@@ -19,6 +19,10 @@ concurrency:
 
 jobs:
   deploy:
+    # GitHub Free cannot publish Pages from this private repository. Pushes become
+    # eligible automatically if it is made public; an eligible paid plan can use
+    # the manual dispatch path without another workflow edit.
+    if: github.event_name == 'workflow_dispatch' || github.event.repository.visibility == 'public'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
