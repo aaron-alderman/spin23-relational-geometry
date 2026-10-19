@@ -7,7 +7,7 @@ This repository uses separate licenses for research content and software. These 
 Except where a file says otherwise, the prose, mathematical exposition, diagrams, research notes, structured research data and documentation are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**.
 
 SPDX identifier: `CC-BY-SA-4.0`  
-Included legal code: [LICENSES/CC-BY-SA-4.0.txt](LICENSES/CC-BY-SA-4.0.txt)  
+Included legal code: [LICENSES/CC-BY-SA-4.0.txt](legal/third-party/CC-BY-SA-4.0.txt)  
 Canonical legal code: <https://creativecommons.org/licenses/by-sa/4.0/legalcode>
 
 You may share and adapt this material, including commercially, provided that you give appropriate attribution, indicate modifications and distribute adaptations under the same or a compatible license.
@@ -21,7 +21,7 @@ Suggested attribution:
 Except where a file says otherwise, executable source code—including files under `scripts/`, `applications/` and `test/`, and source files elsewhere in the repository—is licensed under the **GNU General Public License, version 3 or any later version (GPL-3.0-or-later)**.
 
 SPDX identifier: `GPL-3.0-or-later`  
-Included version 3 text: [LICENSES/GPL-3.0-or-later.txt](LICENSES/GPL-3.0-or-later.txt)  
+Included version 3 text: [LICENSES/GPL-3.0-or-later.txt](legal/third-party/GPL-3.0-or-later.txt)  
 Official license text: <https://www.gnu.org/licenses/gpl-3.0.txt>
 
 The software is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. See the GNU General Public License for details.
