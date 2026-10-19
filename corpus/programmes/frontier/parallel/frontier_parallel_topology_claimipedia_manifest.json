@@ -1,0 +1,376 @@
+{
+  "protocol": "claimipedia-frontier-claim-candidate-manifest/1",
+  "programme": "Spin(2,3)-Jordan-Furey",
+  "frontier": "topology-source-intertwiner-and-Mobius-holonomy",
+  "date": "2026-10-18",
+  "epistemicStates": [
+    "established",
+    "conditional",
+    "indeterminate",
+    "obstructed"
+  ],
+  "claims": [
+    {
+      "id": "spin23.topology.TP-01",
+      "type": "EpistemicClaim",
+      "statement": "A full-rank linear intertwiner from the incidence/B-L source plane to the exchange-even/odd Furey face plane exists only if the source plane carries one even and one odd reversal line.",
+      "epistemicState": "established",
+      "disposition": "retain-for-review",
+      "dependencies": [
+        "source and target are real two-dimensional label spaces",
+        "target face exchange has eigenvalues +1 and -1",
+        "the map is linear and exchange equivariant"
+      ],
+      "falsifier": "Exhibit an invertible solution of C_F M = M C_S when C_S is +I or -I.",
+      "evidence": [
+        "frontier_parallel_topology_01_source_to_furey_face_intertwiner.md",
+        "verification/classify/classify_frontier_source_to_face_intertwiners.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-02",
+      "type": "EpistemicClaim",
+      "statement": "Fixing the B-L line to the exchange-even face sum and matching the established free-UV Gram matrix leaves two source-to-face isometries related by reversal of the face-difference orientation.",
+      "epistemicState": "established",
+      "disposition": "retain-for-review",
+      "dependencies": [
+        "free-UV Gram matrix [[231,9],[9,48]]",
+        "Euclidean normalization of the face exchange eigenbasis",
+        "positive orientation fixed on the B-L image"
+      ],
+      "falsifier": "Find a third metric-matched map satisfying the same Ward-axis condition that is not one of the two orientation reversals.",
+      "evidence": [
+        "frontier_parallel_topology_01_source_to_furey_face_intertwiner.md",
+        "verification/classify/classify_frontier_source_to_face_intertwiners.mjs",
+        "programme_closure_06_the_free_standard_model_uv_cut_fixes_a_relative_metric_but_not_the_physical_ports.md"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-03",
+      "type": "EpistemicFrontier",
+      "statement": "The bare incidence and B-L vector-current pair does not currently supply the relative odd source-label line required to identify physical CP/reversal with Furey face exchange.",
+      "epistemicState": "indeterminate",
+      "disposition": "hold-open",
+      "dependencies": [
+        "the shared Lorentz transformation is factored from the current-label action",
+        "no additional CP-odd spurion or boundary orientation is assumed"
+      ],
+      "falsifier": "Derive from the same Standard-Model action a gauge-invariant renormalized odd source direction that pairs with the protected even B-L line.",
+      "evidence": [
+        "frontier_parallel_topology_01_source_to_furey_face_intertwiner.md",
+        "719_a_cp_odd_flavor_spurion_conditionally_reopens_the_vacuum_stress_odd_response_but_does_not_supply_the_furey_parity_intertwiner.md"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-04",
+      "type": "EpistemicClaim",
+      "statement": "Natural KO-6 reality and relation composition generate a dihedral D3 action, not a Mobius C6 transport.",
+      "epistemicState": "obstructed",
+      "disposition": "no-go-guard",
+      "dependencies": [
+        "r has order three",
+        "J has order two",
+        "J r J = r inverse"
+      ],
+      "falsifier": "Construct an order-six element inside the permutation action satisfying those three relations.",
+      "evidence": [
+        "1135_the_natural_oriented_relation_rotation_is_dihedral_and_blocks_the_naive_Jrho_Mobius_C6.md",
+        "frontier_parallel_topology_02_represented_calculus_holonomy_fork.md"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-05",
+      "type": "EpistemicClaim",
+      "statement": "A direct relation reversal is first-order forbidden, while a shortest off-diagonal one-spectator resolution uses three elementary first-order edges and two one-sided spectator sectors.",
+      "epistemicState": "established",
+      "disposition": "retain-for-review",
+      "dependencies": [
+        "strict first-order rook rule",
+        "diagonal loop sectors excluded",
+        "one added spectator character S"
+      ],
+      "falsifier": "Exhibit a direct or two-edge off-diagonal first-order path from (i,j) to (j,i), with i not equal to j, under the same vertex contract.",
+      "evidence": [
+        "frontier_parallel_topology_02_represented_calculus_holonomy_fork.md",
+        "verification/classify/classify_frontier_represented_calculus_holonomy.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-06",
+      "type": "EpistemicClaim",
+      "statement": "One spectator character cannot mediate all three relation reversals with a cyclically symmetric wholly grading-odd Dirac graph because the required one-sided mediator sectors form an odd triangle.",
+      "epistemicState": "obstructed",
+      "disposition": "no-go-guard",
+      "dependencies": [
+        "all three reversal paths use the same spectator S",
+        "every elementary Dirac edge is grading odd",
+        "cyclic completion retains all three middle edges"
+      ],
+      "falsifier": "Give a two-coloring of the PS-NS-IS triangle or a cyclic completion avoiding that triangle under the same one-spectator contract.",
+      "evidence": [
+        "frontier_parallel_topology_02_represented_calculus_holonomy_fork.md",
+        "verification/classify/classify_frontier_represented_calculus_holonomy.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-07",
+      "type": "EpistemicFrontier",
+      "statement": "One selected length-three mediated seam remains graphically viable, but its Mobius transport is physical only if the composite survives junk while its anchor-mixing scalar projection vanishes non-accidentally.",
+      "epistemicState": "conditional",
+      "disposition": "hold-open",
+      "dependencies": [
+        "an explicit finite spectral datum (A_F,H_F,pi,D_F,gamma,J)",
+        "represented products through degree three",
+        "a computed junk quotient and kinetic projection"
+      ],
+      "falsifier": "The composite is junk, or every nonzero surviving composite necessarily induces the forbidden anchor-mixing scalar.",
+      "evidence": [
+        "frontier_parallel_topology_02_represented_calculus_holonomy_fork.md",
+        "1077_coarse_Furey_arrow_incidence_cannot_determine_the_represented_one_form_or_S1_copy_number.md"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-08",
+      "type": "EpistemicClaim",
+      "statement": "Reality closure of one shortest mediated reversal path gives an explicit six-sector C6 Dirac graph satisfying the label-level KO-6, grading, order-zero and strict first-order conditions.",
+      "epistemicState": "established",
+      "disposition": "retain-for-review",
+      "dependencies": [
+        "finite label algebra with characters P, N and S",
+        "six sectors PN, PS, NS, NP, SP and SN",
+        "equal nonzero real edge weights in the minimal witness"
+      ],
+      "falsifier": "Find a failed KO-6 sign or a nonzero double commutator [[D,L(a)],R(b)] in the displayed six-sector matrices.",
+      "evidence": [
+        "frontier_parallel_topology_04_degree_three_seam_calculus_and_junk.md",
+        "verification/compute/compute_frontier_one_seam_degree_three_calculus.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-09",
+      "type": "EpistemicClaim",
+      "statement": "The one-seam half-turn is a nonzero alternating opposite-left-opposite product but is not represented in either ordinary left or ordinary opposite degree-three universal calculus.",
+      "epistemicState": "obstructed",
+      "disposition": "no-go-guard",
+      "dependencies": [
+        "ordinary single-algebra Connes differential envelope",
+        "the explicit six-sector C6 witness",
+        "separate left and opposite representations"
+      ],
+      "falsifier": "Express E(PN,NP) as a represented element of ordinary Omega_D^3(A) or Omega_D^3(A-op) for the displayed witness.",
+      "evidence": [
+        "frontier_parallel_topology_04_degree_three_seam_calculus_and_junk.md",
+        "verification/compute/compute_frontier_one_seam_degree_three_calculus.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-10",
+      "type": "EpistemicClaim",
+      "statement": "In the maximal joint diagonal six-point Connes calculus, the represented degree-three image equals degree-three junk and the mediated seam E(PN,NP) has an explicit junk preimage.",
+      "epistemicState": "obstructed",
+      "disposition": "no-go-guard",
+      "dependencies": [
+        "the joint left/right image is promoted to the full diagonal C^6 algebra",
+        "the equal-weight C6 Dirac witness",
+        "the standard Connes junk quotient"
+      ],
+      "falsifier": "Show that the explicit preimage is not in ker(pi_2), that its differential is not E(PN,NP), or that E(PN,NP) survives the stated quotient.",
+      "evidence": [
+        "frontier_parallel_topology_04_degree_three_seam_calculus_and_junk.md",
+        "verification/compute/compute_frontier_one_seam_degree_three_calculus.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-11",
+      "type": "EpistemicFrontier",
+      "statement": "Physical survival of the mediated Mobius seam is indeterminate until a mixed bimodule differential calculus or superconnection, including its degree-three junk ideal and action, is declared.",
+      "epistemicState": "indeterminate",
+      "disposition": "hold-open",
+      "dependencies": [
+        "a bigraded calculus containing alternating right-left-right products",
+        "a differential and junk ideal compatible with J and gamma",
+        "a gauge-covariant action distinguishing transport from a physical anchor-mixing scalar"
+      ],
+      "falsifier": "Prove that every admissible mixed calculus kills the seam or construct one independently motivated calculus in which the seam survives with a protected coefficient and no anchor leakage.",
+      "evidence": [
+        "frontier_parallel_topology_04_degree_three_seam_calculus_and_junk.md",
+        "frontier_parallel_topology_03_research_docket.md"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-12",
+      "type": "EpistemicClaim",
+      "statement": "In every associative matrix representation retaining the three elementary seam edges, their mixed product is exactly the forbidden endpoint operator E(PN,NP); a projection killing anchor mixing also kills the represented seam.",
+      "epistemicState": "obstructed",
+      "disposition": "no-go-guard",
+      "dependencies": [
+        "the explicit rank-one elementary matrix units",
+        "associative composition in End(H)",
+        "anchor projectors P_PN and P_NP"
+      ],
+      "falsifier": "Construct a nonzero represented component of the elementary-edge product outside the PN-to-NP anchor block without enlarging the representation.",
+      "evidence": [
+        "frontier_parallel_topology_05_mixed_dga_and_superconnection_stop.md",
+        "verification/test/test_frontier_mixed_dga_and_superconnection_seam.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-13",
+      "type": "EpistemicClaim",
+      "statement": "The same left/right degree-one module admits a free mixed completion retaining the seam and a differential-ideal quotient killing it, so current module and KO data do not determine mixed degree three.",
+      "epistemicState": "indeterminate",
+      "disposition": "hold-open",
+      "dependencies": [
+        "only the represented degree-one bimodules are fixed",
+        "no mixed universality or junk prescription is imposed"
+      ],
+      "falsifier": "Derive from the existing finite module a universal property that uniquely selects one of the two mixed completions.",
+      "evidence": [
+        "frontier_parallel_topology_05_mixed_dga_and_superconnection_stop.md",
+        "verification/test/test_frontier_mixed_dga_and_superconnection_seam.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-14",
+      "type": "EpistemicClaim",
+      "statement": "For the minimal KO-real C6 witness, the open half-holonomy has the forbidden endpoint gauge type, while the closed Wilson product is |abc|^2 and is orientation even.",
+      "epistemicState": "obstructed",
+      "disposition": "no-go-guard",
+      "dependencies": [
+        "JD=DJ pairs second-half weights with first-half conjugates",
+        "the minimal single C6 path",
+        "ordinary endpoint gauge covariance"
+      ],
+      "falsifier": "Produce a gauge-invariant orientation-odd phase from the same single KO-real six-cycle without adding a second path or central phase datum.",
+      "evidence": [
+        "frontier_parallel_topology_05_mixed_dga_and_superconnection_stop.md",
+        "verification/test/test_frontier_mixed_dga_and_superconnection_seam.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.TP-15",
+      "type": "EpistemicFrontier",
+      "statement": "A physical Mobius seam now requires an independently motivated enriched transport representation, central extension, higher-categorical lift, boundary endpoint interpretation or protected two-path interference observable.",
+      "epistemicState": "indeterminate",
+      "disposition": "pin-until-new-input",
+      "dependencies": [
+        "new structure beyond the current finite matter module",
+        "a derivation of its action and quotient",
+        "a gauge-invariant orientation-sensitive observable"
+      ],
+      "falsifier": "Either construct such a derived extension with a protected observable, or prove that every admissible extension reduces to anchor mixing or orientation-even closed holonomy.",
+      "evidence": [
+        "frontier_parallel_topology_05_mixed_dga_and_superconnection_stop.md",
+        "frontier_parallel_topology_04_degree_three_seam_calculus_and_junk.md"
+      ]
+    },
+    {
+      "id": "spin23.topology.W4C-01",
+      "type": "EpistemicClaim",
+      "statement": "The established Peirce H2(R) module is three-dimensional but, with the currently trivial topology action on W_mediator, every O(2)-equivariant map to W has rank at most one and its image line remains arbitrary in CP2.",
+      "epistemicState": "established",
+      "disposition": "no-go-guard",
+      "dependencies": [
+        "H2(R)=1 plus the two-dimensional traceless O(2) module",
+        "no derived O(2) action on W_mediator",
+        "the independent U(3) mediator commutant"
+      ],
+      "falsifier": "Derive a nontrivial O(2) action on W and a full-rank normalized intertwiner from existing Peirce data without importing a Clebsch row or target line.",
+      "evidence": [
+        "frontier_wave4_topology_01_cross_carrier_module_audit.md",
+        "verification/analyze/analyze_frontier_wave4_topology_cross_carrier.mjs",
+        "622_exchange_fixed_two_topology_observables_are_the_h2r_spin23_carrier.md"
+      ]
+    },
+    {
+      "id": "spin23.topology.W4C-02",
+      "type": "EpistemicClaim",
+      "statement": "The three-label ribbon/permutation module has a two-dimensional invariant endomorphism algebra, so symmetry permits a singlet-doublet anisotropy but does not normalize it; the natural Walsh metric is scalar.",
+      "epistemicState": "established",
+      "disposition": "retain-for-review",
+      "dependencies": [
+        "the S3 permutation representation decomposes as 1 plus 2",
+        "equal atomic or Walsh weighting",
+        "no Standard-Model-typed handle exchange acting on mediator copies"
+      ],
+      "falsifier": "Derive from the ribbon action a unique non-unit singlet/doublet Gram ratio and the corresponding typed action on W_mediator.",
+      "evidence": [
+        "frontier_wave4_topology_01_cross_carrier_module_audit.md",
+        "verification/analyze/analyze_frontier_wave4_topology_cross_carrier.mjs",
+        "767_the_sewn_furey_ribbon_has_untyped_handle_exchange_but_no_standard_model_typed_exchange_between_c_and_d.md"
+      ]
+    },
+    {
+      "id": "spin23.topology.W4C-03",
+      "type": "EpistemicClaim",
+      "statement": "The intrinsic Golay M11 ordered-point flag does not canonically produce a normalized positive real three-module: rank three first occurs after choosing three ordered points, over F3, with a three-dimensional invariant-form space.",
+      "epistemicState": "obstructed",
+      "disposition": "no-go-guard",
+      "dependencies": [
+        "the established five-dimensional characteristic-three Golay carrier",
+        "the sharply four-transitive M11 ordered-point stabilizer chain",
+        "no independently selected integral real lift"
+      ],
+      "falsifier": "Construct an intrinsic flag-free rank-three real positive quotient with a unique form and a typed equivariant map to W_mediator.",
+      "evidence": [
+        "frontier_wave4_topology_01_cross_carrier_module_audit.md",
+        "604_the_intrinsic_m11_flag_does_not_yield_a_spin23_metric_before_symmetry_is_gone.md",
+        "verification/analyze/analyze_frontier_wave4_topology_cross_carrier.mjs"
+      ]
+    },
+    {
+      "id": "spin23.topology.W4C-04",
+      "type": "EpistemicClaim",
+      "statement": "Spin_0(2,3) has no nontrivial three-dimensional linear representation; an H2(R) linear section of its five-vector instead lies in a six-dimensional embedding orbit with setwise stabilizer SO_0(1,2) times SO_0(1,1).",
+      "epistemicState": "established",
+      "disposition": "no-go-guard",
+      "dependencies": [
+        "simplicity and dimension ten of sp4(R)",
+        "dimension nine of gl3(R)",
+        "the signature-(1,2) section theorem in the five-dimensional vector module"
+      ],
+      "falsifier": "Exhibit a nontrivial Lie-algebra homomorphism sp4(R) to gl3(R), or show that the stated section stabilizer has dimension other than four.",
+      "evidence": [
+        "frontier_wave4_topology_01_cross_carrier_module_audit.md",
+        "verification/analyze/analyze_frontier_wave4_topology_cross_carrier.mjs",
+        "746_an_h2r_carrier_embeds_as_a_signature12_section_of_the_spin23_module_but_leaves_a_six_parameter_embedding_degeneracy.md"
+      ]
+    },
+    {
+      "id": "spin23.topology.W4C-05",
+      "type": "EpistemicFrontier",
+      "statement": "The first missing W4-C datum is a physically typed nontrivial source-symmetry representation on W_mediator, derived without q_QQ, together with a normalized equivariant pairing that fixes the singlet-doublet relative scale and selects one incidence ray.",
+      "epistemicState": "indeterminate",
+      "disposition": "pin-until-new-input",
+      "dependencies": [
+        "a named source symmetry from Peirce, ribbon, code or a broken Spin(2,3) subgroup",
+        "an independently derived action rho_W on the mediator copies",
+        "counterterm and heavy-threshold stability"
+      ],
+      "falsifier": "Either construct the normalized cross-carrier action and show uniqueness up to overall phase, or prove that every admissible action retains a transitive target commutant or a free Gram ratio.",
+      "evidence": [
+        "frontier_wave4_topology_01_cross_carrier_module_audit.md",
+        "frontier_wave4_00_cross_carrier_intertwiner_programme.md",
+        "frontier_wave3_04_synthesis_the_cross_carrier_intertwiner_is_the_common_gate.md"
+      ]
+    }
+  ],
+  "review": {
+    "requiresQualifyingEvidence": true,
+    "automaticPromotion": false,
+    "automaticCorpusAdmission": false,
+    "permittedDisposition": [
+      "hold",
+      "no-go",
+      "retain",
+      "retire"
+    ]
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entailsMicroscopicSpin23": false,
+    "entailsPhysicalMobiusHolonomy": false,
+    "empiricalAuthority": false
+  }
+}
+

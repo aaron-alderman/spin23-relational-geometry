@@ -2,14 +2,14 @@
 
 The repository's default licenses apply only where the repository owner holds the necessary rights. The following bundled material has separate provenance or an upstream license.
 
-## `orientation-claimipedia-pilot/sources/j-hagedorn-trilogy-d745f06/`
+## `integrations/claimipedia/orientation-pilot/sources/j-hagedorn-trilogy-d745f06/`
 
 - Upstream project: Joshua Hagedorn, [`j-hagedorn/trilogy`](https://github.com/j-hagedorn/trilogy)
 - Upstream description: reference datasets for mythology and folktale motifs
 - Upstream license: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), as stated in the bundled upstream README
 - The dataset also identifies underlying public-domain and permission-based sources that should be cited according to that README.
 
-The adjacent `orientation-claimipedia-pilot/sources/trilogy-v1.1.zip` is a preserved source archive of that material and retains the same upstream provenance and notices.
+The adjacent `integrations/claimipedia/orientation-pilot/sources/trilogy-v1.1.zip` is a preserved source archive of that material and retains the same upstream provenance and notices.
 
 ## Citations and linked works
 

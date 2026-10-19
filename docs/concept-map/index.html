@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#18201f">
+  <title>Concept atlas · Spin(2,3) Edition 3</title>
+  <link rel="stylesheet" href="concept-map.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"}}
+  </script>
+</head>
+<body>
+  <header class="mast">
+    <a href="../edition-3/index.html">Spin(2,3) · Edition 3</a>
+    <nav><a href="../edition-3/08-result-ledger.html">Findings</a> · <a href="../edition-3/09-research-frontier.html">Frontier</a> · <strong>Concept atlas</strong></nav>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="kicker">One programme · four semantic regions · typed edges</p>
+      <h1>The research<br><em>as a navigable object</em></h1>
+      <p class="lede">The central horizontal chain is the established mathematical spine. Physical realization descends toward unresolved selection and prediction; projective topology rises behind it; exceptional and arithmetic proposals remain a separate horizon.</p>
+      <p class="rule">A path inherits its weakest edge. A dotted analogy never becomes a derivation by proximity.</p>
+    </section>
+
+    <section class="atlas" aria-labelledby="atlas-title">
+      <div class="atlas-head">
+        <div>
+          <p class="kicker">Interactive three-dimensional graph</p>
+          <h2 id="atlas-title">Concept atlas</h2>
+        </div>
+        <p class="counts" id="counts" aria-live="polite"></p>
+      </div>
+      <div class="controls" aria-label="Graph controls">
+        <label>Find <input id="search" type="search" placeholder="Spin, Furey, orientation…"></label>
+        <label>Region <select id="group-filter"><option value="all">All regions</option></select></label>
+        <label>Status <select id="status-filter"><option value="all">All statuses</option></select></label>
+        <label>Focus <select id="node-select"><option value="">Choose a concept</option></select></label>
+        <button id="flatten" type="button" aria-pressed="false">Flatten depth</button>
+        <button id="reset" type="button">Reset view</button>
+      </div>
+      <div class="stage-wrap">
+        <div id="stage" role="img" aria-label="Interactive three-dimensional concept graph. Drag to orbit, scroll to zoom, and select a labeled node for its status and evidence."></div>
+        <div class="depth-key" aria-hidden="true"><span>front</span><i></i><span>mathematical spine</span><i></i><span>back</span></div>
+        <aside id="detail" class="detail" aria-live="polite">
+          <p class="detail-status">Select a node</p>
+          <h3>Read the graph without collapsing its claims</h3>
+          <p>Click a concept or choose it from the Focus menu. The panel will show its epistemic status, short account, typed connections and source documents.</p>
+        </aside>
+      </div>
+      <div class="legend" aria-label="Legend">
+        <div><strong>Node status</strong><span><i class="dot established"></i>Established</span><span><i class="dot conditional"></i>Conditional</span><span><i class="dot underdetermined"></i>Underdetermined</span><span><i class="dot obstructed"></i>Obstructed</span><span><i class="dot missing"></i>Missing</span><span><i class="dot analogical"></i>Analogy</span></div>
+        <div><strong>Edge grammar</strong><span>solid = construction</span><span>dashed = unresolved / analogy</span><span>red = obstruction or separation</span></div>
+      </div>
+      <noscript>This atlas requires JavaScript. Use the Mermaid fallback in corpus/concept-map/README.md.</noscript>
+    </section>
+  </main>
+  <footer>Canonical data: <a href="https://github.com/aaron-alderman/spin23-relational-geometry/blob/main/corpus/concept-map/graph.json">graph.json</a> · Three.js r186 · Admission is not endorsement.</footer>
+  <script src="graph-data.js"></script>
+  <script type="module" src="concept-map.js"></script>
+  <script src="concept-map-fallback.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+
+const record = JSON.parse(await readFile(new URL("../../evidence/data/outcome-dynamics-cp193-integration.json", import.meta.url), "utf8"));
+assert.equal(record.sourceAuditPassed, true);
+assert.equal(record.preRefinementEvidence.selectedMechanicalPatterns, 8);
+assert.equal(record.preRefinementEvidence.patternFrequencyCells, 72);
+assert.equal(record.preRefinementEvidence.fullRankAtEveryFrequency, true);
+assert.equal(record.preRefinementEvidence.lateralRefinementAmplitudeScreenPassed, false);
+assert.ok(record.pRefinement.linearSevenToNine.chargeRelativeDifference > 0.05);
+assert.ok(record.pRefinement.linearSevenToNine.opticalRelativeDifference > 0.05);
+assert.ok(record.pRefinement.linearSevenToNine.generalizedDisplacementRelativeDifference > 0.1);
+assert.ok(record.pRefinement.quadraticSevenToNine.stressDirectionDifference < 0.02);
+assert.ok(record.pRefinement.quadraticSevenToNine.chargeRelativeDifference < 0.01);
+assert.ok(record.pRefinement.quadraticSevenToNine.opticalRelativeDifference < 0.01);
+assert.ok(record.pRefinement.quadraticSevenToNine.generalizedDisplacementRelativeDifference < 0.01);
+assert.equal(record.pRefinement.linearParityDiagnosedAsElementDiscretizationArtifact, true);
+assert.equal(record.openGates.massRepresentationIndependentControl, false);
+assert.equal(record.openGates.physicalAdmission, false);
+assert.equal(record.spin23Interpretation.derivesSpin23, false);
+assert.equal(record.spin23Interpretation.supportsFundamentalSpin23Ontology, false);
+assert.equal(Object.keys(record.sourceHashesSha256).length, 10);
+for (const hash of Object.values(record.sourceHashesSha256)) assert.match(hash, /^[0-9a-f]{64}$/u);
+console.log(JSON.stringify({passed:true,checkpoint:record.sourceCheckpoint,quadraticMaximumObservableDifference:Math.max(record.pRefinement.quadraticSevenToNine.chargeRelativeDifference,record.pRefinement.quadraticSevenToNine.opticalRelativeDifference,record.pRefinement.quadraticSevenToNine.generalizedDisplacementRelativeDifference),nextNumericalGate:record.openGates.nextNumericalGate,physicalAdmission:record.openGates.physicalAdmission}));

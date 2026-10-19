@@ -1,0 +1,342 @@
+{
+  "manifest_version": "claimipedia-candidate-manifest/1",
+  "generated_on": "2026-10-18",
+  "programme": "Spin(2,3)/Jordan/Furey research programme",
+  "branch_owner": "frontier-parallel-kantor-freudenthal",
+  "summary_document": "frontier_parallel_kantor_synthesis_and_branch_status.md",
+  "claims": [
+    {
+      "id": "KPF-001",
+      "title": "The transpose-compatible metric cubic family on the real paired lepton carrier has four projective Kantor rays",
+      "epistemic_state": "established_exact_finite_dimensional",
+      "claim": "For V_abc(x,y,z)=a x<y,z>+b z<y,x>+c y<x,z>, the Kantor identities are equivalent to c(c+a)=0 and 3b^2-3ab-ac+bc=0, with nonzero real projective rays (1,0,0), (1,1,0), (1,1,-1), and (3,1,-3).",
+      "scope": "Real two-dimensional lepton carrier; metric-built cubic products; transpose-paired rectangular realization.",
+      "dependencies": [
+        "830_the_raw_furey_tro_product_fails_the_second_kantor_identity_while_its_structurable_linking_product_passes.md",
+        "832_cp_pairing_preserves_the_lepton_jordan_graph_but_not_the_kantor_spin23_slice_closing_the_oriented_parent_gate.md"
+      ],
+      "falsifiers": [
+        "A basis instance violating either Kantor identity on one of the four rays.",
+        "A nonzero real projective solution outside the four algebraic components."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_01_cp_compatible_contact_completion.md",
+        "verification/verify/verify_frontier_kantor_cp_contact_completion.mjs"
+      ],
+      "publication_action": "publish_as_mathematical_claim"
+    },
+    {
+      "id": "KPF-002",
+      "title": "One paired Kantor ray simultaneously has CP covariance, nonzero contact layer, and the established Jordan shadow",
+      "epistemic_state": "established_exact_finite_dimensional",
+      "claim": "The ray V(x,y,z)=x<y,z>, represented on paired rectangles by transpose-reversed six-word coefficients (1/2,1/2,-1/2), is a Kantor triple product, has K nonzero, is transpose covariant, and outer-symmetrizes to the established Hermitian Jordan triple.",
+      "scope": "Real paired lepton rectangles only; no claim yet about the complex full Furey carrier or a microscopic action.",
+      "dependencies": ["KPF-001", "42_jordan_triple_to_sp4r_determination.md"],
+      "falsifiers": [
+        "Failure of matrix-level transpose covariance.",
+        "Failure of either Kantor identity.",
+        "Mismatch between outer symmetrization and the existing Jordan triple."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_01_cp_compatible_contact_completion.md",
+        "verification/verify/verify_frontier_kantor_cp_contact_completion.mjs"
+      ],
+      "publication_action": "publish_with_scope_warning"
+    },
+    {
+      "id": "KPF-003",
+      "title": "The paired six-word Kantor completion is a physical Standard-Model/Furey product",
+      "epistemic_state": "closed_scoped_no_go",
+      "claim": "The distinguished real product does not extend as a Kantor system to the phase-doubled complex Furey lepton pair within the complete real-coefficient dagger-built metric family; both real rays with nonzero K fail the Kantor identities.",
+      "dependencies": ["KPF-002"],
+      "falsifiers": [
+        "A nonzero-K coefficient ray in the stated dagger-built family that passes both phase-doubled Kantor identities.",
+        "An error in either preserved explicit basis counterexample."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_03_complex_phase_lift_no_go.md",
+        "verification/verify/verify_frontier_kantor_complex_gauge_lift.mjs"
+      ],
+      "publication_action": "publish_as_no_go_with_real_slice_escape"
+    },
+    {
+      "id": "KPF-004",
+      "title": "Positive Freudenthal inverse pairs are dual-GL(2) orbits labelled by lambda",
+      "epistemic_state": "established_exact",
+      "claim": "For N_+={(A,lambda A^-1):A>0,lambda>0}, the dual GL(2) action is transitive at fixed lambda and N_+/GL(2) is isomorphic to the positive real line, with lambda=tr(AC)/2=sqrt(det(A)det(C)).",
+      "dependencies": ["freudenthal_parallel_03_symplectic_pairing_and_triple_critical_locus.md"],
+      "falsifiers": [
+        "Two positive inverse pairs with the same lambda that are not related by dual congruence.",
+        "Failure of lambda invariance under the dual action."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_02_freudenthal_inverse_orbit_no_selector.md",
+        "verification/verify/verify_frontier_freudenthal_inverse_orbit_no_selector.mjs"
+      ],
+      "publication_action": "publish_as_mathematical_claim"
+    },
+    {
+      "id": "KPF-005",
+      "title": "Freudenthal quartic/triple criticality does not select scale, embedding line, or orientation",
+      "epistemic_state": "established_scoped_no_go",
+      "claim": "The restricted quartic and cubic map vanish for every positive lambda on the inverse locus, while norm symmetry moves the octonionic link line and contains its orientation reversal; these invariants therefore cannot select lambda, the embedding line, or its sign.",
+      "dependencies": ["KPF-004", "833_the_freudenthal_quartic_can_homogenize_the_h2r_determinant_but_does_not_select_the_embedding_orientation_or_e8_parent.md"],
+      "falsifiers": [
+        "A scalar internal to the same invariant structure that varies along the lambda quotient without extra scale data.",
+        "A restricted invariant distinguishing two norm-related link lines."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_02_freudenthal_inverse_orbit_no_selector.md",
+        "verification/verify/verify_frontier_freudenthal_inverse_orbit_no_selector.mjs"
+      ],
+      "publication_action": "publish_as_no_go_with_scope"
+    },
+    {
+      "id": "KPF-006",
+      "title": "A Gaussian/log-determinant action can choose lambda but Freudenthal symmetry alone cannot",
+      "epistemic_state": "established_with_interpretive_boundary",
+      "claim": "The stationary equation of tr(AC)-kappa log det C is C=kappa A^-1, so a state or normalization supplies lambda; a pure function of the restricted Freudenthal quartic is stationary along every inverse ray and supplies no lambda potential.",
+      "dependencies": ["KPF-004", "freudenthal_action_01_logdet_variational_mechanism_and_scale_no_go.md"],
+      "falsifiers": [
+        "A variation error in the log-determinant action.",
+        "A pure quartic action whose derivative is nonzero along the critical-null inverse locus."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_02_freudenthal_inverse_orbit_no_selector.md",
+        "freudenthal_action_synthesis_mechanism_and_no_go.md"
+      ],
+      "publication_action": "publish_as_mechanism_and_boundary"
+    },
+    {
+      "id": "KPF-007",
+      "title": "A physical Higgs, Majorana, boundary, or CP-breaking datum selects the real Kantor carrier",
+      "epistemic_state": "open_high_value",
+      "claim": "An independently derived Standard-Model datum may select the real subbundle on which the CP-compatible contact Kantor product exists, without choosing a basis or erasing the global orientation witness.",
+      "dependencies": ["KPF-002", "KPF-003"],
+      "falsifiers": [
+        "Every available physical real structure either violates gauge covariance or leaves a continuous family of real slices.",
+        "The selected slice makes the local K generator unobservable or unrelated to the global orientation-odd channel."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_01_cp_compatible_contact_completion.md",
+        "frontier_parallel_kantor_03_complex_phase_lift_no_go.md",
+        "frontier_parallel_kantor_synthesis_and_branch_status.md"
+      ],
+      "publication_action": "publish_as_open_gate"
+    },
+    {
+      "id": "KPF-008",
+      "title": "A gauge-covariant real selector is an antiunitary fixed form commuting with the gauge action",
+      "epistemic_state": "established_exact_representation_theorem",
+      "claim": "For an antiunitary involution J on a complex gauge module, Fix(J) is a gauge-covariant real form iff J commutes with the gauge representation. A two-real-dimensional fixed form with invariant Euclidean metric supports the contact Kantor product x<y,z> and grading (1,2,4,2,1).",
+      "dependencies": ["KPF-002", "KPF-003"],
+      "falsifiers": [
+        "A gauge transformation carrying Fix(J) outside itself despite [J,rho(g)]=0.",
+        "A failure of either Kantor identity on the fixed Euclidean two-plane."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_04_real_subbundle_selector_classification.md",
+        "verification/classify/classify_frontier_kantor_real_subbundle_selectors.mjs"
+      ],
+      "publication_action": "publish_as_selector_criterion"
+    },
+    {
+      "id": "KPF-009",
+      "title": "No nonzero linear gauge intertwiner connects a charged Nambu plane to a neutral boundary plane",
+      "epistemic_state": "established_exact_no_go",
+      "claim": "If the Nambu fixed plane carries R(q theta) with q nonzero and the boundary plane is gauge trivial, S R(q theta)=S for all theta implies S J=0 and hence S=0.",
+      "dependencies": ["KPF-008"],
+      "falsifiers": ["A nonzero 2x2 matrix satisfying S R(q theta)=S for all theta with q nonzero."],
+      "evidence_paths": [
+        "frontier_parallel_kantor_06_nambu_boundary_intertwiner_classification.md",
+        "verification/classify/classify_frontier_kantor_nambu_boundary_intertwiners.mjs"
+      ],
+      "publication_action": "publish_as_no_go"
+    },
+    {
+      "id": "KPF-010",
+      "title": "Matched rotation and reflection reduce Nambu-boundary isometries to signs",
+      "epistemic_state": "established_exact_classification",
+      "claim": "When source and boundary retain the same SO(2) connection, metric intertwiners form U(1); matching the real reflection D reduces them to plus or minus I, or plus or minus D when rotation orientation is reversed.",
+      "dependencies": ["KPF-008", "908_a_local_real_interface_supplies_the_antiunitary_sideband_twist_and_closes_the_boundary_monodromy_model.md"],
+      "falsifiers": ["A reflection-compatible orthogonal rotation intertwiner outside the four stated sign classes."],
+      "evidence_paths": [
+        "frontier_parallel_kantor_06_nambu_boundary_intertwiner_classification.md",
+        "verification/classify/classify_frontier_kantor_nambu_boundary_intertwiners.mjs"
+      ],
+      "publication_action": "publish_as_classification"
+    },
+    {
+      "id": "KPF-011",
+      "title": "The minimal neutral observable escape is a quadratic two-face Gram map with a separate orientation line",
+      "epistemic_state": "open_high_value_with_established_minimality",
+      "claim": "One charged complex mode has only one independent quadratic norm coordinate; two equal-charge faces are minimally required to produce a Hermitian Gram carrier, whose phase-aligned slice is H_2(R). The Gram carrier forgets the contact-area sign, which must survive as separate boundary, Pfaffian, or interference data.",
+      "dependencies": ["KPF-009", "130_antiunitary_and_common_spurion_alignment_criteria.md"],
+      "falsifiers": [
+        "A one-mode gauge-invariant quadratic construction with a two-real-dimensional oriented carrier.",
+        "Failure of common phase alignment for every candidate pair of Higgs-dressed faces.",
+        "Proof that every attached orientation line is gauge or basis artefact."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_06_nambu_boundary_intertwiner_classification.md",
+        "frontier_parallel_kantor_05_real_exit_decision.md"
+      ],
+      "publication_action": "publish_minimality; retain_physical_bridge_as_open"
+    },
+    {
+      "id": "KPF-012",
+      "title": "The contact-area orientation is exactly blind to the B-L shear",
+      "epistemic_state": "established_exact_no_go",
+      "claim": "The incidence shear T_c=[[1,0],[c,1]] fixes the B-L axis, has determinant one, and preserves the two-dimensional contact area form. Since all Yukawa-divergence covectors also annihilate B-L, divergence plus contact orientation cannot determine c.",
+      "dependencies": ["KPF-011", "FPQFT-C15"],
+      "falsifiers": [
+        "A value of c for which T_c fails to preserve the area form.",
+        "A declared Yukawa-divergence coordinate with nonzero B-L component in the same Dirac branch."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_07_qft_frame_compatibility_and_residual_anchor_no_go.md",
+        "verification/verify/verify_frontier_kantor_qft_frame_compatibility.mjs"
+      ],
+      "publication_action": "publish_as_cross_branch_no_go"
+    },
+    {
+      "id": "KPF-013",
+      "title": "Charged-lepton divergence selects the incidence fork but not its B-L-shear representative",
+      "epistemic_state": "established_exact_cross_branch",
+      "claim": "The deduplicated and multiplicity incidence coordinates differ first in the charged-lepton channel, 2 versus 4, while every shift by B-L leaves both values unchanged.",
+      "dependencies": ["FPQFT-C14", "FPQFT-C15"],
+      "falsifiers": [
+        "Equality of the charged-lepton divergence coordinates after using the declared incidence definitions.",
+        "A nonzero Yukawa divergence for completed B-L."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_qft_05_rank_one_up_yukawa_and_channel_growth.md",
+        "frontier_parallel_kantor_07_qft_frame_compatibility_and_residual_anchor_no_go.md",
+        "verification/verify/verify_frontier_kantor_qft_frame_compatibility.mjs"
+      ],
+      "publication_action": "publish_as_cross_branch_selector"
+    },
+    {
+      "id": "KPF-014",
+      "title": "The action-derived QFT Gram fixes a unique B-L-orthogonal incidence representative inside each fork",
+      "epistemic_state": "established_exact_conditional_on_declared_qft_gram",
+      "claim": "The Grams [[231,9],[9,48]] and [[239,15],[15,48]] select lambda_d-(3/16)q and lambda_m-(5/16)q respectively, with norms 3669/16 and 3749/16.",
+      "dependencies": ["FPQFT-C03", "KPF-013"],
+      "falsifiers": [
+        "Non-orthogonality of either displayed representative to q in its stated Gram.",
+        "Failure of the Gram to define the physical common source bilinear over the matching window."
+      ],
+      "evidence_paths": [
+        "programme_lane_expansion_33_the_action_derived_two_current_block_removes_bl_shear_but_not_the_incidence_normalisation_fork.md",
+        "frontier_parallel_kantor_07_qft_frame_compatibility_and_residual_anchor_no_go.md",
+        "verification/verify/verify_frontier_kantor_qft_frame_compatibility.mjs"
+      ],
+      "publication_action": "publish_with_qft_scope"
+    },
+    {
+      "id": "KPF-015",
+      "title": "Topology Gram plus contact area retains an SO(2) frame torsor",
+      "epistemic_state": "established_exact_no_go",
+      "claim": "An oriented positive two-plane specified only by its metric and area form has SO(2) automorphism group. It therefore cannot canonically identify one topology direction with B-L or incidence.",
+      "dependencies": ["KPF-011", "KPF-014"],
+      "falsifiers": [
+        "A nonzero vector or covector constructed equivariantly from a two-dimensional positive metric and compatible area form alone.",
+        "Triviality of the exhibited quarter-turn stabilizer."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_07_qft_frame_compatibility_and_residual_anchor_no_go.md",
+        "verification/verify/verify_frontier_kantor_qft_frame_compatibility.mjs"
+      ],
+      "publication_action": "publish_as_residual_stabilizer_theorem"
+    },
+    {
+      "id": "KPF-016",
+      "title": "One topology-to-source anchor completes the two-dimensional frame matching",
+      "epistemic_state": "open_high_value_with_exact_sufficiency",
+      "claim": "After charged leptons choose the incidence fork and the QFT Gram fixes its B-L-orthogonal representative, one oriented topology vector or covector mapped to a named source axis removes the residual SO(2) torsor; an unoriented line leaves only a common sign.",
+      "dependencies": ["KPF-013", "KPF-014", "KPF-015"],
+      "falsifiers": [
+        "A residual continuous stabilizer after an oriented unit anchor is fixed.",
+        "Proof that every candidate Furey/Higgs/boundary anchor is basis dependent or gauge variant."
+      ],
+      "evidence_paths": [
+        "frontier_parallel_kantor_07_qft_frame_compatibility_and_residual_anchor_no_go.md",
+        "569_the_two_named_peirce_faces_uniquely_select_the_contraction_and_an_exact_split_jordan_lift.md",
+        "577_the_unique_electron_cycle_selects_the_neutral_response_channel_but_not_its_sign_phase_or_normalization.md",
+        "verification/verify/verify_frontier_kantor_qft_frame_compatibility.mjs"
+      ],
+      "publication_action": "publish_sufficiency_theorem; retain_physical_anchor_as_open"
+    },
+    {
+      "id": "KPF-017",
+      "title": "Minimal local source consistency gives paired admission or paired rejection of the incidence rays",
+      "epistemic_state": "established_exact_conditional_no_selector",
+      "claim": "For linear real Standard-Model current sources, locality and Hermiticity admit both incidence rays; derivative-ALP shift symmetry admits both; exact anomaly-free gauging without extra completion data rejects both; and closure under the smallest exact shared-field RG block rejects both. None of these principles selects exactly one ray.",
+      "dependencies": ["KPF-013", "KPF-016", "programme_lane_expansion_35_the_gauge_typed_source_quotient_has_one_anomaly_coordinate_and_no_incidence_eigenray.md"],
+      "falsifiers": [
+        "A source-consistency condition within the declared class that is satisfied by exactly one of lambda_d and lambda_m.",
+        "A calculation showing that exactly one incidence Yukawa vector is an eigenvector of the declared shared-field block.",
+        "An anomaly-free exact gauging of exactly one ray without additional matter, spurions or Wess-Zumino completion data."
+      ],
+      "evidence_paths": [
+        "frontier_wave2_source_01_local_unitary_selector_classification.md",
+        "verification/classify/classify_frontier_wave2_local_source_actions.mjs"
+      ],
+      "publication_action": "publish_as_source_selection_no_go"
+    },
+    {
+      "id": "KPF-018",
+      "title": "Anomaly coordinates distinguish the electron fork but do not independently select it",
+      "epistemic_state": "established_exact_quotient_statement",
+      "claim": "The two incidence rays have anomaly images (16,16,336,51) and (16,16,408,53). Their A3 and A2 entries agree, while the AYY and gravitational differences are fixed by the differing charged-lepton Yukawa coordinate through exact row identities; anomaly data therefore read the fork but supply no independent accept/reject selector.",
+      "dependencies": ["KPF-013", "KPF-017"],
+      "falsifiers": [
+        "Failure of either stated anomaly image under the declared rows.",
+        "Independence of AYY or Agrav from the five-coordinate Yukawa-plus-A2 quotient.",
+        "A completion-independent anomaly criterion accepting exactly one incidence ray."
+      ],
+      "evidence_paths": [
+        "frontier_wave2_source_01_local_unitary_selector_classification.md",
+        "programme_lane_expansion_35_the_gauge_typed_source_quotient_has_one_anomaly_coordinate_and_no_incidence_eigenray.md",
+        "verification/classify/classify_frontier_wave2_local_source_actions.mjs"
+      ],
+      "publication_action": "publish_with_normalization_scope"
+    },
+    {
+      "id": "KPF-019",
+      "title": "The smallest falsifiable source realization is a discrete two-ray ALP benchmark",
+      "epistemic_state": "conditional_minimal_model",
+      "claim": "With no independent UV gauge operators or fermion-current coefficients, a single derivative ALP coupled at the matching scale to either lambda_d or lambda_m gives a two-hypothesis, one-overall-scale benchmark. The electron chirality amplitude ratio is two and its isolated leading squared-rate ratio is four, while the common quark and weak-anomaly coordinates provide production anchors.",
+      "dependencies": ["KPF-017", "KPF-018"],
+      "falsifiers": [
+        "A reconstructed UV vector inconsistent with both projective coordinate sets (10,6,2,1;16) and (10,6,4,1;16).",
+        "Necessity of independent UV gauge operators or additional fermion-current directions in the claimed restricted model.",
+        "Failure of the isolated equal-kinematics lepton partial width to scale quadratically with the chirality-changing coefficient."
+      ],
+      "evidence_paths": [
+        "frontier_wave2_source_02_minimal_two_ray_alp_model.md",
+        "frontier_wave2_source_01_local_unitary_selector_classification.md",
+        "verification/classify/classify_frontier_wave2_local_source_actions.mjs"
+      ],
+      "publication_action": "publish_as_conditional_benchmark_not_as_unique_derivation"
+    },
+    {
+      "id": "KPF-020",
+      "title": "Furey electron topology fixes a response channel but no source normalization",
+      "epistemic_state": "established_scope_boundary_with_open_intertwiner",
+      "claim": "The unique electron cycle and named Peirce data identify the charged-lepton response line, but the existing construction contains no independently normalized topology-to-current metric that chooses sector-deduplicated weight one over incidence-multiplicity weight three. A normalized electron-to-quark intertwiner remains the missing selector.",
+      "dependencies": ["KPF-016", "577_the_unique_electron_cycle_selects_the_neutral_response_channel_but_not_its_sign_phase_or_normalization.md", "KPF-017"],
+      "falsifiers": [
+        "An existing derived Furey pairing that canonically fixes the electron-to-quark response ratio to exactly one of the two incidence values.",
+        "A proof that one incidence weighting violates a topology automorphism or a declared normalized state pairing while the other does not."
+      ],
+      "evidence_paths": [
+        "frontier_wave2_source_01_local_unitary_selector_classification.md",
+        "frontier_wave2_source_02_minimal_two_ray_alp_model.md",
+        "577_the_unique_electron_cycle_selects_the_neutral_response_channel_but_not_its_sign_phase_or_normalization.md",
+        "569_the_two_named_peirce_faces_uniquely_select_the_contraction_and_an_exact_split_jordan_lift.md"
+      ],
+      "publication_action": "publish_scope_boundary; prioritize_normalized_intertwiner"
+    }
+  ]
+}
