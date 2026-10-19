@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, resolve, sep } from "node:path";
 
 const root = resolve(process.cwd());
@@ -13,11 +13,14 @@ const governanceFiles = [
   "91_multi_branch_active_goal_log.md",
 ];
 const includedDirectories = [
+  ".github",
   "applications",
   "assets",
+  "book",
   "claimipedia-discovery-campaigns",
   "claimipedia-research-method",
   "data",
+  "docs",
   "LICENSES",
   "orientation-claimipedia-pilot",
   "scripts",
@@ -56,7 +59,13 @@ function walk(directory) {
 }
 
 function sha256(file) {
-  return createHash("sha256").update(readFileSync(join(root, file))).digest("hex");
+  return createHash("sha256").update(canonicalFileBytes(file)).digest("hex");
+}
+
+function canonicalFileBytes(file) {
+  const bytes = readFileSync(join(root, file));
+  if (bytes.includes(0)) return bytes;
+  return Buffer.from(bytes.toString("utf8").replaceAll("\r\n", "\n"), "utf8");
 }
 
 function localMarkdownLinks(file) {
@@ -120,7 +129,7 @@ const repositoryFiles = [
   .sort();
 const repositoryEntries = repositoryFiles.map((file) => ({
   path: file,
-  bytes: statSync(join(root, file)).size,
+  bytes: canonicalFileBytes(file).length,
   sha256: sha256(file),
 }));
 
