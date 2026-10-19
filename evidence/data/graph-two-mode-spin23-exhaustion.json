@@ -1,0 +1,47 @@
+{
+  "protocol": "graph-two-mode-spin23-exhaustion/1",
+  "date": "2026-10-20",
+  "model": "scaled cycle-graph Laplacian with a massive real scalar and three projected edge controls",
+  "selector": {
+    "kind": "lowest-nonzero-Laplacian-eigenspace",
+    "configurationDimension": 2,
+    "phaseSpaceDimension": 4,
+    "intrinsicAtSymmetricBasePoint": true,
+    "basisOrientationSelected": false,
+    "refinementFamily": [8, 16, 32, 64, 128]
+  },
+  "action": {
+    "quadraticForm": "S[q]=1/2 q^T(m^2 I+L_h)q",
+    "selectedResponse": "R0=(m^2+lambda1)I2",
+    "status": "derived-positive-real-isotropic-response",
+    "spectralActionStatus": "graph-field quadratic action, not a derivation from the full Chamseddine-Connes trace action"
+  },
+  "closure": {
+    "symmetryPreservingDimension": 3,
+    "targetDimension": 10,
+    "addressedEdgeControlCount": 3,
+    "addressedClosureDimension": 10,
+    "interpretation": "The intrinsic harmonic plane is insufficient; addressed anisotropic controls supply the missing generator directions."
+  },
+  "realForm": {
+    "staticReciprocalResponse": "H2(R)+",
+    "finiteFrequencyDampedResponse": "H2(C) or a complex Herglotz family",
+    "selector": "zero frequency, lossless reciprocity, or a separately established antiunitary real structure"
+  },
+  "refinement": {
+    "scaledLaplacian": "L_h=L/h^2 with h=2pi/n",
+    "continuumFirstEigenvalue": 1,
+    "continuumGapToSecondHarmonic": 3,
+    "criterion": "The first-harmonic spectral projector is stable while its isolation gap stays positive."
+  },
+  "promotion": {
+    "responseSpin23": "conditionally achieved after addressed-control closure",
+    "fundamentalSpacetimeSpin23": false,
+    "remainingDebts": [
+      "derive the addressed controls from the graph action rather than laboratory choice",
+      "construct a Lorentzian physical-state sector",
+      "derive stress observables and pole residues",
+      "show universality beyond the cycle family"
+    ]
+  }
+}
