@@ -11,6 +11,7 @@ This is **not a completed unified theory**. Established mathematics, reproducibl
 | General reader | [Edition 3.0 book preview](book/edition-3/README.md) |
 | Researcher | [Canonical corpus guide](corpus/README.md) |
 | Auditor or contributor | [Verification guide](verification/README.md) |
+| Visual explorer | [Interactive concept atlas](docs/concept-map/index.html) |
 
 The generated paged edition is available in [`docs/edition-3`](docs/edition-3/index.html). GitHub Pages deployment is prepared but requires a repository visibility or account-plan change while this repository remains private.
 
@@ -51,7 +52,9 @@ Run from the repository root:
 
 ```powershell
 node tooling/publication/generate_edition3_book_preview.mjs
+node tooling/publication/generate_concept_map.mjs
 node --test tests/publication/edition3_book_preview.test.mjs
+node --test tests/publication/concept_map.test.mjs
 node tooling/audit/audit_markdown_links.mjs
 node tooling/audit/audit_spin23_corpus_manifest.mjs --write
 ```

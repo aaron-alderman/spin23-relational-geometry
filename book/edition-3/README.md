@@ -21,10 +21,12 @@ The first volume identified Spin(2,3) as an exact hinge. This volume begins from
 9. [Result and reversal ledger](chapters/08-result-ledger.md) — Twelve retained findings
 10. [Research frontier](chapters/09-research-frontier.md) — Advance conditions and stop rules
 11. [Provenance and reading map](chapters/10-provenance-and-reading-map.md) — How to audit the book
+12. [Concept atlas](chapters/11-concept-atlas.md) — The programme as a navigable typed graph
 
 ## Other reading surfaces
 
 - [Open the live paged HTML edition](https://aaron-alderman.github.io/spin23-relational-geometry/)
+- [Open the interactive concept atlas](../../docs/concept-map/index.html)
 - [Inspect the paged HTML source](../../docs/edition-3/index.html)
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)

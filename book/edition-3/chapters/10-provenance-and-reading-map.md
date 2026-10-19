@@ -19,4 +19,4 @@ The generated book is a reading layer. If it conflicts with a cited research doc
 
 ---
 
-[← Research frontier](09-research-frontier.md) · [Contents](../README.md)
+[← Research frontier](09-research-frontier.md) · [Contents](../README.md) · [Concept atlas →](11-concept-atlas.md)
