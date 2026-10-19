@@ -22,6 +22,7 @@ const includedDirectories = [
   "orientation-claimipedia-pilot",
   "scripts",
   "sourcery-mcp-admission",
+  "spin23-action-pilot",
   "test",
 ];
 const excludedDirectories = new Set([

@@ -1,0 +1,81 @@
+{
+  "protocol": "a5-selector-particularity-boundary/1",
+  "exactTheorem": {
+    "statement": "For a G-equivariant selector f:D->X, any G-fixed input d can map only to a G-fixed output f(d). If X^G is empty, no deterministic selector exists.",
+    "finiteModel": "C4 acts transitively on four compass directions while the input datum is C4-fixed.",
+    "deterministicSelectorsTested": 4,
+    "equivariantDeterministicSelectors": 0
+  },
+  "minimalEscape": {
+    "covariantOrientedInputs": 4,
+    "mapsExhaustivelyTested": 256,
+    "equivariantMapsFound": 4,
+    "equivariantMaps": [
+      [
+        1,
+        2,
+        3,
+        0
+      ],
+      [
+        2,
+        3,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "interpretation": "One transforming orientation datum is sufficient; the law remains equivariant, but the input is no longer symmetry-fixed."
+  },
+  "stochasticBoundary": {
+    "invariantDistribution": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "invariant": true,
+    "selectsUniqueOutcome": false
+  },
+  "innerConjugationBoundary": {
+    "blockSignAssignmentsTested": 32,
+    "mirrorClosedAssignments": 32,
+    "conclusion": "Every inner block-sign grade assigns the same grade to an arrow and its reverse."
+  },
+  "universalRealityBoundary": {
+    "simultaneouslyRealCpOddDeterminant": {
+      "re": 0,
+      "im": 0
+    },
+    "complexHermitianCpOddDeterminant": {
+      "re": 0,
+      "im": 12
+    },
+    "conclusion": "Extending one ordinary real structure to the full three-family Yukawa sector forces this CP-odd invariant to vanish, while complex Hermitian data need not."
+  },
+  "scope": {
+    "proves": [
+      "symmetric input cannot canonically select a point in a fixed-point-free orbit",
+      "a symmetric stochastic law can return an orbit average but not a unique realized member",
+      "inner block-sign conjugation cannot orient endomorphism arrows",
+      "a universal ordinary real selector is incompatible with nonzero flavor CP data"
+    ],
+    "doesNotProve": [
+      "that no sector-limited, twisted, broken, anisotropic, boundary-supplied, historical, anomaly-induced, or index selector exists",
+      "that an observed outcome requires a theological cause",
+      "that dagger-reverse blocks are necessarily independent physical mirror fermions"
+    ]
+  },
+  "passed": true
+}

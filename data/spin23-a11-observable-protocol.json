@@ -1,0 +1,161 @@
+{
+  "schema": "spin23.a11-holonomy-response-protocol/1",
+  "protocolId": "A11-Z3-H2-PREREG-1",
+  "date": "2026-10-19",
+  "status": "protocol-ready-synthetic-only",
+  "claimBoundary": {
+    "microscopicDefectToStressCouplingDerived": false,
+    "physicalDataAvailable": false,
+    "spin23DynamicalSymmetryEstablished": false,
+    "physicalAdmission": false
+  },
+  "question": "Do fixed probes produce a positivity-preserving response direction transverse to the preregistered two-form-factor plane, and does that transverse component reproducibly covary with a controlled Z3 holonomy sector?",
+  "design": {
+    "holonomySectors": [0, 1, 2],
+    "sectorAngles": [0, 2.0943951023931953, 4.1887902047863905],
+    "minimumIndependentRunsPerSector": 3,
+    "randomizedSectorOrder": true,
+    "blindedPrimaryAnalysis": true,
+    "sameFrequencyGridRequired": true,
+    "sameProbeDefinitionHashRequired": true,
+    "sameContactSchemeHashRequired": true,
+    "sameCalibrationMapHashRequired": true,
+    "planeSource": "theory-fixed G2,G0 or an independent training set frozen before holonomy labels are revealed",
+    "heldOutEvaluationRequired": true
+  },
+  "response": {
+    "recordType": "real symmetric 2x2 spectral response C_h(omega)",
+    "coordinates": "v(C)=(C11,C22,sqrt(2)C12)",
+    "positivity": "C11>=0, C22>=0 and det(C)>=-epsilon_psd in every admitted bin",
+    "rho": "det(C)/tr(C)^2",
+    "rhoRangeForPositiveSemidefinite2x2": [0, 0.25],
+    "planeNormal": "w=normalize(v(G2) cross v(G0))",
+    "planeResidual": "ell(C)=w dot v(C)/norm(v(C))",
+    "sectorHarmonics": {
+      "cosine": "D_c=(2/3) sum_h cos(2*pi*h/3) C_h",
+      "sine": "D_s=(2/3) sum_h sin(2*pi*h/3) C_h",
+      "transverseAmplitude": "A_perp=sqrt((w dot v(D_c))^2+(w dot v(D_s))^2)/mean_h norm(v(C_h))"
+    }
+  },
+  "calibrationInvariants": [
+    "rank of the response span under one common nonsingular probe recalibration C->A C A^T",
+    "linear dependence coefficients among response matrices under one common nonsingular probe recalibration",
+    "det(C_h)/det(C_0) at fixed frequency under one common nonsingular probe recalibration",
+    "tr(C_0^-1 C_h) at fixed frequency under one common nonsingular probe recalibration",
+    "sector contrasts are unchanged by one sector-independent additive contact matrix"
+  ],
+  "nonInvariants": [
+    "rho is not invariant under a general GL(2,R) probe recalibration and is admissible only with the calibrated probe basis held fixed",
+    "the numerical magnitude of ell is not invariant under a general GL(2,R) probe recalibration",
+    "a plane fitted after seeing holonomy labels is not an admissible null"
+  ],
+  "identifiability": {
+    "referencePlaneRank": 2,
+    "minimumReferenceWedgeNorm": 0.000001,
+    "calibrationMapMinimumAbsoluteDeterminant": 0.000001,
+    "fullResponseRankForThirdDirection": 3,
+    "minimumFrequenciesPassing": 2,
+    "minimumIndependentReplicationsPassing": 2,
+    "requireSectorEffectBeyondNullEnsemble": true,
+    "requireEffectAboveResolutionFloor": true
+  },
+  "thresholds": {
+    "epsilonPsdRelative": 1e-10,
+    "maximumShamTransverseAmplitude": 0.001,
+    "minimumPositiveTransverseAmplitude": 0.01,
+    "familywiseAlpha": 0.01,
+    "minimumNullPower": 0.9,
+    "maximumProbeDriftRelative": 0.001,
+    "maximumCalibrationDriftRelative": 0.001
+  },
+  "requiredControls": [
+    "sector labels randomized and primary statistic computed blind",
+    "sham switching with unchanged holonomy",
+    "repeat the three-sector cycle in reverse order",
+    "matched temperature, drive, geometry, material state and frequency bins",
+    "spectral-discontinuity analysis or explicit proof that contact terms are sector independent",
+    "common calibrated probe map checked before and after every cycle",
+    "positive-semidefinite response in every retained bin",
+    "independent implementation or experimental replication"
+  ],
+  "decisionRules": {
+    "invalidRun": [
+      "positivity fails beyond the preregistered numerical or measurement tolerance",
+      "probe, contact-scheme or calibration hashes differ across sectors",
+      "reference plane is rank deficient or was fitted on the labelled test data",
+      "sham switching exceeds its transverse-amplitude threshold",
+      "environmental or numerical covariates are confounded with sector"
+    ],
+    "ambientOnly": [
+      "the admitted response span remains rank at most two",
+      "the transverse statistic is consistent with the powered null bound",
+      "an apparent effect disappears under spectral/contact control",
+      "an apparent effect follows calibration or probe drift rather than holonomy"
+    ],
+    "operationalAdvance": [
+      "all retained response matrices remain positive semidefinite",
+      "the held-out response span has rank three above the resolution floor",
+      "A_perp exceeds the preregistered null threshold in at least two frequency bins",
+      "the effect repeats in at least two independent runs and survives reversed sector order",
+      "sham, contact and common-calibration controls remain null",
+      "a microscopic model subsequently predicts the same sector harmonic without fitting it"
+    ]
+  },
+  "stopConditions": {
+    "stopAndRepair": [
+      "any invalidRun condition is met",
+      "the Outcome Dynamics representation gate remains open for the numerical observable being used",
+      "the analysis code or thresholds change after unblinding without a new protocol version"
+    ],
+    "stopThisBranch": [
+      "two independent, adequately powered implementations bound A_perp below the declared effect region for the same derived microscopic coupling and frequency window",
+      "the only transverse effect requires sector-dependent probes, contact terms or calibration",
+      "the proposed holonomy cannot be physically prepared or distinguished"
+    ],
+    "doNotOverinterpret": "Without a derived microscopic coupling and its effect-size/frequency prediction, a null result falsifies this operational A11 realization in the tested window, not every possible Spin(2,3) theory."
+  },
+  "evidenceRecordSchema": {
+    "requiredRunFields": [
+      "runId",
+      "implementationId",
+      "holonomySector",
+      "sectorOrderIndex",
+      "frequencyGrid",
+      "responseMatrices",
+      "uncertaintyMatrices",
+      "probeDefinitionHash",
+      "contactSchemeHash",
+      "calibrationMapHash",
+      "environmentStateHash",
+      "blindLabel",
+      "rawDataHash"
+    ],
+    "requiredAnalysisFields": [
+      "protocolHash",
+      "frozenPlaneBasis",
+      "planeWedgeNorm",
+      "positivityMargins",
+      "rhoBySectorAndFrequency",
+      "planeResiduals",
+      "cosineAndSineContrasts",
+      "transverseAmplitude",
+      "responseSpanSingularValues",
+      "shamStatistic",
+      "calibrationInvariantChecks",
+      "decision",
+      "softwareEnvironmentHash"
+    ]
+  },
+  "syntheticFixtures": {
+    "referenceStructures": {
+      "G2": [[1.4, 0.35], [0.35, 0.9]],
+      "G0": [[0.3, -0.12], [-0.12, 0.55]],
+      "Gx": [[0.8, 0.41], [0.41, 1.2]]
+    },
+    "frequencyIndices": [0, 1, 2, 3],
+    "nullFixture": "sector-dependent nonnegative combinations of G2 and G0 only",
+    "positiveFixture": "the same plane family plus a positive Gx coefficient with a Z3 first harmonic",
+    "commonContactMatrix": [[0.07, 0.01], [0.01, 0.05]],
+    "commonCalibrationMap": [[1.1, 0.2], [-0.1, 0.9]]
+  }
+}

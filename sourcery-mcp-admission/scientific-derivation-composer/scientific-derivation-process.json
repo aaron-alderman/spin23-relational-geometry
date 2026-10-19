@@ -1,5 +1,5 @@
 {
-  "protocol": "scientific-derivation-composition/common-algebra-1",
+  "protocol": "scientific-derivation-composition/common-algebra-2",
   "scope": "Bounded typed path composition for scientific claim proposals. Results are candidates with explicit assumptions, information losses and rejection receipts; they are not entailment, empirical confirmation or corpus admission.",
   "program": [
     { "let": "sourceMatches", "value": ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$request.query.source"]] },
@@ -16,11 +16,24 @@
       "toExists": ["eq", ["count", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.to"]]], 1],
       "fromSignatureMatches": ["eq", "$r.fromSignature", ["at", ["map", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.from"]], "o", "$o.signature"], 0]],
       "toSignatureMatches": ["eq", "$r.toSignature", ["at", ["map", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.to"]], "o", "$o.signature"], 0]],
+      "fromDimensionMatches": ["eq", "$r.fromDimension", ["at", ["map", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.from"]], "o", "$o.dimension"], 0]],
+      "toDimensionMatches": ["eq", "$r.toDimension", ["at", ["map", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.to"]], "o", "$o.dimension"], 0]],
       "authorityBounded": ["and", ["eq", "$r.authority.proposalOnly", true], ["eq", "$r.authority.entails", false], ["eq", "$r.authority.empiricalAuthority", false]],
       "notAnalogy": ["eq", "$r.analogyOnly", false],
       "evidencePresent": ["not", ["eq", ["count", "$r.evidenceRefs"], 0]],
       "lossDeclared": ["or", ["not", ["eq", "$r.kind", "projection"]], ["not", ["eq", ["count", "$r.losses"], 0]]],
       "contactSafe": ["not", ["not", ["or", ["not", ["eq", "$r.kind", "analytic-continuation"]], ["includes", "$r.removes", "local-contact-polynomials"]]]],
+      "dimensionRuleRecognized": ["eq", "$r.dimensionRule", "si-base-exponent-delta"],
+      "dimensionallyValid": ["and",
+        ["eq", "$r.toDimension.mass", ["add", "$r.fromDimension.mass", "$r.dimensionDelta.mass"]],
+        ["eq", "$r.toDimension.length", ["add", "$r.fromDimension.length", "$r.dimensionDelta.length"]],
+        ["eq", "$r.toDimension.time", ["add", "$r.fromDimension.time", "$r.dimensionDelta.time"]],
+        ["eq", "$r.toDimension.current", ["add", "$r.fromDimension.current", "$r.dimensionDelta.current"]],
+        ["eq", "$r.toDimension.temperature", ["add", "$r.fromDimension.temperature", "$r.dimensionDelta.temperature"]],
+        ["eq", "$r.toDimension.amount", ["add", "$r.fromDimension.amount", "$r.dimensionDelta.amount"]],
+        ["eq", "$r.toDimension.luminousIntensity", ["add", "$r.fromDimension.luminousIntensity", "$r.dimensionDelta.luminousIntensity"]]
+      ],
+      "dimensionChangeDeclared": ["not", ["not", ["or", ["eq", "$r.fromDimension", "$r.toDimension"], ["includes", "$r.changes", "dimension"]]]],
       "domainChangeDeclared": ["or", ["eq", "$r.fromSignature.domain", "$r.toSignature.domain"], ["includes", "$r.changes", "domain"]],
       "rankChangeDeclared": ["or", ["eq", "$r.fromSignature.rank", "$r.toSignature.rank"], ["includes", "$r.changes", "rank"]],
       "varianceChangeDeclared": ["or", ["eq", "$r.fromSignature.variance", "$r.toSignature.variance"], ["includes", "$r.changes", "variance"]],
@@ -32,7 +45,7 @@
       "cpChangeDeclared": ["or", ["eq", "$r.fromSignature.cp", "$r.toSignature.cp"], ["includes", "$r.changes", "cp"]],
       "supportChangeDeclared": ["or", ["eq", "$r.fromSignature.support", "$r.toSignature.support"], ["includes", "$r.changes", "support"]]
     }] },
-    { "let": "validRules", "value": ["map", ["filter", "$ruleChecks", "c", ["and", "$c.fromExists", "$c.toExists", "$c.fromSignatureMatches", "$c.toSignatureMatches", "$c.authorityBounded", "$c.notAnalogy", "$c.evidencePresent", "$c.lossDeclared", "$c.contactSafe", "$c.domainChangeDeclared", "$c.rankChangeDeclared", "$c.varianceChangeDeclared", "$c.basisChangeDeclared", "$c.regimeChangeDeclared", "$c.orderChangeDeclared", "$c.schemeChangeDeclared", "$c.symmetryChangeDeclared", "$c.cpChangeDeclared", "$c.supportChangeDeclared"]], "c", "$c.rule"] },
+    { "let": "validRules", "value": ["map", ["filter", "$ruleChecks", "c", ["and", "$c.fromExists", "$c.toExists", "$c.fromSignatureMatches", "$c.toSignatureMatches", "$c.fromDimensionMatches", "$c.toDimensionMatches", "$c.authorityBounded", "$c.notAnalogy", "$c.evidencePresent", "$c.lossDeclared", "$c.contactSafe", "$c.dimensionRuleRecognized", "$c.dimensionallyValid", "$c.dimensionChangeDeclared", "$c.domainChangeDeclared", "$c.rankChangeDeclared", "$c.varianceChangeDeclared", "$c.basisChangeDeclared", "$c.regimeChangeDeclared", "$c.orderChangeDeclared", "$c.schemeChangeDeclared", "$c.symmetryChangeDeclared", "$c.cpChangeDeclared", "$c.supportChangeDeclared"]], "c", "$c.rule"] },
     { "let": "invalidRules", "value": ["filter", "$ruleChecks", "c", ["not", ["includes", ["map", "$validRules", "r", "$r.id"], "$c.rule.id"]]] },
     { "let": "initialPath", "value": { "current": "$request.query.source", "steps": [], "assumptions": [], "losses": [], "evidenceRefs": [] } },
     { "fold": ["range", "$request.query.maxDepth"], "as": "depth", "accumulator": "search", "initial": { "frontier": ["list", "$initialPath"], "accepted": [] }, "steps": [
@@ -94,7 +107,7 @@
       }
     } },
     { "let": "result", "value": {
-      "protocol": "scientific-derivation-composition/1",
+      "protocol": "scientific-derivation-composition/2",
       "query": "$request.query",
       "candidates": "$candidates",
       "invalidRules": "$invalidRules",
@@ -105,6 +118,8 @@
         "objectCount": ["count", "$request.graph.objects"],
         "transformationCount": ["count", "$request.graph.transformations"],
         "validTransformationCount": ["count", "$validRules"],
+        "dimensionGate": "required-si-base-exponent-delta",
+        "dimensionRejectedTransformationCount": ["count", ["filter", "$ruleChecks", "c", ["not", "$c.dimensionallyValid"]]],
         "candidateCount": ["count", "$candidates"],
         "proposalOnly": true,
         "entails": false,

@@ -1,0 +1,181 @@
+{
+  "schema": "spin23.typed-candidate-action-pilot/1",
+  "candidateId": "spin23-effective-closure-action-v1",
+  "date": "2026-10-19",
+  "scope": "effective Standard-Model-plus-U1X action with a level-three BF defect and an ambient H2R response geometry",
+  "claimBoundary": {
+    "fundamentalSpin23ActionDerived": false,
+    "standardModelDerived": false,
+    "newPhysicalEffectObserved": false,
+    "physicalAdmission": false
+  },
+  "statusVocabulary": ["implemented", "exact", "conditional", "missing"],
+  "sources": [
+    "1199_minimal_typed_closure_action_v1_separates_the_derived_bf_sector_from_the_still_spurionic_flavour_response.md",
+    "62_standard_model_anomaly_gate.md",
+    "74_real_selector_cp_violation_obstruction.md",
+    "206_conserved_stress_spectral_quotient_to_h2_response.md",
+    "208_stress_spectral_family_dimension_and_ambient_sp4_obstruction.md",
+    "1215_any_number_of_fully_integrated_isotropic_links_remains_blind_to_the_complementary_frame.md",
+    "1216_planckian_tj_transport_is_a_scalar_detailed_balance_ray_and_a_testable_two_current_spin23_response_extension.md"
+  ],
+  "typedFields": [
+    {"id": "P", "type": "Hermitian rank-one projector on complex family space C3", "role": "selected lepton-family line", "origin": "spurionic", "status": "conditional"},
+    {"id": "a", "type": "compact U(1)_X one-form connection", "role": "determinant-neutral family-sensitive gauge connection", "origin": "action field", "status": "implemented"},
+    {"id": "s", "type": "complex scalar section of charge-three line bundle", "role": "Higgs U(1)_X to the split Z3 remnant", "origin": "action field", "status": "implemented"},
+    {"id": "b", "type": "compact infrared two-form", "role": "dual of the compact flavon phase", "origin": "derived effective field", "status": "conditional"},
+    {"id": "g", "type": "Lorentzian metric and stress source", "role": "defines stress response", "origin": "background/source", "status": "implemented"},
+    {"id": "K", "type": "neutral cross-Peirce family maps", "role": "carry otherwise undetermined flavour direction", "origin": "spurionic", "status": "conditional"}
+  ],
+  "action": {
+    "symbol": "S_v1",
+    "status": "implemented",
+    "terms": [
+      "Standard Model gauge and matter kinetic terms",
+      "U(1)_X Maxwell and hypercharge kinetic-mixing terms",
+      "projector sigma-model term Tr(DP DP)",
+      "Higgs and charge-three flavon kinetic and potential terms",
+      "flavon-dressed Peirce-block Yukawa and Majorana terms"
+    ],
+    "knownInputsNotDerived": ["P", "K", "projector-response tensors H_a", "defect orientation", "boundary stress probes"]
+  },
+  "nodes": [
+    {
+      "id": "A0",
+      "stage": "candidate-action",
+      "label": "Typed four-dimensional effective action S_v1",
+      "status": "implemented",
+      "gate": true,
+      "passed": true,
+      "dependsOn": [],
+      "evidence": ["1199_minimal_typed_closure_action_v1_separates_the_derived_bf_sector_from_the_still_spurionic_flavour_response.md"]
+    },
+    {
+      "id": "A1",
+      "stage": "anomaly",
+      "label": "Displayed SM plus three nu_R U(1)_X charge assignment is anomaly-free",
+      "status": "exact",
+      "gate": true,
+      "passed": true,
+      "dependsOn": ["A0"],
+      "evidence": ["62_standard_model_anomaly_gate.md", "scripts/verify-sm-one-generation-anomalies.mjs"]
+    },
+    {
+      "id": "A2",
+      "stage": "lorentz-reduction",
+      "label": "Compact charge-three Higgs phase and S1/Z2 parity reduce to level-three BF defect fields a_mu and c_mu",
+      "status": "conditional",
+      "gate": true,
+      "passed": false,
+      "dependsOn": ["A0"],
+      "missingEvidence": ["derived compactification dynamics", "defect orientation", "proof that all charged defect matter is gapped"],
+      "evidence": ["1199_minimal_typed_closure_action_v1_separates_the_derived_bf_sector_from_the_still_spurionic_flavour_response.md"]
+    },
+    {
+      "id": "A3",
+      "stage": "spin23-geometry",
+      "label": "Defect causal response carrier is H2(R) with conformal completion Sp(4,R) locally isomorphic to Spin0(2,3)",
+      "status": "exact",
+      "gate": false,
+      "passed": true,
+      "dependsOn": ["A2"],
+      "boundary": "This identifies ambient response geometry, not a microscopic or fundamental symmetry.",
+      "evidence": ["1199_minimal_typed_closure_action_v1_separates_the_derived_bf_sector_from_the_still_spurionic_flavour_response.md"]
+    },
+    {
+      "id": "A4",
+      "stage": "physical-state",
+      "label": "Full Lorentzian kinetic Hessian is ghost-free and the boundary Hilbert space is positive",
+      "status": "missing",
+      "gate": true,
+      "passed": false,
+      "dependsOn": ["A0", "A2"],
+      "missingEvidence": ["gauge-fixed quadratic action", "BRST or constraint cohomology", "boundary-condition self-adjointness", "spectral positivity"]
+    },
+    {
+      "id": "A5",
+      "stage": "chirality-selector",
+      "label": "A source-derived selector removes mirrors while preserving anomaly cancellation and nonzero flavour CP violation",
+      "status": "missing",
+      "gate": true,
+      "passed": false,
+      "dependsOn": ["A0", "A1"],
+      "missingEvidence": ["complete selected chiral module", "selector dynamics", "nonzero CP-odd invariant after selection"],
+      "evidence": ["74_real_selector_cp_violation_obstruction.md"]
+    },
+    {
+      "id": "A6",
+      "stage": "standard-model-limit",
+      "label": "Low-energy spectrum and couplings reduce to the observed chiral Standard Model",
+      "status": "missing",
+      "gate": true,
+      "passed": false,
+      "dependsOn": ["A1", "A4", "A5"],
+      "missingEvidence": ["mirror decoupling", "three-family Yukawa and Majorana solution", "measured gauge and Higgs matching", "heavy U(1)_X and kinetic-mixing bounds"]
+    },
+    {
+      "id": "A7",
+      "stage": "stress-operator",
+      "label": "Variation with respect to g defines a conserved gauge-consistent stress operator",
+      "status": "conditional",
+      "gate": true,
+      "passed": false,
+      "dependsOn": ["A0", "A4"],
+      "missingEvidence": ["explicit improved stress tensor", "contact-term prescription", "renormalized Ward-identity audit"]
+    },
+    {
+      "id": "A8",
+      "stage": "positive-response",
+      "label": "Two conserved probes of a positive spectral kernel yield a positive H2(R) Schur response",
+      "status": "exact",
+      "gate": true,
+      "passed": true,
+      "dependsOn": ["A7"],
+      "boundary": "Exact after conservation, range compatibility and spectral positivity are supplied; it does not calculate the candidate action's spectral densities.",
+      "evidence": ["206_conserved_stress_spectral_quotient_to_h2_response.md", "scripts/verify_conserved_stress_h2_response.mjs"]
+    },
+    {
+      "id": "A9",
+      "stage": "standard-model-response",
+      "label": "The complete Standard Model limit supplies renormalized spin-two and spin-zero spectral densities for canonical probes",
+      "status": "missing",
+      "gate": true,
+      "passed": false,
+      "dependsOn": ["A6", "A7"],
+      "missingEvidence": ["rho_2", "rho_0", "canonical physical probes", "scheme-independent observable"]
+    },
+    {
+      "id": "A10",
+      "stage": "observable",
+      "label": "Compute rho(omega)=det(C)/tr(C)^2 and the fixed-probe plane residual",
+      "status": "implemented",
+      "gate": false,
+      "passed": true,
+      "dependsOn": ["A8", "A9"],
+      "boundary": "The diagnostic exists; the candidate action does not yet supply physical input data.",
+      "evidence": ["208_stress_spectral_family_dimension_and_ambient_sp4_obstruction.md", "scripts/verify_stress_spectral_family_dimension.mjs"]
+    },
+    {
+      "id": "A11",
+      "stage": "branch-test",
+      "label": "A Z3-holonomy-correlated third positive response direction violates the vacuum plane null while fixed probes and contact scheme are held constant",
+      "status": "missing",
+      "gate": true,
+      "passed": false,
+      "dependsOn": ["A2", "A9", "A10"],
+      "missingEvidence": ["microscopic defect-to-stress coupling", "holonomy-resolved spectra", "null ensemble", "independent numerical or experimental replication"]
+    }
+  ],
+  "branchDiscriminatingTarget": {
+    "observable": "paired measurements of rho(omega) and L(C(omega)) across controlled Z3 holonomy sectors",
+    "conventionalNull": "fixed parity-even Lorentz-invariant probes span at most the G2,G0 plane, so L(C)=0; conformal data lie on one ray",
+    "candidatePositiveSignature": "a third positive response direction with nonzero L(C), reproducibly covarying with Z3 holonomy and not removable by contact terms or probe recalibration",
+    "ambientOnlyOutcome": "no third direction or no holonomy correlation; Spin(2,3) remains ambient response geometry",
+    "status": "specified-not-predicted"
+  },
+  "admissionPolicy": {
+    "requiredGateIds": ["A0", "A1", "A2", "A4", "A5", "A6", "A7", "A8", "A9", "A11"],
+    "allowedPassingStatuses": ["implemented", "exact"],
+    "expectedCurrentBlockers": ["A2", "A4", "A5", "A6", "A7", "A9", "A11"]
+  }
+}

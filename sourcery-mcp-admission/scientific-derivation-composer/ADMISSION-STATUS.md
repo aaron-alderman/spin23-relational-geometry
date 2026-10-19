@@ -23,6 +23,17 @@ The reflected MCP operation is `scientific_derivation_compose`, with two actions
 
 The common algebra tracks domain, tensor rank, variance, basis, regime, perturbative order, renormalization scheme, symmetry, CP sector, source support, assumptions, information loss, and evidence. Search is bounded to 128 objects, 256 transformations, and depth 6.
 
+## Local next revision: dimensional gate
+
+The checked-in composer grammar now includes a fail-closed dimensional-analysis
+gate for a future successor build. Scientific objects declare named SI-base
+exponents, and transformations must supply an endpoint-matching exponent delta.
+Dimensionally invalid edges remain in the rejection receipt. The Standard Model
+pilot includes one such negative fixture and a nonzero action-to-stress dimension
+change. This local revision is tested but has not itself been installed into the
+protected runtime; the selected admitted generation remains v17 and its authority
+boundary is unchanged.
+
 ## Claimipedia workbench
 
 Every successful result includes `claimipedia-scientific-derivation-workbench/1` in `read-only-proposal-review` mode, with panes for:

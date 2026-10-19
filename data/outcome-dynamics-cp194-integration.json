@@ -1,0 +1,91 @@
+{
+  "schema": "spin23.outcome-dynamics-integration/1",
+  "importedAt": "2026-10-19",
+  "sourceRepository": "sourcery/sourcery-applications",
+  "sourceRepositoryHead": "1ea11bf7fc1f521c4a1eee54409966347ecc3057",
+  "sourceCheckpoint": 194,
+  "sourceAuditSchema": "claimipedia.outcome_dynamics.mass_formulation_control.audit.v1",
+  "sourceAuditPassed": true,
+  "sourceFilesCommittedAtImport": false,
+  "scope": "model-local bonded GaAs active/support finite-element mass-formulation control",
+  "method": {
+    "activeElementFamily": "Q1(x,y) x Q2(z)",
+    "massFormulations": ["row-sum-lumped", "consistent"],
+    "activeZNodes": [5, 7, 9],
+    "allOtherNumericalAndPhysicalInputsHeld": true,
+    "frequencyHz": 1000000,
+    "patternId": "p0:n1n2:relative-plus"
+  },
+  "consistentAdjacent": [
+    {
+      "fromActiveZNodes": 5,
+      "toActiveZNodes": 7,
+      "stressDirectionDifference": 0.010052341547432852,
+      "chargeRelativeDifference": 0.020858463261892248,
+      "opticalRelativeDifference": 0.020046712218397295,
+      "generalizedDisplacementRelativeDifference": 0.05041135755103635
+    },
+    {
+      "fromActiveZNodes": 7,
+      "toActiveZNodes": 9,
+      "stressDirectionDifference": 0.000965130575310522,
+      "chargeRelativeDifference": 0.0006347725412195806,
+      "opticalRelativeDifference": 0.000504378966678691,
+      "generalizedDisplacementRelativeDifference": 0.0022196941250391053
+    }
+  ],
+  "massSensitivity": [
+    {
+      "activeZNodes": 5,
+      "stressDirectionDifference": 0.08156286732042772,
+      "chargeRelativeDifference": 0.6915386283988122,
+      "opticalRelativeDifference": 0.7213951904322445,
+      "generalizedDisplacementRelativeDifference": 0.651087332417841
+    },
+    {
+      "activeZNodes": 7,
+      "stressDirectionDifference": 0.08499625936117332,
+      "chargeRelativeDifference": 0.6921044572097983,
+      "opticalRelativeDifference": 0.7219756860457407,
+      "generalizedDisplacementRelativeDifference": 0.6493647484183693
+    },
+    {
+      "activeZNodes": 9,
+      "stressDirectionDifference": 0.0853598642491051,
+      "chargeRelativeDifference": 0.6922012130481949,
+      "opticalRelativeDifference": 0.722072309665154,
+      "generalizedDisplacementRelativeDifference": 0.6492228372448231
+    }
+  ],
+  "summary": {
+    "consistentConverged": true,
+    "massFormulationsAgreeAtFinest": false,
+    "massRepresentationMaterialAtCurrentResolution": true,
+    "previousElementArtifactDiagnosisRetained": true,
+    "reciprocal": true,
+    "globalMultifrequencyConvergenceEstablished": false,
+    "massGate": "open",
+    "nextNumericalGate": "consistent-mass-lateral-and-support-refinement",
+    "physicalMultifrequencyIdentification": "no-go",
+    "physicalAdmission": false,
+    "physicalEffectObserved": false
+  },
+  "validation": {
+    "dedicatedNodeTestsPassed": 3,
+    "dedicatedNodeTestsFailed": 0,
+    "testRuntimeMilliseconds": 189185.3709,
+    "independentAuditRerunCompleted": true
+  },
+  "sourceHashesSha256": {
+    "applications/claimipedia/research/outcome-dynamics-v0.3-meta/mass-formulation-control.mjs": "4ab91f4c489d9a5305ee62951ebdc45467a436515b58e7ef7dd8a9d31ebb8d9d",
+    "applications/claimipedia/research/outcome-dynamics-v0.3-meta/mass-formulation-control.rel": "29bcc2f31265e4f9003849ced2777e8cb7076694bb072f6949cf778c1ca138d6",
+    "applications/claimipedia/research/outcome-dynamics-v0.3-meta/USE-CHECKPOINT-194.md": "5b1034fece06b79d942bff99f52b7516128f285dce3cb65b03e75b43770f9b3a",
+    "applications/claimipedia/research/outcome-dynamics-v0.3-meta/gaas-monolithic-active-support-operator.mjs": "60ef6fc9dd0c1dfda63aff6448a2c6e927cd001b3f0442709500a97bb30cb443",
+    "applications/claimipedia/research/outcome-dynamics-v0.3-meta/through-thickness-p-refinement-control.mjs": "642e74286b9497585017aa317153325747eeff1165749509990d567e1ac688ee",
+    "applications/claimipedia/research/outcome-dynamics-v0.3-meta/reciprocal-force-pattern-rank-design.mjs": "c3b1260b1f5c1b10b028b24144f6f81b6f2def47b419259846bbf3966a4cae0b",
+    "applications/claimipedia/research/outcome-dynamics-v0.3-meta/epotek-353nd-bond-source.json": "a7bd3b375e5e3779e2e006342734ad3b8beaab91b75378f91cb16d4fb6814d13",
+    "applications/claimipedia/research/outcome-dynamics-v0.3-meta/fused-silica-material-source.json": "df4bed707d1988177e8f13ecd6ce018d82cc24fc0965357a0af2200565004fa4",
+    "test/claimipedia-outcome-dynamics-v03-mass-formulation-control.test.mjs": "b7bb40d84acd89a8cc528ed20f6495a44d2b3cf4bd8d535c7f9314d1bd25b572"
+  }
+}
+

@@ -1,0 +1,130 @@
+{
+  "schema": "spin23.a4-physical-state-audit/1",
+  "auditId": "spin23-a4-physical-state-audit-v1",
+  "date": "2026-10-19",
+  "candidateId": "spin23-effective-closure-action-v1",
+  "sources": [
+    "spin23-action-pilot/candidate-action-v1.json",
+    "1199_minimal_typed_closure_action_v1_separates_the_derived_bf_sector_from_the_still_spurionic_flavour_response.md",
+    "01_standard_model_as_stress_energy_full_analysis.md",
+    "206_conserved_stress_spectral_quotient_to_h2_response.md"
+  ],
+  "claimBoundary": {
+    "fullGaugeFixedHessianAvailable": false,
+    "brstOrDiracCohomologyAvailable": false,
+    "boundaryDomainSpecified": false,
+    "literalTwoTimeTheoryCertified": false,
+    "responseGeometryAddsSpacetimeDegreesOfFreedom": false,
+    "a4Passed": false,
+    "physicalAdmission": false
+  },
+  "ontologySplit": {
+    "literalSpacetime": {
+      "meaning": "Spin(2,3) acts on a five-dimensional metric with two physical timelike directions.",
+      "minimalTest": "A free scalar Fourier mode with nonzero second-time frequency has m_eff^2 = m^2 - omega_2^2.",
+      "result": "fails-naive-realization",
+      "scope": "This rejects the unconstrained literal realization, not every possible constrained two-time theory.",
+      "repairBurden": "Supply a closed first-class constraint or gauge symmetry that removes every physical second-time momentum mode and then prove positive cohomology and a well-posed 3+1 initial-value problem."
+    },
+    "responseGeometry": {
+      "meaning": "Spin0(2,3) is the conformal completion of the positive H2(R) response cone.",
+      "minimalTest": "No second spacetime time or additional propagating coordinate is introduced.",
+      "result": "no-spin23-specific-ghost-burden",
+      "scope": "This does not certify the microscopic four-dimensional action; it only prevents ambient response geometry from being misread as an extra physical time."
+    }
+  },
+  "informationDeficit": {
+    "verdict": "exactly-underdetermined",
+    "reason": "The action is a typed term inventory, not a gauge-fixed quadratic functional with numerical coefficients, a selected vacuum, a constraint complex, and operator domains.",
+    "missing": [
+      "metric and kinetic-sign convention applied consistently to every term",
+      "numerical gauge couplings and kinetic-mixing coefficient",
+      "complete scalar/projector potential and a stationary vacuum",
+      "quadratic fluctuation operator including gauge fixing",
+      "BRST differential or Dirac first-class and second-class constraint algebra",
+      "boundary conditions and the domain of each kinetic operator",
+      "gauge-invariant pole locations and residues",
+      "dynamical-gravity action and sign, if the metric is not merely a source"
+    ],
+    "witnessPair": {
+      "sharedDeclaredForm": "In the normalization -B_Y^2/(4gY^2)-f_X^2/(4eX^2)-chi f_X B_Y/2, K = [[1/gY^2, chi], [chi, 1/eX^2]] for the two Abelian field strengths.",
+      "healthy": {"gY": 1, "eX": 1, "chi": 0.2, "eigenvalues": [0.8, 1.2]},
+      "ghostly": {"gY": 1, "eX": 1, "chi": 1.2, "eigenvalues": [-0.2, 2.2]},
+      "conclusion": "Both instantiate the displayed term inventory, so that inventory alone cannot decide A4."
+    },
+    "domainWitness": {
+      "operator": "-d^2/dx^2 on the half-line",
+      "positiveDomain": "Dirichlet boundary data has nonnegative spectrum.",
+      "negativeDomain": "The self-adjoint Robin condition psi'(0)=-kappa psi(0), kappa>0, admits psi=exp(-kappa x) with eigenvalue -kappa^2.",
+      "conclusion": "A differential expression, and even self-adjointness alone, does not determine positivity without the boundary domain."
+    }
+  },
+  "maximalDeclaredQuadraticSubsector": [
+    {
+      "sector": "Standard Model",
+      "localResult": "conditional-baseline",
+      "test": "Use the ordinary BRST-positive Standard Model as an input baseline; it is not rederived by S_v1.",
+      "conditions": ["standard gauge fixing and BRST cohomology", "ordinary Hermitian Yukawa completion"]
+    },
+    {
+      "sector": "U1Y-U1X gauge kinetic block",
+      "localResult": "conditional-pass",
+      "test": "The real symmetric kinetic matrix must be positive definite.",
+      "conditions": ["gY^2 > 0", "eX^2 > 0", "chi^2 < 1/(gY^2 eX^2)"],
+      "falsifier": "A nonpositive eigenvalue after kinetic diagonalization."
+    },
+    {
+      "sector": "charge-three flavon radial mode",
+      "localResult": "conditional-pass",
+      "test": "For V=-mu_s^2 |s|^2 + lambda_s |s|^4 and s=(v+rho)e^{i theta}/sqrt(2), the broken vacuum has v^2=mu_s^2/lambda_s and m_rho^2=2 mu_s^2.",
+      "conditions": ["mu_s^2 > 0", "lambda_s > 0", "positive scalar kinetic coefficient"],
+      "falsifier": "No stationary broken vacuum or a negative radial Hessian eigenvalue."
+    },
+    {
+      "sector": "projector CP2 tangent modes",
+      "localResult": "kinetic-conditional-potential-blocked",
+      "test": "The sigma-model tangent metric is positive when fP^2>0, but masses are eigenvalues of the unspecified cross-Peirce Hessian of V_resp.",
+      "conditions": ["fP^2 > 0", "positive-semidefinite constrained Hessian at the chosen projector vacuum"],
+      "falsifier": "A negative constrained Hessian eigenvalue or a wrong-sign tangent kinetic term."
+    },
+    {
+      "sector": "four-dimensional level-three BF limit",
+      "localResult": "bulk-ghost-free-boundary-blocked",
+      "test": "Pure compact BF theory has no local propagating bulk modes, so it has no perturbative bulk kinetic ghost to count.",
+      "conditions": ["real integer level", "compact real gauge fields", "a boundary variational principle and Hilbert-space star structure"],
+      "falsifier": "An induced boundary mode with negative norm or Hamiltonian unbounded below."
+    },
+    {
+      "sector": "2+1 dimensional mutual BF defect",
+      "localResult": "topological-count-conditional-positivity-blocked",
+      "test": "Level three gives the claimed finite topological state count on spatial T2 only after the compact reduction; positivity still requires the boundary/domain and star-structure data.",
+      "conditions": ["derived compactification and orientation", "all charged defect matter gapped", "unitary boundary quantization"],
+      "falsifier": "Failure of gauge invariance, a nonunitary mapping-class action, or a negative-norm boundary state."
+    },
+    {
+      "sector": "H2(R) spectral response",
+      "localResult": "exact-conditional-not-a-microscopic-audit",
+      "test": "A positive conserved spectral kernel yields a positive two-probe response.",
+      "conditions": ["physical spectral positivity", "conservation", "range compatibility"],
+      "falsifier": "A negative eigenvalue of the physical response beyond subtraction and numerical uncertainty."
+    }
+  ],
+  "gateVerdict": {
+    "gate": "A4",
+    "status": "blocked",
+    "notFailedBecause": "The declared 4D EFT has a nonempty parameter region compatible with positive quadratic kinetic terms.",
+    "notPassedBecause": "The candidate does not select that region or provide the full gauge-fixed Hessian, physical cohomology, boundary domains, and pole-residue audit.",
+    "literalTwoTimeSubbranch": "fails-naive-realization",
+    "recommendedOntology": "response-geometry",
+    "minimumRepair": [
+      "Declare that H2(R)/Spin0(2,3) is response geometry rather than a second-time spacetime.",
+      "Choose a vacuum and publish the complete quadratic action with all coefficients and sign conventions.",
+      "Impose and verify the Abelian kinetic-matrix inequalities.",
+      "Compute the constrained scalar/projector Hessian.",
+      "Provide BRST or Dirac cohomology and count physical modes.",
+      "Specify boundary operator domains and prove self-adjointness plus lower-bounded energy.",
+      "Check every gauge-invariant propagator pole for nonnegative mass squared and positive residue."
+    ],
+    "minimalStopEverythingFalsifier": "One gauge-invariant physical pole with negative residue, one unavoidable negative-norm cohomology class, or one physical second-time Fourier mode with omega_2^2>m^2 and no gauge constraint removing it."
+  }
+}

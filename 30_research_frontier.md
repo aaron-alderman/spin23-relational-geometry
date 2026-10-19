@@ -2486,4 +2486,36 @@ Ordered pairs of Leech vectors supply a canonical arithmetic entrance to the sam
 
 The selector boundary persists. Two positive determinant-fifteen copies have the wrong ternary discriminant type; a sign-reversed second summand produces the required hyperbolic module, but the orientation twist and affine theta characteristic are not selected by Leech data alone. The decisive gate is a microscopic seam whose reversal supplies both structures and intertwines the existing Golay sewing module. See [document 1217](1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md).
 
+## 19 October 2026 — Outcome Dynamics closes one numerical artifact, not the physical bridge
+
+The adjacent Outcome Dynamics programme has progressed from idealized source rows to a bonded GaAs active/support calculation with eight independent mechanical patterns, nine frequencies and stress, charge and optical outputs. The coarse 72-cell transfer retained rank eight and reciprocity, but large lateral-refinement changes correctly blocked physical admission. Fourth-order load integration and stress recovery were separately converged and did not remove the odd/even through-thickness response.
+
+A genuine same-node element-order control now changes the active layer from linear to quadratic through-thickness interpolation. On the preregistered 1 MHz normal direction, the quadratic 7-to-9-node changes are 0.0331% in projected stress direction, 0.0949% in charge, 0.0852% in optical displacement and 0.1816% in generalized displacement. The linear comparison remains unstable at 7.29%, 7.33% and 13.24% for the three observables. The prior parity is therefore supported as an element-discretization artifact on this direction.
+
+This advances the action-to-observable middle and supplies a useful numerical-admission rule for every response branch. It does not select an \(H_2(\mathbb R)\) compression or derive \(Spin(2,3)\). Mass formulation, consistent lateral/support refinement, the full eight-pattern frequency rerun, measured inputs and physical observation remain open. See [document 1218](1218_outcome_dynamics_turns_the_stress_bridge_into_a_converged_numerical_gate_not_evidence_for_fundamental_spin23.md).
+
+## 19 October 2026 — consistent mass converges locally but keeps the numerical gate open
+
+Checkpoint 194 holds the quadratic element and physical model fixed while replacing row-sum-lumped mass with a full consistent mass matrix. The consistent-mass 7-to-9-node sequence passes the declared local convergence screens: 0.0965% in projected stress direction, 0.0635% in charge, 0.0504% in optical displacement and 0.2220% in generalized displacement.
+
+That internal convergence does not close the representation gate. At nine nodes, lumped and consistent mass still differ by 8.54% in stress direction, 69.22% in charge, 72.21% in optical displacement and 64.92% in generalized displacement. The next valid calculation is therefore consistent-mass lateral and support refinement, not the full 72-cell rerun. Physical admission and every fundamental \(Spin(2,3)\) inference remain false. See [document 1219](1219_outcome_dynamics_consistent_mass_converges_but_disagrees_with_lumped_mass_so_the_gate_remains_open.md).
+
+## 19 October 2026 — the candidate-action blocker round separates wrong ontology, missing particularity and a real experiment
+
+The A4 physical-state audit gives a split verdict. The displayed four-dimensional effective action remains blocked because its stationary vacuum, numerical Hessian, constraint cohomology, boundary domains and physical pole residues are not specified strongly enough to choose between healthy and ghostly completions. The unconstrained literal two-time subbranch already fails: nonzero second-time momentum gives \(m_{\rm eff}^2=m^2-\omega_2^2\) and destroys the ordinary one-time initial-value interpretation. The \(H_2(\mathbb R)\) response-geometry reading adds no second spacetime time and remains the recommended live ontology. See [document 1220](1220_the_a4_physical_state_gate_blocks_the_typed_action_but_rejects_only_the_naive_two_time_reading.md).
+
+The A5 selector question has an exact general boundary. If a selector is \(G\)-equivariant and its input is fixed by \(G\), its output must also be fixed. It therefore cannot select a point in a fixed-point-free orbit such as the complementary \(\mathbb{CP}^1\). Finite isotropic link multiplicity, symmetric probability and inner block signs do not repair this. A viable selector requires covariant anisotropy, a sector-limited or twisted structure, spontaneous breaking plus history, boundary data, or an anomaly/index. This proves a missing-asymmetry requirement, not a theological cause. See [document 1221](1221_symmetric_data_cannot_select_a_nonfixed_orientation_and_a5_requires_a_covariant_selector_input.md).
+
+The A11 target is now operational. Three controlled \(\mathbb Z_3\) sectors are compared using a first-harmonic amplitude transverse to a response plane frozen before labels are revealed. Synthetic controls verify zero transverse amplitude for rank-two null families, nonzero amplitude for a positive rank-three family, cancellation of sector-independent contact terms and preservation of rank and relative invariants under one common probe recalibration. The protocol does not yet predict an effect: without a microscopic defect-to-stress coupling and effect window, a null closes this realization but not every possible \(Spin(2,3)\) theory. See [document 1222](1222_a_preregistered_z3_holonomy_response_test_can_separate_a_third_physical_direction_from_ambient_spin23_geometry.md).
+
+## 19 October 2026 — 691 reaches the arithmetic carrier through the Klingen-Siegel tower
+
+Nagaoka's congruence between the degree-three Klingen lift of Δ and the degree-three Siegel Eisenstein series modulo 691 descends under the Siegel operator to
+
+\[
+[\Delta]\equiv\mathcal G_{12}^{(2)}\pmod{691}.
+\]
+
+The middle stage is a modular form for (Sp(4,\mathbb Z)), so it lies directly on the arithmetic subgroup of the established (Sp(4,\mathbb R)\cong Spin_0(2,3)) carrier. The same Klingen-Siegel tower carries distinct mod-23 determinant-divisibility statements and meets the genus-two Leech theta series. This is an exact automorphic linkage, but it does not turn either prime into a physical constant or select the outstanding orientation seam. The next gate is a normalized genus-two coefficient/Hecke comparison on the Leech determinant strata, not further integer pattern matching. See [document 1223](1223_the_prime_691_reaches_the_spin23_arithmetic_carrier_through_the_weight_twelve_klingen_siegel_tower.md).
+
 

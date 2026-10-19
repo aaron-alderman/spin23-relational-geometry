@@ -1,0 +1,78 @@
+{
+  "schema": "spin23.outcome-dynamics-integration/1",
+  "importedAt": "2026-10-19",
+  "sourceRepository": "sourcery/sourcery-applications",
+  "sourceCheckpoint": 193,
+  "sourceAuditSchema": "claimipedia.outcome_dynamics.through_thickness_p_refinement_control.audit.v1",
+  "sourceAuditPassed": true,
+  "scope": "model-local bonded GaAs active/support finite-element transfer",
+  "preRefinementEvidence": {
+    "selectedMechanicalPatterns": 8,
+    "frequencies": 9,
+    "patternFrequencyCells": 72,
+    "fullRankAtEveryFrequency": true,
+    "minimumPivotRatioAcrossFrequencies": 0.0420889744725498,
+    "maximumReciprocityRelativeResidual": 8.281622555025403e-13,
+    "minimumChargeMagnitudeCPerN": 1.9127081549360607e-15,
+    "minimumOpticalMagnitudeMPerN": 4.975114828848893e-10,
+    "lateralRefinementAmplitudeScreenPassed": false,
+    "oddEvenNormalMeshOscillationDetected": true,
+    "loadQuadratureThreeToFourMaximumRelativeDifference": 1.1468234428768653e-5,
+    "stressRecoveryThreeToFourDirectionDifference": 1.6655968733249595e-5,
+    "chargeDifferenceAcrossStressRecoveryOrders": 0,
+    "opticalDifferenceAcrossStressRecoveryOrders": 0
+  },
+  "pRefinement": {
+    "elementFamilies": ["Q1(x,y) x Q1(z)", "Q1(x,y) x Q2(z)"],
+    "sameNodeCounts": true,
+    "activeZNodes": [5, 7, 9],
+    "loadQuadratureOrder": 4,
+    "stressRecoveryQuadratureOrder": 4,
+    "frequencyHz": 1000000,
+    "patternId": "p0:n1n2:relative-plus",
+    "linearSevenToNine": {
+      "stressDirectionDifference": 0.0009538060247794806,
+      "chargeRelativeDifference": 0.07286541870763913,
+      "opticalRelativeDifference": 0.07325163556766705,
+      "generalizedDisplacementRelativeDifference": 0.13235721522633767
+    },
+    "quadraticSevenToNine": {
+      "stressDirectionDifference": 0.0003305039743306972,
+      "chargeRelativeDifference": 0.0009488173863846061,
+      "opticalRelativeDifference": 0.0008517361082736476,
+      "generalizedDisplacementRelativeDifference": 0.0018158589359563626
+    },
+    "quadraticConvergedOnPreregisteredNormalDirection": true,
+    "linearFinalUnstable": true,
+    "linearParityDiagnosedAsElementDiscretizationArtifact": true,
+    "reciprocityPassed": true
+  },
+  "openGates": {
+    "massRepresentationIndependentControl": false,
+    "globalMultifrequencyConvergence": false,
+    "selectedEightPatternQuadraticRerun": false,
+    "physicalAdmission": false,
+    "physicalEffectObserved": false,
+    "nextNumericalGate": "consistent-versus-lumped-mass-control"
+  },
+  "spin23Interpretation": {
+    "strengthensActionToObservableGovernance": true,
+    "providesOperationalStressResponseTestbed": true,
+    "selectsH2RCarrier": false,
+    "derivesSpin23": false,
+    "supportsFundamentalSpin23Ontology": false,
+    "reopensClosedFundamentalBranches": false
+  },
+  "sourceHashesSha256": {
+    "reciprocal-force-pattern-rank-design.mjs": "c3b1260b1f5c1b10b028b24144f6f81b6f2def47b419259846bbf3966a4cae0b",
+    "bonded-force-pattern-interface-gap.mjs": "089fe1f9e8ab6a81128a4019ebb991557481ec4613514beaf05716f86e50b22c",
+    "bonded-mechanical-pattern-transfer.mjs": "9b38509fa37a1db23239d3a50abe19aa2ce037826d1c056d1adf8d19b9afc455",
+    "bonded-mechanical-pattern-lateral-refinement.mjs": "c3f27f66d5995775dd0ce082588f04428341e571e5ad3fff897860b9f3a0d3de",
+    "mode-two-directional-refinement-diagnosis.mjs": "fc4a212eeb91e2a16f29534925d3c31e0759d3b0da88b3a08c2325258be49bd2",
+    "normal-mode-two-mesh-parity-audit.mjs": "fa59347e389f4ea1640919f127c1d2ff75cd2665a1a266f97987d210c61f8b4d",
+    "consistent-load-quadrature-control.mjs": "46351a3526ee27ce361db738d604248286d4991c14f0190147b5a0304989817e",
+    "stress-recovery-quadrature-control.mjs": "bc492874d4d285c295f6e9ee147c738199e5d13f85c13b8851b073152d0b2b01",
+    "through-thickness-p-refinement-control.mjs": "642e74286b9497585017aa317153325747eeff1165749509990d567e1ac688ee",
+    "gaas-monolithic-active-support-operator.mjs": "60ef6fc9dd0c1dfda63aff6448a2c6e927cd001b3f0442709500a97bb30cb443"
+  }
+}

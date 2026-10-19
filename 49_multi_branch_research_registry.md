@@ -12950,6 +12950,36 @@ Each cycle ends by updating this registry, including branches that failed or bec
 - **Stop condition:** do not identify Conway symmetry with continuous \(Spin(2,3)\), or treat the required characteristic as selected by Leech data alone.
 - **Artifact:** [1217](1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md).
 
+### B-OUTCOME-DYNAMICS-STRESS-TRANSFER — internally converged mass branch, representation gate open
+
+- **External programme:** Outcome Dynamics checkpoints 185–194 in the adjacent Sourcery research tree.
+- **Operational gain:** eight independent mechanical source directions propagate through a bonded GaAs/support operator to stress, charge and optical outputs across nine frequencies.
+- **Negative control:** the coarse full-rank transfer fails lateral refinement; rank, reciprocity and nonzero outputs do not suffice for admission.
+- **Numerical diagnosis:** fourth-order load and stress-recovery quadrature are converged, while same-node quadratic through-thickness interpolation stabilizes the preregistered normal direction and the linear comparison remains unstable.
+- **Mass control:** consistent mass converges on the preregistered normal sequence, but its finest charge, optical and displacement outputs differ from lumped mass by 65–72%; local convergence therefore does not establish representation independence.
+- **Pinned dependency:** refine lateral/support directions under consistent mass, then rerun the full selected pattern-frequency panel only if those gates close.
+- **Stop condition:** do not count model-local convergence as a new physical effect, an (H_2(\mathbb R)) selector or evidence for fundamental (Spin(2,3)).
+- **Artifacts:** [1218](1218_outcome_dynamics_turns_the_stress_bridge_into_a_converged_numerical_gate_not_evidence_for_fundamental_spin23.md) and [1219](1219_outcome_dynamics_consistent_mass_converges_but_disagrees_with_lumped_mass_so_the_gate_remains_open.md).
+
+### B-SPIN23-ACTION-BLOCKERS — physical state, particularity and observable discrimination
+
+- **A4 result:** the current effective action is underdetermined between healthy and ghostly completions; the unconstrained literal two-time subbranch fails, while response geometry remains viable.
+- **A5 result:** a symmetry-fixed input cannot deterministically and equivariantly select a point in a fixed-point-free orientation orbit. A physical asymmetry or history-bearing datum is necessary.
+- **A11 result:** a preregistered \(\mathbb Z_3\)-correlated transverse-response statistic separates the rank-two null from a positive rank-three alternative under frozen probes and common contact/calibration controls.
+- **Pinned dependencies:** complete the A4 Hessian/constraint data; source the A5 asymmetry physically; derive the A11 defect-to-stress coupling and effect window.
+- **Stop condition:** do not infer a literal extra time, a theological cause or fundamental \(Spin(2,3)\) merely from the exact response geometry or synthetic protocol.
+- **Artifacts:** [1220](1220_the_a4_physical_state_gate_blocks_the_typed_action_but_rejects_only_the_naive_two_time_reading.md), [1221](1221_symmetric_data_cannot_select_a_nonfixed_orientation_and_a5_requires_a_covariant_selector_input.md), and [1222](1222_a_preregistered_z3_holonomy_response_test_can_separate_a_third_physical_direction_from_ambient_spin23_geometry.md).
+
+### B-691-KLINGEN-SIEGEL-SPIN23 — exact arithmetic congruence on the genus-two carrier
+
+- **Established tower:** ([\Delta]^{(3)}\xrightarrow{\Phi}[\Delta]\xrightarrow{\Phi}\Delta) and ‎\(\mathcal G_{12}^{(3)}\xrightarrow{\Phi}\mathcal G_{12}^{(2)}\xrightarrow{\Phi}\mathcal G_{12}^{(1)}\).
+- **Exact inference:** Nagaoka's ([\Delta]^{(3)}\equiv\mathcal G_{12}^{(3)}\pmod{691}) descends to ([\Delta]\equiv\mathcal G_{12}^{(2)}\pmod{691}) on (Sp(4,\mathbb Z)).
+- **Leech intersection:** the integral genus-two Leech theta decomposition has elliptic boundary (E_{12}-(65520/691)\Delta), while the same Siegel tower carries separate mod-(23) determinant divisibility.
+- **Carrier identification:** (Sp(4,\mathbb Z)\subset Sp(4,\mathbb R)\cong Spin_0(2,3)).
+- **Pinned dependency:** compute normalized genus-two coefficients and Hecke data on determinant strata (0,12,15,16).
+- **Stop condition:** do not promote (691), (23), (691=30\cdot23+1), or the (60!\) residue to a physical selector.
+- **Artifact:** [1223](1223_the_prime_691_reaches_the_spin23_arithmetic_carrier_through_the_weight_twelve_klingen_siegel_tower.md).
+
 
 
 
