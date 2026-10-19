@@ -1,0 +1,176 @@
+{
+  "protocol": "a11-nearest-loop-versus-protected-z3/1",
+  "date": "2026-10-20",
+  "commonMeasurement": {
+    "rawObservable": "fixed-reference-plane complex two-port scattering matrix S_h(omega)",
+    "admittanceEquation": "Y_h=Y0^(1/2)(I-S_h)(I+S_h)^(-1)Y0^(1/2)",
+    "positiveResponseEquation": "C_h=(Y_h+Y_h^dagger)/2",
+    "realCarrierCondition": "reciprocity plus one common port-phase calibration makes C_h real symmetric",
+    "primaryStatistic": "the preregistered A_perp first-harmonic transverse statistic from document 1222",
+    "fixedProbeLabels": ["microwave-port-1", "microwave-port-2"],
+    "requiredChecks": [
+      "same calibration and reference planes in all sectors",
+      "C_h positive semidefinite within uncertainty",
+      "same frequency grid, temperature and drive power",
+      "randomized preparation order with at least three repeats",
+      "sham operation and held-out null fixture",
+      "resolved third singular direction in at least two adjacent bins and an independent replication"
+    ]
+  },
+  "nearProtocol": {
+    "id": "josephson-aharonov-casher-three-phase-sampling",
+    "claimClass": "continuous-U1-holonomy sampled at three preregistered phases",
+    "device": "two-path coherent quantum-phase-slip or fluxon interferometer enclosing a gate-controlled superconducting island, weakly coupled to the same two microwave ports",
+    "controlKnob": {
+      "name": "induced island offset charge",
+      "equation": "n_g=C_g(V_g-V_offset)/(2e)",
+      "holonomyEquation": "W_AC=exp(i 2pi n_g)",
+      "sectorSettings": [0, 0.3333333333333333, 0.6666666666666666],
+      "sectorLabels": [0, 1, 2],
+      "voltageEquation": "V_g(h)=V_offset+(2e/C_g)h/3"
+    },
+    "auxiliaryObservable": "fluxon or phase-slip interference amplitude and resonant spectrum versus n_g",
+    "threePreparations": [
+      "stabilize n_g modulo one at 0",
+      "stabilize n_g modulo one at 1/3",
+      "stabilize n_g modulo one at 2/3"
+    ],
+    "nuisanceControls": [
+      "reverse and randomized gate sweep",
+      "dummy gate matched for electrostatic loading but not enclosed charge",
+      "disable one coherent path so Aharonov-Casher interference must vanish",
+      "measure offset-charge drift and quasiparticle-parity jumps",
+      "hold magnetic flux, temperature and microwave power fixed",
+      "verify linear response and reciprocity",
+      "repeat after redistributing local circuit parameters at fixed enclosed charge",
+      "common pre/post two-port calibration"
+    ],
+    "billOfMaterials": [
+      "superconducting loop or junction chain with two coherent fluxon/phase-slip paths",
+      "gate island with calibrated gate capacitance C_g and charge-stability monitor",
+      "two weak microwave coupling ports or resonators",
+      "tunable element or fabricated control device that disables one path",
+      "independent magnetic-flux bias and filtered gate-voltage lines",
+      "vector network analyser or two-channel lock-in",
+      "cryogenic attenuation, isolation, thermometry and magnetic shielding"
+    ],
+    "missingQuantitativeInputs": [
+      "coherent path amplitudes and their relative dynamical phase",
+      "gate capacitance and offset-charge noise spectrum",
+      "junction capacitances and Josephson or phase-slip energies",
+      "port coupling matrix and internal/external linewidths",
+      "temperature, quasiparticle-poisoning rate and coherence time",
+      "predicted sector-dependent Y_h(omega) with uncertainty"
+    ],
+    "topologyClass": 1
+  },
+  "topolectricalAlternative": {
+    "id": "three-edge-phase-ring",
+    "claimClass": "synthetic-U1-loop-holonomy",
+    "controlKnob": "total directed link phase Phi=phi_1+phi_2+phi_3 modulo 2pi",
+    "sectorSettings": [0, 2.0943951023931953, 4.1887902047863905],
+    "decisiveControls": [
+      "redistribute edge phases at fixed total Phi",
+      "cut one edge to destroy the loop",
+      "reverse Phi",
+      "audit active or nonreciprocal elements so gain is not mistaken for positive passive response"
+    ],
+    "topologyClass": 1
+  },
+  "protectedProtocol": {
+    "id": "z3-parafermion-sector-resolved-two-port",
+    "claimClass": "candidate protected discrete-Z3 sector experiment",
+    "device": "nu=2/3 fractional quantum Hall or fractional Chern-insulator edge with alternating superconducting and charge-preserving gapped regions, producing a pair or network of Z3 parafermion domain walls",
+    "lowEnergyModel": {
+      "clockEigenvalues": ["1", "omega", "omega^2"],
+      "clockEquation": "W|m>=omega^m|m>, omega=exp(2pi i/3)",
+      "incrementEquation": "X|m>=|m+1 mod 3>, XW=omega^(-1)WX",
+      "conditionalBranchEnergy": "E_m(phi)=-E_P cos((phi+2pi m)/3)",
+      "branchPermutation": "E_m(phi+2pi)=E_(m+1 mod 3)(phi)",
+      "fixedSectorPeriod": "6pi"
+    },
+    "controlKnobs": [
+      "superconducting phase bias phi",
+      "gate-defined strengths and lengths of superconducting and charge-preserving gapped segments",
+      "architecture-derived quasiparticle transfer or Wilson-string operation X",
+      "two fixed microwave port couplings"
+    ],
+    "threePreparations": [
+      "project or initialize a reference W eigenstate |0>",
+      "apply the validated nonlocal increment operation X once to prepare |1>",
+      "apply X twice to prepare |2>",
+      "verify W=1, omega, omega^2 before and after the response sweep"
+    ],
+    "observables": [
+      "the same positive dissipative two-port matrix C_m(omega)",
+      "sector-resolved spectral branch under phi -> phi+2pi",
+      "6pi return of a fixed sector in the minimal Z3 branch model",
+      "Wilson/string eigenvalue and sector leakage",
+      "finite-size splitting and poisoning lifetime"
+    ],
+    "nuisanceControls": [
+      "ordinary 2pi Cooper-pair Josephson contribution",
+      "Landau-Zener and nonequilibrium fractional-periodicity mimic",
+      "quasiparticle poisoning and uncontrolled sector switching",
+      "finite-size parafermion hybridization",
+      "local subgap states and non-topological resonances",
+      "heating and microwave-power dependence",
+      "sector-dependent readout calibration",
+      "device with one gapped domain removed",
+      "local perturbations away from both domain walls",
+      "systematic dependence on domain-wall separation"
+    ],
+    "billOfMaterials": [
+      "validated nu=2/3 fractional Hall or fractional Chern-insulator channel",
+      "superconducting contacts compatible with the fractional edge",
+      "gate-defined charge-preserving backscattering or quantum-dot-array segments",
+      "at least two separated superconducting/gapped interfaces",
+      "phase-bias loop",
+      "architecture-specific quasiparticle injection or string-control structure",
+      "fractional-charge or Wilson-sector verification channel",
+      "two weak microwave probes with common calibration",
+      "cryogenic filtering, thermometry and poisoning monitor"
+    ],
+    "missingQuantitativeInputs": [
+      "microscopic edge and proximity Hamiltonian for the selected material stack",
+      "topological and competing gaps",
+      "parafermion coupling E_P and ordinary Josephson coupling E_J",
+      "domain-wall localization length and finite-size splitting",
+      "sector preparation and readout fidelities",
+      "poisoning, relaxation and dephasing rates",
+      "port coupling operators and predicted C_m(omega)",
+      "temperature and measurement-time window",
+      "scaling under local perturbations and domain-wall separation"
+    ],
+    "admissionConditions": [
+      "W^3=I on the measured low-energy space",
+      "all three W eigenvalues are prepared and verified",
+      "local observables cannot efficiently mix sectors in the protected regime",
+      "sector splitting or mixing decreases with domain-wall separation",
+      "a 2pi phase advance permutes branches and a fixed branch returns after 6pi",
+      "the same two probes and positive response estimator are used in every sector",
+      "ordinary periodicity, Landau-Zener and poisoning controls pass"
+    ],
+    "topologyClass": 2
+  },
+  "digitalProtectedAlternative": {
+    "id": "z3-toric-code-qutrit-processor",
+    "status": "experimentally demonstrated discrete Z3 code and parafermion-defect algebra, but not a passive material superselection sector or a native microwave admittance experiment",
+    "use": "validate sector preparation, Wilson strings and local-indistinguishability analysis before material hardware exists"
+  },
+  "continuousEmulationStopLine": [
+    "choosing three points on a continuous phase dial is not discrete topological order",
+    "a genuine Z3 experiment must verify W^3=I and three eigenvalues on one admitted low-energy space",
+    "sector changes must require a declared nonlocal string or quasiparticle-transfer process rather than an ordinary local knob",
+    "robustness must be shown against local perturbations and by separation or size scaling",
+    "fractional periodicity alone is insufficient because non-topological dynamics can imitate it"
+  ],
+  "sources": [
+    "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.85.094503",
+    "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.2.041002",
+    "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.119.217701",
+    "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.109.L161106/fulltext",
+    "https://www.nature.com/articles/s41467-025-61391-z",
+    "https://arxiv.org/abs/1206.4596"
+  ]
+}

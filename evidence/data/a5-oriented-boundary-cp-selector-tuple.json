@@ -1,0 +1,102 @@
+{
+  "protocol": "a5-oriented-boundary-cp-selector-tuple/1",
+  "date": "2026-10-20",
+  "status": "admissible effective selector tuple; microscopic portal not derived",
+  "group": {
+    "name": "Z2 exchange",
+    "generator": "g",
+    "actions": {
+      "boundaryOrientation": "g: chi -> -chi",
+      "neutralBlocks": "g: O1 <-> R",
+      "matterTopology": "g: T_A <-> T_B",
+      "flavor": "g: (H_u,H_d) -> (conjugate(H_u),conjugate(H_d))",
+      "cpInvariant": "g: J_det -> -J_det"
+    }
+  },
+  "input": {
+    "boundaryOrientation": {
+      "symbol": "chi",
+      "values": [-1, 1],
+      "physicalCandidates": [
+        "oriented defect normal with a declared incoming/outgoing convention",
+        "signed boundary winding or flux relative to that normal",
+        "recorded domain history selecting one exchange-related boundary face"
+      ]
+    },
+    "flavorSpurions": {
+      "H_u": [[1, 0, 0], [0, 4, 0], [0, 0, 16]],
+      "H_dGaussianIntegers": [
+        [{"re": 3, "im": 0}, {"re": 1, "im": 0}, {"re": 0, "im": -1}],
+        [{"re": 1, "im": 0}, {"re": 3, "im": 0}, {"re": 1, "im": 0}],
+        [{"re": 0, "im": 1}, {"re": 1, "im": 0}, {"re": 3, "im": 0}]
+      ],
+      "role": "measured complex three-family anisotropy retained by the selector, not derived by it"
+    }
+  },
+  "candidateModules": {
+    "T_A": {
+      "exchangeSign": 1,
+      "blocks": {
+        "Q": {"source": "H", "target": "O2"},
+        "u_c": {"source": "O2", "target": "C"},
+        "d_c": {"source": "O2", "target": "O1"},
+        "L": {"source": "R", "target": "H"},
+        "e_c": {"source": "C", "target": "R"}
+      }
+    },
+    "T_B": {
+      "exchangeSign": -1,
+      "blocks": {
+        "Q": {"source": "H", "target": "O2"},
+        "u_c": {"source": "O2", "target": "C"},
+        "d_c": {"source": "O2", "target": "R"},
+        "L": {"source": "O1", "target": "H"},
+        "e_c": {"source": "C", "target": "O1"}
+      }
+    }
+  },
+  "moduleRepresentations": [
+    {"field": "Q", "colorDimension": 3, "weakDimension": 2, "Y6": 1, "colorCubicSign": 1},
+    {"field": "u_c", "colorDimension": 3, "weakDimension": 1, "Y6": -4, "colorCubicSign": -1},
+    {"field": "d_c", "colorDimension": 3, "weakDimension": 1, "Y6": 2, "colorCubicSign": -1},
+    {"field": "L", "colorDimension": 1, "weakDimension": 2, "Y6": -3, "colorCubicSign": 0},
+    {"field": "e_c", "colorDimension": 1, "weakDimension": 1, "Y6": 6, "colorCubicSign": 0}
+  ],
+  "selector": {
+    "map": "f(+1)=T_A with (H_u,H_d); f(-1)=T_B with (conjugate(H_u),conjugate(H_d))",
+    "effectiveAction": "V_sel=-lambda chi epsilon_T, lambda>0, epsilon(T_A)=+1, epsilon(T_B)=-1",
+    "cpLockingTerm": "V_CP=-kappa chi J_det/J_scale, kappa>0",
+    "output": "three replicated copies of the selected 15-complex-dimensional chiral matter TRO with exchange-correlated complex flavor orientation",
+    "covariance": "f(g chi)=g f(chi); chi epsilon_T and chi J_det are exchange even"
+  },
+  "stabilizer": {
+    "ofNonzeroBoundaryOrientationInsideZ2": "identity",
+    "internalGaugeGroup": "SU(3)c x SU(2)L x U(1)Y remains unbroken because chi and J_det are gauge singlets",
+    "warning": "the absence of a Z2 stabilizer selects an exchange orientation but does not derive Lorentz spin, statistics or the portal"
+  },
+  "falsifiers": [
+    "the boundary datum is not independently measurable or reversable",
+    "reversing chi does not exchange the selected neutral-block topology",
+    "the portal requires gauge breaking or sector-dependent probe definitions",
+    "the selected five-block support is not ternary closed",
+    "any local or global Standard Model anomaly is nonzero",
+    "the selector forces simultaneous flavor reality and J_det=0",
+    "both T_A and T_B remain independent same-chirality propagating matter sectors",
+    "radiative corrections populate the unused block sectors without a protecting rule"
+  ],
+  "earliestPhysicalObstruction": {
+    "name": "boundary-to-internal type mismatch",
+    "statement": "A spacetime boundary sign is a gauge-singlet pseudoscalar, while O1<->R is an internal neutral-block exchange. The corpus has no microscopic local operator whose coefficient is the boundary sign and whose odd action distinguishes those two blocks.",
+    "consequence": "V_sel is a consistent effective portal but presently an inserted bridge, not a derived selector."
+  },
+  "smallestExtraDatum": {
+    "name": "one exchange-odd portal operator B_minus",
+    "requirements": [
+      "B_minus is gauge and Lorentz scalar after contraction with the oriented boundary datum",
+      "g B_minus g^{-1}=-B_minus",
+      "B_minus has opposite eigenvalue on T_A and T_B",
+      "its coefficient is derived from a boundary, defect, index or measured winding rather than hand chosen",
+      "if Yukawas are to be dynamically selected, B_minus must couple to an exchange-odd dynamical flavor field with nonzero J_det"
+    ]
+  }
+}

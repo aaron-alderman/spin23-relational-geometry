@@ -1,0 +1,119 @@
+{
+  "schema": "spin23.a2-charge-three-higgs-bf-reduction/1",
+  "documentId": 1233,
+  "date": "2026-10-20",
+  "modelId": "compact-u1-charge3-higgs-orbifold-with-gapped-q1-reader-v1",
+  "status": "complete-conditional-reduction-with-open-origin-and-orientation-gates",
+  "normalization": {
+    "gaugeTransformation": "a -> a + d alpha, theta -> theta + 3 alpha, alpha equivalent modulo 2 pi",
+    "unitWilsonLine": "exp(i integral_C a)",
+    "twoFormWilsonSurface": "exp(i integral_W b)",
+    "higgsField": "s=(v+sigma) exp(i theta)/sqrt(2)",
+    "euclideanAction": "integral [f wedge star f/(2 e^2) + dsigma wedge star dsigma/2 + (v+sigma)^2(dtheta-3a) wedge star(dtheta-3a)/2 + lambda(|s|^2-v^2/2)^2]",
+    "firstOrderPhaseAction": "integral [H wedge star H/(8 pi^2 v^2) + i H wedge(dtheta-3a)/(2 pi)]",
+    "dualAction": "integral [db wedge star db/(8 pi^2 v^2) + i 3 b wedge da/(2 pi)] plus Maxwell and irrelevant corrections",
+    "bfLevel": 3,
+    "compactPeriods": {"integralDa": "2 pi integers away from Higgs vortices", "integralDb": "2 pi integers"}
+  },
+  "parameters": {
+    "e": 0.4,
+    "v": 2,
+    "lambda": 0.5,
+    "readerBareMassSquared": 0.81,
+    "readerPortalKappa": 0.1,
+    "readerQuartic": 0.2,
+    "intervalRadius": 0.2,
+    "probeEnergy": 0.1,
+    "readerCycleSites": 6,
+    "readerInverseTemperature": 1.3
+  },
+  "spectrumFormulas": {
+    "radialMassSquared": "2 lambda v^2",
+    "canonicalVectorMassSquared": "9 e^2 v^2",
+    "readerMassSquared": "m0^2 + kappa v^2/2",
+    "firstKaluzaKleinGap": "1/R",
+    "readerCycleEnergySquared": "M_reader^2 + 4 sin^2((2 pi n + 2 pi q h/3)/(2N))"
+  },
+  "vortexAndDefect": {
+    "higgsVortex": "an oriented codimension-two worldsheet W2 in four dimensions with dd theta=2 pi n delta_2(W2)",
+    "flux": "integral_linking_disk da = -2 pi n/3 in the stated sign convention",
+    "source": "i n integral_W2 b",
+    "orbifoldDefect": "a codimension-one fixed plane Sigma3 of S1/Z2, not the vortex worldsheet",
+    "intersection": "gamma1=W2 intersect Sigma3 is a worldline; if W2 carries the interval tangent, integral_W2 b reduces to integral_gamma1 c",
+    "orientation": "n=+1 and n=-1 have equal energy in the CP-even action and conjugate mutual phases; the action does not choose one"
+  },
+  "orbifold": {
+    "coordinate": "y -> -y",
+    "parities": {"a_mu": "even", "a_y": "odd", "b_mu_nu": "odd", "b_mu_y": "even"},
+    "survivingZeroModes": ["a_mu", "c_mu=integral_I b_mu_y dy"],
+    "projectedZeroModes": ["a_y", "b_mu_nu"],
+    "reducedAction": "i 3 integral_Sigma3 c wedge da/(2 pi)",
+    "normalizationRule": "c is the interval-integrated compact one-form, so the integer level is not multiplied by interval length",
+    "originDerived": false
+  },
+  "boundaryVariation": {
+    "bulk": "delta S_BF = i3/(2pi) integral_M [delta b wedge da - db wedge delta a]",
+    "boundary": "i3/(2pi) integral_boundaryM pullback(b) wedge delta pullback(a)",
+    "twoFormGaugeBoundary": "delta_Lambda S_BF=i3/(2pi) integral_boundaryM pullback(Lambda) wedge da",
+    "orbifoldResolution": "b_mu_nu and tangential Lambda_mu are odd and vanish on fixed planes, so both boundary terms vanish",
+    "maxwellBoundary": "variation adds integral_boundary delta a_i n_mu f^{mu i}/e^2",
+    "readerBoundaryEquation": "for dynamical boundary a_i, n_mu f^{mu i}/e^2 + j_reader^i = 0, or the corresponding jump equation in the doubled/folded picture",
+    "qualification": "orbifold parity closes the BF boundary term but does not by itself solve the Maxwell-plus-reader boundary equation",
+    "otherAllowedPolarizations": ["fix pullback(a)", "set pullback(b)=0", "add the boundary Legendre term and fix the dual polarization"],
+    "physicalOrientationSelected": false
+  },
+  "reader": {
+    "field": "complex scalar chi localized on Sigma3",
+    "residualCharge": 1,
+    "action": "integral_Sigma sqrt(gamma) [|D_a chi|^2 + (m0^2+kappa |s|^2)|chi|^2 + lambda_chi |chi|^4]",
+    "gaugeAnomaly": "none for a complex scalar",
+    "localizationDerived": false,
+    "coexistenceConditions": [
+      "M_reader^2>0 in every background sector",
+      "lambda_chi>0 and chi has no condensate",
+      "the reader gap stays above the experiment/probe energy",
+      "no anomaly-forced or boundary-condition-forced charged zero mode exists",
+      "virtual winding splittings are treated as finite-size non-topological corrections"
+    ],
+    "condensationConsequence": "a charge-one condensate breaks the residual Z3 completely and destroys the claimed BF topological phase"
+  },
+  "allChargedDefectMatterGappedDefinition": {
+    "formula": "Delta_ch = inf spectrum(H_Sigma restricted to residual charges 1 or 2 mod 3) > 0 uniformly over admitted holonomy sectors",
+    "requires": [
+      "positive quadratic spectrum after constraints and boundary conditions",
+      "no charged Goldstone or edge zero mode",
+      "no charge-one or charge-two condensate",
+      "no uncancelled localized anomaly requiring gapless charged matter",
+      "magnetic vortex excitations have positive tension/gap",
+      "probe energies and temperatures are below Delta_ch, radial/vector gaps and the first KK gap"
+    ],
+    "doesNotMean": "charged matter must be absent; gapped charges may exist and be integrated out",
+    "finiteSizeQualification": "gapped charge-one winding splits topological sectors by exponentially small terms, so exact pure-BF degeneracy is an infinite-volume/strict-IR statement"
+  },
+  "conditionalReductionGate": {
+    "passedInputs": [
+      "compact normalization and charge-three condensate",
+      "stable radial and massive-vector quadratic spectrum for the displayed parameters",
+      "exact first-order dualization to integer level three",
+      "orbifold parity removes the unwanted zero modes and its BF boundary variation",
+      "the sourced Maxwell-reader boundary equation is explicitly stated",
+      "a positive-mass bosonic charge-one reader can coexist without an anomaly or condensate"
+    ],
+    "openInputs": [
+      "dynamical origin of the S1/Z2 reflection defect or equivalent folding",
+      "selection of one physical orientation rather than its CP conjugate",
+      "derivation and localization of the charge-one reader from S_v1",
+      "audit of every Standard-Model and boundary charged mode",
+      "physical compact two-cycle and scale hierarchy",
+      "complete bulk-defect-displacement stress Ward identity"
+    ],
+    "a2Passed": false,
+    "physicalAdmission": false
+  },
+  "syntheticChecks": {
+    "readerHolonomySectors": [0, 1, 2],
+    "readerChargeChecks": [1, 3],
+    "vortexWindings": [-1, 1],
+    "expectedTorusGroundStatesInStrictBfLimit": 9
+  }
+}

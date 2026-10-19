@@ -1,0 +1,153 @@
+{
+  "schema": "spin23.a4-maximal-physical-state-packet/1",
+  "documentId": 1451,
+  "date": "2026-10-20",
+  "sources": [1199, 1290, 1292, 1390, 1391, 1398],
+  "geometry": {
+    "bulkSignature": "-+++",
+    "cover": "R_t x T2 x [-L,L]",
+    "fold": "y maps to -y",
+    "fixedDefect": "Sigma3 at y=0",
+    "halfLength": 5,
+    "spin23Meaning": "response geometry, not a second spacetime time"
+  },
+  "formulationRule": {
+    "ultravioletChart": "charge-three scalar s with its compact phase",
+    "infraredChart": "dual compact two-form b with level-three BF term",
+    "rule": "The UV phase and its dual b are alternative variables and are not summed as independent propagating fields.",
+    "bfLocalBulkModes": 0
+  },
+  "fields": {
+    "gauge": ["SU3", "SU2", "U1Y", "U1X"],
+    "bulkBosons": ["H", "s", "P in CP2", "neutral real eta", "charge-one complex Phi"],
+    "bulkFermions": "three copies of SM15 plus one sterile Weyl N per copy",
+    "irTopological": ["compact a", "compact b"],
+    "ghosts": ["one FP complex per gauge generator after linearization", "one-form ghost Lambda and scalar ghost-for-ghost rho in the BF chart"]
+  },
+  "parameters": {
+    "g": 0.6,
+    "gY": 0.4,
+    "gX": 0.3,
+    "kineticMixingChi": 0.2,
+    "vH": 2,
+    "vS": 3,
+    "lambdaH": 0.5,
+    "lambdaS": 0.4,
+    "lambdaHS": 0.1,
+    "fP": 1,
+    "projectorKappa": 0.5,
+    "projectorReferenceEigenvalues": [0, 1, 2],
+    "wallU": 1,
+    "wallLambda": 2,
+    "wallMu": 1,
+    "readerMInfinitySquared": 1.64,
+    "readerWellCoupling": 2,
+    "readerQuartic": 0.3,
+    "gaugeXi": 1
+  },
+  "fermionFixture": {
+    "purpose": "bulk pole witness only; not a flavor fit",
+    "effectivePostFlavonDiagonalYukawas": {
+      "up": [0.01, 0.2, 0.7],
+      "down": [0.02, 0.05, 0.1],
+      "chargedLepton": [0.005, 0.03, 0.08],
+      "neutrinoDirac": [0.01, 0.02, 0.03]
+    },
+    "sterileMajoranaMasses": [2, 3, 4],
+    "canonicalKineticResidue": 1,
+    "boundaryMajoranaPortal": {
+      "included": false,
+      "reason": "Its self-adjoint boundary condition and physical phase reference are not constructed; adding it would not be a frozen physical-state action."
+    }
+  },
+  "gaugeFixingAndBrst": {
+    "bulkGauge": "canonicalize the Abelian kinetic block, rotate to mass basis, then use R_xi with xi=1",
+    "linearizedDifferential": [
+      "s V_i = d c_i",
+      "s G_i = m_i c_i",
+      "s anti-c_i = B_i",
+      "s B_i = 0"
+    ],
+    "bfReducibleDifferential": [
+      "s a = d c",
+      "s b = d Lambda",
+      "s Lambda = d rho",
+      "s c = s rho = 0"
+    ],
+    "bulkCohomology": "conventional at the chosen quadratic point",
+    "globalBoundaryCohomology": "undefined until the fermionic fold/domain and BF boundary complex are fixed"
+  },
+  "bosonicFold": {
+    "even": ["a_i", "b_iy", "Phi", "H", "s", "P", "tangential SM gauge fields", "gauge parameters", "FP ghosts"],
+    "odd": ["eta", "a_y", "b_ij", "normal SM gauge components"],
+    "fixedPlaneDomains": {
+      "even": "Neumann-type at y=0",
+      "odd": "Dirichlet-type at y=0"
+    },
+    "outerDomainStatus": "external",
+    "reason": "The finite-slab tanh and sech fixtures do not simultaneously fix a unique global self-adjoint outer domain."
+  },
+  "fermionDomainObstruction": {
+    "statement": "The bosonic fold has no supplied local Lorentz- and gauge-covariant lift to the undoubled four-dimensional chiral fermion inventory.",
+    "algebra": [
+      "{gamma5,gammaY}=0",
+      "P_L gammaY = gammaY P_R",
+      "P_L gammaY P_L = 0"
+    ],
+    "representationExample": "Q_L has no independent right-handed Weyl field in the same (3,2) gauge representation.",
+    "consequence": "A Pin reflection exchanges four-dimensional chirality. The current chiral inventory is not closed under it.",
+    "escapeClasses": [
+      "add vectorlike same-representation partners and impose a bag/orbifold domain",
+      "choose a nonlocal APS-type domain plus eta-invariant/anomaly-inflow data",
+      "remove the fold and work on the full wall geometry, restoring the translation zero mode",
+      "supply a gauge-complete Nambu doubling and prove that its quotient has positive cohomology"
+    ],
+    "status": "unresolved, not a demonstrated ghost"
+  },
+  "computedPoles": {
+    "neutralGaugeMassSquared": [0, 0.4869935816886004, 8.108423084978067],
+    "chargedGaugeMassSquared": 0.36,
+    "radialScalarMassSquared": [3.891199250936495, 7.308800749063504],
+    "projectorComplexModeMassSquared": [1, 4],
+    "wallInfiniteCover": {
+      "translationMassSquared": 0,
+      "translationParity": "even and projected out by eta-odd fold",
+      "shapeMassSquared": 3,
+      "shapeParity": "odd and retained",
+      "continuumThresholdSquared": 4
+    },
+    "readerInfiniteCover": {
+      "boundMassSquared": 0.64,
+      "boundParity": "even and retained",
+      "continuumThresholdSquared": 1.64,
+      "realPhysicalBoundModes": 2
+    },
+    "residueStatement": "All displayed canonical bulk and infinite-cover localized poles have positive unit residue at tree level.",
+    "finiteSlabQualification": "The wall and reader numbers are exact only in the infinite-cover spectral problem; finite-slab pole values await a declared outer domain."
+  },
+  "cohomologyLedger": {
+    "bulkBosonicModesIncludingGluonsBeforeWallExtension": 36,
+    "retainedLocalizedWallRealModes": 1,
+    "retainedLocalizedReaderRealModes": 2,
+    "bfLocalBulkModes": 0,
+    "fermionBulkComplexWeylGenerators": 48,
+    "globalPhysicalModeCountAvailable": false
+  },
+  "externalDataRemaining": [
+    "a globally compatible finite-slab outer domain for eta, Phi, gauge fields, ghosts and the BF complex",
+    "a fermionic fold lift or an explicitly chosen replacement boundary condition",
+    "the full boundary BRST charge and proof that it preserves all operator domains",
+    "a gauge-complete self-adjoint domain for the chiral Yukawa and Majorana operator",
+    "a decision whether the sterile boundary Majorana portal is absent or included with a physical phase reference",
+    "radiative counterterms and RG interval for the chosen boundary conditions",
+    "a unitary compact BF boundary quantization if the topological chart is retained"
+  ],
+  "verdict": {
+    "negativeNormStateFound": false,
+    "negativeResidueFound": false,
+    "completePhysicalStateActionFrozen": false,
+    "earliestBlocker": "fermionic self-adjoint fold/domain, accompanied by an unfixed global outer/BF boundary complex",
+    "a4Status": "blocked",
+    "physicalAdmission": false
+  }
+}

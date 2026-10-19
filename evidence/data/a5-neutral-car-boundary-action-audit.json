@@ -1,0 +1,73 @@
+{
+  "protocol": "a5-neutral-car-boundary-action-audit/1",
+  "fieldContent": {
+    "independentSterileFields": 1,
+    "sterileRepresentation": {"su3": "1", "su2": "1", "Y6": 0},
+    "bulkTerms": ["i N_dagger sigma_bar^mu partial_mu N", "Y_nu_i L_i H N + h.c.", "one-half M_chi N N + h.c."],
+    "boundaryMass": "M_chi=m_even+i chi m_odd"
+  },
+  "carDecision": {
+    "minimalRepresentation": "the reverse neutral TRO arrow is represented by the adjoint of one CAR generator",
+    "oneModeFockDimension": 2,
+    "independentReverseArrowFockDimension": 4,
+    "matterTroDimensions": {"forwardOnly": 16, "bothIndependent": 24},
+    "forcedBySource": false
+  },
+  "transformationAudit": {
+    "antiunitaryRealStructurePlus": {
+      "rule": "Theta_plus A Theta_plus^-1=A_dagger and Theta_plus i Theta_plus^-1=-i",
+      "scalarParity": "even",
+      "pseudoscalarParity": "even",
+      "chiTimesPseudoscalarInvariant": false
+    },
+    "unitaryParticleHoleExchange": {
+      "rule": "C A C^-1=A_dagger and C i C^-1=i",
+      "scalarParity": "even",
+      "pseudoscalarParity": "odd",
+      "chiTimesPseudoscalarInvariant": true,
+      "gaugeEquivariantOnUndoubledChargedModule": false
+    },
+    "rephasing": {
+      "rule": "N->exp(i alpha)N rotates A=NN by exp(2 i alpha)",
+      "consequence": "the scalar and pseudoscalar axes are not canonical without a phase reference"
+    }
+  },
+  "counterterms": [
+    {"operator": "1", "boundaryDimension": 0, "pairedParity": "even", "status": "allowed boundary tension"},
+    {"operator": "H_dagger H", "boundaryDimension": 2, "pairedParity": "even", "status": "allowed spectator"},
+    {"operator": "S_N=NN+(NN)_dagger", "boundaryDimension": 3, "pairedParity": "even", "status": "allowed even Majorana mass"},
+    {"operator": "P_N=i(NN-(NN)_dagger)", "boundaryDimension": 3, "pairedParity": "odd under chosen unitary C; even under Theta_plus", "status": "forbidden alone only in the unitary-C contract"},
+    {"operator": "chi S_N", "boundaryDimension": 3, "pairedParity": "odd under chosen unitary C", "status": "forbidden in the unitary-C contract"},
+    {"operator": "chi P_N", "boundaryDimension": 3, "pairedParity": "even under chosen unitary C; odd under Theta_plus", "status": "portal allowed only after choosing unitary C or an alternative real-structure sign"},
+    {"operator": "n_mu N_dagger sigma_bar^mu N", "boundaryDimension": 3, "pairedParity": "particle-hole odd before geometric normal transformation", "status": "allowed boundary-condition/current datum but state-dependent"},
+    {"operator": "gauge or gravitational Chern-Simons", "boundaryDimension": 3, "pairedParity": "endpoint even", "status": "cannot lock O1 to R"},
+    {"operator": "L H N", "bulkDimension": 4, "boundaryDimension": 4, "pairedParity": "spurion-covariant only with Y_nu->Y_nu_star", "status": "bulk renormalizable, boundary irrelevant"},
+    {"operator": "N_dagger derivative_tangent N", "boundaryDimension": 4, "pairedParity": "even", "status": "boundary irrelevant"}
+  ],
+  "oneLoop": {
+    "singleSterileFlavorStructure": "delta M_chi is proportional to (Y_nu_dagger Y_nu) M_chi",
+    "coefficientClaimed": false,
+    "phaseMixingAtOneLoop": false,
+    "zeroMassTechnicallyNatural": true,
+    "reason": "Y_nu_dagger Y_nu is a real scalar for one N and lepton number forbids an additive Majorana mass when M_chi=0",
+    "limitation": "the calculation preserves a chosen phase; it does not select the phase, the unitary exchange, or the boundary coefficient"
+  },
+  "verdict": {
+    "classification": "technically stable tunable spurion, not a source-derived physical latch",
+    "antiunitaryPlusBranch": "obstructed because the proposed Hermitian pseudoscalar is even and chi times it is odd",
+    "unitaryBranch": "locally admissible and one-loop multiplicatively stable, but the unitary exchange and phase reference are extra data",
+    "smallestMissingData": [
+      "a source-derived choice between the antiunitary real structure and a unitary particle-hole exchange",
+      "a phase reference fixing the scalar/pseudoscalar Majorana axes",
+      "an operator-level lock from neutral-arrow orientation to the charged Furey TRO"
+    ]
+  },
+  "falsifiers": [
+    "the reverse arrow must be independently integrated rather than represented as the CAR adjoint",
+    "no self-adjoint local boundary condition admits the proposed Majorana term",
+    "the chosen exchange fails on the full charged Nambu module",
+    "one-loop counterterms violate M_minus_chi=M_chi_star despite the declared exact paired symmetry",
+    "the neutral orientation remains uncorrelated with the charged TRO",
+    "a source construction canonically fixes the unitary exchange and phase, upgrading the spurion to a physical latch"
+  ]
+}

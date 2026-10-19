@@ -26490,6 +26490,119 @@ Treat topology as sector memory or control, not as a local force source. Advance
 
 [1227_pure_bf_is_locally_stress_and_flat_holonomy_blind_while_gapped_unit_charged_matter_is_the_minimal_a11_bridge.md](../1200-1299/)
 
+## Cycle 1109 — gapped charge-one matter becomes an explicit local holonomy reader
+
+### Executed
+
+- Constructed the finite-temperature charged-scalar model on an oriented square defect torus.
+- Computed its holonomy-dependent partition function and positive connected stress covariance.
+- Verified charge-three blindness, conjugate-sector degeneracy, orientation-averaging cancellation and mass/size suppression.
+
+### Decision
+
+Admit the toy as an explicit topology-to-matter-to-stress mechanism. Do not infer a physical third direction until the probe embedding relative to the fixed response plane is derived. Static Euclidean covariance is not yet the real-frequency A11 observable.
+
+### Artifact
+
+[1228_a_gapped_charge_one_scalar_reads_flat_z3_holonomy_through_stress_but_the_third_direction_requires_an_oriented_cycle_and_probe_embedding.md](../1200-1299/)
+
+## Cycle 1110 — conjugation splits even sector detection from oriented readout
+
+### Executed
+
+- Proved \(C_{-h}=RC_hR^T\).
+- Separated the even cosine and orientation-odd sine harmonics.
+- Verified a positive three-site ring whose even/odd cross covariance distinguishes all three sectors.
+
+### Decision
+
+Report even and orientation-odd A11 amplitudes separately. Apparatus orientation is an admissible operational datum but does not solve A5 family selection.
+
+### Artifact
+
+[1229_conjugate_z3_sectors_are_degenerate_for_same_parity_probes_but_an_oriented_odd_probe_separates_them_without_solving_a5.md](../1200-1299/)
+
+## Cycle 1111 — the nearest A11 experiment becomes concrete
+
+### Executed
+
+- Specified an Aharonov--Casher two-port protocol at three offset-charge phases.
+- Added fixed-port conversion, nuisance controls, bills of materials and missing-input fields.
+- Defined the stronger clock-algebra, branch-permutation, protection-scaling and poisoning tests for genuine protected \(Z_3\).
+
+### Decision
+
+Use the loop experiment as a continuous-holonomy control. Do not call three sampled phases a discrete topological sector while intermediate phases remain accessible.
+
+### Artifact
+
+[1230_the_nearest_a11_experiment_is_an_aharonov_casher_two_port_while_protected_z3_requires_verified_sector_algebra_and_scaling.md](../1200-1299/)
+
+## Cycle 1112 — genuine exhaustion becomes a dependency-frontier criterion
+
+### Executed
+
+- Encoded the seven blockers as an acyclic dependency graph.
+- Identified A2, A4 and A5 as construction roots and A6, A9 and A11 as downstream consumers.
+- Assigned every blocker a first missing datum, smallest resolving calculation, falsifier and external-input boundary.
+
+### Decision
+
+Continue only work that discharges a dependency, closes a stated model class, or reduces the uncertainty to a named external datum. More documents or representations alone do not constitute exhaustion.
+
+### Artifact
+
+[1231_genuine_exhaustion_is_a_dependency_frontier_not_a_document_count.md](../1200-1299/)
+
+## Cycle 1113 — A7 acquires its maximal conditional classical stress tensor
+
+### Executed
+
+- Varied the metric-dependent action sectors term by term.
+- Separated gauge, scalar, projector and fermion contributions.
+- Recorded exactly zero local Hilbert stress for the pure BF sectors.
+- Localized the remaining ambiguity to improvement, mixing, contacts, boundary variation and physical-port normalization.
+
+### Decision
+
+Advance A7 to a conditional classical construction but do not pass it. Its smallest resolving packet is now a completed curved-space action plus renormalized Ward audit tied to two operational probes.
+
+### Artifact
+
+[1232_the_candidate_action_has_a_conditional_classical_stress_tensor_but_a7_stops_at_improvement_contacts_and_physical_probe_normalization.md](../1200-1299/)
+
+## Cycle 1114 — A2 reaches its minimal conditional defect completion
+
+The charge-three Higgs-to-BF normalization and gapped-reader coexistence were derived conditionally. The gauge-connected Higgs vacuum cannot source a wall, so a neutral \(Z_2\) kink is the minimal extension. It localizes one charge-one boson, but its origin and orientation remain external. Artifacts: [1233](../1200-1299/1233_charge_three_abelian_higgs_reduces_conditionally_to_level_three_bf_and_a_gapped_unit_charge_reader_can_coexist_only_as_non_topological_memory.md) and [1292](../1200-1299/1292_a_neutral_z2_kink_is_the_minimal_defect_origin_and_one_even_charge_one_boson_localizes_without_mirror_doubling.md).
+
+## Cycle 1115 — A4 proves possible health but stops at the chiral fold domain
+
+One scoped bosonic tree-level completion has positive kinetics, masses, residues and a periodic self-adjoint domain. The maximal action packet retains healthy defined poles, but reflection flips chirality and the undoubled Standard Model supplies no same-representation partner. Boundary BRST cohomology and the global spectrum are therefore undefined. Artifacts: [1290](../1200-1299/1290_s_v1_contains_a_fully_healthy_quadratic_benchmark_but_one_completion_cannot_discharge_the_global_a4_gate.md) and [1451](../1400-1499/1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md).
+
+## Cycle 1116 — A5 is exhausted at an external complex phase reference
+
+An oriented boundary supplies a valid effective selector tuple, but endpoint-blind SM15 operators cannot distinguish the Furey exchange. The sterile CAR extension corrects the antiunitary sign and leaves only a unitary particle--hole spurion. No declared CP, boundary, \(Z_3\), flavour or index datum selects its phase circle. Reopening requires an independently calibrated charge-minus-two complex reference and local topology lock. Artifacts: [1235](../1200-1299/1235_an_oriented_boundary_can_select_one_anomaly_free_furey_tro_and_retain_cp_only_if_an_exchange_odd_portal_exists.md), [1391](../1300-1399/1391_the_minimal_sterile_car_action_makes_the_reverse_arrow_an_adjoint_but_leaves_the_a5_portal_a_tunable_spurion.md), and [1395](../1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md).
+
+## Cycle 1117 — A6 finds a canonical index three and kills its minimal local parent
+
+The completion \(\mathbb{CP}^1\) canonically inherits \(\mathcal O(3)\), and the formal vertical Dirac operator gives three zero modes to every Standard Model multiplet. Its minimal local six-dimensional parent has irreducible gravitational/gauge and global \(SU(2)\) anomalies; a Dirac repair restores mirrors. A6 remains externally open to new anomaly inflow or matter. Artifacts: [1397](../1300-1399/1397_the_completion_cp1_canonically_inherits_o3_and_index_three_but_no_current_action_makes_it_the_fermion_family_dirac_space.md) and [1450](../1400-1499/1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md).
+
+## Cycle 1118 — A7/A9 retain a traceless spectral threshold, not a universal third matrix direction
+
+The static covariance was separated from the real-time pair spectrum. Ward completion and scalar improvement show that the integrated signed third direction depends on the unmatched \(\xi_\chi\), whereas the traceless spectral support survives the displayed improvement family and local contacts. Artifacts: [1392](../1300-1399/1392_the_static_reader_covariance_does_not_analytically_continue_but_an_orientation_odd_pair_spectrum_retains_a_third_direction.md), [1393](../1300-1399/1393_the_full_scalar_stress_preserves_a_traceless_holonomy_threshold_but_not_a_scheme_invariant_third_matrix_direction.md), and [1396](../1300-1399/1396_no_current_principle_predicts_the_reader_curvature_coupling_so_only_the_traceless_threshold_is_scheme_robust.md).
+
+## Cycle 1119 — A11 becomes a calibrated spectral experiment with a device-prediction gate
+
+The primary endpoint is now a traceless/differential spectral pole and band contrast. The literature-anchored synthetic fixture has a 0.630 MHz resolution floor, but no microscopic shift, residue or physical port operator is predicted. Aharonov--Casher remains a continuous-\(U(1)\) mechanism test; protected \(Z_3\) requires separate algebra and protection evidence. Artifacts: [1399](../1300-1399/1399_a11_should_preregister_the_traceless_spectral_support_shift_and_treat_the_third_matrix_direction_as_secondary.md) and [1452](../1400-1499/1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md).
+
+## Cycle 1120 — red-team correction precedes terminal exhaustion
+
+The adversarial audit found and corrected the antiunitary parity error, finite-square-index overclaim, finite-wall exactness language and several readiness/scheme labels. The terminal register then partitioned all seven gates without declaring a whole-gate failure. Artifacts: [1398](../1300-1399/1398_final_wave_red_team_audit_finds_two_substantive_errors_and_preserves_four_independent_stopping_boundaries.md) and [1453](../1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md).
+
+## Cycle 1121 — Zenodo response sources are corrected and integrated without reopening a gate
+
+The two-branch octonionic preprint was repaired from \(A\bar B\)/common-phase language to the \(AB\)/opposite-phase symmetry actually used by its equations. The repaired flow has an exact CP-Lindblad two-mode completion and an \(SO(2,1)\) response cone, but no full \(Sp(4,\mathbb R)\) closure or derived octonionic operator map. The dissipative QWZ preprint's quadrature reproduces, while an exact Liouvillian calculation kills its identification with the stationary response of the written \(L=\sigma_z\) bath. The terminal gate partition is unchanged. Artifacts: [1454](../1400-1499/1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md), [1455](../1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md), and [1456](../1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md).
+
 
 
 

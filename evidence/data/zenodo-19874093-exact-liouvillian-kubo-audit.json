@@ -1,0 +1,73 @@
+{
+  "schema": "spin23.zenodo-19874093-liouvillian-kubo-audit/1",
+  "documentId": 1454,
+  "date": "2026-10-20",
+  "source": {
+    "doi": "10.5281/zenodo.19874093",
+    "title": "Dissipative Softening of Chern Plateaus in a Two-Sector Lattice Dirac Model",
+    "author": "Aaron Alderman",
+    "publicationDate": "2026-04-29",
+    "status": "author preprint",
+    "sourceCodeFile": "paper3_qwz_common.py",
+    "sourcePdfMd5": "8d7972c8fa43331d76618e40ce9aaec1"
+  },
+  "model": {
+    "hamiltonian": "H(k)=sin(kx) sigma_x + sin(ky) sigma_y + [M+cos(kx)+cos(ky)] sigma_z",
+    "claimedMasterEquation": "rho_dot=-i[H,rho]+gamma(sigma_z rho sigma_z-rho)",
+    "phenomenologicalFormula": "sigma_xy^phen=(1/2pi) integral_BZ Omega(k) 4|d|^2/[4|d|^2+gamma^2] d^2k",
+    "phenomenologicalStep": "replace i eta by a momentum-independent scalar retarded self-energy i gamma/2",
+    "berryCurvature": "Omega=d dot (partial_kx d cross partial_ky d)/(2|d|^3)"
+  },
+  "quadratureReproduction": {
+    "grid": "uniform N by N on [-pi,pi)^2",
+    "rule": "periodic Riemann sum with dk=2pi/N",
+    "curvatureRegularizer": 1e-12,
+    "paperConvergenceTarget": {
+      "mass": -1,
+      "gamma": 0.0001,
+      "values": [
+        {"N": 100, "reported": 0.999971},
+        {"N": 200, "reported": 0.999998},
+        {"N": 300, "reported": 1.0},
+        {"N": 400, "reported": 1.0}
+      ]
+    },
+    "maximumAllowedAbsoluteDifference": 0.00003,
+    "comparisonNote": "the released code/formula agrees with the rounded convergence table only to 2.9e-5 at N=100; this is accepted as reproduction of the stated near-quantized quadrature, not bitwise reproduction of the printed table"
+  },
+  "exactLiouvillian": {
+    "blochEquation": "r_dot=A r with A=2[d]_cross-diag(2gamma,2gamma,0)",
+    "determinant": "det(A)=-8 gamma [sin(kx)^2+sin(ky)^2]",
+    "genericSteadyState": "rho_ss=I/2 for gamma>0 and sin(kx)^2+sin(ky)^2>0",
+    "exceptionalMomenta": "kx,ky in {0,pi}; a measure-zero set where H commutes with sigma_z",
+    "probe": "delta H=-A_y v_y, v_y=partial_ky H",
+    "linearizedForcing": "delta L rho_ss=i A_y[v_y,rho_ss]=0",
+    "exactSteadyStateKubo": "delta rho=(i omega-L)^(-1) delta L rho_ss=0 and sigma_xy=0",
+    "orderOfLimits": "taking t to infinity at any gamma>0 gives zero; taking gamma to zero first and preparing the lower band gives the closed-system Chern response"
+  },
+  "killTest": {
+    "null": "the phenomenological quadrature equals the exact steady-state L=sigma_z Liouvillian Kubo response",
+    "decisivePoint": {"mass": -1, "gamma": 0.35, "gridN": 400},
+    "failureCondition": "absolute difference greater than the numerical threshold",
+    "failureThreshold": 0.000001,
+    "expectedExact": 0,
+    "interpretation": "a nonzero phenomenological value with zero exact response rejects the identification, not the numerical quadrature"
+  },
+  "consistencyDiagnosis": {
+    "retardedOnlySelfEnergyIsInsufficient": true,
+    "missingObjects": [
+      "the noise or lesser Keldysh component that fixes the stationary distribution",
+      "Liouvillian vertex corrections required by the stated jump operator",
+      "a non-unital energy-relaxation or reservoir model that preserves a lower-band population",
+      "a finite-time preparation-and-readout protocol if the intended observable is transient rather than stationary"
+    ],
+    "survivingClaim": "the code correctly evaluates the declared phenomenological scalar-self-energy Berry-curvature quadrature and its doubled geometric cusp",
+    "rejectedClaim": "the finite softened curve is the exact steady-state Hall conductivity of the written L=sigma_z Lindblad equation"
+  },
+  "programmeMapping": {
+    "A9": "use exact Liouvillian response, stationary state and order-of-limits gates before admitting dissipative spectral or transport predictions",
+    "A11": "a broadening-only retarded response cannot supply a calibrated positive observable unless the bath, stationary preparation and physical ports are specified",
+    "spin23Evidence": false,
+    "maximumAdmission": "methodological no-go and reusable verifier; no microscopic Spin23 coupling or physical data"
+  }
+}

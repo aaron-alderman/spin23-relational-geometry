@@ -1,0 +1,102 @@
+{
+  "schema": "spin23.xi-normalization-exhaustion/1",
+  "documentId": 1396,
+  "date": "2026-10-20",
+  "modelId": "localized-q1-scalar-xi-principle-audit-v1",
+  "status": "normalization-not-derived-robust-traceless-remnant-only",
+  "conventions": {
+    "defectDimension": 3,
+    "curvatureTerm": "integral sqrt(-gamma) xi_chi R[gamma] |chi|^2",
+    "conformalValue": "xi_conf(d)=(d-2)/(4(d-1)); xi_conf(3)=1/8",
+    "bulkConformalValue": "xi_conf(4)=1/6 and cannot be copied to the defect without dimensional matching"
+  },
+  "principles": [
+    {
+      "id": "minimal-coupling",
+      "candidateValue": 0,
+      "classification": "boundary condition or convention",
+      "fixesXiInCurrentProgramme": false,
+      "reason": "R|chi|^2 is local, gauge invariant and symmetry allowed; minimal coupling is not protected once curved-space matching or interactions are admitted"
+    },
+    {
+      "id": "defect-conformal-coupling",
+      "candidateValue": 0.125,
+      "classification": "symmetry value only for a massless conformal defect theory",
+      "fixesXiInCurrentProgramme": false,
+      "reason": "the reader is explicitly gapped and its quartic/localization scales break Weyl invariance; no defect CFT or Weyl Ward identity is derived"
+    },
+    {
+      "id": "curved-space-rg",
+      "candidateValue": null,
+      "classification": "running coupling requiring a boundary condition and completed beta functions",
+      "fixesXiInCurrentProgramme": false,
+      "reason": "R|chi|^2 is an allowed marginal curvature operator in 2+1 dimensions; fixed-point attraction, where present, does not specify a finite-scale value without the full field content, scheme and matching scale"
+    },
+    {
+      "id": "spectral-action",
+      "candidateValue": null,
+      "classification": "possible microscopic matching principle not instantiated",
+      "fixesXiInCurrentProgramme": false,
+      "reason": "the localized q=1 reader and three-dimensional defect Dirac/spectral data are absent from the current spectral action; a Higgs coefficient from another spectral triple cannot be imported"
+    },
+    {
+      "id": "defect-weyl-symmetry",
+      "candidateValue": 0.125,
+      "classification": "would be predictive only after an exact or fixed-point Weyl symmetry is proved",
+      "fixesXiInCurrentProgramme": false,
+      "reason": "mass, finite localization width, finite cycle and generic interactions break or deform the required Ward identity"
+    },
+    {
+      "id": "equivalence-principle",
+      "candidateValue": null,
+      "classification": "does not distinguish allowed scalar curvature coupling",
+      "fixesXiInCurrentProgramme": false,
+      "reason": "local covariance and universal metric coupling permit xi R|chi|^2; curvature is tidal data not removable by a local inertial frame"
+    },
+    {
+      "id": "operational-renormalization",
+      "candidateValue": null,
+      "classification": "measurable input",
+      "fixesXiInCurrentProgramme": true,
+      "predictsXi": false,
+      "reason": "one reference trace-stress matrix element fixes xi at a declared scale and scheme, making later predictions well defined but not parameter free"
+    }
+  ],
+  "curvedCounterterms": {
+    "intrinsicDefect": ["delta_Z |D chi|^2", "delta_M2 |chi|^2", "delta_lambda |chi|^4", "delta_xi R_def |chi|^2", "delta_Lambda", "delta_kappa R_def", "higher derivative curvature/source terms in the EFT"],
+    "embeddedDefect": ["extrinsic-curvature invariants allowed by fold parity", "normal-derivative and displacement-operator counterterms", "bulk-to-defect matching terms"],
+    "rgStructure": "mu d xi/d mu=beta_xi(xi, lambda, gauge, wall and portal couplings); near a specified conformal fixed point beta_xi may be linearized as gamma_xi (xi-xi_star)+..., but neither gamma_xi nor xi_star for this incomplete defect theory is presently derived",
+    "strongestJustifiedCoefficientClaim": "no numerical beta_xi coefficient is justified until reader self-interaction, gauge dynamics, wall modes, regulator and renormalization prescription are fixed"
+  },
+  "responseVerdict": {
+    "thirdMatrixDirection": "conditional on a frozen xi_chi and a common physical port map; not scheme invariant",
+    "robustObservable": "positive spectral measure and first visible threshold of S=T_xx-T_yy",
+    "robustThresholdsForFixture": {"h0": 2.5612496949731396, "h1": 1.7442646111507087, "h2": 1.7442646111507087},
+    "cpOddResponse": "zero in the CP-even scalar toy"
+  },
+  "stoppingRule": {
+    "stopClaimingPrediction": "do not claim a physical A11 third matrix direction while xi_chi or the common trace/traceless port map is unfixed",
+    "continueOnlyIf": [
+      "a complete curved microscopic action including the localized reader computes xi_chi by matching",
+      "an exact defect Weyl fixed point and its deformation to the gapped phase are derived",
+      "or one operational trace-stress renormalization condition is supplied at a declared scale"
+    ],
+    "defaultPrimaryObservable": "use only the traceless spectral threshold/support as the scheme-robust preregistered target"
+  },
+  "parameters": {"sitesPerCycle": 6, "mass": 0.8, "beta": 1.3},
+  "acceptance": {
+    "maximumConformalFormulaError": 1e-15,
+    "maximumTracelessXiDrift": 1e-12,
+    "maximumRootResidual": 1e-10,
+    "minimumThresholdSeparation": 0.001
+  },
+  "claimBoundary": {
+    "xiPredicted": false,
+    "betaXiComputed": false,
+    "exactDefectWeylSymmetryDerived": false,
+    "spectralActionReaderEmbeddingDerived": false,
+    "thirdMatrixDirectionSchemeInvariant": false,
+    "tracelessThresholdSchemeInvariant": true,
+    "physicalAdmission": false
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema": "spin23.a6-programme-three-to-index-three-bridge/1",
+  "documentId": 1397,
+  "date": "2026-10-20",
+  "status": "canonical-bundle-pullback-found-but-fermion-dirac-coupling-missing",
+  "sourceGeometry": {
+    "projectorOrbit": "CP2=P(C3)",
+    "universalSequence": "0 -> L -> C3_trivial -> Q -> 0",
+    "classes": {
+      "c1L": "-h",
+      "c1Q": "h",
+      "tangent": "T_CP2=L* tensor Q",
+      "c1Tangent": "3h",
+      "antiCanonical": "det(T_CP2)=K_CP2^-1=O(3)"
+    }
+  },
+  "completionLineEmbedding": {
+    "fixedSelectedProjector": "P with complementary plane Q_P",
+    "completionSpace": "P(Q_P)=CP1",
+    "map": "j_P:P(Q_P)->P(C3)=CP2 sends a complementary line F2 to the same line viewed in C3",
+    "isCanonicalGivenP": true,
+    "pullbacks": {
+      "jStarL": "O(-1)",
+      "jStarQ": "O(0) direct-sum O(1)",
+      "jStarT_CP2": "O(1) direct-sum O(2)",
+      "jStarDetT_CP2": "O(3)"
+    },
+    "chernNumbers": {
+      "integralH": 1,
+      "integralC1Tangent": 3,
+      "integralC1DetTangent": 3
+    },
+    "normalBundle": "O(1)",
+    "intrinsicTangentOfCP1": "O(2)",
+    "qualification": "O(3) is the restricted ambient anticanonical line O(2) tensor normal O(1), not the intrinsic anticanonical line of CP1."
+  },
+  "diracIndex": {
+    "spinPositive": "O(-1)",
+    "twist": "j_P^* K_CP2^-1=O(3)",
+    "positiveBundle": "O(2)",
+    "positiveKernelBasis": ["1", "z", "z^2"],
+    "positiveKernelDimension": 3,
+    "negativeKernelDimension": 0,
+    "index": 3,
+    "alternativeTangentTwist": {
+      "bundle": "O(1) direct-sum O(2)",
+      "componentIndices": [1, 2],
+      "totalIndex": 3
+    }
+  },
+  "candidateSources": [
+    {
+      "candidate": "cross-Peirce completion CP1",
+      "verdict": "supplies the canonical embedded base j_P(P(Q_P)) once P is selected",
+      "exactContribution": "makes pullback of the ambient O(3) well typed",
+      "missing": "does not make a vacuum/configuration space into a fermion propagation coordinate"
+    },
+    {
+      "candidate": "CP2 projector curvature",
+      "verdict": "supplies the degree-three curvature class",
+      "exactContribution": "with Pi=F2 the varying complementary projector, j_P^*[-i Tr((I-3Pi) dPi wedge dPi)]/(2pi) integrates to 3",
+      "missing": "for a constant four-dimensional vacuum map its spacetime pullback has no family index"
+    },
+    {
+      "candidate": "canonical Spin-c determinant",
+      "verdict": "its line O(3) restricts correctly and can twist a CP1 Dirac operator",
+      "exactContribution": "a canonical degree-three line exists without choosing an arbitrary O(3) after P",
+      "missing": "it is center-blind and is not yet represented on the physical fermion kinetic operator"
+    },
+    {
+      "candidate": "charge-three flavon line R^3",
+      "verdict": "does not create degree three on the completion CP1",
+      "exactContribution": "c1(R^3)=3c1(R) only after a line R over the same base is supplied",
+      "missing": "the existing R lives over spacetime; pulled back from M4 to M4xCP1 it has fiber degree zero"
+    },
+    {
+      "candidate": "normalized charge-three link Hopf quotient",
+      "verdict": "the weight-three physical U1 action is non-effective; on the coarse CP1 its charge-three representation descends to O(1), not O(3)",
+      "exactContribution": "the residual Z3 is the ineffective kernel",
+      "missing": "primitive charge-one matter is gerbe-twisted rather than an ordinary line on the coarse CP1"
+    },
+    {
+      "candidate": "residual Z3 and level-three BF",
+      "verdict": "no ordinary degree-three line follows",
+      "exactContribution": "encodes finite holonomy/topological level",
+      "missing": "H1(CP1,Z3)=0 and H2(CP1,Z) has no torsion; BF level is not a first Chern flux"
+    },
+    {
+      "candidate": "family U1X",
+      "verdict": "cannot be the common family twist",
+      "exactContribution": "provides a compact connection with species- and family-dependent charges",
+      "missing": "Q has X=0 and other fields have unequal signed X, so one X flux does not yield three identical complete SM generations"
+    }
+  ],
+  "centerAndFundamentalAudit": {
+    "centralParameter": "t=2pi/3",
+    "tangentWeight": 3,
+    "detTangentWeight": 6,
+    "z3ActionOnTangent": "trivial",
+    "z3ActionOnSpinCDeterminant": "trivial",
+    "fundamentalRestriction": "j_P^*(L direct-sum Q)=O(-1) direct-sum O(0) direct-sum O(1)",
+    "fundamentalComponentIndices": [-1, 0, 1],
+    "fundamentalTotalIndex": 0,
+    "consequence": "The faithful fundamental module remembers the Z3 center but does not by itself produce index three; the center-blind determinant line produces index three but needs an explicit fermion coupling."
+  },
+  "typedBridge": {
+    "bundleLevelExists": true,
+    "chain": [
+      "selected rank-one projector P",
+      "completion embedding j_P:P(Q_P)=CP1 -> CP2",
+      "ambient anticanonical line K_CP2^-1=O(3)",
+      "pullback j_P^*K_CP2^-1=O_CP1(3)",
+      "spin Dirac on CP1 twisted by that line",
+      "index three"
+    ],
+    "physicalOperatorLevelExists": false
+  },
+  "minimalNewCoupling": {
+    "name": "universal vertical family Dirac coupling",
+    "operator": "D_total=D4 tensor 1 + gamma5 tensor D_fam, where D_fam is the CP1 spin Dirac operator twisted by j_P^*K_CP2^-1",
+    "requirements": [
+      "treat the completion CP1 as an internal spectral/propagation coordinate rather than only a vacuum target",
+      "tensor every SM15 multiplet and the sterile N uniformly with the same O(3) twist",
+      "supply a Hermitian connection whose curvature is the pulled-back projector curvature",
+      "impose the conjugate Nambu/CAR real structure so O(-3) modes are adjoints rather than independent mirrors",
+      "audit the higher-dimensional or spectral-triple anomaly and Kaluza-Klein spectrum",
+      "explain how response-gapping the CP1 orientation coexists with retaining its index geometry"
+    ]
+  },
+  "derivedVersusInserted": {
+    "nowDerived": [
+      "the completion CP1 embeds canonically as the projective line of complementary rank-one projectors once P is selected",
+      "the ambient anticanonical line restricts to O(3)",
+      "its twisted CP1 Dirac index is three"
+    ],
+    "stillInserted": [
+      "fermions propagate or spectrally fluctuate along that CP1",
+      "all SM species couple universally to the restricted anticanonical connection",
+      "the vertical kinetic scale and CAR polarization",
+      "compatibility with the response potential that otherwise gaps/selects the CP1 direction"
+    ]
+  },
+  "verdict": {
+    "integerCoincidenceOnly": false,
+    "canonicalBundleBridgeExists": true,
+    "physicalFermionBridgeExists": false,
+    "generationThreeDerivedByProgramme": false,
+    "a6Passed": false,
+    "physicalAdmission": false
+  }
+}

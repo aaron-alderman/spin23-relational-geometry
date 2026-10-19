@@ -12991,6 +12991,54 @@ Each cycle ends by updating this registry, including branches that failed or bec
 - **Stop condition:** do not interpret a synthetic three-phase control or continuous \(U(1)\) ring as a genuine discrete gauge sector, and do not infer stress from topology without a stress-carrying mediator.
 - **Artifacts:** [1225](../1200-1299/1225_the_a11_effect_window_requires_nuisance_projected_power_not_only_a_nonzero_transverse_response.md), [1226](../1200-1299/1226_a_passive_two_port_is_the_fastest_z3_control_test_but_only_a_parafermion_or_discrete_gauge_platform_would_supply_genuine_z3_sectors.md), and [1227](../1200-1299/1227_pure_bf_is_locally_stress_and_flat_holonomy_blind_while_gapped_unit_charged_matter_is_the_minimal_a11_bridge.md).
 
+### B-A11-CHARGED-READER — explicit holonomy-to-stress matter bridge
+
+- **Dependency:** B-A11-MICROSCOPIC-REALIZATION.
+- **Constructive result:** a gapped charge-one scalar on an oriented torus has holonomy-dependent positive stress covariance without an anisotropic local kinetic coefficient.
+- **Exact symmetry boundary:** charge conjugation pairs sectors one and two; orientation averaging removes the signed component.
+- **Probe theorem:** the cosine harmonic detects trivial versus nontrivial sectors, while the sine harmonic requires an even/odd oriented probe pair.
+- **Scale boundary:** response falls rapidly with increasing mass and cycle size; no coefficient is yet derived from the candidate action.
+- **Stop condition:** do not identify operational loop orientation with the A5 family selector or infer a physical third direction before deriving the embedding relative to the fixed physical response plane.
+- **Artifacts:** [1228](../1200-1299/1228_a_gapped_charge_one_scalar_reads_flat_z3_holonomy_through_stress_but_the_third_direction_requires_an_oriented_cycle_and_probe_embedding.md) and [1229](../1200-1299/1229_conjugate_z3_sectors_are_degenerate_for_same_parity_probes_but_an_oriented_odd_probe_separates_them_without_solving_a5.md).
+
+### B-A11-CONCRETE-PROTOCOL — continuous loop control versus protected Z3
+
+- **Near experiment:** Aharonov--Casher two-port at offset charges \(0,1/3,2/3\), with fixed ports and path-off, dummy-gate, drift and reciprocity controls.
+- **Interpretive boundary:** accessible intermediate phase values make this a continuous-\(U(1)\) holonomy experiment, not a protected discrete sector.
+- **Protected test:** verify clock/shift algebra, prepare three sector eigenstates, observe branch permutation and fixed-sector return, and demonstrate local-perturbation resistance plus separation scaling.
+- **Pinned dependency:** obtain platform-specific coupling, linewidth, poisoning and calibration inputs before reusing the effect-window budget.
+- **Artifact:** [1230](../1200-1299/1230_the_nearest_a11_experiment_is_an_aharonov_casher_two_port_while_protected_z3_requires_verified_sector_algebra_and_scaling.md).
+
+### B-GENUINE-EXHAUSTION-FRONTIER — blocker dependency and terminal rules
+
+- **Construction roots:** A2 compact defect descent, A4 physical-state positivity, A5 sourced selector.
+- **Conditional middle:** A7 classical stress can be constructed, but its renormalized operator and physical ports remain open.
+- **Downstream consumers:** A6 Standard-Model matching, A9 physical spectral response, A11 experimental discrimination.
+- **Exhaustion rule:** every current-input route must end in a derivation, bounded no-go, unique smallest resolving calculation or explicit external-input boundary.
+- **Stop condition:** document count, analogy and further ambient group correspondences do not constitute frontier progress.
+- **Artifacts:** [1231](../1200-1299/1231_genuine_exhaustion_is_a_dependency_frontier_not_a_document_count.md) and [1232](../1200-1299/1232_the_candidate_action_has_a_conditional_classical_stress_tensor_but_a7_stops_at_improvement_contacts_and_physical_probe_normalization.md).
+
+### B-TERMINAL-ACTION-EXHAUSTION — typed external and conditional frontiers
+
+- **A2:** conditionally constructed after adding a neutral \(Z_2\) kink and localized gapped charge-one reader; wall origin and orientation remain external.
+- **A4:** externally open; defined bulk/localized poles are healthy, but no Lorentz- and gauge-covariant chiral fold domain or boundary BRST cohomology is supplied.
+- **A5:** internally exhausted for declared data; reopening requires an independently sourced complex charge-minus-two phase reference and local lock to the charged TRO.
+- **A6:** externally open; the canonical \(\mathcal O(3)\) index-three bundle exists, but its minimal local six-dimensional parent is anomalous and vectorlike repair restores mirrors.
+- **A7:** internally exhausted at the matched-operator boundary; the integrated matrix statistic depends on \(\xi_\chi\), while the traceless channel survives the displayed improvement family.
+- **A9:** conditionally constructed as a positive causal reader spectrum with a traceless threshold; the physical Standard-Model/defect port operator and residue remain unpredicted.
+- **A11:** externally open as a calibrated spectral-pole/band experiment; the synthetic sensitivity floor is 0.630 MHz, not a predicted signal.
+- **Graph lane:** internally exhausted at conditional response symmetry, not spacetime.
+- **Stop condition:** reopen only when a named external action, domain, anomaly-cancelling completion, phase reference, matched stress operator, microscopic signal or measured dataset is supplied.
+- **Artifacts:** [1398](../1300-1399/1398_final_wave_red_team_audit_finds_two_substantive_errors_and_preserves_four_independent_stopping_boundaries.md), [1450](../1400-1499/1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md), [1451](../1400-1499/1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md), [1452](../1400-1499/1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md), and [1453](../1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md).
+
+### B-ZENODO-RESPONSE-CONTROLS — corrected open-bosonic realization and exact Liouvillian kill test
+
+- **Corrected positive result:** the two-branch conjugate-pair ODE uses \(AB\) and opposite-phase \(U(1)\), admits an exact CP-Lindblad two-mode realization, and closes on an \(SO(2,1)\) positive response cone.
+- **Exact negative result:** the scalar-broadened QWZ curve is not the stationary Hall response of the written unital \(L=\sigma_z\) Lindbladian; the latter has generic steady state \(I/2\) and zero linear response.
+- **Authority boundary:** these are source-rich conditional/control results, not fundamental \(Spin(2,3)\), protected-\(Z_3\), Standard-Model, or physical-admission evidence.
+- **Gate result:** no 1453 reopen condition is met and the terminal partition is unchanged.
+- **Artifacts:** [1454](../1400-1499/1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md), [1455](../1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md), and [1456](../1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md).
+
 
 
 

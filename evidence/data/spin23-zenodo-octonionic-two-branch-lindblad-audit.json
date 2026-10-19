@@ -1,0 +1,118 @@
+{
+  "schema": "spin23.zenodo-octonionic-two-branch-lindblad-audit/1",
+  "documentId": 1455,
+  "date": "2026-10-20",
+  "source": {
+    "doi": "10.5281/zenodo.19643326",
+    "recordId": 19643326,
+    "title": "Octonionic Two-Branch Transport and Forced Phase Classification",
+    "pdfMd5": "5390ac0b7a6920b54d7993777cf61c05",
+    "scriptMd5": "47e0bcc480c9d07e160c5d070102b9e4"
+  },
+  "asWrittenModel": {
+    "equations": [
+      "dot A=(i omega-gamma) A+kappa conjugate(B)",
+      "dot B=(i omega-gamma) B+kappa conjugate(A)"
+    ],
+    "claimedInvariant": "A conjugate(B)",
+    "claimedPhase": "Phi=theta1+theta2",
+    "claimedSymmetry": "common-phase U(1)",
+    "internallyConsistent": false
+  },
+  "minimalCorrection": {
+    "invariant": "A B",
+    "phase": "Phi=theta1+theta2",
+    "symmetry": "opposite-phase U(1): A->exp(i alpha)A, B->exp(-i alpha)B",
+    "commonPhaseCovariant": false,
+    "oppositePhaseCovariant": true,
+    "reducedEquationsThenCorrect": true
+  },
+  "rankThreeBilinearClosure": {
+    "coordinates": [
+      "S0=(abs(A)^2+abs(B)^2)/2",
+      "S1=Re(A B)",
+      "S2=Im(A B)"
+    ],
+    "driftMatrix": [
+      ["-2gamma", "2kappa", 0],
+      ["2kappa", "-2gamma", "-2omega"],
+      [0, "2omega", "-2gamma"]
+    ],
+    "closureDimension": 3,
+    "warning": "closure dimension three does not imply the drift matrix has rank three at exceptional parameters"
+  },
+  "responseCone": {
+    "matrix": "[[S0+S1,S2],[S2,S0-S1]]",
+    "positiveSemidefinite": true,
+    "determinant": "S0^2-S1^2-S2^2=(abs(A)^2-abs(B)^2)^2/4",
+    "metric": [1, -1, -1],
+    "conformalLorentzIdentity": "M3^T eta+eta M3=-4 gamma eta",
+    "interpretation": "emergent H2(R) response cone, not literal spacetime"
+  },
+  "fourDimensionalLift": {
+    "coordinateOrder": ["Re(A)", "Im(A)", "Re(B)", "Im(B)"],
+    "driftMatrix": [
+      ["-gamma", "-omega", "kappa", 0],
+      ["omega", "-gamma", 0, "-kappa"],
+      ["kappa", 0, "-gamma", "-omega"],
+      [0, "-kappa", "omega", "-gamma"]
+    ],
+    "conformallySymplecticIdentity": "K^T J+J K=-2 gamma J",
+    "phaseSpaceDimension": 4,
+    "hamiltonianLieClosureDimension": 3,
+    "hamiltonianLieAlgebra": "sp(2,R) isomorphic to so(2,1)",
+    "fullSp4Dimension": 10,
+    "fullSp4Generated": false
+  },
+  "cpLindbladCompletion": {
+    "masterEquationConvention": "dot rho=-i[H,rho]+sum_j D[L_j](rho)",
+    "hamiltonian": "H=-omega(a^dagger a+b^dagger b)+i kappa(a^dagger b^dagger-a b)",
+    "hamiltonianSelfAdjoint": true,
+    "jumpOperators": ["sqrt(2 gamma) a", "sqrt(2 gamma) b"],
+    "kossakowskiEigenvalues": ["2gamma", "2gamma"],
+    "gammaConstraint": "gamma>=0",
+    "firstMomentIdentification": ["A=<a>", "B=<b>"],
+    "reproducesRotationExactly": true,
+    "reproducesConjugateCouplingExactly": true,
+    "reproducesDampingExactly": true,
+    "quadratureDiffusion": "D=gamma I4 for vacuum covariance I4/2",
+    "octonionicOperatorIdentificationDerived": false,
+    "associatorToSqueezingCouplingDerived": false
+  },
+  "fixedPointCorrection": {
+    "symmetricCondition": "rho=0 and sin(Phi)=omega/kappa",
+    "complementaryPositiveSign": "Phi=pi/2 only when omega/kappa>=1",
+    "complementaryNegativeSign": "Phi=3pi/2 only when omega/kappa<=-1",
+    "centersForStrictAbsoluteRatioAboveOne": 2,
+    "centersPlottedBySuppliedScriptPerPanel": 4,
+    "spuriousMarkersPerPanel": 2,
+    "amplitudeAtComplementaryPoint": "dot R/R=-gamma",
+    "strictDecayRequires": "gamma>0"
+  },
+  "dynamicalQualification": {
+    "paperClassesAre": "instantaneous pointwise partition, not invariant basins",
+    "firstMomentExponents": "-gamma +/- sqrt(kappa^2-omega^2)",
+    "parametricThreshold": "kappa^2=gamma^2+omega^2",
+    "strictAsymptoticStability": "gamma>0 and kappa^2<gamma^2+omega^2"
+  },
+  "corpusImpact": {
+    "newExactResults": [
+      "corrected three-coordinate bilinear closure",
+      "conformal Lorentz response-cone identity",
+      "four-dimensional conformally symplectic lift",
+      "exact quadratic Hamiltonian and CP-Lindblad realization"
+    ],
+    "a4Advanced": false,
+    "physicalStateDomainSupplied": false,
+    "fullSpin23Generated": false,
+    "spacetimeInterpretationAdmitted": false,
+    "promotion": "promote corrected open-bosonic response model only; do not promote the source as written"
+  },
+  "verdict": {
+    "sourceAsWrittenPasses": false,
+    "minimalCorrectionPassesAlgebraicReduction": true,
+    "cpLindbladCompletionExactForDisplayedOde": true,
+    "octonionicPhysicalDerivationComplete": false,
+    "physicalAdmission": false
+  }
+}

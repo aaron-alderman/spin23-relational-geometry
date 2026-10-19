@@ -1,0 +1,90 @@
+{
+  "schema": "spin23.genuine-exhaustion-frontier/1",
+  "date": "2026-10-20",
+  "candidateId": "spin23-effective-closure-action-v1",
+  "physicalAdmission": false,
+  "definition": {
+    "internallyExhausted": "Every admissible route using current corpus inputs ends in a derivation, a bounded no-go, a unique smallest resolving calculation, or an explicit external-input boundary.",
+    "notSufficient": [
+      "document count",
+      "additional ambient group correspondences",
+      "repeated analogy",
+      "synthetic effect without a microscopic coefficient"
+    ]
+  },
+  "blockers": [
+    {
+      "id": "A2",
+      "layer": "construction-root",
+      "dependsOn": [],
+      "firstMissingDatum": "A declared compactification with oriented defect embedding and complete charged spectrum.",
+      "smallestResolvingCalculation": "Reduce one specified compact charge-three Higgs action on the declared defect and derive the BF level, orientation, boundary terms and gapped charged modes.",
+      "falsifier": "The reduction is noncompact, gauge anomalous, leaves an unintended gapless charged mode, or fails to produce the level-three sector.",
+      "conditionalWork": "Holonomy and charged-defect toy spectra.",
+      "externalInputBoundary": "A complete ultraviolet or mesoscopic defect action and its boundary conditions."
+    },
+    {
+      "id": "A4",
+      "layer": "construction-root",
+      "dependsOn": ["A2"],
+      "firstMissingDatum": "The selected vacuum and complete gauge-fixed quadratic action with coefficients and operator domains.",
+      "smallestResolvingCalculation": "Compute the physical cohomology, pole masses and residues of one fully specified candidate action.",
+      "falsifier": "One unavoidable negative-norm state, negative physical residue, unbounded domain, or unremoved second-time mode.",
+      "conditionalWork": "Sectorwise Hessian inequalities and boundary-domain tests.",
+      "externalInputBoundary": "Numerical coefficients, potential, gauge fixing and boundary domains."
+    },
+    {
+      "id": "A5",
+      "layer": "construction-root",
+      "dependsOn": [],
+      "firstMissingDatum": "A physically sourced transforming asymmetry or history-bearing selector.",
+      "smallestResolvingCalculation": "Instantiate one selector tuple, derive its selected chiral module, and compute anomalies and a nonzero CP-odd invariant.",
+      "falsifier": "The selector is constructed only from invariant input, leaves mirrors, violates anomaly cancellation, or forces every CP-odd invariant to zero.",
+      "conditionalWork": "Broken, twisted, boundary, index and history-dependent selector models.",
+      "externalInputBoundary": "The physical origin and distribution of the asymmetric datum."
+    },
+    {
+      "id": "A7",
+      "layer": "matching",
+      "dependsOn": ["A4"],
+      "firstMissingDatum": "A completed renormalized action and contact/improvement prescription.",
+      "smallestResolvingCalculation": "Metric variation plus the renormalized Ward-identity audit for the fixed action and probes.",
+      "falsifier": "No conserved gauge-consistent stress operator exists after allowed improvement and contact terms.",
+      "conditionalWork": "Classical stress tensor and counterterm basis.",
+      "externalInputBoundary": "Renormalization scheme and physical probe definition."
+    },
+    {
+      "id": "A6",
+      "layer": "matching",
+      "dependsOn": ["A4", "A5"],
+      "firstMissingDatum": "A positive selected spectrum with a defined heavy/light split.",
+      "smallestResolvingCalculation": "Integrate out the heavy sector and match the light spectrum, gauge/Higgs couplings, Yukawas and Majorana data.",
+      "falsifier": "A mirror remains light, an observed representation is absent, or matching violates measured coupling and heavy-boson bounds.",
+      "conditionalWork": "Parameter-count and decoupling audits.",
+      "externalInputBoundary": "Selected vacuum, thresholds and measured matching inputs."
+    },
+    {
+      "id": "A9",
+      "layer": "matching",
+      "dependsOn": ["A6", "A7"],
+      "firstMissingDatum": "Canonical normalized physical probes in the matched theory.",
+      "smallestResolvingCalculation": "Compute one renormalized two-by-two spin-two/spin-zero spectral response with its mixing and finite-contact prescription.",
+      "falsifier": "The response is rank one, basis arbitrary, nonpositive beyond allowed subtraction, or entirely removable by source redefinition.",
+      "conditionalWork": "Free and perturbative spectral benchmarks.",
+      "externalInputBoundary": "Chosen observable, scheme and experimental channel."
+    },
+    {
+      "id": "A11",
+      "layer": "discrimination",
+      "dependsOn": ["A2", "A9"],
+      "firstMissingDatum": "A microscopic holonomy-to-stress coefficient and a realizable sector preparation.",
+      "smallestResolvingCalculation": "Predict and then measure the nuisance-projected transverse amplitude across controlled sectors with independent replication.",
+      "falsifier": "Adequately powered data remain in the fixed rank-two plane, or the response does not track the prepared sector.",
+      "conditionalWork": "Charged-defect spectrum, power design and platform controls.",
+      "externalInputBoundary": "Platform-specific coupling, noise, calibration and replicated data."
+    }
+  ],
+  "priorityRoots": ["A2", "A4", "A5"],
+  "conditionalParallelGate": "A7",
+  "downstreamConsumers": ["A6", "A9", "A11"]
+}

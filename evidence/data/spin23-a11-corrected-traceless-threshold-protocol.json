@@ -1,0 +1,133 @@
+{
+  "schema": "spin23.a11-corrected-traceless-threshold-protocol/1",
+  "documentId": 1399,
+  "protocolId": "A11-Z3-TRACELESS-SUPPORT-PREREG-2",
+  "date": "2026-10-20",
+  "status": "protocol-ready-synthetic-only",
+  "correction": {
+    "supersedesPrimaryEndpointOf": "A11-Z3-H2-PREREG-1",
+    "oldPrimary": "signed third H2 matrix direction and A_perp",
+    "newPrimary": "scheme-robust differential/traceless positive spectral support and onset contrast",
+    "oldEndpointDisposition": "secondary only after xi_chi and the common physical port map are fixed before labels are revealed"
+  },
+  "primaryObservable": {
+    "physicalChannel": "S=T_xx-T_yy for stress probes, or the calibrated differential port s=(1,-1)/sqrt(2) for two-port hardware",
+    "spectralDensity": "rhoS_h(omega)=s^T C_h(omega) s >= 0",
+    "sectorExcess": "Delta_rhoS=(rhoS_1+rhoS_2)/2-rhoS_0",
+    "onset": "Omega_h is the first independent resolution element whose uncertainty-aware spectral weight exceeds the frozen detection floor",
+    "onsetContrast": "Delta_Omega=Omega_0-(Omega_1+Omega_2)/2",
+    "bandWeight": "W_h(B)=integral_B rhoS_h(omega)domega",
+    "bandContrast": "Delta_W(B)=[W_1(B)+W_2(B)]/2-W_0(B)",
+    "toyPredictedWindow": [1.7442646111507087, 2.5612496949731396],
+    "toyPredictedOnsetContrast": 0.8169850838224309,
+    "schemeStatement": "the traceless projection removes scalar improvement and sector contrasts remove a sector-independent contact/background; the physical differential port must still be calibrated once and held common"
+  },
+  "primaryDesign": {
+    "holonomySectors": [0, 1, 2],
+    "minimumIndependentRunsPerSector": 3,
+    "randomizedSectorOrder": true,
+    "blindedPrimaryAnalysis": true,
+    "frozenFrequencyGrid": true,
+    "minimumIndependentSubbandsPassing": 2,
+    "minimumIndependentReplicationsPassing": 2,
+    "cpCompatibilityRequired": "h=1 and h=2 spectra agree within the preregistered CP-even tolerance",
+    "sameDifferentialPortHashRequired": true,
+    "sameContactSchemeHashRequired": true,
+    "sameEnvironmentHashRequired": true
+  },
+  "secondaryObservable": {
+    "name": "signed full-matrix transverse response A_perp and rank-three span",
+    "admissibleOnlyIf": [
+      "xi_chi is fixed by microscopic matching or one frozen operational trace-stress renormalization condition",
+      "one nonsingular common map from laboratory ports to trace/traceless metric sources is calibrated before unblinding",
+      "the G2,G0 reference plane is frozen independently of labelled test data",
+      "all original positivity, sham, contact and replication controls pass"
+    ],
+    "cannotOverridePrimaryNull": true,
+    "interpretation": "conditional signed orientation information, not a scheme-invariant primary discovery endpoint"
+  },
+  "validityControls": [
+    "positive semidefinite full dissipative response and nonnegative rhoS in every retained bin",
+    "common source/port, gain, phase and contact definitions in all sectors",
+    "frequency resolution fixed before sector labels are revealed",
+    "sham preparation with unchanged holonomy",
+    "forward and reverse randomized preparation order",
+    "temperature, drive, geometry and material-state matching",
+    "sector-independent background estimated label blind",
+    "independent implementation or experimental replication",
+    "no counting oversampled correlated bins as independent support"
+  ],
+  "powerModel": {
+    "normalizedBandEffect": 0.01,
+    "singleRunRelativeNoise": 0.02,
+    "nuisanceRetention": 0.85,
+    "worstCaseRelativeBias": 0.001,
+    "familywiseAlpha": 0.01,
+    "preregisteredIndependentSubbands": 8,
+    "requiredSubbands": 2,
+    "requiredReplications": 2,
+    "targetJointPower": 0.9,
+    "variancePerBandContrast": "3 sigma^2/(2n) for equal n in each sector",
+    "oneSidedZPowerRule": "n >= 3 sigma^2 (z_(1-alpha/B)+z_(1-beta_event))^2 / [2 (r a-b)^2]",
+    "scope": "this analytic budget covers the band contrast only; onset-separation power must be certified by the frozen lineshape and resolution model",
+    "warning": "synthetic design values are not a physical Spin23 effect prediction"
+  },
+  "decisions": {
+    "invalid": [
+      "positivity or rhoS nonnegativity fails beyond uncertainty",
+      "differential-port, contact, environment or resolution hashes differ by sector",
+      "sham or order effects exceed the frozen systematic allowance",
+      "the analysis window or onset rule changes after unblinding",
+      "h1/h2 incompatibility appears without a preregistered CP-odd microscopic term"
+    ],
+    "operationalAdvance": [
+      "Delta_W has a positive familywise-corrected lower bound in at least two independent preregistered subbands",
+      "Delta_Omega has a positive lower bound above the resolution floor",
+      "both conditions repeat in two independent replications",
+      "sham, reversed-order, common-calibration and background controls remain null"
+    ],
+    "spin23AdvanceAdditional": [
+      "a microscopic defect model predicts the same window, onset ordering and sector dependence without fitting the labelled response",
+      "the platform establishes genuine protected Z3 sector semantics rather than three samples of a continuous U1 phase"
+    ],
+    "poweredNull": [
+      "the achieved covariance and sample size certify at least 90 percent joint power for the frozen minimum band effect and onset separation",
+      "two independent implementations place upper bounds below either required model-predicted primary effect across the frozen window",
+      "all validity controls pass"
+    ],
+    "inconclusive": "every valid run satisfying neither operationalAdvance nor poweredNull"
+  },
+  "platformMapping": {
+    "aharonovCasher": {
+      "topologyClass": 1,
+      "sectorControl": "offset charges n_g=0,1/3,2/3 sampling a continuous U1 Aharonov-Casher phase",
+      "primaryReadout": "differential dissipative two-port spectral density and first visible resonance/support",
+      "decisiveControls": ["disable one coherent path", "dummy gate", "reverse/randomize charge sweep", "monitor offset-charge and quasiparticle-parity jumps"],
+      "maximumClaim": "near-term operational validation of holonomy-sensitive support; never protected Z3 evidence by three-point sampling alone"
+    },
+    "protectedZ3": {
+      "topologyClass": 2,
+      "sectorControl": "prepare and verify W eigenstates 1,omega,omega^2 using a validated nonlocal increment/string operation",
+      "primaryReadout": "the same differential positive spectral support/onset in all verified sectors",
+      "additionalControls": ["W^3=I", "local perturbation robustness", "domain-wall separation scaling", "2pi branch permutation and 6pi fixed-sector return", "poisoning and ordinary Josephson controls"],
+      "maximumClaim": "A11 protected-sector advance only after sector algebra/protection and microscopic response prediction both pass"
+    }
+  },
+  "syntheticFixtures": {
+    "frequencyCenters": [1.7, 1.9, 2.1, 2.3, 2.5, 2.7],
+    "commonBackground": [0.02, 0.025, 0.023, 0.021, 0.019, 0.018],
+    "nullSectorExcess": [0, 0, 0, 0, 0, 0],
+    "positiveH1H2Excess": [0, 0.08, 0.1, 0.09, 0.07, 0],
+    "positiveH0Excess": [0, 0, 0, 0, 0, 0.12],
+    "commonContactMatrix": [[0.04, 0.01], [0.01, 0.03]],
+    "commonCalibrationMap": [[1.1, 0.2], [-0.1, 0.9]]
+  },
+  "claimBoundary": {
+    "physicalDataAvailable": false,
+    "microscopicAmplitudePredicted": false,
+    "protectedZ3PlatformDemonstratedInsideProgramme": false,
+    "primaryEndpointSchemeRobust": true,
+    "secondaryThirdDirectionSchemeRobust": false,
+    "physicalAdmission": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "spin23.a11-realtime-charged-reader-response/1",
+  "documentId": 1392,
+  "date": "2026-10-20",
+  "modelId": "finite-torus-q1-complex-oscillator-retarded-response-v1",
+  "status": "complete-controlled-toy-not-physical-admission",
+  "model": {
+    "spatialLattice": "square N by N periodic lattice",
+    "holonomy": "theta_h=2*pi*h/3 on one oriented cycle",
+    "modeEnergySquared": "E_k(h)^2=M^2+K_x(k,h)+K_y(k)",
+    "strainVertices": "K_a=4 sin^2((2*pi*n_a+delta_ax*theta_h)/(2N))",
+    "probe": "O_a=2 sum_k K_a |z_k|^2, normalized so each particle occupation carries Q_a=K_a/E_k",
+    "scope": "gradient part of the integrated metric-strain vertex; not the complete renormalized stress tensor"
+  },
+  "response": {
+    "retarded": "chiR_ab(z)=sum_k A_ab(k)[1/(z-2E_k)-1/(z+2E_k)]",
+    "poleWeight": "A_ab=K_a K_b coth(beta E_k/2)/E_k^2",
+    "commutatorSpectralFunction": "rho_ab(omega)=2*pi*sum_k A_ab[delta(omega-2E_k)-delta(omega+2E_k)]",
+    "positiveFrequencyCone": "for omega>0 every exact spectral atom is a nonnegative multiple of K K^T and is positive semidefinite",
+    "kms": "Ggreater_ab(omega)=rho_ab(omega)/(1-exp(-beta*omega)); Gless_ab(omega)=exp(-beta*omega)Ggreater_ab(omega)",
+    "analyticProperties": [
+      "chiR is analytic in the upper half-plane",
+      "rho(-omega)=-rho(omega)^T",
+      "positive-frequency spectral atoms are positive semidefinite",
+      "chiR(z) falls as z^-2 because the positive and negative poles cancel at order z^-1"
+    ]
+  },
+  "continuationBoundary": {
+    "staticOccupationCovariance": "Cocc_ab=2*beta/N^2 sum_k nB(E)[1+nB(E)] K_a K_b/E^2",
+    "zeroFrequencyFact": "the occupation-number part commutes with the free Hamiltonian and has no nonzero-frequency retarded commutator",
+    "pairPart": "the same metric vertex also contains particle-antiparticle pair terms at omega=2E; these, not Cocc alone, produce the retarded spectral response",
+    "verdict": "the third direction is not the analytic continuation of the 1228 static occupation covariance, but an orientation-odd third direction can independently survive in the pair spectral measure"
+  },
+  "decomposition": {
+    "holonomyEven": "Delta_even=(R_h=1+R_h=2)/2-R_h=0",
+    "holonomyCpOdd": "Delta_CPodd=(R_h=1-R_h=2)/2=0 in the CP-even toy",
+    "orientationEven": "R_orient_even=(R_x+P R_x P)/2",
+    "orientationOdd": "R_orient_odd=(R_x-P R_x P)/2 with P exchanging x and y",
+    "thirdDirection": "orientationOdd is proportional to diag(1,-1), normal to the exchange-symmetric H2 plane"
+  },
+  "parameters": {
+    "sitesPerCycle": 6,
+    "mass": 0.8,
+    "beta": 1.3,
+    "lorentzianWidthForPlotsOnly": 0.04,
+    "probeEnergyResolution": 0.08
+  },
+  "acceptance": {
+    "maximumCpConjugateRelativeError": 1e-12,
+    "maximumKmsRelativeError": 1e-12,
+    "maximumOddnessRelativeError": 1e-12,
+    "maximumExchangeAverageResidual": 1e-12,
+    "minimumPositiveEigenvalueTolerance": -1e-12,
+    "minimumNonzeroOrientationOddRelativeNorm": 1e-5,
+    "minimumThresholdSeparation": 0.001
+  },
+  "claimBoundary": {
+    "localizedReaderDerivedConditionallyByDocument1292": true,
+    "orientedCycleDerived": false,
+    "completePhysicalStressVertexDerived": false,
+    "contactTermsFixed": false,
+    "bulkDefectWardIdentityClosed": false,
+    "microscopicProbeEmbeddingDerived": false,
+    "thirdPhysicalResponseDirectionEstablished": false,
+    "physicalAdmission": false
+  }
+}

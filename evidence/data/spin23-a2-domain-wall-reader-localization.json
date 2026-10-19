@@ -1,0 +1,94 @@
+{
+  "schema": "spin23.a2-domain-wall-reader-localization/1",
+  "documentId": 1292,
+  "date": "2026-10-20",
+  "modelId": "z2-kink-fold-with-single-even-q1-bosonic-reader-v1",
+  "status": "complete-conditional-minimal-extension",
+  "dimensionAudit": {
+    "target": "2+1-dimensional defect worldvolume",
+    "minimalBulk": "3+1 dimensions with one transverse coordinate y",
+    "fourPlusOneVerdict": "a codimension-one wall in 4+1 dimensions has a 3+1-dimensional worldvolume and requires a second reduction; moreover the existing b2 wedge da1 action is a four-form, not a standalone five-dimensional action",
+    "chosenCompletion": "3+1-dimensional finite folded slab with a dynamical Z2 kink"
+  },
+  "abelianHiggsOnlyNoGo": {
+    "statement": "The charge-three scalar phases are gauge equivalent, so the gauge-inequivalent vacuum space is connected and has no pi_0 domain walls. The minimal Abelian Higgs action supplies codimension-two vortices, not the required codimension-one defect.",
+    "minimalExtraDatum": "one neutral real Z2-odd order parameter eta, or externally imposed folding/orbifold boundary data"
+  },
+  "wall": {
+    "action": "integral [1/2 (d eta)^2 + lambda_eta(eta^2-u^2)^2/4]",
+    "kink": "eta_K(y)=u tanh(mu y)",
+    "antikink": "eta_A(y)=-u tanh(mu y)",
+    "mu": "u sqrt(lambda_eta/2)",
+    "tension": "4 mu u^2/3",
+    "topologicalCharge": "Q=[eta(+infinity)-eta(-infinity)]/(2u)=plus or minus one",
+    "orientationSelection": "the CP/reflection-symmetric action gives equal kink and antikink tension; boundary conditions or formation history select a superselection sector but the law predicts no sign",
+    "translationMode": "eta_K prime is even and is projected out when eta is constrained odd under the fold, pinning the wall at y=0"
+  },
+  "fold": {
+    "coveringInterval": "[-L,L] with reflection y -> -y",
+    "parities": {
+      "eta": "odd",
+      "a_i": "even",
+      "a_y": "odd",
+      "b_ij": "odd",
+      "b_iy": "even",
+      "Phi_reader": "even"
+    },
+    "survivingFields": ["a_i zero mode", "c_i=integral b_iy dy", "one even localized reader mode"],
+    "projectedFields": ["a_y zero mode", "b_ij zero mode", "wall translation zero mode"],
+    "orientationBoundaryData": ["eta(-L)=-u, eta(+L)=+u", "or its CP/reflection conjugate"],
+    "bulkActionExplicitCpBreaking": false,
+    "uniqueOrientationPredicted": false
+  },
+  "reader": {
+    "bulkField": "one complex scalar Phi of compact-U1 charge one",
+    "action": "integral [|D_a Phi|^2 + (M_infinity^2-g(u^2-eta^2))|Phi|^2 + lambda_Phi |Phi|^4]",
+    "transverseOperator": "-d_y^2 + M_infinity^2 - g u^2 sech^2(mu y)",
+    "solvableChoice": "g u^2=2 mu^2",
+    "boundWavefunction": "psi_0(y)=sqrt(mu/2) sech(mu y)",
+    "boundMassSquared": "m_chi^2=M_infinity^2-mu^2",
+    "continuumThresholdSquared": "M_infinity^2",
+    "normalizable": true,
+    "parity": "even",
+    "doublingVerdict": "one complex bosonic mode is consistent; its antiparticle supplies charge two modulo three but is not a second mirror field",
+    "anomalyVerdict": "no bosonic parity anomaly; a single 2+1-dimensional fermionic reader would require a separate parity-anomaly/inflow audit",
+    "condensationGate": "M_infinity^2 must exceed mu^2 and lambda_Phi must be positive"
+  },
+  "parameters": {
+    "u": 1,
+    "lambdaEta": 2,
+    "halfLength": 5,
+    "readerBulkMassSquared": 1.64,
+    "readerWellCoupling": 2,
+    "readerQuartic": 0.3,
+    "probeEnergy": 0.05
+  },
+  "conditionalConstruction": {
+    "achieved": [
+      "classical normalizable codimension-one defect profile",
+      "explicit fold parities reproducing the required BF zero-mode projection",
+      "history-selectable orientation without an explicit CP-odd bulk term",
+      "one normalizable even gapped charge-one bosonic reader",
+      "projection of the neutral wall translation zero mode",
+      "finite Kaluza-Klein gap and positive reader continuum gap"
+    ],
+    "remainingInputs": [
+      "the new neutral eta field or equivalent fold datum is absent from S_v1",
+      "opposite-vacuum boundary/history data are required to create rather than merely permit the wall",
+      "the orientation sign is selected by the state, not predicted by the action",
+      "the physical origin and size of the folded interval are not derived",
+      "couplings tying the wall to the Standard Model/family sector are not derived",
+      "full quantum stability, backreaction and bulk-defect stress Ward audit remain open"
+    ],
+    "a2OriginalActionPassed": false,
+    "a2ExtendedConditionalConstructionPassed": true,
+    "physicalAdmission": false
+  },
+  "acceptance": {
+    "maximumKinkEquationResidual": 1e-10,
+    "maximumReaderEquationResidual": 1e-10,
+    "maximumWavefunctionNormalizationError": 1e-8,
+    "maximumBoundaryTail": 0.0001,
+    "minimumPositiveGap": 1e-6
+  }
+}

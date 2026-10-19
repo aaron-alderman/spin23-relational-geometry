@@ -1,0 +1,140 @@
+{
+  "schema": "spin23.a4-healthy-benchmark/1",
+  "documentId": 1290,
+  "date": "2026-10-20",
+  "benchmarkId": "S-v1-healthy-quadratic-point-1",
+  "status": "conditional-existence-benchmark-not-a4-admission",
+  "claimBoundary": {
+    "parameterPointDerivedByProgramme": false,
+    "projectorSelectorDerived": false,
+    "yukawaMassSpectrumSpecified": false,
+    "defectBoundaryHilbertSpaceCertified": false,
+    "loopCorrectedVacuumCertified": false,
+    "dynamicalGravityIncluded": false,
+    "a4Passed": false,
+    "physicalAdmission": false
+  },
+  "conventions": {
+    "metric": "eta=(-,+,+,+)",
+    "gaugeKinetic": "L=-1/4 F^T K F",
+    "scalarKinetic": "L=-(D Phi)^dagger(D Phi) in covariant mostly-plus notation",
+    "potential": "L contains -V",
+    "spin23Ontology": "H2(R) response geometry, not a second physical time",
+    "backgroundGeometry": "fixed Minkowski source metric"
+  },
+  "parameters": {
+    "g": 0.6,
+    "gY": 0.4,
+    "gX": 0.3,
+    "kineticMixingChi": 0.2,
+    "higgsVev": 2,
+    "flavonVev": 3,
+    "lambdaH": 0.5,
+    "lambdaS": 0.4,
+    "lambdaHS": 0.1,
+    "projectorDecayScale": 1,
+    "projectorKappa": 0.5,
+    "projectorReferenceEigenvalues": [0, 1, 2],
+    "gaugeFixingXi": 1,
+    "periodicBoxLength": 5
+  },
+  "vacuum": {
+    "H": "(0,vH/sqrt(2))",
+    "s": "vS/sqrt(2)",
+    "P": [[1, 0, 0], [0, 0, 0], [0, 0, 0]],
+    "gaugeFields": "zero",
+    "potential": "lambdaH(|H|^2-vH^2/2)^2+lambdaS(|s|^2-vS^2/2)^2+lambdaHS(|H|^2-vH^2/2)(|s|^2-vS^2/2)+kappa||[P,A]||_HS^2",
+    "projectorReferenceA": [[0, 0, 0], [0, 1, 0], [0, 0, 2]],
+    "stationary": true,
+    "globalSelectionQualification": "P is one of three discrete eigenprojector minima. The benchmark chooses it; S_v1 does not derive why this minimum is realized."
+  },
+  "abelianKineticBlock": {
+    "basis": ["B_Y", "X"],
+    "matrix": [[1, 0.2], [0.2, 1]],
+    "eigenvalues": [0.8, 1.2],
+    "positiveDefinite": true
+  },
+  "neutralGaugeSector": {
+    "basis": ["W3", "B_Y", "X"],
+    "kineticMatrix": [[1, 0, 0], [0, 1, 0.2], [0, 0.2, 1]],
+    "higgsChargeVector": [-0.3, 0.2, -0.3],
+    "flavonChargeVector": [0, 0, 0.9],
+    "massMatrixConstruction": "M2=vH^2 cH cH^T+vS^2 cS cS^T",
+    "canonicalization": "A_c=K^(1/2) A; M_c^2=K^(-1/2) M2 K^(-1/2)",
+    "massSquaredEigenvalues": [0, 0.4869935816886004, 8.108423084978067],
+    "masses": [0, 0.6978492542724398, 2.8475292948410678],
+    "photonNullVectorInOriginalBasis": [2, 3, 0],
+    "transversePoleResiduesAfterCanonicalization": [1, 1, 1]
+  },
+  "chargedGaugeSector": {
+    "fields": ["W+", "W-"],
+    "massSquared": 0.36,
+    "mass": 0.6,
+    "transversePoleResidue": 1
+  },
+  "radialScalarSector": {
+    "basis": ["h", "rho"],
+    "hessian": [[4, 0.6], [0.6, 7.2]],
+    "massSquaredEigenvalues": [3.891199250936495, 7.308800749063504],
+    "masses": [1.9726122910842097, 2.7034793783314686],
+    "poleResiduesAfterOrthogonalDiagonalization": [1, 1],
+    "boundedQuarticTest": "lambdaH>0, lambdaS>0 and 4 lambdaH lambdaS-lambdaHS^2>0"
+  },
+  "projectorSector": {
+    "localCoordinates": "z1,z2 in the CP2 tangent at P0",
+    "quadraticKinetic": "fP^2 (|partial z1|^2+|partial z2|^2)",
+    "quadraticPotential": "2 kappa (|z1|^2+4|z2|^2)",
+    "realPhysicalModes": 4,
+    "massSquaredByComplexMode": [1, 4],
+    "poleResiduesAfterCanonicalization": [1, 1, 1, 1],
+    "qualification": "A and kappa are benchmark inputs of the allowed V_resp form, not quantities derived by S_v1."
+  },
+  "gaugeFixing": {
+    "procedure": "canonicalize K, orthogonally diagonalize the gauge mass matrix, then use R_xi gauge in the mass basis",
+    "functional": "L_gf=-sum_i (partial.V_i-xi m_i G_i)^2/(2 xi), with partial.V_gamma for the photon",
+    "xi": 1,
+    "linearBrst": ["s V_i=partial c_i", "s G_i=m_i c_i", "s anti-c_i=B_i", "s B_i=0"],
+    "cohomology": "two photon polarizations and three polarizations for every massive vector; Goldstones, longitudinal gauge representatives and FP ghosts cancel from the physical cohomology"
+  },
+  "physicalBosonicModeCount": {
+    "masslessPhoton": 2,
+    "massiveChargedVectors": 6,
+    "massiveNeutralVectors": 6,
+    "higgsFlavonRadials": 2,
+    "projectorTangents": 4,
+    "subtotalWithoutGluons": 20,
+    "masslessGluonsInheritedFromStandardModel": 16,
+    "totalIncludingGluons": 36,
+    "qualification": "Fermions are excluded from the numerical count because the Yukawa and Majorana matrices are not fixed."
+  },
+  "selfAdjointDomain": {
+    "space": "spatial three-torus of side L=5",
+    "boundaryCondition": "periodic fields, gauge parameters and ghosts",
+    "operatorDomain": "H^2(T^3) for each Laplace-type physical fluctuation operator",
+    "eigenvalues": "(2 pi/L)^2 |n|^2+m^2",
+    "lowerBound": "m^2>=0",
+    "qualification": "This certifies a boundary-free periodic benchmark. It does not certify the orbifold fixed plane or a physical defect edge."
+  },
+  "certifiedAtTreeLevel": [
+    "the chosen vacuum is stationary",
+    "the gauge kinetic matrix is positive definite",
+    "all displayed physical bosonic mass-squared eigenvalues are nonnegative",
+    "all canonical physical pole residues are positive",
+    "the periodic quadratic operators are self-adjoint and lower bounded",
+    "the linear gauge-fixed BRST cohomology has the stated physical polarization count"
+  ],
+  "minimalGlobalObstruction": {
+    "statement": "An existence witness for one healthy completion cannot certify the underdetermined candidate action whose coefficient functions, selector data, Yukawa/Majorana tensors and defect domains are not fixed.",
+    "unresolved": [
+      "the programme does not derive this parameter point or the projector reference tensor A",
+      "the full Yukawa and Majorana spectrum and its coupling to projector fluctuations are unspecified",
+      "fermion and defect loops may change the scalar/projector Hessian and kinetic mixing",
+      "the localized defect matter spectrum and parity anomaly are unspecified",
+      "the orbifold/fixed-plane self-adjoint domain and boundary BRST complex are unspecified",
+      "the metric is only a source; no dynamical gravitational physical-state sector is defined",
+      "no RG interval is supplied over which all positivity inequalities remain valid"
+    ],
+    "gateVerdict": "A4 remains blocked",
+    "physicalAdmission": false
+  }
+}

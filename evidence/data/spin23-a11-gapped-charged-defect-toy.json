@@ -1,0 +1,82 @@
+{
+  "schema": "spin23.a11-gapped-charged-defect-toy/1",
+  "documentId": 1228,
+  "date": "2026-10-20",
+  "modelId": "square-torus-z3-charged-scalar-static-stress-v1",
+  "status": "quantitative-toy-certificate",
+  "claimBoundary": {
+    "derivedFromTypedAction": false,
+    "defectLocalizationDerived": false,
+    "physicalMassPredicted": false,
+    "physicalCoefficientPredicted": false,
+    "dynamicSpectralResponseComputed": false,
+    "physicalAdmission": false
+  },
+  "model": {
+    "spacetime": "2+1-dimensional defect at finite temperature with square spatial lattice torus",
+    "field": "gapped complex scalar phi of residual Z3 charge q=1; q=2 is its conjugate sector",
+    "continuumAction": "integral_Sigma sqrt(gamma) [gamma^ij (D_i phi)^* D_j phi + m^2 |phi|^2]",
+    "flatConnection": "a_x=theta_h/L_x, a_y=0, theta_h=2*pi*h/3",
+    "latticeDispersion": "E_nm(h)^2=m^2+4 sin^2((2*pi*n+theta_h)/(2*N))+4 sin^2(pi*m/N)",
+    "thermalPartitionFunction": "log Z_h=-2 sum_nm log(1-exp(-beta E_nm(h)))",
+    "stressCharges": {
+      "Qx": "pHat_x^2/E",
+      "Qy": "pHat_y^2/E",
+      "origin": "minus derivative of E with respect to orthogonal logarithmic metric/strain sources"
+    },
+    "positiveResponse": "C_ab=(2*beta/N^2) sum_nm n_B(E)[1+n_B(E)] Q_a Q_b",
+    "positivityReason": "C is the connected covariance of the two integrated stress/strain observables and is a sum of positive rank-one matrices",
+    "contactQualification": "C is the positive covariance/spectral piece, not the complete second derivative of free energy, which also contains source-contact terms"
+  },
+  "parameters": {
+    "latticeSitesPerDirection": 6,
+    "latticeSpacing": 1,
+    "mass": 0.8,
+    "inverseTemperature": 1.3,
+    "chargesChecked": [1, 2, 3],
+    "holonomySectors": [0, 1, 2]
+  },
+  "nullPlane": {
+    "probeMeaning": ["x-directed diagonal stress/strain", "y-directed diagonal stress/strain"],
+    "definition": "exchange-symmetric matrices C with C_xx=C_yy",
+    "basis": {
+      "Gplus": [[1, 0], [0, 1]],
+      "Gcross": [[1, 0.5], [0.5, 1]]
+    },
+    "normal": "proportional to (1,-1,0) in v(C)=(C_xx,C_yy,sqrt(2)C_xy)",
+    "scope": "canonical for this square-torus orthogonal-probe toy; not automatically identical to the corpus four-dimensional G2,G0 plane"
+  },
+  "predictionsOfToy": [
+    "h=0 lies in the exchange-symmetric null plane",
+    "h=1 and h=2 are exactly degenerate under CP/time reversal",
+    "nontrivial holonomy oriented along x makes C_xx unequal to C_yy without an anisotropic local kinetic coefficient",
+    "the Z3 first-harmonic transverse statistic is nonzero relative to the exchange-symmetric toy plane",
+    "the three holonomy sectors contain only two distinct matrices at fixed temperature and therefore span at most two dimensions by themselves",
+    "charge-three matter is holonomy blind",
+    "orientation averaging x- and y-directed holonomies restores C_xx=C_yy and removes the transverse statistic",
+    "the effect is suppressed as the gap or cycle size grows"
+  ],
+  "dependencyBoundary": {
+    "noExtraAnisotropicLocalCouplingNeededInToy": true,
+    "anisotropicPreparationStillRequired": "the holonomy must be attached to a physically fixed cycle and the two stress probes must retain that orientation",
+    "mappingToA11StillRequired": [
+      "derive the charged localized mode from S_v1",
+      "derive its mass, multiplicity and boundary conditions",
+      "derive the physical cycle and holonomy preparation",
+      "identify the toy orthogonal stress probes with the preregistered conserved probes",
+      "show the toy exchange-symmetric plane is the physical G2,G0 null plane or directly compute a nonzero physical triple volume",
+      "include the complete bulk-defect displacement Ward identity",
+      "compute the real-frequency spectral response and uncertainties"
+    ]
+  },
+  "acceptance": {
+    "maximumExchangeResidualTrivialSector": 1e-12,
+    "maximumCpConjugateMatrixDifference": 1e-12,
+    "minimumPositiveDeterminant": 1e-12,
+    "minimumHolonomyPartitionDifference": 1e-8,
+    "minimumHolonomyStressDifference": 1e-8,
+    "minimumTransverseAmplitude": 1e-6,
+    "maximumChargeThreeSectorDifference": 1e-12,
+    "maximumOrientationAveragedResidual": 1e-12
+  }
+}

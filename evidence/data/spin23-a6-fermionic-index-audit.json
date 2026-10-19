@@ -1,0 +1,108 @@
+{
+  "schema": "spin23.a6-fermionic-index-audit/1",
+  "documentId": 1394,
+  "date": "2026-10-20",
+  "status": "four-dimensional-finite-no-go-with-minimal-topological-escape",
+  "inputs": {
+    "effectiveSelectorDocument": 1235,
+    "sterilePortalDocument": 1291,
+    "lowEnergyAuditDocument": 1390
+  },
+  "selectedMatter": {
+    "oneGeneration": [
+      {"field": "Q", "color": "3", "weakDimension": 2, "Y6": 1, "complexComponents": 6},
+      {"field": "u_c", "color": "bar3", "weakDimension": 1, "Y6": -4, "complexComponents": 3},
+      {"field": "d_c", "color": "bar3", "weakDimension": 1, "Y6": 2, "complexComponents": 3},
+      {"field": "L", "color": "1", "weakDimension": 2, "Y6": -3, "complexComponents": 2},
+      {"field": "e_c", "color": "1", "weakDimension": 1, "Y6": 6, "complexComponents": 1}
+    ],
+    "sterile": {"field": "N", "color": "1", "weakDimension": 1, "Y6": 0, "complexComponents": 1},
+    "smComponentsPerGeneration": 15,
+    "componentsIncludingSterilePerGeneration": 16
+  },
+  "fourDimensionalNoGo": {
+    "sameChargeExchangeCarFailure": "T_A and T_B carry the same Standard Model representations. An antiunitary sends charge y to -y, so it cannot commute with the same-charge target action unless y=0.",
+    "bilinearGapFailure": "No unordered pair of SM15 left-handed fields is a Lorentz-scalar Standard-Model gauge singlet. A gauge-preserving quadratic mass cannot gap one complete survivor.",
+    "kineticFailure": "A positive nondegenerate kinetic matrix on the endpoint doublet propagates both copies. Setting one kinetic eigenvalue to zero makes the Gaussian/propagator singular rather than deriving a healthy projection.",
+    "finiteIndexTheorem": "For a finite square map T:C^n->C^n, index(T)=nullity(T)-nullity(T^dagger)=0. A nonzero finite index requires an inserted dimension imbalance; an infinite-dimensional elliptic/Fredholm operator requires topology.",
+    "consequence": "No local finite quadratic operator built only from the current four-dimensional endpoint-doublet inventory both derives three generations and turns the other same-charge survivor into CAR adjoints."
+  },
+  "minimalConditionalCarConstruction": {
+    "particleSpace": "K=(T_selected plus N) tensor C^3",
+    "nambuSpace": "K direct-sum conjugate(K)",
+    "realStructure": "Gamma(v,conjugate(w))=(w,conjugate(v)); Gamma^2=1",
+    "gaugeAction": "rho direct-sum conjugate(rho), which commutes with Gamma",
+    "independentComplexGenerators": 48,
+    "nambuPresentationDimension": 96,
+    "mirrorCount": 0,
+    "qualification": "This is a consistent CAR polarization, but selecting T_selected and C^3 inserts both chirality and generation multiplicity."
+  },
+  "minimalTopologicalEscape": {
+    "geometry": "M4 x CP1",
+    "whyTwoDimensions": "A compact one-dimensional Dirac operator has zero complex index; a compact oriented two-dimensional spin-c geometry is the smallest standard setting with nonzero chiral Dirac index.",
+    "familyLineBundle": "L=O(3)",
+    "firstChernNumber": 3,
+    "spinBundle": "K_CP1^(1/2)=O(-1)",
+    "positiveKernel": "H^0(CP1,O(2))",
+    "positiveKernelBasis": ["1", "z", "z^2"],
+    "positiveKernelDimension": 3,
+    "negativeKernel": "H^1(CP1,O(2))",
+    "negativeKernelDimension": 0,
+    "diracIndex": 3,
+    "fourDimensionalSmWeylComponents": 45,
+    "fourDimensionalSterileWeylComponents": 3,
+    "operator": "D6=D4 tensor 1 + gamma5 tensor D_CP1,L",
+    "local": true,
+    "gaugeCovariant": true,
+    "hermitianOnFullInternalSpinors": true,
+    "carReading": "The conjugate bundle O(-3) and opposite Lorentz chirality form the Nambu/adjoint half, not an independent same-chirality mirror, after a self-dual CAR polarization is imposed.",
+    "ko2Convention": {"J2": -1, "JDSign": 1, "JGammaSign": -1},
+    "qualification": "The degree-three family line bundle, its connection and the higher-dimensional parent are new data. The existing charge-three flavon charge and Z3 BF level do not by themselves imply c1(L)=3."
+  },
+  "anomalyAudit": {
+    "oneGenerationStandardModelAnomalies": {
+      "su3Cubed": 0,
+      "su3SquaredY6": 0,
+      "su2SquaredY6": 0,
+      "gravitySquaredY6": 0,
+      "y6Cubed": 0,
+      "wittenDoubletParity": 0
+    },
+    "threeGenerationScaling": "three times zero remains zero",
+    "sterileContribution": "zero",
+    "higherDimensionalWarning": "A six-dimensional parent has its own local and global anomaly conditions; they are not certified by the four-dimensional cancellation."
+  },
+  "localityAndSelectorAudit": {
+    "endpointBlindFourDimensionalOperator": "cannot distinguish T_A and T_B",
+    "sterileMajoranaPseudoscalar": "a valid conditional exchange-odd portal only after CAR reversal is supplied and neutral orientation is locked to the charged TRO",
+    "existingDefectKink": "localizes 2+1-dimensional modes in the present 3+1-dimensional construction and therefore cannot derive three 3+1-dimensional generations",
+    "cp1Escape": "local and first order, but requires an additional compact family geometry"
+  },
+  "derivedVersusInserted": {
+    "derivedGivenNewGeometry": [
+      "index(D_CP1,O(3))=3",
+      "three positive-chirality zero modes and no negative-chirality zero modes",
+      "45 Standard-Model Weyl components and three sterile zero modes after tensoring"
+    ],
+    "inserted": [
+      "the existence of CP1 or an equivalent compact family surface",
+      "the line bundle O(3) and its first Chern number three",
+      "a common family twist acting uniformly on every Standard-Model multiplet and N",
+      "the higher-dimensional fermion content and CAR polarization",
+      "the locking of the sterile exchange-odd portal to the charged TRO"
+    ]
+  },
+  "minimalExtraDatum": {
+    "name": "a common family Fredholm operator with derived index three",
+    "concreteRepresentative": "the spin-c Dirac operator on CP1 twisted by O(3)",
+    "requiredBridge": "derive its degree-three line bundle from existing programme data or exhibit a typed map from the charge-three/BF sector to this family bundle",
+    "falsifier": "if every admissible common family operator has index zero, non-universal indices across SM multiplets, or unavoidable independent conjugate zero modes, this escape closes"
+  },
+  "verdict": {
+    "currentFourDimensionalOperatorExists": false,
+    "conditionalTopologicalOperatorExists": true,
+    "generationThreeDerivedByCurrentProgramme": false,
+    "a6Passed": false,
+    "physicalAdmission": false
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "spin23.a7-a11-improved-stress-scheme-audit/1",
+  "documentId": 1393,
+  "date": "2026-10-20",
+  "modelId": "localized-q1-scalar-full-flat-stress-with-improvement-v1",
+  "status": "sharp-scheme-invariant-remnant-not-full-embedding",
+  "stress": {
+    "minimalTensor": "t_ij=(D_i chi)^*D_j chi+(D_j chi)^*D_i chi-eta_ij[(D chi)^*D chi-M^2|chi|^2]",
+    "improvement": "Delta t_ij=xi(eta_ij box-partial_i partial_j)|chi|^2",
+    "pairVertexAtZeroSpatialMomentum": "v_a=(K_a-E^2)/E+2 xi E=[K_a+(2xi-1)E^2]/E",
+    "traceVertex": "v_T=v_x+v_y is improvement dependent",
+    "tracelessVertex": "v_S=v_x-v_y=(K_x-K_y)/E is improvement independent",
+    "energyVertex": "v_00=0 on the pair shell, compatible with q_mu t^mu_nu=0 at q=(2E,0,0)"
+  },
+  "defectWardIdentity": {
+    "distributionalForm": "partial_mu Tbulk^{mu nu}+delta(y)[delta_i^nu partial_j tdef^{ji}-n^nu D]=external forces",
+    "tangential": "partial_i tdef^{ij} equals the jump of normal bulk momentum flux plus background-current forces",
+    "normal": "D is the displacement operator and equals the normal force mismatch after embedding variation",
+    "topologicalSector": "pure BF has zero Hilbert stress; edges, sources and charged matter contribute separately",
+    "symmetricWall": "the eta^2 reader well has zero first normal derivative at the wall center, but this does not close the full quantum displacement identity"
+  },
+  "schemeFreedom": {
+    "improvement": "one flat-space-visible scalar coefficient xi inherited from the curved defect coupling xi R_def |chi|^2",
+    "operatorMixing": ["equation-of-motion operators", "total derivatives", "identity/trace mixing consistent with symmetries"],
+    "localContacts": ["cosmological and Einstein defect counterterms", "local curvature-squared or source-derivative terms allowed by the effective cutoff", "parity-odd gravitational contact terms if the symmetry permits them"],
+    "contactEffect": "real local contacts add momentum polynomials/distributions but no separated-frequency absorptive discontinuity",
+    "improvementEffect": "improvement is not merely a contact; it changes trace-channel spectral matrix elements"
+  },
+  "schemeInvariantRemnant": {
+    "observable": "positive-frequency spectral measure of S=t_xx-t_yy at zero spatial momentum",
+    "reason": "the scalar improvement shifts t_xx and t_yy equally, so it cancels in S; local contacts have no nonlocal spectral discontinuity",
+    "survives": ["CP equality h=1=h=2", "holonomy-dependent spectral support", "anisotropic traceless absorption magnitude but not the orientation sign", "shift from h=0 first S-visible threshold to h=1/2 first S-visible threshold"],
+    "doesNotSurvive": "the full 2x2 orientation-odd third matrix direction can be tuned to zero by an allowed improvement because it is the trace-traceless cross response"
+  },
+  "parameters": {
+    "sitesPerCycle": 6,
+    "mass": 0.8,
+    "beta": 1.3,
+    "improvementScan": [-2, -1, 0, 0.125, 0.5, 1, 2]
+  },
+  "acceptance": {
+    "maximumWardResidual": 1e-12,
+    "maximumTracelessImprovementDrift": 1e-12,
+    "maximumCpRelativeError": 1e-12,
+    "maximumOrientationRootResidual": 1e-10,
+    "minimumInvariantThresholdSeparation": 0.001,
+    "minimumPositiveWeightTolerance": -1e-12
+  },
+  "minimalMissingNormalization": {
+    "parameter": "xi_chi, equivalently one renormalization condition fixing the trace port relative to the traceless strain port",
+    "operationalCondition": "fix one reference matrix element of the trace stress, or fix the coefficient of R_def |chi|^2 in the curved defect action",
+    "additionalEmbedding": "a common calibrated map from the two laboratory ports to (trace, traceless strain) is still required for a physical H2 matrix"
+  },
+  "claimBoundary": {
+    "fullBulkDefectEmbeddingCompleted": false,
+    "displacementWardIdentityClosed": false,
+    "improvementCoefficientPredicted": false,
+    "physicalPortMapDerived": false,
+    "schemeInvariantThirdMatrixDirectionEstablished": false,
+    "schemeInvariantTracelessSpectralRemnantEstablished": true,
+    "physicalAdmission": false
+  }
+}

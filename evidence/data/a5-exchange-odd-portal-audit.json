@@ -1,0 +1,104 @@
+{
+  "protocol": "a5-exchange-odd-portal-audit/1",
+  "scope": {
+    "bulkDimension": 4,
+    "boundaryDimension": 3,
+    "currentFields": ["Q", "u_c", "d_c", "L", "e_c", "H", "standard-model gauge fields"],
+    "excludedFromCurrentFields": ["right-handed neutrino N", "endpoint projector P_minus", "independent mirror copy", "exchange-odd flavon"],
+    "exchange": "O1 <-> R",
+    "physicalForgetfulAction": "identity on Q,u_c,d_c,L,e_c,H and the Standard Model gauge fields"
+  },
+  "theorem": {
+    "statement": "Every local operator generated from the current physical fields, Standard Model invariant tensors, Lorentz contractions and endpoint-blind coefficients is exchange-even at every effective dimension.",
+    "reason": "The forgetful map sends both Furey survivors to the same physical field representation and intertwines their exchange with the identity.",
+    "consequence": "No source-derived B_minus exists in the current 15-state field content."
+  },
+  "candidateClasses": [
+    {
+      "id": "bare-holomorphic-fermion-bilinear",
+      "bulkDimension": 3,
+      "gaugeLorentzCompatible": false,
+      "exchangeOdd": false,
+      "verdict": "No gauge-singlet holomorphic fermion bilinear exists among Q,u_c,d_c,L,e_c."
+    },
+    {
+      "id": "boundary-normal-current",
+      "boundaryDimension": 3,
+      "gaugeLorentzCompatible": true,
+      "exchangeOdd": false,
+      "verdict": "n_mu psi_dagger sigma_bar^mu psi is allowed but endpoint-blind; an odd weighting requires the missing P_minus spurion and is state-dependent rather than a topology eigenvalue."
+    },
+    {
+      "id": "kinetic-difference",
+      "bulkDimension": 4,
+      "gaugeLorentzCompatible": true,
+      "exchangeOdd": false,
+      "verdict": "A physical-field kinetic term is identical for the two embeddings; inserting P_minus assumes the portal."
+    },
+    {
+      "id": "yukawa-pseudoscalar",
+      "bulkDimension": 4,
+      "gaugeLorentzCompatible": true,
+      "exchangeOdd": false,
+      "verdict": "The same Q u_c H, Q d_c H_dagger and L e_c H_dagger operators occur in both survivors. An imaginary part of one Yukawa is rephasing-dependent and does not measure endpoint orientation."
+    },
+    {
+      "id": "theta-or-chern-simons-descent",
+      "bulkDimension": 4,
+      "boundaryDimension": 3,
+      "gaugeLorentzCompatible": "conditional on standard quantization and boundary completion",
+      "exchangeOdd": false,
+      "verdict": "Gauge and gravitational connections are unchanged by O1 <-> R; their characteristic classes cannot distinguish the survivors."
+    },
+    {
+      "id": "anomaly-inflow",
+      "gaugeLorentzCompatible": true,
+      "exchangeOdd": false,
+      "verdict": "Both survivors have the same vanishing perturbative anomaly vector and even weak-doublet parity, so the difference inflow polynomial is zero."
+    },
+    {
+      "id": "projector-weighted-defect-current",
+      "boundaryDimension": 3,
+      "gaugeLorentzCompatible": true,
+      "exchangeOdd": true,
+      "verdict": "Formally works only after adjoining P_minus=P_O1-P_R; this is the missing internal datum, not a composite of the current physical fields."
+    },
+    {
+      "id": "sterile-majorana-pseudoscalar",
+      "boundaryDimension": 3,
+      "gaugeLorentzCompatible": true,
+      "exchangeOdd": true,
+      "verdict": "After adjoining one sterile Weyl N~(1,1)_0 and identifying the reverse Furey arrow by the CAR real structure, B_minus=i(NN-(NN)^dagger) is the smallest field-based candidate."
+    }
+  ],
+  "minimalExtension": {
+    "field": "one left-handed sterile Weyl fermion N per completed generation",
+    "standardModelRepresentation": {"su3": "1", "su2": "1", "Y6": 0},
+    "fieldDimension": 1.5,
+    "operator": "B_minus=i(NN-(NN)^dagger)",
+    "operatorDimension": 3,
+    "boundaryCoupling": "integral_boundary lambda_N chi B_minus",
+    "boundaryCoefficientDimension": 0,
+    "conditions": [
+      "the exchange/CAR map sends NN to (NN)^dagger",
+      "the unique D->E neutral arrow has fermionic Lorentz character",
+      "the reverse arrow is not an independent sterile species",
+      "the coupling correlates the selected neutral-arrow orientation with the charged 15-state topology"
+    ],
+    "fallbackIfCARFails": "two independent sterile Weyl fields or an independent exchange-odd order parameter are required; this is no longer the minimal one-field completion"
+  },
+  "radiativeStability": {
+    "spurionicCombinedSymmetry": "chi -> -chi and B_minus -> -B_minus",
+    "stableStatement": "Counterterms preserve the paired form if the combined exchange is exact in the regulator and boundary conditions.",
+    "unstableStatement": "With fixed chi and no exact combined symmetry, gauge invariance alone permits both CP-even and CP-odd sterile masses and does not protect portal alignment.",
+    "requiredAudit": "derive the CAR exchange, regulator and boundary condition; compute whether LNH loops mix the odd and even sterile mass operators"
+  },
+  "falsifiers": [
+    "the Furey D->E arrow cannot be assigned the sterile Weyl Lorentz/CAR structure",
+    "the reverse arrow is independently quantized and creates an unwanted sterile Dirac pair",
+    "boundary reversal does not reverse the Majorana pseudoscalar response",
+    "radiative counterterms destroy the combined exchange without a protecting symmetry",
+    "the neutral portal does not correlate with which charged TRO is realized",
+    "a current-field composite is found whose physical correlators distinguish O1 from R without an endpoint-labelled coefficient"
+  ]
+}

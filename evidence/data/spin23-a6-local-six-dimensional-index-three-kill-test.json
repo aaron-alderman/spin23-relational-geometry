@@ -1,0 +1,142 @@
+{
+  "schema": "spin23.a6-local-six-dimensional-index-three-kill-test/1",
+  "documentId": 1450,
+  "date": "2026-10-20",
+  "status": "formal-index-three-operator-exact-minimal-local-six-dimensional-parent-ruled-out",
+  "geometry": {
+    "space": "M4 x CP1",
+    "familyLine": "O(3)=j_P^*K_CP2^-1",
+    "chernNumber": 3,
+    "spinPositive": "O(-1)",
+    "positiveZeroModeBundle": "O(2)",
+    "positiveKernelBasis": ["1", "z", "z^2"],
+    "positiveKernelDimension": 3,
+    "negativeKernelDimension": 0,
+    "index": 3,
+    "conjugateLine": "O(-3)",
+    "conjugateIndex": -3
+  },
+  "operator": {
+    "formal": "D4 tensor 1 + gamma5 tensor D_CP1,O(3)",
+    "gaugeEquivarianceReason": "G_SM and the family connection act on separate tensor factors",
+    "universalTwist": true,
+    "formalConstructionValid": true,
+    "literalLocalSixDimensionalActionValid": false,
+    "localAction": "sum_r integral_M4xCP1 sqrt(abs(g6)) i PsiBar_r Gamma^M (nabla_M+A_SM+A_F) Psi_r"
+  },
+  "multiplets": [
+    {"name": "Q", "colorDimension": 3, "weakDimension": 2, "componentDimension": 6, "Y6": 1, "colorCubicSign": 1, "isColorFundamental": true, "isWeakDoublet": true},
+    {"name": "u^c", "colorDimension": 3, "weakDimension": 1, "componentDimension": 3, "Y6": -4, "colorCubicSign": -1, "isColorFundamental": true, "isWeakDoublet": false},
+    {"name": "d^c", "colorDimension": 3, "weakDimension": 1, "componentDimension": 3, "Y6": 2, "colorCubicSign": -1, "isColorFundamental": true, "isWeakDoublet": false},
+    {"name": "L", "colorDimension": 1, "weakDimension": 2, "componentDimension": 2, "Y6": -3, "colorCubicSign": 0, "isColorFundamental": false, "isWeakDoublet": true},
+    {"name": "e^c", "colorDimension": 1, "weakDimension": 1, "componentDimension": 1, "Y6": 6, "colorCubicSign": 0, "isColorFundamental": false, "isWeakDoublet": false},
+    {"name": "N", "colorDimension": 1, "weakDimension": 1, "componentDimension": 1, "Y6": 0, "colorCubicSign": 0, "isColorFundamental": false, "isWeakDoublet": false}
+  ],
+  "modeCount": {
+    "oneGenerationSMWithoutSterile": 15,
+    "oneGenerationWithSterile": 16,
+    "familyIndex": 3,
+    "selectedSMWeylComponents": 45,
+    "selectedSterileComponents": 3,
+    "selectedTotalParticleComponents": 48,
+    "nambuConjugateComponents": 48,
+    "nambuPresentationComponents": 96,
+    "oppositeSixDimensionalChiralityMirrorComponentsIfDiracParent": 48
+  },
+  "kkSpectrum": {
+    "monopoleNumber": 3,
+    "radiusSymbol": "R",
+    "nonzeroEigenvalues": "lambda_k,+/- = +/- sqrt(k(k+3))/R for k>=1",
+    "degeneracyPerSign": "2k+3",
+    "firstK": 1,
+    "firstMassInInverseRadiusUnits": 2,
+    "firstDegeneracyPerSign": 5,
+    "zeroModeExpansion": "Psi_r(x,y)=sum_a=1^3 psi_r,a(x) eta_a(y)+massive KK modes",
+    "nonzeroPairsReduceTo": "4D massive Dirac levels with mass abs(lambda_k) and multiplicity 2k+3",
+    "gaugeCouplingReduction": "1/g4^2=4*pi*R^2/g6^2"
+  },
+  "sixDimensionalAnomalyRelativeTraces": {
+    "sameParentChiralityRequiredForSameFourDimensionalChirality": true,
+    "irreducibleGravitationalDimensionCoefficient": 16,
+    "sumDimensionTimesY6": 0,
+    "sumDimensionTimesY6Squared": 120,
+    "sumDimensionTimesY6Cubed": 0,
+    "sumDimensionTimesY6Fourth": 2280,
+    "su3QuarticFundamentalCount": 4,
+    "su2QuarticDoubletCount": 4,
+    "su3SquaredY6Squared": 22,
+    "su2SquaredY6Squared": 12,
+    "Y6Su3Cubed": 4,
+    "irreducibleY6Su3CubedCancels": false,
+    "globalSu2DoubletExcess": 4,
+    "globalSu2CancellationModulus": 6,
+    "globalSu2AnomalyCancels": false,
+    "indexThreeDoesNotMultiplyBulkAnomalyCarriers": true,
+    "localAnomalyCancels": false,
+    "greenSchwarzAloneCancelsIrreducibleTrR4": false
+  },
+  "fourDimensionalAnomalies": {
+    "su3Cubed": 0,
+    "su3SquaredY6": 0,
+    "su2SquaredY6": 0,
+    "gravitationalSquaredY6": 0,
+    "Y6Cubed": 0,
+    "weakDoubletsPerFamily": 4,
+    "wittenSu2Anomaly": false,
+    "threeFamiliesPreserveCancellation": true
+  },
+  "dynamicalUniversalFamilyU1AnomaliesPerFamily": {
+    "universalFamilyCharge": 1,
+    "gravitationalSquaredF": 16,
+    "FCubed": 16,
+    "su3SquaredF": 4,
+    "su2SquaredF": 4,
+    "Y6SquaredF": 120,
+    "Y6FSquared": 0,
+    "anomalyFree": false,
+    "consequence": "family connection must be a fixed internal background without a 4D gauge zero mode or receive new anomaly-cancelling data"
+  },
+  "carReality": {
+    "chargeConjugation": "(r,O(3)) maps to (rbar,O(-3))",
+    "realSpace": "K_+3 direct-sum conjugate(K_+3)",
+    "realStructureExchangesFluxBlocks": true,
+    "conjugateModesAreAntiparticlesOnlyWithSelfDualCARConstraint": true,
+    "independentQuantizationWouldCreateMirrors": true,
+    "finiteCutoffPfaffianIdentity": "Pf([[0,D],[-D^T,0]])=+/-det(D)"
+  },
+  "sterileMajorana": {
+    "zeroModeTwist": "O(3)",
+    "bilinearTwist": "O(6)",
+    "requiredCoefficientTwist": "O(-6)",
+    "nowhereVanishingCoefficientExists": false,
+    "pairingWithConjugateOminus3": "bundle-invariant but Dirac/vectorlike",
+    "majoranaMassDerived": false
+  },
+  "formalVersusLocal": {
+    "formalTensorProduct": {
+      "works": true,
+      "whatItDerives": "a common multiplicity-three kernel for each already-specified 4D chiral multiplet",
+      "whatItInputs": ["the 4D chiral SM15+N carrier", "its gauge representations", "universal coupling to O(3)"]
+    },
+    "localSixDimensionalAction": {
+      "works": false,
+      "firstObstruction": "nonzero irreducible six-dimensional gravitational anomaly",
+      "additionalObstructions": ["irreducible Y6 SU(3)^3 local anomaly", "global SU(2) anomaly 4 mod 6", "nonzero reducible gauge anomaly traces", "Dirac anomaly repair yields mirror zero modes", "sterile Majorana bilinear needs O(-6) datum"]
+    }
+  },
+  "minimalRepairs": [
+    "interpret CP1 as spectral family geometry rather than literal local extra dimensions and acknowledge 4D chirality as input",
+    "or add an explicit anomaly-cancelling spectator/inflow/Green-Schwarz sector with zero net 4D index",
+    "if using an orbifold or boundary projection, calculate localized anomalies and prove the mirror kernel absent",
+    "supply an O(-6) compensator or a different bundle-invariant sterile pairing"
+  ],
+  "verdict": {
+    "canonicalIndexThree": true,
+    "sameIndexForAllMultiplets": true,
+    "formalGaugeEquivariantOperatorConstructed": true,
+    "minimalLocalSixDimensionalTheoryRuledOut": true,
+    "threePhysicalGenerationsDerived": false,
+    "a6Passed": false,
+    "physicalAdmission": false
+  }
+}

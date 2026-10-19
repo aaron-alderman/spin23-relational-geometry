@@ -1,0 +1,204 @@
+{
+  "schema": "spin23.final-wave-red-team-audit/1",
+  "documentId": 1398,
+  "date": "2026-10-20",
+  "scope": [1228, 1229, 1230, 1231, 1232, 1233, 1235, 1290, 1291, 1292, 1390, 1391, 1392, 1393, 1394, 1395, 1396, 1397],
+  "overallVerdict": {
+    "physicalAdmission": false,
+    "materialCorrections": 8,
+    "nonMaterialQualifications": 8,
+    "unchangedCoreResults": [1229, 1232, 1392, 1397],
+    "supersededClaims": ["1291:antiunitary-pseudoscalar-odd"],
+    "highestRiskDocuments": [1291, 1394]
+  },
+  "findings": [
+    {
+      "id": "RT-01",
+      "severity": "error",
+      "documents": [1291, 1391],
+      "category": "antiunitary-sign",
+      "currentClaim": "For an antiunitary exchange sending A=NN to A-dagger, i(A-A-dagger) is exchange odd.",
+      "refereeResult": "False: antiunitarity also sends i to -i, so both A+A-dagger and i(A-A-dagger) are even for the plus exchange convention used in 1391.",
+      "requiredAction": "Mark the antiunitary parity conclusion of 1291 superseded by 1391. Retain only its endpoint-blind no-go and its identification of the sterile bilinear as a conditional candidate under an additional unitary/phase convention.",
+      "verifierAssessment": "The 1291 verifier labels the candidate odd without implementing conjugate-linearity; it certifies its input convention, not the claimed antiunitary transformation."
+    },
+    {
+      "id": "RT-02",
+      "severity": "overclaim",
+      "documents": [1394],
+      "category": "theorem-scope",
+      "currentClaim": "No finite four-dimensional operator derives three selected generations.",
+      "refereeResult": "Rank-nullity proves zero Fredholm index only for finite square maps. Rectangular complexes have an index equal to their dimension imbalance, and finite symmetry-protected kernels are not excluded by this proof.",
+      "requiredAction": "Replace the headline theorem by: no finite square internal map has nonzero Fredholm index; no currently supplied finite operator derives three rather than inserting multiplicity or extra protected data.",
+      "verifierAssessment": "Testing representative ranks is illustrative. The proof is the scoped rank-nullity argument, not the fixture."
+    },
+    {
+      "id": "RT-03",
+      "severity": "hidden-assumption",
+      "documents": [1394, 1397],
+      "category": "higher-dimensional-chirality",
+      "currentClaim": "Tensoring the O(3)-twisted CP1 kernel with SM15 produces three four-dimensional chiral generations and the conjugate bundle is only the CAR adjoint.",
+      "refereeResult": "The index-three bundle statement is exact, but the physical conclusion also needs a declared six-dimensional Weyl parent or equivalent spectral polarization, its gauge representation, self-adjoint domain, and higher-dimensional anomaly audit. A six-dimensional Dirac parent generally supplies both product chiralities.",
+      "requiredAction": "Keep 1397 as an exact bundle-level bridge. Downgrade 1394's physical escape to a conditional index fixture until the parent chirality, CAR polarization, and higher-dimensional anomalies are constructed.",
+      "verifierAssessment": "Kernel dimensions and four-dimensional anomaly sums do not verify the higher-dimensional quantization or anomaly problem."
+    },
+    {
+      "id": "RT-04",
+      "severity": "error",
+      "documents": [1292],
+      "category": "finite-domain-boundary-condition",
+      "currentClaim": "The finite-slab fixture contains an exact tanh kink and has KK gap pi/(2L).",
+      "refereeResult": "The tanh profile reaches plus/minus u only asymptotically, so on [-L,L] it is a controlled approximation unless boundary data equal its finite endpoint values. The stated KK gap depends on an undeclared self-adjoint boundary condition and interval convention.",
+      "requiredAction": "Call the wall exact on the infinite line and exponentially accurate in the finite fixture. Declare the outer boundary conditions before quoting a KK gap or global folded spectrum.",
+      "verifierAssessment": "The verifier checks an allowed endpoint-tail tolerance and assumes the KK formula; this is not an exact finite-domain boundary-value solution."
+    },
+    {
+      "id": "RT-05",
+      "severity": "overclaim",
+      "documents": [1290],
+      "category": "health-scope",
+      "currentClaim": "S_v1 contains a fully healthy quadratic benchmark.",
+      "refereeResult": "The calculation establishes positivity for a chosen bulk bosonic tree-level quadratic fixture. It does not cover fermions, boundary BRST/self-adjoint domains, loops, gravity, or the full interacting action.",
+      "requiredAction": "Use 'healthy scoped bosonic tree-level benchmark' and reserve 'fully healthy' for a complete field/domain/quantum audit.",
+      "verifierAssessment": "The verifier recomputes matrices from declared coefficients; it does not test global completion or radiative stability."
+    },
+    {
+      "id": "RT-06",
+      "severity": "overclaim",
+      "documents": [1230],
+      "category": "experimental-readiness",
+      "currentClaim": "The result is a laboratory-ready protocol.",
+      "refereeResult": "It is an experiment-design protocol: no device-specific effect size, calibrated noise budget, fabrication tolerances, power analysis, or demonstrated protected-Z3 platform is supplied.",
+      "requiredAction": "Replace 'laboratory-ready' by 'simulation-ready experiment design' until platform parameters and a power/noise budget are sourced.",
+      "verifierAssessment": "The verifier checks roots of unity, loop-phase invariance, and checklist completeness, not laboratory feasibility."
+    },
+    {
+      "id": "RT-07",
+      "severity": "overclaim",
+      "documents": [1393, 1396],
+      "category": "scheme-versus-coupling",
+      "currentClaim": "The traceless threshold is scheme invariant while the full third direction is removed by a stress-tensor scheme choice.",
+      "refereeResult": "The demonstrated invariance is within the one-parameter improvement family of the free localized scalar fixture. Xi is also a curved-space Wilson coupling whose change can represent a different matched theory, not merely a renormalization convention. The cancellation shown is for an integrated response statistic, not necessarily every frequency-resolved spectral matrix.",
+      "requiredAction": "Say 'independent of xi within the displayed improvement family' and restrict the zero of the third direction to the integrated statistic actually computed.",
+      "verifierAssessment": "The scripts evaluate the declared vertex formula; they do not derive the Hilbert operator, operator mixing, or a microscopic matching for xi."
+    },
+    {
+      "id": "RT-08",
+      "severity": "overclaim",
+      "documents": [1231],
+      "category": "dependency-typing",
+      "currentClaim": "The displayed DAG is the dependency frontier.",
+      "refereeResult": "Several edges are programme-workflow choices, not logical necessities: an analogue A11 experiment can precede A6/A9, and alternative chiral constructions need not depend on the current A5 branch.",
+      "requiredAction": "Type edges as logical, model-conditional, or workflow/prioritization dependencies. Call the current graph a candidate-action workflow DAG.",
+      "verifierAssessment": "The verifier proves only graph well-formedness and that the authored edges are present. It cannot certify their scientific necessity."
+    },
+    {
+      "id": "RT-09",
+      "severity": "qualification",
+      "documents": [1233],
+      "category": "exactness-and-typesetting",
+      "currentClaim": "Exact dualization and exact strict-IR BF description.",
+      "refereeResult": "The normalization is exact conditional on the stated compact-field conventions. The physical BF description is asymptotic/topological after integrating out massive modes and needs global-sector and boundary assumptions. The source also contains malformed expressions 'left[' and '3,da'.",
+      "requiredAction": "Use 'conditionally exact normalization' and 'strict-IR topological EFT'; repair the two displayed formula typos in a future correction pass.",
+      "verifierAssessment": "The verifier checks the chosen normalization, gaps, and orbifold ledger; it does not derive compactification or global boundary data."
+    },
+    {
+      "id": "RT-10",
+      "severity": "qualification",
+      "documents": [1235],
+      "category": "selector-type",
+      "currentClaim": "A complete finite selector model is constructed.",
+      "refereeResult": "It is a complete finite selector tuple/decision rule. The action couples to epsilon(T), a topology label not yet represented by a local operator or dynamical field.",
+      "requiredAction": "Replace 'model' by 'tuple' unless and until epsilon(T) is a local observable in the path integral.",
+      "verifierAssessment": "The verifier establishes anomaly sums, covariance of the stipulated tuple, and a compatible CP matrix; it does not construct the portal."
+    },
+    {
+      "id": "RT-11",
+      "severity": "qualification",
+      "documents": [1390],
+      "category": "input-versus-result",
+      "currentClaim": "The benchmark has zero same-chirality mirrors and a wide decoupling region.",
+      "refereeResult": "Zero mirrors is conditional on the unconstructed selector/CAR interpretation, and 'wide' is not quantified by one point plus continuity.",
+      "requiredAction": "Label mirror count as an assumption and replace 'wide' by 'nonempty open neighbourhood' unless a measure or scan is supplied.",
+      "verifierAssessment": "The script asserts the authored mirror count and checks one parameter point; it does not construct the fermionic Hilbert space."
+    },
+    {
+      "id": "RT-12",
+      "severity": "qualification",
+      "documents": [1391],
+      "category": "loop-order-language",
+      "currentClaim": "The one-loop audit determines the portal status.",
+      "refereeResult": "The document gives a complete spurion/counterterm classification in its restricted neutral boundary basis, not a one-loop integral or coefficient calculation. It also leaves the self-adjoint boundary domain open.",
+      "requiredAction": "Call it a one-loop symmetry/counterterm classification and avoid implying a computed beta function or finite threshold.",
+      "verifierAssessment": "The verifier correctly checks CAR and unitary/antiunitary parities; its numerical delta-M fixture is not a loop calculation."
+    },
+    {
+      "id": "RT-13",
+      "severity": "qualification",
+      "documents": [1395],
+      "category": "vacuum-and-verifier",
+      "currentClaim": "The verifier checks spontaneous CP vacuum degeneracy.",
+      "refereeResult": "The phase-circle/equivariance theorem is sound under the declared sterile rephasing, but evaluating a CP-even potential at theta and -theta does not establish that either point is a stationary vacuum.",
+      "requiredAction": "Keep the no-canonical-phase conclusion; describe the script as a potential-symmetry check unless stationary points and Hessians are also solved.",
+      "verifierAssessment": "The candidate-principle ledger is an audited input, not independently discoverable by the script."
+    },
+    {
+      "id": "RT-14",
+      "severity": "qualification",
+      "documents": [1228],
+      "category": "observable-typing",
+      "currentClaim": "The scalar reads holonomy through stress.",
+      "refereeResult": "The computed matrices are gradient/strain occupation covariances, not the complete Hilbert stress susceptibility; contact, improvement, and port normalization are absent and are only partly repaired by 1393.",
+      "requiredAction": "Cite 1228 as a finite-regulator gradient-stress toy and use 1393/1396 for the physical-stress qualification.",
+      "verifierAssessment": "The script genuinely recomputes the finite lattice sums and ranks, but only for the stipulated toy observable."
+    },
+    {
+      "id": "RT-15",
+      "severity": "no-material-flaw",
+      "documents": [1229, 1392],
+      "category": "scoped-result",
+      "currentClaim": "CP-conjugate sectors are degenerate for same-parity probes, while a mixed-parity/oriented spectral reader can supply a third toy direction.",
+      "refereeResult": "Valid within the stated finite/free fixtures. It does not solve A5 or define a physical stress port, and both documents say so.",
+      "requiredAction": "No status change; preserve the scope clauses.",
+      "verifierAssessment": "These scripts recompute nontrivial spectra, covariance/spectral positivity, CP relations, and response rank."
+    },
+    {
+      "id": "RT-16",
+      "severity": "no-material-flaw",
+      "documents": [1232, 1397],
+      "category": "scoped-result",
+      "currentClaim": "The classical stress ledger is conditional, and the selected-projector completion canonically carries an O(3) bundle of index three while the physical fermion bridge is absent.",
+      "refereeResult": "Both stopping boundaries are correctly stated. The 1232 verifier is primarily a ledger certificate; the 1397 bundle calculation is substantive but remains nonphysical without the vertical fermion operator.",
+      "requiredAction": "No status change; do not promote either result beyond its declared boundary.",
+      "verifierAssessment": "1397 independently recomputes degrees and kernel dimensions; 1232 mostly checks authored classifications."
+    }
+  ],
+  "verifierClasses": {
+    "substantiveRecomputation": [1228, 1229, 1233, 1290, 1292, 1391, 1392, 1393, 1394, 1396, 1397],
+    "mixedRecomputationAndLedger": [1230, 1235, 1390, 1395],
+    "ledgerOrGraphOnly": [1231, 1232],
+    "knownUnsoundSubcheck": ["1291:antiunitary-pseudoscalar-odd"]
+  },
+  "independentStoppingBoundaries": [
+    {
+      "gate": "A5",
+      "missingDatum": "a physical phase/orientation reference and a local exchange-odd portal",
+      "notSuppliedBy": ["anomaly cancellation", "CP-even action", "residual Z3", "index three"]
+    },
+    {
+      "gate": "A6",
+      "missingDatum": "a physical fermion family Dirac coupling/polarization with anomaly control",
+      "notSuppliedBy": ["bundle degree three alone", "four-dimensional decoupling benchmark"]
+    },
+    {
+      "gate": "A7",
+      "missingDatum": "a matched curved-space stress operator and normalized physical probes",
+      "notSuppliedBy": ["flat-space gradient covariance", "topological BF normalization"]
+    },
+    {
+      "gate": "A11",
+      "missingDatum": "device-specific port map, effect size, noise/power budget, and genuine sector preparation",
+      "notSuppliedBy": ["synthetic U1 phase labels", "finite toy response rank"]
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "schema": "spin23.a11-full-observable-experimental-packet/1",
+  "documentId": 1452,
+  "protocolId": "A7-A9-A11-SCHEME-INVARIANT-SPECTRAL-PACKET-3",
+  "date": "2026-10-20",
+  "status": "preregisterable-sensitivity-packet-no-physical-effect-prediction",
+  "primaryEndpoint": {
+    "observable": "rhoS_h(f)=s_phys^T C_h(f) s_phys, with C_h=(Y_h+Y_h^dagger)/2 and s_phys the independently calibrated differential/traceless covector",
+    "sectorContrast": "Delta_rhoS=(rhoS_1+rhoS_2)/2-rhoS_0",
+    "poleContrastMHz": "Delta_Omega=Omega_0-(Omega_1+Omega_2)/2",
+    "bandContrast": "Delta_W(B)=[W_1(B)+W_2(B)]/2-W_0(B)",
+    "schemeInvariantContent": [
+      "the traceless projection cancels scalar stress improvement",
+      "absorptive spectral discontinuities are unchanged by real local polynomial contacts",
+      "a common invertible port-coordinate change leaves the scalar invariant when the covector is transformed contragrediently"
+    ],
+    "broadeningCaveat": "a Lorentzian or Voigt line has tails at every frequency, so the operational onset is the lowest fitted pole or common-forward-model support edge, not the first mathematically nonzero sample"
+  },
+  "interactionAndEnvironmentModel": {
+    "retardedPole": "G_R,h(f)=Z_h/[f-Omega_h-ReSigma_h(f)+i Gamma_h(f)/2]+regular",
+    "positiveLine": "rho_h(f)=R_h L(f;Omega_h,Gamma_h), R_h>=0",
+    "quasiStaticDisorder": "Gaussian center jitter convolved with the homogeneous Lorentzian gives a Voigt profile",
+    "sectorMixing": "rhoObserved_h=sum_k P_hk rhoTrue_k for a separately measured preparation-confusion matrix P",
+    "symmetricMixingAttenuation": "for P_hh=1-epsilon and P_hk=epsilon/2, every zero-sum three-sector contrast is multiplied by 1-3epsilon/2",
+    "finiteVolumeRule": "the lowest pole is assignable only when the gap to the next allowed pole exceeds one measured effective FWHM plus the frozen guard band",
+    "interactionRule": "interactions may shift poles, broaden them, change residues, create bound states, or open continua; a numerical onset from the free toy is not transferable to a device without a matched interacting Hamiltonian"
+  },
+  "portCalibration": {
+    "rawToAdmittance": "Y=Z0^(-1/2)(I-S)(I+S)^(-1)Z0^(-1/2)",
+    "referenceImpedanceOhm": 50,
+    "requiredStandards": ["cryogenic thru", "cryogenic reflect", "cryogenic line or independently characterized load"],
+    "requirements": [
+      "full complex 2x2 S matrix at the device reference plane",
+      "error-box parameters and covariance in the same thermal cycle",
+      "pre/post drift standards bracketing every randomized sector block",
+      "one frozen map from laboratory ports to the physical differential covector",
+      "condition number and covariance propagated into every spectral contrast",
+      "reciprocity and passivity residuals reported without projecting failing data onto the physical cone"
+    ],
+    "maximumConditionNumber": 20,
+    "maximumUnmodelledSectorDifferentialFrequencyDriftMHz": 0.03,
+    "absoluteCommonFrequencyErrorCancelsInContrast": true,
+    "unavailableInCurrentProgramme": [
+      "device-specific port capacitance and mutual-inductance matrix",
+      "complex transfer functions from room-temperature sources to both device operators",
+      "readout resonator dispersive response and amplifier noise covariance",
+      "proof that the two calibrated circuit operators realize orthogonal metric or strain sources"
+    ]
+  },
+  "literatureAnchors": [
+    {
+      "id": "Pop2012",
+      "primaryUrl": "https://arxiv.org/abs/1104.3999",
+      "doi": "10.1103/PhysRevB.85.094503",
+      "facts": {
+        "junctionCount": 6,
+        "islandCount": 5,
+        "temperatureMilliK": 50,
+        "EJoverECRange": [2, 3],
+        "loopInductanceNanoH": 8,
+        "shuntCapacitancePicoF": 270,
+        "readoutCriticalCurrentNanoA": 330,
+        "bareEJKelvin": 2,
+        "ECKelvin": 0.66,
+        "representativeGateCapacitancesAttoF": [25, 410, 42],
+        "offsetChargeTypicalDriftMinutes": 5,
+        "scanDurationMinutes": 3,
+        "postselectedRunsApprox": 3000,
+        "favourableConfigurationFractionApprox": 0.0016
+      },
+      "scope": "demonstrates coherent AC interference in a six-junction switching-current experiment; it is not a calibrated A11 two-port spectrum"
+    },
+    {
+      "id": "Bell2016",
+      "primaryUrl": "https://arxiv.org/abs/1504.05602",
+      "doi": "10.1103/PhysRevLett.116.107002",
+      "facts": {
+        "temperatureMilliK": 20,
+        "spectroscopyBandGHz": [1, 10],
+        "readoutResonanceGHz": 6.45,
+        "superinductorSelfResonanceGHz": 5.5,
+        "CPBEJGHz": 6.25,
+        "CPBECGHz": 6.7,
+        "ELGHz": 0.4,
+        "inductanceMicroH": 0.4,
+        "singlePhaseSlipAmplitudeUpperGHz": 0.2,
+        "doublePhaseSlipAmplitudeGHz": 0.4,
+        "stableTraceMinutes": 80,
+        "acChargePeriodCooperPairs": 1
+      },
+      "scope": "demonstrates gate-dependent AC spectroscopy and destructive single-fluxon interference; the sectors remain samples of a continuous charge phase"
+    },
+    {
+      "id": "Manucharyan2012",
+      "primaryUrl": "https://arxiv.org/abs/1012.1928",
+      "doi": "10.1103/PhysRevB.85.024521",
+      "facts": {
+        "resolvedPhaseSlipLinewidthOrderKHz": 100
+      },
+      "scope": "establishes that slow offset-charge fluctuations convert coherent phase-slip energy shifts into resolvable linewidth"
+    },
+    {
+      "id": "Randeria2024",
+      "primaryUrl": "https://arxiv.org/abs/2404.02989",
+      "doi": "10.1103/PRXQuantum.5.030341",
+      "facts": {
+        "qubitCount": 6,
+        "arrayJunctionCountRange": [85, 139],
+        "EJoverHGHzRange": [3.1, 3.315],
+        "ECoverHGHzRange": [1.37, 1.45],
+        "ELoverHGHzRange": [0.25, 0.3],
+        "halfFluxF01GHzRange": [0.412, 0.467],
+        "T1MicrosecondsRange": [56.5, 885.9],
+        "RamseyPureDephasingMicrosecondsRange": [0.21, 121.1],
+        "echoPureDephasingMicrosecondsRange": [23.5, 142],
+        "fluxNoiseMicroPhi0PerRootHzRange": [3.3, 4.5],
+        "representativeRepeatedFrequencyStdKHzRange": [22, 226]
+      },
+      "scope": "current empirical scale for CQPS charge-noise broadening; device-to-device ranges are not an A11 signal prediction"
+    },
+    {
+      "id": "Dunstan2026",
+      "primaryUrl": "https://arxiv.org/abs/2601.06682",
+      "facts": {
+        "temperatureMilliK": 12,
+        "measuredDeviceCount": 5,
+        "circuitsPerSample": 4,
+        "readoutResonanceGHz": 10.676,
+        "readoutQualityFactor": 520,
+        "inputAttenuationDb": -83,
+        "coldAmplifierGainDb": 35,
+        "roomAmplifierGainDb": 35,
+        "persistentCurrentNanoA": 11.5,
+        "loopInductanceNanoH": 90,
+        "degeneracyFrequencyGHz": 2.555,
+        "relaxationTimeNanoS": 20,
+        "junctionPhaseSlipRatesGHz": [1.48, 1.08],
+        "destructiveInterferenceMinimumGHz": 0.4,
+        "chargePeriodElementaryCharge": 2
+      },
+      "scope": "a current hybrid Josephson/NbN AC spectroscopy platform with large tunability but visible quasiparticle-parity branches and short relaxation; it is not a protected Z3 platform"
+    },
+    {
+      "id": "YehAnlage2013",
+      "primaryUrl": "https://arxiv.org/abs/1212.4427",
+      "doi": "10.1063/1.4794912",
+      "facts": {
+        "calibration": "in-situ cryogenic TRL with a pseudo-open correction",
+        "sameThermalCycleAdditionalMinutes": 20,
+        "demonstrationBandGHz": [3, 18],
+        "referenceImpedanceOhm": 50,
+        "resonatorQualityFactorOrder": 100000
+      },
+      "scope": "shows that full cryogenic two-port error removal is practical; it does not calibrate an A11 stress analogue"
+    }
+  ],
+  "resolutionFixture": {
+    "purpose": "sensitivity certificate only",
+    "carrierMHz": 450,
+    "injectedSectorCentersMHz": [450, 449, 449],
+    "injectedContrastMHz": 1,
+    "homogeneousLorentzianFWHMMHz": 0.15,
+    "quasiStaticCenterStdMHz": 0.226,
+    "instrumentGaussianStdMHz": 0.05,
+    "frequencyBinMHz": 0.02,
+    "peakAmplitudeSNRPerBin": 20,
+    "sectorDifferentialDriftStdMHz": 0.03,
+    "independentSweepsPerSectorPerReplication": 12,
+    "independentReplications": 2,
+    "nextModeSpacingMHz": 6,
+    "guardBandMHz": 0.1,
+    "familywiseOneSidedAlpha": 0.01,
+    "targetPower": 0.9,
+    "warning": "the 1 MHz shift, residues and SNR are injected planning values, not Spin23 or device predictions"
+  },
+  "preregisteredDecisions": {
+    "invalid": [
+      "passivity, reciprocity, KMS/detailed-balance, or calibration residual exceeds its frozen tolerance",
+      "port map condition number exceeds 20 or its uncertainty makes the contrast sign indeterminate",
+      "pre/post standard drift exceeds 0.03 MHz sector-differential equivalent",
+      "preparation-confusion matrix is singular or its contrast singular value is below 0.5",
+      "the common Voigt or interacting spectral model fails held-out residual diagnostics",
+      "the first and second allowed poles cannot be separated by the effective FWHM plus guard band",
+      "h=1 and h=2 fail the frozen CP-even compatibility test without a preregistered CP-odd term",
+      "window, pole count, line model, or differential covector changes after sector unblinding"
+    ],
+    "operationalAdvance": [
+      "positive familywise-corrected lower bound on the preregistered band contrast in two independent subbands",
+      "positive familywise-corrected lower bound on Delta_Omega that also exceeds one effective FWHM",
+      "the result repeats in two independent device or cooldown replications",
+      "dummy-gate, one-path-disabled, randomized-order, reverse-order, power-scaling and temperature controls pass"
+    ],
+    "spin23AdvanceAdditional": [
+      "a frozen microscopic action predicts the device-specific pole window, sector ordering, minimum contrast and port residues before labelled data",
+      "the physical two-port operator is matched to the conserved/traceless response rather than selected empirically",
+      "a separate protected-Z3 platform verifies sector algebra and protection; three AC gate settings do not meet this condition"
+    ],
+    "poweredNull": [
+      "all validity controls pass",
+      "achieved linewidth, calibration covariance, confusion matrix and sample count give at least 90 percent power for the model's frozen minimum pole and band contrasts",
+      "two independent replications place a simultaneous upper bound below at least one required model effect throughout the frozen window"
+    ],
+    "inconclusive": "valid data that meet neither operationalAdvance nor poweredNull"
+  },
+  "protectedZ3Boundary": {
+    "separateProtocolRequired": true,
+    "acThreePointSamplingIsProtectedZ3": false,
+    "requiredExtraEvidence": [
+      "W^3=I and three eigenvalues in one admitted low-energy space",
+      "validated nonlocal sector increment or string operator",
+      "suppressed local sector mixing with increasing separation or code size",
+      "poisoning lifetime longer than preparation plus acquisition",
+      "device-specific microscopic response and port matching"
+    ]
+  },
+  "predictionGate": {
+    "physicalEffectPredictionAvailable": false,
+    "absoluteOnsetPowerAvailable": false,
+    "sensitivityPowerAvailable": true,
+    "missingInputs": [
+      "microscopic interacting AC-device Hamiltonian containing the proposed reader and its environment",
+      "predicted sector-dependent pole shift and spectral residue with uncertainty",
+      "device-specific matrix elements from both calibrated ports to the conserved/traceless operator",
+      "measured sector-resolved homogeneous linewidth and quasi-static charge-disorder distribution",
+      "sector preparation-confusion and poisoning transition matrices versus acquisition time",
+      "calibration covariance and drift at the device reference plane",
+      "temperature and drive-power dependence establishing the linear-response window"
+    ],
+    "noGo": "without those inputs, multiplying a literature linewidth by an assumed coupling cannot yield a defensible absolute power, integration time, or Spin23 exclusion"
+  },
+  "claimBoundary": {
+    "physicalDataInProgramme": false,
+    "protectedZ3Demonstrated": false,
+    "microscopicCouplingPredicted": false,
+    "schemeInvariantProtocolCompleted": true,
+    "physicalAdmission": false
+  }
+}

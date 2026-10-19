@@ -1,0 +1,130 @@
+{
+  "schema": "spin23.a11-z3-orientation-readout/1",
+  "documentId": 1229,
+  "date": "2026-10-20",
+  "status": "exact-symmetry-theorem-and-finite-counterexample-synthetic-only",
+  "claimBoundary": {
+    "microscopicA11ReaderDerived": false,
+    "a5SelectorDerived": false,
+    "physicalOrientationSelected": false,
+    "physicalDataAvailable": false,
+    "a11Passed": false,
+    "physicalAdmission": false
+  },
+  "theorem": {
+    "name": "conjugate-sector response theorem",
+    "hypotheses": [
+      "h is in Z3 and an involutive unitary or antiunitary symmetry Theta maps H_h to H_-h",
+      "the equilibrium or stationary state is mapped covariantly from rho_h to rho_-h",
+      "the real symmetrized probe vector transforms by a fixed real orthogonal parity matrix R",
+      "the probe convention and physical orientation are held fixed across sectors"
+    ],
+    "response": "C_h,ab = (1/2) Tr rho_h {Delta O_a, Delta O_b}",
+    "conclusion": "C_-h = R C_h R^T",
+    "corollaries": [
+      "If every retained probe has the same Theta parity, R=I or R=-I and C_1=C_2.",
+      "Every R-congruence invariant is equal in h=1 and h=2 even when the labelled matrices differ.",
+      "For one even and one odd probe, R=diag(1,-1); diagonal autocovariances are conjugate-sector even and the cross covariance is odd.",
+      "A single Theta-odd expectation value can separate h=1 from h=2, but a one-probe autocorrelation cannot because its parity is squared."
+    ]
+  },
+  "z3HarmonicDecomposition": {
+    "cosine": "D_c=(2 C_0-C_1-C_2)/3",
+    "sine": "D_s=(C_1-C_2)/sqrt(3)",
+    "evenMeaning": "D_c compares the trivial sector with the conjugate-pair average and may be nonzero with exact CP/T symmetry.",
+    "oddMeaning": "D_s is conjugation/orientation odd and vanishes for same-parity probes under exact CP/T symmetry.",
+    "protocolCorrection": "The omnibus A_perp=sqrt(L(D_c)^2+L(D_s)^2)/S can be nonzero with D_s=0; it is a sector-dependence test, not by itself an orientation test.",
+    "recommendedReporting": ["A_even=abs(L(D_c))/S", "A_orient=abs(L(D_s))/S", "the signed phase atan2(L(D_s),L(D_c)) after fixing orientation provenance"]
+  },
+  "localityBoundary": {
+    "pureFlatGaugeSector": "Strictly local gauge-invariant operators made only from flat field strengths and local geometry cannot distinguish any h.",
+    "chargedMatterEscape": "A local charged field on a multiply connected space has a holonomy-dependent global state or spectrum, so a local density can acquire h-dependent expectation values through winding.",
+    "qualification": "After the charged field is integrated out, this dependence is nonlocal and generally gap/length suppressed; it is not a local derivative expansion reading flat curvature."
+  },
+  "minimalEscapeLedger": [
+    {
+      "target": "separate h=0 from the nontrivial conjugate pair",
+      "minimumDatum": "one CP/T-even holonomy-sensitive charged-matter observable",
+      "orientationImported": false,
+      "a5Solved": false
+    },
+    {
+      "target": "separate h=1 from h=2 by a one-point measurement",
+      "minimumDatum": "one oriented CP/T-odd local observable such as persistent current on a declared loop orientation",
+      "orientationImported": true,
+      "a5Solved": false
+    },
+    {
+      "target": "separate h=1 from h=2 inside a positive symmetric response matrix",
+      "minimumDatum": "two probes of opposite CP/T parity and their cross response, or one even response multiplied by an independently sourced odd pseudoscalar",
+      "orientationImported": true,
+      "a5Solved": false
+    },
+    {
+      "target": "derive a preferred orientation rather than merely measure one",
+      "minimumDatum": "microscopic CP/T breaking, an anomaly, an oriented boundary/history datum, or spontaneous breaking plus a recorded domain choice",
+      "orientationImported": "must be derived or independently evidenced",
+      "a5Solved": "only if the datum also acts covariantly on the internal family/chiral selector and passes the A5 gates"
+    }
+  ],
+  "finiteToyModel": {
+    "description": "one charged particle on a three-site oriented ring",
+    "sites": 3,
+    "hopping": 1,
+    "massOffset": 3,
+    "inverseTemperature": 1,
+    "sectorFlux": "Phi_h=2 pi h/3 with labels h=0,1,2 and h=2 represented as -1",
+    "hamiltonian": "H_h=m I-t sum_j(exp(i Phi_h/3)|j+1><j|+h.c.)",
+    "symmetry": "complex conjugation maps H_h to H_-h",
+    "localEvenProbe": "bond kinetic energy K_0=-t(exp(i Phi_h/3)|1><0|+h.c.)",
+    "localOddProbe": "oriented bond current J_0=i t(exp(i Phi_h/3)|1><0|-h.c.)",
+    "response": "thermal real symmetrized covariance Gram of (K_0,J_0)",
+    "expected": [
+      "the spectra and every even thermodynamic scalar agree in sectors 1 and 2",
+      "the local current expectation reverses sign between sectors 1 and 2",
+      "C_2=diag(1,-1) C_1 diag(1,-1)",
+      "all response matrices are positive semidefinite",
+      "the three labelled response matrices span three dimensions because the mixed-parity cross covariance supplies the odd direction",
+      "deleting the odd probe restores C_1=C_2"
+    ],
+    "qualification": "The ring is a logical counterexample showing that local charged observables can read globally prepared holonomy. It is not the programme's derived defect spectrum or an effect-size prediction."
+  },
+  "exactClaims": [
+    "Under the theorem hypotheses, same-parity real symmetrized response matrices satisfy C_1=C_2.",
+    "D_s=(C_1-C_2)/sqrt(3), so D_s is exactly the orientation-sensitive first-harmonic component.",
+    "D_c may be nonzero while C_1=C_2; a nonzero omnibus first harmonic does not prove orientation selection.",
+    "A two-probe positive Gram matrix needs opposite-parity probes for an odd cross-response direction without explicit symmetry breaking.",
+    "An externally oriented probe distinguishes sectors operationally but does not derive the A5 internal selector."
+  ],
+  "modelDependentClaims": [
+    "The three-site ring realizes the exact symmetry pattern with a nonzero local current and mixed-parity covariance.",
+    "A gapped charged defect mode in the candidate programme could realize the same pattern if it is localized, anomaly safe and coupled to the declared probes."
+  ],
+  "speculativeClaims": [
+    "The required oriented datum may descend from defect orientation, a parity anomaly, a CP-odd flavour invariant or cosmological/domain history.",
+    "Any such datum connects to A5 only if one action derives its coupling to the family/chiral sector rather than identifying two unrelated orientations by analogy."
+  ],
+  "protocolDecisions": {
+    "evenAdvance": "A_even nonzero with A_orient null establishes holonomy-sensitive response but not orientation or three individually readable sectors.",
+    "orientedAdvance": "A_orient nonzero under a preregistered opposite-parity probe pair establishes oriented conjugate-sector readout after CP/T, calibration and order-reversal controls.",
+    "invalidInterpretation": "Calling D_c-only response spontaneous orientation selection, or treating an apparatus loop direction as a derived A5 selector.",
+    "noGo": "With pure flat BF, no charged winding sector, exact Theta symmetry and same-parity probes, all local readout routes to C_1 not equal C_2 are closed."
+  },
+  "literatureBoundary": [
+    {
+      "citation": "Onsager, Reciprocal Relations in Irreversible Processes I, Phys. Rev. 37, 405 (1931)",
+      "doi": "https://doi.org/10.1103/PhysRev.37.405",
+      "role": "microscopic reversibility background"
+    },
+    {
+      "citation": "Casimir, On Onsager's Principle of Microscopic Reversibility, Rev. Mod. Phys. 17, 343 (1945)",
+      "doi": "https://doi.org/10.1103/RevModPhys.17.343",
+      "role": "time-reversal parity and reversed-field reciprocity"
+    },
+    {
+      "citation": "Akkermans et al., Relation between Persistent Currents and the Scattering Matrix, Phys. Rev. Lett. 66, 76 (1991)",
+      "doi": "https://doi.org/10.1103/PhysRevLett.66.76",
+      "role": "time reversal makes flux-even spectral data and flux-odd persistent current"
+    }
+  ]
+}

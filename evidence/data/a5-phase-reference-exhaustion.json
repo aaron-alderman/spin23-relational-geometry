@@ -1,0 +1,90 @@
+{
+  "protocol": "a5-phase-reference-exhaustion/1",
+  "rephasingAction": {
+    "field": "N -> exp(i alpha) N",
+    "pair": "A=NN -> exp(2 i alpha) A",
+    "particleHolePhase": "beta -> beta+2 alpha",
+    "majoranaCoefficient": "M -> exp(-2 i alpha) M",
+    "target": "a point beta on the particle-hole phase circle modulo pi"
+  },
+  "theorem": {
+    "statement": "No datum fixed by continuous sterile rephasing can equivariantly select a particle-hole phase beta on its fixed-point-free phase circle.",
+    "scope": "one sterile Weyl field with endpoint-blind Standard Model interactions and no independently phased lepton-number-violating source",
+    "escape": "a nonzero independently sourced covariant of sterile rephasing charge minus two"
+  },
+  "candidateAudit": [
+    {
+      "candidate": "CP",
+      "rephasingType": "a family CP_xi whose intrinsic phase shifts under N rephasing",
+      "canonical": false,
+      "reason": "CP_xi is itself a torsor under sterile rephasing; exact full-theory CP is also incompatible with nonzero observed Jarlskog invariants unless used only spurionically or spontaneously."
+    },
+    {
+      "candidate": "CPT",
+      "rephasingType": "neutral theorem with an unfixed intrinsic sterile phase",
+      "canonical": false,
+      "reason": "CPT permits both Hermitian scalar and pseudoscalar Majorana bilinears and does not fix the particle-hole phase."
+    },
+    {
+      "candidate": "oriented boundary normal",
+      "rephasingType": "neutral Z2 sign",
+      "canonical": false,
+      "reason": "It supplies chi but has no sterile charge minus two; it can correlate with a chosen quadrature but cannot define that quadrature."
+    },
+    {
+      "candidate": "charge-three Higgs phase",
+      "rephasingType": "gauge phase with gauge-equivalent vacuum representatives",
+      "canonical": false,
+      "reason": "The three condensate phases are gauge equivalent, and no typed coupling to the A5 sterile rephasing has been declared."
+    },
+    {
+      "candidate": "Majorana mass phase",
+      "rephasingType": "covariant charge minus two",
+      "canonical": false,
+      "reason": "It defines beta=-arg(M) covariantly but is the same coefficient whose scalar/pseudoscalar decomposition is being selected; using it is circular."
+    },
+    {
+      "candidate": "Yukawa and Jarlskog data",
+      "rephasingType": "physical invariants are neutral",
+      "canonical": false,
+      "reason": "One-N Yukawas have no physical sterile phase after lepton-field rephasings; quark or lepton Jarlskog invariants are neutral pseudoscalars and cannot select a charged phase-circle point."
+    },
+    {
+      "candidate": "residual Z3",
+      "rephasingType": "discrete subgroup or neutral topological label",
+      "canonical": false,
+      "reason": "If NN is Z3 invariant then N is neutral mod three; otherwise the Majorana term is forbidden. A three-point orbit does not select one representative."
+    },
+    {
+      "candidate": "anomaly index or Pfaffian flow",
+      "rephasingType": "integer or relative Z2 transport",
+      "canonical": false,
+      "reason": "The sterile field has no Standard Model gauge anomaly; index and Pfaffian flow transport relative orientation but require an initial determinant-line orientation."
+    }
+  ],
+  "vacuumDegeneracy": {
+    "exactCP": "a CP-invariant potential has conjugate vacua R and R_star whenever a CP-odd phase condenses",
+    "consequence": "boundary conditions or formation history may select a branch but the microscopic action predicts no absolute sign",
+    "chargeThree": "the apparent three Higgs phases are gauge representatives rather than distinct physical vacua"
+  },
+  "minimalNewReference": {
+    "symbol": "R2",
+    "transformation": "R2 -> exp(-2 i alpha) R2",
+    "nonzero": true,
+    "selectedParticleHolePhase": "beta=-arg(R2) modulo pi",
+    "invariantAxes": [
+      "S_R=R2 NN+R2_star (NN)_dagger",
+      "P_R=i(R2 NN-R2_star (NN)_dagger)"
+    ],
+    "physicalRealizations": [
+      "an independently calibrated lepton-number-violating complex source measured relative to a charged-current or boundary clock convention",
+      "a complex boundary field X of sterile charge minus two with a prepared nonzero vacuum and a second independently fixed phase-sensitive coupling"
+    ],
+    "warning": "one isolated complex field with a symmetric potential has a continuous or CP-conjugate vacuum degeneracy; its unmeasured VEV phase is not a canonical prediction"
+  },
+  "verdict": {
+    "classification": "no-go for all already-declared structures as a canonical A5 phase reference",
+    "bestExistingRole": "boundary history or a CP-odd flavor invariant can label or correlate already selected conjugate sectors but cannot define the sterile particle-hole quadrature",
+    "minimalClosure": "one independently sourced and calibrated nonzero charge-minus-two covariant R2, followed by a derived lock from its invariant odd quadrature to the charged TRO"
+  }
+}
