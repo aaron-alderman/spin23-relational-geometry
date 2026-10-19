@@ -11,7 +11,7 @@ const repositoryReadme = readFileSync(new URL("README.md", root), "utf8");
 test("Edition 3 exposes matching Markdown and HTML books", () => {
   assert.equal(metadata.schema, "spin23-edition3-book/v1");
   assert.equal(metadata.edition, "3.0 preview");
-  assert.equal(metadata.chapters.length, 11);
+  assert.equal(metadata.chapters.length, 12);
   assert.equal(metadata.findings.length, 12);
   assert.equal(metadata.frontiers.length, 8);
   assert.match(metadata.citationDigest, /^[a-f0-9]{64}$/u);
@@ -43,7 +43,8 @@ test("every citation resolves inside the repository", () => {
 test("the repository front door advertises both reading surfaces", () => {
   assert.match(repositoryReadme, /book\/edition-3\/README\.md/u);
   assert.match(repositoryReadme, /docs\/edition-3\/index\.html/u);
-  assert.match(coverHtml, /Eleven reader pages/u);
+  assert.match(coverHtml, /Twelve reader pages \+ interactive atlas/u);
   assert.match(coverHtml, /09-research-frontier\.html/u);
   assert.match(coverHtml, /10-provenance-and-reading-map\.html/u);
+  assert.match(coverHtml, /11-concept-atlas\.html/u);
 });
