@@ -12980,6 +12980,17 @@ Each cycle ends by updating this registry, including branches that failed or bec
 - **Stop condition:** do not promote (691), (23), (691=30\cdot23+1), or the (60!\) residue to a physical selector.
 - **Artifact:** [1223](../1200-1299/1223_the_prime_691_reaches_the_spin23_arithmetic_carrier_through_the_weight_twelve_klingen_siegel_tower.md).
 
+### B-A11-MICROSCOPIC-REALIZATION — topology, charged matter, power and platforms
+
+- **Dependency:** B-SPIN23-ACTION-BLOCKERS / A11.
+- **Exact no-gos:** pure closed-bulk BF/Chern--Simons terms are locally Hilbert-stress blind; local curvature-squared terms are blind to flat holonomy; the charge-three Higgs field is neutral under the residual \(\mathbb Z_3\) it creates.
+- **Smallest live bridge:** gapped defect matter of residual charge one or two, with probe-response Gram data outside the frozen rank-two span.
+- **Quantitative gate:** nuisance-projected information must remain nonzero. In the frozen synthetic budget, the robust two-bin/two-replication 90% design uses 144 runs per sector per replication, 864 sector-runs total.
+- **Platform ladder:** passive two-port for analysis control; Josephson or topolectrical ring for continuous-holonomy control; parafermion/discrete-gauge realization for genuine protected \(\mathbb Z_3\) sectors.
+- **Pinned dependencies:** derive the carrier mass, localization and coupling coefficient; establish the physical frequency/noise window; replace synthetic controls with platform-specific measured nuisance and calibration data.
+- **Stop condition:** do not interpret a synthetic three-phase control or continuous \(U(1)\) ring as a genuine discrete gauge sector, and do not infer stress from topology without a stress-carrying mediator.
+- **Artifacts:** [1225](../1200-1299/1225_the_a11_effect_window_requires_nuisance_projected_power_not_only_a_nonzero_transverse_response.md), [1226](../1200-1299/1226_a_passive_two_port_is_the_fastest_z3_control_test_but_only_a_parafermion_or_discrete_gauge_platform_would_supply_genuine_z3_sectors.md), and [1227](../1200-1299/1227_pure_bf_is_locally_stress_and_flat_holonomy_blind_while_gapped_unit_charged_matter_is_the_minimal_a11_bridge.md).
+
 
 
 

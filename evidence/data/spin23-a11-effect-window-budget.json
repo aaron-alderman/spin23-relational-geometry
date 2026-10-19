@@ -1,0 +1,135 @@
+{
+  "schema": "spin23.a11-effect-window-budget/1",
+  "budgetId": "A11-Z3-H2-EFFECT-WINDOW-1",
+  "date": "2026-10-20",
+  "parentProtocol": "evidence/data/spin23-a11-observable-protocol.json",
+  "status": "synthetic-design-calculation-only",
+  "claimBoundary": {
+    "microscopicEffectSizeDerived": false,
+    "physicalFrequencyWindowDerived": false,
+    "physicalDataAvailable": false,
+    "a11Passed": false,
+    "physicalAdmission": false
+  },
+  "estimand": {
+    "description": "The two-component cosine/sine first harmonic of the response component transverse to the frozen G2,G0 plane.",
+    "stackedModel": "y = N eta + a T(phi) + epsilon",
+    "nuisanceProjector": "M_N = I - N (N^T W N)^+ N^T W",
+    "information": "F = T^T W M_N T",
+    "identifiability": "lambda_min(F)>0; otherwise the transverse effect is indistinguishable from admitted calibration/contact nuisance.",
+    "nuisanceRetention": "r^2=lambda_min(F)/lambda_min(T^T W T), with 0<=r<=1",
+    "balancedHomoscedasticStatistic": "Q=(q_c^2+q_s^2)/s_n^2, s_n^2=2 sigma_rel^2/(3n)",
+    "nullDistribution": "chi-square with 2 degrees of freedom",
+    "alternativeDistribution": "noncentral chi-square with 2 degrees of freedom and lambda=3n(r a-b_sys)^2/(2 sigma_rel^2)"
+  },
+  "positivityBudget": {
+    "exactRequirement": "lambda_min(C_h(omega)) >= 0 for every sector and retained frequency",
+    "sufficientPerturbativeBound": "For C_h=C_h0+delta C_h, positivity is guaranteed when ||delta C_h||_2 <= lambda_min(C_h0).",
+    "confidenceRequirement": "The one-sided lower confidence bound on lambda_min(C_h) must be nonnegative; overlap with zero is inconclusive, not evidence of positivity violation.",
+    "syntheticBaseline": [[1.61, 0.266], [0.266, 1.285]],
+    "syntheticMinimumEigenvalue": 1.1357914021076738,
+    "syntheticFrobeniusNorm": 2.0940002387774457,
+    "syntheticSufficientDimensionlessCeiling": 0.5424027089752342,
+    "interpretation": "The 0.01 synthetic design target lies far inside this sufficient cone margin; this is fixture validation, not a physical prediction."
+  },
+  "nuisanceBudget": {
+    "sectorIndependentContact": "Cancels exactly in balanced Z3 cosine/sine contrasts because both harmonic weights sum to zero.",
+    "admittedNuisanceColumns": [
+      "three coordinates of a sector-independent additive contact matrix",
+      "infinitesimal common probe-congruence calibration directions",
+      "frozen-plane estimation directions learned without labelled evaluation data",
+      "preregistered environmental covariates"
+    ],
+    "minimumInformationRetention": 0.85,
+    "maximumWorstCaseRelativeBias": 0.001,
+    "biasBreakdown": {
+      "sectorDependentContactRemainder": 0.0003,
+      "calibrationDriftLeakage": 0.0004,
+      "frozenPlaneEstimationLeakage": 0.0003
+    },
+    "rules": [
+      "If r=0, redesign the probes; increasing sample count cannot repair nonidentifiability.",
+      "Estimate or bound nuisance columns on training/sham data, never by rotating the plane after labels are revealed.",
+      "The measured sham amplitude plus its one-sided uncertainty must remain below 0.001.",
+      "If the total bias bound reaches r times the target amplitude, the target is not detectible at any sample count."
+    ]
+  },
+  "frequencyWindow": {
+    "windowResolutionElements": 8,
+    "minimumPassingResolutionElements": 2,
+    "minimumIndependentReplications": 2,
+    "familywiseAlpha": 0.01,
+    "multiplicityMethod": "Bonferroni across the eight preregistered resolution elements",
+    "perElementAlpha": 0.00125,
+    "chiSquare2CriticalValue": 13.369223455335854,
+    "requirements": [
+      "The window endpoints and resolution bandwidth are frozen from a microscopic prediction or label-blind training data.",
+      "Raw bins closer than one response-resolution width count as one resolution element.",
+      "At least two resolution elements must pass; oversampling one spectral peak does not satisfy this rule.",
+      "The Z3 harmonic phase must be compatible across the passing elements and independent replications.",
+      "The same probe, calibration, contact prescription, temperature, geometry and drive apply throughout the window.",
+      "Scanning outside the window requires a new protocol or an explicit expanded multiplicity correction."
+    ]
+  },
+  "syntheticPowerExample": {
+    "targetDimensionlessAmplitude": 0.01,
+    "singleRunProjectedRelativeStandardDeviation": 0.02,
+    "minimumNuisanceRetention": 0.85,
+    "maximumWorstCaseRelativeBias": 0.001,
+    "effectiveWorstCaseSignal": 0.0075,
+    "singleEventPower": 0.9,
+    "singleEventRequiredNoncentrality": 23.21311690194701,
+    "singleEventMinimumRunsPerSector": 111,
+    "requiredPassEvents": 4,
+    "jointPowerTarget": 0.9,
+    "unionBoundPerEventPower": 0.975,
+    "jointGuaranteeRequiredNoncentrality": 30.301700192792556,
+    "jointGuaranteeMinimumRunsPerSectorPerReplication": 144,
+    "jointGuaranteeActualPerEventPower": 0.9753821416806342,
+    "jointGuaranteeLowerBound": 0.9015285667225366,
+    "totalSectorRunsAcrossTwoReplications": 864,
+    "noiseScalingTable": [
+      {"singleRunProjectedRelativeStandardDeviation": 0.02, "minimumRunsPerSectorPerReplication": 144},
+      {"singleRunProjectedRelativeStandardDeviation": 0.01, "minimumRunsPerSectorPerReplication": 36},
+      {"singleRunProjectedRelativeStandardDeviation": 0.005, "minimumRunsPerSectorPerReplication": 9}
+    ],
+    "protocolThresholdCrossingCaution": {
+      "statement": "Power to reject zero at a true amplitude of 0.01 is not 90% power to observe an estimate above the protocol threshold 0.01.",
+      "at144RunsStandardError": 0.0013608276348795435,
+      "rawTrueAmplitudeFor90PercentChanceToExceedPointThreshold": 0.014891842507572839
+    },
+    "scope": "All numbers are synthetic planning fixtures. They are not estimates of a physical coupling or achievable apparatus noise. The joint-power figure assumes two particular preregistered resolution elements each carry at least the target amplitude; an unspecified effect somewhere in the window has no such guarantee."
+  },
+  "uncertaintyAccounting": {
+    "generalCase": "Use the full repeated-run covariance in W and recompute F=T^T W M_N T; the balanced scalar formula is valid only for independent equal-variance sector estimates.",
+    "normalization": "Propagate uncertainty in the mean response norm appearing in A_perp jointly with the numerator, using the delta method or a run-level bootstrap that repeats nuisance fitting.",
+    "correlatedFrequencies": "Use the measured cross-frequency covariance for estimation; count only resolution elements, not raw oversampled bins, for the preregistered multiplicity and two-element rule.",
+    "nuisanceEstimation": "Training or sham uncertainty in nuisance columns and the frozen plane must be propagated, not treated as known exactly.",
+    "reportedIntervals": "Report point estimates and one-sided bounds for positivity margin, A_perp, the third singular value, sham leakage and nuisance retention."
+  },
+  "decisionThresholds": {
+    "invalid": [
+      "A response matrix is negative beyond the preregistered one-sided uncertainty allowance.",
+      "Probe, calibration, contact, environment or frequency-grid identity differs by sector.",
+      "The nuisance-projected signal information has zero minimum eigenvalue.",
+      "The sham upper bound exceeds 0.001.",
+      "The frozen window or threshold changes after unblinding."
+    ],
+    "advance": [
+      "All validity and positivity requirements pass.",
+      "The familywise-corrected Q statistic passes in at least two preregistered resolution elements.",
+      "The point estimate A_perp exceeds 0.01 in those elements.",
+      "A conservative lower confidence bound exceeds the measured sham/systematic floor.",
+      "The nuisance-projected third singular direction has a positive one-sided lower confidence bound.",
+      "The phase-compatible result repeats in two independent replications and survives reversed order.",
+      "Common-calibration rank/relative invariants agree with the fixed-coordinate statistic."
+    ],
+    "poweredNull": [
+      "The planned sample size and achieved noise certify at least 90% joint power over the declared effect window.",
+      "In each of two independent implementations, fewer than two predicted resolution elements have a conservative upper bound reaching 0.01.",
+      "All validity controls pass, so absence is not caused by positivity, drift or identifiability failure."
+    ],
+    "inconclusive": "Any valid outcome that meets neither the advance rule nor the powered-null rule.",
+    "physicalMeaning": "Advance moves A11 to an empirical anomaly requiring microscopic explanation; it does not establish Spin(2,3). Powered null rejects the declared effect window, not unspecified future couplings."
+  }
+}

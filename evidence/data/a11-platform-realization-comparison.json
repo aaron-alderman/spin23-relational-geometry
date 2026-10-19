@@ -1,0 +1,138 @@
+{
+  "protocol": "a11-platform-realization-comparison/1",
+  "date": "2026-10-20",
+  "scoreScale": {
+    "0": "absent or presently disqualifying",
+    "1": "specified or partially available",
+    "2": "implemented locally or conventional platform capability"
+  },
+  "operationalCriteria": [
+    "threeControlledSectors",
+    "fixedTwoProbeReadout",
+    "positiveTwoChannelResponse",
+    "executableOrBuildableNow",
+    "negativeControlsAndCalibration"
+  ],
+  "topologyClasses": {
+    "0": "synthetic three-state label only",
+    "1": "gauge-invariant loop phase or geometric holonomy, continuously tunable and not a protected Z3 sector",
+    "2": "discrete Z3 sector protected against local deformation within a declared gap and superselection regime"
+  },
+  "platforms": [
+    {
+      "id": "passive-switched-two-port",
+      "name": "Passive switched two-port circuit",
+      "scores": {
+        "threeControlledSectors": 2,
+        "fixedTwoProbeReadout": 2,
+        "positiveTwoChannelResponse": 2,
+        "executableOrBuildableNow": 2,
+        "negativeControlsAndCalibration": 2
+      },
+      "topologyClass": 0,
+      "currentBoundary": "Three switch settings are labels; the rank-three response is deliberately engineered and is not holonomy evidence.",
+      "nextGate": "Run the supplied nodal-conductance fixture, then reproduce it in SPICE or on a resistor-switch bench with fixed ports."
+    },
+    {
+      "id": "topolectrical-phase-ring",
+      "name": "Topolectrical or microwave phase ring",
+      "scores": {
+        "threeControlledSectors": 2,
+        "fixedTwoProbeReadout": 2,
+        "positiveTwoChannelResponse": 2,
+        "executableOrBuildableNow": 1,
+        "negativeControlsAndCalibration": 2
+      },
+      "topologyClass": 1,
+      "currentBoundary": "The product of directed link phases around a closed ring is a real synthetic holonomy, but selecting phases 0, 2pi/3 and 4pi/3 does not make the continuously tunable U(1) loop a protected Z3 theory.",
+      "nextGate": "Simulate a passive or passively dilated ring at three loop phases and require the signal to disappear when the loop is cut."
+    },
+    {
+      "id": "conventional-josephson-loop",
+      "name": "Conventional Josephson or SQUID loop",
+      "scores": {
+        "threeControlledSectors": 2,
+        "fixedTwoProbeReadout": 2,
+        "positiveTwoChannelResponse": 2,
+        "executableOrBuildableNow": 1,
+        "negativeControlsAndCalibration": 2
+      },
+      "topologyClass": 1,
+      "currentBoundary": "Flux bias gives a physical U(1) loop holonomy and standard microwave ports, but three flux biases are not protected Z3 superselection sectors.",
+      "nextGate": "Model the Hermitian dissipative part of the same two-port admittance at fluxes 0, Phi0/3 and 2Phi0/3 with loop-open and sweep-reversal controls."
+    },
+    {
+      "id": "planckian-tj-two-current",
+      "name": "Planckian t-J two-current transport",
+      "scores": {
+        "threeControlledSectors": 1,
+        "fixedTwoProbeReadout": 1,
+        "positiveTwoChannelResponse": 1,
+        "executableOrBuildableNow": 1,
+        "negativeControlsAndCalibration": 1
+      },
+      "topologyClass": 1,
+      "currentBoundary": "The positive particle-energy spectral matrix is exact in principle, but the physical lattice energy current is not implemented; three twisted boundary phases are U(1) flux samples rather than Z3 topological sectors.",
+      "nextGate": "Derive and validate the physical energy current before adding common twisted-boundary sectors to the same FTLM samples."
+    },
+    {
+      "id": "outcome-dynamics-gaas",
+      "name": "Outcome Dynamics GaAs electromechanics",
+      "scores": {
+        "threeControlledSectors": 1,
+        "fixedTwoProbeReadout": 1,
+        "positiveTwoChannelResponse": 0,
+        "executableOrBuildableNow": 1,
+        "negativeControlsAndCalibration": 1
+      },
+      "topologyClass": 0,
+      "currentBoundary": "Charge and optical displacement are established readouts but are not entries of one positive response matrix; the consistent-versus-lumped mass disagreement leaves the numerical gate open.",
+      "nextGate": "Close lateral/support refinement and define two conjugate drive-response ports whose dissipative Gram matrix is positive before introducing three boundary labels."
+    },
+    {
+      "id": "z3-parafermion-junction",
+      "name": "Z3 parafermion or discrete-gauge Josephson platform",
+      "scores": {
+        "threeControlledSectors": 1,
+        "fixedTwoProbeReadout": 1,
+        "positiveTwoChannelResponse": 1,
+        "executableOrBuildableNow": 0,
+        "negativeControlsAndCalibration": 0
+      },
+      "topologyClass": 2,
+      "currentBoundary": "This is the only candidate with the right protected discrete-sector semantics, but sector preparation, lifetime, fixed two-port response and false-positive controls are not established inside the programme.",
+      "nextGate": "Treat as a long-horizon target until a microscopic Hamiltonian, gap, sector-changing operators, preparation protocol and response readout are all explicit."
+    }
+  ],
+  "minimalExecutableExperiment": {
+    "id": "passive-three-setting-two-port-fixture",
+    "claimClass": "synthetic-control validation only",
+    "fixedProbeLabels": ["port-1 current/voltage", "port-2 current/voltage"],
+    "sectorLabels": [0, 1, 2],
+    "branches": [
+      {"id": "port-1-shunt", "outerVector": [1, 0]},
+      {"id": "port-2-shunt", "outerVector": [0, 1]},
+      {"id": "inter-port", "outerVector": [1, -1]}
+    ],
+    "sectorConductances": [
+      [4, 2, 1],
+      [1, 4, 2],
+      [2, 1, 4]
+    ],
+    "referencePlaneBranchIds": ["port-1-shunt", "port-2-shunt"],
+    "requiredControls": [
+      "randomized sector order",
+      "sham switching with conductances unchanged",
+      "the same port definitions and common calibration in every sector",
+      "forward and reverse switch order",
+      "repeat after opening or removing the inter-port branch"
+    ],
+    "expected": {
+      "allResponsesPositiveDefinite": true,
+      "responseSpanRank": 3,
+      "responseDeterminants": [14, 14, 14],
+      "transverseFirstHarmonicStrictlyPositive": true,
+      "genuineTopologicalHolonomy": false
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "schema": "spin23.a11-microscopic-coupling-ledger/1",
+  "documentId": 1227,
+  "date": "2026-10-20",
+  "protocolId": "A11-Z3-STRESS-BRIDGE-1",
+  "scope": "2+1-dimensional level-three BF defect coupled to an induced metric and two fixed conserved stress probes",
+  "operatorBasisAssumption": "Local diffeomorphism-invariant defect scalars use the induced metric and BF fields with no additional preferred tangential vector. Adding such a vector is additional medium/probe structure and does not evade flat-field-strength blindness.",
+  "dimensionConvention": {
+    "spacetimeDimension": 3,
+    "derivative": 1,
+    "topologicalGaugeOneForms": {"a": 1, "c": 1},
+    "fieldStrengths": {"f_a": 2, "f_c": 2},
+    "canonicalComplexScalar": 0.5,
+    "canonicalDiracFermion": 1,
+    "note": "The topological normalization makes c wedge da dimension three. Maxwell coefficients then have mass dimension minus one. Dimensions are defect EFT dimensions, not four-dimensional bulk dimensions."
+  },
+  "discreteSector": {
+    "level": 3,
+    "flatHolonomy": "exp(i integral a)=exp(2 pi i h/3), h=0,1,2",
+    "pureBfAction": "(3/2pi) integral c wedge da",
+    "conventionalDiscreteSymmetryAssignment": "a is a polar one-form and c is an axial one-form so the mutual BF term is P/T even",
+    "qualification": "Individual CP labels depend on microscopic charge assignments; the ledger uses this conventional BF assignment."
+  },
+  "operators": [
+    {
+      "id": "O1",
+      "operator": "epsilon^{ijk} c_i partial_j a_k",
+      "effectiveDimension": 3,
+      "local": true,
+      "gaugeConsistent": true,
+      "cpOrParity": "even under the conventional polar-a/axial-c BF assignment",
+      "metricDependent": false,
+      "localStress": "zero in the closed defect bulk",
+      "flatHolonomySensitivity": "topological globally, absent from local Hilbert stress",
+      "thirdDirectionCapacity": "none through metric variation",
+      "coefficientStatus": "quantized level three",
+      "verdict": "topological carrier, not the A11 stress bridge"
+    },
+    {
+      "id": "O2",
+      "operator": "epsilon^{ijk} a_i partial_j a_k or epsilon^{ijk} c_i partial_j c_k",
+      "effectiveDimension": 3,
+      "local": true,
+      "gaugeConsistent": "only at quantized level with global/spin qualifications",
+      "cpOrParity": "odd for an ordinary one-form self Chern-Simons term",
+      "metricDependent": false,
+      "localStress": "zero in the closed defect bulk",
+      "flatHolonomySensitivity": "changes topological twist but supplies no local stress response",
+      "thirdDirectionCapacity": "none through metric variation",
+      "coefficientStatus": "quantized but not derived; the programme requires the untwisted class",
+      "verdict": "cannot realize A11 and may destroy the two-qutrit carrier"
+    },
+    {
+      "id": "O3",
+      "operator": "(1/4Lambda) Z_IJ f_I,ij f_J^{ij}, I,J in {a,c}",
+      "effectiveDimension": 4,
+      "local": true,
+      "gaugeConsistent": true,
+      "cpOrParity": "diagonal terms even; mixed a-c term odd under the conventional polar/axial assignment",
+      "metricDependent": true,
+      "localStress": "nonzero for flux or propagating field-strength excitations",
+      "flatHolonomySensitivity": "none when f_a=f_c=0",
+      "thirdDirectionCapacity": "conditional on a defect tensor Gram matrix outside span(G2,G0), but not Z3-correlated for flat sectors",
+      "coefficientStatus": "unknown irrelevant EFT coefficients",
+      "verdict": "smallest pure-gauge stress term; exact flat-holonomy no-go"
+    },
+    {
+      "id": "O4",
+      "operator": "|D_{3a} s|^2 plus m_s^2 |s|^2",
+      "effectiveDimension": 3,
+      "local": true,
+      "gaugeConsistent": true,
+      "cpOrParity": "even for a scalar with CP-even mass and kinetic terms",
+      "metricDependent": true,
+      "localStress": "nonzero",
+      "flatHolonomySensitivity": "none to the residual Z3 because charge q=3 has exp(2 pi i q h/3)=1",
+      "thirdDirectionCapacity": "may add a defect response direction but cannot correlate it with the residual Z3 holonomy",
+      "coefficientStatus": "present schematically in S_v1; defect spectrum and coefficients not derived",
+      "verdict": "the flavon that creates Z3 cannot itself read its flat residual holonomy"
+    },
+    {
+      "id": "O5",
+      "operator": "|D_a phi|^2+m_phi^2|phi|^2 for residual charge q not divisible by three",
+      "effectiveDimension": 3,
+      "local": true,
+      "gaugeConsistent": true,
+      "cpOrParity": "even for a parity-paired or complex scalar matter sector",
+      "metricDependent": true,
+      "localStress": "nonzero and conserved with the complete defect equations",
+      "flatHolonomySensitivity": "yes through the global covariant spectrum on a noncontractible cycle; no strictly local curvature expansion can see it",
+      "thirdDirectionCapacity": "conditional: requires defect localization/probe geometry to give G_phi outside span(G2,G0)",
+      "coefficientStatus": "field content, mass, charge, multiplicity and portal coefficients are not predicted",
+      "verdict": "smallest viable local microscopic completion, with globally nonlocal holonomy dependence after the matter is integrated out"
+    },
+    {
+      "id": "O6",
+      "operator": "bar psi (i gamma^i D_i[a]-m_psi) psi in a parity-paired charge sector",
+      "effectiveDimension": 3,
+      "local": true,
+      "gaugeConsistent": "yes after the localized parity anomaly and regulator levels cancel",
+      "cpOrParity": "a single two-component mass is parity odd; a parity-paired completion can be even",
+      "metricDependent": true,
+      "localStress": "nonzero",
+      "flatHolonomySensitivity": "yes through the global charged spectrum",
+      "thirdDirectionCapacity": "conditional on transverse defect probe Gram and anomaly-safe pairing",
+      "coefficientStatus": "not derived",
+      "verdict": "viable only after the existing localized Chern-Simons/parity-anomaly gate is passed"
+    },
+    {
+      "id": "O7",
+      "operator": "R_Sigma f_I,ij f_J^{ij}/Lambda^3 and higher derivative descendants",
+      "effectiveDimension": 6,
+      "local": true,
+      "gaugeConsistent": true,
+      "cpOrParity": "inherits the parity of f_I f_J",
+      "metricDependent": true,
+      "localStress": "nonzero away from a flat metric or with nonzero field strength",
+      "flatHolonomySensitivity": "none for flat gauge fields at fixed local geometry",
+      "thirdDirectionCapacity": "conditional but higher order and not flat-holonomy correlated",
+      "coefficientStatus": "unknown irrelevant EFT coefficients",
+      "verdict": "not minimal and does not evade the local-flat no-go"
+    },
+    {
+      "id": "O8",
+      "operator": "W_q(C)=exp(i q integral_C a) inserted in or coupled to a detector functional",
+      "effectiveDimension": "nonlocal/dimensionless exponent",
+      "local": false,
+      "gaugeConsistent": true,
+      "cpOrParity": "CP maps h to -h and W_q to its conjugate",
+      "metricDependent": "only through the contour/detector or charged matter that realizes it",
+      "localStress": "not a standalone local stress tensor",
+      "flatHolonomySensitivity": "direct",
+      "thirdDirectionCapacity": "conditional on a detector response Gram outside span(G2,G0)",
+      "coefficientStatus": "detector coupling not derived",
+      "verdict": "clean observable but not the requested local microscopic operator"
+    }
+  ],
+  "exactNoGos": [
+    {
+      "id": "N1",
+      "statement": "On a closed defect, metric variation of pure BF and pure Chern-Simons terms gives zero bulk Hilbert stress because these actions use orientation but no metric."
+    },
+    {
+      "id": "N2",
+      "statement": "For flat sectors f_a=f_c=0, every strictly local gauge-invariant polynomial built only from f_a, f_c, their covariant derivatives and a fixed local metric is identical in all Z3 holonomy sectors."
+    },
+    {
+      "id": "N3",
+      "statement": "A charge q divisible by three is blind to residual Z3 holonomy, so the charge-three flavon cannot be the A11 holonomy reader."
+    },
+    {
+      "id": "N4",
+      "statement": "Any response contribution whose fixed-probe Gram lies in span(G2,G0) merely changes the two scalar form factors and cannot produce the A11 third direction."
+    },
+    {
+      "id": "N5",
+      "statement": "With CP or time reversal unbroken, conjugate flat sectors h=1 and h=2 are isospectral for ordinary charged matter; a signed h=1 versus h=2 splitting requires an orientation-sensitive observable or CP/T breaking."
+    }
+  ],
+  "minimalViableBridge": {
+    "operatorId": "O5",
+    "field": "gapped defect-localized matter of residual charge q=1 or q=2",
+    "reason": "It is local, gauge consistent, metric dependent and can read a flat holonomy through its spectrum around a noncontractible cycle.",
+    "necessaryConditions": [
+      "the charged field and its localization follow from the candidate action rather than being added only to fit A11",
+      "all gauge and localized anomalies cancel",
+      "the field is gapped so the BF sector remains approximately isolated",
+      "the compact cycle or equivalent multiply connected path is physically realized",
+      "the induced two-probe Gram G_phi has nonzero triple volume with G2 and G0",
+      "the resulting coefficient and frequency dependence are calculated before comparison with data"
+    ],
+    "predictedCoefficient": false,
+    "predictedMass": false,
+    "predictedFrequencyWindow": false,
+    "physicalAdmission": false
+  },
+  "responseCriterion": {
+    "thirdDirectionVolume": "V_phi=det[v(G2),v(G0),v(G_phi)]",
+    "planeOnly": "V_phi=0",
+    "thirdDirectionCapable": "V_phi nonzero",
+    "holonomyCorrelation": "the coefficient multiplying G_phi must vary with h under fixed probes and controls",
+    "spin23Qualification": "A third direction advances A11 beyond ambient-only geometry but does not establish full Sp(4,R) covariance."
+  },
+  "syntheticCertificate": {
+    "cycleSites": 4,
+    "matterMassSquared": 0.7,
+    "heatKernelTimes": [0.25, 0.55, 0.9, 1.25],
+    "referenceStructures": {
+      "G2": [[1.4, 0.35], [0.35, 0.9]],
+      "G0": [[0.3, -0.12], [-0.12, 0.55]],
+      "Gparallel": [[0.74, 0.068], [0.068, 0.69]],
+      "Gphi": [[0.8, 0.41], [0.41, 1.2]]
+    },
+    "matterResponseCoefficient": 0.02,
+    "qualification": "The coefficient and Gram matrix are synthetic witnesses of capacity, not values predicted by S_v1."
+  }
+}

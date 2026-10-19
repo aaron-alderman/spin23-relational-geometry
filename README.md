@@ -27,6 +27,7 @@ The strongest present synthesis is conditional:
 - the prime \(691\) reaches the arithmetic carrier exactly through the weight-twelve Klingen–Siegel tower on \(Sp(4,\mathbb Z)\), while remaining an automorphic congruence prime rather than a physical parameter;
 - Outcome Dynamics supplies a model-local bonded stress-to-charge/optical pipeline whose quadratic through-thickness control converges on one preregistered direction; consistent mass also converges there, but differs from lumped mass by 65–72% in the main observables, so lateral/support refinement and full-panel convergence remain open;
 - the first candidate-action blocker round rejects an unconstrained literal second time, proves that symmetry-fixed data cannot select a nonfixed orientation, and defines a preregistered holonomy-response test; none of these results grants physical admission.
+- the A11 continuation shows that topology alone is locally stress-blind: a measurable holonomy response minimally requires gapped matter carrying residual \(Z_3\) charge one or two, a transverse probe tensor, and a nuisance-projected effect large enough to survive replication.
 
 ## Canonical research controls
 
@@ -43,6 +44,9 @@ The strongest present synthesis is conditional:
 11. [Selector particularity theorem](corpus/claims/1200-1299/1221_symmetric_data_cannot_select_a_nonfixed_orientation_and_a5_requires_a_covariant_selector_input.md)
 12. [Preregistered branch-discriminating response test](corpus/claims/1200-1299/1222_a_preregistered_z3_holonomy_response_test_can_separate_a_third_physical_direction_from_ambient_spin23_geometry.md)
 13. [The 691 Klingen–Siegel arithmetic bridge](corpus/claims/1200-1299/1223_the_prime_691_reaches_the_spin23_arithmetic_carrier_through_the_weight_twelve_klingen_siegel_tower.md)
+14. [A11 quantitative effect window](corpus/claims/1200-1299/1225_the_a11_effect_window_requires_nuisance_projected_power_not_only_a_nonzero_transverse_response.md)
+15. [A11 platform realization audit](corpus/claims/1200-1299/1226_a_passive_two_port_is_the_fastest_z3_control_test_but_only_a_parafermion_or_discrete_gauge_platform_would_supply_genuine_z3_sectors.md)
+16. [A11 microscopic coupling boundary](corpus/claims/1200-1299/1227_pure_bf_is_locally_stress_and_flat_holonomy_blind_while_gapped_unit_charged_matter_is_the_minimal_a11_bridge.md)
 
 ## Repository architecture
 

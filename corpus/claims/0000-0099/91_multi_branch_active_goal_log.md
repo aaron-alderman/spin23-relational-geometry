@@ -26439,6 +26439,57 @@ Treat a reproducible holonomy-correlated third positive response direction as ev
 
 [1222_a_preregistered_z3_holonomy_response_test_can_separate_a_third_physical_direction_from_ambient_spin23_geometry.md](../1200-1299/)
 
+## Cycle 1106 — A11 acquires a quantitative effect-window gate
+
+### Executed
+
+- Projected the three-sector response template away from the frozen nuisance space.
+- Replaced raw nonzero amplitude with the Fisher-information condition \(F=T^TWM_NT\).
+- Computed one-event and robust joint-power budgets for the frozen synthetic noise model.
+- Distinguished the reporting threshold from the true amplitude required to cross it with 90% probability.
+
+### Decision
+
+Admit the power calculation as an experimental-design receipt only. A zero retained transverse fraction is structurally non-identifiable, regardless of sample size. Keep physical admission false until a microscopic model predicts an effect amplitude and a real platform supplies noise and nuisance estimates.
+
+### Artifact
+
+[1225_the_a11_effect_window_requires_nuisance_projected_power_not_only_a_nonzero_transverse_response.md](../1200-1299/)
+
+## Cycle 1107 — A11 gains a staged platform ladder
+
+### Executed
+
+- Compared passive two-port, Josephson-loop, topolectrical-ring, Planckian two-current, GaAs stress-transfer and parafermion/discrete-gauge candidates.
+- Separated analysis controls, continuous-holonomy emulators and genuine protected \(\mathbb Z_3\) sectors.
+- Verified a positive-definite rank-three passive fixture with equal determinants and nonzero transverse amplitude.
+
+### Decision
+
+Use the passive two-port first to validate inference and calibration, not ontology. Use Josephson or topolectrical rings as continuous-holonomy controls. Reserve claims about genuine \(\mathbb Z_3\) sector physics for a parafermion or discrete-gauge platform. Hold the t--J and GaAs branches behind their existing physical-current and representation gates.
+
+### Artifact
+
+[1226_a_passive_two_port_is_the_fastest_z3_control_test_but_only_a_parafermion_or_discrete_gauge_platform_would_supply_genuine_z3_sectors.md](../1200-1299/)
+
+## Cycle 1108 — A11 reaches its microscopic mediation boundary
+
+### Executed
+
+- Audited eight candidate microscopic operators.
+- Proved the local-stress blindness of pure topological terms and the flat-holonomy blindness of local curvature energy.
+- Showed that the charge-three Higgs field is neutral under the residual \(\mathbb Z_3\) sector it leaves behind.
+- Identified gapped residual-charge-one or residual-charge-two defect matter as the smallest local reader.
+- Verified that sector distinction alone is insufficient unless its response adds a direction transverse to the frozen rank-two plane.
+
+### Decision
+
+Treat topology as sector memory or control, not as a local force source. Advance only models that derive a stress-carrying charged mediator together with its mass, localization, response tensors and effect coefficient. Keep physical admission false.
+
+### Artifact
+
+[1227_pure_bf_is_locally_stress_and_flat_holonomy_blind_while_gapped_unit_charged_matter_is_the_minimal_a11_bridge.md](../1200-1299/)
+
 
 
 
