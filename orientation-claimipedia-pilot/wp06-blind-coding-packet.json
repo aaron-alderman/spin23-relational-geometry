@@ -1,0 +1,45 @@
+{
+  "protocol": "orientation.wp06.blind-coding-packet/1",
+  "status": "ProtocolCandidate",
+  "source": {
+    "manifest": "wp06-pilot-manifest.json",
+    "csvSha256": "2f56f0482c6a00b58a56a16d46b3b62225fb25544d63f4d0eefb519244344fd1",
+    "textLocation": "local-rights-reviewed-source-only"
+  },
+  "selection": {
+    "identityUtf8": "atu_id|tale_title|provenance|source|text",
+    "digest": "sha256",
+    "order": "ascending-full-digest",
+    "take": 120,
+    "sourceRowsInOrder": [792,1219,1095,1492,147,1295,1015,1192,923,904,852,743,247,398,283,775,235,618,1485,442,1032,1163,971,540,553,786,4,1239,1381,1248,1048,1356,229,602,238,1425,1491,750,828,917,769,426,286,630,212,339,177,654,1158,672,966,1438,991,723,1230,1058,493,346,121,1424,788,425,1122,1351,407,1278,922,1344,642,1024,155,1198,1118,631,1174,416,461,1271,36,779,1279,1200,260,455,1201,511,608,1133,1221,658,663,729,1442,980,1368,138,1249,1092,976,748,1324,1041,625,197,578,1272,532,178,88,449,998,615,385,1320,888,516,936,1180,1502,1443],
+    "partitions": [
+      {"id": "calibration", "selectionPositions": [1,20], "count": 20, "tripleCoded": true},
+      {"id": "reliability", "selectionPositions": [21,100], "count": 80, "tripleCoded": true},
+      {"id": "holdout", "selectionPositions": [101,120], "count": 20, "sealedUntil": "manual-and-model-freeze"}
+    ]
+  },
+  "coderVisibleFields": ["opaquePacketId", "normalizedText", "paragraphAnchors", "sentenceAnchors"],
+  "maskedFields": ["taleTitle", "atuId", "provenance", "notes", "source", "dataSource", "expectedPrevalence", "proposedSequence", "theoreticalBranding"],
+  "codes": ["order", "anomaly", "boundary-crossing", "costly-commitment", "disintegration", "reorganization", "return-or-transmission", "altered-order"],
+  "values": ["present", "absent", "uncertain", "not-applicable"],
+  "requiredPresentEvidence": ["startAnchor", "endAnchor", "functionalRationale"],
+  "reliabilityGate": {
+    "primaryStatistic": "Krippendorff-alpha",
+    "aggregateMinimum": 0.80,
+    "perCodeConfirmatoryMinimum": 0.80,
+    "perCodeExploratoryMinimum": 0.67,
+    "belowExploratoryDisposition": "remove-from-confirmatory-use",
+    "requiredDiagnostics": ["prevalence", "pairwise-confusion", "prevalence-robust-sensitivity"],
+    "manualRevisionsBeforeReliability": 1,
+    "manualRevisionsAfterReliabilityStarts": 0
+  },
+  "rivalTeams": ["generic-story-grammar", "event-valence-and-agency"],
+  "authority": {
+    "pilotMethodQualification": true,
+    "confirmatoryCrossCulturalInference": false,
+    "metaphysicalInference": false,
+    "claimipediaCorpusAdmission": false,
+    "humanCodingCompleted": false
+  }
+}
+

@@ -1,0 +1,74 @@
+{
+  "protocol": "orientation.wp06.corpus-inventory/1",
+  "status": "PilotMaterializedConfirmatoryHeld",
+  "asOf": "2026-10-19",
+  "confirmatoryCorpusFrozen": false,
+  "decision": "Method qualification may begin; confirmatory cross-cultural inference may not.",
+  "sources": [
+    {
+      "id": "bag-of-tales",
+      "title": "Bearing a Bag-of-Tales",
+      "url": "https://doi.org/10.5334/johd.78",
+      "version": "v1.1",
+      "zenodoDoi": "10.5281/zenodo.6575263",
+      "archiveSha256": "e85c7898192f8befeff601fd6140d7c2995d27ac6fecb7d081c5e5d51539e495",
+      "rights": "CC BY-SA 4.0 declared by the paper and exact archive README; Zenodo rendered licence field blank when checked",
+      "role": ["pilot-ingestion", "coder-training", "generic-story-baseline"],
+      "admission": "ExploratoryPilotOnly",
+      "limitations": ["English-language", "ATU-annotated", "Ashliman-derived", "not world-representative"]
+    },
+    {
+      "id": "tehrani-lrrh",
+      "title": "Little Red Riding Hood phylogenetic supporting data",
+      "url": "https://doi.org/10.1371/journal.pone.0078871",
+      "rights": "File-level verification required",
+      "role": ["bounded-method-reproduction", "phylogenetic-fixture"],
+      "admission": "ConditionalFixture",
+      "limitations": ["single tale complex", "not evidence of universal invariants"]
+    },
+    {
+      "id": "glottolog-5.3",
+      "title": "Glottolog 5.3",
+      "url": "https://glottolog.org/meta/downloads",
+      "rights": "CC BY 4.0",
+      "role": ["language-family-metadata", "geographic-metadata", "blocked-holdout-design"],
+      "admission": "SamplingMetadataOnly",
+      "limitations": ["no narrative texts", "linguistic relatedness is not cultural independence"]
+    },
+    {
+      "id": "folklore-database",
+      "title": "Folklore Database",
+      "url": "https://www.folkloredatabase.com/copyright.php",
+      "rights": "Mixed and item-specific",
+      "role": ["candidate-discovery", "possible-licensed-expansion"],
+      "admission": "Hold",
+      "releaseConditions": ["written extraction permission", "record-level rights manifest", "stable version", "represented-tradition review"]
+    },
+    {
+      "id": "forager-folklore-database",
+      "title": "Forager Folklore Database",
+      "url": "https://tei-c.org/Vault/MembersMeetings/2023/contributions/110.html",
+      "rights": "Variable by underlying source",
+      "role": ["candidate-expansion"],
+      "admission": "Hold",
+      "releaseConditions": ["stable release", "file-level rights manifest", "collection-context audit", "represented-tradition review"]
+    }
+  ],
+  "corpusPartitions": {
+    "P": {"purpose": "pipeline qualification", "admitted": ["bag-of-tales"], "materialized": true, "manifest": "wp06-pilot-manifest.json", "supportsUniversalClaims": false},
+    "C": {"purpose": "confirmatory cross-cultural test", "admitted": [], "frozen": false},
+    "H": {"purpose": "blocked held-out transfer", "admitted": [], "frozen": false}
+  },
+  "requiredManifestFields": [
+    "recordId", "sourceId", "sourceVersion", "contentHash", "collector", "publicationDate",
+    "sourceLanguage", "analysisLanguage", "translationChain", "genre", "glottocode",
+    "macroarea", "rightsBasis", "communityReviewState", "restrictionState"
+  ],
+  "forbiddenInferences": [
+    "pilot-recurrence-to-cross-cultural-invariant",
+    "cross-cultural-recurrence-to-collective-unconscious",
+    "recurrence-to-moral-truth",
+    "recurrence-to-Christian-metaphysical-proof"
+  ]
+}
+

@@ -1,0 +1,176 @@
+{
+  "protocol": "claimipedia-d02-exhausted-strike-docket/1",
+  "strikeId": "d02-support-stratified-schur-exhausted-v1",
+  "supersedes": {
+    "protocol": "claimipedia-d02-final-strike-docket/1",
+    "sha256": "859a1a3b271d998208b15d24826245a515e0475da912c45a9c9333b921b30149"
+  },
+  "reviewStage": "Triage",
+  "disposition": "retain-local-theorem-admit-typed-arc-groupoid-dispatch-reject-universal-single-value",
+  "terminalResult": "Within finite-dimensional analytic or polynomial block-response germs, rank-changing Schur elimination is completely dispatched at value level by the cluster behavior of the full correction B D^-1 B^T: one finite value glues, multiple finite values remain approach-groupoid-valued, and an unbounded value retains/refuses the interior. No fixed finite jet decoration is uniformly complete, pole finite parts are scheme-relative, and positivity does not force descent.",
+  "evidenceBasis": {
+    "process": {
+      "path": "d02-process-receipt.json",
+      "sha256": "42b960f453e8d800470f3e16a45f46a0931b070d8e0d45c531bc82f811d05dfd"
+    },
+    "local": {
+      "path": "d02-execution-receipt.json",
+      "sha256": "3ed38c40686d1f013a3470b5b95099cc1ee46f26b20d173fb27545d970da765c"
+    },
+    "initialReview": {
+      "path": "d02-sourcery-review.json",
+      "sha256": "580f01e703689faa2d09eadac7c86693e540f4b61b5dfff6fb3ac1a54080967c"
+    },
+    "initialDocket": {
+      "path": "d02-final-docket.json",
+      "sha256": "acebaac8880f7265683db5010e8a9e86fe8fd7ae1942f4addb69999fd8e8207a"
+    },
+    "valuation": {
+      "path": "d02-valuation-gluing-receipt.json",
+      "sha256": "bbdcea0fd40a77d7038ac6dc2b7d7594852a56e2b6edca7625b7f7ed33478be0"
+    },
+    "meromorphic": {
+      "path": "d02-meromorphic-filtration-receipt.json",
+      "sha256": "933403f630429812aab8570a1b93c0b495060f0e527abd2253715a380799b788"
+    },
+    "exhaustion": {
+      "path": "d02-bounded-exhaustion-receipt.json",
+      "sha256": "9ae3875c6d40cbfb01720764f4a87949b75afecd99c1c1da6d9423024bfbeb72"
+    },
+    "exhaustionAudit": {
+      "path": "d02-bounded-exhaustion-audit.json",
+      "sha256": "478c7929ad1eab570140daa9914f2cc8f441deab7ff4a7e31a4251b7cce24609"
+    },
+    "exhaustionReview": {
+      "path": "d02-exhaustion-sourcery-review.json",
+      "sha256": "b58a08dba9d4395757d8880ccbb20c39f3a24d2915b9c2b2700e389ded81aef3"
+    }
+  },
+  "admittedReview": {
+    "host": {
+      "generationId": "host-policy-anchor-v19",
+      "runtimeHash": "42c6e040c0b5422c89e51fb20ed04fefe9289c3b7106b50027cffea9aaf5dd5a",
+      "admittedBasisGenerationId": "host-claim-adapter-v18",
+      "admittedBasisHash": "28fbfa709c2f8a18716d76450a196abba8074e45b908334316c7e0c147d2b1a3"
+    },
+    "positiveCandidateSteps": [
+      [
+        "construct-approach-arc-groupoid",
+        "evaluate-full-schur-correction",
+        "dispatch-by-cluster-class",
+        "handoff-exhausted-bounded-dispatcher"
+      ]
+    ],
+    "invalidRuleIds": [
+      "counterexample-canonical-pole-finite-part",
+      "counterexample-collapse-all-arcs",
+      "counterexample-response-determines-bulk-index"
+    ]
+  },
+  "findings": [
+    {
+      "id": "D02-X1",
+      "status": "exact-bounded-theorem",
+      "statement": "Constant-support, range-compatible reciprocal Schur elimination preserves analytic Herglotz passivity and support-frame covariance."
+    },
+    {
+      "id": "D02-X2",
+      "status": "exact-valuation-trichotomy",
+      "statement": "For D_s=s^m(D_m+O(s)) and B_s=s^n(B_n+O(s)), the correction is classified by the sign of 2n-m."
+    },
+    {
+      "id": "D02-X3",
+      "status": "coordinate-free-extension",
+      "statement": "The full correction is meromorphic for analytic one-parameter matrix germs; boundedness makes the puncture removable, including unequal-order non-diagonal crossings."
+    },
+    {
+      "id": "D02-X4",
+      "status": "descent-criterion",
+      "statement": "A singular-point response exists exactly when the approach-arc response functor is finite and constant on every admitted approach object."
+    },
+    {
+      "id": "D02-X5",
+      "status": "exact-counterexample",
+      "statement": "For every fixed jet depth N, higher-contact paths with the same N-jet can have different finite Schur limits."
+    },
+    {
+      "id": "D02-X6",
+      "status": "exact-counterexample",
+      "statement": "A nonlinear regular reparameterization changes the constant term obtained by subtracting a pole, so finite parts are not canonical without scheme decoration."
+    },
+    {
+      "id": "D02-X7",
+      "status": "category-boundary",
+      "statement": "Smooth flat germs can share every Taylor coefficient while producing different finite corrections; the analytic theorem does not silently extend to jet-only smooth calculus."
+    },
+    {
+      "id": "D02-X8",
+      "status": "decoration-split",
+      "statement": "Quadratic passive residue descends through sign holonomy; orientation/grading and invisible bulk index do not."
+    },
+    {
+      "id": "D02-X9",
+      "status": "measure-boundary",
+      "statement": "Positive operator-valued Herglotz measures represent passive branches but do not identify distinct approach-dependent residues."
+    }
+  ],
+  "finalDispatcher": [
+    {
+      "condition": "constant support and range-compatible coupling",
+      "output": "ordinary local support-Schur response"
+    },
+    {
+      "condition": "rank change and the full correction has one finite cluster value",
+      "output": "unique removable glued response"
+    },
+    {
+      "condition": "rank change and finite cluster values depend on the approach arc",
+      "output": "arc-groupoid-valued response; do not descend to one value"
+    },
+    {
+      "condition": "the correction is unbounded along at least one admitted arc",
+      "output": "retain the interior or refuse elimination"
+    },
+    {
+      "condition": "a normal coordinate and subtraction prescription are explicit decorations",
+      "output": "scheme-relative renormalized response with the scheme retained in its type"
+    }
+  ],
+  "externalFrontiers": [
+    {
+      "id": "smooth-full-germ",
+      "status": "new-programme",
+      "reentryCondition": "Supply a representation of full smooth germs and a computable equivalence stronger than Taylor jets."
+    },
+    {
+      "id": "operator-essential-spectrum",
+      "status": "new-programme",
+      "reentryCondition": "Declare a closed-range/Fredholm class, topology of convergence, and treatment of spectral accumulation."
+    },
+    {
+      "id": "interacting-gauge-wall",
+      "status": "application-programme",
+      "reentryCondition": "Provide a concrete model, renormalized response construction and gauge/BRST compatibility obligations."
+    },
+    {
+      "id": "nonequilibrium-fluctuation",
+      "status": "application-programme",
+      "reentryCondition": "Specify the matrix fluctuation relation, state preparation and admissible nonreciprocal coupling class."
+    }
+  ],
+  "boundedExhaustion": {
+    "achieved": true,
+    "scope": "finite-dimensional analytic or polynomial block-response germs near a rank-changing locus",
+    "remainingInScopeDiscriminants": [],
+    "qualification": "Exhaustion is relative to the declared finite-dimensional analytic/polynomial value-level scope; external frontiers are preserved rather than erased."
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entailsBeyondDeclaredScope": false,
+    "empiricalAuthority": false,
+    "automaticPromotion": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  },
+  "docketSha256": "056fc0bccfba1a48fe141e1d01c4225838432024c67a30da6798638823ee3977"
+}

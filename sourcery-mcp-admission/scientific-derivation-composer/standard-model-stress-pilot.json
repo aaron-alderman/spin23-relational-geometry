@@ -1,0 +1,95 @@
+{
+  "protocol": "standard-model-stress-response-pilot/1",
+  "authority": {
+    "scope": "A bounded executable representation of already stated stress-response links; not a new Standard Model result or a Spin(2,3) entailment.",
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "applicationAdmission": false
+  },
+  "graph": {
+    "objects": [
+      { "id": "sm.curved-action", "signature": { "domain": "metric-functional", "rank": 0, "variance": "scalar", "basis": "covariant", "regime": "off-shell-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "diffeomorphism-and-sm-gauge", "cp": "unrestricted", "support": "local-plus-nonlocal" } },
+      { "id": "sm.hilbert-stress", "signature": { "domain": "symmetric-tensor", "rank": 2, "variance": "covariant", "basis": "covariant", "regime": "off-shell-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "ward-constrained", "cp": "unrestricted", "support": "local-plus-nonlocal" } },
+      { "id": "sm.ward-quotient", "signature": { "domain": "conserved-symmetric-tensor-quotient", "rank": 2, "variance": "covariant", "basis": "spin-2-spin-0", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "transverse-lorentz", "cp": "even", "support": "local-plus-nonlocal" } },
+      { "id": "sm.response-canonical", "signature": { "domain": "two-probe-h2-response", "rank": 2, "variance": "matrix", "basis": "canonical-probes", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "subtraction-dependent", "symmetry": "spin-2-spin-0", "cp": "even", "support": "local-plus-nonlocal" } },
+      { "id": "sm.response-rotated", "signature": { "domain": "two-probe-h2-response", "rank": 2, "variance": "matrix", "basis": "rotated-probes", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "subtraction-dependent", "symmetry": "spin-2-spin-0", "cp": "even", "support": "local-plus-nonlocal" } },
+      { "id": "sm.spectral-response", "signature": { "domain": "two-probe-h2-spectral-density", "rank": 2, "variance": "matrix", "basis": "basis-covariant", "regime": "vacuum-lorentzian", "order": "renormalized-unspecified", "scheme": "contact-independent-positive-support", "symmetry": "spin-2-spin-0", "cp": "even", "support": "positive-spectral-cut" } }
+    ],
+    "transformations": [
+      {
+        "id": "metric-variation", "kind": "functional-derivative", "from": "sm.curved-action", "to": "sm.hilbert-stress",
+        "fromSignature": { "domain": "metric-functional", "rank": 0, "variance": "scalar", "basis": "covariant", "regime": "off-shell-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "diffeomorphism-and-sm-gauge", "cp": "unrestricted", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "symmetric-tensor", "rank": 2, "variance": "covariant", "basis": "covariant", "regime": "off-shell-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "ward-constrained", "cp": "unrestricted", "support": "local-plus-nonlocal" },
+        "changes": ["domain", "rank", "variance", "symmetry"], "assumptions": ["background metric or tetrad is declared", "renormalized composite-operator prescription is fixed"], "losses": [], "removes": [],
+        "evidenceRefs": ["01_standard_model_as_stress_energy_full_analysis.md#metric-variation"], "analogyOnly": false,
+        "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      },
+      {
+        "id": "ward-and-lorentz-quotient", "kind": "projection", "from": "sm.hilbert-stress", "to": "sm.ward-quotient",
+        "fromSignature": { "domain": "symmetric-tensor", "rank": 2, "variance": "covariant", "basis": "covariant", "regime": "off-shell-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "ward-constrained", "cp": "unrestricted", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "conserved-symmetric-tensor-quotient", "rank": 2, "variance": "covariant", "basis": "spin-2-spin-0", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "transverse-lorentz", "cp": "even", "support": "local-plus-nonlocal" },
+        "changes": ["domain", "basis", "regime", "symmetry", "cp"], "assumptions": ["Lorentz-invariant parity-even vacuum", "nonzero momentum", "stress conservation Ward identity"], "losses": ["longitudinal Ward-null directions", "parity-odd or medium-specific structures"], "removes": [],
+        "evidenceRefs": ["206_conserved_stress_spectral_quotient_to_h2_response.md#ward-quotient", "795_vacuum_total_stress_has_at_most_two_nonlocal_form_factor_moments_and_cannot_tomograph_four_relational_projector_channels.md#rank-bound"], "analogyOnly": false,
+        "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      },
+      {
+        "id": "canonical-probe-contraction", "kind": "probe-contraction", "from": "sm.ward-quotient", "to": "sm.response-canonical",
+        "fromSignature": { "domain": "conserved-symmetric-tensor-quotient", "rank": 2, "variance": "covariant", "basis": "spin-2-spin-0", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "transverse-lorentz", "cp": "even", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "two-probe-h2-response", "rank": 2, "variance": "matrix", "basis": "canonical-probes", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "subtraction-dependent", "symmetry": "spin-2-spin-0", "cp": "even", "support": "local-plus-nonlocal" },
+        "changes": ["domain", "variance", "basis", "scheme", "symmetry"], "assumptions": ["two named conserved probes", "probe Gram matrices are declared"], "losses": ["tensor components outside the two-probe response"], "removes": [],
+        "evidenceRefs": ["206_conserved_stress_spectral_quotient_to_h2_response.md#two-probe-response"], "analogyOnly": false,
+        "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      },
+      {
+        "id": "rotated-probe-contraction", "kind": "probe-contraction", "from": "sm.ward-quotient", "to": "sm.response-rotated",
+        "fromSignature": { "domain": "conserved-symmetric-tensor-quotient", "rank": 2, "variance": "covariant", "basis": "spin-2-spin-0", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "transverse-lorentz", "cp": "even", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "two-probe-h2-response", "rank": 2, "variance": "matrix", "basis": "rotated-probes", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "subtraction-dependent", "symmetry": "spin-2-spin-0", "cp": "even", "support": "local-plus-nonlocal" },
+        "changes": ["domain", "variance", "basis", "scheme", "symmetry"], "assumptions": ["invertible declared probe-basis rotation", "two named conserved probes"], "losses": ["tensor components outside the two-probe response"], "removes": [],
+        "evidenceRefs": ["206_conserved_stress_spectral_quotient_to_h2_response.md#two-probe-response"], "analogyOnly": false,
+        "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      },
+      {
+        "id": "canonical-spectral-discontinuity", "kind": "analytic-continuation", "from": "sm.response-canonical", "to": "sm.spectral-response",
+        "fromSignature": { "domain": "two-probe-h2-response", "rank": 2, "variance": "matrix", "basis": "canonical-probes", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "subtraction-dependent", "symmetry": "spin-2-spin-0", "cp": "even", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "two-probe-h2-spectral-density", "rank": 2, "variance": "matrix", "basis": "basis-covariant", "regime": "vacuum-lorentzian", "order": "renormalized-unspecified", "scheme": "contact-independent-positive-support", "symmetry": "spin-2-spin-0", "cp": "even", "support": "positive-spectral-cut" },
+        "changes": ["domain", "basis", "regime", "scheme", "support"], "assumptions": ["retarded analytic continuation exists", "positive spectral support is selected"], "losses": ["subtraction-polynomial information"], "removes": ["local-contact-polynomials"],
+        "evidenceRefs": ["207_stress_contact_counterterm_obstruction_and_spectral_escape.md#lorentzian-discontinuity"], "analogyOnly": false,
+        "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      },
+      {
+        "id": "rotated-spectral-discontinuity", "kind": "analytic-continuation", "from": "sm.response-rotated", "to": "sm.spectral-response",
+        "fromSignature": { "domain": "two-probe-h2-response", "rank": 2, "variance": "matrix", "basis": "rotated-probes", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "subtraction-dependent", "symmetry": "spin-2-spin-0", "cp": "even", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "two-probe-h2-spectral-density", "rank": 2, "variance": "matrix", "basis": "basis-covariant", "regime": "vacuum-lorentzian", "order": "renormalized-unspecified", "scheme": "contact-independent-positive-support", "symmetry": "spin-2-spin-0", "cp": "even", "support": "positive-spectral-cut" },
+        "changes": ["domain", "basis", "regime", "scheme", "support"], "assumptions": ["retarded analytic continuation exists", "invertible probe-basis rotation"], "losses": ["subtraction-polynomial information"], "removes": ["local-contact-polynomials"],
+        "evidenceRefs": ["207_stress_contact_counterterm_obstruction_and_spectral_escape.md#lorentzian-discontinuity"], "analogyOnly": false,
+        "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      },
+      {
+        "id": "counterexample-rank-mismatch", "kind": "projection", "from": "sm.hilbert-stress", "to": "sm.ward-quotient",
+        "fromSignature": { "domain": "symmetric-tensor", "rank": 1, "variance": "covariant", "basis": "covariant", "regime": "off-shell-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "ward-constrained", "cp": "unrestricted", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "conserved-symmetric-tensor-quotient", "rank": 2, "variance": "covariant", "basis": "spin-2-spin-0", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "transverse-lorentz", "cp": "even", "support": "local-plus-nonlocal" },
+        "changes": ["domain", "rank", "basis", "regime", "symmetry", "cp"], "assumptions": ["deliberate negative fixture"], "losses": ["rank mismatch"], "removes": [], "evidenceRefs": ["assurance:rank-mismatch"], "analogyOnly": false, "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      },
+      {
+        "id": "counterexample-contact-unsafe", "kind": "analytic-continuation", "from": "sm.response-canonical", "to": "sm.spectral-response",
+        "fromSignature": { "domain": "two-probe-h2-response", "rank": 2, "variance": "matrix", "basis": "canonical-probes", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "subtraction-dependent", "symmetry": "spin-2-spin-0", "cp": "even", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "two-probe-h2-spectral-density", "rank": 2, "variance": "matrix", "basis": "basis-covariant", "regime": "vacuum-lorentzian", "order": "renormalized-unspecified", "scheme": "contact-independent-positive-support", "symmetry": "spin-2-spin-0", "cp": "even", "support": "positive-spectral-cut" },
+        "changes": ["domain", "basis", "regime", "scheme", "support"], "assumptions": ["deliberate negative fixture"], "losses": [], "removes": [], "evidenceRefs": ["assurance:contact-unsafe"], "analogyOnly": false, "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      },
+      {
+        "id": "counterexample-undeclared-regime-order-cp", "kind": "projection", "from": "sm.hilbert-stress", "to": "sm.ward-quotient",
+        "fromSignature": { "domain": "symmetric-tensor", "rank": 2, "variance": "covariant", "basis": "covariant", "regime": "off-shell-euclidean", "order": "tree", "scheme": "declared-curved-space", "symmetry": "ward-constrained", "cp": "odd", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "conserved-symmetric-tensor-quotient", "rank": 2, "variance": "covariant", "basis": "spin-2-spin-0", "regime": "vacuum-euclidean", "order": "one-loop", "scheme": "declared-curved-space", "symmetry": "transverse-lorentz", "cp": "even", "support": "local-plus-nonlocal" },
+        "changes": ["domain", "basis", "symmetry"], "assumptions": ["deliberate negative fixture"], "losses": ["invalid mixed context"], "removes": [], "evidenceRefs": ["assurance:context-mismatch"], "analogyOnly": false, "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      },
+      {
+        "id": "counterexample-analogy-firewall", "kind": "analogy", "from": "sm.ward-quotient", "to": "sm.spectral-response",
+        "fromSignature": { "domain": "conserved-symmetric-tensor-quotient", "rank": 2, "variance": "covariant", "basis": "spin-2-spin-0", "regime": "vacuum-euclidean", "order": "renormalized-unspecified", "scheme": "declared-curved-space", "symmetry": "transverse-lorentz", "cp": "even", "support": "local-plus-nonlocal" },
+        "toSignature": { "domain": "two-probe-h2-spectral-density", "rank": 2, "variance": "matrix", "basis": "basis-covariant", "regime": "vacuum-lorentzian", "order": "renormalized-unspecified", "scheme": "contact-independent-positive-support", "symmetry": "spin-2-spin-0", "cp": "even", "support": "positive-spectral-cut" },
+        "changes": ["domain", "variance", "basis", "regime", "scheme", "symmetry", "support"], "assumptions": ["formal resemblance only"], "losses": [], "removes": [], "evidenceRefs": ["assurance:analogy-only"], "analogyOnly": true, "authority": { "proposalOnly": true, "entails": false, "empiricalAuthority": false }
+      }
+    ]
+  },
+  "query": { "source": "sm.curved-action", "target": "sm.spectral-response", "maxDepth": 4 }
+}

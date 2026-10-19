@@ -1,0 +1,171 @@
+{
+  "protocol": "claimipedia-d02-operator-harnack-strike/1",
+  "strikeId": "d02-operator-herglotz-harnack-strike-v1",
+  "theoremCandidate": {
+    "statement": "For a bounded operator-valued Herglotz function D on a connected upper-half-plane domain, ker Im(D(z)) is independent of z. On every compact frequency set, scalar Harnack inequalities applied to <x,Im(D(z))x> yield c Im(D(z0)) <= Im(D(z)) <= C Im(D(z0)).",
+    "douglasConsequence": "The two-sided inequalities imply range(Im(D(z))^(1/2))=range(Im(D(z0))^(1/2)); the bounded square-root coupling class is frequency-invariant.",
+    "supportConsequence": "The dissipative support projection and its non-closed-range character are frequency-invariant.",
+    "limitation": "Comparability of imaginary parts does not by itself factor the full complex operator D(z) through the same scale; full Schur elimination still needs complementability/factorization data."
+  },
+  "diagonalWitness": {
+    "family": "D_n(z)=a_n+z/n+(1/n^2)[(q_n-z)^-1-q_n/(1+q_n^2)]",
+    "basePoint": {
+      "re": 0,
+      "im": 1
+    },
+    "comparabilitySamples": [
+      {
+        "point": {
+          "re": -1.2,
+          "im": 0.4
+        },
+        "lower": 0.38756046147795836,
+        "upper": 0.8847288534168302
+      },
+      {
+        "point": {
+          "re": 0.7,
+          "im": 0.6
+        },
+        "lower": 0.5607048254686616,
+        "upper": 0.6669656364171039
+      },
+      {
+        "point": {
+          "re": 1.4,
+          "im": 1.8
+        },
+        "lower": 1.5746818020292126,
+        "upper": 1.804520844324941
+      },
+      {
+        "point": {
+          "re": -0.3,
+          "im": 2.2
+        },
+        "lower": 2.0423202246825967,
+        "upper": 2.199996882769445
+      }
+    ],
+    "weightedNormComparisons": [
+      [
+        {
+          "vectorIndex": 0,
+          "baseNorm": 1.4506160556305567,
+          "pointNorm": 1.2580753754701248,
+          "ratio": 0.8672697166055163
+        },
+        {
+          "vectorIndex": 1,
+          "baseNorm": 1.603579066201346,
+          "pointNorm": 1.3693426674631584,
+          "ratio": 0.8539289994019061
+        },
+        {
+          "vectorIndex": 2,
+          "baseNorm": 0.0058711218261065885,
+          "pointNorm": 0.0023540000652251688,
+          "ratio": 0.40094553220780543
+        }
+      ],
+      [
+        {
+          "vectorIndex": 0,
+          "baseNorm": 1.4506160556305567,
+          "pointNorm": 0.8173167337005601,
+          "ratio": 0.5634273318071661
+        },
+        {
+          "vectorIndex": 1,
+          "baseNorm": 1.603579066201346,
+          "pointNorm": 0.9064782915802035,
+          "ratio": 0.5652844382207629
+        },
+        {
+          "vectorIndex": 2,
+          "baseNorm": 0.0058711218261065885,
+          "pointNorm": 0.003741516265209603,
+          "ratio": 0.63727450664923
+        }
+      ],
+      [
+        {
+          "vectorIndex": 0,
+          "baseNorm": 1.4506160556305567,
+          "pointNorm": 2.3059892009221907,
+          "ratio": 1.589661986692832
+        },
+        {
+          "vectorIndex": 1,
+          "baseNorm": 1.603579066201346,
+          "pointNorm": 2.5638041868235733,
+          "ratio": 1.598801232106918
+        },
+        {
+          "vectorIndex": 2,
+          "baseNorm": 0.0058711218261065885,
+          "pointNorm": 0.010346724475369695,
+          "ratio": 1.7623079169234486
+        }
+      ],
+      [
+        {
+          "vectorIndex": 0,
+          "baseNorm": 1.4506160556305567,
+          "pointNorm": 2.9753875542245614,
+          "ratio": 2.051119965669492
+        },
+        {
+          "vectorIndex": 1,
+          "baseNorm": 1.603579066201346,
+          "pointNorm": 3.2972737933928875,
+          "ratio": 2.0561965810664184
+        },
+        {
+          "vectorIndex": 2,
+          "baseNorm": 0.0058711218261065885,
+          "pointNorm": 0.012616310265466781,
+          "ratio": 2.148875570826511
+        }
+      ]
+    ],
+    "baseEntries": [
+      {
+        "n": 1,
+        "value": 1.225850751488041
+      },
+      {
+        "n": 10,
+        "value": 0.10790980417171653
+      },
+      {
+        "n": 100,
+        "value": 0.010058204877865606
+      },
+      {
+        "n": 1000,
+        "value": 0.0010002927751806205
+      },
+      {
+        "n": 10000,
+        "value": 0.0001000029492546117
+      }
+    ],
+    "closedRange": false,
+    "constantSupport": true
+  },
+  "dispositions": {
+    "frequencyWiseKernelCensusNeeded": false,
+    "oneBasePointDeterminesDissipativeSupport": true,
+    "oneBasePointDeterminesSquareRootRangeClass": true,
+    "fullComplexFactorizationAutomatic": false,
+    "localCompactHarnackConstantsRequired": true
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

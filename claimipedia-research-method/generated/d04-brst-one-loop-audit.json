@@ -1,0 +1,227 @@
+{
+  "protocol": "claimipedia-d04-brst-one-loop-audit/1",
+  "strikeId": "d04-brst-one-loop-support-and-order-v1",
+  "modelDefinition": {
+    "lagrangian": "-F^2/4+|D Phi|^2-(lambda/2)(Phi^dagger Phi-v^2/2)^2 plus R_xi gauge fixing and its FP sector",
+    "expansion": "Phi=(v+h+i rho)/sqrt(2)",
+    "masses": "m_A^2=e^2 v^2, m_h^2=lambda v^2",
+    "higgsSource": "O_H=Phi^dagger Phi-v^2/2=v h+(h^2+rho^2)/2",
+    "traceIdentity": "[T^mu_mu]=c_H[O_H]+(beta_e/2e)[F^2]+beta_lambda[partial L/partial lambda]+BRST-exact+EOM+improvement+contact terms"
+  },
+  "brstCompletion": {
+    "cohomology": "O_H is BRST closed and its only dimension-two even cohomology mixing partner is the constant v^2.",
+    "gaugeFixedFieldsRequiredInternally": [
+      "h",
+      "rho",
+      "A_mu",
+      "ghost",
+      "antighost",
+      "Nakanishi-Lautrup",
+      "counterterms"
+    ],
+    "physicalOneLoopSpectrum": [
+      "Higgs one-particle pole",
+      "hh continuum",
+      "two-massive-vector continuum"
+    ],
+    "cancelledOrQuotiented": [
+      "xi-dependent Goldstone threshold",
+      "ghost threshold",
+      "longitudinal gauge artifacts",
+      "BRST-exact states",
+      "local source contact polynomials"
+    ],
+    "evidenceBoundary": "The cancellation and positive xi-independent O_H spectral density are externally certified by arXiv:1912.11390 and the renormalization cohomology by arXiv:2007.01770; this strike independently audits support, positivity, rank and perturbative order, not every Feynman integral."
+  },
+  "topologyAudit": [
+    {
+      "id": "two-particle-cut",
+      "particles": 2,
+      "internalLines": 2,
+      "vertices": 2,
+      "loops": 1
+    },
+    {
+      "id": "four-particle-cut-effective-form-factors",
+      "particles": 4,
+      "internalLines": 4,
+      "vertices": 2,
+      "loops": 3
+    },
+    {
+      "id": "OH-to-four-via-quartic",
+      "particles": 4,
+      "internalLines": 5,
+      "vertices": 3,
+      "loops": 3
+    }
+  ],
+  "oneLoopContinuum": {
+    "formula": "rho_ab^(1)(s)=w_phys(s) (c_H,1)_a(c_H,1)_b with w_phys=w_hh+w_AA>=0 at strict uniform one-loop order",
+    "model": {
+      "v": 1,
+      "e": 0.7,
+      "lambda": 0.4,
+      "mA": 0.7,
+      "mh": 0.6324555320336759
+    },
+    "classicalTraceRatio": -0.4,
+    "samples": [
+      {
+        "s": 0.5,
+        "hhWeight": 0,
+        "aaWeight": 0,
+        "physicalWeight": 0,
+        "rho": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "determinant": 0
+      },
+      {
+        "s": 1.8,
+        "hhWeight": 0.006631455962162304,
+        "aaWeight": 0,
+        "physicalWeight": 0.006631455962162304,
+        "rho": [
+          [
+            0.0010610329539459688,
+            -0.0026525823848649217
+          ],
+          [
+            -0.0026525823848649217,
+            0.006631455962162304
+          ]
+        ],
+        "determinant": 8.470329472543003e-22
+      },
+      {
+        "s": 3,
+        "hhWeight": 0.013590440550181276,
+        "aaWeight": 0.010398665101784417,
+        "physicalWeight": 0.023989105651965693,
+        "rho": [
+          [
+            0.0038382569043145113,
+            -0.009595642260786278
+          ],
+          [
+            -0.009595642260786278,
+            0.023989105651965693
+          ]
+        ],
+        "determinant": 0
+      },
+      {
+        "s": 6,
+        "hhWeight": 0.01703651883383007,
+        "aaWeight": 0.014118158372248005,
+        "physicalWeight": 0.031154677206078077,
+        "rho": [
+          [
+            0.004984748352972493,
+            -0.012461870882431232
+          ],
+          [
+            -0.012461870882431232,
+            0.031154677206078077
+          ]
+        ],
+        "determinant": 0
+      }
+    ],
+    "disposition": "The strict one-loop physical continuum is a spectral ray. Anomaly operators first change its projective direction beyond uniform one-loop order."
+  },
+  "gaugeParameterAudit": {
+    "xiValues": [
+      0.2,
+      1,
+      3,
+      7
+    ],
+    "supportByXi": [
+      {
+        "xi": 0.2,
+        "physicalThresholds": [
+          1.6,
+          1.9599999999999997
+        ],
+        "excludedGaugeFixedThreshold": 0.39199999999999996
+      },
+      {
+        "xi": 1,
+        "physicalThresholds": [
+          1.6,
+          1.9599999999999997
+        ],
+        "excludedGaugeFixedThreshold": 1.9599999999999997
+      },
+      {
+        "xi": 3,
+        "physicalThresholds": [
+          1.6,
+          1.9599999999999997
+        ],
+        "excludedGaugeFixedThreshold": 5.879999999999999
+      },
+      {
+        "xi": 7,
+        "physicalThresholds": [
+          1.6,
+          1.9599999999999997
+        ],
+        "excludedGaugeFixedThreshold": 13.719999999999999
+      }
+    ],
+    "physicalSupportIndependentOfXi": true
+  },
+  "perturbativeOrder": {
+    "classicalTwoParticleContinuum": {
+      "phaseSpaceLoop": 1,
+      "betaCoefficientLoop": 0,
+      "uniformOrder": 1
+    },
+    "gaugeAnomalyInterferenceOnTwoParticleCut": {
+      "phaseSpaceLoop": 1,
+      "betaCoefficientLoop": 1,
+      "uniformOrder": 2
+    },
+    "quarticAnomalyInterferenceOnFourParticleCut": {
+      "phaseSpaceLoop": 3,
+      "betaCoefficientLoop": 1,
+      "uniformOrder": 4
+    },
+    "quarticAnomalySquaredOnFourParticleCut": {
+      "phaseSpaceLoop": 3,
+      "betaCoefficientLoop": 2,
+      "uniformOrder": 5
+    }
+  },
+  "decisiveNoGo": {
+    "statement": "The D-03 quartic-anomaly orientation is a four-particle-cut observable. A four-particle cut begins at three graph loops, and interference with the one-loop beta_lambda insertion begins at uniform order four. Therefore no BRST-complete one-loop two-point spectral matrix can confirm or falsify that relation.",
+    "invalidHybrid": "Combining a one-loop beta coefficient with a tree form-factor ratio on a four-particle state is a useful amplitude-level probe, but calling it a one-loop spectral-matrix result collapses two independent loop gradings."
+  },
+  "dispositions": {
+    "brstPhysicalOneLoopSupportClassified": true,
+    "unphysicalXiThresholdBelongsInSpectralMeasure": false,
+    "strictOneLoopContinuumHasNonzeroInnovation": false,
+    "fourParticleCutOccursAtOneLoop": false,
+    "originalQTestableInOneLoopSpectralMatrix": false,
+    "priorD03FormulaDisprovedAsAmplitudeIdentity": false,
+    "priorD03FormulaDisprovedAsOneLoopSpectralClaim": true
+  },
+  "nextGate": "Replace Q by the beta-vector projective identity at the form-factor level, then compute the full four-particle physical form factors or the uniform order-four cut.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

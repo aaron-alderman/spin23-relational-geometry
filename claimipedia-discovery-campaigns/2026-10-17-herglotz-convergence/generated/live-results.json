@@ -1,0 +1,1253 @@
+{
+  "protocol": "claimipedia-scientific-discovery-live-run/1",
+  "campaignId": "herglotz-convergence-2026-10-17",
+  "graphSha256": "5b7ad6f6896a0bb3075f978e109e34c1af367cca16a0db9a885bfcc01f0dc575",
+  "results": [
+    {
+      "query": {
+        "id": "thermal-stress-route",
+        "source": "stress.thermal-input",
+        "target": "shared.schur-herglotz-interface",
+        "maxDepth": 5
+      },
+      "result": {
+        "protocol": "scientific-derivation-composition/1",
+        "query": {
+          "source": "stress.thermal-input",
+          "target": "shared.schur-herglotz-interface",
+          "maxDepth": 5
+        },
+        "candidates": [
+          {
+            "candidateId": "d5d350c30b5d7d3fd37bc758c54393f108b2aedba90386bb08b9d2b22d93374d",
+            "source": "stress.thermal-input",
+            "target": "shared.schur-herglotz-interface",
+            "steps": [
+              "thermal-ward-channel-decomposition",
+              "two-probe-channel-contraction",
+              "direct-kms-causal-lift",
+              "forget-kms-to-common-interface"
+            ],
+            "assumptions": [
+              "equilibrium medium rest frame is declared",
+              "nonzero spatial momentum",
+              "stress Ward identity holds",
+              "two conserved probes and their channel amplitudes are declared",
+              "positive-frequency spectral positivity",
+              "one common inverse temperature",
+              "a reciprocal passive analytic completion exists",
+              "real frequency-independent sewing couplings",
+              "only the causal passive response interface is compared across domains"
+            ],
+            "losses": [
+              "Ward-null longitudinal combinations",
+              "directions outside the helicity channel decomposition",
+              "channel components outside the two-probe Gram response",
+              "common-temperature KMS multiplier",
+              "thermal channel interpretation",
+              "microscopic stress provenance"
+            ],
+            "evidenceRefs": [
+              "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=tensor%2C%20shear%2Fvector%20and%20sound%2Fscalar%20channels",
+              "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=full-span%20result%2C%20not%20a%20full-symmetry%20result",
+              "206_conserved_stress_spectral_quotient_to_h2_response.md#sha256=dd3fd0f41a3c89bea99996f30ffbe62834b431712cbc66a6af59a5ab51d936ae&anchor=The%20projector%20theorem%20fixes%20the%20kinematic%20quotient",
+              "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=this%20response%20class%20is%20closed%20under%20Schur%20elimination",
+              "207_stress_contact_counterterm_obstruction_and_spectral_escape.md#sha256=0897bc3dfcfae06b262467d694d1152feae4b3080d81e1d892a56b7fad4eae32&anchor=The%20spectral%20density%20is%20the%20invariant%20content"
+            ],
+            "claimStatus": "derived-claim-proposal",
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          },
+          {
+            "candidateId": "388f6396c99ab7f061b3c1171840575ac952b6eecf208fabf02844241e06501d",
+            "source": "stress.thermal-input",
+            "target": "shared.schur-herglotz-interface",
+            "steps": [
+              "thermal-ward-channel-decomposition",
+              "hydrodynamic-specialization",
+              "hydrodynamic-kms-causal-lift",
+              "forget-kms-to-common-interface"
+            ],
+            "assumptions": [
+              "equilibrium medium rest frame is declared",
+              "nonzero spatial momentum",
+              "stress Ward identity holds",
+              "leading hydrodynamic regime",
+              "positive transport coefficients",
+              "prototype normalizations are not treated as microscopic predictions",
+              "correctly normalized retarded correlator exists in the hydrodynamic domain",
+              "one common temperature",
+              "hydrodynamic poles remain passive",
+              "only the causal passive response interface is compared across domains"
+            ],
+            "losses": [
+              "Ward-null longitudinal combinations",
+              "directions outside the helicity channel decomposition",
+              "prototype coefficient normalization",
+              "common-temperature KMS multiplier",
+              "thermal channel interpretation",
+              "microscopic stress provenance"
+            ],
+            "evidenceRefs": [
+              "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=tensor%2C%20shear%2Fvector%20and%20sound%2Fscalar%20channels",
+              "212_hydrodynamic_stress_map_can_have_local_rank_three.md#sha256=3f8302d8ece695890f9054661d86c515cc0e60ca57daf6641a16f0c76e05de73&anchor=must%20have%20Jacobian%20rank%20three%20somewhere",
+              "212_hydrodynamic_stress_map_can_have_local_rank_three.md#sha256=3f8302d8ece695890f9054661d86c515cc0e60ca57daf6641a16f0c76e05de73&anchor=not%20a%20universal%20theorem",
+              "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic",
+              "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=this%20response%20class%20is%20closed%20under%20Schur%20elimination"
+            ],
+            "claimStatus": "derived-claim-proposal",
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          }
+        ],
+        "invalidRules": [
+          {
+            "rule": {
+              "id": "counterexample-kms-without-common-temperature",
+              "kind": "causal-completion",
+              "from": "stress.two-probe-spectrum",
+              "to": "thermal.kms-herglotz-carrier",
+              "fromSignature": {
+                "domain": "two-probe-h2-spectral-density",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "channel-gram",
+                "regime": "equilibrium-finite-temperature-lorentzian",
+                "order": "renormalized-unspecified",
+                "scheme": "contact-independent-positive-support",
+                "symmetry": "residual-rotations",
+                "cp": "even",
+                "support": "positive-spectral-cut"
+              },
+              "toSignature": {
+                "domain": "two-face-matrix-herglotz",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "probe-covariant",
+                "regime": "fixed-temperature-upper-half-plane",
+                "order": "effective-unspecified",
+                "scheme": "causal-passive-kms",
+                "symmetry": "reciprocal-real",
+                "cp": "even",
+                "support": "positive-operator-measure"
+              },
+              "changes": [
+                "domain",
+                "basis",
+                "regime",
+                "order",
+                "scheme",
+                "symmetry",
+                "support"
+              ],
+              "assumptions": [
+                "deliberate negative fixture: unequal channel temperatures"
+              ],
+              "losses": [],
+              "removes": [],
+              "evidenceRefs": [
+                "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic"
+              ],
+              "analogyOnly": true,
+              "authority": {
+                "proposalOnly": true,
+                "entails": false,
+                "empiricalAuthority": false
+              }
+            },
+            "fromObject": {
+              "id": "stress.two-probe-spectrum",
+              "signature": {
+                "domain": "two-probe-h2-spectral-density",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "channel-gram",
+                "regime": "equilibrium-finite-temperature-lorentzian",
+                "order": "renormalized-unspecified",
+                "scheme": "contact-independent-positive-support",
+                "symmetry": "residual-rotations",
+                "cp": "even",
+                "support": "positive-spectral-cut"
+              }
+            },
+            "toObject": {
+              "id": "thermal.kms-herglotz-carrier",
+              "signature": {
+                "domain": "two-face-matrix-herglotz",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "probe-covariant",
+                "regime": "fixed-temperature-upper-half-plane",
+                "order": "effective-unspecified",
+                "scheme": "causal-passive-kms",
+                "symmetry": "reciprocal-real",
+                "cp": "even",
+                "support": "positive-operator-measure"
+              }
+            },
+            "fromExists": true,
+            "toExists": true,
+            "fromSignatureMatches": true,
+            "toSignatureMatches": true,
+            "authorityBounded": true,
+            "notAnalogy": false,
+            "evidencePresent": true,
+            "lossDeclared": true,
+            "contactSafe": true,
+            "domainChangeDeclared": true,
+            "rankChangeDeclared": true,
+            "varianceChangeDeclared": true,
+            "basisChangeDeclared": true,
+            "regimeChangeDeclared": true,
+            "orderChangeDeclared": true,
+            "schemeChangeDeclared": true,
+            "symmetryChangeDeclared": true,
+            "cpChangeDeclared": true,
+            "supportChangeDeclared": true
+          }
+        ],
+        "frontier": [],
+        "workbench": {
+          "protocol": "claimipedia-scientific-derivation-workbench/1",
+          "mode": "read-only-proposal-review",
+          "panes": {
+            "query": {
+              "source": "stress.thermal-input",
+              "target": "shared.schur-herglotz-interface",
+              "maxDepth": 5
+            },
+            "candidatePaths": [
+              {
+                "candidateId": "d5d350c30b5d7d3fd37bc758c54393f108b2aedba90386bb08b9d2b22d93374d",
+                "source": "stress.thermal-input",
+                "target": "shared.schur-herglotz-interface",
+                "steps": [
+                  "thermal-ward-channel-decomposition",
+                  "two-probe-channel-contraction",
+                  "direct-kms-causal-lift",
+                  "forget-kms-to-common-interface"
+                ],
+                "assumptions": [
+                  "equilibrium medium rest frame is declared",
+                  "nonzero spatial momentum",
+                  "stress Ward identity holds",
+                  "two conserved probes and their channel amplitudes are declared",
+                  "positive-frequency spectral positivity",
+                  "one common inverse temperature",
+                  "a reciprocal passive analytic completion exists",
+                  "real frequency-independent sewing couplings",
+                  "only the causal passive response interface is compared across domains"
+                ],
+                "losses": [
+                  "Ward-null longitudinal combinations",
+                  "directions outside the helicity channel decomposition",
+                  "channel components outside the two-probe Gram response",
+                  "common-temperature KMS multiplier",
+                  "thermal channel interpretation",
+                  "microscopic stress provenance"
+                ],
+                "evidenceRefs": [
+                  "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=tensor%2C%20shear%2Fvector%20and%20sound%2Fscalar%20channels",
+                  "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=full-span%20result%2C%20not%20a%20full-symmetry%20result",
+                  "206_conserved_stress_spectral_quotient_to_h2_response.md#sha256=dd3fd0f41a3c89bea99996f30ffbe62834b431712cbc66a6af59a5ab51d936ae&anchor=The%20projector%20theorem%20fixes%20the%20kinematic%20quotient",
+                  "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=this%20response%20class%20is%20closed%20under%20Schur%20elimination",
+                  "207_stress_contact_counterterm_obstruction_and_spectral_escape.md#sha256=0897bc3dfcfae06b262467d694d1152feae4b3080d81e1d892a56b7fad4eae32&anchor=The%20spectral%20density%20is%20the%20invariant%20content"
+                ],
+                "claimStatus": "derived-claim-proposal",
+                "entails": false,
+                "empiricalAuthority": false,
+                "applicationAdmission": false
+              },
+              {
+                "candidateId": "388f6396c99ab7f061b3c1171840575ac952b6eecf208fabf02844241e06501d",
+                "source": "stress.thermal-input",
+                "target": "shared.schur-herglotz-interface",
+                "steps": [
+                  "thermal-ward-channel-decomposition",
+                  "hydrodynamic-specialization",
+                  "hydrodynamic-kms-causal-lift",
+                  "forget-kms-to-common-interface"
+                ],
+                "assumptions": [
+                  "equilibrium medium rest frame is declared",
+                  "nonzero spatial momentum",
+                  "stress Ward identity holds",
+                  "leading hydrodynamic regime",
+                  "positive transport coefficients",
+                  "prototype normalizations are not treated as microscopic predictions",
+                  "correctly normalized retarded correlator exists in the hydrodynamic domain",
+                  "one common temperature",
+                  "hydrodynamic poles remain passive",
+                  "only the causal passive response interface is compared across domains"
+                ],
+                "losses": [
+                  "Ward-null longitudinal combinations",
+                  "directions outside the helicity channel decomposition",
+                  "prototype coefficient normalization",
+                  "common-temperature KMS multiplier",
+                  "thermal channel interpretation",
+                  "microscopic stress provenance"
+                ],
+                "evidenceRefs": [
+                  "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=tensor%2C%20shear%2Fvector%20and%20sound%2Fscalar%20channels",
+                  "212_hydrodynamic_stress_map_can_have_local_rank_three.md#sha256=3f8302d8ece695890f9054661d86c515cc0e60ca57daf6641a16f0c76e05de73&anchor=must%20have%20Jacobian%20rank%20three%20somewhere",
+                  "212_hydrodynamic_stress_map_can_have_local_rank_three.md#sha256=3f8302d8ece695890f9054661d86c515cc0e60ca57daf6641a16f0c76e05de73&anchor=not%20a%20universal%20theorem",
+                  "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic",
+                  "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=this%20response%20class%20is%20closed%20under%20Schur%20elimination"
+                ],
+                "claimStatus": "derived-claim-proposal",
+                "entails": false,
+                "empiricalAuthority": false,
+                "applicationAdmission": false
+              }
+            ],
+            "assumptionLossLedger": [
+              {
+                "candidateId": "d5d350c30b5d7d3fd37bc758c54393f108b2aedba90386bb08b9d2b22d93374d",
+                "assumptions": [
+                  "equilibrium medium rest frame is declared",
+                  "nonzero spatial momentum",
+                  "stress Ward identity holds",
+                  "two conserved probes and their channel amplitudes are declared",
+                  "positive-frequency spectral positivity",
+                  "one common inverse temperature",
+                  "a reciprocal passive analytic completion exists",
+                  "real frequency-independent sewing couplings",
+                  "only the causal passive response interface is compared across domains"
+                ],
+                "losses": [
+                  "Ward-null longitudinal combinations",
+                  "directions outside the helicity channel decomposition",
+                  "channel components outside the two-probe Gram response",
+                  "common-temperature KMS multiplier",
+                  "thermal channel interpretation",
+                  "microscopic stress provenance"
+                ],
+                "evidenceRefs": [
+                  "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=tensor%2C%20shear%2Fvector%20and%20sound%2Fscalar%20channels",
+                  "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=full-span%20result%2C%20not%20a%20full-symmetry%20result",
+                  "206_conserved_stress_spectral_quotient_to_h2_response.md#sha256=dd3fd0f41a3c89bea99996f30ffbe62834b431712cbc66a6af59a5ab51d936ae&anchor=The%20projector%20theorem%20fixes%20the%20kinematic%20quotient",
+                  "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=this%20response%20class%20is%20closed%20under%20Schur%20elimination",
+                  "207_stress_contact_counterterm_obstruction_and_spectral_escape.md#sha256=0897bc3dfcfae06b262467d694d1152feae4b3080d81e1d892a56b7fad4eae32&anchor=The%20spectral%20density%20is%20the%20invariant%20content"
+                ]
+              },
+              {
+                "candidateId": "388f6396c99ab7f061b3c1171840575ac952b6eecf208fabf02844241e06501d",
+                "assumptions": [
+                  "equilibrium medium rest frame is declared",
+                  "nonzero spatial momentum",
+                  "stress Ward identity holds",
+                  "leading hydrodynamic regime",
+                  "positive transport coefficients",
+                  "prototype normalizations are not treated as microscopic predictions",
+                  "correctly normalized retarded correlator exists in the hydrodynamic domain",
+                  "one common temperature",
+                  "hydrodynamic poles remain passive",
+                  "only the causal passive response interface is compared across domains"
+                ],
+                "losses": [
+                  "Ward-null longitudinal combinations",
+                  "directions outside the helicity channel decomposition",
+                  "prototype coefficient normalization",
+                  "common-temperature KMS multiplier",
+                  "thermal channel interpretation",
+                  "microscopic stress provenance"
+                ],
+                "evidenceRefs": [
+                  "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=tensor%2C%20shear%2Fvector%20and%20sound%2Fscalar%20channels",
+                  "212_hydrodynamic_stress_map_can_have_local_rank_three.md#sha256=3f8302d8ece695890f9054661d86c515cc0e60ca57daf6641a16f0c76e05de73&anchor=must%20have%20Jacobian%20rank%20three%20somewhere",
+                  "212_hydrodynamic_stress_map_can_have_local_rank_three.md#sha256=3f8302d8ece695890f9054661d86c515cc0e60ca57daf6641a16f0c76e05de73&anchor=not%20a%20universal%20theorem",
+                  "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic",
+                  "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=this%20response%20class%20is%20closed%20under%20Schur%20elimination"
+                ]
+              }
+            ],
+            "rejectionReceipt": [
+              {
+                "rule": {
+                  "id": "counterexample-kms-without-common-temperature",
+                  "kind": "causal-completion",
+                  "from": "stress.two-probe-spectrum",
+                  "to": "thermal.kms-herglotz-carrier",
+                  "fromSignature": {
+                    "domain": "two-probe-h2-spectral-density",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "channel-gram",
+                    "regime": "equilibrium-finite-temperature-lorentzian",
+                    "order": "renormalized-unspecified",
+                    "scheme": "contact-independent-positive-support",
+                    "symmetry": "residual-rotations",
+                    "cp": "even",
+                    "support": "positive-spectral-cut"
+                  },
+                  "toSignature": {
+                    "domain": "two-face-matrix-herglotz",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "probe-covariant",
+                    "regime": "fixed-temperature-upper-half-plane",
+                    "order": "effective-unspecified",
+                    "scheme": "causal-passive-kms",
+                    "symmetry": "reciprocal-real",
+                    "cp": "even",
+                    "support": "positive-operator-measure"
+                  },
+                  "changes": [
+                    "domain",
+                    "basis",
+                    "regime",
+                    "order",
+                    "scheme",
+                    "symmetry",
+                    "support"
+                  ],
+                  "assumptions": [
+                    "deliberate negative fixture: unequal channel temperatures"
+                  ],
+                  "losses": [],
+                  "removes": [],
+                  "evidenceRefs": [
+                    "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic"
+                  ],
+                  "analogyOnly": true,
+                  "authority": {
+                    "proposalOnly": true,
+                    "entails": false,
+                    "empiricalAuthority": false
+                  }
+                },
+                "fromObject": {
+                  "id": "stress.two-probe-spectrum",
+                  "signature": {
+                    "domain": "two-probe-h2-spectral-density",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "channel-gram",
+                    "regime": "equilibrium-finite-temperature-lorentzian",
+                    "order": "renormalized-unspecified",
+                    "scheme": "contact-independent-positive-support",
+                    "symmetry": "residual-rotations",
+                    "cp": "even",
+                    "support": "positive-spectral-cut"
+                  }
+                },
+                "toObject": {
+                  "id": "thermal.kms-herglotz-carrier",
+                  "signature": {
+                    "domain": "two-face-matrix-herglotz",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "probe-covariant",
+                    "regime": "fixed-temperature-upper-half-plane",
+                    "order": "effective-unspecified",
+                    "scheme": "causal-passive-kms",
+                    "symmetry": "reciprocal-real",
+                    "cp": "even",
+                    "support": "positive-operator-measure"
+                  }
+                },
+                "fromExists": true,
+                "toExists": true,
+                "fromSignatureMatches": true,
+                "toSignatureMatches": true,
+                "authorityBounded": true,
+                "notAnalogy": false,
+                "evidencePresent": true,
+                "lossDeclared": true,
+                "contactSafe": true,
+                "domainChangeDeclared": true,
+                "rankChangeDeclared": true,
+                "varianceChangeDeclared": true,
+                "basisChangeDeclared": true,
+                "regimeChangeDeclared": true,
+                "orderChangeDeclared": true,
+                "schemeChangeDeclared": true,
+                "symmetryChangeDeclared": true,
+                "cpChangeDeclared": true,
+                "supportChangeDeclared": true
+              }
+            ]
+          },
+          "reviewHandoff": {
+            "claimipediaStage": "Triage",
+            "requiresQualifyingEvidence": true,
+            "automaticPromotion": false,
+            "automaticCorpusAdmission": false,
+            "permittedDisposition": [
+              "hold",
+              "no-go",
+              "retain",
+              "retire"
+            ]
+          },
+          "authority": {
+            "proposalOnly": true,
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          }
+        },
+        "receipt": {
+          "boundedDepth": 5,
+          "objectCount": 11,
+          "transformationCount": 12,
+          "validTransformationCount": 11,
+          "candidateCount": 2,
+          "proposalOnly": true,
+          "entails": false,
+          "empiricalAuthority": false,
+          "applicationAdmission": false,
+          "grammarHash": "fe976ea9ac01be807e5e676f1913ba82170393c5aa7b84dc17b98c13a513d085",
+          "requestHash": "795329be94316aad4a9ca907453ec7cd1dedf48b8be78886d376952bc5c6af36",
+          "runtimeAction": "scientific_derivation_compose.compose-derivation"
+        }
+      }
+    },
+    {
+      "query": {
+        "id": "conserved-current-route",
+        "source": "current.euclidean-ward-kernel",
+        "target": "shared.schur-herglotz-interface",
+        "maxDepth": 3
+      },
+      "result": {
+        "protocol": "scientific-derivation-composition/1",
+        "query": {
+          "source": "current.euclidean-ward-kernel",
+          "target": "shared.schur-herglotz-interface",
+          "maxDepth": 3
+        },
+        "candidates": [
+          {
+            "candidateId": "993fb606a2ca2738b29aee2b53277eda65b1fd3322f5b7dc2ec840986a429a10",
+            "source": "current.euclidean-ward-kernel",
+            "target": "shared.schur-herglotz-interface",
+            "steps": [
+              "current-ward-causal-quotient",
+              "forget-current-to-common-interface"
+            ],
+            "assumptions": [
+              "constant-rank Ward support patch",
+              "two conserved probes annihilate the null bundle",
+              "retarded analytic continuation exists",
+              "the Ward support remains constant on the compared patch"
+            ],
+            "losses": [
+              "longitudinal Ward-null directions",
+              "subtraction-polynomial information",
+              "current-specific polarization interpretation",
+              "fixed Ward-null bundle coordinates"
+            ],
+            "evidenceRefs": [
+              "205_conserved_current_ward_quotient_to_h2_response.md#sha256=97cc04d0c90b0268b7d5bc22552937ffd3de30ed5def369aa511f147ab54f8b4&anchor=The%20Ward%20identity%20and%20conserved-source%20condition%20therefore%20make%20the%20generalized%20recursion%20well%20defined",
+              "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#sha256=9a4f9490dcc1816c3d748af7939de536e4298487bda13f8f6d2b3adeae3499f5&anchor=The%20singular%20Ward%20quotient%20and%20causal%20Schur%20sewing%20commute",
+              "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#sha256=9a4f9490dcc1816c3d748af7939de536e4298487bda13f8f6d2b3adeae3499f5&anchor=Rank-changing%20thresholds%20are%20a%20genuine%20pin"
+            ],
+            "claimStatus": "derived-claim-proposal",
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          }
+        ],
+        "invalidRules": [
+          {
+            "rule": {
+              "id": "counterexample-kms-without-common-temperature",
+              "kind": "causal-completion",
+              "from": "stress.two-probe-spectrum",
+              "to": "thermal.kms-herglotz-carrier",
+              "fromSignature": {
+                "domain": "two-probe-h2-spectral-density",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "channel-gram",
+                "regime": "equilibrium-finite-temperature-lorentzian",
+                "order": "renormalized-unspecified",
+                "scheme": "contact-independent-positive-support",
+                "symmetry": "residual-rotations",
+                "cp": "even",
+                "support": "positive-spectral-cut"
+              },
+              "toSignature": {
+                "domain": "two-face-matrix-herglotz",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "probe-covariant",
+                "regime": "fixed-temperature-upper-half-plane",
+                "order": "effective-unspecified",
+                "scheme": "causal-passive-kms",
+                "symmetry": "reciprocal-real",
+                "cp": "even",
+                "support": "positive-operator-measure"
+              },
+              "changes": [
+                "domain",
+                "basis",
+                "regime",
+                "order",
+                "scheme",
+                "symmetry",
+                "support"
+              ],
+              "assumptions": [
+                "deliberate negative fixture: unequal channel temperatures"
+              ],
+              "losses": [],
+              "removes": [],
+              "evidenceRefs": [
+                "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic"
+              ],
+              "analogyOnly": true,
+              "authority": {
+                "proposalOnly": true,
+                "entails": false,
+                "empiricalAuthority": false
+              }
+            },
+            "fromObject": {
+              "id": "stress.two-probe-spectrum",
+              "signature": {
+                "domain": "two-probe-h2-spectral-density",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "channel-gram",
+                "regime": "equilibrium-finite-temperature-lorentzian",
+                "order": "renormalized-unspecified",
+                "scheme": "contact-independent-positive-support",
+                "symmetry": "residual-rotations",
+                "cp": "even",
+                "support": "positive-spectral-cut"
+              }
+            },
+            "toObject": {
+              "id": "thermal.kms-herglotz-carrier",
+              "signature": {
+                "domain": "two-face-matrix-herglotz",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "probe-covariant",
+                "regime": "fixed-temperature-upper-half-plane",
+                "order": "effective-unspecified",
+                "scheme": "causal-passive-kms",
+                "symmetry": "reciprocal-real",
+                "cp": "even",
+                "support": "positive-operator-measure"
+              }
+            },
+            "fromExists": true,
+            "toExists": true,
+            "fromSignatureMatches": true,
+            "toSignatureMatches": true,
+            "authorityBounded": true,
+            "notAnalogy": false,
+            "evidencePresent": true,
+            "lossDeclared": true,
+            "contactSafe": true,
+            "domainChangeDeclared": true,
+            "rankChangeDeclared": true,
+            "varianceChangeDeclared": true,
+            "basisChangeDeclared": true,
+            "regimeChangeDeclared": true,
+            "orderChangeDeclared": true,
+            "schemeChangeDeclared": true,
+            "symmetryChangeDeclared": true,
+            "cpChangeDeclared": true,
+            "supportChangeDeclared": true
+          }
+        ],
+        "frontier": [],
+        "workbench": {
+          "protocol": "claimipedia-scientific-derivation-workbench/1",
+          "mode": "read-only-proposal-review",
+          "panes": {
+            "query": {
+              "source": "current.euclidean-ward-kernel",
+              "target": "shared.schur-herglotz-interface",
+              "maxDepth": 3
+            },
+            "candidatePaths": [
+              {
+                "candidateId": "993fb606a2ca2738b29aee2b53277eda65b1fd3322f5b7dc2ec840986a429a10",
+                "source": "current.euclidean-ward-kernel",
+                "target": "shared.schur-herglotz-interface",
+                "steps": [
+                  "current-ward-causal-quotient",
+                  "forget-current-to-common-interface"
+                ],
+                "assumptions": [
+                  "constant-rank Ward support patch",
+                  "two conserved probes annihilate the null bundle",
+                  "retarded analytic continuation exists",
+                  "the Ward support remains constant on the compared patch"
+                ],
+                "losses": [
+                  "longitudinal Ward-null directions",
+                  "subtraction-polynomial information",
+                  "current-specific polarization interpretation",
+                  "fixed Ward-null bundle coordinates"
+                ],
+                "evidenceRefs": [
+                  "205_conserved_current_ward_quotient_to_h2_response.md#sha256=97cc04d0c90b0268b7d5bc22552937ffd3de30ed5def369aa511f147ab54f8b4&anchor=The%20Ward%20identity%20and%20conserved-source%20condition%20therefore%20make%20the%20generalized%20recursion%20well%20defined",
+                  "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#sha256=9a4f9490dcc1816c3d748af7939de536e4298487bda13f8f6d2b3adeae3499f5&anchor=The%20singular%20Ward%20quotient%20and%20causal%20Schur%20sewing%20commute",
+                  "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#sha256=9a4f9490dcc1816c3d748af7939de536e4298487bda13f8f6d2b3adeae3499f5&anchor=Rank-changing%20thresholds%20are%20a%20genuine%20pin"
+                ],
+                "claimStatus": "derived-claim-proposal",
+                "entails": false,
+                "empiricalAuthority": false,
+                "applicationAdmission": false
+              }
+            ],
+            "assumptionLossLedger": [
+              {
+                "candidateId": "993fb606a2ca2738b29aee2b53277eda65b1fd3322f5b7dc2ec840986a429a10",
+                "assumptions": [
+                  "constant-rank Ward support patch",
+                  "two conserved probes annihilate the null bundle",
+                  "retarded analytic continuation exists",
+                  "the Ward support remains constant on the compared patch"
+                ],
+                "losses": [
+                  "longitudinal Ward-null directions",
+                  "subtraction-polynomial information",
+                  "current-specific polarization interpretation",
+                  "fixed Ward-null bundle coordinates"
+                ],
+                "evidenceRefs": [
+                  "205_conserved_current_ward_quotient_to_h2_response.md#sha256=97cc04d0c90b0268b7d5bc22552937ffd3de30ed5def369aa511f147ab54f8b4&anchor=The%20Ward%20identity%20and%20conserved-source%20condition%20therefore%20make%20the%20generalized%20recursion%20well%20defined",
+                  "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#sha256=9a4f9490dcc1816c3d748af7939de536e4298487bda13f8f6d2b3adeae3499f5&anchor=The%20singular%20Ward%20quotient%20and%20causal%20Schur%20sewing%20commute",
+                  "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#sha256=9a4f9490dcc1816c3d748af7939de536e4298487bda13f8f6d2b3adeae3499f5&anchor=Rank-changing%20thresholds%20are%20a%20genuine%20pin"
+                ]
+              }
+            ],
+            "rejectionReceipt": [
+              {
+                "rule": {
+                  "id": "counterexample-kms-without-common-temperature",
+                  "kind": "causal-completion",
+                  "from": "stress.two-probe-spectrum",
+                  "to": "thermal.kms-herglotz-carrier",
+                  "fromSignature": {
+                    "domain": "two-probe-h2-spectral-density",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "channel-gram",
+                    "regime": "equilibrium-finite-temperature-lorentzian",
+                    "order": "renormalized-unspecified",
+                    "scheme": "contact-independent-positive-support",
+                    "symmetry": "residual-rotations",
+                    "cp": "even",
+                    "support": "positive-spectral-cut"
+                  },
+                  "toSignature": {
+                    "domain": "two-face-matrix-herglotz",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "probe-covariant",
+                    "regime": "fixed-temperature-upper-half-plane",
+                    "order": "effective-unspecified",
+                    "scheme": "causal-passive-kms",
+                    "symmetry": "reciprocal-real",
+                    "cp": "even",
+                    "support": "positive-operator-measure"
+                  },
+                  "changes": [
+                    "domain",
+                    "basis",
+                    "regime",
+                    "order",
+                    "scheme",
+                    "symmetry",
+                    "support"
+                  ],
+                  "assumptions": [
+                    "deliberate negative fixture: unequal channel temperatures"
+                  ],
+                  "losses": [],
+                  "removes": [],
+                  "evidenceRefs": [
+                    "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic"
+                  ],
+                  "analogyOnly": true,
+                  "authority": {
+                    "proposalOnly": true,
+                    "entails": false,
+                    "empiricalAuthority": false
+                  }
+                },
+                "fromObject": {
+                  "id": "stress.two-probe-spectrum",
+                  "signature": {
+                    "domain": "two-probe-h2-spectral-density",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "channel-gram",
+                    "regime": "equilibrium-finite-temperature-lorentzian",
+                    "order": "renormalized-unspecified",
+                    "scheme": "contact-independent-positive-support",
+                    "symmetry": "residual-rotations",
+                    "cp": "even",
+                    "support": "positive-spectral-cut"
+                  }
+                },
+                "toObject": {
+                  "id": "thermal.kms-herglotz-carrier",
+                  "signature": {
+                    "domain": "two-face-matrix-herglotz",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "probe-covariant",
+                    "regime": "fixed-temperature-upper-half-plane",
+                    "order": "effective-unspecified",
+                    "scheme": "causal-passive-kms",
+                    "symmetry": "reciprocal-real",
+                    "cp": "even",
+                    "support": "positive-operator-measure"
+                  }
+                },
+                "fromExists": true,
+                "toExists": true,
+                "fromSignatureMatches": true,
+                "toSignatureMatches": true,
+                "authorityBounded": true,
+                "notAnalogy": false,
+                "evidencePresent": true,
+                "lossDeclared": true,
+                "contactSafe": true,
+                "domainChangeDeclared": true,
+                "rankChangeDeclared": true,
+                "varianceChangeDeclared": true,
+                "basisChangeDeclared": true,
+                "regimeChangeDeclared": true,
+                "orderChangeDeclared": true,
+                "schemeChangeDeclared": true,
+                "symmetryChangeDeclared": true,
+                "cpChangeDeclared": true,
+                "supportChangeDeclared": true
+              }
+            ]
+          },
+          "reviewHandoff": {
+            "claimipediaStage": "Triage",
+            "requiresQualifyingEvidence": true,
+            "automaticPromotion": false,
+            "automaticCorpusAdmission": false,
+            "permittedDisposition": [
+              "hold",
+              "no-go",
+              "retain",
+              "retire"
+            ]
+          },
+          "authority": {
+            "proposalOnly": true,
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          }
+        },
+        "receipt": {
+          "boundedDepth": 3,
+          "objectCount": 11,
+          "transformationCount": 12,
+          "validTransformationCount": 11,
+          "candidateCount": 1,
+          "proposalOnly": true,
+          "entails": false,
+          "empiricalAuthority": false,
+          "applicationAdmission": false,
+          "grammarHash": "fe976ea9ac01be807e5e676f1913ba82170393c5aa7b84dc17b98c13a513d085",
+          "requestHash": "4198dd3a0f305e006a21474cb8b4bec62362b9730f25af77c4ec7f58722f3c16",
+          "runtimeAction": "scientific_derivation_compose.compose-derivation"
+        }
+      }
+    },
+    {
+      "query": {
+        "id": "domain-wall-route",
+        "source": "wall.finite-kink-hamiltonian",
+        "target": "shared.schur-herglotz-interface",
+        "maxDepth": 4
+      },
+      "result": {
+        "protocol": "scientific-derivation-composition/1",
+        "query": {
+          "source": "wall.finite-kink-hamiltonian",
+          "target": "shared.schur-herglotz-interface",
+          "maxDepth": 4
+        },
+        "candidates": [
+          {
+            "candidateId": "784f803213dfed4939b710cd841db3f3452deb09bae128299fc7166bcbf5030e",
+            "source": "wall.finite-kink-hamiltonian",
+            "target": "shared.schur-herglotz-interface",
+            "steps": [
+              "wall-projected-resolvent",
+              "wall-schur-elimination",
+              "forget-wall-to-common-interface"
+            ],
+            "assumptions": [
+              "finite Hermitian kink Hamiltonian",
+              "two real probes near the wall",
+              "interior resolvent block is invertible away from retained poles",
+              "bulk/probe partition is declared",
+              "only the causal passive response interface is compared across domains"
+            ],
+            "losses": [
+              "bulk coordinates outside the two wall probes",
+              "explicit eliminated bulk coordinates",
+              "wall localization interpretation",
+              "zero-mode index interpretation",
+              "finite-chain microscopic realization"
+            ],
+            "evidenceRefs": [
+              "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=The%20wall%20response%20is%20a",
+              "227_domain_wall_relocates_weyl_compensation_into_bulk_inflow.md#sha256=b5546e962a3f3269ab608b34f52fe4959535ab80b94007ff043fc100c375ee07&anchor=relocation%2C%20not%20erasure",
+              "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=exact%20Schur-complement%20provenance",
+              "227_domain_wall_relocates_weyl_compensation_into_bulk_inflow.md#sha256=b5546e962a3f3269ab608b34f52fe4959535ab80b94007ff043fc100c375ee07&anchor=Boundary%20Green%20functions%20obtained%20by%20eliminating%20the%20massive%20bulk%20are%20Schur%20complements",
+              "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=matrix-valued%20Herglotz%20function"
+            ],
+            "claimStatus": "derived-claim-proposal",
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          }
+        ],
+        "invalidRules": [
+          {
+            "rule": {
+              "id": "counterexample-kms-without-common-temperature",
+              "kind": "causal-completion",
+              "from": "stress.two-probe-spectrum",
+              "to": "thermal.kms-herglotz-carrier",
+              "fromSignature": {
+                "domain": "two-probe-h2-spectral-density",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "channel-gram",
+                "regime": "equilibrium-finite-temperature-lorentzian",
+                "order": "renormalized-unspecified",
+                "scheme": "contact-independent-positive-support",
+                "symmetry": "residual-rotations",
+                "cp": "even",
+                "support": "positive-spectral-cut"
+              },
+              "toSignature": {
+                "domain": "two-face-matrix-herglotz",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "probe-covariant",
+                "regime": "fixed-temperature-upper-half-plane",
+                "order": "effective-unspecified",
+                "scheme": "causal-passive-kms",
+                "symmetry": "reciprocal-real",
+                "cp": "even",
+                "support": "positive-operator-measure"
+              },
+              "changes": [
+                "domain",
+                "basis",
+                "regime",
+                "order",
+                "scheme",
+                "symmetry",
+                "support"
+              ],
+              "assumptions": [
+                "deliberate negative fixture: unequal channel temperatures"
+              ],
+              "losses": [],
+              "removes": [],
+              "evidenceRefs": [
+                "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic"
+              ],
+              "analogyOnly": true,
+              "authority": {
+                "proposalOnly": true,
+                "entails": false,
+                "empiricalAuthority": false
+              }
+            },
+            "fromObject": {
+              "id": "stress.two-probe-spectrum",
+              "signature": {
+                "domain": "two-probe-h2-spectral-density",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "channel-gram",
+                "regime": "equilibrium-finite-temperature-lorentzian",
+                "order": "renormalized-unspecified",
+                "scheme": "contact-independent-positive-support",
+                "symmetry": "residual-rotations",
+                "cp": "even",
+                "support": "positive-spectral-cut"
+              }
+            },
+            "toObject": {
+              "id": "thermal.kms-herglotz-carrier",
+              "signature": {
+                "domain": "two-face-matrix-herglotz",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "probe-covariant",
+                "regime": "fixed-temperature-upper-half-plane",
+                "order": "effective-unspecified",
+                "scheme": "causal-passive-kms",
+                "symmetry": "reciprocal-real",
+                "cp": "even",
+                "support": "positive-operator-measure"
+              }
+            },
+            "fromExists": true,
+            "toExists": true,
+            "fromSignatureMatches": true,
+            "toSignatureMatches": true,
+            "authorityBounded": true,
+            "notAnalogy": false,
+            "evidencePresent": true,
+            "lossDeclared": true,
+            "contactSafe": true,
+            "domainChangeDeclared": true,
+            "rankChangeDeclared": true,
+            "varianceChangeDeclared": true,
+            "basisChangeDeclared": true,
+            "regimeChangeDeclared": true,
+            "orderChangeDeclared": true,
+            "schemeChangeDeclared": true,
+            "symmetryChangeDeclared": true,
+            "cpChangeDeclared": true,
+            "supportChangeDeclared": true
+          }
+        ],
+        "frontier": [],
+        "workbench": {
+          "protocol": "claimipedia-scientific-derivation-workbench/1",
+          "mode": "read-only-proposal-review",
+          "panes": {
+            "query": {
+              "source": "wall.finite-kink-hamiltonian",
+              "target": "shared.schur-herglotz-interface",
+              "maxDepth": 4
+            },
+            "candidatePaths": [
+              {
+                "candidateId": "784f803213dfed4939b710cd841db3f3452deb09bae128299fc7166bcbf5030e",
+                "source": "wall.finite-kink-hamiltonian",
+                "target": "shared.schur-herglotz-interface",
+                "steps": [
+                  "wall-projected-resolvent",
+                  "wall-schur-elimination",
+                  "forget-wall-to-common-interface"
+                ],
+                "assumptions": [
+                  "finite Hermitian kink Hamiltonian",
+                  "two real probes near the wall",
+                  "interior resolvent block is invertible away from retained poles",
+                  "bulk/probe partition is declared",
+                  "only the causal passive response interface is compared across domains"
+                ],
+                "losses": [
+                  "bulk coordinates outside the two wall probes",
+                  "explicit eliminated bulk coordinates",
+                  "wall localization interpretation",
+                  "zero-mode index interpretation",
+                  "finite-chain microscopic realization"
+                ],
+                "evidenceRefs": [
+                  "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=The%20wall%20response%20is%20a",
+                  "227_domain_wall_relocates_weyl_compensation_into_bulk_inflow.md#sha256=b5546e962a3f3269ab608b34f52fe4959535ab80b94007ff043fc100c375ee07&anchor=relocation%2C%20not%20erasure",
+                  "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=exact%20Schur-complement%20provenance",
+                  "227_domain_wall_relocates_weyl_compensation_into_bulk_inflow.md#sha256=b5546e962a3f3269ab608b34f52fe4959535ab80b94007ff043fc100c375ee07&anchor=Boundary%20Green%20functions%20obtained%20by%20eliminating%20the%20massive%20bulk%20are%20Schur%20complements",
+                  "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=matrix-valued%20Herglotz%20function"
+                ],
+                "claimStatus": "derived-claim-proposal",
+                "entails": false,
+                "empiricalAuthority": false,
+                "applicationAdmission": false
+              }
+            ],
+            "assumptionLossLedger": [
+              {
+                "candidateId": "784f803213dfed4939b710cd841db3f3452deb09bae128299fc7166bcbf5030e",
+                "assumptions": [
+                  "finite Hermitian kink Hamiltonian",
+                  "two real probes near the wall",
+                  "interior resolvent block is invertible away from retained poles",
+                  "bulk/probe partition is declared",
+                  "only the causal passive response interface is compared across domains"
+                ],
+                "losses": [
+                  "bulk coordinates outside the two wall probes",
+                  "explicit eliminated bulk coordinates",
+                  "wall localization interpretation",
+                  "zero-mode index interpretation",
+                  "finite-chain microscopic realization"
+                ],
+                "evidenceRefs": [
+                  "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=The%20wall%20response%20is%20a",
+                  "227_domain_wall_relocates_weyl_compensation_into_bulk_inflow.md#sha256=b5546e962a3f3269ab608b34f52fe4959535ab80b94007ff043fc100c375ee07&anchor=relocation%2C%20not%20erasure",
+                  "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=exact%20Schur-complement%20provenance",
+                  "227_domain_wall_relocates_weyl_compensation_into_bulk_inflow.md#sha256=b5546e962a3f3269ab608b34f52fe4959535ab80b94007ff043fc100c375ee07&anchor=Boundary%20Green%20functions%20obtained%20by%20eliminating%20the%20massive%20bulk%20are%20Schur%20complements",
+                  "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=matrix-valued%20Herglotz%20function"
+                ]
+              }
+            ],
+            "rejectionReceipt": [
+              {
+                "rule": {
+                  "id": "counterexample-kms-without-common-temperature",
+                  "kind": "causal-completion",
+                  "from": "stress.two-probe-spectrum",
+                  "to": "thermal.kms-herglotz-carrier",
+                  "fromSignature": {
+                    "domain": "two-probe-h2-spectral-density",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "channel-gram",
+                    "regime": "equilibrium-finite-temperature-lorentzian",
+                    "order": "renormalized-unspecified",
+                    "scheme": "contact-independent-positive-support",
+                    "symmetry": "residual-rotations",
+                    "cp": "even",
+                    "support": "positive-spectral-cut"
+                  },
+                  "toSignature": {
+                    "domain": "two-face-matrix-herglotz",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "probe-covariant",
+                    "regime": "fixed-temperature-upper-half-plane",
+                    "order": "effective-unspecified",
+                    "scheme": "causal-passive-kms",
+                    "symmetry": "reciprocal-real",
+                    "cp": "even",
+                    "support": "positive-operator-measure"
+                  },
+                  "changes": [
+                    "domain",
+                    "basis",
+                    "regime",
+                    "order",
+                    "scheme",
+                    "symmetry",
+                    "support"
+                  ],
+                  "assumptions": [
+                    "deliberate negative fixture: unequal channel temperatures"
+                  ],
+                  "losses": [],
+                  "removes": [],
+                  "evidenceRefs": [
+                    "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic"
+                  ],
+                  "analogyOnly": true,
+                  "authority": {
+                    "proposalOnly": true,
+                    "entails": false,
+                    "empiricalAuthority": false
+                  }
+                },
+                "fromObject": {
+                  "id": "stress.two-probe-spectrum",
+                  "signature": {
+                    "domain": "two-probe-h2-spectral-density",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "channel-gram",
+                    "regime": "equilibrium-finite-temperature-lorentzian",
+                    "order": "renormalized-unspecified",
+                    "scheme": "contact-independent-positive-support",
+                    "symmetry": "residual-rotations",
+                    "cp": "even",
+                    "support": "positive-spectral-cut"
+                  }
+                },
+                "toObject": {
+                  "id": "thermal.kms-herglotz-carrier",
+                  "signature": {
+                    "domain": "two-face-matrix-herglotz",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "probe-covariant",
+                    "regime": "fixed-temperature-upper-half-plane",
+                    "order": "effective-unspecified",
+                    "scheme": "causal-passive-kms",
+                    "symmetry": "reciprocal-real",
+                    "cp": "even",
+                    "support": "positive-operator-measure"
+                  }
+                },
+                "fromExists": true,
+                "toExists": true,
+                "fromSignatureMatches": true,
+                "toSignatureMatches": true,
+                "authorityBounded": true,
+                "notAnalogy": false,
+                "evidencePresent": true,
+                "lossDeclared": true,
+                "contactSafe": true,
+                "domainChangeDeclared": true,
+                "rankChangeDeclared": true,
+                "varianceChangeDeclared": true,
+                "basisChangeDeclared": true,
+                "regimeChangeDeclared": true,
+                "orderChangeDeclared": true,
+                "schemeChangeDeclared": true,
+                "symmetryChangeDeclared": true,
+                "cpChangeDeclared": true,
+                "supportChangeDeclared": true
+              }
+            ]
+          },
+          "reviewHandoff": {
+            "claimipediaStage": "Triage",
+            "requiresQualifyingEvidence": true,
+            "automaticPromotion": false,
+            "automaticCorpusAdmission": false,
+            "permittedDisposition": [
+              "hold",
+              "no-go",
+              "retain",
+              "retire"
+            ]
+          },
+          "authority": {
+            "proposalOnly": true,
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          }
+        },
+        "receipt": {
+          "boundedDepth": 4,
+          "objectCount": 11,
+          "transformationCount": 12,
+          "validTransformationCount": 11,
+          "candidateCount": 1,
+          "proposalOnly": true,
+          "entails": false,
+          "empiricalAuthority": false,
+          "applicationAdmission": false,
+          "grammarHash": "fe976ea9ac01be807e5e676f1913ba82170393c5aa7b84dc17b98c13a513d085",
+          "requestHash": "09fa60199c1970adab0cdf54febe63bb41625c195980ea37d7066e2c665da452",
+          "runtimeAction": "scientific_derivation_compose.compose-derivation"
+        }
+      }
+    }
+  ],
+  "host": {
+    "generationId": "host-claim-adapter-v18",
+    "runtimeHash": "28fbfa709c2f8a18716d76450a196abba8074e45b908334316c7e0c147d2b1a3"
+  },
+  "operation": {
+    "name": "scientific_derivation_compose",
+    "actions": [
+      "compose-derivation",
+      "standard-model-stress-pilot"
+    ]
+  },
+  "passed": true,
+  "docketSha256": "08d98c4044cad60a6e0f93472cd657afd12eed7513d0bf1499b305fcd84254dd"
+}

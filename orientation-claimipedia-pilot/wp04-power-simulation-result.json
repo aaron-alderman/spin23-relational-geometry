@@ -1,0 +1,48 @@
+{
+  "protocol": "orientation.wp04.power-simulation-result/1",
+  "status": "SyntheticDesignEvidenceOnly",
+  "executedAt": "2026-10-19",
+  "implementation": {
+    "localPath": "scripts/wp04-power-simulation.mjs",
+    "sha256": "569d246d24b473460287793fa9a951b7333286ebcea180e13725602edf95564e",
+    "seed": 20261019,
+    "iterationsPerCell": 50000,
+    "outputSha256": "fab644c5d8a83f6cfc660e98689004881a8dfe0b1185d2d8d21ced46a84d614a",
+    "repeatRunOutputSha256": "fab644c5d8a83f6cfc660e98689004881a8dfe0b1185d2d8d21ced46a84d614a",
+    "deterministicRepeatVerified": true
+  },
+  "design": {
+    "cells": 4,
+    "factors": ["authority", "authority-reliability"],
+    "networkSize": 8,
+    "independentUnit": "network",
+    "alphaPerPrimaryFamily": 0.016666666666666666,
+    "powerTarget": 0.90,
+    "effectScale": "standardized-network-level-outcome"
+  },
+  "firstTestedNetworksPerCellAtOrAbovePower90": {
+    "d0.20": {"authorityMain": 400, "lowReliabilitySimple": 800, "interaction": null},
+    "d0.30": {"authorityMain": 200, "lowReliabilitySimple": 400, "interaction": 600},
+    "d0.40": {"authorityMain": 100, "lowReliabilitySimple": 200, "interaction": 400},
+    "d0.50": {"authorityMain": 100, "lowReliabilitySimple": 150, "interaction": 300}
+  },
+  "keyBoundaryResults": [
+    {"effect": 0.20, "networksPerCell": 800, "totalNetworks": 3200, "participantPlaces": 25600, "interactionPower": 0.66788},
+    {"effect": 0.30, "networksPerCell": 600, "totalNetworks": 2400, "participantPlaces": 19200, "interactionPower": 0.90112},
+    {"effect": 0.40, "networksPerCell": 400, "totalNetworks": 1600, "participantPlaces": 12800, "interactionPower": 0.94546},
+    {"effect": 0.50, "networksPerCell": 300, "totalNetworks": 1200, "participantPlaces": 9600, "interactionPower": 0.97324}
+  ],
+  "disposition": {
+    "confirmatoryInteractionStudy": "hold-pending-multi-site-capacity-or-external-prior",
+    "single-siteNextStep": "estimation-pilot-only",
+    "effectSizeInflation": "forbidden",
+    "syntheticResultsAsBehaviouralEvidence": "forbidden"
+  },
+  "authority": {
+    "empiricalEffectEstimate": false,
+    "behaviouralEvidence": false,
+    "causalConfirmation": false,
+    "claimipediaAdmission": false
+  }
+}
+

@@ -1,0 +1,32 @@
+{
+  "protocol": "orientation.wp04.feasibility-audit/1",
+  "status": "DesignSplitRequired",
+  "assumptions": {
+    "power": 0.90,
+    "twoSidedAlphaPerContrast": 0.0125,
+    "method": "normal-approximation feasibility screen",
+    "independentUnit": "network",
+    "qualification": "Not the final multilevel simulation"
+  },
+  "approximateNetworksPerArm": [
+    {"effect": "standardized-d-0.20", "n": 715},
+    {"effect": "standardized-d-0.30", "n": 318},
+    {"effect": "standardized-d-0.40", "n": 179},
+    {"effect": "standardized-d-0.50", "n": 115},
+    {"effect": "binary-0.50-to-0.60", "cohenH": 0.20135792079033066, "n": 705}
+  ],
+  "originalDesign": {
+    "cells": 16,
+    "networksIf715PerCell": 11440,
+    "participantPlacesIf715PerCell": 228800,
+    "disposition": "SplitBeforeRegistration"
+  },
+  "successorStudies": [
+    {"id": "04.3a", "factors": ["authority", "authority-reliability"], "networkSize": 8, "status": "AwaitingBlindedSimulation"},
+    {"id": "04.3b", "factors": ["authority", "appeal"], "networkSize": 8, "status": "HeldPending04.3aManipulation"},
+    {"id": "04.3c", "factors": ["diagnostic-condition", "network-size"], "status": "HeldPending04.3aAnd04.3b"}
+  ],
+  "dispositions": ["retain-outcome-separation", "split-design", "narrow-immediate-deliverable", "hold-appeal-and-scale", "retire-confirmatory-label-if-infeasible"],
+  "forbiddenMoves": ["count-participants-as-independent-networks", "inflate-effect-to-fit-budget", "treat-synthetic-agents-as-behavioural-evidence"]
+}
+

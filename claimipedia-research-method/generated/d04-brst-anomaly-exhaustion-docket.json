@@ -1,0 +1,117 @@
+{
+  "protocol": "claimipedia-d04-brst-anomaly-exhaustion-docket/1",
+  "campaign": "D-04 BRST-complete one-loop metric-Higgs strike",
+  "requestedQuestion": "Does a BRST-complete one-loop Abelian-Higgs metric-Higgs spectral calculation preserve the D-03 quartic-anomaly orientation Q?",
+  "answer": "The question is perturbatively ill-graded: a four-particle spectral cut begins at three graph loops and its interference with a one-loop beta insertion begins at uniform order four. One-loop cannot test Q.",
+  "strongestOneLoopResult": "The BRST-physical one-loop scalar continuum has only hh and massive-vector-pair thresholds and is a positive metric-Higgs ray at strict uniform one-loop order; xi-dependent Goldstone/ghost thresholds are absent from the physical measure.",
+  "replacementTheorem": "For physical state classes n,m, Delta r_nm=b dot (R_n-R_m), where b is the beta/anomalous coefficient covector and R is the renormalized anomaly-operator form-factor response vector. The pairing is invariant under improvement shear and invertible operator mixing.",
+  "oldQDisposition": {
+    "amplitudeLevel": "retained only as a quartic-only special-case conjecture",
+    "oneLoopSpectralLevel": "rejected",
+    "brstProtection": "rejected; BRST protects the cohomological beta-vector contraction, not omission of gauge-anomaly form factors",
+    "genericCompletion": "Q_full=(beta_e/2e) Delta R_F2 + beta_lambda Delta R_lambda + sum_other b_I Delta R_I."
+  },
+  "evidenceBoundary": {
+    "externallyCertified": [
+      "arXiv:1912.11390 supplies the explicit xi-independent positive one-loop O_H spectral density and physical hh/vector thresholds",
+      "arXiv:2007.01770 supplies the BRST cohomology and algebraic renormalization of O_H"
+    ],
+    "independentlyExecutableHere": [
+      "cut topology loop count",
+      "physical phase-space positivity fixture",
+      "strict one-loop ray determinant",
+      "separation of graph-loop and beta-coefficient orders",
+      "improvement and operator-mixing covariance of the beta-vector identity"
+    ],
+    "notClaimed": "No unpublished TT or T O_H Feynman-integral evaluation is represented as completed."
+  },
+  "exactNextCalculation": {
+    "object": "physical form-factor response matrix Delta R",
+    "operators": [
+      "[F_mu_nu F^mu_nu]",
+      "[partial L/partial lambda]",
+      "mass-anomalous scalar representatives"
+    ],
+    "states": [
+      "hh",
+      "massive-vector pair",
+      "four-body physical states"
+    ],
+    "requiredChecks": [
+      "Slavnov-Taylor identities",
+      "xi cancellation",
+      "operator-mixing covariance",
+      "infrared safety",
+      "complete Cutkosky support",
+      "uniform perturbative grading"
+    ],
+    "decision": "If Delta R has sufficient rank, infer beta-vector combinations; otherwise record the resulting Ward/dynamical null relation."
+  },
+  "dispositions": {
+    "oneLoopBrstSupport": "closed with external integral evidence and local executable audit",
+    "oneLoopMetricHiggsInnovation": "zero on the strict continuum rung",
+    "quarticFourBodyQAtOneLoop": "no-go",
+    "quarticOnlyQInFullBrstTheory": "not protected",
+    "betaVectorIdentity": "closed algebraically",
+    "numericalAnomalyTomography": "blocked on new physical form-factor calculation",
+    "fullUniformOrderFourSpectrum": "external multi-loop programme"
+  },
+  "sourceryReview": {
+    "protocol": "claimipedia-d04-sourcery-review/1",
+    "activeGenerationId": "sqlite-claimipedia-boundary-mature-v5r9r2",
+    "grammarHash": "fe976ea9ac01be807e5e676f1913ba82170393c5aa7b84dc17b98c13a513d085",
+    "positiveCandidateCount": 1,
+    "positiveCandidateSteps": [
+      [
+        "brst-physical-quotient",
+        "separate-loop-gradings",
+        "derive-beta-vector-identity",
+        "handoff-form-factor-frontier"
+      ]
+    ],
+    "negativeCandidateCounts": {
+      "oneLoopQ": 0,
+      "quarticProtection": 0,
+      "fullMatrix": 0,
+      "amplitudeSpectrum": 0
+    },
+    "invalidRuleIds": [
+      "brst-protects-quartic-only",
+      "form-factor-ratio-is-one-loop-spectrum",
+      "one-loop-confirms-Q",
+      "published-OO-is-full-matrix"
+    ],
+    "requestHashes": {
+      "positive": "f1e9c8e16f079fe94874cc9d647f61aece79eff0fd5780e7ebec6ce8d1006f92",
+      "oneLoopQ": "19b6aef81bcada1df765a7e6814cfbe38cc7dc5ae9f703599fb4280a22069de7",
+      "quarticProtection": "4af5c8700c52e448811c3ddf04b9d5099749898f46371dc8ee8a9ffa36581e4f",
+      "fullMatrix": "33401c0edf4a004826d13ca270d9414116d2fb7dfc2454445c478ceda44c7b48",
+      "amplitudeSpectrum": "afa318faad39064d13552afbb6ff6a010197311608eca84db6a934ac1203a489"
+    },
+    "authority": {
+      "proposalOnly": true,
+      "entails": false,
+      "empiricalAuthority": false,
+      "applicationAdmission": false
+    },
+    "passed": true
+  },
+  "exhaustion": {
+    "everyTechnicallyActionableGateInDeclaredOneLoopScopeHasDisposition": true,
+    "unresolvedOneLoopDiscriminantThatCanRescueQ": false,
+    "remainingWorkRequiresHigherOrderOrNewTraceInsertionIntegrals": true,
+    "classification": "one-loop-support-certified; one-loop-Q-no-go; beta-vector-anomaly-tomography-retained"
+  },
+  "receiptHashes": {
+    "d04-brst-one-loop-receipt.json": "59fa1bc7c04b0f64df24b2985f361472f7a75ffe6b17aa7eb44c3133b6212204",
+    "d04-beta-vector-identity-receipt.json": "73b8e5cb1488ba9d1586be1ca82f1390f6a08599c75072739e5302b9b01658ce"
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  },
+  "docketSha256": "ffd07ec8c35eab944d2677a5d02b14128f46c2d1e66feab9a93da90208f277a3"
+}

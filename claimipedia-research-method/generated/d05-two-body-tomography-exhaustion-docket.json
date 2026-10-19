@@ -1,0 +1,103 @@
+{
+  "protocol": "claimipedia-d05-two-body-tomography-exhaustion-docket/1",
+  "campaign": "D-05 physical two-body anomaly tomography",
+  "strongestResult": "The hh, transverse-vector-pair and longitudinal-vector-pair physical form factors generically yield a rank-two response matrix for the gauge and quartic anomaly operators above their common continuum threshold.",
+  "determinant": "det[ R_T-R_hh ; R_L-R_hh ] = v^2(s-m_h^2)/(s+2m_h^2) * (s-m_h^2)s(s-4m_A^2)/[2m_A^2(s-2m_A^2)].",
+  "inversionResult": "Two polarization-resolved projective differences recover the two beta coefficients at one energy; alternatively, two inclusive energies with independent weighted-mean responses recover them without event-level polarization tags.",
+  "inclusiveResult": {
+    "mean": "After summing unresolved physical channels, (rho_gH/rho_HH)-c_H equals the positive-weighted mean response Rbar(s) dot b.",
+    "innovation": "The Schur innovation equals W(s) times the weighted variance of b dot R_i(s); it retains polarization/channel heterogeneity even when labels are not observed.",
+    "scan": "Two energies whose mean-response vectors are independent recover the two-component beta covector from inclusive mixed responses without event-by-event polarization resolution."
+  },
+  "perturbativeDisposition": {
+    "formFactors": "tree level and physical on shell",
+    "mixedProjectiveSignal": "bi-grade (two-particle cut loop 1, beta-coefficient loop 1); uniform order two",
+    "positiveInnovation": "quadratic in beta differences; first visible at uniform order three",
+    "fourBodyRequired": false
+  },
+  "covarianceDisposition": {
+    "rankAndSignal": "invariant under invertible anomaly-operator mixing with dual beta transformation",
+    "conditionNumber": "not invariant without a declared operator-space metric/normalization",
+    "brst": "Goldstone and ghost fields remain internal completion variables and are not added to the positive physical spectral sum",
+    "equivalenceTheorem": "usable for high-energy longitudinal checks only with finite equivalence factors and complete BRST diagrams"
+  },
+  "measurementFrontier": {
+    "object": "inclusive mixed-correlator mean and Schur innovation over an energy window",
+    "missing": [
+      "dimensionless renormalized operator normalization",
+      "loop-corrected physical response functions",
+      "Euclidean/lattice or dispersive estimator",
+      "measurement covariance and regularized inverse"
+    ],
+    "decisionRule": "Claim beta tomography only after the measured response design has stable rank under uncertainties and declared scheme transformations."
+  },
+  "noGoResults": [
+    "exact vector threshold does not distinguish transverse and longitudinal response",
+    "tree form-factor rank does not imply uniform one-loop positive innovation",
+    "inclusive summation is not projection onto a single ray",
+    "condition number is not basis-free",
+    "the equivalence theorem does not add Goldstones as physical positive states",
+    "form-factor labels do not by themselves define an experimental observable"
+  ],
+  "sourceryReview": {
+    "protocol": "claimipedia-d05-sourcery-review/1",
+    "activeGenerationId": "sqlite-claimipedia-boundary-mature-v5r9r2",
+    "grammarHash": "fe976ea9ac01be807e5e676f1913ba82170393c5aa7b84dc17b98c13a513d085",
+    "positiveCandidateCount": 1,
+    "positiveCandidateSteps": [
+      [
+        "derive-two-body-rank",
+        "form-inclusive-moments",
+        "handoff-conditioned-estimator"
+      ]
+    ],
+    "negativeCandidateCounts": {
+      "directObservable": 0,
+      "inclusiveRay": 0,
+      "basisFreeCondition": 0,
+      "oneLoopInnovation": 0,
+      "goldstoneSpectrum": 0
+    },
+    "invalidRuleIds": [
+      "condition-number-is-basis-free",
+      "equivalence-adds-goldstone-states",
+      "form-factors-are-direct-observables",
+      "inclusive-sum-is-ray",
+      "tree-rank-is-one-loop-innovation"
+    ],
+    "requestHashes": {
+      "positive": "2e9bee83fd3ef3f72ca33e016bdd9c6452b1dd708303913eac3069c1c2556108",
+      "directObservable": "51104577c2b206faecfc73f7f3a9d0a755e121a99c4edf9d863d3181e9a4fde6",
+      "inclusiveRay": "1cb3dcdd58984a81650f9e45003b9e607a0d061f10b540bc1972afc137ac2bbe",
+      "basisFreeCondition": "57bb6e970805674d65933118e6976aa77b9645ea2336c2ff46fc67d0914685e9",
+      "oneLoopInnovation": "ea48ee4ad9a4ecd45d187e3c5cb38a064cfec6267d25f2dd70cce627bffeb40a",
+      "goldstoneSpectrum": "f42f3fb0c103988068ce65546122b5058c96efc3c2b8e93203117174086f8a14"
+    },
+    "authority": {
+      "proposalOnly": true,
+      "entails": false,
+      "empiricalAuthority": false,
+      "applicationAdmission": false
+    },
+    "passed": true
+  },
+  "exhaustion": {
+    "everyDeclaredFormFactorRankAndConditioningGateHasDisposition": true,
+    "unresolvedInScopeDiscriminantThatCanChangeRankConclusion": false,
+    "remainingWorkRequiresLoopIntegralsOrMeasurementDesign": true,
+    "classification": "two-body-beta-response-full-rank; inclusive-tomography-viable; empirical-estimator-frontier"
+  },
+  "receiptHashes": {
+    "d05-two-body-form-factor-receipt.json": "02919f650fbfb8b7738a20fe4b84bbfdc0433968707e34609fd36e2e028980ab",
+    "d05-inclusive-tomography-receipt.json": "5ca256e4e754889e212b9ebdde0e4bca86f09a879b0989fe6aa462e652f11ce7",
+    "d05-conditioning-receipt.json": "9e073ce043d6c4092cb068c890fc53e40f8812d4e6e972f4ef1fd1c921190b33"
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  },
+  "docketSha256": "a1d9e284fdb8a3fdf55c289bc0c876d2a021424b1da23ed2a464e553045704c2"
+}

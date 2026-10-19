@@ -1,0 +1,1132 @@
+{
+  "protocol": "claimipedia-d02-sourcery-review/1",
+  "graphSha256": "13f13a1021b9d4080c15aa52960a53184a6bb9d556205c6bf1df42bcd4dffd0c",
+  "queries": [
+    {
+      "query": {
+        "id": "bounded-local-theorem",
+        "source": "d02.raw-block-family",
+        "target": "d02.local-theorem-triage",
+        "maxDepth": 5
+      },
+      "result": {
+        "protocol": "scientific-derivation-composition/1",
+        "query": {
+          "source": "d02.raw-block-family",
+          "target": "d02.local-theorem-triage",
+          "maxDepth": 5
+        },
+        "candidates": [
+          {
+            "candidateId": "dc7c834906dd3048adc4a5e12b6a8b44bc143f8f333c25c2e218f5006fd9e42a",
+            "source": "d02.raw-block-family",
+            "target": "d02.local-theorem-triage",
+            "steps": [
+              "classify-fixed-support-stratum",
+              "apply-local-support-schur-theorem",
+              "transport-compatible-decorations",
+              "handoff-bounded-theorem-and-obstruction"
+            ],
+            "assumptions": [
+              "constant kernel on the selected patch",
+              "support projector transported with the frame",
+              "coupling annihilates the null bundle",
+              "restricted eliminated block is invertible",
+              "real frequency-independent reciprocal coupling",
+              "upper-half-plane passivity",
+              "Ward support is fixed",
+              "thermal channels share one temperature",
+              "wall residue is probe-visible",
+              "the theorem is restricted to finite constant-support patches",
+              "the rank-change counterexample is retained beside the positive theorem"
+            ],
+            "losses": [
+              "bulk wall index is not determined by the projected response",
+              "global rank-change continuation",
+              "no operator-theoretic or empirical authority",
+              "no single global law across rank change"
+            ],
+            "evidenceRefs": [
+              "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#constant-kernel-hypothesis",
+              "generated/d02-execution-receipt.json#wardRegulatorIndependence",
+              "213_fixed_temperature_kms_herglotz_schur_sewing.md#closed-schur-class",
+              "generated/d02-execution-receipt.json#localHerglotzPassivity",
+              "D02-RESULT.md#decoration-transport",
+              "generated/d02-execution-receipt.json#projectedResponseDoesNotDetermineBulkIndex",
+              "D02-RESULT.md",
+              "generated/d02-execution-result.json"
+            ],
+            "claimStatus": "derived-claim-proposal",
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          }
+        ],
+        "invalidRules": [
+          {
+            "rule": {
+              "id": "counterexample-silent-rank-change-continuation",
+              "kind": "analytic-continuation",
+              "from": "d02.rank-changing-family",
+              "to": "d02.global-single-law",
+              "fromSignature": {
+                "domain": "block-herglotz-family",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "external-interior-block",
+                "regime": "rank-changing-locus",
+                "order": "exact-finite",
+                "scheme": "two-path-limit",
+                "symmetry": "declared-in-scope",
+                "cp": "unrestricted",
+                "support": "changing-rank"
+              },
+              "toSignature": {
+                "domain": "global-stratified-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "global-support-frame",
+                "regime": "across-rank-change",
+                "order": "conjectural",
+                "scheme": "single-canonical-continuation",
+                "symmetry": "globally-preserved",
+                "cp": "unrestricted",
+                "support": "all-strata"
+              },
+              "changes": [
+                "domain",
+                "basis",
+                "regime",
+                "order",
+                "scheme",
+                "symmetry",
+                "support"
+              ],
+              "assumptions": [
+                "deliberate invalid fixture: limiting block alone selects one continuation"
+              ],
+              "losses": [],
+              "removes": [],
+              "evidenceRefs": [
+                "D02-RESULT.md#minimal-rank-change-obstruction"
+              ],
+              "analogyOnly": true,
+              "authority": {
+                "proposalOnly": true,
+                "entails": false,
+                "empiricalAuthority": false
+              }
+            },
+            "fromObject": {
+              "id": "d02.rank-changing-family",
+              "signature": {
+                "domain": "block-herglotz-family",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "external-interior-block",
+                "regime": "rank-changing-locus",
+                "order": "exact-finite",
+                "scheme": "two-path-limit",
+                "symmetry": "declared-in-scope",
+                "cp": "unrestricted",
+                "support": "changing-rank"
+              }
+            },
+            "toObject": {
+              "id": "d02.global-single-law",
+              "signature": {
+                "domain": "global-stratified-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "global-support-frame",
+                "regime": "across-rank-change",
+                "order": "conjectural",
+                "scheme": "single-canonical-continuation",
+                "symmetry": "globally-preserved",
+                "cp": "unrestricted",
+                "support": "all-strata"
+              }
+            },
+            "fromExists": true,
+            "toExists": true,
+            "fromSignatureMatches": true,
+            "toSignatureMatches": true,
+            "authorityBounded": true,
+            "notAnalogy": false,
+            "evidencePresent": true,
+            "lossDeclared": true,
+            "contactSafe": false,
+            "domainChangeDeclared": true,
+            "rankChangeDeclared": true,
+            "varianceChangeDeclared": true,
+            "basisChangeDeclared": true,
+            "regimeChangeDeclared": true,
+            "orderChangeDeclared": true,
+            "schemeChangeDeclared": true,
+            "symmetryChangeDeclared": true,
+            "cpChangeDeclared": true,
+            "supportChangeDeclared": true
+          },
+          {
+            "rule": {
+              "id": "counterexample-boundary-response-determines-wall-index",
+              "kind": "projection",
+              "from": "d02.local-effective-response",
+              "to": "d02.global-single-law",
+              "fromSignature": {
+                "domain": "effective-herglotz-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "external-ports",
+                "regime": "constant-rank-patch",
+                "order": "exact-finite",
+                "scheme": "support-schur",
+                "symmetry": "support-frame-covariant",
+                "cp": "unrestricted",
+                "support": "positive-operator-measure"
+              },
+              "toSignature": {
+                "domain": "global-stratified-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "global-support-frame",
+                "regime": "across-rank-change",
+                "order": "conjectural",
+                "scheme": "single-canonical-continuation",
+                "symmetry": "globally-preserved",
+                "cp": "unrestricted",
+                "support": "all-strata"
+              },
+              "changes": [
+                "domain",
+                "basis",
+                "regime",
+                "order",
+                "scheme",
+                "symmetry",
+                "support"
+              ],
+              "assumptions": [
+                "deliberate invalid fixture: projected response determines invisible bulk index"
+              ],
+              "losses": [
+                "uncoupled graded zero modes"
+              ],
+              "removes": [],
+              "evidenceRefs": [
+                "D02-RESULT.md#decoration-transport"
+              ],
+              "analogyOnly": true,
+              "authority": {
+                "proposalOnly": true,
+                "entails": false,
+                "empiricalAuthority": false
+              }
+            },
+            "fromObject": {
+              "id": "d02.local-effective-response",
+              "signature": {
+                "domain": "effective-herglotz-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "external-ports",
+                "regime": "constant-rank-patch",
+                "order": "exact-finite",
+                "scheme": "support-schur",
+                "symmetry": "support-frame-covariant",
+                "cp": "unrestricted",
+                "support": "positive-operator-measure"
+              }
+            },
+            "toObject": {
+              "id": "d02.global-single-law",
+              "signature": {
+                "domain": "global-stratified-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "global-support-frame",
+                "regime": "across-rank-change",
+                "order": "conjectural",
+                "scheme": "single-canonical-continuation",
+                "symmetry": "globally-preserved",
+                "cp": "unrestricted",
+                "support": "all-strata"
+              }
+            },
+            "fromExists": true,
+            "toExists": true,
+            "fromSignatureMatches": true,
+            "toSignatureMatches": true,
+            "authorityBounded": true,
+            "notAnalogy": false,
+            "evidencePresent": true,
+            "lossDeclared": true,
+            "contactSafe": true,
+            "domainChangeDeclared": true,
+            "rankChangeDeclared": true,
+            "varianceChangeDeclared": true,
+            "basisChangeDeclared": true,
+            "regimeChangeDeclared": true,
+            "orderChangeDeclared": true,
+            "schemeChangeDeclared": true,
+            "symmetryChangeDeclared": true,
+            "cpChangeDeclared": true,
+            "supportChangeDeclared": true
+          }
+        ],
+        "frontier": [],
+        "workbench": {
+          "protocol": "claimipedia-scientific-derivation-workbench/1",
+          "mode": "read-only-proposal-review",
+          "panes": {
+            "query": {
+              "source": "d02.raw-block-family",
+              "target": "d02.local-theorem-triage",
+              "maxDepth": 5
+            },
+            "candidatePaths": [
+              {
+                "candidateId": "dc7c834906dd3048adc4a5e12b6a8b44bc143f8f333c25c2e218f5006fd9e42a",
+                "source": "d02.raw-block-family",
+                "target": "d02.local-theorem-triage",
+                "steps": [
+                  "classify-fixed-support-stratum",
+                  "apply-local-support-schur-theorem",
+                  "transport-compatible-decorations",
+                  "handoff-bounded-theorem-and-obstruction"
+                ],
+                "assumptions": [
+                  "constant kernel on the selected patch",
+                  "support projector transported with the frame",
+                  "coupling annihilates the null bundle",
+                  "restricted eliminated block is invertible",
+                  "real frequency-independent reciprocal coupling",
+                  "upper-half-plane passivity",
+                  "Ward support is fixed",
+                  "thermal channels share one temperature",
+                  "wall residue is probe-visible",
+                  "the theorem is restricted to finite constant-support patches",
+                  "the rank-change counterexample is retained beside the positive theorem"
+                ],
+                "losses": [
+                  "bulk wall index is not determined by the projected response",
+                  "global rank-change continuation",
+                  "no operator-theoretic or empirical authority",
+                  "no single global law across rank change"
+                ],
+                "evidenceRefs": [
+                  "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#constant-kernel-hypothesis",
+                  "generated/d02-execution-receipt.json#wardRegulatorIndependence",
+                  "213_fixed_temperature_kms_herglotz_schur_sewing.md#closed-schur-class",
+                  "generated/d02-execution-receipt.json#localHerglotzPassivity",
+                  "D02-RESULT.md#decoration-transport",
+                  "generated/d02-execution-receipt.json#projectedResponseDoesNotDetermineBulkIndex",
+                  "D02-RESULT.md",
+                  "generated/d02-execution-result.json"
+                ],
+                "claimStatus": "derived-claim-proposal",
+                "entails": false,
+                "empiricalAuthority": false,
+                "applicationAdmission": false
+              }
+            ],
+            "assumptionLossLedger": [
+              {
+                "candidateId": "dc7c834906dd3048adc4a5e12b6a8b44bc143f8f333c25c2e218f5006fd9e42a",
+                "assumptions": [
+                  "constant kernel on the selected patch",
+                  "support projector transported with the frame",
+                  "coupling annihilates the null bundle",
+                  "restricted eliminated block is invertible",
+                  "real frequency-independent reciprocal coupling",
+                  "upper-half-plane passivity",
+                  "Ward support is fixed",
+                  "thermal channels share one temperature",
+                  "wall residue is probe-visible",
+                  "the theorem is restricted to finite constant-support patches",
+                  "the rank-change counterexample is retained beside the positive theorem"
+                ],
+                "losses": [
+                  "bulk wall index is not determined by the projected response",
+                  "global rank-change continuation",
+                  "no operator-theoretic or empirical authority",
+                  "no single global law across rank change"
+                ],
+                "evidenceRefs": [
+                  "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#constant-kernel-hypothesis",
+                  "generated/d02-execution-receipt.json#wardRegulatorIndependence",
+                  "213_fixed_temperature_kms_herglotz_schur_sewing.md#closed-schur-class",
+                  "generated/d02-execution-receipt.json#localHerglotzPassivity",
+                  "D02-RESULT.md#decoration-transport",
+                  "generated/d02-execution-receipt.json#projectedResponseDoesNotDetermineBulkIndex",
+                  "D02-RESULT.md",
+                  "generated/d02-execution-result.json"
+                ]
+              }
+            ],
+            "rejectionReceipt": [
+              {
+                "rule": {
+                  "id": "counterexample-silent-rank-change-continuation",
+                  "kind": "analytic-continuation",
+                  "from": "d02.rank-changing-family",
+                  "to": "d02.global-single-law",
+                  "fromSignature": {
+                    "domain": "block-herglotz-family",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "external-interior-block",
+                    "regime": "rank-changing-locus",
+                    "order": "exact-finite",
+                    "scheme": "two-path-limit",
+                    "symmetry": "declared-in-scope",
+                    "cp": "unrestricted",
+                    "support": "changing-rank"
+                  },
+                  "toSignature": {
+                    "domain": "global-stratified-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "global-support-frame",
+                    "regime": "across-rank-change",
+                    "order": "conjectural",
+                    "scheme": "single-canonical-continuation",
+                    "symmetry": "globally-preserved",
+                    "cp": "unrestricted",
+                    "support": "all-strata"
+                  },
+                  "changes": [
+                    "domain",
+                    "basis",
+                    "regime",
+                    "order",
+                    "scheme",
+                    "symmetry",
+                    "support"
+                  ],
+                  "assumptions": [
+                    "deliberate invalid fixture: limiting block alone selects one continuation"
+                  ],
+                  "losses": [],
+                  "removes": [],
+                  "evidenceRefs": [
+                    "D02-RESULT.md#minimal-rank-change-obstruction"
+                  ],
+                  "analogyOnly": true,
+                  "authority": {
+                    "proposalOnly": true,
+                    "entails": false,
+                    "empiricalAuthority": false
+                  }
+                },
+                "fromObject": {
+                  "id": "d02.rank-changing-family",
+                  "signature": {
+                    "domain": "block-herglotz-family",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "external-interior-block",
+                    "regime": "rank-changing-locus",
+                    "order": "exact-finite",
+                    "scheme": "two-path-limit",
+                    "symmetry": "declared-in-scope",
+                    "cp": "unrestricted",
+                    "support": "changing-rank"
+                  }
+                },
+                "toObject": {
+                  "id": "d02.global-single-law",
+                  "signature": {
+                    "domain": "global-stratified-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "global-support-frame",
+                    "regime": "across-rank-change",
+                    "order": "conjectural",
+                    "scheme": "single-canonical-continuation",
+                    "symmetry": "globally-preserved",
+                    "cp": "unrestricted",
+                    "support": "all-strata"
+                  }
+                },
+                "fromExists": true,
+                "toExists": true,
+                "fromSignatureMatches": true,
+                "toSignatureMatches": true,
+                "authorityBounded": true,
+                "notAnalogy": false,
+                "evidencePresent": true,
+                "lossDeclared": true,
+                "contactSafe": false,
+                "domainChangeDeclared": true,
+                "rankChangeDeclared": true,
+                "varianceChangeDeclared": true,
+                "basisChangeDeclared": true,
+                "regimeChangeDeclared": true,
+                "orderChangeDeclared": true,
+                "schemeChangeDeclared": true,
+                "symmetryChangeDeclared": true,
+                "cpChangeDeclared": true,
+                "supportChangeDeclared": true
+              },
+              {
+                "rule": {
+                  "id": "counterexample-boundary-response-determines-wall-index",
+                  "kind": "projection",
+                  "from": "d02.local-effective-response",
+                  "to": "d02.global-single-law",
+                  "fromSignature": {
+                    "domain": "effective-herglotz-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "external-ports",
+                    "regime": "constant-rank-patch",
+                    "order": "exact-finite",
+                    "scheme": "support-schur",
+                    "symmetry": "support-frame-covariant",
+                    "cp": "unrestricted",
+                    "support": "positive-operator-measure"
+                  },
+                  "toSignature": {
+                    "domain": "global-stratified-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "global-support-frame",
+                    "regime": "across-rank-change",
+                    "order": "conjectural",
+                    "scheme": "single-canonical-continuation",
+                    "symmetry": "globally-preserved",
+                    "cp": "unrestricted",
+                    "support": "all-strata"
+                  },
+                  "changes": [
+                    "domain",
+                    "basis",
+                    "regime",
+                    "order",
+                    "scheme",
+                    "symmetry",
+                    "support"
+                  ],
+                  "assumptions": [
+                    "deliberate invalid fixture: projected response determines invisible bulk index"
+                  ],
+                  "losses": [
+                    "uncoupled graded zero modes"
+                  ],
+                  "removes": [],
+                  "evidenceRefs": [
+                    "D02-RESULT.md#decoration-transport"
+                  ],
+                  "analogyOnly": true,
+                  "authority": {
+                    "proposalOnly": true,
+                    "entails": false,
+                    "empiricalAuthority": false
+                  }
+                },
+                "fromObject": {
+                  "id": "d02.local-effective-response",
+                  "signature": {
+                    "domain": "effective-herglotz-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "external-ports",
+                    "regime": "constant-rank-patch",
+                    "order": "exact-finite",
+                    "scheme": "support-schur",
+                    "symmetry": "support-frame-covariant",
+                    "cp": "unrestricted",
+                    "support": "positive-operator-measure"
+                  }
+                },
+                "toObject": {
+                  "id": "d02.global-single-law",
+                  "signature": {
+                    "domain": "global-stratified-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "global-support-frame",
+                    "regime": "across-rank-change",
+                    "order": "conjectural",
+                    "scheme": "single-canonical-continuation",
+                    "symmetry": "globally-preserved",
+                    "cp": "unrestricted",
+                    "support": "all-strata"
+                  }
+                },
+                "fromExists": true,
+                "toExists": true,
+                "fromSignatureMatches": true,
+                "toSignatureMatches": true,
+                "authorityBounded": true,
+                "notAnalogy": false,
+                "evidencePresent": true,
+                "lossDeclared": true,
+                "contactSafe": true,
+                "domainChangeDeclared": true,
+                "rankChangeDeclared": true,
+                "varianceChangeDeclared": true,
+                "basisChangeDeclared": true,
+                "regimeChangeDeclared": true,
+                "orderChangeDeclared": true,
+                "schemeChangeDeclared": true,
+                "symmetryChangeDeclared": true,
+                "cpChangeDeclared": true,
+                "supportChangeDeclared": true
+              }
+            ]
+          },
+          "reviewHandoff": {
+            "claimipediaStage": "Triage",
+            "requiresQualifyingEvidence": true,
+            "automaticPromotion": false,
+            "automaticCorpusAdmission": false,
+            "permittedDisposition": [
+              "hold",
+              "no-go",
+              "retain",
+              "retire"
+            ]
+          },
+          "authority": {
+            "proposalOnly": true,
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          }
+        },
+        "receipt": {
+          "boundedDepth": 5,
+          "objectCount": 7,
+          "transformationCount": 6,
+          "validTransformationCount": 4,
+          "candidateCount": 1,
+          "proposalOnly": true,
+          "entails": false,
+          "empiricalAuthority": false,
+          "applicationAdmission": false,
+          "grammarHash": "fe976ea9ac01be807e5e676f1913ba82170393c5aa7b84dc17b98c13a513d085",
+          "requestHash": "bdcde22bc364130b4dc597ce94d37d957cb5fca2a3b5a15fe92494eb4d3c8839",
+          "runtimeAction": "scientific_derivation_compose.compose-derivation"
+        }
+      }
+    },
+    {
+      "query": {
+        "id": "global-rank-change-law",
+        "source": "d02.rank-changing-family",
+        "target": "d02.global-single-law",
+        "maxDepth": 2
+      },
+      "result": {
+        "protocol": "scientific-derivation-composition/1",
+        "query": {
+          "source": "d02.rank-changing-family",
+          "target": "d02.global-single-law",
+          "maxDepth": 2
+        },
+        "candidates": [],
+        "invalidRules": [
+          {
+            "rule": {
+              "id": "counterexample-silent-rank-change-continuation",
+              "kind": "analytic-continuation",
+              "from": "d02.rank-changing-family",
+              "to": "d02.global-single-law",
+              "fromSignature": {
+                "domain": "block-herglotz-family",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "external-interior-block",
+                "regime": "rank-changing-locus",
+                "order": "exact-finite",
+                "scheme": "two-path-limit",
+                "symmetry": "declared-in-scope",
+                "cp": "unrestricted",
+                "support": "changing-rank"
+              },
+              "toSignature": {
+                "domain": "global-stratified-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "global-support-frame",
+                "regime": "across-rank-change",
+                "order": "conjectural",
+                "scheme": "single-canonical-continuation",
+                "symmetry": "globally-preserved",
+                "cp": "unrestricted",
+                "support": "all-strata"
+              },
+              "changes": [
+                "domain",
+                "basis",
+                "regime",
+                "order",
+                "scheme",
+                "symmetry",
+                "support"
+              ],
+              "assumptions": [
+                "deliberate invalid fixture: limiting block alone selects one continuation"
+              ],
+              "losses": [],
+              "removes": [],
+              "evidenceRefs": [
+                "D02-RESULT.md#minimal-rank-change-obstruction"
+              ],
+              "analogyOnly": true,
+              "authority": {
+                "proposalOnly": true,
+                "entails": false,
+                "empiricalAuthority": false
+              }
+            },
+            "fromObject": {
+              "id": "d02.rank-changing-family",
+              "signature": {
+                "domain": "block-herglotz-family",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "external-interior-block",
+                "regime": "rank-changing-locus",
+                "order": "exact-finite",
+                "scheme": "two-path-limit",
+                "symmetry": "declared-in-scope",
+                "cp": "unrestricted",
+                "support": "changing-rank"
+              }
+            },
+            "toObject": {
+              "id": "d02.global-single-law",
+              "signature": {
+                "domain": "global-stratified-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "global-support-frame",
+                "regime": "across-rank-change",
+                "order": "conjectural",
+                "scheme": "single-canonical-continuation",
+                "symmetry": "globally-preserved",
+                "cp": "unrestricted",
+                "support": "all-strata"
+              }
+            },
+            "fromExists": true,
+            "toExists": true,
+            "fromSignatureMatches": true,
+            "toSignatureMatches": true,
+            "authorityBounded": true,
+            "notAnalogy": false,
+            "evidencePresent": true,
+            "lossDeclared": true,
+            "contactSafe": false,
+            "domainChangeDeclared": true,
+            "rankChangeDeclared": true,
+            "varianceChangeDeclared": true,
+            "basisChangeDeclared": true,
+            "regimeChangeDeclared": true,
+            "orderChangeDeclared": true,
+            "schemeChangeDeclared": true,
+            "symmetryChangeDeclared": true,
+            "cpChangeDeclared": true,
+            "supportChangeDeclared": true
+          },
+          {
+            "rule": {
+              "id": "counterexample-boundary-response-determines-wall-index",
+              "kind": "projection",
+              "from": "d02.local-effective-response",
+              "to": "d02.global-single-law",
+              "fromSignature": {
+                "domain": "effective-herglotz-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "external-ports",
+                "regime": "constant-rank-patch",
+                "order": "exact-finite",
+                "scheme": "support-schur",
+                "symmetry": "support-frame-covariant",
+                "cp": "unrestricted",
+                "support": "positive-operator-measure"
+              },
+              "toSignature": {
+                "domain": "global-stratified-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "global-support-frame",
+                "regime": "across-rank-change",
+                "order": "conjectural",
+                "scheme": "single-canonical-continuation",
+                "symmetry": "globally-preserved",
+                "cp": "unrestricted",
+                "support": "all-strata"
+              },
+              "changes": [
+                "domain",
+                "basis",
+                "regime",
+                "order",
+                "scheme",
+                "symmetry",
+                "support"
+              ],
+              "assumptions": [
+                "deliberate invalid fixture: projected response determines invisible bulk index"
+              ],
+              "losses": [
+                "uncoupled graded zero modes"
+              ],
+              "removes": [],
+              "evidenceRefs": [
+                "D02-RESULT.md#decoration-transport"
+              ],
+              "analogyOnly": true,
+              "authority": {
+                "proposalOnly": true,
+                "entails": false,
+                "empiricalAuthority": false
+              }
+            },
+            "fromObject": {
+              "id": "d02.local-effective-response",
+              "signature": {
+                "domain": "effective-herglotz-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "external-ports",
+                "regime": "constant-rank-patch",
+                "order": "exact-finite",
+                "scheme": "support-schur",
+                "symmetry": "support-frame-covariant",
+                "cp": "unrestricted",
+                "support": "positive-operator-measure"
+              }
+            },
+            "toObject": {
+              "id": "d02.global-single-law",
+              "signature": {
+                "domain": "global-stratified-response",
+                "rank": 2,
+                "variance": "matrix",
+                "basis": "global-support-frame",
+                "regime": "across-rank-change",
+                "order": "conjectural",
+                "scheme": "single-canonical-continuation",
+                "symmetry": "globally-preserved",
+                "cp": "unrestricted",
+                "support": "all-strata"
+              }
+            },
+            "fromExists": true,
+            "toExists": true,
+            "fromSignatureMatches": true,
+            "toSignatureMatches": true,
+            "authorityBounded": true,
+            "notAnalogy": false,
+            "evidencePresent": true,
+            "lossDeclared": true,
+            "contactSafe": true,
+            "domainChangeDeclared": true,
+            "rankChangeDeclared": true,
+            "varianceChangeDeclared": true,
+            "basisChangeDeclared": true,
+            "regimeChangeDeclared": true,
+            "orderChangeDeclared": true,
+            "schemeChangeDeclared": true,
+            "symmetryChangeDeclared": true,
+            "cpChangeDeclared": true,
+            "supportChangeDeclared": true
+          }
+        ],
+        "frontier": [],
+        "workbench": {
+          "protocol": "claimipedia-scientific-derivation-workbench/1",
+          "mode": "read-only-proposal-review",
+          "panes": {
+            "query": {
+              "source": "d02.rank-changing-family",
+              "target": "d02.global-single-law",
+              "maxDepth": 2
+            },
+            "candidatePaths": [],
+            "assumptionLossLedger": [],
+            "rejectionReceipt": [
+              {
+                "rule": {
+                  "id": "counterexample-silent-rank-change-continuation",
+                  "kind": "analytic-continuation",
+                  "from": "d02.rank-changing-family",
+                  "to": "d02.global-single-law",
+                  "fromSignature": {
+                    "domain": "block-herglotz-family",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "external-interior-block",
+                    "regime": "rank-changing-locus",
+                    "order": "exact-finite",
+                    "scheme": "two-path-limit",
+                    "symmetry": "declared-in-scope",
+                    "cp": "unrestricted",
+                    "support": "changing-rank"
+                  },
+                  "toSignature": {
+                    "domain": "global-stratified-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "global-support-frame",
+                    "regime": "across-rank-change",
+                    "order": "conjectural",
+                    "scheme": "single-canonical-continuation",
+                    "symmetry": "globally-preserved",
+                    "cp": "unrestricted",
+                    "support": "all-strata"
+                  },
+                  "changes": [
+                    "domain",
+                    "basis",
+                    "regime",
+                    "order",
+                    "scheme",
+                    "symmetry",
+                    "support"
+                  ],
+                  "assumptions": [
+                    "deliberate invalid fixture: limiting block alone selects one continuation"
+                  ],
+                  "losses": [],
+                  "removes": [],
+                  "evidenceRefs": [
+                    "D02-RESULT.md#minimal-rank-change-obstruction"
+                  ],
+                  "analogyOnly": true,
+                  "authority": {
+                    "proposalOnly": true,
+                    "entails": false,
+                    "empiricalAuthority": false
+                  }
+                },
+                "fromObject": {
+                  "id": "d02.rank-changing-family",
+                  "signature": {
+                    "domain": "block-herglotz-family",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "external-interior-block",
+                    "regime": "rank-changing-locus",
+                    "order": "exact-finite",
+                    "scheme": "two-path-limit",
+                    "symmetry": "declared-in-scope",
+                    "cp": "unrestricted",
+                    "support": "changing-rank"
+                  }
+                },
+                "toObject": {
+                  "id": "d02.global-single-law",
+                  "signature": {
+                    "domain": "global-stratified-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "global-support-frame",
+                    "regime": "across-rank-change",
+                    "order": "conjectural",
+                    "scheme": "single-canonical-continuation",
+                    "symmetry": "globally-preserved",
+                    "cp": "unrestricted",
+                    "support": "all-strata"
+                  }
+                },
+                "fromExists": true,
+                "toExists": true,
+                "fromSignatureMatches": true,
+                "toSignatureMatches": true,
+                "authorityBounded": true,
+                "notAnalogy": false,
+                "evidencePresent": true,
+                "lossDeclared": true,
+                "contactSafe": false,
+                "domainChangeDeclared": true,
+                "rankChangeDeclared": true,
+                "varianceChangeDeclared": true,
+                "basisChangeDeclared": true,
+                "regimeChangeDeclared": true,
+                "orderChangeDeclared": true,
+                "schemeChangeDeclared": true,
+                "symmetryChangeDeclared": true,
+                "cpChangeDeclared": true,
+                "supportChangeDeclared": true
+              },
+              {
+                "rule": {
+                  "id": "counterexample-boundary-response-determines-wall-index",
+                  "kind": "projection",
+                  "from": "d02.local-effective-response",
+                  "to": "d02.global-single-law",
+                  "fromSignature": {
+                    "domain": "effective-herglotz-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "external-ports",
+                    "regime": "constant-rank-patch",
+                    "order": "exact-finite",
+                    "scheme": "support-schur",
+                    "symmetry": "support-frame-covariant",
+                    "cp": "unrestricted",
+                    "support": "positive-operator-measure"
+                  },
+                  "toSignature": {
+                    "domain": "global-stratified-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "global-support-frame",
+                    "regime": "across-rank-change",
+                    "order": "conjectural",
+                    "scheme": "single-canonical-continuation",
+                    "symmetry": "globally-preserved",
+                    "cp": "unrestricted",
+                    "support": "all-strata"
+                  },
+                  "changes": [
+                    "domain",
+                    "basis",
+                    "regime",
+                    "order",
+                    "scheme",
+                    "symmetry",
+                    "support"
+                  ],
+                  "assumptions": [
+                    "deliberate invalid fixture: projected response determines invisible bulk index"
+                  ],
+                  "losses": [
+                    "uncoupled graded zero modes"
+                  ],
+                  "removes": [],
+                  "evidenceRefs": [
+                    "D02-RESULT.md#decoration-transport"
+                  ],
+                  "analogyOnly": true,
+                  "authority": {
+                    "proposalOnly": true,
+                    "entails": false,
+                    "empiricalAuthority": false
+                  }
+                },
+                "fromObject": {
+                  "id": "d02.local-effective-response",
+                  "signature": {
+                    "domain": "effective-herglotz-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "external-ports",
+                    "regime": "constant-rank-patch",
+                    "order": "exact-finite",
+                    "scheme": "support-schur",
+                    "symmetry": "support-frame-covariant",
+                    "cp": "unrestricted",
+                    "support": "positive-operator-measure"
+                  }
+                },
+                "toObject": {
+                  "id": "d02.global-single-law",
+                  "signature": {
+                    "domain": "global-stratified-response",
+                    "rank": 2,
+                    "variance": "matrix",
+                    "basis": "global-support-frame",
+                    "regime": "across-rank-change",
+                    "order": "conjectural",
+                    "scheme": "single-canonical-continuation",
+                    "symmetry": "globally-preserved",
+                    "cp": "unrestricted",
+                    "support": "all-strata"
+                  }
+                },
+                "fromExists": true,
+                "toExists": true,
+                "fromSignatureMatches": true,
+                "toSignatureMatches": true,
+                "authorityBounded": true,
+                "notAnalogy": false,
+                "evidencePresent": true,
+                "lossDeclared": true,
+                "contactSafe": true,
+                "domainChangeDeclared": true,
+                "rankChangeDeclared": true,
+                "varianceChangeDeclared": true,
+                "basisChangeDeclared": true,
+                "regimeChangeDeclared": true,
+                "orderChangeDeclared": true,
+                "schemeChangeDeclared": true,
+                "symmetryChangeDeclared": true,
+                "cpChangeDeclared": true,
+                "supportChangeDeclared": true
+              }
+            ]
+          },
+          "reviewHandoff": {
+            "claimipediaStage": "Triage",
+            "requiresQualifyingEvidence": true,
+            "automaticPromotion": false,
+            "automaticCorpusAdmission": false,
+            "permittedDisposition": [
+              "hold",
+              "no-go",
+              "retain",
+              "retire"
+            ]
+          },
+          "authority": {
+            "proposalOnly": true,
+            "entails": false,
+            "empiricalAuthority": false,
+            "applicationAdmission": false
+          }
+        },
+        "receipt": {
+          "boundedDepth": 2,
+          "objectCount": 7,
+          "transformationCount": 6,
+          "validTransformationCount": 4,
+          "candidateCount": 0,
+          "proposalOnly": true,
+          "entails": false,
+          "empiricalAuthority": false,
+          "applicationAdmission": false,
+          "grammarHash": "fe976ea9ac01be807e5e676f1913ba82170393c5aa7b84dc17b98c13a513d085",
+          "requestHash": "1069ded9447942acaa7fae264537512ab8348f1b3aa4b00292318dc75e089c8d",
+          "runtimeAction": "scientific_derivation_compose.compose-derivation"
+        }
+      }
+    }
+  ],
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false
+  },
+  "host": {
+    "generationId": "host-policy-anchor-v19",
+    "runtimeHash": "42c6e040c0b5422c89e51fb20ed04fefe9289c3b7106b50027cffea9aaf5dd5a",
+    "admittedBasisGenerationId": "host-claim-adapter-v18",
+    "admittedBasisHash": "28fbfa709c2f8a18716d76450a196abba8074e45b908334316c7e0c147d2b1a3"
+  },
+  "summary": {
+    "localCandidateCount": 1,
+    "localCandidateSteps": [
+      [
+        "classify-fixed-support-stratum",
+        "apply-local-support-schur-theorem",
+        "transport-compatible-decorations",
+        "handoff-bounded-theorem-and-obstruction"
+      ]
+    ],
+    "globalCandidateCount": 0,
+    "invalidRuleIds": [
+      "counterexample-boundary-response-determines-wall-index",
+      "counterexample-silent-rank-change-continuation"
+    ],
+    "disposition": "retain-local-law-split-global-rank-change-law"
+  },
+  "passed": true
+}

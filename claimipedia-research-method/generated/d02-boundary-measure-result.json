@@ -1,0 +1,165 @@
+{
+  "protocol": "claimipedia-d02-boundary-measure-strike/1",
+  "strikeId": "d02-boundary-measure-and-density-strike-v1",
+  "theoremCandidate": {
+    "statement": "For each vector state, the scalar Herglotz representation gives finite nontangential boundary values Lebesgue-a.e., Im M(lambda+i0)=pi dSigma_ac/dlambda in scalar matrix elements, and Sigma({lambda})=lim_{y down to 0} y Im M(lambda+i y). Operator-valued promotion requires a separately proved uniform bound and topology.",
+    "primaryBoundaryObject": "bounded positive operator-valued measure Sigma",
+    "nonCompressions": [
+      "a.e. density does not include atoms",
+      "density plus atoms does not include singular-continuous mass",
+      "scalarized a.e. limits need not assemble into a bounded operator"
+    ]
+  },
+  "noBoundedDensityFixture": {
+    "construction": "diagonal interval densities k 1_[j/k,(j+1)/k)",
+    "densityGrowth": [
+      {
+        "maxResolution": 10,
+        "boundaryDensityNorm": 10,
+        "totalOperatorMeasureNorm": 1
+      },
+      {
+        "maxResolution": 25,
+        "boundaryDensityNorm": 25,
+        "totalOperatorMeasureNorm": 1
+      },
+      {
+        "maxResolution": 50,
+        "boundaryDensityNorm": 50,
+        "totalOperatorMeasureNorm": 1
+      },
+      {
+        "maxResolution": 100,
+        "boundaryDensityNorm": 100,
+        "totalOperatorMeasureNorm": 1
+      },
+      {
+        "maxResolution": 200,
+        "boundaryDensityNorm": 200,
+        "totalOperatorMeasureNorm": 1
+      }
+    ],
+    "interiorBounds": [
+      {
+        "y": 0.2,
+        "maximum": 4.999711671698502,
+        "elementaryBound": 15.707963267948966
+      },
+      {
+        "y": 0.08,
+        "maximum": 12.495497355171826,
+        "elementaryBound": 39.269908169872416
+      },
+      {
+        "y": 0.03,
+        "maximum": 33.2482907806141,
+        "elementaryBound": 104.71975511965978
+      }
+    ],
+    "conclusion": "The POVM has norm one, and its Cauchy transform is bounded for every y>0, but its pointwise density is an unbounded diagonal form at every x."
+  },
+  "atomTopologyFixture": {
+    "construction": "coordinate n is uniform probability on [0,2^-n]",
+    "atomAtZero": 0,
+    "atomTest": [
+      {
+        "y": 0.1,
+        "fixedCoordinate": 0.4761159798730127,
+        "approximateNorm": 1
+      },
+      {
+        "y": 0.03,
+        "fixedCoordinate": 0.17416408809318698,
+        "approximateNorm": 1
+      },
+      {
+        "y": 0.01,
+        "fixedCoordinate": 0.06123270558686427,
+        "approximateNorm": 1
+      },
+      {
+        "y": 0.003,
+        "fixedCoordinate": 0.018705562832941624,
+        "approximateNorm": 1
+      },
+      {
+        "y": 0.001,
+        "fixedCoordinate": 0.006267185392512101,
+        "approximateNorm": 1
+      }
+    ],
+    "conclusion": "The atom test converges strongly to zero but not in norm; uniform non-atomic tightness is the missing norm condition."
+  },
+  "thresholdFixture": {
+    "density": "rho(t)=1/(2 sqrt(t)) on (0,1)",
+    "thresholdSamples": [
+      {
+        "y": 0.01,
+        "imaginaryPart": 11.103874154910583,
+        "scaledCoefficient": 1.1103874154910585,
+        "atomIndicator": 0.11103874154910584
+      },
+      {
+        "y": 0.001,
+        "imaginaryPart": 35.12374032201294,
+        "scaledCoefficient": 1.1107101936185684,
+        "atomIndicator": 0.035123740322012945
+      },
+      {
+        "y": 0.0001,
+        "imaginaryPart": 111.0720401206267,
+        "scaledCoefficient": 1.110720401206267,
+        "atomIndicator": 0.01110720401206267
+      }
+    ],
+    "conclusion": "Boundary divergence with a vanishing atom indicator is a threshold density, not a pole."
+  },
+  "singularContinuousFixture": {
+    "totalMass": 1,
+    "absolutelyContinuousMass": 0,
+    "atomicMass": 0,
+    "singularContinuousMass": 1,
+    "lebesgueAlmostEverywhereImaginaryDensity": 0
+  },
+  "dispatcher": [
+    {
+      "condition": "scalarized nontangential limits exist and are uniformly bounded over unit vectors",
+      "output": "bounded weak/strong/norm boundary operator according to the proved topology"
+    },
+    {
+      "condition": "scalarized limits exist but fail uniform boundedness",
+      "output": "quadratic-form or state-indexed boundary data; do not manufacture a bounded operator"
+    },
+    {
+      "condition": "y Im M(lambda+i y) converges",
+      "output": "atomic residue in the proved topology; norm convergence requires uniform non-atomic tightness"
+    },
+    {
+      "condition": "Im M(lambda+i0) is finite Lebesgue-a.e.",
+      "output": "absolutely continuous density only; retain atoms and singular-continuous measure separately"
+    },
+    {
+      "condition": "boundary value diverges but y Im M tends to zero",
+      "output": "threshold/singular-density branch, not an atom"
+    },
+    {
+      "condition": "the representing measure is singular continuous",
+      "output": "retain measure-level data even if Lebesgue-a.e. imaginary boundary density vanishes"
+    },
+    {
+      "condition": "the approach is arbitrary tangential rather than nontangential",
+      "output": "retain the approach arc; do not inherit the nontangential theorem"
+    },
+    {
+      "condition": "a uniform limiting-absorption principle is requested",
+      "output": "require a model-specific weighted/operator scale and uniform resolvent estimate"
+    }
+  ],
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

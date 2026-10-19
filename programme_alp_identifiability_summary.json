@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "point": {
+    "uv_scale_GeV": 10000,
+    "fa_GeV": 1000000,
+    "deduplicated_incidence_parameters": [5, -5, -1, 1, -1, 0, 0, 0],
+    "parameter_order": ["cqL", "cuR", "cdR", "clL", "ceR", "cG", "cW", "cB"]
+  },
+  "local_identifiability": {
+    "all_ten_observables_singular_values": [4.944790034538097, 1.2920875981639517, 0.5618654706049645, 0.30362466070508215, 0.005606381334437366, 9.905894327979722e-6, 2.467112064831064e-6, 4.68089761284681e-8],
+    "all_channels_effective_rank_at_relative_1e-3": 5,
+    "production_and_total_width_singular_values": [1.3333605205759362, 0.5631641505310683, 0.016063805498984136, 0.007455148450859109, 0.0009318574129141424, 5.296829973944555e-15],
+    "production_and_total_width_effective_rank": {"relative_1e-2": 3, "relative_1e-3": 4, "relative_1e-4": 5},
+    "kaon_and_total_width_singular_values": [1.3325406209685626, 0.3991089079538419, 0.014557222293490168, 0.0009819474156169078],
+    "kaon_and_total_width_effective_rank": {"relative_1e-2": 3, "relative_1e-3": 3, "relative_1e-4": 4},
+    "smallest_all_channel_direction": [0.016400344339604363, 0.017502789829097403, 0.016933590427509405, -0.018591848416480487, -0.018560667085928382, -0.00048380031765449423, 0.7060950500001739, -0.707020032022617],
+    "interpretation": "The formal eight-parameter numerical rank is driven by tiny radiative responses. At realistic relative thresholds the low-mass system resolves five physical combinations with all decay channels, and only three to four with production and total lifetime alone."
+  },
+  "physical_low_energy_coordinates": {
+    "fermionic": ["cuR-cqL", "cdR-cqL", "ceR-clL"],
+    "gauge": ["effective_gluon", "effective_photon"],
+    "unresolved_without_electroweak_or_high_energy_data": "the orthogonal cW-cB direction",
+    "conserved_current_redundancies": ["common quark vector shift", "common lepton vector shift"]
+  },
+  "incidence_normalization_fork": {
+    "deduplicated": {"uv_physical_pattern": [-10, -6, -2], "ctau_100MeV_m": 20652.131255754502, "ctau_300MeV_m": 0.22779843522802193, "NA62_300MeV_crossing_f_GeV": 1803595.2476422507},
+    "multiplicity_preserving": {"uv_physical_pattern": [-10, -6, -4], "ctau_100MeV_m": 7447.185104780342, "ctau_300MeV_m": 0.08258704681855199, "NA62_300MeV_crossing_f_GeV": 2318868.560417763},
+    "XiK_deduplicated_over_multiplicity_100MeV": 2.7731695145531825,
+    "XiK_deduplicated_over_multiplicity_300MeV": 2.7583064070489725,
+    "robust_output": "sterile-neutrino kernel and sector ordering",
+    "nonrobust_output": "charged-lepton eigenvalue and therefore the exact ALP charge ray"
+  },
+  "metric_candidate_tests": {
+    "absorptive_yukawa_spectral_measure": "physical and contact-scheme independent, but energy- and Yukawa-weighted; selects a top-dominated direction rather than either incidence spectrum",
+    "completed_furey_middle_slot_hilbert_schmidt": {
+      "sector_order": ["Q", "uc", "dc", "L", "ec", "nuc"],
+      "weights": [14, 14, 8, 2, 6, 12],
+      "kernel_dimension": 0,
+      "selects_deduplicated_incidence": false,
+      "selects_multiplicity_incidence": false
+    }
+  },
+  "bottom_compass": {
+    "mass_GeV": 0.1,
+    "Belle_Upsilon1S_observed_bound": 1.0714752264074963e-6,
+    "predictions_at_f_1e6_GeV": {
+      "incidence_deduplicated": 4.892033347564447e-10,
+      "incidence_multiplicity": 4.891963709607534e-10,
+      "equal_axial": 1.2433940894230618e-9,
+      "top_right_only": 5.906777087819407e-12
+    },
+    "prediction_ratios": {"equal_over_incidence": 2.5416713278172955, "incidence_over_top": 82.82068672698853},
+    "bound_to_incidence_prediction": 2190.245139970156,
+    "curve_level_f_sensitivity_GeV": {"incidence": 21367.496295330915, "equal_axial": 34065.38740005231, "top_right_only": 2347.9250196281987},
+    "interpretation": "Radiative Upsilon production supplies the missing bottom direction in principle, but present invisible sensitivity is roughly three orders of magnitude too weak in branching ratio at the low-mass incidence reference point."
+  }
+}

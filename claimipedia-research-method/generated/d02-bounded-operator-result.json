@@ -1,0 +1,194 @@
+{
+  "protocol": "claimipedia-d02-bounded-operator-strike/1",
+  "strikeId": "d02-factorized-bounded-operator-strike-v1",
+  "theoremCandidate": {
+    "statement": "Let T be a bounded positive operator with fixed support P, let D(z)=T^(1/2) Dhat(z) T^(1/2), and let B=C T^(1/2) with bounded C. If Dhat is norm-holomorphic, boundedly invertible and Herglotz on P H_i, then the factorized correction C Dhat(z)^(-1) C* is bounded and norm-holomorphic, and subtracting it preserves Herglotz passivity.",
+    "identity": "Im(-Dhat^-1)=Dhat^(-*) Im(Dhat) Dhat^-1 >= 0",
+    "compatibility": "B=C T^(1/2) is the Douglas range-factorization gate; closed range of T is sufficient but not necessary.",
+    "qualification": "The factorized form is part of the typed object. General convergence of arbitrary regularizers is not claimed."
+  },
+  "essentialSpectrumFixture": {
+    "interiorScale": "T=diag(1/n) on l2",
+    "properties": [
+      "bounded",
+      "positive",
+      "injective",
+      "compact",
+      "dense non-closed range",
+      "zero in essential spectrum"
+    ],
+    "couplingFamily": "B=T^alpha",
+    "correction": "diag((1/n)^(2alpha-1))/z",
+    "spectralCases": [
+      {
+        "alpha": 0.25,
+        "expected": "unbounded-refuse",
+        "truncatedNorms": [
+          7.525394016428849,
+          23.797385382117742,
+          75.25394016428848
+        ],
+        "normErrors": [
+          168.2335577944013,
+          168.14176039040206,
+          167.8799537383559,
+          166.9691054959198
+        ],
+        "strongErrors": [
+          1.5870184037932105,
+          1.4507390166986194,
+          1.3143421578240764,
+          1.147485756520416
+        ]
+      },
+      {
+        "alpha": 0.5,
+        "expected": "bounded-strong-only",
+        "truncatedNorms": [
+          0.7525394016428849,
+          0.7525394016428849,
+          0.7525394016428849
+        ],
+        "normErrors": [
+          0.7523633426498417,
+          0.7519528121788412,
+          0.7507819772369676,
+          0.7467085400624209
+        ],
+        "strongErrors": [
+          0.16134654104673096,
+          0.08946420609707459,
+          0.05179475828157062,
+          0.028320999768536675
+        ]
+      },
+      {
+        "alpha": 0.75,
+        "expected": "compact-norm-stable",
+        "truncatedNorms": [
+          0.07525394016428849,
+          0.02379738538211774,
+          0.007525394016428849
+        ],
+        "normErrors": [
+          0.106443157784295,
+          0.05830470397378632,
+          0.033662432201836005,
+          0.018437675304597334
+        ],
+        "strongErrors": [
+          0.06714065305354709,
+          0.024677826304922868,
+          0.009424922997004542,
+          0.003177910783287839
+        ]
+      },
+      {
+        "alpha": 1.5,
+        "expected": "trace-class-norm-stable",
+        "truncatedNorms": [
+          0.0000752539401642885,
+          7.525394016428849e-7,
+          7.525394016428849e-9
+        ],
+        "normErrors": [
+          0.053082677765906396,
+          0.016657420200438332,
+          0.005625843707535717,
+          0.0016955752741931913
+        ],
+        "strongErrors": [
+          0.04280577388454504,
+          0.013484308929400597,
+          0.004560207306769638,
+          0.0013750840465608914
+        ]
+      }
+    ]
+  },
+  "topologyFinding": {
+    "criticalAlpha": 0.5,
+    "statement": "At B=T^(1/2), regularized corrections converge strongly to I/z but not in operator norm. Every regulator value is compact, whereas I/z is not compact.",
+    "consequence": "Strong, norm and trace-norm gluing are distinct dispositions."
+  },
+  "supportGate": {
+    "supportEigenvalues": [
+      1,
+      0.4,
+      0,
+      0
+    ],
+    "supportCompatibleValues": [
+      {
+        "re": 0.30301394322372827,
+        "im": -0.5693993164740394
+      },
+      {
+        "re": 0.3085568145508728,
+        "im": -0.5731021682572424
+      },
+      {
+        "re": 0.3086130909953084,
+        "im": -0.57313927855563
+      }
+    ],
+    "forbiddenValues": [
+      {
+        "re": 0.30301394322372827,
+        "im": -4.5693993164740405
+      },
+      {
+        "re": 0.3085568145508728,
+        "im": -400.5731021682573
+      },
+      {
+        "re": 0.3086130909953084,
+        "im": -40000.57313927856
+      }
+    ]
+  },
+  "measureHierarchy": [
+    {
+      "alpha": 0.5,
+      "residueClass": "bounded-noncompact",
+      "partialTraces": [
+        100,
+        1000,
+        10000
+      ]
+    },
+    {
+      "alpha": 0.75,
+      "residueClass": "compact-not-trace-class",
+      "partialTraces": [
+        18.58960382478415,
+        61.80100876524318,
+        198.54464544952413
+      ]
+    },
+    {
+      "alpha": 1.5,
+      "residueClass": "trace-class",
+      "partialTraces": [
+        1.6349839001848923,
+        1.6439345666815615,
+        1.6448340718480652
+      ]
+    }
+  ],
+  "dispositions": {
+    "closedRangeRequired": false,
+    "boundedDouglasFactorRequiredForBoundedFactorizedCorrection": true,
+    "normConvergenceAutomatic": false,
+    "strongConvergenceSufficientForTraceClaims": false,
+    "traceMeasureRequiresSchattenDecoration": true,
+    "nonFredholmCanStillHaveBoundedStrongResponse": true
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "protocol": "scientific-derivation-composition/common-algebra-1",
+  "scope": "Bounded typed path composition for scientific claim proposals. Results are candidates with explicit assumptions, information losses and rejection receipts; they are not entailment, empirical confirmation or corpus admission.",
+  "program": [
+    { "let": "sourceMatches", "value": ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$request.query.source"]] },
+    { "let": "targetMatches", "value": ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$request.query.target"]] },
+    { "assert": ["eq", ["count", "$sourceMatches"], 1], "message": "derivation-source-object-invalid" },
+    { "assert": ["eq", ["count", "$targetMatches"], 1], "message": "derivation-target-object-invalid" },
+    { "assert": ["eq", ["count", ["distinct", ["map", "$request.graph.objects", "o", "$o.id"]]], ["count", "$request.graph.objects"]], "message": "derivation-object-identities-not-unique" },
+    { "assert": ["eq", ["count", ["distinct", ["map", "$request.graph.transformations", "r", "$r.id"]]], ["count", "$request.graph.transformations"]], "message": "derivation-transformation-identities-not-unique" },
+    { "let": "ruleChecks", "value": ["map", "$request.graph.transformations", "r", {
+      "rule": "$r",
+      "fromObject": ["at", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.from"]], 0],
+      "toObject": ["at", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.to"]], 0],
+      "fromExists": ["eq", ["count", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.from"]]], 1],
+      "toExists": ["eq", ["count", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.to"]]], 1],
+      "fromSignatureMatches": ["eq", "$r.fromSignature", ["at", ["map", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.from"]], "o", "$o.signature"], 0]],
+      "toSignatureMatches": ["eq", "$r.toSignature", ["at", ["map", ["filter", "$request.graph.objects", "o", ["eq", "$o.id", "$r.to"]], "o", "$o.signature"], 0]],
+      "authorityBounded": ["and", ["eq", "$r.authority.proposalOnly", true], ["eq", "$r.authority.entails", false], ["eq", "$r.authority.empiricalAuthority", false]],
+      "notAnalogy": ["eq", "$r.analogyOnly", false],
+      "evidencePresent": ["not", ["eq", ["count", "$r.evidenceRefs"], 0]],
+      "lossDeclared": ["or", ["not", ["eq", "$r.kind", "projection"]], ["not", ["eq", ["count", "$r.losses"], 0]]],
+      "contactSafe": ["not", ["not", ["or", ["not", ["eq", "$r.kind", "analytic-continuation"]], ["includes", "$r.removes", "local-contact-polynomials"]]]],
+      "domainChangeDeclared": ["or", ["eq", "$r.fromSignature.domain", "$r.toSignature.domain"], ["includes", "$r.changes", "domain"]],
+      "rankChangeDeclared": ["or", ["eq", "$r.fromSignature.rank", "$r.toSignature.rank"], ["includes", "$r.changes", "rank"]],
+      "varianceChangeDeclared": ["or", ["eq", "$r.fromSignature.variance", "$r.toSignature.variance"], ["includes", "$r.changes", "variance"]],
+      "basisChangeDeclared": ["or", ["eq", "$r.fromSignature.basis", "$r.toSignature.basis"], ["includes", "$r.changes", "basis"]],
+      "regimeChangeDeclared": ["or", ["eq", "$r.fromSignature.regime", "$r.toSignature.regime"], ["includes", "$r.changes", "regime"]],
+      "orderChangeDeclared": ["or", ["eq", "$r.fromSignature.order", "$r.toSignature.order"], ["includes", "$r.changes", "order"]],
+      "schemeChangeDeclared": ["or", ["eq", "$r.fromSignature.scheme", "$r.toSignature.scheme"], ["includes", "$r.changes", "scheme"]],
+      "symmetryChangeDeclared": ["or", ["eq", "$r.fromSignature.symmetry", "$r.toSignature.symmetry"], ["includes", "$r.changes", "symmetry"]],
+      "cpChangeDeclared": ["or", ["eq", "$r.fromSignature.cp", "$r.toSignature.cp"], ["includes", "$r.changes", "cp"]],
+      "supportChangeDeclared": ["or", ["eq", "$r.fromSignature.support", "$r.toSignature.support"], ["includes", "$r.changes", "support"]]
+    }] },
+    { "let": "validRules", "value": ["map", ["filter", "$ruleChecks", "c", ["and", "$c.fromExists", "$c.toExists", "$c.fromSignatureMatches", "$c.toSignatureMatches", "$c.authorityBounded", "$c.notAnalogy", "$c.evidencePresent", "$c.lossDeclared", "$c.contactSafe", "$c.domainChangeDeclared", "$c.rankChangeDeclared", "$c.varianceChangeDeclared", "$c.basisChangeDeclared", "$c.regimeChangeDeclared", "$c.orderChangeDeclared", "$c.schemeChangeDeclared", "$c.symmetryChangeDeclared", "$c.cpChangeDeclared", "$c.supportChangeDeclared"]], "c", "$c.rule"] },
+    { "let": "invalidRules", "value": ["filter", "$ruleChecks", "c", ["not", ["includes", ["map", "$validRules", "r", "$r.id"], "$c.rule.id"]]] },
+    { "let": "initialPath", "value": { "current": "$request.query.source", "steps": [], "assumptions": [], "losses": [], "evidenceRefs": [] } },
+    { "fold": ["range", "$request.query.maxDepth"], "as": "depth", "accumulator": "search", "initial": { "frontier": ["list", "$initialPath"], "accepted": [] }, "steps": [
+      { "fold": "$search.frontier", "as": "path", "accumulator": "expanded", "initial": [], "steps": [
+        { "fold": "$validRules", "as": "rule", "accumulator": "matches", "initial": [], "steps": [], "yield": ["if", ["eq", "$rule.from", "$path.current"], ["append", "$matches", ["list", {
+          "current": "$rule.to",
+          "steps": ["append", "$path.steps", ["list", "$rule.id"]],
+          "assumptions": ["distinct", ["append", "$path.assumptions", "$rule.assumptions"]],
+          "losses": ["distinct", ["append", "$path.losses", "$rule.losses"]],
+          "evidenceRefs": ["distinct", ["append", "$path.evidenceRefs", "$rule.evidenceRefs"]]
+        }]], "$matches"] , "into": "ruleExpansions" },
+        { "let": "expandedNext", "value": ["append", "$expanded", "$ruleExpansions"] }
+      ], "yield": "$expandedNext", "into": "nextFrontier" },
+      { "let": "newAccepted", "value": ["filter", "$nextFrontier", "p", ["eq", "$p.current", "$request.query.target"]] }
+    ], "yield": { "frontier": ["filter", "$nextFrontier", "p", ["not", ["eq", "$p.current", "$request.query.target"]]], "accepted": ["append", "$search.accepted", "$newAccepted"] }, "into": "searchResult" },
+    { "let": "candidates", "value": ["map", "$searchResult.accepted", "p", {
+      "candidateId": ["hash", "$p.steps"],
+      "source": "$request.query.source",
+      "target": "$request.query.target",
+      "steps": "$p.steps",
+      "assumptions": "$p.assumptions",
+      "losses": "$p.losses",
+      "evidenceRefs": "$p.evidenceRefs",
+      "claimStatus": "derived-claim-proposal",
+      "entails": false,
+      "empiricalAuthority": false,
+      "applicationAdmission": false
+    }] },
+    { "let": "workbench", "value": {
+      "protocol": "claimipedia-scientific-derivation-workbench/1",
+      "mode": "read-only-proposal-review",
+      "panes": {
+        "query": {
+          "source": "$request.query.source",
+          "target": "$request.query.target",
+          "maxDepth": "$request.query.maxDepth"
+        },
+        "candidatePaths": "$candidates",
+        "assumptionLossLedger": ["map", "$candidates", "candidate", {
+          "candidateId": "$candidate.candidateId",
+          "assumptions": "$candidate.assumptions",
+          "losses": "$candidate.losses",
+          "evidenceRefs": "$candidate.evidenceRefs"
+        }],
+        "rejectionReceipt": "$invalidRules"
+      },
+      "reviewHandoff": {
+        "claimipediaStage": "Triage",
+        "requiresQualifyingEvidence": true,
+        "automaticPromotion": false,
+        "automaticCorpusAdmission": false,
+        "permittedDisposition": ["hold", "no-go", "retain", "retire"]
+      },
+      "authority": {
+        "proposalOnly": true,
+        "entails": false,
+        "empiricalAuthority": false,
+        "applicationAdmission": false
+      }
+    } },
+    { "let": "result", "value": {
+      "protocol": "scientific-derivation-composition/1",
+      "query": "$request.query",
+      "candidates": "$candidates",
+      "invalidRules": "$invalidRules",
+      "frontier": "$searchResult.frontier",
+      "workbench": "$workbench",
+      "receipt": {
+        "boundedDepth": "$request.query.maxDepth",
+        "objectCount": ["count", "$request.graph.objects"],
+        "transformationCount": ["count", "$request.graph.transformations"],
+        "validTransformationCount": ["count", "$validRules"],
+        "candidateCount": ["count", "$candidates"],
+        "proposalOnly": true,
+        "entails": false,
+        "empiricalAuthority": false,
+        "applicationAdmission": false
+      }
+    } }
+  ]
+}

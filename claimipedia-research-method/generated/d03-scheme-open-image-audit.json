@@ -1,0 +1,112 @@
+{
+  "protocol": "claimipedia-d03-scheme-open-image-audit/1",
+  "auditId": "d03-scheme-brst-real-open-image-v1",
+  "exactResults": {
+    "sourceBasisCovariance": "For an invertible real source change O'=S O, rho'=S rho S^T and det(rho')=det(S)^2 det(rho); rank and positivity are invariant.",
+    "projectiveCovariance": "State ratios transform by the projective bijection r'=(a r+b)/(c r+d); an invertible source change preserves distinct projective directions.",
+    "improvementAtFixedMomentum": "T improvement shifts O_g by kappa(s) O_H. At each fixed s this shifts every finite ratio by the same kappa(s), preserving ratio differences and spectral rank.",
+    "contactQuotient": "Hermitian local real counterterm polynomials have zero absorptive discontinuity on the ordinary real cut, so rho is the scheme-stable primary object.",
+    "vacuumOpenImageNoGo": "A Lorentz-invariant vacuum family parameterized only by invariant mass s has local image dimension at most one, even when samples at separated s linearly span H2(R)."
+  },
+  "gaugeAndCohomologyGate": {
+    "physicalStatement": "Gauge independence is assigned only to matrix elements of renormalized gauge-invariant sources between BRST-cohomology states after the gauge, Goldstone and ghost completion.",
+    "quotientStatement": "BRST-exact and equation-of-motion insertions are null only in the physical on-shell/cohomological quotient; dropping them diagram by diagram is not licensed.",
+    "abelianStrikeStatus": "structural witness, not a completed gauge-fixed amplitude calculation"
+  },
+  "realStructureGate": {
+    "automaticObject": "rho_ab is complex Hermitian positive semidefinite in general",
+    "realReductionCondition": "A common antiunitary symmetry preserving the state and making both Hermitian scalar sources even permits a real source basis and H2(R).",
+    "failureModes": [
+      "CP/T violation",
+      "chemical potentials or non-invariant states",
+      "unresolved absorptive phases"
+    ],
+    "disposition": "H2(C) is canonical until the antiunitary real structure is certified; H2(R) is a conditional reduction."
+  },
+  "fixtures": {
+    "S": [
+      [
+        2,
+        1
+      ],
+      [
+        0.5,
+        1.5
+      ]
+    ],
+    "rho": [
+      [
+        5,
+        1.25
+      ],
+      [
+        1.25,
+        2
+      ]
+    ],
+    "transformed": [
+      [
+        27,
+        12.375
+      ],
+      [
+        12.375,
+        7.625
+      ]
+    ],
+    "determinantLawError": 0,
+    "ratios": [
+      -1.25,
+      0.4,
+      2.1
+    ],
+    "transformedRatios": [
+      -1.7142857142857142,
+      1.0588235294117647,
+      2.03921568627451
+    ],
+    "improvementShift": 3.7,
+    "improvementDifferenceError": 4.440892098500626e-16,
+    "contactImaginaryParts": [
+      {
+        "s": -3,
+        "imaginaryPart": 0
+      },
+      {
+        "s": 0,
+        "imaginaryPart": 0
+      },
+      {
+        "s": 2,
+        "imaginaryPart": 0
+      },
+      {
+        "s": 11,
+        "imaginaryPart": 0
+      }
+    ],
+    "derivative": [
+      5.0000099999891745,
+      0.8944276382205628,
+      12.000060000261213
+    ],
+    "localImageRankUpperBound": 1
+  },
+  "dispositions": {
+    "spectralRankSchemeStable": true,
+    "projectiveDistinctnessBasisStable": true,
+    "improvementCanCreateAThirdDirectionAtFixedS": false,
+    "brstCompletionFinishedBySimplifiedStrike": false,
+    "realSymmetricCarrierAutomatic": false,
+    "vacuumFrequencyFamilyHasOpenThreeDimensionalImage": false,
+    "globalSpanAndLocalImageSeparated": true
+  },
+  "reentry": "An open metric-Higgs image requires at least three independently effective physical controls and a verified rank-three Jacobian; candidate controls include temperature, spatial momentum and Higgs background.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

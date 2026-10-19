@@ -1,0 +1,145 @@
+{
+  "protocol": "claimipedia-d02-boundary-approach-strike/1",
+  "strikeId": "d02-boundary-approach-geometry-strike-v1",
+  "fixture": {
+    "density": "rho=1 on I_n=[2^-n-2^(-3n-1),2^-n+2^(-3n-1)] and zero otherwise",
+    "boundaryPoint": 0,
+    "lebesgueValue": 0,
+    "lebesgueRatios": [
+      {
+        "N": 4,
+        "radius": 0.0625,
+        "averageDensityOnSymmetricBall": 0.001255580357142857
+      },
+      {
+        "N": 6,
+        "radius": 0.015625,
+        "averageDensityOnSymmetricBall": 0.00007847377232142856
+      },
+      {
+        "N": 8,
+        "radius": 0.00390625,
+        "averageDensityOnSymmetricBall": 0.000004904610770089285
+      },
+      {
+        "N": 10,
+        "radius": 0.0009765625,
+        "averageDensityOnSymmetricBall": 3.0653817313057927e-7
+      },
+      {
+        "N": 12,
+        "radius": 0.000244140625,
+        "averageDensityOnSymmetricBall": 1.9158635820656916e-8
+      },
+      {
+        "N": 14,
+        "radius": 0.00006103515625,
+        "averageDensityOnSymmetricBall": 1.1974147387739048e-9
+      }
+    ],
+    "verticalSamples": [
+      {
+        "N": 4,
+        "x": 0,
+        "y": 0.0625,
+        "imaginaryPart": 0.05461819974667007,
+        "realPart": 0.3208492757616066
+      },
+      {
+        "N": 6,
+        "x": 0,
+        "y": 0.015625,
+        "imaginaryPart": 0.015206843660598783,
+        "realPart": 0.33331729282828904
+      },
+      {
+        "N": 8,
+        "x": 0,
+        "y": 0.00390625,
+        "imaginaryPart": 0.0039037700050840213,
+        "realPart": 0.3345534803329304
+      },
+      {
+        "N": 10,
+        "x": 0,
+        "y": 0.0009765625,
+        "imaginaryPart": 0.0009823998841332288,
+        "realPart": 0.3346593491325149
+      },
+      {
+        "N": 12,
+        "x": 0,
+        "y": 0.000244140625,
+        "imaginaryPart": 0.0002460047868699883,
+        "realPart": 0.334667754059567
+      },
+      {
+        "N": 14,
+        "x": 0,
+        "y": 0.00006103515625,
+        "imaginaryPart": 0.00006152651691661035,
+        "realPart": 0.33466839112616875
+      }
+    ],
+    "tangentialPath": "z_n=2^-n+i(2^-3n)^2",
+    "tangentialSamples": [
+      {
+        "n": 4,
+        "x": 0.0625,
+        "y": 5.960464477539063e-8,
+        "tangentialRatio": 1048576,
+        "imaginaryPart": 3.1406161892272593
+      },
+      {
+        "n": 6,
+        "x": 0.015625,
+        "y": 1.4551915228366852e-11,
+        "tangentialRatio": 1073741824,
+        "imaginaryPart": 3.141577394818691
+      },
+      {
+        "n": 8,
+        "x": 0.00390625,
+        "y": 3.552713678800501e-15,
+        "tangentialRatio": 1099511627776,
+        "imaginaryPart": 3.1415924151712176
+      },
+      {
+        "n": 10,
+        "x": 0.0009765625,
+        "y": 8.673617379884035e-19,
+        "tangentialRatio": 1125899906842624,
+        "imaginaryPart": 3.141592649864503
+      },
+      {
+        "n": 12,
+        "x": 0.000244140625,
+        "y": 2.117582368135751e-22,
+        "tangentialRatio": 1152921504606847000,
+        "imaginaryPart": 3.1415926535315855
+      }
+    ],
+    "principalValueAtZero": 0.3346684415445615
+  },
+  "theoremBoundary": {
+    "scalarizedAETopology": "For each scalar matrix element, the Cauchy transform has finite nontangential boundary values almost everywhere; the imaginary part identifies pi times the absolutely continuous density.",
+    "operatorUpgrade": "A bounded WOT, SOT or norm boundary operator requires the corresponding uniform boundedness and convergence evidence; scalarized almost-everywhere limits alone do not supply it.",
+    "principalValue": "The real part is a principal-value/Hilbert-transform decoration where it exists. It is not determined pointwise by the density value and is not a substitute for the full measure.",
+    "approachRule": "Vertical paths are nontangential. Arbitrary tangential paths are a distinct arc decoration and cannot inherit the nontangential theorem."
+  },
+  "dispositions": {
+    "nontangentialAEAdmissibleAfterScalarization": true,
+    "arbitraryTangentialPromotionAdmissible": false,
+    "densityValueDeterminesPrincipalValue": false,
+    "principalValueAndDensityDetermineSingularMeasure": false,
+    "approachGeometryRequiredDecoration": true,
+    "genericBoundaryTheoremImpliesUniformLAP": false
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

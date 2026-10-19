@@ -1,0 +1,192 @@
+{
+  "protocol": "claimipedia-d03-abelian-anomaly-strike/1",
+  "strikeId": "d03-abelian-higgs-anomaly-innovation-v1",
+  "theoremCandidate": {
+    "traceDecomposition": "Write the renormalized trace as O_g=a O_H+c_beta O_F+other beta-function operators, with O_F=F_{mu nu}F^{mu nu} and c_beta proportional to beta_e/(2e).",
+    "leadingOrthogonalChannel": "At the first decoupled spectral order O_H excites scalar-pair states while O_F excites gauge-pair states, so the latter is orthogonal spectral innovation.",
+    "determinantIdentity": "rho=rho_H(a,1)(a,1)^T+c_beta^2 rho_F(1,0)(1,0)^T implies det rho=c_beta^2 rho_H rho_F and Delta=c_beta^2 rho_F.",
+    "planeObstruction": "All such leading matrices lie in span{(a,1)(a,1)^T,E_gg}; full rank at fixed s does not make the spectral family three-dimensional.",
+    "thirdDirectionGate": "A third Jordan direction requires an energy/state-dependent mixed excitation not confined to the Higgs ray plus metric-only anomaly plane."
+  },
+  "fixture": {
+    "massSquared": 1,
+    "a": 2,
+    "cBeta": 0.08,
+    "samples": [
+      {
+        "s": 0.5,
+        "rhoH": 0,
+        "rhoF": 0.25,
+        "rho": [
+          [
+            0.0016,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "determinant": 0,
+        "innovation": null,
+        "rank": 1
+      },
+      {
+        "s": 2,
+        "rhoH": 0,
+        "rhoF": 4,
+        "rho": [
+          [
+            0.0256,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "determinant": 0,
+        "innovation": null,
+        "rank": 1
+      },
+      {
+        "s": 4.1,
+        "rhoH": 0.15617376188860577,
+        "rhoF": 16.81,
+        "rho": [
+          [
+            0.7322790475544231,
+            0.31234752377721153
+          ],
+          [
+            0.31234752377721153,
+            0.15617376188860577
+          ]
+        ],
+        "determinant": 0.01680179799902376,
+        "innovation": 0.10758400000000001,
+        "rank": 2
+      },
+      {
+        "s": 5,
+        "rhoH": 0.44721359549995787,
+        "rhoF": 25,
+        "rho": [
+          [
+            1.9488543819998314,
+            0.8944271909999157
+          ],
+          [
+            0.8944271909999157,
+            0.44721359549995787
+          ]
+        ],
+        "determinant": 0.0715541752799933,
+        "innovation": 0.15999999999999992,
+        "rank": 2
+      },
+      {
+        "s": 8,
+        "rhoH": 0.7071067811865476,
+        "rhoF": 64,
+        "rho": [
+          [
+            3.2380271247461905,
+            1.4142135623730951
+          ],
+          [
+            1.4142135623730951,
+            0.7071067811865476
+          ]
+        ],
+        "determinant": 0.2896309375740098,
+        "innovation": 0.40959999999999974,
+        "rank": 2
+      },
+      {
+        "s": 16,
+        "rhoH": 0.8660254037844386,
+        "rhoF": 256,
+        "rho": [
+          [
+            5.102501615137754,
+            1.7320508075688772
+          ],
+          [
+            1.7320508075688772,
+            0.8660254037844386
+          ]
+        ],
+        "determinant": 1.4188960215604243,
+        "innovation": 1.6383999999999999,
+        "rank": 2
+      }
+    ],
+    "higgsRayMatrix": [
+      [
+        4,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "anomalyMatrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "planeNormal": [
+      0,
+      2.8284271247461903,
+      -1
+    ],
+    "planeResiduals": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "maximumTripleSpanDeterminant": 2.220446049250313e-16
+  },
+  "mixedDirectionWitness": {
+    "mixedDirection": [
+      1,
+      -0.55
+    ],
+    "mixedMatrix": [
+      [
+        1,
+        -0.55
+      ],
+      [
+        -0.55,
+        0.30250000000000005
+      ]
+    ],
+    "fullSpanDeterminant": 1.6334166645409252
+  },
+  "dispositions": {
+    "traceAnomalyCanCreatePositiveInnovation": true,
+    "leadingAnomalyCanCreateFixedPointRankTwo": true,
+    "leadingDecoupledAnomalyCreatesFullH2Family": false,
+    "rankTwoAtOneEnergyImpliesSpin23": false,
+    "mixedSpectralDirectionNeededForFullCarrier": true
+  },
+  "nextGate": "Calculate the first nonzero mixed spectral amplitudes and their energy dependence in scalar QED/Abelian Higgs theory; test whether three sampled matrices have nonzero coordinate determinant after the contact quotient.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

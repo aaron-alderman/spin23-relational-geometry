@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "source": {
+    "paper": "NA62, Searches for hidden sectors using K+ to pi+ X decays",
+    "arxiv": "2507.17286v2",
+    "figure": "Figure 6b",
+    "acceptance_equation": "A(m,tau)=A(m,0)*(1-exp(-tau0/tau)), tau0=0.07 ns"
+  },
+  "mass_MeV": 300,
+  "digitized_prompt_observed_90pct_CL": {
+    "lower": {"mass_MeV": 299.5475, "limit": 1.175977763698103e-10},
+    "upper": {"mass_MeV": 300.35699997132616, "limit": 1.6058033642851897e-10},
+    "log_interpolated": 1.3996720375283923e-10
+  },
+  "fixed_10TeV_model_recast": {
+    "common_reference_f_GeV": 1000000,
+    "incidence_universal": {
+      "BR_K_times_BR_mumu_at_reference": 1.630608335490795e-8,
+      "proper_lifetime_ns_at_reference": 0.7598537893438998,
+      "curve_crossing_f_GeV": 1803595.2476422507,
+      "proper_lifetime_ns_at_crossing": 2.471770804357146,
+      "branching_product_at_crossing": 5.012697457524477e-9
+    },
+    "equal_axial_universal": {
+      "BR_K_times_BR_mumu_at_reference": 1.5924812718671343e-8,
+      "proper_lifetime_ns_at_reference": 0.057285288213789004,
+      "curve_crossing_f_GeV": 3388837.0269744573,
+      "proper_lifetime_ns_at_crossing": 0.6578766461196136,
+      "branching_product_at_crossing": 1.386669509733343e-9
+    },
+    "top_right_only": {
+      "BR_K_times_BR_mumu_at_reference": 1.7301724915751324e-8,
+      "proper_lifetime_ns_at_reference": 6.4354070981804,
+      "curve_crossing_f_GeV": 1075563.9656887657,
+      "proper_lifetime_ns_at_crossing": 7.444722474575636,
+      "branching_product_at_crossing": 1.4956050237445227e-8
+    }
+  },
+  "status": "curve-and-acceptance recast; not an official likelihood or a profile over extra EFT operators"
+}

@@ -1,0 +1,177 @@
+{
+  "protocol": "claimipedia-d05-conditioning-audit/1",
+  "auditId": "d05-normalized-response-conditioning-v1",
+  "theoremCandidate": {
+    "rankCovariance": "Under X'=A X, a row response matrix transforms M'=M A^T and the coefficient covector as b'=A^{-T}b; signals M b and matrix rank are invariant.",
+    "conditioningQualification": "Numerical condition number is not invariant under arbitrary operator rescaling or mixing. A normalization/metric on operator space must be declared before comparing experimental sensitivity.",
+    "thresholdAndUltraviolet": "The inversion is singular at the vector threshold and becomes poorly scaled again at high energy because the transverse ratio grows quadratically in s while the longitudinal and quartic directions remain bounded.",
+    "finiteWindow": "In the declared fixed operator normalization, the model has a finite near-threshold/intermediate window of best conditioning; energy-dependent column normalization can hide the ultraviolet scaling problem and is only a diagnostic."
+  },
+  "parameters": {
+    "v": 2,
+    "e": 0.4,
+    "lambda": 0.3,
+    "mA2": 0.6400000000000001,
+    "mh2": 1.2
+  },
+  "scan": {
+    "commonThreshold": 4.8,
+    "pointCount": 600,
+    "first": {
+      "s": 4.800479999999999,
+      "rawDeterminant": 17.18831220933671,
+      "rawCondition": 6.106647463226229,
+      "normalizedCondition": 2.948489053923172,
+      "columnNorms": [
+        9.988823019624563,
+        2.8286156739845576
+      ]
+    },
+    "optimum": {
+      "s": 4.800479999999999,
+      "rawDeterminant": 17.18831220933671,
+      "rawCondition": 6.106647463226229,
+      "normalizedCondition": 2.948489053923172,
+      "columnNorms": [
+        9.988823019624563,
+        2.8286156739845576
+      ]
+    },
+    "last": {
+      "s": 144,
+      "rawDeterminant": 62117.68506946997,
+      "rawCondition": 4081.2285482139296,
+      "normalizedCondition": 2.414488214595453,
+      "columnNorms": [
+        15922.200051507869,
+        5.517751276144208
+      ]
+    }
+  },
+  "basisCovarianceFixture": {
+    "basis": [
+      [
+        1.2,
+        0.35
+      ],
+      [
+        -0.15,
+        0.9
+      ]
+    ],
+    "base": [
+      [
+        9.902670179999992,
+        2.000133324445037
+      ],
+      [
+        1.3090869426896334,
+        2.000133324445037
+      ]
+    ],
+    "transformed": [
+      [
+        12.583250879555754,
+        0.3147194650005345
+      ],
+      [
+        2.2709509947833233,
+        1.6037569505970883
+      ]
+    ],
+    "beta": [
+      0.023,
+      -0.041
+    ],
+    "betaPrime": [
+      0.012847682119205298,
+      -0.05055187637969095
+    ],
+    "originalSignal": [
+      0.1457559478377533,
+      -0.051896466620384954
+    ],
+    "transformedSignal": [
+      0.1457559478377533,
+      -0.051896466620384954
+    ],
+    "covarianceError": 0,
+    "determinantLawError": 0
+  },
+  "noiseWitnesses": [
+    {
+      "s": 4.800479999999999,
+      "condition": 6.106647463226229,
+      "signal": [
+        0.1457559478377533,
+        -0.051896466620384954
+      ],
+      "noise": [
+        0.01,
+        -0.01
+      ],
+      "recovered": [
+        0.0253273178891393,
+        -0.04752289589934222
+      ],
+      "relativeError": 0.1473208390716663
+    },
+    {
+      "s": 4.800479999999999,
+      "condition": 6.106647463226229,
+      "signal": [
+        0.1457559478377533,
+        -0.051896466620384954
+      ],
+      "noise": [
+        0.01,
+        -0.01
+      ],
+      "recovered": [
+        0.0253273178891393,
+        -0.04752289589934222
+      ],
+      "relativeError": 0.1473208390716663
+    },
+    {
+      "s": 144,
+      "condition": 4081.2285482139296,
+      "signal": [
+        366.0506327868852,
+        -0.13051071087260163
+      ],
+      "noise": [
+        3.6605063278688523,
+        -0.01
+      ],
+      "recovered": [
+        0.023230546130078106,
+        -0.04363870223574196
+      ],
+      "relativeError": 0.056343729378459925
+    }
+  ],
+  "dispositions": {
+    "rankDependsOnOperatorBasis": false,
+    "betaSignalDependsOnOperatorBasis": false,
+    "conditionNumberIsBasisIndependentWithoutMetric": false,
+    "thresholdIsGoodTomographyPoint": false,
+    "arbitrarilyHighEnergyAlwaysImprovesConditioning": false,
+    "finiteConditionedWindowExistsInFixture": true
+  },
+  "measurementContract": [
+    "declare operator normalization and renormalization scheme",
+    "use dimensionless or whitened response coordinates",
+    "avoid exact threshold and uncontrolled ultraviolet extrapolation",
+    "propagate covariance of mixed correlator estimates through the inverse",
+    "repeat the rank and conditioning audit after loop corrections"
+  ],
+  "nextGate": "Express the inclusive Euclidean correlator moments that determine the mixed spectral mean and innovation, and identify a lattice/dispersive estimator with a declared covariance model.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

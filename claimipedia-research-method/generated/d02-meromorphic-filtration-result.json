@@ -1,0 +1,282 @@
+{
+  "protocol": "claimipedia-d02-meromorphic-filtration-execution/1",
+  "strikeId": "d02-coordinate-free-meromorphic-strike-v1",
+  "theoremCandidate": {
+    "statement": "For finite-dimensional one-parameter analytic germs D_s and B_s with D_s invertible off s=0, C_s=B_s D_s^-1 B_s^T is meromorphic. If its Laurent principal part vanishes, C_s has a unique removable limit invariant under every analytic invertible interior-frame germ.",
+    "proofSkeleton": [
+      "D_s^-1=adj(D_s)/det(D_s) is meromorphic wherever det(D_s) is not the zero germ.",
+      "Contraction with analytic B_s preserves meromorphicity.",
+      "A meromorphic finite-dimensional matrix germ bounded at the puncture has zero principal part and therefore a unique removable value.",
+      "For D'_s=T_s^T D_s T_s and B'_s=B_s T_s, direct cancellation gives B'_s(D'_s)^-1(B'_s)^T=B_sD_s^-1B_s^T."
+    ],
+    "decisionRule": {
+      "boundedCorrection": "remove the singularity and glue the unique value",
+      "poleInCorrection": "retain the interior or refuse elimination",
+      "decoratedPole": "a finite part is allowed only as scheme-relative data when a normal coordinate and subtraction prescription are explicit decorations"
+    }
+  },
+  "unequalOrderNonDiagonalFixture": {
+    "diagonalModel": "D=diag(s^2 z,s^4(z+1)), B=(s b1,s^2 b2)",
+    "mixingFrame": "T_s=[[1,s],[0,1+s]]",
+    "expectedCorrection": {
+      "re": 0.19689797026962497,
+      "im": -0.4690860787062411
+    },
+    "frameSamples": [
+      {
+        "s": 0.4,
+        "mixedInterior": [
+          [
+            {
+              "re": 0.05920000000000001,
+              "im": 0.19040000000000004
+            },
+            {
+              "re": 0.023680000000000007,
+              "im": 0.07616000000000002
+            }
+          ],
+          [
+            {
+              "re": 0.023680000000000007,
+              "im": 0.07616000000000002
+            },
+            {
+              "re": 0.07821312000000001,
+              "im": 0.09017344000000001
+            }
+          ]
+        ],
+        "mixedCoupling": [
+          {
+            "re": 0.292,
+            "im": 0
+          },
+          {
+            "re": 0.024959999999999996,
+            "im": 0
+          }
+        ],
+        "diagonalValue": {
+          "re": 0.1968979702696249,
+          "im": -0.46908607870624097
+        },
+        "mixedValue": {
+          "re": 0.19689797026962494,
+          "im": -0.4690860787062411
+        },
+        "invarianceError": 1.1443916996305594e-16
+      },
+      {
+        "s": 0.1,
+        "mixedInterior": [
+          [
+            {
+              "re": 0.0037000000000000006,
+              "im": 0.011900000000000003
+            },
+            {
+              "re": 0.0003700000000000001,
+              "im": 0.0011900000000000003
+            }
+          ],
+          [
+            {
+              "re": 0.0003700000000000001,
+              "im": 0.0011900000000000003
+            },
+            {
+              "re": 0.00020277000000000004,
+              "im": 0.0002629900000000001
+            }
+          ]
+        ],
+        "mixedCoupling": [
+          {
+            "re": 0.073,
+            "im": 0
+          },
+          {
+            "re": 0.002789999999999999,
+            "im": 0
+          }
+        ],
+        "diagonalValue": {
+          "re": 0.1968979702696249,
+          "im": -0.46908607870624097
+        },
+        "mixedValue": {
+          "re": 0.1968979702696249,
+          "im": -0.46908607870624114
+        },
+        "invarianceError": 1.6653345369377348e-16
+      },
+      {
+        "s": 0.02,
+        "mixedInterior": [
+          [
+            {
+              "re": 0.000148,
+              "im": 0.000476
+            },
+            {
+              "re": 0.00000296,
+              "im": 0.00000952
+            }
+          ],
+          [
+            {
+              "re": 0.00000296,
+              "im": 0.00000952
+            },
+            {
+              "re": 2.8725568000000005e-7,
+              "im": 3.8849216e-7
+            }
+          ]
+        ],
+        "mixedCoupling": [
+          {
+            "re": 0.0146,
+            "im": 0
+          },
+          {
+            "re": 0.00012471999999999998,
+            "im": 0
+          }
+        ],
+        "diagonalValue": {
+          "re": 0.19689797026962497,
+          "im": -0.4690860787062413
+        },
+        "mixedValue": {
+          "re": 0.1968979702696252,
+          "im": -0.46908607870624125
+        },
+        "invarianceError": 2.2887833992611187e-16
+      },
+      {
+        "s": 0.005,
+        "mixedInterior": [
+          [
+            {
+              "re": 0.00000925,
+              "im": 0.00002975
+            },
+            {
+              "re": 4.625e-8,
+              "im": 1.4875e-7
+            }
+          ],
+          [
+            {
+              "re": 4.625e-8,
+              "im": 1.4875e-7
+            },
+            {
+              "re": 1.09608390625e-9,
+              "im": 1.4949560937499999e-9
+            }
+          ]
+        ],
+        "mixedCoupling": [
+          {
+            "re": 0.00365,
+            "im": 0
+          },
+          {
+            "re": 0.00000794875,
+            "im": 0
+          }
+        ],
+        "diagonalValue": {
+          "re": 0.19689797026962497,
+          "im": -0.4690860787062413
+        },
+        "mixedValue": {
+          "re": 0.19689797026962505,
+          "im": -0.4690860787062412
+        },
+        "invarianceError": 1.3877787807814457e-16
+      }
+    ],
+    "effectiveLimit": {
+      "re": 1.151102029730375,
+      "im": 2.445086078706241
+    },
+    "passiveAfterElimination": true
+  },
+  "fixedDecorationCounterexample": {
+    "pole": "1/s^2",
+    "coordinateChange": "s=r+a r^2",
+    "transformedExpansion": "r^-2-2a r^-1+3a^2+O(r)",
+    "finitePartFixtures": [
+      {
+        "reparameterizationCoefficient": 0,
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "expectedConstant": 0
+      },
+      {
+        "reparameterizationCoefficient": 0.2,
+        "values": [
+          0.11996800813358277,
+          0.11999039848660686,
+          0.11999677121639252
+        ],
+        "expectedConstant": 0.12000000000000002
+      },
+      {
+        "reparameterizationCoefficient": -0.55,
+        "values": [
+          0.9081659577786922,
+          0.9076996923727165,
+          0.9075665473937988
+        ],
+        "expectedConstant": 0.9075000000000002
+      }
+    ],
+    "conclusion": "Pole subtraction is not invariant under nonlinear regular reparameterization; order, leading symbol and projective direction do not fix a canonical finite part."
+  },
+  "divergentSchurFixture": [
+    {
+      "s": 0.1,
+      "value": {
+        "re": 12.696265292981328,
+        "im": -40.83393432066967
+      }
+    },
+    {
+      "s": 0.03,
+      "value": {
+        "re": 141.06961436645918,
+        "im": -453.7103813407741
+      }
+    },
+    {
+      "s": 0.01,
+      "value": {
+        "re": 1269.6265292981325,
+        "im": -4083.393432066966
+      }
+    }
+  ],
+  "scope": {
+    "closed": "finite-dimensional analytic or polynomial one-parameter germs, including non-diagonal unequal-order crossings",
+    "notClosed": [
+      "smooth non-analytic flat germs",
+      "infinite-dimensional essential-spectrum crossings",
+      "scheme-independent values for pole cases"
+    ]
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entailsBeyondDeclaredAnalyticFiniteDimensionalScope": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

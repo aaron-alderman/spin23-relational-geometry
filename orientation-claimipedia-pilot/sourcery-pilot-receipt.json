@@ -1,0 +1,96 @@
+{
+  "protocol": "claimipedia.orientation.sourcery-pilot-receipt/1",
+  "executedAt": "2026-10-19",
+  "activeGenerationId": "sqlite-claimipedia-boundary-mature-v5r9r2",
+  "operation": "scientific_derivation_compose.compose-derivation",
+  "graph": {
+    "objectCount": 9,
+    "transformationCount": 15,
+    "validTransformationCount": 11,
+    "invalidTransformationCount": 4,
+    "grammarHash": "abc99a2cbde179fba12445b8cbbecebf24fc56241782b1b722dde2299b4a0d7e"
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "applicationAdmission": false
+  },
+  "queries": [
+    {
+      "id": "relational-to-review",
+      "source": "orientation.relation",
+      "target": "orientation.programme-review",
+      "maxDepth": 3,
+      "requestHash": "bb9fbca15a6e6b66420eff66bc81eb3ef4e82d7a1c0c69df724e59caf4d3ded2",
+      "candidatePaths": [
+        ["handoff-relational-definition"],
+        ["operationalize-orientation-through-attention", "handoff-attention-hypothesis"],
+        ["operationalize-orientation-through-attention", "test-identity-central-anomaly-response", "handoff-identity-hypothesis"]
+      ]
+    },
+    {
+      "id": "meaning-to-review",
+      "source": "meaning.warrant-separation",
+      "target": "orientation.programme-review",
+      "maxDepth": 3,
+      "requestHash": "1ff61ba05dcbd40d94ba75a69258753ed606939d4b06c36929e428bc2e938b76",
+      "candidatePaths": [
+        ["handoff-meaning-guardrail"],
+        ["guard-orientation-evaluation", "handoff-corrigibility-proposal"]
+      ]
+    },
+    {
+      "id": "myth-to-review",
+      "source": "myth.transformation-invariants",
+      "target": "orientation.programme-review",
+      "maxDepth": 2,
+      "requestHash": "be3219b8f24ebf0007930d52bcf5ba1400924bb85f073175b64aee2650473b2b",
+      "candidatePaths": [["handoff-myth-hypothesis"]]
+    },
+    {
+      "id": "moral-to-review",
+      "source": "moral.frame-transformation-invariance",
+      "target": "orientation.programme-review",
+      "maxDepth": 2,
+      "requestHash": "5582fc4bc372ad71c9f29936f6118264840165ca8ce14628ebaeff2cc5dad65d",
+      "candidatePaths": [["handoff-moral-proposal"]]
+    },
+    {
+      "id": "logos-to-review",
+      "source": "logos.landscape-interpretation",
+      "target": "orientation.programme-review",
+      "maxDepth": 2,
+      "requestHash": "7dfb7dc619b5432888355b60c94ebd550230c9819fbd8c03c2c7783a663a5e89",
+      "candidatePaths": [["handoff-logos-interpretation"]]
+    },
+    {
+      "id": "myth-to-moral",
+      "source": "myth.transformation-invariants",
+      "target": "moral.frame-transformation-invariance",
+      "maxDepth": 2,
+      "requestHash": "6d3e122618ca6d19c7067620c3bf001ba807c7c0efd6d6162adef3a6f941e70a",
+      "candidatePaths": []
+    },
+    {
+      "id": "myth-to-logos",
+      "source": "myth.transformation-invariants",
+      "target": "logos.landscape-interpretation",
+      "maxDepth": 2,
+      "requestHash": "c58fd247da9afe5bbba53008c6c4a8dfceeb7f1f8455f82a131a8b1bc7fa6b7e",
+      "candidatePaths": []
+    }
+  ],
+  "rejectedRules": [
+    "invalid-myth-to-moral-truth",
+    "invalid-myth-to-logos-proof",
+    "invalid-meaning-to-warrant",
+    "invalid-identity-defense-to-falsity"
+  ],
+  "interpretation": {
+    "positive": "The graph can preserve distinct admissible proposal paths while carrying assumptions and losses.",
+    "negative": "A path is not an entailment, an empirical result, or an admission decision.",
+    "reflexiveQualification": "The rejected transformations were authored as analogy-only or category-collapse fixtures. Sourcery enforced the declared boundary; it did not independently infer the philosophical error. Positive paths likewise attest graph consistency rather than truth.",
+    "nextTest": "Independent reviewers should challenge the eight claim packets and attempt to force at least one split, downgrade, or retirement."
+  }
+}

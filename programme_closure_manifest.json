@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "title": "Spin(2,3) programme end-to-end closure manifest",
+  "date": "2026-10-17",
+  "terminal_requirement": "A source-derived, gauge-invariant, normalized and causal action must pass every upstream gate and produce at least one dimensionally normalized observable not inherited from generic Gaussian, Schur, symmetry or response theory.",
+  "status_vocabulary": {
+    "established": "The stated mathematical or physical bridge is proved at the declared type and scope.",
+    "conditional": "The bridge is exact after an input not yet derived by the programme is supplied.",
+    "underdetermined": "Several inequivalent choices survive all current constraints.",
+    "obstructed": "An exact counterexample or type/no-go theorem closes the proposed direct route.",
+    "missing": "No construction at the required type currently exists."
+  },
+  "gates": [
+    {
+      "id": "G00",
+      "name": "Chiral Standard-Model matter carrier",
+      "depends_on": [],
+      "required_output": "A mirror-free, anomaly-consistent, chirally typed Standard-Model/Furey matter module with Yukawa incidence.",
+      "status": "established",
+      "first_missing_datum": null,
+      "evidence": [
+        {"document": "109_furey_oriented_sector_anomaly_audit.md", "certificate_required": true},
+        {"document": "197_unique_gauge_invariant_holomorphic_pairing_on_completed_matter.md", "certificate_required": true}
+      ]
+    },
+    {
+      "id": "G01",
+      "name": "Gauge-invariant physical source selection",
+      "depends_on": ["G00"],
+      "required_output": "A unique or dynamically selected pair of gauge-invariant Standard-Model composite probes with declared Lorentz type and non-redundant rank-two response support.",
+      "status": "underdetermined",
+      "first_missing_datum": "Incidence and B-L define a canonical candidate source plane in the completed branch, but Ward protection leaves a scale-times-shear affine frame torsor; no renormalization condition or operational coupling selects one calibrated basis.",
+      "evidence": [
+        {"document": "628_gauge_invariant_two_face_sources_form_five_h2r_multiplets_but_one_redundant_image_is_null.md", "certificate_required": true},
+        {"document": "650_incidence_and_b_minus_l_generate_a_full_rank_relational_current_carrier.md", "certificate_required": true},
+        {"document": "796_four_higgs_dressed_yukawa_gram_sources_can_supply_rank_four_tomography_only_in_the_nu_right_completed_branch.md", "certificate_required": true},
+        {"document": "810_four_independent_yukawa_gram_probes_form_a_source_label_space_not_yet_a_physical_four_atom_jordan_quotient.md", "certificate_required": true},
+        {"document": "programme_closure_02_the_source_subspace_is_canonical_but_its_frame_is_an_affine_torsor.md", "certificate_required": true}
+      ]
+    },
+    {
+      "id": "G02",
+      "name": "Microscopic or controlled effective action",
+      "depends_on": ["G01"],
+      "required_output": "One gauge-invariant local or controlled boundary action whose fields and couplings generate the selected probes and their response without fitted carrier matrices.",
+      "status": "established",
+      "first_missing_datum": null,
+      "evidence": [
+        {"document": "203_three_boundary_scalar_star_realizes_peirce_schur_recursion.md", "certificate_required": true},
+        {"document": "627_a_nondynamical_two_face_field_realizes_the_h2r_response_without_mirror_poles.md", "certificate_required": true},
+        {"document": "664_the_pole_response_has_an_explicit_two_port_open_hamiltonian_realization.md", "certificate_required": true},
+        {"document": "667_broken_phase_standard_model_residues_define_a_minimal_ten_state_relational_hamiltonian.md", "certificate_required": true},
+        {"document": "freudenthal_action_02_gaussian_schur_boundary_realization.md", "certificate_required": true},
+        {"document": "programme_closure_03_a_controlled_standard_model_external_source_action_exists_but_does_not_fix_the_frame.md", "certificate_required": true}
+      ],
+      "qualification": "Established as a nondynamical external-source generating functional conditional on a frame in the G01 source plane; it does not fix finite operator mixing, contacts or the real slice."
+    },
+    {
+      "id": "G03",
+      "name": "Ward quotient and causal/KMS closure",
+      "depends_on": ["G02"],
+      "required_output": "A Ward-legal physical quotient with positive spectral measure, analytic Herglotz response and controlled KMS sewing.",
+      "status": "conditional",
+      "first_missing_datum": "Vacuum locality, Hermiticity and Lorentz covariance close the transverse two-current spectral measure on Sym2(R)+, with B-L Ward-protected only before Majorana breaking; the remaining datum is a renormalized subtraction/contact prescription and, for thermal claims, an explicit KMS tensor decomposition in the chosen source frame.",
+      "evidence": [
+        {"document": "205_conserved_current_ward_quotient_to_h2_response.md", "certificate_required": true},
+        {"document": "213_fixed_temperature_kms_herglotz_schur_sewing.md", "certificate_required": true},
+        {"document": "626_exchange_fixed_matrix_spectral_measures_preserve_the_h2r_carrier.md", "certificate_required": true},
+        {"document": "656_the_incidence_current_cannot_be_repaired_into_a_conserved_current.md", "certificate_required": true},
+        {"document": "programme_closure_04_vacuum_locality_closes_the_two_current_spectral_measure_on_h2r_but_not_the_thermal_response.md", "certificate_required": true}
+      ],
+      "qualification": "The zero-temperature vacuum spectral measure and its subtracted Herglotz transform are established for the local Hermitian source pair. Full finite-temperature/KMS closure and the scheme-dependent polynomial part remain conditional."
+    },
+    {
+      "id": "G04",
+      "name": "Positive H2(R) carrier closure",
+      "depends_on": ["G03"],
+      "required_output": "A full-rank reciprocal two-channel response closing on the positive H2(R) cone across the relevant kinematic range.",
+      "status": "established",
+      "first_missing_datum": null,
+      "evidence": [
+        {"document": "622_exchange_fixed_two_topology_observables_are_the_h2r_spin23_carrier.md", "certificate_required": true},
+        {"document": "623_standard_model_invariant_two_topology_kernels_decompose_into_five_h2r_cones.md", "certificate_required": true},
+        {"document": "653_distinct_threshold_running_can_make_the_relational_response_generate_all_of_h2r.md", "certificate_required": true},
+        {"document": "655_broken_phase_mass_splitting_generically_spans_the_relational_h2_carrier.md", "certificate_required": true},
+        {"document": "programme_closure_05_the_source_first_and_topology_first_routes_meet_only_at_an_abstract_cone.md", "certificate_required": true}
+      ],
+      "qualification": "Established by both a generic source-current route and a separately typed topology-face route. The two copies of H2(R)+ have no established physical intertwiner and must not be identified merely because their cones are isomorphic."
+    },
+    {
+      "id": "G05",
+      "name": "Physical two-face and real-slice selector",
+      "depends_on": ["G04"],
+      "required_output": "One source-derived completely positive selector choosing the physical rank-two face and real link line without erasing that face or introducing an independent conjugation.",
+      "status": "underdetermined",
+      "first_missing_datum": "Peirce, exchange and Clifford selectors exist, but require separately typed stages; Furey SU(3) and conjugation still leave two axes and positivity chooses neither.",
+      "evidence": [
+        {"document": "685_a_heavy_third_face_dynamically_selects_the_rank_two_peirce_corner_but_not_its_real_slice.md", "certificate_required": true},
+        {"document": "688_the_combined_peirce_exchange_superselection_selector_is_completely_positive_on_the_doubled_carrier.md", "certificate_required": true},
+        {"document": "706_a_clifford_multiplicity_conditional_expectation_exactly_selects_h2r_without_the_g2_fixed_range_excess.md", "certificate_required": true},
+        {"document": "709_fureys_su3_stabilizer_leaves_a_circle_of_clifford_response_lines_until_conjugation_parity_selects_an_axis.md", "certificate_required": true},
+        {"document": "710_the_furey_odd_imaginary_axis_also_has_an_exact_cp_h2r_selector_so_positivity_does_not_choose_the_axis.md", "certificate_required": true}
+      ]
+    },
+    {
+      "id": "G06",
+      "name": "Source/dual typing, UV scale and contact normalization",
+      "depends_on": ["G05"],
+      "required_output": "A source/response or stiffness/covariance dictionary with fixed units, subtraction tensor and dynamical bracket scale derived from the same action.",
+      "status": "underdetermined",
+      "first_missing_datum": "For the declared integer currents the free three-generation UV cut fixes the nonlocal metric G/(8 pi^2) and an orthogonal shear convention, but it does not select the physical coupling or finite contact tensor; Jordan-Lie compatibility and positivity also do not calibrate the dynamical bracket.",
+      "evidence": [
+        {"document": "641_uv_normalization_generically_reduces_diagonal_siegel_locking_to_a_discrete_spectral_symmetry.md", "certificate_required": true},
+        {"document": "642_relative_contact_terms_obstruct_a_scheme_independent_siegel_lock.md", "certificate_required": true},
+        {"document": "658_the_ward_and_uv_stabilizer_intersection_contains_only_contact_translations.md", "certificate_required": true},
+        {"document": "835_jordan_lie_compatibility_and_ward_positivity_do_not_fix_the_dynamical_bracket_scale.md", "certificate_required": true},
+        {"document": "programme_closure_06_the_free_standard_model_uv_cut_fixes_a_relative_metric_but_not_the_physical_ports.md", "certificate_required": true},
+        {"document": "freudenthal_action_synthesis_mechanism_and_no_go.md", "certificate_required": false}
+      ]
+    },
+    {
+      "id": "G07",
+      "name": "Physical orientation selection",
+      "depends_on": ["G06"],
+      "required_output": "An action or boundary condition selecting one member of the source-to-flux orientation torsor and retaining a measurable orientation-odd coherence.",
+      "status": "underdetermined",
+      "first_missing_datum": "A normalized ±1 index and positive interferometric witnesses exist, but flux reversal exchanges the two choices and no source-derived action chooses one.",
+      "evidence": [
+        {"document": "788_the_18_background_torsor_is_exactly_three_framed_matter_pairings_times_a_central_three_phase_but_the_physical_source_map_is_open.md", "certificate_required": true},
+        {"document": "797_positive_unital_source_to_projector_maps_reduce_to_24_order_isomorphisms_but_regular_torsor_covariance_selects_none.md", "certificate_required": true},
+        {"document": "800_flux_reversal_exchanges_the_two_global_furey_to_projector_assignments_so_the_last_bit_is_an_orientation_torsor.md", "certificate_required": true},
+        {"document": "803_positive_channel_weights_cancel_from_a_normalized_orientation_index_leaving_an_exact_plus_or_minus_one_flux_bit.md", "certificate_required": true},
+        {"document": "824_a_positive_even_odd_character_interferometer_measures_relational_orientation_by_balanced_output_differences.md", "certificate_required": true}
+      ]
+    },
+    {
+      "id": "G08",
+      "name": "Algebraic completion and parent comparison",
+      "depends_on": ["G04", "G05", "G07"],
+      "required_output": "An explicit invariant-preserving intertwiner showing that an enlarged Lie, Jordan, Freudenthal, Kantor or structurable object constrains the selected physical action or observable.",
+      "status": "obstructed",
+      "first_missing_datum": "The tested enlargements reproduce or regrade known structures but fail selection, CP covariance, grading compatibility or physical pairing; no E7/E8 parent is selected.",
+      "evidence": [
+        {"document": "830_the_raw_furey_tro_product_fails_the_second_kantor_identity_while_its_structurable_linking_product_passes.md", "certificate_required": true},
+        {"document": "831_the_structurable_furey_five_grading_is_classical_and_spin23_appears_only_on_the_real_lepton_slice.md", "certificate_required": true},
+        {"document": "832_cp_pairing_preserves_the_lepton_jordan_graph_but_not_the_kantor_spin23_slice_closing_the_oriented_parent_gate.md", "certificate_required": true},
+        {"document": "833_the_freudenthal_quartic_can_homogenize_the_h2r_determinant_but_does_not_select_the_embedding_orientation_or_e8_parent.md", "certificate_required": true},
+        {"document": "freudenthal_parallel_synthesis_decision_memo.md", "certificate_required": false}
+      ],
+      "qualification": "The established H2(R) Jordan-to-TKK bridge remains exact; the obstruction concerns promotion to a more fundamental selecting parent."
+    },
+    {
+      "id": "G09",
+      "name": "Pole, residue and scattering realization",
+      "depends_on": ["G03", "G04", "G06"],
+      "required_output": "A physical channel dictionary carrying the normalized response into poles, positive residues and an on-shell scattering observable.",
+      "status": "conditional",
+      "first_missing_datum": "Every finite rational positive response has a passive realization, but current residues are relational superpositions rather than uniquely Furey-typed Standard-Model thresholds.",
+      "evidence": [
+        {"document": "660_symplectic_inversion_is_a_spectrum_generating_duality_not_a_fixed_spectrum_symmetry.md", "certificate_required": true},
+        {"document": "662_positive_dual_pole_residues_are_inverse_slopes_of_response_zeros.md", "certificate_required": true},
+        {"document": "663_in_the_cayley_scattering_realization_dual_weight_and_time_delay_are_reciprocal.md", "certificate_required": true},
+        {"document": "666_every_finite_rational_positive_matrix_response_has_a_finite_relational_carrier_realization.md", "certificate_required": true},
+        {"document": "785_the_scattering_eigenchannel_quartet_is_not_an_equivariant_permutation_copy_of_the_furey_udenu_grid.md", "certificate_required": true},
+        {"document": "792_checkpoint_spectral_projectors_give_an_explicit_positive_rank_one_relational_residue_model_but_not_furey_typing_or_threshold_prediction.md", "certificate_required": true}
+      ]
+    },
+    {
+      "id": "G10",
+      "name": "Dimensionally normalized novel observable",
+      "depends_on": ["G07", "G09"],
+      "required_output": "At least one experimentally interpretable, dimensionally normalized relation whose value is fixed by the programme and is not a generic response identity.",
+      "status": "missing",
+      "first_missing_datum": "The ±1 orientation index, reciprocal delay-residue law and CP scores are exact after choosing a source map or generic response normalization, but the programme does not derive the physical map or a new Standard-Model value.",
+      "evidence": [
+        {"document": "802_a_higgs_channel_times_flux_imbalance_cross_correlation_is_orientation_odd_and_distinguishes_the_two_global_source_maps.md", "certificate_required": true},
+        {"document": "803_positive_channel_weights_cancel_from_a_normalized_orientation_index_leaving_an_exact_plus_or_minus_one_flux_bit.md", "certificate_required": true},
+        {"document": "825_a_reciprocal_rational_inner_two_character_response_carries_orientation_odd_coherence_and_a_positive_matrix_spectral_residue.md", "certificate_required": true},
+        {"document": "793_fixed_uv_and_known_poles_turn_residue_recovery_into_a_cauchy_rank_problem_with_an_exact_minimum_data_theorem.md", "certificate_required": true}
+      ]
+    },
+    {
+      "id": "G11",
+      "name": "End-to-end Standard-Model consistency",
+      "depends_on": ["G00", "G02", "G03", "G05", "G06", "G07", "G09", "G10"],
+      "required_output": "One common construction passing anomaly, chirality, positivity, locality, unitarity, renormalization, identifiability and known-data checks.",
+      "status": "missing",
+      "first_missing_datum": "No single action currently joins the established matter module to the selected, normalized and oriented response and its observable readout.",
+      "evidence": [
+        {"document": "22_spin23_programme_file_and_folder_analysis.md", "certificate_required": false},
+        {"document": "568_claimipedia_export_reconciliation_four_lock_furey_projector_and_passive_elimination_gates.md", "certificate_required": true},
+        {"document": "755_arxiv_2610_21879v1_reentry_audit_and_current_frontier_map.md", "certificate_required": false}
+      ]
+    }
+  ],
+  "smallest_resolving_tests": [
+    {
+      "targets": ["G01", "G02", "G03"],
+      "test": "Compute, from one explicitly renormalized Standard-Model composite source pair, the full 2x2 retarded correlator including Ward completion, subtraction tensor and spectral density."
+    },
+    {
+      "targets": ["G05", "G07"],
+      "test": "Derive from the same microscopic boundary action a real-slice selector and an orientation-odd phase, then show reversal changes the measured balanced interferometer output."
+    },
+    {
+      "targets": ["G06", "G09"],
+      "test": "Calibrate the UV slope and contact tensor from a sum rule or measured asymptotic response, then test the predicted pole residues without refitting."
+    },
+    {
+      "targets": ["G10", "G11"],
+      "test": "Pre-register one source-resolved scattering or stress/current observable whose numerical value differs from generic passive two-port theory and compare it with data or a first-principles Standard-Model calculation."
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+{
+  "protocol": "claimipedia-d05-two-body-form-factor-strike/1",
+  "strikeId": "d05-physical-polarization-anomaly-tomography-v1",
+  "conventions": {
+    "potential": "L_potential=-m^2 Phi^dagger Phi-(lambda/2)(Phi^dagger Phi)^2 with m^2+lambda v^2/2=0",
+    "operators": [
+      "O_H=Phi^dagger Phi-v^2/2",
+      "X_F=F^2/2",
+      "X_lambda=-(Phi^dagger Phi)^2/2"
+    ],
+    "masses": "m_A^2=e^2 v^2 and m_h^2=lambda v^2",
+    "normalizationQualification": "Signs and overall operator factors are convention-bound; rank, declared dual pairing and threshold degeneracy are invariant when beta coefficients transform dually."
+  },
+  "formFactorTheorem": {
+    "hh": "R_hh=(0,-3 v^2 s/[2(s+2m_h^2)]) at tree level in the declared convention.",
+    "vectorTransverse": "R_T=((s-2m_A^2)(s-m_h^2)/(2m_A^2),-v^2/2).",
+    "vectorLongitudinal": "R_L=(2m_A^2(s-m_h^2)/(s-2m_A^2),-v^2/2).",
+    "determinant": "det[ R_T-R_hh ; R_L-R_hh ] = v^2(s-m_h^2)/(s+2m_h^2) * (s-m_h^2)s(s-4m_A^2)/[2m_A^2(s-2m_A^2)].",
+    "genericRank": "For common physical continuum s>max(4m_h^2,4m_A^2), the response matrix has rank two.",
+    "thresholdLoss": "At s=4m_A^2 the transverse and longitudinal gauge-kinetic ratios coincide; polarization tomography loses one direction exactly at threshold."
+  },
+  "parameters": {
+    "v": 2,
+    "e": 0.4,
+    "lambda": 0.3,
+    "mA2": 0.6400000000000001,
+    "mh2": 1.2
+  },
+  "samples": [
+    {
+      "s": 6,
+      "polarizations": {
+        "p1": [
+          1.224744871391589,
+          0,
+          0,
+          0.9273618495495702
+        ],
+        "p2": [
+          1.224744871391589,
+          0,
+          0,
+          -0.9273618495495702
+        ],
+        "transverse1": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "transverse2": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "longitudinal1": [
+          1.1592023119369628,
+          0,
+          0,
+          1.530931089239486
+        ],
+        "longitudinal2": [
+          1.1592023119369628,
+          0,
+          0,
+          -1.530931089239486
+        ]
+      },
+      "amplitudes": {
+        "ampFT": -4.719999999999999,
+        "ampFL": 1.2800000000000011,
+        "ampHT": -0.2666666666666667,
+        "ampHL": 0.9833333333333332,
+        "ampHhh": 1.75,
+        "ampLambdaHh": -7.5
+      },
+      "responses": {
+        "hh": [
+          0,
+          -4.285714285714286
+        ],
+        "vectorTransverse": [
+          17.699999999999992,
+          -2
+        ],
+        "vectorLongitudinal": [
+          1.3016949152542387,
+          -2
+        ]
+      },
+      "responseMatrix": [
+        [
+          17.699999999999992,
+          2.2857142857142856
+        ],
+        [
+          1.3016949152542387,
+          2.2857142857142856
+        ]
+      ],
+      "determinant": 37.48184019370457,
+      "analyticDeterminant": 37.481840193704585
+    },
+    {
+      "s": 8,
+      "polarizations": {
+        "p1": [
+          1.4142135623730951,
+          0,
+          0,
+          1.1661903789690602
+        ],
+        "p2": [
+          1.4142135623730951,
+          0,
+          0,
+          -1.1661903789690602
+        ],
+        "transverse1": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "transverse2": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "longitudinal1": [
+          1.4577379737113252,
+          0,
+          0,
+          1.7677669529663689
+        ],
+        "longitudinal2": [
+          1.4577379737113252,
+          0,
+          0,
+          -1.7677669529663689
+        ]
+      },
+      "amplitudes": {
+        "ampFT": -6.7200000000000015,
+        "ampFL": 1.279999999999994,
+        "ampHT": -0.1882352941176471,
+        "ampHL": 0.9882352941176473,
+        "ampHhh": 1.5294117647058822,
+        "ampLambdaHh": -7.0588235294117645
+      },
+      "responses": {
+        "hh": [
+          0,
+          -4.615384615384616
+        ],
+        "vectorTransverse": [
+          35.699999999999996,
+          -2
+        ],
+        "vectorLongitudinal": [
+          1.2952380952380889,
+          -2
+        ]
+      },
+      "responseMatrix": [
+        [
+          35.699999999999996,
+          2.615384615384616
+        ],
+        [
+          1.2952380952380889,
+          2.615384615384616
+        ]
+      ],
+      "determinant": 89.981684981685,
+      "analyticDeterminant": 89.98168498168496
+    },
+    {
+      "s": 12,
+      "polarizations": {
+        "p1": [
+          1.7320508075688772,
+          0,
+          0,
+          1.5362291495737215
+        ],
+        "p2": [
+          1.7320508075688772,
+          0,
+          0,
+          -1.5362291495737215
+        ],
+        "transverse1": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "transverse2": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "longitudinal1": [
+          1.9202864369671517,
+          0,
+          0,
+          2.1650635094610964
+        ],
+        "longitudinal2": [
+          1.9202864369671517,
+          0,
+          0,
+          -2.1650635094610964
+        ]
+      },
+      "amplitudes": {
+        "ampFT": -10.719999999999999,
+        "ampFL": 1.2800000000000011,
+        "ampHT": -0.11851851851851854,
+        "ampHL": 0.9925925925925926,
+        "ampHhh": 1.3333333333333333,
+        "ampLambdaHh": -6.666666666666666
+      },
+      "responses": {
+        "hh": [
+          0,
+          -5
+        ],
+        "vectorTransverse": [
+          90.44999999999997,
+          -2
+        ],
+        "vectorLongitudinal": [
+          1.2895522388059713,
+          -2
+        ]
+      },
+      "responseMatrix": [
+        [
+          90.44999999999997,
+          3
+        ],
+        [
+          1.2895522388059713,
+          3
+        ]
+      ],
+      "determinant": 267.481343283582,
+      "analyticDeterminant": 267.48134328358213
+    },
+    {
+      "s": 20,
+      "polarizations": {
+        "p1": [
+          2.23606797749979,
+          0,
+          0,
+          2.08806130178211
+        ],
+        "p2": [
+          2.23606797749979,
+          0,
+          0,
+          -2.08806130178211
+        ],
+        "transverse1": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "transverse2": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "longitudinal1": [
+          2.6100766272276377,
+          0,
+          0,
+          2.7950849718747373
+        ],
+        "longitudinal2": [
+          2.6100766272276377,
+          0,
+          0,
+          -2.7950849718747373
+        ]
+      },
+      "amplitudes": {
+        "ampFT": -18.720000000000002,
+        "ampFL": 1.2799999999999727,
+        "ampHT": -0.06808510638297874,
+        "ampHL": 0.9957446808510642,
+        "ampHhh": 1.1914893617021276,
+        "ampLambdaHh": -6.382978723404255
+      },
+      "responses": {
+        "hh": [
+          0,
+          -5.357142857142858
+        ],
+        "vectorTransverse": [
+          274.95,
+          -2
+        ],
+        "vectorLongitudinal": [
+          1.2854700854700576,
+          -2
+        ]
+      },
+      "responseMatrix": [
+        [
+          274.95,
+          3.3571428571428577
+        ],
+        [
+          1.2854700854700576,
+          3.3571428571428577
+        ]
+      ],
+      "determinant": 918.730921855922,
+      "analyticDeterminant": 918.7309218559219
+    }
+  ],
+  "inversion": {
+    "beta": {
+      "gauge": 0.023,
+      "quartic": -0.041
+    },
+    "samples": [
+      {
+        "s": 6,
+        "measuredProjectiveDifferences": [
+          0.3133857142857141,
+          -0.06377530266343821
+        ],
+        "recovered": {
+          "gauge": 0.023,
+          "quartic": -0.041
+        },
+        "error": 0
+      },
+      {
+        "s": 8,
+        "measuredProjectiveDifferences": [
+          0.7138692307692307,
+          -0.0774402930402932
+        ],
+        "recovered": {
+          "gauge": 0.023000000000000003,
+          "quartic": -0.041
+        },
+        "error": 3.469446951953614e-18
+      },
+      {
+        "s": 12,
+        "measuredProjectiveDifferences": [
+          1.9573499999999993,
+          -0.09334029850746266
+        ],
+        "recovered": {
+          "gauge": 0.023,
+          "quartic": -0.040999999999999995
+        },
+        "error": 6.938893903907228e-18
+      },
+      {
+        "s": 20,
+        "measuredProjectiveDifferences": [
+          6.186207142857143,
+          -0.10807704517704586
+        ],
+        "recovered": {
+          "gauge": 0.023,
+          "quartic": -0.04100000000000001
+        },
+        "error": 6.938893903907228e-18
+      }
+    ]
+  },
+  "spectralGramWitness": {
+    "s": 8,
+    "weights": {
+      "hh": 0.014715634681069742,
+      "vectorTransverse": 0.0011625635719654357,
+      "vectorLongitudinal": 0.01602157922614866
+    },
+    "states": [
+      {
+        "id": "hh",
+        "R": [
+          0,
+          -4.615384615384616
+        ],
+        "ratio": -1.0107692307692306,
+        "weight": 0.014715634681069742
+      },
+      {
+        "id": "vectorTransverse",
+        "R": [
+          35.699999999999996,
+          -2
+        ],
+        "ratio": -0.2969,
+        "weight": 0.0011625635719654357
+      },
+      {
+        "id": "vectorLongitudinal",
+        "R": [
+          1.2952380952380889,
+          -2
+        ],
+        "ratio": -1.0882095238095237,
+        "weight": 0.01602157922614866
+      }
+    ],
+    "rho": [
+      [
+        0.03410952660571938,
+        -0.032654110971746204
+      ],
+      [
+        -0.032654110971746204,
+        0.031899777479183836
+      ]
+    ],
+    "gramDeterminant": 0.00002179534528763314,
+    "pairwiseDeterminant": 0.00002179534528763311,
+    "zeroBetaDeterminant": 2.168404344971009e-19
+  },
+  "perturbativeGrading": {
+    "projectiveDifference": "tree physical form factors times one-loop beta coefficients; bi-grade (cut loop 1, beta loop 1), uniform order two in the mixed T-O_H spectral response",
+    "positiveInnovation": "the Gram determinant is quadratic in ratio differences; bi-grade (cut loop 1, beta power 2), first visible at uniform order three",
+    "comparison": "This precedes the four-particle quartic strike, whose corresponding bi-grade is (cut loop 3, beta loop 1)."
+  },
+  "dispositions": {
+    "twoBodyPhysicalResponseMatrixFullRankGenerically": true,
+    "fourBodyCutRequiredForBetaVectorTomography": false,
+    "polarizationResolutionEssential": true,
+    "exactVectorThresholdFullRank": false,
+    "betaVectorRecoverableFromTwoProjectiveDifferences": true,
+    "positiveMetricHiggsInnovationAtNonzeroBeta": true,
+    "oneLoopUniformInnovationEstablished": false
+  },
+  "nextGate": "Audit BRST and equivalence-theorem stability of the transverse/longitudinal physical form factors, then determine whether inclusive polarization sums retain enough information or require polarization-resolved observables.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

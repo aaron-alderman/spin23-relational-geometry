@@ -1,0 +1,127 @@
+{
+  "protocol": "claimipedia-d02-operator-topology-strike/1",
+  "strikeId": "d02-operator-topology-and-path-strike-v1",
+  "noncommutingFixture": {
+    "statement": "The factorized theorem does not require T and Dhat to commute or be simultaneously diagonalizable.",
+    "directCorrection": {
+      "re": 0.1510977581013207,
+      "im": -0.495969617450052
+    },
+    "factorizedCorrection": {
+      "re": 0.1510977581013207,
+      "im": -0.495969617450052
+    },
+    "framedCorrection": {
+      "re": 0.15109775810132067,
+      "im": -0.4959696174500519
+    },
+    "directFactorizedError": 0,
+    "frameError": 1.1443916996305594e-16
+  },
+  "stratificationUpgrade": {
+    "sameSupportDifferentGap": {
+      "first": {
+        "operator": "I",
+        "kernel": "0",
+        "support": "I",
+        "lowerBound": 1,
+        "closedRange": true
+      },
+      "second": {
+        "operator": "diag(1/n)",
+        "kernel": "0",
+        "support": "I",
+        "lowerBound": 0,
+        "closedRange": false,
+        "zeroInEssentialSpectrum": true
+      }
+    },
+    "requiredCoordinates": [
+      "support projection",
+      "closed-range/spectral-gap class",
+      "Douglas coupling class",
+      "convergence topology",
+      "Schatten ideal class",
+      "approach/regularizer germ"
+    ],
+    "conclusion": "Support rank alone is not a complete operator stratum invariant."
+  },
+  "fixedEndpointPathCounterexample": {
+    "kernelPathLimits": [
+      {
+        "approachCoefficient": 0,
+        "endpointInterior": "z T0",
+        "endpointCoupling": "sqrt(T0)",
+        "kernelCorrectionLimit": {
+          "re": 0,
+          "im": 0
+        },
+        "supportCorrectionLimit": {
+          "re": 0.2617669267556003,
+          "im": -0.6594512962496853
+        }
+      },
+      {
+        "approachCoefficient": 0.4,
+        "endpointInterior": "z T0",
+        "endpointCoupling": "sqrt(T0)",
+        "kernelCorrectionLimit": {
+          "re": 0.04188270828089606,
+          "im": -0.10551220739994968
+        },
+        "supportCorrectionLimit": {
+          "re": 0.2617669267556003,
+          "im": -0.6594512962496853
+        }
+      },
+      {
+        "approachCoefficient": 0.9,
+        "endpointInterior": "z T0",
+        "endpointCoupling": "sqrt(T0)",
+        "kernelCorrectionLimit": {
+          "re": 0.21203121067203626,
+          "im": -0.5341555499622451
+        },
+        "supportCorrectionLimit": {
+          "re": 0.2617669267556003,
+          "im": -0.6594512962496853
+        }
+      }
+    ],
+    "conclusion": "Norm-convergent D_delta and B_delta can share endpoints while their Schur corrections have different strong limits on the emerging kernel; the sqrt(delta) coefficient is indispensable approach data."
+  },
+  "essentialSpectrumTopologyCounterexample": {
+    "essentialPaths": {
+      "coherent": {
+        "definition": "D_delta=z(T+delta I), B_delta=sqrt(T+delta I)",
+        "correction": "I/z for every delta",
+        "normStable": true
+      },
+      "frozen": {
+        "definition": "D_delta=z(T+delta I), B_delta=sqrt(T)",
+        "correction": "T(T+delta I)^(-1)/z",
+        "strongErrors": [
+          0.17064606235803134,
+          0.09508304857105454,
+          0.05514748017358312,
+          0.03021439158415661
+        ],
+        "normError": 0.7095054165180573,
+        "normStable": false
+      }
+    },
+    "conclusion": "With constant full support and no kernel, coherent and frozen coupling paths share the strong output but differ in norm convergence. The topology and transport rule are independent decorations."
+  },
+  "measureDisposition": {
+    "operatorValuedAtom": "The critical residue I defines a bounded positive operator-valued atom in weak/strong matrix elements.",
+    "scalarTraceMeasure": "Its trace is infinite, so no finite scalar trace measure descends without a trace-class/Schatten decoration.",
+    "determinant": "No Fredholm determinant is licensed for the identity residue."
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

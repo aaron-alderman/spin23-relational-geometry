@@ -1,0 +1,134 @@
+{
+  "protocol": "claimipedia-d04-beta-vector-projective-identity/1",
+  "strikeId": "d04-anomaly-tomography-beta-vector-v1",
+  "theoremCandidate": {
+    "traceCohomology": "In the physical BRST quotient, write [T]=c_H[O_H]+sum_I b_I[X_I], where b_I are convention-matched beta/anomalous coefficients and X_I are renormalized gauge-invariant scalar operators.",
+    "stateIdentity": "For a physical state n with F_H^n nonzero, r_n=<n|T|0>/<n|O_H|0>=c_H+b dot R_n, with R_I,n=<n|X_I|0>/<n|O_H|0>.",
+    "differenceIdentity": "For two physical state classes n,m, Delta r_nm=b dot (R_n-R_m). The mass/improvement shear c_H cancels.",
+    "mixingCovariance": "Under an invertible anomaly-operator basis change X'=A X, R'=A R and b'=A^{-T}b, so every b dot R_n and Delta r_nm is invariant.",
+    "fixedPointNull": "If all anomaly coefficients vanish and the explicit-mass coefficient is common, every projective difference Delta r_nm vanishes."
+  },
+  "fixture": {
+    "beta": [
+      0.07,
+      -0.11
+    ],
+    "cH": -0.4,
+    "responseRatios": {
+      "scalarPair": [
+        0.15,
+        0
+      ],
+      "vectorPair": [
+        1.25,
+        0.08
+      ],
+      "fourBody": [
+        0.55,
+        -0.9
+      ]
+    },
+    "sourceRatios": {
+      "scalarPair": -0.3895,
+      "vectorPair": -0.32130000000000003,
+      "fourBody": -0.2625
+    },
+    "pairDifferences": {
+      "vectorMinusScalar": 0.06819999999999998,
+      "fourMinusScalar": 0.127,
+      "fourMinusVector": 0.05880000000000002
+    },
+    "improvement": 3.25,
+    "shiftedRatios": {
+      "scalarPair": 2.8605,
+      "vectorPair": 2.9287,
+      "fourBody": 2.9875
+    }
+  },
+  "operatorMixingFixture": {
+    "A": [
+      [
+        1,
+        0.3
+      ],
+      [
+        0.2,
+        1.1
+      ]
+    ],
+    "betaPrime": [
+      0.09519230769230771,
+      -0.12596153846153846
+    ],
+    "transformedResponses": {
+      "scalarPair": [
+        0.15,
+        0.03
+      ],
+      "vectorPair": [
+        1.274,
+        0.338
+      ],
+      "fourBody": [
+        0.28,
+        -0.8800000000000001
+      ]
+    },
+    "basisErrors": [
+      1.734723475976807e-18,
+      2.7755575615628914e-17,
+      0
+    ]
+  },
+  "oldFormulaDisposition": {
+    "validSpecialCase": "The D-03 Q=beta_lambda/(lambda sum D_i) is recovered only when the gauge-anomaly response difference and every other anomaly-operator response difference vanish in the chosen physical state comparison.",
+    "genericCompletion": "Q_full=(beta_e/2e) Delta R_F2 + beta_lambda Delta R_lambda + sum_other b_I Delta R_I.",
+    "simplified": {
+      "betaGauge": 0.07,
+      "betaLambda": -0.11,
+      "deltaGaugeResponse": 0,
+      "deltaQuarticResponse": -0.9,
+      "fullDifference": 0.099,
+      "oldQuarticOnlyDifference": 0.099
+    },
+    "gaugeCompleted": {
+      "betaGauge": 0.07,
+      "betaLambda": -0.11,
+      "deltaGaugeResponse": 0.6,
+      "deltaQuarticResponse": -0.9,
+      "fullDifference": 0.14100000000000001,
+      "oldQuarticOnlyDifference": 0.099
+    },
+    "conclusion": "BRST completion does not protect the quartic-only formula. It protects the cohomological beta-vector contraction; omitted gauge-sector form factors generically correct Q."
+  },
+  "observable": {
+    "name": "projective anomaly difference",
+    "definition": "Delta r_nm=r_n-r_m",
+    "invariantUnder": [
+      "O_g -> O_g+kappa O_H at fixed kinematics",
+      "invertible renormalized anomaly-operator mixing",
+      "addition of real local contact polynomials to the two-point function"
+    ],
+    "requiredInputs": [
+      "physical BRST-cohomology state classes",
+      "renormalized form-factor ratios R_I,n",
+      "beta/anomalous coefficient vector in the dual operator basis"
+    ],
+    "interpretation": "A collection of Delta r_nm values is a linear inverse problem for the running-coefficient vector b when the response matrix Delta R has sufficient rank."
+  },
+  "dispositions": {
+    "quarticOnlyQProtectedByBrst": false,
+    "betaVectorContractionBasisInvariant": true,
+    "projectiveDifferencesImprovementInvariant": true,
+    "anomalyTomographyMathematicallyWellTyped": true,
+    "numericalPredictionAvailableWithoutPhysicalFormFactors": false
+  },
+  "nextGate": "Compute the physical two- and four-body form-factor response matrix Delta R for [F^2], [partial L/partial lambda] and any mass-anomalous operator; then test its rank and invert for b.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

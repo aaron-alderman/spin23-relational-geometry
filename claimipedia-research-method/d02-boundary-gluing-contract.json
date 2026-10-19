@@ -1,0 +1,58 @@
+{
+  "protocol": "claimipedia-d02-boundary-gluing-contract/1",
+  "id": "d02-operator-herglotz-boundary-v1",
+  "scope": "bounded operator-valued Herglotz functions on a separable Hilbert space, approached nontangentially from the upper half-plane",
+  "primaryObject": "the bounded positive operator-valued representing measure Sigma, interpreted through scalar matrix elements",
+  "boundaryLayers": [
+    "finite boundary operator M(lambda+i0) in a declared topology",
+    "absolutely continuous density W(lambda)=dSigma_ac/dlambda when it exists in the declared operator class",
+    "atomic residue R_lambda=Sigma({lambda})",
+    "singular-continuous measure Sigma_sc",
+    "principal-value real part where it exists",
+    "threshold or resonance scaling exponent when the pointwise boundary diverges",
+    "approach region or arc class",
+    "weighted space or operator scale for any limiting-absorption claim"
+  ],
+  "dispatcher": [
+    {
+      "condition": "scalarized nontangential limits exist and are uniformly bounded over unit vectors",
+      "output": "bounded weak/strong/norm boundary operator according to the proved topology"
+    },
+    {
+      "condition": "scalarized limits exist but fail uniform boundedness",
+      "output": "quadratic-form or state-indexed boundary data; do not manufacture a bounded operator"
+    },
+    {
+      "condition": "y Im M(lambda+i y) converges",
+      "output": "atomic residue in the proved topology; norm convergence requires uniform non-atomic tightness"
+    },
+    {
+      "condition": "Im M(lambda+i0) is finite Lebesgue-a.e.",
+      "output": "absolutely continuous density only; retain atoms and singular-continuous measure separately"
+    },
+    {
+      "condition": "boundary value diverges but y Im M tends to zero",
+      "output": "threshold/singular-density branch, not an atom"
+    },
+    {
+      "condition": "the representing measure is singular continuous",
+      "output": "retain measure-level data even if Lebesgue-a.e. imaginary boundary density vanishes"
+    },
+    {
+      "condition": "the approach is arbitrary tangential rather than nontangential",
+      "output": "retain the approach arc; do not inherit the nontangential theorem"
+    },
+    {
+      "condition": "a uniform limiting-absorption principle is requested",
+      "output": "require a model-specific weighted/operator scale and uniform resolvent estimate"
+    }
+  ],
+  "schurBoundaryRule": "Taking a Schur complement commutes with a boundary limit only under a topology in which products are controlled and the limiting interior inverse is uniformly bounded; weak operator limits alone are not multiplicative.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

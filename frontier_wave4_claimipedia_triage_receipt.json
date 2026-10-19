@@ -1,0 +1,55 @@
+{
+  "protocol": "claimipedia-scientific-derivation-triage-receipt/1",
+  "candidateId": "8ea290b24b14b09569c57dbd6c547e2e98b20eb74e3356ccb2dbbf95716b54bd",
+  "source": "furey.bosonic-s1",
+  "target": "mediator.rank-one-gram",
+  "steps": [
+    "normalized-tro-embedding",
+    "positive-rank-one-gram"
+  ],
+  "assumptions": [
+    "one nonzero bosonic S1-to-three-copy intertwiner y is chosen",
+    "strict TRO compatibility fixes norm(y)=1",
+    "the projective direction [y] is external data",
+    "the target Hermitian metric is fixed"
+  ],
+  "losses": [
+    "full target U(3) naturality",
+    "canonical orientation",
+    "incidence-ray selection",
+    "overall source phase"
+  ],
+  "rejectedDirectRoute": {
+    "id": "dimension-three-canonical-selector",
+    "reason": "analogy-only linkage; matching the number three supplies neither a shared action nor a canonical intertwiner"
+  },
+  "evidenceRefs": [
+    "frontier_wave4_furey_01_cross_carrier_hom_classification.md",
+    "frontier_wave4_topology_01_cross_carrier_module_audit.md",
+    "frontier_wave4_04_synthesis_the_internal_selector_stops_at_the_missing_target_action.md"
+  ],
+  "claimStatus": "derived-claim-proposal",
+  "reviewHandoff": {
+    "claimipediaStage": "Triage",
+    "requiresQualifyingEvidence": true,
+    "automaticPromotion": false,
+    "automaticCorpusAdmission": false,
+    "permittedDisposition": ["hold", "no-go", "retain", "retire"]
+  },
+  "receipt": {
+    "boundedDepth": 2,
+    "objectCount": 3,
+    "transformationCount": 3,
+    "validTransformationCount": 2,
+    "candidateCount": 1,
+    "grammarHash": "bb0c61b68d97510caf4956a0c6a0755d5ec501688bafae56ad6457dffd066255",
+    "requestHash": "c1a5642af50d291949bdfd9ae97a1929d984212d5840ee124cd9e73a537e8877",
+    "runtimeAction": "scientific_derivation_compose.compose-derivation"
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "applicationAdmission": false
+  }
+}

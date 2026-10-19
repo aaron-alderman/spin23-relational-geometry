@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-18",
+  "tool": {"name": "alpaca-ALPs", "version": "1.2.0"},
+  "normalization": {
+    "uv_scale_GeV": 10000,
+    "fa_GeV": 1000000,
+    "common_uv_ctt": -10,
+    "independent_gauge_coefficients": {"cG": 0, "cW": 0, "cB": 0},
+    "generation_universal": true
+  },
+  "models": {
+    "deduplicated": {
+      "uv_pattern": [-10, -6, -2],
+      "ew_pattern": [-8.02151404829715, -6.796773634628126, -3.1812103470481965],
+      "mass_points": {
+        "0.1": {"K_BR": 3.293970337029817e-8, "ctau_m": 20652.131255754502, "BR_ee": 0.9957135283427361},
+        "0.3": {"K_BR": 1.6306944195466462e-8, "ctau_m": 0.22779843522802193, "BR_mumu": 0.9999472101855387}
+      }
+    },
+    "multiplicity_preserving": {
+      "uv_pattern": [-10, -6, -4],
+      "ew_pattern": [-8.021428620336946, -6.796725025064287, -5.180885929366185],
+      "mass_points": {
+        "0.1": {"K_BR": 3.293942354000343e-8, "ctau_m": 7447.185104780342, "BR_ee": 0.9903751448447917},
+        "0.3": {"K_BR": 1.6306804953090292e-8, "ctau_m": 0.08258704681855199, "BR_mumu": 0.9999451479232628}
+      }
+    }
+  },
+  "na62_300MeV_curve": {
+    "prompt_limit": 1.3997e-10,
+    "acceptance_tau0_ns": 0.07,
+    "deduplicated_crossing_f_GeV": 1803586.1758301368,
+    "multiplicity_crossing_f_GeV": 2318856.8416921296
+  },
+  "provenance": "Recomputed with scripts/run_programme_incidence_alpaca_comparators.py; NA62 curve and acceptance inputs from programme_lane_expansion_27."
+}

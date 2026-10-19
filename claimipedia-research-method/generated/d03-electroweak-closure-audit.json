@@ -1,0 +1,88 @@
+{
+  "protocol": "claimipedia-d03-electroweak-closure-audit/1",
+  "auditId": "d03-electroweak-genericity-closure-a2-observable-v1",
+  "electroweakLift": {
+    "traceBasis": [
+      "beta_1/(2 g_1) B_{mu nu}B^{mu nu}",
+      "beta_2/(2 g_2) W^a_{mu nu}W^{a mu nu}",
+      "beta_3/(2 g_3) G^A_{mu nu}G^{A mu nu}",
+      "beta_lambda (H^dagger H)^2 with convention-dependent normalization",
+      "mass terms and anomalous-dimension/EOM representatives",
+      "Yukawa beta-function operators plus improvement/contact representatives"
+    ],
+    "inference": "The Standard Model has more threshold classes and source ratios than the Abelian witness. Conditional on nonzero physical form factors, full H2 span is generic rather than exceptional.",
+    "exactBoundary": "No full electroweak BRST-complete form-factor calculation or numerical spectral density is claimed here.",
+    "conceptualDisposition": "Carrier existence alone is too cheap to identify Spin(2,3); the discriminating burden moves to physical transformation closure and invariant relations."
+  },
+  "transformationClosure": {
+    "physicalSourceAction": "Invertible source relabellings act by GL(2) congruence; local counterterms add a real polynomial layer.",
+    "ambientAction": "Sp(4,R) acts fractionally by M -> (A M+B)(C M+D)^-1 on the Siegel/Herglotz domain.",
+    "counterexample": {
+      "family": "M(z)=diag(-1/z,-1/(z-2))",
+      "symplecticElement": "lower shear [[I,0],[I,I]]",
+      "image": "diag(-1/(z-1),-1/(z-3))",
+      "originalPoles": [
+        0,
+        2
+      ],
+      "transformedPoles": [
+        1,
+        3
+      ],
+      "supportClosed": false
+    },
+    "disposition": "A generic fractional symplectic transformation moves physical poles/thresholds and does not preserve a fixed QFT response family. Only the congruence/contact subgroup is presently physically realized."
+  },
+  "a2Bridge": {
+    "temptingConstruction": "Three projective channel labels can be centered into an abstract two-dimensional trace-zero plane carrying the permutation representation of S3/W(A2).",
+    "obstruction": "The channels have unequal invariant thresholds and nondegenerate dynamics, so no physical S3 action permutes them. Naming three sectors does not supply A2 roots, reflections or intertwining maps.",
+    "disposition": "abstract bookkeeping analogy only; reject a typed A2/Higgs/code bridge until an actual threshold-preserving S3 action and intertwiners are exhibited."
+  },
+  "constrainedObservable": {
+    "name": "quartic-anomaly projective orientation",
+    "normalization": "O_g and O_H fixed as in the scalar strike; leading simplified real-scalar rung",
+    "definition": "Q=(1/sqrt(2)) det[v_infinity,v(r2),v(r4)]",
+    "prediction": "Q=r4-r2=beta_lambda/(lambda sum_i D_i)",
+    "fixture": {
+      "r2": 2.4,
+      "r4": 2.7529411764705882,
+      "betaLambda": 0.18,
+      "lambda": 0.3,
+      "propagatorSum": 1.7,
+      "orientationDeterminant": 0.49913419848462226,
+      "anomalyOrientation": 0.35294117647058854,
+      "predictedOrientation": 0.3529411764705882
+    },
+    "invariance": "Q is invariant under triangular improvement/source shear O_g -> O_g+kappa O_H at fixed kinematics.",
+    "falsifiers": [
+      "Q nonzero at beta_lambda=0 within the declared perturbative rung",
+      "wrong kinematic dependence after complete normalization",
+      "loss of the relation under a common fixed-k source shear"
+    ],
+    "fullTheoryStatus": "A constrained leading-order target, not yet an electroweak numerical prediction."
+  },
+  "decisiveDispositions": {
+    "simplifiedInteractingTheoryHasGlobalH2Span": true,
+    "standardModelLikelyHasTooFewDirections": false,
+    "fullH2SpanIsDistinctiveEvidenceForSpin23": false,
+    "genericSp4FractionalClosureEstablished": false,
+    "exactA2BridgeEstablished": false,
+    "constrainedObservableIdentified": true,
+    "ambientResponseGeometryRemainsViable": true,
+    "emergentSpin23DynamicalSymmetryEstablished": false
+  },
+  "frontier": [
+    "BRST-complete electroweak form factors and spectral densities",
+    "finite-temperature/momentum/Higgs-background rank-three control Jacobian",
+    "a physical non-congruence transformation that preserves all thresholds and positivity",
+    "an exact threshold-preserving S3 action with typed A2 intertwiners",
+    "renormalized measurement protocol for the anomaly-orientation observable"
+  ],
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

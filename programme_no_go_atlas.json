@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "title": "Spin(2,3) programme maximal no-go and underdetermination atlas",
+  "date": "2026-10-17",
+  "interpretation": "Each route records the earliest bridge that fails at the type required for a physical prediction. Later exact mathematics remains valid but cannot repair that upstream break.",
+  "routes": [
+    {
+      "id": "R_SOURCE",
+      "name": "Standard-Model source-first effective response",
+      "status": "underdetermined",
+      "gates_covered": ["G01", "G03", "G06", "G09", "G10", "G11"],
+      "established_core": "Local external sources coupled to the incidence and B-L currents give a controlled generating functional; vacuum locality and Lorentz covariance yield a real positive two-current spectral measure; the free UV metric is calculable.",
+      "first_break": "No dynamics or operational coupling uniquely selects and calibrates the incidence/B-L source pair; finite operator mixing and contacts remain scheme data.",
+      "smallest_resolving_calculation": "Compute the renormalized 2x2 correlator, operator-mixing matrix, Ward completion and finite subtraction prescription for explicitly normalized incidence and B-L sources in one declared Standard-Model scheme.",
+      "promotion_test": "Use the result without refitting to predict one pole, residue, cross section or sum-rule combination that differs from a generic pair of currents.",
+      "falsifier": "The calculated correlator has rank one, violates the assumed Ward typing, or every claimed relation can be changed by an allowed finite source redefinition.",
+      "evidence": [
+        "programme_closure_02_the_source_subspace_is_canonical_but_its_frame_is_an_affine_torsor.md",
+        "programme_closure_03_a_controlled_standard_model_external_source_action_exists_but_does_not_fix_the_frame.md",
+        "programme_closure_04_vacuum_locality_closes_the_two_current_spectral_measure_on_h2r_but_not_the_thermal_response.md",
+        "programme_closure_06_the_free_standard_model_uv_cut_fixes_a_relative_metric_but_not_the_physical_ports.md"
+      ]
+    },
+    {
+      "id": "R_TOPOLOGY",
+      "name": "Furey topology-first Jordan/Spin(2,3) response",
+      "status": "underdetermined",
+      "gates_covered": ["G05", "G06", "G07", "G10", "G11"],
+      "established_core": "Exact Peirce, exchange and Clifford conditional expectations reach positive H2(R) carriers, and exact orientation-odd witnesses exist.",
+      "first_break": "More than one completely positive real-axis selector and both global orientations survive; no operator-level map identifies topology faces with physical Standard-Model probes.",
+      "smallest_resolving_calculation": "Derive from one gauge-invariant action a completely positive source-to-topology intertwiner that preserves the B-L Ward axis, UV metric, contacts and reversal operation.",
+      "promotion_test": "The derived reversal flips a measured balanced interference observable while all source normalizations cancel.",
+      "falsifier": "Two inequivalent selectors remain observationally indistinguishable or the intertwiner fails Ward, positivity or dimensional typing.",
+      "evidence": [
+        "programme_closure_05_the_source_first_and_topology_first_routes_meet_only_at_an_abstract_cone.md",
+        "709_fureys_su3_stabilizer_leaves_a_circle_of_clifford_response_lines_until_conjugation_parity_selects_an_axis.md",
+        "710_the_furey_odd_imaginary_axis_also_has_an_exact_cp_h2r_selector_so_positivity_does_not_choose_the_axis.md",
+        "803_positive_channel_weights_cancel_from_a_normalized_orientation_index_leaving_an_exact_plus_or_minus_one_flux_bit.md"
+      ]
+    },
+    {
+      "id": "R_FREUDENTHAL",
+      "name": "Freudenthal source-response completion",
+      "status": "obstructed",
+      "gates_covered": ["G05", "G06", "G08", "G10"],
+      "established_core": "On a paired H2(R) source-response space the quartic critical locus contains the inverse graph C=lambda A^-1, and a log-determinant variational action realizes that graph.",
+      "first_break": "The exceptional invariant is homogeneous and fixes neither lambda, the embedding, the real axis nor the orientation; the variational scale is an external coupling or temperature.",
+      "smallest_resolving_calculation": "Exhibit an additional source-derived term or quantization condition whose stationary equations fix lambda and the physical embedding without importing either as a coefficient.",
+      "promotion_test": "The fixed scale propagates to a dimensionally normalized observable invariant under allowed source redefinitions.",
+      "falsifier": "A continuous rescaling orbit remains after all admitted invariants and boundary conditions are imposed.",
+      "evidence": [
+        "freudenthal_parallel_synthesis_decision_memo.md",
+        "freudenthal_action_synthesis_mechanism_and_no_go.md",
+        "833_the_freudenthal_quartic_can_homogenize_the_h2r_determinant_but_does_not_select_the_embedding_orientation_or_e8_parent.md"
+      ]
+    },
+    {
+      "id": "R_KANTOR",
+      "name": "Kantor/structurable oriented parent",
+      "status": "obstructed",
+      "gates_covered": ["G07", "G08", "G11"],
+      "established_core": "The raw Furey TRO product fails the second Kantor identity; its canonical structurable correction passes and yields explicit classical five-gradings, including so(3,2) only on a real lepton slice.",
+      "first_break": "The CP pairing that preserves the lepton Jordan graph does not preserve the structurable Kantor product or its Spin(2,3) slice.",
+      "smallest_resolving_calculation": "Provide a different physically justified involution/product and verify both Kantor identities, Standard-Model gauge covariance, CP covariance and the required grading on the full matter carrier.",
+      "promotion_test": "Its five-graded action fixes a source selector or orientation observable unavailable in the Jordan shadow.",
+      "falsifier": "The repaired product again closes only on a classical linking algebra or loses CP/gauge covariance.",
+      "evidence": [
+        "830_the_raw_furey_tro_product_fails_the_second_kantor_identity_while_its_structurable_linking_product_passes.md",
+        "831_the_structurable_furey_five_grading_is_classical_and_spin23_appears_only_on_the_real_lepton_slice.md",
+        "832_cp_pairing_preserves_the_lepton_jordan_graph_but_not_the_kantor_spin23_slice_closing_the_oriented_parent_gate.md"
+      ]
+    },
+    {
+      "id": "R_EXCEPTIONAL",
+      "name": "E7/E8 or exceptional-parent ontology",
+      "status": "missing",
+      "gates_covered": ["G08", "G10", "G11"],
+      "established_core": "Exceptional groups and Freudenthal/Albert structures contain relevant representations and invariant polynomials.",
+      "first_break": "No explicit intertwiner carries the audited chiral Standard-Model action, its source operators and their normalization into a selected exceptional parent with the correct four-dimensional chirality.",
+      "smallest_resolving_calculation": "Write the parent action and branching map, then derive rather than insert the mirror projection, hypercharge normalization, Yukawa tensors and low-energy source response.",
+      "promotion_test": "At least one low-energy dimensionless or dimensionful relation survives threshold matching and differs from a generic grand-unified boundary condition.",
+      "falsifier": "The construction needs manual mirror removal, arbitrary symmetry-breaking directions or unrestricted threshold corrections that can fit any low-energy value.",
+      "evidence": [
+        "833_the_freudenthal_quartic_can_homogenize_the_h2r_determinant_but_does_not_select_the_embedding_orientation_or_e8_parent.md",
+        "freudenthal_parallel_02_selector_uniqueness_and_embedding_degeneracy.md"
+      ]
+    },
+    {
+      "id": "R_SCATTERING",
+      "name": "Passive poles, residues and scattering",
+      "status": "conditional",
+      "gates_covered": ["G09", "G10", "G11"],
+      "established_core": "Every finite rational positive matrix response has a passive realization; dual pole weights, time delay and positive residues obey exact response-theory identities.",
+      "first_break": "The poles and residues are not uniquely tied to Furey-typed Standard-Model thresholds, and the exact laws found so far are generic passive-system identities.",
+      "smallest_resolving_calculation": "Match the renormalized Standard-Model current correlator to physical asymptotic channels and predict a residue or delay combination with no response-model fit parameters.",
+      "promotion_test": "A pre-registered scattering or spectral observable agrees with the calculated value and cannot be reproduced by arbitrary positive two-port data.",
+      "falsifier": "The channel dictionary is basis dependent or all proposed relations follow from generic unitarity, positivity or the Cayley transform.",
+      "evidence": [
+        "663_in_the_cayley_scattering_realization_dual_weight_and_time_delay_are_reciprocal.md",
+        "666_every_finite_rational_positive_matrix_response_has_a_finite_relational_carrier_realization.md",
+        "792_checkpoint_spectral_projectors_give_an_explicit_positive_rank_one_relational_residue_model_but_not_furey_typing_or_threshold_prediction.md"
+      ]
+    }
+  ]
+}

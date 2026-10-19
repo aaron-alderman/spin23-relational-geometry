@@ -1,0 +1,254 @@
+{
+  "protocol": "claimipedia-d03-thermal-control-strike/1",
+  "strikeId": "d03-thermal-stress-open-carrier-control-v1",
+  "theoremCandidate": {
+    "channelCarrier": "After the thermal Ward quotient, two probes can receive independent tensor, shear/vector and sound/scalar Gram contributions GT,GV,GS that span H2(R).",
+    "positiveMap": "rho(a,b,c)=a GT+b GV+c GS=[[a+c,c],[c,b+c]] is positive definite for a,b,c>0.",
+    "openImage": "The Jacobian from independent channel weights (a,b,c) to Jordan coordinates has determinant sqrt(2), so independently variable positive weights give an open physical subcone.",
+    "controlQualification": "Thermal kinematics permits the carrier but does not prove that one Standard-Model state supplies independently variable weights or that Sp(4,R) preserves the thermal family.",
+    "scanNoGo": "A one-parameter frequency scan can have three linearly independent sample matrices while its local image remains a curve; sample span is not Jacobian rank."
+  },
+  "generators": {
+    "GT": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "GV": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "GS": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "coordinateDeterminant": 1.4142135623730951
+  },
+  "controlMap": {
+    "formula": "[[a+c,c],[c,b+c]]",
+    "jacobian": [
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1.4142135623730951
+      ]
+    ],
+    "jacobianDeterminant": 1.4142135623730951,
+    "samples": [
+      {
+        "temperature": 1,
+        "momentum": 0.4,
+        "chemicalPotential": 0,
+        "weights": [
+          1.2,
+          0.8,
+          0.3
+        ],
+        "rho": [
+          [
+            1.5,
+            0.3
+          ],
+          [
+            0.3,
+            1.1
+          ]
+        ],
+        "determinant": 1.56,
+        "innovation": 1.4181818181818182,
+        "positiveDefinite": true
+      },
+      {
+        "temperature": 1.4,
+        "momentum": 0.4,
+        "chemicalPotential": 0,
+        "weights": [
+          1.7,
+          0.9,
+          0.35
+        ],
+        "rho": [
+          [
+            2.05,
+            0.35
+          ],
+          [
+            0.35,
+            1.25
+          ]
+        ],
+        "determinant": 2.44,
+        "innovation": 1.9519999999999997,
+        "positiveDefinite": true
+      },
+      {
+        "temperature": 1,
+        "momentum": 0.8,
+        "chemicalPotential": 0,
+        "weights": [
+          1.1,
+          1.5,
+          0.4
+        ],
+        "rho": [
+          [
+            1.5,
+            0.4
+          ],
+          [
+            0.4,
+            1.9
+          ]
+        ],
+        "determinant": 2.6899999999999995,
+        "innovation": 1.4157894736842105,
+        "positiveDefinite": true
+      },
+      {
+        "temperature": 1,
+        "momentum": 0.4,
+        "chemicalPotential": 0.5,
+        "weights": [
+          1.25,
+          0.85,
+          1.1
+        ],
+        "rho": [
+          [
+            2.35,
+            1.1
+          ],
+          [
+            1.1,
+            1.9500000000000002
+          ]
+        ],
+        "determinant": 3.3725000000000005,
+        "innovation": 1.7294871794871796,
+        "positiveDefinite": true
+      }
+    ]
+  },
+  "oneParameterCounterexample": {
+    "samples": [
+      {
+        "t": 0,
+        "rho": [
+          [
+            1.2,
+            0.2
+          ],
+          [
+            0.2,
+            1.2
+          ]
+        ]
+      },
+      {
+        "t": 0.4,
+        "rho": [
+          [
+            1.664,
+            0.264
+          ],
+          [
+            0.264,
+            1.4240000000000002
+          ]
+        ]
+      },
+      {
+        "t": 0.8,
+        "rho": [
+          [
+            2.5120000000000005,
+            0.7120000000000002
+          ],
+          [
+            0.7120000000000002,
+            2.3520000000000003
+          ]
+        ]
+      }
+    ],
+    "coordinateDeterminant": -0.12309314846895397,
+    "localParameterDimension": 1
+  },
+  "isotropicCounterexample": {
+    "matrices": [
+      [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    ],
+    "coordinateDeterminant": 0
+  },
+  "dispositions": {
+    "thermalChannelsCanSpanH2": true,
+    "independentChannelWeightsGiveOpenSubcone": true,
+    "frequencyScanAloneProvesOpenImage": false,
+    "thermalFullSpanImpliesFundamentalSpin23": false,
+    "thermalControlValidatesMetricHiggsRankTest": true
+  },
+  "nextGate": "Apply the same Jacobian-rank audit to threshold-resolved metric-Higgs weights and determine whether frequency, momentum, temperature and Higgs background vary three directions independently.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

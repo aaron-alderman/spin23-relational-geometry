@@ -1,0 +1,178 @@
+{
+  "protocol": "claimipedia-d02-bounded-operator-exhaustion-audit/1",
+  "strikeId": "d02-bounded-operator-exhaustion-v1",
+  "scope": "bounded operators on separable Hilbert spaces, interior upper-half-plane frequency, reciprocal frequency-independent coupling, value-level effective response",
+  "evidenceHashes": {
+    "boundedOperator": "1b7392eea3ba3bb2234a9196638916e38842ee0add890d9541ef8ac12cecf10a",
+    "topology": "cd5c59b43bc4816d5ce1f7243581d246e3d7c385808570fbaf90b9f87cf17f0a",
+    "measure": "c43d56ddf2cf80e35105962c914c46ebc07328f04d1f42262bc468f200e2f22e",
+    "harnack": "cbc2a13275f374225c6e5ec97872ead82633ce71094e3104bce1f6d93ea94ed8"
+  },
+  "dispatcher": [
+    {
+      "priority": 1,
+      "condition": "D(z) is boundedly invertible on the declared upper-half-plane patch",
+      "handler": "ordinary operator Schur complement",
+      "topology": "operator norm",
+      "failureTransition": 2
+    },
+    {
+      "priority": 2,
+      "condition": "D(z) has fixed closed range/support and B annihilates the kernel",
+      "handler": "bounded Moore-Penrose/support Schur complement",
+      "topology": "operator norm",
+      "failureTransition": 3
+    },
+    {
+      "priority": 3,
+      "condition": "the block is complementable through a certified common scale: D=T^(1/2)Dhat T^(1/2), B=C T^(1/2)",
+      "handler": "factorized/form Schur complement C Dhat^-1 C*",
+      "topology": "norm-holomorphic output; approximation topology separately declared",
+      "failureTransition": 4
+    },
+    {
+      "priority": 4,
+      "condition": "a specified approximation/approach net has a bounded correction limit in a declared topology",
+      "handler": "arc/net-groupoid-valued response, descending only when all admitted nets agree in that topology",
+      "topology": "trace-norm, norm, strong or weak—never silently promoted",
+      "failureTransition": 5
+    },
+    {
+      "priority": 5,
+      "condition": "no bounded complement or topology-labelled limit exists",
+      "handler": "retain the interior or refuse elimination",
+      "topology": "none",
+      "failureTransition": null
+    }
+  ],
+  "requiredOperatorStratum": [
+    "support",
+    "spectral gap/closed range",
+    "Douglas coupling class",
+    "full complementability certificate",
+    "convergence topology",
+    "Schatten ideal",
+    "approach net",
+    "measure scalarization"
+  ],
+  "branches": [
+    {
+      "id": "ordinary-invertible",
+      "discriminant": "bounded inverse exists",
+      "result": "closed",
+      "disposition": "norm Schur"
+    },
+    {
+      "id": "closed-range",
+      "discriminant": "bounded Moore-Penrose inverse and fixed support",
+      "result": "closed",
+      "disposition": "norm support-Schur"
+    },
+    {
+      "id": "nonclosed-factorized",
+      "discriminant": "Douglas square-root factorization",
+      "result": "closed",
+      "disposition": "bounded factorized response"
+    },
+    {
+      "id": "below-douglas-threshold",
+      "discriminant": "unbounded spectral correction for alpha<1/2",
+      "result": "refuted",
+      "disposition": "retain/refuse"
+    },
+    {
+      "id": "essential-spectrum-critical",
+      "discriminant": "strong but not norm convergence at alpha=1/2",
+      "result": "closed-with-topology",
+      "disposition": "strong response only"
+    },
+    {
+      "id": "low-spectrum-suppressed",
+      "discriminant": "compact factor gives norm convergence",
+      "result": "closed",
+      "disposition": "norm-stable compact response"
+    },
+    {
+      "id": "trace-measure",
+      "discriminant": "Schatten threshold",
+      "result": "closed-with-ideal",
+      "disposition": "trace claims only for trace-class residue"
+    },
+    {
+      "id": "weak-only",
+      "discriminant": "Rademacher projections",
+      "result": "closed-with-counterexample",
+      "disposition": "weak response cannot promote to strong"
+    },
+    {
+      "id": "frequency-support",
+      "discriminant": "operator Harnack plus Douglas",
+      "result": "closed",
+      "disposition": "one base point fixes dissipative square-root range class"
+    },
+    {
+      "id": "full-complex-factorization",
+      "discriminant": "explicit complementability certificate",
+      "result": "conditional",
+      "disposition": "use certified form branch or fall through; imaginary comparability alone is insufficient"
+    },
+    {
+      "id": "kernel-crossing-path",
+      "discriminant": "endpoint-identical sqrt(delta)L paths",
+      "result": "closed-with-counterexample",
+      "disposition": "retain positive-operator residue/approach data"
+    },
+    {
+      "id": "finite-probe-reconstruction",
+      "discriminant": "equal visible compression and trace, unequal residues",
+      "result": "refuted-uniformly",
+      "disposition": "retain operator-valued measure or separating state family"
+    },
+    {
+      "id": "noncommuting-reduced-interior",
+      "discriminant": "direct versus factorized and frame-rotated correction",
+      "result": "closed",
+      "disposition": "simultaneous diagonalization not required"
+    },
+    {
+      "id": "fredholm-necessity",
+      "discriminant": "non-Fredholm compact T with bounded critical response",
+      "result": "refuted",
+      "disposition": "Fredholmness is optional metadata, not the response gate"
+    }
+  ],
+  "frontiers": [
+    {
+      "id": "unbounded-operator-domains",
+      "status": "new-programme",
+      "reentryCondition": "Declare closed operators, common form domains, graph topology and adjoint/domain transport."
+    },
+    {
+      "id": "real-axis-boundary-values",
+      "status": "new-programme",
+      "reentryCondition": "Choose an a.e., weak, strong, norm or limiting-absorption boundary topology and a spectral-measure class."
+    },
+    {
+      "id": "frequency-dependent-or-nonreciprocal-coupling",
+      "status": "new-programme",
+      "reentryCondition": "Include off-diagonal imaginary parts and state a replacement passivity identity."
+    },
+    {
+      "id": "hilbert-cstar-modules-or-banach-spaces",
+      "status": "new-category",
+      "reentryCondition": "Replace Hilbert-space Douglas factorization and specify which range/complementability theorem survives."
+    }
+  ],
+  "boundedExhaustion": {
+    "everyInScopeBranchHasDisposition": true,
+    "unresolvedInScopeDiscriminantThatCanChangeDisposition": false,
+    "reason": "Every bounded interior case is routed by existence of an ordinary inverse, closed-range inverse, certified generalized complement, topology-labelled bounded limit, or refusal. The strict topology and residue counterexamples prevent any further silent promotion."
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

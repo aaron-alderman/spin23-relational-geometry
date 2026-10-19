@@ -1,0 +1,283 @@
+{
+  "protocol": "claimipedia-d03-free-metric-higgs-strike/1",
+  "strikeId": "d03-free-improved-higgs-spectral-ray-v1",
+  "theoremCandidate": {
+    "freeTraceIdentity": "For a free four-real-scalar Higgs multiplet with conformal improvement in four dimensions, the separated-point on-shell trace is O_g=2 m^2 O_H, modulo EOM and contact terms.",
+    "spectralConsequence": "rho_ab(s)=rho_H(s) (2m^2,1)_a (2m^2,1)_b, so the metric-Higgs spectral matrix has rank one and zero determinant at every s above the two-particle threshold.",
+    "innovationTheorem": "For positive rho with rho_HH>0, Delta=rho_gg-rho_gH rho_HH^-1 rho_Hg=det(rho)/rho_HH is nonnegative and invariant under O_g -> O_g+c O_H.",
+    "gramMeaning": "If the metric excitation vector is g=a h+b x, Delta=b^2 ||x_perp||^2. It measures spectral information not already present in the Higgs source.",
+    "fullCarrierGate": "Positive determinant at one spectral point gives two independent source directions, not a three-dimensional spectral family. Full H2 requires three linearly independent matrices or a rank-three controlled-state Jacobian."
+  },
+  "freeFixture": {
+    "massSquared": 2.25,
+    "traceCoefficient": 4.5,
+    "threshold": 9,
+    "densityNormalization": "arbitrary positive common convention; rank and normalized innovation are convention independent",
+    "samples": [
+      {
+        "s": 9.25,
+        "rhoH": 0.16439898730535712,
+        "rho": [
+          [
+            3.3290794929334817,
+            0.739795442874107
+          ],
+          [
+            0.739795442874107,
+            0.16439898730535712
+          ]
+        ],
+        "determinant": 0,
+        "innovation": 4.440892098500626e-16,
+        "rank": 1
+      },
+      {
+        "s": 10,
+        "rhoH": 0.3162277660168379,
+        "rho": [
+          [
+            6.403612261840967,
+            1.4230249470757705
+          ],
+          [
+            1.4230249470757705,
+            0.3162277660168379
+          ]
+        ],
+        "determinant": 0,
+        "innovation": 0,
+        "rank": 1
+      },
+      {
+        "s": 12,
+        "rhoH": 0.5,
+        "rho": [
+          [
+            10.125,
+            2.25
+          ],
+          [
+            2.25,
+            0.5
+          ]
+        ],
+        "determinant": 0,
+        "innovation": 0,
+        "rank": 1
+      },
+      {
+        "s": 18,
+        "rhoH": 0.7071067811865476,
+        "rho": [
+          [
+            14.318912319027588,
+            3.1819805153394642
+          ],
+          [
+            3.1819805153394642,
+            0.7071067811865476
+          ]
+        ],
+        "determinant": -1.7763568394002505e-15,
+        "innovation": -1.7763568394002505e-15,
+        "rank": 1
+      },
+      {
+        "s": 36,
+        "rhoH": 0.8660254037844386,
+        "rho": [
+          [
+            17.537014426634883,
+            3.8971143170299736
+          ],
+          [
+            3.8971143170299736,
+            0.8660254037844386
+          ]
+        ],
+        "determinant": 1.7763568394002505e-15,
+        "innovation": 0,
+        "rank": 1
+      }
+    ]
+  },
+  "sourceShearFixture": {
+    "basePositive": [
+      [
+        5,
+        1.4
+      ],
+      [
+        1.4,
+        2
+      ]
+    ],
+    "samples": [
+      {
+        "c": -4,
+        "transformed": [
+          [
+            25.8,
+            -6.6
+          ],
+          [
+            -6.6,
+            2
+          ]
+        ],
+        "determinant": 8.040000000000006,
+        "innovation": 4.020000000000003
+      },
+      {
+        "c": -1,
+        "transformed": [
+          [
+            4.2,
+            -0.6000000000000001
+          ],
+          [
+            -0.6000000000000001,
+            2
+          ]
+        ],
+        "determinant": 8.040000000000001,
+        "innovation": 4.0200000000000005
+      },
+      {
+        "c": 0.5,
+        "transformed": [
+          [
+            6.9,
+            2.4
+          ],
+          [
+            2.4,
+            2
+          ]
+        ],
+        "determinant": 8.040000000000001,
+        "innovation": 4.0200000000000005
+      },
+      {
+        "c": 3,
+        "transformed": [
+          [
+            31.4,
+            7.4
+          ],
+          [
+            7.4,
+            2
+          ]
+        ],
+        "determinant": 8.039999999999992,
+        "innovation": 4.019999999999996
+      }
+    ]
+  },
+  "interactionWitness": {
+    "h": [
+      1,
+      2,
+      -1
+    ],
+    "x": [
+      2,
+      -1,
+      3
+    ],
+    "a": 4.5,
+    "b": 0.35,
+    "g": [
+      5.2,
+      8.65,
+      -3.45
+    ],
+    "interactingGram": [
+      [
+        113.76500000000001,
+        25.95
+      ],
+      [
+        25.95,
+        6
+      ]
+    ],
+    "determinant": 9.187500000000227,
+    "gramDeterminantFormula": 9.187499999999998,
+    "innovation": 1.5312500000000284,
+    "xPerp": [
+      2.5,
+      0,
+      2.5
+    ]
+  },
+  "fullCarrierWitness": {
+    "family": [
+      [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    ],
+    "coordinateMatrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1.4142135623730951
+      ]
+    ],
+    "coordinateDeterminant": 1.4142135623730951
+  },
+  "dispositions": {
+    "freeHiggsProducesFullH2Carrier": false,
+    "freeHiggsProducesSpectralRay": true,
+    "improvementOrContactTermsCreateAbsorptiveRank": false,
+    "interactionOrAnomalyDirectionRequired": true,
+    "positiveDeterminantAtOnePointProvesSpin23Symmetry": false,
+    "innovationIsSourceShearInvariant": true
+  },
+  "nextGate": "Compute the anomaly/interacting remainder X=T^mu_mu-2m_H^2 H^dagger H in the Abelian-Higgs rung and test whether its spectral vector has a component orthogonal to H^dagger H.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

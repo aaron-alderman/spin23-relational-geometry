@@ -1,0 +1,127 @@
+{
+  "protocol": "claimipedia-d02-local-strike-execution/1",
+  "strikeId": "d02-support-stratified-schur-lightning-strike-v1",
+  "results": {
+    "localTheoremWitness": {
+      "status": "pass",
+      "statement": "On a fixed support with range-compatible real coupling, the support inverse is analytic, the Schur output remains Herglotz, and orthogonal support-frame changes leave the correction invariant.",
+      "samples": [
+        {
+          "z": {
+            "re": -1.2,
+            "im": 0.2
+          },
+          "effectiveImaginaryPart": 0.5448108879600367,
+          "frameCorrectionError": 1.1443916996305594e-16
+        },
+        {
+          "z": {
+            "re": 0,
+            "im": 0.7
+          },
+          "effectiveImaginaryPart": 1.4779266492146916,
+          "frameCorrectionError": 0
+        },
+        {
+          "z": {
+            "re": 2.4,
+            "im": 1.1
+          },
+          "effectiveImaginaryPart": 2.2274293476114653,
+          "frameCorrectionError": 2.8609792490763984e-17
+        }
+      ]
+    },
+    "wardDecoration": {
+      "status": "preserved-on-fixed-support",
+      "regulatorCorrectionSpread": 0,
+      "forbiddenNullCouplingDivergence": [
+        0.4000000000000001,
+        40.00000000000001,
+        4000.0000000000005
+      ]
+    },
+    "rankChange": {
+      "status": "canonical-continuation-refuted",
+      "sameFullBlockLimit": true,
+      "sqrtCouplingLimit": {
+        "re": 1.4238532110091744,
+        "im": 2.5871559633027523
+      },
+      "linearCouplingLimit": {
+        "re": 1.6,
+        "im": 2
+      },
+      "separation": 0.613008822541537,
+      "samples": [
+        {
+          "t": 0.01,
+          "sqrtPath": {
+            "re": 1.4238532110091744,
+            "im": 2.5871559633027523
+          },
+          "linearPath": {
+            "re": 1.5982385321100918,
+            "im": 2.0058715596330274
+          }
+        },
+        {
+          "t": 0.0001,
+          "sqrtPath": {
+            "re": 1.4238532110091744,
+            "im": 2.5871559633027523
+          },
+          "linearPath": {
+            "re": 1.599982385321101,
+            "im": 2.0000587155963303
+          }
+        },
+        {
+          "t": 0.000001,
+          "sqrtPath": {
+            "re": 1.4238532110091744,
+            "im": 2.5871559633027523
+          },
+          "linearPath": {
+            "re": 1.5999998238532112,
+            "im": 2.0000005871559634
+          }
+        }
+      ]
+    },
+    "kmsDecoration": {
+      "status": "preserved-only-at-common-temperature",
+      "commonMultiplier": 2.0933639826813994,
+      "commonTemperatureNoise": 2.721373177485819,
+      "unequalMultipliers": [
+        2.692803173129624,
+        1.386708186115386
+      ]
+    },
+    "wallDecoration": {
+      "residueStatus": "preserved-when-probe-visible",
+      "bulkIndexStatus": "not-determined-by-projected-response",
+      "invisibleIndexPair": {
+        "firstBulkIndex": 0,
+        "secondBulkIndex": 1,
+        "projectedResponseDifference": 0
+      },
+      "observedZeroModeImaginaryPart": 1.4999999999999998
+    }
+  },
+  "disposition": {
+    "localFixedSupportLaw": "retain-as-exact-bounded-theorem",
+    "globalAcrossRankChangeLaw": "split-into-stratum-specific-calculi",
+    "ward": "transport-on-fixed-support-with-range-condition",
+    "kms": "transport-at-one-common-temperature-only",
+    "wallResidue": "transport-if-observed",
+    "wallIndex": "retain-separate-bulk-decoration-or-emit-loss-receipt"
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entailsBeyondDeclaredFiniteModels": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

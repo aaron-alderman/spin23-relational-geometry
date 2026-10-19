@@ -1,0 +1,80 @@
+{
+  "protocol": "claimipedia-rank-change-gluing-contract/1",
+  "id": "d02-schur-arc-groupoid-gluing-v1",
+  "scope": {
+    "objects": "finite-dimensional analytic or polynomial block-response germs near a rank-changing locus",
+    "regularLocus": "points where the eliminated block D is invertible on its support",
+    "excluded": [
+      "infinite-dimensional essential-spectrum crossings",
+      "interacting quantum-field-theory existence questions",
+      "nonequilibrium fluctuation relations",
+      "smooth flat germs unless their full germs, rather than jets, are retained"
+    ]
+  },
+  "semanticObjects": [
+    {
+      "type": "SchurGerm",
+      "fields": ["base germ A", "coupling germ B", "interior germ D", "singular locus S", "declared decorations"]
+    },
+    {
+      "type": "ApproachArc",
+      "fields": ["germ gamma with gamma(0) in S", "gamma(t) outside S for t != 0", "optional normal-coordinate and subtraction scheme"]
+    },
+    {
+      "type": "ResponseAlongArc",
+      "fields": ["limit or pole class of A-B D^-1 B^T along gamma", "transported Ward/KMS/wall decorations", "loss receipt"]
+    }
+  ],
+  "morphisms": [
+    {
+      "type": "interior-frame-germ",
+      "action": "D maps to T^T D T and B maps to B T for analytic invertible T",
+      "invariant": "the full correction B D^-1 B^T"
+    },
+    {
+      "type": "regular-parameter-germ",
+      "action": "precompose all germs and approach arcs by an invertible parameter germ",
+      "invariant": "existence and equality of ordinary finite limits",
+      "nonInvariant": "Hadamard finite parts of poles without a transported subtraction scheme"
+    },
+    {
+      "type": "arc-equivalence",
+      "action": "identify arcs only when the retained germ data force the same response",
+      "invariant": "response functor on the resulting quotient groupoid"
+    }
+  ],
+  "dispatcher": [
+    {
+      "condition": "constant support and range-compatible coupling",
+      "output": "ordinary local support-Schur response"
+    },
+    {
+      "condition": "rank change and the full correction has one finite cluster value",
+      "output": "unique removable glued response"
+    },
+    {
+      "condition": "rank change and finite cluster values depend on the approach arc",
+      "output": "arc-groupoid-valued response; do not descend to one value"
+    },
+    {
+      "condition": "the correction is unbounded along at least one admitted arc",
+      "output": "retain the interior or refuse elimination"
+    },
+    {
+      "condition": "a normal coordinate and subtraction prescription are explicit decorations",
+      "output": "scheme-relative renormalized response with the scheme retained in its type"
+    }
+  ],
+  "measureInterpretation": {
+    "statement": "When each response is Herglotz, it may separately carry its positive operator-valued representing measure. Measure-valued representation preserves passivity and residues but does not identify inequivalent approach arcs.",
+    "forbiddenInference": "positivity alone implies descent from the arc groupoid to the singular point"
+  },
+  "descentCriterion": "A scalar/matrix response at a singular point exists exactly when the response functor is constant on all admitted approach objects and finite there.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

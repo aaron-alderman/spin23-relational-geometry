@@ -1,0 +1,58 @@
+{
+  "protocol": "claimipedia-d02-bounded-operator-contract/1",
+  "id": "d02-factorized-operator-schur-v1",
+  "scope": "bounded operators between separable Hilbert spaces with fixed support; norm-holomorphic frequency dependence",
+  "objects": {
+    "interiorScale": "a bounded positive operator T with fixed support P=projection onto closure(range(T))",
+    "reducedInterior": "a norm-holomorphic bounded operator Dhat(z) on P H_i that is boundedly invertible at every z in the upper half-plane",
+    "interiorBlock": "D(z)=T^(1/2) Dhat(z) T^(1/2)",
+    "compatibleCoupling": "B=C T^(1/2), equivalently range(B*) is contained in range(T^(1/2)) with a bounded Douglas factor C",
+    "effectiveCorrection": "C Dhat(z)^(-1) C*"
+  },
+  "dispatcher": [
+    {
+      "condition": "T has closed range and the coupling annihilates its kernel",
+      "topology": "operator norm",
+      "output": "ordinary bounded Moore-Penrose/support-Schur response"
+    },
+    {
+      "condition": "T may have non-closed range but B=C T^(1/2) with bounded C",
+      "topology": "factorized form; strong regularization in the commuting spectral model",
+      "output": "bounded factorized Schur response C Dhat^(-1) C*"
+    },
+    {
+      "condition": "the factor C suppresses the low-spectrum tail uniformly (compact C is sufficient)",
+      "topology": "operator norm under the declared commuting regularization",
+      "output": "norm-stable factorized response"
+    },
+    {
+      "condition": "B does not factor boundedly through T^(1/2)",
+      "topology": "none",
+      "output": "unbounded correction; retain the interior or refuse elimination"
+    },
+    {
+      "condition": "B has a component on kernel(T)",
+      "topology": "none",
+      "output": "regulator divergence; fail the Ward/range gate"
+    }
+  ],
+  "topologyLedger": {
+    "norm": "uniform operator control; stable under norm-continuous downstream operations",
+    "strong": "vectorwise control only; does not license norm, determinant, trace, or uniform spectral conclusions",
+    "weak": "matrix-element control only; retained as a distinct weaker option",
+    "traceNorm": "requires an additional Schatten-class residue condition"
+  },
+  "symmetries": [
+    "unitary external and interior frame transport",
+    "fixed-support partial-isometry transport",
+    "regular frequency reparameterization",
+    "factorization-gauge transport that leaves D, B and the reduced correction invariant"
+  ],
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

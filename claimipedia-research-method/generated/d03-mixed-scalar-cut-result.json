@@ -1,0 +1,151 @@
+{
+  "protocol": "claimipedia-d03-mixed-scalar-cut-strike/1",
+  "strikeId": "d03-abelian-higgs-four-scalar-ratio-v1",
+  "theoremCandidate": {
+    "formFactors": "In the scalar quartic sector, O_H=phi^2/2 reaches four on-shell scalars at order lambda through one propagator, while the beta_lambda O_4 trace term reaches them through a local contact form factor.",
+    "mixedRatio": "Up to common convention factors, r_4=2m^2+beta_lambda/[lambda sum_i((q-p_i)^2-m^2)^-1], so nonzero beta_lambda gives a finite ratio distinct from the scalar-pair value at generic kinematics.",
+    "kinematicVariation": "The propagator sum changes across four-body phase space, so r_4 is not a fixed relabelling of the scalar-pair ray.",
+    "thresholdSeparation": "Gauge-pair, scalar-pair and four-scalar cuts start at distinct thresholds 0,4m^2,16m^2 in the massless-gauge simplified rung, making their leading weights spectrally identifiable.",
+    "fullSpan": "The gauge-only point at infinity, scalar-pair ratio 2m^2 and any generic four-scalar ratio have nonzero projective coordinate determinant and therefore span H2(R).",
+    "schemeCovariance": "O_g -> O_g+c O_H shifts every finite ratio by c and leaves the determinant with the infinity direction unchanged."
+  },
+  "parameters": {
+    "mass": 1,
+    "lambda": 0.2,
+    "betaLambda": 0.0007599088773175335,
+    "pairRatio": 2
+  },
+  "configurations": [
+    {
+      "totalEnergy": 6,
+      "invariantMassSquared": 36,
+      "firstMomentum": 0,
+      "secondMomentum": 1.7320508075688772,
+      "firstEnergy": 1,
+      "secondEnergy": 2,
+      "firstDenominator": 24,
+      "secondDenominator": 12,
+      "higgsFourFormFactor": 0.05,
+      "quarticContactFormFactor": 1,
+      "ratio": 2.0151981775463508
+    },
+    {
+      "totalEnergy": 6,
+      "invariantMassSquared": 36,
+      "firstMomentum": 1,
+      "secondMomentum": 1.2307390567303167,
+      "firstEnergy": 1.4142135623730951,
+      "secondEnergy": 1.5857864376269049,
+      "firstDenominator": 19.029437251522857,
+      "secondDenominator": 16.970562748477143,
+      "higgsFourFormFactor": 0.04459029062228061,
+      "quarticContactFormFactor": 1,
+      "ratio": 2.0170420256677546
+    },
+    {
+      "totalEnergy": 7,
+      "invariantMassSquared": 49,
+      "firstMomentum": 0.4,
+      "secondMomentum": 2.206981936947309,
+      "firstEnergy": 1.077032961426901,
+      "secondEnergy": 2.4229670385730993,
+      "firstDenominator": 33.921538540023384,
+      "secondDenominator": 15.078461459976609,
+      "higgsFourFormFactor": 0.03831982342739773,
+      "quarticContactFormFactor": 1,
+      "ratio": 2.019830698822433
+    },
+    {
+      "totalEnergy": 8,
+      "invariantMassSquared": 64,
+      "firstMomentum": 1.5,
+      "secondMomentum": 1.9564751207577475,
+      "firstEnergy": 1.8027756377319946,
+      "secondEnergy": 2.197224362268005,
+      "firstDenominator": 35.15558979628808,
+      "secondDenominator": 28.844410203711917,
+      "higgsFourFormFactor": 0.02524549635216405,
+      "quarticContactFormFactor": 1,
+      "ratio": 2.030100769924153
+    }
+  ],
+  "carrierDeterminants": [
+    {
+      "mixedRatio": 2.0151981775463508,
+      "determinant": 0.021493468809403726
+    },
+    {
+      "mixedRatio": 2.0170420256677546,
+      "determinant": 0.02410106382964905
+    },
+    {
+      "mixedRatio": 2.019830698822433,
+      "determinant": 0.028044843226020966
+    },
+    {
+      "mixedRatio": 2.030100769924153,
+      "determinant": 0.0425689170646093
+    }
+  ],
+  "shearChecks": [
+    {
+      "ratio": 2.0151981775463508,
+      "shiftedRatio": 5.715198177546351,
+      "before": 0.021493468809403726,
+      "after": 0.02149346880940506,
+      "error": 1.3322676295501878e-15
+    },
+    {
+      "ratio": 2.0170420256677546,
+      "shiftedRatio": 5.717042025667755,
+      "before": 0.02410106382964905,
+      "after": 0.024101063829650826,
+      "error": 1.7763568394002505e-15
+    },
+    {
+      "ratio": 2.019830698822433,
+      "shiftedRatio": 5.719830698822433,
+      "before": 0.028044843226020966,
+      "after": 0.028044843226021854,
+      "error": 8.881784197001252e-16
+    },
+    {
+      "ratio": 2.030100769924153,
+      "shiftedRatio": 5.730100769924153,
+      "before": 0.0425689170646093,
+      "after": 0.04256891706461019,
+      "error": 8.881784197001252e-16
+    }
+  ],
+  "thresholds": {
+    "gaugePair": 0,
+    "scalarPair": 4,
+    "fourScalar": 16
+  },
+  "fixedPointCounterexample": {
+    "betaLambda": 0,
+    "ratio": 2,
+    "determinant": 0
+  },
+  "dispositions": {
+    "genericQuarticRunningSuppliesThirdProjectiveDirection": true,
+    "thirdRatioVariesAcrossFourBodyKinematics": true,
+    "threeLeadingThresholdClassesSpanH2": true,
+    "sourceShearErasesDistinctness": false,
+    "scalarFixedPointSuppliesThirdDirection": false,
+    "fullSpanEstablishesSpin23Covariance": false
+  },
+  "qualifications": [
+    "This is the leading scalar-sector form-factor topology; complete Abelian-Higgs normalization, charged-species combinatorics, gauge/Goldstone/ghost completion and loop phases remain to be calculated.",
+    "Linear span is established structurally; an open physical image and transformation closure remain separate gates.",
+    "The real-carrier conclusion uses tree-level real form factors; absorptive loop phases require the declared antiunitary/reciprocity audit."
+  ],
+  "nextGate": "Perform the BRST-complete Abelian-Higgs operator-mixing and phase audit, then compute whether physical controls give a rank-three spectral Jacobian rather than only a three-direction threshold span.",
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

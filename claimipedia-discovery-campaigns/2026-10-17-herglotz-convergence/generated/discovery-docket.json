@@ -1,0 +1,283 @@
+{
+  "protocol": "claimipedia-scientific-discovery-docket/1",
+  "campaignId": "herglotz-convergence-2026-10-17",
+  "title": "Conserved response routes to a shared Schur–Herglotz interface",
+  "basis": {
+    "graphSha256": "5b7ad6f6896a0bb3075f978e109e34c1af367cca16a0db9a885bfcc01f0dc575",
+    "sourceLedgerSnapshotDigest": "6b7c7f0239aa32cf7cf5b70300f4100cb42cfa1f54ff158810ab34244df74542",
+    "sourceCount": 11,
+    "host": {
+      "generationId": "host-claim-adapter-v18",
+      "runtimeHash": "28fbfa709c2f8a18716d76450a196abba8074e45b908334316c7e0c147d2b1a3"
+    }
+  },
+  "reviewStage": "Triage",
+  "summary": {
+    "queryCount": 3,
+    "candidateCount": 4,
+    "routesWithCandidates": [
+      "conserved-current-route",
+      "domain-wall-route",
+      "thermal-stress-route"
+    ],
+    "invalidRuleIds": [
+      "counterexample-kms-without-common-temperature"
+    ],
+    "convergenceObserved": true,
+    "convergenceTarget": "shared.schur-herglotz-interface",
+    "interpretation": "Three independently sourced constructions reach a common causal-passive two-face response interface only after their domain-specific meanings are explicitly discarded. This is a reusable composition seam, not evidence of a physical coupling or unification."
+  },
+  "candidates": [
+    {
+      "queryId": "thermal-stress-route",
+      "candidateId": "d5d350c30b5d7d3fd37bc758c54393f108b2aedba90386bb08b9d2b22d93374d",
+      "source": "stress.thermal-input",
+      "target": "shared.schur-herglotz-interface",
+      "steps": [
+        "thermal-ward-channel-decomposition",
+        "two-probe-channel-contraction",
+        "direct-kms-causal-lift",
+        "forget-kms-to-common-interface"
+      ],
+      "assumptions": [
+        "equilibrium medium rest frame is declared",
+        "nonzero spatial momentum",
+        "stress Ward identity holds",
+        "two conserved probes and their channel amplitudes are declared",
+        "positive-frequency spectral positivity",
+        "one common inverse temperature",
+        "a reciprocal passive analytic completion exists",
+        "real frequency-independent sewing couplings",
+        "only the causal passive response interface is compared across domains"
+      ],
+      "losses": [
+        "Ward-null longitudinal combinations",
+        "directions outside the helicity channel decomposition",
+        "channel components outside the two-probe Gram response",
+        "common-temperature KMS multiplier",
+        "thermal channel interpretation",
+        "microscopic stress provenance"
+      ],
+      "evidenceRefs": [
+        "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=tensor%2C%20shear%2Fvector%20and%20sound%2Fscalar%20channels",
+        "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=full-span%20result%2C%20not%20a%20full-symmetry%20result",
+        "206_conserved_stress_spectral_quotient_to_h2_response.md#sha256=dd3fd0f41a3c89bea99996f30ffbe62834b431712cbc66a6af59a5ab51d936ae&anchor=The%20projector%20theorem%20fixes%20the%20kinematic%20quotient",
+        "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=this%20response%20class%20is%20closed%20under%20Schur%20elimination",
+        "207_stress_contact_counterterm_obstruction_and_spectral_escape.md#sha256=0897bc3dfcfae06b262467d694d1152feae4b3080d81e1d892a56b7fad4eae32&anchor=The%20spectral%20density%20is%20the%20invariant%20content"
+      ],
+      "ranking": {
+        "attentionScore": 33,
+        "topicBreadth": 9,
+        "topics": [
+          "herglotz",
+          "hydrodynamics",
+          "kms",
+          "renormalization",
+          "schur-composition",
+          "spectral-response",
+          "stress-energy",
+          "thermal-field-theory",
+          "ward-identity"
+        ],
+        "testCount": 5,
+        "tests": [
+          "Schur closure with the KMS data deliberately forgotten",
+          "kinematic falsifier: fewer than three independent nonzero channels",
+          "probe Gram determinant and channel independence",
+          "unequal-temperature scalar KMS obstruction",
+          "upper-half-plane passivity"
+        ],
+        "stepCount": 4,
+        "assumptionCount": 9,
+        "lossCount": 6,
+        "authority": "attention-ordering-only"
+      }
+    },
+    {
+      "queryId": "thermal-stress-route",
+      "candidateId": "388f6396c99ab7f061b3c1171840575ac952b6eecf208fabf02844241e06501d",
+      "source": "stress.thermal-input",
+      "target": "shared.schur-herglotz-interface",
+      "steps": [
+        "thermal-ward-channel-decomposition",
+        "hydrodynamic-specialization",
+        "hydrodynamic-kms-causal-lift",
+        "forget-kms-to-common-interface"
+      ],
+      "assumptions": [
+        "equilibrium medium rest frame is declared",
+        "nonzero spatial momentum",
+        "stress Ward identity holds",
+        "leading hydrodynamic regime",
+        "positive transport coefficients",
+        "prototype normalizations are not treated as microscopic predictions",
+        "correctly normalized retarded correlator exists in the hydrodynamic domain",
+        "one common temperature",
+        "hydrodynamic poles remain passive",
+        "only the causal passive response interface is compared across domains"
+      ],
+      "losses": [
+        "Ward-null longitudinal combinations",
+        "directions outside the helicity channel decomposition",
+        "prototype coefficient normalization",
+        "common-temperature KMS multiplier",
+        "thermal channel interpretation",
+        "microscopic stress provenance"
+      ],
+      "evidenceRefs": [
+        "211_thermal_stress_channels_can_span_full_h2.md#sha256=5c3ae5863db8209b14fd4388c7170924d55b9b20023a1991476750db43d2e3b7&anchor=tensor%2C%20shear%2Fvector%20and%20sound%2Fscalar%20channels",
+        "212_hydrodynamic_stress_map_can_have_local_rank_three.md#sha256=3f8302d8ece695890f9054661d86c515cc0e60ca57daf6641a16f0c76e05de73&anchor=must%20have%20Jacobian%20rank%20three%20somewhere",
+        "212_hydrodynamic_stress_map_can_have_local_rank_three.md#sha256=3f8302d8ece695890f9054661d86c515cc0e60ca57daf6641a16f0c76e05de73&anchor=not%20a%20universal%20theorem",
+        "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=common%20temperature%20is%20not%20cosmetic",
+        "213_fixed_temperature_kms_herglotz_schur_sewing.md#sha256=206eb8ec985d70f8a3e2e63c855d75d3cc3720342703c30306dc3df4de936417&anchor=this%20response%20class%20is%20closed%20under%20Schur%20elimination"
+      ],
+      "ranking": {
+        "attentionScore": 30,
+        "topicBreadth": 8,
+        "topics": [
+          "herglotz",
+          "hydrodynamics",
+          "kms",
+          "local-rank",
+          "schur-composition",
+          "stress-energy",
+          "thermal-field-theory",
+          "transport"
+        ],
+        "testCount": 6,
+        "tests": [
+          "KMS gate on normalized correlator",
+          "Schur closure with the KMS data deliberately forgotten",
+          "kinematic falsifier: fewer than three independent nonzero channels",
+          "pole and passivity audit",
+          "rank-collapse under exact constitutive identities",
+          "rank-three Jacobian witness"
+        ],
+        "stepCount": 4,
+        "assumptionCount": 10,
+        "lossCount": 6,
+        "authority": "attention-ordering-only"
+      }
+    },
+    {
+      "queryId": "domain-wall-route",
+      "candidateId": "784f803213dfed4939b710cd841db3f3452deb09bae128299fc7166bcbf5030e",
+      "source": "wall.finite-kink-hamiltonian",
+      "target": "shared.schur-herglotz-interface",
+      "steps": [
+        "wall-projected-resolvent",
+        "wall-schur-elimination",
+        "forget-wall-to-common-interface"
+      ],
+      "assumptions": [
+        "finite Hermitian kink Hamiltonian",
+        "two real probes near the wall",
+        "interior resolvent block is invertible away from retained poles",
+        "bulk/probe partition is declared",
+        "only the causal passive response interface is compared across domains"
+      ],
+      "losses": [
+        "bulk coordinates outside the two wall probes",
+        "explicit eliminated bulk coordinates",
+        "wall localization interpretation",
+        "zero-mode index interpretation",
+        "finite-chain microscopic realization"
+      ],
+      "evidenceRefs": [
+        "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=The%20wall%20response%20is%20a",
+        "227_domain_wall_relocates_weyl_compensation_into_bulk_inflow.md#sha256=b5546e962a3f3269ab608b34f52fe4959535ab80b94007ff043fc100c375ee07&anchor=relocation%2C%20not%20erasure",
+        "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=exact%20Schur-complement%20provenance",
+        "227_domain_wall_relocates_weyl_compensation_into_bulk_inflow.md#sha256=b5546e962a3f3269ab608b34f52fe4959535ab80b94007ff043fc100c375ee07&anchor=Boundary%20Green%20functions%20obtained%20by%20eliminating%20the%20massive%20bulk%20are%20Schur%20complements",
+        "229_finite_domain_wall_resolvent_is_a_schur_herglotz_carrier.md#sha256=b245c5968aae85e033c5729d41628ca7ec669ae1ea1efa30c636c9610870455a&anchor=matrix-valued%20Herglotz%20function"
+      ],
+      "ranking": {
+        "attentionScore": 27,
+        "topicBreadth": 6,
+        "topics": [
+          "anomaly-inflow",
+          "boundary-response",
+          "domain-wall",
+          "herglotz",
+          "resolvent",
+          "schur-composition"
+        ],
+        "testCount": 5,
+        "tests": [
+          "block Schur identity",
+          "localized zero-mode residue",
+          "positive spectral residues",
+          "projected resolvent positivity",
+          "restoring gauge and spinor structure must preserve spectral positivity"
+        ],
+        "stepCount": 3,
+        "assumptionCount": 5,
+        "lossCount": 5,
+        "authority": "attention-ordering-only"
+      }
+    },
+    {
+      "queryId": "conserved-current-route",
+      "candidateId": "993fb606a2ca2738b29aee2b53277eda65b1fd3322f5b7dc2ec840986a429a10",
+      "source": "current.euclidean-ward-kernel",
+      "target": "shared.schur-herglotz-interface",
+      "steps": [
+        "current-ward-causal-quotient",
+        "forget-current-to-common-interface"
+      ],
+      "assumptions": [
+        "constant-rank Ward support patch",
+        "two conserved probes annihilate the null bundle",
+        "retarded analytic continuation exists",
+        "the Ward support remains constant on the compared patch"
+      ],
+      "losses": [
+        "longitudinal Ward-null directions",
+        "subtraction-polynomial information",
+        "current-specific polarization interpretation",
+        "fixed Ward-null bundle coordinates"
+      ],
+      "evidenceRefs": [
+        "205_conserved_current_ward_quotient_to_h2_response.md#sha256=97cc04d0c90b0268b7d5bc22552937ffd3de30ed5def369aa511f147ab54f8b4&anchor=The%20Ward%20identity%20and%20conserved-source%20condition%20therefore%20make%20the%20generalized%20recursion%20well%20defined",
+        "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#sha256=9a4f9490dcc1816c3d748af7939de536e4298487bda13f8f6d2b3adeae3499f5&anchor=The%20singular%20Ward%20quotient%20and%20causal%20Schur%20sewing%20commute",
+        "215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#sha256=9a4f9490dcc1816c3d748af7939de536e4298487bda13f8f6d2b3adeae3499f5&anchor=Rank-changing%20thresholds%20are%20a%20genuine%20pin"
+      ],
+      "ranking": {
+        "attentionScore": 22,
+        "topicBreadth": 5,
+        "topics": [
+          "conserved-current",
+          "herglotz",
+          "pseudoinverse",
+          "schur-response",
+          "ward-identity"
+        ],
+        "testCount": 3,
+        "tests": [
+          "rank-changing threshold refusal",
+          "regulator independence",
+          "support-rank continuity across the selected patch"
+        ],
+        "stepCount": 2,
+        "assumptionCount": 4,
+        "lossCount": 4,
+        "authority": "attention-ordering-only"
+      }
+    }
+  ],
+  "falsifiers": [
+    "The thermal response lacks a passive analytic completion or requires unequal-temperature sewing.",
+    "The Ward support changes rank on the claimed current-response patch.",
+    "Restoring gauge and spinor structure makes the wall spectral density indefinite or invalidates the Schur partition.",
+    "The apparent convergence disappears when domain-specific data are retained rather than projected away."
+  ],
+  "authority": {
+    "ranking": "attention-ordering-only",
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticPromotion": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  },
+  "docketSha256": "08d98c4044cad60a6e0f93472cd657afd12eed7513d0bf1499b305fcd84254dd"
+}

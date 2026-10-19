@@ -1,0 +1,116 @@
+{
+  "protocol": "claimipedia.programme-import-proposal/1",
+  "authority": "proposal-only",
+  "sourceProgramme": "programme.orientation-architecture",
+  "targetApplication": "app.claimipedia",
+  "targetCollections": {
+    "programs": [
+      {
+        "subject": "program.orientationArchitecture",
+        "currentVersion": "programVersion.orientationArchitecture.1"
+      }
+    ],
+    "programVersions": [
+      {
+        "subject": "programVersion.orientationArchitecture.1",
+        "program": "program.orientationArchitecture",
+        "status": "Proposed",
+        "title": "Architecture of Orientation Research Programme",
+        "authority": "ProposalOnly",
+        "workPackageIds": ["WP00", "WP01", "WP02", "WP03", "WP04", "WP05", "WP06", "WP07", "WP08", "WP09", "WP10"]
+      }
+    ],
+    "programExamples": [
+      {
+        "subject": "example.orientationArchitecture.initialTranche",
+        "programVersion": "programVersion.orientationArchitecture.1",
+        "claimIds": ["O1", "O2", "O3", "O4", "O5", "O6", "O7", "O8"],
+        "source": "initial-tranche.json"
+      },
+      {
+        "subject": "example.orientationArchitecture.initialTrancheV2",
+        "programVersion": "programVersion.orientationArchitecture.1",
+        "claimIds": ["O1v2", "O1c", "O2a", "O2b", "O3v2", "O4v2", "O5a", "O5b", "O6a", "O6b", "O7v2", "O8v2"],
+        "source": "initial-tranche-v2.json",
+        "status": "ReviewCandidate"
+      }
+    ],
+    "evaluations": [
+      {
+        "subject": "evaluation.orientationArchitecture.wp01",
+        "programVersion": "programVersion.orientationArchitecture.1",
+        "workPackage": "WP01",
+        "status": "HumanDispositionRecorded",
+        "perspectives": ["internal-steelman", "rival-framework", "affected-party", "reflexive-third-order"],
+        "requiredOutcome": "Each claim receives a human disposition and the tranche demonstrates the possibility of subtractive correction.",
+        "completionState": "CompletedForV1",
+        "sources": ["wp01-adversarial-review.md", "initial-tranche-v2.json", "wp01-sourcery-receipt.json", "wp01-human-dispositions.json"]
+      },
+      {
+        "subject": "evaluation.orientationArchitecture.wp04",
+        "programVersion": "programVersion.orientationArchitecture.1",
+        "workPackage": "WP04",
+        "status": "ProtocolCandidate",
+        "perspectives": ["administrator", "participant", "affected-party", "dissenter", "material-power-rival"],
+        "requiredOutcome": "A preregistrable study must distinguish norms, rules, sorting, incentives, network effects and contestable standing.",
+        "sources": ["wp04-culture-power-protocol.md", "wp04-study-04-3-preregistration.md", "wp04-feasibility-audit.md", "wp04-feasibility-audit.json", "wp04-power-simulation-result.json", "wp04-power-simulation-interpretation.md", "wp04-wp06-claim-packets.json", "wp04-wp06-sourcery-receipt.json"]
+      },
+      {
+        "subject": "evaluation.orientationArchitecture.wp02",
+        "programVersion": "programVersion.orientationArchitecture.1",
+        "workPackage": "WP02",
+        "status": "ProtocolCandidate",
+        "perspectives": ["enriched-internalist", "ecological-dynamics", "skilled-practitioner", "affected-party", "reflexive-third-order"],
+        "requiredOutcome": "The stronger relational thesis must outperform an equally constrained enriched internal model on preregistered held-out coupling and transfer predictions; tacit legibility must permit gains, losses and null effects.",
+        "sources": ["wp02-relational-embodiment-protocol.md", "wp02-claim-packets.json", "wp01-human-dispositions.json"]
+      },
+      {
+        "subject": "evaluation.orientationArchitecture.wp06",
+        "programVersion": "programVersion.orientationArchitecture.1",
+        "workPackage": "WP06",
+        "status": "PreregistrationCandidate",
+        "perspectives": ["comparative-folklore", "cultural-phylogenetic", "represented-tradition", "generic-narrative-rival", "reflexive-third-order"],
+        "requiredOutcome": "Corpus governance, fixed coding, numerical reliability thresholds and executable null models must precede confirmatory coding.",
+        "sources": ["wp06-myth-invariants-preregistration.md", "wp06-corpus-inventory.md", "wp06-corpus-inventory.json", "wp06-pilot-manifest.json", "wp06-blind-coding-packet.md", "wp06-blind-coding-packet.json", "wp04-wp06-claim-packets.json", "wp04-wp06-sourcery-receipt.json"]
+      }
+    ],
+    "metrics": [
+      {"subject": "metric.orientationArchitecture.claimPacketCompleteness", "programmeMetric": "M01"},
+      {"subject": "metric.orientationArchitecture.liveRivalCoverage", "programmeMetric": "M02"},
+      {"subject": "metric.orientationArchitecture.subtractiveCorrectionRate", "programmeMetric": "M03"},
+      {"subject": "metric.orientationArchitecture.evidenceCoverage", "programmeMetric": "M04"},
+      {"subject": "metric.orientationArchitecture.crossLayerCollapseCount", "programmeMetric": "M05"},
+      {"subject": "metric.orientationArchitecture.outOfSamplePerformance", "programmeMetric": "M06"},
+      {"subject": "metric.orientationArchitecture.affectedPartyStanding", "programmeMetric": "M07"}
+    ]
+  },
+  "dependencies": [
+    "initial-tranche.json",
+    "initial-tranche-v2.json",
+    "sourcery-pilot-receipt.json",
+    "wp01-adversarial-review.md",
+    "wp01-sourcery-receipt.json",
+    "wp01-human-dispositions.json",
+    "wp02-relational-embodiment-protocol.md",
+    "wp02-claim-packets.json",
+    "wp04-culture-power-protocol.md",
+    "wp04-study-04-3-preregistration.md",
+    "wp04-feasibility-audit.md",
+    "wp04-feasibility-audit.json",
+    "wp04-power-simulation-result.json",
+    "wp04-power-simulation-interpretation.md",
+    "wp06-myth-invariants-preregistration.md",
+    "wp06-corpus-inventory.md",
+    "wp06-corpus-inventory.json",
+    "wp06-pilot-manifest.json",
+    "wp06-blind-coding-packet.md",
+    "wp06-blind-coding-packet.json",
+    "wp04-wp06-claim-packets.json",
+    "wp04-wp06-review-packets.json",
+    "wp04-wp06-sourcery-receipt.json",
+    "programme.json"
+  ],
+  "admissionRequested": false,
+  "reasonNotAdmitted": "The exposed Claimipedia MCP boundary is an exact captured read projection and grants no business mutation or application-author authority."
+}
+

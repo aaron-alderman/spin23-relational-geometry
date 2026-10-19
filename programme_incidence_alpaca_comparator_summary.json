@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "tool": {"name": "alpaca-ALPs", "version": "1.2.0"},
+  "normalization": {
+    "uv_scale_GeV": 10000,
+    "fa_GeV": 1000000,
+    "common_uv_ctt": -10,
+    "independent_gauge_coefficients": {"cG": 0, "cW": 0, "cB": 0}
+  },
+  "models": {
+    "incidence_universal": {
+      "uv_physical_pattern": [-10, -6, -2],
+      "ew_physical_pattern": [-8.02151404829715, -6.796773634628126, -3.1812103470481965],
+      "ew_abs_bs": 0.008201543368490502,
+      "mass_points": {
+        "0.1": {"K_BR": 3.293970337029817e-8, "B_BR": 9.743552829552962e-6, "ctau_m": 20652.131255754502},
+        "0.3": {"K_BR": 1.6306944195466462e-8, "B_BR": 9.75563634418155e-6, "ctau_m": 0.22779843522802193}
+      }
+    },
+    "equal_axial_universal": {
+      "uv_physical_pattern": [-10, -10, -10],
+      "ew_physical_pattern": [-7.976508117374429, -10.745047115116927, -11.175432854951792],
+      "ew_abs_bs": 0.008182111425373364,
+      "mass_points": {
+        "0.1": {"K_BR": 3.233067189438192e-8, "B_BR": 9.707091081560607e-6, "ctau_m": 1523.9302861129622},
+        "0.3": {"K_BR": 1.592565548887668e-8, "B_BR": 9.719129377974339e-6, "ctau_m": 0.017173697360850233}
+      }
+    },
+    "top_right_only": {
+      "uv_physical_pattern": [-10, 0, 0],
+      "ew_physical_pattern": [-8.16470483447239, -0.9611770118033662, -1.197686053258878],
+      "ew_abs_bs": 0.008263503272218121,
+      "mass_points": {
+        "0.1": {"K_BR": 3.5119502799852186e-8, "B_BR": 9.860375320747516e-6, "ctau_m": 156218.1011067132},
+        "0.3": {"K_BR": 1.730255564439711e-8, "B_BR": 9.872603713359108e-6, "ctau_m": 1.9292865121941496}
+      }
+    }
+  },
+  "derived": {
+    "production_spread_fraction_at_0.1_GeV": {
+      "K": 0.08625960247844022,
+      "B": 0.015790955075932527
+    },
+    "incidence_over_equal": {
+      "ctau_0.1": 13.551887145986973,
+      "ctau_0.3": 13.264379267991485,
+      "K_BR_times_ctau_0.1": 13.807171844583202,
+      "K_BR_times_ctau_0.3": 13.581952256955189
+    },
+    "incidence_over_top": {
+      "ctau_0.1": 0.13220062918091002,
+      "ctau_0.3": 0.11807392722035363,
+      "K_BR_times_ctau_0.1": 0.12399519251178832,
+      "K_BR_times_ctau_0.3": 0.11127980060826237
+    }
+  },
+  "interpretation": "At fixed mass and UV matching scale, production BR times proper decay length cancels the common 1/fa^2 normalization at leading order and tests the relative fermion-coupling pattern."
+}

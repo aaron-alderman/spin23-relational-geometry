@@ -1,0 +1,212 @@
+{
+  "protocol": "claimipedia-d02-valuation-gluing-execution/1",
+  "strikeId": "d02-valuation-normal-cone-strike-v1",
+  "theoremCandidate": {
+    "statement": "For a one-parameter finite-dimensional crossing with D_s=s^m(D_m+O(s)) and B_s=s^n(B_n+O(s)), invertible Herglotz leading block D_m on the crossing sector, the Schur correction is s^(2n-m)(B_n D_m^-1 B_n^T+O(s)).",
+    "trichotomy": {
+      "positiveExponent": "correction vanishes and the base limit descends",
+      "zeroExponent": "a finite residue-decorated limit survives",
+      "negativeExponent": "the correction diverges and elimination must retain or refuse"
+    },
+    "coordinateInvariance": "The critical residue is invariant under regular one-parameter reparameterization and orthogonal/unitary crossing-frame changes when all leading data are transported."
+  },
+  "oneParameterCases": [
+    {
+      "interiorOrder": 2,
+      "couplingOrder": 2,
+      "expected": "vanishing-correction",
+      "classification": {
+        "exponent": 2,
+        "handler": "vanishing-correction",
+        "output": "base-limit"
+      },
+      "samples": [
+        {
+          "re": 0.000029197080291970797,
+          "im": -0.0000802919708029197
+        },
+        {
+          "re": 2.9197080291970808e-9,
+          "im": -8.029197080291972e-9
+        },
+        {
+          "re": 2.919708029197079e-13,
+          "im": -8.029197080291968e-13
+        }
+      ]
+    },
+    {
+      "interiorOrder": 2,
+      "couplingOrder": 1,
+      "expected": "finite-residue",
+      "classification": {
+        "exponent": 0,
+        "handler": "finite-residue",
+        "output": "residue-decorated-limit"
+      },
+      "samples": [
+        {
+          "re": 0.291970802919708,
+          "im": -0.802919708029197
+        },
+        {
+          "re": 0.29197080291970806,
+          "im": -0.8029197080291972
+        },
+        {
+          "re": 0.29197080291970795,
+          "im": -0.8029197080291969
+        }
+      ]
+    },
+    {
+      "interiorOrder": 2,
+      "couplingOrder": 0,
+      "expected": "divergent-correction",
+      "classification": {
+        "exponent": -2,
+        "handler": "divergent-correction",
+        "output": "retain-or-refuse"
+      },
+      "samples": [
+        {
+          "re": 2919.7080291970797,
+          "im": -8029.1970802919695
+        },
+        {
+          "re": 29197080.291970804,
+          "im": -80291970.80291972
+        },
+        {
+          "re": 291970802919.70795,
+          "im": -802919708029.1969
+        }
+      ]
+    }
+  ],
+  "higherTermFamilies": [
+    {
+      "interiorHigher": 0,
+      "couplingHigher": 0,
+      "values": [
+        {
+          "re": 0.11005053340819759,
+          "im": -0.3026389668725434
+        },
+        {
+          "re": 0.11005053340819758,
+          "im": -0.3026389668725434
+        },
+        {
+          "re": 0.11005053340819762,
+          "im": -0.30263896687254344
+        }
+      ],
+      "limitError": 5.551115123125783e-17
+    },
+    {
+      "interiorHigher": 2.5,
+      "couplingHigher": -0.4,
+      "values": [
+        {
+          "re": 0.10650916092630881,
+          "im": -0.2929001925473492
+        },
+        {
+          "re": 0.11001422598510952,
+          "im": -0.3025391214590511
+        },
+        {
+          "re": 0.11005017024236295,
+          "im": -0.3026379681664981
+        }
+      ],
+      "limitError": 0.0000010626867782306817
+    },
+    {
+      "interiorHigher": -1.7,
+      "couplingHigher": 1.2,
+      "values": [
+        {
+          "re": 0.11465675837925242,
+          "im": -0.31530608554294415
+        },
+        {
+          "re": 0.11009566338371846,
+          "im": -0.30276307430522575
+        },
+        {
+          "re": 0.11005098461631008,
+          "im": -0.3026402076948527
+        }
+      ],
+      "limitError": 0.0000013203138883764135
+    }
+  ],
+  "multiParameter": {
+    "radialValuationSufficient": false,
+    "requiredDecoration": "projective normal direction plus leading homogeneous interior and coupling symbols",
+    "directionResidues": [
+      {
+        "angle": 0,
+        "correction": {
+          "re": 0.2364963503649635,
+          "im": -0.6503649635036497
+        }
+      },
+      {
+        "angle": 0.5235987755982988,
+        "correction": {
+          "re": 0.17737226277372264,
+          "im": -0.4877737226277374
+        }
+      },
+      {
+        "angle": 1.0471975511965976,
+        "correction": {
+          "re": 0.0591240875912409,
+          "im": -0.16259124087591248
+        }
+      },
+      {
+        "angle": 1.5707963267948966,
+        "correction": {
+          "re": 8.867192875592005e-34,
+          "im": -2.4384780407878017e-33
+        }
+      }
+    ],
+    "sameDirectionCurvedPaths": [
+      {
+        "re": 0.23640178964910386,
+        "im": -0.6501049215350357
+      },
+      {
+        "re": 0.23649634090510988,
+        "im": -0.6503649374890522
+      },
+      {
+        "re": 0.23649635036401745,
+        "im": -0.6503649635010481
+      }
+    ],
+    "descentCriterion": "The boundary correction descends from the blown-up normal sphere to the original singular point exactly when it is direction-independent."
+  },
+  "holonomy": {
+    "carrierResidueDescendsAcrossSignHolonomy": true,
+    "orientedEigenlineDescends": false,
+    "disposition": "retain orientation or grading as a separate local-system decoration"
+  },
+  "limits": {
+    "zeroJetResolvedForBoundedLeadingOrderClass": true,
+    "finiteJetResolvesFullGermUniformly": false,
+    "reason": "Higher effective-response coefficients depend on correspondingly higher input jets; no fixed finite jet captures the full analytic germ across families of unbounded order."
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entailsBeyondDeclaredFiniteLeadingOrderClass": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}

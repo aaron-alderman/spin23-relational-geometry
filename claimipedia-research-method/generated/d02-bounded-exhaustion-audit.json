@@ -1,0 +1,244 @@
+{
+  "protocol": "claimipedia-d02-bounded-exhaustion-audit/1",
+  "strikeId": "d02-bounded-exhaustion-v1",
+  "contractSha256": "d8bfcfbf8f47839eddc5b7776691fa388a00576d439dab3ef8bf346906aebf3e",
+  "strongestFixedDecorationCounterexample": {
+    "statement": "For every fixed jet order N, an order-(N+1) contact family has two arcs with identical N-jets and different finite eliminated limits.",
+    "finiteJetCounterexamples": [
+      {
+        "retainedJetOrder": 1,
+        "hiddenContactOrder": 2,
+        "family": "D=x^4 z, B=y",
+        "paths": [
+          "(x,y)=(t,0)",
+          "(x,y)=(t,0.44999999999999996 t^2)"
+        ],
+        "pathsAgreeThroughJet": 1,
+        "zeroPathLimit": {
+          "re": 0,
+          "im": 0
+        },
+        "curvedPathLimit": {
+          "re": 0.05058420628525381,
+          "im": -0.174597099113618
+        }
+      },
+      {
+        "retainedJetOrder": 2,
+        "hiddenContactOrder": 3,
+        "family": "D=x^6 z, B=y",
+        "paths": [
+          "(x,y)=(t,0)",
+          "(x,y)=(t,0.55 t^3)"
+        ],
+        "pathsAgreeThroughJet": 2,
+        "zeroPathLimit": {
+          "re": 0,
+          "im": 0
+        },
+        "curvedPathLimit": {
+          "re": 0.07556406124093473,
+          "im": -0.2608178887993554
+        }
+      },
+      {
+        "retainedJetOrder": 3,
+        "hiddenContactOrder": 4,
+        "family": "D=x^8 z, B=y",
+        "paths": [
+          "(x,y)=(t,0)",
+          "(x,y)=(t,0.6499999999999999 t^4)"
+        ],
+        "pathsAgreeThroughJet": 3,
+        "zeroPathLimit": {
+          "re": 0,
+          "im": 0
+        },
+        "curvedPathLimit": {
+          "re": 0.10553988718775177,
+          "im": -0.36428283642224
+        }
+      },
+      {
+        "retainedJetOrder": 4,
+        "hiddenContactOrder": 5,
+        "family": "D=x^10 z, B=y",
+        "paths": [
+          "(x,y)=(t,0)",
+          "(x,y)=(t,0.75 t^5)"
+        ],
+        "pathsAgreeThroughJet": 4,
+        "zeroPathLimit": {
+          "re": 0,
+          "im": 0
+        },
+        "curvedPathLimit": {
+          "re": 0.14051168412570506,
+          "im": -0.48499194198227236
+        }
+      },
+      {
+        "retainedJetOrder": 5,
+        "hiddenContactOrder": 6,
+        "family": "D=x^12 z, B=y",
+        "paths": [
+          "(x,y)=(t,0)",
+          "(x,y)=(t,0.85 t^6)"
+        ],
+        "pathsAgreeThroughJet": 5,
+        "zeroPathLimit": {
+          "re": 0,
+          "im": 0
+        },
+        "curvedPathLimit": {
+          "re": 0.1804794520547945,
+          "im": -0.622945205479452
+        }
+      },
+      {
+        "retainedJetOrder": 6,
+        "hiddenContactOrder": 7,
+        "family": "D=x^14 z, B=y",
+        "paths": [
+          "(x,y)=(t,0)",
+          "(x,y)=(t,0.95 t^7)"
+        ],
+        "pathsAgreeThroughJet": 6,
+        "zeroPathLimit": {
+          "re": 0,
+          "im": 0
+        },
+        "curvedPathLimit": {
+          "re": 0.2254431909750201,
+          "im": -0.7781426269137792
+        }
+      }
+    ],
+    "consequence": "No uniform finite normal-decoration vocabulary makes all unbounded-order rank changes single-valued."
+  },
+  "analyticBoundaryCounterexample": {
+    "statement": "Smooth flat D and B can have identical infinite Taylor jets while their quotient has different finite limits.",
+    "flatSmoothFamilies": [
+      {
+        "couplingScale": 0.4,
+        "allTaylorCoefficientsOfDAndBAtZero": 0,
+        "correctionLimit": {
+          "re": 0.039967767929089446,
+          "im": -0.13795326349717973
+        }
+      },
+      {
+        "couplingScale": 0.9,
+        "allTaylorCoefficientsOfDAndBAtZero": 0,
+        "correctionLimit": {
+          "re": 0.2023368251410153,
+          "im": -0.6983883964544723
+        }
+      }
+    ],
+    "consequence": "Analyticity is substantive; a jet-only dispatcher must not claim the smooth category."
+  },
+  "branches": [
+    {
+      "id": "constant-support-local-law",
+      "boundedDiscriminant": "imaginary-part identity, null-regulator independence and frame covariance",
+      "result": "closed",
+      "dispositionImpact": "retained local theorem"
+    },
+    {
+      "id": "one-parameter-analytic-rank-change",
+      "boundedDiscriminant": "principal part of the full meromorphic Schur correction",
+      "result": "closed",
+      "dispositionImpact": "removable limit / pole refusal dichotomy"
+    },
+    {
+      "id": "multi-parameter-directional-rank-change",
+      "boundedDiscriminant": "cluster set of the correction on admitted approach arcs",
+      "result": "closed-semantically-not-collapsed",
+      "dispositionImpact": "unique value iff constant finite arc functor; otherwise retain arc-groupoid output"
+    },
+    {
+      "id": "finite-normal-decoration",
+      "boundedDiscriminant": "same finite jet with different finite response",
+      "result": "refuted-uniformly",
+      "dispositionImpact": "no fixed finite jet is complete over unbounded contact order"
+    },
+    {
+      "id": "pole-finite-part",
+      "boundedDiscriminant": "nonlinear regular reparameterization",
+      "result": "refuted-without-scheme",
+      "dispositionImpact": "finite parts remain scheme-relative decorations"
+    },
+    {
+      "id": "support-bundle-holonomy",
+      "boundedDiscriminant": "loop transport of quadratic residue versus oriented eigenline",
+      "result": "split",
+      "dispositionImpact": "passive carrier descends; orientation/grading remains a local-system decoration"
+    },
+    {
+      "id": "positive-measure-representation",
+      "boundedDiscriminant": "compare approach-indexed positive residues",
+      "result": "does-not-repair-descent",
+      "dispositionImpact": "measure representation preserves each passive branch but cannot equate distinct branches"
+    },
+    {
+      "id": "bulk-index-recovery",
+      "boundedDiscriminant": "direct-sum invisible graded zero mode",
+      "result": "refuted",
+      "dispositionImpact": "bulk index remains non-descending information"
+    },
+    {
+      "id": "smooth-nonanalytic-extension",
+      "boundedDiscriminant": "flat germs with identical Taylor series and different corrections",
+      "result": "split-to-full-germ-programme",
+      "dispositionImpact": "jet calculus cannot silently extend beyond analytic germs"
+    },
+    {
+      "id": "operator-essential-spectrum",
+      "boundedDiscriminant": "Fredholm/closed-range hypotheses and spectral accumulation",
+      "result": "out-of-declared-finite-dimensional-scope",
+      "dispositionImpact": "new operator-theoretic programme; cannot alter the bounded theorem"
+    },
+    {
+      "id": "interacting-and-nonequilibrium-decorations",
+      "boundedDiscriminant": "model-specific existence, renormalization and fluctuation relations",
+      "result": "out-of-scope",
+      "dispositionImpact": "application programmes, not missing cases of the carrier theorem"
+    }
+  ],
+  "finalDispatcher": [
+    {
+      "condition": "constant support and range-compatible coupling",
+      "output": "ordinary local support-Schur response"
+    },
+    {
+      "condition": "rank change and the full correction has one finite cluster value",
+      "output": "unique removable glued response"
+    },
+    {
+      "condition": "rank change and finite cluster values depend on the approach arc",
+      "output": "arc-groupoid-valued response; do not descend to one value"
+    },
+    {
+      "condition": "the correction is unbounded along at least one admitted arc",
+      "output": "retain the interior or refuse elimination"
+    },
+    {
+      "condition": "a normal coordinate and subtraction prescription are explicit decorations",
+      "output": "scheme-relative renormalized response with the scheme retained in its type"
+    }
+  ],
+  "boundedExhaustion": {
+    "declaredScope": "finite-dimensional analytic or polynomial block-response germs near a rank-changing locus",
+    "everyInScopeBranchHasDisposition": true,
+    "unresolvedBoundedDiscriminantThatCanChangeDisposition": false,
+    "reason": "Within the declared finite-dimensional analytic/polynomial scope, every crossing is classified by whether the full correction has one finite cluster value, multiple finite cluster values, or an unbounded value. Further resolution algorithms can refine arc labels but cannot change these three dispositions."
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "automaticCorpusAdmission": false,
+    "applicationAdmission": false
+  }
+}
