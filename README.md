@@ -16,13 +16,16 @@ The strongest present synthesis is conditional:
 
 ## Start here
 
-1. [Research document map](00_research_document_map.md)
-2. [Current research frontier](30_research_frontier.md)
-3. [The Spin(2,3) pole synthesis](40_grand_synthesis_spin23_pole.md)
-4. [Multi-branch research registry](49_multi_branch_research_registry.md)
-5. [Active-goal and evidence log](91_multi_branch_active_goal_log.md)
-6. [Latest external response test](1216_planckian_tj_transport_is_a_scalar_detailed_balance_ray_and_a_testable_two_current_spin23_response_extension.md)
-7. [Latest arithmetic carrier test](1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
+1. [Edition 3.0 book preview](book/edition-3/README.md)
+2. [Live paged HTML edition](https://aaron-alderman.github.io/spin23-relational-geometry/)
+3. [Paged HTML source](docs/edition-3/index.html)
+4. [Research document map](00_research_document_map.md)
+5. [Current research frontier](30_research_frontier.md)
+6. [The Spin(2,3) pole synthesis](40_grand_synthesis_spin23_pole.md)
+7. [Multi-branch research registry](49_multi_branch_research_registry.md)
+8. [Active-goal and evidence log](91_multi_branch_active_goal_log.md)
+9. [Latest external response test](1216_planckian_tj_transport_is_a_scalar_detailed_balance_ray_and_a_testable_two_current_spin23_response_extension.md)
+10. [Latest arithmetic carrier test](1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 
 ## Reproducibility and integrity
 
@@ -33,6 +36,13 @@ node scripts/audit_spin23_corpus_manifest.mjs --write
 ```
 
 The audit checks that the canonical governance documents all reach the latest numbered entry and that their local links resolve. Historical numbering is preserved; the manifest currently records one legacy collision at document ID 963.
+
+Regenerate the Edition 3 reading surfaces before refreshing the manifest:
+
+```powershell
+node scripts/generate_edition3_book_preview.mjs
+node scripts/audit_spin23_corpus_manifest.mjs --write
+```
 
 ## Licensing and stewardship
 
