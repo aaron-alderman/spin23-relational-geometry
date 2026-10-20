@@ -6,6 +6,8 @@
 
 **Status:** exact represented-one-form support identity and conditional closure theorem; construction of the complete physical family-extended spectral triple remains open
 
+> **Category qualification (claim 1500).** If the family projectors live only in the multiplicity commutant rather than the coordinate algebra, the same block identity and support protection remain exact, but \(P[D,Q]\) is a relational/module commutator rather than an ordinary inner one-form. This avoids the tensor-coordinate gauge enlargement at the cost of requiring a generalized gauge/connection principle.
+
 **Depends on:** [the Pati--Salam mediator inventory triage](1498_the_minimal_spectral_Pati_Salam_inventory_reduces_the_three_Dirac_bridges_to_one_conditional_family_charged_bidoublet_threat.md), [generalized-fluctuation support closure](1494_generalized_inner_fluctuations_preserve_the_central_family_null_mask_while_dressing_the_present_Pati_Salam_Majorana_defect.md), and [the sector-dependent null mask](../1100-1199/1120_a_sector_dependent_Krajewski_anchor_mask_allows_Majorana_null_sewing_while_forbidding_Dirac_null_leakage.md)
 
 **Evidence:** [charged-bidoublet support ledger](../../../evidence/data/spin23-charged-bidoublet-dirac-support-equivalence.json) and [executable one-form verifier](../../../verification/verify/verify_spin23_charged_bidoublet_equals_dirac_cross_support.mjs)

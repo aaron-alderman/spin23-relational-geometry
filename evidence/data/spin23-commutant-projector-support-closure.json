@@ -1,0 +1,30 @@
+{
+  "schema": "spin23.commutant-projector-support-closure/1",
+  "date": "2026-10-20",
+  "theorem": {
+    "hypothesis": "P and Q commute with the represented algebra and opposite-algebra actions, and P D Q = 0",
+    "coordinateMembershipRequired": false,
+    "commutationWithBothActionsSuffices": true,
+    "conclusion": "P A_(1) Q = P opposite(A_(1)) Q = P A_(2) Q = 0"
+  },
+  "witness": {
+    "internalAlgebraImage": "M2 acting as a tensor I_family",
+    "familyProjector": "I_internal tensor diag(1,0)",
+    "projectorInCoordinateImage": false,
+    "projectorInCoordinateCommutant": true,
+    "maskedA1CrossBlock": 0,
+    "maskedA2CrossBlock": 0
+  },
+  "associativeNoGo": {
+    "selector": "X=I-3P",
+    "associativeEnvelope": "C P + C Q",
+    "faithfulCoordinateExtension": "A_internal tensor_R (C+C)",
+    "realDimensionForReducedSMExample": 96,
+    "ordinaryQuotientCanDiagonalizeGaugeCopies": false
+  },
+  "categoryFork": {
+    "coordinateRoute": {"producesInnerFamilyOneForms": true, "cost": "full tensor-coordinate algebra and duplicated/enlarged gauge factors"},
+    "commutantRoute": {"preservesSupportMask": true, "producesInnerFamilyGaugeField": false, "requiredCompletion": "outer/module connection, Jordan/correspondence calculus, or boundary/defect gauge principle"}
+  },
+  "verdict": "the null-mask convergence survives the associative-coordinate no-go, but only as a module/relational structure whose charge-three dynamics require a generalized gauge principle"
+}
