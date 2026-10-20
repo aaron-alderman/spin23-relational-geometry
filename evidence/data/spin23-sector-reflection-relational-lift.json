@@ -1,0 +1,36 @@
+{
+  "schema": "spin23.sector-reflection-relational-lift/1",
+  "date": "2026-10-20",
+  "coarseGraph": {
+    "vertices": ["P", "I", "N"],
+    "requiredEdges": [
+      {"edge": "P-I safe Dirac", "parity": 1},
+      {"edge": "P-N desired Majorana", "parity": 1},
+      {"edge": "P-N dangerous Dirac", "parity": -1}
+    ],
+    "obstruction": "the two parallel P-N edges form a signed two-cycle with product -1"
+  },
+  "typedGraph": {
+    "vertices": ["D_P", "D_I", "D_N", "M_P", "M_N"],
+    "requiredEdges": [
+      {"edge": "D_P-D_I safe Dirac", "parity": 1},
+      {"edge": "D_P-D_N dangerous Dirac", "parity": -1},
+      {"edge": "M_P-M_N desired Majorana", "parity": 1}
+    ],
+    "witness": {"D_P": 1, "D_I": 1, "D_N": -1, "M_P": 1, "M_N": 1}
+  },
+  "enumeration": {
+    "coarseAssignments": 8,
+    "coarseSolutions": 0,
+    "typedAssignments": 32,
+    "typedSolutions": 4,
+    "typedSolutionsAfterGluingBothFamilyLifts": 0
+  },
+  "theorem": {
+    "familyOnlyLiftExists": false,
+    "relationalTypedLiftExists": true,
+    "minimalNewDatum": "at least one sector/opposite-anchor bit that distinguishes the parallel P-N relations"
+  },
+  "boundary": "the signed-graph lift proves the minimal incidence requirement, not compatibility with the full KO-dimension-six real structure, chirality, or every Pati-Salam Yukawa vertex",
+  "verdict": "the protecting reflection cannot be an ordinary family-endpoint parity; it must act on relationally lifted Dirac/Majorana carriers"
+}

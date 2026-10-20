@@ -201,8 +201,10 @@ its unbroken graded phase:
 }
 \]
 
-The next gate is to lift this canonical reflection to the full real-even
-fermion module and test every required Dirac and Majorana vertex for parity.
+Claim 1504 performs the first lift test. No sign assignment on visible family
+endpoints can distinguish the parallel Majorana and Dirac \(P-N\) edges, but
+the sector/opposite-anchor relational cover admits four assignments. KO-6
+reality and the complete physical vertex graph remain to be imposed.
 
 ## Reproduction
 
