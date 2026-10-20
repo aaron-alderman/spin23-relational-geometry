@@ -1,0 +1,56 @@
+{
+  "schema": "spin23.orientation-conjugate-ckm-falsifier/1",
+  "documentId": 1477,
+  "date": "2026-10-20",
+  "status": "exact-model-prediction-and-empirical-exclusion",
+  "modelPrediction": {
+    "diagonalizers": "Hplus=U Lambda U_dagger, Hminus=U_star Lambda U_transpose",
+    "relativeMixing": "V=U_dagger*U_star",
+    "transposeSymmetry": "V_transpose=V",
+    "magnitudeSymmetry": "abs(V_ij)=abs(V_ji)",
+    "allowedOrderingAudit": "all 6 row permutations times all 6 column permutations"
+  },
+  "source": {
+    "name": "Particle Data Group 2025 CKM review",
+    "url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-ckm-matrix.pdf",
+    "equation": "12.27",
+    "accessed": "2026-10-20"
+  },
+  "ckmMagnitudes": [
+    [0.97435, 0.22501, 0.003732],
+    [0.22487, 0.97349, 0.04183],
+    [0.00858, 0.04111, 0.999118]
+  ],
+  "transposeDifferences": {
+    "VusMinusVcd": 0.00014,
+    "VubMinusVtd": -0.004848,
+    "VcbMinusVts": 0.00072,
+    "frobeniusUpperTriangleNorm": 0.004903172850308258
+  },
+  "dominantFalsifier": {
+    "Vub": 0.003732,
+    "VubConservativeSigma": 0.00009,
+    "Vtd": 0.00858,
+    "VtdConservativeSigma": 0.00019,
+    "absoluteDifference": 0.004848,
+    "combinedSigma": 0.00021023796041628638,
+    "significance": 23.05958443660987
+  },
+  "permutationAudit": {
+    "bestRowPermutationZeroBased": [0, 1, 2],
+    "bestColumnPermutationZeroBased": [0, 1, 2],
+    "bestRmsTransposeAsymmetry": 0.002830848165008737,
+    "exactSymmetrizingPermutationExists": false
+  },
+  "repairBoundary": {
+    "generationUniversalGaugeShiftRepairsMixing": false,
+    "reason": "a gauge-sector distinction proportional to the family identity changes eigenvalues but not eigenvectors",
+    "requiredNewObject": "a derived noncentral family operator coupled differently to the two sectors",
+    "arbitraryFamilySpurionAllowed": false
+  },
+  "verdict": {
+    "directOrientationConjugateCKMExcluded": true,
+    "algebraicNoncommutingConstructionRetained": true,
+    "physicalAdmissionChanged": false
+  }
+}

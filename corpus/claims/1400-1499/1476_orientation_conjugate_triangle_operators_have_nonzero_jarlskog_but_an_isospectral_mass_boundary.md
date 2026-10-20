@@ -10,6 +10,8 @@
 
 **Evidence:** [machine-readable construction](../../../evidence/data/spin23-orientation-conjugate-triangle-jarlskog.json) and [executable verifier](../../../verification/verify/verify_spin23_orientation_conjugate_triangle_jarlskog.mjs)
 
+> **Subsequent held-out falsifier (claim 1477).** Exact orientation conjugacy implies a symmetric relative mixing matrix, up to eigenvalue orderings. The 2025 PDG CKM global fit violates the resulting magnitude symmetry at about 23 conservative combined standard deviations through |Vub| versus |Vtd|. The construction remains an exact noncommuting toy model, but its direct CKM interpretation is excluded.
+
 ## Result
 
 The smallest noncommuting repair of claim 1475 does not require an arbitrary second matrix. Use the two orientations of the same decorated triangle:
