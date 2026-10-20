@@ -1,5 +1,7 @@
 # A Third-Power Fredholm Shift Gives an Exact Index-Three Z3 Family Carrier
 
+> **Subsequent quantum-parent bridge (claim 1584).** Stone--von Neumann makes the regular irreducible finite-mode Weyl representation unique, while the nonzero family index arises only after Hardy/selector compression of a bilateral unitary parent. This locates family multiplicity in topology and boundary selection rather than inequivalent regular quantizations. See [1584](1584_stone_von_neumann_fixes_the_regular_quantum_parent_while_index_three_requires_selector_compression.md).
+
 **Date:** 20 October 2026
 
 **Gates:** A1, A2, A4 and A5

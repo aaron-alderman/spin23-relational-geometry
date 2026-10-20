@@ -1,0 +1,38 @@
+{
+  "schema": "spin23.stone-von-neumann-selector-compression/1",
+  "date": "2026-10-20",
+  "symplecticCarrier": {
+    "realDimension": 4,
+    "canonicalPairs": 2,
+    "symplecticLieAlgebraDimension": 10,
+    "orthogonalPartner": "so(2,3)",
+    "groupIdentification": "Sp(4,R) is locally/isomorphically identified with the connected Spin(2,3) group used by the programme"
+  },
+  "weylRelations": {
+    "formula": "W(v)W(w)=exp(-i omega(v,w)/(2 hbar)) W(v+w)",
+    "fixedCentralCharacter": "hbar != 0",
+    "stoneVonNeumannConclusion": "all irreducible strongly continuous regular representations are unitarily equivalent"
+  },
+  "metaplecticImplementation": {
+    "automorphism": "W(v) -> W(Sv), S in Sp(4,R)",
+    "implementer": "unitary up to phase; exact on Mp(4,R)",
+    "interpretation": "Spin(2,3)-symplectic transformations have a canonical quantum implementation at finite mode number"
+  },
+  "selectorCompression": {
+    "parent": "bilateral unitary shift U on L2(S1), index zero",
+    "projector": "Hardy/nonnegative-mode projector P_plus",
+    "compressedShift": "T=P_plus U P_plus",
+    "backwardShift": "B=T^dagger",
+    "thirdPowerIndex": 3,
+    "conclusion": "the family index is created by boundary/polarization compression, not by choosing an inequivalent regular CCR representation"
+  },
+  "scope": {
+    "finiteCanonicalDegreesOfFreedom": true,
+    "infiniteQFTDegreesCovered": false,
+    "gaugeConstraintReductionAutomatic": false,
+    "hamiltonianOrVacuumSelected": false,
+    "bornRuleDerived": false,
+    "e6YukawaFrameDerived": false
+  },
+  "decision": "Stone-von Neumann supplies the unique regular quantum parent; the Spin(2,3) selector must supply the polarization or defect that creates index three"
+}

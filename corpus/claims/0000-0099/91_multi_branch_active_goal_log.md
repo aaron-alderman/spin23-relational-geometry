@@ -26966,3 +26966,7 @@ A common Z3 phase on one nonzero portal doublet can be compensated by hypercharg
 ## Cycle 1211 — a Fredholm shift realizes the missing index three
 
 The third power of the backward unilateral shift has kernel (operatorname{span}\{e_0,e_1,e_2\}), zero cokernel and index three. A blockwise family cycle commutes with it, and tensoring by the Spin(10) 16 gives equivariant index class (3[16]) and component kernel dimension 48. This is the first exact topological carrier matching the E6 result, but its physical defect/extra-direction origin and compressed Yukawa frame remain open. Artifact: [1583](../1500-1599/1583_a_third_power_fredholm_shift_gives_an_exact_index_three_z3_family_carrier.md).
+
+## Cycle 1212 — Stone--von Neumann fixes the quantum parent and localizes family multiplicity to compression
+
+The four-dimensional symplectic carrier defines two canonical pairs whose regular irreducible Weyl representation is unique at fixed nonzero \(\hbar\). Its \(Sp(4,\mathbb R)\cong Spin_0(2,3)\) transformations lift metaplectically. Three families therefore cannot be three inequivalent regular finite-mode quantizations. Instead the index-zero bilateral parent acquires index three only after a Hardy/selector compression to the unilateral shift. The decisive joining target is now a dynamical Spin(2,3) derivation of that projector and the E6 Parseval frame on its kernel. Artifact: [1584](../1500-1599/1584_stone_von_neumann_fixes_the_regular_quantum_parent_while_index_three_requires_selector_compression.md).
