@@ -1,0 +1,63 @@
+{
+  "schema": "spin23.a4-weyl-boundary-no-go-and-full-wall-completion/1",
+  "documentId": 1460,
+  "date": "2026-10-20",
+  "status": "local-fold-no-go-and-conditional-boundaryless-tree-completion",
+  "weylBoundaryNoGo": {
+    "greenForm": "B(psi,phi)=-i integral_boundary psi^dagger sigma^n phi",
+    "localSelfAdjointDomain": "maximal isotropic complex line in C^2 for h(u,v)=u^dagger sigma^n v",
+    "maximalIsotropicLinesExist": true,
+    "boundarySpin12RepresentationIrreducible": true,
+    "invariantComplexLineExists": false,
+    "undoubledLocalComplexLinearSelfAdjointLorentzCovariantDomainExists": false
+  },
+  "domainTaxonomy": [
+    {"class": "local maximal-isotropic", "result": "ruled out for one undoubled Weyl multiplet under boundary Spin(1,2)"},
+    {"class": "enlarged boundary fiber", "result": "works only with mirrors, pairing spurions or new edge theory"},
+    {"class": "APS-Calderon", "result": "nonlocal and requires foliation, eta and inflow data"},
+    {"class": "endpoint unitary gluing", "result": "self-adjoint but gives an orientation-preserving circle, not a reflection fold"},
+    {"class": "full wall", "result": "boundaryless conditional construction"},
+    {"class": "absorbing boundary", "result": "not self-adjoint"}
+  ],
+  "fullWall": {
+    "spacetime": "R_t x T2 x R_y",
+    "fermionDomain": "H1 on the complete spatial slice",
+    "bosonDomain": "H2 on the complete spatial slice",
+    "wallOperator": "A2^dagger A2 with A2=d/dy+2 tanh(y)",
+    "wallPotential": "-d2/dy2+4-6 sech(y)^2",
+    "wallEigenMassSquared": [0, 3],
+    "wallContinuumThresholdSquared": 4,
+    "readerOperator": "A1^dagger A1+0.64 with A1=d/dy+tanh(y)",
+    "readerPotential": "-d2/dy2+1.64-2 sech(y)^2",
+    "readerBoundMassSquared": 0.64,
+    "readerContinuumThresholdSquared": 1.64,
+    "localizedRealModes": {
+      "translation": 1,
+      "shape": 1,
+      "complexReader": 2,
+      "total": 4
+    },
+    "treeQuadraticOperatorsNonnegative": true,
+    "boundaryGreenFormAbsent": true,
+    "brstDomainsConventionallyClosedAtQuadraticLevel": true
+  },
+  "trade": {
+    "a4Status": "conditionally-constructed-at-frozen-tree-point",
+    "reflectionFoldRetained": false,
+    "foldPinningInherited": false,
+    "bfParityProjectionInherited": false,
+    "a2A11MustBeReconstructed": true
+  },
+  "falsifiers": [
+    "a negative eigenvalue after omitted cross-couplings are restored",
+    "a non-nilpotent or anomalous BRST differential on the complete-domain theory",
+    "failure of the full-wall action to retain the required localized spectrum",
+    "a proof that the intended topological mechanism requires the reflection quotient"
+  ],
+  "verdict": {
+    "localUndoubledReflectionFoldClassPassed": false,
+    "fullWallTreeA4ConditionallyConstructed": true,
+    "globalQuantumA4Passed": false,
+    "physicalAdmission": false
+  }
+}

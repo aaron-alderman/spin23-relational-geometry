@@ -1,0 +1,68 @@
+{
+  "schema": "spin23.a2-a5-wall-peirce-phase-selector-boundary/1",
+  "documentId": 1461,
+  "date": "2026-10-20",
+  "status": "exact-u1-no-go-conditional-projective-selector-and-terminal-hom-test",
+  "neutralDataNoGo": {
+    "inputs": ["neutral kink", "wall normal", "orientation sign", "Omega", "G", "I=sqrt(3) G^-1 Omega"],
+    "remainingStabilizer": "U(1)={exp(alpha I)}",
+    "target": "a real projective ray in the underlying real plane of the sterile charge-minus-two line",
+    "targetSpace": "P_R(L^-2_R)=S1/{plus-or-minus-one}",
+    "targetWeight": -2,
+    "nonzeroInvariantRayUnderFullU1": false,
+    "wallSignRemovesContinuousStabilizer": false
+  },
+  "peirceSelector": {
+    "complexStructure": "J_nu",
+    "realStructure": "K_nu",
+    "relations": ["J_nu^2=-1", "K_nu^2=1", "K_nu J_nu=-J_nu K_nu"],
+    "projector": "P_chi=(1+chi K_nu)/2",
+    "projectorRank": 1,
+    "oppositeOrientationRelation": "J_nu P_chi J_nu^-1=P_-chi",
+    "selectsRealProjectiveRay": true
+  },
+  "intertwiner": {
+    "map": "T:V_nu -> L^-2",
+    "requirements": [
+      "T J_nu=J_2 T",
+      "T K_nu=C T",
+      "isometry",
+      "SM gauge covariance",
+      "boundary Lorentz covariance",
+      "reflection covariance",
+      "CAR compatibility"
+    ],
+    "ifItExistsProjectiveMultiplicity": 1,
+    "presentlyConstructed": false,
+    "terminalHomSpace": "Hom_(G_SM x Spin_boundary x Z2)((V_nu,J_nu,K_nu),(L^-2,J_2,C))",
+    "dimensionVerdicts": {
+      "0": "joint A2/A5 route ruled out",
+      "1": "unique projective phase reference",
+      "greaterThan1": "phase or modulus remains underdetermined"
+    }
+  },
+  "conditionalPotential": {
+    "formula": "V=lambda(|z|^2-v^2)^2-mu q_wall Re(z^2)",
+    "positiveOrientationMinimumPhase": "0 mod pi",
+    "negativeOrientationMinimumPhase": "pi/2 mod pi",
+    "minimumRadiusSquared": "v^2+|mu q_wall|/(2 lambda)",
+    "quadraticAxisMassSquared": ["m0^2-mu q_wall", "m0^2+mu q_wall"],
+    "continuousPhaseRemainingAfterTransportedK": false,
+    "validOnlyIfRealStructureIsSourceTransported": true
+  },
+  "remainingBridges": [
+    "compute the full Higgs/Yukawa-dressed equivariant Hom space",
+    "derive the coefficient of q_wall Re(z^2) from the source action",
+    "derive the local map from the selected neutral odd quadrature to the charged Furey TRO",
+    "reconstruct wall pinning if the A4 full-wall alternative is used"
+  ],
+  "verdict": {
+    "neutralWallAndSpin23ComplexStructureSelectPhase": false,
+    "wallAndNativePeirceRealStructureSelectProjectiveRay": true,
+    "transportToSterilePlaneDerived": false,
+    "currentInputBranchExhaustedAtHomTest": true,
+    "a2Passed": false,
+    "a5Passed": false,
+    "physicalAdmission": false
+  }
+}

@@ -13047,6 +13047,15 @@ Each cycle ends by updating this registry, including branches that failed or bec
 - **Boundary:** the flux split, a dynamical family-connection completion and the sterile Majorana pairing remain underived; A6 does not pass.
 - **Artifact:** [1457](../1400-1499/1457_opposite_chirality_o0_spectators_cancel_the_o3_parent_anomalies_without_restoring_massless_mirrors.md).
 
+### B-COMPLETE-EXHAUSTION-V2 — domain, family, selector and response boundaries
+
+- **A4 advance:** the undoubled local reflection fold is ruled out, while the boundaryless full wall conditionally passes the frozen quadratic physical-state gate.
+- **A6 advance:** \(\mathcal O(0)\) is the unique zero-index line spectator; it cancels the restricted anomaly without mirrors but requires an independent matter-module origin.
+- **A2/A5 boundary:** wall sign plus native Peirce conjugation selects two rays; the dressed equivariant Hom-space dimension is the terminal test for transport to the sterile plane.
+- **A7/A9/A11 boundary:** no physical shift, residue, port or linewidth follows without a sector-resolved generator, state/preparation and calibrated input/output ports.
+- **Terminal partition:** A5/A7 internally exhausted; A2/A4/A6/A9 conditionally constructed; A11 externally open; physical admission false.
+- **Artifacts:** [1458](../1400-1499/1458_o0_is_the_unique_zero_index_cp1_spectator_but_no_single_ordinary_dirac_or_real_structure_generates_the_flux_split.md), [1459](../1400-1499/1459_the_a7_a9_a11_lane_is_underidentified_and_reopens_only_with_a_generator_state_port_packet.md), [1460](../1400-1499/1460_an_undoubled_weyl_reflection_fold_has_no_local_covariant_self_adjoint_domain_but_the_full_wall_conditionally_constructs_a4.md), [1461](../1400-1499/1461_the_wall_sign_and_native_peirce_real_structure_select_two_phase_rays_but_transport_to_the_sterile_line_is_the_terminal_a2_a5_gate.md), and [1462](../1400-1499/1462_complete_current_input_exhaustion_promotes_a4_and_a6_conditionally_but_leaves_physical_admission_false.md).
+
 
 
 

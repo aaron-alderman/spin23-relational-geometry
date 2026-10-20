@@ -1,0 +1,72 @@
+{
+  "schema": "spin23.a7-a9-a11-generator-state-port-underidentification/1",
+  "documentId": 1459,
+  "date": "2026-10-20",
+  "status": "exact-current-input-underidentification-and-minimal-reopen-packet",
+  "survivingInvariant": {
+    "operator": "S=T_xx-T_yy",
+    "oneParticleVertex": "v_S(k)=(K_x-K_y)/E_k",
+    "independentOfScalarImprovement": true,
+    "separatedFrequencySupportImmuneToLocalContacts": true,
+    "fixtureThresholds": {
+      "trivialSector": 2.56124969,
+      "nontrivialSector": 1.74426461,
+      "units": "synthetic model units",
+      "devicePrediction": false
+    }
+  },
+  "symmetryPreservingDeformation": {
+    "operator": "H_lambda=H_0+lambda(W+W_dagger)",
+    "sectorEigenvalues": [2, -1, -1],
+    "poleContrastCoefficient": 3,
+    "preservesCPConjugateDegeneracy": true,
+    "contrastPredictedBySymmetry": false
+  },
+  "residueFreedom": {
+    "portRescaling": "O_S maps to g O_S",
+    "residueScaling": "R maps to g^2 R",
+    "zeroOverlapAllowed": true,
+    "absoluteResiduePredicted": false
+  },
+  "portFreedom": {
+    "unknownMap": "B in GL(2,R)",
+    "covarianceMap": "C maps to B C B^T; s maps to B^-T s",
+    "quadraticResponseInvariant": "s^T C s",
+    "coordinateCovarianceSelectsPhysicalPort": false
+  },
+  "openSystemResponse": {
+    "formula": "Y_ab,h(omega)=D_ab,h+Tr[J_a,h (i omega-L_h)^-1 V_b,h rho_h]",
+    "residueFormula": "R_ab,h^(n)=Tr(J_a,h r_n) ell_n^dagger V_b,h rho_h",
+    "requiredBlocks": ["generator", "state-or-preparation", "input-output-port-map"],
+    "qWZControl": {
+      "declaredJump": "sigma_z",
+      "genericStationaryState": "I/2",
+      "stationaryKuboForcing": 0,
+      "phenomenologicalValueAtRegisteredPoint": 0.9720664,
+      "lesson": "a retarded linewidth does not determine the stationary response"
+    }
+  },
+  "minimalReopenPacket": {
+    "generator": "dimensional sector-resolved L_h[u], including Hamiltonian, boundary, interactions and environment",
+    "state": "stationary rho_h or a finite-time preparation rule",
+    "ports": "physical V_b, J_a and D_ab with reference-plane calibration",
+    "experimentAddenda": [
+      "preparation-confusion or poisoning transition matrix",
+      "calibration covariance and drift",
+      "measured sector-resolved linewidth and disorder distributions"
+    ],
+    "protectedZ3Addendum": [
+      "W^3=I on all three sectors",
+      "validated sector increment",
+      "decreasing local mixing with separation or code size"
+    ]
+  },
+  "verdict": {
+    "currentInputsDeterminePhysicalShift": false,
+    "currentInputsDetermineResidue": false,
+    "currentInputsDeterminePort": false,
+    "currentInputsDetermineLinewidth": false,
+    "currentInputsExhausted": true,
+    "physicalAdmission": false
+  }
+}
