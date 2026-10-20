@@ -1,0 +1,43 @@
+{
+  "schema": "spin23.e6-bidoublet-inert-alignment-audit/1",
+  "date": "2026-10-20",
+  "reducedMassMatrix": {
+    "basis": ["H_27", "H_S351"],
+    "entries": [["A", "B"], ["B*", "C"]],
+    "pureS351EigenvectorIff": "B=0",
+    "pureMasslessS351Iff": "B=0 and C=0",
+    "genericOneLightTuning": "A C=|B|^2",
+    "genericNullVectorForRealB": ["-B/A", "1"],
+    "determinantTuningImpliesInertness": false
+  },
+  "parentSources": {
+    "effectiveDirac": "alpha Y27 + beta YS",
+    "majorana": "YS",
+    "genericMixingGivesAtLeastTwoSourceDirections": true,
+    "oneInvariantRequiresAlphaZero": true
+  },
+  "discreteWitness": {
+    "group": "Z5",
+    "charges": {"matter27": 1, "H27": 3, "S351": 3},
+    "matterMatterH27": 0,
+    "matterMatterS351": 0,
+    "H27H27S351": 4,
+    "allowsBothYukawas": true,
+    "forbidsMixedScalarInvariant": true,
+    "singletVevsBreakDiscreteSymmetry": true
+  },
+  "sourceBoundedVacuum": {
+    "knownRenormalizableHiggsSet": ["27", "bar27", "351prime", "bar351prime"],
+    "mixedInvariants": ["27^2 bar351prime", "bar27^2 351prime"],
+    "351PrimePairAloneStopsAt": "Pati-Salam",
+    "knownRealisticConstructionUsesMixedSystem": true,
+    "protectedInertVacuumInMinimalSystemEstablished": false
+  },
+  "decision": {
+    "inertAlignmentAlgebraicallyPossible": true,
+    "ordinaryDeterminantFineTuningSufficient": false,
+    "minimalSourcedCompleteBreakingWithProtection": "not established",
+    "portalWardLineDerived": false,
+    "nextTest": "enumerate the Z5-allowed scalar invariants and find the smallest complete-breaking extension that retains B=0"
+  }
+}

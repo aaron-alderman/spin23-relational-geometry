@@ -1,0 +1,45 @@
+{
+  "schema": "spin23.e6-inert-abelian-susy-vacuum-no-go/1",
+  "date": "2026-10-20",
+  "assumptions": {
+    "symmetry": "abelian and commuting with E6",
+    "matterYukawasRetained": ["27F 27F H27", "27F 27F S351"],
+    "minimalHiggsPairs": ["27+bar27", "351prime+bar351prime"],
+    "vacuumCategory": "renormalizable supersymmetric F-flat with nonzero quadratic masses"
+  },
+  "chargeTheorem": {
+    "matterCharge": "f",
+    "H27Charge": "h=-2f",
+    "S351Charge": "s=-2f",
+    "equality": "h=s",
+    "unbarredCubicCharges": {
+      "H3": "3h",
+      "H2S": "3h",
+      "HS2": "3h",
+      "S3": "3h"
+    },
+    "forbidMixingCondition": "3h!=0",
+    "allowAnySameOrientationCubicCondition": "3h=0"
+  },
+  "z5Witness": {
+    "charges": {"f": 1, "h": 3, "s": 3},
+    "bothYukawasAllowed": true,
+    "allUnbarredCubicsCharge": 4,
+    "allBarredCubicsCharge": 1,
+    "allHiggsCubicsForbidden": true
+  },
+  "fTermResult": {
+    "remainingSuperpotential": "m27 H barH + m351 S barS",
+    "nonzeroMasses": true,
+    "uniqueFflatVacuum": "H=barH=S=barS=0",
+    "spontaneousE6Breaking": false,
+    "exoticMassVevs": false
+  },
+  "decision": {
+    "commutingAbelianProtectionAndMinimalRenormalizableSusyBreakingCompatible": false,
+    "nonSupersymmetricEscapeOpen": true,
+    "softOrNonrenormalizableEscapeOpen": true,
+    "enlargedOrNonabelianSelectorEscapeOpen": true,
+    "portalWardLineDerived": false
+  }
+}
