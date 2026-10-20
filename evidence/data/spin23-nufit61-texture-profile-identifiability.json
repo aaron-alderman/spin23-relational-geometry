@@ -1,0 +1,39 @@
+{
+  "schema": "spin23.nufit61-texture-profile-identifiability/1",
+  "date": "2026-10-20",
+  "officialFiles": {
+    "normal": {
+      "url": "https://www.nu-fit.org/sites/default/files/v61.release-TByes-NO.txt.xz",
+      "compressedBytes": 3996408,
+      "sha256": "c74bd6df84297a8429cd3b9e1239751cd0762756f1ec0c2a31248d78570b26e4",
+      "decompressedLines": 1450268,
+      "sectionCount": 22
+    },
+    "inverted": {
+      "url": "https://www.nu-fit.org/sites/default/files/v61.release-TByes-IO.txt.xz",
+      "compressedBytes": 4087336,
+      "sha256": "d92fbd1886a85738080a394a6af513ec1ac49d5e474a6517cada0c2c6f3b96b2",
+      "decompressedLines": 1450268,
+      "sectionCount": 22
+    }
+  },
+  "publishedProjectionStructure": {
+    "threeDimensional": ["T23/DMA/DCP"],
+    "twoDimensionalCount": 15,
+    "oneDimensionalCount": 6
+  },
+  "electronZeroRelevantVariables": ["T12", "T13", "DMS", "DMA"],
+  "largestPublishedJointOverlapWithRelevantSet": 2,
+  "containsFullRelevantJointProfile": false,
+  "identifiabilityCounterexample": {
+    "domain": "four binary variables",
+    "costA": "zero on even parity and one on odd parity",
+    "costB": "one on even parity and zero on odd parity",
+    "allProperSubsetProfilesIdentical": true,
+    "minimumOnEvenParityConstraint": {"costA": 0, "costB": 1}
+  },
+  "allowedUse": "pairwise consistency diagnostics or explicitly qualified lower bounds",
+  "forbiddenUse": "reconstruction of an exact correlated confidence interval by summing, multiplying or otherwise composing profiled tables",
+  "reopenTrigger": "a four-dimensional T12/T13/DMS/DMA likelihood grid, evaluator or collaboration-produced profile on the texture constraint",
+  "verdict": "the exact correlated electron-zero likelihood is not identifiable from the public NuFIT 6.1 projection files"
+}

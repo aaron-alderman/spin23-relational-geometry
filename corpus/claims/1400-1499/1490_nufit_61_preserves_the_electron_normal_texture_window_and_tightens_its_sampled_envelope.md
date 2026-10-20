@@ -209,6 +209,8 @@ after charge-three breaking.
 (\chi^2) tables and profile the one-zero constraint rather than sampling a
 rectangular marginal box.
 
+**Projection audit:** [Claim 1491](1491_nufit_61_public_projections_do_not_identify_the_correlated_electron_zero_likelihood.md) executes that ingestion and finds an identifiability boundary. The public release contains no joint profile over the four variables entering the electron-zero constraint; lower-dimensional profiled tables cannot be composed into an exact correlated confidence interval.
+
 ## Reproduction
 
 ~~~powershell
