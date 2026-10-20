@@ -184,6 +184,9 @@ The next high-value task is an aggregate intertwiner census for the actual
 minimal Pati--Salam mediator representations, including whether the
 conditional bidoublet adds a genuinely independent column.
 
+The programme-level ordering, executable artifacts, stop/go rules, and work
+to defer are fixed in [claim 1511](1511_the_highest_value_next_investigations_are_the_physical_intertwiner_RG_tangency_and_categorical_closure_tests.md).
+
 ## Reproduction
 
 ~~~powershell

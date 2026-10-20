@@ -1,0 +1,153 @@
+{
+  "schema": "spin23.next-investigation-priority-roadmap/1",
+  "date": "2026-10-20",
+  "decisionQuestion": "What are the most important next investigations that could shift the programme and are doable or worth doing?",
+  "decisionPrinciple": "Prioritize bounded investigations that can derive the global Schur ray, establish radiative stability, construct the typed physical embedding, or kill one of those possibilities cleanly.",
+  "centralGate": "Does the actual physical Pati-Salam carrier force one global Schur ray, and is its determinantal ideal preserved by quantum corrections?",
+  "investigations": [
+    {
+      "rank": 1,
+      "tier": "A-now",
+      "id": "physical-aggregate-intertwiner-census",
+      "title": "Actual minimal Pati-Salam aggregate intertwiner and primitive-path census",
+      "impact": "very-high",
+      "tractability": "high",
+      "whyProgrammeShifting": "It decides whether the common Schur ray exists in the physical carrier or only in a toy typed category.",
+      "firstExecutableArtifact": "A sourced representation-and-vertex inventory plus a verifier constructing the aggregate coupling matrix and all of its minors.",
+      "positiveResult": "Only one physical packet exists or all admitted columns factor through one common morphism.",
+      "negativeResult": "Two required carriers supply independent columns, making exact protection non-generic in the minimal embedding.",
+      "dependencies": ["claims 1496-1510"],
+      "status": "actionable"
+    },
+    {
+      "rank": 2,
+      "tier": "A-now",
+      "id": "complex-indefinite-schur-locus",
+      "title": "Complex-phase and indefinite-weight Schur-locus classification",
+      "impact": "high",
+      "tractability": "high",
+      "whyProgrammeShifting": "It closes the largest explicit caveat in the common-ray theorem or reveals a distinct symmetry-stable cancellation mechanism.",
+      "firstExecutableArtifact": "A symbolic stratification of the two- and three-packet determinant-zero locus with transverse perturbation tests.",
+      "positiveResult": "Every symmetry-stable component is common-ray factorization and nonaligned zeros are tuned.",
+      "negativeResult": "An available reality, CP, or representation constraint enforces a nonaligned component.",
+      "dependencies": ["claim 1509"],
+      "status": "actionable"
+    },
+    {
+      "rank": 3,
+      "tier": "A-next",
+      "id": "one-loop-determinantal-ideal-tangency",
+      "title": "One-loop and RG tangency of the Schur determinantal ideal",
+      "impact": "very-high",
+      "tractability": "medium",
+      "whyProgrammeShifting": "It distinguishes a technically natural invariant manifold from a tree-level cancellation destroyed by counterterms.",
+      "firstExecutableArtifact": "One frozen mediator Lagrangian, complete one-loop operator census, and symbolic test that beta(I) lies in the packet-and-minor ideal.",
+      "positiveResult": "The matching variety is invariant under the one-loop flow.",
+      "negativeResult": "A loop generates a transverse primitive leakage coefficient.",
+      "dependencies": ["priorities 1 and 2", "claims 1495 and 1508-1510"],
+      "status": "actionable-after-carrier-freeze"
+    },
+    {
+      "rank": 4,
+      "tier": "A-next",
+      "id": "typed-matching-category",
+      "title": "Formal typed matching category or superconnection",
+      "impact": "very-high",
+      "tractability": "medium",
+      "whyProgrammeShifting": "It determines whether primitive/composite provenance and complete Schur packets form a consistent mathematical middle.",
+      "firstExecutableArtifact": "A finite presented category and matrix matching functor with associativity, integration-order, real-structure, grading, and topology closure tests.",
+      "positiveResult": "Composition preserves the packet ideal and realizes relation-sheet parity as a defined categorical symmetry.",
+      "negativeResult": "Matching depends on elimination order or conflicts with the real-even physical module.",
+      "dependencies": ["claims 1505-1510"],
+      "status": "actionable"
+    },
+    {
+      "rank": 5,
+      "tier": "A-build",
+      "id": "bounded-real-even-embedding-search",
+      "title": "Bounded finite real-even embedding search",
+      "impact": "very-high",
+      "tractability": "medium-low",
+      "whyProgrammeShifting": "A complete witness would promote the construction, while a certified bounded no-go would identify the incompatible axioms.",
+      "firstExecutableArtifact": "A versioned SAT/SMT/ILP or exhaustive constraint schema with declared bounds and checkable witness or UNSAT output.",
+      "positiveResult": "A physical KO-6 Pati-Salam carrier satisfies support, reality, chirality, parity, and common-ray constraints.",
+      "negativeResult": "No carrier exists within the declared bounds and a minimal incompatible constraint subset is isolated.",
+      "dependencies": ["priorities 1-4"],
+      "status": "worth-doing-after-formalization"
+    },
+    {
+      "rank": 6,
+      "tier": "B-conditional",
+      "id": "jordan-spin23-multiplicity-one",
+      "title": "Jordan and Spin(2,3) aggregate multiplicity-one theorem or counterexample",
+      "impact": "very-high",
+      "tractability": "medium-low",
+      "whyProgrammeShifting": "It could derive the common ray from representation theory or prove that current symmetry data permit multiple directions.",
+      "firstExecutableArtifact": "A Hom-space decomposition for the physical aggregate domain and codomain fixed by priority 1.",
+      "positiveResult": "The aggregate intertwiner occurs with multiplicity one.",
+      "negativeResult": "At least two independent intertwiners occur.",
+      "dependencies": ["priority 1"],
+      "status": "conditional"
+    },
+    {
+      "rank": 7,
+      "tier": "B-conditional",
+      "id": "loop-multimediator-functional-matching",
+      "title": "Loop and multi-mediator matching with momentum-dependent form factors",
+      "impact": "high",
+      "tractability": "medium-low",
+      "whyProgrammeShifting": "It tests whether finite packet provenance survives when matching becomes nonlocal and functional.",
+      "firstExecutableArtifact": "One complete loop topology matched to a momentum-dependent kernel and a functional-rank closure test.",
+      "positiveResult": "A closed functional packet ideal survives.",
+      "negativeResult": "Momentum dependence creates unavoidable independent directions.",
+      "dependencies": ["priorities 3 and 4"],
+      "status": "conditional"
+    },
+    {
+      "rank": 8,
+      "tier": "C-external",
+      "id": "direct-correlated-nufit-profile",
+      "title": "Direct correlated NuFIT electron-zero likelihood profile",
+      "impact": "high",
+      "tractability": "blocked-external",
+      "whyProgrammeShifting": "It can sharpen phenomenological viability but cannot derive the missing mechanism.",
+      "firstExecutableArtifact": "A full four-variable evaluator or a collaboration-produced constrained likelihood profile.",
+      "positiveResult": "A statistically resolved allowed or excluded texture region.",
+      "negativeResult": "The texture is excluded by the joint profile.",
+      "dependencies": ["joint NuFIT evaluator or direct collaboration profile", "claim 1491"],
+      "status": "externally-blocked"
+    }
+  ],
+  "deprioritized": [
+    {
+      "id": "ordinary-charge-guessing",
+      "reason": "Claims 1489 and 1507 close the relevant ordinary U(1) and field-Z2 composition route."
+    },
+    {
+      "id": "unconstrained-flavour-fitting",
+      "reason": "It measures capacity before deriving the source and repeats the non-predictive saturation diagnosed in claims 1487-1488."
+    },
+    {
+      "id": "premature-discrete-anomaly-audit",
+      "reason": "No ordinary field symmetry has been constructed; a genuine physical or categorical lift must come first."
+    },
+    {
+      "id": "premature-full-spectral-action",
+      "reason": "The carrier, functor, phase-locus, and RG tests can reject the branch at much lower cost."
+    },
+    {
+      "id": "metaphor-only-analogy",
+      "reason": "Spin(2,3), Golay, Leech, theology, dreams, and altered-state motifs remain admissible signposts but need an explicit intertwiner, transport law, or kill test before another tranche."
+    },
+    {
+      "id": "ungoverned-literature-ingestion",
+      "reason": "New sources should be ingested only when mapped to one of the decisive gates or when they alter the dependency frontier."
+    }
+  ],
+  "immediateTranche": [
+    "physical representation and primitive-path inventory",
+    "aggregate-intertwiner rank verifier",
+    "complex and indefinite Schur-locus symbolic classifier"
+  ],
+  "verdict": "First determine whether the physical Pati-Salam inventory forces one global Schur ray; if it survives the complex-locus audit, test whether its ideal is tangent to the one-loop flow before expanding the programme."
+}
