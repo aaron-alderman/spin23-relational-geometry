@@ -9,7 +9,7 @@
     {"externalPairing": ["L_P N_N", "H S"], "mediatorSpin": "scalar", "gaugeType": "Higgs-doublet-like scalar", "matching": "c_D/Lambda = y_LN mu_HS/M_Phi^2"}
   ],
   "exhaustivenessReason": "the three unordered pairings of two external fermions and two external scalars give two Yukawa-Yukawa fermion exchanges and one Yukawa-cubic scalar exchange",
-  "protectionCriterion": {"everyCompletionMustLoseAPortal": true, "meaning": "the central incidence mask must forbid at least one renormalizable vertex in each of the three mediator topologies"},
+  "protectionCriterion": {"portalCutIsSufficient": true, "portalCutIsNecessary": false, "correlatedPacketAlternative": true, "meaning": "each topology must either lose a portal or belong to a complete correlated matching packet; claim 1497 exhibits the selected-neutrino alternative"},
   "junkBoundary": "integrating out a propagating mediator produces a Schur-complement Wilson coefficient; this is not a represented degree-two differential form and is not removed by the ordinary junk quotient",
-  "verdict": "UV exactness is equivalent, at one-mediator tree level, to a three-topology portal veto rather than to charge conservation alone"
+  "verdict": "the topology census is exhaustive, but UV exactness requires a portal-or-correlation audit rather than charge conservation or graph disconnection alone"
 }

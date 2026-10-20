@@ -6,6 +6,8 @@
 
 **Status:** exhaustive one-mediator renormalizable tree-topology theorem; multi-mediator, loop and strongly coupled completions remain open
 
+> **Correlation correction (claim 1497).** The topology census is exact, but “every bridge must be cut” is too strong. The selected right-handed neutrino already inside the full seesaw can realize the singlet-fermion bridge. Sequential matching then produces an apparent Dirac operator together with a Weinberg contact and Majorana shift whose contributions cancel exactly. The portal veto applies to independent matching packets, not to this complete Schur-correlated packet. See [claim 1497](1497_the_selected_heavy_neutrino_bridge_generates_an_apparent_Dirac_leakage_but_its_complete_Schur_package_preserves_the_texture_zero.md).
+
 **Depends on:** [the operator-dimension moat](1495_the_charge_three_operator_dimension_moat_is_renormalizable_for_Majorana_sewing_but_the_leading_Dirac_texture_lift_forgets_the_breaking_vev.md), [the central generalized-fluctuation support theorem](1494_generalized_inner_fluctuations_preserve_the_central_family_null_mask_while_dressing_the_present_Pati_Salam_Majorana_defect.md), and [the matrix-valued junk theorem](1493_matrix_multiplicity_enlarges_only_the_loop_sector_while_all_two_step_cross_edges_remain_junk.md)
 
 **Evidence:** [single-mediator completion ledger](../../../evidence/data/spin23-single-mediator-dirac-leakage-completions.json) and [executable topology verifier](../../../verification/verify/verify_spin23_single_mediator_dirac_leakage_completions.mjs)
@@ -40,15 +42,16 @@ renormalizable vertices joined by one propagator. They give:
 }
 \]
 
-Thus exact protection at single-mediator tree level has a finite test:
+Thus independent leakage at single-mediator tree level has a finite test:
 
 \[
 \boxed{
-\text{forbid at least one portal in each of these three topologies}.}
+\text{cut each independent packet or prove its complete Schur correlation}.}
 \]
 
 This translates the abstract sector-dependent incidence mask into a concrete
-UV matching requirement.
+UV matching requirement while allowing the reducible seesaw bridge isolated
+in claim 1497.
 
 ## 1. Exhaustiveness
 
@@ -95,16 +98,15 @@ C_\Phi=\frac{y\mu}{M_\Phi^2}.
 \]
 
 Consequently either missing portal sets that topology's matching coefficient
-to zero. The central support condition of claim 1494 can now be imposed as a
-vertex-level statement rather than only as a low-energy matrix zero:
+to zero. This supplies the following simple sufficient vertex-level cuts:
 
 - forbid \(L_PHF\) or \(F\nu_N^cS\);
 - forbid \(L_PSF\) or \(FH\nu_N^c\);
 - forbid \(L_P\Phi\nu_N^c\) or \(SH\Phi^\dagger\).
 
-The choice need not be the same portal in all three cases. What matters is
-that no complete path crosses from the selected Dirac carrier to the null
-carrier.
+The choice need not be the same portal in all three cases. Claim 1497 shows
+that a complete path may instead be retained when its full induced operator
+packet satisfies the relevant Schur correlation.
 
 ## 3. Relation to the junk theorem
 
@@ -169,14 +171,15 @@ respect the charge and gauge symmetries.
 type, not a unique Pati--Salam representation or finite-triple sector.
 
 **Portal stop:** showing that one preferred mediator is absent is
-insufficient; all three topology classes must be cut.
+insufficient; every topology class must be cut or shown to be a complete
+correlated packet rather than an independent leakage coefficient.
 
 **Junk stop:** differential junk must not be used to discard a Wilson
 coefficient produced by integrating out a physical state.
 
 **Positive trigger:** embed the actual Pati--Salam/family carrier table and
-prove that its bimodule incidence forbids at least one vertex in every row
-while retaining \(S\nu_P^c\nu_N^c\).
+prove, topology by topology, that each row is either portal-forbidden or
+Schur-correlated while retaining \(S\nu_P^c\nu_N^c\).
 
 ## Verdict
 
@@ -185,7 +188,7 @@ finite portal problem:
 
 \[
 \boxed{
-\text{three tree bridges exist; exact protection requires three cuts}.}
+\text{three tree bridges exist; each requires a portal-or-correlation audit}.}
 \]
 
 The sector-dependent support mask is therefore not just a convenient texture

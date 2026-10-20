@@ -56,6 +56,8 @@ assert.ok(0*mu/mScalar**2===0);
 assert.equal(evidence.exhaustiveSingleMediatorCount,3);
 assert.equal(evidence.completions.filter(x=>x.mediatorSpin==='fermion').length,2);
 assert.equal(evidence.completions.filter(x=>x.mediatorSpin==='scalar').length,1);
-assert.equal(evidence.protectionCriterion.everyCompletionMustLoseAPortal,true);
+assert.equal(evidence.protectionCriterion.portalCutIsSufficient,true);
+assert.equal(evidence.protectionCriterion.portalCutIsNecessary,false);
+assert.equal(evidence.protectionCriterion.correlatedPacketAlternative,true);
 
 console.log('PASS 1496: exactly three one-mediator renormalizable tree topologies generate the dimension-five Dirac leakage, and each vanishes when either portal is removed.');
