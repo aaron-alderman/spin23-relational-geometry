@@ -1,0 +1,43 @@
+{
+  "schema": "spin23.e6-nonsusy-vacuum-residual-selector-audit/1",
+  "date": "2026-10-20",
+  "reducedPotential": {
+    "variables": {"x": "|s|^2", "y": "|t|^2"},
+    "form": "-muS2*x-muT2*y+lambdaS*x^2+lambdaT*y^2+kappa*x*y",
+    "parameters": {"muS2": 5, "muT2": 7, "lambdaS": 2, "lambdaT": 3, "kappa": 1},
+    "quarticDeterminant": 23,
+    "stationaryPoint": {"x": 1, "y": 1},
+    "stationaryEnergy": -6,
+    "xBoundaryMinimumEnergy": -3.125,
+    "yBoundaryMinimumEnergy": -4.083333333333333,
+    "originEnergy": 0,
+    "uniqueGlobalMinimumOnNonnegativeQuadrant": true,
+    "rank11ExoticMassCondition": true
+  },
+  "selectorTheorem": {
+    "assumptions": [
+      "an abelian selector commutes with E6 and therefore assigns one charge to each irreducible multiplet",
+      "both 27F 27F H27 and 27F 27F S351 Yukawas are retained",
+      "the H27 and S351 singlet directions both acquire nonzero vacuum expectation values"
+    ],
+    "chargeEquations": ["2f+h=0", "2f+s=0"],
+    "consequence": "h=s=-2f",
+    "relativeBidoubletBilinearCharge": "-h+s=0",
+    "residualSubgroupStatement": "every selector element preserving the singlet VEVs acts trivially and identically on both complete Higgs multiplets",
+    "canResidualSelectorDistinguishBidoublets": false
+  },
+  "z5Witness": {
+    "charges": {"f": 1, "h": 3, "s": 3},
+    "residualSubgroupOrder": 1,
+    "selectorCompletelyBroken": true,
+    "relativeBidoubletBilinearNeutral": true
+  },
+  "decision": {
+    "nonSupersymmetricReducedVacuumExistsOnOpenParameterSet": true,
+    "minimalSusyFtermObstructionEvaded": true,
+    "commutingAbelianSelectorProtectsPostBreakingInertness": false,
+    "fullE6QuarticInvariantAndSpectrumAuditStillRequired": true,
+    "portalWardLineDerived": false,
+    "nextExactRoute": "component-sensitive noncommuting, nonabelian, graded or correspondence selector, or a complete E6 quartic cancellation theorem"
+  }
+}
