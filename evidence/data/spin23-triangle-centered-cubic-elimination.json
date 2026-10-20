@@ -1,0 +1,37 @@
+{
+  "schema": "spin23.triangle-centered-cubic-elimination/1",
+  "documentId": 1480,
+  "date": "2026-10-20",
+  "status": "exact-invariant-reduction-and-constructive-spectral-witness",
+  "centeredInvariant": {
+    "pSquared": "(sum(g_i^2)+2*s^2*(a^2+b^2+c^2))/6",
+    "centeredDeterminant": "g1*g2*g3-s^2*(g1*b^2+g2*c^2+g3*a^2)+2*s^3*a*b*c*cos(delta)",
+    "orderedSpectrumInvariant": "z(r)=-(r+1)(2r-1)(2-r)/(r^2-r+1)^(3/2)",
+    "holonomyEliminated": true
+  },
+  "targets": {"up": 0.000013577502786208545, "down": 0.0003497378191729099},
+  "spectralWitness": {
+    "a": 1000.0,
+    "b": 55194982.36316417,
+    "c": 1.0,
+    "delta": 3.141592653589793,
+    "eta": 0.9992921770622212,
+    "upEigenvalues": [1.33318506, 1500.16002, 110390465.0],
+    "downEigenvalues": [988.028213, 39581.7396, 110351397.0],
+    "upMassSquaredLocation": 0.000013577502786215757,
+    "downMassSquaredLocation": 0.00034973781917296533,
+    "bOverA": 55194.98236316417,
+    "bOverC": 55194982.36316417
+  },
+  "fixedSlicePhaseSearch": {
+    "scope": "200000 uniform phase samples plus 20000 local proposals; not a global proof",
+    "alpha": 1.54314758,
+    "beta": -1.51802284,
+    "Vus": 0.815816542,
+    "Vcb": 0.0231940953,
+    "Vub": 0.0328343815,
+    "absoluteJarlskog": 0.0000140646544,
+    "joinedSolutionFound": false
+  },
+  "verdict": {"spectralTargetsCompatible": true, "naturalHierarchyDerived": false, "mixingJoined": false, "globalNoGoEstablished": false, "physicalAdmissionChanged": false}
+}
