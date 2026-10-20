@@ -1,0 +1,32 @@
+{
+  "schema": "spin23.pi-flux-signless-slope-bound/1",
+  "documentId": 1482,
+  "date": "2026-10-20",
+  "status": "exact-spectral-inequality-and-bounded-surviving-branch-audit",
+  "theorem": {
+    "operator": "weighted triangle signless Laplacian Q at delta=pi",
+    "trace": "2S",
+    "secondElementaryInvariant": "3(ab+bc+ca)",
+    "determinant": "4abc",
+    "characteristicAtHalfS": "-(3S^3-12S(ab+bc+ca)+32abc)/8",
+    "schurDecomposition": "3*(S^3-4S(ab+bc+ca)+9abc)+5abc",
+    "middleEigenvalueBound": "lambda2<=S/2",
+    "sortedLocationBound": "r<=1/3",
+    "reversedPhysicalLocationBound": "1-r>=2/3",
+    "sharpBoundaryWeights": [0.5,0.5,0.0],
+    "sharpBoundarySpectrum": [0.0,0.5,1.5]
+  },
+  "observedUpMassSquaredLocation": 0.000013577502786208545,
+  "decreasingUpSlopeCompatible": false,
+  "boundedScan": {
+    "delta": 3.141592653589793,
+    "aGridCount": 161,
+    "phaseSamplesPerRoot": 8000,
+    "increasingIncreasing": {"rootedSolutions": 389,"bestMeanSquaredLogScore": 1.584406722759206,"bestObservables": {"Vus":0.484714870,"Vcb":0.0172440277,"Vub":0.0311774054,"absoluteJarlskog":0.0000158396770}},
+    "increasingDecreasing": {"rootedSolutions": 197,"bestMeanSquaredLogScore": 0.7377426626277913,"bestObservables": {"Vus":0.0705454742,"Vcb":0.0997790668,"Vub":0.00806856690,"absoluteJarlskog":0.0000516333529}},
+    "decreasingIncreasingRootedSolutions": 0,
+    "decreasingDecreasingRootedSolutions": 0,
+    "globalMinimumClaimed": false
+  },
+  "verdict": {"upSlopeForcedPositiveAtPiFlux": true,"piFluxCKMSolutionFound": false,"generalHolonomyExcluded": false,"physicalAdmissionChanged": false}
+}
