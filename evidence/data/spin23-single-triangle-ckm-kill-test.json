@@ -1,0 +1,40 @@
+{
+  "schema": "spin23.single-triangle-ckm-kill-test/1",
+  "documentId": 1475,
+  "date": "2026-10-20",
+  "status": "exact-minimal-operator-no-go-and-repair-boundary",
+  "minimalOperator": {
+    "form": "H=[[0,a,c*exp(-i delta)],[a,0,b],[c*exp(i delta),b,0]]",
+    "positiveEdgeMagnitudes": ["a", "b", "c"],
+    "loopPhase": "delta",
+    "rawRealParameters": 4,
+    "scaleLaw": "H(lambda*a,lambda*b,lambda*c,delta)=lambda*H(a,b,c,delta)",
+    "eigenvectorParameters": ["a/c", "b/c", "delta"],
+    "maximumIndependentEigenvectorParameters": 3
+  },
+  "characteristicPolynomial": "x^3-x*(a^2+b^2+c^2)-2*a*b*c*cos(delta)",
+  "physicalCP": {
+    "oneHermitianSectorSufficient": false,
+    "jarlskogRequiresTwoNoncommutingSectors": true,
+    "commonSpectralFunctionAnsatz": "H_u=f(H0), H_d=g(H0)",
+    "commutator": "[H_u,H_d]=0",
+    "jarlskogInvariant": 0,
+    "ckmMixing": "trivial up to degenerate-subspace conventions"
+  },
+  "repairs": [
+    "two independently derived noncommuting overlap operators",
+    "sector-dependent connections constrained by one higher action",
+    "one additional diagonal contrast not reducible to identity or the common generator"
+  ],
+  "repairDebt": {
+    "independentEdgeFitsAllowed": false,
+    "arbitrarySecondMatrixAllowed": false,
+    "requiredHeldOutObservable": "Jarlskog invariant"
+  },
+  "verdict": {
+    "rawParameterRoleMatchRetained": true,
+    "singleTrianglePredictsGenericCKM": false,
+    "singleSharedGeneratorProducesCPViolation": false,
+    "physicalAdmissionChanged": false
+  }
+}

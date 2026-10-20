@@ -10,6 +10,8 @@
 
 **Evidence:** [machine-readable parameter audit](../../../evidence/data/spin23-decorated-defect-triangle-flavour-count.json) and [executable verifier](../../../verification/verify/verify_spin23_decorated_defect_triangle_flavour_count.mjs)
 
+> **Subsequent spectral quotient (claim 1475).** The raw (3+1) middle count does not survive as four independent mixing parameters for one minimal triangle operator: overall edge scale leaves eigenvectors unchanged, and one shared generator cannot produce a nonzero Jarlskog commutator. The count remains a useful ansatz signal, not a CKM construction.
+
 ## Result
 
 Claim 1473 proves that three bare projective points have no cross-ratio. The top-down geometry, however, carries more than a projective structure: once (mathbb{CP}^1) is equipped with its Fubini--Study metric, the symmetry reduces from (PGL(2,mathbb C)) to (PSU(2)cong SO(3)). A generic ordered triple then has three real shape invariants, which may be taken as its pairwise geodesic distances:
