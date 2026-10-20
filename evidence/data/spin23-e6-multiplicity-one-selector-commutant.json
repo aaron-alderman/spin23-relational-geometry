@@ -1,0 +1,46 @@
+{
+  "schema": "spin23.e6-multiplicity-one-selector-commutant/1",
+  "date": "2026-10-20",
+  "fieldContent": [
+    {"field": "psi", "e6Representation": "27", "dimension": 27, "multiplicity": 1},
+    {"field": "S", "e6Representation": "351prime", "dimension": 351, "multiplicity": 1}
+  ],
+  "commutant": {
+    "assumptions": [
+      "complex irreducible E6 modules",
+      "positive canonical kinetic form",
+      "unitary internal selector commutes with the E6 action"
+    ],
+    "schurResult": {
+      "onPsi": "exp(i alpha) identity_27",
+      "onS": "exp(i beta) identity_351prime",
+      "crossIntertwiners": 0,
+      "image": "subgroup of U(1)_psi times U(1)_S"
+    }
+  },
+  "operators": {
+    "I1": {
+      "expression": "(barpsi psi)(barS S)",
+      "phaseExponent": {"alpha": 0, "beta": 0},
+      "hermitian": true,
+      "generalizedCpParity": "even"
+    },
+    "I2": {
+      "expression": "barpsi^mu psi_nu barS^nu_tau S_mu_tau",
+      "phaseExponent": {"alpha": 0, "beta": 0},
+      "hermitian": true,
+      "generalizedCpParity": "even"
+    }
+  },
+  "gaugeLoopInput": {
+    "claim": 1569,
+    "tensorDecomposition": "K=(28/9) I1+20 I2",
+    "I2Projection": 20
+  },
+  "decision": {
+    "anyCommutingUnitaryMultiplicityOneSelectorCanForbidI2": false,
+    "generalizedCpCanMakeI2Odd": false,
+    "ordinaryMultiplicityOneInternalSelectorClassClosed": true,
+    "minimumStructuralEscape": "nontrivial multiplicity or relation space, noncommuting action, or enlarged completion"
+  }
+}
