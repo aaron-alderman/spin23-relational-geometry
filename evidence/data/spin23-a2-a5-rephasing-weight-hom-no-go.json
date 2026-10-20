@@ -1,0 +1,67 @@
+{
+  "schema": "spin23.a2-a5-rephasing-weight-hom-no-go/1",
+  "documentId": 1463,
+  "date": "2026-10-20",
+  "status": "exact-linear-hom-no-go-and-projective-collapse",
+  "representations": {
+    "peirceLine": {
+      "name": "V_nu",
+      "type": "realification of a one-arrow complex Peirce line",
+      "naturalCircleWeights": [1, -1],
+      "smRepresentation": "trivial",
+      "boundaryLorentzRepresentation": "scalar"
+    },
+    "majoranaReference": {
+      "name": "L^-2",
+      "type": "dual of the sterile-pair coefficient line",
+      "sterileRephasingWeight": -2,
+      "smRepresentation": "trivial",
+      "boundaryLorentzRepresentation": "scalar"
+    }
+  },
+  "restrictedHom": {
+    "conditions": ["T J=J T", "T K=K T"],
+    "realDimension": 1,
+    "generalMap": "T=a I",
+    "projectiveIsometryMultiplicity": 1,
+    "warning": "forgets the integer U(1) weights"
+  },
+  "physicalHom": {
+    "group": "U(1)_N x G_SM x Spin_boundary x Z2",
+    "sourceWeightMagnitudes": [1],
+    "targetWeightMagnitude": 2,
+    "realDimension": 0,
+    "infinitesimalEquations": ["T J=-2 J T for source weight +1", "T J=2 J T for source weight -1"],
+    "verdict": "the linear Peirce-to-Majorana transport proposed in document 1461 is ruled out"
+  },
+  "quadraticRepair": {
+    "minimalMap": "Q(z)=conjugate(z)^2",
+    "targetWeight": -2,
+    "conjugationCompatible": true,
+    "sourceWallRays": ["[1]", "[i]"],
+    "images": ["[1]", "[-1]"],
+    "sameRealProjectiveTarget": true,
+    "universalReason": "every weight-minus-two equivariant F obeys F(i z)=-F(z)",
+    "transmitsWallOrientation": false
+  },
+  "declaredDressings": {
+    "YnuDaggerYnuWeight": 0,
+    "quadraticYukawaHasTargetWeight": true,
+    "quadraticYukawaIsDeclaredFlavorScalar": false,
+    "majoranaCoefficientIsNoncircularInput": false,
+    "sourceDerivedRepairPresent": false
+  },
+  "verdict": {
+    "a2InternalRaySelectionRetainedConditionally": true,
+    "a5LinearTransportRuledOut": true,
+    "oneLineChargeCorrectNonlinearTransportDistinguishesWallPair": false,
+    "chargedTroLockPresent": false,
+    "physicalAdmission": false
+  },
+  "minimalReopenData": [
+    "an independently sourced nonzero R2 in L^-2",
+    "a primitive charge-minus-two Peirce or boundary field",
+    "a second phase-bearing source with a surviving relative invariant",
+    "a derived flavor tensor making a quadratic Yukawa covariant scalar and noncircular"
+  ]
+}

@@ -10,6 +10,8 @@
 
 **Evidence:** [machine-readable certificate](../../../evidence/data/spin23-a2-a5-wall-peirce-phase-selector-boundary.json) and [executable verifier](../../../verification/verify/verify_spin23_a2_a5_wall_peirce_phase_selector_boundary.mjs)
 
+> **Subsequent resolution (document 1463).** The Hom-space below is one-real-dimensional only after forgetting the integer sterile-rephasing weights. Restoring the natural one-arrow weight of (V_\nu) and the charge-minus-two weight of (L^{-2}) makes the physical linear Hom-space zero. The charge-correct quadratic repair maps the two wall-selected source rays to the same target projective ray. See [1463](1463_the_rephasing_equivariant_peirce_to_majorana_linear_hom_vanishes_and_every_charge_two_repair_collapses_the_wall_pair.md).
+
 ## Result
 
 A neutral wall orientation and the \(Spin(2,3)\)-compatible complex structure do not select the sterile phase. Their exact stabilizer retains a continuous \(U(1)\), while the required real phase ray in the charge-minus-two sterile plane rotates nontrivially.

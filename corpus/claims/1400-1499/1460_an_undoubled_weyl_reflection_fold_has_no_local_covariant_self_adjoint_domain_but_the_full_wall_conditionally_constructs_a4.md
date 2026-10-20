@@ -10,6 +10,8 @@
 
 **Evidence:** [machine-readable certificate](../../../evidence/data/spin23-a4-weyl-boundary-no-go-and-full-wall-completion.json) and [executable verifier](../../../verification/verify/verify_spin23_a4_weyl_boundary_no_go_and_full_wall_completion.mjs)
 
+> **Subsequent quantitative boundary (document 1465).** The full-wall reader is healthy on a finite exact interval: its first tachyon occurs only when the Pöschl--Teller well strength rises from (2) to (g_{\rm crit}\simeq2.9206). The witness nevertheless sets symmetry-allowed cross-couplings to zero, so quantum A4 still requires a complete counterterm, renormalization and matrix-Hessian packet. See [1465](1465_the_full_wall_reader_has_an_exact_positive_stability_margin_but_the_zero_cross_coupling_surface_is_not_symmetry_closed.md).
+
 ## Result
 
 For an undoubled Weyl multiplet on a timelike boundary, no local domain can be simultaneously

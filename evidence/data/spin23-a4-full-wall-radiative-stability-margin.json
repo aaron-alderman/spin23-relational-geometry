@@ -1,0 +1,45 @@
+{
+  "schema": "spin23.a4-full-wall-radiative-stability-margin/1",
+  "documentId": 1465,
+  "date": "2026-10-20",
+  "status": "exact-reader-margin-and-counterterm-closure-boundary",
+  "reader": {
+    "operator": "-d_y^2+M_infinity^2-g sech^2(y)",
+    "MInfinitySquared": 1.64,
+    "frozenWellStrength": 2,
+    "sOfG": "(sqrt(1+4g)-1)/2",
+    "groundMassSquared": "M_infinity^2-s(g)^2",
+    "frozenS": 1,
+    "frozenGroundMassSquared": 0.64,
+    "criticalWellStrength": 2.92062484748657,
+    "positiveMarginInG": 0.92062484748657,
+    "continuumThreshold": 1.64,
+    "groundMassSlopeAtFrozenPoint": -0.6666666666666666
+  },
+  "allowedCrossCouplings": [
+    "eta^2 H^dagger H",
+    "eta^2 |s|^2",
+    "|Phi|^2 H^dagger H",
+    "|Phi|^2 |s|^2",
+    "eta^2 times a gauge-invariant projector response scalar",
+    "|Phi|^2 times a gauge-invariant projector response scalar"
+  ],
+  "forbiddenByDeclaredSymmetry": [],
+  "frozenZeroCrossCouplingSurfaceSymmetryClosed": false,
+  "quantumReopenPacket": [
+    "complete scalar cross-coupling counterterms and beta functions",
+    "renormalization conditions fixing finite parts",
+    "loop-corrected wall and vacuum stationarity equations",
+    "full matrix Schrodinger Hessian",
+    "an RG interval with nonnegative physical eigenvalues and residues",
+    "anomaly-free BRST or Slavnov-Taylor identity"
+  ],
+  "verdict": {
+    "frozenFullWallTreeSpectrumHealthy": true,
+    "finiteReaderStabilityNeighbourhood": true,
+    "inevitableRadiativeInstabilityProved": false,
+    "radiativeStabilityDerived": false,
+    "globalQuantumA4Passed": false,
+    "physicalAdmission": false
+  }
+}

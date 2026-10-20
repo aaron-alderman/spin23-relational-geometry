@@ -10,6 +10,8 @@
 
 **Evidence:** [machine-readable certificate](../../../evidence/data/spin23-a6-unique-zero-index-spectator-and-clifford-origin-no-go.json) and [executable verifier](../../../verification/verify/verify_spin23_a6_unique_zero_index_spectator_and_clifford_origin_no_go.mjs)
 
+> **Subsequent sterile-pair boundary (document 1466).** The selected (mathcal O(3)) pair requires an (mathcal O(-6)) coefficient, whose regular holomorphic section space is zero. Any smooth nonzero repair necessarily carries a six-unit defect ledger and constitutes a new field/background sector; the (mathcal O(0)) spectator does not supply it. See [1466](1466_the_o3_sterile_triplet_has_no_holomorphic_majorana_coefficient_and_any_smooth_o_minus6_repair_is_a_new_defect_sector.md).
+
 ## Result
 
 Within ordinary holomorphic line-bundle compactifications on \(\mathbb{CP}^1\), the spectator used in document 1457 is unique. Every holomorphic line bundle is \(\mathcal O(n)\), and

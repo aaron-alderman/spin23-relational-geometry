@@ -8,6 +8,8 @@
 
 **Depends on:** [the first terminal register](1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md), [the unique A6 spectator result](1458_o0_is_the_unique_zero_index_cp1_spectator_but_no_single_ordinary_dirac_or_real_structure_generates_the_flux_split.md), [the response underidentification theorem](1459_the_a7_a9_a11_lane_is_underidentified_and_reopens_only_with_a_generator_state_port_packet.md), [the A4 domain classification](1460_an_undoubled_weyl_reflection_fold_has_no_local_covariant_self_adjoint_domain_but_the_full_wall_conditionally_constructs_a4.md), and [the joint A2/A5 terminal test](1461_the_wall_sign_and_native_peirce_real_structure_select_two_phase_rays_but_transport_to_the_sterile_line_is_the_terminal_a2_a5_gate.md)
 
+> **Subsequent resolution (documents 1463--1464).** Restoring sterile rephasing resolves the A2/A5 linear Hom test to dimension zero, and every one-line charge-minus-two repair collapses the two wall rays projectively. A complete platform inventory also confirms that response-complete controls and named devices occur separately, never as one A11 physical packet. See [1463](1463_the_rephasing_equivariant_peirce_to_majorana_linear_hom_vanishes_and_every_charge_two_repair_collapses_the_wall_pair.md) and [1464](1464_no_existing_named_platform_contains_the_generator_state_port_and_sector_packet_needed_for_a11.md).
+
 **Evidence:** [machine-readable terminal register](../../../evidence/data/spin23-complete-current-input-exhaustion-v2.json) and [executable verifier](../../../verification/verify/verify_spin23_complete_current_input_exhaustion_v2.mjs)
 
 ## Result

@@ -13056,6 +13056,15 @@ Each cycle ends by updating this registry, including branches that failed or bec
 - **Terminal partition:** A5/A7 internally exhausted; A2/A4/A6/A9 conditionally constructed; A11 externally open; physical admission false.
 - **Artifacts:** [1458](../1400-1499/1458_o0_is_the_unique_zero_index_cp1_spectator_but_no_single_ordinary_dirac_or_real_structure_generates_the_flux_split.md), [1459](../1400-1499/1459_the_a7_a9_a11_lane_is_underidentified_and_reopens_only_with_a_generator_state_port_packet.md), [1460](../1400-1499/1460_an_undoubled_weyl_reflection_fold_has_no_local_covariant_self_adjoint_domain_but_the_full_wall_conditionally_constructs_a4.md), [1461](../1400-1499/1461_the_wall_sign_and_native_peirce_real_structure_select_two_phase_rays_but_transport_to_the_sterile_line_is_the_terminal_a2_a5_gate.md), and [1462](../1400-1499/1462_complete_current_input_exhaustion_promotes_a4_and_a6_conditionally_but_leaves_physical_admission_false.md).
 
+### B-CHARGE-SENSITIVE-EXHAUSTION — resolved phase Hom, quantum margin and physical-packet inventory
+
+- **A2/A5 resolution:** the charge-forgetting Peirce-to-Majorana Hom has real dimension one, but the physical (U(1)_N)-equivariant Hom has dimension zero; every one-line charge-minus-two nonlinear repair identifies the two wall rays projectively.
+- **A4 quantitative boundary:** the frozen full-wall reader at (g=2) remains positive until (g_{\rm crit}\simeq2.9206), but the omitted cross-couplings are symmetry allowed and require a full counterterm/RG packet.
+- **A6 sterile boundary:** (H^0(\mathbb{CP}^1,\mathcal O(-6))=0); a smooth repair carries a six-unit defect ledger and is independent new structure.
+- **A11 inventory:** mathematical packets and named devices both exist, but no single platform joins a sector generator, state, calibrated ports, raw complex response, protected-(mathbb Z_3) certificate and microscopic (Spin(2,3)) map.
+- **Highest-value acquisition:** a frozen named Aharonov--Casher circuit/netlist plus calibrated complex (2\times2) scattering data and charge/parity timestamps at (n_g=0,1/3,2/3).
+- **Artifacts:** [1463](../1400-1499/1463_the_rephasing_equivariant_peirce_to_majorana_linear_hom_vanishes_and_every_charge_two_repair_collapses_the_wall_pair.md), [1464](../1400-1499/1464_no_existing_named_platform_contains_the_generator_state_port_and_sector_packet_needed_for_a11.md), [1465](../1400-1499/1465_the_full_wall_reader_has_an_exact_positive_stability_margin_but_the_zero_cross_coupling_surface_is_not_symmetry_closed.md), and [1466](../1400-1499/1466_the_o3_sterile_triplet_has_no_holomorphic_majorana_coefficient_and_any_smooth_o_minus6_repair_is_a_new_defect_sector.md).
+
 
 
 
