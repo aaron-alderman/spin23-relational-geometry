@@ -1,0 +1,50 @@
+{
+  "schema": "spin23.marked-lepton-seesaw-join/1",
+  "date": "2026-10-20",
+  "markedFlag": {
+    "projector": "P_alpha",
+    "generator": "X_alpha=I-3P_alpha",
+    "identity": "[Y,X_alpha]=-3[Y,P_alpha]",
+    "equivalence": "[Y_nu,X_alpha]=0 iff [Y_nu,P_alpha]=0"
+  },
+  "diracChargeMatrix": [
+    [0, -3, -3],
+    [3, 0, 0],
+    [3, 0, 0]
+  ],
+  "seesawDescent": {
+    "assumptions": [
+      "rank(Q M_R Q)=1",
+      "det(M_R) is nonzero",
+      "[Y_nu,P_alpha]=0"
+    ],
+    "cofactorZero": "P M_R^-1 P=0",
+    "consequence": "P m_nu P=0"
+  },
+  "breakingCollision": {
+    "majoranaNullEdgeCharge": 3,
+    "diracNullEdgeCharge": 3,
+    "chargeOnlyProtectionSufficient": false,
+    "reason": "the charge-three breaking required for full heavy rank also permits the dangerous Dirac selected-to-null edge",
+    "sameOrderWarning": "if y and r_N are generated at the same first order, the linear seesaw lift contains r_N/y and need not be small"
+  },
+  "minimalKnownMiddle": {
+    "type": "sector-dependent opposite-algebra anchor mask",
+    "diracSelected": "(P,P)",
+    "diracNull": "(N,N)",
+    "majoranaSelected": "(P,I)",
+    "majoranaNull": "(N,I)",
+    "diracNullAllowed": false,
+    "majoranaNullAllowed": true,
+    "completePhysicalEmbeddingDerived": false
+  },
+  "spin23Path": [
+    "Spin(2,3) Jordan copy exchange",
+    "rank-one complementary Majorana block",
+    "sector-dependent A2 incidence mask",
+    "B-3L_alpha marked family flag",
+    "block-preserving neutrino Dirac map",
+    "selected-flavour light-neutrino texture zero"
+  ],
+  "verdict": "the marked lepton generator derives the seesaw flag exactly, but preserving it through charge-three Majorana rank restoration requires sector-dependent incidence rather than charge alone"
+}

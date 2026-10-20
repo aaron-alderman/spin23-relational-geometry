@@ -105,6 +105,11 @@ The last route is the next source-respecting fan. It must use neutrino mass
 ordering and phase assumptions explicitly and must not treat uncertain
 Majorana phases as measured targets.
 
+That fan is executed in [claim 1489](1489_the_marked_lepton_generator_derives_the_seesaw_flag_but_charge_three_breaking_needs_a_sector_dependent_mask.md). The identity
+([Y_\nu,I-3P_\alpha]=-3[Y_\nu,P_\alpha]) joins the marked action to the
+block-preserving seesaw hypothesis exactly, while the charge-three breaking
+audit shows why a sector-dependent incidence mask is still required.
+
 ## Consequence for Spin(2,3)
 
 Spin(2,3) still supplies the relational/Jordan carrier and the defect route
