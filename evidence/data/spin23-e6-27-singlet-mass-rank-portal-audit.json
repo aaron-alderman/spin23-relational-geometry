@@ -1,0 +1,50 @@
+{
+  "schema": "spin23.e6-27-singlet-mass-rank-portal-audit/1",
+  "date": "2026-10-20",
+  "matterBranching": [
+    {"representation": "16", "qPsi": 1, "dimension": 16},
+    {"representation": "10", "qPsi": -2, "dimension": 10},
+    {"representation": "1", "qPsi": 4, "dimension": 1}
+  ],
+  "singletMassChannels": {
+    "exoticTen": "10_-2 10_-2 1_4 in 27_F 27_F 27_H",
+    "fermionSinglet": "1_4 1_4 1_-8 in 27_F 27_F S_351,H, where S_351 is bar351' in the upper-index-27 convention",
+    "mass10": "c_s Y_27 s",
+    "mass1": "c_t Y_S t"
+  },
+  "highScaleMass": {
+    "blocks": ["0_16", "m10 I_10", "m1"],
+    "rankWhenMassesNonzero": 11,
+    "kernelDimension": 16,
+    "survivingRepresentation": "16_1"
+  },
+  "supportProjector": {
+    "formula": "-(Qpsi+2)(Qpsi-4)/9",
+    "eigenvaluesOn16TenOne": [1, 0, 0],
+    "rank": 16,
+    "e6EquivariantBeforeBreaking": false,
+    "spin10EquivariantAfterBreaking": true,
+    "equalsMassKernelProjector": true
+  },
+  "reducedVacuum": {
+    "potential": "lambda_s(|s|^2-v_s^2)^2+lambda_t(|t|^2-v_t^2)^2+kappa(|s|^2-v_s^2)(|t|^2-v_t^2)",
+    "stabilityConditions": ["lambda_s>0", "lambda_t>0", "4 lambda_s lambda_t>kappa^2"],
+    "fullE6VacuumAudited": false
+  },
+  "portalCoefficients": {
+    "dirac": "Y27 cD27 vD27 ZD27 + Y351 cD351 vD351 ZD351",
+    "majorana": "Y351 cM351 vM351 ZM351",
+    "independentParentCoefficients": 2,
+    "genericPortalSourceDimensionAtLeast": 2,
+    "oneInvariantCondition": "vD27=0 or an exact symmetry removes the light 27_H Dirac projection",
+    "oneInvariantConditionDerivedByE6": false,
+    "normalizedThresholdParallelLineDerived": false
+  },
+  "decision": {
+    "exoticRankTest": "SAT",
+    "canonicalPostBreakingH16Support": "SAT at the representation-block level",
+    "orientedSevenEdgeMaskDerived": false,
+    "genericMinimalFieldSetHasSinglePortalInvariant": false,
+    "nextTest": "complete bidoublet mass matrix and symmetry-protected inert 27_H alignment, followed by normalized source-line RG and threshold audit"
+  }
+}
