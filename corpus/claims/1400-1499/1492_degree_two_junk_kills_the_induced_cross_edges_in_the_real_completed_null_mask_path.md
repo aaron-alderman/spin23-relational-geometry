@@ -261,6 +261,8 @@ relations non-junk.
 bimodule multiplicities and determine whether the junk rank factorizes or
 whether noncommuting internal coefficients rescue a mixed cross-edge.
 
+That calculation is completed abstractly in [claim 1493](1493_matrix_multiplicity_enlarges_only_the_loop_sector_while_all_two_step_cross_edges_remain_junk.md). Arbitrary noncommuting edge blocks can enlarge the diagonal return-loop quotient from dimension four to six, but every distance-two product remains the differential of a represented-zero nonedge one-form and is therefore exact junk.
+
 ## Verdict
 
 The plausible middle passes its first genuine differential-calculus test:
