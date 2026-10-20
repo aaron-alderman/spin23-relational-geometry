@@ -10,6 +10,8 @@
 
 **Evidence:** [typed validation ledger](../../../evidence/data/spin23-external-phenomena-typed-validation-map.json) and [deterministic verifier](../../../verification/verify/verify_spin23_external_phenomena_typed_validation_map.mjs)
 
+**Subsequent refinement:** [claim 1589](1589_lense_thirring_is_the_vector_sector_gravity_gate_beyond_the_scalar_geopotential.md) separates the scalar geopotential lane from the gravitomagnetic current-dipole sector and turns Lense--Thirring precession into a direct weak-field recovery gate for a Spin(2,3) Cartan action.
+
 ## Result
 
 The eight phenomena belong to different theories and different standards of

@@ -1,0 +1,54 @@
+{
+  "schema": "spin23.lense-thirring-gravitomagnetic-gate/1",
+  "date": "2026-10-20",
+  "status": "weak-field gravitomagnetic admission test with Earth-orbit witness; no unique Spin(2,3) prediction",
+  "physicsSplit": {
+    "massMultipoles": "the scalar geopotential and its C_lm/S_lm coefficients generate gravitoelectric orbital perturbations such as J2 nodal precession",
+    "currentDipole": "the source angular momentum J generates the off-diagonal metric/spin-connection sector and Lense-Thirring frame dragging",
+    "nonPromotion": "fitting geopotential harmonics does not by itself test the gravitomagnetic coefficient"
+  },
+  "orbitalFormulae": {
+    "lenseThirringNode": "OmegaDot_LT=2 G J/[c^2 a^3 (1-e^2)^(3/2)]",
+    "j2Node": "OmegaDot_J2=-(3/2) n J2 (R/a)^2 cos(i)/(1-e^2)^2",
+    "meanMotion": "n=sqrt(GM/a^3)"
+  },
+  "lageosWitness": {
+    "G": 6.6743e-11,
+    "earthAngularMomentumKgM2PerS": 5.86e33,
+    "cMPerS": 299792458,
+    "earthGmM3PerS2": 398600441800000,
+    "earthRadiusM": 6378136.3,
+    "J2": 0.00108262668,
+    "semiMajorAxisM": 12270000,
+    "eccentricity": 0.0045,
+    "inclinationDeg": 109.84,
+    "lenseThirringMasPerYear": 30.67,
+    "j2MasPerYear": 450321037,
+    "absoluteClassicalToRelativisticRatio": 14683233
+  },
+  "gravityProbeB": {
+    "measuredFrameDraggingMasPerYear": -37.2,
+    "measurementSigmaMasPerYear": 7.2,
+    "grPredictionMasPerYear": -39.2,
+    "measuredGeodeticMasPerYear": -6601.8,
+    "grGeodeticPredictionMasPerYear": -6606.1,
+    "meaning": "the measured gyroscope drift is compatible with GR and separates geodetic from frame-dragging precession"
+  },
+  "timeReversal": {
+    "statement": "a rotating source selects a state with J not equal to zero, but the underlying classical equations can remain T symmetric because T maps J to -J and reverses the associated precession",
+    "notMicroscopicTViolation": true
+  },
+  "spin23": {
+    "connection": "A=(1/2) omega^{ab}J_ab+ell^{-1}e^aJ_a4",
+    "requiredDerivation": "solve the candidate field equations for a stationary rotating source and recover the GR g_0i/spin-connection coefficient, including torsion or extra-field corrections",
+    "whyNotUnique": "Cartan packaging of omega and e does not determine the action coefficients; ordinary GR and many equivalent formulations reproduce the same weak-field effect",
+    "falsifier": "a derived frame-dragging coefficient or radial dependence outside experimental bounds after the same mass-multipole and non-gravitational systematics are fitted"
+  },
+  "sources": [
+    "https://arxiv.org/abs/1105.3456",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4946852/",
+    "https://doi.org/10.1007/s10052-019-7386-z",
+    "https://earth.gsfc.nasa.gov/geo/data/slr"
+  ],
+  "decision": "Lense-Thirring is the first clean vector-sector gravity benchmark for a Spin(2,3) Cartan completion, but agreement is a necessary GR recovery test rather than evidence selecting Spin(2,3)"
+}
