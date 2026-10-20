@@ -1,0 +1,95 @@
+{
+  "schema": "spin23.spectator-connector-minimal-repair-exhaustion/1",
+  "date": "2026-10-20",
+  "startingNoGo": {
+    "basis": ["P", "I", "N", "X"],
+    "directConnector": "N--X with coefficient m",
+    "selectedCofactor": "-d*m^2",
+    "conflict": "d and m must be nonzero, so a primitive direct connector destroys the selected cofactor zero"
+  },
+  "repairAudit": [
+    {
+      "id": "junk-trivial",
+      "status": "UNSAT",
+      "reason": "degree-two junk can remove represented composite forms but cannot erase a nonzero bare finite-D matrix element; setting the finite-D connector to zero makes the physical finite metric disconnected"
+    },
+    {
+      "id": "zero-vacuum-or-kinetic-only",
+      "status": "UNSAT under same-operator physical connectedness",
+      "reason": "m(vac)=0 restores the cofactor but removes the connector from the vacuum Dirac operator; a kinetic field with no finite-D support does not connect the finite metric"
+    },
+    {
+      "id": "direct-rank-one-Schur-block",
+      "status": "UNSAT with exact relation-sheet parity",
+      "effectiveBlock": "[[e,m],[m,M_X]] on (N,X)",
+      "cofactorCondition": "e*M_X-m^2=0",
+      "algebraicCofactorStatus": "SAT",
+      "parityFailure": "the required N--JN and X--JX diagonal Majorana terms cross relation sheets and are Gamma_rel-odd"
+    },
+    {
+      "id": "one-intermediate-graded-chain",
+      "status": "SAT at categorical signed-mass-graph level",
+      "path": "N--Z--X and its J partner",
+      "extraJPairOrbitsBeyondRowB": 1,
+      "primitiveConnectorEdgeOrbits": 2,
+      "selfMassesOnNZX": 0,
+      "reason": "the odd three-vertex complementary chain has determinant zero, while both nonzero edges give actual finite-metric connectedness"
+    }
+  ],
+  "minimalCategoricalRepair": {
+    "newRoles": ["Z", "JZ"],
+    "physicalGaugeChoice": "X and Z may both be Pati-Salam gauge singlets at EFT level",
+    "primitiveEdges": ["N--JZ", "Z--JX", "JN--Z", "JZ--X"],
+    "massCoefficientChain": "N--Z--X, where a symmetric Weyl coefficient u-v is represented on the doubled Hilbert space by u--Jv and v--Ju",
+    "grading": {
+      "weylRoles": {"N": -1, "Z": -1, "X": -1},
+      "JRoles": {"JN": 1, "JZ": 1, "JX": 1},
+      "allPrimitiveEdgesKO6Odd": true
+    },
+    "relationParity": {
+      "weylRoles": {"N": -1, "Z": 1, "X": -1},
+      "JRoles": {"JN": 1, "JZ": -1, "JX": 1},
+      "allPrimitiveEdgesGammaRelEven": true
+    },
+    "spectatorPairReassignment": "X/JX exchange spectator character slots relative to the direct-edge witness. The abstract Weyl-role sign gamma(X)=-1 is retained, but the KO-6 sign attached to the occupied spectator character slot is therefore reversed, flipping the spectator row and column of the four-character intersection form.",
+    "fourCharacterIntersectionDeterminantBefore": 1,
+    "fourCharacterIntersectionDeterminantAfterRelationReassignment": 1,
+    "physicalAlgebraEmbedding": "underdetermined because isolated singlet modules and the Z correspondence are not supplied by the unreduced Pati-Salam algebra"
+  },
+  "heavyMatrixRepair": {
+    "basis": ["P", "I", "N", "Z", "X"],
+    "matrix": "[[a,x,y,0,0],[x,d,0,0,0],[y,0,0,g,0],[0,0,g,0,h],[0,0,0,h,0]]",
+    "complementaryBlock": "diag(d, chain(N,Z,X))",
+    "complementaryChain": "[[0,g,0],[g,0,h],[0,h,0]]",
+    "complementaryNullVector": "(I,N,Z,X)=(0,h,0,-g)",
+    "selectedCofactor": 0,
+    "fullDeterminant": "d*y^2*h^2",
+    "invertibilityConditions": ["d nonzero", "y nonzero", "h nonzero"],
+    "connectednessConditions": ["g nonzero", "h nonzero"],
+    "texturePreserved": true,
+    "noExactZeroMode": "the full five-state heavy matrix is invertible under the listed conditions even though its complementary block has the required one-dimensional kernel; invertibility alone gives no quantitative lower mass bound"
+  },
+  "minimality": {
+    "zeroIntermediatePairs": "UNSAT by the -d*m^2 direct-connector cofactor",
+    "oneIntermediatePair": "SAT by the N--Z--X chain",
+    "minimumExtraJPairOrbits": 1,
+    "minimumPrimitiveConnectorEdgeOrbits": 2,
+    "minimumAdditionalTermsRelativeToOneDirectEdge": 1,
+    "structuralZerosRequired": ["N--JN", "Z--JZ", "X--JX on the complementary chain"],
+    "protection": "the same KO-6/relation-sheet bipartite grading that makes the two connector edges admissible forbids the displayed self terms in the categorical graph"
+  },
+  "largerSchurPacketBoundary": {
+    "oneEliminatedSourceState": "generates a rank-one [[e,m],[m,M_X]] block and restores the cofactor algebraically",
+    "failure": "the two induced diagonal terms are relation-sheet odd in the direct Row-B assignment",
+    "minimumPossibleEscape": "change the connector to the graded one-intermediate chain, or supply a still larger functor whose full matrix realization is Gamma_rel-even and reduces to the same structural zero mode",
+    "ordinaryMatrixTuningIsInsufficient": true
+  },
+  "decision": {
+    "smallestViableCategoricalRepair": "within the declared bounded signed-mass-graph class, one additional mediator J-pair Z/JZ and the two-edge connector N--Z--X",
+    "categoricalSignedGraphStatus": "SAT",
+    "physicalPatiSalamFiniteTripleStatus": "UNDERDETERMINED",
+    "directPrimitiveJunkAndZeroVacuumRepairs": "NO-GO",
+    "programmeConsequence": "finite-metric connectedness can coexist with the cofactor zero, but only after subdividing the connector and changing the spectator grading; the missing physical-algebra functor remains the admission gate"
+  },
+  "boundary": "The minimality statement is restricted to the declared direct-connector, rank-one-block, and graded path-subdivision repair class. The SAT witness is an exact real graded mass graph and gauge-EFT singlet construction, not an ordinary module of the unreduced spectral Pati-Salam algebra. A physical promotion still requires a represented Z/JZ correspondence, junk and orientability checks, and a potential enforcing the structural zero pattern."
+}

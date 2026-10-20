@@ -1,0 +1,54 @@
+{
+  "schema": "spin23.minimal-real-even-bounded-embedding-search/1",
+  "date": "2026-10-20",
+  "bounds": {
+    "relationLabels": 8,
+    "diagonalRelationSignAssignments": 256,
+    "mediatorCopies": 3,
+    "nonzeroCouplingAlphabet": [-1,1],
+    "aggregateCouplingAssignments": 64,
+    "ordinaryFields": 5,
+    "ordinaryFieldSignAssignments": 32
+  },
+  "relationalCover": {
+    "constraints": [
+      "six retained path edges even",
+      "four J-pairs have opposite signs",
+      "both orientable dangerous Dirac anchors odd"
+    ],
+    "solutions": 2,
+    "interpretation": "one relation-sheet reflection and its overall negative"
+  },
+  "aggregateRank": {
+    "constraints": "all 2x2 minors of the 2x3 coupling matrix vanish",
+    "solutions": 16,
+    "assignments": 64,
+    "interpretation": "three nonzero columns occupy one common projective ray"
+  },
+  "joinedRelationalModel": {
+    "solutions": 32,
+    "satisfiable": true,
+    "witness": {
+      "positiveSheet": ["PN","IN","IP","SP"],
+      "negativeSheet": ["NP","NI","PI","PS"],
+      "couplingColumns": [[1,1],[-1,-1],[1,1]]
+    }
+  },
+  "ordinaryFieldDescent": {
+    "requiredEvenVertices": ["L_P H nu_P^c","S nu_P^c nu_N^c"],
+    "requiredOddVertex": "S L_P H nu_N^c",
+    "solutions": 0,
+    "satisfiable": false,
+    "minimalUnsatCoreSize": 3,
+    "solutionsAfterDroppingEachCoreConstraint": [8,8,8]
+  },
+  "theorems": {
+    "boundedRelationalModelSatisfiable": true,
+    "ordinaryFieldParityDescentSatisfiable": false,
+    "ordinaryFieldUnsatCoreInclusionMinimal": true,
+    "fullPhysicalPatiSalamEmbeddingEstablished": false,
+    "aggregateRankDerivedRatherThanImposed": false
+  },
+  "boundary": "the search joins exact label, parity, and aggregate-rank constraints but does not yet enumerate every physical Pati-Salam representation and vertex or derive the minor ideal from an intertwiner theorem",
+  "verdict": "the minimal typed real-even model is satisfiable only before ordinary-field descent; the next search layer requires the actual physical aggregate-intertwiner inventory"
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "spin23.one-loop-Schur-tangency-toy/1",
+  "date": "2026-10-20",
+  "scope": "three-real-scalar counterterm proxy, not the physical Pati-Salam beta function",
+  "fields": ["L", "P", "N"],
+  "treeQuadraticData": {
+    "mediatorMassSquared": "a != 0",
+    "portalVector": "v=(d,y)^T",
+    "endpointPacket": "G_tree=-(1/a) v v^T",
+    "protectedIdeal": "I=det(G)=c s-p^2"
+  },
+  "loopInteraction": {
+    "potentialTerm": "V_int=(1/2) P^2 (g_L L+g_N N)",
+    "loopVector": "g=(g_L,g_N)^T",
+    "oneLoopEndpointPoleSupport": "delta G=kappa g g^T",
+    "interpretation": "the P bubble gives an additive rank-one endpoint counterterm; the normalization and sign of kappa do not affect tangency"
+  },
+  "exactIdentity": {
+    "totalPacket": "G=-(1/a) v v^T+kappa g g^T",
+    "determinant": "I(G)=-(kappa/a) (d g_N-y g_L)^2",
+    "normalDerivativeAtTreeCone": "dI/dkappa|_0=-(1/a) (d g_N-y g_L)^2",
+    "tangentCondition": "d g_N-y g_L=0, equivalently g is projectively aligned with v (including zero-vector degeneracies)"
+  },
+  "enumeration": {
+    "mediatorMassSquaredValues": [1, 2, 3],
+    "couplingValues": [-2, -1, 1, 2],
+    "cases": 768,
+    "alignedCases": 144,
+    "transverseCases": 624,
+    "identityFailures": 0
+  },
+  "decision": {
+    "genericTangency": false,
+    "conditionalTangency": "yes, if the complete theory forbids the cubic loop portal or forces g=lambda v",
+    "proved": "one allowed mediator-bubble counterterm with an independent coupling ray is sufficient to leave the rank-one Schur cone at one loop",
+    "notProved": "the full physical Pati-Salam model contains this scalar vertex, or that its complete one-loop flow is transverse"
+  },
+  "nextPhysicalTest": "perform the representation and incidence census first, then compute whether every admitted loop coupling vector is absent or lies in the same aggregate intertwiner line as v",
+  "verdict": "tree-level Schur provenance is not by itself a radiative protection theorem; one-loop tangency reduces to a global alignment or exclusion condition"
+}

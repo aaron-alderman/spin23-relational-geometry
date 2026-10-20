@@ -1,0 +1,116 @@
+{
+  "schema": "spin23.nufit61-current-acquisition-audit/1",
+  "auditDate": "2026-10-20",
+  "scope": "official NuFIT and author-primary publication surfaces only",
+  "officialReleaseStatus": {
+    "resultsIndexUrl": "https://www.nu-fit.org/?q=node%2F12",
+    "latestListedRelease": "6.1",
+    "latestReleaseDataDate": "November 2025",
+    "releasePageUrl": "https://www.nu-fit.org/?q=node%2F309",
+    "releaseNotesUrl": "https://www.nu-fit.org/sites/default/files/v61.release-notes.pdf",
+    "primaryPaperUrl": "https://arxiv.org/abs/2410.05380",
+    "newerOfficialReleaseListed": false
+  },
+  "target": {
+    "constraint": "(m_nu)_ee = 0",
+    "requiredJointOscillationCoordinates": ["T12", "T13", "DMS", "DMA"],
+    "coordinateDefinitions": {
+      "T12": "sin^2(theta_12)",
+      "T13": "sin^2(theta_13)",
+      "DMS": "log10(Delta m^2_21 / eV^2)",
+      "DMA": "Delta m^2_3l / (10^-3 eV^2)"
+    },
+    "acceptablePublicArtifactClasses": [
+      "callable joint chi-square evaluator on T12/T13/DMS/DMA",
+      "machine-readable joint grid containing T12/T13/DMS/DMA",
+      "NuFIT-produced profile with (m_nu)_ee = 0 imposed"
+    ]
+  },
+  "publishedDataInventory": {
+    "releaseConfigurations": [
+      {"atmosphericVariant": "TBno", "ordering": "NO"},
+      {"atmosphericVariant": "TBno", "ordering": "IO"},
+      {"atmosphericVariant": "TByes", "ordering": "NO", "auditedLocalUrl": "https://www.nu-fit.org/sites/default/files/v61.release-TByes-NO.txt.xz"},
+      {"atmosphericVariant": "TByes", "ordering": "IO", "auditedLocalUrl": "https://www.nu-fit.org/sites/default/files/v61.release-TByes-IO.txt.xz"}
+    ],
+    "releaseConfigurationCount": 4,
+    "sectionsPerReleaseFile": 22,
+    "sectionDimensions": {"oneDimensional": 6, "twoDimensional": 15, "threeDimensional": 1},
+    "sections": [
+      ["T23", "DMA", "DCP"],
+      ["T13", "T12"],
+      ["T13", "DMS"],
+      ["T12", "DMS"],
+      ["T13", "T23"],
+      ["T13", "DMA"],
+      ["T23", "DMA"],
+      ["T13", "DCP"],
+      ["T23", "DCP"],
+      ["DMA", "DCP"],
+      ["T12", "T23"],
+      ["T12", "DCP"],
+      ["T12", "DMA"],
+      ["DMS", "T23"],
+      ["DMS", "DCP"],
+      ["DMS", "DMA"],
+      ["T13"],
+      ["T12"],
+      ["T23"],
+      ["DCP"],
+      ["DMS"],
+      ["DMA"]
+    ],
+    "onlyThreeDimensionalSection": ["T23", "DMA", "DCP"],
+    "maximumOverlapWithRequiredCoordinates": 2,
+    "containsRequiredFourCoordinateJointProfile": false,
+    "artifactKind": "profile projections with undisplayed parameters minimized",
+    "callableJointEvaluator": false,
+    "directElectronZeroProfile": false
+  },
+  "officialAcquisitionChecks": [
+    {
+      "surface": "official results index",
+      "url": "https://www.nu-fit.org/?q=node%2F12",
+      "query": "release newer than 6.1",
+      "found": false,
+      "positiveObservation": "6.1 is labelled Latest results"
+    },
+    {
+      "surface": "official 6.1 release page and Available data files section",
+      "url": "https://www.nu-fit.org/?q=node%2F309",
+      "query": "callable likelihood evaluator or joint four-coordinate grid",
+      "found": false,
+      "positiveObservation": "the page advertises one-, two- and three-dimensional Delta chi-square projections"
+    },
+    {
+      "surface": "official 6.1 release notes",
+      "url": "https://www.nu-fit.org/sites/default/files/v61.release-notes.pdf",
+      "query": "section containing T12, T13, DMS and DMA",
+      "found": false,
+      "positiveObservation": "the notes specify four compressed files, each divided into the same 22 projection sections"
+    },
+    {
+      "surface": "official NuFIT site",
+      "url": "https://www.nu-fit.org/",
+      "query": "electron-zero or texture-zero constrained profile",
+      "found": false,
+      "positiveObservation": "no NuFIT-produced constrained profile was located"
+    },
+    {
+      "surface": "author-primary NuFIT 6.0 paper record",
+      "url": "https://arxiv.org/abs/2410.05380",
+      "query": "public evaluator, analysis source release, or ancillary multidimensional likelihood",
+      "found": false,
+      "positiveObservation": "the paper describes one- and two-dimensional confidence projections and points to the NuFIT webpage for additional figures and tables"
+    }
+  ],
+  "decision": {
+    "usableArtifactFound": false,
+    "constrainedProfileRun": false,
+    "blockerRemains": true,
+    "reason": "No official public artifact supplies joint chi-square dependence on all four oscillation coordinates entering the electron-zero condition, and no direct NuFIT electron-zero profile is published.",
+    "epistemicBoundary": "This is an audit of the official public acquisition surface, not evidence that the NuFIT collaboration lacks an internal joint likelihood.",
+    "reopenTrigger": "Acquire a callable NuFIT joint evaluator or grid on T12/T13/DMS/DMA, or a NuFIT-produced profile imposing (m_nu)_ee = 0."
+  },
+  "priorIdentifiabilityEvidence": "evidence/data/spin23-nufit61-texture-profile-identifiability.json"
+}

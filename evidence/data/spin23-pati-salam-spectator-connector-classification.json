@@ -1,0 +1,139 @@
+{
+  "schema": "spin23.pati-salam-spectator-connector-classification/1",
+  "date": "2026-10-20",
+  "question": "What is the smallest Pati-Salam spectator X/JX and connector compatible with the sourced null right carrier, J, grading, connectedness, and no extra light charged matter?",
+  "conventions": {
+    "group": "SU(2)_R x SU(2)_L x SU(4)",
+    "nullRightCarrier": "R_N=(2,1,4)",
+    "JNullRightCarrier": "JR_N=(2,1,conjugate(4))",
+    "sourcedScalars": ["Delta=(2,1,4)", "H_1=(2,2,1)", "H_15=(2,2,15) conditional", "Sigma=(1,1,1+15)"],
+    "relationWitness": {"JR_N": "IP", "X": "SP", "R_N": "PI", "JX": "PS"}
+  },
+  "exactProducts": [
+    {
+      "connectorScalar": "Delta=(2,1,4)",
+      "product": "(2,1,conjugate(4)) tensor (2,1,4)",
+      "decomposition": ["(1,1,1)", "(3,1,1)", "(1,1,15)", "(3,1,15)"],
+      "dimensions": [1, 3, 15, 45],
+      "dimensionCheck": "1+3+15+45=64=8*8"
+    },
+    {
+      "connectorScalar": "H_1=(2,2,1)",
+      "product": "(2,1,conjugate(4)) tensor (2,2,1)",
+      "decompositionForConjugateX": ["(1,2,4)", "(3,2,4)"],
+      "dimensions": [8, 24],
+      "dimensionCheck": "8+24=32=8*4"
+    },
+    {
+      "connectorScalar": "Sigma_1=(1,1,1) or a direct mass",
+      "smallestConjugateX": "(2,1,4)",
+      "dimension": 8
+    },
+    {
+      "connectorScalar": "H_15=(2,2,15) conditional",
+      "smallestConjugateX": "(1,2,4)",
+      "smallestDimension": 8,
+      "su4Identity": "conjugate(4) tensor 15 contains conjugate(4) once"
+    }
+  ],
+  "smallestCandidates": [
+    {
+      "rank": 1,
+      "X": "(1,1,1)",
+      "dimension": 1,
+      "connector": "JR_N Delta X plus its J partner R_N conjugate(Delta) JX",
+      "connectorMultiplicity": 1,
+      "nontrivialChargedComponents": 0,
+      "JCompatible": true,
+      "KO6GradingCompatible": true,
+      "relationParityEven": true,
+      "gaugeEFTStatus": "unique smallest charged-matter-free candidate",
+      "unreducedFiniteAlgebraStatus": "not an isolated module because the unreduced Pati-Salam algebra has no one-dimensional complex character"
+    },
+    {
+      "rank": 2,
+      "X": "(3,1,1)",
+      "dimension": 3,
+      "connector": "JR_N Delta X",
+      "connectorMultiplicity": 1,
+      "chargedComponentsAfterBreaking": ["Q=+1", "Q=0", "Q=-1"],
+      "heavyMassPossible": "yes because the gauge representation is real",
+      "status": "adds charged matter and is not in the sourced fermion inventory"
+    },
+    {
+      "rank": 3,
+      "X": "(1,2,4)",
+      "dimension": 8,
+      "connector": "JR_N H_1 X, also available through the smallest H_15 channel",
+      "connectorMultiplicity": 1,
+      "heavyMassPossible": "yes with its J-conjugate vectorlike partner",
+      "status": "adds weak and colour charged matter and is not an independent sourced heavy copy"
+    },
+    {
+      "rank": 4,
+      "X": "(2,1,4)",
+      "dimension": 8,
+      "connector": "direct or Sigma_1-assisted",
+      "connectorMultiplicity": 1,
+      "heavyMassPossible": "yes with its J-conjugate vectorlike partner",
+      "status": "adds a vectorlike right multiplet and reopens the mediator census"
+    },
+    {
+      "rank": 5,
+      "X": "(1,1,15)",
+      "dimension": 15,
+      "connector": "JR_N Delta X",
+      "connectorMultiplicity": 1,
+      "heavyMassPossible": "yes because the gauge representation is real",
+      "status": "adds colour-charged adjoint components"
+    }
+  ],
+  "JAndGradings": {
+    "connectorOrbit": ["JR_N--X", "R_N--JX"],
+    "relationEdges": ["IP--SP", "PI--PS"],
+    "KO6Chiralities": {"IP": 1, "SP": -1, "PI": -1, "PS": 1},
+    "GammaRelSigns": {"IP": 1, "SP": 1, "PI": -1, "PS": -1},
+    "conclusion": "the connector and its J partner are chirality odd and relation-sheet even"
+  },
+  "textureObstruction": {
+    "originalHeavyMatrix": "[[a,x,y],[x,d,0],[y,0,0]]",
+    "extendedHeavyMatrixBasis": ["P", "I", "N", "X"],
+    "extendedHeavyMatrix": "[[a,x,y,0],[x,d,0,0],[y,0,0,m],[0,0,m,M_X]]",
+    "selectedCofactorBeforeConnector": 0,
+    "selectedCofactorAfterConnector": "-d*m^2",
+    "fullDeterminant": "-a*d*m^2 + x^2*m^2 - d*M_X*y^2",
+    "inverseSelectedEntry": "(-d*m^2)/det(M_extended)",
+    "genericConclusion": "for d nonzero, connector m nonzero, and invertible full heavy matrix, the protected selected inverse entry is nonzero",
+    "independentOfSpectatorRepresentation": true,
+    "minimalUnsatCore": ["d nonzero for the complementary image mass", "m nonzero for physical finite-metric connectedness", "selected cofactor remains zero"]
+  },
+  "branchDecisions": [
+    {
+      "branch": "Pati-Salam gauge EFT representation and J/grading only",
+      "status": "SAT",
+      "witness": "X=(1,1,1) with Delta connector"
+    },
+    {
+      "branch": "isolated singlet as an ordinary module of the unchanged unreduced finite algebra",
+      "status": "UNSAT",
+      "reason": "there is no one-dimensional complex character of H_R direct-sum H_L direct-sum M_4(C)"
+    },
+    {
+      "branch": "nonzero direct physical R_N--X mass connector preserving the selected seesaw cofactor zero",
+      "status": "UNSAT",
+      "reason": "the selected cofactor is -d*m^2"
+    },
+    {
+      "branch": "categorical, junk-trivial, zero-vacuum, or larger Schur-correlated connector",
+      "status": "UNDERDETERMINED",
+      "reason": "such a connector is not the direct primitive mass edge classified here and requires new provenance or matching data"
+    }
+  ],
+  "decision": {
+    "smallestGaugeCandidate": "X=(1,1,1) with the sourced Delta connector, unique at dimension one",
+    "directPhysicalRowBStatus": "NO-GO",
+    "why": "the singlet has no ordinary unreduced finite-algebra module, and any nonzero primitive connector to the null heavy state destroys the selected cofactor zero irrespective of X representation",
+    "remainingEscape": "reinterpret the connector as a non-masslike relation/correspondence edge, prove it junk-trivial or zero in the physical vacuum while retaining metric connectedness by another route, or embed it in a larger complete Schur packet whose contact terms restore the cofactor identity"
+  },
+  "boundary": "The representation list is exhaustive only for the smallest channels generated by the locally sourced Delta, H_1, conditional H_15, Sigma_1, and direct mass. The cofactor no-go applies to a primitive nonzero connector entering the heavy-neutrino mass matrix; it does not exclude a formally defined categorical connector with no such matrix element."
+}

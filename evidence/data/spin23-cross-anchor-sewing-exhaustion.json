@@ -1,0 +1,88 @@
+{
+  "schema": "spin23.cross-anchor-sewing-exhaustion/1",
+  "date": "2026-10-20",
+  "question": "What is the smallest cross-anchor sewing that reduces the two typed local-intertwiner scalars to one while preserving J, grading, Pati-Salam covariance and the absence of physical mixed I-N support?",
+  "boundedModel": {
+    "diracSector": "V_D=C^2 with local algebra M_2(C)_D",
+    "majoranaSector": "V_M=C^2 with local algebra M_2(C)_M",
+    "unsewnCarrier": "V_D direct-sum V_M",
+    "unsewnCarrierCommutant": "C direct-sum C",
+    "relationSheetAssignment": "the primitive D sector and primitive M sector of claim 1127 occupy opposite Gamma_rel sheets; J supplies their conjugate partner sectors",
+    "patiSalamAssumption": "a candidate sewing is a Pati-Salam scalar on relation multiplicity; if its two endpoint gauge irreps are inequivalent, Schur's lemma sets it to zero"
+  },
+  "ordinaryCarrierSewing": {
+    "candidate": "a linear map S:V_D->V_M adjoined with its reverse as an off-diagonal carrier operator T_S",
+    "rankClasses": [0, 1, 2],
+    "classification": [
+      {
+        "rank": 0,
+        "aggregateCommutantComplexDimension": 2,
+        "mixedSupportComposable": false,
+        "verdict": "safe but does not sew"
+      },
+      {
+        "rank": 1,
+        "aggregateCommutantComplexDimension": 1,
+        "generatedAssociativeAlgebraComplexDimension": 16,
+        "mixedSupportComposable": true,
+        "verdict": "equates scalars but generates all of M_4(C)"
+      },
+      {
+        "rank": 2,
+        "aggregateCommutantComplexDimension": 1,
+        "generatedAssociativeAlgebraComplexDimension": 16,
+        "mixedSupportComposable": true,
+        "verdict": "equates scalars but generates all of M_4(C)"
+      }
+    ],
+    "generalTheorem": "Because the linear span of M_2 S M_2 equals M_2 for every nonzero 2x2 matrix S, one nonzero carrier sewing plus the two full local matrix algebras generates both cross blocks and hence M_4(C).",
+    "relationParity": "Every direct D-to-M carrier block is Gamma_rel-odd in the actual primitive-sector assignment. Its J-completed partner is also odd. Therefore a nonzero direct sewing cannot belong to the Gamma_rel-even allowed operator algebra.",
+    "koGrading": "Homogeneous chirality-even and chirality-odd nonzero S both exist, so KO grading alone does not select a safe nonzero carrier sewing.",
+    "patiSalamCovariance": "When the relation sectors carry equivalent Pati-Salam representations, S tensor I_gauge is covariant and the M_4 closure no-go remains. When they are inequivalent, the scalar Hom vanishes and no sewing occurs.",
+    "boundedEnumeration": {
+      "entryAlphabet": [-1, 0, 1],
+      "nonzeroMatrices": 80,
+      "rankOne": 32,
+      "rankTwo": 48,
+      "chiralityEven": 8,
+      "chiralityOdd": 8,
+      "mixedChirality": 64,
+      "allNonzeroReduceCommutantToOne": true,
+      "allNonzeroGenerateM4": true
+    }
+  },
+  "canonicalJunkQualification": {
+    "model": "Ignore the actual relation-sheet parity and restrict a carrier sewing to the two P-lifts, producing the four-vertex chain I_D-P_D-P_M-N_M with diagonal algebra C^4.",
+    "inducedMixedSupport": "The I_D-N_M endpoint matrix is a length-three composite and is algebraically composable.",
+    "degreeThreeCalculation": "The represented degree-three space has dimension 8 and is entirely junk, so Omega_D^3=0 and the length-three endpoint vanishes in this canonical toy quotient.",
+    "boundary": "This junk rescue does not make the physical sewing viable: the primitive P_D-P_M edge is Gamma_rel-odd on the actual KO-6 labels, and the matrix-valued physical junk quotient has not been computed for a regraded or stabilized carrier."
+  },
+  "coefficientLineSewing": {
+    "construction": "Introduce one common coefficient line L and nonzero embeddings i_D:L->L_D and i_M:L->L_M. Equivalently impose y=kappa d with fixed nonzero kappa, without adding a morphism V_D->V_M.",
+    "aggregateCoefficientSpaceComplexDimension": 1,
+    "compatibleCoefficientEndomorphismComplexDimension": 1,
+    "underlyingCarrierCommutantComplexDimension": 2,
+    "packetConsequence": "Every mediator copy has (d_i,y_i)=lambda_i(1,kappa), so all columns lie on one projective Schur ray.",
+    "jCompatibility": "On the J-conjugate sheet use the conjugate embeddings; kappa_- equals conjugate(kappa_+).",
+    "gradingCompatibility": "The equalizer is degree zero and relation-sheet even because it relates coefficient functors rather than carrier states.",
+    "patiSalamCovariance": "L, L_D and L_M are scalar coefficient lines multiplying already-fixed Pati-Salam Clebsch intertwiners.",
+    "mixedSupport": "No cross-sector one-arrow is added, so X_D X_M remains zero and I-N remains noncomposable; all previously computed junk spaces are unchanged.",
+    "classification": "Every nonzero sewing of two one-dimensional coefficient lines is isomorphic to this construction. With fixed metrics kappa retains a normalized phase; J pairs it with its complex conjugate.",
+    "status": "formally viable and minimal, but it is a single-common-source or single-spurion axiom, not derived from the current Spin(2,3), Jordan or Pati-Salam carrier"
+  },
+  "minimalityTheorem": {
+    "statement": "There is no nonzero ordinary carrier-linear sewing in the bounded two-sector model that both reduces the commutant to one and preserves noncomposability. One nonzero coefficient-line equalizer is the smallest non-carrier enlargement that does both.",
+    "whyMinimal": "The unsewn compatible coefficient endomorphisms form C^2. Reducing them to the diagonal C requires one independent nonzero compatibility equation, and the line equalizer supplies exactly one without changing carrier support."
+  },
+  "physicalReopeningDatum": {
+    "required": "Source the common coefficient line as a physical spurion, correspondence-module map, boundary datum or universal matching object, and compute its embeddings into the actual selected Dirac and Majorana Pati-Salam Hom lines.",
+    "tests": [
+      "the embeddings and their J partners are nonzero and normalized",
+      "the family-anchor action realizes them without a Gamma_rel-odd carrier edge",
+      "the spectator connector and physical junk quotient do not create an independent mixed I-N primitive",
+      "loops preserve the one-dimensional coefficient equalizer"
+    ],
+    "falsifier": "two independent source coefficient lines or a required Gamma_rel-odd carrier sewing"
+  },
+  "verdict": "The smallest viable sewing is not an operator between the two relation carriers. It is a one-dimensional common-source equalizer of their coefficient lines. This formally derives the common Schur ray while retaining typed noncomposability, but its physical source is still missing."
+}

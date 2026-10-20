@@ -230,6 +230,12 @@ one-loop tangency test becomes decisive. The formal matching category and
 bounded real-even embedding search then determine whether the mechanism is a
 coherent Spin(2,3) middle rather than a successful local analogy.
 
+## Execution update
+
+Priorities 1--7 have now been executed to their current-input boundaries in
+claims 1512--1519. Their integrated result, precise missing rows, and external
+stop are recorded in [claim 1520](1520_the_next_investigation_roadmap_is_internally_executed_and_converges_on_two_carrier_rows_plus_loop_Ward_data.md).
+
 ## Reproduction
 
 ~~~powershell

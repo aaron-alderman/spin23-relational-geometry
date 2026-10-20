@@ -1,0 +1,93 @@
+{
+  "schema": "spin23.common-coefficient-line-physical-source-audit/1",
+  "date": "2026-10-20",
+  "question": "Can the sourced minimal Pati-Salam/Jordan scalar content physically realize the one common coefficient line required by claim 1521?",
+  "portalLines": {
+    "selectedDirac": {
+      "primitive": "L_P H nu_P^c",
+      "patiSalamScalarCarriers": ["H_1=(2_R,2_L,1)", "H_15=(2_R,2_L,15), when present"],
+      "lowEnergyScalarCarrier": "electroweak Higgs doublet",
+      "familyChargeOfScalar": 0,
+      "canonicalOperatorDimension": 4,
+      "sourceCoefficient": "selected entry of k^nu (or its light-Higgs projected combination)",
+      "finiteSupportType": "Dirac particle-particle arrow"
+    },
+    "selectedNullMajorana": {
+      "primitive": "S_-3 nu_P^c nu_N^c after family breaking",
+      "patiSalamScalarCarriers": ["H_M in (3_R,1_L,10)", "H_M in (1_R,1_L,6)"],
+      "sourcedNonlinearOrigin": "H_M=Delta Delta with Delta=(2_R,1_L,4), generation blind in the published model",
+      "lowEnergyScalarCarrier": "electroweak singlet S_-3 in the proposed family extension",
+      "familyChargeOfScalar": -3,
+      "canonicalOperatorDimension": 4,
+      "sourceCoefficient": "selected-null entry of k^nu_R or lambda_M",
+      "finiteSupportType": "particle-conjugate Majorana defect"
+    }
+  },
+  "gaugeRepresentationNoGo": {
+    "diracScalarIrreps": [[2, 2, 1], [2, 2, 15]],
+    "majoranaScalarIrreps": [[3, 1, 10], [1, 1, 6]],
+    "fundamentalMajoranaDressingIrrep": [2, 1, 4],
+    "intersection": [],
+    "reason": "Every Dirac scalar carrier is an SU(2)_L doublet, while every Majorana scalar carrier and Delta is an SU(2)_L singlet.",
+    "lowEnergyIntersection": [],
+    "lowEnergyReason": "The selected Dirac mass uses an electroweak doublet; the selected-null Majorana mass uses an electroweak singlet."
+  },
+  "familyChargeNoGo": {
+    "selectedDiracBareOperatorCharge": 0,
+    "selectedNullMajoranaBilinearCharge": 3,
+    "requiredDiracScalarCharge": 0,
+    "requiredMajoranaScalarCharge": -3,
+    "conclusion": "One nonzero scalar in an unbroken U(1)_X representation cannot simultaneously have charge 0 and -3.",
+    "jordanBoundary": "The population-normal Jordan faces Delta_0 and Delta_-3 are two Majorana-sector copies; neither is the Dirac bidoublet, and calling them one Jordan carrier does not make them one scalar field."
+  },
+  "jAndCpAudit": {
+    "jAction": "J sends the Dirac arrow to its conjugate Dirac arrow and the Majorana defect to its conjugate defect; it does not exchange their supports.",
+    "parameterSpaceBeforeCp": "C k_D direct-sum C k_M",
+    "complexDimensionBeforeCp": 2,
+    "parameterSpaceWithExactCp": "R k_D direct-sum R k_M",
+    "realDimensionWithExactCp": 2,
+    "conclusion": "Reality supplies Hermitian-conjugate terms and CP can make both coefficients real, but neither condition imposes k_M=kappa k_D."
+  },
+  "operatorDimensionAudit": {
+    "fieldDimensions": {"fermion": 1.5, "scalar": 1},
+    "selectedDiracDimension": 4,
+    "selectedNullMajoranaDimension": 4,
+    "sharedDimensionlessCouplingAllowed": true,
+    "sharedCouplingEnforcedByPowerCounting": false,
+    "chargedScalarInSelectedDirac": "S_-3 L_P H nu_P^c has dimension 5 and nonzero family charge, so it is not the selected Dirac invariant.",
+    "chargedScalarInCrossDirac": "S_-3 L_P H nu_N^c/Lambda is dimension 5 and is the dangerous cross-Dirac operator, not the safe selected Dirac portal.",
+    "neutralModulus": "A new neutral dimension-one scalar chi can multiply both already-invariant operators only at dimension 5, but the two Wilson coefficients remain independent."
+  },
+  "candidateScalarAudit": [
+    {"candidate": "H_1 or H_15", "sourced": true, "feedsSelectedDirac": true, "feedsSelectedNullMajorana": false, "reason": "wrong SU(2)_L and Majorana representation"},
+    {"candidate": "Delta=(2_R,1_L,4)", "sourced": true, "feedsSelectedDirac": false, "feedsSelectedNullMajorana": true, "reason": "Majorana dressing factor, not a bidoublet and generation blind"},
+    {"candidate": "H_M=Delta Delta", "sourced": true, "feedsSelectedDirac": false, "feedsSelectedNullMajorana": true, "reason": "Majorana scalar irreps have SU(2)_L dimension one"},
+    {"candidate": "Delta_0 and Delta_-3 Jordan faces", "sourced": false, "feedsSelectedDirac": false, "feedsSelectedNullMajorana": true, "reason": "conditional two-copy Majorana alphabet, not one field and not the Dirac Higgs"},
+    {"candidate": "S_-3", "sourced": false, "feedsSelectedDirac": false, "feedsSelectedNullMajorana": true, "reason": "family-charged singlet; insertion into a Dirac operator gives the dimension-five cross channel"},
+    {"candidate": "new neutral scalar chi", "sourced": false, "feedsSelectedDirac": true, "feedsSelectedNullMajorana": true, "reason": "can occur in both higher-dimensional monomials but does not relate their two Wilson coefficients"}
+  ],
+  "oneFieldVersusOneCoupling": {
+    "oneFieldStatement": "The occurrence of one scalar chi in two independent invariant monomials produces lambda_D chi O_D + lambda_M chi O_M, with coefficient space C^2.",
+    "oneCouplingStatement": "A common coefficient line is the stronger assertion (k_D,k_M)=lambda(c_D,c_M) with fixed embeddings c_D,c_M.",
+    "vevBoundary": "Even a shared numerical lambda does not by itself fix the mass ray unless the normalized embeddings, including v_H and v_S or their matching factors, are fixed: d=lambda c_D v_H and y=lambda c_M v_S.",
+    "counterexample": "Two packets can share lambda but use embedding vectors (1,1) and (1,2), whose minor is nonzero."
+  },
+  "minimalNewSpurionTheorem": {
+    "ordinaryScalarResult": "No scalar in the sourced minimal Pati-Salam/Jordan inventory feeds both portal lines, and adding one neutral scalar field still leaves two independent invariant couplings.",
+    "minimalDatum": "One dimension-zero, gauge-neutral, family-neutral portal-label spurion/coupling object Lambda with fixed nonzero embeddings into the Dirac and Majorana invariant operator lines.",
+    "coefficientForm": "(k_D,k_M)=Lambda(c_D,c_M)",
+    "jCompatibility": "The conjugate action uses conjugate(Lambda), conjugate(c_D), conjugate(c_M).",
+    "cpCompatibility": "Exact CP permits a real basis for Lambda and the embeddings, but does not determine their ratio.",
+    "whatWouldEnforceIt": "A new operator-label exchange/duality, correspondence-module universal map, or ultraviolet Ward identity with exactly one invariant contraction.",
+    "notEnough": ["one scalar field appearing twice", "one common VEV", "J reality", "CP reality", "equal canonical dimension", "the H_2(R) Jordan organization of the Majorana copies"]
+  },
+  "physicalStatus": {
+    "sourcedCommonScalar": false,
+    "sourcedCommonCoupling": false,
+    "formalCommonCoefficientLine": true,
+    "minimalNewFieldCountAlone": "no finite answer: a field without a new relation still permits two couplings",
+    "minimalNewStructuralDatumCount": 1,
+    "nextTest": "Construct a physical correspondence or Ward identity giving one invariant contraction into both portal lines, then test its normalized VEV embeddings and one-loop tangency."
+  },
+  "verdict": "The minimal sourced Pati-Salam/Jordan scalar content cannot realize the claim-1521 common coefficient line. The smallest viable addition is not one ordinary scalar but one new dimension-zero portal-label coupling object or an equivalent symmetry/Ward identity enforcing a single invariant contraction."
+}

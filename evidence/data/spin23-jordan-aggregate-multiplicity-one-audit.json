@@ -1,0 +1,85 @@
+{
+  "schema": "spin23.jordan-aggregate-multiplicity-one-audit/1",
+  "date": "2026-10-20",
+  "question": "Do the presently available Jordan and Spin(2,3) representation data force the physical aggregate intertwiner to have multiplicity one or force all Schur packets onto one projective ray?",
+  "inputBoundary": {
+    "physicalCensus": "Claim 1512: each fixed Pati-Salam bidoublet carrier has gauge Clebsch multiplicity one, but the published carrier is generation blind and leaves End(C^3). The bounded masked minimal tree census has one packet only by absence.",
+    "jordanCarrier": "Claims 1109 and 1126-1127: each local relation wheel is H_2(R)/Spin(2,3); two untyped overlapping wheels generate H_3(R)/Sp(6,R); opposite-anchor typing prevents that mixed closure.",
+    "nullCone": "Claim 1513: three nonaligned packets can lie on a complex or real-indefinite quadratic null cone, but cone invariance does not force nullness."
+  },
+  "factorizationTheorem": {
+    "statement": "If an algebra or group A acts on U and U' but trivially on family multiplicity F, then Hom_A(U tensor F,U' tensor F) is Hom_A(U,U') tensor End(F).",
+    "relevantDimensions": {
+      "internalGaugeHom": 1,
+      "familyDimension": 3,
+      "familyEndomorphismComplexDimension": 9,
+      "combinedHomComplexDimension": 9
+    },
+    "consequence": "Adding a Jordan/Spin(2,3) action on an external response factor, while it remains trivial on F, cannot turn the sourced Pati-Salam gauge intertwiner into a unique physical family intertwiner."
+  },
+  "familyCentralizerLadder": [
+    {
+      "data": "generation-blind action only",
+      "generators": "none on F=C^3",
+      "complexDimension": 9,
+      "meaning": "all family endomorphisms survive"
+    },
+    {
+      "data": "rank-one selected projector P only",
+      "generators": "P=diag(1,0,0)",
+      "complexDimension": 5,
+      "meaning": "C direct-sum M_2(C); choosing the selected line still leaves unrestricted complement rotations"
+    },
+    {
+      "data": "three family idempotents P,I,N",
+      "generators": "diag(1,0,0), diag(0,1,0), diag(0,0,1)",
+      "complexDimension": 3,
+      "meaning": "three independent diagonal scalars remain"
+    },
+    {
+      "data": "one local P-I Jordan wheel with N spectator",
+      "generators": "P,I,N and X_PI=E_PI+E_IP",
+      "complexDimension": 2,
+      "meaning": "one scalar on the connected P-I block and one on N"
+    },
+    {
+      "data": "both untyped overlapping P-I and P-N wheels",
+      "generators": "P,I,N,X_PI,X_PN",
+      "complexDimension": 1,
+      "meaning": "multiplicity one is reached, but the mixed Jordan product generates X_IN and the closure is H_3(R)/Sp(6,R), not the protected pair of local Spin(2,3) wheels"
+    }
+  ],
+  "typedAnchorTheorem": {
+    "model": "Two independently typed irreducible H_2 relation sectors on C^2_D direct-sum C^2_M, with sector projectors retained so cross-sector composition is forbidden.",
+    "complexCentralizerDimension": 2,
+    "centralizer": "C on the Dirac wheel direct-sum C on the Majorana wheel",
+    "consequence": "Opposite-anchor typing protects the null mask but does not equate the two sector normalizations. A cross-anchor sewing law is needed to reduce the two scalars to one common scalar.",
+    "unsafeAlternative": "Forgetting the type projectors and joining the two relations on one P/I/N carrier reduces the commutant to C only by restoring the mixed I-N relation and the Sp(6) envelope."
+  },
+  "rankMismatchNoGo": {
+    "statement": "No invertible raw-family exchange can conjugate the rank-one selected projector P to the rank-two complement projector Q.",
+    "proof": "Similarity preserves trace and rank, but tr(P)=rank(P)=1 whereas tr(Q)=rank(Q)=2.",
+    "consequence": "The exchange real structure of the two-face H_2 carrier cannot act directly on the physical 1+2 family split; it must live on equal-dimensional scalar copies, a stabilized module, or a response carrier."
+  },
+  "threePacketNullVectorTest": {
+    "conditionalRepresentation": "If the three packet minors are explicitly identified with the standard vector representation of SO(1,2), their quadratic form is the claim-1513 null form.",
+    "fixedSubspaceDimension": 0,
+    "unbrokenSymmetryConsequence": "A fixed coupling vector invariant under the full connected SO(1,2) must vanish, which returns all minors to zero and hence the common ray.",
+    "brokenOrbitConsequence": "A nonzero null vector such as (5,4,3) lies on a symmetry-preserved orbit but is not itself invariant. Using it requires a null spurion or vacuum and breaks to its stabilizer.",
+    "currentStatus": "The corpus contains no physical equivariant map from the aggregate packet-minor space to this Lorentz vector representation and no action or orbit constraint forcing a null vacuum."
+  },
+  "aggregateVerdict": {
+    "minimalMaskedTree": "Multiplicity-one alignment is unnecessary because claim 1512 has only one retained packet; this is an absence theorem, not a representation theorem.",
+    "publishedPhysicalCarrier": "No multiplicity-one theorem: the exact relevant Hom space retains complex dimension 9.",
+    "localJordanRepair": "Insufficient: one wheel leaves centralizer dimension 2, while typed two-wheel separation leaves two sector scalars.",
+    "untypedGlobalRepair": "Achieves scalar commutant only at the cost of H_3(R)/Sp(6,R) closure and the mixed relation the mask was designed to exclude.",
+    "nullConeRepair": "Conditional only: full unbroken SO(1,2) would force zero minors, while a nonzero null orbit requires new spurion/dynamical data."
+  },
+  "exactReopeningDatum": {
+    "primary": "A represented cross-anchor sewing morphism or natural transformation that identifies the Dirac-wheel and Majorana-wheel scalar intertwiners while keeping the mixed I-N composite in junk or outside the composable Hom set.",
+    "requiredCertificate": "On the complete physical real-even Pati-Salam module, compute dim Hom_rel(aggregate source,aggregate target)=1, show all admitted packet columns factor through its generator, and verify that X_PI circle X_PN does not become a physical primitive I-N arrow.",
+    "nullOrbitAlternative": "Provide an explicit equivariant identification of the three physical packet minors with an SO(1,2) vector plus a sourced invariant constraint or potential whose admissible vacuum forces q=0; state whether the vacuum is zero/common-ray or nonzero/symmetry-breaking.",
+    "falsifier": "Two independent typed sector scalars, two independent physical Hom generators, or one surviving mixed I-N primitive arrow."
+  },
+  "verdict": "The available Jordan/Spin(2,3) data do not force aggregate multiplicity one. The only current finite-matrix route to a scalar commutant joins both wheels into the already-excluded H_3(R)/Sp(6,R) envelope; the protected typed construction retains a two-scalar ambiguity."
+}

@@ -1,0 +1,133 @@
+{
+  "schema": "spin23.minimal-pati-salam-aggregate-intertwiner-census/1",
+  "date": "2026-10-20",
+  "question": "Does the actually sourced minimal spectral Pati-Salam carrier force the single global Schur ray required by claims 1509-1511?",
+  "scope": {
+    "included": [
+      "the published generation-blind spectral Pati-Salam gauge carriers",
+      "the exhaustive one-heavy-mediator renormalizable tree topologies for S L_P H nu_N^c",
+      "the programme's explicitly declared rank-one selected-family line and central Dirac P-N support mask"
+    ],
+    "excluded": [
+      "new vectorlike fermion copies",
+      "non-spectral elementary charged bidoublets",
+      "two-or-more-mediator trees",
+      "loops and momentum-dependent form factors",
+      "a complete KO-6 family-extended physical spectral triple, which has not been constructed"
+    ]
+  },
+  "sourcedCore": {
+    "primarySource": "Chamseddine-Connes-van Suijlekom, arXiv:1304.8050",
+    "groupConvention": "SU(2)_R x SU(2)_L x SU(4)",
+    "fermionsPerGeneration": [
+      "R=(2,1,4)",
+      "L=(1,2,4)"
+    ],
+    "bidoubletChannels": [
+      {
+        "carrier": "H_1=(2,2,1)",
+        "status": "sourced fundamental Dirac bidoublet",
+        "gaugeIntertwinerMultiplicityForLHR": 1
+      },
+      {
+        "carrier": "H_15=(2,2,15)",
+        "status": "possible additional fundamental or composite channel depending on order-one assumptions",
+        "gaugeIntertwinerMultiplicityForLHR": 1
+      }
+    ],
+    "extraHeavyVectorlikeL": false,
+    "familyAction": "generation blind: pi(a)=pi_internal(a) tensor I_3",
+    "familyCoefficientSpacePerAllowedInternalArrow": "End(C^3)",
+    "familyCoefficientComplexDimension": 9,
+    "derivedSelectedNullSupportMask": false,
+    "derivedAggregateCommonRay": false
+  },
+  "representationFacts": [
+    {
+      "identity": "2 tensor 2 = 1 direct-sum 3",
+      "use": "L tensor H contains the R weak carrier with singlet multiplicity one"
+    },
+    {
+      "identity": "conjugate(4) tensor 4 = 1 direct-sum 15",
+      "use": "an L-R scalar bridge has gauge carrier (2,2,1) or (2,2,15)"
+    },
+    {
+      "identity": "first-order tests factor as internal test tensor K for K in End(C^3)",
+      "use": "gauge multiplicity one does not reduce the published generation-blind family coefficient space"
+    }
+  ],
+  "topologyCensus": [
+    {
+      "id": "right-fermion-selected-neutrino",
+      "externalPairing": "(L_P H)|(nu_N^c S)",
+      "mediatorCarrier": "R=(2,1,4)",
+      "sourcedCarrierStatus": "present",
+      "minimalPropagatingStatus": "the selected right-neutrino state already in R",
+      "maskedCompletionStatus": "retained-correlated",
+      "independentPrimitiveLeakagePacket": false,
+      "aggregateSchurColumn": true,
+      "reason": "eliminating the one-dimensional selected block produces one complete rank-one Schur packet; multiple H_1/H_15 contributions only enter its effective d coupling and do not create another eliminated mediator column"
+    },
+    {
+      "id": "left-fermion-vectorlike-copy",
+      "externalPairing": "(L_P S)|(nu_N^c H)",
+      "mediatorCarrier": "L=(1,2,4)",
+      "sourcedCarrierStatus": "present only as the ordinary light chiral multiplet",
+      "minimalPropagatingStatus": "absent: no independent heavy vectorlike L copy",
+      "maskedCompletionStatus": "absent",
+      "independentPrimitiveLeakagePacket": false,
+      "aggregateSchurColumn": false,
+      "reason": "a light chiral carrier is not an integrable heavy mediator"
+    },
+    {
+      "id": "scalar-family-charged-bidoublet",
+      "externalPairing": "(L_P nu_N^c)|(H S)",
+      "mediatorCarrier": "Phi=(2,2,1) or (2,2,15)",
+      "sourcedCarrierStatus": "gauge carriers exist, but the charge-three family face is not supplied by the generation-blind source",
+      "minimalPropagatingStatus": "conditional before a family calculus is chosen",
+      "maskedCompletionStatus": "absent when the central Dirac P-N mask is imposed",
+      "independentPrimitiveLeakagePacket": false,
+      "aggregateSchurColumn": false,
+      "reason": "the required Yukawa portal is the represented cross one-form p_P[D,p_N], equal on the dangerous block to D_(L_P,R_N), so the central mask kills both the singlet and adjoint bidoublet family faces"
+    }
+  ],
+  "boundedMaskedCompletion": {
+    "assumptionsNotDerivedByPublishedCore": [
+      "a rank-one selected family projector P and complementary image/null labels exist",
+      "the Dirac P-N block is a central represented-support zero",
+      "the Majorana P-N sewing block remains present",
+      "after symmetry breaking, all surviving bidoublet contributions are projected onto the chosen light Higgs direction and combined into d_eff",
+      "no new heavy vectorlike matter or non-spectral elementary scalar is added"
+    ],
+    "abstractOneMediatorTopologies": 3,
+    "retainedCorrelatedPackets": 1,
+    "independentPrimitiveLeakagePackets": 0,
+    "aggregateMatrix": "V=[[d_eff],[y_eff]]",
+    "aggregateColumnCount": 1,
+    "aggregateRankUpperBound": 1,
+    "crossMediatorMinorCount": 0,
+    "commonRayStatus": "automatic by single-column absence, not derived alignment",
+    "minimalTreeTextureStatus": "conditionally protected"
+  },
+  "counterfactualReopeners": [
+    {
+      "addition": "one heavy vectorlike L copy",
+      "effect": "adds a second independently parameterized mediator column unless an extra relation aligns its two portals"
+    },
+    {
+      "addition": "one non-spectral or mask-evading family-charged bidoublet",
+      "effect": "adds a second independently parameterized mediator column unless its full packet shares the selected-neutrino ray"
+    },
+    {
+      "addition": "a selected heavy subspace of dimension greater than one",
+      "effect": "permits several Schur columns and reactivates every 2x2 minor"
+    }
+  ],
+  "decision": {
+    "strictPublishedCoreVerdict": "negative: gauge-carrier multiplicity one is tensored with an unrestricted 9-complex-dimensional family matrix space, so the published generation-blind carrier does not force the family mask or a global Schur ray",
+    "boundedMaskedCompletionVerdict": "positive but conditional: the minimal one-mediator tree census contains exactly one retained correlated column and no independent primitive leakage column, so rank one is automatic",
+    "programmeConsequence": "priority 1 is closed at the current evidence boundary; the result is an absence-based conditional survivor, not a physical multiplicity-one theorem",
+    "nextDecisiveGate": "construct the full family-extended real-even Pati-Salam bimodule and test whether the central mask is physically admissible; on that frozen survivor, test one-loop tangency"
+  },
+  "boundary": "This census cannot promote physical admission. The source is generation blind, whereas the protecting P/I/N decomposition, sector-dependent anchors, and projection to a chosen light Higgs direction are added programme data. Nonminimal particles, extra light Higgs directions, loops, or a failed KO-6 embedding reopen the aggregate rank problem."
+}

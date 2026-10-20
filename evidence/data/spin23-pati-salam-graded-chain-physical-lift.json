@@ -1,0 +1,105 @@
+{
+  "schema": "spin23.pati-salam-graded-chain-physical-lift/1",
+  "date": "2026-10-20",
+  "target": "physical realization of the claim-1523 N--Z--X graded spectator chain",
+  "sourcedCarrierAudit": {
+    "fermionsPerGeneration": ["R=(2,1,4)", "L=(1,2,4)"],
+    "extraHeavyVectorlikeFermions": false,
+    "patiSalamSingletFermions": 0,
+    "existingIndependentRolesAvailableForXAndZ": 0,
+    "verdict": "neither X nor Z is an already sourced fermion carrier; reusing an L or R family role violates the one-new-independent-J-pair lower bound or adds charged partners"
+  },
+  "minimalGaugeRepresentation": {
+    "X": "(1,1,1)",
+    "Z": "(1,1,1)",
+    "firstCoefficient": "N--Z through Delta=(2,1,4) after including the J-conjugate orientation",
+    "secondCoefficient": "Z--X gauge-singlet mixing",
+    "chargedComponentsAdded": 0,
+    "fullHeavyMatrixCanBeInvertible": true,
+    "status": "SAT as a Pati-Salam gauge-EFT chain"
+  },
+  "nextSmallestGaugeChoices": [
+    {"representation": "(3,1,1)", "dimension": 3, "extraContent": "SU(2)_R triplet including electrically charged components"},
+    {"representation": "(1,2,4)", "dimension": 8, "extraContent": "weak and colour charged L-like multiplet"},
+    {"representation": "(2,1,4)", "dimension": 8, "extraContent": "vectorlike R-like multiplet that reopens the mediator census"},
+    {"representation": "(1,1,15)", "dimension": 15, "extraContent": "SU(4) adjoint charged partners"}
+  ],
+  "unreducedFiniteAlgebra": {
+    "algebra": "H_R direct-sum H_L direct-sum M_4(C)",
+    "isolatedOneDimensionalModules": 0,
+    "singletContainingDiagonalBimodules": [
+      {"bimodule": "H_R--H_R", "complexDimension": 4, "gaugeDecomposition": "(1,1,1)+(3,1,1)"},
+      {"bimodule": "H_L--H_L", "complexDimension": 4, "gaugeDecomposition": "(1,1,1)+(1,3,1)"},
+      {"bimodule": "M_4(C)--M_4(C)", "complexDimension": 16, "gaugeDecomposition": "(1,1,1)+(1,1,15)"}
+    ],
+    "smallestSingletContainingDimension": 4,
+    "smallestUnwantedPartnerDimension": 3,
+    "selfPairOrientability": "fails in KO dimension six without further opposite-grade structure because a zero-cycle cannot distinguish the repeated self-pair grades",
+    "alreadySourcedPhysicalBimodule": false,
+    "verdict": "UNSAT for an isolated charged-matter-free X/Z lift in the unchanged unreduced triple"
+  },
+  "reducedFourCharacterSearch": {
+    "characters": ["P", "I", "N", "S"],
+    "fixedWeylRolesAfterClaim1523Repair": {"Nrole": "PI", "Xrole": "PS", "JXrole": "SP"},
+    "firstOrderRule": "an edge is allowed when its endpoint labels share a left or right character",
+    "ZCandidates": ["IP", "NP", "SP"],
+    "candidateFailures": [
+      {"Z": "IP", "failure": "JZ=PI collapses onto the N role"},
+      {"Z": "NP", "failure": "the NP/PN orbit is already occupied by the L_P/JL_P role"},
+      {"Z": "SP", "failure": "Z collapses onto JX"}
+    ],
+    "freshZSolutions": 0,
+    "verdict": "UNSAT for one fresh Z/JZ pair inside the existing four-character carrier"
+  },
+  "fiveCharacterAttempt": {
+    "newCharacter": "T",
+    "uniqueFreshZPair": ["TP", "PT"],
+    "chainEdges": ["PI--PT", "TP--SP"],
+    "firstOrderCompatible": true,
+    "KO6OddWithDeclaredSigns": true,
+    "characterCount": 5,
+    "intersectionFormProperty": "every 5x5 antisymmetric intersection form is singular",
+    "poincareDuality": false,
+    "verdict": "UNSAT as a complete KO-6 finite geometry"
+  },
+  "sixCharacterBoundedCompletion": {
+    "newCharactersBeyondPINS": ["T", "U"],
+    "ZPair": {"sectors": ["TP", "PT"], "chiralities": [-1, 1]},
+    "dualityRepairPair": {"sectors": ["TU", "UT"], "chiralities": [1, -1]},
+    "newFirstOrderEdges": ["PI--PT", "TP--SP", "TP--TU", "PT--UT"],
+    "intersectionCharacterOrder": ["P", "I", "N", "S", "T", "U"],
+    "intersectionMatrix": [
+      [0, -1, 1, -1, 1, 0],
+      [1, 0, -1, 0, 0, 0],
+      [-1, 1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0, 0],
+      [-1, 0, 0, 0, 0, 1],
+      [0, 0, 0, 0, -1, 0]
+    ],
+    "intersectionDeterminant": 1,
+    "JClosed": true,
+    "KO6Graded": true,
+    "firstOrderCompatible": true,
+    "finiteLabelMetricConnected": true,
+    "extraJPairOrbitsBeyondClaim1523": 1,
+    "status": "SAT as a reduced six-character sterile subdiagram",
+    "physicalLimit": "it is a genuine algebra and Hilbert-space extension, retains the universal-family two-slot obstruction, and introduces additional central gauge directions"
+  },
+  "branchDecisions": [
+    {"branch": "already sourced Pati-Salam fermion carrier", "status": "UNSAT"},
+    {"branch": "unchanged unreduced ordinary finite-algebra bimodule", "status": "UNSAT"},
+    {"branch": "reduced existing four-character ordinary bimodule", "status": "UNSAT"},
+    {"branch": "reduced five-character completion", "status": "UNSAT by odd antisymmetric duality"},
+    {"branch": "reduced six-character sterile subdiagram", "status": "SAT but new and nonminimal"},
+    {"branch": "one-pair generalized correspondence/defect module of claim 1523", "status": "UNDERDETERMINED but necessarily new"}
+  ],
+  "decision": {
+    "embedsInAlreadySourcedCarrier": false,
+    "requiresNewCorrespondenceOrDefectModule": true,
+    "smallestGaugeEFTContent": "two sterile singlets X and Z",
+    "smallestOrdinaryFirstOrderCharacterCompletion": "six characters with Z pair TP/PT plus duality pair TU/UT",
+    "minimumCostBeyondClaim1523ForOrdinaryDuality": "one further character U and one further J-pair TU/UT",
+    "preferredResearchTarget": "construct the one-pair generalized correspondence directly; otherwise the ordinary associative route expands to the six-character sterile completion and must pass gauge-kernel and anomaly tests"
+  },
+  "boundary": "The six-character construction proves finite label-level consistency, not a universal physical family embedding. The direct-sum two-slot obstruction still prevents these scalar characters from decorating all sourced weak and colour bimodules, and no anomaly or gauge-kernel claim is made."
+}

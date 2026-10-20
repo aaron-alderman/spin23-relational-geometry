@@ -1,0 +1,40 @@
+{
+  "schema": "spin23.complete-Schur-composition-category/1",
+  "date": "2026-10-20",
+  "construction": {
+    "objects": "finite typed boundary and internal label sets",
+    "morphisms": "symmetric quadratic kernels decorated by primitive-arrow provenance and optional real/grade involutions",
+    "composition": "glue typed labels and eliminate the joined invertible internal block by the complete Schur complement",
+    "parallelComposition": "direct sum before lowering and addition of effective kernels after lowering"
+  },
+  "theorems": {
+    "completeSchurCompositionAssociative": true,
+    "eliminationOrderIndependentWithFillIn": true,
+    "realEquivarianceDescendsOnStableEliminationSets": true,
+    "relationSheetEvennessDescendsOnStableEliminationSets": true,
+    "matrixLoweringFaithfulOnProvenance": false,
+    "arbitraryParallelCompositionPreservesRankOne": false
+  },
+  "coupledMediatorWitness": {
+    "internalBlock": [[3,1],[1,5]],
+    "boundaryIncidence": [[2,-1],[4,3]],
+    "internalDeterminant": 14,
+    "checkedOrders": ["P1 then P2", "P2 then P1", "simultaneous inverse"],
+    "result": "all complete eliminations agree exactly; treating q as zero does not"
+  },
+  "provenanceCounterexample": {
+    "sourceA": "factored L->P->N diagram with a=5,d=2,y=3",
+    "sourceB": "endpoint-only diagram with primitive contacts equal to the lowered packet",
+    "sameEffectiveKernel": true,
+    "sameSourceProvenance": false
+  },
+  "requiredEmbeddingData": [
+    "primitive generators",
+    "path factorizations and internal labels",
+    "complete Schur fill-in",
+    "aggregate coupling rank",
+    "J-stable elimination sets"
+  ],
+  "boundary": "this exact finite category implements consistent matching but neither derives the physical generator restriction nor proves quantum closure",
+  "verdict": "complete Schur composition is associative and graded-real compatible, but endpoint matrix lowering forgets provenance and cannot by itself enforce exact texture protection"
+}

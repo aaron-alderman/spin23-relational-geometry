@@ -1,0 +1,196 @@
+{
+  "schema": "spin23.physical-carrier-bounded-embedding-search/1",
+  "date": "2026-10-20",
+  "joinedInputs": [
+    "spin23.minimal-pati-salam-aggregate-intertwiner-census/1",
+    "spin23.minimal-real-even-bounded-embedding-search/1",
+    "spin23.KO6-relation-sheet-reflection/1"
+  ],
+  "bounds": {
+    "relationLabels": ["PN", "IN", "IP", "SP", "NP", "NI", "PI", "PS"],
+    "JPairOrbits": 4,
+    "physicalRolePairOrbits": 4,
+    "JEquivariantBijectiveRoleAssignments": 384,
+    "requiredPrimitiveEdgeOrbits": 3,
+    "requiredOrientedEdgesIncludingJPartners": 6,
+    "minimalMediatorColumns": 1,
+    "nonzeroCouplingAlphabet": [-1, 1]
+  },
+  "physicalCarrierRoles": [
+    {
+      "rolePair": "L_P/JL_P",
+      "patiSalamCarrier": "(1,2,4) and its J-conjugate",
+      "complexGaugeDimensionPerParticleCarrier": 8,
+      "sourced": true,
+      "multiplicityInBoundedSearch": 1
+    },
+    {
+      "rolePair": "R_P/JR_P",
+      "patiSalamCarrier": "(2,1,4) and its J-conjugate",
+      "complexGaugeDimensionPerParticleCarrier": 8,
+      "sourced": true,
+      "multiplicityInBoundedSearch": 1
+    },
+    {
+      "rolePair": "R_N/JR_N",
+      "patiSalamCarrier": "a null-family copy of (2,1,4) and its J-conjugate",
+      "complexGaugeDimensionPerParticleCarrier": 8,
+      "sourcedGaugeCarrier": true,
+      "sourcedFamilyAnchor": false,
+      "multiplicityInBoundedSearch": 1
+    },
+    {
+      "rolePair": "X/JX",
+      "patiSalamCarrier": "undetermined spectator pair",
+      "sourced": false,
+      "multiplicityInBoundedSearch": 1
+    }
+  ],
+  "vertexOrbits": [
+    {
+      "id": "selected-dirac",
+      "physicalEdges": ["L_P--R_P", "JL_P--JR_P"],
+      "relationEdgeInWitness": ["PN--IN", "NP--NI"],
+      "provenance": "primitive finite-D support",
+      "patiSalamIntertwiners": [
+        {"carrier": "H_1=(2,2,1)", "gaugeMultiplicity": 1, "status": "sourced"},
+        {"carrier": "H_15=(2,2,15)", "gaugeMultiplicity": 1, "status": "conditional on order-one assumptions"}
+      ]
+    },
+    {
+      "id": "selected-null-majorana",
+      "physicalEdges": ["R_P--JR_N", "JR_P--R_N"],
+      "relationEdgeInWitness": ["IN--IP", "NI--PI"],
+      "provenance": "primitive particle-conjugate finite-D support with generalized Delta-Delta dressing",
+      "patiSalamIntertwiners": [
+        {"carrier": "Delta=(2,1,4), with Sym^2 Delta containing (3,1,10)+(1,1,6)", "gaugeMultiplicity": 1, "status": "sourced gauge mechanism; family-face multiplicity not sourced"}
+      ]
+    },
+    {
+      "id": "spectator-connector",
+      "physicalEdges": ["JR_N--X", "R_N--JX"],
+      "relationEdgeInWitness": ["IP--SP", "PI--PS"],
+      "provenance": "primitive connector required for finite-metric connectedness",
+      "patiSalamIntertwiners": [],
+      "status": "undetermined"
+    },
+    {
+      "id": "forbidden-null-dirac",
+      "physicalEdges": ["L_P--R_N", "JL_P--JR_N"],
+      "relationEdgeInWitness": ["PN--PI", "NP--IP"],
+      "provenance": "independent primitive support required absent",
+      "status": "cross-sheet and Gamma_rel-odd in every graph lift"
+    },
+    {
+      "id": "reducible-schur-path",
+      "physicalPaths": ["L_P--R_P--JR_N", "JL_P--JR_P--R_N"],
+      "relationPathInWitness": ["PN--IN--IP", "NP--NI--PI"],
+      "provenance": "candidate composite path; mapping its JR_N/R_N endpoint convention to the physical Dirac coefficient requires the missing real-structure and fermionic-action dictionary",
+      "status": "graph-retained; physical Schur identification underdetermined"
+    }
+  ],
+  "relationAssignmentSearch": {
+    "constraints": [
+      "the four physical role pairs map bijectively to the four J-pair orbits",
+      "the map is J equivariant",
+      "the selected Dirac, selected-null Majorana, and spectator connector orbits map to the six allowed within-sheet edges",
+      "the forbidden null-Dirac orbit maps across relation sheets"
+    ],
+    "assignmentsTested": 384,
+    "solutions": 4,
+    "allSolutionsMakeForbiddenDiracCrossSheet": true,
+    "witness": {
+      "L_P": "PN",
+      "JL_P": "NP",
+      "R_P": "IN",
+      "JR_P": "NI",
+      "R_N": "PI",
+      "JR_N": "IP",
+      "X": "SP",
+      "JX": "PS"
+    },
+    "solutionsMatchingTheTwoPreviouslyNamedToyDangerousAnchorPairs": 0,
+    "anchorInterpretation": "the physical lift places the forbidden L_P--R_N edge on a different cross-sheet pair; Gamma_rel still makes it odd, but a physical anchor dictionary is needed before calling the toy anchors identical to physical fields"
+  },
+  "aggregateHomSearch": {
+    "source": "claim 1512 minimal masked census",
+    "retainedMediatorColumns": 1,
+    "aggregateMatrix": "V=[[d_eff],[y_eff]]",
+    "aggregateRankUpperBound": 1,
+    "minorCount": 0,
+    "couplingAssignmentsOverNonzeroSignAlphabet": 4,
+    "rankOneAssignments": 4,
+    "rankStatus": "derived from the bounded physical absence census, not imposed as a three-column constraint"
+  },
+  "joinedRelationalCarrier": {
+    "roleAssignmentSolutions": 4,
+    "relationParityAssignmentsIncludingOverallSign": 2,
+    "singleColumnCouplingAssignments": 4,
+    "joinedWitnesses": 32,
+    "status": "SAT at decorated relation-graph level"
+  },
+  "branchDecisions": [
+    {
+      "branch": "unchanged unreduced Pati-Salam algebra with literal four-character first-order lift",
+      "status": "UNSAT",
+      "core": [
+        "the connected KO-6 completion requires a one-dimensional spectator character S",
+        "H_R direct-sum H_L direct-sum M_4(C) has no one-dimensional complex character"
+      ],
+      "sourceClaim": 1122
+    },
+    {
+      "branch": "reduced Standard-Model algebra direct-sum C^3 as universal family decoration",
+      "status": "UNSAT",
+      "core": [
+        "a physical mixed gauge bimodule already uses its left and right simple-factor supports",
+        "an independent direct-sum family character requires a third support slot"
+      ],
+      "sourceClaim": 1124
+    },
+    {
+      "branch": "ordinary unduplicated field Z2 descent",
+      "status": "UNSAT",
+      "core": [
+        "L_P H nu_P^c even",
+        "S nu_P^c nu_N^c even",
+        "S L_P H nu_N^c odd"
+      ],
+      "sourceClaim": 1516
+    },
+    {
+      "branch": "commutant, normalizer, correspondence, Jordan, or generalized relation-module lift",
+      "status": "UNDERDETERMINED",
+      "reason": "the graph constraints are SAT but the physical algebra actions and spectator connector row are not supplied by the sourced carrier"
+    }
+  ],
+  "minimalUnresolvedData": {
+    "rows": [
+      {
+        "id": "family-anchor-action",
+        "mustSpecify": [
+          "the represented and opposite family/normalizer action on L_P, R_P, R_N and their J partners",
+          "why it is sheet diagonal while the Dirac L_P--R_N primitive is absent",
+          "whether and how the JR_N endpoint of the factored path maps to the R_N slot of the effective Dirac coefficient",
+          "the multiplicity of the neutral and charge-minus-three Delta faces when the full family Majorana texture is required"
+        ]
+      },
+      {
+        "id": "spectator-connector",
+        "mustSpecify": [
+          "the physical Pati-Salam representation of X and JX",
+          "the primitive connector intertwiner JR_N--X and its J partner",
+          "its effect on the physical intersection form, junk quotient, gauge kernel, and unwanted light matter"
+        ]
+      }
+    ],
+    "whyMinimal": "all other bounded carrier roles, required J partners, primitive/composite provenance classes, and the minimal aggregate rank are fixed by the joined local results"
+  },
+  "overallDecision": {
+    "status": "UNDERDETERMINED",
+    "notSATBecause": "the 32 witnesses decorate the relation graph but do not define a faithful physical algebra bimodule or the missing connector",
+    "notUNSATBecause": "the generalized relation-module branch has graph witnesses and arbitrary within-sheet physical multiplicity is algebraically compatible with Gamma_rel",
+    "strongestConclusion": "three ordinary associative/field realizations are excluded, while one precisely delimited generalized physical lift remains open"
+  },
+  "boundary": "This is a finite carrier-skeleton search, not a full spectral-triple solver. It does not invent the missing family action or spectator representation and does not certify orientability, Poincare duality, anomaly freedom, or radiative stability on a physical Hilbert space."
+}

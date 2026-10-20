@@ -1,0 +1,66 @@
+{
+  "schema": "spin23.complex-indefinite-Schur-locus/1",
+  "date": "2026-10-20",
+  "scope": "Sums of two and three complete rank-one 2x2 Schur packets G_i=w_i v_i v_i^T, with a separate Hermitian comparison",
+  "conventions": {
+    "vector": "v_i=(d_i,y_i)^T",
+    "minor": "Delta_ij=d_i y_j-d_j y_i",
+    "symmetricPacket": "G_i=w_i v_i v_i^T",
+    "nondegenerateWeights": "all displayed classification theorems assume w_i != 0; zero weights reduce to a lower-packet stratum"
+  },
+  "twoPacketClassification": {
+    "identity": "det(G_1+G_2)=w_1 w_2 Delta_12^2",
+    "zeroLocusForNonzeroWeights": "Delta_12=0",
+    "conclusion": "Neither complex phases nor opposite-sign weights create a nonaligned two-packet cancellation branch. The only nondegenerate zero is the common projective ray."
+  },
+  "threePacketClassification": {
+    "identity": "det(sum_i G_i)=w_1 w_2 Delta_12^2+w_1 w_3 Delta_13^2+w_2 w_3 Delta_23^2",
+    "minorCoordinates": "For a 2x3 coupling matrix the three minors have no Plucker relation; every nonzero projective minor triple is realized on a coordinate chart.",
+    "commonRayStratum": "Delta_12=Delta_13=Delta_23=0; equivalently rank[v_1 v_2 v_3] <= 1",
+    "nonalignedCancellationStratum": "The nonzero points of the weighted quadratic cone q_w(Delta)=0",
+    "geometryOverComplexNumbers": "For nonzero weights q_w is nondegenerate. Its projectivization is a smooth irreducible conic in P^2_C, while the affine cone is singular only at the common-ray vertex Delta=0.",
+    "geometryOverRealNumbers": {
+      "sameSignWeights": "q_w is definite, so there is no nonaligned real zero.",
+      "mixedSignWeights": "q_w has signature (1,2) or (2,1), so its nonzero real null cone supplies nonaligned cancellations."
+    },
+    "rankOnNonalignedCone": "The resulting 2x2 sum has rank exactly one. It cannot vanish because a nondegenerate three-dimensional symmetric form has Witt index one, whereas vanishing would require two independent mutually orthogonal null rows.",
+    "interpretation": "Three is the minimal packet number for a phase or indefinite-sign cancellation that is not projective alignment."
+  },
+  "exactExamples": {
+    "complexSymmetricSameWeights": {
+      "weights": ["1", "1", "1"],
+      "vectors": [["3", "0"], ["0", "3"], ["-5i", "4"]],
+      "minors": ["9", "12", "15i"],
+      "identity": "9^2+12^2+(15i)^2=0",
+      "allPairwiseNonaligned": true,
+      "sumRank": 1
+    },
+    "realSymmetricMixedWeights": {
+      "weights": ["1", "1", "-1"],
+      "vectors": [["5", "0"], ["0", "5"], ["3", "4"]],
+      "minors": ["25", "20", "-15"],
+      "identity": "25^2-20^2-(-15)^2=0",
+      "allPairwiseNonaligned": true,
+      "sumRank": 1
+    }
+  },
+  "perturbativeStratification": {
+    "commonRayVertex": "In packet-minor coordinates q_w has zero gradient at Delta=0. A small misalignment Delta=epsilon h lifts the determinant at order epsilon^2.",
+    "nonalignedCone": "At every nonzero null point grad(q_w) is nonzero. A generic transverse packet perturbation lifts the determinant at order epsilon.",
+    "matrixSpaceBoundary": "The quadratic protection at the common-ray vertex applies only to complete-packet deformations. An independent primitive 2x2 matrix deformation can lift a rank-one sum linearly.",
+    "naturalnessVerdict": "The nonaligned cone is an extended algebraic locus rather than an isolated numerical accident, but kinematics does not force a theory onto it. Technical protection requires an additional constraint that preserves and enforces null minor data."
+  },
+  "symmetryBoundary": {
+    "coneStabilizers": ["O(3,C) after complex square-root rescaling of nonzero weights", "O(1,2) or O(2,1) for real mixed-sign weights"],
+    "whatStabilizerDoes": "It preserves the quadratic cone and can move between its nonzero points.",
+    "whatStabilizerDoesNotDo": "Invariance of q_w does not by itself impose q_w=0 on the coupling matrix.",
+    "openPhysicalTest": "Determine whether the actual Pati-Salam/Spin(2,3) carrier supplies a representation, orbit condition, or composite matching law that forces the minor vector to be null."
+  },
+  "hermitianComparison": {
+    "identity": "For H=sum_i w_i v_i v_i^dagger with real weights, det(H)=sum_{i<j} w_i w_j |Delta_ij|^2.",
+    "positiveWeights": "Only the common-ray stratum survives, for any complex phases.",
+    "mixedSignWeights": "A real signed null cone remains possible from three packets onward."
+  },
+  "spin23Signpost": "The three minors form a natural quadratic three-vector. Its mixed-sign cancellation locus is an SO(1,2) null cone, giving a precise possible Spin(1,2)-inside-Spin(2,3) middle to test, not a derivation of that middle.",
+  "verdict": "Claim 1509 is exact for two packets and for positive Hermitian sums. For three complex-symmetric or real-indefinite packets there is a distinct nonaligned null-cone branch; it is linearly fragile to generic packet perturbations and remains physically unprotected until the carrier forces null minor data."
+}

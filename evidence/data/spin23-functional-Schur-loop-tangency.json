@@ -1,0 +1,47 @@
+{
+  "schema": "spin23.functional-Schur-loop-tangency/1",
+  "date": "2026-10-20",
+  "scope": "finite real rank-one packet family with analytic momentum-dependent weights; not a full Pati-Salam loop calculation",
+  "setup": {
+    "packetFamily": "G(z)=sum_i w_i(z) u_i u_i^T, with u_i=(d_i,y_i)^T",
+    "treePacket": "u_0=v and w_0=-1/a",
+    "loopPackets": "u_alpha=g_alpha and w_alpha=hbar f_alpha(z)+O(hbar^2)",
+    "protectedFunctionalIdeal": "det G(z)=0 on an open connected analytic momentum domain"
+  },
+  "exactIdentity": {
+    "determinant": "det G(z)=sum_{i<j} w_i(z) w_j(z) Delta_ij^2",
+    "minor": "Delta_ij=d_i y_j-d_j y_i",
+    "functionalCriterion": "the coefficient vector (Delta_ij^2) lies in the kernel of the linear map sending coefficients to sum coefficients times w_i w_j",
+    "independentProductCorollary": "if the active product functions w_i w_j are linearly independent, interval protection forces every active Delta_ij=0"
+  },
+  "oneLoopTangency": {
+    "normalComponent": "D_1(z)=w_0 sum_alpha f_alpha(z) Delta_0alpha^2",
+    "criterion": "D_1 is identically zero on the analytic domain",
+    "independentFormFactorCorollary": "if the f_alpha are linearly independent, every loop vector is absent or projectively aligned with the tree vector",
+    "sameSignCorollary": "if all nonzero f_alpha have one sign on the interval, pointwise cancellation is impossible for real vectors unless every active Delta_0alpha vanishes"
+  },
+  "pointVersusInterval": {
+    "analyticFact": "a nonzero analytic determinant has isolated zeros; cancellation at one momentum does not imply interval closure",
+    "derivativeTest": "interval closure is equivalent to all Taylor coefficients, or all derivatives at one interior point, vanishing",
+    "stableMechanisms": [
+      "common projective coupling ray",
+      "absence of transverse packets",
+      "a symmetry-enforced functional dependence placing the squared-minor vector in the form-factor nullspace"
+    ]
+  },
+  "exactAudit": {
+    "packetCount": 4,
+    "polynomialCauchyBinetIdentity": true,
+    "onePointCancellationPolynomial": "z",
+    "onePointCancellationAt": 0,
+    "intervalCancellationExample": "4(1+z)+[-4(1+z)]=0",
+    "intervalCancellationRequiresDependentIndefiniteWeights": true
+  },
+  "physicalConnection": {
+    "claim1512TreeResult": "the bounded masked minimal Pati-Salam census has one retained tree column",
+    "newRequirement": "inventory every loop topology, its endpoint coupling vector, mass threshold, and form factor",
+    "killTest": "one admitted transverse loop vector with a form factor not in an exact Ward-enforced null relation destroys interval protection at one loop",
+    "nonClaim": "the present evidence does not establish which loop packets occur in the physical family-extended Pati-Salam carrier"
+  },
+  "verdict": "momentum dependence upgrades common-ray alignment to a functional-rank condition; a zero at one momentum is not protection over an interval"
+}

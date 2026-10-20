@@ -26790,3 +26790,67 @@ The proposed one-dimensional-Hom repair was tested against mediator multiplicity
 ## Cycle 1167 — the programme is reordered around three decisive gates
 
 The accumulated frontier was stepped back from and ranked by its capacity to change the programme rather than merely extend it. The first investigation is the actual minimal Pati--Salam aggregate-intertwiner and primitive-path census; it can either derive the common Schur ray or expose two independent physical directions. The parallel cheap closure test is the complex/indefinite determinant-zero locus. If a robust component survives, one-loop tangency of the Schur/minor ideal decides technical naturalness. Formal categorical matching and a bounded real-even embedding search are the next construction layer, followed by a physical Jordan/Spin(2,3) multiplicity theorem. General loop matching and correlated NuFIT profiling remain conditional. Ordinary charge guessing, unconstrained fits, premature anomaly or full spectral-action work, metaphor-only correspondences and ungoverned literature ingestion are deferred. Artifact: [1511](../1500-1599/1511_the_highest_value_next_investigations_are_the_physical_intertwiner_RG_tangency_and_categorical_closure_tests.md).
+
+## Cycle 1168 — the minimal masked tree inventory has one column but no derived family intertwiner
+
+The sourced Pati--Salam carrier has one gauge Clebsch channel per irreducible bidoublet but leaves an arbitrary (M_3(\mathbb C)) family coefficient. Conditional on the central family mask, chosen light-Higgs direction and minimal matter content, the three one-mediator topologies reduce to one selected-neutrino Schur column, no primitive leakage column and no cross-mediator minor. Rank one is automatic by absence, not a representation theorem. Artifact: [1512](../1500-1599/1512_the_minimal_pati_salam_tree_census_leaves_one_correlated_Schur_column_but_does_not_derive_the_family_intertwiner.md).
+
+## Cycle 1169 — the complex and indefinite loophole begins at three packets
+
+Two nonzero packets still satisfy (\det(G_1+G_2)=w_1w_2\Delta_{12}^2), so phases and opposite signs cannot protect nonaligned columns. Three packets first admit a nonzero quadratic null cone over complex couplings or real mixed-sign weights. Its generic transverse lifting is linear, and no physical constraint currently forces the minor vector onto it. Artifact: [1513](../1500-1599/1513_three_Schur_packets_admit_a_nonaligned_complex_or_indefinite_null_cone_but_two_packets_do_not.md).
+
+## Cycle 1170 — an independent loop portal is transverse to the Schur cone
+
+The minimal mediator-bubble proxy gives (\det(-vv^T/a+\kappa gg^T)=-(\kappa/a)\det(v,g)^2). Tangency survives only if the loop portal is absent or projectively aligned with the tree portal. The result is an exact counterterm-support theorem for the proxy, not a claimed full Pati--Salam beta function. Artifact: [1514](../1500-1599/1514_a_single_mediator_bubble_leaves_the_rank_one_Schur_cone_unless_its_loop_portal_shares_the_tree_coupling_ray.md).
+
+## Cycle 1171 — complete Schur composition is associative but forgetful lowering is not faithful
+
+Quadratic diagrams composed by complete Schur complement are independent of elimination order, retain induced fill-in and preserve (J) and relation-sheet parity on stable eliminated sets. A factored path and a primitive endpoint kernel can nevertheless lower to the same matrix, so provenance must remain explicit and category language alone cannot forbid leakage. Artifact: [1515](../1500-1599/1515_complete_Schur_composition_is_associative_but_matrix_lowering_forgets_primitive_versus_composite_provenance.md).
+
+## Cycle 1172 — the bounded relational embedding is SAT but ordinary field descent is minimally UNSAT
+
+The eight-label real-even cover has two parity solutions and, with the bounded aggregate-rank signs, 32 joined relational witnesses. Requiring one ordinary parity on five unduplicated fields makes the required Dirac and Majorana vertices even while their product composite must be odd; those three constraints form an inclusion-minimal UNSAT core. Artifact: [1516](../1500-1599/1516_the_minimal_real_even_embedding_is_relationally_satisfiable_but_its_ordinary_field_descent_has_a_three_constraint_UNSAT_core.md).
+
+## Cycle 1173 — four physical graph lifts leave exactly two representation rows open
+
+Among 384 (J)-equivariant physical-role assignments, four realize the required edge orbits and place the dangerous primitive cross-sheet. With the single physical mediator column they give 32 decorated witnesses. Unreduced, reduced universal-decoration and ordinary field-parity realizations are UNSAT; the generalized carrier is underdetermined by the family-anchor action and spectator connector. The graph does not by itself identify the retained composite with the physical Schur/Weyl term. Artifact: [1517](../1500-1599/1517_the_sourced_pati_salam_skeleton_has_four_relational_lifts_but_physical_SAT_is_underdetermined_by_two_rows.md).
+
+## Cycle 1174 — protected Jordan typing stops one scalar short of multiplicity one
+
+The family commutant ladder is (9\to5\to3\to2\to1). The last reduction occurs only when both local edges occupy one untyped carrier, whose mixed product generates the forbidden relation and (H_3(\mathbb R)/Sp(6,\mathbb R)). Opposite-anchor typing preserves the mask but leaves two sector scalars. Artifact: [1518](../1500-1599/1518_the_available_Jordan_Spin23_data_force_multiplicity_one_only_by_reopening_the_Sp6_mixed_relation.md).
+
+## Cycle 1175 — loop protection over momentum is a functional-rank identity
+
+For analytic packet weights, (\det G(z)=\sum_{i<j}w_i(z)w_j(z)\Delta_{ij}^2). A cancellation at one momentum is generically an isolated root. Interval protection forces common-ray alignment under independent or same-sign form factors, unless a symmetry enforces an exact dependent complex/indefinite functional null relation. Artifact: [1519](../1500-1599/1519_momentum_dependent_Schur_protection_is_a_functional_rank_condition_and_a_zero_at_one_momentum_is_not_stable.md).
+
+## Cycle 1176 — roadmap execution converges on two carrier rows and one loop law
+
+Priorities 1--7 now have bounded results and the correlated NuFIT profile remains externally blocked. The conditional one-column tree survivor, generic multi-ray loop failure, non-faithful matrix lowering, physical SAT/UNSAT split and Jordan multiplicity obstruction reduce internal continuation to the family-anchor row, spectator row and a physical loop Ward module. Artifact: [1520](../1500-1599/1520_the_next_investigation_roadmap_is_internally_executed_and_converges_on_two_carrier_rows_plus_loop_Ward_data.md).
+
+## Cycle 1177 — no carrier operator safely sews the wheels, but a coefficient line can
+
+Every nonzero (2\times2) carrier sewing equates the two sector scalars only by generating all of (M_4(\mathbb C)), making mixed support composable and crossing relation parity. A common one-dimensional coefficient source instead imposes ((d_i,y_i)=\lambda_i(1,\kappa)) without adding a carrier arrow. It is formally minimal but physically unsourced. Artifact: [1521](../1500-1599/1521_no_carrier_operator_can_safely_sew_the_typed_wheels_but_one_coefficient_line_can.md).
+
+## Cycle 1178 — the unique minimal spectator candidate has a representation-independent connector no-go
+
+The smallest charged-matter-free candidate is (X=(1,1,1)) through (\Delta). A direct primitive connector (m) changes the selected cofactor to (-dm^2), so nonzero connectedness and the texture zero cannot coexist in that four-role mass graph. Artifact: [1522](../1500-1599/1522_the_unique_charged_matter_free_spectator_is_a_Delta_coupled_singlet_but_any_primitive_null_connector_destroys_the_texture.md).
+
+## Cycle 1179 — one intermediate real pair repairs the connector in the bounded graph class
+
+Junk, zero-vacuum and direct rank-one-block repairs fail the simultaneous connectedness, cofactor and parity tests. Subdividing the connector through one (Z/JZ) pair gives a graded (N-Z-X) chain with zero selected cofactor and (\det M_5=d y^2h^2\ne0). This is the exact lower bound in the declared signed-mass-graph class and leaves the physical module lift open. Artifact: [1523](../1500-1599/1523_one_intermediate_real_pair_is_the_minimal_categorical_repair_of_the_spectator_connector_no_go.md).
+
+## Cycle 1180 — the official NuFIT joint-likelihood acquisition remains blocked
+
+A dated primary-source audit finds NuFIT 6.1 still listed as latest and only lower-dimensional public profile projections available. No official callable four-coordinate evaluator, joint grid or direct electron-zero constrained profile was acquired, so the correlated likelihood cannot be reconstructed or run. Artifact: [1524](../1500-1599/1524_the_current_official_NuFIT_acquisition_surface_still_does_not_expose_the_electron_zero_joint_likelihood.md).
+
+## Cycle 1181 — no sourced scalar supplies the common portal coefficient line
+
+Dirac and Majorana portal scalars lie in inequivalent Pati--Salam and family-charge sectors. (J), CP and common canonical dimension leave two independent coefficients; one shared scalar in two invariants still leaves two Wilson coefficients. The minimal alignment datum is a new dimension-zero portal-label object or Ward/correspondence law with fixed embeddings. Artifact: [1525](../1500-1599/1525_no_sourced_scalar_supplies_the_common_portal_line_so_the_minimal_new_datum_is_an_enforced_dimension_zero_coupling_object.md).
+
+## Cycle 1182 — the graded spectator chain has no sourced bimodule lift
+
+The gauge-level (X=Z=(1,1,1)) chain is absent from the sourced matter carrier. The four-character model has no fresh slot; a fifth character produces a singular odd-dimensional antisymmetric intersection form; the first ordinary first-order/(J)-closed sterile completion uses six characters and another real pair with determinant-one intersection matrix. The one-pair repair must therefore be a new correspondence/defect module. Artifact: [1526](../1500-1599/1526_the_graded_spectator_chain_has_no_sourced_pati_salam_bimodule_lift_and_an_ordinary_completion_requires_six_characters.md).
+
+## Cycle 1183 — current-input exhaustion closes the sourced carrier
+
+Both missing rows have reached explicit endpoints. The sourced minimal Pati--Salam carrier neither supplies the coefficient-line law nor the graded spectator correspondence, and generic independent loops are transverse. Full physical admission is therefore closed for the sourced carrier. The typed mechanism survives only as a conditional new-model branch with a dimension-zero portal law or a new correspondence/defect module; further progress requires declaring and testing one of those new objects or acquiring the external joint likelihood. Artifact: [1527](../1500-1599/1527_current_input_exhaustion_closes_the_sourced_carrier_and_leaves_only_new_portal_law_or_correspondence_module_branches.md).
