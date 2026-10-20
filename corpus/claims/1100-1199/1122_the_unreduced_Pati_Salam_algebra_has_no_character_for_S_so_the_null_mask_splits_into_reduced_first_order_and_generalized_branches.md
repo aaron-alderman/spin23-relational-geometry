@@ -7,6 +7,8 @@
 **Certificate:** [prove_unreduced_Pati_Salam_has_no_character_for_the_spectator_S.mjs](../../../verification/prove/prove_unreduced_Pati_Salam_has_no_character_for_the_spectator_S.mjs)  
 **Primary source:** [Chamseddine–Connes–van Suijlekom, *Beyond the Spectral Standard Model: Emergence of Pati-Salam Unification*](https://arxiv.org/abs/1304.8050)
 
+> **Update (20 October 2026).** [Claim 1494](../1400-1499/1494_generalized_inner_fluctuations_preserve_the_central_family_null_mask_while_dressing_the_present_Pati_Salam_Majorana_defect.md) performs the support calculation posed here. If the family decomposition is represented by central projectors commuting with both algebra actions, the complete generalized inner fluctuation preserves every absent family block. Thus \(A_{(2)}\) cannot regenerate an absent dangerous Dirac block, although the complete physical embedding and radiative counterterm test remain open.
+
 ## Executive result
 
 The fourth character \(S\) required by the [connected null-mask completion](1121_the_orientable_null_mask_is_an_A2_triangle_and_one_spectator_real_edge_pair_repairs_both_duality_and_connectedness.md) cannot be identified literally with an existing summand of the unreduced spectral Pati–Salam algebra.

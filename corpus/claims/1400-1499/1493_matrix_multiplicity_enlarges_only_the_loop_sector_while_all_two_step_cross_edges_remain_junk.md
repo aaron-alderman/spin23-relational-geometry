@@ -205,6 +205,8 @@ is specific:
 counterterm support on the distance-two blocks}.}
 \]
 
+The generalized-inner-fluctuation half of this gate is resolved in [claim 1494](1494_generalized_inner_fluctuations_preserve_the_central_family_null_mask_while_dressing_the_present_Pati_Salam_Majorana_defect.md): central family support zeros are invariant under \(A_{(1)}+\widetilde A_{(1)}+A_{(2)}\). The radiative-counterterm half remains open.
+
 ## 6. Boundaries
 
 **Support boundary:** the theorem assumes the finite Dirac support is exactly
