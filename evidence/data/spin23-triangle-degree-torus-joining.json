@@ -1,0 +1,45 @@
+{
+  "schema": "spin23.triangle-degree-torus-joining/1",
+  "documentId": 1479,
+  "date": "2026-10-20",
+  "status": "exact-closure-and-bounded-numerical-negative-result",
+  "exactOrbit": {
+    "generator": "D=diag(a+c,a+b,b+c)",
+    "unitary": "U(theta)=exp(i theta D)",
+    "downOperator": "Kd(theta)=U(theta)(D+eta Hminus)U(theta)^dagger",
+    "tangentAtZero": "i eta [D,Hminus]",
+    "spectrumIndependentOfTheta": true
+  },
+  "maximalClosure": {
+    "condition": "the three degree entries are distinct",
+    "basis": ["I", "D", "D^2"],
+    "vandermondeDeterminant": "(d2-d1)(d3-d1)(d3-d2)",
+    "unitaryQuotient": "U(1)^3/U(1)=U(1)^2",
+    "arbitraryOffDiagonalSpurionAdded": false
+  },
+  "targets": {
+    "Vus": 0.22501,
+    "Vcb": 0.04183,
+    "Vub": 0.003732,
+    "absoluteJarlskog": 0.00003115,
+    "upMassSquaredLocation": 0.000013577502786208545,
+    "downMassSquaredLocation": 0.0003497378191729099
+  },
+  "oneParameterOrbitSearch": {
+    "algorithms": ["120-restart seeded annealing plus Nelder-Mead", "320-member 1200-generation differential evolution"],
+    "parameters": {"a": 34194.50590635016, "b": 0.00001139240243925442, "c": 1.0, "delta": 3.141590248041393, "eta": 1.0004133282418937, "theta": -59.63273240709568},
+    "observables": {"Vus": 0.5731465920720956, "Vcb": 0.016808944469963397, "Vub": 0.023753841094820476, "absoluteJarlskog": 0.0000191796233077364, "upMassSquaredLocation": 0.000021932833006009087, "downMassSquaredLocation": 0.00021488407612505636},
+    "meanSquaredLogScore": 0.9722187633040741,
+    "joinedSolutionFound": false
+  },
+  "fullDiagonalTorusSearch": {
+    "algorithm": "420-member 1200-generation seeded differential evolution",
+    "parameters": {"a": 0.14853945919831796, "b": 31761.912436924893, "c": 1.0, "delta": 3.1415922961070835, "eta": 1.000433264122108, "alpha": -1.4262093904242827, "beta": 1.7722096094530766},
+    "observables": {"Vus": 0.526678973, "Vcb": 0.0151682031, "Vub": 0.0240211783, "absoluteJarlskog": 0.0000203453524, "upMassSquaredLocation": 0.0000210008426, "downMassSquaredLocation": 0.000227018906},
+    "meanSquaredLogScore": 0.962954522719938,
+    "joinedSolutionFound": false,
+    "globalMinimumClaimed": false
+  },
+  "nextGate": "derive an analytic elimination relation or bound among the two spectral locations and a rephasing-invariant mixing observable",
+  "verdict": {"exactSpectrumBasisSeparation": true, "maximalDerivedDiagonalOrbitTested": true, "joinedSolutionFound": false, "globalNoGoEstablished": false, "physicalAdmissionChanged": false}
+}
