@@ -1,0 +1,49 @@
+{
+  "schema": "spin23.charge-to-picard-functor-classification/1",
+  "documentId": 1470,
+  "date": "2026-10-20",
+  "status": "exact-picard-functor-classification-and-full-spectrum-no-go",
+  "groups": {
+    "characterLatticeU1": "Z",
+    "picardCP1": "Z",
+    "tensorCompatibleMaps": "d(q)=k*q for k in Z"
+  },
+  "sterileSlice": {
+    "selectedCharge": -3,
+    "complementCharge": 0,
+    "requiredSelectedDegree": 3,
+    "requiredComplementDegree": 0,
+    "uniqueK": -1,
+    "map": "d(q)=-q",
+    "alignmentExists": true,
+    "causalGenerationClaim": false
+  },
+  "fullSelectedChargeTable": {
+    "Q_L": 0,
+    "u_R": -1,
+    "d_R": 1,
+    "L_L": -2,
+    "e_R": -1,
+    "nu_R": -3
+  },
+  "requiredUniversalSelectedDegree": 3,
+  "integerKSolutionsForFullTable": [],
+  "obstructions": [
+    "tensor-unit preservation forces d(0)=0, so selected Q_L cannot map to O(3)",
+    "opposite charges u_R and d_R map to opposite bundle degrees under every homomorphism",
+    "the B-3L_i charge table presupposes three labelled families and a selected projector",
+    "the O(0) anomaly spectator is an independent opposite-six-dimensional-chirality Weyl complex, not the unselected-family sterile complement"
+  ],
+  "smallestRepair": {
+    "newGrading": "g_family(parent)=1 and g_family(spectator)=0 for every Standard Model representation",
+    "degreeMap": "d(g)=3*g",
+    "derivedFromCurrentFureyOrGaugeData": false,
+    "interpretation": "a new universal family-generation grading, not the existing species-dependent U(1)_X charge"
+  },
+  "verdict": {
+    "sterileDictionaryExact": true,
+    "fullA6BundleSplitDerived": false,
+    "a6Passed": false,
+    "physicalAdmissionChanged": false
+  }
+}
