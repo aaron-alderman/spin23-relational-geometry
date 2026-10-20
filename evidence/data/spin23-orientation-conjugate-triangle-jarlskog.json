@@ -1,0 +1,44 @@
+{
+  "schema": "spin23.orientation-conjugate-triangle-jarlskog/1",
+  "documentId": 1476,
+  "date": "2026-10-20",
+  "status": "exact-noncommuting-two-sector-construction-with-isospectral-boundary",
+  "operators": {
+    "Hplus": "H(a,b,c,delta)",
+    "Hminus": "H(a,b,c,-delta)=conjugate(Hplus)",
+    "sectorPositiveForms": ["K_u=mu_u*I+beta_u*Hplus", "K_d=mu_d*I+beta_d*Hminus"],
+    "positivityAvailableByLargeShift": true
+  },
+  "commutator": {
+    "determinant": "-8*i*(beta_u*beta_d)^3*c^4*(a^2-b^2)*sin(delta)^2*sin(2*delta)",
+    "genericNonzero": true,
+    "zeroConditions": ["a=b or a=-b", "c=0", "sin(delta)=0", "sin(2*delta)=0", "beta_u*beta_d=0"]
+  },
+  "explicitWitness": {
+    "a": 2,
+    "b": 3,
+    "c": 5,
+    "delta": "pi/4",
+    "beta_u": 1,
+    "beta_d": 1,
+    "commutatorDeterminant": "12500*i"
+  },
+  "jarlskog": {
+    "nonzeroWhenSpectraNondegenerate": true,
+    "requiresIndependentSecondArbitraryMatrix": false,
+    "source": "orientation conjugation plus triangle anisotropy"
+  },
+  "constraints": {
+    "HplusAndHminusIsospectral": true,
+    "affineSectorSpectra": "lambda_d=mu_d+beta_d*lambda, lambda_u=mu_u+beta_u*lambda",
+    "mixingParameterDimensionAtMost": 3,
+    "genericCKMMatrixCovered": false,
+    "massHierarchiesDerived": false,
+    "heldOutMixingRelationStillRequired": true
+  },
+  "interpretation": {
+    "orientationExchangeCouldBeGeneralizedCP": true,
+    "physicalSectorAssignmentDerived": false,
+    "physicalAdmissionChanged": false
+  }
+}
