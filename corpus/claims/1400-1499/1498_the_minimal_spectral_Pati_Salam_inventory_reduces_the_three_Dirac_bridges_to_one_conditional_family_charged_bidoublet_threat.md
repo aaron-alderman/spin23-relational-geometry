@@ -229,6 +229,8 @@ leading UV problem:
 The highest-value next calculation is now the charge-three bidoublet
 multiplicity and portal audit in the family-extended finite calculus.
 
+[Claim 1499](1499_the_family_charged_bidoublet_is_exactly_the_forbidden_Dirac_cross_one_form_so_the_central_mask_closes_all_minimal_tree_leakage.md) completes that support audit conditionally: the charged bidoublet one-form is exactly the forbidden Dirac \(P-N\) block, so a physically realized central mask removes the scalar bridge as well.
+
 ## Reproduction
 
 ~~~powershell

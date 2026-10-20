@@ -1,0 +1,24 @@
+{
+  "schema": "spin23.charged-bidoublet-dirac-support-equivalence/1",
+  "date": "2026-10-20",
+  "basis": ["L_P", "L_N", "R_P", "R_N"],
+  "oneForm": "p_P [D,p_N]",
+  "theorem": {
+    "chargedBidoubletOneFormExistsIffDiracCrossSupportExists": true,
+    "matrixIdentity": "(p_P[D,p_N])_(L_P,R_N) = D_(L_P,R_N)",
+    "generalizedFluctuationCannotCreateAbsentCrossSupport": true
+  },
+  "portalInterpretation": {
+    "yukawaPortal": "L_P Phi_(P-N) nu_N^c",
+    "spectralOrigin": "the same finite-Dirac P-N block whose represented one-form is Phi_(P-N)",
+    "scalarMixingAloneInsufficient": true
+  },
+  "minimalTreeConclusion": {
+    "rightFermionBridge": "present but Schur-correlated",
+    "leftFermionBridge": "absent without new heavy vectorlike matter",
+    "chargedBidoubletBridge": "absent when the central Dirac support mask holds",
+    "allIndependentLeakageTopologiesClosedConditionally": true
+  },
+  "boundary": "this closure is conditional on a physical family-extended spectral triple realizing the central support mask; adding non-spectral elementary scalars or new heavy matter reopens the audit",
+  "verdict": "within the minimal spectral inventory, the last scalar threat is not a new condition but the original Dirac null-mask condition in one-form language"
+}
