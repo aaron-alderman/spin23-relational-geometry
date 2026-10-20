@@ -256,6 +256,8 @@ therefore no longer whether \(A_{(2)}\) fills the null block. It is whether
 the sector-tagged zero is protected against the **full symmetry-allowed
 radiative operator basis** in a physical embedding.
 
+[Claim 1495](1495_the_charge_three_operator_dimension_moat_is_renormalizable_for_Majorana_sewing_but_the_leading_Dirac_texture_lift_forgets_the_breaking_vev.md) begins that audit. The required cross-Majorana sewing is dimension four, while the first charge-compatible Dirac leakage is dimension five. This gives renormalizable protection but not exact EFT protection.
+
 ## Reproduction
 
 ~~~powershell

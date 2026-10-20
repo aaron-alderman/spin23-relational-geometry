@@ -295,6 +295,8 @@ earlier for family parities.
 
 ## 5. Charge-three flavon repair
 
+> **Operator-dimension refinement (20 October 2026).** [Claim 1495](../1400-1499/1495_the_charge_three_operator_dimension_moat_is_renormalizable_for_Majorana_sewing_but_the_leading_Dirac_texture_lift_forgets_the_breaking_vev.md) shows that one flavon insertion makes the cross-Majorana operator dimension four but the cross-Dirac operator dimension five. The resulting moat protects the renormalizable symmetric-phase theory, although the allowed dimension-five Dirac term lifts the seesaw texture by \(O(v^2/\Lambda)\), with the common flavon VEV cancelling at leading order.
+
 Introduce a Standard-Model-singlet flavon \(S\) with
 
 \[

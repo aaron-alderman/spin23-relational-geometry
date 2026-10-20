@@ -1,0 +1,20 @@
+{
+  "schema": "spin23.operator-dimension-moat/1",
+  "date": "2026-10-20",
+  "fieldDimensions": {"WeylFermion": 1.5, "Higgs": 1, "chargeThreeFlavon": 1},
+  "operatorAudit": {
+    "crossMajorana": {"schematic": "S nuP^c nuN^c", "baseChargeMagnitude": 3, "flavonInsertions": 1, "minimumDimension": 4, "powerCountingRenormalizable": true},
+    "crossDirac": {"schematic": "S L_P H nuN^c / Lambda", "baseChargeMagnitude": 3, "flavonInsertions": 1, "minimumDimension": 5, "powerCountingRenormalizable": false},
+    "selectedMajorana": {"schematic": "S^2 nuP^c nuP^c / Lambda", "baseChargeMagnitude": 6, "flavonInsertions": 2, "minimumDimension": 5, "powerCountingRenormalizable": false}
+  },
+  "dimensionGap": 1,
+  "leadingTextureLift": {
+    "inputs": ["d_P = y_P v", "r_N = c_D v v_S / Lambda", "M_R(P,N) = lambda_M v_S"],
+    "formula": "delta(m_nu)_(PP) = -2 y_P c_D v^2 / (lambda_M Lambda) + O(r_N^2)",
+    "familyBreakingVevExponent": 0,
+    "interpretation": "the common charge-three VEV cancels between Dirac leakage and rank-restoring Majorana sewing"
+  },
+  "positiveResult": "the renormalizable symmetric-phase counterterm basis can contain the required Majorana sewing without containing the dangerous Dirac cross Yukawa",
+  "boundary": "the gauge-invariant dimension-five Dirac operator is allowed in the EFT and at heavy thresholds; exact protection still requires an incidence rule, Ward identity or UV matching condition that sets its coefficient to zero",
+  "verdict": "operator dimension supplies a suppression moat, not an exact texture-zero theorem"
+}
