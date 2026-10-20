@@ -1,0 +1,59 @@
+{
+  "schema": "spin23.democratic-triangle-cabibbo-obstruction/1",
+  "documentId": 1484,
+  "date": "2026-10-20",
+  "status": "exact-first-order-neighbourhood-obstruction-and-bounded-general-holonomy-audits",
+  "targets": {
+    "upMassSquaredLocation": 0.000013577502786208545,
+    "downMassSquaredLocation": 0.0003497378191729099,
+    "downToUpRatio": 25.758626212778893,
+    "Vus": 0.22501,
+    "asymptoticVusLowerBound": 0.7071067811865476
+  },
+  "democraticLimit": {
+    "shape": [1, 1, 1],
+    "flux": 0,
+    "upSpectrum": [0, 3, 3],
+    "downSpectrum": ["2-eta", "2-eta", "2+2eta"],
+    "commonThirdGenerationState": "(1,1,1)/sqrt(3)",
+    "upSlope": "decreasing",
+    "downSlope": "increasing"
+  },
+  "doubletExpansion": {
+    "chart": "c=1, a=1+x, b=1+y, delta=t",
+    "upBloch": ["-sqrt(3)y/2", "sqrt(3)t/3", "x-y/2"],
+    "downBloch": ["sqrt(3)(2eta-1)y/6", "sqrt(3)eta t/3", "(1-2eta)x/3+(2eta-1)y/6"],
+    "edgeScale": "(1-2eta)/3",
+    "fluxScale": "eta",
+    "upLocation": "2|u|/3+O(epsilon^2)",
+    "downLocation": "2|d|/(3eta)+O(epsilon^2)",
+    "etaUpperBound": 0.012614177441817899,
+    "blochDotSignOnFeasibleLimit": "positive",
+    "liminfVus": ">=1/sqrt(2)"
+  },
+  "generalHolonomyRootedAudit": {
+    "seed": 1483,
+    "sampledShapeFluxPairs": 6000,
+    "exactUpRoots": 7980,
+    "exactDownContinuations": 11970,
+    "entrywisePhasorIntervalPasses": 23,
+    "phaseSamplesPerPass": 3000,
+    "bestMeanSquaredLogScore": 1.8917235181381091,
+    "bestObservables": {"Vus": 0.275979889, "Vcb": 0.010716111, "Vub": 0.0382290985, "absoluteJarlskog": 0.0000187586034},
+    "globalMinimumClaimed": false
+  },
+  "nearDemocraticGlobalAudit": {
+    "independentSeeds": [14832, 14833, 14834],
+    "bestMeanSquaredLogScore": 0.43683199365900954,
+    "bestObservables": {"upLocation": 0.0000134541874, "downLocation": 0.000347678274, "Vus": 0.993993867, "Vcb": 0.0449614991, "Vub": 0.00659579741, "absoluteJarlskog": 0.0000232972235},
+    "globalMinimumClaimed": false
+  },
+  "verdict": {
+    "democraticMiddleExplainsBothHierarchyLimits": true,
+    "commonThirdGenerationAligned": true,
+    "sharedHolonomyLightDoubletLimitExcludedByVus": true,
+    "allGeneralHolonomyExcluded": false,
+    "nextTypedFreedom": "sector-character action on the shared connection or one derived noncentral A2 intertwiner",
+    "physicalAdmissionChanged": false
+  }
+}
