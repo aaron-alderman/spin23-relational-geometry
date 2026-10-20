@@ -128,6 +128,13 @@ physical endpoint axis.  Bounded searches found the endpoint axes with
 (\kappa<0); the middle axis and all tested (kappa>0) branches did not
 converge, but that is not a certified global exclusion.
 
+The subsequent [type audit](1488_the_marked_ckm_witness_is_capacity_not_a_derived_quark_gauge_orbit.md)
+adds a sharper qualification. The anomaly-safe (I-3P_alpha) generator is
+derived in the lepton-family part of (B-3L_alpha), not as a down-quark
+operator, and a common gauge action on the weak doublet cancels from CKM.
+Its use here must therefore be read as an effective quark Yukawa spurion
+whose microscopic origin remains to be constructed.
+
 The join is highly sensitive.  In the chosen solver coordinates its
 Jacobian condition number is (1.77\times10^8), reflecting the nearly
 degenerate democratic seam.  The small quantities
