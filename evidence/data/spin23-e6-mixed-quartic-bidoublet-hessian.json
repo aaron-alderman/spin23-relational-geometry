@@ -1,0 +1,52 @@
+{
+  "schema": "spin23.e6-mixed-quartic-bidoublet-hessian/1",
+  "date": "2026-10-20",
+  "source": {
+    "paper": "https://arxiv.org/abs/1605.05920",
+    "programDoi": "10.17632/tk3xtvsd7b.1",
+    "archiveFilename": "E6Tensors.tar.gz",
+    "archiveSha256": "1d0f48f46ede83ca8eed1bfaf0788acc741bfefe022d0fea008d47857b825d3a",
+    "basisFile": "E6Tensors/e6tensors_full/E6Tensors.m",
+    "basisConvention": "FundRep=(d1,D1,u1,d2,D2,u2,d3,D3,u3,nu,Hup,Hd0,s,ec,nuc,e,Hu0,Hdm,Dc1,Dc2,Dc3,uc1,uc2,uc3,dc1,dc2,dc3)"
+  },
+  "mixedQuartics": {
+    "factorized": "I1=(barpsi^mu psi_mu)(barS^sigma_tau S_sigma_tau)",
+    "nonfactorized": "I2=barpsi^mu psi_nu barS^nu_tau S_mu_tau"
+  },
+  "relevantComponents": {
+    "fundamentalSinglet": {"name": "s", "indexOneBased": 13},
+    "fundamentalDoublets": [
+      {"name": "Hu0", "indexOneBased": 17, "pairedSymmetricComponent": 291},
+      {"name": "Hd0", "indexOneBased": 12, "pairedSymmetricComponent": 311}
+    ],
+    "symmetricSinglet": {
+      "component": 229,
+      "nonzeroEntries": [[13, 13, "1"]
+      ]
+    },
+    "symmetricDoubletRelevantEntries": [
+      {"component": 291, "entries": [[13, 17, "-1/sqrt(10)"], [17, 13, "-1/sqrt(10)"]]},
+      {"component": 311, "entries": [[12, 13, "-1/sqrt(10)"], [13, 12, "-1/sqrt(10)"]]}
+    ]
+  },
+  "hessian": {
+    "factorizedMixedEntries": {"Hu0_chi291": 0, "Hd0_chi311": 0},
+    "nonfactorizedMixedEntries": {
+      "Hu0_chi291": "-1/sqrt(10)",
+      "Hd0_chi311": "-1/sqrt(10)",
+      "Hu0_chi311": "0",
+      "Hd0_chi291": "0"
+    },
+    "massTerms": "-(lambda2/sqrt(10))[(v* conjugate(w)) conjugate(Hu0) chi291 + (v* conjugate(w)) conjugate(Hd0) chi311 + h.c.]",
+    "offDiagonalEntry": "B=-lambda2*v*conjugate(w)/sqrt(10)"
+  },
+  "decision": {
+    "genericNonzeroSingletVevs": true,
+    "genericNonzeroNonfactorizedQuartic": true,
+    "genericBidoubletMixingNonzero": true,
+    "pureSymmetricParentLightBidoubletGeneric": false,
+    "settingLambda2ZeroIsEnforcedByCommutingAbelianSelector": false,
+    "minimalNonsupersymmetricCommutingAbelianRouteClosedGenerically": true,
+    "portalWardLineDerived": false
+  }
+}
