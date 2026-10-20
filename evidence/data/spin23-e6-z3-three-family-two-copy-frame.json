@@ -1,0 +1,55 @@
+{
+  "schema": "spin23.e6-z3-three-family-two-copy-frame/1",
+  "date": "2026-10-20",
+  "familyAction": {
+    "group": "Z3",
+    "omega": "exp(2*pi*i/3)",
+    "matterAction": "F -> P F, with P the three-cycle permutation matrix",
+    "identityYukawa": "Y0=identity_3/sqrt(3)",
+    "clockYukawa": "Y1=diag(1,omega,omega^2)/sqrt(3)",
+    "covariance": [
+      "P^T Y0 P=Y0",
+      "P^T Y1 P=omega Y1"
+    ]
+  },
+  "scalarCopies": {
+    "S0Character": "1",
+    "S1Character": "omega^2",
+    "S0Role": "symmetric-singlet VEV and exotic-singlet mass",
+    "S1Role": "copy-orthogonal light Dirac/Majorana portal",
+    "fundamental27HCharacter": "1",
+    "vevPreservesZ3": true,
+    "crossCopyBilinearCharacter": "omega^2",
+    "fundamentalLightCopyBilinearCharacter": "omega^2",
+    "crossMixingForbidden": true
+  },
+  "frameIdentities": {
+    "scalarCopyGram": [[1, 0], [0, 1]],
+    "familyWavefunctionSum": "Y0 Y0^dagger+Y1 Y1^dagger=(2/3) identity_3",
+    "familyRays": [
+      ["1/sqrt(3)", "1/sqrt(3)"],
+      ["1/sqrt(3)", "omega/sqrt(3)"],
+      ["1/sqrt(3)", "omega^2/sqrt(3)"]
+    ],
+    "rayFrameOperator": [[1, 0], [0, 1]],
+    "equiangularSquaredNorm": "2/3",
+    "equiangularCrossMagnitude": "1/3"
+  },
+  "e6MassRank": {
+    "fundamentalSingletYukawaMatrix": "identity_3",
+    "symmetricSingletYukawaMatrix": "Y0",
+    "rankPerFamily": 11,
+    "totalExoticRank": 33,
+    "totalKernelDimension": 48,
+    "survivingChiral16s": 3
+  },
+  "decision": {
+    "observedThreeFamilyMultiplicityClosesOneLoopCopyGram": true,
+    "residualZ3ProtectsOrthogonalPortalCopy": true,
+    "pureGaugeMixingIntoPortalCopy": false,
+    "oneLoopYukawaCopyRotation": false,
+    "fullScalarPotentialVacuumDerived": false,
+    "normalizedPortalWardLineDerived": false,
+    "routeStatus": "reopened at symmetry, rank, gauge-loop, and Yukawa-wavefunction gates"
+  }
+}
