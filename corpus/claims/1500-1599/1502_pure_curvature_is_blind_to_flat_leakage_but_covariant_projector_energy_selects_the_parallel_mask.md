@@ -179,7 +179,9 @@ introduce an accidental \(U(2)\) relation symmetry not present in the sourced
 model; the fixed typed-bundle reading avoids that claim.
 
 **Source boundary:** matter currents coupled linearly to the off-diagonal
-connection can shift the minimum away from zero.
+connection can shift the minimum away from zero. Claim 1503 identifies the
+canonical projector reflection that forbids such odd terms in its unbroken
+phase, but also shows that a positive mass alone gives only suppression.
 
 **Quantum boundary:** positivity at tree level is not yet a proof of
 radiative stability or absence of symmetry-allowed counterterms.

@@ -1,0 +1,36 @@
+{
+  "schema": "spin23.sector-reflection-leakage-naturalness/1",
+  "date": "2026-10-20",
+  "sectorInvolution": {
+    "projector": "Z_M=diag(0,1)",
+    "reflection": "Gamma=I-2 Z_M=diag(1,-1)",
+    "action": "K maps to Gamma K Gamma",
+    "evenPart": "diag(a,c)",
+    "oddPart": "[[0,b],[b,0]]"
+  },
+  "theorem": {
+    "commonChargeForbidsLinearSource": false,
+    "reason": "the common charge generator 3I_2 acts trivially by conjugation on the off-diagonal connection",
+    "sectorReflectionForbidsOddLeakageTerms": true,
+    "positiveMassAloneGuaranteesExactMaskWithSources": false,
+    "stableMaskConditions": ["the action and state preserve Gamma", "the leakage Hessian is positive", "no Gamma-odd background source condenses"]
+  },
+  "polynomialAudit": {
+    "oneRealLeakageCoordinateDegreesThroughQuartic": [0,1,2,3,4],
+    "evenMonomialsThroughQuartic": 3,
+    "oddMonomialsForbidden": 2,
+    "allowedDegrees": [0,2,4],
+    "forbiddenDegrees": [1,3]
+  },
+  "sourceWitness": {
+    "potential": "V=m^2 |B|^2+2 Re(J* B)",
+    "minimum": "B=-J/m^2",
+    "sample": {"mSquared": 5, "source": [2,-3], "minimum": [-0.4,0.6], "minimumEnergy": -2.6}
+  },
+  "phaseBoundary": {
+    "positiveQuadratic": "Gamma-preserving vacuum B=0 when sources vanish",
+    "negativeQuadratic": "Gamma can break spontaneously and produce two leakage vacua in a stabilizing even quartic",
+    "oddMatterState": "a Gamma-odd current can induce nonzero B without explicitly breaking a covariant full theory"
+  },
+  "verdict": "the projector supplies its own minimal Z2 naturalness symmetry, but an exact mask requires the unbroken positive-mass phase or a hard typed-bundle restriction"
+}
