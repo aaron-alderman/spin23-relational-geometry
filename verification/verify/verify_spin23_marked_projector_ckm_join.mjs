@@ -1,0 +1,34 @@
+import assert from "node:assert/strict";
+import {readFileSync} from "node:fs";
+import {fileURLToPath} from "node:url";
+import path from "node:path";
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"../..");
+const data=JSON.parse(readFileSync(path.join(root,"evidence/data/spin23-marked-projector-ckm-join.json"),"utf8"));
+assert.equal(data.documentId,1487);
+const C=(re=0,im=0)=>({re,im}),add=(x,y)=>C(x.re+y.re,x.im+y.im),sub=(x,y)=>C(x.re-y.re,x.im-y.im),mul=(x,y)=>C(x.re*y.re-x.im*y.im,x.re*y.im+x.im*y.re),conj=x=>C(x.re,-x.im),scale=(x,s)=>C(x.re*s,x.im*s),abs2=x=>x.re*x.re+x.im*x.im;
+const cross=(u,v)=>[sub(mul(u[1],v[2]),mul(u[2],v[1])),sub(mul(u[2],v[0]),mul(u[0],v[2])),sub(mul(u[0],v[1]),mul(u[1],v[0]))];
+const norm=v=>Math.sqrt(v.reduce((s,x)=>s+abs2(x),0));
+const detH=A=>A[0][0].re*A[1][1].re*A[2][2].re+2*mul(mul(A[0][1],A[1][2]),A[2][0]).re-A[0][0].re*abs2(A[1][2])-A[1][1].re*abs2(A[0][2])-A[2][2].re*abs2(A[0][1]);
+function eigh(A){
+ const q=(A[0][0].re+A[1][1].re+A[2][2].re)/3;
+ const B=A.map((r,i)=>r.map((z,j)=>sub(z,C(i===j?q:0))));
+ const p=Math.sqrt((B.reduce((s,r)=>s+r.reduce((t,z)=>t+abs2(z),0),0))/6);
+ const N=B.map(r=>r.map(z=>scale(z,1/p)));const rr=Math.max(-1,Math.min(1,detH(N)/2));const ph=Math.acos(rr)/3;
+ const vals=[q+2*p*Math.cos(ph+2*Math.PI/3),q+2*p*Math.cos(ph+4*Math.PI/3),q+2*p*Math.cos(ph)].sort((x,y)=>x-y);
+ const vecs=vals.map(l=>{const M=A.map((r,i)=>r.map((z,j)=>sub(z,C(i===j?l:0))));const cs=[cross(M[0],M[1]),cross(M[0],M[2]),cross(M[1],M[2])];let v=cs.sort((x,y)=>norm(y)-norm(x))[0],n=norm(v);return v.map(z=>scale(z,1/n));});
+ return {values:vals,vectors:Array.from({length:3},(_,i)=>vecs.map(v=>v[i]))};
+}
+const w=data.witness,a=w.a,b=w.b,c=w.c,d=w.delta,e=w.eta,k=w.kappa,phi=w.phi;
+const D=[a+c,a+b,b+c],H=[[C(),C(a),C(c*Math.cos(d),-c*Math.sin(d))],[C(a),C(),C(b)],[C(c*Math.cos(d),c*Math.sin(d)),C(b),C()]];
+const X=[-2,1,1];
+const Ku=D.map((x,i)=>D.map((_,j)=>i===j?C(x):scale(H[i][j],-1)));
+const Kd=D.map((x,i)=>D.map((_,j)=>i===j?C(x+k*X[i]):scale(conj(H[i][j]),e)));
+const up=eigh(Ku),dn=eigh(Kd),ratio=v=>(v[1]-v[0])/(v[2]-v[0]);
+const ru=1-ratio(up.values),rd=ratio(dn.values);assert.ok(Math.abs(ru-w.upMassSquaredLocation)<3e-9);assert.ok(Math.abs(rd-w.downMassSquaredLocation)<3e-9);
+const Uu=up.vectors.map(r=>[r[2],r[1],r[0]]),Ud=dn.vectors,P=X.map(x=>C(Math.cos(phi*x),Math.sin(phi*x)));
+const V=Array.from({length:3},(_,i)=>Array.from({length:3},(_,j)=>{let z=C();for(let n=0;n<3;n++)z=add(z,mul(mul(conj(Uu[n][i]),P[n]),Ud[n][j]));return z;}));
+const mag=V.map(r=>r.map(z=>Math.sqrt(abs2(z))));const J=Math.abs(mul(mul(V[0][0],V[1][1]),mul(conj(V[0][1]),conj(V[1][0]))).im);
+for(let i=0;i<3;i++)for(let j=0;j<3;j++)assert.ok(Math.abs(mag[i][j]-w.ckmMagnitudes[i][j])<3e-7);
+assert.ok(Math.abs(mag[0][1]-w.Vus)<3e-7&&Math.abs(mag[1][2]-w.Vcb)<3e-7&&Math.abs(mag[0][2]-w.Vub)<3e-7&&Math.abs(J-w.absoluteJarlskog)<3e-8);
+assert.equal(data.localIsolationAudit.fullRank,true);assert.ok(Math.min(...data.localIsolationAudit.jacobianSingularValues)>0);assert.equal(data.interpretation.continuousParameterCountSaturated,true);assert.equal(data.interpretation.heldOutContinuousPrediction,false);assert.equal(data.interpretation.physicalAdmissionChanged,false);
+console.log("PASS 1487: the six-parameter marked-projector packet reproduces both hierarchy ratios and four independent CKM invariants; its local Jacobian is full rank but ill-conditioned, and no held-out continuous prediction is claimed.");

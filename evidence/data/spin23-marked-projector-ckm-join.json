@@ -1,0 +1,55 @@
+{
+  "schema": "spin23.marked-projector-ckm-join/1",
+  "documentId": 1487,
+  "date": "2026-10-20",
+  "status": "constructive-isolated-numerical-join-with-parameter-count-saturation",
+  "operatorPacket": {
+    "markedGenerator": "X1=I-3P1=diag(-2,1,1)",
+    "upOperator": "Ku=D-H(delta)",
+    "downOperator": "Kd=D+eta H(-delta)+kappa X1",
+    "basisOrbit": "Uphi=exp(i phi X1)",
+    "upSlope": "decreasing",
+    "downSlope": "increasing",
+    "continuousParameterCount": 6,
+    "targetCount": 6
+  },
+  "witness": {
+    "a": 0.9999995851507903,
+    "b": 1.000019854192057,
+    "c": 1,
+    "eta": 0.0005703109579622935,
+    "kappa": -0.000006953881369408575,
+    "delta": 0.000006049203401201914,
+    "phi": -0.029700813213397174,
+    "upMassSquaredLocation": 0.000013577502787631701,
+    "downMassSquaredLocation": 0.0003497378191424648,
+    "Vus": 0.22500999994655022,
+    "Vcb": 0.04183000000003852,
+    "Vub": 0.0037319999995771916,
+    "absoluteJarlskog": 0.00003114999998855145,
+    "ckmMagnitudes": [[0.9743493070249791,0.22500999994655022,0.0037319999995771916],[0.2248774143158052,0.9734887773521761,0.041830000000038524],[0.008577670463536018,0.04111082939347063,0.9991177724752975]]
+  },
+  "localIsolationAudit": {
+    "solverCoordinates": ["log(a)","log(b)","log(eta)","log(-kappa)","log(delta)","phi"],
+    "jacobianSingularValues": [3711252.8805028484,902998.4116261266,63.972232981137395,1.3045537544022465,0.5424382888601379,0.020997671167748345],
+    "jacobianDeterminant": -3185535804683.679,
+    "jacobianConditionNumber": 176745928.19622764,
+    "fullRank": true,
+    "wellConditioned": false
+  },
+  "boundedSearchAudit": {
+    "exactJoinSeeds": [14880,14882,14890,14892,14893],
+    "endpointReflectedCopiesFound": true,
+    "middleAxisExactJoinFound": false,
+    "positiveKappaExactJoinFound": false,
+    "globalExclusionClaimedForFailedBranches": false
+  },
+  "interpretation": {
+    "continuousParameterCountSaturated": true,
+    "heldOutContinuousPrediction": false,
+    "fullCkmMagnitudeMatrixIsUnitarityConsistencyNotNinePredictions": true,
+    "markedAxisDerivedAsOrbitButSpecificPhysicalAxisSelected": false,
+    "nextGate": "derive the fiber-to-projector map and one coefficient relation, then hold out one fitted invariant",
+    "physicalAdmissionChanged": false
+  }
+}
