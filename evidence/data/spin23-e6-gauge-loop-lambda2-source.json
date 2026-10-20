@@ -1,0 +1,91 @@
+{
+  "schema": "spin23.e6-gauge-loop-lambda2-source/1",
+  "date": "2026-10-20",
+  "sources": {
+    "tensorPaper": "https://arxiv.org/abs/1605.05920",
+    "programDoi": "10.17632/tk3xtvsd7b.1",
+    "archiveFilename": "E6Tensors.tar.gz",
+    "archiveSha256": "1d0f48f46ede83ca8eed1bfaf0788acc741bfefe022d0fea008d47857b825d3a",
+    "generatorFile": "E6Tensors/e6tensors_full/E6gen.m",
+    "tensorFile": "E6Tensors/e6tensors_full/E6Tensors.m",
+    "generalRgePaper": "https://arxiv.org/abs/1809.06797",
+    "generalRgeEquations": [24, 69]
+  },
+  "generatorAudit": {
+    "count": 78,
+    "fundamentalDimension": 27,
+    "normalization": "tr(T_A T_B)=3 delta_AB",
+    "maximumHermiticityResidual": 0,
+    "maximumDiagonalNormalizationResidual": 1.3322676295501878e-15,
+    "maximumOffDiagonalTraceResidual": 5.551115123125783e-17
+  },
+  "representations": {
+    "fundamentalAction": "T_A psi",
+    "symmetricAction": "L_A(S)=T_A S+S T_A^T",
+    "gaugeQuarticTensor": "K=sum_AB (psi^dagger {T_A,T_B} psi) tr[S^dagger {L_A,L_B} S]"
+  },
+  "canonicalDirections": {
+    "fundamentalSinglet": {"name": "s", "indexOneBased": 13},
+    "symmetricSinglet": {"component": 229, "entries": [[13, 13, "1"]]},
+    "upChannel": {
+      "fundamental": {"name": "Hu0", "indexOneBased": 17},
+      "symmetricComponent": 291,
+      "symmetricEntries": [
+        [1, 25, "-(5+sqrt(5))/(20*sqrt(2))"],
+        [4, 26, "-(5+sqrt(5))/(20*sqrt(2))"],
+        [7, 27, "-(5+sqrt(5))/(20*sqrt(2))"],
+        [13, 17, "-1/sqrt(10)"],
+        [14, 16, "(15-sqrt(5))/(20*sqrt(2))"]
+      ],
+      "symmetricEntriesAreMirrored": true
+    },
+    "downChannel": {
+      "fundamental": {"name": "Hd0", "indexOneBased": 12},
+      "symmetricComponent": 311,
+      "symmetricEntries": [
+        [3, 22, "-(5+sqrt(5))/(20*sqrt(2))"],
+        [6, 23, "-(5+sqrt(5))/(20*sqrt(2))"],
+        [9, 24, "-(5+sqrt(5))/(20*sqrt(2))"],
+        [10, 15, "(15-sqrt(5))/(20*sqrt(2))"],
+        [12, 13, "-1/sqrt(10)"]
+      ],
+      "symmetricEntriesAreMirrored": true
+    }
+  },
+  "contraction": {
+    "orderedGeneratorPairsPerChannel": 32,
+    "contributionClasses": [
+      {"multiplicity": 8, "value": "(-5+3*sqrt(5))/(8*sqrt(10))"},
+      {"multiplicity": 24, "value": "(-5-sqrt(5))/(8*sqrt(10))"}
+    ],
+    "upOrderedPairs": [
+      [14,17],[14,18],[15,17],[15,18],[17,14],[17,15],[18,14],[18,15],
+      [29,31],[29,58],[31,29],[31,56],[38,40],[38,67],[40,38],[40,65],
+      [47,49],[47,76],[49,47],[49,74],[56,31],[56,58],[58,29],[58,56],
+      [65,40],[65,67],[67,38],[67,65],[74,49],[74,76],[76,47],[76,74]
+    ],
+    "downOrderedPairs": [
+      [9,20],[9,21],[10,20],[10,21],[20,9],[20,10],[21,9],[21,10],
+      [25,30],[25,57],[30,25],[30,52],[34,39],[34,66],[39,34],[39,61],
+      [43,48],[43,75],[48,43],[48,70],[52,30],[52,57],[57,25],[57,52],
+      [61,39],[61,66],[66,34],[66,61],[70,48],[70,75],[75,43],[75,70]
+    ],
+    "mixedHessian": {
+      "Hu0_chi291": "-2*sqrt(10)",
+      "Hd0_chi311": "-2*sqrt(10)"
+    },
+    "singletBackgroundValue": "208/9",
+    "invariantDecomposition": {
+      "I1": "28/9",
+      "I2": "20"
+    }
+  },
+  "decision": {
+    "pureGaugeOneLoopProjectsOntoI2": true,
+    "lambda2ZeroSurfaceGaugeRgeClosed": false,
+    "commutingAbelianSelectorSufficient": false,
+    "minimalNonsupersymmetricInertRouteTechnicallyNatural": false,
+    "overallLoopNormalizationConventionDependent": true,
+    "nonzeroProjectionConventionIndependent": true
+  }
+}
