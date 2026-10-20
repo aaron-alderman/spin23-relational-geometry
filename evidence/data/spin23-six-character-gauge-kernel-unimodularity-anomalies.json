@@ -1,0 +1,102 @@
+{
+  "schema": "spin23.six-character-gauge-kernel-unimodularity-anomalies/1",
+  "date": "2026-10-20",
+  "scope": "the declared twelve simple chiral C^6 bimodule sectors of claim 1529, with unit multiplicity and no sourced Pati-Salam tensor factors",
+  "characterOrder": ["P", "I", "N", "S", "T", "U"],
+  "centralGaugeAction": {
+    "rule": "a central infinitesimal theta acts on e_ab with charge theta_a-theta_b",
+    "twelveStateChargeVectors": {
+      "PN": [1, 0, -1, 0, 0, 0],
+      "NP": [-1, 0, 1, 0, 0, 0],
+      "IN": [0, 1, -1, 0, 0, 0],
+      "NI": [0, -1, 1, 0, 0, 0],
+      "IP": [-1, 1, 0, 0, 0, 0],
+      "PI": [1, -1, 0, 0, 0, 0],
+      "PS": [1, 0, 0, -1, 0, 0],
+      "SP": [-1, 0, 0, 1, 0, 0],
+      "TP": [-1, 0, 0, 0, 1, 0],
+      "PT": [1, 0, 0, 0, -1, 0],
+      "TU": [0, 0, 0, 0, 1, -1],
+      "UT": [0, 0, 0, 0, -1, 1]
+    },
+    "incidenceRank": 5,
+    "continuousKernel": "span((1,1,1,1,1,1))",
+    "effectiveCentralGaugeAlgebra": "u(1)^6/u(1)_diag is isomorphic to u(1)^5"
+  },
+  "unimodularity": {
+    "convention": "Tr_H pi(theta)=0 on the declared twelve-state left representation",
+    "leftCharacterMultiplicities": [4, 2, 2, 1, 2, 1],
+    "condition": "4 theta_P+2 theta_I+2 theta_N+theta_S+2 theta_T+theta_U=0",
+    "diagonalTrace": 12,
+    "effect": "the trace hyperplane is transverse to the trivially acting diagonal and therefore gives one unique representative of every effective charge class; it does not reduce the effective continuous dimension below five",
+    "gaugeLiftTrace": "Tr_H(pi(theta)-pi_o(theta))=0 identically because every e_ab is paired with e_ba, so imposing trace on the lifted charge itself would be vacuous"
+  },
+  "anomalyConvention": {
+    "leftHandedRepresentatives": ["PN", "NI", "IP", "SP", "PT", "TU"],
+    "chargeVectors": [
+      [1, 0, -1, 0, 0, 0],
+      [0, -1, 1, 0, 0, 0],
+      [-1, 1, 0, 0, 0, 0],
+      [-1, 0, 0, 1, 0, 0],
+      [1, 0, 0, 0, -1, 0],
+      [0, 0, 0, 0, 1, -1]
+    ],
+    "normalization": "the six gamma=+1 representatives give the declared chiral normalization; Tr_H(gamma Q^n) on all twelve states is twice this for odd n and has the same zero locus"
+  },
+  "mixedGravitationalAnomaly": {
+    "covector": [0, 0, 0, 1, 0, -1],
+    "polynomial": "A_grav(theta)=theta_S-theta_U",
+    "fullFiveDirectionGaugeAlgebraAnomalyFree": false
+  },
+  "cubicGaugeAnomaly": {
+    "definition": "T_abc=sum_left v_a v_b v_c",
+    "nonzeroSymmetricComponents": [
+      ["PPI", 1], ["PPN", -1], ["PPS", 1], ["PPT", -1],
+      ["PII", -1], ["PNN", 1], ["PSS", -1], ["PTT", 1],
+      ["IIN", 1], ["INN", -1], ["SSS", 1],
+      ["TTU", -1], ["TUU", 1], ["UUU", -1]
+    ],
+    "polynomial": "A_3(theta)=(P-N)^3+(N-I)^3+(I-P)^3+(S-P)^3+(P-T)^3+(T-U)^3",
+    "factorizedOnGravitationalKernelModuloDiagonal": "with P=0 and S=U, A_3=3[N I (I-N)+T S (S-T)]",
+    "fullFiveDirectionGaugeAlgebraAnomalyFree": false
+  },
+  "maximalSimultaneousAnomalyFreeSubspace": {
+    "unimodularBasis": [
+      [0, 1, 0, 0, -1, 0],
+      [-1, -1, 1, 1, 1, 1]
+    ],
+    "rawCharacterRelationsModuloDiagonal": ["theta_S=theta_U=theta_N", "theta_T=theta_P+theta_N-theta_I"],
+    "effectiveDimension": 2,
+    "chargePairing": "on this subspace the charges of (SP,PT,TU) are the negatives of (PN,NI,IP), respectively",
+    "mixedGravitationalTensor": "zero",
+    "allCubicAndMixedAbelianTensorComponents": "zero",
+    "maximality": "after A_grav=0 and quotienting the diagonal, the cubic is the smooth projective cubic surface F=NI(I-N)+TS(S-T) in P^3; a three-dimensional vector subspace would give a projective plane contained in that surface, forcing a linear factor and contradicting smoothness",
+    "singleDirectionBoundary": "additional isolated anomaly-free U(1) rays lie on the cubic zero locus, but they do not enlarge the displayed simultaneous anomaly-free linear gauge algebra"
+  },
+  "addedCharacterOnlySlice": {
+    "definition": "theta_P=theta_I=theta_N=0, so only the added S,T,U character phases are switched on before quotienting the diagonal",
+    "gravitationalCondition": "theta_S=theta_U",
+    "cubicOnGravitationalKernel": "A_3=3 theta_T theta_S (theta_S-theta_T)",
+    "anomalyFreeRays": [
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 1, 0, 1],
+      [0, 0, 0, 1, 1, 1]
+    ],
+    "maximalLinearDimensionInsideSlice": 1,
+    "interpretation": "nontrivial added-only U(1) directions exist, but no two-dimensional added-only plane is simultaneously anomaly-free"
+  },
+  "physicalDecision": {
+    "finiteLabelConsistency": "unchanged and SAT",
+    "gaugingAllEffectiveCentralDirections": "ANOMALOUS",
+    "largestExhibitedAndMaximalLinearAnomalyFreeCentralSubalgebra": "u(1)^2",
+    "unimodularityAloneCancelsAnomalies": false,
+    "sourcedPatiSalamGaugeTheory": false,
+    "minimalRepairOptions": [
+      "gauge only an anomaly-free subalgebra such as the displayed u(1)^2 and keep the other central label directions global or absent",
+      "supply additional chiral bimodule multiplicities whose linear and cubic tensors cancel the residual anomalies",
+      "supply a physical central extension or correspondence that selects the actual gauged combinations before anomaly evaluation"
+    ],
+    "reopeningDatum": "a physical lift fixing which center combinations are gauged, all fermion multiplicities and Pati-Salam tensor factors; any added spectrum must cancel both the mixed-gravitational covector and the complete symmetric cubic tensor"
+  },
+  "boundary": "The anomaly result is exact for the declared unit-multiplicity C^6 label spectrum. Tensoring sectors with physical colour, weak, family or generation multiplicities changes the trace weights and must be recomputed; no Standard-Model or Pati-Salam anomaly claim follows from this label-only calculation."
+}

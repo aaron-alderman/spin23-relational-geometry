@@ -1,0 +1,99 @@
+{
+  "schema": "spin23.portal-label-symmetry-minimality/1",
+  "date": "2026-10-20",
+  "question": "What is the smallest dimension-zero object that enforces (k_D,k_M)=Lambda(c_D,c_M) without being an ordinary Pati-Salam scalar or adding carrier support?",
+  "portalLabelSpace": {
+    "space": "E=C e_D direct-sum C e_M",
+    "namedBasis": ["Dirac portal D", "Majorana portal M"],
+    "unconstrainedCoefficientDimension": 2,
+    "target": "a one-dimensional invariant subspace with both D and M components nonzero",
+    "carrierAction": "none"
+  },
+  "finiteSymmetryExhaustion": {
+    "class": "real signed-permutation involutions of the canonical two-label orthonormal basis",
+    "candidates": [
+      {"matrix": [[1,0],[0,1]], "fixedDimension": 2, "result": "no constraint"},
+      {"matrix": [[-1,0],[0,-1]], "fixedDimension": 0, "result": "kills both coefficients"},
+      {"matrix": [[1,0],[0,-1]], "fixedDimension": 1, "result": "keeps D and kills M"},
+      {"matrix": [[-1,0],[0,1]], "fixedDimension": 1, "result": "kills D and keeps M"},
+      {"matrix": [[0,1],[1,0]], "fixedDimension": 1, "fixedRay": [1,1], "result": "keeps both portals with equal normalized coefficients"},
+      {"matrix": [[0,-1],[-1,0]], "fixedDimension": 1, "fixedRay": [1,-1], "result": "keeps both portals with opposite normalized coefficients"}
+    ],
+    "minimalGroup": "Z2",
+    "minimalGenerator": [[0,1],[1,0]],
+    "minimality": "The trivial group fixes E. A nontrivial involution is the smallest group action, and among canonical signed permutations only plus-or-minus exchange has a one-dimensional fixed space with both portal components nonzero.",
+    "canonicalOutcome": "(k_D,k_M)=Lambda(1,1), or Lambda(1,-1) for signed exchange"
+  },
+  "weightedReflection": {
+    "generator": "R_kappa=[[0,1/kappa],[kappa,0]]",
+    "fixedRay": "span(1,kappa)",
+    "involution": "R_kappa^2=I for every nonzero kappa",
+    "standardMetricUnitarity": "requires |kappa|=1",
+    "realCpSlice": "kappa=plus-or-minus 1 if the standard metric and real basis are fixed",
+    "boundary": "For arbitrary kappa the desired ratio has been inserted into the generator, or equivalently into a weighted portal metric. It is not derived by Z2 alone."
+  },
+  "u1Audit": {
+    "diagonalCharacters": "diag(exp(i q_D theta),exp(i q_M theta))",
+    "fixedDimensionRule": "the number of zero charges",
+    "bothNonzeroCharges": "fixed dimension zero",
+    "bothZeroCharges": "fixed dimension two",
+    "oneZeroCharge": "fixed dimension one but one portal coefficient is killed",
+    "realRotation": "the nontrivial SO(2) rotation representation has no nonzero fixed vector",
+    "conjugatedRepresentation": "1 direct-sum chi can be conjugated so its invariant line is mixed, but that conjugation explicitly supplies the desired line and ratio",
+    "verdict": "U(1) is continuous overkill and has no greater predictive content than the Z2 reflection."
+  },
+  "realLineAudit": {
+    "map": "iota:R -> R^2, Lambda maps to Lambda(a,b)",
+    "enforces": "one common coefficient line once (a,b) is supplied",
+    "normalization": "a^2+b^2=1 still leaves a continuum of projective rays",
+    "cpEffect": "CP makes the line real but does not choose it",
+    "exchangeEffect": "canonical exchange reduces the allowed normalized rays to (1,plus-or-minus 1)/sqrt(2)"
+  },
+  "frobeniusAudit": {
+    "algebra": "A=C e_D direct-sum C e_M",
+    "multiplication": "e_i e_j=delta_ij e_i",
+    "unit": "eta(1)=e_D+e_M",
+    "comultiplication": "Delta(e_i)=e_i tensor e_i",
+    "counit": "epsilon(e_i)=1",
+    "status": "two-point special commutative dagger-Frobenius algebra",
+    "automorphism": "the nontrivial algebra automorphism exchanges e_D and e_M",
+    "fixedSubalgebra": "C(e_D+e_M), exactly the equal-coefficient line",
+    "boundary": "The Frobenius algebra alone admits every k_D e_D+k_M e_M. Restriction to its exchange-fixed subalgebra is the enforcing datum, so this is a packaging of the same Z2 rather than an independent derivation."
+  },
+  "naturalTransformationAudit": {
+    "objects": "one-dimensional coefficient functors L_D and L_M",
+    "component": "eta_D_M is multiplication by kappa in C^times",
+    "naturalityAgainstScalars": "automatic, because scalar endomorphisms commute",
+    "equalizer": "compatible pairs of scalar endomorphisms satisfy mu_D=mu_M and form one complex line",
+    "unitaryRestriction": "|kappa|=1",
+    "cpRestriction": "kappa=plus-or-minus 1 in a real normalized basis",
+    "boundary": "Naturality enforces a common line only after eta is specified; eta is precisely the missing correspondence datum."
+  },
+  "jAndCp": {
+    "jCompatibility": "The real exchange and signed-exchange matrices commute with coefficient conjugation. J acts on each physical portal and its conjugate while the label action is duplicated on the conjugate pair.",
+    "cpCompatibility": "The fixed ray may be chosen real. CP permits the relative sign but does not choose between signs or fix a noncanonical magnitude ratio.",
+    "notAnExchangeOfPhysicalFields": "The label involution acts on invariant-operator coefficients, not on the inequivalent Dirac bidoublet and Majorana singlet/triplet carrier fields."
+  },
+  "carrierSupport": {
+    "typedSupports": "the Dirac and Majorana operators remain on their original disjoint finite supports",
+    "mixedProduct": "X_D X_M=X_M X_D=0 remains true",
+    "newOneArrowSupport": false,
+    "newI_NSupport": false,
+    "ordinaryPatiSalamScalar": false,
+    "physicalLiftBoundary": "Lifting exchange to the carrier Hilbert space would require an intertwiner between inequivalent gauge representations; claim 1525 gives Hom_GPS=0, while claim 1521 shows an unrestricted cross-anchor carrier sewing generates M4 and is relation-sheet odd."
+  },
+  "normalizedEmbeddingBoundary": {
+    "formalResult": "With the named portal basis and canonical equal metric, Z2 fixes the normalized embedding (c_D,c_M) proportional to (1,plus-or-minus 1).",
+    "physicalMasses": "d=Lambda c_D v_H Z_D and y=Lambda c_M v_S Z_M may still have an arbitrary ratio through vacuum expectation values, Clebsch factors, kinetic normalization and matching factors.",
+    "requiredAdditionalDatum": "a physically sourced portal metric/normalization and vacuum-matching identity, unless all such factors are already included in the definition of the two normalized labels"
+  },
+  "minimalityTheorem": {
+    "formalConstruction": "The unique smallest canonical construction is the fixed line of a Z2 exchange on the two portal labels; equivalently it is the exchange-fixed unit line of the two-point dagger-Frobenius algebra or the equalizer of a specified normalized natural isomorphism.",
+    "whatItDerives": "one coefficient parameter and equal magnitude in the canonical normalized basis",
+    "whatItDoesNotDerive": ["an arbitrary kappa", "the physical portal metric", "a Pati-Salam field exchange", "the Higgs-to-Majorana VEV ratio", "radiative stability"],
+    "smallestExtraFormalDatumCount": 1,
+    "physicalStatus": "conditional and unsourced"
+  },
+  "reopeningDatum": "Exhibit a sourced ultraviolet Ward identity or operator duality whose action on the two normalized invariant-operator lines is the exchange Z2, whose lift commutes with gauge action, grading, J and CP without acting as a carrier intertwiner, and whose counterterms preserve the fixed line. Equivalently supply the portal metric and a radiatively stable natural isomorphism rather than merely postulating kappa.",
+  "verdict": "A dimension-zero Z2 exchange is the exact smallest formal mechanism: it enforces (k_D,k_M)=Lambda(1,plus-or-minus 1), is J/CP compatible, and adds no forbidden carrier support because it acts only on operator labels. An arbitrary ray requires its ratio or metric as new input, and no sourced Pati-Salam/Jordan symmetry currently provides the physical lift."
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "spin23.five-chain-minimal-auxiliary-feshbach-topology/1",
+  "date": "2026-10-20",
+  "scope": "abstract auxiliary extensions of the retained I-P-N-Z-X chain through two auxiliary states, with exact Feshbach elimination and explicit J/grading/relation accounting",
+  "retainedChain": {
+    "roleOrder": ["I", "P", "N", "Z", "X"],
+    "chiralities": [1, -1, 1, -1, 1],
+    "relationParity": "one fixed relation sheet",
+    "edges": ["I--P", "P--N", "N--Z", "Z--X"],
+    "weights": ["x", "y", "g", "h"],
+    "desiredSelfEnergies": ["I", "P"],
+    "forbiddenInducedSupport": ["I--N", "P--Z", "N--X"]
+  },
+  "unconstrainedMassiveScalarAuxiliaries": {
+    "oneAuxiliary": {
+      "massBlock": "[M]",
+      "attachmentVectorOnIP": "(lambda_I,lambda_P)",
+      "selfEnergyOnIP": "(z-M)^(-1) [[lambda_I^2,lambda_I lambda_P],[lambda_I lambda_P,lambda_P^2]]",
+      "minimumForBothDiagonalsIfAllowedIPEdgeRenormalization": true,
+      "rankOneRelation": "Sigma_II Sigma_PP-Sigma_IP^2=0",
+      "forbiddenSupport": "none when the attachment vector has support only on I,P",
+      "failureOfDiagonalOnlyRequirement": "both nonzero diagonals force the off-diagonal I--P correction lambda_I lambda_P/(z-M)"
+    },
+    "twoAuxiliaries": {
+      "uniqueGenericDiagonalOnlyTopology": "two disconnected massive leaves, one attached only to I and one only to P",
+      "massBlock": "diag(M_I,M_P)",
+      "attachmentMatrix": "diag(lambda_I,lambda_P) on the I,P rows",
+      "selfEnergies": ["delta_I(z)=lambda_I^2/(z-M_I)", "delta_P(z)=lambda_P^2/(z-M_P)"],
+      "necessaryForIndependentDiagonalOnlySelfEnergies": true,
+      "sufficientForIndependentDiagonalOnlySelfEnergies": true,
+      "genericConnectedTwoByTwoMassBlock": "induces I--P through the off-diagonal auxiliary resolvent and therefore is not diagonal-only",
+      "forbiddenSupport": "none"
+    },
+    "jCompletedCost": {
+      "oneSharedLeaf": "one auxiliary state per sheet and its J partner: two new complex states, one mass and two attachment parameters before J conjugation",
+      "twoDisconnectedLeaves": "two auxiliary states per sheet and two J partners: four new complex states, two masses and two attachment parameters before J conjugation"
+    },
+    "gradingDecision": "UNSAT as an ordinary grading-odd finite Dirac extension because each nonzero one-state mass M is a grading-even self term"
+  },
+  "strictGradingRelationAudit": {
+    "oddAuxiliaryNormalForm": "D_A=[[0,M],[M^*,0]] between opposite-chirality auxiliary subspaces on the same relation sheet",
+    "inverseAtZero": "D_A^(-1)=[[0,(M^*)^(-1)],[M^(-1),0]]",
+    "attachmentRule": "a retained state couples only to auxiliary states of the opposite chirality",
+    "zeroEnergySelfEnergyTheorem": "B D_A^(-1) B^* has zero diagonal blocks on each retained chirality, so every retained same-state self-energy vanishes at z=0 for any finite-dimensional invertible grading-odd auxiliary block",
+    "oneAuxiliaryState": "cannot have an invertible grading-odd mass block",
+    "twoAuxiliaryStates": "one opposite-chirality dimer is invertible, but its diagonal self-energies are proportional to z and vanish at zero; if attached to both I and P it also renormalizes I--P",
+    "twoMassiveDimersForSeparateRoles": "requires four auxiliary states per sheet and four J partners, eight new complex states total; it gives diagonal-only lambda_r^2 z/(z^2-m_r^2) but no zero-energy mass",
+    "relationParity": "the two members of each dimer must lie on the same relation sheet; J supplies the opposite sheet, where all edges and masses are conjugated",
+    "strictOneOrTwoAuxiliaryStateResult": "UNSAT for nonzero zero-energy I and P diagonals",
+    "allSizeResult": "UNSAT at zero energy for any invertible grading-odd auxiliary block unless grading or relation parity is relaxed"
+  },
+  "cofactorAndRank": {
+    "effectiveMatrixAtZeroWithScalarLeaves": "the five-chain with diagonal delta_I=-lambda_I^2/M_I and delta_P=-lambda_P^2/M_P",
+    "selectedCofactorPP": 0,
+    "reason": "deleting P separates the I scalar block from the zero-diagonal three-chain N--Z--X, whose determinant is zero",
+    "determinant": "delta_I y^2 h^2",
+    "minimumForGapOnly": "one grading-even massive leaf on I is sufficient if y h and its attachment/mass are nonzero; the P leaf is required only to generate both requested diagonals independently",
+    "strictGradingAtZero": "the induced diagonals vanish and the five-chain remains singular"
+  },
+  "intervalAndEFTDecision": {
+    "supportStability": "the two disconnected scalar leaves generate only I and P diagonals for every z away from their poles, so absence of I--N, P--Z and N--X is interval-stable",
+    "effectiveOperatorCofactor": "cof_PP(D_eff(z))=0 identically for the same N--Z--X odd-chain reason",
+    "exactEnergyDependence": "delta_r(z)=lambda_r^2/(z-M_r), not a constant mass",
+    "lowEnergyExpansion": "delta_r(z)=-lambda_r^2/M_r-lambda_r^2 z/M_r^2+O(z^2/M_r^3)",
+    "constantTextureStatus": "only a low-energy EFT approximation for |z| much smaller than |M_r|",
+    "projectedResolventSelectedZero": "not interval-stable: every finite projected diagonal resolvent has asymptotic 1/z and cannot vanish identically on an open interval",
+    "strictDimerExpansion": "lambda_r^2 z/(z^2-m_r^2)=-lambda_r^2 z/m_r^2+O(z^3/m_r^4), a wavefunction-type correction with no constant mass"
+  },
+  "classificationDecision": {
+    "oneSharedScalarLeaf": "minimal if an induced allowed I--P correction and rank-one relation are accepted, but violates grading",
+    "twoDisconnectedScalarLeaves": "necessary and sufficient for independent diagonal-only I and P self-energies and exact forbidden-support stability, but violates grading",
+    "strictOrdinaryFiniteGeometry": "no one- or two-auxiliary-state solution, and in fact no finite grading-odd auxiliary block can generate nonzero zero-energy diagonals",
+    "minimumReopeningDatum": "either permit two grading-even massive correspondence leaves (four J-completed states) as EFT mediators, or explicitly relax the grading/relation rule; a strict finite-Dirac realization cannot obtain the desired diagonal masses by Schur elimination"
+  },
+  "physicalBoundary": "This is a topology theorem for label-level auxiliary blocks. It does not source the leaves as Pati-Salam representations, derive their masses or couplings, or turn the energy-dependent effective kernel into a physical propagator without a lift and kinetic prescription."
+}

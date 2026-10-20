@@ -1,0 +1,108 @@
+{
+  "schema": "spin23.common-coefficient-line-rg-invariance/1",
+  "date": "2026-10-20",
+  "scope": "exact two-label source/counterterm theorem and minimal one-loop spurion proxy; not a full Pati-Salam beta-function calculation",
+  "setup": {
+    "operatorLabels": ["O_D", "O_M"],
+    "coefficientColumns": "k_i=(k_Di,k_Mi)^T for mediator or matching copies i",
+    "commonLineLaw": "k_i=Lambda_i c with one nonzero c=(c_D,c_M)^T",
+    "projectiveMinor": "Delta_ij=det(k_i,k_j)",
+    "oneLoopFlow": "dot(k_i)=A_i k_i+s_i, where A_i contains label anomalous dimensions and mixing and s_i is additive counterterm support evaluated on the common-line locus"
+  },
+  "exactMinorEvolution": {
+    "formula": "dot(Delta_ij)|rank1=Lambda_i Lambda_j det(c,(A_j-A_i)c)-Lambda_j det(c,s_i)+Lambda_i det(c,s_j)",
+    "rankOneTangency": "the common-line variety is one-loop invariant exactly when this expression vanishes for every active pair i,j",
+    "homogeneousCriterion": "when all s_i vanish, tangency is equivalent to (A_i-A_j)c lying in span(c) for every i,j",
+    "universalProjectiveSufficientCondition": "A_i=A+alpha_i I for one common label-mixing matrix A",
+    "fixedLineCriterion": "the fixed ray span(c) is invariant exactly when det(c,A_i c+s_i/Lambda_i)=0 for every i with nonzero Lambda_i",
+    "homogeneousFixedLineCriterion": "with s_i=0, c must be a common eigenvector of every A_i"
+  },
+  "ratioEvolution": {
+    "matrixConvention": "A=[[a,b],[q,d]], beta_D=a k_D+b k_M, beta_M=q k_D+d k_M",
+    "ratio": "r=k_M/k_D on the k_D nonzero patch",
+    "formula": "dot(r)=q+(d-a)r-b r^2",
+    "diagonalCase": "for b=q=0, dot(log r)=d-a=gamma_M-gamma_D",
+    "fixedNonzeroDiagonalRatio": "gamma_D=gamma_M",
+    "interpretation": "a universal A preserves alignment of all copies while generally rotating their common projective ray; a fixed c_M/c_D requires an eigenline"
+  },
+  "wardClosureConditions": {
+    "fixedRatio": [
+      "a non-anomalous Ward identity acts on the completed invariant operator/source space",
+      "the allowed portal counterterm source module is one-dimensional and spanned by c",
+      "every multiplicative pole maps c to a scalar multiple of c",
+      "every additive pole has zero component transverse to c",
+      "threshold matching and canonical normalization preserve the same embedded line"
+    ],
+    "runningCommonRay": [
+      "all copies have the same projective anomalous action, differing at most by scalar rescaling on the selected line",
+      "copy-dependent additive poles have one common transverse velocity after division by Lambda_i"
+    ],
+    "exchangeZ2Proxy": {
+      "generator": [[0, 1], [1, 0]],
+      "commutingCountertermMatrix": "A=[[u,v],[v,u]]",
+      "fixedRays": ["(1,1)", "(1,-1)"],
+      "closure": "an invariant additive pole lies in the chosen fixed ray, so the exact non-anomalous exchange Ward identity protects the corresponding fixed ratio"
+    },
+    "physicalBoundary": "O_D and O_M use inequivalent Pati-Salam scalar and family-charge dressings. Existing gauge and family Ward identities distinguish rather than exchange them, so they do not enforce gamma_D=gamma_M or a common eigenline. The formal portal-label Z2 of claim 1528 would do so only if it lifts to a non-anomalous symmetry of normalized completed operators and their regulator, thresholds, and counterterms."
+  },
+  "minimalCountertermProxy": {
+    "bareSourceForm": "k_i^0=mu^(p epsilon)[k_i+(16 pi^2 epsilon)^(-1)(A_i k_i+s_i)]",
+    "counterexample": {
+      "c": [1, 1],
+      "Lambdas": [1, 2],
+      "A1": [[1, 0], [0, 2]],
+      "A2": [[1, 0], [0, 3]],
+      "s1": [0, 0],
+      "s2": [0, 0],
+      "initialMinor": 0,
+      "minorDerivative": 2,
+      "conclusion": "different Majorana-label anomalous dimensions generate a transverse projective minor immediately"
+    },
+    "universalRunningRay": {
+      "c": [1, 1],
+      "A": [[1, 2], [3, 4]],
+      "columnScalarShifts": [0, 5],
+      "minorDerivative": 0,
+      "ratioDerivativeAtR1": 4,
+      "conclusion": "one common mixing matrix preserves rank one across copies but does not preserve the fixed ratio"
+    },
+    "wardEigenline": {
+      "c": [1, 1],
+      "A": [[2, 1], [1, 2]],
+      "eigenvalue": 3,
+      "columnScalarShifts": [0, 5],
+      "minorDerivative": 0,
+      "ratioDerivativeAtR1": 0,
+      "conclusion": "a common eigenline plus scalar column rescalings preserves both alignment and the fixed ratio"
+    },
+    "additivePoleCounterexample": {
+      "c": [1, 1],
+      "Lambdas": [1, 2],
+      "A1": [[0, 0], [0, 0]],
+      "A2": [[0, 0], [0, 0]],
+      "s1": [0, 0],
+      "s2": [0, 1],
+      "minorDerivative": 1,
+      "conclusion": "even universal multiplicative running is insufficient when an allowed additive counterterm points off the line"
+    }
+  },
+  "finiteAudit": {
+    "matrixEntryAlphabet": [-1, 0, 1],
+    "testRay": [1, 1],
+    "matrixCount": 81,
+    "fixedLineMatrices": 19,
+    "orderedMatrixPairs": 6561,
+    "rankOneTangentPairs": 1107,
+    "rankOneTransversePairs": 5454,
+    "identityFailures": 0
+  },
+  "decision": {
+    "treeLevelCommonSymbolSufficient": false,
+    "genericFixedRatioInvariant": false,
+    "genericMultiCopyAlignmentInvariant": false,
+    "conditionalRunningAlignment": "yes, under universal projective anomalous flow and compatible additive poles",
+    "conditionalFixedRatio": "yes, when the selected source line is an exact common Ward eigenline and all transverse additive counterterms are forbidden",
+    "physicalPatiSalamStatus": "underdetermined until the complete anomalous-dimension, vertex-counterterm, threshold, and portal-label Ward modules are supplied"
+  },
+  "verdict": "The common coefficient-line law is not generically RG invariant. Rank-one alignment survives exactly under common projective counterterm flow, while a fixed Dirac-Majorana ratio requires the stronger common-eigenline Ward condition and absence of transverse additive poles."
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "spin23.one-generator-selector-unification-no-go/1",
+  "claim": 1552,
+  "date": "2026-10-20",
+  "composableShift": {
+    "objects": ["I", "P", "N"],
+    "generator": "u=a E_PI+b E_NP",
+    "condition": "a*b != 0",
+    "source": "u* u=|a|^2 p_I+|b|^2 p_P",
+    "range": "u u*=|a|^2 p_P+|b|^2 p_N",
+    "unitWeightSelector": "q=p_I+p_P=u* u",
+    "transporterRecovery": "t=p_N u p_P / b",
+    "lengthTwo": "u^2=a*b E_NI",
+    "generatedAlgebra": "M_3(C)",
+    "generatedDimension": 9,
+    "commutant": "C 1",
+    "commutantDimension": 1,
+    "forbiddenSupport": ["I-to-N", "N-to-I after star closure"]
+  },
+  "weightExhaustion": {
+    "bothNonzero": "full M_3 for every magnitude and phase choice",
+    "oneZero": "M_2 direct-sum C but one required adjacent structure is absent",
+    "equalNonzeroMagnitudes": "q and the complementary range projector are recovered directly; their product gives p_P",
+    "unequalNonzeroMagnitudes": "spectral projections of u*u and uu* recover all vertices",
+    "phases": "removable on the three-object tree and cannot make a*b vanish"
+  },
+  "truncationNoGo": {
+    "attempt": "retain normalized s:I->P and t:P->N while imposing t*s=0",
+    "identity": "(t*s)*(t*s)=s* t* t s=s* p_P s=p_I",
+    "conclusion": "no faithful C*-representation can impose radical-square-zero with both normalized composable arrows",
+    "directINCancellation": "an added I-to-N component contributes no second length-two term and cannot cancel a*b E_NI"
+  },
+  "typedAlternative": {
+    "generator": "u_typed=a E_(D_P,D_I) direct-sum b E_(M_N,M_P)",
+    "square": 0,
+    "mixedBranches": false,
+    "distinctMagnitudes": {
+      "algebra": "M_2(C) direct-sum M_2(C)",
+      "dimension": 8,
+      "commutantDimension": 2,
+      "cost": "independent nonzero singular-value ratio"
+    },
+    "equalMagnitudesWithoutBranchProjectors": {
+      "algebra": "diagonal copy M_2(C) tensor 1_2",
+      "dimension": 4,
+      "commutant": "1_2 tensor M_2(C)",
+      "commutantDimension": 4,
+      "cost": "components cannot be separately recovered"
+    },
+    "equalMagnitudesWithBranchProjectors": "splits to M_2 direct-sum M_2 but imports the independent branch selectors",
+    "verdict": "safe reducible packaging, not structural unification"
+  },
+  "symmetry": {
+    "relationGrading": "if both adjacent arrows are even then their forbidden composite is even; grading cannot remove it",
+    "J": "real completion adds conjugate/reverse support and does not erase u^2",
+    "CP": "weights can be represented as real on the tree but their nonzero product remains"
+  },
+  "portalCoefficient": {
+    "supportedBasis": ["p_P", "t+t^T"],
+    "complexDimension": 2,
+    "commonLineForced": false,
+    "requiredEqualizer": "Lambda_D=Lambda_M"
+  },
+  "threeObjectComplementCaveat": "For u=t alone, q=1-tt* only in a literal three-object universe. In the declared five-role universe the complement also contains Z, X and other typed objects, so it does not select I+P.",
+  "minimumClosureCost": "full M_3 and nonzero I-N carrier for any genuine composable one-generator unification",
+  "verdict": "A single composable shift can derive q and t only by generating u^2 and the full M_3 block. The only support-safe one-generator form is a reducible typed direct sum, which retains independent weights/branch data and does not force the common portal coefficient."
+}

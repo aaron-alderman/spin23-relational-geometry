@@ -1,0 +1,109 @@
+{
+  "schema": "spin23.degree-two-path-correspondence-classification/1",
+  "date": "2026-10-20",
+  "question": "Can a degree-at-most-two path/Feshbach correspondence generate the missing A,d terms and canonically select the physical common ray?",
+  "fiveChain": {
+    "roleOrder": ["I", "P", "N", "Z", "X"],
+    "primitiveEdges": [
+      {"edge": "I--P", "coefficient": "x"},
+      {"edge": "P--N", "coefficient": "y"},
+      {"edge": "N--Z", "coefficient": "g"},
+      {"edge": "Z--X", "coefficient": "h"}
+    ],
+    "closedLengthTwoReturns": {
+      "I": ["x^2"],
+      "P": ["x^2", "y^2"],
+      "N": ["y^2", "g^2"],
+      "Z": ["g^2", "h^2"],
+      "X": ["h^2"]
+    },
+    "openLengthTwoPaths": [
+      {"path": "I--P--N", "coefficient": "x*y", "physicalStatus": "forbidden I--N/L--N effective support"},
+      {"path": "P--N--Z", "coefficient": "y*g", "physicalStatus": "outside target texture"},
+      {"path": "N--Z--X", "coefficient": "g*h", "physicalStatus": "outside target texture"}
+    ]
+  },
+  "degreeTwoClassification": {
+    "generalSelectedReturnMap": {
+      "A": "alpha_x*x^2 + alpha_y*y^2, with alpha_x and alpha_y of inverse-mass dimension",
+      "d": "beta*x^2, with beta of inverse-mass dimension",
+      "NDiagonal": 0,
+      "ZDiagonal": 0,
+      "XDiagonal": 0
+    },
+    "JGradeRelationCompatibility": "closed returns are J-even, grading-even and relation-even; primitive edges retain their odd/even assignments",
+    "invertibilityCondition": "beta*x*y*h is nonzero",
+    "selectedCofactor": 0,
+    "determinant": "beta*x^2*y^2*h^2",
+    "coefficientTriplesOverMinusOneZeroOne": 27,
+    "successfulNontrivialATriples": 16,
+    "minimalCommonScaleCandidate": {"alpha_x": "kappa", "alpha_y": "kappa", "beta": "kappa", "massDimensionOfKappa": -1},
+    "unitNormalizedCandidate": {"alpha_x": 1, "alpha_y": 1, "beta": 1, "interpretation": "dimensionless verifier convention kappa=1"},
+    "minimalCommonScaleCandidateMatrixInPINZXOrder": "[[kappa*(x^2+y^2),x,y,0,0],[x,kappa*x^2,0,0,0],[y,0,0,g,0],[0,0,g,0,h],[0,0,0,h,0]]",
+    "boundedNonzeroEdgeAssignmentsChecked": 256,
+    "candidateInvertibleAssignments": 256,
+    "candidateZeroCofactorAssignments": 256
+  },
+  "projectorNecessity": {
+    "globalPolynomial": "D_chain + D_chain^2",
+    "globalPolynomialFailure": [
+      "creates the forbidden open I--N path x*y",
+      "creates P--Z and N--X open length-two support",
+      "creates nonzero N,Z,X diagonal returns"
+    ],
+    "requiredOperations": [
+      "diagonal conditional expectation E_diag to remove open length-two paths",
+      "endpoint projector Pi_PI to retain returns only at P and I"
+    ],
+    "rawReturnVertexMasks": 32,
+    "masksWithExactTargetDiagonalSupportAndBothAAndd": 1,
+    "uniqueMask": ["P", "I"],
+    "symmetryForcesUniqueMask": false,
+    "reason": "J, grading and relation parity admit closed returns at N,Z,X just as they admit returns at P,I"
+  },
+  "matrixMultiplicityRepair": {
+    "primitiveINMultiplicityVectors": {"xVector": [1, 0], "yVector": [0, 1]},
+    "gramMatrix": [[1, 0], [0, 1]],
+    "gramDeterminant": 1,
+    "sourceColumnsCollinear": false,
+    "U2InvariantDegreeAtMostTwoData": ["norm(xVector)^2", "norm(yVector)^2", "innerProduct(xVector,yVector)"],
+    "invariantDataSelectsRay": false,
+    "nonzeroU2InvariantLinearFunctional": false,
+    "boundedSignedRayChoices": 4,
+    "allSignedChoicesProduceNonzeroProjectedxy": true,
+    "canonicalSignedChoice": false,
+    "degreeTwoReturnTermsCanGenerateAd": true,
+    "naturalPrimitiveChainMap": false,
+    "status": "UNSAT under multiplicity-basis naturality; SAT only after inserting a rank-one multiplicity projector plus Pi_PI"
+  },
+  "newSectorRepair": {
+    "primitiveChainCoefficientsCanonical": true,
+    "multiplicityBasisNaturality": "vacuous because every retained chain sector has multiplicity one",
+    "unitReturnCandidateSatisfiesTargetAlgebra": true,
+    "requiresDiagonalConditionalExpectation": true,
+    "requiresSelectedEndpointProjector": true,
+    "newNumericalConstantsAtUnitNormalization": 0,
+    "physicalDimensionalCost": "at least one inverse mass scale kappa; setting kappa=1 is only a verifier normalization",
+    "newStructuralProjectors": ["E_diag", "Pi_PI"],
+    "status": "conditional SAT: an explicit degree-two map exists, but it is not selected by J/grading/relation symmetry alone"
+  },
+  "forbiddenSupportAudit": {
+    "primitiveLNBeforeMap": false,
+    "primitiveLNAfterSelectedReturnMap": false,
+    "effectiveLNUnderUnprojectedD2": "x*y, nonzero for every bounded nonzero assignment",
+    "selectedMapRemovesItBy": "E_diag",
+    "interpretation": "the successful map preserves primitive support only because it includes a new path-type projector"
+  },
+  "decision": {
+    "degreeTwoAlgebraicCandidateExists": true,
+    "candidate": "primitive four-chain plus kappa Pi_PI E_diag(D_chain^2)",
+    "invertibleProtectedTarget": "SAT for all nonzero x,y,h",
+    "canonicalFromExistingSymmetries": false,
+    "commonRayCanonicallySelected": false,
+    "matrixMultiplicityBranch": "UNSAT without a new rank-one multiplicity projector",
+    "newSectorBranch": "SAT only with E_diag and Pi_PI supplied as new structural data",
+    "exactMinimumNewDatum": "an inverse mass scale kappa and selected-return conditional expectation Pi_PI E_diag; the multiplicity repair additionally needs a rank-one projector in each doubled multiplicity space",
+    "strongestConclusion": "length-two returns can generate the missing diagonals and preserve the cofactor, but neither path algebra nor the declared symmetries choose which returns survive or select the common mediator ray"
+  },
+  "boundary": "The classification includes primitive degree-one edges and all length-two paths on the five-chain, with real endpoint coefficients and the inherited J/grade/relation assignments. Higher paths, energy-dependent inverses and added auxiliary masses are outside the bound."
+}

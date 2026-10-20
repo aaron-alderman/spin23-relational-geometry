@@ -1,0 +1,70 @@
+{
+  "schema": "spin23.family-partial-isometry-relational-generation-audit/1",
+  "claim": 1546,
+  "date": "2026-10-20",
+  "question": "Does the declared finite relational geometry already contain or canonically generate the rank-one P-to-N partial isometry required by claim 1544?",
+  "declaredData": {
+    "familyProjectors": ["p_P", "p_I", "p_N"],
+    "majoranaEndpoints": {"M_P": ["P", "I"], "M_N": ["N", "I"]},
+    "diracEndpoints": {"D_P": ["P", "P"], "D_N": ["N", "N"]},
+    "relationSheetSigns": {"M_P": 1, "M_N": 1, "D_P": 1, "D_N": -1},
+    "realCompletion": "J supplies the adjoint/conjugate orientation and anticommutes with relation-sheet parity"
+  },
+  "anchoredClassification": {
+    "majoranaForwardLine": "p_N B(H_F) p_P = C E_NP",
+    "normalizedFamily": "t_phi = exp(i phi) E_NP",
+    "equations": ["t_phi^* t_phi = p_P", "t_phi t_phi^* = p_N"],
+    "moduli": "U(1) torsor",
+    "cpRealModuli": ["+E_NP", "-E_NP"],
+    "diracForwardSpace": "0 under the first-order/opposite-anchor rule",
+    "meaning": "anchors select one complex line but no normalized vector or phase"
+  },
+  "commutatorPolarConstruction": {
+    "majoranaBlock": "D_M|_{P,N} = y E_PN + conjugate(y) E_NP",
+    "compressedCommutator": "p_N [D_M,p_P] p_P = conjugate(y) E_NP",
+    "condition": "y != 0",
+    "polarPart": "v_M = exp(-i arg(y)) E_NP",
+    "diracCompression": "p_N [D_D,p_P] p_P = 0",
+    "boundary": [
+      "polar normalization divides by |y| and is undefined at y=0",
+      "the phase is inherited from the chosen Majorana block",
+      "projectors and anchors alone do not generate this element"
+    ]
+  },
+  "symmetryAudit": {
+    "J": "pairs t_phi with its adjoint/conjugate orientation but admits every phi",
+    "CP": "restricts phi to 0 or pi but does not choose the sign",
+    "relationSheet": {
+      "majoranaPN": "even",
+      "hypotheticalDiracPN": "odd",
+      "phaseSelection": "none; parity is constant over each supported line"
+    }
+  },
+  "branchConditioning": {
+    "safeConstruction": "b_D tensor E_PP plus b_M tensor Sym(t_phi E_PP)",
+    "diracPNReopened": false,
+    "crossSectorCarrierAdded": false,
+    "warning": "realizing the coefficient identification by an actual D-to-M carrier map invokes claim 1521's forbidden cross-anchor enlargement"
+  },
+  "coefficientBoundary": {
+    "rawBlock": "imports independent magnitude |y| and phase arg(y)",
+    "polarBlock": "removes |y| but retains relative phase exp(-i arg(y))",
+    "existingGeometryEnforcesCommonCoefficient": false,
+    "distinction": [
+      "canonical supported line",
+      "canonical normalized vector",
+      "canonical common-coupling law"
+    ]
+  },
+  "minimumReopeningDatum": {
+    "newCarrierSupportRequired": false,
+    "required": "one relation-sheet-even branch-conditioned phase-and-coefficient locking law between the Dirac PP coefficient line and the polar Majorana PN line",
+    "cpRealResidualDatum": "one sign",
+    "acceptableForms": [
+      "a natural transformation iota_M = Sym(v_M composed with iota_D)",
+      "a gauge-invariant closed relation cycle fixing the relative phase"
+    ],
+    "forbiddenImplementation": "a carrier operator sewing the Dirac and Majorana wheels"
+  },
+  "verdict": "The allowed Majorana relation already supplies a unique complex P-to-N matrix-unit line and a nonzero Majorana D block supplies a conditional polar representative. The declared anchors, J, CP and relation-sheet parity do not select its phase or enforce use of that representative to transport the Dirac coefficient. The forbidden Dirac P-N one-form stays absent."
+}

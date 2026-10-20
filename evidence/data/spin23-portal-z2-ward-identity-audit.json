@@ -1,0 +1,95 @@
+{
+  "schema": "spin23.portal-z2-ward-identity-audit/1",
+  "date": "2026-10-20",
+  "question": "Can the claim-1528 label-only Z2 exchange be a genuine non-anomalous symmetry or Ward identity of the completed Pati-Salam operator/source action?",
+  "interactionModel": {
+    "operatorColumn": "O=(O_D,O_M)^T",
+    "sourceColumn": "k=(k_D,k_M)^T",
+    "interaction": "S_int=k^T O+h.c.",
+    "operatorTransformation": "O maps to A O",
+    "sourceTransformation": "k maps to B k",
+    "offShellInvarianceCondition": "B^T A=I"
+  },
+  "sourceSwapTheorem": {
+    "sourceSwap": "B=P=[[0,1],[1,0]]",
+    "requiredOperatorAction": "A=(B^T)^-1=P",
+    "conclusion": "An off-shell source exchange is a symmetry of the source-coupled action if and only if the operator doublet is exchanged contragrediently. Leaving O_D and O_M fixed does not work.",
+    "fixedPointBoundary": "At k_D=k_M the numerical source is unchanged by P, but this makes the source transformation trivial at that point; it supplies no field transformation, Ward identity, or reason the action must lie there."
+  },
+  "typedOperatorAudit": {
+    "diracOperator": "O_D=L_P H nu_P^c on particle-particle Dirac support",
+    "majoranaOperator": "O_M=S_-3 nu_P^c nu_N^c on particle-conjugate Majorana support",
+    "sharedProperties": ["Lorentz scalar", "gauge-contracted singlet", "canonical dimension four"],
+    "distinctProperties": ["constituent Pati-Salam representations", "family dressing", "Dirac versus Majorana finite support", "particle/conjugate grading", "threshold and vacuum factor"],
+    "importantQualification": "After all indices are contracted, each monomial spans an abstract trivial gauge representation, so an untyped Hom between the two one-dimensional singlet lines is nonzero. The vanishing statement is for typed local operator/carrier intertwiners induced by transformations of the fundamental fields while preserving gauge action, grading and J.",
+    "typedHomDimension": 0,
+    "availableFieldInducedOperatorMatrices": "block diagonal A=diag(a_D,a_M), not exchange",
+    "sourceSwapCompatible": false
+  },
+  "classification": {
+    "exactInternalSymmetry": {
+      "couplingsTransform": false,
+      "requirement": "a transformation of dynamical fields and measure leaves the fixed-coupling action invariant",
+      "result": "No exchange action exists on the sourced typed fields. Diagonal phases preserving both nonzero monomials do not relate k_D and k_M.",
+      "status": "excluded in the standard local linear symmetry class"
+    },
+    "spurionicSymmetry": {
+      "couplingsTransform": true,
+      "requirement": "sources transform contragrediently to a realized operator action",
+      "result": "A formal abstract relabelling O_D<->O_M, k_D<->k_M makes k^T O invariant, but the operator exchange has no sourced field/carrier lift. Source swap alone fails B^T A=I.",
+      "status": "bookkeeping reparameterization unless a physical operator action is supplied"
+    },
+    "duality": {
+      "couplingsTransform": true,
+      "requirement": "an isomorphism of theories maps operator algebras, states, correlators, thresholds and vacua while sending O_D to O_M",
+      "result": "No such map is present in the corpus; the local typed intertwiner is obstructed. A genuinely nonlocal or strong/weak duality is not logically excluded but must be constructed, not inferred from coefficient equality.",
+      "status": "open only with new duality data"
+    },
+    "fixedLocusRestriction": {
+      "condition": "k_D=k_M",
+      "result": "defines a one-dimensional subfamily of actions but is not itself a symmetry or Ward identity",
+      "status": "ansatz"
+    }
+  },
+  "anomalyAudit": {
+    "classicalGate": "A quantum anomaly is tested only after a nontrivial classical transformation of dynamical fields has been defined.",
+    "fieldTransformationAvailable": false,
+    "sourcePermutationJacobian": "unit determinant magnitude in a nondynamical two-source coordinate space",
+    "sourceJacobianMeaning": "not an anomaly cancellation result, because external-source relabelling has no fermionic path-integral measure action",
+    "conclusion": "The proposed label Z2 fails before the anomaly question: it is not a classical Ward symmetry of the completed action. It is therefore neither shown anomalous nor shown non-anomalous."
+  },
+  "thresholdAndNormalizationAudit": {
+    "matchingMatrix": "T=diag(t_D,t_M)",
+    "factors": "t_D=c_D v_H Z_D and t_M=c_M v_S Z_M, including Clebsches, VEVs, wavefunction and threshold matching",
+    "uvFixedSource": "k=Lambda(1,1)",
+    "infraredSource": "k_IR=T k=Lambda(t_D,t_M)",
+    "canonicalSwapPreservation": "T P=P T iff t_D=t_M",
+    "inducedInfraredExchange": "P_IR=T P T^-1=[[0,t_D/t_M],[t_M/t_D,0]]",
+    "boundary": "When t_D differs from t_M the low-energy ray is weighted. Calling P_IR a symmetry inserts the threshold ratio into its generator, exactly the claim-1528 weighted-reflection boundary."
+  },
+  "vacuumAudit": {
+    "condition": "A putative exchange must map the full scalar potential and vacuum, not only two interaction coefficients.",
+    "availableVacua": "the Dirac bidoublet and Majorana singlet/triplet dressings are inequivalent and have independently normalized VEVs",
+    "invariantVacuumDatum": "an explicit identity relating c_D v_H Z_D to c_M v_S Z_M",
+    "present": false
+  },
+  "renormalizationAudit": {
+    "fixedLine": "F(k)=k_D-k_M=0",
+    "tangencyCondition": "(beta_D-beta_M)|F=0=0",
+    "multiplicativeCase": "beta_D=gamma_D k_D and beta_M=gamma_M k_M require gamma_D=gamma_M along the line",
+    "availableProtection": "none, because no realized exchange Ward identity relates the two operator renormalizations",
+    "conclusion": "The equality locus is not proven radiatively stable. Its preservation is an additional test, not a consequence of the formal source Z2."
+  },
+  "strongestNoGo": {
+    "assumptions": [
+      "local invertible symmetry acting on the sourced fundamental fields",
+      "preservation of Pati-Salam gauge action, Lorentz type, finite grading and J",
+      "off-shell invariance of the source-coupled action",
+      "both portal interactions nonzero"
+    ],
+    "theorem": "No genuine Z2 Ward symmetry can act as k_D<->k_M. Off-shell invariance forces O_D<->O_M, while the allowed field-induced action on their typed span is block diagonal because the typed intertwiner space vanishes.",
+    "notExcluded": "a new enlarged theory with extra partner fields, a nonlocal duality with a full operator-algebra map, or an ultraviolet relation that ceases to be an exact symmetry after thresholds"
+  },
+  "reopeningDatum": "Supply an explicit transformation of the dynamical field algebra (or a full duality functor) that maps the normalized typed O_D line to O_M, including partner kinetic terms, scalar potential, gauge and family representations, grading, J/CP action, path-integral measure, vacuum/threshold map, and beta-function intertwining. Equivalently enlarge the spectrum so the two portal complexes become isomorphic and then prove anomaly cancellation and RG tangency.",
+  "verdict": "The claim-1528 label-only Z2 is a useful projection on source space but is not a genuine non-anomalous Ward symmetry of the completed Pati-Salam action. A source exchange requires an operator exchange; no such typed field-induced exchange exists. At the equal-source point the transformation is trivial, thresholds generically turn it into a weighted reflection, and radiative tangency remains unprotected."
+}

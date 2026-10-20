@@ -1,0 +1,101 @@
+{
+  "schema": "spin23.six-character-anomaly-free-higgs-link-audit/1",
+  "date": "2026-10-20",
+  "scope": "the exact twelve-state, five-J-edge-orbit C^6 completion of claim 1529 restricted to the maximal anomaly-free central U(1)^2 exhibited in claim 1532",
+  "generatorNormalization": {
+    "recordedUnimodularLieBasis": [
+      [0, 1, 0, 0, -1, 0],
+      [-1, -1, 1, 1, 1, 1]
+    ],
+    "characterOrder": ["P", "I", "N", "S", "T", "U"],
+    "faithfulPrimitiveCocharacters": [
+      "h1=w1",
+      "h2=w2/2 modulo the common diagonal"
+    ],
+    "whyHalfIsAllowed": "exp(2 pi i h2)=exp(pi i w2)=(-1,-1,-1,-1,-1,-1), which is the trivially acting common diagonal",
+    "chargeConvention": "the table records (q_h1,q_h2); for an oriented link phi_(u<-v), q_phi=q_u-q_v"
+  },
+  "stateCharges": {
+    "PN": [0, -1], "NP": [0, 1],
+    "IN": [1, -1], "NI": [-1, 1],
+    "IP": [1, 0], "PI": [-1, 0],
+    "PS": [0, -1], "SP": [0, 1],
+    "TP": [-1, 1], "PT": [1, -1],
+    "TU": [-1, 0], "UT": [1, 0]
+  },
+  "allowedOrientedEdgeCharges": {
+    "PN<-IN": [-1, 0],
+    "NP<-NI": [1, 0],
+    "IN<-IP": [0, -1],
+    "NI<-PI": [0, 1],
+    "IP<-TP": [2, -1],
+    "PI<-PT": [-2, 1],
+    "SP<-TP": [1, 0],
+    "PS<-PT": [-1, 0],
+    "TP<-TU": [0, 1],
+    "PT<-UT": [0, -1]
+  },
+  "jEdgeOrbitAudit": [
+    {
+      "orbit": ["PN--IN", "NP--NI"],
+      "representativeOrientation": "PN<-IN",
+      "representativeLinkCharge": [-1, 0],
+      "jPartnerLinkCharge": [1, 0],
+      "bareInvariantMass": false
+    },
+    {
+      "orbit": ["IN--IP", "NI--PI"],
+      "representativeOrientation": "IN<-IP",
+      "representativeLinkCharge": [0, -1],
+      "jPartnerLinkCharge": [0, 1],
+      "bareInvariantMass": false
+    },
+    {
+      "orbit": ["IP--TP", "PI--PT"],
+      "representativeOrientation": "IP<-TP",
+      "representativeLinkCharge": [2, -1],
+      "jPartnerLinkCharge": [-2, 1],
+      "bareInvariantMass": false
+    },
+    {
+      "orbit": ["SP--TP", "PS--PT"],
+      "representativeOrientation": "SP<-TP",
+      "representativeLinkCharge": [1, 0],
+      "jPartnerLinkCharge": [-1, 0],
+      "bareInvariantMass": false
+    },
+    {
+      "orbit": ["TP--TU", "PT--UT"],
+      "representativeOrientation": "TP<-TU",
+      "representativeLinkCharge": [0, 1],
+      "jPartnerLinkCharge": [0, -1],
+      "bareInvariantMass": false
+    }
+  ],
+  "bareInvariantOrbitCount": 0,
+  "chargedLinkRequiredOrbitCount": 5,
+  "linkChargeLattice": {
+    "representativeRows": [[-1, 0], [0, -1], [2, -1], [1, 0], [0, 1]],
+    "rank": 2,
+    "smithInvariantFactors": [1, 1],
+    "indexInFaithfulGaugeChargeLattice": 1,
+    "distinctChargesUpToConjugation": [[1, 0], [0, 1], [2, -1]],
+    "interpretation": "five link entries are required, although scalar multiplets or Yukawa parameters could reuse the three charge types; that reuse is not fixed by the finite label data"
+  },
+  "genericVevStabilizer": {
+    "continuousDimension": 0,
+    "faithfulResidualGaugeGroup": "trivial",
+    "nonfaithfulRecordedBasisArtifact": "using (w1,w2) rather than (h1,h2) suggests a residual Z2, but it is exp(pi i w2), the common diagonal already acting trivially on every state",
+    "reason": "the link lattice is saturated and contains primitive generators (-1,0) and (0,-1)"
+  },
+  "compatibilityDecision": {
+    "perturbativeAnomalyCancellation": "SAT: bosonic link fields do not change the chiral fermion anomaly tensor",
+    "allFiveRequiredJEdgeOrbitsNonzero": "SAT conditionally on five nonzero charged link entries or equivalent Yukawa-link data",
+    "relationParity": "SAT if the links are relation-even; every allowed edge already joins equal relation parity",
+    "nZXTexture": "SAT only at the same coefficient-level Schur/texture projection as claim 1529; no correspondence identifies these five charged link entries with the physical N--Z--X coefficients",
+    "massGapOnExactTwelveStateSupport": "UNSAT: each six-state connected component has chiral bipartition sizes 4 and 2, so every grading-odd Dirac operator on this support has nullity at least two per component and at least four total",
+    "physicalScalarCompletion": "UNDERDETERMINED: no scalar potential, kinetic normalization, vacuum alignment, Yukawa identification or physical Pati-Salam representation is supplied"
+  },
+  "minimalReopeningDatum": "specify relation-even dynamical link/scalar fields carrying the three primitive charge types, their independent edge Yukawa maps and a potential with the required nonzero VEVs; obtaining a mass gap additionally requires new grading-odd support or multiplicity that removes the 4-versus-2 component imbalance, plus a correspondence to the N--Z--X physical coefficient texture",
+  "boundary": "This is an exact charge, lattice and support audit for the label-level anomaly-free U(1)^2. It neither derives the link fields from a spectral action nor supplies a physical Higgs sector."
+}

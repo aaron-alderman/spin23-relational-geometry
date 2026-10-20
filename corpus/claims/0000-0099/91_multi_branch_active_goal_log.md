@@ -26854,3 +26854,31 @@ The gauge-level (X=Z=(1,1,1)) chain is absent from the sourced matter carrier. T
 ## Cycle 1183 — current-input exhaustion closes the sourced carrier
 
 Both missing rows have reached explicit endpoints. The sourced minimal Pati--Salam carrier neither supplies the coefficient-line law nor the graded spectator correspondence, and generic independent loops are transverse. Full physical admission is therefore closed for the sourced carrier. The typed mechanism survives only as a conditional new-model branch with a dimension-zero portal law or a new correspondence/defect module; further progress requires declaring and testing one of those new objects or acquiring the external joint likelihood. Artifact: [1527](../1500-1599/1527_current_input_exhaustion_closes_the_sourced_carrier_and_leaves_only_new_portal_law_or_correspondence_module_branches.md).
+
+## Cycle 1184 — the two explicit new hypotheses are constructed and separated
+
+The label-exchange branch is formally minimal but fails as a sourced Ward symmetry and generic RG invariant. The six-character branch is a valid real-even finite geometry but begins with four structural zero modes and an anomalous five-dimensional center. Artifacts: [1528](../1500-1599/1528_the_minimal_portal_label_symmetry_is_a_Z2_fixed_line_but_its_metric_and_physical_lift_remain_new_data.md)--[1533](../1500-1599/1533_the_four_zero_modes_require_exactly_four_new_real_completed_dimensions_and_no_edge_only_repair_exists.md).
+
+## Cycle 1185 — parent unification and ordinary descent close at precise selectors
+
+Fixed Pati--Salam mirrors and the audited compact parents do not exchange the complete portals. Spin(10) shared-126 is the strongest one-tensor near-miss, but its universal family matrix conflicts with the sector mask. The ordinary correspondence repair needs four new dimensions and has no natural linear descent. Artifacts: [1534](../1500-1599/1534_the_smallest_safe_portal_mirror_completion_has_two_Z2_orbits_and_cannot_identify_Dirac_with_Majorana.md)--[1538](../1500-1599/1538_no_three_family_symmetry_can_save_one_universal_shared126_tensor_but_a_sector_labelled_intertwiner_can.md).
+
+## Cycle 1186 — a gapped anomaly-controlled label model exists
+
+The sixteen-state sector repair rotates but preserves a maximal anomaly-free \(U(1)^2\). Its charged links can Higgs the torus completely, open a finite-Dirac mass gap and sit at an open stable renormalizable vacuum with no forced physical Goldstone. This is a positive label-level construction, not a Pati--Salam lift. Artifacts: [1539](../1500-1599/1539_the_sixteen_state_repair_rotates_the_anomaly_free_two_torus_and_its_link_vevs_can_both_higgs_it_and_open_the_label_level_mass_gap.md) and [1542](../1500-1599/1542_the_six_link_potential_has_no_forced_goldstone_and_an_open_full_rank_vacuum_but_scalar_identification_does_not_derive_the_common_ray.md).
+
+## Cycle 1187 — selected returns work algebraically but expose new marked data
+
+Degree-two return paths generate the missing endpoint diagonals and preserve the cofactor exactly after a diagonal expectation and \(I/P\) corner are supplied. The expectation is canonical; the corner is not. It exists as a nonminimal sector sum and a positive cut action selects it only on an open weight chamber not enforced by the scalar vacuum. Artifacts: [1540](../1500-1599/1540_selected_length_two_returns_recover_the_protected_texture_but_require_a_new_endpoint_projector_and_do_not_select_the_common_ray.md), [1543](../1500-1599/1543_the_diagonal_expectation_is_canonical_but_the_selected_PI_return_corner_is_new_marked_projector_data.md), [1548](../1500-1599/1548_the_selected_anchor_projection_exists_as_a_nonminimal_sector_sum_but_is_not_sourced_or_central_in_the_path_algebra.md), [1551](../1500-1599/1551_the_Dirichlet_cut_action_selects_the_anchor_on_H12_and_one_marked_orbit_restores_uniqueness_on_H16.md), and [1553](../1500-1599/1553_the_anchor_cut_has_an_open_weight_chamber_but_the_stable_vacuum_does_not_enforce_its_ordering.md).
+
+## Cycle 1188 — hidden Feshbach and one-generator shortcuts fail
+
+Actual elimination of the repaired auxiliaries induces the wrong diagonals and gives only isolated zero-energy projected-resolvent zeros. Strict odd finite auxiliaries cannot generate the required endpoint masses at zero energy. The smallest safe oriented algebra holds both selectors independently; one composable generator derives them only by generating the forbidden \(I\)-to-\(N\) path and full \(M_3\) support. Artifacts: [1547](../1500-1599/1547_the_exact_feshbach_kernel_induces_the_wrong_diagonals_and_the_protected_resolvent_zeros_hold_only_at_zero_energy_not_on_an_interval.md), [1549](../1500-1599/1549_the_minimal_oriented_correspondence_algebra_realizes_both_selectors_but_does_not_unify_them.md), [1550](../1500-1599/1550_two_disconnected_massive_leaves_are_minimal_for_independent_endpoint_self_energies_but_strict_grading_forbids_their_zero_energy_masses.md), and [1552](../1500-1599/1552_a_single_composable_shift_derives_both_selectors_only_at_full_M3_closure_cost.md).
+
+## Cycle 1189 — red-team verification preserves the conditional endpoint
+
+All 24 claims in the explicit new-model wave pass their primary verifiers and cross-claim consistency audit. No semantic correction is required. Label geometry, finite triple, EFT, zero-energy, interval and physical Pati--Salam statements remain sharply separated. Artifact: [1554](../1500-1599/1554_the_1528_1553_programme_is_internally_consistent_but_none_of_its_label_EFT_or_zero_energy_results_closes_the_physical_lift.md).
+
+## Cycle 1190 — the tranche converges on one conditional oriented correspondence
+
+The surviving middle is an exact, anomaly-controlled, gapped oriented label model with a cofactor-preserving return rule. It is not physically admitted: the branch-conditioned transporter, selected-anchor ordering law, Ward-protected portal line and full Pati--Salam correspondence remain new joined data. All shorter derivations in the audited finite, polynomial, auxiliary and compact-parent classes are closed. Artifact: [1555](../1500-1599/1555_the_new_model_tranche_converges_on_a_conditional_oriented_correspondence_and_closes_every_shorter_derivation.md).

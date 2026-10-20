@@ -1,0 +1,132 @@
+{
+  "schema": "spin23.six-character-ordinary-correspondence-completion/1",
+  "date": "2026-10-20",
+  "question": "Does the smallest six-character completion of claim 1526 define an ordinary real-even finite geometry, realize the N--Z--X repair, and embed the sourced Pati-Salam carrier?",
+  "finiteAlgebra": {
+    "algebra": "C_P direct-sum C_I direct-sum C_N direct-sum C_S direct-sum C_T direct-sum C_U",
+    "characters": ["P", "I", "N", "S", "T", "U"],
+    "complexDimension": 6,
+    "representation": "on e_ab, pi(z)e_ab=z_a e_ab and pi_o(z)e_ab=z_b e_ab",
+    "faithful": true
+  },
+  "hilbertSpace": {
+    "complexDimension": 12,
+    "basis": ["PN", "NP", "IN", "NI", "IP", "PI", "PS", "SP", "TP", "PT", "TU", "UT"],
+    "sectors": [
+      {"label": "PN", "left": "P", "right": "N", "gamma": 1, "relationParity": 1, "J": "NP", "provenance": "existing relation carrier"},
+      {"label": "NP", "left": "N", "right": "P", "gamma": -1, "relationParity": -1, "J": "PN", "provenance": "existing relation carrier"},
+      {"label": "IN", "left": "I", "right": "N", "gamma": -1, "relationParity": 1, "J": "NI", "provenance": "existing relation carrier"},
+      {"label": "NI", "left": "N", "right": "I", "gamma": 1, "relationParity": -1, "J": "IN", "provenance": "existing relation carrier"},
+      {"label": "IP", "left": "I", "right": "P", "gamma": 1, "relationParity": 1, "J": "PI", "provenance": "existing relation carrier"},
+      {"label": "PI", "left": "P", "right": "I", "gamma": -1, "relationParity": -1, "J": "IP", "provenance": "existing relation carrier"},
+      {"label": "PS", "left": "P", "right": "S", "gamma": -1, "relationParity": -1, "J": "SP", "provenance": "existing spectator orbit after claim-1523 reassignment"},
+      {"label": "SP", "left": "S", "right": "P", "gamma": 1, "relationParity": 1, "J": "PS", "provenance": "existing spectator orbit after claim-1523 reassignment"},
+      {"label": "TP", "left": "T", "right": "P", "gamma": -1, "relationParity": 1, "J": "PT", "provenance": "new Z/JZ orbit"},
+      {"label": "PT", "left": "P", "right": "T", "gamma": 1, "relationParity": -1, "J": "TP", "provenance": "new Z/JZ orbit"},
+      {"label": "TU", "left": "T", "right": "U", "gamma": 1, "relationParity": 1, "J": "UT", "provenance": "new duality-repair orbit"},
+      {"label": "UT", "left": "U", "right": "T", "gamma": -1, "relationParity": -1, "J": "TU", "provenance": "new duality-repair orbit"}
+    ]
+  },
+  "realEvenStructure": {
+    "J": "antilinear coefficient conjugation followed by e_ab mapsto e_ba",
+    "J2": 1,
+    "KO6Relations": ["J gamma = - gamma J", "J D = D J"],
+    "grading": "gamma e_ab = gamma_ab e_ab",
+    "relationReflection": "Gamma_rel is diagonal with the listed relationParity signs",
+    "orderZero": "SAT: represented and opposite algebras are commuting diagonal left/right character actions",
+    "orientability": "SAT for this C^6 label geometry: gamma is the signed sum of the twelve minimal left-right projectors",
+    "intersectionCharacterOrder": ["P", "I", "N", "S", "T", "U"],
+    "intersectionMatrix": [
+      [0, -1, 1, -1, 1, 0],
+      [1, 0, -1, 0, 0, 0],
+      [-1, 1, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0, 0],
+      [-1, 0, 0, 0, 0, 1],
+      [0, 0, 0, 0, -1, 0]
+    ],
+    "intersectionDeterminant": 1
+  },
+  "finiteDiracSupport": {
+    "selectionRules": [
+      "opposite KO6 chirality",
+      "equal relation parity",
+      "first order: endpoints share a left or a right character"
+    ],
+    "unorderedStatePairsTested": 66,
+    "pairsPassingChirality": 36,
+    "pairsPassingRelationParity": 30,
+    "pairsPassingChiralityAndRelationParity": 16,
+    "pairsPassingAllThreeRules": 10,
+    "allowedEdges": [
+      "PN--IN", "NP--NI", "IN--IP", "NI--PI", "IP--TP",
+      "PI--PT", "PS--PT", "SP--TP", "TP--TU", "PT--UT"
+    ],
+    "edgeOrbitsUnderJ": [
+      ["PN--IN", "NP--NI"],
+      ["IN--IP", "NI--PI"],
+      ["IP--TP", "PI--PT"],
+      ["SP--TP", "PS--PT"],
+      ["TP--TU", "PT--UT"]
+    ],
+    "supportUniqueness": "the ten displayed edges are the complete allowed set; a nonzero realization of all five required edge orbits is unique at support level",
+    "stateGraphComponents": 2,
+    "statesPerComponent": 6,
+    "componentShape": "tree with arm lengths 3, 1, 1",
+    "characterSupportGraphConnected": true,
+    "orderOne": "SAT exactly because every displayed edge holds one character slot fixed",
+    "JClosed": true,
+    "gradingOdd": true,
+    "relationEven": true
+  },
+  "finiteDiracSpectrum": {
+    "oneComponentRealWeights": {"PN--IN": "a", "IN--IP": "b", "IP--TP": "c", "TP--SP": "d", "TP--TU": "e"},
+    "oneComponentCharacteristicPolynomial": "lambda^2*(lambda^4-(a^2+b^2+c^2+d^2+e^2)*lambda^2+(a^2*c^2+a^2*d^2+a^2*e^2+b^2*d^2+b^2*e^2))",
+    "genericKernelDimensionOneComponent": 2,
+    "genericKernelDimensionFullJCompletedSpace": 4,
+    "unitWeightFullCharacteristicPolynomial": "[lambda^2*(lambda^4-5*lambda^2+5)]^2",
+    "unitWeightEigenvalues": [
+      {"value": "0", "multiplicity": 4},
+      {"value": "+sqrt((5+sqrt(5))/2)", "multiplicity": 2},
+      {"value": "-sqrt((5+sqrt(5))/2)", "multiplicity": 2},
+      {"value": "+sqrt((5-sqrt(5))/2)", "multiplicity": 2},
+      {"value": "-sqrt((5-sqrt(5))/2)", "multiplicity": 2}
+    ],
+    "consequence": "the exact ordinary support does not by itself give an invertible finite Dirac operator; lifting its four zero modes requires new support or additional multiplicity data"
+  },
+  "connectorTexture": {
+    "weylCoefficientBasis": ["P", "I", "N", "Z", "X"],
+    "matrix": "[[A,x,y,0,0],[x,D,0,0,0],[y,0,0,g,0],[0,0,g,0,h],[0,0,0,h,0]]",
+    "selectedCofactor": 0,
+    "fullDeterminant": "D*y^2*h^2",
+    "complementaryNullVector": "(I,N,Z,X)=(0,h,0,-g)",
+    "boundedNonzeroAssignmentsChecked": 4096,
+    "alphabet": [-2, -1, 1, 2],
+    "coexistenceStatus": "SAT as a coefficient-level Schur/texture projection",
+    "singlePhysicalDiracStatus": "not established: the explicit 12-dimensional ordinary Dirac support has a four-dimensional kernel while the five-state coefficient matrix is invertible",
+    "missingMap": "a correspondence/descent functor identifying the relation-sector Dirac data with the physical Weyl coefficient matrix without adding forbidden support"
+  },
+  "physicalCarrierAudit": {
+    "sourcedPatiSalamFermionsPerGeneration": ["R=(2,1,4)", "L=(1,2,4)"],
+    "newOrdinarySectorsBeyondTheFourCharacterModel": ["TP", "PT", "TU", "UT"],
+    "newJPairOrbits": 2,
+    "minimumNewComplexLabelStates": 4,
+    "newAlgebraCharacters": ["T", "U"],
+    "patiSalamSingletFermionsInSourcedCarrier": 0,
+    "unreducedPatiSalamHasOneDimensionalCharacters": false,
+    "directSumFamilyTwoSlotObstructionPersists": true,
+    "genuineSourcedPatiSalamEmbedding": false,
+    "interpretation": "the ordinary C^6 model necessarily introduces new sterile matter and central directions; treating it only as a relation algebra instead requires a new correspondence action not present in the sources"
+  },
+  "decision": {
+    "ordinarySixCharacterFiniteGeometry": "SAT",
+    "nondegenerateIntersectionForm": "SAT",
+    "orderZeroFirstOrderJGrading": "SAT",
+    "finiteCharacterMetricConnected": "SAT",
+    "invertibleTwelveStateFiniteDirac": "UNSAT on the exact allowed support",
+    "protectedFiveStateTexture": "SAT at coefficient level",
+    "embedsSourcedPatiSalamCarrier": "UNSAT",
+    "singleOperatorPhysicalRealization": "UNDERDETERMINED pending a new correspondence/descent functor",
+    "strongestConclusion": "the six-character completion is a valid minimal ordinary label geometry but not a physical completion of the sourced Pati-Salam model; it adds two real fermion orbits and leaves a precise four-zero-mode/descent obstruction"
+  },
+  "boundary": "The exhaustive statement is over the twelve declared simple C^6 bimodule sectors, diagonal KO6/relation gradings, and first-order finite-D edges. It does not exclude enlarging multiplicities, changing the algebra, or using a generalized correspondence, but each such move is new physical input."
+}

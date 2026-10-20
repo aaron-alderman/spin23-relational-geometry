@@ -1,0 +1,84 @@
+{
+  "schema": "spin23.portal-exchange-spectrum-enlargement/1",
+  "date": "2026-10-20",
+  "question": "What is the smallest spectrum/operator-complex enlargement that can make the Dirac and Majorana portal complexes exchange-isomorphic and evade the claim-1531 Ward-symmetry obstruction?",
+  "declaredMinimalClass": {
+    "gaugeGroup": "fixed Pati-Salam SU(2)_R x SU(2)_L x SU(4), with the marked family action",
+    "symmetry": "local invertible linear Z2 on elementary fields, allowed to cover an automorphism of the gauge group",
+    "preservedData": ["Lorentz parity", "gauge kinetic terms", "family character", "finite grading", "J/CP pairing"],
+    "interactions": "renormalizable cubic portal monomials",
+    "allowedEnlargement": "finitely many complete Pati-Salam field multiplets and their required J/conjugate partners"
+  },
+  "typedPortalComplexes": {
+    "dirac": {
+      "fermionTypeMultiset": ["F_L=(1_R,2_L,4)", "F_R=(2_R,1_L,4-or-conjugate-by-convention)"],
+      "scalarType": "H_D=(2_R,2_L,1), minimally; optionally the sourced 15 channel",
+      "familyDressing": "neutral selected Dirac channel",
+      "finiteSupport": "particle-particle Dirac arrow"
+    },
+    "majorana": {
+      "fermionTypeMultiset": ["F_R", "F_R"],
+      "scalarType": "H_M=(3_R,1_L,10) or (1_R,1_L,6), with low-energy S_-3 dressing",
+      "familyDressing": "charge-minus-three selected-null dressing",
+      "finiteSupport": "particle-conjugate Majorana defect"
+    }
+  },
+  "fixedGroupNoGo": {
+    "constituentMismatch": ["F_L cannot map to F_R while commuting with the fixed gauge action", "H_D cannot map to H_M", "neutral Dirac dressing cannot map to the charge-minus-three Majorana dressing", "particle-particle support cannot map to particle-conjugate support while preserving grading and J"],
+    "gaugeAutomorphismBoundary": "The left-right outer automorphism can exchange SU(2)_L and SU(2)_R, but it preserves representation dimensions and maps a bidoublet to a bidoublet; it does not map H_D to the triplet/singlet H_M. No automorphism maps a nontrivial representation to the trivial representation.",
+    "finiteAdditionTheorem": "Adding fields does not change the type of the image of an original field under a gauge-compatible Z2. The original O_D can only map to a new D-typed monomial, never to the original M-typed monomial, and conversely.",
+    "conclusion": "No finite spectrum addition within the declared fixed-group class makes the original O_D and O_M a single Z2 orbit."
+  },
+  "minimalObjectLevelClosure": {
+    "typeCountsBefore": {
+      "diracSide": {"F_L": 1, "F_R": 1, "H_D": 1, "H_M": 0},
+      "majoranaSide": {"F_L": 0, "F_R": 2, "H_D": 0, "H_M": 1}
+    },
+    "necessaryAdditions": {
+      "toDiracSide": ["one F_R multiplet", "one H_M multiplet"],
+      "toMajoranaSide": ["one F_L multiplet", "one H_D multiplet"]
+    },
+    "lowerBound": "two fermion multiplet copies plus two scalar representation copies, together with required J/conjugate partners",
+    "countsAfter": {
+      "diracSide": {"F_L": 1, "F_R": 2, "H_D": 1, "H_M": 1},
+      "majoranaSide": {"F_L": 1, "F_R": 2, "H_D": 1, "H_M": 1}
+    },
+    "interpretation": "The fermion additions close one complete left-right Pati-Salam family pair across the two sides; gauge covariance requires whole irreducible multiplets, not only neutrino components.",
+    "boundedCandidate": {
+      "sectorA": "original O_D^A plus added O_M^A built from the added F_R^A and H_M^A",
+      "sectorB": "original O_M^B plus added O_D^B built from the added F_L^B and H_D^B",
+      "z2Action": ["O_D^A <-> O_D^B", "O_M^A <-> O_M^B"],
+      "invariantInteraction": "lambda_D(O_D^A+O_D^B)+lambda_M(O_M^A+O_M^B)+h.c.",
+      "invariantCouplingDimension": 2,
+      "status": "exchange-isomorphic as enlarged object collections, but does not relate lambda_D to lambda_M"
+    }
+  },
+  "minimalityDichotomy": {
+    "safeDirectSumCompletion": "keeps gauge/grading types separate and adds no mixed carrier arrow, but leaves two independent Z2 orbits and two invariant couplings",
+    "crossTypeCompletion": "would put original O_D and O_M in one orbit and yield one invariant coupling, but requires an off-diagonal typed intertwiner forbidden by claims 1521, 1525 and 1531",
+    "carrierConsequence": "Implementing the cross-type map as a finite-carrier sewing reopens the M4 closure and relation-sheet oddness of claim 1521.",
+    "theorem": "Within the declared class, every safe completion is insufficient and every completion sufficient to equate the original portal couplings violates at least gauge type or finite grading."
+  },
+  "kineticAndJRequirements": {
+    "kineticTerms": "Each exchanged elementary pair must have identical gauge representation, chirality convention and kinetic normalization.",
+    "normalization": "Unequal wavefunction metrics conjugate the exchange into a weighted reflection and reinsert the desired ratio.",
+    "jClosure": "The Z2 must act simultaneously on the J-conjugate copy of every added multiplet; this doubles finite-Hilbert representatives but need not mean an independent physical chiral field.",
+    "cp": "Real exchange matrices are CP compatible; CP does not identify the D- and M-type orbits."
+  },
+  "anomalyAudit": {
+    "isolatedComponents": "Adding only neutrino components is not gauge covariant and cannot be anomaly-audited as a Pati-Salam representation.",
+    "completeFamilyPair": "One F_L=(1,2,4) together with the conjugate-handed F_R multiplet has cancelling SU(4)^3 contribution and even SU(2) doublet multiplicities, so the minimal full Pati-Salam family pair can be gauge-anomaly free.",
+    "familyAnomalies": "The marked family U(1) charges of all added chiral multiplets must be specified. The type-counting completion alone does not prove cancellation of U(1)-gauge, cubic-U(1), or gravitational-U(1) anomalies.",
+    "vectorlikeSafeOption": "Adding representation-conjugate vectorlike partners cancels perturbative gauge and family anomalies, but increases the physical fermion count and still leaves two operator-type orbits.",
+    "conclusion": "Anomaly freedom is possible for a mirror closure but does not cure its two-coupling result; a successful cross-type exchange has no candidate field action to anomaly-test."
+  },
+  "smallestBoundedCandidateVerdict": {
+    "exists": true,
+    "scope": "object-level exchange-isomorphic mirror closure only",
+    "evadesClaim1531": false,
+    "reason": "its Z2 pairs like typed portals and has a two-dimensional invariant interaction space"
+  },
+  "strongestNoGo": "No finite addition of Pati-Salam multiplets, with a local linear Z2 preserving gauge action up to automorphism, family character, grading and J, can make the original Dirac and Majorana portal monomials exchange partners. Their constituent type multisets are not related by a Pati-Salam automorphism. The minimal representation-balanced mirror closure exists but has two invariant coupling parameters.",
+  "reopeningDatum": "Provide an enlarged gauge/category structure G_tilde with an involutive automorphism sigma and representations whose restriction contains the full D and M constituent complexes in one sigma orbit, including their scalars, family characters, grading and J. Then give an anomaly-free chiral spectrum, an invariant kinetic metric and scalar potential/vacuum, and show that the operator orbit has exactly one invariant contraction without inducing the claim-1521 forbidden carrier sewing.",
+  "verdict": "The smallest safe spectrum closure adds one F_R and one H_M to the Dirac side and one F_L and one H_D to the Majorana side, plus J/conjugate closure. It duplicates complete gauge multiplets and can be anomaly-safe, but its Z2 exchanges D with D and M with M, leaving two couplings. No finite fixed-Pati-Salam enlargement turns the original D and M portals into one genuine exchange orbit."
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "spin23.spin10-shared126-family-symmetry-audit/1",
+  "date": "2026-10-20",
+  "question": "Can a smallest family symmetry on three families relate Y_PP and Y_PN in the shared Spin(10) 126 tensor while preserving the Dirac null mask and Majorana P-N sewing?",
+  "basis": {
+    "familyOrder": ["P", "I", "N"],
+    "symmetricCoefficientOrder": ["PP", "PI", "PN", "II", "IN", "NN"],
+    "genericMatrix": "[[a,b,c],[b,d,e],[c,e,f]]"
+  },
+  "requiredSectorData": {
+    "selectedDirac": "D_PP nonzero",
+    "diracBlockPreservingMask": ["D_PI=0", "D_PN=0"],
+    "selectedMajorana": "M_PN nonzero",
+    "majoranaRankOneComplementCanonicalMask": ["M_IN=0", "M_NN=0", "M_II nonzero"],
+    "sectorDistinction": "the same family P-N label is forbidden on Dirac support and required on Majorana support"
+  },
+  "universalShared126NoGo": {
+    "assumption": "one family matrix Y_126 multiplies both the (15,2,2) Dirac branch and the (10,1,3) Majorana branch, with nonzero branch VEV/Clebsch factors v_D and v_M",
+    "equations": ["D_PN=v_D Y_PN", "M_PN=v_M Y_PN"],
+    "contradiction": "D_PN=0 and M_PN nonzero cannot both hold when v_D and v_M are nonzero",
+    "strength": "independent of which family symmetry fixes Y_126",
+    "conclusion": "A single universal shared-126 family tensor cannot preserve the sector-dependent null mask."
+  },
+  "permutationAudit": {
+    "structuralInvariant": "Congruence by a family permutation preserves equality pattern of index pairs: diagonal entries map only to diagonal entries and off-diagonal entries only to off-diagonal entries.",
+    "consequence": "PP and PN are in different orbits for every permutation subgroup, so no permutation symmetry can relate them nontrivially.",
+    "fixedDimensions": [
+      {"group": "trivial", "dimensionInSym2": 6},
+      {"group": "one transposition", "dimensionInSym2": 4},
+      {"group": "C3 cyclic permutation", "dimensionInSym2": 2, "texture": "one common diagonal plus one common off-diagonal"},
+      {"group": "S3", "dimensionInSym2": 2, "texture": "one common diagonal plus one common off-diagonal"}
+    ],
+    "maskFailures": [
+      "P<->N equates PP with NN, so nonzero PP activates forbidden NN",
+      "I<->N equates PI with PN, so nonzero PN activates the forbidden Dirac PI entry",
+      "C3 or S3 makes all off-diagonals equal and all diagonals equal, activating forbidden entries"
+    ]
+  },
+  "signedPermutationAudit": {
+    "classSize": 48,
+    "structuralInvariant": "Signed monomial congruence still preserves diagonal and off-diagonal coordinate subspaces.",
+    "consequence": "No signed-permutation subgroup has an orbit containing both PP and PN. If both fixed sectors are nonzero, their amplitudes remain at least two independent invariant parameters.",
+    "examples": [
+      {"generator": "diag(1,1,-1)", "fixedDimension": 4, "effect": "kills PN and IN"},
+      {"generator": "diag(-1,1,-1)", "fixedDimension": 4, "effect": "keeps PP and PN but leaves them independent while killing PI and IN"},
+      {"group": "independent family signs", "fixedDimension": 3, "effect": "keeps only diagonal entries and therefore kills the needed PN portal"}
+    ]
+  },
+  "u1CharacterAudit": {
+    "invarianceConditions": ["2 q_P+q_H=0 for PP", "q_P+q_N+q_H=0 for PN"],
+    "jointConsequence": "q_P=q_N",
+    "selectionBoundary": "A U(1) can permit or forbid entries but never equates their coefficients. Keeping both PP and PN also gives P and N the same character, so the U(1) cannot preserve their marked distinction or distinguish Dirac P-N from Majorana P-N.",
+    "verdict": "no solution"
+  },
+  "rankOneAudit": {
+    "ansatz": "Y=v v^T",
+    "relation": "Y_PP=Y_PN nonzero implies v_N=v_P nonzero",
+    "forcedEntry": "Y_NN=v_N^2=Y_PP nonzero",
+    "maskConflict": "the required Majorana complementary-null entry Y_NN=0 is activated",
+    "verdict": "no solution"
+  },
+  "markedSplitStabilizerAudit": {
+    "fullFlagStabilizer": "U(1)_P x U(1)_I x U(1)_N, or its finite monomial subgroups",
+    "selectedLineStabilizer": "U(1)_P x U(2)_(I,N)",
+    "moduleDecomposition": "Sym2(F)=Sym2(P) direct-sum (P tensor Q) direct-sum Sym2(Q), of dimensions 1+2+3",
+    "homResult": "PP lies in Sym2(P), while PN lies in P tensor Q; no intertwiner exists under the natural stabilizer.",
+    "boundary": "Any family rotation that mixes PP with PN must mix the marked P and N lines and therefore moves the null projector and its sector anchors."
+  },
+  "coefficientProjectorAudit": {
+    "desiredFormalLine": "span(E_PP + E_PN + E_NP)",
+    "matrix": [[1,0,1],[0,0,0],[1,0,0]],
+    "matrixRank": 2,
+    "status": "A rank-one projector in the six-dimensional coefficient space can select this line, but it explicitly contains the desired tensor and is not induced by a family permutation, character symmetry, or rank-one family vector.",
+    "universalTensorFailure": "Used as one Y_126, it still activates Dirac P-N and therefore fails the sector mask."
+  },
+  "minimalSectorDependentConstruction": {
+    "portalTensors": ["Y_D^portal=Lambda E_PP", "Y_M^portal=Lambda(E_PN+E_NP)"],
+    "minimalFullRankExample": {
+      "D": "[[Lambda,0,0],[0,d_I,0],[0,0,d_N]]",
+      "M": "[[0,0,Lambda],[0,mu,0],[Lambda,0,0]]",
+      "conditions": ["Lambda nonzero", "mu nonzero"],
+      "detM": "-mu Lambda^2",
+      "rankOfComplementaryMajoranaBlock": 1
+    },
+    "properties": ["D_PP and M_PN share one coefficient", "D_PN remains zero", "M_IN and M_NN remain zero", "the heavy Majorana matrix is invertible"],
+    "cost": "requires a sector-labelled intertwiner/projector distinguishing the Dirac and Majorana 126 branches; this is not one universal Spin(10) Yukawa matrix and therefore breaks or extends the naive shared-126 parent relation"
+  },
+  "candidateResults": [
+    {"candidate": "permutations", "relatesPPtoPN": false, "preservesMask": false, "invariantDimensionFloorWithBoth": 2},
+    {"candidate": "signed permutations", "relatesPPtoPN": false, "preservesMask": false, "invariantDimensionFloorWithBoth": 2},
+    {"candidate": "U(1) characters", "relatesPPtoPN": false, "preservesMask": false, "invariantDimensionFloorWithBoth": 2},
+    {"candidate": "rank-one family projector", "relatesPPtoPN": true, "preservesMask": false, "invariantDimensionFloorWithBoth": 1},
+    {"candidate": "natural marked-split stabilizer", "relatesPPtoPN": false, "preservesMask": true, "invariantDimensionFloorWithBoth": 2},
+    {"candidate": "sector-dependent coefficient intertwiner", "relatesPPtoPN": true, "preservesMask": true, "invariantDimensionFloorWithBoth": 1}
+  ],
+  "strongestNoGo": "Within compact family symmetries generated by permutations, signed permutations, U(1) characters, rank-one family projectors, or the natural stabilizer of the marked P/I/N split, no one-dimensional invariant portal ray relates nonzero PP and PN while preserving the null mask. More strongly, one universal Y_126 cannot make its PN entry vanish in the Dirac branch and survive in the Majorana branch.",
+  "reopeningDatum": "Supply a sector-dependent family tensor or natural transformation Xi in (Dirac/Majorana branch labels) tensor Sym2(F*) whose two components are proportional to E_PP and sym(PN), and derive Xi from an enlarged parent representation or finite-geometry anchor rather than inserting it. Then prove compatibility with Spin(10) breaking, J/CP, anomaly-free family gauging, threshold normalization and RG stability.",
+  "verdict": "The shared-126 route cannot preserve the programme's null mask with one universal family Yukawa matrix. Standard three-family symmetries cannot relate a diagonal entry PP to an off-diagonal entry PN without either leaving two parameters or activating forbidden entries. The smallest algebraically viable texture uses one common coefficient in two sector-dependent tensors, so the next datum is a branch-labelled family intertwiner, not an ordinary family symmetry."
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "spin23.sixteen-state-five-role-feshbach-resolvent/1",
+  "date": "2026-10-20",
+  "scope": "one eight-state relation-sheet component of claim 1533's SI/IS+NU/UN repair, projected onto the five coordinate sectors retained by claim 1537",
+  "orders": {
+    "fullSheet": ["PN", "IN", "IP", "TP", "SP", "TU", "SI", "NU"],
+    "retainedSectors": ["PN", "IN", "IP", "TP", "SP"],
+    "retainedRoles": ["I", "P", "N", "Z", "X"],
+    "auxiliarySectors": ["TU", "SI", "NU"]
+  },
+  "genericRealEdgeWeights": {
+    "PN--IN": "x",
+    "IN--IP": "y",
+    "IP--TP": "g",
+    "TP--SP": "h",
+    "TP--TU": "u",
+    "SP--SI": "v",
+    "TU--NU": "w"
+  },
+  "phaseConvention": "the eight-state support graph is a tree, so independent sector rephasings remove every edge phase; real weights lose no spectral generality on this isolated label component",
+  "fullSheetMatrix": "[[0,x,0,0,0,0,0,0],[x,0,y,0,0,0,0,0],[0,y,0,g,0,0,0,0],[0,0,g,0,h,u,0,0],[0,0,0,h,0,0,v,0],[0,0,0,u,0,0,0,w],[0,0,0,0,v,0,0,0],[0,0,0,0,0,w,0,0]]",
+  "fullSheetDeterminant": "x^2 g^2 v^2 w^2",
+  "feshbach": {
+    "definition": "G_R(z)=P(z-D_8)^(-1)P=[z I_5-D_eff(z)]^(-1), D_eff=D_R+B(z I_3-D_A)^(-1)B^T",
+    "initialDomain": "z not in {0,+w,-w} and z not in spec(D_8); the rational result is continued wherever the full resolvent is regular",
+    "auxiliaryBlock": "[[0,0,w],[0,0,0],[w,0,0]] in (TU,SI,NU) order",
+    "auxiliaryResolvent": "[[z/(z^2-w^2),0,w/(z^2-w^2)],[0,1/z,0],[w/(z^2-w^2),0,z/(z^2-w^2)]]",
+    "alpha": "u^2 z/(z^2-w^2)",
+    "beta": "v^2/z",
+    "effectiveOperatorInIPNZXOrder": "[[0,x,0,0,0],[x,0,y,0,0],[0,y,0,g,0],[0,0,g,alpha,h],[0,0,0,h,beta]]",
+    "inducedDiagonals": {"I": "0", "P": "0", "N": "0", "Z": "alpha", "X": "beta"},
+    "inducedOffDiagonals": "all zero; the four retained primitive chain edges are unchanged",
+    "desiredDiagonalDecision": "the elimination generates neither the P diagonal A nor the I diagonal d of the protected coefficient texture; instead it generates unwanted Z and X diagonals"
+  },
+  "projectedResolvent": {
+    "definitions": {
+      "A": "z-alpha",
+      "B": "z-beta",
+      "theta0": "1",
+      "theta1": "z",
+      "theta2": "z^2-x^2",
+      "theta3": "z(z^2-x^2-y^2)",
+      "theta4": "A theta3-g^2 theta2",
+      "Delta": "B theta4-h^2 theta3",
+      "phi5": "B",
+      "phi4": "A B-h^2",
+      "phi3": "z phi4-g^2 B",
+      "phi2": "z phi3-y^2 phi4"
+    },
+    "upperTriangleInIPNZXOrder": {
+      "II": "phi2/Delta",
+      "IP": "x phi3/Delta",
+      "IN": "x y phi4/Delta",
+      "IZ": "x y g B/Delta",
+      "IX": "x y g h/Delta",
+      "PP": "z phi3/Delta",
+      "PN": "y z phi4/Delta",
+      "PZ": "y g z B/Delta",
+      "PX": "y g h z/Delta",
+      "NN": "theta2 phi4/Delta",
+      "NZ": "g theta2 B/Delta",
+      "NX": "g h theta2/Delta",
+      "ZZ": "theta3 B/Delta",
+      "ZX": "h theta3/Delta",
+      "XX": "theta4/Delta"
+    },
+    "symmetry": "the lower triangle equals the upper triangle for real weights; complex weights require the corresponding conjugate-oriented products"
+  },
+  "forbiddenSupportAndCofactor": {
+    "effectiveOperatorPrimitiveIN": "zero identically",
+    "projectedResolventIN": "x y phi4/Delta, generically nonzero",
+    "phi4ClearedNumerator": "F4(t)=(t-w^2-u^2)(t-v^2)-h^2(t-w^2), t=z^2",
+    "intervalAbsenceConditionForIN": "x y=0; F4 cannot vanish identically because its t^2 coefficient is one",
+    "physicalCost": "x=0 or y=0 deletes a required I--P or P--N chain mass",
+    "effectiveOperatorSelectedCofactorPP": "zero identically because deleting P isolates a zero-diagonal I row",
+    "spectralKernelSelectedCofactorPP": "cof_PP(z I-D_eff)=z phi3",
+    "projectedResolventPP": "z phi3/Delta",
+    "phi3ClearedNumerator": "H3(t)=t F4(t)-g^2(t-v^2)(t-w^2), whose t^3 coefficient is one",
+    "intervalProtectedResolventZero": false,
+    "isolatedEnergyConditions": [
+      "G_IN(z)=0 at non-pole isolated energies satisfying F4(z^2)=0",
+      "G_PP(z)=0 at z=0 or non-pole isolated energies satisfying H3(z^2)=0"
+    ],
+    "interpretation": "the mass-matrix cofactor of D_eff is a tautological chain zero, but the physically relevant spectral cofactor of z I-D_eff and the projected resolvent diagonal do not vanish on any open energy interval"
+  },
+  "controlledZeroEnergyLimit": {
+    "conditions": "x g v w nonzero, equivalently det(D_8) nonzero; the full resolvent is then regular at z=0 despite the singular auxiliary block",
+    "limitInIPNZXOrder": [
+      ["0", "-1/x", "0", "y/(x g)", "0"],
+      ["-1/x", "0", "0", "0", "0"],
+      ["0", "0", "0", "-1/g", "0"],
+      ["y/(x g)", "0", "-1/g", "0", "0"],
+      ["0", "0", "0", "0", "0"]
+    ],
+    "selectedPP": 0,
+    "forbiddenIN": 0,
+    "newNonlocalEntry": "I--Z=y/(x g)",
+    "decision": "the selected zero and absence of I--N return only at the isolated zero-energy point; they are not interval identities"
+  },
+  "massAndSupportDecision": {
+    "fullRankConditions": ["x nonzero", "g nonzero", "v nonzero", "w nonzero"],
+    "allPhysicalChainEdgesNonzeroAdds": ["y nonzero", "h nonzero"],
+    "auxiliaryAttachmentNonzeroAdds": ["u nonzero"],
+    "noNonzeroEdgeRelationProtectsINOnInterval": true,
+    "noFiniteEdgeRelationProtectsPPResolventOnInterval": true,
+    "recoverDesiredPAndIDiagonals": "requires new auxiliary couplings to P and I or an external endpoint-selection rule; no relation among x,y,g,h,u,v,w moves the induced Z/X self-energies to P/I"
+  },
+  "boundary": "This is the exact coordinate-projected resolvent of the label-level eight-state component. Without a physical lift identifying sectors, kinetic normalization, i epsilon prescription and observable external states, it is not a claimed physical propagator."
+}

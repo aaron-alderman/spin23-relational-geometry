@@ -1,0 +1,99 @@
+{
+  "schema": "spin23.anchor-cut-weighted-robustness/1",
+  "date": "2026-10-20",
+  "question": "On which positive edge-weight chamber is Q_anchor=AB the unique rank-four J-invariant Dirichlet-cut minimizer, and is that chamber enforced by the sourced link potential or repeated charges?",
+  "variables": {
+    "x": {"quotientEdge": "AB", "stateOrbit": "PN--IN / NP--NI", "claim1542Field": "a", "meaning": "squared Dirac-edge norm"},
+    "y": {"quotientEdge": "BC", "stateOrbit": "IN--IP / NI--PI", "claim1542Field": "b", "meaning": "squared Dirac-edge norm and Q_anchor boundary cost"},
+    "z": {"quotientEdge": "CE", "stateOrbit": "IP--TP / PI--PT", "claim1542Field": "c", "meaning": "squared Dirac-edge norm"},
+    "u": {"quotientEdge": "DE", "stateOrbit": "SP--TP / PS--PT", "claim1542Field": "neutral bare coefficient", "meaning": "squared Dirac-edge norm"},
+    "v": {"quotientEdge": "EF", "stateOrbit": "TP--TU / PT--UT", "claim1542Field": "e", "meaning": "squared Dirac-edge norm"},
+    "r": {"quotientEdge": "DG", "stateOrbit": "SP--SI / PS--IS", "claim1542Field": "f", "meaning": "squared Dirac-edge norm"},
+    "s": {"quotientEdge": "FH", "stateOrbit": "TU--NU / UT--UN", "claim1542Field": "g", "meaning": "squared Dirac-edge norm"}
+  },
+  "action": {
+    "formula": "S_rho(Q)=(1/4)Tr([D,Q]^*[D,Q])=the sum of rho_e over quotient edges crossing Q",
+    "domain": "rho=(x,y,z,u,v,r,s) with every used coordinate strictly positive",
+    "targetCost": "S_rho(AB)=y",
+    "geometry": "the selection regions are open rational polyhedral cones in squared-edge-weight space"
+  },
+  "H12": {
+    "coordinates": ["x", "y", "z", "u", "v"],
+    "necessaryAndSufficientStrictInequalities": [
+      "y < x+z",
+      "y < x+u",
+      "y < x+v",
+      "y < z+u",
+      "y < z+v",
+      "y < u+v"
+    ],
+    "compressedForm": "y is smaller than the sum of the two smallest members of {x,z,u,v}",
+    "facetDegeneracyWalls": [
+      {"wall": "y=x+z", "competitor": "BC"},
+      {"wall": "y=x+u", "competitor": "AD"},
+      {"wall": "y=x+v", "competitor": "AF"},
+      {"wall": "y=z+u", "competitor": "EF"},
+      {"wall": "y=z+v", "competitor": "DE"},
+      {"wall": "y=u+v", "competitor": "DF"}
+    ],
+    "irredundantFacetCount": 6,
+    "unitPoint": "strict interior with margin one on every facet",
+    "openUntunedChamber": true
+  },
+  "H16": {
+    "coordinates": ["x", "y", "z", "u", "v", "r", "s"],
+    "necessaryAndSufficientStrictInequalities": [
+      "y < u",
+      "y < v",
+      "y < x+z",
+      "y < x+r",
+      "y < x+s",
+      "y < r+s"
+    ],
+    "facetDegeneracyWalls": [
+      {"wall": "y=u", "competitor": "DG"},
+      {"wall": "y=v", "competitor": "FH"},
+      {"wall": "y=x+z", "competitor": "BC"},
+      {"wall": "y=x+r", "competitor": "AG"},
+      {"wall": "y=x+s", "competitor": "AH"},
+      {"wall": "y=r+s", "competitor": "GH"}
+    ],
+    "irredundantFacetCount": 6,
+    "unitPoint": "codimension-two boundary intersection y=u=v; AB, DG and FH tie",
+    "openUntunedChamber": true,
+    "exampleInteriorPoint": {"x": 1, "y": 0.5, "z": 1, "u": 1, "v": 1, "r": 1, "s": 1},
+    "exampleOtherWinner": {"x": 1, "y": 2, "z": 1, "u": 0.5, "v": 1, "r": 1, "s": 1}
+  },
+  "potentialAndChargeAudit": {
+    "claim1542StableAllLinkCondition": "all six charged VEVs and the neutral coefficient are nonzero; this implies positivity of the seven weights but no ordering among them",
+    "generalRenormalizablePotential": "contains independent modulus masses and quartics, so its allowed coefficient space does not impose any of the six selection facets",
+    "claim1542Witness": "all link coefficients and the neutral coefficient equal one",
+    "witnessOnH12": "strictly inside the H12 selection cone",
+    "witnessOnH16": "on y=u and y=v, hence not in the unique-selection cone",
+    "repeatedChargeFieldIdentificationOnly": "a=b and e=f as scalar fields does not imply x=y or v=r because the edge Yukawa maps remain independent",
+    "tiedYukawaAddOn": "if repeated-charge Yukawas are also tied, then x=y and v=r",
+    "H12AfterTiedYukawas": ["y < z+u", "y < z+v", "y < u+v"],
+    "H16AfterTiedYukawas": ["y < u", "y < v"],
+    "tiedYukawaVerdict": "the equalities remove four redundant facets on H16 but do not enforce either remaining ordering; the all-one witness saturates both",
+    "enforcedByRenormalizablePotential": false,
+    "enforcedByRepeatedCharges": false
+  },
+  "perturbationAudit": {
+    "model": "independent threshold or one-loop shifts rho_e -> rho_e+delta_e, restricted only by rho_e+delta_e>0",
+    "exactStabilityRule": "replace every rho in the six strict facet inequalities by rho+delta; selection persists exactly while every resulting margin remains positive",
+    "interiorRobustness": "every interior point has a nonzero open neighborhood of perturbations preserving Q_anchor",
+    "H16UnitPointLinearConditions": ["delta_y < delta_u", "delta_y < delta_v"],
+    "H16UnitPointOtherFacets": "the other four facets have unit margin and therefore remain inactive for sufficiently small shifts",
+    "genericUnitPointBehavior": "independent arbitrarily small shifts resolve the AB/DG/FH tie in any of the three directions; AB is not radiatively selected without beta-function ordering",
+    "radiativeProtection": false
+  },
+  "decision": {
+    "H12RobustSelection": "SAT on a nonempty open untuned polyhedral chamber containing the all-link unit vacuum",
+    "H16RobustSelection": "SAT on a nonempty open untuned polyhedral chamber, but the claim-1542 symmetric vacuum lies on two degeneracy walls",
+    "existingPotentialOrChargesForceChamber": false,
+    "newEqualityLawNeeded": false,
+    "newOrderingLawNeededForPrediction": true,
+    "strongestConclusion": "Unique anchor selection is structurally stable once the six strict inequalities hold, so it does not require fine tuning; however, neither the stable all-link potential nor repeated-charge identifications force that chamber. Predictive selection on H16 needs a new dynamical ordering or beta-function law, not another equality assumption."
+  },
+  "boundary": "The chamber calculation treats the seven squared primitive edge norms as scalar positive coordinates. Matrix-valued family Yukawas would replace them by trace norms in the action and can introduce noncommuting spectral data not classified here."
+}

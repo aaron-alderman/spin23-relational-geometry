@@ -1,0 +1,126 @@
+{
+  "schema": "spin23.six-character-zero-mode-repair-exhaustion/1",
+  "date": "2026-10-20",
+  "startingModel": {
+    "sourceClaim": 1529,
+    "algebra": "C^6 with characters P,I,N,S,T,U",
+    "hilbertDimension": 12,
+    "stateGraphComponents": 2,
+    "componentBipartition": {
+      "positive": ["PN", "IP", "SP", "TU"],
+      "negative": ["IN", "TP"]
+    },
+    "componentChiralityDimensions": [4, 2],
+    "genericKernelDimensionPerComponent": 2,
+    "genericKernelDimensionFullSpace": 4,
+    "cause": "Hall/chirality capacity defect: four positive dimensions have only two negative dimensions, and SP plus TU share TP as their sole old negative neighbor"
+  },
+  "additionalExistingSectorEdges": {
+    "unorderedPairs": 66,
+    "completeAllowedEdgeCount": 10,
+    "currentlyUsedAllowedEdgeCount": 10,
+    "additionalEdgesSatisfyingFirstOrderJGradingRelation": 0,
+    "status": "UNSAT",
+    "lowerBound": "changing coefficients on the existing support cannot exceed structural rank eight on the twelve-state real completion"
+  },
+  "boundedMultiplicitySearch": {
+    "componentOrder": ["PN", "IN", "IP", "TP", "SP", "TU"],
+    "multiplicityRange": [1, 3],
+    "patternsTested": 729,
+    "JConstraint": "the conjugate sector has the same multiplicity",
+    "invertibilityConditions": [
+      "m_PN+m_IP+m_SP+m_TU = m_IN+m_TP",
+      "m_PN <= m_IN",
+      "m_SP+m_TU <= m_TP"
+    ],
+    "invertiblePatterns": 15,
+    "minimumAdditionalFullHilbertDimension": 4,
+    "minimumPatterns": [
+      {
+        "multiplicities": {"PN": 1, "IN": 1, "IP": 1, "TP": 3, "SP": 1, "TU": 1},
+        "JPartnersImplied": true,
+        "interpretation": "two further TP/PT copies",
+        "intersectionDeterminant": 1
+      },
+      {
+        "multiplicities": {"PN": 1, "IN": 2, "IP": 1, "TP": 2, "SP": 1, "TU": 1},
+        "JPartnersImplied": true,
+        "interpretation": "one further IN/NI copy and one further TP/PT copy",
+        "intersectionDeterminant": 4
+      }
+    ],
+    "explicitFullRankBlocksExist": true,
+    "status": "SAT with matrix-valued existing edges",
+    "physicalCost": "at least one additional unsourced TP/PT sterile orbit is unavoidable; the less exotic minimum may use another sourced-family IN/NI carrier but requires independent matrix columns",
+    "aggregateWarning": "the full-rank edge matrices do not enforce the common Schur ray; generic independent columns reopen the aggregate-rank problem"
+  },
+  "newSectorOrbitSearch": {
+    "unusedOffDiagonalOrbitsAmongExistingCharacters": 9,
+    "oneNewJOrbit": {
+      "additionalFullHilbertDimension": 2,
+      "status": "UNSAT",
+      "reason": "one new negative state on the positive relation sheet changes the 4-versus-2 imbalance only to 4-versus-3"
+    },
+    "twoNewJOrbits": {
+      "additionalFullHilbertDimension": 4,
+      "orientedPairsTested": 144,
+      "pairsWithPerfectMatching": 79,
+      "pairsAlsoWithNondegenerateIntersection": 51,
+      "status": "SAT"
+    },
+    "minimalWitness": {
+      "newOrbits": [["SI", "IS"], ["NU", "UN"]],
+      "newChiralRelationAssignments": {
+        "SI": [-1, 1],
+        "IS": [1, -1],
+        "NU": [-1, 1],
+        "UN": [1, -1]
+      },
+      "newEdgeOrbits": [["SP--SI", "PS--IS"], ["TU--NU", "UT--UN"]],
+      "expandedHilbertDimension": 16,
+      "completeAllowedEdgeCount": 14,
+      "intersectionDeterminant": 1,
+      "unitWeightDiracDeterminant": 1,
+      "perfectMatchingPerRelationSheet": ["PN--IN", "IP--TP", "SP--SI", "TU--NU"],
+      "forbiddenOldToOldEdgesAdded": 0
+    },
+    "status": "two new J-orbits are necessary and sufficient if all original multiplicities remain one"
+  },
+  "textureAudit": {
+    "fiveStateMatrix": "[[A,x,y,0,0],[x,D,0,0,0],[y,0,0,g,0],[0,0,g,0,h],[0,0,0,h,0]]",
+    "selectedCofactor": 0,
+    "determinant": "D*y^2*h^2",
+    "additionalEdgeRepair": "not applicable because no edge exists",
+    "multiplicityRepair": {
+      "restrictedOriginalSupportUnchanged": true,
+      "forbiddenPrimitiveOldToOldSupportAdded": false,
+      "fiveStatePrincipalProjectionPreserved": true,
+      "fullPhysicalSchurIdentityCertified": false,
+      "reason": "matrix-valued multiplicity directions require a physical projection/descent map; generic independent columns need not occupy the protected common ray"
+    },
+    "newSectorRepair": {
+      "restrictedOriginalSupportUnchanged": true,
+      "forbiddenPrimitiveOldToOldSupportAdded": false,
+      "fiveStatePrincipalProjectionPreserved": true,
+      "fullPhysicalSchurIdentityCertified": false,
+      "reason": "the new edges have new endpoints, but eliminating those states may generate effective terms unless a correspondence/descent rule proves otherwise"
+    }
+  },
+  "minimum": {
+    "rankLowerBound": "four additional complex Hilbert dimensions on the J-completed space",
+    "ordinaryMultiplicityMinimum": "one extra IN/NI copy plus one extra TP/PT copy, or two extra TP/PT copies",
+    "multiplicityOneSectorMinimum": "two new J-orbits; SI/IS plus NU/UN is a determinant-one witness",
+    "leastNewPhysicalDatum": "a second unsourced Z-like TP/PT pair together with a full-rank 2x2 matrix-valued edge packet; using another physical IN/NI generation is conditional on the unresolved family descent",
+    "remainingObstruction": "no repair derives simultaneous physical descent and the rank-one Schur/cofactor law"
+  },
+  "decision": {
+    "coefficientOnlyEdgeRepair": "UNSAT",
+    "boundedMultiplicityRepair": "SAT formally, minimum +4 dimensions",
+    "newSectorRepairAtMultiplicityOne": "SAT formally, minimum two J-orbits and +4 dimensions",
+    "sourcedPatiSalamRepair": "UNSAT because every minimum contains additional unsourced sterile/correspondence matter",
+    "protectedTextureAsProjection": "SAT",
+    "protectedTextureForTheFullPhysicalOperator": "UNDERDETERMINED",
+    "strongestConclusion": "the four zero modes can be lifted only by four added J-completed dimensions; the cheapest support-preserving cure is a second Z pair plus one matrix rank, but it is new matter and does not solve physical descent"
+  },
+  "boundary": "The multiplicity exhaustion is exact for integer sector multiplicities 1 through 3 and already reaches the global lower bound. The new-sector exhaustion uses unused off-diagonal sectors of the same C^6 algebra with the inherited diagonal gradings. Enlarging the algebra or relaxing relation parity is outside the claim."
+}

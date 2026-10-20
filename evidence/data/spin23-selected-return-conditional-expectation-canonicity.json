@@ -1,0 +1,99 @@
+{
+  "schema": "spin23.selected-return-conditional-expectation-canonicity/1",
+  "date": "2026-10-20",
+  "question": "Is Pi_PI E_diag canonical from an already declared algebraic structure?",
+  "coefficientAlgebra": {
+    "algebra": "M_5(C)",
+    "vertexOrder": ["I", "P", "N", "Z", "X"],
+    "diagonalSubalgebra": "Delta=span{p_I,p_P,p_N,p_Z,p_X}",
+    "selectedProjection": "q=p_I+p_P",
+    "selectedCorner": "q Delta q=span{p_I,p_P}"
+  },
+  "diagonalExpectation": {
+    "formula": "E_diag(a)=sum_v p_v a p_v",
+    "idempotent": true,
+    "unital": true,
+    "faithful": true,
+    "tracePreserving": true,
+    "completelyPositive": true,
+    "KrausOperators": ["p_I", "p_P", "p_N", "p_Z", "p_X"],
+    "ChoiRank": 5,
+    "DeltaBimodular": true,
+    "JEquivariantAfterRealCompletion": true,
+    "gradingEquivariant": true,
+    "relationEquivariant": true,
+    "status": "canonical once the vertex diagonal MASA is declared"
+  },
+  "selectedReturnMap": {
+    "formula": "F_PI(a)=q E_diag(a) q=p_I a p_I+p_P a p_P",
+    "idempotent": true,
+    "unitalOnM5": false,
+    "unitImage": "q, not 1",
+    "unitalAsMapToCorner": true,
+    "tracePreservingOnM5": false,
+    "completelyPositive": true,
+    "ChoiRank": 2,
+    "selectedCornerBimodular": true,
+    "JEquivariantWhenQIncludesJPartners": true,
+    "gradingEquivariant": true,
+    "relationEquivariant": true,
+    "status": "canonical CP corner map only after q is supplied; not a full-algebra conditional expectation that derives q"
+  },
+  "pathSubalgebras": {
+    "algebraGeneratedByVerticesAndFourChainEdges": "M_5(C)",
+    "generatedMatrixUnits": 25,
+    "conditionalExpectationOntoGeneratedPathAlgebra": "identity",
+    "degreeOneVertexEdgeSpanDimension": 13,
+    "degreeOneSpanClosedUnderMultiplication": false,
+    "counterexample": "E_IP E_PN=E_IN, an open length-two matrix unit outside the degree-one span",
+    "blockExpectationUsingQ": "a mapsto q a q+(1-q)a(1-q) is unital CP and bimodular, but presupposes q and retains the entire N-Z-X block"
+  },
+  "automorphismClassification": {
+    "unmarkedFiveChainAutomorphismGroupOrder": 2,
+    "unmarkedAction": "reflection I<->X, P<->Z, N fixed",
+    "unmarkedVertexOrbits": [["I", "X"], ["P", "Z"], ["N"]],
+    "unmarkedEquivariantMasks": 8,
+    "PiPIUnmarkedEquivariant": false,
+    "PiPIReflectionImage": ["Z", "X"],
+    "stabilizerOrderWithPMarked": 1,
+    "equivariantMasksWithPMarked": 32,
+    "stabilizerOrderWithAnchorSetIPMarked": 1,
+    "equivariantMasksWithAnchorSetIPMarked": 32,
+    "masksContainingBothPhysicalAnchors": 8,
+    "inclusionMinimalMaskContainingBothAnchors": ["I", "P"],
+    "minimalityRuleAlreadyDeclared": false,
+    "conclusion": "unmarked symmetry excludes Pi_PI, while marking P or I destroys the reflection and makes every mask invariant; uniqueness follows only after adding the rule 'take the minimal mask containing both anchors'"
+  },
+  "anchorAudit": {
+    "alreadyNamedData": ["P is the selected cofactor role", "I carries the complementary image mass d", "I--P is the first primitive chain edge"],
+    "whatTheyDetermine": "the labeled vertices and anchor edge",
+    "whatTheyDoNotDetermine": "a conditional expectation must discard every return at N,Z,X",
+    "geodesicHullCandidate": "the graph-convex hull of I and P is {I,P}",
+    "geodesicHullRuleStatus": "new functorial rule, not a consequence of J, grading, relation parity, or the spectral triple axioms",
+    "restatementTest": "declaring q=p_I+p_P or demanding exactly the A,d diagonal support is equivalent to supplying the desired return mask"
+  },
+  "spectralPolynomialAudit": {
+    "degreeTwoScalarPolynomial": "c0*1+c1*D+c2*D^2",
+    "universalMaskCondition": "zero diagonal at N,Z,X for all nonzero edge weights",
+    "solutionsForC0C2": [[0, 0]],
+    "nontrivialSelectedReturnSolutions": 0,
+    "reason": "the X diagonal is c0+c2*h^2; varying h forces c0=c2=0",
+    "spectralActionTrace": "Tr f(D/Lambda) is a global scalar and Tr D^2 sums returns at all vertices",
+    "localizedSpectralAction": "Tr(q f(D/Lambda)) produces a selected density but inserts q",
+    "heatKernel": "exp(-t D^2) is positive definite for t>0, so every diagonal entry is strictly positive and no proper vertex mask occurs",
+    "heatKernelWithInsertion": "q exp(-t D^2) q has the requested support only because q is inserted",
+    "status": "no scalar spectral-action or heat-kernel polynomial generates Pi_PI"
+  },
+  "decision": {
+    "EdiagCanonical": true,
+    "PiPIEdiagCanonicalFromDeclaredSymmetries": false,
+    "PiPIEdiagIsCompletelyPositiveCornerMap": true,
+    "uniqueEquivariantMask": false,
+    "spectralPolynomialGeneratesMask": false,
+    "heatKernelGeneratesMask": false,
+    "smallestAdditionalAxiom": "take the graph-convex/inclusion-minimal return corner containing the marked I--P anchor edge",
+    "axiomCost": "equivalent to supplying q=p_I+p_P; it is a useful concise rule but not a derivation of the texture",
+    "strongestConclusion": "the diagonal conditional expectation is canonical, whereas the selected endpoint corner is genuinely new marked-projector data"
+  },
+  "boundary": "Canonicity is tested against automorphisms of the labeled/unlabeled five-chain, the declared diagonal and path algebras, J/grade/relation equivariance, and scalar spectral/heat-kernel functional calculus. A larger sourced algebra with a central projection equal to q could change the conclusion, but no such projection has been declared."
+}

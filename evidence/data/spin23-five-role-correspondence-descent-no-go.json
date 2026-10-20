@@ -1,0 +1,95 @@
+{
+  "schema": "spin23.five-role-correspondence-descent-no-go/1",
+  "date": "2026-10-20",
+  "question": "Can either minimal invertible repair of claim 1533 descend naturally and surjectively to the protected five-role physical coefficient matrix?",
+  "target": {
+    "fiveRoleOrder": ["I", "P", "N", "Z", "X"],
+    "positiveRelationSheetSectors": ["PN", "IN", "IP", "TP", "SP"],
+    "KO6Signs": [1, -1, 1, -1, 1],
+    "chiralDimensionsPerRelationSheet": [3, 2],
+    "requiredOffDiagonalEdges": ["I--P", "P--N", "N--Z", "Z--X"],
+    "requiredCoefficientMatrixInPINZXOrder": "[[A,x,y,0,0],[x,D,0,0,0],[y,0,0,g,0],[0,0,g,0,h],[0,0,0,h,0]]",
+    "selectedCofactor": 0,
+    "determinant": "D*y^2*h^2",
+    "requiredNonzeroCoefficients": ["D", "y", "h"]
+  },
+  "strictQuotientTheorem": {
+    "requirements": ["Q is complex-linear and surjective", "QJ=JQ", "Qgamma=gammaQ", "QGamma_rel=Gamma_rel Q", "QD_source=D_target Q"],
+    "sourceProperty": "both repaired source Dirac operators are invertible",
+    "kernelProperty": "QD_source=D_target Q makes ker(Q) D_source-invariant; finite-dimensional invertibility implies the induced quotient operator is invertible",
+    "targetProperty": "a relation-even grading-odd operator acts separately on each relation sheet, but the target sheet has chiral dimensions 3 and 2",
+    "targetRankBoundPerSheet": 4,
+    "targetKernelLowerBoundPerSheet": 1,
+    "targetKernelLowerBoundJCompleted": 2,
+    "surjectiveStrictQuotientExists": false,
+    "status": "UNSAT independently of coefficient values"
+  },
+  "matrixMultiplicityRepair": {
+    "sourceComponentDimension": 8,
+    "multiplicitiesInPN_IN_IP_TP_SP_TUOrder": [1, 2, 1, 2, 1, 1],
+    "sourceChiralDimensions": [4, 4],
+    "explicitSourceDiracDeterminant": 1,
+    "targetCompression": "retain PN, one linear combination of the two IN copies, IP, one linear combination of the two TP copies, and SP; discard the complementary multiplicity directions and TU",
+    "signedCompressionVectorsTested": 16,
+    "signedCompressionsWithAllFourChainEdgesNonzero": 16,
+    "strictIntertwiningCompressions": 0,
+    "compressedChainRank": 4,
+    "compressedChainDeterminant": 0,
+    "missingTerms": ["I diagonal D", "P diagonal A"],
+    "auxiliaryDimensionPerRelationSheet": 3,
+    "auxiliaryBlockDeterminant": 0,
+    "ordinarySchurEliminationAvailable": false,
+    "naturalityObstruction": "choosing C^2 to C functionals for the IN and TP multiplicity spaces selects coupling rays; there is no nonzero U(2)-invariant linear functional",
+    "commonRayDerived": false,
+    "status": "compression SAT only after choosing rays by hand; full descent UNSAT"
+  },
+  "newSectorRepair": {
+    "sourceComponentDimension": 8,
+    "sourceSectors": ["PN", "IN", "IP", "TP", "SP", "TU", "SI", "NU"],
+    "sourceDiracDeterminant": 1,
+    "targetCompression": "retain the five chain sectors PN,IN,IP,TP,SP and discard TU,SI,NU plus J partners",
+    "coordinateCompressionCount": 1,
+    "strictIntertwiningCompressions": 0,
+    "compressedChainRank": 4,
+    "compressedChainDeterminant": 0,
+    "missingTerms": ["I diagonal D", "P diagonal A"],
+    "auxiliarySectorsPerRelationSheet": ["TU", "SI", "NU"],
+    "auxiliaryEdges": ["TU--NU"],
+    "auxiliaryBlockRank": 2,
+    "auxiliaryBlockDeterminant": 0,
+    "ordinarySchurEliminationAvailable": false,
+    "forbiddenOldToOldEdgesInCompression": 0,
+    "status": "canonical coordinate compression exists but is singular and cannot be upgraded by a legal Schur complement"
+  },
+  "coefficientInsertionAudit": {
+    "offDiagonalChainFromCompression": "[[0,x,0,0,0],[x,0,y,0,0],[0,y,0,g,0],[0,0,g,0,h],[0,0,0,h,0]] in I,P,N,Z,X order",
+    "offDiagonalChainDeterminant": 0,
+    "termsNotInImageOfLinearCompression": ["A", "D"],
+    "why": "the source support has no self-sector edge; compression of the retained chain cannot create diagonal coefficients",
+    "physicalMatrixAfterManualDiagonalInsertion": {
+      "boundedNonzeroSignAssignments": 64,
+      "invertibleAssignments": 64,
+      "zeroSelectedCofactorAssignments": 64,
+      "forbiddenPrimitiveLNAssignments": 0
+    },
+    "interpretation": "manual A,D insertion recovers the claimed texture, but D is indispensable for invertibility and is not derived by either descent"
+  },
+  "forbiddenSupportAudit": {
+    "forbiddenPrimitive": "L--N next-nearest/cross-sheet support",
+    "coordinateCompressionsAddForbiddenPrimitive": false,
+    "legalSchurEliminationsTested": 0,
+    "reasonNoLegalSchurTest": "the three-dimensional auxiliary block on each relation sheet is grading odd and singular",
+    "regularizationCost": "making that block invertible requires a new relation-mixing or grading-even/self term outside the admissible support",
+    "successfulMapMeetingAllRequirements": false
+  },
+  "decision": {
+    "naturalSurjectiveStrictDescent": "UNSAT",
+    "coordinateCompressionToFiveChain": "SAT but singular",
+    "matrixMultiplicityCommonRayWithoutChoice": "UNSAT",
+    "newSectorSchurDescent": "UNSAT",
+    "manualCoefficientCompletion": "SAT but inserts A,D and a multiplicity ray",
+    "exactMissingDatum": "a non-linear or non-quotient correspondence functor that supplies the two effective diagonal coefficients and canonically selects the common multiplicity ray while forbidding L--N support",
+    "strongestConclusion": "neither minimal rank repair naturally descends to the invertible protected five-role operator; the desired matrix is not a linear quotient or legal Schur complement of the repaired finite Dirac data"
+  },
+  "boundary": "The no-go covers complex-linear surjective Dirac-intertwining quotients and relation-compatible coordinate compressions of the two explicit minimum repairs. It does not exclude a new non-linear, energy-dependent, derived-category, Jordan or path-algebra correspondence, but such a rule is precisely additional programme input."
+}

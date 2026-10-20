@@ -1,0 +1,119 @@
+{
+  "schema": "spin23.parent-symmetry-portal-orbit-audit/1",
+  "date": "2026-10-20",
+  "question": "Does a standard compact parent of Pati-Salam put the complete selected Dirac and Majorana portal complexes in one involutive orbit with exactly one invariant contraction?",
+  "scope": {
+    "candidates": ["Pati-Salam semidirect left-right parity", "SU(4) x Sp(4)", "Spin(10)", "E6", "doubled Pati-Salam semidirect exchange"],
+    "orbitMeaning": "an involution normalizing the chosen Pati-Salam stage and mapping the complete typed operator complex, including scalar, family character, grading and J data",
+    "oneContractionMeaning": "multiplicity one after both gauge representation and the actual family-labelled coefficient space are included",
+    "notSearched": ["noncompact parents", "exceptional groups larger than E6", "nonlocal dualities", "arbitrary product groups without a natural Pati-Salam embedding"]
+  },
+  "sources": [
+    {"id": "AulakhGirdhar2002", "url": "https://arxiv.org/abs/hep-ph/0204097", "use": "explicit Spin(10)-to-Pati-Salam invariant decomposition and D parity"},
+    {"id": "BabuBajcSaad2016", "url": "https://arxiv.org/abs/1612.04329", "use": "Spin(10) Yukawa channels 10, 120 and 126"},
+    {"id": "BajcSusic2014", "url": "https://arxiv.org/abs/1311.0775", "use": "E6 matter 27 and scalar 351-prime decompositions and Yukawa sector"},
+    {"id": "DjouadiEtAl2023", "url": "https://arxiv.org/abs/2212.11315", "use": "E6 351-prime parent relation between Spin(10) 10 and 126 Yukawa sectors and threshold boundary"},
+    {"id": "HuangJiangLi2004", "url": "https://arxiv.org/abs/hep-ph/0407180", "use": "standard doubled-Spin(10) and link-field/deconstruction precedent"}
+  ],
+  "patiSalamData": {
+    "matter": ["F_L=(4,2,1)", "F_R=(bar(4),1,2), in an all-left-handed convention"],
+    "diracScalars": ["H_D1=(1,2,2)", "H_D15=(15,2,2)"],
+    "majoranaScalars": ["H_MR=(10,1,3), up to conjugation convention", "H_M6=(6,1,1) channel"],
+    "familyBoundary": "The selected Dirac and selected-null Majorana coefficients occupy different entries in the marked family coefficient matrix and carry different low-energy family dressings."
+  },
+  "involutionInvariant": {
+    "normalizerRule": "An involution descending to the chosen Pati-Salam stage permutes Pati-Salam irreducibles through a group automorphism and therefore preserves representation dimension and tensor invariants.",
+    "scalarDimensions": {"H_D1": 4, "H_D15": 60, "H_MR": 30, "H_M6": 6},
+    "dimensionConsequence": "No complete sourced Dirac scalar multiplet has the dimension of a sourced Majorana scalar multiplet, so none can be exchanged as whole Pati-Salam representations by a normalizer involution.",
+    "familyConsequence": "Even a parent gauge tensor does not exchange a neutral selected Dirac family entry with the charge-minus-three selected-null entry unless the parent also contains the marked family symmetry and its intertwiner."
+  },
+  "candidateAudit": [
+    {
+      "candidate": "Pati-Salam semidirect Z2_LR",
+      "parentType": "disconnected semidirect extension",
+      "matterResult": "F_L and F_R can be parity partners",
+      "scalarOrbit": "H_D is mapped to a bidoublet of the same type; H_MR is mapped to the left Majorana partner H_ML, not to H_D",
+      "completePortalOrbit": false,
+      "gaugeInvariantContractionCountLowerBound": 2,
+      "familyMultiplicityResolved": false,
+      "verdict": "fails scalar orbit"
+    },
+    {
+      "candidate": "SU(4) x Sp(4)",
+      "parentType": "connected compact semisimple, dimension 25",
+      "matterResult": "the Sp(4) fundamental branches as (2,1)+(1,2), so left and right weak matter types can share one parent representation",
+      "weakScalarResult": "the Sp(4) adjoint branches as (3,1)+(1,3)+(2,2), so weak triplet and bidoublet types can share one parent representation",
+      "su4Obstruction": "a product-group irrep has one fixed SU(4) representation across those weak branches, whereas H_D uses SU(4) 1 or 15 and H_M uses 10 or 6",
+      "completePortalOrbit": false,
+      "gaugeInvariantContractionCountLowerBound": 2,
+      "familyMultiplicityResolved": false,
+      "verdict": "smallest clear near-miss; fails the SU(4) scalar type"
+    },
+    {
+      "candidate": "Spin(10)",
+      "parentType": "connected compact simple, dimension 45",
+      "branching": {
+        "16F": ["(4,2,1)", "(bar(4),1,2)"],
+        "10H": ["(1,2,2)", "(6,1,1)"],
+        "126HRelevant": ["(15,2,2)", "(10,1,3)", "conjugate left-triplet partner", "(6,1,1)"]
+      },
+      "tensorProduct": "16 x 16 = 10_s + 120_a + 126_s, each with multiplicity one",
+      "minimalDiracH1PlusMajorana": "H_D1 in 10H and H_MR in 126H use two inequivalent parent invariant tensors and two Yukawa matrices",
+      "shared126NearMiss": "Choosing the sourced H_D15 branch and H_MR from one 126H puts both gauge components in the single multiplicity-one 16F 16F 126H invariant.",
+      "involutionTest": "D parity fixes/exchanges bidoublet chirality within its type and maps H_MR to H_ML. The D5 diagram automorphism conjugates spinor/self-dual representations; neither maps the bidoublet submultiplet to H_MR.",
+      "completePortalOrbit": false,
+      "gaugeInvariantContractionCountLowerBound": 1,
+      "familyMultiplicityResolved": false,
+      "actualSelectedCoefficientCount": "at least two entries of the symmetric family Yukawa matrix Y_126",
+      "verdict": "smallest one-parent-tensor near-miss, but not an involutive orbit and not one selected numerical coefficient"
+    },
+    {
+      "candidate": "E6",
+      "parentType": "connected compact simple, dimension 78",
+      "branching": {
+        "27F_under_Spin10xU1": ["16_1", "10_-2", "1_4"],
+        "351primeH_under_Spin10xU1": ["1", "10", "16", "54", "126", "144"]
+      },
+      "tensorProduct": "27 x 27 contains conjugate 27, 351 and 351-prime channels with multiplicity one; restriction to one 351-prime Yukawa channel gives one E6 invariant tensor",
+      "oneTensorNearMiss": "The 10H and 126H Spin(10) branches occur in one 351-prime, so one E6 Yukawa tensor fixes their relative Clebsch coefficients.",
+      "outerAutomorphismTest": "The E6 diagram involution sends 27 to bar(27) and 351-prime to its conjugate; it does not exchange the internal Spin(10) 10 and 126 branches. Any involution normalizing the selected Pati-Salam subgroup also preserves whole-multiplet dimensions.",
+      "extraSpectrum": "Each matter 27 adds a Spin(10) 10 plus singlet beyond the family 16; the 351-prime adds 1,16,54 and 144 scalar branches in addition to 10 and 126.",
+      "completePortalOrbit": false,
+      "gaugeInvariantContractionCountLowerBound": 1,
+      "familyMultiplicityResolved": false,
+      "actualSelectedCoefficientCount": "at least two entries of the E6 family Yukawa matrix",
+      "verdict": "strongest single-tensor parent but no exchange involution and substantial extra spectrum"
+    },
+    {
+      "candidate": "(Pati-Salam x Pati-Salam) semidirect Z2_exchange",
+      "parentType": "doubled compact product with exchange",
+      "matterResult": "exchange maps each representation in copy A to the identical representation in copy B",
+      "scalarOrbit": "D_A maps to D_B and M_A maps to M_B; inequivalent D and M types remain separate orbits",
+      "completePortalOrbit": false,
+      "gaugeInvariantContractionCountLowerBound": 2,
+      "familyMultiplicityResolved": false,
+      "verdict": "exact copy exchange reproduces the claim-1534 two-orbit mirror closure"
+    }
+  ],
+  "familyMultiplicityAudit": {
+    "oneParentTensorDoesNotMeanOneNumber": "For n family copies, a symmetric parent Yukawa channel carries a symmetric n x n matrix, of dimension n(n+1)/2.",
+    "threeFamilyDimension": 6,
+    "selectedEntries": ["Y_PP for the selected Dirac channel", "Y_PN for the selected-null Majorana channel"],
+    "independence": "Gauge unification alone does not equate different family-matrix entries.",
+    "requiredRepair": "a family symmetry/intertwiner that puts the two selected entries in one orbit while preserving the null mask"
+  },
+  "oneTensorVersusOrbit": {
+    "oneTensor": "Spin(10) with a shared 126H, or E6 with a 351-prime H, can derive fixed gauge Clebsches from one parent invariant tensor.",
+    "oneOrbit": "None of the audited normalizer involutions exchanges the complete D and M Pati-Salam multiplets.",
+    "physicalMeaning": "A one-tensor construction is a viable alternative mechanism to the claim-1528 exchange ansatz, but only after family-entry alignment, vacuum projection, threshold matching and unwanted-component control are proved."
+  },
+  "ranking": [
+    {"rank": 1, "candidate": "Spin(10) shared-126 channel", "reason": "smallest parent with a multiplicity-one gauge tensor containing H_D15 and H_MR; fails involutive orbit and family-entry uniqueness"},
+    {"rank": 2, "candidate": "E6 351-prime channel", "reason": "one tensor contains Spin(10) 10 and 126 branches and can relate their Yukawas; adds exotics and still fails orbit/family tests"},
+    {"rank": 3, "candidate": "SU(4) x Sp(4)", "reason": "smaller and unifies weak left-right types, but cannot unify the SU(4) scalar representations"},
+    {"rank": 4, "candidate": "left-right or doubled Pati-Salam semidirect products", "reason": "their involutions only exchange chirality or identical copies, leaving D and M in separate orbits"}
+  ],
+  "strongestConclusion": "No audited standard compact parent realizes both requirements simultaneously: a complete involutive D/M portal orbit and one actual selected-family contraction. Spin(10) and E6 do furnish multiplicity-one gauge tensors containing both kinds of component, which is a distinct and more promising mechanism than exchange, but family multiplicity and symmetry-breaking data prevent promotion to the required common coefficient line.",
+  "reopeningDatum": "For the leading Spin(10) route, specify one 126H Yukawa tensor using the (15,2,2) Dirac and (10,1,3) Majorana branches, then construct a family symmetry that relates the exact Y_PP and Y_PN entries, prove the selected vacuum/threshold projection preserves their fixed Clebsch ray, and audit all other 126 components. For a literal exchange, exhibit an enlarged parent and involution normalizing the low-energy embedding that maps the whole unequal-dimensional Pati-Salam multiplets, which requires structure beyond the audited ordinary group embeddings.",
+  "verdict": "The literal involutive-orbit programme is negative for left-right parity, SU(4)xSp(4), Spin(10), E6 and doubled Pati-Salam. The highest-value surviving route is not exchange but a single parent invariant: shared-126 Spin(10) first, then E6 351-prime if the Dirac singlet and Majorana 126 channels must both be retained."
+}

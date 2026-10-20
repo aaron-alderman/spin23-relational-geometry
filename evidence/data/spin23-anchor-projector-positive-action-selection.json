@@ -1,0 +1,100 @@
+{
+  "schema": "spin23.anchor-projector-positive-action-selection/1",
+  "date": "2026-10-20",
+  "question": "Can an already motivated positive projector action select Q_anchor from the 15 or 28 rank-four J-invariant sector projections?",
+  "normalization": {
+    "projectorClass": "rank-four diagonal projections formed from two complete rank-two J-orbits",
+    "dirac": "unit coefficient on every primitive edge of the quotient support graph and its J partner",
+    "cutAction": "S_cut(Q)=(1/4) Tr([D,Q]^*[D,Q])",
+    "cutIdentity": "S_cut is exactly the number of quotient edges crossing the selected two-vertex set",
+    "distanceAction": "graph distance between the two selected quotient vertices",
+    "volumeAction": "(1/2) Tr(Q D^2), equal to the sum of the selected quotient degrees for unit J-paired state edges",
+    "anchorPenalty": "S_mu(Q)=S_cut(Q)+mu(1-(1/2)Tr(P_B Q)), mu>0, where P_B projects onto B=IN/NI"
+  },
+  "orbitDictionary": {
+    "A": ["PN", "NP"],
+    "B": ["IN", "NI"],
+    "C": ["IP", "PI"],
+    "D": ["SP", "PS"],
+    "E": ["TP", "PT"],
+    "F": ["TU", "UT"],
+    "G": ["SI", "IS"],
+    "H": ["NU", "UN"]
+  },
+  "target": {
+    "QanchorOrbitPair": "AB",
+    "QanchorSectors": ["PN", "NP", "IN", "NI"],
+    "markedOrbit": "B",
+    "markedPhysicalMeaning": "the already declared selected-cofactor P role under the claim-1548 descent dictionary",
+    "doesPenaltyEncodeFullSupport": false,
+    "unencodedPartnerSelectedDynamically": "A"
+  },
+  "twelveStateModel": {
+    "vertices": ["A", "B", "C", "D", "E", "F"],
+    "edges": ["AB", "BC", "CE", "DE", "EF"],
+    "candidateCount": 15,
+    "cutHistogram": {"1": 1, "2": 6, "3": 6, "4": 1, "5": 1},
+    "cutMinimizers": ["AB"],
+    "cutMinimum": 1,
+    "rawCommutatorMinimum": 4,
+    "distanceHistogram": {"1": 5, "2": 5, "3": 3, "4": 2},
+    "distanceMinimizers": ["AB", "BC", "CE", "DE", "EF"],
+    "volumeHistogram": {"2": 3, "3": 6, "4": 4, "5": 2},
+    "volumeMinimizers": ["AD", "AF", "DF"],
+    "hardBConstraintCandidates": 5,
+    "hardBConstraintCutMinimizer": ["AB"],
+    "markedPenaltyMinimizerForEveryPositiveMu": ["AB"],
+    "result": "The unweighted Dirichlet/cut action already selects Q_anchor uniquely."
+  },
+  "sixteenStateSectorRepair": {
+    "vertices": ["A", "B", "C", "D", "E", "F", "G", "H"],
+    "edges": ["AB", "BC", "CE", "DE", "DG", "EF", "FH"],
+    "candidateCount": 28,
+    "cutHistogram": {"1": 3, "2": 4, "3": 12, "4": 8, "5": 1},
+    "cutMinimizers": ["AB", "DG", "FH"],
+    "cutMinimum": 1,
+    "rawCommutatorMinimum": 4,
+    "distanceHistogram": {"1": 7, "2": 7, "3": 7, "4": 5, "5": 2},
+    "distanceMinimizers": ["AB", "BC", "CE", "DE", "DG", "EF", "FH"],
+    "volumeHistogram": {"2": 3, "3": 12, "4": 9, "5": 4},
+    "volumeMinimizers": ["AG", "AH", "GH"],
+    "hardBConstraintCandidates": 7,
+    "hardBConstraintCutMinimizer": ["AB"],
+    "markedPenaltyMinimizerForEveryPositiveMu": ["AB"],
+    "unmarkedDegeneracyExplanation": "AB, DG and FH are the three terminal two-vertex branches, each separated by one edge.",
+    "result": "The intrinsic unweighted cut action leaves a threefold degeneracy; marking only B lifts it and selects AB for every mu>0."
+  },
+  "commutingPositiveFunctionals": {
+    "representedAlgebra": "Tr([Q,pi(a)]^*[Q,pi(a)])=0 for every candidate and every a in C^6",
+    "oppositeAlgebra": "Tr([Q,pi^o(a)]^*[Q,pi^o(a)])=0 for every candidate",
+    "grading": "Tr([Q,gamma]^*[Q,gamma])=0 for every candidate",
+    "relationParity": "Tr([Q,Gamma_rel]^*[Q,Gamma_rel])=0 for every candidate",
+    "reason": "all candidates and these operators are diagonal in the occupied-sector basis",
+    "selectionPower": "none"
+  },
+  "weightedBoundary": {
+    "terminalBranchActions": {
+      "AB": "|w_BC|^2",
+      "DG": "|w_DE|^2",
+      "FH": "|w_EF|^2"
+    },
+    "intrinsicConclusion": "positive but unequal primitive coefficients can select any terminal branch; positivity alone does not canonically prefer AB",
+    "singleAnchorLimitation": "a B-penalty cannot distinguish AB from another B-containing pair, so for arbitrary unequal weights it does not universally force AB",
+    "unitWeightConclusion": "with the minimal isotropic normalization, every mu>0 makes AB the unique global minimizer on both models"
+  },
+  "minimalExtraDatum": {
+    "datum": "one already physically named rank-two J-orbit P_B, or equivalently the hard condition B is contained in Q",
+    "informationAdded": "one marked orbit, not the desired two-orbit support",
+    "whyMinimal": "all unmarked intrinsic diagonal symmetry tests vanish, and the repaired graph has three equal terminal branches under the unit cut action",
+    "cost": "the mark uses the claim-1548 physical descent dictionary; without accepting that dictionary it is new correspondence data",
+    "forbiddenPrimitiveSupport": "none; the functional evaluates existing edges and adds no Dirac matrix element"
+  },
+  "decision": {
+    "H12IntrinsicSelection": "SAT under the unit/isotropic primitive-edge normalization",
+    "H16IntrinsicSelection": "UNSAT because of the AB/DG/FH threefold minimum",
+    "H16SingleMarkedOrbitSelection": "SAT for every mu>0 under the same unit normalization",
+    "arbitraryPositiveWeightsCanonicalSelection": "UNSAT",
+    "strongestConclusion": "The Dirichlet cut action is a genuine dynamical selector on H12. The minimal H16 repair creates two indistinguishable terminal competitors; one previously declared physical anchor orbit is sufficient to restore uniqueness without specifying A, but this is conditional correspondence data rather than a derivation of the full anchor from C^6 alone."
+  },
+  "boundary": "The exhaustive result covers all diagonal rank-four J-invariant two-orbit projections in the explicit 12-state and 16-state new-sector models. It does not classify non-diagonal rank-four projections in the full Grassmannian or derive equality of primitive edge norms from a spectral action."
+}

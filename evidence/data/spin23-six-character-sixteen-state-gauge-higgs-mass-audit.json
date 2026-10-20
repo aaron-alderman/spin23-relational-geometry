@@ -1,0 +1,112 @@
+{
+  "schema": "spin23.six-character-sixteen-state-gauge-higgs-mass-audit/1",
+  "date": "2026-10-20",
+  "scope": "claim 1533's explicit multiplicity-one sixteen-state repair obtained by adding SI/IS and NU/UN to the C^6 label geometry",
+  "characterOrder": ["P", "I", "N", "S", "T", "U"],
+  "addedStates": [
+    {"label": "SI", "left": "S", "right": "I", "gamma": -1, "relationParity": 1, "J": "IS"},
+    {"label": "IS", "left": "I", "right": "S", "gamma": 1, "relationParity": -1, "J": "SI"},
+    {"label": "NU", "left": "N", "right": "U", "gamma": -1, "relationParity": 1, "J": "UN"},
+    {"label": "UN", "left": "U", "right": "N", "gamma": 1, "relationParity": -1, "J": "NU"}
+  ],
+  "gaugeKernelAndUnimodularity": {
+    "chargeRule": "q(e_ab)=e_a-e_b",
+    "chargeMatrixRank": 5,
+    "continuousKernel": "span((1,1,1,1,1,1))",
+    "effectiveCentralGaugeAlgebra": "u(1)^5",
+    "leftCharacterMultiplicities": [4, 3, 3, 2, 2, 2],
+    "unimodularityCondition": "4P+3I+3N+2S+2T+2U=0",
+    "diagonalTrace": 16,
+    "effect": "unimodularity remains a transverse representative choice for the diagonal kernel and does not lower the effective dimension"
+  },
+  "chiralAnomaly": {
+    "gammaPositiveStates": ["PN", "NI", "IP", "SP", "PT", "TU", "IS", "UN"],
+    "mixedGravitationalCovector": [0, 1, -1, 0, 0, 0],
+    "mixedGravitationalPolynomial": "I-N",
+    "cubicPolynomial": "(P-N)^3+(N-I)^3+(I-P)^3+(S-P)^3+(P-T)^3+(T-U)^3+(I-S)^3+(U-N)^3",
+    "nonzeroSymmetricCubicComponents": [
+      ["PPI", 1], ["PPN", -1], ["PPS", 1], ["PPT", -1],
+      ["PII", -1], ["PNN", 1], ["PSS", -1], ["PTT", 1],
+      ["III", 1], ["IIN", 1], ["IIS", -1], ["INN", -1],
+      ["ISS", 1], ["NNN", -1], ["NNU", 1], ["NUU", -1],
+      ["TTU", -1], ["TUU", 1]
+    ],
+    "fullFiveDirectionGaugeAlgebraAnomalyFree": false
+  },
+  "maximalAnomalyFreeSubalgebra": {
+    "characterRelationsModuloDiagonal": ["I=N=U", "S=T"],
+    "primitiveQuotientCocharacters": [
+      [1, 0, 0, 0, 0, 0],
+      [0, 0, 0, 1, 1, 0]
+    ],
+    "coordinateNames": ["p", "s"],
+    "effectiveDimension": 2,
+    "chiralChargePairing": "PN=-IP, SP=-PT, TU=-IS, while NI and UN are neutral",
+    "allCubicAndMixedGravitationalAnomalies": "zero",
+    "maximality": "on I=N and modulo the diagonal, the cubic is the sum of cubes of five cycle-edge variables with zero sum; its projective cubic surface is smooth because a constrained critical point would require five signs of one nonzero magnitude to sum to zero, impossible for an odd number of signs",
+    "comparisonToTwelveStateResult": {
+      "oldMaximumDimension": 2,
+      "newMaximumDimension": 2,
+      "oldPlaneSurvivesOnlyInDimension": 1,
+      "oldPlaneIntersectionRelations": ["I=N=S=U", "T=P"],
+      "decision": "the added chiral orbits do not improve or worsen the maximal dimension, but they spoil the old anomaly-free plane and rotate the surviving maximal two-torus"
+    }
+  },
+  "stateChargesOnMaximalTwoTorus": {
+    "PN": [1, 0], "NP": [-1, 0],
+    "IN": [0, 0], "NI": [0, 0],
+    "IP": [-1, 0], "PI": [1, 0],
+    "PS": [1, -1], "SP": [-1, 1],
+    "TP": [-1, 1], "PT": [1, -1],
+    "TU": [0, 1], "UT": [0, -1],
+    "SI": [0, 1], "IS": [0, -1],
+    "NU": [0, 0], "UN": [0, 0]
+  },
+  "allowedOrientedEdgeCharges": {
+    "PN<-IN": [1, 0], "NP<-NI": [-1, 0],
+    "IN<-IP": [1, 0], "NI<-PI": [-1, 0],
+    "IP<-TP": [0, -1], "PI<-PT": [0, 1],
+    "SP<-TP": [0, 0], "PS<-PT": [0, 0],
+    "TP<-TU": [-1, 0], "PT<-UT": [1, 0],
+    "SP<-SI": [-1, 0], "PS<-IS": [1, 0],
+    "TU<-NU": [0, 1], "UT<-UN": [0, -1]
+  },
+  "jEdgeOrbitAudit": [
+    {"orbit": ["PN--IN", "NP--NI"], "representative": "PN<-IN", "charge": [1, 0], "bareInvariantMass": false},
+    {"orbit": ["IN--IP", "NI--PI"], "representative": "IN<-IP", "charge": [1, 0], "bareInvariantMass": false},
+    {"orbit": ["IP--TP", "PI--PT"], "representative": "IP<-TP", "charge": [0, -1], "bareInvariantMass": false},
+    {"orbit": ["SP--TP", "PS--PT"], "representative": "SP<-TP", "charge": [0, 0], "bareInvariantMass": true},
+    {"orbit": ["TP--TU", "PT--UT"], "representative": "TP<-TU", "charge": [-1, 0], "bareInvariantMass": false},
+    {"orbit": ["SP--SI", "PS--IS"], "representative": "SP<-SI", "charge": [-1, 0], "bareInvariantMass": false},
+    {"orbit": ["TU--NU", "UT--UN"], "representative": "TU<-NU", "charge": [0, 1], "bareInvariantMass": false}
+  ],
+  "bareInvariantOrbitCount": 1,
+  "chargedLinkRequiredOrbitCount": 6,
+  "linkChargeLattice": {
+    "representativeRows": [[1, 0], [1, 0], [0, -1], [0, 0], [-1, 0], [-1, 0], [0, 1]],
+    "rank": 2,
+    "smithInvariantFactors": [1, 1],
+    "indexInFaithfulGaugeChargeLattice": 1
+  },
+  "genericVevStabilizer": {
+    "continuousDimension": 0,
+    "faithfulResidualGaugeGroup": "trivial",
+    "reason": "the charged edge VEVs contain primitive charges (1,0) and (0,1)"
+  },
+  "massGapAndParity": {
+    "completeAllowedEdgeCount": 14,
+    "relationParityPreserved": true,
+    "unitWeightDiracDeterminant": 1,
+    "genericFullRank": true,
+    "perfectMatchingUsingLinkSupportedEdges": ["PN--IN", "IP--TP", "SP--SI", "TU--NU"],
+    "sameVevDecision": "generic nonzero VEVs for the six charged link orbits, together with the neutral SP--TP orbit coefficient, can simultaneously break the two-torus completely and give a full-rank relation-even Dirac operator"
+  },
+  "textureAndPhysicalBoundary": {
+    "nZXPrincipalProjection": "preserved exactly at support level",
+    "fullSchurProtection": "UNDERDETERMINED because eliminating SI/IS and NU/UN may induce effective terms",
+    "sourcedPatiSalamEmbedding": false,
+    "reason": "SI/IS and NU/UN are additional one-dimensional label/correspondence fermion orbits absent from the sourced Pati-Salam carrier, and the required charged link representations, Yukawa maps and scalar potential are not sourced",
+    "minimalReopeningDatum": "a physical correspondence assigning all sixteen label states and six charged link orbits to Pati-Salam representations, with anomaly weights, Yukawa maps and a relation-even scalar potential whose generic vacuum realizes the determinant-one support without spoiling the protected physical Schur relation"
+  },
+  "boundary": "All conclusions are exact for the multiplicity-one C^6 label spectrum and central abelian gauge action. Physical nonabelian factors, family multiplicities and Pati-Salam tensor weights are absent and would require a new anomaly and Higgs audit."
+}
