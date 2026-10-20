@@ -1,0 +1,31 @@
+{
+  "schema": "spin23.KO6-relation-sheet-reflection/1",
+  "date": "2026-10-20",
+  "realCompletion": {
+    "sheetA": ["PN", "IN", "IP", "SP"],
+    "sheetB": ["NP", "NI", "PI", "PS"],
+    "JPairing": ["PN-NP", "IN-NI", "IP-PI", "SP-PS"],
+    "allowedEdges": ["PN-IN", "IN-IP", "IP-SP", "NP-NI", "NI-PI", "PI-PS"]
+  },
+  "reflection": {
+    "name": "Gamma_rel",
+    "sheetASign": 1,
+    "sheetBSign": -1,
+    "properties": ["Gamma_rel squared equals 1", "[Gamma_rel,D_allowed]=0", "[Gamma_rel,gamma_KO6]=0", "{Gamma_rel,J}=0"]
+  },
+  "theorem": {
+    "uniqueNontrivialReflectionUpToSign": true,
+    "safeDiracEdgeEven": true,
+    "desiredMajoranaEdgeEven": true,
+    "dangerousDiracEdgesOddForBothOrientableAnchors": true,
+    "ordinaryChiralityIdenticalToRelationReflection": false
+  },
+  "enumeration": {
+    "allDiagonalInvolutions": 256,
+    "preserveAllAllowedEdges": 4,
+    "alsoAnticommuteWithJ": 2,
+    "alsoMakeDangerousDiracEdgesOdd": 2
+  },
+  "boundary": "this is a complete KO-6 label-level lift on the eight-state real completion, not yet an embedding in the full physical Pati-Salam Hilbert space or a discrete anomaly proof",
+  "verdict": "the real-completed two-path geometry canonically realizes the protecting reflection as J-odd relation-sheet parity, unique up to overall sign"
+}

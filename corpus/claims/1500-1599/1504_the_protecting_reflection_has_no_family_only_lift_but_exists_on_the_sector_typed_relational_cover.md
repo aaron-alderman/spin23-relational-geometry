@@ -181,8 +181,10 @@ The reflection cannot be collapsed to a family symmetry:
 \text{sector-typed relational cover: four lifts}.}
 \]
 
-The next gate is to impose the KO-6 reality pairing and the complete physical
-Yukawa graph on these four candidates and count which, if any, remain.
+Claim 1505 imposes the existing eight-state KO-6 reality completion. Exactly
+two candidates remain, differing by overall sign: the reflection is constant
+on each four-state path and reverses on its \(J\)-partner. The complete
+physical Pati--Salam Yukawa graph remains to be imposed.
 
 ## Reproduction
 
