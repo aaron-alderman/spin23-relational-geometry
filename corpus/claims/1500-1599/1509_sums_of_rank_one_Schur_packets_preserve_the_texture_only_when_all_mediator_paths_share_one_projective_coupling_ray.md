@@ -184,9 +184,10 @@ The first categorical construction needs one further global condition:
 \text{all contributing Schur paths must span one projective coupling ray}.}
 \]
 
-The next gate is to test whether the typed twin-wheel/Jordan representation
-forces this one-dimensional Hom space, or whether it admits multiple
-independent intertwiners and therefore generically loses the texture.
+Claim 1510 proves that one-dimensional local arrow spaces do not suffice:
+multiple mediator copies still form an unconstrained \(2\times m\) coupling
+matrix. A shared rank-one factorization or aggregate one-dimensional
+intertwiner space is required.
 
 ## Reproduction
 

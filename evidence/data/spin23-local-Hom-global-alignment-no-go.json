@@ -1,0 +1,29 @@
+{
+  "schema": "spin23.local-Hom-global-alignment-no-go/1",
+  "date": "2026-10-20",
+  "quiver": {
+    "objects": "L, N, and mediator copies P_i",
+    "localArrows": "one scalar d_i on L->P_i and one scalar y_i on P_i->N",
+    "aggregateCouplingMatrix": "V=[[d_1,...,d_m],[y_1,...,y_m]]"
+  },
+  "theorem": {
+    "localOneDimensionalHomImpliesGlobalAlignment": false,
+    "globalAlignmentIsRankOneDeterminantalCondition": true,
+    "ideal": "d_i y_j-d_j y_i=0 for every i<j",
+    "genericCodimensionForMMediators": "m-1",
+    "alignedFactorization": "d_i=kappa y_i for one common kappa"
+  },
+  "enumeration": {
+    "mediators": 3,
+    "nonzeroLocalValues": [-1,1],
+    "threeMediatorSignAssignments": 64,
+    "globallyAligned": 16,
+    "misaligned": 48
+  },
+  "representationInterpretation": {
+    "currentTwinWheelTyping": "separates relation sectors and primitive/composite provenance but does not equate independent mediator ratios",
+    "requiredUpgrade": "a shared rank-one coupling module, diagonal natural transformation, or one common source morphism across mediator copies"
+  },
+  "boundary": "a stronger irreducible symmetry or spectral constraint could impose the minor ideal, but none has yet been derived from the present Spin(2,3) twin-wheel data",
+  "verdict": "one-dimensional local arrow spaces are insufficient; exact multi-path protection requires a global rank-one factorization law"
+}
