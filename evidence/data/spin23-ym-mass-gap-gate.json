@@ -1,0 +1,116 @@
+{
+  "schema": "spin23.ym-mass-gap-gate/1",
+  "date": "2026-10-20",
+  "status": "problem-boundary ledger with finite diagnostic witnesses; not a proof of four-dimensional Yang-Mills existence or a mass gap",
+  "clayProblem": {
+    "gaugeGroups": "every compact simple gauge group G",
+    "spacetime": "R^4",
+    "existence": "construct a nontrivial quantum Yang-Mills theory with axiomatic properties at least as strong as the cited Wightman and Osterwalder-Schrader frameworks",
+    "massGap": "for the Hamiltonian H with vacuum energy zero, there is Delta>0 such that spec(H) has no support in (0,Delta), with finite maximal gap",
+    "localContent": "gauge-invariant local operators corresponding to renormalized polynomials in F and its covariant derivatives, with short-distance behavior consistent with asymptotic freedom and perturbative renormalization",
+    "source": "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf"
+  },
+  "reconstructionGate": {
+    "minkowskiRequirements": [
+      "positive Hilbert-space metric",
+      "unitary Poincare covariance and positive-energy spectrum",
+      "a unique Poincare-invariant vacuum up to phase",
+      "locality for spacelike-separated gauge-invariant observables",
+      "tempered/operator-valued distribution control adequate for reconstruction"
+    ],
+    "euclideanRequirements": [
+      "Euclidean covariance and permutation symmetry",
+      "reflection positivity",
+      "regularity/temperedness sufficient for reconstruction",
+      "clustering and an infinite-volume limit",
+      "continuum Schwinger functions whose reconstruction gives the physical Hilbert space and Hamiltonian"
+    ],
+    "warning": "a gauge-fixed propagator or positive numerical correlator is not by itself an Osterwalder-Schrader construction",
+    "source": "https://doi.org/10.1007/BF01645738"
+  },
+  "logicalSeparations": {
+    "spectralGap": "a statement about the physical Hamiltonian spectrum above the vacuum",
+    "confinement": "a distinct statement about color/non-singlet states or large Wilson-loop behavior; neither definition alone automatically proves the other in the required continuum theory",
+    "higgsMass": "a mass generated after adding a Higgs sector is not the pure quantum Yang-Mills mass-gap result",
+    "finiteLattice": "a lowest excitation at fixed lattice spacing and finite volume does not prove a positive gap uniform in volume and nonzero after continuum scaling",
+    "perturbativeMass": "ordinary perturbation theory about the trivial vacuum does not generate the required gauge-invariant infrared spectrum"
+  },
+  "oneLoopDimensionalTransmutationWitness": {
+    "group": "SU(3) pure Yang-Mills",
+    "betaConvention": "mu dg/dmu=-b0 g^3+O(g^5)",
+    "b0Formula": "11N/(48 pi^2)",
+    "N": 3,
+    "mu1": 100,
+    "gAtMu1": 0.8,
+    "mu2": 1000,
+    "gAtMu2OneLoop": 0.7286879460459149,
+    "lambdaFormula": "Lambda=mu exp[-1/(2 b0 g(mu)^2)]",
+    "lambdaAtMu1": 0.0013464424854919962,
+    "lambdaAtMu2": 0.0013464424854919995,
+    "meaning": "the one-loop RG invariant supplies a scale but does not prove existence, positivity, confinement, or a mass gap"
+  },
+  "strongCouplingWitness": {
+    "model": "four-dimensional SU(2) Wilson lattice action, leading fundamental character-expansion term",
+    "beta": 0.8,
+    "leadingPlaquetteFactor": 0.2,
+    "rectangularLoopR": 3,
+    "rectangularLoopT": 4,
+    "leadingWilsonLoop": 4.096e-9,
+    "latticeStringTension": 1.6094379124341003,
+    "fixedRTransferEnergy": 4.828313737302301,
+    "formulae": {
+      "loop": "W(R,T) approximately (beta/4)^(R T)",
+      "stringTension": "sigma a^2=-log(beta/4)",
+      "transferEnergy": "a E(R)=-log[W(R,T+1)/W(R,T)]=R sigma a^2"
+    },
+    "meaning": "this is a controlled leading strong-coupling lattice witness, not the weak-coupling continuum limit required by Clay",
+    "source": "https://doi.org/10.1103/PhysRevD.10.2445"
+  },
+  "correlationGapWitness": {
+    "model": "C(t)=exp(-m t)+r exp(-M t)",
+    "m": 0.8,
+    "M": 1.7,
+    "r": 0.3,
+    "effectiveMassDefinition": "m_eff(t)=log[C(t)/C(t+1)]",
+    "times": [1, 2, 4, 8, 16],
+    "effectiveMasses": [
+      0.866687575135183,
+      0.8284381950701305,
+      0.8048365450188155,
+      0.8001328930681358,
+      0.8000000992316959
+    ],
+    "meaning": "exponential decay can diagnose a supplied positive transfer-matrix spectrum; fitting it does not construct the continuum theory or prove a volume- and cutoff-uniform gap"
+  },
+  "spin23Boundary": {
+    "groupFact": "Spin(2,3) is noncompact, whereas the Clay statement is for compact simple G",
+    "sharedComplexification": "spin(2,3) and compact spin(5) are real forms of so(5,C)",
+    "positivityObstruction": "complexification does not transport reflection positivity, a positive Hilbert space, or a spectral gap between real forms",
+    "gravityConstraint": "a universal gap for the full Spin(2,3) connection would conflict with the required long-range massless spin-2 sector",
+    "admissibleTarget": "retain a massless Einstein graviton while proving positive physical spectral support only for non-Einstein torsion/coset/auxiliary sectors; keep compact internal Yang-Mills as a separate factor",
+    "nonPromotion": "the group name, symmetry breaking, or a shared complexified algebra does not solve the compact Yang-Mills problem"
+  },
+  "nextGates": [
+    "write the exact gauge-invariant Euclidean measure or controlled regulator and specify the observable algebra",
+    "prove reflection positivity and a positive transfer matrix before interpreting exponential decay as mass",
+    "establish thermodynamic-limit Schwinger functions and clustering uniformly in finite volume",
+    "construct a renormalized continuum trajectory with asymptotic-freedom short-distance behavior",
+    "prove a lower spectral bound uniform in volume and cutoff whose physical-unit limit is nonzero",
+    "show nontriviality and regulator universality rather than a Gaussian or lattice-artifact limit",
+    "separate and independently test mass gap, Wilson-loop confinement, center symmetry, and glueball pole claims",
+    "for the Spin(2,3) programme, derive the quadratic spectrum and BRST/constraint cohomology and isolate the massless spin-2 pole",
+    "test a compact Spin(5) lattice proxy, then either prove a positivity-preserving bridge to the intended real form or record a no-go",
+    "derive any relation between an internal Yang-Mills scale, the Spin(2,3)-breaking scale, and the cosmological scale rather than identifying them by notation"
+  ],
+  "sources": [
+    "https://www.claymath.org/millennium/yang-mills-the-maths-gap/",
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf",
+    "https://doi.org/10.1007/BF01645738",
+    "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II-with-an-Appendix-by/cmp/1103899050.pdf",
+    "https://doi.org/10.1103/PhysRevLett.30.1343",
+    "https://doi.org/10.1103/PhysRevLett.30.1346",
+    "https://doi.org/10.1103/PhysRevD.10.2445",
+    "https://doi.org/10.1103/PhysRevD.15.1128"
+  ],
+  "decision": "No present Spin(2,3) construction solves the four-dimensional compact Yang-Mills existence-and-gap problem. The useful programme is a typed sequence of positivity, limit, spectrum, and sector-separation gates with finite calculations retained only as regression witnesses."
+}

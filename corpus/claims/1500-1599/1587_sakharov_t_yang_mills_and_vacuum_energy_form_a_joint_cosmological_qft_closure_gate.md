@@ -10,6 +10,8 @@
 
 **Evidence:** [joint closure ledger](../../../evidence/data/spin23-sakharov-t-yang-mills-vacuum-energy-gate.json) and [deterministic verifier](../../../verification/verify/verify_spin23_sakharov_t_yang_mills_vacuum_energy_gate.mjs)
 
+**Subsequent mass-gap closure:** [claims 1590--1594](1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md) separate the compact constructive Yang--Mills theorem from a sector-selective broken-Spin(2,3) spectrum, reject real-form and branching shortcuts, and install a six-type gap firewall.
+
 **External-validation expansion:** [claim 1588](1588_eight_external_phenomena_define_typed_validation_lanes_not_one_spin23_explanation.md) separates Hubble, dark matter, SUSY, QCD, gallium, DIB and geopotential observables into native forward-model tests rather than one shared-cause assertion.
 
 ## Result

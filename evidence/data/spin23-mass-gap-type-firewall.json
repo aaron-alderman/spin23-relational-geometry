@@ -1,0 +1,82 @@
+{
+  "schema": "spin23.mass-gap-type-firewall/1",
+  "date": "2026-10-20",
+  "decision": "The programme uses at least six inequivalent notions of gap. Only an infinite-volume continuum gauge-invariant Hamiltonian spectral gap inside a rigorously constructed compact Yang-Mills QFT addresses the Clay problem.",
+  "gapTypes": [
+    {
+      "name": "finiteOperator",
+      "object": "finite Dirac, adjacency or response matrix",
+      "gap": "minimum nonzero singular value or eigenvalue separation",
+      "survivesNeeded": "controlled large-carrier and continuum limits",
+      "notEnoughForClay": true
+    },
+    {
+      "name": "vacuumHessian",
+      "object": "quadratic fluctuation matrix at a stationary vacuum",
+      "gap": "positive minimum physical mass-squared eigenvalue after gauge constraints",
+      "survivesNeeded": "gauge quotient, radiative stability and continuum QFT",
+      "notEnoughForClay": true
+    },
+    {
+      "name": "topologicalBand",
+      "object": "Bloch or bulk single-particle Hamiltonian",
+      "gap": "uniform separation between occupied and unoccupied bands",
+      "survivesNeeded": "interactions and the proposed spacetime/internal lift",
+      "notEnoughForClay": true
+    },
+    {
+      "name": "liouvillian",
+      "object": "open-system evolution generator",
+      "gap": "smallest nonzero decay rate in minus the real spectrum",
+      "survivesNeeded": "replacement by a closed unitary Hamiltonian theory if a particle mass is claimed",
+      "notEnoughForClay": true
+    },
+    {
+      "name": "finiteLatticeTransfer",
+      "object": "finite-volume Euclidean transfer matrix",
+      "gap": "minus log(lambda1/lambda0) divided by the Euclidean time spacing",
+      "survivesNeeded": "uniform thermodynamic and continuum limits with reflection positivity",
+      "notEnoughForClay": true
+    },
+    {
+      "name": "qftMassGap",
+      "object": "physical Hamiltonian reconstructed from gauge-invariant Euclidean correlators",
+      "gap": "infimum of the nonvacuum spectrum above zero",
+      "survivesNeeded": "already an infinite-volume continuum statement",
+      "notEnoughForClay": false
+    }
+  ],
+  "finiteWitness": {
+    "diracMass": 0.7,
+    "hessian": [[4, 1], [1, 3]],
+    "hessianMinimumEigenvalue": 2.381966011250105,
+    "qwzMassParameter": -1,
+    "qwzMinimumAbsoluteEnergy": 1,
+    "liouvillianRates": [0, -0.4, -0.6, -1],
+    "liouvillianGap": 0.4,
+    "transferEigenvalues": [1, 0.4965853037914095],
+    "timeSpacing": 1,
+    "finiteTransferGap": 0.7,
+    "twoStateCorrelator": "C(t)=exp(-0.7 t)+0.3 exp(-1.8 t)",
+    "asymptoticEffectiveMass": 0.7
+  },
+  "promotionGate": [
+    "compact simple gauge group",
+    "nontrivial interacting continuum theory on R4",
+    "Euclidean axioms including reflection positivity sufficient for reconstruction",
+    "thermodynamic and continuum limits",
+    "gauge-invariant physical Hilbert space and Hamiltonian",
+    "unique vacuum or declared vacuum sector",
+    "strict positive lower bound on the complete nonvacuum spectrum"
+  ],
+  "spin23Boundary": {
+    "statement": "Spin(2,3) is noncompact and is used as a broken spacetime Cartan group, so its whole-connection gap is neither the compact Yang-Mills problem nor compatible with an ordinary long-range massless graviton.",
+    "allowedQuestion": "whether non-Einstein torsion, coset or portal sectors have positive physical gaps while the spin-2 sector remains massless",
+    "internalQuestion": "the SU(3)c descendant of E6 has its own compact nonperturbative Yang-Mills/QCD gap and confinement problem"
+  },
+  "sources": [
+    "https://www.claymath.org/millennium/yang-mills-the-maths-gap/",
+    "https://www.claymath.org/library/monographs/MPPc.pdf",
+    "https://arxiv.org/abs/1704.06201"
+  ]
+}

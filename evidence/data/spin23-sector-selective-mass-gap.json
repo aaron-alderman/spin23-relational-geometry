@@ -1,0 +1,93 @@
+{
+  "schema": "spin23.sector-selective-mass-gap/1",
+  "date": "2026-10-20",
+  "status": "finite quadratic-spectrum admission witness; not a spectrum derived from a complete Spin(2,3) action",
+  "cartanDecomposition": {
+    "breaking": "Spin(2,3) -> Spin(1,3)",
+    "connection": "A=(1/2) omega^{ab} J_ab + ell^{-1} e^a J_a4",
+    "curvatureLorentz": "F^{ab}=R^{ab}+ell^{-2} e^a wedge e^b",
+    "curvatureCoset": "F^{a4}=ell^{-1} T^a",
+    "warning": "e and omega are constrained gravitational variables after symmetry breaking, not ten ordinary Yang-Mills vector bosons"
+  },
+  "infraredRequirement": {
+    "masslessSpin2Helicities": 2,
+    "masslessPole": "D_GR is proportional to P^(2)/(M_Pl^2 p^2) after gauge constraints and saturation with a conserved source",
+    "fullGapConflict": "replacing the graviton pole by p^2+m_g^2 changes the long-range 1/r response to exp(-m_g r)/r",
+    "lenseThirringConnection": "the stationary g_0i response and its Lense-Thirring precession use the same long-range Einstein graviton sector, so a full connection gap would also Yukawa-suppress frame dragging",
+    "requiredPattern": "one positive-residue massless spin-2 sector plus positive-residue positive-mass non-Einstein sectors"
+  },
+  "reducedProjectorWitness": {
+    "description": "an orthogonal five-dimensional mode-space proxy for the physical quadratic blocks after gauge fixing and constraint reduction",
+    "dimension": 5,
+    "projectors": {
+      "graviton": [1, 1, 0, 0, 0],
+      "axialTorsion": [0, 0, 1, 0, 0],
+      "traceTorsion": [0, 0, 0, 1, 0],
+      "selectorRadial": [0, 0, 0, 0, 1]
+    },
+    "euclideanKernel": "K(q^2)=M_Pl^2 q^2 P_g + sum_s Z_s(q^2+m_s^2)P_s",
+    "planckCoefficient": 1,
+    "auxiliaryModes": [
+      {
+        "name": "axial-torsion-proxy",
+        "spinParity": "1+ proxy",
+        "projector": "axialTorsion",
+        "Z": 0.75,
+        "massSquaredInEllUnits": 1.44
+      },
+      {
+        "name": "trace-torsion-proxy",
+        "spinParity": "0+ proxy",
+        "projector": "traceTorsion",
+        "Z": 0.5,
+        "massSquaredInEllUnits": 0.64
+      },
+      {
+        "name": "selector-radial-proxy",
+        "spinParity": "0+ proxy",
+        "projector": "selectorRadial",
+        "Z": 1.25,
+        "massSquaredInEllUnits": 0.36
+      }
+    ],
+    "expectedAtZeroMomentum": {
+      "nullity": 2,
+      "auxiliaryGapSquaredInEllUnits": 0.36
+    },
+    "interpretation": "the numbers exhibit a nonempty healthy sign pattern only; a proposed action must derive its own projectors, residues and masses"
+  },
+  "stopRules": {
+    "ghost": "stop if any physical saturated pole has negative residue, equivalently Z_s<=0 in an already diagonal positive-norm block",
+    "tachyon": "stop if any physical pole has m_s^2<0 around the chosen vacuum",
+    "extraMasslessMode": "stop or reclassify if the zero-momentum kernel has nullity beyond the two graviton helicities without a demonstrated gauge redundancy",
+    "higherDerivativeSpin2": "stop for a local factor p^2(1+p^2/M^2) treated with ordinary Feynman poles, because its partial fractions have opposite residues",
+    "strongCoupling": "stop if a kinetic coefficient vanishes without a proven gauge symmetry and controlled nonlinear constraint algebra",
+    "backgroundDependence": "repeat the spectrum and characteristic analysis on every claimed physical background; Minkowski positivity alone is insufficient"
+  },
+  "higherDerivativeCounterexample": {
+    "propagator": "1/[p^2(1+p^2/M^2)]=1/p^2-1/(p^2+M^2)",
+    "masslessResidue": 1,
+    "massiveResidue": -1,
+    "decision": "negative-residue massive pole fails the ordinary perturbative unitarity gate"
+  },
+  "requiredDerivation": [
+    "write a complete symmetry-breaking action and choose a specified vacuum",
+    "expand the coframe, Lorentz connection and selector fields to quadratic order",
+    "fix diffeomorphism and local Lorentz redundancies and solve nondynamical constraints",
+    "block-diagonalize with spin-parity projectors and saturate the propagator with allowed sources",
+    "show exactly two positive-residue massless spin-2 helicities",
+    "show every additional physical pole has positive residue and positive mass squared",
+    "recover the unsuppressed Lense-Thirring coefficient in the infrared",
+    "repeat the hyperbolicity and constraint count beyond the linearized vacuum"
+  ],
+  "sources": [
+    "https://doi.org/10.1103/PhysRevLett.38.739",
+    "https://arxiv.org/abs/2010.12515",
+    "https://arxiv.org/abs/1812.02675",
+    "https://arxiv.org/abs/1912.01023",
+    "https://arxiv.org/abs/2108.11982",
+    "https://doi.org/10.1103/PhysRevD.16.953",
+    "https://arxiv.org/abs/1105.3456"
+  ],
+  "decision": "Spin(2,3) can consistently motivate a sector-selective gap question, but the group and connection decomposition do not determine the answer; admission requires a derived massless Einstein pole and a separately positive, ghost-free, tachyon-free auxiliary spectrum"
+}

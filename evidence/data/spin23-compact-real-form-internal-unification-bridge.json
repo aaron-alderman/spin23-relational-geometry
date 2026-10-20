@@ -1,0 +1,80 @@
+{
+  "schema": "spin23.compact-real-form-internal-unification-bridge/1",
+  "date": "2026-10-20",
+  "status": "exact finite algebra and one-loop witnesses; nonperturbative bridge remains unproved",
+  "realForms": {
+    "compact": {
+      "group": "Spin(5) isomorphic to compact Sp(2), also written USp(4)",
+      "algebraDimension": 10,
+      "killingSignaturePositiveNegative": [0, 10],
+      "euclideanYangMillsRole": "a compact simple gauge group admitted by the Jaffe-Witten problem"
+    },
+    "split": {
+      "group": "Spin_0(2,3) isomorphic to Sp(4,R)",
+      "algebraDimension": 10,
+      "maximalCompactAlgebra": "so(2)+so(3)",
+      "cartanDecompositionDimensions": {"k": 4, "p": 6},
+      "killingSignaturePositiveNegative": [6, 4],
+      "gravityRole": "the noncompact anti-de Sitter/Cartan spacetime gauge group used by the programme"
+    },
+    "commonComplexification": "spin(5,C) isomorphic to sp(4,C)",
+    "nonTransport": [
+      "positive-definite invariant inner product",
+      "reflection positivity",
+      "physical Hilbert space",
+      "vacuum measure",
+      "spectral gap"
+    ]
+  },
+  "finiteWitnesses": {
+    "dimensionFormulae": {
+      "soN": "dim so(N)=N(N-1)/2",
+      "sp2n": "dim sp(2n)=n(2n+1)"
+    },
+    "adjointCasimirs": {
+      "Spin5_B2": 3,
+      "SU3_A2": 3
+    },
+    "pureYangMillsOneLoop": {
+      "formula": "b0=(11/3) C_A",
+      "Spin5": 11,
+      "SU3": 11,
+      "warning": "equality of a perturbative ultraviolet coefficient does not identify the theories or prove either infrared mass gap"
+    }
+  },
+  "internalChain": {
+    "route": "E6 -> Spin(10) x U(1)_psi -> Standard Model gauge group -> SU(3)_color",
+    "algebraDimensions": {"E6": 78, "Spin10": 45, "U1psi": 1, "standardModel": 12, "SU3color": 8},
+    "branching": {
+      "E6adjoint": "78 = 45_0 + 1_0 + 16_-3 + conjugate(16)_3",
+      "E6fundamental": "27 = 16_1 + 10_-2 + 1_4",
+      "Spin10spinor": "16 -> 10 + conjugate(5) + 1 under SU(5)"
+    },
+    "dimensionBalances": {"adjoint": [78, 45, 1, 16, 16], "fundamental": [27, 16, 10, 1], "spinor": [16, 10, 5, 1]},
+    "distinction": "branching identifies possible fields and charges; it supplies neither the Yang-Mills measure nor confinement, a glueball spectrum, or a mass-gap proof"
+  },
+  "joinedResearchLadder": [
+    "define compact Spin(5) lattice and continuum observables with a positive Euclidean measure",
+    "separate finite-volume transfer-matrix gaps from a uniform infinite-volume and continuum mass gap",
+    "derive the E6-to-Spin(10)-to-Standard-Model breaking spectrum, thresholds, anomalies and running couplings",
+    "treat SU(3)_color confinement and its gauge-invariant spectrum as an independent nonperturbative problem",
+    "define the broken Lorentzian Spin(2,3) Cartan theory and prove BRST/unitarity while retaining a massless spin-2 pole",
+    "test whether non-Einstein connection sectors are gapped without transferring a compact-theory gap by analytic continuation",
+    "rejoin the arms only through an explicitly derived shared scale, matching condition or protected observable"
+  ],
+  "decision": {
+    "compactSandbox": true,
+    "analyticContinuationProvesGap": false,
+    "branchingProvesConfinement": false,
+    "spin23CanHaveUniversalMassGap": false,
+    "reason": "ordinary long-range gravity requires a massless spin-2 sector; only additional sectors may consistently be candidates for a gap"
+  },
+  "sources": [
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf",
+    "https://doi.org/10.1103/PhysRevLett.30.1343",
+    "https://doi.org/10.1103/PhysRevD.8.3633",
+    "https://doi.org/10.1016/0370-2693(76)90417-2",
+    "https://doi.org/10.1016/0370-1573(81)90092-2",
+    "https://arxiv.org/abs/hep-th/9108018"
+  ]
+}

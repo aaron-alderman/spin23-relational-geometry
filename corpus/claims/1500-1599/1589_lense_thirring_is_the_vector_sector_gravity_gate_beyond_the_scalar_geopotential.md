@@ -10,6 +10,8 @@
 
 **Evidence:** [Lense--Thirring ledger](../../../evidence/data/spin23-lense-thirring-gravitomagnetic-gate.json) and [deterministic verifier](../../../verification/verify/verify_spin23_lense_thirring_gravitomagnetic_gate.mjs)
 
+**Subsequent spectrum gate:** [claim 1591](1591_spin23_requires_a_sector_selective_not_universal_gravitational_mass_gap.md) shows why the Einstein pole must remain massless while only healthy non-Einstein modes may be gapped; [claim 1594](1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md) integrates that result with the compact Yang--Mills problem.
+
 ## Result
 
 Lense--Thirring frame dragging tests a gravitational sector absent from a scalar geopotential model:
