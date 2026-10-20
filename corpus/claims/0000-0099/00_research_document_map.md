@@ -721,3 +721,6 @@ Every major claim should be read at one of four levels:
 
 The central distinction throughout is this: **a list of correct particle representations is not yet a quantum field theory, and a quantum field theory is not yet a theory of gravity.** Stress–energy is the interface at which both omissions become impossible to ignore.
 
+- [1467](../1400-1499/1467_any_source_can_seed_an_ansatz_but_only_typed_translation_collision_and_kill_tests_can_promote_it.md) installs a Claimipedia idea-factory protocol: unrestricted inspiration, mandatory dual formalization, named corpus collision, negative controls and a cheap kill test, with beauty used only to order searches.
+- [1468](../1400-1499/1468_theology_altered_state_and_beauty_signposts_generate_eight_typed_spin23_missing_middle_experiments.md) converts theological, visionary, altered-state and aesthetic motifs into eight bounded Spin(2,3) research arcs while assigning every source zero evidential weight.
+- [1469](../1400-1499/1469_no_nonempty_invariant_packet_currently_crosses_the_jordan_furey_defect_action_port_chain.md) executes the first source-blind audit and finds endpoint recurrence of Spin(2,3), but no nonempty invariant packet transported across every declared middle arrow.

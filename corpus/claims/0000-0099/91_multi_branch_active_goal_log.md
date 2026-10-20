@@ -26619,3 +26619,10 @@ Restoring the integer sterile-rephasing weights turns the conditional A2/A5 Hom-
 
 
 
+## Cycle 1125 — Claimipedia gains a controlled speculative idea factory
+
+Current-input exhaustion was separated from exhaustion of hypothesis generation. Any source may now seed a signpost, including theology, scripture, myth, dreams, altered-state reports, visionary narratives, failed models and aesthetic intuitions, but the source contributes zero evidential weight. Promotion requires two typed formalizations, a named corpus collision, minimal equations, a cheap kill test, a negative control and a held-out consequence. Eight Spin(2,3) arcs were seeded. The priority target is a source-blind commuting-square audit of the Jordan--Furey--defect--action--port chain; descent and a canonical O(3)/O(0) defect functor follow. The terminal gate partition and physical-admission flag are unchanged. Artifacts: [1467](../1400-1499/1467_any_source_can_seed_an_ansatz_but_only_typed_translation_collision_and_kill_tests_can_promote_it.md) and [1468](../1400-1499/1468_theology_altered_state_and_beauty_signposts_generate_eight_typed_spin23_missing_middle_experiments.md).
+
+## Cycle 1126 — the first translation-without-collapse audit finds endpoint recurrence, not transport
+
+The declared five-stage Jordan--Furey--defect--action--port chain was audited against six candidate invariants. None is both supported at every stage and preserved by every declared arrow. Spin(2,3) occurs at the positive Jordan carrier and again as the completion of positive calibrated response, but the corpus does not transport it through the charge, bundle, anomaly and port middle. This is an exact inventory result, not a universal no-go. The smallest next calculation is the integer-charge and bundle-degree graded natural-transformation space of the Jordan--Furey--defect square. Artifact: [1469](../1400-1499/1469_no_nonempty_invariant_packet_currently_crosses_the_jordan_furey_defect_action_port_chain.md).

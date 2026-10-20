@@ -1,0 +1,24 @@
+{
+  "schema": "claimipedia.speculative-ansatz-playground/1",
+  "documentId": 1467,
+  "date": "2026-10-20",
+  "purpose": "Convert unrestricted inspiration into typed, falsifiable research candidates without granting the source evidential authority.",
+  "sourcePolicy": {
+    "allowed": ["mathematics", "physics", "theology", "scripture", "myth", "art", "dream", "altered-state report", "visionary or highly associative narrative", "failed model", "anomaly", "numerical coincidence"],
+    "sourceAuthorityGrantsEvidence": false,
+    "alteredStateContentEstablishesExternalOntology": false
+  },
+  "requiredFields": ["id", "sourceClass", "motif", "formalTargets", "namedCorpusGate", "minimalAnsatz", "cheapestKillTest", "negativeControl", "promotionState", "epistemicWeight", "beautifulResult", "failureValue"],
+  "pipeline": ["raw-signpost", "motif-extraction", "multiple-formalizations", "corpus-collision", "minimal-ansatz", "cheap-kill-test", "controlled-promotion-or-archive"],
+  "promotionStates": ["SIGNPOST", "ANALOGY", "TYPED-ANSATZ", "EXACT-LOCAL", "CONDITIONAL-BRIDGE", "EMPIRICAL"],
+  "forbiddenDirectPromotions": [["SIGNPOST", "EXACT-LOCAL"], ["SIGNPOST", "CONDITIONAL-BRIDGE"], ["SIGNPOST", "EMPIRICAL"], ["ANALOGY", "EMPIRICAL"]],
+  "formalizationMinimum": 2,
+  "beautyPrior": {
+    "criteria": ["compression", "unification", "naturality", "few-free-parameters", "falsifiability"],
+    "penalties": ["type-debt", "free-parameter-debt", "evidence-leakage", "post-hoc-fit"],
+    "beautyChangesLikelihoodWithoutTest": false,
+    "use": "search-order-only"
+  },
+  "mandatoryControls": ["source-blind reconstruction", "competing formalization", "scrambled or random motif baseline", "held-out consequence", "explicit failure archive"],
+  "epistemicRule": "An inspiration source may choose where to look, never what to conclude."
+}

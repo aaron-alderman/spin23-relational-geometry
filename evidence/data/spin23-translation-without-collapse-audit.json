@@ -1,0 +1,71 @@
+{
+  "schema": "spin23.translation-without-collapse-audit/1",
+  "documentId": 1469,
+  "date": "2026-10-20",
+  "status": "exact-audit-of-declared-arrows-not-universal-no-go",
+  "stages": ["JORDAN", "FUREY", "DEFECT", "ACTION", "PORT"],
+  "candidateInvariants": [
+    "positive-cone-order",
+    "symplectic-or-spin23-action",
+    "integer-u1-charge",
+    "chirality-or-index",
+    "anomaly-class",
+    "calibrated-spectral-pole"
+  ],
+  "stageSupport": {
+    "JORDAN": ["positive-cone-order", "symplectic-or-spin23-action"],
+    "FUREY": ["integer-u1-charge", "chirality-or-index"],
+    "DEFECT": ["integer-u1-charge", "chirality-or-index", "anomaly-class"],
+    "ACTION": ["integer-u1-charge", "chirality-or-index", "anomaly-class", "calibrated-spectral-pole"],
+    "PORT": ["positive-cone-order", "symplectic-or-spin23-action", "calibrated-spectral-pole"]
+  },
+  "arrows": [
+    {
+      "from": "JORDAN",
+      "to": "FUREY",
+      "status": "missing-physical-intertwiner",
+      "preserves": [],
+      "freeMapRisk": true,
+      "blocker": "The primitive Peirce arrow and charge-minus-two Majorana coefficient are inequivalent U(1) representations."
+    },
+    {
+      "from": "FUREY",
+      "to": "DEFECT",
+      "status": "missing-canonical-bundle-functor",
+      "preserves": ["integer-u1-charge", "chirality-or-index"],
+      "freeMapRisk": true,
+      "blocker": "No declared natural map generates the asymmetric O(3) selected and O(0) spectator assignment from the Furey module."
+    },
+    {
+      "from": "DEFECT",
+      "to": "ACTION",
+      "status": "conditional",
+      "preserves": ["integer-u1-charge", "chirality-or-index", "anomaly-class"],
+      "freeMapRisk": false,
+      "blocker": "The restricted anomaly-free parent is conditional and the sterile Majorana coefficient requires a new O(-6) defect sector."
+    },
+    {
+      "from": "ACTION",
+      "to": "PORT",
+      "status": "missing-matched-port-map",
+      "preserves": ["calibrated-spectral-pole"],
+      "freeMapRisk": true,
+      "blocker": "No generator-state-port packet fixes the physical shift, residue, linewidth and calibrated observable."
+    }
+  ],
+  "endToEndPreservedPacket": [],
+  "endToEndPacketNonempty": false,
+  "spin23Occurrence": {
+    "atJordanCarrier": true,
+    "atPortResponseCompletion": true,
+    "transportedThroughEveryDeclaredArrow": false,
+    "interpretation": "endpoint recurrence, not yet functorial transport"
+  },
+  "smallestRepair": {
+    "targetSquare": "JORDAN-FUREY-DEFECT",
+    "requiredObject": "a charge-graded natural intertwiner whose image canonically distinguishes O(3) selected matter from O(0) spectators",
+    "firstTest": "compute the equivariant natural-transformation space after retaining integer U(1) weights and CP1 bundle degree",
+    "killCondition": "the space is zero or every nonzero element requires a freely chosen charge-two spurion or bundle split"
+  },
+  "physicalAdmissionChanged": false
+}
