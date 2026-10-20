@@ -1,0 +1,126 @@
+{
+  "schema": "spin23.e6-27-chiral-carrier-audit/1",
+  "date": "2026-10-20",
+  "scope": "branch-resolved audit of the chiral E6 27 as a reopening of the claim-1559 physical-carrier fork",
+  "conventions": {
+    "chain": "E6 -> Spin(10) x U(1)_psi -> SU(4)_C x SU(2)_L x SU(2)_R",
+    "representationsAreAllLeftHanded": true,
+    "spin10Branching": [
+      {"representation": "16", "u1PsiCharge": 1, "dimension": 16},
+      {"representation": "10", "u1PsiCharge": -2, "dimension": 10},
+      {"representation": "1", "u1PsiCharge": 4, "dimension": 1}
+    ],
+    "patiSalamBranching": [
+      {"parent": "16_1", "representation": "(4,2,1)", "dimension": 8, "role": "H16 gamma-plus candidate"},
+      {"parent": "16_1", "representation": "(bar4,1,2)", "dimension": 8, "role": "H16 gamma-minus candidate"},
+      {"parent": "10_-2", "representation": "(6,1,1)", "dimension": 6, "role": "extra colour-sextet fermions"},
+      {"parent": "10_-2", "representation": "(1,2,2)", "dimension": 4, "role": "extra bidoublet fermions"},
+      {"parent": "1_4", "representation": "(1,1,1)", "dimension": 1, "role": "extra singlet fermion"}
+    ]
+  },
+  "stateAccounting": {
+    "h16Dimension": 16,
+    "extraSpin10TenDimension": 10,
+    "extraSingletDimension": 1,
+    "extraDimension": 11,
+    "totalDimension": 27,
+    "exactEmbedding": "H16 can be identified with the Spin(10) 16_1 branch after E6 is reduced to Spin(10) x U(1)_psi",
+    "statisticsBoundary": "the 11 extra states in a matter 27 are fermions; the (1,2,2) fermions are not the scalar bidoublet required by the H16 Dirac edges"
+  },
+  "anomalies": {
+    "e6PerturbativeCubicDecision": "SAT",
+    "e6Reason": "E6 has no invariant symmetric rank-three adjoint tensor and the chiral 27 is perturbatively gauge-anomaly free",
+    "u1Psi": {
+      "gravitationalLinearTerms": [16, -20, 4],
+      "gravitationalLinearTotal": 0,
+      "cubicTerms": [16, -80, 64],
+      "cubicTotal": 0,
+      "spin10DynkinIndices": {"16": 2, "10": 1, "1": 0},
+      "spin10SquaredMixedTerms": [2, -2, 0],
+      "spin10SquaredMixedTotal": 0
+    },
+    "patiSalam": {
+      "su4CubicContributions": [2, -2, 0],
+      "su4CubicTotal": 0,
+      "su2LDoubletCount": 6,
+      "su2RDoubletCount": 6,
+      "wittenParity": [0, 0],
+      "extraElevenDecision": "the (6,1,1), (1,2,2) and singlet are anomaly-neutral under the semisimple Pati-Salam group"
+    }
+  },
+  "reality": {
+    "representationType": "the E6 27 is complex and inequivalent to bar27",
+    "fullE6Ordinary": {
+      "completion": "27 + bar27",
+      "dimension": 54,
+      "decision": "SAT only after doubling"
+    },
+    "brokenPatiSalamOrdinary": {
+      "realExtraBranches": ["(6,1,1)", "(1,2,2)", "(1,1,1)"],
+      "complexFamilyBranch": "(4,2,1) + (bar4,1,2)",
+      "completion": "16 + bar16 + 10 + 1 after forgetting U(1)_psi and the broken E6 generators",
+      "dimension": 43,
+      "qualification": "43 is not an E6 representation and cannot be used while claiming unbroken E6 covariance"
+    },
+    "outerTwist": {
+      "automorphism": "the E6 diagram Z2 conjugates 27 and bar27",
+      "twistedDimension": 27,
+      "decision": "CONDITIONAL SAT",
+      "cost": "J is semilinear for E6 rt Z2 rather than an ordinary E6-equivariant real structure; disconnected-extension anomalies and symmetry breaking remain unaudited"
+    }
+  },
+  "grading": {
+    "h16Split": [8, 8],
+    "fullE6CommutantDimension": 1,
+    "nontrivialE6EquivariantGradingExists": false,
+    "reason": "Schur's lemma makes every operator commuting with the irreducible complex 27 scalar",
+    "decision": "the H16 grading can be retained only after choosing the broken Pati-Salam decomposition or by treating it as non-E6-equivariant correspondence data"
+  },
+  "cubicAndYukawaChannels": {
+    "matterCubic27": {
+      "invariant": "27_F 27_F 27_H",
+      "u1PsiNeutralBranchTriples": [
+        ["16_1", "16_1", "10_-2"],
+        ["10_-2", "10_-2", "1_4"]
+      ],
+      "diracBidoubletPresent": true,
+      "rightMajorana126Present": false,
+      "decision": "the E6 cubic supplies a family Dirac channel and exotic masses but no renormalizable right-Majorana carrier"
+    },
+    "scalar351Prime": {
+      "spin10Dimensions": [1, 10, 16, 54, 126, 144],
+      "dimensionCheck": 351,
+      "containsSpin10Ten": true,
+      "containsSpin10ConjugateOneHundredTwentySix": true,
+      "symmetricMatterChannelMultiplicity": 1,
+      "diracPatiSalamBranches": ["(1,2,2) inside 10", "(15,2,2) inside bar126"],
+      "majoranaPatiSalamBranch": "(10,1,3) inside bar126 in the declared 27 = 16_1 + 10_-2 + 1_4 convention; simultaneous conjugation reverses the naming",
+      "decision": "one 27_F 27_F 351'_H gauge tensor can contain both typed portals, but 351'_H is an additional scalar representation rather than one of the 11 extra matter states"
+    }
+  },
+  "portalWardTest": {
+    "oneFamilyGaugeTensorCoefficientCount": 1,
+    "threeFamilySymmetricCoefficientCount": 6,
+    "matchedCoefficients": {
+      "dirac": "k_D = Y_351 C_D Z_D v_D",
+      "majorana": "k_M = Y_351 C_M Z_M v_M"
+    },
+    "fixedByE6": ["the parent Yukawa tensor identity", "representation-theoretic Clebsches before symmetry breaking"],
+    "notFixedByE6Alone": ["selected family entries", "the ratio of broken-phase VEVs", "wavefunction normalization", "threshold transport", "the H16 null mask"],
+    "typedExchangeExists": false,
+    "reason": "the diagram involution conjugates complete E6 representations and does not exchange the unequal Spin(10) 10 and bar126 or their Pati-Salam bidoublet and triplet branches",
+    "decision": "PARTIAL: E6 improves one-parent-tensor unification but does not supply the normalized parallel source line required by claim 1557"
+  },
+  "verdict": {
+    "chiral27Carrier": "CONDITIONAL SAT as an anomaly-free E6 matter parent",
+    "literalH16Completion": "UNSAT under unbroken E6 because the grading is not equivariant and the extra 11 do not close ordinary J",
+    "ordinaryFullE6Reality": "54 states",
+    "ordinaryBrokenPatiSalamReality": "43 states after discarding U(1)_psi and E6 covariance",
+    "twistedE6Reality": "27 states conditionally",
+    "minimal27CubicMajoranaClosure": "UNSAT",
+    "351PrimePortalUnification": "CONDITIONAL SAT at the gauge-tensor level",
+    "portalWardIntertwiner": "UNSAT",
+    "programmeConsequence": "claim 1559 must be reopened from two to three carrier strategies: 32-state ordinary Spin(10)/Pati-Salam, 16-state left-right twisted, and 27-state chiral E6. The 27 branch is the best parent-unification route but needs a declared E6 outer twist or a 54-state ordinary completion, an added 351'_H or effective Majorana operator, a broken-phase grading prescription, and an independent family/threshold law."
+  },
+  "boundary": "This is a representation, anomaly, invariant-channel and source-count audit. It does not construct an E6-breaking vacuum, solve doublet-triplet splitting, audit disconnected global anomalies, or calculate the complete threshold and beta-function system."
+}

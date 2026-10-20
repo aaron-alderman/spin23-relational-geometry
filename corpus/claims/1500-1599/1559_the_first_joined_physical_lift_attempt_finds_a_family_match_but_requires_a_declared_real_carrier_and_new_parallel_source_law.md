@@ -106,10 +106,14 @@ Their conjunction is stronger than the three statements separately:
 
 No component can therefore be borrowed as a silent fix for another.
 
-## 2. The physical carrier now has exactly two honest branches
+## 2. The fixed-spectrum physical carrier has exactly two honest reality branches
 
-The next construction must choose one of two mutually explicit starting
-points.
+For the fixed fermion spectrum of one Pati--Salam/Spin(10) family, the next
+construction must choose one of two mutually explicit starting points.
+This is not exhaustive once the matter spectrum itself may be enlarged.
+In particular the chiral E6 \(27=16+10+1\), and its ordinary-real
+\(27+\overline{27}\) completion, form a separate parent-enlarged branch
+analysed in [claim 1562](1562_the_four_carrier_counts_split_into_fixed_spectrum_and_parent_enlarged_reality_branches.md).
 
 ### Ordinary-real branch
 
@@ -182,8 +186,9 @@ not absence of propagation.
 The next programme-shifting task is no longer another search over small
 label graphs.  It is a branch-resolved physical action packet:
 
-1. choose the 32-state ordinary-real carrier or the 16-state twisted-real
-   carrier;
+1. choose the fixed-spectrum 32-state ordinary-real carrier, the 16-state
+   twisted-real carrier, or explicitly declare a parent-enlarged branch such
+   as the chiral E6 27 or ordinary-real E6 54;
 2. write the complete Pati--Salam fermion, bidoublet, Majorana and breaking
    table with \(J\), grading and relation-sheet actions;
 3. enumerate all invariant Yukawa/scalar operators and compute the complete

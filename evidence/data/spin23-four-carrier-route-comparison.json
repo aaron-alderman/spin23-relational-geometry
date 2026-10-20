@@ -1,0 +1,151 @@
+{
+  "schema": "spin23.four-carrier-route-comparison/1",
+  "date": "2026-10-20",
+  "question": "How do the 16 twisted Pati-Salam, 27 chiral E6, 32 ordinary-real Spin(10)/Pati-Salam, and 54 ordinary-real E6 routes compare when state-count conventions and real structures are kept explicit?",
+  "sources": [
+    {
+      "id": "BajcSusic2014",
+      "url": "https://arxiv.org/abs/1311.0775",
+      "use": "E6 matter 27, scalar 27/351-prime/650 content, and renormalizable Yukawa-sector precedent"
+    },
+    {
+      "id": "HebbarLeontarisShafi2016",
+      "url": "https://arxiv.org/abs/1604.08328",
+      "use": "the E6 cubic 27_F 27_F 27_H and singlet-VEV masses for vectorlike 10-sector exotics"
+    },
+    {
+      "id": "BabuBajcSaad2016",
+      "url": "https://arxiv.org/abs/1612.04329",
+      "use": "Spin(10) 10/120/126 Yukawa channels and scalar-completion context"
+    },
+    {
+      "id": "AulakhGirdhar2002",
+      "url": "https://arxiv.org/abs/hep-ph/0204097",
+      "use": "Spin(10)-to-Pati-Salam branching and left-right parity"
+    }
+  ],
+  "countingConvention": {
+    "unit": "complex internal one-particle dimensions in an all-left-handed convention",
+    "chiralMatterCount": "counts independent left-handed fermion components before adding an ordinary charge-conjugate carrier",
+    "realCarrierCount": "counts a representation and its conjugate as separate complex summands on which an antiunitary J exchanges them",
+    "warning": "A real-carrier count is not automatically a count of independent propagating left-handed fields. If the second summand is the J-related antiparticle copy, calling it a mirror family is a category error; if both summands are independent fields, the theory is vectorlike and mirror decoupling becomes a dynamical problem."
+  },
+  "branchings": {
+    "patiSalamFamily": {
+      "formula": "16 = (4,2,1) + (bar4,1,2)",
+      "dimensions": [8, 8],
+      "sum": 16
+    },
+    "e6Matter": {
+      "formula": "27 = 16_1 + 10_-2 + 1_4 under Spin(10) x U(1)_psi",
+      "dimensions": [16, 10, 1],
+      "charges": [1, -2, 4],
+      "sum": 27
+    },
+    "spin10OrdinaryReal": {
+      "formula": "16 + bar16",
+      "dimensions": [16, 16],
+      "sum": 32
+    },
+    "brokenPatiSalamTruncationOf27": {
+      "formula": "16 + bar16 + 10 + 1 after discarding E6 and U(1)_psi covariance",
+      "dimensions": [16, 16, 10, 1],
+      "sum": 43,
+      "boundary": "representation-theoretically ordinary-real under the broken Pati-Salam/Spin(10) stage, but not a complete E6 representation and therefore not one of the four ultraviolet routes"
+    },
+    "e6OrdinaryReal": {
+      "formula": "27 + bar27",
+      "dimensions": [27, 27],
+      "sum": 54
+    }
+  },
+  "anomalyChecks": {
+    "patiSalam16": {
+      "su4CubicFundamentalUnits": 0,
+      "su2LDoublets": 4,
+      "su2RDoublets": 4,
+      "verdict": "semisimple perturbative anomaly free and both SU(2) Witten parities even"
+    },
+    "e6Chiral27": {
+      "spin10xU1LinearChargeTrace": 0,
+      "spin10xU1CubicChargeTrace": 0,
+      "spin10SquaredU1UsingT16eq2T10": 0,
+      "verdict": "the standard chiral E6 family is anomaly consistent; the displayed subgroup traces cancel"
+    },
+    "ordinaryReal32And54": {
+      "verdict": "representation plus conjugate is vectorlike at the gauge-representation level, so local gauge anomalies cancel pairwise"
+    },
+    "boundary": "A twisted or disconnected extension still requires its own discrete/global anomaly audit."
+  },
+  "routes": [
+    {
+      "id": "PS16-twisted",
+      "complexDimension": 16,
+      "matterContent": "one chiral Pati-Salam family",
+      "J": "J g = sigma_LR(g) J, where sigma_LR exchanges SU(2)_L and SU(2)_R",
+      "ordinaryJ": false,
+      "twistedJ": true,
+      "anomalyStatus": "continuous Pati-Salam anomaly tests pass; disconnected-extension test open",
+      "scalarClosure": "not closed: cross-chiral edges require (1,2,2) or (15,2,2), while Majorana and high-scale breaking require additional multiplets",
+      "mirrorStatus": "no extra conjugate carrier, but ordinary low-energy reality must emerge after the twist is broken",
+      "minimality": "smallest of the four counts, conditional on admitting the left-right twist",
+      "killTest": "construct the disconnected/twisted action and show J^2, the fermionic action, discrete anomaly cancellation, symmetry breaking, and recovery of ordinary low-energy charge conjugation"
+    },
+    {
+      "id": "E6-27-chiral",
+      "complexDimension": 27,
+      "matterContent": "16_1 + 10_-2 + 1_4",
+      "J": "no ordinary internal J closes on one complex 27; an E6 outer-automorphism-twisted J is a separate disconnected-extension proposal",
+      "ordinaryJ": false,
+      "twistedJ": "possible in representation type, not audited as a full disconnected model",
+      "anomalyStatus": "chiral E6 matter route is anomaly consistent",
+      "scalarClosure": "not closed by the fermion 27: the cubic 27_F 27_F 27_H supplies 16_F16_F10_H and 10_F10_F1_H channels, but a conventional 126 Majorana branch requires 351-prime_H and realistic E6 breaking requires further scalar data",
+      "mirrorStatus": "the Spin(10) 10 is vectorlike after further branching and can receive mass from a singlet VEV, but the whole 10+1 exotic mass matrix and retained chiral index must be shown",
+      "minimality": "smallest standard simple-parent enlargement containing the family 16 in the E6 fundamental, but not a real carrier",
+      "killTest": "write the complete 27_F exotic mass matrix after declared 27/351-prime/breaking VEVs and prove that exactly the intended 16-sector chirality remains light while the one-parent-invariant relation survives the vacuum and thresholds"
+    },
+    {
+      "id": "Spin10-32-ordinary-real",
+      "complexDimension": 32,
+      "matterContent": "16 + bar16",
+      "J": "ordinary gauge-equivariant antiunitary exchange between 16 and bar16",
+      "ordinaryJ": true,
+      "twistedJ": false,
+      "anomalyStatus": "pairwise vectorlike cancellation; each intended one-family Pati-Salam restriction also passes its anomaly test",
+      "scalarClosure": "not closed by the carrier: Dirac, Majorana and breaking sectors still require declared 10/126 and breaking representations",
+      "mirrorStatus": "safe only if bar16 is the constrained J-antiparticle copy; if it is an independent left-handed field, 16+bar16 is vectorlike and an invariant mass can remove the desired family together with the mirror",
+      "minimality": "minimum ordinary-J closure of a fixed Spin(10) 16 or fixed Pati-Salam family",
+      "killTest": "specify the fermionic-action/reality projection. If both summands are independent, exhibit a symmetry-respecting mass matrix with chiral index one; otherwise identify bar16 explicitly as the non-independent antiparticle carrier"
+    },
+    {
+      "id": "E6-54-ordinary-real",
+      "complexDimension": 54,
+      "matterContent": "27 + bar27",
+      "J": "ordinary gauge-equivariant antiunitary exchange between 27 and bar27",
+      "ordinaryJ": true,
+      "twistedJ": false,
+      "anomalyStatus": "pairwise vectorlike cancellation",
+      "scalarClosure": "not closed by the carrier and inherits the E6 27/351-prime/breaking-field inventory plus its conjugation requirements",
+      "mirrorStatus": "safe as a kinematic J-pair; if treated as two independent chiral multiplets it is vectorlike and the gauge-invariant 27 bar27 mass does not selectively preserve one 27",
+      "minimality": "minimum ordinary-J closure of an E6 27, not the minimum E6 chiral matter representation",
+      "killTest": "separate the J-related antiparticle copy from independent matter, then demonstrate full exotic lifting, scalar vacuum, thresholds and one surviving chiral family without silently breaking the asserted reality law"
+    }
+  ],
+  "categoryTheorem": {
+    "fixedPatiSalamSpectrum": "For the fixed sixteen-component Pati-Salam family, the two reality implementations in claim 1559 are exhaustive: 16 with left-right-twisted J or 32 with ordinary J.",
+    "parentEnlargement": "Once parent-spectrum enlargement is admitted, the phrase exactly two honest branches is incomplete: a chiral E6 27 and its 54-dimensional ordinary-real completion are additional routes.",
+    "nonEquivalence": "The 27 is not a third ordinary-real solution between 16 and 32. It changes the matter content by adding a Spin(10) 10+1 and still needs either no internal ordinary J, an outer-automorphism twist, or the 54 completion. A 43-dimensional 16+bar16+10+1 closure exists only after abandoning ultraviolet E6 and U(1)_psi covariance.",
+    "correctedBranching": [
+      "fixed-spectrum PS/Spin(10): 16 twisted or 32 ordinary-real",
+      "E6-enlarged: 27 chiral (optionally separately test an outer twist) or 54 ordinary-real"
+    ]
+  },
+  "comparativeDecision": {
+    "claim1559MateriallyFalse": "unscoped yes; scoped to the fixed Pati-Salam family spectrum no",
+    "bestEconomicalTest": "16 twisted, because it adds no fermionic exotics but bears the strongest disconnected-reality burden",
+    "bestSimpleParentTest": "27 chiral E6, because it is anomaly consistent and supplies a parent cubic plus vectorlike 10-sector mass channel, but it bears an exotic/scalar-completion burden",
+    "bestConservativeRealityTest": "32 ordinary-real Spin(10)/Pati-Salam, provided the conjugate is explicitly a J-related antiparticle carrier rather than an independent mirror field",
+    "largestControlRoute": "54 ordinary-real E6, useful as a completeness control but dominated in minimality unless ordinary E6-equivariant J is mandatory",
+    "noWinnerYet": "None of the four routes closes the scalar, Ward-intertwiner, threshold and physical-observable gates."
+  }
+}

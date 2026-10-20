@@ -1,0 +1,137 @@
+{
+  "schema": "spin23.e6-ordinary-real-54-carrier-audit/1",
+  "date": "2026-10-20",
+  "scope": "ordinary-real E6 carrier branch 27 + bar27, audited through Spin(10) x U(1)_psi and Pati-Salam for reality, anomalies, exotic masses, invariant tensors, breaking, oriented support and the typed portal line",
+  "conventions": {
+    "allFermionsLeftHanded": true,
+    "patiSalamOrder": ["SU(4)_C", "SU(2)_L", "SU(2)_R"],
+    "chargeConvention": "27 = 16_1 + 10_-2 + 1_4; simultaneous reversal gives the equivalent convention",
+    "carrierComplexDimension": 54,
+    "independentFieldBoundary": "27 + bar27 may mean 54 independent all-left Weyl states or an ordinary-real/Nambu carrier in which bar27 is the J-image; those interpretations have different spectrum counts"
+  },
+  "branching": {
+    "twentySeven": [
+      {"id": "FL", "spin10": "16", "qPsi": 1, "patiSalam": ["4", "2", "1"], "dimension": 8, "role": "ordinary chiral family left branch"},
+      {"id": "FRc", "spin10": "16", "qPsi": 1, "patiSalam": ["bar4", "1", "2"], "dimension": 8, "role": "ordinary chiral family right-conjugate branch"},
+      {"id": "D", "spin10": "10", "qPsi": -2, "patiSalam": ["6", "1", "1"], "dimension": 6, "role": "colour-sextet real branch; Standard-Model exotic triplet pair after further restriction"},
+      {"id": "H", "spin10": "10", "qPsi": -2, "patiSalam": ["1", "2", "2"], "dimension": 4, "role": "bidoublet; vectorlike weak-doublet pair after further restriction"},
+      {"id": "S", "spin10": "1", "qPsi": 4, "patiSalam": ["1", "1", "1"], "dimension": 1, "role": "extra neutral singlet under the semisimple subgroup"}
+    ],
+    "barTwentySeven": [
+      {"id": "barFL", "spin10": "bar16", "qPsi": -1, "patiSalam": ["bar4", "2", "1"], "dimension": 8, "role": "ordinary conjugate of FL"},
+      {"id": "barFRc", "spin10": "bar16", "qPsi": -1, "patiSalam": ["4", "1", "2"], "dimension": 8, "role": "ordinary conjugate of FRc"},
+      {"id": "barD", "spin10": "10", "qPsi": 2, "patiSalam": ["6", "1", "1"], "dimension": 6, "role": "J-paired copy of the self-conjugate semisimple representation"},
+      {"id": "barH", "spin10": "10", "qPsi": 2, "patiSalam": ["1", "2", "2"], "dimension": 4, "role": "J-paired copy of the self-conjugate semisimple representation"},
+      {"id": "barS", "spin10": "1", "qPsi": -4, "patiSalam": ["1", "1", "1"], "dimension": 1, "role": "ordinary conjugate of S"}
+    ],
+    "dimensionChecks": {"twentySeven": 27, "barTwentySeven": 27, "total": 54}
+  },
+  "ordinaryReality": {
+    "jPairs": [["FL", "barFL"], ["FRc", "barFRc"], ["D", "barD"], ["H", "barH"], ["S", "barS"]],
+    "ordinaryGaugeEquivariantJExists": true,
+    "singleTwentySevenOrdinaryJClosed": false,
+    "linearE6CrossIntertwinerDimension": 0,
+    "commutant": "End_E6(27 + bar27) = C + C because 27 and bar27 are inequivalent complex irreducibles",
+    "decision": "SAT for ordinary antilinear reality on 54; UNSAT for an E6-equivariant linear oriented transporter between the two sheets"
+  },
+  "anomalies": {
+    "e6PerturbativeGaugeAnomaly": 0,
+    "reason": "E6 has no primitive symmetric rank-three adjoint invariant; its representations have vanishing four-dimensional triangle anomaly",
+    "u1PsiOnTwentySeven": {
+      "weightedGravitationalTerms": [16, -20, 4],
+      "weightedGravitationalTotal": 0,
+      "weightedCubicTerms": [16, -80, 64],
+      "weightedCubicTotal": 0,
+      "spin10SquaredU1TermsUsingT16Equals2T10": [2, -2],
+      "spin10SquaredU1Total": 0
+    },
+    "patiSalamOnTwentySeven": {
+      "su4CubicTerms": [2, -2, 0],
+      "su4CubicTotal": 0,
+      "su2LDoubletCount": 6,
+      "su2RDoubletCount": 6,
+      "wittenParities": [0, 0]
+    },
+    "fullCarrier": "27 + bar27 is vectorlike and locally anomaly free; notably, one chiral 27 already passes the four-dimensional perturbative E6 test, the displayed local subgroup traces and the Pati-Salam Witten-parity checks",
+    "scopeBoundary": "no claim is made here about disconnected-extension anomalies or every possible global anomaly after further quotient choices"
+  },
+  "invariantTensors": {
+    "products": [
+      "27 x bar27 = 1 + 78 + 650",
+      "Sym^2(27) = bar27 + bar351-prime",
+      "Alt^2(27) = bar351"
+    ],
+    "vectorlikeMassAndSplitting": [
+      "M 27_F bar27_F",
+      "y78 27_F bar27_F 78_H",
+      "y650 27_F bar27_F 650_H"
+    ],
+    "sameChiralityYukawas": [
+      "Y27 27_F 27_F 27_H",
+      "Y351p 27_F 27_F 351-prime_H"
+    ],
+    "oneFamilyAntisymmetric351Channel": "absent for two identical fermion multiplets; it requires antisymmetric family data",
+    "exceptionalCubicBranches": ["16 16 10", "10 10 1"],
+    "shared351PrimeBranches": ["16_F 16_F 10_H", "16_F 16_F bar126_H", "additional E6-related branches"],
+    "shared351PrimeParentCoefficientDimensionForOneFamily": 1
+  },
+  "exoticMassAudit": {
+    "unbrokenE6SingletMassSpectrum": "one singlet bilinear coefficient masses 16 with bar16, 10 with 10, and 1 with 1 together",
+    "unbrokenE6CanLiftOnlyTenPlusOne": false,
+    "breakingCanSplitEigenvalues": true,
+    "breakingChannels": ["78_H", "650_H"],
+    "independentWeylInterpretation": "with only one 27 + bar27, setting the 16-bar16 eigenvalue to zero leaves both a family and a mirror massless; a single vectorlike pair cannot lift only the mirror",
+    "nambuInterpretation": "if bar27 is only the J-image, it is not an independent mirror family, but vectorlike bilinears cannot then be counted as removal of independent exotics; the physical-field quotient must be declared",
+    "lightChiralFamilyFromCarrierWithoutExtraProjection": "UNSAT",
+    "qualification": "additional chiral copies, boundary/orbifold projection, compositeness, or a non-field correspondence interpretation can reopen the spectrum problem"
+  },
+  "symmetryBreaking": {
+    "requiredStages": [
+      "select Spin(10) x U(1)_psi or Pati-Salam inside E6 using an E6-breaking vacuum such as a 78_H or 650_H direction",
+      "break the extra U(1)_psi and descend through Pati-Salam with semisimple-singlet/high-scale directions",
+      "supply the right-Majorana (10,1,3) inside the Spin(10) bar126 branch of 351-prime_H",
+      "supply an electroweak (1,2,2) direction in a Spin(10) 10 branch",
+      "split coloured (6,1,1) partners from the desired weak bidoublet",
+      "declare how the independent-Weyl mirror is removed or why the conjugate sheet is only a J-image"
+    ],
+    "branchingAloneCompletesVacuum": false,
+    "minimalRenormalizableE6Precedent": "27_H + bar27_H + 351-prime_H + bar351-prime_H can break E6 directly, but this is a full vacuum system rather than a consequence of the 54-state carrier"
+  },
+  "orientedCorrespondence": {
+    "sixteenLabelEmbedding": "the 16 labels can be identified with 16_1 inside 27 after a Spin(10) x U(1)_psi direction is chosen",
+    "e6InvariantProjectorOntoSixteenExists": false,
+    "reason": "27 is irreducible, so an E6-equivariant idempotent on it has rank 0 or 27, never 16",
+    "jImage": "the selected 16_1 is carried to bar16_-1 in bar27, producing two ordinary-real relation sheets",
+    "exceptionalCubicClosesOnSixteen": false,
+    "forcedComplementChannel": "16 16 10",
+    "additionalComplementChannel": "10 10 1",
+    "supportVerdict": "the E6 action and cubic do not preserve the selected sixteen-state edge mask; selecting the mask requires broken-subgroup projectors and further support data",
+    "linearOrientedTransporterVerdict": "UNSAT at unbroken E6 because Hom_E6(27,bar27)=0"
+  },
+  "typedPortalWardLine": {
+    "bestNearMiss": "one 27_F 27_F 351-prime_H invariant gives fixed Clebsches multiplying both the Spin(10) 10_H Dirac branch and bar126_H Majorana branch",
+    "oneFamilyParentInvariantCoefficient": "SAT",
+    "effectiveCoefficients": ["g_D = Y c_10 v_10 Z_D", "g_M = Y c_126 v_126 Z_M"],
+    "missingEquality": "c_10 v_10 Z_D = c_126 v_126 Z_M is not implied by the existence of the common parent coefficient Y",
+    "typedOperatorExchange": false,
+    "selectedSupportProtected": false,
+    "multiFamilyCost": "Y becomes a symmetric family matrix, so selected entries are not one-dimensional without a family intertwiner",
+    "jOrCpEffect": "J or CP relates the conjugate invariant and complex-conjugates coefficients; it does not exchange the Dirac and Majorana Pati-Salam operator complexes",
+    "wardDecision": "SAT for one parent invariant coefficient with fixed Clebsch projections; no broken-phase portal ray or selected normalized portal Ward line is derived"
+  },
+  "spin23Status": {
+    "positive": "the 54-state carrier supplies an honest ordinary-real two-sheet target on which Spin(2,3)-organized grading and relation data could act",
+    "negative": "no audited Spin(2,3) action selects the 16 inside 27, removes the 10+1 support, provides Hom_E6(27,bar27), or locks the two broken-phase portal normalizations",
+    "nextGate": "construct a declared physical quotient/projection plus a broken-phase scalar vacuum and show that its surviving counterterm module is one-dimensional"
+  },
+  "verdict": {
+    "ordinaryReality": "SAT",
+    "auditedPerturbativeAndPatiSalamAnomalies": "SAT",
+    "automaticLightChiralSpectrum": "UNSAT",
+    "orientedSupportClosure": "UNSAT",
+    "sharedParentYukawaTensor": "SAT for one family",
+    "normalizedTypedPortalWardLine": "UNSAT",
+    "physicalCarrier": "CONDITIONAL",
+    "programmeConsequence": "27 + bar27 is an ordinary-real exceptional container and the one-family 351-prime channel supplies one invariant coefficient with fixed Clebsch projections, but it neither isolates one chiral family nor preserves the oriented sixteen-state support nor derives a broken-phase Dirac/Majorana coefficient ray"
+  }
+}
