@@ -1,0 +1,24 @@
+{
+  "schema": "spin23.pati-salam-mediator-inventory-triage/1",
+  "date": "2026-10-20",
+  "groupConvention": "SU(2)_R x SU(2)_L x SU(4)",
+  "sourceInventory": {
+    "fermions": ["R=(2,1,4)", "L=(1,2,4)"],
+    "fundamentalHiggs": ["H=(2,2,1)", "Delta=(2,1,4)", "Sigma=(1,1,1+15)"],
+    "additionalBidoubletCarrier": "(2,2,15) may occur among additional fundamental/composite fields depending on the order-one assumptions",
+    "extraVectorlikeFermions": false
+  },
+  "representationArithmetic": [
+    "L tensor H contains R via 2_L tensor 2_L contains 1",
+    "H tensor R contains L via 2_R tensor 2_R contains 1",
+    "conjugate(4) tensor 4 = 1 + 15, so the L-R scalar channel is (2,2,1+15)"
+  ],
+  "topologyTriage": [
+    {"topology": "(L_P H)|(N_N S)", "mediatorCarrier": "R=(2,1,4)", "status": "present-correlated", "reason": "the selected right-neutrino state is already in R and its complete sequential matching preserves the cofactor zero"},
+    {"topology": "(L_P S)|(N_N H)", "mediatorCarrier": "L=(1,2,4)", "status": "absent-minimal-fermion-inventory", "reason": "the source has the chiral light L multiplet but no independent heavy vectorlike L copy to integrate out"},
+    {"topology": "(L_P N_N)|(H S)", "mediatorCarrier": "Phi=(2,2,1+15)", "status": "conditional-family-charged-bidoublet", "reason": "the gauge carrier exists, but leakage requires an independent charge-three family face plus both the L Phi N Yukawa and S H Phi-dagger mixing portals"}
+  ],
+  "liveIndependentTreeThreat": "family-charged (2_R,2_L,1+15) bidoublet with both Yukawa and scalar-mixing portals",
+  "boundary": "the published model is generation blind; the required family extension may enlarge the scalar or fermion inventory, so absence in the minimal source is not an all-completions no-go",
+  "verdict": "the actual minimal Pati-Salam inventory reduces three abstract one-mediator bridges to one conditional independent scalar threat"
+}

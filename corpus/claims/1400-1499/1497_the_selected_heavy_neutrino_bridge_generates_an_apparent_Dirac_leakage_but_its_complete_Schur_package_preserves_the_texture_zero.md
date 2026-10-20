@@ -259,6 +259,8 @@ enforces it.
 extra singlet-fermion states by whether their complete matching packets obey
 an analogous Schur identity.
 
+[Claim 1498](1498_the_minimal_spectral_Pati_Salam_inventory_reduces_the_three_Dirac_bridges_to_one_conditional_family_charged_bidoublet_threat.md) performs the sourced inventory triage: no independent heavy left-multiplet fermion is present, while the sole leading independent tree threat is a conditional family-charged \((2,2,1\oplus15)\) bidoublet.
+
 ## Verdict
 
 The first physical mediator test turns a prospective no-go into a stronger
