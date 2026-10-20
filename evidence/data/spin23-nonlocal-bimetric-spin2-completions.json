@@ -1,0 +1,115 @@
+{
+  "schema": "spin23.nonlocal-bimetric-spin2-completions/1",
+  "date": "2026-10-21",
+  "status": "explicit spin-2 propagator and completion-cost audit beyond finite local curvature-square truncations",
+  "conventions": {
+    "momentum": "Euclidean p^2 is used to display zeros; a pole at p^2=-m^2 is a Lorentzian mass m",
+    "scope": "spin-2 transverse-traceless projector and positive overall Planck normalization are suppressed",
+    "health": "a simple real pole is healthy when its diagonalized kinetic mode has positive norm; complex poles fail ordinary spectral unitarity"
+  },
+  "localFiniteTruncation": {
+    "propagator": "D_4(p^2)=1/[p^2(1+p^2/M^2)]",
+    "partialFraction": "D_4=1/p^2-1/(p^2+M^2)",
+    "poles": [
+      {"pSquared": 0, "residue": 1, "interpretation": "healthy Einstein graviton"},
+      {"pSquaredOverM2": -1, "residue": -1, "interpretation": "massive spin-2 ghost under ordinary Feynman quantization"}
+    ]
+  },
+  "entireCompletion": {
+    "inverseKernel": "K_inf(p^2)=M_Pl^2 p^2 exp(p^2/M^2)",
+    "propagator": "D_inf(p^2)=exp(-p^2/M^2)/(M_Pl^2 p^2)",
+    "zeroFreeReason": "the complex exponential is entire and never zero at finite argument",
+    "finitePoles": 1,
+    "masslessResidue": "1/M_Pl^2>0",
+    "massivePoles": 0,
+    "decision": "the massless Einstein pole survives and no additional spin-2 particle or gap is generated"
+  },
+  "polynomialSequence": {
+    "definition": "P_N(x)=sum_{k=0}^N x^k/k!, D_N=1/[p^2 P_N(p^2/M^2)]",
+    "ordersChecked": [1,2,3,4,5,6,7,8,9,10],
+    "extraPoleCounts": [1,2,3,4,5,6,7,8,9,10],
+    "realNegativeRootCounts": [1,0,1,0,1,0,1,0,1,0],
+    "firstOrder": "P_1=1+x gives residues +1 at x=0 and -1 at x=-1",
+    "decision": "every nonconstant finite Taylor truncation has extra propagator poles; even orders have complex-conjugate poles and odd orders also have one real negative root in the checked sequence",
+    "interpretation": "the extra poles do not converge to additional poles of exp(x); they are truncation artifacts that move through the complex plane as N changes"
+  },
+  "bimetricCompletion": {
+    "linearTTKernel": "K=[[p^2+mu^2,-mu^2],[-mu^2,p^2+mu^2]] for two canonically normalized positive-kinetic spin-2 fields",
+    "eigenmodes": {
+      "plus": "(h_g+h_f)/sqrt(2), eigenvalue p^2",
+      "minus": "(h_g-h_f)/sqrt(2), eigenvalue p^2+2mu^2"
+    },
+    "massiveMassSquared": "m_2^2=2mu^2>0",
+    "gMetricPropagator": "D_gg=(p^2+mu^2)/[p^2(p^2+2mu^2)]=(1/2)/p^2+(1/2)/(p^2+m_2^2)",
+    "poles": [
+      {"pSquared": 0, "residueInDgg": 0.5, "degrees": 2, "interpretation": "healthy massless graviton"},
+      {"pSquared": "-m_2^2", "residueInDgg": 0.5, "degrees": 5, "interpretation": "healthy gapped Fierz-Pauli spin-2"}
+    ],
+    "nonlinearDegrees": 7,
+    "nonlinearCondition": "the Hassan-Rosen square-root potential and its secondary constraint are required to remove the Boulware-Deser scalar",
+    "decision": "unlike a one-field four-derivative propagator, the full two-field theory can have positive residues at both poles"
+  },
+  "bimetricDerivativeExpansion": {
+    "exactEffectiveKernelForG": "K_eff=2p^2(p^2+m_2^2)/(2p^2+m_2^2)",
+    "lowMomentumSeries": "K_eff=2p^2[1-(p^2/m_2^2)+2(p^2/m_2^2)^2-4(p^2/m_2^2)^3+...]",
+    "firstTruncation": "K_eff^(1)=2p^2(1-p^2/m_2^2), which has an additional truncation pole at p^2=+m_2^2",
+    "warning": "the derivative expansion is valid only below the massive pole/series singularity; resumming a finite curvature-square truncation as fundamental invents a ghost or tachyon not present in the positive-residue two-field spectrum",
+    "literatureMap": "integrating one metric out of ghost-free bimetric theory produces an infinite higher-curvature action; the apparent higher-derivative ghost of finite truncations is not a pole of the full bimetric theory"
+  },
+  "costAudit": {
+    "entireNonlocal": [
+      "requires a covariant entire function of derivative operators, a contour/prescription and a specified function space",
+      "absence of extra free poles does not by itself prove microcausality, reflection positivity, nonlinear stability or a well-posed global initial-value problem",
+      "loop self-energies contain logarithms and branch cuts and need not preserve the chosen zero-free entire form without a UV symmetry or completion",
+      "the exponential example has no healthy gapped massive spin-2 pole; it only preserves the Einstein pole"
+    ],
+    "bimetric": [
+      "adds a second vierbein/metric and five physical massive-spin-2 degrees of freedom",
+      "requires the tuned Hassan-Rosen/dRGT interaction potential and a matter-coupling choice that preserves the constraint below the cutoff",
+      "has a strong-coupling/Vainshtein scale and background-dependent stability and characteristic cones that require separate checks",
+      "radiative corrections and generic composite matter couplings can detune the special potential or reintroduce the Boulware-Deser mode above an EFT scale"
+    ],
+    "spin23Parent": [
+      "the single Spin(2,3) connection and selector do not supply either an entire covariant form factor or a second metric",
+      "the nonlocal route needs an infinite tower F(D^2/M^2) with ordering and gauge-covariance data",
+      "the bimetric route needs a second vierbein/Spin connection or a derived composite metric and an explanation of the square-root potential",
+      "neither spin-2 escape repairs the axial 1-plus/0-minus sign no-go of claim 1615; the torsion sector still needs a decoupling or critical completion"
+    ]
+  },
+  "decision": "Both principal escapes invalidate the inference that every curvature-square coefficient implies a physical spin-2 ghost. A zero-free entire form factor keeps only the healthy massless graviton, while full ghost-free bimetric theory has a healthy massless graviton plus a gapped five-polarization spin-2 mode. Neither follows from the current broken Spin(2,3) parent: nonlocality imports an infinite functional choice and bimetric theory imports a second metric plus a tuned constraint-preserving potential.",
+  "stopRules": [
+    "Do not infer poles of an entire or bimetric completion from a finite derivative truncation beyond its convergence/cutoff domain.",
+    "Do not call a zero-free entire propagator a mass-gap mechanism: it has no added massive pole.",
+    "Do not call a generic two-metric potential ghost-free; require the Hassan-Rosen constraint structure.",
+    "Do not couple matter generically to both metrics without rechecking the Boulware-Deser constraint and EFT cutoff.",
+    "Do not claim a Spin(2,3) completion until the entire operator or second metric and interaction potential are derived from explicit parent variables.",
+    "Retain claim 1615 independently: these are spin-2 completions, not a cure of the axial torsion sign contradiction."
+  ],
+  "sources": [
+    {
+      "title": "Biswas, Gerwick, Koivisto and Mazumdar, Towards Singularity- and Ghost-Free Theories of Gravity",
+      "url": "https://arxiv.org/abs/1110.5249",
+      "role": "zero-free entire-function spin-2 propagator construction"
+    },
+    {
+      "title": "Hassan and Rosen, Bimetric Gravity from Ghost-Free Massive Gravity",
+      "url": "https://arxiv.org/abs/1109.3515",
+      "role": "nonlinear ghost-free bimetric action and seven-degree spectrum"
+    },
+    {
+      "title": "Hassan, Schmidt-May and von Strauss, Higher Derivative Gravity and Conformal Gravity From Bimetric and Partially Massless Bimetric Theory",
+      "url": "https://arxiv.org/abs/1303.6940",
+      "role": "infinite higher-curvature effective action and finite-truncation ghost interpretation"
+    },
+    {
+      "title": "de Rham, Heisenberg and Ribeiro, On Couplings to Matter in Massive (Bi-)Gravity",
+      "url": "https://arxiv.org/abs/1408.1678",
+      "role": "constraint and cutoff costs of nonminimal bimetric matter coupling"
+    },
+    {
+      "title": "Hassan and Kocic, On the Local Structure of Spacetime in Ghost-Free Bimetric Theory and Massive Gravity",
+      "url": "https://arxiv.org/abs/1706.07806",
+      "role": "causal compatibility and local spacetime-structure conditions for two metrics"
+    }
+  ]
+}

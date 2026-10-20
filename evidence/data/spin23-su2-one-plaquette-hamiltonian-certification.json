@@ -1,0 +1,81 @@
+{
+  "schema": "spin23.su2-one-plaquette-hamiltonian-certification/1",
+  "date": "2026-10-21",
+  "status": "finite SU(2) character-basis diagonalization with residual and Schur-complement enclosures; convergent one-plaquette gaps but no uniform continuum or volume theorem",
+  "convention": {
+    "fullHamiltonian": "H=(2 g^2/a) h_kappa for one open plaquette after maximal-tree gauge fixing",
+    "dimensionlessHamiltonian": "h_kappa=C2+kappa(2-chi_1/2)",
+    "couplingMap": "kappa=1/(2 g^4)",
+    "basis": "orthonormal SU(2) class characters |n>=chi_(n/2), n=0,1,...",
+    "matrixElements": "h_nn=(n/2)(n/2+1)+2 kappa; h_n,n+1=-kappa",
+    "characterRule": "chi_1/2 chi_j=chi_(j+1/2)+chi_(j-1/2), with chi_(-1/2)=0",
+    "constantWarning": "the additive 2 kappa changes absolute energies but not gaps; rescalings in other Hamiltonian conventions must be mapped before comparing numbers"
+  },
+  "couplings": [0.05, 0.5, 2, 8, 32, 128],
+  "cutoffs": [4, 8, 12, 16, 24, 32, 40],
+  "certification": {
+    "truncation": "P_N retains n=0,...,N and Q_N retains n>=N+1",
+    "ritzUpper": "min-max gives E_k <= theta_k^(N)",
+    "tailFloor": "Q_N h Q_N >= T_N Q_N with T_N=((N+1)/2)(((N+1)/2)+1), because kappa(2-chi_1/2) is positive",
+    "boundaryCoupling": "P_N h Q_N=-kappa |N><N+1|",
+    "schurLower": "if theta_k<T_N, set delta=kappa^2/(T_N-theta_k); then E_k >= lambda_k(P_N h P_N-delta |N><N|)",
+    "residual": "extending a normalized Ritz vector by zero gives residual norm rho=kappa |v_N| and dist(theta,spectrum(h))<=rho",
+    "gapInterval": "E1-E0 lies in [L1-U0,U1-L0] whenever the level enclosures are ordered",
+    "certifiedTarget": "report convergence when the gap interval has positive lower endpoint and relative width below 1e-8"
+  },
+  "scanExpectations": {
+    "strongCouplingLimit": "as kappa->0 the gap tends C2(1/2)-C2(0)=3/4",
+    "weakCouplingBasisGrowth": "the character distribution broadens and the cutoff needed for a fixed enclosure grows with kappa",
+    "finiteCertification": "all listed couplings obtain a positive certified gap interval by some listed cutoff",
+    "residualBehavior": "boundary residuals decay rapidly once N exceeds the occupied character range"
+  },
+  "certifiedResults": [
+    {"kappa": 0.05, "g": 1.7782794100, "cutoffN": 4, "gapLower": 0.7546481338, "gapUpper": 0.7546481338, "aGapLower": 4.77281387, "aGapUpper": 4.77281387},
+    {"kappa": 0.5, "g": 1, "cutoffN": 8, "gapLower": 1.0982430963, "gapUpper": 1.0982430963, "aGapLower": 2.19648619, "aGapUpper": 2.19648619},
+    {"kappa": 2, "g": 0.7071067812, "cutoffN": 8, "gapLower": 2.4787389118, "gapUpper": 2.4787389138, "aGapLower": 2.47873891, "aGapUpper": 2.47873891},
+    {"kappa": 8, "g": 0.5, "cutoffN": 12, "gapLower": 5.3283832432, "gapUpper": 5.3283832471, "aGapLower": 2.66419162, "aGapUpper": 2.66419162},
+    {"kappa": 32, "g": 0.3535533906, "cutoffN": 24, "gapLower": 10.9937137743, "gapUpper": 10.9937137743, "aGapLower": 2.74842844, "aGapUpper": 2.74842844},
+    {"kappa": 128, "g": 0.25, "cutoffN": 32, "gapLower": 22.3112778094, "gapUpper": 22.3112778094, "aGapLower": 2.78890973, "aGapUpper": 2.78890973}
+  ],
+  "continuumScalingAudit": {
+    "dimensionlessGap": "Delta_h=E1(h)-E0(h)",
+    "latticeUnitGap": "a Delta_H=2 g^2 Delta_h",
+    "weakCouplingQuestion": "whether a Delta_H vanishes along a renormalized trajectory so that Delta_H can remain finite as a->0",
+    "onePlaquetteOutcome": "the isolated plaquette has only a compact rotor localized by one magnetic well; its lattice-unit gap approaches a nonzero cutoff-scale number rather than generating a four-dimensional infrared scale",
+    "missing": "coupled plaquettes, a thermodynamic limit, running coupling, and a uniform lower bound after subtracting extensive vacuum energy"
+  },
+  "volumeObstruction": {
+    "basisGrowth": "with P independent loop labels and cutoff N, the unreduced tensor-product count grows as (N+1)^P before Gauss-law recoupling",
+    "boundaryGrowth": "many plaquette interactions cross the representation cutoff, so the P-Q coupling norm need not remain kappa",
+    "tailProblem": "the one-coordinate Casimir tail floor does not directly bound the first omitted many-body sector above an extensive interacting vacuum",
+    "gapProblem": "a thermodynamic gap is a difference of two extensive energies and requires errors that cancel or remain uniform in volume",
+    "reusableModule": "finite gauge-invariant basis plus positivity, Ritz upper bounds, tail floors, Schur complements and residuals is reusable once volume-uniform tail and coupling estimates are supplied"
+  },
+  "constructiveBoundary": {
+    "provedHere": [
+      "self-adjoint positive one-plaquette Hamiltonian in the gauge-invariant character basis",
+      "certified enclosures for its two lowest infinite-basis eigenvalues",
+      "a positive certified one-plaquette gap at each tested coupling",
+      "cutoff convergence and boundary-residual decay"
+    ],
+    "notProved": [
+      "a volume-uniform gap for a multi-plaquette lattice",
+      "a finite nonzero physical gap on a four-dimensional renormalized trajectory",
+      "continuum Hamiltonian existence and the required local field structure",
+      "the Jaffe-Witten theorem for every compact simple group"
+    ]
+  },
+  "spin23Boundary": {
+    "useful": "the certified finite Hamiltonian module can test compact internal gauge sectors coupled to a separately constrained Spin(2,3) sector",
+    "notABridge": "Spin(2,3) symmetry does not make the representation cutoff or volume estimates uniform and does not convert a cutoff-scale rotor gap into a four-dimensional Yang-Mills mass"
+  },
+  "sources": [
+    "https://doi.org/10.1103/PhysRevD.11.395",
+    "https://doi.org/10.1007/BF01614090",
+    "https://arxiv.org/abs/2307.11829",
+    "https://arxiv.org/abs/math/0511408",
+    "https://doi.org/10.1137/S0895479896310536",
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf"
+  ],
+  "decision": "Hamiltonian truncation plus Schur-tail certification is a reusable finite proof module and proves the isolated SU(2) plaquette gap. Its tail floor and boundary coupling are not uniform under multi-plaquette growth, while its weak-coupling gap remains at the cutoff scale, so it does not establish the four-dimensional continuum mass gap."
+}

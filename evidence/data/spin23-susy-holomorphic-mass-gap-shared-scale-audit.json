@@ -1,0 +1,125 @@
+{
+  "schema": "spin23.susy-holomorphic-mass-gap-shared-scale-audit/1",
+  "date": "2026-10-21",
+  "status": "finite N=1 SYM vacuum, Witten-index, soft-threshold and AdS-supergravity audit; not a constructive mass-gap proof",
+  "holomorphicVacua": {
+    "group": "SU(3)",
+    "N": 3,
+    "theta": 0,
+    "lambdaSYM": 1,
+    "normalization": "S_k=Lambda_SYM^3 exp[i(theta+2 pi k)/N]",
+    "condensates": [
+      {"k": 0, "real": 1, "imaginary": 0, "magnitude": 1},
+      {"k": 1, "real": -0.4999999999999998, "imaginary": 0.8660254037844387, "magnitude": 1},
+      {"k": 2, "real": -0.5000000000000004, "imaginary": -0.8660254037844384, "magnitude": 1}
+    ],
+    "sum": {"real": -2.220446049250313e-16, "imaginary": 3.3306690738754696e-16},
+    "protected": "discrete chiral Z_2N to Z_2 breaking, N branches, condensate phases and holomorphic superpotential extrema",
+    "notProtected": "the non-holomorphic Kahler metric and physical non-BPS masses"
+  },
+  "kahlerCounterexample": {
+    "localToy": "dimensionless quadratic fluctuation model with kinetic coefficient Z and W''=N/S",
+    "formula": "m_toy=|W''|/Z=N/(Z |S|)",
+    "N": 3,
+    "absoluteS": 1,
+    "points": [
+      {"Z": 0.1, "mass": 30},
+      {"Z": 1, "mass": 3},
+      {"Z": 10, "mass": 0.3}
+    ],
+    "decision": "Identical protected extrema and condensates admit continuously different curvature scales when the unprotected Kahler metric changes; VY holomorphy alone is not a mass calculation."
+  },
+  "wittenIndexWitness": {
+    "group": "SU(3)",
+    "index": 3,
+    "spectrumDefinition": "three bosonic E=0 vacua plus one boson-fermion pair at E=epsilon",
+    "beta": 1,
+    "points": [
+      {"epsilon": 0.01, "indexValue": 3},
+      {"epsilon": 1, "indexValue": 3},
+      {"epsilon": 100, "indexValue": 3}
+    ],
+    "decision": "The index is invariant while the first paired excitation can approach zero or infinity. It neither lower-bounds the gap nor proves a continuum theory with reflection positivity and clustering."
+  },
+  "softMassVacuumSplitting": {
+    "formula": "Delta E_k=-2 m_lambda Lambda_SYM^3 cos[(theta+2 pi k)/N]+O(m_lambda^2)",
+    "N": 3,
+    "mLambda": 0.05,
+    "lambdaSYM": 1,
+    "points": [
+      {"theta": 0, "energies": [-0.1, 0.04999999999999998, 0.050000000000000044], "minimumBranches": [0]},
+      {"theta": 3.141592653589793, "energies": [-0.05000000000000002, 0.1, -0.05000000000000002], "minimumBranches": [0, 2]}
+    ],
+    "vacuumEnergySplittingAtTheta0": 0.15000000000000005,
+    "warning": "vacuum-energy splitting between branches is not the physical particle mass gap",
+    "controlledRegime": "m_lambda much less than Lambda_SYM"
+  },
+  "softDecouplingMatching": {
+    "bSYM": "3N",
+    "bYM": "11N/3",
+    "matching": "Lambda_YM^(11N/3)=m_lambda^(2N/3) Lambda_SYM^(3N)",
+    "solved": "Lambda_YM=m_lambda^(2/11) Lambda_SYM^(9/11)",
+    "fixedLambdaSYM": 1,
+    "points": [
+      {"mLambda": 0.01, "lambdaYM": 0.43287612810830584},
+      {"mLambda": 0.1, "lambdaYM": 0.657933224657568},
+      {"mLambda": 1, "lambdaYM": 1},
+      {"mLambda": 10, "lambdaYM": 1.5199110829529336},
+      {"mLambda": 100, "lambdaYM": 2.3101297000831598}
+    ],
+    "smallSoftRegime": "m_lambda/Lambda_SYM much less than 1",
+    "pureYMDecouplingRegime": "m_lambda/Lambda_SYM much greater than 1",
+    "overlap": false,
+    "retuningAtFixedLambdaYM": "Lambda_SYM=Lambda_YM^(11/9) m_lambda^(-2/9)",
+    "continuityObstacle": "No holomorphic or index theorem supplies a uniform positive spectral bound through the uncontrolled intermediate region and into nonsupersymmetric pure Yang-Mills."
+  },
+  "ospAdSBridge": {
+    "supergroup": "OSp(1|4)",
+    "bosonicSubgroup": "Sp(4,R) is locally isomorphic to Spin(2,3)",
+    "unbrokenAdSRelation": "m_3/2=1/ell and Lambda_grav=-3 m_3/2^2=-3/ell^2",
+    "qualification": "requires local N=1 supersymmetry, a gravitino and a supergravity completion; it is not implied by the bosonic Spin(2,3) connection"
+  },
+  "supergravityCondensateWitness": {
+    "formulae": [
+      "W_cond,k=N Lambda_SYM^3 exp(2 pi i k/N)",
+      "m_3/2=exp[K/(2 M_Pl^2)] |W_0+W_cond|/M_Pl^2",
+      "Lambda_grav=-3 m_3/2^2 in an unbroken supersymmetric AdS vacuum"
+    ],
+    "inputs": {"MPlanck": 1, "K": 0, "N": 3, "lambdaSYM": 0.01, "branch": 0, "Wcond": 0.0000030000000000000005},
+    "points": [
+      {"W0OverWcond": 0, "Wtotal": 0.0000030000000000000005, "mGravitino": 0.0000030000000000000005, "ell": 333333.33333333326, "lambdaGravity": -2.700000000000001e-11},
+      {"W0OverWcond": -1, "Wtotal": 0, "mGravitino": 0, "ell": null, "lambdaGravity": 0},
+      {"W0OverWcond": 1, "Wtotal": 0.000006000000000000001, "mGravitino": 0.000006000000000000001, "ell": 166666.66666666663, "lambdaGravity": -1.0800000000000004e-10}
+    ],
+    "decision": "The same condensate permits different AdS radii or Minkowski space because W0 is independent. Kahler data, the gauge kinetic function, SUSY breaking and uplift add further freedom."
+  },
+  "protectionBoundary": {
+    "protected": [
+      "Witten index and index-stable vacuum multiplicity",
+      "holomorphic condensate phases and anomaly branch structure",
+      "holomorphic superpotential data and applicable BPS central charges",
+      "m_3/2=ell^-1 in an unbroken N=1 AdS supergravity vacuum"
+    ],
+    "notProtected": [
+      "a numerical positive non-BPS physical mass gap",
+      "the composite-field Kahler metric or full spectral density",
+      "uniform continuity from small soft mass to the pure-YM decoupling limit",
+      "constructive existence, reflection positivity and infinite-volume clustering",
+      "the constant W0, uplift sector or cosmological vacuum energy",
+      "identification of hidden Lambda_SYM with Lambda_QCD or the Spin(2,3) radius"
+    ],
+    "reopeningConditions": [
+      "a uniform positive spectral bound along the entire soft-deformation path",
+      "a constructive continuum theorem transporting that bound to pure Yang-Mills",
+      "a UV boundary law fixing the gauge coupling, Kahler data, W0, SUSY breaking and embedding together"
+    ],
+    "programmeDecision": "SUSY supplies exact neighbouring-theory vacuum data and an optional OSp(1|4) bridge, but no protected pure-YM gap or shared QCD-AdS scale."
+  },
+  "primarySources": [
+    {"title": "Constraints on Supersymmetry Breaking", "doi": "10.1016/0550-3213(82)90071-2", "role": "Witten index and nonperturbative vacuum constraints"},
+    {"title": "An Effective Lagrangian for the Pure N=1 Supersymmetric Yang-Mills Theory", "doi": "10.1016/0370-2693(82)90828-0", "role": "Veneziano-Yankielowicz anomaly effective action"},
+    {"title": "The Spectrum of Softly Broken N=1 Supersymmetric Yang-Mills Theory", "arxiv": "hep-th/9806204", "role": "soft breaking of the generalized VY action and bound-state splittings"},
+    {"title": "Stable Non-Supersymmetric Supergravity Solutions from Deformations of the Maldacena-Nunez Background", "arxiv": "hep-th/0201224", "role": "small soft-deformation gravity analysis and its regime limitation"},
+    {"title": "Supergravity with cosmological constant and the AdS group", "arxiv": "hep-th/0305004", "role": "OSp(1|4) AdS gauge supergravity construction"}
+  ]
+}

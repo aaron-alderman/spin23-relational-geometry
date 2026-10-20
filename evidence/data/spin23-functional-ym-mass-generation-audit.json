@@ -1,0 +1,110 @@
+{
+  "schema": "spin23.functional-ym-mass-generation-audit/1",
+  "date": "2026-10-21",
+  "status": "finite gauge-fixed propagator, positivity, nonlinear gap-equation, longitudinal-pole and gauge-invariant correlator audit; not a continuum mass-gap proof",
+  "sameScreeningDifferentSpectra": {
+    "positivePropagator": "D_plus(p^2)=1/(p^2+1)",
+    "gribovStinglPropagator": "D_G(p^2)=(p^2+1)/(p^4+p^2+1)",
+    "DplusAtZero": 1,
+    "DGAtZero": 1,
+    "screeningMassDefinition": "m_scr^2=1/D(0)",
+    "screeningMassBoth": 1,
+    "positiveSchwingerFunction": "C_plus(t)=exp(-|t|)/2",
+    "gribovSchwingerFunction": "C_G(t)=exp(-sqrt(3)|t|/2) cos(|t|/2)/sqrt(3)",
+    "gribovP2Poles": [
+      {"real": -0.5, "imaginary": 0.8660254037844386},
+      {"real": -0.5, "imaginary": -0.8660254037844386}
+    ],
+    "points": [
+      {"t": 0, "Cplus": 0.5, "CG": 0.5773502691896258},
+      {"t": 1, "Cplus": 0.18393972058572117, "CG": 0.21311661207275903},
+      {"t": 2, "Cplus": 0.06766764161830635, "CG": 0.055189452476069815},
+      {"t": 4, "Cplus": 0.00915781944436709, "CG": -0.007520483348618335}
+    ],
+    "gribovHankel2Determinant": -0.01355504509788389,
+    "decision": "Equal finite D(0) and equal screening masses do not determine spectral positivity or a physical pole. The sign-changing gauge-fixed correlator has no nonnegative Kallen-Lehmann measure."
+  },
+  "nonlinearGapEquation": {
+    "equation": "m^2=lambda m^2 log(1+Lambda^2/m^2)",
+    "nonzeroSolution": "m/Lambda=1/sqrt(exp(1/lambda)-1)",
+    "points": [
+      {"lambda": 0.2, "mOverLambda": 0.08236294619732973},
+      {"lambda": 0.5, "mOverLambda": 0.3956231069460753},
+      {"lambda": 1, "mOverLambda": 0.7628739783668902}
+    ],
+    "zeroSolutionAlwaysPresent": true,
+    "interpretation": "A nonlinear hierarchy can generate an exponentially small scale, but the value inherits kernel closure, renormalisation and boundary data. This algebraic toy is not a Yang-Mills DSE."
+  },
+  "scalingDecoupling": {
+    "sharedUVTheory": true,
+    "infraredBoundaryConditionSelectsFamily": true,
+    "decouplingProperty": "finite nonzero transverse gluon propagator at p^2=0 and finite ghost dressing",
+    "scalingProperty": "infrared power-law relation with enhanced ghost and vanishing or suppressed gluon propagator",
+    "decision": "Gauge-fixed infrared boundary data can select distinct functional solutions; a decoupling solution is not by itself a unique gauge-invariant spectrum."
+  },
+  "schwingerPoleTransversality": {
+    "tensor": "Pi_mn(q)=m^2(delta_mn-q_m q_n/q^2)",
+    "massSquared": 1,
+    "vectors": [
+      {"q": [0.3, 0.4], "maximumContractionResidual": 2.7755575615628914e-17, "eigenvalues": [1, 0]},
+      {"q": [1, 2], "maximumContractionResidual": 1.1102230246251565e-16, "eigenvalues": [1, 0]},
+      {"q": [-2, 1], "maximumContractionResidual": 1.1102230246251565e-16, "eigenvalues": [1, 0]}
+    ],
+    "inverseDressing": "Delta^-1(q^2)=q^2 J(q^2)+m^2(q^2)",
+    "poleRole": "longitudinally coupled composite 1/q^2 poles in vertices preserve Slavnov-Taylor identities while permitting nonzero Delta^-1(0)",
+    "nonPromotion": "a longitudinal vertex pole is not automatically a positive-norm asymptotic massless particle, and a screened colored propagator is not a color-singlet Hamiltonian gap"
+  },
+  "positiveGaugeInvariantTarget": {
+    "operatorExample": "O=tr F^2",
+    "correlator": "C_O(t)=0.8 exp(-1.6 t)+0.2 exp(-2.4 t)",
+    "spectralMasses": [1.6, 2.4],
+    "spectralWeights": [0.8, 0.2],
+    "points": [
+      {"t": 0, "C": 1, "effectiveMassToNext": 1.716684622206997},
+      {"t": 1, "C": 0.17966080505360682, "effectiveMassToNext": 1.6572173149531724},
+      {"t": 2, "C": 0.03425571259249697, "effectiveMassToNext": 1.6268154819227683},
+      {"t": 3, "C": 0.006733114800891355, "effectiveMassToNext": 1.612287154821904},
+      {"t": 4, "C": 0.001342791565837318, "effectiveMassToNext": 1.605570519002697},
+      {"t": 5, "C": 0.00026959894479267516, "effectiveMassToNext": null}
+    ],
+    "hankel2Determinant": 0.001977707719986857,
+    "hankel3Determinant": 1.6940658945086007e-21,
+    "rank": 2,
+    "decision": "A positive gauge-invariant spectral measure makes exponential decay and its lowest mass physically interpretable. This witness supplies rather than derives that measure."
+  },
+  "functionalBoundStateStatus": {
+    "advance": "Matched DSE and Bethe-Salpeter truncations compute color-singlet glueball poles and agree quantitatively with lattice spectra in studied channels.",
+    "limitations": [
+      "the full vertex hierarchy and bound-state kernel are truncated",
+      "the overall physical scale is supplied externally in representative calculations",
+      "a finite set of channels does not prove an all-channel lower bound",
+      "agreement does not construct the continuum measure or prove reflection positivity"
+    ]
+  },
+  "proofAdmissionConditions": [
+    "a regulator-defined continuum measure or equivalent exact complete DSE/FRG hierarchy",
+    "closure of all Slavnov-Taylor identities including longitudinal pole vertices with anomaly-free renormalisation",
+    "nilpotent renormalised BRST cohomology with positive physical inner product or equivalent gauge-invariant construction",
+    "gauge-parameter independence of physical poles, including Nielsen-identity control",
+    "bound-state kernels derived from the same effective action with ghosts and every potentially lighter channel",
+    "positive spectral measures for a separating family of gauge-invariant local operators",
+    "uniform positive spectral lower bound through infinite-volume, regulator-removal and continuum limits"
+  ],
+  "spin23MethodologyOnly": {
+    "transfer": "physical-pole and cohomology methodology, not a group-theoretic scale",
+    "forbiddenInference": "saturation of a gauge-fixed Spin(2,3) connection dressing implies a physical torsion or graviton mass",
+    "requiredSpectrum": "a positive-residue massless Einstein spin-2 pole plus separately demonstrated positive physical poles or thresholds for claimed auxiliary sectors",
+    "decision": "Functional screening supplies no QCD-to-Spin(2,3) scale law."
+  },
+  "primarySources": [
+    {"title": "Gauge Invariance and Mass. II", "doi": "10.1103/PhysRev.128.2425", "role": "mass generation through a massless-pole mechanism"},
+    {"title": "Dynamical Mass Generation in Continuum Quantum Chromodynamics", "doi": "10.1103/PhysRevD.26.1453", "role": "continuum Schwinger-Dyson dynamical gluon mass"},
+    {"title": "On the infrared behavior of Landau gauge Yang-Mills theory", "arxiv": "0810.1987", "role": "scaling and decoupling solutions selected by infrared boundary conditions"},
+    {"title": "Analytic properties of the Landau gauge gluon and quark propagators", "arxiv": "hep-ph/0309077", "doi": "10.1103/PhysRevD.70.014014", "role": "gluon positivity violation in functional propagators"},
+    {"title": "Positivity violation for the lattice Landau gluon propagator", "arxiv": "hep-lat/0406020", "doi": "10.1103/PhysRevD.71.051902", "role": "direct lattice Schwinger-function positivity test"},
+    {"title": "Landau gauge Yang-Mills correlation functions", "arxiv": "1605.01856", "role": "self-consistent FRG vertex expansion"},
+    {"title": "Schwinger poles of the three-gluon vertex: symmetry and dynamics", "arxiv": "2306.16283", "role": "longitudinal pole residues constrained by Slavnov-Taylor identities"},
+    {"title": "Spectrum of scalar and pseudoscalar glueballs from functional methods", "arxiv": "2004.00415", "role": "matched DSE/BSE glueball spectrum with externally fixed scale"}
+  ],
+  "programmeDecision": "Functional methods provide high-value nonperturbative evidence and spectroscopy, but a gauge-fixed screening mass, positivity violation, or longitudinal Schwinger pole is not a gauge-invariant Hamiltonian gap."
+}

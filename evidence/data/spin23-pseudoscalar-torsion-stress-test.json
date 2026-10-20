@@ -1,0 +1,126 @@
+{
+  "schema": "spin23.pseudoscalar-torsion-stress-test/1",
+  "date": "2026-10-21",
+  "status": "AdS4, characteristic, canonical and one-loop closure stress test of the claim-1603 isolated 0-minus torsion sector",
+  "inputSector": {
+    "quadraticAction": "L=(a_S/2)S_mu S^mu+(b_X/2)(nabla_mu S^mu)^2",
+    "spin23Mapping": "a_S=M_Pl^2(1-4lambda)/24",
+    "dualAction": "L_chi=-(1/(2a_S))(nabla chi)^2-chi^2/(2b_X)",
+    "massSquared": "m_0minus^2=a_S/b_X",
+    "flatHealthyRegion": "M_Pl^2>0, lambda<1/4, b_X>0, lambda!=-1/2"
+  },
+  "ads4QuadraticTest": {
+    "background": "torsionless AdS4 with Lambda=-3/ell^2",
+    "linearIdentity": "Xhat^(1)=nabla_mu S^mu remains valid; the dual is a minimally coupled pseudoscalar Klein-Gordon field",
+    "equation": "(box-m_0minus^2)varphi=0",
+    "breitenlohnerFreedmanBound": "m^2 ell^2>=-9/4",
+    "conformalWeights": "Delta_pm=(3+/-sqrt(9+4m^2 ell^2))/2",
+    "decision": "the flat healthy region has m_0minus^2>0 and therefore lies strictly above the AdS4 BF bound",
+    "finiteWitness": {
+      "M_PlSquared": 1,
+      "lambda": 0,
+      "b_X": 0.041666666666666664,
+      "ellSquared": 1,
+      "a_S": 0.041666666666666664,
+      "massSquaredEllSquared": 1,
+      "bfMargin": 3.25,
+      "DeltaPlus": 3.302775637731995,
+      "DeltaMinus": -0.30277563773199456
+    },
+    "boundaryConditionCaveat": "global AdS is not globally hyperbolic without boundary conditions; use an energy-preserving reflecting/standard quantization boundary condition for this positive-mass witness"
+  },
+  "characteristicAudit": {
+    "principalSymbol": "P(k)=-(1/a_S) g^{mu nu}k_mu k_nu",
+    "characteristicEquation": "g^{mu nu}k_mu k_nu=0",
+    "speedRelativeToMetricLightCone": 1,
+    "decision": "for a_S>0 the dual scalar equation is normally hyperbolic and its characteristic cone is exactly the metric null cone; no superluminal quadratic characteristic is present",
+    "scope": "this does not determine characteristics after other Poincare-gauge invariants are radiatively activated or on a constraint-bifurcation surface"
+  },
+  "canonicalConstraintAudit": {
+    "configurationVariables": 4,
+    "phaseSpaceDimension": 8,
+    "primaryConstraints": "pi^i approximately 0, i=1,2,3",
+    "primaryConstraintCount": 3,
+    "secondaryConstraints": "C_i=a_S S_i-partial_i pi^0 approximately 0",
+    "secondaryConstraintCount": 3,
+    "constraintClass": "the six constraints are second class when a_S!=0 because {pi^i,C_j}=a_S delta^i_j",
+    "firstClassCount": 0,
+    "secondClassCount": 6,
+    "physicalConfigurationDegrees": 1,
+    "calculation": "(8-2*0-6)/2=1",
+    "singularLimits": {
+      "a_S=0": "the Dirac matrix loses rank; this is lambda=1/4 and the one-mode count cannot be continued through it",
+      "b_X=0": "pi^0 also becomes constrained and the propagating 0-minus mode disappears"
+    }
+  },
+  "nonlinearConstraintAudit": {
+    "literatureResult": "the massive 0-minus Poincare-gauge mode has normal Hamiltonian propagation, but the full nonlinear scalar-mode theory admits constraint bifurcation on special field/parameter surfaces",
+    "higherSpinWarning": "coupling 0-minus to additional higher-spin torsion sectors can activate modes and fail the nonlinear constraint test",
+    "survivingPatch": "the quadratic healthy region is admitted only on connected field-space patches where the full Dirac matrix retains its vacuum rank",
+    "decision": "quadratic and local canonical viability survives; global nonlinear viability is not proved and rank-changing surfaces are a hard stop"
+  },
+  "radiativeClosureAudit": {
+    "spurionStatement": "parity, diffeomorphism and local Lorentz invariance allow Xhat^2, C^2, R^2 and the other parity-even curvature/torsion invariants simultaneously; setting all but Xhat^2 to zero restores no symmetry",
+    "powerCounting": "the dimension-four operators are logarithmic counterterm candidates in four dimensions",
+    "dualPseudoscalarOneLoopDivergence": "In a common dimensional-regularization convention, Gamma_div contains [(1/120)C^2-(1/360)E+(1/72)R^2]/[(4pi)^2 epsilon] for one minimally coupled real pseudoscalar, up to total derivatives and mass-dependent lower-dimension terms",
+    "nonzeroGeneratedCoefficients": {
+      "C2": 0.008333333333333333,
+      "Euler": -0.002777777777777778,
+      "R2": 0.013888888888888888
+    },
+    "pgtOneLoopCrossCheck": "an explicit Poincare-gauge one-loop calculation by Melichev and Percacci finds that starting with one term of each type generates the other terms and additional operators; their model is not this exact 0-minus truncation, so it is corroboration rather than a beta function for b_X",
+    "decision": "the one-invariant 0-minus surface is not radiatively closed or technically natural",
+    "unitarityConsequence": "if the generated local C^2 term is resummed as a fundamental finite polynomial action with ordinary Feynman poles, the opposite-residue massive spin-2 pole of claim 1599 returns",
+    "eftQualification": "as an EFT, the induced C^2 term is a counterterm and need not be resummed into a physical pole below the cutoff; the healthy 0-minus mode can survive as a low-energy excitation if its mass is below the cutoff"
+  },
+  "strongestSurvivingRegion": {
+    "couplings": [
+      "M_Pl^2>0",
+      "lambda<1/4",
+      "lambda!=-1/2",
+      "b_X>0",
+      "m_0minus below the EFT cutoff",
+      "full Dirac determinant nonzero on the field patch",
+      "energy-preserving AdS boundary conditions"
+    ],
+    "spectrum": "two massless AdS graviton helicities plus one positive-residue gapped 0-minus torsion mode",
+    "status": "viable classical/low-energy EFT patch, not a radiatively closed fundamental local theory"
+  },
+  "exhaustionAndStopRules": [
+    "ADMIT AdS4 quadratic stability when m_0minus^2 ell^2>=-9/4; the positive-mass region passes automatically",
+    "ADMIT luminal normal hyperbolicity only while a_S>0 and the isolated scalar principal symbol remains nondegenerate",
+    "STOP wherever the nonlinear Dirac matrix changes rank",
+    "STOP treating the Xhat^2-only coupling surface as exact under loops: C^2 and R^2 are generated with nonzero coefficients",
+    "DO NOT interpret an EFT curvature counterterm as a resolved ghost pole unless the action is extrapolated/resummed beyond its cutoff",
+    "A fundamental local completion must enlarge the action and redo every spin-parity residue and constraint test; the minimal surface alone fails that closure requirement",
+    "Repeat the calculation with matter couplings and the actual AdS boundary-value problem before phenomenology"
+  ],
+  "decision": "The positive 0-minus torsion pole survives AdS4 quadratic stability, luminal hyperbolicity and the local canonical count. It survives as a controlled EFT excitation on constant-rank field patches. The minimal Xhat^2-only action does not survive radiative closure and has known nonlinear constraint-bifurcation boundaries, so it is not yet a fundamental completion.",
+  "sources": [
+    {
+      "title": "Breitenlohner and Freedman, Stability in Gauged Extended Supergravity",
+      "url": "https://doi.org/10.1016/0003-4916(82)90116-6",
+      "role": "AdS4 scalar stability bound and energy-preserving boundary-value problem"
+    },
+    {
+      "title": "Yo and Nester, Hamiltonian Analysis of Poincare Gauge Theory Scalar Modes",
+      "url": "https://arxiv.org/abs/gr-qc/9902032",
+      "role": "canonical propagation and nonlinear constraint bifurcation of the 0-minus mode"
+    },
+    {
+      "title": "Sezgin and van Nieuwenhuizen, New Ghost-Free Gravity Lagrangians with Propagating Torsion",
+      "url": "https://doi.org/10.1103/PhysRevD.21.3269",
+      "role": "quadratic spin-projector health classification"
+    },
+    {
+      "title": "Melichev and Percacci, On the Renormalization of Poincare Gauge Theories",
+      "url": "https://arxiv.org/abs/2307.02336",
+      "role": "explicit one-loop evidence that sparse Poincare-gauge coupling surfaces generate additional invariants"
+    },
+    {
+      "title": "'t Hooft and Veltman, One-Loop Divergencies in the Theory of Gravitation",
+      "url": "https://www.numdam.org/item/AIHPA_1974__20_1_69_0/",
+      "role": "scalar-gravity one-loop curvature-square counterterms"
+    }
+  ]
+}

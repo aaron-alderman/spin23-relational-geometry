@@ -1,0 +1,124 @@
+{
+  "schema": "spin23.su2-heat-kernel-transfer-exhaustion/1",
+  "date": "2026-10-20",
+  "status": "exact reflection-positive 1+1-dimensional compact SU(2) transfer system and scaling audit; not a four-dimensional mass-gap proof",
+  "system": {
+    "group": "SU(2)",
+    "hilbertSpace": "L2(SU(2), Haar)^Ad with orthonormal character basis chi_j, j=0,1/2,1,...",
+    "casimir": "C2(j)=j(j+1)",
+    "plaquetteHeatKernel": "K_t(U)=sum_j (2j+1) chi_j(U) exp[-t C2(j)]",
+    "transferAction": "T_t chi_j=exp[-t C2(j)] chi_j",
+    "hamiltonian": "H=kappa*(-Delta_SU(2)), with t=a_tau*kappa",
+    "reflectionPositivity": "for f=sum_j f_j chi_j, <f,T_t f>=sum_j exp[-t C2(j)] |f_j|^2 >= 0",
+    "sewing": "T_t1 T_t2=T_(t1+t2) representation by representation"
+  },
+  "exactWitness": {
+    "t": 0.3,
+    "timeSpacing": 0.1,
+    "kappa": 3,
+    "representations": [
+      {"j": 0, "dimension": 1, "casimir": 0, "transferEigenvalue": 1, "hamiltonianEnergy": 0},
+      {"j": 0.5, "dimension": 2, "casimir": 0.75, "transferEigenvalue": 0.7985162187593771, "hamiltonianEnergy": 2.25},
+      {"j": 1, "dimension": 3, "casimir": 2, "transferEigenvalue": 0.5488116360940265, "hamiltonianEnergy": 6},
+      {"j": 1.5, "dimension": 4, "casimir": 3.75, "transferEigenvalue": 0.32465246735834974, "hamiltonianEnergy": 11.25},
+      {"j": 2, "dimension": 5, "casimir": 6, "transferEigenvalue": 0.16529888822158656, "hamiltonianEnergy": 18}
+    ],
+    "latticeGap": 0.225,
+    "physicalGap": 2.25,
+    "fundamentalCorrelation": {
+      "formula": "C_1/2(n)=exp[-n t C2(1/2)]",
+      "rows": [
+        {"n": 0, "correlation": 1},
+        {"n": 1, "correlation": 0.7985162187593771},
+        {"n": 2, "correlation": 0.6376281516217732},
+        {"n": 4, "correlation": 0.4065696597405991},
+        {"n": 8, "correlation": 0.16529888822158653}
+      ],
+      "latticeCorrelationLength": 4.444444444444445,
+      "effectiveMassAtEveryStep": 0.225
+    },
+    "testCharacterCoefficients": [1, -2, 0.5, 1.25],
+    "testNormSquared": 6.8125,
+    "positiveTransferForm": 4.838537264308436,
+    "heatTrace": 2.9491375880421797,
+    "heatTraceTruncationJ": 4,
+    "heatTraceTailUpperBound": 0.0007517863236907405
+  },
+  "timeContinuumScaling": {
+    "rule": "t=a_tau*kappa and -log(lambda_1/2)/a_tau=3*kappa/4",
+    "rows": [
+      {"timeSpacing": 0.4, "t": 1.2, "latticeGap": 0.9, "physicalGap": 2.25},
+      {"timeSpacing": 0.2, "t": 0.6, "latticeGap": 0.45, "physicalGap": 2.25},
+      {"timeSpacing": 0.1, "t": 0.3, "latticeGap": 0.225, "physicalGap": 2.25},
+      {"timeSpacing": 0.05, "t": 0.15, "latticeGap": 0.1125, "physicalGap": 2.25}
+    ],
+    "lesson": "transfer eigenvalues coalesce at one as the time cutoff is removed; the Hamiltonian gap is the logarithmic slope, not a cutoff-uniform separation of transfer eigenvalues"
+  },
+  "spatialCircleScaling": {
+    "couplingSquared": 1.5,
+    "rule": "kappa=g_2^2 L/2, so Delta=3 g_2^2 L/8",
+    "rows": [
+      {"circumference": 1, "gap": 0.5625},
+      {"circumference": 2, "gap": 1.125},
+      {"circumference": 4, "gap": 2.25},
+      {"circumference": 8, "gap": 4.5}
+    ],
+    "lesson": "the states are global electric-flux sectors on a circle; the model has no local propagating gluon degrees of freedom and its growing flux energy is not a four-dimensional glueball bound"
+  },
+  "wilsonCharacterCorrection": {
+    "weight": "exp[(beta/2) Tr U]=exp[beta cos(theta)]",
+    "fundamentalNormalizedCoefficient": "u(beta)=I_2(beta)/I_1(beta)",
+    "smallBetaSeries": "u=beta/4-beta^3/96+beta^5/1536+O(beta^7)",
+    "beta": 0.8,
+    "leadingBetaOver4": 0.2,
+    "exactCoefficient": 0.19487127575981178,
+    "relativeCorrection": -0.025643621200941145,
+    "rectangleArea": 12,
+    "leadingCharacterTiling": 2.9989825600234234e-9,
+    "leadingBetaOver4Tiling": 4.096000000000002e-9,
+    "weakCouplingAsymptotic": "u(beta)=1-3/(2 beta)+O(beta^-2), hence -log u=3/(2 beta)+O(beta^-2)",
+    "weakCouplingRows": [
+      {"beta": 4, "u": 0.6580472673593596, "minusLogU": 0.41847851534417846, "leadingAsymptotic": 0.375},
+      {"beta": 8, "u": 0.8192494103556202, "minusLogU": 0.19936671114027996, "leadingAsymptotic": 0.1875},
+      {"beta": 16, "u": 0.9078148458807502, "minusLogU": 0.0967148354024254, "leadingAsymptotic": 0.09375},
+      {"beta": 32, "u": 0.9535031514532264, "minusLogU": 0.04761254880477981, "leadingAsymptotic": 0.046875}
+    ],
+    "warning": "replacing beta/4 by the exact one-plaquette character coefficient resums local powers but does not include higher connected surfaces, handles or screening graphs"
+  },
+  "fourDimensionalObstruction": {
+    "missingMagneticDynamics": "the one-cylinder transfer operator is a group Laplacian with no spatial-plaquette magnetic term coupling an infinite three-dimensional link system",
+    "wrongDimension": "in 1+1 dimensions g_2^2 has mass dimension two and the theory reduces to global flux sectors; in 3+1 dimensions the coupling is dimensionless and local transverse gauge dynamics remains",
+    "continuumRequirement": "for a finite physical gap Delta, the lattice mass a*Delta must tend to zero while the correlation length in lattice units diverges",
+    "fixedTFailure": "holding t>0 fixed while a_tau tends to zero sends the inferred physical gap (3t/4)/a_tau to infinity",
+    "strongCouplingFailure": "the convergent strong-coupling neighborhood is not the asymptotically-free weak-bare-coupling continuum trajectory",
+    "volumeFailure": "finite-volume positivity and a discrete spectrum do not establish thermodynamic-limit Schwinger functions, clustering, or a gap uniform in volume and cutoff",
+    "localityFailure": "the exactly diagonalized class-function Hilbert space does not construct the local gauge-invariant observable algebra on R^4",
+    "nontrivialityFailure": "no regulator-independent interacting four-dimensional continuum measure or Osterwalder-Schrader reconstruction is produced"
+  },
+  "oneLoopBoundaryWitness": {
+    "group": "SU(2)",
+    "b0": 0.04643887583607148,
+    "wilsonBetaRule": "beta=4/g0^2=8 b0 log[1/(a Lambda)] at one loop",
+    "formalBetaEquals4AtALambda": 0.000021087266884615515,
+    "naiveExactCoefficientTrajectory": [
+      {"aLambda": 0.01, "beta": 1.7108714117686337, "minusLogU": 0.9583075580910756, "sigmaOverLambdaSquared": 9583.075580910756},
+      {"aLambda": 0.0001, "beta": 3.4217428235372673, "minusLogU": 0.4936819649155681, "sigmaOverLambdaSquared": 49368196.49155681},
+      {"aLambda": 1e-8, "beta": 6.843485647074535, "minusLogU": 0.23533570360696598, "sigmaOverLambdaSquared": 2353357036069659.5}
+    ],
+    "meaning": "the leading beta/4 strong-coupling formula becomes nonsensical as a positive string-tension estimate before the a Lambda -> 0 continuum limit; this marks breakdown of the expansion, not deconfinement"
+  },
+  "spin23Boundary": {
+    "compactLesson": "positive character coefficients and a positive invariant Haar measure make the compact transfer construction work",
+    "noncompactWarning": "Spin(2,3) is noncompact, so neither Haar normalization nor this positive discrete character sum transfers by common complexification",
+    "permittedUse": "the calculation is a benchmark for a compact internal SU(2) or Spin(5) sector and a checklist for any proposed positivity-preserving bridge",
+    "notPermitted": "it cannot gap the full Spin(2,3) gravitational connection, which must retain a massless spin-2 sector"
+  },
+  "sources": [
+    "https://doi.org/10.1016/0550-3213(81)90560-5",
+    "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.104.065003",
+    "https://arxiv.org/abs/2103.02602",
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf",
+    "https://doi.org/10.1103/PhysRevD.10.2445"
+  ],
+  "decision": "The minimal SU(2) heat-kernel transfer system exactly proves reflection positivity and a finite Hamiltonian gap in its own 1+1-dimensional global-flux Hilbert space. Its exact solvability also exposes every missing quantifier needed for the four-dimensional theorem; no finite refinement of this model can supply the absent local magnetic dynamics, thermodynamic construction, or asymptotically-free continuum bound."
+}

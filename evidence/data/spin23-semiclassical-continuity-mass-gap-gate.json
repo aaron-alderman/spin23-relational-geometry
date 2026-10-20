@@ -1,0 +1,126 @@
+{
+  "schema": "spin23.semiclassical-continuity-mass-gap-gate/1",
+  "date": "2026-10-20",
+  "status": "controlled small-circle dual-photon mass-gap calculation with an explicit unproved large-circle and R4 continuity gate",
+  "setup": {
+    "spacetime": "R3 x S1 with circumference L",
+    "theory": "center-stabilized pure SU(N) Yang-Mills",
+    "deformation": "Delta S proportional to L^-3 integral_R3 sum_n a_n |Tr Omega^n|^2 with sufficiently positive coefficients",
+    "semiclassicalDomain": "N L Lambda << 1",
+    "centerSymmetricHolonomy": "Omega has evenly spaced eigenvalues and the long-distance gauge description abelianizes to U(1)^(N-1)",
+    "wBosonScale": "m_W=2 pi/(N L)",
+    "monopoleAction": "S0=8 pi^2/[g^2(m_W) N]",
+    "qualification": "abelianization is a controlled gauge-fixed infrared description, not spontaneous breaking of a local gauge symmetry"
+  },
+  "mechanisms": {
+    "pureDeformedYangMills": {
+      "leadingObjects": "N monopole-instantons associated with the N-1 simple roots and the affine root",
+      "potential": "V_m=zeta_m sum_i [1-cos(alpha_i dot sigma+theta/N)]",
+      "order": "zeta_m proportional to exp(-S0) times a calculable prefactor",
+      "gapStatement": "at theta=0 the Hessian is positive on the SU(N) Cartan subspace"
+    },
+    "qcdAdjointTemplate": {
+      "leadingBosonicObjects": "magnetic bions with charges alpha_i-alpha_(i+1) when monopole operators carry fermion zero modes",
+      "potential": "V_b=zeta_b sum_i [1-cos((alpha_i-alpha_(i+1)) dot sigma)]",
+      "order": "zeta_b proportional to exp(-2 S0) times a calculable prefactor",
+      "separation": "bions are the leading bosonic gap mechanism in QCD(adj), but only a subleading template in pure deformed Yang-Mills where monopoles already contribute"
+    }
+  },
+  "normalization": {
+    "rootEmbedding": "alpha_i=e_i-e_(i+1), alpha_0=e_N-e_1 in R^N",
+    "kineticConvention": "the finite witness sets the dual-photon kinetic matrix to the identity",
+    "physicalMassRule": "for a general kinetic matrix K_sigma, physical mass-squared eigenvalues are eigenvalues of K_sigma^(-1/2) H K_sigma^(-1/2)",
+    "commonShift": "the vector (1,...,1) is a redundant U(1) center-of-mass embedding direction removed by sum_i sigma_i=0; it is not the discrete Z_N center symmetry"
+  },
+  "su2Witness": {
+    "affineRoots": [[1, -1], [-1, 1]],
+    "monopoleHessian": [[2, -2], [-2, 2]],
+    "monopoleEigenvalues": [0, 4],
+    "bionCharges": [[2, -2], [-2, 2]],
+    "bionHessian": [[8, -8], [-8, 8]],
+    "bionEigenvalues": [0, 16],
+    "physicalEigenvector": [0.7071067811865476, -0.7071067811865476],
+    "nullVector": [0.7071067811865476, 0.7071067811865476]
+  },
+  "su3Witness": {
+    "affineRoots": [[1, -1, 0], [0, 1, -1], [-1, 0, 1]],
+    "monopoleHessian": [[2, -1, -1], [-1, 2, -1], [-1, -1, 2]],
+    "monopoleEigenvalues": [0, 3, 3],
+    "bionCharges": [[1, -2, 1], [1, 1, -2], [-2, 1, 1]],
+    "bionHessian": [[6, -3, -3], [-3, 6, -3], [-3, -3, 6]],
+    "bionEigenvalues": [0, 9, 9],
+    "physicalEigenvectors": [[0.7071067811865476, -0.7071067811865476, 0], [0.4082482904638631, 0.4082482904638631, -0.8164965809277261]],
+    "nullVector": [0.5773502691896258, 0.5773502691896258, 0.5773502691896258]
+  },
+  "combinedNumericalWitness": {
+    "zetaMonopole": 0.02,
+    "zetaBion": 0.003,
+    "rule": "H=zeta_m L_N+zeta_b L_N^2",
+    "su2Hessian": [[0.064, -0.064], [-0.064, 0.064]],
+    "su2Eigenvalues": [0, 0.128],
+    "su3Hessian": [[0.058, -0.029, -0.029], [-0.029, 0.058, -0.029], [-0.029, -0.029, 0.058]],
+    "su3Eigenvalues": [0, 0.087, 0.087],
+    "interpretation": "positive mass-squared on every physical dual-photon direction in this canonical normalization"
+  },
+  "generalAffineSpectrum": {
+    "monopoleRule": "lambda_k=4 sin^2(pi k/N), k=0,...,N-1",
+    "bionRule": "lambda_k^bion=lambda_k^2",
+    "fourierModes": "sigma_tilde_k=N^-1/2 sum_j exp(-2 pi i k j/N) sigma_j; these diagonalize the cyclic affine-root Hessian",
+    "modeMeaning": "k=0 is the decoupled common-shift photon added by the U(N) embedding and is absent in SU(N); k=1,...,N-1 are the physical dual-photon modes",
+    "minimumRows": [
+      {"N": 2, "monopoleMinimum": 4, "bionMinimum": 16, "combinedMinimum": 0.128},
+      {"N": 3, "monopoleMinimum": 2.9999999999999996, "bionMinimum": 8.999999999999998, "combinedMinimum": 0.08699999999999998},
+      {"N": 4, "monopoleMinimum": 1.9999999999999996, "bionMinimum": 3.9999999999999982, "combinedMinimum": 0.05199999999999999},
+      {"N": 8, "monopoleMinimum": 0.585786437626905, "bionMinimum": 0.3431457505076198, "combinedMinimum": 0.012745166004060959},
+      {"N": 16, "monopoleMinimum": 0.15224093497742647, "bionMinimum": 0.023177302282800995, "combinedMinimum": 0.0031143506063969323}
+    ],
+    "largeN": "lambda_min_m ~ 4 pi^2/N^2 and lambda_min_b ~ 16 pi^4/N^4, before the N dependence of fugacities and kinetic normalization",
+    "uniformityWarning": "the dimensionless affine Hessian alone has no N-uniform lower bound, while the semiclassical domain N L Lambda << 1 simultaneously shrinks"
+  },
+  "semiclassicalPhysicalScale": {
+    "sourceConvention": "m_k=m_gamma sin(pi k/N)",
+    "runningScale": "m_gamma=A_tilde Lambda (Lambda N L)^(5/6) |log(Lambda N L)|^(9/11), up to controlled logarithmic corrections and an order-one prefactor",
+    "unitPrefactorRows": [
+      {"lambdaNL": 0.01, "mGammaOverLambda": 0.07516036721115127},
+      {"lambdaNL": 0.0001, "mGammaOverLambda": 0.0028550879809001364},
+      {"lambdaNL": 1e-8, "mGammaOverLambda": 0.0000023365949386644506}
+    ],
+    "limit": "at fixed finite N the calculable physical dual-photon gap tends to zero as L tends to zero even while semiclassical control improves",
+    "consequence": "a uniform-continuity proof must start at a finite controlled L0 and bound the gap away from zero on L>=L0; control arbitrarily close to L=0 is not a uniform positive-gap theorem"
+  },
+  "continuityGate": {
+    "supported": [
+      "the center-stabilizing deformation preserves center symmetry at small L",
+      "in N L Lambda << 1 the W bosons are parametrically heavier than the dual photons",
+      "the dilute monopole gas in pure deformed Yang-Mills generates a calculable positive dual-photon Hessian at theta=0",
+      "there is no known local order parameter distinguishing the weakly coupled abelian confinement regime from the large-L strongly coupled confinement regime"
+    ],
+    "notProved": [
+      "a single path in (L,a_n) from the controlled deformed theory to undeformed Yang-Mills on R4 along which the physical gauge-invariant gap has a strictly positive uniform lower bound",
+      "uniform error bounds on the semiclassical expansion as N L Lambda approaches one",
+      "Osterwalder-Schrader Schwinger functions and a regulator-independent Hamiltonian for the endpoint theory",
+      "that no non-Landau transition, level rearrangement or exponentially closing crossover invalidates gap transport",
+      "interchange of the limits volume to infinity, cutoff to zero, L to infinity, deformation to zero and possibly N to infinity",
+      "identification of the small-circle dual photon with the lightest R4 glueball through a controlled operator map"
+    ],
+    "necessaryUniformStatement": "there must exist Delta_star>0 and a path gamma(s), 0<=s<1, such that the gauge-invariant physical gap Delta[gamma(s)]>=Delta_star uniformly, the Schwinger functions converge as s approaches 1, and the endpoint is undeformed Yang-Mills on R4",
+    "absenceOfOrderParameter": "same symmetry realization is evidence for possible continuity but is not a spectral inequality"
+  },
+  "specialLimits": {
+    "theta": "the explicit Hessians are theta=0 witnesses; at theta near pi branch competition and monopole interference require a separate analysis",
+    "largeN": "volume independence concerns the neutral sector at N=infinity under unbroken center symmetry; it does not turn the finite-N semiclassical Hessian into a constructive R4 gap proof",
+    "largeL": "when N L Lambda is no longer small, W-boson/dual-photon scale separation and dilute-gas control are lost even if center symmetry remains unbroken"
+  },
+  "spin23Boundary": {
+    "useful": "this is the most explicit compact nonperturbative gap mechanism available as a laboratory for internal SU(N) sectors and for testing scale-sharing proposals",
+    "notTransported": "the root Hessian, compact duality and positive fugacities do not analytically continue to the noncompact Spin(2,3) gravitational connection",
+    "gravityConstraint": "a viable Spin(2,3) phase must still retain the massless spin-2 sector, so at most selected compact or auxiliary sectors may inherit an analogous gap mechanism"
+  },
+  "sources": [
+    "https://arxiv.org/abs/0803.0344",
+    "https://arxiv.org/abs/0709.3269",
+    "https://doi.org/10.1016/0550-3213(77)90086-4",
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf"
+  ],
+  "decision": "Center-stabilized Yang-Mills supplies a genuine analytically controlled mass gap on small R3 x S1, and its affine-root spectrum can be computed exactly. The route to ordinary R4 Yang-Mills remains a continuity theorem with a uniform physical lower bound, not a further finite Hessian calculation."
+}

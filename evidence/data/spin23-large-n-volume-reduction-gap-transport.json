@@ -1,0 +1,129 @@
+{
+  "schema": "spin23.large-n-volume-reduction-gap-transport/1",
+  "date": "2026-10-21",
+  "status": "exact finite center and momentum-color witnesses plus a planar-limit spectral noncommutation counterexample; no finite-N R4 mass-gap transport",
+  "reductionStatement": {
+    "planarClaim": "at N=infinity, normalized neutral-sector Wilson-loop expectation values are volume independent when center symmetry and translation symmetry are unbroken",
+    "loopEquationInputs": [
+      "large-N factorization closes products of normalized Wilson loops up to O(1/N^2)",
+      "unbroken center symmetry makes center-charged open loops vanish",
+      "matching action normalization and corresponding neutral observables",
+      "selection of the same physical solution of the loop equations"
+    ],
+    "finiteNBoundary": "the equivalence is not exact at fixed N; connected correlators and reduction errors are generically O(1/N^2)",
+    "originalFailure": "the original one-site Eguchi-Kawai center symmetry breaks at weak coupling in four dimensions",
+    "repairs": "double-trace center stabilization, adjoint matter, quenching, or a suitable coprime twist can preserve the symmetry under additional conditions"
+  },
+  "clockHolonomyWitness": {
+    "N": 8,
+    "circumference": 1,
+    "eigenphases": [
+      -2.748893571891069,
+      -1.9634954084936207,
+      -1.1780972450961724,
+      -0.39269908169872414,
+      0.39269908169872414,
+      1.1780972450961724,
+      1.9634954084936207,
+      2.748893571891069
+    ],
+    "determinant": "one",
+    "normalizedTraceMagnitudesForPowers1Through8": [0, 0, 0, 0, 0, 0, 0, 1],
+    "adjointMomentumRule": "p_ab,n=(2 pi/L)[n+(a-b)/N]",
+    "colorDifferenceBins": 8,
+    "lowestNonzeroMomentum": 0.7853981633974483,
+    "effectiveCircumference": 8,
+    "meaning": "an evenly spaced center-symmetric holonomy converts adjoint color differences into momentum fractions of size 2 pi/(N L)"
+  },
+  "ordinaryColorMomentumRows": [
+    {"N": 4, "L": 1, "effectiveLength": 4, "lowestMomentum": 1.5707963267948966},
+    {"N": 8, "L": 1, "effectiveLength": 8, "lowestMomentum": 0.7853981633974483},
+    {"N": 16, "L": 1, "effectiveLength": 16, "lowestMomentum": 0.39269908169872414},
+    {"N": 32, "L": 1, "effectiveLength": 32, "lowestMomentum": 0.19634954084936207}
+  ],
+  "twistedOneSiteWitness": {
+    "dimension": 4,
+    "NRule": "N=L_hat^2 for the symmetric four-dimensional twist",
+    "twistEaterConstruction": "Gamma_1=P tensor I, Gamma_2=Q tensor I, Gamma_3=I tensor P, Gamma_4=I tensor Q with P Q=omega Q P",
+    "explicitLHat": 4,
+    "explicitN": 16,
+    "omega": {"real": 0, "imaginary": 1},
+    "matrixDimension": 16,
+    "colorBasisCount": 256,
+    "momentumGridCount": 256,
+    "identityModeRemovedCount": 255,
+    "dimensionlessMomentumRule": "a p_mu=2 pi n_mu/L_hat",
+    "rows": [
+      {"N": 16, "LHat": 4, "effectiveSites": 256, "aPMin": 1.5707963267948966},
+      {"N": 64, "LHat": 8, "effectiveSites": 4096, "aPMin": 0.7853981633974483},
+      {"N": 256, "LHat": 16, "effectiveSites": 65536, "aPMin": 0.39269908169872414},
+      {"N": 1024, "LHat": 32, "effectiveSites": 1048576, "aPMin": 0.19634954084936207}
+    ],
+    "meaning": "N^2 matrix basis elements reproduce the number of momentum points of an L_hat^4 lattice, so the effective linear size is a sqrt(N) in four dimensions"
+  },
+  "continuumOrderWitness": {
+    "fixedN": [
+      {"a": 0.25, "N": 256, "physicalEffectiveLength": 4, "physicalPMin": 1.5707963267948966},
+      {"a": 0.125, "N": 256, "physicalEffectiveLength": 2, "physicalPMin": 3.141592653589793},
+      {"a": 0.0625, "N": 256, "physicalEffectiveLength": 1, "physicalPMin": 6.283185307179586}
+    ],
+    "fixedPhysicalBoxDoubleScaling": [
+      {"a": 0.25, "N": 256, "physicalEffectiveLength": 4, "physicalPMin": 1.5707963267948966},
+      {"a": 0.125, "N": 1024, "physicalEffectiveLength": 4, "physicalPMin": 1.5707963267948966},
+      {"a": 0.0625, "N": 4096, "physicalEffectiveLength": 4, "physicalPMin": 1.5707963267948966}
+    ],
+    "growingBoxDoubleScaling": [
+      {"a": 0.25, "N": 256, "physicalEffectiveLength": 4, "physicalPMin": 1.5707963267948966},
+      {"a": 0.125, "N": 4096, "physicalEffectiveLength": 8, "physicalPMin": 0.7853981633974483},
+      {"a": 0.0625, "N": 65536, "physicalEffectiveLength": 16, "physicalPMin": 0.39269908169872414}
+    ],
+    "necessaryScaling": "continuum plus infinite effective volume requires a sqrt(N) -> infinity; N proportional to a^-2 only holds the physical box fixed, while a growing box requires faster growth"
+  },
+  "planarSpectralCounterexample": {
+    "correlator": "C_N(t)=exp(-Delta_infinity t)+N^-2 exp(-epsilon_N t)",
+    "DeltaInfinity": 1,
+    "epsilonRule": "epsilon_N=1/N",
+    "rows": [
+      {"N": 8, "epsilonN": 0.125, "crossoverTime": 4.753009238125339, "effectiveMassAtT2": 0.8907831830893891},
+      {"N": 16, "epsilonN": 0.0625, "crossoverTime": 5.9148559407781995, "effectiveMassAtT2": 0.9621359853775066},
+      {"N": 32, "epsilonN": 0.03125, "crossoverTime": 7.1550676702962095, "effectiveMassAtT2": 0.9890539593963106},
+      {"N": 64, "epsilonN": 0.015625, "crossoverTime": 8.449794201111713, "effectiveMassAtT2": 0.9970787138728863},
+      {"N": 128, "epsilonN": 0.0078125, "crossoverTime": 9.78047045325529, "effectiveMassAtT2": 0.9992470927420525}
+    ],
+    "fixedTimeLimit": "for every fixed t, the second term vanishes as N tends to infinity and the planar correlator has apparent gap one",
+    "largeTimeLimit": "for every fixed finite N, the small-residue state eventually dominates and the actual gap is 1/N",
+    "noncommutation": "lim_N lim_t effectiveMass=0 while lim_t lim_N effectiveMass=1",
+    "lesson": "O(1/N^2) control of amplitudes at fixed separation is insufficient to transport a uniform lower bound on spectral support"
+  },
+  "loopEquationBoundary": {
+    "closure": "factorization replaces expectation values of loop products by products of expectation values at N=infinity",
+    "centerCondition": "open reduced-model paths must have zero expectation unless their displacement closes modulo the effective lattice",
+    "whatMatches": "under the symmetry conditions, reduced and unreduced planar Schwinger-Dyson equations for corresponding neutral Wilson loops match",
+    "whatDoesNotFollow": [
+      "uniqueness of the physically relevant solution of the infinite loop hierarchy",
+      "reflection positivity and a reconstructed Hamiltonian for the reduced solution",
+      "uniform control of large-area or large-time limits from pointwise 1/N^2 factorization",
+      "a positive lower spectral bound at every fixed finite N",
+      "the Clay statement for every compact simple gauge group"
+    ]
+  },
+  "routeAssessment": {
+    "successfulUse": "reduction can calculate or numerically estimate planar string tensions, glueball correlators and running couplings using far fewer spatial sites",
+    "strongestPossibleTheorem": "a center-stable reduced construction plus unique reflection-positive planar loop solution and a positive planar gap would establish an N=infinity neutral-sector result",
+    "missingFiniteNBridge": "one additionally needs spectral convergence uniform near zero energy, excluding states whose overlap is O(1/N^2) while their energy tends to zero",
+    "orderOfLimits": "N to infinity, Euclidean time to infinity, volume to infinity and cutoff removal cannot be interchanged without uniform estimates"
+  },
+  "spin23Boundary": {
+    "useful": "large-N reduction is a computational and conceptual engine for compact internal SU(N) sectors and their planar observables",
+    "notAGroupBridge": "Spin(2,3) has fixed rank and is noncompact; it has no Eguchi-Kawai N parameter whose infinity reconstructs spacetime",
+    "permittedAdjacency": "a large-N internal sector may couple to a separately constrained massless Spin(2,3) gravitational sector, but reduction does not supply the gravitational Hilbert space or gap selected auxiliary modes"
+  },
+  "sources": [
+    "https://doi.org/10.1103/PhysRevLett.48.1063",
+    "https://doi.org/10.1103/PhysRevD.27.2397",
+    "https://arxiv.org/abs/hep-th/0702021",
+    "https://arxiv.org/abs/0803.0344",
+    "https://arxiv.org/abs/1005.1981"
+  ],
+  "decision": "Center-stable large-N reduction reconstructs planar momentum and loop equations, but it neither establishes a uniform spectral gap nor transports an N=infinity result to any fixed finite-N R4 theory. The obstruction is an order-of-limits and spectral-support problem, not a shortage of reduced matrix size."
+}

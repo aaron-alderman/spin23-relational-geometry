@@ -1,0 +1,80 @@
+{
+  "schema": "spin23.stochastic-quantization-gap-audit/1",
+  "date": "2026-10-21",
+  "status": "exact compact equilibrium and converged Fokker-Planck relaxation spectrum; the stochastic-time gap rescales with mobility and is not a physical transfer gap",
+  "compactModel": {
+    "configuration": "theta in U(1), theta modulo 2 pi",
+    "action": "S(theta)=-beta cos(theta)",
+    "beta": 2,
+    "langevin": "d theta_s=-M beta sin(theta_s) ds+sqrt(2M) dW_s",
+    "fokkerPlanck": "partial_s P=M partial_theta(partial_theta P+beta sin(theta) P)",
+    "equilibrium": "P_eq(theta)=exp(beta cos(theta))/(2 pi I0(beta))",
+    "equilibriumPlaquette": 0.697774657964008,
+    "mobilities": [0.5, 1, 3],
+    "fourierCutoffs": [4, 6, 8, 10, 14, 18]
+  },
+  "selfAdjointTransform": {
+    "map": "P=exp(-S/2) psi",
+    "operator": "H_FP=M[-d_theta^2+(beta^2/4) sin^2(theta)-(beta/2) cos(theta)]",
+    "factorization": "H_FP=M A_dagger A with A=d_theta+(beta/2) sin(theta)",
+    "groundState": "psi_0 proportional to exp(beta cos(theta)/2)",
+    "groundEigenvalue": 0,
+    "fourierMatrix": "diag n^2+beta^2/8; distance-one entries -beta/4; distance-two entries -beta^2/16, all multiplied by M"
+  },
+  "computedSpectrum": {
+    "M1CutoffRows": [
+      {"N": 4, "ground": 0.000001658, "gap": 1.647367397902},
+      {"N": 6, "ground": 1.115e-10, "gap": 1.647365398645},
+      {"N": 8, "ground": 2.192e-15, "gap": 1.647365398504},
+      {"N": 10, "ground": 2.591e-17, "gap": 1.647365398504},
+      {"N": 14, "ground": -3.298e-17, "gap": 1.647365398504},
+      {"N": 18, "ground": -3.298e-17, "gap": 1.647365398504}
+    ],
+    "mobilityGapRows": [
+      {"M": 0.5, "gap": 0.823682699252},
+      {"M": 1, "gap": 1.647365398504},
+      {"M": 3, "gap": 4.942096195512}
+    ],
+    "physicalRotorGap": 1.756849961374,
+    "groundStateFourierOverlap": 1
+  },
+  "mobilityAudit": {
+    "constantMobility": "H_FP(M)=M H_FP(1), so every nonzero relaxation eigenvalue and the stochastic-time gap scale exactly with M",
+    "timeRescaling": "s'=M s removes a constant M without changing the equilibrium distribution",
+    "stateDependentMobility": "positive m(theta) gives H=A_dagger m(theta) A and preserves the same ground state while generally changing nonzero eigenvalue ratios",
+    "conclusion": "the relaxation gap is algorithmic/dynamical data of the chosen stochastic process, not an invariant of the equilibrium Euclidean measure"
+  },
+  "physicalComparison": {
+    "rotorHamiltonian": "H_phys=-d_theta^2+kappa(1-cos(theta)) with kappa=2",
+    "reasonForChoice": "a compact quantum rotor with the same coordinate and cosine potential, but physical-time kinetic dynamics",
+    "comparisonRule": "its gap is independent of stochastic mobility M and is not equal to the M-dependent Fokker-Planck relaxation gap",
+    "warning": "the supersymmetric-quantum-mechanics interpretation of H_FP does not turn fictitious Parisi-Wu time into the physical Euclidean time already contained in the field coordinate"
+  },
+  "fourDimensionalRequirements": {
+    "existence": "construct the gauge-field stochastic process globally for the regulator and control its continuum limit",
+    "ergodicity": "prove convergence to a unique equilibrium for gauge-invariant observables, including topology and flat gauge directions",
+    "gaugeHandling": "control gauge-orbit diffusion or stochastic gauge fixing without changing gauge-invariant equilibrium observables",
+    "equilibriumIdentification": "prove that the stationary measure is the intended Yang-Mills Euclidean measure nonperturbatively",
+    "reflectionPositivity": "establish Osterwalder-Schrader positivity and reconstruction in physical Euclidean time at equilibrium",
+    "physicalGap": "prove a positive lower spectral bound for the reconstructed physical Hamiltonian, not for the stochastic generator",
+    "uniformity": "make existence, mixing/equilibrium, locality and physical spectral estimates uniform as volume grows and cutoff is removed"
+  },
+  "topologyAndCriticalSlowing": {
+    "finiteRegulator": "compact finite lattices can define well-behaved link diffusions, but mixing constants may deteriorate",
+    "continuumRisk": "topological-sector tunneling and long physical correlation lengths can drive the stochastic relaxation gap to zero",
+    "logicalLesson": "even a uniform stochastic mixing gap would be mobility-dependent and would not by itself be the Yang-Mills mass gap"
+  },
+  "spin23Boundary": {
+    "useful": "stochastic quantization may sample a compact internal gauge measure used in a Spin(2,3)-adjacent construction",
+    "notABridge": "Spin(2,3) does not identify fictitious stochastic time with physical time or transfer a mobility-dependent Fokker-Planck gap into a gauge-invariant particle mass"
+  },
+  "sources": [
+    "https://doi.org/10.1360/YA1981-24-4-483",
+    "https://doi.org/10.1016/0550-3213(81)90202-9",
+    "https://doi.org/10.1016/0370-1573(87)90144-X",
+    "https://arxiv.org/abs/hep-th/0012103",
+    "https://doi.org/10.1007/BF01645738",
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf"
+  ],
+  "decision": "Stochastic quantization correctly recovers the compact equilibrium measure in the witness, but its relaxation gap scales with an arbitrary mobility/time convention and differs from a physical rotor gap. A four-dimensional route must construct and identify the equilibrium Yang-Mills measure, prove physical-time OS reconstruction and then prove the reconstructed Hamiltonian gap uniformly in regulator limits."
+}

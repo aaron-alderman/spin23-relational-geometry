@@ -1,0 +1,114 @@
+{
+  "schema": "spin23.critical-pgt-lense-thirring-spin-yukawa/1",
+  "date": "2026-10-21",
+  "status": "linear stationary-source and weak-field observable audit of the claim-1622 critical 0-minus PGT class",
+  "linearSourceSplit": {
+    "metricEquation": "in harmonic gauge, box bar(h)_{mu nu}=-16 pi G T_{mu nu}",
+    "torsionAction": "L_0minus=(A/2)S_mu S^mu+(B/2)(partial_mu S^mu)^2+S_mu J_c^mu, with A>0 and B>0",
+    "torsionEquation": "A S_mu-B partial_mu(partial.S)=-J_c,mu",
+    "current": "J_c^mu=sum_f c_f bar(psi_f)gamma^mu gamma_5 psi_f",
+    "diagonalization": "around torsionless Minkowski the parity-even critical class has no linear h--0-minus mixing; T_mu_nu excites the 2-plus metric block and J_c excites the 0-minus connection block",
+    "orbitalRule": "orbital angular momentum is contained in T_0i and sources h_0i; Poincare-gauge torsion couples to intrinsic spin current, not orbital angular momentum",
+    "unpolarizedRule": "for an unpolarized macroscopic source the coarse-grained axial current vanishes even when T_0i and orbital angular momentum are nonzero"
+  },
+  "metricWeakField": {
+    "potential": "h_00=2GM/r in c=1 conventions",
+    "gravitomagneticField": "h_0i=-2G (J_orb cross r)_i/r^3, up to the stated metric-sign convention",
+    "gyroPrecession": "Omega_LT=(G/(c^2 r^3))[3(J_orb.rhat)rhat-J_orb]",
+    "nodalRate": "dot(Omega_node)=2G J_orb/[c^2 a^3(1-e^2)^(3/2)]",
+    "criticalClassCoefficient": 1,
+    "treeDecision": "the b3 pseudoscalar-curvature square vanishes in the torsionless metric block and the unpolarized source has J_c=0, so the GR gravitoelectric and gravitomagnetic coefficients are unchanged at linear tree level"
+  },
+  "torsionExchange": {
+    "projectorInverse": "K^-1=P_T/A+P_L/(A+B p^2)",
+    "contact": "the P_T/A part is algebraic and contributes only an unresolved local axial-axial operator",
+    "poleMassSquared": "m_phi^2=A/B",
+    "derivativeCoupling": "f_f=c_f/sqrt(A)",
+    "yukawaKernel": "Y_m(r)=exp(-m r)/(4 pi r)",
+    "pointSpinPotential": "V=f_1 f_2 sigma_1^i sigma_2^j partial_i partial_j Y_m(r)",
+    "expandedSeparatedPotential": "V=(f1 f2 exp(-mr)/(4pi))*[-(sigma1.sigma2)(m/r^2+1/r^3)+(sigma1.rhat)(sigma2.rhat)(m^2/r+3m/r^2+3/r^3)] for r>0",
+    "selectionRule": "the separated pole force is dipole-dipole and averages to zero if either body has zero net intrinsic polarization; there is no minimal monopole-dipole force",
+    "range": "lambda_phi=hbar*c/m_phi; the tail is exponentially suppressed for r/lambda_phi much greater than one"
+  },
+  "benchmarks": {
+    "constants": {
+      "G_SI": 6.6743e-11,
+      "c_m_per_s": 299792458,
+      "earthAngularMomentum_kg_m2_per_s": 5.86e33,
+      "secondsPerJulianYear": 31557600,
+      "masPerRadian": 206264806.247,
+      "hbarc_eV_m": 1.973269804e-7
+    },
+    "lageosLike": {
+      "semimajorAxis_m": 12270000,
+      "eccentricity": 0.0045,
+      "grNodalRate_mas_per_year": 30.6690648188,
+      "criticalClassRate_mas_per_year": 30.6690648188,
+      "torsionCorrectionForUnpolarizedBodies_mas_per_year": 0,
+      "mediatorMassForOneERange_eV": 1.60820684923e-14
+    },
+    "gravityProbeB": {
+      "publishedGRFrameDragging_mas_per_year": -39.2,
+      "publishedMeasured_mas_per_year": -37.2,
+      "publishedOneSigma_mas_per_year": 7.2,
+      "interpretation": "agreement tests the metric 2-plus frame-dragging sector; an ordinary unpolarized quartz gyroscope is not a direct torsion-spin source or detector"
+    },
+    "laboratoryRange": {
+      "separation_m": 0.1,
+      "mediatorMassForOneERange_eV": 1.973269804e-6,
+      "decision": "a ten-centimetre polarized-spin experiment requires a mediator at or below about two micro-eV for an unsuppressed tail"
+    },
+    "naturalCriticalPoint": {
+      "m_phi_GeV": 2.435e18,
+      "lageosExponent_mr": 1.51410871131e41,
+      "decision": "the natural Planck-mass pole has exactly zero numerical long-range relevance; exp(-mr) is beyond negligible"
+    }
+  },
+  "higherOrderQualification": {
+    "torsionStress": "the energy of a sourced torsion configuration can backreact on the metric at quadratic order in intrinsic spin, but it neither renormalizes the universal linear Lense-Thirring coefficient nor survives for an unpolarized source",
+    "finiteSize": "a macroscopic polarized source requires convolution of the tensor Yukawa kernel with its spin density and material-specific spin fractions",
+    "adS": "over a local apparatus or Solar-System patch with r much less than ell_AdS, curvature corrections are O(r^2/ell_AdS^2); the source-selection conclusion is unchanged"
+  },
+  "falsifiability": {
+    "genericSignal": "an orientation-dependent finite-range spin-spin torque with the pseudoscalar tensor angular pattern and exponential range, absent for unpolarized source or detector",
+    "notUniqueYet": "this force is shared by generic pseudoscalar and propagating-torsion EFTs",
+    "spin23FingerprintCondition": "uniqueness requires the broken parent to fix flavor-dependent c_f, A and B, hence both the range and the correlated strengths f_f*m_phi=c_f/sqrt(B), while retaining an exactly GR Lense-Thirring coefficient for unpolarized rotation",
+    "decisivePattern": "a non-GR unpolarized frame-dragging coefficient would falsify this isolated critical 0-minus action rather than confirm it"
+  },
+  "stopRules": [
+    "DO NOT use LAGEOS or Gravity Probe B orbital/frame-dragging agreement as a direct bound on the isolated 0-minus torsion pole",
+    "DO NOT identify macroscopic rotation with the intrinsic axial current",
+    "SET the tree-level unpolarized Lense-Thirring correction to zero in the critical class, not merely to a small fitted value",
+    "USE polarized source and detector spin densities when applying the Yukawa potential",
+    "INCLUDE exp(-m r) before quoting any satellite or laboratory sensitivity",
+    "RECOMPUTE if another spin-parity sector, nonminimal matter coupling, parity violation, or selector dynamics is added"
+  ],
+  "decision": "The critical 0-minus class passes the Lense-Thirring gate by prediction rather than adjustment: its unpolarized weak-field metric is GR at linear tree level. Its only leading separated-body deviation is a polarized pseudoscalar Yukawa spin-spin force, naturally Planck range and generic unless the Spin(2,3) descendant fixes its coupling pattern.",
+  "sources": [
+    {
+      "title": "Hehl, Obukhov and Puetzfeld, On Poincare gauge theory of gravity, its equations of motion, and Gravity Probe B",
+      "url": "https://arxiv.org/abs/1304.2769",
+      "role": "Poincare-gauge source distinction: torsion couples to intrinsic spin rather than orbital angular momentum"
+    },
+    {
+      "title": "Everitt et al., Gravity Probe B: Final Results of a Space Experiment to Test General Relativity",
+      "url": "https://arxiv.org/abs/1105.3456",
+      "role": "primary frame-dragging measurement and GR prediction"
+    },
+    {
+      "title": "Ciufolini and Pavlis, A confirmation of the general relativistic prediction of the Lense-Thirring effect",
+      "url": "https://doi.org/10.1038/nature03007",
+      "role": "primary LAGEOS frame-dragging analysis"
+    },
+    {
+      "title": "Fadeev et al., Revisiting Spin-Dependent Forces Mediated by New Bosons",
+      "url": "https://arxiv.org/abs/1810.10364",
+      "role": "corrected coordinate-space pseudoscalar dipole-dipole potential"
+    },
+    {
+      "title": "Yo and Nester, Hamiltonian Analysis of Poincare Gauge Theory Scalar Modes",
+      "url": "https://arxiv.org/abs/gr-qc/9902032",
+      "role": "critical 0-minus spectrum and nonlinear constraint class"
+    }
+  ]
+}

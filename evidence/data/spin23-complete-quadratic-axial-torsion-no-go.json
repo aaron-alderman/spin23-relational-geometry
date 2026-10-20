@@ -1,0 +1,133 @@
+{
+  "schema": "spin23.complete-quadratic-axial-torsion/1",
+  "date": "2026-10-21",
+  "status": "exact flat-space pole, residue, constraint and finite sign-scan audit of the two-derivative parity-even axial-torsion completion",
+  "conventions": {
+    "metric": "eta=(-,+,+,+)",
+    "action": "L=(a/2)S_mu S^mu+(b/2)(partial_mu S^mu)^2-(z/4)F_mu_nu F^mu_nu+S_mu J^mu",
+    "fieldStrength": "F_mu_nu=partial_mu S_nu-partial_nu S_mu",
+    "signs": "z>0 is the positive-energy Maxwell sign; the claim-1603 scalar convention is recovered at z=0 with a>0,b>0",
+    "completeness": "up to integration by parts, S^2, (partial.S)^2 and F^2 span the flat-space parity-even quadratic axial-vector action with at most two derivatives"
+  },
+  "projectorDecomposition": {
+    "projectors": "P_L^{mu nu}=p^mu p^nu/p^2; P_T=eta-P_L",
+    "kernel": "K=(a-z p^2)P_T+(a+b p^2)P_L",
+    "inverse": "K^{-1}=P_T/(a-z p^2)+P_L/(a+b p^2)",
+    "transverseMassSquared": "m_1^2=-a/z",
+    "longitudinalMassSquared": "m_0^2=a/b",
+    "currentEffectiveAction": "L_eff=-(1/2)J.[P_T/(a-zp^2)+P_L/(a+bp^2)].J"
+  },
+  "healthConditions": {
+    "spin1Transverse": {
+      "degrees": 3,
+      "canonicalForm": "for z>0 and a=-z m_1^2, A_mu=sqrt(z)S_mu gives L=-F_A^2/4-m_1^2 A^2/2",
+      "positiveNorm": "z>0",
+      "nonTachyon": "m_1^2=-a/z>0",
+      "combined": "z>0 and a<0"
+    },
+    "spin0Longitudinal": {
+      "degrees": 1,
+      "dualAction": "L_chi=-(partial chi)^2/(2a)-chi^2/(2b)",
+      "positiveNorm": "a>0",
+      "nonTachyon": "m_0^2=a/b>0",
+      "combined": "a>0 and b>0"
+    },
+    "simultaneousDecision": "NO OPEN REGION: healthy spin-1 requires a<0 while healthy spin-0 requires a>0",
+    "failureForScalarHealthySigns": "a>0,b>0,z>0 gives a healthy 0-minus scalar but m_1^2<0, so the transverse vector is tachyonic",
+    "failureForVectorHealthySigns": "a<0,z>0 and b<0 gives positive masses for both poles, but the longitudinal scalar has negative kinetic norm"
+  },
+  "constraintCounts": {
+    "generic_bz_nonzero": {
+      "velocityHessianRank": 4,
+      "primaryConstraints": 0,
+      "physicalConfigurationDegrees": 4,
+      "spectrum": "three massive transverse spin-1 polarizations plus one longitudinal spin-0 mode"
+    },
+    "z_zero_scalar_surface": {
+      "velocityHessianRank": 1,
+      "secondClassConstraints": 6,
+      "physicalConfigurationDegrees": 1,
+      "healthyRegion": "a>0,b>0",
+      "radiativeStatus": "not stable once fermions with nonzero axial coupling generate F^2"
+    },
+    "b_zero_proca_surface": {
+      "velocityHessianRank": 3,
+      "secondClassConstraints": 2,
+      "physicalConfigurationDegrees": 3,
+      "healthyRegion": "z>0,a<0"
+    },
+    "bz_zero_auxiliary_surface": {
+      "velocityHessianRank": 0,
+      "secondClassConstraints": 8,
+      "physicalConfigurationDegrees": 0
+    },
+    "a_zero": "rank-changing massless surface; with b and z nonzero the velocity Hessian is full rank but the Maxwell-plus-divergence system carries an indefinite unprotected four-component kinetic sector, not a continuous healthy limit"
+  },
+  "nonconservedAxialCurrent": {
+    "longitudinalExchange": "L_eff,L=-(p.J)^2/[2p^2(a+b p^2)]",
+    "wardIdentity": "p.J_5,f=2m_f times the pseudoscalar density plus gauge anomalies",
+    "decision": "massive fermions and anomalies expose the longitudinal pole; current conservation cannot be used to hide its ghost or tachyon",
+    "conservedLimit": "an exactly conserved external current has p.J=0 and does not exchange the scalar, but this source restriction does not remove the scalar from the spectrum",
+    "lowMomentum": "K^{-1}=eta/a+(p^2/a^2)(z P_T-b P_L)+O(p^4), so both sectors share the algebraic J^2/a contact at leading order"
+  },
+  "decouplingSurfaces": [
+    "z=0: the transverse pole becomes algebraic and the healthy claim-1603 0-minus scalar surface is recovered",
+    "b=0: the longitudinal pole becomes algebraic and an ordinary healthy Proca surface exists for z>0,a<0",
+    "b=z=0: all axial torsion is algebraic",
+    "J=0: matter exchange vanishes but the free pole health problem remains",
+    "p.J=0: longitudinal exchange vanishes for that source only",
+    "a=0: constraint/pole rank changes and neither massive health criterion can be continued through the surface"
+  ],
+  "finiteScan": {
+    "values": [-2, -1, 1, 2],
+    "points": 64,
+    "scalarHealthyPoints": 16,
+    "vectorHealthyPoints": 16,
+    "bothHealthyPoints": 0,
+    "positiveMassBothButScalarGhostPoints": 8,
+    "statement": "the scan is a finite witness of the analytic sign contradiction, not its proof"
+  },
+  "spin23InvariantMap": {
+    "a": "Einstein-Cartan plus broken-phase torsion squares; in the one-lambda truncation a=M_Pl^2(1-4lambda)/24",
+    "b": "the parity-even square of the Riemann-Cartan pseudoscalar curvature Xhat, whose linear axial part is partial.S",
+    "z": "a complementary linear combination of parity-even Riemann-Cartan curvature-square invariants whose axial quadratic projection contains F_S^2; fermion vacuum polarization generates the same allowed operator",
+    "warning": "a generic curvature-square invariant also activates trace torsion, tensor torsion and/or metric sectors; z cannot be treated as an isolated UV coefficient without an explicit irreducible-curvature projection",
+    "remainingFullSectors": [
+      "massless metric spin-2 graviton",
+      "connection spin-parity sectors 0+, 0-, 1+, 1-, 2+ and 2-",
+      "trace-vector and tensor-torsion blocks and their mixings",
+      "metric curvature-square scalar and massive spin-2 blocks",
+      "constraint-critical surfaces that can remove modes but are not open generic regions"
+    ]
+  },
+  "decision": "The most general isolated parity-even two-derivative axial-vector completion has no open parameter region in which its massive spin-1 and spin-0 poles are both healthy. The shared algebraic coefficient a must have opposite signs. Healthy theories exist only on decoupling/critical surfaces that remove one pole, or potentially in a larger Poincare-gauge system whose mixings and constraints must be analyzed afresh.",
+  "stopRules": [
+    "Reject every generic b*z!=0 point as a simultaneous healthy 1-plus/0-minus completion: it contains a transverse tachyon, a scalar ghost/tachyon, or a Maxwell ghost.",
+    "Retain z=0 only as a low-energy scalar EFT surface, not a radiatively closed fermion-coupled theory.",
+    "Retain b=0,z>0,a<0 as the healthy Proca decoupling surface, not as continuity with the healthy 0-minus branch.",
+    "Do not cross a=0 using massive pole formulas; the rank and constraint structure changes.",
+    "Do not infer health of the full broken Spin(2,3) curvature-square action from the axial projection; repeat the complete spin-parity and constraint analysis."
+  ],
+  "sources": [
+    {
+      "title": "Sezgin and van Nieuwenhuizen, New Ghost-Free Gravity Lagrangians with Propagating Torsion",
+      "url": "https://doi.org/10.1103/PhysRevD.21.3269",
+      "role": "primary parity-even Poincare-gauge spin-parity pole classification"
+    },
+    {
+      "title": "Karananas, The Particle Spectrum of Parity-Violating Poincare Gravitational Theory",
+      "url": "https://arxiv.org/abs/1411.5613",
+      "role": "complete spin-projector treatment and coupling inequalities in quadratic Poincare gravity"
+    },
+    {
+      "title": "Lin, Hobson and Lasenby, Ghost and Tachyon Free Poincare Gauge Theories",
+      "url": "https://arxiv.org/abs/1812.02675",
+      "role": "systematic critical-case and constraint-rank classification"
+    },
+    {
+      "title": "de Berredo-Peixoto, Helayel-Neto and Shapiro, On the Consistency of a Fermion-Torsion Effective Theory",
+      "url": "https://arxiv.org/abs/hep-th/9910168",
+      "role": "fermion-loop generation and quantum consistency of axial torsion kinetics"
+    }
+  ]
+}

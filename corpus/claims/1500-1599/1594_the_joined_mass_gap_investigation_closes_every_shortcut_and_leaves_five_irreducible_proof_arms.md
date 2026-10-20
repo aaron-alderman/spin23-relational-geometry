@@ -6,6 +6,8 @@
 
 **Status:** terminal synthesis of currently calculable arms; the Millennium problem and action-level Spin(2,3) spectrum remain open
 
+**Subsequent refinement (21 October 2026):** this initial shortcut audit was deliberately reopened. Claims 1595--1624 execute the five arms through 20 concrete method families, find a healthy critical (0^-) gravity EFT and a radiative one-vev shared-scale portal, and replace this document's terminal language with the bounded-exhaustion synthesis in [claim 1624](../1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md).
+
 **Depends on:** [the constructive Yang--Mills gate](1590_four_dimensional_yang_mills_mass_gap_is_a_constructive_qft_gate_not_a_group_theory_corollary.md), [the sector-selective gravity gate](1591_spin23_requires_a_sector_selective_not_universal_gravitational_mass_gap.md), [the compact-real-form/internal bridge audit](1592_compact_real_forms_and_internal_branching_do_not_transport_the_yang_mills_mass_gap.md), and [the six-gap type firewall](1593_six_inequivalent_gaps_require_a_type_firewall_before_the_yang_mills_problem_can_join_spin23.md)
 
 **Evidence:** [joined exhaustion ledger](../../../evidence/data/spin23-yang-mills-mass-gap-joined-exhaustion.json) and [cross-ledger verifier](../../../verification/verify/verify_spin23_yang_mills_mass_gap_joined_exhaustion.mjs)

@@ -1,0 +1,120 @@
+{
+  "schema": "spin23.critical-pgt-pseudoscalar-class/1",
+  "date": "2026-10-21",
+  "status": "exact critical-class and nonlinear constraint-rank witness for the massive parity-even Poincare-gauge 0-minus sector",
+  "publishedClass": {
+    "conventions": "Yo and Nester parity-even PGT: a0 multiplies scalar curvature, a1,a2,a3 multiply the three irreducible torsion squares, and b1,...,b6 multiply the six irreducible curvature squares; one curvature combination is Bach-Lanczos redundant",
+    "criticalEqualities": [
+      "2*a1+a2=0",
+      "a1+2*a3=0",
+      "b1=b2=b4=b5=b6=0"
+    ],
+    "nonzeroRequirements": [
+      "a0!=0",
+      "b3!=0",
+      "m=(a0-a1)/ell^2!=0"
+    ],
+    "projectedKineticCombination": "the 0-minus kinetic coefficient is b2+b3, hence b3 on this class",
+    "projectedMassCombination": "the 0-minus algebraic coefficient is a0/2+a3=(a0-a1)/2 on this class",
+    "classification": "seven displayed algebraic equalities define a critical surface; its strict health inequalities are open only relative to that surface"
+  },
+  "health": {
+    "publishedHamiltonianSigns": [
+      "a1>0",
+      "b3/kappa<0"
+    ],
+    "tachyonExclusionUsedHere": "a0>a1 so (a0-a1)/2>0",
+    "einsteinResidue": "a0>0",
+    "positiveNormalizedReduction": {
+      "definitions": "A=(a0-a1)/ell^2 and B=-b3/kappa",
+      "action": "L_0minus=(A/2) S_mu S^mu+(B/2)(partial_mu S^mu)^2, after positive field/convention rescalings",
+      "dualAction": "L_chi=-(partial chi)^2/(2A)-chi^2/(2B)",
+      "pole": "p^2=-A/B",
+      "massSquared": "A/B",
+      "warning": "A/B is the mass in this explicitly stated reduced normalization; irreducible-projector normalization factors must be restored before comparing a numerical mass across PGT convention systems"
+    }
+  },
+  "finiteWitness": {
+    "ellSquared": 1,
+    "kappa": 1,
+    "a0": 2,
+    "a1": 1,
+    "a2": -2,
+    "a3": -0.5,
+    "b1": 0,
+    "b2": 0,
+    "b3": -1,
+    "b4": 0,
+    "b5": 0,
+    "b6": 0,
+    "A": 1,
+    "B": 1,
+    "reducedMassSquared": 1,
+    "spectrum": [
+      {"spinParity": "2-plus", "massSquared": 0, "degrees": 2, "residue": "positive"},
+      {"spinParity": "0-minus", "massSquared": 1, "degrees": 1, "residue": "positive in the stated reduced normalization"}
+    ]
+  },
+  "canonicalWitness": {
+    "phaseSpaceVariables": 80,
+    "firstClassConstraints": 20,
+    "secondClassConstraints": 34,
+    "physicalConfigurationDegrees": "(80-2*20-34)/2=3",
+    "massParameter": "m=(a0-a1)/ell^2",
+    "determinant": "J^(-12)*[((p_pi)/(6J))^2+m^2]^6",
+    "decision": "for real m!=0 and nondegenerate spatial volume J>0 this determinant is strictly positive, so the analyzed 0-minus primary-if-constraint block cannot change rank",
+    "grLimit": "at m=0 and p_pi=0 the determinant vanishes; Yo and Nester identify a1=a0 as the massless/pure-gauge case equivalent to GR rather than a continuous extra massless scalar",
+    "scope": "this is a strong nonlinear rank result for the selected scalar-mode class, not a proof for arbitrary matter couplings, added invariants, degenerate tetrads, or every global solution"
+  },
+  "spin23Map": {
+    "breaking": "e^a=ell A^{a4}, omega^{ab}=A^{ab}, with a fixed-norm selector V^A defining the Lorentz split",
+    "a0": "the MacDowell-Mansouri/Stelle-West cross term supplies the Einstein-Cartan scalar-curvature coefficient",
+    "torsionSquares": "the three selector-covariant invariants T^(I)a wedge star T^(I)_a supply a1,a2,a3 and must obey a2=-2a1 and a3=-a1/2",
+    "curvatureSquare": "the selector-defined pseudoscalar irreducible curvature square supplies b3; the other five displayed curvature coefficients are set to zero",
+    "minimalParentFailure": "a single T_{mu nu rho}T^{mu nu rho} coefficient generally cannot impose both independent torsion relations, so this class requires the enlarged irreducible invariant basis",
+    "selectorAssumption": "the selector norm is fixed and no radial or orientation mode propagates; a dynamical selector would add scalar mixing and requires a fresh constraint analysis",
+    "vacuumScope": "the exact projector point is a torsionless Minkowski result; its reduced 0-minus mode has the AdS stability described in claim 1607, but the full critical PGT projector algebra should still be repeated on the natural Spin(2,3) AdS vacuum"
+  },
+  "radiativeClosure": {
+    "decision": "not closed",
+    "reason": "the seven zero/equality conditions are not protected by an identified symmetry; matter and graviton/connection loops populate the allowed parity-even invariant basis",
+    "specificLeak": "fermion loops coupled to axial torsion generate a transverse F_S^2 term, leaving the isolated longitudinal critical class",
+    "classification": "a consistent classical tree-level critical sector and a usable low-energy EFT tuning, not presently an open radiatively stable quantum parameter region"
+  },
+  "stopRules": [
+    "ADMIT the three-degree-of-freedom spectrum only after all seven critical equalities and a0>a1>0, a1>0, b3/kappa<0 are checked",
+    "REJECT the claim that this is an open region of the full PGT coupling space; it is open only within the critical surface",
+    "STOP at a0=a1 for a separate gauge-class analysis; do not count a new massless 0-minus particle there",
+    "RECOMPUTE the full spin-projector and Dirac system if any forbidden bi is generated or if either torsion equality is relaxed",
+    "TREAT radiative departures as EFT counterterms with a cutoff unless a protecting Spin(2,3)-parent symmetry is supplied",
+    "REPEAT the full critical-class analysis on AdS before calling it a complete broken-Spin(2,3) vacuum"
+  ],
+  "decision": "The local parity-even route is nonempty but critical: it has an explicit healthy massless graviton plus one gapped 0-minus torsion mode, and the relevant nonlinear constraint determinant does not bifurcate for nonzero mass. It is not an open or radiatively closed full-coupling theory, so the strongest defensible endpoint is a classical critical sector or tuned EFT.",
+  "sources": [
+    {
+      "title": "Yo and Nester, Hamiltonian Analysis of Poincare Gauge Theory Scalar Modes",
+      "url": "https://arxiv.org/abs/gr-qc/9902032",
+      "role": "explicit massive 0-minus critical class, Hamiltonian signs, constraint count and nonlinear determinant"
+    },
+    {
+      "title": "Sezgin and van Nieuwenhuizen, New Ghost-Free Gravity Lagrangians with Propagating Torsion",
+      "url": "https://doi.org/10.1103/PhysRevD.21.3269",
+      "role": "original spin-projector ghost/tachyon classification"
+    },
+    {
+      "title": "Lin, Hobson and Lasenby, Ghost and tachyon free Poincare gauge theories: a systematic approach",
+      "url": "https://arxiv.org/abs/1812.02675",
+      "role": "systematic critical-case classification and independent confirmation that critical healthy classes exist"
+    },
+    {
+      "title": "Lin, Hobson and Lasenby, Power-counting renormalizable, ghost-and-tachyon-free Poincare gauge theories",
+      "url": "https://arxiv.org/abs/1910.14197",
+      "role": "additional critical classes, including massless gravity plus massive 0-minus possibilities"
+    },
+    {
+      "title": "Melichev and Percacci, On the renormalization of Poincare gauge theories",
+      "url": "https://arxiv.org/abs/2307.02336",
+      "role": "one-loop counterterm and radiative-closure context for the general invariant basis"
+    }
+  ]
+}

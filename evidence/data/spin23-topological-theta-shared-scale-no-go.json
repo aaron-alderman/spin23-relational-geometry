@@ -1,0 +1,149 @@
+{
+  "schema": "spin23.topological-theta-shared-scale-no-go/1",
+  "date": "2026-10-20",
+  "status": "finite topological-sector, dilute-gas, MacDowell-Mansouri and mixed-axion audit; not a gravitational-instanton measure or a Yang-Mills mass-gap proof",
+  "characteristicClassSeparation": {
+    "color": "Q_c=(1/8 pi^2) integral tr(F_c wedge F_c) is the second characteristic number of the compact internal color bundle, with normalization chosen so Q_c is integral",
+    "gravityPontryagin": "Q_P is the normalized first Pontryagin number of the tangent/Lorentz bundle",
+    "gravityEuler": "chi(M)=(1/32 pi^2) integral epsilon_abcd R^ab wedge R^cd on a closed oriented four-manifold",
+    "independentBundles": true,
+    "noCanonicalEquality": "Q_c, Q_P and chi(M) are characteristic numbers of different bundles. Equality or a diagonal sum is extra correspondence data, not a consequence of Spin(2,3), E6 or bundle topology."
+  },
+  "compactYangMills": {
+    "euclideanActionBound": "S_YM >= 8 pi^2 |Q_c|/g_c^2, saturated by self-dual or anti-self-dual instantons",
+    "thetaWeight": "exp[-8 pi^2 |Q_c|/g_c^2 + i theta_c Q_c]",
+    "periodicity": "theta_c is identified modulo 2 pi when Q_c is integral",
+    "instantonFactorScan": [
+      {"g": 0.8, "expMinus8Pi2OverG2": 2.6367313052106427e-54},
+      {"g": 1.0, "expMinus8Pi2OverG2": 5.122502279235455e-35},
+      {"g": 1.2, "expMinus8Pi2OverG2": 1.5386519412537812e-24}
+    ],
+    "decision": "Topology quantizes Q_c and makes theta periodic; it does not fix g_c, the instanton determinant, the size integral or the RG-generated dimensional scale."
+  },
+  "finiteSectorWitness": {
+    "definition": "Z_N(theta;A)=sum_{Q=-N}^N exp(-A |Q|+i theta Q)",
+    "A": 2.5,
+    "Qmax": 8,
+    "Z0": 1.1788509792990645,
+    "points": [
+      {"theta": 0, "Z": 1.1788509792990645, "minusLogZOverZ0": 0},
+      {"theta": 1.0471975511965976, "Z": 1.0741998444614063, "minusLogZOverZ0": 0.09296416402748368},
+      {"theta": 1.5707963267948966, "Z": 0.9866142981790204, "minusLogZOverZ0": 0.17801631563251907},
+      {"theta": 3.141592653589793, "Z": 0.8482836402702237, "minusLogZOverZ0": 0.3290804353878253}
+    ],
+    "chargeVarianceAtTheta0": 0.19484479032679078,
+    "infiniteSumChargeVariance": 0.1948448161317528,
+    "infiniteSumFormula": "2 exp(-A)/(1-exp(-A))^2",
+    "decision": "The integer sector sum determines a periodic shape only after the continuous suppression A and the volume/prefactor have been supplied."
+  },
+  "diluteInstantonGasWitness": {
+    "formula": "Z(theta)/Z(0)=exp[2 K V (cos(theta)-1)]",
+    "energyDifference": "E(theta)-E(0)=2 K (1-cos(theta))",
+    "susceptibility": "chi_top=2 K",
+    "inputs": {"K": 0.01, "V": 100, "theta": 1.0471975511965976},
+    "ZRatio": 0.36787944117144233,
+    "energyDifferenceValue": 0.009999999999999998,
+    "susceptibilityValue": 0.02,
+    "dimension": "K and chi_top have mass dimension four in four spacetime dimensions",
+    "decision": "Topology fixes the cosine and periodicity; K carries the scale and depends on the coupling, measure, determinants, matter zero modes and RG running."
+  },
+  "largeNMultibranchWitness": {
+    "ansatz": "E(theta)=min_k (chi/2)(theta+2 pi k)^2",
+    "chi": 0.02,
+    "points": [
+      {"theta": 0, "minimumEnergy": 0, "minimizingBranches": [0]},
+      {"theta": 1.5707963267948966, "minimumEnergy": 0.024674011002723397, "minimizingBranches": [0]},
+      {"theta": 3.141592653589793, "minimumEnergy": 0.09869604401089359, "minimizingBranches": [-1, 0]},
+      {"theta": 4.71238898038469, "minimumEnergy": 0.024674011002723397, "minimizingBranches": [-1]},
+      {"theta": 6.283185307179586, "minimumEnergy": 0, "minimizingBranches": [-1]}
+    ],
+    "decision": "Branch minimization restores 2 pi periodicity and permits a cusp at theta=pi without a dilute gas. The overall curvature chi remains an independent dynamical observable, so the scale no-go is unchanged."
+  },
+  "macdowellMansouriTopologicalSector": {
+    "actionDecomposition": "S_MM=(ell^2/8 kappa) integral epsilon R wedge R + Einstein-Cartan + cosmological term",
+    "normalizedEulerContribution": "S_E=4 pi^2 (ell^2/kappa) chi(M)",
+    "dimensionlessParameter": "x=ell^2/kappa=M_Pl^2 ell^2",
+    "cosmologicalRelation": "Lambda_grav/M_Pl^2=-3/x",
+    "benchmark": {
+      "x": 0.1,
+      "actionPerEulerUnit": 3.947841760435743,
+      "relativeEuclideanWeightPerEulerUnit": 0.01929630291101678
+    },
+    "pontryagin": {
+      "constantCoefficient": "i theta_g Q_P",
+      "periodicity": "theta_g is periodic modulo 2 pi after an integral normalization is chosen",
+      "bulkVariationOnClosedFixedTopology": 0
+    },
+    "niehYan": {
+      "identity": "d(e^a wedge T_a)=T^a wedge T_a-e^a wedge e^b wedge R_ab",
+      "role": "the full Spin(2,3) Pontryagin density decomposes into Lorentz Pontryagin plus a convention-dependent multiple of the Nieh-Yan boundary density",
+      "scaleDecision": "a constant coefficient changes boundary/topological weighting but supplies no local mass scale"
+    },
+    "decision": "The minimal action relates the local cosmological term and Euler coefficient through the unfixed x. Quantization of chi(M) does not quantize x, and fixed-topology local equations do not determine it."
+  },
+  "forcedDiagonalChargeTest": {
+    "ansatz": "restrict the path integral by hand to Q_c=Q_P=Q",
+    "sectorWeight": "exp[-(A_c+A_g)|Q|+i(theta_c+theta_g)Q]",
+    "inputs": {"A_c": 2, "A_g": 3},
+    "separateInfiniteSumVariances": {"color": 0.36203083048315526, "gravity": 0.11028201100411952},
+    "diagonalInfiniteSumVariance": 0.013659345760384113,
+    "decision": "Even the imposed diagonal identification merely adds continuous actions and angles. It suppresses fluctuations but does not derive A_c, A_g, either determinant, or a dimensional scale."
+  },
+  "susceptibilityAndVacuumEnergy": {
+    "generalExpansion": "E(theta)=E(0)+(1/2) chi_top theta^2+O(theta^4)",
+    "diluteGasShape": "E(theta)-E(0)=chi_top(1-cos theta)",
+    "qcdScalingStatement": "chi_QCD is a dimension-four dynamical observable of order a QCD scale to the fourth power, not an integer characteristic number",
+    "cosmologicalConstantRenormalization": "E(0) and every theta-independent vacuum contribution renormalize the independent cosmological counterterm",
+    "nonCancellation": "relaxing theta to a minimum can remove the theta-dependent excess but does not set the additive E(0) or the renormalized cosmological constant to zero",
+    "decision": "Topological susceptibility can transmit a pre-existing strong scale into an axion mass or theta-dependent vacuum energy; it cannot derive that scale or protect the cosmological constant."
+  },
+  "anomalyAxionEscape": {
+    "potential": "V(a)=chi_c[1-cos(theta_c+N_c a/f)]+chi_g[1-cos(theta_g+N_g a/f)]+C",
+    "toyInputs": {"chi_c": 1, "chi_g": 0.2, "N_c": 1, "N_g": 2, "f": 10},
+    "axionMassSquaredAtAlignedMinimum": 0.018,
+    "shiftInvariantAngle": "N_g theta_c-N_c theta_g",
+    "additiveConstant": "C remains unconstrained",
+    "integerDataFix": ["periodicity", "anomaly coefficients N_c and N_g", "domain-wall multiplicity after global identifications"],
+    "integerDataDoNotFix": ["chi_c", "chi_g", "f", "C", "Lambda_QCD", "ell", "kappa"],
+    "decision": "A mixed anomaly can correlate angles, and an axion can dynamically relax one anomalous direction. With one axion an orthogonal angle remains; in all cases the susceptibilities, decay constant and additive vacuum energy are independent dynamical data."
+  },
+  "sharedScaleAttempt": {
+    "qcd": "Lambda_QCD=v exp[-8 pi^2/(b0 g_c(v)^2)] times threshold and scheme factors",
+    "gravity": "M_Pl=sqrt(xi) v and ell^{-1} is fixed only if the selector potential supplies an independent relation ell v = constant",
+    "topologicalFactors": "gauge and gravitational sector weights contain independent actions, determinants and measures even if their integer charges are identified",
+    "requiredPromotionLaw": "an exact symmetry or UV saddle must fix g_c(v), xi, ell v, the two determinant ratios and the bundle map relating Q_c to Q_P or chi",
+    "presentStatus": "none of those laws is derived in the corpus",
+    "decision": "Topology can protect an angle's periodicity or an anomaly coefficient, but not a dimensionful QCD/AdS/Planck/cosmological shared scale."
+  },
+  "exhaustionBoundary": {
+    "closedFiniteRoutes": [
+      "integer Yang-Mills charge by itself fixes the instanton amplitude",
+      "theta periodicity fixes a transmutation scale",
+      "the MacDowell-Mansouri Euler coefficient is quantized by the Euler characteristic",
+      "constant Pontryagin or Nieh-Yan terms change local bulk scale equations",
+      "identifying gauge and gravitational topological charges removes continuous couplings",
+      "topological susceptibility fixes the additive vacuum energy",
+      "large-N branch periodicity fixes the susceptibility scale",
+      "one mixed axion fixes both independent theta angles and the cosmological constant",
+      "one common modulus plus topology predicts Lambda_QCD/M_Pl or Lambda_QCD ell"
+    ],
+    "remainingNonFiniteInputs": [
+      "a well-defined sum over four-manifold topologies and gravitational instanton measure",
+      "a UV bundle correspondence deriving a diagonal characteristic class",
+      "a complete E6 and Spin(2,3) spectrum fixing all instanton determinants and thresholds",
+      "a symmetry or fixed trajectory fixing g_c(v), xi and ell v",
+      "enough axionic directions and anomaly data to remove every physical theta combination",
+      "a vacuum-energy principle fixing the additive cosmological counterterm"
+    ],
+    "programmeDecision": "No presently available topological, instanton, theta, anomaly or axion datum promotes the shared-scale ansatz to a prediction."
+  },
+  "primarySources": [
+    "https://doi.org/10.1016/0370-2693(75)90163-X",
+    "https://doi.org/10.1103/PhysRevD.14.3432",
+    "https://doi.org/10.1103/PhysRevLett.38.1440",
+    "https://arxiv.org/abs/hep-th/9807109",
+    "https://doi.org/10.1103/PhysRevLett.38.739",
+    "https://doi.org/10.1063/1.525379",
+    "https://doi.org/10.1143/PTP.73.803"
+  ]
+}

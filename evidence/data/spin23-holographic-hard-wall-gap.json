@@ -1,0 +1,47 @@
+{
+  "schema": "spin23.holographic-hard-wall-gap/1",
+  "date": "2026-10-21",
+  "status": "exact hard-wall normal-mode witness; bottom-up model input rather than a four-dimensional Yang-Mills construction",
+  "hardWall": {
+    "bulk": "AdS5 scalar dual to the dimension-four operator Tr F^2",
+    "radialProfile": "phi(z)=z^2 J_2(m z)",
+    "infraredBoundary": "Dirichlet at z=z0",
+    "quantization": "J_2(m_n z0)=0",
+    "besselJ2Zeros": [5.135622301840683, 8.417244140399864, 11.61984117214906],
+    "z0InverseGeV": 0.3,
+    "massesGeV": [1.540686690552205, 2.525173242119959, 3.485952351644718],
+    "massRatioSecondToFirst": 1.638992053092183
+  },
+  "sensitivity": {
+    "z0InverseGeVValues": [0.2, 0.3, 0.4],
+    "lightestMassGeV": [1.027124460368137, 1.540686690552205, 2.054248920736273],
+    "logDerivative": 1,
+    "meaning": "the gap is proportional to the imposed infrared wall scale"
+  },
+  "transportAudit": {
+    "positive": [
+      "a confining radial boundary produces a discrete gauge-invariant scalar spectrum",
+      "dimensionless mass ratios follow from the Sturm-Liouville problem once boundary conditions are chosen",
+      "the construction is a useful spectral ansatz and comparison target"
+    ],
+    "missing": [
+      "derivation of the five-dimensional background and wall from the four-dimensional Yang-Mills measure",
+      "proof of holographic duality for finite-N pure four-dimensional Yang-Mills",
+      "Osterwalder-Schrader construction and regulator-independent R4 continuum limit",
+      "removal of Kaluza-Klein and other extra states in top-down confining backgrounds",
+      "prediction of z0 from the Spin(2,3) scale rather than identification by hand"
+    ]
+  },
+  "spin23Boundary": {
+    "bulkGroupMismatch": "AdS5 uses SO(2,4), whereas Spin(2,3) is the AdS4 group",
+    "allowedUse": "Spin(2,3) may motivate an AdS4 gravitational phase, but a 3+1-dimensional Yang-Mills holographic dual requires an additional radial organization and normally an AdS5-like parent",
+    "nonPromotion": "a discrete bulk normal-mode spectrum is not a proof of the boundary Yang-Mills theory unless the duality and boundary theory are constructed"
+  },
+  "sources": [
+    "https://arxiv.org/abs/hep-th/9803131",
+    "https://arxiv.org/abs/hep-th/9903142",
+    "https://arxiv.org/abs/hep-th/0207071",
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf"
+  ],
+  "decision": "Holographic confinement can generate an explicit discrete gap and robust ratios, but the hard-wall scale and dual background are extra inputs. Spin(2,3) alone is dimensionally the wrong AdS group for a direct 4D boundary dual, so this route remains a calculational laboratory rather than the Clay construction."
+}

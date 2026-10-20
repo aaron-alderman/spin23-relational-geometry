@@ -1,0 +1,149 @@
+{
+  "schema": "spin23.radiative-selector-portal-construction/1",
+  "date": "2026-10-21",
+  "status": "explicit positive one-loop scale-invariant portal construction; absolute transmutation scale and color boundary coupling remain inputs",
+  "model": {
+    "fields": [
+      "complex hidden-U(1)_X scalar Phi with radial mode s=sqrt(2)|Phi|",
+      "Spin(2,3) selector radial norm chi in Sigma^A=chi n^A",
+      "N_T complex SU(3) fundamental scalars T_i",
+      "SU(3), U(1)_X and broken Cartan gauge sectors"
+    ],
+    "potential": "V0=lambda_s s^4/4+lambda_chi chi^4/4-lambda_p s^2 chi^2/4+kappa chi^2 sum(T_i^dagger T_i)/2+lambda_T[sum(T_i^dagger T_i)]^2",
+    "inducedGravity": "xi chi^2 R/2",
+    "classicalMassParameters": 0
+  },
+  "benchmarkInputs": {
+    "lambdaS": 0.04,
+    "lambdaChi": 0.01,
+    "lambdaPortal": 0.04,
+    "gX": 0.6,
+    "kappa": 0.1,
+    "lambdaT": 0.1,
+    "numberColorTriplets": 6,
+    "xi": 2,
+    "g3AtV": 0.7
+  },
+  "gildenerWeinbergRay": {
+    "condition": "lambda_p=2 sqrt(lambda_s lambda_chi)",
+    "nS": 0.5773502691896257,
+    "nChi": 0.816496580927726,
+    "nSSquared": 0.3333333333333333,
+    "nChiSquared": 0.6666666666666666,
+    "treeHessianOverVSquared": [[0.02666666666666667, -0.018856180831641266], [-0.018856180831641266, 0.013333333333333332]],
+    "treeEigenvaluesOverVSquared": [0, 0.04],
+    "flatDirectionEigenvector": [0.5773502691896257, 0.816496580927726],
+    "heavyDirectionEigenvector": [-0.816496580927726, 0.5773502691896257],
+    "boundedAtGWScale": true
+  },
+  "oneLoopPotential": {
+    "kX": 0.12,
+    "kH": 0.04,
+    "kT": 0.03333333333333333,
+    "colorScalarRealDegrees": 36,
+    "A": -0.000524326805390947,
+    "B": 0.00013425056832609754,
+    "vOverMuGW": 5.489250653639721,
+    "massesOverV": {
+      "heavyScalar": 0.2,
+      "hiddenVector": 0.34641016151377546,
+      "colorThreshold": 0.18257418583505536,
+      "scalon": 0.03277200858367977
+    },
+    "vacuumEnergyOverV4": -0.00006712528416304877,
+    "positiveB": true
+  },
+  "spin23InducedGravityMatch": {
+    "definitions": [
+      "chi_0=n_chi v",
+      "M_Pl=sqrt(xi) chi_0",
+      "ell^-1=g_A chi_0",
+      "Lambda_grav=-3 ell^-2"
+    ],
+    "minimalVacuumCondition": "V(v)=M_Pl^2 Lambda_grav with no independent vacuum-energy sector",
+    "derivedRelation": "B=6 xi g_A^2 n_chi^4",
+    "gA": 0.005017168679757866,
+    "planckOverV": 1.1547005383792515,
+    "inverseEllOverV": 0.004096501072959971,
+    "planckTimesEll": 281.8748287413264,
+    "lambdaGravityOverV2": -0.00005034396312228658,
+    "einsteinVacuumEnergyOverV4": -0.00006712528416304877,
+    "inverseEllOverScalonMass": 0.125,
+    "qualification": "The relation is derived only in the declared minimal vacuum. Extra vacuum sectors, finite vacuum terms, higher loops or uplift reopen g_A and the curvature."
+  },
+  "colorThresholdMatching": {
+    "bHigh": 10,
+    "bLow": 11,
+    "deltaB": 1,
+    "thresholdOverV": 0.18257418583505536,
+    "g3AtThreshold": 0.7401454146489083,
+    "matching": "Lambda_YM^11=M_T Lambda_H^10",
+    "directFormula": "Lambda_YM/v=k_T^(1/22) exp[-8 pi^2/(11 g_3(v)^2)]",
+    "lambdaYMOverV": 3.7237539299391864e-7,
+    "lambdaYMOverMPlanck": 3.2248655007694744e-7,
+    "g3Scan": [
+      {"g3AtV": 0.6, "lambdaYMOverV": 1.8777442817009826e-9, "lambdaYMOverMPlanck": 1.6261742497640141e-9},
+      {"g3AtV": 0.7, "lambdaYMOverV": 3.7237539299391864e-7, "lambdaYMOverMPlanck": 3.2248655007694744e-7},
+      {"g3AtV": 0.8, "lambdaYMOverV": 0.00001153575255250747, "lambdaYMOverMPlanck": 0.000009990254762242651}
+    ],
+    "kappaScanAtG3Point7": [
+      {"kappa": 0.05, "thresholdOverV": 0.12909944487358055, "lambdaYMOverV": 3.6082597427399005e-7},
+      {"kappa": 0.1, "thresholdOverV": 0.18257418583505536, "lambdaYMOverV": 3.7237539299392065e-7},
+      {"kappa": 0.2, "thresholdOverV": 0.2581988897471611, "lambdaYMOverV": 3.8429448873900627e-7}
+    ]
+  },
+  "logSensitivitiesOfLambdaYMOverMPlanck": {
+    "withRespectToLogG3": 29.29752697911498,
+    "formulaLogG3": "16 pi^2/(11 g_3(v)^2)",
+    "withRespectToLogKappa": 0.045454545454545456,
+    "withRespectToLogXi": -0.5,
+    "withRespectToLogNChi": -0.9090909090909091,
+    "decision": "The explicit scalar portal and threshold powers are mild, while the unfixed color boundary coupling remains exponentially amplified."
+  },
+  "gates": {
+    "passedAtFiniteOneLoopBenchmark": [
+      "nonnegative tree quartic with one GW flat ray",
+      "positive orthogonal-scalar, hidden-vector, colored-threshold and scalon masses squared",
+      "unbroken color at T_i=0",
+      "positive one-loop B and perturbative displayed couplings",
+      "curvature below the lightest scalar mass",
+      "continuous perturbative one-loop color threshold matching"
+    ],
+    "stillOpen": [
+      "complete beta functions, all-scale stability and Landau-pole exclusion",
+      "gauge-, scheme- and curved-space-consistent higher-loop effective action",
+      "UV explanation of the GW boundary condition and g_3(v)",
+      "constructive pure-Yang-Mills Hamiltonian gap",
+      "unique ghost-free covariant Spin(2,3) parent and full constraint algebra"
+    ]
+  },
+  "epistemicBoundary": {
+    "derivedConditionally": [
+      "v/mu_GW and all displayed mass ratios once dimensionless running couplings are supplied",
+      "M_Pl/v from induced gravity",
+      "g_A and ell/v from minimal vacuum-energy backreaction",
+      "the one-loop SU(3) threshold law and Lambda_YM/v"
+    ],
+    "chosen": [
+      "mu_GW and therefore the absolute dimensional scale",
+      "dimensionless couplings and field content",
+      "g_3(v)",
+      "Cartan generator normalization and absence of extra vacuum sectors"
+    ],
+    "notDerived": [
+      "the observed Lambda_QCD/M_Pl hierarchy",
+      "the cosmological constant after additional sectors",
+      "a rigorous Yang-Mills mass gap"
+    ],
+    "programmeDecision": "A genuine positive joined-scale portal exists and reduces three dimensionful inputs to one transmuted scale, but it does not remove the exponential color boundary datum."
+  },
+  "primarySources": [
+    {"title": "Radiative Corrections as the Origin of Spontaneous Symmetry Breaking", "doi": "10.1103/PhysRevD.7.1888"},
+    {"title": "Symmetry Breaking and Scalar Bosons", "doi": "10.1103/PhysRevD.13.3333"},
+    {"title": "Spontaneously Broken de Sitter Symmetry and the Gravitational Holonomy Group", "doi": "10.1103/PhysRevD.21.1466"},
+    {"title": "A Broken-Symmetric Theory of Gravity", "doi": "10.1103/PhysRevLett.42.417"},
+    {"title": "Infrared Singularities and Massive Fields", "doi": "10.1103/PhysRevD.11.2856"},
+    {"title": "Ultraviolet Behavior of Non-Abelian Gauge Theories", "doi": "10.1103/PhysRevLett.30.1343"},
+    {"title": "Reliable Perturbative Results for Strong Interactions?", "doi": "10.1103/PhysRevLett.30.1346"}
+  ]
+}

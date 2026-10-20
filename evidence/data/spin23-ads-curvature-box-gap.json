@@ -1,0 +1,44 @@
+{
+  "schema": "spin23.ads-curvature-box-gap/1",
+  "date": "2026-10-20",
+  "status": "exact global-AdS normal-mode witness; not a Minkowski particle mass or Yang-Mills mass gap",
+  "ads4": {
+    "isometryGroup": "SO(2,3), with double cover Spin(2,3)",
+    "scalarDimensionFormula": "Delta=3/2+sqrt(9/4+m^2 ell^2) in standard quantization",
+    "scalarFrequencyFormula": "omega_(n,l) ell=Delta+l+2n",
+    "masslessScalarDelta": 3,
+    "masslessSpin2LowestEnergyInEllUnits": 3,
+    "masslessSpin2Representation": "D(3,2)",
+    "interpretation": "nonzero lowest global energy follows from curvature, reflecting boundary conditions and the compact spatial slicing; it does not break gauge invariance or create a local Fierz-Pauli mass"
+  },
+  "finiteWitness": {
+    "ell": 2.5,
+    "scalarMassSquaredEllSquared": 0,
+    "modes": [
+      {"n": 0, "l": 0, "omegaEll": 3, "omega": 1.2},
+      {"n": 0, "l": 1, "omegaEll": 4, "omega": 1.6},
+      {"n": 1, "l": 0, "omegaEll": 5, "omega": 2}
+    ],
+    "radialSpacing": 0.8,
+    "angularSpacing": 0.4
+  },
+  "flatLimit": {
+    "ellValues": [1, 2, 4, 8, 16],
+    "lowestMasslessEnergy": [3, 1.5, 0.75, 0.375, 0.1875],
+    "limit": 0,
+    "decision": "the lowest global energy is not uniform in the flat ell-to-infinity limit"
+  },
+  "gapFirewall": {
+    "newType": "curvature/box gap",
+    "notYangMillsGap": "the Yang-Mills problem requires a dynamically generated gauge-invariant continuum spectral gap on R4, whereas this scale is imposed by ell and global boundary conditions",
+    "notGravitonMass": "the massless AdS representation retains gauge symmetry and two helicities despite E0=3/ell",
+    "notAuxiliaryGap": "it supplies no positive mass for torsion, selector or other non-Einstein fields",
+    "observableBoundary": "a claimed physical use must specify the AdS patch, boundary conditions and whether the ell-to-infinity limit is required"
+  },
+  "sources": [
+    "https://arxiv.org/abs/hep-th/9810231",
+    "https://arxiv.org/abs/gr-qc/0611154",
+    "https://doi.org/10.1103/PhysRevLett.38.739"
+  ],
+  "decision": "Spin(2,3) naturally supplies a curvature scale and global AdS level spacing, but this is a seventh gap type and cannot be used as the four-dimensional Yang-Mills gap, a graviton mass, or evidence for gapped extra connection modes."
+}

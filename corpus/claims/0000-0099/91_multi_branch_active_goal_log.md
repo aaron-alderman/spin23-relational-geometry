@@ -26994,3 +26994,43 @@ The scalar geopotential and gravitomagnetic current dipole are now explicitly se
 ## Cycle 1218 — the joined Yang--Mills mass-gap audit exhausts every finite shortcut
 
 Four parallel arms now close the available shortcut space. The compact Yang--Mills arm verifies one-loop dimensional transmutation, a leading SU(2) strong-coupling area law and positive correlator mass extraction while withholding the continuum theorem. The gravity arm retains two massless spin-2 helicities and exhibits a healthy auxiliary projector gap with minimum m^2 ell^2=0.36, while a negative-residue higher-derivative pole and universal Yukawa suppression are stop rules. The real-form arm finds equal dimension ten but Killing signatures (0,10) and (6,4), and proves that even the shared b0=11 of Spin(5) and SU(3) transports no infrared gap. A six-type firewall separates finite-operator, Hessian, band, Liouvillian, transfer and QFT gaps. The joined verifier rejects seven shortcuts and leaves five irreducible arms requiring new constructive estimates or a specified action. Artifacts: [1590](../1500-1599/1590_four_dimensional_yang_mills_mass_gap_is_a_constructive_qft_gate_not_a_group_theory_corollary.md), [1591](../1500-1599/1591_spin23_requires_a_sector_selective_not_universal_gravitational_mass_gap.md), [1592](../1500-1599/1592_compact_real_forms_and_internal_branching_do_not_transport_the_yang_mills_mass_gap.md), [1593](../1500-1599/1593_six_inequivalent_gaps_require_a_type_firewall_before_the_yang_mills_problem_can_join_spin23.md), and [1594](../1500-1599/1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md).
+
+## Cycle 1219 — shortcut exhaustion is rejected and the five arms are reopened
+
+Exact heat-kernel transfer, MacDowell--Mansouri decomposition, E6 threshold running, noncompact reflection positivity and local propagator calculations replace the previous verbal endpoints. The compact finite system is positive, the minimal gravity action remains massless, the threshold hierarchy is exponentially free, the naive real-form bridge has a negative norm, and local Weyl square has a spin-2 ghost. Artifacts: [1595--1599](../1500-1599/1595_exact_su2_heat_kernel_transfer_system_is_reflection_positive_but_does_not_scale_to_the_4d_mass_gap.md).
+
+## Cycle 1220 — deformation routes are calculated rather than listed
+
+Semiclassical continuity, theta/topology, global AdS spacing, large-(N) reduction, supersymmetry and hard-wall holography all produce controlled finite information but fail at a named limit or imported datum. A first-order curvature-pseudoscalar term gives the first positive healthy (0^-) torsion pole. Artifacts: [1600--1606](../1600-1699/1600_center_stabilized_semiclassical_continuity_generates_a_controlled_gap_but_not_an_r4_theorem.md).
+
+## Cycle 1221 — numerical and functional evidence reach their exact boundary
+
+The torsion pole survives AdS, hyperbolicity and the reduced constraint count but not radiative closure. Lattice GEVP and correlated continuum fits give stable glueball evidence. Functional mass generation gives a finite screening scale, while an equal-screening counterexample violates reflection positivity. Artifacts: [1607--1609](../1600-1699/1607_the_gapped_0minus_torsion_mode_survives_ads_and_hyperbolicity_but_not_radiative_closure.md).
+
+## Cycle 1222 — matter and a real one-vev portal are constructed
+
+The (0^-) pole yields an axial contact and polarized Yukawa force but natural coefficients put it at the Planck scale. Independently, a Gildener--Weinberg selector portal gives one radiative vev that sets Spin(2,3), Planck, curvature and colored-threshold scales with a positive finite Hessian. Artifacts: [1611](../1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md) and [1612](../1600-1699/1612_a_radiative_selector_portal_joins_spin23_planck_and_yang_mills_scales_but_retains_one_color_boundary.md).
+
+## Cycle 1223 — symmetry, moments and the full axial kernel close three loopholes
+
+One-form anomalies constrain phases but do not select a gap. Positive moment localizers rigorously exclude gaps that are too large, while arbitrarily small overlap hides arbitrarily light states in finite noisy data. The complete local axial action has an exact sign contradiction between healthy spin 1 and spin 0. Artifacts: [1613--1615](../1600-1699/1613_one_form_center_symmetry_and_theta_pi_anomalies_constrain_phases_but_do_not_prove_the_mass_gap.md).
+
+## Cycle 1224 — fixed points and finite Hamiltonians become conditional proof modules
+
+An interacting gauge--gravity fixed point can make color irrelevant and predict its portal boundary, but coefficient uncertainty moves the hierarchy by fourteen orders. A certified SU(2) one-plaquette Hamiltonian gap converges at each coupling but becomes a cutoff rotor scale rather than the four-dimensional continuum gap. Artifacts: [1616](../1600-1699/1616_asymptotic_safety_can_conditionally_fix_the_color_boundary_but_not_without_a_spin23_universality_class.md) and [1617](../1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md).
+
+## Cycle 1225 — nonlocal/bimetric and loop-bootstrap routes reach precise costs
+
+An entire zero-free form factor retains only the Einstein pole; full bimetric theory admits healthy massless and massive spin 2 but imports a second metric. The Wilson-loop bootstrap gives rapidly convergent rigorous local bounds while finite loop cutoffs retain spurious positive solutions and no temporal support exclusion. Artifacts: [1618](../1600-1699/1618_entire_and_bimetric_completions_evade_the_finite_spin2_ghost_but_import_new_parent_structure.md) and [1619](../1600-1699/1619_wilson_loop_bootstrap_certifies_local_observables_but_not_the_four_dimensional_mass_gap.md).
+
+## Cycle 1226 — vacuum energy and stochastic time close two false identifications
+
+The portal vacuum has the wrong sign and is (5.27\times10^{115}) observed dark-energy densities in magnitude; sequestering removes constant loop sensitivity only conditionally and leaves the residual unset. The stochastic Fokker--Planck gap rescales with auxiliary mobility while the equilibrium measure and physical rotor spectrum do not. Artifacts: [1620](../1600-1699/1620_the_radiative_selector_portal_predicts_the_wrong_vacuum_and_only_sequestering_removes_its_loop_sensitivity.md) and [1621](../1600-1699/1621_the_stochastic_quantization_relaxation_gap_is_mobility_dependent_and_not_the_physical_yang_mills_gap.md).
+
+## Cycle 1227 — the critical full PGT class survives and closes the weak-field gate
+
+A published critical parity-even PGT class has the massless graviton plus one healthy gapped pseudoscalar, three configuration degrees and a nonzero analyzed nonlinear determinant. It is a tuned classical/EFT surface. Its stationary source blocks leave unpolarized Lense--Thirring exactly GR and add only an intrinsic-spin Yukawa torque. Artifacts: [1622](../1600-1699/1622_the_full_local_pgt_route_contains_a_healthy_critical_pseudoscalar_sector_but_not_an_open_quantum_region.md) and [1623](../1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md).
+
+## Cycle 1228 — bounded exhaustion reaches five irreducible new-input gates
+
+Twenty route families and 28 new claims now terminate in positive constructions, exact no-gos/counterexamples or five irreducible gates: constructive four-dimensional Yang--Mills, a radiatively closed Spin(2,3) quantum action, a predictive color fixed point, radiatively stable positive vacuum energy and complete matter descent. No remaining finite rescan of the declared structures changes those logical types. Artifact: [1624](../1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md).

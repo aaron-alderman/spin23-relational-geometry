@@ -1,0 +1,37 @@
+{
+  "schema": "spin23.one-form-anomaly-mass-gap-boundary.v1",
+  "claim": 1613,
+  "result": "center symmetry and its mixed CP anomaly constrain infrared phases but do not prove a positive bulk mass gap or transport one to broken Spin(2,3)",
+  "theta_pi_anomaly_matching": [
+    {"phase": "unique_trivial_gapped_CP_and_center_symmetric", "allowed": false},
+    {"phase": "gapped_CP_broken_two_vacua_center_symmetric", "allowed": true},
+    {"phase": "gapped_center_broken", "allowed": true},
+    {"phase": "gapless_anomaly_matching", "allowed": true},
+    {"phase": "gapped_topological_order", "allowed": true}
+  ],
+  "finite_countermodel": {
+    "description": "a sector with nonzero string tension and unbroken one-form center tensored with a neutral massless scalar",
+    "string_tension": 1.0,
+    "box_lengths": [8, 16, 32, 64, 128],
+    "neutral_gaps": [0.7853981633974483, 0.39269908169872414, 0.19634954084936207, 0.09817477042468103, 0.04908738521234052],
+    "formula": "Delta_neutral(L)=2*pi/L",
+    "infinite_volume_gap": 0.0,
+    "center_order_unchanged": true
+  },
+  "logical_nonimplications": [
+    "unbroken_one_form_center_does_not_imply_a_gap_for_center_neutral_local_states",
+    "area_law_does_not_supply_reflection_positivity_or_a_uniform_continuum_bound",
+    "theta_pi_anomaly_does_not_select_gapped_CP_breaking_over_gapless_matching",
+    "domain_wall_TQFT_data_do_not_set_the_bulk_glueball_mass",
+    "the_center_of_a_group_does_not_identify_the_real_form_or_physical_Hilbert_space"
+  ],
+  "spin23_boundary": {
+    "compact_color_center": "Z_3 for pure SU(3)",
+    "spin23_cover_center": "Z_2",
+    "center_isomorphism": false,
+    "fundamental_color_matter_explicitly_breaks_pure_YM_one_form_center": true,
+    "broken_gravity_requires_massless_spin2": true,
+    "scale_transport": false
+  },
+  "reopening_condition": "combine the symmetry/anomaly classification with a positive gauge-invariant reconstruction and a uniform lower spectral bound in every center-neutral channel"
+}

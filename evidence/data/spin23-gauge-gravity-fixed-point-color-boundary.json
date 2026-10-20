@@ -1,0 +1,88 @@
+{
+  "schema": "spin23.gauge-gravity-fixed-point-color-boundary/1",
+  "date": "2026-10-21",
+  "status": "explicit coupled fixed-point and critical-trajectory test; coefficients are illustrative truncation data, not a derived Spin(2,3) beta function",
+  "betaSystem": {
+    "t": "log(k/k_transition)",
+    "betaG": "2 G (1-G)",
+    "betaGauge": "g[-f G-b g^2+c g^4]",
+    "b": 0.06965831375410722,
+    "bDefinition": "11/(16 pi^2)",
+    "interpretation": {
+      "f": "gravitational antiscreening coefficient",
+      "c": "higher-order gauge-gravity closure coefficient",
+      "warning": "f and c are not derived for the corpus Spin(2,3) action"
+    }
+  },
+  "gaussianGaugeFixedPoint": {
+    "coordinates": {"G": 1, "g": 0},
+    "stabilityMatrix": [[-2, 0], [0, -0.01]],
+    "criticalExponentsAtBenchmarkF": [2, 0.01],
+    "classification": "both directions relevant in the asymptotic-safety convention theta=-eig(B); finite-scale gauge amplitude remains a free trajectory parameter",
+    "fZeroLimit": "g is marginally asymptotically free and Lambda_color is an integration constant"
+  },
+  "interactingBenchmark": {
+    "inputs": {"f": 0.01, "c": 0.5, "GStar": 1},
+    "gStarSquared": 0.22730437515452928,
+    "gStar": 0.4767644860458141,
+    "gaugeStabilityEigenvalue": 0.07166727896439098,
+    "stabilityMatrix": [[-2, 0], [-0.004767644860458141, 0.07166727896439098]],
+    "criticalExponents": [2, -0.07166727896439098],
+    "criticalSurfaceSlope": 0.0023013564527801234,
+    "slopeFormula": "q=f gStar/(L+2)",
+    "classification": "gravity is relevant and color is irrelevant, so color has no independent UV integration constant"
+  },
+  "criticalTrajectory": {
+    "gravitySolution": "G(t)=1/(1+exp(-2t))",
+    "transitionIdentification": "k_transition=M_Pl",
+    "planckOverVFromClaim1612": 1.1547005383792515,
+    "tAtV": -0.1438410362258904,
+    "GAtV": 0.42857142857142855,
+    "integrationStartT": 12,
+    "integrationStepMagnitude": 0.002,
+    "g3AtV": 0.474833851489409,
+    "portalKT": 0.03333333333333333,
+    "lambdaYMOverMPlanck": 1.1074962462305372e-14,
+    "formula": "kT^(1/22) exp[-8 pi^2/(11 g3(v)^2)]/(M_Pl/v)",
+    "decision": "Within the declared beta system, fixed-point irrelevance plus the gravity crossover removes the independent g3(v) boundary datum."
+  },
+  "coefficientSensitivityScan": [
+    {"f": 0.005, "c": 0.5, "gStar": 0.43763940314775684, "gaugeCriticalExponent": -0.04668306947072562, "g3AtV": 0.43673920110841563, "lambdaYMOverMPlanck": 3.3666041351512795e-17},
+    {"f": 0.01, "c": 0.5, "gStar": 0.4767644860458141, "gaugeCriticalExponent": -0.07166727896439098, "g3AtV": 0.474833851489409, "lambdaYMOverMPlanck": 1.1074962462305372e-14},
+    {"f": 0.02, "c": 0.5, "gStar": 0.5305109651228804, "gaugeCriticalExponent": -0.1192095341345445, "g3AtV": 0.5263388084909408, "lambdaYMOverMPlanck": 4.148093835561147e-12},
+    {"f": 0.01, "c": 0.25, "gStar": 0.6189155793604243, "gaugeCriticalExponent": -0.09336613894145124, "g3AtV": 0.616440994317892, "lambdaYMOverMPlanck": 4.644134443840172e-9},
+    {"f": 0.01, "c": 1, "gStar": 0.37512790093220877, "gaugeCriticalExponent": -0.05960476706727225, "g3AtV": 0.37359796937432777, "lambdaYMOverMPlanck": 3.4362820603788205e-23}
+  ],
+  "signAndExistenceTests": {
+    "cZeroFPositive": "only the Gaussian color fixed point exists and theta_g=f>0, leaving the gauge trajectory free",
+    "cZeroFNegative": "an interacting root gStar^2=-f/b exists but theta_g=-2f>0, so it is relevant and still free",
+    "requiredForPrediction": "an interacting fixed point with negative gauge critical exponent plus a fixed relevant gravity trajectory and matching map"
+  },
+  "schemeAndTruncationBoundary": {
+    "issues": [
+      "perturbative gravitational correction to the gauge kinetic term has appeared gauge dependent or absent in different calculations",
+      "functional-RG fixed-point coordinates depend on gauge, regulator and truncation",
+      "higher-dimensional operators can move or remove the interacting root represented by c",
+      "Einstein-Cartan or broken Spin(2,3) theory need not share the metric-gravity universality class",
+      "physical predictivity requires stable critical exponents and an observable matching map, not fixed-point coordinates alone"
+    ],
+    "scanSpanOrdersOfMagnitude": 14.130815978892397,
+    "decision": "The toy removes g3(v) only by supplying f, c, the gravity trajectory and matching. Those are not yet corpus-derived universal data."
+  },
+  "closureConditions": [
+    "nonperturbative definition of the quantum broken-Spin(2,3) plus portal theory",
+    "gauge-gravity fixed point with finite-dimensional UV critical surface",
+    "irrelevant color exponent stable under systematic truncation enlargement",
+    "unique critical trajectory through all selector thresholds and induced operators",
+    "gauge-invariant observable matching to low-energy MSbar color and pure-YM threshold"
+  ],
+  "programmeDecision": "Asymptotic safety can remove the color boundary in a specified beta system, but presently trades g3(v) for unestablished fixed-point, critical-trajectory and universality-class data.",
+  "primarySources": [
+    {"title": "Gravitational Correction to Running of Gauge Couplings", "arxiv": "hep-th/0509050"},
+    {"title": "Gauge Dependence of Gravitational Correction to Running of Gauge Couplings", "arxiv": "hep-th/0606208"},
+    {"title": "Absence of Gravitational Contributions to the Running Yang-Mills Coupling", "arxiv": "0710.1002"},
+    {"title": "Running Gauge Coupling in Asymptotically Safe Quantum Gravity", "arxiv": "0910.4938"},
+    {"title": "Upper Bound on the Abelian Gauge Coupling from Asymptotic Safety", "arxiv": "1709.07252"},
+    {"title": "Einstein-Cartan Gravity, Asymptotic Safety, and the Running Immirzi Parameter", "arxiv": "1301.5135"}
+  ]
+}

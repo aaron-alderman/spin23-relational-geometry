@@ -1,0 +1,40 @@
+{
+  "schema": "spin23.noncompact-reflection-positivity-obstruction/1",
+  "date": "2026-10-20",
+  "status": "exact Gaussian reflection-positivity obstruction for a naive unbroken adjoint kinetic form; constrained broken gravity remains open",
+  "algebra": {
+    "group": "Spin_0(2,3)",
+    "dimension": 10,
+    "killingSignaturePositiveNegative": [6, 4],
+    "overallSignReversedSignaturePositiveNegative": [4, 6],
+    "theoremBoundary": "a real semisimple Lie algebra admits a positive-definite ad-invariant inner product only in the compact case",
+    "consequence": "no overall sign makes the Killing kinetic form positive on all ten adjoint directions"
+  },
+  "gaussianWitness": {
+    "mass": 1.3,
+    "positiveTimeSamples": [0.25, 0.8, 1.4],
+    "testCoefficients": [1, -0.4, 0.7],
+    "scalarKernel": "C(t,s)=exp[-m(t+s)]/(2m) for t,s>0",
+    "internalMetricDiagonal": [1, 1, 1, 1, 1, 1, -1, -1, -1, -1],
+    "positiveDirectionOSNorm": 0.1855455632994728,
+    "negativeDirectionOSNorm": -0.1855455632994728,
+    "rankOneFactorization": "Q_eta(v,f)=(v^T eta v)/(2m) |sum_i f_i exp(-m t_i)|^2"
+  },
+  "interpretation": {
+    "rejected": "analytic continuation of an ordinary compact adjoint Gaussian using the noncompact Killing form while retaining all adjoint directions as positive-norm physical oscillators",
+    "notRejected": "a broken Cartan-gravity theory in which diffeomorphism/local-Lorentz constraints and BRST cohomology remove unphysical directions and the coframe is not an ordinary adjoint Yang-Mills vector",
+    "requiredEscape": [
+      "select a compact or otherwise positive physical subspace after symmetry breaking",
+      "derive the constraint/BRST cohomology and show negative directions are nonphysical",
+      "construct reflection-positive gauge-invariant observables directly rather than continue adjoint components",
+      "verify positive saturated residues for every surviving pole"
+    ]
+  },
+  "sources": [
+    "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/Axioms-for-Euclidean-Greens-functions/cmp/1103858969.pdf",
+    "https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II-with-an-Appendix-by/cmp/1103899050.pdf",
+    "https://arxiv.org/abs/2010.12515",
+    "https://arxiv.org/abs/1512.02191"
+  ],
+  "decision": "The naive compact-to-Spin(2,3) Gaussian bridge fails reflection positivity exactly. Any viable route must use symmetry breaking and physical constraint reduction, not analytic continuation of the full adjoint kinetic form."
+}

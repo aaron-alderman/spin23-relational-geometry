@@ -1,5 +1,7 @@
 # Lense–Thirring Is the Vector-Sector Gravity Gate Beyond the Scalar Geopotential
 
+**Subsequent result (21 October 2026):** the gate is executed for the surviving critical (0^-) sector in [claim 1623](../1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md). Unpolarized orbital rotation retains the exact GR coefficient at tree level; intrinsic polarization sources the new Yukawa torque.
+
 **Date:** 20 October 2026
 
 **Gates:** A1, A2, A4, A6, A7 and A8

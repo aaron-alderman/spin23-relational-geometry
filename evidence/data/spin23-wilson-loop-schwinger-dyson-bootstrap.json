@@ -1,0 +1,77 @@
+{
+  "schema": "spin23.wilson-loop-schwinger-dyson-bootstrap/1",
+  "date": "2026-10-21",
+  "status": "executable U(1) loop-equation plus Toeplitz-positivity hierarchy with converging plaquette bounds; finite-cutoff positive solutions remain nonunique and no 4D mass-gap certificate follows",
+  "model": {
+    "measure": "d mu_beta(theta)=exp(beta cos(theta)) dtheta/(2 pi I0(beta))",
+    "beta": 2,
+    "moments": "w_n=<cos(n theta)>=I_n(beta)/I_0(beta)",
+    "plaquette": "u=w_1",
+    "exactPlaquette": 0.697774657964008,
+    "interpretation": "one compact U(1) plaquette, equivalently the independent-plaquette building block of two-dimensional U(1) lattice gauge theory on a simply connected lattice"
+  },
+  "loopEquation": {
+    "integrationByParts": "0=integral dtheta d/dtheta[sin(n theta) exp(beta cos(theta))] after trigonometric reduction",
+    "recurrence": "w_(n+1)=w_(n-1)-(2n/beta) w_n for n>=1",
+    "initialData": "w_0=1 and w_1=u",
+    "finiteCutoffConsequence": "every retained moment is affine in u, but the loop equation alone leaves u free"
+  },
+  "positivityRelaxation": {
+    "matrix": "T_K(u)_(ij)=w_|i-j|(u), i,j=0,...,K",
+    "origin": "for any coefficients c_i, c* T_K c=<|sum_i c_i exp(i i theta)|^2> >=0",
+    "optimization": "minimize and maximize u subject to T_K(u) positive semidefinite",
+    "cutoffs": [1, 2, 3, 4, 5, 6, 7, 8],
+    "endpointTolerance": 1e-11,
+    "expectedProperties": [
+      "the exact Bessel ratio is feasible at every cutoff",
+      "lower bounds are nondecreasing and upper bounds are nonincreasing",
+      "the interval width decreases with loop cutoff",
+      "each finite cutoff admits a continuum of positive loop-equation solutions"
+    ]
+  },
+  "certifiedBounds": [
+    {"K": 1, "lower": -1.000000000010, "upper": 1.000000000010, "width": 2.000000000020},
+    {"K": 2, "lower": -0.000000000010, "upper": 0.780776406410, "width": 0.780776406420},
+    {"K": 3, "lower": 0.548583770351, "upper": 0.732050807572, "width": 0.183467037221},
+    {"K": 4, "lower": 0.666666666665, "upper": 0.712424885397, "width": 0.045758218732},
+    {"K": 5, "lower": 0.691187450436, "upper": 0.702774427662, "width": 0.011586977226},
+    {"K": 6, "lower": 0.696484724300, "upper": 0.698976607655, "width": 0.002491883355},
+    {"K": 7, "lower": 0.697554467027, "upper": 0.697991842888, "width": 0.000437375861},
+    {"K": 8, "lower": 0.697742300243, "upper": 0.697806944940, "width": 0.000064644697}
+  ],
+  "finiteCutoffMultiplicity": {
+    "statement": "PSD of a truncated Toeplitz matrix constrains only positive trigonometric polynomials up to the retained degree; it does not guarantee that the recursively continued infinite sequence remains positive",
+    "spuriousWitnessRule": "at each cutoff where possible choose a point strictly inside the K-feasible interval that violates positivity at K+1",
+    "meaning": "finite loop equations plus positivity are relaxations, not uniqueness theorems"
+  },
+  "fourDimensionalBoundary": {
+    "newComplexity": [
+      "self-intersecting Wilson loops split into products and at finite N require multiple-trace variables",
+      "many geometrically distinct loops share a length cutoff",
+      "Hermitian, reflection and twist-reflection positivity give different semidefinite matrices",
+      "large-N factorization closes a different hierarchy from fixed SU(3)"
+    ],
+    "massGapObservable": "connected gauge-invariant correlators at increasing Euclidean time, not the one-plaquette expectation alone",
+    "requiredSupportStatement": "a positive mass gap requires uniform exclusion of temporal spectral support near exp(-a Delta)=1",
+    "requiredLimits": "loop cutoff and t_max to infinity, volume to infinity, and a to zero must be controlled uniformly",
+    "whyPlaquetteBoundsAreInsufficient": "two-sided bounds on local Wilson loops can converge while arbitrarily small positive spectral weight remains at arbitrarily low energy"
+  },
+  "relationshipToPublishedBootstrap": {
+    "largeN": "Kazakov and Zheng combine Makeenko-Migdal equations, loop-length cutoffs and positivity to bound plaquettes in D=2,3,4 at SU(infinity)",
+    "densityMatrix": "Anderson and Kruczenski formulate positive Wilson-loop matrices from open paths and demonstrate strong finite-cutoff performance",
+    "finiteSU3": "Guo, Li, Yang and Zhu incorporate multiple traces and Hermitian/reflection/twist-reflection positivity to bound SU(3) plaquettes in D=2,3,4",
+    "unclosedGate": "these plaquette bounds do not yet give a regulator-uniform temporal spectral support exclusion proving the SU(3) mass gap"
+  },
+  "spin23Boundary": {
+    "useful": "loop positivity offers a gauge-invariant interface for testing any compact internal sector proposed alongside Spin(2,3)",
+    "notABridge": "Spin(2,3) does not close the fixed-N Wilson-loop hierarchy or supply uniform temporal support bounds; spacetime symmetry cannot replace the compact gauge measure"
+  },
+  "sources": [
+    "https://arxiv.org/abs/1612.08140",
+    "https://arxiv.org/abs/2203.11360",
+    "https://arxiv.org/abs/2502.14421",
+    "https://doi.org/10.1016/0550-3213(81)90258-6",
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf"
+  ],
+  "decision": "Wilson-loop bootstrap gives rigorous finite-cutoff bounds when loop equations are combined with positivity, but finite relaxations contain multiple and sometimes nonextendable positive solutions. Converged plaquette bounds are not a mass-gap proof; that requires temporal spectral support exclusion uniform in loop cutoff, time, volume and continuum limits."
+}

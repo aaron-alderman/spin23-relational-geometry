@@ -1,0 +1,116 @@
+{
+  "schema": "spin23.positive-spectral-moment-gap-bounds/1",
+  "date": "2026-10-21",
+  "status": "executable Hankel/localizing bounds and interval-noise counterexample; exact flat spectra are recoverable but noisy finite windows do not certify a positive lower gap",
+  "momentMap": {
+    "euclideanCorrelator": "C_n=integral exp(-E n tau) d rho(E)",
+    "hausdorffVariable": "x=exp(-E tau) in [0,1]",
+    "momentSequence": "C_n=integral x^n d mu(x)",
+    "gapRelation": "Delta=-log(x_max)/tau",
+    "hankel": "H0_ij=C_(i+j)",
+    "shiftedHankel": "H1_ij=C_(i+j+1)",
+    "supportLocalizer": "support in [0,R] requires H1 positive semidefinite and R H0-H1 positive semidefinite",
+    "effectiveMassDirection": "C_(n+1)/C_n <= x_max, hence Delta <= -log(C_(n+1)/C_n)/tau"
+  },
+  "exactSpectrum": {
+    "tau": 1,
+    "energies": [0.4, 1.1],
+    "weights": [0.7, 0.3],
+    "xAtoms": [0.6703200460356393, 0.33287108369807955],
+    "moments0Through16": [
+      1,
+      0.5690853573343714,
+      0.34777122239075525,
+      0.2219008985589134,
+      0.1450107645671793,
+      0.09596072969716811,
+      0.0639106777138531,
+      0.0427028919925186,
+      0.028578762707384985,
+      0.01914165811772164,
+      0.012825957732350998,
+      0.008595805786120401,
+      0.00576137811467329,
+      0.0038617798980203795,
+      0.0025885661172753184,
+      0.0017351470004765797,
+      0.001163096907359732
+    ],
+    "exactClaims": [
+      "H0 and H1 are positive definite for the 2 by 2 pencil",
+      "the generalized eigenvalues of H1 v=x H0 v are exactly the two x atoms",
+      "the 3 by 3 Hankel matrix is positive semidefinite and flat with rank two",
+      "flatness plus exact moments gives the unique two-atomic representing measure in this witness",
+      "the recovered largest x atom gives Delta=0.4 exactly"
+    ]
+  },
+  "effectiveMassWitness": {
+    "sampleIndices": [0, 1, 2, 4, 8],
+    "values": [0.5637248432166824, 0.4924855791007823, 0.4493139773476018, 0.4128689359362226, 0.4007968660182378],
+    "interpretation": "each value is an upper bound on the true lowest energy 0.4 and decreases toward it"
+  },
+  "intervalNoiseWitness": {
+    "observedCentralMoments": "exactSpectrum moments",
+    "maximumObservedIndex": 10,
+    "relativeHalfWidth": 0.000002,
+    "absoluteFloor": 1e-12,
+    "intervalRule": "|C_n-C_n_central| <= max(relativeHalfWidth*C_n_central,absoluteFloor)",
+    "hiddenSpectrum": {
+      "energy": 0.01,
+      "weight": 1e-8,
+      "remainingSpectrumScale": 0.99999999,
+      "maximumRelativeDeviationThroughObservedWindow": 6.954735691452001e-7,
+      "firstIndexExceedingRelativeHalfWidth": 13,
+      "groundStateCrossoverTime": 46.317963564137514,
+      "trueGap": 0.01
+    },
+    "consequence": "the interval box contains both the central spectrum with gap 0.4 and a positive spectrum with gap 0.01, so it cannot certify any lower gap above 0.01"
+  },
+  "localizingCertificate": {
+    "excludedGapHypothesis": 0.5,
+    "excludedSupportCeiling": 0.6065306597126334,
+    "witnessVector": [-0.33287108369807955, 1],
+    "logic": "if all E>=0.5 then x<=exp(-0.5), so v^T(R H0-H1)v must be nonnegative; a strictly negative interval upper bound refutes that hypothesis",
+    "compatibleCentralGapHypothesis": 0.3,
+    "warning": "feasibility of the central exact sequence at gap 0.3 is not a robust lower-gap certificate for the whole noise box"
+  },
+  "finiteWindowScaling": {
+    "indices": [0, 2, 4, 8, 16, 32, 48, 64, 96],
+    "claim": "the hidden-state effective mass remains close to 0.4 before its tiny residue is resolved, crosses over near t=46.3, and only later approaches 0.01",
+    "generalRule": "for residue epsilon and energies Delta_hidden<Delta_visible, crossover is log(w_visible/epsilon)/(Delta_visible-Delta_hidden)"
+  },
+  "certificationBoundary": {
+    "rigorousFromExactFiniteData": [
+      "Hankel reflection-positivity checks",
+      "effective-mass and generalized-Ritz upper bounds on the lowest energy",
+      "exclusion of a proposed too-large gap by a negative localizing quadratic form",
+      "exact atom recovery when an exact flat-extension/rank hypothesis holds"
+    ],
+    "notRigorousUnderNonzeroIntervalsWithoutExtraAssumptions": [
+      "a strictly positive lower bound on the energy of every state with arbitrarily small overlap",
+      "exact Hankel rank or exact finite-atomicity",
+      "absence of spectral weight below the fitted plateau",
+      "uniformity as lattice spacing tends to zero and volume and Euclidean time tend to infinity"
+    ],
+    "assumptionsThatCouldChangeTheAnswer": [
+      "a proved positive lower bound on spectral residue for every state in the channel",
+      "an exact finite-atomic spectrum and flat moment extension",
+      "an analytic tail bound uniform in cutoff and volume",
+      "all moments known exactly rather than a finite noisy prefix"
+    ]
+  },
+  "continuumVolumeBoundary": {
+    "finiteLattice": "the moment test applies to the sampled finite-volume finite-cutoff transfer spectrum",
+    "missingUniformity": "a Yang-Mills gap theorem needs estimates uniform in a->0, L->infinity and t_max->infinity, including overlap control near zero energy",
+    "spin23": "the same moment cone can audit any reflection-positive Spin(2,3)-adjacent Euclidean channel, but group representation theory alone supplies neither reflection positivity nor the required uniform limits"
+  },
+  "sources": [
+    "https://doi.org/10.1007/BF01614090",
+    "https://doi.org/10.1016/0550-3213(90)90540-T",
+    "https://arxiv.org/abs/math/0610882",
+    "https://arxiv.org/abs/math/0507067",
+    "https://doi.org/10.1007/BF01645738",
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf"
+  ],
+  "decision": "Finite reflection-positive samples yield rigorous positivity tests and upper bounds on the gap, and can refute a proposed gap that is too large. Exact flat data can recover a finite atomic spectrum. With any nonzero interval noise and no residue floor, a tiny positive low-energy atom can remain invisible, so a positive lower gap and its continuum-volume uniformity are not certified."
+}

@@ -1,0 +1,157 @@
+{
+  "schema": "spin23.pseudoscalar-torsion-fermion-portal/1",
+  "date": "2026-10-21",
+  "status": "fermion matching and phenomenology audit of the claim-1607 healthy 0-minus torsion EFT patch",
+  "conventions": {
+    "torsionVector": "S^mu=epsilon^{alpha beta gamma mu}T_{alpha beta gamma}",
+    "axialCurrent": "J_5,f^mu=bar(psi_f) gamma^mu gamma_5 psi_f",
+    "interaction": "L_int=sum_f c_f S_mu J_5,f^mu",
+    "minimalDiracBenchmark": "c_f=1/8 in this S_mu convention, up to an overall sign that drops out of identical-species exchange",
+    "axialQuadraticAction": "L=(a_S/2)S^2+(b_X/2)(partial.S)^2+S.J_c, where J_c=sum_f c_f J_5,f",
+    "spin23Mapping": "a_S=M_Pl^2(1-4lambda)/24"
+  },
+  "exactExchangeKernel": {
+    "projectors": "P_L^{mu nu}=p^mu p^nu/p^2; P_T=eta-P_L",
+    "inverseKernel": "K^{-1}=P_T/a_S+P_L/(a_S+b_X p^2)",
+    "currentEffectiveAction": "L_eff=-(1/2)J_c.[P_T/a_S+P_L/(a_S+b_X p^2)].J_c",
+    "contactPlusPoleForm": "L_eff=-(J_c^2)/(2a_S)+(b_X/(2a_S)) (p.J_c)^2/(a_S+b_X p^2)",
+    "interpretation": "the transverse axial torsion is algebraic and gives a local axial-axial operator; only the longitudinal divergence carries the 0-minus pole"
+  },
+  "canonicalPseudoscalarMatching": {
+    "field": "varphi=chi/sqrt(a_S)",
+    "massSquared": "m_phi^2=a_S/b_X",
+    "derivativeCouplings": "L_int=sum_f f_f partial_mu varphi J_5,f^mu with f_f=c_f/sqrt(a_S)",
+    "wardIdentity": "partial_mu J_5,f^mu=2 i m_f bar(psi_f)gamma_5 psi_f + gauge-anomaly terms",
+    "onShellYukawa": "L_int=-i sum_f y_f varphi bar(psi_f)gamma_5 psi_f plus anomaly terms, with y_f=2m_f f_f",
+    "massCouplingIdentity": "f_f m_phi=c_f/sqrt(b_X)",
+    "e6Qualification": "the E6-to-Spin(10)-to-SM representation chain supplies chiral fermion slots but does not fix c_f, the exotic thresholds, flavor rotations, or anomaly coefficients; minimal geometry gives a universal elementary-fermion benchmark, not an E6-specific numerical prediction"
+  },
+  "lowEnergyMatching": {
+    "regime": "|p^2| much less than m_phi^2",
+    "expansion": "L_eff=-(J_c^2)/(2a_S)+(b_X/(2a_S^2))(p.J_c)^2+O(p^4/m_phi^4)",
+    "dimensionSixWilsonMatrixConvention": "with L_eff=-(1/2)sum_fg C_AA,fg J_5,f.J_5,g, C_AA,fg=c_f c_g/a_S",
+    "dimensionEightLongitudinalMatrix": "with +(1/2)sum_fg C_dA,fg (partial.J_5,f)(partial.J_5,g), C_dA,fg=c_f c_g b_X/a_S^2=c_f c_g/(a_S m_phi^2)",
+    "minimalEinsteinCartanMagnitude": "for c_f=1/8 and lambda=0, the single-current coefficient c^2/(2a_S)=3/(16 M_Pl^2), matching the conventional Einstein-Cartan four-fermion magnitude up to signature/sign conventions"
+  },
+  "staticPolePotential": {
+    "definition": "Y_m(r)=exp(-m r)/(4 pi r)",
+    "operatorForm": "V_pole(r)=+f_1 f_2 sigma_1^i sigma_2^j partial_i partial_j Y_m(r) in the Fadeev-et-al. corrected-sign convention",
+    "expandedForm": "V_pole=f_1 f_2{exp(-mr)/(4pi)[-(sigma1.sigma2)(m/r^2+1/r^3)+(sigma1.rhat)(sigma2.rhat)(m^2/r+3m/r^2+3/r^3)]-(sigma1.sigma2)delta^3(r)/3}",
+    "separateLocalTerm": "the algebraic -J_c^2/(2a_S) operator adds a zero-range spin-spin interaction; it is not part of the separated-body Yukawa tail",
+    "selection": "unpolarized macroscopic sources average the one-pseudoscalar dipole-dipole force to zero; polarized torsion balances, comagnetometers, atomic spectroscopy and spin-precession experiments are the direct probes"
+  },
+  "finiteWitness": {
+    "M_Pl_GeV": 2.435e18,
+    "lambda": 0,
+    "delta": 1,
+    "b_X": 0.041666666666666664,
+    "c_minimal": 0.125,
+    "electronMass_GeV": 0.00051099895,
+    "nucleonMass_GeV": 0.938918,
+    "a_S_GeV2": 2.4705104166666667e35,
+    "m_phi_GeV": 2.435e18,
+    "f_GeVminus1": 2.5148765326315997e-19,
+    "y_e": 2.5701985351087764e-22,
+    "y_N_elementaryBenchmark": 4.722525688530793e-19,
+    "singleCurrentContactCoefficient_GeVminus2": 3.1623019871905686e-38,
+    "interpretation": "order-one b_X and a noncritical torsion mass coefficient put the pole at the Planck scale and all fermion effects at gravitational strength"
+  },
+  "decouplingAndCriticalLimits": [
+    {
+      "limit": "b_X to 0 at fixed a_S",
+      "result": "m_phi to infinity and the propagating Yukawa tail disappears, while the algebraic Einstein-Cartan axial-axial contact remains"
+    },
+    {
+      "limit": "a_S to infinity at fixed c_f and b_X",
+      "result": "both f_f and the contact Wilson coefficient vanish"
+    },
+    {
+      "limit": "c_f to 0",
+      "result": "the fermion portal vanishes even though the pure torsion pole remains"
+    },
+    {
+      "limit": "lambda to 1/4 from below",
+      "result": "m_phi decreases and f_f diverges at fixed b_X; this is not a controlled enhancement because the Dirac constraint matrix loses rank at a_S=0"
+    },
+    {
+      "limit": "m_phi r much greater than 1",
+      "result": "the separated-body pole potential is exponentially suppressed, leaving only unresolved contact physics"
+    }
+  ],
+  "observableMap": {
+    "laboratorySeparatedSpinSources": "the potential is precisely the generic pseudoscalar dipole-dipole potential tested by torsion pendula, trapped spins, magnetometers and comagnetometers; Terrano et al. cover mediator masses up to 500 micro-eV and report sensitivities to couplings up to 14 orders below electromagnetism",
+    "atomicAndMolecular": "the delta-function and short-range tensor pieces shift hyperfine/spin-dependent levels; nuclear and electronic matrix elements are required before applying spectroscopy limits",
+    "colliderAndContact": "for m_phi above momentum transfer the observable is an axial-axial contact operator; ordinary propagating axial-vector torsion resonance bounds do not map directly because this sector has no transverse pole",
+    "stellarElectrons": "as a historical light-pseudoscalar benchmark, Raffelt and Weiss give alpha_a<0.5e-26, equivalent to y_e<sqrt(4 pi alpha_a) about 2.5e-13; stellar-systematic reassessments make this a benchmark rather than a universal hard wall",
+    "supernovaNucleons": "Lella et al. find that combined supernova arguments exclude roughly g_aN greater than 1e-9 for masses below about 1 MeV, subject to trapping and supernova-model assumptions",
+    "minimalBenchmarkComparison": "at delta=1 the minimal values y_e=2.57e-22 and y_N=4.72e-19 are respectively about nine and ten orders below those representative astrophysical sensitivities",
+    "nearCriticalTranslation": "for the minimal benchmark y_f(delta)=y_f(delta=1)/sqrt(delta), so the historical electron bound corresponds to delta=1-4lambda greater than about 1.1e-18 and the supernova nucleon benchmark to delta greater than about 2.2e-19, only when their mass ranges and coupling assumptions apply",
+    "hadronicCaveat": "the nucleon coefficient is a spin-fraction matching combination of quark c_q, not automatically the elementary universal c_f"
+  },
+  "rangeNaturalness": {
+    "formula": "b_X=a_S/m_phi^2=M_Pl^2(1-4lambda)/(24m_phi^2)",
+    "b_X_for_1MeV_at_lambda0": 2.4705104166666666e41,
+    "b_X_for_500microeV_at_lambda0": 9.882041666666668e59,
+    "delta_for_1MeV_with_bX1over24": 1.68656105983497e-43,
+    "decision": "a laboratory/stellar-range pole with the minimal weak coupling requires an enormous b_X; using only critical tuning with order-one b_X makes f_f diverge, crosses observational benchmarks first, and approaches the constraint-rank boundary"
+  },
+  "fermionLoopClosure": {
+    "powerCounting": "two insertions of c_f S_mu J_5,f^mu in a Dirac loop have superficial degree two and generate local dimension-four torsion operators",
+    "nonzeroSpurion": "for any charged c_f, beta_{F_S^2} at F_S^2=0 is nonzero; the ultraviolet transverse axial-current polarization is the same nonvanishing tensor structure as vector vacuum polarization, up to mass/anomaly terms",
+    "generatedOperator": "F_S,mu nu F_S^{mu nu}, where F_S,mu nu=partial_mu S_nu-partial_nu S_mu, together with mass-dependent longitudinal/local terms",
+    "consequence": "the fermion-coupled Xhat^2-only surface is not radiatively closed; a transverse spin-1 torsion pole is activated after resummation and the full spin-parity ghost/tachyon test must be repeated",
+    "scope": "as an EFT the generated term is perturbative below the cutoff; it is nevertheless fatal to claiming an exact one-mode fundamental portal"
+  },
+  "decision": {
+    "classification": "generic torsion/axion-like EFT portal, not yet a distinctive Spin(2,3) prediction",
+    "reason": "the force shape is the standard pseudoscalar dipole-dipole potential and the mass and coupling depend on free b_X, lambda and c_f; the E6 descendant has not fixed flavor or anomaly coefficients",
+    "potentialFingerprint": "a distinctive portal would require the UV construction to fix c_f ratios, b_X and lambda, producing the correlated relation f_f m_phi=c_f/sqrt(b_X), plus anomaly coefficients and exotic-threshold matching",
+    "minimalExpectation": "with natural order-one b_X and away from lambda=1/4 the mediator is Planck-mass and decoupled; observable long range requires a huge b_X or a near-degenerate a_S, both demanding additional protection"
+  },
+  "stopRules": [
+    "Do not apply transverse axial-vector resonance bounds to a purely longitudinal 0-minus pole.",
+    "Do not call the coupling E6-universal until the descendant action fixes c_f, flavor rotations and exotic thresholds.",
+    "Do not use lambda=1/4 as a massless limit: the canonical constraint rank changes there.",
+    "Do not apply stellar or supernova bounds outside their mediator-mass, free-streaming/trapping and production assumptions.",
+    "Do not claim a monopole-dipole force without an independently generated scalar CP-violating coupling; the minimal portal is dipole-dipole.",
+    "Require a radiative mechanism protecting any huge b_X or tiny 1-4lambda used to put the mode in laboratory range."
+    ,"Once c_f is nonzero, include the fermion-loop-generated transverse torsion operators before claiming a fundamental one-pole spectrum."
+  ],
+  "sources": [
+    {
+      "title": "Shapiro, Physical Aspects of the Space-Time Torsion",
+      "url": "https://arxiv.org/abs/hep-th/0103093",
+      "role": "torsion decomposition, minimal axial fermion coupling and consistency cautions"
+    },
+    {
+      "title": "de Berredo-Peixoto, Helayel-Neto and Shapiro, On the Consistency of a Fermion-Torsion Effective Theory",
+      "url": "https://arxiv.org/abs/hep-th/9910168",
+      "role": "fermion-loop Ward identities, generated torsion operators and quantum consistency restrictions"
+    },
+    {
+      "title": "Moody and Wilczek, New Macroscopic Forces?",
+      "url": "https://doi.org/10.1103/PhysRevD.30.130",
+      "role": "original pseudoscalar spin-dependent force"
+    },
+    {
+      "title": "Fadeev et al., Revisiting Spin-Dependent Forces Mediated by New Bosons",
+      "url": "https://arxiv.org/abs/1810.10364",
+      "role": "coordinate-space pseudoscalar potential including contact terms"
+    },
+    {
+      "title": "Terrano et al., Short-Range, Spin-Dependent Interactions of Electrons",
+      "url": "https://doi.org/10.1103/PhysRevLett.115.201801",
+      "role": "direct polarized-electron dipole-dipole laboratory search"
+    },
+    {
+      "title": "Raffelt and Weiss, Red Giant Bound on the Axion-Electron Coupling Reexamined",
+      "url": "https://arxiv.org/abs/hep-ph/9410205",
+      "role": "representative stellar electron-coupling benchmark"
+    },
+    {
+      "title": "Lella et al., Getting the Most on Supernova Axions",
+      "url": "https://arxiv.org/abs/2306.01048",
+      "role": "representative supernova nucleon-coupling exclusion including trapping"
+    }
+  ]
+}

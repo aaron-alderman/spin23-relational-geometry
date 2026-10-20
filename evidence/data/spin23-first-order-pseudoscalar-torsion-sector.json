@@ -1,0 +1,141 @@
+{
+  "schema": "spin23.first-order-pseudoscalar-torsion-sector/1",
+  "date": "2026-10-21",
+  "status": "exact Minkowski quadratic spin-parity witness for the minimal parity-even first-order 0-minus Poincare-gauge torsion sector",
+  "literatureClass": {
+    "description": "independent coframe and Lorentz connection with terms at most quadratic in torsion and curvature",
+    "selectedMode": "massive spin-parity 0-minus carried by the longitudinal axial torsion",
+    "reason": "X^2 is parity even, vanishes in the torsionless Riemannian sector, and supplies a derivative only to the axial longitudinal block; this is the smallest tractable propagating-torsion completion",
+    "excluded": "fakeon, Lee-Wick and nonlocal prescriptions; general six-spin-parity Poincare-gauge parameter space"
+  },
+  "spin23BrokenAction": {
+    "baseDensity": "(M_Pl^2/2)sqrt(-g)[R(omega)+lambda T_{mu nu rho}T^{mu nu rho}-2Lambda]",
+    "newInvariant": "+(b_X/2)sqrt(-g) Xhat^2",
+    "pseudoscalarNormalization": "Xhat is the rescaled pseudoscalar curvature chosen so that Xhat^(1)=partial_mu S^mu around the torsionless Minkowski vacuum",
+    "geometricOrigin": "Xhat is proportional to epsilon^{mu nu rho sigma}R_{mu nu rho sigma}(omega); its square is parity even and is an allowed curvature-squared invariant of the independent connection",
+    "axialTorsion": "S^mu=epsilon^{alpha beta gamma mu}T_{alpha beta gamma}",
+    "planckMapping": "M_Pl^2=1/kappa",
+    "spin23Mapping": "omega^{ab}=A^{ab}; e^a=ell A^{a4}; the invariant is added after V^A selects Spin(1,3) inside Spin(2,3)"
+  },
+  "quadraticReduction": {
+    "einsteinCartanAxialCoefficient": "R(omega) contains +(1/24)S_mu S^mu modulo a boundary",
+    "torsionNormAxialCoefficient": "T_{mu nu rho}T^{mu nu rho} contains -(1/6)S_mu S^mu",
+    "axialMassCoefficientDefinition": "L_axial^(2)=(a_S/2)S_mu S^mu+(b_X/2)(partial_mu S^mu)^2",
+    "axialMassCoefficient": "a_S=M_Pl^2(1-4lambda)/24",
+    "otherBlocks": "trace and tensor torsion remain algebraic as in claim 1596 and must be nondegenerate before this reduction",
+    "metricSector": "Xhat vanishes for a torsionless Levi-Civita connection by the first Bianchi identity, so Xhat^2 adds no metric spin-2 pole at quadratic order"
+  },
+  "exactAuxiliaryDual": {
+    "linearization": "(b_X/2)(partial.S)^2 = -chi^2/(2b_X)+chi partial.S",
+    "afterParts": "L=(a_S/2)S^2-(partial_mu chi)S^mu-chi^2/(2b_X)",
+    "algebraicSolution": "S_mu=(partial_mu chi)/a_S",
+    "scalarAction": "L_chi=-(1/(2a_S))(partial chi)^2-chi^2/(2b_X)",
+    "canonicalField": "varphi=chi/sqrt(a_S)",
+    "canonicalAction": "L_varphi=-(1/2)(partial varphi)^2-(1/2)m_0minus^2 varphi^2",
+    "massSquared": "m_0minus^2=a_S/b_X=M_Pl^2(1-4lambda)/(24b_X)",
+    "poleResidueInChiNormalization": "a_S",
+    "spinParity": "0-minus",
+    "physicalDegrees": 1
+  },
+  "spinParityProjectorWitness": {
+    "projectors": "P_L^{mu nu}=p^mu p^nu/p^2 and P_T^{mu nu}=eta^{mu nu}-P_L^{mu nu}",
+    "euclideanKernel": "K^{mu nu}=a_S P_T^{mu nu}+(a_S+b_X p^2)P_L^{mu nu}",
+    "inverse": "K^{-1}=a_S^{-1}P_T+(a_S+b_X p^2)^{-1}P_L",
+    "transverseDecision": "P_T has no momentum-dependent denominator and carries no particle pole",
+    "longitudinalPole": "p^2=-a_S/b_X, which continues to Minkowski mass squared m_0minus^2=a_S/b_X",
+    "residueDecision": "the auxiliary dual shows that the canonically normalized longitudinal pole has positive residue exactly when a_S>0"
+  },
+  "healthRegion": {
+    "conditions": [
+      "M_Pl^2>0 for the massless graviton residue",
+      "a_S>0, equivalently lambda<1/4, for positive 0-minus kinetic residue",
+      "b_X>0 for positive m_0minus^2 once a_S>0",
+      "lambda!=-1/2 so the 16-component tensor-torsion algebraic block from claim 1596 is invertible",
+      "the trace degeneracy lambda=2 lies outside lambda<1/4 but remains a boundary of the parent action"
+    ],
+    "nonemptyWitness": {
+      "M_PlSquared": 1,
+      "lambda": 0,
+      "b_X": 0.041666666666666664,
+      "a_S": 0.041666666666666664,
+      "massSquared": 1,
+      "gravitonHelicities": 2,
+      "torsionPseudoscalarDegrees": 1
+    },
+    "decision": "a genuinely propagating, positive-residue, positive-mass torsion mode coexists with the ordinary massless graviton on a nonempty open coupling region"
+  },
+  "failureRegions": [
+    {
+      "condition": "lambda>1/4",
+      "result": "a_S<0 and the canonical 0-minus kinetic term has the ghost sign"
+    },
+    {
+      "condition": "lambda<1/4 and b_X<0",
+      "result": "m_0minus^2<0, a tachyon"
+    },
+    {
+      "condition": "lambda=1/4",
+      "result": "the axial algebraic block inherited from claim 1596 vanishes; the auxiliary dual is singular and the mode is not admitted without a separate nonlinear constraint analysis"
+    },
+    {
+      "condition": "lambda=-1/2",
+      "result": "the unrelated 16-component tensor-torsion block is degenerate, so the claimed one-mode truncation is not isolated"
+    },
+    {
+      "condition": "b_X=0",
+      "result": "the new pole decouples and axial torsion returns to an algebraic auxiliary field"
+    }
+  ],
+  "poleCensus": [
+    {
+      "spinParity": "2-plus",
+      "massSquared": 0,
+      "degrees": 2,
+      "residueSign": "positive when M_Pl^2>0"
+    },
+    {
+      "spinParity": "0-minus",
+      "massSquared": "M_Pl^2(1-4lambda)/(24b_X)",
+      "degrees": 1,
+      "residueSign": "positive when lambda<1/4"
+    }
+  ],
+  "interpretation": {
+    "success": "unlike the reduced action of claim 1599, this independent-connection curvature square genuinely differentiates a torsion component and realizes a sector-selective torsion gap",
+    "limits": "the result is a quadratic Minkowski admission witness for the isolated 0-minus subclass, not a proof of nonlinear global stability, radiative closure, AdS stability or quantum unitarity",
+    "lenseThirring": "the massless 2-plus pole is unchanged at quadratic order; the new pseudoscalar does not replace the long-range gravitomagnetic graviton"
+  },
+  "exhaustionAndStopRules": [
+    "ADMIT the isolated 0-minus pole only for M_Pl^2>0, lambda<1/4, b_X>0 and lambda!=-1/2",
+    "REJECT lambda>1/4 as a ghost and b_X<0 in the positive-residue region as a tachyon",
+    "STOP at lambda=1/4 and lambda=-1/2 for a full nonlinear Dirac-constraint analysis",
+    "DO NOT count the algebraic transverse components of S_mu as three additional particles; only partial.S propagates",
+    "DO NOT infer health of the other spin-parity sectors when further curvature invariants are switched on",
+    "REPEAT on the Spin(2,3) AdS vacuum and test the appropriate stability bound before claiming background-independent viability",
+    "CHECK nonlinear constraint bifurcation and characteristic cones before promoting the quadratic witness to a complete theory",
+    "CHECK radiative closure: loops can populate curvature invariants that reactivate ghostly sectors"
+  ],
+  "decision": "The tractable first-order subclass succeeds at the quadratic gate: it contains a nonempty healthy region with one gapped 0-minus torsion mode and the massless graviton. This is the first explicit realization of the sector-selective pattern requested in claim 1591, but it remains a candidate action rather than a completed quantum gravity theory.",
+  "sources": [
+    {
+      "title": "Sezgin and van Nieuwenhuizen, New Ghost-Free Gravity Lagrangians with Propagating Torsion",
+      "url": "https://doi.org/10.1103/PhysRevD.21.3269",
+      "role": "original spin-projector classification and ghost/tachyon-free Poincare-gauge subclasses"
+    },
+    {
+      "title": "Yo and Nester, Hamiltonian Analysis of Poincare Gauge Theory Scalar Modes",
+      "url": "https://arxiv.org/abs/gr-qc/9902032",
+      "role": "nonlinear Hamiltonian viability of the massive 0-minus torsion mode and warning about constraint bifurcation"
+    },
+    {
+      "title": "Baekler, Hehl and Nester, Poincare Gauge Theory of Gravity: Friedman Cosmology with Even and Odd Parity Modes",
+      "url": "https://arxiv.org/abs/1009.5112",
+      "role": "scalar/pseudoscalar curvature and vector/axial torsion invariant basis"
+    },
+    {
+      "title": "MacDowell and Mansouri, Unified Geometric Theory of Gravity and Supergravity",
+      "url": "https://doi.org/10.1103/PhysRevLett.38.1376",
+      "role": "Spin(2,3)-broken base action"
+    }
+  ]
+}

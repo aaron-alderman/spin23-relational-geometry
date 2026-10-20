@@ -1,0 +1,112 @@
+{
+  "schema": "spin23.portal-vacuum-energy-escape-audit/1",
+  "date": "2026-10-21",
+  "status": "finite observed-density, portal-loop, uplift and four-mechanism audit; no prediction of positive dark energy",
+  "observedBenchmark": {
+    "H0KmPerSecPerMpc": 67.4,
+    "omegaLambda": 0.685,
+    "reducedPlanckGeV": 2.435e18,
+    "secondsPerGeVInverse": 6.582119569e-25,
+    "metersPerMpc": 3.085677581491367e22,
+    "H0PerSecond": 2.1842852410855023e-18,
+    "H0GeV": 1.4377226629626767e-42,
+    "rhoDarkEnergyGeV4": 2.5186046135005834e-47,
+    "rhoDarkEnergyOverMPlanck4": 7.164141125106213e-121,
+    "rhoDarkEnergyQuarterPowerMilliEV": 2.240216536081548
+  },
+  "claim1612PortalVacuum": {
+    "B": 0.00013425056832609754,
+    "planckOverV": 1.1547005383792515,
+    "vacuumEnergyOverV4": -0.00006712528416304877,
+    "vacuumEnergyOverMPlanck4": -0.00003775797234171494,
+    "rhoObservedOverV4": 1.273625088907771e-120,
+    "magnitudeMismatch": 5.2704115793301255e115,
+    "mismatchOrders": 115.72184453165512,
+    "lambdaSpinOverV2": -0.00005034396312228658,
+    "lambdaObservedOverV2": 9.552188166808282e-121,
+    "signConflict": "minimal Spin(2,3) match is AdS/negative while observed late-time dark energy is positive",
+    "requiredUpliftOverV4": "0.00006712528416304877 plus 1.273625088907771e-120",
+    "residualFractionOfCancellation": 1.897385023822183e-116
+  },
+  "radiativeLedger": {
+    "oneLoopNumeratorContributions": {
+      "hiddenVector": 0.0432,
+      "heavyScalar": 0.0016,
+      "coloredScalars": 0.04,
+      "sum": 0.08479999999999999
+    },
+    "vacuumSharesOverV4": {
+      "hiddenVector": -0.000034195899479289,
+      "heavyScalar": -0.0000012665147955292222,
+      "coloredScalars": -0.000031662869888230556,
+      "sum": -0.00006712528416304877
+    },
+    "conservativeTwoLoopEstimateOverV4": 4.2507582773302326e-7,
+    "twoLoopEstimateOverObserved": 3.33752712187507e113,
+    "claim1612LambdaYMOverVFourthPower": 1.922754773658893e-26,
+    "claim1612ColorVacuumOrdersOverObserved": 94.17888229269384,
+    "claim1616LambdaYMOverV": 1.2788265117754014e-14,
+    "claim1616LambdaYMOverVFourthPower": 2.6745241562135786e-56,
+    "claim1616ColorVacuumOrdersOverObserved": 64.32220491921667,
+    "decision": "Ordinary loop and threshold improvements generate additive constants vastly above the target and require renewed cancellation."
+  },
+  "unimodularTest": {
+    "traceFreeEquation": "R_mn-R g_mn/4=(T_mn-T g_mn/4)/M_Pl^2",
+    "constantVacuumSamples": [1e-120, 1, 1e120],
+    "traceFreeSourceCoefficients": [0, 0, 0],
+    "radiativeProperty": "constant vacuum shifts drop out of the local trace-free equation",
+    "residualDatum": "Bianchi integration restores an arbitrary cosmological integration constant",
+    "portalImpact": "local mass and threshold relations can survive, but V(v)=M_Pl^2 Lambda no longer predicts physical curvature",
+    "decision": "relocates the observed value to integration or initial data rather than predicting it"
+  },
+  "sequesteringTest": {
+    "effectiveSource": "T_mn-<T> g_mn/4-DeltaLambda g_mn",
+    "constantVacuumCancellation": "for T_mn=-rho g_mn and <T>=-4rho, the protected-sector source is exactly zero",
+    "testedVacuumShiftsOverV4": [-0.000034195899479289, -0.0000012665147955292222, -0.000031662869888230556, 4.2507582773302326e-7],
+    "sourceAfterSequestering": [0, 0, 0, 0],
+    "radiativelyStableWithinDeclaredFramework": true,
+    "residualDatum": "DeltaLambda/global flux or historic spacetime average is measured or set by boundary data",
+    "portalImpact": "particle, Planck and threshold ratios may survive, but the direct B-to-g_A curvature relation is replaced",
+    "decision": "genuinely removes protected constant matter loops, but does not predict the observed positive residual and imports global or four-form structure"
+  },
+  "supersymmetryTest": {
+    "equalDegrees": 4,
+    "fermionMassOverV": 0.2,
+    "points": [
+      {"bosonMassOverV": 0.2, "supertraceVacuumOverV4": 0},
+      {"bosonMassOverV": 0.201, "supertraceVacuumOverV4": 2.0416725743106707e-7},
+      {"bosonMassOverV": 0.22, "supertraceVacuumOverV4": 0.000004702316132840895}
+    ],
+    "oneTeVSUSYBreakingOverObserved": 3.9704525062793003e58,
+    "exactDecision": "unbroken global SUSY cancels equal-mass vacuum loops but gives zero rather than the observed positive value",
+    "brokenDecision": "soft splittings restore a contribution of order M_SUSY^4; unbroken supergravity generically gives AdS and uplift data remain free"
+  },
+  "localAdjustmentTest": {
+    "potential": "V(a)=rho0+m^2 a^2/2+lambda a^4/4",
+    "inputs": {"mSquared": -1, "lambda": 1},
+    "stableExtrema": [-1, 1],
+    "tunedRho0": 0.25,
+    "vacuumAtTunedPoint": 0,
+    "thresholdShift": 0.01,
+    "extremaAfterShift": [-1, 1],
+    "vacuumAfterShift": 0.01,
+    "rollingMassRequirementGeV": 1.4377226629626767e-42,
+    "decision": "stationarity and zero vacuum are independent conditions; a local equilibrium adjuster retunes after an additive threshold, while a rolling field must remain H0-light and radiatively secluded"
+  },
+  "mechanismDecisionTable": [
+    {"mechanism": "unimodular integration constant", "removesConstantLoopFromLocalTraceFreeEquation": true, "predictsObservedResidual": false, "preservesAllClaim1612Relations": false, "classification": "relocates tuning/value"},
+    {"mechanism": "vacuum-energy sequestering", "removesConstantLoopFromLocalTraceFreeEquation": true, "predictsObservedResidual": false, "preservesAllClaim1612Relations": false, "classification": "solves radiative instability conditionally; residual and curvature matching relocated"},
+    {"mechanism": "exact or broken supersymmetry", "removesConstantLoopFromLocalTraceFreeEquation": false, "predictsObservedResidual": false, "preservesAllClaim1612Relations": false, "classification": "exact cancellation is lost after realistic breaking"},
+    {"mechanism": "local adjustment scalar", "removesConstantLoopFromLocalTraceFreeEquation": false, "predictsObservedResidual": false, "preservesAllClaim1612Relations": false, "classification": "generic equilibrium no-go or radiatively unstable rolling sector"}
+  ],
+  "programmeDecision": "The portal explains common particle and gravity scales but predicts a large AdS vacuum. Sequestering can protect curvature from matter vacuum loops only by adding new global/four-form structure and abandoning the direct portal-to-AdS vacuum relation; no tested mechanism predicts observed positive dark energy.",
+  "primarySources": [
+    {"title": "Planck 2018 Results VI: Cosmological Parameters", "arxiv": "1807.06209"},
+    {"title": "The Cosmological Constant and General Covariance", "doi": "10.1016/0370-2693(89)91251-3"},
+    {"title": "Sequestering the Standard Model Vacuum Energy", "arxiv": "1309.6562"},
+    {"title": "Vacuum Energy Sequestering: The Framework and Its Cosmological Consequences", "arxiv": "1406.0711"},
+    {"title": "A Manifestly Local Theory of Vacuum Energy Sequestering", "doi": "10.1103/PhysRevLett.116.051302"},
+    {"title": "Dynamical Breaking of Supersymmetry", "doi": "10.1016/0550-3213(81)90006-7"},
+    {"title": "The Cosmological Constant Problem", "doi": "10.1103/RevModPhys.61.1"}
+  ]
+}

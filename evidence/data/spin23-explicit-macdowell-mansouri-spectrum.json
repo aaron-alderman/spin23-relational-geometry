@@ -1,0 +1,153 @@
+{
+  "schema": "spin23.explicit-macdowell-mansouri-spectrum/1",
+  "date": "2026-10-20",
+  "status": "exact classical decomposition and quadratic pole census for the fixed-norm two-derivative MacDowell-Mansouri/Stelle-West branch plus its minimal selector-covariant torsion-square deformation",
+  "conventions": {
+    "group": "Spin(2,3)",
+    "breaking": "Spin(2,3) -> Spin(1,3)",
+    "indices": "A,B=0,...,4 and a,b=0,...,3",
+    "connection": "A^{ab}=omega^{ab}, A^{a4}=e^a/ell",
+    "curvatures": "F^{ab}=R^{ab}+ell^{-2} e^a wedge e^b; F^{a4}=ell^{-1}T^a",
+    "cosmologicalConstant": "Lambda=-3/ell^2",
+    "gravitationalCoupling": "kappa=8 pi G and M_Pl^2=1/kappa",
+    "warning": "overall signs change with curvature and internal-metric conventions; all relative coefficients below use the displayed definitions"
+  },
+  "stelleWestAction": {
+    "selector": "V^A V_A=sigma ell^2, enforced by a Lagrange multiplier",
+    "covariantAction": "S_SW=ell/(8 kappa) integral epsilon_{ABCDE} V^E F^{AB} wedge F^{CD}",
+    "unitaryGauge": "V^A=ell delta^A_4",
+    "gaugeFixedAction": "S_MM=ell^2/(8 kappa) integral epsilon_{abcd} F^{ab} wedge F^{cd}"
+  },
+  "exactDecomposition": {
+    "identity": "epsilon F F=epsilon R R+2 ell^{-2} epsilon R e e+ell^{-4} epsilon e e e e",
+    "terms": [
+      {
+        "name": "Euler",
+        "coefficient": "ell^2/(8 kappa)",
+        "form": "epsilon_{abcd} R^{ab} wedge R^{cd}",
+        "localBulkDegreesOfFreedom": 0
+      },
+      {
+        "name": "Einstein-Cartan",
+        "coefficient": "1/(4 kappa)",
+        "form": "epsilon_{abcd} e^a wedge e^b wedge R^{cd}"
+      },
+      {
+        "name": "cosmological",
+        "coefficient": "1/(8 kappa ell^2)",
+        "equivalentCoefficient": "-Lambda/(24 kappa)",
+        "form": "epsilon_{abcd} e^a wedge e^b wedge e^c wedge e^d"
+      }
+    ],
+    "coefficientChecks": {
+      "Euler": "(ell^2/(8 kappa))*1",
+      "EinsteinCartan": "(ell^2/(8 kappa))*(2/ell^2)=1/(4 kappa)",
+      "cosmological": "(ell^2/(8 kappa))*(1/ell^4)=1/(8 kappa ell^2)=-Lambda/(24 kappa)"
+    }
+  },
+  "minimalBranchPoleCensus": {
+    "connectionEquationInVacuum": "epsilon_{abcd} e^c wedge T^d=0, hence T^a=0 for an invertible coframe",
+    "reducedAction": "Einstein-Hilbert with Lambda=-3/ell^2 plus the Euler boundary/topological invariant",
+    "linearizedEinsteinEquationTT": "(box-2 Lambda/3) h^{TT}_{mu nu}=0",
+    "adsForm": "(box+2/ell^2) h^{TT}_{mu nu}=0; the curvature shift is the AdS massless representation, not a Fierz-Pauli mass",
+    "configurationCount": {
+      "symmetricMetricComponents": 10,
+      "diffeomorphismFirstClassGenerators": 4,
+      "physicalConfigurationDegrees": 2,
+      "calculation": "10-2*4=2"
+    },
+    "flatLimitSaturatedExchange": "[T_{mu nu}T^{mu nu}-(1/2)T^2]/(M_Pl^2 p^2) for a conserved source",
+    "poles": [
+      {
+        "sector": "spin-2",
+        "massSquared": 0,
+        "physicalHelicities": 2,
+        "residueCondition": "M_Pl^2>0"
+      }
+    ],
+    "independentTorsionPoles": 0,
+    "selectorPoles": 0
+  },
+  "minimalSelectorCovariantDeformation": {
+    "definition": "mathcalT^A=F^{AB}V_B and S_lambda=S_SW+lambda M_Pl^2 integral mathcalT^A wedge star mathcalT_A",
+    "unitaryGauge": "mathcalT^a=+/-T^a and the deformation is lambda M_Pl^2 integral T^a wedge star T_a",
+    "componentNormalization": "the non-topological density is (M_Pl^2/2) sqrt(-g) [R(omega)+lambda T_{mu nu rho}T^{mu nu rho}-2 Lambda]",
+    "reasonForChoice": "it is local, parity-even, quadratic, selector-covariant before unitary gauge, and adds no curvature-squared derivative",
+    "torsionDecomposition": {
+      "formula": "T_{mu nu rho}=(1/3)(T_nu g_{mu rho}-T_rho g_{mu nu})-(1/6)epsilon_{mu nu rho sigma}S^sigma+q_{mu nu rho}",
+      "constraints": "q^nu_{ mu nu}=0 and epsilon^{mu nu rho sigma}q_{mu nu rho}=0",
+      "dimensions": {
+        "traceVector": 4,
+        "axialVector": 4,
+        "tensor": 16,
+        "total": 24
+      },
+      "scalarCurvatureIdentityModuloBoundary": "R(omega)=R(LC)-(4/3)T_mu T^mu+(1/24)S_mu S^mu+(1/2)q_{mu nu rho}q^{mu nu rho}",
+      "torsionNormIdentity": "T_{mu nu rho}T^{mu nu rho}=(2/3)T_mu T^mu-(1/6)S_mu S^mu+q_{mu nu rho}q^{mu nu rho}"
+    },
+    "algebraicQuadraticCoefficients": [
+      {
+        "sector": "traceVector",
+        "multiplicity": 4,
+        "coefficient": "2(lambda-2)/3",
+        "degenerateAt": 2
+      },
+      {
+        "sector": "axialVector",
+        "multiplicity": 4,
+        "coefficient": "(1-4 lambda)/24",
+        "degenerateAt": 0.25
+      },
+      {
+        "sector": "tensor",
+        "multiplicity": 16,
+        "coefficient": "lambda+1/2",
+        "degenerateAt": -0.5
+      }
+    ],
+    "hessianDeterminantUpToNonzeroBasisFactors": "[2(lambda-2)/3]^4 [(1-4 lambda)/24]^4 [lambda+1/2]^16",
+    "momentumDegree": 0,
+    "genericDecision": "for lambda not in {-1/2,1/4,2}, all 24 vacuum torsion components are algebraic and vanish; integrating them out leaves the same two graviton helicities and no auxiliary pole",
+    "exceptionalDecision": "at lambda=-1/2,1/4,2 one irreducible algebraic Hessian block loses rank; without an added gauge symmetry or higher-order constraint analysis this is a strong-coupling/underdetermination stop, not evidence for a propagating massless mode",
+    "healthClassification": "no torsion propagator denominator exists in this action class, so its torsion blocks are neither healthy massive particles nor ghosts/tachyons; those labels require a kinetic pole. The graviton is healthy when M_Pl^2>0"
+  },
+  "selectorCount": {
+    "ambientComponents": 5,
+    "fixedNormConstraint": 1,
+    "brokenGaugeOrbitDirections": 4,
+    "physicalRadialModes": 0,
+    "calculation": "5-1-4=0",
+    "decision": "the fixed-norm Stelle-West selector is a compensator and supplies no radial scalar pole; a softened norm and its kinetic term define a different action class"
+  },
+  "exhaustionAndStopRules": [
+    "STOP the minimal branch if M_Pl^2<=0 because the massless spin-2 residue has the wrong sign or vanishes",
+    "STOP at lambda in {-1/2,1/4,2} until the nonlinear constraint algebra resolves the degenerate torsion block",
+    "DO NOT call an algebraic Hessian eigenvalue a particle mass; no p^2 dependence means no pole",
+    "DO NOT infer a torsion mass gap from this deformation: generic torsion is auxiliary and exceptional torsion is degenerate",
+    "To make torsion propagate one must add derivative-producing invariants, normally curvature-squared or an independent selector kinetic/radial sector; that is outside this exhausted two-derivative fixed-norm class and requires a fresh spin-parity residue analysis",
+    "Any enlarged branch must retain exactly two healthy massless graviton helicities, recover the Einstein and Lense-Thirring infrared response, and reject every negative-residue or negative-mass-squared physical pole"
+  ],
+  "decision": "The explicit minimal Spin(2,3) action succeeds as a reformulation of GR, not as a source of a selectively gapped extra spectrum. Its smallest selector-covariant torsion-square deformation changes only algebraic constraints. The earlier abstract healthy auxiliary projectors are therefore not realized by this action class.",
+  "sources": [
+    {
+      "title": "MacDowell and Mansouri, Unified Geometric Theory of Gravity and Supergravity",
+      "url": "https://doi.org/10.1103/PhysRevLett.38.1376",
+      "role": "original curvature-square broken-gauge formulation"
+    },
+    {
+      "title": "Stelle and West, Spontaneously Broken de Sitter Symmetry and the Gravitational Holonomy Group",
+      "url": "https://doi.org/10.1103/PhysRevD.21.1466",
+      "role": "compensator/Goldstone restoration of the full de Sitter gauge covariance"
+    },
+    {
+      "title": "Shapiro, Physical Aspects of the Space-Time Torsion",
+      "url": "https://arxiv.org/abs/hep-th/0103093",
+      "role": "torsion irreducible decomposition and the distinction between auxiliary and propagating torsion"
+    },
+    {
+      "title": "Matter matters in Einstein-Cartan gravity",
+      "url": "https://doi.org/10.1103/PhysRevD.104.064036",
+      "role": "two-derivative Einstein-Cartan EFT and algebraic elimination of the connection"
+    }
+  ]
+}

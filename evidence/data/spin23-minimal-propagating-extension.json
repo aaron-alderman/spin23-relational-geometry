@@ -1,0 +1,122 @@
+{
+  "schema": "spin23.minimal-propagating-extension/1",
+  "date": "2026-10-20",
+  "status": "flat-background quadratic pole census for the smallest reduced-metric curvature-square completion and softened-selector radial completion of claim 1596",
+  "domain": {
+    "startingAction": "the explicit MacDowell-Mansouri/Stelle-West plus torsion-square action of claim 1596",
+    "torsionCouplingRestriction": "lambda not in {-1/2,1/4,2}",
+    "orderOfOperations": "solve the full-rank algebraic torsion equation first, then build curvature invariants from the resulting Levi-Civita curvature",
+    "background": "flat-space pole diagnostic after tuning the vacuum energy and selector tadpole; every claimed AdS application must repeat the background-dependent residue and stability analysis",
+    "warning": "a first-order R(omega)^2 Poincare-gauge theory is a larger action class and is not silently identified with this reduced-metric completion"
+  },
+  "curvatureSquareAction": {
+    "action": "S=sqrt(-g){(M_Pl^2/2)[R-2 Lambda+R^2/(6 m_0^2)]-(M_Pl^2/(4 m_2^2)) C_{mu nu rho sigma}C^{mu nu rho sigma}}",
+    "normalization": "m_0 and m_2 are defined by the poles displayed below; the four-dimensional Euler density has been omitted because it has no local quadratic pole",
+    "saturatedConservedSourceExchange": "A(p)=M_Pl^{-2}{[T_{mu nu}T^{mu nu}-(1/2)T^2]/p^2-[T_{mu nu}T^{mu nu}-(1/3)T^2]/(p^2+m_2^2)+(1/6)T^2/(p^2+m_0^2)}",
+    "spin2Kernel": "K_2(p^2)=M_Pl^2 p^2(1+p^2/m_2^2)",
+    "spin2PartialFraction": "1/[p^2(1+p^2/m_2^2)]=1/p^2-1/(p^2+m_2^2)",
+    "spin2MasslessResidue": 1,
+    "spin2MassiveResidue": -1,
+    "scalaronResidueInTraceChannel": "plus 1/(6 M_Pl^2)",
+    "scalaronMassSquared": "m_0^2",
+    "decisions": {
+      "finiteWeylSquared": "ordinary Feynman quantization has an unavoidable negative-residue massive spin-2 pole; no sign choice makes both spin-2 residues positive",
+      "pureR2Line": "the m_2 -> infinity line removes the Weyl pole and leaves the two massless graviton helicities plus one scalaron",
+      "healthyPureR2Conditions": "M_Pl^2>0 and m_0^2>0",
+      "tachyon": "m_0^2<0 is a scalar tachyon",
+      "extraMassless": "m_0^2=0 is outside the displayed local parametrization and corresponds to loss of a finite positive scalar gap"
+    }
+  },
+  "scalaronAuxiliaryWitness": {
+    "jordanIdentity": "R+R^2/(6m_0^2) = Phi R-(3/2)m_0^2(Phi-1)^2 after eliminating Phi, with Phi=1+R/(3m_0^2)",
+    "einsteinField": "phi=sqrt(3/2) M_Pl log Phi",
+    "potential": "V(phi)=(3/4)M_Pl^2 m_0^2[1-exp(-sqrt(2/3)phi/M_Pl)]^2",
+    "quadraticMass": "V''(0)=m_0^2",
+    "decision": "the R^2 mode is a healthy gapped scalar for M_Pl^2>0 and m_0^2>0; it is not torsion and it is not a Yang-Mills mass gap"
+  },
+  "softenedSelector": {
+    "parameterization": "V^A=(ell+rho)n^A with n^A n_A=sigma",
+    "radialInvariant": "S_rad=-(Z/(8ell^2)) integral d(V^2) wedge star d(V^2)-integral U(V^2) star 1",
+    "quadraticJordanAction": "sqrt(-g){(1/2)F(rho)R-(Z/2)(partial rho)^2-U(rho)} with F(rho)=M_Pl^2(1+rho/ell)+O(rho^2)",
+    "tuning": "U(0) and U'(0) absorb the target cosmological constant and radial tadpole; define U''(0)=mu_rho^2",
+    "einsteinFrameKineticAtVacuum": "K_rho=Z+3 M_Pl^2/(2ell^2)",
+    "physicalMassSquared": "m_rho^2=mu_rho^2/K_rho",
+    "healthyConditions": [
+      "M_Pl^2>0 and F(rho)>0 in the admitted field neighborhood",
+      "K_rho=Z+3M_Pl^2/(2ell^2)>0",
+      "mu_rho^2>0"
+    ],
+    "finiteWitness": {
+      "M_PlSquared": 1,
+      "ellSquared": 1,
+      "Z": 1,
+      "muRhoSquared": 5,
+      "einsteinFrameKinetic": 2.5,
+      "physicalMassSquared": 2
+    },
+    "decision": "softening the norm can add one healthy gapped scalar, but its kinetic coefficient and potential curvature are new input parameters rather than predictions of Spin(2,3) or the minimal Stelle-West action"
+  },
+  "joinedSpectrum": {
+    "healthyLocalSubspace": "lambda not in {-1/2,1/4,2}, M_Pl^2>0, no finite Weyl-squared pole, m_0^2>0 when R^2 is present, and K_rho>0 with mu_rho^2>0 when the selector norm is softened",
+    "physicalModes": [
+      "two massless spin-2 helicities",
+      "optional healthy scalaron of mass squared m_0^2",
+      "optional healthy selector-radial scalar of mass squared mu_rho^2/K_rho"
+    ],
+    "torsionModes": 0,
+    "lenseThirring": "the p^2=0 positive-residue spin-2 pole remains, so the infrared 1/r and gravitomagnetic response are not Yukawa removed",
+    "mixedScalarQuadraticWitness": {
+      "variables": "x=Phi-1 and y=rho",
+      "kineticMatrixGeneral": "K=[[3M_Pl^2/2,3M_Pl^2/(2ell)],[3M_Pl^2/(2ell),Z+3M_Pl^2/(2ell^2)]]",
+      "massMatrixGeneral": "H=diag[(3/2)M_Pl^2 m_0^2,mu_rho^2]",
+      "witnessParameters": "M_Pl^2=ell^2=Z=1, m_0^2=4, mu_rho^2=5",
+      "kineticMatrix": [[1.5, 1.5], [1.5, 2.5]],
+      "massMatrix": [[6, 0], [0, 5]],
+      "kineticPrincipalMinors": [1.5, 1.5],
+      "generalizedCharacteristicPolynomial": "det(H-m^2 K)=(3/2)(m^2)^2-(45/2)m^2+30",
+      "massSquaredEigenvalues": ["(15-sqrt(145))/2", "(15+sqrt(145))/2"],
+      "numericalMassSquaredEigenvalues": [1.4792027106, 13.5207972894]
+    },
+    "nonemptyExample": "lambda=0, M_Pl^2=ell^2=1, m_0^2=4, no Weyl-squared term, Z=1, mu_rho^2=5 gives two positive mixed-scalar masses squared (15-sqrt(145))/2 and (15+sqrt(145))/2, with no extra spin-2 pole"
+  },
+  "connectionToClaim1596": {
+    "genericLambda": "the reduced completion is defined only after the rank-24 torsion Hessian has been inverted",
+    "lambdaMinusHalf": "the 16-component tensor-torsion block is degenerate",
+    "lambdaQuarter": "the four-component axial block is degenerate",
+    "lambdaTwo": "the four-component trace block is degenerate",
+    "decision": "curvature-square or selector-radial terms do not license integrating through these singular surfaces; they require a separate first-order constraint analysis"
+  },
+  "exhaustionAndStopRules": [
+    "REJECT every finite local Weyl-squared coefficient under ordinary Feynman pole quantization because its massive spin-2 residue is opposite to the graviton residue",
+    "ADMIT the local R+R^2 line at quadratic order only for M_Pl^2>0 and m_0^2>0",
+    "ADMIT the softened radial selector only where F>0, K_rho>0 and mu_rho^2>0",
+    "STOP at the three claim-1596 torsion degeneracies before algebraic reduction",
+    "DO NOT identify either scalar mass with a Yang-Mills mass gap or a torsion gap",
+    "REPEAT the calculation on AdS and on every claimed cosmological background; the flat witness is necessary but not sufficient",
+    "Radiative generation of a Weyl-squared counterterm means the tree-level healthy R^2 line is not by itself a closed quantum completion; fakeon, Lee-Wick or nonlocal prescriptions are different quantizations and require separate axioms",
+    "A genuine propagating first-order torsion extension requires the full parity-even Poincare-gauge spin-projector analysis and is outside this reduced minimal class"
+  ],
+  "decision": "The minimal propagating extension is not empty: a pure R^2 scalaron and/or a softened selector radial mode can be healthy and gapped while the graviton stays massless. But a finite local Weyl-squared term fails by an exact opposite-residue spin-2 pole, and none of these modes realizes a torsion gap. This exhausts the reduced-metric plus single-radial local quadratic extension.",
+  "sources": [
+    {
+      "title": "Stelle, Renormalization of Higher-Derivative Quantum Gravity",
+      "url": "https://doi.org/10.1103/PhysRevD.16.953",
+      "role": "quadratic-curvature propagator and higher-derivative gravity"
+    },
+    {
+      "title": "Starobinsky, A New Type of Isotropic Cosmological Models Without Singularity",
+      "url": "https://doi.org/10.1016/0370-2693(80)90670-X",
+      "role": "R+R^2 scalaron branch"
+    },
+    {
+      "title": "MacDowell and Mansouri, Unified Geometric Theory of Gravity and Supergravity",
+      "url": "https://doi.org/10.1103/PhysRevLett.38.1376",
+      "role": "base broken-gauge action"
+    },
+    {
+      "title": "Stelle and West, Spontaneously Broken de Sitter Symmetry and the Gravitational Holonomy Group",
+      "url": "https://doi.org/10.1103/PhysRevD.21.1466",
+      "role": "selector/compensator formulation"
+    }
+  ]
+}

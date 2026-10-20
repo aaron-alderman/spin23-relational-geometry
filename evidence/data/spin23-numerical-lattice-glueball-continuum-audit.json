@@ -1,0 +1,156 @@
+{
+  "schema": "spin23.numerical-lattice-glueball-continuum-audit/1",
+  "date": "2026-10-21",
+  "status": "positive-correlator, correlated continuum/volume regression, scale and systematic witnesses; strong numerical evidence but no constructive R4 Yang-Mills theorem",
+  "publishedBenchmarks": {
+    "SU3": {
+      "group": "SU(3)",
+      "observable": "continuum lightest 0++ glueball mass divided by sqrt(string tension)",
+      "value": 3.405,
+      "statisticalError": 0.021,
+      "alternativeContinuumFit": 3.391,
+      "alternativeError": 0.023,
+      "source": "https://arxiv.org/abs/2007.06422",
+      "sourceLocation": "Eq. (18) discussion and continuum spectrum table: linear 3.405(21), quadratic 3.391(23)",
+      "methodAnchors": [
+        "Wilson plaquette action at beta through 6.50",
+        "large variational basis of spatial Wilson-loop operators",
+        "finite-volume comparison",
+        "continuum expansion M/sqrt(sigma)=M0+c1 a^2 sigma+c2(a^2 sigma)^2+...",
+        "topological-charge decorrelation audit"
+      ]
+    },
+    "Sp4": {
+      "group": "physicists' Sp(4), isomorphic as a compact Lie group to Spin(5)",
+      "observable": "eta=(m_0+^2/sigma) C2(F)/C2(A)",
+      "eta": 5.27,
+      "etaError": 0.15,
+      "casimirFundamental": 1.25,
+      "casimirAdjoint": 3,
+      "derivedMassOverSqrtSigma": 3.5564026768632373,
+      "derivedError": 0.050612941321583074,
+      "source": "https://arxiv.org/abs/1710.07043",
+      "sourceLocation": "Eq. (19): eta(Sp(4))=5.27(15); continuum extrapolations use leading sigma a^2 correction",
+      "scopeWarning": "first exploratory pure-Sp(4) spectrum; quoted comparison propagates the published eta uncertainty and is not a universality theorem"
+    },
+    "crossGroupComparison": {
+      "SU3CasimirFundamental": 1.3333333333333333,
+      "SU3CasimirAdjoint": 3,
+      "SU3Eta": 5.152899999999999,
+      "SU3EtaError": 0.06356,
+      "rawMassRatioDifference": 0.1514026768632375,
+      "rawMassRatioPull": 2.7629928663870627,
+      "etaDifference": 0.11710000000000065,
+      "etaPull": 0.7187990095303732,
+      "interpretation": "raw ratios are not equal at the quoted statistical precision, while the Casimir-normalized eta values agree within one combined standard deviation; this is comparative evidence, not proof of group universality"
+    }
+  },
+  "positiveCorrelatorWitness": {
+    "definition": "C(t)=Z diag(exp(-E0 t),exp(-E1 t)) Z^T",
+    "energies": [0.45, 0.95],
+    "overlapMatrix": [[1, 0.35], [0.45, 1.1]],
+    "referenceTime": 1,
+    "times": [1, 2, 3, 4, 5],
+    "expectedGEVPEnergies": [0.45, 0.95],
+    "meaning": "positive spectral weights make every finite C(t) positive definite, and the full-rank two-state GEVP recovers both energies exactly in exact arithmetic",
+    "limitation": "a Monte Carlo operator basis is finite and noisy; positivity cannot exclude a lighter state with exactly or numerically unresolved overlap"
+  },
+  "syntheticContinuumVolumeRegression": {
+    "calibration": "intercept is calibrated to the published SU(3) continuum 0++ ratio 3.405; slopes and residuals are synthetic and are not reported simulation data",
+    "model": "y=M0+c_a x+c_L exp(-ell), x=a^2 sigma, ell=L sqrt(sigma)",
+    "rows": [
+      {"x": 0.08, "ell": 3, "y": 3.316382887602325, "statSigma": 0.025},
+      {"x": 0.08, "ell": 4, "y": 3.2790736013888035, "statSigma": 0.024},
+      {"x": 0.05, "ell": 2.5, "y": 3.376146749243144, "statSigma": 0.023},
+      {"x": 0.05, "ell": 4, "y": 3.321073601388804, "statSigma": 0.022},
+      {"x": 0.03, "ell": 3, "y": 3.393382887602325, "statSigma": 0.021},
+      {"x": 0.03, "ell": 4.5, "y": 3.359109948096033, "statSigma": 0.021},
+      {"x": 0.015, "ell": 3, "y": 3.415382887602325, "statSigma": 0.02},
+      {"x": 0.015, "ell": 5, "y": 3.379705870849497, "statSigma": 0.02},
+      {"x": 0.007, "ell": 4, "y": 3.4078736013888036, "statSigma": 0.019},
+      {"x": 0.007, "ell": 5.5, "y": 3.390047724291155, "statSigma": 0.019}
+    ],
+    "generationOnly": {
+      "M0": 3.405,
+      "cA": -1.6,
+      "cL": 0.55,
+      "residuals": [0.012, -0.008, 0.006, -0.014, 0.009, -0.004, 0.007, -0.005, 0.004, -0.006]
+    },
+    "covarianceRule": "C_ij=delta_ij statSigma_i^2+(f_scale y_i)(f_scale y_j)+u_i u_j, where u_i=f_disc x_i/max(x)",
+    "commonScaleFraction": 0.004,
+    "correlatedDiscretizationAmplitude": 0.006,
+    "fitSuite": [
+      "GLS full model 1,x,exp(-ell)",
+      "drop coarsest point",
+      "omit explicit finite-volume term",
+      "add x^2 term"
+    ],
+    "expectedFullFitBounds": {
+      "M0": [3.35, 3.46],
+      "cA": [-3.5, 0],
+      "cL": [0, 1.5],
+      "chi2PerDof": [0, 3]
+    }
+  },
+  "systematicAudit": {
+    "covarianceComponents": [
+      "per-ensemble statistical variance",
+      "rank-one common scale-setting covariance",
+      "rank-one correlated cutoff nuisance covariance"
+    ],
+    "modelEnvelopeComponents": [
+      "linear versus quadratic a^2 extrapolation",
+      "coarsest-lattice removal",
+      "finite-volume term inclusion versus omission",
+      "fixed 0.012 mock fit-window/excited-state allowance"
+    ],
+    "requiredRealAnalysisChecks": [
+      "blocked or autocorrelation-aware resampling from configurations through the GEVP and scale fit",
+      "condition-number and positive-definiteness audit for correlator and data covariance matrices",
+      "fit-window and operator-basis stability including multi-particle and winding-flux states",
+      "several volumes at fixed lattice spacing with m_gap L comfortably large",
+      "linear/quadratic Symanzik fits with controlled coarsest-point cuts",
+      "rotational-multiplet restoration among cubic irreducible representations",
+      "topological-sector tunneling or a validated fixed-topology correction at fine spacing",
+      "independent scale choices such as sqrt(sigma), r0, t0 or w0"
+    ],
+    "physicalScaleExample": {
+      "sqrtSigmaGeV": 0.44,
+      "sqrtSigmaErrorGeV": 0.02,
+      "SU3MassGeV": 1.4982,
+      "scaleOnlyErrorGeV": 0.0681,
+      "warning": "pure Yang-Mills has no experimentally unique physical scale; conversion to GeV imports a convention"
+    }
+  },
+  "constructiveBoundary": {
+    "numericalEvidenceCanShow": [
+      "stable positive-mass plateaux across operator bases, volumes and lattice spacings",
+      "continuum-compatible dimensionless ratios with quantified statistical and model sensitivity",
+      "agreement across actions and scale choices as a universality test",
+      "a compelling empirical estimate of the lowest state coupling to the sampled operators"
+    ],
+    "itDoesNotProve": [
+      "existence of a nontrivial continuum quantum Yang-Mills measure on R4",
+      "all Osterwalder-Schrader axioms and reconstruction of the required Hilbert space",
+      "uniform convergence of the finite-lattice spectral measures near zero energy",
+      "an exact positive lower spectral bound in infinite volume",
+      "absence of an arbitrarily light state with vanishing overlap in every sampled finite operator basis",
+      "the theorem for every compact simple gauge group"
+    ],
+    "quantifierMismatch": "a finite set of stochastic estimates and regression models cannot establish the universal cutoff, volume, observable and spectral quantifiers in the Jaffe-Witten statement",
+    "officialProblem": "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf"
+  },
+  "spin23Boundary": {
+    "useful": "these continuum ratios are falsifiable numerical targets for any Spin(2,3)-adjacent mechanism that claims to reproduce a compact internal Yang-Mills sector",
+    "notAProofBridge": "agreement with a glueball spectrum does not construct the compact gauge measure, and Spin(2,3) representation theory does not supply the missing uniform continuum spectral bound",
+    "groupLesson": "Sp(4)/Spin(5) is a compact-group comparison, not the noncompact spacetime group Spin(2,3); the neighboring notation must not be treated as a dynamical identification"
+  },
+  "sources": [
+    "https://arxiv.org/abs/2007.06422",
+    "https://arxiv.org/abs/2106.00364",
+    "https://arxiv.org/abs/1710.07043",
+    "https://doi.org/10.1016/0550-3213(90)90540-T",
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf"
+  ],
+  "decision": "The numerical lattice route gives the strongest quantitative evidence for a four-dimensional pure-gauge gap. Its finite correlator positivity, continuum fits and cross-action/group checks are auditable, but extrapolated stochastic convergence is not a construction of the R4 theory and supplies no uniform theorem excluding spectral weight arbitrarily close to zero."
+}
