@@ -1,0 +1,49 @@
+{
+  "schema": "spin23.zero-flux-reversed-slope-seam/1",
+  "documentId": 1483,
+  "date": "2026-10-20",
+  "status": "exact-boundary-identity-and-constructive-spectral-witness",
+  "targets": {
+    "upMassSquaredLocation": 0.000013577502786208545,
+    "downMassSquaredLocation": 0.0003497378191729099
+  },
+  "zeroFluxIdentity": {
+    "S": "a+b+c",
+    "R": "sqrt(((a-b)^2+(b-c)^2+(c-a)^2)/2)",
+    "upSortedSpectrum": ["0", "S-R", "S+R"],
+    "sortedLocation": "(S-R)/(S+R)",
+    "decreasingSlopePhysicalLocation": "2R/(S+R)",
+    "requiredRoverS": 0.000006788797480562627
+  },
+  "spectralWitness": {
+    "delta": 0,
+    "a": 1.0000117585421586,
+    "b": 0.9999882414578414,
+    "c": 1,
+    "eta": 0.012612109310721289,
+    "upSlope": "decreasing",
+    "downSlope": "increasing",
+    "upLocation": 0.000013577502785855344,
+    "downLocation": 0.0003497378191811765
+  },
+  "boundedDiagonalTorusGrid": {
+    "gridPerPhase": 512,
+    "bestMeanSquaredLogScore": 0.7829763168691607,
+    "best": {
+      "alpha": 0.06135923151542565,
+      "beta": 6.160466844148735,
+      "Vus": 0.9991488903099948,
+      "Vcb": 0.07621958647209016,
+      "Vub": 0.0057739080543010865,
+      "absoluteJarlskog": 0.000017108486052812947
+    },
+    "globalMinimumClaimed": false
+  },
+  "verdict": {
+    "decreasingUpSlopeReopenedAwayFromPiFlux": true,
+    "bothMassHierarchiesCompatibleAtZeroFlux": true,
+    "joinedCkmWitnessFound": false,
+    "generalHolonomyExcluded": false,
+    "physicalAdmissionChanged": false
+  }
+}
