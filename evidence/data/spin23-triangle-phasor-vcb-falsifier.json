@@ -1,0 +1,46 @@
+{
+  "schema": "spin23.triangle-phasor-vcb-falsifier/1",
+  "documentId": 1481,
+  "date": "2026-10-20",
+  "status": "exact-fixed-witness-bound-and-local-held-out-branch-falsifier",
+  "phasorInterval": {
+    "entry": "V_ij=sum_k A_ki B_kj exp(i phi_k)",
+    "lower": "max(2 max_k(abs(w_k))-sum_k(abs(w_k)),0)",
+    "upper": "sum_k(abs(w_k))",
+    "exactForTwoIndependentRelativePhases": true
+  },
+  "claim1480WitnessControl": {
+    "maximumVcs": 0.5919663179078647,
+    "pdgVcs": 0.97349,
+    "excludedForBothMonotoneOrderings": true
+  },
+  "rootedBranch": {
+    "delta": 3.141592653589793,
+    "a": 1.4164910146486267,
+    "b": 49498.70035260983,
+    "c": 1.0,
+    "eta": 1.0006721188062855,
+    "alpha": 1.247964929430676,
+    "beta": 1.2666461658547656,
+    "upOrderingZeroBased": [0, 1, 2],
+    "downOrderingZeroBased": [2, 1, 0],
+    "upMassSquaredLocation": 0.000013577502786208545,
+    "downMassSquaredLocation": 0.0003497378191729099,
+    "fitted": {"Vus": 0.2250099999982625, "Vub": 0.00373199999995437, "absoluteJarlskog": 0.00003114999999983409},
+    "predicted": {"Vcb": 0.05014123233590199},
+    "mixingMagnitudes": [[0.9743493070130359,0.2250099999982625,0.00373199999995437],[0.22484702198430986,0.9731031155661893,0.05014123233590198],[0.00934048328541243,0.04940472018094521,0.9987351645936168]]
+  },
+  "pdg": {
+    "source": "Particle Data Group 2025 CKM review",
+    "url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-ckm-matrix.pdf",
+    "equation": "12.27",
+    "Vcb": 0.04183,
+    "upperSigma": 0.00079,
+    "lowerSigma": 0.00069
+  },
+  "heldOutDifference": 0.00831123233590199,
+  "relativeExcessPercent": 19.869070848438895,
+  "conservativeSignificance": 10.520547260635428,
+  "scope": {"spectralSolutionsScanned": 581, "globalNoGoEstablished": false, "nextGate": "certified interval branch-and-bound on every centered-cubic branch"},
+  "verdict": {"claim1480WitnessExcluded": true, "rootedLargeBBranchExcluded": true, "wholeTriangleFamilyExcluded": false, "physicalAdmissionChanged": false}
+}
