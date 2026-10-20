@@ -206,9 +206,11 @@ exact minimal form:
 constant Dirac/Majorana sector projector}.}
 \]
 
-The next gate is dynamical: compute the curvature decomposition and determine
-whether a natural generalized action suppresses the off-diagonal second
-fundamental form rather than imposing it by hand.
+Claim 1502 performs the first dynamical test. Pure curvature does not suffice:
+flat off-diagonal connections can still leak across the split. A positive
+covariant-projector energy detects exactly that second fundamental form and
+selects the parallel mask in the source-free vacuum, though its spectral
+origin remains to be derived.
 
 ## Reproduction
 

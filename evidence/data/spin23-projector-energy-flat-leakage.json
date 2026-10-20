@@ -1,0 +1,27 @@
+{
+  "schema": "spin23.projector-energy-flat-leakage/1",
+  "date": "2026-10-20",
+  "theorem": {
+    "pureCurvatureImpliesParallelProjector": false,
+    "counterexample": "A_x=i sigma_x and A_y=0 has F_xy=0 but [A_x,Z_M] is nonzero",
+    "positiveProjectorEnergySelectsParallelism": true,
+    "selectionTerm": "S_Z=kappa integral ||nabla Z_M||^2, kappa>0",
+    "minimum": "nabla Z_M=0 in the source-free vacuum"
+  },
+  "enumeration": {
+    "generatorForm": "K_mu=[[a_mu,b_mu],[b_mu,c_mu]], coefficients in {-1,0,1}",
+    "totalConnectionPairs": 729,
+    "flatPairs": 265,
+    "flatButLeakingPairs": 184,
+    "parallelPairs": 81,
+    "flatAndParallelPairs": 81,
+    "projectorEnergy": "2(b_x^2+b_y^2)"
+  },
+  "physicalInterpretation": {
+    "pureYangMills": "cannot distinguish a flat off-diagonal leakage connection from a flat block connection",
+    "projectorKineticTerm": "is gauge-covariant when Z_M transforms in the adjoint and gives the off-diagonal connection a positive quadratic mass",
+    "leakageCarrier": "the second fundamental form (I-Z_M) nabla Z_M"
+  },
+  "boundary": "the positive term is the minimal sufficient dynamics, not yet a derivation from the Pati-Salam spectral action; external matter sources can displace its minimum",
+  "verdict": "curvature alone does not dynamically protect the mask; a covariant-projector energy or an equivalent source of positive second-fundamental-form mass is required"
+}
