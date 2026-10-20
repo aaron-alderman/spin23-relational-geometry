@@ -21,7 +21,7 @@ function jacobi(A){
   return {values:order.map(i=>A[i][i]*scale),vectors:U.map(row=>order.map(i=>row[i]))};
 }
 const C=(re,im=0)=>({re,im}),add=(x,y)=>C(x.re+y.re,x.im+y.im),mul=(x,y)=>C(x.re*y.re-x.im*y.im,x.re*y.im+x.im*y.re),conj=x=>C(x.re,-x.im),abs=x=>Math.hypot(x.re,x.im);
-const w=data.rootedBranch,{a,b,c,eta}=w,D=[a+c,a+b,b+c],H=[[0,a,-c],[a,0,b],[-c,b,0]];
+const w=data.inadmissibleReversedOrderBranch,{a,b,c,eta}=w,D=[a+c,a+b,b+c],H=[[0,a,-c],[a,0,b],[-c,b,0]];
 const matrix=s=>D.map((d,i)=>D.map((_,j)=>(i===j?d:0)+s*H[i][j]));
 const up=jacobi(matrix(-1)),down=jacobi(matrix(eta));
 const ratio=e=>(e[1]-e[0])/(e[2]-e[0]);
@@ -34,11 +34,13 @@ const M=V.map(row=>row.map(abs));
 assert.ok(Math.max(...M.flatMap((row,i)=>row.map((x,j)=>Math.abs(x-w.mixingMagnitudes[i][j]))))<2e-9);
 const J=Math.abs(mul(mul(V[0][0],V[1][1]),mul(conj(V[0][1]),conj(V[1][0]))).im);
 assert.ok(Math.abs(J-w.fitted.absoluteJarlskog)<2e-12);
-const f=data.pdg,pred=w.predicted.Vcb,diff=pred-f.Vcb,sig=diff/f.upperSigma;
-assert.ok(Math.abs(diff-data.heldOutDifference)<1e-15);
-assert.ok(Math.abs(sig-data.conservativeSignificance)<1e-12&&sig>10);
+const physicalAfterReversal=1-w.sortedDownLocation;
+assert.ok(Math.abs(physicalAfterReversal-w.physicalDownLocationAfterReversal)<1e-15);
+assert.ok(Math.abs(physicalAfterReversal-w.downMassSquaredLocation)>.99);
+assert.equal(w.orderingCompatibleWithClaimedMassHierarchy,false);
 assert.ok(data.claim1480WitnessControl.maximumVcs<data.claim1480WitnessControl.pdgVcs);
-assert.equal(data.verdict.rootedLargeBBranchExcluded,true);
+assert.equal(data.verdict.reversedOrderNearFitPhysicallyAdmissible,false);
+assert.equal(data.verdict.nominalVcbFalsifierWithdrawn,true);
 assert.equal(data.verdict.wholeTriangleFamilyExcluded,false);
 assert.equal(data.verdict.physicalAdmissionChanged,false);
-console.log(`PASS 1481: the exact mass-surface branch fits Vus, Vub and J but predicts |Vcb|=${pred.toFixed(9)}, ${sig.toFixed(2)} conservative PDG sigma high; the global family remains open.`);
+console.log(`PASS 1481 CORRECTED: the exact phasor bound excludes the claim-1480 witness; the apparent reversed-order near-fit maps rd to 1-rd=${physicalAfterReversal.toFixed(9)} and is not a joined mass/mixing solution.`);

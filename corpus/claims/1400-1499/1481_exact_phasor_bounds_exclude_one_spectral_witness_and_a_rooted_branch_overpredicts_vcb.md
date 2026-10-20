@@ -1,14 +1,16 @@
-# Exact phasor bounds exclude one spectral witness and a rooted branch overpredicts Vcb
+# Exact phasor bounds exclude one spectral witness and expose a false reversed-order join
 
 **Date:** 20 October 2026
 
 **Gates:** A5 and A6
 
-**Status:** exact fixed-witness bound and local held-out branch falsifier; global triangle family remains open
+**Status:** exact fixed-witness bound plus correction of an inadmissible ordering; global triangle family remains open
 
 **Depends on:** [the centered-cubic spectral elimination](1480_the_centered_cubic_eliminates_holonomy_and_shows_the_mass_hierarchies_are_spectrally_feasible.md)
 
-**Evidence:** [machine-readable branch test](../../../evidence/data/spin23-triangle-phasor-vcb-falsifier.json), [executable verifier](../../../verification/verify/verify_spin23_triangle_phasor_vcb_falsifier.mjs), and [PDG 2025 CKM review, Eqs. 12.27--12.28](https://pdg.lbl.gov/2025/reviews/rpp2025-rev-ckm-matrix.pdf)
+**Evidence:** [machine-readable correction](../../../evidence/data/spin23-triangle-phasor-vcb-falsifier.json), [executable verifier](../../../verification/verify/verify_spin23_triangle_phasor_vcb_falsifier.mjs), and [PDG 2025 CKM review](https://pdg.lbl.gov/2025/reviews/rpp2025-rev-ckm-matrix.pdf)
+
+> **Correction.** The initially reported large-(b) near-fit reversed the down eigenvalue order while retaining the small sorted mass location. A negative affine slope sends (r) to (1-r); the near-fit therefore did not preserve the down-quark hierarchy. Its nominal held-out (V_{cb}) falsifier is withdrawn. The exact phasor bound below is unaffected.
 
 ## Exact phase interval
 
@@ -18,87 +20,61 @@ On the (delta=\pi) spectral surface, let the real orthogonal eigenvector matrice
 V=A^T\operatorname{diag}(1,e^{i\alpha},e^{i\beta})B.
 \]
 
-Every entry is therefore a three-phasor sum
-
-\[
-V_{ij}=w_1+w_2e^{i\alpha}+w_3e^{i\beta},
-\qquad w_k=A_{ki}B_{kj}\in\mathbb R.
-\]
-
-Its exactly attainable magnitude interval is
+Every entry is a three-phasor sum (V_{ij}=\sum_k w_ke^{i\phi_k}), with (w_k=A_{ki}B_{kj}\in\mathbb R). Its exactly attainable magnitude interval is
 
 \[
 \boxed{
 \max\left(2\max_k|w_k|-\sum_k|w_k|,0\right)
-\le |V_{ij}|\le
-\sum_k|w_k|.
+\le |V_{ij}|\le\sum_k|w_k|.
 }
 \]
 
-This converts each fixed spectral witness into a phase-independent CKM screen.
-
-For the extreme witness in claim 1480, the middle--middle entry satisfies
+For the extreme witness in claim 1480 this gives
 
 \[
 |V_{cs}|\le0.59196632,
 \]
 
-whereas the PDG central value is (0.97349). Both monotone orderings keep the middle eigenvector in the middle, so no diagonal phases or slope reversal can repair that witness.
+against the PDG central value (0.97349). Both increasing and decreasing affine orderings keep the middle eigenvector in the middle, so phases cannot repair this witness.
 
-## A second spectral branch nearly converges
+## Why the apparent near-fit fails
 
-The exact centered-cubic surface has other branches. Rooting the two mass ratios at (delta=\pi) and scanning 581 solutions found a large-(b) branch with substantially better mixing. After continuous refinement, its three remaining variables are one surface coordinate and two diagonal phases.
-
-Fit the three observables
+The numerical solve used
 
 \[
-|V_{us}|=0.22501,
-\qquad |V_{ub}|=0.003732,
-\qquad |J|=3.115\times10^{-5}
+(a,b,c,\eta)=(1.41649101465,49498.70035261,1,1.00067211881)
 \]
 
-while holding (|V_{cb}|) out. The rooted solution is
+and reversed the down eigenvectors. It formally fitted (|V_{us}|), (|V_{ub}|) and (J), giving (V_{cb}=0.05014123234). But for sorted eigenvalues
 
 \[
-(a,b,c,\eta)=(1.41649101465,49498.70035261,1,1.00067211881),
+r=\frac{\lambda_2-\lambda_1}{\lambda_3-\lambda_1},
 \]
 
-with down eigenvalue order reversed and
+a negative affine slope reverses the physical order and yields (r_{\rm physical}=1-r).
+
+The solve imposed (r_d=3.49738\times10^{-4}) before reversal. Its physical down location is therefore (0.9996502622), not the observed small hierarchy. The attractive CKM matrix came from spending an inadmissible family permutation.
+
+Repeating the 581-solution (delta=\pi) scan with hierarchy-compatible increasing order gives a much poorer best recorded point:
 
 \[
-(\alpha,\beta)=(1.24796492943,1.26664616585).
+(|V_{us}|,|V_{cb}|,|V_{ub}|,|J|)
+\simeq(0.4969,0.01838,0.03202,1.642\times10^{-5}).
 \]
 
-The three fitted quantities agree at approximately (10^{-11}) relative tolerance. The held-out result is
+This is a bounded scan, not a global minimum.
 
-\[
-\boxed{|V_{cb}|_{\rm triangle}=0.05014123234.}
-\]
+## Scope and next gate
 
-The 2025 PDG global fit gives
+The correction strengthens the joining rule: eigenvalue permutations stop being free once the same labels must carry affine masses and CKM rows or columns. A global no-go is still absent because decreasing physical slopes require rooting the sorted location at (1-r), and general-(delta) branches remain.
 
-\[
-|V_{cb}|=0.04183^{+0.00079}_{-0.00069}.
-\]
-
-Using the larger quoted uncertainty, the branch prediction is high by (10.52) standard deviations, or (19.87\%).
-
-## Scope
-
-This is stronger than the earlier optimizer residual because it is a held-out consequence after the two mass ratios and three mixing invariants are fixed. It is still not a global no-go:
-
-- the spectral-elimination equation has multiple branches;
-- the displayed solve uses (delta=\pi);
-- other choices of three fitted invariants parameterize the same image differently;
-- a certified bound over every allowed branch has not been proved.
-
-The next decisive calculation is interval branch-and-bound on the centered-cubic surface, using the exact phasor intervals to prune boxes and either enclose a CKM solution or certify its absence.
+The next calculation must enumerate all four hierarchy-correct slope-sign branches before applying interval branch-and-bound.
 
 ## Verdict
 
 \[
 \boxed{\text{claim-1480 witness: exactly excluded},\quad
-\text{large-}b\text{ rooted branch: held-out }V_{cb}\text{ excluded},\quad
+\text{reversed-order near-fit: inadmissible},\quad
 \text{global family: open}.}
 \]
 
