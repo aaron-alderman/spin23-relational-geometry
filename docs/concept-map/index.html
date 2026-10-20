@@ -39,18 +39,21 @@
         <button id="flatten" type="button" aria-pressed="false">Flatten depth</button>
         <button id="reset" type="button">Reset view</button>
       </div>
-      <div class="stage-wrap">
-        <div id="stage" role="img" aria-label="Interactive three-dimensional concept graph. Drag to orbit, scroll to zoom, and select a labeled node for its status and evidence."></div>
-        <div class="depth-key" aria-hidden="true"><span>front</span><i></i><span>mathematical spine</span><i></i><span>back</span></div>
+      <div class="stage-shell">
+        <div class="stage-wrap">
+          <div id="stage" role="region" aria-label="Interactive three-dimensional concept graph. Drag to orbit, scroll to zoom, and click or tab to a concept label for its status and evidence."></div>
+          <div class="depth-key" aria-hidden="true"><span>front</span><i></i><span>mathematical spine</span><i></i><span>back</span></div>
+        </div>
         <aside id="detail" class="detail" aria-live="polite">
           <p class="detail-status">Select a node</p>
           <h3>Read the graph without collapsing its claims</h3>
-          <p>Click a concept or choose it from the Focus menu. The panel will show its epistemic status, short account, typed connections and source documents.</p>
+          <p>Click any visible label, tab to it with the keyboard, or choose it from the Focus menu. The panel will show its epistemic status, short account, clickable connections and source documents.</p>
         </aside>
       </div>
       <div class="legend" aria-label="Legend">
         <div><strong>Node status</strong><span><i class="dot established"></i>Established</span><span><i class="dot conditional"></i>Conditional</span><span><i class="dot underdetermined"></i>Underdetermined</span><span><i class="dot obstructed"></i>Obstructed</span><span><i class="dot missing"></i>Missing</span><span><i class="dot analogical"></i>Analogy</span></div>
-        <div><strong>Edge grammar</strong><span>solid = construction</span><span>dashed = unresolved / analogy</span><span>red = obstruction or separation</span></div>
+        <div><strong>Edge status colour</strong><span><i class="edge-swatch established"></i>Established</span><span><i class="edge-swatch conditional"></i>Conditional</span><span><i class="edge-swatch underdetermined"></i>Underdetermined</span><span><i class="edge-swatch obstructed"></i>Obstructed</span><span><i class="edge-swatch missing"></i>Missing</span><span><i class="edge-swatch analogical"></i>Analogy</span></div>
+        <div><strong>Edge type</strong><span><i class="edge-swatch established"></i>solid = derives / realizes</span><span><i class="edge-swatch conditional dashed"></i>dashed = requires / extends</span><span><i class="edge-swatch analogical dotted"></i>dotted = analogy / separation</span></div>
       </div>
       <noscript>This atlas requires JavaScript. Use the Mermaid fallback in corpus/concept-map/README.md.</noscript>
     </section>

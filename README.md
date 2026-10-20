@@ -8,7 +8,7 @@ This is **not a completed unified theory**. Established mathematics, reproducibl
 
 | Reader | Start here |
 |---|---|
-| General reader | [Edition 3.0 book preview](book/edition-3/README.md) |
+| General reader | [Edition 3.1 expanded book preview](book/edition-3/README.md) |
 | Researcher | [Canonical corpus guide](corpus/README.md) |
 | Auditor or contributor | [Verification guide](verification/README.md) |
 | Visual explorer | [Interactive concept atlas](docs/concept-map/index.html) |

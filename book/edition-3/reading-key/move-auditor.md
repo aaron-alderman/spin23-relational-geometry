@@ -1,0 +1,72 @@
+# ⌕ Auditor
+
+_Research-move page_
+
+checks assumptions, certificates, counterexamples and stopping rules. This describes the work performed by a passage, not a personality type.
+
+## How to read it
+
+Treat this mark as a verb. It names the work the passage is doing and therefore the kind of question a reader should ask of it.
+
+## Every current use
+
+- [The revised spine · Why ten generators are a real gate](../chapters/01-the-revised-spine.md#why-ten-generators-are-a-real-gate)
+- [The revised spine · Algebra is not yet spacetime](../chapters/01-the-revised-spine.md#algebra-is-not-yet-spacetime)
+- [One carrier, two faces, three relations · Three relations do not select an orientation](../chapters/02-one-carrier-two-faces-three-relations.md#three-relations-do-not-select-an-orientation)
+- [Chapter · The projective loop](../chapters/03-projective-loop.md)
+- [The projective loop · The exact result](../chapters/03-projective-loop.md#the-exact-result)
+- [The projective loop · The reversal](../chapters/03-projective-loop.md#the-reversal)
+- [The projective loop · A familiar twisted-loop picture](../chapters/03-projective-loop.md#a-familiar-twisted-loop-picture)
+- [The projective loop · Central sign versus handedness](../chapters/03-projective-loop.md#central-sign-versus-handedness)
+- [The Furey interface · Why it is not yet unification](../chapters/04-furey-interface.md#why-it-is-not-yet-unification)
+- [Chapter · The Standard-Model seam](../chapters/05-standard-model-seam.md)
+- [The Standard-Model seam · The attractive construction](../chapters/05-standard-model-seam.md#the-attractive-construction)
+- [The Standard-Model seam · The uncomfortable edge](../chapters/05-standard-model-seam.md#the-uncomfortable-edge)
+- [The Standard-Model seam · What c, L and Y mean](../chapters/05-standard-model-seam.md#what-c-l-and-y-mean)
+- [The Standard-Model seam · Fit capacity versus derivation](../chapters/05-standard-model-seam.md#fit-capacity-versus-derivation)
+- [The Standard-Model seam · The chiral fold obstruction](../chapters/05-standard-model-seam.md#the-chiral-fold-obstruction)
+- [Proton safety, Pati–Salam and triality · The current action and its limits](../chapters/06-proton-safety.md#the-current-action-and-its-limits)
+- [The exceptional horizon · Jordan freedom and the need for selectors](../chapters/07-exceptional-horizon.md#jordan-freedom-and-the-need-for-selectors)
+- [Provenance and reading map · How to challenge a claim](../chapters/10-provenance-and-reading-map.md#how-to-challenge-a-claim)
+- [E3-F01 · The Jordan/TKK route reaches the Spin(2,3) hinge](../chapters/08-result-ledger.md#E3-F01)
+- [E3-F02 · A concrete lower-rank Jordan entry point exists](../chapters/08-result-ledger.md#E3-F02)
+- [E3-F03 · The odd-cycle intuition has a projective double-cover realization](../chapters/08-result-ledger.md#E3-F03)
+- [E3-F04 · The central sign is not the missing orientation datum](../chapters/08-result-ledger.md#E3-F04)
+- [E3-F06 · One S₁ mediator cannot realize the desired pure Furey pulse](../chapters/08-result-ledger.md#E3-F06)
+- [E3-F07 · Proton safety is a source-selection problem](../chapters/08-result-ledger.md#E3-F07)
+- [E3-F09 · The simplest continuous and binary protections fail](../chapters/08-result-ledger.md#E3-F09)
+- [E3-F15 · Healthy bosonic poles do not settle the chiral fold](../chapters/08-result-ledger.md#E3-F15)
+- [E3-F16 · The selector is missing a physical phase reference](../chapters/08-result-ledger.md#E3-F16)
+- [E3-F17 · The canonical completion carries index three, but its minimal 6D parent is anomalous](../chapters/08-result-ledger.md#E3-F17)
+- [E3-F18 · The traceless spectral threshold survives stress improvement](../chapters/08-result-ledger.md#E3-F18)
+- [E3-F20 · The softened QWZ curve is not the response of its stated Lindbladian](../chapters/08-result-ledger.md#E3-F20)
+- [Proof · Furey participation: closure certificate](../details/furey-participation-proof.md)
+- [Proof · Furey interface: selector obstruction](../details/furey-selector-obstruction.md)
+- [Claim · The revised spine · Why ten generators are a real gate (1)](../details/01-the-revised-spine-why-ten-generators-are-a-real-gate-claim-1.md)
+- [Claim · The revised spine · Algebra is not yet spacetime (1)](../details/01-the-revised-spine-algebra-is-not-yet-spacetime-claim-1.md)
+- [Claim · One carrier, two faces, three relations · Three relations do not select an orientation (1)](../details/02-one-carrier-two-faces-three-relations-three-relations-do-not-select-an-orientation-claim-1.md)
+- [Claim · The projective loop · The exact result (1)](../details/03-projective-loop-the-exact-result-claim-1.md)
+- [Claim · The projective loop · The exact result (2)](../details/03-projective-loop-the-exact-result-claim-2.md)
+- [Claim · The projective loop · The reversal (1)](../details/03-projective-loop-the-reversal-claim-1.md)
+- [Claim · The projective loop · A familiar twisted-loop picture (1)](../details/03-projective-loop-a-familiar-twisted-loop-picture-claim-1.md)
+- [Claim · The projective loop · A familiar twisted-loop picture (2)](../details/03-projective-loop-a-familiar-twisted-loop-picture-claim-2.md)
+- [Claim · The projective loop · Central sign versus handedness (1)](../details/03-projective-loop-central-sign-versus-handedness-claim-1.md)
+- [Claim · The projective loop · Central sign versus handedness (2)](../details/03-projective-loop-central-sign-versus-handedness-claim-2.md)
+- [Claim · The Furey interface · Why it is not yet unification (1)](../details/04-furey-interface-why-it-is-not-yet-unification-claim-1.md)
+- [Claim · The Standard-Model seam · The attractive construction (1)](../details/05-standard-model-seam-the-attractive-construction-claim-1.md)
+- [Claim · The Standard-Model seam · The uncomfortable edge (1)](../details/05-standard-model-seam-the-uncomfortable-edge-claim-1.md)
+- [Claim · The Standard-Model seam · What c, L and Y mean (1)](../details/05-standard-model-seam-what-c-l-and-y-mean-claim-1.md)
+- [Claim · The Standard-Model seam · What c, L and Y mean (2)](../details/05-standard-model-seam-what-c-l-and-y-mean-claim-2.md)
+- [Claim · The Standard-Model seam · Fit capacity versus derivation (1)](../details/05-standard-model-seam-fit-capacity-versus-derivation-claim-1.md)
+- [Claim · The Standard-Model seam · The chiral fold obstruction (1)](../details/05-standard-model-seam-the-chiral-fold-obstruction-claim-1.md)
+- [Claim · The Standard-Model seam · The chiral fold obstruction (2)](../details/05-standard-model-seam-the-chiral-fold-obstruction-claim-2.md)
+- [Claim · Proton safety, Pati–Salam and triality · The current action and its limits (1)](../details/06-proton-safety-the-current-action-and-its-limits-claim-1.md)
+- [Claim · Proton safety, Pati–Salam and triality · The current action and its limits (2)](../details/06-proton-safety-the-current-action-and-its-limits-claim-2.md)
+- [Claim · The exceptional horizon · Jordan freedom and the need for selectors (1)](../details/07-exceptional-horizon-jordan-freedom-and-the-need-for-selectors-claim-1.md)
+- [Claim · The exceptional horizon · Jordan freedom and the need for selectors (2)](../details/07-exceptional-horizon-jordan-freedom-and-the-need-for-selectors-claim-2.md)
+- [Claim · Provenance and reading map · How to challenge a claim (1)](../details/10-provenance-and-reading-map-how-to-challenge-a-claim-claim-1.md)
+- [Claim · Provenance and reading map · How to challenge a claim (2)](../details/10-provenance-and-reading-map-how-to-challenge-a-claim-claim-2.md)
+
+---
+
+[← All reading-key pages](../reading-key.md) · [Book contents](../README.md)

@@ -1,102 +1,157 @@
 # Research frontier
 
-_Advance conditions and stop rules_
+_Seven physical gates, one graph lane, explicit reopen rules_
 
-## E3-RP1 · Reconstruct the closure independently
+> **Chapter status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
 
-**Priority:** `stop-everything`
+> **Chapter function — [✦ Scout](../reading-key/move-scout.md)** — opens a plausible new route or searches beyond the present ingredients.
 
-**Question:** Does the three-generator Jordan/Furey set close to sp(4,R) under an independent basis and sign convention?
+![Terminal gate map grouping A5 and A7 as internally exhausted, A2 and A9 as conditionally constructed, and A4 A6 A11 as externally open](../../../docs/edition-3/assets/terminal-gates.svg)
 
-**Advance when:** A second implementation reproduces dimension ten, brackets, real form and the Spin₀(2,3) identification.
+_The terminal partition says where new information must enter._
+<a id="A2"></a>
+## A2 · Derive the defect rather than insert it
 
-**Stop or downgrade when:** Downgrade the central result if closure depends on tuned transcription, a hidden quotient or an inconsistent real form.
+> **Gate state — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
-- [1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md](../../../corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md)
+> **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-## E3-RP2 · Derive rather than name the physical carrier
+**Priority:** `external-input`
 
-**Priority:** `highest`
+**Question:** What microscopic action creates the neutral wall, its orientation and a globally compatible compact domain?
 
-**Question:** What microscopic system supplies the four-real-dimensional carrier and its generators?
+**Advance when:** One UV model produces the interface, BF parity and localized reader spectrum with no hand-selected history.
 
-**Advance when:** One action yields the carrier, symplectic form and normalization without branch-specific insertion.
+**Stop or downgrade when:** Do not keep manipulating gauge-equivalent charge-three phases as though they were disconnected vacua.
 
-**Stop or downgrade when:** Keep the result mathematical if the carrier remains an interpretive assignment.
+- [1233_charge_three_abelian_higgs_reduces_conditionally_to_level_three_bf_and_a_gapped_unit_charge_reader_can_coexist_only_as_non_topological_memory.md](../../../corpus/claims/1200-1299/1233_charge_three_abelian_higgs_reduces_conditionally_to_level_three_bf_and_a_gapped_unit_charge_reader_can_coexist_only_as_non_topological_memory.md)
+- [1292_a_neutral_z2_kink_is_the_minimal_defect_origin_and_one_even_charge_one_boson_localizes_without_mirror_doubling.md](../../../corpus/claims/1200-1299/1292_a_neutral_z2_kink_is_the_minimal_defect_origin_and_one_even_charge_one_boson_localizes_without_mirror_doubling.md)
 
-- [1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md](../../../corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md)
+<a id="A4"></a>
+## A4 · Define the chiral physical-state domain
 
-## E3-RP3 · Resolve the third Wilson edge
+> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
 
-**Priority:** `highest`
-
-**Question:** Is the forced third edge observable structure, a boundary term or a fatal mismatch?
-
-**Advance when:** A source-derived mechanism predicts its coefficient and survives loop and flavor tests.
-
-**Stop or downgrade when:** Close pure-star candidates that delete the edge without a symmetry or incidence theorem.
-
-- [1062_one_S1_mediator_cannot_generate_a_pure_FCp_pulse_but_two_orthogonal_copies_realize_the_exact_oriented_star.md](../../../corpus/claims/1000-1099/1062_one_S1_mediator_cannot_generate_a_pure_FCp_pulse_but_two_orthogonal_copies_realize_the_exact_oriented_star.md)
-
-## E3-RP4 · Complete proton-safe source selection
-
-**Priority:** `highest`
-
-**Question:** Can a full finite spectral triple derive the safe leptoquark sector while suppressing every diquark partner?
-
-**Advance when:** The one-form calculus, kinetic metric, vacuum and counterterms preserve the mask.
-
-**Stop or downgrade when:** Reject candidates with unprotected companion mixing or a forbidden proton-decay rate.
-
-- [1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md](../../../corpus/claims/1000-1099/1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md)
-
-## E3-RP5 · Transport baryon triality through the ultraviolet theory
-
-**Priority:** `high`
-
-**Question:** Does the Z₉ representative and Z₃ observable quotient survive the global group, bordism class and heavy thresholds?
-
-**Advance when:** A complete anomaly and Higgs-descent calculation returns triality without extra assumptions.
-
-**Stop or downgrade when:** Close the protection if a global anomaly or threshold operator regenerates the forbidden channel.
-
-- [1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md](../../../corpus/claims/1000-1099/1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md)
-
-## E3-RP6 · Separate central sign, orientation and chirality
-
-**Priority:** `high`
-
-**Question:** Can one typed map connect projective sign to an independently odd datum and then to a protected chiral observable?
-
-**Advance when:** The same map preserves carrier, symmetry action and measurable phase through all stages.
-
-**Stop or downgrade when:** Keep the notions separate if the bridge changes representation or silently inserts reflection.
-
-- [1066_the_Wilson_pi_flux_is_the_nontrivial_RP1_line_holonomy_but_its_canonical_frame_lift_is_central_minus_I_not_a_Pfaffian_sheet_flip.md](../../../corpus/claims/1000-1099/1066_the_Wilson_pi_flux_is_the_nontrivial_RP1_line_holonomy_but_its_canonical_frame_lift_is_central_minus_I_not_a_Pfaffian_sheet_flip.md)
-
-## E3-RP7 · Cross the exceptional real-form seam
-
-**Priority:** `high`
-
-**Question:** Can the local real Jordan carrier enter an exceptional state domain while preserving positivity, cubic structure and noncompact action?
-
-**Advance when:** An explicit real-form map preserves a nontrivial invariant and a declared physical observable.
-
-**Stop or downgrade when:** Retain adjacency only if the constructions meet merely through dimensions, labels or analogy.
-
-- [33_octonions_leech_lattice_jordan_branch.md](../../../corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md)
-
-## E3-RP8 · Demand one target-blind observable
+> **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
 **Priority:** `stop-everything`
 
-**Question:** What prospective measurement differs from established physics after parameters and selectors are frozen?
+**Question:** What Lorentz- and gauge-compatible fermion domain replaces the bosonic reflection fold?
 
-**Advance when:** A preregistered observable survives controls, flat-limit recovery and independent analysis.
+**Advance when:** A self-adjoint operator, lower bound, BRST cohomology and positive residues are computed on the same declared domain.
 
-**Stop or downgrade when:** Do not call the programme physical closure while every comparison remains retrospective or convention-selected.
+**Stop or downgrade when:** A positive bosonic benchmark does not establish unitarity of the chiral theory.
 
-- [30_research_frontier.md](../../../corpus/claims/0000-0099/30_research_frontier.md)
+- [1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md](../../../corpus/claims/1400-1499/1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md)
+
+<a id="A5"></a>
+## A5 · Supply a physical phase reference
+
+> **Gate state — [■ Internally exhausted](../reading-key/status-exhausted.md)** — Rearranging the present ingredients no longer addresses the missing datum.
+
+> **Needed move — [◉ Witness](../reading-key/move-witness.md)** — retains observation, preparation history, stakes and situated evidence.
+
+**Priority:** `external-input`
+
+**Question:** What measured or history-bearing charge-minus-two datum chooses the sterile phase axis and locks it locally to the charged carrier?
+
+**Advance when:** A gauge-complete local operator selects the whole orientation without target-dependent convention.
+
+**Stop or downgrade when:** Searches among already-audited symmetric data are exhausted.
+
+- [1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md](../../../corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md)
+
+<a id="A6"></a>
+## A6 · Make index three anomaly-free and mirror-free
+
+> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+
+> **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Priority:** `stop-everything`
+
+**Question:** Can a local or spectral real structure retain three complete chiral families while cancelling the full higher-dimensional anomaly polynomial?
+
+**Advance when:** The construction supplies sterile pairing, cancels local and global anomalies and has no independent mirror kernel.
+
+**Stop or downgrade when:** The integer three and O(3) bundle are not by themselves a physical family derivation.
+
+- [1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md](../../../corpus/claims/1400-1499/1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md)
+
+<a id="A7"></a>
+## A7 · Match the stress operator in curved microscopic theory
+
+> **Gate state — [■ Internally exhausted](../reading-key/status-exhausted.md)** — Rearranging the present ingredients no longer addresses the missing datum.
+
+> **Needed move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
+
+**Priority:** `external-input`
+
+**Question:** Which renormalization condition fixes improvement, contact terms, displacement operators and the common physical probe?
+
+**Advance when:** One completed action predicts the renormalized stress vertex and port map at a stated scale.
+
+**Stop or downgrade when:** The full third matrix direction must remain secondary while its improvement dependence is unfixed.
+
+- [1396_no_current_principle_predicts_the_reader_curvature_coupling_so_only_the_traceless_threshold_is_scheme_robust.md](../../../corpus/claims/1300-1399/1396_no_current_principle_predicts_the_reader_curvature_coupling_so_only_the_traceless_threshold_is_scheme_robust.md)
+
+<a id="A9"></a>
+## A9 · Predict a causal interacting spectrum
+
+> **Gate state — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Priority:** `highest`
+
+**Question:** What microscopic Hamiltonian predicts the sector-dependent pole, residue, linewidth and band support?
+
+**Advance when:** A causal positive spectral density survives disorder, calibration and held-out sector labels with the port fixed in advance.
+
+**Stop or downgrade when:** A static covariance, scalar linewidth or phenomenological curve is not an interacting response derivation.
+
+- [1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md](../../../corpus/claims/1400-1499/1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md)
+- [1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md](../../../corpus/claims/1400-1499/1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md)
+
+<a id="A11"></a>
+## A11 · Turn sensitivity into a physical test
+
+> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+
+> **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Priority:** `highest`
+
+**Question:** What device model predicts an absolute signal before data are unblinded, and can a protected ℤ₃ sector actually be prepared?
+
+**Advance when:** A powered experiment tests a preregistered effect size with independently verified sector algebra and scaling.
+
+**Stop or downgrade when:** Three settings of a continuous U(1) control are not protected ℤ₃ sectors.
+
+- [1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md](../../../corpus/claims/1400-1499/1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md)
+
+<a id="GRAPH"></a>
+## GRAPH · Derive the missing anisotropies
+
+> **Gate state — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Priority:** `external-input`
+
+**Question:** Can an action generate the addressed controls that enlarge the natural 𝔰𝔭(2,ℝ) response symmetry to all ten generators of 𝔰𝔭(4,ℝ)?
+
+**Advance when:** Orientation and anisotropy arise dynamically and ten-generator closure survives loss, disorder and refinement.
+
+**Stop or downgrade when:** A four-real carrier or conformally symplectic flow alone is not full Spin(2,3).
+
+- [1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md](../../../corpus/claims/1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md)
+- [1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md](../../../corpus/claims/1200-1299/1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md)
+
+## Chapter sources
+
+- [1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md](../../../corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md)
+- [1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md](../../../corpus/claims/1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md)
 
 ---
 

@@ -1,70 +1,1258 @@
 {
   "schema": "spin23-edition3-book/v1",
-  "edition": "3.0 preview",
-  "generatedAt": "2026-10-19T00:00:00.000Z",
-  "numberedCorpusDocuments": 1196,
-  "citationCount": 36,
-  "citationDigest": "5a2c34c340f9691a6e27258e94d190949b44eca66728301c0e169691cf99bf1c",
+  "edition": "3.1 expanded preview",
+  "generatedAt": "2026-10-20T00:00:00.000Z",
+  "numberedCorpusDocuments": 1266,
+  "citationCount": 57,
+  "citationDigest": "8fc8f8c14811f5f1f9623eb39f1111bb5898226f54daa220a0dff48ec9a0e8e2",
+  "taxonomy": {
+    "established": {
+      "icon": "✓",
+      "label": "Established",
+      "description": "Follows from declared assumptions and has an inspectable certificate."
+    },
+    "conditional": {
+      "icon": "◇",
+      "label": "Conditional",
+      "description": "Works after a named field, coefficient, boundary condition or control is supplied."
+    },
+    "external": {
+      "icon": "↗",
+      "label": "Externally open",
+      "description": "Needs an ingredient, calculation or observation not contained in the current corpus."
+    },
+    "exhausted": {
+      "icon": "■",
+      "label": "Internally exhausted",
+      "description": "Rearranging the present ingredients no longer addresses the missing datum."
+    },
+    "obstruction": {
+      "icon": "⊘",
+      "label": "Obstruction / no-go",
+      "description": "A stated candidate class or identification has been ruled out under explicit assumptions."
+    },
+    "experiment": {
+      "icon": "⌁",
+      "label": "Experiment / protocol",
+      "description": "Defines a measurement, sensitivity calculation or empirical decision rule."
+    },
+    "interpretive": {
+      "icon": "◎",
+      "label": "Interpretive map",
+      "description": "Organizes thought or workflow but is not evidence for a physical claim."
+    },
+    "governance": {
+      "icon": "▦",
+      "label": "Ledger / governance",
+      "description": "Preserves provenance, status, stopping rules and navigation."
+    }
+  },
+  "archetypes": [
+    {
+      "key": "scout",
+      "icon": "✦",
+      "name": "Scout",
+      "description": "opens a plausible new route or searches beyond the present ingredients"
+    },
+    {
+      "key": "cartographer",
+      "icon": "⌖",
+      "name": "Cartographer",
+      "description": "maps territory, distinctions, dependencies and interfaces"
+    },
+    {
+      "key": "auditor",
+      "icon": "⌕",
+      "name": "Auditor",
+      "description": "checks assumptions, certificates, counterexamples and stopping rules"
+    },
+    {
+      "key": "builder",
+      "icon": "⚒",
+      "name": "Builder",
+      "description": "constructs a model, mechanism, calculation, protocol or intervention"
+    },
+    {
+      "key": "witness",
+      "icon": "◉",
+      "name": "Witness",
+      "description": "retains observation, preparation history, stakes and situated evidence"
+    },
+    {
+      "key": "steward",
+      "icon": "▤",
+      "name": "Steward",
+      "description": "preserves provenance, memory, status and continuity"
+    },
+    {
+      "key": "translator",
+      "icon": "⇄",
+      "name": "Translator",
+      "description": "moves a structure between mathematical, physical or ordinary languages"
+    },
+    {
+      "key": "integrator",
+      "icon": "⊕",
+      "name": "Integrator",
+      "description": "joins several typed results while letting the weakest edge set the claim"
+    }
+  ],
   "chapters": [
     {
       "number": 1,
       "slug": "00-front-matter",
-      "title": "Front matter"
+      "title": "Front matter",
+      "taxonomy": "governance",
+      "archetype": "steward",
+      "sourceCount": 1,
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
     },
     {
       "number": 2,
       "slug": "01-the-revised-spine",
-      "title": "The revised spine"
+      "title": "The revised spine",
+      "taxonomy": "established",
+      "archetype": "integrator",
+      "sourceCount": 3,
+      "sources": [
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1200-1299/1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md"
+      ]
     },
     {
       "number": 3,
       "slug": "02-one-carrier-two-faces-three-relations",
-      "title": "One carrier, two faces, three relations"
+      "title": "One carrier, two faces, three relations",
+      "taxonomy": "established",
+      "archetype": "cartographer",
+      "sourceCount": 3,
+      "sources": [
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md",
+        "corpus/claims/1200-1299/1280_a_cycle_graph_selects_a_refinement_stable_real_two_mode_plane_but_not_its_orientation.md",
+        "corpus/claims/1200-1299/1281_full_sp4_closure_requires_addressed_anisotropy_which_is_control_data_not_cycle_symmetry.md"
+      ]
     },
     {
       "number": 4,
       "slug": "03-projective-loop",
-      "title": "The projective loop"
+      "title": "The projective loop",
+      "taxonomy": "obstruction",
+      "archetype": "auditor",
+      "sourceCount": 3,
+      "sources": [
+        "corpus/claims/0900-0999/994_the_three_placement_triangle_has_a_z2_sideband_frustration_and_requires_path_dependence_or_a_double_cover.md",
+        "corpus/claims/1200-1299/1233_charge_three_abelian_higgs_reduces_conditionally_to_level_three_bf_and_a_gapped_unit_charge_reader_can_coexist_only_as_non_topological_memory.md",
+        "corpus/claims/1200-1299/1292_a_neutral_z2_kink_is_the_minimal_defect_origin_and_one_even_charge_one_boson_localizes_without_mirror_doubling.md"
+      ]
     },
     {
       "number": 5,
       "slug": "04-furey-interface",
-      "title": "The Furey interface"
+      "title": "The Furey interface",
+      "taxonomy": "conditional",
+      "archetype": "translator",
+      "sourceCount": 5,
+      "sources": [
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
     },
     {
       "number": 6,
       "slug": "05-standard-model-seam",
-      "title": "The Standard-Model seam"
+      "title": "The Standard-Model seam",
+      "taxonomy": "external",
+      "archetype": "auditor",
+      "sourceCount": 3,
+      "sources": [
+        "corpus/claims/1300-1399/1390_a_decoupling_limit_can_fit_the_standard_model_but_a6_first_fails_at_the_unconstructed_chiral_fermion_operator.md",
+        "corpus/claims/1400-1499/1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md",
+        "corpus/claims/1400-1499/1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md"
+      ]
     },
     {
       "number": 7,
       "slug": "06-proton-safety",
-      "title": "Proton safety, Pati–Salam and triality"
+      "title": "Proton safety, Pati–Salam and triality",
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sourceCount": 3,
+      "sources": [
+        "corpus/claims/1000-1099/1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md",
+        "corpus/claims/1000-1099/1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md",
+        "corpus/claims/1100-1199/1199_minimal_typed_closure_action_v1_separates_the_derived_bf_sector_from_the_still_spurionic_flavour_response.md"
+      ]
     },
     {
       "number": 8,
       "slug": "07-exceptional-horizon",
-      "title": "The exceptional horizon"
+      "title": "The exceptional horizon",
+      "taxonomy": "interpretive",
+      "archetype": "cartographer",
+      "sourceCount": 2,
+      "sources": [
+        "corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md",
+        "corpus/claims/1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md"
+      ]
     },
     {
       "number": 9,
       "slug": "08-result-ledger",
-      "title": "Result and reversal ledger"
+      "title": "Result and reversal ledger",
+      "taxonomy": "governance",
+      "archetype": "steward",
+      "sourceCount": 1,
+      "sources": [
+        "corpus/claims/1300-1399/1398_final_wave_red_team_audit_finds_two_substantive_errors_and_preserves_four_independent_stopping_boundaries.md"
+      ]
     },
     {
       "number": 10,
       "slug": "09-research-frontier",
-      "title": "Research frontier"
+      "title": "Research frontier",
+      "taxonomy": "external",
+      "archetype": "scout",
+      "sourceCount": 2,
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md",
+        "corpus/claims/1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md"
+      ]
     },
     {
       "number": 11,
       "slug": "10-provenance-and-reading-map",
-      "title": "Provenance and reading map"
+      "title": "Provenance and reading map",
+      "taxonomy": "governance",
+      "archetype": "steward",
+      "sourceCount": 3,
+      "sources": [
+        "corpus/claims/0000-0099/00_research_document_map.md",
+        "corpus/claims/0000-0099/30_research_frontier.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md"
+      ]
     },
     {
       "number": 12,
       "slug": "11-concept-atlas",
-      "title": "Concept atlas"
+      "title": "Concept atlas",
+      "taxonomy": "interpretive",
+      "archetype": "cartographer",
+      "sourceCount": 1,
+      "sources": [
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"
+      ]
+    }
+  ],
+  "proofDetails": [
+    {
+      "slug": "furey-participation-proof",
+      "title": "Furey participation: closure certificate",
+      "taxonomy": "established",
+      "archetype": "auditor",
+      "certificates": [
+        "verification/generate/generate_full_sp4_from_turn_split_dilation_and_channel_rotation.mjs",
+        "verification/exponentiate/exponentiate_the_furey_response_product_into_the_sp4_channel_flow.mjs",
+        "verification/verify/verify-furey-weak-jordan-ladder.mjs"
+      ],
+      "sources": [
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md"
+      ]
+    },
+    {
+      "slug": "furey-selector-obstruction",
+      "title": "Furey interface: selector obstruction",
+      "taxonomy": "exhausted",
+      "archetype": "auditor",
+      "certificates": [
+        "verification/verify/verify_a5_phase_reference_exhaustion.mjs",
+        "evidence/data/a5-phase-reference-exhaustion.json"
+      ],
+      "sources": [
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
+    }
+  ],
+  "claimDetails": [
+    {
+      "slug": "00-front-matter-successor-not-replacement-claim-1",
+      "chapter": "00-front-matter",
+      "heading": "Successor, not replacement",
+      "claim": "Edition 3 is a reading of the corpus after the Jordan-triple, Möbius-cover, Furey-operator and Standard-Model source-selection investigations. It preserves earlier formulations as historical stages rather than silently rewriting them.",
+      "claimIndex": 0,
+      "taxonomy": "governance",
+      "archetype": "steward",
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "00-front-matter-successor-not-replacement-claim-2",
+      "chapter": "00-front-matter",
+      "heading": "Successor, not replacement",
+      "claim": "The labels established, conditional, obstruction and open are part of the result. A beautiful chain of mathematics is not converted into a physical theory by typography or narrative momentum.",
+      "claimIndex": 1,
+      "taxonomy": "governance",
+      "archetype": "steward",
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "00-front-matter-the-authority-boundary-claim-1",
+      "chapter": "00-front-matter",
+      "heading": "The authority boundary",
+      "claim": "This volume reports calculations and constructions internal to declared models. It is not empirical confirmation, peer review, or a derivation of the Standard Model. Every strong sentence carries a nearby statement of what it does not establish.",
+      "claimIndex": 0,
+      "taxonomy": "governance",
+      "archetype": "steward",
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "00-front-matter-a-book-of-layers-claim-1",
+      "chapter": "00-front-matter",
+      "heading": "A book of layers",
+      "claim": "A ruler can tell you the length of a table without telling you why the table exists. A compass can preserve a direction without choosing which direction should count as north. Much of this programme has the same layered character. It contains exact measuring structures, conditional mechanisms and proposed physical interpretations. The reader should not flatten those layers into one claim.",
+      "claimIndex": 0,
+      "taxonomy": "interpretive",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "00-front-matter-a-book-of-layers-claim-2",
+      "chapter": "00-front-matter",
+      "heading": "A book of layers",
+      "claim": "Each chapter therefore moves in the same order: ordinary picture, defined object, exact result, and authority boundary. A term such as symplectic is introduced only after the familiar idea it formalizes: preserving oriented area in a phase-space plane. A term such as chirality is introduced only after the familiar idea: left- and right-handed patterns cannot always be superposed by rotation.",
+      "claimIndex": 1,
+      "taxonomy": "interpretive",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "00-front-matter-four-labels-used-throughout-claim-1",
+      "chapter": "00-front-matter",
+      "heading": "Four labels used throughout",
+      "claim": "Established means that a calculation follows from its written assumptions and has an executable or inspectable certificate. Conditional means that a construction works after a named field, coefficient, boundary condition or control is supplied. Externally open means that the missing ingredient is not contained in the current corpus. Internally exhausted means that further rearrangement of the same ingredients no longer addresses the missing datum.",
+      "claimIndex": 0,
+      "taxonomy": "governance",
+      "archetype": "steward",
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "00-front-matter-four-labels-used-throughout-claim-2",
+      "chapter": "00-front-matter",
+      "heading": "Four labels used throughout",
+      "claim": "None of these labels means true of nature. Even an exact theorem can describe the wrong physical system. Conversely, a blocked physical programme can contain useful mathematics, simulation tools and experimentally transferable methods.",
+      "claimIndex": 1,
+      "taxonomy": "governance",
+      "archetype": "steward",
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "00-front-matter-the-route-through-the-book-claim-1",
+      "chapter": "00-front-matter",
+      "heading": "The route through the book",
+      "claim": "Chapters 1–3 build the mathematical spine from response measurements and relational loops. Chapters 4–7 ask whether that spine can carry Standard-Model matter, safe interactions and exceptional structure. The ledger then records both positive results and reversals. The frontier chapter ends with concrete reopen conditions rather than an invitation to continue indefinitely.",
+      "claimIndex": 0,
+      "taxonomy": "governance",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "01-the-revised-spine-what-closes-claim-1",
+      "chapter": "01-the-revised-spine",
+      "heading": "What closes",
+      "claim": "The programme no longer reaches Spin(2,3) only from a top-down list of low-rank coincidences. Positive two-face response data supplies H₂(ℝ); Schur elimination becomes a Jordan-triple operation; Tits–Kantor–Koecher prolongation supplies the graded generators; and the resulting ten-dimensional real Lie algebra is 𝔰𝔭(4,ℝ).",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "integrator",
+      "sources": [
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/0000-0099/47_global_group_isomorphism_sp4r_spin023.md",
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md"
+      ]
+    },
+    {
+      "slug": "01-the-revised-spine-what-closes-claim-2",
+      "chapter": "01-the-revised-spine",
+      "heading": "What closes",
+      "claim": "The global low-rank isomorphism then identifies Sp(4,ℝ) with Spin₀(2,3). This is the firm mathematical middle rung.",
+      "claimIndex": 1,
+      "taxonomy": "established",
+      "archetype": "integrator",
+      "sources": [
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/0000-0099/47_global_group_isomorphism_sp4r_spin023.md",
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md"
+      ]
+    },
+    {
+      "slug": "01-the-revised-spine-what-remains-open-claim-1",
+      "chapter": "01-the-revised-spine",
+      "heading": "What remains open",
+      "claim": "The derivation is conditional on the carrier and generator typing. Nature has not yet selected the action, state, vacuum, quantum measure or observed quantity that would make this algebra the dynamical symmetry of a physical system.",
+      "claimIndex": 0,
+      "taxonomy": "external",
+      "archetype": "scout",
+      "sources": [
+        "corpus/claims/1200-1299/1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md",
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "01-the-revised-spine-begin-with-a-measuring-frame-claim-1",
+      "chapter": "01-the-revised-spine",
+      "heading": "Begin with a measuring frame",
+      "claim": "Imagine recording two coupled signals: two voltages, two oscillator amplitudes or two stress readouts. Their self-responses and cross-response form a symmetric two-by-two table. Requiring every real combination of the signals to have nonnegative power makes that table positive. This positive cone is the everyday entrance to H₂(ℝ), the Jordan algebra of real symmetric two-by-two matrices.",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "integrator",
+      "sources": [
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md",
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md"
+      ]
+    },
+    {
+      "slug": "01-the-revised-spine-begin-with-a-measuring-frame-claim-2",
+      "chapter": "01-the-revised-spine",
+      "heading": "Begin with a measuring frame",
+      "claim": "The Jordan product X∘Y=(XY+YX)/2 keeps the result symmetric even when ordinary matrix multiplication does not. It is useful when the object of interest is a state or response cone rather than an ordered sequence of operations.",
+      "claimIndex": 1,
+      "taxonomy": "established",
+      "archetype": "integrator",
+      "sources": [
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md",
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md"
+      ]
+    },
+    {
+      "slug": "01-the-revised-spine-from-elimination-to-symmetry-claim-1",
+      "chapter": "01-the-revised-spine",
+      "heading": "From elimination to symmetry",
+      "claim": "When an internal degree of freedom is removed from a coupled quadratic system, the effective response is a Schur complement. Repeating that operation produces the same triple combination that appears in Jordan theory. The Tits–Kantor–Koecher construction then packages translations, linear transformations and their opposites into a graded Lie algebra.",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md",
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md"
+      ]
+    },
+    {
+      "slug": "01-the-revised-spine-from-elimination-to-symmetry-claim-2",
+      "chapter": "01-the-revised-spine",
+      "heading": "From elimination to symmetry",
+      "claim": "For the declared carrier, the closure is ten-dimensional 𝔰𝔭(4,ℝ). This algebra preserves a nondegenerate oriented-area form on four real phase-space coordinates. A standard low-rank isomorphism identifies its connected group with Spin₀(2,3), the double cover of the identity component of SO(2,3).",
+      "claimIndex": 1,
+      "taxonomy": "established",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md",
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md"
+      ]
+    },
+    {
+      "slug": "01-the-revised-spine-why-ten-generators-are-a-real-gate-claim-1",
+      "chapter": "01-the-revised-spine",
+      "heading": "Why ten generators are a real gate",
+      "claim": "Four real coordinates do not automatically imply 𝔰𝔭(4,ℝ). A pair of ordinary oscillators can explore only a three-generator squeezing/rotation subalgebra. Reaching ten requires independently available anisotropies and shears. The corpus therefore treats generator rank as a kill test: if commutators close at three, the model is a lower-rank control, not hidden full Spin(2,3).",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1200-1299/1281_full_sp4_closure_requires_addressed_anisotropy_which_is_control_data_not_cycle_symmetry.md"
+      ]
+    },
+    {
+      "slug": "01-the-revised-spine-algebra-is-not-yet-spacetime-claim-1",
+      "chapter": "01-the-revised-spine",
+      "heading": "Algebra is not yet spacetime",
+      "claim": "A symmetry can act on response coordinates without acting on physical events. Calling the response cone spacetime would require a Lorentzian state space, causal localization, a physical inner product and a map to measured rods and clocks. The current result establishes an exact algebraic hinge and deliberately stops before that interpretation.",
+      "claimIndex": 0,
+      "taxonomy": "external",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1200-1299/1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md",
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md"
+      ]
+    },
+    {
+      "slug": "02-one-carrier-two-faces-three-relations-the-smallest-relational-closure-claim-1",
+      "chapter": "02-one-carrier-two-faces-three-relations",
+      "heading": "The smallest relational closure",
+      "claim": "Two faces define a comparison, but a third relation is the first place where local pairwise consistency can fail around a loop. This is why the gear intuition becomes mathematically meaningful at three: not because the universe is literally geared, but because an odd cycle detects a return defect invisible on a single edge.",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/0900-0999/994_the_three_placement_triangle_has_a_z2_sideband_frustration_and_requires_path_dependence_or_a_double_cover.md",
+        "corpus/claims/1200-1299/1280_a_cycle_graph_selects_a_refinement_stable_real_two_mode_plane_but_not_its_orientation.md"
+      ]
+    },
+    {
+      "slug": "02-one-carrier-two-faces-three-relations-the-smallest-relational-closure-claim-2",
+      "chapter": "02-one-carrier-two-faces-three-relations",
+      "heading": "The smallest relational closure",
+      "claim": "The same grammar appears in two-port response matrices, Peirce off-diagonal spaces, placement triangles and three-edge Wilson data. What is shared is a typed relational pattern, not an identity of physical mechanisms.",
+      "claimIndex": 1,
+      "taxonomy": "established",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/0900-0999/994_the_three_placement_triangle_has_a_z2_sideband_frustration_and_requires_path_dependence_or_a_double_cover.md",
+        "corpus/claims/1200-1299/1280_a_cycle_graph_selects_a_refinement_stable_real_two_mode_plane_but_not_its_orientation.md"
+      ]
+    },
+    {
+      "slug": "02-one-carrier-two-faces-three-relations-jordan-recursion-claim-1",
+      "chapter": "02-one-carrier-two-faces-three-relations",
+      "heading": "Jordan recursion",
+      "claim": "For block-positive response matrices, eliminating an interior degree of freedom produces a Schur complement. Written in Jordan language, the correction is a triple operation. Repeated elimination therefore supplies a concrete meaning for Jordan-triple recursion: local consistency under composition.",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md"
+      ]
+    },
+    {
+      "slug": "02-one-carrier-two-faces-three-relations-why-two-is-comparison-and-three-is-consistency-claim-1",
+      "chapter": "02-one-carrier-two-faces-three-relations",
+      "heading": "Why two is comparison and three is consistency",
+      "claim": "Two rulers can disagree, but the disagreement is only pairwise. Add a third ruler and one may compare 1 with 2, 2 with 3, and 3 back with 1. The final comparison can fail to return to the starting convention. Three is therefore the smallest cycle that can store a relational defect.",
+      "claimIndex": 0,
+      "taxonomy": "interpretive",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0900-0999/994_the_three_placement_triangle_has_a_z2_sideband_frustration_and_requires_path_dependence_or_a_double_cover.md",
+        "corpus/claims/1100-1199/1128_three_is_the_minimal_Mobius_gear_cycle_and_the_third_relation_of_the_typed_twin_wheels.md"
+      ]
+    },
+    {
+      "slug": "02-one-carrier-two-faces-three-relations-why-two-is-comparison-and-three-is-consistency-claim-2",
+      "chapter": "02-one-carrier-two-faces-three-relations",
+      "heading": "Why two is comparison and three is consistency",
+      "claim": "This is the grounded meaning of the programme's recurring three. It is not a numerological claim that every appearance of three has one cause. The number can count edges of a minimal loop, components of a response cone, families, or a bundle degree; a valid bridge must say which object is being counted and which map preserves the count.",
+      "claimIndex": 1,
+      "taxonomy": "interpretive",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0900-0999/994_the_three_placement_triangle_has_a_z2_sideband_frustration_and_requires_path_dependence_or_a_double_cover.md",
+        "corpus/claims/1100-1199/1128_three_is_the_minimal_Mobius_gear_cycle_and_the_third_relation_of_the_typed_twin_wheels.md"
+      ]
+    },
+    {
+      "slug": "02-one-carrier-two-faces-three-relations-faces-and-the-off-diagonal-channel-claim-1",
+      "chapter": "02-one-carrier-two-faces-three-relations",
+      "heading": "Faces and the off-diagonal channel",
+      "claim": "A two-by-two response has two diagonal entries—its faces—and one off-diagonal channel connecting them. Positivity constrains the channel by the two faces, just as the diagonal length of a rectangle is constrained by its sides. Peirce decomposition is the algebraic name for separating those diagonal and connecting pieces.",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md",
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md"
+      ]
+    },
+    {
+      "slug": "02-one-carrier-two-faces-three-relations-faces-and-the-off-diagonal-channel-claim-2",
+      "chapter": "02-one-carrier-two-faces-three-relations",
+      "heading": "Faces and the off-diagonal channel",
+      "claim": "The Schur complement then describes what the outside observer sees after an internal face is hidden. This makes the recursion operational: eliminate, update the response, and ask which structure survives.",
+      "claimIndex": 1,
+      "taxonomy": "established",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md",
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md"
+      ]
+    },
+    {
+      "slug": "02-one-carrier-two-faces-three-relations-three-relations-do-not-select-an-orientation-claim-1",
+      "chapter": "02-one-carrier-two-faces-three-relations",
+      "heading": "Three relations do not select an orientation",
+      "claim": "A triangle can be traversed clockwise or anticlockwise. The unoriented graph does not choose between them. This simple fact reappears at the selector gate: symmetric endpoint data cannot select a non-fixed orientation. A boundary normal, historical preparation, complex phase reference or other odd datum must be physically supplied and locally coupled.",
+      "claimIndex": 0,
+      "taxonomy": "obstruction",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1200-1299/1280_a_cycle_graph_selects_a_refinement_stable_real_two_mode_plane_but_not_its_orientation.md"
+      ]
+    },
+    {
+      "slug": "02-one-carrier-two-faces-three-relations-the-graph-result-claim-1",
+      "chapter": "02-one-carrier-two-faces-three-relations",
+      "heading": "The graph result",
+      "claim": "A scaled cycle graph canonically isolates a real first-harmonic plane under refinement, but leaves an O(2) basis ambiguity. Symmetric controls generate only the common-oscillator 𝔰𝔭(2,ℝ). Three addressed anisotropies can generate full 𝔰𝔭(4,ℝ), but the addresses are control data, not consequences of the cycle. The graph lane therefore reaches conditional response symmetry, not emergent spacetime.",
+      "claimIndex": 0,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1200-1299/1281_full_sp4_closure_requires_addressed_anisotropy_which_is_control_data_not_cycle_symmetry.md",
+        "corpus/claims/1200-1299/1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md"
+      ]
+    },
+    {
+      "slug": "03-projective-loop-the-exact-result-claim-1",
+      "chapter": "03-projective-loop",
+      "heading": "The exact result",
+      "claim": "An odd three-relation cycle can fail to return on the base configuration while closing on a connected double cover. The placement triangle lifts to a six-cycle, and coherent transport can require twelve steps before every marked datum returns.",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/0900-0999/994_the_three_placement_triangle_has_a_z2_sideband_frustration_and_requires_path_dependence_or_a_double_cover.md",
+        "corpus/claims/0900-0999/995_the_unique_connected_double_cover_of_the_placement_triangle_is_the_six_cycle_with_sideband_as_deck_parity.md",
+        "corpus/claims/0900-0999/996_the_graded_sideband_antiunitary_lifts_the_six_cycle_to_a_nested_c12_to_c6_to_c3_transport.md"
+      ]
+    },
+    {
+      "slug": "03-projective-loop-the-exact-result-claim-2",
+      "chapter": "03-projective-loop",
+      "heading": "The exact result",
+      "claim": "This is the mathematically disciplined form of the twisted odd-gear intuition: the obstruction lives in projective lifting and holonomy.",
+      "claimIndex": 1,
+      "taxonomy": "established",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/0900-0999/994_the_three_placement_triangle_has_a_z2_sideband_frustration_and_requires_path_dependence_or_a_double_cover.md",
+        "corpus/claims/0900-0999/995_the_unique_connected_double_cover_of_the_placement_triangle_is_the_six_cycle_with_sideband_as_deck_parity.md",
+        "corpus/claims/0900-0999/996_the_graded_sideband_antiunitary_lifts_the_six_cycle_to_a_nested_c12_to_c6_to_c3_transport.md"
+      ]
+    },
+    {
+      "slug": "03-projective-loop-the-reversal-claim-1",
+      "chapter": "03-projective-loop",
+      "heading": "The reversal",
+      "claim": "The central return −I preserves determinant orientation. It therefore cannot simply be renamed chirality or identified with a Pfaffian-sheet reversal. The negative result is productive: it tells the programme that orientation needs an independently odd datum.",
+      "claimIndex": 0,
+      "taxonomy": "obstruction",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1000-1099/1066_the_Wilson_pi_flux_is_the_nontrivial_RP1_line_holonomy_but_its_canonical_frame_lift_is_central_minus_I_not_a_Pfaffian_sheet_flip.md",
+        "corpus/claims/1000-1099/1046_the_oriented_area_is_exactly_the_pfaffian_line_of_the_response_root_but_its_microscopic_weak_higgs_identification_remains_open.md"
+      ]
+    },
+    {
+      "slug": "03-projective-loop-a-familiar-twisted-loop-picture-claim-1",
+      "chapter": "03-projective-loop",
+      "heading": "A familiar twisted-loop picture",
+      "claim": "Write an arrow on a strip of paper, give the strip a half twist, and join the ends. After one circuit the arrow returns reversed; after two it returns fully. A projective double cover records this without pretending that the paper moved through an extra physical dimension.",
+      "claimIndex": 0,
+      "taxonomy": "interpretive",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/0900-0999/994_the_three_placement_triangle_has_a_z2_sideband_frustration_and_requires_path_dependence_or_a_double_cover.md",
+        "corpus/claims/0900-0999/995_the_unique_connected_double_cover_of_the_placement_triangle_is_the_six_cycle_with_sideband_as_deck_parity.md",
+        "corpus/claims/0900-0999/996_the_graded_sideband_antiunitary_lifts_the_six_cycle_to_a_nested_c12_to_c6_to_c3_transport.md"
+      ]
+    },
+    {
+      "slug": "03-projective-loop-a-familiar-twisted-loop-picture-claim-2",
+      "chapter": "03-projective-loop",
+      "heading": "A familiar twisted-loop picture",
+      "claim": "The programme's three-placement loop behaves similarly. Local transitions can be consistent while their product returns a central sign. Lifting the triangle to a six-cycle makes the sign bookkeeping single-valued, and a twelve-step marked transport can return every decoration.",
+      "claimIndex": 1,
+      "taxonomy": "interpretive",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/0900-0999/994_the_three_placement_triangle_has_a_z2_sideband_frustration_and_requires_path_dependence_or_a_double_cover.md",
+        "corpus/claims/0900-0999/995_the_unique_connected_double_cover_of_the_placement_triangle_is_the_six_cycle_with_sideband_as_deck_parity.md",
+        "corpus/claims/0900-0999/996_the_graded_sideband_antiunitary_lifts_the_six_cycle_to_a_nested_c12_to_c6_to_c3_transport.md"
+      ]
+    },
+    {
+      "slug": "03-projective-loop-central-sign-versus-handedness-claim-1",
+      "chapter": "03-projective-loop",
+      "heading": "Central sign versus handedness",
+      "claim": "Multiplying every vector by minus one changes its sign but preserves the orientation of an even-dimensional frame. Handedness instead changes under a reflection with negative determinant. This is why a central -I holonomy cannot simply be called chirality.",
+      "claimIndex": 0,
+      "taxonomy": "obstruction",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1000-1099/1066_the_Wilson_pi_flux_is_the_nontrivial_RP1_line_holonomy_but_its_canonical_frame_lift_is_central_minus_I_not_a_Pfaffian_sheet_flip.md",
+        "corpus/claims/1000-1099/1047_fixing_the_phase_symplectic_orientation_reduces_the_gram_root_gauge_to_SO2_and_turns_the_pfaffian_sign_into_a_rank_one_separated_Z2_sheet.md"
+      ]
+    },
+    {
+      "slug": "03-projective-loop-central-sign-versus-handedness-claim-2",
+      "chapter": "03-projective-loop",
+      "heading": "Central sign versus handedness",
+      "claim": "The distinction is not pedantry. A physical selector must couple to something that actually changes under the proposed exchange. If the candidate datum is even, no amount of suggestive language makes it an orientation source.",
+      "claimIndex": 1,
+      "taxonomy": "obstruction",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1000-1099/1066_the_Wilson_pi_flux_is_the_nontrivial_RP1_line_holonomy_but_its_canonical_frame_lift_is_central_minus_I_not_a_Pfaffian_sheet_flip.md",
+        "corpus/claims/1000-1099/1047_fixing_the_phase_symplectic_orientation_reduces_the_gram_root_gauge_to_SO2_and_turns_the_pfaffian_sign_into_a_rank_one_separated_Z2_sheet.md"
+      ]
+    },
+    {
+      "slug": "03-projective-loop-from-topology-to-a-defect-claim-1",
+      "chapter": "03-projective-loop",
+      "heading": "From topology to a defect",
+      "claim": "A topological label can remember how a loop was prepared, but a localized laboratory mode also needs a place to live. The charge-three Higgs sector has a precise level-three BF limit, yet its apparent phase vacua are gauge copies and cannot make a domain wall. Adding a neutral ℤ₂ field supplies an explicit kink and one localized even bosonic reader.",
+      "claimIndex": 0,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1200-1299/1233_charge_three_abelian_higgs_reduces_conditionally_to_level_three_bf_and_a_gapped_unit_charge_reader_can_coexist_only_as_non_topological_memory.md",
+        "corpus/claims/1200-1299/1292_a_neutral_z2_kink_is_the_minimal_defect_origin_and_one_even_charge_one_boson_localizes_without_mirror_doubling.md"
+      ]
+    },
+    {
+      "slug": "03-projective-loop-from-topology-to-a-defect-claim-2",
+      "chapter": "03-projective-loop",
+      "heading": "From topology to a defect",
+      "claim": "This cleanly separates memory from hardware: BF theory carries the sector label; the gapped reader carries non-topological dynamics; and the wall's origin remains an external microscopic question.",
+      "claimIndex": 1,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1200-1299/1233_charge_three_abelian_higgs_reduces_conditionally_to_level_three_bf_and_a_gapped_unit_charge_reader_can_coexist_only_as_non_topological_memory.md",
+        "corpus/claims/1200-1299/1292_a_neutral_z2_kink_is_the_minimal_defect_origin_and_one_even_charge_one_boson_localizes_without_mirror_doubling.md"
+      ]
+    },
+    {
+      "slug": "04-furey-interface-why-furey-enters-claim-1",
+      "chapter": "04-furey-interface",
+      "heading": "Why Furey enters",
+      "claim": "Furey's division-algebra programme provides chiral ideals, particle representations, ladder operations and a Jordan hierarchy. In the present carrier, a continuous Furey product rotation acts as the missing channel generator needed for full 𝔰𝔭(4,ℝ) closure.",
+      "claimIndex": 0,
+      "taxonomy": "conditional",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
+    },
+    {
+      "slug": "04-furey-interface-why-furey-enters-claim-2",
+      "chapter": "04-furey-interface",
+      "heading": "Why Furey enters",
+      "claim": "This is stronger than analogy: it is an explicit operator participation in a declared finite-dimensional model.",
+      "claimIndex": 1,
+      "taxonomy": "conditional",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
+    },
+    {
+      "slug": "04-furey-interface-why-it-is-not-yet-unification-claim-1",
+      "chapter": "04-furey-interface",
+      "heading": "Why it is not yet unification",
+      "claim": "The operator remains effective. Its microscopic origin, charge completion and relationship to the full division-algebra construction are not derived. The result says that a Furey-shaped channel flow can close the algebra—not that Furey's programme has derived spacetime or that Spin(2,3) has derived the Standard Model.",
+      "claimIndex": 0,
+      "taxonomy": "external",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
+    },
+    {
+      "slug": "04-furey-interface-what-a-representation-does-claim-1",
+      "chapter": "04-furey-interface",
+      "heading": "What a representation does",
+      "claim": "A representation is a way for an abstract symmetry to act on a concrete list of states. The familiar example is rotating an arrow by multiplying its coordinate vector by a matrix. Furey's division-algebra constructions similarly organize particle-like states and ladder operations using complex numbers, quaternions and octonions.",
+      "claimIndex": 0,
+      "taxonomy": "interpretive",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
+    },
+    {
+      "slug": "04-furey-interface-what-a-representation-does-claim-2",
+      "chapter": "04-furey-interface",
+      "heading": "What a representation does",
+      "claim": "The present programme does not claim that the names of those algebras make the particles inevitable. It asks the narrower question: can a specifically typed Furey-shaped channel act on the response carrier and close the missing generators?",
+      "claimIndex": 1,
+      "taxonomy": "interpretive",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
+    },
+    {
+      "slug": "04-furey-interface-the-exact-participation-result-claim-1",
+      "chapter": "04-furey-interface",
+      "heading": "The exact participation result",
+      "claim": "The answer is yes inside the declared finite model. A continuous Furey product rotation, combined with the Jordan translations and grading operations, generates all ten directions of 𝔰𝔭(4,ℝ). The word continuous matters: a discrete relabelling does not supply the infinitesimal generator needed for Lie closure.",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "integrator",
+      "sources": [
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
+    },
+    {
+      "slug": "04-furey-interface-the-selector-problem-claim-1",
+      "chapter": "04-furey-interface",
+      "heading": "The selector problem",
+      "claim": "The algebra admits paired matter constructions related by conjugation. Symmetric endpoint-blind data cannot choose one member of the pair. Audits of CP, CPT, residual ℤ₃, boundary orientation, Yukawa phases, a sterile Majorana term and the index-three construction leave a continuous phase circle unfixed.",
+      "claimIndex": 0,
+      "taxonomy": "exhausted",
+      "archetype": "witness",
+      "sources": [
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
+    },
+    {
+      "slug": "04-furey-interface-the-selector-problem-claim-2",
+      "chapter": "04-furey-interface",
+      "heading": "The selector problem",
+      "claim": "The smallest named remedy is a physical complex reference with charge minus two, together with a local portal that locks it to the charged carrier. Until that reference is derived or measured, the matter selection is a conditional decision rule rather than an outcome of the theory.",
+      "claimIndex": 1,
+      "taxonomy": "exhausted",
+      "archetype": "witness",
+      "sources": [
+        "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md",
+        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ]
+    },
+    {
+      "slug": "05-standard-model-seam-the-attractive-construction-claim-1",
+      "chapter": "05-standard-model-seam",
+      "heading": "The attractive construction",
+      "claim": "The minimal Standard-Model field completion points toward dimension-six S₁ exchange operators. They reproduce the two desired crossed arms with the required relative structure.",
+      "claimIndex": 0,
+      "taxonomy": "conditional",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1000-1099/1061_the_minimal_sm_field_completion_of_the_furey_channel_pulse_is_a_pair_of_dimension_six_S1_exchange_operators_with_an_underived_relative_phase.md"
+      ]
+    },
+    {
+      "slug": "05-standard-model-seam-the-uncomfortable-edge-claim-1",
+      "chapter": "05-standard-model-seam",
+      "heading": "The uncomfortable edge",
+      "claim": "The same mediator generically closes a triangle and generates a third Wilson edge. One copy is rank-obstructed; copies preserving the same positive Clebsch orientation do not cancel it. A pure star must therefore be derived by a new incidence rule, involution or boundary mechanism—or abandoned.",
+      "claimIndex": 0,
+      "taxonomy": "obstruction",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1000-1099/1062_one_S1_mediator_cannot_generate_a_pure_FCp_pulse_but_two_orthogonal_copies_realize_the_exact_oriented_star.md",
+        "corpus/claims/1000-1099/1074_positive_Spin10_Clebsch_preserving_copies_can_never_remove_the_third_edge_but_a_twisted_two_copy_involution_can.md"
+      ]
+    },
+    {
+      "slug": "05-standard-model-seam-what-c-l-and-y-mean-claim-1",
+      "chapter": "05-standard-model-seam",
+      "heading": "What c, L and Y mean",
+      "claim": "In the Standard-Model algebra su(3)c⊕su(2)L⊕u(1)Y, c labels colour, the three-way charge carried by quarks; L labels the weak interaction acting on left-handed doublets; and Y is hypercharge, the bookkeeping quantity which combines with weak isospin to give electric charge. These labels are directions in an internal measuring system, not ordinary colours, locations or heights.",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1300-1399/1390_a_decoupling_limit_can_fit_the_standard_model_but_a6_first_fails_at_the_unconstructed_chiral_fermion_operator.md"
+      ]
+    },
+    {
+      "slug": "05-standard-model-seam-what-c-l-and-y-mean-claim-2",
+      "chapter": "05-standard-model-seam",
+      "heading": "What c, L and Y mean",
+      "claim": "The direct-sum sign means that these symmetry instructions coexist. It does not say that a larger group has already explained why nature chose them or why matter occupies its observed chiral representations.",
+      "claimIndex": 1,
+      "taxonomy": "established",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1300-1399/1390_a_decoupling_limit_can_fit_the_standard_model_but_a6_first_fails_at_the_unconstructed_chiral_fermion_operator.md"
+      ]
+    },
+    {
+      "slug": "05-standard-model-seam-fit-capacity-versus-derivation-claim-1",
+      "chapter": "05-standard-model-seam",
+      "heading": "Fit capacity versus derivation",
+      "claim": "A sufficiently flexible effective action can reproduce Standard-Model masses and mixing parameters. That demonstrates compatibility, much as an adjustable curve can pass through many points. It does not predict the points. The current decoupling limit has ample flavour capacity, so its success is a consistency witness rather than a derivation.",
+      "claimIndex": 0,
+      "taxonomy": "obstruction",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1300-1399/1390_a_decoupling_limit_can_fit_the_standard_model_but_a6_first_fails_at_the_unconstructed_chiral_fermion_operator.md"
+      ]
+    },
+    {
+      "slug": "05-standard-model-seam-the-chiral-fold-obstruction-claim-1",
+      "chapter": "05-standard-model-seam",
+      "heading": "The chiral fold obstruction",
+      "claim": "A mirror turns a left glove into a right glove. Likewise, spatial reflection exchanges left- and right-handed Weyl spinors. The bosonic fold can have healthy masses and residues while the fermionic theory remains undefined, because the undoubled chiral Standard Model does not supply the same-representation partner required by the reflection.",
+      "claimIndex": 0,
+      "taxonomy": "external",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1400-1499/1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md"
+      ]
+    },
+    {
+      "slug": "05-standard-model-seam-the-chiral-fold-obstruction-claim-2",
+      "chapter": "05-standard-model-seam",
+      "heading": "The chiral fold obstruction",
+      "claim": "The next valid object is therefore not another positive bosonic spectrum. It is a declared fermion boundary domain—bag, APS/inflow, vectorlike or another explicit construction—followed by self-adjointness, gauge consistency and BRST cohomology on that same domain.",
+      "claimIndex": 1,
+      "taxonomy": "external",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1400-1499/1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md"
+      ]
+    },
+    {
+      "slug": "05-standard-model-seam-three-generations-and-the-index-claim-1",
+      "chapter": "05-standard-model-seam",
+      "heading": "Three generations and the index",
+      "claim": "An index is a robust signed count of zero modes, rather like counting unmatched left-moving and right-moving lanes after paired lanes cancel. The selected-projector completion canonically pulls back the anticanonical line on ℂP¹ to O(3), giving Dirac index three for every spectator Standard-Model multiplet.",
+      "claimIndex": 0,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1300-1399/1397_the_completion_cp1_canonically_inherits_o3_and_index_three_but_no_current_action_makes_it_the_fermion_family_dirac_space.md",
+        "corpus/claims/1400-1499/1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md"
+      ]
+    },
+    {
+      "slug": "05-standard-model-seam-three-generations-and-the-index-claim-2",
+      "chapter": "05-standard-model-seam",
+      "heading": "Three generations and the index",
+      "claim": "That is the programme's strongest typed bridge to three families. Its minimal local six-dimensional realization is nevertheless anomalous, and the obvious vectorlike repair restores mirror families. The bundle explains a count; it does not yet provide an acceptable parent theory.",
+      "claimIndex": 1,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1300-1399/1397_the_completion_cp1_canonically_inherits_o3_and_index_three_but_no_current_action_makes_it_the_fermion_family_dirac_space.md",
+        "corpus/claims/1400-1499/1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md"
+      ]
+    },
+    {
+      "slug": "06-proton-safety-complete-multiplets-are-not-automatically-safe-claim-1",
+      "chapter": "06-proton-safety",
+      "heading": "Complete multiplets are not automatically safe",
+      "claim": "Unified representations carry wanted and unwanted channels together. The proton-safe projector exists only after reducing the colour–lepton symmetry that made the complete multiplet attractive in the first place.",
+      "claimIndex": 0,
+      "taxonomy": "obstruction",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1000-1099/1075_the_unified_vector_triplet_gives_two_FCp_arms_one_safe_extra_and_three_proton_decay_channels_all_with_BminusL_zero.md",
+        "corpus/claims/1000-1099/1076_the_proton_safe_current_projector_exists_only_after_breaking_the_pati_salam_colour_lepton_roots.md"
+      ]
+    },
+    {
+      "slug": "06-proton-safety-the-surviving-route-claim-1",
+      "chapter": "06-proton-safety",
+      "heading": "The surviving route",
+      "claim": "A finite Pati–Salam reconstruction supplies a concrete source split, while an all-orders rank-one normal form protects part of it. The simplest U(1) and universal Z₂ protections fail. The first surviving family-universal cyclic witness is a Z₉ lift whose faithful low-energy quotient is baryon triality.",
+      "claimIndex": 0,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1000-1099/1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md",
+        "corpus/claims/1000-1099/1084_the_minimal_spectral_graph_has_an_all_orders_rank_one_bridge_normal_form_that_forbids_holomorphic_cross_six_mixing.md",
+        "corpus/claims/1000-1099/1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md"
+      ]
+    },
+    {
+      "slug": "06-proton-safety-the-surviving-route-claim-2",
+      "chapter": "06-proton-safety",
+      "heading": "The surviving route",
+      "claim": "This is a live conditional route, not closure: global anomalies, heavy thresholds, the full finite triple and the third edge remain decisive gates.",
+      "claimIndex": 1,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1000-1099/1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md",
+        "corpus/claims/1000-1099/1084_the_minimal_spectral_graph_has_an_all_orders_rank_one_bridge_normal_form_that_forbids_holomorphic_cross_six_mixing.md",
+        "corpus/claims/1000-1099/1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md"
+      ]
+    },
+    {
+      "slug": "06-proton-safety-why-a-multiplet-brings-unwanted-companions-claim-1",
+      "chapter": "06-proton-safety",
+      "heading": "Why a multiplet brings unwanted companions",
+      "claim": "Buying a complete toolkit gives both the tool you wanted and the tools packed beside it. Unified gauge multiplets behave similarly: symmetry relates desired leptoquark interactions to diquark partners capable of destabilizing the proton. The problem is not merely finding a useful mediator but explaining why its dangerous companions are absent or ineffective.",
+      "claimIndex": 0,
+      "taxonomy": "obstruction",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1000-1099/1075_the_unified_vector_triplet_gives_two_FCp_arms_one_safe_extra_and_three_proton_decay_channels_all_with_BminusL_zero.md"
+      ]
+    },
+    {
+      "slug": "06-proton-safety-from-continuous-charges-to-triality-claim-1",
+      "chapter": "06-proton-safety",
+      "heading": "From continuous charges to triality",
+      "claim": "The simplest family-universal extra U(1) charges collapse to familiar combinations and do not isolate the safe source. A universal binary sign also fails for three families because of a weak anomaly. The first surviving cyclic construction is a ℤ₉ lift whose observable gauge quotient is baryon triality.",
+      "claimIndex": 0,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1000-1099/1078_no_minimal_family_universal_anomaly_free_U1_can_protect_the_proton_safe_S1_source_mask.md",
+        "corpus/claims/1000-1099/1086_for_an_odd_number_of_families_any_universal_Z2_that_splits_leptoquark_from_diquark_triplets_has_the_same_mod_two_weak_anomaly.md",
+        "corpus/claims/1000-1099/1087_connected_CKM_and_PMNS_Yukawa_graphs_force_any_exact_diagonal_family_Z2_back_to_the_universal_anomalous_class.md",
+        "corpus/claims/1000-1099/1088_Z9_is_the_minimal_family_universal_cyclic_lift_that_protects_triplet_companion_mixing_and_its_three_family_quotient_is_baryon_triality.md",
+        "corpus/claims/1000-1099/1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md"
+      ]
+    },
+    {
+      "slug": "06-proton-safety-from-continuous-charges-to-triality-claim-2",
+      "chapter": "06-proton-safety",
+      "heading": "From continuous charges to triality",
+      "claim": "A quotient here is like identifying clock readings that differ by a full turn: the larger bookkeeping group retains information needed for anomaly cancellation even when the low-energy observer sees only three classes.",
+      "claimIndex": 1,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1000-1099/1078_no_minimal_family_universal_anomaly_free_U1_can_protect_the_proton_safe_S1_source_mask.md",
+        "corpus/claims/1000-1099/1086_for_an_odd_number_of_families_any_universal_Z2_that_splits_leptoquark_from_diquark_triplets_has_the_same_mod_two_weak_anomaly.md",
+        "corpus/claims/1000-1099/1087_connected_CKM_and_PMNS_Yukawa_graphs_force_any_exact_diagonal_family_Z2_back_to_the_universal_anomalous_class.md",
+        "corpus/claims/1000-1099/1088_Z9_is_the_minimal_family_universal_cyclic_lift_that_protects_triplet_companion_mixing_and_its_three_family_quotient_is_baryon_triality.md",
+        "corpus/claims/1000-1099/1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md"
+      ]
+    },
+    {
+      "slug": "06-proton-safety-the-current-action-and-its-limits-claim-1",
+      "chapter": "06-proton-safety",
+      "heading": "The current action and its limits",
+      "claim": "The typed candidate action now separates BF memory, defect, reader, bosonic bulk, fermion capacity and response terms. A frozen point is healthy in all defined local bosonic sectors. Its classical stress tensor is also known term by term, with the pure BF term carrying no metric stress.",
+      "claimIndex": 0,
+      "taxonomy": "external",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1100-1199/1199_minimal_typed_closure_action_v1_separates_the_derived_bf_sector_from_the_still_spurionic_flavour_response.md",
+        "corpus/claims/1000-1099/1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md"
+      ]
+    },
+    {
+      "slug": "06-proton-safety-the-current-action-and-its-limits-claim-2",
+      "chapter": "06-proton-safety",
+      "heading": "The current action and its limits",
+      "claim": "The remaining gaps are not a vague request for more elegance. They are a microscopic wall origin, a chiral fermion domain, a phase reference, an anomaly-free family operator, curved stress matching, an interacting spectrum and a device-specific signal.",
+      "claimIndex": 1,
+      "taxonomy": "external",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/1100-1199/1199_minimal_typed_closure_action_v1_separates_the_derived_bf_sector_from_the_still_spurionic_flavour_response.md",
+        "corpus/claims/1000-1099/1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md"
+      ]
+    },
+    {
+      "slug": "07-exceptional-horizon-what-the-local-result-changes-claim-1",
+      "chapter": "07-exceptional-horizon",
+      "heading": "What the local result changes",
+      "claim": "The H₂(ℝ) construction makes the Spin(2,3) middle rung concrete. It clarifies how response geometry, causal positivity and relational composition can meet.",
+      "claimIndex": 0,
+      "taxonomy": "established",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md",
+        "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md"
+      ]
+    },
+    {
+      "slug": "07-exceptional-horizon-what-it-does-not-collapse-claim-1",
+      "chapter": "07-exceptional-horizon",
+      "heading": "What it does not collapse",
+      "claim": "J₃(𝕆), E₆, E₈, the Golay code, the Leech lattice, Conway symmetry and moonshine remain distinct structures with distinct jobs. The Leech pair-Gram construction reaches H₂(ℝ) and genus-two symplectic geometry, but needs an orientation twist and affine theta shift. No group-name chain substitutes for a carrier-preserving map.",
+      "claimIndex": 0,
+      "taxonomy": "obstruction",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+        "corpus/claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md"
+      ]
+    },
+    {
+      "slug": "07-exceptional-horizon-e8-as-a-crystal-rather-than-a-slogan-claim-1",
+      "chapter": "07-exceptional-horizon",
+      "heading": "E₈ as a crystal rather than a slogan",
+      "claim": "A crystal can be described by its rotations, translations, vibration modes and reciprocal lattice. None of those descriptions alone is the crystal, yet each reveals a real aspect. The charitable E₈ reading is similar: exceptional groups may organize compatible slices of one structure without every subgroup being a literal fundamental force.",
+      "claimIndex": 0,
+      "taxonomy": "interpretive",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"
+      ]
+    },
+    {
+      "slug": "07-exceptional-horizon-e8-as-a-crystal-rather-than-a-slogan-claim-2",
+      "chapter": "07-exceptional-horizon",
+      "heading": "E₈ as a crystal rather than a slogan",
+      "claim": "This avoids two opposite mistakes. One is to assume that embedding the Standard Model in a larger Lie group automatically derives chirality, generations and dynamics. The other is to dismiss exceptional structure because a particular Lie-algebra enlargement fails phenomenologically.",
+      "claimIndex": 1,
+      "taxonomy": "interpretive",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"
+      ]
+    },
+    {
+      "slug": "07-exceptional-horizon-jordan-freedom-and-the-need-for-selectors-claim-1",
+      "chapter": "07-exceptional-horizon",
+      "heading": "Jordan freedom and the need for selectors",
+      "claim": "Jordan algebras organize observables and positive state cones particularly well. Their strength is also their danger: many embeddings, real forms and idempotent choices are available. Without a selector, the theory can describe a landscape of possible measuring frames without choosing the one realized.",
+      "claimIndex": 0,
+      "taxonomy": "interpretive",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md",
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md"
+      ]
+    },
+    {
+      "slug": "07-exceptional-horizon-jordan-freedom-and-the-need-for-selectors-claim-2",
+      "chapter": "07-exceptional-horizon",
+      "heading": "Jordan freedom and the need for selectors",
+      "claim": "Lie and Jordan methods are therefore not competing religions. Lie algebra controls infinitesimal symmetry; Jordan structure controls compatible observables and positivity. Both can be epistemically incomplete even if an underlying exceptional object is real.",
+      "claimIndex": 1,
+      "taxonomy": "interpretive",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md",
+        "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md"
+      ]
+    },
+    {
+      "slug": "07-exceptional-horizon-the-corrected-octonionic-two-branch-model-claim-1",
+      "chapter": "07-exceptional-horizon",
+      "heading": "The corrected octonionic two-branch model",
+      "claim": "The audited two-branch flow illustrates the discipline required. Its manuscript used the wrong invariant and phase symmetry, overcounted fixed points and treated instantaneous regions as persistent basins. After correction, the equations admit an exact two-mode squeezing Hamiltonian and completely positive loss model.",
+      "claimIndex": 0,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md"
+      ]
+    },
+    {
+      "slug": "07-exceptional-horizon-the-corrected-octonionic-two-branch-model-claim-2",
+      "chapter": "07-exceptional-horizon",
+      "heading": "The corrected octonionic two-branch model",
+      "claim": "The resulting three bilinears form an SO(2,1) cone, while the four-real amplitude flow is conformally symplectic. Its Lie closure remains three-dimensional 𝔰𝔭(2,ℝ), not ten-dimensional 𝔰𝔭(4,ℝ). This is a useful open-system model and lower-rank control—not a derivation of fundamental Spin(2,3).",
+      "claimIndex": 1,
+      "taxonomy": "conditional",
+      "archetype": "builder",
+      "sources": [
+        "corpus/claims/1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md"
+      ]
+    },
+    {
+      "slug": "07-exceptional-horizon-where-the-exceptional-programme-actually-stands-claim-1",
+      "chapter": "07-exceptional-horizon",
+      "heading": "Where the exceptional programme actually stands",
+      "claim": "H₂(ℝ), J₃(𝕆), E₆, E₇, E₈, lattice constructions and moonshine occupy adjacent but non-identical levels. A legitimate continuation must specify a carrier map, preserve a stated invariant and end in an observable or a no-go test. Shared numbers and nested group names are clues for investigation, not evidence by themselves.",
+      "claimIndex": 0,
+      "taxonomy": "external",
+      "archetype": "cartographer",
+      "sources": [
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+        "corpus/claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md",
+        "corpus/claims/1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md"
+      ]
+    },
+    {
+      "slug": "10-provenance-and-reading-map-how-to-challenge-a-claim-claim-1",
+      "chapter": "10-provenance-and-reading-map",
+      "heading": "How to challenge a claim",
+      "claim": "Start with the claim's boundary sentence, then open its controlling source and executable verifier. Check whether the mathematical object is the same on both sides of every arrow: the same field space, symmetry action, domain and normalization. Many attractive false bridges change one of those silently.",
+      "claimIndex": 0,
+      "taxonomy": "governance",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/0000-0099/00_research_document_map.md",
+        "corpus/claims/0000-0099/30_research_frontier.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md"
+      ]
+    },
+    {
+      "slug": "10-provenance-and-reading-map-how-to-challenge-a-claim-claim-2",
+      "chapter": "10-provenance-and-reading-map",
+      "heading": "How to challenge a claim",
+      "claim": "For a physical claim, also ask what prepared the state, what the measuring port couples to, which limits are taken and whether the quoted response belongs to the stated dynamics. The QWZ audit is the model example: the numerical quadrature was correct, but the stationary state of the written bath made the claimed response vanish.",
+      "claimIndex": 1,
+      "taxonomy": "governance",
+      "archetype": "auditor",
+      "sources": [
+        "corpus/claims/0000-0099/00_research_document_map.md",
+        "corpus/claims/0000-0099/30_research_frontier.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md"
+      ]
+    },
+    {
+      "slug": "11-concept-atlas-a-compact-vocabulary-claim-1",
+      "chapter": "11-concept-atlas",
+      "heading": "A compact vocabulary",
+      "claim": "Carrier: the concrete space on which transformations act. Selector: a physical rule that chooses one option from a symmetric family. Domain: the boundary and regularity conditions that make an operator well defined. Residue: the strength with which a mode appears in a response. Anomaly: an obstruction that appears when a classical symmetry is required to survive quantization.",
+      "claimIndex": 0,
+      "taxonomy": "governance",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"
+      ]
+    },
+    {
+      "slug": "11-concept-atlas-a-compact-vocabulary-claim-2",
+      "chapter": "11-concept-atlas",
+      "heading": "A compact vocabulary",
+      "claim": "These words name different jobs. A carrier does not select itself; a positive spectrum does not define a boundary domain; an index does not cancel an anomaly; and an experimental sensitivity does not predict a residue.",
+      "claimIndex": 1,
+      "taxonomy": "governance",
+      "archetype": "translator",
+      "sources": [
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"
+      ]
     }
   ],
   "findings": [
@@ -72,25 +1260,29 @@
       "id": "E3-F01",
       "status": "established-in-model",
       "title": "The Jordan/TKK route reaches the Spin(2,3) hinge",
-      "statement": "For the declared four-real-dimensional carrier, Jordan translations, grading and a correctly typed continuous Furey channel rotation close the ten-dimensional real Lie algebra sp(4,R), hence Spin₀(2,3).",
+      "statement": "For the declared four-real-dimensional carrier, Jordan translations, grading and a correctly typed continuous Furey channel rotation close the ten-dimensional real Lie algebra 𝔰𝔭(4,ℝ), hence Spin₀(2,3).",
       "boundary": "This is a finite-dimensional model theorem, not evidence that nature selects the carrier or its interpretation.",
       "sources": [
         "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
         "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
         "corpus/claims/0000-0099/47_global_group_isomorphism_sp4r_spin023.md"
-      ]
+      ],
+      "taxonomy": "established",
+      "archetype": "auditor"
     },
     {
       "id": "E3-F02",
       "status": "established-in-model",
       "title": "A concrete lower-rank Jordan entry point exists",
-      "statement": "The Gaussian residual selector is represented by the H₂(R) logarithmic barrier and its Peirce–Schur recursion. Its conformal/TKK algebra supplies an explicit local rung into sp(4,R).",
-      "boundary": "H₂(R) is not the exceptional Albert algebra; the later J₃(O), E₆ and E₈ continuation remains a separate bridge.",
+      "statement": "The Gaussian residual selector is represented by the H₂(ℝ) logarithmic barrier and its Peirce–Schur recursion. Its conformal/TKK algebra supplies an explicit local rung into 𝔰𝔭(4,ℝ).",
+      "boundary": "H₂(ℝ) is not the exceptional Albert algebra; the later J₃(𝕆), E₆ and E₈ continuation remains a separate bridge.",
       "sources": [
         "corpus/claims/1000-1099/1023_the_gaussian_gram_selector_is_the_h2r_jordan_logdet_barrier_and_a_peirce_slice_of_the_rank_three_cubic.md",
         "corpus/claims/0900-0999/986_the_diagonal_cubic_barrier_is_flat_in_log_coordinates_and_cannot_generate_the_carrier_shear_without_tkk_prolongation.md",
         "corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md"
-      ]
+      ],
+      "taxonomy": "established",
+      "archetype": "auditor"
     },
     {
       "id": "E3-F03",
@@ -103,7 +1295,9 @@
         "corpus/claims/0900-0999/995_the_unique_connected_double_cover_of_the_placement_triangle_is_the_six_cycle_with_sideband_as_deck_parity.md",
         "corpus/claims/0900-0999/996_the_graded_sideband_antiunitary_lifts_the_six_cycle_to_a_nested_c12_to_c6_to_c3_transport.md",
         "corpus/claims/1100-1199/1128_three_is_the_minimal_Mobius_gear_cycle_and_the_third_relation_of_the_typed_twin_wheels.md"
-      ]
+      ],
+      "taxonomy": "established",
+      "archetype": "auditor"
     },
     {
       "id": "E3-F04",
@@ -115,19 +1309,23 @@
         "corpus/claims/1000-1099/1066_the_Wilson_pi_flux_is_the_nontrivial_RP1_line_holonomy_but_its_canonical_frame_lift_is_central_minus_I_not_a_Pfaffian_sheet_flip.md",
         "corpus/claims/1000-1099/1046_the_oriented_area_is_exactly_the_pfaffian_line_of_the_response_root_but_its_microscopic_weak_higgs_identification_remains_open.md",
         "corpus/claims/1000-1099/1047_fixing_the_phase_symplectic_orientation_reduces_the_gram_root_gauge_to_SO2_and_turns_the_pfaffian_sign_into_a_rank_one_separated_Z2_sheet.md"
-      ]
+      ],
+      "taxonomy": "obstruction",
+      "archetype": "auditor"
     },
     {
       "id": "E3-F05",
       "status": "constructed-conditional",
       "title": "The Furey channel rotation participates in exact sp(4) closure",
-      "statement": "On the declared response carrier, the continuous Furey product rotation supplies the generator that enlarges the compact-turn/split-dilation subalgebra to sp(4,R).",
+      "statement": "On the declared response carrier, the continuous Furey product rotation supplies the generator that enlarges the compact-turn/split-dilation subalgebra to 𝔰𝔭(4,ℝ).",
       "boundary": "The response operator is an effective typed construction, not a microscopic Standard-Model Hamiltonian or a theorem about Furey's complete programme.",
       "sources": [
         "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
         "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md",
         "corpus/claims/0000-0099/69_furey_weak_jordan_ladder_spin23.md"
-      ]
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
     },
     {
       "id": "E3-F06",
@@ -139,7 +1337,9 @@
         "corpus/claims/1000-1099/1061_the_minimal_sm_field_completion_of_the_furey_channel_pulse_is_a_pair_of_dimension_six_S1_exchange_operators_with_an_underived_relative_phase.md",
         "corpus/claims/1000-1099/1062_one_S1_mediator_cannot_generate_a_pure_FCp_pulse_but_two_orthogonal_copies_realize_the_exact_oriented_star.md",
         "corpus/claims/1000-1099/1074_positive_Spin10_Clebsch_preserving_copies_can_never_remove_the_third_edge_but_a_twisted_two_copy_involution_can.md"
-      ]
+      ],
+      "taxonomy": "obstruction",
+      "archetype": "auditor"
     },
     {
       "id": "E3-F07",
@@ -151,7 +1351,9 @@
         "corpus/claims/1000-1099/1075_the_unified_vector_triplet_gives_two_FCp_arms_one_safe_extra_and_three_proton_decay_channels_all_with_BminusL_zero.md",
         "corpus/claims/1000-1099/1076_the_proton_safe_current_projector_exists_only_after_breaking_the_pati_salam_colour_lepton_roots.md",
         "corpus/claims/1000-1099/1078_no_minimal_family_universal_anomaly_free_U1_can_protect_the_proton_safe_S1_source_mask.md"
-      ]
+      ],
+      "taxonomy": "obstruction",
+      "archetype": "auditor"
     },
     {
       "id": "E3-F08",
@@ -163,7 +1365,9 @@
         "corpus/claims/1000-1099/1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md",
         "corpus/claims/1000-1099/1084_the_minimal_spectral_graph_has_an_all_orders_rank_one_bridge_normal_form_that_forbids_holomorphic_cross_six_mixing.md",
         "corpus/claims/1000-1099/1085_the_rank_one_spectral_zero_is_the_unbroken_colour_lepton_reflection_Ward_sector_but_three_generation_weak_instantons_make_it_nonperturbatively_anomalous.md"
-      ]
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
     },
     {
       "id": "E3-F09",
@@ -175,7 +1379,9 @@
         "corpus/claims/1000-1099/1078_no_minimal_family_universal_anomaly_free_U1_can_protect_the_proton_safe_S1_source_mask.md",
         "corpus/claims/1000-1099/1086_for_an_odd_number_of_families_any_universal_Z2_that_splits_leptoquark_from_diquark_triplets_has_the_same_mod_two_weak_anomaly.md",
         "corpus/claims/1000-1099/1087_connected_CKM_and_PMNS_Yukawa_graphs_force_any_exact_diagonal_family_Z2_back_to_the_universal_anomalous_class.md"
-      ]
+      ],
+      "taxonomy": "obstruction",
+      "archetype": "auditor"
     },
     {
       "id": "E3-F10",
@@ -188,19 +1394,23 @@
         "corpus/claims/1000-1099/1089_the_Z9_quark_number_lift_factors_exactly_into_a_chiral_module_phase_times_Pati_Salam_BminusL_and_its_gauge_quotient_is_baryon_triality.md",
         "corpus/claims/1000-1099/1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md",
         "corpus/claims/1000-1099/1094_the_Majorana_vacuum_stabilizer_is_the_Z6_quotiented_standard_model_times_a_split_baryon_triality_with_the_Z9_lift_cubing_to_colour_centre.md"
-      ]
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
     },
     {
       "id": "E3-F11",
       "status": "conditional",
       "title": "The exceptional continuation remains a separate bridge",
-      "statement": "The local H₂(R)/TKK result strengthens the route into Spin(2,3), but does not derive J₃(O), E₆, E₈, Golay, Leech or Monster structure.",
+      "statement": "The local H₂(ℝ)/TKK result strengthens the route into Spin(2,3), but does not derive J₃(𝕆), E₆, E₈, Golay, Leech or Monster structure.",
       "boundary": "Shared dimensions, labels and visual resemblance are not carrier maps; each continuation needs an explicit map, invariant and observable.",
       "sources": [
         "corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md",
         "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
         "corpus/claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md"
-      ]
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
     },
     {
       "id": "E3-F12",
@@ -212,97 +1422,242 @@
         "corpus/claims/0000-0099/30_research_frontier.md",
         "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
         "corpus/claims/1200-1299/1203_terminal_reflexive_closure_audit_conditional_eft_closure_and_sharp_indeterminacy_of_absolute_flavour_selection.md"
-      ]
+      ],
+      "taxonomy": "external",
+      "archetype": "scout"
+    },
+    {
+      "id": "E3-F13",
+      "status": "constructed-conditional",
+      "title": "Charge-three Higgsing has a precise topological limit",
+      "statement": "With the declared normalization, a compact charge-three Abelian Higgs sector reduces in the strict infrared to level-three BF theory. A gapped unit-charge reader may retain sector memory without becoming a topological degree of freedom.",
+      "boundary": "The charge-three phase does not create the required wall: its apparent vacua are gauge-equivalent. A separate defect origin and orientation history are required.",
+      "sources": [
+        "corpus/claims/1200-1299/1233_charge_three_abelian_higgs_reduces_conditionally_to_level_three_bf_and_a_gapped_unit_charge_reader_can_coexist_only_as_non_topological_memory.md"
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
+    },
+    {
+      "id": "E3-F14",
+      "status": "constructed-conditional",
+      "title": "A neutral kink supplies the minimal reader wall",
+      "statement": "Adding one neutral ℤ₂ order parameter produces an explicit kink and localizes one even, gapped, charge-one bosonic mode without mirror doubling.",
+      "boundary": "This is a minimal completion, not a derivation from the original action. Compact boundary conditions and the physical origin of the neutral field remain external.",
+      "sources": [
+        "corpus/claims/1200-1299/1292_a_neutral_z2_kink_is_the_minimal_defect_origin_and_one_even_charge_one_boson_localizes_without_mirror_doubling.md"
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
+    },
+    {
+      "id": "E3-F15",
+      "status": "established-boundary",
+      "title": "Healthy bosonic poles do not settle the chiral fold",
+      "statement": "A frozen tree-level benchmark has positive kinetic eigenvalues, nonnegative masses and positive residues for every defined bosonic sector.",
+      "boundary": "Reflection exchanges four-dimensional chirality. The undoubled chiral Standard Model has no declared same-representation partner, self-adjoint fold domain or boundary BRST cohomology.",
+      "sources": [
+        "corpus/claims/1200-1299/1290_s_v1_contains_a_fully_healthy_quadratic_benchmark_but_one_completion_cannot_discharge_the_global_a4_gate.md",
+        "corpus/claims/1400-1499/1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md"
+      ],
+      "taxonomy": "obstruction",
+      "archetype": "auditor"
+    },
+    {
+      "id": "E3-F16",
+      "status": "internally-exhausted",
+      "title": "The selector is missing a physical phase reference",
+      "statement": "Endpoint-blind Standard-Model data cannot supply the exchange-odd portal needed to choose one non-fixed orientation. CP, CPT, ℤ₃, boundary normal, index and known flavour data do not canonically fix the remaining phase circle.",
+      "boundary": "A physical charge-minus-two complex reference and a local lock to the charged carrier would reopen the problem; merely renaming an existing phase does not.",
+      "sources": [
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ],
+      "taxonomy": "exhausted",
+      "archetype": "auditor"
+    },
+    {
+      "id": "E3-F17",
+      "status": "established-boundary",
+      "title": "The canonical completion carries index three, but its minimal 6D parent is anomalous",
+      "statement": "The selected-projector completion canonically induces O(3) on ℂP¹, and the twisted Dirac operator has index three for every spectator Standard-Model representation.",
+      "boundary": "The simplest same-six-dimensional-chirality local parent has irreducible gravitational, gauge and global SU(2) anomalies. A vectorlike repair returns mirror zero modes.",
+      "sources": [
+        "corpus/claims/1300-1399/1397_the_completion_cp1_canonically_inherits_o3_and_index_three_but_no_current_action_makes_it_the_fermion_family_dirac_space.md",
+        "corpus/claims/1400-1499/1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md"
+      ],
+      "taxonomy": "obstruction",
+      "archetype": "auditor"
+    },
+    {
+      "id": "E3-F18",
+      "status": "internally-exhausted",
+      "title": "The traceless spectral threshold survives stress improvement",
+      "statement": "Within the displayed scalar improvement family, the traceless stress vertex and its pair-production threshold are independent of the curvature coupling xi.",
+      "boundary": "The full trace-mixed third response direction is not universal and can be tuned away. Curved microscopic matching and an operational port definition are still needed.",
+      "sources": [
+        "corpus/claims/1300-1399/1393_the_full_scalar_stress_preserves_a_traceless_holonomy_threshold_but_not_a_scheme_invariant_third_matrix_direction.md",
+        "corpus/claims/1300-1399/1396_no_current_principle_predicts_the_reader_curvature_coupling_so_only_the_traceless_threshold_is_scheme_robust.md"
+      ],
+      "taxonomy": "exhausted",
+      "archetype": "auditor"
+    },
+    {
+      "id": "E3-F19",
+      "status": "simulation-ready",
+      "title": "A calibrated pole-and-band experiment can be specified",
+      "statement": "The A11 packet includes finite-volume, disorder, sector-confusion, calibration and statistical-power gates. Its synthetic fixture has an effective resolution floor near 0.630 MHz and resolves an injected 1 MHz shift.",
+      "boundary": "Sensitivity is not a predicted signal. The programme still lacks a microscopic sector shift, spectral residue and physical port operator.",
+      "sources": [
+        "corpus/claims/1400-1499/1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md"
+      ],
+      "taxonomy": "experiment",
+      "archetype": "builder"
+    },
+    {
+      "id": "E3-F20",
+      "status": "established-no-go",
+      "title": "The softened QWZ curve is not the response of its stated Lindbladian",
+      "statement": "The published scalar-broadening quadrature and doubled cusp reproduce, but the stated unital L=σ_z dynamics generically drive each momentum sector to I/2. Exact stationary Kubo forcing therefore vanishes.",
+      "boundary": "The curve remains a phenomenological template. A non-unital bath, reservoir or finite-time preparation would define a different model and must be solved independently.",
+      "sources": [
+        "corpus/claims/1400-1499/1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md"
+      ],
+      "taxonomy": "obstruction",
+      "archetype": "auditor"
+    },
+    {
+      "id": "E3-F21",
+      "status": "corrected-conditional",
+      "title": "The two-branch flow has an exact open-bosonic realization",
+      "statement": "After replacing the incorrect A-bar-B invariant by AB and common-phase symmetry by opposite-phase U(1), the two-branch flow closes on an SO(2,1) cone and is reproduced exactly by a two-mode squeezing Hamiltonian with completely positive loss.",
+      "boundary": "Its Lie closure is 𝔰𝔭(2,ℝ), not 𝔰𝔭(4,ℝ), and the octonionic bracket-to-bosonic-operator map remains assumed.",
+      "sources": [
+        "corpus/claims/1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md"
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
+    },
+    {
+      "id": "E3-F22",
+      "status": "terminal-current-input",
+      "title": "Seven gates now have explicit stopping and reopening rules",
+      "statement": "A5 and A7 are internally exhausted; A2 and A9 are conditionally constructed; A4, A6 and A11 are externally open. No whole gate is globally failed.",
+      "boundary": "Physical admission remains false. Exhaustion means that recombining the same inputs is no longer frontier work, not that every possible completion is impossible.",
+      "sources": [
+        "corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md",
+        "corpus/claims/1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md"
+      ],
+      "taxonomy": "governance",
+      "archetype": "steward"
     }
   ],
   "frontiers": [
     {
-      "id": "E3-RP1",
+      "id": "A2",
+      "priority": "external-input",
+      "title": "Derive the defect rather than insert it",
+      "question": "What microscopic action creates the neutral wall, its orientation and a globally compatible compact domain?",
+      "advance": "One UV model produces the interface, BF parity and localized reader spectrum with no hand-selected history.",
+      "stop": "Do not keep manipulating gauge-equivalent charge-three phases as though they were disconnected vacua.",
+      "sources": [
+        "corpus/claims/1200-1299/1233_charge_three_abelian_higgs_reduces_conditionally_to_level_three_bf_and_a_gapped_unit_charge_reader_can_coexist_only_as_non_topological_memory.md",
+        "corpus/claims/1200-1299/1292_a_neutral_z2_kink_is_the_minimal_defect_origin_and_one_even_charge_one_boson_localizes_without_mirror_doubling.md"
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
+    },
+    {
+      "id": "A4",
       "priority": "stop-everything",
-      "title": "Reconstruct the closure independently",
-      "question": "Does the three-generator Jordan/Furey set close to sp(4,R) under an independent basis and sign convention?",
-      "advance": "A second implementation reproduces dimension ten, brackets, real form and the Spin₀(2,3) identification.",
-      "stop": "Downgrade the central result if closure depends on tuned transcription, a hidden quotient or an inconsistent real form.",
+      "title": "Define the chiral physical-state domain",
+      "question": "What Lorentz- and gauge-compatible fermion domain replaces the bosonic reflection fold?",
+      "advance": "A self-adjoint operator, lower bound, BRST cohomology and positive residues are computed on the same declared domain.",
+      "stop": "A positive bosonic benchmark does not establish unitarity of the chiral theory.",
       "sources": [
-        "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md"
-      ]
+        "corpus/claims/1400-1499/1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md"
+      ],
+      "taxonomy": "external",
+      "archetype": "builder"
     },
     {
-      "id": "E3-RP2",
-      "priority": "highest",
-      "title": "Derive rather than name the physical carrier",
-      "question": "What microscopic system supplies the four-real-dimensional carrier and its generators?",
-      "advance": "One action yields the carrier, symplectic form and normalization without branch-specific insertion.",
-      "stop": "Keep the result mathematical if the carrier remains an interpretive assignment.",
+      "id": "A5",
+      "priority": "external-input",
+      "title": "Supply a physical phase reference",
+      "question": "What measured or history-bearing charge-minus-two datum chooses the sterile phase axis and locks it locally to the charged carrier?",
+      "advance": "A gauge-complete local operator selects the whole orientation without target-dependent convention.",
+      "stop": "Searches among already-audited symmetric data are exhausted.",
       "sources": [
-        "corpus/claims/1000-1099/1060_a_positive_first_order_response_pulse_generates_the_full_furey_channel_flow_without_bulk_degeneracy_but_needs_microscopic_charge_completion.md"
-      ]
+        "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md"
+      ],
+      "taxonomy": "exhausted",
+      "archetype": "witness"
     },
     {
-      "id": "E3-RP3",
-      "priority": "highest",
-      "title": "Resolve the third Wilson edge",
-      "question": "Is the forced third edge observable structure, a boundary term or a fatal mismatch?",
-      "advance": "A source-derived mechanism predicts its coefficient and survives loop and flavor tests.",
-      "stop": "Close pure-star candidates that delete the edge without a symmetry or incidence theorem.",
-      "sources": [
-        "corpus/claims/1000-1099/1062_one_S1_mediator_cannot_generate_a_pure_FCp_pulse_but_two_orthogonal_copies_realize_the_exact_oriented_star.md"
-      ]
-    },
-    {
-      "id": "E3-RP4",
-      "priority": "highest",
-      "title": "Complete proton-safe source selection",
-      "question": "Can a full finite spectral triple derive the safe leptoquark sector while suppressing every diquark partner?",
-      "advance": "The one-form calculus, kinetic metric, vacuum and counterterms preserve the mask.",
-      "stop": "Reject candidates with unprotected companion mixing or a forbidden proton-decay rate.",
-      "sources": [
-        "corpus/claims/1000-1099/1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md"
-      ]
-    },
-    {
-      "id": "E3-RP5",
-      "priority": "high",
-      "title": "Transport baryon triality through the ultraviolet theory",
-      "question": "Does the Z₉ representative and Z₃ observable quotient survive the global group, bordism class and heavy thresholds?",
-      "advance": "A complete anomaly and Higgs-descent calculation returns triality without extra assumptions.",
-      "stop": "Close the protection if a global anomaly or threshold operator regenerates the forbidden channel.",
-      "sources": [
-        "corpus/claims/1000-1099/1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md"
-      ]
-    },
-    {
-      "id": "E3-RP6",
-      "priority": "high",
-      "title": "Separate central sign, orientation and chirality",
-      "question": "Can one typed map connect projective sign to an independently odd datum and then to a protected chiral observable?",
-      "advance": "The same map preserves carrier, symmetry action and measurable phase through all stages.",
-      "stop": "Keep the notions separate if the bridge changes representation or silently inserts reflection.",
-      "sources": [
-        "corpus/claims/1000-1099/1066_the_Wilson_pi_flux_is_the_nontrivial_RP1_line_holonomy_but_its_canonical_frame_lift_is_central_minus_I_not_a_Pfaffian_sheet_flip.md"
-      ]
-    },
-    {
-      "id": "E3-RP7",
-      "priority": "high",
-      "title": "Cross the exceptional real-form seam",
-      "question": "Can the local real Jordan carrier enter an exceptional state domain while preserving positivity, cubic structure and noncompact action?",
-      "advance": "An explicit real-form map preserves a nontrivial invariant and a declared physical observable.",
-      "stop": "Retain adjacency only if the constructions meet merely through dimensions, labels or analogy.",
-      "sources": [
-        "corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md"
-      ]
-    },
-    {
-      "id": "E3-RP8",
+      "id": "A6",
       "priority": "stop-everything",
-      "title": "Demand one target-blind observable",
-      "question": "What prospective measurement differs from established physics after parameters and selectors are frozen?",
-      "advance": "A preregistered observable survives controls, flat-limit recovery and independent analysis.",
-      "stop": "Do not call the programme physical closure while every comparison remains retrospective or convention-selected.",
+      "title": "Make index three anomaly-free and mirror-free",
+      "question": "Can a local or spectral real structure retain three complete chiral families while cancelling the full higher-dimensional anomaly polynomial?",
+      "advance": "The construction supplies sterile pairing, cancels local and global anomalies and has no independent mirror kernel.",
+      "stop": "The integer three and O(3) bundle are not by themselves a physical family derivation.",
       "sources": [
-        "corpus/claims/0000-0099/30_research_frontier.md"
-      ]
+        "corpus/claims/1400-1499/1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md"
+      ],
+      "taxonomy": "external",
+      "archetype": "builder"
+    },
+    {
+      "id": "A7",
+      "priority": "external-input",
+      "title": "Match the stress operator in curved microscopic theory",
+      "question": "Which renormalization condition fixes improvement, contact terms, displacement operators and the common physical probe?",
+      "advance": "One completed action predicts the renormalized stress vertex and port map at a stated scale.",
+      "stop": "The full third matrix direction must remain secondary while its improvement dependence is unfixed.",
+      "sources": [
+        "corpus/claims/1300-1399/1396_no_current_principle_predicts_the_reader_curvature_coupling_so_only_the_traceless_threshold_is_scheme_robust.md"
+      ],
+      "taxonomy": "exhausted",
+      "archetype": "translator"
+    },
+    {
+      "id": "A9",
+      "priority": "highest",
+      "title": "Predict a causal interacting spectrum",
+      "question": "What microscopic Hamiltonian predicts the sector-dependent pole, residue, linewidth and band support?",
+      "advance": "A causal positive spectral density survives disorder, calibration and held-out sector labels with the port fixed in advance.",
+      "stop": "A static covariance, scalar linewidth or phenomenological curve is not an interacting response derivation.",
+      "sources": [
+        "corpus/claims/1400-1499/1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md",
+        "corpus/claims/1400-1499/1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md"
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
+    },
+    {
+      "id": "A11",
+      "priority": "highest",
+      "title": "Turn sensitivity into a physical test",
+      "question": "What device model predicts an absolute signal before data are unblinded, and can a protected ℤ₃ sector actually be prepared?",
+      "advance": "A powered experiment tests a preregistered effect size with independently verified sector algebra and scaling.",
+      "stop": "Three settings of a continuous U(1) control are not protected ℤ₃ sectors.",
+      "sources": [
+        "corpus/claims/1400-1499/1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md"
+      ],
+      "taxonomy": "external",
+      "archetype": "builder"
+    },
+    {
+      "id": "GRAPH",
+      "priority": "external-input",
+      "title": "Derive the missing anisotropies",
+      "question": "Can an action generate the addressed controls that enlarge the natural 𝔰𝔭(2,ℝ) response symmetry to all ten generators of 𝔰𝔭(4,ℝ)?",
+      "advance": "Orientation and anisotropy arise dynamically and ten-generator closure survives loss, disorder and refinement.",
+      "stop": "A four-real carrier or conformally symplectic flow alone is not full Spin(2,3).",
+      "sources": [
+        "corpus/claims/1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md",
+        "corpus/claims/1200-1299/1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md"
+      ],
+      "taxonomy": "conditional",
+      "archetype": "builder"
     }
   ]
 }

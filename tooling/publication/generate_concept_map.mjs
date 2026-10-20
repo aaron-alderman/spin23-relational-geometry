@@ -7,6 +7,14 @@ const root = resolve(process.cwd());
 const sourceRoot = join(root, "tooling", "publication", "concept-map");
 const outputRoot = join(root, "docs", "concept-map");
 const graphPath = join(root, "corpus", "concept-map", "graph.json");
+const typeset = value => String(value)
+  .replaceAll("H₂(R)", "H₂(ℝ)")
+  .replaceAll("H2(R)", "H₂(ℝ)")
+  .replaceAll("J₃(O)", "J₃(𝕆)")
+  .replaceAll("J3(O)", "J₃(𝕆)")
+  .replaceAll("sp(4,R)", "𝔰𝔭(4,ℝ)")
+  .replaceAll("Sp(4,R)", "Sp(4,ℝ)")
+  .replaceAll("Z₉", "ℤ₉");
 
 if (!existsSync(graphPath)) throw new Error(`Missing concept graph: ${graphPath}`);
 const graph = JSON.parse(readFileSync(graphPath, "utf8"));
@@ -22,5 +30,10 @@ for (const edge of graph.edges) {
 
 mkdirSync(outputRoot, { recursive: true });
 for (const file of ["index.html", "concept-map.css", "concept-map.js", "concept-map-fallback.js"]) cpSync(join(sourceRoot, file), join(outputRoot, file));
-writeFileSync(join(outputRoot, "graph-data.js"), `window.SPIN23_CONCEPT_GRAPH = ${JSON.stringify(graph)};\n`);
+const displayGraph = {
+  ...graph,
+  nodes: graph.nodes.map(node => ({ ...node, label: typeset(node.label), description: typeset(node.description) })),
+  edges: graph.edges.map(edge => ({ ...edge, label: typeset(edge.label || "") })),
+};
+writeFileSync(join(outputRoot, "graph-data.js"), `window.SPIN23_CONCEPT_GRAPH = ${JSON.stringify(displayGraph)};\n`);
 console.log(JSON.stringify({ nodes: graph.nodes.length, edges: graph.edges.length, output: "docs/concept-map" }, null, 2));

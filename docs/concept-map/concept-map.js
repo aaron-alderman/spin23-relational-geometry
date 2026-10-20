@@ -81,21 +81,33 @@ for (const node of graph.nodes) {
   graphGroup.add(mesh);
   nodeMeshes.push(mesh);
 
-  const element = document.createElement("div");
+  const anchor = document.createElement("div");
+  anchor.className = "graph-label-anchor";
+  const element = document.createElement("button");
+  element.type = "button";
   element.className = "graph-label";
   element.textContent = node.label;
+  element.setAttribute("aria-label", `Show details for ${node.label}`);
+  element.setAttribute("aria-controls", "detail");
+  element.setAttribute("aria-pressed", "false");
   element.style.setProperty("--node-color", `#${statusColors[node.status].getHexString()}`);
-  const label = new CSS2DObject(element);
-  label.position.set(0, 18, 0);
+  element.addEventListener("pointerdown", event => event.stopPropagation());
+  element.addEventListener("click", event => {
+    event.stopPropagation();
+    selectNode(node.id);
+  });
+  anchor.appendChild(element);
+  const label = new CSS2DObject(anchor);
+  label.position.set(0, 0, 0);
   mesh.add(label);
-  nodeById.set(node.id, { node, mesh, label, element });
+  nodeById.set(node.id, { node, mesh, label, anchor, element });
 }
 
 function edgeMaterial(edge) {
-  const obstructive = edge.type === "obstructs" || edge.type === "separates";
-  const dashed = ["requires", "analogous", "extends"].includes(edge.type) || edge.status !== "established";
-  const options = { color: obstructive ? statusColors.obstructed : edge.status === "analogical" ? statusColors.analogical : color("--muted"), transparent: true, opacity: edge.status === "established" ? .68 : .46 };
-  return dashed ? new THREE.LineDashedMaterial({ ...options, dashSize: 8, gapSize: 6 }) : new THREE.LineBasicMaterial(options);
+  const dashed = ["requires", "extends", "analogous", "separates"].includes(edge.type);
+  const dotted = ["analogous", "separates"].includes(edge.type);
+  const options = { color: statusColors[edge.status] || color("--muted"), transparent: true, opacity: edge.status === "established" ? .82 : edge.status === "conditional" ? .72 : .64 };
+  return dashed ? new THREE.LineDashedMaterial({ ...options, dashSize: dotted ? 2.5 : 9, gapSize: dotted ? 5 : 6 }) : new THREE.LineBasicMaterial(options);
 }
 
 for (const edge of graph.edges) {
@@ -123,16 +135,26 @@ function evidenceHref(path) {
   return `https://github.com/aaron-alderman/spin23-relational-geometry/blob/main/${encodeURI(file)}${hash ? `#${encodeURIComponent(hash)}` : ""}`;
 }
 
+function localEvidenceHref(path) {
+  const [file, hash] = path.split("#");
+  return `../../${encodeURI(file)}${hash ? `#${encodeURIComponent(hash)}` : ""}`;
+}
+
+function escapeHtml(value) {
+  return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+}
+
 function renderDetail(node) {
   const incoming = graph.edges.filter(edge => edge.target === node.id);
   const outgoing = graph.edges.filter(edge => edge.source === node.id);
   const connection = edge => {
     const other = edge.source === node.id ? nodeById.get(edge.target).node : nodeById.get(edge.source).node;
     const arrow = edge.source === node.id ? "→" : "←";
-    return `<li><strong>${edge.type}</strong> ${arrow} ${other.label}${edge.label ? ` · ${edge.label}` : ""} <em>(${edge.status})</em></li>`;
+    return `<li><strong>${escapeHtml(edge.type)}</strong> ${arrow} <button type="button" class="connection-button" data-node-id="${escapeHtml(other.id)}">${escapeHtml(other.label)}</button>${edge.label ? ` · ${escapeHtml(edge.label)}` : ""} <em>(${escapeHtml(edge.status)})</em></li>`;
   };
   detail.style.setProperty("--detail-color", `#${statusColors[node.status].getHexString()}`);
-  detail.innerHTML = `<p class="detail-status">${node.status} · ${groups[node.group]}</p><h3>${node.label}</h3><p>${node.description}</p><ul class="connections">${[...incoming, ...outgoing].map(connection).join("")}</ul><p class="sources"><strong>Evidence</strong><br>${node.evidence.map(path => `<a href="${evidenceHref(path)}">${path.split("/").at(-1)}</a>`).join("<br>")}</p>`;
+  detail.innerHTML = `<p class="detail-status">${escapeHtml(node.status)} · ${escapeHtml(groups[node.group])}</p><h3>${escapeHtml(node.label)}</h3><p>${escapeHtml(node.description)}</p><h4>Typed connections</h4><ul class="connections">${[...incoming, ...outgoing].map(connection).join("")}</ul><h4>Evidence and source links</h4><ul class="sources evidence-list">${node.evidence.map(path => `<li><span>${escapeHtml(path.split("/").at(-1))}</span><span><a href="${localEvidenceHref(path)}">Open locally</a> · <a href="${evidenceHref(path)}" target="_blank" rel="noreferrer">GitHub ↗</a></span></li>`).join("")}</ul>`;
+  detail.scrollTop = 0;
 }
 
 function selectNode(id, moveCamera = false) {
@@ -141,6 +163,7 @@ function selectNode(id, moveCamera = false) {
     const selected = node.id === selectedId;
     mesh.scale.setScalar(selected ? 1.55 : 1);
     element.classList.toggle("selected", selected);
+    element.setAttribute("aria-pressed", String(selected));
   }
   if (!id) return;
   const record = nodeById.get(id);
@@ -188,7 +211,7 @@ function flattenDepth() {
 }
 
 function resetView() {
-  camera.position.set(100, 80, 1550);
+  camera.position.set(100, 80, stage.clientWidth < 850 ? 1850 : 1550);
   controls.target.set(60, 0, 0);
   controls.update();
   search.value = "";
@@ -212,12 +235,21 @@ search.addEventListener("input", applyFilters);
 groupFilter.addEventListener("change", applyFilters);
 statusFilter.addEventListener("change", applyFilters);
 nodeSelect.addEventListener("change", () => nodeSelect.value && selectNode(nodeSelect.value, true));
+detail.addEventListener("click", event => {
+  const button = event.target.closest("[data-node-id]");
+  if (button) selectNode(button.dataset.nodeId, true);
+});
 flattenButton.addEventListener("click", flattenDepth);
 resetButton.addEventListener("click", resetView);
 
+let initialFramePending = true;
 function resize() {
   const width = stage.clientWidth;
   const height = stage.clientHeight;
+  if (initialFramePending && width > 0) {
+    camera.position.z = width < 850 ? 1850 : 1550;
+    initialFramePending = false;
+  }
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
   renderer.setSize(width, height, false);
@@ -225,11 +257,60 @@ function resize() {
 }
 new ResizeObserver(resize).observe(stage);
 
+const labelWorldPosition = new THREE.Vector3();
+function labelLayout() {
+  const width = stage.clientWidth;
+  const height = stage.clientHeight;
+  if (!width || !height) return;
+  const occupied = [];
+  const records = [...nodeById.values()]
+    .filter(record => record.mesh.visible)
+    .map(record => {
+      record.mesh.getWorldPosition(labelWorldPosition);
+      const projected = labelWorldPosition.clone().project(camera);
+      return { ...record, x: (projected.x * .5 + .5) * width, y: (-projected.y * .5 + .5) * height, depth: projected.z };
+    })
+    .filter(record => record.depth > -1 && record.depth < 1)
+    .sort((a, b) => Number(b.node.id === selectedId) - Number(a.node.id === selectedId) || Number(b.node.status === "established") - Number(a.node.status === "established") || a.depth - b.depth);
+
+  const intersectionArea = (a, b) => Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left)) * Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top));
+  for (const record of records) {
+    const labelWidth = record.element.offsetWidth || 120;
+    const labelHeight = record.element.offsetHeight || 28;
+    const gap = record.node.id === selectedId ? 24 : 18;
+    const candidates = [
+      [-labelWidth / 2, -labelHeight - gap],
+      [-labelWidth / 2, gap],
+      [gap, -labelHeight / 2],
+      [-labelWidth - gap, -labelHeight / 2],
+      [gap, -labelHeight - gap],
+      [-labelWidth - gap, -labelHeight - gap],
+      [gap, gap],
+      [-labelWidth - gap, gap],
+    ];
+    let best = null;
+    for (const [offsetX, offsetY] of candidates) {
+      const placedX = Math.max(5, Math.min(width - labelWidth - 5, record.x + offsetX));
+      const placedY = Math.max(5, Math.min(height - labelHeight - 5, record.y + offsetY));
+      const actualOffsetX = placedX - record.x;
+      const actualOffsetY = placedY - record.y;
+      const rect = { left: placedX - 4, top: placedY - 3, right: placedX + labelWidth + 4, bottom: placedY + labelHeight + 3 };
+      const overlap = occupied.reduce((sum, other) => sum + intersectionArea(rect, other), 0);
+      const distance = Math.hypot(actualOffsetX + labelWidth / 2, actualOffsetY + labelHeight / 2);
+      const score = overlap * 1000 + distance;
+      if (!best || score < best.score) best = { score, offsetX: actualOffsetX, offsetY: actualOffsetY, rect };
+    }
+    record.element.style.transform = `translate(${best.offsetX}px,${best.offsetY}px)`;
+    occupied.push(best.rect);
+  }
+}
+
 function animate() {
   requestAnimationFrame(animate);
   controls.update();
   renderer.render(scene, camera);
   labelRenderer.render(scene, camera);
+  labelLayout();
 }
 
 applyFilters();
