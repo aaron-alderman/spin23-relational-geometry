@@ -234,9 +234,10 @@ y\circ d\text{ is retained as a factored path and matches to }
 }
 \]
 
-whereas independent leakage is a transverse deformation. The immediate next
-task is to extend the matching ideal over the complete three-topology tree
-category and determine which sums preserve the protected cofactor.
+whereas independent leakage is a transverse deformation. Claim 1509 extends
+the ideal to sums and proves that same-sign packets preserve the protected
+cofactor exactly when every mediator coupling vector shares one projective
+ray; packet-wise correlation alone is not enough.
 
 ## Reproduction
 

@@ -1,0 +1,29 @@
+{
+  "schema": "spin23.Schur-packet-sum-alignment/1",
+  "date": "2026-10-20",
+  "twoPacketIdentity": {
+    "packets": "G_i=(1/a_i) v_i v_i^T with v_i=(d_i,y_i)",
+    "determinant": "det(G_1+G_2)=((d_1 y_2-d_2 y_1)^2)/(a_1 a_2)",
+    "sameSignZeroCondition": "d_1 y_2-d_2 y_1=0"
+  },
+  "multiPacketIdentity": {
+    "name": "two-row Cauchy-Binet",
+    "determinant": "sum over i<j of w_i w_j (d_i y_j-d_j y_i)^2",
+    "sameSignInterpretation": "zero exactly when every nonzero coupling vector lies on one projective ray"
+  },
+  "enumeration": {
+    "masses": [1,2,3],
+    "couplingValues": [-2,-1,1,2],
+    "twoPacketCases": 2304,
+    "alignedCases": 432,
+    "nonAlignedCases": 1872,
+    "identityFailures": 0
+  },
+  "theorem": {
+    "rankOnePacketsClosedUnderAddition": false,
+    "sameSignProtectionEquivalentToProjectiveAlignment": true,
+    "minimalStructuralRepair": "a one-dimensional typed coupling Hom space or an exact common-ray alignment law"
+  },
+  "boundary": "the positivity iff alignment statement assumes real or common-phase couplings and same-sign inverse masses; complex phases or indefinite weights can create additional tuned cancellations",
+  "verdict": "packet-wise Schur correlation is insufficient in a multi-mediator theory; exact protection requires global projective alignment of every contributing path"
+}
