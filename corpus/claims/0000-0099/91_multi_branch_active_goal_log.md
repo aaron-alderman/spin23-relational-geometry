@@ -26934,3 +26934,23 @@ Two matter 27s realize the signed tight frame explicitly: the two scalar-copy Yu
 ## Cycle 1203 — a residual Z3 turns physical three-family multiplicity into the needed frame
 
 Keeping three matter 27s rather than decoupling an auxiliary copy yields a positive construction. Under the cyclic family permutation, \(Y_0=I_3/\sqrt3\) is invariant and \(Y_1=\operatorname{diag}(1,\omega,\omega^2)/\sqrt3\) has character \(\omega\). Assigning the VEV copy trivial charge and the portal copy charge \(\omega^2\) permits both Yukawas while forbidding their scalar mixing; neutral 27 and symmetric singlet VEVs leave this Z3 unbroken. The two Yukawas have identity scalar-copy Gram and isotropic family wave-function sum, while the E6 mass operator has rank 33 and a 48-dimensional kernel of three chiral 16s. The branch is reopened pending the full Z3-compatible scalar vacuum, spectrum and portal-threshold audit. Artifact: [1575](../1500-1599/1575_a_residual_Z3_family_cycle_realizes_the_two_copy_frame_and_protects_a_three_family_E6_portal.md).
+
+## Cycle 1204 — tachyon, characteristic and warp claims separate
+
+The scalar quartic witness is tachyonic at the symmetric point and positive at its broken minima, while its principal symbol is independent of the mass sign. An AdS4 mass \(m^2\ell^2=-2\) is also above the BF bound. Separately, a constant ADM shift produces coordinate light speeds \(v\pm1\) but is exactly flat after \(x'=x-vt\). Faster-than-light and warp work now requires a derived principal cone and sourced global geometry rather than vocabulary. Artifact: [1576](../1500-1599/1576_tachyons_superluminal_characteristics_and_warp_shortcuts_are_three_independent_admission_gates.md).
+
+## Cycle 1205 — the protected global Z3 opens a domain-wall gate
+
+The neutral high-scale E6 VEVs preserve the family cycle, but the charge-two electroweak portal VEV has trivial stabilizer because \(2k=0\pmod3\) only for \(k=0\). Its exact global symmetry orbit therefore has three degenerate images. The complete scalar vacuum must decide whether they are disconnected; if so, the construction must gauge the Z3, place its breaking before inflation, or introduce controlled explicit breaking and re-audit the portal mixing it regenerates. Artifact: [1577](../1500-1599/1577_the_exact_global_z3_portal_protection_produces_three_electroweak_vacua_and_a_domain_wall_gate.md).
+
+## Cycle 1206 — CCC moves to a Spin(2,4) parent
+
+Dimension and group-role checks prevent the four-dimensional conformal branch from being assigned directly to Spin(2,3). The conditional chain is Spin(2,4) to Spin(2,3) to Spin(1,3), and an aeon crossover is a spacelike conformal junction rather than a traversable shortcut. Conformal-factor selection, stress/current flux and quantum-state matching are the live tests. Artifact: [1578](../1500-1599/1578_four_dimensional_conformal_cyclic_cosmology_requires_a_spin24_parent_not_spin23_alone.md).
+
+## Cycle 1207 — the current three-family kernel is not yet an index
+
+Rank--nullity proves that every finite balanced chiral block has index zero. The three retained E6 16s solve the copy-frame threshold problem but do not topologically explain family number. A legitimate family-index construction must introduce an unbalanced grading, a Fredholm/domain-wall operator or a characteristic-class background evaluating to three. Artifact: [1579](../1500-1599/1579_a_balanced_finite_chiral_carrier_has_zero_index_so_the_three_family_kernel_is_not_yet_topological.md).
+
+## Cycle 1208 — all exotic portal arcs reduce to four typed junction tests
+
+Internal particle portals, topological family defects, localized spacetime handles and conformal aeon boundaries now share one research method without being identified. Every candidate must pass support intertwining, charge/stress flux, hyperbolicity/causality and explicit-topology tests. The first work order remains the complete E6xZ3 vacuum, followed by an index-three carrier, the dynamical Spin(2,3) selector principal symbol, only then defect/shortcut searches and a Spin(2,4) conformal lift. Artifact: [1580](../1500-1599/1580_the_topological_portal_programme_reduces_to_four_finite_junction_and_causality_tests.md).

@@ -541,3 +541,11 @@ The programme's most productive single question is:
 > **Can an interaction-selected Lorentzian sector emerge from a larger indefinite configuration geometry such that one invariant stress–energy structure predicts both ordinary local particle physics and a distinctive, independently measurable gravitational or spectral effect?**
 
 That question is ambitious, technically demanding, and clear enough to guide real mathematical work. It also preserves the original spirit of the investigation: let intuition generate possibilities, let mathematics specify them, let experiments decide which survive.
+
+## Topological portals, causal cones and cyclic completion
+
+The programme now sharpens exotic-transport language into three independent gates. A tachyonic mass is a negative Hessian direction and may simply destabilize the symmetric vacuum; the local front cone comes from the principal symbol; and a warp shortcut is a property of the sourced metric and its global causal relation. None implies either of the others. In an AdS4 reading, even a negative scalar mass may be stable above the Breitenlohner--Freedman bound.
+
+Topology supplies a possible deeper joining language but also immediate obstructions. The live E6 family Z3 has a three-point degenerate electroweak orbit if it is exact and global; the full scalar vacuum must decide whether those images are disconnected and form domain walls. Meanwhile the balanced finite three-family carrier has zero Fredholm index. A topological explanation of family number therefore requires a new unbalanced, domain-wall/Fredholm or characteristic-class carrier. Likewise a wormhole requires an actual handle geometry and admissible stress tensor; connection holonomy or relational adjacency alone is insufficient.
+
+Conformal cyclic cosmology belongs to a larger four-dimensional conformal parent, \(Spin(2,4)\), with \(Spin(2,3)\) at most a selected intermediate phase before \(Spin(1,3)\). Its crossover is a spacelike boundary portal, not a traversable Stargate. The common research object is a typed junction that preserves physical support, charge/stress flux, hyperbolicity and an explicit topological invariant.

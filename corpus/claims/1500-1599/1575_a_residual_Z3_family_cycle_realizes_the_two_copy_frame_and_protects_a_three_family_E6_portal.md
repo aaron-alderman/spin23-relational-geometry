@@ -1,5 +1,7 @@
 # A Residual Z3 Family Cycle Realizes the Two-Copy Frame and Protects a Three-Family E6 Portal
 
+> **Subsequent topological boundary (claim 1577).** If this Z3 is exact and global, the nonzero charge-two electroweak portal VEV has trivial stabilizer and a three-point degenerate orbit. The high-scale protection remains valid, but the full scalar vacuum must decide whether these are disconnected components producing post-inflationary domain walls. See [1577](1577_the_exact_global_z3_portal_protection_produces_three_electroweak_vacua_and_a_domain_wall_gate.md).
+
 **Date:** 20 October 2026
 
 **Gates:** A2, A5 and A6

@@ -1,0 +1,30 @@
+{
+  "schema": "spin23.e6-z3-electroweak-domain-wall-gate/1",
+  "date": "2026-10-20",
+  "group": { "order": 3, "generator": "omega", "omegaCubed": 1 },
+  "chargesModuloThree": {
+    "S0": 0,
+    "fundamental27H": 0,
+    "portalS1": 2
+  },
+  "highScaleVacuum": {
+    "nonzeroFields": ["S0 singlet", "fundamental27H singlet"],
+    "stabilizerOrder": 3,
+    "z3Preserved": true
+  },
+  "electroweakVacuum": {
+    "nonzeroFields": ["S1 bidoublet"],
+    "stabilizerOrderForGlobalZ3": 1,
+    "orbitSize": 3,
+    "symmetryRelatedDegenerateRepresentatives": 3,
+    "disconnectedVacuumComponentsDerivedFromChargeDataAlone": false,
+    "stableDomainWallsIfRepresentativesAreIsolatedGlobalVacua": true
+  },
+  "escapeRoutes": {
+    "gaugedZ3": "the three representatives may be gauge equivalent; defects and discrete anomalies must be recomputed",
+    "preOrDuringInflationBreaking": "walls can be inflated away only with a compatible reheating history",
+    "explicitSoftBreaking": "biases and removes stable walls but also weakens exact portal protection",
+    "unbrokenSubgroup": "impossible for a nonzero charge-two order parameter because gcd(2,3)=1"
+  },
+  "decision": "claim 1575 protects the high-scale matching regime; the full scalar vacuum must decide whether the three-point orbit is disconnected and produces walls"
+}

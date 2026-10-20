@@ -1,0 +1,43 @@
+{
+  "schema": "spin23.causal-spectrum-warp-gate/1",
+  "date": "2026-10-20",
+  "scalarWitness": {
+    "potential": "V(phi)=-(mu^2/2) phi^2+(lambda/4) phi^4",
+    "assumptions": { "muSquared": 1, "lambda": 1 },
+    "symmetricPointHessian": -1,
+    "brokenVacua": [-1, 1],
+    "brokenVacuumHessian": 2,
+    "interpretation": "the tachyon labels instability of the symmetric expansion point, not a superluminal particle"
+  },
+  "adsWitness": {
+    "dimension": 4,
+    "massSquaredTimesRadiusSquared": -2,
+    "breitenlohnerFreedmanBound": -2.25,
+    "stableAgainstBFTest": true
+  },
+  "characteristicWitness": {
+    "equation": "partial_t^2 phi-c_s^2 partial_x^2 phi+m^2 phi=0",
+    "massSquaredSamples": [-1, 0, 1],
+    "characteristicSpeed": 1,
+    "massSignChangesPrincipalSymbol": false,
+    "decision": "tachyon and superluminal characteristic are independent gates"
+  },
+  "constantShiftWitness": {
+    "metric": "ds^2=-dt^2+(dx-v dt)^2",
+    "coordinateMap": "x_prime=x-v t",
+    "lightCoordinateSpeeds": ["v-1", "v+1"],
+    "riemannFlat": true,
+    "physicalShortcutDerived": false,
+    "decision": "coordinate speed above one is not a warp-drive certificate"
+  },
+  "admissionTests": [
+    "positive physical Hessian at the selected vacuum, apart from gauge zero modes",
+    "hyperbolic principal symbol with an identified physical causal cone",
+    "front velocity rather than phase or group velocity",
+    "nontrivial curvature or global connectivity for a geometric shortcut",
+    "source stress tensor, stability, chronology, and quantum-backreaction audit"
+  ],
+  "sources": [
+    "https://arxiv.org/abs/gr-qc/0009013"
+  ]
+}
