@@ -1,0 +1,37 @@
+{
+  "schema": "spin23.s3-doublet-commutant-audit/1",
+  "documentId": 1486,
+  "date": "2026-10-20",
+  "status": "exact-representation-obstruction-and-minimal-symmetry-lowering-fork",
+  "representations": {
+    "classOrder": ["identity", "transposition", "threeCycle"],
+    "classSizes": [1, 3, 2],
+    "trivialCharacter": [1, 1, 1],
+    "signCharacter": [1, -1, 1],
+    "A2Character": [2, 0, -1],
+    "shapeAndFluxSource": "A2+sign",
+    "hermitianDoubletOperators": "trivial+A2+sign",
+    "tracelessHermitianDoubletOperators": "A2+sign",
+    "equivariantLinearResponseDimension": 2,
+    "crossIrrepMaps": 0,
+    "familyDoubletCommutantDimension": 1
+  },
+  "subgroupFork": [
+    {"retainedSymmetry": "S3", "hermitianCommutantDimension": 1, "noncentralGenerator": null, "cost": "none but no rotator"},
+    {"retainedSymmetry": "A3", "hermitianCommutantDimension": 2, "noncentralGenerator": "iJ", "cost": "orientation or chirality"},
+    {"retainedSymmetry": "S2 point stabilizer", "hermitianCommutantDimension": 2, "noncentralGenerator": "sigma_z", "cost": "marked defect or axis"},
+    {"retainedSymmetry": "trivial", "hermitianCommutantDimension": 4, "noncentralGenerator": "arbitrary Hermitian matrix", "cost": "arbitrary family basis"}
+  ],
+  "higherOrderBoundary": {
+    "genericLinearSplittingOrder": "epsilon",
+    "quadraticCorrectionOrder": "epsilon^2",
+    "genericEigenvectorChange": "epsilon",
+    "orderOneEscapeRoutes": ["new A2 or sign spurion", "singular response coefficient", "vanishing-linear critical branch"]
+  },
+  "verdict": {
+    "undecoratedS3SuppliesFixedCabibboRotator": false,
+    "orientationTensorIsSignCovariantNotS3Invariant": true,
+    "nextTypedSearch": "explicit A2 or sign covariant from the defect superconnection, Peirce action, or boundary orientation",
+    "physicalAdmissionChanged": false
+  }
+}
