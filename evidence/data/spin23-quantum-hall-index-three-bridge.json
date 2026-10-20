@@ -1,0 +1,38 @@
+{
+  "schema": "spin23.quantum-hall-index-three-bridge/1",
+  "date": "2026-10-20",
+  "landauAlgebra": {
+    "relation": "[Pi_x,Pi_y]=i hbar q B",
+    "stoneVonNeumannRole": "fixed nonzero magnetic central character selects one regular irreducible Heisenberg representation"
+  },
+  "twoBandWitness": {
+    "model": "H(k)=sin(kx) sigma_x+sin(ky) sigma_y+(-1+cos(kx)+cos(ky)) sigma_z",
+    "occupiedBandChernNumber": -1,
+    "copies": 3,
+    "totalChernNumber": -3,
+    "absoluteEdgeIndex": 3
+  },
+  "bulkBoundary": {
+    "bulkObject": "gapped occupied-band projector",
+    "boundaryObject": "Toeplitz/Fredholm compression",
+    "protectedQuantity": "net chiral edge-mode count",
+    "spin10Lift": "three chiral channels tensor the 16, giving index class 3[16] up to orientation"
+  },
+  "orientationBoundary": {
+    "threeIdenticalCopiesHaveInternalSymmetry": "U(3)",
+    "chernNumberSelectsZ3Basis": false,
+    "chernNumberDerivesYukawaFrame": false,
+    "requiredExtraData": "family-cycle symmetry or interaction selecting the clock/Fourier basis and its two-copy Yukawa operators"
+  },
+  "fourDimensionalRoute": {
+    "motivation": "a 4D quantum Hall bulk has a 3+1-dimensional boundary and a second-Chern index",
+    "derivedHere": false,
+    "source": "https://arxiv.org/abs/cond-mat/0110572"
+  },
+  "sources": [
+    "https://arxiv.org/abs/math-ph/0008040",
+    "https://arxiv.org/abs/2410.19539",
+    "https://arxiv.org/abs/cond-mat/0110572"
+  ],
+  "decision": "quantum Hall dynamics realizes the parent-gap-projector-index mechanism, but topology fixes family count rather than flavor orientation"
+}

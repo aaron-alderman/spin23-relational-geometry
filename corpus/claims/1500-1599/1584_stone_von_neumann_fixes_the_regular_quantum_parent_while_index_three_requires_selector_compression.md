@@ -1,5 +1,7 @@
 # Stone–von Neumann Fixes the Regular Quantum Parent While Index Three Requires Selector Compression
 
+> **Subsequent dynamical realization (claim 1585).** A three-copy Chern-insulator witness realizes the full parent--gap--projector--Toeplitz--index chain with absolute edge index three. Its residual U(3) channel freedom proves that bulk topology protects family count but does not select the Z3 Yukawa frame. See [1585](1585_quantum_hall_bulk_boundary_dynamics_realizes_index_three_but_not_the_z3_flavor_frame.md).
+
 **Date:** 20 October 2026
 
 **Gates:** A1, A2, A4 and A5
