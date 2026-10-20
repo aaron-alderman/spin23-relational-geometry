@@ -214,9 +214,11 @@ The physical tensor lift has no multiplicity obstruction:
 cross-sheet support is the unique algebraic threat}.}
 \]
 
-The next gate is a row-by-row parity classification of the actual
-Pati--Salam fermion, scalar and Yukawa inventory, followed by the discrete
-anomaly and odd-Hessian tests.
+Claim 1507 begins the physical vertex audit and finds a decisive boundary:
+the two required vertices automatically make their dimension-five composite
+even under every ordinary field \(\mathbb Z_2\). The present closure theorem
+remains valid on the relation module, but its completion must be categorical
+and correlation-aware rather than a conventional endpoint parity.
 
 ## Reproduction
 

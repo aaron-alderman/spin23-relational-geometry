@@ -1,0 +1,28 @@
+{
+  "schema": "spin23.ordinary-Z2-composite-leakage-no-go/1",
+  "date": "2026-10-20",
+  "vertices": {
+    "requiredStandardDirac": "L_P H nu_P^c",
+    "requiredMajoranaSewing": "S nu_P^c nu_N^c",
+    "dangerousComposite": "S L_P H nu_N^c"
+  },
+  "identity": "parity(S L_P H nu_N^c)=parity(L_P H nu_P^c) parity(S nu_P^c nu_N^c), because parity(nu_P^c)^2=1",
+  "enumeration": {
+    "fields": 5,
+    "fieldSignAssignments": 32,
+    "preserveBothRequiredVertices": 8,
+    "alsoAllowCompositeLeakage": 8,
+    "alsoForbidCompositeLeakage": 0
+  },
+  "theorem": {
+    "ordinaryFieldZ2CanProtectExactMask": false,
+    "relationParityIsOrdinaryFieldParity": false,
+    "survivingMechanisms": ["typed relation-module restriction", "complete correlated Schur packet", "additional non-Z2 structure that distinguishes composition rather than endpoints"]
+  },
+  "interpretation": {
+    "sequentialSeesaw": "the symmetry-allowed apparent leakage occurs together with contact and shifted-Majorana terms whose complete Schur package cancels",
+    "naturalnessCorrection": "Gamma_rel grades relation support and cannot be invoked as an ordinary zero-form symmetry of the unduplicated fields",
+    "anomalyCorrection": "a conventional discrete anomaly audit is premature until a genuine field or categorical symmetry lift is specified"
+  },
+  "verdict": "the physical triangle is a Z2 composition no-go; exact protection must live at relation level or in correlated matching, not in an ordinary field parity"
+}

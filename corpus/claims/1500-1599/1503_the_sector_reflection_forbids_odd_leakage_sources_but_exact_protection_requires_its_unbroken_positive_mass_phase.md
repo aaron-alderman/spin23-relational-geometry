@@ -4,7 +4,7 @@
 
 **Gates:** A2, A5 and A6
 
-**Status:** exact naturalness criterion and source counterexample; fermionic realization and anomaly audit remain open
+**Status:** exact relation-bundle naturalness criterion and source counterexample; claim 1507 proves that it is not an ordinary field \(\mathbb Z_2\)
 
 **Depends on:** [the projector-energy action test](1502_pure_curvature_is_blind_to_flat_leakage_but_covariant_projector_energy_selects_the_parallel_mask.md) and [the parallel sector-projector theorem](1501_equal_charge_Dirac_and_Majorana_relations_require_a_parallel_sector_projector_in_the_minimal_module_connection.md)
 
@@ -201,10 +201,11 @@ its unbroken graded phase:
 }
 \]
 
-Claim 1504 performs the first lift test. No sign assignment on visible family
-endpoints can distinguish the parallel Majorana and Dirac \(P-N\) edges, but
-the sector/opposite-anchor relational cover admits four assignments. KO-6
-reality and the complete physical vertex graph remain to be imposed.
+Claims 1504--1506 lift the reflection consistently on the typed relation
+module. Claim 1507 then proves a decisive limit: no ordinary field
+\(\mathbb Z_2\) can preserve the required Dirac and Majorana vertices while
+forbidding their dimension-five composite. The viable interpretation is
+categorical/relational, not a conventional zero-form particle symmetry.
 
 ## Reproduction
 
