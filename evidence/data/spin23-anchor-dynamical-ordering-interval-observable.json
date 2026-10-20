@@ -1,0 +1,88 @@
+{
+  "schema": "spin23.anchor-dynamical-ordering-interval-observable/1",
+  "date": "2026-10-20",
+  "question": "Can the H16 anchor-cut chamber be selected by a smallest explicit stable dynamics, and can chiral grading turn the zero-energy Feshbach zeros into a genuine interval-level statement?",
+  "dependencies": {
+    "weightedCut": "claim 1553",
+    "projectedResolvent": "claim 1547"
+  },
+  "orderingModel": {
+    "scope": "the three weights y,u,v that meet the active all-one degeneracy walls, with x,z,r,s retained as four spectator weights",
+    "newDegreeOfFreedom": "one real branch-ordering singlet sigma",
+    "parameters": {
+      "a": "0<a<1",
+      "eta": "eta>0",
+      "Lambda": "Lambda>0"
+    },
+    "potential": "V=(sigma^2-1)^2+eta(sigma-1)^2+Lambda[(x-1)^2+(z-1)^2+(r-1)^2+(s-1)^2+(y-(1-a sigma))^2+(u-(1+a sigma))^2+(v-(1+a sigma))^2]",
+    "renormalizability": "when each edge weight is the modulus square of a link field, every displayed term has field degree at most four; sigma times a link modulus square is cubic",
+    "uniqueZeroVacuum": {
+      "sigma": 1,
+      "x": 1,
+      "y": "1-a",
+      "z": 1,
+      "u": "1+a",
+      "v": "1+a",
+      "r": 1,
+      "s": 1
+    },
+    "globalMinimumReason": "V is a sum of nonnegative squares. Its zero set requires sigma^2=1 and sigma=1, then fixes every weight to the listed value. Thus the vacuum is the unique global minimum in weight space.",
+    "positivity": "0<a<1 makes every vacuum weight strictly positive",
+    "Hessian": {
+      "weightDiagonal": "2 Lambda",
+      "sigmaDiagonal": "8+2 eta+6 Lambda a^2",
+      "sigmaMixedWithYUV": ["+2 Lambda a", "-2 Lambda a", "-2 Lambda a"],
+      "sigmaSchurComplement": "8+2 eta>0",
+      "decision": "positive definite for a,eta,Lambda in the stated domain"
+    },
+    "H16FacetMargins": {
+      "u-y": "2a",
+      "v-y": "2a",
+      "x+z-y": "1+a",
+      "x+r-y": "1+a",
+      "x+s-y": "1+a",
+      "r+s-y": "1+a",
+      "minimum": "min(2a,1+a)>0"
+    },
+    "witness": {
+      "a": 0.25,
+      "eta": 1,
+      "Lambda": 1,
+      "weights": {"x": 1, "y": 0.75, "z": 1, "u": 1.25, "v": 1.25, "r": 1, "s": 1},
+      "minimumFacetMargin": 0.5,
+      "independentWeightLinfinityRadius": 0.25
+    },
+    "robustness": "positive Hessian plus strict facet margins makes the selected local vacuum persist inside the AB chamber under sufficiently small coefficient perturbations; direct independent weight perturbations with norm below min(a,(1+a)/3) preserve all six facets",
+    "minimality": "among extensions that retain the sourced symmetric link sector and resolve its branch with a new local order parameter, one real singlet is the smallest field-count addition. Unequal coefficients can hard-code the chamber with no new field, and this is not a uniqueness theorem over non-polynomial, threshold, or radiative mechanisms.",
+    "cost": "eta(sigma-1)^2 is an explicit orientation bias, and the sigma couplings distinguish y from the residual u-v pair. The model dynamically stabilizes an ordering but does not derive the marked orientation from Spin(2,3) or the prior link potential. At eta=0 the sigma=+1 and sigma=-1 branches are degenerate and only the positive branch selects AB."
+  },
+  "intervalObservable": {
+    "fullSheetOrder": ["PN", "IN", "IP", "TP", "SP", "TU", "SI", "NU"],
+    "retainedRoleOrder": ["I", "P", "N", "Z", "X"],
+    "grading": [1, -1, 1, -1, 1, 1, -1, -1],
+    "operatorIdentity": "Gamma D8 Gamma=-D8",
+    "analyticResolventIdentity": "Gamma G(z) Gamma=-G(-z), G(z)=(z-D8)^(-1)",
+    "causalIdentity": "Gamma G^R(E) Gamma=-G^A(-E)",
+    "sameGradeChannels": ["I-N", "P-P"],
+    "pointwiseEnergyReflectionIdentities": [
+      "G^R_IN(E)+G^A_IN(-E)=0",
+      "G^R_PP(E)+G^A_PP(-E)=0"
+    ],
+    "dispersiveIntervalObservable": "for the positive real (reciprocal) weight sheet and every even real test function W supported on [-L,L], O_ij[W]=integral W(E) Re G^R_ij(E) dE=0 for ij=IN,PP",
+    "generalHermitianDispersiveObservable": "for arbitrary complex Hermitian bipartite weights, integral W(E) Re[(G^R_ij(E)+G^R_ji(E))/2] dE=0 for same-grade ij; the diagonal PP case needs no symmetrization",
+    "polePrescription": "the retarded/advanced identity holds distributionally; equivalently use finite eta>0 before taking eta to zero. The real-part integral is understood with the corresponding principal-value prescription.",
+    "pointwiseTextureZero": false,
+    "genericNonzeroFact": "G_IN(E) and G_PP(E) remain generically nonzero at each nonzero E; the interval statement is an energy-reflection cancellation, not absent propagation",
+    "robustness": "the ordered retarded/advanced identity is exact under arbitrary complex Hermitian bipartite changes. The unsymmetrized off-diagonal real-part integral additionally requires reciprocity/real-symmetric weights; reciprocal symmetrization is exact for arbitrary phases",
+    "breakingTerms": "diagonal or same-grade couplings violate the anticommutation and generically spoil the identity at first order",
+    "physicalStatus": "a mathematically exact label-level dispersive sum rule. It becomes a physical observable only if the lift identifies the external channels, preserves the grading about a physical energy origin, and supplies the causal response normalization."
+  },
+  "decision": {
+    "dynamicalOrdering": "SAT with one new real singlet and an explicit orientation bias",
+    "orderingDerivedFromExistingSpin23Data": false,
+    "pointwiseIntervalPropagatorTexture": "UNSAT, unchanged from claim 1547",
+    "intervalLevelReplacement": "SAT as an exact chiral energy-reflection/dispersion sum rule",
+    "strongestConclusion": "The joined packet can be extended by a stable open anchor chamber and an exact interval-integrated identity, but only conditionally: the chamber uses new marked Landau data, and the interval identity tests chiral energy-reflection rather than pointwise absence of the forbidden channel."
+  },
+  "boundary": "This construction closes the smallest label-level dynamics and interval-observable questions. It does not provide the physical Pati-Salam lift, derive the orientation bias, protect chiral grading against physical diagonal terms, or identify a measured response function."
+}

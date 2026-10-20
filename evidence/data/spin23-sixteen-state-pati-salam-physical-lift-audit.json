@@ -1,0 +1,88 @@
+{
+  "schema": "spin23.sixteen-state-pati-salam-physical-lift-audit/1",
+  "date": "2026-10-20",
+  "scope": "minimal physical-lift audit of claim 1539's repaired sixteen-state oriented-correspondence geometry against one chiral Pati-Salam family and its Spin(10) parent",
+  "conventions": {
+    "patiSalamGroup": "SU(4)_C x SU(2)_L x SU(2)_R",
+    "representationsAreAllLeftHanded": true,
+    "family": [
+      {"name": "F_L", "representation": ["4", "2", "1"], "dimension": 8},
+      {"name": "F_R^c", "representation": ["bar4", "1", "2"], "dimension": 8}
+    ],
+    "spin10Parent": "16 -> (4,2,1) + (bar4,1,2)"
+  },
+  "dimensionAndChirality": {
+    "labelDimension": 16,
+    "labelGammaPlus": 8,
+    "labelGammaMinus": 8,
+    "minimalPatiSalamFamilyDimension": 16,
+    "candidateAssignment": {
+      "gammaPlus": "F_L=(4,2,1)",
+      "gammaMinus": "F_R^c=(bar4,1,2)"
+    },
+    "dimensionLevelDecision": "SAT",
+    "qualification": "the equality is a vector-space and chirality-count match only"
+  },
+  "nonabelianAnomalies": {
+    "su4CubicContributions": [2, -2],
+    "su4CubicTotal": 0,
+    "su2LPseudorealDoubletCount": 4,
+    "su2RPseudorealDoubletCount": 4,
+    "wittenParity": [0, 0],
+    "decision": "one chiral Pati-Salam family is perturbatively and Witten-anomaly free",
+    "qualification": "this does not validate the independent label U(1)^2 as a physical gauge factor"
+  },
+  "ordinaryReality": {
+    "source": "F_L=(4,2,1)",
+    "ordinaryComplexConjugate": "barF_L=(bar4,2,1)",
+    "declaredJTarget": "F_R^c=(bar4,1,2)",
+    "ordinaryIntertwinerDimension": 0,
+    "reverseIntertwinerDimension": 0,
+    "reason": "complex conjugation reverses the SU(4) representation but does not exchange SU(2)_L with SU(2)_R",
+    "minimalOrdinaryRealCompletion": [
+      "(4,2,1)", "(bar4,1,2)", "(bar4,2,1)", "(4,1,2)"
+    ],
+    "minimalOrdinaryRealDimension": 32,
+    "spin10Decision": "the chiral 16 is of complex type, so ordinary real completion likewise requires 16 + bar16",
+    "sixteenStateOrdinaryDecision": "UNSAT"
+  },
+  "twistedReality": {
+    "automorphism": "sigma_LR exchanges SU(2)_L and SU(2)_R and leaves SU(4)_C fixed",
+    "sourceAfterAntilinearConjugationAndTwist": "sigma_LR(bar4,2,1)=(bar4,1,2)",
+    "reverseAfterAntilinearConjugationAndTwist": "sigma_LR(4,1,2)=(4,2,1)",
+    "twistedIntertwinerDimension": 1,
+    "sixteenStateTwistedDecision": "CONDITIONAL SAT",
+    "cost": "J is a semilinear left-right-twisted correspondence or a representation of a disconnected extension, not the ordinary gauge-equivariant real structure of the declared Pati-Salam theory"
+  },
+  "linkAndScalarLift": {
+    "labelJEdgeOrbitCount": 7,
+    "labelBareNeutralOrbitCount": 1,
+    "allOrbitsCrossGamma": true,
+    "patiSalamBareBilinearSingletMultiplicity": 0,
+    "diracBilinear": "(4,2,1) x (bar4,1,2)",
+    "diracScalarCandidates": ["(1,2,2)", "(15,2,2)"],
+    "physicalBareOrbitCount": 0,
+    "decision": "all seven edge-orbit coefficients require Pati-Salam bidoublet-valued scalar/Yukawa lifts; label neutrality of SP--TP does not make it a Pati-Salam bare mass",
+    "economyBoundary": "one scalar multiplet may feed several component entries only after specifying its Clebsch map and Yukawa tensor; seven label edges do not establish seven independent physical multiplets"
+  },
+  "majoranaAndBreaking": {
+    "rightMajoranaScalar": "(10,1,3)",
+    "rightMajoranaActsWithin": "F_R^c x F_R^c",
+    "rightMajoranaGammaParityUnderCandidateAssignment": "even",
+    "declaredFiniteDiracEdgeParity": "odd",
+    "majoranaPresentInSevenEdgeSupport": false,
+    "standardBreakingExamples": ["(4,1,2)", "(10,1,3)", "(15,1,1)"],
+    "bidoubletCandidatesSupplyStandardHighScaleBreaking": false,
+    "reason": "the cross-chiral bidoublets do not provide the SU(2)_L-singlet Pati-Salam-breaking or same-chirality Majorana carrier required by a conventional staged descent"
+  },
+  "verdict": {
+    "representationAndChiralityCount": "SAT",
+    "nonabelianAnomalyGate": "SAT",
+    "ordinarySixteenStateJ": "UNSAT",
+    "leftRightTwistedSixteenStateJ": "CONDITIONAL SAT",
+    "physicalScalarAndBreakingClosure": "UNSAT",
+    "minimalOrdinaryRealStateCount": 32,
+    "programmeConsequence": "the repaired sixteen-state object can be a label correspondence over one family, but cannot itself be the ordinary real Pati-Salam or Spin(10) fermion space; a physical lift must either double to 32 states or explicitly adopt a twisted/disconnected left-right reality, then add sourced bidoublet, breaking and Majorana maps"
+  },
+  "boundary": "The no-go is for an ordinary gauge-equivariant real structure with gammaPlus and gammaMinus identified with the two irreducible halves of one minimal chiral family. Twisted spectral triples, disconnected gauge extensions, family multiplicities, or treating the sixteen labels as an external correspondence tensor are reopenings, not counterexamples."
+}

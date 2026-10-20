@@ -1,0 +1,78 @@
+{
+  "schema": "spin23.ward-counterterm-intertwiner-no-go/1",
+  "date": "2026-10-20",
+  "scope": "minimal source-module, RG-connection and threshold theorem for the two completed portal operators; not a completed Pati-Salam loop calculation",
+  "operators": {
+    "dirac": "O_D=L_P H nu_P^c",
+    "majorana": "O_M=S_-3 nu_P^c nu_N^c",
+    "normalizedSourceSpace": "E=C O_D plus C O_M",
+    "selectedLine": "L=span(c_+), c_+=(1,1)^T",
+    "quotientLine": "E/L represented by c_-=(1,-1)^T"
+  },
+  "minimalModulePackage": {
+    "masterSource": "one line bundle ell with coefficient Lambda",
+    "embedding": "iota:ell->E, iota(1)=c_+/sqrt(2)",
+    "reflection": "W=2 iota iota^dagger-I=[[0,1],[1,0]]",
+    "countertermCondition": "A iota=iota a, equivalently det(c_+,A c_+)=0",
+    "thresholdCondition": "T iota_up=iota_down tau, equivalently det(c_down,T c_up)=0",
+    "additiveCondition": "every additive pole s lies in im(iota)",
+    "wardCondition": "W must act contragrediently on sources and completed operators and be non-anomalous; invariant sources are then exactly Fix(W)=L"
+  },
+  "explicitMatrices": {
+    "generalCounterterm": "A=[[a,b],[q,d]]",
+    "fixedLineTangency": "q+d-a-b=0",
+    "exchangeCommutant": "[A,W]=0 iff A=[[u,v],[v,u]]",
+    "generalThreshold": "T=[[alpha,beta],[gamma,delta]]",
+    "thresholdTangency": "gamma+delta-alpha-beta=0",
+    "diagonalThreshold": "diag(t_D,t_M) preserves c_+ iff t_D=t_M",
+    "weightedIntertwiner": "W_u=[[0,u^-1],[u,0]]; W_u^2=I and Fix(W_u)=span((1,u)^T)",
+    "spurionParallelEquation": "beta_u=(gamma_M-gamma_D)u plus vertex and threshold terms"
+  },
+  "typedLiftNoGo": {
+    "typingObservable": "K=diag(1,-1) distinguishes the Dirac particle-particle/bidoublet complex from the Majorana particle-conjugate/singlet-or-triplet complex",
+    "preservingActions": "Every sourced Spin(2,3), Pati-Salam, family, grading, J-compatible linear action preserves the two typed summands, so [A,K]=0 and A is diagonal on E",
+    "exchangeFailure": "W K W=-K, hence W does not preserve K and is not induced by any symmetry that preserves the sourced typing",
+    "intertwinerForm": "A physical exchange requires an invertible typed intertwiner U:C_D->C_M and its inverse, giving W_U=[[0,U^-1],[U,0]]",
+    "homObstruction": "The current sourced carrier has no such local gauge-, kinetic-, grading- and J-compatible U; the abstract map between the two gauge-contracted singlet lines is not a typed field lift"
+  },
+  "candidateEnforcers": {
+    "Spin23": {
+      "status": "no",
+      "reason": "After contraction both operators are scalar singlets, so an action blind to the multiplicity leaves a two-dimensional source space; retaining constituent typing makes the two complexes inequivalent and removes the off-diagonal Hom. Neither side canonically selects one mixed line."
+    },
+    "PatiSalamParity": {
+      "status": "no",
+      "reason": "Left-right parity exchanges left and right Majorana branches and acts within the bidoublet sector; it does not exchange a Dirac bidoublet monomial with the right-Majorana monomial. Its induced action is block diagonal on E."
+    },
+    "CPorJ": {
+      "status": "no",
+      "reason": "Conjugation fixes a real plane of real dimension two. The antiunitary exchange z->W conjugate(z) also has a real two-dimensional fixed set. Their intersection is the real equal line only after the missing exchange W is independently imposed."
+    },
+    "spurion": {
+      "status": "conditional input only",
+      "reason": "A normalized off-diagonal spurion U can define W_U and a moving selected line, but its orientation and normalization are new data. Keeping a fixed line requires the parallel equation beta_U=Gamma_M U-U Gamma_D=0 and compatible threshold transport, which is the original Ward/RG problem."
+    }
+  },
+  "finiteAudit": {
+    "matrixAlphabet": [-1, 0, 1],
+    "matrixCount": 81,
+    "fixedLineTangentMatrices": 19,
+    "exchangeCommutingMatrices": 9,
+    "diagonalMatrices": 9,
+    "diagonalFixedLineTangentMatrices": 3,
+    "signedPermutationInvolutions": 6,
+    "typingPreservingSignedPermutationInvolutions": 4,
+    "typingPreservingMixedFixedLines": 0
+  },
+  "decision": {
+    "minimalAbstractOneDimensionalCountertermModule": true,
+    "minimalReflectionUniqueForNormalizedLine": true,
+    "sourcedTypedIntertwinerPresent": false,
+    "Spin23EnforcesLine": false,
+    "PatiSalamParityEnforcesLine": false,
+    "CPorJEnforcesLine": false,
+    "freeSpurionDerivesLine": false,
+    "conditionalClosure": "yes, if one adds a normalized typed intertwiner whose Ward identity is non-anomalous and whose line is parallel under the full RG connection and every threshold map"
+  },
+  "verdict": "The exact minimum is a one-dimensional master-source bundle embedded in the two completed-operator source space, together with its reflection and a physical typed operator intertwiner. The first two exist formally. The intertwiner does not exist in the sourced Spin(2,3)/Pati-Salam data, and CP, J, parity or a free spurion does not derive it."
+}
