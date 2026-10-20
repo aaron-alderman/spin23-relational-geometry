@@ -1,0 +1,40 @@
+{
+  "schema": "spin23.e6-two-copy-yukawa-gram-obstruction/1",
+  "date": "2026-10-20",
+  "source": {
+    "generalRgePaper": "https://arxiv.org/abs/1809.06797",
+    "relevantDefinition": "Y_2^{ab}(S)=1/2 Tr(Y^{dagger a}Y^b+Y^{dagger b}Y^a), equation 17",
+    "interpretation": "scalar wave-function renormalization is a matrix in copy space"
+  },
+  "oneSource": {
+    "alignedBasis": {"w": [1, 0], "d": [0, 1]},
+    "yukawaVector": "y=(y_parallel,y_perpendicular)",
+    "gramMatrix": [
+      ["abs(y_parallel)^2", "conjugate(y_parallel)*y_perpendicular"],
+      ["conjugate(y_perpendicular)*y_parallel", "abs(y_perpendicular)^2"]
+    ],
+    "rankWhenNonzero": 1,
+    "massCondition": "y_parallel != 0",
+    "portalCondition": "y_perpendicular != 0",
+    "offDiagonalThenNonzero": true,
+    "axesMultiplicativelyRenormalized": false
+  },
+  "multiSourceCriterion": {
+    "gramSum": "G=sum_r y_r^dagger y_r",
+    "axisClosure": "G_parallel,perpendicular=0",
+    "isotropicClosure": "G=c identity_2",
+    "minimumGenericSourceCountForFullRank": 2,
+    "tightFrameWitness": {
+      "y1": ["1/sqrt(2)", "1/sqrt(2)"],
+      "y2": ["1/sqrt(2)", "-1/sqrt(2)"],
+      "gramSum": [[1, 0], [0, 1]]
+    }
+  },
+  "decision": {
+    "singleTiltedYukawaRayRgeClosesOrthogonalProjector": false,
+    "bareTwoSymmetricCopyRouteClosedUnderYukawaLoops": true,
+    "twoIndependentBalancedSourceRaysCanCancelRotation": true,
+    "balancedSourceRaysDerivedByCurrentModel": false,
+    "nextTarget": "derive a two-ray tight-frame identity from matter/relation multiplicity"
+  }
+}
