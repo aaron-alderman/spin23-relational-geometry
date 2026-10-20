@@ -1,0 +1,113 @@
+{
+  "schema": "spin23.triangle-laplacian-signless-joining/1",
+  "documentId": 1478,
+  "date": "2026-10-20",
+  "status": "constructive-witness-and-bounded-joint-stress-test",
+  "ansatz": {
+    "edgeConvention": "H12=a, H23=b, H31=c*exp(i*delta)",
+    "degreeMatrix": "D=diag(a+c,a+b,b+c)",
+    "upOperator": "Ku=D-Hplus",
+    "downOperator": "Kd=D+eta*conjugate(Hplus)",
+    "commonScaleGauge": "c=1",
+    "dimensionlessParameters": ["a/c", "b/c", "delta", "eta"]
+  },
+  "ckmSource": {
+    "name": "Particle Data Group 2025 CKM review",
+    "url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-ckm-matrix.pdf",
+    "equation": "12.27",
+    "accessed": "2026-10-20"
+  },
+  "ckmTargetMagnitudes": [
+    [0.97435, 0.22501, 0.003732],
+    [0.22487, 0.97349, 0.04183],
+    [0.00858, 0.04111, 0.999118]
+  ],
+  "unrestrictedOrderingWitness": {
+    "parameters": {
+      "a": 41.61769874682881,
+      "b": 1.3561191461596707,
+      "c": 1.0,
+      "delta": 2.981201830181217,
+      "eta": 0.33504830557732207
+    },
+    "upPermutationZeroBased": [0, 1, 2],
+    "downPermutationZeroBased": [2, 0, 1],
+    "upEigenvaluesPhysicalOrder": [1.1123935954098487, 2.38778243006018, 84.44745976050689],
+    "downEigenvaluesPhysicalOrder": [56.74101273601092, 2.344282789324896, 28.86234026064111],
+    "mixingMagnitudes": [
+      [0.9743501536347495, 0.22500633388637728, 0.0037319998595370355],
+      [0.22487365715583196, 0.9734896527467569, 0.04182982563148053],
+      [0.008580001707501022, 0.04111016548265053, 0.9991177797760822]
+    ],
+    "maximumMagnitudeResidual": 0.000003666113622707856,
+    "absoluteJarlskog": 0.00003115912738311975,
+    "downOrderIsIncreasing": false,
+    "downOrderIsDecreasing": false,
+    "affineOrMonotoneMassAssignmentPossible": false
+  },
+  "massSource": {
+    "name": "Huang and Zhou, Precise Values of Running Quark and Lepton Masses in the Standard Model",
+    "url": "https://arxiv.org/abs/2009.04851",
+    "table": "II, full SM at mu=MZ",
+    "scheme": "MSbar",
+    "scaleGeV": 91.1876,
+    "accessed": "2026-10-20",
+    "centralMassesGeV": {
+      "u": 0.00123,
+      "c": 0.620,
+      "t": 168.26,
+      "d": 0.00267,
+      "s": 0.05316,
+      "b": 2.839
+    }
+  },
+  "affineInvariantMassSquaredLocations": {
+    "up": 0.000013577502786208545,
+    "down": 0.0003497378191729099
+  },
+  "jointSearch": {
+    "scope": "bounded numerical stress test, not a proof of a global minimum",
+    "seed": 1478,
+    "randomRestarts": 80,
+    "stepsPerRestart": 1500,
+    "localRefinement": "2500-step Nelder-Mead",
+    "allowedOrderings": ["increasing", "decreasing"],
+    "score": "mean squared log residual over nine CKM magnitudes and two affine mass-squared locations",
+    "bestParameters": {
+      "a": 0.000038867127707460776,
+      "b": 6.867913152071996e-16,
+      "c": 1.0,
+      "delta": 1.536475502716994,
+      "eta": 0.9996594475132387
+    },
+    "bestUpPermutationZeroBased": [0, 1, 2],
+    "bestDownPermutationZeroBased": [0, 1, 2],
+    "bestMassSquaredLocations": {
+      "up": 0.000029149779276782645,
+      "down": 0.00016292225519886198
+    },
+    "bestMixingMagnitudes": [
+      [0.50626255, 0.86192415, 0.02801761],
+      [0.86237451, 0.50588312, 0.01981087],
+      [0.00290473, 0.03419093, 0.99941110]
+    ],
+    "bestScore": 1.0422159579014292,
+    "joinedSolutionFound": false
+  },
+  "nextTest": {
+    "derivedOperator": "Cminus=i[D,Hminus]",
+    "newDimensionlessCoefficients": 1,
+    "totalDimensionlessParameters": 5,
+    "bottomUpTargets": 6,
+    "heldOutRelations": 1,
+    "arbitraryFamilySpurionAllowed": false
+  },
+  "verdict": {
+    "derivedNoncentralContrastExists": true,
+    "transposeSymmetryEscaped": true,
+    "ckmMagnitudeCapacityWitnessExists": true,
+    "thatWitnessRespectsMassOrder": false,
+    "globalNoGoEstablished": false,
+    "physicalAdmissionChanged": false
+  }
+}
