@@ -20,5 +20,10 @@
     "use": "search-order-only"
   },
   "mandatoryControls": ["source-blind reconstruction", "competing formalization", "scrambled or random motif baseline", "held-out consequence", "explicit failure archive"],
+  "bidirectionalConvergenceProtocol": {
+    "steps": ["top-down descent", "bottom-up ascent", "provisional middle", "fan middle upward and downward", "convergence audit"],
+    "convergenceSignals": ["same typed invariant", "same obstruction", "commuting maps without fitted conjugators", "parameter compression", "held-out consequence"],
+    "falseConvergenceSignals": ["shared vocabulary", "same small integer without a map", "free basis identification", "post-hoc parameter fit", "one-sided reconstruction"]
+  },
   "epistemicRule": "An inspiration source may choose where to look, never what to conclude."
 }

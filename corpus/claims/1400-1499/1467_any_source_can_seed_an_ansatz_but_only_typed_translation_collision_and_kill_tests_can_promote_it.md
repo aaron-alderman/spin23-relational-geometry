@@ -57,7 +57,19 @@ Every promoted arc must include source-blind reconstruction, a competing transla
 
 Small claims are useful when each slice reduces a dependency: one Hom-space, anomaly polynomial, commuting square, spectrum, identifiability rank or calibrated null. They are not useful when they merely restate the same analogy. The unit of progress is the smallest result that changes the dependency graph.
 
-## 6. Verdict
+## 6. Bidirectional convergence search
+
+For long missing middles, Claimipedia runs two fronts rather than forcing one continuous derivation:
+
+1. descend from the most abstract exact structure;
+2. ascend from measured or established low-energy structure;
+3. propose the smallest typed middle that both fronts can reach;
+4. fan that middle upward and downward independently;
+5. audit whether the fronts converge.
+
+Convergence means the same typed invariant, the same obstruction, commuting maps without fitted conjugators, fewer independent parameters, or a held-out consequence. Shared vocabulary, the same small integer, a freely chosen basis identification, or a post-hoc fit do not count. A useful middle may first be sensed aesthetically, but it is retained only when both fans constrain it.
+
+## 7. Verdict
 
 The earlier exhaustion result closed untyped continuation from the then-current inputs. It did not prohibit new hypothesis generation. This protocol reopens exploration as a controlled queue while leaving every physical-admission flag unchanged.
 

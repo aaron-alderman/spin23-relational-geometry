@@ -15,6 +15,15 @@ assert.equal(data.beautyPrior.use, "search-order-only");
 assert.ok(data.formalizationMinimum >= 2);
 assert.ok(data.pipeline.includes("cheap-kill-test"));
 assert.ok(data.mandatoryControls.includes("scrambled or random motif baseline"));
+assert.deepEqual(data.bidirectionalConvergenceProtocol.steps, [
+  "top-down descent",
+  "bottom-up ascent",
+  "provisional middle",
+  "fan middle upward and downward",
+  "convergence audit",
+]);
+assert.ok(data.bidirectionalConvergenceProtocol.convergenceSignals.includes("same typed invariant"));
+assert.ok(data.bidirectionalConvergenceProtocol.falseConvergenceSignals.includes("same small integer without a map"));
 
 const states = new Set(data.promotionStates);
 for (const [from, to] of data.forbiddenDirectPromotions) {
