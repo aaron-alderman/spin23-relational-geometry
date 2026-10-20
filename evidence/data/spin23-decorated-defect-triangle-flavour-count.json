@@ -1,0 +1,56 @@
+{
+  "schema": "spin23.decorated-defect-triangle-flavour-count/1",
+  "documentId": 1474,
+  "date": "2026-10-20",
+  "status": "exact-parameter-count-match-not-flavour-prediction",
+  "metricShape": {
+    "space": "CP1 with Fubini-Study metric, equivalently round S2 up to scale",
+    "orderedPointCount": 3,
+    "rawRealDimension": 6,
+    "isometryGroup": "PSU(2) isomorphic to SO(3)",
+    "genericOrbitDimension": 3,
+    "genericShapeDimension": 3,
+    "invariants": ["d12", "d23", "d31"]
+  },
+  "connection": {
+    "graph": "triangle K3",
+    "vertices": 3,
+    "edges": 3,
+    "connectedComponents": 1,
+    "cycleRank": 1,
+    "gaugeInvariant": "delta=arg(U12*U23*U31)"
+  },
+  "mixingTarget": {
+    "threeGenerationUnitaryAngles": 3,
+    "diracCPPhases": 1,
+    "totalCKMLikeParameters": 4,
+    "majoranaPhases": 2,
+    "majoranaPhasesCovered": false
+  },
+  "countMatch": {
+    "geometricShapeParameters": 3,
+    "loopPhaseParameters": 1,
+    "total": 4,
+    "matchesCKMLikeCount": true,
+    "numericalMapDerived": false
+  },
+  "explicitNondegenerateSection": {
+    "homogeneousPolynomial": "z1*(z0-z1)*(i*z0-z1)",
+    "zeros": ["[1:0]", "[1:1]", "[1:i]"],
+    "blochPairwiseDotProducts": [0, 0, 0],
+    "shape": "three pairwise right angles on the round sphere"
+  },
+  "killTests": [
+    "derive a unique dimensionless map from the three distances to three mixing angles",
+    "derive the loop holonomy from the same action rather than fit it",
+    "reproduce a held-out invariant such as the Jarlskog combination",
+    "show stability under allowed deformations and radiative corrections"
+  ],
+  "boundaries": {
+    "massesDerived": false,
+    "mixingAnglesDerived": false,
+    "cpPhaseDerived": false,
+    "majoranaSectorDerived": false,
+    "physicalAdmissionChanged": false
+  }
+}
