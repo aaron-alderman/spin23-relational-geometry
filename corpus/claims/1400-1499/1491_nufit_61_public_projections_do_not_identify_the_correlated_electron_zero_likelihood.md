@@ -217,6 +217,8 @@ constraint.
 **Internal next gate:** compute whether the physical finite one-form module
 retains the sector-dependent Majorana/Dirac null mask after junk reduction.
 
+That gate is opened at toy-model level by [claim 1492](1492_degree_two_junk_kills_the_induced_cross_edges_in_the_real_completed_null_mask_path.md): after real completion, the two relationship sheets are four-state paths, and the canonical diagonal represented calculus kills all distance-two induced cross-edges as degree-two junk.
+
 ## Reproduction
 
 ~~~powershell
