@@ -1,0 +1,43 @@
+{
+  "schema": "spin23.e6-two-copy-orthogonal-bidoublet-escape/1",
+  "date": "2026-10-20",
+  "fieldContent": {
+    "fundamentalHiggsCopies": 1,
+    "symmetricHiggsCopies": 2,
+    "symmetricCopySpace": "C^2"
+  },
+  "gaugeTensor": {
+    "singleCopyDecomposition": "K=(28/9) I1+20 I2",
+    "twoCopyForm": "K_total=sum_a[(28/9) I1_a+20 I2_a]",
+    "copyMatrix": [[1, 0], [0, 1]],
+    "offDiagonalCopyTerms": 0,
+    "reason": "gauge vertices preserve the canonical copy index"
+  },
+  "alignment": {
+    "symmetricSingletVev": "w=(w1,w2)",
+    "normalizedLightDirection": "d=(d1,d2)",
+    "gaugeMixingCovector": "B_gauge=-2*sqrt(10)*C_g*v*conjugate(w)",
+    "projectedMixing": "B_gauge(d) proportional to w^dagger d",
+    "inertCondition": "w^dagger d=0",
+    "orthogonalDirectionExists": true
+  },
+  "yukawaCriterion": {
+    "copyCovector": "y=(y1,y2)",
+    "singletMass": "m_1 proportional to y dot w",
+    "lightPortal": "g_D proportional to y dot d",
+    "bothNonzeroCondition": "(y dot w)*(y dot d) != 0",
+    "alignedBasis": {
+      "w": [1, 0],
+      "d": [0, 1],
+      "requiredYukawaComponents": ["y_parallel != 0", "y_perpendicular != 0"]
+    },
+    "newUnfixedDatum": "projective orientation [y_parallel:y_perpendicular]"
+  },
+  "decision": {
+    "pureGaugeLoopsPreserveCopyOrthogonalInertness": true,
+    "twoCopiesReopenGaugeInertRoute": true,
+    "twoCopiesAloneDerivePortal": false,
+    "twoCopiesAloneDeriveNormalizedWardLine": false,
+    "nextRequiredStructure": "a symmetry or correspondence law fixing the relative orientation of w, d, and y"
+  }
+}
