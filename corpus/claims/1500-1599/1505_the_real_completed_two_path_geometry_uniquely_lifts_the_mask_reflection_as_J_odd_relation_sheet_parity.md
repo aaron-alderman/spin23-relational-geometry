@@ -230,9 +230,10 @@ The KO-6 label-level lift succeeds and is essentially forced:
 }
 \]
 
-unique up to sign. The next gate is no longer abstract reality compatibility;
-it is the explicit tensor lift over the physical Pati--Salam multiplets and
-their complete Yukawa graph.
+unique up to sign. Claim 1506 proves that arbitrary physical multiplicity and
+the complete generalized fluctuation preserve it whenever the represented
+and opposite algebra actions are sheet-even. The remaining gate is the
+row-by-row support audit of the actual Pati--Salam vertex graph.
 
 ## Reproduction
 

@@ -1,0 +1,28 @@
+{
+  "schema": "spin23.relation-sheet-parity-tensor-fluctuation/1",
+  "date": "2026-10-20",
+  "theorem": {
+    "hypotheses": ["Gamma_rel commutes with D", "Gamma_rel commutes with the represented algebra", "Gamma_rel commutes with the opposite represented algebra"],
+    "arbitraryWithinSheetMultiplicityPreservesParity": true,
+    "generalizedFluctuationPreservesParity": true,
+    "conclusion": "Gamma_rel commutes with A_(1), opposite A_(1), A_(2), and the fully fluctuated D_A",
+    "crossSheetPhysicalVertexIsExactObstruction": true
+  },
+  "witness": {
+    "relationSheets": 2,
+    "relationVerticesPerSheet": 3,
+    "physicalMultiplicity": 2,
+    "totalDimension": 12,
+    "endomorphismDimension": 144,
+    "evenEndomorphismDimension": 72,
+    "oddEndomorphismDimension": 72,
+    "coefficients": "deterministic noncommuting integer matrices within each sheet"
+  },
+  "supportCriterion": {
+    "even": "sheet-diagonal block support, with arbitrary internal matrices",
+    "odd": "sheet-off-diagonal block support",
+    "physicalMeaning": "colour, weak, spin and generation multiplicities are harmless by themselves; only a physical vertex changing relation sheet breaks the mask reflection"
+  },
+  "boundary": "the theorem reduces the physical embedding to a support audit but does not establish that every actual Pati-Salam representation and Yukawa vertex is sheet diagonal or that the discrete reflection is anomaly free",
+  "verdict": "tensor multiplicity and generalized fluctuations cannot defeat relation-sheet parity; the sole algebraic obstruction is admitted cross-sheet support"
+}
