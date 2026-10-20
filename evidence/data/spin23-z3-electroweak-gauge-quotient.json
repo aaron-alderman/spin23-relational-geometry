@@ -1,0 +1,22 @@
+{
+  "schema": "spin23.z3-electroweak-gauge-quotient/1",
+  "date": "2026-10-20",
+  "z3PortalPhase": "q=omega^2",
+  "doublets": {
+    "Hu": { "hyperchargeTwice": 1, "z3Charge": 2 },
+    "Hd": { "hyperchargeTwice": -1, "z3Charge": 2 }
+  },
+  "cases": {
+    "onlyHuNonzero": { "z3GaugeCompensable": true, "gaugeInvariantProductNonzero": false },
+    "onlyHdNonzero": { "z3GaugeCompensable": true, "gaugeInvariantProductNonzero": false },
+    "bothNonzero": { "z3GaugeCompensable": false, "gaugeInvariantProductChargeModuloThree": 1 },
+    "bothNonzeroButProductZero": { "requiresSeparateOrbitAnalysis": true }
+  },
+  "phaseSensitiveOperator": {
+    "operator": "(Hu epsilon Hd)^3+h.c.",
+    "massDimension": 6,
+    "z3Invariant": true,
+    "renormalizableInFourDimensions": false
+  },
+  "decision": "domain-wall topology depends on the gauge quotient and phase-sensitive operators of the complete electroweak potential"
+}

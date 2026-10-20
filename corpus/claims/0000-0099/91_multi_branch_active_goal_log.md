@@ -26954,3 +26954,15 @@ Rank--nullity proves that every finite balanced chiral block has index zero. The
 ## Cycle 1208 — all exotic portal arcs reduce to four typed junction tests
 
 Internal particle portals, topological family defects, localized spacetime handles and conformal aeon boundaries now share one research method without being identified. Every candidate must pass support intertwining, charge/stress flux, hyperbolicity/causality and explicit-topology tests. The first work order remains the complete E6xZ3 vacuum, followed by an index-three carrier, the dynamical Spin(2,3) selector principal symbol, only then defect/shortcut searches and a Spin(2,4) conformal lift. Artifact: [1580](../1500-1599/1580_the_topological_portal_programme_reduces_to_four_finite_junction_and_causality_tests.md).
+
+## Cycle 1209 — the reduced three-radial E6xZ3 vacuum is open
+
+A strictly convex radial quartic has unique orthant minimum ((|s_{27}|^2,|s_0|^2,|s_1|^2)=(1,1,0)), with positive portal-singlet boundary derivative (9/4). The high-scale neutral VEV pattern is therefore compatible with an open potential region. The result does not yet split the charged copy's bidoublet from its singlet and coloured partners; that complete E6 component Hessian is the next scalar gate. Artifact: [1581](../1500-1599/1581_the_z3_reduced_three_radial_potential_has_an_open_neutral_vev_and_zero_portal_singlet_vacuum.md).
+
+## Cycle 1210 — the electroweak gauge quotient refines the wall criterion
+
+A common Z3 phase on one nonzero portal doublet can be compensated by hypercharge. With both opposite-hypercharge doublets nonzero, no one hypercharge phase compensates both and the gauge-invariant product transforms nontrivially. Its first pure Z3 phase-locking operator is dimension six. The full light-doublet content and threshold operators, not the field orbit alone, decide disconnectedness and walls. Artifact: [1582](../1500-1599/1582_the_electroweak_gauge_quotient_makes_z3_breaking_depend_on_two_doublet_support.md).
+
+## Cycle 1211 — a Fredholm shift realizes the missing index three
+
+The third power of the backward unilateral shift has kernel (operatorname{span}\{e_0,e_1,e_2\}), zero cokernel and index three. A blockwise family cycle commutes with it, and tensoring by the Spin(10) 16 gives equivariant index class (3[16]) and component kernel dimension 48. This is the first exact topological carrier matching the E6 result, but its physical defect/extra-direction origin and compressed Yukawa frame remain open. Artifact: [1583](../1500-1599/1583_a_third_power_fredholm_shift_gives_an_exact_index_three_z3_family_carrier.md).

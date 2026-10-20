@@ -1,0 +1,30 @@
+{
+  "schema": "spin23.e6-z3-reduced-three-radial-vacuum/1",
+  "date": "2026-10-20",
+  "coordinates": { "x": "|27H singlet|^2", "y": "|S0 singlet|^2", "z": "|S1 singlet|^2" },
+  "potential": "V=-a*x-b*y+c*z+lx*x^2+ly*y^2+lz*z^2+kxy*x*y+kxz*x*z+kyz*y*z",
+  "witness": {
+    "a": 5,
+    "b": 7,
+    "c": 2,
+    "lx": 2,
+    "ly": 3,
+    "lz": 4,
+    "kxy": 1,
+    "kxz": 0.5,
+    "kyz": -0.25,
+    "minimum": [1, 1, 0],
+    "portalSingletBoundaryDerivative": 2.25,
+    "potentialAtMinimum": -6
+  },
+  "quarticHessian": [[4, 1, 0.5], [1, 6, -0.25], [0.5, -0.25, 8]],
+  "decision": {
+    "strictlyConvex": true,
+    "uniqueGlobalMinimumOnNonnegativeOrthant": true,
+    "neutralHighScaleVevsNonzero": true,
+    "chargedCopySingletVevZero": true,
+    "openUnderSmallParameterChanges": true,
+    "fullE6NonSingletHessianDerived": false,
+    "oneLightPortalBidoubletDerived": false
+  }
+}

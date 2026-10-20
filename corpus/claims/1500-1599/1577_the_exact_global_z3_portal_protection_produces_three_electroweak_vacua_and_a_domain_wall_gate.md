@@ -1,5 +1,7 @@
 # The Exact Global Z3 Portal Protection Produces a Three-Point Electroweak Orbit and a Domain-Wall Gate
 
+> **Subsequent gauge-quotient refinement (claim 1582).** A single nonzero portal doublet has a Z3 phase that can be compensated by hypercharge. Genuine gauge-distinct breaking is detected when both opposite-hypercharge doublets have nonzero gauge-invariant product; its first pure Z3 phase-locking power is dimension six. See [1582](1582_the_electroweak_gauge_quotient_makes_z3_breaking_depend_on_two_doublet_support.md).
+
 **Date:** 20 October 2026
 
 **Gates:** A5, A6 and A8

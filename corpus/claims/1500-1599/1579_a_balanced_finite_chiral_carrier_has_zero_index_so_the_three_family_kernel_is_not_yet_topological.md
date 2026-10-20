@@ -1,5 +1,7 @@
 # A Balanced Finite Chiral Carrier Has Zero Index, So the Three-Family Kernel Is Not Yet Topological
 
+> **Subsequent minimal escape (claim 1583).** The third power of the backward unilateral shift has index three and a three-dimensional kernel carrying the regular Z3 action. Tensoring with the Spin(10) 16 gives equivariant index class (3[16]), providing an exact topological ansatz but not yet a physical defect lift. See [1583](1583_a_third_power_fredholm_shift_gives_an_exact_index_three_z3_family_carrier.md).
+
 **Date:** 20 October 2026
 
 **Gates:** A2, A4 and A5

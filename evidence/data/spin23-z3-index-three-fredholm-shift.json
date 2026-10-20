@@ -1,0 +1,25 @@
+{
+  "schema": "spin23.z3-index-three-fredholm-shift/1",
+  "date": "2026-10-20",
+  "carrier": "ell^2(N) with basis e_(3n+r), n>=0, r in Z3",
+  "operator": "B^3, where B e_0=0 and B e_n=e_(n-1)",
+  "kernel": ["e_0", "e_1", "e_2"],
+  "kernelDimension": 3,
+  "cokernelDimension": 0,
+  "fredholmIndex": 3,
+  "z3Action": "P e_(3n+r)=e_(3n+r+1 mod 3)",
+  "commutator": "[B^3,P]=0",
+  "equivariantKernel": "regular representation of Z3",
+  "spin10Lift": {
+    "operator": "B^3 tensor identity_16",
+    "kernelDimension": 48,
+    "equivariantIndex": "3[16]",
+    "matchesThreeChiral16Multiplicity": true
+  },
+  "decision": {
+    "escapesBalancedFiniteIndexNoGo": true,
+    "derivesPhysicalExtraDimensionOrDefect": false,
+    "derivesE6YukawaFrame": false,
+    "status": "minimal exact topological ansatz, not a physical lift"
+  }
+}
