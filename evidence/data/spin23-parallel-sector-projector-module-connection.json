@@ -1,0 +1,38 @@
+{
+  "schema": "spin23.parallel-sector-projector-module-connection/1",
+  "date": "2026-10-20",
+  "relationFiber": {
+    "basis": ["dangerous Dirac relation e_D", "desired Majorana relation e_M"],
+    "charges": [3, 3],
+    "gaugeGenerator": "3 I_2",
+    "majoranaSectorProjector": "Z_M=diag(0,1)"
+  },
+  "theorem": {
+    "gaugeChargeAloneSuffices": false,
+    "reason": "the charge generator is scalar, so its commutant is the full End(C^2) and gauge covariance permits Dirac-Majorana mixing",
+    "oneSidedInvarianceCondition": "(I-Z_M) A Z_M=0",
+    "realityUnitaryUpgrade": "for an anti-Hermitian connection, one-sided invariance implies the adjoint condition and hence [A,Z_M]=0",
+    "parallelSectorProjectorSuffices": true,
+    "conclusion": "the Majorana-only subbundle is preserved exactly when the constant sector projector is parallel"
+  },
+  "enumeration": {
+    "coefficientSet": [-1, 0, 1],
+    "generatorForm": "K=[[a,b],[b,c]], with unitary connection A=iK",
+    "totalHermitianGenerators": 27,
+    "gaugeCompatible": 27,
+    "parallelAndMaskPreserving": 9,
+    "leaking": 18,
+    "leakageCoefficient": "b",
+    "covariantProjectorDefect": "[K,Z_M]=[[0,b],[-b,0]]"
+  },
+  "curvatureInterpretation": {
+    "parallelCase": "connection and curvature split into independent Dirac and Majorana blocks",
+    "nonparallelCase": "the off-diagonal second fundamental form is the exact spurion that transports an allowed Majorana section into the forbidden Dirac channel"
+  },
+  "reality": {
+    "chargeMinusThreeFiber": "use the conjugate connection on the J-paired relation fiber",
+    "effect": "the projector criterion is preserved by the real pairing"
+  },
+  "boundary": "this constructs the minimal connection kinematics and identifies the necessary extra datum; it does not derive the sector projector, its dynamics, or a full Pati-Salam spectral action",
+  "verdict": "the smallest viable middle is an equal-charge relation bundle equipped with a parallel Dirac/Majorana sector projector; charge covariance alone is provably insufficient"
+}

@@ -279,8 +279,10 @@ is still additional structure}.}
 \]
 
 The next construction should therefore not search for another ordinary
-associative finite algebra. It should specify and test the generalized
-connection on the already identified multiplicity/Jordan carrier.
+associative finite algebra. Claim 1501 specifies and tests the smallest such
+generalized connection: because the desired Majorana and forbidden Dirac
+relations have equal charge, their common gauge character cannot distinguish
+them, and a parallel sector projector is the necessary additional datum.
 
 ## Reproduction
 
