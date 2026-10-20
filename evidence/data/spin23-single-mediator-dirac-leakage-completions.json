@@ -1,0 +1,15 @@
+{
+  "schema": "spin23.single-mediator-dirac-leakage-completions/1",
+  "date": "2026-10-20",
+  "targetOperator": "S L_P H N_N / Lambda",
+  "exhaustiveSingleMediatorCount": 3,
+  "completions": [
+    {"externalPairing": ["L_P H", "N_N S"], "mediatorSpin": "fermion", "gaugeType": "singlet-like fermion", "matching": "c_D/Lambda = y_LH y_NS/M_F"},
+    {"externalPairing": ["L_P S", "N_N H"], "mediatorSpin": "fermion", "gaugeType": "doublet-like fermion", "matching": "c_D/Lambda = y_LS y_HN/M_F"},
+    {"externalPairing": ["L_P N_N", "H S"], "mediatorSpin": "scalar", "gaugeType": "Higgs-doublet-like scalar", "matching": "c_D/Lambda = y_LN mu_HS/M_Phi^2"}
+  ],
+  "exhaustivenessReason": "the three unordered pairings of two external fermions and two external scalars give two Yukawa-Yukawa fermion exchanges and one Yukawa-cubic scalar exchange",
+  "protectionCriterion": {"everyCompletionMustLoseAPortal": true, "meaning": "the central incidence mask must forbid at least one renormalizable vertex in each of the three mediator topologies"},
+  "junkBoundary": "integrating out a propagating mediator produces a Schur-complement Wilson coefficient; this is not a represented degree-two differential form and is not removed by the ordinary junk quotient",
+  "verdict": "UV exactness is equivalent, at one-mediator tree level, to a three-topology portal veto rather than to charge conservation alone"
+}

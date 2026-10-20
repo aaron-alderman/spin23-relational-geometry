@@ -252,6 +252,8 @@ But the leading low-energy lift is
 The plausible middle has acquired an EFT suppression scale. Exact protection
 still belongs to the incidence/UV completion problem.
 
+[Claim 1496](1496_exactly_three_single_mediator_tree_bridges_generate_the_dimension_five_Dirac_leakage_and_each_requires_two_incidence_portals.md) resolves the leading weakly coupled UV topology: exactly three one-mediator tree bridges generate the dimension-five leakage, and exact incidence protection must remove at least one portal from each.
+
 ## Reproduction
 
 ~~~powershell
