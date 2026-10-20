@@ -1,0 +1,47 @@
+{
+  "schema": "spin23.e6-two-family-tight-frame-chiral-threshold/1",
+  "date": "2026-10-20",
+  "highEnergyWitness": {
+    "matter27Copies": 2,
+    "symmetricHiggsCopies": 2,
+    "familyChannelMatrices": {
+      "M1": [[1, 0], [0, 0]],
+      "M2": [[0, 0], [0, 1]]
+    },
+    "scalarCopyYukawaMatrices": {
+      "Y1": "(M1+M2)/sqrt(2)",
+      "Y2": "(M1-M2)/sqrt(2)"
+    },
+    "hilbertSchmidtGram": [[1, 0], [0, 1]],
+    "frameClosed": true
+  },
+  "e6BreakingRank": {
+    "rankPerMatter27": 11,
+    "kernelPerMatter27": 16,
+    "twoCopyRank": 22,
+    "twoCopyKernel": 32,
+    "survivingChiral16s": 2
+  },
+  "oneFamilyProjection": {
+    "projector": [[1, 0], [0, 0]],
+    "effectiveYukawaVector": ["1/sqrt(2)", "1/sqrt(2)"],
+    "copyGram": [["1/2", "1/2"], ["1/2", "1/2"]],
+    "rank": 1,
+    "eigenvalues": [1, 0],
+    "offDiagonal": "1/2",
+    "frameClosed": false
+  },
+  "generalRankBound": {
+    "activeMatterBilinearDimensionBelowThreshold": 1,
+    "copyGramRankUpperBound": 1,
+    "rankRequiredForNonzeroIsotropicTwoFrame": 2,
+    "nonzeroIdentityFramePossible": false
+  },
+  "decision": {
+    "twoActiveMatterChannelsCanCloseYukawaFrame": true,
+    "twoActiveMatterChannelsLeaveExactlyOneChiral16": false,
+    "projectingToOneChiral16PreservesFrame": false,
+    "minimalMatterMultiplicityEscapeClosesAcrossThreshold": false,
+    "nextEscape": "retain at least two active relation channels without a second chiral family, or supply an exact threshold counterframe"
+  }
+}
