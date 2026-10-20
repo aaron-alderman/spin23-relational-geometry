@@ -26603,6 +26603,10 @@ The adversarial audit found and corrected the antiunitary parity error, finite-s
 
 The two-branch octonionic preprint was repaired from \(A\bar B\)/common-phase language to the \(AB\)/opposite-phase symmetry actually used by its equations. The repaired flow has an exact CP-Lindblad two-mode completion and an \(SO(2,1)\) response cone, but no full \(Sp(4,\mathbb R)\) closure or derived octonionic operator map. The dissipative QWZ preprint's quadrature reproduces, while an exact Liouvillian calculation kills its identification with the stationary response of the written \(L=\sigma_z\) bath. The terminal gate partition is unchanged. Artifacts: [1454](../1400-1499/1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md), [1455](../1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md), and [1456](../1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md).
 
+## Cycle 1122 — flux-split spectators close the A6 anomaly/mirror subproblem
+
+The smallest explicit extension of the anomalous \(\mathcal O(3)\) parent uses opposite-six-dimensional-chirality spectators in the same Standard Model representations but the trivial \(\mathcal O(0)\) bundle. Their pure six-dimensional anomalies cancel specieswise; the residual flux-dependent polynomial is the anomaly-free four-dimensional one-generation polynomial. Because the untwisted round-sphere Dirac operator has no kernel, no massless mirror family returns. The result is restricted to a fixed internal flux and leaves the asymmetric bundle assignment, dynamical origin and sterile pairing open. Artifact: [1457](../1400-1499/1457_opposite_chirality_o0_spectators_cancel_the_o3_parent_anomalies_without_restoring_massless_mirrors.md).
+
 
 
 

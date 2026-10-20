@@ -13039,6 +13039,14 @@ Each cycle ends by updating this registry, including branches that failed or bec
 - **Gate result:** no 1453 reopen condition is met and the terminal partition is unchanged.
 - **Artifacts:** [1454](../1400-1499/1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md), [1455](../1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md), and [1456](../1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md).
 
+### B-A6-FLUX-SPLIT-SPECTATORS — anomaly cancellation without a massless mirror kernel
+
+- **Construction:** pair every positive-chirality \(SM15+N\) parent in \(\mathcal O(3)\) with an opposite-six-dimensional-chirality spectator in the same Standard Model representation and \(\mathcal O(0)\).
+- **Exact result:** on \(M_4\times\mathbb{CP}^1\) with fixed purely internal flux, the residual eight-form is the flux wedged with the anomaly-free one-generation four-dimensional polynomial, so it vanishes.
+- **Spectrum:** the untwisted round-sphere Dirac operator has no zero modes; the spectators start at mass \(1/R\) and restore no massless mirror family.
+- **Boundary:** the flux split, a dynamical family-connection completion and the sterile Majorana pairing remain underived; A6 does not pass.
+- **Artifact:** [1457](../1400-1499/1457_opposite_chirality_o0_spectators_cancel_the_o3_parent_anomalies_without_restoring_massless_mirrors.md).
+
 
 
 

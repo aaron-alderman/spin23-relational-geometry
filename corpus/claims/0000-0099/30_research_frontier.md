@@ -2560,4 +2560,8 @@ The dissipative QWZ preprint's scalar-self-energy quadrature and doubled cusp re
 
 The combined audit finds no 1453 reopen condition satisfied. A5/A7 remain internally exhausted, A2/A9 conditionally constructed, A4/A6/A11 externally open, and physical admission false. Both sources are useful response/control continuations; neither is fundamental \(Spin(2,3)\) evidence. See [1456](../1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md).
 
+## 20 October 2026 — flux-split spectators repair the A6 anomaly without massless mirrors
+
+The six-dimensional anomaly-versus-mirror dilemma has a minimal conditional escape. Pair each positive-chirality \(SM15+N\) parent twisted by \(\mathcal O(3)\) with an opposite-six-dimensional-chirality spectator in the same Standard Model representation but the trivial \(\mathcal O(0)\) bundle. Pure gravitational and Standard Model anomalies cancel specieswise. On \(M_4\times\mathbb{CP}^1\), the residual polynomial is \(f\wedge[\widehat A(TM_4)\operatorname{ch}(E_{SM})]_6\), which vanishes because one four-dimensional \(SM15+N\) generation is anomaly-free. The untwisted round-sphere Dirac operator has no zero modes, so no massless mirror family returns. The construction is exact only for a fixed purely internal family flux; it does not derive the \(\mathcal O(3)_+\oplus\mathcal O(0)_-\) split, a dynamical family \(U(1)\), or the sterile Majorana pairing. See [document 1457](../1400-1499/1457_opposite_chirality_o0_spectators_cancel_the_o3_parent_anomalies_without_restoring_massless_mirrors.md).
+
 

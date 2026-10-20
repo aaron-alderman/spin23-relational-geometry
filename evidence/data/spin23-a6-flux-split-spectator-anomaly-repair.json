@@ -1,0 +1,78 @@
+{
+  "schema": "spin23.a6-flux-split-spectator-anomaly-repair/1",
+  "documentId": 1457,
+  "date": "2026-10-20",
+  "status": "exact-restricted-background-anomaly-repair-without-massless-mirrors",
+  "geometry": {
+    "space": "M4 x CP1",
+    "selectedLine": "O(3)",
+    "spectatorLine": "O(0)",
+    "selectedIndex": 3,
+    "spectatorIndex": 0,
+    "familyCurvaturePurelyInternal": true,
+    "familyConnectionDynamicalInSixDimensions": false
+  },
+  "fieldContent": {
+    "selectedParents": "one positive-six-dimensional-chirality Weyl field in each SM15+N representation, twisted by O(3)",
+    "spectators": "one negative-six-dimensional-chirality Weyl field in each identical SM15+N representation, twisted by O(0)",
+    "selectedComponentDimension": 16,
+    "spectatorComponentDimension": 16,
+    "sixDimensionalChiralityDifference": 0,
+    "weakDoubletDifference": 0
+  },
+  "anomalyFactorization": {
+    "formalIdentity": "I8_total=[Ahat(T(M4xCP1)) ch(E_SM) (exp(f)-1)]_8",
+    "internalFluxSquare": 0,
+    "reducedIdentity": "I8_total=f wedge [Ahat(TM4) ch(E_SM)]_6",
+    "fourDimensionalPolynomial": "one-generation SM15+N anomaly polynomial",
+    "su3Cubed": 0,
+    "su3SquaredY6": 0,
+    "su2SquaredY6": 0,
+    "gravitationalSquaredY6": 0,
+    "Y6Cubed": 0,
+    "fourDimensionalWeakDoublets": 4,
+    "localAnomalyOnRestrictedBackground": 0,
+    "sixDimensionalGlobalSu2DifferenceMod6": 0,
+    "pureSixDimensionalDynamicalAnomaliesCancelSpecieswise": true
+  },
+  "spectrum": {
+    "selectedPositiveZeroModes": 3,
+    "selectedNegativeZeroModes": 0,
+    "spectatorZeroModes": 0,
+    "masslessMirrorModes": 0,
+    "selectedFirstMassInInverseRadiusUnits": 2,
+    "spectatorFirstMassInInverseRadiusUnits": 1,
+    "untwistedNoZeroModeReason": "Lichnerowicz theorem on the positive-curvature round two-sphere",
+    "untwistedEigenvalues": "plus-or-minus (ell+1)/R with degeneracy 2(ell+1), ell>=0"
+  },
+  "scope": {
+    "exact": [
+      "the pulled-back local anomaly polynomial vanishes on M4 x CP1 for purely internal degree-three family curvature",
+      "irreducible gravitational and pure Standard Model six-dimensional anomalies cancel species by species",
+      "the global SU(2) chirality excess cancels",
+      "the untwisted opposite-chirality spectators have no massless four-dimensional zero modes"
+    ],
+    "notDerived": [
+      "why the selected fields couple to O(3) while the spectators couple to O(0)",
+      "a dynamical anomaly-free six-dimensional family U(1)",
+      "the radius and flux-supporting dynamics",
+      "Yukawa textures or a bundle-invariant sterile Majorana mass",
+      "a physical derivation of CP1 as a propagation space"
+    ],
+    "failureOutsideScope": "If the family connection is promoted to a general six-dimensional gauge field, powers of its curvature no longer vanish and the spectator-neutral completion is not anomaly-free."
+  },
+  "spin23Path": {
+    "projectorOrbitCompletion": "selected rank-one orbit CP1",
+    "canonicalLine": "j_P^* K_CP2^-1 = O(3)",
+    "indexStep": "O(3) twisted CP1 Dirac operator gives three selected chiral modes",
+    "repairStep": "opposite-chirality O(0) spectators cancel the parent anomaly without a zero-mode mirror kernel",
+    "remainingBridge": "derive the flux split and vertical Dirac coupling from the Spin(2,3) action or boundary data"
+  },
+  "verdict": {
+    "minimalParentNoGoRemainsValid": true,
+    "explicitZeroNetIndexSpectatorRepairExists": true,
+    "masslessMirrorsReturn": false,
+    "a6Passed": false,
+    "physicalAdmission": false
+  }
+}
