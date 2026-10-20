@@ -1,0 +1,47 @@
+{
+  "schema": "spin23.e6-two-copy-selector-yukawa-trilemma/1",
+  "date": "2026-10-20",
+  "assumptions": {
+    "matter27Copies": 1,
+    "fundamentalHiggs27Copies": 1,
+    "symmetricHiggs351PrimeCopies": 2,
+    "selector": "exact unitary internal symmetry commuting with E6",
+    "yukawaCoefficients": "invariant numerical couplings, not transforming spurions"
+  },
+  "characters": {
+    "matter": "f",
+    "matterBilinear": "2f",
+    "vevAxis": "s_w",
+    "lightAxis": "s_d",
+    "yukawaConditionForVevAxis": "2f+s_w=0",
+    "yukawaConditionForLightAxis": "2f+s_d=0",
+    "bothYukawasImply": "s_w=s_d=-2f",
+    "crossCopyBilinearCharacter": "-s_w+s_d"
+  },
+  "cases": [
+    {
+      "name": "distinct selector characters",
+      "condition": "s_w != s_d",
+      "crossCopyMixingForbidden": true,
+      "singleMatterBilinearCouplesToBothAxes": false
+    },
+    {
+      "name": "common selector character",
+      "condition": "s_w=s_d=-2f",
+      "crossCopyMixingForbidden": false,
+      "singleMatterBilinearCouplesToBothAxes": true
+    }
+  ],
+  "representationForm": {
+    "copyModule": "W",
+    "matterBilinearCharacter": "chi_f^2",
+    "invariantYukawaSpace": "Hom_G(W,chi_f^-2)",
+    "distinctIsotypicAxesBothInYukawaSupport": false,
+    "sameIsotypicAxesProtectedFromMixing": false
+  },
+  "decision": {
+    "twoScalarCopiesPlusOneMatterCopyGiveProtectedNonzeroMassAndPortal": false,
+    "kinematicGaugeOrthogonalDirectionStillExists": true,
+    "minimumFurtherEscape": "matter multiplicity, a transforming relation spurion, or a noncommuting enlarged algebra"
+  }
+}
