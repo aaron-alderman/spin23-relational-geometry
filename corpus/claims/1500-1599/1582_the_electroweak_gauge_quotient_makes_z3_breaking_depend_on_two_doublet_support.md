@@ -10,6 +10,8 @@
 
 **Evidence:** [electroweak gauge-quotient ledger](../../../evidence/data/spin23-z3-electroweak-gauge-quotient.json) and [deterministic verifier](../../../verification/verify/verify_spin23_z3_electroweak_gauge_quotient.mjs)
 
+**Subsequent refinement:** [claim 1586](1586_elitzur_and_goldstone_force_gauge_invariant_selector_data_and_a_portal_phase_fork.md) applies Elitzur's theorem to the order parameter and separates an accidental-U(1) Goldstone branch from Z3 phase locking and its candidate wall vacua.
+
 ## Result
 
 The three-point field orbit of claim 1577 is not automatically a

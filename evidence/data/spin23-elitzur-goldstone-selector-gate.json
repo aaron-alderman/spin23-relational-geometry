@@ -1,0 +1,43 @@
+{
+  "schema": "spin23.elitzur-goldstone-selector-gate/1",
+  "date": "2026-10-20",
+  "groupCounts": {
+    "spin23Dimension": 10,
+    "spin13Dimension": 6,
+    "spin23CosetDimension": 4,
+    "e6Dimension": 78,
+    "spin10PlusU1Dimension": 46,
+    "e6CosetDimension": 32
+  },
+  "elitzur": {
+    "statement": "an unfixed local gauge measure gives zero expectation to a gauge-noninvariant local order parameter",
+    "forbiddenCertificate": "a bare gauge-variant VEV as proof that a local gauge redundancy physically broke",
+    "admissibleData": [
+      "gauge-invariant composite or potential minimum modulo gauge",
+      "mass and pole spectrum",
+      "Wilson or disorder observables where appropriate",
+      "bundle reduction or covariant projector with gauge-invariant traces",
+      "BRST cohomology"
+    ]
+  },
+  "goldstone": {
+    "globalContinuousBreaking": "massless modes occur under the relativistic internal-symmetry hypotheses",
+    "gaugeBreaking": "gauge-fixed Goldstone coordinates are absorbed into massive vector polarizations rather than appearing as physical massless particles",
+    "spacetimeSymmetryCaveat": "broken spacetime generators require a dedicated constraint/inverse-Higgs count"
+  },
+  "portalPhaseWitness": {
+    "gaugeInvariantOrderParameter": "O=Hu epsilon Hd",
+    "z3ChargeModuloThree": 1,
+    "unlockedPotential": "independent of theta=arg O, giving an accidental global U1 phase mode",
+    "lockingPotential": "V(theta)=Lambda^4[1-cos(3 theta)]",
+    "minima": ["0", "2*pi/3", "4*pi/3"],
+    "pseudoGoldstoneMassSquared": "9 Lambda^4/f^2",
+    "consequence": "phase locking removes the massless mode but creates three isolated Z3 minima if no gauge identification connects them"
+  },
+  "quantumHallBoundary": {
+    "chernPhaseRequiresLocalOrderParameter": false,
+    "edgeModesAreGoldstones": false,
+    "protection": "bulk topology and anomaly/spectral flow rather than spontaneous breaking of a local order parameter"
+  },
+  "decision": "every selector phase must be classified as gauge, global, discrete, accidental, or topological before Goldstone and defect counting"
+}

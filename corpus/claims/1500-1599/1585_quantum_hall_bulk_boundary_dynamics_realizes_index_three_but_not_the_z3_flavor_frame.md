@@ -10,6 +10,8 @@
 
 **Evidence:** [quantum-Hall index ledger](../../../evidence/data/spin23-quantum-hall-index-three-bridge.json) and [deterministic verifier](../../../verification/verify/verify_spin23_quantum_hall_index_three_bridge.mjs)
 
+**Subsequent distinction:** [claim 1586](1586_elitzur_and_goldstone_force_gauge_invariant_selector_data_and_a_portal_phase_fork.md) records that these topological edge modes are not Nambu--Goldstone bosons and require no gauge-variant local order parameter.
+
 ## Result
 
 Quantum Hall dynamics supplies a physical prototype for the abstract chain
