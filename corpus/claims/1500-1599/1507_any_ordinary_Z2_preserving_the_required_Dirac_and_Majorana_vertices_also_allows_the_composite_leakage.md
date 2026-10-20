@@ -163,9 +163,10 @@ The ordinary-field-symmetry route is closed:
 \Longrightarrow\mathcal O_5\text{ even for every field }\mathbb Z_2.}
 \]
 
-The next viable construction is categorical: represent the two required
-vertices as typed arrows, retain their correlated Schur composite, and prove
-that no independent leakage arrow belongs to the generated relation calculus.
+Claim 1508 constructs the first such calculus: the two vertices are primitive
+typed arrows, their factored path matches to a complete rank-one Schur packet,
+and an independent leakage arrow is a transverse deformation of its
+determinantal cone. Loop and multi-mediator closure remain open.
 
 ## Reproduction
 

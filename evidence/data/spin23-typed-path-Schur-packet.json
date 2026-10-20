@@ -1,0 +1,35 @@
+{
+  "schema": "spin23.typed-path-Schur-packet/1",
+  "date": "2026-10-20",
+  "typedCategory": {
+    "objects": ["light selected state L", "selected heavy state P", "null heavy state N"],
+    "primitiveArrows": ["d:L->P", "y:P->N"],
+    "compositePath": "y o d:L->P->N",
+    "independentPrimitiveLtoN": false
+  },
+  "matching": {
+    "eliminatedBlock": "a at P",
+    "SchurPacket": "(c,p,s)=-(d^2,d y,y^2)/a",
+    "rankOneRelation": "c s-p^2=0",
+    "lightMassAfterNElimination": "c-p^2/s=0"
+  },
+  "independentLeakage": {
+    "deformation": "p maps to p+r with c and s fixed",
+    "coneDefect": "c s-(p+r)^2=-2 p r-r^2",
+    "lightMass": "-2 d r/y+a r^2/y^2",
+    "genericLinearSensitivity": "-2 d/y at r=0",
+    "zeroLocus": ["r=0", "r=-2p (finite sign-flip branch)"]
+  },
+  "enumeration": {
+    "coefficientSet": [-3,-2,-1,1,2,3],
+    "nonzeroIntegerPackets": 216,
+    "rankOneFailures": 0
+  },
+  "theorem": {
+    "matchedPacketRankOne": true,
+    "compositePathIsIndependentPrimitive": false,
+    "independentLeakageIsTransverseGenerically": true
+  },
+  "boundary": "the typed path and Schur matching law are an exact minimal calculus, but no spectral/Jordan functor has yet been shown to enforce this primitive-versus-composite distinction for every loop and multi-mediator graph",
+  "verdict": "the smallest viable categorical middle retains path provenance and maps a reducible path to its full rank-one Schur packet rather than to a free leakage coefficient"
+}
