@@ -10,6 +10,8 @@
 
 **Evidence:** [three-radial vacuum ledger](../../../evidence/data/spin23-e6-z3-reduced-three-radial-vacuum.json) and [deterministic verifier](../../../verification/verify/verify_spin23_e6_z3_reduced_three_radial_vacuum.mjs)
 
+**Subsequent vacuum-energy boundary:** [claim 1587](1587_sakharov_t_yang_mills_and_vacuum_energy_form_a_joint_cosmological_qft_closure_gate.md) proves that an additive constant leaves this vacuum and Hessian unchanged while shifting its gravitating energy, so stability does not determine the cosmological constant.
+
 ## Result
 
 The Z3 extension passes its first vacuum test on an open parameter set. Let

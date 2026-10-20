@@ -1,0 +1,79 @@
+{
+  "schema": "spin23.sakharov-t-yang-mills-vacuum-energy-gate/1",
+  "date": "2026-10-20",
+  "status": "exact gate classification with finite witnesses; no baryogenesis or cosmological-constant solution",
+  "sakharov": {
+    "scope": "conventional local Lorentz-invariant CPT-preserving QFT beginning from zero baryon asymmetry",
+    "necessaryConditions": [
+      "baryon-number violation, directly or through lepton-number violation followed by electroweak sphaleron conversion",
+      "C and CP violation",
+      "departure from thermal equilibrium"
+    ],
+    "programmeIngredients": {
+      "baryonOrLeptonViolation": "the E6/Spin(10) branch contains right-handed-neutrino and Majorana channels, while electroweak sphalerons violate B+L and conserve B-L",
+      "cpViolation": "the corpus contains nonzero flavor-CP capacity, but a low-energy CKM or PMNS invariant does not by itself fix the heavy-decay invariant",
+      "nonequilibrium": "no finite-temperature transition, decay-rate-versus-Hubble, or kinetic transport solution has yet been derived"
+    },
+    "fieldContentDependentSphaleronConversion": {
+      "formula": "B/(B-L)=(8 Nf+4 NH)/(22 Nf+13 NH)",
+      "threeFamiliesOneHiggs": "28/79",
+      "threeFamiliesTwoHiggs": "8/23"
+    }
+  },
+  "toyLeptogenesisInvariant": {
+    "yukawaColumns": {
+      "y1": [[1, 0], [1, 0]],
+      "y2": [[1, 0], [0, 1]]
+    },
+    "innerProduct": "(Ydagger Y)12=1+i",
+    "imaginarySquare": 2,
+    "meaning": "a nonzero heavy-sector CP-odd invariant is possible; its magnitude, washout, spectrum and sign are not derived"
+  },
+  "timeReversal": {
+    "microscopicT": "an antiunitary transformation comparing transition amplitudes with initial and final states exchanged and momenta/spins reversed",
+    "cptConditionalRelation": "if the completed theory satisfies the hypotheses of CPT, CP violation requires compensating T violation",
+    "notEquivalentTo": [
+      "cosmological expansion",
+      "thermodynamic entropy increase",
+      "out-of-equilibrium initial or boundary conditions",
+      "an oriented selector label without an operator intertwiner"
+    ]
+  },
+  "yangMillsQft": {
+    "standardModelGaugeAlgebraDimension": 12,
+    "compactInternalRole": "SU(3)xSU(2)xU(1) Yang-Mills fields and chiral matter arise only after a declared E6/Spin(10) breaking and threshold map",
+    "spin23Role": "Spin(2,3) is most naturally a spacetime Cartan/MacDowell-Mansouri parent, not another compact internal Yang-Mills factor",
+    "cartanDecomposition": "A=(1/2) omega^{ab} J_ab + ell^{-1} e^a J_a4",
+    "adsGeometricCosmologicalConstant": "Lambda_geom=-3/ell^2",
+    "quantumAdmission": [
+      "local action and complete field representations",
+      "gauge fixing and nilpotent BRST or equivalent constraint cohomology",
+      "gauge and gravitational anomaly cancellation",
+      "renormalized operator and counterterm basis",
+      "unitary physical poles and positive residues",
+      "finite-temperature and curved-background definition where cosmology is claimed"
+    ]
+  },
+  "vacuumEnergy": {
+    "effectiveRelation": "Lambda_eff=Lambda_bare+8 pi G rho_vac",
+    "stressTensor": "T_vac_munu=-rho_vac g_munu",
+    "reducedPotentialWitness": {
+      "stationaryPoint": [1, 1, 0],
+      "valueBeforeConstant": -6,
+      "boundaryDerivativeZ": 2.25,
+      "additiveConstants": [-10, 0, 10],
+      "shiftedVacuumValues": [-16, -6, 4],
+      "unchangedData": "stationary point, Hessian, particle masses and nongravitational transition amplitudes"
+    },
+    "consequence": "the existing stable-vacuum theorem does not predict the gravitating zero of energy; the Cartan radius and matter vacuum contributions require a radiatively stable matching law"
+  },
+  "sources": [
+    "https://doi.org/10.1070/PU1991v034n05ABEH002497",
+    "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-bbang-cosmology.pdf",
+    "https://arxiv.org/abs/1207.5832",
+    "https://arxiv.org/abs/gr-qc/0611154",
+    "https://doi.org/10.1103/RevModPhys.61.1",
+    "https://doi.org/10.1103/PhysRevD.106.114507"
+  ],
+  "decision": "the programme has plausible ingredients for leptogenesis and gauge gravity, but physical closure requires a BRST-complete QFT, a heavy-sector CP/T invariant, a nonequilibrium transport solution and a radiatively stable vacuum-energy matching condition"
+}

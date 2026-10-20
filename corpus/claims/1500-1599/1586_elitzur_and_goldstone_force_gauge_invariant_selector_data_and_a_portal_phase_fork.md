@@ -10,6 +10,8 @@
 
 **Evidence:** [Elitzur/Goldstone ledger](../../../evidence/data/spin23-elitzur-goldstone-selector-gate.json) and [deterministic verifier](../../../verification/verify/verify_spin23_elitzur_goldstone_selector_gate.mjs)
 
+**Subsequent cosmological/QFT gate:** [claim 1587](1587_sakharov_t_yang_mills_and_vacuum_energy_form_a_joint_cosmological_qft_closure_gate.md) joins the symmetry-type audit to Sakharov conditions, microscopic T, BRST-complete gauge QFT and renormalized vacuum energy.
+
 ## Result
 
 The programme must classify every proposed breaking symmetry before it
