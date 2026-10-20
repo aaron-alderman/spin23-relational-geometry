@@ -177,6 +177,8 @@ The electron branch is therefore the highest-value next target. It is both restr
 
 **Version boundary:** NuFIT 6.1 is current; this certificate uses explicitly recorded 6.0 ranges so its numerical contract is auditable.
 
+**Update:** [Claim 1490](../1400-1499/1490_nufit_61_preserves_the_electron_normal_texture_window_and_tightens_its_sampled_envelope.md) executes the bounded NuFIT 6.1 IC24+SK update. The electron-normal branch and analytic electron-inverted exclusion survive; the newer sampled marginal-range envelope is recorded separately so this 6.0 certificate remains reproducible.
+
 **Absolute-mass boundary:** the scan intentionally runs to (1) eV to classify the algebraic triangle. It does not declare the high-mass portion physically viable.
 
 **Mechanism boundary:** ((m_\nu)_{ee}=0) removes the standard light-neutrino exchange contribution to (0\nu\beta\beta), not every possible short-distance contribution.

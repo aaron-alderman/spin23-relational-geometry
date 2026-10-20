@@ -221,6 +221,8 @@ This distinction prevents a seductive but invalid identification of the Majorana
 
 **Statistics boundary:** a correlated NuFIT 6.1 likelihood scan must replace the listed-best-fit curve before any confidence statement is made.
 
+**NuFIT 6.1 update:** [Claim 1490](../1400-1499/1490_nufit_61_preserves_the_electron_normal_texture_window_and_tightens_its_sampled_envelope.md) moves the listed-best-fit mass interval to (2.34901)--(6.53630) meV and the endpoint mass-sum range to (61.5077)--(67.9377) meV. The two-sheeted phase geometry is unchanged; a correlated likelihood treatment remains open.
+
 ## 8. Verdict
 
 The electron/normal branch has become a one-parameter curve with a two-sheeted phase lift:

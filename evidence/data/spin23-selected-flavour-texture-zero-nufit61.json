@@ -1,0 +1,45 @@
+{
+  "schema": "spin23.selected-flavour-texture-zero-nufit61/1",
+  "date": "2026-10-20",
+  "input": {
+    "release": "NuFIT 6.1",
+    "dataset": "IC24 with SK atmospheric data",
+    "parameterTable": "https://www.nu-fit.org/sites/default/files/v61.tbl-parameters.pdf",
+    "sampling": "6000 deterministic uniform samples per flavor and ordering over listed one-dimensional 3-sigma ranges"
+  },
+  "criterion": "2 max_i(m_i |U_alpha_i|^2) <= sum_i(m_i |U_alpha_i|^2)",
+  "listedBestFitIntervalsEV": {
+    "normal": {
+      "electron": [0.0023490077827129, 0.0065362968153721435],
+      "muon": [0.07948571149886813, 1.0],
+      "tau": null
+    },
+    "inverted": {
+      "electron": null,
+      "muon": [0.015514240780644823, 0.08365402581451553],
+      "tau": [0.02844668361131294, 1.0]
+    }
+  },
+  "sampledMarginalRangeResults": {
+    "normal": {
+      "electron": {"accepted": 6000, "total": 6000, "envelopeEV": [0.0018056804116627298, 0.007586284930906905]},
+      "muon": {"accepted": 2978, "total": 6000, "envelopeEV": [0.053313194571241854, 1.0]},
+      "tau": {"accepted": 3841, "total": 6000, "envelopeEV": [0.04568195004177278, 1.0]}
+    },
+    "inverted": {
+      "electron": {"accepted": 0, "total": 6000, "envelopeEV": null},
+      "muon": {"accepted": 6000, "total": 6000, "envelopeEV": [0.0015252715732201486, 1.0]},
+      "tau": {"accepted": 6000, "total": 6000, "envelopeEV": [0.0018589976037810543, 1.0]}
+    }
+  },
+  "electronNormalEndpointObservables": {
+    "sumMassesEV": [0.06150768081190828, 0.06793774141755403],
+    "betaDecayMassEV": [0.009204138649996847, 0.011041807224533674]
+  },
+  "electronInvertedAnalyticExclusion": {
+    "overListedMarginalBox": true,
+    "conservativeMargin": 0.3017782541037037
+  },
+  "caveat": "sampled marginal-range envelopes are existence diagnostics, not confidence intervals or a correlated likelihood analysis",
+  "verdict": "NuFIT 6.1 preserves the electron-normal branch and electron-inverted exclusion while narrowing the deterministic marginal-range existence envelope"
+}
