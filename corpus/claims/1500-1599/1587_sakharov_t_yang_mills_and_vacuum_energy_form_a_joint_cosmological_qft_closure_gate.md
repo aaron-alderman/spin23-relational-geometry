@@ -10,6 +10,8 @@
 
 **Evidence:** [joint closure ledger](../../../evidence/data/spin23-sakharov-t-yang-mills-vacuum-energy-gate.json) and [deterministic verifier](../../../verification/verify/verify_spin23_sakharov_t_yang_mills_vacuum_energy_gate.mjs)
 
+**External-validation expansion:** [claim 1588](1588_eight_external_phenomena_define_typed_validation_lanes_not_one_spin23_explanation.md) separates Hubble, dark matter, SUSY, QCD, gallium, DIB and geopotential observables into native forward-model tests rather than one shared-cause assertion.
+
 ## Result
 
 These four topics do not supply four decorative analogies. Together they

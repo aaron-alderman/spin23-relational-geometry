@@ -10,6 +10,8 @@
 
 **Primary source:** [the complete renormalizable supersymmetric E6 Higgs superpotential](https://arxiv.org/abs/1311.0775)
 
+**Later external-phenomena placement:** [claim 1588](1588_eight_external_phenomena_define_typed_validation_lanes_not_one_spin23_explanation.md) places this no-go inside the wider supersymmetry lane and records that neither E6 nor Spin(2,3) by itself supplies a physical superalgebra or SUSY-breaking spectrum.
+
 **Evidence:** [abelian-protection no-go ledger](../../../evidence/data/spin23-e6-inert-abelian-susy-vacuum-no-go.json) and [deterministic verifier](../../../verification/verify/verify_spin23_e6_inert_abelian_susy_vacuum_no_go.mjs)
 
 ## Result
