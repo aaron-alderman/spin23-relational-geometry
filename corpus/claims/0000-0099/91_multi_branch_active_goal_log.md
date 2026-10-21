@@ -27034,3 +27034,7 @@ A published critical parity-even PGT class has the massless graviton plus one he
 ## Cycle 1228 — bounded exhaustion reaches five irreducible new-input gates
 
 Twenty route families and 28 new claims now terminate in positive constructions, exact no-gos/counterexamples or five irreducible gates: constructive four-dimensional Yang--Mills, a radiatively closed Spin(2,3) quantum action, a predictive color fixed point, radiatively stable positive vacuum energy and complete matter descent. No remaining finite rescan of the declared structures changes those logical types. Artifact: [1624](../1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md).
+
+## Cycle 1229 — eight open-letter answers become four executable packets
+
+The eight supplied standalone ChatGPT answers are preserved as source evidence and explicitly not attributed to the named addressees. Their established mathematics is admitted, their conditional steps are isolated, and their open physical lifts are retained. The revised programme now consists of a carrier certificate, an explicit joint-module/action packet, an operational rebit/metaplectic laboratory and a twistor scalar reconstruction benchmark. Artifacts: [1625--1633](../1600-1699/1633_the_eight_open_letter_answers_reduce_to_four_executable_packets_without_closing_the_physical_lift.md).

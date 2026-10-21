@@ -2756,3 +2756,7 @@ The frontier is therefore five named gates, in priority order:
 5. complete anomaly-free matter descent fixing torsion/flavor/threshold coefficients.
 
 Routine finite rescans are now deprioritized. Progress requires a new infinite-dimensional estimate, UV parent/symmetry, nonperturbative fixed point, vacuum-energy principle or empirical matter input. See [1624](../1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md).
+
+## Open-letter answer frontier
+
+Claims [1625--1633](../1600-1699/1633_the_eight_open_letter_answers_reduce_to_four_executable_packets_without_closing_the_physical_lift.md) adjudicate eight standalone AI answers without treating them as expert replies. Standard rank-two Jordan/TKK, rebit, metaplectic and incidence results are retained at their proper scope. The active frontier is four finite packets: carrier certificate, explicit joint module and action, declared operational composite, and a scalar twistor reconstruction with locality and positivity.

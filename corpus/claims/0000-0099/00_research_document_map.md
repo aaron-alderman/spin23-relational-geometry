@@ -833,3 +833,8 @@ The central distinction throughout is this: **a list of correct particle represe
 - [1611--1616](../1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md) derive the fermion spin portal and one-vev radiative selector portal, then test generalized symmetry, positive moments, the complete axial sector and an interacting gauge--gravity fixed point.
 - [1617--1623](../1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md) execute certified Hamiltonian, entire/bimetric, Wilson-loop bootstrap, vacuum-energy, stochastic-quantization, full critical-PGT and rotating-source/Lense--Thirring calculations.
 - [1624](../1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md) is the terminal bounded-exhaustion synthesis: 28 new claims and 20 route families converge on five gates requiring genuinely new input.
+
+## Open-letter answer adjudication tranche
+
+- [1625--1632](../1600-1699/1625_the_rank_two_peirce_criterion_selects_h2r_but_not_its_physical_carrier_role.md) adjudicate the eight supplied standalone answers: the rank-two EJA/TKK, rebit, metaplectic and incidence mathematics are retained with sharper scopes, while carrier selection, module compatibility, locality, chirality, action, vacuum and spectrum remain open.
+- [1633](../1600-1699/1633_the_eight_open_letter_answers_reduce_to_four_executable_packets_without_closing_the_physical_lift.md) integrates them into four executable packets—carrier certificate, joint module/action, operational laboratory and twistor scalar benchmark—without treating the AI sources as expert replies or physical closure.
