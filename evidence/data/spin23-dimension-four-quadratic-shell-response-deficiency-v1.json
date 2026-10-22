@@ -1,0 +1,42 @@
+{
+  "schema": "spin23.dimension-four-quadratic-shell-response-deficiency/1",
+  "date": "2026-10-22",
+  "status": "exact quadratic operator count and minimum missing-response bound",
+  "einsteinForm": {
+    "RR": 3,
+    "nablaT_nablaT": 9,
+    "R_nablaT": 2,
+    "total": 14,
+    "R_nablaTReduction": "five candidates minus three Bianchi relations"
+  },
+  "cartanForm": {
+    "FF": 6,
+    "DTDT": 4,
+    "FDT": 4,
+    "total": 14,
+    "outsideOrdinaryPgtCurvatureSquares": 8
+  },
+  "topologicalQuotient": {
+    "eulerDirections": 1,
+    "dimension": 13
+  },
+  "knownQuadraticResponses": ["C2", "R2", "axial longitudinal B", "axial transverse Z"],
+  "knownResponseRank": 4,
+  "unresolvedQuadraticDimension": 9,
+  "minimalNewResponses": {
+    "remainingDerivativeTorsion": 7,
+    "curvatureSingleTorsion": 2,
+    "total": 9
+  },
+  "excludedFromQuadraticRank": {
+    "xiR_xiRic": "RTT and therefore cubic in background fields",
+    "higherShell": ["RTT", "TT nabla T", "T4"]
+  },
+  "requiredBackgrounds": [
+    "flat trace-torsion jets",
+    "flat traceless tensor-torsion jets",
+    "mixed torsion-irrep jets",
+    "curved backgrounds linear in trace or tensor torsion"
+  ],
+  "decision": "At least nine additional independent quadratic responses are required before the dimension-four propagator shell can be reconstructed; higher-field shells remain beyond this lower bound."
+}

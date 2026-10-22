@@ -1,5 +1,11 @@
 # The Curvature-Square Integrability Relation Fails and Proves an Independent RTT Counterterm
 
+> **Execution update (claim 1676):** the complete dimension-four quadratic
+> shell has dimension thirteen modulo Euler.  The torsionless and axial-flat
+> packet responses have rank four there, leaving a strict minimum of nine
+> non-axial quadratic responses before the separate cubic and quartic shells
+> are addressed.
+
 **Date:** 22 October 2026
 
 **Gates:** A1, A2, A4, A6, A7, A8 and A11
