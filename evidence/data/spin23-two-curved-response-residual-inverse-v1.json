@@ -1,0 +1,28 @@
+{
+  "schema": "spin23.two-curved-response-residual-inverse/1",
+  "date": "2026-10-22",
+  "knownResponses": ["deltaA", "deltaB", "deltaZ", "deltaXiR_p-loop", "deltaXiRic_p-loop=0"],
+  "unknownResponses": ["u=deltaXiR_h-p", "v=deltaXiRic_h-p"],
+  "generalResidualSystem": [
+    "E=RE*(u+v/4)",
+    "P=RP*u+rP*v"
+  ],
+  "generalInverse": [
+    "qmix=E/RE",
+    "v=(P-RP*qmix)/(rP-RP/4)",
+    "u=qmix-v/4"
+  ],
+  "packetGeometry": {
+    "RE": -12,
+    "RP": -12,
+    "rP": -2,
+    "dP": 1
+  },
+  "packetInverse": [
+    "v=P-E",
+    "u=-E/12-(P-E)/4"
+  ],
+  "directRicciIsolation": "deltaXiRic_h-p=M_product-M_Einstein at equal scalar curvature",
+  "secondEinsteinConsistencyCheck": "E_R=-24=2*E_R=-12",
+  "remaining": "two covariant mixed metric-axial curved response traces"
+}
