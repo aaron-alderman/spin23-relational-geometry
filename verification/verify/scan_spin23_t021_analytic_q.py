@@ -25,9 +25,10 @@ SIGN_REDUCED = os.environ.get("SPIN23_SIGN_REDUCED") == "1"
 DIRECTIONS = tuple((i, j, sign) for i, j in itertools.combinations(range(4), 2)
                    for sign in ((1.0,) if SIGN_REDUCED else (1.0, -1.0)))
 PROFILE = os.environ.get("SPIN23_PROFILE", "t021")
-PROFILE_ENTRIES = {"t021": {"021": 1.0}, "t102": {"102": 1.0}, "t112": {"112": 1.0}}
+PROFILE_ENTRIES = {"t021": {"021": 1.0}, "t102": {"102": 1.0}, "t112": {"112": 1.0},
+                   "t011": {"011": 1.0}}
 RESPONSE_ROWS = {"t021": [2,0,0,1,0,0,0,0,0], "t102": [2,0,0,0,0,2,0,0,0],
-                 "t112": [2,1,1,0,0,0,0,0,0]}
+                 "t112": [2,1,1,0,0,0,0,0,0], "t011": [2,1,1,1,0,0,0,0,1]}
 if PROFILE not in PROFILE_ENTRIES:
     raise ValueError(f"unsupported profile {PROFILE}")
 
