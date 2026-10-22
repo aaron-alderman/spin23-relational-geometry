@@ -1,0 +1,84 @@
+{
+  "schema": "spin23.torsion-empirical-geometry-extraction/1",
+  "date": "2026-10-23",
+  "status": "primary-source geometry partially extracted; earlier all-or-nothing geometry blocker narrowed",
+  "primarySource": {
+    "title": "Constraints on Axion Mediated Dipole-Dipole Interactions",
+    "authors": "Zitong Xu et al.",
+    "journal": "Physical Review Letters 134, 181801 (2025)",
+    "doi": "10.1103/PhysRevLett.134.181801",
+    "url": "https://link.aps.org/pdf/10.1103/PhysRevLett.134.181801",
+    "license": "CC BY 4.0"
+  },
+  "extractedGeometry": {
+    "sensorCell": {
+      "shape": "sphere",
+      "diameterMillimetres": 12,
+      "contents": "3.5 amagat 21Ne, 50 torr N2, K and Rb",
+      "sourceLocation": "article page 2, experimental setup"
+    },
+    "smCo5Core": {
+      "shape": "cylinder",
+      "diameterMillimetres": 2.5,
+      "heightMillimetres": 2.5,
+      "remanenceTeslaApproximate": 1,
+      "sourceLocation": "article page 2, experimental setup"
+    },
+    "shields": {
+      "pureIronThicknessMillimetres": 2,
+      "muMetalThicknessMillimetres": 2,
+      "centralShieldRadiusMillimetres": 40,
+      "sourceLocation": "article page 2, experimental setup"
+    },
+    "sourceSensorCenterDistance": {
+      "millimetres": 50,
+      "sigmaMillimetres": 0.05,
+      "sourceLocation": "article Table I"
+    },
+    "sourceSpinMotion": {
+      "rotationAxis": "z",
+      "spinConstraint": "perpendicular to z during rotation",
+      "modulationFrequencyHertz": 0.3
+    }
+  },
+  "dimensionlessAtSevenMillimetreRange": {
+    "centerDistanceOverRange": 7.142857142857143,
+    "sourceRadiusOverCenterDistance": 0.025,
+    "sourceHeightOverCenterDistance": 0.05,
+    "sensorRadiusOverCenterDistance": 0.12
+  },
+  "modelDisclosure": {
+    "sourceIntegralDeclared": true,
+    "declaredForm": "The equivalent pseudomagnetic field is obtained by integrating V_pp over source volume and multiplying by the 21Ne neutron or proton spin fraction divided by the nuclear magnetic moment.",
+    "neutronSpinFraction": 0.58,
+    "protonSpinFraction": 0.04,
+    "netSourceSpins": 4.63e20,
+    "netSourceSpinsSigma": 5.6e19,
+    "netSpinComposition": "electron spins from both SmCo5 and the soft iron"
+  },
+  "availabilityLedger": {
+    "macroscopicDimensions": "partially available",
+    "centerDistanceAndUncertainty": "available",
+    "sourceVolumeIntegralEquation": "available",
+    "smCo5CoreUniformDensityApproximation": "constructible but not author-certified",
+    "combinedSmCo5AndSoftIronSpinDensityMap": "not identified",
+    "exactSourceAndSensorCoordinateFrames": "figure-level only; not machine-readable",
+    "finiteSensorResponseWeighting": "not identified",
+    "fieldSimulationInputs": "not identified",
+    "rawTimeSeries": "not identified",
+    "fullCovarianceAndNuisancePriors": "not identified",
+    "massDependentLikelihoodOrLimitTable": "figure-only in inspected source"
+  },
+  "correction": {
+    "supersededOverstatement": "machine-readable source and detector geometry is wholly absent",
+    "correctedFinding": "Several essential dimensions and the source-volume integral are published, so an explicitly approximate recast is possible. An author-faithful reproduction remains blocked by the undisclosed combined spin-density map, simulation inputs, response weighting and likelihood data.",
+    "admissibleNextStep": "Build a labelled approximation using the published SmCo5 core and sensor-cell dimensions, then propagate an explicit model-discrepancy term; do not call it an independent reproduction."
+  },
+  "authority": {
+    "grantsIndependentReproduction": false,
+    "grantsEmpiricalLikelihood": false,
+    "grantsDetection": false,
+    "grantsSpin23Specificity": false,
+    "grantsWorldwrightCalibration": false
+  }
+}

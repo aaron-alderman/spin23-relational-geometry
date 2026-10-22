@@ -68,6 +68,7 @@ node verification/verify/verify_spin23_critical_pgt_lense_thirring_spin_yukawa.m
 node verification/verify/verify_spin23_worldwright_torsion_response_surface.mjs
 node verification/verify/verify_spin23_torsion_synthetic_likelihood.mjs
 node verification/verify/verify_spin23_torsion_empirical_calibration_source_audit.mjs
+node verification/verify/verify_spin23_torsion_empirical_geometry_extraction.mjs
 node verification/verify/verify_spin23_torsion_fingerprint_parameter_closure.mjs
 node verification/verify/verify_spin23_torsion_finite_geometry_response.mjs
 node verification/verify/verify_spin23_worldwright_bridge_assurance_manifest.mjs
@@ -79,7 +80,7 @@ The machine-readable response surface is [spin23-worldwright-torsion-response-su
 
 The synthetic calibration contract is [spin23-torsion-synthetic-likelihood-v1.json](../../../evidence/data/spin23-torsion-synthetic-likelihood-v1.json).
 
-The primary-source audit is [spin23-torsion-empirical-calibration-source-audit-v1.json](../../../evidence/data/spin23-torsion-empirical-calibration-source-audit-v1.json).
+The primary-source audit is [spin23-torsion-empirical-calibration-source-audit-v1.json](../../../evidence/data/spin23-torsion-empirical-calibration-source-audit-v1.json), with the geometry correction in [spin23-torsion-empirical-geometry-extraction-v1.json](../../../evidence/data/spin23-torsion-empirical-geometry-extraction-v1.json).
 
 The finite-volume response is [spin23-torsion-finite-geometry-response-v1.json](../../../evidence/data/spin23-torsion-finite-geometry-response-v1.json).
 
@@ -105,6 +106,8 @@ The hash-pinned executable chain is [spin23-worldwright-bridge-assurance-manifes
 The point-source observable has now been integrated over two identical, uniformly polarized, axis-aligned cubes using deterministic product quadrature. The cubes remain non-overlapping, so the excluded contact term never enters. The fifteen-cell response covers three mediator masses and five source-size ratios, with independent order-14 and order-20 calculations agreeing to a maximum absolute difference of `2.06e-11`.
 
 The result identifies the regime in which apparatus geometry is scientifically consequential. At `m*d=4` and `a/d=0.75`, the volume-integrated radial response is `1.6703` times the center-point estimate and the transverse magnitude is `1.4539` times it. The closest polarized volume elements dominate a short-range interaction, and the finite geometry also shifts the radial/transverse anisotropy from `5.2` to `5.9739`. Therefore a real experimental recast needs the apparatus spin-density geometry or a bounded approximation error; center separation alone is insufficient.
+
+Reinspection of the Xu et al. primary article narrowed that blocker. It publishes a 12 mm spherical sensor cell, a cylindrical SmCo5 core 2.5 mm in both diameter and height, a `50.00(5)` mm source-sensor center distance, and the source-volume integral used for the pseudomagnetic field. At a 7 mm force range these correspond to `d/lambda=7.1429`, source radius `0.025d`, source height `0.05d`, and sensor radius `0.12d`. An explicitly approximate recast is therefore possible. An author-faithful reconstruction remains blocked because the stated `4.63e20` net electron spins combine SmCo5 and soft iron without an executable spatial density map, and the exact simulation inputs, finite-sensor weighting, raw data, covariance and mass-dependent likelihood are not published in machine-readable form.
 
 ## Next gates
 
