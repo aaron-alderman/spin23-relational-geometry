@@ -13,11 +13,11 @@ y_{011}=-\frac{159a_1^2+319a_1+176}{2304\pi^2\epsilon}.
 \]
 
 Its response row is
-\(y_{011}=2h^{TT}_1+h^{TT}_2+h^{TT}_3+h^{TT}_4+h^{TT}_9\).
+\(y_{011}=2h^{TT}_1+h^{TT}_2+h^{TT}_3+h^{TT}_4+h^{TT}_5+h^{TT}_9\).
 Substituting the four completed responses yields
 
 \[
-\boxed{h^{TT}_9=-\frac{33a_1^2+74a_1+43}{576\pi^2\epsilon}}.
+\boxed{h^{TT}_9=-\frac{99a_1^2+196a_1+113}{2304\pi^2\epsilon}}.
 \]
 
 The mixed `t001+t122` row is selected next because its only unresolved

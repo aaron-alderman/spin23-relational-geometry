@@ -69,13 +69,14 @@ generalization and the `t021` row are now complete, giving
 `t112` is complete and fixes
 \(h^{TT}_2+h^{TT}_3=(-3a_1^2+28a_1+23)/(2304\pi^2\epsilon)\).  The live
 `t011` is complete and gives
-\(h^{TT}_9=-(33a_1^2+74a_1+43)/(576\pi^2\epsilon)\).  The live profile is
+\(h^{TT}_9=-(99a_1^2+196a_1+113)/(2304\pi^2\epsilon)\).  The live profile is
 `t001+t122` is complete and fixes
 \(2h^{TT}_2+h^{TT}_7=(6a_1^2+11a_1+5)/(2304\pi^2\epsilon)\).  The live
 `t001` is complete and equals the mixed response, implying
 \(h^{TT}_8=2h^{TT}_1+h^{TT}_2-h^{TT}_3\).  All seven new flat probes are
-closed.  The live operation is to normalize the two existing axial rows and
-apply the exact nine-response inverse.
+closed.  The common-normalization axial rows and exact inverse now close all
+nine \(h^{TT}\) poles.  The live operation is the two-probe curved
+linear-torsion block \((h^{RT}_3,h^{RT}_5)\).
 
 ## Backtracking policy
 
