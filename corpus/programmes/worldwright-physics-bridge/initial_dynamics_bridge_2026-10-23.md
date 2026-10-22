@@ -68,6 +68,7 @@ node verification/verify/verify_spin23_critical_pgt_lense_thirring_spin_yukawa.m
 node verification/verify/verify_spin23_worldwright_torsion_response_surface.mjs
 node verification/verify/verify_spin23_torsion_synthetic_likelihood.mjs
 node verification/verify/verify_spin23_torsion_empirical_calibration_source_audit.mjs
+node verification/verify/verify_spin23_torsion_fingerprint_parameter_closure.mjs
 ```
 
 The machine-readable response surface is [spin23-worldwright-torsion-response-surface-v1.json](../../../evidence/data/spin23-worldwright-torsion-response-surface-v1.json).
@@ -75,6 +76,21 @@ The machine-readable response surface is [spin23-worldwright-torsion-response-su
 The synthetic calibration contract is [spin23-torsion-synthetic-likelihood-v1.json](../../../evidence/data/spin23-torsion-synthetic-likelihood-v1.json).
 
 The primary-source audit is [spin23-torsion-empirical-calibration-source-audit-v1.json](../../../evidence/data/spin23-torsion-empirical-calibration-source-audit-v1.json).
+
+## Fingerprint closure
+
+The existing corpus does not already fix an accessible Spin(2,3)-specific signal. Its natural minimal benchmark has a Planck-mass torsion pole. Moving that pole to a 7 mm range requires a mass reduction of about `8.64e31`; at fixed `A`, the corresponding relative increase in `B/A` is about `7.46e63`.
+
+The minimal bare Dirac coefficient `|c_f|=1/8` is a useful benchmark, but it is not yet a derived low-energy flavor prediction after nonminimal terms, thresholds and descendant matching. Consequently:
+
+- the natural benchmark is experimentally inaccessible as a separated force;
+- a fitted light pole is generic EFT phenomenology rather than a prediction;
+- a hierarchically light pole is not fundamental without radiative protection;
+- a distinctive fingerprint still requires one anomaly-free, radiatively closed descendant to calculate `A`, `B` and all relevant `c_f`.
+
+This is a useful negative result: present experiments can constrain the surviving EFT, but neither a null result nor a detected generic tensor-Yukawa force can currently identify Spin(2,3).
+
+The executable closure gate is [spin23-torsion-fingerprint-parameter-closure-v1.json](../../../evidence/data/spin23-torsion-fingerprint-parameter-closure-v1.json).
 
 ## Next gates
 

@@ -1,0 +1,95 @@
+{
+  "schema": "spin23.torsion-fingerprint-parameter-closure/1",
+  "date": "2026-10-23",
+  "status": "exact parameter-closure audit; no present laboratory-range Spin(2,3) fingerprint",
+  "sourceClaims": [
+    {
+      "path": "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md",
+      "sha256": "366d5539b2a6cb1cf726a8b5248a45ca04a96fa135a12012b3108d970a25c501"
+    },
+    {
+      "path": "corpus/claims/1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md",
+      "sha256": "95d9265b12e371ac5b546ef1ff0c3cf3a8985164422ad52efbdbd503b59bef39"
+    }
+  ],
+  "exactRelations": {
+    "poleMassSquared": "m_phi^2=A/B",
+    "derivativeCoupling": "f_f=c_f/sqrt(A)",
+    "correlatedStrength": "f_f*m_phi=c_f/sqrt(B)",
+    "minimalDiracBenchmark": "|c_f|=1/8 before nonminimal couplings and threshold running",
+    "fingerprintRequirement": "the broken parent must calculate A,B and the low-energy ratios and signs of c_f"
+  },
+  "naturalBenchmark": {
+    "reducedPlanckMassGeV": 2.435e18,
+    "bX": 0.041666666666666664,
+    "lambda": 0,
+    "absoluteCf": 0.125,
+    "poleMassGeV": 2.435e18,
+    "classification": "Planck-scale contact correction with no laboratory-range pole"
+  },
+  "sevenMillimetreTarget": {
+    "rangeMetres": 0.007,
+    "poleMassElectronVolts": 0.000028189568628571428,
+    "naturalMassToTargetMass": 8.637947008284529e31,
+    "requiredBOverARelativeToNatural": 7.461412851793165e63,
+    "naturalExponentAtTargetRange": 8.63794700828453e31,
+    "decision": "At the natural benchmark the separated force is exponentially absent. Holding A fixed while moving the pole to 7 mm requires an approximately 7.46e63 enhancement of B/A."
+  },
+  "candidateRoutes": [
+    {
+      "id": "natural-minimal-benchmark",
+      "prediction": "universal bare |c_f|=1/8 and Planck-mass pole",
+      "laboratoryRange": false,
+      "distinctive": false,
+      "reason": "The tail is exponentially absent; only a contact-scale correction remains."
+    },
+    {
+      "id": "fit-light-pole",
+      "prediction": "choose B/A to put the pole in an experimental window",
+      "laboratoryRange": true,
+      "distinctive": false,
+      "reason": "A fitted range is not a parent-derived prediction."
+    },
+    {
+      "id": "critical-or-large-B-tuning",
+      "prediction": "make B/A hierarchically large",
+      "laboratoryRange": true,
+      "distinctive": false,
+      "reason": "No protecting symmetry or radiatively stable fixed surface is presently established."
+    },
+    {
+      "id": "minimal-universal-flavor",
+      "prediction": "take all low-energy c_f equal to the minimal bare coefficient",
+      "laboratoryRange": "independent",
+      "distinctive": false,
+      "reason": "Threshold matching, nonminimal terms and the complete E6 descendant matter action do not presently derive low-energy flavor ratios."
+    },
+    {
+      "id": "parent-fixed-correlated-line",
+      "prediction": "derive A,B and every relevant c_f from one anomaly-free radiatively closed descendant",
+      "laboratoryRange": "unknown",
+      "distinctive": true,
+      "status": "missing"
+    }
+  ],
+  "closureDecision": {
+    "currentAccessibleEftSignal": "generic torsion or axion-like tensor Yukawa force",
+    "currentSpin23Fingerprint": false,
+    "naturalBenchmarkExperimentallyAccessible": false,
+    "lightPoleWithoutNewProtectionAdmissibleAsFundamental": false,
+    "irreducibleMissingCalculation": "derive A,B,c_f and threshold corrections from a radiatively closed broken-Spin(2,3) matter action",
+    "usefulFailure": "The laboratory bridge remains valuable for constraining the EFT, but a null or positive signal cannot presently identify Spin(2,3)."
+  },
+  "falsifiers": [
+    "a claimed fingerprint leaves any relevant A,B or c_f freely fitted",
+    "a light pole is introduced without a protecting symmetry or fixed surface",
+    "bare universal c_f is treated as a derived low-energy flavor prediction",
+    "a generic pseudoscalar force limit is reported as uniquely Spin(2,3)"
+  ],
+  "authority": {
+    "grantsFundamentalTheory": false,
+    "grantsSpin23Specificity": false,
+    "grantsDetection": false,
+    "grantsEmpiricalCalibration": false
+  }
+}
