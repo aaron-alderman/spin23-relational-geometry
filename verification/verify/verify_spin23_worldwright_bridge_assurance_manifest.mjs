@@ -13,7 +13,7 @@ const manifest = JSON.parse(await readFile(new URL(
 ), "utf8"));
 const sha256 = bytes => createHash("sha256").update(bytes).digest("hex");
 
-assert.equal(manifest.chain.length, 7);
+assert.equal(manifest.chain.length, 8);
 for (const item of manifest.chain) {
   const [evidenceBytes, verifierBytes] = await Promise.all([
     readFile(new URL("../../" + item.evidencePath, import.meta.url)),
@@ -35,6 +35,7 @@ assert.equal(manifest.conclusions.responseSurfaceReproducible, true);
 assert.equal(manifest.conclusions.syntheticInferencePipelineOperational, true);
 assert.equal(manifest.conclusions.primaryEmpiricalAnchorIdentified, true);
 assert.equal(manifest.conclusions.publishedMacroscopicGeometryPartiallyExtracted, true);
+assert.equal(manifest.conclusions.publishedGeometryApproximationOperational, true);
 assert.equal(manifest.conclusions.finiteVolumeIntegrationOperational, true);
 assert.equal(manifest.conclusions.independentEmpiricalLikelihoodAvailable, false);
 assert.equal(manifest.conclusions.spin23SpecificFingerprintAvailable, false);
@@ -42,5 +43,5 @@ assert.ok(Object.values(manifest.authority).every(value => value === false));
 
 console.log("Spin(2,3)/Worldwright bridge assurance manifest: PASS");
 console.log(`  hash-pinned executable stages: ${manifest.chain.length}`);
-console.log("  exact EFT observable -> response surface -> synthetic likelihood -> empirical audit -> geometry extraction -> fingerprint closure -> finite geometry");
+console.log("  exact EFT observable -> response surface -> synthetic likelihood -> empirical audit -> geometry extraction -> published-geometry approximation -> fingerprint closure -> finite geometry");
 console.log("  authority remains separated across physics,Worldwright,policy and moral domains");
