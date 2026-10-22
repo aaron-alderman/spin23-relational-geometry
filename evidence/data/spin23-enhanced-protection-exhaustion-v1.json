@@ -1,0 +1,38 @@
+{
+  "schema": "spin23.enhanced-protection-exhaustion/1",
+  "date": "2026-10-22",
+  "status": "minimal enhanced-symmetry representation and compatibility exhaustion",
+  "target": {
+    "bosonicDegrees": 3,
+    "content": "two massless graviton helicities plus one massive 0-minus torsion pseudoscalar"
+  },
+  "commutingBosonicSymmetry": {
+    "principle": "a group commuting with local Lorentz acts only within multiplicities of equivalent Lorentz irreducibles",
+    "quadraticNormVerdict": "every orthogonal real-sector norm remains a singlet",
+    "protectionVerdict": "cannot forbid selected curvature or torsion squares without adding duplicate irreducible fields or enlarging the spacetime gauge algebra"
+  },
+  "minimalN1AdSCompletion": {
+    "superalgebra": "OSp(1|4)",
+    "multiplets": [
+      {"name": "massless gravity", "bosonicDegrees": 2, "fermionicDegrees": 2, "newStates": "massless gravitino helicities"},
+      {"name": "chiral containing 0-minus", "bosonicDegrees": 2, "fermionicDegrees": 2, "newStates": "one additional real scalar and one Majorana fermion"}
+    ],
+    "totalBosonicDegrees": 4,
+    "totalFermionicDegrees": 4,
+    "totalDegrees": 8,
+    "additionalDegreesRelativeToTarget": 5,
+    "verdict": "exact supersymmetry can protect only an enlarged spectrum, not the unchanged 2+1 target"
+  },
+  "otherPrinciples": [
+    {"name": "exact Weyl symmetry", "failure": "fixed compensator norm, Planck scale and AdS radius explicitly or spontaneously introduce scales; spontaneous repair adds fields"},
+    {"name": "0-minus shift symmetry", "failure": "forbids the required nonzero pseudoscalar mass and does not act on C^2"},
+    {"name": "topological BRST pairing", "failure": "requires a new gauge complex; existing critical constraints are second class rather than new Ward generators"}
+  ],
+  "remainingRgProblem": {
+    "normalEquation": "C beta(g)=0 on an invariant surface, or beta(g*)=0 at a fixed point",
+    "knownWeakCouplingNormalTerms": {"C2": "1/[120(4pi)^2]", "R2": "1/[72(4pi)^2]"},
+    "cancellationLogicalStatus": "not excluded, but requires added fields or interactions and an explicit beta-function solution",
+    "requiredChecks": ["fixed-point or invariant-surface existence", "stability matrix", "unitary AdS pole spectrum", "nonlinear constraint rank", "anomaly-free BRST complex"]
+  },
+  "decision": "Minimal symmetry protection is exhausted. The next reopening requires either a specified enlarged super/topological theory with extra states or a computed unitary RG fixed surface annihilating every normal beta component."
+}

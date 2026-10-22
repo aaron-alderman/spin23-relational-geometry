@@ -1,0 +1,84 @@
+{
+  "schema": "spin23.copy-brst-counterterm-cohomology-no-go/1",
+  "date": "2026-10-22",
+  "status": "exact direct-product symmetry-character and finite counterterm-tangency no-go; sufficient-subspace audit of local BRST cohomology",
+  "brstComplex": {
+    "gaugeFactors": [
+      "local Spin(2,3), reduced to local Lorentz in unitary gauge",
+      "diffeomorphisms",
+      "optional local SO(2)_copy"
+    ],
+    "ghosts": ["c^{AB}", "xi^mu", "eta"],
+    "contractiblePairs": "gauge-fixing antighost/Nakanishi-Lautrup and covariant multiplier doublets do not remove gauge-invariant ghost-number-zero classes",
+    "countertermRule": "integrated gauge- and diffeomorphism-invariant local four-forms represent H^{0,4}(s|d), modulo total derivatives and EOM/field-redefinition classes"
+  },
+  "countertermCandidateSpan": {
+    "representatives": [
+      "cosmological density",
+      "Einstein scalar curvature",
+      "three irreducible torsion squares",
+      "six parity-even irreducible curvature squares",
+      "copy gauge curvature square f_q^2"
+    ],
+    "presentationCountIncludingCosmologicalAndEinstein": 12,
+    "quadraticCouplingBasis": ["t1", "t2", "t3", "cC", "cR", "cX", "c4", "c5", "c6", "zq"],
+    "guaranteedIndependentNormalDirectionsUsed": ["C^2", "R^2", "f_q^2"],
+    "qualification": "a candidate invariant presentation before all topological and EOM/field-redefinition identifications; the three displayed normal directions suffice for non-closure"
+  },
+  "criticalSurface": {
+    "constraints": [
+      {"coefficients": {"t1": 2, "t2": 1}, "equation": "2t1+t2=0"},
+      {"coefficients": {"t1": 1, "t3": 2}, "equation": "t1+2t3=0"},
+      {"coefficients": {"cC": 1}, "equation": "cC=0"},
+      {"coefficients": {"cR": 1}, "equation": "cR=0"},
+      {"coefficients": {"c4": 1}, "equation": "c4=0"},
+      {"coefficients": {"c5": 1}, "equation": "c5=0"},
+      {"coefficients": {"c6": 1}, "equation": "c6=0"},
+      {"coefficients": {"zq": 1}, "equation": "zq=0"}
+    ],
+    "constraintRankInPresentedCoordinates": 8,
+    "ambientQuadraticCouplingDimension": 10,
+    "tangentDimensionInPresentedCoordinates": 2,
+    "tangentGenerators": [
+      {"t1": 1, "t2": -2, "t3": -0.5},
+      {"cX": 1}
+    ]
+  },
+  "finiteTangencyFalsifiers": [
+    {
+      "source": "one real minimally coupled 0-minus pseudoscalar",
+      "direction": {"cC": "1/120", "cR": "1/72"},
+      "normalProjectionNonzero": true
+    },
+    {
+      "source": "any generated ordinary copy gauge kinetic term",
+      "direction": {"zq": 1},
+      "normalProjectionNonzero": true,
+      "qualification": "allowed and unprotected; a nonzero beta coefficient was not computed for the exactly constrained pure-bosonic copy sector"
+    }
+  ],
+  "directProductTheorem": {
+    "assumptions": [
+      "K_copy acts only on multiplicity indices",
+      "K_copy commutes with the gravitational gauge algebra",
+      "the PGT counterterms contain no open copy index"
+    ],
+    "grantedExtraDatum": "for continuous SO(2), a transforming oriented unit doublet is granted so the linear Stelle-West compensator can be written despite Hom_SO(2)(R^2,R)=0",
+    "characterRankOnNinePgtQuadratics": 0,
+    "conclusion": "all pure PGT quadratic invariants are K_copy singlets, so its Ward identity cannot select the pseudoscalar-curvature square or enforce torsion-coupling relations"
+  },
+  "candidatePrincipleAudit": [
+    {"principle": "parity or CP", "verdict": "all displayed dangerous operators are parity even"},
+    {"principle": "Weyl symmetry", "verdict": "incompatible with fixed compensator norm, Einstein scale and natural AdS radius"},
+    {"principle": "0-minus shift symmetry", "verdict": "incompatible with the required massive pole and does not forbid metric C^2"},
+    {"principle": "commuting copy gauge symmetry", "verdict": "permits f_q^2 and is blind to the PGT basis"},
+    {"principle": "existing critical constraints", "verdict": "second-class degeneracy conditions are not new gauge generators or Ward identities"}
+  ],
+  "anomalyBoundary": {
+    "pureBosonicCopySector": "no perturbative chiral anomaly",
+    "chiralMatterConditions": ["sum q_f^3=0", "sum q_f=0", "mixed non-Abelian conditions"],
+    "derivedMatterChargesAvailable": false,
+    "logicalRole": "anomaly cancellation is necessary for quantum BRST but cannot remove the ghost-number-zero counterterm obstruction"
+  },
+  "decision": "Every ordinary multiplicity symmetry commuting with Spin(2,3) fails to protect the critical gravity surface. The local-polynomial fundamental route is exhausted until a symmetry acts nontrivially on the connection, a larger super/topological BRST complex is specified, or an actual RG fixed surface is computed."
+}

@@ -42,6 +42,13 @@ Thus no minimal copy symmetry simultaneously derives the selected ray,
 retains exactly the (2+1) target spectrum, and is closed under all allowed
 local counterterms.
 
+There is also an action-level obstruction. The Stelle--West term is linear in
+one ambient vector. The defining real doublet of continuous (SO(2)) has no
+nonzero invariant covector, so no expression (r^IY_I^A) is copy invariant
+unless (r^I=0). A continuous copy symmetry therefore requires an additional
+transforming unit doublet (n_I), or an equivalent oriented square root of the
+rank-one Gram projector, before the gravity action itself can be written.
+
 ## Rank-one constraint rather than a chosen projector
 
 At the background
@@ -72,6 +79,35 @@ The rank-one equations are stronger than merely setting the determinant of
 the (2\times2) Gram matrix to zero. In signature ((2,3)), two independent
 vectors can span a degenerate plane, so a zero Gram determinant does not imply
 linear dependence.
+
+## Covariant-action obstruction
+
+Let (J=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)) generate
+the copy rotation. An invariant real covector (r) would obey
+
+\[
+ rJ=0.
+\]
+
+Since (J) is invertible, (r=0). Hence
+
+\[
+ \operatorname{Hom}_{SO(2)}(\mathbb R^2,\mathbb R)=0.
+\]
+
+The linear compensator required by
+(epsilon_{ABCDE}V^EF^{AB}\wedge F^{CD}) cannot be constructed from the
+copy doublet alone. The rank-one Gram matrix determines the projector
+(n_In_J), but not an oriented vector (n_I); choosing its square root is a
+double-cover section.
+
+One can add a unit Stueckelberg doublet (n_I), transforming with (Y_I), and
+define (V^A=n^IY_I^A). Local (SO(2)) then gauges its angle. This makes the
+action covariant but does not derive the oriented section from the original
+two-copy carrier. It also leaves the copy-connection counterterm problem
+below. By contrast, exchange (\mathbb Z_2) has the invariant covector
+((1,1)), so it canonically permits the symmetric combination, but its finite
+orbit cannot remove the antisymmetric vector field.
 
 ## Global continuous branch
 
@@ -110,7 +146,8 @@ vector-copy components:
 \]
 
 This is the only minimal continuous branch that genuinely turns the ray into
-gauge. It has two subbranches:
+gauge, after a transforming unit doublet or equivalent oriented section has
+also been supplied to write the Stelle--West term. It has two subbranches:
 
 - If (q_\mu) has no kinetic term, it is algebraic and adds no classical
   particle. The (2+1) spectrum survives at tree level.
@@ -177,9 +214,10 @@ The minimal multiplicity-symmetry possibilities end as follows:
 | local (SO(2)), (Z_q\ne0) | gauge | 3 vector | no |
 | exchange (\mathbb Z_2) | canonical eigenlines | 5 unless constrained | no |
 
-The only tree-level solution is a gauged copy rotation on the critical
-auxiliary surface (Z_q=0), which simply moves the radiative-stability problem
-to a new coupling. The next decisive question is therefore cohomological:
+The only tree-level solution is a gauged copy rotation plus an oriented
+Stueckelberg section on the critical auxiliary surface (Z_q=0). This imports
+new geometric data and moves the radiative-stability problem to a new
+coupling. The next decisive question is therefore cohomological:
 whether the complete BRST Ward identities can forbid (f^2) and the seven PGT
 departures simultaneously.
 

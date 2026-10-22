@@ -74,6 +74,18 @@ assert.equal(branch("exchange Z2").extraPhysicalDegrees, 5);
 // the local tangent dimension. Its linear gauge-map rank is zero.
 assert.equal(rank([Array(10).fill(0)]), 0);
 
+// A continuous SO(2) doublet has no invariant covector. If rJ=0 with the
+// invertible generator J, then r=0. Exchange Z2 instead has the invariant
+// symmetric covector (1,1).
+const so2Generator = [[0, -1], [1, 0]];
+assert.equal(rank(so2Generator), 2);
+const exchangeMinusIdentity = [[-1, 1], [1, -1]];
+assert.equal(rank(exchangeMinusIdentity), 1);
+assert.deepEqual([
+  exchangeMinusIdentity[0][0] + exchangeMinusIdentity[1][0],
+  exchangeMinusIdentity[0][1] + exchangeMinusIdentity[1][1],
+], [0, 0]);
+
 // Standard massive-vector count in four dimensions: 4 fields minus one
 // primary/secondary second-class pair = 3 configuration degrees.
 assert.equal((8 - 2)/2, 3);
@@ -82,5 +94,6 @@ console.log("Spin(2,3) two-copy multiplicity symmetry classification: PASS");
 console.log("  rank-one constraint: rank 4; norm: rank 1");
 console.log("  global SO(2): one Goldstone remains after Spin(2,3) quotient");
 console.log("  local SO(2): rank 1 copy gauge removes the ray angle");
+console.log("  action covariance: SO(2) has no invariant covector; an oriented section must be added");
 console.log("  kinetic copy connection: three massive-vector polarizations are added");
 console.log("  exchange Z2: canonical line but zero local gauge rank; W still requires a constraint");
