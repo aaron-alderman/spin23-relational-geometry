@@ -1,5 +1,10 @@
 # The Generated Curvature Terms Define a Controlled Order-Reduced EFT but Not a New Fundamental Spectrum
 
+> **Torsion-inclusive completion (claim 1717):** all nine derivative-torsion
+> and both curvature--derivative-torsion poles are now known.  Their complete
+> basis running envelope and explicit cutoff inequalities extend this
+> torsionless prescription without changing its order-reduced interpretation.
+
 **Date:** 22 October 2026
 
 **Gates:** A1, A2, A4, A6, A7, A8 and A11

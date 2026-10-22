@@ -1,0 +1,16 @@
+{
+  "schema":"spin23.torsion-inclusive-eft-envelope/1",
+  "date":"2026-10-23",
+  "domain":"complete dimension-four quadratic shell in the frozen packet basis",
+  "runningConvention":"absolute one-loop pole residue times abs(log(mu/mu0)); finite matching values remain independent inputs",
+  "basisEnvelope":{"definition":"betaMax(a1)=max_i abs(beta_i(a1)) over cC,cR,hTT1..hTT9,hRT3,hRT5","forA1Nonnegative":"(99*a1^2+196*a1+113)/(2304*pi^2)","dominantCoefficient":"abs(hTT9)"},
+  "samples":[
+    {"a1":1,"betaMax":0.01794229293666398,"turnoverOverMpl":7.4655365927652095},
+    {"a1":2,"betaMax":0.03962256356846629,"turnoverOverMpl":5.023758043893513},
+    {"a1":3,"betaMax":0.070010123419532,"turnoverOverMpl":3.7793714530952145},
+    {"a1":4,"betaMax":0.10910497248986112,"turnoverOverMpl":3.0274552189628547}
+  ],
+  "validity":{"basisParameter":"etaBasis=betaMax*absLog*E^2/Mpl^2","strictFractionalCutoff":"E_delta/Mpl=sqrt(delta/(betaMax*absLog))","a1=4_absLog=1_delta=0.1":0.9573654006086405,"kernelInvariantSufficientCondition":"kappa*E^2*absLog*norm(B4)/Zmin << 1"},
+  "interpretation":["use all four-derivative terms perturbatively","order-reduce with the leading two-derivative equations","do not invert the truncated polynomial as an exact propagator","retain finite Wilson coefficients as UV matching data"],
+  "decision":"the universal torsion-inclusive running envelope is complete; observable predictions require a chosen process and finite matching conditions"
+}
