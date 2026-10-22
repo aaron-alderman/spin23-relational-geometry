@@ -1,0 +1,44 @@
+{
+  "schema": "spin23.torsion-published-geometry-approximation/1",
+  "date": "2026-10-23",
+  "status": "explicit approximation from published dimensions; not an author-faithful apparatus reproduction",
+  "sourceEvidence": {
+    "path": "evidence/data/spin23-torsion-empirical-geometry-extraction-v1.json",
+    "sha256": "0689c37f708adfed840e986c474a08c14a091e45b99194ab9113cbe45bc86126"
+  },
+  "assumptions": [
+    "The SmCo5 core is a uniformly polarized cylinder with radius and half-height 1.25 mm.",
+    "The cylinder axis and source spin are along y, while its center lies 50 mm from the sensor along x.",
+    "The measured harmonic is the y component of the pseudomagnetic field at transverse source orientation.",
+    "The 12 mm spherical sensor cell has uniform response weighting.",
+    "The soft-iron contribution to the stated total source spin is not spatially modeled.",
+    "Shielding changes ordinary magnetic leakage but not the exotic tensor-Yukawa field."
+  ],
+  "method": {
+    "sourceCore": "deterministic Gauss-Legendre quadrature over cylinder axial coordinate and squared radius, with periodic angular quadrature",
+    "reportedSourceOrder": "20 x 20 x 96",
+    "comparisonSourceOrder": "14 x 14 x 64",
+    "sensorCell": "exact uniform-ball mean-value factor for a source-free modified-Helmholtz field: 3*(z*cosh(z)-sinh(z))/z^3, z=R_cell/lambda",
+    "normalization": "response divided by the transverse center-point kernel at the same center distance and force range"
+  },
+  "response": [
+    {"forceRangeMillimetres":2,"centerDistanceOverRange":25,"sourceCoreToPoint":1.0472733789902309,"uniformCellMeanFactor":2.2427901177692657,"combinedToPoint":2.348814385002117,"sourceQuadratureDifference":3.101927297073854e-25},
+    {"forceRangeMillimetres":7,"centerDistanceOverRange":7.142857142857143,"sourceCoreToPoint":1.003257445161463,"uniformCellMeanFactor":1.0754236043015128,"combinedToPoint":1.078926737717868,"sourceQuadratureDifference":4.683753385137379e-17},
+    {"forceRangeMillimetres":20,"centerDistanceOverRange":2.5,"sourceCoreToPoint":1.0001128225022777,"uniformCellMeanFactor":1.0090289768350618,"combinedToPoint":1.009142818009099,"sourceQuadratureDifference":3.219646771412954e-15},
+    {"forceRangeMillimetres":50,"centerDistanceOverRange":1,"sourceCoreToPoint":0.9998038566644941,"uniformCellMeanFactor":1.0014407407689359,"combinedToPoint":1.00124431484173,"sourceQuadratureDifference":1.0325074129013956e-14}
+  ],
+  "findings": {
+    "reportedSevenMillimetreRange": "The uniform-core correction is +0.326 percent, the uniform-cell factor is +7.542 percent, and the combined factor is 1.07893.",
+    "shortRange": "At 2 mm the combined response is 2.34881 times the center-point estimate because the cell radius is three force ranges and nearer detector volume is exponentially favored.",
+    "dominantFiniteSizeAtSevenMillimetres": "Under the declared assumptions, sensor-volume averaging dominates the SmCo5-core correction.",
+    "likelihoodImpact": "Because the inferred coupling product is inversely proportional to modeled response, omitting the 7 mm combined correction would shift the approximate coupling scale downward by about 7.32 percent when corrected.",
+    "limit": "The result cannot reproduce the publication's limit until the combined SmCo5/soft-iron spin density, sensor polarization weighting, exact coordinate convention and likelihood are supplied."
+  },
+  "authority": {
+    "grantsIndependentReproduction": false,
+    "grantsEmpiricalLikelihood": false,
+    "grantsDetection": false,
+    "grantsSpin23Specificity": false,
+    "grantsWorldwrightCalibration": false
+  }
+}
