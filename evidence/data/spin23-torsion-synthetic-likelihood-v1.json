@@ -1,0 +1,72 @@
+{
+  "schema": "spin23.torsion-synthetic-likelihood/1",
+  "date": "2026-10-23",
+  "status": "synthetic injection-recovery demonstration; not empirical calibration",
+  "responseSurfaceRef": {
+    "path": "evidence/data/spin23-worldwright-torsion-response-surface-v1.json",
+    "sha256": "8d0d7cff4cfd5c0dcd34d977411efc80feb4560551c44703673480222095a8c9",
+    "verifierPath": "verification/verify/verify_spin23_worldwright_torsion_response_surface.mjs",
+    "verifierSha256": "a7720d25daa7de84947fb9c17281259cbeca4961c2adda37f7d1ad6d748d84d6"
+  },
+  "design": {
+    "separations": [0.25, 0.5, 1, 2, 4, 8],
+    "orientations": ["radial-parallel", "transverse-parallel"],
+    "polarization": 1,
+    "zeroPolarizationControls": 12,
+    "signalCells": 12,
+    "noiseModel": "independent Gaussian",
+    "sigma": 0.02,
+    "datasetKind": "noiseless Asimov injection"
+  },
+  "injection": {
+    "dimensionlessMass": 1,
+    "amplitude": 0.2,
+    "freeParameters": ["dimensionlessMass", "amplitude"]
+  },
+  "massGrid": [0.25, 0.5, 1, 2, 4],
+  "profileLikelihood": [
+    {"dimensionlessMass": 0.25, "amplitudeHat": 0.14260289830259354, "chiSquared": 281.4502410689827},
+    {"dimensionlessMass": 0.5, "amplitudeHat": 0.16892895195199054, "chiSquared": 97.349569037399},
+    {"dimensionlessMass": 1, "amplitudeHat": 0.19999999999999998, "chiSquared": 2.985379492896347e-29},
+    {"dimensionlessMass": 2, "amplitudeHat": 0.23178272353246787, "chiSquared": 120.09684775527026},
+    {"dimensionlessMass": 4, "amplitudeHat": 0.27305374000393096, "chiSquared": 432.44472127535533}
+  ],
+  "nullModel": {
+    "amplitude": 0,
+    "chiSquared": 1580.0939167321173
+  },
+  "result": {
+    "uniqueGridMinimum": 1,
+    "recoveredAmplitude": 0.2,
+    "massIdentifiableOnDeclaredGrid": true,
+    "amplitudeIdentifiableAtFixedMass": true,
+    "zeroPolarizationControlsPass": true,
+    "interpretation": "Radial and transverse separation scans contain enough shape information to recover an injected range and amplitude in this idealized point-source model."
+  },
+  "empiricalCalibrationContract": {
+    "requiredData": [
+      "measured torque or energy with units",
+      "full covariance or a justified likelihood",
+      "source and detector spin-density fields",
+      "separation and orientation metrology",
+      "polarization efficiencies and uncertainties",
+      "finite-size geometry",
+      "magnetic,electrostatic,thermal and mechanical nuisance models",
+      "blind-analysis and data-quality rules"
+    ],
+    "requiredForwardModel": [
+      "finite-volume convolution of the tensor Yukawa kernel",
+      "material-specific spin fractions",
+      "apparatus transfer function",
+      "nuisance marginalization",
+      "look-elsewhere treatment for a mass scan"
+    ],
+    "admissionRule": "No empirical exclusion,detection or Spin(2,3) inference is admitted until the required data and forward-model fields are present and independently reproduced."
+  },
+  "authority": {
+    "grantsDetectionSignificance": false,
+    "grantsEmpiricalExclusion": false,
+    "grantsSpin23Specificity": false,
+    "grantsWorldwrightCalibration": false
+  }
+}
