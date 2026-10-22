@@ -37,6 +37,17 @@ assert.equal(calibration.conclusions.perfectCrosswalkWouldOpenCausalEstimation, 
 assert.ok(Object.values(calibration.authority).every(value => value === false), "calibration audit authority promotion");
 const calibrationChild = spawnSync(process.execPath, [resolve(root, manifest.calibrationAudit.verifier.path)], { encoding: "utf8" });
 assert.equal(calibrationChild.status, 0, `calibration audit verifier failed\n${calibrationChild.stdout}\n${calibrationChild.stderr}`);
+assert.equal(manifest.designAudits.length, 1);
+for (const audit of manifest.designAudits) {
+  for (const kind of ["evidence", "harness", "verifier"]) {
+    assert.equal(await digest(audit[kind].path), audit[kind].sha256, `${audit.id} ${kind} hash drift`);
+  }
+  const evidence = JSON.parse(await readFile(resolve(root, audit.evidence.path), "utf8"));
+  assert.equal(evidence.exactRepeat, true, `${audit.id} did not repeat exactly`);
+  assert.ok(Object.values(evidence.authority).every(value => value === false), `${audit.id} authority promotion`);
+  const child = spawnSync(process.execPath, [resolve(root, audit.verifier.path)], { encoding: "utf8" });
+  assert.equal(child.status, 0, `${audit.id} verifier failed\n${child.stdout}\n${child.stderr}`);
+}
 assert.equal(await digest(manifest.separatePhysicsBridge.path), manifest.separatePhysicsBridge.sha256, "physics bridge hash drift");
 const physics = JSON.parse(await readFile(resolve(root, manifest.separatePhysicsBridge.path), "utf8"));
 assert.equal(physics.conclusions.spin23SpecificFingerprintAvailable, false);
@@ -44,6 +55,7 @@ assert.equal(manifest.separatePhysicsBridge.authorityTransfer, false);
 assert.deepEqual(manifest.conclusions, {
   hashPinnedExperimentChains: 4,
   hashPinnedStructuralAudits: 1,
+  hashPinnedDesignAudits: 1,
   allExperimentsRepeatExactly: true,
   allEmpiricalValidationBlocked: true,
   continuousCorpusVerificationAvailable: true,
@@ -52,5 +64,5 @@ assert.deepEqual(manifest.conclusions, {
 });
 
 console.log("Worldwright local research assurance manifest: PASS");
-console.log("  4 hash-pinned executable experiment chains, 1 structural audit, plus programme landscape");
+console.log("  4 hash-pinned executable experiment chains, 1 structural audit, 1 design audit, plus programme landscape");
 console.log("  Spin(2,3) bridge referenced separately with no authority transfer");

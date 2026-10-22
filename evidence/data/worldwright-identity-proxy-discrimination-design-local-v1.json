@@ -1,0 +1,154 @@
+{
+  "schema": "worldwright.identity-proxy-discrimination-design.local/1",
+  "protocol": "worldwright/identity-proxy-discrimination-design.local-v1",
+  "source": {
+    "schema": "worldwright.identity-functional-form-robustness.local/1",
+    "robustnessHash": "sha256:0dd16df3d1796c6ecc02d1a5c2b6e25fa91213891731900da344554e0b9d0020",
+    "fileSha256": "889ca57de00d16f5838bbe0ba3a8770f4184715ed18f68137d0d1414a15c49c6"
+  },
+  "design": {
+    "observable": "held-out change in intervention classification relative to preregistered zero-salience baseline",
+    "denominator": 640,
+    "candidateIntermediateLevels": [
+      {
+        "salience": 0.25,
+        "distinctSignatures": 5,
+        "separablePairs": 14,
+        "totalPairs": 15,
+        "minimumPairwiseGapCells": 0,
+        "minimumNonzeroGapCells": 2,
+        "unresolvedPairs": [["thresholdHalf", "nullControl"]],
+        "predictions": {
+          "linear": 26,
+          "convexQuadratic": 2,
+          "concaveSquareRoot": 45,
+          "normalizedLogistic": 13,
+          "thresholdHalf": 0,
+          "nullControl": 0
+        }
+      },
+      {
+        "salience": 0.5,
+        "distinctSignatures": 5,
+        "separablePairs": 14,
+        "totalPairs": 15,
+        "minimumPairwiseGapCells": 0,
+        "minimumNonzeroGapCells": 15,
+        "unresolvedPairs": [["linear", "normalizedLogistic"]],
+        "predictions": {
+          "linear": 45,
+          "convexQuadratic": 26,
+          "concaveSquareRoot": 60,
+          "normalizedLogistic": 45,
+          "thresholdHalf": 87,
+          "nullControl": 0
+        }
+      },
+      {
+        "salience": 0.75,
+        "distinctSignatures": 6,
+        "separablePairs": 15,
+        "totalPairs": 15,
+        "minimumPairwiseGapCells": 6,
+        "minimumNonzeroGapCells": 6,
+        "unresolvedPairs": [],
+        "predictions": {
+          "linear": 64,
+          "convexQuadratic": 49,
+          "concaveSquareRoot": 70,
+          "normalizedLogistic": 77,
+          "thresholdHalf": 87,
+          "nullControl": 0
+        }
+      }
+    ],
+    "recommendedCore": {
+      "controlLevels": [0, 1],
+      "primaryDiscriminationLevel": 0.75,
+      "curvatureReplicationLevel": 0.25,
+      "rationale": "Salience 0.75 is the only tested single interior level with six distinct aggregate signatures; 0.25 adds early-curve leverage and exposes threshold-versus-null aliasing rather than concealing it."
+    },
+    "resolutionPlanning": [
+      {
+        "pair": ["nullControl", "convexQuadratic"],
+        "predictedRates": [0, 0.0765625],
+        "gapCells": 49,
+        "absoluteRateGap": 0.0765625,
+        "conservativeIndependentBinomialNPerArm": 328
+      },
+      {
+        "pair": ["convexQuadratic", "thresholdHalf"],
+        "predictedRates": [0.0765625, 0.1359375],
+        "gapCells": 38,
+        "absoluteRateGap": 0.059375,
+        "conservativeIndependentBinomialNPerArm": 545
+      },
+      {
+        "pair": ["convexQuadratic", "concaveSquareRoot"],
+        "predictedRates": [0.0765625, 0.109375],
+        "gapCells": 21,
+        "absoluteRateGap": 0.0328125,
+        "conservativeIndependentBinomialNPerArm": 1785
+      },
+      {
+        "pair": ["concaveSquareRoot", "normalizedLogistic"],
+        "predictedRates": [0.109375, 0.1203125],
+        "gapCells": 7,
+        "absoluteRateGap": 0.0109375,
+        "conservativeIndependentBinomialNPerArm": 16057
+      },
+      {
+        "pair": ["linear", "concaveSquareRoot"],
+        "predictedRates": [0.1, 0.109375],
+        "gapCells": 6,
+        "absoluteRateGap": 0.009375,
+        "conservativeIndependentBinomialNPerArm": 21855
+      }
+    ],
+    "planningCaveat": "The sample figures are conservative independent-binomial, 95-percent normal-approximation planning bounds. They are not a power calculation for a paired cohort; cell-level discordance and empirical variance must be measured first."
+  },
+  "preregisteredObservableRequirements": [
+    "identity proxy measured before intervention exposure",
+    "proxy definition and salience mapping frozen before outcomes are inspected",
+    "same intervention choice set and classification rule across salience strata",
+    "action time, locality, channel, baseline state and outcome window retained",
+    "missingness, attrition and proxy reliability reported by stratum",
+    "development cohort separated from untouched held-out evaluation cohort"
+  ],
+  "falsificationRules": [
+    {
+      "id": "identity-null-superiority",
+      "consequence": "remove or demote identity as a causal coordinate",
+      "rule": "On the untouched holdout, the null control equals or exceeds every non-null law under the preregistered proper score and uncertainty rule."
+    },
+    {
+      "id": "monotone-family-failure",
+      "consequence": "reject the tested monotone response-law family",
+      "rule": "The held-out response is absent, reverses direction, or requires a non-monotone pattern beyond the preregistered uncertainty band."
+    },
+    {
+      "id": "law-nondiscrimination",
+      "consequence": "report the curve as empirically unidentified; do not select a winning law",
+      "rule": "Measurement error or sampling uncertainty overlaps the closest competing law signatures at both interior levels."
+    },
+    {
+      "id": "proxy-invalidity",
+      "consequence": "invalidate the test rather than treating it as confirmation or refutation",
+      "rule": "The identity proxy is post-treatment, outcome-selected, unreliable, or fails the frozen construct checks."
+    }
+  ],
+  "interpretation": {
+    "status": "preregisterable-discrimination-design-not-empirical-validation",
+    "mainFinding": "The 0.75 salience level uniquely separates all six aggregate synthetic signatures, but the closest pair differs by only 6 of 640 classifications.",
+    "practicalFinding": "Existence-versus-null is much cheaper to test than choosing among nearby non-null curves; law selection requires a staged design and empirical variance estimates."
+  },
+  "authority": {
+    "grantsEmpiricalValidation": false,
+    "grantsPolicyAuthority": false,
+    "grantsMoralAuthority": false,
+    "grantsDemographicAuthority": false,
+    "grantsPhysicsAuthority": false
+  },
+  "designHash": "sha256:b419bcb4cd4dddb5f162e8e7dcee4ebb0b97d5e20d872098ec798b62e4eaf503",
+  "exactRepeat": true
+}

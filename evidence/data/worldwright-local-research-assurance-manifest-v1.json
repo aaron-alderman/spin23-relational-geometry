@@ -30,13 +30,21 @@
     }
   ],
   "programmeLandscape": {
-    "evidence": {"path": "evidence/data/worldwright-programme-current-landscape-v2.json", "sha256": "11fb86dcfdc5d86b16e30c9a26508c48368b1207d99c6becbd30177371cd79aa"},
-    "verifier": {"path": "verification/verify/verify_worldwright_programme_current_landscape_v2.mjs", "sha256": "475db2bb59881d040331a7e868b57f0c7bb253a56eb677d8c522907c95816915"}
+    "evidence": {"path": "evidence/data/worldwright-programme-current-landscape-v2.json", "sha256": "1d4419e5892dc0d660b8c0bfcd9edb861e79ba070f79f06df16fb8221924f2d8"},
+    "verifier": {"path": "verification/verify/verify_worldwright_programme_current_landscape_v2.mjs", "sha256": "c63faa21334ee1a91bbae8ab2e358da01943eaa8c551e5d387c82fab56867da7"}
   },
   "calibrationAudit": {
     "evidence": {"path": "evidence/data/worldwright-calibration-identifiability-audit-local-v1.json", "sha256": "5267d16d805330dcdba55403e42d8b445255647d0ac2e61c6a1976bb4a23ffeb"},
     "verifier": {"path": "verification/verify/verify_worldwright_calibration_identifiability_audit_local.mjs", "sha256": "36276a3bc530d12f06c1d9841fbd6e35cc248f954c403738f3dff6775f1136bf"}
   },
+  "designAudits": [
+    {
+      "id": "identity-proxy-discrimination",
+      "evidence": {"path": "evidence/data/worldwright-identity-proxy-discrimination-design-local-v1.json", "sha256": "c8c2e7d99a0d362a434c9a707fb8a196bd0b9b13d51ceae6feb506b0ef071b81"},
+      "harness": {"path": "verification/experiments/design_worldwright_identity_proxy_discrimination.mjs", "sha256": "2e90992ed990d29eb0d1fe44f3f8169ff89b80b573c33be1592e70540e90d6a9"},
+      "verifier": {"path": "verification/verify/verify_worldwright_identity_proxy_discrimination_design_local.mjs", "sha256": "032c1b53d6b21e83b9904f4eeb4ebfd7c6302ed003dc09a33b84fbcf5fc43e02"}
+    }
+  ],
   "separatePhysicsBridge": {
     "path": "evidence/data/spin23-worldwright-bridge-assurance-manifest-v1.json",
     "sha256": "d90229090d44356a7d48e2cf79161631e97ac660daf64d007530ea80dd913016",
@@ -45,6 +53,7 @@
   "conclusions": {
     "hashPinnedExperimentChains": 4,
     "hashPinnedStructuralAudits": 1,
+    "hashPinnedDesignAudits": 1,
     "allExperimentsRepeatExactly": true,
     "allEmpiricalValidationBlocked": true,
     "continuousCorpusVerificationAvailable": true,
