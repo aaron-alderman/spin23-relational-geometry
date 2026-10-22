@@ -28,12 +28,12 @@ exhaustion occurs only when no frontier node is executable.
 | ID | Branch | State | Unlocks | Immediate test |
 |---|---|---|---|---|
 | Q | Complete quadratic one-loop shell | completed | E, L, P | all 14 quadratic responses closed |
-| E | Torsion-inclusive order-reduced EFT | executing | P | translate complete poles into validity inequalities |
-| B | Full higher-field beta functional | queued on Q | L, U | count and project (RTT,TT\nabla T,T^4) |
-| L | Enlarged local fundamental action | queued on Q and spectrum audit | U | search RG-tangent healthy coupling surfaces |
-| P | Low-energy phenomenology | queued on E and matching data | — | propagate EFT coefficients to pole observables |
-| U | Protecting symmetry or UV parent | open, not executable | fundamental rescue | supply an explicit Ward identity or parent action |
-| N | Nonperturbative definition | open, not executable | fundamental rescue | supply regulator, continuum limit and positive reconstruction |
+| E | Torsion-inclusive order-reduced EFT | completed | P | complete basis envelope and cutoff inequalities |
+| B | Higher-field beta functional as rescue | rejected | L, U | cannot repair torsionless normal beta |
+| L | Enlarged local action, unchanged spectrum | rejected | U | nonzero beta_C; finite p4 resummation has opposite residues |
+| P | Low-energy phenomenology | externally blocked | — | needs observable and finite matching data |
+| U | Protecting symmetry or UV parent | externally blocked | — | needs explicit Ward identity or parent action |
+| N | Nonperturbative definition | externally blocked | — | needs regulator, continuum limit and positive reconstruction |
 
 The original sparse-action closure branch is already rejected: known
 torsionless and axial poles leave it.  The published-general-PGT shortcut is
@@ -78,8 +78,10 @@ closed.  The common-normalization axial rows and exact inverse now close all
 nine \(h^{TT}\) poles.  Two Bianchi-compatible Fourier probes now also give
 \(h^{RT}_3=3(a_1+1)/(256\pi^2\epsilon)\) and
 \(h^{RT}_5=-(459a_1+491)/(13824\pi^2\epsilon)\).  The complete quadratic
-shell is closed.  The live operation is the torsion-inclusive order-reduced
-EFT running envelope and validity domain.
+shell is closed.  Its torsion-inclusive order-reduced EFT envelope is also
+complete.  The enlarged unchanged-spectrum local action is rejected by the
+nonzero normal Weyl-square beta and opposite-residue finite resummation.
+Higher-field torsion operators cannot change that torsionless response.
 
 ## Backtracking policy
 
@@ -96,8 +98,11 @@ EFT running envelope and validity domain.
 
 ## Current stopping status
 
-Global exhaustion is **false**.  Q has a fully specified local next
-calculation, and therefore at least one executable node remains.
+Global exhaustion is **true** for the frozen programme.  Every frontier node
+is completed, rejected by a local certificate, or externally blocked by a
+named reopening datum.  The allowed reopenings are finite observable
+matching, an explicit protecting parent with its full beta/spectrum audit,
+or a nonperturbative regulator with continuum and positivity proofs.
 
 ## Reproduction
 

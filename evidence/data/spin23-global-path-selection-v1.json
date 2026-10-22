@@ -4,23 +4,25 @@
   "terminalStates": ["completed", "rejected", "externally-blocked"],
   "nodes": [
     {"id":"Q","name":"complete quadratic one-loop shell","state":"completed","prerequisites":[],"unlocks":["E","B","L"],"localExecutable":false,"priority":{"decisionImpact":5,"inputReadiness":5,"exactVerifiability":5,"cost":5}},
-    {"id":"E","name":"torsion-inclusive order-reduced EFT","state":"executing","prerequisites":["Q"],"unlocks":["P"],"localExecutable":true,"priority":{"decisionImpact":5,"inputReadiness":5,"exactVerifiability":4,"cost":3}},
-    {"id":"B","name":"higher-field beta functional","state":"queued","prerequisites":["Q"],"unlocks":["L"],"localExecutable":false,"priority":{"decisionImpact":3,"inputReadiness":2,"exactVerifiability":4,"cost":5}},
-    {"id":"L","name":"enlarged local fundamental action","state":"queued","prerequisites":["Q"],"unlocks":["U"],"localExecutable":false,"priority":{"decisionImpact":4,"inputReadiness":2,"exactVerifiability":4,"cost":5}},
-    {"id":"P","name":"low-energy phenomenology","state":"queued","prerequisites":["E"],"unlocks":[],"localExecutable":false,"priority":{"decisionImpact":4,"inputReadiness":2,"exactVerifiability":3,"cost":3}},
-    {"id":"U","name":"protecting symmetry or UV parent","state":"open","prerequisites":["explicit Ward identity or parent action"],"unlocks":[],"localExecutable":false,"priority":{"decisionImpact":5,"inputReadiness":0,"exactVerifiability":3,"cost":5}},
-    {"id":"N","name":"nonperturbative definition","state":"open","prerequisites":["regulator, continuum limit, positive reconstruction"],"unlocks":[],"localExecutable":false,"priority":{"decisionImpact":5,"inputReadiness":0,"exactVerifiability":3,"cost":5}}
+    {"id":"E","name":"torsion-inclusive order-reduced EFT","state":"completed","prerequisites":["Q"],"unlocks":["P"],"localExecutable":false,"priority":{"decisionImpact":5,"inputReadiness":5,"exactVerifiability":4,"cost":3}},
+    {"id":"B","name":"higher-field beta functional as a rescue path","state":"rejected","prerequisites":["Q"],"unlocks":["L"],"localExecutable":false,"priority":{"decisionImpact":3,"inputReadiness":2,"exactVerifiability":4,"cost":5}},
+    {"id":"L","name":"enlarged local fundamental action with unchanged spectrum","state":"rejected","prerequisites":["Q"],"unlocks":["U"],"localExecutable":false,"priority":{"decisionImpact":4,"inputReadiness":2,"exactVerifiability":4,"cost":5}},
+    {"id":"P","name":"low-energy phenomenology","state":"externally-blocked","prerequisites":["E"],"unlocks":[],"localExecutable":false,"priority":{"decisionImpact":4,"inputReadiness":2,"exactVerifiability":3,"cost":3}},
+    {"id":"U","name":"protecting symmetry or UV parent","state":"externally-blocked","prerequisites":["explicit Ward identity or parent action"],"unlocks":[],"localExecutable":false,"priority":{"decisionImpact":5,"inputReadiness":0,"exactVerifiability":3,"cost":5}},
+    {"id":"N","name":"nonperturbative definition","state":"externally-blocked","prerequisites":["regulator, continuum limit, positive reconstruction"],"unlocks":[],"localExecutable":false,"priority":{"decisionImpact":5,"inputReadiness":0,"exactVerifiability":3,"cost":5}}
   ],
   "closedBranches": [
     {"id":"sparse-fundamental-closure","state":"rejected","certificate":"torsionless and axial one-loop poles leave the sparse surface"},
-    {"id":"general-PGT-specialization","state":"rejected","certificate":"connection principal-symbol ranks are 1 and 24"}
+    {"id":"general-PGT-specialization","state":"rejected","certificate":"connection principal-symbol ranks are 1 and 24"},
+    {"id":"unchanged-spectrum-local-fundamental","state":"rejected","certificate":"nonzero beta_C is normal to the critical surface and finite p4 resummation has opposite spin-2 residues"},
+    {"id":"higher-field-rescue","state":"rejected","certificate":"torsionful higher-field operators vanish on the torsionless source fixing beta_C and cannot repair the decisive normal component"}
   ],
-  "selectedNode":"E",
-  "selectedSubtask":"derive the torsion-inclusive running envelope and order-reduction validity inequalities",
-  "selectedProfile":"t132",
-  "selectedResponseRow":[2,0,0,0,0,0,0,0,0],
-  "completedMilestones":["t132 fixed-coframe Hkk1/Hkk2 source vertices","corrected t132 full Xhat-squared coframe-connection H1/H2 vertices","response-to-packet torsion convention bridge","complete t132 packet H1/H2 source vertices","flat zero-source 34-component propagator and exact metric Schur calibration","intrinsic-Fourier oriented determinant insertion and noncancellation witness","converged t132 q2/r4 projection and S3 angular reconstruction","twelve-point regular t132 coupling scan and rational surface candidate","analytic-q directional reconstruction of hTT1","general seven-profile source parameterization and vertex census","t021 analytic-q response and hTT4 extraction","t102 analytic-q response and hTT6 extraction","t112 analytic-q response and hTT2+hTT3 extraction","t011 analytic-q response and hTT9 extraction","mixed t001+t122 analytic-q response","t001 analytic-q response and completion of all seven new flat rows","common-normalization axial rows and exact inversion of all nine flat hTT poles","Bianchi-compatible curved Fourier probes and exact hRT3/hRT5 inversion","complete dimension-four quadratic one-loop shell"],
-  "currentSubtask":"combine the complete quadratic poles into a torsion-inclusive Wilson-coefficient running envelope and conservative EFT validity domain",
-  "globalExhaustion":false,
+  "selectedNode":null,
+  "selectedSubtask":"none: every decision-relevant frontier node is terminal",
+  "selectedProfile":null,
+  "selectedResponseRow":null,
+  "completedMilestones":["t132 fixed-coframe Hkk1/Hkk2 source vertices","corrected t132 full Xhat-squared coframe-connection H1/H2 vertices","response-to-packet torsion convention bridge","complete t132 packet H1/H2 source vertices","flat zero-source 34-component propagator and exact metric Schur calibration","intrinsic-Fourier oriented determinant insertion and noncancellation witness","converged t132 q2/r4 projection and S3 angular reconstruction","twelve-point regular t132 coupling scan and rational surface candidate","analytic-q directional reconstruction of hTT1","general seven-profile source parameterization and vertex census","t021 analytic-q response and hTT4 extraction","t102 analytic-q response and hTT6 extraction","t112 analytic-q response and hTT2+hTT3 extraction","t011 analytic-q response and hTT9 extraction","mixed t001+t122 analytic-q response","t001 analytic-q response and completion of all seven new flat rows","common-normalization axial rows and exact inversion of all nine flat hTT poles","Bianchi-compatible curved Fourier probes and exact hRT3/hRT5 inversion","complete dimension-four quadratic one-loop shell","torsion-inclusive quadratic running envelope and explicit EFT cutoff inequalities","terminal RG-tangency and higher-field rescue audit"],
+  "currentSubtask":"terminal audit complete; wait for an explicit reopening datum",
+  "globalExhaustion":true,
   "globalExhaustionCondition":"every node is completed, rejected, or externally-blocked and no localExecutable node remains"
 }
