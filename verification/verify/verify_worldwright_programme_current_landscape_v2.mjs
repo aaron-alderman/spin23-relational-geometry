@@ -29,7 +29,8 @@ assert.equal(physicsManifest.conclusions.spin23SpecificFingerprintAvailable, fal
 assert.ok(capability("L10").evidence.includes("ten-stage"));
 
 const smooth = landscape.currentScientificFindings.find(item => item.id === "smooth-transition-local-result");
-assert.equal(smooth.scope, "awaiting-authoritative-Sourcery-publication");
+assert.equal(smooth.scope, "corpus-local verified; awaiting-authoritative-Sourcery-publication");
+assert.match(smooth.comparatorHash, /^sha256:[0-9a-f]{64}$/);
 const component = landscape.currentScientificFindings.find(item => item.id === "learning-health-component-factorial-local-result");
 assert.equal(component.scope, "awaiting-authoritative-Sourcery-publication");
 assert.match(component.factorialHash, /^sha256:[0-9a-f]{64}$/);

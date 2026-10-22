@@ -1,0 +1,43 @@
+{
+  "schema": "worldwright.local-research-assurance-manifest/1",
+  "date": "2026-10-23",
+  "status": "corpus-local continuous assurance; authoritative Sourcery publication pending",
+  "sourceSnapshotId": "bff142b8-1ae9-4f7b-ba2e-9631d2ccfdaf",
+  "chains": [
+    {
+      "id": "smooth-capacity-transition",
+      "evidence": {"path": "evidence/data/worldwright-smooth-capacity-transition-comparator-local-v1.json", "sha256": "22d96023ce225fb7bcbb3cc51f46a8c2be598cd6128d20976a2365672d84c837"},
+      "harness": {"path": "verification/experiments/run_worldwright_smooth_capacity_transition_comparator.mjs", "sha256": "7aae579e9feab8add263cec8806fba3192bc70447e0099a34c85ef2bcd4e8ad3"},
+      "verifier": {"path": "verification/verify/verify_worldwright_smooth_capacity_transition_comparator_local.mjs", "sha256": "1b0e95bef6fad754e3f5cbc534c0471d1389796a301ac223d5e15ef1e5def40c"}
+    },
+    {
+      "id": "learning-health-component-factorial",
+      "evidence": {"path": "evidence/data/worldwright-surplus-learning-component-factorial-local-v1.json", "sha256": "89576cf1f0016f3be2524d5f9ac2b4377fbecd9291b797fb564233842fa78cd8"},
+      "harness": {"path": "verification/experiments/run_worldwright_surplus_learning_component_factorial.mjs", "sha256": "3cfafe8442fab8ae51901432e6bc39cc4fb85af9b1628ae3f9b347c0929fedcc"},
+      "verifier": {"path": "verification/verify/verify_worldwright_surplus_learning_component_factorial_local.mjs", "sha256": "f34b12c0316dcd729e4d7b17bf8e6ba8b5031ee1daf91ee063c130668ddf2af3"}
+    },
+    {
+      "id": "identity-retention-response-surface",
+      "evidence": {"path": "evidence/data/worldwright-identity-retention-response-surface-local-v1.json", "sha256": "0ec59f434a62ae94264ab80e51e5b2ab3a79d39958770a2d105e3971faa9685a"},
+      "harness": {"path": "verification/experiments/run_worldwright_identity_retention_response_surface.mjs", "sha256": "2d9b482e980ead00fd31baacdc5fab92a2378dd3edfff37aed97cd75e8cecf20"},
+      "verifier": {"path": "verification/verify/verify_worldwright_identity_retention_response_surface_local.mjs", "sha256": "da78bc6e69ab5e23198c9dc4385d6f074d5c6afafe3a7074754f78f8a7259718"}
+    }
+  ],
+  "programmeLandscape": {
+    "evidence": {"path": "evidence/data/worldwright-programme-current-landscape-v2.json", "sha256": "3770ebd81992aa076a2cc5e147011bfd11adc8443efa1f226d024abbdf68ba35"},
+    "verifier": {"path": "verification/verify/verify_worldwright_programme_current_landscape_v2.mjs", "sha256": "f4583b074660be297c7c94a9b9b814a4e18bcf7e37bb3da5be39d7277cba3457"}
+  },
+  "separatePhysicsBridge": {
+    "path": "evidence/data/spin23-worldwright-bridge-assurance-manifest-v1.json",
+    "sha256": "d90229090d44356a7d48e2cf79161631e97ac660daf64d007530ea80dd913016",
+    "authorityTransfer": false
+  },
+  "conclusions": {
+    "hashPinnedExperimentChains": 3,
+    "allExperimentsRepeatExactly": true,
+    "allEmpiricalValidationBlocked": true,
+    "continuousCorpusVerificationAvailable": true,
+    "authoritativeSourceryPublicationComplete": false,
+    "physicsAuthorityTransferredToWorldwright": false
+  }
+}

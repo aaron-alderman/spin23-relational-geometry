@@ -1,0 +1,55 @@
+{
+  "schema": "worldwright.smooth-capacity-transition-comparator.local/1",
+  "date": "2026-10-23",
+  "status": "exact corpus-local execution awaiting authoritative Sourcery publication",
+  "provenance": {
+    "laneId": "task/worldwright-kenotic-boundary-app-20261022",
+    "snapshotId": "bff142b8-1ae9-4f7b-ba2e-9631d2ccfdaf",
+    "preregistrationSnapshotId": "e089c544-2cf7-4fef-891b-409695205f6b",
+    "engineObjectHash": "ae160c2cf07eb2ce2b3c11bbb42828cbc27023e41e5f272f1a6f8243cf55fe17",
+    "executionOwnerObjectHash": "2026f456a08802de0e272dd443b15f8a873725cbe4079a16e9b9b02fd6581f7f",
+    "responseSurfaceObjectHash": "8704965ded83fd1130d83f2a72625987d691eb97989b6af3ed4614c69b9d690c"
+  },
+  "design": {
+    "widths": [0, 1, 2, 4],
+    "centerThreshold": 40,
+    "offsets": [-2.5, -1.5, -0.5, 0.5, 1.5, 2.5],
+    "weights": [0.08, 0.12, 0.3, 0.3, 0.12, 0.08],
+    "seeds": [98301, 98302, 98303, 98304, 98305, 98306, 98307, 98308, 98309, 98310],
+    "conditions": 4,
+    "pairedCellsPerCondition": 640,
+    "adjacentDelayContrastsPerCondition": 480,
+    "totalPairedCells": 2560,
+    "modelRunsPerExecution": 5120
+  },
+  "conditions": [
+    {"width": 0, "activeContrasts": 304, "totalAbsoluteChange": 19.6, "negative": 304, "emergent": 0, "l1FromHard": 0, "byMaterial": {"20": 64, "30": 120, "40": 120}},
+    {"width": 1, "activeContrasts": 328, "totalAbsoluteChange": 19.495, "negative": 328, "emergent": 24, "l1FromHard": 0.641, "byMaterial": {"20": 88, "30": 120, "40": 120}},
+    {"width": 2, "activeContrasts": 360, "totalAbsoluteChange": 19.026, "negative": 360, "emergent": 56, "l1FromHard": 1.364, "byMaterial": {"20": 120, "30": 120, "40": 120}},
+    {"width": 4, "activeContrasts": 424, "totalAbsoluteChange": 18.167, "negative": 424, "emergent": 120, "l1FromHard": 3.723, "byMaterial": {"10": 64, "20": 120, "30": 120, "40": 120}}
+  ],
+  "hardActiveContrasts": 304,
+  "hardActivePreservedAtEverySmoothWidth": 304,
+  "hardActiveSignsPreservedAtEverySmoothWidth": 304,
+  "signReversals": 0,
+  "disappearedHardEffects": 0,
+  "hypotheses": {
+    "allHardEffectsPersist": true,
+    "allHardSignsPreserved": true,
+    "narrowWidthConvergence": true
+  },
+  "comparatorHash": "sha256:a72f9b3042a6a19477a85a995c7d6d11b39a37db1cb0bf91652587c4874e4d32",
+  "exactRepeat": true,
+  "interpretation": {
+    "finding": "The diagnosed delay-sensitive learning path is not created solely by a single hard threshold: every hard-active effect persists with the same sign under all three stepped-smooth widths.",
+    "topology": "Smoothing broadens exposure from 304 to 424 active contrasts and reaches initial material 10 at width 4, while total absolute effect declines from 19.6 to 18.167.",
+    "limitation": "The comparator is a six-step monotone approximation, not a proof for every continuous response function or an empirically calibrated capacity law."
+  },
+  "authority": {
+    "empiricalValidation": false,
+    "policyAuthority": false,
+    "moralAuthority": false,
+    "demographicAuthority": false,
+    "physicsAuthority": false
+  }
+}
