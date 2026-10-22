@@ -1,0 +1,53 @@
+{
+  "schema": "worldwright.identity-retention-response-surface.local/1",
+  "date": "2026-10-23",
+  "status": "exact local execution awaiting authoritative Sourcery publication",
+  "provenance": {
+    "laneId": "task/worldwright-kenotic-boundary-app-20261022",
+    "snapshotId": "bff142b8-1ae9-4f7b-ba2e-9631d2ccfdaf",
+    "engineObjectHash": "ae160c2cf07eb2ce2b3c11bbb42828cbc27023e41e5f272f1a6f8243cf55fe17",
+    "executionOwnerObjectHash": "2026f456a08802de0e272dd443b15f8a873725cbe4079a16e9b9b02fd6581f7f",
+    "responseSurfaceObjectHash": "8704965ded83fd1130d83f2a72625987d691eb97989b6af3ed4614c69b9d690c"
+  },
+  "design": {
+    "identitySalience": [0, 0.25, 0.5, 0.75, 1],
+    "initialMaterial": [10, 20, 30, 40],
+    "mediatedDeliveryTick": [2, 5, 8, 11],
+    "urgencyMultiplier": [0, 0.5, 1, 1.5],
+    "seeds": [98311, 98312, 98313, 98314, 98315, 98316, 98317, 98318, 98319, 98320],
+    "conditions": 5,
+    "pairedCellsPerCondition": 640,
+    "totalPairedCells": 3200,
+    "modelRunsPerExecution": 6400,
+    "retentionCriterion": "At least one intervention winner changes between identity salience 0 and 1 on the independently varied response grid."
+  },
+  "conditions": [
+    {"salience": 0, "winnerCounts": {"visible": 359, "mediated": 281, "tie": 0}, "meanRelationalDelta": 4.1565625, "meanOverallDelta": -0.894490304687, "minOverallDelta": -8.410102, "maxOverallDelta": 1.297199},
+    {"salience": 0.25, "winnerCounts": {"visible": 333, "mediated": 307, "tie": 0}, "meanRelationalDelta": 4.6515625, "meanOverallDelta": -0.70441030625, "minOverallDelta": -8.220022, "maxOverallDelta": 1.487279},
+    {"salience": 0.5, "winnerCounts": {"visible": 314, "mediated": 326, "tie": 0}, "meanRelationalDelta": 5.1465625, "meanOverallDelta": -0.514330304687, "minOverallDelta": -8.029942, "maxOverallDelta": 1.677359},
+    {"salience": 0.75, "winnerCounts": {"visible": 295, "mediated": 345, "tie": 0}, "meanRelationalDelta": 5.6415625, "meanOverallDelta": -0.324250304687, "minOverallDelta": -7.839862, "maxOverallDelta": 1.867439},
+    {"salience": 1, "winnerCounts": {"visible": 272, "mediated": 368, "tie": 0}, "meanRelationalDelta": 6.1365625, "meanOverallDelta": -0.134170304687, "minOverallDelta": -7.649782, "maxOverallDelta": 2.057519}
+  ],
+  "winnerChangesFromZero": {"0": 0, "0.25": 26, "0.5": 45, "0.75": 64, "1": 87},
+  "relationalMonotonicViolations": 0,
+  "overallMonotonicViolations": 0,
+  "retentionGate": {
+    "passed": true,
+    "disposition": "retain as a synthetic decision coordinate",
+    "correction": "The earlier zero-winner-change result is specific to four confounded presets and does not generalize to the independently varied response grid."
+  },
+  "gateHash": "sha256:64230155412135b0a2074cdebc96c793d70a7008d5f7188184ec1c6fffa78eb3",
+  "exactRepeat": true,
+  "interpretation": {
+    "finding": "Identity salience is decision-relevant inside the authored model: moving from 0 to 1 changes 87 of 640 classifications and monotonically increases both relational and aggregate mediated-minus-visible margins in every cell.",
+    "limitation": "This is a structural sensitivity result, not independent evidence that the chosen identity construct or its linear coefficient describes real populations. The seeds were unused by the component factorial but occurred in the earlier response-surface partition, so this is not an external held-out validation.",
+    "nextFalsifier": "Compare alternative identity functional forms and test preregistered observable proxies on an external cohort; remove or demote identity if it adds no held-out predictive information there."
+  },
+  "authority": {
+    "empiricalValidation": false,
+    "policyAuthority": false,
+    "moralAuthority": false,
+    "demographicAuthority": false,
+    "physicsAuthority": false
+  }
+}
