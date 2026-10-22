@@ -1,0 +1,42 @@
+{
+  "schema": "spin23.matter-weyl-counterterm-and-copy-anomaly-no-go/1",
+  "date": "2026-10-22",
+  "status": "exact free healthy-field sign and rational Abelian anomaly-minimality result",
+  "weylCoefficients": {
+    "normalization": "Gamma_div contains c C^2/[(4pi)^2 epsilon]",
+    "realScalar": "1/120",
+    "weylFermion": "1/40",
+    "healthyVector": "1/10",
+    "formula": "c=(N0+3Nhalf+12N1)/120",
+    "positiveCone": true,
+    "zeroOnlyForEmptyMatter": true
+  },
+  "scalarR2": {
+    "coefficient": "(1/2)(1/6-xi)^2",
+    "minimalXi": 0,
+    "minimalCoefficient": "1/72",
+    "conformalXi": "1/6",
+    "conformalCoefficient": 0,
+    "weylCoefficientIndependentOfXi": true
+  },
+  "multiplets": {
+    "N1Chiral": {"realScalars": 2, "weylFermions": 1, "vectors": 0, "c": "1/24"},
+    "N1Vector": {"realScalars": 0, "weylFermions": 1, "vectors": 1, "c": "1/8"},
+    "copyVectorAlone": {"realScalars": 0, "weylFermions": 0, "vectors": 1, "c": "1/10"}
+  },
+  "copyAnomaly": {
+    "conditions": ["sum q_i=0", "sum q_i^3=0"],
+    "theorem": "every rational solution with at most four nonzero charges contains opposite pairs; a genuinely chiral solution needs at least five",
+    "fiveChargeWitness": [-9, -5, -1, 7, 8],
+    "witnessLinearSum": 0,
+    "witnessCubicSum": 0,
+    "witnessHasOppositePair": false,
+    "fiveWeylC": "1/8",
+    "withOriginalPseudoscalarC": "2/15"
+  },
+  "scopeBoundary": {
+    "proved": "healthy free or asymptotically free ordinary matter cannot cancel the positive pseudoscalar C^2 determinant",
+    "notProved": "the full gauge-fixed interacting graviton, torsion and ghost determinant cannot supply an opposite contribution"
+  },
+  "decision": "Adding healthy matter, supersymmetric partners, a kinetic copy vector, or a chiral anomaly-free copy sector cannot cancel the Weyl counterterm; all such additions increase its coefficient."
+}
