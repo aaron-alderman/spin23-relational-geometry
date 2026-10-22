@@ -68,7 +68,9 @@ generalization and the `t021` row are now complete, giving
 \(h^{TT}_6=(3a_1^2+42a_1+31)/(4608\pi^2\epsilon)\).  The live profile is
 `t112` is complete and fixes
 \(h^{TT}_2+h^{TT}_3=(-3a_1^2+28a_1+23)/(2304\pi^2\epsilon)\).  The live
-profile is `t011`, which now isolates \(h^{TT}_9\).
+`t011` is complete and gives
+\(h^{TT}_9=-(33a_1^2+74a_1+43)/(576\pi^2\epsilon)\).  The live profile is
+`t001+t122`, which isolates \(2h^{TT}_2+h^{TT}_7\).
 
 ## Backtracking policy
 
