@@ -1,0 +1,26 @@
+{
+  "schema": "spin23.critical-pgt-order-reduced-eft-window/1",
+  "date": "2026-10-22",
+  "matchingBenchmark": "c_C(mu0)=c_R(mu0)=0; finite UV thresholds may change this",
+  "oneLoopMagnitudes": {"bC": "11/60", "bR": "5/36", "denominator": "(4pi)^2", "log": "abs(log(mu/mu0))"},
+  "samples": [
+    {"absLog": 1, "cC": 0.001160971895901787, "cR": 0.0008795241635619599, "lambdaCOverMpl": 29.348718765663016, "lambdaROverMpl": 33.71911070899549},
+    {"absLog": 10, "cC": 0.01160971895901787, "cR": 0.0087952416356196, "lambdaCOverMpl": 9.280879770722064, "lambdaROverMpl": 10.662919051580078},
+    {"absLog": 100, "cC": 0.1160971895901787, "cR": 0.087952416356196, "lambdaCOverMpl": 2.9348718765663016, "lambdaROverMpl": 3.3719110708995483}
+  ],
+  "powerCounting": [
+    "epsilon_C=abs(c_C)*E^2/M_Pl^2 << 1",
+    "epsilon_R=abs(c_R)*E^2/M_Pl^2 << 1",
+    "abs(c_C)/(M_Pl^2 ell^2) << 1 on AdS",
+    "abs(c_R)/(M_Pl^2 ell^2) << 1 on AdS"
+  ],
+  "orderReduction": [
+    "expand only to the declared order in four-derivative Wilson coefficients",
+    "use leading equations to remove higher time derivatives",
+    "do not invert the truncated derivative polynomial as an exact propagator",
+    "retain the leading 2+1 particle content inside the EFT domain"
+  ],
+  "diagnosticWarning": "M_Pl/sqrt(abs(c)) is an order-of-magnitude resummation scale, not a claimed physical pole mass or UV completion",
+  "nextInput": "an observable choice and finite matching data for the complete torsionful operator basis",
+  "decision": "The generated curvature terms are perturbatively controlled below a conservative Planck cutoff for perturbative logarithms, but the result is an order-reduced EFT rather than a radiatively closed fundamental action."
+}
