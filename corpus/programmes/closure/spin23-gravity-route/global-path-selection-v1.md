@@ -27,8 +27,8 @@ exhaustion occurs only when no frontier node is executable.
 
 | ID | Branch | State | Unlocks | Immediate test |
 |---|---|---|---|---|
-| Q | Complete quadratic one-loop shell | executing | E, L, P | construct and trace `t132` packet Hessian |
-| E | Torsion-inclusive order-reduced EFT | queued on Q | P | translate quadratic poles into cutoff/residue bounds |
+| Q | Complete quadratic one-loop shell | completed | E, L, P | all 14 quadratic responses closed |
+| E | Torsion-inclusive order-reduced EFT | executing | P | translate complete poles into validity inequalities |
 | B | Full higher-field beta functional | queued on Q | L, U | count and project (RTT,TT\nabla T,T^4) |
 | L | Enlarged local fundamental action | queued on Q and spectrum audit | U | search RG-tangent healthy coupling surfaces |
 | P | Low-energy phenomenology | queued on E and matching data | — | propagate EFT coefficients to pole observables |
@@ -75,8 +75,11 @@ generalization and the `t021` row are now complete, giving
 `t001` is complete and equals the mixed response, implying
 \(h^{TT}_8=2h^{TT}_1+h^{TT}_2-h^{TT}_3\).  All seven new flat probes are
 closed.  The common-normalization axial rows and exact inverse now close all
-nine \(h^{TT}\) poles.  The live operation is the two-probe curved
-linear-torsion block \((h^{RT}_3,h^{RT}_5)\).
+nine \(h^{TT}\) poles.  Two Bianchi-compatible Fourier probes now also give
+\(h^{RT}_3=3(a_1+1)/(256\pi^2\epsilon)\) and
+\(h^{RT}_5=-(459a_1+491)/(13824\pi^2\epsilon)\).  The complete quadratic
+shell is closed.  The live operation is the torsion-inclusive order-reduced
+EFT running envelope and validity domain.
 
 ## Backtracking policy
 

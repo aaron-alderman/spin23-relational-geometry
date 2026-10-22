@@ -170,11 +170,32 @@ def z3():
     return [[[{} for _ in range(4)] for _ in range(4)] for _ in range(4)]
 
 
-def hessian_sectors(p, pp, q, *, source_pair, include_torsion=True, p_source=P_SOURCE):
+def hessian_sectors(p, pp, q, *, source_pair, include_torsion=True, p_source=P_SOURCE,
+                    f_source=None, f_source_momentum=None):
+    """Return source-graded Hessian sectors.
+
+    ``p_source`` is an independent contorsion wave at momentum ``q``.  The
+    optional symmetric ``f_source`` is a coframe wave; its matching linear
+    Levi-Civita connection is inserted automatically, so it changes the
+    metric/curvature without introducing spurious torsion.  Supplying the
+    two waves at opposite momenta makes the tau=2, zero-momentum coefficient
+    their mixed curved response.
+    """
+    if f_source is None:
+        f_source = np.zeros((4, 4))
+    else:
+        f_source = np.asarray(f_source, dtype=float)
+    if f_source_momentum is None:
+        f_source_momentum = np.asarray(q, dtype=float)
+    else:
+        f_source_momentum = np.asarray(f_source_momentum, dtype=float)
+
     f = z2()
     for a in range(4):
         for b in range(4):
             terms = []
+            if f_source[a, b] != 0:
+                terms.append(source(f_source[a, b], f_source_momentum))
             for i, direction in enumerate(F_DIRS):
                 terms += [quantum(direction[a, b], p, i, "x"), quantum(direction[a, b], pp, i, "y")]
             f[a][b] = padd(*terms)
@@ -197,6 +218,16 @@ def hessian_sectors(p, pp, q, *, source_pair, include_torsion=True, p_source=P_S
     K = z3()
     for mu, a, b in itertools.product(range(4), repeat=3):
         terms = [source(p_source[mu, a, b], q, conjugate=source_pair)]
+        # For a symmetric exponential coframe wave f_ab(r), the linear
+        # torsion-free spin connection is
+        #   omega_{mu ab}=i(r_b f_{a mu}-r_a f_{b mu}).
+        # It cancels de in T^a=de^a+omega^a_b wedge e^b.
+        lc = 1j * (
+            f_source_momentum[b] * f_source[a, mu]
+            - f_source_momentum[a] * f_source[b, mu]
+        )
+        if lc != 0:
+            terms.append(source(lc, f_source_momentum))
         for i, direction in enumerate(K_DIRS, start=10):
             terms += [quantum(direction[mu, a, b], p, i, "x"), quantum(direction[mu, a, b], pp, i, "y")]
         K[mu][a][b] = padd(*terms)
