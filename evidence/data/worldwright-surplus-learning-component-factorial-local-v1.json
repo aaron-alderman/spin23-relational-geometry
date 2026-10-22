@@ -1,0 +1,67 @@
+{
+  "schema": "worldwright.surplus-learning-component-factorial.local/1",
+  "date": "2026-10-23",
+  "status": "exact local execution awaiting authoritative Sourcery publication",
+  "provenance": {
+    "laneId": "task/worldwright-kenotic-boundary-app-20261022",
+    "snapshotId": "bff142b8-1ae9-4f7b-ba2e-9631d2ccfdaf",
+    "engineObjectHash": "ae160c2cf07eb2ce2b3c11bbb42828cbc27023e41e5f272f1a6f8243cf55fe17",
+    "executionOwnerObjectHash": "2026f456a08802de0e272dd443b15f8a873725cbe4079a16e9b9b02fd6581f7f",
+    "responseSurfaceObjectHash": "8704965ded83fd1130d83f2a72625987d691eb97989b6af3ed4614c69b9d690c"
+  },
+  "design": {
+    "transitions": ["hard", "smooth-width-2"],
+    "learningScale": [0, 1],
+    "healthScale": [0, 1],
+    "conditions": 8,
+    "seeds": [98301, 98302, 98303, 98304, 98305, 98306, 98307, 98308, 98309, 98310],
+    "pairedCellsPerCondition": 640,
+    "adjacentDelayContrastsPerCondition": 480,
+    "totalPairedCells": 5120,
+    "modelRunsPerExecution": 10240,
+    "smoothTransition": {
+      "center": 40,
+      "width": 2,
+      "offsets": [-2.5, -1.5, -0.5, 0.5, 1.5, 2.5],
+      "weights": [0.08, 0.12, 0.3, 0.3, 0.12, 0.08]
+    }
+  },
+  "results": {
+    "hard": {
+      "neither": {"activeContrasts": 0, "totalAbsoluteChange": 0},
+      "learningOnly": {"activeContrasts": 304, "totalAbsoluteChange": 19.6},
+      "healthOnly": {"activeContrasts": 0, "totalAbsoluteChange": 0},
+      "both": {"activeContrasts": 304, "totalAbsoluteChange": 19.6},
+      "learningNecessaryContrasts": 304,
+      "healthNecessaryContrasts": 0,
+      "interactionActiveContrasts": 0,
+      "interactionL1": 0,
+      "additiveReproductionCount": 480
+    },
+    "smoothWidth2": {
+      "neither": {"activeContrasts": 0, "totalAbsoluteChange": 0},
+      "learningOnly": {"activeContrasts": 360, "totalAbsoluteChange": 19.026},
+      "healthOnly": {"activeContrasts": 0, "totalAbsoluteChange": 0},
+      "both": {"activeContrasts": 360, "totalAbsoluteChange": 19.026},
+      "learningNecessaryContrasts": 360,
+      "healthNecessaryContrasts": 0,
+      "interactionActiveContrasts": 0,
+      "interactionL1": 0,
+      "additiveReproductionCount": 480
+    }
+  },
+  "factorialHash": "sha256:9e7cf26dcf92f4dbf8cceea65abf25ffb27a693d846a5d2cbe966eaf1c6c8ecd",
+  "exactRepeat": true,
+  "interpretation": {
+    "finding": "Within the frozen v5.1 outcome algebra, the delay-sensitive relational effect is completely reproduced by the learning increment. The health increment changes no relational delay contrast and has no detectable learning-health interaction on this grid.",
+    "consequence": "The bundled name surplus-learning should not be interpreted as evidence for a joint learning-and-health relational mechanism. Health remains an outcome and harm coordinate, but it is not a cause of the diagnosed relational path effect under the present reducer.",
+    "nextFalsifier": "Vary or remove the learning contribution in a held-out grid and test whether a distinct, independently specified health-to-relational path exists before retaining any joint-mechanism language."
+  },
+  "authority": {
+    "empiricalValidation": false,
+    "policyAuthority": false,
+    "moralAuthority": false,
+    "demographicAuthority": false,
+    "physicsAuthority": false
+  }
+}

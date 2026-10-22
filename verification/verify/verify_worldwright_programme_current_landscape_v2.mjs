@@ -15,7 +15,7 @@ const physicsManifest = JSON.parse(await readFile(new URL(
 assert.equal(landscape.schema, "worldwright.programme-current-landscape/2");
 assert.equal(landscape.capabilities.length, 10);
 assert.deepEqual(landscape.capabilities.map(item => item.id), ["L1","L2","L3","L4","L5","L6","L7","L8","L9","L10"]);
-assert.equal(landscape.currentScientificFindings.length, 6);
+assert.equal(landscape.currentScientificFindings.length, 7);
 assert.deepEqual(landscape.nextExecutableQueue.map(item => item.rank), [1,2,3,4,5,6,7]);
 
 const capability = id => landscape.capabilities.find(item => item.id === id);
@@ -29,9 +29,12 @@ assert.ok(capability("L10").evidence.includes("ten-stage"));
 
 const smooth = landscape.currentScientificFindings.find(item => item.id === "smooth-transition-local-result");
 assert.equal(smooth.scope, "awaiting-authoritative-Sourcery-publication");
+const component = landscape.currentScientificFindings.find(item => item.id === "learning-health-component-factorial-local-result");
+assert.equal(component.scope, "awaiting-authoritative-Sourcery-publication");
+assert.match(component.factorialHash, /^sha256:[0-9a-f]{64}$/);
 assert.ok(landscape.completionRule.includes("incomplete"));
 assert.ok(Object.values(landscape.authority).every(value => value === false));
 
 console.log("Worldwright programme current landscape v2: PASS");
-console.log("  10 capability lanes; 6 current findings; 7-item executable queue");
+console.log("  10 capability lanes; 7 current findings; 7-item executable queue");
 console.log("  authoritative gaps retained: rendered use, continuous assurance, empirical mechanism and Spin(2,3) fingerprint");

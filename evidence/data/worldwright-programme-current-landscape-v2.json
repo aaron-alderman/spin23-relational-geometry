@@ -29,8 +29,8 @@
       "id": "L3",
       "name": "sensitivity and ablation",
       "state": "broad-synthetic-coverage",
-      "evidence": "failure strata, 960-cell matched ablation, relational factorial, weight robustness, ablation-effect robustness, 1,280-cell response surface, delay-path decomposition and 7,680-cell threshold/gain factorial",
-      "open": "smooth-transition result must be published in the authoritative lane; stakeholder partial orders remain open"
+      "evidence": "failure strata, 960-cell matched ablation, relational factorial, weight robustness, ablation-effect robustness, 1,280-cell response surface, delay-path decomposition, 7,680-cell threshold/gain factorial and a 5,120-cell learning-health component factorial",
+      "open": "smooth-transition and component-factorial results must be published in the authoritative lane; stakeholder partial orders remain open"
     },
     {
       "id": "L4",
@@ -113,6 +113,12 @@
       "claim": "An exact local execution found complete persistence and sign preservation under widths 1, 2 and 4, with active contrasts broadening from 304 to 328, 360 and 424 and no reversals.",
       "scope": "awaiting-authoritative-Sourcery-publication",
       "preregistrationSnapshotId": "e089c544-2cf7-4fef-891b-409695205f6b"
+    },
+    {
+      "id": "learning-health-component-factorial-local-result",
+      "claim": "Under both hard and width-2 smooth transitions, learning alone reproduces all 304 and 360 active relational delay contrasts and their full magnitudes; health alone and the learning-health interaction contribute zero.",
+      "scope": "awaiting-authoritative-Sourcery-publication",
+      "factorialHash": "sha256:9e7cf26dcf92f4dbf8cceea65abf25ffb27a693d846a5d2cbe966eaf1c6c8ecd"
     }
   ],
   "nextExecutableQueue": [
@@ -128,8 +134,8 @@
     },
     {
       "rank": 3,
-      "id": "learning-health-factorial",
-      "action": "execute the preregistered 2x2 learning-versus-health component factorial under hard and width-2 transitions"
+      "id": "learning-health-factorial-publication",
+      "action": "publish and qualify the exact 2x2 learning-versus-health component factorial and narrow the mechanism language to the supported learning path"
     },
     {
       "rank": 4,
