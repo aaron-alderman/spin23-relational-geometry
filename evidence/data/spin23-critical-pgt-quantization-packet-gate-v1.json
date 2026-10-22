@@ -1,0 +1,30 @@
+{
+  "schema": "spin23.critical-pgt-quantization-packet-gate/1",
+  "date": "2026-10-22",
+  "status": "input-completeness audit for a unique critical-PGT background-field path integral",
+  "requirements": [
+    {"id": "field-background-inventory", "status": "available", "detail": "independent tetrad/connection content, constrained compensator sector and natural torsionless AdS background are identified"},
+    {"id": "critical-coupling-surface", "status": "available", "detail": "critical torsion relations, surviving pseudoscalar curvature square and sign domain are identified"},
+    {"id": "classical-spectrum-constraint-rank", "status": "available", "detail": "2+1 pole count and a nonvanishing massive primary-if-constraint bracket block are established"},
+    {"id": "complete-nonlinear-action", "status": "partial", "detail": "geometric action is displayed, but not frozen in one component/projector normalization sufficient to generate a unique Hessian"},
+    {"id": "gauge-brst-specification", "status": "partial", "detail": "useful classical gauges and a schematic nilpotent differential exist, but no single complete background gauge fermion is supplied"},
+    {"id": "ads-domain", "status": "partial", "detail": "the local AdS background is fixed, but boundary conditions, zero modes and domains for every field and ghost are not"},
+    {"id": "irreducible-projector-dictionary", "status": "missing", "detail": "explicit normalized torsion and curvature projector definitions and completeness relations"},
+    {"id": "background-split-gauge-fermion", "status": "missing", "detail": "exact fluctuation variables, gauge parameters and one gauge fermion for every first-class symmetry"},
+    {"id": "full-ghost-auxiliary-action", "status": "missing", "detail": "complete mixed ghost, antighost and Nakanishi-Lautrup vertices"},
+    {"id": "functional-measure-jacobians", "status": "missing", "detail": "field-space measure and Jacobians for connection/contorsion and irreducible decompositions"},
+    {"id": "second-class-measure", "status": "missing", "detail": "complete covariant Senjanovic determinant or proved first-class conversion; one canonical bracket block is not the full measure"},
+    {"id": "euclidean-contours", "status": "missing", "detail": "continuation and contours for noncompact gauge directions, conformal factor, auxiliaries and multipliers"},
+    {"id": "renormalization-redundancy-convention", "status": "missing", "detail": "regulator, subtraction, full invariant basis and quotient by topology, equations of motion, redefinitions and BRST-exact terms"},
+    {"id": "normal-projection-observable-map", "status": "missing", "detail": "counterterm-to-critical-normal projection plus source or observable matching convention"}
+  ],
+  "counts": {"available": 3, "partial": 3, "missing": 8, "total": 14},
+  "classicallyInvisibleChoices": [
+    "irreducible-projector normalization and recombination",
+    "background gauge parameters and connection gauge condition",
+    "connection versus contorsion variables and Jacobian",
+    "second-class measure implementation and Euclidean multiplier contour"
+  ],
+  "logicalConsequence": "The repository fixes the classical critical surface and spectrum but not a unique off-shell Hessian, ghost operator or beta vector.",
+  "reopenCondition": "Supply and validate all fourteen quantization-packet classes, then compute the complete gauge-fixed one-loop divergent functional and project it onto the enlarged critical normal space."
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "spin23.critical-pgt-normal-beta-information-rank/1",
+  "date": "2026-10-22",
+  "status": "exact information-rank and computation-contract audit for the displayed critical normal space",
+  "normalBasis": [
+    "2 beta_t1+beta_t2",
+    "beta_t1+2 beta_t3",
+    "beta_C2",
+    "beta_R2",
+    "beta_c4",
+    "beta_c5",
+    "beta_c6",
+    "beta_zq"
+  ],
+  "displayedNormalDimension": 8,
+  "unconditionalKnownVectors": [
+    {
+      "name": "torsion-pseudoscalar C2 determinant",
+      "components": [0, 0, "1/120", 0, 0, 0, 0, 0]
+    },
+    {
+      "name": "minimally coupled torsion-pseudoscalar R2 determinant",
+      "components": [0, 0, 0, "1/72", 0, 0, 0, 0]
+    }
+  ],
+  "knownInformationRank": 2,
+  "unresolvedDisplayedDimension": 6,
+  "conditionalData": [
+    "fermion matter generates a transverse-axial direction but changes the field content",
+    "charged propagating copy matter generates f_q^2 but is absent from the exact constrained pure-bosonic target"
+  ],
+  "notTransferable": [
+    "pure metric-gravity one-loop coefficients",
+    "beta functions of a different noncritical PGT action",
+    "illustrative functional-RG or polynomial fixed-point flows",
+    "flat-background scalar truncations without the full AdS gauge and constraint complex"
+  ],
+  "operatorClosureWarning": {
+    "publishedSimplerPgtResult": "generates all other FF terms, DTDT, FDT, and higher curvature powers",
+    "implication": "the eight displayed normal directions are only the first closure shell; exact critical cancellations must be computed rather than assumed"
+  },
+  "fixedSurfaceBranches": [
+    {"name": "no gauge-sector cancellation", "verdict": "sparse target surface fails"},
+    {"name": "accidental one-loop cancellation", "verdict": "does not establish six remaining directions, higher loops or operator closure"},
+    {"name": "nonzero local C2 fixed point", "verdict": "ordinary resummation reintroduces an opposite-residue massive spin-two pole"},
+    {"name": "EFT treatment", "verdict": "healthy low-energy 2+1 poles retained, but no fundamental finite-action closure"}
+  ],
+  "requiredCalculation": [
+    "full independent tetrad, Lorentz connection, compensator, multiplier and optional copy-connection Hessian",
+    "nilpotent diffeomorphism, Lorentz, broken Spin(2,3) and copy BRST gauge fixing",
+    "Faddeev-Popov, Jacobian and second-class determinant factors",
+    "Riemann-Cartan AdS heat-kernel or equivalent determinant",
+    "complete local divergence basis",
+    "topological, BRST-exact and field-redefinition quotient",
+    "projection onto every critical normal",
+    "new pole, residue and constraint audit at nonzero fixed-point couplings",
+    "scheme-stable critical exponents and observable matching"
+  ],
+  "decision": "Current exact quantum data have rank two in an eight-dimensional displayed normal space, leaving six directions unresolved before the larger operator-closure problem. The irreducible missing object is the full gauge-fixed one-loop divergent functional of the exact critical action."
+}
