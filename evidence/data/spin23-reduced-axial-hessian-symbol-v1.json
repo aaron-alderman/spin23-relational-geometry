@@ -1,0 +1,22 @@
+{
+  "schema": "spin23.reduced-axial-hessian-symbol/1",
+  "date": "2026-10-22",
+  "quadraticLagrangian": "A*s^2/2+bX*(Ds)^2/2+lambda4*(pbar^2*(Ds)^2+4*(pbar.s)*Xbar*Ds+Xbar^2*s^2)",
+  "definitions": {
+    "mu2": "A+2*lambda4*Xbar^2",
+    "Z": "bX+2*lambda4*pbar^2",
+    "c": "4*lambda4*Xbar"
+  },
+  "frozenJetSymbol": "K_mn=mu2*delta_mn+Z*k_m*k_n+i*c*(pbar_m*k_n-k_m*pbar_n)",
+  "determinant": "mu2^2*(mu2*(mu2+Z*k^2)-c^2*(k^2*pbar^2-(k.pbar)^2))",
+  "secondOrderPrincipalRank": 1,
+  "propagatingAxialChannels": 1,
+  "directionalSchurCoefficient": "Zeff(khat)=Z-c^2*pbar_perp^2/mu2",
+  "uniformEuclideanPositivity": [
+    "mu2>0",
+    "Z-c^2*pbar^2/mu2>0"
+  ],
+  "divergenceFreeDeterminant": "A^3*(A+(bX+2*lambda4*pbar^2)*k^2)",
+  "decision": "The axial symbol has one propagating divergence channel; nonzero background divergence creates a directional auxiliary Schur boundary.",
+  "remaining": "covariant coupled metric-axial one-loop trace with nonzero background divergence and five-response projection"
+}
