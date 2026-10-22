@@ -1,0 +1,61 @@
+{
+  "schema": "spin23.two-copy-multiplicity-symmetry-classification/1",
+  "date": "2026-10-22",
+  "status": "exact linear-rank and degree-count classification for minimal copy symmetries",
+  "basisFreeConstraint": {
+    "rankOne": "epsilon^{IJ}Y_I^[A Y_J^B]=0",
+    "norm": "delta^{IJ}Y_I.Y_J=-ell^2",
+    "localSolution": "Y_I^A=n_I V^A with n.n=1 and V.V=-ell^2",
+    "warning": "det Gram=0 is weaker in indefinite signature and does not by itself force rank(Y)<=1"
+  },
+  "linearRanks": {
+    "rawVectorComponents": 10,
+    "bivectorConstraintRank": 4,
+    "normConstraintRank": 1,
+    "brokenSpin23GaugeRank": 4,
+    "copyAngleTangentDimension": 1,
+    "localSO2GaugeRank": 1
+  },
+  "branches": [
+    {
+      "name": "fixed multiplicity spurion",
+      "ray": "imposed",
+      "extraPhysicalDegrees": 0,
+      "verdict": "target spectrum retained but the ray is not derived"
+    },
+    {
+      "name": "global SO(2)",
+      "ray": "spontaneously selected on S1 modulo the discrete stabilizer",
+      "extraPhysicalDegrees": 1,
+      "extraMode": "massless Goldstone scalar",
+      "verdict": "fails the exact 2+1 target spectrum"
+    },
+    {
+      "name": "local SO(2) with auxiliary connection",
+      "ray": "gauge",
+      "extraPhysicalDegrees": 0,
+      "condition": "copy gauge kinetic coefficient Z_q=0",
+      "verdict": "passes classically but Z_q=0 is not protected because f_q^2 is gauge invariant"
+    },
+    {
+      "name": "local SO(2) with ordinary kinetic connection",
+      "ray": "gauge",
+      "extraPhysicalDegrees": 3,
+      "extraMode": "massive copy vector for positive kinetic sign, ghost for negative sign",
+      "verdict": "fails the exact 2+1 target spectrum"
+    },
+    {
+      "name": "exchange Z2",
+      "ray": "even and odd eigenlines are canonical",
+      "extraPhysicalDegrees": 5,
+      "condition": "without a multiplier constraint and before specifying kinetic degeneracies",
+      "verdict": "makes W=0 a consistent stationary truncation but does not remove W"
+    }
+  ],
+  "anomalyAudit": {
+    "pureCompensatorSector": "real bosonic fields have no perturbative chiral SO(2) anomaly",
+    "matterExtension": "chiral copy charges would require vanishing cubic and mixed gauge-gravitational U(1)-type anomaly sums",
+    "availableChargeAssignment": false
+  },
+  "decision": "Only a local SO(2) quotient removes the ray without a fixed projector, but retaining the 2+1 spectrum requires the unprotected auxiliary surface Z_q=0; all other minimal branches leave an extra mode or an imposed constraint."
+}
