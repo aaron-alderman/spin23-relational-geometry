@@ -1,0 +1,29 @@
+{
+  "schema": "spin23.mixed-curved-operator-reduction/1",
+  "date": "2026-10-22",
+  "maps": {
+    "J": "(J_P h)_alpha=(h/2) P_alpha-h_alpha_mu P^mu",
+    "Q": "Q_P h=P^mu(nabla^nu h_mu_nu-(1/2)nabla_mu h)",
+    "D": "D s=nabla_mu s^mu",
+    "defect": "E_P(h)=(h/2)nabla.P-h^mu_nu nabla_mu P_nu"
+  },
+  "identity": "D J_P=-Q_P+E_P",
+  "zeroFirstJet": {
+    "condition": "nabla_mu P_nu=0 at the matching point",
+    "mixedBlock": "V_sh=K_s J_P",
+    "axialKernel": "K_s=A I+bX Ddagger D",
+    "metricInsertion": "U_hh=(A/2)Jdagger J+bX Qdagger Q",
+    "reducedTrace": "Gamma_parallel=-(A/4) Tr(H_h^-1 Jdagger J)"
+  },
+  "integrability": {
+    "condition": "[nabla_mu,nabla_nu]P_rho=R_rho_sigma_mu_nu P^sigma",
+    "constantCurvatureCommonKernelDimension": 0,
+    "productH2CommonKernelDimension": 0,
+    "requiredInsertionOrder": "R P^2"
+  },
+  "remainingData": [
+    "de Donder graviton a1 with Jdagger J insertion",
+    "mixed graviton-scalar two-resolvent commutator form factor"
+  ],
+  "decision": "The nonminimal divergence-channel contribution cancels at frozen first jet, but curvature integrability produces an independent RP^2 defect. The two mixed curvature coefficients cannot be assigned from an ordinary minimal determinant alone."
+}
