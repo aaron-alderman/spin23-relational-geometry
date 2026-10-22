@@ -57,11 +57,11 @@ try an equivalent covariant symbolic implementation before declaring an
 external-tool boundary.  The source vertices and flat zero-source
 34-component propagator are complete.  The logarithmic pole is nonzero at
 the regular witness point.  A converged twelve-point coupling scan selects
-the rational candidate
+the rational surface
 \(h^{TT}_1=(18a_1^2+3a_1-7)/(4608\pi^2\epsilon)\), independent of
-\(B=\kappa b_X\).  The live operation is to prove or falsify that candidate
-by analytic external-momentum differentiation before advancing to the other
-six flat rows.
+\(B=\kappa b_X\).  Analytic external-momentum differentiation recovers it
+direction by direction.  The live operation is to parameterize the source
+tensor and advance the same engine to the other six flat rows.
 
 ## Backtracking policy
 
