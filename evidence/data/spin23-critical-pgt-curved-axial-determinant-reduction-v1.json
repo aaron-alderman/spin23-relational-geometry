@@ -1,0 +1,24 @@
+{
+  "schema": "spin23.critical-pgt-curved-axial-determinant-reduction/1",
+  "date": "2026-10-22",
+  "domain": "torsionless Riemannian background with packet-v1 zero-mode prescription",
+  "contorsionShift": {
+    "definition": "omega=omega_LC(e)+K",
+    "jacobianShape": "block triangular with identity diagonal",
+    "coordinateDeterminant": 1
+  },
+  "niehYan": "d(e_a wedge T^a)=T_a wedge T^a-R_ab wedge e^a wedge e^b",
+  "quadraticAxialOperator": "K1=A I+B Ddagger D, with D S=nabla_mu S^mu and Ddagger=-nabla",
+  "determinantIdentity": "det_1(A I+B Ddagger D)=A^(N1-N0) B^N0 det_0'(-nabla^2+A/B), with kernel factors treated separately",
+  "physicalOperator": {"type": "minimal scalar Laplace type", "massSquared": "A/B", "multiplicity": 1},
+  "derivativeFactorization": [
+    "Einstein graviton plus diffeomorphism ghost determinant",
+    "one minimal massive pseudoscalar determinant"
+  ],
+  "notIncluded": [
+    "complete field-dependent 34-constraint Faddeev-Senjanovic determinant",
+    "general torsionful-background off-shell Hessian",
+    "ultralocal algebraic factors before combination with the constrained measure"
+  ],
+  "decision": "The torsionless curved axial determinant is exactly the minimal 0-minus scalar determinant times explicit auxiliary factors. The remaining irreducible loop uncertainty is the complete second-class measure and its algebraic-factor combination."
+}

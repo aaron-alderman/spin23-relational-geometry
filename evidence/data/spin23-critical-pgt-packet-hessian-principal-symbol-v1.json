@@ -1,0 +1,33 @@
+{
+  "schema": "spin23.critical-pgt-packet-hessian-principal-symbol/1",
+  "date": "2026-10-22",
+  "background": "torsionless Euclidean Einstein background; principal symbol evaluated in a local orthonormal frame",
+  "bosonicFields": {
+    "symmetricCoframe": {"components": 10, "secondOrder": 10, "algebraic": 0},
+    "axialConnection": {"components": 4, "secondOrder": 1, "algebraic": 3},
+    "traceConnection": {"components": 4, "secondOrder": 0, "algebraic": 4},
+    "tensorConnection": {"components": 16, "secondOrder": 0, "algebraic": 16}
+  },
+  "bosonicTotals": {"components": 34, "secondOrderRank": 11, "algebraicConnectionDirections": 23},
+  "ghostFields": {
+    "diffeomorphism": {"components": 4, "order": 2, "backgroundOperator": "-nabla^2 delta_mu^nu-R_mu^nu"},
+    "lorentz": {"components": 6, "order": 0, "backgroundOperator": "invertible algebraic antisymmetric-coframe FP matrix"},
+    "brokenSpin23": {"components": 4, "order": 0, "backgroundOperator": "ell delta_a^b"}
+  },
+  "axialKernel": {
+    "matrix": "K_mu_nu=A delta_mu_nu+B p_mu p_nu",
+    "conditions": ["A>0", "B>0"],
+    "transverseEigenvalue": "A",
+    "transverseMultiplicity": 3,
+    "longitudinalEigenvalue": "A+B p^2",
+    "determinant": "A^3*(A+B*p^2)=A^3*B*(p^2+A/B)",
+    "massSquared": "A/B",
+    "physicalPoles": 1
+  },
+  "reductionRule": {
+    "method": "irreducible connection split followed by exact algebraic Schur complements",
+    "retain": ["determinant of every eliminated algebraic block", "irreducible-decomposition Jacobians", "differential and algebraic ghost determinants", "complete second-class measure"],
+    "forbidden": "applying a minimal Laplace heat-kernel formula directly to the unreduced 34-component mixed-order Hessian"
+  },
+  "nextGate": "derive the full curved Einstein-AdS block Hessian and determine whether the measure-preserving reduced operator is Laplace type"
+}

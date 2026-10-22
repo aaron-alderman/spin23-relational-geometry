@@ -1,0 +1,22 @@
+{
+  "schema": "spin23.critical-pgt-second-class-measure-factorization/1",
+  "date": "2026-10-22",
+  "branch": "massive 0-minus, torsionless background, p_pi=0, m!=0",
+  "constraintGroups": {
+    "Pa": {"dimensions": [3,3,3,3], "total": 12, "role": "primary constraints with invertible primary-primary bracket block A"},
+    "Pb": {"dimensions": [1,5,5], "total": 11, "role": "remaining primary constraints paired algebraically with secondaries"},
+    "S": {"dimensions": [1,5,5], "total": 11, "role": "secondary constraints"}
+  },
+  "totalSecondClassConstraints": 34,
+  "blockMatrix": "Delta=[[A,0,C^T],[0,0,E],[-C,-E^T,F]]",
+  "primaryBlock": {"generalDeterminant": "J^-12*((p_pi/(6J))^2+m^2)^6", "backgroundDeterminant": "J^-12*m^12"},
+  "pairingBlockEigenclasses": [
+    {"value": "-6*a0*m/(a1*J)", "multiplicity": 1, "source": "B.3"},
+    {"value": "a0*ell^2/J", "multiplicity": 5, "source": "B.6"},
+    {"value": "1/J", "multiplicity": 5, "source": "B.9"}
+  ],
+  "crossDerivativeFamilies": ["B.1","B.4","B.5","B.7","B.8"],
+  "determinantIdentity": "det(Delta)=det(A)*det(E)^2, independent of C and F",
+  "measureDecision": "sqrt(det Delta)=sqrt(det A)*abs(det E) is ultralocal on the torsionless massive background and cannot contribute curvature-square or derivative-torsion counterterms",
+  "scopeExclusions": ["generic torsionful backgrounds","m=0 constraint-class boundary","boundary and zero-mode factors","nonperturbative constraint-class changes"]
+}

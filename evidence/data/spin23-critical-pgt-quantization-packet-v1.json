@@ -1,0 +1,61 @@
+{
+  "schema": "spin23.critical-pgt-quantization-packet/1",
+  "date": "2026-10-22",
+  "branch": "fixed-spurion constrained two-copy branch",
+  "specification": "corpus/programmes/closure/spin23-gravity-route/quantization-packet-v1.md",
+  "frozenClasses": [
+    "field-background-inventory",
+    "critical-coupling-surface",
+    "classical-spectrum-constraint-rank",
+    "complete-nonlinear-action",
+    "gauge-brst-specification",
+    "ads-domain",
+    "irreducible-projector-dictionary",
+    "background-split-gauge-fermion",
+    "full-ghost-auxiliary-action",
+    "functional-measure-jacobians",
+    "euclidean-contours",
+    "renormalization-redundancy-convention",
+    "normal-projection-observable-map"
+  ],
+  "partialClasses": ["second-class-measure"],
+  "counts": {"frozen": 13, "partial": 1, "total": 14},
+  "torsionProjectors": {
+    "componentConvention": "T_abc=-T_bac in Euclidean validation signature",
+    "trace": "v_b=sum_a T_aba",
+    "axial": "s_d=(1/6) epsilon_dabc T_abc",
+    "vectorPiece": "V_abc=(delta_ac v_b-delta_bc v_a)/3",
+    "axialPiece": "A_abc=-epsilon_abcd s_d",
+    "tensorPiece": "Q=T-V-A",
+    "dimensions": [4, 4, 16]
+  },
+  "gaugeRanks": {"diffeomorphism": 4, "lorentz": 6, "brokenSpin23": 4, "total": 14},
+  "normalMatrix": [
+    [2,1,0,0,0,0,0,0,0,0],
+    [1,0,2,0,0,0,0,0,0,0],
+    [0,0,0,1,0,0,0,0,0,0],
+    [0,0,0,0,1,0,0,0,0,0],
+    [0,0,0,0,0,0,1,0,0,0],
+    [0,0,0,0,0,0,0,1,0,0],
+    [0,0,0,0,0,0,0,0,1,0],
+    [0,0,0,0,0,0,0,0,0,1]
+  ],
+  "euclideanDefinition": {
+    "domain": "smooth compact boundaryless quotient of H4",
+    "zeroModes": "primed determinants plus collective coordinates",
+    "conformalContour": "imaginary steepest descent",
+    "multiplierContours": "imaginary Fourier contours imposing delta functionals",
+    "pseudoscalarContour": "real for A>0 and B>0"
+  },
+  "renormalization": {
+    "regulator": "dimensional regularization d=4-2epsilon",
+    "subtraction": "background-field MS-bar",
+    "ordering": "record full local divergence before topological, BRST-exact, equation-of-motion or field-redefinition quotient"
+  },
+  "secondClassBoundary": {
+    "known": "one massive 0-minus primary-if-constraint bracket block is nonvanishing",
+    "missing": "complete list of 34 second-class constraints and their field-dependent bracket operator in packet conventions",
+    "forbiddenShortcut": "do not identify the known sub-block determinant with the complete Faddeev-Senjanovic factor"
+  },
+  "decision": "Packet v1 uniquely fixes construction of the gauge-fixed Lagrangian Hessian and its reduced principal symbols. A complete off-shell one-loop functional additionally requires the full second-class measure or a proved BV/BFV-equivalent conversion."
+}
