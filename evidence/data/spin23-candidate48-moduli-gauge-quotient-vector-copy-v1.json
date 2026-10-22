@@ -1,0 +1,43 @@
+{
+  "schema": "spin23-candidate48-moduli-gauge-quotient-reinterpretation/1",
+  "title": "Candidate 48 has no full U(2) multiplicity gauge symmetry to remove the second-vector data",
+  "claim": {
+    "status": "gauge-escape-falsified",
+    "statement": "Admissible gauge transformations quotient at most two of candidate 48's five exact moduli at generic points, leaving three physical flat directions; the independent eta circle is not gauge.",
+    "implication": "The corrected second vector-5 multiplicity cannot be dismissed as a pure U(2) gauge redundancy using the established candidate gauge algebra."
+  },
+  "results": {
+    "moduliDimension": 5,
+    "canonicalGaugeIntersectionRank": 1,
+    "canonicalPhysicalDimension": 4,
+    "genericGaugeIntersectionRanks": [
+      2
+    ],
+    "genericPhysicalDimensions": [
+      3
+    ],
+    "maximumGaugeProjectionOntoEtaCoordinate": 3.1639179519958306e-15,
+    "genericSamples": 8
+  },
+  "interpretation": [
+    "The U(2) parameterization of the vacuum family is larger than the actual admissible gauge orbit.",
+    "At generic points two U(2)-type tangent combinations are gauge, while two further U(2)-type combinations plus eta remain physical.",
+    "Because v655's rank-six half-scalar/half-vector invariants persist over the whole family, gauge quotienting cannot reveal a hidden compensator point.",
+    "A new multiplicity gauge symmetry would have to be added and checked for anomalies/dynamics rather than inferred from the existing flat family."
+  ],
+  "falsifiers": [
+    "An enlarged admissible gauge algebra acting on the completed module could alter the quotient and must be explicitly constructed.",
+    "The audit is local in moduli space; global discrete identifications can further quotient but cannot remove continuous local dimensions.",
+    "The link to the vector-copy issue is dimensional and structural, not a direct identification of every physical modulus with relative vector orientation."
+  ],
+  "nextBranches": [
+    "Test whether the full 168-dimensional completed module admits an enlarged multiplicity gauge algebra compatible with the scalar ansatz.",
+    "Construct explicit V2=cV1 constraints and check whether they are first- or second-class.",
+    "Treat the remaining three moduli as physical fields and compute their coupling to the proposed gravitational connection."
+  ],
+  "evidence": {
+    "localScript": ".scratch_spin23_candidate48_joint_double_quotient.py",
+    "protocol": "spin23-candidate48-joint-double-quotient/1",
+    "note": "Existing gauge-quotient computation reinterpreted after the corrected 2x5 carrier decomposition."
+  }
+}

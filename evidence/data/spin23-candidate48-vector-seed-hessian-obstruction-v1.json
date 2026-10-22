@@ -1,0 +1,99 @@
+{
+  "schema": "spin23-candidate48-vector-seed-hessian/1",
+  "title": "Candidate 48 quadratic response splits both seeded Lorentz vectors 2+2",
+  "claim": {
+    "status": "falsified-at-fixed-vacuum",
+    "statement": "The canonical candidate-48 vacuum does not admit a direct SO(5)-equivariant quadratic extension from either seeded SO(4) vector sector, because each four-vector Hessian block is anisotropic.",
+    "retainedStructure": "The adjoint-10 and symmetric-traceless-14 seed sectors are mutually orthogonal in both the field Gram form and Hessian, and have identical spectra."
+  },
+  "setup": {
+    "carrier": {
+      "lpair": [
+        [
+          8,
+          10
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "rpair": [
+        [
+          10,
+          2
+        ],
+        [
+          7,
+          5
+        ]
+      ]
+    },
+    "candidate": "48",
+    "scalarCoordinateDimension": 102,
+    "completedModule": "94*1 + 10*5 + 10 + 14",
+    "seedSectors": [
+      {
+        "irrep": "10",
+        "so5Casimir": 1.5,
+        "so4Component": "4",
+        "rank": 4
+      },
+      {
+        "irrep": "14",
+        "so5Casimir": 2.5,
+        "so4Component": "4",
+        "rank": 4
+      }
+    ],
+    "method": "Project the original 102-coordinate scalar span into each completed-module SO(4) vector, take the field-Gram metric-adjoint image as its canonical seed preimage, and restrict the exact candidate-48 Hessian."
+  },
+  "results": {
+    "coordinateGramOffDiagonalMaximum": 0,
+    "adjoint10VectorEigenvalues": [
+      0.01297716240952423,
+      0.012977162409524295,
+      0.5753674769009858,
+      0.5753674769009862
+    ],
+    "symmetric14VectorEigenvalues": [
+      0.012977162409524177,
+      0.012977162409524191,
+      0.5753674769009872,
+      0.5753674769009874
+    ],
+    "sectorMeanCoefficient": 0.2941723196552554,
+    "isotropyResidual": 0.5623903144914624,
+    "crossSectorGramFrobeniusNorm": 8.791124313478715e-16,
+    "crossSectorHessianFrobeniusNorm": 2.5503472072430675e-16,
+    "combinedSpectrum": [
+      0.01297716240952413,
+      0.012977162409524222,
+      0.01297716240952423,
+      0.012977162409524276,
+      0.5753674769009854,
+      0.5753674769009862,
+      0.5753674769009868,
+      0.5753674769009869
+    ]
+  },
+  "interpretation": [
+    "The exact 2+2 degeneracy is consistent with residual symmetry smaller than Lorentz SO(4), rather than numerical instability.",
+    "Absence of 10-to-14 mixing satisfies one necessary Schur condition, but isotropy within each SO(4) vector fails.",
+    "Any full SO(5) quadratic completion must either change/average the vacuum, add symmetry-restoring response terms, or accept spontaneous Lorentz breaking."
+  ],
+  "falsifiers": [
+    "The no-go is overturned if a field-Gram-equivalent seed embedding yields scalar four-by-four Hessian blocks.",
+    "A moduli or compact-orbit average that remains a legitimate single-vacuum local theory and makes both blocks scalar would evade the fixed-vacuum obstruction.",
+    "The result does not test Hessian coefficients on the unseeded 6, 1, and 9 descendants; passing seed isotropy would still be only necessary, not sufficient."
+  ],
+  "nextBranches": [
+    "Sample the candidate-48 finite moduli and average the transported seed Hessians.",
+    "Resolve the 2+2 eigenspaces under the canonical U(1) stabilizer.",
+    "Test minimal symmetry-restoring counterterms constrained to vanish on the certified radial KKT data."
+  ],
+  "evidence": {
+    "localScript": ".scratch_spin23_candidate48_vector_seed_hessian.py",
+    "protocol": "spin23-candidate48-vector-seed-hessian/1"
+  }
+}

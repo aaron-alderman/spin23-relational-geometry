@@ -1,0 +1,62 @@
+{
+  "schema": "spin23-candidate48-omitted-so5-response-repair/1",
+  "title": "Omitted SO(5) response can repair each vector seed separately but not with one stationary coupling",
+  "claim": {
+    "status": "single-coupling-no-go",
+    "statement": "The equal-weight response from the nine SO(5) generators orthogonal to candidate 48's residual U(1) admits a positive isotropizing weight for each seeded irrep separately, but no common weight repairs both, and the response moves the vacuum at first order.",
+    "implication": "A viable symmetry-restoring completion needs irrep-selective operators and a simultaneous vacuum/KKT re-solve."
+  },
+  "setup": {
+    "omittedGeneratorDimension": 9,
+    "counterterm": "lambda times sum over omitted compact generators of ||[G,Phi]||^2",
+    "retainedGenerator": "the normalized residual U(1) stabilizer",
+    "seedIrreps": [
+      "10",
+      "14"
+    ]
+  },
+  "results": {
+    "vacuumGradientEuclideanNormPerUnitWeight": 9.797958971132715,
+    "vacuumGradientMaximumAbsoluteComponentPerUnitWeight": 5.656854249492383,
+    "sectors": [
+      {
+        "irrep": "10",
+        "fixedPlaneShiftPerUnitWeight": 0.42857142857142794,
+        "rotatingPlaneShiftPerUnitWeight": 2.499999999999999,
+        "requiredRepairWeight": 0.2714987725131193,
+        "correctedEigenvalue": 0.6917240936923226,
+        "correctedIsotropyResidual": 8.353356309117508e-16
+      },
+      {
+        "irrep": "14",
+        "fixedPlaneShiftPerUnitWeight": 0.714285714285715,
+        "rotatingPlaneShiftPerUnitWeight": 4.500000000000005,
+        "requiredRepairWeight": 0.1485559321298202,
+        "correctedEigenvalue": 0.681478856993716,
+        "correctedIsotropyResidual": 7.875811922279257e-16
+      }
+    ],
+    "requiredWeightDifference": 0.12294284038329911,
+    "commonNonnegativeRepairExists": false
+  },
+  "interpretation": [
+    "The sign is favorable: omitted SO(5) directions preferentially stiffen the light charged planes.",
+    "Different Casimir content of the 10 and 14 produces different response slopes, so one universal omitted-generator coefficient cannot cancel the same initial gap in both.",
+    "Even an irrep-specific Hessian repair is not stationary at the original vacuum without compensating deformations.",
+    "The next minimal algebraic extension is a polynomial in the completed-module SO(5) Casimir that separates eigenvalues 3/2 and 5/2, accompanied by a re-solved radial stationarity system."
+  ],
+  "falsifiers": [
+    "A universal repair would require the two inferred weights to agree within numerical tolerance; they differ by 0.12294.",
+    "A fixed-vacuum repair would require zero added gradient; its norm is 9.798 per unit weight.",
+    "This no-go applies to the equal-weight nine-generator commutator response, not to general SO(5)-equivariant operators."
+  ],
+  "nextBranches": [
+    "Build Casimir-polynomial projectors selecting the 10 and 14 completed-module sectors.",
+    "Solve the two-coupling seed isotropy equations and determine the compensating radial source needed for stationarity.",
+    "Test positivity on the descendant 6, 1, and 9 sectors before accepting the repair."
+  ],
+  "evidence": {
+    "localScript": ".scratch_spin23_candidate48_vector_seed_hessian.py",
+    "protocol": "spin23-candidate48-vector-seed-hessian/1"
+  }
+}

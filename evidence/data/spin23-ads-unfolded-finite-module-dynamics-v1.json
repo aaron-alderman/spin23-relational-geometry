@@ -1,0 +1,55 @@
+{
+  "schema": "spin23-ads-unfolded-finite-module/1",
+  "title": "Finite 10 and 14 descendant modules form integrable AdS unfolded toys but carry no local propagation",
+  "claim": {
+    "status": "verified-with-dynamical-no-go",
+    "statement": "The corrected SO(2,3) adjoint-10 and symmetric-traceless-14 descendants support exact finite-dimensional covariantly constant AdS4 unfolded systems, but those systems are topological/rigid rather than propagating field theories.",
+    "researchConsequence": "The programme should retain these modules as kinematic seeds while adding an infinite Weyl module or differential gauge-form sector for genuine local gravity."
+  },
+  "setup": {
+    "realForm": "SO(2,3) fundamental metric diag(-1,+1,+1,+1,-1)",
+    "symmetricPair": "so(2,3)=so(1,3)+m4",
+    "unfoldedEquation": "D C = (d + omega^{ab} R(J_ab) + e^a R(P_a)) C = 0",
+    "modules": [
+      "adjoint 10",
+      "symmetric traceless rank-2 14"
+    ]
+  },
+  "results": {
+    "symmetricPairBracketProjectionResidual": 3.1401849173675503e-16,
+    "adjoint10": {
+      "branching": "6+4",
+      "representationResidual": 3.8459253727671276e-16,
+      "integrabilityResidual": 3.8459253727671276e-16,
+      "vectorToBivectorRank": 6,
+      "bivectorToVectorRank": 4
+    },
+    "symmetric14": {
+      "branching": "1+4+9",
+      "representationResidual": 1.6587776440920599e-15,
+      "integrabilityResidual": 4.052509462565858e-15,
+      "vectorToScalarPlusTensorRank": 10,
+      "scalarPlusTensorToVectorRank": 4
+    }
+  },
+  "interpretation": [
+    "The immediate descendant maps found in v645 are the component form of a bona fide SO(2,3) representation connection.",
+    "The noncommuting AdS translations close onto Lorentz generators, so D^2 vanishes when AdS curvature cancels the vierbein wedge term.",
+    "The vector seeds generate every Lorentz descendant in one translation step and are generated back in one step.",
+    "Finite-dimensional covariantly constant zero-forms have only finite initial data and no arbitrary local wave data; representation closure alone therefore cannot supply propagating gravitons."
+  ],
+  "falsifiers": [
+    "Any failure of the representation commutator [R(P_a),R(P_b)]=R([P_a,P_b]) would invalidate integrability; residuals are below 5e-15.",
+    "Local propagation would require solutions with arbitrary functional initial data modulo constraints; the finite parallel-section equation does not provide this.",
+    "The no-propagation statement does not exclude dynamics after coupling to gauge forms, interactions, boundaries, or infinite modules."
+  ],
+  "nextBranches": [
+    "Construct the minimal SO(2,3) gauge one-form sector and linearized curvature equations around AdS4.",
+    "Build the first levels of an infinite Weyl module seeded by the Lorentz symmetric-traceless tensor.",
+    "Test whether candidate-48 scalar seeds can source the gauge curvature consistently without violating the residual-U(1) Hessian constraints."
+  ],
+  "evidence": {
+    "localScript": "spin23-relational-geometry/verification/construct/construct_spin23_ads_unfolded_finite_modules.py",
+    "protocol": "spin23-ads-unfolded-finite-module/1"
+  }
+}

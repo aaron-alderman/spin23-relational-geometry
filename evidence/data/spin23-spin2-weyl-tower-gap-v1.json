@@ -1,0 +1,81 @@
+{
+  "schema": "spin23-spin2-weyl-tower-gap/1",
+  "title": "Spin-2 propagation requires a new form degree and an infinite Weyl tower",
+  "claim": {
+    "status": "verified-gap",
+    "statement": "The finite candidate-48 scalar completion cannot be reinterpreted directly as the propagating AdS4 spin-2 system: its adjoint-10 zero-form has the wrong Lorentz branching and form degree, and generic waves require an infinite Weyl-derivative module.",
+    "constructiveDirection": "Add an SO(2,3)-adjoint one-form connection and a Weyl zero-form tower, treating the existing finite modules only as sources, order parameters, or auxiliary sectors."
+  },
+  "results": {
+    "tensorConstraintAudit": {
+      "ambientRank4": 256,
+      "riemannConstraintRank": 236,
+      "riemannDimension": 20,
+      "riemannPlusRicciConstraintRank": 246,
+      "weylDimension": 10
+    },
+    "representationComparison": {
+      "candidateAdjoint10": "Lorentz bivector 6 + vector 4, zero-form",
+      "spin2Weyl10": "chiral rank-4 spinor 5 plus conjugate 5, zero-form curvature",
+      "gravityConnection": "SO(2,3) adjoint-valued one-form"
+    },
+    "weylTower": [
+      {
+        "level": 0,
+        "realDimension": 10,
+        "cumulative": 10
+      },
+      {
+        "level": 1,
+        "realDimension": 24,
+        "cumulative": 34
+      },
+      {
+        "level": 2,
+        "realDimension": 42,
+        "cumulative": 76
+      },
+      {
+        "level": 3,
+        "realDimension": 64,
+        "cumulative": 140
+      },
+      {
+        "level": 4,
+        "realDimension": 90,
+        "cumulative": 230
+      },
+      {
+        "level": 8,
+        "realDimension": 234,
+        "cumulative": 930
+      }
+    ]
+  },
+  "minimalExtension": {
+    "connection": "a = 1/2 δω^{ab} J_ab + ell^{-1} h^a P_a",
+    "torsion": "Dbar h^a + δω^a_b wedge ebar^b = 0",
+    "curvature": "Dbar δω^{ab} + ell^{-2}(ebar^a wedge h^b - ebar^b wedge h^a) = ebar_c wedge ebar_d C^{ab,cd}",
+    "tower": "C^{ab,cd} plus all on-shell covariant derivatives"
+  },
+  "interpretation": [
+    "Equality of dimensions 10 is not equality of representations: the candidate adjoint and Weyl curvature have incompatible Lorentz content.",
+    "Form degree is dynamical data. An adjoint zero-form is a matter/auxiliary module; an adjoint one-form can be a Cartan gauge connection.",
+    "Truncating the Weyl tower at a highest level imposes extra derivative constraints and yields finite-type/Killing data rather than generic wave solutions.",
+    "The 9-component symmetric-traceless descendant may naturally couple to a metric perturbation, but it is not the 10-component on-shell Weyl curvature."
+  ],
+  "falsifiers": [
+    "A direct identification would require an explicit Lorentz intertwiner between 6+4 and Weyl 5+5; none can exist between inequivalent branchings.",
+    "A finite propagation claim would require arbitrary functional initial data surviving a finite covariant-constancy chain.",
+    "Composite or emergent one-forms remain possible, but must be constructed and shown to transform with the correct inhomogeneous gauge law."
+  ],
+  "nextBranches": [
+    "Search for a composite adjoint one-form built from spacetime derivatives of candidate scalar order parameters.",
+    "Test linearized gauge transformations and torsion elimination in a minimal Palatini toy.",
+    "Construct the level-0 to level-1 Weyl translation map and verify why truncation at level 0 fails on generic data."
+  ],
+  "evidence": {
+    "localScript": "spin23-relational-geometry/verification/analyze/analyze_spin23_spin2_weyl_tower_gap.py",
+    "protocol": "spin23-spin2-weyl-tower-gap/1"
+  }
+}

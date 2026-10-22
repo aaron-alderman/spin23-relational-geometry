@@ -1,0 +1,64 @@
+{
+  "protocol": "spin23-original-seed-lorentz-sector-support/1",
+  "status": "metric-sector-indirect-only",
+  "question": "Which SO(4), hence analytically continued Lorentz, pieces of the completed 10 and 14 irreps are already present in the original candidate48 scalar ansatz?",
+  "adjoint10": {
+    "overallOriginalProjectionRank": 4,
+    "overallEnergy": 24.000000000000014,
+    "components": [
+      {
+        "sector": "vector4",
+        "so4Casimir": 0.75,
+        "dimension": 4,
+        "seedRank": 4,
+        "seedEnergy": 24.000000000000004
+      },
+      {
+        "sector": "bivector6",
+        "so4Casimir": 1,
+        "dimension": 6,
+        "seedRank": 0,
+        "seedEnergy": 4.916757102149018e-27
+      }
+    ]
+  },
+  "symmetricTraceless14": {
+    "overallOriginalProjectionRank": 4,
+    "overallEnergy": 24.000000000000004,
+    "components": [
+      {
+        "sector": "scalar1",
+        "so4Casimir": 0,
+        "dimension": 1,
+        "seedRank": 0,
+        "seedEnergy": 8.169597656015564e-30
+      },
+      {
+        "sector": "vector4",
+        "so4Casimir": 0.75,
+        "dimension": 4,
+        "seedRank": 4,
+        "seedEnergy": 23.999999999999996
+      },
+      {
+        "sector": "symmetricTracelessRank2_9",
+        "so4Casimir": 2,
+        "dimension": 9,
+        "seedRank": 0,
+        "seedEnergy": 5.002175536742474e-27
+      }
+    ]
+  },
+  "conclusion": [
+    "The original 102-field ansatz directly seeds two distinct four-vector sectors in the active-active block.",
+    "Neither the Lorentz bivector6 nor the metric-like symmetric-traceless9 is present directly.",
+    "The bivector, scalar, and rank-two sectors arise only after completing the SO(5) orbit; after real-form continuation they are symmetry descendants of the seeded vectors."
+  ],
+  "researchDirection": "Treat the generated rank-two9 as an emergent response descendant and test whether its quadratic dynamics is induced consistently from the vector seed, rather than calling it a fundamental metric field.",
+  "falsifier": "The indirect-only conclusion fails if an independent projector finds seed rank above zero or projection energy above 1e-10 in the bivector6, scalar1, or rank-two9 sectors.",
+  "nextBranches": [
+    "Compute explicit odd-generator maps from each seeded vector4 into the scalar1, bivector6, and rank-two9 descendants.",
+    "Measure whether the generated rank-two quadratic form has the Fierz-Pauli trace constraint.",
+    "Test if the two seeded vector4 sectors are coupled or orthogonal under the candidate48 Hessian."
+  ]
+}

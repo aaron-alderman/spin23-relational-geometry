@@ -1,0 +1,60 @@
+{
+  "schema": "spin23-candidate48-compensator-projection/1",
+  "title": "Candidate 48 fails the vector-compensator alignment criterion despite containing the right carrier representation",
+  "claim": {
+    "status": "current-vacuum-no-go",
+    "statement": "The canonical candidate-48 vacuum does not realize a Lorentz-preserving MacDowell-Mansouri compensator in its singlet-to-active cross block.",
+    "reason": "The VEV has rank six, equally splits between Lorentz-scalar and Lorentz-vector directions of 2x5, and retains only a one-dimensional compact stabilizer."
+  },
+  "setup": {
+    "activeCarrier": "2 x vector5",
+    "lorentzBranching": "2 x (scalar1 + vector4)",
+    "vacuumBlock": "174 singlet states to 10 active states",
+    "criterion": "support entirely in the two SO(4)-scalar axes and rank-one vector alignment"
+  },
+  "results": {
+    "crossBlockShape": [
+      174,
+      10
+    ],
+    "crossBlockRank": 6,
+    "nonzeroSingularValues": [
+      0.707106781186548,
+      0.7071067811865476,
+      0.5,
+      0.5,
+      0.49999999999999994,
+      0.4999999999999999
+    ],
+    "totalEnergy": 1.9999999999999991,
+    "lorentzScalarEnergy": 0.9999999999999996,
+    "lorentzVectorEnergy": 0.9999999999999993,
+    "lorentzScalarFraction": 0.5,
+    "lorentzVectorFraction": 0.4999999999999999,
+    "compactSo5StabilizerDimension": 1,
+    "compactSo4StabilizerDimension": 1,
+    "projectionReconstructionResidual": 8.320232330362386e-16,
+    "passesScalarDirection": false,
+    "passesRankOne": false
+  },
+  "interpretation": [
+    "The abstract presence of 2x5 in the carrier is necessary but not sufficient for a compensator phase.",
+    "Half of the current cross-block order lies in Lorentz-vector directions, so the established SO(4) is explicitly/spontaneously reduced to the residual U(1).",
+    "Rank six is far from the aligned rank-one pattern required by the two-vector MacDowell-Mansouri toy.",
+    "A gravity-oriented branch must search for or engineer a different stationary vacuum rather than relabel candidate 48."
+  ],
+  "falsifiers": [
+    "A basis-independent compensator identification must recover a six-dimensional Lorentz stabilizer; this cross block has dimension one.",
+    "A different vacuum on the candidate moduli could change the scalar/vector split and must be tested separately.",
+    "Other carrier blocks or composite constructions may supply a compensator and are not excluded."
+  ],
+  "nextBranches": [
+    "Optimize over the exact candidate-48 moduli for maximum Lorentz-scalar fraction and stabilizer enhancement.",
+    "Add an invariant alignment potential for the two vector copies and re-solve stationarity.",
+    "Search other robust candidates for a rank-one timelike vector-5 cross-block VEV."
+  ],
+  "evidence": {
+    "localScript": ".scratch_spin23_candidate48_compensator_projection.py",
+    "protocol": "spin23-candidate48-compensator-projection/1"
+  }
+}

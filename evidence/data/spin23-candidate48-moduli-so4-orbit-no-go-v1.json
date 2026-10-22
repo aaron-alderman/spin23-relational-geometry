@@ -1,0 +1,67 @@
+{
+  "schema": "spin23-candidate48-moduli-so4-orbit/1",
+  "title": "Candidate 48 exact moduli are not the compact SO(4)/U(1) orbit",
+  "claim": {
+    "status": "falsified",
+    "statement": "The five-parameter candidate-48 finite moduli cannot be identified locally with the five-dimensional compact SO(4) orbit of the canonical vacuum in the Spin(2,3) embedding.",
+    "consequence": "The v646 2+2 Hessian anisotropy is not repaired by interpreting the known finite moduli as Goldstone coordinates of Lorentz breaking."
+  },
+  "setup": {
+    "vacuum": "candidate 48 canonical U(2)=I, eta=0",
+    "moduliTangents": "four U(2) seed tangents in orbit (4,8), plus the eta tangent",
+    "comparisonTangents": "commutators of the six compact even SO(4) generators with the same vacuum",
+    "ambientRepresentation": "real-packed 184x184 Hermitian matrices"
+  },
+  "results": {
+    "moduliParameterCount": 5,
+    "moduliTangentRank": 5,
+    "moduliTangentSingularValues": [
+      3.1622776601678524,
+      2.23606797749979,
+      2.23606797749979,
+      2.23606797749979,
+      2.23606797749979
+    ],
+    "so4GeneratorDimension": 6,
+    "so4OrbitTangentRank": 5,
+    "so4VacuumStabilizerDimension": 1,
+    "so4OrbitTangentSingularValues": [
+      0.7071067811865476,
+      0.5000000000000002,
+      0.5000000000000001,
+      0.5000000000000001,
+      0.4999999999999999,
+      5.401178124954084e-16
+    ],
+    "principalCosines": [
+      0.6324555320336761,
+      4.633068896119275e-34,
+      0,
+      0,
+      0
+    ],
+    "projectorDifferenceFrobeniusNorm": 3.03315017762062,
+    "localIdentification": false
+  },
+  "interpretation": [
+    "Matching dimension five is accidental and insufficient: the principal-angle audit shows the tangent spaces are different.",
+    "At least four independent exact-modulus directions are orthogonal to the compact SO(4) orbit at the canonical vacuum.",
+    "The known flat family therefore contains non-Goldstone or accidental moduli relative to this SO(4).",
+    "A formal SO(4) Reynolds projection of the v646 eight-dimensional seed Hessian gives 0.2941723196552552 times the identity, but this average is not integration over the candidate's known moduli and is not a single-vacuum local Hessian."
+  ],
+  "falsifiers": [
+    "A different, explicitly justified map from finite-moduli parameters to the same carrier vacuum could overturn the tangent comparison if its Jacobian spans the SO(4) commutator orbit.",
+    "A different compact SO(4) embedding inside SO(5) may have a different orbit; this result concerns the SO(4) selected by the established Spin(2,3) continuation.",
+    "Numerical equality would require all five principal cosines to approach one; the observed spectrum is far from that threshold."
+  ],
+  "nextBranches": [
+    "Classify the five moduli tangents under the residual U(1) and compare them with the five compact-orbit tangents.",
+    "Test whether the accidental moduli become lifted by an SO(5)-completion counterterm.",
+    "Construct a two-order-parameter toy separating moduli-space averaging from compact-orbit averaging."
+  ],
+  "evidence": {
+    "localScript": ".scratch_spin23_candidate48_moduli_so4_orbit.py",
+    "protocol": "spin23-candidate48-moduli-so4-orbit/1",
+    "reportingNote": "Projector distance evaluated from principal angles to avoid materializing a 67712-square projector."
+  }
+}

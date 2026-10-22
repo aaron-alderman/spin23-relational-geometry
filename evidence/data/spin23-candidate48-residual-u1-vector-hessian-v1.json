@@ -1,0 +1,81 @@
+{
+  "schema": "spin23-candidate48-residual-u1-seed-resolution/1",
+  "title": "Residual U(1) exactly explains candidate 48's duplicated 2+2 vector-seed Hessian split",
+  "claim": {
+    "status": "verified",
+    "statement": "The v646 anisotropy in both seeded SO(4) vectors is precisely the decomposition into the fixed and rotating planes of the unique compact U(1) generator that stabilizes the canonical candidate-48 vacuum and preserves the 102-coordinate scalar ansatz.",
+    "implication": "Candidate 48 is quadratically covariant under the residual U(1), but not under the compact Lorentz SO(4) required for direct Spin(2,3) completion."
+  },
+  "results": {
+    "scalarSpanClosureResidual": 8.519348308966918e-16,
+    "sectors": [
+      {
+        "irrep": "10",
+        "u1ActionSingularValues": [
+          0.49999999999999967,
+          0.4999999999999996,
+          5.328119886220644e-17,
+          2.6999203918878347e-17
+        ],
+        "actionRank": 2,
+        "fixedPlaneDimension": 2,
+        "rotatingPlaneDimension": 2,
+        "actionClosureResidual": 6.772018657404611e-16,
+        "actionSkewResidual": 3.397331337295977e-18,
+        "hessianInvarianceResidual": 2.840458722646277e-16,
+        "fixedPlaneHessianEigenvalues": [
+          0.5753674769009856,
+          0.5753674769009861
+        ],
+        "rotatingPlaneHessianEigenvalues": [
+          0.012977162409524208,
+          0.012977162409524224
+        ]
+      },
+      {
+        "irrep": "14",
+        "u1ActionSingularValues": [
+          0.5000000000000002,
+          0.5,
+          9.242204667736163e-17,
+          3.263410945222958e-17
+        ],
+        "actionRank": 2,
+        "fixedPlaneDimension": 2,
+        "rotatingPlaneDimension": 2,
+        "actionClosureResidual": 6.321948643497891e-16,
+        "actionSkewResidual": 3.0672078663983996e-17,
+        "hessianInvarianceResidual": 1.0467026194524412e-16,
+        "fixedPlaneHessianEigenvalues": [
+          0.5753674769009871,
+          0.5753674769009873
+        ],
+        "rotatingPlaneHessianEigenvalues": [
+          0.012977162409524224,
+          0.01297716240952424
+        ]
+      }
+    ],
+    "duplicatedChargePattern": true
+  },
+  "interpretation": [
+    "The twofold degeneracies are representation-theoretic U(1) multiplets rather than numerical accidents.",
+    "The charged rotating plane is much lighter than the neutral fixed plane by a factor of about 44.34 in the Hessian coefficient.",
+    "The identical pattern in the inequivalent SO(5) irreps 10 and 14 suggests a shared carrier-level origin, while their zero cross-Hessian respects the irrep separation.",
+    "A symmetry-restoring deformation must close a gap of 0.562390314491462 per vector sector without inducing forbidden 10-to-14 mixing."
+  ],
+  "falsifiers": [
+    "Failure of scalar-span closure under the stabilizer would invalidate the charge assignment; the measured residual is 8.52e-16.",
+    "A nonzero U(1)-invariance residual would invalidate the plane interpretation; both are below 3e-16.",
+    "The result concerns the canonical vacuum and the established residual generator; other vacua can rotate the charge planes."
+  ],
+  "nextBranches": [
+    "Construct the minimal positive semidefinite projector counterterm that raises only the charged plane to the neutral coefficient.",
+    "Test whether that counterterm can arise from the omitted nine SO(5) response generators or necessarily requires completed scalar descendants.",
+    "Classify the five accidental moduli under the same U(1)."
+  ],
+  "evidence": {
+    "localScript": ".scratch_spin23_candidate48_vector_seed_hessian.py",
+    "protocol": "spin23-candidate48-vector-seed-hessian/1"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "spin23-candidate48-moduli-compensator-scan/1",
+  "title": "Candidate 48's entire known moduli family retains the rank-six half-scalar half-vector obstruction",
+  "claim": {
+    "status": "moduli-family-no-go",
+    "statement": "No sampled point of the exact candidate-48 U(2) x S1 moduli approaches a Lorentz-preserving vector compensator; rank, stabilizer, norm, and scalar/vector split are invariant across the family to numerical precision.",
+    "consequence": "The MacDowell-Mansouri compensator branch requires leaving the known candidate-48 flat family."
+  },
+  "sampleDesign": {
+    "canonical": 1,
+    "etaGrid": 32,
+    "haarU2UniformEta": 256,
+    "total": 289
+  },
+  "results": {
+    "scalarFractionRange": [
+      0.49999999999999956,
+      0.5000000000000003
+    ],
+    "vectorFractionRange": [
+      0.4999999999999997,
+      0.5000000000000004
+    ],
+    "totalCrossEnergyRange": [
+      1.9999999999999971,
+      1.9999999999999998
+    ],
+    "crossBlockRanks": [
+      6
+    ],
+    "compactSo5StabilizerDimensions": [
+      1
+    ],
+    "smallestNonzeroCrossSingularRange": [
+      0.49999999999999944,
+      0.5000000000000002
+    ],
+    "compensatorFound": false
+  },
+  "interpretation": [
+    "The exact-looking invariants strongly suggest that the known finite moduli rotate internal orientation without changing the Lorentz-scalar/vector balance or cross-block singular spectrum.",
+    "No local optimization inside this family can produce rank one or a six-generator Lorentz stabilizer if these invariants hold analytically.",
+    "The predominantly accidental moduli identified in v647 do not include a hidden compensator direction.",
+    "A compensator phase must arise from a different stationary branch, added alignment interactions, or another candidate."
+  ],
+  "falsifiers": [
+    "An analytic proof of variation in these invariants, or a counterexample moduli point, would overturn the sampling inference.",
+    "The scan covers the established U(2) x S1 parameterization, not undiscovered disconnected moduli.",
+    "A compensator built from a different block or composite observable is not excluded."
+  ],
+  "nextBranches": [
+    "Derive the exact singular spectrum and one-half projection fractions symbolically from the candidate seed matrices.",
+    "Search alternative robust candidate vacua for cross-block rank-one Lorentz-scalar support.",
+    "Construct an alignment deformation and follow the bifurcation from the U(1) phase to a Lorentz phase."
+  ],
+  "evidence": {
+    "localScript": ".scratch_spin23_candidate48_moduli_compensator_scan.py",
+    "protocol": "spin23-candidate48-moduli-compensator-scan/1"
+  }
+}

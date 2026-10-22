@@ -1,0 +1,41 @@
+{
+  "protocol": "spin23-ads-coset-descendant-map-surjectivity/1",
+  "status": "explicit-toy-map-verified",
+  "setup": "Standard compact SO(5) model with SO(4) generators h=L_ij and coset generators m=L_i5; analytic continuation of m gives the AdS4 translation sector of so(2,3).",
+  "adjoint10": {
+    "branching": "6+4",
+    "seed": "complete vector4",
+    "forwardMap": "m4 tensor seed4 -> bivector6 by commutator",
+    "forwardImageRank": 6,
+    "targetDimension": 6,
+    "outsideTargetResidual": 3.1401849173675503e-16,
+    "reverseMap": "m4 tensor bivector6 -> vector4",
+    "reverseImageRank": 4,
+    "reverseTargetDimension": 4,
+    "reverseOutsideTargetResidual": 3.1401849173675503e-16
+  },
+  "symmetricTraceless14": {
+    "branching": "1+4+9",
+    "seed": "complete vector4",
+    "forwardMap": "m4 tensor seed4 -> scalar1 + symmetricTraceless9",
+    "forwardImageRank": 10,
+    "targetDimension": 10,
+    "outsideTargetResidual": 7.994666660370688e-16,
+    "reverseMap": "m4 tensor (scalar1 + tensor9) -> vector4",
+    "reverseImageRank": 4,
+    "reverseTargetDimension": 4,
+    "reverseOutsideTargetResidual": 1.5700924586837752e-16
+  },
+  "conclusion": [
+    "A full four-vector seed generates the entire bivector complement of the adjoint10 in one coset action.",
+    "A full four-vector seed generates the entire scalar-plus-rank-two complement of the symmetric-traceless14 in one coset action.",
+    "The indirect rank-two sector found in v644 is therefore neither arbitrary nor remote: it is the immediate AdS-translation descendant of the seeded vector."
+  ],
+  "physicalCaution": "Surjective representation maps establish symmetry organization only; they do not supply kinetic equations, gauge constraints, or propagating graviton degrees of freedom.",
+  "falsifier": "The result fails if the standard five-vector realization gives forward ranks below 6 or 10, or nonzero leakage outside the declared SO(4) target sectors.",
+  "nextBranches": [
+    "Push the candidate48 Hessian through these maps to test whether descendant quadratic coefficients obey SO(2,3) ratios.",
+    "Check whether a gauge quotient can reduce the rank-two9 to the two helicities of a massless graviton.",
+    "Construct a minimal first-order unfolded toy system linking vector seed, bivector, scalar, and rank-two descendants."
+  ]
+}

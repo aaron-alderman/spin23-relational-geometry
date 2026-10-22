@@ -1,0 +1,116 @@
+{
+  "protocol": "spin23-active-state-two-vector-irrep-correction/1",
+  "status": "material-representation-correction",
+  "corrects": [
+    "v632 interpretation of the 10-dimensional active state sector as one adjoint",
+    "v640 label of the 50-dimensional cross sector as five adjoints",
+    "v641 irrep source of the invariant signature, though its aggregate (44,30) remains correct",
+    "v642 Lorentz multiplicity counts"
+  ],
+  "evidence": {
+    "activeStateDimension": 10,
+    "so5Casimir": {
+      "eigenvalue": 1,
+      "multiplicity": 10
+    },
+    "fullSo5CommutantDimension": 4,
+    "so4CasimirClusters": [
+      {
+        "eigenvalue": 0,
+        "multiplicity": 2
+      },
+      {
+        "eigenvalue": 0.75,
+        "multiplicity": 8
+      }
+    ],
+    "deduction": "A four-dimensional commutant certifies multiplicity two; the SO(4) branching 2*(1+4) identifies two copies of the SO(5) vector5."
+  },
+  "correctedCarrierDecomposition": "174*1 + 2*5",
+  "correctedCompletedModuleDecomposition": [
+    {
+      "irrep": "1",
+      "multiplicity": 94,
+      "totalDimension": 94,
+      "source": "inert singlet-singlet block"
+    },
+    {
+      "irrep": "5",
+      "multiplicity": 10,
+      "totalDimension": 50,
+      "source": "singlet-active cross block",
+      "casimir": 1,
+      "so4Branching": "10*(1+4)"
+    },
+    {
+      "irrep": "10",
+      "multiplicity": 1,
+      "totalDimension": 10,
+      "source": "active-active block",
+      "casimir": 1.5,
+      "so4Branching": "6+4"
+    },
+    {
+      "irrep": "14",
+      "multiplicity": 1,
+      "totalDimension": 14,
+      "source": "active-active block",
+      "casimir": 2.5,
+      "so4Branching": "1+4+9"
+    }
+  ],
+  "dimensionCheck": 168,
+  "realFormSignature": {
+    "vector5Each": {
+      "positive": 3,
+      "negative": 2
+    },
+    "adjoint10": {
+      "positive": 6,
+      "negative": 4
+    },
+    "symmetricTraceless14": {
+      "positive": 8,
+      "negative": 6
+    },
+    "nontrivialTotal": {
+      "positive": 44,
+      "negative": 30
+    },
+    "comment": "The aggregate signature agrees with v641 by coincidence despite the corrected irrep content."
+  },
+  "correctedLorentzContent": [
+    {
+      "type": "scalar",
+      "multiplicity": 105,
+      "totalDimension": 105
+    },
+    {
+      "type": "vector4",
+      "multiplicity": 12,
+      "totalDimension": 48
+    },
+    {
+      "type": "bivector6",
+      "multiplicity": 1,
+      "totalDimension": 6
+    },
+    {
+      "type": "symmetricTraceless9",
+      "multiplicity": 1,
+      "totalDimension": 9
+    }
+  ],
+  "originalSeedEvidence": {
+    "adjoint10ProjectionRank": 4,
+    "adjoint10ProjectionEnergy": 24.000000000000014,
+    "symmetricTraceless14ProjectionRank": 4,
+    "symmetricTraceless14ProjectionEnergy": 24.000000000000004
+  },
+  "falsifier": "The correction fails if an independent commutant calculation gives dimension other than four or if restriction to the six-dimensional even SO(4) fails to yield two singlets plus two four-vectors.",
+  "nextBranches": [
+    "Resolve the original seed's projection rank within the 1+4+9 pieces of the 14.",
+    "Construct explicit multiplicity-space projectors for the two carrier vector5 copies.",
+    "Recompute all claims that used the word adjoint for the carrier state sector."
+  ]
+}
