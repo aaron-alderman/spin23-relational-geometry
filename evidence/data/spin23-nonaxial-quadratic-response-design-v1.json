@@ -1,0 +1,41 @@
+{
+  "schema": "spin23.nonaxial-quadratic-response-design/1",
+  "date": "2026-10-22",
+  "status": "exact minimal full-rank design for the nine missing quadratic responses",
+  "torsionConvention": "t_abc=-t_cba and nabla_l T_abc=k_l*t_abc",
+  "axialRows": [
+    [6, -6, 0, 0, 0, 0, 0, 0, 0],
+    [6, -6, 0, 2, -2, 2, -2, 0, 0]
+  ],
+  "generator": {
+    "recurrence": "u_next=(1664525*u+1013904223) mod 2^32",
+    "componentMap": "value=(u mod 7)-3",
+    "ordering": "four k components, then a<c and b=0..3 for t_abc with t_cba=-t_abc",
+    "seeds": [1, 2, 3, 4, 5, 6, 7]
+  },
+  "additionalRows": [
+    [2670, 1020, 570, 882, 318, 536, 343, 127, 400],
+    [2772, 429, 1111, 393, 190, 526, 67, 143, 324],
+    [2508, 924, 154, 477, 244, 1046, 221, -95, 4],
+    [1330, 469, 735, 391, 117, 388, 154, 171, 361],
+    [4278, 1955, 805, 1200, 446, 1676, 776, 636, 100],
+    [3528, 540, 1332, 1310, -283, 1606, 618, 908, 1],
+    [1488, 678, 522, 270, 157, 508, 151, 154, 25]
+  ],
+  "ttDesign": {
+    "basis": ["HTT1", "HTT2", "HTT3", "HTT4", "HTT5", "HTT6", "HTT7", "HTT8", "HTT9"],
+    "rank": 9,
+    "determinant": "-125421711372731400000"
+  },
+  "rtDesign": {
+    "basis": ["HRT3", "HRT5"],
+    "probes": [
+      {"ricci": [3, -1, -1, -1], "div1T": [1, 0, 0, 0], "row": [3, 0]},
+      {"ricci": [1, 1, 1, 1], "div1T": [1, 1, 1, 1], "row": [4, 16]}
+    ],
+    "rank": 2,
+    "determinant": 48
+  },
+  "newEvaluations": {"flat": 7, "curved": 2, "total": 9},
+  "decision": "The nine-response lower bound is attained by an explicit full-rank source design; the remaining boundary is evaluation of the packet Hessian and ghosts on these backgrounds."
+}

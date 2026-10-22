@@ -1,5 +1,11 @@
 # The Quadratic Dimension-Four Shell Has Nine Unresolved Response Directions
 
+> **Design update (claim 1677):** the lower bound is attained.  Seven
+> explicit flat nonaxial torsion jets augment the two axial rows to rank nine
+> in the derivative-torsion basis, and two curved linear-torsion probes have
+> rank two in the Bianchi-reduced mixed basis.  Background selection is
+> closed; the remaining work is evaluation of the packet determinants.
+
 **Date:** 22 October 2026
 
 **Gates:** A1, A2, A4, A6, A7, A8 and A11
