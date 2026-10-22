@@ -80,4 +80,5 @@ console.log("Spin(2,3) flat mixed axial polarization vertex: PASS");
 console.log("  complete h-P-s vertex: symmetric and momentum-conserving");
 console.log("  constant longitudinal limit: -(A+bX*k^2)*T");
 console.log("  flat metric seagull poles: zero");
-console.log("  next operation: q^2 projection of one mixed polarization integral");
+console.log("  subsequent q^2 projection: longitudinal pole only");
+console.log("  remaining: curved responses");

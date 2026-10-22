@@ -149,10 +149,11 @@ flat metric responses; no additional diagram or source vertex is missing.
 
 ## Remaining calculation
 
-The next operation is a standard dimensionally regulated expansion of the
-displayed two-propagator integral through \(q^2\).  Once its two projections
-are added to claim 1663, the complete flat pair \((\delta B,\delta Z)\) is
-closed.  Only the two curved responses then remain.
+Claim 1665 performs the dimensionally regulated expansion of the displayed
+integral through \(q^2\).  Its longitudinal pole is
+\(-\kappa A/(4\pi^2\epsilon)\), while its transverse pole vanishes.  After
+adding claim 1663, the complete flat pair \((\delta B,\delta Z)\) is closed.
+Only the two curved responses remain.
 
 ## Reproduction
 

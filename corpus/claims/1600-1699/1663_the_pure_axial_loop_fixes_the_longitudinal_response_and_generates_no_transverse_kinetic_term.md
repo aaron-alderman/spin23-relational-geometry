@@ -133,9 +133,9 @@ metric--axial loops can still populate it.
 
 The pure reduced-axial block is now exhausted through quadratic background
 order and two derivatives.  Its contributions to \((\delta A,\delta B,
-\delta Z)\) are all fixed.  Completing the flat derivative responses
-requires the external-momentum expansion of the mixed graviton--axial
-bubble.  Curved backgrounds are still required for
+\delta Z)\) are all fixed.  Claim 1665 subsequently evaluates the mixed
+graviton--axial external-momentum bubble and completes the flat derivative
+responses.  Curved backgrounds are still required for
 \((\delta\xi_R,\delta\xi_{\rm Ric})\).
 
 ## Reproduction

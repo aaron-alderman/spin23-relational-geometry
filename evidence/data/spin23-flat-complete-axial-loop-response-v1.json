@@ -1,0 +1,22 @@
+{
+  "schema": "spin23.flat-complete-axial-loop-response/1",
+  "date": "2026-10-22",
+  "mixedPolarizationReduction": {
+    "longitudinalNumeratorQ2": "-A^2*q^2",
+    "transverseNumeratorQ2": 0,
+    "commonPoleFactor": "4*kappa/(A*16*pi^2*epsilon)"
+  },
+  "mixedResponses": {
+    "deltaA_h-p": 0,
+    "deltaB_h-p": "-kappa*A/(4*pi^2*epsilon)",
+    "deltaZ_h-p": 0
+  },
+  "completeCriticalFlatResponses": {
+    "deltaA": "kappa*A^2/(24*pi^2*epsilon*bX*(a1+1))",
+    "deltaB": "-kappa*A/(24*pi^2*epsilon)*(6+1/(a1+1))",
+    "deltaZ": 0
+  },
+  "closedResponses": ["deltaA", "deltaB", "deltaZ"],
+  "remainingResponses": ["deltaXiR", "deltaXiRic"],
+  "decision": "All flat quadratic axial responses are closed; only the two curvature responses remain."
+}

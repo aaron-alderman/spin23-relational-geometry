@@ -47,4 +47,5 @@ console.log("Spin(2,3) pure axial two-derivative loop response: PASS");
 console.log("  mass pole agrees with constant-background determinant");
 console.log("  longitudinal response deltaB: fixed");
 console.log("  pure-axial transverse response deltaZ: zero");
-console.log("  next operation: mixed graviton-axial external-momentum expansion");
+console.log("  subsequent mixed response: deltaB=-kappa*A/(4*pi^2*epsilon), deltaZ=0");
+console.log("  remaining: curved responses");
