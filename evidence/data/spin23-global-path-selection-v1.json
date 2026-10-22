@@ -1,0 +1,26 @@
+{
+  "schema": "spin23.global-path-selection/1",
+  "date": "2026-10-22",
+  "terminalStates": ["completed", "rejected", "externally-blocked"],
+  "nodes": [
+    {"id":"Q","name":"complete quadratic one-loop shell","state":"executing","prerequisites":[],"unlocks":["E","B","L"],"localExecutable":true,"priority":{"decisionImpact":5,"inputReadiness":5,"exactVerifiability":5,"cost":5}},
+    {"id":"E","name":"torsion-inclusive order-reduced EFT","state":"queued","prerequisites":["Q"],"unlocks":["P"],"localExecutable":false,"priority":{"decisionImpact":5,"inputReadiness":3,"exactVerifiability":4,"cost":3}},
+    {"id":"B","name":"higher-field beta functional","state":"queued","prerequisites":["Q"],"unlocks":["L"],"localExecutable":false,"priority":{"decisionImpact":3,"inputReadiness":2,"exactVerifiability":4,"cost":5}},
+    {"id":"L","name":"enlarged local fundamental action","state":"queued","prerequisites":["Q"],"unlocks":["U"],"localExecutable":false,"priority":{"decisionImpact":4,"inputReadiness":2,"exactVerifiability":4,"cost":5}},
+    {"id":"P","name":"low-energy phenomenology","state":"queued","prerequisites":["E"],"unlocks":[],"localExecutable":false,"priority":{"decisionImpact":4,"inputReadiness":2,"exactVerifiability":3,"cost":3}},
+    {"id":"U","name":"protecting symmetry or UV parent","state":"open","prerequisites":["explicit Ward identity or parent action"],"unlocks":[],"localExecutable":false,"priority":{"decisionImpact":5,"inputReadiness":0,"exactVerifiability":3,"cost":5}},
+    {"id":"N","name":"nonperturbative definition","state":"open","prerequisites":["regulator, continuum limit, positive reconstruction"],"unlocks":[],"localExecutable":false,"priority":{"decisionImpact":5,"inputReadiness":0,"exactVerifiability":3,"cost":5}}
+  ],
+  "closedBranches": [
+    {"id":"sparse-fundamental-closure","state":"rejected","certificate":"torsionless and axial one-loop poles leave the sparse surface"},
+    {"id":"general-PGT-specialization","state":"rejected","certificate":"connection principal-symbol ranks are 1 and 24"}
+  ],
+  "selectedNode":"Q",
+  "selectedSubtask":"construct packet-gauge H1/H2 and trace t132",
+  "selectedProfile":"t132",
+  "selectedResponseRow":[2,0,0,0,0,0,0,0,0],
+  "completedMilestones":["t132 fixed-coframe Hkk1/Hkk2 source vertices"],
+  "currentSubtask":"construct t132 hk, kh and hh coframe-completion vertices and validate the axial limit",
+  "globalExhaustion":false,
+  "globalExhaustionCondition":"every node is completed, rejected, or externally-blocked and no localExecutable node remains"
+}

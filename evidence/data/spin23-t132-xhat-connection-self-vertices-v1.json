@@ -1,0 +1,24 @@
+{
+  "schema":"spin23.t132-xhat-connection-self-vertices/1",
+  "date":"2026-10-22",
+  "status":"complete fixed-coframe kk source derivatives",
+  "connectionBasis":"(mu,[ab]) with mu=0..3 and [ab]=[01],[02],[03],[12],[13],[23]",
+  "source":{
+    "profile":"t132",
+    "momentum":[1,0,0,0],
+    "contorsion":{"123":"-1/2","132":"1/2","213":"1/2","231":"-1/2","312":"1/2","321":"-1/2"}
+  },
+  "curvatureDecomposition":{
+    "linear":"L(K)=epsilon^(mu nu a b) partial_mu K_(nu a b)",
+    "bilinear":"C(A,B)=epsilon^(mu nu a b) A_(mu a c) B_(nu c b)",
+    "LP":"-1",
+    "CPP":"0",
+    "crossSupport":{"component":"k_(3,[03])","coefficient":"2"}
+  },
+  "witnessMomenta":{"p":[2,3,5,7],"pPrime":[-3,-3,-5,-7]},
+  "Hkk1":{"rank":24,"nonzeroEntries":68,"entrySum":"-4","squareSum":"8752"},
+  "Hkk2":{"rank":1,"nonzeroEntries":1,"entrySum":"4","squareSum":"16"},
+  "completeAtFixedCoframe":true,
+  "fullBosonicTraceComplete":false,
+  "nextSubtask":"construct hk, kh and hh coframe-completion vertices and recover the axial mixed-polarization limit"
+}
