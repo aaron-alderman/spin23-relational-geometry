@@ -61,7 +61,10 @@ the rational surface
 \(h^{TT}_1=(18a_1^2+3a_1-7)/(4608\pi^2\epsilon)\), independent of
 \(B=\kappa b_X\).  Analytic external-momentum differentiation recovers it
 direction by direction.  The live operation is to parameterize the source
-tensor and advance the same engine to the other six flat rows.
+tensor and advance the same engine to the other six flat rows.  That
+generalization and the `t021` row are now complete, giving
+\(h^{TT}_4=-(21a_1^2+27a_1+10)/(1152\pi^2\epsilon)\).  The live profile is
+`t102`, which isolates \(h^{TT}_6\).
 
 ## Backtracking policy
 

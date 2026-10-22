@@ -144,10 +144,22 @@ for mu in range(4):
         k[mu, a, b], k[mu, b, a] = 1, -1
         K_DIRS.append(k)
 
-P_SOURCE = np.zeros((4, 4, 4))
-for label, value in {"123": -.5, "132": .5, "213": .5, "231": -.5, "312": .5, "321": -.5}.items():
-    mu, a, b = map(int, label)
-    P_SOURCE[mu, a, b] = value
+def torsion_to_contorsion(entries):
+    """Map response torsion T_abc=-T_cba to packet K_a[bc]."""
+    torsion = np.zeros((4, 4, 4))
+    for label, value in entries.items():
+        a, b, c = map(int, label)
+        torsion[a, b, c] += value
+        torsion[c, b, a] -= value
+    contorsion = np.zeros((4, 4, 4))
+    for a, b, c in itertools.product(range(4), repeat=3):
+        contorsion[a, b, c] = (
+            torsion[a, b, c] + torsion[b, c, a] - torsion[c, a, b]
+        ) / 2.0
+    return contorsion
+
+
+P_SOURCE = torsion_to_contorsion({"132": 1.0})
 
 
 def z2():
@@ -158,7 +170,7 @@ def z3():
     return [[[{} for _ in range(4)] for _ in range(4)] for _ in range(4)]
 
 
-def hessian_sectors(p, pp, q, *, source_pair, include_torsion=True):
+def hessian_sectors(p, pp, q, *, source_pair, include_torsion=True, p_source=P_SOURCE):
     f = z2()
     for a in range(4):
         for b in range(4):
@@ -184,7 +196,7 @@ def hessian_sectors(p, pp, q, *, source_pair, include_torsion=True):
 
     K = z3()
     for mu, a, b in itertools.product(range(4), repeat=3):
-        terms = [source(P_SOURCE[mu, a, b], q, conjugate=source_pair)]
+        terms = [source(p_source[mu, a, b], q, conjugate=source_pair)]
         for i, direction in enumerate(K_DIRS, start=10):
             terms += [quantum(direction[mu, a, b], p, i, "x"), quantum(direction[mu, a, b], pp, i, "y")]
         K[mu][a][b] = padd(*terms)
