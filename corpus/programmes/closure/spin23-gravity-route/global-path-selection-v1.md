@@ -72,7 +72,10 @@ generalization and the `t021` row are now complete, giving
 \(h^{TT}_9=-(33a_1^2+74a_1+43)/(576\pi^2\epsilon)\).  The live profile is
 `t001+t122` is complete and fixes
 \(2h^{TT}_2+h^{TT}_7=(6a_1^2+11a_1+5)/(2304\pi^2\epsilon)\).  The live
-profile is the final new flat probe, `t001`.
+`t001` is complete and equals the mixed response, implying
+\(h^{TT}_8=2h^{TT}_1+h^{TT}_2-h^{TT}_3\).  All seven new flat probes are
+closed.  The live operation is to normalize the two existing axial rows and
+apply the exact nine-response inverse.
 
 ## Backtracking policy
 
