@@ -1,0 +1,80 @@
+{
+  "schema": "spin23.torsion-pseudoscalar-coupling-match/1",
+  "date": "2026-10-23",
+  "status": "exact tree-level normalization match in natural units; generic EFT constraint, not Spin(2,3) identification",
+  "sources": [
+    {
+      "path": "evidence/data/spin23-critical-pgt-lense-thirring-spin-yukawa.json",
+      "sha256": "cd1813bdd4a77fe5f9c01d761c651392d21d74b00b14f67d7566e360f50c7f5c"
+    },
+    {
+      "path": "evidence/data/spin23-torsion-empirical-calibration-source-audit-v1.json",
+      "sha256": "6c10c7d428fe761197dbba43995cb2e2bf28e07f058a10434c375dbfb99f32a4"
+    }
+  ],
+  "conventions": {
+    "units": "hbar=c=1 for matching; masses and inverse couplings reported in GeV",
+    "spinOperator": "Both kernels are expressed with Pauli vectors sigma rather than sigma/2.",
+    "torsionCoefficient": "V=(f_X*f_Y/(4*pi))*tensorKernel",
+    "experimentalCoefficient": "V=(g_p^X*g_p^Y/(16*pi*m_X*m_Y))*tensorKernel",
+    "contactTerm": "excluded for separated macroscopic source and detector",
+    "overallSign": "field and gamma5 conventions may reverse every g_p sign; absolute product constraints are unchanged"
+  },
+  "exactMatch": {
+    "singleFlavor": "g_p^f=2*m_f*f_f=2*m_f*c_f/sqrt(A)",
+    "twoFlavorProduct": "g_p^X*g_p^Y=4*m_X*m_Y*f_X*f_Y=4*m_X*m_Y*c_X*c_Y/A",
+    "poleMass": "m_phi^2=A/B",
+    "experimentConstrains": "|f_e*f_n|=|c_e*c_n|/A at each fixed mediator mass"
+  },
+  "inputs": {
+    "electronMassGeV": 0.00051099895,
+    "neutronMassGeV": 0.93956542052,
+    "sevenMillimetreMediatorMassGeV": 2.8189568628571428e-14,
+    "reportedAbsolute95ElectronNeutronProduct": 2.4e-9,
+    "reportedCentralProduct": 3.8e-10,
+    "reportedStatisticalSigmaProduct": 1.08e-9,
+    "reportedSystematicSigmaProduct": 4.8e-10
+  },
+  "translatedSevenMillimetreConstraint": {
+    "central_fElectronTimesFNeutron_GeVMinus2": 1.9786845958552924e-7,
+    "statisticalSigma_GeVMinus2": 5.623629904009778e-7,
+    "systematicSigma_GeVMinus2": 2.4993910684487906e-7,
+    "absolute95_fElectronTimesFNeutron_GeVMinus2": 0.000001249695534224395,
+    "universalAbsoluteFUpper_GeVMinus1": 0.0011178978192233828
+  },
+  "minimalBareCoefficientConditional": {
+    "assumption": "|c_e|=|c_n|=1/8 is provisionally used as a low-energy value; this is not derived after matching and running.",
+    "minimumA_GeV2": 12503.045399531993,
+    "minimumSqrtA_GeV": 111.81701748630212,
+    "minimumBAtSevenMillimetres": 1.5733992828847183e31,
+    "interpretation": "A light 7 mm pole with minimal bare couplings must lie above this A normalization and requires enormous B; the experiment does not supply the mechanism making B radiatively stable."
+  },
+  "naturalPlanckBenchmark": {
+    "sqrtA_GeV": 2.435e18,
+    "absolute_fElectronTimesFNeutron_GeVMinus2": 2.6352516559921407e-39,
+    "absolute_gElectronTimesGNeutron": 5.060915880047862e-42,
+    "comparisonToReportedProductBound": "more than 32 orders of magnitude below the coupling-product bound before also applying the overwhelming Planck-range Yukawa suppression"
+  },
+  "decisions": {
+    "normalizationBridgeAvailable": true,
+    "genericEftConstraintAvailable": true,
+    "spin23FingerprintAvailable": false,
+    "lightPoleMechanismAvailable": false,
+    "fullLikelihoodAvailable": false,
+    "reportedLimitReinterpretedWithoutGeometryRecorrection": true
+  },
+  "falsifiers": [
+    "a coupling translation omits the fermion-mass factors implied by derivative axial coupling",
+    "Pauli-vector and spin-vector conventions are mixed without the corresponding factor of two",
+    "the reported experimental limit is geometry-corrected a second time without reconstructing the authors' likelihood",
+    "a bound on |c_e*c_n|/A is presented as a separate determination of A,c_e and c_n",
+    "the generic EFT constraint is presented as unique evidence for Spin(2,3)"
+  ],
+  "authority": {
+    "grantsDetection": false,
+    "grantsSpin23Specificity": false,
+    "grantsLightPoleNaturalness": false,
+    "grantsIndependentLikelihood": false,
+    "grantsWorldwrightCalibration": false
+  }
+}

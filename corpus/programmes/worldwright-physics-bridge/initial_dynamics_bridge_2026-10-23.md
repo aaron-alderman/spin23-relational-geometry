@@ -71,6 +71,7 @@ node verification/verify/verify_spin23_torsion_empirical_calibration_source_audi
 node verification/verify/verify_spin23_torsion_empirical_geometry_extraction.mjs
 node verification/verify/verify_spin23_torsion_published_geometry_approximation.mjs
 node verification/verify/verify_spin23_torsion_model_discrepancy_priority.mjs
+node verification/verify/verify_spin23_torsion_pseudoscalar_coupling_match.mjs
 node verification/verify/verify_spin23_torsion_fingerprint_parameter_closure.mjs
 node verification/verify/verify_spin23_torsion_finite_geometry_response.mjs
 node verification/verify/verify_spin23_worldwright_bridge_assurance_manifest.mjs
@@ -89,6 +90,8 @@ The finite-volume response is [spin23-torsion-finite-geometry-response-v1.json](
 The published-dimension approximation is [spin23-torsion-published-geometry-approximation-v1.json](../../../evidence/data/spin23-torsion-published-geometry-approximation-v1.json).
 
 The model-discrepancy priority audit is [spin23-torsion-model-discrepancy-priority-v1.json](../../../evidence/data/spin23-torsion-model-discrepancy-priority-v1.json).
+
+The experimental coupling normalization is [spin23-torsion-pseudoscalar-coupling-match-v1.json](../../../evidence/data/spin23-torsion-pseudoscalar-coupling-match-v1.json).
 
 ## Fingerprint closure
 
@@ -118,6 +121,10 @@ Reinspection of the Xu et al. primary article narrowed that blocker. It publishe
 The first such approximation treats the disclosed SmCo5 core as uniformly polarized and the spherical sensor as uniformly responsive. At the reported 7 mm range, source-core integration changes the transverse response by `+0.326%`; the exact modified-Helmholtz uniform-ball mean contributes `+7.542%`; together the response is `1.07893` times the center-point value. The corresponding coupling scale would be about `7.32%` lower than a center-point inference. At a 2 mm range the correction rises to `2.34881`, showing why finite detector volume becomes decisive at ranges shorter than its radius. These values are a model-discrepancy diagnostic, not a revised experimental limit.
 
 The resulting evidence-acquisition priority is now quantitative. At 7 mm, the published net-spin uncertainty corresponds to `12.10%` fractional response uncertainty, the AC response ratio to `7.14%`, and the center-distance uncertainty to `0.93%`. Separately, the point-versus-uniform sensor scenario shifts response by `7.54%`, whereas integrating the disclosed SmCo5 core shifts it by only `0.33%`. Because the scenario shift exceeds five percent, the point-sensor approximation fails the declared geometry-robustness gate. These reported uncertainties and nonprobabilistic geometry scenarios are deliberately not combined into one claimed experimental error bar.
+
+## Coupling normalization gate
+
+The torsion EFT and experimental pseudoscalar conventions can be matched exactly at tree level. In natural units their identical separated tensor kernels imply `g_p^f=2*m_f*f_f=2*m_f*c_f/sqrt(A)`, and hence `g_p^e*g_p^n=4*m_e*m_n*c_e*c_n/A`. The reported 7 mm bound therefore gives `|f_e*f_n|=|c_e*c_n|/A <= 1.24970e-6 GeV^-2`. Under the explicitly conditional assumption `|c_e|=|c_n|=1/8`, this becomes `sqrt(A) > 111.817 GeV`; maintaining a 7 mm pole would then require `B > 1.5734e31`. This closes the generic EFT normalization but not the missing Spin(2,3) derivation of `A`, `B`, and low-energy flavor coefficients.
 
 ## Next gates
 
