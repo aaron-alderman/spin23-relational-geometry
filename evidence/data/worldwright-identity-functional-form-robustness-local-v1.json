@@ -1,0 +1,52 @@
+{
+  "schema": "worldwright.identity-functional-form-robustness.local/1",
+  "date": "2026-10-23",
+  "status": "exact corpus-local execution awaiting authoritative Sourcery publication",
+  "provenance": {
+    "laneId": "task/worldwright-kenotic-boundary-app-20261022",
+    "snapshotId": "bff142b8-1ae9-4f7b-ba2e-9631d2ccfdaf",
+    "engineObjectHash": "ae160c2cf07eb2ce2b3c11bbb42828cbc27023e41e5f272f1a6f8243cf55fe17",
+    "executionOwnerObjectHash": "2026f456a08802de0e272dd443b15f8a873725cbe4079a16e9b9b02fd6581f7f",
+    "responseSurfaceObjectHash": "8704965ded83fd1130d83f2a72625987d691eb97989b6af3ed4614c69b9d690c"
+  },
+  "design": {
+    "authoredSalience": [0, 0.25, 0.5, 0.75, 1],
+    "forms": ["linear", "convexQuadratic", "concaveSquareRoot", "normalizedLogistic", "thresholdHalf", "nullControl"],
+    "normalizedForms": 5,
+    "conditions": 30,
+    "pairedCellsPerCondition": 640,
+    "totalPairedCells": 19200,
+    "modelRunsPerExecution": 38400,
+    "seeds": [98311, 98312, 98313, 98314, 98315, 98316, 98317, 98318, 98319, 98320]
+  },
+  "forms": [
+    {"id": "linear", "effectiveSalience": [0, 0.25, 0.5, 0.75, 1], "winnerChangesFromZero": [0, 26, 45, 64, 87], "endpointWinnerChanges": 87},
+    {"id": "convexQuadratic", "effectiveSalience": [0, 0.0625, 0.25, 0.5625, 1], "winnerChangesFromZero": [0, 2, 26, 49, 87], "endpointWinnerChanges": 87},
+    {"id": "concaveSquareRoot", "effectiveSalience": [0, 0.5, 0.707106781187, 0.866025403784, 1], "winnerChangesFromZero": [0, 45, 60, 70, 87], "endpointWinnerChanges": 87},
+    {"id": "normalizedLogistic", "effectiveSalience": [0, 0.104993585404, 0.5, 0.895006414596, 1], "winnerChangesFromZero": [0, 13, 45, 77, 87], "endpointWinnerChanges": 87},
+    {"id": "thresholdHalf", "effectiveSalience": [0, 0, 1, 1, 1], "winnerChangesFromZero": [0, 0, 87, 87, 87], "endpointWinnerChanges": 87},
+    {"id": "nullControl", "effectiveSalience": [0, 0, 0, 0, 0], "winnerChangesFromZero": [0, 0, 0, 0, 0], "endpointWinnerChanges": 0}
+  ],
+  "relationalMonotonicityViolations": 0,
+  "overallMonotonicityViolations": 0,
+  "hypotheses": {
+    "endpointRetentionInvariantAcrossNormalizedForms": true,
+    "monotoneDirectionInvariantAcrossNormalizedForms": true,
+    "nullControlEliminatesIdentityResponse": true,
+    "intermediateClassificationPathDependsOnFunctionalForm": true
+  },
+  "robustnessHash": "sha256:0dd16df3d1796c6ecc02d1a5c2b6e25fa91213891731900da344554e0b9d0020",
+  "exactRepeat": true,
+  "interpretation": {
+    "finding": "Identity remains decision-relevant under every normalized monotone form at the zero-to-one endpoint, but the intermediate classification path depends strongly on the response law.",
+    "correction": "The programme may retain identity as a synthetic decision coordinate, but it cannot treat the current linear coefficient or dose-response curve as identified.",
+    "nextFalsifier": "Preregister observable identity proxies and compare alternative forms by held-out predictive score; demote the coordinate if it adds no information beyond non-identity covariates."
+  },
+  "authority": {
+    "empiricalValidation": false,
+    "policyAuthority": false,
+    "moralAuthority": false,
+    "demographicAuthority": false,
+    "physicsAuthority": false
+  }
+}

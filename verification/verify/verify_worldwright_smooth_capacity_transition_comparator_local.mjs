@@ -7,6 +7,7 @@ const result = JSON.parse(await readFile(new URL(
   "../../evidence/data/worldwright-smooth-capacity-transition-comparator-local-v1.json",
   import.meta.url,
 ), "utf8"));
+const harness = await readFile(new URL("../experiments/run_worldwright_smooth_capacity_transition_comparator.mjs", import.meta.url), "utf8");
 
 assert.equal(result.schema, "worldwright.smooth-capacity-transition-comparator.local/1");
 assert.equal(result.design.weights.reduce((a, b) => a + b, 0), 1);
@@ -26,6 +27,7 @@ assert.equal(result.disappearedHardEffects, 0);
 assert.ok(Object.values(result.hypotheses).every(Boolean));
 assert.match(result.comparatorHash, /^sha256:[0-9a-f]{64}$/);
 assert.equal(result.exactRepeat, true);
+for (const hash of Object.values(result.provenance).filter(value => /^[0-9a-f]{64}$/.test(value))) assert.ok(harness.includes(hash), `harness source pin missing: ${hash}`);
 assert.ok(Object.values(result.authority).every(value => value === false));
 
 console.log("Worldwright smooth capacity-transition comparator: PASS");

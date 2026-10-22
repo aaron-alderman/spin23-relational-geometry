@@ -7,6 +7,7 @@ const result = JSON.parse(await readFile(new URL(
   "../../evidence/data/worldwright-surplus-learning-component-factorial-local-v1.json",
   import.meta.url,
 ), "utf8"));
+const harness = await readFile(new URL("../experiments/run_worldwright_surplus_learning_component_factorial.mjs", import.meta.url), "utf8");
 
 assert.equal(result.schema, "worldwright.surplus-learning-component-factorial.local/1");
 assert.equal(result.design.conditions, 8);
@@ -15,6 +16,7 @@ assert.equal(result.design.modelRunsPerExecution, 10240);
 assert.equal(result.design.smoothTransition.weights.reduce((a, b) => a + b, 0), 1);
 assert.equal(result.exactRepeat, true);
 assert.match(result.factorialHash, /^sha256:[0-9a-f]{64}$/);
+for (const hash of Object.values(result.provenance).filter(value => /^[0-9a-f]{64}$/.test(value))) assert.ok(harness.includes(hash), `harness source pin missing: ${hash}`);
 
 for (const transition of [result.results.hard, result.results.smoothWidth2]) {
   assert.equal(transition.neither.activeContrasts, 0);

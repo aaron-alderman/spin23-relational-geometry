@@ -7,6 +7,7 @@ const result = JSON.parse(await readFile(new URL(
   "../../evidence/data/worldwright-identity-retention-response-surface-local-v1.json",
   import.meta.url,
 ), "utf8"));
+const harness = await readFile(new URL("../experiments/run_worldwright_identity_retention_response_surface.mjs", import.meta.url), "utf8");
 
 assert.equal(result.schema, "worldwright.identity-retention-response-surface.local/1");
 assert.equal(result.design.conditions, 5);
@@ -20,6 +21,7 @@ assert.equal(result.overallMonotonicViolations, 0);
 assert.equal(result.retentionGate.passed, true);
 assert.equal(result.exactRepeat, true);
 assert.match(result.gateHash, /^sha256:[0-9a-f]{64}$/);
+for (const hash of Object.values(result.provenance).filter(value => /^[0-9a-f]{64}$/.test(value))) assert.ok(harness.includes(hash), `harness source pin missing: ${hash}`);
 assert.ok(Object.values(result.authority).every(value => value === false));
 
 for (let index = 1; index < result.conditions.length; index++) {

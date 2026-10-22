@@ -29,7 +29,7 @@
       "id": "L3",
       "name": "sensitivity and ablation",
       "state": "broad-synthetic-coverage",
-      "evidence": "failure strata, 960-cell matched ablation, relational factorial, weight robustness, ablation-effect robustness, 1,280-cell response surface, delay-path decomposition, 7,680-cell threshold/gain factorial and a 5,120-cell learning-health component factorial",
+      "evidence": "failure strata, 960-cell matched ablation, relational factorial, weight robustness, ablation-effect robustness, 1,280-cell response surface, delay-path decomposition, 7,680-cell threshold/gain factorial, a 5,120-cell learning-health component factorial and a 19,200-cell identity functional-form surface",
       "open": "smooth-transition and component-factorial results must be published in the authoritative lane; stakeholder partial orders remain open"
     },
     {
@@ -64,8 +64,8 @@
       "id": "L8",
       "name": "identity, affect and topology",
       "state": "synthetically-decision-relevant-unvalidated",
-      "evidence": "removing identity changes zero winners on four confounded presets, but varying salience from 0 to 1 on the independent response grid changes 87 of 640 classifications with zero monotonicity violations",
-      "open": "alternative functional forms, observable proxies and external held-out prediction"
+      "evidence": "removing identity changes zero winners on four confounded presets; five normalized monotone forms all change 87 of 640 endpoint classifications with zero monotonicity violations, while their intermediate response paths differ",
+      "open": "observable proxies, dose-response discrimination and external held-out prediction"
     },
     {
       "id": "L9",
@@ -131,6 +131,12 @@
       "id": "calibration-identifiability-audit-local-result",
       "claim": "The 248-event discovery frame identifies no causal Worldwright mechanism: all six require action-level, baseline, outcome or confounding fields absent from the retained projection, so even a perfect event crosswalk would be insufficient for causal calibration.",
       "scope": "metadata-only structural audit; no outcomes extracted"
+    },
+    {
+      "id": "identity-functional-form-robustness-local-result",
+      "claim": "Identity's zero-to-one endpoint relevance survives linear, quadratic, square-root, normalized-logistic and threshold response laws at exactly 87 of 640 changed classifications, but intermediate classifications differ sharply, so the dose-response curve is not identified.",
+      "scope": "synthetic functional-form sensitivity only; awaiting-authoritative-Sourcery-publication",
+      "robustnessHash": "sha256:0dd16df3d1796c6ecc02d1a5c2b6e25fa91213891731900da344554e0b9d0020"
     }
   ],
   "nextExecutableQueue": [

@@ -15,7 +15,7 @@ const physicsManifest = JSON.parse(await readFile(new URL(
 assert.equal(landscape.schema, "worldwright.programme-current-landscape/2");
 assert.equal(landscape.capabilities.length, 10);
 assert.deepEqual(landscape.capabilities.map(item => item.id), ["L1","L2","L3","L4","L5","L6","L7","L8","L9","L10"]);
-assert.equal(landscape.currentScientificFindings.length, 9);
+assert.equal(landscape.currentScientificFindings.length, 10);
 assert.deepEqual(landscape.nextExecutableQueue.map(item => item.rank), [1,2,3,4,5,6,7]);
 
 const capability = id => landscape.capabilities.find(item => item.id === id);
@@ -38,9 +38,12 @@ const identity = landscape.currentScientificFindings.find(item => item.id === "i
 assert.match(identity.gateHash, /^sha256:[0-9a-f]{64}$/);
 const calibration = landscape.currentScientificFindings.find(item => item.id === "calibration-identifiability-audit-local-result");
 assert.ok(calibration.claim.includes("all six"));
+const identityForms = landscape.currentScientificFindings.find(item => item.id === "identity-functional-form-robustness-local-result");
+assert.match(identityForms.robustnessHash, /^sha256:[0-9a-f]{64}$/);
+assert.ok(identityForms.claim.includes("dose-response curve is not identified"));
 assert.ok(landscape.completionRule.includes("incomplete"));
 assert.ok(Object.values(landscape.authority).every(value => value === false));
 
 console.log("Worldwright programme current landscape v2: PASS");
-console.log("  10 capability lanes; 9 current findings; 7-item executable queue");
+console.log("  10 capability lanes; 10 current findings; 7-item executable queue");
 console.log("  authoritative gaps retained: rendered use, continuous assurance, empirical mechanism and Spin(2,3) fingerprint");

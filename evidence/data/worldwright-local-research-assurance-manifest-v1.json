@@ -7,25 +7,31 @@
     {
       "id": "smooth-capacity-transition",
       "evidence": {"path": "evidence/data/worldwright-smooth-capacity-transition-comparator-local-v1.json", "sha256": "22d96023ce225fb7bcbb3cc51f46a8c2be598cd6128d20976a2365672d84c837"},
-      "harness": {"path": "verification/experiments/run_worldwright_smooth_capacity_transition_comparator.mjs", "sha256": "7aae579e9feab8add263cec8806fba3192bc70447e0099a34c85ef2bcd4e8ad3"},
-      "verifier": {"path": "verification/verify/verify_worldwright_smooth_capacity_transition_comparator_local.mjs", "sha256": "1b0e95bef6fad754e3f5cbc534c0471d1389796a301ac223d5e15ef1e5def40c"}
+      "harness": {"path": "verification/experiments/run_worldwright_smooth_capacity_transition_comparator.mjs", "sha256": "a887deeff253ec6aeaeab3f3db4fac8e5020e910fa1713514a6a863a03001ab8"},
+      "verifier": {"path": "verification/verify/verify_worldwright_smooth_capacity_transition_comparator_local.mjs", "sha256": "7b67f31213db159f3e0eb1b81371736805ce6ac26f1e7d20846772342fa34c32"}
     },
     {
       "id": "learning-health-component-factorial",
       "evidence": {"path": "evidence/data/worldwright-surplus-learning-component-factorial-local-v1.json", "sha256": "89576cf1f0016f3be2524d5f9ac2b4377fbecd9291b797fb564233842fa78cd8"},
-      "harness": {"path": "verification/experiments/run_worldwright_surplus_learning_component_factorial.mjs", "sha256": "3cfafe8442fab8ae51901432e6bc39cc4fb85af9b1628ae3f9b347c0929fedcc"},
-      "verifier": {"path": "verification/verify/verify_worldwright_surplus_learning_component_factorial_local.mjs", "sha256": "f34b12c0316dcd729e4d7b17bf8e6ba8b5031ee1daf91ee063c130668ddf2af3"}
+      "harness": {"path": "verification/experiments/run_worldwright_surplus_learning_component_factorial.mjs", "sha256": "157a20b8e584ac24e785f97ba034d54cfbeeffeca78656847efec8382faa9046"},
+      "verifier": {"path": "verification/verify/verify_worldwright_surplus_learning_component_factorial_local.mjs", "sha256": "e6337293a3d6f31810713d68f393ff7ed4c58a3579f2213403ad97026606a5bb"}
     },
     {
       "id": "identity-retention-response-surface",
       "evidence": {"path": "evidence/data/worldwright-identity-retention-response-surface-local-v1.json", "sha256": "0ec59f434a62ae94264ab80e51e5b2ab3a79d39958770a2d105e3971faa9685a"},
-      "harness": {"path": "verification/experiments/run_worldwright_identity_retention_response_surface.mjs", "sha256": "2d9b482e980ead00fd31baacdc5fab92a2378dd3edfff37aed97cd75e8cecf20"},
-      "verifier": {"path": "verification/verify/verify_worldwright_identity_retention_response_surface_local.mjs", "sha256": "da78bc6e69ab5e23198c9dc4385d6f074d5c6afafe3a7074754f78f8a7259718"}
+      "harness": {"path": "verification/experiments/run_worldwright_identity_retention_response_surface.mjs", "sha256": "c5dd03d2ac5c0f3a65acfd261846f3ec3a2688a44be9aa7442f0c852253689fc"},
+      "verifier": {"path": "verification/verify/verify_worldwright_identity_retention_response_surface_local.mjs", "sha256": "0da6eba1553e309fa9637668d2c2cf80652cc926deb7f26ee187bbf9f75a1868"}
+    },
+    {
+      "id": "identity-functional-form-robustness",
+      "evidence": {"path": "evidence/data/worldwright-identity-functional-form-robustness-local-v1.json", "sha256": "889ca57de00d16f5838bbe0ba3a8770f4184715ed18f68137d0d1414a15c49c6"},
+      "harness": {"path": "verification/experiments/run_worldwright_identity_functional_form_robustness.mjs", "sha256": "25acd78f3384508524af7d6314ac41a4bd993e2d5cd076ea7340e05af2c06ce2"},
+      "verifier": {"path": "verification/verify/verify_worldwright_identity_functional_form_robustness_local.mjs", "sha256": "aa90f3aec1da2811eff26ffe77d240b3b46be025b4f772e86bec69927eb1ce14"}
     }
   ],
   "programmeLandscape": {
-    "evidence": {"path": "evidence/data/worldwright-programme-current-landscape-v2.json", "sha256": "1ec0228c704110a6fec284dfeaca33255d385d64504d9182180db0490a3bb070"},
-    "verifier": {"path": "verification/verify/verify_worldwright_programme_current_landscape_v2.mjs", "sha256": "b1ea0d0cce858e2da1ce024eccf08f9d8f3c278be351b7f9a8d81e8eab134590"}
+    "evidence": {"path": "evidence/data/worldwright-programme-current-landscape-v2.json", "sha256": "11fb86dcfdc5d86b16e30c9a26508c48368b1207d99c6becbd30177371cd79aa"},
+    "verifier": {"path": "verification/verify/verify_worldwright_programme_current_landscape_v2.mjs", "sha256": "475db2bb59881d040331a7e868b57f0c7bb253a56eb677d8c522907c95816915"}
   },
   "calibrationAudit": {
     "evidence": {"path": "evidence/data/worldwright-calibration-identifiability-audit-local-v1.json", "sha256": "5267d16d805330dcdba55403e42d8b445255647d0ac2e61c6a1976bb4a23ffeb"},
@@ -37,7 +43,7 @@
     "authorityTransfer": false
   },
   "conclusions": {
-    "hashPinnedExperimentChains": 3,
+    "hashPinnedExperimentChains": 4,
     "hashPinnedStructuralAudits": 1,
     "allExperimentsRepeatExactly": true,
     "allEmpiricalValidationBlocked": true,

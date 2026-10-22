@@ -13,9 +13,9 @@ const sourcePaths = {
   surface: "layers/applications/products/worldwright-laboratory/worldwright-urgency-delay-response-surface-diagnostic-v1.mjs",
 };
 const sourceHashes = {
-  engine: "e6b586c55b01f44be2d16de0a8ebf4454d78a6bfb211a2f9a931d0f1ef8b3d01",
-  owner: "f905ad723c3dafe31a5eafaf73a4219eec39e3e132ccb926d8b728c36e8e022b",
-  surface: "bb05139e77668136b1bf31c3f35f9238013cd9f9d195c6afc4d5ab7cd5860d49",
+  engine: "ae160c2cf07eb2ce2b3c11bbb42828cbc27023e41e5f272f1a6f8243cf55fe17",
+  owner: "2026f456a08802de0e272dd443b15f8a873725cbe4079a16e9b9b02fd6581f7f",
+  surface: "8704965ded83fd1130d83f2a72625987d691eb97989b6af3ed4614c69b9d690c",
 };
 for (const [key, relative] of Object.entries(sourcePaths)) {
   const hash = createHash("sha256").update(await readFile(resolve(projectionRoot, relative))).digest("hex");

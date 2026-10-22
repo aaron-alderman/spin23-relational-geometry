@@ -14,7 +14,7 @@ const digest = async path => createHash("sha256")
   .digest("hex");
 
 assert.equal(manifest.schema, "worldwright.local-research-assurance-manifest/1");
-assert.equal(manifest.chains.length, 3);
+assert.equal(manifest.chains.length, 4);
 for (const chain of manifest.chains) {
   for (const kind of ["evidence", "harness", "verifier"]) {
     assert.equal(await digest(chain[kind].path), chain[kind].sha256, `${chain.id} ${kind} hash drift`);
@@ -42,7 +42,7 @@ const physics = JSON.parse(await readFile(resolve(root, manifest.separatePhysics
 assert.equal(physics.conclusions.spin23SpecificFingerprintAvailable, false);
 assert.equal(manifest.separatePhysicsBridge.authorityTransfer, false);
 assert.deepEqual(manifest.conclusions, {
-  hashPinnedExperimentChains: 3,
+  hashPinnedExperimentChains: 4,
   hashPinnedStructuralAudits: 1,
   allExperimentsRepeatExactly: true,
   allEmpiricalValidationBlocked: true,
@@ -52,5 +52,5 @@ assert.deepEqual(manifest.conclusions, {
 });
 
 console.log("Worldwright local research assurance manifest: PASS");
-console.log("  3 hash-pinned executable experiment chains, 1 structural audit, plus programme landscape");
+console.log("  4 hash-pinned executable experiment chains, 1 structural audit, plus programme landscape");
 console.log("  Spin(2,3) bridge referenced separately with no authority transfer");
