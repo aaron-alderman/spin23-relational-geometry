@@ -4,7 +4,7 @@
 
 **Status:** exact convention bridge and t132 irreducible decomposition
 
-**Depends on:** [the t132 curvature-sector completion](1697_the_t132_xhat_squared_coframe_completion_is_an_exact_rank_24_rank_6_pair.md) and [quantization packet v1](../../programmes/closure/spin23-gravity-route/quantization-packet-v1.md)
+**Depends on:** [the t132 curvature-sector completion](1697_the_t132_xhat_squared_coframe_completion_is_an_exact_rank_30_rank_6_pair.md) and [quantization packet v1](../../programmes/closure/spin23-gravity-route/quantization-packet-v1.md)
 
 **Evidence:** [convention ledger](../../../evidence/data/spin23-response-packet-torsion-convention-bridge-v1.json) and [verifier](../../../verification/verify/verify_spin23_response_packet_torsion_convention_bridge.mjs)
 

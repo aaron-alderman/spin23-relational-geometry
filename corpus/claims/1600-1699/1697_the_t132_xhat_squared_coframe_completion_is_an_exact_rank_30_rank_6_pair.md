@@ -1,4 +1,9 @@
-# The t132 Xhat-Squared Coframe Completion Is an Exact Rank-24/Rank-6 Pair
+# The t132 Xhat-Squared Coframe Completion Is an Exact Rank-30/Rank-6 Pair
+
+> **Correction:** the first implementation incorrectly skipped curvature
+> components when their internal pair differed from the coordinate two-form
+> pair. Removing that shortcut preserves the fixed-coframe `kk` block but
+> raises the complete source-linear rank from 24 to 30.
 
 **Date:** 22 October 2026
 
@@ -6,7 +11,7 @@
 
 **Depends on:** [the fixed-coframe self-vertices](1696_the_t132_packet_connection_self_vertices_close_in_two_exact_matrices.md)
 
-**Evidence:** [full-vertex ledger](../../../evidence/data/spin23-t132-xhat-full-source-vertices-v1.json) and [verifier](../../../verification/verify/verify_spin23_t132_xhat_full_source_vertices.mjs)
+**Evidence:** [full-vertex ledger](../../../evidence/data/spin23-t132-xhat-full-source-vertices-v1.json) and [verifier](../../../verification/verify/verify_spin23_t132_complete_packet_source_vertices.mjs)
 
 ## Result
 
@@ -23,16 +28,16 @@ fluctuations.  For the `t132` source and witness loop momentum
 \(p=(2,3,5,7)\), the source-linear matrix has
 
 \[
-\boxed{\operatorname{rank}H^{X^2}_1=24}
+\boxed{\operatorname{rank}H^{X^2}_1=30}
 \]
 
 with nonzero block counts
 
 \[
-(hh,hk,kh,kk)=(0,30,30,68)
+(hh,hk,kh,kk)=(0,78,78,68)
 \]
 
-and block ranks \((0,3,3,24)\).  For the conjugate source pair, the
+and block ranks \((0,9,9,24)\).  For the conjugate source pair, the
 source-quadratic matrix has
 
 \[
@@ -56,5 +61,5 @@ Only their sum may be Schur-reduced and inserted into the loop trace.
 ## Reproduction
 
 ~~~powershell
-node verification/verify/verify_spin23_t132_xhat_full_source_vertices.mjs
+node verification/verify/verify_spin23_t132_complete_packet_source_vertices.mjs
 ~~~
