@@ -1,0 +1,1274 @@
+{
+  "schema": "architecture-inventory-handoff/1",
+  "status": "source-qualified-in-bounded-scopes; live-publication-blocked",
+  "sourceLane": "task/architecture-inventory-surface-20261022",
+  "closedHead": "b76f7b44-cd07-4b81-b667-de2e470dc17c",
+  "proposal": {
+    "id": "e6043231-16c8-44c6-90f1-3a49a255a493",
+    "laneId": "task/architecture-inventory-surface-20261022",
+    "baseSnapshotId": "split-v7-ca47b0236a41638e1694ff2cb8548b76f8edd0a3ff5f4434b3b6b0820fc10ee0",
+    "headSnapshotId": "57160594-676c-44ab-93c7-11178c29cba5",
+    "testReceiptPath": "meta/test-receipts/57160594-676c-44ab-93c7-11178c29cba5.json",
+    "label": "Architecture inventory: qualified bounded model and UI fixture, full-state publication frontier explicit",
+    "createdAt": "2026-10-22T06:56:59.590Z",
+    "forkLaneId": "integration/main",
+    "forkSnapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab",
+    "authentication": "asjo9864p4Pi_CAEMzj-wh5_vYMTB8bRZOobTc4d-t4"
+  },
+  "modelTest": {
+    "passed": true,
+    "exitCode": 0,
+    "stdout": "{\"protocol\":\"algebra-data-conformance/1\",\"passed\":true,\"cases\":9,\"rows\":[{\"id\":\"valid-bounded-inventory\",\"passed\":true,\"result\":{\"ready\":true,\"failed\":[],\"items\":17,\"connections\":18,\"coverage\":6,\"freshness\":\"snapshot-only; reobserve on declared triggers\",\"globallyComplete\":false}},{\"id\":\"duplicate-item\",\"passed\":true,\"result\":{\"ready\":false,\"failed\":[\"unique-items\"],\"items\":18,\"connections\":18,\"coverage\":6,\"freshness\":\"snapshot-only; reobserve on declared triggers\",\"globallyComplete\":false}},{\"id\":\"duplicate-connection\",\"passed\":true,\"result\":{\"ready\":false,\"failed\":[\"unique-connections\"],\"items\":17,\"connections\":19,\"coverage\":6,\"freshness\":\"snapshot-only; reobserve on declared triggers\",\"globallyComplete\":false}},{\"id\":\"dangling-connection\",\"passed\":true,\"result\":{\"ready\":false,\"failed\":[\"connection-endpoints\"],\"items\":17,\"connections\":18,\"coverage\":6,\"freshness\":\"snapshot-only; reobserve on declared triggers\",\"globallyComplete\":false}},{\"id\":\"asserted-proof-instead-of-evidence\",\"passed\":true,\"result\":{\"ready\":false,\"failed\":[\"evidence-class\"],\"items\":17,\"connections\":18,\"coverage\":6,\"freshness\":\"snapshot-only; reobserve on declared triggers\",\"globallyComplete\":false}},{\"id\":\"stale-mixed-observation-time\",\"passed\":true,\"result\":{\"ready\":false,\"failed\":[\"observation-time\"],\"items\":17,\"connections\":18,\"coverage\":6,\"freshness\":\"snapshot-only; reobserve on declared triggers\",\"globallyComplete\":false}},{\"id\":\"false-automatic-freshness\",\"passed\":true,\"result\":{\"ready\":false,\"failed\":[\"explicit-snapshot-freshness\"],\"items\":17,\"connections\":18,\"coverage\":6,\"freshness\":\"snapshot-only; reobserve on declared triggers\",\"globallyComplete\":false}},{\"id\":\"false-global-completeness\",\"passed\":true,\"result\":{\"ready\":false,\"failed\":[\"no-global-completeness\"],\"items\":17,\"connections\":18,\"coverage\":6,\"freshness\":\"snapshot-only; reobserve on declared triggers\",\"globallyComplete\":false}},{\"id\":\"firewall-upgraded-to-enforcement\",\"passed\":true,\"result\":{\"ready\":false,\"failed\":[\"firewall-not-enforced\"],\"items\":17,\"connections\":18,\"coverage\":6,\"freshness\":\"snapshot-only; reobserve on declared triggers\",\"globallyComplete\":false}}],\"resources\":{\"rss\":55963648,\"heapTotal\":11018240,\"heapUsed\":7931768,\"external\":2180537,\"arrayBuffers\":143647},\"sourceMutation\":false,\"applicationAdmission\":false}\n✔ C:\\Users\\aaron\\AppData\\Local\\Temp\\sourcery-temple-test-KhMx5W\\programme\\claimipedia-sqlite-unit-20261016\\qualification.cjs (153.3423ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 176.9084\n",
+    "stderr": "",
+    "testedSnapshotId": "58d45c90-da76-4854-8ae7-e05ecae209ca",
+    "receiptSnapshotId": "93c070a3-722a-4e1e-9279-167ed9c74a2c",
+    "receiptPath": "meta/test-receipts/93c070a3-722a-4e1e-9279-167ed9c74a2c.json",
+    "projectionMode": "declared",
+    "projectionPaths": [
+      "programme/claimipedia-sqlite-unit-20261016/input.json",
+      "programme/claimipedia-sqlite-unit-20261016/qualification.cjs"
+    ],
+    "projectedFiles": 2,
+    "projectionDeleted": true
+  },
+  "uiTest": {
+    "passed": true,
+    "exitCode": 0,
+    "stdout": "{\"protocol\":\"claimipedia-publication-coverage/1\",\"candidateHash\":\"f74c89117770aff325e363c6343f4ab213cc13c1e0bd3f499be2004b6a3d7687\",\"artifactHash\":\"ad0a8ddc4465adc1f7b8d8376bb36892a839f8abd9828365388a11c0acf726a9\",\"coverage\":{\"protocol\":\"object-ui-coverage/1\",\"state\":\"candidate\",\"ready\":true,\"registeredTypes\":35,\"objects\":98,\"schemaInventory\":[{\"type\":\"NavigationContext\",\"schema\":\"schema.NavigationContext\",\"fields\":12},{\"type\":\"RetainedArtifact\",\"schema\":\"schema.RetainedArtifact\",\"fields\":4},{\"type\":\"NavigationMove\",\"schema\":\"schema.NavigationMove\",\"fields\":7},{\"type\":\"TypeRegistry\",\"schema\":\"schema.TypeRegistry\",\"fields\":4},{\"type\":\"TypeSchema\",\"schema\":\"schema.TypeSchema\",\"fields\":5},{\"type\":\"PresentationGrammar\",\"schema\":\"schema.PresentationGrammar\",\"fields\":2},{\"type\":\"CoveragePolicy\",\"schema\":\"schema.CoveragePolicy\",\"fields\":2},{\"type\":\"SystemAtlasCatalogueEntry\",\"schema\":\"schema.SystemAtlasCatalogueEntry\",\"fields\":17},{\"type\":\"ArchitectureMap\",\"schema\":\"schema.ArchitectureMap\",\"fields\":18},{\"type\":\"ArchitectureLayer\",\"schema\":\"schema.ArchitectureLayer\",\"fields\":8},{\"type\":\"ArchitectureComponent\",\"schema\":\"schema.ArchitectureComponent\",\"fields\":18},{\"type\":\"ArchitectureSeam\",\"schema\":\"schema.ArchitectureSeam\",\"fields\":7},{\"type\":\"ShellOperation\",\"schema\":\"schema.ShellOperation\",\"fields\":13},{\"type\":\"ShellCatalogue\",\"schema\":\"schema.ShellCatalogue\",\"fields\":8},{\"type\":\"ClaimipediaSurfaceDeclaration\",\"schema\":\"schema.ClaimipediaSurfaceDeclaration\",\"fields\":16},{\"type\":\"ClaimipediaEditorialGrammar\",\"schema\":\"schema.ClaimipediaEditorialGrammar\",\"fields\":8},{\"type\":\"ClaimipediaUIRegistry\",\"schema\":\"schema.ClaimipediaUIRegistry\",\"fields\":8},{\"type\":\"ClaimipediaEvaluationPreview\",\"schema\":\"schema.ClaimipediaEvaluationPreview\",\"fields\":10},{\"type\":\"ClaimipediaReproductionPlan\",\"schema\":\"schema.ClaimipediaReproductionPlan\",\"fields\":9},{\"type\":\"ClaimipediaEvaluationRecord\",\"schema\":\"schema.ClaimipediaEvaluationRecord\",\"fields\":13},{\"type\":\"NumericOrderQualification\",\"schema\":\"schema.NumericOrderQualification\",\"fields\":9},{\"type\":\"DependencyCycleObservation\",\"schema\":\"schema.DependencyCycleObservation\",\"fields\":15},{\"type\":\"ClaimipediaSimulationPreview\",\"schema\":\"schema.ClaimipediaSimulationPreview\",\"fields\":12},{\"type\":\"PolicyProgram\",\"schema\":\"schema.PolicyProgram\",\"fields\":3},{\"type\":\"PolicyProgramVersion\",\"schema\":\"schema.PolicyProgramVersion\",\"fields\":17},{\"type\":\"PolicyRule\",\"schema\":\"schema.PolicyRule\",\"fields\":7},{\"type\":\"RuleCondition\",\"schema\":\"schema.RuleCondition\",\"fields\":5},{\"type\":\"ProgramExample\",\"schema\":\"schema.ProgramExample\",\"fields\":5},{\"type\":\"ProgramSourceMap\",\"schema\":\"schema.ProgramSourceMap\",\"fields\":6},{\"type\":\"PolicyCompilationObservation\",\"schema\":\"schema.PolicyCompilationObservation\",\"fields\":13},{\"type\":\"ClaimipediaBatchSimulationPreview\",\"schema\":\"schema.ClaimipediaBatchSimulationPreview\",\"fields\":13},{\"type\":\"DeclarationReceipt\",\"schema\":\"schema.DeclarationReceipt\",\"fields\":13},{\"type\":\"ArchitectureInventoryItem\",\"schema\":\"schema.ArchitectureInventoryItem\",\"fields\":10},{\"type\":\"ArchitectureConnection\",\"schema\":\"schema.ArchitectureConnection\",\"fields\":9},{\"type\":\"ArchitectureCoverage\",\"schema\":\"schema.ArchitectureCoverage\",\"fields\":7}],\"errors\":[],\"assurance\":\"executable-baseline-check\",\"formalProof\":false},\"objectSubject\":\"context.work\",\"renderedFields\":12,\"evidenceLevel\":\"existing-installed-checker;executable-not-proof\"}\n✔ C:\\Users\\aaron\\AppData\\Local\\Temp\\sourcery-temple-test-hiCXg7\\programme\\claimipedia-sqlite-unit-20261016\\qualification.cjs (239.1963ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 249.8854\n",
+    "stderr": "",
+    "testedSnapshotId": "d9192108-59cc-4562-91c8-455359cb39ee",
+    "receiptSnapshotId": "57160594-676c-44ab-93c7-11178c29cba5",
+    "receiptPath": "meta/test-receipts/57160594-676c-44ab-93c7-11178c29cba5.json",
+    "projectionMode": "declared",
+    "projectionPaths": [
+      "programme/claimipedia-sqlite-unit-20261016/input.json",
+      "programme/claimipedia-sqlite-unit-20261016/qualification.cjs"
+    ],
+    "projectedFiles": 2,
+    "projectionDeleted": true
+  },
+  "fixtureRestoration": {
+    "protocol": "architecture-inventory-fixture-restoration/1",
+    "fixedPath": "programme/claimipedia-sqlite-unit-20261016/input.json",
+    "predecessor": {
+      "laneId": "integration/main",
+      "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab",
+      "objectHash": "7ac714666cca23eaafa93eec7c39e5d9dffd5ed1bdac256e12c9a438028b8f2b"
+    },
+    "testedFixtureHash": "addc5cc9e989cea21bba0f4b3af26ae00cb8fc451daa3360a328ceb68dc31a4f",
+    "testedProposal": "e6043231-16c8-44c6-90f1-3a49a255a493",
+    "testedHead": "57160594-676c-44ab-93c7-11178c29cba5",
+    "modelReceipt": "93c070a3-722a-4e1e-9279-167ed9c74a2c",
+    "uiReceipt": "57160594-676c-44ab-93c7-11178c29cba5",
+    "limits": "Fixed-input runner produced bounded historical execution observations. Restored head cannot rerun architecture checks without deliberate fixture staging. Production full-carrier publication not qualified.",
+    "sourceAccounting": {
+      "modifiedExecutableFiles": 0,
+      "newExecutableFiles": 0,
+      "newCapabilityRegistryEntries": 0
+    }
+  },
+  "publicationFrontier": {
+    "protocol": "architecture-inventory-publication-frontier/1",
+    "status": "not-published",
+    "modelReceipt": "93c070a3-722a-4e1e-9279-167ed9c74a2c",
+    "sourceCandidate": {
+      "facts": 6889,
+      "characters": 992390
+    },
+    "attempts": [
+      {
+        "kind": "prepare-only",
+        "documents": 3,
+        "approxCharacters": 3000000,
+        "outcome": "response not received during bounded wait; own orchestration continuation stopped; no commit call issued"
+      },
+      {
+        "kind": "prepare-only",
+        "documents": 1,
+        "characters": 992391,
+        "outcome": "response not received within ~2min; no commit call issued"
+      }
+    ],
+    "reconciled": {
+      "head": "93c070a3-722a-4e1e-9279-167ed9c74a2c",
+      "intendedTarget": "programme/architecture-inventory-20261022/context-state.json",
+      "targetAbsent": true,
+      "hostInflight": 0
+    },
+    "retainedHistoricalPredecessor": "programme/claimipedia-sqlite-unit-20261016/representation-migration/SHARDED-ATLAS-CARRIER-PREPARATION-20261017.json",
+    "materialization": "Existing generated-context-view-materialization/1 evidence proves past reconstruction, but current callable prepare-session/materialize is omitted from published action schema. Migration owner forbids use as side gate.",
+    "selectedReaderChanged": false,
+    "remaining": "Existing owner must provide a published/admitted lossless materialization path; then full UI coverage, source persistence, fixed-scope binding prepare/admit/apply and browser readback.",
+    "noRuntimeOrDeploymentChanges": true,
+    "uiFixtureScope": "Closed988fact fixture exercises exact added schemas and links with required existing targets; does not establish full6889fact carrier coverage."
+  },
+  "inventory": {
+    "protocol": "architecture-inventory-data/1",
+    "observedAt": "2026-10-22T06:36:57Z",
+    "freshnessMode": "snapshot-only",
+    "globallyComplete": false,
+    "items": [
+      {
+        "id": "architecture.inventory.map",
+        "type": "ArchitectureInventoryItem",
+        "title": "Existing architecture map",
+        "state": "selected-captured",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "protocol": "sqlite-projection-basis/1",
+          "laneId": "task/programme-host-lifecycle-20261015",
+          "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+          "path": "programme/context-checkpoint-publication-20261015/state.json",
+          "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+          "factArrayPath": "facts"
+        },
+        "details": {
+          "subject": "map.architecture",
+          "components": 47,
+          "seams": 4,
+          "source": {
+            "protocol": "sqlite-projection-basis/1",
+            "laneId": "task/programme-host-lifecycle-20261015",
+            "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+            "path": "programme/context-checkpoint-publication-20261015/state.json",
+            "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+            "factArrayPath": "facts"
+          },
+          "classification": "47 authored source-informed classifications; not a runtime census",
+          "freshness": "Historical component deployment labels have not all been reverified"
+        },
+        "components": [],
+        "schemas": [
+          "schema.ArchitectureMap",
+          "schema.ArchitectureComponent",
+          "schema.ArchitectureLayer",
+          "schema.ArchitectureSeam"
+        ]
+      },
+      {
+        "id": "architecture.inventory.context",
+        "type": "ArchitectureInventoryItem",
+        "title": "Named contexts",
+        "state": "read-observed",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "kind": "read-only-operation-observation",
+          "operations": [
+            "sourcery_context_read",
+            "temple_system_describe",
+            "temple_workspace_status",
+            "temple_context_binding",
+            "temple_context_surface",
+            "temple_host_describe"
+          ],
+          "observedAt": "2026-10-22T06:36:57Z",
+          "connectionScope": "coordinator r65; exact binding recorded in details"
+        },
+        "details": {
+          "ids": [
+            "context.temple",
+            "context.sourcery",
+            "context.work",
+            "context.claimipedia"
+          ],
+          "reader": "sourcery_context_read",
+          "bindingFields": [
+            "installationId",
+            "generationId",
+            "contextId",
+            "stateId",
+            "interpretationId",
+            "projectionId",
+            "scopeId",
+            "policyRevision"
+          ],
+          "meaning": "Navigation scope; not storage containment or inherited authority"
+        },
+        "components": [],
+        "schemas": [
+          "schema.NavigationContext"
+        ]
+      },
+      {
+        "id": "architecture.inventory.corpus",
+        "type": "ArchitectureInventoryItem",
+        "title": "Captured context corpus",
+        "state": "selected-captured",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "kind": "read-only-operation-observation",
+          "operations": [
+            "sourcery_context_read",
+            "temple_system_describe",
+            "temple_workspace_status",
+            "temple_context_binding",
+            "temple_context_surface",
+            "temple_host_describe"
+          ],
+          "observedAt": "2026-10-22T06:36:57Z",
+          "connectionScope": "coordinator r65; exact binding recorded in details"
+        },
+        "details": {
+          "facts": 6310,
+          "typeCount": 32,
+          "source": {
+            "protocol": "sqlite-projection-basis/1",
+            "laneId": "task/programme-host-lifecycle-20261015",
+            "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+            "path": "programme/context-checkpoint-publication-20261015/state.json",
+            "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+            "factArrayPath": "facts"
+          },
+          "otherContextSource": {
+            "protocol": "sqlite-projection-basis/1",
+            "laneId": "task/programme-host-lifecycle-20261015",
+            "snapshotId": "95828642-928a-45a8-b193-0f509b3619ad",
+            "path": "programme/context-checkpoint-publication-20261015/state.json",
+            "factArrayPath": "facts",
+            "objectHash": "ae7e478566ce2f7a3453b260bda3b788a750943c40eda5f50ff339065e8efbc7"
+          },
+          "freshness": "Current binding observed; content remains captured, not live application facts"
+        },
+        "components": [],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.schema",
+        "type": "ArchitectureInventoryItem",
+        "title": "Object schemas and type registry",
+        "state": "selected-captured",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "protocol": "sqlite-projection-basis/1",
+          "laneId": "task/programme-host-lifecycle-20261015",
+          "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+          "path": "programme/context-checkpoint-publication-20261015/state.json",
+          "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+          "factArrayPath": "facts"
+        },
+        "details": {
+          "subjects": [
+            "ui.types",
+            "schema.TypeSchema"
+          ],
+          "types": [
+            {
+              "type": "NavigationContext",
+              "count": 29
+            },
+            {
+              "type": "RetainedArtifact",
+              "count": 337
+            },
+            {
+              "type": "NavigationMove",
+              "count": 8
+            },
+            {
+              "type": "TypeRegistry",
+              "count": 1
+            },
+            {
+              "type": "TypeSchema",
+              "count": 32
+            },
+            {
+              "type": "PresentationGrammar",
+              "count": 1
+            },
+            {
+              "type": "CoveragePolicy",
+              "count": 1
+            },
+            {
+              "type": "SystemAtlasCatalogueEntry",
+              "count": 58
+            },
+            {
+              "type": "ArchitectureMap",
+              "count": 1
+            },
+            {
+              "type": "ArchitectureLayer",
+              "count": 3
+            },
+            {
+              "type": "ArchitectureComponent",
+              "count": 47
+            },
+            {
+              "type": "ArchitectureSeam",
+              "count": 4
+            },
+            {
+              "type": "ShellOperation",
+              "count": 40
+            },
+            {
+              "type": "ShellCatalogue",
+              "count": 1
+            },
+            {
+              "type": "ClaimipediaSurfaceDeclaration",
+              "count": 20
+            },
+            {
+              "type": "ClaimipediaEditorialGrammar",
+              "count": 19
+            },
+            {
+              "type": "ClaimipediaUIRegistry",
+              "count": 1
+            },
+            {
+              "type": "ClaimipediaEvaluationPreview",
+              "count": 3
+            },
+            {
+              "type": "ClaimipediaReproductionPlan",
+              "count": 3
+            },
+            {
+              "type": "ClaimipediaEvaluationRecord",
+              "count": 3
+            },
+            {
+              "type": "NumericOrderQualification",
+              "count": 3
+            },
+            {
+              "type": "DependencyCycleObservation",
+              "count": 1
+            },
+            {
+              "type": "ClaimipediaSimulationPreview",
+              "count": 3
+            },
+            {
+              "type": "PolicyProgram",
+              "count": 1
+            },
+            {
+              "type": "PolicyProgramVersion",
+              "count": 1
+            },
+            {
+              "type": "PolicyRule",
+              "count": 1
+            },
+            {
+              "type": "RuleCondition",
+              "count": 3
+            },
+            {
+              "type": "ProgramExample",
+              "count": 1
+            },
+            {
+              "type": "ProgramSourceMap",
+              "count": 6
+            },
+            {
+              "type": "PolicyCompilationObservation",
+              "count": 1
+            },
+            {
+              "type": "ClaimipediaBatchSimulationPreview",
+              "count": 1
+            },
+            {
+              "type": "DeclarationReceipt",
+              "count": 1
+            }
+          ],
+          "meaning": "Counts are scoped to selected Sourcery projection"
+        },
+        "components": [
+          "map.component.sourcery.uiSchema"
+        ],
+        "schemas": [
+          "schema.TypeRegistry",
+          "schema.TypeSchema"
+        ]
+      },
+      {
+        "id": "architecture.inventory.presentation",
+        "type": "ArchitectureInventoryItem",
+        "title": "Interpretation and automatic object views",
+        "state": "read-observed",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "kind": "read-only-operation-observation",
+          "operations": [
+            "sourcery_context_read",
+            "temple_system_describe",
+            "temple_workspace_status",
+            "temple_context_binding",
+            "temple_context_surface",
+            "temple_host_describe"
+          ],
+          "observedAt": "2026-10-22T06:36:57Z",
+          "connectionScope": "coordinator r65; exact binding recorded in details"
+        },
+        "details": {
+          "subjects": [
+            "ui.layout",
+            "ui.coverage.policy"
+          ],
+          "interpretationId": "existing-surface-ui:b4558aed4bfa16379f4811f2ad06777e31bb487e74cb2a8dea93f43dc1469435",
+          "operations": [
+            "object",
+            "types",
+            "source",
+            "traverse"
+          ],
+          "meaning": "Same facts may have different interpretations; references/backlinks are scoped"
+        },
+        "components": [
+          "map.component.sourcery.renderer"
+        ],
+        "schemas": [
+          "schema.PresentationGrammar",
+          "schema.CoveragePolicy"
+        ]
+      },
+      {
+        "id": "architecture.inventory.catalogue",
+        "type": "ArchitectureInventoryItem",
+        "title": "Operation and Atlas catalogues",
+        "state": "mixed-basis",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "protocol": "sqlite-projection-basis/1",
+          "laneId": "task/programme-host-lifecycle-20261015",
+          "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+          "path": "programme/context-checkpoint-publication-20261015/state.json",
+          "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+          "factArrayPath": "facts"
+        },
+        "details": {
+          "capturedShellOperations": 40,
+          "capturedAtlasEntries": 58,
+          "currentGuideOperations": 43,
+          "reportedActiveOperations": 32,
+          "meaning": "Different denominators; 40/43/32 are not interchangeable completeness counts",
+          "source": {
+            "laneId": "task/universal-transition-firewall-v2-20261022",
+            "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+            "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+            "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+          }
+        },
+        "components": [
+          "map.component.sourcery.shellCatalogue",
+          "map.component.sourcery.discovery"
+        ],
+        "schemas": [
+          "schema.ShellCatalogue",
+          "schema.ShellOperation",
+          "schema.SystemAtlasCatalogueEntry"
+        ]
+      },
+      {
+        "id": "architecture.inventory.grammar",
+        "type": "ArchitectureInventoryItem",
+        "title": "Common process grammar",
+        "state": "declared-model",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "protocol": "sqlite-projection-basis/1",
+          "laneId": "task/programme-host-lifecycle-20261015",
+          "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+          "path": "programme/context-checkpoint-publication-20261015/state.json",
+          "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+          "factArrayPath": "facts"
+        },
+        "details": {
+          "examples": [
+            "architecture-map-common-algebra.json",
+            "runtime-package-process.json",
+            "reader-binding-process.json"
+          ],
+          "meaning": "Executable semantics when run by exact interpreter; grammar presence alone does not establish deployed use"
+        },
+        "components": [
+          "map.component.temple.interpreter",
+          "map.component.sourcery.packageSequence"
+        ],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.capability",
+        "type": "ArchitectureInventoryItem",
+        "title": "Boundary capabilities and adapters",
+        "state": "declared-model",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "protocol": "sqlite-projection-basis/1",
+          "laneId": "task/programme-host-lifecycle-20261015",
+          "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+          "path": "programme/context-checkpoint-publication-20261015/state.json",
+          "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+          "factArrayPath": "facts"
+        },
+        "details": {
+          "catalogue": "sourcery-boundary-capabilities.json",
+          "entries": 110,
+          "meaning": "Hash-bound grammar/phases/ports/adapters/qualification closure; eligibility is not activation",
+          "owner": "existing migration owner"
+        },
+        "components": [
+          "map.component.temple.guard"
+        ],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.workspace",
+        "type": "ArchitectureInventoryItem",
+        "title": "Workspace lanes, leases and snapshots",
+        "state": "read-observed",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "kind": "read-only-operation-observation",
+          "operations": [
+            "sourcery_context_read",
+            "temple_system_describe",
+            "temple_workspace_status",
+            "temple_context_binding",
+            "temple_context_surface",
+            "temple_host_describe"
+          ],
+          "observedAt": "2026-10-22T06:36:57Z",
+          "connectionScope": "coordinator r65; exact binding recorded in details"
+        },
+        "details": {
+          "integration": {
+            "laneId": "integration/main",
+            "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+          },
+          "status": "closed",
+          "headEqualsBlessing": true,
+          "lease": null,
+          "meaning": "Lane is mutable leased work; snapshot is immutable composed identity; projection is disposable native view"
+        },
+        "components": [],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.evidence",
+        "type": "ArchitectureInventoryItem",
+        "title": "Evidence and epistemic status",
+        "state": "mixed-basis",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "protocol": "sqlite-projection-basis/1",
+          "laneId": "task/programme-host-lifecycle-20261015",
+          "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+          "path": "programme/context-checkpoint-publication-20261015/state.json",
+          "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+          "factArrayPath": "facts"
+        },
+        "details": {
+          "kinds": [
+            "authored declaration",
+            "source inspection",
+            "executable check",
+            "model proof",
+            "accepted admission"
+          ],
+          "meaning": "A receipt proves only its named scope. Declarations, qualification and production effects are distinct",
+          "records": [
+            "RetainedArtifact",
+            "DeclarationReceipt"
+          ]
+        },
+        "components": [],
+        "schemas": [
+          "schema.RetainedArtifact",
+          "schema.DeclarationReceipt"
+        ]
+      },
+      {
+        "id": "architecture.inventory.selectedRuntime",
+        "type": "ArchitectureInventoryItem",
+        "title": "Selected application generation",
+        "state": "selected-observed",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "kind": "read-only-operation-observation",
+          "operations": [
+            "sourcery_context_read",
+            "temple_system_describe",
+            "temple_workspace_status",
+            "temple_context_binding",
+            "temple_context_surface",
+            "temple_host_describe"
+          ],
+          "observedAt": "2026-10-22T06:36:57Z",
+          "connectionScope": "coordinator r65; exact binding recorded in details"
+        },
+        "details": {
+          "generationId": "sqlite-sourcery-workspace-test-versioned-v3r7",
+          "activationId": "180ef493-a6bd-4470-9da9-03182883d30c",
+          "meaning": "Observed selected pointer; does not describe every connection's serving worker"
+        },
+        "components": [],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.servingRuntime",
+        "type": "ArchitectureInventoryItem",
+        "title": "Serving worker on coordinator connection",
+        "state": "serving-observed",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "kind": "read-only-operation-observation",
+          "operations": [
+            "sourcery_context_read",
+            "temple_system_describe",
+            "temple_workspace_status",
+            "temple_context_binding",
+            "temple_context_surface",
+            "temple_host_describe"
+          ],
+          "observedAt": "2026-10-22T06:36:57Z",
+          "connectionScope": "coordinator r65; exact binding recorded in details"
+        },
+        "details": {
+          "generationId": "sqlite-sourcery-activation-qualification-v3r4r16",
+          "hostGenerationId": "host-runtime-package-capability-authority-r65",
+          "hostRuntimeHash": "d8459a6e16bdb32f928d145905fdd7347a3088767030b8941fba4121bca37509",
+          "meaning": "Connection-local predecessor continuity; no reload inferred or performed"
+        },
+        "components": [],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.binding",
+        "type": "ArchitectureInventoryItem",
+        "title": "Reader registry and governed selection",
+        "state": "read-observed",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "kind": "read-only-operation-observation",
+          "operations": [
+            "sourcery_context_read",
+            "temple_system_describe",
+            "temple_workspace_status",
+            "temple_context_binding",
+            "temple_context_surface",
+            "temple_host_describe"
+          ],
+          "observedAt": "2026-10-22T06:36:57Z",
+          "connectionScope": "coordinator r65; exact binding recorded in details"
+        },
+        "details": {
+          "sequence": 62,
+          "state": "cf80d69942090614a1f335f3eec3b4b229981a606b20afe3f712aaf9b6ffe079",
+          "mutableContexts": [
+            "context.work",
+            "context.sourcery"
+          ],
+          "unchangedOtherEntries": 6,
+          "operation": "temple_context_binding",
+          "lifecycle": [
+            "prepare",
+            "admit",
+            "apply"
+          ],
+          "meaning": "Selection changes a read projection, not application runtime authority"
+        },
+        "components": [],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.browser",
+        "type": "ArchitectureInventoryItem",
+        "title": "Existing local context browser",
+        "state": "stopped-observed",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "kind": "read-only-operation-observation",
+          "operations": [
+            "sourcery_context_read",
+            "temple_system_describe",
+            "temple_workspace_status",
+            "temple_context_binding",
+            "temple_context_surface",
+            "temple_host_describe"
+          ],
+          "observedAt": "2026-10-22T06:36:57Z",
+          "connectionScope": "coordinator r65; exact binding recorded in details"
+        },
+        "details": {
+          "operation": "temple_context_surface",
+          "phase": "stopped",
+          "live": false,
+          "url": null,
+          "meaning": "Browser surface stopped when inspected; MCP reader still works. Start/select remain existing governed operations"
+        },
+        "components": [],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.ownership",
+        "type": "ArchitectureInventoryItem",
+        "title": "Work and owner coordination",
+        "state": "declared-ownership",
+        "evidenceClass": "owner-supplied",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "task/universal-transition-firewall-v2-20261022",
+          "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+          "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+          "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+        },
+        "details": {
+          "coordinatorChat": "01a15ea1-122a-7172-8476-180fd5e872f2",
+          "migrationOwnerChat": "01a147b8-4a14-72a2-98e1-4a4f88ae4cb5",
+          "inventoryLane": "task/architecture-inventory-surface-20261022",
+          "migrationLane": "task/universal-transition-firewall-v2-20261022",
+          "boundary": "Coordinator owns architecture data/projection; migration owner owns enforcement/custody/receiving. No competing control plane."
+        },
+        "components": [],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.firewall",
+        "type": "ArchitectureInventoryItem",
+        "title": "Universal transition firewall programme",
+        "state": "candidate-not-enforced",
+        "evidenceClass": "owner-supplied",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "task/universal-transition-firewall-v2-20261022",
+          "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+          "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+          "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+        },
+        "details": {
+          "source": {
+            "laneId": "task/universal-transition-firewall-v2-20261022",
+            "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+            "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+            "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+          },
+          "counts": {
+            "guideOperations": 43,
+            "sourceInspectedSinks": 17,
+            "delegationEdges": 34
+          },
+          "status": "refused-for-universal-enforcement",
+          "evidence": "declared+source-inspected",
+          "remaining": "Authenticated exhaustive sink discovery and exclusive capability custody are not proved",
+          "meaning": "Referenced owner evidence; neither inventory nor map confers admission"
+        },
+        "components": [],
+        "schemas": []
+      },
+      {
+        "id": "architecture.inventory.domain",
+        "type": "ArchitectureInventoryItem",
+        "title": "Application semantic objects",
+        "state": "selected-captured",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "protocol": "sqlite-projection-basis/1",
+          "laneId": "task/programme-host-lifecycle-20261015",
+          "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+          "path": "programme/context-checkpoint-publication-20261015/state.json",
+          "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+          "factArrayPath": "facts"
+        },
+        "details": {
+          "types": [
+            "PolicyProgram",
+            "PolicyProgramVersion",
+            "PolicyRule",
+            "RuleCondition",
+            "ProgramSourceMap",
+            "ClaimipediaEvaluationRecord",
+            "ClaimipediaReproductionPlan"
+          ],
+          "meaning": "Captured semantic fixtures/declarations are distinct from an activated product",
+          "source": {
+            "protocol": "sqlite-projection-basis/1",
+            "laneId": "task/programme-host-lifecycle-20261015",
+            "snapshotId": "87acf984-ac83-4e93-9e20-9b2a03289d51",
+            "path": "programme/context-checkpoint-publication-20261015/state.json",
+            "objectHash": "bfe945d71f94eb554855edc4b9554e8117970ae6095c0ae31b0d5c38cc1a3e0c",
+            "factArrayPath": "facts"
+          }
+        },
+        "components": [
+          "map.component.claimipedia.declarations",
+          "map.component.claimipedia.context"
+        ],
+        "schemas": []
+      }
+    ],
+    "connections": [
+      {
+        "id": "architecture.connection.01",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.context",
+        "to": "architecture.inventory.corpus",
+        "relation": "selects",
+        "meaning": "Context resolves through exact binding to a captured corpus",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.02",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.corpus",
+        "to": "architecture.inventory.schema",
+        "relation": "declares",
+        "meaning": "Facts declare types and field contracts",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.03",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.schema",
+        "to": "architecture.inventory.presentation",
+        "relation": "interpreted-by",
+        "meaning": "Type definitions and presentation grammar generate object views",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.04",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.presentation",
+        "to": "architecture.inventory.map",
+        "relation": "renders",
+        "meaning": "Existing object renderer exposes map.architecture",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.05",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.map",
+        "to": "architecture.inventory.catalogue",
+        "relation": "links-to",
+        "meaning": "Architecture discovery links to shell and Atlas contracts",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.06",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.catalogue",
+        "to": "architecture.inventory.grammar",
+        "relation": "describes",
+        "meaning": "Operation discovery describes grammar/owner entry points; not custody proof",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.07",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.grammar",
+        "to": "architecture.inventory.capability",
+        "relation": "requires",
+        "meaning": "Boundary operations require exact declared capability and adapter closure",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.08",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.capability",
+        "to": "architecture.inventory.evidence",
+        "relation": "qualified-by",
+        "meaning": "Scope-bound qualifier evidence is distinct from installation/admission",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.09",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.workspace",
+        "to": "architecture.inventory.evidence",
+        "relation": "retains",
+        "meaning": "Snapshots retain source and scoped receipts",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.10",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.selectedRuntime",
+        "to": "architecture.inventory.servingRuntime",
+        "relation": "differs-from",
+        "meaning": "Selected and this connection's serving identities currently differ",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.11",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.binding",
+        "to": "architecture.inventory.context",
+        "relation": "selects",
+        "meaning": "Governed reader registry selects context bindings",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.12",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.binding",
+        "to": "architecture.inventory.corpus",
+        "relation": "references",
+        "meaning": "Registry62 names exact captured source corpus",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.13",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.browser",
+        "to": "architecture.inventory.presentation",
+        "relation": "hosts",
+        "meaning": "Existing browser process hosts the same object grammar; currently stopped",
+        "evidenceClass": "live-observation",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.14",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.ownership",
+        "to": "architecture.inventory.firewall",
+        "relation": "assigns-owner",
+        "meaning": "Migration owner owns effect/custody enforcement; map only references evidence",
+        "evidenceClass": "owner-supplied",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "task/universal-transition-firewall-v2-20261022",
+          "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+          "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+          "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+        }
+      },
+      {
+        "id": "architecture.connection.15",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.firewall",
+        "to": "architecture.inventory.catalogue",
+        "relation": "audits",
+        "meaning": "Owner inventory distinguishes43guide operations from32reported active count",
+        "evidenceClass": "owner-supplied",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "task/universal-transition-firewall-v2-20261022",
+          "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+          "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+          "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+        }
+      },
+      {
+        "id": "architecture.connection.16",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.firewall",
+        "to": "architecture.inventory.capability",
+        "relation": "requires",
+        "meaning": "Universal custody remains unproved despite declared owners",
+        "evidenceClass": "owner-supplied",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "task/universal-transition-firewall-v2-20261022",
+          "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+          "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+          "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+        }
+      },
+      {
+        "id": "architecture.connection.17",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.domain",
+        "to": "architecture.inventory.corpus",
+        "relation": "captured-in",
+        "meaning": "Application semantic fixtures are part of selected captured projection",
+        "evidenceClass": "retained-declaration",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.connection.18",
+        "type": "ArchitectureConnection",
+        "from": "architecture.inventory.map",
+        "to": "architecture.inventory.ownership",
+        "relation": "maintained-by",
+        "meaning": "Architecture projection and enforcement work have non-overlapping owners",
+        "evidenceClass": "owner-supplied",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "task/universal-transition-firewall-v2-20261022",
+          "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+          "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+          "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+        }
+      }
+    ],
+    "coverage": [
+      {
+        "id": "architecture.coverage.components",
+        "type": "ArchitectureCoverage",
+        "title": "Component inventory coverage",
+        "counts": {
+          "observed": 47,
+          "denominator": "unknown; 4481 artifacts in historical declared scope are not components"
+        },
+        "status": "partial",
+        "meaning": "Captured map is a bounded classification, not exhaustive implementation discovery",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.coverage.operations",
+        "type": "ArchitectureCoverage",
+        "title": "Operation catalogue reconciliation",
+        "counts": {
+          "capturedShell": 40,
+          "guide": 43,
+          "reportedActive": 32,
+          "denominator": "different contract scopes"
+        },
+        "status": "inconsistent-denominators",
+        "meaning": "Do not calculate40/43 or43/32 as architecture completeness",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.coverage.custody",
+        "type": "ArchitectureCoverage",
+        "title": "Effect sinks and exclusive custody",
+        "counts": {
+          "sourceInspectedSinks": 17,
+          "delegationEdges": 34,
+          "denominator": "authenticated exhaustive discovery unavailable"
+        },
+        "status": "unproved",
+        "meaning": "Owner explicitly refuses universal-enforcement claim",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "task/universal-transition-firewall-v2-20261022",
+          "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+          "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+          "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+        }
+      },
+      {
+        "id": "architecture.coverage.freshness",
+        "type": "ArchitectureCoverage",
+        "title": "Architecture freshness",
+        "counts": {
+          "automaticSubscriptionsVerified": 0,
+          "currentLiveChecks": [
+            "context reader",
+            "binding registry",
+            "runtime identity",
+            "integration status",
+            "surface status"
+          ]
+        },
+        "status": "snapshot-only",
+        "meaning": "Reobserve after source/catalogue/generation/reader/schema/policy changes; no automatic refresh claimed",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.coverage.contextCompatibility",
+        "type": "ArchitectureCoverage",
+        "title": "Cross-context compatibility",
+        "counts": {
+          "sources": 2,
+          "contexts": 8,
+          "mutable": 2
+        },
+        "status": "not-proved",
+        "meaning": "Same navigation graph can link contexts pinned to different captured sources; compatibility needs checks",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      },
+      {
+        "id": "architecture.coverage.publication",
+        "type": "ArchitectureCoverage",
+        "title": "Display, qualification and admission",
+        "counts": {
+          "mcpReader": "works",
+          "browser": "stopped when observed",
+          "runtimeActivation": "not changed",
+          "deployment": "not performed"
+        },
+        "status": "separate-boundaries",
+        "meaning": "A displayed declaration, passing UI coverage, signed binding admission and deployed product are distinct",
+        "observedAt": "2026-10-22T06:36:57Z",
+        "source": {
+          "laneId": "integration/main",
+          "snapshotId": "ffec3ed4-3d02-418d-860f-ae18b3f6f9ab"
+        }
+      }
+    ],
+    "firewallOwnerRef": {
+      "laneId": "task/universal-transition-firewall-v2-20261022",
+      "snapshotId": "3094c6d6-34da-482f-8916-23700dc2e6f3",
+      "path": "programme/universal-transition-firewall-20261022/active-effect-operation-delegation-inventory-v2.json",
+      "objectHash": "794d12b7da60c813e675eb279b390ebb8d447b4eb6012073291bd57ec6db5668"
+    },
+    "refreshTriggers": [
+      "source snapshot change",
+      "reader binding selection",
+      "selected or serving generation change",
+      "operation catalogue change",
+      "schema/interpretation change",
+      "scope/policy change"
+    ]
+  },
+  "ownerBoundary": {
+    "coordinator": "read-only architecture/context inventory and data projection",
+    "migrationOwner": "enforcement/custody/canonical receiving/published materialization boundary"
+  },
+  "newSourceAccounting": {
+    "javascript": 0,
+    "runtimeChanges": 0,
+    "capabilityRegistryChanges": 0,
+    "schemas": 3,
+    "inventoryItems": 17,
+    "connections": 18,
+    "coverageQuestions": 6
+  },
+  "artifacts": [
+    {
+      "path": "programme/architecture-inventory-20261022/context-delta.json",
+      "objectHash": "1615d0ad6d7298d0c00d4e5d979146bd8bb8cd7923c1cffc14ff8c0a0f703483"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/fixture-restoration.json",
+      "objectHash": "e3a02ebb2e8384f0e89328852702c9401996154cc1c63a299951838c8134fd7b"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/inventory-data.json",
+      "objectHash": "a1bb51e3d786599ff0e381bedee120912c3b7034b15741fdf42a8fbbd16ffceb"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/inventory-projection-common-algebra.json",
+      "objectHash": "08e02198428c5a20b9bfbb8ec9d50bfbf39756113087fa2f41df359a12815f5f"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/promotion-coordinate-note.json",
+      "objectHash": "68d824a085536584dde7a3d33bf8a0ab78711af226581ace6425428a1682044f"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/publication-frontier.json",
+      "objectHash": "66753eeb5cf853e814791ae0af96db36c14cbc0a066eca28a7641e2aadaaa8f4"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/qualification-cases.json",
+      "objectHash": "d36976ae8d96d722b0b4ee7a77b5f4343e08b2a2583f65134f9dff193b4e2bf2"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/qualification-correction.json",
+      "objectHash": "409c2f7814249469f90cd89f3143147c2a9272ad8217bf5c5cdf0ffb319c3ad0"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/qualification-input.json",
+      "objectHash": "b2beafcf1f2841cf976b7dd2239fcf03c150d72816e27cbed8fb3a719d1e27ce"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/reflection.json",
+      "objectHash": "5ef855e350d86b15b220bbaf32ace17d57813fdb5d2fb1894906ac592863df2e"
+    },
+    {
+      "path": "programme/architecture-inventory-20261022/ui-fixture.json",
+      "objectHash": "f8265cb0ad990519f32222da18570b748d668a4b4041db8aae449da53f7cbee8"
+    }
+  ],
+  "notComplete": "Not selected into live context; full carrier UI coverage, admitted publication and reader/browser readback remain."
+}

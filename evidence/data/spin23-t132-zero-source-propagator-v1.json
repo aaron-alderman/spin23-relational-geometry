@@ -1,0 +1,25 @@
+{
+  "schema": "spin23.t132-zero-source-propagator/1",
+  "date": "2026-10-23",
+  "status": "complete flat zero-source packet propagator before the t132 loop trace",
+  "witnessMomentum": [2, 3, 5, 7],
+  "zeroSourceSectorRanks": {"XhatSquared": 1, "criticalTorsionRaw": 24, "EinsteinHilbertRaw": 30},
+  "fourierContinuation": {
+    "twoDerivativeBlocks": "minus the real-momentum polynomial coefficient",
+    "oneDerivativeMixedBlocks": "multiply by i; the raw hk and kh blocks are negative transposes",
+    "algebraicBlocks": "unchanged"
+  },
+  "schurWitness": {
+    "parameters": {"kappa": 1, "a1": 2, "bX": 1},
+    "connectionRank": 24,
+    "ungaugedReducedMetricRank": 6,
+    "gaugeFixedMetricRank": 10,
+    "gaugeCoefficientInFCoordinates": "-1/(2*kappa)",
+    "deDonderInverse": "-kappa/p^2 times the symmetric-tensor trace-reversal projector; the minus is the Euclidean Einstein continuation",
+    "maximumResidual": 1.4e-17,
+    "criticalCouplingIndependenceResidual": 4.0e-12
+  },
+  "principalSymbol": {"metricRank": 10, "connectionRank": 1, "totalRank": 11, "fieldDimension": 34},
+  "calibration": "After exact elimination of all 24 connection components, the inverse for f=h/2 is -kappa P/p^2, equivalent after Euclidean continuation to G_h=4*kappa*P/p^2.",
+  "nextCalculation": "evaluate the seagull-minus-bubble t132 logarithmic pole with the validated momentum-dependent 34-component inverse"
+}

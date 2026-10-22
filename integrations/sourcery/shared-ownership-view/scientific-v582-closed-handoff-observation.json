@@ -1,0 +1,35 @@
+{
+  "schema": "shared-ownership-scientific-observation/1",
+  "status": "prepared-not-published",
+  "version": "v582",
+  "laneId": "task/claimipedia-spin23-minimal-physical-model-20261021",
+  "snapshotId": "0933888c-252d-401e-8a1a-8c4da6d67186",
+  "artifact": {
+    "path": "research/spin23-u14-moduli-conjugator-admissibility-v1.json",
+    "expectedObjectHash": "76d220a3c7d8d456975b5f2caca5af5a69bc307811639f6cb3344088178eaa6e",
+    "content": "{\n  \"protocol\": \"spin23-u14-moduli-conjugator-admissibility/1\",\n  \"status\": \"research-checkpoint\",\n  \"parentSnapshotId\": \"68d5e0c4-25c7-489b-91e9-48bf05ee7f3f\",\n  \"question\": \"Does ambient isospectrality of the 19-dimensional active moduli immediately provide an admissible programme equivalence?\",\n  \"construction\": {\n    \"sample\": \"one deterministic simultaneous random point on S^3 x U(3) x S^3 x U(2)\",\n    \"method\": \"Use SVDs of the canonical and transformed 92x92 off-diagonal vacuum blocks to construct left/right unitary factors and assemble a grading-block-diagonal U(184) conjugator.\",\n    \"warning\": \"Degenerate singular values make the conjugator non-unique; this construction tests one generic witness, not existence of an optimized admissible witness.\"\n  },\n  \"results\": {\n    \"maximumSingularValueDeviation\": 3.3306690738754696e-16,\n    \"relativeVacuumConjugationResidual\": 6.784374072742956e-16,\n    \"gradingCommutatorNorm\": 0,\n    \"topCarrierOffBlockFraction\": 0.9581359980082307,\n    \"bottomCarrierOffBlockFraction\": 0.9598681858436834,\n    \"naiveRealStructureResidual\": 1.4234097633586629\n  },\n  \"interpretation\": {\n    \"positive\": \"An explicit unitary conjugator exists numerically and can be chosen to commute exactly with the particle/antiparticle grading.\",\n    \"negative\": \"The generic SVD witness is highly nonlocal across the 16 carrier blocks and does not satisfy the simplest bottom=conjugate(top) real-structure relation.\",\n    \"conclusion\": \"Ambient isospectrality does not by itself establish that the 19 moduli are admissible gauge or representation-basis redundancies.\",\n    \"nonNoGo\": \"Because of large singular-value degeneracies, another conjugator within the stabilizer freedom may satisfy additional structural constraints; this remains an existence problem.\"\n  },\n  \"nextProblem\": {\n    \"formulation\": \"Solve a constrained Procrustes/intertwiner problem inside degenerate singular subspaces, imposing carrier-block locality, grading, real structure, and algebra-normalizer conditions.\",\n    \"outcomes\": {\n      \"success\": \"quotient some or all of the 19-dimensional family as admissible equivalence\",\n      \"failure\": \"retain the corresponding directions as physical moduli needing orientation-locking dynamics\"\n    }\n  },\n  \"falsifiers\": [\n    \"An explicit structure-preserving block-local conjugator for the same transformed vacuum would show the generic SVD witness was merely a poor choice.\",\n    \"A lower bound excluding all block-local conjugators below nonzero residual would establish a genuine admissibility obstruction.\",\n    \"A corrected real-structure matrix differing from the naive half-swap may alter the reported reality residual and must be audited before any no-go claim.\"\n  ]\n}\n"
+  },
+  "evidenceClass": "Exact retained authored JSON independently read; numerical computation not independently rerun; no executable receipt or blessing inferred.",
+  "ownerReportedLifecycle": {
+    "closedAtSnapshot": "0933888c-252d-401e-8a1a-8c4da6d67186",
+    "blessedSnapshotId": null,
+    "terminalDisposition": null,
+    "proposalId": null,
+    "proposalOutcome": "issued but no proposal identifier in returned payload; not replayed",
+    "normalResearchMayResume": true
+  },
+  "summary": "v575-v582: represented preserving u(1)^4 is spectator; cross-inactive quartic repairs finite sampled negative directions, not global positivity. Nineteen active modes form sampled energy-degenerate and isospectral product family. V582 constructs one grading-preserving ambient conjugator with tiny conjugation residual but large carrier nonlocality/reality residual; this does not establish admissible equivalence or a no-go against all constrained conjugators.",
+  "remainingScientificGates": [
+    "symbolic kernel and orbit proof",
+    "global repaired-quartic positivity",
+    "structure-preserving constrained intertwiner existence or no-go",
+    "edge-local active nonabelian gauge-Higgs completion"
+  ],
+  "publication": {
+    "requestId": "request-01b7-70c0-e47f",
+    "lastVerifiedRevision": 1,
+    "published": false,
+    "authoringQualification": "blocked pending existing-owner projection fix continuation",
+    "deployment": "separate admission gate"
+  }
+}

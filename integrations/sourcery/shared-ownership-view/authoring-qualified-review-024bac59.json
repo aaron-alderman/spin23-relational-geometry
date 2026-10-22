@@ -1,0 +1,92 @@
+{
+  "inspectionCopy": true,
+  "canonicalRef": {
+    "laneId": "task/authenticated-authoring-deployment-review-20261022",
+    "snapshotId": "d2462d52-40c4-42f7-919c-652ae6cb41b6",
+    "path": "programme/sourcery-authenticated-authoring-resource-20261022/deployment-review/qualified-source-route-review-v3.json",
+    "objectHash": "16457634bf5f07eb40b10d0ed527bf90ff2905d1ba46741c767e16e0c0e8c388"
+  },
+  "artifact": {
+    "protocol": "sourcery/authenticated-authoring-qualified-review/3",
+    "status": "authoring-integrated-and-blessed;route-review-not-ready-for-deployment",
+    "authoringIntegration": {
+      "headAndBlessed": "024bac59-eed3-4805-a5b1-d84397774832",
+      "receiptPath": "meta/test-receipts/024bac59-eed3-4805-a5b1-d84397774832.json",
+      "nativePassed": 17,
+      "fixturePassed": 2,
+      "nineMemberHashesVerified": true,
+      "all113PriorCapabilitiesPreserved": true
+    },
+    "routeCandidate": {
+      "snapshotId": "09b2c771-f619-422f-8a72-7de54ca9241f",
+      "receiptPath": "meta/test-receipts/09b2c771-f619-422f-8a72-7de54ca9241f.json",
+      "passed": 7,
+      "failed": 0,
+      "scope": "fake-port nonproduction lifecycle tests;not live Nginx or HTTP proof",
+      "limits": "Seven native fake-port lifecycle tests passed on immutable candidate09b2c771;post-note retained qualification fails before Node. Neither later route head nor production deployment is accepted.",
+      "manifestReviewRef": {
+        "laneId": "task/authenticated-authoring-deployment-review-20261022",
+        "snapshotId": "a3636985-fa4c-4112-ac9b-4f6e242c648a",
+        "path": "programme/sourcery-authenticated-authoring-resource-20261022/deployment-review/qualified-source-route-review-v1.json",
+        "objectHash": "a09857cd2ecd6a1d20b41bb15f932e6c0a65cb6af43902ea36fbf76c6df8f955"
+      }
+    },
+    "efficiency": {
+      "receivingMetadataBytes": 692561,
+      "largestSourcePreparationBytes": 978120,
+      "productionSourceTestsPhaseMs": {
+        "validation": 155.407,
+        "projection": 4016.91,
+        "test": 2585.501,
+        "cleanup": 38.515,
+        "preReceiptTotal": 6796.384
+      },
+      "routeQualificationPhaseMs": {
+        "validation": 182.46,
+        "projection": 203.345,
+        "test": 241.822,
+        "cleanup": 2.951,
+        "preReceiptTotal": 630.609
+      },
+      "memoryFailureObserved": false,
+      "disposableProjectionsDeleted": true,
+      "repairScope": "No kernel,host,supervisor,auth,lease or reader repair;one receiving capability and inactive same-owner bounded route successor",
+      "qualityDefects": [
+        {
+          "id": "work.process-qa.authoring-preparation-size-stall-20261022",
+          "disposition": "Keep preparations below observed transport stall size;split metadata and exact source;reuse catalogued dependencies"
+        },
+        {
+          "id": "work.process-qa.cross-lane-work-basis-receiving-20261022",
+          "disposition": "Ordinary merge preserves task basis;rebind receiving metadata before integration qualifier;source unchanged"
+        }
+      ]
+    },
+    "productionPreflight": {
+      "status": "blocked-on-expired-existing-aws-session",
+      "configuredConnection": "SSM AWS-StartSSHSession to existing EC2 instance,region ap-southeast-2,ec2-user",
+      "directDomainSsh": "host-key verification failed;not bypassed",
+      "readOnlyAwsQuery": "refused:Your session has expired.Please reauthenticate using aws login",
+      "historicalConfigHash": "e33a9c21e303b912a9d7c24459cc0e4279558c39bda07b9b1e9c7e56cd7c1788",
+      "currentLiveHashReobserved": false
+    },
+    "remaining": [
+      "Resolve exact route-candidate retained-owner requalification defect without assuming a platform repair is required",
+      "Reauthenticate existing AWS session",
+      "Reobserve production source/config/service identities using trusted existing connection",
+      "Prepare exact source-install package and staged complete Nginx successor from that live basis",
+      "Obtain fresh human deployment admission for exact source and eight routes",
+      "Apply once through existing admitted effect owner;verify live positive/negative regressions",
+      "Reobserve latest closed scientific checkpoint;publish prepared chronological update through existing journal lifecycle;verify readback"
+    ],
+    "productionEffectsPerformed": [],
+    "grantsDeploymentAdmission": false,
+    "grantsPublicationAuthority": false,
+    "supersedes": "programme/sourcery-authenticated-authoring-resource-20261022/deployment-review/qualified-source-route-review-v2.json",
+    "additionalBlocker": {
+      "workItemId": "work.process-qa.retained-route-owner-note-requalification-20261022",
+      "path": "programme/sourcery-authenticated-authoring-resource-20261022/deployment-review/retained-owner-requalification-qa-observation-v2.json",
+      "status": "Both initial native candidates pass7;both post-note qualification attempts fail before Node;literal-data hypothesis falsified;root cause not established"
+    }
+  }
+}

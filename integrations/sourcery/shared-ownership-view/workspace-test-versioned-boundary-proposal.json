@@ -1,0 +1,52 @@
+{
+  "kind": "review-proposal-only",
+  "date": "2026-10-22",
+  "runtimeOwnerChatId": "01a147b8-4a14-72a2-98e1-4a4f88ae4cb5",
+  "basisSnapshotId": "ae4b3579-2583-4845-8749-f4b6b288cb20",
+  "patch": "workspace-test-versioned-boundary-proposal.patch",
+  "patchSha256": "dae5c1da9bc257650c1c2f6e933eb8d49d6674a35d109074f21d6a0c08653262",
+  "files": [
+    {
+      "sourcePath": "C:\\Users\\aaron\\sourcery\\.consolidation\\temple-runtime\\2026-10-22-workspace-test-assurance-v3r6\\surface-v3\\manager-mcp.mjs",
+      "sourceSha256": "307db3f6480bd54026ee14e8a8209e1e49f34337bb222113a1b6189f34ea58b8",
+      "draftSha256": "6c8787cd47bd2adcc4d8d63816c3a9c535ebcadfa4bae6a67b0831235c3625e5",
+      "syntaxCheck": "passed; parsed from stdin only"
+    },
+    {
+      "sourcePath": "C:\\Users\\aaron\\sourcery\\.consolidation\\temple-runtime\\2026-10-22-workspace-test-assurance-v3r6\\surface-v3\\development-mcp.mjs",
+      "sourceSha256": "d6f49a31eceeabbed4c41b898fcdfcad54e3506b6c01f92a570c190a85fcbde6",
+      "draftSha256": "6ce1fe618a11fb88a2c1bf655018d4b8f3c28f5e0252f43aec2ef87fb35dc43c",
+      "syntaxCheck": "passed; parsed from stdin only"
+    }
+  ],
+  "behaviour": [
+    "Preserve old temple_workspace_test descriptor and omitted projectionMode defaults to full.",
+    "Add temple_workspace_test_v3 requiring explicit projectionMode through the existing dispatcher.",
+    "Use the actual operation ID in normalized and fenced requests so the two versions cannot alias effect identity.",
+    "Retain existing lane:test permission and include v3 in the existing mutating-operation fence."
+  ],
+  "authorityBoundary": {
+    "source": "C:/Users/aaron/sourcery/AGENTS.md",
+    "quote": "For this migration stage, leave existing application source and prior research artifacts unchanged unless the user explicitly authorizes otherwise.",
+    "currentWorkItem": "work.runtime-package.workspace-test-assurance-v3r6r1",
+    "exclusion": "Application executable changes",
+    "inspectionCopy": "runtime-work-item-at-ae4b3579.json"
+  },
+  "dataOnlyAliasInsufficient": "The existing session.test method hard-codes temple_workspace_test when creating its durable request. Registry aliases cannot independently change that fenced identity.",
+  "approvalScope": "Authorize only the versioned boundary-owner successor in these two modules and the necessary matching grammar, registry, tests and genuine qualification receipts, through the existing Temple/SQLite owner and governed admission/activation lifecycle. No authentication, lane-scope, public MCP route or lease-safety expansion.",
+  "requiredValidation": [
+    "Old descriptor byte-for-byte equality and v2 omitted/explicit projection-mode compatibility.",
+    "V3 missing projectionMode refusal; all three explicit modes positive.",
+    "Invalid modes and invalid/missing/unsafe/excessive declared paths refused.",
+    "Wrong operation ID rejected by session.test.",
+    "Cross-version request/effect identities cannot consume each others receipts.",
+    "Lane permissions, lease fencing, stale epochs and uncertain effects preserved.",
+    "Inherited lane migration and sealed-package positive/negative regressions.",
+    "Exact source qualification, package closure, inactive installation qualification, governed activation and live regression receipts.",
+    "Tested/blessed integration reconciliation and explicit failed/superseded candidate dispositions."
+  ],
+  "reviewLimits": "This is a real source-context draft diff and syntax-checked proposal, not an applied patch, executable test receipt or admission. Matching grammar/registry/tests still must be authored and qualified through Temple after scoped authorization.",
+  "patchApplyCheck": "Passed git apply --check against the exact inactive candidate; no patch applied.",
+  "protectedSourceUnchanged": true,
+  "runtimeActivated": false
+}

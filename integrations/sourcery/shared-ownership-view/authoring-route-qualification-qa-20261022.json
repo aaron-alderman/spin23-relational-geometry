@@ -1,0 +1,35 @@
+{
+  "inspectionCopy": true,
+  "canonicalRef": {
+    "laneId": "task/authenticated-authoring-deployment-review-20261022",
+    "snapshotId": "d2462d52-40c4-42f7-919c-652ae6cb41b6",
+    "path": "programme/sourcery-authenticated-authoring-resource-20261022/deployment-review/retained-owner-requalification-qa-observation-v2.json",
+    "objectHash": "102f5417813113e32dc9fa399cdb5b098e70c0fcbc800a817360f23101ac5111"
+  },
+  "artifact": {
+    "protocol": "sourcery/process-qa-observation/2",
+    "workItemId": "work.process-qa.retained-route-owner-note-requalification-20261022",
+    "status": "open;bounded-grammar-hypothesis-falsified;production-blocked",
+    "intendedClaim": "The data-reference grammar correction resolves post-note retained-owner qualification",
+    "evidence": {
+      "v1NativeReceipt": "09b2c771-f619-422f-8a72-7de54ca9241f",
+      "v1NativeTestsPassed": 7,
+      "v1PostNoteCandidate": "a3636985-fa4c-4112-ac9b-4f6e242c648a",
+      "v2NativeReceipt": "0c0079b6-6ce9-4054-b0fd-383ae126820f",
+      "v2NativeTestsPassed": 7,
+      "v2PostNoteCandidate": "320030e0-18d6-4a37-a1da-c2e72ab16b0f",
+      "bothPostNoteResults": "evaluate is not a function or its return value is not iterable",
+      "nodeStarted": false,
+      "postNoteReceiptProduced": false,
+      "effectAdapterHash": "794f0f67c6120dc913d9f3521d0618bd49c0507d9defe4ccd09b5938a83f9a41",
+      "effectAdapterUnchanged": true
+    },
+    "decision": "Hypothesis falsified;do not promote current route head or invent a fresh successor to evade the retained-owner gate. Preserve both native passing receipts and failures. No platform repair authorized/performed by this observation.",
+    "next": "Diagnose exact difference between current-candidate and retained-owner qualification using these immutable pairs;first inspect candidate metadata/grammar before proposing any platform change",
+    "independentUserAction": "Existing AWS session expired;aws login needed for trusted production preflight",
+    "authoringIntegrationUnaffected": "024bac59-eed3-4805-a5b1-d84397774832 remains closed/blessed;17 native plus2 fixture pass",
+    "productionEffects": [],
+    "publication": false,
+    "grantsAuthority": false
+  }
+}

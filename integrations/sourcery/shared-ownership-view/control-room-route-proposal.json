@@ -1,0 +1,78 @@
+{
+  "status": "proposal-only-not-applied",
+  "host": "mcp.sourcerytech.com.au",
+  "target": "/etc/nginx/sites-enabled/sourcery-mcp-candidate",
+  "expectedPredecessorSha256": "10b777bdd173dc122fbbd35a040da17a55a50228d64629930be7df1a232055ca",
+  "upstream": "http://127.0.0.1:8130",
+  "existingService": "sourcery-hosted",
+  "routes": [
+    {
+      "match": "^~ /control-room/",
+      "purpose": "Existing authenticated request pages, request creation, events and control-room assets",
+      "methods": "GET POST"
+    },
+    {
+      "match": "= /portal",
+      "purpose": "Existing authenticated workspace portal",
+      "methods": "GET"
+    },
+    {
+      "match": "= /portal/client.mjs",
+      "purpose": "Existing workspace portal client",
+      "methods": "GET"
+    },
+    {
+      "match": "= /v1/portal/workspaces",
+      "purpose": "Existing authenticated workspace discovery",
+      "methods": "GET"
+    },
+    {
+      "match": "= /v1/portal/mcp-portfolios",
+      "purpose": "Existing authenticated project/portfolio discovery used by portal",
+      "methods": "GET"
+    }
+  ],
+  "risk": "Persistently exposes existing authenticated control-room and workspace discovery endpoints on the public HTTPS domain. Authentication and per-scope authorization must continue to be enforced by the existing service.",
+  "constraints": [
+    "No replacement of general location /, public /mcp ceiling remains8151",
+    "Temple publication remains8150",
+    "Existing identity endpoints remain8132",
+    "No new service, credential, tenant, role, or scope",
+    "Never forward client-supplied X-Sourcery-Ssh-Assertion",
+    "No application activation and no dependency on v3r5"
+  ],
+  "observedChecks": {
+    "existingService": "Owner observed active/running; healthz200",
+    "privateControlRoomUnauthenticated": "Independent SSH HTTP probe returned401 with no-store,CSP default-src none,frame-ancestors none",
+    "publicPortal": "Independent browser returned public-lane-read-only"
+  },
+  "beforeApply": [
+    "Direct explicit human approval of target, paths and public exposure",
+    "Migration/deployment owner must confirm existing release authority or admit bounded route ownership; no direct unadmitted edit",
+    "Exact predecessor hash still matches",
+    "Confirm installed service actually exposes each proposed route and rejects unauthenticated/scopemismatched requests",
+    "Back up exact predecessor; syntax-test complete staged Nginx configuration before switch"
+  ],
+  "afterApply": [
+    "nginx -t passes before reload",
+    "Public MCP unauthenticated mutation remains refused",
+    "Temple publication and existing identity routes retain expected responses",
+    "Unauthenticated control-room and portal API do not reveal scope data",
+    "Authenticated exact request created with shared snapshot provenance and resolver-attested links only",
+    "Control-room GET and events identify actual request journal revision",
+    "Independent browser verifies owning chats, evidence, blockers and source links"
+  ],
+  "rollback": "Restore exact backed-up predecessor only if current file matches the applied proposal; nginx -t; reload; verify original routing and service health.",
+  "remaining": [
+    "User approval and admitted deployment path pending",
+    "No shared AuthoringRequest created yet",
+    "No live control-room claim; public route still refused",
+    "Full six-view enrichment requires accepted same-scope semantic/native state"
+  ],
+  "automaticReview": {
+    "action": "Instruction to apply persistent production reverse-proxy binding",
+    "decision": "rejected",
+    "reason": "User had not explicitly approved exact Nginx target, public exposure and blast radius"
+  }
+}
+

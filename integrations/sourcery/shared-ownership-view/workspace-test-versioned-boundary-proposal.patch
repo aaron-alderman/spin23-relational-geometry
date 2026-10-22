@@ -1,0 +1,79 @@
+--- a/surface-v3/manager-mcp.mjs
++++ b/surface-v3/manager-mcp.mjs
+@@ -41,7 +41,8 @@
+   { name: 'temple_workspace_discard', description: 'Discard a registered editor projection and delete its disposable files without committing.', inputSchema: object({ ...laneIdSchema, projectionId: string }, ['laneId', 'projectionId']) },
+   { name: 'temple_workspace_materialize', description: 'Create a disposable native projection for a filesystem-only tool.', inputSchema: object({ ...laneIdSchema, snapshotId: string, targetDirectory: string }, ['laneId', 'snapshotId', 'targetDirectory']) },
+   { name: 'temple_workspace_ingest', description: 'Commit the exact delta from a disposable projection.', inputSchema: object({ ...laneIdSchema, snapshotId: string, projectionDirectory: string, label: string }, ['laneId', 'snapshotId', 'projectionDirectory', 'label']) },
+-  { name: 'temple_workspace_test', description: 'Run a bounded Node test in an explicitly selected disposable full, test-file or declared-closure projection and advance the lane head to its scope-bound telemetry receipt.', inputSchema: object({ ...laneIdSchema, snapshotId: string, testPath: string, projectionMode: { enum: ['full', 'test-file', 'declared'] }, projectionPaths: { type: 'array', minItems: 1, maxItems: 512, items: string } }, ['laneId', 'snapshotId', 'testPath', 'projectionMode']) },
++  { name: 'temple_workspace_test', description: 'Run a bounded Node test in a disposable full, test-file or declared-closure projection and advance the lane head to its scope-bound receipt snapshot.', inputSchema: object({ ...laneIdSchema, snapshotId: string, testPath: string, projectionMode: { enum: ['full', 'test-file', 'declared'] }, projectionPaths: { type: 'array', minItems: 1, maxItems: 512, items: string } }, ['laneId', 'snapshotId', 'testPath']) },
++  { name: 'temple_workspace_test_v3', description: 'Run a bounded Node test in an explicitly selected disposable full, test-file or declared-closure projection and advance the lane head to its scope-bound telemetry receipt.', inputSchema: object({ ...laneIdSchema, snapshotId: string, testPath: string, projectionMode: { enum: ['full', 'test-file', 'declared'] }, projectionPaths: { type: 'array', minItems: 1, maxItems: 512, items: string } }, ['laneId', 'snapshotId', 'testPath', 'projectionMode']) },
+   { name: 'temple_workspace_propose', description: 'Propose the exact tested head of a task lane.', inputSchema: object({ ...laneIdSchema, label: string }, ['laneId', 'label']) },
+   { name: 'temple_workspace_task_ownership', description: 'Describe the exclusive writer ownership of one task lane without locking files or artifacts.', inputSchema: object(laneIdSchema, ['laneId']) },
+   { name: 'temple_workspace_propose_normalized', description: 'Propose an exact tested task head with canonical artifact lineage and intended endpoints.', inputSchema: object({ ...laneIdSchema, label: string, targets: { type: 'array', minItems: 1, maxItems: 64, items: targetDeclarationSchema } }, ['laneId', 'label', 'targets']) },
+@@ -1365,6 +1366,7 @@
+     temple_workspace_materialize: ['lane:write', args => [args.laneId]],
+     temple_workspace_ingest: ['lane:write', args => [args.laneId]],
+     temple_workspace_test: ['lane:test', args => [args.laneId]],
++    temple_workspace_test_v3: ['lane:test', args => [args.laneId]],
+     temple_workspace_propose: ['lane:propose', args => [args.laneId]],
+     temple_workspace_task_ownership: ['lane:read', args => [args.laneId]],
+     temple_workspace_propose_normalized: ['lane:propose', args => [args.laneId]],
+@@ -1376,7 +1378,7 @@
+     'temple_workspace_open','temple_workspace_fork','temple_workspace_migrate','temple_workspace_heartbeat',
+     'temple_workspace_close','temple_workspace_archive','temple_workspace_commit','temple_workspace_checkout',
+     'temple_workspace_save','temple_workspace_discard','temple_workspace_materialize','temple_workspace_ingest',
+-    'temple_workspace_test','temple_workspace_propose','temple_workspace_propose_normalized',
++    'temple_workspace_test','temple_workspace_test_v3','temple_workspace_propose','temple_workspace_propose_normalized',
+     'temple_workspace_merge','temple_workspace_bless','temple_workspace_seal',
+   ]);
+   const coordinatorResult = (message, value) => ({ jsonrpc: '2.0', id: message.id,
+@@ -1436,7 +1438,7 @@
+         else if (name === 'temple_workspace_discard') value = await manager.discard(args, execution);
+         else if (name === 'temple_workspace_materialize') value = await manager.session(args.laneId).materialize(args.snapshotId, args.targetDirectory, execution);
+         else if (name === 'temple_workspace_ingest') value = await manager.session(args.laneId).ingest(args, execution);
+-        else if (name === 'temple_workspace_test') value = await manager.session(args.laneId).test(args, execution);
++        else if (name === 'temple_workspace_test' || name === 'temple_workspace_test_v3') value = await manager.session(args.laneId).test(args, execution, name);
+         else if (name === 'temple_workspace_propose') value = manager.session(args.laneId).propose(args, execution);
+         else if (name === 'temple_workspace_task_ownership') value = manager.taskOwnership(args.laneId);
+         else if (name === 'temple_workspace_propose_normalized') value = manager.proposeNormalized(args);
+--- a/surface-v3/development-mcp.mjs
++++ b/surface-v3/development-mcp.mjs
+@@ -105,7 +105,7 @@
+ export const workspaceToolBoundaryProtocol = 'sourcery/workspace-tool-boundary-lifecycle/1';
+ 
+ export function workspaceToolRequestInput(operationId, input) {
+-  if (!['temple_workspace_materialize', 'temple_workspace_ingest', 'temple_workspace_test'].includes(operationId)) {
++  if (!['temple_workspace_materialize', 'temple_workspace_ingest', 'temple_workspace_test', 'temple_workspace_test_v3'].includes(operationId)) {
+     throw new Error('Workspace tool boundary operation required.');
+   }
+   if (!input || Array.isArray(input) || typeof input.snapshotId !== 'string' || !input.snapshotId) {
+@@ -120,7 +120,8 @@
+       || typeof input.label !== 'string' || !input.label) throw new Error('Exact ingest input required.');
+     return Object.freeze({ snapshotId: input.snapshotId, projectionDirectory: resolve(input.projectionDirectory), label: input.label });
+   }
+-  const projectionMode = input.projectionMode;
++  const projectionMode = operationId === 'temple_workspace_test_v3'
++    ? input.projectionMode : input.projectionMode ?? 'full';
+   if (!['full', 'test-file', 'declared'].includes(projectionMode)
+     || typeof input.testPath !== 'string' || !input.testPath) throw new Error('Exact workspace test input required.');
+   const testPath = templePath(input.testPath);
+@@ -754,13 +755,16 @@
+     return { ...committed, changedPaths: changes.map(change => change.path), projectionAuthority: false, sparse: true };
+   }
+ 
+-  async test(input, execution = null) {
++  async test(input, execution = null, operationId = 'temple_workspace_test') {
++    if (!['temple_workspace_test', 'temple_workspace_test_v3'].includes(operationId)) {
++      throw new Error('Workspace test operation required.');
++    }
+     const startedAt = new Date().toISOString();
+     const operationStartedAt = performance.now();
+-    const normalized = workspaceToolRequestInput('temple_workspace_test', input);
++    const normalized = workspaceToolRequestInput(operationId, input);
+     let x = null;
+     if (execution) {
+-      x = this.#workspaceToolRequest('temple_workspace_test', normalized, execution);
++      x = this.#workspaceToolRequest(operationId, normalized, execution);
+       const observed = this.transactionParticipant.observe(x.request);
+       if (observed?.effectReceipt) return this.#workspaceToolOutcome(observed, execution.fence.epoch);
+       if (observed) return { protocol: workspaceToolBoundaryProtocol, status: 'uncertain',

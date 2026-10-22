@@ -1,0 +1,37 @@
+{
+  "protocol": "spin23-u14-moduli-conjugator-admissibility/1",
+  "status": "research-checkpoint",
+  "parentSnapshotId": "68d5e0c4-25c7-489b-91e9-48bf05ee7f3f",
+  "question": "Does ambient isospectrality of the 19-dimensional active moduli immediately provide an admissible programme equivalence?",
+  "construction": {
+    "sample": "one deterministic simultaneous random point on S^3 x U(3) x S^3 x U(2)",
+    "method": "Use SVDs of the canonical and transformed 92x92 off-diagonal vacuum blocks to construct left/right unitary factors and assemble a grading-block-diagonal U(184) conjugator.",
+    "warning": "Degenerate singular values make the conjugator non-unique; this construction tests one generic witness, not existence of an optimized admissible witness."
+  },
+  "results": {
+    "maximumSingularValueDeviation": 3.3306690738754696e-16,
+    "relativeVacuumConjugationResidual": 6.784374072742956e-16,
+    "gradingCommutatorNorm": 0,
+    "topCarrierOffBlockFraction": 0.9581359980082307,
+    "bottomCarrierOffBlockFraction": 0.9598681858436834,
+    "naiveRealStructureResidual": 1.4234097633586629
+  },
+  "interpretation": {
+    "positive": "An explicit unitary conjugator exists numerically and can be chosen to commute exactly with the particle/antiparticle grading.",
+    "negative": "The generic SVD witness is highly nonlocal across the 16 carrier blocks and does not satisfy the simplest bottom=conjugate(top) real-structure relation.",
+    "conclusion": "Ambient isospectrality does not by itself establish that the 19 moduli are admissible gauge or representation-basis redundancies.",
+    "nonNoGo": "Because of large singular-value degeneracies, another conjugator within the stabilizer freedom may satisfy additional structural constraints; this remains an existence problem."
+  },
+  "nextProblem": {
+    "formulation": "Solve a constrained Procrustes/intertwiner problem inside degenerate singular subspaces, imposing carrier-block locality, grading, real structure, and algebra-normalizer conditions.",
+    "outcomes": {
+      "success": "quotient some or all of the 19-dimensional family as admissible equivalence",
+      "failure": "retain the corresponding directions as physical moduli needing orientation-locking dynamics"
+    }
+  },
+  "falsifiers": [
+    "An explicit structure-preserving block-local conjugator for the same transformed vacuum would show the generic SVD witness was merely a poor choice.",
+    "A lower bound excluding all block-local conjugators below nonzero residual would establish a genuine admissibility obstruction.",
+    "A corrected real-structure matrix differing from the naive half-swap may alter the reported reality residual and must be audited before any no-go claim."
+  ]
+}

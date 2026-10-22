@@ -18,6 +18,8 @@ This set turns the compact discussion in Sections VI–VII of the parent thesis 
 4. [Furey and Spin(2,3) in Standard-Model context](04_furey_spin23_standard_model_context.md) is the bridge document. It records genuine overlaps, categorical mismatches, possible interfaces and no-go risks.
 5. [Furey–Spin(2,3)–Standard Model synthesis](05_furey_spin23_standard_model_synthesis.md) proposes a disciplined combined programme, including a minimal action, consistency gates, calculations, falsifiers and an ordered research plan.
 
+The [foundational document acceptance audit](../../programmes/document-acceptance/spin23_foundational_document_acceptance_20261021.md) records the requested-versus-delivered checklist, acceptance evidence, remaining debt and the distinction between the completed foundational set and the programme's later frontier.
+
 ## Frontier and grand-synthesis sequence
 
 ### Coordinated seven-thread continuation (18 October 2026)
@@ -838,3 +840,26 @@ The central distinction throughout is this: **a list of correct particle represe
 
 - [1625--1632](../1600-1699/1625_the_rank_two_peirce_criterion_selects_h2r_but_not_its_physical_carrier_role.md) adjudicate the eight supplied standalone answers: the rank-two EJA/TKK, rebit, metaplectic and incidence mathematics are retained with sharper scopes, while carrier selection, module compatibility, locality, chirality, action, vacuum and spectrum remain open.
 - [1633](../1600-1699/1633_the_eight_open_letter_answers_reduce_to_four_executable_packets_without_closing_the_physical_lift.md) integrates them into four executable packets—carrier certificate, joint module/action, operational laboratory and twistor scalar benchmark—without treating the AI sources as expert replies or physical closure.
+
+## Participatory-remainder theology tranche
+
+- [1680](../1600-1699/1680_the_participatory_remainder_is_a_testable_relational_hypothesis_not_a_residual_proof_of_god.md) types the proposed field tilt as a conditional outcome hypothesis while proving neither that a residual is divine nor that participatory measurement is a quantum mechanism.
+- [1681](../1600-1699/1681_kenosis_election_incarnation_participation_and_remnant_form_a_coherent_biblical_chain_but_not_a_deduction.md) reconstructs the kenosis--election--incarnation--participation--remnant chain from canonical motifs and records every inferential gap.
+- [1682](../1600-1699/1682_the_participatory_remainder_requires_active_religious_and_secular_rivals_not_a_belief_versus_unbelief_binary.md) replaces belief-versus-unbelief comparison with six live causal rivals and matched religious and secular controls.
+- [1683](../1600-1699/1683_a_preregistered_longitudinal_active_control_design_can_test_participatory_consequences_but_not_divine_agency.md) specifies a multisite longitudinal design with behavioural outcomes, adverse-event accounting, held-out transport and a measurement-reactivity subrandomization.
+- [1684](../1600-1699/1684_the_kenotic_field_tilt_fails_if_hiddenness_and_fruit_are_allowed_to_explain_every_outcome.md) prevents kenosis, hiddenness and fruit from absorbing null or adverse results by fixing eight demotion conditions and six forbidden repairs.
+- [1685](../1600-1699/1685_participatory_theology_and_spin23_share_a_selector_realization_grammar_but_no_cross_domain_mechanism.md) retains only a source-blind selector--realization heuristic and forbids identification of grace, election, Christ or faith with physical fields, projectors, order parameters or collapse.
+- [1686](../1600-1699/1686_the_participatory_remainder_programme_reduces_to_nine_independent_dependency_gates.md) replaces an open-ended discussion with nine independent terminal gates and a finite dependency frontier.
+- [1687](../1600-1699/1687_current_evidence_supports_small_heterogeneous_practice_effects_but_not_a_christian_specific_field_tilt.md) audits present empirical evidence, retains small heterogeneous practice effects, and demotes Christian specificity and divine causal identification.
+- [1688](../1600-1699/1688_kenotic_hiddenness_preserves_freedom_only_by_accepting_nonresistant_nonbelief_as_adverse_evidence.md) treats nonresistant nonbelief, diversity and suffering as adverse evidence rather than post-hoc confirmation of kenosis.
+- [1689](../1600-1699/1689_early_resurrection_belief_is_historically_accessible_but_the_resurrection_cause_is_prior_sensitive.md) separates early proclamation and reported experience from bodily-resurrection attribution and terminates the historical gate at a prior-sensitive abductive boundary.
+- [1690](../1600-1699/1690_time_varying_participation_is_not_causally_identified_by_cross_sectional_or_complete_case_comparison.md) fixes the target-trial, positivity, feedback, negative-control and replication conditions required before a participation effect can be called causal.
+- [1691](../1600-1699/1691_spiritual_safety_and_adverse_outcomes_are_coprimary_not_optional_corrections_to_participatory_research.md) makes spiritual safety and adverse outcomes co-primary and requires authority-independent consent, safeguarding and ethics review.
+- [1692](../1600-1699/1692_shared_transformation_across_incompatible_traditions_identifies_common_process_before_religious_truth.md) proves that shared transformation across incompatible traditions identifies common process before exclusive truth and specifies a component decomposition.
+- [1693](../1600-1699/1693_christian_truth_cannot_be_reduced_to_wellbeing_and_christian_fruit_cannot_be_exempted_from_harm.md) prevents both prosperity-style validation and theological exemption of harm while separating welfare, moral fruit and historical-metaphysical truth.
+- [1694](../1600-1699/1694_the_kenotic_participatory_chain_is_one_christian_model_family_not_the_unique_reading_of_christianity.md) red-teams kenosis, election, participation and providence, retaining the chain as one coherent Christian model family while rejecting unique derivation.
+- [1695](../1600-1699/1695_the_participatory_remainder_programme_is_boundedly_exhausted_at_five_external_input_gates.md) closes every current branch as resolved, demoted or reduced to one of five explicit external inputs and records the strongest surviving claim.
+
+## Lorentzian seven-point conformal-cycle tranche
+
+- [1700](../1700-1799/1700_the_tetrahedral_seven_point_sphere_extends_to_an_exact_spin23_conformal_cycle.md) proves that the tetrahedral seven-point sphere identity uses only a nondegenerate quadratic form, extends it to the Lorentzian \(H_2(\mathbb R)\) carrier, and lifts the common cycle exactly to the projective null cone of signature \((2,3)\), while retaining affine-chart and physical-admission boundaries.

@@ -1,0 +1,325 @@
+{
+  "protocol": "sourcery/science-control/shared-ownership-projection/1",
+  "id": "science-control.shared-work-ownership.20261021",
+  "status": "candidate-read-only-projection",
+  "observedAt": "2026-10-21T13:39:41.930Z",
+  "purpose": "Join existing control-plane owners into one evidence-addressed science work view; do not create another control plane.",
+  "authorityBoundary": {
+    "projectionOnly": true,
+    "controlsTaskState": false,
+    "assignsOwners": false,
+    "grantsAuthoring": false,
+    "grantsAdmission": false,
+    "grantsActivation": false,
+    "liveStateMustBeReobserved": true
+  },
+  "identityRule": "WorkItem names work; request/checkpoint records history; lane snapshot locates evidence; lease observes a writer. None substitutes for another.",
+  "topologyDiagnosis": {
+    "classification": "composition-and-discovery-failure",
+    "finding": "The requested behaviours mostly exist under adjacent owners. The defect is missing joins and visibility, not missing engines.",
+    "missingJoins": [
+      "WorkItem -> request/checkpoint",
+      "WorkItem -> exact lane snapshot evidence",
+      "snapshot -> reader/application consequence",
+      "blocker -> dependency owner -> acceptance evidence",
+      "candidate -> explicit not-installed disposition",
+      "fresh observation -> stale-state warning"
+    ],
+    "prohibitedDuplication": [
+      "scheduler",
+      "request journal",
+      "lease service",
+      "control-room runtime",
+      "reader runtime",
+      "evidence store"
+    ]
+  },
+  "existingOwners": [
+    {
+      "capability": "work lifecycle",
+      "status": "active",
+      "operation": "catalogue.workItemNextCall",
+      "path": "layers/capabilities/plugins/hosted-control-plane/native-work-item-service.mjs",
+      "objectHash": "f5d76739e31f0565e62b241e7dff883b4de0842329e60c8e7e9c717abfef97d6"
+    },
+    {
+      "capability": "request history",
+      "status": "active",
+      "operation": "catalogue.requestJournal",
+      "path": "layers/capabilities/plugins/sourcery-app-foundation/authoring-request-journal.mjs",
+      "objectHash": "36a37d77f402fbb53106ae6e67c21fd2c8cb877c649e86731336fd7a0dec54e3"
+    },
+    {
+      "capability": "authenticated principal",
+      "status": "active",
+      "operation": "catalogue.localPrincipal",
+      "path": "sourcery-platform/sdk/temple-workspace/security.mjs",
+      "objectHash": "787d1883764829556330deb490607ba702b2016645f10a1df0c687abda36c1d6"
+    },
+    {
+      "capability": "execution fence",
+      "status": "active",
+      "operation": "artifact.discovery.fence",
+      "path": "layers/capabilities/plugins/sourcery-app-foundation/authoring-request-execution-fence.mjs",
+      "objectHash": "19c95b09c37ced8724de8800a5e59ced1dff2d91c712f83c8bd39ea985b3ac9b"
+    },
+    {
+      "capability": "shared control-room views",
+      "status": "active",
+      "views": [
+        "now",
+        "meaning",
+        "work",
+        "product",
+        "evidence",
+        "history"
+      ],
+      "path": "layers/capabilities/plugins/authoring-control-plane/control-room-projection.mjs",
+      "objectHash": "860e92fec1b3081c5b1c7f955d5ca43990a3f58070c54be7fec0c285f2a06f56"
+    },
+    {
+      "capability": "system topology atlas",
+      "status": "active",
+      "path": "layers/capabilities/plugins/sourcery-app-foundation/system-atlas-control-plane.mjs",
+      "objectHash": "353eb3a0213ab80529fae717f441748bed99558c7370d6434b08cf08a21680af"
+    },
+    {
+      "capability": "reader binding",
+      "status": "active",
+      "path": "sourcery-platform/sdk/temple-workspace/retained-context-binding-v1/reader-binding-control.mjs",
+      "objectHash": "f90fb1b2c5ffcd456bf31ce41000a97ee13f196d2f370925f44eef5b79c2d445"
+    },
+    {
+      "capability": "reflexive discovery/digestion",
+      "status": "active-process",
+      "operation": "catalogue.route.reflexivity",
+      "path": "programme/governed-work-roundtrip-20261016/reflexive-discovery/process.json",
+      "objectHash": "94ab1d61398596a91a29aa94838a93aef1359a7bcef4c7e08b3146567f6e17c5"
+    },
+    {
+      "capability": "atomic receipt store",
+      "status": "retained-candidate-not-installed",
+      "operation": "artifact.discovery.atomicStore",
+      "path": "programme/governed-work-roundtrip-20261016/oauth-review/candidate/workspace-native-work-item-store-v3.mjs",
+      "objectHash": "c2982e5403e419156fc5bc72ffba50c4832faffa786afdf47f6465d291b6acb7"
+    },
+    {
+      "capability": "signed governance consumption",
+      "status": "retained-candidate-not-installed",
+      "operation": "catalogue.route.governanceConsumption",
+      "path": "programme/governed-work-roundtrip-20261016/governance-consumption/gate-process.json",
+      "objectHash": "5975ab5b9151a166de66cf91060bdf35e9ecf8380245e764af45ce1a8ac6d5f8"
+    }
+  ],
+  "runtimeObservation": {
+    "connectionHost": {
+      "generationId": "host-retained-owner-multiplicity-r62r2",
+      "runtimeHash": "de3bdbe0c60a51de3b619f269f224b1c0002e9841231552769f10a16a52c2d80",
+      "observationScope": "connection-scoped-not-durable-selected-state",
+      "observingChatId": "01a144f9-9c50-7e62-beb7-48042a4ac7b6",
+      "warning": "This r62r2 value belongs to the digestion/topology chat connection. It must not be presented as global or selected host state."
+    },
+    "activeWorker": "sqlite-sourcery-activation-qualification-v3r4r16",
+    "integrationMain": {
+      "head": "3e17b4f7-1a96-4d9a-8f63-ce1652dc99da",
+      "blessed": "bdd9542a-cd2a-4cb5-9218-b7df7b881f70",
+      "status": "closed"
+    },
+    "otherConnectionObservation": {
+      "generationId": "r64r2",
+      "observedByChatIds": [
+        "01a15ea1-122a-7172-8476-180fd5e872f2",
+        "01a147b8-4a14-72a2-98e1-4a4f88ae4cb5"
+      ],
+      "status": "owner-reported-connection-scoped",
+      "warning": "Separate connections can serve different retained hosts; this is not a contradiction and is not a global selected-state claim."
+    }
+  },
+  "workRecords": [
+    {
+      "id": "science.spin23.minimal-physical-model",
+      "workItemId": "work.spin23-natural-ads-local-spectrum-v1.20261021",
+      "state": "closed-research-checkpoint",
+      "ownerAcknowledgement": "verified",
+      "laneId": "task/claimipedia-spin23-minimal-physical-model-20261021",
+      "snapshotId": "8f239ef6-15b9-4638-a9f6-9c4ab6b0c519",
+      "outcome": "Local torsionless AdS4 pole census closed for the exact critical theory; global nonlinear, boundary, and quantum completion remain open.",
+      "evidence": [
+        {
+          "path": "programme/spin23-minimal-physical-model-20261021/natural-ads-critical-audit-v1.json",
+          "objectHash": "b55f036ef0d24530ed5e5ca12c7c930b318f546eceb03e11eb9b1a9e249d6ade"
+        },
+        {
+          "path": "programme/spin23-minimal-physical-model-20261021/natural-ads-derivation-receipt-v1.json",
+          "objectHash": "f0a5552fdc524b19ee104c9876b915859c85753e7c33cbfb6b0c425fc1202ea0"
+        }
+      ],
+      "nextAction": "Advance the finite-triple route first; keep global AdS constraints and boundary analysis second.",
+      "acceptanceEvidence": [
+        "exact finite-triple receipt",
+        "explicit global/boundary non-entailment",
+        "falsifiable observable or exclusion region"
+      ],
+      "dependencyOwner": "science programme",
+      "owningChat": {
+        "chatId": "01a15dea-92cf-7af2-ac8a-01a496b6090e",
+        "title": "Commit work in tranches"
+      }
+    },
+    {
+      "id": "product.spin23.open-letter-surface",
+      "workItemId": "work.claimipedia.spin23.open-letter-surface.route-owner-blocker",
+      "state": "closed-blocked-at-owner-boundary",
+      "ownerAcknowledgement": "verified",
+      "laneId": "task/claimipedia-spin23-open-letter-surface-20261021",
+      "snapshotId": "68e47c2c-b1ce-4e09-b83a-16766e4624f3",
+      "blocker": "Retained qualifier reaches state-and-context then fails a historical SPA-shell literal; composition-only owner is not admitted and the route is not live.",
+      "evidence": [
+        {
+          "path": "programme/spin23-edition3-recovery/open-letter-surface-frontier.json",
+          "objectHash": "4bd7e97f7184bd4c167eaa5b7d64e35cb9967afc609fcdd12fa3aad5b1064c04"
+        }
+      ],
+      "nextAction": "Use an existing qualified application/pageSsr owner to admit the composition-only runner or promote the exact declarative candidate.",
+      "acceptanceEvidence": [
+        "passing composition receipt",
+        "HTTP 200 exact route",
+        "browser-visible eight-assessment dossier",
+        "governed promotion evidence"
+      ],
+      "dependencyOwner": "unresolved-qualified-application-or-pageSsr-owner",
+      "owningChat": {
+        "chatId": "01a15df3-f70a-7f13-b9be-cd02acc9097e",
+        "title": "Assess Jordan physics claims"
+      }
+    },
+    {
+      "id": "platform.claimipedia-representation-migration",
+      "workItemId": "work.checkpoint.v3r5r5-catalogue-authority-mismatch",
+      "state": "active-layer-boundary-blocker",
+      "ownerAcknowledgement": "verified",
+      "laneId": "task/programme-host-lifecycle-20261015",
+      "snapshotId": "55c6ec5a-a126-43f9-a230-96fb86b734f2",
+      "blocker": "Package inspection selects task-lane root catalogue as prior authority instead of the exact installed-active capability registry.",
+      "evidence": [
+        {
+          "path": "programme/sourcery-qualification-optimization-20261021/CHECKPOINT-v3r5r5-catalogue-authority-mismatch.json",
+          "objectHash": "41c20ed3149ebe3096274342659d8cb5e0e2ec3625295e938bacbf29e7867cd3"
+        }
+      ],
+      "nextAction": "Correct and qualify supervisor package-inspection catalogue selection; unknown selection fails closed.",
+      "acceptanceEvidence": [
+        "installed-active registry selected",
+        "neutral authoring passes",
+        "sensitive authoring refuses without diagnosis",
+        "inspection passes without fossil drift"
+      ],
+      "dependencyOwner": "supervisor-package-inspection-policy",
+      "owningChat": {
+        "chatId": "01a147b8-4a14-72a2-98e1-4a4f88ae4cb5",
+        "title": "Migrate Claimipedia representations"
+      }
+    },
+    {
+      "id": "control.science-digestion-and-topology",
+      "workItemId": "work.science-control.shared-ownership-projection.20261021",
+      "state": "closed-bounded-projection-checkpoint",
+      "ownerAcknowledgement": "human-authorized-current-chat",
+      "owningChat": {
+        "chatId": "01a144f9-9c50-7e62-beb7-48042a4ac7b6",
+        "title": "Spin(2,3) corpus digestion and control-plane topology"
+      },
+      "laneId": "task/shared-work-ownership-projection-20261021",
+      "snapshotId": "75d4b5e9-7cd4-433f-9b6f-2cc04f84b720",
+      "outcome": "Audited adjacent control-plane capabilities and authored one shared read-only ownership/evidence projection instead of duplicating existing engines.",
+      "evidence": [
+        {
+          "path": "programme/shared-work-ownership-20261021/shared-ownership-projection.json",
+          "objectHash": "94726a1f451111b0607603d90421be4fe44f7b849f0830b67a514f986c1295aa"
+        },
+        {
+          "path": "programme/shared-work-ownership-20261021/CHECKPOINT.json",
+          "objectHash": "48dd939df41dac9597a7e5a27077efa24c16103cd232d0debdfaad38c3fa9f1f"
+        }
+      ],
+      "nextAction": "Have the existing integration/reader owner consume the exact projection after the lifecycle-coordinate gate permits it; do not create a new live UI.",
+      "acceptanceEvidence": [
+        "existing control room consumes exact record",
+        "System Atlas exposes evidence links",
+        "reader shows stale-state boundary and dependency frontier"
+      ],
+      "dependencyOwner": "existing-integration-and-reader-owner"
+    }
+  ],
+  "adjacentEvidence": [
+    {
+      "id": "documents.spin23-foundational-set",
+      "sourcePlane": "grand-theory-repository",
+      "ownerAcknowledgement": "verified-by-file-read",
+      "path": "corpus/programmes/document-acceptance/spin23_foundational_document_acceptance_20261021.md",
+      "state": "foundational-request-complete-current-frontier-reconciliation-incomplete",
+      "nextAction": "Correct one TeX defect, add current-status links, create paper-level Furey provenance matrix, and preserve the founding synthesis as historical.",
+      "nonEntailment": "This local repository record is evidence from an adjacent plane; it is not yet a Temple lane snapshot or reader promotion.",
+      "owningChat": {
+        "chatId": "01a144e5-ca2c-7203-8b52-b992d95ce8d9",
+        "title": "Write Spin(2,3) research documents"
+      }
+    }
+  ],
+  "projectionRules": [
+    "timestamp live observations",
+    "exact evidence for completion",
+    "separate active owners from retained candidates",
+    "never infer authority from titles or leases",
+    "preserve blockers and disagreement",
+    "reuse control-room and Atlas projections"
+  ],
+  "nextIncrement": {
+    "kind": "composition-profile-not-new-runtime",
+    "joinInto": [
+      "existing authoring control room",
+      "System Atlas",
+      "existing reader binding"
+    ],
+    "outputs": [
+      "now",
+      "work",
+      "evidence",
+      "history",
+      "dependency frontier"
+    ],
+    "deferred": [
+      "task mutation",
+      "owner assignment",
+      "admission",
+      "activation",
+      "deployment"
+    ]
+  },
+  "coordinationRecords": [
+    {
+      "id": "control.shared-research-coordinator",
+      "owningChat": {
+        "chatId": "01a15ea1-122a-7172-8476-180fd5e872f2",
+        "title": "Shared research-work coordination"
+      },
+      "state": "active-coordination-observation",
+      "responsibility": "Collect owner acknowledgements, monitor the bounded migration assurance condition, and route exact frontiers without borrowing task authority.",
+      "monitor": {
+        "id": "resume-sourcery-supervisor-recovery",
+        "cadence": "every 15 minutes",
+        "targetChatId": "01a15ea1-122a-7172-8476-180fd5e872f2",
+        "stopCondition": "bounded assurance migration acceptance",
+        "doesNotWaitFor": [
+          "root-host completion",
+          "all research frontiers",
+          "deployment"
+        ],
+        "evidenceStatus": "owner-reported-existing; not an execution or scheduling receipt in this artifact"
+      },
+      "nextAction": "Route this closed projection and its promotion refusal to the existing integration/reader owner.",
+      "authorityBoundary": "Coordinator observation and monitor metadata do not assign work, mutate tasks, or prove schedule execution."
+    }
+  ]
+}
+

@@ -1,0 +1,289 @@
+{
+  "inspectionCopy": true,
+  "canonicalRef": {
+    "laneId": "task/authenticated-authoring-deployment-review-20261022",
+    "snapshotId": "d2462d52-40c4-42f7-919c-652ae6cb41b6",
+    "path": "programme/sourcery-authenticated-authoring-resource-20261022/deployment-review/shared-view-checkpoint-prepared-v1.json",
+    "objectHash": "02ed9dc61a01b4ec383835c1b355a5eee282f796a61083eb82247b7cd51952f3"
+  },
+  "artifact": {
+    "protocol": "sourcery/shared-ownership-chronological-checkpoint/1",
+    "status": "prepared-not-published",
+    "requestId": "request-01b7-70c0-e47f",
+    "preserveInitialIntent": true,
+    "lastVerifiedJournalRevision": 1,
+    "runtimeMigration": {
+      "status": "accepted-separately",
+      "acceptanceRef": {
+        "laneId": "integration/main",
+        "snapshotId": "024bac59-eed3-4805-a5b1-d84397774832",
+        "path": "programme/sourcery-qualification-optimization-20261021/diagnoses/workspace-test-v3r7-retained-owner-runtime-acceptance-r4.json"
+      }
+    },
+    "authoringSource": {
+      "status": "integrated-tested-blessed",
+      "snapshotId": "024bac59-eed3-4805-a5b1-d84397774832",
+      "nativeTests": 17,
+      "fixtureTests": 2,
+      "productionDeployed": false,
+      "sourceManifestRef": {
+        "laneId": "integration/main",
+        "snapshotId": "024bac59-eed3-4805-a5b1-d84397774832",
+        "path": "programme/sourcery-authenticated-authoring-resource-20261022/checkpoints/011-authoring-source-qualified-native17.json",
+        "objectHash": "b1c50f5ecac3a2cbf59c65f8164f271e34775c87d086fe03440459482d75ab1e"
+      }
+    },
+    "science": {
+      "sourceCommit": "0831f00a-274b-46ef-a769-212325db1119",
+      "ownerReportedCheckpointVersion": 661,
+      "observationOnly": true,
+      "ownerLaneObservedOpen": true,
+      "observations": [
+        {
+          "sourceRef": {
+            "laneId": "task/claimipedia-spin23-minimal-physical-model-20261021",
+            "snapshotId": "0831f00a-274b-46ef-a769-212325db1119",
+            "path": "research/spin23-candidate48-moduli-compensator-no-go-v1.json",
+            "objectHash": "cb7667c2ba428c9663004f531a4332e1295915dd63b4302483257f8ff9baefb8"
+          },
+          "claim": {
+            "status": "moduli-family-no-go",
+            "statement": "No sampled point of the exact candidate-48 U(2) x S1 moduli approaches a Lorentz-preserving vector compensator; rank, stabilizer, norm, and scalar/vector split are invariant across the family to numerical precision.",
+            "consequence": "The MacDowell-Mansouri compensator branch requires leaving the known candidate-48 flat family."
+          },
+          "reportedResults": {
+            "scalarFractionRange": [
+              0.49999999999999956,
+              0.5000000000000003
+            ],
+            "vectorFractionRange": [
+              0.4999999999999997,
+              0.5000000000000004
+            ],
+            "totalCrossEnergyRange": [
+              1.9999999999999971,
+              1.9999999999999998
+            ],
+            "crossBlockRanks": [
+              6
+            ],
+            "compactSo5StabilizerDimensions": [
+              1
+            ],
+            "smallestNonzeroCrossSingularRange": [
+              0.49999999999999944,
+              0.5000000000000002
+            ],
+            "compensatorFound": false
+          },
+          "falsifiers": [
+            "An analytic proof of variation in these invariants, or a counterexample moduli point, would overturn the sampling inference.",
+            "The scan covers the established U(2) x S1 parameterization, not undiscovered disconnected moduli.",
+            "A compensator built from a different block or composite observable is not excluded."
+          ],
+          "evidenceGrade": "Independently read immutable authored artifact and checked content hash;reported numerical results not independently executed or converted into signed Temple test receipts"
+        },
+        {
+          "sourceRef": {
+            "laneId": "task/claimipedia-spin23-minimal-physical-model-20261021",
+            "snapshotId": "0831f00a-274b-46ef-a769-212325db1119",
+            "path": "research/spin23-two-vector-compensator-alignment-potential-no-go-v1.json",
+            "objectHash": "6048e5a888170c8f734043c638c42c85ac2457e56d5f0300d83412c90230bbda"
+          },
+          "claim": {
+            "status": "quartic-alignment-no-go",
+            "statement": "For two vector-5 fields in signature (2,3), neither sign of the basic Gram-determinant quartic yields a globally bounded, locally stable parallel timelike compensator vacuum.",
+            "implication": "Deriving the v653 rank-one alignment requires structure beyond a simple polynomial of the SO(2,3) Gram matrix."
+          },
+          "reportedResults": {
+            "boundedSign": {
+              "quartic": "+(V1.V2)^2-V1^2V2^2",
+              "alignedNegativeModes": 1,
+              "alignedZeroModes": 4,
+              "alignedPotential": 0,
+              "orthogonalTwoTimelikePotential": -2,
+              "sampledHomogeneousQuarticMinimum": 0.0001443185869154258
+            },
+            "reversedSign": {
+              "quartic": "+V1^2V2^2-(V1.V2)^2",
+              "alignedNegativeModes": 3,
+              "alignedZeroModes": 4,
+              "orthogonalTwoTimelikePotential": 6,
+              "nullPairRunaway": [
+                {
+                  "amplitude": 1,
+                  "potential": -2
+                },
+                {
+                  "amplitude": 2,
+                  "potential": -62
+                },
+                {
+                  "amplitude": 4,
+                  "potential": -1022
+                },
+                {
+                  "amplitude": 8,
+                  "potential": -16382
+                }
+              ]
+            }
+          },
+          "falsifiers": [
+            "This no-go covers the displayed renormalizable Gram-potential family, not arbitrary higher-order or constrained potentials.",
+            "Additional fields can alter the stability matrix.",
+            "A nonpolynomial domain restriction to a selected causal sheet can change global boundedness but must itself be derived."
+          ],
+          "evidenceGrade": "Independently read immutable authored artifact and checked content hash;reported numerical results not independently executed or converted into signed Temple test receipts"
+        },
+        {
+          "sourceRef": {
+            "laneId": "task/claimipedia-spin23-minimal-physical-model-20261021",
+            "snapshotId": "0831f00a-274b-46ef-a769-212325db1119",
+            "path": "research/spin23-cartan-metric-compensator-symmetry-intersection-v1.json",
+            "objectHash": "e84a788dd970224d2b951377c9a2793d05486462fa0de5f29c235474d1dc30cc"
+          },
+          "claim": {
+            "status": "symmetry-cost-verified",
+            "statement": "In the SO(2,3) fundamental, a positive Cartan metric has SO(2)xSO(3) stabilizer, a timelike compensator has SO(1,3) stabilizer, and their joint stabilizer is only SO(3).",
+            "implication": "The positive metric that stabilizes compact-first alignment cannot remain as a fixed physical background in a Lorentz-invariant low-energy gravity phase."
+          },
+          "reportedResults": {
+            "positiveMetric": {
+              "stabilizerDimension": 4,
+              "algebra": "so(2)+so(3)",
+              "killingEigenvalues": [
+                -2,
+                -2,
+                -2,
+                0
+              ]
+            },
+            "timelikeCompensator": {
+              "stabilizerDimension": 6,
+              "algebra": "so(1,3)",
+              "killingSignature": {
+                "negative": 3,
+                "positive": 3
+              }
+            },
+            "jointBackground": {
+              "stabilizerDimension": 3,
+              "algebra": "so(3)",
+              "killingEigenvalues": [
+                -2,
+                -2,
+                -2
+              ]
+            },
+            "maximumClosureResidual": 3.8459253727671276e-16
+          },
+          "falsifiers": [
+            "An alternative positive structure whose joint stabilizer with the compensator is SO(1,3) would evade the result; no positive definite metric can be invariant under noncompact SO(1,3) in this finite vector representation.",
+            "Gauge redundancy could make the apparent Cartan background unobservable, but requires an explicit mechanism.",
+            "The calculation concerns the fundamental representation and fixed backgrounds."
+          ],
+          "evidenceGrade": "Independently read immutable authored artifact and checked content hash;reported numerical results not independently executed or converted into signed Temple test receipts"
+        },
+        {
+          "sourceRef": {
+            "laneId": "task/claimipedia-spin23-minimal-physical-model-20261021",
+            "snapshotId": "0831f00a-274b-46ef-a769-212325db1119",
+            "path": "research/spin23-constrained-single-compensator-quotient-v1.json",
+            "objectHash": "41346adcedd371f15aa5b848c20f16287c00c8ff447fdcdeddac512f5032b247"
+          },
+          "claim": {
+            "status": "viable-minimal-prescription",
+            "statement": "A single normalized SO(2,3) vector compensator has no local physical scalar modes: its four constraint tangents coincide exactly with the four broken gauge directions. The corrected second vector copy is not automatically gauge-redundant and requires a separate multiplicity constraint.",
+            "significance": "This avoids the unstable noncompact alignment potential while preserving a concrete MacDowell-Mansouri/Stelle-West gravity route."
+          },
+          "reportedResults": {
+            "singleVector": {
+              "constraintTangentDimension": 4,
+              "gaugeOrbitRank": 4,
+              "stabilizerDimension": 6,
+              "principalCosines": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "physicalLocalModes": 0
+            },
+            "alignedPair": {
+              "constraintSurfaceDimension": 8,
+              "gaugeOrbitRank": 4,
+              "stabilizerDimension": 6,
+              "quotientDimension": 4
+            },
+            "genericPair": {
+              "constraintSurfaceDimension": 8,
+              "gaugeOrbitRank": 7,
+              "stabilizerDimension": 3,
+              "quotientDimension": 1
+            },
+            "survivingInvariant": "V1 dot V2"
+          },
+          "falsifiers": [
+            "A hidden gauge symmetry acting on the two-copy multiplicity space could remove the relative modes and would modify the count.",
+            "If the second vector is not an independent field but only a representation multiplicity, a precise field construction may avoid the pair problem.",
+            "Quantum consistency of the constraint and gauge fixing remains untested."
+          ],
+          "evidenceGrade": "Independently read immutable authored artifact and checked content hash;reported numerical results not independently executed or converted into signed Temple test receipts"
+        },
+        {
+          "sourceRef": {
+            "laneId": "task/claimipedia-spin23-minimal-physical-model-20261021",
+            "snapshotId": "0831f00a-274b-46ef-a769-212325db1119",
+            "path": "research/spin23-candidate48-moduli-gauge-quotient-vector-copy-v1.json",
+            "objectHash": "ccd2efdf13b410e306c85b39df7d0942651983d8c79959a336554b019a367777"
+          },
+          "claim": {
+            "status": "gauge-escape-falsified",
+            "statement": "Admissible gauge transformations quotient at most two of candidate 48's five exact moduli at generic points, leaving three physical flat directions; the independent eta circle is not gauge.",
+            "implication": "The corrected second vector-5 multiplicity cannot be dismissed as a pure U(2) gauge redundancy using the established candidate gauge algebra."
+          },
+          "reportedResults": {
+            "moduliDimension": 5,
+            "canonicalGaugeIntersectionRank": 1,
+            "canonicalPhysicalDimension": 4,
+            "genericGaugeIntersectionRanks": [
+              2
+            ],
+            "genericPhysicalDimensions": [
+              3
+            ],
+            "maximumGaugeProjectionOntoEtaCoordinate": 3.1639179519958306e-15,
+            "genericSamples": 8
+          },
+          "falsifiers": [
+            "An enlarged admissible gauge algebra acting on the completed module could alter the quotient and must be explicitly constructed.",
+            "The audit is local in moduli space; global discrete identifications can further quotient but cannot remove continuous local dimensions.",
+            "The link to the vector-copy issue is dimensional and structural, not a direct identification of every physical modulus with relative vector orientation."
+          ],
+          "evidenceGrade": "Independently read immutable authored artifact and checked content hash;reported numerical results not independently executed or converted into signed Temple test receipts"
+        }
+      ],
+      "remaining": [
+        "Candidate48 is not the Lorentz-preserving compensator phase",
+        "Independent SO(2,3) connection and a constrained compensator branch need explicit construction",
+        "Second-vector multiplicity constraints and full gauge/constraint algebra remain open",
+        "Full calculus,junk,kinetic positivity,vacuum stability and quantitative prediction checks remain separately open"
+      ],
+      "publicationRule": "Reobserve actual latest owner-closed checkpoint before publication;do not claim this dated observation is a timeless latest summary"
+    },
+    "lifecycle": [
+      "inspect existing request",
+      "claim through authenticated admitted owner",
+      "append chronological checkpoint",
+      "release",
+      "independent journal and browser readback"
+    ],
+    "authority": {
+      "canonicalSemantics": false,
+      "empiricalAuthority": false,
+      "workItemCompletion": false,
+      "publication": false
+    }
+  }
+}

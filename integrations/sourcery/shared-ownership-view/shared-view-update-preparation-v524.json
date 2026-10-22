@@ -1,0 +1,359 @@
+{
+  "schema": "shared-view-preparation-observation/1",
+  "publicationStatus": "DRAFT ONLY; existing journal revision not advanced",
+  "requestId": "request-01b7-70c0-e47f",
+  "predecessorObservation": "shared-view-update-preparation-v520.json",
+  "checkpoint": {
+    "laneId": "task/claimipedia-spin23-minimal-physical-model-20261021",
+    "snapshotId": "3356673e-c1fe-4062-a369-d90c6d58edfd",
+    "versions": "v521-v524"
+  },
+  "evidenceClass": "four exact retained authored artifacts independently read; source computational scripts uncommitted; matrix/census/Hessian computations not independently rerun",
+  "materialChanges": [
+    "v521-v522 report zero ordinary and operator-Krein mixed trace in specified 4-spinor toy. Cartan square remains Lorentz-indefinite; naive single-Beta trace gives zero pure terms. Physical action/Hamiltonian or Wick prescription remains open.",
+    "v523 reports trace factors88 per side,176 for auxiliary side doublet, across44 robust carriers. Census and side-doublet KO/real compatibility not independently qualified.",
+    "v524 conditional desired-branch elimination drives soft Q=qQ0 downward. Survival requires stiffness; near-threshold kappa=2/5 needs Lambda/kappa^2>=250, versus475/191 at20/19. No full joint piecewise or angular matrix-Q minimization."
+  ],
+  "remainingGates": [
+    "physical action prescription and positivity/ghost analysis",
+    "differential-form contractions and physical normalization",
+    "exact KO/real/one-form quotient and admissibility of auxiliary side doubling",
+    "full piecewise KKT including G-condensed branches",
+    "matrix-Q angular/domain-wall modes and loop corrections",
+    "empirical matching and actual predictions"
+  ],
+  "sources": [
+    {
+      "path": "research/spin23-dynamical-q-radial-backreaction-v1.json",
+      "objectHash": "098e8f8e70a1fea472533ed763c47c18e5ebd159cf203b77491948a1f0cc3514",
+      "artifact": {
+        "schema": "spin23-toy-model/v1",
+        "version": "v524",
+        "title": "A soft dynamical central compensator is driven toward collapse unless its radial potential is parametrically stiff",
+        "status": "exact conditional backreaction toy on the unrestricted desired-vacuum branch",
+        "depends_on": [
+          "research/spin23-unrestricted-commutator-viability-window-maximin-v1.json",
+          "research/spin23-central-partial-involution-repair-cone-v1.json",
+          "research/spin23-product-compensator-cartan-finite-repair-toy-v1.json"
+        ],
+        "question": "If Q=q Q_0 is dynamical rather than fixed, does a conventional Lambda(q^2-1)^2 potential preserve enough repair strength?",
+        "setup": {
+          "ray": "Pure unrestricted repair with delta=kappa y, t=delta/4, y=q^2>=0.",
+          "desiredBranch": "Active squared amplitudes x_26=1/2-delta/8, x_29=3/10-11delta/80, x_5,10=1/5+delta/80, x_6,7=1/4-delta/16.",
+          "radialWindow": "24/61 < delta < 24/11.",
+          "qPotential": "V_Q=Lambda(y-1)^2."
+        },
+        "exact_elimination": {
+          "minimizedMatterEnergy": "E_min(delta)=-98/5+(19/5)delta-(53/80)delta^2 on this active branch.",
+          "total": "W(y)=E_min(kappa y)+Lambda(y-1)^2.",
+          "convexityOnBranch": "Lambda>(53/80)kappa^2.",
+          "stationaryPoint": "y_*=(2Lambda-(19/5)kappa)/[2(Lambda-(53/80)kappa^2)].",
+          "shift": "y_*-1=-[(19/5)kappa-(53/40)kappa^2]/[2(Lambda-(53/80)kappa^2)].",
+          "direction": "Throughout the viable delta window the numerator is positive, so finite-sector vacuum energy drives y_* below 1."
+        },
+        "survival_condition": {
+          "premise": "For a bare kappa>24/61, require the backreacted delta_*=kappa y_* to remain at least 24/61.",
+          "stiffnessBound": "Lambda/kappa^2 >= (200/61)/[2(kappa-24/61)].",
+          "examples": [
+            {
+              "kappa": "2/5",
+              "minimumLambdaOverKappa2": "250",
+              "meaning": "The near-threshold benchmark is extremely fragile."
+            },
+            {
+              "kappa": "1/2",
+              "minimumLambdaOverKappa2": "200/13 approximately 15.385",
+              "meaning": "Even the moderate benchmark needs a substantially stiff constraint."
+            },
+            {
+              "kappa": "20/19",
+              "minimumLambdaOverKappa2": "475/191 approximately 2.487",
+              "meaning": "The maximin-scale benchmark survives with a modestly stiff radial mode."
+            }
+          ],
+          "exact_constraint": "A Lagrange-multiplier condition y=1 avoids the backreaction but makes Q kinematical rather than an ordinary soft field."
+        },
+        "tuned_alternative": {
+          "shiftedCenter": "For Lambda(y-y0)^2, keeping y=1 stationary requires y0=1+kappa[(19/5)-(53/40)kappa]/(2Lambda).",
+          "interpretation": "This is a calculable counter-shift but is a tuning unless derived from the same product geometry."
+        },
+        "caveats": [
+          "The eliminated energy formula is exact only while the desired active set remains the minimizing radial phase.",
+          "When delta falls below 24/61 the G direction condenses and a different branch must be minimized; the negative-y stationary examples should be read as collapse toward the y=0 boundary, not as physical negative q^2.",
+          "The toy treats one scalar amplitude q and omits angular/domain-wall fluctuations of a matrix-valued Q.",
+          "Loop corrections to Lambda and kappa are not included."
+        ],
+        "interpretation": [
+          "Promoting Q to a soft order parameter is not automatically benign: the very repair term it creates gives matter an energetic incentive to reduce Q.",
+          "The robust kappa=20/19 region is dynamically preferable to the minimal kappa=2/5 point, not just Hessian-preferable.",
+          "This strengthens the case for either a constrained partial involution Q^3=Q or a genuinely heavy radial mode."
+        ],
+        "falsifiers": [
+          "A full joint minimization including the G-condensed branches finds a stable y near one below the stated stiffness bound.",
+          "Additional product-action terms supply a positive y-linear contribution large enough to reverse the collapse force without tuning.",
+          "The physical trace prescription changes the sign of the matter energy derivative with respect to delta.",
+          "A matrix-valued constrained Q has light angular modes that destabilize the assumed one-amplitude reduction."
+        ],
+        "reproducibility": {
+          "local_script": ".scratch_spin23_dynamic_q_backreaction.py",
+          "committed_code": false,
+          "method": "Exact rational elimination of the four active squared amplitudes."
+        },
+        "next": [
+          "Perform the full piecewise KKT minimization jointly in y, including the G-condensed branch.",
+          "Test whether the Spin(2,3) Cartan term supplies the required radial stiffness with the correct sign.",
+          "Construct the exact-constraint sigma-model version and count its angular modes."
+        ],
+        "conclusion": "A soft Q is viable only with a meaningful stiffness hierarchy. Near the repair threshold the required hierarchy diverges; the kappa=20/19 maximin region is much more tolerant, while an exact partial-involution constraint removes radial collapse by construction.",
+        "authority": {
+          "proposalOnly": true,
+          "entails": false,
+          "empiricalAuthority": false
+        }
+      }
+    },
+    {
+      "path": "research/spin23-finite-q-trace-normalization-census-v1.json",
+      "objectHash": "5388b9988ceb7eb1a43520b8f7df612f376d1b7a4dac358354eb6b181fd4ffc1",
+      "artifact": {
+        "schema": "spin23-research-branch-v1",
+        "version": "v523",
+        "title": "The finite compensator trace normalization is rigid across all 44 robust carriers",
+        "status": "family-wide exact combinatorial census",
+        "depends_on": [
+          "research/spin23-product-compensator-cartan-finite-repair-toy-v1.json",
+          "research/spin23-robust-family-ab-projector-census-v1.json",
+          "research/spin23-central-partial-involution-repair-cone-v1.json"
+        ],
+        "question": "Does coupling the Spin(2,3) compensator to the central partial involution introduce carrier-dependent gravitational normalization?",
+        "definitions": {
+          "node_charge": "q(i)=+1 on A, -1 on B, and 0 otherwise.",
+          "left_right": "Q_L acts by q(i) on a positive module (i,j) and by q(j) on its J-swapped partner; Q_R acts oppositely.",
+          "support": "S_L=Q_L^2 and S_R=Q_R^2.",
+          "sample": "All 44 robust 184-dimensional carriers with trace split (k5,k10)=(8,4)."
+        },
+        "exact_census": {
+          "carrierCount": 44,
+          "hilbertDimension": 184,
+          "invariant_on_every_carrier": {
+            "Tr(Q_L)": "0",
+            "Tr(Q_R)": "0 by J symmetry",
+            "Tr(Q_L^2)": "88",
+            "Tr(Q_R^2)": "88",
+            "Tr(Q_L Q_R)": "-16",
+            "Tr(S_L S_R)": "16"
+          },
+          "histograms": {
+            "hilbertDimension": {
+              "184": 44
+            },
+            "trQL": {
+              "0": 44
+            },
+            "trQL2": {
+              "88": 44
+            },
+            "trQLQR": {
+              "-16": 44
+            },
+            "trSLSR": {
+              "16": 44
+            }
+          },
+          "preferredCarrier": "The preferred carrier has exactly the same tuple (184,0,88,-16,16)."
+        },
+        "product_lifts": {
+          "one_sided": {
+            "compensator": "C=N tensor Q_L (or Q_R)",
+            "finiteTraceFactor": "Tr_F(Q^2)=88",
+            "limitation": "A single side generates only the corresponding commutator norm and does not reproduce the full left-plus-right repair."
+          },
+          "side_doubled": {
+            "compensator": "On an auxiliary two-state side label, Q_side=diag(Q_L,Q_R) and C=N tensor Q_side.",
+            "finiteTraceFactor": "Tr_F(Q_side^2)=176",
+            "repair": "The finite commutator norm is exactly the sum of left and right unrestricted commutator norms, up to the already explicit factor 1/4 in U(D).",
+            "implication": "A minimal side doublet implements the full v519 unrestricted ray without choosing left over right."
+          },
+          "combined_without_doubling": {
+            "sum": "Tr((Q_L+Q_R)^2)=144.",
+            "difference": "Tr((Q_L-Q_R)^2)=208.",
+            "warning": "Q_L+/-Q_R is not generally a partial involution and changes the field weights, so these are not equivalent replacements."
+          }
+        },
+        "interpretation": [
+          "The product construction's Cartan-sector multiplicity is invariant over the entire robust carrier family.",
+          "Graph variation inside the 44-carrier class therefore cannot tune the ratio between the spacetime compensator term and the finite repair term.",
+          "The vanishing signed trace means A and B support is dimension-balanced even though their overlap has negative correlation Tr(Q_L Q_R)=-16.",
+          "Any phenomenologically required rescaling must come from trace normalization, the product coupling, or additional representation multiplicity rather than carrier selection."
+        ],
+        "falsifiers": [
+          "A robust carrier omitted from the enumeration has a different trace tuple.",
+          "The exact quotient representation changes module multiplicities or the J-swapped completion.",
+          "The physically admissible product trace is weighted rather than the ordinary finite trace and breaks the census invariance.",
+          "The auxiliary side doublet is forbidden by grading, real-structure, or KO-sign constraints."
+        ],
+        "reproducibility": {
+          "local_script": ".scratch_spin23_finite_q_trace_census.py",
+          "committed_code": false,
+          "method": "Exact integer sums of dim(i)dim(j) over positive modules and their J-swapped partners."
+        },
+        "next": [
+          "Insert the side doublet into the explicit KO6 real structure and test signs.",
+          "Derive the relative Cartan/finite coefficient after fixing normalized versus unnormalized traces.",
+          "Promote Q to a constrained field and quantify radial backreaction."
+        ],
+        "conclusion": "The robust family has a universal finite compensator normalization: Tr(Q_L^2)=Tr(Q_R^2)=88. A two-state side lift gives the full left-plus-right repair with trace factor 176, but removes carrier choice as a way to tune its gravitational feedback.",
+        "authority": {
+          "proposalOnly": true,
+          "entails": false,
+          "empiricalAuthority": false
+        }
+      }
+    },
+    {
+      "path": "research/spin23-product-compensator-clifford-mixed-trace-audit-v1.json",
+      "objectHash": "39635b7d513a0b9b6c233dde757126f543c507e9a547b2d3bb3cfdff9ca54f95",
+      "artifact": {
+        "schema": "spin23-research-branch-v1",
+        "title": "Explicit Cl(2,3) matrices eliminate the product-compensator mixed term",
+        "version": "v521",
+        "status": "explicit-clifford-validation-with-krein-caveat",
+        "depends_on": [
+          "research/spin23-product-compensator-cartan-finite-repair-toy-v1.json"
+        ],
+        "conventions": {
+          "representation": "4x4 complex irreducible Clifford matrices built from Pauli Kronecker products",
+          "signature": "(-,+,+,+,-)",
+          "residual": "indices a=0,1,2,3 carry Spin(1,3)",
+          "compensatorDirection": "N=Gamma_4, with N^2=-1",
+          "chirality": "gamma_*=i Gamma_0 Gamma_1 Gamma_2 Gamma_3"
+        },
+        "exactChecks": {
+          "maximumCliffordResidual": 0,
+          "nSquaredResidual": 0,
+          "chiralitySquaredResidual": 0,
+          "identity": "gamma_* N=i identity_4",
+          "brokenGenerators": "J_a4=[Gamma_a,Gamma_4]/4",
+          "brokenDerivative": "[J_a4,N]=plus or minus Gamma_a for every a",
+          "mixedPairing": "Tr([J_a4,N]^dagger gamma_* N)=0 for a=0,1,2,3",
+          "maximumMixedResidual": 0
+        },
+        "consequence": {
+          "split": "For the ordinary Hilbert-Schmidt trace, ||[D,C]||^2 separates into a Cartan/coframe term and a finite [D_F,Q] term with no bilinear cross operator.",
+          "reason": "The finite-direction spin factor gamma_*N is scalar while each broken Cartan derivative is a traceless gamma matrix.",
+          "robustness": "The cancellation follows from Clifford parity/tracelessness, not a numerical accident of matrix entries."
+        },
+        "qualification": [
+          "The calculation uses the ordinary positive Hilbert-Schmidt adjoint. The Lorentzian/Krein action may insert a fundamental symmetry and must be checked separately.",
+          "Connection, form-degree, and spacetime index contractions were suppressed; they can change signs though not the bare spin trace.",
+          "The result validates mixed-term cancellation, not the normalization of kappa_U."
+        ],
+        "falsifiers": [
+          "The programme's admitted Krein adjoint turns the zero ordinary trace into a nonzero physical mixed term.",
+          "The exact product Dirac operator uses a chirality/compensator placement for which gamma_*N is not scalar.",
+          "Form-degree contractions introduce an independent mixed invariant despite the spin trace.",
+          "Reality doubling changes the cancellation or the relative sign of the two squared pieces."
+        ],
+        "next": [
+          "Repeat the trace using the exact Hilbert-to-Krein fundamental symmetry already developed in the programme.",
+          "Carry differential-form and connection indices through the product reduction.",
+          "Compute Tr_F(Q^2) and the finite commutator coefficient in the 184-dimensional carrier.",
+          "Check whether both reduced terms have positive physical signs after Lorentzian continuation."
+        ],
+        "conclusion": "In a concrete minimal Cl(2,3) representation, the product-compensator cross term vanishes identically and the Cartan and finite commutator energies decouple at quadratic order. The next obstruction is signature/Krein sign, not Clifford mixing."
+      }
+    },
+    {
+      "path": "research/spin23-product-compensator-krein-sign-audit-v1.json",
+      "objectHash": "087fcc77b63eb4fde81022e272238e693116301bcd52004b5a1bd4bc9fd01351",
+      "artifact": {
+        "schema": "spin23-toy-model/v1",
+        "version": "v522",
+        "title": "The product compensator mixed term survives the Krein audit as zero, but its Cartan square is necessarily Lorentz-indefinite",
+        "status": "exact 4-spinor toy audit; physical action prescription remains open",
+        "question": "Does the ordinary Hilbert-Schmidt cancellation in v521 persist for the programme's fundamental-symmetry/Krein convention, and do the two pure squares have compatible signs?",
+        "convention": {
+          "clifford": "{Gamma_A,Gamma_B}=2 eta_AB with eta=diag(-1,+1,+1,+1,-1), residual a=0,1,2,3, and N=Gamma_4.",
+          "fundamental_symmetry": "Beta=i Gamma_0 Gamma_4.",
+          "properties": [
+            "Beta^dagger=Beta",
+            "Beta^2=1",
+            "Beta Gamma_A Beta implements the Cartan involution: Gamma_0 and Gamma_4 change sign, Gamma_1,Gamma_2,Gamma_3 do not."
+          ],
+          "krein_adjoint": "X^times=Beta X^dagger Beta."
+        },
+        "operators": {
+          "cartan_piece": "A_a=[J_a4,N], J_a4=[Gamma_a,Gamma_4]/4; A_a=+/- Gamma_a.",
+          "finite_clifford_piece": "B=gamma_* N=i I_4 in the explicit representation used by v521.",
+          "pairings_tested": {
+            "operator_krein_hs": "<X,Y>_times=Tr(X^times Y)",
+            "single_beta": "<X,Y>_Beta=Tr(X^dagger Beta Y)"
+          }
+        },
+        "exact_results": {
+          "representation_checks": {
+            "betaHermitianError": 0,
+            "betaSquareError": 0,
+            "inducedVectorActionMaxError": 0
+          },
+          "operator_krein_hs": {
+            "mixed": [
+              "Tr(A_0^times B)=0",
+              "Tr(A_1^times B)=0",
+              "Tr(A_2^times B)=0",
+              "Tr(A_3^times B)=0"
+            ],
+            "cartan_norms": [
+              "Tr(A_0^times A_0)=-4",
+              "Tr(A_1^times A_1)=4",
+              "Tr(A_2^times A_2)=4",
+              "Tr(A_3^times A_3)=4"
+            ],
+            "finite_norm": "B^times=-B and Tr(B^times B)=4.",
+            "implication": "The mixed spacetime-finite term cancels exactly, while the Cartan sector carries the residual Lorentz signature rather than a positive sum of squares."
+          },
+          "single_beta_trace": {
+            "pure_cartan": "Tr(A_a^dagger Beta A_a)=0 for all a.",
+            "mixed": "Tr(A_a^dagger Beta B)=0 for all a.",
+            "finite": "Tr(B^dagger Beta B)=0.",
+            "implication": "The naive one-Beta spinor trace is identically blind to these quadratic pieces in the irreducible four-spinor representation."
+          }
+        },
+        "interpretation": [
+          "v521's algebraic decoupling is robust under the natural spinor lift of the programme's vector fundamental symmetry.",
+          "A Lorentz-covariant Krein pairing cannot simultaneously be advertised as an ordinary positive norm: its Cartan term has one negative and three positive residual components.",
+          "The finite B piece is positive in the two-Beta operator pairing despite being Krein-anti-self-adjoint; this removes the simplest relative-sign conflict but does not establish ghost freedom.",
+          "The one-Beta trace is not a substitute action here because it annihilates both desired pure terms."
+        ],
+        "consequences_for_v520": {
+          "survives": "The product-compensator split and zero mixed term survive algebraically.",
+          "qualified": "The notation ||[D,C]||^2 must not be read as a positive Spin(2,3)-covariant norm before a Hamiltonian/Wick/physical-subspace prescription is specified.",
+          "next_decision": "Choose and justify either a Lorentzian signed action followed by a positive Hamiltonian reduction, or an explicitly Cartan/Hilbert positive action that breaks full noncompact covariance."
+        },
+        "falsifiers": [
+          "Any admissible spinor fundamental symmetry implementing the same vector Cartan involution that yields a nonzero mixed trace would make the cancellation representation-dependent.",
+          "If the physical differential-form contraction reverses or mixes the displayed trace signs, the matrix-only sign table is insufficient.",
+          "If no reflection-positive Wick rotation or positive Hamiltonian physical subspace exists, the product-compensator action has a ghost obstruction.",
+          "If an admissible nontrivial trace insertion makes the single-Beta prescription nonzero while preserving covariance and cyclicity, its null conclusion is not general."
+        ],
+        "reproducibility": {
+          "local_script": ".scratch_spin23_product_compensator_krein.py",
+          "numerical_tolerance": "All reported residuals were exactly 0.0 in double-precision explicit matrices; identities also follow from the Clifford relations.",
+          "committed_code": false
+        },
+        "authority": {
+          "proposalOnly": true,
+          "entails": false,
+          "empiricalAuthority": false
+        }
+      }
+    }
+  ],
+  "publicationRules": [
+    "reobserve latest closed source before eventual publication",
+    "preserve predecessor observations and chronological qualifications",
+    "keep runtime acceptance audit first; exact nine-file authoring adoption/behavioral qualification approved; deployment separately gated",
+    "use existing admitted journal lifecycle and actual readback; no new queue/control plane",
+    "foundational original documents remain complete separately from open current research"
+  ]
+}

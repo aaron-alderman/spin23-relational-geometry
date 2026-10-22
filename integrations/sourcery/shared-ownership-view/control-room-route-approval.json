@@ -1,0 +1,27 @@
+{
+  "status": "human-approved-awaiting-admitted-application",
+  "sourceChatId": "01a15ea1-122a-7172-8476-180fd5e872f2",
+  "humanInstruction": "Approved for the specific routing change in the proposal, through the existing deployment/admission owner. Keep authentication and scope checks intact, preserve the public MCP routes, and verify the shared view is live.",
+  "proposal": "control-room-route-proposal.json",
+  "patch": "control-room-route-proposal.patch",
+  "authorityBoundary": "This records the direct human instruction; it is not a signed deployment admission or evidence of application.",
+  "baseline": {
+    "configSha256": "10b777bdd173dc122fbbd35a040da17a55a50228d64629930be7df1a232055ca",
+    "sourceryHostedService": "active",
+    "privateControlRoomHttp": 401,
+    "publicControlRoomHttp": 403,
+    "publicPortalHttp": 403,
+    "publicMcpGetHttp": 403,
+    "templePublicationHttp": 200
+  },
+  "baselineMethod": "Independent read-only SSH hash, service-status and HTTP probes before deployment",
+  "acceptance": [
+    "existing deployment/admission owner accepts exact bounded change",
+    "complete staged nginx configuration passes syntax validation",
+    "approved routes reach existing service without weakening authentication or scope checks",
+    "public MCP and Temple publication behavior remains preserved",
+    "existing AuthoringRequest links the exact shared snapshot and provenance",
+    "independent browser read verifies the actual shared view"
+  ],
+  "liveVerified": false
+}

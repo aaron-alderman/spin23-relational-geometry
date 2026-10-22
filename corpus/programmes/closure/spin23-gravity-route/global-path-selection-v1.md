@@ -54,7 +54,9 @@ with the rank-one connection channel exercises the genuinely difficult part
 of the packet.  Failure to construct a consistent source Hessian closes the
 current implementation route but does not close Q: the selector must then
 try an equivalent covariant symbolic implementation before declaring an
-external-tool boundary.
+external-tool boundary.  The source vertices and flat zero-source
+34-component propagator are now complete; the live operation is the
+seagull-minus-bubble logarithmic trace.
 
 ## Backtracking policy
 
