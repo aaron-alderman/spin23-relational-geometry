@@ -1,0 +1,109 @@
+{
+  "schema": "spin23.torsion-model-discrepancy-priority/1",
+  "date": "2026-10-23",
+  "status": "mixed reported-uncertainty and explicit model-scenario priority audit; not a combined experimental error budget",
+  "sources": [
+    {
+      "path": "evidence/data/spin23-torsion-empirical-geometry-extraction-v1.json",
+      "sha256": "0689c37f708adfed840e986c474a08c14a091e45b99194ab9113cbe45bc86126"
+    },
+    {
+      "path": "evidence/data/spin23-torsion-published-geometry-approximation-v1.json",
+      "sha256": "c3b031d3e1a97df6b5a3e6b0b3f47d39e6806fef9891270dece35072ca0ee14b"
+    }
+  ],
+  "target": {
+    "forceRangeMillimetres": 7,
+    "centerDistanceMillimetres": 50,
+    "centerDistanceSigmaMillimetres": 0.05,
+    "centerDistanceOverRange": 7.142857142857143,
+    "orientation": "transverse source harmonic under the published-geometry approximation"
+  },
+  "reportedOneSigmaTerms": [
+    {
+      "id": "net-source-spin-normalization",
+      "input": "4.63e20 +/- 0.56e20 spins",
+      "fractionalResponseSigma": 0.12095032397408209,
+      "rank": 1
+    },
+    {
+      "id": "ac-response-ratio",
+      "input": "0.84 +/- 0.06",
+      "fractionalResponseSigma": 0.07142857142857142,
+      "rank": 2
+    },
+    {
+      "id": "center-distance",
+      "input": "50.00 +/- 0.05 mm",
+      "propagation": "For transverse point response exp(-d/lambda)*(d/lambda+1)/d^3, |d ln K/d ln d|=3+mu^2/(mu+1).",
+      "fractionalResponseSigma": 0.009265664160401001,
+      "rank": 3
+    }
+  ],
+  "declaredScenarioTerms": [
+    {
+      "id": "sensor-response-weighting",
+      "comparison": "point sensor versus uniform 12 mm ball",
+      "fractionalResponseShift": 0.07542360430151285,
+      "probabilisticInterpretation": "none"
+    },
+    {
+      "id": "smco5-core-volume",
+      "comparison": "center point versus uniform disclosed SmCo5 cylinder",
+      "fractionalResponseShift": 0.0032574451614630906,
+      "probabilisticInterpretation": "none"
+    },
+    {
+      "id": "two-degree-projection-only",
+      "comparison": "1-cos(2 degrees); illustrative projection loss, not the publication's full mounting model",
+      "fractionalResponseShift": 0.0006091729809042379,
+      "probabilisticInterpretation": "none"
+    }
+  ],
+  "derived": {
+    "reportedThreeTermQuadratureFraction": 0.14077241994828135,
+    "publishedGeometryCombinedPointShift": 0.07892673771786796,
+    "geometryCorrectedCouplingScaleShift": -0.07315300933667912,
+    "dominantReportedTerm": "net-source-spin-normalization",
+    "dominantGeometryScenario": "sensor-response-weighting"
+  },
+  "priority": [
+    {
+      "rank": 1,
+      "need": "spatially resolved combined SmCo5 and soft-iron electron-spin density",
+      "reason": "It controls both the largest reported normalization uncertainty and the largest unmodeled source-shape ambiguity."
+    },
+    {
+      "rank": 2,
+      "need": "sensor-cell polarization and response weighting",
+      "reason": "The point-to-uniform-cell scenario changes the 7 mm response by 7.54 percent."
+    },
+    {
+      "rank": 3,
+      "need": "frequency-dependent exotic-field transfer calibration and covariance",
+      "reason": "The published 0.84 +/- 0.06 ratio alone corresponds to 7.14 percent fractional response uncertainty."
+    },
+    {
+      "rank": 4,
+      "need": "exact coordinate frames and mounting nuisance model",
+      "reason": "Needed for an author-faithful harmonic template even though a simple two-degree projection is small."
+    },
+    {
+      "rank": 5,
+      "need": "raw or reduced time series plus mass-dependent likelihood",
+      "reason": "Required to turn the response model into an independently evaluable empirical constraint."
+    }
+  ],
+  "falsificationUse": {
+    "geometryRobustClaim": "A claimed coupling constraint is geometry-robust only if it remains within its declared tolerance across point, uniform-core and sensor-weighting alternatives or is tied to measured response maps.",
+    "failureCondition": "If plausible disclosed-geometry variants move the response beyond the published model-discrepancy allowance, a point-source recast is rejected.",
+    "currentDecision": "The 7 mm point-source approximation fails a five-percent geometry-tolerance gate under uniform sensor weighting."
+  },
+  "authority": {
+    "grantsCombinedErrorBudget": false,
+    "grantsIndependentReproduction": false,
+    "grantsDetection": false,
+    "grantsSpin23Specificity": false,
+    "grantsWorldwrightCalibration": false
+  }
+}
