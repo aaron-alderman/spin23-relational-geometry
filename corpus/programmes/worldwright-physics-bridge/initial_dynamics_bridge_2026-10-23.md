@@ -73,7 +73,7 @@ node verification/verify/verify_spin23_torsion_finite_geometry_response.mjs
 node verification/verify/verify_spin23_worldwright_bridge_assurance_manifest.mjs
 ```
 
-The final command is the aggregate assurance entry point for the first five-stage chain. It verifies SHA-256 pins for all evidence/verifier pairs in that manifest, executes every listed verifier, and checks that the chain still withholds detection, Spin(2,3) specificity, Worldwright empirical validation, policy authority and moral authority. The finite-geometry result is independently executable and is to be added to the aggregate manifest after this tranche is hash-pinned.
+The final command is the aggregate assurance entry point for the six-stage chain. It verifies SHA-256 pins for all evidence/verifier pairs in that manifest, executes every listed verifier, and checks that the chain still withholds detection, Spin(2,3) specificity, Worldwright empirical validation, policy authority and moral authority.
 
 The machine-readable response surface is [spin23-worldwright-torsion-response-surface-v1.json](../../../evidence/data/spin23-worldwright-torsion-response-surface-v1.json).
 
