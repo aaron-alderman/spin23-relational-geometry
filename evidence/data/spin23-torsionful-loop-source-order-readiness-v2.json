@@ -1,0 +1,17 @@
+{
+  "schema": "spin23.torsionful-loop-source-order-readiness/2",
+  "date": "2026-10-22",
+  "sourceVariation": "vary independent background connection by pure axial contorsion at fixed coframe and selector",
+  "sectors": [
+    {"id": "bosonicComplete", "firstSourceDerivative": "missing", "secondSourceDerivative": "missing", "msbarAxialResponse": "unresolved", "knownSubblock": "pure axial-to-axial derivatives are zero"},
+    {"id": "ghost", "firstSourceDerivative": "zero", "secondSourceDerivative": "zero", "msbarAxialResponse": 0, "reason": "gauge conditions and transformations of e,V do not depend on independent background omega"},
+    {"id": "secondClass", "firstSourceDerivative": "zero at origin", "secondSourceDerivative": "known local even response", "msbarAxialResponse": 0, "reason": "multiplication determinant gives a scaleless functional trace in dimensional regularization"},
+    {"id": "measureJacobians", "firstSourceDerivative": "zero", "secondSourceDerivative": "zero", "msbarAxialResponse": 0, "reason": "L2 metrics and irreducible projectors depend on fixed coframe; omega-to-K shift has unit Jacobian"}
+  ],
+  "requiredSourceDerivativeObjects": 8,
+  "closedSourceDerivativeObjects": 6,
+  "missingSourceDerivativeObjects": ["HB1", "HB2"],
+  "resolvedNonbosonicMsbarResponses": 3,
+  "remainingTrace": "1/2 Tr(GB HB2)-1/4 Tr(GB HB1 GB HB1)",
+  "decision": "Only the first two axial-source derivatives of the complete mixed bosonic Hessian remain unresolved."
+}
