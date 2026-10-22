@@ -69,7 +69,10 @@ node verification/verify/verify_spin23_worldwright_torsion_response_surface.mjs
 node verification/verify/verify_spin23_torsion_synthetic_likelihood.mjs
 node verification/verify/verify_spin23_torsion_empirical_calibration_source_audit.mjs
 node verification/verify/verify_spin23_torsion_fingerprint_parameter_closure.mjs
+node verification/verify/verify_spin23_worldwright_bridge_assurance_manifest.mjs
 ```
+
+The final command is the aggregate assurance entry point. It verifies SHA-256 pins for all five evidence/verifier pairs, executes every verifier, and checks that the chain still withholds detection, Spin(2,3) specificity, Worldwright empirical validation, policy authority and moral authority.
 
 The machine-readable response surface is [spin23-worldwright-torsion-response-surface-v1.json](../../../evidence/data/spin23-worldwright-torsion-response-surface-v1.json).
 
@@ -91,6 +94,8 @@ The minimal bare Dirac coefficient `|c_f|=1/8` is a useful benchmark, but it is 
 This is a useful negative result: present experiments can constrain the surviving EFT, but neither a null result nor a detected generic tensor-Yukawa force can currently identify Spin(2,3).
 
 The executable closure gate is [spin23-torsion-fingerprint-parameter-closure-v1.json](../../../evidence/data/spin23-torsion-fingerprint-parameter-closure-v1.json).
+
+The hash-pinned executable chain is [spin23-worldwright-bridge-assurance-manifest-v1.json](../../../evidence/data/spin23-worldwright-bridge-assurance-manifest-v1.json).
 
 ## Next gates
 
