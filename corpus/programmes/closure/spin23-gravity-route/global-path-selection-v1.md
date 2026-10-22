@@ -48,15 +48,20 @@ Among nodes whose prerequisites are satisfied, order by:
 3. exactness and independent verifiability;
 4. computational cost.
 
-This selects `Q:t132-feasibility`.  The profile has response row
+This selects `Q:t132-coupling-function`.  The profile has response row
 ((2,0,\ldots,0)), so one pole fixes (h^{TT}_1), while its nonzero overlap
 with the rank-one connection channel exercises the genuinely difficult part
 of the packet.  Failure to construct a consistent source Hessian closes the
 current implementation route but does not close Q: the selector must then
 try an equivalent covariant symbolic implementation before declaring an
 external-tool boundary.  The source vertices and flat zero-source
-34-component propagator are now complete; the live operation is the
-seagull-minus-bubble logarithmic trace.
+34-component propagator are complete.  The logarithmic pole is nonzero at
+the regular witness point.  A converged twelve-point coupling scan selects
+the rational candidate
+\(h^{TT}_1=(18a_1^2+3a_1-7)/(4608\pi^2\epsilon)\), independent of
+\(B=\kappa b_X\).  The live operation is to prove or falsify that candidate
+by analytic external-momentum differentiation before advancing to the other
+six flat rows.
 
 ## Backtracking policy
 

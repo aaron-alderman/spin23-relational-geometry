@@ -264,34 +264,58 @@ def packet_h0(sectors, p, a1=2.0, bx=1.0, kappa=1.0):
     return bx * sectors["X0"] + a1 / (4 * kappa) * sectors["T0"] + sectors["E0"] / (2 * kappa) + gauge_hessian(p, kappa)
 
 
-def calculate_trace(p=(2, 3, 5, 7), q=(1, 0, 0, 0), a1=2.0, bx=1.0, kappa=1.0):
+def calculate_traces(p=(2, 3, 5, 7), q=(1, 0, 0, 0), couplings=((2.0, 1.0, 1.0),)):
     p, q = np.asarray(p, float), np.asarray(q, float)
     linear = hessian_sectors(p, -p - q, q, source_pair=False, include_torsion=False)
     reverse = hessian_sectors(p + q, -p, -q, source_pair=False, include_torsion=False)
     quadratic = hessian_sectors(p, -p, q, source_pair=True)
     zero_q = hessian_sectors(p + q, -p - q, q * 0, source_pair=False)
-    g = (a1 + 1) / (2 * kappa)
-    h1, h1r = bx * linear["X1"] + g * linear["E1"], bx * reverse["X1"] + g * reverse["E1"]
-    h2 = bx * quadratic["X2"] + g * quadratic["E2"]
-    Gp = np.linalg.inv(packet_h0(quadratic, p, a1, bx, kappa))
-    Gq = np.linalg.inv(packet_h0(zero_q, p + q, a1, bx, kappa))
-    seagull = .5 * np.trace(Gp @ h2)
-    bubble = -.25 * np.trace(Gp @ h1 @ Gq @ h1r)
-    return {"seagull": seagull, "bubble": bubble, "total": seagull + bubble,
-            "rankH1": np.linalg.matrix_rank(h1), "rankH2": np.linalg.matrix_rank(h2),
-            "reverseResidual": np.max(np.abs(h1r - h1.T.conj()))}
+    results = []
+    for a1, bx, kappa in couplings:
+        g = (a1 + 1) / (2 * kappa)
+        h1 = bx * linear["X1"] + g * linear["E1"]
+        h1r = bx * reverse["X1"] + g * reverse["E1"]
+        h2 = bx * quadratic["X2"] + g * quadratic["E2"]
+        Gp = np.linalg.inv(packet_h0(quadratic, p, a1, bx, kappa))
+        Gq = np.linalg.inv(packet_h0(zero_q, p + q, a1, bx, kappa))
+        seagull = .5 * np.trace(Gp @ h2)
+        bubble = -.25 * np.trace(Gp @ h1 @ Gq @ h1r)
+        results.append({"seagull": seagull, "bubble": bubble, "total": seagull + bubble,
+                        "rankH1": np.linalg.matrix_rank(h1), "rankH2": np.linalg.matrix_rank(h2),
+                        "reverseResidual": np.max(np.abs(h1r - h1.T.conj()))})
+    return results
+
+
+def calculate_trace(p=(2, 3, 5, 7), q=(1, 0, 0, 0), a1=2.0, bx=1.0, kappa=1.0):
+    return calculate_traces(p, q, ((a1, bx, kappa),))[0]
 
 
 if __name__ == "__main__":
     p = tuple(map(float, os.environ.get("SPIN23_TRACE_P", "2,3,5,7").split(",")))
     q0 = float(os.environ.get("SPIN23_TRACE_Q", "1"))
+    a1 = float(os.environ.get("SPIN23_TRACE_A1", "2"))
+    bx = float(os.environ.get("SPIN23_TRACE_BX", "1"))
+    kappa = float(os.environ.get("SPIN23_TRACE_KAPPA", "1"))
     if len(p) != 4:
         raise ValueError("SPIN23_TRACE_P must contain four comma-separated numbers")
-    result = calculate_trace(p=p, q=(q0, 0, 0, 0))
+    coupling_text = os.environ.get("SPIN23_TRACE_COUPLINGS")
+    couplings = (
+        [tuple(map(float, item.split(","))) for item in coupling_text.split(";")]
+        if coupling_text else [(a1, bx, kappa)]
+    )
+    if any(len(c) != 3 for c in couplings):
+        raise ValueError("SPIN23_TRACE_COUPLINGS entries must be a1,bX,kappa triples")
+    results = calculate_traces(p=p, q=(q0, 0, 0, 0), couplings=couplings)
+    result = results[0]
     assert os.environ.get("SPIN23_TRACE_P") is not None or (result["rankH1"] == 30 and result["rankH2"] == 7)
-    assert result["reverseResidual"] < 1e-10
-    assert np.isfinite(result["total"])
+    assert all(r["reverseResidual"] < 1e-10 for r in results)
+    assert all(np.isfinite(r["total"]) for r in results)
+    if os.environ.get("SPIN23_TRACE_COMPACT") == "1":
+        print(";".join(f"{row['total'].real:.17g}" for row in results))
+        raise SystemExit(0)
     print("Spin(2,3) vectorized t132 Fourier trace: PASS")
     print(f"  H1/H2 ranks: {result['rankH1']}, {result['rankH2']}")
     print(f"  reverse-vertex Hermiticity residual: {result['reverseResidual']:.3e}")
     print(f"  seagull={result['seagull']}; bubble={result['bubble']}; total={result['total']}")
+    for coupling, row in zip(couplings[1:], results[1:]):
+        print(f"  coupling={coupling}; seagull={row['seagull']}; bubble={row['bubble']}; total={row['total']}")

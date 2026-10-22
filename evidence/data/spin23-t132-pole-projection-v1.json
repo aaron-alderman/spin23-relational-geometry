@@ -1,0 +1,32 @@
+{
+  "schema": "spin23.t132-pole-projection/1",
+  "date": "2026-10-23",
+  "status": "superseded under-extrapolated pole projection at the witness coupling",
+  "parameters": {"kappa": 1, "a1": 2, "bX": 1},
+  "projection": {
+    "externalMomentum": "q e0",
+    "radialVariable": "z=1/r^2",
+    "q2Extraction": "[F(+delta)+F(-delta)-2F(0)]/(2 delta^2)",
+    "radialExtraction": "coefficient of z^2 in a cubic z fit on r=(8,12,16,24,32,48,64)",
+    "q4Removal": "(4 c(delta=1/4)-c(delta=1/2))/3"
+  },
+  "angularReduction": {
+    "residualSymmetry": "SO(2) in the 1-2 plane",
+    "variables": ["x=n0^2", "y=n3^2"],
+    "sampleCount": 11,
+    "quadraticMaximumResidual": 9.21501e-6,
+    "cubicMaximumResidual": 1.80711e-6,
+    "quadraticCubicAverageDifference": 6.36134e-7,
+    "s3Measure": "Dirichlet(1/2,1/2,1/2,1/2) in squared direction cosines",
+    "averageQ2OverR4Coefficient": 0.48484593477810095
+  },
+  "poleNormalization": {
+    "radialAngularFactor": "1/(16*pi^2*epsilon)",
+    "y132Coefficient": 0.0030703227497433055,
+    "responseRow": [2,0,0,0,0,0,0,0,0],
+    "hTT1Equals": "y132/2",
+    "hTT1Coefficient": 0.0015351613748716528
+  },
+  "scope": "This proves a nonzero HTT1 pole but its numerical coefficient is superseded by spin23-t132-coupling-surface-v1, which adds a finer finite-difference level.",
+  "nextCalculation": "evaluate the same four-point degree-four angular cubature over coupling space and reconstruct the regular hTT1(a1,bX,kappa) dependence"
+}

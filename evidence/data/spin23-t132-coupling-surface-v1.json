@@ -1,0 +1,28 @@
+{
+  "schema": "spin23.t132-coupling-surface/1",
+  "date": "2026-10-23",
+  "status": "converged numerical reconstruction with an exact rational candidate awaiting analytic proof",
+  "dimensionlessCouplings": {"a1": "a1", "B": "kappa*bX", "kappaScaling": "the trace is invariant under fixed (a1,B)"},
+  "grid": {"a1": [1,2,3,4], "B": [0.5,1,2], "points": 12},
+  "projection": {
+    "radii": [8,12,16,24,32,48,64],
+    "angularNodes": [[0,0],[0.5,0],[0,0.5],[0.5,0.5]],
+    "angularWeights": ["1/6","1/3","1/3","1/6"],
+    "richardsonLevels": ["(delta=1/8,1/4)","(delta=1/16,1/8)"],
+    "secondExtrapolation": "(16 R_1/16 - R_1/8)/15"
+  },
+  "candidateAngularAverage": "(18*a1^2+3*a1-7)/144",
+  "candidateBDependence": "none",
+  "maximumAbsoluteGridResidual": 0.0005638429764553976,
+  "witness": {
+    "a1": 2,
+    "B": 1,
+    "finestDirectAverage": 0.4930563166737776,
+    "candidateAverage": "71/144",
+    "directMinusCandidate": 7.611181e-7,
+    "candidateHTT1Pole": "71/(4608*pi^2*epsilon)",
+    "candidateHTT1Decimal": 0.0015611553903224788
+  },
+  "decision": "The regular t132 surface is numerically consistent with a B-independent quadratic in a1. Treat the rational expression as a candidate until analytic q differentiation or exact asymptotic reduction proves it.",
+  "nextCalculation": "replace finite q differences by analytic q jets and derive the q2/r4 angular polynomial symbolically enough to prove or falsify the rational candidate"
+}
