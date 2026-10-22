@@ -1,0 +1,42 @@
+{
+  "schema": "spin23.critical-packet-general-pgt-specialization-obstruction/1",
+  "date": "2026-10-22",
+  "status": "exact principal-rank and gauge-complex obstruction",
+  "connectionComponents": 24,
+  "packet": {
+    "curvatureKineticTerm": "bX*Xhat^2/2",
+    "linearizedMap": "delta Xhat = v_I(p) k_I with v_(nu,[ab])=epsilon^(mu nu a b) p_mu",
+    "connectionSecondOrderSymbol": "bX*v*v^T",
+    "rankAtNonzeroMomentum": 1,
+    "algebraicConnectionDirections": 23,
+    "lorentzGhostOrder": 0,
+    "connectionSourceGhostDerivatives": [0, 0],
+    "ordinaryJacobianSourceDerivatives": [0, 0],
+    "secondClassMSbarPole": 0
+  },
+  "comparisonTheory": {
+    "source": "Melichev and Percacci, arXiv:2307.02336",
+    "curvatureKineticTerm": "c1*F_(mu nu a b)*F^(mu nu a b)",
+    "lorentzGauge": "nabla^nu Z_(nu a b)=0",
+    "connectionSecondOrderSymbol": "c1*p^2*I_24",
+    "rankAtNonzeroMomentum": 24,
+    "canonicalRescaling": "Z -> Z/sqrt(c1)",
+    "singularLowerOrderRatio": "a1/c1",
+    "lorentzGhostOrder": 2,
+    "diffeomorphismGhostContainsTorsion": true
+  },
+  "rankGap": 23,
+  "regularSpecializationExists": false,
+  "packetQuadraticTrace": "1/2 Tr(G H2) - 1/4 Tr(G H1 G H1)",
+  "firstRecommendedProfile": "t132",
+  "t132Source": {
+    "momentumDirection": [1, 0, 0, 0],
+    "torsion": {"132": "1", "231": "-1"},
+    "contorsion": {"123": "-1/2", "132": "1/2", "213": "1/2", "231": "-1/2", "312": "1/2", "321": "-1/2"},
+    "torsionReconstruction": "T_abc=K_abc-K_cba",
+    "responseRow": [2, 0, 0, 0, 0, 0, 0, 0, 0],
+    "packetDerivativeVectorContraction": "-1/2"
+  },
+  "firstCoefficientExtraction": "hTT1=y132/2",
+  "decision": "Published full-F-squared PGT poles cannot be specialized to the rank-one critical packet; the next irreducible calculation is the packet-specific bosonic H1/H2 trace on t132."
+}
