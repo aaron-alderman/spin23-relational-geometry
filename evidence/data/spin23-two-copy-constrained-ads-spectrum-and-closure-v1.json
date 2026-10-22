@@ -1,0 +1,122 @@
+{
+  "schema": "spin23.two-copy-constrained-ads-spectrum-and-closure/1",
+  "date": "2026-10-22",
+  "status": "exact constraint-rank and reduced quadratic-spectrum certificate with a one-loop non-closure witness",
+  "action": {
+    "fields": [
+      "independent Spin(2,3) connection A^{AB}",
+      "two vector zero-forms Y_I^A",
+      "four-form multipliers rho and B_A"
+    ],
+    "multiplicitySplit": "V^A=n^I Y_I^A and W^A=m^I Y_I^A for fixed orthonormal multiplicity vectors n,m",
+    "baseInvariant": "(ell/8kappa) integral epsilon_{ABCDE} V^E F^{AB} wedge F^{CD}",
+    "criticalCompletion": "three irreducible torsion squares with a_2=-2a_1 and a_3=-a_1/2, plus the b_3 pseudoscalar-curvature square; the other five irreducible curvature-square coefficients vanish",
+    "constraints": [
+      "V^2=-ell^2",
+      "W^A=0"
+    ],
+    "epistemicStatus": "W=0 and the ray n^I are imposed data; no multiplicity gauge symmetry or Spin(2,3) theorem presently derives them"
+  },
+  "compensatorRank": {
+    "rawComponents": 10,
+    "normConstraintRank": 1,
+    "orthogonalCopyConstraintRank": 5,
+    "brokenGaugeRank": 4,
+    "combinedConstraintAndGaugeRank": 10,
+    "physicalDegrees": 0
+  },
+  "background": {
+    "geometry": "torsionless AdS4",
+    "cosmologicalConstant": "Lambda=-3/ell^2",
+    "curvature": "Rbar^{ab}=-ell^{-2} ebar^a wedge ebar^b",
+    "pseudoscalarCurvature": 0,
+    "reasonItSolvesSameAction": "all torsion, pseudoscalar-curvature and multiplier additions vanish on the MacDowell-Mansouri AdS solution"
+  },
+  "gaugeFixing": {
+    "brokenSpin23": "unitary gauge delta V^a=0; algebraic Faddeev-Popov rank 4",
+    "localLorentz": "symmetric-vierbein gauge f_[mu nu]=0",
+    "diffeomorphism": "background de Donder gauge nabla^nu h_mu nu-(1/2)nabla_mu h=0",
+    "ghostVerdict": "gauge-orbit determinants only; no BRST-cohomology particle poles"
+  },
+  "quadraticSectors": [
+    {
+      "name": "massless 2-plus graviton",
+      "operator": "(box+2/ell^2) h_TT=0",
+      "rawComponents": 16,
+      "degrees": 2,
+      "health": "positive residue for M_Pl^2>0"
+    },
+    {
+      "name": "massive 0-minus axial torsion",
+      "operator": "(box-A/B) phi=0",
+      "rawComponents": 4,
+      "degrees": 1,
+      "health": "positive residue and positive mass squared for A>0 and B>0"
+    },
+    {
+      "name": "trace contorsion",
+      "rawComponents": 4,
+      "degrees": 0,
+      "health": "nondegenerate algebraic block"
+    },
+    {
+      "name": "tensor contorsion",
+      "rawComponents": 16,
+      "degrees": 0,
+      "health": "nondegenerate algebraic block"
+    },
+    {
+      "name": "two-copy compensator",
+      "rawComponents": 10,
+      "degrees": 0,
+      "health": "six imposed constraints plus four broken gauge directions"
+    }
+  ],
+  "constraintAudit": {
+    "phaseSpaceVariables": 80,
+    "firstClassConstraints": 20,
+    "secondClassConstraints": 34,
+    "configurationDegrees": 3,
+    "nonlinearDeterminant": "J^-12[((p_pseudo)/(6J))^2+m_c^2]^6",
+    "nonBifurcationDomain": "J>0 and m_c!=0"
+  },
+  "healthyWitness": {
+    "ellSquared": 1,
+    "kappa": 1,
+    "planckSquared": 1,
+    "A": 1,
+    "B": 1,
+    "torsionMassSquared": 1,
+    "bfMargin": 3.25,
+    "gravitonDegrees": 2,
+    "torsionDegrees": 1,
+    "totalPhysicalDegrees": 3
+  },
+  "oneLoopObstruction": {
+    "minimalPseudoscalarHeatKernel": {
+      "C2": "1/120",
+      "Euler": "-1/360",
+      "R2": "1/72"
+    },
+    "criticalSurfaceCodimension": 7,
+    "criticalEqualities": [
+      "2a_1+a_2=0",
+      "a_1+2a_3=0",
+      "b_1=0",
+      "b_2=0",
+      "b_4=0",
+      "b_5=0",
+      "b_6=0"
+    ],
+    "decision": "nonzero C2 and R2 counterterms point outside the sparse critical surface, so it is not radiatively closed",
+    "additionalObstruction": "fermion loops generate transverse axial kinetic terms whose generic coexistence with the healthy longitudinal pole violates the isolated axial sign conditions"
+  },
+  "finalClassification": {
+    "admitted": "healthy tuned classical AdS theory and low-energy EFT with two graviton helicities plus one massive 0-minus torsion mode",
+    "rejected": "radiatively closed fundamental finite local polynomial theory on the displayed unprotected critical surface",
+    "missingPrinciples": [
+      "a genuine symmetry or dynamical theorem selecting the multiplicity ray and replacing the imposed W=0 constraint",
+      "a BRST-compatible symmetry, fixed point or UV prescription protecting all seven critical coupling relations"
+    ]
+  }
+}
