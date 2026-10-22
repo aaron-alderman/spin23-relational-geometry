@@ -1,5 +1,10 @@
 # Seven Flat Nonaxial Jets and Two Curved Linear-Torsion Probes Close the Quadratic Response Design
 
+> **Sparse replacement (claim 1678):** the seven seeded dense flat jets are
+> not needed operationally.  A common-momentum design with one or two unit
+> torsion components per new probe has determinant \(-48\) and an explicit
+> rational inverse.  The curved two-probe block below remains unchanged.
+
 **Date:** 22 October 2026
 
 **Gates:** A1, A2, A4, A6, A7, A8 and A11

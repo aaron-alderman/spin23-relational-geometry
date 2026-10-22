@@ -1,0 +1,39 @@
+{
+  "schema": "spin23.sparse-derivative-torsion-response-inverse/1",
+  "date": "2026-10-22",
+  "status": "exact sparse common-momentum design and rational inverse",
+  "momentum": [1, 0, 0, 0],
+  "torsionConvention": "a listed t_abc is +1, t_cba is -1, and all other independent components vanish",
+  "rowOrder": ["axial-longitudinal", "axial-transverse", "t001", "t011", "t021", "t102", "t112", "t132", "t001+t122"],
+  "matrix": [
+    [6, -6, 0, 0, 0, 0, 0, 0, 0],
+    [6, -6, 0, 2, -2, 2, -2, 0, 0],
+    [2, 1, 1, 1, 0, 2, 1, 1, 0],
+    [2, 1, 1, 1, 1, 0, 0, 0, 1],
+    [2, 0, 0, 1, 0, 0, 0, 0, 0],
+    [2, 0, 0, 0, 0, 2, 0, 0, 0],
+    [2, 1, 1, 0, 0, 0, 0, 0, 0],
+    [2, 0, 0, 0, 0, 0, 0, 0, 0],
+    [4, 2, 0, 1, 0, 2, 1, 0, 0]
+  ],
+  "determinant": "-48",
+  "inverse": [
+    ["0", "0", "0", "0", "0", "0", "0", "1/2", "0"],
+    ["-1/6", "0", "0", "0", "0", "0", "0", "1/2", "0"],
+    ["1/6", "0", "0", "0", "0", "0", "1", "-3/2", "0"],
+    ["0", "0", "0", "0", "1", "0", "0", "-1", "0"],
+    ["1/6", "-1/2", "0", "0", "2", "3/2", "0", "-1/2", "-1"],
+    ["0", "0", "0", "0", "0", "1/2", "0", "-1/2", "0"],
+    ["1/3", "0", "0", "0", "-1", "-1", "0", "-1", "1"],
+    ["-1/3", "0", "1", "0", "0", "0", "-1", "3", "-1"],
+    ["-1/6", "1/2", "0", "1", "-3", "-3/2", "-1", "3/2", "1"]
+  ],
+  "curvedLinearTorsionBlock": {
+    "coefficientOrder": ["HRT3", "HRT5"],
+    "probeOrder": ["Ric=diag(3,-1,-1,-1), div1T=diag(1,0,0,0)", "Ric=I, div1T=I"],
+    "matrix": [[3, 0], [4, 16]],
+    "determinant": "48",
+    "inverse": [["1/3", "0"], ["-1/12", "1/16"]]
+  },
+  "decision": "The seven new flat evaluations can all use one momentum and at most two unit torsion components; exact rational inverses now close both derivative-torsion and curved linear-torsion coefficient extraction."
+}
