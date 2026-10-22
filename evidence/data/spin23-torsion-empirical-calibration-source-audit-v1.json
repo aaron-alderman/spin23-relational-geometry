@@ -1,0 +1,78 @@
+{
+  "schema": "spin23.torsion-empirical-calibration-source-audit/1",
+  "date": "2026-10-23",
+  "status": "primary-source anchor identified; independent likelihood reconstruction blocked",
+  "primarySource": {
+    "title": "Constraints on Axion Mediated Dipole-Dipole Interactions",
+    "authors": "Zitong Xu et al.",
+    "journal": "Physical Review Letters 134, 181801",
+    "published": "2025-05-06",
+    "doi": "10.1103/PhysRevLett.134.181801",
+    "url": "https://doi.org/10.1103/PhysRevLett.134.181801",
+    "license": "CC BY 4.0"
+  },
+  "modelMatch": {
+    "interaction": "pseudoscalar-pseudoscalar dipole-dipole",
+    "tensorStructureMatch": true,
+    "contactTerm": "zero for separated macroscopic source and detector",
+    "sourceDetectorChannels": ["electron-neutron", "electron-proton"],
+    "spin23Specificity": false,
+    "reason": "The experiment constrains the generic tensor Yukawa interaction; a Spin(2,3) parent relation among mass and flavor couplings is still absent."
+  },
+  "reportedAnchor": {
+    "integrationHours": 80,
+    "forceRangeMillimetres": 7,
+    "approximateMediatorMassMeV": 0.03,
+    "exoticFieldFemtoTesla": {
+      "central": 0.08,
+      "statisticalSigma": 0.22,
+      "systematicSigma": 0.12
+    },
+    "electronNeutronCouplingTimes1e9": {
+      "central": 0.38,
+      "statisticalSigma": 1.08,
+      "systematicSigma": 0.48,
+      "reportedAbsolute95Upper": 2.4
+    }
+  },
+  "apparatusAnchor": {
+    "source": "iron-shielded SmCo5 electron-spin source",
+    "netSourceSpins": 4.63e20,
+    "netSourceSpinsSigma": 0.56e20,
+    "sourceSensorDistanceMillimetres": 50,
+    "sourceSensorDistanceSigmaMillimetres": 0.05,
+    "modulationFrequencyHertz": 0.3,
+    "acResponseRatio": 0.84,
+    "acResponseRatioSigma": 0.06,
+    "neutronSpinFraction": 0.58,
+    "protonSpinFraction": 0.04,
+    "magneticLeakageUpperFemtoTesla": 0.1
+  },
+  "reproductionAudit": {
+    "rangeMassConversion": "hbar*c/lambda gives 0.02819 meV at 7 mm, consistent with the reported approximate 0.03 meV",
+    "roundedGaussianCheck": "central + 1.645*sqrt(statistical^2+systematic^2) gives 2.324e-9, within four percent of the reported 2.4e-9 limit",
+    "fullLimitCurve": "figure only in the inspected article",
+    "rawTimeSeries": "not identified in the inspected article",
+    "fullCovariance": "not identified in the inspected article",
+    "sourceVolumeSpinDensityModel": "described but executable inputs were not identified in the inspected article",
+    "independentLikelihoodReconstruction": false
+  },
+  "calibrationDecision": {
+    "primaryAnchorAvailable": true,
+    "singlePointSanityCheckAvailable": true,
+    "fullEmpiricalCalibrationAdmitted": false,
+    "nextEvidence": [
+      "author or repository release of the reduced time series",
+      "full covariance and nuisance priors",
+      "machine-readable source and detector geometry",
+      "spin-density and transfer-function simulation inputs",
+      "machine-readable mass-dependent limit curve or likelihood"
+    ]
+  },
+  "authority": {
+    "grantsDetection": false,
+    "grantsIndependentReproduction": false,
+    "grantsSpin23Specificity": false,
+    "grantsWorldwrightCalibration": false
+  }
+}

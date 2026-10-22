@@ -53,17 +53,28 @@ A second executable artifact demonstrates the inference path without pretending 
 
 Those numbers are properties of a noiseless synthetic dataset and have no detection significance. The artifact separately lists the measurements, covariance, finite spin-density geometry, apparatus response, nuisance models and blind-analysis rules required before empirical calibration is admissible.
 
+## Empirical calibration source audit
+
+The closest primary empirical anchor identified so far is Xu et al., *Physical Review Letters* 134, 181801 (2025), DOI 10.1103/PhysRevLett.134.181801. It measures the same generic pseudoscalar dipole-dipole tensor interaction with a shielded polarized source and comagnetometer.
+
+At a reported 7 mm force range, the article gives an electron-neutron coupling estimate of (0.38 +/- 1.08 statistical +/- 0.48 systematic)e-9 and an absolute 95% upper limit of 2.4e-9. A range conversion gives 0.02819 meV, consistent with the paper's approximate 0.03 meV. A deliberately simple one-sided Gaussian calculation from the rounded uncertainties gives 2.324e-9, within four percent of the published limit.
+
+This is enough for a provenance anchor and sanity check, but not a full independent reconstruction. The inspected article does not expose a raw time series, full covariance, executable spin-density geometry or machine-readable mass-dependent likelihood. The calibration gate therefore remains closed pending those inputs.
+
 ## Reproduction
 
 ```powershell
 node verification/verify/verify_spin23_critical_pgt_lense_thirring_spin_yukawa.mjs
 node verification/verify/verify_spin23_worldwright_torsion_response_surface.mjs
 node verification/verify/verify_spin23_torsion_synthetic_likelihood.mjs
+node verification/verify/verify_spin23_torsion_empirical_calibration_source_audit.mjs
 ```
 
 The machine-readable response surface is [spin23-worldwright-torsion-response-surface-v1.json](../../../evidence/data/spin23-worldwright-torsion-response-surface-v1.json).
 
 The synthetic calibration contract is [spin23-torsion-synthetic-likelihood-v1.json](../../../evidence/data/spin23-torsion-synthetic-likelihood-v1.json).
+
+The primary-source audit is [spin23-torsion-empirical-calibration-source-audit-v1.json](../../../evidence/data/spin23-torsion-empirical-calibration-source-audit-v1.json).
 
 ## Next gates
 
