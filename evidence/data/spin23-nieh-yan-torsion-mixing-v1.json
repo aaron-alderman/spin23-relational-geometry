@@ -1,0 +1,15 @@
+{
+  "schema": "spin23.nieh-yan-torsion-mixing/1",
+  "date": "2026-10-22",
+  "torsionDimensions": {"trace": 4, "axial": 4, "tensor": 16, "total": 24},
+  "torsionSquarePseudoscalar": "star(T_a wedge T^a)=(2/3)*t.p+star(Q_a wedge Q^a)",
+  "vanishingBilinears": ["V_a wedge V^a", "A_a wedge A^a", "V_a wedge Q^a", "A_a wedge Q^a"],
+  "exactPseudoscalarCurvature": "Xhat=Dp+(2/3)*t.p+star(Q_a wedge Q^a)",
+  "backgroundSplit": {"p": "pbar+s", "t": "v", "Q": "q", "Xbar": "D pbar"},
+  "linearFluctuation": "X1=Ds+(2/3)*v.pbar",
+  "quadraticFluctuation": "X2=(2/3)*v.s+star(q_a wedge q^a)",
+  "HB1ConnectionVertices": ["(4/3)*(Ds)*(v.pbar)", "(4/3)*Xbar*(v.s)", "2*Xbar*star(q_a wedge q^a)"],
+  "HB2ConnectionVertices": ["(4/9)*(v.pbar)^2"],
+  "remaining": "coframe completion and measure-preserving Schur reduction",
+  "decision": "The fixed-coframe connection source expansion is exact and contains only axial-trace and tensor-square mixings."
+}
