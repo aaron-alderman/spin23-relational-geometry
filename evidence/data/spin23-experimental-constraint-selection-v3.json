@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.global-path-selection/3",
+  "date": "2026-10-23",
+  "objective": "reopen the apparatus-data boundary with primary published laboratory results that probe the critical 0-minus tensor operator",
+  "terminalStates": ["completed", "rejected", "externally_blocked"],
+  "nodes": [
+    {"id":"EE","branch":"electron-electron low-mass plateau","state":"completed","localExecutable":false,"result":"|y_e|<7.4162e-9 for m_phi<30 microeV at 95% confidence"},
+    {"id":"EN","branch":"electron-neutron 30-microeV point","state":"completed","localExecutable":false,"result":"|y_e y_n|<=2.4e-9 at 95% confidence"},
+    {"id":"U","branch":"universal effective-coupling improvement from EN","state":"rejected","localExecutable":false,"result":"under c_n=c_e the EN common-f reach is 154 times weaker than EE"},
+    {"id":"FC","branch":"independent reconstruction of full published mass curves","state":"externally_blocked","localExecutable":false,"blocker":"author numerical response tables or controlled figure digitization plus full apparatus geometry"},
+    {"id":"HM","branch":"hadronic inverse matching","state":"externally_blocked","localExecutable":false,"blocker":"quark-level c_q values, nucleon axial spin fractions and threshold matching"},
+    {"id":"UV","branch":"unique Spin(2,3) prediction","state":"externally_blocked","localExecutable":false,"blocker":"broken-parent calculation of A, B and flavor coefficients"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "decision-relevant direct laboratory maps extractable from the selected primary electron-spin experiments",
+  "decision": "Published data now constrain the electron and electron-neutron portal combinations, but neither experiment approaches the natural Planck-range benchmark or separates the underlying coefficients. The next decisive progress requires numerical apparatus data, hadronic matching, or UV matching."
+}
