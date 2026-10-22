@@ -68,10 +68,11 @@ for(const witness of [
 }
 
 assert.deepEqual(evidence.closedResponses,["deltaA"]);
-assert.equal(evidence.remainingResponses.length,4);
+assert.equal(evidence.remainingResponses.length,2);
 
 console.log("Spin(2,3) flat constant axial mixed bubble: PASS");
 console.log("  de Donder vertex contractions: exact");
 console.log("  seagulls and polynomial bubble terms: scaleless");
 console.log("  completed reduced flat response: deltaA");
-console.log("  remaining responses: deltaB, deltaZ, deltaXiR, deltaXiRic");
+console.log("  subsequent flat derivative closure: deltaB and deltaZ");
+console.log("  remaining responses: deltaXiR, deltaXiRic");

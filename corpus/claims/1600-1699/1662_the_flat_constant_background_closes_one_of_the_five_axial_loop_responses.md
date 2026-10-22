@@ -167,16 +167,15 @@ constant-background projection.  No tensor-torsion insertion survives at
 this source order when \(\bar X=0\), and the trace channel is already included
 through exact elimination.
 
-The remaining response vector is
+At this checkpoint the remaining response vector was
 
 \[
 (\delta B,\delta Z,\delta\xi_R,\delta\xi_{\rm Ric}).
 \]
 
-Those four entries require nonconstant and/or curved backgrounds.  Their
-calculation cannot reuse the constant-background bubble because derivatives
-of the background-dependent Schur coefficients and curvature endomorphisms
-enter at the same order.
+Claims 1663--1665 subsequently close \((\delta B,\delta Z)\) by using a
+nonconstant flat background.  The two curvature entries still require curved
+backgrounds and cannot be recovered from the constant-background bubble.
 
 ## Reproduction
 
