@@ -1,0 +1,25 @@
+{
+  "schema": "spin23.t132-fourier-determinant-insertion/1",
+  "date": "2026-10-23",
+  "status": "complete intrinsic-Fourier determinant integrand; pole projection in progress",
+  "engine": "vectorized tau/x/y Fourier jet with complex derivative phases and simultaneous 34-by-34 Hessian extraction",
+  "witness": {
+    "loopMomentum": [2, 3, 5, 7],
+    "sourceMomentum": [1, 0, 0, 0],
+    "parameters": {"kappa": 1, "a1": 2, "bX": 1},
+    "H1Rank": 30,
+    "H2Rank": 7,
+    "reverseVertexHermiticityResidual": 0.0,
+    "seagull": -0.6379310344827596,
+    "bubble": -2.2217272513477755,
+    "total": -2.859658285830535
+  },
+  "projectionDiscipline": [
+    "symmetrize q and -q before the radial expansion",
+    "fit only even powers of inverse loop radius",
+    "use q=1/2 and q=1/4 Richardson extrapolation to remove q^4 contamination from the q^2 response",
+    "perform the four-dimensional angular cubature only after the local q^2/r^4 coefficient is isolated"
+  ],
+  "rejectedShortcut": "the real-exponential witness is a noncancellation diagnostic only; its number is not the Euclidean Fourier pole integrand",
+  "nextCalculation": "stabilize the radial coefficient on the symmetry orbits, determine the required angular polynomial degree, and complete the S3 average"
+}
