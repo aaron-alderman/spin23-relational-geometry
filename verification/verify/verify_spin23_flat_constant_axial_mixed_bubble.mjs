@@ -23,7 +23,7 @@ const massTensor=(p,alpha,A)=>Array.from({length:p.length},(_,mu)=>
   )/2));
 
 const kineticTensor=(p,k,alpha,bX)=>Array.from({length:p.length},(_,mu)=>
-  Array.from({length:p.length},(_,nu)=>bX*k[alpha]*(
+  Array.from({length:p.length},(_,nu)=>-bX*k[alpha]*(
     k[mu]*p[nu]+k[nu]*p[mu]-dot(k,p)*(mu===nu?1:0)
   )/2));
 
@@ -42,14 +42,13 @@ for(const witness of [
   const VA0=massTensor(witness.p,0,witness.A);
   const VX0=kineticTensor(witness.p,k,0,witness.bX);
   const combined=add(VA0,VX0);
-  const predicted=(witness.bX*witness.q**2-witness.A)**2*p2/2;
+  const predicted=(witness.A+witness.bX*witness.q**2)**2*p2/2;
   assert.ok(Math.abs(deDonderInner(combined,combined)-predicted)<1e-10);
 
   const x=witness.q**2;
-  const bracket=4*witness.A+witness.bX*x
-    -4*witness.A*witness.bX*x/(witness.A+witness.bX*x);
+  const bracket=4*witness.A+witness.bX*x;
   const original=3*witness.A
-    +(witness.bX*x-witness.A)**2/(witness.A+witness.bX*x);
+    +(witness.A+witness.bX*x)**2/(witness.A+witness.bX*x);
   assert.ok(Math.abs(bracket-original)<1e-12);
 }
 
@@ -59,11 +58,11 @@ for(const witness of [
 ]){
   const Ct=witness.Ct??(-2*(witness.a1+1)/(3*witness.kappa));
   const pure=-(witness.A**2)/(36*witness.bX*Ct);
-  const mixed=-witness.kappa*witness.A**2/(2*witness.bX);
+  const mixed=0;
   const total=pure+mixed;
   if(witness.a1!==null){
-    const critical=witness.kappa*witness.A**2/(24*witness.bX)
-      *(1/(witness.a1+1)-12);
+    const critical=witness.kappa*witness.A**2
+      /(24*witness.bX*(witness.a1+1));
     assert.ok(Math.abs(total-critical)<1e-12);
   }
 }

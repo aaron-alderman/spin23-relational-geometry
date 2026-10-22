@@ -51,4 +51,5 @@ console.log("Spin(2,3) constant axial-background pole: PASS");
 console.log("  exact rational kinetic resummation: verified");
 console.log("  determinant: one scalar factor plus three ultralocal factors");
 console.log("  pure-axial mass pole: -A^2/(36*pi^2*epsilon*bX*Ct)");
-console.log("  remaining: mixed metric-axial and derivative/curvature responses");
+console.log("  subsequent mixed metric-axial constant-background pole: zero");
+console.log("  remaining: derivative/curvature responses");

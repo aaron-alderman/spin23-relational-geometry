@@ -126,8 +126,8 @@ action.  At \(\bar X=0\), the tensor-torsion channel has no quadratic
 background-source insertion, while trace torsion has already been eliminated
 exactly.
 
-The remaining operation is now sharply delimited: combine these vertices
-with the packet-normalized Einstein graviton and gauge-mode propagators and
+The remaining operation was sharply delimited: combine these vertices with
+the packet-normalized Einstein graviton and gauge-mode propagators and
 evaluate
 
 \[
@@ -135,9 +135,12 @@ evaluate
 -{1\over4}\operatorname{Tr}(G_BH_{B,1}G_BH_{B,1}).
 \]
 
-That trace fixes the metric contribution needed to complete the flat
-constant-background \(\delta A\).  Nonconstant curved backgrounds remain
-necessary for the other four response coefficients.
+Claim 1662 performs that trace.  Opposite loop momenta make the mass and
+harmonic-gauge vertices combine into \(A+b_Xk^2\), cancelling the
+longitudinal axial propagator and leaving only scaleless integrals.  Hence
+the constant-background metric contribution to \(\delta A\) is zero.
+Nonconstant curved backgrounds remain necessary for the other four response
+coefficients.
 
 ## Reproduction
 

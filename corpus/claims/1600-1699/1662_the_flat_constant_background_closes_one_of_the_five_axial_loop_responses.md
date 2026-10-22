@@ -18,8 +18,10 @@ metric seagull is a massless one-propagator tadpole and vanishes in
 dimensional regularization.  Ghost, ordinary-Jacobian and second-class
 measure poles are already zero under axial source differentiation.
 
-The remaining bubble can be evaluated exactly.  Combining it with the
-pure-axial determinant closes the flat mass response \(\delta A\), the first
+The remaining bubble can be evaluated exactly.  The mass and harmonic-gauge
+vertices combine into the inverse longitudinal axial kernel, so its
+propagator cancels and the bubble is scaleless.  The pure-axial determinant
+therefore already gives the complete flat response \(\delta A\), the first
 of the five quadratic axial loop responses.
 
 ## Propagators and vertices
@@ -66,7 +68,7 @@ The source-linear mixed vertex is \(V=V_A+V_X\), with
 
 \[
 (V_X)_{\mu\nu,\alpha}
-={b_X\over2}k_\alpha\left[
+=-{b_X\over2}k_\alpha\left[
 k_\mu\bar p_\nu+k_\nu\bar p_\mu
 -(k\cdot\bar p)\delta_{\mu\nu}
 \right].
@@ -84,12 +86,13 @@ each transverse axial component,
 V_APV_A={A^2\bar p^2\over2}.
 \]
 
-For the longitudinal component the two vertices are antiparallel in
+For the longitudinal component, the two quantum legs carry opposite loop
+momenta.  The two vertices consequently have the same sign in
 symmetric-tensor space, giving
 
 \[
 (V_A+V_X)P(V_A+V_X)
-={(b_Xk^2-A)^2\bar p^2\over2}.
+={(A+b_Xk^2)^2\bar p^2\over2}.
 \]
 
 Consequently, before integration,
@@ -98,15 +101,15 @@ Consequently, before integration,
 \operatorname{tr}(G_hVG_sV^\dagger)
 ={4\kappa\bar p^2\over2k^2}
 \left[
-A(d-1)+{(b_Xk^2-A)^2\over A+b_Xk^2}
+A(d-1)+{(A+b_Xk^2)^2\over A+b_Xk^2}
 \right].
 \]
 
-Polynomial division separates this into scaleless terms plus
+The longitudinal denominator cancels exactly, leaving
 
 \[
-\left.\operatorname{tr}(G_hVG_sV^\dagger)\right|_{\rm massive}
-=-{8\kappa A b_X\bar p^2\over A+b_Xk^2}.
+\operatorname{tr}(G_hVG_sV^\dagger)
+={4\kappa\bar p^2\over2k^2}(Ad+b_Xk^2).
 \]
 
 Because the off-diagonal block occurs twice in the Hessian trace, its
@@ -116,27 +119,19 @@ quadratic one-loop coefficient is
 -{1\over2}\operatorname{Tr}(G_hVG_sV^\dagger).
 \]
 
-Using
-
-\[
-\int{d^{4-2\epsilon}k\over(2\pi)^{4-2\epsilon}}
-{1\over A+b_Xk^2}
-\bigg|_{\rm pole}
-=-{A\over16\pi^2\epsilon b_X^2},
-\]
-
-the raw effective-action pole is
+Both remaining integrals, \(\int_k1/k^2\) and \(\int_k1\), are scaleless in
+dimensional regularization.  Hence
 
 \[
 {\Gamma^{(1)}_{h-p,\rm pole}\over\int d^4x}
-=-{\kappa A^2\over4\pi^2\epsilon b_X}\bar p^2.
+=0.
 \]
 
 Therefore
 
 \[
 \boxed{
-\delta A_{h-p}=-{\kappa A^2\over2\pi^2\epsilon b_X}.
+\delta A_{h-p}=0.
 }
 \]
 
@@ -147,8 +142,7 @@ Adding the pure-axial result of claim 1660 gives
 \[
 \boxed{
 \delta A_{\rm red,flat}
-=-{A^2\over36\pi^2\epsilon b_XC_t}
--{\kappa A^2\over2\pi^2\epsilon b_X}.
+=-{A^2\over36\pi^2\epsilon b_XC_t}.
 }
 \]
 
@@ -158,8 +152,7 @@ On the critical surface
 \[
 \boxed{
 \delta A_{\rm red,flat}
-={\kappa A^2\over24\pi^2\epsilon b_X}
-\left({1\over a_1+1}-12\right).
+={\kappa A^2\over24\pi^2\epsilon b_X(a_1+1)}.
 }
 \]
 

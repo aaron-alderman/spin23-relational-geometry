@@ -82,4 +82,5 @@ console.log("Spin(2,3) constant axial metric vertices: PASS");
 console.log("  exponential-coframe mass Hessian: verified");
 console.log("  divergence mixing: exactly proportional to harmonic gauge function");
 console.log("  transverse-traceless algebraic mixing: nonzero witness");
-console.log("  next operation: packet-normalized graviton/gauge trace for deltaA");
+console.log("  subsequent packet-normalized graviton/gauge pole: zero");
+console.log("  next operation: external-momentum and curved response traces");

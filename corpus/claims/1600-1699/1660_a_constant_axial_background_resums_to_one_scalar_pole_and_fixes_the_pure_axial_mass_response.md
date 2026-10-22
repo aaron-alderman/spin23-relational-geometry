@@ -98,9 +98,10 @@ The MS-bar counterterm has the opposite sign to the displayed raw pole.
 ## What this does and does not fix
 
 This is the complete one-loop mass response of the **pure reduced axial
-block** on a constant flat background.  It is not yet the full PGT value of
-\(\delta A\): mixed metric--axial fluctuations must be added before the
-five-response inverse can be applied.
+block** on a constant flat background.  Claim 1662 subsequently evaluates
+the only possible mixed metric--axial bubble and proves that it is scaleless
+in dimensional regularization.  The displayed pole is therefore also the
+complete trace-reduced flat \(\delta A\) response.
 
 For a general frozen jet, claim 1659 similarly reduces the determinant to
 one anisotropic scalar with kinetic tensor eigenvalues
@@ -125,12 +126,12 @@ response.
 
 ## Exhaustion boundary
 
-All pure-axial information obtainable from an exactly constant background
-has now been extracted.  Further determination of
-\((\delta B,\delta Z,\delta\xi_R,\delta\xi_{\rm Ric})\), and completion of
-\(\delta A\), requires the covariant coupled metric--axial Hessian with
-nonconstant and curved source backgrounds.  Freezing coefficients or setting
-\(D\bar p=0\) cannot supply those four responses.
+All information obtainable from an exactly constant flat background has now
+been extracted.  Further determination of
+\((\delta B,\delta Z,\delta\xi_R,\delta\xi_{\rm Ric})\) requires the
+covariant coupled metric--axial Hessian with nonconstant and curved source
+backgrounds.  Freezing coefficients or setting \(D\bar p=0\) cannot supply
+those four responses.
 
 ## Reproduction
 
