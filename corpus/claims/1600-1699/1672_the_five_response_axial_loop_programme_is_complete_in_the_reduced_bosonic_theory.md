@@ -1,10 +1,18 @@
 # The Five-Response Axial Loop Programme Is Complete in the Reduced Bosonic Theory
 
+> **Completion note (claim 1673):** the primary Hamiltonian source lists all
+> nonzero brackets and proves that the complete massive-branch
+> Faddeev--Senjanovic determinant is ultralocal for general field values, not
+> only on the torsionless slice.  Its axial-source functional logarithm is
+> proportional to \(\delta^{(d)}(0)\) and vanishes in the frozen dimensional
+> scheme.  Claim 1673 therefore promotes the response vector below from
+> reduced-bosonic closure to the complete packet axial response.
+
 **Date:** 22 October 2026
 
 **Gates:** A1, A2, A4, A6, A7, A8 and A11
 
-**Status:** terminal reduced-bosonic response-vector closure
+**Status:** complete packet one-loop quadratic axial-response closure
 
 **Depends on:** [the complete flat response](1665_the_mixed_polarization_closes_both_flat_derivative_responses.md), [the pure-axial curvature response](1666_the_minimal_scalar_heat_kernel_fixes_the_pure_axial_curvature_response.md), and [the complete mixed curvature response](1671_the_off_shell_product_heat_kernel_closes_both_mixed_curvature_responses.md)
 
@@ -83,22 +91,20 @@ an all-orders protection theorem.
 
 ## Terminal boundary
 
-There is no remaining quadratic axial response to compute in the reduced
-bosonic Lagrangian theory.  The next unresolved quantum object belongs to a
-different layer:
+There is no remaining quadratic axial response to compute in the packet.
+Claim 1673 proves that the complete 34-constraint Faddeev--Senjanovic
+determinant is ultralocal throughout the connected massive branch and has no
+dimensional-regularization logarithmic pole.  It therefore cannot alter any
+entry above.
 
-\[
-\Gamma_{\rm SC}^{(1)}
-={1\over2}\operatorname{Tr}
-\log\{\chi_A,\chi_B\}_{\rm complete}.
-\]
-
-The packet still lacks the complete field-dependent bracket operator for
-all 34 second-class constraints.  Consequently the response vector above
-must not be promoted to the complete off-shell critical-PGT beta functional
-unless that determinant is supplied or an equivalent covariant BV/BFV
-conversion is proved.  Further manipulation of the existing reduced
-Hessian cannot reconstruct this independent measure input.
+The next unresolved quantum object belongs to a broader operator layer: the
+unquotiented beta functional for non-axial torsion and curvature invariants.
+The five coefficients above are projections of that functional, not a
+replacement for it.  In particular, converting the curvature--axial
+responses into the eight normal coordinates of claim 1639 requires the
+explicit Cartan-invariant expansion and its topological, BRST and
+field-redefinition quotient.  Further axial-source projections cannot supply
+that missing coupling Jacobian.
 
 ## Reproduction
 

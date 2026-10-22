@@ -1,5 +1,13 @@
 # The Known Normal Beta Data Have Rank Two, and the Exact Critical-PGT Loop Is the Irreducible Missing Calculation
 
+> **Update (claims 1672--1674):** the complete packet quadratic axial
+> response is now known and proves nonclosure through nonzero \(RS^2\) and
+> \(R_{\mu\nu}S^\mu S^\nu\) poles.  Its five-dimensional response-design
+> rank is not the rank of the eight-coordinate normal map.  Until the six
+> covariant curvature invariants are expanded and quotiented in the packet
+> conventions, the embedded displayed-normal information rank below remains
+> two; claim 1674 gives the updated boundary.
+
 **Date:** 22 October 2026
 
 **Gates:** A1, A2, A4, A6, A7, A8 and A11

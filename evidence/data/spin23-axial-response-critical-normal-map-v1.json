@@ -1,0 +1,41 @@
+{
+  "schema": "spin23.axial-response-critical-normal-map/1",
+  "date": "2026-10-22",
+  "status": "exact packet-level departure result with explicit normal-rank boundary",
+  "admittedBranch": {
+    "conditions": ["kappa>0", "A>0", "a1>0", "bX>0"],
+    "Amap": "A=(a0-a1)/ell^2",
+    "Bmap": "B=-b3/kappa"
+  },
+  "completeAxialResponse": {
+    "deltaA": "+kappa*A^2/(24*pi^2*epsilon*bX*(a1+1))",
+    "deltaB": "-(kappa*A/(24*pi^2*epsilon))*(6+1/(a1+1))",
+    "deltaZ": "0",
+    "deltaXiR": "-(kappa*A/(pi^2*epsilon))*(7/96+1/(144*(a1+1)))",
+    "deltaXiRic": "+3*kappa*A/(8*pi^2*epsilon)"
+  },
+  "targetAxialZeros": ["Z", "xiR", "xiRic"],
+  "strictDeparture": {
+    "nonzeroOnAdmittedBranch": ["deltaXiR", "deltaXiRic"],
+    "generatedOperators": ["R*S^2", "Ricci_mn*S^m*S^n"],
+    "decision": "the sparse critical action is not closed in the complete packet quadratic axial sector"
+  },
+  "rankSeparation": {
+    "axialResponseDesignRank": 5,
+    "displayedNormalDimension": 8,
+    "currentlyEmbeddedNormalInformationRank": 2,
+    "normalRankUpgrade": "not justified without the covariant curvature-invariant expansion and quotient"
+  },
+  "mapClassification": {
+    "A": "one a0-a1 mass combination; insufficient for the two torsion normals",
+    "B": "retained cX-axis coupling and therefore tangent",
+    "Z": "computed zero response at this order, but no all-order protection",
+    "xiR_xiRic": "nonzero quadratic-axial projections of the covariant curvature beta vector"
+  },
+  "missingEmbedding": [
+    "quadratic-axial expansion of all six parity-even Riemann-Cartan curvature squares",
+    "joint map to B, Z, xiR and xiRic",
+    "torsionless and other irreducible-torsion projections",
+    "topological, BRST-exact and field-redefinition quotient"
+  ]
+}

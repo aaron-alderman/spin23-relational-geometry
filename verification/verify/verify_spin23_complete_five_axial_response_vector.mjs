@@ -40,10 +40,12 @@ close(-E/12-(P-E)/4,mixedXiR);
 assert.equal(evidence.complete.deltaZ,"0");
 assert.equal(evidence.remainingReducedBosonicQuadraticAxialResponses,0);
 assert.equal(evidence.countertermSign,"opposite");
+assert.match(evidence.packetAxialResponseStatus,/complete/);
 
 console.log("Spin(2,3) complete five-response axial vector: PASS");
 console.log("  deltaA, deltaB, deltaZ integrated");
 console.log("  deltaXiR, deltaXiRic integrated");
 console.log("  Einstein and product curvature projections invert exactly");
 console.log("  remaining reduced-bosonic quadratic axial responses: zero");
-console.log("  external boundary: complete second-class measure");
+console.log("  packet axial response: complete");
+console.log("  external boundary: non-axial unquotiented beta functional");
