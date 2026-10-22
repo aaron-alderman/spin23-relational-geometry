@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+import assert from "node:assert/strict";import{readFile}from"node:fs/promises";const d=JSON.parse(await readFile(new URL("../../evidence/data/spin23-response-packet-torsion-convention-bridge-v1.json",import.meta.url),"utf8"));
+const eps=(a,b,c,e)=>{const x=[a,b,c,e];if(new Set(x).size<4)return 0;let n=0;for(let i=0;i<4;i++)for(let j=i+1;j<4;j++)if(x[i]>x[j])n++;return n%2?-1:1},ix=(a,b,c)=>(a*4+b)*4+c;
+const response=[];for(let a=0;a<4;a++)for(let c=a+1;c<4;c++)for(let b=0;b<4;b++){const S=Array(64).fill(0);S[ix(a,b,c)]=1;S[ix(c,b,a)]=-1;response.push(S)}assert.equal(response.length,24);
+const map=S=>{const U=Array(64).fill(0);for(let a=0;a<4;a++)for(let b=0;b<4;b++)for(let c=0;c<4;c++)U[ix(a,b,c)]=S[ix(a,c,b)];return U};
+for(const S of response){const U=map(S);for(let a=0;a<4;a++)for(let b=0;b<4;b++)for(let c=0;c<4;c++){assert.ok(Math.abs(U[ix(a,b,c)]+U[ix(b,a,c)])<1e-12);assert.equal(S[ix(a,b,c)],U[ix(a,c,b)])}assert.equal(S.reduce((s,x)=>s+x*x,0),U.reduce((s,x)=>s+x*x,0))}
+const S=Array(64).fill(0);S[ix(1,3,2)]=1;S[ix(2,3,1)]=-1;const U=map(S),v=Array(4).fill(0),s=Array(4).fill(0);for(let b=0;b<4;b++)for(let a=0;a<4;a++)v[b]+=U[ix(a,b,a)];for(let e=0;e<4;e++)for(let a=0;a<4;a++)for(let b=0;b<4;b++)for(let c=0;c<4;c++)s[e]+=eps(e,a,b,c)*U[ix(a,b,c)]/6;
+const V=Array(64).fill(0),A=Array(64).fill(0);for(let a=0;a<4;a++)for(let b=0;b<4;b++)for(let c=0;c<4;c++){V[ix(a,b,c)]=((a===c?v[b]:0)-(b===c?v[a]:0))/3;for(let e=0;e<4;e++)A[ix(a,b,c)]-=eps(a,b,c,e)*s[e]}const Q=U.map((x,i)=>x-V[i]-A[i]),norm=x=>x.reduce((z,y)=>z+y*y,0),close=(x,y)=>Math.abs(x-y)<1e-12;
+assert.ok(close(norm(V),0));assert.ok(close(norm(A),2/3));assert.ok(close(norm(Q),4/3));assert.ok(close(norm(U),2));assert.ok(close(norm(Q)-norm(A)/2,1));assert.equal(d.dimension,24);assert.equal(d.isometric,true);
+console.log("Spin(2,3) response/packet torsion convention bridge: PASS");console.log("  S_abc=U_acb is an isometric 24-dimensional bijection");console.log("  t132: trace 0, axial norm 2/3, tensor norm 4/3");console.log("  critical weighted norm: a1");
