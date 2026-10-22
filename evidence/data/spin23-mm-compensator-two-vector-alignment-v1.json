@@ -1,0 +1,73 @@
+{
+  "schema": "spin23-mm-compensator-alignment/1",
+  "title": "The corrected two-vector carrier can select Lorentz symmetry only under a rank-one alignment condition",
+  "claim": {
+    "status": "constructive-with-alignment-falsifier",
+    "statement": "One timelike SO(2,3) vector-5 can act as a MacDowell-Mansouri compensator with SO(1,3) stabilizer, but two generic independent vector-5 expectation values overbreak the symmetry; the corrected 2x5 carrier must align to rank one in multiplicity space.",
+    "significance": "This supplies a concrete route from the programme's carrier representation to an Einstein-Cartan-type action, while converting the second vector copy into a sharp vacuum-alignment constraint."
+  },
+  "results": {
+    "singleTimelikeVector": {
+      "norm": -1,
+      "orbitRank": 4,
+      "stabilizerDimension": 6,
+      "stabilizerKillingSignature": {
+        "negative": 3,
+        "zero": 0,
+        "positive": 3
+      },
+      "identifiedAlgebra": "so(1,3)"
+    },
+    "parallelTwoVectorPair": {
+      "orbitRank": 4,
+      "stabilizerDimension": 6
+    },
+    "independentTwoVectorPair": {
+      "orbitRank": 7,
+      "stabilizerDimension": 3,
+      "stabilizerKillingSignature": {
+        "negative": 1,
+        "zero": 0,
+        "positive": 2
+      }
+    },
+    "genericPairs": {
+      "samples": 64,
+      "observedStabilizerDimensions": [
+        3
+      ]
+    },
+    "alignmentCondition": "The two vector-5 VEVs must be parallel as SO(2,3) vectors, so the 2x5 expectation matrix has multiplicity-space rank one."
+  },
+  "macDowellMansouri": {
+    "action": "S proportional to integral epsilon_{ABCDE} V^E F^{AB} wedge F^{CD}",
+    "gaugeFixing": "V^A=ell delta^A_4",
+    "curvatureSplit": "F^{ab}=R^{ab}+ell^{-2} e^a wedge e^b; F^{a4}=ell^{-1}T^a",
+    "expansion": [
+      "epsilon R wedge R: Euler/topological",
+      "2 ell^-2 epsilon R wedge e wedge e: Einstein-Hilbert",
+      "ell^-4 epsilon e wedge e wedge e wedge e: cosmological"
+    ],
+    "independentIngredient": "an adjoint-valued one-form connection"
+  },
+  "interpretation": [
+    "The vector-5 carrier correction is not merely bookkeeping: it contains the correct compensator representation for selecting Lorentz symmetry.",
+    "The second copy can be a radial/flavour partner only if the potential aligns it with the first; a generic two-vector vacuum leaves a three-dimensional subgroup.",
+    "This route explains how Spin(2,3) geometry could organize gravity without identifying the finite adjoint zero-form with the gauge connection.",
+    "The cosmological and Einstein-Hilbert coefficients are linked by the AdS scale in the minimal action."
+  ],
+  "falsifiers": [
+    "A proposed vacuum with two nonparallel vector-5 VEVs fails the six-dimensional Lorentz-stabilizer requirement.",
+    "A viable model must derive, not assume, timelike nonzero norm and rank-one alignment.",
+    "The compensator does not supply the independent one-form connection or its quantum dynamics."
+  ],
+  "nextBranches": [
+    "Project candidate-48 vacuum data into the two vector-5 multiplicity space and test rank-one alignment directly.",
+    "Construct a minimal invariant potential for two SO(2,3) vectors whose stable minima are timelike and parallel.",
+    "Couple the aligned compensator to an independent connection and audit the signs of Einstein-Hilbert and cosmological terms."
+  ],
+  "evidence": {
+    "localScript": "verification/analyze/analyze_spin23_mm_compensator_alignment.py",
+    "protocol": "spin23-mm-compensator-alignment/1"
+  }
+}

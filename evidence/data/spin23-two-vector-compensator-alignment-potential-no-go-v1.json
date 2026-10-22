@@ -1,0 +1,72 @@
+{
+  "schema": "spin23-two-vector-alignment-potential/1",
+  "title": "Simple Spin(2,3)-invariant Gram quartics cannot stably align the two vector compensators",
+  "claim": {
+    "status": "quartic-alignment-no-go",
+    "statement": "For two vector-5 fields in signature (2,3), neither sign of the basic Gram-determinant quartic yields a globally bounded, locally stable parallel timelike compensator vacuum.",
+    "implication": "Deriving the v653 rank-one alignment requires structure beyond a simple polynomial of the SO(2,3) Gram matrix."
+  },
+  "setup": {
+    "potential": "lambda[(V1^2+v^2)^2+(V2^2+v^2)^2] +/- kappa[(V1.V2)^2-V1^2 V2^2]",
+    "parameters": {
+      "lambda": 1,
+      "kappa": 1,
+      "vSquared": 1
+    },
+    "alignedPoint": "V1=V2=unit vector along one timelike axis"
+  },
+  "results": {
+    "boundedSign": {
+      "quartic": "+(V1.V2)^2-V1^2V2^2",
+      "alignedNegativeModes": 1,
+      "alignedZeroModes": 4,
+      "alignedPotential": 0,
+      "orthogonalTwoTimelikePotential": -2,
+      "sampledHomogeneousQuarticMinimum": 0.0001443185869154258
+    },
+    "reversedSign": {
+      "quartic": "+V1^2V2^2-(V1.V2)^2",
+      "alignedNegativeModes": 3,
+      "alignedZeroModes": 4,
+      "orthogonalTwoTimelikePotential": 6,
+      "nullPairRunaway": [
+        {
+          "amplitude": 1,
+          "potential": -2
+        },
+        {
+          "amplitude": 2,
+          "potential": -62
+        },
+        {
+          "amplitude": 4,
+          "potential": -1022
+        },
+        {
+          "amplitude": 8,
+          "potential": -16382
+        }
+      ]
+    }
+  },
+  "interpretation": [
+    "The second timelike direction makes the bounded Gram sign prefer an independent timelike component over parallel alignment.",
+    "The reversed sign is indefinite along spacelike/relative directions and unbounded along pairs of null vectors with growing mutual product.",
+    "The four near-zero Hessian modes are the expected common group-orbit directions, but additional negative modes invalidate the vacuum.",
+    "A positive Cartan-involution metric, constrained compensator, auxiliary field, or sequential compact-to-noncompact continuation may be needed."
+  ],
+  "falsifiers": [
+    "This no-go covers the displayed renormalizable Gram-potential family, not arbitrary higher-order or constrained potentials.",
+    "Additional fields can alter the stability matrix.",
+    "A nonpolynomial domain restriction to a selected causal sheet can change global boundedness but must itself be derived."
+  ],
+  "nextBranches": [
+    "Use the programme's constructed Cartan involution to define a positive alignment norm and quantify the explicit/spontaneous symmetry cost.",
+    "Test a constrained one-compensator model where the second vector copy is projected out or made massive without a VEV.",
+    "Search for sequential SO(5) alignment before analytic continuation to SO(2,3)."
+  ],
+  "evidence": {
+    "localScript": "verification/analyze/analyze_spin23_two_vector_alignment_potential.py",
+    "protocol": "spin23-two-vector-alignment-potential/1"
+  }
+}

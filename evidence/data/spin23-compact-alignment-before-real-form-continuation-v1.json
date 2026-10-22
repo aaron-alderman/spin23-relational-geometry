@@ -1,0 +1,63 @@
+{
+  "schema": "spin23-compact-alignment-then-continuation/1",
+  "title": "Compact SO(5) dynamics stably aligns the two vector copies, but continuation does not preserve the potential symmetry",
+  "claim": {
+    "status": "viable-staged-prescription-with-cost",
+    "statement": "A simple SO(5)-invariant Gram potential stably selects a rank-one two-vector vacuum with SO(4) stabilizer, and the selected algebraic configuration can be continued to a timelike Spin(2,3) compensator with SO(1,3) stabilizer.",
+    "cost": "The Euclidean positivity responsible for stability is not Spin(2,3)-invariant; the Cartan involution or real-form selection must therefore enter as physical structure."
+  },
+  "compactToy": {
+    "potential": "lambda[(V1^2-v^2)^2+(V2^2-v^2)^2]+kappa[V1^2 V2^2-(V1.V2)^2]",
+    "parameters": {
+      "lambda": 1,
+      "kappa": 1,
+      "vSquared": 1
+    },
+    "alignedPotential": 0,
+    "hessianSignature": {
+      "negative": 0,
+      "zero": 4,
+      "positive": 6
+    },
+    "positiveEigenvalues": [
+      4,
+      4,
+      4,
+      4,
+      8,
+      8
+    ],
+    "sampledGramDeterminantMinimum": 0.0006506221128160013,
+    "vacuum": "parallel or antiparallel unit vectors",
+    "stabilizer": "SO(4)"
+  },
+  "continuation": {
+    "retained": [
+      "rank-one multiplicity alignment",
+      "six-dimensional stabilizer",
+      "vector compensator role"
+    ],
+    "continuedStabilizer": "SO(1,3)",
+    "lost": "Cauchy-Schwarz positivity of the Euclidean Gram determinant",
+    "warning": "Replacing the Euclidean metric in the potential by the invariant (2,3) metric reproduces the v656 negative modes and null runaway."
+  },
+  "interpretation": [
+    "Vacuum selection in the compact parent followed by real-form continuation is much better behaved than trying to minimize a noncompact invariant potential directly.",
+    "This gives the programme a concrete staged research route: compact spectral dynamics first, geometric real-form interpretation second.",
+    "The route is not neutral: it introduces a preferred Cartan involution/positive inner product whose origin and observability must be explained."
+  ],
+  "falsifiers": [
+    "A fully Spin(2,3)-invariant bounded potential that stably yields the same aligned vacuum would remove the need for compact-first selection.",
+    "If the continued kinetic/action signs are inconsistent, algebraic continuation of the vacuum is insufficient.",
+    "Quantum corrections could destabilize the compact alignment and remain untested."
+  ],
+  "nextBranches": [
+    "Use the existing carrier Cartan involution to write the positive alignment norm intrinsically and identify its residual symmetry.",
+    "Audit whether the continued MacDowell-Mansouri action has the correct Einstein-Hilbert sign for each choice of timelike compensator.",
+    "Formulate the compact-to-real continuation as a phase-selection rule with explicit order parameters."
+  ],
+  "evidence": {
+    "localScript": "verification/compare/compare_spin23_compact_alignment_continuation.py",
+    "protocol": "spin23-compact-alignment-then-continuation/1"
+  }
+}

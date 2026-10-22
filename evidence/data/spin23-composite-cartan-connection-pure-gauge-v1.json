@@ -1,0 +1,44 @@
+{
+  "schema": "spin23-composite-cartan-connection/1",
+  "title": "A scalar order parameter yields a Cartan one-form, but the direct composite is pure gauge",
+  "claim": {
+    "status": "constructive-no-go",
+    "statement": "For an SO(2,3) order parameter g(x), the composite A=g^{-1}dg supplies Lorentz-connection and vierbein components but has identically zero Cartan curvature by the Maurer-Cartan equation.",
+    "implication": "Form-degree transmutation is possible kinematically, yet independent gravitational dynamics requires an additional adjoint one-form sector or a nontrivial construction beyond the exact Maurer-Cartan form."
+  },
+  "toy": {
+    "chart": "g(x,y)=exp(x P0) exp(y P1)",
+    "point": {
+      "x": 0.37,
+      "y": -0.22
+    },
+    "orderParameterNormDeviation": 4.440892098500626e-16,
+    "connectionProjectionResidual": 3.2009291313835888e-16,
+    "derivativeLorentzCoefficient": -1.0242977642749296,
+    "bracketLorentzCoefficient": 1.0242977642749296,
+    "derivativeTranslationCoefficient": 0.22177896631245125,
+    "bracketTranslationCoefficient": -0.22177896631245125,
+    "fullCurvatureFrobeniusNorm": 0,
+    "torsionTranslationNorm": 0
+  },
+  "interpretation": [
+    "The coset part of A behaves as a vierbein and the stabilizer part as a spin connection.",
+    "Even in a noncommuting chart with nonzero derivative and bracket pieces, Maurer-Cartan cancellation makes the full connection flat.",
+    "This realizes relational geometry but not independent gravitational waves.",
+    "The minimal escape is A=g^{-1}dg+K, for which F=D_(g^{-1}dg)K+K wedge K; K must have its own transformation law and action."
+  ],
+  "falsifiers": [
+    "A nonzero curvature for a smooth exact Maurer-Cartan form would contradict the group identity; the explicit residual is zero.",
+    "Global topology, singular defects, or patching can give nontrivial holonomy despite local flatness and are not excluded.",
+    "Composite connections involving additional fields or nonlocal operations are not ruled out."
+  ],
+  "nextBranches": [
+    "Give K a Yang-Mills/MacDowell-Mansouri-type quadratic action and count its linearized modes.",
+    "Test whether candidate-48 descendants can act as a symmetry-breaking compensator selecting the Lorentz subgroup in such an action.",
+    "Explore defect or holonomy sectors where a locally flat composite connection has global observables."
+  ],
+  "evidence": {
+    "localScript": "verification/verify/verify_spin23_composite_cartan_connection.py",
+    "protocol": "spin23-composite-cartan-connection/1"
+  }
+}

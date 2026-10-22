@@ -1,0 +1,56 @@
+{
+  "schema": "spin23-constrained-compensator-quotient/1",
+  "title": "One constrained vector is a pure gauge compensator; the second vector copy leaves relative physical data",
+  "claim": {
+    "status": "viable-minimal-prescription",
+    "statement": "A single normalized SO(2,3) vector compensator has no local physical scalar modes: its four constraint tangents coincide exactly with the four broken gauge directions. The corrected second vector copy is not automatically gauge-redundant and requires a separate multiplicity constraint.",
+    "significance": "This avoids the unstable noncompact alignment potential while preserving a concrete MacDowell-Mansouri/Stelle-West gravity route."
+  },
+  "results": {
+    "singleVector": {
+      "constraintTangentDimension": 4,
+      "gaugeOrbitRank": 4,
+      "stabilizerDimension": 6,
+      "principalCosines": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "physicalLocalModes": 0
+    },
+    "alignedPair": {
+      "constraintSurfaceDimension": 8,
+      "gaugeOrbitRank": 4,
+      "stabilizerDimension": 6,
+      "quotientDimension": 4
+    },
+    "genericPair": {
+      "constraintSurfaceDimension": 8,
+      "gaugeOrbitRank": 7,
+      "stabilizerDimension": 3,
+      "quotientDimension": 1
+    },
+    "survivingInvariant": "V1 dot V2"
+  },
+  "interpretation": [
+    "The norm constraint replaces radial potential stabilization, and unitary gauge removes all one-compensator Goldstone directions.",
+    "Two constrained vectors share the same gauge group, so their relative orientation cannot be completely gauged away.",
+    "Keeping Lorentz symmetry requires selecting one multiplicity combination as compensator and eliminating or algebraically aligning the orthogonal copy.",
+    "That multiplicity selection is new dynamical or constraint input not supplied by candidate 48."
+  ],
+  "falsifiers": [
+    "A hidden gauge symmetry acting on the two-copy multiplicity space could remove the relative modes and would modify the count.",
+    "If the second vector is not an independent field but only a representation multiplicity, a precise field construction may avoid the pair problem.",
+    "Quantum consistency of the constraint and gauge fixing remains untested."
+  ],
+  "nextBranches": [
+    "Search the corpus for an existing U(2) multiplicity gauge symmetry that could quotient the second vector copy.",
+    "Construct a Lagrange-multiplier constraint V2=c V1 and audit its gauge and constraint algebra.",
+    "Insert the single constrained compensator into the MacDowell-Mansouri action and verify linearized Einstein equations."
+  ],
+  "evidence": {
+    "localScript": "verification/analyze/analyze_spin23_constrained_compensator_quotient.py",
+    "protocol": "spin23-constrained-compensator-quotient/1"
+  }
+}

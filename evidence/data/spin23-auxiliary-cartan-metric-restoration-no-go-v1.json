@@ -1,0 +1,89 @@
+{
+  "schema": "spin23-auxiliary-cartan-metric-toy/1",
+  "title": "A dynamical positive Cartan metric selects a frame or runs to the noncompact boundary",
+  "claim": {
+    "status": "auxiliary-restoration-no-go-in-subtoy",
+    "statement": "Promoting the positive Cartan metric to an auxiliary field does not generically restore Lorentz symmetry after elimination: its noncompact orbit has no finite invariant average, timelike couplings select a frame, and null couplings can run to infinite rapidity.",
+    "scope": "Explicit SO(1,1) subgroup diagnostic inside SO(2,3)."
+  },
+  "results": {
+    "metricOrbit": "H(chi)=B(-chi)^T B(-chi), detH=1, eigenvalues exp(+/-2chi)",
+    "cutoffMeanTrace": [
+      {
+        "cutoff": 1,
+        "value": 3.6268604199365533
+      },
+      {
+        "cutoff": 2,
+        "value": 13.644958780496658
+      },
+      {
+        "cutoff": 3,
+        "value": 67.23772114055798
+      },
+      {
+        "cutoff": 4,
+        "value": 372.6197263204383
+      }
+    ],
+    "nullPositiveNorm": [
+      {
+        "rapidity": 0,
+        "value": 2
+      },
+      {
+        "rapidity": 1,
+        "value": 0.2706705664732252
+      },
+      {
+        "rapidity": 2,
+        "value": 0.03663127777747022
+      },
+      {
+        "rapidity": 4,
+        "value": 0.0006709252556902356
+      },
+      {
+        "rapidity": 8,
+        "value": 2.253800630569458e-7
+      }
+    ],
+    "timelikePositiveNorm": [
+      {
+        "rapidity": 0,
+        "value": 1
+      },
+      {
+        "rapidity": 1,
+        "value": 3.7621956910836314
+      },
+      {
+        "rapidity": 2,
+        "value": 27.308232836016487
+      },
+      {
+        "rapidity": 4,
+        "value": 1490.479161252178
+      }
+    ]
+  },
+  "interpretation": [
+    "The symmetric space of Cartan metrics is noncompact, so group averaging is not a normalizable symmetry-restoration mechanism.",
+    "A matter/compensator configuration can pin the auxiliary metric, but the resulting vacuum still carries a preferred Cartan frame.",
+    "Null configurations expose boundary runaways unless an additional stabilizing potential is added; such a potential itself selects structure."
+  ],
+  "falsifiers": [
+    "A fully gauge-redundant formulation with no Cartan-metric observables could evade the preferred-frame conclusion.",
+    "A compact quotient or contour prescription might regularize an average but would add nontrivial global input.",
+    "The SO(1,1) subtoy is a necessary diagnostic, not a full path-integral theorem for SO(2,3)."
+  ],
+  "nextBranches": [
+    "Treat the Cartan metric as gauge fixing rather than a physical field and identify BRST-invariant observables.",
+    "Explore single-compensator constrained formulations that avoid a positive metric entirely.",
+    "Test whether the programme's pseudo-unitary carrier metric can provide bounded response terms without selecting a spacetime Cartan frame."
+  ],
+  "evidence": {
+    "localScript": "verification/analyze/analyze_spin23_auxiliary_cartan_metric.py",
+    "protocol": "spin23-auxiliary-cartan-metric-toy/1"
+  }
+}

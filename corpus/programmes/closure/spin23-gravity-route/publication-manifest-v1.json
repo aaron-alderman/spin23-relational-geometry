@@ -1,0 +1,67 @@
+{
+  "schema": "spin23-gravity-route-publication/1",
+  "date": "2026-10-22",
+  "source": {
+    "kind": "sourcery-temple-lane",
+    "laneId": "task/claimipedia-spin23-minimal-physical-model-20261021",
+    "snapshotId": "0831f00a-274b-46ef-a769-212325db1119"
+  },
+  "disposition": {
+    "publishedEvidenceCount": 19,
+    "publishedCertificateCount": 9,
+    "scratchFilesCommitted": 0,
+    "policy": "Publish corrected structured evidence and standalone reproducible certificates; leave exploratory and superseded scratch dependency graphs untracked."
+  },
+  "evidence": {
+    "representationAndCompletion": [
+      "evidence/data/spin23-active-state-two-vector-irrep-correction-v1.json",
+      "evidence/data/spin23-original-seed-lorentz-sector-support-v1.json",
+      "evidence/data/spin23-ads-coset-descendant-map-surjectivity-v1.json",
+      "evidence/data/spin23-ads-unfolded-finite-module-dynamics-v1.json",
+      "evidence/data/spin23-spin2-weyl-tower-gap-v1.json"
+    ],
+    "candidate48Obstructions": [
+      "evidence/data/spin23-candidate48-vector-seed-hessian-obstruction-v1.json",
+      "evidence/data/spin23-candidate48-moduli-so4-orbit-no-go-v1.json",
+      "evidence/data/spin23-candidate48-residual-u1-vector-hessian-v1.json",
+      "evidence/data/spin23-candidate48-omitted-so5-response-repair-v1.json",
+      "evidence/data/spin23-candidate48-compensator-projection-no-go-v1.json",
+      "evidence/data/spin23-candidate48-moduli-compensator-no-go-v1.json",
+      "evidence/data/spin23-candidate48-moduli-gauge-quotient-vector-copy-v1.json"
+    ],
+    "gravityRoute": [
+      "evidence/data/spin23-composite-cartan-connection-pure-gauge-v1.json",
+      "evidence/data/spin23-mm-compensator-two-vector-alignment-v1.json",
+      "evidence/data/spin23-two-vector-compensator-alignment-potential-no-go-v1.json",
+      "evidence/data/spin23-compact-alignment-before-real-form-continuation-v1.json",
+      "evidence/data/spin23-cartan-metric-compensator-symmetry-intersection-v1.json",
+      "evidence/data/spin23-auxiliary-cartan-metric-restoration-no-go-v1.json",
+      "evidence/data/spin23-constrained-single-compensator-quotient-v1.json"
+    ]
+  },
+  "certificates": [
+    "verification/construct/construct_spin23_ads_unfolded_finite_modules.py",
+    "verification/analyze/analyze_spin23_spin2_weyl_tower_gap.py",
+    "verification/verify/verify_spin23_composite_cartan_connection.py",
+    "verification/analyze/analyze_spin23_mm_compensator_alignment.py",
+    "verification/analyze/analyze_spin23_two_vector_alignment_potential.py",
+    "verification/compare/compare_spin23_compact_alignment_continuation.py",
+    "verification/analyze/analyze_spin23_cartan_metric_compensator_intersection.py",
+    "verification/analyze/analyze_spin23_auxiliary_cartan_metric.py",
+    "verification/analyze/analyze_spin23_constrained_compensator_quotient.py"
+  ],
+  "verification": {
+    "interpreter": ".venv-alpaca/Scripts/python.exe",
+    "passed": 9,
+    "failed": 0,
+    "outputContract": "Each certificate emits one JSON document to stdout."
+  },
+  "supersession": {
+    "superseded": [
+      "active ten-dimensional carrier labelled as one adjoint 10",
+      "Lorentz multiplicities derived from that carrier misidentification",
+      "dimension-only identification of the finite adjoint 10 with the spin-2 Weyl tensor"
+    ],
+    "current": "The active carrier is two vector-5 copies; a viable gravity route additionally needs an independent adjoint one-form and a one-combination constrained compensator."
+  }
+}
