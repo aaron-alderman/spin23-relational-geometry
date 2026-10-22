@@ -69,16 +69,19 @@ node verification/verify/verify_spin23_worldwright_torsion_response_surface.mjs
 node verification/verify/verify_spin23_torsion_synthetic_likelihood.mjs
 node verification/verify/verify_spin23_torsion_empirical_calibration_source_audit.mjs
 node verification/verify/verify_spin23_torsion_fingerprint_parameter_closure.mjs
+node verification/verify/verify_spin23_torsion_finite_geometry_response.mjs
 node verification/verify/verify_spin23_worldwright_bridge_assurance_manifest.mjs
 ```
 
-The final command is the aggregate assurance entry point. It verifies SHA-256 pins for all five evidence/verifier pairs, executes every verifier, and checks that the chain still withholds detection, Spin(2,3) specificity, Worldwright empirical validation, policy authority and moral authority.
+The final command is the aggregate assurance entry point for the first five-stage chain. It verifies SHA-256 pins for all evidence/verifier pairs in that manifest, executes every listed verifier, and checks that the chain still withholds detection, Spin(2,3) specificity, Worldwright empirical validation, policy authority and moral authority. The finite-geometry result is independently executable and is to be added to the aggregate manifest after this tranche is hash-pinned.
 
 The machine-readable response surface is [spin23-worldwright-torsion-response-surface-v1.json](../../../evidence/data/spin23-worldwright-torsion-response-surface-v1.json).
 
 The synthetic calibration contract is [spin23-torsion-synthetic-likelihood-v1.json](../../../evidence/data/spin23-torsion-synthetic-likelihood-v1.json).
 
 The primary-source audit is [spin23-torsion-empirical-calibration-source-audit-v1.json](../../../evidence/data/spin23-torsion-empirical-calibration-source-audit-v1.json).
+
+The finite-volume response is [spin23-torsion-finite-geometry-response-v1.json](../../../evidence/data/spin23-torsion-finite-geometry-response-v1.json).
 
 ## Fingerprint closure
 
@@ -97,9 +100,15 @@ The executable closure gate is [spin23-torsion-fingerprint-parameter-closure-v1.
 
 The hash-pinned executable chain is [spin23-worldwright-bridge-assurance-manifest-v1.json](../../../evidence/data/spin23-worldwright-bridge-assurance-manifest-v1.json).
 
+## Finite geometry gate
+
+The point-source observable has now been integrated over two identical, uniformly polarized, axis-aligned cubes using deterministic product quadrature. The cubes remain non-overlapping, so the excluded contact term never enters. The fifteen-cell response covers three mediator masses and five source-size ratios, with independent order-14 and order-20 calculations agreeing to a maximum absolute difference of `2.06e-11`.
+
+The result identifies the regime in which apparatus geometry is scientifically consequential. At `m*d=4` and `a/d=0.75`, the volume-integrated radial response is `1.6703` times the center-point estimate and the transverse magnitude is `1.4539` times it. The closest polarized volume elements dominate a short-range interaction, and the finite geometry also shifts the radial/transverse anisotropy from `5.2` to `5.9739`. Therefore a real experimental recast needs the apparatus spin-density geometry or a bounded approximation error; center separation alone is insufficient.
+
 ## Next gates
 
-1. Add finite polarized source and detector geometries and integrate the tensor kernel over their spin densities.
+1. Replace the ideal uniform cubes with a published apparatus's actual polarized source and detector geometry.
 2. Recast published spin-dependent-force limits as a likelihood over mediator mass and coupling product.
 3. Derive or rule out a parent relation fixing `A`, `B` and `c_f`.
 4. Keep the physical likelihood, Worldwright calibration data and cross-domain analogy ledger as three separate evidence objects.

@@ -1,0 +1,75 @@
+{
+  "schema": "spin23.torsion-finite-geometry-response/1",
+  "date": "2026-10-23",
+  "status": "deterministic finite-volume extension of the separated tensor-Yukawa observable",
+  "sourceEvidence": {
+    "path": "evidence/data/spin23-worldwright-torsion-response-surface-v1.json",
+    "sha256": "8d0d7cff4cfd5c0dcd34d977411efc80feb4560551c44703673480222095a8c9"
+  },
+  "geometry": {
+    "source": "uniformly polarized cube",
+    "detector": "identical uniformly polarized cube",
+    "centerDisplacement": "d times the positive z unit vector",
+    "sideToCenterSeparation": [0, 0.1, 0.25, 0.5, 0.75],
+    "nonOverlapRule": "0 <= a/d < 1",
+    "polarizationOrientations": {
+      "radial": [0, 0, 1],
+      "transverse": [1, 0, 0]
+    },
+    "scope": "uniform spin density, unit polarization, identical axis-aligned cubes; contact term excluded because the volumes do not overlap"
+  },
+  "model": {
+    "massAxis": "mu=m_phi*d/(hbar*c)",
+    "pairSeparation": "R=|d*z_hat + u_detector - u_source|",
+    "dimensionlessPotential": "the pair-volume average of d^3*exp(-m_phi*R)/(R^3)*[-(s1.s2)*(m_phi*R+1)+(s1.Rhat)*(s2.Rhat)*((m_phi*R)^2+3*m_phi*R+3)]",
+    "differenceDensity": "each normalized coordinate delta_i/a has triangular density 1-|t| on [-1,1]",
+    "quadrature": "tensor-product Gauss-Legendre on each half of each triangular difference coordinate"
+  },
+  "execution": {
+    "massTimesCenterSeparation": [0, 1, 4],
+    "reportedQuadratureOrderPerHalfAxis": 20,
+    "comparisonQuadratureOrderPerHalfAxis": 14,
+    "cellCount": 15,
+    "randomSeeds": 0,
+    "deterministic": true,
+    "maximumAbsoluteOrder14To20Difference": 2.0583090787340552e-11
+  },
+  "response": [
+    {"sideToCenterSeparation":0,"massTimesCenterSeparation":0,"radial":2,"transverse":-1,"anisotropy":2,"radialToPoint":1,"transverseToPoint":1},
+    {"sideToCenterSeparation":0,"massTimesCenterSeparation":1,"radial":1.8393972058572117,"transverse":-0.7357588823428847,"anisotropy":2.5,"radialToPoint":1,"transverseToPoint":1},
+    {"sideToCenterSeparation":0,"massTimesCenterSeparation":4,"radial":0.4762066111070886,"transverse":-0.0915781944436709,"anisotropy":5.199999999999999,"radialToPoint":1,"transverseToPoint":1},
+    {"sideToCenterSeparation":0.1,"massTimesCenterSeparation":0,"radial":1.9999126820112119,"transverse":-0.9999563410056104,"anisotropy":1.9999999999999911,"radialToPoint":0.9999563410056059,"transverseToPoint":0.9999563410056104},
+    {"sideToCenterSeparation":0.1,"massTimesCenterSeparation":1,"radial":1.8408457033388865,"transverse":-0.7363311502099786,"anisotropy":2.50002421167967,"radialToPoint":1.0007874848766012,"transverseToPoint":1.0007777926720662},
+    {"sideToCenterSeparation":0.1,"massTimesCenterSeparation":4,"radial":0.4825390702281977,"transverse":-0.09278804188712637,"anisotropy":5.200444587624672,"radialToPoint":1.0132977135835795,"transverseToPoint":1.0132110864469996},
+    {"sideToCenterSeparation":0.25,"massTimesCenterSeparation":0,"radial":1.9966450398336104,"transverse":-0.9983225199168207,"anisotropy":1.999999999999969,"radialToPoint":0.9983225199168052,"transverseToPoint":0.9983225199168207},
+    {"sideToCenterSeparation":0.25,"massTimesCenterSeparation":1,"radial":1.8457272241149614,"transverse":-0.7380164976026493,"anisotropy":2.5009294915636255,"radialToPoint":1.003441354720771,"transverseToPoint":1.003068417268135},
+    {"sideToCenterSeparation":0.25,"massTimesCenterSeparation":4,"radial":0.5151835563449577,"transverse":-0.09875619476339215,"anisotropy":5.216721417621193,"radialToPoint":1.0818488116896472,"transverseToPoint":1.0783811076788197},
+    {"sideToCenterSeparation":0.5,"massTimesCenterSeparation":0,"radial":1.9524608854671341,"transverse":-0.976230442733572,"anisotropy":1.99999999999999,"radialToPoint":0.9762304427335671,"transverseToPoint":0.976230442733572},
+    {"sideToCenterSeparation":0.5,"massTimesCenterSeparation":1,"radial":1.8311872706514638,"transverse":-0.7285991546934903,"anisotropy":2.5132986483106943,"radialToPoint":0.9955366164634779,"transverseToPoint":0.9902689212169679},
+    {"sideToCenterSeparation":0.5,"massTimesCenterSeparation":4,"radial":0.6234909612834307,"transverse":-0.11494029300620748,"anisotropy":5.424476873830123,"radialToPoint":1.3092866557100802,"transverseToPoint":1.2551054724812951},
+    {"sideToCenterSeparation":0.75,"massTimesCenterSeparation":0,"radial":1.825964374883845,"transverse":-0.9129821874419297,"anisotropy":1.9999999999999842,"radialToPoint":0.9129821874419225,"transverseToPoint":0.9129821874419297},
+    {"sideToCenterSeparation":0.75,"massTimesCenterSeparation":1,"radial":1.7522270750309858,"transverse":-0.6870305627382494,"anisotropy":2.5504354101035296,"radialToPoint":0.9526094034781345,"transverseToPoint":0.9337713471436876},
+    {"sideToCenterSeparation":0.75,"massTimesCenterSeparation":4,"radial":0.7954119820724677,"transverse":-0.13314793752353976,"anisotropy":5.973896380721959,"radialToPoint":1.6703085667443551,"transverseToPoint":1.453926213902788}
+  ],
+  "findings": {
+    "smallSourceLimit": "At a/d=0.1 every reported correction is below 1.4 percent and the massless correction is below 0.005 percent.",
+    "geometryCanSuppress": "For mu=0 and a/d=0.75, finite geometry suppresses both orientations by about 8.70 percent while preserving the exact ratio two within numerical tolerance.",
+    "nearFaceDominance": "For mu=4 and a/d=0.75, the finite radial response is 1.6703 times the center-point estimate and the transverse magnitude is 1.4539 times it.",
+    "anisotropyShift": "At mu=4, enlarging a/d from zero to 0.75 increases the absolute radial/transverse ratio from 5.2 to 5.9739.",
+    "practicalConsequence": "An empirical likelihood cannot use a center-point approximation without a geometry-error budget; short-range searches are especially sensitive to the nearest polarized volume elements."
+  },
+  "falsifiers": [
+    "failure to recover the point-source response at a/d=0",
+    "loss of exact polarization sign reversal in this bilinear model",
+    "non-convergence between declared deterministic quadrature orders",
+    "a claimed apparatus limit that omits finite spin-density geometry without bounding its error"
+  ],
+  "authority": {
+    "grantsDetection": false,
+    "grantsSpin23Specificity": false,
+    "grantsApparatusCalibration": false,
+    "grantsWorldwrightEmpiricalValidation": false,
+    "grantsPolicyAuthority": false,
+    "grantsMoralAuthority": false
+  }
+}
