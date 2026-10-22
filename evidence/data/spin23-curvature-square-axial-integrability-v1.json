@@ -1,0 +1,41 @@
+{
+  "schema": "spin23.curvature-square-axial-integrability/1",
+  "date": "2026-10-22",
+  "status": "exact curvature-square response map and explicit enlarged-shell obstruction",
+  "rawInvariantBasis": [
+    "R_abcd R^abcd",
+    "R_abcd R^cdab",
+    "R_abcd R^acbd",
+    "Ric_ab Ric^ab",
+    "Ric_ab Ric^ba",
+    "R^2"
+  ],
+  "axialContorsion": "K_abm=-(1/6)*epsilon_abmn*S^n",
+  "normalizationCheck": "Xhat^(1)=div(S)",
+  "responseRows": {
+    "B": ["2/3", "0", "-1/3", "0", "0", "0"],
+    "Z": ["4/9", "-4/9", "0", "1/9", "-1/9", "0"],
+    "xiR": ["-2/9", "-2/9", "-1/9", "-2/9", "-2/9", "-2/3"],
+    "xiRic": ["0", "8/9", "2/9", "2/9", "2/9", "0"],
+    "C2ModuloEuler": ["2", "2", "1", "1/2", "1/2", "0"],
+    "R2ModuloEuler": ["1/3", "1/3", "1/6", "1/3", "1/3", "1"]
+  },
+  "ranks": {
+    "axialRows": 4,
+    "axialPlusC2": 5,
+    "allRows": 5
+  },
+  "kernel": ["0", "1", "0", "0", "-4", "1"],
+  "kernelInterpretation": "Euler density direction after integrated covariant reduction",
+  "integrabilityRelation": "cR2=-(3/2)*xiR",
+  "packetComparison": {
+    "torsionlessR2": "5/(576*pi^2*epsilon)",
+    "predictedFromAxialXiR": "kappa*A*(7/64+1/(96*(a1+1)))/(pi^2*epsilon)",
+    "witness": {"kappa": 1, "A": 1, "a1": 1},
+    "witnessTorsionlessR2": "5/(576*pi^2*epsilon)",
+    "witnessPredictedR2": "11/(96*pi^2*epsilon)",
+    "witnessMismatch": "61/(576*pi^2*epsilon)"
+  },
+  "decision": "The complete packet pole is not the expansion of curvature squares alone; at least one independent RTT-type counterterm is generated.",
+  "nextBoundary": "non-axial torsion source projections separating curvature-square, RTT, DTDT, FDT and T4 operator classes"
+}

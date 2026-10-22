@@ -1,5 +1,12 @@
 # The Complete Axial Response Proves Departure Without Closing the Full Normal-Beta Map
 
+> **Update (claim 1675):** the six-curvature-square response map can be
+> constructed and has rank five modulo Euler, but the packet poles violate
+> its exact relation \(c_{R^2}=-3\delta\xi_R/2\).  The missing embedding is
+> therefore not merely a change of curvature basis: an independent
+> \(RTT\)-type counterterm is required, and non-axial torsion projections are
+> needed to separate the enlarged shell.
+
 **Date:** 22 October 2026
 
 **Gates:** A1, A2, A4, A6, A7, A8 and A11
