@@ -1,0 +1,87 @@
+{
+  "schema": "spin23.worldwright-torsion-response-surface/1",
+  "date": "2026-10-23",
+  "status": "exact dimensionless response-surface bridge from the critical 0-minus torsion observable to the Worldwright experiment discipline",
+  "sourceEvidence": {
+    "path": "evidence/data/spin23-critical-pgt-lense-thirring-spin-yukawa.json",
+    "sha256": "cd1813bdd4a77fe5f9c01d761c651392d21d74b00b14f67d7566e360f50c7f5c",
+    "verifierPath": "verification/verify/verify_spin23_critical_pgt_lense_thirring_spin_yukawa.mjs",
+    "verifierSha256": "0756524b565e13fdcce28f7365a8cb9f36b43beee6985a9830dacf48a2eaa290"
+  },
+  "separationRule": {
+    "sharedMethod": [
+      "immutable model declaration",
+      "matched controls",
+      "parameter response surface",
+      "mechanism ablation",
+      "exact replay",
+      "explicit falsifiers"
+    ],
+    "worldwrightSemanticsImportedIntoPhysics": false,
+    "physicsAuthorityExportedToWorldwright": false,
+    "claim": "Only the experimental grammar is shared. No social variable is identified with a physical field, source, charge, action or observable."
+  },
+  "physicalModel": {
+    "dimensionlessRange": "x=m_phi*r/(hbar*c)",
+    "normalizedPotential": "K=4*pi*r^3*V/(f1*f2*p1*p2)",
+    "kernel": "exp(-x)*[-(s1.s2)*(x+1)+(s1.rhat)*(s2.rhat)*(x^2+3*x+3)]",
+    "dimensionalRestoration": "V=(f1*f2*p1*p2/(4*pi*r^3))*K",
+    "scope": "separated sources r>0; the unresolved contact term is excluded",
+    "unpolarizedMetricControl": "The critical-class Lense-Thirring coefficient remains exactly one and the torsion correction is exactly zero."
+  },
+  "axes": {
+    "x": [0, 0.25, 1, 2, 4, 8, 16],
+    "polarization": [0, 0.25, 0.5, 1],
+    "orientations": [
+      {"id": "radial-parallel", "s1DotS2": 1, "s1DotR": 1, "s2DotR": 1},
+      {"id": "radial-antiparallel", "s1DotS2": -1, "s1DotR": 1, "s2DotR": -1},
+      {"id": "transverse-parallel", "s1DotS2": 1, "s1DotR": 0, "s2DotR": 0},
+      {"id": "transverse-antiparallel", "s1DotS2": -1, "s1DotR": 0, "s2DotR": 0},
+      {"id": "radial-transverse", "s1DotS2": 0, "s1DotR": 1, "s2DotR": 0}
+    ]
+  },
+  "execution": {
+    "cellCount": 560,
+    "zeroPolarizationControlCount": 245,
+    "nonzeroPolarizationCellCount": 315,
+    "nonzeroSignalCellCount": 252,
+    "randomSeeds": 0,
+    "deterministic": true
+  },
+  "unitPolarizationResponse": [
+    {"x": 0, "radialParallel": 2, "transverseParallel": -1, "absoluteAnisotropyRatio": 2, "yukawaSuppression": 1},
+    {"x": 0.25, "radialParallel": 1.995677006620475, "transverseParallel": -0.9735009788392561, "absoluteAnisotropyRatio": 2.05, "yukawaSuppression": 0.7788007830714049},
+    {"x": 1, "radialParallel": 1.8393972058572117, "transverseParallel": -0.7357588823428847, "absoluteAnisotropyRatio": 2.5, "yukawaSuppression": 0.36787944117144233},
+    {"x": 2, "radialParallel": 1.353352832366127, "transverseParallel": -0.4060058497098381, "absoluteAnisotropyRatio": 3.3333333333333335, "yukawaSuppression": 0.1353352832366127},
+    {"x": 4, "radialParallel": 0.4762066111070886, "transverseParallel": -0.0915781944436709, "absoluteAnisotropyRatio": 5.2, "yukawaSuppression": 0.01831563888873418},
+    {"x": 8, "radialParallel": 0.027507935488005973, "transverseParallel": -0.003019163651122607, "absoluteAnisotropyRatio": 9.11111111111111, "yukawaSuppression": 0.00033546262790251185},
+    {"x": 16, "radialParallel": 0.000032635200668585144, "transverseParallel": -0.000001913097970227405, "absoluteAnisotropyRatio": 17.058823529411764, "yukawaSuppression": 1.1253517471925912e-7}
+  ],
+  "ablations": {
+    "removePolarization": "Every cell with p1=0 or p2=0 must have exactly zero signal.",
+    "removeTensorAnisotropy": "An isotropic-only kernel cannot reproduce the opposite signs of radial-parallel and transverse-parallel configurations.",
+    "removeYukawaExponential": "The unsuppressed radial polynomial is 290 at x=16, whereas the admitted kernel is approximately 3.26352e-5.",
+    "alterUnpolarizedFrameDragging": "Any nonzero tree-level correction falsifies this isolated critical 0-minus class."
+  },
+  "falsifiers": [
+    "nonzero separated torsion signal for an unpolarized source or detector",
+    "failure of radial-antiparallel or transverse-antiparallel sign reversal",
+    "failure of the radial/transverse tensor anisotropy",
+    "absence of exponential range suppression",
+    "non-GR unpolarized Lense-Thirring coefficient"
+  ],
+  "interpretation": {
+    "result": "The existing physical observable admits a reproducible response surface and clean controls. Range suppresses absolute signal while increasing the radial-to-transverse anisotropy ratio.",
+    "newPhysicsStatus": "candidate-observable-not-detection",
+    "spin23Specificity": "not-yet",
+    "specificityRequirement": "A broken Spin(2,3) parent must fix A, B and the flavor-dependent axial couplings c_f, thereby fixing range and correlated strengths.",
+    "empiricalCalibration": "blocked pending an experimental likelihood and apparatus-specific spin-density model"
+  },
+  "authority": {
+    "grantsWorldwrightEmpiricalValidation": false,
+    "grantsPhysicsDetection": false,
+    "grantsSpin23Fundamentality": false,
+    "grantsPolicyAuthority": false,
+    "grantsMoralAuthority": false
+  }
+}
