@@ -1,0 +1,19 @@
+{
+  "schema": "spin23.torsionful-loop-source-order-readiness/1",
+  "date": "2026-10-22",
+  "sourceExpansion": "H(epsilon)=H0+epsilon H1+epsilon^2 H2+O(epsilon^3)",
+  "quadraticTraceCoefficient": "Tr(H0^-1 H2)-1/2 Tr(H0^-1 H1 H0^-1 H1)",
+  "sectors": [
+    {"id": "bosonic", "zeroSource": "known after torsionless Schur reduction", "firstSourceDerivative": "missing", "secondSourceDerivative": "missing"},
+    {"id": "ghost", "zeroSource": "known on the torsionless packet background", "firstSourceDerivative": "missing", "secondSourceDerivative": "missing"},
+    {"id": "secondClass", "zeroSource": "complete determinant factorized and ultralocal on the torsionless massive background", "firstSourceDerivative": "missing", "secondSourceDerivative": "missing"},
+    {"id": "measureJacobians", "zeroSource": "measure convention frozen", "firstSourceDerivative": "missing", "secondSourceDerivative": "missing"}
+  ],
+  "requiredSourceDerivativeObjects": 8,
+  "availableSourceDerivativeObjects": 0,
+  "targetResponses": ["deltaA", "deltaB", "deltaZ", "deltaXiR", "deltaXiRic"],
+  "responsesDeterminedByExistingZeroSourceData": 0,
+  "forbiddenInference": "Do not infer quadratic torsion counterterms from the torsionless Einstein-plus-scalar determinant.",
+  "nextPayload": ["HB1", "HB2", "Hghost1", "Hghost2", "DeltaSC1", "DeltaSC2", "logJ1", "logJ2"],
+  "decision": "The response design is complete, but all five loop responses await the first two axial-source variations of four determinant/measure sectors."
+}
