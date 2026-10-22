@@ -1,0 +1,61 @@
+{
+  "schema": "spin23.polarized-electron-observable/1",
+  "date": "2026-10-23",
+  "status": "exact point-ensemble orientation observable and parametric reach map; finite-size material response and UV matching remain external",
+  "model": {
+    "potential": "V=f_e^2 sigma_1^i sigma_2^j partial_i partial_j exp(-m r)/(4 pi r)",
+    "fermionMatching": "f_e=c_e/sqrt(A), y_e=2 m_e f_e, m_phi^2=A/B",
+    "effectivePolarizedCount": "N_eff=(P_1 N_1)(P_2 N_2)",
+    "pointEnsembleCondition": "each polarized body is small compared with both the separation and the force-variation scale; otherwise use the displayed six-dimensional spin-density convolution"
+  },
+  "orientationChannels": {
+    "x": "m_phi r",
+    "transverseEnergy": "U_T(theta)=-K_T cos(theta)",
+    "transverseTorqueAmplitude": "K_T=N_eff f_e^2 exp(-x)(x+1)/(4 pi r^3)",
+    "radialEnergy": "U_R=N_eff f_e^2 exp(-x)(x^2+2x+2)/(4 pi r^3)",
+    "signedRatio": "U_R/U_T(theta=0)=-(x^2+2x+2)/(x+1)",
+    "positiveRatio": "rho=-U_R/U_T(theta=0)=x+1+1/(x+1), with rho>=2",
+    "massInversion": "x=(rho+sqrt(rho^2-4))/2-1, choosing x>=0",
+    "nullTests": [
+      "the separated signal vanishes when either body is depolarized",
+      "the transverse torque vanishes at theta=0 and pi and is maximal at theta=pi/2",
+      "reversing either polarization reverses the signal",
+      "the radial/transverse ratio must obey rho>=2 and yield the same nonnegative mass at every separation"
+    ]
+  },
+  "finiteSizeObservable": {
+    "energy": "U=f_e^2 integral d^3x d^3y s_1^i(x) s_2^j(y) partial_i partial_j Y_m(|x-y|)",
+    "interpretation": "s_a^i is the species-weighted polarized electron number density; geometry, shielding and magnetic leakage enter the experimental forward model rather than the particle-level kernel",
+    "massExtraction": "the analytic point ratio is replaced by the ratio of two geometry form factors, both computable from the same measured spin-density maps"
+  },
+  "reachFormula": {
+    "naturalUnits": "y_e,min=sqrt[16 pi m_e^2 r^3 tau_min exp(x)/(N_eff (x+1))]",
+    "meaning": "tau_min is the resolved transverse torque amplitude expressed as an energy; r and m_e are in inverse common natural units",
+    "inverseMatching": [
+      "f_e=y_e/(2m_e)",
+      "A/c_e^2=1/f_e^2",
+      "B/c_e^2=1/(f_e^2 m_phi^2)"
+    ],
+    "degeneracy": "a force measurement determines m_phi and f_e, but A, B and c_e are not separately identifiable without UV or matter-sector matching"
+  },
+  "illustrativeDesignPoint": {
+    "classification": "sensitivity scaling example, not a claim about an existing apparatus or achievable magnetic systematics",
+    "separation_m": 0.1,
+    "x": 1,
+    "mediatorMass_eV": 1.973269804e-6,
+    "polarizedElectronsPerBody": 1e24,
+    "polarizationFractionPerBody": 1,
+    "torqueThreshold_N_m": 1e-21,
+    "y_eReach": 1.20379428301628e-10,
+    "f_eReach_GeV_inverse": 1.1778833234552439e-7,
+    "sqrtA_over_absCe_GeV": 8489805.230169702,
+    "B_over_CeSquared": 1.8510685989222563e43,
+    "interpretation": "even this optimistic point-ensemble scaling probes a coupling many orders above the natural Planck-normalized benchmark; making the pole light while retaining weak coupling requires a very large B coefficient"
+  },
+  "ratioWitnesses": [
+    {"x": 0, "rho": 2},
+    {"x": 1, "rho": 2.5},
+    {"x": 3, "rho": 4.25}
+  ],
+  "decision": "The phenomenology branch can be advanced without inventing finite Wilson coefficients: a dual-orientation polarized electron experiment first extracts the range from a coupling-free tensor ratio and then extracts f_e from the absolute torque. The remaining blocker is no longer the observable; it is material-specific finite-size modeling plus UV matching of c_e, A and B."
+}

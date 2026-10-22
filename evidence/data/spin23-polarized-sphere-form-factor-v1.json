@@ -1,0 +1,45 @@
+{
+  "schema": "spin23.polarized-sphere-form-factor/1",
+  "date": "2026-10-23",
+  "status": "exact non-overlapping uniform-sphere convolution for the 0-minus dipole-dipole kernel",
+  "domain": {
+    "geometry": "two uniformly polarized spheres of radii R_1 and R_2 with centre separation D>R_1+R_2",
+    "polarization": "constant species-weighted electron spin direction and density within each sphere",
+    "exclusions": "overlap, nonuniform domains, boundary-dependent polarization texture and magnetic backgrounds require a numerical apparatus model"
+  },
+  "formFactor": {
+    "definition": "F(z)=3(z cosh(z)-sinh(z))/z^3",
+    "continuousValue": "F(0)=1",
+    "smallZ": "F(z)=1+z^2/10+z^4/280+O(z^6)",
+    "scalarConvolution": "integral rho_1(x) rho_2(y) Y_m(|D+x-y|) d^3x d^3y=N_1 N_2 F(mR_1)F(mR_2)Y_m(D)",
+    "tensorConvolution": "global centre derivatives commute with both volume integrals, so the Hessian Yukawa kernel receives the identical multiplicative form factor"
+  },
+  "observable": {
+    "x": "m_phi D",
+    "z1": "m_phi R_1",
+    "z2": "m_phi R_2",
+    "transverseTorqueAmplitude": "K_T=N_eff f_e^2 F(z1)F(z2) exp(-x)(x+1)/(4 pi D^3)",
+    "radialEnergy": "U_R=N_eff f_e^2 F(z1)F(z2) exp(-x)(x^2+2x+2)/(4 pi D^3)",
+    "ratio": "rho=-U_R/U_T(0)=x+1+1/(x+1)",
+    "decision": "uniform spherical finite size changes absolute reach but cancels exactly from the radial/transverse mass estimator"
+  },
+  "witnesses": [
+    {"z": 0, "F": 1},
+    {"z": 0.2, "F": 1.0040057185204396},
+    {"z": 0.4, "F": 1.0160916999640546},
+    {"z": 1, "F": 1.103638323514327}
+  ],
+  "illustrativeGeometry": {
+    "centreSeparation_m": 0.1,
+    "radius1_m": 0.02,
+    "radius2_m": 0.02,
+    "x": 1,
+    "z1": 0.2,
+    "z2": 0.2,
+    "nonOverlapMargin_m": 0.06,
+    "torqueEnhancementOverPointCounts": 1.0080274828217441,
+    "couplingReachImprovement": 1.0040057185204396,
+    "interpretation": "at fixed total polarized counts, finite radius enhances the torque slightly because near-side pairs receive greater Yukawa weight; y_e reach improves by the square root of the torque form factor"
+  },
+  "decision": "The finite-size blocker is analytically closed for uniform non-overlapping polarized spheres. A concrete experiment now needs only measured spin counts/textures, torque noise and a background model; arbitrary geometry can be handled by numerical convolution against this exact kernel."
+}
