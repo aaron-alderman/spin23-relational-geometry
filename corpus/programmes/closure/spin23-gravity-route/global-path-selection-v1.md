@@ -64,7 +64,9 @@ direction by direction.  The live operation is to parameterize the source
 tensor and advance the same engine to the other six flat rows.  That
 generalization and the `t021` row are now complete, giving
 \(h^{TT}_4=-(21a_1^2+27a_1+10)/(1152\pi^2\epsilon)\).  The live profile is
-`t102`, which isolates \(h^{TT}_6\).
+`t102` is also complete, giving
+\(h^{TT}_6=(3a_1^2+42a_1+31)/(4608\pi^2\epsilon)\).  The live profile is
+`t112`, which isolates \(h^{TT}_2+h^{TT}_3\).
 
 ## Backtracking policy
 

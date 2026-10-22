@@ -8,6 +8,7 @@ import importlib.util
 import itertools
 import json
 import math
+import os
 from pathlib import Path
 
 import numpy as np
@@ -20,7 +21,15 @@ COUPLINGS = tuple((float(a1), float(bx), 1.0) for a1 in (1, 2, 3, 4) for bx in (
 Q_NODES = (-1.0, 0.0, 1.0, 2.0)
 # Antipodal representatives of the 24 D4 roots.  Equal weights integrate
 # every spherical polynomial through degree five on S^3.
-DIRECTIONS = tuple((i, j, sign) for i, j in itertools.combinations(range(4), 2) for sign in (1.0, -1.0))
+SIGN_REDUCED = os.environ.get("SPIN23_SIGN_REDUCED") == "1"
+DIRECTIONS = tuple((i, j, sign) for i, j in itertools.combinations(range(4), 2)
+                   for sign in ((1.0,) if SIGN_REDUCED else (1.0, -1.0)))
+PROFILE = os.environ.get("SPIN23_PROFILE", "t021")
+PROFILE_ENTRIES = {"t021": {"021": 1.0}, "t102": {"102": 1.0}, "t112": {"112": 1.0}}
+RESPONSE_ROWS = {"t021": [2,0,0,1,0,0,0,0,0], "t102": [2,0,0,0,0,2,0,0,0],
+                 "t112": [2,1,1,0,0,0,0,0,0]}
+if PROFILE not in PROFILE_ENTRIES:
+    raise ValueError(f"unsupported profile {PROFILE}")
 
 
 def load_engine():
@@ -53,7 +62,7 @@ def evaluate(task):
     direction, radius = task
     engine = load_engine()
     p = momentum(direction, radius)
-    source = engine.torsion_to_contorsion({"021": 1.0})
+    source = engine.torsion_to_contorsion(PROFILE_ENTRIES[PROFILE])
     primitives = []
     for q0 in Q_NODES:
         q = np.asarray((q0, 0.0, 0.0, 0.0))
@@ -101,12 +110,12 @@ def main():
             directional[d, c] = np.polynomial.polynomial.polyfit(z, values[:, c], 3)[2]
     averages = np.mean(directional, axis=0)
     result = {
-        "profile": "t021",
-        "responseRow": [2,0,0,1,0,0,0,0,0],
+        "profile": PROFILE,
+        "responseRow": RESPONSE_ROWS[PROFILE],
         "couplingOrder": [{"a1":a1,"B":bx} for a1,bx,_ in COUPLINGS],
         "maximumQuadraticQReconstructionResidual": max(x[3] for x in rows),
         "angularAverages": averages.tolist(),
-        "y021PoleCoefficients": (averages/(16*math.pi**2)).tolist(),
+        "yProfilePoleCoefficients": (averages/(16*math.pi**2)).tolist(),
         "directionalQ2OverR4": directional.T.tolist(),
     }
     print(json.dumps(result, indent=2))
