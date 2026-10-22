@@ -1,0 +1,82 @@
+{
+  "schema": "worldwright.calibration-identifiability-audit.local/1",
+  "date": "2026-10-23",
+  "status": "structural audit of retained metadata; no outcomes extracted",
+  "provenance": {
+    "laneId": "task/worldwright-kenotic-boundary-app-20261022",
+    "snapshotId": "bff142b8-1ae9-4f7b-ba2e-9631d2ccfdaf",
+    "sourceObjects": {
+      "calibrationDataDictionary": "6558fcb4980f6cd2de7fc05dfaeae3582647db24a7bbd33bf4861d25d7a70250",
+      "calibrationEvidencePathway": "51f5ca4009855e2a410b0f249fa432e7438d7a3f51624bd961bf6caf9b5f8fb6",
+      "externalCalibrationReadiness": "cd6c9431c4729495e01a39e1df88ec1b0b29f8fb265a2a7fbe15817146055501",
+      "metadataFeasibilityEvidence": "e15e2a7521d504ab56912e45c30409ecc8e73576a90f1f02e2c90cfd91145cc3",
+      "glideIdentityBridgeEvidence": "5d1bdb1deec0dd1ab6655b00ef9b812a0ca0110e5a24b60dd4033afc3f8b24e3"
+    }
+  },
+  "retainedFrame": {
+    "events": 248,
+    "countries": 91,
+    "hazardClasses": 6,
+    "dayPrecisionOnsetCoverage": 1,
+    "reportReferenceCoverage": 0.947581,
+    "existingOrStrongCrossSourceIdentityCoverage": 0.322581,
+    "positiveControlExactRate": 0.611111,
+    "positiveControlWrongRate": 0.111111,
+    "scope": "event and report discovery metadata only"
+  },
+  "fieldCoverage": [
+    {"field": "event_identity", "retained": true, "coverage": 1, "fitness": "IFRC-only frame"},
+    {"field": "cross_source_identity", "retained": true, "coverage": 0.322581, "fitness": "failed quality gate"},
+    {"field": "country_hazard_onset", "retained": true, "coverage": 1, "fitness": "event stratification only"},
+    {"field": "public_report_reference", "retained": true, "coverage": 0.947581, "fitness": "discovery pointer, not action evidence"},
+    {"field": "locality_id", "retained": false, "coverage": 0, "fitness": "not measured in projection"},
+    {"field": "intervention_channel", "retained": false, "coverage": 0, "fitness": "not measured in projection"},
+    {"field": "commitment_dispatch_delivery_times", "retained": false, "coverage": 0, "fitness": "not measured; publication dates barred as substitutes"},
+    {"field": "baseline_deficit_and_trend", "retained": false, "coverage": 0, "fitness": "not measured in projection"},
+    {"field": "delivered_dose_and_capture", "retained": false, "coverage": 0, "fitness": "not measured in projection"},
+    {"field": "time_resolved_harm_outcomes", "retained": false, "coverage": 0, "fitness": "outcome extraction barred"},
+    {"field": "relational_outcomes", "retained": false, "coverage": 0, "fitness": "not measured in projection"},
+    {"field": "identity_layers_and_topology", "retained": false, "coverage": 0, "fitness": "requires consented instrument or governed organizational graph"},
+    {"field": "selection_and_concurrent_interventions", "retained": false, "coverage": 0, "fitness": "not measured in projection"}
+  ],
+  "mechanismIdentifiability": [
+    {"id": "urgency-loss", "required": ["baseline_deficit_and_trend", "commitment_dispatch_delivery_times", "time_resolved_harm_outcomes", "selection_and_concurrent_interventions"], "observedRequired": 0, "identifiableNow": false},
+    {"id": "delivery-failure-and-capture", "required": ["commitment_dispatch_delivery_times", "delivered_dose_and_capture", "locality_id"], "observedRequired": 0, "identifiableNow": false},
+    {"id": "learning-threshold-and-gain", "required": ["baseline_deficit_and_trend", "delivered_dose_and_capture", "relational_outcomes"], "observedRequired": 0, "identifiableNow": false},
+    {"id": "relational-persistence", "required": ["intervention_channel", "commitment_dispatch_delivery_times", "relational_outcomes"], "observedRequired": 0, "identifiableNow": false},
+    {"id": "identity-salience", "required": ["identity_layers_and_topology", "intervention_channel", "relational_outcomes"], "observedRequired": 0, "identifiableNow": false},
+    {"id": "channel-contrast", "required": ["locality_id", "intervention_channel", "commitment_dispatch_delivery_times", "baseline_deficit_and_trend", "time_resolved_harm_outcomes", "selection_and_concurrent_interventions"], "observedRequired": 0, "identifiableNow": false}
+  ],
+  "calibrationGates": [
+    {"id": "G0-source-linkage", "state": "failed", "reason": "Cross-source event identity is 32.3%, and locality/response-segment identities are absent."},
+    {"id": "G1-time-integrity", "state": "not-open", "reason": "No action-level first-delivery timestamps are retained."},
+    {"id": "G2-baseline", "state": "not-open", "reason": "No baseline deficit or pretrend is retained."},
+    {"id": "G3-outcome", "state": "not-open", "reason": "Outcome extraction remains barred."},
+    {"id": "G4-overlap", "state": "not-assessable", "reason": "Channel, dose, severity covariates and selection are absent."},
+    {"id": "G5-negative-control", "state": "not-assessable", "reason": "No estimation dataset exists."},
+    {"id": "G6-transport", "state": "not-assessable", "reason": "No effects exist to stratify."},
+    {"id": "G7-replay", "state": "metadata-only-pass", "reason": "Projected metadata and identity matching replay, but no calibration rows exist."}
+  ],
+  "conclusions": {
+    "causalMechanismsAudited": 6,
+    "causalMechanismsIdentifiableNow": 0,
+    "perfectCrosswalkWouldOpenCausalEstimation": false,
+    "aggregateWeightsStatisticallyIdentifiable": false,
+    "aggregateWeightRoute": "stakeholder-separated elicitation and partial-order analysis, not fitting to observational outcomes",
+    "principalCorrection": "Cross-source identity is necessary for enriched multi-source analysis but insufficient for calibration. Action timestamps, locality, channel, baseline, outcomes and confounding controls remain independently missing."
+  },
+  "nextActions": [
+    {"rank": 1, "id": "ifrc-action-time-pilot", "scope": "Use exact IFRC event/report identifiers to test whether a governed metadata-only extractor can recover locality, channel, dispatch and first-delivery intervals without outcomes or narrative retention."},
+    {"rank": 2, "id": "source-crosswalk", "scope": "Obtain source-provided or governed partner identifiers before multi-source enrichment; do not relax fuzzy matching."},
+    {"rank": 3, "id": "baseline-outcome-binding", "scope": "Open only after action-time feasibility; bind baseline deficit, repeated harm outcomes, selection and concurrent interventions with explicit missingness."}
+  ],
+  "authority": {
+    "outcomeExtraction": false,
+    "causalEstimation": false,
+    "empiricalValidation": false,
+    "policyAuthority": false,
+    "moralAuthority": false,
+    "demographicAuthority": false,
+    "physicsAuthority": false
+  }
+}

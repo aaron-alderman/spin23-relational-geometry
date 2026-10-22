@@ -28,12 +28,22 @@ for (const chain of manifest.chains) {
 
 assert.equal(await digest(manifest.programmeLandscape.evidence.path), manifest.programmeLandscape.evidence.sha256, "landscape evidence hash drift");
 assert.equal(await digest(manifest.programmeLandscape.verifier.path), manifest.programmeLandscape.verifier.sha256, "landscape verifier hash drift");
+assert.equal(await digest(manifest.calibrationAudit.evidence.path), manifest.calibrationAudit.evidence.sha256, "calibration audit evidence hash drift");
+assert.equal(await digest(manifest.calibrationAudit.verifier.path), manifest.calibrationAudit.verifier.sha256, "calibration audit verifier hash drift");
+const calibration = JSON.parse(await readFile(resolve(root, manifest.calibrationAudit.evidence.path), "utf8"));
+assert.equal(calibration.conclusions.causalMechanismsAudited, 6);
+assert.equal(calibration.conclusions.causalMechanismsIdentifiableNow, 0);
+assert.equal(calibration.conclusions.perfectCrosswalkWouldOpenCausalEstimation, false);
+assert.ok(Object.values(calibration.authority).every(value => value === false), "calibration audit authority promotion");
+const calibrationChild = spawnSync(process.execPath, [resolve(root, manifest.calibrationAudit.verifier.path)], { encoding: "utf8" });
+assert.equal(calibrationChild.status, 0, `calibration audit verifier failed\n${calibrationChild.stdout}\n${calibrationChild.stderr}`);
 assert.equal(await digest(manifest.separatePhysicsBridge.path), manifest.separatePhysicsBridge.sha256, "physics bridge hash drift");
 const physics = JSON.parse(await readFile(resolve(root, manifest.separatePhysicsBridge.path), "utf8"));
 assert.equal(physics.conclusions.spin23SpecificFingerprintAvailable, false);
 assert.equal(manifest.separatePhysicsBridge.authorityTransfer, false);
 assert.deepEqual(manifest.conclusions, {
   hashPinnedExperimentChains: 3,
+  hashPinnedStructuralAudits: 1,
   allExperimentsRepeatExactly: true,
   allEmpiricalValidationBlocked: true,
   continuousCorpusVerificationAvailable: true,
@@ -42,5 +52,5 @@ assert.deepEqual(manifest.conclusions, {
 });
 
 console.log("Worldwright local research assurance manifest: PASS");
-console.log("  3 hash-pinned executable experiment chains plus programme landscape");
+console.log("  3 hash-pinned executable experiment chains, 1 structural audit, plus programme landscape");
 console.log("  Spin(2,3) bridge referenced separately with no authority transfer");

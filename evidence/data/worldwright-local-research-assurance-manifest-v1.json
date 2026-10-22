@@ -24,8 +24,12 @@
     }
   ],
   "programmeLandscape": {
-    "evidence": {"path": "evidence/data/worldwright-programme-current-landscape-v2.json", "sha256": "3770ebd81992aa076a2cc5e147011bfd11adc8443efa1f226d024abbdf68ba35"},
-    "verifier": {"path": "verification/verify/verify_worldwright_programme_current_landscape_v2.mjs", "sha256": "f4583b074660be297c7c94a9b9b814a4e18bcf7e37bb3da5be39d7277cba3457"}
+    "evidence": {"path": "evidence/data/worldwright-programme-current-landscape-v2.json", "sha256": "1ec0228c704110a6fec284dfeaca33255d385d64504d9182180db0490a3bb070"},
+    "verifier": {"path": "verification/verify/verify_worldwright_programme_current_landscape_v2.mjs", "sha256": "b1ea0d0cce858e2da1ce024eccf08f9d8f3c278be351b7f9a8d81e8eab134590"}
+  },
+  "calibrationAudit": {
+    "evidence": {"path": "evidence/data/worldwright-calibration-identifiability-audit-local-v1.json", "sha256": "5267d16d805330dcdba55403e42d8b445255647d0ac2e61c6a1976bb4a23ffeb"},
+    "verifier": {"path": "verification/verify/verify_worldwright_calibration_identifiability_audit_local.mjs", "sha256": "36276a3bc530d12f06c1d9841fbd6e35cc248f954c403738f3dff6775f1136bf"}
   },
   "separatePhysicsBridge": {
     "path": "evidence/data/spin23-worldwright-bridge-assurance-manifest-v1.json",
@@ -34,6 +38,7 @@
   },
   "conclusions": {
     "hashPinnedExperimentChains": 3,
+    "hashPinnedStructuralAudits": 1,
     "allExperimentsRepeatExactly": true,
     "allEmpiricalValidationBlocked": true,
     "continuousCorpusVerificationAvailable": true,
