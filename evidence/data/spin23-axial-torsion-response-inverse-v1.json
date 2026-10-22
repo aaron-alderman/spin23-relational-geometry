@@ -1,0 +1,21 @@
+{
+  "schema": "spin23.axial-torsion-response-inverse/1",
+  "date": "2026-10-22",
+  "parameterOrder": ["A", "B", "Z", "xiR", "xiRic"],
+  "responseOrder": ["Bobs", "M1", "M2", "Zobs", "M3"],
+  "geometry": {"R1": -12, "R2": -24, "R3": -12, "rParallel": -2},
+  "inverse": {
+    "B": "Bobs",
+    "Z": "Zobs",
+    "q": "(M2-M1)/(R2-R1)",
+    "A": "M1-R1*q",
+    "xiRic": "(M3-A-R3*q)/(rParallel-R3/4)",
+    "xiR": "q-xiRic/4"
+  },
+  "singularLoci": ["R2=R1", "rParallel=R3/4"],
+  "witness": {
+    "parameters": {"A": 5, "B": 2, "Z": 3, "xiR": 7, "xiRic": 11},
+    "responses": {"Bobs": 2, "M1": -112, "M2": -229, "Zobs": 3, "M3": -101}
+  },
+  "decision": "The five responses reconstruct all five quadratic axial-EFT coefficients by an exact closed-form inverse."
+}

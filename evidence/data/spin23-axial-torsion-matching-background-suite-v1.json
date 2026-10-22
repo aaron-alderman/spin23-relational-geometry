@@ -1,0 +1,27 @@
+{
+  "schema": "spin23.axial-torsion-matching-background-suite/1",
+  "date": "2026-10-22",
+  "backgrounds": [
+    {"name": "M1", "geometry": "compact H4 quotient", "sectionalCurvature": -1, "scalarCurvature": -12, "ricciEigenvalues": [-3,-3,-3,-3]},
+    {"name": "M2", "geometry": "compact H4 quotient", "sectionalCurvature": -2, "scalarCurvature": -24, "ricciEigenvalues": [-6,-6,-6,-6]},
+    {"name": "M3", "geometry": "product of compact H2 quotients", "factorCurvatures": [-2,-4], "scalarCurvature": -12, "ricciEigenvalues": [-2,-2,-4,-4], "selectedParallelEigenvalue": -2}
+  ],
+  "sourceModes": [
+    "longitudinal gradient of a nonzero scalar-Laplacian eigenmode",
+    "transverse coexact one-form Laplacian eigenmode",
+    "longitudinal product mode with gradient tangent to the first H2 factor"
+  ],
+  "responseMatrix": [
+    [0,1,0,0,0],
+    [1,0,0,-12,-3],
+    [1,0,0,-24,-6],
+    [0,0,1,0,0],
+    [1,0,0,-12,-2]
+  ],
+  "designDeterminantFormula": "(R2-R1)*(rParallel-R3/4)",
+  "designDeterminant": -12,
+  "rank": 5,
+  "advantages": ["smooth","compact","boundaryless","locally symmetric","rescalable to weak curvature","non-Einstein Ricci projector available"],
+  "nextCalculation": "packet-v1 nonminimal torsionful Hessian and divergent form factors on the three-background eigenmode suite",
+  "decision": "The five-response matching protocol has an explicit compact boundaryless geometric realization with nonzero design determinant."
+}

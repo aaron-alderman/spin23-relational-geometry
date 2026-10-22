@@ -1,0 +1,29 @@
+{
+  "schema": "spin23.axial-torsion-observable-matching-rank/1",
+  "date": "2026-10-22",
+  "parameterBasis": ["A","B","Z","xi_R","xi_Ric"],
+  "quadraticOperators": ["S_mu S^mu","(nabla_mu S^mu)^2","F_mu_nu(S) F^mu_nu(S)","R S_mu S^mu","R_mu_nu S^mu S^nu"],
+  "singleAdsPseudoscalarResponse": {
+    "rows": [[0,1,0,0,0],[1,0,0,-12,-3]],
+    "rank": 2,
+    "nullity": 3,
+    "visible": ["B","A-12 xi_R-3 xi_Ric"],
+    "blind": ["Z","separate A from curvature shift","separate xi_R from xi_Ric"]
+  },
+  "fullProtocol": {
+    "curvatures": {"R1": -12,"R2": -24,"R3": -12,"rParallel": -2},
+    "rows": [
+      [0,1,0,0,0],
+      [1,0,0,-12,-3],
+      [1,0,0,-24,-6],
+      [0,0,1,0,0],
+      [1,0,0,-12,-2]
+    ],
+    "rank": 5,
+    "responses": ["longitudinal normalization B","longitudinal pole shift at R1","longitudinal pole shift at R2","transverse momentum coefficient Z","Ricci-polarized shift on a non-Einstein background"]
+  },
+  "spectralForm": "<Xhat Xhat>(p)=p^2/(A+B p^2)=1/B-(A/B^2)/(p^2+A/B)",
+  "higherFieldOrderNotMatched": ["RTT cubic vertices","TT nabla T cubic vertices","T4 quartic vertices"],
+  "nextCalculation": "torsionful non-Einstein background-field divergence projected onto the five quadratic axial operators",
+  "decision": "One AdS Xhat correlator has rank two. Two curvatures, a transverse response and one non-Einstein Ricci polarization give a full-rank five-response matching protocol."
+}
