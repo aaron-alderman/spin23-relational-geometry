@@ -1,0 +1,39 @@
+{
+  "schema": "spin23.ads4-higher-spin-parity-selector-audit/1",
+  "date": "2026-10-23",
+  "higherSpinParent": {
+    "background": "AdS4",
+    "spectrum": "an infinite tower of higher-spin gauge fields plus a scalar in the vector-model class",
+    "evadesColemanMandulaFiniteSpeciesAssumption": true,
+    "parityData": "a parity-breaking bulk phase theta0 related by holographic boundary conditions to a Chern-Simons matter t Hooft coupling"
+  },
+  "commonConventionWitness": {
+    "relation": "theta0=pi N/(2k)=pi lambda/2",
+    "qualification": "normalization and boundary-condition conventions must be fixed by parity-odd correlator matching",
+    "samples": [
+      {"N":10,"k":80,"lambda":0.125,"thetaOverPi":0.0625},
+      {"N":20,"k":80,"lambda":0.25,"thetaOverPi":0.125},
+      {"N":40,"k":80,"lambda":0.5,"thetaOverPi":0.25},
+      {"N":60,"k":80,"lambda":0.75,"thetaOverPi":0.375}
+    ],
+    "largeNStatement": "N,k tend to infinity at fixed N/k, producing a continuous planar parameter"
+  },
+  "torsionIdentityAudit": {
+    "higherSpinScalarAutomaticallyPgtTorsion": false,
+    "massiveLongitudinalZeroMinusEstablished": false,
+    "fermionAxialMatchingMapPresent": false,
+    "missing": [
+      "bulk field map from the higher-spin scalar/master field to independent Lorentz-connection torsion",
+      "boundary condition or symmetry fixing the required massive pseudoscalar pole",
+      "normalized coupling to the four-dimensional fermion axial current",
+      "low-spin truncation or decoupling proof preserving consistency"
+    ]
+  },
+  "selectionAudit": {
+    "higherSpinConsistencyFixesParityPhaseUniquely": false,
+    "parityInvariantSpecialPoints": "special endpoints exist, but generic consistent parity-violating phases remain",
+    "oneEighthSelected": false,
+    "reason": "the parent contains a continuous phase and no derived map from that phase to the PGT axial coefficient"
+  },
+  "verdict": "higher-spin AdS structure is a genuine Coleman-Mandula loophole but enlarges the spectrum and retains continuous parity data without identifying or selecting the PGT axial portal"
+}
