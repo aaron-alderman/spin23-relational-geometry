@@ -1,0 +1,17 @@
+{
+  "schema": "spin23.new-model-path-selection/4",
+  "date": "2026-10-23",
+  "objective": "instantiate the strongest remaining compactification path and distinguish topological index selection from axial normalization",
+  "terminalStates": ["completed", "rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"TG","branch":"three-generation E6 quotient topology","state":"completed","result":"chi=-6 fixes three net generations in the standard embedding"},
+    {"id":"KN","branch":"Kahler-modulus axial normalization","state":"rejected_as_selector","result":"the family index stays three while lambda_c scales continuously as r^-3"},
+    {"id":"PM","branch":"universal axion as the PGT pole","state":"rejected_as_selector","result":"an unlifted shift-symmetric axion is not the independent massive longitudinal PGT 0-minus connection mode"},
+    {"id":"SV","branch":"stabilized torsional three-generation vacuum","state":"externally_blocked","blocker":"no explicit globally consistent flux or intrinsic-torsion vacuum supplies stabilized moduli, normalized kinetic/mass mixing, a healthy PGT pole and matched chiral thresholds"},
+    {"id":"FP","branch":"nonperturbative Spin(2,3) fixed point","state":"externally_blocked","blocker":"complete quantization, beta functions, stability, unitarity and matching packet absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "generic selectors plus the concrete three-generation Calabi-Yau standard-embedding representative",
+  "decision": "the explicit topology selects the generation index but not the canonical axial coefficient; the remaining string path is a new stabilized-vacuum construction, not an inference from existing compactification data"
+}

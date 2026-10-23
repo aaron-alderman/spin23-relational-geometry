@@ -1,0 +1,46 @@
+{
+  "schema": "spin23.three-generation-heterotic-normalization/1",
+  "date": "2026-10-23",
+  "compactification": {
+    "coverEulerCharacteristic": -72,
+    "freelyActingGroupOrder": 12,
+    "quotientHodgeNumbers": {"h11": 1, "h21": 4},
+    "quotientEulerCharacteristic": -6,
+    "standardEmbeddingGaugeGroup": "E6",
+    "netGenerationMagnitude": 3,
+    "topologicalRelations": [
+      "chi(cover/G) = chi(cover)/|G|",
+      "chi = 2(h11-h21)",
+      "absolute net generation number = |chi|/2 for the standard embedding"
+    ],
+    "sources": [
+      "https://arxiv.org/abs/0910.5464",
+      "https://arxiv.org/abs/1112.1097"
+    ]
+  },
+  "kahlerScaling": {
+    "definition": "J -> r^2 J along the single overall Kahler modulus",
+    "internalVolume": "V6 -> r^6 V6",
+    "threeFormKineticCoefficient": "Z_H -> r^6 Z_H at fixed dilaton and other data",
+    "canonicalCurrentCoupling": "lambda_c -> r^-3 lambda_c",
+    "generationIndex": "unchanged",
+    "witnesses": [
+      {"r": 0.5, "volumeRatio": 0.015625, "canonicalCouplingRatio": 8, "netGenerations": 3},
+      {"r": 1, "volumeRatio": 1, "canonicalCouplingRatio": 1, "netGenerations": 3},
+      {"r": 2, "volumeRatio": 64, "canonicalCouplingRatio": 0.125, "netGenerations": 3}
+    ]
+  },
+  "modeAudit": {
+    "standardCalabiYauBackground": "the standard embedding may be taken with vanishing background H and an unlifted universal axion",
+    "target": "a healthy massive longitudinal PGT 0-minus pole",
+    "identified": false,
+    "missingInputs": [
+      "flux or intrinsic torsion and a globally consistent bundle",
+      "stabilized dilaton, Kahler and complex-structure moduli",
+      "normalized axion, two-form and Lorentz-connection kinetic and mass matrices",
+      "proof that one massive eigenmode is the healthy PGT 0-minus pole",
+      "four-dimensional chiral spectrum, anomaly audit and threshold matching"
+    ]
+  },
+  "verdict": "the quotient topology fixes three net generations and E6 matter, but it does not fix the canonically normalized axial coupling or identify the massive PGT torsion mode"
+}
