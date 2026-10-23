@@ -867,3 +867,4 @@ The central distinction throughout is this: **a list of correct particle represe
 ## Latest Spin(2,3) hadronic closure
 
 - [1728](../1700-1799/1728_public_hadronic_input_closes_the_low_energy_branch_not_the_uv_flavor_problem.md) records the completed universal and general light-quark-to-nucleon matching, proves the proton/neutron map has one invisible flavor direction, and places further progress at experimental-response, third-observable, or UV-matching input gates.
+- [1732](../1700-1799/1732_coherent_nuclear_response_exhausts_the_public_experimental_hadronic_route.md) corrects separate proton/neutron curve interpretation to one coherent nuclear likelihood, tests the available neon-xenon isotope lever, and locates the remaining boundary at joint response data, nuclear covariance, a third flavor projection, or UV matching.

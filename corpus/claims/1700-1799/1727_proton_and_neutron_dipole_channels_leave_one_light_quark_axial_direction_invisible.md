@@ -68,10 +68,13 @@ For \(c_e=1/8\), equivalently,
 >1.00024\times10^5\ {\rm GeV}^2.
 \]
 
-An electron-proton curve would add the other row, but still not remove the
-kernel.  Unique light-flavor tomography requires a third independent hadronic
-observable or a theory prior such as universality, vanishing strange coupling,
-or a UV-derived flavor relation.
+An electron-proton measurement on an independent target could add the other
+row, but the proton and neutron curves from one mixed-spin nucleus need not be
+independent.  Claim 1730 shows that the Xu curves are two one-coupling-at-a-time
+views of one nuclear combination.  Even two genuinely independent nucleon rows
+would still leave the kernel.  Unique light-flavor tomography requires a third
+independent hadronic observable or a theory prior such as universality,
+vanishing strange coupling, or a UV-derived flavor relation.
 
 ## Implication
 

@@ -27042,3 +27042,7 @@ The eight supplied standalone ChatGPT answers are preserved as source evidence a
 ## Cycle 1230 — public hadronic matching reaches its structural flavor boundary
 
 Physical-point nucleon axial charges complete both the universal benchmark and the general \(u,d,s\to p,n\) response map.  The map has rank two with kernel proportional to \((1,1,9.56332)\), so no proton/neutron-only refinement can identify all three light-quark coefficients.  Further progress needs a third independent hadronic projection, numerical apparatus response data, or UV Wilson coefficients with scale and scheme.  Artifact: [1728](../1700-1799/1728_public_hadronic_input_closes_the_low_energy_branch_not_the_uv_flavor_problem.md).
+
+## Cycle 1231 — coherent nuclear response corrects the tomography count
+
+The Xu proton point is recoverable analytically, but its proton and neutron curves are one-coupling views of one \(^{21}\mathrm{Ne}\) likelihood with cancellation line \(c_p=-14.5c_n\).  A \(^{129}\mathrm{Xe}\) target rotates the response by only \(2.204^\circ\), producing condition number 52.38.  Public-data continuation stops at joint likelihood, nuclear covariance, third-projection and UV-matching gates.  Artifact: [1732](../1700-1799/1732_coherent_nuclear_response_exhausts_the_public_experimental_hadronic_route.md).

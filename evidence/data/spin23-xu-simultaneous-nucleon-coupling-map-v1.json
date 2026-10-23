@@ -1,0 +1,38 @@
+{
+  "schema": "spin23.xu-simultaneous-nucleon-coupling-map/1",
+  "date": "2026-10-23",
+  "status": "joint-coupling reinterpretation of the single Xu comagnetometer signal",
+  "source": {
+    "url": "https://link.aps.org/pdf/10.1103/PhysRevLett.134.181801",
+    "electronNeutronOneAtATimeUpper": 2.4e-9,
+    "neutronSpinFraction": 0.58,
+    "protonSpinFraction": 0.04,
+    "mass_eV": 0.00003
+  },
+  "jointConstraint": {
+    "pseudoscalarForm": "|y_e [y_n+(eta_p/eta_n)(m_n/m_p)y_p]|<=2.4e-9",
+    "torsionCoefficientForm": "A/(|c_e| |c_n+(eta_p/eta_n)c_p|)>800194.9055700476 GeV^2",
+    "protonWeightRelativeToNeutron": 0.06896551724137932,
+    "coefficientCancellationCpOverCn": -14.499999999999998,
+    "pseudoscalarCancellationYpOverYn": -14.48004043272514,
+    "interpretation": "the published e-n and e-p curves are alternative one-coupling-at-a-time projections of one likelihood, not statistically independent nucleon constraints"
+  },
+  "quarkProjection": {
+    "rawNuclearCombination": "eta_n c_n+eta_p c_p",
+    "basis": ["c_u", "c_d", "c_s"],
+    "row": [-0.21143999999999996, 0.483, -0.028396],
+    "equation": "eta_n c_n+eta_p c_p=-0.21144 c_u+0.483 c_d-0.028396 c_s",
+    "rankFromThisExperiment": 1
+  },
+  "universalLightQuarkWitness": {
+    "electronCoefficient": 0.125,
+    "protonCoefficient": 0.049025,
+    "neutronCoefficient": 0.049025,
+    "normalizedNucleonCombination": 0.052406034482758615,
+    "A_lower_GeV2": 5241.880226778961,
+    "sqrtA_lower_GeV": 72.40083029067388,
+    "B_lower": 5.824311363087734e30,
+    "changeVersusNeutronOnly": "A reach increases by 6.8966 percent and sqrt(A) reach by 3.3902 percent because universal proton and neutron amplitudes add"
+  },
+  "decision": "The proper simultaneous-coupling object is one weighted nuclear-spin projection. The proton reinterpretation does not add a second hadronic row. Under the universal positive-coefficient witness it modestly strengthens the neutron-only number, while opposite-sign coefficients can cancel exactly."
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "spin23.two-isotope-nucleon-tomography/1",
+  "date": "2026-10-23",
+  "status": "response-rank and conditioning assessment for 21Ne and 129Xe nuclear targets",
+  "sources": [
+    {
+      "title": "Constraints on Axion Mediated Dipole-Dipole Interactions",
+      "url": "https://link.aps.org/pdf/10.1103/PhysRevLett.134.181801",
+      "target": "21Ne",
+      "spinFractions": {"neutron": 0.58, "proton": 0.04}
+    },
+    {
+      "title": "Limits on axions and axionlike particles within the axion window using a spin-based amplifier",
+      "url": "https://arxiv.org/abs/2201.11847",
+      "target": "129Xe",
+      "role": "published electron-neutron dipole experiment; paper uses neutron fraction 0.73"
+    },
+    {
+      "title": "Nuclear spin content and constraints on exotic spin-dependent couplings",
+      "url": "https://arxiv.org/abs/1407.2671",
+      "target": "129Xe",
+      "selectedShellModel": "Menendez-Gazit-Schwenk/Klos/Vietze row",
+      "spinFractions": {"neutron": 0.658, "proton": 0.02},
+      "qualification": "the source documents substantial model spread and warns that the small non-valence proton fraction in heavy odd-neutron nuclei is not robust"
+    }
+  ],
+  "nucleonResponse": {
+    "basis": ["c_n", "c_p"],
+    "matrix": [[0.58, 0.04], [0.658, 0.02]],
+    "protonToNeutronRatios": [0.06896551724137932, 0.030395136778115502],
+    "determinant": -0.014720000000000004,
+    "singularValues": [0.8781133154159, 0.016763212379973236],
+    "conditionNumber": 52.38335561893668,
+    "rowAngle_degrees": 2.2042091841093727,
+    "rank": 2
+  },
+  "quarkResponse": {
+    "basis": ["c_u", "c_d", "c_s"],
+    "ne21Row": [-0.21143999999999996, 0.483, -0.028396],
+    "xe129Row": [-0.26175200000000004, 0.558716, -0.0310524],
+    "rank": 2,
+    "remainingKernelRelative": [1, 1, 9.563318777292576]
+  },
+  "experimentalBoundary": {
+    "available": "the 2022 129Xe experiment supplies an independent isotope response direction and a published one-coupling electron-neutron curve",
+    "missing": "a common-mass numerical likelihood or response table reinterpreted with both neutron and proton spin fractions and their nuclear-theory covariance",
+    "decision": "21Ne plus 129Xe can in principle separate c_n and c_p, but the 2.2-degree row separation gives condition number 52.4 before experimental and nuclear-model uncertainties. This is a fragile tomography path, not a current precision reconstruction."
+  }
+}

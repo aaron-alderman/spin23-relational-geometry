@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.global-path-selection/5",
+  "date": "2026-10-23",
+  "objective": "exhaust the experimental-hadronic continuation after recognizing coherent proton-neutron response in mixed-spin nuclei",
+  "terminalStates": ["completed", "rejected", "externally_blocked"],
+  "nodes": [
+    {"id":"EP","branch":"Xu electron-proton point at 30 microeV","state":"completed","localExecutable":false,"result":"analytically reconstructed as |y_e y_p| approximately <=3.4752e-8 from the reported spin fractions"},
+    {"id":"JX","branch":"simultaneous Xu proton-neutron likelihood","state":"completed","localExecutable":false,"result":"one nuclear projection c_n+0.0689655 c_p with blind line c_p=-14.5 c_n; universal sqrt(A)>72.401 GeV"},
+    {"id":"2I","branch":"second-isotope response-rank test","state":"completed","localExecutable":false,"result":"21Ne and 129Xe span nucleon space but have only 2.204-degree separation and condition number 52.38"},
+    {"id":"2C","branch":"precision joint 21Ne-129Xe coupling reconstruction","state":"externally_blocked","localExecutable":false,"blocker":"common-mass numerical likelihoods or response tables plus consistently normalized neutron/proton nuclear-spin covariance for both experiments"},
+    {"id":"H3","branch":"third independent light-quark projection","state":"externally_blocked","localExecutable":false,"blocker":"a specified observable with quark-level axial response outside the proton-neutron span and a compatible experimental likelihood"},
+    {"id":"UV","branch":"Spin(2,3) prediction of flavor coefficients","state":"externally_blocked","localExecutable":false,"blocker":"broken-parent Wilson coefficients with threshold matching, renormalization scale and scheme"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "locally executable reinterpretation and response-rank analysis of the selected public electron-spin dipole experiments and public nuclear-spin inputs",
+  "decision": "The proton curve is recovered, its shared-likelihood nature is corrected, and the strongest available second-isotope route is shown to be formally full rank but ill-conditioned. Further numerical inversion requires unpublished response likelihoods and nuclear covariance; quark-level completion additionally requires a third projection or UV flavor relation."
+}

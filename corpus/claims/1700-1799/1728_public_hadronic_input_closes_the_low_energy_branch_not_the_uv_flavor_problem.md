@@ -29,6 +29,12 @@ scale, and scheme from a concrete broken-parent realization.  Treating those
 missing inputs as though they followed from the low-energy critical action
 would turn an assumption into a false prediction.
 
+**Subsequent refinement:** claim 1730 establishes that the Xu proton and
+neutron curves are alternative projections of one mixed nuclear response, not
+two independent likelihoods.  The algebraic \(u,d,s\to p,n\) rank-two map
+remains valid, but the selected experiment samples only one combination of its
+two rows.
+
 ## Reproduction
 
 ~~~powershell

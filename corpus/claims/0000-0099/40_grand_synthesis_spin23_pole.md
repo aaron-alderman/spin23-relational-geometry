@@ -15932,3 +15932,5 @@ Claims [1625--1633](../1600-1699/1633_the_eight_open_letter_answers_reduce_to_fo
 ## Hadronic matching synthesis update
 
 The polarized \(0^-\) portal now has a public low-energy nucleon match.  Under universal \(u,d,s\) coefficients \(c_q=1/8\), the lattice axial singlet gives \(c_p=c_n=0.049025\), while the general proton/neutron map has rank two and an exact one-dimensional flavor kernel.  [Claim 1728](../1700-1799/1728_public_hadronic_input_closes_the_low_energy_branch_not_the_uv_flavor_problem.md) therefore closes the model-independent hadronic continuation without promoting the benchmark to a Spin(2,3) prediction.
+
+[Claim 1732](../1700-1799/1732_coherent_nuclear_response_exhausts_the_public_experimental_hadronic_route.md) further corrects the laboratory likelihood: a mixed-spin nucleus measures one coherent proton-neutron combination.  The universal Xu witness becomes \(\sqrt A>72.401\) GeV when both contributions add, while general coefficients admit cancellation; neon-xenon separation is formally rank two but has condition number 52.38.

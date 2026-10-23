@@ -2764,3 +2764,5 @@ Claims [1625--1633](../1600-1699/1633_the_eight_open_letter_answers_reduce_to_fo
 ## Hadronic matching frontier update
 
 The public zero-momentum light-quark matching is now closed through [1728](../1700-1799/1728_public_hadronic_input_closes_the_low_energy_branch_not_the_uv_flavor_problem.md).  Proton and neutron channels have a rank-two response to three light-quark coefficients, so the remaining flavor direction requires a third independent hadronic observable or a UV flavor relation; apparatus response tables and singlet/heavy-threshold Wilson matching remain external inputs.
+
+The experimental interpretation is sharpened in [1732](../1700-1799/1732_coherent_nuclear_response_exhausts_the_public_experimental_hadronic_route.md): the Xu proton and neutron curves are one coherent \(^{21}\mathrm{Ne}\) likelihood, while the available \(^{129}\mathrm{Xe}\) direction makes nucleon inversion formally possible but ill-conditioned.  Joint likelihood tables and nuclear covariance are now explicit prerequisites.
