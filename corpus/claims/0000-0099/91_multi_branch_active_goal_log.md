@@ -27070,3 +27070,7 @@ The density \(\sqrt{|g|}S_\mu J_5^\mu\) has Weyl weight \(4+0-4=0\), so conforma
 ## Cycle 1237 — the fixed-point survivor reaches an exact information boundary
 
 Three complete beta functions reproduce the entire known matter-only slice while respectively fixing, rejecting and reversing the local slope at \(\eta=1/8\).  Published Immirzi fixed points concern a separate gravitational coupling and cannot supply the missing axial beta row.  Current-input global exhaustion is therefore reached: reopening requires the complete Spin(2,3) matter--gravity beta functional, simultaneous fixed point, stability matrix, unitary reconstruction and threshold-matched trajectory.  Artifacts: [1745--1746](../1700-1799/1746_the_fixed_point_escape_is_reduced_to_a_complete_beta_and_matching_packet.md).
+
+## Cycle 1238 — Nieh--Yan closes the named anomaly escape
+
+The exact Nieh--Yan form integrates to zero on a smooth closed manifold and to boundary torsion data when a boundary is present.  Its anomaly coefficient has mass dimension two and shifts continuously under a local axial-current counterterm, while the bulk axial Wilson coefficient is dimensionless.  Torsional boundary and thermal response remain legitimate observables, but the anomaly cannot select \(1/8\).  Every current-input selector is now terminal; any continuation starts a genuinely new UV model or computation.  Artifacts: [1747--1748](../1700-1799/1748_the_named_anomaly_route_closes_at_boundary_response_not_bulk_coefficient_selection.md).

@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.global-path-selection/12",
+  "date": "2026-10-23",
+  "objective": "execute the named torsional-anomaly survivor for axial-coefficient selection",
+  "terminalStates": ["completed", "rejected", "externally_blocked"],
+  "nodes": [
+    {"id":"NY","branch":"Nieh-Yan index quantizes eta","state":"rejected","localExecutable":false,"result":"the smooth closed integral vanishes and the boundary integral is boundary data"},
+    {"id":"AC","branch":"Nieh-Yan anomaly coefficient selects eta","state":"rejected","localExecutable":false,"result":"the anomaly coefficient is dimensionful and continuously shiftable by a local current counterterm"},
+    {"id":"GA","branch":"gauge-anomaly cancellation fixes eta","state":"rejected","localExecutable":false,"result":"axial torsion is a Lorentz-invariant composite rather than a gauged axial charge"},
+    {"id":"BR","branch":"torsional boundary or thermal response","state":"completed","localExecutable":false,"result":"a legitimate observable branch exists but depends on boundary, state and scale data and does not select the bulk coefficient"},
+    {"id":"UA","branch":"UV non-shiftable anomaly theorem","state":"externally_blocked","localExecutable":false,"blocker":"no compact torsional charge, nontrivial anomaly class and Ward identity relating it to eta are supplied"},
+    {"id":"EA","branch":"specific enlarged action with a new Ward identity","state":"externally_blocked","localExecutable":false,"blocker":"no enlarged algebra, field content, invariant action or threshold spectrum is supplied"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "all current-input symmetry, topology, anomaly, perturbative-RG and neighboring-fixed-point routes for selecting the axial torsion coefficient",
+  "decision": "the named Nieh-Yan anomaly route controls possible boundary response, not the dimensionless bulk Wilson coefficient; every remaining selector requires a genuinely new UV action or non-shiftable Ward theorem"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "spin23.nieh-yan-axial-selector-no-go/1",
+  "date": "2026-10-23",
+  "identity": "NY = d(e_a wedge T^a) = T_a wedge T^a - e_a wedge e_b wedge R^ab",
+  "bulkWilsonOperator": "O_A = S_mu bar(psi) gamma^mu gamma_5 psi",
+  "bulkWilsonCoefficientDimension": 0,
+  "niehYanDensityDimension": 2,
+  "niehYanAnomalyCoefficientDimension": 2,
+  "closedSmoothManifold": {
+    "assumptions": ["compact", "no boundary", "globally defined smooth e_a wedge T^a"],
+    "integral": 0,
+    "reason": "Stokes theorem"
+  },
+  "boundaryCase": {
+    "formula": "integral_M NY = integral_boundaryM e_a wedge T^a",
+    "interpretation": "boundary condition or response datum, not a bulk quantization of eta"
+  },
+  "currentRedefinition": {
+    "map": "J5^mu -> J5^mu + c Atilde^mu",
+    "divergenceShift": "div J5 -> div J5 + c NY",
+    "cIsContinuous": true,
+    "consequence": "the nonthermal Nieh-Yan anomaly coefficient depends on a renormalization condition"
+  },
+  "singularOrThermalCases": "may produce cutoff-, length-, curvature- or temperature-dependent torsional responses, but add scale and boundary/state data rather than fixing eta",
+  "selectorTests": [
+    {"test":"closed-manifold index quantizes eta","passes":false,"reason":"the smooth Nieh-Yan integral vanishes when the index problem is well defined"},
+    {"test":"anomaly coefficient equals eta","passes":false,"reason":"they have different dimensions and belong to different local terms"},
+    {"test":"boundary anomaly fixes bulk eta","passes":false,"reason":"local counterterms and boundary conditions shift the Nieh-Yan coefficient"},
+    {"test":"anomaly cancellation forces eta=1/8","passes":false,"reason":"axial torsion is a Lorentz-invariant composite, not a gauged axial connection whose anomaly cancellation fixes its charge"}
+  ],
+  "verdict": "Nieh-Yan and torsional anomaly data can constrain boundary response and current conventions but do not quantize or select the dimensionless bulk axial torsion-current coefficient"
+}
