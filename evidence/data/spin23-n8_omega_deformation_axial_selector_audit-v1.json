@@ -1,0 +1,67 @@
+{
+  "schema": "spin23.n8-omega-deformation-axial-selector-audit/1",
+  "date": "2026-10-23",
+  "theory": {
+    "dimension": 4,
+    "supersymmetry": "N=8",
+    "gauging": "SO(8)",
+    "deformation": "omega, continuous modulo discrete identifications",
+    "overallGaugeScale": "g",
+    "inequivalentFamily": true
+  },
+  "maximallySymmetricVacuum": {
+    "sameQuadraticSpectrumAcrossFamily": true,
+    "omegaDependentBeyondQuadraticOrder": [
+      "supersymmetry transformations",
+      "interaction couplings",
+      "scalar and gauge couplings"
+    ],
+    "logicalConsequence": "a fixed maximally symmetric quadratic spectrum does not select the interacting theory"
+  },
+  "masslessMultiplet": {
+    "gravitons": 1,
+    "gravitini": 8,
+    "vectors": 28,
+    "spinOneHalfFermions": 56,
+    "realScalars": 70,
+    "so8ScalarPseudoscalarSplit": "35 plus 35",
+    "bosonicOnShellDegreesOfFreedom": 128,
+    "fermionicOnShellDegreesOfFreedom": 128
+  },
+  "deformationWitnesses": [
+    {"omegaOverPi": 0, "sameQuadraticSpectrum": true},
+    {"omegaOverPi": 0.0625, "sameQuadraticSpectrum": true},
+    {"omegaOverPi": 0.125, "sameQuadraticSpectrum": true}
+  ],
+  "truncationWitness": {
+    "model": "omega-deformed gauged STU supergravity",
+    "supersymmetry": "N=2 truncation of the N=8 family",
+    "scalarPotentialCanBeOmegaIndependent": true,
+    "gaugeKineticAndFermionCouplingsRetainOmega": true,
+    "consequence": "even an unchanged potential does not remove the deformation from the full theory"
+  },
+  "targetAudit": {
+    "maximalSupersymmetrySelectsOmega": false,
+    "quadraticSpectrumSelectsInteractions": false,
+    "pseudoscalarAutomaticallyIdentifiedWithIndependentPgtTorsion": false,
+    "etaMapPresent": false,
+    "oneEighthSelected": false,
+    "missing": [
+      "a selected omega and electric-magnetic frame",
+      "a vacuum and controlled symmetry-breaking trajectory",
+      "a field map from a normalized pseudoscalar eigenmode to independent Lorentz-connection torsion",
+      "a derivation of eta as a function of omega, g and vacuum data",
+      "threshold matching to the observed fermion axial current"
+    ]
+  },
+  "upliftAudit": {
+    "genericElevenDimensionalOriginEstablishedByTheCitedAnalysis": false,
+    "role": "a higher-dimensional origin would be additional model data, not a consequence of four-dimensional maximal supersymmetry alone"
+  },
+  "sources": [
+    "https://arxiv.org/abs/1209.0760",
+    "https://arxiv.org/abs/1302.6219",
+    "https://arxiv.org/abs/1402.1994"
+  ],
+  "verdict": "maximal N=8 supersymmetry still admits a continuous omega-deformed family with the same maximally symmetric quadratic spectrum; it neither selects the interacting theory nor supplies the PGT torsion and axial-coupling dictionary"
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.new-model-path-selection/14",
+  "date": "2026-10-23",
+  "objective": "test the strongest higher-N supersymmetry escape using maximal N=8 SO(8)-gauged supergravity",
+  "terminalStates": ["completed", "rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"N8","branch":"maximal N=8 SO(8)-gauged supergravity","state":"completed","result":"a continuous omega-deformed family exists with the same maximally symmetric quadratic spectrum and different interaction data"},
+    {"id":"OD","branch":"maximal supersymmetry uniquely selects the deformation","state":"rejected_as_selector","result":"omega remains continuous modulo discrete identifications, and the overall gauge scale and vacuum realization are additional data"},
+    {"id":"PI","branch":"an N=8 pseudoscalar automatically equals the PGT zero-minus torsion pole","state":"rejected_as_selector","result":"the 70-scalar sector belongs to a 128+128 multiplet and no independent Lorentz-connection field identity or eta map is derived"},
+    {"id":"UP","branch":"specific omega-deformed uplift and torsion matching","state":"externally_blocked","blocker":"selected electric-magnetic frame, higher-dimensional origin, vacuum or breaking trajectory, torsion map and fermion thresholds absent"},
+    {"id":"HD","branch":"complete higher-spin-to-PGT dictionary","state":"externally_blocked","blocker":"bulk field map, normalized correlators and low-spin effective action absent"},
+    {"id":"SV","branch":"microscopic stabilized torsional compactification","state":"externally_blocked","blocker":"complete vacuum and normalized mixing, spectrum and threshold data absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "supersymmetry as a model-independent selector, tested at representative N=2 and maximal N=8",
+  "decision": "more supersymmetry alone cannot select one eighth: maximal N=8 admits inequivalent omega-deformed interactions at fixed maximally symmetric quadratic spectrum and supplies no PGT torsion dictionary"
+}
