@@ -1,0 +1,32 @@
+{
+  "schema": "spin23.bimetric-matching-degeneracy/1",
+  "date": "2026-10-23",
+  "linearHealthyFamily": {
+    "matterMetric": "h_g=cos(theta) h_0+sin(theta) h_m",
+    "sourcePropagator": "D_gg=cos(theta)^2/p^2+sin(theta)^2/(p^2+m2^2)",
+    "residues": ["cos(theta)^2", "sin(theta)^2"],
+    "healthDomain": "0<theta<pi/2 and m2^2>0",
+    "exactInverseKernel": "K_eff=p^2(p^2+m2^2)/(p^2+cos(theta)^2 m2^2)",
+    "einsteinNormalizedExpansion": "cos(theta)^2 K_eff=p^2-[tan(theta)^2/m2^2]p^4+O(p^6)",
+    "matchedCombination": "q=tan(theta)^2/m2^2"
+  },
+  "fixedLocalCoefficientWitnesses": [
+    {"tanTheta":0.5,"m2Squared":0.25,"q":1,"masslessResidue":0.8,"massiveResidue":0.2,"axialCouplingsAllowed":[0,0.125,0.25]},
+    {"tanTheta":1,"m2Squared":1,"q":1,"masslessResidue":0.5,"massiveResidue":0.5,"axialCouplingsAllowed":[0,0.125,0.25]},
+    {"tanTheta":2,"m2Squared":4,"q":1,"masslessResidue":0.2,"massiveResidue":0.8,"axialCouplingsAllowed":[0,0.125,0.25]}
+  ],
+  "nonlinearRequirements": [
+    "Hassan-Rosen square-root potential and secondary constraint",
+    "matter coupling preserving the constraint below the cutoff",
+    "background stability, characteristic and Higuchi-type tests",
+    "radiative and strong-coupling control",
+    "derivation of the second metric from the Spin(2,3) parent"
+  ],
+  "selectionAudit": {
+    "positiveResiduesSelectMixing": false,
+    "localCurvatureMatchSelectsMassAndMixingSeparately": false,
+    "localCurvatureMatchSelectsAxialCoupling": false,
+    "oneEighthStatus": "independently admitted for every witness"
+  },
+  "verdict": "a healthy bimetric propagator can reproduce one local higher-derivative coefficient, but the inverse map has a continuous mass-mixing degeneracy and no axial-coupling equation"
+}

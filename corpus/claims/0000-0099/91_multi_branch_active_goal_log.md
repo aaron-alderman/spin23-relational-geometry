@@ -27102,3 +27102,7 @@ The fixed-point path was revisited against the later packet results.  The local 
 ## Cycle 1245 — an entire completion matches the leak but leaves an infinite theory family
 
 The zero-free kernels \(K_\alpha=M_{\rm Pl}^2p^2\exp[x+\alpha x^2]\) retain only the healthy Einstein pole and share the same \(p^4\) coefficient for every \(\alpha\).  Matching the packet coefficient fixes \(M^2/M_{\rm Pl}^2=960\pi^2/11\) under the stated unit-log boundary condition, but not \(\alpha\), higher form-factor data, the quantum prescription or the axial coupling.  Values \(0,1/8,1/4\) remain independently admissible.  The branch ends at a complete nonlocal quantum principle.  Artifacts: [1761--1762](../1700-1799/1762_the_entire_function_escape_is_an_existence_proof_not_a_predictive_uv_completion.md).
+
+## Cycle 1246 — the healthy bimetric escape has the same inverse degeneracy
+
+For matter metric \(h_g=\cos\theta h_0+\sin\theta h_m\), the exact propagator has positive residues \(\cos^2\theta\) and \(\sin^2\theta\).  Its normalized local expansion fixes only \(q=\tan^2\theta/m_2^2\).  Three witnesses with \((\tan\theta,m_2^2)=(1/2,1/4),(1,1),(2,4)\) share \(q=1\) while their pole masses and residues differ.  The axial coupling remains independently \(0,1/8,1/4\).  Both entire and bimetric spin-two escapes now terminate at a new parent principle with a cross-sector Ward relation.  Artifacts: [1763--1764](../1700-1799/1764_both_healthy_spin_two_escapes_are_inverse_degenerate_and_decoupled_from_axial_selection.md).
