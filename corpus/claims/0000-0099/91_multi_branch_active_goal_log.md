@@ -27062,3 +27062,7 @@ Minimal and nonminimal axial terms multiply the identical invariant, so no unbro
 ## Cycle 1235 — Schur closure rules out every commuting linear UV grading
 
 Any linear internal symmetry commuting with Spin(2,3) acts on the real multiplicity-one compensator by a sign and on family multiplicity by a unitary matrix.  The sign cancels pairwise in both factors of the parent axial four-form, while \(U^\dagger I U=I\).  The universal operator is invariant across the whole class.  Every survivor therefore adds a noncommuting enlargement, charged field, nonlinear/topological rule or fixed-point dynamics.  Artifacts: [1741--1742](../1700-1799/1742_the_commuting_uv_grading_class_is_closed_and_every_surviving_flavor_selector_changes_the_model.md).
+
+## Cycle 1236 — conformal weight and local variation close the generic extension labels
+
+The density \(\sqrt{|g|}S_\mu J_5^\mu\) has Weyl weight \(4+0-4=0\), so conformal enlargement does not forbid it.  Its fermion and torsion variations are nonzero and continuously local, so it is not a characteristic class and its coefficient is not topologically quantized.  Only a specific enlarged action and Ward identity, named anomaly theorem, or interacting fixed point can reopen the branch.  Artifacts: [1743--1744](../1700-1799/1744_conformal_and_topological_selectors_fail_and_only_specific_new_dynamics_can_reopen_torsion_flavor.md).
