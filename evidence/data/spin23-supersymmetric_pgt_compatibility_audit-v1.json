@@ -1,0 +1,84 @@
+{
+  "schema": "spin23.supersymmetric-pgt-compatibility-audit/1",
+  "date": "2026-10-23",
+  "targetGates": [
+    "local supersymmetry",
+    "independent Lorentz connection",
+    "healthy propagating zero-minus torsion pole",
+    "nonlinear or symmetry-protected consistency"
+  ],
+  "candidates": [
+    {
+      "id": "isolated-pgt-zero-minus",
+      "description": "the corpus critical quadratic PGT witness",
+      "localSupersymmetry": false,
+      "independentConnection": true,
+      "healthyZeroMinusPole": true,
+      "nonlinearOrSymmetryProtected": false,
+      "boundary": "quadratic admission witness with radiative nonclosure and no supersymmetric completion"
+    },
+    {
+      "id": "dematteis-unitary-local-susy",
+      "description": "locally supersymmetric extension of the analyzed Sezgin-van Nieuwenhuizen and Neville classes",
+      "localSupersymmetry": true,
+      "independentConnection": false,
+      "healthyZeroMinusPole": false,
+      "nonlinearOrSymmetryProtected": true,
+      "boundary": "within the analyzed 9- and 17-parameter classes, unitarity plus local supersymmetry leaves ordinary supergravity"
+    },
+    {
+      "id": "castro-kuhfuss-nitsch",
+      "description": "supersymmetric construction in the ghost/tachyon-free Kuhfuss-Nitsch regime",
+      "localSupersymmetry": true,
+      "independentConnection": false,
+      "healthyZeroMinusPole": false,
+      "nonlinearOrSymmetryProtected": false,
+      "boundary": "in the stated special regime only the standard graviton propagates, supercovariant torsion can be gauged to zero and the connection is algebraic"
+    },
+    {
+      "id": "nishino-propagating-connection",
+      "description": "supergravity tensor calculus with a propagating Lorentz connection",
+      "localSupersymmetry": true,
+      "independentConnection": true,
+      "healthyZeroMinusPole": false,
+      "nonlinearOrSymmetryProtected": false,
+      "boundary": "the cited programme establishes preliminary transformation/coupling results, including consistency only through limited interaction order, not the required isolated massive zero-minus completion"
+    },
+    {
+      "id": "symmetry-first-torsionlike-ir",
+      "description": "unitary parity-conserving pair-antisymmetric rank-three models selected by gauge symmetry",
+      "localSupersymmetry": false,
+      "independentConnection": true,
+      "healthyZeroMinusPole": false,
+      "nonlinearOrSymmetryProtected": true,
+      "boundary": "the exhaustive linear symmetry-first catalogue retains vector modes but no scalar or pseudoscalar torsion"
+    }
+  ],
+  "nonlinearChecks": {
+    "kuhfussNitschPromisingCasePassesHamiltonianTest": false,
+    "coupledZeroMinusTwoMinusPassesHamiltonianTest": false,
+    "failureMechanism": "constraint bifurcation or nonlinear constraint inconsistency in the cited Hamiltonian analysis"
+  },
+  "scopeQualification": "the result exhausts the named four-dimensional locally supersymmetric PGT constructions and the cited symmetry-first linear torsionlike class; it is not a theorem against every imaginable torsionful supersymmetric theory",
+  "targetAudit": {
+    "anyCandidatePassesAllFourGates": false,
+    "etaMapPresent": false,
+    "oneEighthSelected": false,
+    "requiredNewInput": [
+      "a new locally supersymmetric action with an independent connection multiplet",
+      "an explicitly healthy zero-minus supermultiplet and complete transformation rules",
+      "a nonlinear Hamiltonian and characteristic analysis without constraint bifurcation",
+      "a symmetry or fixed point protecting the critical operator surface",
+      "normalized coupling and threshold matching to observed fermions"
+    ]
+  },
+  "sources": [
+    "https://doi.org/10.1103/PhysRevD.32.3184",
+    "https://doi.org/10.1143/PTP.82.616",
+    "https://doi.org/10.1143/PTP.68.975",
+    "https://doi.org/10.1143/PTP.68.1765",
+    "https://arxiv.org/abs/gr-qc/0112030",
+    "https://arxiv.org/abs/2507.05349"
+  ],
+  "verdict": "known supersymmetric PGT routes split between ordinary or algebraic-connection supergravity with no zero-minus pole and propagating-connection constructions without complete healthy nonlinear protection; no audited candidate satisfies all four target gates"
+}
