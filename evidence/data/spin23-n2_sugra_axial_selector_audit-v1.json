@@ -1,0 +1,39 @@
+{
+  "schema": "spin23.n2-sugra-axial-selector-audit/1",
+  "date": "2026-10-23",
+  "generalStructure": {
+    "matterContent": "arbitrary numbers of vector multiplets and hypermultiplets are allowed",
+    "scalarGeometry": "special Kahler times quaternionic-Kahler",
+    "gaugingData": ["gauge coupling g", "Killing vectors k_Lambda^u", "moment maps P_Lambda^x", "symplectic/electric-magnetic embedding", "vacuum expectation values"],
+    "supersymmetryRole": "fixes the covariant geometric form once the target geometry and gauging are chosen",
+    "selectorRole": "does not choose those model data"
+  },
+  "pseudoscalarEmbedding": {
+    "candidate": "an axionic coordinate a in a hypermultiplet or scalar-tensor multiplet",
+    "minimumHypermultipletBosons": 4,
+    "minimumHypermultipletWeylFermions": 2,
+    "isolatedPgtZeroMinusOnly": false,
+    "extraSpectrumRequired": true
+  },
+  "canonicalMatchingTemplate": {
+    "coordinateKineticTerm": "oneHalf h_aa (partial a)^2",
+    "gaugedShift": "D a=partial a+g k A",
+    "canonicalCoordinate": "a_c=sqrt(h_aa) a",
+    "normalizedGaugingCombination": "g k/sqrt(h_aa)",
+    "witnesses": [
+      {"g":0.0625,"k":1,"haa":1,"normalizedCombination":0.0625},
+      {"g":0.125,"k":1,"haa":1,"normalizedCombination":0.125},
+      {"g":0.25,"k":1,"haa":1,"normalizedCombination":0.25},
+      {"g":0.25,"k":1,"haa":4,"normalizedCombination":0.125}
+    ],
+    "qualification": "these are local normalization witnesses; a complete supergravity vacuum must also satisfy its moment-map potential and field equations"
+  },
+  "targetAudit": {
+    "oneEighthAdmitted": true,
+    "oneEighthSelected": false,
+    "massivePgtPoleIdentified": false,
+    "fermionAxialCoefficientDerived": false,
+    "missing": ["specific quaternionic-Kahler manifold", "gauged isometry and embedding", "supersymmetric or broken vacuum", "mass and mixing matrices", "map to independent Lorentz-connection torsion", "threshold matching to observed fermions"]
+  },
+  "verdict": "N=2 supersymmetry organizes an enlarged axion/tensor sector but leaves continuous gauging, geometry and vacuum data; it does not by itself select the PGT axial coefficient"
+}
