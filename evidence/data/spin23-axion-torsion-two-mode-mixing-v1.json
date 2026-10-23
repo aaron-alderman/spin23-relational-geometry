@@ -1,0 +1,34 @@
+{
+  "schema": "spin23.axion-torsion-two-mode-mixing/1",
+  "date": "2026-10-23",
+  "quadraticSystem": {
+    "fields": ["heterotic axion a", "PGT pseudoscalar torsion t"],
+    "lagrangian": "oneHalf dPhi^T K dPhi - oneHalf Phi^T M2 Phi + J5 g^T Phi",
+    "healthConditions": ["K positive definite", "generalized mass eigenvalues positive"],
+    "canonicalization": "Phi = K^(-1/2) O chi, with O^T K^(-1/2) M2 K^(-1/2) O diagonal",
+    "massBasisCouplings": "h = O^T K^(-1/2) g",
+    "residueSumRule": "sum_i h_i^2 = g^T K^(-1) g"
+  },
+  "identityKineticWitness": {
+    "K": [[1,0],[0,1]],
+    "massEigenvaluesSquared": [1,9],
+    "sourceCoupling": [0,0.25],
+    "rotationConvention": "Phi = [[cos(theta),-sin(theta)],[sin(theta),cos(theta)]] chi",
+    "witnesses": [
+      {"thetaRadians":0,"lightCoupling":0,"heavyCoupling":0.25,"couplingNormSquared":0.0625},
+      {"thetaRadians":0.5235987755982988,"lightCoupling":0.125,"heavyCoupling":0.21650635094610965,"couplingNormSquared":0.0625},
+      {"thetaRadians":1.5707963267948966,"lightCoupling":0.25,"heavyCoupling":0,"couplingNormSquared":0.0625}
+    ]
+  },
+  "topologyAudit": {
+    "netGenerations": 3,
+    "dependsOnMixingAngle": false,
+    "reason": "the chiral index is fixed by bundle topology while the two-mode kinetic and mass matrices are continuous low-energy data"
+  },
+  "selectionAudit": {
+    "oneEighthOccurs": "theta=pi/6 for source norm eta=1/4",
+    "selected": false,
+    "reason": "all displayed angles have positive kinetic terms and the same positive pole masses and topological index"
+  },
+  "verdict": "a healthy stabilized two-mode system can realize 1/8, but positivity, pole masses and the three-generation index do not select it"
+}
