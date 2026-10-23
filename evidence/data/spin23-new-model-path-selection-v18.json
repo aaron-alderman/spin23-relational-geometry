@@ -1,0 +1,19 @@
+{
+  "schema": "spin23.new-model-path-selection/18",
+  "date": "2026-10-23",
+  "objective": "attempt the minimal new four-gate parent by placing the Lorentz connection in an ordinary N=1 vector supermultiplet",
+  "terminalStates": ["completed", "rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"LV","branch":"ordinary N=1 Lorentz vector-supermultiplet construction","state":"completed","result":"the full invariant kinetic-form family was derived in the rotation/boost basis"},
+    {"id":"KF","branch":"choose a positive Lorentz-invariant gauge kinetic form","state":"rejected_as_selector","result":"every nonzero real invariant symmetric form has signature three plus three"},
+    {"id":"SS","branch":"supersymmetry removes the negative-sign directions","state":"rejected_as_selector","result":"the common gauge-index metric pairs rather than removes the negative vector and gaugino directions"},
+    {"id":"NR","branch":"nonlinear realization preserves the minimal proposal","state":"rejected_as_selector","result":"a positive metric requires new breaking fields, a compact linearly realized subgroup and vacuum data"},
+    {"id":"NP","branch":"new non-Yang-Mills four-gate torsionful supersymmetric parent","state":"externally_blocked","blocker":"tetrad-dependent invariant action, full multiplet, nonlinear constraints, vacuum, radiative protection and matching absent"},
+    {"id":"HD","branch":"complete higher-spin-to-PGT dictionary","state":"externally_blocked","blocker":"bulk field map, normalized correlators and low-spin effective action absent"},
+    {"id":"SV","branch":"microscopic stabilized torsional compactification","state":"externally_blocked","blocker":"complete vacuum and normalized mixing, spectrum and threshold data absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "the ordinary N=1 super-Yang-Mills vector-multiplet completion of the real Lorentz connection",
+  "decision": "the minimal construction is excluded by the indefinite invariant kinetic form; viable continuations must be non-Yang-Mills, nonlinearly realized or otherwise enlarged and hence require new model data"
+}
