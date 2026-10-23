@@ -1,0 +1,54 @@
+{
+  "schema": "spin23.m-algebra-torsion-parent-audit/1",
+  "date": "2026-10-23",
+  "parent": {
+    "dimension": 11,
+    "localGaugeAlgebra": "M-algebra",
+    "localSupersymmetry": true,
+    "chernSimonsLikeSingleConnection": true,
+    "sameAsCremmerJuliaScherkSupergravity": false
+  },
+  "connectionContent": {
+    "vielbein": true,
+    "independentLorentzConnection": true,
+    "gravitino": true,
+    "rankTwoLorentzTensorOneForm": true,
+    "rankFiveLorentzTensorOneForm": true
+  },
+  "vacuumAudit": {
+    "genericVacuaDegenerate": true,
+    "genericVacuaHavePropagatingDegreesOfFreedom": false,
+    "warpedProductFamily": "S^(10-d) times X_(d+1), with X a warped product of R and a d-dimensional spacetime",
+    "nontrivialGravitonPropagatorOnlyAtD": 4,
+    "fourDimensionalCosmologicalSign": "positive",
+    "fourDimensionalMetricLimit": "linearized general relativity on de Sitter space"
+  },
+  "targetAudit": {
+    "targetBackground": "Spin(2,3) or anti-de Sitter four-dimensional broken phase",
+    "backgroundSignMatches": false,
+    "propagatingAxialZeroMinusConnectionPoleDerived": false,
+    "healthyPoleResidueAndMassDerived": false,
+    "observedFermionMatterSectorPresent": false,
+    "normalizedAxialCurrentMapPresent": false,
+    "etaMapPresent": false,
+    "oneEighthSelected": false
+  },
+  "gateVector": {
+    "localSupersymmetry": true,
+    "independentConnection": true,
+    "healthyPropagatingZeroMinus": false,
+    "targetVacuumAndMatterMatching": false
+  },
+  "requiredNewInput": [
+    "a nondegenerate anti-de Sitter vacuum with the target four-dimensional symmetry",
+    "a complete fluctuation decomposition proving a healthy axial connection pole",
+    "a compactification or localization retaining that pole",
+    "a realistic fermion matter sector",
+    "normalized axial-current and threshold matching"
+  ],
+  "sources": [
+    "https://arxiv.org/abs/hep-th/0306258",
+    "https://arxiv.org/abs/hep-th/0503220"
+  ],
+  "verdict": "M-algebra gauge supergravity supplies local supersymmetry and an independent connection, but its established dynamical reduction yields de Sitter general relativity rather than a healthy axial torsion pole or Spin(2,3) fermion portal"
+}
