@@ -1,0 +1,26 @@
+{
+  "schema": "spin23.axial-coefficient-selection-no-go/1",
+  "date": "2026-10-23",
+  "operator": "O_A = S_mu bar(psi) gamma^mu gamma_5 psi",
+  "coefficientDecomposition": "c_total = c_min + kappa",
+  "minimalMagnitude": 0.125,
+  "symmetryLemma": "if an unbroken symmetry permits c_min O_A with nonzero c_min, it permits kappa O_A because symmetry acts on the operator rather than on the bookkeeping origin of its coefficient",
+  "identityFlavorDirection": "every family conjugation leaves the identity coefficient invariant",
+  "namedTransformations": [
+    {"name":"fermion number","operatorParity":"even","result":"does not forbid"},
+    {"name":"massless chiral phase","operatorParity":"even","result":"does not forbid"},
+    {"name":"charge conjugation","operatorParity":"even","result":"does not forbid"},
+    {"name":"four-dimensional parity","operatorParity":"even","result":"does not forbid"},
+    {"name":"compensator reversal","operatorParity":"even","result":"does not forbid"},
+    {"name":"E6 and residual family transformations","operatorParity":"identity direction is a singlet","result":"cannot fix its scalar coefficient"}
+  ],
+  "oneLoopRG": {
+    "equation": "(4 pi)^2 d eta / dt = C eta h^2",
+    "condition": "C > 0",
+    "fixedPointsForNonzeroYukawa": [0],
+    "minimalPointIsFixed": false,
+    "zeroYukawaLimit": "all eta are marginal, so no value is selected",
+    "multiSpecies": "mixing and species-dependent coefficients are allowed"
+  },
+  "verdict": "ordinary unbroken symmetries cannot distinguish minimal and nonminimal contributions to the same operator, and the standard perturbative RG does not select |eta| = 1/8"
+}

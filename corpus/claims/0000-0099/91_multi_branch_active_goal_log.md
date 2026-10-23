@@ -27054,3 +27054,7 @@ Minimal metric-compatible Dirac coupling fixes \(|c_f|=1/8\) universally and ide
 ## Cycle 1233 — the compensator closes the parent-covariance escape
 
 The covariant four-form \((J_{5,A}E^A)\wedge(E_B\wedge T^B)\) is allowed by full Spin(2,3) and reduces in physical gauge to the nonminimal axial torsion-current operator.  Because the contraction is also parity even, neither parent covariance nor parity protects the minimal coefficient.  The protection graph now terminates only at a genuinely new selection law and a complete threshold/anomaly-matching action.  Artifacts: [1736--1737](../1700-1799/1737_parent_covariance_does_not_rescue_minimal_torsion_flavor_and_the_protection_graph_is_exhausted.md).
+
+## Cycle 1234 — same-operator symmetry and perturbative RG close the conventional selector space
+
+Minimal and nonminimal axial terms multiply the identical invariant, so no unbroken symmetry can retain the nonzero minimal contribution while forbidding an additive coefficient.  Fermion, chiral, C, P, compensator, E6 and family transformations all leave the scalar or its identity direction allowed.  The standard beta function \((4\pi)^2d\eta/dt=C\eta h^2\) fixes zero for nonzero Yukawa coupling and leaves every value marginal at zero Yukawa; it never selects \(1/8\).  Only a new UV grading/nonrenormalization theorem or a computed interacting fixed point remains.  Artifacts: [1739--1740](../1700-1799/1740_the_conventional_torsion_flavor_selection_programme_is_exhausted_at_two_new_physics_gates.md).
