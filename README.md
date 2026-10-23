@@ -15,6 +15,8 @@ This is **not a completed unified theory**. Established mathematics, reproducibl
 
 The generated paged edition is available in [`docs/edition-3`](docs/edition-3/index.html) and is deployed to [GitHub Pages](https://aaron-alderman.github.io/spin23-relational-geometry/). The Pages workflow regenerates and tests the book before publishing the committed static site.
 
+`book/edition-3/book.json` is the canonical machine-readable publication object. GitHub Pages renders it locally; Claimipedia mirrors its scientific fields and citation digest through the Sourcery MCP lane, and may add presentation metadata without becoming a second research source of truth. The [Claimipedia publication authority contract](integrations/claimipedia/PUBLICATION-AUTHORITY.md) defines that boundary.
+
 ## Current position
 
 The strongest present synthesis remains conditional:

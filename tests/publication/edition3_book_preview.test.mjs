@@ -14,6 +14,10 @@ test("Edition 3 exposes matching Markdown and HTML books", () => {
   assert.equal(metadata.chapters.length, 12);
   assert.equal(metadata.findings.length, 24);
   assert.equal(metadata.frontiers.length, 9);
+  assert.equal(metadata.publicationAuthority.role, "canonical-publication-source");
+  assert.equal(metadata.publicationAuthority.sourcePath, "book/edition-3/book.json");
+  assert.ok(metadata.publicationAuthority.authoritativeFields.includes("findings"));
+  assert.ok(metadata.publicationAuthority.authoritativeFields.includes("frontiers"));
   assert.match(metadata.citationDigest, /^[a-f0-9]{64}$/u);
   for (const chapter of metadata.chapters) {
     assert.equal(existsSync(new URL(`book/edition-3/chapters/${chapter.slug}.md`, root)), true, chapter.slug);
