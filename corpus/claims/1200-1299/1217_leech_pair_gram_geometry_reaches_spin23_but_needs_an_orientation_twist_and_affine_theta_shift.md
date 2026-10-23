@@ -199,7 +199,7 @@ The sign reversal is therefore structural, not cosmetic: it is what changes the 
 
 ## 7. Decisive next gate
 
-Construct a microscopic ordered-pair or seam map whose reversal changes one determinant-fifteen summand from \(L_{15}\) to \(L_{15}(-1)\), and prove that the same datum fixes an affine characteristic rather than merely choosing it by hand. The gate passes only if the construction also intertwines the existing Golay sewing module with the resulting \((\mathbb Z/3)^2\) hyperbolic discriminant module. Failure leaves a valuable arithmetic adjacency but no physical selector.
+[Claim 1790](../1700-1799/1790_the_leech_seam_needs_one_affine_orientation_bit_to_intertwine_sign_and_theta_shift.md) closes the algebraic part and sharpens the obstruction. Bare summand reversal sends the ternary discriminant form to its negative but fixes the mod-two norm refinement, so it cannot also create a nonzero affine theta shift. Retaining one orientation bit as an affine torsor gives an exact augmented reversal that does both. [Claim 1793](../1700-1799/1793_the_rule60_golay_kernel_supplies_the_unique_tm23_leech_affine_seam_torsor.md) supplies its finite provenance: the Rule-60 kernel is the unique two-sheeted Golay deck line, and its unique nonzero map to the machine-selected line sends $\mathbf1$ to $v$. The remaining gate is physical realization of this finite seam.
 
 ## Sources and certificate
 
@@ -211,4 +211,6 @@ Construct a microscopic ordered-pair or seam map whose reversal changes one dete
 - [The global \(Sp(4,\mathbb R)\)-\(Spin_0(2,3)\) isomorphism](../0000-0099/47_global_group_isomorphism_sp4r_spin023.md)
 - [The exact two-qutrit genus-two carrier](../0400-0499/478_the_genus_two_a2_weil_representation_is_exactly_the_two_qutrit_clifford_carrier_and_derives_the_cross_gate_from_a_sum_cycle_twist.md)
 - [Arithmetic verification script](../../../verification/verify/verify_leech_pair_gram_spin23_bridge.mjs)
+- [Affine-orientation seam verifier](../../../verification/verify/verify_leech_seam_affine_orientation_intertwiner.mjs)
+- [Rule-60/Golay seam-torsor verifier](../../../verification/verify/verify_rule60_golay_kernel_supplies_the_leech_seam_torsor.mjs)
 
