@@ -27106,3 +27106,7 @@ The zero-free kernels \(K_\alpha=M_{\rm Pl}^2p^2\exp[x+\alpha x^2]\) retain only
 ## Cycle 1246 — the healthy bimetric escape has the same inverse degeneracy
 
 For matter metric \(h_g=\cos\theta h_0+\sin\theta h_m\), the exact propagator has positive residues \(\cos^2\theta\) and \(\sin^2\theta\).  Its normalized local expansion fixes only \(q=\tan^2\theta/m_2^2\).  Three witnesses with \((\tan\theta,m_2^2)=(1/2,1/4),(1,1),(2,4)\) share \(q=1\) while their pole masses and residues differ.  The axial coupling remains independently \(0,1/8,1/4\).  Both entire and bimetric spin-two escapes now terminate at a new parent principle with a cross-sector Ward relation.  Artifacts: [1763--1764](../1700-1799/1764_both_healthy_spin_two_escapes_are_inverse_degenerate_and_decoupled_from_axial_selection.md).
+
+## Cycle 1247 — positive spectral reconstruction rejects the simple exponential and retains bimetric propagation
+
+In a physical transverse-traceless channel, a positive massless spectral weight \(Z\) implies \(Q^2D(Q^2)\ge Z\).  The exponential propagator gives \(Q^2D/Z=e^{-Q^2/M^2}<1\) and cannot have the standard positive representation.  The bimetric propagator instead has positive delta weights \(\cos^2\theta\) and \(\sin^2\theta\).  This selects the bimetric construction under ordinary positivity, but the spectral gate contains no axial vertex and still admits \(0,1/8,1/4\).  Artifacts: [1765--1766](../1700-1799/1766_positive_reconstruction_selects_the_bimetric_escape_but_still_cannot_select_one_eighth.md).

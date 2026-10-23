@@ -1,0 +1,34 @@
+{
+  "schema": "spin23.spin2-positive-spectral-reconstruction/1",
+  "date": "2026-10-23",
+  "positiveSpectralCriterion": {
+    "euclideanRepresentation": "D(Q2)=Z/Q2+integral_0^infinity rho(s)/(Q2+s) ds",
+    "conditions": ["Z>0", "rho(s)>=0"],
+    "necessaryInequality": "Q2 D(Q2)>=Z for every Q2>0",
+    "reason": "the continuum contribution is nonnegative"
+  },
+  "exponentialAudit": {
+    "propagator": "D_exp(Q2)=Z exp(-Q2/M2)/Q2",
+    "scaledPropagator": "Q2 D_exp=Z exp(-Q2/M2)",
+    "forPositiveQ2": "strictly less than Z",
+    "standardPositiveSpectralRepresentation": false,
+    "scope": "physical transverse-traceless channel under the ordinary positive spectral assumption"
+  },
+  "bimetricAudit": {
+    "propagator": "D_bi(Q2)=cos(theta)^2/Q2+sin(theta)^2/(Q2+m2^2)",
+    "spectralMeasure": "rho(s)=cos(theta)^2 delta(s)+sin(theta)^2 delta(s-m2^2)",
+    "standardPositiveSpectralRepresentation": true,
+    "conditions": "0<theta<pi/2 and m2^2>0"
+  },
+  "numericWitnesses": [
+    {"x":0.25,"exponentialScaledRatio":0.7788007830714049},
+    {"x":1,"exponentialScaledRatio":0.36787944117144233},
+    {"x":4,"exponentialScaledRatio":0.01831563888873418}
+  ],
+  "axialAudit": {
+    "positiveSpectralGateContainsEta": false,
+    "bimetricAllowedEta": [0,0.125,0.25],
+    "verdict": "standard spectral positivity discriminates the spin-two completions but does not select the axial torsion coupling"
+  },
+  "caveat": "a nonlocal theory may reject ordinary Kallen-Lehmann reconstruction, but it must then state and prove a replacement unitarity or positivity principle"
+}

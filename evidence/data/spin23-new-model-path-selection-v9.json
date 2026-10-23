@@ -1,0 +1,19 @@
+{
+  "schema": "spin23.new-model-path-selection/9",
+  "date": "2026-10-23",
+  "objective": "apply positive spectral reconstruction to the two healthy-pole-count spin-two escapes and propagate the result to axial selection",
+  "terminalStates": ["completed", "rejected_under_standard_positivity", "rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"KL","branch":"physical-channel positive spectral gate","state":"completed","result":"a massless residue Z requires Q2 D(Q2)>=Z for Q2>0"},
+    {"id":"EX","branch":"simple exponentially suppressed propagator","state":"rejected_under_standard_positivity","result":"Q2 D/Z=exp(-Q2/M2)<1 contradicts the positive spectral lower bound"},
+    {"id":"BM","branch":"positive-residue bimetric propagator","state":"completed","result":"admits two nonnegative delta-function spectral weights"},
+    {"id":"AS","branch":"spectral positivity selects the axial coefficient","state":"rejected_as_selector","result":"the positivity inequality contains no axial vertex and the surviving bimetric family admits 0, 1/8 and 1/4"},
+    {"id":"BP","branch":"Spin(2,3)-derived nonlinear bimetric parent","state":"externally_blocked","blocker":"second metric, constraint-preserving potential, matter coupling, cross-sector Ward identity, full flow and matching absent"},
+    {"id":"NP","branch":"nonstandard positive nonlocal reconstruction","state":"externally_blocked","blocker":"a replacement for ordinary Kallen-Lehmann positivity has not been defined or proved"},
+    {"id":"SV","branch":"microscopic stabilized torsional compactification","state":"externally_blocked","blocker":"complete vacuum and normalized mixing, spectrum and threshold data absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "standard positive spectral reconstruction of the explicit exponential and bimetric spin-two completion representatives",
+  "decision": "ordinary positivity rejects the simple exponential and retains bimetric propagation, but the surviving positive completion still does not select the axial coupling"
+}
