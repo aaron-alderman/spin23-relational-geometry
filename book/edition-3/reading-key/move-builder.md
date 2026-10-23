@@ -33,6 +33,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [A9 · Predict a causal interacting spectrum](../chapters/09-research-frontier.md#A9)
 - [A11 · Turn sensitivity into a physical test](../chapters/09-research-frontier.md#A11)
 - [GRAPH · Derive the missing anisotropies](../chapters/09-research-frontier.md#GRAPH)
+- [TORSION-UV · Construct the protected torsion parent](../chapters/09-research-frontier.md#TORSION-UV)
 - [Claim · One carrier, two faces, three relations · The graph result (1)](../details/02-one-carrier-two-faces-three-relations-the-graph-result-claim-1.md)
 - [Claim · The projective loop · From topology to a defect (1)](../details/03-projective-loop-from-topology-to-a-defect-claim-1.md)
 - [Claim · The projective loop · From topology to a defect (2)](../details/03-projective-loop-from-topology-to-a-defect-claim-2.md)

@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "docs/**"
+      - "book/edition-3/**"
+      - "tooling/publication/**"
+      - "tests/publication/**"
       - ".github/workflows/publish-edition-3-pages.yml"
   workflow_dispatch:
 
@@ -19,17 +22,25 @@ concurrency:
 
 jobs:
   deploy:
-    # GitHub Free cannot publish Pages from this private repository. Pushes become
-    # eligible automatically if it is made public; an eligible paid plan can use
-    # the manual dispatch path without another workflow edit.
-    if: github.event_name == 'workflow_dispatch' || github.event.repository.visibility == 'public'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Check out the corpus
         uses: actions/checkout@v5
+
+      - name: Regenerate the static book
+        run: node tooling/publication/generate_edition3_book_preview.mjs
+
+      - name: Verify generated files are committed
+        run: git diff --exit-code -- book/edition-3 docs/edition-3 docs/index.html
+
+      - name: Test the publication surfaces
+        run: |
+          node --test tests/publication/edition3_book_preview.test.mjs
+          node --test tests/publication/concept_map.test.mjs
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

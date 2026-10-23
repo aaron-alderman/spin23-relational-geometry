@@ -1,6 +1,6 @@
 # Research frontier
 
-_Seven physical gates, one graph lane, explicit reopen rules_
+_Legacy action gates, the graph lane and the current torsion-parent boundary_
 
 > **Chapter status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
 
@@ -148,10 +148,29 @@ _The terminal partition says where new information must enter._
 - [1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md](../../../corpus/claims/1400-1499/1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md)
 - [1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md](../../../corpus/claims/1200-1299/1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md)
 
+<a id="TORSION-UV"></a>
+## TORSION-UV · Construct the protected torsion parent
+
+> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+
+> **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Priority:** `highest`
+
+**Question:** Which complete microscopic theory contains a nondegenerate vacuum, a positive independent zero-minus connection pole and a protected normalized axial-current coupling?
+
+**Advance when:** One action passes the reality, constraint, spectrum, radiative-protection and threshold-matching gates without importing the answer as a free coefficient.
+
+**Stop or downgrade when:** Another symmetry label, projector or quadratic parameter scan cannot replace the missing model.
+
+- [1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md](../../../corpus/claims/1700-1799/1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md)
+
 ## Chapter sources
 
 - [1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md](../../../corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md)
 - [1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md](../../../corpus/claims/1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md)
+- [1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md](../../../corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md)
+- [1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md](../../../corpus/claims/1700-1799/1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md)
 
 ---
 

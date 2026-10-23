@@ -26,6 +26,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [E3-F15 · Healthy bosonic poles do not settle the chiral fold](../chapters/08-result-ledger.md#E3-F15)
 - [E3-F17 · The canonical completion carries index three, but its minimal 6D parent is anomalous](../chapters/08-result-ledger.md#E3-F17)
 - [E3-F20 · The softened QWZ curve is not the response of its stated Lindbladian](../chapters/08-result-ledger.md#E3-F20)
+- [E3-F23 · The local gravity route has one healthy critical torsion sector but no closed quantum parent](../chapters/08-result-ledger.md#E3-F23)
 - [Claim · One carrier, two faces, three relations · Three relations do not select an orientation (1)](../details/02-one-carrier-two-faces-three-relations-three-relations-do-not-select-an-orientation-claim-1.md)
 - [Claim · The projective loop · The reversal (1)](../details/03-projective-loop-the-reversal-claim-1.md)
 - [Claim · The projective loop · Central sign versus handedness (1)](../details/03-projective-loop-central-sign-versus-handedness-claim-1.md)

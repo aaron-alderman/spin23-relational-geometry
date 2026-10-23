@@ -23,7 +23,12 @@ const files=walk(root).filter(p=>p.endsWith('.md'));
 const broken=[];
 for(const file of files){
   const text=fs.readFileSync(file,'utf8');
-  const links=text.matchAll(/\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/g);
+  const prose=text
+    .replace(/```[\s\S]*?```/g,'')
+    .replace(/~~~[\s\S]*?~~~/g,'')
+    .replace(/\\\[[\s\S]*?\\\]/g,'')
+    .replace(/\$\$[\s\S]*?\$\$/g,'');
+  const links=prose.matchAll(/\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/g);
   for(const match of links){
     let target=match[1].replace(/^<|>$/g,'');
     if(/^(?:https?:|mailto:|data:|#|codex:)/i.test(target))continue;

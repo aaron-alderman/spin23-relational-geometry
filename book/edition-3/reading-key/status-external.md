@@ -22,6 +22,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [A4 · Define the chiral physical-state domain](../chapters/09-research-frontier.md#A4)
 - [A6 · Make index three anomaly-free and mirror-free](../chapters/09-research-frontier.md#A6)
 - [A11 · Turn sensitivity into a physical test](../chapters/09-research-frontier.md#A11)
+- [TORSION-UV · Construct the protected torsion parent](../chapters/09-research-frontier.md#TORSION-UV)
 - [Claim · The revised spine · What remains open (1)](../details/01-the-revised-spine-what-remains-open-claim-1.md)
 - [Claim · The revised spine · Algebra is not yet spacetime (1)](../details/01-the-revised-spine-algebra-is-not-yet-spacetime-claim-1.md)
 - [Claim · The Furey interface · Why it is not yet unification (1)](../details/04-furey-interface-why-it-is-not-yet-unification-claim-1.md)

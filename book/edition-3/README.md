@@ -1,6 +1,6 @@
 # Spin(2,3): Jordan-triple closure and the Standard Model frontier
 
-**Edition 3.1 expanded preview · 20 October 2026**
+**Edition 3.1 expanded preview · 23 October 2026**
 
 ![Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon](../../docs/edition-3/assets/relational-geometry-hero.png)
 
@@ -20,8 +20,8 @@ This expanded edition turns the research ledger into a reader's path. It begins 
 6. [The Standard-Model seam](chapters/05-standard-model-seam.md) — **[↗ Externally open](reading-key/status-external.md)** · **[⌕ Auditor](reading-key/move-auditor.md)** · Mediator completion and the third edge
 7. [Proton safety, Pati–Salam and triality](chapters/06-proton-safety.md) — **[◇ Conditional](reading-key/status-conditional.md)** · **[⚒ Builder](reading-key/move-builder.md)** · Selection is the physics
 8. [The exceptional horizon](chapters/07-exceptional-horizon.md) — **[◎ Interpretive map](reading-key/status-interpretive.md)** · **[⌖ Cartographer](reading-key/move-cartographer.md)** · Jordan, Leech and Monster without overclaim
-9. [Result and reversal ledger](chapters/08-result-ledger.md) — **[▦ Ledger / governance](reading-key/status-governance.md)** · **[▤ Steward](reading-key/move-steward.md)** · Twenty-two retained findings
-10. [Research frontier](chapters/09-research-frontier.md) — **[↗ Externally open](reading-key/status-external.md)** · **[✦ Scout](reading-key/move-scout.md)** · Seven physical gates, one graph lane, explicit reopen rules
+9. [Result and reversal ledger](chapters/08-result-ledger.md) — **[▦ Ledger / governance](reading-key/status-governance.md)** · **[▤ Steward](reading-key/move-steward.md)** · Twenty-four retained findings
+10. [Research frontier](chapters/09-research-frontier.md) — **[↗ Externally open](reading-key/status-external.md)** · **[✦ Scout](reading-key/move-scout.md)** · Legacy action gates, the graph lane and the current torsion-parent boundary
 11. [Provenance and reading map](chapters/10-provenance-and-reading-map.md) — **[▦ Ledger / governance](reading-key/status-governance.md)** · **[▤ Steward](reading-key/move-steward.md)** · How to audit the book
 12. [Concept atlas](chapters/11-concept-atlas.md) — **[◎ Interpretive map](reading-key/status-interpretive.md)** · **[⌖ Cartographer](reading-key/move-cartographer.md)** · The programme as a navigable typed graph
 
@@ -34,4 +34,4 @@ This expanded edition turns the research ledger into a reader's path. It begins 
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `8fc8f8c14811f5f1f9623eb39f1111bb5898226f54daa220a0dff48ec9a0e8e2`
+Citation-set digest: `f6ccabe86cc5463256bf5560d7626d6cef0c66210c9a569310798a82217d3934`

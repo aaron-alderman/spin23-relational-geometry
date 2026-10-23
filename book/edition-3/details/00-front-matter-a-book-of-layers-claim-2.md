@@ -35,6 +35,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 ## Controlling documents
 
 - **genuine exhaustion leaves no untyped internal work but seven named external or conditional frontiers** — [1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md](../../../corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md)
+- **all finite escapes from the minimal connection parent now end at new model construction** — [1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md](../../../corpus/claims/1700-1799/1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

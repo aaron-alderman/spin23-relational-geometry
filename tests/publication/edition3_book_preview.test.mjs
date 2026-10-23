@@ -12,8 +12,8 @@ test("Edition 3 exposes matching Markdown and HTML books", () => {
   assert.equal(metadata.schema, "spin23-edition3-book/v1");
   assert.equal(metadata.edition, "3.1 expanded preview");
   assert.equal(metadata.chapters.length, 12);
-  assert.equal(metadata.findings.length, 22);
-  assert.equal(metadata.frontiers.length, 8);
+  assert.equal(metadata.findings.length, 24);
+  assert.equal(metadata.frontiers.length, 9);
   assert.match(metadata.citationDigest, /^[a-f0-9]{64}$/u);
   for (const chapter of metadata.chapters) {
     assert.equal(existsSync(new URL(`book/edition-3/chapters/${chapter.slug}.md`, root)), true, chapter.slug);
@@ -216,6 +216,7 @@ test("the book preserves the authority boundary and physical firewall", () => {
   assert.ok(metadata.findings.some(finding => finding.status === "internally-exhausted"));
   assert.ok(metadata.findings.some(finding => finding.status === "simulation-ready"));
   assert.ok(metadata.frontiers.some(frontier => frontier.id === "A11"));
+  assert.ok(metadata.findings.some(finding => finding.sources.some(source => source.includes("1788_all_finite_escapes"))));
   assert.ok(metadata.chapters.every(chapter => typeof chapter.archetype === "string"));
 });
 

@@ -20,6 +20,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Provenance and reading map · How to challenge a claim](../chapters/10-provenance-and-reading-map.md#how-to-challenge-a-claim)
 - [Concept atlas · A compact vocabulary](../chapters/11-concept-atlas.md#a-compact-vocabulary)
 - [E3-F22 · Seven gates now have explicit stopping and reopening rules](../chapters/08-result-ledger.md#E3-F22)
+- [E3-F24 · Every finite connection-parent escape now ends at new model construction](../chapters/08-result-ledger.md#E3-F24)
 - [Claim · Front matter · Successor, not replacement (1)](../details/00-front-matter-successor-not-replacement-claim-1.md)
 - [Claim · Front matter · Successor, not replacement (2)](../details/00-front-matter-successor-not-replacement-claim-2.md)
 - [Claim · Front matter · The authority boundary (1)](../details/00-front-matter-the-authority-boundary-claim-1.md)

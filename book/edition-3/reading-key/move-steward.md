@@ -17,6 +17,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Chapter · Result and reversal ledger](../chapters/08-result-ledger.md)
 - [Chapter · Provenance and reading map](../chapters/10-provenance-and-reading-map.md)
 - [E3-F22 · Seven gates now have explicit stopping and reopening rules](../chapters/08-result-ledger.md#E3-F22)
+- [E3-F24 · Every finite connection-parent escape now ends at new model construction](../chapters/08-result-ledger.md#E3-F24)
 - [Claim · Front matter · Successor, not replacement (1)](../details/00-front-matter-successor-not-replacement-claim-1.md)
 - [Claim · Front matter · Successor, not replacement (2)](../details/00-front-matter-successor-not-replacement-claim-2.md)
 - [Claim · Front matter · The authority boundary (1)](../details/00-front-matter-the-authority-boundary-claim-1.md)

@@ -1,6 +1,6 @@
 # Result and reversal ledger
 
-_Twenty-two retained findings_
+_Twenty-four retained findings_
 
 > **Chapter status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
 
@@ -365,6 +365,36 @@ A5 and A7 are internally exhausted; A2 and A9 are conditionally constructed; A4,
 
 - [1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md](../../../corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md)
 - [1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md](../../../corpus/claims/1400-1499/1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md)
+
+<a id="E3-F23"></a>
+## E3-F23 · The local gravity route has one healthy critical torsion sector but no closed quantum parent
+
+> **Ledger reading — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Detailed status:** `established-boundary`
+
+The reopened mass-gap and action programme isolates a healthy classical/EFT zero-minus torsion sector and a complete quadratic shell, while the local quantum flow leaves the critical surface through a Weyl-square term.
+
+**Boundary:** Positive enlarged completions remain possible, but they import new functional, metric, vacuum or matching data and do not select the axial portal.
+
+- [1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md](../../../corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md)
+
+<a id="E3-F24"></a>
+## E3-F24 · Every finite connection-parent escape now ends at new model construction
+
+> **Ledger reading — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
+
+> **Research move — [▤ Steward](../reading-key/move-steward.md)** — preserves provenance, memory, status and continuity.
+
+**Detailed status:** `terminal-current-input`
+
+Ordinary Lorentz super-Yang--Mills is kinetically indefinite; self-duality requires complex reality constraints; nonlinear Lorentz realization gives a massive rotation-vector triplet rather than the target pseudoscalar.
+
+**Boundary:** This is operational exhaustion under current inputs, not a theorem against future models. Reopening requires a complete action, vacuum, constraint solution, positive spectrum and normalized fermion matching.
+
+- [1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md](../../../corpus/claims/1700-1799/1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md)
 
 ## Chapter sources
 
