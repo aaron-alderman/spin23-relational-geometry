@@ -1,0 +1,31 @@
+{
+  "schema": "spin23.axial-u1-locking-completion/1",
+  "date": "2026-10-23",
+  "fields": ["Spin(2,3) gravity sector", "axial U(1) gauge field B_mu", "Stueckelberg scalar a", "charged fermions"],
+  "gaugeTransformations": ["B_mu -> B_mu + partial_mu alpha", "a -> a + M alpha", "S_mu -> S_mu"],
+  "gaugeInvariantCombination": "X_mu = B_mu - partial_mu a/M",
+  "lockingTerm": "(M^2/2) (X_mu - rho S_mu)^2",
+  "fermionCoupling": "g q B_mu J5^mu",
+  "lowEnergyAlgebraicSolution": "B_mu = rho S_mu - (g q/M^2) J5_mu + O(partial^2/M^2)",
+  "lowEnergyOperators": {
+    "axialTorsion": "eta_eff S_mu J5^mu with eta_eff = g q rho",
+    "fourFermion": "-(g q)^2 J5_mu J5^mu/(2 M^2)"
+  },
+  "selectionTest": {
+    "chargeQuantized": true,
+    "gaugeCouplingContinuous": true,
+    "lockingCoefficientContinuous": true,
+    "oneEighthCondition": "rho = 1/(8 g q)",
+    "oneEighthIsPrediction": false
+  },
+  "pureAxialDiracCharges": "q_L=-q and q_R=+q",
+  "anomaliesPerDirac": {
+    "leftWeylCharges": ["-q", "-q"],
+    "mixedGravitational": "-2 q",
+    "cubic": "-2 q^3"
+  },
+  "anomalyCancellationConditions": ["sum_i q_i = 0", "sum_i q_i^3 = 0"],
+  "minimalCancellationWitness": [1, -1],
+  "spectrumCost": ["one massive spin-one field", "one eaten Stueckelberg mode", "at least one opposite-axial anomaly-cancelling fermion for a single charged Dirac species", "a charged Higgs or equivalent structure for gauge-invariant fermion masses"],
+  "verdict": "gauging and locking axial charge converts eta into the continuous product g q rho, adds a four-fermion threshold and extra spectrum, and does not select 1/8"
+}

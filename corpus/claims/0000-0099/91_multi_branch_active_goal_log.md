@@ -27074,3 +27074,7 @@ Three complete beta functions reproduce the entire known matter-only slice while
 ## Cycle 1238 — Nieh--Yan closes the named anomaly escape
 
 The exact Nieh--Yan form integrates to zero on a smooth closed manifold and to boundary torsion data when a boundary is present.  Its anomaly coefficient has mass dimension two and shifts continuously under a local axial-current counterterm, while the bulk axial Wilson coefficient is dimensionless.  Torsional boundary and thermal response remain legitimate observables, but the anomaly cannot select \(1/8\).  Every current-input selector is now terminal; any continuation starts a genuinely new UV model or computation.  Artifacts: [1747--1748](../1700-1799/1748_the_named_anomaly_route_closes_at_boundary_response_not_bulk_coefficient_selection.md).
+
+## Cycle 1239 — explicit axial gauging reopens the programme but fails as a selector
+
+A compact axial \(U(1)\), Stueckelberg scalar and torsion-locking mass term form the least invasive explicit extension.  Integrating out the heavy vector gives \(\eta_{\rm eff}=gq\rho\) and a negative axial four-fermion threshold.  Integer charge leaves \(g\rho\) continuous; one pure-axial Dirac species is cubic and mixed-gravitational anomalous, so cancellation adds matter and mass-generation structure.  The candidate is rejected as a \(1/8\) selector and local supersymmetry becomes the next branch.  Artifacts: [1749--1750](../1700-1799/1750_gauged_axial_locking_fails_and_local_supersymmetry_is_the_next_new_model_branch.md).
