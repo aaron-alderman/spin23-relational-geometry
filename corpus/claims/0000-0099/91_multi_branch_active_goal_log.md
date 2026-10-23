@@ -27078,3 +27078,7 @@ The exact Nieh--Yan form integrates to zero on a smooth closed manifold and to b
 ## Cycle 1239 — explicit axial gauging reopens the programme but fails as a selector
 
 A compact axial \(U(1)\), Stueckelberg scalar and torsion-locking mass term form the least invasive explicit extension.  Integrating out the heavy vector gives \(\eta_{\rm eff}=gq\rho\) and a negative axial four-fermion threshold.  Integer charge leaves \(g\rho\) continuous; one pure-axial Dirac species is cubic and mixed-gravitational anomalous, so cancellation adds matter and mass-generation structure.  The candidate is rejected as a \(1/8\) selector and local supersymmetry becomes the next branch.  Artifacts: [1749--1750](../1700-1799/1750_gauged_axial_locking_fails_and_local_supersymmetry_is_the_next_new_model_branch.md).
+
+## Cycle 1240 — local supersymmetry permits a continuous Kähler deformation
+
+The real linear multiplet's dual vector is divergence-free and cannot represent the longitudinal critical \(0^-\) mode.  A chiral multiplet contains the pseudoscalar but necessarily adds a scalar and fermion; the shift-invariant Kähler family \(e^{c(A+\bar A)/f}\bar Q Q\) gives connection \(\Gamma^Q{}_{AQ}=c/f\) for arbitrary real \(c\).  Local supersymmetry therefore does not select \(1/8\), and a concrete string or higher-dimensional normalization is selected next.  Artifacts: [1751--1752](../1700-1799/1752_local_supersymmetry_fails_as_a_selector_and_string_normalization_is_the_next_model_branch.md).

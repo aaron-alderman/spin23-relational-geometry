@@ -1,0 +1,14 @@
+{
+  "schema": "spin23.new-model-path-selection/2",
+  "date": "2026-10-23",
+  "objective": "continue explicit UV model selection after gauged axial locking",
+  "nodes": [
+    {"id":"AU","branch":"compact axial U(1) locking","state":"rejected_as_selector","result":"eta=g q rho remains continuous"},
+    {"id":"SG","branch":"N=1 local supersymmetry","state":"rejected_as_selector","result":"linear multiplet misses the longitudinal mode; chiral Kähler D-terms permit a continuous coefficient and enlarge the spectrum"},
+    {"id":"ST","branch":"specific string or higher-dimensional torsion normalization","state":"next_selected","reason":"flux, level or charge data could in principle quantize a normalization, but compactification moduli and mixing must be tested"},
+    {"id":"FP","branch":"nonperturbative Spin(2,3) fixed point","state":"externally_blocked","reason":"complete quantization and beta packet absent"}
+  ],
+  "selectedNode": "ST",
+  "globalExhaustion": false,
+  "decision": "local supersymmetry alone fails; a concrete higher-dimensional or string normalization is the next explicit model branch"
+}

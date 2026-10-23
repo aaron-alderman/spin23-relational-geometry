@@ -1,0 +1,30 @@
+{
+  "schema": "spin23.n1-sugra-axial-selector-audit/1",
+  "date": "2026-10-23",
+  "target": "longitudinal axial torsion S_mu proportional to partial_mu a coupled to a fermion axial current",
+  "linearMultiplet": {
+    "bosons": ["real scalar", "two-form B_mn"],
+    "dualVector": "H^mu proportional to epsilon^(mu nu rho sigma) partial_nu B_rho_sigma",
+    "identity": "partial_mu H^mu = 0",
+    "targetMatch": false,
+    "reason": "the target 0-minus torsion mode is longitudinal, whereas the linear-multiplet dual vector is transverse by its Bianchi identity"
+  },
+  "chiralMultiplet": {
+    "superfield": "A = (s + i a)/sqrt(2) + fermion + auxiliary",
+    "targetMatch": true,
+    "unavoidablePartners": ["real scalar s", "Majorana/Weyl fermion chi_A"]
+  },
+  "kahlerWitness": {
+    "potential": "K = (A+Abar)^2/2 + exp[c(A+Abar)/f] Qbar Q",
+    "shift": "A -> A + i f alpha",
+    "shiftInvariant": true,
+    "matterMetricAtQ0": "G_QQbar = exp[c(A+Abar)/f]",
+    "connection": "Gamma^Q_AQ = partial_A log G_QQbar = c/f",
+    "componentConsequence": "the fermion sigma-model covariant derivative contains a partial_mu a current coupling proportional to c/f",
+    "cContinuous": true
+  },
+  "localSupersymmetryDecision": "the entire real one-parameter family is an allowed N=1 Kähler D-term, so the supersymmetry Ward identities do not select c or eta=1/8",
+  "spectrumCost": ["massless gravitino before supersymmetry breaking", "scalar partner of the pseudoscalar torsion mode", "fermionic partner of that multiplet", "scalar partners of matter fermions"],
+  "brokenPhase": "integrating out superpartners after supersymmetry breaking removes the exact Ward protection and generates threshold corrections",
+  "verdict": "N=1 local supersymmetry can organize the axial interaction but neither preserves the original 2+1 spectrum nor fixes its coefficient"
+}
