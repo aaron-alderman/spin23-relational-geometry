@@ -621,7 +621,12 @@ if (missingCertificates.length) throw new Error(`Missing proof certificates:\n${
 
 const corpusManifest = JSON.parse(readFileSync(join(root, "corpus", "registers", "spin23_corpus_manifest.json"), "utf8"));
 const numberedCount = corpusManifest.summary.numberedDocumentCount;
-const sourceDigest = sha256(allSources.map(source => `${source}\0${sha256(readFileSync(join(root, source)))}`).join("\n"));
+// Hash canonical text so generated provenance is reproducible across Git
+// checkouts that use different native line endings (for example Windows and Linux).
+const sourceDigest = sha256(allSources.map(source => {
+  const canonicalText = readFileSync(join(root, source), "utf8").replace(/\r\n?/g, "\n");
+  return `${source}\0${sha256(canonicalText)}`;
+}).join("\n"));
 
 const mdLink = source => `[${basename(source)}](${posix(relative(chaptersRoot, join(root, source)))})`;
 const sourceListMd = sources => sources.map(source => `- ${mdLink(source)}`).join("\n");

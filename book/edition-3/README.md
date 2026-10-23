@@ -34,4 +34,4 @@ This expanded edition turns the research ledger into a reader's path. It begins 
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `f6ccabe86cc5463256bf5560d7626d6cef0c66210c9a569310798a82217d3934`
+Citation-set digest: `c64326ab2e178aa7ef341b736f9943e5deaaa130e37f0b2d00b7c14294ec880c`
