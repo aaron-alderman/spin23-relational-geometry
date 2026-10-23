@@ -1,0 +1,34 @@
+{
+  "schema": "spin23.nucleon-axial-flavor-map/1",
+  "date": "2026-10-23",
+  "status": "complete three-light-flavor to proton-neutron linear map at zero momentum transfer using one lattice input set",
+  "source": {
+    "title": "Nucleon axial, tensor and scalar charges and sigma-terms in lattice QCD",
+    "authors": "C. Alexandrou et al.",
+    "url": "https://arxiv.org/abs/1909.00485",
+    "protonCharges": {"u": 0.862, "d": -0.424, "s": -0.0458},
+    "qualification": "central values of the final renormalized physical-point single-flavor axial charges; isospin symmetry used for the neutron"
+  },
+  "map": {
+    "basis": ["c_u", "c_d", "c_s"],
+    "protonRow": [0.862, -0.424, -0.0458],
+    "neutronRow": [-0.424, 0.862, -0.0458],
+    "equations": [
+      "c_p=0.862 c_u-0.424 c_d-0.0458 c_s",
+      "c_n=-0.424 c_u+0.862 c_d-0.0458 c_s",
+      "c_p-c_n=1.286(c_u-c_d)",
+      "c_p+c_n=0.438(c_u+c_d)-0.0916 c_s"
+    ],
+    "rank": 2,
+    "nonzeroSingularValues": [1.286, 0.44276323243918975],
+    "nonzeroConditionNumber": 2.9044868809801696,
+    "nullDirectionRelative": [1, 1, 9.563318777292576],
+    "nullDirectionMeaning": "adding lambda*(1,1,9.5633187773) to (c_u,c_d,c_s) leaves both c_p and c_n unchanged"
+  },
+  "experimentalInterface": {
+    "xu2025Equation": "A/(|c_e| |-0.424 c_u+0.862 c_d-0.0458 c_s|)>800194.90557 GeV^2",
+    "forCeEqualsOneEighth": "A/|-0.424 c_u+0.862 c_d-0.0458 c_s|>100024.36320 GeV^2",
+    "logicalLimit": "electron-neutron and electron-proton products can at most recover two nucleon projections; they cannot determine all three light-quark coefficients without a third independent hadronic observable or a flavor prior"
+  },
+  "decision": "The u,d,s to p,n matching is algebraically complete at this input point. Its one-dimensional kernel is structural, not a numerical deficiency. Universal light flavor is one benchmark slice, while unique quark-flavor reconstruction remains impossible from proton and neutron dipole channels alone."
+}

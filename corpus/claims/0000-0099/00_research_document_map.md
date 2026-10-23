@@ -863,3 +863,7 @@ The central distinction throughout is this: **a list of correct particle represe
 ## Lorentzian seven-point conformal-cycle tranche
 
 - [1700](../1700-1799/1700_the_tetrahedral_seven_point_sphere_extends_to_an_exact_spin23_conformal_cycle.md) proves that the tetrahedral seven-point sphere identity uses only a nondegenerate quadratic form, extends it to the Lorentzian \(H_2(\mathbb R)\) carrier, and lifts the common cycle exactly to the projective null cone of signature \((2,3)\), while retaining affine-chart and physical-admission boundaries.
+
+## Latest Spin(2,3) hadronic closure
+
+- [1728](../1700-1799/1728_public_hadronic_input_closes_the_low_energy_branch_not_the_uv_flavor_problem.md) records the completed universal and general light-quark-to-nucleon matching, proves the proton/neutron map has one invisible flavor direction, and places further progress at experimental-response, third-observable, or UV-matching input gates.

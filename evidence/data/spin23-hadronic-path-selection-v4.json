@@ -1,0 +1,61 @@
+{
+  "schema": "spin23.global-path-selection/4",
+  "date": "2026-10-23",
+  "objective": "exhaust the hadronic continuation opened by the 2025 electron-neutron dipole bound using public zero-momentum nucleon axial charges",
+  "terminalStates": ["completed", "rejected", "externally_blocked"],
+  "nodes": [
+    {
+      "id": "HU",
+      "branch": "universal u,d,s benchmark",
+      "state": "completed",
+      "localExecutable": false,
+      "result": "DeltaSigma_uds=0.3922 gives c_p=c_n=0.049025 for c_q=1/8 and sqrt(A)>70.026 GeV at the Xu point"
+    },
+    {
+      "id": "HG",
+      "branch": "general u,d,s to p,n matching",
+      "state": "completed",
+      "localExecutable": false,
+      "result": "rank-two map completed; exact central-value kernel proportional to (1,1,9.56332)"
+    },
+    {
+      "id": "HD",
+      "branch": "unique reconstruction of three light-quark coefficients from proton and neutron channels",
+      "state": "rejected",
+      "localExecutable": false,
+      "result": "impossible because the 2-by-3 hadronic map has a one-dimensional kernel"
+    },
+    {
+      "id": "EP",
+      "branch": "numerical electron-proton experimental curve",
+      "state": "externally_blocked",
+      "localExecutable": false,
+      "blocker": "author numerical limit/response table or controlled digitization with sufficient apparatus information"
+    },
+    {
+      "id": "H3",
+      "branch": "third independent hadronic flavor projection",
+      "state": "externally_blocked",
+      "localExecutable": false,
+      "blocker": "a specified observable whose quark-level axial response is linearly independent of both proton and neutron rows"
+    },
+    {
+      "id": "RG",
+      "branch": "singlet running, heavy-quark thresholds and anomaly matching",
+      "state": "externally_blocked",
+      "localExecutable": false,
+      "blocker": "UV-scale quark Wilson coefficients, matching scale and renormalization scheme from a concrete parent realization"
+    },
+    {
+      "id": "UV",
+      "branch": "predictive Spin(2,3) flavor relation",
+      "state": "externally_blocked",
+      "localExecutable": false,
+      "blocker": "broken-parent derivation of A, B and the fermion-species coefficients rather than an assumed low-energy benchmark"
+    }
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "locally executable, model-independent hadronic continuation from the public zero-momentum axial charges and the selected published dipole limits",
+  "decision": "The public low-energy hadronic branch is exhausted: universal and general light-flavor maps are complete, and the missing flavor direction is proved structural. Further progress requires new numerical experimental data, a third independent hadronic observable, or UV Wilson coefficients; none can be inferred from the current gravity action."
+}

@@ -27038,3 +27038,7 @@ Twenty route families and 28 new claims now terminate in positive constructions,
 ## Cycle 1229 — eight open-letter answers become four executable packets
 
 The eight supplied standalone ChatGPT answers are preserved as source evidence and explicitly not attributed to the named addressees. Their established mathematics is admitted, their conditional steps are isolated, and their open physical lifts are retained. The revised programme now consists of a carrier certificate, an explicit joint-module/action packet, an operational rebit/metaplectic laboratory and a twistor scalar reconstruction benchmark. Artifacts: [1625--1633](../1600-1699/1633_the_eight_open_letter_answers_reduce_to_four_executable_packets_without_closing_the_physical_lift.md).
+
+## Cycle 1230 — public hadronic matching reaches its structural flavor boundary
+
+Physical-point nucleon axial charges complete both the universal benchmark and the general \(u,d,s\to p,n\) response map.  The map has rank two with kernel proportional to \((1,1,9.56332)\), so no proton/neutron-only refinement can identify all three light-quark coefficients.  Further progress needs a third independent hadronic projection, numerical apparatus response data, or UV Wilson coefficients with scale and scheme.  Artifact: [1728](../1700-1799/1728_public_hadronic_input_closes_the_low_energy_branch_not_the_uv_flavor_problem.md).

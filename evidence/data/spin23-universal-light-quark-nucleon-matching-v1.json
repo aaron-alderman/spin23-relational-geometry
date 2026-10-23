@@ -1,0 +1,54 @@
+{
+  "schema": "spin23.universal-light-quark-nucleon-matching/1",
+  "date": "2026-10-23",
+  "status": "conditional hadronic matching witness for universal light-quark axial coefficients",
+  "source": {
+    "title": "Nucleon axial, tensor and scalar charges and sigma-terms in lattice QCD",
+    "authors": "C. Alexandrou et al.",
+    "arxiv": "1909.00485",
+    "url": "https://arxiv.org/abs/1909.00485",
+    "ensemble": "cB211.072.64 at approximately physical pion mass",
+    "valuesAre": "final renormalized single-flavor proton axial charges from Table 11"
+  },
+  "matching": {
+    "equation": "c_N=sum_{q=u,d,s} c_q Delta q_N",
+    "assumption": "c_e=c_u=c_d=c_s=1/8 at a common matched normalization; heavy flavors omitted",
+    "isospin": "Delta u_n=Delta d_p, Delta d_n=Delta u_p, Delta s_n=Delta s_p, so the universal light-flavor sum is equal for proton and neutron",
+    "deltaUProton": 0.862,
+    "deltaUUncertainty": 0.017,
+    "deltaDProton": -0.424,
+    "deltaDUncertainty": 0.016,
+    "deltaSProton": -0.0458,
+    "deltaSUncertainty": 0.0073,
+    "lightSinglet": 0.3922,
+    "lightSingletNaiveIndependentUncertainty": 0.024459967293518608,
+    "elementaryCoefficient": 0.125,
+    "effectiveProtonCoefficient": 0.049025,
+    "effectiveNeutronCoefficient": 0.049025,
+    "effectiveNucleonCoefficientNaiveUncertainty": 0.003057495911689826,
+    "nucleonToElementaryCoefficientRatio": 0.3922
+  },
+  "xu2025Propagation": {
+    "mass_eV": 0.00003,
+    "electronNeutronProductUpper": 2.4e-9,
+    "absCeCn": 0.006128125,
+    "A_lower_GeV2": 4903.694405696448,
+    "sqrtA_lower_GeV": 70.02638363999992,
+    "B_lower": 5.448549339662717e30,
+    "deltaLower_if_A_equals_reducedPlanckSquaredTimesDeltaOver24": 1.9848912081547714e-32,
+    "ynOverYe": 721.1317321257587,
+    "yeUpper_if_product_saturated": 0.0000018243086513899,
+    "ynUpper_if_product_saturated": 0.0013155668577088057
+  },
+  "uncertainty": {
+    "method": "quadrature of the three quoted single-flavor lattice uncertainties, neglecting correlations and uncertainty in the experimental limit",
+    "relativeCoefficient": 0.0623660563322759,
+    "relativeSqrtABound": 0.03118302816613795,
+    "qualification": "illustrative propagation only; a precision result requires the lattice covariance and consistently run quark Wilson coefficients"
+  },
+  "scope": {
+    "established": "universal u,d,s coefficients are suppressed at nucleon level by the light-quark singlet axial charge, yielding c_p=c_n about 0.049 for c_q=1/8",
+    "notEstablished": "the Spin(2,3) parent predicts universal quark coefficients, the matching convention is UV complete, or heavy-quark/anomaly threshold effects vanish",
+    "decision": "this conditional witness closes the simplest hadronic branch but does not turn either laboratory null result into a model fingerprint; the electron-electron bound remains decisive for the minimal universal benchmark"
+  }
+}

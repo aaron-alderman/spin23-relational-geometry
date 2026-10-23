@@ -2760,3 +2760,7 @@ Routine finite rescans are now deprioritized. Progress requires a new infinite-d
 ## Open-letter answer frontier
 
 Claims [1625--1633](../1600-1699/1633_the_eight_open_letter_answers_reduce_to_four_executable_packets_without_closing_the_physical_lift.md) adjudicate eight standalone AI answers without treating them as expert replies. Standard rank-two Jordan/TKK, rebit, metaplectic and incidence results are retained at their proper scope. The active frontier is four finite packets: carrier certificate, explicit joint module and action, declared operational composite, and a scalar twistor reconstruction with locality and positivity.
+
+## Hadronic matching frontier update
+
+The public zero-momentum light-quark matching is now closed through [1728](../1700-1799/1728_public_hadronic_input_closes_the_low_energy_branch_not_the_uv_flavor_problem.md).  Proton and neutron channels have a rank-two response to three light-quark coefficients, so the remaining flavor direction requires a third independent hadronic observable or a UV flavor relation; apparatus response tables and singlet/heavy-threshold Wilson matching remain external inputs.

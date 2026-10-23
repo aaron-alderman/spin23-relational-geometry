@@ -15928,3 +15928,7 @@ The terminal result is therefore constructive but incomplete: a viable critical 
 ## Open-letter answer synthesis
 
 Claims [1625--1633](../1600-1699/1633_the_eight_open_letter_answers_reduce_to_four_executable_packets_without_closing_the_physical_lift.md) sharpen the Jordan, operational, metaplectic, twistor and spectral-triple seams. They add usable mathematical lemmas but do not alter the synthesis boundary: physical promotion still requires carrier selection, a represented joint module, an action with vacuum and healthy spectrum, and local positive observables.
+
+## Hadronic matching synthesis update
+
+The polarized \(0^-\) portal now has a public low-energy nucleon match.  Under universal \(u,d,s\) coefficients \(c_q=1/8\), the lattice axial singlet gives \(c_p=c_n=0.049025\), while the general proton/neutron map has rank two and an exact one-dimensional flavor kernel.  [Claim 1728](../1700-1799/1728_public_hadronic_input_closes_the_low_energy_branch_not_the_uv_flavor_problem.md) therefore closes the model-independent hadronic continuation without promoting the benchmark to a Spin(2,3) prediction.
