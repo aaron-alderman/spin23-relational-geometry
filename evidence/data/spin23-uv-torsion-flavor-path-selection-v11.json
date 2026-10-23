@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.global-path-selection/11",
+  "date": "2026-10-23",
+  "objective": "execute the surviving interacting-fixed-point route for the axial torsion coefficient as far as current information permits",
+  "terminalStates": ["completed", "rejected", "externally_blocked"],
+  "nodes": [
+    {"id":"KS","branch":"use the known perturbative beta slice","state":"completed","localExecutable":false,"result":"it fixes only the zero-gravity restriction beta_eta=a eta h^2"},
+    {"id":"ID","branch":"test whether that slice identifies eta=1/8 at an interacting point","state":"rejected","localExecutable":false,"result":"three explicit extensions agree on the slice but respectively select, reject, and reverse the local slope at one eighth"},
+    {"id":"IM","branch":"import an Immirzi fixed point","state":"rejected","localExecutable":false,"result":"the Holst/Immirzi coupling and the fermion axial Wilson coefficient are different theory-space coordinates"},
+    {"id":"BF","branch":"compute the complete Spin(2,3) matter-gravity beta functional","state":"externally_blocked","localExecutable":false,"blocker":"the complete truncation, quantization packet, mixing basis and functional trace are absent"},
+    {"id":"ST","branch":"classify the axial direction on the UV critical surface","state":"externally_blocked","localExecutable":false,"blocker":"the full fixed point and stability matrix are absent"},
+    {"id":"MT","branch":"match the UV trajectory to the low-energy axial coefficient","state":"externally_blocked","localExecutable":false,"blocker":"heavy spectrum, thresholds, scheme and trajectory are absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "all current-input fixed-point and neighboring-coupling inferences for selecting the axial torsion coefficient",
+  "decision": "the fixed-point route is not disproved, but no present beta datum identifies one eighth; reopening requires the complete beta, stability, unitarity and matching packet"
+}

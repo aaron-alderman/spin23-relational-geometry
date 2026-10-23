@@ -1,0 +1,45 @@
+{
+  "schema": "spin23.axial-fixed-point-identifiability/1",
+  "date": "2026-10-23",
+  "targetCoefficient": 0.125,
+  "knownSlice": {
+    "equation": "beta_eta(eta,h,g=0) = a eta h^2",
+    "assumption": "a > 0",
+    "information": ["the Gaussian eta fixed point", "multiplicative matter running on the zero-gravity slice"],
+    "notDetermined": ["gravity-torsion contribution", "operator mixing", "interacting fixed-point value", "full stability-matrix eigenvectors", "threshold trajectory"]
+  },
+  "completionWitnesses": [
+    {
+      "id": "select_one_eighth",
+      "beta": "a eta h^2 + g (eta - 1/8)",
+      "interactingPoint": {"h": 0, "g": 1, "eta": 0.125},
+      "betaAtTarget": 0,
+      "etaSlopeAtTarget": 1
+    },
+    {
+      "id": "reject_one_eighth",
+      "beta": "a eta h^2 + g (eta - 1/3)",
+      "interactingPoint": {"h": 0, "g": 1, "eta": 0.125},
+      "betaAtTarget": -0.20833333333333334,
+      "etaSlopeAtTarget": 1
+    },
+    {
+      "id": "opposite_local_slope",
+      "beta": "a eta h^2 - g (eta - 1/8)",
+      "interactingPoint": {"h": 0, "g": 1, "eta": 0.125},
+      "betaAtTarget": 0,
+      "etaSlopeAtTarget": -1
+    }
+  ],
+  "commonRestriction": "all three completions reduce exactly to a eta h^2 when g=0",
+  "criticalExponentQualification": "the eta partial derivative is not itself a critical exponent when eta mixes with other couplings; eigenvalues of the complete stability matrix are required",
+  "falseAnalogy": "a fixed point of the Holst/Immirzi coupling is not a fixed point of the independent fermion axial Wilson coefficient",
+  "minimumReopeningPacket": [
+    "a declared Spin(2,3) matter-gravity truncation containing every mixing operator",
+    "the complete beta vector and fixed point in that truncation",
+    "the full stability matrix with scheme and truncation tests",
+    "a unitary Lorentzian spectrum or equivalent reconstruction",
+    "an RG trajectory and threshold match to the low-energy axial coefficient"
+  ],
+  "verdict": "the known beta slice has zero identifying power for whether eta=1/8 is an interacting fixed point or for its relevance class"
+}

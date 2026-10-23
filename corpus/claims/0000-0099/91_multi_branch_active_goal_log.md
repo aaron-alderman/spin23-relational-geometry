@@ -27066,3 +27066,7 @@ Any linear internal symmetry commuting with Spin(2,3) acts on the real multiplic
 ## Cycle 1236 — conformal weight and local variation close the generic extension labels
 
 The density \(\sqrt{|g|}S_\mu J_5^\mu\) has Weyl weight \(4+0-4=0\), so conformal enlargement does not forbid it.  Its fermion and torsion variations are nonzero and continuously local, so it is not a characteristic class and its coefficient is not topologically quantized.  Only a specific enlarged action and Ward identity, named anomaly theorem, or interacting fixed point can reopen the branch.  Artifacts: [1743--1744](../1700-1799/1744_conformal_and_topological_selectors_fail_and_only_specific_new_dynamics_can_reopen_torsion_flavor.md).
+
+## Cycle 1237 — the fixed-point survivor reaches an exact information boundary
+
+Three complete beta functions reproduce the entire known matter-only slice while respectively fixing, rejecting and reversing the local slope at \(\eta=1/8\).  Published Immirzi fixed points concern a separate gravitational coupling and cannot supply the missing axial beta row.  Current-input global exhaustion is therefore reached: reopening requires the complete Spin(2,3) matter--gravity beta functional, simultaneous fixed point, stability matrix, unitary reconstruction and threshold-matched trajectory.  Artifacts: [1745--1746](../1700-1799/1746_the_fixed_point_escape_is_reduced_to_a_complete_beta_and_matching_packet.md).
