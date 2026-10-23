@@ -27058,3 +27058,7 @@ The covariant four-form \((J_{5,A}E^A)\wedge(E_B\wedge T^B)\) is allowed by full
 ## Cycle 1234 — same-operator symmetry and perturbative RG close the conventional selector space
 
 Minimal and nonminimal axial terms multiply the identical invariant, so no unbroken symmetry can retain the nonzero minimal contribution while forbidding an additive coefficient.  Fermion, chiral, C, P, compensator, E6 and family transformations all leave the scalar or its identity direction allowed.  The standard beta function \((4\pi)^2d\eta/dt=C\eta h^2\) fixes zero for nonzero Yukawa coupling and leaves every value marginal at zero Yukawa; it never selects \(1/8\).  Only a new UV grading/nonrenormalization theorem or a computed interacting fixed point remains.  Artifacts: [1739--1740](../1700-1799/1740_the_conventional_torsion_flavor_selection_programme_is_exhausted_at_two_new_physics_gates.md).
+
+## Cycle 1235 — Schur closure rules out every commuting linear UV grading
+
+Any linear internal symmetry commuting with Spin(2,3) acts on the real multiplicity-one compensator by a sign and on family multiplicity by a unitary matrix.  The sign cancels pairwise in both factors of the parent axial four-form, while \(U^\dagger I U=I\).  The universal operator is invariant across the whole class.  Every survivor therefore adds a noncommuting enlargement, charged field, nonlinear/topological rule or fixed-point dynamics.  Artifacts: [1741--1742](../1700-1799/1742_the_commuting_uv_grading_class_is_closed_and_every_surviving_flavor_selector_changes_the_model.md).
