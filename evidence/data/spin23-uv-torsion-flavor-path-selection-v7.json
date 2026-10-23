@@ -1,0 +1,17 @@
+{
+  "schema": "spin23.global-path-selection/7",
+  "date": "2026-10-23",
+  "objective": "test and exhaust the final parent-covariance escape from the UV torsion-flavor obstruction",
+  "terminalStates": ["completed", "rejected", "externally_blocked"],
+  "nodes": [
+    {"id":"PL","branch":"construct a Spin(2,3)-covariant parent lift of the axial torsion-current operator","state":"completed","localExecutable":false,"result":"the compensator supplies the invariant four-form kappa (J5_A E^A) wedge (E_B wedge T^B)"},
+    {"id":"PG","branch":"use full parent gauge covariance to forbid the nonminimal coefficient","state":"rejected","localExecutable":false,"result":"the explicit invariant reduces in physical gauge to a nonzero multiple of S_a J5^a vol"},
+    {"id":"PP","branch":"use four-dimensional parity to forbid the operator","state":"rejected","localExecutable":false,"result":"axial torsion and the axial fermion current are both pseudovectors, so their contraction is parity even"},
+    {"id":"NS","branch":"supply a new exact protecting symmetry or selection law","state":"externally_blocked","localExecutable":false,"blocker":"no declared symmetry forbids the explicit parent four-form while retaining the required minimal fermion action and surviving the compensator and E6 vacua"},
+    {"id":"TM","branch":"calculate descendant flavor coefficients","state":"externally_blocked","localExecutable":false,"blocker":"the complete fermion action, heavy spectrum, breaking scales, anomaly inventory and scale- and scheme-declared threshold matching remain absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "the complete locally constructible parent-covariance, residual-symmetry and EFT-protection route for the axial-torsion flavor matrix",
+  "decision": "The nonminimal axial operator has an explicit Spin(2,3)-covariant compensator lift and is parity even. Parent covariance therefore cannot protect the minimal coefficient. Reopening now requires genuinely new object-level input: a symmetry or selection law that forbids the displayed invariant and a complete threshold-matching action."
+}

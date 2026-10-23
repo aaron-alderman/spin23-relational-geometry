@@ -1,0 +1,23 @@
+{
+  "schema": "spin23.parent-axial-operator-lift/1",
+  "date": "2026-10-23",
+  "parentGroup": "Spin(2,3)",
+  "objects": {
+    "compensator": "V^A with fixed nonzero V^2",
+    "projector": "P^A_B = delta^A_B - V^A V_B / V^2",
+    "coframe": "E^A = P^A_B D V^B",
+    "torsion": "T^A = P^A_B D E^B",
+    "brokenChirality": "Gamma_V = V_A Gamma^A / sqrt(|V^2|)",
+    "transverseAxialCurrent": "J_5^A = P^A_B bar(Psi) Gamma^B Gamma_V Psi"
+  },
+  "parentInvariant": "Omega_nm = kappa (J_(5,A) E^A) wedge (E_B wedge T^B)",
+  "formDegree": 4,
+  "physicalGaugeReduction": {
+    "compensator": "V^A = ell delta^A_4",
+    "coframe": "E^a = e^a and E^4 = 0",
+    "chirality": "Gamma_V becomes the four-dimensional chirality matrix up to convention",
+    "operator": "Omega_nm = kappa J_5 wedge (e_a wedge T^a) = -kappa S_a J_5^a vol / 2 up to orientation and metric conventions"
+  },
+  "coefficientStatus": "kappa is an independent dimensionless parent-invariant coefficient",
+  "verdict": "full Spin(2,3) covariance with the symmetry-breaking compensator does not forbid the nonminimal axial torsion-current operator"
+}

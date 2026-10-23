@@ -27050,3 +27050,7 @@ The Xu proton point is recoverable analytically, but its proton and neutron curv
 ## Cycle 1232 — the UV flavor branch separates minimal geometry from prediction
 
 Minimal metric-compatible Dirac coupling fixes \(|c_f|=1/8\) universally and identity-valued coefficients survive arbitrary mass-basis rotations.  The general axial operator is nevertheless an allowed dimension-four counterterm.  One E6 27 is scalar by Schur, but three family copies retain a matrix and the residual Z3 permits non-scalar circulants.  The locally reachable UV graph is therefore exhausted at the missing protected matter action and heavy-threshold matching packet.  Artifacts: [1733 and 1735](../1700-1799/1735_the_uv_torsion_flavor_route_terminates_at_an_unprotected_minimal_slice_and_missing_threshold_action.md).
+
+## Cycle 1233 — the compensator closes the parent-covariance escape
+
+The covariant four-form \((J_{5,A}E^A)\wedge(E_B\wedge T^B)\) is allowed by full Spin(2,3) and reduces in physical gauge to the nonminimal axial torsion-current operator.  Because the contraction is also parity even, neither parent covariance nor parity protects the minimal coefficient.  The protection graph now terminates only at a genuinely new selection law and a complete threshold/anomaly-matching action.  Artifacts: [1736--1737](../1700-1799/1737_parent_covariance_does_not_rescue_minimal_torsion_flavor_and_the_protection_graph_is_exhausted.md).
