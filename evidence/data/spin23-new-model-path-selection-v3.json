@@ -1,0 +1,17 @@
+{
+  "schema": "spin23.new-model-path-selection/3",
+  "date": "2026-10-23",
+  "objective": "audit the discrete-normalization escape after gauged and supersymmetric completions",
+  "terminalStates": ["rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"AU","branch":"compact axial U(1) locking","state":"rejected_as_selector","result":"continuous g rho and extra anomalous spectrum"},
+    {"id":"SG","branch":"N=1 local supersymmetry","state":"rejected_as_selector","result":"continuous Kähler deformation and superpartner spectrum"},
+    {"id":"ST","branch":"heterotic torsionful normalization","state":"rejected_as_selector","result":"canonical coupling depends on dilaton, volume, warping and mode mixing; string H is not automatically the PGT torsion pole"},
+    {"id":"CC","branch":"one fully specified stabilized compactification","state":"externally_blocked","blocker":"no internal geometry, bundle, flux, stabilized moduli, normalized mode basis or threshold spectrum is specified"},
+    {"id":"FP","branch":"nonperturbative Spin(2,3) fixed point","state":"externally_blocked","blocker":"complete quantization and beta packet absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "minimal explicit new-model selector families: axial gauging, local N=1 supersymmetry, and heterotic quantized torsion normalization",
+  "decision": "every generic new-model family relocates the coefficient into continuous mixing or normalization data; further progress requires one fully specified compactification or the complete fixed-point computation"
+}

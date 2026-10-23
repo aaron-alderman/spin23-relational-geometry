@@ -27082,3 +27082,7 @@ A compact axial \(U(1)\), Stueckelberg scalar and torsion-locking mass term form
 ## Cycle 1240 — local supersymmetry permits a continuous Kähler deformation
 
 The real linear multiplet's dual vector is divergence-free and cannot represent the longitudinal critical \(0^-\) mode.  A chiral multiplet contains the pseudoscalar but necessarily adds a scalar and fermion; the shift-invariant Kähler family \(e^{c(A+\bar A)/f}\bar Q Q\) gives connection \(\Gamma^Q{}_{AQ}=c/f\) for arbitrary real \(c\).  Local supersymmetry therefore does not select \(1/8\), and a concrete string or higher-dimensional normalization is selected next.  Artifacts: [1751--1752](../1700-1799/1752_local_supersymmetry_fails_as_a_selector_and_string_normalization_is_the_next_model_branch.md).
+
+## Cycle 1241 — heterotic parent quantization dissolves into four-dimensional moduli
+
+The heterotic three-form has fixed Chern--Simons normalization and enters a torsionful ten-dimensional connection, but its four-dimensional kinetic coefficient scales with compactification volume and dilaton.  Canonical normalization sends a fixed parent vertex to \(\lambda_{10}/\sqrt{Z_H}\); warping, overlaps and thresholds add further dependence.  The string two-form/axion is not automatically the independent massive PGT connection mode.  Minimal new-model exhaustion is reached at a fully specified stabilized compactification or the complete Spin(2,3) quantum packet.  Artifacts: [1753--1754](../1700-1799/1754_minimal_new_model_selectors_are_exhausted_at_compactification_or_full_quantum_input.md).

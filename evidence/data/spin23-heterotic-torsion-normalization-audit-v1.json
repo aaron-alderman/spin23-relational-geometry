@@ -1,0 +1,34 @@
+{
+  "schema": "spin23.heterotic-torsion-normalization-audit/1",
+  "date": "2026-10-23",
+  "tenDimensionalData": {
+    "threeForm": "H = dB - (alphaPrime/4)(omegaYM - omegaL)",
+    "torsionfulConnection": "OmegaPlusMinus = omega plusOrMinus H/2 in convention-dependent placement",
+    "discreteData": ["Chern-Simons levels", "integral fluxes", "gauge and Lorentz trace normalization"],
+    "fixedStatement": "supersymmetry fixes relative terms in the ten-dimensional action once conventions are chosen"
+  },
+  "fourDimensionalZeroMode": {
+    "kineticCoefficient": "Z_H proportional to V6 exp(-2 phi)/kappa10^2, with warp and threshold corrections in general",
+    "canonicalField": "H_c = sqrt(Z_H) H",
+    "canonicalCurrentCoupling": "lambda_c = lambda_10/sqrt(Z_H)",
+    "continuousInputs": ["dilaton", "compactification volume", "warping", "mode overlap", "threshold corrections"]
+  },
+  "normalizationWitnesses": [
+    {"ZH":1,"lambda10":0.125,"lambdaCanonical":0.125},
+    {"ZH":4,"lambda10":0.125,"lambdaCanonical":0.0625},
+    {"ZH":0.25,"lambda10":0.125,"lambdaCanonical":0.25}
+  ],
+  "fieldTypeAudit": {
+    "stringField": "two-form gauge potential B with gauge-invariant three-form H",
+    "pgtField": "independent Lorentz connection with axial torsion S_mu",
+    "canonicalIdentification": false,
+    "requiredNewMap": "a reduction and mixing matrix identifying a normalized H zero mode with the PGT axial connection mode"
+  },
+  "massAudit": {
+    "unliftedUniversalAxion": "shift-symmetric and massless",
+    "target": "massive longitudinal 0-minus torsion pole",
+    "requiredLift": ["flux", "instantons", "gaugino condensation", "other nonperturbative potential"],
+    "consequence": "the mass and mixing introduce additional continuous compactification data"
+  },
+  "verdict": "heterotic quantized parent data fix topological normalizations but do not by themselves fix the canonically normalized four-dimensional PGT axial coefficient to 1/8"
+}
