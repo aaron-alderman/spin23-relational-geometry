@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.new-model-path-selection/20",
+  "date": "2026-10-23",
+  "objective": "execute the nonlinear compact-subgroup escape and adjudicate the remaining construction frontier",
+  "terminalStates": ["completed", "rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"NR","branch":"SO(1,3)/SO(3) nonlinear realization","state":"completed","result":"the Cartan involution gives a positive metric after adding three coset coordinates and reducing the linearly realized group to SO(3)"},
+    {"id":"PS","branch":"minimal nonlinear realization contains the target pseudoscalar pole","state":"rejected_as_selector","result":"the three broken boost generators form an SO(3) vector triplet and yield massive spin-one connections, with no singlet zero-minus mode"},
+    {"id":"CO","branch":"compact-subgroup positivity fixes the portal coefficient","state":"rejected_as_selector","result":"the gauge coupling, coset scale, sigma-model normalization and matter embedding remain continuous"},
+    {"id":"CG","branch":"complete constrained chiral torsion supergravity","state":"externally_blocked","blocker":"action, Lorentzian reality involution, full constraint algebra, positive spectrum and portal matching absent"},
+    {"id":"TS","branch":"tetrad-dependent non-Yang-Mills torsion supergravity","state":"externally_blocked","blocker":"new protected four-gate action and nondegenerate vacuum absent"},
+    {"id":"UV","branch":"microscopic higher-dimensional, higher-spin or fixed-point parent","state":"externally_blocked","blocker":"normalized torsion eigenmode and threshold dictionary absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "all finite algebraic escapes from the failed ordinary Lorentz vector-supermultiplet construction available from the current corpus and public model data",
+  "decision": "self-duality requires a new constrained complex gravity model and nonlinear realization produces the wrong minimal representation; every live continuation now requires an externally absent complete action, vacuum, constraint solution and normalized matching calculation"
+}
