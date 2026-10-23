@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.new-model-path-selection/15",
+  "date": "2026-10-23",
+  "objective": "test whether the known standard eleven-dimensional S7 uplift supplies the missing PGT torsion field identity",
+  "terminalStates": ["completed", "rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"S7","branch":"standard omega-zero S7 uplift of SO(8)-gauged N=8 supergravity","state":"completed","result":"the metric and three-form provide a consistent eleven-dimensional origin for the ordinary maximal theory"},
+    {"id":"AF","branch":"the uplifted A_3 pseudoscalar is automatically PGT axial torsion","state":"rejected_as_selector","result":"the three-form and an independent Lorentz connection are distinct gauge fields even when their four-dimensional modes share spin and parity"},
+    {"id":"SC","branch":"supercovariant gravitino torsion supplies the PGT pole","state":"rejected_as_selector","result":"a fermion-bilinear correction to the connection does not add an independent propagating bosonic connection coordinate"},
+    {"id":"TE","branch":"torsionful first-order microscopic extension and consistent reduction","state":"externally_blocked","blocker":"independent connection multiplet, healthy kinetic operator, compactification ansatz, mixing and threshold matching absent"},
+    {"id":"HD","branch":"complete higher-spin-to-PGT dictionary","state":"externally_blocked","blocker":"bulk field map, normalized correlators and low-spin effective action absent"},
+    {"id":"SV","branch":"microscopic stabilized torsional compactification","state":"externally_blocked","blocker":"complete vacuum and normalized mixing, spectrum and threshold data absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "the standard eleven-dimensional S7 uplift as a source of the independent four-dimensional PGT axial torsion pole",
+  "decision": "the ordinary uplift is complete for standard maximal supergravity but its pseudoscalars originate in metric and three-form data; obtaining the PGT pole requires a genuinely torsionful parent extension"
+}

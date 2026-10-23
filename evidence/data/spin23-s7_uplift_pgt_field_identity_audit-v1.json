@@ -1,0 +1,50 @@
+{
+  "schema": "spin23.s7-uplift-pgt-field-identity-audit/1",
+  "date": "2026-10-23",
+  "parent": {
+    "theory": "standard eleven-dimensional supergravity",
+    "compactification": "consistent S7 truncation",
+    "daughter": "four-dimensional SO(8)-gauged N=8 supergravity in the standard electric frame",
+    "ordinaryOmegaZeroUpliftAvailable": true,
+    "genericOmegaUpliftEstablishedByCitedAnalysis": false
+  },
+  "elevenDimensionalFieldContent": {
+    "bosonicGaugePotentials": ["metric or elfbein", "three-form potential A_3"],
+    "fermionicGaugePotential": "gravitino",
+    "independentPropagatingBosonicLorentzConnection": false,
+    "connectionRole": "Levi-Civita or supercovariant connection determined by the elfbein and gravitino rather than an added PGT connection multiplet"
+  },
+  "fourDimensionalProvenance": {
+    "metricSector": "internal metric and warp-factor uplift formulae encode scalar degrees of freedom",
+    "pseudoscalarSector": "internal three-form and four-form flux uplift formulae encode pseudoscalar degrees of freedom",
+    "pseudoscalarImpliesTorsion": false,
+    "reason": "an internal differential-form mode and an independent Lorentz-connection mode are different field coordinates with different gauge origins"
+  },
+  "torsionAudit": {
+    "target": "independent four-dimensional Lorentz connection with a propagating longitudinal axial zero-minus pole",
+    "bosonicBackgroundTorsionPolePresent": false,
+    "gravitinoSupercovariantTorsionPresent": true,
+    "gravitinoTorsionSuppliesIndependentBosonicPole": false,
+    "directFieldIdentityPresent": false,
+    "normalizedEtaMapPresent": false
+  },
+  "routeWitnesses": [
+    {"candidate":"internal metric mode","upliftOrigin":"eleven-dimensional metric","pgtConnectionIdentity":false},
+    {"candidate":"internal A_3 pseudoscalar mode","upliftOrigin":"eleven-dimensional three-form or flux","pgtConnectionIdentity":false},
+    {"candidate":"supercovariant fermion torsion","upliftOrigin":"gravitino bilinear correction to the connection","pgtConnectionIdentity":false}
+  ],
+  "requiredExtension": [
+    "an independent connection or equivalent torsion multiplet in the microscopic parent",
+    "a healthy kinetic operator producing the four-dimensional zero-minus pole",
+    "a consistent compactification or truncation retaining that pole",
+    "mixing matrices between form pseudoscalars and connection torsion",
+    "normalized matching to the observed fermion axial current"
+  ],
+  "sources": [
+    "https://arxiv.org/abs/1302.6219",
+    "https://arxiv.org/abs/1602.03327",
+    "https://arxiv.org/abs/1709.07024",
+    "https://arxiv.org/abs/2207.14327"
+  ],
+  "verdict": "the known standard S7 uplift is a genuine maximal-supergravity parent but its pseudoscalars come from metric and three-form data, not an independent propagating Lorentz connection; it therefore does not furnish the PGT torsion pole or select eta"
+}
