@@ -1,0 +1,28 @@
+{
+  "schema": "spin23.minimal-fermion-universality-boundary/1",
+  "date": "2026-10-23",
+  "torsionConvention": "S^mu = epsilon^(alpha beta gamma mu) T_(alpha beta gamma)",
+  "minimalDiracCoefficientMagnitude": 0.125,
+  "operatorDimension": 4,
+  "minimalFlavorMatrix": "c_min I_n",
+  "basisRule": {
+    "left": "C_L -> U_L^dagger C_L U_L",
+    "right": "C_R -> U_R^dagger C_R U_R",
+    "minimalConsequence": "U^dagger (c_min I_n) U = c_min I_n"
+  },
+  "allowedNonminimalOperator": "S_mu bar(psi) gamma^mu gamma_5 C psi",
+  "allowedCoefficient": "Hermitian on every multiplicity space compatible with the unbroken gauge representation",
+  "e6Boundary": {
+    "singleIrreducible27": "Schur's lemma restricts an exactly E6-invariant coefficient to a scalar on the 27",
+    "threeEquivalent27s": "the E6 commutant contains a full family matrix",
+    "residualZ3": "commutation with the cyclic family permutation restricts the matrix to the circulant algebra, not to the identity",
+    "realSymmetricWitness": "C = I + 0.2(P + P^2)",
+    "witnessEigenvalues": [1.4, 0.8, 0.8]
+  },
+  "renormalizationBoundary": {
+    "minimalityProtected": false,
+    "reason": "the axial torsion-fermion operator has the required locality, covariance and engineering dimension and occurs as a nonminimal counterterm",
+    "multiSpeciesConsequence": "independent fermion coefficients are allowed and may run differently once matter interactions or thresholds distinguish the species"
+  },
+  "verdict": "minimal spin-connection coupling defines a universal tree-level slice, but current Spin(2,3), E6 and residual-Z3 data do not select or radiatively protect that slice"
+}

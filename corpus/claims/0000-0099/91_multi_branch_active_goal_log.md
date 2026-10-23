@@ -27046,3 +27046,7 @@ Physical-point nucleon axial charges complete both the universal benchmark and t
 ## Cycle 1231 — coherent nuclear response corrects the tomography count
 
 The Xu proton point is recoverable analytically, but its proton and neutron curves are one-coupling views of one \(^{21}\mathrm{Ne}\) likelihood with cancellation line \(c_p=-14.5c_n\).  A \(^{129}\mathrm{Xe}\) target rotates the response by only \(2.204^\circ\), producing condition number 52.38.  Public-data continuation stops at joint likelihood, nuclear covariance, third-projection and UV-matching gates.  Artifact: [1732](../1700-1799/1732_coherent_nuclear_response_exhausts_the_public_experimental_hadronic_route.md).
+
+## Cycle 1232 — the UV flavor branch separates minimal geometry from prediction
+
+Minimal metric-compatible Dirac coupling fixes \(|c_f|=1/8\) universally and identity-valued coefficients survive arbitrary mass-basis rotations.  The general axial operator is nevertheless an allowed dimension-four counterterm.  One E6 27 is scalar by Schur, but three family copies retain a matrix and the residual Z3 permits non-scalar circulants.  The locally reachable UV graph is therefore exhausted at the missing protected matter action and heavy-threshold matching packet.  Artifacts: [1733 and 1735](../1700-1799/1735_the_uv_torsion_flavor_route_terminates_at_an_unprotected_minimal_slice_and_missing_threshold_action.md).

@@ -1,0 +1,19 @@
+{
+  "schema": "spin23.global-path-selection/6",
+  "date": "2026-10-23",
+  "objective": "exhaust the locally executable UV route for predicting the axial-torsion fermion coefficient matrix",
+  "terminalStates": ["completed", "rejected", "externally_blocked"],
+  "nodes": [
+    {"id":"MC","branch":"derive the minimal Dirac coefficient in the declared torsion convention","state":"completed","localExecutable":false,"result":"minimal metric-compatible coupling gives common |c_min|=1/8"},
+    {"id":"BR","branch":"test whether mass-basis rotations destroy minimal universality","state":"completed","localExecutable":false,"result":"identity coefficients remain identity under independent left- and right-unitary rotations"},
+    {"id":"E6","branch":"use exact E6 covariance to fix the coefficient matrix","state":"completed","localExecutable":false,"result":"one irreducible 27 is scalar by Schur, but three equivalent 27s retain an unconstrained family multiplicity matrix"},
+    {"id":"Z3","branch":"use the established residual family cycle to force universality","state":"rejected","localExecutable":false,"result":"the Z3 commutant is circulant and contains non-scalar Hermitian matrices; a real-symmetric witness has eigenvalues 1.4, 0.8, 0.8"},
+    {"id":"MP","branch":"promote minimal coupling to a radiatively protected surface","state":"rejected","localExecutable":false,"result":"the axial torsion-current operator is an allowed dimension-four nonminimal counterterm and zero independent coefficient restores no declared symmetry"},
+    {"id":"MA","branch":"derive coefficients from a complete broken-parent matter action","state":"externally_blocked","localExecutable":false,"blocker":"no declared complete Spin(2,3) plus E6 fermion kinetic action, representation of the broken connection on every light and heavy field, or symmetry eliminating the allowed nonminimal matrices"},
+    {"id":"TM","branch":"run and match the UV matrix to electron and light-quark coefficients","state":"externally_blocked","localExecutable":false,"blocker":"no complete heavy spectrum, Yukawa matrices, breaking scales, threshold prescription, anomaly matching packet, renormalization scale or scheme"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "all locally executable paths from the repository's minimal spin connection, E6 representations, residual Z3 family symmetry and published torsion-EFT operator classification to a predicted low-energy axial-torsion flavor matrix",
+  "decision": "Minimal coupling supplies a universal tree-level benchmark but neither E6 family multiplicity nor the residual Z3 removes the allowed nonminimal Wilson directions. The remaining routes require a new complete matter action with a protecting symmetry and its heavy-threshold matching; no further manipulation of the present representation data predicts c_f."
+}
