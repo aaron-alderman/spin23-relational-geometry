@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.new-model-path-selection/19",
+  "date": "2026-10-23",
+  "objective": "test whether Lorentzian self-dual projection rescues the minimal supersymmetric connection parent",
+  "terminalStates": ["completed", "rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"SD","branch":"exact Lorentzian self-dual decomposition","state":"completed","result":"the Hodge star squares to minus one, its chiral eigenspaces are complex, and real connections require conjugate chiral coefficients"},
+    {"id":"PP","branch":"self-dual projection alone produces a positive real kinetic theory","state":"rejected_as_selector","result":"the restricted Killing form is complex bilinear and its real completion remains indefinite"},
+    {"id":"SS","branch":"self-dual supersymmetry supplies the missing reality and pole conditions","state":"rejected_as_selector","result":"known chiral supergravity establishes compatibility but not the required real unitary independent-torsion completion or normalized portal"},
+    {"id":"CG","branch":"constrained chiral gravitational parent","state":"externally_blocked","blocker":"complete action, Lorentzian involution, simplicity and secondary constraints, positive physical spectrum, independent zero-minus eigenmode and matching are absent"},
+    {"id":"NR","branch":"nonlinear realization to a compact subgroup","state":"externally_blocked","blocker":"breaking field, vacuum, induced metric, spectrum and matching are absent"},
+    {"id":"HD","branch":"higher-spin or higher-dimensional parent","state":"externally_blocked","blocker":"normalized reduction or holographic dictionary to the independent torsion pole is absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "self-dual projection as a standalone rescue of the minimal Lorentz connection supermultiplet",
+  "decision": "chirality moves the obstruction into complex reality and constrained gravitational dynamics; it does not by itself construct a real positive torsion parent or select the axial coefficient"
+}

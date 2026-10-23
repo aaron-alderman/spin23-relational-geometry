@@ -1,0 +1,61 @@
+{
+  "schema": "spin23.self-dual-connection-reality-audit/1",
+  "date": "2026-10-23",
+  "proposal": "evade the real Lorentz Yang-Mills signature obstruction by retaining only one Lorentzian self-dual connection",
+  "basis": ["J1", "J2", "J3", "K1", "K2", "K3"],
+  "hodgeStar": {
+    "action": ["star J_i = K_i", "star K_i = -J_i"],
+    "square": "-identity",
+    "realEigenvectors": false,
+    "complexEigenvalues": ["+i", "-i"]
+  },
+  "chiralBasis": {
+    "plus": "Z_i^+ = J_i - i K_i",
+    "minus": "Z_i^- = J_i + i K_i",
+    "eigenvaluePlus": "+i",
+    "eigenvalueMinus": "-i",
+    "complexConjugationExchangesSectors": true
+  },
+  "realityReconstruction": {
+    "realConnection": "A_i = j_i J_i + k_i K_i with real j_i,k_i",
+    "chiralCoefficients": ["a_i^+=(j_i+i k_i)/2", "a_i^-=(j_i-i k_i)/2"],
+    "condition": "a_i^- = conjugate(a_i^+)",
+    "oneChiralSectorAloneIsReal": false
+  },
+  "bilinearAudit": {
+    "lorentzKillingValues": ["B(J_i,J_j)=-4 delta_ij", "B(K_i,K_j)=+4 delta_ij", "B(J_i,K_j)=0"],
+    "chiralValues": ["B(Z_i^+,Z_j^+)=-8 delta_ij", "B(Z_i^-,Z_j^-)=-8 delta_ij", "B(Z_i^+,Z_j^-)=0"],
+    "realPartForOneComplexCoefficient": "B(a Z^+,a Z^+) plus complex conjugate = -16[(Re a)^2-(Im a)^2]",
+    "positiveRealKineticFormObtainedByProjectionAlone": false
+  },
+  "constraintAudit": {
+    "chiralGravityExists": true,
+    "whyThisIsNotANoGoForChiralGravity": "Ashtekar-Plebanski gravity uses tetrad or two-form variables, simplicity constraints, diffeomorphism constraints and Lorentzian reality conditions rather than an unconstrained Yang-Mills norm",
+    "newRequiredData": [
+      "a real Lorentzian phase space and involution",
+      "a complete simplicity and secondary-constraint algebra",
+      "a positive physical Hamiltonian or spectral reconstruction",
+      "a propagating independent zero-minus torsion eigenmode",
+      "a normalized axial-current matching calculation"
+    ]
+  },
+  "supersymmetryAudit": {
+    "selfDualSupersymmetricModelsExist": true,
+    "automaticLorentzianRealUnitaryCompletion": false,
+    "reason": "supersymmetry is compatible with chiral complex variables but does not itself supply the missing reality, constraint, pole and matching data"
+  },
+  "targetAudit": {
+    "realOneSidedConnectionConstructed": false,
+    "positiveUnconstrainedKineticMetricConstructed": false,
+    "healthyIndependentZeroMinusPoleConstructed": false,
+    "etaMapPresent": false,
+    "oneEighthSelected": false
+  },
+  "sources": [
+    "https://arxiv.org/abs/gr-qc/9311020",
+    "https://arxiv.org/abs/gr-qc/9410013",
+    "https://arxiv.org/abs/gr-qc/0510050",
+    "https://arxiv.org/abs/hep-th/9902082"
+  ],
+  "verdict": "self-dual projection evades the six-real-direction presentation only by complexifying the connection; Lorentzian reality restores a relation to the conjugate sector, and a viable chiral gravitational completion requires new constraints and dynamics rather than projection alone"
+}
