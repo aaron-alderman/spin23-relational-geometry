@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.new-model-path-selection/11",
+  "date": "2026-10-23",
+  "objective": "classify the new cross-sector symmetry required by the positive bimetric-torsion parent",
+  "terminalStates": ["completed", "rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"PC","branch":"Poincare-commuting internal generator","state":"completed","result":"commutation with W2 makes the action block diagonal between spin two and spin zero"},
+    {"id":"CM","branch":"ordinary continuous bosonic S-matrix symmetry","state":"rejected_as_selector","result":"under Coleman-Mandula assumptions it factors as Poincare times internal and cannot provide the required spin mixer"},
+    {"id":"S1","branch":"minimal N=1 graded extension","state":"rejected_as_selector","result":"previous audit adds a supermultiplet and retains a continuous Kahler portal coefficient"},
+    {"id":"ES","branch":"extended or broken supersymmetric parent","state":"externally_blocked","blocker":"complete enlarged multiplets, action, vacuum, unitarity and threshold matching absent"},
+    {"id":"HS","branch":"higher-spin, infinite-tower, AdS, topological or nonstandard-S-matrix parent","state":"externally_blocked","blocker":"explicit theory and replacement asymptotic/positivity framework absent"},
+    {"id":"SV","branch":"microscopic stabilized torsional compactification","state":"externally_blocked","blocker":"complete vacuum and normalized mixing, spectrum and threshold data absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "ordinary continuous bosonic and minimal graded symmetry routes for linking the standard-positive bimetric, torsion and fermion sectors",
+  "decision": "ordinary bosonic symmetry is representation-theoretically blocked and minimal N=1 is non-selective; every loophole requires a genuinely enlarged model outside current inputs"
+}
