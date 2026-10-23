@@ -27110,3 +27110,7 @@ For matter metric \(h_g=\cos\theta h_0+\sin\theta h_m\), the exact propagator ha
 ## Cycle 1247 — positive spectral reconstruction rejects the simple exponential and retains bimetric propagation
 
 In a physical transverse-traceless channel, a positive massless spectral weight \(Z\) implies \(Q^2D(Q^2)\ge Z\).  The exponential propagator gives \(Q^2D/Z=e^{-Q^2/M^2}<1\) and cannot have the standard positive representation.  The bimetric propagator instead has positive delta weights \(\cos^2\theta\) and \(\sin^2\theta\).  This selects the bimetric construction under ordinary positivity, but the spectral gate contains no axial vertex and still admits \(0,1/8,1/4\).  Artifacts: [1765--1766](../1700-1799/1766_positive_reconstruction_selects_the_bimetric_escape_but_still_cannot_select_one_eighth.md).
+
+## Cycle 1248 — the minimal positive bimetric--torsion parent preserves a continuous axial portal
+
+The positive bimetric eigenmodes and healthy \(0^-\) torsion scalar can be joined with portal \(\eta\phi\partial\cdot J_5\).  At \(\tan\theta=1\), \(m_2^2=1\), and \(m_\phi^2=2\), the choices \(\eta=0,1/8,1/4\) have identical positive free poles and obey the same diagonal-diffeomorphism and local-Lorentz Ward identities.  The portal is separately invariant.  Hence the remaining relation must be genuinely new cross-sector parent structure, not a standard bimetric Ward identity.  Artifacts: [1767--1768](../1700-1799/1768_the_standard_positive_bimetric_route_ends_at_a_genuinely_new_cross_sector_principle.md).

@@ -1,0 +1,18 @@
+{
+  "schema": "spin23.new-model-path-selection/10",
+  "date": "2026-10-23",
+  "objective": "join the standard-positive bimetric survivor to the healthy pseudoscalar torsion sector and test ordinary cross-sector Ward selection",
+  "terminalStates": ["completed", "rejected_as_selector", "externally_blocked"],
+  "nodes": [
+    {"id":"BM","branch":"positive bimetric spin-two sector","state":"completed","result":"positive massless and massive spectral weights"},
+    {"id":"TP","branch":"healthy pseudoscalar torsion sector","state":"completed","result":"positive massive 0-minus pole on the critical EFT patch"},
+    {"id":"JP","branch":"minimal symmetry-respecting joined parent","state":"completed","result":"block-diagonal healthy free spectrum with invariant axial portal eta phi partial.J5"},
+    {"id":"SW","branch":"standard diffeomorphism and local-Lorentz Ward identities select eta","state":"rejected_as_selector","result":"eta multiplies a separately invariant operator and 0, 1/8 and 1/4 share the same free health and Ward identities"},
+    {"id":"CW","branch":"new cross-sector parent principle","state":"externally_blocked","blocker":"no symmetry or dynamical theorem linking bimetric, torsion and fermion normalizations is supplied"},
+    {"id":"SV","branch":"microscopic stabilized torsional compactification","state":"externally_blocked","blocker":"complete vacuum and normalized mixing, spectrum and threshold data absent"}
+  ],
+  "selectedNode": null,
+  "globalExhaustion": true,
+  "scope": "minimal standard-positive bimetric plus healthy pseudoscalar-torsion product with ordinary gravitational Ward identities",
+  "decision": "the surviving standard-positive completion admits a continuous invariant axial portal; selection requires genuinely new cross-sector parent structure or microscopic compactification"
+}

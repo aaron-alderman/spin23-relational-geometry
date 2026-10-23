@@ -1,0 +1,32 @@
+{
+  "schema": "spin23.bimetric-torsion-product-ward-audit/1",
+  "date": "2026-10-23",
+  "quadraticParent": {
+    "spin2Sector": "positive massless h0 and massive hm modes with matter metric h_g=cos(theta)h0+sin(theta)hm",
+    "torsionSector": "positive pseudoscalar phi with mass m_phi",
+    "axialPortal": "eta phi partial_mu J5^mu",
+    "freeHessian": "block diagonal between spin2 and pseudoscalar sectors at the reference vacuum"
+  },
+  "benchmark": {
+    "tanTheta": 1,
+    "massiveSpin2MassSquared": 1,
+    "masslessSpin2Residue": 0.5,
+    "massiveSpin2Residue": 0.5,
+    "pseudoscalarMassSquared": 2,
+    "axialCoefficientWitnesses": [0,0.125,0.25]
+  },
+  "wardAudit": {
+    "diagonalDiffeomorphisms": "impose stress-tensor conservation and the bimetric constraint-compatible coupling structure",
+    "localLorentz": "permits the pseudoscalar contraction phi partial.J5 or its axial-torsion form",
+    "coefficientConstraint": "none: eta multiplies a separately invariant operator",
+    "standardBimetricSymmetrySelectsEta": false,
+    "standardLocalLorentzSymmetrySelectsEta": false
+  },
+  "healthAudit": {
+    "freeSpectrumDependsOnEta": false,
+    "allWitnessesShareSpin2Poles": true,
+    "allWitnessesSharePseudoscalarPole": true,
+    "qualification": "loop closure and nonlinear constraints remain separate tests, but tree-level symmetry and free health do not select eta"
+  },
+  "verdict": "the minimally joined healthy bimetric and pseudoscalar-torsion sectors form a continuous eta family, so standard gravitational Ward identities do not provide the missing cross-sector selection"
+}
