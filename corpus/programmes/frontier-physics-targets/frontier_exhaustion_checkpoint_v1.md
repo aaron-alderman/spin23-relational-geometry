@@ -22,6 +22,8 @@ AZ-056 adds a second coordinate to this result. AZ-052 charts horizontal motion 
 
 AZ-057 closes OT-001 for the declared three-mechanism selector family and integrates OT-002--OT-005 in one generative simulator. Reversal tomography separates geometric holonomy from even splitting/loss effects, and process singular values finish the separation. The same run proves that an independently declared (Y), complete measurement record and matched-contraction thermodynamic ledgers are algebraically compatible. Their remaining gates are physical: carrier calibration, source-native (Y), record efficiency and measured heat/work/activity.
 
+The [finesse technology pathway](finesse_technology_pathway_v1.md) is the execution overlay: begin with a 90-day resonator-chain design and blind challenge, reuse its schema on a three-mode coherent selector platform, then advance to same-film response/force closure. Its escalation rule withholds “new physics” until a residual survives preregistered nuisance controls, independent-carrier replication and a common-parameter operator model.
+
 ## Shape of the remaining frontier
 
 The live frontier is not a sphere around one grand theory. It is a layered, perforated boundary:

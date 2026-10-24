@@ -2,7 +2,7 @@
 
 This corpus must be read from the admissible domain outward, not from a preferred symmetry group inward.
 
-The governing order is:
+The governing explanatory order is:
 
 \[
 \boxed{\text{Jordan admission and composition}}
@@ -14,7 +14,7 @@ The governing order is:
 \boxed{\text{dynamics, selection and records}}.
 \]
 
-The arrows do not claim that one mathematical structure temporally manufactures the next. They specify the order of explanation and the type of question assigned to each layer.
+The arrows do not claim that one mathematical structure temporally manufactures the next. They specify the order of explanation and the type of question assigned to each layer. Once the carrier and types are declared, the operative relation is balanced rather than one-way: Jordan composition constrains admissible Lie transport, while transport tests which Jordan relations remain dynamically stable.
 
 The [explanatory standard](EXPLANATORY_STANDARD.md) governs each arrow: begin with the things being related, state why they are alike and different, identify the reason for the difference, report mathematical and physical closure separately, and place implications beside non-implications. Pictures and speculative readings may be offered as a menu, but none is required to accept the core result.
 
@@ -23,6 +23,19 @@ The [explanatory standard](EXPLANATORY_STANDARD.md) governs each arrow: begin wi
 3. **Lie asks how admitted possibilities can be transported.** Infinitesimal transformations and their closure describe motion or relation that preserves declared structure. They do not decide which states are admissible, which carrier nature realizes or which member of an orbit is selected.
 4. **Dynamics lives inside, on or across the boundary.** An action, flow or update proposes histories. The admissibility gates determine whether those histories preserve positivity, type, causality, stability, global consistency and observable records.
 5. **Detectors return the construction to evidence.** A detector folds histories into records and thereby reveals some distinctions while quotienting away others.
+
+6. **Ternary structure records mediated influence.** A Jordan triple, ternary operator product or typed three-way compatibility law may encode how two terms relate through a third context. This is a mathematical form of mediated dependence, not permission to rename a cubic expression as a new physical force.
+
+## Originating language and the third-order arc
+
+The phrase “hope, kenotically, is third-order influence with a soul” may be retained as originating language under four firewalls:
+
+- “third-order” denotes an irreducibly three-place relation unless a physical perturbative order is separately derived;
+- “kenotic” governs the relinquishment of excess authority and the preservation of alternatives;
+- “soul” points to retained identity across admissible transformations and projections;
+- none of these words names a physical field, coupling or observable without an independently typed model and detector.
+
+The admissible scientific translation is to study context-mediated influence, identity-retaining transport, memory and detector-visible invariants. The metaphysical or theological interpretation remains optional and cannot serve as a premise in a physical derivation.
 
 For the rank-two positive response cone, the Jordan triple/TKK construction has the exact conformal completion
 

@@ -7,6 +7,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 ## Canonical artifacts
 
 - [Frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md) — current whole-corpus result, frontier shape and ranked next tranches.
+- [Finesse technology pathway](finesse_technology_pathway_v1.md) — converts certificate-preserving descent, detector lifting and memory closure into a 90-day launch, a shared finesse device and a strict anomaly-to-new-physics escalation ladder.
 - [Frontier physics target set](frontier_physics_target_set_v1.md) — human-readable map, priorities and use rules.
 - [Per-target corpus assessments](frontier_physics_target_assessments_v1.md) — reach band, internal assets, missing join, promotion test and neighbouring targets for every FPT entry.
 - [Target register](frontier_physics_target_register_v1.json) — machine-readable source of truth for the normalized target set and all declared crosswalks.

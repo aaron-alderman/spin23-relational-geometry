@@ -9,21 +9,33 @@
 
 ## The reading contract
 
-This programme must be read from admission outward, not from a preferred symmetry group inward: **Jordan admission and composition → typed admissibility region → Lie transformation and transport → dynamics, selection and records**. Jordan structure first delimits what can coexist as positive states, responses, observables and compositions. The typed middle then asks which carrier, histories, selectors and records remain jointly realizable. Lie structure describes how those admitted possibilities can be transformed and transported. Dynamics proposes paths through or across the resulting region; detectors decide which distinctions survive into records.
+This programme began with an understandable but damaging temptation: find the right Lie symmetry, place reality inside it, and treat decomposition of the group as explanation. That view was not useless—Lie structure remains indispensable for generators, transformations, transport and conservation—but it began with motion before establishing what could move, coexist, remain positive or become observable. It made a symmetry container look more fundamental than the admissible physical domain it was meant to preserve.
 
-In this order, \(\operatorname{Spin}_0(2,3)\cong\operatorname{Sp}(4,\mathbb R)\) is not the starting claim. It is the exact conformal completion obtained from the rank-two positive response cone through the Jordan triple/TKK construction. The group is a symmetry of the possibility space that the Jordan side has already delimited. The live research object is the compatibility region between admission and transport, not the group alone. The concise normative version is the [canonical reading contract](../READING_CONTRACT.md).
+The corrected reading begins from admission while retaining balance:
 
-## The good news
+\[
+\boxed{\text{Jordan: what can coexist and be observed}}
+\quad\rightleftarrows\quad
+\boxed{\text{Lie: how the admitted domain can change}}
+\]
+
+inside a typed admissibility region. Jordan structure has explanatory priority because it delimits positive states, responses, observables and allowed composition. Lie structure has dynamical necessity because admissibility without transport is sterile. Neither is reduced to the other. Their compatibility—not either language alone—is the live object.
+
+The next step is not merely another binary bridge. Jordan triple products, ternary operator systems and contextual composition show that influence can be genuinely three-place: a first term acts toward a third through a mediating state, relation or boundary condition. Dynamics proposes histories through this balanced structure; descent asks what survives reduction; detectors decide which distinctions reach records.
+
+In this order, \(\operatorname{Spin}_0(2,3)\cong\operatorname{Sp}(4,\mathbb R)\) is not the starting claim. It is the exact conformal completion obtained from the rank-two positive response cone through the Jordan triple/TKK construction. The Lie group is therefore a symmetry of an admitted possibility space, not the prior container of reality. The concise normative version is the [canonical reading contract](../READING_CONTRACT.md).
+
+## The recovered balance
 
 The corpus has found a coherent way to hold together two mathematical languages that physics repeatedly needs and repeatedly risks confusing.
 
-Jordan structure describes what can coexist as a state, response, observable or positive composition. Lie structure describes how a system can transform, move and preserve relations. The corpus does not ask one language to replace the other, but the order of explanation is not reversible:
+Jordan structure describes what can coexist as a state, response, observable or positive composition. Lie structure describes how a system can transform, move and preserve relations. The initial mistake was to ask Lie structure to answer both questions. The correction is not to reverse the monopoly and declare that Jordan structure does everything. It is to recover the balanced algebraic view in which symmetric composition and antisymmetric transport constrain one another:
 
 \[
 \boxed{\text{Jordan admission and composition}}
-\quad\longrightarrow\quad
+\quad\rightleftarrows\quad
 \boxed{\text{typed admissibility region}}
-\quad\longrightarrow\quad
+\quad\rightleftarrows\quad
 \boxed{\text{Lie transformation and transport}}
 \quad\longrightarrow\quad
 \boxed{\text{dynamics, selection and records}}.
@@ -45,7 +57,7 @@ with the connected group relation
 Sp(4,\mathbb R)\cong Spin_0(2,3).
 \]
 
-That hinge is established mathematics, not yet a declaration about the microscopic universe. Its importance is that the corpus has reached it from below—from positive response, two faces, elimination, composition and transport—not only from a top-down attraction to a symmetry name.
+That hinge is established mathematics, not yet a declaration about the microscopic universe. Its importance is that the corpus has reached it from below—from positive response, two faces, elimination, composition and transport—not only from a top-down attraction to a symmetry name. The symmetry becomes meaningful because it preserves and completes an admitted structure.
 
 The second piece of good news is methodological. When the corpus asks for dynamics, it no longer treats an action as the only possible beginning. It turns the question around:
 
@@ -88,6 +100,25 @@ This is why the repeated objects in the corpus matter. Projectors, Jordan frames
 \]
 
 That loop is the deeper coherence of the corpus. The algebraic work supplies exact local shapes. The admissibility programme asks which shapes survive contact with dynamics and observation. The detector programme asks which distinctions remain after an apparatus has folded the world into records. The frontier map then records what is filled, bounded, excluded, underidentified, experimentally inaccessible or still uncharted.
+
+## The third term: influence through relation
+
+The balanced view exposes why the programme repeatedly reaches ternary structure. Binary action asks what \(x\) does to \(y\). A triple product asks how \(x\) and \(z\) are related through a middle term \(y\):
+
+\[
+\{x,y,z\}.
+\]
+
+In the established mathematics this may be a Jordan triple product, a ternary operator product such as \(xy^\dagger z\), a three-way compatibility condition or a composition whose outcome depends on a boundary or context. “Third order” here means a genuinely three-place dependence. It does not automatically mean a cubic force law, third-order perturbation theory or a new fundamental interaction.
+
+This supplies a disciplined reading of the originating phrase **“hope, kenotically, is third-order influence with a soul.”** Its layers must remain distinct:
+
+- **Mathematical type-shape:** influence is mediated by a third term; changing the mediator can change which relation is admissible without changing the two endpoints.
+- **Methodological kenosis:** a model, institution or researcher relinquishes unwarranted authority so that another source, state or explanation can remain genuinely active rather than being absorbed into a prior container.
+- **Retained identity:** “soul” names the intuition that something remains itself through transformation, descent and relation without being exhausted by any one observable projection.
+- **Scientific boundary:** physics may test invariance, memory, identity-retaining transport and context-sensitive response. It has not thereby detected hope or a soul as a field, particle or force.
+
+The phrase is therefore neither discarded nor promoted beyond its warrant. It becomes an originating coordinate for a precise question: can a system exhibit relational influence that is irreducibly context-mediated while retaining a measurable identity across transformation and coarse-graining?
 
 ## What has been found
 
@@ -156,9 +187,9 @@ The corpus is therefore already valuable in two ways:
 1. as a mathematical programme, because it contains exact classifications, constructions and obstructions; and
 2. as a frontier instrument, because it tells researchers where a calculation, device or dataset can genuinely change the map.
 
-## Why there is hope: this is where to look
+## Why there is hope: the failures have become generative
 
-Hope here does not depend on pretending that every bridge closed. It comes from the shape of the failures.
+Hope here does not depend on pretending that every bridge closed. It comes from the way a failed binary identification can reveal the missing third term: a boundary, selector, environment, memory kernel, detector orientation, source relation or common action. The no-go does not merely say “no.” It specifies what would have to make room for a different relation to become possible.
 
 The programme has not dissolved into arbitrary numerology. Repeated investigations converge on a small set of missing objects: a physical carrier, a source-derived second datum, a common action, a protected normalization, a scale-stable descent and a detector that remains discriminating after nuisance folding. That convergence is informative. It means the next work can be narrower, harder and more decisive.
 
@@ -172,6 +203,8 @@ Several fronts are reachable without waiting for a final theory. Each has a two-
 - source-native exceptional and modular tests can return useful no-go results before any speculative unification claim is entertained.
 
 The invitation is therefore concrete: **look here**. Improve the projector control, material-response pipeline, thermodynamic-limit calculation, topological-memory device, polarized-force bound or carrier-preserving classification. Most successful work will improve theory, inference or engineering. If a residual survives the declared conventional model, reversal tests and detector controls, the same work provides an honest route to new physics. The route is difficult, but it is no longer shapeless.
+
+The [finesse technology pathway](../programmes/frontier-physics-targets/finesse_technology_pathway_v1.md) is the practical consequence. Higher energy is one way to cross a physical threshold; greater finesse is another way to recover distinctions already present but erased by the apparatus. Phase-sensitive reversal, nonlinear correlators, boundary-order probes, memory-aware inference and cross-carrier replication turn the philosophical arc into an engineering programme.
 
 ## Kenotic confidence
 
