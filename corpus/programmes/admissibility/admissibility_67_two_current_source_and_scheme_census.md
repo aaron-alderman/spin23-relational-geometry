@@ -1,7 +1,7 @@
 # The two-current frontier is three calculations, not one
 
 **Date:** 25 October 2026  
-**Status:** source-and-scheme census complete; OT-047 calculation open  
+**Status:** source-and-scheme census complete; its initial WP-A next action is superseded by the corpus-native five-coordinate result in AZ-068
 **Topic:** OT-047  
 **Parents:** [source-frame torsor](../closure/programme_closure_02_the_source_subspace_is_canonical_but_its_frame_is_an_affine_torsor.md), [external-source action](../closure/programme_closure_03_a_controlled_standard_model_external_source_action_exists_but_does_not_fix_the_frame.md), [vacuum spectral cone](../closure/programme_closure_04_vacuum_locality_closes_the_two_current_spectral_measure_on_h2r_but_not_the_thermal_response.md)  
 **Evidence:** [source-and-scheme ledger](../../../evidence/data/two-current-source-scheme-census-v1.json)  
@@ -91,7 +91,7 @@ None computes the corpus's incidence/$B-L$ matrix. Importing their theorems with
 
 ## Exact next calculation
 
-The next admissible tranche is WP-A, not the full finite-temperature answer at once:
+The census initially identified WP-A as the next admissible tranche:
 
 1. freeze the Dirac-neutrino branch, gauge, operator basis and subtraction convention;
 2. generate every one-loop 1PI insertion needed for the closed vector/breaking basis;
@@ -100,6 +100,8 @@ The next admissible tranche is WP-A, not the full finite-temperature answer at o
 5. only then match into WP-B and construct the WP-C thermal theory.
 
 The first decisive fork is simple. If $\gamma_{\lambda q}=0$ and a physical normalization makes $J_\lambda$ multiplicative, the corpus has a preferred running frame candidate. If a generic scale-dependent shear survives, only frame-covariant quantities—rank, determinant after normalization, pole loci and properly contracted observables—can be promoted.
+
+The subsequent whole-corpus reconciliation in [AZ-068](admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md) found that Results 33 and 35 had already completed the scheme-insensitive part of this step. Their exact five-coordinate quotient and leading noncontact Yukawa block kill algebraic two-current closure. The surviving calculation is therefore the energy-dependent five-channel absorptive response and its operational low-rank test, not another abstract $2\times2$ mixing ansatz.
 
 ## Open and closed
 

@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The next calculation is now finite: freeze a Dirac-neutrino branch, operator basis and subtraction scheme; compute the one-loop source subblock and source-source counterterms; and verify the protected Ward row before threshold matching or thermal continuation. A generic scale-dependent shear would demote basis components to conventions. A protected multiplicative frame or no-refit ratio would identify exactly where additional structure might live.
+> The census makes the work finite, and whole-corpus reconciliation sharpens it further: existing source-native calculations already determine the scheme-insensitive quotient and show that the broken sector has more than one channel. The next section states that no-go. The remaining task is not to assume a closed two-by-two block, but to find whether the full response develops an operational low-rank window before thermal continuation.
 
 ## What this commits us to
 
@@ -42,4 +42,4 @@ Supply the missing datum with a physical definition and demonstrate that it conn
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-two-currents-require-three-calculations) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-2.md) · [Next claim →](08-admissibility-frontier-kenotic-confidence-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-two-currents-require-three-calculations) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates-claim-1.md)

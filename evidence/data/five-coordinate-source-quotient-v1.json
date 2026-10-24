@@ -1,0 +1,195 @@
+{
+  "protocol": "five-coordinate-source-quotient/1",
+  "date": "2026-10-25",
+  "target": "OT-047",
+  "basis": [
+    "Q",
+    "u^c",
+    "d^c",
+    "L",
+    "e^c",
+    "nu^c",
+    "H"
+  ],
+  "yukawaMap": [
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      -1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      -1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  ],
+  "freeSeparatedPointMetricDiagonal": [
+    6,
+    3,
+    3,
+    2,
+    1,
+    1,
+    1
+  ],
+  "yukawaChannelMetric": [
+    [
+      1.5,
+      -0.8333333333333334,
+      -1,
+      1
+    ],
+    [
+      -0.8333333333333334,
+      1.5,
+      1,
+      -1
+    ],
+    [
+      -1,
+      1,
+      2.5,
+      -0.5
+    ],
+    [
+      1,
+      -1,
+      -0.5,
+      2.5
+    ]
+  ],
+  "yukawaChannelEigenvalues": [
+    0.6390791565672602,
+    0.6666666666666666,
+    2,
+    4.694254176766073
+  ],
+  "independentAnomalyRow": [
+    3,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "combinedRank": 5,
+  "nullRepresentatives": {
+    "hypercharge6": [
+      1,
+      -4,
+      2,
+      -3,
+      6,
+      0,
+      3
+    ],
+    "bl3": [
+      1,
+      -1,
+      -1,
+      -3,
+      3,
+      3,
+      0
+    ],
+    "yukawaOnHypercharge": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "yukawaOnBL": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "anomalyOnHypercharge": 0,
+    "anomalyOnBL": 0
+  },
+  "incidence": {
+    "deduplicated": {
+      "source": [
+        5,
+        5,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "image": [
+        10,
+        6,
+        2,
+        1,
+        16
+      ]
+    },
+    "multiplicity": {
+      "source": [
+        5,
+        5,
+        1,
+        1,
+        3,
+        0,
+        0
+      ],
+      "image": [
+        10,
+        6,
+        4,
+        1,
+        16
+      ]
+    },
+    "commonRelation": "A2=A3=v_u+v_d=16 in the declared normalization",
+    "eigenrayTest": "fails: neither four-component Yukawa image is an eigenvector of M"
+  },
+  "quotient": {
+    "coordinates": [
+      "v_u",
+      "v_d",
+      "v_e",
+      "v_nu",
+      "a_2"
+    ],
+    "dimensionAfterHyperchargeQuotient": 5,
+    "uniqueNullAxisAfterHyperchargeQuotient": "3(B-L)",
+    "contactEomInsensitive": true
+  },
+  "verdict": {
+    "exactTwoCurrentClosure": "killed_at_leading_noncontact_yukawa_block",
+    "operationalReopening": "requires a measured hierarchy, threshold window or external projection yielding one stable broken singular direction plus B-L",
+    "nextCalculation": "five-by-five absorptive response with top, bottom, charged-lepton, neutrino and weak-anomaly cuts, followed by singular-spectrum and KMS-limit tests",
+    "physicalFirewall": "The exact quotient and leading block do not supply the full diagrammatic counterterms, threshold-matched response or finite-temperature rank."
+  }
+}

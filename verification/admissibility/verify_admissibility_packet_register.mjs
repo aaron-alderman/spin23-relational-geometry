@@ -9,11 +9,11 @@ const primaryIds = primary.regions.map(region => region.id);
 const continuationIds = continuation.packets.map(packet => packet.id);
 const ids = [...primaryIds, ...continuationIds];
 
-for (let n = 1; n <= 67; n += 1) {
+for (let n = 1; n <= 68; n += 1) {
   const id = `AZ-${String(n).padStart(3, "0")}`;
   if (ids.filter(candidate => candidate === id).length !== 1) throw new Error(`${id} is missing or duplicated`);
 }
-if (ids.length !== 67) throw new Error(`expected 67 packets, found ${ids.length}`);
+if (ids.length !== 68) throw new Error(`expected 68 packets, found ${ids.length}`);
 if (continuation.continues !== "admissibility_zone_register_v1.json") throw new Error("continuation pointer mismatch");
 
 for (const packet of continuation.packets) {

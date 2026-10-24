@@ -460,9 +460,28 @@ The literature supplies the architecture but not the answer. Ward identities pro
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-2.md)
 
-The next calculation is now finite: freeze a Dirac-neutrino branch, operator basis and subtraction scheme; compute the one-loop source subblock and source-source counterterms; and verify the protected Ward row before threshold matching or thermal continuation. A generic scale-dependent shear would demote basis components to conventions. A protected multiplicative frame or no-refit ratio would identify exactly where additional structure might live.
+The census makes the work finite, and whole-corpus reconciliation sharpens it further: existing source-native calculations already determine the scheme-insensitive quotient and show that the broken sector has more than one channel. The next section states that no-go. The remaining task is not to assume a closed two-by-two block, but to find whether the full response develops an operational low-rank window before thermal continuation.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-3.md)
+
+<a id="hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates"></a>
+## Hot off the press — the microscopic source quotient has five coordinates
+
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** After hypercharge, equation-of-motion and contact redundancies are removed, the completed Standard-Model source quotient has five physical coordinates: four Yukawa violations and one independent weak-anomaly coordinate. Completed B minus L is the unique remaining null direction. This exact result was already present in the corpus but had not been carried into the frontier register.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates-claim-1.md)
+
+The leading noncontact Yukawa metric is positive and has four distinct eigenvalues. Neither retained incidence vector is one of its eigenrays. Exact incidence/B minus L two-current closure therefore fails: the protected current is real, but its broken complement contains several independently propagating channels. Rotating coordinates cannot repair that failure because it would merely rename the sources.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates-claim-2.md)
+
+The rank-two Jordan cone remains exact for any pair of ports that an experiment actually isolates. The missing reason is now operational rather than algebraic: compute the energy-dependent five-channel response and look for one stable broken singular direction separated from the others across a declared window. A spectral gap would justify a two-port reduced model and guide detector design; its absence would rule out that reduction while leaving the wider admissibility method intact.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates-claim-3.md)
 
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
