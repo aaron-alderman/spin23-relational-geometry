@@ -1,0 +1,2428 @@
+{
+  "protocol": "zenodo-eis-frozen-two-tone-protocol/1",
+  "date": "2026-10-25",
+  "source": {
+    "doi": "10.5281/zenodo.15422339",
+    "cells": 54
+  },
+  "frozenProtocol": {
+    "targetEvaluationValuesUsedForPrediction": false,
+    "calibrationRows": [
+      0,
+      29
+    ],
+    "calibrationFrequenciesHz": [
+      10000,
+      2.82193493843079
+    ],
+    "neighbourCount": 3,
+    "distance": "Euclidean distance in donor-standardized four-real calibration coordinates",
+    "parameterRule": "mean passive parameter vector of three nearest donor cells",
+    "evaluationRows": "source row index modulo 3 equals 1",
+    "thresholds": {
+      "heldOutMedianRelativeErrorMaximum": 0.05,
+      "heldOutMaximumRelativeErrorMaximum": 0.2
+    },
+    "adaptiveChoicesPerTarget": 0
+  },
+  "population": {
+    "passedCells": 54,
+    "failedCells": 0,
+    "passFraction": 1,
+    "medianCellMedianRelativeError": 0.006738955998266346,
+    "worstCellMedianRelativeError": 0.022897938650918218,
+    "medianCellMaximumRelativeError": 0.03612209874066091,
+    "worstCellMaximumRelativeError": 0.05502871684594699,
+    "worstMedianCell": "ID22",
+    "worstMaximumCell": "ID07"
+  },
+  "cells": [
+    {
+      "id": "ID01",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.01439659378957,
+            "im": 0.00577427260577679
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0181533463746746,
+            "im": -0.000302791058402363
+          }
+        }
+      ],
+      "neighbours": [
+        "ID25",
+        "ID26",
+        "ID53"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013708223284162805,
+        "seriesInductanceH": 9.62216914435289e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0001686793939650476,
+        "debyeResistanceAt1HzOhm": 0.0000062705265002644915,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002441140520416283,
+        "debyeResistanceAt1000HzOhm": 0.0017399746183936853,
+        "warburgOhmSqrtRadPerSecond": 0.0014121902463925045
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021336672721093263,
+        "medianRelativeError": 0.005756154696005102,
+        "meanRelativeError": 0.009841220602672594,
+        "maximumRelativeError": 0.03485803058365821
+      },
+      "passed": true
+    },
+    {
+      "id": "ID02",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0145269109634683,
+            "im": 0.00583251006901264
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0185514569730003,
+            "im": -0.000314182123020146
+          }
+        }
+      ],
+      "neighbours": [
+        "ID27",
+        "ID25",
+        "ID26"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013683700042143124,
+        "seriesInductanceH": 9.6872531190852e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00011705844953907623,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0025551143993000204,
+        "debyeResistanceAt1000HzOhm": 0.00176623164748241,
+        "warburgOhmSqrtRadPerSecond": 0.001437387215277982
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003344619573138634,
+        "medianRelativeError": 0.015699736270792762,
+        "meanRelativeError": 0.01746362542257597,
+        "maximumRelativeError": 0.044772947518090606
+      },
+      "passed": true
+    },
+    {
+      "id": "ID03",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141171411378309,
+            "im": 0.00563794746994972
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0183172498345812,
+            "im": -0.000323899600971345
+          }
+        }
+      ],
+      "neighbours": [
+        "ID30",
+        "ID28",
+        "ID14"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013411551439506127,
+        "seriesInductanceH": 9.448158259837543e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000007120717474792098,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.000008394807604851295,
+        "debyeResistanceAt100HzOhm": 0.002725014440213822,
+        "debyeResistanceAt1000HzOhm": 0.0019103532731718957,
+        "warburgOhmSqrtRadPerSecond": 0.0015053329616137147
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002035554032451382,
+        "medianRelativeError": 0.003947621172606038,
+        "meanRelativeError": 0.008802480509110425,
+        "maximumRelativeError": 0.03734344702242571
+      },
+      "passed": true
+    },
+    {
+      "id": "ID04",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0139687060145661,
+            "im": 0.00557741895318031
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0183682863116701,
+            "im": -0.00032720515582696
+          }
+        }
+      ],
+      "neighbours": [
+        "ID33",
+        "ID10",
+        "ID28"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01335846236260698,
+        "seriesInductanceH": 9.381180745500349e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000016581755281370723,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.00001383787865163651,
+        "debyeResistanceAt100HzOhm": 0.0028091285459947656,
+        "debyeResistanceAt1000HzOhm": 0.0019326061494821965,
+        "warburgOhmSqrtRadPerSecond": 0.001510360125462167
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019896632980106771,
+        "medianRelativeError": 0.006099988267825597,
+        "meanRelativeError": 0.009389165501771716,
+        "maximumRelativeError": 0.03215696175378034
+      },
+      "passed": true
+    },
+    {
+      "id": "ID05",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0139914889587089,
+            "im": 0.00572494789958
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0181907725036581,
+            "im": -0.000317680287025723
+          }
+        }
+      ],
+      "neighbours": [
+        "ID17",
+        "ID14",
+        "ID18"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013399910492871451,
+        "seriesInductanceH": 9.509563860226763e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000011716925153673576,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0025674017026020546,
+        "debyeResistanceAt1000HzOhm": 0.0019113407264282542,
+        "warburgOhmSqrtRadPerSecond": 0.0014680068631420752
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002143709515635324,
+        "medianRelativeError": 0.006216187161409825,
+        "meanRelativeError": 0.010875750657226235,
+        "maximumRelativeError": 0.030138686258724564
+      },
+      "passed": true
+    },
+    {
+      "id": "ID06",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140571425436065,
+            "im": 0.00567731261253357
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0184498142898519,
+            "im": -0.000330280732214305
+          }
+        }
+      ],
+      "neighbours": [
+        "ID28",
+        "ID14",
+        "ID03"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01343061579589145,
+        "seriesInductanceH": 9.449574789018258e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000007120717474792098,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.000008394807604851295,
+        "debyeResistanceAt100HzOhm": 0.00274262154481684,
+        "debyeResistanceAt1000HzOhm": 0.0019053951189041676,
+        "warburgOhmSqrtRadPerSecond": 0.0015082956968613089
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021785245759592742,
+        "medianRelativeError": 0.006434458921732729,
+        "meanRelativeError": 0.0112516510070531,
+        "maximumRelativeError": 0.0326892028644284
+      },
+      "passed": true
+    },
+    {
+      "id": "ID07",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0147200663341209,
+            "im": 0.00582759827375412
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0191464603394707,
+            "im": -0.000340731073720235
+          }
+        }
+      ],
+      "neighbours": [
+        "ID02",
+        "ID12",
+        "ID11"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013712325132491108,
+        "seriesInductanceH": 9.602630283649044e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00002948183078267758,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000022739980956543412,
+        "debyeResistanceAt100HzOhm": 0.002940794374662699,
+        "debyeResistanceAt1000HzOhm": 0.0018561661016880072,
+        "warburgOhmSqrtRadPerSecond": 0.0015011917014356444
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00039801552172369587,
+        "medianRelativeError": 0.01843149024012436,
+        "meanRelativeError": 0.020343171124144112,
+        "maximumRelativeError": 0.05502871684594699
+      },
+      "passed": true
+    },
+    {
+      "id": "ID08",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140207101358101,
+            "im": 0.00547122769057751
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0186068408638675,
+            "im": -0.000341459862738702
+          }
+        }
+      ],
+      "neighbours": [
+        "ID04",
+        "ID33",
+        "ID09"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013376801620436128,
+        "seriesInductanceH": 9.358363470207867e-8,
+        "debyeResistanceAt0.1HzOhm": 0,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000018399122014860775,
+        "debyeResistanceAt100HzOhm": 0.002829493579149541,
+        "debyeResistanceAt1000HzOhm": 0.0019281873014738576,
+        "warburgOhmSqrtRadPerSecond": 0.0015198968500702355
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002509449514438364,
+        "medianRelativeError": 0.011108754555256865,
+        "meanRelativeError": 0.013850593534471843,
+        "maximumRelativeError": 0.03320423705288771
+      },
+      "passed": true
+    },
+    {
+      "id": "ID09",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140263297362253,
+            "im": 0.00564014725387096
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0185983770043094,
+            "im": -0.000338764586103935
+          }
+        }
+      ],
+      "neighbours": [
+        "ID06",
+        "ID10",
+        "ID28"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013358899450591627,
+        "seriesInductanceH": 9.445776957444982e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000016581755281370723,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.00002000066799946928,
+        "debyeResistanceAt100HzOhm": 0.0028513090003884703,
+        "debyeResistanceAt1000HzOhm": 0.0019335212065336763,
+        "warburgOhmSqrtRadPerSecond": 0.0015179827708615267
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002435309430185852,
+        "medianRelativeError": 0.009586288164086725,
+        "meanRelativeError": 0.012907577799841813,
+        "maximumRelativeError": 0.03612209874066091
+      },
+      "passed": true
+    },
+    {
+      "id": "ID10",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.013903432409279,
+            "im": 0.005644166842103
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0184500787854631,
+            "im": -0.000333443969338987
+          }
+        }
+      ],
+      "neighbours": [
+        "ID09",
+        "ID06",
+        "ID04"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013377238708420775,
+        "seriesInductanceH": 9.422959682152502e-8,
+        "debyeResistanceAt0.1HzOhm": 0,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000024561911362693538,
+        "debyeResistanceAt100HzOhm": 0.0028716740335432453,
+        "debyeResistanceAt1000HzOhm": 0.001929102358525338,
+        "warburgOhmSqrtRadPerSecond": 0.0015275194954695954
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020707215701114702,
+        "medianRelativeError": 0.005504960462529047,
+        "meanRelativeError": 0.010209991367707599,
+        "maximumRelativeError": 0.02919740112693037
+      },
+      "passed": true
+    },
+    {
+      "id": "ID11",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0142944128019735,
+            "im": 0.00572910159826279
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0188324798346002,
+            "im": -0.000335147591158602
+          }
+        }
+      ],
+      "neighbours": [
+        "ID15",
+        "ID12",
+        "ID13"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01354716601907816,
+        "seriesInductanceH": 9.543542320712209e-8,
+        "debyeResistanceAt0.1HzOhm": 0,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000027448702568726587,
+        "debyeResistanceAt100HzOhm": 0.00304189000789131,
+        "debyeResistanceAt1000HzOhm": 0.0019218248442519643,
+        "warburgOhmSqrtRadPerSecond": 0.0015127245789096232
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021687906501491468,
+        "medianRelativeError": 0.0059928288427122415,
+        "meanRelativeError": 0.009779539829571365,
+        "maximumRelativeError": 0.03915083222619615
+      },
+      "passed": true
+    },
+    {
+      "id": "ID12",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0143788241548464,
+            "im": 0.00567513145506382
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0189935185462673,
+            "im": -0.000340752494139451
+          }
+        }
+      ],
+      "neighbours": [
+        "ID11",
+        "ID13",
+        "ID15"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013519922512269286,
+        "seriesInductanceH": 9.573422282810314e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000008070594643307138,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000020503936194887702,
+        "debyeResistanceAt100HzOhm": 0.0030235019568677023,
+        "debyeResistanceAt1000HzOhm": 0.001923852380418366,
+        "warburgOhmSqrtRadPerSecond": 0.0015106746280598015
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002971648877941541,
+        "medianRelativeError": 0.012318130665701131,
+        "meanRelativeError": 0.015158878587611278,
+        "maximumRelativeError": 0.04651327773226605
+      },
+      "passed": true
+    },
+    {
+      "id": "ID13",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141349480254576,
+            "im": 0.00571452639997005
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.018840427741452,
+            "im": -0.000345840978752676
+          }
+        }
+      ],
+      "neighbours": [
+        "ID15",
+        "ID11",
+        "ID09"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013492657623712297,
+        "seriesInductanceH": 9.533777172154394e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000008070594643307138,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000013462039383526262,
+        "debyeResistanceAt100HzOhm": 0.002984260905760468,
+        "debyeResistanceAt1000HzOhm": 0.0019186278422325658,
+        "warburgOhmSqrtRadPerSecond": 0.0015104220723963825
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023892947799652496,
+        "medianRelativeError": 0.009485790413629461,
+        "meanRelativeError": 0.012807672413974774,
+        "maximumRelativeError": 0.03329996316732039
+      },
+      "passed": true
+    },
+    {
+      "id": "ID14",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141020835144445,
+            "im": 0.00569419376552105
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0183356378674944,
+            "im": -0.000327985691455979
+          }
+        }
+      ],
+      "neighbours": [
+        "ID06",
+        "ID28",
+        "ID03"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013426511557896917,
+        "seriesInductanceH": 9.44142799042036e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000007120717474792098,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.00001455759695268406,
+        "debyeResistanceAt100HzOhm": 0.0027712935659394977,
+        "debyeResistanceAt1000HzOhm": 0.0019087939985173977,
+        "warburgOhmSqrtRadPerSecond": 0.0015252528553230365
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022372695529715043,
+        "medianRelativeError": 0.007943022017460085,
+        "meanRelativeError": 0.01116697383170232,
+        "maximumRelativeError": 0.035772875592420934
+      },
+      "passed": true
+    },
+    {
+      "id": "ID15",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141683266265318,
+            "im": 0.00572537072002888
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.018586726158901,
+            "im": -0.00033756312177502
+          }
+        }
+      ],
+      "neighbours": [
+        "ID13",
+        "ID11",
+        "ID06"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013493749495449715,
+        "seriesInductanceH": 9.545555571551363e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000008070594643307138,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.00002666672554272047,
+        "debyeResistanceAt100HzOhm": 0.0029955478362733833,
+        "debyeResistanceAt1000HzOhm": 0.001923931917886668,
+        "warburgOhmSqrtRadPerSecond": 0.001525824015461092
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00024106296008321953,
+        "medianRelativeError": 0.009529487349853429,
+        "meanRelativeError": 0.012898927594059027,
+        "maximumRelativeError": 0.03524714523358918
+      },
+      "passed": true
+    },
+    {
+      "id": "ID16",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141558040631935,
+            "im": 0.00579696893692017
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0182182781845768,
+            "im": -0.000315274884542305
+          }
+        }
+      ],
+      "neighbours": [
+        "ID29",
+        "ID17",
+        "ID19"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01343633777121215,
+        "seriesInductanceH": 9.63966371940817e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000026128423034474778,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0025089081946386067,
+        "debyeResistanceAt1000HzOhm": 0.00190854013194372,
+        "warburgOhmSqrtRadPerSecond": 0.0014717587910402126
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023098450548036966,
+        "medianRelativeError": 0.0067962851185271326,
+        "meanRelativeError": 0.011455637155925092,
+        "maximumRelativeError": 0.03785024170970233
+      },
+      "passed": true
+    },
+    {
+      "id": "ID17",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141025193734095,
+            "im": 0.0057488102465868
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0180886026919325,
+            "im": -0.000317433864893246
+          }
+        }
+      ],
+      "neighbours": [
+        "ID19",
+        "ID35",
+        "ID05"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013427955409440534,
+        "seriesInductanceH": 9.574662497178738e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000038567183050318825,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000005150664656573452,
+        "debyeResistanceAt100HzOhm": 0.002503854983875116,
+        "debyeResistanceAt1000HzOhm": 0.001874152448208987,
+        "warburgOhmSqrtRadPerSecond": 0.0014656311651515361
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021581497398817065,
+        "medianRelativeError": 0.0052833660763603124,
+        "meanRelativeError": 0.009740093383904653,
+        "maximumRelativeError": 0.0349322701044285
+      },
+      "passed": true
+    },
+    {
+      "id": "ID18",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.014032335835509,
+            "im": 0.00565542466938496
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0179585639834841,
+            "im": -0.000312625330025185
+          }
+        }
+      ],
+      "neighbours": [
+        "ID38",
+        "ID30",
+        "ID40"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013433686461795888,
+        "seriesInductanceH": 9.419905686431992e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000045370792665048834,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002372318443378456,
+        "debyeResistanceAt1000HzOhm": 0.0018868144800373648,
+        "warburgOhmSqrtRadPerSecond": 0.001455889530676422
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019928088507780754,
+        "medianRelativeError": 0.004968878812248468,
+        "meanRelativeError": 0.009113643961424082,
+        "maximumRelativeError": 0.030434854806983772
+      },
+      "passed": true
+    },
+    {
+      "id": "ID19",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141536601586267,
+            "im": 0.00574884936213493
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0179990299493511,
+            "im": -0.000311099823647965
+          }
+        }
+      ],
+      "neighbours": [
+        "ID35",
+        "ID24",
+        "ID17"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013431831837563695,
+        "seriesInductanceH": 9.590410923083854e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00006711708619333617,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024459701551719595,
+        "debyeResistanceAt1000HzOhm": 0.0018472543767338037,
+        "warburgOhmSqrtRadPerSecond": 0.0014522552573690373
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020865640052577847,
+        "medianRelativeError": 0.0022680012376309613,
+        "meanRelativeError": 0.008725457525957828,
+        "maximumRelativeError": 0.03786079964686424
+      },
+      "passed": true
+    },
+    {
+      "id": "ID20",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0139914097962901,
+            "im": 0.00586144253611565
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.017812215954109,
+            "im": -0.00030042235584915
+          }
+        }
+      ],
+      "neighbours": [
+        "ID39",
+        "ID21",
+        "ID34"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013331293479820419,
+        "seriesInductanceH": 9.597816846543037e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00002535178928841258,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023610701566125626,
+        "debyeResistanceAt1000HzOhm": 0.0018619230533782668,
+        "warburgOhmSqrtRadPerSecond": 0.001426544903950159
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020670135872965435,
+        "medianRelativeError": 0.0060082146050567,
+        "meanRelativeError": 0.009495137909768879,
+        "maximumRelativeError": 0.033734726067966986
+      },
+      "passed": true
+    },
+    {
+      "id": "ID21",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140458027599379,
+            "im": 0.00575925782322884
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.017824498236223,
+            "im": -0.000304304603105265
+          }
+        }
+      ],
+      "neighbours": [
+        "ID34",
+        "ID37",
+        "ID24"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013372926830093675,
+        "seriesInductanceH": 9.594002444063053e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00007808790417271404,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002355325441619599,
+        "debyeResistanceAt1000HzOhm": 0.0018492394525599866,
+        "warburgOhmSqrtRadPerSecond": 0.001423971892956681
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022622495036833982,
+        "medianRelativeError": 0.005625589117347645,
+        "meanRelativeError": 0.010634695541129996,
+        "maximumRelativeError": 0.034793393029089216
+      },
+      "passed": true
+    },
+    {
+      "id": "ID22",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0138382109580562,
+            "im": 0.00577463023364544
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0172159422636469,
+            "im": -0.000291637830287073
+          }
+        }
+      ],
+      "neighbours": [
+        "ID43",
+        "ID39",
+        "ID37"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013356025806828832,
+        "seriesInductanceH": 9.606673555137894e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00008287998256001816,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0022040668471622507,
+        "debyeResistanceAt1000HzOhm": 0.0018461493580276352,
+        "warburgOhmSqrtRadPerSecond": 0.0013919373814748242
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00038811896385525875,
+        "medianRelativeError": 0.022897938650918218,
+        "meanRelativeError": 0.02344140058994453,
+        "maximumRelativeError": 0.03548385131914687
+      },
+      "passed": true
+    },
+    {
+      "id": "ID23",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.014471277478151,
+            "im": 0.00589705258607864
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0177619711012085,
+            "im": -0.00030169169031069
+          }
+        }
+      ],
+      "neighbours": [
+        "ID49",
+        "ID41",
+        "ID50"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013702394515540506,
+        "seriesInductanceH": 9.733122117808516e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010761415398711751,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002098573004697602,
+        "debyeResistanceAt1000HzOhm": 0.0017312972197309276,
+        "warburgOhmSqrtRadPerSecond": 0.0013776706248390923
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023920738746006936,
+        "medianRelativeError": 0.00894735408919163,
+        "meanRelativeError": 0.011095930830331276,
+        "maximumRelativeError": 0.04067056760790621
+      },
+      "passed": true
+    },
+    {
+      "id": "ID24",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141279752133414,
+            "im": 0.00575577653944492
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0178167794347246,
+            "im": -0.00030765983819947
+          }
+        }
+      ],
+      "neighbours": [
+        "ID37",
+        "ID21",
+        "ID19"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013393021246689325,
+        "seriesInductanceH": 9.582889384110194e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004122193890183948,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.00233309635996777,
+        "debyeResistanceAt1000HzOhm": 0.0018832927253691074,
+        "warburgOhmSqrtRadPerSecond": 0.0014189056942155544
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002172337396717237,
+        "medianRelativeError": 0.008458749814667165,
+        "meanRelativeError": 0.010242299914477155,
+        "maximumRelativeError": 0.03959813022769928
+      },
+      "passed": true
+    },
+    {
+      "id": "ID25",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0144213464809582,
+            "im": 0.00579471699893475
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.018153538227125,
+            "im": -0.000306407936932374
+          }
+        }
+      ],
+      "neighbours": [
+        "ID01",
+        "ID26",
+        "ID27"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013681637614096784,
+        "seriesInductanceH": 9.681050459585562e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00009695264182791161,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002565523994125391,
+        "debyeResistanceAt1000HzOhm": 0.0017537500672277827,
+        "warburgOhmSqrtRadPerSecond": 0.001449637193615767
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022887440145926192,
+        "medianRelativeError": 0.00879854164255332,
+        "meanRelativeError": 0.01168027056150179,
+        "maximumRelativeError": 0.03872574342515005
+      },
+      "passed": true
+    },
+    {
+      "id": "ID26",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0143482646672055,
+            "im": 0.00579211115837097
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0182082534283836,
+            "im": -0.000309684649892006
+          }
+        }
+      ],
+      "neighbours": [
+        "ID25",
+        "ID01",
+        "ID27"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013702017441185313,
+        "seriesInductanceH": 9.674099166583666e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010918169166778266,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0025307596248454766,
+        "debyeResistanceAt1000HzOhm": 0.0017505592235115906,
+        "warburgOhmSqrtRadPerSecond": 0.00144726087982258
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021750586354848969,
+        "medianRelativeError": 0.005226019098969344,
+        "meanRelativeError": 0.010311325023780411,
+        "maximumRelativeError": 0.03251047384437073
+      },
+      "passed": true
+    },
+    {
+      "id": "ID27",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0144225683761761,
+            "im": 0.00582136027514935
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0183888014853437,
+            "im": -0.000311550263631943
+          }
+        }
+      ],
+      "neighbours": [
+        "ID26",
+        "ID02",
+        "ID25"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013725649367832125,
+        "seriesInductanceH": 9.686476079665066e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00012516434090819367,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0025521985984548173,
+        "debyeResistanceAt1000HzOhm": 0.0017828229338872732,
+        "warburgOhmSqrtRadPerSecond": 0.0014328094848403896
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022725530216183482,
+        "medianRelativeError": 0.006297569644032499,
+        "meanRelativeError": 0.011185126128678231,
+        "maximumRelativeError": 0.0356856873058419
+      },
+      "passed": true
+    },
+    {
+      "id": "ID28",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140763752860948,
+            "im": 0.00565231777727604
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0183946241140802,
+            "im": -0.000328169569456804
+          }
+        }
+      ],
+      "neighbours": [
+        "ID06",
+        "ID03",
+        "ID14"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01342603052180624,
+        "seriesInductanceH": 9.477733096041214e-8,
+        "debyeResistanceAt0.1HzOhm": 0,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.0000061627893478327665,
+        "debyeResistanceAt100HzOhm": 0.0027653839452682683,
+        "debyeResistanceAt1000HzOhm": 0.0019069400432920342,
+        "warburgOhmSqrtRadPerSecond": 0.0015100300286449125
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020227185605445317,
+        "medianRelativeError": 0.005342274295837369,
+        "meanRelativeError": 0.009705602409887215,
+        "maximumRelativeError": 0.03343030689180837
+      },
+      "passed": true
+    },
+    {
+      "id": "ID29",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141026246128604,
+            "im": 0.00584553182125092
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0182218470126827,
+            "im": -0.000316840787036199
+          }
+        }
+      ],
+      "neighbours": [
+        "ID16",
+        "ID17",
+        "ID19"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013451276626383846,
+        "seriesInductanceH": 9.610880635252034e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000015204435960125466,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002489848618373927,
+        "debyeResistanceAt1000HzOhm": 0.0019149190302741202,
+        "warburgOhmSqrtRadPerSecond": 0.0014567830752330424
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002323706330226622,
+        "medianRelativeError": 0.008306030806802712,
+        "meanRelativeError": 0.01237280186505766,
+        "maximumRelativeError": 0.03354693588197175
+      },
+      "passed": true
+    },
+    {
+      "id": "ID30",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140735487220809,
+            "im": 0.00564328581094742
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0182204369903047,
+            "im": -0.000322177963880677
+          }
+        }
+      ],
+      "neighbours": [
+        "ID03",
+        "ID28",
+        "ID14"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01343061579589145,
+        "seriesInductanceH": 9.449574789018258e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000007120717474792098,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.000008394807604851295,
+        "debyeResistanceAt100HzOhm": 0.00274262154481684,
+        "debyeResistanceAt1000HzOhm": 0.0019053951189041676,
+        "warburgOhmSqrtRadPerSecond": 0.0015082956968613089
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002265211458101346,
+        "medianRelativeError": 0.009774513495707342,
+        "meanRelativeError": 0.012566872929048676,
+        "maximumRelativeError": 0.03258186285120467
+      },
+      "passed": true
+    },
+    {
+      "id": "ID31",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.014354623737745,
+            "im": 0.00571901910007
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.018292895749255,
+            "im": -0.000310832825107354
+          }
+        }
+      ],
+      "neighbours": [
+        "ID32",
+        "ID26",
+        "ID01"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013638287325913686,
+        "seriesInductanceH": 9.622825995014844e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00012647134802327734,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0025638527890025696,
+        "debyeResistanceAt1000HzOhm": 0.001766038669463935,
+        "warburgOhmSqrtRadPerSecond": 0.001426711548605483
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022744076248393347,
+        "medianRelativeError": 0.006738955998266346,
+        "meanRelativeError": 0.011031224030440979,
+        "maximumRelativeError": 0.03791528878923304
+      },
+      "passed": true
+    },
+    {
+      "id": "ID32",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0142955965129659,
+            "im": 0.00571660883724689
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0182703409791429,
+            "im": -0.000313910729801137
+          }
+        }
+      ],
+      "neighbours": [
+        "ID31",
+        "ID35",
+        "ID26"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013582925977733968,
+        "seriesInductanceH": 9.606691535268917e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00008069977570405507,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002541796042505439,
+        "debyeResistanceAt1000HzOhm": 0.0017972888708133485,
+        "warburgOhmSqrtRadPerSecond": 0.0014463145237514168
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023268173704327346,
+        "medianRelativeError": 0.0062115356331167975,
+        "meanRelativeError": 0.011646865850395295,
+        "maximumRelativeError": 0.037140435142860646
+      },
+      "passed": true
+    },
+    {
+      "id": "ID33",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140474688960239,
+            "im": 0.00556598603725433
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0183040660322149,
+            "im": -0.000325417016483698
+          }
+        }
+      ],
+      "neighbours": [
+        "ID04",
+        "ID03",
+        "ID30"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013405068086610163,
+        "seriesInductanceH": 9.395752274275116e-8,
+        "debyeResistanceAt0.1HzOhm": 0,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000012834689922686772,
+        "debyeResistanceAt100HzOhm": 0.0027247176724474816,
+        "debyeResistanceAt1000HzOhm": 0.0018932618163655212,
+        "warburgOhmSqrtRadPerSecond": 0.0015151637847501175
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019966522351059593,
+        "medianRelativeError": 0.006032700007029788,
+        "meanRelativeError": 0.009048410730829194,
+        "maximumRelativeError": 0.03348682673683044
+      },
+      "passed": true
+    },
+    {
+      "id": "ID34",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.014042520779185,
+            "im": 0.00575564801692963
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0179035749733885,
+            "im": -0.000303615657230694
+          }
+        }
+      ],
+      "neighbours": [
+        "ID21",
+        "ID37",
+        "ID24"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013371554380572782,
+        "seriesInductanceH": 9.588010985660603e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00007808790417271404,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023266558222678276,
+        "debyeResistanceAt1000HzOhm": 0.0018529020487397336,
+        "warburgOhmSqrtRadPerSecond": 0.001415233124520394
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023385684133664996,
+        "medianRelativeError": 0.007200338049582353,
+        "meanRelativeError": 0.012366124651955135,
+        "maximumRelativeError": 0.03394531730430247
+      },
+      "passed": true
+    },
+    {
+      "id": "ID35",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141866308404133,
+            "im": 0.00574002787470818
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0179921064973314,
+            "im": -0.000313181416913721
+          }
+        }
+      ],
+      "neighbours": [
+        "ID19",
+        "ID17",
+        "ID24"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013444441575986642,
+        "seriesInductanceH": 9.586401903373016e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00006727483719112547,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024118948162616207,
+        "debyeResistanceAt1000HzOhm": 0.0018685709193914251,
+        "warburgOhmSqrtRadPerSecond": 0.0014545048036470366
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022305714375694355,
+        "medianRelativeError": 0.005488934770769079,
+        "meanRelativeError": 0.009735864107270616,
+        "maximumRelativeError": 0.03959414649282889
+      },
+      "passed": true
+    },
+    {
+      "id": "ID36",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0136292938841507,
+            "im": 0.00557493977248669
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0176371347606619,
+            "im": -0.000304421076634753
+          }
+        }
+      ],
+      "neighbours": [
+        "ID18",
+        "ID22",
+        "ID04"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013302698788404852,
+        "seriesInductanceH": 9.454263333864829e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00007136597796309483,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000012834689922686772,
+        "debyeResistanceAt100HzOhm": 0.002416233164007487,
+        "debyeResistanceAt1000HzOhm": 0.0018696343120930955,
+        "warburgOhmSqrtRadPerSecond": 0.0014639594306224317
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003204372063387521,
+        "medianRelativeError": 0.014283651926590176,
+        "meanRelativeError": 0.018402568669334297,
+        "maximumRelativeError": 0.04054331117957282
+      },
+      "passed": true
+    },
+    {
+      "id": "ID37",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140975619433448,
+            "im": 0.00576255656778812
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0177195102423866,
+            "im": -0.000302064510378841
+          }
+        }
+      ],
+      "neighbours": [
+        "ID39",
+        "ID21",
+        "ID54"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01335660448698543,
+        "seriesInductanceH": 9.58683560393679e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00008116786799978476,
+        "debyeResistanceAt1HzOhm": 0.0000046726651796538046,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023218773267429534,
+        "debyeResistanceAt1000HzOhm": 0.0018368083921617914,
+        "warburgOhmSqrtRadPerSecond": 0.0014184660322782204
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022575397541189443,
+        "medianRelativeError": 0.006599078068817615,
+        "meanRelativeError": 0.01074774477224254,
+        "maximumRelativeError": 0.03929158565176206
+      },
+      "passed": true
+    },
+    {
+      "id": "ID38",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141365024028346,
+            "im": 0.00565106421709061
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0178560663462122,
+            "im": -0.000305310780731816
+          }
+        }
+      ],
+      "neighbours": [
+        "ID40",
+        "ID18",
+        "ID54"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013413519678308096,
+        "seriesInductanceH": 9.471783410857895e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010342287061503373,
+        "debyeResistanceAt1HzOhm": 0.0000046726651796538046,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002312132424388186,
+        "debyeResistanceAt1000HzOhm": 0.0018587602995263925,
+        "warburgOhmSqrtRadPerSecond": 0.0014270453315478188
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021954368996459487,
+        "medianRelativeError": 0.0064707422887906,
+        "meanRelativeError": 0.009988788643728631,
+        "maximumRelativeError": 0.03744523732765633
+      },
+      "passed": true
+    },
+    {
+      "id": "ID39",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140937109244987,
+            "im": 0.0057788398116827
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0176473606825311,
+            "im": -0.000304658680306602
+          }
+        }
+      ],
+      "neighbours": [
+        "ID37",
+        "ID21",
+        "ID24"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013371554380572782,
+        "seriesInductanceH": 9.588010985660603e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00007808790417271404,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023266558222678276,
+        "debyeResistanceAt1000HzOhm": 0.0018529020487397336,
+        "warburgOhmSqrtRadPerSecond": 0.001415233124520394
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00024346634706940134,
+        "medianRelativeError": 0.00976221742290912,
+        "meanRelativeError": 0.013458755373273764,
+        "maximumRelativeError": 0.03690480493718354
+      },
+      "passed": true
+    },
+    {
+      "id": "ID40",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0141315822256729,
+            "im": 0.00567061826586723
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0177263293862779,
+            "im": -0.000302118265153695
+          }
+        }
+      ],
+      "neighbours": [
+        "ID38",
+        "ID54",
+        "ID18"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013400325321716337,
+        "seriesInductanceH": 9.462858197708961e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00007701392978010661,
+        "debyeResistanceAt1HzOhm": 0.0000046726651796538046,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023514687962825783,
+        "debyeResistanceAt1000HzOhm": 0.0018779704549014675,
+        "warburgOhmSqrtRadPerSecond": 0.0014424013988328082
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000237899517350877,
+        "medianRelativeError": 0.010111271386254306,
+        "meanRelativeError": 0.01276083892174055,
+        "maximumRelativeError": 0.03791800576227089
+      },
+      "passed": true
+    },
+    {
+      "id": "ID41",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0144406025065109,
+            "im": 0.00582562200725079
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0179090213478048,
+            "im": -0.000296461033485684
+          }
+        }
+      ],
+      "neighbours": [
+        "ID50",
+        "ID47",
+        "ID25"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.0136730279213641,
+        "seriesInductanceH": 9.684039750171438e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00012806436365722727,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0021853986158999594,
+        "debyeResistanceAt1000HzOhm": 0.0017426280199483019,
+        "warburgOhmSqrtRadPerSecond": 0.0013886781332085694
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022873522114388766,
+        "medianRelativeError": 0.005413187762292241,
+        "meanRelativeError": 0.010644830195386694,
+        "maximumRelativeError": 0.03867763465461803
+      },
+      "passed": true
+    },
+    {
+      "id": "ID42",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0143330831779167,
+            "im": 0.00574290938675404
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0177474033534963,
+            "im": -0.000294068815037463
+          }
+        }
+      ],
+      "neighbours": [
+        "ID44",
+        "ID46",
+        "ID47"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013609370164292098,
+        "seriesInductanceH": 9.639954739059293e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010892977943983035,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.00208751772776338,
+        "debyeResistanceAt1000HzOhm": 0.001756095007571102,
+        "warburgOhmSqrtRadPerSecond": 0.0013708959835684938
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022375713584069838,
+        "medianRelativeError": 0.007180675957607253,
+        "meanRelativeError": 0.010726910274180096,
+        "maximumRelativeError": 0.036885873794179534
+      },
+      "passed": true
+    },
+    {
+      "id": "ID43",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0140405426500365,
+            "im": 0.00576810911297798
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0175308261514147,
+            "im": -0.000292894329959381
+          }
+        }
+      ],
+      "neighbours": [
+        "ID37",
+        "ID39",
+        "ID54"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013377885845915384,
+        "seriesInductanceH": 9.59319198291532e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010718537094149879,
+        "debyeResistanceAt1HzOhm": 0.0000046726651796538046,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002277348769027926,
+        "debyeResistanceAt1000HzOhm": 0.001829518180568576,
+        "warburgOhmSqrtRadPerSecond": 0.0014070544217913985
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002659959743166001,
+        "medianRelativeError": 0.012399789304461738,
+        "meanRelativeError": 0.015477830255872332,
+        "maximumRelativeError": 0.032625031503720724
+      },
+      "passed": true
+    },
+    {
+      "id": "ID44",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0143248903332278,
+            "im": 0.00576043128967285
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0176799271703203,
+            "im": -0.000298003769330535
+          }
+        }
+      ],
+      "neighbours": [
+        "ID42",
+        "ID46",
+        "ID47"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013609205704746316,
+        "seriesInductanceH": 9.627427074735394e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010156356008361762,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0021044777494881903,
+        "debyeResistanceAt1000HzOhm": 0.0017621868355998755,
+        "warburgOhmSqrtRadPerSecond": 0.0013754046803527882
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021561657863437852,
+        "medianRelativeError": 0.006012483907806479,
+        "meanRelativeError": 0.010059524851971773,
+        "maximumRelativeError": 0.036124485029583694
+      },
+      "passed": true
+    },
+    {
+      "id": "ID45",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0142090924782678,
+            "im": 0.00582719221711159
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.017526923909827,
+            "im": -0.000290604906240333
+          }
+        }
+      ],
+      "neighbours": [
+        "ID51",
+        "ID47",
+        "ID46"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013576318042449013,
+        "seriesInductanceH": 9.679780157212702e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00011205862155729098,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002044488394807654,
+        "debyeResistanceAt1000HzOhm": 0.0017527885835031223,
+        "warburgOhmSqrtRadPerSecond": 0.0013719812332686082
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022723531352570342,
+        "medianRelativeError": 0.006371039094558487,
+        "meanRelativeError": 0.012031045433607461,
+        "maximumRelativeError": 0.030052309655025748
+      },
+      "passed": true
+    },
+    {
+      "id": "ID46",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0143127253977582,
+            "im": 0.00578898005187511
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0176915146857937,
+            "im": -0.000292281083147827
+          }
+        }
+      ],
+      "neighbours": [
+        "ID44",
+        "ID47",
+        "ID42"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.0136141351965032,
+        "seriesInductanceH": 9.61011050696612e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010933284963411894,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0021022504199668065,
+        "debyeResistanceAt1000HzOhm": 0.00175640158911683,
+        "warburgOhmSqrtRadPerSecond": 0.0013693769200440137
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021448844422349334,
+        "medianRelativeError": 0.0061711008360717376,
+        "meanRelativeError": 0.009836694537633825,
+        "maximumRelativeError": 0.035158415818986884
+      },
+      "passed": true
+    },
+    {
+      "id": "ID47",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0143415526254103,
+            "im": 0.00583122856914997
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0176562771648605,
+            "im": -0.000290965007934574
+          }
+        }
+      ],
+      "neighbours": [
+        "ID48",
+        "ID46",
+        "ID50"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013639349170344782,
+        "seriesInductanceH": 9.69742374914878e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00011651436464339751,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0020613626869443943,
+        "debyeResistanceAt1000HzOhm": 0.0017335702635981765,
+        "warburgOhmSqrtRadPerSecond": 0.0013725059310758113
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021934858662696149,
+        "medianRelativeError": 0.005593136379051362,
+        "meanRelativeError": 0.010064657614839408,
+        "maximumRelativeError": 0.03526432429047371
+      },
+      "passed": true
+    },
+    {
+      "id": "ID48",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0143374361796305,
+            "im": 0.00587125867605209
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0175959758907993,
+            "im": -0.00029089597364873
+          }
+        }
+      ],
+      "neighbours": [
+        "ID47",
+        "ID49",
+        "ID52"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013665789384736659,
+        "seriesInductanceH": 9.741333779318713e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00012733465271843223,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002027802602982689,
+        "debyeResistanceAt1000HzOhm": 0.001712330509314185,
+        "warburgOhmSqrtRadPerSecond": 0.0013638991341440772
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022286609944920506,
+        "medianRelativeError": 0.0053330001230062745,
+        "meanRelativeError": 0.010939867099812614,
+        "maximumRelativeError": 0.03287538580345892
+      },
+      "passed": true
+    },
+    {
+      "id": "ID49",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0144265972776338,
+            "im": 0.00589044764637947
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.017678537637039,
+            "im": -0.000288579163225222
+          }
+        }
+      ],
+      "neighbours": [
+        "ID48",
+        "ID50",
+        "ID52"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013672200160906376,
+        "seriesInductanceH": 9.722478680636532e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00013264201797727793,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0020127244674267744,
+        "debyeResistanceAt1000HzOhm": 0.0017016752198306935,
+        "warburgOhmSqrtRadPerSecond": 0.0013633362003421376
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023104423617623896,
+        "medianRelativeError": 0.007404972349913625,
+        "meanRelativeError": 0.010984486805556254,
+        "maximumRelativeError": 0.03903581122983244
+      },
+      "passed": true
+    },
+    {
+      "id": "ID50",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0144545565126464,
+            "im": 0.00583287887275219
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.017673944354101,
+            "im": -0.000291084275431785
+          }
+        }
+      ],
+      "neighbours": [
+        "ID52",
+        "ID47",
+        "ID41"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013673251376755041,
+        "seriesInductanceH": 9.703198166553131e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010748393987779042,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.00207972925132017,
+        "debyeResistanceAt1000HzOhm": 0.0017264227934765865,
+        "warburgOhmSqrtRadPerSecond": 0.0013727419397427673
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021988579786094296,
+        "medianRelativeError": 0.005996149144228639,
+        "meanRelativeError": 0.01014508022905883,
+        "maximumRelativeError": 0.038809152335532844
+      },
+      "passed": true
+    },
+    {
+      "id": "ID51",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0142228965414688,
+            "im": 0.00583777204155922
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0174361926019628,
+            "im": -0.000287716729417298
+          }
+        }
+      ],
+      "neighbours": [
+        "ID45",
+        "ID48",
+        "ID47"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013561544380030724,
+        "seriesInductanceH": 9.711523023747954e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00013230695598427257,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0020604700762647146,
+        "debyeResistanceAt1000HzOhm": 0.0017556784220969053,
+        "warburgOhmSqrtRadPerSecond": 0.0013576794099982726
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002448514870403786,
+        "medianRelativeError": 0.010719085859901042,
+        "meanRelativeError": 0.014082822307962074,
+        "maximumRelativeError": 0.03231921594361319
+      },
+      "passed": true
+    },
+    {
+      "id": "ID52",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.014430181006901,
+            "im": 0.00583667494356632
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0175379358679493,
+            "im": -0.000285861476641003
+          }
+        }
+      ],
+      "neighbours": [
+        "ID50",
+        "ID47",
+        "ID48"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013641425784452703,
+        "seriesInductanceH": 9.720569166543484e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00011383056600240454,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002053902686462511,
+        "debyeResistanceAt1000HzOhm": 0.001726878476456686,
+        "warburgOhmSqrtRadPerSecond": 0.0013732946706823122
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023472160182985143,
+        "medianRelativeError": 0.007886634127197572,
+        "meanRelativeError": 0.012228800987386388,
+        "maximumRelativeError": 0.0401834366041626
+      },
+      "passed": true
+    },
+    {
+      "id": "ID53",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.0145072889281437,
+            "im": 0.00573435053229332
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0180229817033251,
+            "im": -0.000302526650102664
+          }
+        }
+      ],
+      "neighbours": [
+        "ID01",
+        "ID25",
+        "ID31"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013681616015363196,
+        "seriesInductanceH": 9.61652929905496e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00011576741017477246,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002516812604546653,
+        "debyeResistanceAt1000HzOhm": 0.0017557195030242579,
+        "warburgOhmSqrtRadPerSecond": 0.0014443774667572459
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002559526936344433,
+        "medianRelativeError": 0.011560813172846808,
+        "meanRelativeError": 0.013300527310147907,
+        "maximumRelativeError": 0.04306395295724125
+      },
+      "passed": true
+    },
+    {
+      "id": "ID54",
+      "calibration": [
+        {
+          "rowIndex": 0,
+          "frequencyHz": 10000,
+          "measured": {
+            "re": 0.014095917227678,
+            "im": 0.00572963617742062
+          }
+        },
+        {
+          "rowIndex": 29,
+          "frequencyHz": 2.82193493843079,
+          "measured": {
+            "re": 0.0177838162035187,
+            "im": -0.000298902728445682
+          }
+        }
+      ],
+      "neighbours": [
+        "ID37",
+        "ID21",
+        "ID34"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013331204620601762,
+        "seriesInductanceH": 9.58910797804803e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00002601750294171402,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023727402367075424,
+        "debyeResistanceAt1000HzOhm": 0.0018746071429944023,
+        "warburgOhmSqrtRadPerSecond": 0.0014166174865985464
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022338632236281177,
+        "medianRelativeError": 0.007814256980166136,
+        "meanRelativeError": 0.010475897982665528,
+        "maximumRelativeError": 0.04133207228558268
+      },
+      "passed": true
+    }
+  ],
+  "decision": {
+    "frozenProtocolPassesAllCells": true,
+    "deployableWithinBatchPointPredictionRuleEstablished": true,
+    "simultaneousPredictiveDistributionEstablished": false,
+    "externalBatchReplicationEstablished": false,
+    "measurementCovarianceEstablished": false,
+    "detectorLikelihoodClosed": false,
+    "generatedDynamicsEstablished": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The globally frozen two-tone, three-neighbour rule predicts every untouched spectrum inside the declared ceilings. This establishes a deployable within-batch point-prediction protocol, not uncertainty calibration, external replication, dynamics or new physics."
+}

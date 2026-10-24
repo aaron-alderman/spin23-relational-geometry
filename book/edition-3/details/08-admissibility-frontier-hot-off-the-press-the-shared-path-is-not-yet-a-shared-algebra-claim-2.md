@@ -17,7 +17,7 @@ A specified candidate class fails under explicit assumptions. The conclusion doe
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the shared path is not yet a shared algebra”.
-- **Unit of argument:** assertion 2 of 12 in this section.
+- **Unit of argument:** assertion 2 of 13 in this section.
 - **Evidence posture:** Check the assumptions defining the ruled-out candidate class; the no-go does not automatically extend beyond that class.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
@@ -34,6 +34,7 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ## Controlling documents
 
+- **admissibility 93 frozen two tone within batch protocol** — [admissibility_93_frozen_two_tone_within_batch_protocol.md](../../../corpus/programmes/admissibility/admissibility_93_frozen_two_tone_within_batch_protocol.md)
 - **admissibility 92 two point population state bridge** — [admissibility_92_two_point_population_state_bridge.md](../../../corpus/programmes/admissibility/admissibility_92_two_point_population_state_bridge.md)
 - **admissibility 91 one point latent state boundary** — [admissibility_91_one_point_latent_state_boundary.md](../../../corpus/programmes/admissibility/admissibility_91_one_point_latent_state_boundary.md)
 - **admissibility 90 pointwise population envelope rank identity and cell level boundary** — [admissibility_90_pointwise_population_envelope_rank_identity_and_cell_level_boundary.md](../../../corpus/programmes/admissibility/admissibility_90_pointwise_population_envelope_rank_identity_and_cell_level_boundary.md)

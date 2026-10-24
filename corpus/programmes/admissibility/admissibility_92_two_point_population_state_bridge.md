@@ -21,7 +21,7 @@ This closes a minimal *point-prediction* bridge for this source population. It d
 
 ## Next gate
 
-Freeze the dominant 10 kHz / 2.8219349 Hz protocol globally rather than reselecting it per outer target, then construct a donor-only joint residual model and test simultaneous whole-spectrum coverage. External replication on a separately acquired batch is required before calling the bridge prospective.
+AZ-093 freezes 10 kHz / 2.8219349 Hz and three neighbours globally. All 54 cells still pass, so the within-batch point-prediction rule is closed. The remaining gates are a donor-only joint residual model, simultaneous whole-spectrum coverage and external replication on a separately acquired batch.
 
 ## Reproduction
 

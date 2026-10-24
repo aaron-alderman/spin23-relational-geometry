@@ -299,6 +299,10 @@ That second view closes the point-prediction gate. Donor-only nested validation 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-12.md)
 
+The final adaptive freedom can also be removed. Fix 10 kHz and 2.8219349 Hz for every target, fix three nearest donors, and keep the passive basis unchanged: all 54 cells still pass. The median cellwise median error remains 0.674%, the worst median improves to 2.290%, and the worst maximum remains 5.503%. This is a reproducible within-batch two-tone point-prediction rule, and therefore a concrete theoretical-engineering gain. It still does not provide simultaneous uncertainty, fixture covariance, external-batch transfer, dynamics or new physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-13.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

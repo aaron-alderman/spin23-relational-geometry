@@ -169,6 +169,12 @@ with 2.8219349 Hz for 51 targets, and all 54 cells pass on fifteen untouched
 frequencies. The result is a two-tone population-state bridge, not yet a joint
 predictive distribution, external replication, detector likelihood or dynamics.
 
+[AZ-093](../admissibility/admissibility_93_frozen_two_tone_within_batch_protocol.md)
+removes the remaining adaptation. The globally fixed 10 kHz / 2.8219349 Hz,
+three-neighbour rule still passes all 54 cells and improves the worst median
+error to 2.290%. It is now a reproducible within-batch point predictor; joint
+uncertainty, fixture covariance and external-batch replication remain open.
+
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
 (\pi/4) phase depends on a common anomaly trivialization, while the (T_1)

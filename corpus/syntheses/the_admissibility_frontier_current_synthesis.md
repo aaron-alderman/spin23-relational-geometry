@@ -300,6 +300,13 @@ the low-frequency point locates relaxation/diffusion state. This is a practical
 population-state bridge, while joint uncertainty, causal material meaning,
 external replication and generated dynamics remain distinct open gates.
 
+[AZ-093](../programmes/admissibility/admissibility_93_frozen_two_tone_within_batch_protocol.md)
+removes the adaptive qualifier. Exactly 10 kHz and 2.8219349 Hz with three
+nearest donors predict all 54 untouched spectra; no target chooses its own
+frequency, neighbourhood size or basis. The bridge is therefore deployable
+within this batch, while uncertainty calibration and external transfer remain
+the honest boundary.
+
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one
 nonabelian semisimple factor, \(\mathfrak{sl}_2\); the reciprocal programme core
