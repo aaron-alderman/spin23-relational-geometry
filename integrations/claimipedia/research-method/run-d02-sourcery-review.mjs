@@ -18,8 +18,8 @@ const bridgeArgs = [
   "--initial-generation", "split-v9-qualified",
 ];
 const expectedHost = {
-  generationId: "host-policy-anchor-v19",
-  runtimeHash: "42c6e040c0b5422c89e51fb20ed04fefe9289c3b7106b50027cffea9aaf5dd5a",
+  generationId: "host-nonproduction-receiving-r87r5",
+  runtimeHash: "f6a578a2280faf014970bc1072c0f17d4477f99d4fcfc6a0bc3a515a92b3818f",
   requiredBasisGenerationId: "host-claim-adapter-v18",
   requiredBasisHash: "28fbfa709c2f8a18716d76450a196abba8074e45b908334316c7e0c147d2b1a3"
 };

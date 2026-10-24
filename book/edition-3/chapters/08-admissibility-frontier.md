@@ -255,9 +255,13 @@ The selector fork also admits an exact reduced dynamics. A convex competition se
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-1.md)
 
-This is a useful no-go. Wrapping every claim in the same opaque signature and assigning synthetic rule metadata would produce a runnable graph, but the typing would come from the wrapper rather than the corpus. The product-preserving and physical-operator gates therefore remain open. Their next datum is finite: type one source-native path without changing Sourcery's admission rules, keep epistemic relations outside the transformation category where appropriate, and predict one held-out composition, product identity or detector record. That would be theoretical engineering; only a source-specific physical residue beyond generic graph programmability would reopen the new-physics reading.
+That no-go remains exact, but the positive side has moved. Four separately authored D02 research paths now pass the active Sourcery v1 protocol: fixed-support local reasoning, operator-range classification, rank-change approach-arc dispatch and boundary-measure dispatch. Their sixteen named steps preserve assumptions, irreversible losses, evidence and proposal-only authority. Fourteen deliberately overstrong queries return no candidates, while fifteen invalid rules remain in rejection receipts. This is not a contradiction: the 43 records are epistemic relations, whereas the admitted D02 edges were authored as scientific operations. A real reason-preserving workflow bridge now exists without pretending that every relation is an operator.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md)
+
+The result is theoretical engineering, not yet a shared physical algebra. The stricter local common-algebra-2 contract requires exact SI-dimension vectors and declared dimension changes, which the four runners do not yet supply. No Jordan product, physical action or detector prediction has been extracted. The next datum is finite: dimension one source-native path, pass the stricter contract unchanged, and predict a withheld product identity, operator composition or calibrated record. Only a source-specific residue surviving those controls would reopen the new-physics reading.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-3.md)
 
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute

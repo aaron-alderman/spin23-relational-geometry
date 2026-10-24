@@ -95,13 +95,17 @@ for another dimensionless redesign.
 | OT-049 | Exceptional rank-one vacuum Hessian and gauge spectrum | stable action-level vacuum with coloured directions and matched current geometry |
 | OT-050 | Lattice-subroutine gravitational action and observable | one complete typed route from the Golay–Leech–Monster/genus-two carrier to a healthy local action or continuum and a no-refit record |
 
-Wave 7.72 sharpens OT-026 and OT-027 without closing them. The pinned
-Claimipedia capture retains 43 directed epistemic relations, but zero records
-directly satisfy Sourcery's scientific-transformation admission contract. The
-shared structure is an ordered graph path, not yet an ALE valuation, Jordan
-product or physical operator. The next admissible bridge must type one real
-path at its source and predict a held-out composition or detector record; an
-opaque uniform wrapper fires the existing programmable-encoding kill test.
+Wave 7.72 and [AZ-082](../admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md)
+now separate two questions that previously looked like one. The pinned
+Claimipedia relationship capture still has zero of 43 edges directly admissible
+as scientific transformations. Separately, four authored D02 research paths,
+with sixteen named steps, pass the active Sourcery v1 protocol and retain
+assumptions, losses, evidence, bounded authority, fourteen zero-candidate
+negative queries and fifteen rejected-rule fixtures. A source-native executable
+workflow therefore exists; a graph-derived Jordan algebra does not. OT-026 and
+OT-027 now reopen at the narrower boundary: add exact SI dimensions and pass
+`common-algebra-2`, then predict a withheld product identity, physical-operator
+composition or calibrated detector record.
 
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute

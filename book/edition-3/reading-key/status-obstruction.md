@@ -39,6 +39,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [E3-F23 · The local gravity route has one healthy critical torsion sector but no closed quantum parent](../chapters/08-result-ledger.md#E3-F23)
 - [Claim · The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra (1)](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra (2)](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra (3)](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-3.md)
 - [Claim · The admissibility frontier · Hot off the press — three hybrid modes are one short (1)](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — three hybrid modes are one short (2)](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — three hybrid modes are one short (3)](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-3.md)

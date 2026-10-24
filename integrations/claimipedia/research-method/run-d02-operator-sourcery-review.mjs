@@ -10,7 +10,7 @@ const generated = resolve(here, "generated");
 const node = "C:/Users/aaron/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe";
 const bridge = "C:/Users/aaron/sourcery/.consolidation/temple-supervisor/host/2026-10-17-executable-succession-root-v7/host-local-bridge.mjs";
 const bridgeArgs = [bridge, "--ledger", "C:\\Users\\aaron\\sourcery\\.consolidation\\temple-supervisor\\supervisor.sqlite", "--generations", "C:\\Users\\aaron\\sourcery\\.consolidation\\temple-supervisor\\generations", "--runtime-root", "C:\\Users\\aaron\\sourcery\\.consolidation\\temple-runtime", "--authority-custody", "C:\\Users\\aaron\\sourcery\\.consolidation\\authority\\temple-authority.dpapi", "--initial-generation", "split-v9-qualified"];
-const expectedHost = { generationId: "host-policy-anchor-v19", runtimeHash: "42c6e040c0b5422c89e51fb20ed04fefe9289c3b7106b50027cffea9aaf5dd5a", requiredBasisGenerationId: "host-claim-adapter-v18", requiredBasisHash: "28fbfa709c2f8a18716d76450a196abba8074e45b908334316c7e0c147d2b1a3" };
+const expectedHost = { generationId: "host-nonproduction-receiving-r87r5", runtimeHash: "f6a578a2280faf014970bc1072c0f17d4477f99d4fcfc6a0bc3a515a92b3818f", requiredBasisGenerationId: "host-claim-adapter-v18", requiredBasisHash: "28fbfa709c2f8a18716d76450a196abba8074e45b908334316c7e0c147d2b1a3" };
 const fields = ["domain", "rank", "variance", "basis", "regime", "order", "scheme", "symmetry", "cp", "support"];
 const authority = { proposalOnly: true, entails: false, empiricalAuthority: false };
 

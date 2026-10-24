@@ -205,6 +205,28 @@ opaque signature would make a runnable graph, but the typing would come from
 the wrapper rather than the corpus. That is the difference between encoding a
 bridge and extracting one.
 
+The [source-native path audit](../programmes/admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md)
+now supplies a positive result on the other side of that distinction. Four
+authored D02 research-method graphs pass the active Sourcery v1 protocol: a
+local fixed-support theorem, an operator-range dispatcher, a rank-change
+approach-arc dispatcher and a boundary-measure dispatcher. Their sixteen named
+steps retain assumptions, losses, evidence and bounded authority; fourteen
+overstrong queries return no path and fifteen invalid rules remain visible.
+This does not revise the zero-of-43 count because the source objects differ.
+The epistemic edges remain epistemic; the admitted edges were authored as
+scientific operations. What is newly established is an executable seam between
+reason-preserving corpus work and checked transformation paths.
+
+That seam is still upstream of physics. The active host returned protocol v1,
+whereas the local `common-algebra-2` contract also requires exact SI-dimension
+vectors and declared dimension changes. The four runners do not yet carry that
+ledger. Nor do they extract a Jordan product, assign a physical action or
+predict a detector record. The next bridge is therefore precise: dimension one
+source-native path, pass the stricter contract unchanged, and withhold a
+product identity, operator composition or calibrated record for prediction.
+Success would be theoretical engineering; a source-specific residue surviving
+those controls would be the point at which a new-physics reading could reopen.
+
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one
 nonabelian semisimple factor, \(\mathfrak{sl}_2\); the reciprocal programme core
