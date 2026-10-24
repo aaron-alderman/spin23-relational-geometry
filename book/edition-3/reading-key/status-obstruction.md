@@ -11,6 +11,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 ## Every current use
 
 - [The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra)
+- [The admissibility frontier · Hot off the press — three hybrid modes are one short](../chapters/08-admissibility-frontier.md#hot-off-the-press-three-hybrid-modes-are-one-short)
 - [One carrier, two faces, three relations · Three relations do not select an orientation](../chapters/02-one-carrier-two-faces-three-relations.md#three-relations-do-not-select-an-orientation)
 - [Chapter · The projective loop](../chapters/03-projective-loop.md)
 - [The projective loop · The reversal](../chapters/03-projective-loop.md#the-reversal)
@@ -30,6 +31,9 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [E3-F23 · The local gravity route has one healthy critical torsion sector but no closed quantum parent](../chapters/08-result-ledger.md#E3-F23)
 - [Claim · The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra (1)](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra (2)](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — three hybrid modes are one short (1)](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — three hybrid modes are one short (2)](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — three hybrid modes are one short (3)](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-3.md)
 - [Claim · One carrier, two faces, three relations · Three relations do not select an orientation (1)](../details/02-one-carrier-two-faces-three-relations-three-relations-do-not-select-an-orientation-claim-1.md)
 - [Claim · The projective loop · The reversal (1)](../details/03-projective-loop-the-reversal-claim-1.md)
 - [Claim · The projective loop · Central sign versus handedness (1)](../details/03-projective-loop-central-sign-versus-handedness-claim-1.md)

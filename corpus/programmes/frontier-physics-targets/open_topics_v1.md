@@ -59,7 +59,7 @@ for another dimensionless redesign.
 | ID | Topic | Frontier contribution |
 |---|---|---|
 | OT-011 | Magnon-polaron versus skew scattering | resolves a major thermal-Hall detector equivalence |
-| OT-012 | YIG three-mode versus four-mode fork | chooses the closest physical hybrid carrier |
+| OT-012 | YIG three-mode versus four-mode fork | AZ-062 closes the reported three-mode protected-doublet route and makes one calibrated four-mode tripod the active target |
 | OT-013 | Non-Hermitian topology versus active selection | separates coherent geometry from gain/loss attraction |
 | OT-015 | Defect information beyond index | tests what a wall transports beyond mode count |
 | OT-016 | Hydrodynamic multichannel cone | collides conservation with response rank |

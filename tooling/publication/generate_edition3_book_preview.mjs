@@ -270,6 +270,7 @@ const sectionTaxonomy = {
   "Hot off the press — the four-mode bench is ready to build": "experiment",
   "Hot off the press — the Lean fold now has a finite provenance gate": "governance",
   "Hot off the press — the selector chip has a design wedge": "experiment",
+  "Hot off the press — three hybrid modes are one short": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -346,6 +347,7 @@ const sectionArchetype = {
   "Hot off the press — the four-mode bench is ready to build": "builder",
   "Hot off the press — the Lean fold now has a finite provenance gate": "auditor",
   "Hot off the press — the selector chip has a design wedge": "builder",
+  "Hot off the press — three hybrid modes are one short": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -564,6 +566,15 @@ admissibilitySections.splice(orientedSeamIndex + 14, 0, [
     "**Provisional integration note — 25 October 2026.** The integrated-photonic carrier now has a finite coupled-mode design window. The strict two-percent adiabatic budget requires coupling–length product at least 207.7968; an illustrative 20 per millimetre, 12 mm schedule passes the adiabatic, accumulated splitting, accumulated differential-loss, dark-retention and nonunitarity tests when the unmeasured residual ratios are each assumed to be one part in ten thousand. Those assumptions are design targets, not properties inferred from published matrix fidelity or insertion loss.",
     "The almost-same device is not yet the same experiment. The exact latitude schedule uses signed effective couplings, whereas passive gap-controlled evanescent couplings are ordinarily nonnegative. A fabrication-native route must therefore add calibrated phase sections, cascade returned half-angle modules, or replace the latitude by a positive-octant or braiding path and rerun the full-wave tolerance calculation. Reversal also needs an external phase reference: within an isolated two-dimensional dark space the two quarter-turn senses differ by a central sign that phase-blind process fidelity quotients away.",
     "Selection must remain a separate intervention. A passive anisotropic section strong enough to attract one dark direction is itself splitting or differential loss, so leaving it active during the holonomy stage can counterfeit choice by ordinary mode filtering. The next useful build has a neutral holonomy stage, reference port, independently calibrated and switchable Y stage, and Y-off/Y-on multi-input tomography. Passing would be theoretical engineering; new physics would still require a source-native reason for nature to choose that carrier and selector.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 15, 0, [
+  "Hot off the press — three hybrid modes are one short",
+  [
+    "**Provisional integration note — 25 October 2026.** The reported YIG photon–magnon–phonon device is a genuine triple-strong-coupling system, but its rotating-frame matrix is an irreducible three-node chain. With both couplings nonzero that Jacobi matrix has simple eigenvalues and only one dark direction. Three hybrid species are therefore not the same object as one bright direction plus a protected two-dimensional dark space.",
+    "The strongest near-doublet reading also fails the present reference budget. Using the 13.26 MHz resonant polariton separation as the remote gap, the three reported polaromechanical pair splittings exceed the AZ-027 relative-splitting limit by factors 1.92, 3.38 and 16.12; the weakest pair is not resolved from its reported polariton linewidth. Reducing the pump coupling does not manufacture the missing protected plane or its three-component control loop.",
+    "The positive target is now structurally definite: one central mode coupled to three independently controlled outer modes has spectrum plus/minus the coupling norm and a two-dimensional zero eigenspace. A second cavity mode, mechanical sideband or magnon mode could supply the missing outer partner, but no such tripod, closed loop, dark-space tomography or independent selector is present in the reported experiment. This selects the next architecture; it does not infer new physics from hybridization.",
   ],
 ]);
 
@@ -807,6 +818,7 @@ const sectionEvidenceOverrides = {
   "Where the exceptional programme actually stands": ["40_grand_synthesis_spin23_pole.md", "1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md", "1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md"],
   "Hot off the press — the Lean fold now has a finite provenance gate": ["corpus/programmes/admissibility/admissibility_60_monster_lean_fold_provenance_and_reproduction_gate.md", "corpus/programmes/frontier/wave-7/frontier_wave7_30_kernel_closure_and_expression_tree_reachability_sieve.md", "corpus/programmes/frontier/wave-7/frontier_wave7_35_adaptive_depth_census_and_detector_cost_curve.md"],
   "Hot off the press — the selector chip has a design wedge": ["corpus/programmes/admissibility/admissibility_61_photonic_selector_chip_coupled_mode_preflight.md", "corpus/programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md", "corpus/programmes/admissibility/admissibility_28_platform_triage_for_the_quarter_turn_contraction_experiment.md"],
+  "Hot off the press — three hybrid modes are one short": ["corpus/programmes/admissibility/admissibility_62_yig_three_mode_no_go_and_four_mode_tripod_gate.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
 };
 
 const evidenceReading = key => ({

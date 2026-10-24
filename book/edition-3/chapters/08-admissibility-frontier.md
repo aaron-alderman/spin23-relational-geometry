@@ -350,6 +350,25 @@ Selection must remain a separate intervention. A passive anisotropic section str
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-3.md)
 
+<a id="hot-off-the-press-three-hybrid-modes-are-one-short"></a>
+## Hot off the press — three hybrid modes are one short
+
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The reported YIG photon–magnon–phonon device is a genuine triple-strong-coupling system, but its rotating-frame matrix is an irreducible three-node chain. With both couplings nonzero that Jacobi matrix has simple eigenvalues and only one dark direction. Three hybrid species are therefore not the same object as one bright direction plus a protected two-dimensional dark space.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-1.md)
+
+The strongest near-doublet reading also fails the present reference budget. Using the 13.26 MHz resonant polariton separation as the remote gap, the three reported polaromechanical pair splittings exceed the AZ-027 relative-splitting limit by factors 1.92, 3.38 and 16.12; the weakest pair is not resolved from its reported polariton linewidth. Reducing the pump coupling does not manufacture the missing protected plane or its three-component control loop.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-2.md)
+
+The positive target is now structurally definite: one central mode coupled to three independently controlled outer modes has spectrum plus/minus the coupling norm and a two-dimensional zero eigenspace. A second cavity mode, mechanical sideband or magnon mode could supply the missing outer partner, but no such tripod, closed loop, dark-space tomography or independent selector is present in the reported experiment. This selects the next architecture; it does not infer new physics from hybridization.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
