@@ -1,0 +1,1087 @@
+{
+  "protocol": "nonlinear-stochastic-frame-detailed-balance/1",
+  "date": "2026-10-25",
+  "target": "OT-016",
+  "parent": "AZ-101",
+  "primaryLiterature": [
+    {
+      "title": "Effective field theory for dissipative fluids (II)",
+      "url": "https://arxiv.org/abs/1701.07817",
+      "role": "nonlinear dynamical KMS and hydrodynamic frame choices"
+    },
+    {
+      "title": "Schwinger-Keldysh effective field theory for stable and causal relativistic hydrodynamics",
+      "url": "https://arxiv.org/abs/2309.00511",
+      "role": "fully nonlinear KMS-realizing stable and causal stochastic hydrodynamics"
+    },
+    {
+      "title": "Covariant Formulation of Non-linear Langevin Theory with Multiplicative Gaussian White Noises",
+      "url": "https://arxiv.org/abs/2007.16131",
+      "role": "nonlinear coordinate covariance and noise-induced drift in Ito dynamics"
+    }
+  ],
+  "model": {
+    "originalDynamics": "dx=-grad(U)dt+sqrt(2T)dW",
+    "originalPotential": "U=(a*x1^2+b*x2^2)/2",
+    "nonlinearFrame": "y1=x1+epsilon*x2^2; y2=x2",
+    "transformedDiffusion": "D_y=T*J*J^T",
+    "detailedBalanceCondition": "b_i=partial_j D_ij-(D_ij/T)partial_j U",
+    "inducedItoDrift": "T times the contracted Hessian of the nonlinear frame map"
+  },
+  "parameters": {
+    "T": 0.8,
+    "a": 1.3,
+    "b": 0.9,
+    "epsilon": 0.28
+  },
+  "samples": [
+    {
+      "y": [
+        -1.2,
+        -0.9
+      ],
+      "x": [
+        -1.4268,
+        -0.9
+      ],
+      "potential": 1.6877428560000003,
+      "jacobian": [
+        [
+          1,
+          -0.5040000000000001
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          1.0032128,
+          -0.40320000000000006
+        ],
+        [
+          -0.40320000000000006,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.4858010362527775,
+        1.3174117637472227
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        -1.85484,
+        -1.7448393600000003
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        1.4465999999999999,
+        0.81
+      ],
+      "itoCorrectedDrift": [
+        1.8946,
+        0.81
+      ],
+      "detailedBalanceDrift": [
+        1.8945999999999996,
+        0.8100000000000002
+      ],
+      "correctCurrentOverDensity": [
+        4.440892098500626e-16,
+        -1.1102230246251565e-16
+      ],
+      "naiveCurrentOverDensity": [
+        -0.44799999999999973,
+        -1.1102230246251565e-16
+      ]
+    },
+    {
+      "y": [
+        -1.2,
+        -0.2
+      ],
+      "x": [
+        -1.2112,
+        -0.2
+      ],
+      "potential": 0.9715535360000002,
+      "jacobian": [
+        [
+          1,
+          -0.11200000000000002
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          0.8100352000000002,
+          -0.08960000000000001
+        ],
+        [
+          -0.08960000000000001,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.7152772171739836,
+        0.8947579828260166
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        -1.5745600000000002,
+        -0.35635072000000007
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        1.5544000000000002,
+        0.18000000000000002
+      ],
+      "itoCorrectedDrift": [
+        2.0024,
+        0.18000000000000002
+      ],
+      "detailedBalanceDrift": [
+        2.0024000000000006,
+        0.18000000000000005
+      ],
+      "correctCurrentOverDensity": [
+        -4.440892098500626e-16,
+        -2.7755575615628914e-17
+      ],
+      "naiveCurrentOverDensity": [
+        -0.4480000000000004,
+        -2.7755575615628914e-17
+      ]
+    },
+    {
+      "y": [
+        -1.2,
+        0.5
+      ],
+      "x": [
+        -1.27,
+        0.5
+      ],
+      "potential": 1.1608850000000002,
+      "jacobian": [
+        [
+          1,
+          0.28
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          0.86272,
+          0.22400000000000003
+        ],
+        [
+          0.22400000000000003,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.6051754523403512,
+        1.057544547659649
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        -1.651,
+        0.9122800000000001
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        1.525,
+        -0.45
+      ],
+      "itoCorrectedDrift": [
+        1.9729999999999999,
+        -0.45
+      ],
+      "detailedBalanceDrift": [
+        1.9729999999999999,
+        -0.4500000000000001
+      ],
+      "correctCurrentOverDensity": [
+        0,
+        1.1102230246251565e-16
+      ],
+      "naiveCurrentOverDensity": [
+        -0.44799999999999995,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "y": [
+        -1.2,
+        1
+      ],
+      "x": [
+        -1.48,
+        1
+      ],
+      "potential": 1.8737599999999999,
+      "jacobian": [
+        [
+          1,
+          0.56
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          1.05088,
+          0.44800000000000006
+        ],
+        [
+          0.44800000000000006,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.46020974131082143,
+        1.3906702586891786
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        -1.924,
+        1.97744
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        1.42,
+        -0.9
+      ],
+      "itoCorrectedDrift": [
+        1.8679999999999999,
+        -0.9
+      ],
+      "detailedBalanceDrift": [
+        1.8679999999999999,
+        -0.9000000000000002
+      ],
+      "correctCurrentOverDensity": [
+        0,
+        2.220446049250313e-16
+      ],
+      "naiveCurrentOverDensity": [
+        -0.44799999999999995,
+        2.220446049250313e-16
+      ]
+    },
+    {
+      "y": [
+        -0.4,
+        -0.9
+      ],
+      "x": [
+        -0.6268,
+        -0.9
+      ],
+      "potential": 0.6198708560000001,
+      "jacobian": [
+        [
+          1,
+          -0.5040000000000001
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          1.0032128,
+          -0.40320000000000006
+        ],
+        [
+          -0.40320000000000006,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.4858010362527775,
+        1.3174117637472227
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        -0.81484,
+        -1.22067936
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        0.4065999999999999,
+        0.81
+      ],
+      "itoCorrectedDrift": [
+        0.8546,
+        0.81
+      ],
+      "detailedBalanceDrift": [
+        0.8546,
+        0.8100000000000002
+      ],
+      "correctCurrentOverDensity": [
+        0,
+        -1.1102230246251565e-16
+      ],
+      "naiveCurrentOverDensity": [
+        -0.4480000000000001,
+        -1.1102230246251565e-16
+      ]
+    },
+    {
+      "y": [
+        -0.4,
+        -0.2
+      ],
+      "x": [
+        -0.4112,
+        -0.2
+      ],
+      "potential": 0.12790553600000001,
+      "jacobian": [
+        [
+          1,
+          -0.11200000000000002
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          0.8100352000000002,
+          -0.08960000000000001
+        ],
+        [
+          -0.08960000000000001,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.7152772171739836,
+        0.8947579828260166
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        -0.53456,
+        -0.23987072000000004
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        0.5144000000000001,
+        0.18000000000000002
+      ],
+      "itoCorrectedDrift": [
+        0.9624000000000001,
+        0.18000000000000002
+      ],
+      "detailedBalanceDrift": [
+        0.9624000000000001,
+        0.18000000000000002
+      ],
+      "correctCurrentOverDensity": [
+        0,
+        0
+      ],
+      "naiveCurrentOverDensity": [
+        -0.44800000000000006,
+        0
+      ]
+    },
+    {
+      "y": [
+        -0.4,
+        0.5
+      ],
+      "x": [
+        -0.47000000000000003,
+        0.5
+      ],
+      "potential": 0.256085,
+      "jacobian": [
+        [
+          1,
+          0.28
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          0.86272,
+          0.22400000000000003
+        ],
+        [
+          0.22400000000000003,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.6051754523403512,
+        1.057544547659649
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        -0.6110000000000001,
+        0.6210800000000001
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        0.4850000000000001,
+        -0.45
+      ],
+      "itoCorrectedDrift": [
+        0.9330000000000002,
+        -0.45
+      ],
+      "detailedBalanceDrift": [
+        0.9330000000000003,
+        -0.45
+      ],
+      "correctCurrentOverDensity": [
+        -1.1102230246251565e-16,
+        0
+      ],
+      "naiveCurrentOverDensity": [
+        -0.4480000000000002,
+        0
+      ]
+    },
+    {
+      "y": [
+        -0.4,
+        1
+      ],
+      "x": [
+        -0.68,
+        1
+      ],
+      "potential": 0.7505600000000001,
+      "jacobian": [
+        [
+          1,
+          0.56
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          1.05088,
+          0.44800000000000006
+        ],
+        [
+          0.44800000000000006,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.46020974131082143,
+        1.3906702586891786
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        -0.8840000000000001,
+        1.39504
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        0.38,
+        -0.9
+      ],
+      "itoCorrectedDrift": [
+        0.8280000000000001,
+        -0.9
+      ],
+      "detailedBalanceDrift": [
+        0.8280000000000001,
+        -0.8999999999999999
+      ],
+      "correctCurrentOverDensity": [
+        0,
+        -1.1102230246251565e-16
+      ],
+      "naiveCurrentOverDensity": [
+        -0.44800000000000006,
+        -1.1102230246251565e-16
+      ]
+    },
+    {
+      "y": [
+        0.3,
+        -0.9
+      ],
+      "x": [
+        0.07319999999999996,
+        -0.9
+      ],
+      "potential": 0.367982856,
+      "jacobian": [
+        [
+          1,
+          -0.5040000000000001
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          1.0032128,
+          -0.40320000000000006
+        ],
+        [
+          -0.40320000000000006,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.4858010362527775,
+        1.3174117637472227
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        0.09515999999999995,
+        -0.76203936
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        -0.5034000000000001,
+        0.81
+      ],
+      "itoCorrectedDrift": [
+        -0.055400000000000005,
+        0.81
+      ],
+      "detailedBalanceDrift": [
+        -0.055399999999999894,
+        0.8100000000000002
+      ],
+      "correctCurrentOverDensity": [
+        -1.1102230246251565e-16,
+        -1.1102230246251565e-16
+      ],
+      "naiveCurrentOverDensity": [
+        -0.4480000000000002,
+        -1.1102230246251565e-16
+      ]
+    },
+    {
+      "y": [
+        0.3,
+        -0.2
+      ],
+      "x": [
+        0.2888,
+        -0.2
+      ],
+      "potential": 0.07221353600000001,
+      "jacobian": [
+        [
+          1,
+          -0.11200000000000002
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          0.8100352000000002,
+          -0.08960000000000001
+        ],
+        [
+          -0.08960000000000001,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.7152772171739836,
+        0.8947579828260166
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        0.37544,
+        -0.13795072000000003
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        -0.3956,
+        0.18000000000000002
+      ],
+      "itoCorrectedDrift": [
+        0.05240000000000006,
+        0.18000000000000002
+      ],
+      "detailedBalanceDrift": [
+        0.05240000000000006,
+        0.18000000000000002
+      ],
+      "correctCurrentOverDensity": [
+        0,
+        0
+      ],
+      "naiveCurrentOverDensity": [
+        -0.44800000000000006,
+        0
+      ]
+    },
+    {
+      "y": [
+        0.3,
+        0.5
+      ],
+      "x": [
+        0.22999999999999998,
+        0.5
+      ],
+      "potential": 0.146885,
+      "jacobian": [
+        [
+          1,
+          0.28
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          0.86272,
+          0.22400000000000003
+        ],
+        [
+          0.22400000000000003,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.6051754523403512,
+        1.057544547659649
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        0.299,
+        0.36628
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        -0.42500000000000004,
+        -0.45
+      ],
+      "itoCorrectedDrift": [
+        0.02300000000000002,
+        -0.45
+      ],
+      "detailedBalanceDrift": [
+        0.023000000000000076,
+        -0.44999999999999996
+      ],
+      "correctCurrentOverDensity": [
+        -5.551115123125783e-17,
+        -5.551115123125783e-17
+      ],
+      "naiveCurrentOverDensity": [
+        -0.4480000000000001,
+        -5.551115123125783e-17
+      ]
+    },
+    {
+      "y": [
+        0.3,
+        1
+      ],
+      "x": [
+        0.019999999999999962,
+        1
+      ],
+      "potential": 0.45026,
+      "jacobian": [
+        [
+          1,
+          0.56
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          1.05088,
+          0.44800000000000006
+        ],
+        [
+          0.44800000000000006,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.46020974131082143,
+        1.3906702586891786
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        0.02599999999999995,
+        0.88544
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        -0.53,
+        -0.9
+      ],
+      "itoCorrectedDrift": [
+        -0.08199999999999996,
+        -0.9
+      ],
+      "detailedBalanceDrift": [
+        -0.08199999999999985,
+        -0.9
+      ],
+      "correctCurrentOverDensity": [
+        -1.1102230246251565e-16,
+        0
+      ],
+      "naiveCurrentOverDensity": [
+        -0.4480000000000002,
+        0
+      ]
+    },
+    {
+      "y": [
+        1.1,
+        -0.9
+      ],
+      "x": [
+        0.8732000000000001,
+        -0.9
+      ],
+      "potential": 0.8601108560000001,
+      "jacobian": [
+        [
+          1,
+          -0.5040000000000001
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          1.0032128,
+          -0.40320000000000006
+        ],
+        [
+          -0.40320000000000006,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.4858010362527775,
+        1.3174117637472227
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        1.1351600000000002,
+        -0.23787935999999976
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        -1.5434000000000003,
+        0.81
+      ],
+      "itoCorrectedDrift": [
+        -1.0954000000000002,
+        0.81
+      ],
+      "detailedBalanceDrift": [
+        -1.0953999999999997,
+        0.8099999999999998
+      ],
+      "correctCurrentOverDensity": [
+        -4.440892098500626e-16,
+        2.220446049250313e-16
+      ],
+      "naiveCurrentOverDensity": [
+        -0.4480000000000006,
+        2.220446049250313e-16
+      ]
+    },
+    {
+      "y": [
+        1.1,
+        -0.2
+      ],
+      "x": [
+        1.0888,
+        -0.2
+      ],
+      "potential": 0.788565536,
+      "jacobian": [
+        [
+          1,
+          -0.11200000000000002
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          0.8100352000000002,
+          -0.08960000000000001
+        ],
+        [
+          -0.08960000000000001,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.7152772171739836,
+        0.8947579828260166
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        1.41544,
+        -0.02147071999999997
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        -1.4356,
+        0.18000000000000002
+      ],
+      "itoCorrectedDrift": [
+        -0.9875999999999999,
+        0.18000000000000002
+      ],
+      "detailedBalanceDrift": [
+        -0.9876000000000001,
+        0.17999999999999997
+      ],
+      "correctCurrentOverDensity": [
+        2.220446049250313e-16,
+        5.551115123125783e-17
+      ],
+      "naiveCurrentOverDensity": [
+        -0.44799999999999984,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "y": [
+        1.1,
+        0.5
+      ],
+      "x": [
+        1.03,
+        0.5
+      ],
+      "potential": 0.802085,
+      "jacobian": [
+        [
+          1,
+          0.28
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          0.86272,
+          0.22400000000000003
+        ],
+        [
+          0.22400000000000003,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.6051754523403512,
+        1.057544547659649
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        1.3390000000000002,
+        0.07507999999999998
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        -1.4650000000000003,
+        -0.45
+      ],
+      "itoCorrectedDrift": [
+        -1.0170000000000003,
+        -0.45
+      ],
+      "detailedBalanceDrift": [
+        -1.017,
+        -0.4500000000000001
+      ],
+      "correctCurrentOverDensity": [
+        -4.440892098500626e-16,
+        1.1102230246251565e-16
+      ],
+      "naiveCurrentOverDensity": [
+        -0.4480000000000004,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "y": [
+        1.1,
+        1
+      ],
+      "x": [
+        0.8200000000000001,
+        1
+      ],
+      "potential": 0.8870600000000001,
+      "jacobian": [
+        [
+          1,
+          0.56
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "jacobianDeterminant": 1,
+      "diffusion": [
+        [
+          1.05088,
+          0.44800000000000006
+        ],
+        [
+          0.44800000000000006,
+          0.8
+        ]
+      ],
+      "diffusionEigenvalues": [
+        0.46020974131082143,
+        1.3906702586891786
+      ],
+      "diffusionDivergence": [
+        0.44800000000000006,
+        0
+      ],
+      "gradientPotential": [
+        1.066,
+        0.30303999999999987
+      ],
+      "pushedDriftWithoutItoCorrection": [
+        -1.5700000000000003,
+        -0.9
+      ],
+      "itoCorrectedDrift": [
+        -1.1220000000000003,
+        -0.9
+      ],
+      "detailedBalanceDrift": [
+        -1.1219999999999999,
+        -0.8999999999999999
+      ],
+      "correctCurrentOverDensity": [
+        -4.440892098500626e-16,
+        -1.1102230246251565e-16
+      ],
+      "naiveCurrentOverDensity": [
+        -0.4480000000000004,
+        -1.1102230246251565e-16
+      ]
+    }
+  ],
+  "audit": {
+    "samplesChecked": 16,
+    "maximumCorrectDetailedBalanceResidual": 4.965068306494546e-16,
+    "minimumNaiveDetailedBalanceResidual": 0.44799999999999973,
+    "expectedMissingItoDriftMagnitude": 0.44800000000000006,
+    "minimumDiffusionEigenvalue": 0.46020974131082143,
+    "maximumJacobianDeterminantError": 0,
+    "transformedDiffusionPositive": true,
+    "correctedDetailedBalancePassed": true,
+    "naivePushforwardFailsDetailedBalance": true
+  },
+  "decision": {
+    "nonlinearCoordinateEquilibriumCovarianceEstablished": true,
+    "noiseInducedDriftNecessary": true,
+    "finiteDimensionalDynamicalKmsAnalogClosed": true,
+    "hydrodynamicStressWardIdentityEstablished": false,
+    "derivativeOrderedFieldTheoryCompletionEstablished": false,
+    "entropyCurrentEstablished": false,
+    "causalStableValidityWindowEstablished": false,
+    "microscopicMatchingEstablished": false,
+    "fullOt016Closure": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "Even a unit-Jacobian nonlinear frame turns additive noise into multiplicative noise. The induced Ito drift is required for zero equilibrium probability current; pushing only the deterministic drift creates a false nonequilibrium residue. A nonlinear hydrodynamic frame audit must therefore transform the noise/action measure and prescription together, not only the retarded equations."
+}

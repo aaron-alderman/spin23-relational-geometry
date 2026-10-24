@@ -834,6 +834,10 @@ The thermal doubling test now closes at the same Gaussian order. Retarded respon
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-6.md)
 
+The first nonlinear audit identifies what that next claim must carry. A unit-volume nonlinear change of two equilibrium variables turns constant noise into state-dependent noise and induces an additional drift. Carrying both effects preserves zero equilibrium current; changing only the deterministic equation manufactures a false irreversible current. The hydrodynamic implication is concrete: nonlinear response fields, noise, measure terms and stochastic prescription must transform together. This finite-dimensional result is a guardrail, not yet the derivative-ordered stress-Ward-complete fluid action.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-7.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -897,6 +901,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_99_three_scale_passive_diffusion_pushforward.md](../../../corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md)
 - [admissibility_100_local_derivative_hydrodynamic_frame_invariance.md](../../../corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md)
 - [admissibility_101_gaussian_schwinger_keldysh_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md)
+- [admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md](../../../corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md)
 
 ---
 
