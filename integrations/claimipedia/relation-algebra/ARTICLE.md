@@ -260,7 +260,10 @@ No single vocabulary is compulsory. The same construction may be pictured as:
   survive a reduction and those that do not.
 
 Each reading foregrounds a real feature and hides another. The algebra is most
-useful when it lets these readings correct one another.
+useful when it lets these readings correct one another. The names used for the
+science-programme graph, the Claimipedia operator system and Sourcery's path
+machinery are consolidated in the
+[Three-Carrier Admissibility Taxonomy](../../../corpus/taxonomies/three_carrier_admissibility_taxonomy_v1.md).
 
 ## Boundary and sources
 
