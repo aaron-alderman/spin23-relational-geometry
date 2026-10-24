@@ -50,6 +50,10 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **frontier wave7 42 instrumented admissibility atlas** — [frontier_wave7_42_instrumented_admissibility_atlas.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md)
 - **frontier wave7 43 sourcery ale algebra** — [frontier_wave7_43_sourcery_ale_algebra.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md)
 - **frontier wave7 44 refinement stability of the mixed interface** — [frontier_wave7_44_refinement_stability_of_the_mixed_interface.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md)
+- **frontier wave7 47 kenotic enriched loop reopening template** — [frontier_wave7_47_kenotic_enriched_loop_reopening_template.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md)
+- **frontier wave7 48 sign holonomy physical detector bridge** — [frontier_wave7_48_sign_holonomy_physical_detector_bridge.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md)
+- **the weighted furey root is a flat horizontal double cover of its projector circle with central minus identity holonomy** — [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
+- **a local conservative real interface network realizes the nested c12 transport as antiperiodic six cycle holonomy** — [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

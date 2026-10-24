@@ -213,6 +213,17 @@ class, not a nonzero rational cohomology group. Claimipedia has not yet supplied
 the distinct overlap records or evidence-backed transition signs needed to
 instantiate the template.
 
+The science programme already knows how to read this **kind** of invariant.
+Its weighted-root projector closes while a coherently marked two-frame returns
+through \(-I_2\), and a local six-edge interface realizes the same central
+return before a twelve-edge double traversal closes. The
+[physical-detector bridge](../../../corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md)
+maps \(\pm I_2\) to the binary return sign \(\pm1\). This is a faithful quotient
+of the central endpoint transport, not a claim that the physical and semantic
+mechanisms are identical. Projector-only and determinant-only measurements
+erase the sign; coherently referenced endpoint-frame tomography with a
+one-loop/two-loop parity control retains it.
+
 ## The relation to admissibility
 
 This construction clarifies the corpus's Jordan–Lie reading without turning

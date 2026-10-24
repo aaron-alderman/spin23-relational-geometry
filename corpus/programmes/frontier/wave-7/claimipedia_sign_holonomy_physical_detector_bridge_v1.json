@@ -1,0 +1,62 @@
+{
+  "schema": "claimipedia-sign-holonomy-physical-detector-bridge/1",
+  "date": "2026-10-24",
+  "status": "exact cross-carrier quotient and detector specification; no mechanism identification",
+  "sourceObjects": {
+    "claimipediaToy": "claimipedia_kenotic_enriched_loop_toy_v1.json",
+    "weightedRootTheorem": "corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md",
+    "effectiveInterfaceTheorem": "corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md",
+    "experiment": "EX-006 in corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md"
+  },
+  "typedMap": {
+    "sourceCarrier": "central endpoint transport Z = {+I2,-I2} on a coherently marked real two-frame",
+    "targetCarrier": "binary return sign {+1,-1}",
+    "map": "chi(+I2)=+1 and chi(-I2)=-1",
+    "preservedOperation": "chi(H2 H1)=chi(H2)chi(H1) for H1,H2 in Z",
+    "projectorQuotient": "A and -A define the same projector P=A^T A",
+    "orientationBlindness": "det(+I2)=det(-I2)=+1",
+    "readout": "chi(H)=sign(tr(H)/2) on the declared central endpoint set"
+  },
+  "exactControls": {
+    "weightedRoot": {
+      "projectorPeriod": "P(theta+pi)=P(theta)",
+      "frameReturn": "A(theta+pi)=-A(theta)",
+      "endpointTransport": "-I2",
+      "binaryReturnSign": -1
+    },
+    "sixEdgeInterface": {
+      "edgeTransfer": "epsilon=[[0,1],[-1,0]]",
+      "sixEdges": "epsilon^6=-I2",
+      "twelveEdges": "epsilon^12=+I2",
+      "binarySequence": [-1, 1]
+    }
+  },
+  "detectorPacket": {
+    "platform": "EX-006 three-mode photonic, microwave or acoustic loop with a coherently referenced two-frame readout",
+    "primaryObservables": [
+      "projector distance between initial and final two-dimensional subspaces",
+      "endpoint frame-overlap matrix H=A_final A_initial^T after declared parallel-transport calibration",
+      "centrality residual ||H-(tr(H)/2)I2||",
+      "binary central return sign sign(tr(H)/2)",
+      "leakage, insertion loss and process singular values"
+    ],
+    "positivePattern": "projector distance is within its calibrated closure band, H is within its centrality band of -I2 after one traversal and +I2 after two traversals",
+    "controls": [
+      "open path",
+      "zero-area or trivial loop",
+      "one traversal followed by a second identical traversal",
+      "static sign-flip and cable-order mimic",
+      "endpoint reference recalibration without selected-state data",
+      "loss and splitting sweeps"
+    ],
+    "stopRule": "Reject the binary-holonomy claim if an independently calibrated endpoint convention removes the sign, the projector does not close, H is noncentral beyond tolerance, or ordinary static/loss models predict the records."
+  },
+  "importantDistinctions": [
+    "The central -I2 sign is reversal-even because (-I2)^-1=-I2; it is not EX-006's reversal-odd non-Abelian statistic.",
+    "The determinant is +1 and therefore cannot be used as the detector.",
+    "Projector-only detection necessarily erases the sign.",
+    "An engineered realization validates the detector and transfer model, not new physics.",
+    "The map identifies an observable type-shape, not Claimipedia, theology and a physical mechanism."
+  ],
+  "boundary": "This bridge proves that one existing science-programme detector can read the same binary return invariant as the proposed Claimipedia sign loop after an explicit central-character quotient. It does not supply Claimipedia's missing authored overlaps, derive a microscopic source for the physical loop or make a theological inference."
+}

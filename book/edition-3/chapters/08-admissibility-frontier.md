@@ -123,6 +123,23 @@ The same typed discipline prevents a false cross-carrier closure. Exhausting the
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-4.md)
 
+<a id="hot-off-the-press-a-lost-sign-becomes-a-detector"></a>
+## Hot off the press — a lost sign becomes a detector
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+The newest cross-carrier bridge is deliberately small. A proposed three-overlap sign loop in Claimipedia would be classified by a binary return product, but the present knowledge graph does not contain the required overlaps or transition signs. The science programme already contains the same detector shape on a different carrier: a response projector returns while its coherently marked two-frame comes back through the central transport -I2.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-lost-sign-becomes-a-detector-claim-1.md)
+
+The exact map sends central endpoint transports +I2 and -I2 to binary signs +1 and -1. It preserves composition, and a second traversal squares the negative return to +I2. Projector-only detection erases the sign, while determinant also misses it because det(-I2)=+1. A successful measurement therefore needs projector closure plus coherently referenced endpoint-frame tomography and a one-loop/two-loop parity control.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-lost-sign-becomes-a-detector-claim-2.md)
+
+This result reuses the EX-006 photonic, microwave or acoustic detector packet, but corrects its discriminator: a central -I2 return is reversal-even, unlike a generic reversal-odd non-Abelian holonomy. An engineered success validates the detector architecture. New physics requires a source-native prediction, nuisance survival and replication; the physical result cannot manufacture Claimipedia's missing authored overlaps.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-lost-sign-becomes-a-detector-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -152,6 +169,10 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [frontier_wave7_42_instrumented_admissibility_atlas.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md)
 - [frontier_wave7_43_sourcery_ale_algebra.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md)
 - [frontier_wave7_44_refinement_stability_of_the_mixed_interface.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md)
+- [frontier_wave7_47_kenotic_enriched_loop_reopening_template.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md)
+- [frontier_wave7_48_sign_holonomy_physical_detector_bridge.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md)
+- [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
+- [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 
 ---
 

@@ -291,6 +291,14 @@ nonzero rational \(H^1\). This is a proposed reopening template, not a fourth
 structure extracted from the current graph. See the
 [enriched-loop template](../programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md).
 
+Across carriers, the **Central-Return Character** is the exact map
+\(\chi:\{\pm I_2\}\to\{\pm1\}\). It sends the science carrier's coherent
+\(-I_2\) frame return to the sign-holonomy toy's \(-1\) class while the
+projector returns unchanged. Determinant is not this map:
+\(\det(-I_2)=+1\). The detector must therefore retain a coherent endpoint
+reference and compare one traversal with two. See the
+[physical-detector bridge](../programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md).
+
 ## III. Sourcery
 
 Sourcery accepts caller-supplied graphs, so it has no single fixed node count.

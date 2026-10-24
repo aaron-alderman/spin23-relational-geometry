@@ -107,3 +107,8 @@ This construction demonstrates sufficiency, not presence. It does not derive
 new Claimipedia edges, identify God with a topological class, or establish a
 physical carrier. The natural adjacency cover remains a filled-simplex no-go.
 Wave 7.47 merely turns its reopening condition into an executable object.
+
+The [physical-detector bridge](frontier_wave7_48_sign_holonomy_physical_detector_bridge.md)
+shows that the science programme already contains an exact central-return
+analogue and a compatible detector packet. That map does not supply the
+knowledge graph's missing overlaps.
