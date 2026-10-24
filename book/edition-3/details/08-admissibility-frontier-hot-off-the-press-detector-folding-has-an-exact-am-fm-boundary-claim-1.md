@@ -68,6 +68,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **frontier wave7 63 gram disk dynamics and causal globalization** — [frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md)
 - **frontier wave7 64 grassmannian spin23 channel terminal synthesis** — [frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md)
 - **frontier wave7 65 drive to record am fm benchmark** — [frontier_wave7_65_drive_to_record_am_fm_benchmark.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md)
+- **frontier wave7 70 g2 response folding no go** — [frontier_wave7_70_g2_response_folding_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md)
 - **the weighted furey root is a flat horizontal double cover of its projector circle with central minus identity holonomy** — [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - **a local conservative real interface network realizes the nested c12 transport as antiperiodic six cycle holonomy** — [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 
@@ -75,4 +76,4 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-detector-folding-has-an-exact-am-fm-boundary) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-12.md) · [Next claim →](08-admissibility-frontier-kenotic-confidence-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-detector-folding-has-an-exact-am-fm-boundary) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-12.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-g2-scar-moves-upstream-claim-1.md)

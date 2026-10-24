@@ -204,6 +204,15 @@ The selector fork also admits an exact reduced dynamics. A convex competition se
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-detector-folding-has-an-exact-am-fm-boundary-claim-1.md)
 
+<a id="hot-off-the-press-the-g2-scar-moves-upstream"></a>
+## Hot off the press — the G2 scar moves upstream
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** The D4/ℤ₃ fold really does carry a threefold weight, but after canonical normalization its complete damped two-channel transfer is exactly an ordinary coupled-oscillator response; coherent phase and sideband records remove AM/FM blindness without identifying a G2 origin. The surviving experiment must retain the quotient map: a four-resonator D4 star driven through its symmetric central port has two accessible modes, while unequal addressed detunings of the three outer resonators raise the accessible Krylov rank to four and removal restores rank two. This closes the two-channel root-scar claim by no-go and relocates the positive target to a controlled dark-mode release; fundamental G2 interpretation would still require a source-native triality carrier.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-g2-scar-moves-upstream-claim-1.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -251,6 +260,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md)
 - [frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md)
 - [frontier_wave7_65_drive_to_record_am_fm_benchmark.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md)
+- [frontier_wave7_70_g2_response_folding_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md)
 - [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 

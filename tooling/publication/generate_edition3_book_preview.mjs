@@ -471,6 +471,13 @@ admissibilitySections.splice(orientedSeamIndex + 4, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 5, 0, [
+  "Hot off the press — the G2 scar moves upstream",
+  [
+    "**Provisional integration note — 25 October 2026.** The D4/Z3 fold really does carry a threefold weight, but after canonical normalization its complete damped two-channel transfer is exactly an ordinary coupled-oscillator response; coherent phase and sideband records remove AM/FM blindness without identifying a G2 origin. The surviving experiment must retain the quotient map: a four-resonator D4 star driven through its symmetric central port has two accessible modes, while unequal addressed detunings of the three outer resonators raise the accessible Krylov rank to four and removal restores rank two. This closes the two-channel root-scar claim by no-go and relocates the positive target to a controlled dark-mode release; fundamental G2 interpretation would still require a source-native triality carrier.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -572,6 +579,7 @@ chapterSources["08-admissibility-frontier"].splice(-2, 0,
   "corpus/programmes/frontier/wave-7/frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+  "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
 );
 
 const chapters = chapterSkeletons.map(chapter => ({

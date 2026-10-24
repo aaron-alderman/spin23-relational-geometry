@@ -1,0 +1,32 @@
+{
+  "schema": "frontier.wave7.g2-response-folding-no-go/1",
+  "date": "2026-10-25",
+  "scope": "linear damped response of the canonically normalized two-channel D4/Z3 fold",
+  "integralFold": {
+    "mass": [[1, 0], [0, 3]],
+    "stiffness": [[2, -3], [-3, 6]],
+    "meaning": ["fixed central D4 direction", "common amplitude of three outer directions"]
+  },
+  "canonicalFold": {
+    "mass": [[1, 0], [0, 1]],
+    "stiffness": [[2, -1.7320508075688772], [-1.7320508075688772, 2]],
+    "eigenvalues": [0.2679491924311227, 3.732050807568877],
+    "conditionRatio": 13.928203230275509
+  },
+  "detectorContract": {
+    "positiveControl": "complete calibrated complex two-port transfer over frequency and relative drive phase",
+    "nullControls": [
+      "power-only records",
+      "free two-mode stiffness, damping and port calibration",
+      "Wave 7.65 mixed-AM/FM coherent-sideband nuisance"
+    ],
+    "reopeningIntervention": "independently detune the three pre-fold outer channels and test whether the symmetric port's Krylov rank rises from two to four"
+  },
+  "expected": {
+    "canonicalResponseMaxError": 1e-12,
+    "unperturbedSymmetricPortKrylovRank": 2,
+    "unequallyPerturbedOuterPortKrylovRank": 4,
+    "twoChannelOriginIdentifiable": false,
+    "topicDecision": "close-no-go"
+  }
+}

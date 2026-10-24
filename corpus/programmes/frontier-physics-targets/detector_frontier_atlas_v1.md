@@ -68,7 +68,7 @@ Together these span FA-04 through FA-10. No single headline signal—endpoint re
 ### Material, spectral and force detectors
 
 - **DET-012 — full thermoelectric/Hall tensor:** jointly measures electrical, thermopower, thermoelectric, thermal and magnetic channels.
-- **DET-013 — frequency, phase and lag spectroscopy:** measures complex response, poles, linewidths and relaxation. Wave 7.65 adds the minimal small-index AM/FM record: a calibrated carrier and both coherent sidebands. Power-only, one-sideband, sideband-excluding bandwidth and ringdown-only ablations are certified insufficient in that model.
+- **DET-013 — frequency, phase and lag spectroscopy:** measures complex response, poles, linewidths and relaxation. Wave 7.65 adds the minimal small-index AM/FM record: a calibrated carrier and both coherent sidebands. Power-only, one-sideband, sideband-excluding bandwidth and ringdown-only ablations are certified insufficient in that model. Wave 7.70 adds an addressed-perturbation control: a genuine pre-fold D4 star moves from two accessible modes to four when its three outer channels are unequally detuned.
 - **DET-014 — hybrid avoided-crossing spectroscopy:** resolves modes, splittings, lifetimes and hybridization.
 - **DET-015 — adversarial thermal-Hall bundle:** joins thermal Hall with spectra, disorder, angle and nonlinear response.
 - **DET-016 — broadband optical tensor:** supplies causal diagonal/off-diagonal response and imaginary-frequency continuation.
@@ -94,7 +94,7 @@ These cover FA-11 and FA-13–FA-15. The immediate computational edge is the low
 
 - **DET-027 — relation-emulator schedule:** nine path, fourteen triangle and one direct `QR-003` channel.
 - **DET-028 — lattice/code invariants:** determinant, discriminant, minimum norm, weight enumerator, distance and radical.
-- **DET-029 — efficient information:** nuisance-projected Fisher/Schur separation and information per calibrated cost. Wave 7.65 adds held-out modulation classification and latent-depth error, with exact power-only equivalence as a mandatory null control.
+- **DET-029 — efficient information:** nuisance-projected Fisher/Schur separation and information per calibrated cost. Wave 7.65 adds held-out modulation classification and latent-depth error, with exact power-only equivalence as a mandatory null control. Wave 7.70 requires model-containment testing before classification: the normalized G2 transfer lies exactly inside the generic two-mode family, so only the pre-fold rank jump remains discriminating.
 - **DET-030 — complexity card:** preparation, sampling, detection, verification and error scaling.
 
 These span FA-03 and FA-16–FA-18. DET-027 is sufficient for the declared emulator, not yet for a physical relation carrier.
