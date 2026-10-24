@@ -118,3 +118,11 @@ The queue exposes eight recurring unknowns that should be reported for every new
 The maintained list is intentionally finite. New topics should be added only when they introduce a distinct carrier, detector, boundary, translation or falsifier not already represented here.
 
 AZ-056 deliberately adds no duplicate topic. Its exact kernel-invariance and defect-composition results sharpen OT-019; its commutator no-go sharpens OT-027 and OT-038; its detector-intersection law sharpens OT-034; and its unresolved modular-forms signpost remains behind OT-045. Repetition of the diagram without a source-native arrow does not create a new frontier.
+
+The [three-carrier programme checkpoint](../frontier/wave-7/frontier_wave7_45_three_carrier_programme_checkpoint.md)
+also adds no duplicate topic. Its exact `A8` mixed interface sharpens OT-019;
+the closed F05 slice concentrates OT-024, OT-027 and OT-038 into a single
+co-realization task; the refused F01 lift sharpens OT-003 and OT-034; and the
+39-entry instrument atlas assigns concrete decision surfaces across the existing
+queue. The remaining frontier is execution, scale survival and source-native
+provenance, not another relabelling of the same finite map.

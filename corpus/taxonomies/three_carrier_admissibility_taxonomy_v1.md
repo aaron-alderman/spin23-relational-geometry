@@ -22,6 +22,9 @@ The governing rule is:
 
 The machine-readable companion is the
 [three-carrier register](../registers/three_carrier_admissibility_taxonomy_v1.json).
+The [programme checkpoint](../programmes/frontier/wave-7/frontier_wave7_45_three_carrier_programme_checkpoint.md)
+states which parts of this finite architecture are exhausted, which physical
+gates remain open and why F05 is the shortest useful execution route.
 
 ## I. Science programme
 
