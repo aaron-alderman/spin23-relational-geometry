@@ -830,6 +830,10 @@ The first local derivative test now closes too. A triangular determinant-one cha
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-5.md)
 
+The thermal doubling test now closes at the same Gaussian order. Retarded response, advanced response and equilibrium noise are placed in one Schwinger–Keldysh kernel, and the local derivative frame is applied to both doubled fields and their source couplings. The noise remains positive, fluctuation–dissipation remains exact to numerical precision and the complete doubled source record is unchanged. This is good news with a sharp limit: equilibrium fluctuations do not erase the multichannel direction, but the next claim must survive nonlinear dynamical KMS, stress Ward identities, entropy and validity control, improvement/contact classification and microscopic or measured matching.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-6.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -892,6 +896,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 - [admissibility_99_three_scale_passive_diffusion_pushforward.md](../../../corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md)
 - [admissibility_100_local_derivative_hydrodynamic_frame_invariance.md](../../../corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md)
+- [admissibility_101_gaussian_schwinger_keldysh_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md)
 
 ---
 

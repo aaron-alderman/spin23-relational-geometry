@@ -1,0 +1,473 @@
+{
+  "protocol": "hydrodynamic-gaussian-sk-kms-completion/1",
+  "date": "2026-10-25",
+  "target": "OT-016",
+  "parent": "AZ-100",
+  "primaryLiterature": [
+    {
+      "title": "Effective field theory of dissipative fluids",
+      "url": "https://arxiv.org/abs/1511.03646",
+      "role": "doubled hydrodynamic effective action and local KMS"
+    },
+    {
+      "title": "Effective field theory for dissipative fluids (II)",
+      "url": "https://arxiv.org/abs/1701.07817",
+      "role": "dynamical KMS, entropy current and frame choices from field redefinitions"
+    },
+    {
+      "title": "Relativistic hydrodynamic fluctuations from an effective action",
+      "url": "https://arxiv.org/abs/2309.00512",
+      "role": "causality, stability and general-frame stochastic actions inside a finite hydrodynamic regime"
+    }
+  ],
+  "action": {
+    "fields": "two r-type and two a-type Gaussian internal modes",
+    "kernel": "K_SK=[[0,D_A],[D_R,iN]]",
+    "retardedModes": [
+      "shear diffusion",
+      "attenuated sound"
+    ],
+    "fluctuationDissipation": "N=coth(omega/(2T)) i(D_R-D_A)",
+    "frameRule": "K'_SK=diag(M,M)^{-dagger} K_SK diag(M,M)^{-1}",
+    "sourceRule": "both doubled source couplings co-transform with the internal fields"
+  },
+  "physicalParameters": {
+    "k": 0.65,
+    "T": 1.4,
+    "w": 6.530719999999999,
+    "eta": 0.6311199999999999,
+    "D": 0.22142857142857145,
+    "Gamma": 0.1928571428571429,
+    "alpha": 0.37,
+    "beta": 0.22
+  },
+  "samples": [
+    {
+      "omega": 0.2,
+      "coth": 14.02380142926515,
+      "retardedKernel": [
+        [
+          {
+            "re": 0.09355357142857144,
+            "im": -0.2
+          },
+          {
+            "re": 0,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 0.10083333333333333,
+            "im": -0.016296428571428576
+          }
+        ]
+      ],
+      "noiseKernel": [
+        [
+          {
+            "re": 5.60952057170606,
+            "im": 0
+          },
+          {
+            "re": 0,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 0.457075756583835,
+            "im": 0
+          }
+        ]
+      ],
+      "transformedRetardedKernel": [
+        [
+          {
+            "re": 0.09355357142857144,
+            "im": -0.2
+          },
+          {
+            "re": -0.023495804464285716,
+            "im": 0.011667035714285717
+          }
+        ],
+        [
+          {
+            "re": 0.006104195535714285,
+            "im": 0.025512964285714288
+          },
+          {
+            "re": 0.10215390771543155,
+            "im": -0.019119569071428578
+          }
+        ]
+      ],
+      "transformedNoiseKernel": [
+        [
+          {
+            "re": 5.60952057170606,
+            "im": 0
+          },
+          {
+            "re": -0.5214049371400783,
+            "im": -0.41510452230624845
+          }
+        ],
+        [
+          {
+            "re": -0.5214049371400783,
+            "im": 0.41510452230624845
+          },
+          {
+            "re": 0.5362580801416676,
+            "im": 0
+          }
+        ]
+      ],
+      "audit": {
+        "advancedIsRetardedDaggerError": 0,
+        "noiseHermiticityError": 0,
+        "fluctuationDissipationError": 1.1102230246251565e-16,
+        "sourceCovarianceDifference": 4.3697813509443875e-14,
+        "minimumNoiseEigenvalue": 0.45707575658383526,
+        "minimumTransformedNoiseEigenvalue": 0.45016689493889883
+      }
+    },
+    {
+      "omega": 0.45,
+      "coth": 6.275701630407811,
+      "retardedKernel": [
+        [
+          {
+            "re": 0.09355357142857144,
+            "im": -0.45
+          },
+          {
+            "re": 0,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": -0.061666666666666675,
+            "im": -0.036666964285714296
+          }
+        ]
+      ],
+      "noiseKernel": [
+        [
+          {
+            "re": 5.64813146736703,
+            "im": 0
+          },
+          {
+            "re": 0,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 0.46022185509992436,
+            "im": 0
+          }
+        ]
+      ],
+      "transformedRetardedKernel": [
+        [
+          {
+            "re": 0.09355357142857144,
+            "im": -0.45
+          },
+          {
+            "re": -0.08362080446428571,
+            "im": 0.02625083035714286
+          }
+        ],
+        [
+          {
+            "re": 0.0662291955357143,
+            "im": 0.05740416964285715
+          },
+          {
+            "re": -0.058264876146175607,
+            "im": -0.0530298429107143
+          }
+        ]
+      ],
+      "transformedNoiseKernel": [
+        [
+          {
+            "re": 5.64813146736703,
+            "im": 0
+          },
+          {
+            "re": -0.5249938198917654,
+            "im": -0.9404138893166105
+          }
+        ],
+        [
+          {
+            "re": -0.5249938198917654,
+            "im": 0.9404138893166105
+          },
+          {
+            "re": 0.6655989432300796,
+            "im": 0
+          }
+        ]
+      ],
+      "audit": {
+        "advancedIsRetardedDaggerError": 6.938893903907228e-18,
+        "noiseHermiticityError": 0,
+        "fluctuationDissipationError": 1.1102230246251565e-16,
+        "sourceCovarianceDifference": 6.280643318413173e-14,
+        "minimumNoiseEigenvalue": 0.46022185509992397,
+        "minimumTransformedNoiseEigenvalue": 0.4427531253238217
+      }
+    },
+    {
+      "omega": 0.8,
+      "coth": 3.594723789616739,
+      "retardedKernel": [
+        [
+          {
+            "re": 0.09355357142857144,
+            "im": -0.8
+          },
+          {
+            "re": 0,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": -0.49916666666666676,
+            "im": -0.0651857142857143
+          }
+        ]
+      ],
+      "noiseKernel": [
+        [
+          {
+            "re": 5.751558063386783,
+            "im": 0
+          },
+          {
+            "re": 0,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 0.46864927577203386,
+            "im": 0
+          }
+        ]
+      ],
+      "transformedRetardedKernel": [
+        [
+          {
+            "re": 0.09355357142857144,
+            "im": -0.8
+          },
+          {
+            "re": -0.24549580446428573,
+            "im": 0.046668142857142866
+          }
+        ],
+        [
+          {
+            "re": 0.2281041955357143,
+            "im": 0.10205185714285715
+          },
+          {
+            "re": -0.4901616019274257,
+            "im": -0.1421902762857143
+          }
+        ]
+      ],
+      "transformedNoiseKernel": [
+        [
+          {
+            "re": 5.751558063386783,
+            "im": 0
+          },
+          {
+            "re": -0.5346073219918015,
+            "im": -1.7024611867624877
+          }
+        ],
+        [
+          {
+            "re": -0.5346073219918015,
+            "im": 1.7024611867624877
+          },
+          {
+            "re": 1.022269537632868,
+            "im": 0
+          }
+        ]
+      ],
+      "audit": {
+        "advancedIsRetardedDaggerError": 0,
+        "noiseHermiticityError": 0,
+        "fluctuationDissipationError": 0,
+        "sourceCovarianceDifference": 9.257338311613208e-16,
+        "minimumNoiseEigenvalue": 0.46864927577203375,
+        "minimumTransformedNoiseEigenvalue": 0.4245293603810807
+      }
+    },
+    {
+      "omega": 1.1,
+      "coth": 2.6750790460908402,
+      "retardedKernel": [
+        [
+          {
+            "re": 0.09355357142857144,
+            "im": -1.1
+          },
+          {
+            "re": 0,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": -1.0691666666666668,
+            "im": -0.08963035714285718
+          }
+        ]
+      ],
+      "noiseKernel": [
+        [
+          {
+            "re": 5.885173901399849,
+            "im": 0
+          },
+          {
+            "re": 0,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 0.4795365805729914,
+            "im": 0
+          }
+        ]
+      ],
+      "transformedRetardedKernel": [
+        [
+          {
+            "re": 0.09355357142857144,
+            "im": -1.1
+          },
+          {
+            "re": -0.45639580446428574,
+            "im": 0.06416869642857143
+          }
+        ],
+        [
+          {
+            "re": 0.43900419553571435,
+            "im": 0.1403213035714286
+          },
+          {
+            "re": -1.05286133608814,
+            "im": -0.28134792989285723
+          }
+        ]
+      ],
+      "transformedNoiseKernel": [
+        [
+          {
+            "re": 5.885173901399849,
+            "im": 0
+          },
+          {
+            "re": -0.547026914135116,
+            "im": -2.3952657778697386
+          }
+        ],
+        [
+          {
+            "re": -0.547026914135116,
+            "im": 2.3952657778697386
+          },
+          {
+            "re": 1.505255903834834,
+            "im": -2.7755575615628914e-17
+          }
+        ]
+      ],
+      "audit": {
+        "advancedIsRetardedDaggerError": 5.551115123125783e-17,
+        "noiseHermiticityError": 5.551115123125783e-17,
+        "fluctuationDissipationError": 2.237726045655905e-16,
+        "sourceCovarianceDifference": 8.923049684886463e-16,
+        "minimumNoiseEigenvalue": 0.47953658057299187,
+        "minimumTransformedNoiseEigenvalue": 0.4039450856970408
+      }
+    }
+  ],
+  "audit": {
+    "samplesChecked": 4,
+    "maximumAdvancedDaggerError": 5.551115123125783e-17,
+    "maximumNoiseHermiticityError": 5.551115123125783e-17,
+    "maximumFluctuationDissipationError": 2.237726045655905e-16,
+    "maximumSourceCovarianceDifference": 6.280643318413173e-14,
+    "minimumNoiseEigenvalue": 0.45707575658383526,
+    "minimumTransformedNoiseEigenvalue": 0.4039450856970408,
+    "gaussianSkRealityPassed": true,
+    "gaussianKmsPassed": true,
+    "noisePositivityPassed": true,
+    "doubledSourceFunctionalInvariant": true
+  },
+  "decision": {
+    "doubledGaussianSkKernelConstructed": true,
+    "fluctuationDissipationAndNoisePositivityEstablished": true,
+    "localDerivativeFramePreservesDoubledSourceFunctional": true,
+    "nonlinearDynamicalKmsTheoremEstablished": false,
+    "stressWardIdentityEstablished": false,
+    "entropyCurrentEstablished": false,
+    "causalStableValidityWindowEstablished": false,
+    "microscopicMatchingEstablished": false,
+    "fullOt016Closure": false,
+    "generatedSpin23DynamicsEstablished": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The AZ-100 local derivative frame extends consistently to a doubled Gaussian Schwinger-Keldysh kernel: retarded/advanced reality, positive noise, fluctuation-dissipation and the complete doubled source covariance survive. The remaining OT-016 gate begins at nonlinear dynamical KMS, stress Ward identities, entropy-current and validity-window control, not at Gaussian doubling."
+}

@@ -83,6 +83,7 @@ Show that the named input is inconsistent, insufficient, unavailable, or fails t
 - **a local conservative real interface network realizes the nested c12 transport as antiperiodic six cycle holonomy** — [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 - **admissibility 99 three scale passive diffusion pushforward** — [admissibility_99_three_scale_passive_diffusion_pushforward.md](../../../corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md)
 - **admissibility 100 local derivative hydrodynamic frame invariance** — [admissibility_100_local_derivative_hydrodynamic_frame_invariance.md](../../../corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md)
+- **admissibility 101 gaussian schwinger keldysh kms completion** — [admissibility_101_gaussian_schwinger_keldysh_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
