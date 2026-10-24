@@ -1,8 +1,8 @@
 # Finesse technology pathway v1
 
-**Date:** 24 October 2026  
+**Date:** 25 October 2026  
 **Status:** execution roadmap; technology-first, anomaly-disciplined  
-**Inputs:** [AZ-056 descent atlas](../admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md), [AZ-057 coordinated selector](../admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md), [experiment atlas](frontier_experiment_atlas_v1.md), [detector atlas](detector_frontier_atlas_v1.md)
+**Inputs:** [AZ-056 descent atlas](../admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md), [AZ-057 coordinated selector](../admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md), [AZ-058 Casimir coverage gate](../admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md), [experiment atlas](frontier_experiment_atlas_v1.md), [detector atlas](detector_frontier_atlas_v1.md)
 
 **Selector control:** [PageRank, Perron selection and the finesse trade-off](page_rank_perron_selector_bridge_v1.md) supplies the exact warning that a weak positive completion can guarantee one stable global state while erasing the disconnected or slowly mixing structure one intended to measure.
 
@@ -84,6 +84,8 @@ The first commercializable outputs are robust geometric transforms, compact mult
 ## Programme C — same-material response closure, 18–36 months
 
 EX-012 is the most direct force frontier but should follow the control platforms. Grow one anisotropic or magnetic film batch and split it into witness coupons and the force/torque device. Measure transport, thermoelectric, magneto-optical and broadband dielectric tensors with common provenance, then propagate them without refitting into a differential Casimir force or torque prediction.
+
+AZ-058 fixes the bandwidth implied by that sentence. For a 0.1--1 micrometre device, measure the complex off-diagonal as well as diagonal tensor from DC/THz through at least 0.1--1 eV. The existing Co2MnGa Hall record stops at 1.5 THz, whereas the characteristic force band begins near 24 THz. The programme therefore starts with overlapping same-film spectroscopy and a causal covariance-bearing fit. It does not fabricate a force device until that posterior predicts a differential larger than the full systematic envelope.
 
 The finesse gain comes from correlated measurements and reversal:
 

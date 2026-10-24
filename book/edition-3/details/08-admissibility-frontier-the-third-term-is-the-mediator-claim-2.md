@@ -37,6 +37,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **the admissibility frontier current synthesis** — [the_admissibility_frontier_current_synthesis.md](../../../corpus/syntheses/the_admissibility_frontier_current_synthesis.md)
 - **admissibility 07 zone known unknown frontiers** — [admissibility_07_zone_known_unknown_frontiers.md](../../../corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md)
 - **admissibility 25 current research frontier crosswalk** — [admissibility_25_current_research_frontier_crosswalk.md](../../../corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md)
+- **admissibility 58 casimir spectral coverage and distance gate** — [admissibility_58_casimir_spectral_coverage_and_distance_gate.md](../../../corpus/programmes/admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md)
 - **frontier experiment atlas v1** — [frontier_experiment_atlas_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md)
 - **monster-fermionization-bridge** — [monster-fermionization-bridge.md](../../../corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - **period-matrix-jordan-boundary-gate** — [period-matrix-jordan-boundary-gate.md](../../../corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md)

@@ -26,12 +26,25 @@ An open topic stays on this list until one of four things happens:
 | OT-003 | Independent selector datum (Y) | predeclare a typed environment-volume, channel-volume, entropy or rank objective and predict both the return map and a path/cost record when endpoint classes collide |
 | OT-004 | Conditioned versus unconditional selector | reconstruct the full instrument without discarding outcomes |
 | OT-005 | Selector thermodynamic ledger | compare three selector classes at matched contraction |
-| OT-006 | Same-film causal tensor closure | assemble transport and optical tensors with covariance before force fitting |
-| OT-007 | No-refit Casimir prediction | propagate the tensor into differential force/torque with all nuisance channels |
-| OT-008 | Low-frequency two-current rank | implement compiled common-sample KPM/typicality beyond the exact oracle |
+| OT-006 | Same-film causal tensor closure | measure the complex diagonal and Hall tensor on one batch/specimen from DC through at least 0.1–1 eV, with covariance, before force fitting |
 | OT-009 | Acoustic repeated-return selector | simulate and fabricate modular loop-plus-selector blocks |
 | OT-010 | Four-mode quotient-scar platform | freeze the hub-plus-three-outer device and its individual/summed/oriented readouts |
 | OT-035 | Frontier-register maintenance | synchronize status, dependencies and closure evidence after every packet |
+
+## P0 — gated executable work
+
+| ID | Topic | Reopen datum required |
+|---|---|---|
+| OT-007 | No-refit Casimir prediction | OT-006's frozen causal tensor posterior plus a calculation showing the differential signal exceeds complete force-systematics covariance |
+| OT-008 | Low-frequency two-current rank | a compiled symmetry-resolved or distributed KPM/typicality implementation beyond the 3×3 oracle; AZ-050 rules out the current dictionary matvec at the 5×5 scale |
+
+[AZ-058](../admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md)
+turns OT-006 into a measured bandwidth rather than a request for “more optical
+data.” The published Hall tensor ends at 1.5 THz. A 0.1–1 µm force experiment
+samples a characteristic 24–239 THz (0.099–0.987 eV), so the missing
+off-diagonal band begins 15.9 times above the current ceiling. The nearest
+experiment is same-film spectroscopy; force metrology follows only after a
+no-refit resolvability calculation.
 
 ## P1 — executable development and mandatory audits
 

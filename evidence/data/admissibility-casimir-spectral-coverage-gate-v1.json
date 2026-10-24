@@ -1,0 +1,43 @@
+{
+  "schema": "admissibility.casimir-spectral-coverage-gate/1",
+  "id": "AZ-058",
+  "date": "2026-10-25",
+  "material": "Co2MnGa",
+  "constants": {
+    "speedOfLightMPerS": 299792458,
+    "planckJouleSecond": 6.62607015e-34,
+    "boltzmannJoulePerKelvin": 1.380649e-23,
+    "electronVoltJoule": 1.602176634e-19
+  },
+  "publishedCoverage": {
+    "complexHallFrequencyTHz": [0.2, 1.5],
+    "longitudinalOpticalEnergyEV": [0.0025, 6.2],
+    "sameSpecimenBroadbandTensorAvailable": false,
+    "missingQuantity": "complex off-diagonal conductivity from the upper THz band through the infrared and near-infrared on the same specimen and magnetic states"
+  },
+  "characteristicMap": {
+    "rule": "f_characteristic = c/(4*pi*d); E = h*f; T_Matsubara = h*f/kB",
+    "publishedHallWindow": [
+      {"frequencyTHz": 0.2, "energyEV": 0.0008271335393847717, "matsubaraTemperatureK": 9.59848614673244, "distanceMicrometre": 119.28362898092357, "idealMetalPressurePa": 6.421877171006692e-12},
+      {"frequencyTHz": 1.5, "energyEV": 0.006203501545385788, "matsubaraTemperatureK": 71.98864610049331, "distanceMicrometre": 15.904483864123142, "idealMetalPressurePa": 2.0319220736388364e-8}
+    ],
+    "targetDistances": [
+      {"distanceMicrometre": 1.0, "frequencyTHz": 23.856725796184715, "energyEV": 0.09866349022965125, "idealMetalPressurePa": 0.0013001257732443657, "factorAbovePublishedHallCeiling": 15.904483864123144},
+      {"distanceMicrometre": 0.1, "frequencyTHz": 238.56725796184713, "energyEV": 0.9866349022965124, "idealMetalPressurePa": 13.001257732443657, "factorAbovePublishedHallCeiling": 159.04483864123142}
+    ],
+    "roomTemperatureFirstMatsubara": {"temperatureK": 300, "frequencyTHz": 6.250985736998272, "energyEV": 0.025851999786435535, "distanceMicrometre": 3.8164742010178907, "idealMetalPressurePa": 0.000006128243932726804}
+  },
+  "adjudication": {
+    "ot006": "active_with_quantified_measurement_band",
+    "ot007": "gated_on_ot006_tensor_and_resolvability",
+    "noRefitPredictionAvailableNow": false,
+    "reason": "the published longitudinal and Hall spectra are neither a same-specimen tensor nor spectrally coincident over the characteristic band for a 0.1-1 micrometre force experiment",
+    "requiredMeasurement": "measure complex sigma_xx and sigma_xy on the same batch or specimen, in both magnetic states, continuously from DC/THz through at least 0.1-1 eV, fit one causal tensor with covariance, then continue to imaginary frequency before force data are opened",
+    "forceGate": "advance only if the preregistered parallel-minus-antiparallel force or torque exceeds the complete patch, roughness, magnetic, drift and response-tail covariance"
+  },
+  "sources": [
+    {"doi": "10.1103/PhysRevB.105.174406", "role": "complex anomalous Hall and Faraday response from 0.2 to 1.5 THz"},
+    {"doi": "10.1002/advs.202400247", "role": "broadband longitudinal optical response of Co2MnGa thin films"},
+    {"doi": "10.1038/s43246-020-0015-4", "role": "dynamical optical tensor and imaginary-frequency continuation required for Weyl-semimetal Casimir calculation"}
+  ]
+}

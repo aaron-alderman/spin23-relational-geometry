@@ -274,6 +274,25 @@ The detector consequence is concrete. One ring programmed to pi/4 is an emulator
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-phase-target-is-relative-not-absolute-claim-2.md)
 
+<a id="hot-off-the-press-the-casimir-bridge-has-a-frequency-window"></a>
+## Hot off the press — the Casimir bridge has a frequency window
+
+> **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** The same-film Casimir proposal now has a quantitative spectral boundary. A separation d weights imaginary frequencies around the ordinary-frequency scale c/(4*pi*d). The published complex Co2MnGa Hall response from 0.2 to 1.5 THz therefore maps mainly to separations near 119 to 16 micrometres. A practical 0.1 to 1 micrometre force experiment instead calls for off-diagonal response around 24 to 239 THz, or 0.099 to 0.987 eV—15.9 to 159 times above the published Hall ceiling.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-casimir-bridge-has-a-frequency-window-claim-1.md)
+
+Broadband longitudinal optical data already cross that energy range, but they do not supply the missing complex Hall tensor, and measurements from different specimens, stacks and histories cannot be joined as though they were one causal material record. At 300 K the first nonzero Matsubara frequency is about 6.25 THz, also above the present Hall band. A large DC or THz Hall angle consequently does not establish a resolvable boundary-force differential.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-casimir-bridge-has-a-frequency-window-claim-2.md)
+
+The nearest work is now spectroscopy, not force metrology: measure complex diagonal and off-diagonal conductivity on one batch or specimen in both magnetic states from DC through at least 0.1 to 1 eV, fit one passive causal posterior with covariance, and freeze its continuation to imaginary frequency. Only if the predicted parallel-minus-antiparallel force or torque exceeds optical-tail, patch, roughness, magnetic, drift and separation uncertainties should a no-refit force experiment advance. A null remains useful material and metrology engineering; a residual becomes a new-physics lead only after that complete conventional closure fails.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-casimir-bridge-has-a-frequency-window-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -290,6 +309,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [the_admissibility_frontier_current_synthesis.md](../../../corpus/syntheses/the_admissibility_frontier_current_synthesis.md)
 - [admissibility_07_zone_known_unknown_frontiers.md](../../../corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md)
 - [admissibility_25_current_research_frontier_crosswalk.md](../../../corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md)
+- [admissibility_58_casimir_spectral_coverage_and_distance_gate.md](../../../corpus/programmes/admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md)
 - [frontier_experiment_atlas_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md)
 - [monster-fermionization-bridge.md](../../../corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - [period-matrix-jordan-boundary-gate.md](../../../corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md)
