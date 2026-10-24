@@ -493,6 +493,10 @@ The frontier therefore moves outward. A successful inequality must start with th
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-3.md)
 
+The first cross-frequency test now makes that lesson concrete. One positive relaxation spectrum forces the divided differences and slopes at several frequencies to form a positive Loewner kernel. A conventional passive response made from one relaxation branch plus a small inductive term stays positive and decreasing yet violates every two-frequency kernel minor; naming and subtracting the inductive storage restores the kernel exactly. This is useful model discrimination—do these records share the declared relaxation carrier?—but it is standard Stieltjes–Loewner theory, not a new fundamental law. The next look-here test needs measured covariance and then a premise not equivalent to choosing a narrower conventional carrier class.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-4.md)
+
 <a id="hot-off-the-press-two-currents-require-three-calculations"></a>
 ## Hot off the press — two currents require three calculations
 

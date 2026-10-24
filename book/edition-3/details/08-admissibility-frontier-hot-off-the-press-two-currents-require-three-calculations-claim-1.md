@@ -42,4 +42,4 @@ Supply the missing datum with a physical definition and demonstrate that it conn
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-two-currents-require-three-calculations) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-3.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-2.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-two-currents-require-three-calculations) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-4.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-2.md)

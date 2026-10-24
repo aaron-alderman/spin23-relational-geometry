@@ -1,0 +1,215 @@
+{
+  "protocol": "admissibility-cross-frequency-stieltjes-bound/1",
+  "date": "2026-10-25",
+  "target": "OT-018",
+  "coordinate": {
+    "name": "positive Laplace / transformed imaginary-frequency coordinate x",
+    "samples": [
+      1,
+      2,
+      3
+    ],
+    "warning": "The inequality applies only after the response and frequency variable have been typed so that a positive relaxation measure has kernel 1/(x+t)."
+  },
+  "theorem": {
+    "premise": "f(x)=a+integral_0^infinity dmu(t)/(x+t), with dmu nonnegative",
+    "kernel": "K_ij=(f(x_i)-f(x_j))/(x_j-x_i), K_ii=-f'(x_i)",
+    "factorization": "K_ij=integral_0^infinity dmu(t)/((x_i+t)(x_j+t))",
+    "consequence": "K is positive semidefinite for every finite sample set",
+    "classification": "standard Stieltjes/Loewner shared-measure condition, not a new admissibility law"
+  },
+  "positiveControl": {
+    "response": "f0(x)=1/(x+1)",
+    "interpretation": "one positive relaxation atom at t=1",
+    "values": [
+      0.5,
+      0.3333333333333333,
+      0.25
+    ],
+    "derivatives": [
+      -0.25,
+      -0.1111111111111111,
+      -0.0625
+    ],
+    "kernel": [
+      [
+        0.25,
+        0.16666666666666669,
+        0.125
+      ],
+      [
+        0.16666666666666669,
+        0.1111111111111111,
+        0.08333333333333331
+      ],
+      [
+        0.125,
+        0.08333333333333331,
+        0.0625
+      ]
+    ],
+    "audit": {
+      "diagonal": [
+        0.25,
+        0.1111111111111111,
+        0.0625
+      ],
+      "twoByTwoPrincipalMinors": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "value": -6.938893903907228e-18
+        },
+        {
+          "indices": [
+            0,
+            2
+          ],
+          "value": 0
+        },
+        {
+          "indices": [
+            1,
+            2
+          ],
+          "value": 2.6020852139652106e-18
+        }
+      ],
+      "determinant": 7.22801448323669e-20,
+      "positiveSemidefiniteByPrincipalMinors": true
+    }
+  },
+  "passiveCounterexample": {
+    "response": "f1(s)=1/(s+1)+s/100",
+    "interpretation": "a conventional positive-real relaxation branch plus a positive inductive term",
+    "positiveRealReason": "Both 1/(s+1) and s/100 have nonnegative real part for Re(s)>0; their sum is positive real.",
+    "values": [
+      0.51,
+      0.35333333333333333,
+      0.28
+    ],
+    "derivatives": [
+      -0.24,
+      -0.10111111111111111,
+      -0.0525
+    ],
+    "positiveOnSamples": true,
+    "decreasingOnSampleInterval": true,
+    "kernel": [
+      [
+        0.24,
+        0.15666666666666668,
+        0.11499999999999999
+      ],
+      [
+        0.15666666666666668,
+        0.10111111111111111,
+        0.0733333333333333
+      ],
+      [
+        0.11499999999999999,
+        0.0733333333333333,
+        0.0525
+      ]
+    ],
+    "audit": {
+      "diagonal": [
+        0.24,
+        0.10111111111111111,
+        0.0525
+      ],
+      "twoByTwoPrincipalMinors": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "value": -0.00027777777777778304
+        },
+        {
+          "indices": [
+            0,
+            2
+          ],
+          "value": -0.0006249999999999988
+        },
+        {
+          "indices": [
+            1,
+            2
+          ],
+          "value": -0.00006944444444444055
+        }
+      ],
+      "determinant": 3.049318610115481e-20,
+      "positiveSemidefiniteByPrincipalMinors": false
+    },
+    "exactTwoPointFailure": "det K[{i,j}]=-(1/100)(1/(x_i+1)-1/(x_j+1))^2<0 for i!=j"
+  },
+  "typedCorrection": {
+    "declaredInductiveCoefficient": 0.01,
+    "operation": "add the known inductive coefficient to every Loewner-kernel entry before testing the relaxation remainder",
+    "correctedKernel": [
+      [
+        0.25,
+        0.16666666666666669,
+        0.12499999999999999
+      ],
+      [
+        0.16666666666666669,
+        0.1111111111111111,
+        0.0833333333333333
+      ],
+      [
+        0.12499999999999999,
+        0.0833333333333333,
+        0.0625
+      ]
+    ],
+    "audit": {
+      "diagonal": [
+        0.25,
+        0.1111111111111111,
+        0.0625
+      ],
+      "twoByTwoPrincipalMinors": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "value": -6.938893903907228e-18
+        },
+        {
+          "indices": [
+            0,
+            2
+          ],
+          "value": 3.469446951953614e-18
+        },
+        {
+          "indices": [
+            1,
+            2
+          ],
+          "value": 5.204170427930421e-18
+        }
+      ],
+      "determinant": -7.228014483236707e-20,
+      "positiveSemidefiniteByPrincipalMinors": true
+    },
+    "equalsPositiveControlKernel": true
+  },
+  "decision": {
+    "crossFrequencySharedMeasureBoundEstablished": true,
+    "fullPointwisePassivitySufficientForSharedRelaxationMeasure": false,
+    "conventionalPassiveCounterexampleExists": true,
+    "extraPremiseIdentified": "one relaxation-only positive spectral measure after separately typing affine storage terms",
+    "novelFundamentalInequalityEstablished": false,
+    "newPhysicsEvidence": false,
+    "topicStatus": "open_with_first_cross_frequency_candidate_classified_as_standard_stieltjes_loewner_theory"
+  },
+  "implication": "Cross-frequency context adds a real joint constraint, but its authority comes from the declared shared-measure carrier. It is a model-discrimination and data-quality tool, not a universal law beyond standard passive-system theory."
+}

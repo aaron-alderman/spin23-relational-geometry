@@ -64,7 +64,7 @@ for another dimensionless redesign.
 | OT-015 | Defect information beyond index | tests what a wall transports beyond mode count |
 | OT-016 | Hydrodynamic multichannel cone | collides conservation with response rank |
 | OT-017 | Source-restricted logical generators | exact closures are 18/54/1,152/51,840 for the source-visible, compiled-cross, imported-local and universal alphabets; the open work is one carrier that physically supplies both mutual coupling and polarization change |
-| OT-018 | New contextual admissibility inequality | AZ-066 kills the natural three-port triangle bound as standard full-matrix positivity; the search moves to cross-frequency, shared-dilation, detector-context or uniform-limit compatibility |
+| OT-018 | New contextual admissibility inequality | AZ-066 kills the triangle bound as full-matrix positivity; AZ-095 classifies the first cross-frequency shared-measure bound as standard Stieltjes–Loewner theory and moves the search to measured covariance, shared dilation and detector context |
 | OT-019 | Three-scale admissibility functor | asks which exclusions and invariants survive coarse-graining |
 | OT-020 | Rare-event selector geometry | separates equilibrium breaking from kinetic freezing |
 | OT-021 | Complexity cards | target audit complete; packet enforcement prevents hidden Hilbert dimension, preparation or tomography |
