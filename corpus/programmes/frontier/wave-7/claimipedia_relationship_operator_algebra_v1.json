@@ -1,0 +1,69 @@
+{
+  "schema": "claimipedia-relationship-operator-algebra/1",
+  "date": "2026-10-24",
+  "source": "claimipedia_relationship_operator_source_v1.json",
+  "sourceHash": "82d9c5a47f4957ddbd302927baed0acb05522773762966a4c9ffc34ed86f94c3",
+  "carrier": {
+    "field": "Q",
+    "basis": "38 distinct source or target nodes in the 43 captured relationships",
+    "nodeCount": 38,
+    "relationshipCount": 43,
+    "distinctEdgeCount": 41
+  },
+  "relationTypeCounts": {
+    "Challenges": 2,
+    "DependsOn": 7,
+    "Qualifies": 27,
+    "Supports": 7
+  },
+  "operatorConvention": "A_r[target,source] counts directed relationships of type r; products compose rightmost first",
+  "generatorRanks": {
+    "Challenges": 2,
+    "DependsOn": 6,
+    "Qualifies": 14,
+    "Supports": 5
+  },
+  "generatedAlgebra": {
+    "unitalDimension": 66,
+    "centerDimension": 14,
+    "commutatorSubspaceDimension": 53,
+    "commutative": false,
+    "allSixGeneratorPairCommutatorsNonzero": true,
+    "nilpotencyIndex": {
+      "Challenges": 2,
+      "Qualifies": 7,
+      "Supports": 3,
+      "DependsOn": null
+    }
+  },
+  "spinTempleCorner": {
+    "nodes": [
+      "claim.grandThesis.spin-2-3",
+      "claim.grandThesis.temple-sourcery"
+    ],
+    "q": "compressed Qualifies = E_spin,temple",
+    "s": "compressed Supports = E_temple,spin",
+    "h": "[q,s] = E_spin,spin - E_temple,temple",
+    "relations": [
+      "q^2=0",
+      "s^2=0",
+      "[h,q]=2q",
+      "[h,s]=-2s",
+      "q*s+s*q=I_2"
+    ],
+    "associativeClosure": "M2(Q)",
+    "lieClosure": "sl2(Q)",
+    "fullSp4Established": false
+  },
+  "descent": {
+    "twoNodeProjectionKernelInvariant": false,
+    "obstructionEdge": [
+      "claim.grandThesis.christianity-kenosis",
+      "claim.grandThesis.temple-sourcery",
+      "Qualifies"
+    ],
+    "minimalPredecessorClosedCarrierNodeCount": 15,
+    "interpretation": "The sl2 pair is an exact compressed corner, not an autonomous descended subsystem. Hidden kenosis data can enter the visible Temple coordinate."
+  },
+  "promotionGate": "A Spin(2,3) comparison requires a second independent sl2 root triple on the same invariant carrier, the C2 Cartan integers and Serre relations. None is established by this calculation."
+}
