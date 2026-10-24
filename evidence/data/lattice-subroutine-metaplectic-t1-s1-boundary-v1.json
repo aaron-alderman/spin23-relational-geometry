@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The free-Majorana genus-two even-characteristic carrier has exact T1 and S1 monomial actions. Absolute generator phases depend on a common anomaly trivialization, but relative fixed-sector and cycle-product ratios survive both diagonal sector rephasing and a common generator phase.",
+  "convention": {
+    "characteristic": "(a1,a2;b1,b2) with binary entries and parity a1*b1+a2*b2 mod 2",
+    "root": "zeta8 = exp(i*pi/4)",
+    "T1Action": "(a1,a2;b1,b2) -> (a1,a2;b1+a1+1,b2)",
+    "T1Exponent": "a1, so the phase is zeta8^a1",
+    "S1Action": "(a1,a2;b1,b2) -> (b1,a2;a1,b2)",
+    "S1Exponent": "2*a1*b1, so the phase is zeta8^(2*a1*b1)",
+    "scope": "reduced theta-characteristic multiplier; the common modular-weight/anomaly factor is not fixed"
+  },
+  "expected": {
+    "evenCharacteristics": 10,
+    "T1": {
+      "twoCycles": 3,
+      "fixedSectors": 4,
+      "nonvanishingFixedAtSeparation": 3,
+      "twoCycleProducts": [0, 0, 0],
+      "fixedExponents": [1, 1, 1, 1],
+      "determinantExponent": 0,
+      "commonPhaseInvariantFixedSquaredOverPair": [2, 2, 2, 2]
+    },
+    "S1": {
+      "twoCycles": 3,
+      "fixedSectors": 4,
+      "nonvanishingFixedAtSeparation": 3,
+      "twoCycleProducts": [0, 0, 0],
+      "fixedExponents": [0, 0, 0, 2],
+      "determinantExponent": 6,
+      "evenFixedSquaredOverPair": 0,
+      "oddOddFixedSquaredOverPair": 4,
+      "oddOddOverEvenFixed": 2
+    }
+  },
+  "invariance": {
+    "diagonalSectorRephasing": "Closed-cycle phase sums and fixed-sector exponents are unchanged.",
+    "commonGeneratorPhase": "For a fixed phase f and two-cycle product c, 2*f-c mod 8 is unchanged; ratios between fixed sectors are also unchanged.",
+    "T1RobustTarget": "Every fixed-sector-square / two-cycle-product ratio is zeta8^2 = i.",
+    "S1RobustTargets": [
+      "odd-odd fixed / even-even fixed = zeta8^2 = i",
+      "even-even fixed squared / two-cycle product = 1",
+      "odd-odd fixed squared / two-cycle product = zeta8^4 = -1"
+    ]
+  },
+  "sourceBoundary": {
+    "freeMajorana": "complete for the declared reduced T1/S1 characteristic actions",
+    "completeMonster2A": "open",
+    "missingDatum": "genus-two fermionic Baby-Monster spin-sector amplitudes and their source-derived anomaly-line trivialization",
+    "physicalBinding": "open; no modular-generator-to-laboratory-control-loop map is derived"
+  },
+  "terminalStatus": "free_majorana_relative_multiplier_invariants_established_complete_2A_source_gate_open"
+}

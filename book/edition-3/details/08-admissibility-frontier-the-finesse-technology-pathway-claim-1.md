@@ -43,6 +43,8 @@ Specify the apparatus, calibration, null distribution, preregistered threshold a
 - **three-mode-loop-seam-preflight** — [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
 - **modular-sign-detector-reassignment** — [modular-sign-detector-reassignment.md](../../../corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md)
 - **metaplectic-phase-candidate** — [metaplectic-phase-candidate.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md)
+- **metaplectic-t1-s1-boundary** — [metaplectic-t1-s1-boundary.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-t1-s1-boundary.md)
+- **frontier wave7 73 relative metaplectic phase boundary** — [frontier_wave7_73_relative_metaplectic_phase_boundary.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_73_relative_metaplectic_phase_boundary.md)
 - **frontier wave7 39 mixed interface resolution** — [frontier_wave7_39_mixed_interface_resolution.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md)
 - **frontier wave7 39 programme a2 double centralizer and c2 no go** — [frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md)
 - **frontier wave7 40 claimipedia operator exhaustion and sp4 gate** — [frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md)

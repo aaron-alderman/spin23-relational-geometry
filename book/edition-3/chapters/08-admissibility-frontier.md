@@ -259,6 +259,21 @@ This is a useful no-go. Wrapping every claim in the same opaque signature and as
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md)
 
+<a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
+## Hot off the press — the phase target is relative, not absolute
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The free-Majorana part of the Monster 2A route now has exact reduced T1 and S₁ actions on all ten even genus-two spin sectors. The earlier exp(i*pi/4) fixed-sector phase was genuine but not yet an intrinsic device flux: a common anomaly-line convention can shift every phase assigned to one generator. What survives is relational. Under T1, a fixed-sector phase squared divided by a two-cycle product is exactly i. Under S₁, the odd--odd fixed sector divided by an even--even fixed sector is also i. Both comparisons survive sector rephasing and a common generator phase.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-phase-target-is-relative-not-absolute-claim-1.md)
+
+The detector consequence is concrete. One ring programmed to pi/4 is an emulator, not a source-bound prediction. A faithful test needs two coherently referenced sectors, or a fixed channel and a two-cycle channel, driven by the same calibrated control so the common phase cancels. This narrows the theoretical-engineering opportunity to relative-sector interferometry. A complete Monster or new-physics claim still requires genus-two fermionic Baby-Monster amplitudes, their anomaly line and a no-refit physical control map; gravity additionally requires a local action or controlled continuum.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-phase-target-is-relative-not-absolute-claim-2.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -281,6 +296,8 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
 - [modular-sign-detector-reassignment.md](../../../corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md)
 - [metaplectic-phase-candidate.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md)
+- [metaplectic-t1-s1-boundary.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-t1-s1-boundary.md)
+- [frontier_wave7_73_relative_metaplectic_phase_boundary.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_73_relative_metaplectic_phase_boundary.md)
 - [frontier_wave7_39_mixed_interface_resolution.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md)
 - [frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md)
 - [frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md)

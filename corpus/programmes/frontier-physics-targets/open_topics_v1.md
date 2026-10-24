@@ -1,11 +1,11 @@
 # Open topics v1
 
-**Date:** 24 October 2026  
+**Date:** 25 October 2026
 **Status:** maintained working queue  
 **Machine authority:** [open-topic register](open_topics_register_v1.json)  
 **Detector map:** [detector and frontier atlas](detector_frontier_atlas_v1.md)
 
-The register contains **49** independently closable topics: **44 remain live and five are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
+The register contains **50** independently closable topics: **45 remain live and five are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
 
 ## Operating rule
 
@@ -81,6 +81,15 @@ shared structure is an ordered graph path, not yet an ALE valuation, Jordan
 product or physical operator. The next admissible bridge must type one real
 path at its source and predict a held-out composition or detector record; an
 opaque uniform wrapper fires the existing programmable-encoding kill test.
+
+Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
+(T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
+(\pi/4) phase depends on a common anomaly trivialization, while the (T_1)
+fixed-square/two-cycle ratio and (S_1) odd--odd/even--even fixed ratio are
+both invariantly (i). The next datum is no longer another free-theta
+enumeration: it is the genus-two fermionic Baby-Monster spin family, followed
+by a coherent relative-sector detector map and one complete gravitational
+route.
 
 ## P3 — fundamental firewall
 

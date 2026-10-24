@@ -28,6 +28,8 @@ The [complexity-card audit](frontier_complexity_cards_v1.md) completes OT-021's 
 
 [Wave 7.72](../frontier/wave-7/frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md) exhausts the direct Claimipedia-to-Sourcery extraction test for the pinned relationship capture. Its 43 relations retain direction, endpoints and epistemic type, but zero directly satisfy the scientific-transformation admission contract. The common structure is an ordered path skeleton, not an ALE valuation, Jordan product or physical operator. OT-026 and OT-027 remain gated until one source-native path supplies exact endpoint typing, losses, evidence and a held-out compositional prediction.
 
+[Wave 7.73](../frontier/wave-7/frontier_wave7_73_relative_metaplectic_phase_boundary.md) completes the reduced free-Majorana (T_1/S_1) action on the ten even genus-two characteristics. It corrects the detector target: an absolute (\pi/4) generator phase depends on a common anomaly trivialization, while the (T_1) fixed-square/two-cycle ratio and the (S_1) odd--odd/even--even fixed ratio are both the invariant (i). OT-050 remains gated on a genuinely new source object—the genus-two fermionic Baby-Monster spin family—and on a coherent relative-sector detector map.
+
 The [finesse technology pathway](finesse_technology_pathway_v1.md) is the execution overlay: begin with a 90-day resonator-chain design and blind challenge, reuse its schema on a three-mode coherent selector platform, then advance to same-film response/force closure. Its escalation rule withholds “new physics” until a residual survives preregistered nuisance controls, independent-carrier replication and a common-parameter operator model.
 
 ## Shape of the remaining frontier

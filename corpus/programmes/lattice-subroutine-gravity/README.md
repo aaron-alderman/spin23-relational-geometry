@@ -199,7 +199,9 @@ The [three-mode loop preflight](three-mode-loop-seam-preflight.md) verifies the 
 
 The [modular-sign detector reassignment](modular-sign-detector-reassignment.md) then closes the first attempted source binding. The \(\chi_5\) character supplies only \(\sigma=\pm1\), which embeds as loop flux \(0\) or \(\pi\). Both are fixed under flux reversal, so the ring is reciprocal and its directional odd channel vanishes. The sign remains observable either as binary spectral parity or, more directly, as interference against an independent reference in the two-quadrature experiment. A chiral three-mode prediction now requires a source-derived multiplier phase beyond the sign character.
 
-The [metaplectic phase calculation](metaplectic-phase-candidate.md) finds that next layer in the free-Majorana factor. Under a first-handle \(T\) transformation, four even spin sectors are fixed with phase \(e^{i\pi/4}\), while the other six form three phase-free two-cycles. The three permutation signs and four eighth-root phases cancel in the determinant, explaining why the binary character missed them. This supplies a conditional no-fit target \(\Phi=\pm\pi/4\) for directional transfer. It is not yet a Monster prediction: the complete Baby-Monster multiplier and a physical modular-to-control-loop map can cancel or alter the phase.
+The [metaplectic phase calculation](metaplectic-phase-candidate.md) finds that next layer in the free-Majorana factor. Under a first-handle \(T\) transformation, four even spin sectors are fixed with phase \(e^{i\pi/4}\), while the other six form three phase-free two-cycles. The three permutation signs and four eighth-root phases cancel in the determinant, explaining why the binary character missed them.
+
+The [combined \(T_1/S_1\) audit](metaplectic-t1-s1-boundary.md) then separates convention from observable structure. A common anomaly phase can shift an absolute generator phase, but it cancels from fixed-sector/cycle comparisons. For \(T_1\), every fixed-sector-square divided by a two-cycle product is exactly \(i\). For \(S_1\), the odd--odd/even--even fixed-sector ratio is also \(i\). The detector target is therefore a coherent relative-sector comparison, not a lone loop fixed at \(\pi/4\). The free-factor computation is complete under the declared convention; a full Monster prediction still requires genus-two fermionic Baby-Monster spin amplitudes, their anomaly-line trivialization and a physical modular-to-control-loop map.
 
 ## Honest implications
 
@@ -227,6 +229,7 @@ The negative implication is equally useful. Images, number coincidences, group i
 - [Three-mode loop seam preflight](three-mode-loop-seam-preflight.md)
 - [Modular-sign detector reassignment](modular-sign-detector-reassignment.md)
 - [Metaplectic phase candidate](metaplectic-phase-candidate.md)
+- [Metaplectic T1/S1 relative-invariant boundary](metaplectic-t1-s1-boundary.md)
 - [Literature review](literature-review.md)
 - [Calculations and next steps](next-steps.md)
 - [Machine verifier](../../../verification/verify/verify_lattice_subroutine_gravity_programme.mjs)
@@ -261,6 +264,8 @@ The negative implication is equally useful. Images, number coincidences, group i
 - [Three-mode loop evidence](../../../evidence/data/lattice-subroutine-three-mode-loop-seam-preflight-v1.json)
 - [Modular-sign detector evidence](../../../evidence/data/lattice-subroutine-modular-sign-detector-reassignment-v1.json)
 - [Metaplectic phase evidence](../../../evidence/data/lattice-subroutine-metaplectic-phase-candidate-v1.json)
+- [Metaplectic T1/S1 boundary evidence](../../../evidence/data/lattice-subroutine-metaplectic-t1-s1-boundary-v1.json)
+- [Metaplectic T1/S1 boundary verifier](../../../verification/verify/verify_lattice_subroutine_metaplectic_t1_s1_boundary.mjs)
 - [Three-mode loop verifier](../../../verification/verify/verify_lattice_subroutine_three_mode_loop_seam_preflight.mjs)
 - [Existing Leech pair-Gram claim](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Existing finite genus-two seam claim](../../claims/1700-1799/1738_the_2_state_3_symbol_universal_machine_selects_a_finite_genus_two_theta_seam_but_not_spin23_dynamics.md)
