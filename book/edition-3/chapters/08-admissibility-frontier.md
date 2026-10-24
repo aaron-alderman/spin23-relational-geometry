@@ -497,6 +497,10 @@ The first cross-frequency test now makes that lesson concrete. One positive rela
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-4.md)
 
+Storage typing changes the verdict on the real impedance lane. At 1 kHz, 3.162 kHz and 10 kHz, the complete fitted impedance fails the relaxation-only Loewner test for all 54 cells. Remove the series inductance already present in the frozen model and all 54 pass, with a positive smallest corrected eigenvalue. This dramatic reversal is not new physics and not independent validation—the nonnegative basis imposed the shared relaxation measure, while the source lacks measured slopes and repeat covariance. It is a practical detector design: report raw and storage-corrected kernels together, vary fixture inductance, and ask whether only the raw verdict moves.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-5.md)
+
 <a id="hot-off-the-press-two-currents-require-three-calculations"></a>
 ## Hot off the press — two currents require three calculations
 

@@ -17,7 +17,7 @@ A specified candidate class fails under explicit assumptions. The conclusion doe
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the first new inequality is not new”.
-- **Unit of argument:** assertion 3 of 4 in this section.
+- **Unit of argument:** assertion 3 of 5 in this section.
 - **Evidence posture:** Check the assumptions defining the ruled-out candidate class; the no-go does not automatically extend beyond that class.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
@@ -34,6 +34,7 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ## Controlling documents
 
+- **admissibility 96 population storage corrected loewner certificate** — [admissibility_96_population_storage_corrected_loewner_certificate.md](../../../corpus/programmes/admissibility/admissibility_96_population_storage_corrected_loewner_certificate.md)
 - **admissibility 95 cross frequency shared measure bound** — [admissibility_95_cross_frequency_shared_measure_bound.md](../../../corpus/programmes/admissibility/admissibility_95_cross_frequency_shared_measure_bound.md)
 - **admissibility 66 contextual triangle bound reduces to standard positivity** — [admissibility_66_contextual_triangle_bound_reduces_to_standard_positivity.md](../../../corpus/programmes/admissibility/admissibility_66_contextual_triangle_bound_reduces_to_standard_positivity.md)
 - **admissibility 08 finite contextual casimir experiment** — [admissibility_08_finite_contextual_casimir_experiment.md](../../../corpus/programmes/admissibility/admissibility_08_finite_contextual_casimir_experiment.md)
