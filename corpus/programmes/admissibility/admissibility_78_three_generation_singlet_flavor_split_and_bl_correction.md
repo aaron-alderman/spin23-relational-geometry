@@ -8,7 +8,7 @@
 **Generator:** [matrix quotient calculation](../../../scripts/run-alp-three-generation-flavor-quotient-gate.mjs)  
 **Verifier:** [matrix quotient certificate](../../../verification/admissibility/verify_alp_three_generation_flavor_quotient_gate.mjs)
 
-**Continuation:** [AZ-079](admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md) identifies a finite flavor-changing matching term that is sensitive to the direct weak operator and therefore breaks the sixth-coordinate blind direction in principle.
+**Continuation:** [AZ-079](admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md) isolates a finite flavor-changing term that is sensitive to the direct weak operator. [AZ-081](admissibility_81_source_complete_fcnc_kernel_restores_the_weak_quotient.md) then shows that the source-complete MFV coefficient restores the sixth-coordinate blind direction. The next live route is a non-collinear shape in a gauge-complete differential amplitude.
 
 ## Result
 
@@ -118,7 +118,7 @@ Open:
 
 The five-coordinate programme remains meaningful, but its claim is now properly scoped. It tests a family-universal source hypothesis. A failure in a flavor-changing channel need not falsify the Jordan–Lie admissibility programme or even the singlet source relation; it can locate one of the forty directions that the weak bosonic detector necessarily folds away.
 
-The useful next place to look is therefore a process that is simultaneously flavor-sensitive and differently sensitive to the direct bosonic coefficient. The finite down-sector matching already supplies such a term. AZ-079 tests whether it breaks the specific sixth-coordinate null direction.
+The useful next place to look is therefore a complete observable that is simultaneously flavor-sensitive and differently sensitive to the direct bosonic coefficient. The finite down-sector matching supplies a candidate term, but AZ-081 shows that the declared source-complete MFV kernel recombines it into the old weak direction. Term-level sensitivity is not enough; non-collinearity must survive the complete amplitude and detector map.
 
 Primary source: [Bauer *et al.*, *The Low-Energy Effective Theory of Axions and ALPs*](https://arxiv.org/abs/2012.12272), especially Eqs. (10), (11), and (41)--(45).
 

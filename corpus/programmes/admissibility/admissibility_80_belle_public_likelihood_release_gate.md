@@ -8,6 +8,8 @@
 **Generator:** [availability audit](../../../scripts/run-belle-alp-public-likelihood-availability-gate.mjs)  
 **Verifier:** [release-packet certificate](../../../verification/admissibility/verify_belle_alp_public_likelihood_availability_gate.mjs)
 
+**Continuation and scope correction:** [AZ-081](admissibility_81_source_complete_fcnc_kernel_restores_the_weak_quotient.md) shows that the published MFV forward kernel depends on \((A_2,c_{WW})\) only through \(\widetilde c_{WW}\). The release packet remains valuable for recasting and cross-scale validation, but it cannot resolve the sixth coordinate within that approximation.
+
 ## Result
 
 The Belle flavor-changing detector arm is real, but the public result is not yet a reusable detector map for the corpus's two-coordinate question.
@@ -65,7 +67,7 @@ Open:
 
 ## Implication and look-here instruction
 
-The frontier is now specific enough to contact an experiment or build a recast without asking vaguely for “more data.” Ask for six named objects. In parallel, finish the forward model. If the release arrives and the rank survives, the sixth coordinate becomes experimentally addressable. If it collapses, that null result is still valuable: it identifies a practical detector quotient rather than confusing an ideal operator distinction with an observable one.
+The frontier is now specific enough to contact an experiment or build a recast without asking vaguely for “more data.” Ask for six named objects. In parallel, finish the forward model. AZ-081 has already shown that the published MFV numerical kernel retains only the weak quotient, so the recast's admitted purpose in that scope is constraint and cross-scale validation. Sixth-coordinate identifiability requires a different source-complete differential shape, not merely release of the same likelihood.
 
 Primary experimental sources: [Belle/Belle II publication record](https://docs.belle2.org/pub_data/publications/3783/) and [Belle II preprint 2025-017](https://docs.belle2.org/files/3783/BELLE2-PUB-DRAFT-2024-020/15/BELLE2-PUB-DRAFT-2024-020.pdf).
 

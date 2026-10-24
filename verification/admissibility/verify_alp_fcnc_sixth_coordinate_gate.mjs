@@ -11,4 +11,5 @@ if (Math.abs(data.rankCertificate.weakImageOfBlindDirection) > 1e-12) fail("old 
 if (!data.rankCertificate.blindDirectionBroken || Math.abs(data.rankCertificate.fcncImageOfBlindDirection) < 1e-12) fail("FCNC row does not break old blind direction");
 if (!(data.rankCertificate.inverseSensitivityAmplification > 1e4)) fail("loop-suppression warning was lost");
 if (!data.nuisanceFirewall.otherSourceCoordinates.includes("c_tt") || !data.nuisanceFirewall.detectorAndHadronicCoordinates.includes("B-to-K form factors")) fail("nuisance firewall incomplete");
-console.log("ALP FCNC sixth-coordinate gate verified: the finite down-sector matching row breaks the weak-record null direction, with a >10^4 loop-sensitivity penalty before nuisances.");
+if (data.nuisanceFirewall.supersededDetectorInferenceBy !== "AZ-081") fail("source-complete correction marker missing");
+console.log("ALP isolated FCNC term gate verified: the term-level row is independent with a >10^4 loop-sensitivity penalty, while AZ-081 controls the source-complete detector inference.");

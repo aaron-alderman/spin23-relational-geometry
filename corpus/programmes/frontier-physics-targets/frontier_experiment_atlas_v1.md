@@ -29,7 +29,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 | EX-018 | Consistency, scattering and continuum control | theorem_computation | ready_now | 6–18 months depending on whether a theorem survives |
 | EX-019 | Flavour, gravity and cosmology | conditional_hybrid | conditional_on_action | 12–36 months after a frozen action and matching packet exist |
 | EX-020 | Exceptional and unification interpretation | theory_computation | conditional_on_model | 12–36 months for one fully specified candidate |
-| EX-021 | Flavour, gravity and cosmology | public_data_recast_then_joint_experiment | specified_source_likelihood_required | 3–9 months for a public-likelihood recast; experiment-internal joint fit depends on access |
+| EX-021 | Flavour, gravity and cosmology | theory_kernel_then_public_data_recast | source_complete_amplitude_required | 2–6 months for the amplitude audit; 3–9 months for a public-likelihood recast after release |
 
 ## Experiment cards
 
@@ -909,48 +909,50 @@ This atlas converts every canonical frontier into a realistic controlled experim
 
 ---
 
-### EX-021 — Joint W-associated and flavor-changing meson ALP fit
+### EX-021 — Source-complete W-associated amplitude and meson validation
 
 **Frontier:** FA-19 — Flavour, gravity and cosmology (sixth-coordinate detector quotient)  
-**Mode/readiness:** public_data_recast_then_joint_experiment; specified_source_likelihood_required  
-**Indicative scale:** 3–9 months for a public-likelihood recast; experiment-internal joint fit depends on access  
+**Mode/readiness:** theory_kernel_then_public_data_recast; source_complete_amplitude_required  
+**Indicative scale:** 2–6 months for the amplitude audit; 3–9 months for a public-likelihood recast after release  
 **Topics:** OT-047, OT-048
 
 **Detector bundles:** DET-029, DET-036
 
-**Platform.** A common ALP EFT likelihood joining a high-energy W-associated response with Belle/Belle II or successor B-to-K(*)a visible and missing-energy bins.
+**Platform.** A gauge-complete W-associated ALP amplitude with independently signed current and direct-boson sources, followed by Belle/Belle II or successor B-to-K(*)a validation in the same EFT basis.
 
-**Hypothesis.** The bosonic row c_WW-A_2/2 and the finite flavor-changing row proportional to unprimed c_WW retain nuisance-profiled rank two.
+**Hypothesis.** A differential W-associated interference shape survives source completion and is not proportional to the weak quotient (-1/2,1), while the meson arm consistently constrains the ctilde_WW/current/gluon/UV-flavor combination identified by AZ-081.
 
 **Interventions**
 
+- Run AZ-074's 27 signed source settings on common phase-space points
+- Ablate direct-boson, top-current and bottom-current diagrams only in gauge-complete subsets
 - Scan the ALP mass and lifetime on one shared grid
 - Separate charged/neutral B and K/K* categories
-- Combine visible resonance and missing-energy categories where available
 - Hold out at least one decay or collider category until the joint coefficients are frozen
 
 **Recorded observables**
 
-- W-associated signed response coefficients and covariance
+- Differential W-associated quadratic response coefficients and Ward residuals
+- Source-complete (A_2,c_WW) singular spectrum by phase-space bin
 - B-to-K(*) diphoton, dilepton or missing-energy binned likelihood
-- Profiled smallest singular value for (A_2,c_WW)
-- Held-out category prediction
+- Cross-scale held-out category prediction
 
 **Controls**
 
+- Published Eq. (74) rank-one MFV kernel
+- Isolated c_WW matching-term false-positive comparator
 - One-coupling g_aW interpretation
 - Current-only c_WW=0 hypothesis
 - Mass sidebands and lifetime/acceptance closure
 - CKM and form-factor covariance
-- Alternative ALP branching-fraction models
 
-**Analysis.** Transport every coefficient through one frozen basis, running and weak-threshold dictionary. Profile current, gluonic, CKM, hadronic, decay and detector nuisances; compare the profiled rank-two model with its exact rank-one null and current-only restriction.
+**Analysis.** Complete every coefficient through one frozen basis, running and weak-threshold dictionary before calculating rank. Test Ward identities and the 27-setting quadratic closure at differential level; only a non-collinear surviving shape proceeds to detector folding. Use the meson likelihood as a common-EFT validation arm and profile current, gluonic, CKM, hadronic, decay and detector nuisances.
 
-**Decisive positive result.** The second profiled singular value clears its preregistered threshold and the joint coefficients predict the held-out category without refitting.
+**Decisive positive result.** A source-complete non-collinear differential shape clears its preregistered singular-value threshold, survives detector folding and predicts the held-out meson or collider category without refitting.
 
-**Useful null result.** Loop suppression and nuisances collapse the second direction, yielding a documented detector quotient rather than a false A_2 measurement.
+**Useful null result.** The full amplitude recombines to the weak quotient, as the MFV meson kernel does, closing the proposed sixth-coordinate route while retaining a useful cross-scale constraint.
 
-**Stop rule.** Do not claim separation from published one-coupling limits or an idealized nonzero Jacobian; stop at the residual quotient unless the full covariance retains rank two.
+**Stop rule.** Do not claim separation from an isolated matching term, one-coupling limit or diagram subset; stop unless source completion, Ward checks, held-out prediction and the full covariance all preserve the second shape.
 
 **Primary precedents.** [https://arxiv.org/abs/2012.12272](https://arxiv.org/abs/2012.12272); [https://arxiv.org/abs/2507.01249](https://arxiv.org/abs/2507.01249)
 

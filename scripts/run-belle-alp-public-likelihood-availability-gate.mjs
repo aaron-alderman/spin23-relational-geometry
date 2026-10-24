@@ -66,8 +66,8 @@ const result = {
   boundary: {
     closed: "The current official paper and publication page define the detector, fit and aggregate one-coupling result but do not expose the machine-readable likelihood packet required for an exact public two-coordinate recast.",
     scope: "This is an availability statement for the inspected official surfaces on 25 October 2026, not a claim that the collaboration lacks the information or that no future release can supply it.",
-    usefulNow: "The public article fixes modes, mass range, fit family, resolution/lifetime dependence and systematic categories. These are sufficient to specify the request and build the theory-side forward model, but not to certify practical identifiability.",
-    nextAction: "Request or locate the six-item release packet; in parallel compute the complete W-associated and flavor-changing forward kernels so a released likelihood can be consumed without redefining the model after seeing data.",
+    usefulNow: "The public article fixes modes, mass range, fit family, resolution/lifetime dependence and systematic categories. These are sufficient to specify a faithful recast and cross-scale validation request, but AZ-081 shows that this MFV flavor kernel does not itself supply the missing sixth coordinate.",
+    nextAction: "Request or locate the six-item release packet for faithful recasting and validation; in parallel compute a gauge-complete differential W-associated amplitude and test whether any detector-retained shape is non-collinear in (A_2,c_WW).",
   },
 };
 

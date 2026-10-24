@@ -289,6 +289,7 @@ const sectionTaxonomy = {
   "Hot off the press — three generations add flavor, not another anomaly": "conditional",
   "Hot off the press — change the record, not just the energy": "experiment",
   "Hot off the press — ask for the likelihood, not the plot": "obstruction",
+  "Hot off the press — a term is not a detector row": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -384,6 +385,7 @@ const sectionArchetype = {
   "Hot off the press — three generations add flavor, not another anomaly": "translator",
   "Hot off the press — change the record, not just the energy": "builder",
   "Hot off the press — ask for the likelihood, not the plot": "auditor",
+  "Hot off the press — a term is not a detector row": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -761,9 +763,9 @@ admissibilitySections.splice(orientedSeamIndex + 31, 0, [
 admissibilitySections.splice(orientedSeamIndex + 32, 0, [
   "Hot off the press — change the record, not just the energy",
   [
-    "**Provisional integration note — 25 October 2026.** The published finite weak matching contains the missing kind of record. A flavor-changing down-sector coefficient includes an explicit term proportional to the unprimed direct \\(c_{WW}\\), while the bosonic record measures \\(c_{WW}-A_2/2\\). The two idealized rows have nonzero determinant and the flavor row breaks the blind shift that survives every energy point of the bosonic record.",
-    "The exit is physically instrumented: \\(B\\to K^{(*)}a\\) and \\(K\\to\\pi a\\) probe the flavor-changing coefficient, and Belle/Belle II have already searched for the diphoton B-decay channel. But the relevant matching coefficient is only about \\(-2.65\\times10^{-5}\\) before CKM and detector folding. Inverting it amplifies error by roughly \\(3.8\\times10^4\\), so a published one-coupling limit is evidence that the detector arm exists, not proof that the two source coordinates are identified.",
-    "The buildable experiment is a joint likelihood: combine one W-associated high-energy kernel with binned visible or missing-energy flavor-decay data; profile top-current, gluonic, CKM, form-factor, lifetime, branching, acceptance and background uncertainties; then ask whether the smallest singular value survives. Success separates inherited anomaly response from a direct interaction. Failure after the full covariance closes this route and records exactly which distinction the available detectors erase.",
+    "**Provisional integration note — 25 October 2026.** One term in the published finite weak matching points toward a different record: the flavor-changing down-sector expression contains an explicit contribution proportional to unprimed \\(c_{WW}\\), whereas the weak bosonic record measures \\(c_{WW}-A_2/2\\). Taken by itself, that term gives an independent formal row. It is a candidate mechanism, not yet the coefficient of a complete observable.",
+    "The source-complete MFV expression in the same paper changes the conclusion. After running, matching and basis conversion are assembled, its \\((A_2,c_{WW})\\) dependence is again proportional to \\((-1/2,1)\\). The determinant with the weak row is exactly zero, so the old displacement \\((2,1)\\) remains invisible. Belle and Belle II therefore constrain and cross-check the common EFT direction in this scope; they do not open a sixth coordinate.",
+    "The buildable next experiment starts one level earlier, with a gauge-complete differential W-associated amplitude. Compute every diagram in one convention, verify Ward identities, fold the result through the 27-setting programme and detector response, and ask whether any retained kinematic shape has a non-collinear \\((A_2,c_{WW})\\) derivative. If it does, flavor data become a held-out cross-scale test. If it does not, this process family closes the route rather than merely failing to measure it well.",
   ],
 ]);
 
@@ -772,7 +774,16 @@ admissibilitySections.splice(orientedSeamIndex + 33, 0, [
   [
     "**Provisional integration note — 25 October 2026.** The Belle/Belle II search supplies a real detector record: four exclusive B-decay modes, declared mass windows, 711 inverse femtobarns, an unbinned diphoton-mass fit, lifetime-dependent acceptance and a published one-coupling limit. It establishes where the flavor-changing arm touches experiment. It does not by itself preserve the distinctions needed for a joint \\((A_2,c_{WW})\\) inference.",
     "An exact public recast requires six machine-readable objects: each mode's mass grid and profile likelihood, efficiency versus mass and lifetime, the correlated nuisance model, the background and resolution response, and the map from production and decay parameters to accepted yield. No such complete packet was found on the official publication, paper and HEPData search surfaces inspected on 25 October 2026. This is a public-availability boundary, not a claim that the collaboration lacks the information.",
-    "Digitizing published curves can orient the search but cannot reconstruct an unbinned likelihood or its covariance, so it cannot establish that the small second singular value survives profiling. The practical instruction is two-track: finish and freeze the common-basis forward kernels now; request the six-item release packet or perform the fit with collaboration-level access. A surviving rank would open the sixth coordinate. A collapse would map the detector quotient honestly.",
+    "Digitizing published curves can orient the search but cannot reconstruct an unbinned likelihood or its covariance. The release packet remains valuable for a faithful recast and a cross-scale validation of the common EFT direction, but the source-complete MFV kernel shows that it cannot open the sixth coordinate in this declared scope. That requires a different, complete observable whose \\((A_2,c_{WW})\\) derivative is demonstrably non-collinear before detector profiling begins.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 34, 0, [
+  "Hot off the press — a term is not a detector row",
+  [
+    "**Provisional integration note — 25 October 2026.** This correction separates three objects that can look alike in an equation: an individual matching term, the source-complete coefficient after all contributions are combined, and the detector record after decays, acceptance and nuisance profiling. Independence of the first does not prove independence of the second or third.",
+    "For the published MFV numerical kernel at the stated scale, the flavor row on \\((A_2,c_{WW})\\) is \\(0.019(-0.0057)(-1/2,1)\\). It is a scalar multiple of the weak row \\((-1/2,1)\\); their determinant vanishes and both annihilate \\((2,1)\\). The isolated \\(c_{WW}\\) term remains a correct piece of the matching calculation, but other pieces restore the quotient in the complete expression.",
+    "The implication is constructive. Flavor searches remain real detectors and valuable consistency tests, while the frontier moves to observables that retain more of the amplitude: angular, energy, polarization or interference information in a gauge-complete W-associated calculation. The practical question is no longer whether a named process mentions \\(c_{WW}\\), but whether its complete, measurable shape responds in a direction the existing record erases.",
   ],
 ]);
 
@@ -1035,6 +1046,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — three generations add flavor, not another anomaly": ["corpus/programmes/admissibility/admissibility_78_three_generation_singlet_flavor_split_and_bl_correction.md", "corpus/programmes/admissibility/admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md", "corpus/programmes/lane-expansion/programme_lane_expansion_35_the_gauge_typed_source_quotient_has_one_anomaly_coordinate_and_no_incidence_eigenray.md"],
   "Hot off the press — change the record, not just the energy": ["corpus/programmes/admissibility/admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md", "corpus/programmes/admissibility/admissibility_77_current_only_rg_stability_and_scale_sweep_no_go.md", "corpus/programmes/admissibility/admissibility_78_three_generation_singlet_flavor_split_and_bl_correction.md"],
   "Hot off the press — ask for the likelihood, not the plot": ["corpus/programmes/admissibility/admissibility_80_belle_public_likelihood_release_gate.md", "corpus/programmes/admissibility/admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md", "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md"],
+  "Hot off the press — a term is not a detector row": ["corpus/programmes/admissibility/admissibility_81_source_complete_fcnc_kernel_restores_the_weak_quotient.md", "corpus/programmes/admissibility/admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md"],
 };
 
 const evidenceReading = key => ({

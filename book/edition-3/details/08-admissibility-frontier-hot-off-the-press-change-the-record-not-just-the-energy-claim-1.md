@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> **Provisional integration note — 25 October 2026.** The published finite weak matching contains the missing kind of record. A flavor-changing down-sector coefficient includes an explicit term proportional to the unprimed direct \(c_{WW}\), while the bosonic record measures \(c_{WW}-A_2/2\). The two idealized rows have nonzero determinant and the flavor row breaks the blind shift that survives every energy point of the bosonic record.
+> **Provisional integration note — 25 October 2026.** One term in the published finite weak matching points toward a different record: the flavor-changing down-sector expression contains an explicit contribution proportional to unprimed \(c_{WW}\), whereas the weak bosonic record measures \(c_{WW}-A_2/2\). Taken by itself, that term gives an independent formal row. It is a candidate mechanism, not yet the coefficient of a complete observable.
 
 ## What this commits us to
 

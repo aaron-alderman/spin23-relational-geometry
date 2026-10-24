@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The buildable experiment is a joint likelihood: combine one W-associated high-energy kernel with binned visible or missing-energy flavor-decay data; profile top-current, gluonic, CKM, form-factor, lifetime, branching, acceptance and background uncertainties; then ask whether the smallest singular value survives. Success separates inherited anomaly response from a direct interaction. Failure after the full covariance closes this route and records exactly which distinction the available detectors erase.
+> The buildable next experiment starts one level earlier, with a gauge-complete differential W-associated amplitude. Compute every diagram in one convention, verify Ward identities, fold the result through the 27-setting programme and detector response, and ask whether any retained kinematic shape has a non-collinear \((A_2,c_{WW})\) derivative. If it does, flavor data become a held-out cross-scale test. If it does not, this process family closes the route rather than merely failing to measure it well.
 
 ## What this commits us to
 

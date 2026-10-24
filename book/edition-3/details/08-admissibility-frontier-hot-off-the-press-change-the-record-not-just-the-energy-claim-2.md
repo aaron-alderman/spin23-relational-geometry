@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The exit is physically instrumented: \(B\to K^{(*)}a\) and \(K\to\pi a\) probe the flavor-changing coefficient, and Belle/Belle II have already searched for the diphoton B-decay channel. But the relevant matching coefficient is only about \(-2.65\times10^{-5}\) before CKM and detector folding. Inverting it amplifies error by roughly \(3.8\times10^4\), so a published one-coupling limit is evidence that the detector arm exists, not proof that the two source coordinates are identified.
+> The source-complete MFV expression in the same paper changes the conclusion. After running, matching and basis conversion are assembled, its \((A_2,c_{WW})\) dependence is again proportional to \((-1/2,1)\). The determinant with the weak row is exactly zero, so the old displacement \((2,1)\) remains invisible. Belle and Belle II therefore constrain and cross-check the common EFT direction in this scope; they do not open a sixth coordinate.
 
 ## What this commits us to
 

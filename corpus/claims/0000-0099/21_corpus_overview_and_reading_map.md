@@ -2,7 +2,7 @@
 
 **Repository:** `grand-theory` (the original 525-file import is now one historical layer inside the maintained corpus)
 
-**Current census:** 2,708 narrative/evidence artifacts; 1,618 artifacts containing gate language or an open-like structured status; zero unresolved ownership records at the 25 October 2026 census. See the [generated full-corpus census](../../programmes/frontier-physics-targets/full_corpus_gate_census_v1.md) for machine-derived counts.
+**Current census:** 2,710 narrative/evidence artifacts; 1,617 artifacts containing gate language or an open-like structured status; zero unresolved ownership records at the 25 October 2026 census. See the [generated full-corpus census](../../programmes/frontier-physics-targets/full_corpus_gate_census_v1.md) for machine-derived counts.
 
 **Purpose:** explain what the corpus is, how its divisions relate, and which files should be treated as authoritative, exploratory, executable, rendered, or archival.
 

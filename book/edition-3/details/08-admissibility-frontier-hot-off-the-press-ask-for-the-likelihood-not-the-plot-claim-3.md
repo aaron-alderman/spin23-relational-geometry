@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> Digitizing published curves can orient the search but cannot reconstruct an unbinned likelihood or its covariance, so it cannot establish that the small second singular value survives profiling. The practical instruction is two-track: finish and freeze the common-basis forward kernels now; request the six-item release packet or perform the fit with collaboration-level access. A surviving rank would open the sixth coordinate. A collapse would map the detector quotient honestly.
+> Digitizing published curves can orient the search but cannot reconstruct an unbinned likelihood or its covariance. The release packet remains valuable for a faithful recast and a cross-scale validation of the common EFT direction, but the source-complete MFV kernel shows that it cannot open the sixth coordinate in this declared scope. That requires a different, complete observable whose \((A_2,c_{WW})\) derivative is demonstrably non-collinear before detector profiling begins.
 
 ## What this commits us to
 
@@ -42,4 +42,4 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-ask-for-the-likelihood-not-the-plot) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-ask-for-the-likelihood-not-the-plot-claim-2.md) · [Next claim →](08-admissibility-frontier-kenotic-confidence-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-ask-for-the-likelihood-not-the-plot) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-ask-for-the-likelihood-not-the-plot-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-a-term-is-not-a-detector-row-claim-1.md)

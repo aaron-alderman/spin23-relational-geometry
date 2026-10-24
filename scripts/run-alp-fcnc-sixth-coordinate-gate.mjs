@@ -55,13 +55,14 @@ const result = {
     otherSourceCoordinates: ["c_tt", "k_U", "ctilde_GG", "CKM"],
     detectorAndHadronicCoordinates: ["B-to-K form factors", "ALP decay branching fraction", "lifetime and acceptance", "mass resolution", "background model"],
     publishedLimitScope: "The Belle B->K(*)a(a->gamma gamma) result reports a one-coupling g_aW interpretation. It is evidence that the detector record exists, not a ready-made two-coordinate likelihood.",
-    admissionRule: "Promote the pair to an identified (A_2,c_WW) measurement only after the nuisance-profiled Fisher/Jacobian retains rank two with the full experimental covariance.",
+    admissionRule: "Do not promote the isolated term to an observable row. First assemble the source-complete coefficient; only then test whether its nuisance-profiled Fisher/Jacobian retains rank two with the full experimental covariance.",
+    supersededDetectorInferenceBy: "AZ-081",
   },
   boundary: {
-    closed: "The published finite weak matching supplies a mathematically independent row: its flavor-changing down-sector term is proportional to the unprimed direct c_WW, whereas the weak bosonic record sees c_WW-A_2/2. The two idealized rows have nonzero determinant.",
-    notClosed: "No existing published single-coupling limit performs the required joint fit, and the direct matching coefficient is loop suppressed. Existing B-decay data therefore nominate a realistic detector arm but do not yet resolve the sixth coordinate.",
-    implication: "The scale-sweep no-go has a concrete exit. Add a different process family—flavor-changing B or K decay—not another energy point of the same W-associated coefficient.",
-    nextCalculation: "Construct a joint likelihood using one W-associated high-energy kernel and B->K(*)a bins (visible and/or missing-energy), profile the listed current, CKM, form-factor, decay and detector nuisances, and test the smallest singular value against the preregistered resolution threshold.",
+    closed: "When isolated from the rest of Eq. (60), the explicit finite c_WW matching term supplies a mathematically independent formal row. This is a term-level certificate only.",
+    notClosed: "The source-complete MFV forward expression in Eq. (74) recombines this term with the other contributions into ctilde_WW, restoring a row parallel to (-1/2,1). AZ-081 therefore supersedes any detector-level rank inference from this isolated-term gate.",
+    implication: "The isolated term nominates source completeness as the decisive audit. A different process name is insufficient unless the complete measurable amplitude retains a non-collinear response.",
+    nextCalculation: "Use AZ-081 as the controlling boundary. Construct a gauge-complete differential W-associated amplitude, check Ward identities, then test its detector-folded shape derivatives for a non-collinear (A_2,c_WW) direction; retain B and K decays as held-out validation.",
   },
 };
 
