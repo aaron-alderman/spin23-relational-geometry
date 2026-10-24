@@ -58,7 +58,7 @@ for another dimensionless redesign.
 
 | ID | Topic | Frontier contribution |
 |---|---|---|
-| OT-011 | Magnon-polaron versus skew scattering | resolves a major thermal-Hall detector equivalence |
+| OT-011 | Magnon-polaron versus skew scattering | AZ-064 replaces the non-minimal disorder reading with an activation-order plus moving-crossing protocol; same-specimen source data remain required |
 | OT-012 | YIG three-mode versus four-mode fork | AZ-062 closes the reported three-mode protected-doublet route and makes one calibrated four-mode tripod the active target |
 | OT-013 | Non-Hermitian topology versus active selection | separates coherent geometry from gain/loss attraction |
 | OT-015 | Defect information beyond index | tests what a wall transports beyond mode count |
@@ -148,7 +148,7 @@ The queue exposes eight recurring unknowns that should be reported for every new
 
 - Do not add another abstract selector before OT-002 and OT-003 are instantiated on a carrier.
 - Do not interpret two-current rank before OT-008 closes its low-frequency limits.
-- Do not infer Berry curvature from thermal Hall without OT-011's adversarial bundle.
+- Do not infer Berry curvature from thermal Hall without OT-011's independently measured gap, moving-crossing intervention and joint mixture test; clean-limit persistence does not exclude intrinsic many-body skew scattering.
 - Do not infer a material Casimir bridge before OT-006 and OT-007 close without refitting.
 - Do not promote relation, Leech, Golay, Jordan, (Spin(2,3)) or (E_8) contact without OT-024–OT-027.
 - Do not reopen torsion coefficient selection without the explicit datum in OT-029.

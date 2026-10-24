@@ -272,6 +272,7 @@ const sectionTaxonomy = {
   "Hot off the press — the selector chip has a design wedge": "experiment",
   "Hot off the press — three hybrid modes are one short": "obstruction",
   "Hot off the press — selection is a channel, not a filter": "obstruction",
+  "Hot off the press — make the proposed cause move": "experiment",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -350,6 +351,7 @@ const sectionArchetype = {
   "Hot off the press — the selector chip has a design wedge": "builder",
   "Hot off the press — three hybrid modes are one short": "auditor",
   "Hot off the press — selection is a channel, not a filter": "auditor",
+  "Hot off the press — make the proposed cause move": "builder",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -586,6 +588,15 @@ admissibilitySections.splice(orientedSeamIndex + 16, 0, [
     "**Provisional integration note — 25 October 2026.** The acoustic repeated-return proposal contained a type error. A lossless coherent pressure-transfer matrix preserves projective distance and cannot attract distinct preparations. A fixed passive matrix can attract after normalization, but the contraction is then completely controlled by unequal singular values: it is ordinary attenuation or gain filtering, not an additional selection mechanism.",
     "The exact one-third selector map acts affinely on a density matrix or ensemble covariance. It can be built by indexed acoustic shots: route the returned field with probability one third, inject the independently calibrated Y preparation with probability two thirds, retain the branch labels and reconstruct the covariance. Every traceless covariance perturbation then contracts by exactly one third. Individual coherent shots do not contract; only the ensemble does.",
     "A passive filter adjusted to the same local angular slope has singular-value log ratio log three and transmits the orthogonal input with only one ninth of its power. Unnormalized power plus coherence- and population-direction tomography separates it from affine replacement. Single-trajectory attraction requires declared feedback or a nonlinear reservoir with a work, latency, reset and noise ledger. The acoustic platform remains valuable because it can make the distinction among transport, admitted mixing and discarded information experimentally explicit.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 17, 0, [
+  "Hot off the press — make the proposed cause move",
+  [
+    "**Provisional integration note — 25 October 2026.** Thermal Hall response is an output port, not a mechanism label. Magnon–phonon Berry curvature and intrinsic many-body magnon skew scattering can both produce a field-odd transverse heat current. The earlier spectroscopy, linewidth and disorder bundle was not minimal: the collision mechanism is itself disorder-free, so clean-limit persistence cannot certify band geometry, and linewidth constrains both stories.",
+    "Two sharper coordinates are now specified. First, freeze the relevant one-particle gap from same-specimen spectroscopy and fit the low-temperature occupation order while profiling amplitude and power-law nuisances. A leading hybrid-band term has one-particle activation, whereas the derived collision term has doubled activation. Second, move the phonon crossing with isotope, strain or another lattice-native control, measure the direct magnetic-spectrum shift, and ask whether the Hall feature follows the remaining avoided-crossing motion. Ideal hybrid and collision endpoints occupy approximately (one, one) and (two, zero) in activation-order and crossing-tracking coordinates.",
+    "The useful experiment is therefore not simply a more precise Hall trace. It is a joint, held-out mixture test in which the alleged cause is made to move and its rival is allowed to remain present. Intermediate or unstable coordinates mean mixture, crossover or unresolved detector equivalence—not permission to choose the preferred story. This is where the corpus says to look; no existing material is assigned from the local calculation alone.",
   ],
 ]);
 
@@ -831,6 +842,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the selector chip has a design wedge": ["corpus/programmes/admissibility/admissibility_61_photonic_selector_chip_coupled_mode_preflight.md", "corpus/programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md", "corpus/programmes/admissibility/admissibility_28_platform_triage_for_the_quarter_turn_contraction_experiment.md"],
   "Hot off the press — three hybrid modes are one short": ["corpus/programmes/admissibility/admissibility_62_yig_three_mode_no_go_and_four_mode_tripod_gate.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
   "Hot off the press — selection is a channel, not a filter": ["corpus/programmes/admissibility/admissibility_63_acoustic_selector_channel_type_and_passive_no_go.md", "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
+  "Hot off the press — make the proposed cause move": ["corpus/programmes/admissibility/admissibility_64_thermal_hall_activation_and_moving_crossing_discriminator.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md", "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md"],
 };
 
 const evidenceReading = key => ({

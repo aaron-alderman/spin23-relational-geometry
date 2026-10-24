@@ -1,0 +1,271 @@
+{
+  "protocol": "admissibility-thermal-hall-discriminator/1",
+  "date": "2026-10-25",
+  "target": "OT-011",
+  "headlineCollision": "A field-odd or sign-changing thermal Hall trace can be produced by hybrid-band Berry curvature or intrinsic many-body skew scattering.",
+  "correctedBoundary": {
+    "disorder": "Controlled disorder remains necessary to exclude extrinsic side-jump and impurity-skew backgrounds, but it does not separate the two named mechanisms because the many-body skew mechanism is itself disorder-free.",
+    "linewidth": "Linewidth is a shared constraint and consistency check, not a unique mechanism label.",
+    "signChange": "A sign change is not a unique tag of hybrid-band geometry."
+  },
+  "activationAudit": {
+    "model": "log|kappa_xy| = a + p log(T) - n Delta_spec/T, with a and p profiled and Delta_spec measured independently",
+    "hybridBandExpectation": "n approximately 1 for a leading one-quasiparticle Berry-curvature contribution",
+    "manyBodySkewExpectation": "n approximately 2 in the low-temperature asymptotic derived for the magnon collision mechanism",
+    "gapCalibrationRule": "A fractional bias in Delta_spec produces the inverse fractional bias in fitted n; the spectroscopic gap and its covariance must therefore enter the joint fit.",
+    "fits": [
+      {
+        "window": "deep",
+        "truth": "hybridBand",
+        "temperaturesOverGap": [
+          0.08,
+          0.09,
+          0.1,
+          0.11,
+          0.12,
+          0.13,
+          0.14,
+          0.15,
+          0.15999999999999998,
+          0.16999999999999998,
+          0.18,
+          0.19,
+          0.2,
+          0.21000000000000002,
+          0.21999999999999997,
+          0.22999999999999998,
+          0.24,
+          0.25
+        ],
+        "fitWithSpectroscopicGap": {
+          "offset": 0.20000000000128182,
+          "power": -0.9999999999986295,
+          "activationOrder": 0.9999999999998143,
+          "activationOrderStandardErrorAtTwoPercentLogNoise": 0.012267953116531618,
+          "rmsLogResidual": 7.305998615363412e-14
+        },
+        "boundary": "The fitted order is meaningful only when the relevant single-particle gap is measured independently and the low-temperature asymptotic regime is established."
+      },
+      {
+        "window": "deep",
+        "truth": "manyBodySkew",
+        "temperaturesOverGap": [
+          0.08,
+          0.09,
+          0.1,
+          0.11,
+          0.12,
+          0.13,
+          0.14,
+          0.15,
+          0.15999999999999998,
+          0.16999999999999998,
+          0.18,
+          0.19,
+          0.2,
+          0.21000000000000002,
+          0.21999999999999997,
+          0.22999999999999998,
+          0.24,
+          0.25
+        ],
+        "fitWithSpectroscopicGap": {
+          "offset": -0.09999999999950049,
+          "power": -1.9999999999994866,
+          "activationOrder": 1.9999999999999334,
+          "activationOrderStandardErrorAtTwoPercentLogNoise": 0.012267953116531618,
+          "rmsLogResidual": 2.877874735408703e-14
+        },
+        "boundary": "The fitted order is meaningful only when the relevant single-particle gap is measured independently and the low-temperature asymptotic regime is established."
+      },
+      {
+        "window": "middle",
+        "truth": "hybridBand",
+        "temperaturesOverGap": [
+          0.15,
+          0.16470588235294117,
+          0.17941176470588235,
+          0.19411764705882353,
+          0.20882352941176469,
+          0.22352941176470587,
+          0.23823529411764705,
+          0.2529411764705882,
+          0.2676470588235294,
+          0.2823529411764706,
+          0.29705882352941176,
+          0.31176470588235294,
+          0.3264705882352941,
+          0.3411764705882353,
+          0.3558823529411764,
+          0.37058823529411766,
+          0.3852941176470588,
+          0.4
+        ],
+        "fitWithSpectroscopicGap": {
+          "offset": 0.20000000000016716,
+          "power": -0.9999999999995324,
+          "activationOrder": 0.9999999999998851,
+          "activationOrderStandardErrorAtTwoPercentLogNoise": 0.028759608748096032,
+          "rmsLogResidual": 1.8800067945180345e-14
+        },
+        "boundary": "The fitted order is meaningful only when the relevant single-particle gap is measured independently and the low-temperature asymptotic regime is established."
+      },
+      {
+        "window": "middle",
+        "truth": "manyBodySkew",
+        "temperaturesOverGap": [
+          0.15,
+          0.16470588235294117,
+          0.17941176470588235,
+          0.19411764705882353,
+          0.20882352941176469,
+          0.22352941176470587,
+          0.23823529411764705,
+          0.2529411764705882,
+          0.2676470588235294,
+          0.2823529411764706,
+          0.29705882352941176,
+          0.31176470588235294,
+          0.3264705882352941,
+          0.3411764705882353,
+          0.3558823529411764,
+          0.37058823529411766,
+          0.3852941176470588,
+          0.4
+        ],
+        "fitWithSpectroscopicGap": {
+          "offset": -0.10000000000011511,
+          "power": -2.0000000000003215,
+          "activationOrder": 2.000000000000079,
+          "activationOrderStandardErrorAtTwoPercentLogNoise": 0.028759608748096032,
+          "rmsLogResidual": 1.2940542490022687e-14
+        },
+        "boundary": "The fitted order is meaningful only when the relevant single-particle gap is measured independently and the low-temperature asymptotic regime is established."
+      },
+      {
+        "window": "narrow",
+        "truth": "hybridBand",
+        "temperaturesOverGap": [
+          0.2,
+          0.2090909090909091,
+          0.2181818181818182,
+          0.2272727272727273,
+          0.23636363636363636,
+          0.24545454545454545,
+          0.2545454545454545,
+          0.2636363636363636,
+          0.2727272727272727,
+          0.2818181818181818,
+          0.2909090909090909,
+          0.3
+        ],
+        "fitWithSpectroscopicGap": {
+          "offset": 0.20000000000600338,
+          "power": -0.9999999999850813,
+          "activationOrder": 0.9999999999963596,
+          "activationOrderStandardErrorAtTwoPercentLogNoise": 0.19685331987653265,
+          "rmsLogResidual": 1.0694707957769234e-13
+        },
+        "boundary": "The fitted order is meaningful only when the relevant single-particle gap is measured independently and the low-temperature asymptotic regime is established."
+      },
+      {
+        "window": "narrow",
+        "truth": "manyBodySkew",
+        "temperaturesOverGap": [
+          0.2,
+          0.2090909090909091,
+          0.2181818181818182,
+          0.2272727272727273,
+          0.23636363636363636,
+          0.24545454545454545,
+          0.2545454545454545,
+          0.2636363636363636,
+          0.2727272727272727,
+          0.2818181818181818,
+          0.2909090909090909,
+          0.3
+        ],
+        "fitWithSpectroscopicGap": {
+          "offset": -0.09999999998443077,
+          "power": -1.999999999961065,
+          "activationOrder": 1.9999999999904754,
+          "activationOrderStandardErrorAtTwoPercentLogNoise": 0.19685331987653265,
+          "rmsLogResidual": 2.7936329399003047e-13
+        },
+        "boundary": "The fitted order is meaningful only when the relevant single-particle gap is measured independently and the low-temperature asymptotic regime is established."
+      }
+    ]
+  },
+  "movingCrossingAudit": {
+    "intervention": "Tune a phonon frequency by isotope, strain or another lattice-native control while measuring the magnon and phonon spectra on the same specimen.",
+    "residualCoordinate": "Remove the measured direct magnon shift, then compare the Hall-feature shift with the measured avoided-crossing shift.",
+    "rows": [
+      {
+        "control": -1,
+        "magnonShift": -0.08,
+        "phononShift": -0.5,
+        "crossingShift": -0.42,
+        "hybridHallFeatureShift": -0.42,
+        "skewHallFeatureShift": 0
+      },
+      {
+        "control": 0,
+        "magnonShift": 0,
+        "phononShift": 0,
+        "crossingShift": 0,
+        "hybridHallFeatureShift": 0,
+        "skewHallFeatureShift": 0
+      },
+      {
+        "control": 1,
+        "magnonShift": 0.08,
+        "phononShift": 0.5,
+        "crossingShift": 0.42,
+        "hybridHallFeatureShift": 0.42,
+        "skewHallFeatureShift": 0
+      }
+    ],
+    "trackingRatios": {
+      "hybridBand": 1,
+      "manyBodySkew": 0
+    },
+    "interpretation": "A hybrid-band contribution should track the moving anticrossing; a pure magnon-skew contribution has no necessary phonon-locking. Mixed mechanisms give an intermediate, temperature-dependent ratio."
+  },
+  "minimumExecutableBundle": [
+    "same-specimen field- and temperature-resolved kappa_xx and kappa_xy",
+    "same-specimen magnon and phonon spectroscopy resolving the relevant gap and avoided crossing",
+    "a low-temperature activation fit with the spectroscopic gap frozen rather than inferred from Hall data",
+    "a lattice-native phonon-moving intervention with the magnetic-spectrum shift retained as a nuisance control",
+    "linewidth, geometry, contact, magnetization, domain and disorder records",
+    "a held-out temperature or intervention setting and a joint mixture fit allowing both mechanisms"
+  ],
+  "decision": {
+    "hybridSupported": "activation order near one and nuisance-corrected Hall-feature tracking ratio near one",
+    "skewSupported": "activation order near two and tracking ratio near zero, with collision phase space and linewidth jointly consistent",
+    "mixtureOrUnresolved": "intermediate or temperature-dependent coordinates, or either coordinate unstable to the declared nuisance model",
+    "killTest": "If both mechanisms remain freely refittable after the independently measured gap and moving-crossing intervention, report the detector-equivalence class rather than assigning geometry."
+  },
+  "sources": [
+    {
+      "title": "Magnon-Polaron Driven Thermal Hall Effect in a Heisenberg-Kitaev Antiferromagnet",
+      "url": "https://arxiv.org/abs/2201.11396",
+      "role": "hybrid-band Berry-curvature mechanism and Na2Co2TeO6 thermal Hall data"
+    },
+    {
+      "title": "Thermal Hall Effect of Magnons from Many-Body Skew Scattering",
+      "url": "https://arxiv.org/abs/2407.00423",
+      "role": "disorder-free collision mechanism and doubled low-temperature activation asymptotic"
+    },
+    {
+      "title": "Direct observation of topological magnon polarons in a multiferroic material",
+      "url": "https://www.nature.com/articles/s41467-023-41791-9",
+      "role": "spectroscopic precedent for resolving hybridization and band inversion"
+    }
+  ],
+  "verdict": {
+    "oldBundle": "corrected_not_minimal",
+    "minimumDiscriminator": "activation_order_plus_moving_crossing",
+    "status": "protocol_specified_source_native_data_required",
+    "physicalFirewall": "The calculation identifies a separating measurement coordinate; it does not assign either mechanism to an existing material without same-specimen data."
+  }
+}

@@ -388,6 +388,25 @@ A passive filter adjusted to the same local angular slope has singular-value log
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-selection-is-a-channel-not-a-filter-claim-3.md)
 
+<a id="hot-off-the-press-make-the-proposed-cause-move"></a>
+## Hot off the press — make the proposed cause move
+
+> **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** Thermal Hall response is an output port, not a mechanism label. Magnon–phonon Berry curvature and intrinsic many-body magnon skew scattering can both produce a field-odd transverse heat current. The earlier spectroscopy, linewidth and disorder bundle was not minimal: the collision mechanism is itself disorder-free, so clean-limit persistence cannot certify band geometry, and linewidth constrains both stories.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-1.md)
+
+Two sharper coordinates are now specified. First, freeze the relevant one-particle gap from same-specimen spectroscopy and fit the low-temperature occupation order while profiling amplitude and power-law nuisances. A leading hybrid-band term has one-particle activation, whereas the derived collision term has doubled activation. Second, move the phonon crossing with isotope, strain or another lattice-native control, measure the direct magnetic-spectrum shift, and ask whether the Hall feature follows the remaining avoided-crossing motion. Ideal hybrid and collision endpoints occupy approximately (one, one) and (two, zero) in activation-order and crossing-tracking coordinates.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-2.md)
+
+The useful experiment is therefore not simply a more precise Hall trace. It is a joint, held-out mixture test in which the alleged cause is made to move and its rival is allowed to remain present. Intermediate or unstable coordinates mean mixture, crossover or unresolved detector equivalence—not permission to choose the preferred story. This is where the corpus says to look; no existing material is assigned from the local calculation alone.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
