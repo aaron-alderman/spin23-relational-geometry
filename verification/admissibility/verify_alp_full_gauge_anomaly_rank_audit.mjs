@@ -1,0 +1,20 @@
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+const evidence = JSON.parse(readFileSync(resolve("evidence/data/alp-full-gauge-anomaly-rank-audit-v1.json"), "utf8"));
+assert.equal(evidence.schema, "admissibility.alp-full-gauge-anomaly-rank-audit/1");
+assert.equal(evidence.physicalMapRank, 7);
+assert.deepEqual(evidence.globalNull, [0, 0, 0, 0, 2, 0, 1, -1]);
+assert.ok(evidence.globalNullImage.every(value => Math.abs(value) < 1e-12));
+assert.equal(evidence.scenarios.weakOnly.rank, 1);
+assert.equal(evidence.scenarios.weakAndHyperchargeWithCbbFixed.rank, 2);
+assert.equal(evidence.scenarios.weakAndHyperchargeWithCbbFixed.determinant, -0.5);
+assert.equal(evidence.scenarios.weakAndHyperchargeWithCbbFixed.identifiable, true);
+assert.equal(evidence.scenarios.weakAndHyperchargeGeneral.rank, 2);
+assert.deepEqual(evidence.scenarios.weakAndHyperchargeGeneral.null, [2, 1, -1]);
+assert.ok(evidence.scenarios.weakAndHyperchargeGeneral.nullImage.every(value => Math.abs(value) < 1e-12));
+assert.equal(evidence.decisions.generalDirectBosonicExtensionAddsPhysicalCoordinatesToFiveCurrentQuotient, 2);
+assert.equal(evidence.decisions.allThreeOfA2CwwCbbSeparatelyObservableAtDimensionFive, false);
+assert.equal(evidence.decisions.newPhysicsEvidence, false);
+console.log("verified full ALP gauge-anomaly rank audit");

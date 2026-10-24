@@ -1,0 +1,183 @@
+{
+  "schema": "admissibility.alp-full-gauge-anomaly-rank-audit/1",
+  "date": "2026-10-25",
+  "sourceCoordinates": [
+    "c_t",
+    "c_b",
+    "c_e",
+    "c_nu",
+    "A_2",
+    "c_GG",
+    "c_WW",
+    "c_BB"
+  ],
+  "physicalCoordinates": [
+    "c_t",
+    "c_b",
+    "c_e",
+    "c_nu",
+    "ctilde_GG",
+    "ctilde_WW",
+    "ctilde_BB"
+  ],
+  "identities": {
+    "ctilde_GG": "c_GG + (c_t + c_b)/2",
+    "ctilde_WW": "c_WW - A_2/2",
+    "ctilde_BB": "c_BB + A_2/2 + 4*c_t/3 + c_b/3 + c_e"
+  },
+  "physicalMap": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0.5,
+      0.5,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      -0.5,
+      0,
+      1,
+      0
+    ],
+    [
+      1.3333333333333333,
+      0.3333333333333333,
+      1,
+      0,
+      0.5,
+      0,
+      0,
+      1
+    ]
+  ],
+  "physicalMapRank": 7,
+  "globalNull": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    1,
+    -1
+  ],
+  "globalNullImage": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "scenarios": {
+    "weakOnly": {
+      "matrix": [
+        [
+          -0.5,
+          1
+        ]
+      ],
+      "rank": 1,
+      "identifiable": false
+    },
+    "weakAndHyperchargeWithCbbFixed": {
+      "matrix": [
+        [
+          -0.5,
+          1
+        ],
+        [
+          0.5,
+          0
+        ]
+      ],
+      "rank": 2,
+      "determinant": -0.5,
+      "identifiable": true
+    },
+    "weakAndHyperchargeGeneral": {
+      "matrix": [
+        [
+          -0.5,
+          1,
+          0
+        ],
+        [
+          0.5,
+          0,
+          1
+        ]
+      ],
+      "rank": 2,
+      "null": [
+        2,
+        1,
+        -1
+      ],
+      "nullImage": [
+        0,
+        0
+      ],
+      "identifiable": false
+    }
+  },
+  "decisions": {
+    "fullDimensionFivePhysicalRank": 7,
+    "naiveCoordinateCount": 8,
+    "generalDirectBosonicExtensionAddsPhysicalCoordinatesToFiveCurrentQuotient": 2,
+    "cbbFixedSecondGaugeRecordCanSeparateA2AndCww": true,
+    "allThreeOfA2CwwCbbSeparatelyObservableAtDimensionFive": false,
+    "gluonRecordLiftsElectroweakRedistributionNull": false,
+    "amplitudeComputed": false,
+    "newPhysicsEvidence": false
+  },
+  "scope": "One diagonal generation plus a hypercharge-neutral right-handed-neutrino difference. The identities are the one-generation reduction of Bauer et al. Eq. (11). Flavor matrices, running, threshold matching, higher-dimensional operators and new states are outside this algebraic rank audit."
+}

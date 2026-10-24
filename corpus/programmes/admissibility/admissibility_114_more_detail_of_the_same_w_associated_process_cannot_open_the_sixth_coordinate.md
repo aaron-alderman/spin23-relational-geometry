@@ -14,6 +14,8 @@
 
 **Verifier:** [null-direction certificate](../../../verification/admissibility/verify_alp_w_associated_shape_no_go.mjs)
 
+**Continuation:** [AZ-115](admissibility_115_the_full_gauge_dictionary_turns_the_sixth_coordinate_into_a_declared_slice.md) closes the full three-gauge coefficient count and replaces the broad “current-sensitive record” instruction with a conditional weak-plus-hypercharge detector or the seven-coordinate basis-invariant fit.
+
 ## Result
 
 The proposed differential-shape escape route closes before an event generator is run. In the complete dimension-five ALP dictionary, the W-associated amplitude coordinates are

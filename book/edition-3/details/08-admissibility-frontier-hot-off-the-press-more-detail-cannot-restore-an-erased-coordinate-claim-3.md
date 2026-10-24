@@ -42,4 +42,4 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice-claim-1.md)

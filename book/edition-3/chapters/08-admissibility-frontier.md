@@ -979,6 +979,25 @@ The result redirects rather than ends the experiment. An independent top, bottom
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate-claim-3.md)
 
+<a id="hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice"></a>
+## Hot off the press — the missing coordinate depends on the declared slice
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
+
+**Provisional integration note — 25 October 2026.** Restoring the full gauge dictionary changes the coordinate count. The five current coordinates plus the three direct gauge labels do not give eight independently observable dimension-five directions. They map to seven physical coefficients and forget the exact redistribution \(\Delta A_2,\Delta c_{WW},\Delta c_{BB}\) = \(2,1,-1\). The missing direction is a change of representation, not a hidden detector target.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice-claim-1.md)
+
+A second gauge record can still do useful work on a declared slice. If \(c_{BB}=0\), the weak row \((-1/2,1)\) and the hypercharge row \((1/2,0)\) have nonzero determinant on \(A_2,c_{WW}\). A neutral-gauge measurement can then separate them after the measured fermion differences are removed. If \(c_{BB}\) is free, the two records retain the full \(2,1,-1\) null and no dimension-five experiment can assign all three origin labels separately.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice-claim-2.md)
+
+The look-here instruction is therefore conditional and buildable: finish the charged top–bottom–weak amplitude triangle; then choose an ALP mass window, declare the direct-operator slice and calculate a complete neutral-gauge likelihood through electroweak rotation, decays, acceptance and nuisance profiling. The unrestricted theory should instead be fit in seven basis-invariant coordinates. A residual becomes a new-physics lead only if it requires a direction outside that physical map.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice-claim-3.md)
+
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
 ## Hot off the press — the hydrodynamic cone has poles
 
