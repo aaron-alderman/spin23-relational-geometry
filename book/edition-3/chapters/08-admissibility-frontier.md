@@ -369,6 +369,25 @@ The positive target is now structurally definite: one central mode coupled to th
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-3.md)
 
+<a id="hot-off-the-press-selection-is-a-channel-not-a-filter"></a>
+## Hot off the press — selection is a channel, not a filter
+
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The acoustic repeated-return proposal contained a type error. A lossless coherent pressure-transfer matrix preserves projective distance and cannot attract distinct preparations. A fixed passive matrix can attract after normalization, but the contraction is then completely controlled by unequal singular values: it is ordinary attenuation or gain filtering, not an additional selection mechanism.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-selection-is-a-channel-not-a-filter-claim-1.md)
+
+The exact one-third selector map acts affinely on a density matrix or ensemble covariance. It can be built by indexed acoustic shots: route the returned field with probability one third, inject the independently calibrated Y preparation with probability two thirds, retain the branch labels and reconstruct the covariance. Every traceless covariance perturbation then contracts by exactly one third. Individual coherent shots do not contract; only the ensemble does.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-selection-is-a-channel-not-a-filter-claim-2.md)
+
+A passive filter adjusted to the same local angular slope has singular-value log ratio log three and transmits the orthogonal input with only one ninth of its power. Unnormalized power plus coherence- and population-direction tomography separates it from affine replacement. Single-trajectory attraction requires declared feedback or a nonlinear reservoir with a work, latency, reset and noise ledger. The acoustic platform remains valuable because it can make the distinction among transport, admitted mixing and discarded information experimentally explicit.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-selection-is-a-channel-not-a-filter-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

@@ -1,0 +1,186 @@
+{
+  "protocol": "admissibility-acoustic-selector-channel/1",
+  "date": "2026-10-25",
+  "exactClaims": {
+    "unitaryNoGo": "For a fixed lossless coherent transfer U, trace distance and projective angle are preserved; repeated U cannot create an attracting selector fixed point.",
+    "passiveLinearNoGo": "For a fixed passive transfer M, any generic projective attraction is controlled by unequal singular/eigenvalue magnitudes and is therefore ordinary filtering, loss or gain selection.",
+    "affineType": "R(rho;Y)=m rho+(1-m)Y Tr(rho) is a linear trace-preserving replacement channel on density/covariance matrices, not a linear map on coherent pressure vectors."
+  },
+  "parameters": {
+    "tangentSlope": 0.3333333333333333,
+    "selectorProjector": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "matchedPassiveFilterSingularValues": [
+      1,
+      0.3333333333333333
+    ],
+    "matchedPassiveFilterLogSingularValueRatio": 1.0986122886681096,
+    "orthogonalInputPowerTransmission": 0.1111111111111111
+  },
+  "localComparison": [
+    {
+      "thetaRadians": 0.001,
+      "inputTraceDistance": 0.0009999998333333415,
+      "neutralUnitaryDistanceRatio": 1,
+      "affineReplacementDistanceRatio": 0.3333333333333333,
+      "passiveFilterDistanceRatio": 0.3333334814815309,
+      "affineOutput": [
+        [
+          0.9999996666667779,
+          0.00033333311111115554
+        ],
+        [
+          0.00033333311111115554,
+          3.33333222222237e-7
+        ]
+      ],
+      "passiveFilterOutput": [
+        [
+          0.9999998888888271,
+          0.0003333334074074189
+        ],
+        [
+          0.0003333334074074189,
+          1.1111117283953304e-7
+        ]
+      ]
+    },
+    {
+      "thetaRadians": 0.003,
+      "inputTraceDistance": 0.0029999955000020256,
+      "neutralUnitaryDistanceRatio": 1,
+      "affineReplacementDistanceRatio": 0.33333333333333326,
+      "passiveFilterDistanceRatio": 0.3333346666706667,
+      "affineOutput": [
+        [
+          0.999997000009,
+          0.0009999940000108
+        ],
+        [
+          0.0009999940000108,
+          0.0000029999910000108
+        ]
+      ],
+      "passiveFilterOutput": [
+        [
+          0.999998999995,
+          0.0010000020000028001
+        ],
+        [
+          0.0010000020000028001,
+          0.0000010000050000196
+        ]
+      ]
+    },
+    {
+      "thetaRadians": 0.01,
+      "inputTraceDistance": 0.009999833334166666,
+      "neutralUnitaryDistanceRatio": 1,
+      "affineReplacementDistanceRatio": 0.33333333333333326,
+      "passiveFilterDistanceRatio": 0.33334814864198914,
+      "affineOutput": [
+        [
+          0.999966667777763,
+          0.0033331111155555132
+        ],
+        [
+          0.0033331111155555132,
+          0.00003333222223703693
+        ]
+      ],
+      "passiveFilterOutput": [
+        [
+          0.9999888882715781,
+          0.003333407408559643
+        ],
+        [
+          0.003333407408559643,
+          0.000011111728421948838
+        ]
+      ]
+    },
+    {
+      "thetaRadians": 0.03,
+      "inputTraceDistance": 0.02999550020249566,
+      "neutralUnitaryDistanceRatio": 1,
+      "affineReplacementDistanceRatio": 0.3333333333333333,
+      "passiveFilterDistanceRatio": 0.333466706676802,
+      "affineOutput": [
+        [
+          0.9997000899892008,
+          0.009994001079907434
+        ],
+        [
+          0.009994001079907434,
+          0.0002999100107993057
+        ]
+      ],
+      "passiveFilterOutput": [
+        [
+          0.9998999499803937,
+          0.010002000279939357
+        ],
+        [
+          0.010002000279939357,
+          0.00010005001960633018
+        ]
+      ]
+    }
+  ],
+  "implementation": {
+    "ensembleChannel": {
+      "protocol": "On each independently indexed shot or time slot, route the loop-returned field with probability m and inject the independently calibrated Y preparation with probability 1-m; tomograph the ensemble covariance after preserving branch labels for audit.",
+      "realizes": "the exact affine replacement channel",
+      "limitation": "individual coherent shots do not contract; only the ensemble covariance does"
+    },
+    "singleTrajectoryOption": {
+      "protocol": "measure the state, compute the declared update, and actively synthesize the next input, or couple to a separately characterized nonlinear reservoir",
+      "requiredLedger": [
+        "measurement noise",
+        "feedback latency",
+        "control work",
+        "amplifier noise",
+        "reset cost",
+        "branch record"
+      ],
+      "limitation": "this is an engineered feedback dynamics and must not be described as spontaneous selection"
+    }
+  },
+  "discriminator": {
+    "records": [
+      "complex pressure vector on every shot",
+      "shot/time-slot branch label",
+      "unnormalized transmitted power",
+      "2x2 ensemble covariance",
+      "singular values of every deterministic block",
+      "coherence and population perturbations about Y"
+    ],
+    "decision": "Affine replacement scales every traceless covariance perturbation by m. A matched passive filter has log singular-value ratio ln(3), transmits the orthogonal input with power 1/9, and scales coherence and population anisotropically. Loss-matched tomography separates them."
+  },
+  "sourcePrecedents": [
+    {
+      "role": "order-sensitive acoustic transport",
+      "url": "https://arxiv.org/abs/2110.08789",
+      "boundary": "Z3 pump cycles cross band degeneracies and do not implement repeated affine selection"
+    },
+    {
+      "role": "discrete quaternionic acoustic phase composition",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.132.216602",
+      "boundary": "endpoint phase classes do not supply selector dynamics"
+    }
+  ],
+  "verdict": {
+    "passiveLoopPlusSelector": "closed_as_a_distinct_nonloss_selection_test",
+    "ensembleReplacementEmulator": "exact_and_buildable",
+    "singleTrajectorySelection": "active_feedback_or_nonlinear_reservoir_required",
+    "physicalFirewall": "The emulator tests typing and detector discipline; it does not evidence spontaneous symmetry breaking or new physics."
+  }
+}

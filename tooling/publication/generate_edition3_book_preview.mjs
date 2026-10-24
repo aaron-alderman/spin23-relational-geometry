@@ -271,6 +271,7 @@ const sectionTaxonomy = {
   "Hot off the press — the Lean fold now has a finite provenance gate": "governance",
   "Hot off the press — the selector chip has a design wedge": "experiment",
   "Hot off the press — three hybrid modes are one short": "obstruction",
+  "Hot off the press — selection is a channel, not a filter": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -348,6 +349,7 @@ const sectionArchetype = {
   "Hot off the press — the Lean fold now has a finite provenance gate": "auditor",
   "Hot off the press — the selector chip has a design wedge": "builder",
   "Hot off the press — three hybrid modes are one short": "auditor",
+  "Hot off the press — selection is a channel, not a filter": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -575,6 +577,15 @@ admissibilitySections.splice(orientedSeamIndex + 15, 0, [
     "**Provisional integration note — 25 October 2026.** The reported YIG photon–magnon–phonon device is a genuine triple-strong-coupling system, but its rotating-frame matrix is an irreducible three-node chain. With both couplings nonzero that Jacobi matrix has simple eigenvalues and only one dark direction. Three hybrid species are therefore not the same object as one bright direction plus a protected two-dimensional dark space.",
     "The strongest near-doublet reading also fails the present reference budget. Using the 13.26 MHz resonant polariton separation as the remote gap, the three reported polaromechanical pair splittings exceed the AZ-027 relative-splitting limit by factors 1.92, 3.38 and 16.12; the weakest pair is not resolved from its reported polariton linewidth. Reducing the pump coupling does not manufacture the missing protected plane or its three-component control loop.",
     "The positive target is now structurally definite: one central mode coupled to three independently controlled outer modes has spectrum plus/minus the coupling norm and a two-dimensional zero eigenspace. A second cavity mode, mechanical sideband or magnon mode could supply the missing outer partner, but no such tripod, closed loop, dark-space tomography or independent selector is present in the reported experiment. This selects the next architecture; it does not infer new physics from hybridization.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 16, 0, [
+  "Hot off the press — selection is a channel, not a filter",
+  [
+    "**Provisional integration note — 25 October 2026.** The acoustic repeated-return proposal contained a type error. A lossless coherent pressure-transfer matrix preserves projective distance and cannot attract distinct preparations. A fixed passive matrix can attract after normalization, but the contraction is then completely controlled by unequal singular values: it is ordinary attenuation or gain filtering, not an additional selection mechanism.",
+    "The exact one-third selector map acts affinely on a density matrix or ensemble covariance. It can be built by indexed acoustic shots: route the returned field with probability one third, inject the independently calibrated Y preparation with probability two thirds, retain the branch labels and reconstruct the covariance. Every traceless covariance perturbation then contracts by exactly one third. Individual coherent shots do not contract; only the ensemble does.",
+    "A passive filter adjusted to the same local angular slope has singular-value log ratio log three and transmits the orthogonal input with only one ninth of its power. Unnormalized power plus coherence- and population-direction tomography separates it from affine replacement. Single-trajectory attraction requires declared feedback or a nonlinear reservoir with a work, latency, reset and noise ledger. The acoustic platform remains valuable because it can make the distinction among transport, admitted mixing and discarded information experimentally explicit.",
   ],
 ]);
 
@@ -819,6 +830,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the Lean fold now has a finite provenance gate": ["corpus/programmes/admissibility/admissibility_60_monster_lean_fold_provenance_and_reproduction_gate.md", "corpus/programmes/frontier/wave-7/frontier_wave7_30_kernel_closure_and_expression_tree_reachability_sieve.md", "corpus/programmes/frontier/wave-7/frontier_wave7_35_adaptive_depth_census_and_detector_cost_curve.md"],
   "Hot off the press — the selector chip has a design wedge": ["corpus/programmes/admissibility/admissibility_61_photonic_selector_chip_coupled_mode_preflight.md", "corpus/programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md", "corpus/programmes/admissibility/admissibility_28_platform_triage_for_the_quarter_turn_contraction_experiment.md"],
   "Hot off the press — three hybrid modes are one short": ["corpus/programmes/admissibility/admissibility_62_yig_three_mode_no_go_and_four_mode_tripod_gate.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
+  "Hot off the press — selection is a channel, not a filter": ["corpus/programmes/admissibility/admissibility_63_acoustic_selector_channel_type_and_passive_no_go.md", "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
 };
 
 const evidenceReading = key => ({

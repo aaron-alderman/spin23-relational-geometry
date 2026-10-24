@@ -27,7 +27,7 @@ An open topic stays on this list until one of four things happens:
 | OT-004 | Conditioned versus unconditional selector | reconstruct the full instrument without discarding outcomes |
 | OT-005 | Selector thermodynamic ledger | compare three selector classes at matched contraction |
 | OT-006 | Same-film causal tensor closure | measure the complex diagonal and Hall tensor on one batch/specimen from DC through at least 0.1–1 eV, with covariance, before force fitting |
-| OT-009 | Acoustic repeated-return selector | simulate and fabricate modular loop-plus-selector blocks |
+| OT-009 | Acoustic repeated-return selector | AZ-063 closes the passive nonloss reading and specifies an exact indexed-shot covariance channel; single-trajectory attraction requires declared feedback or a nonlinear reservoir |
 | OT-010 | Four-mode quotient-scar platform | build AZ-059's frozen 100 MHz bench and run the blind exact/weak/resolved/reversal schedule |
 | OT-035 | Frontier-register maintenance | synchronize status, dependencies and closure evidence after every packet |
 
