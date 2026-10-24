@@ -96,7 +96,7 @@ The exact result is narrower and more useful than a group-name correspondence. M
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-2.md)
 
-Those obstructions identify the detector. A phase-blind positive response sees the complex sewing parameter only through its magnitude; an isolated two-mode coupling phase can be removed by a basis change. The smallest intrinsic carrier is therefore a three-mode loop: its resonance spectrum identifies opposite loop orientations, while coherent directional transfer distinguishes them. This is now a realistic controlled experiment and an engineering result; it becomes a new-physics test only when a modular or Monster calculation predicts the loop record without fitting it to the device.
+Those obstructions now assign two detectors rather than one. The binary Igusa character embeds only as loop holonomy zero or pi; both values are reciprocal and make the three-mode directional odd channel vanish. Its sign belongs in a referenced two-quadrature interferometer, while the three-mode ring tests a genuinely continuous intrinsic phase. The engineering protocols are ready, but a frontier claim now requires either a no-refit referenced amplitude or a source-derived fermionic multiplier phase beyond the binary character.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-3.md)
 
@@ -120,6 +120,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [monster-fermionization-bridge.md](../../../corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - [period-matrix-jordan-boundary-gate.md](../../../corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md)
 - [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
+- [modular-sign-detector-reassignment.md](../../../corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md)
 
 ---
 

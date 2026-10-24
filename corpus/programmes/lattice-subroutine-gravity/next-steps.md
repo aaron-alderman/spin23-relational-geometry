@@ -24,7 +24,8 @@ The characteristic-orbit and separating-order parts are now complete in the [sea
 3. Compute the genus-two spin-structure vector of the now-identified Monster \(2A\) fermionization (Majorana--Weyl times Baby Monster), lift the established finite determinant sign to the analytic \(\chi_5\) line, and construct or rule out a junction to the distinct \(2B\)/Leech Rule-60 seam. Do not substitute the additive bosonization sum for this determinant calculation.
 4. If the analytic line closes, construct a derived physical response map taking the separating divisor to the response-root rank-one boundary \(\det\Psi=0\). The canonical map \(Q=\operatorname{Im}\Omega\) has now failed this test: separation leaves \(Q\) positive definite. Shared sign parity without a different zero-locus/transport map does not identify the modular and response Pfaffian lines.
 5. Implement the response map as a two-quadrature coherent observable, or derive the physical phase reference selecting one real seam normal. A power-only scalar necessarily measures the squared, orientation-blind seam.
-4. Test factorization, positivity and whether the seam produces a distinct correlation/sewing observable.
+6. Keep the binary character and continuous loop phase distinct. The \(\chi_5\) sign maps to \(0/\pi\) holonomy, where the three-mode directional odd channel vanishes; use referenced interference for the sign unless the full sewn multiplier supplies a canonically transportable phase beyond \(\mathbb Z_2\).
+7. Test factorization, positivity and whether the seam produces a distinct correlation/sewing observable.
 
 **Success:** either a modularly consistent ten-sector completion or a precisely marked subgroup defect with a new computable invariant.  
 **Failure:** the orientation bit cannot be included without breaking factorization, positivity or the declared subgroup/full-group covariance.  
@@ -132,6 +133,8 @@ Implement a sign-reversed double and affine boundary twist in a topological, aco
 - **payoff:** tests whether the extra seam data has operational residue.
 
 The [fully specified first implementation](two-quadrature-seam-experiment.md) uses a complex programmable resonator coupling and IQ/homodyne detection. Its preregistered discriminator is linear odd interference versus quadratic even power under coupling-phase reversal.
+
+The [detector reassignment result](modular-sign-detector-reassignment.md) now gives this referenced protocol priority for a direct \(\chi_5\)-character test. The three-mode ring remains the correct detector for a genuinely continuous intrinsic flux, but the binary modular sign alone reaches only reciprocal \(0/\pi\) sectors and cannot predict its directional odd channel.
 
 None of these experiments tests quantum gravity directly. They determine whether the proposed interface can exist as controlled physics before it is asked to carry gravity.
 

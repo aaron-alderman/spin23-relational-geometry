@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "The chi5 sign character maps to binary 0/pi loop holonomy. It can select spectral parity or referenced interference, but it cannot by itself source the orientation-odd directional channel of a three-mode ring.",
+  "sourceDatum": {
+    "type": "Z2 modular character",
+    "values": [1, -1],
+    "u1Embedding": {"1": 0, "-1": 3.141592653589793},
+    "excludedPromotion": "a binary sign does not select a continuous chiral flux"
+  },
+  "threeModeModel": {
+    "edgeMagnitude": 0.23,
+    "linewidth": 0.18,
+    "probeFrequency": 0.11,
+    "prediction": "At Phi=0 and Phi=pi the ring is reciprocal; spectral parity can differ but directional odd transfer vanishes."
+  },
+  "referencedDetector": {
+    "record": "|Aref+Aseam|^2-|Aref-Aseam|^2=4 Re(conj(Aref) Aseam)",
+    "control": "the sign-odd record vanishes when Aref is removed"
+  },
+  "nextGate": "Compute the full sewn Monster 2A multiplier and determine whether a source-derived trivialization or connection supplies a transportable U(1) phase beyond the Z2 character.",
+  "terminalStatus": "sign_detector_assigned_beyond_sign_multiplier_open",
+  "sources": [
+    "https://arxiv.org/abs/1007.5203",
+    "https://arxiv.org/abs/1308.2441",
+    "https://arxiv.org/abs/1911.00042"
+  ]
+}

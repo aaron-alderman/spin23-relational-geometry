@@ -288,9 +288,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 
 **Useful null result.** A static, reciprocal or non-Hermitian nuisance model predicts every record, improving coherent-network calibration while closing the claimed discriminator at the achieved sensitivity.
 
-**Stop rule.** Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin. Stop at an engineering demonstration unless an independent modular or Monster calculation predicts the loop phase, coupling ratios or defect response without fitting them to the device; require replication on a second carrier before a new-physics interpretation.
+**Stop rule.** Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin. Stop at an engineering demonstration unless an independent source calculation predicts a continuous loop phase beyond the binary modular sign, coupling ratios or a defect response without fitting them to the device; require replication on a second carrier before a new-physics interpretation.
 
-**Current preflight.** The [three-mode oriented-seam calculation](../lattice-subroutine-gravity/three-mode-loop-seam-preflight.md) verifies phase-redistribution invariance, spectral evenness and directional-transfer oddness for the declared coupled-mode model. It is a detector certificate, not evidence that nature uses the proposed lattice or Monster carrier.
+**Current preflight.** The [three-mode oriented-seam calculation](../lattice-subroutine-gravity/three-mode-loop-seam-preflight.md) verifies phase-redistribution invariance, spectral evenness and directional-transfer oddness for the declared coupled-mode model. The [modular-sign reassignment](../lattice-subroutine-gravity/modular-sign-detector-reassignment.md) proves that the \(\chi_5\) sign reaches only reciprocal \(0/\pi\) sectors; a direct character experiment belongs in the referenced two-quadrature channel, while this ring requires a beyond-sign phase. These are detector certificates, not evidence that nature uses the proposed lattice or Monster carrier.
 
 **Primary precedents.** [https://doi.org/10.1038/s41467-025-58794-3](https://doi.org/10.1038/s41467-025-58794-3); [https://doi.org/10.1038/s41467-025-62481-8](https://doi.org/10.1038/s41467-025-62481-8)
 

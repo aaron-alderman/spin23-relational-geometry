@@ -41,6 +41,7 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 - **monster-fermionization-bridge** — [monster-fermionization-bridge.md](../../../corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - **period-matrix-jordan-boundary-gate** — [period-matrix-jordan-boundary-gate.md](../../../corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md)
 - **three-mode-loop-seam-preflight** — [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
+- **modular-sign-detector-reassignment** — [modular-sign-detector-reassignment.md](../../../corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
