@@ -35,6 +35,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (1)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (2)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (3)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (4)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-4.md)
 - [Claim · The revised spine · What closes (1)](../details/01-the-revised-spine-what-closes-claim-1.md)
 - [Claim · The revised spine · What closes (2)](../details/01-the-revised-spine-what-closes-claim-2.md)
 - [Claim · The revised spine · Begin with a measuring frame (1)](../details/01-the-revised-spine-begin-with-a-measuring-frame-claim-1.md)

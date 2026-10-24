@@ -42,6 +42,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [E3-F20 · The softened QWZ curve is not the response of its stated Lindbladian](../chapters/08-result-ledger.md#E3-F20)
 - [E3-F23 · The local gravity route has one healthy critical torsion sector but no closed quantum parent](../chapters/08-result-ledger.md#E3-F23)
 - [E3-F25 · The mixed admissibility interface is an A8 transfer lattice](../chapters/08-result-ledger.md#E3-F25)
+- [E3-F26 · The pinned Claimipedia operator layers contain sl2 plus sl3, not sp4](../chapters/08-result-ledger.md#E3-F26)
 - [Proof · Furey participation: closure certificate](../details/furey-participation-proof.md)
 - [Proof · Furey interface: selector obstruction](../details/furey-selector-obstruction.md)
 - [Claim · The revised spine · Why ten generators are a real gate (1)](../details/01-the-revised-spine-why-ten-generators-are-a-real-gate-claim-1.md)

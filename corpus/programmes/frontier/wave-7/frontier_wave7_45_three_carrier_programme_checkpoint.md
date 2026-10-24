@@ -35,6 +35,9 @@ because some of its relation operators also have recognizable algebra.
   cannot be laundered into a path.
 - **The instrumentation schema is closed.** All 39 objects have the same
   16-field decision contract.
+- **The pinned Claimipedia operator search is closed.** Its semisimple content is
+  exactly `sl2 + sl3`, not `sp4`; reopening requires a new evidence-bound
+  cross-operator rather than another path through the existing graph.
 - **Two end-to-end controls are closed.** F05 closes inside its declared
   effective model; F01 refuses an oriented quarter-turn for an exact reason.
 - **The refinement question is closed at this level.** Bookkeeping refinements
@@ -150,6 +153,7 @@ The governing open-topic anchors are `OT-002`, `OT-003`, `OT-009`, `OT-017`,
 - [Two vertical slices](frontier_wave7_41_two_cross_carrier_vertical_slices.md)
 - [Instrumented atlas](frontier_wave7_42_instrumented_admissibility_atlas.md)
 - [Sourcery ALE algebra](frontier_wave7_43_sourcery_ale_algebra.md)
+- [Claimipedia operator exhaustion](frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md)
 - [Refinement stress test](frontier_wave7_44_refinement_stability_of_the_mixed_interface.md)
 - [Maintained open topics](../../frontier-physics-targets/open_topics_v1.md)
 

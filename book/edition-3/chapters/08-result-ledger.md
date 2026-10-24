@@ -1,6 +1,6 @@
 # Result and reversal ledger
 
-_Twenty-five retained findings_
+_Twenty-six retained findings_
 
 > **Chapter status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
 
@@ -411,6 +411,22 @@ For the declared 16-node, 27-relation quotient-scar graph, the constructive and 
 
 - [frontier_wave7_39_mixed_interface_resolution.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md)
 - [frontier_wave7_44_refinement_stability_of_the_mixed_interface.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md)
+
+<a id="E3-F26"></a>
+## E3-F26 · The pinned Claimipedia operator layers contain sl2 plus sl3, not sp4
+
+> **Ledger reading — [■ Internally exhausted](../reading-key/status-exhausted.md)** — Rearranging the present ingredients no longer addresses the missing datum.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Detailed status:** `internally-exhausted`
+
+The full relationship-path algebra contributes sl2, the reciprocal programme core contributes exact A2/sl3, and the evidence and provenance layers contribute no further semisimple Lie factor.
+
+**Boundary:** This is an exhaustive result for the fixed captured schema, not a physical symmetry claim. Reopening requires a new evidence-bound cross-operator on one shared carrier satisfying the C2 Cartan, Serre and nondegenerate symplectic-form tests.
+
+- [frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md)
+- [frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md)
 
 ## Chapter sources
 

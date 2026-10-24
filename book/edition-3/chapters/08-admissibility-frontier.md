@@ -119,6 +119,10 @@ The shape now terminates in decisions. The wall-response return gives one bounde
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-3.md)
 
+The same typed discipline prevents a false cross-carrier closure. Exhausting the pinned Claimipedia relationship, programme, evidence and provenance operators yields semisimple Lie content sl2 plus sl3, not sp4. The knowledge graph does not secretly reproduce the physics symmetry; a new evidence-bound cross-operator on one shared carrier is the exact reopening datum.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-4.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -142,6 +146,8 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [modular-sign-detector-reassignment.md](../../../corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md)
 - [metaplectic-phase-candidate.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md)
 - [frontier_wave7_39_mixed_interface_resolution.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md)
+- [frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md)
+- [frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md)
 - [frontier_wave7_41_two_cross_carrier_vertical_slices.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md)
 - [frontier_wave7_42_instrumented_admissibility_atlas.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md)
 - [frontier_wave7_43_sourcery_ale_algebra.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md)

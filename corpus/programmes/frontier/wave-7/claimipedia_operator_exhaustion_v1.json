@@ -1,0 +1,60 @@
+{
+  "schema": "claimipedia-operator-exhaustion/1",
+  "date": "2026-10-24",
+  "sourceHash": "82d9c5a47f4957ddbd302927baed0acb05522773762966a4c9ffc34ed86f94c3",
+  "relationshipLayer": {
+    "carrierDimension": 38,
+    "algebraDimension": 66,
+    "jacobsonRadicalDimension": 58,
+    "semisimpleQuotient": "Q + M2(Q) + Q[C3] ~= Q^2 + Q(zeta3) + M2(Q)",
+    "semisimpleLiePart": "sl2(Q)",
+    "secondSl2InAnyPathCombination": false
+  },
+  "programmeLayer": {
+    "carrierDimension": 9,
+    "stageAlgebra": "M3(Q)",
+    "multiplicityCommutant": "M3(Q)",
+    "cartanMatrix": [[2, -1], [-1, 2]],
+    "rootSystem": "A2",
+    "c2": false
+  },
+  "evidenceLayer": {
+    "recordCount": 7,
+    "directionCounts": {
+      "Supports": 4,
+      "Challenges": 2,
+      "Qualifies": 1
+    },
+    "allAuthoredEdges": "EvidenceItem -> Claim",
+    "pathIdealSquareZero": true,
+    "semisimpleQuotient": "Q",
+    "semisimpleLiePart": "0"
+  },
+  "provenanceLayer": {
+    "declarationReceipts": 659,
+    "contributions": 659,
+    "contributionReviews": 659,
+    "receiptTargetsUnique": 659,
+    "contributionTargetsUnique": 659,
+    "reviewTargetsUnique": 659,
+    "contributionReceiptBijection": true,
+    "reviewContributionBijection": true,
+    "allTargetTriplesAgree": true,
+    "allReviewsAccepted": true,
+    "authoredStageAlgebra": "Q*I + strictly upper triangular n4",
+    "authoredStageAlgebraDimension": 7,
+    "invariantAlternatingFormSpaceDimension": 1,
+    "maximumInvariantAlternatingFormRank": 2,
+    "nondegenerateInvariantAlternatingForm": false,
+    "semisimpleLiePart": "0",
+    "formalInverseExtension": "Adjoining inverse lookup maps would create generic matrix capacity, but those inverse transitions and a symplectic selector are not authored operators."
+  },
+  "combinedConclusion": {
+    "authoredSemisimpleLieFactors": "sl2(Q) + sl3(Q)",
+    "crossCouplings": "one-way evidence/example/provenance incidence only; these enter the radical and do not join the simple factors",
+    "sp4Embedding": false,
+    "reason": "Any semisimple Lie subalgebra injects through the solvable radical into sl2 + sl3. Simple sp4 cannot inject into either lower-dimensional factor, and no cross-root C2 coupling exists.",
+    "goalDisposition": "current captured-corpus route exhausted",
+    "reopenGate": "Add an evidence-bound cross-operator on a shared invariant carrier and verify a nondegenerate symplectic form plus the asymmetric C2 Cartan and Serre relations."
+  }
+}

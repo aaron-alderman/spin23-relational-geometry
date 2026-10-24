@@ -225,6 +225,37 @@ quotient is the **Stable Reading Skeleton**: one scalar channel plus the
 reversible cell. No second root cell is present, so this direct route does not
 close to \(C_2\) or \(Spin(2,3)\).
 
+### Full operator exhaustion and programme core
+
+The full 38-node relationship-path algebra sharpens that local result. Its
+58-dimensional nilpotent radical leaves the semisimple quotient
+
+\[
+\mathbb Q\oplus M_2(\mathbb Q)\oplus\mathbb Q[C_3],
+\]
+
+so its only nonabelian semisimple commutator factor is
+\(\mathfrak{sl}_2(\mathbb Q)\). Separately, the reciprocal nine-node
+Program–Version–Example core is a genuine double-centralizer
+\(M_3(\mathbb Q)\otimes I_3\) with commutant
+\(I_3\otimes M_3(\mathbb Q)\). Its root system is exactly \(A_2\), hence its
+commutator algebra is \(\mathfrak{sl}_3(\mathbb Q)\).
+
+Evidence incidence is square-zero and the authored provenance-stage algebra is
+scalar plus strictly triangular. Neither contributes a semisimple Lie factor;
+the provenance operators preserve no nondegenerate alternating form. The full
+captured semisimple Lie content is therefore
+
+\[
+\mathfrak{sl}_2(\mathbb Q)\oplus\mathfrak{sl}_3(\mathbb Q),
+\]
+
+not \(\mathfrak{sp}_4\). Reopening requires a new evidence-bound operator on a
+shared carrier that supplies a second root pair, a nondegenerate preserved
+alternating form, the asymmetric \((-1,-2)\) Cartan coupling and the \(C_2\)
+Serre relations. See the [programme-core calculation](../programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md)
+and [operator exhaustion](../programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md).
+
 ## III. Sourcery
 
 Sourcery accepts caller-supplied graphs, so it has no single fixed node count.

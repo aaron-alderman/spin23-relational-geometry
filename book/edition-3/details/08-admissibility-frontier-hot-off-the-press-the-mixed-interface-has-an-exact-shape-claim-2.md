@@ -17,7 +17,7 @@ The stated conclusion follows inside the declared model. Reusing it elsewhere re
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the mixed interface has an exact shape”.
-- **Unit of argument:** assertion 2 of 3 in this section.
+- **Unit of argument:** assertion 2 of 4 in this section.
 - **Evidence posture:** Audit the declared carrier, assumptions and certificate. The result is exact only within that written scope.
 - **Research move:** joins several typed results while letting the weakest edge set the claim.
 
@@ -44,6 +44,8 @@ Locate a mismatched definition, an omitted assumption, a failed certificate step
 - **modular-sign-detector-reassignment** — [modular-sign-detector-reassignment.md](../../../corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md)
 - **metaplectic-phase-candidate** — [metaplectic-phase-candidate.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md)
 - **frontier wave7 39 mixed interface resolution** — [frontier_wave7_39_mixed_interface_resolution.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md)
+- **frontier wave7 39 programme a2 double centralizer and c2 no go** — [frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md)
+- **frontier wave7 40 claimipedia operator exhaustion and sp4 gate** — [frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md)
 - **frontier wave7 41 two cross carrier vertical slices** — [frontier_wave7_41_two_cross_carrier_vertical_slices.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md)
 - **frontier wave7 42 instrumented admissibility atlas** — [frontier_wave7_42_instrumented_admissibility_atlas.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md)
 - **frontier wave7 43 sourcery ale algebra** — [frontier_wave7_43_sourcery_ale_algebra.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md)

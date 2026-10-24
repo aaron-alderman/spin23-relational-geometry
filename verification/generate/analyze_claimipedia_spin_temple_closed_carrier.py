@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -22,17 +23,21 @@ def main() -> None:
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
     edges = source["edges"]
     relation_types = sorted({edge[2] for edge in edges})
-    visible = {
-        "claim.grandThesis.spin-2-3",
-        "claim.grandThesis.temple-sourcery",
-    }
-    changed = True
-    while changed:
-        changed = False
-        for source_node, target_node, _ in edges:
-            if target_node in visible and source_node not in visible:
-                visible.add(source_node)
-                changed = True
+    full_graph = "--full" in sys.argv[1:]
+    if full_graph:
+        visible = {value for edge in edges for value in edge[:2]}
+    else:
+        visible = {
+            "claim.grandThesis.spin-2-3",
+            "claim.grandThesis.temple-sourcery",
+        }
+        changed = True
+        while changed:
+            changed = False
+            for source_node, target_node, _ in edges:
+                if target_node in visible and source_node not in visible:
+                    visible.add(source_node)
+                    changed = True
 
     nodes = sorted(visible)
     index = {node: i for i, node in enumerate(nodes)}
@@ -129,7 +134,7 @@ def main() -> None:
                     reverse_pairs.append(record)
 
     result = {
-        "schema": "claimipedia-spin-temple-closed-carrier-analysis/1",
+        "schema": "claimipedia-full-scc-algebra-analysis/1" if full_graph else "claimipedia-spin-temple-closed-carrier-analysis/1",
         "sourceHash": source["sourceHash"],
         "nodeCount": size,
         "edgeCount": len(retained_edges),

@@ -12,7 +12,7 @@ test("Edition 3 exposes matching Markdown and HTML books", () => {
   assert.equal(metadata.schema, "spin23-edition3-book/v1");
   assert.equal(metadata.edition, "3.2 admissibility preview");
   assert.equal(metadata.chapters.length, 14);
-  assert.equal(metadata.findings.length, 25);
+  assert.equal(metadata.findings.length, 26);
   assert.equal(metadata.frontiers.length, 10);
   assert.equal(metadata.publicationAuthority.role, "canonical-publication-source");
   assert.equal(metadata.publicationAuthority.sourcePath, "book/edition-3/book.json");
@@ -119,7 +119,7 @@ test("Furey claims link at the point of assertion to inspectable proof pages", (
 });
 
 test("every narrative assertion has its own expanded claim page", () => {
-  assert.equal(metadata.claimDetails.length, 104);
+  assert.equal(metadata.claimDetails.length, 105);
   assert.equal(new Set(metadata.claimDetails.map(detail => detail.slug)).size, metadata.claimDetails.length);
   for (const detail of metadata.claimDetails) {
     const chapterHtml = readFileSync(new URL(`docs/edition-3/${detail.chapter}.html`, root), "utf8");

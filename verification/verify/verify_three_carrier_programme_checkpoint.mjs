@@ -18,12 +18,16 @@ const instruments = JSON.parse(readFileSync(new URL(
   "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
   root,
 ), "utf8"));
+const claimipedia = JSON.parse(readFileSync(new URL(
+  "corpus/programmes/frontier/wave-7/claimipedia_operator_exhaustion_v1.json",
+  root,
+), "utf8"));
 
 assert.equal(checkpoint.schema, "three-carrier-programme-checkpoint/v1");
 assert.equal(checkpoint.verdict, "finite architecture exhausted; physical execution open");
 assert.deepEqual(
   checkpoint.closedLayers.map(layer => layer.id),
-  ["taxonomy", "mixed-interface", "vertical-slices", "instrumentation", "sourcery-algebra", "refinement"],
+  ["taxonomy", "mixed-interface", "vertical-slices", "instrumentation", "sourcery-algebra", "claimipedia-algebra", "refinement"],
 );
 for (const layer of checkpoint.closedLayers) {
   assert.equal(existsSync(new URL(layer.certificate, root)), true, layer.certificate);
@@ -38,6 +42,8 @@ assert.equal(mixed.integralInterface.rank, 8);
 assert.equal(mixed.integralInterface.determinant, 9);
 assert.equal(mixed.integralInterface.rootCount, 72);
 assert.equal(instruments.counts.total, 39);
+assert.equal(claimipedia.combinedConclusion.authoredSemisimpleLieFactors, "sl2(Q) + sl3(Q)");
+assert.equal(claimipedia.combinedConclusion.sp4Embedding, false);
 
 assert.equal(checkpoint.shortestUsefulRoute.id, "F05");
 assert.deepEqual(checkpoint.shortestUsefulRoute.steps, [

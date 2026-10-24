@@ -1,0 +1,40 @@
+{
+  "schema": "claimipedia-programme-core-source/1",
+  "date": "2026-10-24",
+  "sourceHash": "82d9c5a47f4957ddbd302927baed0acb05522773762966a4c9ffc34ed86f94c3",
+  "families": [
+    {
+      "name": "credentialReview",
+      "program": "program.credentialReview",
+      "version": "programVersion.credentialReview.1",
+      "example": "example.credentialReview.representativeRiver"
+    },
+    {
+      "name": "equalEvidence",
+      "program": "program.equalEvidence",
+      "version": "programVersion.equalEvidence.1",
+      "example": "example.equalEvidence.representativeRiver"
+    },
+    {
+      "name": "independentSource",
+      "program": "program.independentSource",
+      "version": "programVersion.independentSource.1",
+      "example": "example.independentSource.representativeRiver"
+    }
+  ],
+  "typedEdges": [
+    ["program.credentialReview", "programVersion.credentialReview.1", "currentVersion"],
+    ["programVersion.credentialReview.1", "program.credentialReview", "program"],
+    ["programVersion.credentialReview.1", "example.credentialReview.representativeRiver", "example"],
+    ["example.credentialReview.representativeRiver", "programVersion.credentialReview.1", "programVersion"],
+    ["program.equalEvidence", "programVersion.equalEvidence.1", "currentVersion"],
+    ["programVersion.equalEvidence.1", "program.equalEvidence", "program"],
+    ["programVersion.equalEvidence.1", "example.equalEvidence.representativeRiver", "example"],
+    ["example.equalEvidence.representativeRiver", "programVersion.equalEvidence.1", "programVersion"],
+    ["program.independentSource", "programVersion.independentSource.1", "currentVersion"],
+    ["programVersion.independentSource.1", "program.independentSource", "program"],
+    ["programVersion.independentSource.1", "example.independentSource.representativeRiver", "example"],
+    ["example.independentSource.representativeRiver", "programVersion.independentSource.1", "programVersion"]
+  ],
+  "boundary": "The nine-node core retains only the exact reciprocal Program--Version--Example bindings. Rule counts, thresholds, claims, constitutions and expected decisions remain outside this symmetry-reduced core."
+}

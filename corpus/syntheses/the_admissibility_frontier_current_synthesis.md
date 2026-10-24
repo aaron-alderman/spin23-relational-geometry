@@ -186,6 +186,17 @@ never becomes a negative edge that can be cancelled. This is how the corpus
 keeps reason attached to movement without confusing a checked route with a
 true conclusion.
 
+The distinction is now algebraically tested rather than merely asserted. On the
+pinned Claimipedia capture, arbitrary finite relationship paths contribute one
+nonabelian semisimple factor, \(\mathfrak{sl}_2\); the reciprocal programme core
+contributes an exact \(A_2/\mathfrak{sl}_3\) double-centralizer; evidence and
+provenance contribute only nilpotent or scalar extensions. The combined result
+is \(\mathfrak{sl}_2\oplus\mathfrak{sl}_3\), not
+\(\mathfrak{sp}_4\). Claimipedia therefore does not secretly reproduce the
+science carrier. The route reopens only with a new evidence-bound cross-operator
+that acts on one shared carrier and satisfies the asymmetric \(C_2\) Cartan,
+Serre and nondegenerate symplectic-form tests.
+
 ## The technology thesis
 
 The result is not merely a new ordering of mathematical language. It changes where and how to look.
@@ -316,6 +327,7 @@ Choose the entrance that matches the work you want to do:
 - **Follow a closed route and a controlled refusal:** [Two cross-carrier vertical slices](../programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md).
 - **Choose among all 39 instrumented relations and returns:** [Instrumented admissibility atlas](../programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md).
 - **Inspect the reasoning algebra:** [Sourcery ALE algebra](../programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md).
+- **Inspect the Claimipedia algebra and its exact no-go:** [Claimipedia operator exhaustion](../programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md).
 - **Choose an open problem:** [Open topics](../programmes/frontier-physics-targets/open_topics_v1.md).
 - **Audit every declared gate:** [Full-corpus census](../programmes/frontier-physics-targets/full_corpus_gate_census_v1.md).
 - **Inspect the strongest algebraic manuscript lead:** [Paper-worthiness ranking](../programmes/closure/programme_closure_08_paperworthiness_ranking.md).
