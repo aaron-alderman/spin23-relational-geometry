@@ -233,6 +233,17 @@ The selector fork also admits an exact reduced dynamics. A convex competition se
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-reachable-frontier-has-a-cost-shape-claim-1.md)
 
+<a id="hot-off-the-press-the-logical-frontier-is-two-controls-not-one-group-name"></a>
+## Hot off the press — the logical frontier is two controls, not one group name
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The two-qutrit code now has an exact control boundary. Source-visible charge-word self-shears plus the optional puncture swap close to order 18; adding the source-labelled compiled mutual shear reaches 54; admitting local Fourier changes without the mutual shear reaches the order-1,152 imprimitive subgroup; and only admitting both reaches all 51,840 elements of Sp(4,F3). The coupled word is real mathematics, but it does not yet explain why one physical carrier executes it, and a Fourier or Legendre change of polarization is not automatically dynamics. The next work is therefore not a search for the group. It is to build one carrier with independently calibrated mutual and polarization-changing controls, record leakage, and predict held-out allowed and forbidden gate words with restricted stabilizer witnesses. Success would be a source-restricted logical laboratory; failure would leave the exact code/Jordan match as compatibility rather than a physical law.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-logical-frontier-is-two-controls-not-one-group-name-claim-1.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -285,6 +296,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [frontier_wave7_68_selector_split_fingerprint_and_channel_breaking_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_68_selector_split_fingerprint_and_channel_breaking_gate.md)
 - [frontier_wave7_69_q_provenance_terminal_synthesis.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_69_q_provenance_terminal_synthesis.md)
 - [frontier_wave7_70_g2_response_folding_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md)
+- [frontier_wave7_71_source_restricted_logical_generator_boundary.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_71_source_restricted_logical_generator_boundary.md)
 - [frontier_complexity_cards_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md)
 - [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)

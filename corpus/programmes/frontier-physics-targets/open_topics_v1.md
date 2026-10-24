@@ -42,7 +42,7 @@ An open topic stays on this list until one of four things happens:
 | OT-013 | Non-Hermitian topology versus active selection | separates coherent geometry from gain/loss attraction |
 | OT-015 | Defect information beyond index | tests what a wall transports beyond mode count |
 | OT-016 | Hydrodynamic multichannel cone | collides conservation with response rank |
-| OT-017 | Source-restricted logical generators | separates physical provenance from universal compilation |
+| OT-017 | Source-restricted logical generators | exact closures are 18/54/1,152/51,840 for the source-visible, compiled-cross, imported-local and universal alphabets; the open work is one carrier that physically supplies both mutual coupling and polarization change |
 | OT-018 | New contextual admissibility inequality | tests whether the principle adds to standard consistency |
 | OT-019 | Three-scale admissibility functor | asks which exclusions and invariants survive coarse-graining |
 | OT-020 | Rare-event selector geometry | separates equilibrium breaking from kinetic freezing |

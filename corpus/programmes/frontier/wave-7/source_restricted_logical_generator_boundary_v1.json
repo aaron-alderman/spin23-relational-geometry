@@ -1,0 +1,59 @@
+{
+  "schema": "frontier.source-restricted-logical-generator-boundary/1",
+  "date": "2026-10-25",
+  "topicId": "OT-017",
+  "targetId": "FPT-009",
+  "field": "F_3",
+  "coordinateOrder": ["x1", "x2", "z1", "z2"],
+  "alphabets": [
+    {
+      "name": "maximal_source_visible",
+      "generators": ["P1", "P2", "Swap"],
+      "provenance": "charge-word diagonal Clifford profiles plus unordered-puncture swap",
+      "groupOrder": 18,
+      "pureZOrbit": 2,
+      "pureXOrbit": 6,
+      "physicalStatus": "charge-word shears are source-derived; Swap is an unordered-puncture relabelling, not yet an implemented physical gate"
+    },
+    {
+      "name": "source_labelled_compiled",
+      "generators": ["P1", "P2", "Cross", "Swap"],
+      "provenance": "source-native alphabet plus the five-field weight-(3,3,2) compiled mutual-shear word",
+      "groupOrder": 54,
+      "pureZOrbit": 2,
+      "pureXOrbit": 18,
+      "physicalStatus": "exact encoded construction; no source-derived dynamics forces Cross"
+    },
+    {
+      "name": "imported_local_dualities",
+      "generators": ["P1", "P2", "F1", "F2", "Swap"],
+      "provenance": "source-native self shears plus imported local Fourier or Legendre changes of polarization",
+      "groupOrder": 1152,
+      "pureZOrbit": 16,
+      "pureXOrbit": 16,
+      "physicalStatus": "conditional chart or control operation; cross coupling absent"
+    },
+    {
+      "name": "universal_clifford_completion",
+      "generators": ["P1", "P2", "Cross", "F1", "F2", "Swap"],
+      "provenance": "compiled cross shear plus imported local Fourier controls",
+      "groupOrder": 51840,
+      "pureZOrbit": 80,
+      "pureXOrbit": 80,
+      "physicalStatus": "full abstract logical Sp(4,F_3); not a source-derived control law"
+    }
+  ],
+  "closed": [
+    "The maximal present source-visible alphabet, including the optional puncture swap, is exactly an order-18 subgroup; the definitely implemented physical subgroup may be smaller.",
+    "Adding the source-labelled compiled cross shear reaches only order 54 and preserves the X polarization up to port swap.",
+    "Imported local Fourier operations without the cross shear reach the order-1152 imprimitive subgroup.",
+    "The full order-51840 Sp(4,F_3) appears only when both cross coupling and polarization-changing controls are admitted."
+  ],
+  "open": [
+    "A Hamiltonian, measurement, deformation or transport rule that physically selects the compiled cross shear.",
+    "A source-native polarization-changing operation rather than an imported universal Clifford or passive chart change.",
+    "Leakage and held-out gate-word tests on a physical carrier."
+  ],
+  "killTest": "Any claimed source-derived full Sp(4,F_3) closure fails if it requires Cross or F_i without an independently derived physical implementation.",
+  "reopenDatum": "One carrier supplies a calibrated cross-coupling control and a calibrated polarization-changing control whose logical actions match Cross and F_i without universal recompilation."
+}

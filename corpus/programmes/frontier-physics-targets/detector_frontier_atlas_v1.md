@@ -93,7 +93,7 @@ These cover FA-11 and FA-13–FA-15. The immediate computational edge is the low
 ### Formal, arithmetic and statistical detectors
 
 - **DET-027 — relation-emulator schedule:** nine path, fourteen triangle and one direct `QR-003` channel.
-- **DET-028 — lattice/code invariants:** determinant, discriminant, minimum norm, weight enumerator, distance and radical.
+- **DET-028 — arithmetic lattice and code invariants:** exact Gram, discriminant, norm, weight, distance and radical data. Wave 7.71 adds restricted logical-group order, Pauli-orbit size, forbidden-transition and leakage records, with generator removal, a universal-compiler positive control and held-out gate words. These records verify the declared finite alphabet without paying for unrestricted logical tomography.
 - **DET-029 — efficient information:** nuisance-projected Fisher/Schur separation and information per calibrated cost. Wave 7.65 adds held-out modulation classification and latent-depth error, with exact power-only equivalence as a mandatory null control. Wave 7.70 requires model-containment testing before classification: the normalized G2 transfer lies exactly inside the generic two-mode family, so only the pre-fold rank jump remains discriminating.
 - **DET-030 — complexity card:** preparation, sampling, detection, verification and error scaling.
 

@@ -217,11 +217,11 @@ Stabilizer/symplectic certification is polynomial, while generic k-logical-qubit
 | detection | exponential | generic logical tomography O(4^k epsilon^-2); stabilizer witnesses remain polynomial | tomographic incompleteness if restricted | explicit favorable/unfavorable fork |
 | verification | polynomial | O(poly(n,m,epsilon^-1)) only with generator provenance, randomized/local witnesses and leakage checks | certificate covers the restricted reachable group, not all unitaries | independent compiler and witness schedule |
 
-**Independent check:** Derive generators from the carrier, compile with an independent implementation, and verify the restricted logical action with randomized or stabilizer witnesses plus leakage records.
+**Independent check:** Use Wave 7.71's exact reachable and forbidden orbits as preregistered predictions: derive generators from the carrier, compile with an independent implementation, remove each control in turn, and verify held-out logical words with stabilizer witnesses plus leakage records.
 
 **Stop rule:** Success requires O(4^k) unrestricted tomography, exponential word search, or arbitrary universal controls that erase source provenance.
 
-**Sources:** [admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md](../../../corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md); [admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md](../../../corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md).
+**Sources:** [admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md](../../../corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md); [admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md](../../../corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md); [frontier_wave7_71_source_restricted_logical_generator_boundary.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_71_source_restricted_logical_generator_boundary.md).
 
 ### FPT-010 — Scattering, causality and positivity bounds
 

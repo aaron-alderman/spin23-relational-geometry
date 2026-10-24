@@ -263,6 +263,7 @@ const sectionTaxonomy = {
   "Hot off the press — the mixed interface has an exact shape": "established",
   "Hot off the press — the missing middle has a type": "conditional",
   "Hot off the press — the reachable frontier has a cost shape": "governance",
+  "Hot off the press — the logical frontier is two controls, not one group name": "conditional",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -332,6 +333,7 @@ const sectionArchetype = {
   "Hot off the press — the mixed interface has an exact shape": "integrator",
   "Hot off the press — the missing middle has a type": "integrator",
   "Hot off the press — the reachable frontier has a cost shape": "auditor",
+  "Hot off the press — the logical frontier is two controls, not one group name": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -494,6 +496,13 @@ admissibilitySections.splice(orientedSeamIndex + 7, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 8, 0, [
+  "Hot off the press — the logical frontier is two controls, not one group name",
+  [
+    "**Provisional integration note — 25 October 2026.** The two-qutrit code now has an exact control boundary. Source-visible charge-word self-shears plus the optional puncture swap close to order 18; adding the source-labelled compiled mutual shear reaches 54; admitting local Fourier changes without the mutual shear reaches the order-1,152 imprimitive subgroup; and only admitting both reaches all 51,840 elements of Sp(4,F3). The coupled word is real mathematics, but it does not yet explain why one physical carrier executes it, and a Fourier or Legendre change of polarization is not automatically dynamics. The next work is therefore not a search for the group. It is to build one carrier with independently calibrated mutual and polarization-changing controls, record leakage, and predict held-out allowed and forbidden gate words with restricted stabilizer witnesses. Success would be a source-restricted logical laboratory; failure would leave the exact code/Jordan match as compatibility rather than a physical law.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -600,6 +609,7 @@ chapterSources["08-admissibility-frontier"].splice(-2, 0,
   "corpus/programmes/frontier/wave-7/frontier_wave7_68_selector_split_fingerprint_and_channel_breaking_gate.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_69_q_provenance_terminal_synthesis.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+  "corpus/programmes/frontier/wave-7/frontier_wave7_71_source_restricted_logical_generator_boundary.md",
   "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md",
 );
 

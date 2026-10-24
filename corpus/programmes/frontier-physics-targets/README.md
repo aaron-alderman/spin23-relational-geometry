@@ -58,7 +58,7 @@ The detector extension additionally normalizes:
 - 35 detector bundles; and
 - 49 maintained topics: 44 live across active, open, audit, gated and blocked states, plus five closed with retained evidence.
 
-The full-corpus census presently hashes and inventories all 2,654 in-scope Markdown/JSON artifacts across `corpus/` and the evidence ledger: 2,199 corpus narratives plus 455 evidence artifacts. It reconciles all 1,588 files containing the expanded gate vocabulary or an open-like structured status, including 1,176 of the 1,575 numbered claims and 89 evidence records; the other 399 claims are explicitly recorded as having no declared gate. It reports zero unmatched ownership records. This is a lexical, structured-status and governance exhaustion result, not a claim that every tacit scientific question has been discovered or solved.
+The full-corpus census presently hashes and inventories all 2,656 in-scope Markdown/JSON artifacts across `corpus/` and the evidence ledger: 2,201 corpus narratives plus 455 evidence artifacts. It reconciles all 1,590 files containing the expanded gate vocabulary or an open-like structured status, including 1,176 of the 1,575 numbered claims and 89 evidence records; the other 399 claims are explicitly recorded as having no declared gate. It reports zero unmatched ownership records. This is a lexical, structured-status and governance exhaustion result, not a claim that every tacit scientific question has been discovered or solved.
 
 Speculative entries remain visible but carry zero evidential weight. Crosswalk membership indicates relevance, not proof of a physical identification.
 

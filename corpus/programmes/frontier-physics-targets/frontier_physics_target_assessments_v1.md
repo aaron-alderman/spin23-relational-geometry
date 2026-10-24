@@ -92,12 +92,12 @@ These are reach assessments, not truth probabilities. “Within reach” means t
 
 ## FPT-009
 
-**Quantum-code and synthetic-gauge emulators — mapped vicinity.**
+**Quantum-code and synthetic-gauge emulators — mapped vicinity with the finite control boundary closed.**
 
-- **Corpus assets:** the exact [qutrit Lagrangian-polarization count](../../claims/0500-0599/512_the_forty_qutrit_null_lines_are_exactly_the_forty_genus_two_lagrangian_polarizations.md), [integral transvection lift](../../claims/0500-0599/504_one_integral_three_transvection_word_is_binary_diagonal_qutrit_mutual_and_exactly_the_positive_kplus_lift.md), [common qutrit glue versus binary lift](../../claims/0500-0599/526_the_common_intersection_separates_one_qutrit_glue_from_a_quartic_binary_lift.md), [coupled-selector word](../../claims/0700-0799/773_the_shortest_coupled_selector_word_uses_the_unique_qutrit_mutual_shear_and_has_an_irreducible_partially_hyperbolic_quartic.md), and the [commuting-square descent criterion](../admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md).
-- **Why it is nearby:** finite symplectic shadows and logical operations are unusually explicit in the corpus and programmable in synthetic platforms.
-- **Missing join:** provenance-bearing physical controls that select the allowed generator set instead of granting universal logical programmability.
-- **Next promotion test:** derive a restricted gate set from one carrier and test a holonomy or forbidden transition not available to the unconstrained emulator.
+- **Corpus assets:** the exact [qutrit Lagrangian-polarization count](../../claims/0500-0599/512_the_forty_qutrit_null_lines_are_exactly_the_forty_genus_two_lagrangian_polarizations.md), [integral transvection lift](../../claims/0500-0599/504_one_integral_three_transvection_word_is_binary_diagonal_qutrit_mutual_and_exactly_the_positive_kplus_lift.md), [common qutrit glue versus binary lift](../../claims/0500-0599/526_the_common_intersection_separates_one_qutrit_glue_from_a_quartic_binary_lift.md), [coupled-selector word](../../claims/0700-0799/773_the_shortest_coupled_selector_word_uses_the_unique_qutrit_mutual_shear_and_has_an_irreducible_partially_hyperbolic_quartic.md), the exact [source-restricted closure boundary](../frontier/wave-7/frontier_wave7_71_source_restricted_logical_generator_boundary.md), and the [commuting-square descent criterion](../admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md).
+- **Why it is nearby:** finite symplectic shadows and logical operations are unusually explicit. The maximal source-visible alphabet closes at order 18, adding the compiled cross shear reaches 54, imported local dualities without cross coupling reach 1,152, and only their combination reaches the full order-51,840 group.
+- **Missing join:** one physical carrier must supply both the mutual control and a polarization-changing control with measured leakage. The compiled cross word and Fourier/Legendre maps exist mathematically but are not yet jointly selected by source-native dynamics.
+- **Next promotion test:** calibrate those two controls independently, use stabilizer witnesses to predict held-out words and forbidden orbits, and reject any success that requires a universal compiler or full logical tomography.
 - **Related targets:** FPT-005, FPT-007, FPT-010 and FPT-019.
 
 ## FPT-010
