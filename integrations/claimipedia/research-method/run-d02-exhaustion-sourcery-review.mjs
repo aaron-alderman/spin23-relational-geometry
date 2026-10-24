@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { createInterface } from "node:readline";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { legacyDimensionAdapter, legacyV1Projection, recordDimension, withRecordDimensions } from "./d02-record-dimension-adapter.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const generated = resolve(here, "generated");
@@ -70,7 +71,8 @@ const transformations = [
   rule({ id: "counterexample-response-determines-bulk-index", kind: "topology-reconstruction", from: "d02.projected-response", to: "d02.bulk-index", assumptions: ["deliberate invalid fixture: projected passive response detects invisible graded direct summands"], losses: ["uncoupled graded zero modes"], evidenceRefs: ["D02-RESULT.md#decoration-transport"], analogyOnly: true })
 ];
 
-const graph = { objects, transformations };
+const graph = withRecordDimensions({ objects, transformations });
+const liveV1Graph = legacyV1Projection(graph);
 const queries = [
   { id: "bounded-exhaustion-dispatch", source: "d02.rank-changing-germ", target: "d02.exhaustion-triage", maxDepth: 5 },
   { id: "undecorated-single-value", source: "d02.rank-changing-germ", target: "d02.undecorated-single-value", maxDepth: 2 },
@@ -78,6 +80,8 @@ const queries = [
   { id: "bulk-index-reconstruction", source: "d02.projected-response", target: "d02.bulk-index", maxDepth: 2 }
 ];
 
+mkdirSync(generated, { recursive: true });
+writeFileSync(resolve(generated, "d02-exhaustion-common-algebra2-graph.json"), `${JSON.stringify({ protocol: "claimipedia-d02-common-algebra2-graph/1", family: "rank-change", dimensionConvention: "dimensionless-proposal-and-review-record", recordDimension, graph, queries }, null, 2)}\n`);
 const child = spawn(node, bridgeArgs, { stdio: ["pipe", "pipe", "pipe"], windowsHide: true });
 const lines = createInterface({ input: child.stdout, crlfDelay: Infinity });
 const pending = new Map();
@@ -114,7 +118,7 @@ function payload(result) {
   return text ? JSON.parse(text) : result;
 }
 const call = async (name, args) => payload(await rpc("tools/call", { name, arguments: args }));
-const report = { protocol: "claimipedia-d02-exhaustion-sourcery-review/1", graphSha256: createHash("sha256").update(JSON.stringify(graph)).digest("hex"), queries: [], authority };
+const report = { protocol: "claimipedia-d02-exhaustion-sourcery-review/1", graphSha256: createHash("sha256").update(JSON.stringify(liveV1Graph)).digest("hex"), sourceGraphSha256: createHash("sha256").update(JSON.stringify(graph)).digest("hex"), protocolAdapter: legacyDimensionAdapter, queries: [], authority };
 
 try {
   await rpc("initialize", { protocolVersion: "2025-03-26", capabilities: {}, clientInfo: { name: "d02-exhaustion-review", version: "1" } });
@@ -125,7 +129,7 @@ try {
   const actions = operation.inputSchema?.properties?.action?.enum ?? [];
   if (!actions.includes("compose-derivation")) throw new Error("selected successor does not preserve scientific_derivation_compose");
   for (const query of queries) {
-    const result = await call("temple_system_execute_operation", { operationId: "scientific_derivation_compose", input: { action: "compose-derivation", request: { graph, query: { source: query.source, target: query.target, maxDepth: query.maxDepth } } } });
+    const result = await call("temple_system_execute_operation", { operationId: "scientific_derivation_compose", input: { action: "compose-derivation", request: { graph: liveV1Graph, query: { source: query.source, target: query.target, maxDepth: query.maxDepth } } } });
     report.queries.push({ query, result });
   }
   const positive = report.queries.find(({ query }) => query.id === "bounded-exhaustion-dispatch").result;

@@ -91,11 +91,11 @@
         "applicationAdmission": false
       },
       "commonAlgebra2DimensionFieldsPresent": {
-        "objectDimension": false,
-        "fromDimension": false,
-        "toDimension": false,
-        "dimensionRule": false,
-        "dimensionDelta": false
+        "objectDimension": true,
+        "fromDimension": true,
+        "toDimension": true,
+        "dimensionRule": true,
+        "dimensionDelta": true
       }
     },
     {
@@ -136,11 +136,11 @@
         "applicationAdmission": false
       },
       "commonAlgebra2DimensionFieldsPresent": {
-        "objectDimension": false,
-        "fromDimension": false,
-        "toDimension": false,
-        "dimensionRule": false,
-        "dimensionDelta": false
+        "objectDimension": true,
+        "fromDimension": true,
+        "toDimension": true,
+        "dimensionRule": true,
+        "dimensionDelta": true
       }
     },
     {
@@ -187,11 +187,11 @@
         "applicationAdmission": false
       },
       "commonAlgebra2DimensionFieldsPresent": {
-        "objectDimension": false,
-        "fromDimension": false,
-        "toDimension": false,
-        "dimensionRule": false,
-        "dimensionDelta": false
+        "objectDimension": true,
+        "fromDimension": true,
+        "toDimension": true,
+        "dimensionRule": true,
+        "dimensionDelta": true
       }
     }
   ],
@@ -217,7 +217,10 @@
       "dimensionChangeDeclared"
     ],
     "runnersSupplyingAllRequiredDimensionFields": [
-      "local"
+      "local",
+      "operator",
+      "rank-change",
+      "boundary"
     ]
   },
   "decision": {
@@ -227,7 +230,8 @@
     "heldOutNegativeControlsRetained": true,
     "wave72GraphOnlyNoGoUnchanged": true,
     "primaryCommonAlgebra2DimensionMigrationClosed": true,
-    "commonAlgebra2DimensionMigrationOpen": true,
+    "allFourCommonAlgebra2RecordMigrationsClosed": true,
+    "commonAlgebra2DimensionMigrationOpen": false,
     "jordanProductExtracted": false,
     "physicalOperatorAssignmentExtracted": false,
     "detectorRecordPredicted": false,
@@ -235,5 +239,5 @@
     "ot027Closed": false
   },
   "reason": "The relationship capture and the D02 transformation graphs are different source objects. The former remains an epistemic graph with zero directly admissible scientific transformations; the latter authors scientific operations with typed endpoints, assumptions, losses, evidence and bounded authority.",
-  "implication": "A real Claimipedia-to-Sourcery workflow bridge exists at protocol v1, and its primary local-theorem path now passes common-algebra-2 through an explicit dimensionless-record convention. The other three families still need dimensional migration; none of the four yet yields a graph-derived Jordan product, physical operator or detector prediction."
+  "implication": "A real Claimipedia-to-Sourcery workflow bridge exists at protocol v1, and all four path families pass common-algebra-2 through an explicit dimensionless-record convention. Record-level dimensional migration is complete; none of the four yet assigns quantity-level units or yields a graph-derived Jordan product, physical operator or detector prediction."
 }

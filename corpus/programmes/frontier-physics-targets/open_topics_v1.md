@@ -106,10 +106,13 @@ workflow therefore exists; a graph-derived Jordan algebra does not. OT-026 and
 OT-027 now reopen at the narrower boundary. [AZ-083](../admissibility/admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md)
 closes that dimension gate for the primary four-step path at the honest
 dimensionless record layer, and shows that missing or inconsistent dimension
-metadata kills the path. A declared loss-bearing projection preserves live v1
-execution. The remaining work is to migrate the other three families, expose
-units for the physical quantities represented by the records, and predict a
-withheld product identity, operator composition or calibrated detector record.
+metadata kills the path. [AZ-084](../admissibility/admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md)
+extends the result to all four families: sixteen steps pass, fourteen negative
+queries remain empty and fifteen invalid rules remain rejected. Declared
+loss-bearing projections preserve live v1 execution. Record-level migration is
+closed. The remaining work is to expose units for the physical quantities
+represented by the records and predict a withheld product identity, operator
+composition or calibrated detector record.
 
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute

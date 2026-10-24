@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The result is theoretical engineering, not yet a shared physical algebra. The operator, rank-change and boundary families still need migration. No quantity-level response units, Jordan product, physical action or detector prediction has been extracted. The next datum is finite: finish the record-level migrations, expose the actual units on one Schur-response step, and predict a withheld product identity, operator composition or calibrated record. Only a source-specific residue surviving those controls would reopen the new-physics reading.
+> The result now extends to all four D02 families. Sixteen positive steps pass common-algebra-2; fourteen overstrong queries remain empty; fifteen invalid rules remain rejected; and every family fails closed when a dimension rule is removed or a delta is corrupted. Record-level dimensional migration is closed. This is theoretical engineering, not yet a shared physical algebra: no quantity-level response units, Jordan product, physical action or detector prediction has been extracted. The next datum is finite: expose the actual units on one Schur-response step and predict a withheld product identity, operator composition or calibrated record. Only a source-specific residue surviving those controls would reopen the new-physics reading.
 
 ## What this commits us to
 
@@ -34,6 +34,7 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ## Controlling documents
 
+- **admissibility 84 all d02 families pass common algebra2 record layer** — [admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md](../../../corpus/programmes/admissibility/admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md)
 - **admissibility 83 first common algebra2 path and legacy dimension projection** — [admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md](../../../corpus/programmes/admissibility/admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md)
 - **admissibility 82 claimipedia source native paths pass live sourcery but dimension and operator gates remain** — [admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md](../../../corpus/programmes/admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md)
 - **frontier wave7 72 claimipedia sourcery typed extraction no go** — [frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md)

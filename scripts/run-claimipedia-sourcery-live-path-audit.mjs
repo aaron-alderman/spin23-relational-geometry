@@ -10,9 +10,9 @@ const processPath = resolve(root, "integrations/sourcery/mcp-admission/scientifi
 
 const families = [
   { id: "local", review: "d02-sourcery-review.json", runner: "run-d02-sourcery-review.mjs", dimensionSource: "d02-scientific-transformation-graph.mjs", positiveKey: "localCandidateSteps", negativeCount: 1 },
-  { id: "operator", review: "d02-operator-sourcery-review.json", runner: "run-d02-operator-sourcery-review.mjs", positiveKey: "positiveCandidateSteps" },
-  { id: "rank-change", review: "d02-exhaustion-sourcery-review.json", runner: "run-d02-exhaustion-sourcery-review.mjs", positiveKey: "positiveCandidateSteps" },
-  { id: "boundary", review: "d02-boundary-sourcery-review.json", runner: "run-d02-boundary-sourcery-review.mjs", positiveKey: "positiveCandidateSteps" },
+  { id: "operator", review: "d02-operator-sourcery-review.json", runner: "run-d02-operator-sourcery-review.mjs", dimensionSource: "d02-record-dimension-adapter.mjs", positiveKey: "positiveCandidateSteps" },
+  { id: "rank-change", review: "d02-exhaustion-sourcery-review.json", runner: "run-d02-exhaustion-sourcery-review.mjs", dimensionSource: "d02-record-dimension-adapter.mjs", positiveKey: "positiveCandidateSteps" },
+  { id: "boundary", review: "d02-boundary-sourcery-review.json", runner: "run-d02-boundary-sourcery-review.mjs", dimensionSource: "d02-record-dimension-adapter.mjs", positiveKey: "positiveCandidateSteps" },
 ];
 
 const composer = JSON.parse(await readFile(processPath, "utf8"));
@@ -93,6 +93,7 @@ const result = {
     heldOutNegativeControlsRetained: negativeQueries === 14 && negativeCandidates === 0 && invalidRuleIds.length === 15,
     wave72GraphOnlyNoGoUnchanged: true,
     primaryCommonAlgebra2DimensionMigrationClosed: dimensionedFamilies.includes("local"),
+    allFourCommonAlgebra2RecordMigrationsClosed: dimensionedFamilies.length === rows.length,
     commonAlgebra2DimensionMigrationOpen: dimensionedFamilies.length < rows.length,
     jordanProductExtracted: false,
     physicalOperatorAssignmentExtracted: false,
@@ -101,7 +102,7 @@ const result = {
     ot027Closed: false,
   },
   reason: "The relationship capture and the D02 transformation graphs are different source objects. The former remains an epistemic graph with zero directly admissible scientific transformations; the latter authors scientific operations with typed endpoints, assumptions, losses, evidence and bounded authority.",
-  implication: "A real Claimipedia-to-Sourcery workflow bridge exists at protocol v1, and its primary local-theorem path now passes common-algebra-2 through an explicit dimensionless-record convention. The other three families still need dimensional migration; none of the four yet yields a graph-derived Jordan product, physical operator or detector prediction.",
+  implication: "A real Claimipedia-to-Sourcery workflow bridge exists at protocol v1, and all four path families pass common-algebra-2 through an explicit dimensionless-record convention. Record-level dimensional migration is complete; none of the four yet assigns quantity-level units or yields a graph-derived Jordan product, physical operator or detector prediction.",
 };
 
 if (write) await writeFile(outputPath, `${JSON.stringify(result, null, 2)}\n`, "utf8");

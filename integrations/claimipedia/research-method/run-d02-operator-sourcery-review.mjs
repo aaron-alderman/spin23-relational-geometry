@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { createInterface } from "node:readline";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { legacyDimensionAdapter, legacyV1Projection, recordDimension, withRecordDimensions } from "./d02-record-dimension-adapter.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const generated = resolve(here, "generated");
@@ -44,7 +45,8 @@ const transformations = [
   rule({ id: "counterexample-strong-implies-norm", kind: "topology-promotion", from: "d02.strong-response", to: "d02.norm-response", assumptions: ["deliberate invalid fixture: vectorwise convergence is uniform"], losses: ["essential spectral tail"], evidenceRefs: ["D02-OPERATOR-TOPOLOGY.md#essential-spectrum-topology-obstruction"], analogyOnly: true }),
   rule({ id: "counterexample-finite-probes-determine-residue", kind: "lossy-reconstruction", from: "d02.finite-probe-ledger", to: "d02.full-operator-residue", assumptions: ["deliberate invalid fixture: finite compression plus trace is faithful"], losses: ["orthogonal hidden residue directions"], evidenceRefs: ["D02-OPERATOR-MEASURE.md#finite-probes-cannot-reconstruct-the-residue"], analogyOnly: true })
 ];
-const graph = { objects, transformations };
+const graph = withRecordDimensions({ objects, transformations });
+const liveV1Graph = legacyV1Projection(graph);
 const queries = [
   { id: "bounded-operator-dispatch", source: "d02.operator-herglotz-family", target: "d02.operator-triage", maxDepth: 5 },
   { id: "support-only", source: "d02.operator-herglotz-family", target: "d02.support-only-response", maxDepth: 2 },
@@ -53,6 +55,8 @@ const queries = [
   { id: "finite-probe-reconstruction", source: "d02.finite-probe-ledger", target: "d02.full-operator-residue", maxDepth: 2 }
 ];
 
+mkdirSync(generated, { recursive: true });
+writeFileSync(resolve(generated, "d02-operator-common-algebra2-graph.json"), `${JSON.stringify({ protocol: "claimipedia-d02-common-algebra2-graph/1", family: "operator", dimensionConvention: "dimensionless-proposal-and-review-record", recordDimension, graph, queries }, null, 2)}\n`);
 const child = spawn(node, bridgeArgs, { stdio: ["pipe", "pipe", "pipe"], windowsHide: true });
 const lines = createInterface({ input: child.stdout, crlfDelay: Infinity });
 const pending = new Map();
@@ -66,7 +70,7 @@ lines.on("line", (line) => { let message; try { message = JSON.parse(line); } ca
 function rpc(method, params = {}) { const id = nextId++; return new Promise((resolvePromise, reject) => { pending.set(id, { resolve: resolvePromise, reject }); child.stdin.write(`${JSON.stringify({ jsonrpc: "2.0", id, method, params })}\n`); }); }
 function payload(result) { if (result?.isError) throw new Error(result.content?.map((part) => part.text ?? "").join("\n") || "tool call failed"); if (result?.structuredContent) return result.structuredContent; const text = result?.content?.find((part) => part.type === "text")?.text; return text ? JSON.parse(text) : result; }
 const call = async (name, args) => payload(await rpc("tools/call", { name, arguments: args }));
-const report = { protocol: "claimipedia-d02-operator-sourcery-review/1", graphSha256: createHash("sha256").update(JSON.stringify(graph)).digest("hex"), queries: [], authority };
+const report = { protocol: "claimipedia-d02-operator-sourcery-review/1", graphSha256: createHash("sha256").update(JSON.stringify(liveV1Graph)).digest("hex"), sourceGraphSha256: createHash("sha256").update(JSON.stringify(graph)).digest("hex"), protocolAdapter: legacyDimensionAdapter, queries: [], authority };
 
 try {
   await rpc("initialize", { protocolVersion: "2025-03-26", capabilities: {}, clientInfo: { name: "d02-operator-review", version: "1" } });
@@ -76,7 +80,7 @@ try {
   const operation = await call("temple_system_describe_operation", { operationId: "scientific_derivation_compose" });
   if (!(operation.inputSchema?.properties?.action?.enum ?? []).includes("compose-derivation")) throw new Error("scientific derivation composer unavailable");
   for (const query of queries) {
-    const result = await call("temple_system_execute_operation", { operationId: "scientific_derivation_compose", input: { action: "compose-derivation", request: { graph, query: { source: query.source, target: query.target, maxDepth: query.maxDepth } } } });
+    const result = await call("temple_system_execute_operation", { operationId: "scientific_derivation_compose", input: { action: "compose-derivation", request: { graph: liveV1Graph, query: { source: query.source, target: query.target, maxDepth: query.maxDepth } } } });
     report.queries.push({ query, result });
   }
   const positive = report.queries.find(({ query }) => query.id === "bounded-operator-dispatch").result;

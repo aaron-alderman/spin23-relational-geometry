@@ -1,7 +1,7 @@
 # The first D02 path passes common-algebra-2 at the record layer
 
 **Date:** 25 October 2026  
-**Status:** primary semantic dimension gate closed; three family migrations and physical units open  
+**Status:** primary semantic dimension gate closed; remaining family migrations closed by AZ-084; physical units open
 **Topics:** OT-026, OT-027  
 **Parent:** [AZ-082 live source-native path admission](admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md)  
 **Evidence:** [common-algebra-2 migration receipt](../../../evidence/data/claimipedia-d02-common-algebra2-migration-v1.json)  
@@ -48,7 +48,7 @@ Closed:
 
 Open:
 
-- equivalent migration of the operator, rank-change and boundary-measure D02 families;
+- quantity-level follow-through after [AZ-084](admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md) closes migration of the operator, rank-change and boundary-measure D02 families;
 - units for the physical response quantities represented by the records;
 - a product identity predicted rather than authored into the wrapper;
 - a physical action or operator and a calibrated detector consequence.
@@ -57,7 +57,7 @@ OT-026 and OT-027 remain open. The result removes one infrastructure excuse: the
 
 ## Implication and look-here instruction
 
-The nearest theoretical-engineering work is mechanical but valuable: apply the same explicit record/quantity distinction to the other three admitted families and upgrade the live host when Sourcery's own lifecycle permits. The scientifically decisive work begins one layer deeper. Choose the Schur-response step, expose the actual units and normalization of its input and output operators, and withhold one compositional consequence. If the typed system predicts that consequence without encoding it as metadata, the bridge begins to constrain mathematics. If an independently calibrated detector then retains the predicted distinction, it begins to constrain physics.
+[AZ-084](admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md) completes the mechanical migration for the other three admitted families. The scientifically decisive work therefore begins one layer deeper. Choose the Schur-response step, expose the actual units and normalization of its input and output operators, and withhold one compositional consequence. If the typed system predicts that consequence without encoding it as metadata, the bridge begins to constrain mathematics. If an independently calibrated detector then retains the predicted distinction, it begins to constrain physics.
 
 ## Reproduction
 

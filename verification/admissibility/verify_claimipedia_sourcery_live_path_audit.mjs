@@ -15,7 +15,7 @@ check(audit.totals.invalidRuleFixturesRetained === 15 && audit.totals.distinctIn
 check(JSON.stringify(audit.protocolBoundary.activeResultProtocols) === JSON.stringify(["scientific-derivation-composition/1"]), "active protocol changed");
 check(audit.protocolBoundary.stricterLocalProtocol === "scientific-derivation-composition/common-algebra-2", "local strict protocol changed");
 check(audit.protocolBoundary.stricterDimensionChecksPresent.length === 5, "strict dimension checks missing");
-check(JSON.stringify(audit.protocolBoundary.runnersSupplyingAllRequiredDimensionFields) === JSON.stringify(["local"]), "primary dimension migration missing or scope drifted");
+check(JSON.stringify(audit.protocolBoundary.runnersSupplyingAllRequiredDimensionFields) === JSON.stringify(["local", "operator", "rank-change", "boundary"]), "four-family dimension migration missing or scope drifted");
 check(Object.values(audit.decision).filter(value => value === undefined).length === 0, "decision field missing");
 check(audit.decision.liveV1SourceNativeAdmissionClosed === true, "live v1 admission must pass");
 check(audit.decision.sourceNativeAssumptionLossEvidenceLedgersRetained === true, "ALE ledgers must be retained");
@@ -23,7 +23,8 @@ check(audit.decision.authorityFirewallRetained === true, "authority firewall mus
 check(audit.decision.heldOutNegativeControlsRetained === true, "negative controls must remain retained");
 check(audit.decision.wave72GraphOnlyNoGoUnchanged === true, "graph-only no-go must remain unchanged");
 check(audit.decision.primaryCommonAlgebra2DimensionMigrationClosed === true, "primary common-algebra-2 migration must be closed");
-check(audit.decision.commonAlgebra2DimensionMigrationOpen === true, "dimension migration must remain open");
+check(audit.decision.allFourCommonAlgebra2RecordMigrationsClosed === true, "four-family common-algebra-2 migration must be closed");
+check(audit.decision.commonAlgebra2DimensionMigrationOpen === false, "record-level dimension migration must be closed");
 for (const key of ["jordanProductExtracted", "physicalOperatorAssignmentExtracted", "detectorRecordPredicted", "ot026Closed", "ot027Closed"]) {
   check(audit.decision[key] === false, `${key} was overclaimed`);
 }

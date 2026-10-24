@@ -27,7 +27,7 @@ The difference is the reason attached to each movement. Sourcery can compose a p
 
 ## The open protocol boundary
 
-The active host returned protocol v1. The stricter local contract, `scientific-derivation-composition/common-algebra-2`, additionally checks exact SI base-exponent dimensions on every object and transformation through `fromDimension`, `toDimension`, `dimensionRule` and `dimensionDelta`. [AZ-083](admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md) now supplies those fields for the primary local-theorem path and passes the stricter contract. The operator, rank-change and boundary families still lack that migration.
+The active host returned protocol v1. The stricter local contract, `scientific-derivation-composition/common-algebra-2`, additionally checks exact SI base-exponent dimensions on every object and transformation through `fromDimension`, `toDimension`, `dimensionRule` and `dimensionDelta`. [AZ-083](admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md) supplies those fields for the primary local-theorem path, and [AZ-084](admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md) completes the same migration for the other three families.
 
 This matters most where a formal transformation is intended to touch physics. A path can be semantically well typed while still failing to say whether it maps voltage to voltage, response to response, energy to action, or a dimensionless claim record to another claim record. The dimension ledger prevents a persuasive path from crossing those boundaries invisibly.
 
@@ -42,7 +42,7 @@ Closed:
 
 Open:
 
-- migration of the remaining operator, rank-change and boundary families to `common-algebra-2` with explicit dimension conventions;
+- quantity-level units and normalization after AZ-084 closes record-level migration for all four families;
 - a product-, norm- or rank-preserving translation that earns the name Jordan rather than borrowing it;
 - a physical operator or action that turns a workflow relation into dynamics;
 - a held-out detector record that distinguishes the proposed operator from an ordinary programmable encoding.

@@ -227,10 +227,12 @@ the newer object shape, so a named compatibility projection erases dimension
 metadata and records that loss, while the unprojected source graph receives a
 separate v2 receipt.
 
-The operator, rank-change and boundary families still need the same migration.
-More importantly, no path yet extracts a Jordan product, assigns quantity-level
-units and a physical action, or predicts a detector record. The next bridge is
-therefore precise: complete the remaining record-level migrations, then expose
+[AZ-084](../programmes/admissibility/admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md) completes the same strict migration for the operator, rank-change and
+boundary families. Across all four paths, sixteen positive steps pass, fourteen
+overstrong queries remain empty and fifteen invalid rules remain rejected.
+Record-level dimensional migration is closed. More importantly, no path yet
+extracts a Jordan product, assigns quantity-level units and a physical action,
+or predicts a detector record. The next bridge is therefore precise: expose
 the actual physical quantities on one Schur-response step and withhold a
 product identity, operator composition or calibrated record for prediction.
 That would be theoretical engineering; a source-specific residue surviving

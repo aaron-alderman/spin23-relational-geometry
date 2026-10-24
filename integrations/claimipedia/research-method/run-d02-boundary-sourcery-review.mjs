@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { createInterface } from "node:readline";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { legacyDimensionAdapter, legacyV1Projection, recordDimension, withRecordDimensions } from "./d02-record-dimension-adapter.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const generated = resolve(here, "generated");
@@ -52,7 +53,8 @@ const transformations = [
   rule({ id: "counterexample-weak-factors-compose", kind: "nonmultiplicative-topology-promotion", from: "d02.weak-schur-factors", to: "d02.weak-schur-product", assumptions: ["deliberate invalid fixture: WOT limits commute with products and inverses"], losses: ["shift-product defect"], evidenceRefs: ["D02-BOUNDARY-SCHUR.md"], analogyOnly: true }),
   rule({ id: "counterexample-nontangential-means-all-paths", kind: "silent-approach-promotion", from: "d02.nontangential-limit", to: "d02.all-path-limit", assumptions: ["deliberate invalid fixture: a Fatou limit controls paths leaving every Stolz cone"], losses: ["sparse-spike tangential path"], evidenceRefs: ["D02-BOUNDARY-APPROACH.md"], analogyOnly: true })
 ];
-const graph = { objects, transformations };
+const graph = withRecordDimensions({ objects, transformations });
+const liveV1Graph = legacyV1Projection(graph);
 const queries = [
   { id: "bounded-boundary-dispatch", source: "d02.boundary-herglotz-response", target: "d02.boundary-triage", maxDepth: 5 },
   { id: "density-to-measure", source: "d02.ae-density-only", target: "d02.reconstructed-full-measure", maxDepth: 2 },
@@ -63,6 +65,8 @@ const queries = [
   { id: "all-paths", source: "d02.nontangential-limit", target: "d02.all-path-limit", maxDepth: 2 }
 ];
 
+mkdirSync(generated, { recursive: true });
+writeFileSync(resolve(generated, "d02-boundary-common-algebra2-graph.json"), `${JSON.stringify({ protocol: "claimipedia-d02-common-algebra2-graph/1", family: "boundary", dimensionConvention: "dimensionless-proposal-and-review-record", recordDimension, graph, queries }, null, 2)}\n`);
 const child = spawn(node, bridgeArgs, { stdio: ["pipe", "pipe", "pipe"], windowsHide: true });
 const lines = createInterface({ input: child.stdout, crlfDelay: Infinity });
 const pending = new Map();
@@ -76,7 +80,7 @@ lines.on("line", (line) => { let message; try { message = JSON.parse(line); } ca
 function rpc(method, params = {}) { const id = nextId++; return new Promise((resolvePromise, reject) => { pending.set(id, { resolve: resolvePromise, reject }); child.stdin.write(`${JSON.stringify({ jsonrpc: "2.0", id, method, params })}\n`); }); }
 function payload(result) { if (result?.isError) throw new Error(result.content?.map((part) => part.text ?? "").join("\n") || "tool call failed"); if (result?.structuredContent) return result.structuredContent; const text = result?.content?.find((part) => part.type === "text")?.text; return text ? JSON.parse(text) : result; }
 const call = async (name, args) => payload(await rpc("tools/call", { name, arguments: args }));
-const report = { protocol: "claimipedia-d02-boundary-sourcery-review/1", graphSha256: createHash("sha256").update(JSON.stringify(graph)).digest("hex"), queries: [], authority };
+const report = { protocol: "claimipedia-d02-boundary-sourcery-review/1", graphSha256: createHash("sha256").update(JSON.stringify(liveV1Graph)).digest("hex"), sourceGraphSha256: createHash("sha256").update(JSON.stringify(graph)).digest("hex"), protocolAdapter: legacyDimensionAdapter, queries: [], authority };
 
 try {
   await rpc("initialize", { protocolVersion: "2025-03-26", capabilities: {}, clientInfo: { name: "d02-boundary-review", version: "1" } });
@@ -86,7 +90,7 @@ try {
   const operation = await call("temple_system_describe_operation", { operationId: "scientific_derivation_compose" });
   if (!(operation.inputSchema?.properties?.action?.enum ?? []).includes("compose-derivation")) throw new Error("scientific derivation composer unavailable");
   for (const query of queries) {
-    const result = await call("temple_system_execute_operation", { operationId: "scientific_derivation_compose", input: { action: "compose-derivation", request: { graph, query: { source: query.source, target: query.target, maxDepth: query.maxDepth } } } });
+    const result = await call("temple_system_execute_operation", { operationId: "scientific_derivation_compose", input: { action: "compose-derivation", request: { graph: liveV1Graph, query: { source: query.source, target: query.target, maxDepth: query.maxDepth } } } });
     report.queries.push({ query, result });
   }
   const positive = report.queries.find(({ query }) => query.id === "bounded-boundary-dispatch").result;
