@@ -71,8 +71,8 @@ for another dimensionless redesign.
 | OT-033 | Real declaration-corpus adaptive census | gated by AZ-060 on the named DeclFold sources, `fold/decls.json` and the pinned Lean/Lake environment; replaces synthetic chains only after source-native occupancy and fibre data reproduce |
 | OT-036 | Microscopic capture and radiation ledger | replaces the successful toy bath with a source-native radiative or phononic channel |
 | OT-037 | Integrated-photonic selector chip | AZ-061 supplies a passing coupled-mode wedge but exposes signed-coupling, reference-port, full-wave tolerance and separate-selector gates; one fabrication-native route must now be chosen and simulated |
-| OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-071 fixes the detector budget; AZ-113 shows the official public linear ALP UFO has intervention rank two in the required three-source space, so the next calculation first needs an independent-current model export |
-| OT-048 | Five-coordinate incidence observable likelihood | AZ-081 restores the weak quotient in the source-complete MFV flavor row. AZ-113 then shows the official public UFO reaches only the slice \((c_t,c_b,c_{WW})=(x,-x,y)\): 9 of 27 settings and 3 of 6 kernel combinations. Build or locate a gauge-invariant three-control model, validate anomaly shifts and Ward identities, then run AZ-074 before detector folding; retain Belle as validation |
+| OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-071 fixes the detector budget; AZ-113 shows the official public linear ALP UFO has intervention rank two in the required three-source space. AZ-114 proves that differential detail from the same dimension-five process cannot recover the erased \((a_2,c_{WW})\) direction. The amplitude calculation still needs an independent-current export for its three-coordinate closure |
+| OT-048 | Five-coordinate incidence observable likelihood | AZ-081 restores the weak quotient in the source-complete MFV flavor row. AZ-113 shows the official public UFO reaches only 9 of 27 settings; AZ-114 closes angular, energy, polarization and detector refinement of the same dimension-five W-associated process as a route to the sixth coordinate. Build the three-control model to test the amplitude triangle, while seeking sixth-coordinate separation in a genuinely current-sensitive record, a UV condition, higher-dimensional structure or a new state |
 
 ## P2 — gated translation problems
 
@@ -143,6 +143,8 @@ a provenance-bearing nonlocal anti-automorphism, or a held-out prediction that
 selects one.
 
 [AZ-113](../admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md)
+
+[AZ-114](../admissibility/admissibility_114_more_detail_of_the_same_w_associated_process_cannot_open_the_sixth_coordinate.md) proves that the exact dimension-five map into the three W-associated amplitude coordinates has null direction \((0,0,2,1)\), and that arbitrary same-process differential or linearly folded detector records inherit it. This closes finer binning of the same process as the sixth-coordinate strategy without closing the three-coordinate factorial amplitude test.
 audits the nearest official collider implementation. Its `CaPhi` control fixes
 the normalized top and bottom ALP couplings to opposite signs, while `CWtil`
 supplies the direct weak-boson control. The resulting intervention map has rank

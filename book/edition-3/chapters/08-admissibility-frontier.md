@@ -944,7 +944,9 @@ The implication is constructive. Flavor searches remain real detectors and valua
 <a id="hot-off-the-press-the-public-model-has-one-control-too-few"></a>
 ## Hot off the press — the public model has one control too few
 
-> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
 **Provisional integration note — 25 October 2026.** The official linear ALP UFO reaches the right process family, but not the full intervention space. It exposes one `CaPhi` control for the Higgs-current direction and one `CWtil` control for direct weak-boson emission. After the known masses are stripped away, the same `CaPhi` makes the top and bottom couplings equal in magnitude and opposite in sign.
 
@@ -957,6 +959,25 @@ This means the available file can move only on the plane ((c_t,c_b,c_{WW})=(x,-x
 The result is hopeful because the missing work is now sharply bounded. Export one nonredundant gauge-invariant model with independent third-generation currents and (c_{WW}), carry the anomaly shifts into the gauge coefficients, generate every completing vertex and pass Ward tests before running the factorial design. A new-physics claim begins only after that complete model, the held-out corners and detector folding fail together; until then this is model engineering, not an anomaly.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-public-model-has-one-control-too-few-claim-3.md)
+
+<a id="hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate"></a>
+## Hot off the press — more detail cannot restore an erased coordinate
+
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The hoped-for differential escape from the weak-source quotient is now closed at the declared dimension-five order. The exact source map is \(v_u,v_d,a_2,c_{WW}\) \mapsto (c_t,c_b,\widetilde c_{WW})=(-v_u,-v_d,c_{WW}-a_2/2\). It annihilates the displacement \(0,0,2,1\) before a phase-space point, polarization or detector has been chosen.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate-claim-1.md)
+
+That ordering matters. Every angular, energy and polarization Jacobian of the same process factors through those three amplitude coordinates, so it kills the same displacement point by point. A linear detector fold can discard more information but cannot recreate this lost coordinate. The quadratic response says the same thing: pulling a three-coordinate kernel back to the four source coordinates leaves the exact null direction intact.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate-claim-2.md)
+
+The result redirects rather than ends the experiment. An independent top, bottom and weak model is still needed to run the twenty-seven settings and audit the three-coordinate amplitude triangle. But separating the current anomaly from a direct weak operator now requires a genuinely current-sensitive record, an explicit ultraviolet restriction such as \(c_{WW}=0\), higher-dimensional structure or a new state. More detail of the same measurement is engineering improvement; a different retained distinction is the frontier.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate-claim-3.md)
 
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
 ## Hot off the press — the hydrodynamic cone has poles

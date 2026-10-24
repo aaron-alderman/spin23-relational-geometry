@@ -2,9 +2,9 @@
 
 _Expanded claim page · The admissibility frontier_
 
-> **Claim status — [◎ Interpretive map](../reading-key/status-interpretive.md)** — Organizes thought or workflow but is not evidence for a physical claim.
+> **Claim status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
-> **Research function — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+> **Research function — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
 ## Exact assertion
 
@@ -12,14 +12,14 @@ _Expanded claim page · The admissibility frontier_
 
 ## What this commits us to
 
-The claim supplies a map or analogy. It becomes a derivation only after an explicit carrier-preserving map and invariant are given.
+A specified candidate class fails under explicit assumptions. The conclusion does not automatically extend to mechanisms outside that class.
 
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the public model has one control too few”.
 - **Unit of argument:** assertion 2 of 3 in this section.
-- **Evidence posture:** Treat the passage as organization or analogy unless a cited carrier-preserving map is supplied.
-- **Research move:** joins several typed results while letting the weakest edge set the claim.
+- **Evidence posture:** Check the assumptions defining the ruled-out candidate class; the no-go does not automatically extend beyond that class.
+- **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
 ## Verification route
 
@@ -30,7 +30,7 @@ The claim supplies a map or analogy. It becomes a derivation only after an expli
 
 ## What would move or defeat this claim
 
-Provide an explicit map that preserves the claimed structure, then identify an observable consequence that the analogy alone did not supply.
+Break one of the no-go assumptions in a controlled construction, or show that the alleged obstruction does not follow within its stated class.
 
 ## Controlling documents
 

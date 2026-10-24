@@ -316,6 +316,8 @@ const sectionTaxonomy = {
   "Hot off the press — change the record, not just the energy": "experiment",
   "Hot off the press — ask for the likelihood, not the plot": "obstruction",
   "Hot off the press — a term is not a detector row": "obstruction",
+  "Hot off the press — the public model has one control too few": "obstruction",
+  "Hot off the press — more detail cannot restore an erased coordinate": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -413,6 +415,8 @@ const sectionArchetype = {
   "Hot off the press — change the record, not just the energy": "builder",
   "Hot off the press — ask for the likelihood, not the plot": "auditor",
   "Hot off the press — a term is not a detector row": "auditor",
+  "Hot off the press — the public model has one control too few": "auditor",
+  "Hot off the press — more detail cannot restore an erased coordinate": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -838,6 +842,15 @@ admissibilitySections.splice(orientedSeamIndex + 35, 0, [
 ]);
 
 admissibilitySections.splice(orientedSeamIndex + 36, 0, [
+  "Hot off the press — more detail cannot restore an erased coordinate",
+  [
+    "**Provisional integration note — 25 October 2026.** The hoped-for differential escape from the weak-source quotient is now closed at the declared dimension-five order. The exact source map is \\(v_u,v_d,a_2,c_{WW}\\) \\mapsto (c_t,c_b,\\widetilde c_{WW})=(-v_u,-v_d,c_{WW}-a_2/2\\). It annihilates the displacement \\(0,0,2,1\\) before a phase-space point, polarization or detector has been chosen.",
+    "That ordering matters. Every angular, energy and polarization Jacobian of the same process factors through those three amplitude coordinates, so it kills the same displacement point by point. A linear detector fold can discard more information but cannot recreate this lost coordinate. The quadratic response says the same thing: pulling a three-coordinate kernel back to the four source coordinates leaves the exact null direction intact.",
+    "The result redirects rather than ends the experiment. An independent top, bottom and weak model is still needed to run the twenty-seven settings and audit the three-coordinate amplitude triangle. But separating the current anomaly from a direct weak operator now requires a genuinely current-sensitive record, an explicit ultraviolet restriction such as \\(c_{WW}=0\\), higher-dimensional structure or a new state. More detail of the same measurement is engineering improvement; a different retained distinction is the frontier.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 37, 0, [
   "Hot off the press — the hydrodynamic cone has poles",
   [
     "**Provisional integration note — 25 October 2026.** The hydrodynamic rank witness now has a full effective response rather than three positive shapes. The tensor term is local at first derivative order, the shear channel has a diffusive pole, and the sound channel has two attenuated propagating poles. At the declared point every pole is retarded, every residue is nonzero and the assembled two-port spectral matrix is positive definite.",
@@ -1191,6 +1204,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — ask for the likelihood, not the plot": ["corpus/programmes/admissibility/admissibility_80_belle_public_likelihood_release_gate.md", "corpus/programmes/admissibility/admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md", "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md"],
   "Hot off the press — a term is not a detector row": ["corpus/programmes/admissibility/admissibility_81_source_complete_fcnc_kernel_restores_the_weak_quotient.md", "corpus/programmes/admissibility/admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md"],
   "Hot off the press — the public model has one control too few": ["corpus/programmes/admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md", "corpus/programmes/admissibility/admissibility_75_operator_basis_covariance_and_cycle_boundary.md"],
+  "Hot off the press — more detail cannot restore an erased coordinate": ["corpus/programmes/admissibility/admissibility_114_more_detail_of_the_same_w_associated_process_cannot_open_the_sixth_coordinate.md", "corpus/programmes/admissibility/admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md", "corpus/programmes/admissibility/admissibility_77_current_only_rg_stability_and_scale_sweep_no_go.md"],
   "Hot off the press — the hydrodynamic cone has poles": ["corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md", "corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md", "corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md", "corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md", "corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md", "corpus/programmes/admissibility/admissibility_98_gaussian_hydrodynamic_source_frame_invariance.md", "corpus/programmes/admissibility/admissibility_97_hydrodynamic_pole_residue_response_ledger.md", "corpus/claims/0200-0299/212_hydrodynamic_stress_map_can_have_local_rank_three.md", "corpus/claims/0200-0299/213_fixed_temperature_kms_herglotz_schur_sewing.md"],
   "Hot off the press — memory depends on the detector scale": ["corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md", "corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md", "corpus/claims/0200-0299/201_recursive_schur_jordan_descent_and_functorial_sewing.md"],
   "Hot off the press — a zero mode does not fix its detector weight": ["corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md", "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"],

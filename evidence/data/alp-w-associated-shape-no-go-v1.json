@@ -1,0 +1,137 @@
+{
+  "protocol": "alp-w-associated-shape-no-go/1",
+  "packet": "AZ-114",
+  "targets": [
+    "OT-047",
+    "OT-048"
+  ],
+  "parent": "AZ-113",
+  "sourceConvention": {
+    "reference": "Bauer et al., arXiv:2012.12272v2, Eqs. (1), (9)-(11)",
+    "sourceCoordinates": [
+      "v_u",
+      "v_d",
+      "a_2",
+      "c_WW"
+    ],
+    "amplitudeCoordinates": [
+      "c_t",
+      "c_b",
+      "ctilde_WW"
+    ],
+    "equations": [
+      "c_t=-v_u",
+      "c_b=-v_d",
+      "ctilde_WW=c_WW-a_2/2"
+    ],
+    "sourceToAmplitude": [
+      [
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -0.5,
+        1
+      ]
+    ],
+    "mapRank": 3,
+    "blindDirection": [
+      0,
+      0,
+      2,
+      1
+    ],
+    "blindImage": [
+      0,
+      0,
+      0
+    ]
+  },
+  "pointwiseCertificate": {
+    "differentialBins": 8,
+    "measuredJacobianRank": 3,
+    "sourceJacobianRank": 3,
+    "sourceBlindResidual": 0,
+    "detectorRecords": 5,
+    "detectorJacobianRank": 3,
+    "detectorBlindResidual": 0,
+    "theorem": "For every phase-space point and polarization, J_source=J_measured*T, so J_source*n=0. Any linear detector fold D preserves the null direction because D*J_source*n=0."
+  },
+  "quadraticCertificate": {
+    "measuredKernel": [
+      [
+        9,
+        -3,
+        6
+      ],
+      [
+        -3,
+        4,
+        -4
+      ],
+      [
+        6,
+        -4,
+        16
+      ]
+    ],
+    "measuredKernelRank": 3,
+    "sourceKernel": [
+      [
+        9,
+        -3,
+        3,
+        -6
+      ],
+      [
+        -3,
+        4,
+        -2,
+        4
+      ],
+      [
+        3,
+        -2,
+        4,
+        -8
+      ],
+      [
+        -6,
+        4,
+        -8,
+        16
+      ]
+    ],
+    "sourceKernelRank": 3,
+    "sourceKernelBlindResidual": 0,
+    "congruence": "K_source=T^T K_measured T"
+  },
+  "factorialCertificate": {
+    "measuredSettings": 27,
+    "allMeasuredSettingsReachable": true,
+    "allShiftedRepresentativesEquivalent": true,
+    "affineDegeneracy": "Every one of the 27 measured settings represents the source line x+lambda*(0,0,2,1)."
+  },
+  "decision": {
+    "az074StillIdentifiesThreeAmplitudeCoordinates": true,
+    "sameProcessDifferentialShapeSeparatesA2FromCww": false,
+    "polarizationOrBinningLiftsBlindDirection": false,
+    "detectorFoldingLiftsBlindDirection": false,
+    "dimensionFiveProcessClassNoGo": true,
+    "amplitudeComputed": false,
+    "newPhysicsEvidence": false
+  },
+  "scope": "The no-go applies to source-complete observables whose dimension-five ALP dependence factors through (c_t,c_b,ctilde_WW), including arbitrary differential bins and polarizations of the same W-associated process. It does not cover higher-dimensional operators, new light states, a UV boundary condition, or a genuinely different record sensitive to another fermion-current invariant.",
+  "implication": "The 27-setting W-associated calculation remains valuable for identifying the three amplitude coordinates and testing closure, but it cannot by itself decide whether ctilde_WW came from a_2 or a direct c_WW. The sixth-coordinate detector must change the physical record, not merely retain more kinematics of the same factorized amplitude.",
+  "nextGate": "Choose an independent current-sensitive record (for example a lepton/neutrino or other flavor coordinate) and transport it with the same running/matching dictionary, or impose and test a UV condition such as c_WW=0. Reopen the same-process route only with a declared higher-dimensional operator or new state that breaks the factorization and survives basis-equivalence and Ward tests."
+}
