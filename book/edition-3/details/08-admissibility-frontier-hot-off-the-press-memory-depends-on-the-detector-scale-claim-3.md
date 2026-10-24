@@ -42,4 +42,4 @@ Locate a mismatched definition, an omitted assumption, a failed certificate step
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-memory-depends-on-the-detector-scale) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-2.md) · [Next claim →](08-admissibility-frontier-the-third-term-is-the-mediator-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-memory-depends-on-the-detector-scale) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight-claim-1.md)

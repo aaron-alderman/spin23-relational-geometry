@@ -87,6 +87,7 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 - **admissibility 102 nonlinear stochastic frame and noise induced drift** — [admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md](../../../corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md)
 - **admissibility 103 causal stable hydrodynamic relaxation wedge** — [admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md](../../../corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md)
 - **admissibility 104 relaxation auxiliary gaussian kms completion** — [admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md)
+- **admissibility 105 fixed index defect information no go** — [admissibility_105_fixed_index_defect_information_no_go.md](../../../corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

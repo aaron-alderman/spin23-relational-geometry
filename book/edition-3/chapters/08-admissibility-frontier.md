@@ -70,6 +70,23 @@ The exact two-stage defect identity and five-step telescoping bound say how much
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-3.md)
 
+<a id="hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight"></a>
+## Hot off the press — a zero mode does not fix its detector weight
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** A minimal chiral wall was deformed through six profiles while its one zero mode, signed index and nonzero gap were held fixed. The centre-port residue nevertheless changed by more than a factor of three, and localization changed with it. A protected pole therefore does not supply a protected detector weight.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight-claim-1.md)
+
+Raw zero-mode phase also fails: a unitary site gauge changes it without changing the spectrum or any intensity. Sublattice support remains exact, but in this carrier it is simply the signed chiral index written as a detector statement. Counting it again as information beyond the index would duplicate the same protection.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight-claim-2.md)
+
+The practical implication is a no-go and a new target. The minimal SSH or Jackiw–Rebbi wall cannot close the beyond-index frontier. A reopening must add an independently protected crystalline representation, projective label, multichannel scattering eigenphase or non-Abelian datum, then hold the signed index fixed while trying to scramble that extra record.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 
@@ -912,6 +929,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md](../../../corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md)
 - [admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md](../../../corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md)
 - [admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md)
+- [admissibility_105_fixed_index_defect_information_no_go.md](../../../corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md)
 
 ---
 
