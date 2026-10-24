@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-link-span-spin23-carrier/1",
+  "carrier": {
+    "source": "linear span of the six 3x3 permutation-link vacua",
+    "dimension": 5,
+    "decomposition": "R singlet plus End(A2)",
+    "representationMeaning": "the image of the three-point permutation representation of R[S3], with the absent sign irrep removed",
+    "adaptedForm": "X = diag(a,R) in the common-line plus trace-zero-plane basis, with R in M2(R)"
+  },
+  "harmonicRestriction": {
+    "underMixedC6Step": "1 plus a fundamental real two-plane plus a second-harmonic real two-plane",
+    "nonzeroFourierModes": [0, 1, 2, 4, 5],
+    "absentFourierMode": 3,
+    "interpretation": "sheet parity is not an independent linear mode; it is recovered nonlinearly by determinant"
+  },
+  "quadraticForm": {
+    "coordinates": ["a", "r00", "r01", "r10", "r11"],
+    "formula": "Q=det(R)-a^2=r00*r11-r01*r10-a^2",
+    "signature": [2, 3],
+    "normalizationBoundary": "the relative positive scale between det(R) and a^2 is not fixed by the finite representation; the signature is stable",
+    "orientationBoundary": "det(R) is a cross-carrier oriented-area comparison and requires correlated orientations of the two A2 planes"
+  },
+  "vacuumCausalClasses": {
+    "evenPermutationVacua": {"count": 3, "a": 1, "detR": 1, "Q": 0},
+    "oddPermutationVacua": {"count": 3, "a": 1, "detR": -1, "Q": -2},
+    "warning": "the mixed C6 step exchanges these classes and therefore does not preserve Q"
+  },
+  "symmetryBoundary": {
+    "preservesQ": "the orientation-correlated subgroup of S3_family x S3_placement, including the vacuum diagonal S3",
+    "doesNotPreserveQ": "an independent reflection on only one endpoint and the parity-changing mixed C6 step",
+    "spinStatement": "the normalized carrier is a real quadratic space of type (2,3), so its full connected isometry spin cover would be Spin(2,3); the corpus has not derived that full isometry group as a physical symmetry"
+  },
+  "status": {
+    "quadraticCarrierEstablished": true,
+    "fullSpin23ActionDerived": false,
+    "physicalMetricSelected": false,
+    "physicalAdmission": false
+  },
+  "evidenceRefs": [
+    "corpus/programmes/admissibility/admissibility_14_relative_frame_link_and_spontaneous_selection.md",
+    "corpus/programmes/admissibility/admissibility_15_hopf_hexagon_as_relative_frame_vacuum_orbit.md",
+    "corpus/claims/1400-1499/1486_the_s3_family_commutant_is_scalar_so_a_cabibbo_rotator_requires_a_new_spurion.md"
+  ],
+  "verdict": "The minimal linear carrier of the six relative frames is five-dimensional and admits a natural orientation-dependent quadratic form of signature (2,3). This explains a Spin(2,3)-shaped envelope but does not derive Spin(2,3) dynamics."
+}

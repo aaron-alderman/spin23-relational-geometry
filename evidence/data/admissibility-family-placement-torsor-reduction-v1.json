@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-family-placement-torsor-reduction/1",
+  "problem": {
+    "familyVertices": ["e", "mu", "tau"],
+    "placementVertices": ["L0", "L1", "L2"],
+    "rawBijections": 6,
+    "moduleIdentity": "delta_alpha = -3 p_i after a chosen bijection",
+    "physicalAdmission": false
+  },
+  "availableData": [
+    {
+      "id": "charged-lepton-simple-spectrum",
+      "effect": "canonically labels the three family projectors",
+      "remainingBijections": 6,
+      "boundary": "labels every candidate but supplies no family-to-placement correspondence"
+    },
+    {
+      "id": "nonzero-jarlskog-orientation",
+      "effect": "distinguishes a flavour frame from its CP-conjugate orientation",
+      "remainingBijections": 6,
+      "boundary": "a neutral CP-odd scalar does not by itself correlate the flavour orientation with placement orientation"
+    },
+    {
+      "id": "nufit61-texture-compatibility",
+      "effect": "excludes the electron-selected inverted-ordering branch over the recorded marginal box",
+      "remainingBijections": 6,
+      "boundary": "electron, muon and tau choices remain open in at least one ordering or sampled region; this is pruning, not selection"
+    },
+    {
+      "id": "one-projector-effective-action",
+      "effect": "none",
+      "remainingBijections": 6,
+      "boundary": "U(3) covariance makes the action constant on the rank-one projector orbit"
+    },
+    {
+      "id": "second-hermitian-response",
+      "effect": "aligns a projector with an eigenframe by minimum variance",
+      "remainingBijections": 6,
+      "boundary": "one tensor leaves three eigenprojector minima; common family-space typing and weights remain underived"
+    }
+  ],
+  "conditionalReductionLadder": [
+    {
+      "stage": "raw",
+      "conditions": [],
+      "remainingBijections": 6,
+      "groupShape": "S3 torsor",
+      "status": "established"
+    },
+    {
+      "stage": "orientation-correlated",
+      "conditions": ["a physical law correlates family and placement orientation parities"],
+      "remainingBijections": 3,
+      "groupShape": "C3 torsor",
+      "status": "conditional-not-derived"
+    },
+    {
+      "stage": "basepoint-correlated",
+      "conditions": ["a physical law pairs one named family vertex with one named placement vertex"],
+      "remainingBijections": 2,
+      "groupShape": "C2 torsor",
+      "status": "conditional-not-derived"
+    },
+    {
+      "stage": "orientation-and-basepoint-correlated",
+      "conditions": [
+        "a physical law correlates family and placement orientation parities",
+        "a physical law pairs one named family vertex with one named placement vertex"
+      ],
+      "remainingBijections": 1,
+      "groupShape": "unique map",
+      "status": "conditional-not-derived"
+    }
+  ],
+  "factorizedMissingData": {
+    "orientationCorrelation": "a cross-carrier pseudoscalar or oriented intertwiner whose sign transforms on both triangles",
+    "basepointCorrelation": "a cross-carrier rank-one incidence or coupling that pairs one family vertex with one placement vertex",
+    "warning": "local labels plus a local orientation are not a cross-carrier identification"
+  },
+  "evidenceRefs": [
+    "corpus/claims/1000-1099/1098_the_family_B_minus_3Li_orbit_is_exactly_the_trace_zero_placement_A2_module_but_the_intertwiner_is_a_six_choice_label_torsor.md",
+    "corpus/claims/1000-1099/1099_the_charged_lepton_Dirac_spectrum_canonically_labels_all_three_family_projectors_but_neither_selects_one_B_minus_3Li_vertex_nor_generates_its_charge_three_flavon.md",
+    "corpus/claims/0100-0199/164_exchange_paired_yukawas_and_cp_orientation_gate.md",
+    "corpus/claims/1100-1199/1196_no_u3_covariant_effective_action_of_one_projector_can_select_its_orientation_so_closure_requires_a_second_family_tensor.md",
+    "corpus/claims/1100-1199/1197_the_minimum_variance_response_functional_is_a_canonical_relative_selector_but_standard_model_family_spaces_and_weights_remain_noncanonical.md",
+    "corpus/claims/1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md",
+    "evidence/data/spin23-selected-flavour-texture-zero-nufit61.json"
+  ],
+  "verdict": "The nearest algebraic edge remains physically unadmitted. Its six-choice obstruction is now resolved into an orientation-correlation gate and a basepoint-correlation gate."
+}

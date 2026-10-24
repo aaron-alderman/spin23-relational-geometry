@@ -1,0 +1,81 @@
+{
+  "schema": "admissibility.physical-energy-current-gate/1",
+  "date": "2026-10-24",
+  "admissionVerdict": "OPERATOR_CONSTRUCTION_SPECIFIED_IMPLEMENTATION_AND_PERIODIC_GAUGE_OPEN",
+  "construction": {
+    "hamiltonianDecomposition": "H=sum_a h_a with each Hermitian term tagged by a support centre r_a",
+    "directedTransfer": "j[a->b]=i[h_a,h_b]",
+    "localContinuity": "d h_a/dt=-sum_b j[a->b]",
+    "uniformCurrent": "J_E^mu=(i/2) sum_ab (r_b^mu-r_a^mu)[h_a,h_b]=i[H,P_E^mu]",
+    "energyPolarization": "P_E^mu=sum_a r_a^mu h_a",
+    "periodicRule": "Do not use wrapped Cartesian coordinates naively; validate an oriented seam/twist or minimum-image current against an open-cluster continuity oracle."
+  },
+  "codeAudit": {
+    "repository": "https://github.com/djfrat/Planckian-tJ",
+    "file": "EDSquare-tJ-LR-Cloop-proxy.py",
+    "commitSha": "95fb9ceeb76de1210a86691c6fecd0e36ee0d264",
+    "observedHamiltonianChannels": [
+      "nearest-neighbour hopping t",
+      "next-nearest-neighbour hopping t-prime",
+      "nearest-neighbour exchange J",
+      "next-nearest-neighbour exchange J-prime",
+      "Ewald-treated long-range density interaction V",
+      "twisted-boundary Peierls phases"
+    ],
+    "presentCurrent": "charge current from flux derivatives of tagged hopping terms",
+    "missingCurrent": "no source-native physical energy-current builder from the full tagged Hamiltonian decomposition",
+    "implementationConsequence": "The energy current must include commutators among every noncommuting tagged channel; copying a nearest-neighbour t-J formula would omit t-prime, J-prime, V and boundary contributions."
+  },
+  "proxyFirewall": {
+    "operator": "J_E_proxy={H,J_N}/2",
+    "exactMatrixElementConstraint": "<m|J_E_proxy|n>=(E_m+E_n)<m|J_N|n>/2",
+    "energyZeroShift": "H->H+cI gives J_E_proxy->J_E_proxy+cJ_N while i[H,P_E] is unchanged",
+    "allowedUse": "matrix-estimator, covariance, positivity and binning plumbing only",
+    "forbiddenUse": "physical thermoelectric rank, heat transport or new-physics inference"
+  },
+  "implementationPlan": [
+    "Refactor the Hamiltonian builder so every sparse contribution carries coefficient, support, centre, displacement, boundary winding and interaction-family tags.",
+    "Build small-cluster h_a matrices and generate j_ab=i[h_a,h_b] only for overlapping or otherwise noncommuting terms.",
+    "Verify Hermiticity, antisymmetry, local continuity and equality with i[H,P_E] on open clusters.",
+    "Introduce a periodic seam/twist convention and test seam translation and local-energy repartition as gauge-sensitivity suites.",
+    "Apply J_N and J_E to the same random vectors, retain complex cross spectra and use identical Lanczos samples and bins.",
+    "Report C_NN, C_NE, C_EE, eigenvalues, determinant and rho with bootstrap covariance over random vectors and flux samples.",
+    "Repeat over temperature, filling, size, broadening and energy-density gauges before interpreting low rank."
+  ],
+  "promotionGates": [
+    "physical-current implementation passes the open-cluster continuity oracle",
+    "periodic results are stable under seam translation within finite-size uncertainty",
+    "response matrices are Hermitian positive semidefinite within sampled covariance",
+    "rank conclusions survive energy-density repartition, bin-width and random-vector resampling",
+    "the proxy and physical-current outputs are reported side by side and are statistically distinguishable"
+  ],
+  "failureInterpretation": {
+    "rankOnePhysical": "A single dissipative transport combination dominates in the tested window; this is useful strange-metal structure but not Spin(2,3) evidence.",
+    "rankTwoPhysical": "A genuine interior two-current response is present; test congruence, scaling and cross-channel predictions next.",
+    "indefiniteMatrix": "Estimator, complex cross-spectrum convention or sampling has failed; no physical interpretation is allowed.",
+    "gaugeSensitive": "Finite-size/boundary definition is unresolved; enlarge clusters or reformulate the periodic current.",
+    "noPlanckianWindow": "The original scalar phenomenology does not extend to the full thermoelectric sector; retain the negative bound."
+  },
+  "certificate": {
+    "model": "three-level exact local-term witness",
+    "checks": [
+      "Hamiltonian reconstruction",
+      "local continuity",
+      "global conservation",
+      "polarization/current-graph equality",
+      "Hermiticity",
+      "physical-current energy-zero invariance",
+      "proxy shift identity",
+      "positive two-current spectral matrix"
+    ],
+    "tolerances": {"matrix": 1e-12, "psd": 1e-12},
+    "minimumProxyPhysicalDistance": 0.1
+  },
+  "sources": [
+    {"title": "Planckian-tJ source", "url": "https://github.com/djfrat/Planckian-tJ"},
+    {"title": "Strange metal behaviour from underlying bad metallicity", "url": "https://www.nature.com/articles/s41567-026-03441-x"},
+    {"title": "Lattice energy-current formalism used for resonant phonon thermal Hall", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9674268/"},
+    {"title": "Transport and conservation laws", "url": "https://arxiv.org/abs/cond-mat/9611007"},
+    {"title": "Thermal Transport for Many Body Tight-Binding Models", "url": "https://arxiv.org/abs/cond-mat/0211538"}
+  ]
+}

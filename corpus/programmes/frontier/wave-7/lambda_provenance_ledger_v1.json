@@ -1,0 +1,71 @@
+{
+  "schema": "wall-selector-lambda-provenance/1",
+  "date": "2026-10-24",
+  "coefficient": "lambda in V_bridge=-lambda*w*chi(P,Y)",
+  "currentVerdict": "effective_mechanism_closed_fundamental_coefficient_not_derived",
+  "routes": [
+    {
+      "id": "LP-001",
+      "route": "factorized_wall_face_spin_carrier",
+      "status": "exact_zero_without_bridge",
+      "result": "lambda=0 because wall chirality and face response occupy commuting factors",
+      "source": "corpus/programmes/lane-expansion/programme_lane_expansion_06_wall_reversal_flips_helicity_but_not_the_spin_summed_h2r_face_response.md"
+    },
+    {
+      "id": "LP-002",
+      "route": "minimal_gauge_linked_wall",
+      "status": "exact_zero_in_minimal_model",
+      "result": "grading cancels squared-operator cross terms; covariance and passivity do not generate lambda",
+      "source": "corpus/claims/0200-0299/232_gauge_linked_wall_hamiltonian_preserves_covariance_and_passivity.md"
+    },
+    {
+      "id": "LP-003",
+      "route": "standard_model_anomaly_inflow",
+      "status": "does_not_fix_local_coefficient",
+      "result": "anomaly consistency does not derive the finite gauge-invariant wall-selector bridge",
+      "source": "corpus/claims/0200-0299/228_one_standard_model_generation_passes_domain_wall_anomaly_gate.md"
+    },
+    {
+      "id": "LP-004",
+      "route": "peirce_to_sterile_linear_intertwiner",
+      "status": "exact_no_go",
+      "result": "the rephasing-equivariant Hom space is zero",
+      "source": "corpus/claims/1400-1499/1463_the_rephasing_equivariant_peirce_to_majorana_linear_hom_vanishes_and_every_charge_two_repair_collapses_the_wall_pair.md"
+    },
+    {
+      "id": "LP-005",
+      "route": "charge_correct_quadratic_peirce_repair",
+      "status": "exact_projective_collapse",
+      "result": "opposite wall-selected source rays map to the same target projective ray",
+      "source": "corpus/claims/1400-1499/1463_the_rephasing_equivariant_peirce_to_majorana_linear_hom_vanishes_and_every_charge_two_repair_collapses_the_wall_pair.md"
+    },
+    {
+      "id": "LP-006",
+      "route": "full_wall_scalar_cross_couplings",
+      "status": "allowed_but_free_counterterm",
+      "result": "cross-couplings are symmetry allowed and require a complete renormalization and matrix-Hessian packet",
+      "source": "corpus/claims/1400-1499/1465_the_full_wall_reader_has_an_exact_positive_stability_margin_but_the_zero_cross_coupling_surface_is_not_symmetry_closed.md"
+    },
+    {
+      "id": "LP-007",
+      "route": "analogue_or_material_interface",
+      "status": "empirical_matching_target",
+      "result": "lambda may be measured from conventional interface interactions but is not thereby universal",
+      "source": "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md"
+    }
+  ],
+  "reopenGates": [
+    "source_native_primitive_carrier",
+    "second_phase_bearing_datum",
+    "gauge_complete_microscopic_matching_and_rg_packet",
+    "explicit_quantized_descent_to_the_bridge",
+    "empirical_same_carrier_closure"
+  ],
+  "forbiddenPromotions": [
+    "symmetry_allowed_implies_predicted",
+    "anomaly_consistent_implies_nonzero_lambda",
+    "mode_count_implies_orientation_transport",
+    "effective_fit_implies_universal_coefficient"
+  ]
+}
+

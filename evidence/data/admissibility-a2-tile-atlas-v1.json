@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-a2-typed-tile-atlas/1",
+  "nodes": [
+    {
+      "id": "contextual",
+      "label": "Finite contextual admission",
+      "signature": {"domain": "three unlabeled relation sites", "rank": "3x3 endomorphism", "basis": "site labels", "regime": "exact finite", "symmetry": "S3 reduced to C3 by orientation", "support": "relation graph"},
+      "coordinates": {"even": "C", "odd": "K", "singlet": "common site mode", "relational": "trace-zero A2 plane"},
+      "status": "established-local",
+      "evidenceRefs": ["evidence/data/admissibility-finite-contextual-casimir-v1.json"]
+    },
+    {
+      "id": "family-placement",
+      "label": "Family-to-placement A2 module",
+      "signature": {"domain": "family augmentation and placement labels", "rank": "3x3 module map", "basis": "three family or placement vertices", "regime": "exact representation", "symmetry": "S3", "support": "trace-zero label plane"},
+      "coordinates": {"even": "D=-C and D^T D=3C", "odd": "not selected", "singlet": "label sum", "relational": "B-3L_i orbit"},
+      "status": "established-local-label-torsor-open",
+      "evidenceRefs": ["verification/prove/prove_the_family_to_placement_A2_intertwiner_and_label_torsor.mjs"]
+    },
+    {
+      "id": "furey-incidence",
+      "label": "Furey signed K3 selector",
+      "signature": {"domain": "compressed Furey incidence coordinates", "rank": "3x3 response classifier", "basis": "u,d,uc after declared sign switch", "regime": "exact finite classifier", "symmetry": "equal-primary cyclic relation", "support": "incidence weights"},
+      "coordinates": {"even": "2I+C", "odd": "absent from the selected response", "singlet": "selected low line", "relational": "transverse doublet"},
+      "status": "established-local-action-open",
+      "evidenceRefs": ["verification/derive/derive_signed_k3_selector_from_furey_triple_incidence_weights_and_cycle_closure.mjs"]
+    },
+    {
+      "id": "partial-sewing",
+      "label": "Typed partial-sewing environment",
+      "signature": {"domain": "reference and residual environment", "rank": "1 plus 2 dimensional module", "basis": "reference ray plus residual ports", "regime": "rational-inner finite realization", "symmetry": "C2 local face and C3 face orbit", "support": "environment dilation"},
+      "coordinates": {"even": "A2 residual metric", "odd": "face-orbit order declared", "singlet": "shared reference ray", "relational": "two residual ports"},
+      "status": "established-local-ontology-conditional",
+      "evidenceRefs": ["verification/construct/construct_the_typed_partial_sewing_with_one_reference_ray_and_an_a2_residual_doublet.mjs"]
+    },
+    {
+      "id": "su3-small-circle",
+      "label": "Semiclassical SU3 affine-root tile",
+      "signature": {"domain": "dual-photon Cartan embedding", "rank": "3x3 Hessian on redundant embedding", "basis": "affine-root cyclic order", "regime": "center-stabilized small R3xS1", "symmetry": "affine A2", "support": "monopole and bion potential"},
+      "coordinates": {"even": "C and 3C Hessians", "odd": "root-incidence ordering", "singlet": "redundant common shift", "relational": "two physical dual-photon modes"},
+      "status": "established-controlled-regime",
+      "evidenceRefs": ["evidence/data/spin23-semiclassical-continuity-mass-gap-gate.json"]
+    },
+    {
+      "id": "a11-fixture",
+      "label": "Passive three-setting conductance fixture",
+      "signature": {"domain": "sector-setting by branch-weight table", "rank": "3x3 rectangular typing despite square dimensions", "basis": "three settings versus three branches", "regime": "synthetic control fixture", "symmetry": "engineered cyclic order", "support": "switched passive circuit"},
+      "coordinates": {"even": "7I-3C/2", "odd": "K/2", "singlet": "uniform control component", "relational": "first cyclic harmonic"},
+      "status": "established-synthetic-not-fundamental",
+      "evidenceRefs": ["evidence/data/a11-platform-realization-comparison.json"]
+    }
+  ],
+  "edges": [
+    {
+      "id": "contextual-family",
+      "from": "contextual", "to": "family-placement", "kind": "representation-intertwiner-family",
+      "algebraicallyExact": true, "physicalAdmission": false, "orientationAction": "unselected", "labelMaps": 6,
+      "changes": ["domain", "basis"], "assumptions": ["choose one family-to-placement bijection"], "losses": [],
+      "blocker": "No source-native basepoint or orientation chooses one of the six maps.",
+      "evidenceRefs": ["verification/prove/prove_the_family_to_placement_A2_intertwiner_and_label_torsor.mjs"]
+    },
+    {
+      "id": "contextual-furey",
+      "from": "contextual", "to": "furey-incidence", "kind": "affine-operator-identification",
+      "algebraicallyExact": true, "physicalAdmission": false, "orientationAction": "forgotten", "labelMaps": 1,
+      "changes": ["domain", "basis", "operator offset"], "assumptions": ["declared sign conjugation", "equal primary incidence weights"], "losses": ["orientation-odd coefficient"],
+      "blocker": "The incidence classifier lacks a common source action, trace or Ward derivation.",
+      "evidenceRefs": ["verification/derive/derive_signed_k3_selector_from_furey_triple_incidence_weights_and_cycle_closure.mjs"]
+    },
+    {
+      "id": "contextual-sewing",
+      "from": "contextual", "to": "partial-sewing", "kind": "module-decomposition-identification",
+      "algebraicallyExact": true, "physicalAdmission": false, "orientationAction": "conditional face ordering", "labelMaps": 6,
+      "changes": ["domain", "basis", "support"], "assumptions": ["identify sites with environment rays"], "losses": ["full relative port identification"],
+      "blocker": "The environment ontology and physical site-to-port map are not derived.",
+      "evidenceRefs": ["verification/construct/construct_the_typed_partial_sewing_with_one_reference_ray_and_an_a2_residual_doublet.mjs"]
+    },
+    {
+      "id": "contextual-su3",
+      "from": "contextual", "to": "su3-small-circle", "kind": "root-laplacian-normal-form",
+      "algebraicallyExact": true, "physicalAdmission": false, "orientationAction": "root order supplied", "labelMaps": 6,
+      "changes": ["domain", "basis", "regime", "dimension"], "assumptions": ["center-stabilized small-circle SU3", "canonical kinetic normalization"], "losses": ["four-dimensional continuation", "gauge-invariant endpoint operator map"],
+      "blocker": "No physical functor maps contextual sites to dual-photon root coordinates or transports the controlled gap beyond its regime.",
+      "evidenceRefs": ["evidence/data/spin23-semiclassical-continuity-mass-gap-gate.json"]
+    },
+    {
+      "id": "contextual-a11",
+      "from": "contextual", "to": "a11-fixture", "kind": "synthetic-coefficient-realization",
+      "algebraicallyExact": true, "physicalAdmission": false, "orientationAction": "engineered", "labelMaps": 1,
+      "changes": ["domain", "variance", "basis", "support"], "assumptions": ["chosen cyclic conductance schedule"], "losses": ["endomorphism typing", "fundamental-sector semantics"],
+      "blocker": "The square numeric table maps settings to branch weights and is not a common-space physical endomorphism.",
+      "evidenceRefs": ["evidence/data/a11-platform-realization-comparison.json"]
+    }
+  ],
+  "closure": {
+    "algebraicGraphConnected": true,
+    "physicalGraphEdgeCount": 0,
+    "physicalGraphConnected": false,
+    "globalAutomorphismDerived": false,
+    "spin23PhysicalClosureDerived": false,
+    "e8ClosureDerived": false
+  },
+  "nextGate": "Admit the first cross-carrier edge only after endpoint signatures, label permutation, orientation action, units, regime changes, assumptions, losses and physical provenance are all explicit."
+}
+

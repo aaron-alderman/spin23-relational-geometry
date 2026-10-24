@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-hopf-link-vacuum-equivariance/1",
+  "objects": {
+    "hopfOrbit": "phi_n=n*pi/3 with n in Z6",
+    "placementCover": "(i,s)=(n mod 3,n mod 2)",
+    "linkOrbit": "X_n=A^n X_0 (B^T)^n with X_0=I",
+    "familyAction": "A is a transposition, A^2=I",
+    "placementAction": "B is a three-cycle, B^3=I"
+  },
+  "equivariance": {
+    "step": "n->n+1 corresponds to X->A X B^T",
+    "period": 6,
+    "placementCoordinate": "n mod 3",
+    "sheetCoordinate": "n mod 2",
+    "linkParity": "det(X_n)=(-1)^n",
+    "halfTurn": "X_(n+3)=A X_n; placement coordinate fixed and sheet/parity flipped",
+    "reflection": "X_n->A X_n A^T=X_(-n) when A B A=B^(-1)",
+    "groupShape": "D6 action on a six-point orbit"
+  },
+  "counts": {
+    "distinctHopfMarks": 6,
+    "distinctLinkVacua": 6,
+    "evenLinkVacua": 3,
+    "oddLinkVacua": 3
+  },
+  "interpretation": {
+    "established": "the marked Hopf/placement cover and the permutation-link vacuum set are exactly equivariant under the displayed C6 step and dihedral reflection",
+    "novelty": "the order-six walk exists only as a two-sided action combining an order-two family operation with an order-three placement operation",
+    "notEstablished": [
+      "that the Hopf phase is the microscopic coordinate of the family-placement link",
+      "that the family transposition A is selected by the existing action",
+      "that the mixed step X->A X B^T is a physical symmetry or time evolution",
+      "that the phase-locking coefficient generates the link potential"
+    ],
+    "physicalAdmission": false
+  },
+  "evidenceRefs": [
+    "corpus/claims/1000-1099/1006_the_six_marked_hopf_phases_map_equivariantly_to_the_placement_cover_and_the_phase_half_turn_is_the_coherent_deck_lift.md",
+    "corpus/claims/1000-1099/1007_placement_deck_and_real_symmetry_force_cos6phi_as_the_minimal_phase_locking_term_and_select_the_six_marked_hopf_phases_conditionally.md",
+    "corpus/programmes/admissibility/admissibility_14_relative_frame_link_and_spontaneous_selection.md"
+  ],
+  "verdict": "The existing marked Hopf hexagon is an exact one-coordinate chart of the six relative-frame vacua under a mixed family-reflection/placement-cycle action, but the physical identification of their carriers remains open."
+}

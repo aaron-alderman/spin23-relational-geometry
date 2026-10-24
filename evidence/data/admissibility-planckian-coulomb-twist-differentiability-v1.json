@@ -1,0 +1,61 @@
+{
+  "schema": "admissibility.planckian-coulomb-twist-differentiability/1",
+  "date": "2026-10-24",
+  "target": "FPT-004",
+  "parent": "AZ-042",
+  "result": "RECIPROCAL_DENSITY_HAMILTONIAN_CLOSED_UNIFORM_COULOMB_IMAGE_TWIST_NONDIFFERENTIABLE",
+  "poissonTwist": {
+    "definition": "image character exp(i lambda.n) shifts reciprocal vectors by kappa=cell^{-1} lambda",
+    "firstMomentExistenceCondition": "alpha > spatialDimension",
+    "productionSpatialDimension": 2,
+    "productionAlpha": 1.0,
+    "productionClassification": "NONDIFFERENTIABLE_ZERO_MODE"
+  },
+  "coulombZeroMode": {
+    "steps": [0.002, 0.001, 0.0005, 0.00025],
+    "differenceQuotientNorms": [1910.6947608599837, 3822.6074044743386, 7646.432331135963, 15294.08200403268],
+    "successiveHalvingRatios": [2.000637403095104, 2.0003185056843296, 2.0001592038885634],
+    "expectedAsymptoticRatio": 2.0,
+    "interpretation": "the excluded 1/|q| reciprocal zero mode has a directional jump and its twist quotient diverges as 1/step"
+  },
+  "shortRangeControl": {
+    "spatialDimension": 2,
+    "alpha": 4.0,
+    "epsilonFactors": [0.5, 1.0, 2.0],
+    "lowerRealImageMomentResidual": 0.11200488801095478,
+    "upperRealImageMomentResidual": 0.22320142096385975,
+    "lowerCompensatedMomentResidual": 7.434994506644683e-16,
+    "upperCompensatedMomentResidual": 6.742164657347311e-16,
+    "verdict": "POISSON_RECIPROCAL_COMPENSATOR_VALIDATED"
+  },
+  "reciprocalDensityHamiltonian": {
+    "torus": [3, 3],
+    "identity": "H_V=(1/2) sum_ij V(r_j-r_i) q_i q_j=(1/2N) sum_k V_k rho_k rho_-k",
+    "zeroModeNormThreshold": 1e-12,
+    "realReciprocalReconstructionThreshold": 1e-12,
+    "status": "PASS"
+  },
+  "admission": {
+    "poissonCompensatorDerivation": "PASS_ON_DIFFERENTIABLE_CONTROL",
+    "reciprocalDensityRepresentation": "PASS",
+    "uniformCoulombImageTwist": "REJECT_NONDIFFERENTIABLE_ZERO_MODE",
+    "minimumImageAsUniqueHeatCurrent": "NOT_ESTABLISHED",
+    "finiteQContinuityRoute": "NEXT_ADMITTED_ROUTE",
+    "screenedOrderOfLimitsRoute": "NEXT_ADMITTED_ROUTE",
+    "rankAtlasRerun": "WITHHELD_BY_INFRARED_OPERATOR_GATE",
+    "thermoelectricRerun": "WITHHELD_BY_INFRARED_OPERATOR_GATE"
+  },
+  "literature": [
+    {"key":"petravic2005","url":"https://doi.org/10.1063/1.2102867","role":"reciprocal-space Ewald contribution to heat flux"},
+    {"key":"galamba_nieto_de_castro_ely2007","url":"https://doi.org/10.1063/1.2734965","role":"non-pairwise reciprocal Ewald energy flux"},
+    {"key":"tatara2015","url":"https://doi.org/10.1103/PhysRevLett.114.196601","role":"thermal vector potential couples consistently to energy current"},
+    {"key":"ballenegger2014","url":"https://doi.org/10.1063/1.4872019","role":"Ewald real/reciprocal and surface-term control"}
+  ],
+  "sourceHashesSha256": {
+    "EDSquare-tJ-LR-Cloop-proxy.py": "f84ff43b2cfa7c5d604b498d98fd8199b9dd71f230865a753b98ce019e4c0a7c",
+    "ewald_image_ledger.py": "2f54804b88ff83f04456d393b77b22f92fe35468d372476e36c2b63f9a6d67ca",
+    "reciprocal_density_modes.py": "d5c6196db0d3671ef02f460581f42752585b01ed14e725020e4ac112c92f58ba"
+  },
+  "tests": {"pythonUnittestCount": 57, "status": "PASS"},
+  "firewall": "zero-mode nondifferentiability is conventional long-range infrared structure; it is not a new-physics or Spin(2,3) signal"
+}

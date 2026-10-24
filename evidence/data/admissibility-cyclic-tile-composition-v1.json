@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "algebra": "R[C3] isomorphic to R direct-sum C",
+  "basis": {
+    "I": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+    "C": [[2, -1, -1], [-1, 2, -1], [-1, -1, 2]],
+    "K": [[0, 1, -1], [-1, 0, 1], [1, -1, 0]]
+  },
+  "multiplication_table": {
+    "C_squared": "3C",
+    "K_squared": "-C",
+    "C_times_K": "3K",
+    "K_times_C": "3K"
+  },
+  "spectral_coordinates": {
+    "singlet": "r=a",
+    "relational": "z=a+3b+i*sqrt(3)*c",
+    "transpose": "(r,z) maps to (r,conjugate(z))",
+    "determinant": "a*((a+3b)^2+3*c^2)"
+  },
+  "positivity": {
+    "symmetric_part": "aI+bC",
+    "positive_semidefinite_iff": ["a>=0", "a+3b>=0"],
+    "orientation_quadratic_form": "x^T K x=0"
+  },
+  "dynamics": {
+    "singlet_exponential": "exp(t*a)",
+    "relational_exponential": "exp(t*(a+3b+i*sqrt(3)*c))",
+    "relational_growth_rate": "a+3b",
+    "relational_angular_rate": "sqrt(3)*c"
+  },
+  "boundary": {
+    "aligned_composition_derived": true,
+    "cross_carrier_alignment_derived": false,
+    "hysteresis_derived": false,
+    "e8_closure_derived": false
+  }
+}
+

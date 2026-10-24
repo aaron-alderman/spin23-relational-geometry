@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-23",
+  "model": "three-site contextual admission benchmark",
+  "uniform": {
+    "automorphism_order": 6,
+    "automorphisms": ["012", "021", "102", "120", "201", "210"],
+    "transposition_class_sum": [[1, 1, 1], [1, 1, 1], [1, 1, 1]],
+    "casimir_like_operator": [[2, -1, -1], [-1, 2, -1], [-1, -1, 2]],
+    "sector_eigenvalues": [0, 3, 3]
+  },
+  "oriented": {
+    "automorphism_order": 3,
+    "automorphisms": ["012", "120", "201"],
+    "orientation_odd_operator": [[0, 1, -1], [-1, 0, 1], [1, -1, 0]],
+    "orientation_odd_square": [[-2, 1, 1], [1, -2, 1], [1, 1, -2]],
+    "reflections_reverse_orientation": true
+  },
+  "marked": {
+    "mark": [1, 0, 0],
+    "automorphism_order": 2,
+    "automorphisms": ["012", "021"]
+  },
+  "weighted": {
+    "adjacency": [[0, 1, 3], [1, 0, 2], [3, 2, 0]],
+    "automorphism_order": 1,
+    "automorphisms": ["012"],
+    "laplacian": [[4, -1, -3], [-1, 3, -2], [-3, -2, 5]],
+    "laplacian_trace": 12,
+    "cofactor": 11,
+    "sector_eigenvalues_exact": ["0", "6-sqrt(3)", "6+sqrt(3)"]
+  },
+  "verdict": {
+    "finite_symmetry_reconstructed": true,
+    "casimir_like_invariant_reconstructed": true,
+    "orientation_derived_from_unoriented_data": false,
+    "physical_state_space_derived": false,
+    "physical_prediction_derived": false
+  }
+}

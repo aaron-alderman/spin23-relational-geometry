@@ -1,0 +1,47 @@
+{
+  "schema": "admissibility.selector-thermodynamic-cost-gate/1",
+  "date": "2026-10-24",
+  "admissionVerdict": "CONTRACTION_DOES_NOT_DETERMINE_THERMODYNAMIC_COST_TRAJECTORY_ACCOUNTING_REQUIRED",
+  "witness": {
+    "model": "two-state continuous-time Markov selector with local detailed balance",
+    "rates": {"towardSelected": 4, "awayFromSelected": 1},
+    "initialSelectedProbability": 0.2,
+    "observationTime": 0.4,
+    "stationarySelectedProbability": 0.8,
+    "contractionMultiplier": 0.1353352832366127,
+    "claims": [
+      "the return map has one globally attractive fixed point",
+      "stationary entropy production is zero",
+      "relaxation entropy production equals the decrease of relative entropy to stationarity",
+      "uniformly scaling both rates changes physical speed without changing the fixed point or total entropy produced along the same dimensionless trajectory"
+    ]
+  },
+  "noGo": [
+    "A slope below one does not imply nonzero housekeeping dissipation.",
+    "A unique stationary state does not identify whether selection is equilibrium bias, active maintenance or measurement conditioning.",
+    "No universal cost-versus-contraction-speed law follows without bounds on kinetic activity, couplings, controls or reservoir access.",
+    "Thermodynamic uncertainty relations for steady currents cannot be applied to an equilibrium relaxation with zero stationary current without checking their assumptions."
+  ],
+  "measurementPacket": [
+    "state trajectory or jump record",
+    "forward and reverse transition rates",
+    "environmental heat or calibrated work proxy",
+    "dynamical activity as total jump count per time",
+    "stationary probability currents and cycle affinities",
+    "reset, feedback and measurement work",
+    "return-map multiplier and mixing time",
+    "conditioned and unconditional state evolution"
+  ],
+  "decisionTree": {
+    "detailedBalanceZeroStationaryCurrent": "equilibrium-biased selector; attribute cost to preparation, relaxation and reset rather than steady housekeeping",
+    "brokenDetailedBalanceCycleCurrent": "nonequilibrium maintained selector; measure housekeeping entropy production and current precision",
+    "conditionedOnlySelection": "measurement-record selection; include detector backaction, memory and erasure",
+    "apparentBoundViolation": "audit hidden reservoirs, coarse-graining, non-Markovianity and activity constraints before any new-physics interpretation"
+  },
+  "sources": [
+    {"title": "Physical origins of entropy production, free energy dissipation, and their mathematical representations", "url": "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.81.051133"},
+    {"title": "Three faces of the second law. I. Master equation formulation", "url": "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.82.011143"},
+    {"title": "Thermodynamic Uncertainty Relation for Biomolecular Processes", "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.114.158101"},
+    {"title": "Stochastic Thermodynamics of Learning", "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.010601"}
+  ]
+}

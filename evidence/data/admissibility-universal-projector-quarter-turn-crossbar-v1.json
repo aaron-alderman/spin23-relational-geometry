@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-universal-projector-quarter-turn-crossbar/1",
+  "projectorIdentity": {
+    "horizontalGenerator": "Omega_P=[dot(P),P]",
+    "transportEquation": "dot(P)=[Omega_P,P]",
+    "universalConnection": "C_P=[P,dP]=-Omega_P dt",
+    "preservation": "dP+[C_P,P]=0"
+  },
+  "twoDimensionalModel": {
+    "P0": [[1, 0], [0, 0]],
+    "J": [[0, -1], [1, 0]],
+    "path": "P(t)=exp(tJ) P0 exp(-tJ)",
+    "identities": ["dot(P)=[J,P]", "[dot(P),P]=J", "C_P=-J dt"],
+    "holonomy": {
+      "quarterTurn": "U(pi/2)=J",
+      "projectiveLoop": "U(pi)=-I while P(pi)=P(0)",
+      "coherentClosure": "U(2pi)=I"
+    }
+  },
+  "rankThreeConnection": {
+    "formula": "nabla=d+[P,dP]+i a (I-3P)",
+    "projectorTermRole": "transports the moving L plus Q split",
+    "independentLineTermRole": "supplies compact flat holonomies and the faithful central Z3 lift",
+    "curvatureIdentity": "-i Tr((I-3P) DP wedge DP)=3i Tr(P DP wedge DP)"
+  },
+  "realLocusBridge": {
+    "nesting": "RP2 embeds in CP2 after choosing a real structure on C3",
+    "connectionRestriction": "The universal complex-projector connection [P,dP] restricts to the real skew projector connection.",
+    "tangentDecomposition": "T(CP2)|RP2 = T(RP2) plus i T(RP2)",
+    "complexStructureBoundary": "The CP2 Kahler complex structure maps the real tangent plane to the normal plane and is not automatically the in-plane selector quarter-turn.",
+    "physicalBoundary": "The selector Bloch triplet and family triplet still require a source-derived intertwiner fixing the residual torsor."
+  },
+  "towerRelation": {
+    "coherent": "C12",
+    "centralSignQuotient": "C6",
+    "sheetQuotient": "C3",
+    "interpretation": "projective closure occurs before coherent closure because the projector forgets frame sign"
+  },
+  "status": {
+    "kinematicQuarterTurnCrossbarEstablished": true,
+    "rankThreeCompatibleConnectionEstablished": true,
+    "realLocusNestingEstablished": true,
+    "selectorFamilyProjectorIntertwinerEstablished": false,
+    "singleMicroscopicActionEstablished": false,
+    "physicalAdmission": false
+  },
+  "evidenceRefs": [
+    "corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md",
+    "corpus/claims/1100-1199/1186_the_shiab_analogy_identifies_the_missing_operation_but_not_yet_a_well_defined_jordan_transport.md",
+    "corpus/claims/1100-1199/1187_the_projector_curvature_contains_an_exact_factor_three_but_a_composite_connection_does_not_yet_supply_the_bf_carrier.md",
+    "corpus/claims/1100-1199/1189_the_z3_kernel_is_invisible_to_tcp2_and_its_spinc_determinant_but_faithful_on_the_universal_fundamental_module.md",
+    "corpus/claims/1100-1199/1194_the_unique_determinant_neutral_line_twist_supplies_the_independent_u1_connection_and_derives_charge_three_without_family_su2.md",
+    "corpus/programmes/admissibility/admissibility_21_quarter_turn_wick_goldstone_cloud_and_open_closure.md"
+  ],
+  "verdict": "The quarter-turn is exactly the holonomy of the universal moving-projector connection on its active real two-plane. Identifying the selector and family projector realizations physically remains open."
+}
+

@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-wilson-source-link-carrier/1",
+  "sourceCarrier": {
+    "baseLabels": ["u", "d", "l"],
+    "doubledLabels": ["u", "bar(u)", "d", "bar(d)", "l", "bar(l)"],
+    "coordinateMap": "n maps to (base=n mod 3, conjugationSheet=n mod 2)",
+    "interpretation": "six orientation lifts of three Wilson source rays, not six particle generations"
+  },
+  "exactCorrespondences": [
+    "marked Hopf phases phi_n=n*pi/3",
+    "placement cover (i,s)=(n mod 3,n mod 2)",
+    "relative-frame permutation vacua X_n",
+    "conjugation-doubled Wilson source labels"
+  ],
+  "physicalGaugeSection": {
+    "vertexOrientation": [0, 0, 1],
+    "inducedEdgeVoltage": [0, 1, 1],
+    "z2Flux": 0,
+    "lift": "C3 disjoint-union C3",
+    "connectedSixCycle": false
+  },
+  "uniformAntiunitaryLift": {
+    "edgeVoltage": [1, 1, 1],
+    "z2Flux": 1,
+    "lift": "C6",
+    "connectedSixCycle": true,
+    "status": "exact combinatorial repair; microscopic action open"
+  },
+  "radiativeBaseGeometry": {
+    "r": "kappa/m^2",
+    "metric": "K(r)=[[1+r,-r],[-r,1+r]]",
+    "a2Point": "r=1",
+    "a2Metric": "[[2,-1],[-1,2]] up to positive scale",
+    "selectionBoundary": "placement C3 plus Real structure protects this ray, but assuming that symmetry does not derive its physical source"
+  },
+  "admissionAssessment": {
+    "candidateBifundamentalCarrierFound": true,
+    "baseA2GeometryConditionallyAvailable": true,
+    "physicalGaugeSectionSuppliesConnectedCover": false,
+    "uniformAntiunitaryMicroscopicTermDerived": false,
+    "physicalAdmission": false
+  },
+  "evidenceRefs": [
+    "corpus/claims/1000-1099/1063_the_doubled_furey_links_do_not_supply_two_S1_copies_and_the_shared_QL_leg_radiatively_breaks_the_naive_orthogonality.md",
+    "corpus/claims/1000-1099/1067_the_Wilson_rays_become_exactly_the_A2_placement_root_system_at_the_unique_shared_leg_strength_kappa_equals_m_squared.md",
+    "corpus/claims/1000-1099/1069_c3_plus_a_Real_structure_protects_the_Wilson_A2_metric_but_the_gauge_conjugate_source_triplet_requires_a_graded_lift.md",
+    "corpus/claims/1000-1099/1070_the_physical_S1_orientation_pattern_is_a_zero_flux_coboundary_so_the_placement_six_cycle_requires_the_full_conjugation_doubled_source_triplet.md",
+    "corpus/programmes/admissibility/admissibility_15_hopf_hexagon_as_relative_frame_vacuum_orbit.md"
+  ],
+  "verdict": "The conjugation-doubled Wilson source triplet is the first corpus object with the exact six-state link/Hopf endpoint structure. Its physical gauge section fails the connected-cover test; a uniform edge antiunitary is the remaining carrier-level gate."
+}

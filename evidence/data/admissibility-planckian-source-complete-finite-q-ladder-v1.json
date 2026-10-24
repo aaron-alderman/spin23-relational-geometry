@@ -1,0 +1,26 @@
+{
+  "schema":"admissibility.planckian-source-complete-finite-q-ladder/1",
+  "date":"2026-10-24",
+  "target":"FPT-004",
+  "parent":"AZ-046",
+  "sector":{"particles":2,"spinful":true,"noDoubleOccupancy":true,"densityLimit":"DILUTE"},
+  "families":["t","t_prime","J","J_prime","V"],
+  "unscreened":[
+    {"L":3,"basis":144,"qMin":2.0943951023931953,"normalizedDifference":0.27470664620104696},
+    {"L":5,"basis":1200,"qMin":1.2566370614359172,"normalizedDifference":0.13780461815503134},
+    {"L":7,"basis":4704,"qMin":0.8975979010256552,"normalizedDifference":0.07088954684772915},
+    {"L":9,"basis":12960,"qMin":0.6981317007977318,"normalizedDifference":0.04382602792514925},
+    {"L":11,"basis":29040,"qMin":0.5711986642890533,"normalizedDifference":0.03044669612972684}
+  ],
+  "fits":{"allSizesExponent":1.7176090242323994,"L5ThroughL11Exponent":1.9187766824488295,"L5ThroughL11DifferenceOverQSquared":[0.08726579,0.08798701,0.08992023,0.09331808]},
+  "screenedL3ThroughL9":{
+    "fixedMu0p5":{"exponent":1.6868985544382797,"normalizedDifferences":[0.27485628924742944,0.1377487557510157,0.07060310745357047,0.04319457409828593]},
+    "muEqualsQmin":{"exponent":1.6983038623799596,"normalizedDifferences":[0.2764281819349546,0.13766320996189793,0.07029378888241908,0.04290498918545748]},
+    "L9RelativeToUnscreened":{"fixed":0.014408192043819002,"scaled":0.021015793200899247}
+  },
+  "maximumContinuityResidual":3.342452540895049e-14,
+  "admission":{"sourceChannelCompleteness":"PASS_DILUTE","screeningCollision":"PASS_DILUTE","fixedDensity":"OPEN","rankAtlasRerun":"WITHHELD","next":"MATRIX_FREE_FIXED_DENSITY_EQUAL_TIME_MOMENTS"},
+  "sourceHashesSha256":{"source_complete_finite_q_ladder.py":"bd159ab36bf86051eb2b2f4afc286642a3972bba64b454c01458f228890b25a1"},
+  "tests":{"pythonUnittestCount":57,"status":"PASS"},
+  "firewall":"source-complete dilute convergence does not establish fixed-density transport rank, Planckian universality or Spin(2,3)"
+}

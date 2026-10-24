@@ -1,0 +1,53 @@
+{
+  "protocol": "admissibility-casimir-thermoelectric-platform-closure/1",
+  "asOf": "2026-10-24",
+  "admissionVerdict": "NO_SAME_CARRIER_EXPERIMENT_ADMITTED",
+  "closestMaterialCarrier": "Co2MnGa",
+  "closestForceProtocol": "birefringent-crystal liquid-crystal Casimir torque",
+  "closestBridgeTheory": "Weyl-semimetal Hall-conductivity Casimir scattering",
+  "co2MnGa": {
+    "transport": {
+      "roomTemperatureSxxMicrovoltPerKelvin": -26,
+      "roomTemperatureAnomalousSyxMicrovoltPerKelvin": 6,
+      "roomTemperatureAnomalousHallConductivitySiemensPerCm": 845,
+      "fullThermopowerUnmixingDemonstrated": true,
+      "source": "https://www.nature.com/articles/s41427-019-0116-z"
+    },
+    "terahertzFilm": {
+      "frequencyRangeTHz": [0.2, 1.5],
+      "roomTemperatureHallConductivityInverseOhmCm": 600,
+      "faradayRotationMrad": 59,
+      "faradayRotationUncertaintyMrad": 6,
+      "hallAnglePercent": 8.5,
+      "thinnestFilmNm": 20,
+      "source": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.105.174406"
+    },
+    "broadbandFilm": {
+      "energyRangeEv": [0.0025, 6.2],
+      "filmThicknessesNm": [10, 20, 40, 60, 80],
+      "kramersKronigConsistentLongitudinalFit": true,
+      "broadbandOffDiagonalTensor": false,
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11538699/"
+    },
+    "sameSpecimenAllChannels": false,
+    "casimirForceOrTorqueMeasured": false,
+    "ordinaryMagneticBackgroundClosed": false
+  },
+  "casimirTorqueProtocol": {
+    "angleDependenceMeasured": true,
+    "distanceDependenceMeasured": true,
+    "agreementWithCalculation": true,
+    "magneticThermoelectricCarrier": false,
+    "source": "https://www.nature.com/articles/s41586-018-0777-8"
+  },
+  "weylCasimirTheory": {
+    "hallResponseIncluded": true,
+    "longitudinalResponseIncluded": true,
+    "thicknessChemicalPotentialAndMagneticFieldTunable": true,
+    "materialSpecificNoRefitPrediction": false,
+    "experiment": false,
+    "source": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.91.235115"
+  },
+  "nextGate": "Close the complex diagonal and off-diagonal optical tensor on matched Co2MnGa films and preregister a parallel-minus-antiparallel Casimir force or torque prediction with propagated uncertainty and magnetic-background controls."
+}
+

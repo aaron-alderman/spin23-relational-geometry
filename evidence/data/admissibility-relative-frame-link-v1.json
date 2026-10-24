@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-relative-frame-link/1",
+  "carriers": {
+    "left": "three labelled family vertices",
+    "right": "three labelled placement vertices",
+    "link": "real 3x3 relative-incidence matrix X"
+  },
+  "potential": {
+    "formula": "V_kappa(X)=sum_ij x_ij^2(1-x_ij)^2 + kappa sum_i(row_i(X)-1)^2 + kappa sum_j(col_j(X)-1)^2",
+    "domain": "R^(3x3)",
+    "condition": "kappa>0",
+    "zeroSet": "the six 3x3 permutation matrices"
+  },
+  "symmetry": {
+    "parent": "S3_family x S3_placement",
+    "action": "X -> P_family X P_placement^T",
+    "vacuumOrbitSize": 6,
+    "vacuumStabilizerOrder": 6,
+    "vacuumStabilizerShape": "a graph/diagonal copy of S3",
+    "breakingPattern": "S3_family x S3_placement -> S3_diagonal(X)"
+  },
+  "vacua": {
+    "total": 6,
+    "evenOrientation": 3,
+    "oddOrientation": 3,
+    "fixedBasepoint": 2,
+    "evenOrientationAndFixedBasepoint": 1
+  },
+  "interpretation": {
+    "derived": "a finite six-point admissible vacuum orbit and its symmetry-breaking pattern",
+    "spontaneous": "one realized vacuum supplies a complete family-to-placement bijection",
+    "notDerived": [
+      "a physical field or composite with the transformation law of X",
+      "the coefficients and kinetic term of the proposed potential",
+      "a detector dictionary for domains or walls between relative-frame vacua",
+      "an absolute prediction of which symmetry-related vacuum is realized"
+    ],
+    "physicalAdmission": false
+  },
+  "conditionalBiases": [
+    {
+      "datum": "orientation correlation",
+      "vacuumFilter": "det(X)=+1 or det(X)=-1",
+      "remainingVacua": 3
+    },
+    {
+      "datum": "paired basepoint",
+      "vacuumFilter": "X_00=1 after naming the paired vertices",
+      "remainingVacua": 2
+    },
+    {
+      "datum": "orientation correlation plus paired basepoint",
+      "vacuumFilter": "det(X)=+1 and X_00=1",
+      "remainingVacua": 1
+    }
+  ],
+  "evidenceRefs": [
+    "corpus/programmes/admissibility/admissibility_13_family_placement_torsor_reduction_audit.md",
+    "corpus/claims/1000-1099/1006_the_six_marked_hopf_phases_map_equivariantly_to_the_placement_cover_and_the_phase_half_turn_is_the_coherent_deck_lift.md",
+    "corpus/claims/1000-1099/1098_the_family_B_minus_3Li_orbit_is_exactly_the_trace_zero_placement_A2_module_but_the_intertwiner_is_a_six_choice_label_torsor.md",
+    "corpus/claims/1100-1199/1192_how_the_programme_closes_over_itself_a_single_typed_action_a_return_map_and_terminal_tests.md"
+  ],
+  "verdict": "Dynamics can convert the six-choice label torsor into six isolated symmetry-related vacua. This resolves how a relative map may be selected spontaneously, but does not yet source the link field physically."
+}

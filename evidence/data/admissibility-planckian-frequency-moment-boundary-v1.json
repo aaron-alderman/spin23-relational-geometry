@@ -1,0 +1,20 @@
+{
+  "schema":"admissibility.planckian-frequency-moment-boundary/1",
+  "date":"2026-10-24",
+  "target":"FPT-004",
+  "parent":"AZ-049",
+  "moments":{"M0":"Tr(J_a^dagger J_b)/D","M2":"Tr([H,J_a]^dagger[H,J_b])/D"},
+  "rmsModes":[
+    {"L":3,"samples":630,"exact":true,"centre":[3.650550814377138,4.534890796664242],"endpoint":[3.6268385275157633,4.426472499946504]},
+    {"L":5,"samples":8,"exact":false,"centre":[3.143584335184485,3.872813489866451],"endpoint":[3.132025441768801,3.9481492573375934]},
+    {"L":7,"samples":4,"exact":false,"centre":[2.879480313483277,4.139323861329386],"endpoint":[2.8779246196172217,4.209655754723313]},
+    {"L":9,"samples":1,"exact":false,"preliminary":true,"centre":[2.4499157915645964,4.213709122261231],"endpoint":[2.4486070499318693,4.250684876370889]}
+  ],
+  "independentL9Centre":[2.2524694980184545,4.280124212844304],
+  "resourceBoundary":{"L5Dimension":67603900,"complex128VectorGiB":1.0073766112327576,"threeVectorRecurrenceGiB":3.0221298336982727,"L7Dimension":1580132580471900,"requiredImplementation":"COMPILED_SYMMETRY_RESOLVED_DISTRIBUTED_TYPICALITY_OR_KPM"},
+  "literatureDois":["10.1103/RevModPhys.78.275","10.1103/PhysRevB.68.235106","10.1103/PhysRevB.92.205103","10.1103/PhysRevB.111.195140","10.1103/PhysRevB.108.245201","10.1063/5.0304329"],
+  "admission":{"ultravioletDivergenceOfSecondMode":"NOT_SUPPORTED","lowFrequencyThermodynamicRank":"OPEN_EXTERNAL_SCALE","currentWorkspaceLane":"EXHAUSTED","reopen":"COMPILED_COMMON_SAMPLE_SPECTRAL_WINDOW_SCALING"},
+  "sourceHashesSha256":{"matrix_free_frequency_moments.py":"cdd13334a1e6e1a7c25b175f62b94cb081eb10f479f9c3a05e628e4457796992"},
+  "tests":{"pythonUnittestCount":57,"status":"PASS"},
+  "firewall":"RMS frequency moments do not determine low-frequency weight, dc transport or Planckian universality"
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "admissibility.planckian-two-current-tranches/1",
+  "date": "2026-10-24",
+  "target": "FPT-004",
+  "parent": "AZ-039",
+  "admissionVerdict": "EXECUTION_ORDER_FIXED_PHYSICS_VERDICT_UNCHANGED",
+  "governingRule": "no response-rank claim advances unless both operator-definition and estimator audits pass",
+  "tranches": [
+    {"id":"T0","label":"frozen oracle baseline","dependsOn":[],"exitGate":"all AZ-039 dense, sparse, continuity, positivity and determinant fixtures reproduce"},
+    {"id":"T1","label":"production term provenance","dependsOn":["T0"],"exitGate":"tagged and legacy Hamiltonians agree entry-for-entry on source-native small clusters and fluxes"},
+    {"id":"T2","label":"periodic and long-range convention collision","dependsOn":["T1"],"exitGate":"continuity and covariance pass and convention differences are bounded or typed as gauge, total-derivative or circulating terms"},
+    {"id":"T3","label":"common-sample FTLM integration","dependsOn":["T2"],"exitGate":"ED and FTLM two-current spectra agree within declared stochastic, Lanczos and binning errors"},
+    {"id":"T4","label":"validation and uncertainty envelope","dependsOn":["T3"],"exitGate":"a preregistered validity mask passes operator, PSD, detailed-balance, moment and convergence thresholds"},
+    {"id":"T5","label":"physical rank atlas","dependsOn":["T4"],"exitGate":"ray, boundary and interior classes are separated from convention and numerical uncertainty"},
+    {"id":"T6","label":"thermoelectric translation","dependsOn":["T5"],"exitGate":"particle-energy to particle-heat congruence and longitudinal Onsager observables pass without current refitting"},
+    {"id":"T7","label":"bridge adjudication","dependsOn":["T6"],"exitGate":"result is classified against conventional transport before any corpus-specific interpretation"}
+  ],
+  "requiredTermFields": ["family","support","centre","displacement","winding","matrixContribution","geometryId"],
+  "rankClasses": ["ray","boundary_layer","cone_interior","unresolved"],
+  "allowedTerminalOutcomes": ["conventional_transport","useful_numerical_extension","admissibility_specific_discriminator","unresolved"],
+  "literature": [
+    {"key":"luttinger1964","role":"mechanical thermal-response source coupling","url":"https://doi.org/10.1103/PhysRev.135.A1505","primary":true},
+    {"key":"paul_kotliar2003","role":"interacting tight-binding thermal current including long-range interactions","url":"https://doi.org/10.1103/PhysRevB.67.115131","primary":true},
+    {"key":"ercole_et_al2016","role":"energy-density gauge invariance of Green-Kubo conductivity","url":"https://arxiv.org/abs/1601.00158","primary":true},
+    {"key":"kapustin_spodyneiko2021","role":"ambiguity-free lattice thermoelectric formulas","url":"https://arxiv.org/abs/2105.01626","primary":true},
+    {"key":"qin_niu_shi2011","role":"energy-magnetization correction for transverse thermal transport","url":"https://arxiv.org/abs/1108.3879","primary":true},
+    {"key":"jaklic_prelovsek1994","role":"finite-temperature Lanczos method applied to t-J optical conductivity","url":"https://doi.org/10.1103/PhysRevB.49.5065","primary":true},
+    {"key":"prelovsek_bonca2011","role":"FTLM dynamical-response convergence and finite-size limits","url":"https://arxiv.org/abs/1111.5931","primary":true},
+    {"key":"schnack_richter_steinigeweg2020","role":"FTLM and typicality accuracy benchmark","url":"https://doi.org/10.1103/PhysRevResearch.2.013186","primary":true},
+    {"key":"shastry2008","role":"finite-frequency thermoelectric response in correlated matter","url":"https://arxiv.org/abs/0806.4629","primary":true},
+    {"key":"shastry2005","role":"thermal conductivity sum rules","url":"https://arxiv.org/abs/cond-mat/0508711","primary":true},
+    {"key":"zotos_naef_prelovsek1997","role":"energy-current conservation and anomalous transport control","url":"https://doi.org/10.1103/PhysRevB.55.11029","primary":true},
+    {"key":"fratini_et_al2026","role":"production t-J strange-metal FTLM frontier anchor","url":"https://doi.org/10.1038/s41567-026-03441-x","primary":true},
+    {"key":"planckian_tj_source","role":"audited public production carrier","url":"https://github.com/djfrat/Planckian-tJ","primary":true}
+  ],
+  "immediateNextAction": "complete T0 and refactor CreateSparseHamiltonian to emit T1 provenance before sparse aggregation",
+  "firstPhysicsInterpretationTranche": "T5",
+  "firewall": "positivity, a Lorentz determinant or low rank alone is not evidence for Spin(2,3)"
+}

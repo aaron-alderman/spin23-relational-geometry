@@ -1,0 +1,1341 @@
+{
+  "schema_version": "1.0.0",
+  "updated": "2026-10-24",
+  "title": "Admissibility zone register",
+  "purpose": "Track filled, bounded, open, excluded, underidentified and uncharted regions across theory, experiment, inference and translation frontiers.",
+  "status_legend": [
+    "established",
+    "conditionally_filled",
+    "bounded_unknown",
+    "open_reachable",
+    "underidentified",
+    "theory_undefined",
+    "experiment_inaccessible",
+    "excluded",
+    "uncharted"
+  ],
+  "frontier_types": [
+    "theory",
+    "experiment",
+    "inference",
+    "translation"
+  ],
+  "axes": [
+    "structural_level",
+    "physical_scale",
+    "frequency_time_regime",
+    "geometry_topology",
+    "theory_status",
+    "experiment_status"
+  ],
+  "regions": [
+    {
+      "id": "AZ-001",
+      "label": "Casimir classification inside a declared symmetry representation",
+      "coverage_status": "established",
+      "theory_status": "Central invariants classify declared representation sectors, subject to algebra and domain assumptions.",
+      "experiment_status": "No generic experiment is implied until a physical representation and probe dictionary are supplied.",
+      "known_theory_bounds": [
+        "The symmetry algebra and representation must be declared.",
+        "Quadratic Casimirs can be incomplete classifiers.",
+        "Noncompact cases require unitary-domain and spectral control."
+      ],
+      "unknown_theory_bounds": [
+        "Whether contextual admissibility can derive the relevant symmetry rather than assume it."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "Probe and detector map are model dependent."
+      ],
+      "frontiers": ["translation", "theory"],
+      "evidence_refs": [
+        "admissibility_02_casimir_as_first_generative_probe.md"
+      ],
+      "next_gate": "Derive a nontrivial automorphism group and central invariant from a thinner typed composition system."
+    },
+    {
+      "id": "AZ-002",
+      "label": "Poincare Casimir obstruction to an ordinary spin-two/spin-zero internal mixer",
+      "coverage_status": "conditionally_filled",
+      "theory_status": "Distinct W-squared eigenspaces cannot be mixed by a generator commuting with Poincare symmetry; broader S-matrix statement is assumption dependent.",
+      "experiment_status": "Not a standalone measurement proposal.",
+      "known_theory_bounds": [
+        "Poincare representation and commuting-generator assumptions are explicit.",
+        "Coleman-Mandula-type extension requires its standard S-matrix hypotheses."
+      ],
+      "unknown_theory_bounds": [
+        "Replacement framework for long-range gravity or nonstandard asymptotics."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [],
+      "frontiers": ["theory"],
+      "evidence_refs": [
+        "../../claims/1700-1799/1769_ordinary_continuous_symmetry_cannot_be_the_missing_spin_two_torsion_mixer.md"
+      ],
+      "next_gate": "Construct a complete graded, higher-spin or nonstandard-asymptotic model with its positivity and observable dictionary."
+    },
+    {
+      "id": "AZ-003",
+      "label": "London to Casimir-Polder to Lifshitz dispersion-force landscape",
+      "coverage_status": "established",
+      "theory_status": "Known quantum-electromagnetic response regimes are connected by retardation, material response, geometry and temperature.",
+      "experiment_status": "Multiple regimes are experimentally accessible, with apparatus-specific calibration and nuisance limits.",
+      "known_theory_bounds": [
+        "Separated-body and response descriptions fail at strong electronic overlap.",
+        "Pairwise summation is not generally exact.",
+        "Equilibrium Lifshitz theory requires causal constitutive data and equilibrium assumptions."
+      ],
+      "unknown_theory_bounds": [
+        "No new admissibility-specific protected crossover invariant has been derived."
+      ],
+      "known_experiment_bounds": [
+        "Finite force sensitivity, geometry calibration, material optical data and thermal control.",
+        "Patch, roughness, residual-potential and contamination nuisance channels."
+      ],
+      "unknown_experiment_bounds": [
+        "Unmeasured material-response tails and apparatus-specific correlated systematics."
+      ],
+      "frontiers": ["experiment", "translation"],
+      "evidence_refs": [
+        "admissibility_04_dispersion_force_landscape.md"
+      ],
+      "next_gate": "Derive a response restriction or observable that cannot be absorbed into conventional material and boundary data."
+    },
+    {
+      "id": "AZ-004",
+      "label": "Invariant atlas for time, force, measure, material and rotation",
+      "coverage_status": "conditionally_filled",
+      "theory_status": "Standard invariants are typed by their transformation groups and domains.",
+      "experiment_status": "Operational access varies by invariant and detector channel.",
+      "known_theory_bounds": [
+        "A metric, symplectic form, response tensor or symmetry must be declared before its invariants exist."
+      ],
+      "unknown_theory_bounds": [
+        "Which preserved structures can be derived from the minimal admissibility packet."
+      ],
+      "known_experiment_bounds": [
+        "Dimensionless and relational observables require calibrated reference scales."
+      ],
+      "unknown_experiment_bounds": [
+        "Completeness of accessible invariant sets for complex material systems."
+      ],
+      "frontiers": ["theory", "translation", "inference"],
+      "evidence_refs": [
+        "admissibility_05_invariant_atlas_time_force_measure_material_rotation.md"
+      ],
+      "next_gate": "Show that a preserved form or measure is forced by contextual composition rather than declared."
+    },
+    {
+      "id": "AZ-005",
+      "label": "Dynamic drive-to-record chain",
+      "coverage_status": "conditionally_filled",
+      "theory_status": "Causal response, modulation, resonance, Floquet, geometry, magnetic and metastable models are individually controlled in declared regimes.",
+      "experiment_status": "Detector bandwidth, noise, acceptance and analysis determine which distinctions survive as records.",
+      "known_theory_bounds": [
+        "Linear response requires amplitude and stationarity control.",
+        "Floquet invariants require a declared full period and gap.",
+        "Metastable rate laws require a declared escape model."
+      ],
+      "unknown_theory_bounds": [
+        "No single derivation joins all dynamic layers from the foundational admissibility packet."
+      ],
+      "known_experiment_bounds": [
+        "Bandwidth, integration time, noise covariance, phase reference, saturation and dead time."
+      ],
+      "unknown_experiment_bounds": [
+        "Detector model discrepancy, unrecorded-event selection and long-time drift outside calibration."
+      ],
+      "frontiers": ["experiment", "inference", "translation"],
+      "evidence_refs": [
+        "admissibility_06_dynamic_response_geometry_detection_metastability.md"
+      ],
+      "next_gate": "Execute the oscillator-to-detector and AM/FM tomography benchmarks with complete information accounting."
+    },
+    {
+      "id": "AZ-006",
+      "label": "Generation of symmetry and state space from contextual admissibility",
+      "coverage_status": "open_reachable",
+      "theory_status": "A first exact finite benchmark derives automorphism groups and a Casimir-like sector operator from declared relation data; no theorem yet derives a physical state space, probability rule, dynamics or the admission relation itself.",
+      "experiment_status": "No unique experimental target exists before the reconstruction supplies an observable distinction.",
+      "known_theory_bounds": [
+        "The target may not be hidden in the admission predicate.",
+        "Survivors must be unique or classified up to a declared equivalence.",
+        "The completed benchmark is finite, three-site and begins from a relation chosen by hand."
+      ],
+      "unknown_theory_bounds": [
+        "Existence and strength of a reconstruction theorem beyond finite automorphism recovery.",
+        "Whether probability, causal geometry and dynamics require irreducible primitives."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "Observable consequences are not yet defined."
+      ],
+      "frontiers": ["theory", "translation"],
+      "evidence_refs": [
+        "admissibility_00_foundational_programme.md",
+        "admissibility_01_physics_contact_and_research_docket.md",
+        "admissibility_08_finite_contextual_casimir_experiment.md",
+        "../../../evidence/data/admissibility-finite-contextual-casimir-v1.json",
+        "../../../verification/admissibility/verify_finite_contextual_admission_casimir.mjs"
+      ],
+      "next_gate": "Extend the finite relation system with typed composition and a nontrivial positive state cone, then classify which structures are forced and which remain choices."
+    },
+    {
+      "id": "AZ-007",
+      "label": "Distinctive empirical prediction of the foundational admissibility principle",
+      "coverage_status": "open_reachable",
+      "theory_status": "Promotion and falsification criteria are defined; no protected new observable has been derived.",
+      "experiment_status": "A protocol can be designed only after a normalized observable and comparator are specified.",
+      "known_theory_bounds": [
+        "Generic consequences of positivity, passivity or Gaussian elimination do not qualify.",
+        "The prediction must not be recoverable by refitting conventional response data."
+      ],
+      "unknown_theory_bounds": [
+        "Whether the programme has any novel empirical consequence."
+      ],
+      "known_experiment_bounds": [
+        "Preregistration requires normalization, nuisance model and detector response."
+      ],
+      "unknown_experiment_bounds": [
+        "Sensitivity and apparatus class remain undefined until the observable is derived."
+      ],
+      "frontiers": ["translation", "experiment", "inference"],
+      "evidence_refs": [
+        "admissibility_01_physics_contact_and_research_docket.md"
+      ],
+      "next_gate": "Derive one no-refit quantitative or qualitative consequence and pass it through a complete detector model."
+    },
+    {
+      "id": "AZ-008",
+      "label": "Finite contextual Casimir benchmark",
+      "coverage_status": "established",
+      "theory_status": "Exhaustive enumeration on three sites verifies that admitted relation structure fixes automorphism groups of orders 6, 3, 2 and 1 and supports exact even and orientation-odd invariant operators.",
+      "experiment_status": "This is a mathematical certificate, not yet a physical measurement proposal.",
+      "known_theory_bounds": [
+        "The uniform complete relation has automorphism group S3 and Casimir-like spectrum {0,3,3}.",
+        "An oriented three-cycle reduces the symmetry to C3 and supplies an orientation-odd operator reversed by reflections.",
+        "A marked site reduces the symmetry to order 2; distinct edge weights reduce it to the identity.",
+        "The relation and site set are declared inputs, so the result does not derive their physical origin."
+      ],
+      "unknown_theory_bounds": [
+        "Which admission principles select the relation rather than merely receive it.",
+        "How positive states, probabilities, composition, dynamics and continuum limits arise.",
+        "Whether the finite invariants survive as protected observables in a physical realization."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No detector dictionary, control variable or nuisance model has yet been defined."
+      ],
+      "frontiers": ["theory", "translation"],
+      "evidence_refs": [
+        "admissibility_08_finite_contextual_casimir_experiment.md",
+        "../../../evidence/data/admissibility-finite-contextual-casimir-v1.json",
+        "../../../verification/admissibility/verify_finite_contextual_admission_casimir.mjs"
+      ],
+      "next_gate": "Add composable typed processes and positive states without encoding the desired symmetry in the admission rule, then derive a detector-facing invariant."
+    },
+    {
+      "id": "AZ-009",
+      "label": "Distributed A2 representation shape",
+      "coverage_status": "established",
+      "theory_status": "The contextual Casimir, trace-zero placement projector, family augmentation Gram, Furey signed K3 selector and partial-sewing residual sector are exact realizations of one singlet-plus-A2 module up to fixed affine rescaling.",
+      "experiment_status": "No common physical labeling, source action or detector map has been derived across the realizations.",
+      "known_theory_bounds": [
+        "C=3I-J=3P0, the family augmentation matrix is -C, its Gram is 3C, and the signed Furey selector is 2I+C.",
+        "The orientation operator satisfies K squared equals -C and defines a normalized complex structure on the A2 plane.",
+        "Metric, orientation and mark data have stabilizer orders 6, 3, 2 and 1 respectively.",
+        "The exact identity is representation-level and does not identify the physical carriers."
+      ],
+      "unknown_theory_bounds": [
+        "Whether a provenance-bearing source map selects one of the six family-to-placement labelings.",
+        "Whether dynamics selects the orientation rather than receiving it as data.",
+        "Whether the recurrent A2 chart transports through the physical action and Ward quotient or is an independent universality class."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No shared calibrated observable currently distinguishes the label or orientation choices."
+      ],
+      "frontiers": ["translation", "theory", "experiment"],
+      "evidence_refs": [
+        "admissibility_09_distributed_a2_shape_discovery.md",
+        "../../../evidence/data/admissibility-distributed-a2-shape-v1.json",
+        "../../../verification/admissibility/verify_distributed_a2_shape_identity.mjs",
+        "../../../verification/prove/prove_the_family_to_placement_A2_intertwiner_and_label_torsor.mjs",
+        "../../../verification/derive/derive_signed_k3_selector_from_furey_triple_incidence_weights_and_cycle_closure.mjs",
+        "../../../verification/construct/construct_the_typed_partial_sewing_with_one_reference_ray_and_an_a2_residual_doublet.mjs"
+      ],
+      "next_gate": "Construct a source-native commuting square that transports P0, C and K between two physical carriers without importing the target labeling or orientation."
+    },
+    {
+      "id": "AZ-010",
+      "label": "Real cyclic three-state operator family census",
+      "coverage_status": "bounded_unknown",
+      "theory_status": "A complete sweep of machine-readable numeric 3x3 evidence matrices identifies the recurrent span of I, C and K as the real cyclic group algebra R[C3], with exact contextual, semiclassical SU(3) and synthetic-control realizations.",
+      "experiment_status": "A buildable passive conductance fixture realizes the oriented coefficient pattern as a control table, but not as evidence for a protected fundamental sector.",
+      "known_theory_bounds": [
+        "The scan covers all nested numeric 3x3 arrays in parseable JSON files below evidence/data.",
+        "The SU(3) monopole and bion Hessians are exact even A2 operators in their controlled small-circle regime.",
+        "Every real three-state circulant operator belongs to span{I,C,K} and decomposes into a singlet plus oriented A2 plane.",
+        "Normal-form coincidence alone carries no physical identity or exceptional-parent implication."
+      ],
+      "unknown_theory_bounds": [
+        "Matrices expressed only symbolically, in source code, Markdown or larger blocks remain outside the census.",
+        "No complete graph of provenance-bearing intertwiners between the discovered tiles exists.",
+        "The minimal closure generated by all physically admitted tile transitions is unknown."
+      ],
+      "known_experiment_bounds": [
+        "The passive three-setting fixture has explicit randomization, sham-switching, reversal and loop-open controls."
+      ],
+      "unknown_experiment_bounds": [
+        "No experiment yet identifies the synthetic three-sector orientation with a fundamental superselection sector."
+      ],
+      "frontiers": ["theory", "translation", "experiment", "inference"],
+      "evidence_refs": [
+        "admissibility_10_a2_operator_sweep_and_frontier.md",
+        "../../../evidence/data/admissibility-distributed-a2-sweep-v1.json",
+        "../../../verification/admissibility/discover_distributed_a2_operator_family.mjs",
+        "../../../evidence/data/spin23-semiclassical-continuity-mass-gap-gate.json",
+        "../../../evidence/data/a11-platform-realization-comparison.json"
+      ],
+      "next_gate": "Extend normal-form discovery to symbolic certificates, then build the typed intertwiner graph and compute the closure generated only by provenance-bearing edges."
+    },
+    {
+      "id": "AZ-011",
+      "label": "Cyclic tile composition and local dynamics",
+      "coverage_status": "established",
+      "theory_status": "Aligned three-state tiles form the closed algebra R[C3] isomorphic to R direct-sum C; their common and relational channels compose by ordinary real and complex multiplication.",
+      "experiment_status": "The calculus supplies phase-sensitive and reversal-sensitive detector targets, but no cross-carrier alignment or fundamental realization is yet selected.",
+      "known_theory_bounds": [
+        "C squared equals 3C, K squared equals -C and CK equals KC equals 3K.",
+        "M(a,b,c) has singlet coordinate a and relational coordinate a+3b+i sqrt(3)c.",
+        "Transpose conjugates the relational coordinate and leaves the singlet fixed.",
+        "Positive semidefiniteness of the symmetric part requires a>=0 and a+3b>=0.",
+        "Constant linear evolution separates exactly into common growth and relational growth plus angular circulation."
+      ],
+      "unknown_theory_bounds": [
+        "The relative label permutation and orientation between independently sourced tiles are not derived.",
+        "Nonlinear memory, hysteresis and metastability require an enlarged state-dependent calculus.",
+        "The closure generated by provenance-bearing cross-tile intertwiners is unknown."
+      ],
+      "known_experiment_bounds": [
+        "Orientation is invisible to instantaneous quadratic forms and therefore requires phase-, circulation- or reversal-sensitive readout."
+      ],
+      "unknown_experiment_bounds": [
+        "No calibrated physical protocol currently identifies the same relational phase across two corpus carriers."
+      ],
+      "frontiers": ["theory", "translation", "experiment"],
+      "evidence_refs": [
+        "admissibility_11_cyclic_tile_composition_and_dynamics.md",
+        "../../../evidence/data/admissibility-cyclic-tile-composition-v1.json",
+        "../../../verification/admissibility/verify_cyclic_tile_composition.mjs"
+      ],
+      "next_gate": "Create the typed tile graph and admit only intertwiners that declare label permutation, orientation action, units, regime changes, assumptions and losses."
+    },
+    {
+      "id": "AZ-012",
+      "label": "Typed A2 tile gluing atlas",
+      "coverage_status": "bounded_unknown",
+      "theory_status": "Six local tile realizations form a connected algebraic graph through five exact normal-form or representation edges, but no cross-carrier edge currently passes physical admission.",
+      "experiment_status": "One synthetic control node is buildable, while no experiment supplies a common calibrated label and orientation map between independent nodes.",
+      "known_theory_bounds": [
+        "Every node has an explicit domain, rank, basis, regime, symmetry, support and evidence source.",
+        "Every algebraic edge declares its type changes, assumptions, losses, orientation action and first blocker.",
+        "The algebraic graph is connected and the physically admitted cross-carrier edge count is zero.",
+        "No global automorphism, Spin(2,3) physical closure or E8 closure follows from the disconnected physical atlas."
+      ],
+      "unknown_theory_bounds": [
+        "Whether any common action fixes a label permutation and orientation between two independent tiles.",
+        "The closure generated after the first physically admitted edge.",
+        "Whether the recurrent tile is a transported identity or a universality class reached independently."
+      ],
+      "known_experiment_bounds": [
+        "The A11 fixture tests synthetic cyclic coefficients but is not a cross-carrier physical intertwiner."
+      ],
+      "unknown_experiment_bounds": [
+        "No common detector protocol currently measures the same relational phase in two distinct tile realizations."
+      ],
+      "frontiers": ["translation", "theory", "experiment", "inference"],
+      "evidence_refs": [
+        "admissibility_12_typed_a2_tile_atlas_and_gluing_audit.md",
+        "../../../evidence/data/admissibility-a2-tile-atlas-v1.json",
+        "../../../verification/admissibility/verify_a2_tile_atlas_gluing_frontier.mjs"
+      ],
+      "next_gate": "Derive one source-native cross-carrier edge with fixed labels, orientation action, compatible signatures and a common observable dictionary."
+    },
+    {
+      "id": "AZ-013",
+      "label": "Family-to-placement label torsor reduction",
+      "coverage_status": "bounded_unknown",
+      "theory_status": "The six algebraic family-to-placement bijections form an S3 torsor whose missing physical data factorize into an orientation-correlation gate and a basepoint-correlation gate.",
+      "experiment_status": "Charged-lepton and neutrino data label and prune family choices but do not measure a common family-placement frame.",
+      "known_theory_bounds": [
+        "The raw intertwiner ambiguity contains exactly six bijections.",
+        "A derived orientation-parity correlation would reduce six maps to three; a derived paired basepoint would reduce six to two; both would select one map.",
+        "The charged-lepton simple spectrum labels all three family projectors but does not select a placement correspondence.",
+        "A local Jarlskog sign distinguishes conjugate flavour orientations but is not a placement-odd cross-carrier intertwiner.",
+        "One U(3)-covariant projector action cannot select a direction, while a second Hermitian response gives relative alignment only after additional typing and weighting data."
+      ],
+      "unknown_theory_bounds": [
+        "No action term currently correlates flavour and placement orientation parities.",
+        "No rank-one cross incidence pairs one family projector with one placement vertex.",
+        "No common physical carrier or portal derives both missing data simultaneously."
+      ],
+      "known_experiment_bounds": [
+        "The recorded NuFIT 6.1 texture-zero scan excludes electron plus inverted ordering but leaves all three family choices open somewhere in the tested branches."
+      ],
+      "unknown_experiment_bounds": [
+        "No calibrated observable measures placement orientation against a flavour CP orientation.",
+        "No detector protocol identifies a family ray with a placement basepoint."
+      ],
+      "frontiers": ["translation", "theory", "experiment", "inference"],
+      "evidence_refs": [
+        "admissibility_13_family_placement_torsor_reduction_audit.md",
+        "../../../evidence/data/admissibility-family-placement-torsor-reduction-v1.json",
+        "../../../verification/admissibility/verify_family_placement_torsor_reduction.mjs",
+        "../../../verification/prove/prove_charged_lepton_projectors_label_but_do_not_select_B_minus_3Li_or_generate_the_flavon.mjs",
+        "../../../verification/verify/verify_jarlskog_as_flavor_graph_curvature_determinant.mjs",
+        "../../../evidence/data/spin23-selected-flavour-texture-zero-nufit61.json"
+      ],
+      "next_gate": "Search for a typed oriented marked triangle: a placement-odd and flavour-odd portal together with one rank-one family-to-placement incidence."
+    },
+    {
+      "id": "AZ-014",
+      "label": "Spontaneous relative-frame link",
+      "coverage_status": "bounded_unknown",
+      "theory_status": "A nonnegative S3-by-S3 invariant matrix potential has exactly the six permutation matrices as isolated zero-energy vacua and breaks the independent family and placement permutation groups to a vacuum-dependent diagonal S3.",
+      "experiment_status": "The six-basin architecture suggests switching, reversal, domain-wall and hysteresis observables, but no physical carrier or detector realization has been identified.",
+      "known_theory_bounds": [
+        "The proposed polynomial potential is nonnegative and its binary zero set is exactly the six permutation matrices.",
+        "The parent symmetry has order 36, each vacuum stabilizer has order 6 and the vacuum orbit has size 6.",
+        "A selected vacuum supplies an orientation parity, a paired basepoint and the complete family-to-placement bijection.",
+        "Parity and basepoint filters reproduce the exact six-to-three, six-to-two and six-to-one torsor reductions."
+      ],
+      "unknown_theory_bounds": [
+        "No corpus field or composite is yet known to carry one family and one placement index.",
+        "The kinetic term, coefficients and microscopic origin of the link potential are not derived.",
+        "The relation between the link vacua and the existing six marked Hopf phases is representation-level only."
+      ],
+      "known_experiment_bounds": [
+        "A physical realization would predict six discrete response basins, with reversal-sensitive parity triplets and mark-sensitive residual splitting."
+      ],
+      "unknown_experiment_bounds": [
+        "No calibrated control couples to the proposed relative-frame order parameter.",
+        "No domain-wall, switching-rate or metastability measurement protocol has been sourced."
+      ],
+      "frontiers": ["dynamics", "translation", "experiment", "theory"],
+      "evidence_refs": [
+        "admissibility_14_relative_frame_link_and_spontaneous_selection.md",
+        "../../../evidence/data/admissibility-relative-frame-link-v1.json",
+        "../../../verification/admissibility/verify_relative_frame_link_spontaneous_selection.mjs",
+        "../../../corpus/claims/1000-1099/1006_the_six_marked_hopf_phases_map_equivariantly_to_the_placement_cover_and_the_phase_half_turn_is_the_coherent_deck_lift.md",
+        "../../../corpus/claims/1000-1099/1098_the_family_B_minus_3Li_orbit_is_exactly_the_trace_zero_placement_A2_module_but_the_intertwiner_is_a_six_choice_label_torsor.md"
+      ],
+      "next_gate": "Find or rule out a bifundamental family-by-placement field, composite or response kernel whose low-energy order parameter is the relative-incidence matrix X."
+    },
+    {
+      "id": "AZ-015",
+      "label": "Hopf hexagon and relative-frame vacuum orbit",
+      "coverage_status": "established_algebraic",
+      "theory_status": "The six marked Hopf phases and six permutation-link vacua are exactly equivariant under a mixed order-two family action and order-three placement action, including the half-turn and dihedral reflection.",
+      "experiment_status": "No common physical operation has been shown to implement the mixed update on family and placement endpoints.",
+      "known_theory_bounds": [
+        "The two-sided update X -> A X B^T has period six when A is a family transposition and B a placement three-cycle.",
+        "Its orbit through the identity consists of all six permutation matrices.",
+        "The orbit coordinates are placement n mod 3, sheet n mod 2 and determinant parity (-1)^n.",
+        "The three-step half-turn fixes placement and flips link parity; simultaneous conjugation by A sends n to -n.",
+        "The order-six action is relational and exists despite neither individual S3 factor containing an element of order six."
+      ],
+      "unknown_theory_bounds": [
+        "The family transposition, placement orientation and mixed generator are not selected by a common source action.",
+        "Discrete vacuum equivariance does not identify the continuous Hopf circle with the ambient link-matrix field.",
+        "No microscopic calculation relates the cos(6 phi) coefficient to the relative-frame potential."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No phase-winding protocol is known to enact the simultaneous family reflection and placement cycle.",
+        "No observable distinguishes a physical Hopf-link correspondence from an abstract relabeling of six states."
+      ],
+      "frontiers": ["translation", "dynamics", "experiment", "theory"],
+      "evidence_refs": [
+        "admissibility_15_hopf_hexagon_as_relative_frame_vacuum_orbit.md",
+        "../../../evidence/data/admissibility-hopf-link-vacuum-equivariance-v1.json",
+        "../../../verification/admissibility/verify_hopf_link_vacuum_equivariance.mjs",
+        "../../../corpus/claims/1000-1099/1006_the_six_marked_hopf_phases_map_equivariantly_to_the_placement_cover_and_the_phase_half_turn_is_the_coherent_deck_lift.md",
+        "../../../corpus/claims/1000-1099/1007_placement_deck_and_real_symmetry_force_cos6phi_as_the_minimal_phase_locking_term_and_select_the_six_marked_hopf_phases_conditionally.md"
+      ],
+      "next_gate": "Derive or exclude a sourced portal whose phase step implements X -> A X B^T and whose locked minima are the six relative-frame vacua."
+    },
+    {
+      "id": "AZ-016",
+      "label": "Five-dimensional relative-frame quadratic carrier",
+      "coverage_status": "established_algebraic",
+      "theory_status": "The six permutation-link vacua span R plus End(A2), a five-dimensional carrier which, after orientation correlation, admits the determinant-minus-singlet quadratic form of signature (2,3).",
+      "experiment_status": "No physical kinetic or response Hessian has yet selected the indefinite form over the positive Frobenius metric.",
+      "known_theory_bounds": [
+        "The six permutation matrices have linear span dimension five and decompose as one singlet plus a four-dimensional A2 endomorphism block.",
+        "The relational determinant has signature (2,2), and subtracting the singlet square gives signature (2,3).",
+        "The orientation-correlated subgroup and vacuum diagonal S3 preserve the relational determinant.",
+        "The three even permutation vacua are null and the three odd vacua have Q=-2 in the normalized form.",
+        "Under the mixed C6 step the carrier decomposes into a singlet, a fundamental harmonic plane and a second-harmonic plane."
+      ],
+      "unknown_theory_bounds": [
+        "No action has selected Q=det(R)-a^2 as the physical kinetic or response metric.",
+        "The full connected SO(2,3) action and its Spin(2,3) lift are not derived physical symmetries.",
+        "The mixed parity-changing six-step update does not preserve Q and requires a separate dynamical interpretation.",
+        "The relative normalization of determinant and singlet-square terms is not fixed by the finite representation."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No measurement distinguishes an indefinite link-response metric from a positive Frobenius response.",
+        "No observable light-cone or null propagation law has been attached to the three even vacua."
+      ],
+      "frontiers": ["theory", "dynamics", "translation", "experiment"],
+      "evidence_refs": [
+        "admissibility_16_five_dimensional_link_span_and_spin23_quadratic_envelope.md",
+        "../../../evidence/data/admissibility-link-span-spin23-carrier-v1.json",
+        "../../../verification/admissibility/verify_link_span_spin23_quadratic_carrier.mjs"
+      ],
+      "next_gate": "Restrict candidate corpus actions and response Hessians to R plus End(A2), then test whether they select the (2,3) determinant form, the positive Frobenius form or neither."
+    },
+    {
+      "id": "AZ-017",
+      "label": "Positive selector versus indefinite causal metric",
+      "coverage_status": "bounded_unknown",
+      "theory_status": "The relative-frame well potential and the nearest explicit stable corpus actions have positive or semidefinite vacuum Hessians; none selects the signature-(2,3) determinant form as a Euclidean energy metric.",
+      "experiment_status": "No detector-facing null cone, hyperbolic propagation law or Q-preserving spectral response has been identified on the five-dimensional carrier.",
+      "known_theory_bounds": [
+        "The six-well relative-frame potential restricts to Hessian eigenvalues 2+12 kappa,2,2,2,2 and signature (5,0) for kappa>0.",
+        "Hopf locking, minimum variance, cross-Peirce norm, Gaussian log-det and Schur boundary mechanisms are positive or semidefinite at their admitted vacua.",
+        "Sylvester inertia prevents these positive forms from becoming the (2,3) determinant metric by an invertible real relabeling.",
+        "Using Q directly as an unconstrained Euclidean potential Hessian gives a saddle rather than a stable vacuum."
+      ],
+      "unknown_theory_bounds": [
+        "No Lorentzian, Hamiltonian, retarded or first-order action preserving Q has been derived on the link carrier.",
+        "No Euclidean-to-Lorentzian continuation and constraint analysis has established a ghost-free physical role for Q.",
+        "The parity-changing six-step Hopf/link update is not a Q-isometry and its dynamical status remains open."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No propagation or response measurement identifies the null cone of Q.",
+        "No spectral protocol distinguishes Q-preserving evolution from positive gradient relaxation or defect switching."
+      ],
+      "frontiers": ["dynamics", "theory", "experiment", "translation"],
+      "evidence_refs": [
+        "admissibility_17_action_metric_audit_positive_selection_versus_causal_geometry.md",
+        "../../../evidence/data/admissibility-link-action-metric-audit-v1.json",
+        "../../../verification/admissibility/verify_link_action_metric_audit.mjs",
+        "../../../corpus/programmes/freudenthal/freudenthal_action_01_logdet_variational_mechanism_and_scale_no_go.md",
+        "../../../corpus/claims/0800-0899/820_the_three_v4_contrasts_match_the_dimension_but_not_the_metric_of_the_h2r_relationship_space_or_a_canonical_spin23_section.md"
+      ],
+      "next_gate": "Search for sourced antisymmetric, symplectic, retarded or first-order generators G on the five-dimensional carrier and test G^T eta + eta G = 0 together with detector-facing causal interpretation."
+    },
+    {
+      "id": "AZ-018",
+      "label": "Transported sp4 action on the relative-frame carrier",
+      "coverage_status": "established_algebraic",
+      "theory_status": "An explicit isometry identifies the five-dimensional link carrier with the corpus's primitive-two-form Spin(2,3) module and transports all ten existing sp4 generators to Q-preserving link-coordinate generators.",
+      "experiment_status": "The transported coordinates and flows have no common detector realization or sourced microscopic link action.",
+      "known_theory_bounds": [
+        "The coordinate map (a,R) to (u,q,a,v,p)/sqrt(2) is an exact isometry to the primitive-two-form module.",
+        "Ten transported generators are independent and satisfy G transpose eta plus eta G equals zero.",
+        "Six generators preserve the singlet and act within the relational block; four mix singlet and relational coordinates.",
+        "The corpus's controlled turn, split TKK dilation and continuous Furey channel rotation already close the required sp4 algebra."
+      ],
+      "unknown_theory_bounds": [
+        "No common microscopic action selects the coordinate isometry or couples the link field to all three generator sources.",
+        "The Hamiltonian interaction and charge-safe mediator for the continuous Furey channel rotation remain open.",
+        "The six-step parity-changing Hopf/link transition is not contained in the connected Q-preserving flow."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No calibrated observable reconstructs the five transported coordinates.",
+        "No response experiment tests the ten-generator closure or Q preservation."
+      ],
+      "frontiers": ["dynamics", "translation", "experiment", "theory"],
+      "evidence_refs": [
+        "admissibility_18_existing_sp4_closure_transports_to_the_link_carrier.md",
+        "../../../evidence/data/admissibility-link-carrier-sp4-transport-v1.json",
+        "../../../verification/admissibility/verify_link_carrier_sp4_transport.mjs",
+        "../../../corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+        "../../../corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "../../../verification/verify/verify_primitive_two_forms_of_symplectic_r4_realize_signature_23_and_sp4_action.mjs"
+      ],
+      "next_gate": "Derive or exclude the microscopic Hamiltonian term and mediator for the continuous Furey channel rotation, coupled to the relative-frame link through the explicit five-dimensional isometry."
+    },
+    {
+      "id": "AZ-019",
+      "label": "Conjugation-doubled Wilson link carrier",
+      "coverage_status": "bounded_unknown",
+      "theory_status": "The six orientation lifts of the three Wilson source rays form an exact source-level carrier for the Hopf, placement-cover and relative-frame six-state orbit, but the physical gauge section splits into two triangles rather than one connected six-cycle.",
+      "experiment_status": "No microscopic edge antiunitary or switching protocol realizes the connected source hexagon.",
+      "known_theory_bounds": [
+        "The doubled source labels are coordinatized by base n mod 3 and conjugation sheet n mod 2.",
+        "The physical S1/S1-dagger vertex grading induces edge voltage (0,1,1), zero Z2 flux and lift C3 disjoint-union C3.",
+        "Uniform antiunitary edge voltage (1,1,1) has odd flux and gives one connected C6.",
+        "Shared-leg radiative mixing closes the Wilson triangle and produces the exact A2 metric at kappa/m^2=1.",
+        "The generic log-det selector chooses the unmixed point rather than the A2 point."
+      ],
+      "unknown_theory_bounds": [
+        "No microscopic Real, CAR or boundary operation supplies the uniform edge antiunitary.",
+        "The ratio kappa/m^2=1 is protected by assumed placement C3 plus Real symmetry but is not independently derived.",
+        "The candidate source carrier has not been promoted to a local bifundamental field with the five-dimensional link action."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No observable distinguishes the connected C6 lift from two disconnected conjugate C3 sectors.",
+        "No measured mediator spectrum establishes the A2 ratio or uniform antiunitary transition."
+      ],
+      "frontiers": ["translation", "dynamics", "experiment", "theory"],
+      "evidence_refs": [
+        "admissibility_19_conjugation_doubled_wilson_source_as_link_carrier.md",
+        "../../../evidence/data/admissibility-wilson-source-link-carrier-v1.json",
+        "../../../verification/admissibility/verify_wilson_source_link_carrier.mjs",
+        "../../../corpus/claims/1000-1099/1067_the_Wilson_rays_become_exactly_the_A2_placement_root_system_at_the_unique_shared_leg_strength_kappa_equals_m_squared.md",
+        "../../../corpus/claims/1000-1099/1070_the_physical_S1_orientation_pattern_is_a_zero_flux_coboundary_so_the_placement_six_cycle_requires_the_full_conjugation_doubled_source_triplet.md"
+      ],
+      "next_gate": "Derive or exclude a uniform edge antiunitary on the conjugation-doubled Wilson source triplet and independently compute whether its dynamics fixes kappa/m^2=1."
+    },
+    {
+      "id": "AZ-020",
+      "label": "Complex-linear flow versus antiunitary edge dynamics",
+      "coverage_status": "established_boundary",
+      "theory_status": "The continuous Furey generator and the connected-cover edge share a real matrix G but differ categorically: exp(tG) is complex-linear, while GK is conjugate-linear and cannot be ordinary Hamiltonian evolution on the same complex carrier.",
+      "experiment_status": "No Nambu, boundary or open-system realization of the real-doubled antiunitary quarter-turn has been identified experimentally.",
+      "known_theory_bounds": [
+        "G is real skew, squares to minus identity and exponentiates to the continuous complex-linear channel rotation.",
+        "Gamma=GK is conjugate-linear, squares to central minus identity and supplies the sheet-changing topology.",
+        "No complex-linear propagator can equal Gamma because their actions on multiplication by i have opposite signs.",
+        "On R8, Gamma becomes a real skew orthogonal complex structure with square minus identity and is a continuous quarter-turn.",
+        "The realified Gamma anticommutes with the original complex structure."
+      ],
+      "unknown_theory_bounds": [
+        "No CAR- and charge-compatible Nambu or Majorana generator realizing the realified Gamma has been derived.",
+        "No boundary/interface matching law or open-system dilation implements the uniform edge sewing.",
+        "The relation between the real-doubled edge flow and the five-dimensional link action remains untyped physically."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No particle-hole, sideband or boundary protocol tests the coherent central-minus lift.",
+        "No measurement separates complex-linear channel rotation from conjugate-linear sheet transport."
+      ],
+      "frontiers": ["dynamics", "translation", "experiment", "theory"],
+      "evidence_refs": [
+        "admissibility_20_linear_flow_versus_antiunitary_edge_dynamics.md",
+        "../../../evidence/data/admissibility-furey-linear-versus-antiunitary-dynamics-v1.json",
+        "../../../verification/admissibility/verify_furey_linear_antiunitary_dynamics_boundary.mjs",
+        "../../../corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+        "../../../corpus/claims/1000-1099/1070_the_physical_S1_orientation_pattern_is_a_zero_flux_coboundary_so_the_placement_six_cycle_requires_the_full_conjugation_doubled_source_triplet.md"
+      ],
+      "next_gate": "Audit existing Nambu, particle-hole, sideband and boundary carriers for a charge- and CAR-compatible realization of Gamma_R=diag(G,-G)."
+    },
+    {
+      "id": "AZ-021",
+      "label": "Quarter-turn, Goldstone, Gaussian-cloud and open-closure synthesis",
+      "coverage_status": "established_boundary",
+      "theory_status": "One exact quarter-turn operator recurs across the corpus as generated complex structure, Jordan-chart transition, selector-orbit motion, Gaussian-response orientation, real-interface sewing and coherent holonomy; these roles are compatible but not yet one microscopic process.",
+      "experiment_status": "No experiment currently identifies one carrier on which the selector motion, Gaussian fluctuation root and antiunitary interface sewing are jointly realized.",
+      "known_theory_bounds": [
+        "On an oriented real plane J^2=-I and exp((pi/2)J)=J, so J is multiplication by i after identifying R2 with C.",
+        "Two anticommuting real structures generate J, while the oriented active C3 determines an integral square-minus-three version of the same complex orientation.",
+        "J is the exact transition between the two positive Jordan charts and the wall-to-Furey selector quarter-turn.",
+        "An isotropic RP2 selector has two tangent Goldstone directions; gauging, anisotropy or boundary typing changes their physical status.",
+        "The proper-Gaussian Wick-current map fills H2(R)+ but forgets the root sign and is not a Jordan or Schur homomorphism.",
+        "Real-interface transport has J^6=-I and J^12=I, so coherent closure retains information discarded by projective and base quotients.",
+        "The boundaryless full wall restores the translational Goldstone removed by the reflection fold."
+      ],
+      "unknown_theory_bounds": [
+        "The presence of J does not derive a spacetime Wick rotation without a typed time contour and reconstruction theorem.",
+        "It is not known whether the selector, Gaussian root and real interface inhabit one gauge- and Lorentz-complete microscopic carrier.",
+        "No dynamical intertwiner identifies the full-wall translation mode with either selector orientation mode.",
+        "The shared operator identity does not by itself choose Goldstone, pseudo-Goldstone, eaten, boundary or coordinate-only realization."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No phase-resolved boundary experiment tests the quarter-turn as a real-form chart transition.",
+        "No measurement tracks the central minus sign through six steps and coherent return through twelve.",
+        "No detector separates a physical Goldstone cloud from gauge, boundary and Gaussian statistical realizations of the same operator grammar."
+      ],
+      "frontiers": ["dynamics", "translation", "experiment", "theory"],
+      "evidence_refs": [
+        "admissibility_21_quarter_turn_wick_goldstone_cloud_and_open_closure.md",
+        "../../../evidence/data/admissibility-quarter-turn-wick-goldstone-cloud-open-closure-v1.json",
+        "../../../verification/admissibility/verify_quarter_turn_wick_goldstone_cloud_open_closure.mjs",
+        "../../../corpus/claims/0200-0299/297_a_dynamical_real_form_selector_has_rp2_order_parameter_and_two_orientation_modes.md",
+        "../../../corpus/claims/0300-0399/308_two_real_structures_generate_either_a_grading_or_a_complex_structure.md",
+        "../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md",
+        "../../../corpus/claims/1000-1099/1028_the_proper_gaussian_wick_map_from_the_xk_fixed_furey_root_surjects_onto_every_positive_residual_h2r_covariance.md"
+      ],
+      "next_gate": "Construct or rule out a single typed field carrier on which selector motion, Gaussian fluctuations and real-interface quarter-turn sewing coexist with gauge, CAR, causal and boundary consistency."
+    },
+    {
+      "id": "AZ-022",
+      "label": "Universal-projector connection as the quarter-turn crossbar",
+      "coverage_status": "established_boundary",
+      "theory_status": "The moving-projector connection C_P=[P,dP] reconstructs the horizontal generator [dot(P),P]; on the active real two-plane its holonomy is exactly the quarter-turn J and its closed projective half-turn lifts to central minus identity.",
+      "experiment_status": "No measured system currently identifies the real-form selector projector with the family CP2 projector or measures their proposed common holonomy.",
+      "known_theory_bounds": [
+        "For every differentiable orthogonal projector path, Omega_P=[dot(P),P] obeys dot(P)=[Omega_P,P].",
+        "The universal connection C_P=[P,dP] preserves the moving split.",
+        "For P(t)=exp(tJ)P0exp(-tJ), C_P=-Jdt and parallel transport gives U(pi/2)=J.",
+        "The projector closes at t=pi while the coherent frame returns with minus identity and closes only at 2pi.",
+        "The rank-three connection d+[P,dP]+ia(I-3P) combines projector transport with independent compact holonomies and the faithful central Z3 lift.",
+        "The quadratic projector return carries the exact factor three.",
+        "After choosing a real structure, RP2 is the real projector locus inside CP2 and the universal connection restricts to it."
+      ],
+      "unknown_theory_bounds": [
+        "The RP2 real-form selector and CP2 family projector are not known to be one physical order parameter.",
+        "No gauge-, Lorentz- and charge-compatible intertwiner identifies their active two-planes.",
+        "The CP2 Kahler complex structure points from the real tangent plane into its normal copy and must not be identified automatically with the in-plane selector quarter-turn.",
+        "No single microscopic action derives the projector path, independent compact connection, Gaussian response and boundary sewing together.",
+        "The quantum defect gap and observable-algebra descent remain conditional."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No phase-sensitive transport experiment measures the projective return and coherent central sign on the proposed carrier.",
+        "No detector reconstructs both projector motion and its lifted frame holonomy."
+      ],
+      "frontiers": ["dynamics", "translation", "experiment", "theory"],
+      "evidence_refs": [
+        "admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "../../../evidence/data/admissibility-universal-projector-quarter-turn-crossbar-v1.json",
+        "../../../verification/admissibility/verify_universal_projector_quarter_turn_crossbar.mjs",
+        "../../../corpus/claims/1100-1199/1186_the_shiab_analogy_identifies_the_missing_operation_but_not_yet_a_well_defined_jordan_transport.md",
+        "../../../corpus/claims/1100-1199/1187_the_projector_curvature_contains_an_exact_factor_three_but_a_composite_connection_does_not_yet_supply_the_bf_carrier.md",
+        "../../../corpus/claims/1100-1199/1194_the_unique_determinant_neutral_line_twist_supplies_the_independent_u1_connection_and_derives_charge_three_without_family_su2.md"
+      ],
+      "next_gate": "Test whether the selector and family projector bundles admit a common typed intertwiner carrying C_P, J, the independent line connection and their physical source actions."
+    },
+    {
+      "id": "AZ-023",
+      "label": "Holonomy-driven selector breaking and reflexive closure",
+      "coverage_status": "conditionally_filled",
+      "theory_status": "A selector on a noncontractible cycle with quarter-turn holonomy has an exact transverse spectral gap and a finite mass window in which its RP2 vacuum surface collapses to one projective director.",
+      "experiment_status": "No physical platform has yet been matched simultaneously to the selector field, quarter-turn holonomy and return-map readout.",
+      "known_theory_bounds": [
+        "For H_phi=diag(R(phi),1) with 0<phi<=pi, the two transverse lowest eigenvalues are phi^2/L^2 while the longitudinal mode remains at zero.",
+        "At phi=pi/2 the transverse gap is pi^2/(4L^2).",
+        "In the interval -phi^2/L^2<r<0 only the longitudinal mode condenses.",
+        "The two vector minima become one vacuum under the director identification n~-n.",
+        "The twisted vacuum has a positive radial Hessian and two positive holonomy-gapped tangent modes, whereas the untwisted isotropic vacuum has two Goldstones."
+      ],
+      "unknown_theory_bounds": [
+        "The compact cycle or wall has not been derived from a preceding material phase.",
+        "The quarter-turn holonomy is boundary data rather than an output of the selected projector.",
+        "The nonlinear fixed-point equation P=Pi_min(Hol(P)) has not been solved on a physical carrier.",
+        "Radiative, causal and quantum stability remain open."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No detector protocol jointly reconstructs the holonomy, selector spectrum and selected director.",
+        "No experiment tests the predicted switch from two tangent Goldstones to two holonomy-gapped modes across the trivial/nontrivial sector."
+      ],
+      "frontiers": ["dynamics", "translation", "experiment", "theory"],
+      "evidence_refs": [
+        "admissibility_23_holonomy_driven_selector_breaking_and_reflexive_closure.md",
+        "../../../evidence/data/admissibility-holonomy-driven-selector-breaking-v1.json",
+        "../../../verification/admissibility/verify_holonomy_driven_selector_breaking.mjs",
+        "../../../corpus/claims/0200-0299/297_a_dynamical_real_form_selector_has_rp2_order_parameter_and_two_orientation_modes.md",
+        "../../../corpus/claims/1100-1199/1192_how_the_programme_closes_over_itself_a_single_typed_action_a_return_map_and_terminal_tests.md",
+        "../../../corpus/claims/1100-1199/1193_projector_stationarity_is_the_return_map_and_spin23_belongs_to_the_2_plus_1_dimensional_defect.md"
+      ],
+      "next_gate": "Derive the holonomy from the same projector it selects and test existence and transverse stability of the fixed point P=Pi_min(Hol(P))."
+    },
+    {
+      "id": "AZ-024",
+      "label": "Self-generated holonomy preserves but cannot choose the projector",
+      "coverage_status": "established_boundary",
+      "theory_status": "A projector canonically generates an axis-preserving half-turn and, after orientation lift, a quarter-turn family; its lowest-mode return map is exactly the identity on RP2, so every projector is fixed and none is transversely attractive.",
+      "experiment_status": "No experimental carrier has yet separated holonomy-based memory from genuine orientation selection in the proposed selector system.",
+      "known_theory_bounds": [
+        "H_phi(n)=P+cos(phi)(I-P)+sin(phi)[n]_cross fixes the line P.",
+        "The quarter-turn changes to its inverse under n to -n and therefore requires an orientation lift.",
+        "The half-turn H_pi(P)=2P-I is well defined from the director alone.",
+        "The lowest-mode return map recovers P exactly for every projector.",
+        "Its tangent derivative is the identity with spectral radius one.",
+        "A projector-only SO(3)-equivariant return map cannot uniquely select orientation."
+      ],
+      "unknown_theory_bounds": [
+        "The minimal non-ad-hoc second datum that reduces the stabilizer has not been identified.",
+        "No two-input return map has yet been shown to be transversely contractive.",
+        "The production of the second datum as a material, boundary or topological record remains open.",
+        "A local causal action implementing the repaired return map is absent."
+      ],
+      "known_experiment_bounds": [],
+      "unknown_experiment_bounds": [
+        "No protocol tests whether a chosen sector merely preserves an axis or dynamically attracts distinct initial projectors.",
+        "No measured response tensor has been tied to the proposed second-datum repair."
+      ],
+      "frontiers": ["dynamics", "translation", "experiment", "theory"],
+      "evidence_refs": [
+        "admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md",
+        "../../../evidence/data/admissibility-self-generated-holonomy-projector-no-go-v1.json",
+        "../../../verification/admissibility/verify_self_generated_holonomy_projector_no_go.mjs",
+        "../../../corpus/claims/1100-1199/1196_no_u3_covariant_effective_action_of_one_projector_can_select_its_orientation_so_closure_requires_a_second_family_tensor.md",
+        "../../../corpus/claims/1200-1299/1215_any_number_of_fully_integrated_isotropic_links_remains_blind_to_the_complementary_frame.md"
+      ],
+      "next_gate": "Construct the smallest two-datum return map R(P;Y), using an existing wall normal or relative-frame link, and test whether its tangent spectral radius is strictly below one."
+    },
+    {
+      "id": "AZ-025",
+      "label": "Current research frontier crosswalk",
+      "coverage_status": "literature_grounded",
+      "theory_status": "The programme has exact formal contact with projector-based Grassmannian quantum geometry, mechanism-level contact with programmable holonomy, generalized symmetry, driven selection and fluctuation forces, and only programme-level or unsupported contact with Spin(2,3) gravity and E8 unification.",
+      "experiment_status": "Synthetic non-Abelian photonics supplies the nearest controllable platform, but the corpus return map and second-datum contraction test have not been implemented.",
+      "known_theory_bounds": [
+        "P, dP and the horizontal commutator connection are standard gauge-independent objects in current projector quantum geometry.",
+        "Non-Abelian holonomy is constrained by curvature and can be programmed in synthetic photonic dimensions.",
+        "Generalized symmetry and defect data can constrain phases and selection rules beyond ordinary local order parameters.",
+        "Current finite-size and open-system symmetry breaking makes preparation, parity, environment, dissipation and history explicit physical data.",
+        "Consistency-first programmes already map allowed theory regions from unitarity, analyticity, causality and positivity."
+      ],
+      "unknown_theory_bounds": [
+        "No corpus-specific projector has been derived as a spectral subspace of a physical Hamiltonian or response operator.",
+        "No result unique to the proposed admissibility principle has been separated from known consistency bounds.",
+        "Spin(2,3) algebraic closure has not been promoted to a healthy gravitational action with observational consequences.",
+        "The E8 interpretation has no representation dictionary, action, breaking chain or discriminating prediction."
+      ],
+      "known_experiment_bounds": [
+        "Photonic synthetic-frequency experiments realize matrix-valued lattice transport and non-Abelian gauge-field signatures.",
+        "Driven-dissipative quantum gases resolve mode coalescence and dynamical phase precursors.",
+        "Fluctuation-induced torque and nonreciprocal Casimir calculations expose measurable relational orientation selection."
+      ],
+      "unknown_experiment_bounds": [
+        "No experiment jointly measures projective return, coherent lifted holonomy and second-datum contraction.",
+        "No measured platform has estimated the tangent spectral radius of the physical return map from multiple initial projectors."
+      ],
+      "frontiers": ["quantum_geometry", "consistency", "generalized_symmetry", "open_systems", "fluctuation_forces", "experiment"],
+      "evidence_refs": [
+        "admissibility_25_current_research_frontier_crosswalk.md",
+        "../../../evidence/data/admissibility-current-research-frontier-crosswalk-v1.json",
+        "../../../verification/admissibility/verify_current_research_frontier_crosswalk.mjs"
+      ],
+      "next_gate": "Construct a three-mode Hamiltonian with a measurable spectral-projector path and quarter-turn holonomy, add an independently measured second datum Y, and test whether the physical return map has spectral radius below one."
+    },
+    {
+      "id": "AZ-026",
+      "label": "Three-mode quarter-turn and two-datum contraction",
+      "coverage_status": "exact_finite_model",
+      "theory_status": "A gapped three-mode Hamiltonian carries a cyclic rank-one spectral projector whose complementary doublet acquires an exact quarter-turn holonomy; adding an independent rank-one datum Y produces a unique fixed projector with tangent spectral radius a/(a+b)<1.",
+      "experiment_status": "The required observables are standard spectrum, projector tomography, phase-sensitive doublet interferometry and repeated return-map tomography, but no specific hardware implementation or error budget has yet been selected.",
+      "known_theory_bounds": [
+        "The latitude cos(theta)=3/4 encloses solid angle pi/2.",
+        "H0=Delta(I-P) has one zero eigenline, a degenerate Delta doublet and a constant gap.",
+        "The projector returns exactly after one loop while the complementary frame returns by J.",
+        "For F=aP+bY with b>a>0, the principal-projector return map has unique fixed point Y.",
+        "The two tangent multipliers at Y are both a/(a+b); the witness a=1,b=2 has spectral radius 1/3.",
+        "The b=0 limit recovers the projector-only identity map and spectral radius one."
+      ],
+      "unknown_theory_bounds": [
+        "No platform-specific control Hamiltonian, loss model or calibration protocol has been fixed.",
+        "The physical origin and measurement channel for Y remain platform-dependent.",
+        "Robustness to doublet splitting, nonadiabaticity, unequal loss and noise has not been quantified.",
+        "The three-mode carrier has no established identification with the corpus family, matter or gravitational carriers."
+      ],
+      "known_experiment_bounds": [
+        "The four required readout classes are available in synthetic photonic, microwave and mechanical mode platforms in principle.",
+        "The adiabatic error parameter is omega*sqrt(7)/(4 Delta).",
+        "The common doublet dynamical phase must be removed before geometric holonomy is inferred."
+      ],
+      "unknown_experiment_bounds": [
+        "No error threshold yet guarantees discrimination of rho=1 from rho<1.",
+        "No false-positive audit yet separates geometric rotation from detuning, dynamical phase, gain/loss imbalance or reconstruction bias."
+      ],
+      "frontiers": ["quantum_geometry", "holonomy", "dynamics", "experiment", "detection"],
+      "evidence_refs": [
+        "admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "../../../evidence/data/admissibility-three-mode-quarter-turn-two-datum-contraction-v1.json",
+        "../../../verification/admissibility/verify_three_mode_quarter_turn_two_datum_contraction.mjs"
+      ],
+      "next_gate": "Perturb the exact three-mode model by doublet splitting, loss imbalance, timing error and tomography noise, then determine which observables reliably distinguish neutral memory from contractive selection."
+    },
+    {
+      "id": "AZ-027",
+      "label": "Robustness window for projective return, coherent holonomy and selection",
+      "coverage_status": "analytic_error_budget",
+      "theory_status": "The three-mode test has a simultaneous adiabaticity-degeneracy-loss window, an exact projector-closure diagnostic, a polar decomposition separating rotation from attenuation and a statistical slope test separating contractive selection from neutral memory.",
+      "experiment_status": "A dimensionless reference budget passes, but platform admission requires measured linewidths, splittings, modulation rates and correlated tomography errors.",
+      "known_theory_bounds": [
+        "The feasibility window is 2pi max(delta,gamma)/epsilon_rel <= omega <= epsilon_ad Delta/s.",
+        "The window exists only if max(delta,gamma)/Delta <= epsilon_rel epsilon_ad/(2pi s).",
+        "A timing error eta produces exact projector chord sqrt(1-(c^2+s^2 cos eta)^2).",
+        "Polar decomposition separates the unitary rotation estimate from differential-loss singular-value distortion.",
+        "The return-map contraction is certified by a multi-initial-condition upper confidence bound below one."
+      ],
+      "unknown_theory_bounds": [
+        "A full nonadiabatic leakage calculation has not been included.",
+        "Colored and correlated noise, drift and state-preparation errors remain unmodeled.",
+        "The integrated-norm bounds may be conservative for a platform-specific echo sequence."
+      ],
+      "known_experiment_bounds": [
+        "For epsilon_ad=0.02 and epsilon_rel=0.05, relative splitting and differential loss must be below approximately 2.406e-4 of the main gap.",
+        "A one-percent projector-chord budget requires azimuth timing error below approximately 0.01512 radians.",
+        "Nine effective observations per tangent direction at 0.03-radian input and 0.01-radian noise give a five-sigma upper slope bound of 8/9 for the m=1/3 witness."
+      ],
+      "unknown_experiment_bounds": [
+        "No surveyed platform has yet been shown to meet the relative splitting and loss target.",
+        "No reversal and echo sequence has yet been validated against hardware drift.",
+        "No detector covariance matrix has yet replaced the independent-noise reference calculation."
+      ],
+      "frontiers": ["experiment", "dynamics", "detection", "noise", "holonomy"],
+      "evidence_refs": [
+        "admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md",
+        "../../../evidence/data/admissibility-three-mode-robustness-window-v1.json",
+        "../../../verification/admissibility/verify_three_mode_robustness_window.mjs"
+      ],
+      "next_gate": "Compare candidate photonic, microwave and mechanical platforms using published splitting, linewidth, modulation-bandwidth and tomography figures, without assuming any platform passes."
+    },
+    {
+      "id": "AZ-028",
+      "label": "Platform triage for the quarter-turn contraction experiment",
+      "coverage_status": "primary_source_platform_triage",
+      "theory_status": "Published demonstrations separately establish high-fidelity non-Abelian holonomy, loop reversal, process tomography, synthetic-dimension control and fast holonomic gates, but aggregate fidelity does not determine the normalized doublet splitting, differential loss or selector-map contraction required by AZ-027.",
+      "experiment_status": "No surveyed platform is admitted or excluded by the AZ-027 bound. Integrated silicon nitride is the closest structural carrier and the Rb-87 Yang-monopole experiment is the closest protocol precedent; neither reports both missing normalized imperfection coordinates, and none measures the independent-datum contraction.",
+      "known_theory_bounds": [
+        "The AZ-027 admission threshold is max(delta,gamma)/Delta <= 0.00024061965677016708 for its reference error budget.",
+        "Matrix or process fidelity cannot be inverted into either delta/Delta or gamma/Delta without a platform-specific error model.",
+        "A platform is admitted only by the typed tuple (delta/Delta, gamma/Delta, dP, theta_H forward/reverse, nu, m_hat), not by architectural resemblance."
+      ],
+      "unknown_theory_bounds": [
+        "The relation between each platform's published aggregate fidelity and the four AZ-027 diagnostic channels remains unidentified.",
+        "A platform-specific forward model joining fabrication disorder, nonadiabatic leakage, common loss and differential loss has not been constructed.",
+        "The physical realization of the independent selector datum Y remains open."
+      ],
+      "known_experiment_bounds": [
+        "The integrated silicon-nitride platform demonstrates SO(m) holonomy through m=6, representative SO(2) matrix fidelities from 0.991 to 0.999, greater than 100 nm bandwidth and less than 2 dB on-chip insertion loss.",
+        "The Rb-87 experiment uses a 2.0 kHz gap and a 2 ms loop, giving a dimensionless angular gap-cycle product of 8pi, and reports forward and reverse process fidelities of 0.98 and 0.96.",
+        "The fiber synthetic-frequency platform supplies six-state polarization tomography and MHz-scale programmable control, while the transmon precedent supplies a 26 ns nonadiabatic holonomic gate."
+      ],
+      "unknown_experiment_bounds": [
+        "Neither closest candidate reports residual splitting divided by the protecting gap together with differential loss divided by that gap.",
+        "No surveyed experiment reports all four diagnostics: projector closure, reversed coherent holonomy, polar nonunitarity and multi-initial-condition selector slope.",
+        "No surveyed experiment implements and calibrates the independent datum Y required to distinguish neutral memory from contractive selection."
+      ],
+      "frontiers": ["experiment", "platforms", "holonomy", "tomography", "selection"],
+      "evidence_refs": [
+        "admissibility_28_platform_triage_for_the_quarter_turn_contraction_experiment.md",
+        "../../../evidence/data/admissibility-quarter-turn-platform-triage-v1.json",
+        "../../../verification/admissibility/verify_quarter_turn_platform_triage.mjs"
+      ],
+      "next_gate": "Specify and simulate an integrated SO(2) four-waveguide device that reports the full typed admission tuple, includes clockwise and counterclockwise loops and implements an independently calibrated selector datum Y."
+    },
+    {
+      "id": "AZ-029",
+      "label": "Seebeck and anomalous Nernst guideposts for response geometry",
+      "coverage_status": "exact_response_tensor_guidepost",
+      "theory_status": "Seebeck thermopower supplies a longitudinal energy-slope projection, anomalous Nernst conductivity supplies a transverse orientation-odd Berry-curvature-weighted projection and anomalous Hall conductivity supplies the occupied-state comparison; the measured thermopower tensor must be unmixed through alpha=sigma S.",
+      "experiment_status": "The three response channels are established in topological and magnetic materials, but they are admitted only as guideposts and detectors. A joint response cube with reversal, Mott, frequency, domain and disorder controls has not yet been constructed for the programme.",
+      "known_theory_bounds": [
+        "At open circuit S=inverse(sigma) alpha, so measured transverse thermopower is not identical to transverse thermoelectric conductivity.",
+        "At low temperature the intrinsic Mott relation compares alpha_ij/T with the chemical-potential derivative of sigma_ij.",
+        "Onsager-Casimir reversal makes the anomalous transverse sector odd under reversal of magnetic order while the ordinary longitudinal linear-response sector is normally even.",
+        "Changing from energy current to heat current is a determinant-one triangular congruence of the two-current response cone."
+      ],
+      "unknown_theory_bounds": [
+        "No derivation identifies the transverse thermoelectric block with the programme's non-Abelian holonomy.",
+        "No thermomagnetic perturbation has been shown to implement the independent selector Y or change the return-map spectral radius.",
+        "Intrinsic Berry curvature, side jump, skew scattering, phonon drag and domain-wall contributions remain platform-dependent decompositions."
+      ],
+      "known_experiment_bounds": [
+        "Mn3Sn demonstrates a large field-reversible anomalous Nernst response despite very small net magnetization.",
+        "Co2MnGa demonstrates a large anomalous Nernst response sensitive to Weyl-band structure and proximity to a Lifshitz transition.",
+        "Simultaneous conductivity and thermopower tensors permit exact reconstruction of alpha and removal of Hall-angle mixing."
+      ],
+      "unknown_experiment_bounds": [
+        "The full response cube over temperature, chemical potential or composition, magnetic orientation and drive frequency is unmeasured for a selected carrier.",
+        "Thermal transfer functions, contact misalignment, domain kinetics and detector covariance have not been integrated into one inference model.",
+        "No paired thermoelectric measurement has yet been connected to the AZ-027 projector-closure and contraction tuple."
+      ],
+      "frontiers": ["thermoelectricity", "berry_curvature", "detection", "metastability", "dynamics", "boundaries"],
+      "evidence_refs": [
+        "admissibility_29_seebeck_nernst_guideposts_for_response_geometry.md",
+        "../../../evidence/data/admissibility-seebeck-nernst-guideposts-v1.json",
+        "../../../verification/admissibility/verify_seebeck_nernst_guideposts.mjs"
+      ],
+      "next_gate": "Construct a joint Hall-Seebeck-Nernst response cube over temperature, chemical potential or composition, magnetic orientation and drive frequency, reporting tensor-unmixed alpha, reversal parity, Mott residuals and hysteresis."
+    },
+    {
+      "id": "AZ-030",
+      "label": "Casimir-Seebeck-Nernst spectral ladder",
+      "coverage_status": "typed_cross_channel_guidepost",
+      "theory_status": "Representation Casimirs classify admitted mode sectors, the Casimir effect probes global boundary-conditioned spectral response, Seebeck probes a longitudinal local energy slope, anomalous Nernst probes an oriented transverse local energy slope and Onsager-Casimir reciprocity supplies the transport reversal grammar.",
+      "experiment_status": "Each rail is independently established, but no same-carrier experiment yet uses one independently measured causal response model to predict the transport and boundary-force channels without refitting.",
+      "known_theory_bounds": [
+        "Representation Casimir, Casimir force and Onsager-Casimir reciprocity are three noninterchangeable typed objects.",
+        "The equilibrium Casimir free energy depends on imaginary-frequency response, boundary scattering, propagation, temperature and geometry.",
+        "For ideal zero-temperature parallel plates only, energy per area scales as distance^-3 and pressure as distance^-4.",
+        "Seebeck and anomalous Nernst interrogate local longitudinal and oriented transverse energy dependence, respectively."
+      ],
+      "unknown_theory_bounds": [
+        "No protected representation-Casimir feature has been shown to survive into both thermoelectric response and boundary force.",
+        "No common microscopic response model has yet derived all three guidepost rails.",
+        "Force or torque parity under magnetic reversal remains dependent on the actual reciprocal or nonreciprocal material tensors and geometry."
+      ],
+      "known_experiment_bounds": [
+        "Optical response, electrical conductivity, thermopower and Casimir force or torque are separately measurable on compatible thin-film platforms.",
+        "Distance, temperature, magnetic orientation, drive frequency and boundary angle provide independent control axes.",
+        "An ideal-plate calibration gives ratios 1/8 for energy and 1/16 for pressure when distance doubles."
+      ],
+      "unknown_experiment_bounds": [
+        "No same-film no-refit Hall-Seebeck-Nernst-Casimir dataset has been selected.",
+        "Patch potentials, roughness, thermal gradients, ordinary magnetic backgrounds and domain kinetics require a joint covariance model.",
+        "No boundary-induced change in the selector return-map fixed point or slope has been demonstrated."
+      ],
+      "frontiers": ["casimir", "thermoelectricity", "boundaries", "spectral_response", "detection", "selection"],
+      "evidence_refs": [
+        "admissibility_30_casimir_seebeck_nernst_spectral_ladder.md",
+        "../../../evidence/data/admissibility-casimir-seebeck-nernst-ladder-v1.json",
+        "../../../verification/admissibility/verify_casimir_seebeck_nernst_ladder.mjs"
+      ],
+      "next_gate": "Perform a same-film no-refit experiment using measured electrical, thermoelectric and magneto-optical tensors to predict distance- and orientation-dependent Casimir force or torque, then test whether the boundary changes selection dynamics."
+    },
+    {
+      "id": "AZ-031",
+      "label": "Same-carrier platform closure for Casimir-thermoelectric response",
+      "coverage_status": "primary_source_platform_closure_audit",
+      "theory_status": "Weyl-semimetal scattering theory predicts Casimir sensitivity to Hall response, longitudinal response, film thickness, chemical potential and relative orientation, but no material-specific no-refit calculation has been closed from a measured causal tensor.",
+      "experiment_status": "Co2MnGa is the closest material carrier, the birefringent Casimir-torque experiment is the closest force protocol and neither constitutes a same-carrier cross-channel experiment. The missing fields are broadband off-diagonal optics, matched specimens, force measurement and magnetic-background closure.",
+      "known_theory_bounds": [
+        "A Casimir prediction requires the complex diagonal and off-diagonal response continued to imaginary frequency, not DC Hall or Nernst coefficients alone.",
+        "Parallel-minus-antiparallel force or torque is the primary differential observable for two matched magnetic films.",
+        "Transport, optical and force data must share a preregistered causal tensor model and propagated covariance to count as one descent."
+      ],
+      "unknown_theory_bounds": [
+        "No accepted tensor family yet bounds the Co2MnGa differential force over extrapolation uncertainty.",
+        "No signal-to-background calculation yet establishes a resolvable window against ordinary magnetic forces and electrostatic patches.",
+        "No boundary-to-selector dynamical model predicts a return-map slope."
+      ],
+      "known_experiment_bounds": [
+        "Co2MnGa bulk measurements report room-temperature Sxx near -26 microvolt/K, anomalous Syx near 6.0 microvolt/K and anomalous Hall conductivity near 845 S/cm.",
+        "Co2MnGa films report anomalous Hall conductivity near 600 inverse-ohm-cm from 0.2 to 1.5 THz, Faraday rotation 59 plus-or-minus 6 mrad and Hall angle near 8.5 percent.",
+        "Separate Co2MnGa films have Kramers-Kronig-consistent longitudinal optical conductivity from approximately 2.5 meV to 6.2 eV across 10 to 80 nm thickness.",
+        "Casimir torque angle and distance dependence has been measured in a separate birefringent-crystal and liquid-crystal apparatus."
+      ],
+      "unknown_experiment_bounds": [
+        "The broadband off-diagonal optical tensor of the force specimen is unmeasured.",
+        "No one specimen or matched batch carries the complete transport, optical and force record.",
+        "No Co2MnGa Casimir force or torque and no parallel-minus-antiparallel differential have been measured.",
+        "Ordinary magnetic, electrostatic-patch, roughness and thermal-gradient backgrounds remain unclosed."
+      ],
+      "frontiers": ["casimir", "weyl_materials", "magneto_optics", "thermoelectricity", "metrology", "selection"],
+      "evidence_refs": [
+        "admissibility_31_same_carrier_platform_closure_for_casimir_thermoelectric_response.md",
+        "../../../evidence/data/admissibility-casimir-thermoelectric-platform-closure-v1.json",
+        "../../../verification/admissibility/verify_casimir_thermoelectric_platform_closure.mjs"
+      ],
+      "next_gate": "Close the complex diagonal and off-diagonal optical tensor on matched Co2MnGa films and preregister a parallel-minus-antiparallel Casimir force or torque prediction with propagated uncertainty and magnetic-background controls."
+    },
+    {
+      "id": "AZ-032",
+      "label": "Wide frontier atlas and iterative research queue",
+      "coverage_status": "corpus_wide_frontier_census",
+      "theory_status": "Fourteen observable-facing lanes reorganize the corpus across historical branches; a declared score ranks corpus leverage, experimental reach, falsifiability and null utility against physical-bridge risk, with steering triggers forcing periodic return to the whole map.",
+      "experiment_status": "Five lanes are prioritized for immediate executable packets: contractive selection, adversarial detector design, two-current transport, same-carrier Casimir-thermoelectric closure and hybrid phonon/magnon carriers.",
+      "known_theory_bounds": [
+        "The corpus is deepest in quantum-information, projector/holonomy, flavour and topology language but document density is not evidence strength.",
+        "The most experimentally leveraged lanes share projectors, positive response matrices, reversal parity, memory and detector equivalence classes.",
+        "A priority score is a steering device and cannot be interpreted as a probability that a lane is true."
+      ],
+      "unknown_theory_bounds": [
+        "Cross-lane intertwiners remain unproved unless the same physical carrier and source action supply both objects.",
+        "Several hold lanes require a new action, infinite-dimensional estimate, UV theorem or public likelihood rather than additional finite algebra.",
+        "The optimal allocation of effort will change as packets gain or lose observable closure."
+      ],
+      "known_experiment_bounds": [
+        "Open-system, photonic, microwave, thermoelectric, acoustic and magnonic platforms offer near-term controllable measurements.",
+        "Every execute-now lane retains useful metrology, control, transport or material information under a null result.",
+        "Reversal, frequency, geometry, waiting time and multi-initial-condition tests recur as low-cost discriminators."
+      ],
+      "unknown_experiment_bounds": [
+        "Platform-specific covariance, nuisance floors and dynamic range remain to be attached to most lanes.",
+        "The hybrid phonon/magnon carrier and physical energy-current implementation have not yet been triaged against current primary sources.",
+        "No common apparatus currently spans all highest-priority observables."
+      ],
+      "frontiers": ["atlas", "experiment", "inference", "translation", "prioritization", "iteration"],
+      "evidence_refs": [
+        "admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md",
+        "../../../evidence/data/admissibility-wide-frontier-atlas-v1.json",
+        "../../../verification/admissibility/verify_wide_frontier_atlas.mjs"
+      ],
+      "next_gate": "Execute the physical energy-current and hybrid bosonic carrier packets while constructing adversarial detector models, then re-score all fourteen lanes from the resulting bounds."
+    },
+    {
+      "id": "AZ-033",
+      "label": "Hybrid bosonic carrier and adversarial thermal-Hall frontier",
+      "coverage_status": "primary_source_hybrid_platform_triage",
+      "theory_status": "Acoustic non-Abelian pumping supplies order-sensitive transport, acoustic active lattices separate complex-spectrum topology from loss, photon-magnon-phonon coupling supplies a literal hybrid carrier and magnon thermal Hall exposes Berry-curvature versus interaction-skew detector equivalence; none yet realizes the two-datum selector map.",
+      "experiment_status": "Two executable branches are identified: a modular acoustic repeated-return emulator and a spectroscopy-conditioned adversarial thermal-Hall experiment. A YIG three-versus-four-mode feasibility calculation is the bridge between them.",
+      "known_theory_bounds": [
+        "Noncommuting acoustic pump order is not equivalent to a protected degenerate-doublet holonomy.",
+        "Complex eigenfrequency tomography can separate coherent band braiding from gain and loss when the full non-Hermitian transfer is reconstructed.",
+        "Thermal Hall current can arise from band Berry curvature or from intrinsic many-body skew scattering without Berry curvature.",
+        "A phonon becomes candidate selector datum Y only after independent calibration and a measured change in return-map slope."
+      ],
+      "unknown_theory_bounds": [
+        "The effective rotating-frame YIG susceptibility has not been tested for a gapped transported doublet.",
+        "No detector theorem yet identifies the minimum channel separating magnon-polaron Berry curvature from many-body skew scattering.",
+        "No source-native intertwiner identifies acoustic quaternionic phase labels with the corpus quarter-turn carrier."
+      ],
+      "known_experiment_bounds": [
+        "A three-band acoustic waveguide realizes two order-dependent Z3 pump cycles.",
+        "An active acoustic lattice reconstructs complex bands while tuning couplings through approximately 20, 24, 32 and 40 Hz.",
+        "The YIG triple-hybrid experiment reports photon-magnon coupling 6.63 MHz, magnon decay 0.49 MHz, phonon damping 155 Hz and cooperativity 9400.",
+        "Na2Co2TeO6 shows a field-driven thermal Hall sign reversal and angles up to approximately two percent."
+      ],
+      "unknown_experiment_bounds": [
+        "No acoustic experiment has measured projector closure, reversed holonomy, nonunitarity and selector contraction together.",
+        "No YIG experiment has implemented the required projector loop or independently calibrated Y.",
+        "Thermal lag, linewidth, disorder, nonlinear response and spectroscopic covariance have not been combined into one adversarial magnon inference model."
+      ],
+      "frontiers": ["phonons", "magnons", "acoustics", "nonhermitian", "thermal_hall", "selection", "inference"],
+      "evidence_refs": [
+        "admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md",
+        "../../../evidence/data/admissibility-hybrid-bosonic-frontier-v1.json",
+        "../../../verification/admissibility/verify_hybrid_bosonic_frontier.mjs"
+      ],
+      "next_gate": "Construct the YIG three- and four-mode effective matrices, design the modular acoustic loop-plus-selector transfer and derive a minimum discriminator set for Berry-curvature versus skew-scattering thermal Hall."
+    },
+    {
+      "id": "AZ-034",
+      "label": "Physical energy-current construction gate",
+      "coverage_status": "exact_operator_construction_with_implementation_gate",
+      "theory_status": "For a geometrically tagged decomposition H=sum_a h_a, directed transfer i[h_a,h_b] obeys local continuity and yields the exact open-cluster uniform current J_E=i[H,P_E]. The diagnostic anticommutator proxy is not an independently conserved energy-flow channel.",
+      "experiment_status": "An executable three-level witness certifies the algebra and spectral positivity. The production t-J implementation remains open because the audited code includes t-prime, J-prime, Ewald density interactions and twisted boundaries that must all enter one periodic current convention.",
+      "known_theory_bounds": [
+        "The current-graph and energy-polarization constructions agree exactly on open clusters.",
+        "The physical current is Hermitian and invariant under an additive shift of the total energy zero.",
+        "The proxy satisfies an exact energy-centroid constraint on charge-current matrix elements and is restricted to estimator plumbing.",
+        "A two-current spectral matrix assembled with one convention is positive semidefinite by construction."
+      ],
+      "unknown_theory_bounds": [
+        "A periodic seam, long-wavelength or energy-twist convention has not been selected and cross-validated for this Hamiltonian.",
+        "Finite-size sensitivity to local-energy repartition has not been bounded.",
+        "The full long-range-interaction current and any transverse energy-magnetization correction remain unimplemented."
+      ],
+      "known_experiment_bounds": [
+        "The public source already tags kinetic, exchange and density-interaction matrix channels and samples twisted fluxes.",
+        "Charge and energy currents can be applied to the same FTLM random vectors and accumulated with common bins.",
+        "Hermiticity, continuity, positive-semidefiniteness and seam translation provide internal null tests."
+      ],
+      "unknown_experiment_bounds": [
+        "No physical C_NE or C_EE spectrum has been produced by the public calculation.",
+        "No bootstrap covariance over random vectors and flux samples has been reported for the two-current determinant.",
+        "No rank conclusion has survived scans over filling, temperature, size, broadening and energy-density gauge."
+      ],
+      "frontiers": ["transport", "energy_current", "FTLM", "continuity", "response_cone", "numerics"],
+      "evidence_refs": [
+        "admissibility_34_physical_energy_current_construction_gate.md",
+        "../../../evidence/data/admissibility-physical-energy-current-gate-v1.json",
+        "../../../verification/admissibility/verify_physical_energy_current_gate.mjs"
+      ],
+      "next_gate": "Refactor the audited Hamiltonian into geometrically tagged local terms, pass the open-cluster continuity oracle, compare periodic seam conventions and then compute the physical two-current FTLM spectrum with shared samples."
+    },
+    {
+      "id": "AZ-035",
+      "label": "Adversarial detector-equivalence atlas",
+      "coverage_status": "exact_local_detector_quotient_and_cross_frontier_design_map",
+      "theory_status": "Mechanism separation after detector folding and nuisance projection is quantified by an efficient-information quadratic form; zero information defines a detector-equivalence class, and exact equivalence cannot be repaired by repeating the same channel.",
+      "experiment_status": "Eight active collision pairs are mapped to reversal, spectral, geometry, waiting-time, linewidth, disorder, operator-gauge or species-ratio augmentations. Several bundles are specified, but physical minimality is unproved for thermal Hall and anomalous Nernst.",
+      "known_theory_bounds": [
+        "Parameter-independent detector folding cannot increase latent Fisher information.",
+        "Nuisance profiling is an orthogonal quotient whose local information is a Schur complement.",
+        "A signal tangent inside the nuisance span remains unidentified at every repetition count.",
+        "An added channel is useful only when it transforms the mechanism difference and nuisance span differently."
+      ],
+      "unknown_theory_bounds": [
+        "Local tangent separation does not prove global injectivity for nonlinear or history-dependent model families.",
+        "Minimum separating channel sets are not proved for several material mechanisms.",
+        "Model discrepancy outside the enumerated mechanism family remains an open direction."
+      ],
+      "known_experiment_bounds": [
+        "Reversal, frequency, geometry, waiting time, linewidth and higher moments are reusable low-dimensional controls.",
+        "A synthetic certificate shows exact nuisance degeneracy, failed replication, successful reversal and information loss under averaging.",
+        "The design protocol requires shared detector folding, covariance and held-out controls."
+      ],
+      "unknown_experiment_bounds": [
+        "Platform-specific costs and calibration covariance are not yet attached to every candidate channel.",
+        "No one apparatus resolves all eight collision pairs.",
+        "Several existing datasets lack the auxiliary channels required for retrospective separation."
+      ],
+      "frontiers": ["detection", "inverse_design", "identifiability", "nuisance", "model_selection", "experiment"],
+      "evidence_refs": [
+        "admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "../../../evidence/data/admissibility-adversarial-detector-atlas-v1.json",
+        "../../../verification/admissibility/verify_adversarial_detector_atlas.mjs"
+      ],
+      "next_gate": "Build generative simulators for the leading mechanism pairs, attach calibrated cost and covariance to candidate added channels, and test global rather than only local separation."
+    },
+    {
+      "id": "AZ-036",
+      "label": "Frontier expansion: cost, backaction, scale and rare events",
+      "coverage_status": "corpus_gap_census_and_seven_lane_expansion",
+      "theory_status": "The original object-facing atlas is extended by process limits on dissipation, measurement backaction, coarse-graining, rare trajectories, computation, causal propagation and disorder. The strongest new programme triangle joins selector dynamics, detector quotient/backaction and thermodynamic/causal cost.",
+      "experiment_status": "Thermodynamic-cost and monitored-circuit lanes have immediate shared carriers with the selector programme; rare-event, speed and disorder audits become required diagnostics, while scale and complexity begin as finite-carrier bookkeeping rather than new ontologies.",
+      "known_theory_bounds": [
+        "Precision of stochastic currents is bounded by dissipation in established thermodynamic-uncertainty settings.",
+        "Measurement can alter many-body dynamical phases rather than merely compress a pre-existing state.",
+        "Open-system evolution and Hamiltonian scrambling obey speed limits under stated assumptions.",
+        "Coarse-graining must compose consistently and cannot create an exact microscopic preimage that was absent."
+      ],
+      "unknown_theory_bounds": [
+        "No thermodynamic cost law has been derived for the corpus's specific two-datum selector.",
+        "No admissibility functor across physical renormalization scales has been constructed.",
+        "The relation among selector contraction, scrambling, entropy production and verification complexity is open."
+      ],
+      "known_experiment_bounds": [
+        "Trajectory-resolved open systems can measure currents, jumps, heat proxies and mixing times.",
+        "A postselection-free measurement-induced transition has been demonstrated on a trapped-ion tree circuit.",
+        "Waiting time, sweep rate, local perturbations and disorder strength are independently controllable diagnostics in several candidate platforms."
+      ],
+      "unknown_experiment_bounds": [
+        "No one carrier has jointly measured selector contraction and entropy production.",
+        "No selector experiment has separated conditioned trajectories, unconditional evolution and the classical record.",
+        "No active packet carries complete prepare, sample, detect and verify complexity scaling."
+      ],
+      "frontiers": ["thermodynamics", "measurement", "renormalization", "rare_events", "complexity", "scrambling", "disorder"],
+      "evidence_refs": [
+        "admissibility_36_frontier_expansion_cost_backaction_scale_and_rare_events.md",
+        "../../../evidence/data/admissibility-frontier-expansion-v1.json",
+        "../../../verification/admissibility/verify_frontier_expansion.mjs"
+      ],
+      "next_gate": "Add trajectory thermodynamics and tunable monitoring to one selector carrier, then test cost-contraction-speed tradeoffs while tracking conditioned and unconditional dynamics separately."
+    },
+    {
+      "id": "AZ-037",
+      "label": "Selector contraction does not determine thermodynamic cost",
+      "coverage_status": "exact_detailed_balance_no_go_and_measurement_gate",
+      "theory_status": "A two-state locally detailed-balanced Markov process has a unique globally attractive fixed point and strict return-map contraction while its stationary entropy production is exactly zero. Uniform rate scaling changes laboratory speed without changing the matched path's total entropy production.",
+      "experiment_status": "The selector packet now requires trajectory, transition-rate, activity, heat/work, stationary-current, reset/feedback and conditioned/unconditional measurements. No existing selector carrier supplies the full tuple.",
+      "known_theory_bounds": [
+        "The exact return multiplier is exp[-(k_plus+k_minus) tau].",
+        "Transient entropy production equals the decrease of relative entropy to the detailed-balance stationary state.",
+        "Zero stationary current implies zero stationary entropy production despite a unique attractive fixed point.",
+        "A cost-speed theorem requires an additional activity, coupling, control, locality or reservoir constraint."
+      ],
+      "unknown_theory_bounds": [
+        "No thermodynamic law has been derived for the corpus's nonlinear projective two-datum selector.",
+        "The minimum work of implementing and resetting the independent datum Y is unknown.",
+        "The relation between quantum coherent holonomy and classical trajectory entropy production remains open."
+      ],
+      "known_experiment_bounds": [
+        "Forward and reverse jump rates, activity and mixing can be estimated from trajectory records.",
+        "Conditioned and unconditional evolution distinguish measurement selection from passive relaxation.",
+        "Stationary cycle currents distinguish detailed-balance bias from maintained nonequilibrium selection."
+      ],
+      "unknown_experiment_bounds": [
+        "No candidate platform has reported contraction, heat/work and reset cost in one calibrated run family.",
+        "Hidden reservoirs and detector work can bias coarse-grained entropy-production estimates.",
+        "Relevant system-bath coupling or activity bounds have not been fixed for a selector speed-limit test."
+      ],
+      "frontiers": ["selection", "stochastic_thermodynamics", "entropy_production", "activity", "measurement", "speed_limits"],
+      "evidence_refs": [
+        "admissibility_37_selector_contraction_does_not_determine_thermodynamic_cost.md",
+        "../../../evidence/data/admissibility-selector-thermodynamic-cost-gate-v1.json",
+        "../../../verification/admissibility/verify_selector_thermodynamic_cost_gate.mjs"
+      ],
+      "next_gate": "Embed the two-datum selector in a trajectory-resolved open-system model and compare equilibrium-biased, driven-cycle and measurement-conditioned realizations at matched return-map slope."
+    },
+    {
+      "id": "AZ-038",
+      "label": "Measurement creates branches, not unique unconditional selection",
+      "coverage_status": "exact_weak_measurement_no_go_and_second_datum_repair",
+      "theory_status": "A weak sigma-z quantum instrument drives conditioned records toward opposite pointer states while its unconditional channel preserves both populations and contracts only coherence. Adding amplitude damping produces a unique fixed point through an independently supplied reservoir orientation.",
+      "experiment_status": "A seven-step protocol separates conditioned trajectories, unconditional maps, feedback and damping while accounting separately for record reset and system heat. No platform has yet combined this protocol with the corpus holonomy carrier.",
+      "known_theory_bounds": [
+        "The unconditional weak-measurement channel multiplies coherence by sqrt(1-epsilon^2) and leaves populations invariant.",
+        "Every density matrix diagonal in the measurement basis is an unconditional fixed point.",
+        "Conditioned branch purification is compatible with ensemble population neutrality.",
+        "Amplitude damping selects a unique ground state because the reservoir supplies a second oriented datum."
+      ],
+      "unknown_theory_bounds": [
+        "The corresponding instrument for the nonlinear projective selector has not been derived.",
+        "The cost and covariance of record storage, feedback and erasure are not attached to the return-map model.",
+        "The many-body scaling relation between this fixed-manifold no-go and measurement-induced transitions is open."
+      ],
+      "known_experiment_bounds": [
+        "Conditioned and outcome-averaged maps can be reconstructed independently with full record retention.",
+        "Measurement strength, feedback and damping can be toggled as separate controls on quantum platforms.",
+        "Equal-population/different-coherence and different-population preparations distinguish dephasing from selection."
+      ],
+      "unknown_experiment_bounds": [
+        "No demonstrated holonomy platform has reported this complete instrument-level selector audit.",
+        "A source-derived physical pointer basis for the corpus carrier remains unidentified.",
+        "System heat and classical record-reset work have not been jointly measured in the proposed cycle."
+      ],
+      "frontiers": ["measurement", "backaction", "selection", "trajectories", "feedback", "thermodynamics"],
+      "evidence_refs": [
+        "admissibility_38_measurement_creates_branches_not_unique_unconditional_selection.md",
+        "../../../evidence/data/admissibility-measurement-conditioned-selection-gate-v1.json",
+        "../../../verification/admissibility/verify_measurement_conditioned_selection_gate.mjs"
+      ],
+      "next_gate": "Implement measurement-only, feedback-assisted and reservoir-biased versions of one selector carrier at matched apparent contraction, then compare conditioned and unconditional fixed sets and full work/heat ledgers."
+    },
+    {
+      "id": "AZ-039",
+      "label": "Periodic physical energy-current bridge",
+      "coverage_status": "exact_periodic_and_source_channel_oracles_dense_sparse_bridge_closed_production_emission_open",
+      "theory_status": "The oriented minimum-image graph current is exact for tagged finite-range periodic terms without antipodal interacting centres, reduces to i[H,P_E] on an open embedding and transforms covariantly under lattice translation. An interacting three-site spin ring and a source-channel-complete constrained t-J oracle both give interior positive particle/energy response.",
+      "experiment_status": "No new experiment is required for this bridge. The next work is source-native numerical integration in the audited two-dimensional t-J FTLM code; comparison with measured thermoelectric response comes only after numerical convention and rank stability close.",
+      "known_theory_bounds": [
+        "The physical current is Hermitian, energy-zero invariant and satisfies exact local continuity.",
+        "Moving the periodic coordinate seam leaves the minimum-image operator unchanged.",
+        "Local-energy repartition changes the open current by the expected total time derivative.",
+        "The witness response has positive determinant and normalized determinant strictly between zero and one quarter."
+        ,"A 24-state constrained t-J oracle with all five audited channel families reconstructs exactly and has positive cone-interior response across 113 active frequency bins.",
+        "The SciPy sparse Hamiltonian and physical current agree operator-for-operator with the dense exact oracle and satisfy the same continuity identity."
+      ],
+      "unknown_theory_bounds": [
+        "Equivalence of minimum-image, oriented-seam and energy-twist currents is not proved for the audited long-range Ewald model.",
+        "The tested tagged-term schema has not yet been ported into the production sparse Hamiltonian builder with centres and winding.",
+        "No source-native FTLM rank scan has been run with the physical current."
+      ],
+      "known_experiment_bounds": [
+        "The bridge is a computation and operator-definition result and introduces no new laboratory dependency.",
+        "Either a robust rank-one or rank-two source-native result would be scientifically useful."
+      ],
+      "unknown_experiment_bounds": [
+        "Comparison with laboratory thermoelectric coefficients remains downstream of the numerical bridge.",
+        "Finite-size and long-range convention uncertainty must be bounded before experimental interpretation."
+      ],
+      "frontiers": ["transport", "periodic_geometry", "continuity", "numerics", "positive_response", "translation"],
+      "evidence_refs": [
+        "admissibility_39_periodic_physical_energy_current_bridge.md",
+        "../../../evidence/data/admissibility-periodic-physical-energy-current-bridge-v1.json",
+        "../../../verification/admissibility/verify_periodic_physical_energy_current_bridge.mjs"
+      ],
+      "next_gate": "Refactor the audited two-dimensional t-J Hamiltonian into tagged local terms and compare minimum-image, oriented-seam and energy-twist currents on source-native small clusters before common-sample FTLM rank analysis."
+    },
+    {
+      "id": "AZ-040",
+      "label": "Planckian two-current execution tranches and literature review",
+      "coverage_status": "dependency_ordered_execution_programme_with_primary_literature_review",
+      "theory_status": "The remaining FPT-004 bridge is decomposed into eight tranches from frozen oracle through production provenance, periodic-convention collision, common-sample FTLM, validation, rank atlas, thermoelectric translation and scientific adjudication. Physics interpretation is prohibited before the operator and estimator audits both close.",
+      "experiment_status": "No new laboratory experiment is required for T0--T5. T6 creates the first controlled bridge to longitudinal thermoelectric observables; transverse response remains separately gated by energy-magnetization corrections.",
+      "known_theory_bounds": [
+        "Interacting tight-binding heat currents contain explicit long-range-interaction contributions.",
+        "Microscopic energy-density gauges can change current correlations while leaving transport coefficients invariant under stated conservation and extensivity conditions.",
+        "FTLM random sampling, Lanczos depth, finite size and low-frequency resolution are independent error axes.",
+        "Energy-current conservation can produce anomalous transport in integrable models and is a conventional low-rank control."
+      ],
+      "unknown_theory_bounds": [
+        "Minimum-image, oriented-seam and energy-twist transport equivalence is unproved for the audited Ewald model.",
+        "The source-native two-current rank over the published strange-metal region is unknown.",
+        "No corpus-specific transformation law follows from positivity or response rank alone."
+      ],
+      "known_experiment_bounds": [
+        "Longitudinal particle, energy and heat-current response can be related by an invertible current-basis change after the numerical operator closes.",
+        "A useful numerical result exists for every stable rank outcome, including a bounded unresolved region."
+      ],
+      "unknown_experiment_bounds": [
+        "Laboratory thermoelectric comparison is downstream of finite-size, gauge and estimator validation.",
+        "Transverse Nernst and thermal-Hall comparison requires circulating-current and energy-magnetization treatment not included in the longitudinal rank tranche."
+      ],
+      "frontiers": ["transport", "literature", "numerics", "uncertainty", "thermoelectricity", "admissibility"],
+      "evidence_refs": [
+        "admissibility_40_planckian_two_current_execution_tranches_and_literature_review.md",
+        "../../../evidence/data/admissibility-planckian-two-current-tranches-v1.json",
+        "../../../verification/admissibility/verify_planckian_two_current_tranches.mjs"
+      ],
+      "next_gate": "Freeze the AZ-039 oracle and make CreateSparseHamiltonian emit family, support, centre, displacement, winding, matrix contribution and geometry identity before sparse aggregation."
+    }
+  ]
+}

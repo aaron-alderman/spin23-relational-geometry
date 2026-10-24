@@ -1,0 +1,98 @@
+{
+  "schema": "admissibility.planckian-ewald-cohomology-block-cross/1",
+  "date": "2026-10-24",
+  "target": "FPT-004",
+  "parent": "AZ-041",
+  "result": "IMAGE_PROVENANCE_CLOSED_RECIPROCAL_THERMAL_TWIST_OPEN",
+  "productionGraph": {
+    "termVertices": 117,
+    "noncommutingEdges": 1332,
+    "cycleRank": 1216,
+    "minimumImageExactnessResidual": 1.0,
+    "orientedSeamExactnessResidual": 2.574151692613865e-15,
+    "orientedSeamPolarizationResidual": 3.0845798670838297e-16,
+    "interpretation": "under the declared unweighted edge inner product, minimum image is wholly outside the coboundary subspace while the seam current is i[H,P_E]"
+  },
+  "dcBlock": {
+    "degeneratePairs": 268,
+    "minimumImageNorm": 30.83041229710596,
+    "orientedSeamNorm": 2.0787732459874713e-14,
+    "minimumVersusSeamDifferenceNorm": 30.830412297105962,
+    "interpretation": "the seam is a finite-system total derivative; the minimum-image current carries the nontrivial degenerate/topological block"
+  },
+  "ewaldImageLedger": {
+    "componentCount": 3267,
+    "sourceKernelResidual": 1.1102230246251565e-16,
+    "internalReconstructionResidual": 8.326672684688674e-17,
+    "meanShift": 0.8667255377782125,
+    "replicas": 5,
+    "splittingAudit": {
+      "epsilonFactors": [0.5, 1.0, 2.0],
+      "lowerKernelResidual": 0.0,
+      "upperKernelResidual": 2.7194799110210365e-16,
+      "lowerRealImageWindingMomentResidual": 0.5072211248449013,
+      "upperRealImageWindingMomentResidual": 0.3582764570647169,
+      "verdict": "REAL_IMAGE_ONLY_TWIST_REQUIRES_RECIPROCAL_COMPENSATOR"
+    }
+  },
+  "nativeBlockCross": {
+    "method": "shared block Krylov seeded by random, particle-current and energy-current vectors; complex cross spectrum retained",
+    "samples": 32,
+    "seed": 20261024,
+    "depth18": {
+      "scalarSpectrumError": 0.7206056279164171,
+      "blockSpectrumError": 0.44637321947784764,
+      "scalarMomentError": 0.7199415533772263,
+      "blockMomentError": 0.3260315808960879
+    },
+    "depth36": {
+      "scalarSpectrumError": 0.34956803575736656,
+      "blockSpectrumError": 0.24742775230172254,
+      "scalarMomentError": 0.3620518266277947,
+      "blockMomentError": 0.1827481345081848
+    },
+    "fullDepth64Vectors": {
+      "depth": 72,
+      "spectrumError": 0.03385387378576276,
+      "momentError": 0.028160202370899792,
+      "partitionError": 0.03198021308255599,
+      "invarianceResidual": 9.470020466937477e-16,
+      "positiveSemidefinite": true
+    },
+    "verdict": "BLOCK_CROSS_IMPROVES_SHALLOW_RESPONSE_BUT_ONLY_FULL_DEPTH_PASSES_FIVE_PERCENT_GATE"
+  },
+  "admission": {
+    "imageResolvedEwaldProvenance": "PASS",
+    "minimumVersusSeamTyping": "PASS_COHOMOLOGY_SEPARATION",
+    "realImageOnlyThermalTwist": "FAIL_SPLITTING_PARAMETER_INVARIANCE",
+    "reciprocalSpaceThermalCompensator": "MISSING",
+    "blockCrossEstimator": "PASS_ADMISSION_CLUSTER",
+    "rankAtlasRerun": "WITHHELD_BY_OPERATOR_GATE",
+    "thermoelectricRerun": "WITHHELD_BY_OPERATOR_GATE"
+  },
+  "literature": [
+    {
+      "key": "petravic2005",
+      "url": "https://doi.org/10.1063/1.2102867",
+      "role": "factorized reciprocal-space Ewald contribution to molecular heat flux"
+    },
+    {
+      "key": "galamba_nieto_de_castro_ely2007",
+      "url": "https://doi.org/10.1063/1.2734965",
+      "role": "reciprocal Ewald energy flux is non-pairwise and must be evaluated in reciprocal space"
+    },
+    {
+      "key": "ballenegger2014",
+      "url": "https://doi.org/10.1063/1.4872019",
+      "role": "real/reciprocal Ewald split and surface-term dependence"
+    }
+  ],
+  "sourceHashesSha256": {
+    "EDSquare-tJ-LR-Cloop-proxy.py": "f84ff43b2cfa7c5d604b498d98fd8199b9dd71f230865a753b98ce019e4c0a7c",
+    "periodic_current_conventions.py": "ed86cb1643fb6acbdc68772b2b491561a78d86dc48b3b78185da72afba43c7ed",
+    "ewald_image_ledger.py": "2f54804b88ff83f04456d393b77b22f92fe35468d372476e36c2b63f9a6d67ca",
+    "common_sample_ftlm.py": "8ef12b37ae40c8f3c03c8bc65aa491250a2d5d369adc3143c9ffef48d64389bb"
+  },
+  "tests": {"pythonUnittestCount":57,"status":"PASS"},
+  "firewall": "graph cohomology identifies exact versus cycle current sectors but does not derive Spin(2,3), a material thermoelectric coefficient, or a complete reciprocal thermal twist"
+}

@@ -1,0 +1,53 @@
+{
+  "protocol": "admissibility-seebeck-nernst-guideposts/1",
+  "asOf": "2026-10-24",
+  "status": "GUIDEPOSTS_ADMITTED_IDENTIFICATION_OPEN",
+  "linearResponseConvention": "j = sigma E - alpha grad(T); open circuit S = inverse(sigma) alpha",
+  "isotropicWitness": {
+    "sigmaXx": 5,
+    "sigmaXy": 1,
+    "alphaXx": 2,
+    "alphaXy": 0.6,
+    "expectedSxx": 0.4076923076923077,
+    "expectedSxy": 0.038461538461538464
+  },
+  "guideposts": [
+    {
+      "observable": "Sxx",
+      "role": "longitudinal spectral-slope and entropy-per-charge guidepost",
+      "reversalParity": "normally even under magnetization reversal in linear response",
+      "geometricSpecificity": "low"
+    },
+    {
+      "observable": "alphaXyAnomalous",
+      "role": "transverse orientation-odd Berry-curvature-weighted entropy guidepost",
+      "reversalParity": "odd under magnetization reversal",
+      "geometricSpecificity": "conditional on Hall, Mott, disorder and domain controls"
+    },
+    {
+      "observable": "sigmaXyAnomalous",
+      "role": "occupied-state transverse curvature guidepost and unmixing input",
+      "reversalParity": "odd under magnetization reversal",
+      "geometricSpecificity": "conditional"
+    }
+  ],
+  "requiredAxes": ["temperature", "chemicalPotentialOrComposition", "magneticOrientation", "driveFrequency"],
+  "requiredControls": [
+    "temperature-gradient reversal",
+    "magnetization or domain reversal",
+    "contact exchange and misalignment subtraction",
+    "simultaneous electrical conductivity tensor",
+    "Mott-relation residual",
+    "frequency-dependent thermal transfer function",
+    "hysteresis and waiting-time audit",
+    "thickness and disorder comparison"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/nphys4181",
+    "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.119.056601",
+    "https://www.nature.com/articles/s41567-018-0225-6",
+    "https://www.nature.com/articles/s41467-018-02857-1"
+  ],
+  "nextGate": "Construct a joint Hall-Seebeck-Nernst response cube over (T, mu, M, omega), reporting tensor-unmixed alpha, reversal parity, Mott residuals and hysteresis."
+}
+

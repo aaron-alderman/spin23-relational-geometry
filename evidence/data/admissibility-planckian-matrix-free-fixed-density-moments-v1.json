@@ -1,0 +1,20 @@
+{
+  "schema":"admissibility.planckian-matrix-free-fixed-density-moments/1",
+  "date":"2026-10-24",
+  "target":"FPT-004",
+  "parent":"AZ-047",
+  "model":{"sector":"balanced_one_hole","families":["t","t_prime","J","J_prime","neutral_Ewald_V"],"moment":"infinite_temperature_normalized_Frobenius"},
+  "unscreened":[
+    {"L":3,"dimension":630,"samples":630,"exact":true,"normalizedDifference":0.43206943486957644,"bootstrapSE":0.0},
+    {"L":5,"dimension":67603900,"samples":64,"exact":false,"normalizedDifference":0.1744892881071395,"bootstrapSE":0.0019458146449271606},
+    {"L":7,"dimension":1580132580471900,"samples":96,"exact":false,"normalizedDifference":0.09004530012062173,"bootstrapSE":0.0009785547835116295},
+    {"L":9,"dimension":8708083907400230293391220,"samples":64,"exact":false,"normalizedDifference":0.05238827957598335,"bootstrapSE":0.0005664683479250759}
+  ],
+  "fits":{"unscreenedAll":1.911555672126731,"unscreenedL5Plus":2.0425298807507866,"fixedMu0p5All":1.9102093801441706,"fixedMu0p5L5Plus":2.0450929097525323,"muEqualsQminAll":1.905274017255179,"muEqualsQminL5Plus":2.0439013518961437},
+  "screenedL9":{"unscreened":0.05238827957598335,"fixedMu0p5":0.05225971993215495,"muEqualsQmin":0.05226469423471418},
+  "independentSeeds":{"L5":[0.17247117882746082,0.17331893428137463],"L7":[0.08934479683342737,0.08835835927084722]},
+  "admission":{"equalTimeOperatorConvergence":"PASS_SUPPORTED","finiteFrequencyBlockCross":"ADMITTED","thermodynamicRank":"OPEN","next":"EXACT_3X3_FINITE_Q_BLOCK_CROSS_SPECTRUM"},
+  "sourceHashesSha256":{"matrix_free_fixed_density_moments.py":"14da3b755fc1b5885f9fbca59fcd1611f9ab6aa5714dbc3f9d58b07725e6e283"},
+  "tests":{"pythonUnittestCount":57,"status":"PASS"},
+  "firewall":"equal-time gauge convergence is not a finite-frequency, low-temperature or thermodynamic rank result"
+}

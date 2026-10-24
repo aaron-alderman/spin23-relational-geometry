@@ -1,0 +1,41 @@
+{
+  "schema": "admissibility.measurement-conditioned-selection-gate/1",
+  "date": "2026-10-24",
+  "admissionVerdict": "MEASUREMENT_CREATES_RECORD_BRANCHES_BUT_NOT_UNIQUE_UNCONDITIONAL_SELECTION",
+  "weakMeasurement": {
+    "observable": "sigma_z",
+    "strength": 0.6,
+    "kraus": "M_s=diag(sqrt((1+s epsilon)/2),sqrt((1-s epsilon)/2)), s in {+1,-1}",
+    "unconditionalAction": "populations fixed; coherence multiplied by sqrt(1-epsilon^2)",
+    "conditionedAction": "Bayesian update toward the outcome-labelled pole",
+    "fixedSet": "all sigma_z-diagonal density matrices",
+    "selectionStatus": "record-conditioned branching without a unique unconditional fixed point"
+  },
+  "secondDatum": {
+    "channel": "amplitude damping in a calibrated energy basis",
+    "strength": 0.25,
+    "action": "excited-state population multiplied by 1-gamma",
+    "uniqueFixedPoint": "ground-state projector",
+    "interpretation": "the reservoir/energy basis is an independently supplied selector datum, not a consequence of measurement alone"
+  },
+  "requiredSeparations": [
+    "conditioned trajectory versus unconditional channel",
+    "measurement information gain versus physical feedback",
+    "dephasing contraction versus population selection",
+    "record storage/erasure cost versus system heat",
+    "chosen measurement basis versus source-derived physical pointer basis"
+  ],
+  "experiment": [
+    "prepare several states with equal populations and different coherences",
+    "prepare several states with different populations",
+    "record every weak-measurement outcome",
+    "reconstruct conditioned and outcome-averaged maps",
+    "repeat with feedback off and on",
+    "add and remove the calibrated damping/selector datum",
+    "measure record-memory reset work separately from system heat"
+  ],
+  "sources": [
+    {"title": "Postselection-free experimental observation of the measurement-induced phase transition in circuits with universal gates", "url": "https://www.nature.com/articles/s42005-025-02443-0"},
+    {"title": "Three faces of the second law. I. Master equation formulation", "url": "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.82.011143"}
+  ]
+}

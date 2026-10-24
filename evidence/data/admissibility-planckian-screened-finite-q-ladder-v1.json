@@ -1,0 +1,18 @@
+{
+  "schema":"admissibility.planckian-screened-finite-q-ladder/1",
+  "date":"2026-10-24",
+  "target":"FPT-004",
+  "parent":"AZ-045",
+  "result":"DILUTE_SCREENED_AND_UNSCREENED_PATHS_SHARE_ZERO_INTERCEPT_Q_SQUARED_GAUGE_LIMIT",
+  "paths":{
+    "unscreened":{"exponent":1.9024722013352051,"L9NormalizedDifference":0.03748067691493524},
+    "fixedMu0p5":{"exponent":1.9218590713024901,"L9NormalizedDifference":0.0366065502335776},
+    "muEqualsQmin":{"exponent":1.9374275306983708,"L9NormalizedDifference":0.0362126291532649}
+  },
+  "L9RelativePathDifferences":{"fixedVersusUnscreened":0.023322062281359683,"scaledVersusUnscreened":0.033832040028206015},
+  "screeningDefinition":"V_mu(k)=V(k)|k|/sqrt(k^2+mu^2), k nonzero; neutral zero mode retained at zero",
+  "admission":{"diluteOrderOfLimits":"PASS_SUPPORTED","productionOrderOfLimits":"OPEN","next":"SOURCE_COMPLETE_MATRIX_FREE_EQUAL_TIME_MOMENTS","rankAtlasRerun":"WITHHELD"},
+  "sourceHashesSha256":{"finite_q_gauge_ladder.py":"78bf972994f7d74ed24756f279798a25ba3c9a03af240a3183f32a1ec876abeb"},
+  "tests":{"pythonUnittestCount":57,"status":"PASS"},
+  "firewall":"dilute screening-path agreement does not establish production-density transport rank or Spin(2,3)"
+}

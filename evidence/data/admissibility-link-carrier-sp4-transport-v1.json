@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-link-carrier-sp4-transport/1",
+  "linkCoordinates": {
+    "input": ["a", "r00", "r01", "r10", "r11"],
+    "diagonal": ["u=(r00+r11)/2", "q=(r01-r10)/2", "a", "v=(r00-r11)/2", "p=(r01+r10)/2"],
+    "metric": "u^2+q^2-a^2-v^2-p^2"
+  },
+  "primitiveTwoFormCoordinates": {
+    "basis": ["positive primitive 1", "positive primitive 2", "negative primitive 1", "negative primitive 2", "negative primitive 3"],
+    "gram": "2 diag(1,1,-1,-1,-1)",
+    "isometry": "primitive coordinates equal (u,q,a,v,p)/sqrt(2)"
+  },
+  "transportedAction": {
+    "sourceAlgebra": "sp(4,R)",
+    "targetAlgebra": "so(2,3) on the link carrier",
+    "generatorCount": 10,
+    "representationRank": 10,
+    "metricPreservation": "G^T eta + eta G = 0 for all transported generators",
+    "subalgebraFixingSingletDimension": 6,
+    "singletRelationalMixingDimension": 4
+  },
+  "corpusJoin": {
+    "existingClosure": "controlled Jordan turn plus split TKK dilation plus continuous Furey channel rotation generate all sp(4,R)",
+    "newResult": "their five-dimensional primitive action transports exactly to R plus End(A2)",
+    "closedBoundary": "an explicit representation-level identification between the recursion algebra and five relative-frame coordinates now exists",
+    "openBoundary": "the isometry is not yet selected by a common microscopic action and the continuous Furey Hamiltonian term remains open"
+  },
+  "status": {
+    "exactModuleIsometryEstablished": true,
+    "fullLieAlgebraActionEstablished": true,
+    "sourceNativeCoordinateIdentification": false,
+    "microscopicActionDerived": false,
+    "physicalAdmission": false
+  },
+  "evidenceRefs": [
+    "corpus/programmes/admissibility/admissibility_16_five_dimensional_link_span_and_spin23_quadratic_envelope.md",
+    "corpus/claims/1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md",
+    "corpus/claims/1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md",
+    "verification/verify/verify_primitive_two_forms_of_symplectic_r4_realize_signature_23_and_sp4_action.mjs"
+  ],
+  "verdict": "The link carrier is an exact five-dimensional sp(4,R) module after an explicit isometry. Algebraic Spin(2,3) dynamics are available; physical transport and the microscopic Hamiltonian remain unadmitted."
+}

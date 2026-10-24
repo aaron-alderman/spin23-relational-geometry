@@ -1,0 +1,54 @@
+{
+  "schema": "admissibility.planckian-finite-q-energy-continuity/1",
+  "date": "2026-10-24",
+  "target": "FPT-004",
+  "parent": "AZ-043",
+  "result": "FINITE_Q_LONGITUDINAL_KERNEL_ADMITTED_THERMODYNAMIC_GAUGE_CONVERGENCE_OPEN",
+  "interactionModes": {
+    "torus": [3, 3],
+    "modeCount": 9,
+    "realPairVersusReciprocalDensityMaximumResidual": 4.564998051344135e-15,
+    "identity": "h_V(q)=(1/4) sum_ij [exp(-iq.r_i)+exp(-iq.r_j)] V_ij Q_i Q_j=(1/4N) sum_p [V_p+V_(q-p)] rho_(q-p) rho_p",
+    "status": "PASS"
+  },
+  "productionFiniteQ": {
+    "wavevector": [2.0943951023931953, 0.0],
+    "centreGaugeContinuityResidual": 1.2606081648801574e-15,
+    "endpointGaugeContinuityResidual": 2.0190184143172583e-15,
+    "endpointModeConjugationResidual": 0.0,
+    "endpointScalarCurrentConjugationResidual": 0.0,
+    "centreCurrentNorm": 13.826860407568345,
+    "endpointCurrentNorm": 11.952175153528215,
+    "energyDensityGaugeDifferenceNorm": 8.701802945152666,
+    "currentGaugeDifferenceNorm": 9.747459051375573,
+    "status": "CONTINUITY_PASS_GAUGE_CONVERGENCE_NOT_TESTABLE_ON_ONE_SIZE"
+  },
+  "openChartControl": {
+    "wavevector": 1e-6,
+    "finiteQVersusPolarizationCurrentRelativeResidual": 1.5689057963431642e-6,
+    "continuityResidual": 0.0,
+    "status": "PASS"
+  },
+  "admission": {
+    "finiteQInteractionDensity": "PASS",
+    "finiteQLongitudinalCurrent": "PASS_PER_DECLARED_GAUGE",
+    "finiteSizeGaugeEquivalence": "FAIL_EXPECTED_AT_QMIN",
+    "thermodynamicGaugeConvergence": "OPEN_SIZE_LADDER_REQUIRED",
+    "transverseCurrent": "UNDETERMINED_BY_CONTINUITY",
+    "rankAtlasRerun": "WITHHELD_BY_LONG_WAVELENGTH_GATE",
+    "thermoelectricRerun": "WITHHELD_BY_LONG_WAVELENGTH_GATE"
+  },
+  "literature": [
+    {"key":"huebner_rigamonti_draxl2023","url":"https://doi.org/10.1103/PhysRevB.108.245201","role":"quantum thermal-conductivity gauge invariance control"},
+    {"key":"werman_et_al2018","url":"https://doi.org/10.1103/PhysRevX.8.031064","role":"thermal current derived from finite-wavevector energy-density continuity"},
+    {"key":"cheng_frenkel2020","url":"https://doi.org/10.1103/PhysRevLett.125.130602","role":"density-fluctuation route that bypasses microscopic heat-flux ambiguity"}
+  ],
+  "sourceHashesSha256": {
+    "EDSquare-tJ-LR-Cloop-proxy.py": "f84ff43b2cfa7c5d604b498d98fd8199b9dd71f230865a753b98ce019e4c0a7c",
+    "ewald_image_ledger.py": "2f54804b88ff83f04456d393b77b22f92fe35468d372476e36c2b63f9a6d67ca",
+    "reciprocal_density_modes.py": "d5c6196db0d3671ef02f460581f42752585b01ed14e725020e4ac112c92f58ba",
+    "finite_q_energy_current.py": "260b3823922a087df23d6794eabe1fbce3ba6e508cfbbc2e01ee5f05c7625c9d"
+  },
+  "tests": {"pythonUnittestCount": 57, "status": "PASS"},
+  "firewall": "finite-q continuity admits an operator family, not a bulk heat current or a Spin(2,3) interpretation; gauge and order-of-limits convergence remain mandatory"
+}

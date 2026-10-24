@@ -1,0 +1,63 @@
+{
+  "schema": "admissibility.periodic-physical-energy-current-bridge/1",
+  "date": "2026-10-24",
+  "target": "FPT-004",
+  "admissionVerdict": "FINITE_PERIODIC_CONVENTION_CLOSED_SOURCE_NATIVE_FTLM_INTEGRATION_OPEN",
+  "periodicConvention": {
+    "name": "oriented minimum-image current graph",
+    "operator": "J_E=(i/2) sum_ab delta_L(r_b-r_a)[h_a,h_b]",
+    "domain": "tagged finite-range local terms on a one-dimensional periodic carrier with no interacting pair at antipodal term centres",
+    "ambiguityRule": "reject rather than choose a sign when a contributing pair is separated by exactly half the period",
+    "openLimit": "when every interacting displacement lies inside one unwrapped chart, delta_L(r_b-r_a)=r_b-r_a and J_E=i[H,P_E]"
+  },
+  "witness": {
+    "model": "three-site interacting anisotropic spin ring with oriented XY phase, longitudinal exchange and distributed field",
+    "dimension": 8,
+    "period": 3,
+    "parameters": {"jxy": 1.0, "jz": 0.63, "phase": 0.37, "field": 0.19},
+    "termCentres": [0.5, 1.5, 2.5]
+  },
+  "sourceChannelOracle": {
+    "location": "external/Planckian-tJ/tagged_tj_small_cluster.py",
+    "runner": "external/Planckian-tJ/run_tagged_tj_bridge.py",
+    "model": "four-site open no-double-occupancy t-J cluster with the five audited source channel families",
+    "basisDimension": 24,
+    "taggedTermCount": 16,
+    "families": ["density_V", "exchange_J", "exchange_J_prime", "hopping_t", "hopping_t_prime"],
+    "reconstructionResidual": 0.0,
+    "maximumContinuityResidual": 2.834893256844394e-17,
+    "physicalEnergyCurrentNorm": 6.602235391559099,
+    "activeFrequencyBins": 113,
+    "normalizedDeterminant": {
+      "minimum": 3.1974303734592922e-06,
+      "median": 0.0524086698508007,
+      "maximum": 0.23365660469662494
+    },
+    "sparseBackend": {
+      "location": "external/Planckian-tJ/physical_energy_current_sparse.py",
+      "tests": 3,
+      "denseSparseHamiltonianAgreement": true,
+      "denseSparseCurrentAgreement": true,
+      "sparseContinuityPassed": true
+    },
+    "interpretation": "After the proxy is removed, a source-channel-complete interacting t-J witness is not forced onto a rank-one response ray. Production rank remains an empirical numerical question."
+  },
+  "closedChecks": [
+    "nonzero Hermitian physical energy current",
+    "exact local continuity",
+    "seam-origin invariance",
+    "lattice-translation covariance",
+    "reduction to i[H,P_E] on an open embedding",
+    "invariance under an additive energy zero",
+    "local-energy repartition changes the open current by a total time derivative",
+    "positive interior particle/energy two-current Gram response"
+  ],
+  "remainingGates": [
+    "port the exact small-cluster TaggedTerm schema into the audited two-dimensional sparse Hamiltonian builder",
+    "declare centres and winding data for hopping, exchange and long-range density contributions",
+    "compare minimum-image, oriented-seam and energy-twist currents on source-native small clusters",
+    "apply the selected physical current in common-sample FTLM spectra",
+    "test rank stability over flux, size, temperature, filling, broadening and energy-density repartition"
+  ],
+  "certificate": {"tolerance": 1e-10, "minimumCurrentNorm": 1e-6, "minimumNormalizedDeterminant": 1e-6}
+}

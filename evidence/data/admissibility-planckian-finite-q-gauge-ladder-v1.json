@@ -1,0 +1,37 @@
+{
+  "schema": "admissibility.planckian-finite-q-gauge-ladder/1",
+  "date": "2026-10-24",
+  "target": "FPT-004",
+  "parent": "AZ-044",
+  "result": "DILUTE_ODD_TORUS_SURROGATE_SUPPORTS_Q_SQUARED_GAUGE_CONVERGENCE",
+  "model": {
+    "particles": 2,
+    "statistics": "spinless_fermion",
+    "hopping": 1.0,
+    "ewaldInteraction": 0.23,
+    "replicas": 5,
+    "limitations": ["dilute fixed-particle sector", "no spin", "no exchange", "not production filling"]
+  },
+  "points": [
+    {"length":3,"sites":9,"basisDimension":36,"qMin":2.0943951023931953,"centreCurrentNorm":16.509542237765487,"endpointCurrentNorm":14.195692541658977,"differenceNorm":4.61359780944193,"normalizedDifference":0.30136577118768243,"centreContinuityResidual":1.1538610707337761e-15,"endpointContinuityResidual":4.163336342344337e-17},
+    {"length":5,"sites":25,"basisDimension":300,"qMin":1.2566370614359172,"centreCurrentNorm":54.99933661209952,"endpointCurrentNorm":51.73350672605481,"differenceNorm":6.088253665207514,"normalizedDifference":0.11413742078949858,"centreContinuityResidual":5.321918454854869e-15,"endpointContinuityResidual":5.298863142095336e-15},
+    {"length":7,"sites":49,"basisDimension":1176,"qMin":0.8975979010256552,"centreCurrentNorm":113.72114831060483,"endpointCurrentNorm":110.08366332728744,"differenceNorm":6.65195865396973,"normalizedDifference":0.05945213923731013,"centreContinuityResidual":1.0221593302517714e-14,"endpointContinuityResidual":1.2336539618151562e-14},
+    {"length":9,"sites":81,"basisDimension":3240,"qMin":0.6981317007977318,"centreCurrentNorm":192.08916274623897,"endpointCurrentNorm":188.28586712428884,"differenceNorm":7.128000458999258,"normalizedDifference":0.03748067691493524,"centreContinuityResidual":1.1425901062854564e-14,"endpointContinuityResidual":1.1489659448298643e-14}
+  ],
+  "scaling": {
+    "logLogExponent": 1.9024722,
+    "normalizedDifferenceOverQSquared": [0.06870316, 0.07227837, 0.07379107, 0.07690113],
+    "interpretation": "consistent with O(q_min^2) gauge separation over L=3,5,7,9"
+  },
+  "admission": {
+    "surrogateGaugeConvergence": "SUPPORTED",
+    "productionFixedDensityGaugeConvergence": "OPEN",
+    "screenedOrderOfLimits": "OPEN",
+    "rankAtlasRerun": "WITHHELD_PENDING_PRODUCTION_MOMENT_LADDER"
+  },
+  "sourceHashesSha256": {
+    "finite_q_gauge_ladder.py": "78bf972994f7d74ed24756f279798a25ba3c9a03af240a3183f32a1ec876abeb"
+  },
+  "tests": {"pythonUnittestCount": 57, "status": "PASS"},
+  "firewall": "dilute surrogate scaling cannot establish the production t-J transport current, response rank, or Spin(2,3)"
+}

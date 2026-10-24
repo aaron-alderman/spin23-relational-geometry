@@ -1,0 +1,106 @@
+{
+  "schema": "admissibility.adversarial-detector-atlas/1",
+  "date": "2026-10-24",
+  "admissionVerdict": "DETECTOR_QUOTIENT_DEFINED_MINIMUM_AUGMENTATIONS_PARTLY_OPEN",
+  "formalism": {
+    "observedModel": "y=D mu(theta)+B eta+epsilon with inverse covariance W",
+    "mechanismTangent": "delta=D(mu_1-mu_0)",
+    "nuisanceResidualizer": "M_B=I-B(B^T W B)^+B^T W",
+    "efficientSeparation": "I_eff=delta^T W M_B delta",
+    "equivalenceCriterion": "I_eff=0",
+    "designCriterion": "choose the admissible added channel maximizing worst-pair conditional efficient information per cost",
+    "dataProcessingBound": "parameter-independent detector folding cannot increase latent Fisher information"
+  },
+  "frontierPairs": [
+    {
+      "id": "holonomy-vs-differential-loss",
+      "headlineCollision": "projector return or endpoint transfer after a loop",
+      "mechanisms": ["coherent geometric holonomy", "differential attenuation plus nonadiabatic leakage"],
+      "minimumAugmentation": "forward/reverse complex process tomography together with singular values",
+      "status": "specified",
+      "failureIfAbsent": "a contractive endpoint can be entirely nonunitary"
+    },
+    {
+      "id": "magnon-polaron-vs-many-body-skew",
+      "headlineCollision": "field-odd thermal Hall response including a sign reversal",
+      "mechanisms": ["hybrid-band Berry curvature", "intrinsic many-body magnon skew scattering"],
+      "minimumAugmentation": "joint avoided-crossing spectroscopy plus linewidth/lifetime and controlled-disorder dependence",
+      "status": "candidate_bundle_not_minimality_proved",
+      "failureIfAbsent": "thermal Hall alone does not identify geometric origin"
+    },
+    {
+      "id": "casimir-hall-vs-surface-and-magnetic-background",
+      "headlineCollision": "distance-dependent force or torque that changes with magnetic configuration",
+      "mechanisms": ["boundary fluctuation response of the measured causal tensor", "ordinary magnetic force, electrostatic patches and drift"],
+      "minimumAugmentation": "parallel-minus-antiparallel reversal, Kelvin-probe surface maps and off-resonant magnetic-force calibration on matched films",
+      "status": "bundle_required",
+      "failureIfAbsent": "a force residual cannot be assigned to Hall-modified vacuum response"
+    },
+    {
+      "id": "anomalous-nernst-intrinsic-vs-extrinsic",
+      "headlineCollision": "orientation-odd transverse thermovoltage",
+      "mechanisms": ["intrinsic Berry-curvature thermoelectric response", "skew/side-jump, magnon-drag or thermal-gradient mixing"],
+      "minimumAugmentation": "full tensor inversion with field reversal, thickness/disorder series and frequency/thermal-lag response",
+      "status": "candidate_bundle_not_minimality_proved",
+      "failureIfAbsent": "an odd voltage is not a unique mechanism tag"
+    },
+    {
+      "id": "equilibrium-breaking-vs-kinetic-freezing",
+      "headlineCollision": "hysteretic branch selection or a persistent domain pattern",
+      "mechanisms": ["equilibrium spontaneous symmetry breaking", "finite-time trapping in metastable basins"],
+      "minimumAugmentation": "waiting-time and sweep-rate scaling of dwell-time distributions under controlled perturbation",
+      "status": "specified",
+      "failureIfAbsent": "history dependence alone cannot establish an equilibrium vacuum structure"
+    },
+    {
+      "id": "nonhermitian-topology-vs-active-transfer",
+      "headlineCollision": "state exchange or apparent braid after exceptional-point encircling",
+      "mechanisms": ["eigenvector topology of the complex band structure", "gain/loss-conditioned nonadiabatic mode selection"],
+      "minimumAugmentation": "complex eigenvalue and left/right eigenvector tomography under both loop orientations and rates",
+      "status": "specified",
+      "failureIfAbsent": "endpoint switching can be dynamical selection rather than topological transport"
+    },
+    {
+      "id": "planckian-two-current-vs-proxy",
+      "headlineCollision": "small determinant or apparent one-mode thermoelectric spectrum",
+      "mechanisms": ["physical particle/energy response", "energy-centroid-weighted charge-current proxy"],
+      "minimumAugmentation": "continuity-derived physical energy current plus seam and local-energy-gauge scans",
+      "status": "specified_implementation_open",
+      "failureIfAbsent": "response rank has no transport interpretation"
+    },
+    {
+      "id": "torsion-vs-generic-spin-force",
+      "headlineCollision": "spin-dependent finite-range force",
+      "mechanisms": ["propagating torsion or broken Spin(2,3) sector", "generic pseudoscalar exchange and magnetic leakage"],
+      "minimumAugmentation": "source/species coupling ratios fixed by one action, range scaling and magnetic-null source reversals",
+      "status": "blocked_by_action",
+      "failureIfAbsent": "a Yukawa-shaped spin force is not a symmetry fingerprint"
+    }
+  ],
+  "designRules": [
+    "Start with an explicit pair or finite set of mechanisms, not a single favored model.",
+    "Fold every mechanism through the same detector response before comparing it with data.",
+    "Include calibration, acceptance, drift and background tangents in the nuisance span.",
+    "If efficient separation is zero, do not add repetitions; add an orientation, frequency, geometry, waiting-time or higher-moment channel.",
+    "Choose the added channel before looking at the disputed data and price its calibration cost.",
+    "Validate on positive and negative controls and reserve a held-out control setting.",
+    "Report the detector-equivalence class when no affordable channel breaks it."
+  ],
+  "certificate": {
+    "baseSignal": [1],
+    "baseNuisance": [1],
+    "candidateChannels": [
+      {"id": "reversal", "signal": -1, "nuisance": 1, "cost": 1},
+      {"id": "frequency", "signal": 0.4, "nuisance": 0.3, "cost": 2},
+      {"id": "replicate", "signal": 1, "nuisance": 1, "cost": 1}
+    ],
+    "expectedBest": "reversal",
+    "tolerance": 1e-12
+  },
+  "corpusAnchors": [
+    "corpus/claims/0700-0799/738_the_efficient_cp_score_is_the_nuisance_orthogonal_jordan_tangent_and_its_schur_complement_is_the_identifiability_test.md",
+    "corpus/claims/0700-0799/739_detector_folding_is_a_positive_markov_compression_that_can_only_contract_cp_fisher_information.md",
+    "corpus/claims/1200-1299/1225_the_a11_effect_window_requires_nuisance_projected_power_not_only_a_nonzero_transverse_response.md",
+    "corpus/programmes/admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md"
+  ]
+}

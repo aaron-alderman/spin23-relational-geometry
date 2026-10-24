@@ -1,0 +1,26 @@
+{
+  "schema":"admissibility.planckian-fixed-density-block-cross-rank/1",
+  "date":"2026-10-24",
+  "target":"FPT-004",
+  "parent":"AZ-048",
+  "exact3x3":{
+    "dimension":630,
+    "betaBroadeningScans":[[0.5,0.15],[0.5,0.4],[1.0,0.25],[2.0,0.15],[2.0,0.4]],
+    "centreMedianNormalizedDeterminantRange":[0.597154954107845,0.6877585168187229],
+    "endpointMedianNormalizedDeterminantRange":[0.5746825793742323,0.6213972679855642],
+    "minimumNormalizedDeterminantAcrossScans":0.1060908859339636,
+    "gaugeSpectralRelativeDifferenceRange":[0.45537791662648525,0.49903589773575363],
+    "positivity":"PASS"
+  },
+  "integratedBlock":[
+    {"L":3,"centre":0.6029062929009594,"endpoint":0.6294782476365859,"exact":true},
+    {"L":5,"centre":0.8387631933671031,"centreSE":0.005135599203792078,"endpoint":0.8319026256540581,"endpointSE":0.005314269108888471},
+    {"L":7,"centre":0.8816181728117427,"centreSE":0.004509421424168629,"endpoint":0.8809825037289866,"endpointSE":0.004508592408158539},
+    {"L":9,"centre":0.9179082681471336,"centreSE":0.0045321137938376475,"endpoint":0.9185206039018611,"endpointSE":0.0044923372917065755}
+  ],
+  "independentL9":{"samples":24,"centre":0.9259264129645596,"centreSE":0.0034078782554261317,"endpoint":0.9262666731042489,"endpointSE":0.003334636878524145},
+  "admission":{"exactFiniteFrequencyRankTwo":"PASS_3X3_ONLY","integratedThermodynamicSequenceRankTwo":"PASS_SUPPORTED","lowFrequencyThermodynamicRank":"OPEN","next":"COMMON_SAMPLE_MATRIX_FREE_SPECTRAL_WINDOW_SCALING"},
+  "sourceHashesSha256":{"matrix_free_fixed_density_moments.py":"14da3b755fc1b5885f9fbca59fcd1611f9ab6aa5714dbc3f9d58b07725e6e283","exact_fixed_density_finite_q_spectrum.py":"41c1c94c938964cbe3053d385b75540da33043f9119d34349dd65ffc7c3ada06"},
+  "tests":{"pythonUnittestCount":57,"status":"PASS"},
+  "firewall":"integrated rank two does not imply low-frequency, dc, low-temperature or universal Planckian rank two"
+}

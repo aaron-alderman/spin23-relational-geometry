@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-link-action-metric-audit/1",
+  "carrier": "W=R singlet plus End(A2)",
+  "candidateMetrics": {
+    "frobenius": {
+      "formula": "a^2+tr(R^T R)",
+      "signature": [5, 0],
+      "role": "canonical positive kinetic or fluctuation norm"
+    },
+    "determinantCausal": {
+      "formula": "det(R)-a^2",
+      "signature": [2, 3],
+      "role": "orientation-dependent quadratic carrier invariant"
+    }
+  },
+  "relativeFramePotential": {
+    "formula": "sum_ij x_ij^2(1-x_ij)^2 + kappa row/column penalties",
+    "vacuum": "any permutation matrix",
+    "restrictedHessianEigenvalues": ["2+12*kappa", 2, 2, 2, 2],
+    "condition": "kappa>0",
+    "signature": [5, 0],
+    "selectsDeterminantCausalMetric": false
+  },
+  "auditedCorpusFunctionals": [
+    {
+      "id": "hopf-cos6-locking",
+      "localSecondVariation": "36*kappa at a selected minimum",
+      "classification": "positive for kappa>0",
+      "relationToQ": "selects six phase marks but does not define the five-dimensional link metric"
+    },
+    {
+      "id": "minimum-variance-family-response",
+      "localSecondVariation": "built from sums of squared commutators",
+      "classification": "positive semidefinite",
+      "relationToQ": "aligns projectors but supplies no determinant-minus-singlet form"
+    },
+    {
+      "id": "cross-peirce-norm-potential",
+      "localSecondVariation": "positive radial stiffness with CP1 directional flats before response terms",
+      "classification": "semidefinite/Morse-Bott",
+      "relationToQ": "completes a family frame but does not generate the link-carrier indefinite metric"
+    },
+    {
+      "id": "gaussian-logdet-action",
+      "localSecondVariation": "kappa tr(C^-1 deltaC C^-1 deltaC)",
+      "classification": "strictly positive on the positive cone",
+      "relationToQ": "generates inverse covariance matching but is orientation-even and Euclidean"
+    },
+    {
+      "id": "gaussian-schur-boundary-action",
+      "localSecondVariation": "positive after Ward/null-mode quotient",
+      "classification": "positive on physical support",
+      "relationToQ": "cannot select orientation or an indefinite link metric"
+    }
+  ],
+  "boundedVerdict": {
+    "existingStableSelectorChoosesQ": false,
+    "QAsEuclideanPotentialHessian": "indefinite saddle, not a stable isolated minimum",
+    "remainingAdmissibleRole": "causal/state-space quadratic invariant or Lorentzian kinetic structure after a declared continuation and constraint analysis",
+    "twoLayerArchitecture": [
+      "positive selector Hessian determines and stabilizes an admissible vacuum",
+      "indefinite Q classifies relational causal geometry on the correlated carrier"
+    ]
+  },
+  "openGates": [
+    "derive a Lorentzian or Hamiltonian evolution preserving Q",
+    "supply the Euclidean-to-Lorentzian continuation and gauge/constraint removal needed to avoid ghosts",
+    "identify an observable null cone or hyperbolic propagation law",
+    "explain whether the parity-changing six-step update is a defect transition rather than a Q-preserving time evolution"
+  ],
+  "evidenceRefs": [
+    "corpus/programmes/admissibility/admissibility_14_relative_frame_link_and_spontaneous_selection.md",
+    "corpus/programmes/admissibility/admissibility_16_five_dimensional_link_span_and_spin23_quadratic_envelope.md",
+    "corpus/claims/1000-1099/1007_placement_deck_and_real_symmetry_force_cos6phi_as_the_minimal_phase_locking_term_and_select_the_six_marked_hopf_phases_conditionally.md",
+    "corpus/claims/1100-1199/1195_a_charge_three_cross_peirce_vacuum_completes_the_rank_split_to_a_full_jordan_frame_but_needs_response_to_gap_cp1.md",
+    "corpus/claims/1100-1199/1197_the_minimum_variance_response_functional_is_a_canonical_relative_selector_but_standard_model_family_spaces_and_weights_remain_noncanonical.md",
+    "corpus/programmes/freudenthal/freudenthal_action_01_logdet_variational_mechanism_and_scale_no_go.md",
+    "corpus/programmes/freudenthal/freudenthal_action_02_gaussian_schur_boundary_realization.md",
+    "corpus/claims/0800-0899/820_the_three_v4_contrasts_match_the_dimension_but_not_the_metric_of_the_h2r_relationship_space_or_a_canonical_spin23_section.md"
+  ],
+  "verdict": "The nearest explicit stable actions select positive Hessians, not the (2,3) determinant form. Q remains admissible as causal geometry, not yet as a stable Euclidean action metric."
+}

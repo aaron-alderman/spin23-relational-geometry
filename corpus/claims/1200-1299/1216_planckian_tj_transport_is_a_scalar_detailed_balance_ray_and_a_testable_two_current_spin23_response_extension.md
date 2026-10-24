@@ -1,7 +1,7 @@
 # Planckian (t)-(J) transport is a scalar detailed-balance ray and a testable two-current (Spin(2,3)) response extension
 
 **Date:** 19 October 2026  
-**Status:** exact response-matrix algebra plus source-code audit and diagnostic prototype; no microscopic (Spin(2,3)) symmetry is derived  
+**Status:** exact response-matrix algebra, current-construction rule and source-code audit; production periodic current remains open and no microscopic (Spin(2,3)) symmetry is derived
 **Role in the corpus:** external transport test of the two-face/Jordan response carrier
 
 ## Result in one sentence
@@ -80,7 +80,7 @@ which preserves positivity and, because (\det A=1), preserves the determinant. L
 
 ## Code experiment and its strict limitation
 
-A diagnostic branch was added to the authors' public script and proposed in a draft pull request. It generalizes the scalar FTLM estimator to a (2\times2) matrix, computes all three independent spectra in one pass, and adds positivity, determinant and rank diagnostics.
+A diagnostic proxy revision is now visible in the authors' public repository. The audited script remains a scalar charge-current FTLM calculation; its proxy machinery is useful for plumbing tests but does not provide a physical thermoelectric matrix.
 
 For validation only, it uses
 
@@ -88,11 +88,11 @@ For validation only, it uses
 J_E^{\mathrm{proxy}}=\frac12\{H,J_N\}.
 \]
 
-This operator is useful for testing matrix plumbing, but it is **not** the physical lattice energy current. In an energy eigenbasis it gives matrix elements proportional to (E_m+E_n), so its spectral matrix can be artificially rank one within a narrow frequency bin. Any apparent cone boundary or determinant collapse obtained from this proxy is therefore diagnostic, not physical evidence.
+This operator is useful for testing matrix plumbing, but it is **not** the physical lattice energy current. In an energy eigenbasis it gives matrix elements proportional to (E_m+E_n), so the supposed second channel is constrained to be an energy-centroid weighting of the first rather than an independently conserved flow. Any apparent cone boundary, interior or determinant collapse obtained from this proxy is therefore diagnostic, not physical evidence.
 
 ## The decisive next calculation
 
-The physical gate is unambiguous:
+The physical gate is now specified in detail in the [physical energy-current construction packet](../../programmes/admissibility/admissibility_34_physical_energy_current_construction_gate.md). In brief:
 
 1. choose a local decomposition (H=\sum_r h_r) compatible with the periodic (t)-(J) lattice;
 2. construct an energy polarization (P_E=\sum_r x_r h_r), treating boundary terms consistently;
@@ -127,7 +127,7 @@ The first statement defines a concrete experiment. The second is not supported b
 
 - [Nature Physics article: “Strange metal behaviour from underlying bad metallicity”](https://www.nature.com/articles/s41567-026-03441-x)
 - [Authors' Planckian-tJ repository](https://github.com/djfrat/Planckian-tJ)
-- [Diagnostic two-current draft pull request](https://github.com/djfrat/Planckian-tJ/pull/1)
+- [Physical energy-current construction gate](../../programmes/admissibility/admissibility_34_physical_energy_current_construction_gate.md)
 - [Terminal reflexive-closure audit](1203_terminal_reflexive_closure_audit_conditional_eft_closure_and_sharp_indeterminacy_of_absolute_flavour_selection.md)
 - [Finite isotropic-link no-go](1215_any_number_of_fully_integrated_isotropic_links_remains_blind_to_the_complementary_frame.md)
 

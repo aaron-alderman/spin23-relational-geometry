@@ -1,0 +1,51 @@
+{
+  "protocol": "admissibility-casimir-seebeck-nernst-ladder/1",
+  "asOf": "2026-10-24",
+  "status": "TYPED_GUIDEPOST_LADDER_SHARED_DESCENT_OPEN",
+  "casimirMeanings": [
+    {
+      "name": "representation Casimir",
+      "role": "sector and mode classifier",
+      "notEquivalentTo": ["Casimir force", "Onsager-Casimir reciprocity"]
+    },
+    {
+      "name": "Casimir effect",
+      "role": "boundary-dependent fluctuation free energy and stress",
+      "notEquivalentTo": ["central representation invariant", "transport reciprocity"]
+    },
+    {
+      "name": "Onsager-Casimir reciprocity",
+      "role": "time-reversal-parity-dependent transpose relation for response",
+      "notEquivalentTo": ["Casimir force", "central representation invariant"]
+    }
+  ],
+  "guidepostRails": [
+    {
+      "observable": "Casimir force or torque",
+      "spectralRole": "global boundary-conditioned imaginary-frequency response",
+      "principalAxes": ["distance", "temperature", "geometry", "orientation", "material response"]
+    },
+    {
+      "observable": "longitudinal Seebeck",
+      "spectralRole": "local longitudinal energy slope",
+      "principalAxes": ["temperature", "chemical potential", "scattering", "drive frequency"]
+    },
+    {
+      "observable": "anomalous Nernst conductivity",
+      "spectralRole": "local transverse orientation-odd energy slope",
+      "principalAxes": ["temperature", "chemical potential", "magnetic orientation", "drive frequency"]
+    }
+  ],
+  "idealPlateCalibration": {
+    "energyDistanceExponent": -3,
+    "pressureDistanceExponent": -4,
+    "energyRatioAtDoubleDistance": 0.125,
+    "pressureRatioAtDoubleDistance": 0.0625,
+    "scope": "ideal perfectly conducting parallel plates at zero temperature only"
+  },
+  "sharedCarrierAxes": ["temperature", "chemicalPotentialOrComposition", "magneticOrientation", "driveFrequency", "distance", "boundaryAngle"],
+  "admissionCriterion": "One independently measured causal material-response model predicts transport and Casimir channels without force-data refitting.",
+  "selectorCriterion": "Changing the boundary changes the measured return-map fixed point or slope in the predicted direction.",
+  "nextGate": "Perform a same-film, no-refit Hall-Seebeck-Nernst-Casimir force or torque experiment with reversal and nuisance controls."
+}
+

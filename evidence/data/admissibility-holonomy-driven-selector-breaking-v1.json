@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-holonomy-driven-selector-breaking/1",
+  "geometry": {
+    "base": "circle of circumference L or compact interface cycle",
+    "field": "real three-component selector n with director identification n~-n",
+    "holonomy": "H_phi=diag(R(phi),1)",
+    "topologicalRole": "the noncontractible cycle makes the connection holonomy gauge-invariant up to conjugacy"
+  },
+  "spectrum": {
+    "longitudinalLowestEigenvalue": "0",
+    "transverseLowestEigenvalueFor0ToPi": "Delta_phi=phi^2/L^2",
+    "quarterTurnGap": "pi^2/(4L^2)"
+  },
+  "potential": {
+    "energy": "integral [|D n|^2/2 + r|n|^2/2 + lambda|n|^4/4]",
+    "selectionWindow": "-Delta_phi < r < 0",
+    "minimum": "n*=+-sqrt(-r/lambda)e3",
+    "directorVacuum": "one projective point [e3]",
+    "hessian": {
+      "radial": "-2r",
+      "twoTangentModes": "Delta_phi"
+    }
+  },
+  "untwistedComparison": {
+    "holonomy": "identity",
+    "vacuumManifold": "S2 or RP2 for a director",
+    "tangentGoldstones": 2
+  },
+  "reflexiveGate": {
+    "equation": "P=Pi_min(Hol(P))",
+    "meaning": "selected structure generates transport whose spectrum must select the same structure",
+    "status": "OPEN"
+  },
+  "status": {
+    "holonomyChangesInstabilityOrder": true,
+    "quarterTurnSelectsOneDirectorInWindow": true,
+    "topologyAloneIsForce": false,
+    "selfGeneratedHolonomyDerived": false,
+    "reflexiveFixedPointSolved": false,
+    "physicalAdmission": false
+  },
+  "evidenceRefs": [
+    "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+    "corpus/claims/0200-0299/297_a_dynamical_real_form_selector_has_rp2_order_parameter_and_two_orientation_modes.md",
+    "corpus/claims/0300-0399/315_the_carrier_quarter_turn_is_a_broken_selector_direction_not_the_surviving_u1.md",
+    "corpus/claims/1100-1199/1192_how_the_programme_closes_over_itself_a_single_typed_action_a_return_map_and_terminal_tests.md",
+    "corpus/claims/1100-1199/1193_projector_stationarity_is_the_return_map_and_spin23_belongs_to_the_2_plus_1_dimensional_defect.md"
+  ],
+  "verdict": "A quarter-turn holonomy on a noncontractible cycle lifts the two transverse selector modes and, in an exact finite mass window, collapses the RP2 vacuum surface to one projective director. Deriving the holonomy from that same selected projector is the remaining reflexive-closure gate."
+}
+

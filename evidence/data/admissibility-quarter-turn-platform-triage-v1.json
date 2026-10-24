@@ -1,0 +1,79 @@
+{
+  "protocol": "admissibility-quarter-turn-platform-triage/1",
+  "asOf": "2026-10-24",
+  "requiredRelativeImperfection": 0.00024061965677016708,
+  "platforms": [
+    {
+      "id": "integrated-sin-holonomy",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12006547/",
+      "year": 2025,
+      "architecture": "chiral-symmetric waveguide array with m-fold dark subspace",
+      "reported": {
+        "maximumDimension": 6,
+        "so2BandwidthNmGreaterThan": 100,
+        "representativeMatrixFidelityRange": [0.991, 0.999],
+        "onChipInsertionLossDbLessThan": 2,
+        "simulatedDarkOutputPowerFraction": 0.95
+      },
+      "residualSplittingOverGap": null,
+      "differentialLossOverGap": null,
+      "selectorContractionMeasured": false,
+      "verdict": "closest structural candidate; numerical admission open"
+    },
+    {
+      "id": "rb87-yang-monopole",
+      "source": "https://arxiv.org/abs/1910.13991",
+      "year": 2021,
+      "architecture": "four hyperfine states forming two doubly degenerate manifolds",
+      "reported": {
+        "gapHz": 2000,
+        "cycleSeconds": 0.002,
+        "forwardProcessFidelity": 0.98,
+        "reverseProcessFidelity": 0.96,
+        "biasFieldGauss": 19.8,
+        "longTermFieldStabilityPpm": 2.5
+      },
+      "residualSplittingOverGap": null,
+      "differentialLossOverGap": null,
+      "selectorContractionMeasured": false,
+      "verdict": "closest protocol and tomography precedent; numerical admission open"
+    },
+    {
+      "id": "fiber-synthetic-frequency",
+      "source": "https://arxiv.org/abs/2406.00321",
+      "year": 2025,
+      "architecture": "polarization-multiplexed fiber ring with synthetic frequency lattice",
+      "reported": {
+        "freeSpectralRangeHz": 4000000,
+        "modulationStrengthFractions": [0.06, 0.14],
+        "roundTripSeconds": 2.5e-7,
+        "simulationRoundTripPowerLossDb": 1.74,
+        "tomographyInputStates": 6
+      },
+      "residualSplittingOverGap": null,
+      "differentialLossOverGap": null,
+      "selectorContractionMeasured": false,
+      "verdict": "strong control and readout toolbox; architectural redesign required"
+    },
+    {
+      "id": "transmon-qutrit-fast-holonomy",
+      "source": "https://arxiv.org/abs/1804.01759",
+      "year": 2018,
+      "architecture": "nonadiabatic pulse-area holonomy in a three-level transmon",
+      "reported": {
+        "pulseShapeTimeSeconds": 6.5e-9,
+        "gateDurationSeconds": 2.6e-8,
+        "T1Seconds": 4.3e-7,
+        "T2Seconds": 2.5e-7
+      },
+      "residualSplittingOverGap": "not applicable to the demonstrated mechanism",
+      "differentialLossOverGap": "not applicable to the demonstrated mechanism",
+      "selectorContractionMeasured": false,
+      "verdict": "credible fast-holonomy fallback; not the current projector experiment"
+    }
+  ],
+  "admissionVerdict": "NO_PLATFORM_ADMITTED",
+  "closestCarrier": "integrated-sin-holonomy",
+  "closestProtocol": "rb87-yang-monopole",
+  "nextGate": "Specify and simulate an integrated SO(2) chip reporting the full typed tuple (delta/Delta, gamma/Delta, dP, theta_H forward/reverse, nu, m_hat)."
+}

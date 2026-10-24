@@ -1,0 +1,41 @@
+{
+  "protocol": "admissibility-three-mode-quarter-turn-two-datum-contraction/1",
+  "date": "2026-10-24",
+  "threeModeHamiltonian": {
+    "form": "H0(phi)=Delta*(I-P(phi))",
+    "n": "(sqrt(7)/4*cos(phi), sqrt(7)/4*sin(phi), 3/4)",
+    "eigenvalues": [0, "Delta", "Delta"],
+    "gap": "Delta",
+    "projectorReturn": "P(2pi)=P(0)"
+  },
+  "holonomy": {
+    "connection": "A_phi=(3/4)J",
+    "solidAngle": "pi/2",
+    "doubletReturn": "exp(-3pi J/2)=exp(pi J/2)=J",
+    "orientationReversal": "J -> -J",
+    "dynamicalPhase": "exp(-i Delta T), common to the doublet and requiring calibration"
+  },
+  "adiabaticity": {
+    "projectorSpeed": "omega*sqrt(7)/4",
+    "parameter": "epsilon_ad=omega*sqrt(7)/(4 Delta)",
+    "required": "epsilon_ad << 1"
+  },
+  "twoDatumReturn": {
+    "Y": "y y^T, independently measured",
+    "fusion": "F(P;Y)=aP+bY",
+    "map": "R(P;Y)=principal spectral projector of F",
+    "domain": "a>0 and b>a",
+    "uniqueFixedPoint": "Y",
+    "tangentMultiplier": "a/(a+b)",
+    "witness": {"a": 1, "b": 2, "spectralRadius": 0.3333333333333333},
+    "memoryLimit": "b=0 gives R(P)=P"
+  },
+  "experimentalReadouts": [
+    "instantaneous singlet-doublet spectrum and gap",
+    "projector tomography after one loop",
+    "phase-sensitive doublet-frame holonomy after dynamical-phase removal",
+    "multi-initial-condition return-map tomography"
+  ],
+  "knownBoundary": "The model is a platform-independent three-mode construction, not an identification with family, matter, gravity, Spin(2,3), or E8 carriers.",
+  "nextGate": "Audit doublet splitting, loss imbalance, timing error and tomography noise against the rho=1 versus rho<1 discriminator."
+}

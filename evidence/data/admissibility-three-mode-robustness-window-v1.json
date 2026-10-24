@@ -1,0 +1,41 @@
+{
+  "protocol": "admissibility-three-mode-robustness-window/1",
+  "date": "2026-10-24",
+  "parameters": {
+    "latitudeSine": 0.6614378277661477,
+    "adiabaticTolerance": 0.02,
+    "relativeEvolutionTolerance": 0.05,
+    "projectorClosureTolerance": 0.01
+  },
+  "feasibility": {
+    "lowerRate": "2pi*max(delta,gamma)/epsilon_rel",
+    "upperRate": "epsilon_ad*Delta/s",
+    "existence": "max(delta,gamma)/Delta <= epsilon_rel*epsilon_ad/(2pi*s)",
+    "maximumRelativeSplittingOrDifferentialLoss": 0.00024061965677016708
+  },
+  "referenceCycle": {
+    "Delta": 1,
+    "omega": 0.030237157840738178,
+    "period": 207.79682205165204,
+    "maximumDeltaOrGamma": 0.00024061965677016708,
+    "maximumAzimuthTimingErrorRadians": 0.015118911906452433
+  },
+  "tomographyDesign": {
+    "idealSlope": 0.3333333333333333,
+    "observationsPerTangentDirection": 9,
+    "inputAngleRadians": 0.03,
+    "effectiveAngleNoiseRadians": 0.01,
+    "standardError": 0.1111111111111111,
+    "oneSidedZ": 5,
+    "upperBound": 0.8888888888888888,
+    "idealRejectionZ": 6
+  },
+  "acceptanceChannels": [
+    {"id": "projective-closure", "estimator": "Frobenius projector chord d_P"},
+    {"id": "coherent-holonomy", "estimator": "rotation angle of polar unitary V plus orientation reversal"},
+    {"id": "nonunitarity", "estimator": "log singular-value ratio nu"},
+    {"id": "selection", "estimator": "multi-initial-condition tangent slope m_hat"}
+  ],
+  "boundary": "The numerical budget is dimensionless and illustrative; platform admission requires measured rates and a full correlated-noise model.",
+  "nextGate": "Compare physical platforms using published linewidths, couplings, modulation rates and tomography precision."
+}

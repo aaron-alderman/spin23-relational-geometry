@@ -1,0 +1,57 @@
+{
+  "schema": "three-record-orientation-experiment/1",
+  "date": "2026-10-24",
+  "status": "platform_agnostic_preregistration",
+  "primaryQuestion": "Can one carrier retain an orientation-odd record after projective selection while controlled detector folding erases that odd record and preserves the even selector response?",
+  "latentCoordinates": {
+    "even": "t=Tr(PY)=cos(theta)^2",
+    "odd": "chi=Tr(J^T[P,Y])=sin(2 theta)"
+  },
+  "records": [
+    {"id": "E", "parity": "even", "role": "selector free energy, resonance shift or quasistatic susceptibility"},
+    {"id": "O", "parity": "odd", "role": "branch population contrast, coherent phase or reversal-odd current"},
+    {"id": "population", "parity": "resolved", "role": "establish whether paired branches were symmetrically occupied or detector-folded"}
+  ],
+  "requiredInterventions": [
+    "matched_plus_minus_theta",
+    "wall_orientation_reversal",
+    "loop_reversal_when_available",
+    "branch_label_randomization_scan",
+    "sweep_rate_scan",
+    "waiting_time_scan"
+  ],
+  "primaryPredictions": {
+    "evenParity": "E(theta)=E(-theta)",
+    "oddParity": "O(theta)=-O(-theta)",
+    "wallParity": "O(theta,J)=-O(theta,-J)",
+    "detectorLaw": "O_obs=(1-2 epsilon) O",
+    "erasurePoint": "epsilon=0.5",
+    "erasureSurvivor": "E"
+  },
+  "nuisanceColumns": [
+    "sweep_rate",
+    "waiting_time",
+    "gain_drift",
+    "wall_position",
+    "temperature",
+    "magnetic_pickup",
+    "geometric_misalignment",
+    "detector_label_asymmetry"
+  ],
+  "forbiddenResiduals": [
+    "E_odd",
+    "O_even",
+    "odd_signal_at_complete_label_randomization",
+    "wiring_dependent_reversal_parity"
+  ],
+  "decisionRules": [
+    {"id": "projective_only", "condition": "E_nonzero_and_O_zero_with_resolved_detector", "conclusion": "projective selector closure without oriented feedback"},
+    {"id": "oriented_candidate", "condition": "E_nonzero_and_O_passes_reversals_and_erasure_control", "conclusion": "oriented response candidate requiring coherent holonomy reconstruction"},
+    {"id": "rotation_without_selection", "condition": "E_zero_and_O_nonzero", "conclusion": "oriented transport without attractive selection"},
+    {"id": "no_join", "condition": "E_zero_and_O_zero", "conclusion": "no detectable selector-orientation join"},
+    {"id": "kinetic", "condition": "O_depends_on_rate_or_waiting_time", "conclusion": "kinetic hysteresis requiring quasistatic extrapolation"},
+    {"id": "detector_failure", "condition": "O_survives_epsilon_half_or_depends_on_wiring", "conclusion": "reject physical orientation interpretation"}
+  ],
+  "newPhysicsGate": "No new-physics interpretation is admitted until conventional defect hybridization, detector leakage, hysteresis, magnetic pickup and symmetry-allowed couplings are quantitatively closed."
+}
+

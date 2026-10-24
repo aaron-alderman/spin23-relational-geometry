@@ -1,0 +1,64 @@
+{
+  "schema": "admissibility.planckian-two-current-execution/1",
+  "date": "2026-10-24",
+  "target": "FPT-004",
+  "programme": "AZ-040",
+  "result": "USEFUL_NUMERICAL_EXTENSION_OPERATOR_CONVENTION_UNRESOLVED",
+  "source": {
+    "upstreamCommit": "d7b2373d7222f70024feeccaa5c70c398b450817",
+    "workingTreeModified": true,
+    "hashesSha256": {
+      "EDSquare-tJ-LR-Cloop-proxy.py": "f84ff43b2cfa7c5d604b498d98fd8199b9dd71f230865a753b98ce019e4c0a7c",
+      "production_term_provenance.py": "0766e6c65746f4e91adcd07dd5ae82f98c959d454d4fa3ec2ce3fd6988308ea6",
+      "periodic_current_conventions.py": "ed86cb1643fb6acbdc68772b2b491561a78d86dc48b3b78185da72afba43c7ed",
+      "common_sample_ftlm.py": "8ef12b37ae40c8f3c03c8bc65aa491250a2d5d369adc3143c9ffef48d64389bb",
+      "spin23_two_current.py": "cd2c63982f44e4bd9b298a22ab906cd2322e91adfb5589c8429182a6bb2d912f"
+    }
+  },
+  "tranches": [
+    {"id":"T0","status":"PASS","result":"frozen AZ-039 hashes and oracle reproduce"},
+    {"id":"T1","status":"PASS_SMALL_CLUSTER","result":"production builder emits hopping, exchange, Ewald pair and Ewald self-image terms; tagged sum reconstructs legacy H"},
+    {"id":"T2","status":"QUARANTINED","result":"odd 3x3 convention algebra closes; 2x2 antipodal pairs are rejected; Ewald thermodynamic/gauge equivalence is not established"},
+    {"id":"T3","status":"PASS_ADMISSION_CLUSTER","result":"physical energy and sum modes enter scalar FTLM selector; common-sample complex two-current estimator agrees with exact 3x3 spectra inside tested full-depth envelope"},
+    {"id":"T4","status":"PROVISIONAL_MASK","result":"full depth is required on the 72-state oracle; 128-vector held-out run passes 5 percent spectrum, moment and partition thresholds; production-size envelope remains open"},
+    {"id":"T5","status":"UNRESOLVED","result":"exact atlas contains ray, boundary and interior bins but class counts depend strongly on periodic convention"},
+    {"id":"T6","status":"ALGEBRA_PASS_PHYSICS_WITHHELD","result":"particle-energy to particle-heat congruence, Seebeck and open-circuit Schur translation implemented; no material prediction admitted"},
+    {"id":"T7","status":"ADJUDICATED","result":"useful numerical extension; no new-physics or Spin(2,3) inference"}
+  ],
+  "productionOracles": {
+    "twoByTwo": {"sites":4,"particles":2,"basisDimension":12,"taggedTerms":42,"antipodalTerms":38,"reconstructionResidual":3.51e-16,"admission":"negative_control"},
+    "threeByThree": {"sites":9,"particles":2,"basisDimension":72,"taggedTerms":117,"antipodalTerms":0,"reconstructionResidual":3.04e-16,"hermiticityResidual":0.0,"admission":"exact_oracle"}
+  },
+  "periodicConvention": {
+    "minimumImageNorm": 39.78826358553055,
+    "orientedSeamNorm": 36.419144245102004,
+    "windingTwistCandidateNorm": 53.939410329528094,
+    "resolvedIdentityResidual": 9.340040336773714e-15,
+    "quarantinedPairCountThreeByThree": 0,
+    "interpretation": "J_seam=J_minimum+J_winding closes algebraically, but transport equivalence is not proven"
+  },
+  "exactBaselineBetaPointSevenEtaPointTwelve": {
+    "minimumImage":{"activeBins":257,"normalizedDeterminantMedian":0.0009949753173362902,"normalizedDeterminantMaximum":0.2494224208673031,"sumRuleResidual":2.0417347410732915e-15,"detailedBalanceResidual":0.05080527486947117},
+    "orientedSeam":{"activeBins":351,"normalizedDeterminantMedian":0.009593534705414379,"normalizedDeterminantMaximum":0.24717114797885917,"sumRuleResidual":2.8049968493506864e-16,"detailedBalanceResidual":0.050830352571204926},
+    "windingTwistCandidate":{"activeBins":343,"normalizedDeterminantMedian":0.006767237327549265,"normalizedDeterminantMaximum":0.16931178879401873,"sumRuleResidual":1.1164063157853765e-16,"detailedBalanceResidual":0.050766824414349834}
+  },
+  "commonSampleValidation": {
+    "beta": 0.7,
+    "broadening": 0.12,
+    "fullDepth": 72,
+    "sixtyFourVectorsSeed20261024":{"spectrumError":0.040354093156973324,"momentError":0.03568610600787493,"partitionError":0.03198021308255543,"invarianceResidual":5.468452588852568e-16},
+    "heldOutThirtyTwoVectorWorst":{"spectrumError":0.10212194258511423,"momentError":0.08573919889839296,"partitionError":0.07996644320851513},
+    "oneHundredTwentyEightVectorsHeldOutSeed20261025":{"spectrumError":0.020838410778843526,"momentError":0.02097339604107936,"partitionError":0.013250970239427543,"invarianceResidual":5.445394346924704e-16},
+    "depthBias":{"depth18SpectrumErrorRange":[0.7206056279164171,0.7279390883372777],"depth36SpectrumErrorRange":[0.3070306456959567,0.34956803575736656]},
+    "provisionalThresholds":{"spectrumErrorMaximum":0.05,"momentErrorMaximum":0.05,"partitionErrorMaximum":0.05,"invarianceResidualMaximum":1e-10}
+  },
+  "heldOutRankAtlasBetaOnePointOneEtaPointZeroEight": {
+    "thresholds":{"rayMaximum":0.0001,"interiorMinimum":0.01},
+    "minimumImage":{"active":175,"ray":93,"boundary":69,"interior":13,"medianNormalizedDeterminant":0.000050559762222506075},
+    "orientedSeam":{"active":320,"ray":84,"boundary":93,"interior":143,"medianNormalizedDeterminant":0.003618514378735769},
+    "windingTwistCandidate":{"active":293,"ray":69,"boundary":122,"interior":102,"medianNormalizedDeterminant":0.003032766821801196},
+    "verdict":"UNRESOLVED_CONVENTION_SYSTEMATIC_DOMINATES"
+  },
+  "tests": {"pythonUnittestCount":57,"status":"PASS"},
+  "firewall": "positivity, determinant geometry and mixed rank bins are ordinary Kubo/Gram facts here; they do not establish a microscopic Spin(2,3) symmetry"
+}

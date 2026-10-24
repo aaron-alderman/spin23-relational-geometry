@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-24",
+  "protocol": "admissibility-self-generated-holonomy-projector-no-go/1",
+  "construction": {
+    "projector": "P=n n^T on RP2",
+    "orientedHolonomy": "H_phi(n)=P+cos(phi)(I-P)+sin(phi)[n]_cross",
+    "directorHolonomy": "H_pi(P)=2P-I",
+    "lowestModeProjector": "Pi_min(H_phi)=P"
+  },
+  "orientationBoundary": {
+    "quarterTurn": "requires an oriented lift because H_phi(-n)=H_phi(n)^-1",
+    "halfTurn": "is projector-defined because H_pi=2P-I"
+  },
+  "returnMap": {
+    "formula": "R(P)=Pi_min(H_pi(P))",
+    "result": "R(P)=P for all P",
+    "tangentDerivative": "identity",
+    "spectralRadius": 1,
+    "attractive": false
+  },
+  "equivarianceTheorem": {
+    "statement": "Every SO(3)-equivariant map RP2 to RP2 is the identity when it is defined only from the selected projector.",
+    "reason": "The stabilizer of a projector fixes only that projective line; transitivity propagates the result.",
+    "consequence": "A unique orientation requires a second relational datum."
+  },
+  "interpretation": {
+    "topologyRole": ["memory", "protection", "spectral gapping", "constraint on later breaking"],
+    "notProvided": ["ex nihilo orientation choice", "transverse attraction on the full projector orbit"],
+    "minimalRepair": "R(P;Y) with a second projector, response tensor, wall normal, source frame, defect orientation or material history"
+  },
+  "status": {
+    "selfConsistentFixedPointsExist": true,
+    "allProjectorsFixed": true,
+    "uniqueAttractiveProjectorDerived": false,
+    "secondRelationalDatumRequired": true,
+    "physicalAdmission": false
+  },
+  "evidenceRefs": [
+    "corpus/programmes/admissibility/admissibility_23_holonomy_driven_selector_breaking_and_reflexive_closure.md",
+    "corpus/claims/1100-1199/1192_how_the_programme_closes_over_itself_a_single_typed_action_a_return_map_and_terminal_tests.md",
+    "corpus/claims/1100-1199/1196_no_u3_covariant_effective_action_of_one_projector_can_select_its_orientation_so_closure_requires_a_second_family_tensor.md",
+    "corpus/claims/1200-1299/1215_any_number_of_fully_integrated_isotropic_links_remains_blind_to_the_complementary_frame.md"
+  ],
+  "verdict": "Projector-generated holonomy returns the same projector and protects it, but full covariance makes every projector a neutrally stable fixed point. Topology preserves historical selection; a second relational datum is required to create selection."
+}
+
