@@ -1,0 +1,90 @@
+{
+  "schema": "admissibility-monster-lean-fold-provenance-gate/1",
+  "date": "2026-10-25",
+  "packetId": "AZ-060",
+  "topicId": "OT-033",
+  "sourcePost": {
+    "url": "https://x.com/introsp3ctor/status/2113631303455109413",
+    "postedAt": "2026-10-23T21:59:00Z",
+    "text": "Here we go 15 opcodes for the monster hecke vm, lean kernel expr needs only 12 fields",
+    "media": [
+      {
+        "url": "https://pbs.twimg.com/media/HVUgd-xXsAAuR7Q?format=webp&name=large",
+        "sha256": "a186f01e6682fe085344f6b80dd9c91341660927eedf59cdd9292b1a9a23330a",
+        "role": "reported corpus census and named source paths"
+      },
+      {
+        "url": "https://pbs.twimg.com/media/HVUgrWfXIAAziGY?format=webp&name=large",
+        "sha256": "fed1af3a2202570eb65dfaf294a96120ccfa6ad13edf0943b672047e912b3bbc",
+        "role": "worked HeckeFold.card_address example and certificate sketch"
+      }
+    ]
+  },
+  "newlyRecoveredProvenance": {
+    "leanSourcesNamedByImage": [
+      "RequestProject/Ogg/DeclFold.lean",
+      "RequestProject/Ogg/DeclFoldReflect.lean",
+      "RequestProject/Ogg/DeclFoldCerts.lean"
+    ],
+    "dataPathNamedByImage": "fold/decls.json",
+    "environmentRead": "Lean.getConstInfo",
+    "workedDeclaration": "HeckeFold.card_address",
+    "workedCertificate": "Cert.HeckeFold.card_address",
+    "certificateCommand": "fold_certify",
+    "reportedCounts": {
+      "userDeclarations": 1979,
+      "distinctAddresses": 908,
+      "exactUnclamped": 789,
+      "kernelCertifiedFolds": 13
+    }
+  },
+  "publicSourceAudit": {
+    "repository": "https://github.com/meta-introspector/monster",
+    "defaultHead": "b82b09439139155dd031b5b8e0f8fa777b917a52",
+    "branchTipsInspected": 49,
+    "exactPathHits": 0,
+    "filenamePatterns": [
+      "DeclFold",
+      "fold/decls.json",
+      "RequestProject/Ogg"
+    ],
+    "publicGistsInspected": 134,
+    "publicGistFilenameHits": 0,
+    "sourcegraphFileSearchHits": 0,
+    "sourcegraphCaveat": "The public index reported transient backend omissions, so zero hits is not a proof of global absence.",
+    "githubCodeSearch": "Unauthenticated code search was unavailable and is not counted as an absence result.",
+    "conclusion": "The images identify the required artifacts, but no public copy of the named Lean files or decls.json was located in the audited surfaces."
+  },
+  "reproductionAdmissionContract": {
+    "requiredArtifacts": [
+      "the three named Lean source files",
+      "fold/decls.json",
+      "lean-toolchain",
+      "lakefile or equivalent build entry point",
+      "lake-manifest.json or exact dependency commits",
+      "the imported root module and declaration-selection predicate",
+      "the command and expected output that regenerate decls.json"
+    ],
+    "requiredPolicies": [
+      "raw tree occurrence versus DAG-node sharing",
+      "metadata treatment",
+      "normalization and transparency mode",
+      "handling of generated, theorem, unsafe and private declarations",
+      "logical-flag name matching",
+      "compact-constructor and projection policy"
+    ],
+    "requiredChecks": [
+      "all source and generated artifacts are content-hashed",
+      "the 1979-to-908 census regenerates from a clean checkout",
+      "all 13 certificates compile and their axiom dependencies are recorded",
+      "raw and normalized profiles are both emitted for mobility tests",
+      "collision fibres retain declaration names only as audit labels, not detector inputs"
+    ]
+  },
+  "status": {
+    "reportedCensus": "not independently reproduced",
+    "ot033": "gated_source_bundle_required",
+    "syntheticAdaptiveCensus": "retained as a finite scaling theorem, not promoted to source-native evidence",
+    "promotionRule": "Do not cite 1979, 908, 789 or 13 as reproduced measurements until the admission contract passes."
+  }
+}

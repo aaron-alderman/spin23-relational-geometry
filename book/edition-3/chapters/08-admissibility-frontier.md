@@ -312,6 +312,25 @@ This is a construction decision rather than an invitation to redesign the algebr
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-3.md)
 
+<a id="hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate"></a>
+## Hot off the press — the Lean fold now has a finite provenance gate
+
+> **Section status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The public images behind the reported Monster-address census name the missing implementation artifacts: three `RequestProject/Ogg/DeclFold*.lean` files, the generated `fold/decls.json`, the `fold_certify` command and the worked declaration `HeckeFold.card_address`. This turns a vague request for “the code” into a finite reproduction bundle.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-1.md)
+
+The bundle has not been located in the audited public surfaces. None of the named paths occurs across 49 public branch tips of the related repository or the author’s 134 public gists. The posted totals—1,979 declarations, 908 addresses, 789 unclamped folds and 13 certificates—therefore remain reported counts. The existing synthetic adaptive-depth result proves something useful about its 32,766 generated chains, but it is not a substitute for the missing source-native environment.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-2.md)
+
+The reason is practical. A little difference in imported root module, declaration selection, metadata removal, DAG sharing, reduction policy or transparency can change which cells are occupied and which declarations collide. The next useful act is not to imitate the infographic. It is to obtain the named files, data and pinned Lean/Lake environment, regenerate the census from a clean checkout, compile the 13 certificates with their axiom dependencies, and then measure which distinctions the fold retains or loses. Only after that does the proposed Hecke reading face its own separate operator-law test.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

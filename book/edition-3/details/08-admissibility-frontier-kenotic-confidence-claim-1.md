@@ -86,4 +86,4 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#kenotic-confidence) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-3.md) · [Next claim →](01-the-revised-spine-what-closes-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#kenotic-confidence) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-3.md) · [Next claim →](01-the-revised-spine-what-closes-claim-1.md)

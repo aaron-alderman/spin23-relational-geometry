@@ -70,7 +70,7 @@ for another dimensionless redesign.
 | OT-021 | Complexity cards | target audit complete; packet enforcement prevents hidden Hilbert dimension, preparation or tomography |
 | OT-022 | Causal selector propagation | bounds how quickly selection and records can spread |
 | OT-023 | Disorder and glassy-memory audit | separates robust branches from rare samples and history |
-| OT-033 | Real declaration-corpus adaptive census | replaces synthetic Lean chains with source-native occupancy and fibre data |
+| OT-033 | Real declaration-corpus adaptive census | gated by AZ-060 on the named DeclFold sources, `fold/decls.json` and the pinned Lean/Lake environment; replaces synthetic chains only after source-native occupancy and fibre data reproduce |
 | OT-036 | Microscopic capture and radiation ledger | replaces the successful toy bath with a source-native radiative or phononic channel |
 | OT-037 | Integrated-photonic selector chip | turns robustness inequalities into a fabrication-ready simulation |
 | OT-047 | Renormalized two-current source frame and KMS response | computes operator mixing, contact terms, thresholds and the finite-temperature tensor |

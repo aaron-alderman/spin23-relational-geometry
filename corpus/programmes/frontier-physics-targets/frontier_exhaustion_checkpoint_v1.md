@@ -10,11 +10,11 @@ The corpus has a closed navigation loop from target to frontier area to detector
 
 - all 22 canonical physics targets and all 20 frontier areas;
 - 35 detector bundles, including records, controls, maturity and source provenance;
-- all 59 admissibility packets; AZ-041--AZ-059 now sit in a machine-verified continuation register rather than outside the older zone register;
+- all 60 admissibility packets; AZ-041--AZ-060 now sit in a machine-verified continuation register rather than outside the older zone register;
 - all 93 Wave 6--7 packet files in the reconciled audit (17 Wave 6 and 76 Wave 7), with reused display numbers held under distinct audit identities;
 - every remaining programme Markdown or JSON file containing the declared open-gate vocabulary: 69 files, of which 48 map to physics topics and 21 retain separate programme governance;
-- the complete source corpus-and-evidence backstop: all 2,666 in-scope Markdown/JSON artifacts hashed and inventoried (2,208 corpus narratives and 458 evidence artifacts, excluding the independently verified generated control surfaces); 1,596 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 89 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
-- 50 independently closable topics: 7 active, 17 open, 3 audit, 16 gated, 2 blocked and 5 closed with retained evidence.
+- the complete source corpus-and-evidence backstop: all 2,668 in-scope Markdown/JSON artifacts hashed and inventoried (2,209 corpus narratives and 459 evidence artifacts, excluding the independently verified generated control surfaces); 1,597 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 89 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
+- 50 independently closable topics: 7 active, 16 open, 3 audit, 17 gated, 2 blocked and 5 closed with retained evidence.
 
 No scanned gate is orphaned. The [full-corpus census](full_corpus_gate_census_v1.md) distinguishes old closure language, live semantic ownership, navigation surfaces and separately governed inquiries rather than equating every occurrence of “open” with a new target. “Exhausted” here means the declared corpus search and ownership problem is exhausted, not that nature, unstated tacit questions, the literature, or every possible experiment is exhausted.
 
@@ -25,6 +25,8 @@ AZ-057 closes OT-001 for the declared three-mechanism selector family and integr
 AZ-058 closes a documentation ambiguity around the same-film Casimir bridge. The published 0.2--1.5 THz complex Hall window maps to characteristic separations near 119--16 micrometres. A 0.1--1 micrometre force experiment instead samples roughly 24--239 THz or 0.099--0.987 eV. Broadband longitudinal data do not replace the missing same-specimen off-diagonal tensor. OT-006 therefore remains active with a precise spectroscopy target; OT-007 is gated until that tensor exists and its predicted differential exceeds the force-systematics covariance. AZ-050 likewise moves OT-008 behind a declared external-scale compute requirement rather than pretending the present dictionary matvec is executable production code.
 
 AZ-059 closes OT-010's hardware-design ambiguity. A 100 MHz four-resonator star with 2 MHz couplings and 0.1 MHz linewidth has a frozen exact/weak/resolved/reversal schedule, measured-unit calibration limits and a packet-specific five-stage complexity card. The symmetric hub record has rank two; resolved centred detuning releases rank four; weak-breaking memory is quadratic; and a physical port exchange reverses the oriented contrast cubic. All 5,000 frozen tolerance draws pass the gap, hub-visibility and Krylov-conditioning thresholds. OT-010 remains active only for construction and blinded execution.
+
+AZ-060 closes OT-033's provenance ambiguity without pretending to close its census. The two source images name `RequestProject/Ogg/DeclFold.lean`, `DeclFoldReflect.lean`, `DeclFoldCerts.lean`, `fold/decls.json`, `fold_certify` and the worked `HeckeFold.card_address` certificate. None is present across the 49 public branch tips and 134 public gists audited on 25 October. OT-033 is therefore gated, not generically open: its next datum is the named source/data bundle plus the pinned Lean/Lake environment and declaration-selection policy. The reported 1,979 declarations, 908 addresses, 789 unclamped folds and 13 certificates remain unreproduced; the synthetic adaptive-depth theorem is not promoted into their substitute.
 
 The [complexity-card audit](frontier_complexity_cards_v1.md) completes OT-021's target-level pass across FPT-001--010 and FPT-022. Most declared records are polynomial after a carrier exists, but that favorable result is sharply conditional. FPT-004 retains exponential many-body preparation, sampling and verification through its Hilbert-space dimension; generic FPT-009 logical tomography costs exponentially in logical-qubit count; FPT-003 material yield remains empirical; FPT-008 microscopic origin and FPT-010 relaxation convergence remain unbounded; and FPT-022 is exact only at fixed four-mode size. OT-021 therefore remains an audit until the same five-stage schema is enforced on every newly active packet.
 
@@ -55,7 +57,7 @@ OT-014 and OT-041 are closed by [AZ-055](../admissibility/admissibility_55_finit
 
 ### Tranche B — simulation and design closure
 
-OT-001's coordinated simulator is closed by AZ-057. Run OT-002, OT-003, OT-033 and OT-037 as the remaining design layer: instantiate the frozen Hamiltonian and (Y) on a carrier, reproduce source-native syntax-fibre scaling, and turn the photonic inequalities into a fabrication-ready device.
+OT-001's coordinated simulator is closed by AZ-057. Run OT-002, OT-003 and OT-037 as the remaining internal design layer: instantiate the frozen Hamiltonian and (Y) on a carrier and turn the photonic inequalities into a fabrication-ready device. OT-033 joins this tranche only when AZ-060's named external source/data bundle is available; a reconstructed near-copy is not a reproduction.
 
 ### Tranche C — nearest experiments
 
