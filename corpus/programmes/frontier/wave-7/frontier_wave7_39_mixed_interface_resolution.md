@@ -136,9 +136,10 @@ an exceptional slot”—can now be replaced by a named theorem:
 This makes the interface useful without inflating it.  A proposed end-to-end
 derivation can be assigned an (A_8) transfer coordinate.  Failure to balance
 the nine coordinates identifies where a route leaves the jointly realizable
-region.  The first two vertical slices should therefore use A04/A05 for the
-closed wall–response loop and A02/A03 for the deliberately open
-selection–memory–holonomy loop.
+region.  The closed wall–response loop uses A03 and A04.  The deliberately
+open selection–memory–holonomy loop contains A02 but passes through the
+forced-zero projection node `QS-008`; that is exactly where an orientation
+datum must enter rather than being inferred from the interface lattice.
 
 ## Open boundary
 

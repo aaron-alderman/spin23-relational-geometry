@@ -233,6 +233,28 @@ where two relation orders disagree, or where a second reversible channel is
 missing.** Those are places where better theoretical machinery is possible and
 where a genuinely new connection, if one exists, must leave a checkable trace.
 
+## Two routes from structure to decision
+
+Two science-programme returns now show how the three layers work together.
+The wall-response route is a positive control: a metastable wall localizes a
+two-channel response, a positive Gaussian determinant gives a selector Hessian,
+and a declared gradient step contracts. Claimipedia keeps each claim bounded to
+that effective model; Sourcery retains the assumptions and the loss of the
+resolved fluctuation; the proposed experiment fits the Hessian and return
+slope. This route closes without claiming a microscopic origin for its
+coupling.
+
+The selection-memory-holonomy route is the boundary control. Retained history
+may select a projective line, and the line defines an axis-preserving half-turn.
+It does not determine the sign of a coherent quarter-turn. Claimipedia records
+that dependency on an orientation datum; Sourcery refuses the promotion; the
+experiment asks for a loop-reversal-odd frame rotation. The refusal is useful
+because it names what must be measured rather than concealing it in the word
+“holonomy.”
+
+These examples are detailed in the
+[two vertical slices](../../../corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md).
+
 ## What is settled and what remains open
 
 | Question | Present state |
