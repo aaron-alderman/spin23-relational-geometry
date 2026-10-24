@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "The Leech-to-Monster genus-one normalization is exact, while a bare c=24 chiral sector does not fit the internal central-charge budget of a four-dimensional critical bosonic, heterotic, or type-II string without additional restructuring.",
+  "status": "exact arithmetic and central-charge budget; no model-completion claim",
+  "modularNormalization": {
+    "definitions": [
+      "E4(q) = 1 + 240 sum_{n>=1} sigma_3(n) q^n",
+      "Delta(q) = q product_{n>=1} (1-q^n)^24",
+      "j = E4^3 / Delta",
+      "J = j - 744",
+      "Theta_Leech = E4^3 - 720 Delta"
+    ],
+    "JCoefficientsFromQMinus1ThroughQ3": ["1", "0", "196884", "21493760", "864299970"],
+    "leechCharacterCoefficientsFromQMinus1ThroughQ3": ["1", "24", "196884", "21493760", "864299970"],
+    "identity": "Theta_Leech/eta^24 = j-720 = J+24",
+    "orbifoldEffectAtWeightOne": "The Monster orbifold removes the 24 weight-one currents."
+  },
+  "centralChargeBudget": {
+    "leechOrMonsterChiralCentralCharge": 24,
+    "bosonic": {
+      "criticalMatterCentralCharge": 26,
+      "remainingCoordinateCentralChargeAfterBareC24Sector": 2,
+      "fourNoncompactCoordinateCentralCharge": 4,
+      "requiredInternalCentralChargeFor4D": 22,
+      "bareC24Mismatch": 2
+    },
+    "heterotic4D": {
+      "leftCriticalMatterCentralCharge": 26,
+      "leftNoncompactCentralCharge": 4,
+      "requiredLeftInternalCentralCharge": 22,
+      "bareC24LeftMismatch": 2,
+      "rightCriticalMatterCentralCharge": 15,
+      "rightNoncompactBosonFermionCentralCharge": 6,
+      "requiredRightInternalCentralCharge": 9
+    },
+    "typeII4D": {
+      "criticalMatterCentralChargePerSide": 15,
+      "noncompactBosonFermionCentralChargePerSide": 6,
+      "requiredInternalCentralChargePerSide": 9,
+      "bareChiralC24MismatchPerSide": 15
+    }
+  },
+  "interpretation": [
+    "The q exponent is a conformal grade in the declared chiral CFT.",
+    "The coefficients are degeneracies, not normalized probabilities.",
+    "A bare c=24 Leech or Monster sector is naturally adjacent to two-dimensional chiral CFT and proposed AdS3 holography.",
+    "A four-dimensional string route must alter, quotient, tensor, gauge, or otherwise embed the c=24 sector in a complete left-right theory; it cannot insert it unchanged as the full internal sector."
+  ],
+  "falsifiers": [
+    "An arithmetic mismatch in the q-series identities.",
+    "A complete critical four-dimensional model whose declared ghost and matter budgets show that the bare c=24 sector fits unchanged; this would supersede the preflight interpretation, not the arithmetic."
+  ]
+}
+

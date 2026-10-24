@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "Treating moonshine coefficients as a count of light four-dimensional species does not determine an induced Einstein action and produces an immediate curvature-coupling, species-scale and vacuum-energy problem in the simplest scalar toy.",
+  "status": "conditional one-loop heat-kernel stress test; the mapping from CFT degeneracies to 4D fields is deliberately not admitted",
+  "toy": {
+    "fields": "N real scalar fields in four Euclidean dimensions",
+    "operator": "-box + xi R",
+    "properTimeCutoff": "Lambda",
+    "vacuumMagnitude": "N Lambda^4/(64 pi^2)",
+    "inducedPlanckMassSquared": "N(1/6-xi)Lambda^2/(16 pi^2)",
+    "schemeBoundary": "Both power divergences depend on regulator and renormalization conditions; they are diagnostic scalings, not predictions."
+  },
+  "populationStressTests": {
+    "N24": {
+      "interpretation": "Leech weight-one current count",
+      "squareRootN": 4.898979485566356,
+      "speciesScaleInPlanckUnits": 0.20412414523193154
+    },
+    "N196884": {
+      "interpretation": "first positive Monster character coefficient",
+      "squareRootN": 443.7161254676237,
+      "speciesScaleInPlanckUnits": 0.0022536931668780793
+    }
+  },
+  "exactForks": {
+    "minimalScalar": "xi=0 gives M_Pl,ind^2 = N Lambda^2/(96 pi^2)",
+    "conformalScalar": "xi=1/6 gives no quadratically induced Einstein term in this coefficient",
+    "vacuumToPlanckScaleForMinimalToy": "|rho_vac|/M_Pl,ind^2 = (3/2)Lambda^2",
+    "loopFactorGap": "The cutoff needed to make the one-loop minimal-scalar Einstein coefficient order one is sqrt(96 pi^2) about 30.78 times the naive species scale M_Pl/sqrt(N)."
+  },
+  "ruledOut": [
+    "Inferring a four-dimensional Newton constant from the coefficient 196884 alone.",
+    "Treating CFT states at one conformal grade as independent light particle species without a field/operator map.",
+    "Claiming that a large degeneracy solves the vacuum-energy hierarchy in the minimal scalar induced-gravity toy."
+  ],
+  "reopenConditions": [
+    "Specify the 4D fields, spins, statistics, masses and nonminimal curvature couplings selected by the lattice/CFT construction.",
+    "Provide a covariant regulator/renormalization prescription and bare gravitational terms.",
+    "Demonstrate a controlled low-energy spectrum and cosmological-term relation."
+  ]
+}
+

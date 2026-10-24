@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "The affine seam pair {0000,1111} is not closed under the full genus-two modular characteristic action; its full orbit contains all ten even characteristics, while the pair closes under a finite order-16 setwise stabilizer. The seam toggle also changes separating vanishing order from zero to one.",
+  "status": "exact finite characteristic-orbit and separating-parity calculation; theta multipliers and a full partition function remain open",
+  "finiteModularQuotient": {
+    "group": "Sp(4,F2)",
+    "order": 720,
+    "evenCharacteristics": [0, 1, 2, 3, 4, 6, 8, 9, 12, 15],
+    "seamPair": [0, 15],
+    "unorderedPairOrbitSize": 45,
+    "characteristicOrbitSize": 10,
+    "setwisePairStabilizerOrder": 16,
+    "pointwisePairStabilizerOrder": 8,
+    "pairSwappingElements": 8,
+    "involutivePairSwappingElements": 6
+  },
+  "separatingDegeneration": {
+    "unmarkedCharacteristic": "0000",
+    "unmarkedHandleType": "even x even",
+    "unmarkedGenericVanishingOrder": 0,
+    "markedCharacteristic": "1111",
+    "markedHandleType": "odd x odd",
+    "markedGenericVanishingOrder": 1,
+    "meaning": "The seam toggle changes zero-mode/factorization content; it is not multiplication of one nonzero scalar block by an orientation sign."
+  },
+  "allowedCompletions": [
+    "Restrict to the inverse image in Sp(4,Z) of the order-16 pair stabilizer, interpreting the seam as marked level/defect data.",
+    "Enlarge the modular object to at least the full ten-component even-characteristic orbit and solve the theta-multiplier/GSO phase problem.",
+    "Use a vector-valued modular form or defect category in which the seam pair is one local chart rather than the whole state space."
+  ],
+  "ruledOut": [
+    "A globally scalar, full-Sp(4,Z)-covariant theory made only from the two seam characteristics.",
+    "Interpreting the seam toggle as only an orientation sign with unchanged separating zero modes."
+  ],
+  "boundary": "Closure of the ten characteristic labels is necessary but not sufficient for a modular partition function; automorphy multipliers, powers, phases, positivity and sewing must still be supplied."
+}
+

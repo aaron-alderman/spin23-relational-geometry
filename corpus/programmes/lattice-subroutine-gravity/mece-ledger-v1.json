@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "programme": "lattice-subroutine-gravity",
+  "date": "2026-10-24",
+  "terminalProposition": "A Golay-Leech-Monster modular subroutine yields a healthy four-dimensional Einstein-plus-matter effective theory and a discriminating observable.",
+  "terminalStatus": "open",
+  "statusVocabulary": ["established", "conditional", "open", "ruled_out"],
+  "lanes": [
+    {"id":"A","name":"discrete_carrier","outputType":"code_lattice_or_module","status":"established","evidence":["extended binary Golay code","Leech lattice","Monster module"],"openGates":[]},
+    {"id":"B","name":"relational_geometry","outputType":"positive_pair_invariant","status":"established","evidence":["Leech pair-Gram map into H2(R)+","degree-two theta series"],"openGates":["physical two-channel realization"]},
+    {"id":"C","name":"equivalence","outputType":"quotient_or_gauge_class","status":"established","evidence":["SL(2,Z) modular quotient","Sp(4,Z) genus-two covariance"],"openGates":["common physical carrier with response transport"]},
+    {"id":"D","name":"spectral_accounting","outputType":"graded_trace_or_partition_data","status":"established","evidence":["Theta_Leech/eta^24 = J+24","Monster character J"],"openGates":["non-chiral physical completion"]},
+    {"id":"E","name":"dynamics","outputType":"hamiltonian_transfer_matrix_or_action","status":"open","evidence":[],"openGates":["generator","time variable","locality","unitarity or reflection positivity"]},
+    {"id":"F","name":"spacetime_source","outputType":"conserved_four_dimensional_stress_tensor","status":"open","evidence":[],"openGates":["covariant 4D coupling","metric variation","Ward identity"]},
+    {"id":"G","name":"gravity","outputType":"dynamical_metric_action","status":"open","evidence":["generic string beta-function and induced-gravity precedents only"],"openGates":["programme-specific action","healthy quadratic spectrum","Einstein limit"]},
+    {"id":"H","name":"continuum_dimension_signature","outputType":"four_dimensional_lorentzian_limit","status":"open","evidence":[],"openGates":["critical scaling","dimension selection","Lorentzian signature","compactification"]},
+    {"id":"I","name":"observation","outputType":"detector_record_and_decision_rule","status":"open","evidence":[],"openGates":["observable","nuisance model","falsifier"]}
+  ],
+  "routes": [
+    {"id":"R1","name":"worldsheet_beta_function","sequence":["A","D","E","G","H","F","I"],"status":"conditional","strongestResult":"Worldsheet Weyl consistency can yield target-space gravitational equations in complete string models.","blocker":"No complete critical non-chiral four-dimensional Leech/Monster model is supplied.","reopenCondition":"Exhibit the full worldsheet theory, spectrum, beta functions and 4D effective action."},
+    {"id":"R2","name":"four_dimensional_induced_action","sequence":["A","D","E","F","G","I"],"status":"conditional","strongestResult":"A covariantly coupled quantum spectrum can induce Einstein-Hilbert and higher-curvature terms.","blocker":"The four-dimensional fields, kinetic operators and coupling to g_mu_nu are unspecified.","reopenCondition":"Compute heat-kernel coefficients for a declared lattice-derived 4D spectrum."},
+    {"id":"R3","name":"emergent_continuum","sequence":["A","B","E","H","G","F","I"],"status":"open","strongestResult":"Pair-Gram positivity supplies local relational data.","blocker":"No incidence, local dynamics, critical scaling, signature or graviton sector is defined.","reopenCondition":"Define a local microscopic model and demonstrate a 4D continuum spin-2 universality class."},
+    {"id":"R4","name":"ads3_holographic_benchmark","sequence":["D","C","G","I"],"status":"conditional","strongestResult":"The Monster CFT is a proposed k=1 extremal-CFT dual for pure AdS3 gravity.","blocker":"The proposal is lower-dimensional and known saddle sums do not automatically give a sensible CFT spectrum.","reopenCondition":"Close the AdS3 consistency problem and supply an independent lift to AdS4 or 4D Lorentzian gravity."},
+    {"id":"R5","name":"direct_cartan_gauge_gravity","sequence":["B","C","E","G","F","I"],"status":"conditional","strongestResult":"An independent Spin(2,3) connection plus constrained compensator can yield an Einstein-Cartan/MacDowell-Mansouri low-energy action.","blocker":"Current lattice data derives neither the independent one-form nor the complete action and microscopic vacuum.","reopenCondition":"Map declared lattice/CFT data into the connection, compensator and complete action, then pass spectrum, measure and radiative gates."},
+    {"id":"R6","name":"thermodynamic_entanglement_equation","sequence":["A","D","B","H","F","G","I"],"status":"conditional","strongestResult":"Local horizon thermodynamics or entanglement equilibrium can conditionally yield Einstein equations.","blocker":"No subregion algebra, geometric area map, area-law normalization or local first law is derived from the lattice data.","reopenCondition":"Derive local geometric entropy and show its equilibrium identity produces a conserved 4D field equation."}
+  ],
+  "forbiddenPromotions": [
+    "absolute value implies probability density",
+    "modular parameter implies crystal momentum",
+    "conformal grade implies Bloch energy",
+    "worldsheet stress tensor equals four-dimensional stress tensor",
+    "internal Euclidean lattice equals spacetime lattice",
+    "shared Sp(4) notation implies shared physical action",
+    "modular invariance alone implies quantum gravity",
+    "group closure implies a propagating graviton"
+  ],
+  "nextGates": [
+    {"priority":1,"id":"N1","task":"genus-two affine-seam characteristic closure and separating-order test","route":"R1","status":"established","result":"The pair closes under an order-16 stabilizer; full modular characteristic closure requires all ten even sectors; the toggle changes separating vanishing order 0 to 1."},
+    {"priority":2,"id":"N2","task":"central-charge, chirality and four-dimensional spectrum budget","route":"R1"},
+    {"priority":3,"id":"N3","task":"untyped Monster-degeneracy scalar heat-kernel preflight","route":"R2","status":"established","result":"Degeneracy alone does not fix the Einstein term; minimal versus conformal curvature coupling gives nonzero versus zero a1, while the vacuum hierarchy and species-scale warnings remain."},
+    {"priority":4,"id":"N4","task":"Monster-AdS3 positivity and discreteness benchmark","route":"R4"},
+    {"priority":5,"id":"N5","task":"local incidence model and continuum-limit preflight","route":"R3"},
+    {"priority":6,"id":"N6","task":"affine seam to Cartan compensator and action map","route":"R5","status":"ruled_out","result":"The discrete seam cannot supply the 4D continuous compensator orbit or 10-generator one-form; V and -V are connected in Spin_0(2,3). Only a marked defect/orientation role survives."},
+    {"priority":7,"id":"N7","task":"global Cardy entropy versus local area-law preflight","route":"R6","status":"established","result":"The character fixes global grade degeneracies only; imposing S=A/(4G) determines A/G but supplies no subregion, area, horizon or Newton normalization."},
+    {"priority":8,"id":"N8","task":"oriented full-modular seam carrier","route":"R1","status":"established","result":"The ordered seam spans a 9D sum-zero characteristic representation whose determinant is the nontrivial finite sign character (360 positive and 360 negative elements); multiplicatively chi5 is the weight-5 analytic sign-character line with linear separating zero, while chi10 is its orientation-blind square."},
+    {"priority":9,"id":"N9","task":"smallest source-derived typed 4D multiplet and full a0-a2 heat-kernel calculation","route":"R2"},
+    {"priority":10,"id":"N10","task":"joint microscopic production of compensator, seam and gauge-invariant action term","route":"R5"},
+    {"priority":11,"id":"N11","task":"source-derived subregion algebra and local entanglement-area map","route":"R6"},
+    {"priority":12,"id":"N12","task":"source-derived Pfaffian or defect sector coupling chi5 orientation to Leech pair data","route":"R1","status":"partial","result":"Monster 2A fermionization supplies a canonical Majorana-Weyl x Baby Monster spin theory and Ising defect category. At genus two its Majorana zero mode removes the six odd-spin vacuum amplitudes, leaving exactly the ten even characteristics of the seam carrier. Its additive bosonization sum is not the multiplicative chi5 line; the finite seam determinant already has the required sign, while the analytic genus-two lift and 2A-to-2B/Leech junction remain open."},
+    {"priority":13,"id":"N13","task":"genus-two 2A fermionization multiplier and 2A-2B defect-junction calculation","route":"R1"}
+  ]
+}
+

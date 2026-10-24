@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "The ten even theta sectors admit a full scalar modular closure through the Igusa form chi10, but this symmetric scalar forgets the oriented seam and is not a factor of the degree-two Leech theta series.",
+  "status": "standard Igusa construction plus exact separating-order and weight/divisor obstruction",
+  "characteristics": {
+    "evenTotal": 10,
+    "evenEvenAtChosenSeparatingDivisor": 9,
+    "oddOddAtChosenSeparatingDivisor": 1,
+    "uniqueOddOddCharacteristic": 15
+  },
+  "igusa": {
+    "chi5": {
+      "definition": "product of the ten even theta constants",
+      "weight": 5,
+      "hasCharacter": true,
+      "separatingVanishingOrder": 1
+    },
+    "chi10": {
+      "definition": "chi5 squared, equivalently a normalized product of the ten squared even theta constants",
+      "weight": 10,
+      "fullScalarModularForm": true,
+      "separatingVanishingOrder": 2
+    }
+  },
+  "leechDegreeTwoTheta": {
+    "weight": 12,
+    "separatingLimit": "Theta_Lambda(tau1) Theta_Lambda(tau2)",
+    "genericSeparatingVanishingOrder": 0
+  },
+  "obstruction": {
+    "weightDifference": 2,
+    "holomorphicScalarWeightTwoInFullGenusTwoRing": false,
+    "chi10DividesLeechDegreeTwoTheta": false,
+    "reason": "A chi10 multiple vanishes on the separating divisor, while the Leech theta series factorizes there to a generically nonzero product."
+  },
+  "interpretation": [
+    "Full modular scalar closure of the seam orbit is mathematically available.",
+    "The scalar product records the separating divisor with multiplicity two but erases which affine transition supplied it.",
+    "The bosonic Leech pair theta series does not automatically contain this spin-structure seam.",
+    "Retaining seam orientation requires marked subgroup data, a vector-valued form, a defect category, or additional fermionic/Pfaffian structure."
+  ],
+  "sources": [
+    "https://doi.org/10.2307/2373041",
+    "https://people.math.wisc.edu/~tonghaiyang/2015-LNYFinal-JNT.pdf",
+    "https://arxiv.org/abs/1412.7606"
+  ]
+}
+
