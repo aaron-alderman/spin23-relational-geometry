@@ -8,6 +8,8 @@
 **Generator:** [family migration runner](../../../scripts/run-claimipedia-d02-common-algebra2-family-migration.mjs)  
 **Verifier:** [four-family certificate](../../../verification/admissibility/verify_claimipedia_d02_common_algebra2_family_migration.mjs)
 
+**Continued by:** [AZ-085 physical admittance operator witness](admissibility_85_physical_admittance_operator_and_held_out_current_witness.md)
+
 ## Result
 
 The local theorem, operator-range, rank-change and boundary-measure D02 families all pass `common-algebra-2`. Each retains one four-step positive path. Across the four families the strict composer admits 16 named steps, rejects all 14 overstrong queries, retains all 15 invalid-rule fixtures and dimension-rejects none of the positive transformations.
@@ -36,7 +38,7 @@ The remaining boundary can no longer be described as missing workflow metadata. 
 
 ## Implication and look-here instruction
 
-Look at the `apply-local-support-schur-theorem` and `extract-positive-operator-measure` steps first. Replace the record-layer zero vector with an additional quantity layer that names the actual input and output spaces, units, normalization and admissible rescalings. Then withhold a consequence: a composed response identity, positivity/rank statement, or calibrated detector statistic. The system must predict it from upstream data rather than receive it as an authored edge.
+AZ-085 takes the first branch: `apply-local-support-schur-theorem` now has a calibrated RC-network instantiation with siemens, volts and amperes and a computationally withheld current. The remaining look-here target is `extract-positive-operator-measure`, followed by a source-native measured record rather than another authored edge.
 
 If the held-out consequence is recovered, Claimipedia and Sourcery become useful machinery for finding constrained theoretical completions. If an independently measured record then disagrees after conventional models and nuisance folding are frozen, that disagreement becomes a legitimate new-physics lead. Until then, the result is a completed reasoning substrate and an open physical bridge.
 

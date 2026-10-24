@@ -267,6 +267,10 @@ The result now extends to all four D02 families. Sixteen positive steps pass com
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-4.md)
 
+That first quantity-level datum now exists in a deliberately ordinary setting. A calibrated passive RC network carries siemens through the local Schur step; applying a declared voltage changes the output to amperes; and an independent Kirchhoff solve recovers the computationally held-out current. Corrupting the voltage dimension or removing the probe kills the path. This closes one physical operator witness, not the programme: no Jordan product, generating action or independently measured detector record follows. The next look-here target is a source-native admittance dataset or the positive-operator-measure path. New physics enters only if a measured residue survives frozen conventional, parasitic and uncertainty models.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-5.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

@@ -17,7 +17,7 @@ A specified candidate class fails under explicit assumptions. The conclusion doe
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the shared path is not yet a shared algebra”.
-- **Unit of argument:** assertion 4 of 4 in this section.
+- **Unit of argument:** assertion 4 of 5 in this section.
 - **Evidence posture:** Check the assumptions defining the ruled-out candidate class; the no-go does not automatically extend beyond that class.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
@@ -34,6 +34,7 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ## Controlling documents
 
+- **admissibility 85 physical admittance operator and held out current witness** — [admissibility_85_physical_admittance_operator_and_held_out_current_witness.md](../../../corpus/programmes/admissibility/admissibility_85_physical_admittance_operator_and_held_out_current_witness.md)
 - **admissibility 84 all d02 families pass common algebra2 record layer** — [admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md](../../../corpus/programmes/admissibility/admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md)
 - **admissibility 83 first common algebra2 path and legacy dimension projection** — [admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md](../../../corpus/programmes/admissibility/admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md)
 - **admissibility 82 claimipedia source native paths pass live sourcery but dimension and operator gates remain** — [admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md](../../../corpus/programmes/admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md)
@@ -43,4 +44,4 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-3.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-phase-target-is-relative-not-absolute-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-3.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-5.md)

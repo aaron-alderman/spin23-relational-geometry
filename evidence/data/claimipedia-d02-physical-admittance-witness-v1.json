@@ -1,0 +1,102 @@
+{
+  "protocol": "claimipedia-d02-physical-admittance-witness/1",
+  "date": "2026-10-25",
+  "graphSha256": "7b97f77edc79e203426ee479f21528770d54af3203ab85774d98e7855a9dab2c",
+  "quantityConvention": {
+    "carrier": "two-node reciprocal passive RC nodal admittance",
+    "portNormalization": "external voltage relative to declared ground; current positive into network; RMS phasors use exp(+i omega t)",
+    "dimensions": {
+      "admittanceSiemens": {
+        "mass": -1,
+        "length": -2,
+        "time": 3,
+        "current": 2,
+        "temperature": 0,
+        "amount": 0,
+        "luminousIntensity": 0
+      },
+      "probeVoltageVolt": {
+        "mass": 1,
+        "length": 2,
+        "time": -3,
+        "current": -1,
+        "temperature": 0,
+        "amount": 0,
+        "luminousIntensity": 0
+      },
+      "predictedCurrentAmpere": {
+        "mass": 0,
+        "length": 0,
+        "time": 0,
+        "current": 1,
+        "temperature": 0,
+        "amount": 0,
+        "luminousIntensity": 0
+      }
+    }
+  },
+  "fixture": {
+    "conductanceExternalS": 0.0012,
+    "conductanceInternalS": 0.0008,
+    "couplingConductanceS": 0.0025,
+    "capacitanceExternalF": 2.2e-7,
+    "capacitanceInternalF": 4.7e-7,
+    "heldOutFrequencyHz": 997,
+    "probeVoltageRmsV": 0.2
+  },
+  "heldOutPrediction": {
+    "schurAdmittanceS": {
+      "re": 0.0026454732324700074,
+      "im": 0.0023189955541656967
+    },
+    "predictedCurrentA": {
+      "re": 0.0005290946464940015,
+      "im": 0.00046379911083313936
+    },
+    "directNodalCurrentA": {
+      "re": 0.0005290946464940016,
+      "im": 0.0004637991108331394
+    },
+    "predictionErrorA": 1.21217487951527e-19,
+    "passiveRealPartPositive": true,
+    "status": "recovered"
+  },
+  "composition": {
+    "protocol": "scientific-derivation-composition/2",
+    "candidateCount": 1,
+    "steps": [
+      "apply-local-support-schur-theorem-to-calibrated-rc-network",
+      "apply-calibrated-voltage-probe"
+    ],
+    "assumptions": [
+      "all conductances and capacitances are positive SI quantities",
+      "the internal nodal admittance is nonzero at the evaluated frequency",
+      "the external voltage and current share one declared ground and current is positive into the network",
+      "the held-out probe is 0.2 V RMS at 997 Hz",
+      "phasors use exp(+i omega t)",
+      "the component values and port convention were fixed before evaluating the held-out current"
+    ],
+    "losses": [
+      "the eliminated internal-node voltage is not retained"
+    ],
+    "dimensionRejectedTransformationCount": 0
+  },
+  "negativeControls": {
+    "missingProbeCandidateCount": 0,
+    "wrongVoltageDimensionCandidateCount": 0,
+    "wrongVoltageDimensionRejected": true
+  },
+  "decision": {
+    "passed": true,
+    "physicalResponseUnitsAssigned": true,
+    "portNormalizationDeclared": true,
+    "physicalOperatorAssignmentExtracted": true,
+    "computationallyHeldOutCurrentPredicted": true,
+    "independentlyMeasuredDetectorRecordPredicted": false,
+    "jordanProductExtracted": false,
+    "newPhysicsEvidence": false,
+    "ot026Closed": false,
+    "ot027Closed": false
+  },
+  "implication": "The local D02 Schur step now has one physical SI instantiation: a calibrated admittance operator maps volts to amperes and recovers a computationally held-out current by an independent nodal solve. This closes the quantity-unit and operator-assignment gate for this RC witness only. It is not a Jordan-product extraction, an independently measured detector prediction or evidence of new physics."
+}

@@ -230,13 +230,16 @@ separate v2 receipt.
 [AZ-084](../programmes/admissibility/admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md) completes the same strict migration for the operator, rank-change and
 boundary families. Across all four paths, sixteen positive steps pass, fourteen
 overstrong queries remain empty and fifteen invalid rules remain rejected.
-Record-level dimensional migration is closed. More importantly, no path yet
-extracts a Jordan product, assigns quantity-level units and a physical action,
-or predicts a detector record. The next bridge is therefore precise: expose
-the actual physical quantities on one Schur-response step and withhold a
-product identity, operator composition or calibrated record for prediction.
-That would be theoretical engineering; a source-specific residue surviving
-those controls would be the point at which a new-physics reading could reopen.
+Record-level dimensional migration is closed. [AZ-085](../programmes/admissibility/admissibility_85_physical_admittance_operator_and_held_out_current_witness.md)
+then supplies the first quantity-level instantiation. A passive two-node RC
+admittance carries siemens through Schur elimination; a declared voltage probe
+changes the output dimension to amperes; and a computationally held-out current
+is recovered by an independent Kirchhoff solve to numerical precision. The
+operator assignment is now real for this conventional witness. No Jordan
+product, generating action or independently measured detector record follows.
+The next bridge is therefore source-native data or the positive-operator-measure
+path. A residue surviving frozen conventional and nuisance models would be the
+point at which a new-physics reading could reopen.
 
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one

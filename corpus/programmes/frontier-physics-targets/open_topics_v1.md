@@ -110,9 +110,13 @@ metadata kills the path. [AZ-084](../admissibility/admissibility_84_all_d02_fami
 extends the result to all four families: sixteen steps pass, fourteen negative
 queries remain empty and fifteen invalid rules remain rejected. Declared
 loss-bearing projections preserve live v1 execution. Record-level migration is
-closed. The remaining work is to expose units for the physical quantities
-represented by the records and predict a withheld product identity, operator
-composition or calibrated detector record.
+closed. [AZ-085](../admissibility/admissibility_85_physical_admittance_operator_and_held_out_current_witness.md)
+then closes the first quantity-level witness: a calibrated passive RC network
+carries siemens through Schur elimination, converts volts to amperes through a
+declared operator and predicts a computationally held-out current recovered by
+an independent Kirchhoff solve. OT-027 is narrowed to source-native measured
+data and a rule generating both operator and detector map. OT-026 remains open:
+no Jordan product or identity has been extracted from relation composition.
 
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
