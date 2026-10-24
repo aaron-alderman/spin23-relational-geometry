@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "A smooth phase-blind positive real response to the complex separating coordinate epsilon has leading dependence |epsilon|^2 and therefore loses the linear oriented chi5 seam; retaining the seam requires two quadratures or a selected phase reference.",
+  "localCoordinate": {
+    "complex": "epsilon=x+iy",
+    "realDimension": 2,
+    "separatingLocus": "x=0 and y=0",
+    "realCodimension": 2
+  },
+  "carrierTypes": [
+    {"carrier": "holomorphic oriented", "leadingTerm": "epsilon", "zeroOrder": 1, "retainsPhase": true},
+    {"carrier": "phase-blind positive", "leadingTerm": "|epsilon|^2=x^2+y^2", "zeroOrder": 2, "retainsPhase": false},
+    {"carrier": "selected real normal", "leadingTerm": "Re(exp(-i phi0) epsilon)", "zeroOrder": 1, "retainsPhase": "relative_to_selector", "zeroSet": "real codimension one line"}
+  ],
+  "noGo": "No smooth real scalar can be phase invariant, sign changing with a linear zero, and vanish only at the codimension-two separating point.",
+  "minimalEnrichments": [
+    "two coherent quadratures forming a complex response",
+    "an independently sourced phase reference selecting one real normal"
+  ],
+  "detectorRule": "Power detects the squared seam; interference is required to retain its orientation.",
+  "terminalStatus": "phase_blind_scalar_route_closed_phase_sensitive_route_open"
+}

@@ -187,6 +187,8 @@ The [Pfaffian-line type audit](pfaffian-line-type-audit.md) prevents a second sh
 
 The [period-matrix/Jordan boundary gate](period-matrix-jordan-boundary-gate.md) tests the canonical base map and rules it out as the seam identification. \(Q=\operatorname{Im}\Omega\) really is a positive rank-two Jordan matrix, but at the separating divisor it is diagonal and still has positive determinant. The modular factorization locus is not the response rank-loss boundary. A successful bridge must derive a different physical response map rather than rely on the common matrix shape.
 
+The [sewing-response codimension gate](sewing-response-codimension-gate.md) determines the minimum enrichment of such a map. The separating normal is complex. Any smooth phase-blind positive record starts as \(|\epsilon|^2\), giving a quadratic orientation-blind zero; a linear signed record requires two coherent quadratures or an independently sourced phase reference. This turns the abstract need for a selector into a concrete detector specification.
+
 ## Honest implications
 
 The positive implication is practical. The corpus has found a narrow place to look: pair-Gram data and genus-two sewing form a mathematically controlled boundary between discrete state organization and positive relational geometry. A new construction placed there can be checked without asking anyone to accept an ontology first. It may yield a theoretical-engineering improvement--better codes, modular spectral design, robust state classifiers, or controlled defect/selector devices--even if gravity never emerges. It could count as new physics only after it produces a nonconventional, falsifiable observable or a more constrained consistent theory.
@@ -206,6 +208,7 @@ The negative implication is equally useful. Images, number coincidences, group i
 - [Monster fermionization bridge](monster-fermionization-bridge.md)
 - [Pfaffian-line type audit](pfaffian-line-type-audit.md)
 - [Period-matrix/Jordan boundary gate](period-matrix-jordan-boundary-gate.md)
+- [Sewing-response codimension gate](sewing-response-codimension-gate.md)
 - [Literature review](literature-review.md)
 - [Calculations and next steps](next-steps.md)
 - [Machine verifier](../../../verification/verify/verify_lattice_subroutine_gravity_programme.mjs)
@@ -229,6 +232,8 @@ The negative implication is equally useful. Images, number coincidences, group i
 - [Pfaffian-line type verifier](../../../verification/verify/verify_lattice_subroutine_pfaffian_line_type_audit.mjs)
 - [Period-matrix/Jordan boundary evidence](../../../evidence/data/lattice-subroutine-period-matrix-jordan-boundary-gate-v1.json)
 - [Period-matrix/Jordan boundary verifier](../../../verification/verify/verify_lattice_subroutine_period_matrix_jordan_boundary_gate.mjs)
+- [Sewing-response codimension evidence](../../../evidence/data/lattice-subroutine-sewing-response-codimension-gate-v1.json)
+- [Sewing-response codimension verifier](../../../verification/verify/verify_lattice_subroutine_sewing_response_codimension_gate.mjs)
 - [Existing Leech pair-Gram claim](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Existing finite genus-two seam claim](../../claims/1700-1799/1738_the_2_state_3_symbol_universal_machine_selects_a_finite_genus_two_theta_seam_but_not_spin23_dynamics.md)
 - [Existing Spin(2,3) gravity checkpoint](../closure/spin23-gravity-route/README.md)

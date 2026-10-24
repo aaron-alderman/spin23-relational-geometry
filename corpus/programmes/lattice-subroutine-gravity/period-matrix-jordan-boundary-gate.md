@@ -101,6 +101,8 @@ A surviving map must do at least one of the following:
 
 Each option is new physics or new model data, not a consequence of the shared \(2\times2\) matrix shape.
 
+The [local sewing-response gate](sewing-response-codimension-gate.md) sharpens the alternatives. A phase-blind positive scalar built from the complex sewing normal necessarily begins with \(|\epsilon|^2\), so it squares the seam and loses orientation. A linear signed response requires either two coherent quadratures or a separately sourced phase reference.
+
 ## What remains useful
 
 The identification \(Y\in H_2(\mathbb R)_+\) is still mathematically exact. It says that genus-two complex structures carry a natural positive rank-two Jordan datum. What fails is the stronger claim that the modular seam zero is automatically the Jordan rank-one boundary.
