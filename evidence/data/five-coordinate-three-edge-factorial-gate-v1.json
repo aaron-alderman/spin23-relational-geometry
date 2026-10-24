@@ -1,0 +1,170 @@
+{
+  "protocol": "five-coordinate-three-edge-factorial-gate/1",
+  "date": "2026-10-25",
+  "targets": [
+    "OT-047",
+    "OT-048"
+  ],
+  "parent": "AZ-073",
+  "responseModel": "y(c)=B+sum_i L_i c_i+c^T F c, for c=(v_u,v_d,a_2)",
+  "factorialDesign": {
+    "fullGrid": "c_i in {-1,0,+1}",
+    "totalSamples": 27,
+    "fitSamples": 19,
+    "heldOutSamples": 8,
+    "recoveredCoefficients": 10,
+    "pairPlaneClosureResiduals": 9,
+    "explanation": "The union of the three coordinate planes contains 19 settings: one origin, six signed axes and twelve signed pair corners. It identifies B, three linear terms and the six independent entries of symmetric F. The eight all-nonzero corners are held out to test the quadratic/no-three-way model.",
+    "pairFormula": "Fij=[y(+,+,0)-y(+,-,0)-y(-,+,0)+y(-,-,0)]/8, with the unused coordinate set to zero"
+  },
+  "syntheticCertificate": {
+    "declaredParameters": {
+      "baseline": 100,
+      "linear": [
+        2,
+        -1,
+        0.5
+      ],
+      "kernel": [
+        [
+          9,
+          -3,
+          6
+        ],
+        [
+          -3,
+          4,
+          -4
+        ],
+        [
+          6,
+          -4,
+          16
+        ]
+      ]
+    },
+    "extracted": {
+      "baseline": 100,
+      "linear": [
+        2,
+        -1,
+        0.5
+      ],
+      "kernel": [
+        [
+          9,
+          -3,
+          6
+        ],
+        [
+          -3,
+          4,
+          -4
+        ],
+        [
+          6,
+          -4,
+          16
+        ]
+      ]
+    },
+    "pairResiduals": {
+      "v_u:v_d": {
+        "evenCorner": 0,
+        "linearFirst": 0,
+        "linearSecond": 0
+      },
+      "v_u:a_2": {
+        "evenCorner": 0,
+        "linearFirst": 0,
+        "linearSecond": 0
+      },
+      "v_d:a_2": {
+        "evenCorner": 0,
+        "linearFirst": 0,
+        "linearSecond": 0
+      }
+    },
+    "heldOutResiduals": {
+      "-1,-1,-1": 0,
+      "-1,-1,1": 0,
+      "-1,1,-1": 0,
+      "-1,1,1": 0,
+      "1,-1,-1": 0,
+      "1,-1,1": 0,
+      "1,1,-1": 0,
+      "1,1,1": 0
+    },
+    "normalizedEdges": {
+      "v_u:v_d": -0.5,
+      "v_u:a_2": 0.5,
+      "v_d:a_2": -0.5
+    },
+    "positivity": {
+      "diagonalEntries": [
+        9,
+        4,
+        16
+      ],
+      "pairPrincipalMinors": {
+        "v_u:v_d": 27,
+        "v_u:a_2": 108,
+        "v_d:a_2": 48
+      },
+      "determinant": 288,
+      "determinantFormula": "Fuu Fdd Faa+2 Fud Fua Fda-Fuu Fda^2-Fdd Fua^2-Faa Fud^2",
+      "positiveSemidefinitePass": true
+    },
+    "signedCycle": {
+      "edgeProduct": 72,
+      "sign": 1,
+      "nodeRephasingsChecked": 8,
+      "determinantInvariant": true,
+      "cycleInvariant": true
+    }
+  },
+  "sourceNativeEvidence": {
+    "fermionEdge": {
+      "source": "Arias-Aragon et al., Production of Thermal Axions across the ElectroWeak Phase Transition, arXiv:2012.04736",
+      "url": "https://arxiv.org/abs/2012.04736",
+      "admittedStatement": "The published broken-phase analytic cross sections for t anti-b -> W+ a and crossed t W- -> b a / b W+ -> t a retain independent c_t and c_b dependence, including mixed c_t c_b terms.",
+      "limit": "The paper uses the amplitudes for thermal production and switches on operator families separately in its cosmological presentation; it is not a collider likelihood or a three-source response table."
+    },
+    "topWeakTopology": {
+      "source": "Hosseini and Mohammadi Najafabadi, Exploring Axion-Like Particle Couplings through Single Top tW-Channel and Top Pair Production at the LHC, arXiv:2408.11588",
+      "url": "https://arxiv.org/abs/2408.11588",
+      "admittedStatement": "Associated t W a production contains top-like and W-emission topologies in one final-state family.",
+      "limit": "The published analysis does not provide the signed bottom/top/W three-coefficient kernel; topology alone does not establish surviving pairwise interference."
+    }
+  },
+  "oneFamilyCandidate": {
+    "amplitudeFamily": [
+      "t anti-b -> W+ a",
+      "t W- -> b a",
+      "b W+ -> t a",
+      "t -> b W+ a (crossed, where kinematically open)"
+    ],
+    "exactStatus": "The c_t-c_b edge is source-native in the fermionic broken-phase calculation. A joint c_t-c_b-c_W amplitude and all three interference entries have not been published or computed here.",
+    "requiredCalculation": "Implement one gauge-consistent broken-phase model with independent signed c_t, c_b and c_W definitions; evaluate the 27 settings on common phase-space points; fit the 19 coordinate-plane settings and predict the eight all-nonzero settings before detector profiling.",
+    "killTests": [
+      "any nominal edge vanishes after helicity, colour, CP and phase-space integration",
+      "gauge completion removes the apparent separation of the three coefficients",
+      "the 19-point fit fails any of the nine pair-plane closure residuals",
+      "the eight held-out corners reveal higher-order or implementation dependence",
+      "the fitted symmetric kernel violates a principal-minor or determinant positivity condition",
+      "detector and nuisance folding erase an edge needed for the triangle"
+    ]
+  },
+  "interpretation": {
+    "jordanJob": "The completed symmetric response kernel asks whether all three self- and cross-responses can coexist inside one positive cone; its determinant is a global condition not supplied by the pairwise bounds alone.",
+    "lieJob": "Signed basis changes transport the three source directions by F -> S F S without changing the determinant or the cycle product.",
+    "middle": "One process family would make admission and transport refer to the same event record. It would reduce the cross-scale bridge from an identification necessity to an external validation route.",
+    "nonClaim": "This ordinary 3x3 positive response matrix is not evidence for a magical J3 algebra, E8, or a fundamental three-source law."
+  },
+  "verdict": {
+    "closed": "A finite 27-setting protocol now extracts the full signed three-source quadratic kernel with 19 fit settings, nine internal pair-plane residuals and eight held-out three-source predictions. The determinant and cycle product are invariant under all eight node sign conventions.",
+    "newlyLocated": "The published W-associated broken-phase axion amplitudes supply a source-native top-bottom interference edge in the same broad electroweak process family as the top/W topology.",
+    "open": "No source-native c_t-c_b-c_W kernel, surviving bottom-W edge, detector-level triangle or signed map to the corpus five-coordinate basis has been computed.",
+    "nextCalculation": "Generate the gauge-complete W-associated three-source amplitude and run the 27 settings. Only then decide whether the triangle exists; retain B_c decay as a low-energy validation arm rather than a necessary sign-identification bridge."
+  }
+}

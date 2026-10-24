@@ -6,7 +6,7 @@ This is a generated atlas, not a claim of truth or completeness. Its machine-rea
 
 **Authority boundary.** This atlas reports repository structure and declared epistemic surfaces. It does not promote claims, replace source evidence, or grant publication, corpus-admission, runtime, or deployment authority.
 
-**Coverage.** 16 declared roots across 4 routes; 5458 retained inventory objects; 4268 objects reachable through local links; 5458 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
+**Coverage.** 16 declared roots across 4 routes; 5467 retained inventory objects; 4274 objects reachable through local links; 5467 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
 
 ## Understand the present claim
 
@@ -58,10 +58,10 @@ A minimum dataset is capability-specific, not one universal subset. The **declar
 
 | Capability | Roots | Declared core files | Observed core bytes | Discoverable files | Observed discoverable bytes |
 |---|---|---:|---:|---:|---:|
-| Interpret faithfully | `reading-contract`, `current-synthesis`, `explanatory-standard`, `glossary` | 4 | 83.1 KiB | 4378 | 57.5 MiB |
-| Choose one bounded research task | `reading-contract`, `role-map`, `open-topics`, `target-set` | 6 | 112.4 KiB | 4378 | 57.5 MiB |
-| Audit claims, provenance, and authority | `reading-contract`, `evidence-spine`, `result-ledger`, `verification-guide`, `document-map`, `corpus-manifest`, `publication-authority` | 11 | 14.7 MiB | 4378 | 57.5 MiB |
-| Design a discriminating experiment | `reading-contract`, `current-synthesis`, `experiment-atlas`, `target-set`, `verification-guide` | 8 | 190.1 KiB | 4378 | 57.5 MiB |
+| Interpret faithfully | `reading-contract`, `current-synthesis`, `explanatory-standard`, `glossary` | 4 | 84.3 KiB | 4385 | 57.5 MiB |
+| Choose one bounded research task | `reading-contract`, `role-map`, `open-topics`, `target-set` | 6 | 112.8 KiB | 4385 | 57.5 MiB |
+| Audit claims, provenance, and authority | `reading-contract`, `evidence-spine`, `result-ledger`, `verification-guide`, `document-map`, `corpus-manifest`, `publication-authority` | 11 | 14.7 MiB | 4385 | 57.5 MiB |
+| Design a discriminating experiment | `reading-contract`, `current-synthesis`, `experiment-atlas`, `target-set`, `verification-guide` | 8 | 191.3 KiB | 4385 | 57.5 MiB |
 
 These profiles are map-only candidates, not admitted packages. Before extracting one, add the selected capability's exact runtime, provenance and falsification dependencies, then independently qualify the derived artifact. Use the full sealed or canonical corpus when custody, exact release reproduction, history, or unknown future questions matter.
 
@@ -74,19 +74,19 @@ Reachability measures what the declared entrances actually expose through local 
 | automation | 1 | 0 | 1.3 KiB | repository workflow automation |
 | claims | 1575 | 1566 | 15.5 MiB | append-only claim and provenance ledger |
 | corpus-navigation | 11 | 11 | 103.4 KiB | canonical corpus navigation, vocabulary, and reading rules |
-| evidence | 477 | 425 | 12.5 MiB | data, figures, and retained observations |
-| generated-publication | 317 | 12 | 11.3 MiB | generated deployable reading surfaces |
+| evidence | 478 | 426 | 12.5 MiB | data, figures, and retained observations |
+| generated-publication | 320 | 12 | 11.3 MiB | generated deployable reading surfaces |
 | governance | 2 | 1 | 7.7 KiB | repository and publication governance |
 | integrations | 268 | 3 | 19.8 MiB | application and publication boundary packets |
 | legal | 2 | 2 | 54.0 KiB | legal notices and policy |
-| programmes | 627 | 428 | 11.6 MiB | bounded research programmes, registers, and closure work |
-| reader-editions | 215 | 215 | 1.8 MiB | curated reader-facing editions |
+| programmes | 628 | 429 | 11.6 MiB | bounded research programmes, registers, and closure work |
+| reader-editions | 218 | 218 | 1.8 MiB | curated reader-facing editions |
 | registers | 13 | 6 | 13.3 MiB | machine-readable inventory, state, and audit records |
 | repository-front-door | 7 | 5 | 26.3 KiB | root navigation, machine retrieval, stewardship, contribution, and legal surfaces |
-| syntheses | 4 | 4 | 165.3 KiB | current and thesis-scale interpretive surfaces |
-| tests | 14 | 3 | 70.7 KiB | repository and publication invariants |
+| syntheses | 4 | 4 | 166.5 KiB | current and thesis-scale interpretive surfaces |
+| tests | 14 | 3 | 70.8 KiB | repository and publication invariants |
 | tooling | 121 | 20 | 3.4 MiB | generation, audit, migration, and publication utilities |
-| verification | 1804 | 1567 | 5.9 MiB | executable certificates and verification navigation |
+| verification | 1805 | 1568 | 5.9 MiB | executable certificates and verification navigation |
 
 ## Structural contract
 

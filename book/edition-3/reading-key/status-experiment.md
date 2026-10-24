@@ -17,6 +17,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [The admissibility frontier · Hot off the press — make the proposed cause move](../chapters/08-admissibility-frontier.md#hot-off-the-press-make-the-proposed-cause-move)
 - [The admissibility frontier · Hot off the press — the detector has two different jobs](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-detector-has-two-different-jobs)
 - [The admissibility frontier · Hot off the press — two edges identify; three edges audit](../chapters/08-admissibility-frontier.md#hot-off-the-press-two-edges-identify-three-edges-audit)
+- [The admissibility frontier · Hot off the press — the third edge tests the whole triangle](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-third-edge-tests-the-whole-triangle)
 - [E3-F19 · A calibrated pole-and-band experiment can be specified](../chapters/08-result-ledger.md#E3-F19)
 - [Claim · The admissibility frontier · The finesse technology pathway (1)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md)
 - [Claim · The admissibility frontier · The finesse technology pathway (2)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)
@@ -38,6 +39,9 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Hot off the press — two edges identify; three edges audit (1)](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — two edges identify; three edges audit (2)](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — two edges identify; three edges audit (3)](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — the third edge tests the whole triangle (1)](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — the third edge tests the whole triangle (2)](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — the third edge tests the whole triangle (3)](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-3.md)
 
 ---
 

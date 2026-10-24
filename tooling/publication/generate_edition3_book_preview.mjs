@@ -282,6 +282,7 @@ const sectionTaxonomy = {
   "Hot off the press — the detector has two different jobs": "experiment",
   "Hot off the press — the spanning tree is not yet one experiment": "external",
   "Hot off the press — two edges identify; three edges audit": "experiment",
+  "Hot off the press — the third edge tests the whole triangle": "experiment",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -370,6 +371,7 @@ const sectionArchetype = {
   "Hot off the press — the detector has two different jobs": "builder",
   "Hot off the press — the spanning tree is not yet one experiment": "scout",
   "Hot off the press — two edges identify; three edges audit": "builder",
+  "Hot off the press — the third edge tests the whole triangle": "builder",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -699,6 +701,15 @@ admissibilitySections.splice(orientedSeamIndex + 26, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 27, 0, [
+  "Hot off the press — the third edge tests the whole triangle",
+  [
+    "**Provisional integration note — 25 October 2026.** A published broken-phase W-associated axion calculation already retains independent top and bottom couplings with mixed terms. This moves the candidate up–down phase edge into the same broad electroweak process family as the top-like and weak-gauge emission topologies. It does not yet supply a three-coupling calculation, but it removes the assumption that sign identification must begin by joining a collider process to a heavy-meson decay.",
+    "The complete three-source protocol has 27 signed settings. Nineteen settings—one origin, six axes and twelve pair corners—recover the ten coefficients of a symmetric quadratic response and leave nine pair-plane closure tests. The eight corners where all three sources are nonzero are held out. They ask whether the fitted pairwise story predicts genuinely joint records without adding a three-way term after seeing the answer.",
+    "A completed triangle is also more than three acceptable pairs. Joint positivity requires the determinant of the full three-by-three response to be nonnegative; pairwise bounds can all pass while that global condition fails. Node-sign conventions transport the kernel without changing either its determinant or the product of the three edge signs. The look-here instruction is therefore exact: calculate one gauge-complete top–bottom–weak amplitude, run the 27 settings on common phase-space points and let closure, held-out prediction, determinant positivity and detector folding decide whether the triangle exists. Bc decay remains an independent low-energy validation arm.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -951,6 +962,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the detector has two different jobs": ["corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md", "corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md", "corpus/programmes/lane-expansion/programme_lane_expansion_37_the_five_coordinate_observable_map_needs_bottom_weak_and_neutrino_compasses.md"],
   "Hot off the press — the spanning tree is not yet one experiment": ["corpus/programmes/admissibility/admissibility_72_candidate_phase_edges_and_scale_bridge.md", "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md", "corpus/programmes/lane-expansion/programme_lane_expansion_37_the_five_coordinate_observable_map_needs_bottom_weak_and_neutrino_compasses.md"],
   "Hot off the press — two edges identify; three edges audit": ["corpus/programmes/admissibility/admissibility_73_signed_edge_extraction_and_cycle_audit.md", "corpus/programmes/admissibility/admissibility_72_candidate_phase_edges_and_scale_bridge.md", "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md"],
+  "Hot off the press — the third edge tests the whole triangle": ["corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md", "corpus/programmes/admissibility/admissibility_73_signed_edge_extraction_and_cycle_audit.md", "corpus/programmes/admissibility/admissibility_66_contextual_triangle_bound_reduces_to_standard_positivity.md"],
 };
 
 const evidenceReading = key => ({

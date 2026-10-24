@@ -578,6 +578,25 @@ This does not supply the missing physics. The heavy-meson coefficients, top/weak
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-3.md)
 
+<a id="hot-off-the-press-the-third-edge-tests-the-whole-triangle"></a>
+## Hot off the press — the third edge tests the whole triangle
+
+> **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** A published broken-phase W-associated axion calculation already retains independent top and bottom couplings with mixed terms. This moves the candidate up–down phase edge into the same broad electroweak process family as the top-like and weak-gauge emission topologies. It does not yet supply a three-coupling calculation, but it removes the assumption that sign identification must begin by joining a collider process to a heavy-meson decay.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-1.md)
+
+The complete three-source protocol has 27 signed settings. Nineteen settings—one origin, six axes and twelve pair corners—recover the ten coefficients of a symmetric quadratic response and leave nine pair-plane closure tests. The eight corners where all three sources are nonzero are held out. They ask whether the fitted pairwise story predicts genuinely joint records without adding a three-way term after seeing the answer.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-2.md)
+
+A completed triangle is also more than three acceptable pairs. Joint positivity requires the determinant of the full three-by-three response to be nonnegative; pairwise bounds can all pass while that global condition fails. Node-sign conventions transport the kernel without changing either its determinant or the product of the three edge signs. The look-here instruction is therefore exact: calculate one gauge-complete top–bottom–weak amplitude, run the 27 settings on common phase-space points and let closure, held-out prediction, determinant positivity and detector folding decide whether the triangle exists. Bc decay remains an independent low-energy validation arm.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
