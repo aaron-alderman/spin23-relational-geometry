@@ -1,0 +1,1703 @@
+{
+  "schema": "science-admissibility-instrumentation/1",
+  "date": "2026-10-24",
+  "source": "corpus/programmes/quotient-scars/quotient_scar_register_v1.json",
+  "sourceSha256": "931a9c4ca57f1e55f72fb0730b930539597438fb6c2491747c90c51905fa3e6a",
+  "authority": "experiment atlas and decision ledger; not evidence that a proposed platform realizes a fundamental carrier",
+  "fieldContract": [
+    "carrier",
+    "input",
+    "output",
+    "invariant",
+    "informationLoss",
+    "platform",
+    "protocol",
+    "observable",
+    "detector",
+    "detectorSufficiency",
+    "nuisanceModel",
+    "decisionRule",
+    "falsifier",
+    "status",
+    "reopenDatum",
+    "sourceRefs"
+  ],
+  "counts": {
+    "constructive": 12,
+    "guardrail": 15,
+    "return": 12,
+    "total": 39
+  },
+  "experimentCatalogue": {
+    "declaredNodeClasses": 16,
+    "usedTargetPlatforms": 14,
+    "sourceOnlyNodes": [
+      "QS-004",
+      "QS-008"
+    ]
+  },
+  "items": [
+    {
+      "id": "K01",
+      "family": "constructive",
+      "relationId": "QR-006",
+      "name": "projector-to-holonomy extension",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-008",
+        "label": "Alternating noncommuting admissibility projections"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "extends_to",
+      "cycleEdgeIds": [],
+      "input": "a resolved vector space with two independently declared admissible subspaces",
+      "output": "a parameterized moving family of projectors plus [P,dP] upgrades order-dependent projection to coherent frame transport",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_05_noncommuting_admissibility_and_projection_curvature.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "K02",
+      "family": "constructive",
+      "relationId": "QR-008",
+      "name": "projection-to-reflexive-closure extension",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-008",
+        "label": "Alternating noncommuting admissibility projections"
+      },
+      "target": {
+        "id": "QS-010",
+        "label": "Two-rail reflexive closure with boundary memory"
+      },
+      "relationType": "extends_to",
+      "cycleEdgeIds": [],
+      "input": "a resolved vector space with two independently declared admissible subspaces",
+      "output": "a second evolving admissibility datum converts fixed alternating projection into relational feedback with an explicit neutral common mode",
+      "invariant": "unanchored eigenvalues 1 and r minus mu separate common neutrality from relative contraction",
+      "informationLoss": "relative rail mismatch, followed by the neutral common displacement when the record is independent",
+      "platform": "two-rail feedback controller with persistent memory",
+      "protocol": "prepare identical present projectors with distinct stored histories and measure convergence before and after anchoring",
+      "observable": [
+        "dynamical: unanchored eigenvalues 1 and r minus mu separate common neutrality from relative contraction",
+        "geometric: the unanchored fixed set is the diagonal p equals y rather than a unique point",
+        "oriented: an additional lift bit or loop direction remains necessary for quarter-turn sign"
+      ],
+      "detector": "time-resolved rail coordinates and fitted tangent eigenvalues",
+      "detectorSufficiency": "two preparations with the same present projector but different stored records are required to distinguish genuine memory from a renamed selector",
+      "nuisanceModel": "controller latency, detector memory and common-mode drift",
+      "decisionRule": "accept an independent rail only when history predicts later response conditional on the present projector",
+      "falsifier": "if future response is conditionally independent of stored history given the present projector, the extra rail is redundant",
+      "status": "exact",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_05_noncommuting_admissibility_and_projection_curvature.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_07_minimal_reflexive_closure_and_neutral_mode.md",
+        "corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md"
+      ]
+    },
+    {
+      "id": "K03",
+      "family": "constructive",
+      "relationId": "QR-011",
+      "name": "memory-to-wall extension",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-010",
+        "label": "Two-rail reflexive closure with boundary memory"
+      },
+      "target": {
+        "id": "QS-011",
+        "label": "Metastable record to wall and topology gate"
+      },
+      "relationType": "extends_to",
+      "cycleEdgeIds": [],
+      "input": "a present selector coordinate and an independently retained response/history coordinate",
+      "output": "spatial stiffness and disconnected stable values promote a retained local record into a wall",
+      "invariant": "kink thickness and finite domain-wall tension",
+      "informationLoss": "independent local branch changes and, in the one-mass probe family, a gapped interpolation between opposite records",
+      "platform": "bistable magnetic, photonic, acoustic or electronic wall device",
+      "protocol": "write opposite histories, image the wall, measure its width and tension, and probe the restricted gap across it",
+      "observable": [
+        "geometric: kink thickness and finite domain-wall tension",
+        "dynamical: barrier-controlled metastability and history-dependent wall motion",
+        "spectral: forced gap closing at the wall only in the restricted one-mass operator family",
+        "topological: disconnected vacuum sectors when no admitted deformation connects the record values"
+      ],
+      "detector": "spatial field imaging plus local spectroscopy",
+      "detectorSufficiency": "wall width, tension and history must be separated from detector lag; coherent probes are needed for holonomy",
+      "nuisanceModel": "pinning disorder, thermal creep, finite boundaries and a hidden second mass",
+      "decisionRule": "accept the restricted topology gate only when the wall and forced gap closing survive the declared deformation set",
+      "falsifier": "an allowed second mass or deformation connects the two sides without gap closing, or the wall sector has no nonzero coupling back to the selector",
+      "status": "structural_boundary",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_07_minimal_reflexive_closure_and_neutral_mode.md",
+        "corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_08_when_memory_becomes_a_wall_and_changes_topology.md",
+        "corpus/claims/0200-0299/274_projector_defect_clutches_to_the_fermion_two_and_stress_eight_ladder.md",
+        "corpus/claims/1500-1599/1577_the_exact_global_z3_portal_protection_produces_three_electroweak_vacua_and_a_domain_wall_gate.md"
+      ]
+    },
+    {
+      "id": "K04",
+      "family": "constructive",
+      "relationId": "QR-014",
+      "name": "wall-to-response extension",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-011",
+        "label": "Metastable record to wall and topology gate"
+      },
+      "target": {
+        "id": "QS-012",
+        "label": "Wall-localized response determinant"
+      },
+      "relationType": "extends_to",
+      "cycleEdgeIds": [],
+      "input": "two-rail reflexive closure with a spatially coupled persistent record",
+      "output": "the wall becomes a selector input when it localizes an embedding-sensitive response whose determinant depends on projector mismatch",
+      "invariant": "a normalizable wall-localized Dirac zero mode",
+      "informationLoss": "the resolved probe fluctuation while retaining its free-energy response",
+      "platform": "wall-localized two-channel response device",
+      "protocol": "reconstruct the localized response projector, sweep the control-projector angle and fit the free-energy or susceptibility shift",
+      "observable": [
+        "spectral: a normalizable wall-localized Dirac zero mode",
+        "nonlinear: logarithmic determinant log of m squared plus g sine squared theta",
+        "dynamical: positive selector Hessian and contractive gradient return map",
+        "oriented: the determinant is even and therefore records projective alignment but erases lift orientation"
+      ],
+      "detector": "localized-mode spectroscopy and two-channel response tomography",
+      "detectorSufficiency": "mode count alone is insufficient; tomography of the localized response projector and angle-dependent free energy is required",
+      "nuisanceModel": "bulk background, angle calibration, detector folding and unconstrained wall coupling",
+      "decisionRule": "accept closure only with positive Hessian, embedding dependence and a return multiplier inside the unit circle",
+      "falsifier": "the response kernel is independent of the retained projector, has the wrong Hessian sign, or becomes constant after the detector model is included",
+      "status": "exact",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_08_when_memory_becomes_a_wall_and_changes_topology.md",
+        "corpus/claims/0200-0299/274_projector_defect_clutches_to_the_fermion_two_and_stress_eight_ladder.md",
+        "corpus/claims/1500-1599/1577_the_exact_global_z3_portal_protection_produces_three_electroweak_vacua_and_a_domain_wall_gate.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_09_wall_localized_response_closes_the_first_toy_loop.md"
+      ]
+    },
+    {
+      "id": "K05",
+      "family": "constructive",
+      "relationId": "QR-019",
+      "name": "invariant-to-detector extension",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-013",
+        "label": "Two-projector invariant and oriented lift"
+      },
+      "target": {
+        "id": "QS-014",
+        "label": "Three-record selector-orientation detector"
+      },
+      "relationType": "extends_to",
+      "cycleEdgeIds": [],
+      "input": "an ordered pair of real rank-one response projectors with optional plane orientation",
+      "output": "the invariant double cover becomes an operational test through matched angle reversal and branch-resolved populations",
+      "invariant": "the observed odd contrast contracts by one minus twice the label-error probability",
+      "informationLoss": "the sign of the branch contrast at one-half label randomization",
+      "platform": "three-record even/odd/population experiment",
+      "protocol": "combine angle reversal, wall reversal, rate sweeps and deliberate branch-label randomization",
+      "observable": [
+        "statistical: the observed odd contrast contracts by one minus twice the label-error probability",
+        "oriented: matched plus and minus angle preparations reverse chi at fixed overlap",
+        "thermodynamic: the even equilibrium selector response survives complete odd-record erasure"
+      ],
+      "detector": "joint spin-summed, helicity-resolved and branch-population records",
+      "detectorSufficiency": "joint even, odd and population records plus deliberate label randomization are minimally sufficient",
+      "nuisanceModel": "label error, lag, hysteresis, heating and detector crosstalk",
+      "decisionRule": "accept orientation evidence only if it passes physical reversals and contracts to zero under half label randomization",
+      "falsifier": "the odd response survives complete branch-label randomization, fails physical reversals, or is absorbed by rate and detector nuisances",
+      "status": "experimental_target",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_10_two_projector_invariants_and_the_oriented_feedback_boundary.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md"
+      ]
+    },
+    {
+      "id": "K06",
+      "family": "constructive",
+      "relationId": "QR-022",
+      "name": "orientation-to-selector extension",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-013",
+        "label": "Two-projector invariant and oriented lift"
+      },
+      "target": {
+        "id": "QS-015",
+        "label": "Wall-pseudoscalar oriented selector"
+      },
+      "relationType": "extends_to",
+      "cycleEdgeIds": [],
+      "input": "an ordered pair of real rank-one response projectors with optional plane orientation",
+      "output": "the physical wall pseudoscalar converts the orientation-odd lift coordinate into a reflection-invariant equilibrium coupling",
+      "invariant": "wall reversal flips the selected lift chi while preserving the overlap t",
+      "informationLoss": "resolved wall helicity while retaining its signed coupling to the projector commutator",
+      "platform": "helicity-resolved wall-selector device",
+      "protocol": "reverse wall orientation at fixed projector overlap and measure the signed lift together with the even equilibrium potential",
+      "observable": [
+        "oriented: wall reversal flips the selected lift chi while preserving the overlap t",
+        "thermodynamic: the bridge produces a reflection-invariant equilibrium potential with degenerate opposite-wall minima",
+        "dynamical: the oriented minimum has Hessian two times the square root of g squared plus four lambda squared"
+      ],
+      "detector": "spin-summed free energy and helicity-resolved response",
+      "detectorSufficiency": "spin-summed and helicity-resolved records plus separate wall-history and label-randomization controls are required",
+      "nuisanceModel": "magnetic stray fields, contact asymmetry, uncontrolled chirality and fitted counterterms",
+      "decisionRule": "accept the effective coupling when wall reversal flips the odd lift but preserves the overlap; do not infer universality",
+      "falsifier": "all gauge-compatible spin-face bridge coefficients vanish, remain arbitrary counterterms, or the selected lift fails to reverse with the wall",
+      "status": "structural_boundary",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_10_two_projector_invariants_and_the_oriented_feedback_boundary.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_12_wall_pseudoscalar_closes_oriented_equilibrium_selection.md",
+        "corpus/programmes/lane-expansion/programme_lane_expansion_06_wall_reversal_flips_helicity_but_not_the_spin_summed_h2r_face_response.md"
+      ]
+    },
+    {
+      "id": "K07",
+      "family": "constructive",
+      "relationId": "QR-025",
+      "name": "selector-to-provenance extension",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-015",
+        "label": "Wall-pseudoscalar oriented selector"
+      },
+      "target": {
+        "id": "QS-016",
+        "label": "Wall-selector coefficient provenance exhaustion"
+      },
+      "relationType": "extends_to",
+      "cycleEdgeIds": [],
+      "input": "two projective response lines plus a metastable wall orientation and helicity-sensitive bridge",
+      "output": "the successful effective selector is subjected to a source-by-source coefficient provenance audit",
+      "invariant": "the Peirce-to-sterile rephasing-equivariant linear Hom space is zero",
+      "informationLoss": "the inference from an allowed effective coupling to a derived universal coefficient",
+      "platform": "same-device coefficient-provenance audit",
+      "protocol": "fit the effective wall coefficient, reconstruct all symmetry-allowed material interactions and propagate them without refitting",
+      "observable": [
+        "algebraic: the Peirce-to-sterile rephasing-equivariant linear Hom space is zero",
+        "oriented: the charge-correct quadratic repair collapses opposite wall rays projectively",
+        "thermodynamic: full-wall cross-couplings are allowed but require freely specified renormalized coefficients"
+      ],
+      "detector": "joint response data, microscopic parameter metrology and held-out prediction",
+      "detectorSufficiency": "the three-record experiment can measure lambda but cannot by itself establish universality or algebraic provenance",
+      "nuisanceModel": "operator mixing, renormalized counterterms, material inhomogeneity and model nonidentifiability",
+      "decisionRule": "promote provenance only when a gauge-complete source fixes nonzero magnitude and sign and predicts held-out data",
+      "falsifier": "a gauge-complete microscopic action or quantized descent derives a nonzero bridge with fixed sign and controlled counterterms",
+      "status": "structural_boundary",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_12_wall_pseudoscalar_closes_oriented_equilibrium_selection.md",
+        "corpus/programmes/lane-expansion/programme_lane_expansion_06_wall_reversal_flips_helicity_but_not_the_spin_summed_h2r_face_response.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_13_lambda_provenance_exhaustion_and_reopen_gates.md",
+        "corpus/programmes/frontier/wave-7/lambda_provenance_ledger_v1.json"
+      ]
+    },
+    {
+      "id": "K08",
+      "family": "constructive",
+      "relationId": "QR-001",
+      "name": "Markov detector realization",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-002",
+        "label": "D4 star Markov and detector lumping"
+      },
+      "target": {
+        "id": "QS-006",
+        "label": "Detector folding of a CP-sensitive latent distribution"
+      },
+      "relationType": "instantiates",
+      "cycleEdgeIds": [],
+      "input": "one center and three resolved outer states",
+      "output": "the resolved-versus-lumped Markov model is a concrete detector-folding and score-contraction system",
+      "invariant": "information loss equals expected conditional score variance",
+      "informationLoss": "score components varying inside detector fibers",
+      "platform": "label-randomized detector-folding experiment",
+      "protocol": "inject known latent CP-odd contrasts and sweep the symmetric mislabelling probability through one half",
+      "observable": [
+        "statistical: information loss equals expected conditional score variance",
+        "oriented: a reversed or signed detector face can restore an erased odd score"
+      ],
+      "detector": "calibrated confusion matrix and observed odd score",
+      "detectorSufficiency": "equality in Fisher data processing holds exactly when the latent score is record-measurable",
+      "nuisanceModel": "asymmetric label errors, drift and correlated readout noise",
+      "decisionRule": "accept the folding law only if the odd score follows one-minus-two-epsilon and vanishes at half mixing",
+      "falsifier": "claiming latent sensitivity after the response makes the score constant zero",
+      "status": "exact",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-6/frontier_wave6_03_resolved_versus_lumped_d4_dynamics.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_01_hidden_elimination_memory_theorem.md",
+        "corpus/claims/0700-0799/739_detector_folding_is_a_positive_markov_compression_that_can_only_contract_cp_fisher_information.md"
+      ]
+    },
+    {
+      "id": "K09",
+      "family": "constructive",
+      "relationId": "QR-015",
+      "name": "anchored-closure realization",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-012",
+        "label": "Wall-localized response determinant"
+      },
+      "target": {
+        "id": "QS-010",
+        "label": "Two-rail reflexive closure with boundary memory"
+      },
+      "relationType": "instantiates",
+      "cycleEdgeIds": [],
+      "input": "a kink-localized response carrier with an embedding-sensitive projector",
+      "output": "the positive fluctuation determinant supplies a concrete anchored Hessian for two-rail reflexive closure",
+      "invariant": "unanchored eigenvalues 1 and r minus mu separate common neutrality from relative contraction",
+      "informationLoss": "relative rail mismatch, followed by the neutral common displacement when the record is independent",
+      "platform": "two-rail feedback controller with persistent memory",
+      "protocol": "prepare identical present projectors with distinct stored histories and measure convergence before and after anchoring",
+      "observable": [
+        "dynamical: unanchored eigenvalues 1 and r minus mu separate common neutrality from relative contraction",
+        "geometric: the unanchored fixed set is the diagonal p equals y rather than a unique point",
+        "oriented: an additional lift bit or loop direction remains necessary for quarter-turn sign"
+      ],
+      "detector": "time-resolved rail coordinates and fitted tangent eigenvalues",
+      "detectorSufficiency": "two preparations with the same present projector but different stored records are required to distinguish genuine memory from a renamed selector",
+      "nuisanceModel": "controller latency, detector memory and common-mode drift",
+      "decisionRule": "accept an independent rail only when history predicts later response conditional on the present projector",
+      "falsifier": "if future response is conditionally independent of stored history given the present projector, the extra rail is redundant",
+      "status": "exact",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_09_wall_localized_response_closes_the_first_toy_loop.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_07_minimal_reflexive_closure_and_neutral_mode.md",
+        "corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md"
+      ]
+    },
+    {
+      "id": "K10",
+      "family": "constructive",
+      "relationId": "QR-017",
+      "name": "projective-overlap realization",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-012",
+        "label": "Wall-localized response determinant"
+      },
+      "target": {
+        "id": "QS-013",
+        "label": "Two-projector invariant and oriented lift"
+      },
+      "relationType": "instantiates",
+      "cycleEdgeIds": [],
+      "input": "a kink-localized response carrier with an embedding-sensitive projector",
+      "output": "the wall-localized determinant realizes the general O2-invariant overlap potential and its orientation blindness",
+      "invariant": "the overlap t equals trace PY and cos squared theta",
+      "informationLoss": "the sign of the relative angle and hence clockwise versus anticlockwise lift",
+      "platform": "phase-sensitive two-projector interferometer",
+      "protocol": "prepare matched plus/minus relative angles at fixed overlap and compare static and coherent odd channels",
+      "observable": [
+        "metric: the overlap t equals trace PY and cos squared theta",
+        "oriented: the pseudoscalar chi equals trace of J transpose times the commutator and squares to 4t times 1 minus t",
+        "algebraic: the O2 orbit space of the projector pair is the closed interval",
+        "thermodynamic: a paired equilibrium determinant is even under reflection and erases the oriented sign"
+      ],
+      "detector": "projector overlap tomography plus an orientation-sensitive quadrature",
+      "detectorSufficiency": "static free energy sees t, while loop reversal or a coherent odd channel is required for chi",
+      "nuisanceModel": "reference-phase drift, reflection asymmetry and population imbalance",
+      "decisionRule": "accept the oriented lift only when the odd channel reverses while the overlap and even response remain fixed",
+      "falsifier": "an alleged O2-invariant scalar of two projector lines distinguishes theta from minus theta without an orientation datum",
+      "status": "exact_no_go",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_09_wall_localized_response_closes_the_first_toy_loop.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_10_two_projector_invariants_and_the_oriented_feedback_boundary.md"
+      ]
+    },
+    {
+      "id": "K11",
+      "family": "constructive",
+      "relationId": "QR-020",
+      "name": "label-folding realization",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-014",
+        "label": "Three-record selector-orientation detector"
+      },
+      "target": {
+        "id": "QS-006",
+        "label": "Detector folding of a CP-sensitive latent distribution"
+      },
+      "relationType": "instantiates",
+      "cycleEdgeIds": [],
+      "input": "a carrier with an even selector response, an oriented branch pair and independently calibrated detector labels",
+      "output": "symmetric branch-label exchange is an exact detector folding that erases the orientation-odd score at one-half mixing",
+      "invariant": "information loss equals expected conditional score variance",
+      "informationLoss": "score components varying inside detector fibers",
+      "platform": "label-randomized detector-folding experiment",
+      "protocol": "inject known latent CP-odd contrasts and sweep the symmetric mislabelling probability through one half",
+      "observable": [
+        "statistical: information loss equals expected conditional score variance",
+        "oriented: a reversed or signed detector face can restore an erased odd score"
+      ],
+      "detector": "calibrated confusion matrix and observed odd score",
+      "detectorSufficiency": "equality in Fisher data processing holds exactly when the latent score is record-measurable",
+      "nuisanceModel": "asymmetric label errors, drift and correlated readout noise",
+      "decisionRule": "accept the folding law only if the odd score follows one-minus-two-epsilon and vanishes at half mixing",
+      "falsifier": "claiming latent sensitivity after the response makes the score constant zero",
+      "status": "exact",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md",
+        "corpus/claims/0700-0799/739_detector_folding_is_a_positive_markov_compression_that_can_only_contract_cp_fisher_information.md"
+      ]
+    },
+    {
+      "id": "K12",
+      "family": "constructive",
+      "relationId": "QR-023",
+      "name": "wall-detector realization",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-015",
+        "label": "Wall-pseudoscalar oriented selector"
+      },
+      "target": {
+        "id": "QS-014",
+        "label": "Three-record selector-orientation detector"
+      },
+      "relationType": "instantiates",
+      "cycleEdgeIds": [],
+      "input": "two projective response lines plus a metastable wall orientation and helicity-sensitive bridge",
+      "output": "spin-summed and helicity-resolved wall responses realize the three-record even-odd-population separation",
+      "invariant": "the observed odd contrast contracts by one minus twice the label-error probability",
+      "informationLoss": "the sign of the branch contrast at one-half label randomization",
+      "platform": "three-record even/odd/population experiment",
+      "protocol": "combine angle reversal, wall reversal, rate sweeps and deliberate branch-label randomization",
+      "observable": [
+        "statistical: the observed odd contrast contracts by one minus twice the label-error probability",
+        "oriented: matched plus and minus angle preparations reverse chi at fixed overlap",
+        "thermodynamic: the even equilibrium selector response survives complete odd-record erasure"
+      ],
+      "detector": "joint spin-summed, helicity-resolved and branch-population records",
+      "detectorSufficiency": "joint even, odd and population records plus deliberate label randomization are minimally sufficient",
+      "nuisanceModel": "label error, lag, hysteresis, heating and detector crosstalk",
+      "decisionRule": "accept orientation evidence only if it passes physical reversals and contracts to zero under half label randomization",
+      "falsifier": "the odd response survives complete branch-label randomization, fails physical reversals, or is absorbed by rate and detector nuisances",
+      "status": "experimental_target",
+      "reopenDatum": "derive the relation on a source-native carrier and reproduce the target observable without refitting",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_12_wall_pseudoscalar_closes_oriented_equilibrium_selection.md",
+        "corpus/programmes/lane-expansion/programme_lane_expansion_06_wall_reversal_flips_helicity_but_not_the_spin_summed_h2r_face_response.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md"
+      ]
+    },
+    {
+      "id": "G01",
+      "family": "guardrail",
+      "relationId": "QR-005",
+      "name": "triality-to-Freudenthal carrier gate",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-003",
+        "label": "Magic-square triality module descent"
+      },
+      "target": {
+        "id": "QS-007",
+        "label": "Freudenthal source-dual-response restriction"
+      },
+      "relationType": "requires_enrichment",
+      "cycleEdgeIds": [],
+      "input": "three identified 16-real-dimensional modules A plus B plus C",
+      "output": "joining triality orientation to Freudenthal source-response geometry requires a gauge-compatible carrier and reflection intertwiner",
+      "invariant": "quartic spectral mismatch discriminant",
+      "informationLoss": "generic octonionic link directions and absolute embedding choice",
+      "platform": "source-response symbolic and analogue network",
+      "protocol": "prepare paired source and dual-response coordinates, impose the Freudenthal restriction and test reflection covariance",
+      "observable": [
+        "nonlinear: quartic spectral mismatch discriminant",
+        "algebraic: critical-null inverse ray C=lambda A inverse"
+      ],
+      "detector": "bilinear response matrix, dual pairing and reflection residual",
+      "detectorSufficiency": "the quartic does not select the real corner, orientation or scale",
+      "nuisanceModel": "arbitrary normalization, source-frame shear and importing exceptional multiplication",
+      "decisionRule": "accept only a source-native pairing with a declared frame and a verified reflection intertwiner",
+      "falsifier": "promoting compatibility with an exceptional invariant to a physical E7 or E8 symmetry",
+      "status": "structural_boundary",
+      "reopenDatum": "supply and verify the missing distinction in joining triality orientation to Freudenthal source-response geometry requires a gauge-compatible carrier and reflection intertwiner",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-6/frontier_wave6_08_magic_square_triality_module_descent.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_09_triality_furey_intertwiner_boundary.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_14_freudenthal_action_comparison_and_no_join.md"
+      ]
+    },
+    {
+      "id": "G02",
+      "family": "guardrail",
+      "relationId": "QR-009",
+      "name": "memory-to-oriented-holonomy gate",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-010",
+        "label": "Two-rail reflexive closure with boundary memory"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "requires_enrichment",
+      "cycleEdgeIds": [],
+      "input": "a present selector coordinate and an independently retained response/history coordinate",
+      "output": "boundary memory can select a projective branch, but coherent quarter-turn sign still requires an oriented lift or loop direction",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in boundary memory can select a projective branch, but coherent quarter-turn sign still requires an oriented lift or loop direction",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_07_minimal_reflexive_closure_and_neutral_mode.md",
+        "corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "G03",
+      "family": "guardrail",
+      "relationId": "QR-012",
+      "name": "wall-to-coherent-holonomy gate",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-011",
+        "label": "Metastable record to wall and topology gate"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "requires_enrichment",
+      "cycleEdgeIds": [],
+      "input": "two-rail reflexive closure with a spatially coupled persistent record",
+      "output": "a wall changes holonomy only after a gapped probe bundle, an admissible loop and a coherent readout are supplied",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in a wall changes holonomy only after a gapped probe bundle, an admissible loop and a coherent readout are supplied",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_08_when_memory_becomes_a_wall_and_changes_topology.md",
+        "corpus/claims/0200-0299/274_projector_defect_clutches_to_the_fermion_two_and_stress_eight_ladder.md",
+        "corpus/claims/1500-1599/1577_the_exact_global_z3_portal_protection_produces_three_electroweak_vacua_and_a_domain_wall_gate.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "G04",
+      "family": "guardrail",
+      "relationId": "QR-018",
+      "name": "overlap-to-oriented-lift gate",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-013",
+        "label": "Two-projector invariant and oriented lift"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "requires_enrichment",
+      "cycleEdgeIds": [],
+      "input": "an ordered pair of real rank-one response projectors with optional plane orientation",
+      "output": "lifting overlap selection to signed quarter-turn transport requires an orientation tensor, coherent frame and loop record",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in lifting overlap selection to signed quarter-turn transport requires an orientation tensor, coherent frame and loop record",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_10_two_projector_invariants_and_the_oriented_feedback_boundary.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "G05",
+      "family": "guardrail",
+      "relationId": "QR-021",
+      "name": "population-to-coherence gate",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-014",
+        "label": "Three-record selector-orientation detector"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "requires_enrichment",
+      "cycleEdgeIds": [],
+      "input": "a carrier with an even selector response, an oriented branch pair and independently calibrated detector labels",
+      "output": "a reversal-odd population record is evidence for orientation but coherent interferometry remains necessary to identify quarter-turn frame holonomy",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in a reversal-odd population record is evidence for orientation but coherent interferometry remains necessary to identify quarter-turn frame holonomy",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "G06",
+      "family": "guardrail",
+      "relationId": "QR-007",
+      "name": "holonomy from hidden-state memory",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "target": {
+        "id": "QS-002",
+        "label": "D4 star Markov and detector lumping"
+      },
+      "relationType": "separates_from",
+      "cycleEdgeIds": [],
+      "input": "a gapped three-mode Hamiltonian with a cyclic rank-one projector and complementary doublet",
+      "output": "projector holonomy rotates a retained frame, whereas Markov hidden-state elimination creates memory and information loss",
+      "invariant": "hidden rate-one modes beside the visible rate-four mode",
+      "informationLoss": "two outer-difference modes",
+      "platform": "programmable three-state Markov network",
+      "protocol": "prepare resolved hidden states, repeat after detector lumping and fit both transition and memory kernels",
+      "observable": [
+        "spectral: hidden rate-one modes beside the visible rate-four mode",
+        "nonlinear: quadratic variance and cubic discriminant in waiting-time derivatives",
+        "dynamical: memory begins quadratically under centered weak breaking",
+        "statistical: zero lumped first-order Fisher information but rank-two resolved information"
+      ],
+      "detector": "time-tagged state record plus resolved-versus-lumped likelihood",
+      "detectorSufficiency": "summed detector is insufficient; two contrast faces recover the hidden tangent plane",
+      "nuisanceModel": "finite-sample bias, nonstationarity and detector dead time",
+      "decisionRule": "accept retained memory only when the lumped process fails a calibrated Markov test while the resolved model passes",
+      "falsifier": "individual readout finds no hidden contrast poles or the memory kernel fails the predicted even leading onset",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in projector holonomy rotates a retained frame, whereas Markov hidden-state elimination creates memory and information loss",
+      "sourceRefs": [
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_03_resolved_versus_lumped_d4_dynamics.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_01_hidden_elimination_memory_theorem.md"
+      ]
+    },
+    {
+      "id": "G07",
+      "family": "guardrail",
+      "relationId": "QR-010",
+      "name": "retained memory from pure-BF forgetting",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-010",
+        "label": "Two-rail reflexive closure with boundary memory"
+      },
+      "target": {
+        "id": "QS-005",
+        "label": "Pure Z3 BF descent from a family projector"
+      },
+      "relationType": "separates_from",
+      "cycleEdgeIds": [],
+      "input": "a present selector coordinate and an independently retained response/history coordinate",
+      "output": "an independently retained boundary record can distinguish projector histories that the pure Z3 BF carrier provably forgets",
+      "invariant": "universal level-three BF phase and finite topological carrier",
+      "informationLoss": "the complete projector orientation",
+      "platform": "Z3 topological-memory or qutrit gauge simulator",
+      "protocol": "encode family-projector histories, descend to the BF sector and test which order-three records survive",
+      "observable": [
+        "integral: universal level-three BF phase and finite topological carrier",
+        "none: no scar within pure BF distinguishes which projector produced the remnant"
+      ],
+      "detector": "Wilson/clock observables and preparation-history comparison",
+      "detectorSufficiency": "no pure-BF detector is sufficient for projector recovery",
+      "nuisanceModel": "ordinary qutrit phase memory, leakage and finite-size splitting",
+      "decisionRule": "accept only the topological remnant that is invariant under local deformations; do not infer erased projector orientation",
+      "falsifier": "any claimed inverse map uses massive matter, Yukawa ports or family sources and therefore is not pure BF",
+      "status": "exact_no_go",
+      "reopenDatum": "supply and verify the missing distinction in an independently retained boundary record can distinguish projector histories that the pure Z3 BF carrier provably forgets",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_07_minimal_reflexive_closure_and_neutral_mode.md",
+        "corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md",
+        "corpus/claims/1200-1299/1200_the_pure_z3_bf_carrier_forgets_the_projector_so_reflexive_closure_requires_non_topological_boundary_memory.md"
+      ]
+    },
+    {
+      "id": "G08",
+      "family": "guardrail",
+      "relationId": "QR-016",
+      "name": "determinant selection from coherent holonomy",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-012",
+        "label": "Wall-localized response determinant"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "separates_from",
+      "cycleEdgeIds": [],
+      "input": "a kink-localized response carrier with an embedding-sensitive projector",
+      "output": "the wall determinant selects projective alignment but is even under orientation reversal and therefore cannot replace coherent quarter-turn holonomy",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in the wall determinant selects projective alignment but is even under orientation reversal and therefore cannot replace coherent quarter-turn holonomy",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_09_wall_localized_response_closes_the_first_toy_loop.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "G09",
+      "family": "guardrail",
+      "relationId": "QR-024",
+      "name": "equilibrium lift selection from accumulated holonomy",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-015",
+        "label": "Wall-pseudoscalar oriented selector"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "separates_from",
+      "cycleEdgeIds": [],
+      "input": "two projective response lines plus a metastable wall orientation and helicity-sensitive bridge",
+      "output": "wall-conditioned equilibrium orientation selects a lift but does not by itself establish accumulated coherent quarter-turn holonomy",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in wall-conditioned equilibrium orientation selects a lift but does not by itself establish accumulated coherent quarter-turn holonomy",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_12_wall_pseudoscalar_closes_oriented_equilibrium_selection.md",
+        "corpus/programmes/lane-expansion/programme_lane_expansion_06_wall_reversal_flips_helicity_but_not_the_spin_summed_h2r_face_response.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "G10",
+      "family": "guardrail",
+      "relationId": "QR-027",
+      "name": "measured coefficient from universality and provenance",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-016",
+        "label": "Wall-selector coefficient provenance exhaustion"
+      },
+      "target": {
+        "id": "QS-014",
+        "label": "Three-record selector-orientation detector"
+      },
+      "relationType": "separates_from",
+      "cycleEdgeIds": [],
+      "input": "the symmetry-allowed effective wall-pseudoscalar selector and all current microscopic provenance routes",
+      "output": "an experiment may establish and measure the effective coefficient without establishing that it is universal or source-derived",
+      "invariant": "the observed odd contrast contracts by one minus twice the label-error probability",
+      "informationLoss": "the sign of the branch contrast at one-half label randomization",
+      "platform": "three-record even/odd/population experiment",
+      "protocol": "combine angle reversal, wall reversal, rate sweeps and deliberate branch-label randomization",
+      "observable": [
+        "statistical: the observed odd contrast contracts by one minus twice the label-error probability",
+        "oriented: matched plus and minus angle preparations reverse chi at fixed overlap",
+        "thermodynamic: the even equilibrium selector response survives complete odd-record erasure"
+      ],
+      "detector": "joint spin-summed, helicity-resolved and branch-population records",
+      "detectorSufficiency": "joint even, odd and population records plus deliberate label randomization are minimally sufficient",
+      "nuisanceModel": "label error, lag, hysteresis, heating and detector crosstalk",
+      "decisionRule": "accept orientation evidence only if it passes physical reversals and contracts to zero under half label randomization",
+      "falsifier": "the odd response survives complete branch-label randomization, fails physical reversals, or is absorbed by rate and detector nuisances",
+      "status": "experimental_target",
+      "reopenDatum": "supply and verify the missing distinction in an experiment may establish and measure the effective coefficient without establishing that it is universal or source-derived",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_13_lambda_provenance_exhaustion_and_reopen_gates.md",
+        "corpus/programmes/frontier/wave-7/lambda_provenance_ledger_v1.json",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md"
+      ]
+    },
+    {
+      "id": "G11",
+      "family": "guardrail",
+      "relationId": "QR-002",
+      "name": "triality-root versus Markov-state seam",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-001",
+        "label": "D4 triality root and singularity quotient"
+      },
+      "target": {
+        "id": "QS-002",
+        "label": "D4 star Markov and detector lumping"
+      },
+      "relationType": "shares_action_not_carrier",
+      "cycleEdgeIds": [],
+      "input": "D4 root lattice and D4 singularity with order-three triality",
+      "output": "both use the cyclic permutation of three outer objects, but roots, singularity cycles and Markov states are not one physical carrier",
+      "invariant": "hidden rate-one modes beside the visible rate-four mode",
+      "informationLoss": "two outer-difference modes",
+      "platform": "programmable three-state Markov network",
+      "protocol": "prepare resolved hidden states, repeat after detector lumping and fit both transition and memory kernels",
+      "observable": [
+        "spectral: hidden rate-one modes beside the visible rate-four mode",
+        "nonlinear: quadratic variance and cubic discriminant in waiting-time derivatives",
+        "dynamical: memory begins quadratically under centered weak breaking",
+        "statistical: zero lumped first-order Fisher information but rank-two resolved information"
+      ],
+      "detector": "time-tagged state record plus resolved-versus-lumped likelihood",
+      "detectorSufficiency": "summed detector is insufficient; two contrast faces recover the hidden tangent plane",
+      "nuisanceModel": "finite-sample bias, nonstationarity and detector dead time",
+      "decisionRule": "accept retained memory only when the lumped process fails a calibrated Markov test while the resolved model passes",
+      "falsifier": "individual readout finds no hidden contrast poles or the memory kernel fails the predicted even leading onset",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in both use the cyclic permutation of three outer objects, but roots, singularity cycles and Markov states are not one physical carrier",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-6/frontier_wave6_12_triality_lattice_monodromy_and_z3_discriminant.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_13_d4_singularity_quotient_and_vanishing_cycles.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_03_resolved_versus_lumped_d4_dynamics.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_01_hidden_elimination_memory_theorem.md"
+      ]
+    },
+    {
+      "id": "G12",
+      "family": "guardrail",
+      "relationId": "QR-004",
+      "name": "BF remnant versus triality-lattice seam",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-005",
+        "label": "Pure Z3 BF descent from a family projector"
+      },
+      "target": {
+        "id": "QS-001",
+        "label": "D4 triality root and singularity quotient"
+      },
+      "relationType": "shares_action_not_carrier",
+      "cycleEdgeIds": [],
+      "input": "rank-one projector orbit CP2 with charge-three Higgs embedding",
+      "output": "both retain order-three data, but pure BF forgets projector orientation while the D4 lattice retains a triality discriminant class",
+      "invariant": "long/short squared-length ratio 3 and G2 triple bond",
+      "informationLoss": "two-dimensional real triality contrast as an invariant coordinate",
+      "platform": "exact D4 lattice and singularity-monodromy computation",
+      "protocol": "enumerate the root/discriminant action and compare quotient scars under the declared triality generator",
+      "observable": [
+        "metric: long/short squared-length ratio 3 and G2 triple bond",
+        "integral: invariant-lattice discriminant and invariant-to-coinvariant cokernel Z3",
+        "geometric: A2 quotient surface with G2 vanishing-cycle intersection form"
+      ],
+      "detector": "integer matrix, orbit and discriminant-class certificate",
+      "detectorSufficiency": "topological and intersection probes see the scar; ordinary invariant coordinates do not recover the contrast orientation",
+      "nuisanceModel": "basis relabelling and confusing a shared order-three action with a shared carrier",
+      "decisionRule": "accept only invariants unchanged by admissible basis changes and reject any carrier identification not supplied by an intertwiner",
+      "falsifier": "an asserted physical mode lacks an operator whose spectrum is controlled by the vanishing cycles",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in both retain order-three data, but pure BF forgets projector orientation while the D4 lattice retains a triality discriminant class",
+      "sourceRefs": [
+        "corpus/claims/1200-1299/1200_the_pure_z3_bf_carrier_forgets_the_projector_so_reflexive_closure_requires_non_topological_boundary_memory.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_12_triality_lattice_monodromy_and_z3_discriminant.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_13_d4_singularity_quotient_and_vanishing_cycles.md"
+      ]
+    },
+    {
+      "id": "G13",
+      "family": "guardrail",
+      "relationId": "QR-013",
+      "name": "wall topology versus singularity topology seam",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-011",
+        "label": "Metastable record to wall and topology gate"
+      },
+      "target": {
+        "id": "QS-001",
+        "label": "D4 triality root and singularity quotient"
+      },
+      "relationType": "shares_action_not_carrier",
+      "cycleEdgeIds": [],
+      "input": "two-rail reflexive closure with a spatially coupled persistent record",
+      "output": "both use topology left by a quotient or defect, but a scalar wall and a D4 triality singularity are distinct physical carriers",
+      "invariant": "long/short squared-length ratio 3 and G2 triple bond",
+      "informationLoss": "two-dimensional real triality contrast as an invariant coordinate",
+      "platform": "exact D4 lattice and singularity-monodromy computation",
+      "protocol": "enumerate the root/discriminant action and compare quotient scars under the declared triality generator",
+      "observable": [
+        "metric: long/short squared-length ratio 3 and G2 triple bond",
+        "integral: invariant-lattice discriminant and invariant-to-coinvariant cokernel Z3",
+        "geometric: A2 quotient surface with G2 vanishing-cycle intersection form"
+      ],
+      "detector": "integer matrix, orbit and discriminant-class certificate",
+      "detectorSufficiency": "topological and intersection probes see the scar; ordinary invariant coordinates do not recover the contrast orientation",
+      "nuisanceModel": "basis relabelling and confusing a shared order-three action with a shared carrier",
+      "decisionRule": "accept only invariants unchanged by admissible basis changes and reject any carrier identification not supplied by an intertwiner",
+      "falsifier": "an asserted physical mode lacks an operator whose spectrum is controlled by the vanishing cycles",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in both use topology left by a quotient or defect, but a scalar wall and a D4 triality singularity are distinct physical carriers",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_08_when_memory_becomes_a_wall_and_changes_topology.md",
+        "corpus/claims/0200-0299/274_projector_defect_clutches_to_the_fermion_two_and_stress_eight_ladder.md",
+        "corpus/claims/1500-1599/1577_the_exact_global_z3_portal_protection_produces_three_electroweak_vacua_and_a_domain_wall_gate.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_12_triality_lattice_monodromy_and_z3_discriminant.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_13_d4_singularity_quotient_and_vanishing_cycles.md"
+      ]
+    },
+    {
+      "id": "G14",
+      "family": "guardrail",
+      "relationId": "QR-003",
+      "name": "selector index is not the G2 triple bond",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-004",
+        "label": "Finite, G2 and Clifford conditional expectations"
+      },
+      "target": {
+        "id": "QS-001",
+        "label": "D4 triality root and singularity quotient"
+      },
+      "relationType": "rules_out_identification",
+      "cycleEdgeIds": [],
+      "input": "complexified 16-dimensional operator carrier",
+      "output": "the actual selector indices 8, 50 and 64 rule out identifying the G2 triple bond with the working selector index",
+      "invariant": "long/short squared-length ratio 3 and G2 triple bond",
+      "informationLoss": "two-dimensional real triality contrast as an invariant coordinate",
+      "platform": "exact D4 lattice and singularity-monodromy computation",
+      "protocol": "enumerate the root/discriminant action and compare quotient scars under the declared triality generator",
+      "observable": [
+        "metric: long/short squared-length ratio 3 and G2 triple bond",
+        "integral: invariant-lattice discriminant and invariant-to-coinvariant cokernel Z3",
+        "geometric: A2 quotient surface with G2 vanishing-cycle intersection form"
+      ],
+      "detector": "integer matrix, orbit and discriminant-class certificate",
+      "detectorSufficiency": "topological and intersection probes see the scar; ordinary invariant coordinates do not recover the contrast orientation",
+      "nuisanceModel": "basis relabelling and confusing a shared order-three action with a shared carrier",
+      "decisionRule": "accept only invariants unchanged by admissible basis changes and reject any carrier identification not supplied by an intertwiner",
+      "falsifier": "an asserted physical mode lacks an operator whose spectrum is controlled by the vanishing cycles",
+      "status": "exact",
+      "reopenDatum": "supply and verify the missing distinction in the actual selector indices 8, 50 and 64 rule out identifying the G2 triple bond with the working selector index",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-6/frontier_wave6_10_selector_inclusion_index_comparison.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_12_triality_lattice_monodromy_and_z3_discriminant.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_13_d4_singularity_quotient_and_vanishing_cycles.md"
+      ]
+    },
+    {
+      "id": "G15",
+      "family": "guardrail",
+      "relationId": "QR-026",
+      "name": "current Peirce line is not the required orientation carrier",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-016",
+        "label": "Wall-selector coefficient provenance exhaustion"
+      },
+      "target": {
+        "id": "QS-003",
+        "label": "Magic-square triality module descent"
+      },
+      "relationType": "rules_out_identification",
+      "cycleEdgeIds": [],
+      "input": "the symmetry-allowed effective wall-pseudoscalar selector and all current microscopic provenance routes",
+      "output": "the current Peirce line cannot be identified with the required sterile orientation carrier because the physical linear Hom vanishes and the quadratic map collapses the wall pair",
+      "invariant": "16-dimensional singlet plus 32-dimensional contrast decomposition",
+      "informationLoss": "32-real-dimensional sheet-contrast sector from the quotient coordinate",
+      "platform": "computer-algebra representation audit",
+      "protocol": "construct the declared triality, Peirce and source-response modules and solve the equivariant Hom and commutant equations",
+      "observable": [
+        "representation: 16-dimensional singlet plus 32-dimensional contrast decomposition",
+        "oriented: canonical complex structure on the contrast sector reversed by sheet reflection"
+      ],
+      "detector": "exact rank, kernel and intertwiner certificate",
+      "detectorSufficiency": "orientation requires identifying sheet reflection with a physical conjugation",
+      "nuisanceModel": "complexification, forgotten real form and accidental basis-dependent isomorphism",
+      "decisionRule": "accept a bridge only when a nonzero map has the required gauge, reflection and carrier covariance",
+      "falsifier": "counting the three overlapping modules as three independent generations",
+      "status": "structural_boundary",
+      "reopenDatum": "supply and verify the missing distinction in the current Peirce line cannot be identified with the required sterile orientation carrier because the physical linear Hom vanishes and the quadratic map collapses the wall pair",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_13_lambda_provenance_exhaustion_and_reopen_gates.md",
+        "corpus/programmes/frontier/wave-7/lambda_provenance_ledger_v1.json",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_08_magic_square_triality_module_descent.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_09_triality_furey_intertwiner_boundary.md"
+      ]
+    },
+    {
+      "id": "F01",
+      "family": "return",
+      "relationId": "QR-009",
+      "name": "selection-memory-holonomy return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-010",
+        "label": "Two-rail reflexive closure with boundary memory"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "requires_enrichment",
+      "cycleEdgeIds": [
+        "QR-009",
+        "QR-008",
+        "QR-006"
+      ],
+      "input": "a present selector coordinate and an independently retained response/history coordinate",
+      "output": "boundary memory can select a projective branch, but coherent quarter-turn sign still requires an oriented lift or loop direction",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_07_minimal_reflexive_closure_and_neutral_mode.md",
+        "corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "F02",
+      "family": "return",
+      "relationId": "QR-010",
+      "name": "memory-BF-triality return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-010",
+        "label": "Two-rail reflexive closure with boundary memory"
+      },
+      "target": {
+        "id": "QS-005",
+        "label": "Pure Z3 BF descent from a family projector"
+      },
+      "relationType": "separates_from",
+      "cycleEdgeIds": [
+        "QR-010",
+        "QR-008",
+        "QR-006",
+        "QR-007",
+        "QR-002",
+        "QR-004"
+      ],
+      "input": "a present selector coordinate and an independently retained response/history coordinate",
+      "output": "an independently retained boundary record can distinguish projector histories that the pure Z3 BF carrier provably forgets",
+      "invariant": "universal level-three BF phase and finite topological carrier",
+      "informationLoss": "the complete projector orientation",
+      "platform": "Z3 topological-memory or qutrit gauge simulator",
+      "protocol": "encode family-projector histories, descend to the BF sector and test which order-three records survive",
+      "observable": [
+        "integral: universal level-three BF phase and finite topological carrier",
+        "none: no scar within pure BF distinguishes which projector produced the remnant"
+      ],
+      "detector": "Wilson/clock observables and preparation-history comparison",
+      "detectorSufficiency": "no pure-BF detector is sufficient for projector recovery",
+      "nuisanceModel": "ordinary qutrit phase memory, leakage and finite-size splitting",
+      "decisionRule": "accept only the topological remnant that is invariant under local deformations; do not infer erased projector orientation",
+      "falsifier": "any claimed inverse map uses massive matter, Yukawa ports or family sources and therefore is not pure BF",
+      "status": "exact_no_go",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_07_minimal_reflexive_closure_and_neutral_mode.md",
+        "corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md",
+        "corpus/claims/1200-1299/1200_the_pure_z3_bf_carrier_forgets_the_projector_so_reflexive_closure_requires_non_topological_boundary_memory.md"
+      ]
+    },
+    {
+      "id": "F03",
+      "family": "return",
+      "relationId": "QR-012",
+      "name": "wall-holonomy enrichment return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-011",
+        "label": "Metastable record to wall and topology gate"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "requires_enrichment",
+      "cycleEdgeIds": [
+        "QR-012",
+        "QR-011",
+        "QR-008",
+        "QR-006"
+      ],
+      "input": "two-rail reflexive closure with a spatially coupled persistent record",
+      "output": "a wall changes holonomy only after a gapped probe bundle, an admissible loop and a coherent readout are supplied",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_08_when_memory_becomes_a_wall_and_changes_topology.md",
+        "corpus/claims/0200-0299/274_projector_defect_clutches_to_the_fermion_two_and_stress_eight_ladder.md",
+        "corpus/claims/1500-1599/1577_the_exact_global_z3_portal_protection_produces_three_electroweak_vacua_and_a_domain_wall_gate.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "F04",
+      "family": "return",
+      "relationId": "QR-013",
+      "name": "wall-triality carrier-separation return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-011",
+        "label": "Metastable record to wall and topology gate"
+      },
+      "target": {
+        "id": "QS-001",
+        "label": "D4 triality root and singularity quotient"
+      },
+      "relationType": "shares_action_not_carrier",
+      "cycleEdgeIds": [
+        "QR-013",
+        "QR-011",
+        "QR-008",
+        "QR-006",
+        "QR-007",
+        "QR-002"
+      ],
+      "input": "two-rail reflexive closure with a spatially coupled persistent record",
+      "output": "both use topology left by a quotient or defect, but a scalar wall and a D4 triality singularity are distinct physical carriers",
+      "invariant": "long/short squared-length ratio 3 and G2 triple bond",
+      "informationLoss": "two-dimensional real triality contrast as an invariant coordinate",
+      "platform": "exact D4 lattice and singularity-monodromy computation",
+      "protocol": "enumerate the root/discriminant action and compare quotient scars under the declared triality generator",
+      "observable": [
+        "metric: long/short squared-length ratio 3 and G2 triple bond",
+        "integral: invariant-lattice discriminant and invariant-to-coinvariant cokernel Z3",
+        "geometric: A2 quotient surface with G2 vanishing-cycle intersection form"
+      ],
+      "detector": "integer matrix, orbit and discriminant-class certificate",
+      "detectorSufficiency": "topological and intersection probes see the scar; ordinary invariant coordinates do not recover the contrast orientation",
+      "nuisanceModel": "basis relabelling and confusing a shared order-three action with a shared carrier",
+      "decisionRule": "accept only invariants unchanged by admissible basis changes and reject any carrier identification not supplied by an intertwiner",
+      "falsifier": "an asserted physical mode lacks an operator whose spectrum is controlled by the vanishing cycles",
+      "status": "exact",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_08_when_memory_becomes_a_wall_and_changes_topology.md",
+        "corpus/claims/0200-0299/274_projector_defect_clutches_to_the_fermion_two_and_stress_eight_ladder.md",
+        "corpus/claims/1500-1599/1577_the_exact_global_z3_portal_protection_produces_three_electroweak_vacua_and_a_domain_wall_gate.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_12_triality_lattice_monodromy_and_z3_discriminant.md",
+        "corpus/programmes/frontier/wave-6/frontier_wave6_13_d4_singularity_quotient_and_vanishing_cycles.md"
+      ]
+    },
+    {
+      "id": "F05",
+      "family": "return",
+      "relationId": "QR-015",
+      "name": "wall-response feedback return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-012",
+        "label": "Wall-localized response determinant"
+      },
+      "target": {
+        "id": "QS-010",
+        "label": "Two-rail reflexive closure with boundary memory"
+      },
+      "relationType": "instantiates",
+      "cycleEdgeIds": [
+        "QR-015",
+        "QR-014",
+        "QR-011"
+      ],
+      "input": "a kink-localized response carrier with an embedding-sensitive projector",
+      "output": "the positive fluctuation determinant supplies a concrete anchored Hessian for two-rail reflexive closure",
+      "invariant": "unanchored eigenvalues 1 and r minus mu separate common neutrality from relative contraction",
+      "informationLoss": "relative rail mismatch, followed by the neutral common displacement when the record is independent",
+      "platform": "two-rail feedback controller with persistent memory",
+      "protocol": "prepare identical present projectors with distinct stored histories and measure convergence before and after anchoring",
+      "observable": [
+        "dynamical: unanchored eigenvalues 1 and r minus mu separate common neutrality from relative contraction",
+        "geometric: the unanchored fixed set is the diagonal p equals y rather than a unique point",
+        "oriented: an additional lift bit or loop direction remains necessary for quarter-turn sign"
+      ],
+      "detector": "time-resolved rail coordinates and fitted tangent eigenvalues",
+      "detectorSufficiency": "two preparations with the same present projector but different stored records are required to distinguish genuine memory from a renamed selector",
+      "nuisanceModel": "controller latency, detector memory and common-mode drift",
+      "decisionRule": "accept an independent rail only when history predicts later response conditional on the present projector",
+      "falsifier": "if future response is conditionally independent of stored history given the present projector, the extra rail is redundant",
+      "status": "exact",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_09_wall_localized_response_closes_the_first_toy_loop.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_07_minimal_reflexive_closure_and_neutral_mode.md",
+        "corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md"
+      ]
+    },
+    {
+      "id": "F06",
+      "family": "return",
+      "relationId": "QR-016",
+      "name": "selection-holonomy separation return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-012",
+        "label": "Wall-localized response determinant"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "separates_from",
+      "cycleEdgeIds": [
+        "QR-016",
+        "QR-014",
+        "QR-011",
+        "QR-008",
+        "QR-006"
+      ],
+      "input": "a kink-localized response carrier with an embedding-sensitive projector",
+      "output": "the wall determinant selects projective alignment but is even under orientation reversal and therefore cannot replace coherent quarter-turn holonomy",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_09_wall_localized_response_closes_the_first_toy_loop.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "F07",
+      "family": "return",
+      "relationId": "QR-018",
+      "name": "overlap-orientation-lift return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-013",
+        "label": "Two-projector invariant and oriented lift"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "requires_enrichment",
+      "cycleEdgeIds": [
+        "QR-018",
+        "QR-017",
+        "QR-014",
+        "QR-011",
+        "QR-008",
+        "QR-006"
+      ],
+      "input": "an ordered pair of real rank-one response projectors with optional plane orientation",
+      "output": "lifting overlap selection to signed quarter-turn transport requires an orientation tensor, coherent frame and loop record",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_10_two_projector_invariants_and_the_oriented_feedback_boundary.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "F08",
+      "family": "return",
+      "relationId": "QR-020",
+      "name": "detector-folding closure return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-014",
+        "label": "Three-record selector-orientation detector"
+      },
+      "target": {
+        "id": "QS-006",
+        "label": "Detector folding of a CP-sensitive latent distribution"
+      },
+      "relationType": "instantiates",
+      "cycleEdgeIds": [
+        "QR-020",
+        "QR-019",
+        "QR-017",
+        "QR-014",
+        "QR-011",
+        "QR-008",
+        "QR-006",
+        "QR-007",
+        "QR-001"
+      ],
+      "input": "a carrier with an even selector response, an oriented branch pair and independently calibrated detector labels",
+      "output": "symmetric branch-label exchange is an exact detector folding that erases the orientation-odd score at one-half mixing",
+      "invariant": "information loss equals expected conditional score variance",
+      "informationLoss": "score components varying inside detector fibers",
+      "platform": "label-randomized detector-folding experiment",
+      "protocol": "inject known latent CP-odd contrasts and sweep the symmetric mislabelling probability through one half",
+      "observable": [
+        "statistical: information loss equals expected conditional score variance",
+        "oriented: a reversed or signed detector face can restore an erased odd score"
+      ],
+      "detector": "calibrated confusion matrix and observed odd score",
+      "detectorSufficiency": "equality in Fisher data processing holds exactly when the latent score is record-measurable",
+      "nuisanceModel": "asymmetric label errors, drift and correlated readout noise",
+      "decisionRule": "accept the folding law only if the odd score follows one-minus-two-epsilon and vanishes at half mixing",
+      "falsifier": "claiming latent sensitivity after the response makes the score constant zero",
+      "status": "exact",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md",
+        "corpus/claims/0700-0799/739_detector_folding_is_a_positive_markov_compression_that_can_only_contract_cp_fisher_information.md"
+      ]
+    },
+    {
+      "id": "F09",
+      "family": "return",
+      "relationId": "QR-021",
+      "name": "population-coherence boundary return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-014",
+        "label": "Three-record selector-orientation detector"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "requires_enrichment",
+      "cycleEdgeIds": [
+        "QR-021",
+        "QR-019",
+        "QR-017",
+        "QR-014",
+        "QR-011",
+        "QR-008",
+        "QR-006"
+      ],
+      "input": "a carrier with an even selector response, an oriented branch pair and independently calibrated detector labels",
+      "output": "a reversal-odd population record is evidence for orientation but coherent interferometry remains necessary to identify quarter-turn frame holonomy",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "F10",
+      "family": "return",
+      "relationId": "QR-023",
+      "name": "wall-orientation detector return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-015",
+        "label": "Wall-pseudoscalar oriented selector"
+      },
+      "target": {
+        "id": "QS-014",
+        "label": "Three-record selector-orientation detector"
+      },
+      "relationType": "instantiates",
+      "cycleEdgeIds": [
+        "QR-023",
+        "QR-022",
+        "QR-019"
+      ],
+      "input": "two projective response lines plus a metastable wall orientation and helicity-sensitive bridge",
+      "output": "spin-summed and helicity-resolved wall responses realize the three-record even-odd-population separation",
+      "invariant": "the observed odd contrast contracts by one minus twice the label-error probability",
+      "informationLoss": "the sign of the branch contrast at one-half label randomization",
+      "platform": "three-record even/odd/population experiment",
+      "protocol": "combine angle reversal, wall reversal, rate sweeps and deliberate branch-label randomization",
+      "observable": [
+        "statistical: the observed odd contrast contracts by one minus twice the label-error probability",
+        "oriented: matched plus and minus angle preparations reverse chi at fixed overlap",
+        "thermodynamic: the even equilibrium selector response survives complete odd-record erasure"
+      ],
+      "detector": "joint spin-summed, helicity-resolved and branch-population records",
+      "detectorSufficiency": "joint even, odd and population records plus deliberate label randomization are minimally sufficient",
+      "nuisanceModel": "label error, lag, hysteresis, heating and detector crosstalk",
+      "decisionRule": "accept orientation evidence only if it passes physical reversals and contracts to zero under half label randomization",
+      "falsifier": "the odd response survives complete branch-label randomization, fails physical reversals, or is absorbed by rate and detector nuisances",
+      "status": "experimental_target",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_12_wall_pseudoscalar_closes_oriented_equilibrium_selection.md",
+        "corpus/programmes/lane-expansion/programme_lane_expansion_06_wall_reversal_flips_helicity_but_not_the_spin_summed_h2r_face_response.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md"
+      ]
+    },
+    {
+      "id": "F11",
+      "family": "return",
+      "relationId": "QR-024",
+      "name": "equilibrium-lift-holonomy return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-015",
+        "label": "Wall-pseudoscalar oriented selector"
+      },
+      "target": {
+        "id": "QS-009",
+        "label": "Moving-projector quarter-turn holonomy"
+      },
+      "relationType": "separates_from",
+      "cycleEdgeIds": [
+        "QR-024",
+        "QR-022",
+        "QR-017",
+        "QR-014",
+        "QR-011",
+        "QR-008",
+        "QR-006"
+      ],
+      "input": "two projective response lines plus a metastable wall orientation and helicity-sensitive bridge",
+      "output": "wall-conditioned equilibrium orientation selects a lift but does not by itself establish accumulated coherent quarter-turn holonomy",
+      "invariant": "loop reversal reverses the coherent quarter turn",
+      "informationLoss": "projector-only observation forgets the internal frame rotation and central phase",
+      "platform": "adiabatic three-mode coherent interferometer",
+      "protocol": "drive the registered projector loop in both orientations and tomograph the returning doublet frame",
+      "observable": [
+        "oriented: loop reversal reverses the coherent quarter turn",
+        "geometric: universal connection [P,dP] and solid-angle holonomy",
+        "spectral: the projector closes with a nonclosing gap while the doublet frame returns as J"
+      ],
+      "detector": "phase-referenced two-mode interferometry plus projector tomography",
+      "detectorSufficiency": "projector tomography is insufficient; coherent doublet interferometry is required",
+      "nuisanceModel": "dynamical phase, nonadiabatic leakage and path miscalibration",
+      "decisionRule": "accept quarter-turn holonomy only when the projector returns, the gap remains open and loop reversal inverts the frame turn",
+      "falsifier": "interpreting a returned projector as a returned coherent frame or failing loop-orientation reversal",
+      "status": "exact",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_12_wall_pseudoscalar_closes_oriented_equilibrium_selection.md",
+        "corpus/programmes/lane-expansion/programme_lane_expansion_06_wall_reversal_flips_helicity_but_not_the_spin_summed_h2r_face_response.md",
+        "corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md",
+        "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md"
+      ]
+    },
+    {
+      "id": "F12",
+      "family": "return",
+      "relationId": "QR-027",
+      "name": "measurement-provenance return",
+      "carrier": "science-programme quotient-scar graph with an explicitly named target platform",
+      "source": {
+        "id": "QS-016",
+        "label": "Wall-selector coefficient provenance exhaustion"
+      },
+      "target": {
+        "id": "QS-014",
+        "label": "Three-record selector-orientation detector"
+      },
+      "relationType": "separates_from",
+      "cycleEdgeIds": [
+        "QR-027",
+        "QR-025",
+        "QR-022",
+        "QR-019"
+      ],
+      "input": "the symmetry-allowed effective wall-pseudoscalar selector and all current microscopic provenance routes",
+      "output": "an experiment may establish and measure the effective coefficient without establishing that it is universal or source-derived",
+      "invariant": "the observed odd contrast contracts by one minus twice the label-error probability",
+      "informationLoss": "the sign of the branch contrast at one-half label randomization",
+      "platform": "three-record even/odd/population experiment",
+      "protocol": "combine angle reversal, wall reversal, rate sweeps and deliberate branch-label randomization",
+      "observable": [
+        "statistical: the observed odd contrast contracts by one minus twice the label-error probability",
+        "oriented: matched plus and minus angle preparations reverse chi at fixed overlap",
+        "thermodynamic: the even equilibrium selector response survives complete odd-record erasure"
+      ],
+      "detector": "joint spin-summed, helicity-resolved and branch-population records",
+      "detectorSufficiency": "joint even, odd and population records plus deliberate label randomization are minimally sufficient",
+      "nuisanceModel": "label error, lag, hysteresis, heating and detector crosstalk",
+      "decisionRule": "accept orientation evidence only if it passes physical reversals and contracts to zero under half label randomization",
+      "falsifier": "the odd response survives complete branch-label randomization, fails physical reversals, or is absorbed by rate and detector nuisances",
+      "status": "experimental_target",
+      "reopenDatum": "co-realize every cycle leg on one calibrated carrier and retain the stated invariant after detector folding",
+      "sourceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_13_lambda_provenance_exhaustion_and_reopen_gates.md",
+        "corpus/programmes/frontier/wave-7/lambda_provenance_ledger_v1.json",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_11_three_record_experiment_for_selection_orientation_and_population.md"
+      ]
+    }
+  ]
+}
