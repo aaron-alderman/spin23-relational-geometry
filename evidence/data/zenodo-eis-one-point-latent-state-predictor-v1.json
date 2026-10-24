@@ -1,0 +1,4602 @@
+{
+  "protocol": "zenodo-eis-one-point-latent-state-predictor/1",
+  "date": "2026-10-25",
+  "source": {
+    "doi": "10.5281/zenodo.15422339",
+    "cells": 54
+  },
+  "preregistration": {
+    "targetEvaluationValuesUsedForPrediction": false,
+    "targetCalibrationRecord": "one complex impedance at the fixed 10000 Hz source row",
+    "donorModel": "Euclidean k-nearest neighbours in donor-standardized calibration-plane coordinates; mean of neighbour passive parameter vectors",
+    "hyperparameterSelection": "for each outer target, choose k by mean cellwise mean relative error in leave-one-donor-out validation inside the other 53 cells",
+    "candidateK": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      13,
+      17,
+      25,
+      35
+    ],
+    "evaluationRows": "source row index modulo 3 equals 1",
+    "thresholds": {
+      "heldOutMedianRelativeErrorMaximum": 0.05,
+      "heldOutMaximumRelativeErrorMaximum": 0.2
+    }
+  },
+  "population": {
+    "passedCells": 53,
+    "failedCells": 1,
+    "passFraction": 0.9814814814814815,
+    "medianCellMedianRelativeError": 0.016275823916404912,
+    "worstCellMedianRelativeError": 0.0525003953323518,
+    "medianCellMaximumRelativeError": 0.03682351975978234,
+    "worstCellMaximumRelativeError": 0.0578425760402992,
+    "worstMedianCell": "ID07",
+    "worstMaximumCell": "ID07",
+    "selectedKCounts": {
+      "1": 0,
+      "3": 33,
+      "5": 0,
+      "7": 8,
+      "9": 13,
+      "13": 0,
+      "17": 0,
+      "25": 0,
+      "35": 0
+    }
+  },
+  "cells": [
+    {
+      "id": "ID01",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.01439659378957,
+          "im": 0.00577427260577679
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018532834203497297,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01863468350961595,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018734677119064166,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018869934356829796,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01910549152920215,
+          "medianCellMeanRelativeError": 0.01775432126148203
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019241182731517977,
+          "medianCellMeanRelativeError": 0.01781727932140087
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019337318045612624,
+          "medianCellMeanRelativeError": 0.018777458449992165
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020066160524009904,
+          "medianCellMeanRelativeError": 0.01829850980058924
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02056263823661932,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID25",
+        "ID26",
+        "ID44"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013652942177123156,
+        "seriesInductanceH": 9.639063983081324e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0001461371571627652,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002368949678430803,
+        "debyeResistanceAt1000HzOhm": 0.0017595885775813999,
+        "warburgOhmSqrtRadPerSecond": 0.0013951871904804422
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00024175954718621482,
+        "medianRelativeError": 0.008295388392461422,
+        "meanRelativeError": 0.012562594472421893,
+        "maximumRelativeError": 0.03850640002813842
+      },
+      "passed": true
+    },
+    {
+      "id": "ID02",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0145269109634683,
+          "im": 0.00583251006901264
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018081884366299466,
+          "medianCellMeanRelativeError": 0.01541452231139136
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018268055610756354,
+          "medianCellMeanRelativeError": 0.016302520682333555
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01831283580594998,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018566010771531062,
+          "medianCellMeanRelativeError": 0.016683798836523787
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01882130530064884,
+          "medianCellMeanRelativeError": 0.016996880185650636
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018899765744648942,
+          "medianCellMeanRelativeError": 0.01755398365789704
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019022495360091866,
+          "medianCellMeanRelativeError": 0.018232142853118985
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.0197393227479903,
+          "medianCellMeanRelativeError": 0.01792730837224994
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020450828393133114,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID50",
+        "ID41",
+        "ID52"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01370674778446225,
+        "seriesInductanceH": 9.699169508293878e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00011369529782577518,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0020632390199644365,
+        "debyeResistanceAt1000HzOhm": 0.001717056876935924,
+        "warburgOhmSqrtRadPerSecond": 0.0013723557731049362
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0007072728330802933,
+        "medianRelativeError": 0.04329483594022441,
+        "meanRelativeError": 0.036363334429366075,
+        "maximumRelativeError": 0.04537402098266113
+      },
+      "passed": true
+    },
+    {
+      "id": "ID03",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141171411378309,
+          "im": 0.00563794746994972
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01848071203450292,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018848759290087207,
+          "medianCellMeanRelativeError": 0.01686355824521013
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.019005131554976993,
+          "medianCellMeanRelativeError": 0.017153757688702736
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019039212142895542,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019093039355177116,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01929394877303358,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.01940159053269103,
+          "medianCellMeanRelativeError": 0.018795764249057843
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019934940233994707,
+          "medianCellMeanRelativeError": 0.0170249037671007
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01994053707394782,
+          "medianCellMeanRelativeError": 0.017927308372249925
+        }
+      ],
+      "neighbours": [
+        "ID38",
+        "ID30",
+        "ID28"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013416262290400468,
+        "seriesInductanceH": 9.411416813749873e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00001660164338985295,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.000008394807604851295,
+        "debyeResistanceAt100HzOhm": 0.0025712894380789495,
+        "debyeResistanceAt1000HzOhm": 0.0019091159319048494,
+        "warburgOhmSqrtRadPerSecond": 0.0014959006931266252
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002364616958501361,
+        "medianRelativeError": 0.008804725856186158,
+        "meanRelativeError": 0.012511380969978727,
+        "maximumRelativeError": 0.03698801887062149
+      },
+      "passed": true
+    },
+    {
+      "id": "ID04",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0139687060145661,
+          "im": 0.00557741895318031
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01875823872048745,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018846101427955748,
+          "medianCellMeanRelativeError": 0.01686355824521013
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018939196074167903,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.0190920651768249,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01918884948516865,
+          "medianCellMeanRelativeError": 0.018178050837291182
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01919902357539086,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019338507311730466,
+          "medianCellMeanRelativeError": 0.018903419979148028
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01989475405197334,
+          "medianCellMeanRelativeError": 0.01829850980058924
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020489098923741414,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID33",
+        "ID09",
+        "ID10"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013350131889531042,
+        "seriesInductanceH": 9.392443441733773e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000009461037806578624,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000011007503138959213,
+        "debyeResistanceAt100HzOhm": 0.0028758832441474354,
+        "debyeResistanceAt1000HzOhm": 0.0019430584865775518,
+        "warburgOhmSqrtRadPerSecond": 0.0015121413107664031
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021102032214511063,
+        "medianRelativeError": 0.008473097435549054,
+        "meanRelativeError": 0.011017965635102314,
+        "maximumRelativeError": 0.032741545043047396
+      },
+      "passed": true
+    },
+    {
+      "id": "ID05",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0139914889587089,
+          "im": 0.00572494789958
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.0182090936322839,
+          "medianCellMeanRelativeError": 0.01541452231139136
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01872439264739419,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018738276603831993,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018786836304460368,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01906595290598048,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019090555054987513,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019375097162010285,
+          "medianCellMeanRelativeError": 0.01885810389254098
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019783677701075197,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.02006373440696198,
+          "medianCellMeanRelativeError": 0.01793340725797958
+        }
+      ],
+      "neighbours": [
+        "ID34",
+        "ID21",
+        "ID54"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013336606718357714,
+        "seriesInductanceH": 9.5777618148657e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005581607871137218,
+        "debyeResistanceAt1HzOhm": 0.0000046726651796538046,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002406745583904732,
+        "debyeResistanceAt1000HzOhm": 0.0018531200971913955,
+        "warburgOhmSqrtRadPerSecond": 0.0014286889938497167
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003408934577596713,
+        "medianRelativeError": 0.019448043480099497,
+        "meanRelativeError": 0.019318255541095484,
+        "maximumRelativeError": 0.034522986546545294
+      },
+      "passed": true
+    },
+    {
+      "id": "ID06",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140571425436065,
+          "im": 0.00567731261253357
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01866221351773963,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018848943949490906,
+          "medianCellMeanRelativeError": 0.016227104902658822
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018866687186114974,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018924031532690257,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019007906627734418,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019052389633543134,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.01921060885826029,
+          "medianCellMeanRelativeError": 0.018639412678843868
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019965636999481413,
+          "medianCellMeanRelativeError": 0.0177005867562522
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020096623213900867,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID18",
+        "ID14",
+        "ID28"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013404116689510902,
+        "seriesInductanceH": 9.44782092148393e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000018837642628465672,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.000008394807604851295,
+        "debyeResistanceAt100HzOhm": 0.00264233303205582,
+        "debyeResistanceAt1000HzOhm": 0.001920015000509512,
+        "warburgOhmSqrtRadPerSecond": 0.0014868960785830072
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00026627360259769524,
+        "medianRelativeError": 0.01237571277727519,
+        "meanRelativeError": 0.014769628165244197,
+        "maximumRelativeError": 0.03446883638906642
+      },
+      "passed": true
+    },
+    {
+      "id": "ID07",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0147200663341209,
+          "im": 0.00582759827375412
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018019855959451908,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018067741339329254,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018185353545908896,
+          "medianCellMeanRelativeError": 0.016744516601014305
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.0182226317970222,
+          "medianCellMeanRelativeError": 0.016683798836523787
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018393296503753025,
+          "medianCellMeanRelativeError": 0.017750451468724338
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018482270410576436,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.018656664255812756,
+          "medianCellMeanRelativeError": 0.018858103892540914
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019333011270582418,
+          "medianCellMeanRelativeError": 0.017687754212576488
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02005588035121467,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID02",
+        "ID50",
+        "ID41"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013751533476366507,
+        "seriesInductanceH": 9.704210105620589e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00008436411778782453,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002292898829984687,
+        "debyeResistanceAt1000HzOhm": 0.001766401030526235,
+        "warburgOhmSqrtRadPerSecond": 0.0014131200378897826
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0009049487431219833,
+        "medianRelativeError": 0.0525003953323518,
+        "meanRelativeError": 0.04524332059152971,
+        "maximumRelativeError": 0.0578425760402992
+      },
+      "passed": false
+    },
+    {
+      "id": "ID08",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140207101358101,
+          "im": 0.00547122769057751
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 7,
+      "nestedValidation": [
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018503908552523613,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.0188115821996349,
+          "medianCellMeanRelativeError": 0.016700698921228243
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018836319960048496,
+          "medianCellMeanRelativeError": 0.01727303408711316
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01893548565574366,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019034762680323804,
+          "medianCellMeanRelativeError": 0.01755398365789704
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019131159736971187,
+          "medianCellMeanRelativeError": 0.018903419979148024
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01913829038269157,
+          "medianCellMeanRelativeError": 0.018178050837291182
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.01955309360663013,
+          "medianCellMeanRelativeError": 0.016541561844728093
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019723395463859244,
+          "medianCellMeanRelativeError": 0.01829850980058924
+        }
+      ],
+      "neighbours": [
+        "ID33",
+        "ID04",
+        "ID09",
+        "ID03",
+        "ID30",
+        "ID10",
+        "ID28"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01338281539524271,
+        "seriesInductanceH": 9.395863109877743e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000007106466549158881,
+        "debyeResistanceAt1HzOhm": 0.0000013901810869093308,
+        "debyeResistanceAt10HzOhm": 0.000013815857428498837,
+        "debyeResistanceAt100HzOhm": 0.002795749999173877,
+        "debyeResistanceAt1000HzOhm": 0.00191865867149013,
+        "warburgOhmSqrtRadPerSecond": 0.0015154817913258596
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00027292740434893374,
+        "medianRelativeError": 0.01335705246069836,
+        "meanRelativeError": 0.015256862942174638,
+        "maximumRelativeError": 0.03320561203487403
+      },
+      "passed": true
+    },
+    {
+      "id": "ID09",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140263297362253,
+          "im": 0.00564014725387096
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01840121810669504,
+          "medianCellMeanRelativeError": 0.016846411683096692
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018775463837805994,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018800730122977578,
+          "medianCellMeanRelativeError": 0.016476563590473406
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018891554924120844,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019083055794456436,
+          "medianCellMeanRelativeError": 0.01753668769328338
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01910166156438533,
+          "medianCellMeanRelativeError": 0.017967641705973425
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019131336405358412,
+          "medianCellMeanRelativeError": 0.018442260270740272
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01977330325327711,
+          "medianCellMeanRelativeError": 0.017847549127529803
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02008160984771206,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID18",
+        "ID30",
+        "ID28"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013402522362923039,
+        "seriesInductanceH": 9.416914348962213e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000018837642628465672,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.000008394807604851295,
+        "debyeResistanceAt100HzOhm": 0.0026107194691797077,
+        "debyeResistanceAt1000HzOhm": 0.001912426392530442,
+        "warburgOhmSqrtRadPerSecond": 0.0014962174408215151
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003776655327783036,
+        "medianRelativeError": 0.02142878181002225,
+        "meanRelativeError": 0.02102979152777747,
+        "maximumRelativeError": 0.03317266970095724
+      },
+      "passed": true
+    },
+    {
+      "id": "ID10",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.013903432409279,
+          "im": 0.005644166842103
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018437592402025162,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018765039348861395,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018773285259448987,
+          "medianCellMeanRelativeError": 0.01686355824521013
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019005817499145157,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019029422032573982,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01909175770537646,
+          "medianCellMeanRelativeError": 0.017750451468724386
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.01921025362015253,
+          "medianCellMeanRelativeError": 0.018409563075369926
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01992401467902339,
+          "medianCellMeanRelativeError": 0.01771535338497547
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02024457775129033,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID09",
+        "ID18",
+        "ID04"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013372313869832217,
+        "seriesInductanceH": 9.399862569875072e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000011716925153673576,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000018399122014860775,
+        "debyeResistanceAt100HzOhm": 0.0027287070413864727,
+        "debyeResistanceAt1000HzOhm": 0.0019277765982706541,
+        "warburgOhmSqrtRadPerSecond": 0.001501446816215668
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023180099807263644,
+        "medianRelativeError": 0.00815636460426865,
+        "meanRelativeError": 0.012658306230923646,
+        "maximumRelativeError": 0.029322540147473285
+      },
+      "passed": true
+    },
+    {
+      "id": "ID11",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0142944128019735,
+          "im": 0.00572910159826279
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018310189332843486,
+          "medianCellMeanRelativeError": 0.016302520682333555
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018337064680462038,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018533622469943573,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018730723796322575,
+          "medianCellMeanRelativeError": 0.0166633288286401
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018773944813338637,
+          "medianCellMeanRelativeError": 0.017162445756217157
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01884678497644362,
+          "medianCellMeanRelativeError": 0.017750451468724386
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.018953367464828442,
+          "medianCellMeanRelativeError": 0.01792060020853489
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019627221608907487,
+          "medianCellMeanRelativeError": 0.01803820425463816
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019738851866470387,
+          "medianCellMeanRelativeError": 0.0170249037671007
+        }
+      ],
+      "neighbours": [
+        "ID32",
+        "ID42",
+        "ID31",
+        "ID44",
+        "ID35",
+        "ID15",
+        "ID46",
+        "ID01",
+        "ID19"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01357736336079751,
+        "seriesInductanceH": 9.582687403051785e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00008095605101120587,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002422414654712986,
+        "debyeResistanceAt1000HzOhm": 0.0018076461832414624,
+        "warburgOhmSqrtRadPerSecond": 0.0014254208123993502
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006584737034969642,
+        "medianRelativeError": 0.03733502016813349,
+        "meanRelativeError": 0.034196225114235146,
+        "maximumRelativeError": 0.04245999906049088
+      },
+      "passed": true
+    },
+    {
+      "id": "ID12",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143788241548464,
+          "im": 0.00567513145506382
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018391094624496434,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01839234548390874,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018398226790465353,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.0185858731138503,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018632263468861786,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018759288978108017,
+          "medianCellMeanRelativeError": 0.017750451468724386
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.018971401922317152,
+          "medianCellMeanRelativeError": 0.018104398873622866
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019670976288949954,
+          "medianCellMeanRelativeError": 0.01792730837224994
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.01997868137746593,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID31",
+        "ID32",
+        "ID11"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013612527500370328,
+        "seriesInductanceH": 9.56422110755305e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00007078570888616871,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000007897607291352264,
+        "debyeResistanceAt100HzOhm": 0.002771551452725576,
+        "debyeResistanceAt1000HzOhm": 0.0018238228131983584,
+        "warburgOhmSqrtRadPerSecond": 0.0014683765813046203
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00045942905846458525,
+        "medianRelativeError": 0.026402075218127638,
+        "meanRelativeError": 0.02419893644033106,
+        "maximumRelativeError": 0.04056764712190159
+      },
+      "passed": true
+    },
+    {
+      "id": "ID13",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141349480254576,
+          "im": 0.00571452639997005
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 7,
+      "nestedValidation": [
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01839807241492388,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01851008383444377,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018532341679720444,
+          "medianCellMeanRelativeError": 0.016439664794987794
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01856128899766916,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018674157106752354,
+          "medianCellMeanRelativeError": 0.016651455370264346
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01875246226669241,
+          "medianCellMeanRelativeError": 0.01802905163885282
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.018969852372747353,
+          "medianCellMeanRelativeError": 0.018106916095238134
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019691564868399195,
+          "medianCellMeanRelativeError": 0.018056438155026267
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020022294226253706,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID15",
+        "ID54",
+        "ID14",
+        "ID35",
+        "ID19",
+        "ID17",
+        "ID24"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013439107218622534,
+        "seriesInductanceH": 9.571285986473068e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005920182894207164,
+        "debyeResistanceAt1HzOhm": 0.000002002570791280202,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0025317045145611854,
+        "debyeResistanceAt1000HzOhm": 0.0018691077280597623,
+        "warburgOhmSqrtRadPerSecond": 0.0014567725580619543
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006146367024085236,
+        "medianRelativeError": 0.03526034738265495,
+        "meanRelativeError": 0.032040561746827366,
+        "maximumRelativeError": 0.04048298315732167
+      },
+      "passed": true
+    },
+    {
+      "id": "ID14",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141020835144445,
+          "im": 0.00569419376552105
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018862794083919013,
+          "medianCellMeanRelativeError": 0.017162445756217157
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01893052350813077,
+          "medianCellMeanRelativeError": 0.01714168194957778
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018950565015614453,
+          "medianCellMeanRelativeError": 0.01686355824521013
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019018029541056608,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019038288865114526,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019060349813698304,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019289620153642557,
+          "medianCellMeanRelativeError": 0.018789337657764853
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020036814459116422,
+          "medianCellMeanRelativeError": 0.017808885290790437
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02007580017549444,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID13",
+        "ID06",
+        "ID40"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01344588115106661,
+        "seriesInductanceH": 9.494009607711967e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00003588986674998798,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000018769118251368203,
+        "debyeResistanceAt100HzOhm": 0.0026982343994432314,
+        "debyeResistanceAt1000HzOhm": 0.0019165701394032303,
+        "warburgOhmSqrtRadPerSecond": 0.0014902141630325101
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021766989896000285,
+        "medianRelativeError": 0.005733541010871613,
+        "meanRelativeError": 0.01006208842671148,
+        "maximumRelativeError": 0.034437783138929444
+      },
+      "passed": true
+    },
+    {
+      "id": "ID15",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141683266265318,
+          "im": 0.00572537072002888
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01849920855212101,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018627848438311827,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018672111682463566,
+          "medianCellMeanRelativeError": 0.016439664794987794
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01868704705185032,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018796256196282005,
+          "medianCellMeanRelativeError": 0.0166633288286401
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018831270006090275,
+          "medianCellMeanRelativeError": 0.01791040254341901
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019150198217313796,
+          "medianCellMeanRelativeError": 0.018435514191105454
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01983278738245304,
+          "medianCellMeanRelativeError": 0.017812798704507728
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020197264094082963,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID35",
+        "ID13",
+        "ID19",
+        "ID54",
+        "ID24",
+        "ID17",
+        "ID14",
+        "ID37",
+        "ID11"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013449796758127726,
+        "seriesInductanceH": 9.574004297713172e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005740856614995166,
+        "debyeResistanceAt1HzOhm": 0.0000015575550598846015,
+        "debyeResistanceAt10HzOhm": 0.000006834645398295901,
+        "debyeResistanceAt100HzOhm": 0.002578473039924206,
+        "debyeResistanceAt1000HzOhm": 0.0018741009609933757,
+        "warburgOhmSqrtRadPerSecond": 0.0014602292351161015
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003927286442592744,
+        "medianRelativeError": 0.02211525255112318,
+        "meanRelativeError": 0.021669463522430422,
+        "maximumRelativeError": 0.03829462330024636
+      },
+      "passed": true
+    },
+    {
+      "id": "ID16",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141558040631935,
+          "im": 0.00579696893692017
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018256480695723783,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018491520441780155,
+          "medianCellMeanRelativeError": 0.01597161687191925
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018539914134064275,
+          "medianCellMeanRelativeError": 0.016992927666288474
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01880257621157057,
+          "medianCellMeanRelativeError": 0.016439664794987794
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018907209018736847,
+          "medianCellMeanRelativeError": 0.01699580278019002
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018968583606429057,
+          "medianCellMeanRelativeError": 0.017794248951897757
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019287080978480083,
+          "medianCellMeanRelativeError": 0.018879619493715076
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01997741092834762,
+          "medianCellMeanRelativeError": 0.01786178377071988
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020039610644399394,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID39",
+        "ID45",
+        "ID24"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01342527260594338,
+        "seriesInductanceH": 9.625912386751137e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00013404090265171307,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002200471527702717,
+        "debyeResistanceAt1000HzOhm": 0.0018139642312244221,
+        "warburgOhmSqrtRadPerSecond": 0.001395562746030532
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004773592950148791,
+        "medianRelativeError": 0.0276438969512873,
+        "meanRelativeError": 0.026268383622450743,
+        "maximumRelativeError": 0.03868506365501831
+      },
+      "passed": true
+    },
+    {
+      "id": "ID17",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141025193734095,
+          "im": 0.0057488102465868
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018475288306443183,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018694032994856735,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01871146459057254,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018774180112082588,
+          "medianCellMeanRelativeError": 0.016498185849556615
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019162821660863794,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019189418135881837,
+          "medianCellMeanRelativeError": 0.018105361544640434
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019403265651181105,
+          "medianCellMeanRelativeError": 0.01862469072164991
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.02012306605299064,
+          "medianCellMeanRelativeError": 0.017999103477019482
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020567195381854097,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID24",
+        "ID37",
+        "ID54"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013398237837258688,
+        "seriesInductanceH": 9.583021201456803e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0001339039828840862,
+        "debyeResistanceAt1HzOhm": 0.0000046726651796538046,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.00231613261174999,
+        "debyeResistanceAt1000HzOhm": 0.0018241247913435114,
+        "warburgOhmSqrtRadPerSecond": 0.0014158930212847425
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00032012476352759957,
+        "medianRelativeError": 0.016256624239578462,
+        "meanRelativeError": 0.018076084596498065,
+        "maximumRelativeError": 0.03700477410989496
+      },
+      "passed": true
+    },
+    {
+      "id": "ID18",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014032335835509,
+          "im": 0.00565542466938496
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01825092269878051,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01857922386210081,
+          "medianCellMeanRelativeError": 0.01597161687191925
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018731192541557046,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018860717603071737,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018868839570395944,
+          "medianCellMeanRelativeError": 0.016439664794987794
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019086541335673248,
+          "medianCellMeanRelativeError": 0.018093616788193205
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.01925622969976048,
+          "medianCellMeanRelativeError": 0.01878235672097913
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019610320898102728,
+          "medianCellMeanRelativeError": 0.0170249037671007
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.0199791757931672,
+          "medianCellMeanRelativeError": 0.018116093233809614
+        }
+      ],
+      "neighbours": [
+        "ID09",
+        "ID28",
+        "ID30"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013403702002520867,
+        "seriesInductanceH": 9.423115850450112e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000007120717474792098,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.000013959239697025296,
+        "debyeResistanceAt100HzOhm": 0.0027976787590377208,
+        "debyeResistanceAt1000HzOhm": 0.0019226595654926145,
+        "warburgOhmSqrtRadPerSecond": 0.001522336973596075
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00040542981234290525,
+        "medianRelativeError": 0.024537833754196648,
+        "meanRelativeError": 0.022366618391361715,
+        "maximumRelativeError": 0.032402285393268164
+      },
+      "passed": true
+    },
+    {
+      "id": "ID19",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141536601586267,
+          "im": 0.00574884936213493
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018744840071281715,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01884309550866302,
+          "medianCellMeanRelativeError": 0.017162445756217157
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018914045180190516,
+          "medianCellMeanRelativeError": 0.016810615635256876
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019038833863599933,
+          "medianCellMeanRelativeError": 0.0169289967317602
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01916792000668069,
+          "medianCellMeanRelativeError": 0.017475707417121452
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01917310271660458,
+          "medianCellMeanRelativeError": 0.017904071296153606
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019443668737972746,
+          "medianCellMeanRelativeError": 0.01848279325005568
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020105639852625184,
+          "medianCellMeanRelativeError": 0.01805520762377033
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020310118774380288,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID24",
+        "ID35",
+        "ID17",
+        "ID15",
+        "ID37",
+        "ID54",
+        "ID13",
+        "ID39",
+        "ID16"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013425906421494715,
+        "seriesInductanceH": 9.594377352232839e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005810081904494499,
+        "debyeResistanceAt1HzOhm": 0.0000015575550598846015,
+        "debyeResistanceAt10HzOhm": 0.000004202109634511812,
+        "debyeResistanceAt100HzOhm": 0.0025274671409472537,
+        "debyeResistanceAt1000HzOhm": 0.0018748383615360988,
+        "warburgOhmSqrtRadPerSecond": 0.0014494319957195137
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021681538461383384,
+        "medianRelativeError": 0.006411180058096581,
+        "meanRelativeError": 0.010657848031776159,
+        "maximumRelativeError": 0.038229875911291664
+      },
+      "passed": true
+    },
+    {
+      "id": "ID20",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0139914097962901,
+          "im": 0.00586144253611565
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01861286796479706,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01882673095703302,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01883659073063928,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019142780534169446,
+          "medianCellMeanRelativeError": 0.018178050837291182
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019164982626399978,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019232025922964278,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.01939186916999563,
+          "medianCellMeanRelativeError": 0.018903419979148028
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020039964261638742,
+          "medianCellMeanRelativeError": 0.01829850980058924
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020110606220854928,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID29",
+        "ID39",
+        "ID43"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.0133683628526163,
+        "seriesInductanceH": 9.65847345820954e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00006778646669265345,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023281939881663206,
+        "debyeResistanceAt1000HzOhm": 0.0018680410917387296,
+        "warburgOhmSqrtRadPerSecond": 0.0014279573857129567
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020796379162296241,
+        "medianRelativeError": 0.005168215559310817,
+        "meanRelativeError": 0.00983583833881334,
+        "maximumRelativeError": 0.03094105907274998
+      },
+      "passed": true
+    },
+    {
+      "id": "ID21",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140458027599379,
+          "im": 0.00575925782322884
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018615282848442716,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01878458273803553,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01889209343769249,
+          "medianCellMeanRelativeError": 0.017036983981873914
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01890729553997307,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019043553881562536,
+          "medianCellMeanRelativeError": 0.01786998842111493
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019101490772577872,
+          "medianCellMeanRelativeError": 0.017969034846055332
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019326537875321206,
+          "medianCellMeanRelativeError": 0.01885810389254098
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.02000676586912712,
+          "medianCellMeanRelativeError": 0.018283472693201453
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020546855569626855,
+          "medianCellMeanRelativeError": 0.020617608904037986
+        }
+      ],
+      "neighbours": [
+        "ID34",
+        "ID43",
+        "ID37"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013336028038201114,
+        "seriesInductanceH": 9.597599766066806e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000057528193271605584,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0022889351043240296,
+        "debyeResistanceAt1000HzOhm": 0.0018624610630572393,
+        "warburgOhmSqrtRadPerSecond": 0.0014021603430463207
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023430775277937272,
+        "medianRelativeError": 0.006862276966484835,
+        "meanRelativeError": 0.011883436368888929,
+        "maximumRelativeError": 0.0372696277794941
+      },
+      "passed": true
+    },
+    {
+      "id": "ID22",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0138382109580562,
+          "im": 0.00577463023364544
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01815344266321551,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018505160887954154,
+          "medianCellMeanRelativeError": 0.016683798836523787
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018521785601860043,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018548847629989856,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018673584667878197,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018763791462082784,
+          "medianCellMeanRelativeError": 0.01787046767119187
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.018853405989612732,
+          "medianCellMeanRelativeError": 0.01878235672097913
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019507295180170366,
+          "medianCellMeanRelativeError": 0.01815920992971688
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019736322559114148,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID05",
+        "ID43",
+        "ID34"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013320382863766815,
+        "seriesInductanceH": 9.585590994959901e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000039826752457748746,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000005150664656573452,
+        "debyeResistanceAt100HzOhm": 0.0024365926467090366,
+        "debyeResistanceAt1000HzOhm": 0.0018696143423597826,
+        "warburgOhmSqrtRadPerSecond": 0.0014401083842070063
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005443139739241131,
+        "medianRelativeError": 0.033944458721514185,
+        "meanRelativeError": 0.0315462118407716,
+        "maximumRelativeError": 0.04129187190520409
+      },
+      "passed": true
+    },
+    {
+      "id": "ID23",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014471277478151,
+          "im": 0.00589705258607864
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018608081185099972,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01866224123028434,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018772034256306313,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01912554813207964,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019200104983552096,
+          "medianCellMeanRelativeError": 0.018295521724883836
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01921573630983909,
+          "medianCellMeanRelativeError": 0.018178050837291182
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019343167923562176,
+          "medianCellMeanRelativeError": 0.019175065679631755
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020007576515312545,
+          "medianCellMeanRelativeError": 0.01829850980058924
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02023065426480889,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID49",
+        "ID52",
+        "ID48"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013665124860731096,
+        "seriesInductanceH": 9.762369462503473e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00013916096816550893,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0020233704644799367,
+        "debyeResistanceAt1000HzOhm": 0.001700078222540367,
+        "warburgOhmSqrtRadPerSecond": 0.0013590787483739502
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002955925464686661,
+        "medianRelativeError": 0.012321056175019584,
+        "meanRelativeError": 0.015730345787187735,
+        "maximumRelativeError": 0.04309886620631588
+      },
+      "passed": true
+    },
+    {
+      "id": "ID24",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141279752133414,
+          "im": 0.00575577653944492
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018724267305588523,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018898466472049187,
+          "medianCellMeanRelativeError": 0.017249025111543824
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018960337545772074,
+          "medianCellMeanRelativeError": 0.016290310124364982
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018997766490046458,
+          "medianCellMeanRelativeError": 0.017421637727060523
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019081545541337407,
+          "medianCellMeanRelativeError": 0.01801070032731307
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019136735753484808,
+          "medianCellMeanRelativeError": 0.017958017725039743
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019320798902101147,
+          "medianCellMeanRelativeError": 0.018692676769247005
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020040044210965714,
+          "medianCellMeanRelativeError": 0.018240817468217593
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02023843866624006,
+          "medianCellMeanRelativeError": 0.01820603379857276
+        }
+      ],
+      "neighbours": [
+        "ID17",
+        "ID19",
+        "ID37",
+        "ID39",
+        "ID54",
+        "ID35",
+        "ID15",
+        "ID21",
+        "ID34"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013399293743125533,
+        "seriesInductanceH": 9.586829805094557e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004581216395465347,
+        "debyeResistanceAt1HzOhm": 0.0000015575550598846015,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002441453600162893,
+        "debyeResistanceAt1000HzOhm": 0.0018675186407945703,
+        "warburgOhmSqrtRadPerSecond": 0.0014377728661169118
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023175133520612039,
+        "medianRelativeError": 0.008742088524665154,
+        "meanRelativeError": 0.012364597584301253,
+        "maximumRelativeError": 0.039187687343303405
+      },
+      "passed": true
+    },
+    {
+      "id": "ID25",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144213464809582,
+          "im": 0.00579471699893475
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018495536682111853,
+          "medianCellMeanRelativeError": 0.01714648109516487
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01861027299751165,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01878339612654957,
+          "medianCellMeanRelativeError": 0.017347554620585008
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018871544632649968,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019037591422700426,
+          "medianCellMeanRelativeError": 0.01773093600893565
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019207299227352218,
+          "medianCellMeanRelativeError": 0.017823689411870396
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019328320747748096,
+          "medianCellMeanRelativeError": 0.018764218274984847
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.02006758886808388,
+          "medianCellMeanRelativeError": 0.01829850980058924
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02038216315148525,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID01",
+        "ID27",
+        "ID41",
+        "ID26",
+        "ID50",
+        "ID52",
+        "ID46",
+        "ID47",
+        "ID44"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013665918520950377,
+        "seriesInductanceH": 9.673391568979578e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010652590636450569,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0022387602472844024,
+        "debyeResistanceAt1000HzOhm": 0.0017423006505782697,
+        "warburgOhmSqrtRadPerSecond": 0.0013976296500963989
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003159796766306796,
+        "medianRelativeError": 0.01558960001878067,
+        "meanRelativeError": 0.017521612218394805,
+        "maximumRelativeError": 0.03978335373867584
+      },
+      "passed": true
+    },
+    {
+      "id": "ID26",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143482646672055,
+          "im": 0.00579211115837097
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018445988378570186,
+          "medianCellMeanRelativeError": 0.016302520682333555
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018517768773573296,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01856085660700903,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01889124459394612,
+          "medianCellMeanRelativeError": 0.016394013276640064
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018981301948816205,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019049589252825377,
+          "medianCellMeanRelativeError": 0.017750451468724386
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019286218615285792,
+          "medianCellMeanRelativeError": 0.018746545828595643
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.01975457329794276,
+          "medianCellMeanRelativeError": 0.0170249037671007
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020000138663606143,
+          "medianCellMeanRelativeError": 0.017835730763497166
+        }
+      ],
+      "neighbours": [
+        "ID46",
+        "ID01",
+        "ID25",
+        "ID44",
+        "ID47",
+        "ID27",
+        "ID42",
+        "ID41",
+        "ID52"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013662442466778543,
+        "seriesInductanceH": 9.654754140902737e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010956075994022833,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002240066432204779,
+        "debyeResistanceAt1000HzOhm": 0.0017466917977488328,
+        "warburgOhmSqrtRadPerSecond": 0.0013961970000009533
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000340699093424764,
+        "medianRelativeError": 0.017763247346810552,
+        "meanRelativeError": 0.019458091310871933,
+        "maximumRelativeError": 0.03511911273534187
+      },
+      "passed": true
+    },
+    {
+      "id": "ID27",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144225683761761,
+          "im": 0.00582136027514935
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018037530498464356,
+          "medianCellMeanRelativeError": 0.01541452231139136
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018221669018498816,
+          "medianCellMeanRelativeError": 0.016302520682333555
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01846749503326134,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01859759791720911,
+          "medianCellMeanRelativeError": 0.016891486591948782
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01880688189182292,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018872199794955816,
+          "medianCellMeanRelativeError": 0.01772864013191701
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019187987027013534,
+          "medianCellMeanRelativeError": 0.01847809826617868
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019800293560631375,
+          "medianCellMeanRelativeError": 0.0170249037671007
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019916045289856483,
+          "medianCellMeanRelativeError": 0.017813463618029417
+        }
+      ],
+      "neighbours": [
+        "ID41",
+        "ID52",
+        "ID50"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01370674778446225,
+        "seriesInductanceH": 9.699169508293878e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00011369529782577518,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0020632390199644365,
+        "debyeResistanceAt1000HzOhm": 0.001717056876935924,
+        "warburgOhmSqrtRadPerSecond": 0.0013723557731049362
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005789009517515991,
+        "medianRelativeError": 0.03492039075953416,
+        "meanRelativeError": 0.0313758919506915,
+        "maximumRelativeError": 0.03774537704947931
+      },
+      "passed": true
+    },
+    {
+      "id": "ID28",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140763752860948,
+          "im": 0.00565231777727604
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018753007479699005,
+          "medianCellMeanRelativeError": 0.017347554620585008
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01886053710478776,
+          "medianCellMeanRelativeError": 0.01686355824521013
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01894840057062049,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019045343368583743,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01909375195655013,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019212743816187504,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019283884303205805,
+          "medianCellMeanRelativeError": 0.01869836410131145
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01994370665057743,
+          "medianCellMeanRelativeError": 0.017927308372249925
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020254326041974243,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID30",
+        "ID18",
+        "ID03"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01341951135662982,
+        "seriesInductanceH": 9.42372941124207e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000011716925153673576,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002590803390235384,
+        "debyeResistanceAt1000HzOhm": 0.0018980256750582806,
+        "warburgOhmSqrtRadPerSecond": 0.0014932787116294932
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002717709501261637,
+        "medianRelativeError": 0.013666310588342492,
+        "meanRelativeError": 0.015097392938117389,
+        "maximumRelativeError": 0.03378904020604406
+      },
+      "passed": true
+    },
+    {
+      "id": "ID29",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141026246128604,
+          "im": 0.00584553182125092
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018215948365950353,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018419579548888565,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018598585291323425,
+          "medianCellMeanRelativeError": 0.016980027875428072
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01881680425993475,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01882779088063426,
+          "medianCellMeanRelativeError": 0.016439664794987794
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018915598551434185,
+          "medianCellMeanRelativeError": 0.017750451468724386
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.01924006775278172,
+          "medianCellMeanRelativeError": 0.018879619493715076
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019750356018897956,
+          "medianCellMeanRelativeError": 0.0170249037671007
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01990941088227228,
+          "medianCellMeanRelativeError": 0.017866957480595472
+        }
+      ],
+      "neighbours": [
+        "ID45",
+        "ID20",
+        "ID51"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013431372262912489,
+        "seriesInductanceH": 9.70789534118695e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0001120139086442048,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0021231642958465455,
+        "debyeResistanceAt1000HzOhm": 0.0018143233243208276,
+        "warburgOhmSqrtRadPerSecond": 0.001371914555301441
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005449883555853686,
+        "medianRelativeError": 0.033052958622734906,
+        "meanRelativeError": 0.02983511333663491,
+        "maximumRelativeError": 0.03616244462720843
+      },
+      "passed": true
+    },
+    {
+      "id": "ID30",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140735487220809,
+          "im": 0.00564328581094742
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018627031329742118,
+          "medianCellMeanRelativeError": 0.017347554620585008
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018895450669167035,
+          "medianCellMeanRelativeError": 0.016812719553014353
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01893709193578062,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019083811636434387,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019111914938683406,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01927644326532758,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.01939499160860205,
+          "medianCellMeanRelativeError": 0.018903419979148028
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019994437371202094,
+          "medianCellMeanRelativeError": 0.017927308372249925
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020444988775448713,
+          "medianCellMeanRelativeError": 0.01820603379857276
+        }
+      ],
+      "neighbours": [
+        "ID28",
+        "ID03",
+        "ID09"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01342276635890619,
+        "seriesInductanceH": 9.424532379630827e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000007120717474792098,
+        "debyeResistanceAt1HzOhm": 0.000003243755869455105,
+        "debyeResistanceAt10HzOhm": 0.000013959239697025296,
+        "debyeResistanceAt100HzOhm": 0.002815285863640738,
+        "debyeResistanceAt1000HzOhm": 0.0019177014112248863,
+        "warburgOhmSqrtRadPerSecond": 0.0015252997088436692
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00026582248976251963,
+        "medianRelativeError": 0.012578955570061818,
+        "meanRelativeError": 0.01522727722056008,
+        "maximumRelativeError": 0.03303148179622534
+      },
+      "passed": true
+    },
+    {
+      "id": "ID31",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014354623737745,
+          "im": 0.00571901910007
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 7,
+      "nestedValidation": [
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018731179475165654,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018775898485296365,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018871944337778102,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018922381717405946,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019094120688827636,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019159414444302882,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019248580671868878,
+          "medianCellMeanRelativeError": 0.018600826980702916
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020001982657962887,
+          "medianCellMeanRelativeError": 0.017751555749926998
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020058950249227988,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID42",
+        "ID32",
+        "ID11",
+        "ID44",
+        "ID12",
+        "ID01",
+        "ID53"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013656157650680286,
+        "seriesInductanceH": 9.561754655467674e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00009904632421285887,
+        "debyeResistanceAt1HzOhm": 0.0000026873685001133537,
+        "debyeResistanceAt10HzOhm": 0.000009745706124232891,
+        "debyeResistanceAt100HzOhm": 0.0025503405604992563,
+        "debyeResistanceAt1000HzOhm": 0.0017843166390687497,
+        "warburgOhmSqrtRadPerSecond": 0.0014334517395833252
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022074653093954956,
+        "medianRelativeError": 0.0066312399213500125,
+        "meanRelativeError": 0.010464429819237786,
+        "maximumRelativeError": 0.03652362889256085
+      },
+      "passed": true
+    },
+    {
+      "id": "ID32",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0142955965129659,
+          "im": 0.00571660883724689
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.0187502104066056,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018788360484552524,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01894061232751041,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018999548320415942,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019048167903084428,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019169850840123237,
+          "medianCellMeanRelativeError": 0.01807543141173705
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019297378601263956,
+          "medianCellMeanRelativeError": 0.018115204306320205
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.02001683054692963,
+          "medianCellMeanRelativeError": 0.017786508793871173
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020388279105877972,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID11",
+        "ID31",
+        "ID42",
+        "ID44",
+        "ID35",
+        "ID12",
+        "ID15",
+        "ID19",
+        "ID13"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013565769316175464,
+        "seriesInductanceH": 9.562463776767215e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004520488809156095,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.00001178210328669295,
+        "debyeResistanceAt100HzOhm": 0.0026490917546147783,
+        "debyeResistanceAt1000HzOhm": 0.0018541053258337688,
+        "warburgOhmSqrtRadPerSecond": 0.0014616724477513584
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002223722709237023,
+        "medianRelativeError": 0.006271304329805731,
+        "meanRelativeError": 0.010838895532906937,
+        "maximumRelativeError": 0.03805660596476461
+      },
+      "passed": true
+    },
+    {
+      "id": "ID33",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140474688960239,
+          "im": 0.00556598603725433
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018873975581912502,
+          "medianCellMeanRelativeError": 0.016700698921228243
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018899590612782815,
+          "medianCellMeanRelativeError": 0.01686355824521013
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01891390250892719,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01912390539214315,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019261286070012762,
+          "medianCellMeanRelativeError": 0.018178050837291182
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019268197678569812,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019425566752810822,
+          "medianCellMeanRelativeError": 0.01890341997914815
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01992854484580394,
+          "medianCellMeanRelativeError": 0.018408915924498892
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020100964616947194,
+          "medianCellMeanRelativeError": 0.0170249037671007
+        }
+      ],
+      "neighbours": [
+        "ID04",
+        "ID09",
+        "ID03"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013398812976212766,
+        "seriesInductanceH": 9.401616437409399e-8,
+        "debyeResistanceAt0.1HzOhm": 0,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000018399122014860775,
+        "debyeResistanceAt100HzOhm": 0.0028289955541474926,
+        "debyeResistanceAt1000HzOhm": 0.0019131567166653096,
+        "warburgOhmSqrtRadPerSecond": 0.0015228464344939697
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022563621560231297,
+        "medianRelativeError": 0.009746403145089863,
+        "meanRelativeError": 0.012253725461440788,
+        "maximumRelativeError": 0.03388658867948583
+      },
+      "passed": true
+    },
+    {
+      "id": "ID34",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014042520779185,
+          "im": 0.00575564801692963
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018559546202127544,
+          "medianCellMeanRelativeError": 0.01541452231139136
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018829530441565483,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018845115434237864,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018915504606327366,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019102290423355324,
+          "medianCellMeanRelativeError": 0.017923038373491955
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019153538148047246,
+          "medianCellMeanRelativeError": 0.017842883411548778
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019366367365354038,
+          "medianCellMeanRelativeError": 0.01885810389254098
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020065367896819862,
+          "medianCellMeanRelativeError": 0.018201361566284057
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020495226017680463,
+          "medianCellMeanRelativeError": 0.01820603379857276
+        }
+      ],
+      "neighbours": [
+        "ID21",
+        "ID43",
+        "ID37"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013334655588680222,
+        "seriesInductanceH": 9.591608307664357e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000057528193271605584,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002260265484972258,
+        "debyeResistanceAt1000HzOhm": 0.0018661236592369863,
+        "warburgOhmSqrtRadPerSecond": 0.001393421574610033
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002729383017091672,
+        "medianRelativeError": 0.01160925976581897,
+        "meanRelativeError": 0.015500931687512425,
+        "maximumRelativeError": 0.036430996561858546
+      },
+      "passed": true
+    },
+    {
+      "id": "ID35",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141866308404133,
+          "im": 0.00574002787470818
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018697624886566247,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018712806435700967,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018722038092327448,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018753155339563482,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019137488725808248,
+          "medianCellMeanRelativeError": 0.017518743977032965
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019179934443150325,
+          "medianCellMeanRelativeError": 0.017902426764180936
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.01942946832354273,
+          "medianCellMeanRelativeError": 0.018486059776405085
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.01981010174016767,
+          "medianCellMeanRelativeError": 0.0170249037671007
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020087154082413655,
+          "medianCellMeanRelativeError": 0.01807500341400303
+        }
+      ],
+      "neighbours": [
+        "ID15",
+        "ID19",
+        "ID24",
+        "ID13",
+        "ID17",
+        "ID54",
+        "ID37",
+        "ID11",
+        "ID32"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013470384844458417,
+        "seriesInductanceH": 9.576573647181532e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00006666768815104586,
+        "debyeResistanceAt1HzOhm": 0.0000015575550598846015,
+        "debyeResistanceAt10HzOhm": 0.000006834645398295901,
+        "debyeResistanceAt100HzOhm": 0.002618026331252517,
+        "debyeResistanceAt1000HzOhm": 0.0018720220791281976,
+        "warburgOhmSqrtRadPerSecond": 0.0014575265193286075
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00028533345760350747,
+        "medianRelativeError": 0.01373909582224921,
+        "meanRelativeError": 0.016199677366537886,
+        "maximumRelativeError": 0.037845388236100355
+      },
+      "passed": true
+    },
+    {
+      "id": "ID36",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0136292938841507,
+          "im": 0.00557493977248669
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018116358154710393,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01841233528532846,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.0184323277449946,
+          "medianCellMeanRelativeError": 0.016683798836523787
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018479452822713932,
+          "medianCellMeanRelativeError": 0.016744516601014305
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018639464068550687,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018742873410922952,
+          "medianCellMeanRelativeError": 0.017613164552933245
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019050110729833574,
+          "medianCellMeanRelativeError": 0.018879619493715076
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019688169618314325,
+          "medianCellMeanRelativeError": 0.017687754212576488
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019823824328706833,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID10",
+        "ID04",
+        "ID33"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013334508979913557,
+        "seriesInductanceH": 9.35826480327892e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000009461037806578624,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000018277760969471987,
+        "debyeResistanceAt100HzOhm": 0.0028228382365015204,
+        "debyeResistanceAt1000HzOhm": 0.0019280614549226198,
+        "warburgOhmSqrtRadPerSecond": 0.0015079068511124674
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006445454268663047,
+        "medianRelativeError": 0.040818762326557595,
+        "meanRelativeError": 0.036549786691688686,
+        "maximumRelativeError": 0.04633945897301234
+      },
+      "passed": true
+    },
+    {
+      "id": "ID37",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140975619433448,
+          "im": 0.00576255656778812
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01843550364870968,
+          "medianCellMeanRelativeError": 0.01541452231139136
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018756831726268092,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018954487179743983,
+          "medianCellMeanRelativeError": 0.01740200947050927
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019036308671045266,
+          "medianCellMeanRelativeError": 0.017635591705978577
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01904389450048553,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019094378765492387,
+          "medianCellMeanRelativeError": 0.017969034846055332
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019256279036663056,
+          "medianCellMeanRelativeError": 0.01864796924823679
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019956528479388228,
+          "medianCellMeanRelativeError": 0.017684074689775533
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020158140028952123,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID17",
+        "ID24",
+        "ID39"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013402622718526797,
+        "seriesInductanceH": 9.601694286381941e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00007742219051941259,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002366670435839614,
+        "debyeResistanceAt1000HzOhm": 0.001843573631987116,
+        "warburgOhmSqrtRadPerSecond": 0.0014419936344585323
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00025090688161214615,
+        "medianRelativeError": 0.010089081895780578,
+        "meanRelativeError": 0.01392448885522078,
+        "maximumRelativeError": 0.03619537845299918
+      },
+      "passed": true
+    },
+    {
+      "id": "ID38",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141365024028346,
+          "im": 0.00565106421709061
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 7,
+      "nestedValidation": [
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018587506040208895,
+          "medianCellMeanRelativeError": 0.01597161687191925
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01860462283535741,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01867735625046352,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018780509932800494,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019011899626843437,
+          "medianCellMeanRelativeError": 0.017750451468724386
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019044392363156564,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019135100358824642,
+          "medianCellMeanRelativeError": 0.018782356720979075
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019867382606271092,
+          "medianCellMeanRelativeError": 0.01818970079089228
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020169168396461504,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID03",
+        "ID40",
+        "ID28",
+        "ID30",
+        "ID06",
+        "ID14",
+        "ID18"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013421719858092778,
+        "seriesInductanceH": 9.445123367739172e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000023454646876480132,
+        "debyeResistanceAt1HzOhm": 0.0000013901810869093308,
+        "debyeResistanceAt10HzOhm": 0.000006238970122578883,
+        "debyeResistanceAt100HzOhm": 0.0026142635005249773,
+        "debyeResistanceAt1000HzOhm": 0.001901834963352381,
+        "warburgOhmSqrtRadPerSecond": 0.001489309453397161
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003396974892043214,
+        "medianRelativeError": 0.018875346287730674,
+        "meanRelativeError": 0.01910568565965959,
+        "maximumRelativeError": 0.03678497741647702
+      },
+      "passed": true
+    },
+    {
+      "id": "ID39",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140937109244987,
+          "im": 0.0057788398116827
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 7,
+      "nestedValidation": [
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018740382327808253,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018772156493315553,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018835758822677837,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01904464535937837,
+          "medianCellMeanRelativeError": 0.01776750308003605
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01905657365211954,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01910205753659786,
+          "medianCellMeanRelativeError": 0.017969034846055332
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019270247101183004,
+          "medianCellMeanRelativeError": 0.018729675243367223
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019911790449162154,
+          "medianCellMeanRelativeError": 0.017741428271903715
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02041529231104238,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID37",
+        "ID43",
+        "ID24",
+        "ID21",
+        "ID17",
+        "ID34",
+        "ID16"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01337229488679374,
+        "seriesInductanceH": 9.6025094498964e-8,
+        "debyeResistanceAt0.1HzOhm": 0.000046970826215402395,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023865183900092625,
+        "debyeResistanceAt1000HzOhm": 0.0018752183144104745,
+        "warburgOhmSqrtRadPerSecond": 0.00142644326777167
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00027978633025622766,
+        "medianRelativeError": 0.01384608909550692,
+        "meanRelativeError": 0.015999985752190523,
+        "maximumRelativeError": 0.03682351975978234
+      },
+      "passed": true
+    },
+    {
+      "id": "ID40",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141315822256729,
+          "im": 0.00567061826586723
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 7,
+      "nestedValidation": [
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01843583310628697,
+          "medianCellMeanRelativeError": 0.01597161687191925
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018517384125414316,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01854851286238187,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018646293738073607,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018806180153112455,
+          "medianCellMeanRelativeError": 0.016439664794987794
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01885791745766639,
+          "medianCellMeanRelativeError": 0.017634144015135855
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019050407514523787,
+          "medianCellMeanRelativeError": 0.018104398873622866
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019847397047641626,
+          "medianCellMeanRelativeError": 0.017927308372249925
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020307442349216536,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID38",
+        "ID14",
+        "ID28",
+        "ID03",
+        "ID06",
+        "ID30",
+        "ID13"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013428255645905518,
+        "seriesInductanceH": 9.460946824451263e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000071149900242226925,
+        "debyeResistanceAt1HzOhm": 0.0000013901810869093308,
+        "debyeResistanceAt10HzOhm": 0.000011641682509808356,
+        "debyeResistanceAt100HzOhm": 0.002728064948893394,
+        "debyeResistanceAt1000HzOhm": 0.001916692620433687,
+        "warburgOhmSqrtRadPerSecond": 0.0015071929487070047
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005296883558219764,
+        "medianRelativeError": 0.03454597575307366,
+        "meanRelativeError": 0.028090223204147165,
+        "maximumRelativeError": 0.03835985425738894
+      },
+      "passed": true
+    },
+    {
+      "id": "ID41",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144406025065109,
+          "im": 0.00582562200725079
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01858389840449305,
+          "medianCellMeanRelativeError": 0.016302520682333555
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018628990267848384,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018706054449190837,
+          "medianCellMeanRelativeError": 0.01686355824521013
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01912543106760429,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019201159519332187,
+          "medianCellMeanRelativeError": 0.017969034846055332
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019253444441807446,
+          "medianCellMeanRelativeError": 0.018272126131930397
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019337007223119113,
+          "medianCellMeanRelativeError": 0.01878235672097913
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.020060496271962887,
+          "medianCellMeanRelativeError": 0.01829850980058924
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020267233468239065,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID27",
+        "ID50",
+        "ID52",
+        "ID25",
+        "ID02",
+        "ID47",
+        "ID26",
+        "ID01",
+        "ID48"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013689643119005994,
+        "seriesInductanceH": 9.699515886690852e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00011364264581711827,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023228729665974576,
+        "debyeResistanceAt1000HzOhm": 0.0017438533735039197,
+        "warburgOhmSqrtRadPerSecond": 0.0014109478294163256
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002336462976442208,
+        "medianRelativeError": 0.008166350326986122,
+        "meanRelativeError": 0.01195432036105618,
+        "maximumRelativeError": 0.037592357759959866
+      },
+      "passed": true
+    },
+    {
+      "id": "ID42",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143330831779167,
+          "im": 0.00574290938675404
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 7,
+      "nestedValidation": [
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018468425327939308,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01849771602078143,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018601451025718495,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01869614961995951,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018740304329485646,
+          "medianCellMeanRelativeError": 0.016740609921459922
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018919933468702913,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.01922818642842596,
+          "medianCellMeanRelativeError": 0.018879619493715076
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01996192199879022,
+          "medianCellMeanRelativeError": 0.01827341622101027
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019997520075502914,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID44",
+        "ID11",
+        "ID31",
+        "ID32",
+        "ID01",
+        "ID46",
+        "ID26"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013627512258109818,
+        "seriesInductanceH": 9.603624740405439e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00009918506622051855,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.00000338468883915097,
+        "debyeResistanceAt100HzOhm": 0.0025071338908159847,
+        "debyeResistanceAt1000HzOhm": 0.00178305163896729,
+        "warburgOhmSqrtRadPerSecond": 0.0014290823220913299
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00039538606138596284,
+        "medianRelativeError": 0.022993096363591165,
+        "meanRelativeError": 0.022062509325978346,
+        "maximumRelativeError": 0.03550879124313382
+      },
+      "passed": true
+    },
+    {
+      "id": "ID43",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140405426500365,
+          "im": 0.00576810911297798
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018668097832574004,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01868210964890642,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01872884422263031,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018829565297162454,
+          "medianCellMeanRelativeError": 0.016439664794987794
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018943345664869268,
+          "medianCellMeanRelativeError": 0.01800773131981263
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019003538633175013,
+          "medianCellMeanRelativeError": 0.017969034846055332
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019189536871393537,
+          "medianCellMeanRelativeError": 0.01787101104206014
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019847801434943173,
+          "medianCellMeanRelativeError": 0.017859853853149258
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02021295482999341,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID21",
+        "ID34",
+        "ID39",
+        "ID37",
+        "ID17",
+        "ID24",
+        "ID54",
+        "ID05",
+        "ID19"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013379295622689831,
+        "seriesInductanceH": 9.585564364409818e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00006092542342016048,
+        "debyeResistanceAt1HzOhm": 0.0000015575550598846015,
+        "debyeResistanceAt10HzOhm": 0.0000017168882188578172,
+        "debyeResistanceAt100HzOhm": 0.002403213788127365,
+        "debyeResistanceAt1000HzOhm": 0.0018599498407523157,
+        "warburgOhmSqrtRadPerSecond": 0.0014387082510658891
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003576826047987134,
+        "medianRelativeError": 0.020982294008392806,
+        "meanRelativeError": 0.020704304224234686,
+        "maximumRelativeError": 0.03250665833934133
+      },
+      "passed": true
+    },
+    {
+      "id": "ID44",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143248903332278,
+          "im": 0.00576043128967285
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 7,
+      "nestedValidation": [
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.0184093234211191,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01852613560782853,
+          "medianCellMeanRelativeError": 0.016302520682333555
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018569541460505243,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018674436626902498,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.018830599705719535,
+          "medianCellMeanRelativeError": 0.01760118594569317
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.018969766173626328,
+          "medianCellMeanRelativeError": 0.017750451468724386
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019207667740267918,
+          "medianCellMeanRelativeError": 0.018850686668852243
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01994127400020144,
+          "medianCellMeanRelativeError": 0.01766358000225886
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020987837827069252,
+          "medianCellMeanRelativeError": 0.01820603379857276
+        }
+      ],
+      "neighbours": [
+        "ID42",
+        "ID46",
+        "ID26",
+        "ID11",
+        "ID01",
+        "ID31",
+        "ID32"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01362744177544734,
+        "seriesInductanceH": 9.598255741409483e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00009602811506785596,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.00000338468883915097,
+        "debyeResistanceAt100HzOhm": 0.002514402471555189,
+        "debyeResistanceAt1000HzOhm": 0.0017856624224081932,
+        "warburgOhmSqrtRadPerSecond": 0.0014310146207131707
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00045050199876687076,
+        "medianRelativeError": 0.02680371234682745,
+        "meanRelativeError": 0.024849038998521405,
+        "maximumRelativeError": 0.0347944419889131
+      },
+      "passed": true
+    },
+    {
+      "id": "ID45",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0142090924782678,
+          "im": 0.00582719221711159
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018389800197114614,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018540639613483515,
+          "medianCellMeanRelativeError": 0.015999985752190523
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018654347531417696,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019047141523959463,
+          "medianCellMeanRelativeError": 0.017218895139496985
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019059490863036432,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019201280853153934,
+          "medianCellMeanRelativeError": 0.017954505970858965
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019377010500121906,
+          "medianCellMeanRelativeError": 0.018879619493715076
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019883244279414545,
+          "medianCellMeanRelativeError": 0.01782273022056062
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020575860876706927,
+          "medianCellMeanRelativeError": 0.01820603379857276
+        }
+      ],
+      "neighbours": [
+        "ID51",
+        "ID16",
+        "ID29"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013460541595430045,
+        "seriesInductanceH": 9.705920387251006e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005643688158575192,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023863487304723774,
+        "debyeResistanceAt1000HzOhm": 0.0018730542529252555,
+        "warburgOhmSqrtRadPerSecond": 0.0014342037816097674
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004022142955545322,
+        "medianRelativeError": 0.024076231270713202,
+        "meanRelativeError": 0.022543321127271636,
+        "maximumRelativeError": 0.03765445847831002
+      },
+      "passed": true
+    },
+    {
+      "id": "ID46",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143127253977582,
+          "im": 0.00578898005187511
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01854343606475706,
+          "medianCellMeanRelativeError": 0.016302520682333555
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01865119463917305,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01872250561253919,
+          "medianCellMeanRelativeError": 0.015730345787187735
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018862085128988838,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019006419311780504,
+          "medianCellMeanRelativeError": 0.017577303109841267
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01902449728688545,
+          "medianCellMeanRelativeError": 0.017750451468724386
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019294223700858076,
+          "medianCellMeanRelativeError": 0.018879619493715076
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019771618136943392,
+          "medianCellMeanRelativeError": 0.0170249037671007
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019944713192185652,
+          "medianCellMeanRelativeError": 0.017655040772314598
+        }
+      ],
+      "neighbours": [
+        "ID26",
+        "ID44",
+        "ID01",
+        "ID47",
+        "ID42",
+        "ID25",
+        "ID27",
+        "ID45",
+        "ID11"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01362979438527624,
+        "seriesInductanceH": 9.642384523427433e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00010965529184732843,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000002632535763784088,
+        "debyeResistanceAt100HzOhm": 0.00239643008598705,
+        "debyeResistanceAt1000HzOhm": 0.0017747858841641985,
+        "warburgOhmSqrtRadPerSecond": 0.0014123314509032502
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003530455496794187,
+        "medianRelativeError": 0.020186360214540656,
+        "meanRelativeError": 0.020099135156007437,
+        "maximumRelativeError": 0.034110564578978146
+      },
+      "passed": true
+    },
+    {
+      "id": "ID47",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143415526254103,
+          "im": 0.00583122856914997
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01857505622030525,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018595416111094946,
+          "medianCellMeanRelativeError": 0.016302520682333555
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018795189095954866,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01895621457537582,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019140787097824408,
+          "medianCellMeanRelativeError": 0.018295521724883836
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01915841028438659,
+          "medianCellMeanRelativeError": 0.017690970790301925
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019296081061797168,
+          "medianCellMeanRelativeError": 0.01878235672097913
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.019929753290136694,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019971645801161068,
+          "medianCellMeanRelativeError": 0.01777799765082705
+        }
+      ],
+      "neighbours": [
+        "ID27",
+        "ID26",
+        "ID52"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013683536805690963,
+        "seriesInductanceH": 9.704656366365532e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0001098097884120502,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002386872389329587,
+        "debyeResistanceAt1000HzOhm": 0.0017375311341386198,
+        "warburgOhmSqrtRadPerSecond": 0.0014168656681816767
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003848982835498925,
+        "medianRelativeError": 0.022943580982656347,
+        "meanRelativeError": 0.02206435521531133,
+        "maximumRelativeError": 0.03232818767531468
+      },
+      "passed": true
+    },
+    {
+      "id": "ID48",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143374361796305,
+          "im": 0.00587125867605209
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018670265102948787,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01885874459237407,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01886722375530564,
+          "medianCellMeanRelativeError": 0.017249025111543824
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019095597168438987,
+          "medianCellMeanRelativeError": 0.018161072896117465
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019140199129311697,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019250063586912676,
+          "medianCellMeanRelativeError": 0.018295256226137178
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019367983042730907,
+          "medianCellMeanRelativeError": 0.018782356720979075
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019895629119237687,
+          "medianCellMeanRelativeError": 0.017726393050789928
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02033392576851647,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID47",
+        "ID49",
+        "ID52"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013665789384736659,
+        "seriesInductanceH": 9.741333779318713e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00012733465271843223,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002027802602982689,
+        "debyeResistanceAt1000HzOhm": 0.001712330509314185,
+        "warburgOhmSqrtRadPerSecond": 0.0013638991341440772
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022286609944920506,
+        "medianRelativeError": 0.0053330001230062745,
+        "meanRelativeError": 0.010939867099812614,
+        "maximumRelativeError": 0.03287538580345892
+      },
+      "passed": true
+    },
+    {
+      "id": "ID49",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144265972776338,
+          "im": 0.00589044764637947
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018673122182835605,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018688459287947826,
+          "medianCellMeanRelativeError": 0.01580806156848705
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018763068592399557,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01910526713875042,
+          "medianCellMeanRelativeError": 0.018161072896117465
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019150944861817353,
+          "medianCellMeanRelativeError": 0.017565148591428395
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019214675210197218,
+          "medianCellMeanRelativeError": 0.018178050837291182
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019316748881730135,
+          "medianCellMeanRelativeError": 0.018879619493715076
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019928260117040623,
+          "medianCellMeanRelativeError": 0.017792702931833035
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020366971482831592,
+          "medianCellMeanRelativeError": 0.018156372255705575
+        }
+      ],
+      "neighbours": [
+        "ID23",
+        "ID48",
+        "ID52",
+        "ID50",
+        "ID41",
+        "ID27",
+        "ID47",
+        "ID02",
+        "ID25"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013703447814442757,
+        "seriesInductanceH": 9.722380670573681e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00013258540907132201,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0022464492317418095,
+        "debyeResistanceAt1000HzOhm": 0.0017433734478265119,
+        "warburgOhmSqrtRadPerSecond": 0.001385935414603395
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002973907831538085,
+        "medianRelativeError": 0.014775270455976326,
+        "meanRelativeError": 0.017011844298752674,
+        "maximumRelativeError": 0.036974876548142084
+      },
+      "passed": true
+    },
+    {
+      "id": "ID50",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144545565126464,
+          "im": 0.00583287887275219
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.01826838136718587,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018378131738263165,
+          "medianCellMeanRelativeError": 0.016199677366537886
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018647426881934676,
+          "medianCellMeanRelativeError": 0.01686355824521013
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.01893511793363633,
+          "medianCellMeanRelativeError": 0.016683798836523805
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019041925248797983,
+          "medianCellMeanRelativeError": 0.01742969362431642
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01910945184499901,
+          "medianCellMeanRelativeError": 0.01839484471231812
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019194440716180074,
+          "medianCellMeanRelativeError": 0.01878235672097913
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019927838703156807,
+          "medianCellMeanRelativeError": 0.017687754212576488
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020226694789070514,
+          "medianCellMeanRelativeError": 0.01820603379857276
+        }
+      ],
+      "neighbours": [
+        "ID41",
+        "ID52",
+        "ID27"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013706862119423971,
+        "seriesInductanceH": 9.710925317393027e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00008885832044559575,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002271126643149887,
+        "debyeResistanceAt1000HzOhm": 0.001733972404036042,
+        "warburgOhmSqrtRadPerSecond": 0.0014081254646250315
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00030484192032719345,
+        "medianRelativeError": 0.016275823916404912,
+        "meanRelativeError": 0.017347554620585008,
+        "maximumRelativeError": 0.03659042906818694
+      },
+      "passed": true
+    },
+    {
+      "id": "ID51",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0142228965414688,
+          "im": 0.00583777204155922
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018377441704875732,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018517000819984204,
+          "medianCellMeanRelativeError": 0.016490359567511912
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018612552863501046,
+          "medianCellMeanRelativeError": 0.017011844298752674
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.019038669566420176,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01906619507354898,
+          "medianCellMeanRelativeError": 0.017160620888904066
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01908222542508528,
+          "medianCellMeanRelativeError": 0.01811826534095458
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019371704207661457,
+          "medianCellMeanRelativeError": 0.018967060385826958
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01986359197569922,
+          "medianCellMeanRelativeError": 0.017898916772896605
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020700306504194434,
+          "medianCellMeanRelativeError": 0.01820603379857276
+        }
+      ],
+      "neighbours": [
+        "ID45",
+        "ID16",
+        "ID47"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013510751801058688,
+        "seriesInductanceH": 9.677593204806925e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00008854967633474817,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0022300325947084304,
+        "debyeResistanceAt1000HzOhm": 0.0018345988863177354,
+        "warburgOhmSqrtRadPerSecond": 0.0013857288422321433
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003558770825355489,
+        "medianRelativeError": 0.021261689872280293,
+        "meanRelativeError": 0.020377347066344094,
+        "maximumRelativeError": 0.03563774103197006
+      },
+      "passed": true
+    },
+    {
+      "id": "ID52",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014430181006901,
+          "im": 0.00583667494356632
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 9,
+      "nestedValidation": [
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018319991557037195,
+          "medianCellMeanRelativeError": 0.016302520682333555
+        },
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018349263575170107,
+          "medianCellMeanRelativeError": 0.01541452231139136
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018613065309816684,
+          "medianCellMeanRelativeError": 0.01686355824521013
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.0188833408179583,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.019028673194781805,
+          "medianCellMeanRelativeError": 0.017360331114129587
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.01908331160752964,
+          "medianCellMeanRelativeError": 0.018295521724883836
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019192763935321506,
+          "medianCellMeanRelativeError": 0.018796424379688946
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.01985041498254319,
+          "medianCellMeanRelativeError": 0.017687754212576488
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.02029274465627782,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID50",
+        "ID41",
+        "ID27",
+        "ID47",
+        "ID25",
+        "ID02",
+        "ID49",
+        "ID48",
+        "ID26"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01368986133426235,
+        "seriesInductanceH": 9.717307724372071e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0001072573611725121,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0023041873042667933,
+        "debyeResistanceAt1000HzOhm": 0.0017526380523916682,
+        "warburgOhmSqrtRadPerSecond": 0.0014065148239606297
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00041242043988738003,
+        "medianRelativeError": 0.025227311317784464,
+        "meanRelativeError": 0.023140829445814602,
+        "maximumRelativeError": 0.036955671764019246
+      },
+      "passed": true
+    },
+    {
+      "id": "ID53",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0145072889281437,
+          "im": 0.00573435053229332
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018497700861906524,
+          "medianCellMeanRelativeError": 0.017162445756217157
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.01867522381212005,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.01880535973990165,
+          "medianCellMeanRelativeError": 0.017521612218394805
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018939572039541358,
+          "medianCellMeanRelativeError": 0.01768199968766766
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01898910218091497,
+          "medianCellMeanRelativeError": 0.017160620888904066
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019246677651929663,
+          "medianCellMeanRelativeError": 0.018107829408874027
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019325133284237517,
+          "medianCellMeanRelativeError": 0.018879619493715076
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.02007022820536559,
+          "medianCellMeanRelativeError": 0.017735437044948676
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020324601453696654,
+          "medianCellMeanRelativeError": 0.017868627774501492
+        }
+      ],
+      "neighbours": [
+        "ID01",
+        "ID31",
+        "ID25"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013681616015363196,
+        "seriesInductanceH": 9.61652929905496e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00011576741017477246,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002516812604546653,
+        "debyeResistanceAt1000HzOhm": 0.0017557195030242579,
+        "warburgOhmSqrtRadPerSecond": 0.0014443774667572459
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002559526936344433,
+        "medianRelativeError": 0.011560813172846808,
+        "meanRelativeError": 0.013300527310147907,
+        "maximumRelativeError": 0.04306395295724125
+      },
+      "passed": true
+    },
+    {
+      "id": "ID54",
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014095917227678,
+          "im": 0.00572963617742062
+        }
+      },
+      "donorCells": 53,
+      "selectedK": 3,
+      "nestedValidation": [
+        {
+          "k": 3,
+          "meanCellMeanRelativeError": 0.018372197092184194,
+          "medianCellMeanRelativeError": 0.015500931687512425
+        },
+        {
+          "k": 9,
+          "meanCellMeanRelativeError": 0.018599649851958312,
+          "medianCellMeanRelativeError": 0.017055868399032833
+        },
+        {
+          "k": 5,
+          "meanCellMeanRelativeError": 0.018628463130851584,
+          "medianCellMeanRelativeError": 0.016439664794987794
+        },
+        {
+          "k": 7,
+          "meanCellMeanRelativeError": 0.018750307329312814,
+          "medianCellMeanRelativeError": 0.01674451660101429
+        },
+        {
+          "k": 17,
+          "meanCellMeanRelativeError": 0.019000765340964596,
+          "medianCellMeanRelativeError": 0.01754309456687506
+        },
+        {
+          "k": 13,
+          "meanCellMeanRelativeError": 0.01906891564296166,
+          "medianCellMeanRelativeError": 0.018034999055935728
+        },
+        {
+          "k": 25,
+          "meanCellMeanRelativeError": 0.019166967424324447,
+          "medianCellMeanRelativeError": 0.018228276626587978
+        },
+        {
+          "k": 35,
+          "meanCellMeanRelativeError": 0.019987198348094086,
+          "medianCellMeanRelativeError": 0.017606516757462477
+        },
+        {
+          "k": 1,
+          "meanCellMeanRelativeError": 0.020204838942031907,
+          "medianCellMeanRelativeError": 0.017775891736612957
+        }
+      ],
+      "neighbours": [
+        "ID17",
+        "ID13",
+        "ID24"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013435372591234049,
+        "seriesInductanceH": 9.580768339281246e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005207040123100001,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0.000012606328903535437,
+        "debyeResistanceAt100HzOhm": 0.0026554808460300563,
+        "debyeResistanceAt1000HzOhm": 0.0018912547554223987,
+        "warburgOhmSqrtRadPerSecond": 0.0014812338765888544
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00041598835276400226,
+        "medianRelativeError": 0.025288484157441813,
+        "meanRelativeError": 0.02394468981040656,
+        "maximumRelativeError": 0.034293150120063245
+      },
+      "passed": true
+    }
+  ],
+  "decision": {
+    "allCellsPassWithOneCalibrationPoint": false,
+    "coherentCellStatePredictorEstablishedForThisPopulation": false,
+    "simultaneousPredictiveDistributionEstablished": false,
+    "measurementCovarianceEstablished": false,
+    "detectorLikelihoodClosed": false,
+    "generatedDynamicsEstablished": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The nested one-point latent-state predictor fails at least one cell. One complex calibration record is insufficient to transport the coherent population state across the untouched spectrum under the declared model."
+}

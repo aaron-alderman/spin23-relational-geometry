@@ -1,0 +1,1934 @@
+{
+  "protocol": "zenodo-eis-one-point-physical-anchor/1",
+  "date": "2026-10-25",
+  "source": {
+    "doi": "10.5281/zenodo.15422339",
+    "cells": 54
+  },
+  "preregistration": {
+    "targetEvaluationValuesUsedForPrediction": false,
+    "targetCalibrationRecord": "one complex impedance at fixed 10000 Hz source row",
+    "donorCoordinates": "coordinatewise median of the other 53 cells for five Debye weights and Warburg weight",
+    "targetCoordinates": "solve series R from the calibration real component and series L from its imaginary component after subtracting donor-derived nonseries contributions",
+    "fittedHyperparameters": 0,
+    "evaluationRows": "source row index modulo 3 equals 1",
+    "thresholds": {
+      "heldOutMedianRelativeErrorMaximum": 0.05,
+      "heldOutMaximumRelativeErrorMaximum": 0.2
+    }
+  },
+  "population": {
+    "passedCells": 36,
+    "failedCells": 18,
+    "passFraction": 0.6666666666666666,
+    "passiveCells": 54,
+    "medianCellMedianRelativeError": 0.03895962226772518,
+    "worstCellMedianRelativeError": 0.07992180407765413,
+    "medianCellMaximumRelativeError": 0.06891416089937442,
+    "worstCellMaximumRelativeError": 0.08203542815126319,
+    "worstMedianCell": "ID52",
+    "worstMaximumCell": "ID52"
+  },
+  "cells": [
+    {
+      "id": "ID01",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.01439659378957,
+          "im": 0.00577427260577679
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01437382233286882,
+        "seriesInductanceH": 9.529227586747366e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0007924568738607107,
+        "medianRelativeError": 0.04337637018638703,
+        "meanRelativeError": 0.04568009810215225,
+        "maximumRelativeError": 0.07285141327319794
+      },
+      "passed": true
+    },
+    {
+      "id": "ID02",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0145269109634683,
+          "im": 0.00583251006901264
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01450413950676712,
+        "seriesInductanceH": 9.621915388218546e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006186509246861473,
+        "medianRelativeError": 0.02787910721228351,
+        "meanRelativeError": 0.03485934895748009,
+        "maximumRelativeError": 0.06675780049740486
+      },
+      "passed": true
+    },
+    {
+      "id": "ID03",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141171411378309,
+          "im": 0.00563794746994972
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01409445404561393,
+        "seriesInductanceH": 9.310916699787538e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004993483649737176,
+        "medianRelativeError": 0.018048633796311185,
+        "meanRelativeError": 0.02779720326274111,
+        "maximumRelativeError": 0.06285645926367558
+      },
+      "passed": true
+    },
+    {
+      "id": "ID04",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0139687060145661,
+          "im": 0.00557741895318031
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01394601892234913,
+        "seriesInductanceH": 9.214582573368814e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004219527407561215,
+        "medianRelativeError": 0.010691829226956774,
+        "meanRelativeError": 0.021286927702130067,
+        "maximumRelativeError": 0.06033324866385047
+      },
+      "passed": true
+    },
+    {
+      "id": "ID05",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0139914889587089,
+          "im": 0.00572494789958
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013968801866491931,
+        "seriesInductanceH": 9.449382184055314e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005092980040587674,
+        "medianRelativeError": 0.019369919764255665,
+        "meanRelativeError": 0.028642600979001696,
+        "maximumRelativeError": 0.06407751085149155
+      },
+      "passed": true
+    },
+    {
+      "id": "ID06",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140571425436065,
+          "im": 0.00567731261253357
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014034455451389531,
+        "seriesInductanceH": 9.373568270064908e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004339344771280191,
+        "medianRelativeError": 0.010836403349552878,
+        "meanRelativeError": 0.02165219082782878,
+        "maximumRelativeError": 0.06187011505729594
+      },
+      "passed": true
+    },
+    {
+      "id": "ID07",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0147200663341209,
+          "im": 0.00582759827375412
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014697379241903931,
+        "seriesInductanceH": 9.612755328655752e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00047499644178899324,
+        "medianRelativeError": 0.00990973261830942,
+        "meanRelativeError": 0.022217988059360448,
+        "maximumRelativeError": 0.06558395940745441
+      },
+      "passed": true
+    },
+    {
+      "id": "ID08",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140207101358101,
+          "im": 0.00547122769057751
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013998023043593131,
+        "seriesInductanceH": 9.045573929804763e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004149564962840656,
+        "medianRelativeError": 0.010399687486685629,
+        "meanRelativeError": 0.019581602339859658,
+        "maximumRelativeError": 0.06002384604614643
+      },
+      "passed": true
+    },
+    {
+      "id": "ID09",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140263297362253,
+          "im": 0.00564014725387096
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014003642644008331,
+        "seriesInductanceH": 9.314417764635531e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004035337401376439,
+        "medianRelativeError": 0.008798051537495013,
+        "meanRelativeError": 0.01845143607602754,
+        "maximumRelativeError": 0.05959513121406676
+      },
+      "passed": true
+    },
+    {
+      "id": "ID10",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.013903432409279,
+          "im": 0.005644166842103
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013880745317062031,
+        "seriesInductanceH": 9.320815137998764e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004023173586875157,
+        "medianRelativeError": 0.008376460497142928,
+        "meanRelativeError": 0.01803505901027849,
+        "maximumRelativeError": 0.05991828145093808
+      },
+      "passed": true
+    },
+    {
+      "id": "ID11",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0142944128019735,
+          "im": 0.00572910159826279
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01427172570975653,
+        "seriesInductanceH": 9.455993000830118e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00045133827856699415,
+        "medianRelativeError": 0.009304916707973862,
+        "meanRelativeError": 0.020081906435676224,
+        "maximumRelativeError": 0.06571889119163869
+      },
+      "passed": true
+    },
+    {
+      "id": "ID12",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143788241548464,
+          "im": 0.00567513145506382
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014356137062629431,
+        "seriesInductanceH": 9.370096850135183e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004579794781938046,
+        "medianRelativeError": 0.009271586726564269,
+        "meanRelativeError": 0.021242108359272656,
+        "maximumRelativeError": 0.06594338201628043
+      },
+      "passed": true
+    },
+    {
+      "id": "ID13",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141349480254576,
+          "im": 0.00571452639997005
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01411226093324063,
+        "seriesInductanceH": 9.432795852281777e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00043335720080501166,
+        "medianRelativeError": 0.00986830712562985,
+        "meanRelativeError": 0.021576861126232024,
+        "maximumRelativeError": 0.06116259302105864
+      },
+      "passed": true
+    },
+    {
+      "id": "ID14",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141020835144445,
+          "im": 0.00569419376552105
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014079396422227532,
+        "seriesInductanceH": 9.400435459495388e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005062841578257962,
+        "medianRelativeError": 0.01763488245390703,
+        "meanRelativeError": 0.02787165859888192,
+        "maximumRelativeError": 0.06528220621949632
+      },
+      "passed": true
+    },
+    {
+      "id": "ID15",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141683266265318,
+          "im": 0.00572537072002888
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014145639534314832,
+        "seriesInductanceH": 9.450055123700111e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004526333184473429,
+        "medianRelativeError": 0.012774499921955236,
+        "meanRelativeError": 0.02223054957181592,
+        "maximumRelativeError": 0.06442779468081662
+      },
+      "passed": true
+    },
+    {
+      "id": "ID16",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141558040631935,
+          "im": 0.00579696893692017
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014133116970976531,
+        "seriesInductanceH": 9.564007225048256e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005802525409989674,
+        "medianRelativeError": 0.02730850428937039,
+        "meanRelativeError": 0.033166726257001684,
+        "maximumRelativeError": 0.06367484093043713
+      },
+      "passed": true
+    },
+    {
+      "id": "ID17",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141025193734095,
+          "im": 0.0057488102465868
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014079832281192532,
+        "seriesInductanceH": 9.487360288854377e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006285447684188771,
+        "medianRelativeError": 0.030699687032225274,
+        "meanRelativeError": 0.03635253220093266,
+        "maximumRelativeError": 0.06627053553887842
+      },
+      "passed": true
+    },
+    {
+      "id": "ID18",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014032335835509,
+          "im": 0.00565542466938496
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014009648554711839,
+        "seriesInductanceH": 9.338762540072675e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000631525244969997,
+        "medianRelativeError": 0.03443259262560521,
+        "meanRelativeError": 0.03668201153889327,
+        "maximumRelativeError": 0.05972749667044851
+      },
+      "passed": true
+    },
+    {
+      "id": "ID19",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141536601586267,
+          "im": 0.00574884936213493
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014130972877829539,
+        "seriesInductanceH": 9.487452556652669e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000689001057258787,
+        "medianRelativeError": 0.03895962226772518,
+        "meanRelativeError": 0.039827861812838726,
+        "maximumRelativeError": 0.06119936604349867
+      },
+      "passed": true
+    },
+    {
+      "id": "ID20",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0139914097962901,
+          "im": 0.00586144253611565
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013968722188308066,
+        "seriesInductanceH": 9.666650679357938e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000726205549148877,
+        "medianRelativeError": 0.04146943259532438,
+        "meanRelativeError": 0.042429994085408165,
+        "maximumRelativeError": 0.06470247394586223
+      },
+      "passed": true
+    },
+    {
+      "id": "ID21",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140458027599379,
+          "im": 0.00575925782322884
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014023115151955867,
+        "seriesInductanceH": 9.504018657714319e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0007766232515025655,
+        "medianRelativeError": 0.044010771134568735,
+        "meanRelativeError": 0.045324425532461646,
+        "maximumRelativeError": 0.0702333755941181
+      },
+      "passed": true
+    },
+    {
+      "id": "ID22",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0138382109580562,
+          "im": 0.00577463023364544
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013815438985589956,
+        "seriesInductanceH": 9.529827303379018e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0010049098501726274,
+        "medianRelativeError": 0.06514993848527295,
+        "meanRelativeError": 0.05878972704332156,
+        "maximumRelativeError": 0.07107369196689092
+      },
+      "passed": false
+    },
+    {
+      "id": "ID23",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014471277478151,
+          "im": 0.00589705258607864
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014448505505684757,
+        "seriesInductanceH": 9.724668528725838e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.001064445524628476,
+        "medianRelativeError": 0.0647628143323826,
+        "meanRelativeError": 0.06022442295982529,
+        "maximumRelativeError": 0.07391769401609538
+      },
+      "passed": false
+    },
+    {
+      "id": "ID24",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141279752133414,
+          "im": 0.00575577653944492
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014105203240875155,
+        "seriesInductanceH": 9.49982071710346e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0008068605230026279,
+        "medianRelativeError": 0.04733651524628561,
+        "meanRelativeError": 0.04698812324809803,
+        "maximumRelativeError": 0.06923677342184122
+      },
+      "passed": true
+    },
+    {
+      "id": "ID25",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144213464809582,
+          "im": 0.00579471699893475
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014398574508491956,
+        "seriesInductanceH": 9.561796383244222e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0008050505981142713,
+        "medianRelativeError": 0.04486778912214192,
+        "meanRelativeError": 0.04626844262170784,
+        "maximumRelativeError": 0.0725494778778672
+      },
+      "passed": true
+    },
+    {
+      "id": "ID26",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143482646672055,
+          "im": 0.00579211115837097
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01432549288331945,
+        "seriesInductanceH": 9.557619045707946e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000724300720034525,
+        "medianRelativeError": 0.03763647401478386,
+        "meanRelativeError": 0.0417268256156512,
+        "maximumRelativeError": 0.07168156561668791
+      },
+      "passed": true
+    },
+    {
+      "id": "ID27",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144225683761761,
+          "im": 0.00582136027514935
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014399796919474869,
+        "seriesInductanceH": 9.604169947995415e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006712249264609464,
+        "medianRelativeError": 0.03132283556620341,
+        "meanRelativeError": 0.038250223805927915,
+        "maximumRelativeError": 0.07157667884306763
+      },
+      "passed": true
+    },
+    {
+      "id": "ID28",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140763752860948,
+          "im": 0.00565231777727604
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01405368819387783,
+        "seriesInductanceH": 9.333787754234873e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004533683134121317,
+        "medianRelativeError": 0.014454906443756861,
+        "meanRelativeError": 0.02382785641859862,
+        "maximumRelativeError": 0.06180838430067675
+      },
+      "passed": true
+    },
+    {
+      "id": "ID29",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141026246128604,
+          "im": 0.00584553182125092
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014079937520643432,
+        "seriesInductanceH": 9.641297455968643e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005414864473261481,
+        "medianRelativeError": 0.022942043019801458,
+        "meanRelativeError": 0.030774214666365613,
+        "maximumRelativeError": 0.06357170178673371
+      },
+      "passed": true
+    },
+    {
+      "id": "ID30",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140735487220809,
+          "im": 0.00564328581094742
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014050861629863931,
+        "seriesInductanceH": 9.319412933364478e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005273316503770653,
+        "medianRelativeError": 0.021374790362736453,
+        "meanRelativeError": 0.029937769782452783,
+        "maximumRelativeError": 0.0632798071865636
+      },
+      "passed": true
+    },
+    {
+      "id": "ID31",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014354623737745,
+          "im": 0.00571901910007
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01433185228104382,
+        "seriesInductanceH": 9.441288901183446e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006760061312869562,
+        "medianRelativeError": 0.03276782227271782,
+        "meanRelativeError": 0.03874217318969521,
+        "maximumRelativeError": 0.0706934347559376
+      },
+      "passed": true
+    },
+    {
+      "id": "ID32",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0142955965129659,
+          "im": 0.00571660883724689
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014272824729079849,
+        "seriesInductanceH": 9.437453369489856e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006578654326679405,
+        "medianRelativeError": 0.031354131109408566,
+        "meanRelativeError": 0.03774444798207206,
+        "maximumRelativeError": 0.07089556757808885
+      },
+      "passed": true
+    },
+    {
+      "id": "ID33",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140474688960239,
+          "im": 0.00556598603725433
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01402478180380693,
+        "seriesInductanceH": 9.196386522533078e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00047136000669526136,
+        "medianRelativeError": 0.01690581344420464,
+        "meanRelativeError": 0.02596910338629669,
+        "maximumRelativeError": 0.06054299602108038
+      },
+      "passed": true
+    },
+    {
+      "id": "ID34",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014042520779185,
+          "im": 0.00575564801692963
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01401983335978316,
+        "seriesInductanceH": 9.498243459083159e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000713820881069559,
+        "medianRelativeError": 0.03842931236034337,
+        "meanRelativeError": 0.04175327752288073,
+        "maximumRelativeError": 0.06921453559400789
+      },
+      "passed": true
+    },
+    {
+      "id": "ID35",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141866308404133,
+          "im": 0.00574002787470818
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01416385938371207,
+        "seriesInductanceH": 9.474725412357998e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456016429125085,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0007550936632911585,
+        "medianRelativeError": 0.04148186888225629,
+        "meanRelativeError": 0.04381527504017373,
+        "maximumRelativeError": 0.07044152351267087
+      },
+      "passed": true
+    },
+    {
+      "id": "ID36",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0136292938841507,
+          "im": 0.00557493977248669
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013606606276168717,
+        "seriesInductanceH": 9.210667361092709e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005827652926608625,
+        "medianRelativeError": 0.03137213564547141,
+        "meanRelativeError": 0.03447931108708458,
+        "maximumRelativeError": 0.059930075580866604
+      },
+      "passed": true
+    },
+    {
+      "id": "ID37",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140975619433448,
+          "im": 0.00576255656778812
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014074874335362817,
+        "seriesInductanceH": 9.509268764885537e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0008670811850742109,
+        "medianRelativeError": 0.05210900423151676,
+        "meanRelativeError": 0.050244763761075714,
+        "maximumRelativeError": 0.06846153294185933
+      },
+      "passed": false
+    },
+    {
+      "id": "ID38",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141365024028346,
+          "im": 0.00565106421709061
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014113815122037437,
+        "seriesInductanceH": 9.331822664705055e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004610684273999983,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.0018547454359992385,
+        "warburgOhmSqrtRadPerSecond": 0.0014455066339579424
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0007793396963324841,
+        "medianRelativeError": 0.04505410862146984,
+        "meanRelativeError": 0.04513547451748627,
+        "maximumRelativeError": 0.06614126195870774
+      },
+      "passed": true
+    },
+    {
+      "id": "ID39",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140937109244987,
+          "im": 0.0057788398116827
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014070938952032456,
+        "seriesInductanceH": 9.536527054908628e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0009187908253284294,
+        "medianRelativeError": 0.05586858062290795,
+        "meanRelativeError": 0.0533885228396112,
+        "maximumRelativeError": 0.07058472880299409
+      },
+      "passed": false
+    },
+    {
+      "id": "ID40",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0141315822256729,
+          "im": 0.00567061826586723
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014108810253206656,
+        "seriesInductanceH": 9.364287115252847e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000868889193582181,
+        "medianRelativeError": 0.0537081475541595,
+        "meanRelativeError": 0.0500049431622071,
+        "maximumRelativeError": 0.06425249707788072
+      },
+      "passed": false
+    },
+    {
+      "id": "ID41",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144406025065109,
+          "im": 0.00582562200725079
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014417830534044655,
+        "seriesInductanceH": 9.61098323164216e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0009943389454487685,
+        "medianRelativeError": 0.06028193384985594,
+        "meanRelativeError": 0.05665669740322053,
+        "maximumRelativeError": 0.07295048520365313
+      },
+      "passed": false
+    },
+    {
+      "id": "ID42",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143330831779167,
+          "im": 0.00574290938675404
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014310311205450456,
+        "seriesInductanceH": 9.479342007560743e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.001020070343238063,
+        "medianRelativeError": 0.06325126293084296,
+        "meanRelativeError": 0.05822573818693408,
+        "maximumRelativeError": 0.07112656398055613
+      },
+      "passed": false
+    },
+    {
+      "id": "ID43",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0140405426500365,
+          "im": 0.00576810911297798
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014017770677570256,
+        "seriesInductanceH": 9.519448617491768e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0009586036535941563,
+        "medianRelativeError": 0.06010056477530793,
+        "meanRelativeError": 0.0555694428074659,
+        "maximumRelativeError": 0.06891416089937442
+      },
+      "passed": false
+    },
+    {
+      "id": "ID44",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143248903332278,
+          "im": 0.00576043128967285
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014302118360761555,
+        "seriesInductanceH": 9.507228982179791e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0010653142673405333,
+        "medianRelativeError": 0.06713426894886984,
+        "meanRelativeError": 0.060706851479747276,
+        "maximumRelativeError": 0.07167063898480476
+      },
+      "passed": false
+    },
+    {
+      "id": "ID45",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0142090924782678,
+          "im": 0.00582719221711159
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014186320505801556,
+        "seriesInductanceH": 9.61348229825254e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0010831457982066626,
+        "medianRelativeError": 0.06912563164721165,
+        "meanRelativeError": 0.06214501064296848,
+        "maximumRelativeError": 0.07177933036504053
+      },
+      "passed": false
+    },
+    {
+      "id": "ID46",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143127253977582,
+          "im": 0.00578898005187511
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014289953425291956,
+        "seriesInductanceH": 9.55266574841624e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0010445862451789788,
+        "medianRelativeError": 0.06564134450941286,
+        "meanRelativeError": 0.05957530594042451,
+        "maximumRelativeError": 0.07114550311762548
+      },
+      "passed": false
+    },
+    {
+      "id": "ID47",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143415526254103,
+          "im": 0.00583122856914997
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014318780652944056,
+        "seriesInductanceH": 9.619906352042213e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0011002353390182193,
+        "medianRelativeError": 0.06950889655814084,
+        "meanRelativeError": 0.06280147891778362,
+        "maximumRelativeError": 0.07359659241294537
+      },
+      "passed": false
+    },
+    {
+      "id": "ID48",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0143374361796305,
+          "im": 0.00587125867605209
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014314664207164256,
+        "seriesInductanceH": 9.683616245901907e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0011385512034967013,
+        "medianRelativeError": 0.07275731066180804,
+        "meanRelativeError": 0.06500872796776656,
+        "maximumRelativeError": 0.07557432444774481
+      },
+      "passed": false
+    },
+    {
+      "id": "ID49",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144265972776338,
+          "im": 0.00589044764637947
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014403825305167556,
+        "seriesInductanceH": 9.714156440706368e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.001146216807659872,
+        "medianRelativeError": 0.07267376242281429,
+        "meanRelativeError": 0.0651682888751878,
+        "maximumRelativeError": 0.07581886931793722
+      },
+      "passed": false
+    },
+    {
+      "id": "ID50",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0144545565126464,
+          "im": 0.00583287887275219
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014431784540180155,
+        "seriesInductanceH": 9.622532891801169e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0011689395849123364,
+        "medianRelativeError": 0.07417089724688415,
+        "meanRelativeError": 0.06638026194709525,
+        "maximumRelativeError": 0.07557575298283963
+      },
+      "passed": false
+    },
+    {
+      "id": "ID51",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0142228965414688,
+          "im": 0.00583777204155922
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014200124569002557,
+        "seriesInductanceH": 9.630320611831388e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0011568113556303977,
+        "medianRelativeError": 0.07439995815930607,
+        "meanRelativeError": 0.0660897438694825,
+        "maximumRelativeError": 0.07654706023379623
+      },
+      "passed": false
+    },
+    {
+      "id": "ID52",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014430181006901,
+          "im": 0.00583667494356632
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014407409034434757,
+        "seriesInductanceH": 9.628574526145126e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0012483387914368142,
+        "medianRelativeError": 0.07992180407765413,
+        "meanRelativeError": 0.07077049932186484,
+        "maximumRelativeError": 0.08203542815126319
+      },
+      "passed": false
+    },
+    {
+      "id": "ID53",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.0145072889281437,
+          "im": 0.00573435053229332
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014484516955677455,
+        "seriesInductanceH": 9.465720167614466e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0009504630972995812,
+        "medianRelativeError": 0.05633937828444779,
+        "meanRelativeError": 0.05444734416652587,
+        "maximumRelativeError": 0.075627311581633
+      },
+      "passed": false
+    },
+    {
+      "id": "ID54",
+      "donorCells": 53,
+      "calibration": {
+        "frequencyHz": 10000,
+        "measured": {
+          "re": 0.014095917227678,
+          "im": 0.00572963617742062
+        }
+      },
+      "donorRule": "coordinatewise median of other 53 fitted passive parameters",
+      "calibratedCoordinates": [
+        "seriesResistanceOhm",
+        "seriesInductanceH"
+      ],
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.014073145255211755,
+        "seriesInductanceH": 9.458217038799669e-8,
+        "debyeResistanceAt0.1HzOhm": 0.0000456133078803764,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.0024579024196378137,
+        "debyeResistanceAt1000HzOhm": 0.001863266248909618,
+        "warburgOhmSqrtRadPerSecond": 0.0014456226179749686
+      },
+      "passiveCoefficientConstraintSatisfied": true,
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0008162589836863759,
+        "medianRelativeError": 0.047778400638637905,
+        "meanRelativeError": 0.047766151011952335,
+        "maximumRelativeError": 0.07129066104981947
+      },
+      "passed": true
+    }
+  ],
+  "decision": {
+    "allCellsPassWithOnePhysicalAnchor": false,
+    "twoCoordinateCellStateSufficientUnderFrozenThresholds": false,
+    "simultaneousPredictiveDistributionEstablished": false,
+    "measurementCovarianceEstablished": false,
+    "detectorLikelihoodClosed": false,
+    "generatedDynamicsEstablished": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The physical two-coordinate anchor fails at least one unseen cell; coherent heterogeneity cannot be reduced to series resistance and inductance under the frozen passive family."
+}

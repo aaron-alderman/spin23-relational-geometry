@@ -156,6 +156,13 @@ at all fifteen evaluation frequencies, while `ID52` is repeatedly
 imaginary-part extreme. OT-027 now requires a donor-selected latent cell state
 and simultaneous spectral coverage, not independent pointwise bars.
 
+[AZ-091](../admissibility/admissibility_91_one_point_latent_state_boundary.md)
+tests the smallest calibration record. A nested neighbour model using one fixed
+10 kHz complex point passes 53 of 54 cells but leaves `ID07` at 5.250% median
+error. Solving only series resistance and inductance from that point passes just
+36 of 54. One point is informative but does not span the relaxation state; the
+next record needs a second, separated frequency.
+
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
 (\pi/4) phase depends on a common anomaly trivialization, while the (T_1)

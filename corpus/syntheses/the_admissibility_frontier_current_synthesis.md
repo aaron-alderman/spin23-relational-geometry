@@ -283,6 +283,15 @@ repeated imaginary or real extrema. A physical population law must transport a
 latent cell state across the spectrum; independent pointwise bars erase the
 relation that needs explanation.
 
+[AZ-091](../programmes/admissibility/admissibility_91_one_point_latent_state_boundary.md)
+asks how little target information is sufficient. One fixed 10 kHz complex
+measurement guides a donor-neighbour passive model to passage on 53 of 54 cells,
+but `ID07` remains just outside at 5.250% median error. Interpreting the same
+record only as series resistance and inductance is worse, passing 36 of 54.
+The state is therefore low-dimensional enough to be strongly localized by one
+point, but it is not merely a constant and slope; the next calibration must
+touch a separated relaxation or diffusion scale.
+
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one
 nonabelian semisimple factor, \(\mathfrak{sl}_2\); the reciprocal programme core

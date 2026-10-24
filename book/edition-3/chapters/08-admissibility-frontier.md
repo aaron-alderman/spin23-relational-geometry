@@ -291,6 +291,10 @@ The simplest predictive envelope also exposes a trap. At each held-out frequency
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-10.md)
 
+One fixed 10 kHz complex calibration record then tests the smallest latent-state bridge. A neighbour count chosen entirely inside the other 53 cells lets their passive parameters predict 53 of 54 untouched spectra; ID07 improves but remains outside at 5.250% median error. A more literal physical reading—use the point to solve only series resistance and inductance while keeping donor-median relaxation weights—passes just 36 of 54. One point therefore carries real state information, but the state is not only an offset and slope. The next look-here experiment uses a second, separated calibration frequency that can see relaxation or diffusion, while keeping all evaluation rows untouched.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-11.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

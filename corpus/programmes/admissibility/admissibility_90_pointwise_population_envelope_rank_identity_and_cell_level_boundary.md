@@ -27,7 +27,7 @@ Nothing here establishes measurement covariance, a detector likelihood, generate
 
 ## Next gate
 
-Construct a nested leave-one-cell-out latent-state model. The target may supply only a predeclared minimal calibration record—such as one complex frequency point or independently measured cell metadata—never the evaluation frequencies. Choose the latent dimension and regularization using donors alone, output a joint predictive distribution across the remaining spectrum, and score simultaneous cell-level coverage. Replicate/fixture data remain necessary before the predictive distribution can become a detector likelihood.
+AZ-091 executes the one-complex-point version. Donor locality nearly closes the gate at 53/54, while a direct series-R/L interpretation passes only 36/54. The next finite test therefore uses two separated calibration frequencies so that the target record observes both port and relaxation/diffusion state. Replicate/fixture data remain necessary before any predictive distribution can become a detector likelihood.
 
 ## Reproduction
 
