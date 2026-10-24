@@ -1,0 +1,143 @@
+{
+  "protocol": "five-coordinate-phase-edge-extraction-gate/1",
+  "date": "2026-10-25",
+  "targets": [
+    "OT-047",
+    "OT-048"
+  ],
+  "parent": "AZ-072",
+  "quadraticModel": "y(ci,cj)=B+Li ci+Lj cj+Fii ci^2+2Fij ci cj+Fjj cj^2",
+  "signSafeDesign": {
+    "grid": "ci,cj in {-1,0,+1}",
+    "samplesRequired": 9,
+    "coefficientsRecovered": [
+      "B",
+      "Li",
+      "Lj",
+      "Fii",
+      "Fij",
+      "Fjj"
+    ],
+    "independentClosureResiduals": 3,
+    "formulas": {
+      "interference": "Fij=[y(+,+)-y(+,-)-y(-,+)+y(-,-)]/8",
+      "diagonalI": "Fii=[y(+,0)+y(-,0)]/2-y(0,0)",
+      "diagonalJ": "Fjj=[y(0,+)+y(0,-)]/2-y(0,0)",
+      "linearI": "Li=[y(+,0)-y(-,0)]/2",
+      "linearJ": "Lj=[y(0,+)-y(0,-)]/2"
+    },
+    "equalIndependentSampleNoise": {
+      "interferenceOneSigmaFactor": 0.25,
+      "statement": "If every corner has independent one-sigma noise s, sigma(Fij)=s/4. Correlated common-random-number generation must use the full signed covariance rather than this shortcut."
+    },
+    "pureQuadraticShortcut": {
+      "condition": "B is subtracted and Li=Lj=0 is established for the signal definition",
+      "additionalMixedSamplesAfterBaselineAndAxes": 2,
+      "samples": [
+        "(+,+)",
+        "(+,-)"
+      ],
+      "formula": "Fij=[y(+,+)-y(+,-)]/4"
+    }
+  },
+  "syntheticCertificate": {
+    "declaredParameters": {
+      "baseline": 100,
+      "linearI": 2,
+      "linearJ": -1,
+      "diagonalI": 9,
+      "diagonalJ": 4,
+      "interference": -3
+    },
+    "samples": {
+      "-1,-1": 106,
+      "-1,0": 107,
+      "-1,1": 116,
+      "0,-1": 105,
+      "0,0": 100,
+      "0,1": 103,
+      "1,-1": 122,
+      "1,0": 111,
+      "1,1": 108
+    },
+    "extracted": {
+      "baseline": 100,
+      "linearI": 2,
+      "linearJ": -1,
+      "diagonalI": 9,
+      "diagonalJ": 4,
+      "interference": -3
+    },
+    "closureResiduals": {
+      "evenCorner": 0,
+      "linearI": 0,
+      "linearJ": 0
+    },
+    "normalizedInterference": -0.5,
+    "positivityBound": "|Fij|<=sqrt(Fii Fjj)",
+    "positivityPass": true
+  },
+  "paperConventionMap": {
+    "heavyMesonEquation13": "Gamma=cQ^2 GammaQ/fa^2+cq^2 Gammaq/fa^2+cQ cq GammaQq/fa^2",
+    "canonicalMap": "FQQ=GammaQ, Fqq=Gammaq, FQq=GammaQq/2",
+    "sourceNativeStatus": "The paper supplies the polynomial form and reports sizeable negative quark interference in its illustrated B channel, but does not publish the B_c differential coefficient table or its covariance."
+  },
+  "processActions": [
+    {
+      "edge": [
+        "v_u",
+        "v_d"
+      ],
+      "process": "B_c -> l nu a",
+      "minimumAction": "Evaluate the two constituent-line amplitudes on the same phase-space points and publish Fcc, Fbb and Fcb=Gamma_cb/2 bin by bin with form-factor covariance.",
+      "admission": "Fcb is nonzero after acceptance, obeys the positive-semidefinite bound in every declared bin or covariance block, and resolves a relative-sign branch in a joint fit."
+    },
+    {
+      "edge": [
+        "v_u",
+        "a_2"
+      ],
+      "process": "pp -> t W a",
+      "minimumAction": "Retain the existing one-coefficient samples, add both mixed-sign samples for the pure quadratic shortcut, and use the full nine-point design if linear or baseline terms are not proved absent.",
+      "admission": "The extracted top/weak Fij is nonzero after cuts, is not nuisance-collinear, and reproduces held-out coupling points."
+    }
+  ],
+  "graphAudit": {
+    "spanningTree": {
+      "edgesRequired": 2,
+      "identifies": "two relative coefficient-sign bits after process-template signs and one global node convention are fixed",
+      "cannotDo": "provide an internal convention-independent check of the cross-scale transport"
+    },
+    "cycle": {
+      "edgesRequired": 3,
+      "invariant": "sign(F_ud F_ua F_da)",
+      "declaredEdgeSigns": {
+        "v_u:v_d": -1,
+        "v_u:a_2": 1,
+        "v_d:a_2": -1
+      },
+      "cycleProduct": 1,
+      "nodeRephasingsChecked": 8,
+      "invariantUnderAllNodeRephasings": true,
+      "purpose": "A third process edge is a validation channel: its cycle product is unchanged by independent sign redefinitions of v_u, v_d and a_2 and can therefore expose a mismatched transport convention."
+    }
+  },
+  "scaleTransportContract": {
+    "coefficientMap": "c_low=M c_high",
+    "quadraticKernelMap": "F_high=M^T F_low M",
+    "covarianceMap": "C_low=J C_high J^T, with threshold and nuisance blocks retained",
+    "requiredLedger": [
+      "operator definitions and signs at both endpoints",
+      "renormalization scheme and scale",
+      "RG evolution matrix",
+      "electroweak threshold matching matrix",
+      "hadronic matching and form-factor convention",
+      "Jacobian and full covariance, including shared nuisances"
+    ]
+  },
+  "verdict": {
+    "closed": "The finite signed-sample design, extraction formulas, positivity test, quadratic closure residuals and tree-versus-cycle distinction are exact.",
+    "open": "No source-native B_c coefficient table, tW top/weak cross term, third validation edge or phase-preserving threshold matrix has yet been computed.",
+    "nextCalculation": "Run the signed design first for tW+a and the common-phase-space amplitude decomposition for B_c; publish the kernels before attempting the joined likelihood."
+  }
+}

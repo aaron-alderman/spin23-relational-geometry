@@ -559,6 +559,25 @@ The two candidates also live on opposite sides of the electroweak threshold. The
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-3.md)
 
+<a id="hot-off-the-press-two-edges-identify-three-edges-audit"></a>
+## Hot off the press — two edges identify; three edges audit
+
+> **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** The candidate phase links now have a finite extraction protocol. A signed nine-setting grid separates the baseline, possible linear response, both self-responses and the cross-response in every differential bin. Three leftover contrasts test whether the quadratic description itself survives. The cross-response must also remain inside the ordinary positivity bound set by the two self-responses.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-1.md)
+
+Two admitted links do one job: after the process templates and one overall convention are fixed, they recover the two relative signs among the up-type, bottom and weak amplitudes. A third link does a different job. The product of the three edge signs is unchanged when any node convention is reversed, so the completed triangle is the first internal audit of whether the sign really survived the journey between scales.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-2.md)
+
+This does not supply the missing physics. The heavy-meson coefficients, top/weak collider interference, third bottom/weak process and signed electroweak matching matrix remain uncomputed. It does make the invitation buildable: publish the signed response table and covariance, require positivity and held-out prediction, then let the third edge decide whether the joined graph is physical structure or only coordinated naming.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

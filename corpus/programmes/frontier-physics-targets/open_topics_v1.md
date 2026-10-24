@@ -74,7 +74,7 @@ for another dimensionless redesign.
 | OT-036 | Microscopic capture and radiation ledger | replaces the successful toy bath with a source-native radiative or phononic channel |
 | OT-037 | Integrated-photonic selector chip | AZ-061 supplies a passing coupled-mode wedge but exposes signed-coupling, reference-port, full-wave tolerance and separate-selector gates; one fabrication-native route must now be chosen and simulated |
 | OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-071 sets the window-wide detector gate: 0.279% combined one-sigma error certifies the 1% reduction at 3 sigma, while resolving the second mode needs below 438 ppm plus sub-degree mode alignment |
-| OT-048 | Five-coordinate incidence observable likelihood | AZ-072 finds a candidate (B_c) quark-line edge and a (tW+a) top/weak edge, but neither supplies a joined signed likelihood; compute both cross terms and the cross-scale phase bridge |
+| OT-048 | Five-coordinate incidence observable likelihood | AZ-073 fixes the nine-point signed extraction and quadratic/PSD checks: two edges identify relative signs, while a third supplies the first convention-independent cycle audit; compute the physical (B_c) and (tW+a) kernels, a (v_d,a_2) validation edge and the signed scale bridge |
 
 ## P2 — gated translation problems
 

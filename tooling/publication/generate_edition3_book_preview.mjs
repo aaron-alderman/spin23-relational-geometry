@@ -281,6 +281,7 @@ const sectionTaxonomy = {
   "Hot off the press — the high-energy window survives running": "conditional",
   "Hot off the press — the detector has two different jobs": "experiment",
   "Hot off the press — the spanning tree is not yet one experiment": "external",
+  "Hot off the press — two edges identify; three edges audit": "experiment",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -368,6 +369,7 @@ const sectionArchetype = {
   "Hot off the press — the high-energy window survives running": "builder",
   "Hot off the press — the detector has two different jobs": "builder",
   "Hot off the press — the spanning tree is not yet one experiment": "scout",
+  "Hot off the press — two edges identify; three edges audit": "builder",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -688,6 +690,15 @@ admissibilitySections.splice(orientedSeamIndex + 25, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 26, 0, [
+  "Hot off the press — two edges identify; three edges audit",
+  [
+    "**Provisional integration note — 25 October 2026.** The candidate phase links now have a finite extraction protocol. A signed nine-setting grid separates the baseline, possible linear response, both self-responses and the cross-response in every differential bin. Three leftover contrasts test whether the quadratic description itself survives. The cross-response must also remain inside the ordinary positivity bound set by the two self-responses.",
+    "Two admitted links do one job: after the process templates and one overall convention are fixed, they recover the two relative signs among the up-type, bottom and weak amplitudes. A third link does a different job. The product of the three edge signs is unchanged when any node convention is reversed, so the completed triangle is the first internal audit of whether the sign really survived the journey between scales.",
+    "This does not supply the missing physics. The heavy-meson coefficients, top/weak collider interference, third bottom/weak process and signed electroweak matching matrix remain uncomputed. It does make the invitation buildable: publish the signed response table and covariance, require positivity and held-out prediction, then let the third edge decide whether the joined graph is physical structure or only coordinated naming.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -939,6 +950,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the high-energy window survives running": ["corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md", "corpus/programmes/admissibility/admissibility_69_threshold_spectrum_and_resolution_ceiling.md", "corpus/programmes/lane-expansion/programme_lane_expansion_19_absorptive_yukawa_spectroscopy_supplies_a_physical_broken_current_anchor.md"],
   "Hot off the press — the detector has two different jobs": ["corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md", "corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md", "corpus/programmes/lane-expansion/programme_lane_expansion_37_the_five_coordinate_observable_map_needs_bottom_weak_and_neutrino_compasses.md"],
   "Hot off the press — the spanning tree is not yet one experiment": ["corpus/programmes/admissibility/admissibility_72_candidate_phase_edges_and_scale_bridge.md", "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md", "corpus/programmes/lane-expansion/programme_lane_expansion_37_the_five_coordinate_observable_map_needs_bottom_weak_and_neutrino_compasses.md"],
+  "Hot off the press — two edges identify; three edges audit": ["corpus/programmes/admissibility/admissibility_73_signed_edge_extraction_and_cycle_audit.md", "corpus/programmes/admissibility/admissibility_72_candidate_phase_edges_and_scale_bridge.md", "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md"],
 };
 
 const evidenceReading = key => ({
