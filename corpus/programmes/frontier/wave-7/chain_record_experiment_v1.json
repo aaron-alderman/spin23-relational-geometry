@@ -1,0 +1,102 @@
+{
+  "schema": "chain-record-experiment/1",
+  "date": "2026-10-25",
+  "status": "executable hardware-neutral protocol",
+  "objective": "Test the qutrit-qubit finite record mechanism independently of any photon-coupling identification.",
+  "carrier": {
+    "qubitWeylLabels": 4,
+    "qutritWeylLabels": 9,
+    "readOperatorDimension": 36,
+    "unreadConnectedDimension": 24,
+    "recordSpaceDimension": 31104
+  },
+  "equipmentAbstraction": {
+    "systems": [
+      "one controllable qubit",
+      "one controllable qutrit",
+      "one interferometric control ancilla"
+    ],
+    "requiredOperations": [
+      "qubit generalized X and Z Weyl gates",
+      "qutrit generalized X and Z Weyl gates",
+      "controlled ordered commutator UVU_daggerV_dagger",
+      "ancilla X and Y readout",
+      "classically sampled correlated local Weyl conjugations"
+    ],
+    "platformNeutral": true
+  },
+  "defaultRun": {
+    "seed": 137036,
+    "channelShots": 200000,
+    "phaseShotsPerQuadrature": 50000,
+    "stateShotsPerPreparation": 12000,
+    "recordShots": 10000000,
+    "eta": 0.125,
+    "perLoopVisibility": 0.995,
+    "qubitPhaseErrorRadians": 0.01,
+    "qutritPhaseErrorRadians": -0.015,
+    "noncentrality": 0,
+    "recordHypothesis": "binary-character"
+  },
+  "gates": [
+    {
+      "id": "G0",
+      "name": "protocol integrity",
+      "criterion": "exact carrier, distribution and POVM arithmetic pass"
+    },
+    {
+      "id": "G1",
+      "name": "unread sampler and channel",
+      "criterion": "total variation <= 0.02; local eigenvalues <= 0.02; connected gain within 0.02 of eta"
+    },
+    {
+      "id": "G2",
+      "name": "phase-complete port",
+      "criterion": "uncubed qubit and qutrit quadratures agree with calibrated central phases within 0.03"
+    },
+    {
+      "id": "G3",
+      "name": "cubed binary port",
+      "criterion": "qutrit X > 0.9, qubit X < -0.9, phase closure residual < 0.06 radians"
+    },
+    {
+      "id": "G4",
+      "name": "centrality",
+      "criterion": "cubed qutrit X spread over six input preparations <= 0.06"
+    },
+    {
+      "id": "G5",
+      "name": "record POVM",
+      "criterion": "binary-character likelihood wins and differs from the nearest no-commutator hypothesis by >= 5 standard errors"
+    }
+  ],
+  "recordHypotheses": {
+    "no-commutator": {
+      "bothExchangeMultiplicity": 0
+    },
+    "binary-character": {
+      "bothExchangeMultiplicity": 3
+    },
+    "phase-complete": {
+      "bothExchangeMultiplicity": 11
+    }
+  },
+  "controls": [
+    "retain uncubed X/Y phase port while testing the cubed port",
+    "reverse operation order and require conjugate uncubed phase",
+    "seal but retain the unread-channel random-label log",
+    "repeat cubed readout over a spanning set of system preparations",
+    "sweep control frequency in both directions to expose lag and hysteresis",
+    "report raw counts, calibration parameters and every failed gate"
+  ],
+  "commands": {
+    "dryRun": "node scripts/run-chain-record-experiment.mjs",
+    "writeEvidence": "node scripts/run-chain-record-experiment.mjs --write",
+    "verification": "node verification/verify/verify_chain_record_experiment_protocol.mjs"
+  },
+  "interpretationBoundary": {
+    "passShows": "the finite unread-channel, cubed-character and record-POVM mechanism survives one calibrated end-to-end protocol",
+    "passDoesNotShow": "that the finite invariant is the fine-structure constant or a photon pole residue",
+    "photonPromotionRequires": "an independently normalized conserved current, massless transverse pole and residue matching without alpha as calibration input"
+  }
+}

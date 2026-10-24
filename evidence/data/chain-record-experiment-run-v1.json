@@ -1,0 +1,278 @@
+{
+  "schema": "chain-record-experiment-run/1",
+  "date": "2026-10-25",
+  "mode": "seeded Monte Carlo hardware-neutral emulator",
+  "settings": {
+    "seed": 137036,
+    "channelShots": 200000,
+    "phaseShots": 50000,
+    "stateShots": 12000,
+    "recordShots": 10000000,
+    "eta": 0.125,
+    "visibility": 0.995,
+    "qubitPhaseError": 0.01,
+    "qutritPhaseError": -0.015,
+    "noncentrality": 0,
+    "model": "binary-character",
+    "write": true
+  },
+  "exact": {
+    "recordSpaceDimension": 31104,
+    "activeRecordDimension": 172,
+    "finiteInvariant": 0.00729735256366226,
+    "unreadCpInterval": [
+      -0.041666666666666664,
+      0.125
+    ],
+    "character": "chi(z)=z^3"
+  },
+  "stages": {
+    "unread": {
+      "shots": 200000,
+      "totalVariation": 0.005242222222222228,
+      "classCounts": {
+        "identityIdentity": 22481,
+        "identityNonidentity": 28048,
+        "nonidentityIdentity": 0,
+        "nonidentityNonidentity": 149471
+      },
+      "eigenvalues": {
+        "scalar": {
+          "re": 1,
+          "im": 0
+        },
+        "qubitLocal": {
+          "re": 0.005759999999999928,
+          "im": 6.087964167921322e-17
+        },
+        "qutritLocal": {
+          "re": 0.001314999999999877,
+          "im": -0.0018446341100607777
+        },
+        "connected": {
+          "re": 0.12727500000000008,
+          "im": 0.00037239092362714374
+        }
+      },
+      "passed": true
+    },
+    "phase": {
+      "shotsPerQuadrature": 50000,
+      "results": {
+        "qubit": {
+          "angle": 3.151592653589793,
+          "one": {
+            "x": {
+              "plus": 143,
+              "minus": 49857,
+              "mean": -0.99428
+            },
+            "y": {
+              "plus": 24920,
+              "minus": 25080,
+              "mean": -0.0032
+            },
+            "expected": {
+              "re": -0.994950250414582,
+              "im": -0.009949834167495498
+            }
+          },
+          "three": {
+            "x": {
+              "plus": 407,
+              "minus": 49593,
+              "mean": -0.98372
+            },
+            "y": {
+              "plus": 24230,
+              "minus": 25770,
+              "mean": -0.0308
+            },
+            "expected": {
+              "re": -0.9846316245515297,
+              "im": -0.029547813612534897
+            }
+          },
+          "phaseClosureResidual": 0.021644302764990186
+        },
+        "qutritPlus": {
+          "angle": 2.079395102393195,
+          "one": {
+            "x": {
+              "plus": 12699,
+              "minus": 37301,
+              "mean": -0.49204
+            },
+            "y": {
+              "plus": 46835,
+              "minus": 3165,
+              "mean": 0.8734
+            },
+            "expected": {
+              "re": -0.48451908784606346,
+              "im": 0.8690605580239035
+            }
+          },
+          "three": {
+            "x": {
+              "plus": 49603,
+              "minus": 397,
+              "mean": 0.98412
+            },
+            "y": {
+              "plus": 23877,
+              "minus": 26123,
+              "mean": -0.04492
+            },
+            "expected": {
+              "re": 0.9840776549869794,
+              "im": -0.044313410065047444
+            }
+          },
+          "phaseClosureResidual": -0.013947982948856463
+        },
+        "qutritMinus": {
+          "angle": -2.079395102393195,
+          "one": {
+            "x": {
+              "plus": 12973,
+              "minus": 37027,
+              "mean": -0.48108
+            },
+            "y": {
+              "plus": 3353,
+              "minus": 46647,
+              "mean": -0.86588
+            },
+            "expected": {
+              "re": -0.48451908784606346,
+              "im": -0.8690605580239035
+            }
+          },
+          "three": {
+            "x": {
+              "plus": 49625,
+              "minus": 375,
+              "mean": 0.985
+            },
+            "y": {
+              "plus": 26149,
+              "minus": 23851,
+              "mean": 0.04596
+            },
+            "expected": {
+              "re": 0.9840776549869794,
+              "im": 0.044313410065047444
+            }
+          },
+          "phaseClosureResidual": -0.002780599630561653
+        }
+      },
+      "maximumQuadratureError": 0.007520912153936521,
+      "maximumPhaseClosureResidual": 0.021644302764990186,
+      "passed": true
+    },
+    "centrality": {
+      "shotsPerPreparation": 12000,
+      "preparations": [
+        {
+          "preparation": 0,
+          "offset": -1,
+          "measurement": {
+            "plus": 11909,
+            "minus": 91,
+            "mean": 0.9848333333333333
+          }
+        },
+        {
+          "preparation": 1,
+          "offset": -0.6,
+          "measurement": {
+            "plus": 11897,
+            "minus": 103,
+            "mean": 0.9828333333333333
+          }
+        },
+        {
+          "preparation": 2,
+          "offset": -0.2,
+          "measurement": {
+            "plus": 11900,
+            "minus": 100,
+            "mean": 0.9833333333333333
+          }
+        },
+        {
+          "preparation": 3,
+          "offset": 0.2,
+          "measurement": {
+            "plus": 11910,
+            "minus": 90,
+            "mean": 0.985
+          }
+        },
+        {
+          "preparation": 4,
+          "offset": 0.6,
+          "measurement": {
+            "plus": 11901,
+            "minus": 99,
+            "mean": 0.9835
+          }
+        },
+        {
+          "preparation": 5,
+          "offset": 1,
+          "measurement": {
+            "plus": 11902,
+            "minus": 98,
+            "mean": 0.9836666666666667
+          }
+        }
+      ],
+      "spread": 0.00216666666666665,
+      "threshold": 0.06,
+      "passed": true
+    },
+    "record": {
+      "shots": 10000000,
+      "clicks": 29912,
+      "observedProbability": 0.0029912,
+      "standardError": 0.000017269200104695065,
+      "recoveredInvariant": 0.0073269137186130415,
+      "selectedModel": "binary-character",
+      "likelihoods": {
+        "no-commutator": -203738.4083754155,
+        "binary-character": -203718.41971478262,
+        "phase-complete": -203813.7503547313
+      },
+      "separationFromNoCommutator": 6.283956847963162,
+      "hypotheses": {
+        "no-commutator": {
+          "multiplicity": 0,
+          "probability": 0.002882681091743255
+        },
+        "binary-character": {
+          "multiplicity": 3,
+          "probability": 0.0029791317090272058
+        },
+        "phase-complete": {
+          "multiplicity": 11,
+          "probability": 0.003236333355117741
+        }
+      },
+      "passed": true
+    }
+  },
+  "gates": {
+    "G0": true,
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": true
+  },
+  "passed": true,
+  "verdict": "finite protocol passes; photon-pole interpretation remains outside scope",
+  "interpretationBoundary": "this run tests the finite channel, character and POVM pipeline; it neither inputs nor derives the fine-structure constant as a photon residue"
+}
