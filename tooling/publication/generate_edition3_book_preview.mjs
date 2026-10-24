@@ -280,6 +280,7 @@ const sectionTaxonomy = {
   "Hot off the press — the two-current window has a resolution ceiling": "conditional",
   "Hot off the press — the high-energy window survives running": "conditional",
   "Hot off the press — the detector has two different jobs": "experiment",
+  "Hot off the press — the spanning tree is not yet one experiment": "external",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -366,6 +367,7 @@ const sectionArchetype = {
   "Hot off the press — the two-current window has a resolution ceiling": "integrator",
   "Hot off the press — the high-energy window survives running": "builder",
   "Hot off the press — the detector has two different jobs": "builder",
+  "Hot off the press — the spanning tree is not yet one experiment": "scout",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -677,6 +679,15 @@ admissibilitySections.splice(orientedSeamIndex + 24, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 25, 0, [
+  "Hot off the press — the spanning tree is not yet one experiment",
+  [
+    "**Provisional integration note — 25 October 2026.** Primary calculations now suggest common-final-state processes for both phase links. Leptonic heavy-meson decay contains an explicit quark-line interference term and gives a low-energy template for the up-type/bottom edge. Associated top, W and ALP production contains top-like and weak-gauge emission diagrams in one final state and gives the high-energy topology for the up-type/weak edge.",
+    "Neither link is yet admitted. The heavy-meson result must be recomputed for the Bc two-coefficient source convention and covariance. The tW plus ALP analysis generates one nonzero coefficient at a time, so it does not retain the signed top/weak cross term. Shared sensitivity is not the same thing as measured interference.",
+    "The two candidates also live on opposite sides of the electroweak threshold. Their coefficient names form a graph, but their phases form one experimental record only if a declared operator basis, running, threshold matching and correlated nuisance model transport the sign between them. The next task is therefore two quadratic differential response polynomials and one common matching ledger; a vanished or nuisance-collinear cross term kills the corresponding edge.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -927,6 +938,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the two-current window has a resolution ceiling": ["corpus/programmes/admissibility/admissibility_69_threshold_spectrum_and_resolution_ceiling.md", "corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md", "corpus/programmes/lane-expansion/programme_lane_expansion_20_the_broken_current_anchor_is_a_threshold_staircase_not_a_universal_axis.md"],
   "Hot off the press — the high-energy window survives running": ["corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md", "corpus/programmes/admissibility/admissibility_69_threshold_spectrum_and_resolution_ceiling.md", "corpus/programmes/lane-expansion/programme_lane_expansion_19_absorptive_yukawa_spectroscopy_supplies_a_physical_broken_current_anchor.md"],
   "Hot off the press — the detector has two different jobs": ["corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md", "corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md", "corpus/programmes/lane-expansion/programme_lane_expansion_37_the_five_coordinate_observable_map_needs_bottom_weak_and_neutrino_compasses.md"],
+  "Hot off the press — the spanning tree is not yet one experiment": ["corpus/programmes/admissibility/admissibility_72_candidate_phase_edges_and_scale_bridge.md", "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md", "corpus/programmes/lane-expansion/programme_lane_expansion_37_the_five_coordinate_observable_map_needs_bottom_weak_and_neutrino_compasses.md"],
 };
 
 const evidenceReading = key => ({

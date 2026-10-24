@@ -1,0 +1,41 @@
+{
+  "protocol": "five-coordinate-phase-edge-literature-gate/1",
+  "date": "2026-10-25",
+  "targets": ["OT-047", "OT-048"],
+  "parent": "AZ-071",
+  "requiredGraph": {
+    "nodes": ["v_u", "v_d", "a_2"],
+    "minimumEdges": 2,
+    "condition": "connected coherent phase graph in one matched source convention"
+  },
+  "candidateEdges": [
+    {
+      "edge": ["v_u", "v_d"],
+      "candidateProcess": "B_c -> l nu a with ALP emission from the charm/up-type and bottom/down-type constituent lines",
+      "source": "https://arxiv.org/abs/2407.05298",
+      "sourceNativeFact": "The heavy-meson calculation writes a width polynomial containing the explicit quark-line interference coefficient c_Q c_q Gamma_Qq (equation 13).",
+      "status": "conditional_template",
+      "missing": "Recompute the B_c channel with both b and c coefficients active in the corpus source convention, including form-factor covariance and generation-universal matching."
+    },
+    {
+      "edge": ["v_u", "a_2"],
+      "candidateProcess": "pp -> t W a with common top-Yukawa-descendant and weak-gauge ALP emission diagrams",
+      "source": "https://arxiv.org/abs/2408.11588",
+      "sourceNativeFact": "The same tWa final state is sensitive to the top-like c_aPhi and weak c_Wtilde coefficients, but the published event generation sets one coefficient nonzero at a time.",
+      "status": "topology_only_cross_term_uncomputed",
+      "missing": "Generate the two-coefficient differential polynomial, retain the signed c_aPhi c_Wtilde term, and profile its detector covariance rather than fitting one coefficient at a time."
+    }
+  ],
+  "scaleBridge": {
+    "lowEnergyEdge": "heavy-meson decay below the electroweak scale",
+    "highEnergyEdge": "tW-associated production above the electroweak scale",
+    "status": "open",
+    "required": "one phase-preserving operator basis, RG evolution, electroweak threshold matching and correlated convention transport between the two likelihoods"
+  },
+  "verdict": {
+    "graphTopology": "candidate spanning tree found",
+    "operationalSignedGraph": "not closed",
+    "reason": "one edge is only a conditional low-energy template, the other lacks a published cross term, and no common phase/covariance transport joins their scales",
+    "nextCalculation": "extract both quadratic response polynomials in one declared ALP/source basis, compute their interference coefficients and transport the coefficient covariance through the electroweak threshold"
+  }
+}

@@ -540,6 +540,25 @@ There is a second, independent information gate. Rates on the up, bottom and wea
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-3.md)
 
+<a id="hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment"></a>
+## Hot off the press — the spanning tree is not yet one experiment
+
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+
+> **Research move — [✦ Scout](../reading-key/move-scout.md)** — opens a plausible new route or searches beyond the present ingredients.
+
+**Provisional integration note — 25 October 2026.** Primary calculations now suggest common-final-state processes for both phase links. Leptonic heavy-meson decay contains an explicit quark-line interference term and gives a low-energy template for the up-type/bottom edge. Associated top, W and ALP production contains top-like and weak-gauge emission diagrams in one final state and gives the high-energy topology for the up-type/weak edge.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-1.md)
+
+Neither link is yet admitted. The heavy-meson result must be recomputed for the Bc two-coefficient source convention and covariance. The tW plus ALP analysis generates one nonzero coefficient at a time, so it does not retain the signed top/weak cross term. Shared sensitivity is not the same thing as measured interference.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-2.md)
+
+The two candidates also live on opposite sides of the electroweak threshold. Their coefficient names form a graph, but their phases form one experimental record only if a declared operator basis, running, threshold matching and correlated nuisance model transport the sign between them. The next task is therefore two quadratic differential response polynomials and one common matching ledger; a vanished or nuisance-collinear cross term kills the corresponding edge.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

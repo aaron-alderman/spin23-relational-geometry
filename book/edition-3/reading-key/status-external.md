@@ -11,6 +11,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 ## Every current use
 
 - [The admissibility frontier · Hot off the press — two currents require three calculations](../chapters/08-admissibility-frontier.md#hot-off-the-press-two-currents-require-three-calculations)
+- [The admissibility frontier · Hot off the press — the spanning tree is not yet one experiment](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment)
 - [The revised spine · What remains open](../chapters/01-the-revised-spine.md#what-remains-open)
 - [The revised spine · Algebra is not yet spacetime](../chapters/01-the-revised-spine.md#algebra-is-not-yet-spacetime)
 - [The Furey interface · Why it is not yet unification](../chapters/04-furey-interface.md#why-it-is-not-yet-unification)
@@ -28,6 +29,9 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Hot off the press — two currents require three calculations (1)](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — two currents require three calculations (2)](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — two currents require three calculations (3)](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — the spanning tree is not yet one experiment (1)](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — the spanning tree is not yet one experiment (2)](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — the spanning tree is not yet one experiment (3)](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-3.md)
 - [Claim · The revised spine · What remains open (1)](../details/01-the-revised-spine-what-remains-open-claim-1.md)
 - [Claim · The revised spine · Algebra is not yet spacetime (1)](../details/01-the-revised-spine-algebra-is-not-yet-spacetime-claim-1.md)
 - [Claim · The Furey interface · Why it is not yet unification (1)](../details/04-furey-interface-why-it-is-not-yet-unification-claim-1.md)
