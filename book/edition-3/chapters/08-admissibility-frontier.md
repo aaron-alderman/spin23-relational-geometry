@@ -407,6 +407,25 @@ The useful experiment is therefore not simply a more precise Hall trace. It is a
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-3.md)
 
+<a id="hot-off-the-press-a-loop-and-its-outcome-are-different-objects"></a>
+## Hot off the press — a loop and its outcome are different objects
+
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** An exceptional-point loop carries two records that a dramatic endpoint image can hide. The instantaneous spectrum has a braid: in the declared two-mode model its discriminant winds once, the square root changes sign and the eigenstate sheets exchange after one circuit in either orientation. The driven state has a history: gain, loss, loop rate and nonadiabatic jumps decide which component remains visible.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-loop-and-its-outcome-are-different-objects-claim-1.md)
+
+Direct evolution makes the difference quantitative. A period-one loop retains a plus-population difference of about 0.681 between the two inputs. By period sixteen, both clockwise inputs reach the plus endpoint with population about 0.996626 while both counterclockwise inputs reach the minus endpoint by the same amount. At period sixty-four the initial-state difference vanishes at recorded precision and the direction-selected population exceeds 0.9998. Slower evolution strengthens selection here; it does not recover the naive symmetric sheet permutation.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-loop-and-its-outcome-are-different-objects-claim-2.md)
+
+The experiment must therefore pair complex eigenvalue and biorthogonal left/right tomography with both initial states, both orientations, a rate ladder and unnormalized gain/loss. An EP-excluding loop with matched imaginary-spectrum exposure tests whether chirality belongs to winding or to the propagator. A useful asymmetric switch may be entirely real engineering while still being the wrong evidence for a topological or spontaneous-selection claim.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-loop-and-its-outcome-are-different-objects-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

@@ -273,6 +273,7 @@ const sectionTaxonomy = {
   "Hot off the press — three hybrid modes are one short": "obstruction",
   "Hot off the press — selection is a channel, not a filter": "obstruction",
   "Hot off the press — make the proposed cause move": "experiment",
+  "Hot off the press — a loop and its outcome are different objects": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -352,6 +353,7 @@ const sectionArchetype = {
   "Hot off the press — three hybrid modes are one short": "auditor",
   "Hot off the press — selection is a channel, not a filter": "auditor",
   "Hot off the press — make the proposed cause move": "builder",
+  "Hot off the press — a loop and its outcome are different objects": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -600,6 +602,15 @@ admissibilitySections.splice(orientedSeamIndex + 17, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 18, 0, [
+  "Hot off the press — a loop and its outcome are different objects",
+  [
+    "**Provisional integration note — 25 October 2026.** An exceptional-point loop carries two records that a dramatic endpoint image can hide. The instantaneous spectrum has a braid: in the declared two-mode model its discriminant winds once, the square root changes sign and the eigenstate sheets exchange after one circuit in either orientation. The driven state has a history: gain, loss, loop rate and nonadiabatic jumps decide which component remains visible.",
+    "Direct evolution makes the difference quantitative. A period-one loop retains a plus-population difference of about 0.681 between the two inputs. By period sixteen, both clockwise inputs reach the plus endpoint with population about 0.996626 while both counterclockwise inputs reach the minus endpoint by the same amount. At period sixty-four the initial-state difference vanishes at recorded precision and the direction-selected population exceeds 0.9998. Slower evolution strengthens selection here; it does not recover the naive symmetric sheet permutation.",
+    "The experiment must therefore pair complex eigenvalue and biorthogonal left/right tomography with both initial states, both orientations, a rate ladder and unnormalized gain/loss. An EP-excluding loop with matched imaginary-spectrum exposure tests whether chirality belongs to winding or to the propagator. A useful asymmetric switch may be entirely real engineering while still being the wrong evidence for a topological or spontaneous-selection claim.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -843,6 +854,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — three hybrid modes are one short": ["corpus/programmes/admissibility/admissibility_62_yig_three_mode_no_go_and_four_mode_tripod_gate.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
   "Hot off the press — selection is a channel, not a filter": ["corpus/programmes/admissibility/admissibility_63_acoustic_selector_channel_type_and_passive_no_go.md", "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
   "Hot off the press — make the proposed cause move": ["corpus/programmes/admissibility/admissibility_64_thermal_hall_activation_and_moving_crossing_discriminator.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md", "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md"],
+  "Hot off the press — a loop and its outcome are different objects": ["corpus/programmes/admissibility/admissibility_65_exceptional_loop_topology_and_dynamic_selection.md", "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
 };
 
 const evidenceReading = key => ({

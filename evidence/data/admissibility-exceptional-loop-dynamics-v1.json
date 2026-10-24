@@ -1,0 +1,254 @@
+{
+  "protocol": "admissibility-exceptional-loop-dynamics/1",
+  "date": "2026-10-25",
+  "target": "OT-013",
+  "model": {
+    "hamiltonian": "H=[[delta+i gamma,g],[g,-delta-i gamma]]",
+    "loop": "delta=r sin(theta), g=gamma+r cos(theta)",
+    "parameters": {
+      "gamma": 1,
+      "radius": 0.5
+    },
+    "exceptionalPoint": {
+      "delta": 0,
+      "coupling": 1
+    },
+    "topology": "The discriminant winds once around zero. Analytic continuation of sqrt(discriminant) changes sign, so the instantaneous eigenstate sheets exchange after one loop for either orientation."
+  },
+  "dynamics": {
+    "equation": "d psi/dt=-i H(t) psi",
+    "normalization": "State is rescaled during integration only to avoid overflow; projective endpoint populations are unchanged.",
+    "runs": [
+      {
+        "period": 1,
+        "direction": "clockwise",
+        "initial": "plus",
+        "finalPopulations": {
+          "plus": 0.9080038996309002,
+          "minus": 0.09199610036909979
+        }
+      },
+      {
+        "period": 1,
+        "direction": "clockwise",
+        "initial": "minus",
+        "finalPopulations": {
+          "plus": 0.2273180406401875,
+          "minus": 0.7726819593598124
+        }
+      },
+      {
+        "period": 1,
+        "direction": "counterclockwise",
+        "initial": "plus",
+        "finalPopulations": {
+          "plus": 0.7726819593598124,
+          "minus": 0.2273180406401875
+        }
+      },
+      {
+        "period": 1,
+        "direction": "counterclockwise",
+        "initial": "minus",
+        "finalPopulations": {
+          "plus": 0.09199610036909979,
+          "minus": 0.9080038996309002
+        }
+      },
+      {
+        "period": 4,
+        "direction": "clockwise",
+        "initial": "plus",
+        "finalPopulations": {
+          "plus": 0.9043612936838009,
+          "minus": 0.09563870631619913
+        }
+      },
+      {
+        "period": 4,
+        "direction": "clockwise",
+        "initial": "minus",
+        "finalPopulations": {
+          "plus": 0.8740085340854024,
+          "minus": 0.12599146591459767
+        }
+      },
+      {
+        "period": 4,
+        "direction": "counterclockwise",
+        "initial": "plus",
+        "finalPopulations": {
+          "plus": 0.12599146591459767,
+          "minus": 0.8740085340854024
+        }
+      },
+      {
+        "period": 4,
+        "direction": "counterclockwise",
+        "initial": "minus",
+        "finalPopulations": {
+          "plus": 0.09563870631619913,
+          "minus": 0.9043612936838009
+        }
+      },
+      {
+        "period": 16,
+        "direction": "clockwise",
+        "initial": "plus",
+        "finalPopulations": {
+          "plus": 0.996626026101413,
+          "minus": 0.0033739738985869203
+        }
+      },
+      {
+        "period": 16,
+        "direction": "clockwise",
+        "initial": "minus",
+        "finalPopulations": {
+          "plus": 0.9966259876395256,
+          "minus": 0.0033740123604744238
+        }
+      },
+      {
+        "period": 16,
+        "direction": "counterclockwise",
+        "initial": "plus",
+        "finalPopulations": {
+          "plus": 0.0033740123604744238,
+          "minus": 0.9966259876395256
+        }
+      },
+      {
+        "period": 16,
+        "direction": "counterclockwise",
+        "initial": "minus",
+        "finalPopulations": {
+          "plus": 0.0033739738985869203,
+          "minus": 0.996626026101413
+        }
+      },
+      {
+        "period": 64,
+        "direction": "clockwise",
+        "initial": "plus",
+        "finalPopulations": {
+          "plus": 0.9998180494302286,
+          "minus": 0.00018195056977150616
+        }
+      },
+      {
+        "period": 64,
+        "direction": "clockwise",
+        "initial": "minus",
+        "finalPopulations": {
+          "plus": 0.9998180494302286,
+          "minus": 0.00018195056977145263
+        }
+      },
+      {
+        "period": 64,
+        "direction": "counterclockwise",
+        "initial": "plus",
+        "finalPopulations": {
+          "plus": 0.00018195056977145263,
+          "minus": 0.9998180494302286
+        }
+      },
+      {
+        "period": 64,
+        "direction": "counterclockwise",
+        "initial": "minus",
+        "finalPopulations": {
+          "plus": 0.00018195056977150616,
+          "minus": 0.9998180494302286
+        }
+      }
+    ],
+    "convergence": [
+      {
+        "period": 1,
+        "direction": "clockwise",
+        "endpointPlusDifferenceAcrossInitialStates": 0.6806858589907128
+      },
+      {
+        "period": 1,
+        "direction": "counterclockwise",
+        "endpointPlusDifferenceAcrossInitialStates": 0.6806858589907127
+      },
+      {
+        "period": 4,
+        "direction": "clockwise",
+        "endpointPlusDifferenceAcrossInitialStates": 0.03035275959839856
+      },
+      {
+        "period": 4,
+        "direction": "counterclockwise",
+        "endpointPlusDifferenceAcrossInitialStates": 0.030352759598398546
+      },
+      {
+        "period": 16,
+        "direction": "clockwise",
+        "endpointPlusDifferenceAcrossInitialStates": 3.846188745271206e-8
+      },
+      {
+        "period": 16,
+        "direction": "counterclockwise",
+        "endpointPlusDifferenceAcrossInitialStates": 3.8461887503452724e-8
+      },
+      {
+        "period": 64,
+        "direction": "clockwise",
+        "endpointPlusDifferenceAcrossInitialStates": 0
+      },
+      {
+        "period": 64,
+        "direction": "counterclockwise",
+        "endpointPlusDifferenceAcrossInitialStates": 5.353248226647178e-17
+      }
+    ]
+  },
+  "discriminator": {
+    "topologyRecord": [
+      "complex eigenvalue braid",
+      "biorthogonal left/right eigenvectors",
+      "discriminant winding",
+      "double-loop return"
+    ],
+    "dynamicsRecord": [
+      "both initial eigenstates",
+      "both loop orientations",
+      "at least three loop periods",
+      "unnormalized gain/loss before projective normalization",
+      "time-resolved nonadiabatic jumps"
+    ],
+    "rule": "Sheet exchange belongs to the instantaneous spectrum. Initial-state erasure or direction-selected endpoints belong to the driven nonunitary propagator. Do not infer one from the other."
+  },
+  "sources": [
+    {
+      "title": "Dynamically encircling an exceptional point for asymmetric mode switching",
+      "url": "https://www.nature.com/articles/nature18605",
+      "role": "experimental dynamical encircling and asymmetric switching"
+    },
+    {
+      "title": "Observation of chiral state transfer without encircling an exceptional point",
+      "url": "https://www.nature.com/articles/s41586-022-04542-2",
+      "role": "demonstrates that chiral transfer is not uniquely identified by EP winding"
+    },
+    {
+      "title": "Observation of Restored Adiabatic State Transfer in Time-Modulated Non-Hermitian Systems",
+      "url": "https://www.nature.com/articles/s41467-026-72751-8",
+      "role": "same-platform separation of symmetric adiabatic and chiral nonadiabatic transfer"
+    },
+    {
+      "title": "Counterintuitive collision of exceptional points on nonorientable manifolds",
+      "url": "https://www.nature.com/articles/s41467-026-76508-1",
+      "role": "complex spectrum plus biorthogonal Berry-phase tomography precedent"
+    }
+  ],
+  "verdict": {
+    "spectralTopology": "exact_for_declared_two_mode_loop",
+    "endpointSelection": "rate_orientation_and_nonunitary_dynamics_dependent",
+    "status": "simulation_closed_physical_protocol_specified",
+    "physicalFirewall": "An endpoint switch is neither a topology measurement nor evidence of spontaneous selection unless spectral winding and the driven gain/loss dynamics are independently reconstructed."
+  }
+}
