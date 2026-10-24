@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "The modular, functional-fermion, response-root, weak/Higgs and complex-flavour Pfaffian objects share partial transformation data but are line objects over different bases; no identification is valid without an explicit base map and equivariant fibre intertwiner.",
+  "lines": [
+    {"id": "P1", "name": "genus_two_modular", "base": "genus-two spin curves or period matrices", "fibre": "chi5 character line", "status": "established_mathematical"},
+    {"id": "P2", "name": "majorana_functional", "base": "metrics, spin structures and background fields", "fibre": "chiral Majorana Pfaffian line", "status": "source_derived_but_analytic_lift_open"},
+    {"id": "P3", "name": "response_root", "base": "nondegenerate real response roots over H2(R)+", "fibre": "sign(det(Psi))", "status": "established_response_level"},
+    {"id": "P4", "name": "weak_higgs", "base": "weak alternating bilinears and field configurations", "fibre": "weak Pfaffian coefficient", "status": "matching_sign_representation_microscopic_map_open"},
+    {"id": "P5", "name": "complex_flavour_majorana", "base": "complex symmetric mass matrices modulo rephasing", "fibre": "det(M)=Pf(M tensor epsilon)", "status": "complex_phase_not_canonical_real_sign"}
+  ],
+  "candidateEdges": [
+    {"from": "P1", "to": "P2", "gate": "derive the full genus-two Majorana-Baby-Monster determinant multiplier", "status": "open"},
+    {"from": "P2", "to": "P3", "gate": "derive response coordinates from the CFT and map the separating divisor to det(Psi)=0", "status": "open"},
+    {"from": "P3", "to": "P4", "gate": "derive the microscopic Furey/Higgs pullback of the alternating form", "status": "open"},
+    {"from": "P4", "to": "P5", "gate": "supply a compatible physical real structure through complex flavour phase space", "status": "open"}
+  ],
+  "establishedNonIdentifications": [
+    "A central minus identity on a two-frame preserves its determinant and is not a response-Pfaffian sheet flip.",
+    "An additive bosonization sum is not the multiplicative chi5 determinant line.",
+    "A complex flavour determinant has no canonical real sign without extra structure.",
+    "Equality of abstract Z2 characters does not identify line bundles over different bases."
+  ],
+  "terminalStatus": "open_no_complete_intertwiner_path"
+}

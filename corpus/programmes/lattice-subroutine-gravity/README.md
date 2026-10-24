@@ -183,6 +183,8 @@ The [oriented seam modular-line result](oriented-seam-modular-line.md) supplies 
 
 The [Monster fermionization bridge](monster-fermionization-bridge.md) supplies a concrete candidate for that missing sector. The exact \(2A\) fermionization is a free Majorana--Weyl fermion times the fermionic Baby Monster CFT and carries an Ising duality-defect category. At genus two the Majorana zero mode kills all six odd-spin vacuum amplitudes, leaving exactly the ten even characteristics of the seam carrier; this is an exact match of type, not yet of amplitudes. Genus-two free-fermion sewing technology already exists. An important shortcut is now closed: the additive bosonization sum cannot equal the multiplicative \(\chi_5\) product. The live test is instead whether the determinant/anomaly line of the sewn \(2A\) spin-sector family supplies the analytic lift of the established finite sign character, and whether its fermion parity/defect intertwines with the distinct \(2B\)/Leech Rule-60 seam.
 
+The [Pfaffian-line type audit](pfaffian-line-type-audit.md) prevents a second shortcut. The modular \(\chi_5\) line, the fermionic functional Pfaffian, the real response-root orientation, the weak/Higgs algebraic sign and the complex flavour determinant live over different base spaces. Their shared odd parity is a compatibility result, not a transitive identification. A physical bridge must map their bases, zeros and transport laws as well as their signs.
+
 ## Honest implications
 
 The positive implication is practical. The corpus has found a narrow place to look: pair-Gram data and genus-two sewing form a mathematically controlled boundary between discrete state organization and positive relational geometry. A new construction placed there can be checked without asking anyone to accept an ontology first. It may yield a theoretical-engineering improvement--better codes, modular spectral design, robust state classifiers, or controlled defect/selector devices--even if gravity never emerges. It could count as new physics only after it produces a nonconventional, falsifiable observable or a more constrained consistent theory.
@@ -200,6 +202,7 @@ The negative implication is equally useful. Images, number coincidences, group i
 - [Thermodynamic-gravity preflight](thermodynamic-gravity-preflight.md)
 - [Oriented seam modular line](oriented-seam-modular-line.md)
 - [Monster fermionization bridge](monster-fermionization-bridge.md)
+- [Pfaffian-line type audit](pfaffian-line-type-audit.md)
 - [Literature review](literature-review.md)
 - [Calculations and next steps](next-steps.md)
 - [Machine verifier](../../../verification/verify/verify_lattice_subroutine_gravity_programme.mjs)
@@ -219,6 +222,8 @@ The negative implication is equally useful. Images, number coincidences, group i
 - [Oriented seam verifier](../../../verification/verify/verify_lattice_subroutine_oriented_seam_modular_line.mjs)
 - [Monster fermionization evidence](../../../evidence/data/lattice-subroutine-monster-fermionization-bridge-v1.json)
 - [Monster fermionization verifier](../../../verification/verify/verify_lattice_subroutine_monster_fermionization_bridge.mjs)
+- [Pfaffian-line type evidence](../../../evidence/data/lattice-subroutine-pfaffian-line-type-audit-v1.json)
+- [Pfaffian-line type verifier](../../../verification/verify/verify_lattice_subroutine_pfaffian_line_type_audit.mjs)
 - [Existing Leech pair-Gram claim](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Existing finite genus-two seam claim](../../claims/1700-1799/1738_the_2_state_3_symbol_universal_machine_selects_a_finite_genus_two_theta_seam_but_not_spin23_dynamics.md)
 - [Existing Spin(2,3) gravity checkpoint](../closure/spin23-gravity-route/README.md)

@@ -22,6 +22,7 @@ const requiredFiles = [
   "thermodynamic-gravity-preflight.md",
   "oriented-seam-modular-line.md",
   "monster-fermionization-bridge.md",
+  "pfaffian-line-type-audit.md",
   "literature-review.md",
   "next-steps.md",
   "mece-ledger-v1.json"
@@ -44,6 +45,8 @@ const requiredEvidence = [
   ,"verification/verify/verify_lattice_subroutine_oriented_seam_modular_line.mjs"
   ,"evidence/data/lattice-subroutine-monster-fermionization-bridge-v1.json"
   ,"verification/verify/verify_lattice_subroutine_monster_fermionization_bridge.mjs"
+  ,"evidence/data/lattice-subroutine-pfaffian-line-type-audit-v1.json"
+  ,"verification/verify/verify_lattice_subroutine_pfaffian_line_type_audit.mjs"
 ];
 
 for (const file of requiredFiles) {
