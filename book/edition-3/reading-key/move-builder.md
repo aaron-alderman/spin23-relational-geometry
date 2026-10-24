@@ -38,6 +38,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [A11 · Turn sensitivity into a physical test](../chapters/09-research-frontier.md#A11)
 - [GRAPH · Derive the missing anisotropies](../chapters/09-research-frontier.md#GRAPH)
 - [TORSION-UV · Construct the protected torsion parent](../chapters/09-research-frontier.md#TORSION-UV)
+- [MIXED-INTERFACE · Realize one mixed-interface return on a calibrated carrier](../chapters/09-research-frontier.md#MIXED-INTERFACE)
 - [Claim · The admissibility frontier · Dynamics moves the boundary (1)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-1.md)
 - [Claim · The admissibility frontier · Dynamics moves the boundary (2)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-2.md)
 - [Claim · The admissibility frontier · The finesse technology pathway (1)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md)

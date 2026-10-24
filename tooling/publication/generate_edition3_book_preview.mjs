@@ -104,6 +104,18 @@ findings.push(...[
   ["E3-F24", "terminal-current-input", "Every finite connection-parent escape now ends at new model construction", "Ordinary Lorentz super-Yang--Mills is kinetically indefinite; self-duality requires complex reality constraints; nonlinear Lorentz realization gives a massive rotation-vector triplet rather than the target pseudoscalar.", "This is operational exhaustion under current inputs, not a theorem against future models. Reopening requires a complete action, vacuum, constraint solution, positive spectrum and normalized fermion matching.", ["1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md"]],
 ].map(([id, status, title, statement, boundary, sources]) => ({ id, status, title, statement, boundary, sources: sources.map(claimPath) })));
 
+findings.push({
+  id: "E3-F25",
+  status: "established-in-model",
+  title: "The mixed admissibility interface is an A8 transfer lattice",
+  statement: "For the declared 16-node, 27-relation quotient-scar graph, the constructive and guardrail incidence images intersect on the zero-sum integral lattice of a nine-node mixed core, hence A8 with determinant nine.",
+  boundary: "The lattice is a corpus-derived transfer coordinate. It is not a physical A8 symmetry, octonion carrier, Leech lattice or exceptional-algebra identification; laboratory meaning requires an explicit cross-carrier map.",
+  sources: [
+    "corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md",
+    "corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md",
+  ],
+});
+
 const frontiers = [
   ["A2", "external-input", "Derive the defect rather than insert it", "What microscopic action creates the neutral wall, its orientation and a globally compatible compact domain?", "One UV model produces the interface, BF parity and localized reader spectrum with no hand-selected history.", "Do not keep manipulating gauge-equivalent charge-three phases as though they were disconnected vacua.", [findings[12].sources[0], findings[13].sources[0]]],
   ["A4", "stop-everything", "Define the chiral physical-state domain", "What Lorentz- and gauge-compatible fermion domain replaces the bosonic reflection fold?", "A self-adjoint operator, lower bound, BRST cohomology and positive residues are computed on the same declared domain.", "A positive bosonic benchmark does not establish unitarity of the chiral theory.", [findings[14].sources[1]]],
@@ -115,6 +127,19 @@ const frontiers = [
   ["GRAPH", "external-input", "Derive the missing anisotropies", "Can an action generate the addressed controls that enlarge the natural sp(2,R) response symmetry to all ten generators of sp(4,R)?", "Orientation and anisotropy arise dynamically and ten-generator closure survives loss, disorder and refinement.", "A four-real carrier or conformally symplectic flow alone is not full Spin(2,3).", [findings[20].sources[0], "corpus/claims/1200-1299/1282_the_graph_to_spin23_lane_is_internally_exhausted_at_conditional_response_symmetry_not_spacetime.md"]],
   ["TORSION-UV", "highest", "Construct the protected torsion parent", "Which complete microscopic theory contains a nondegenerate vacuum, a positive independent zero-minus connection pole and a protected normalized axial-current coupling?", "One action passes the reality, constraint, spectrum, radiative-protection and threshold-matching gates without importing the answer as a free coefficient.", "Another symmetry label, projector or quadratic parameter scan cannot replace the missing model.", [findings[23].sources[0]]],
 ].map(([id, priority, title, question, advance, stop, sources]) => ({ id, priority, title, question, advance, stop, sources: sources.map(claimPath) }));
+
+frontiers.push({
+  id: "MIXED-INTERFACE",
+  priority: "highest",
+  title: "Realize one mixed-interface return on a calibrated carrier",
+  question: "Can one platform co-realize the wall-response return or supply the missing orientation datum in the selection-memory-holonomy return?",
+  advance: "A preregistered detector records the predicted invariant, nuisance model and return law on held-out data without refitting the bridge coefficient.",
+  stop: "The abstract A8 transfer lattice is not a laboratory conservation law or physical symmetry without an explicit carrier map.",
+  sources: [
+    "corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md",
+    "corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md",
+  ],
+});
 
 const archetypes = [
   ["scout", "✦", "Scout", "opens a plausible new route or searches beyond the present ingredients"],
@@ -223,6 +248,7 @@ const sectionTaxonomy = {
   "The third term is the mediator": "interpretive",
   "The finesse technology pathway": "experiment",
   "Hot off the press — the oriented seam becomes an experiment": "conditional",
+  "Hot off the press — the mixed interface has an exact shape": "established",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -289,6 +315,7 @@ const sectionArchetype = {
   "The third term is the mediator": "translator",
   "The finesse technology pathway": "builder",
   "Hot off the press — the oriented seam becomes an experiment": "builder",
+  "Hot off the press — the mixed interface has an exact shape": "integrator",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -301,11 +328,11 @@ const statusArchetype = status => {
   return "steward";
 };
 
-const frontierArchetype = id => ({ A2: "builder", A4: "builder", A5: "witness", A6: "builder", A7: "translator", A9: "builder", A11: "builder", GRAPH: "builder", "TORSION-UV": "builder" })[id];
+const frontierArchetype = id => ({ A2: "builder", A4: "builder", A5: "witness", A6: "builder", A7: "translator", A9: "builder", A11: "builder", GRAPH: "builder", "TORSION-UV": "builder", "MIXED-INTERFACE": "builder" })[id];
 
 const frontierTaxonomy = id => {
   if (["A5", "A7"].includes(id)) return "exhausted";
-  if (["A2", "A9", "GRAPH"].includes(id)) return "conditional";
+  if (["A2", "A9", "GRAPH", "MIXED-INTERFACE"].includes(id)) return "conditional";
   return "external";
 };
 
@@ -367,7 +394,7 @@ const chapterSkeletons = [
   { slug: "06-proton-safety", title: "Proton safety, Pati–Salam and triality", kicker: "Selection is the physics", sections: [["Complete multiplets are not automatically safe", ["Unified representations carry wanted and unwanted channels together. The proton-safe projector exists only after reducing the colour–lepton symmetry that made the complete multiplet attractive in the first place."]], ["The surviving route", ["A finite Pati–Salam reconstruction supplies a concrete source split, while an all-orders rank-one normal form protects part of it. The simplest U(1) and universal Z₂ protections fail. The first surviving family-universal cyclic witness is a Z₉ lift whose faithful low-energy quotient is baryon triality.", "This is a live conditional route, not closure: global anomalies, heavy thresholds, the full finite triple and the third edge remain decisive gates."]]] },
   { slug: "07-exceptional-horizon", title: "The exceptional horizon", kicker: "Jordan, Leech and Monster without overclaim", sections: [["What the local result changes", ["The H₂(R) construction makes the Spin(2,3) middle rung concrete. It clarifies how response geometry, causal positivity and relational composition can meet."]], ["What it does not collapse", ["J₃(O), E₆, E₈, the Golay code, the Leech lattice, Conway symmetry and moonshine remain distinct structures with distinct jobs. The Leech pair-Gram construction reaches H₂(R) and genus-two symplectic geometry, but needs an orientation twist and affine theta shift. No group-name chain substitutes for a carrier-preserving map."]]] },
   { slug: "08-admissibility-frontier", title: "The admissibility frontier", kicker: "New physics by finesse", sections: [["The shift", ["The next route to new physics may begin not with higher energy but with greater finesse: preserving phase, delay, boundary order, memory, orientation and cross-channel relation that ordinary measurements average away. The programme therefore begins where candidate mechanisms become observationally equivalent and asks which erased distinction would separate them.", "This is a change of protagonist. Spin₀(2,3) and the larger symmetry landscape no longer lead the story. The admission–dynamics–detection loop does, because it determines which mathematical differences can become physical records."]], ["Why Jordan and Lie must be balanced", ["Jordan structure delimits what can coexist and compose as positive states, responses and observables. Lie structure describes how those admitted objects transform and circulate. Jordan has explanatory priority; Lie has dynamical necessity; neither can supply the carrier, selector and detector alone.", "Spin₀(2,3) is an exact conformal completion of one declared rank-two Jordan response cone. It is therefore a recovered symmetry of an admitted geometry, not the prior container of physics."]], ["Dynamics moves the boundary", ["Bound states, boundary bands, resonances and free continua are joined by spectral flow, capture, decay and memory. Dynamics is tested by what it preserves, which context selects a history and which record survives finite detection—not only by whether an equation of motion can be written.", "This turns Casimir response, thermoelectric transport, holonomy, hysteresis, metastability and scattering delay into complementary probes of a changing admissibility boundary."]], ["The third term is the mediator", ["A boundary, selector, environment, memory kernel or detector orientation can mediate the relation between nominal endpoints. Ternary structure makes this context-dependence explicit: changing the middle term can change the admissible relation without changing the endpoints.", "The scientific question behind retained identity or ‘soul’ is whether a measurable invariant survives transformation, descent and observation. This does not declare a soul to be a field or particle."]], ["The finesse technology pathway", ["The practical sequence is to find a mechanism collision, identify the erased distinction, build a detector or reversal that retains it and replicate any residual on an independent carrier. Phase-sensitive controls, nonlinear correlators, boundary-order probes, memory-aware inference and same-material response closure are the immediate tools.", "Each experiment has two valuable outcomes: improved theory or technology if established physics closes the record, and a disciplined anomaly path if a preregistered residual survives nuisance models, reversals and cross-carrier replication. Only the latter sequence can promote the result toward new physics."]], ["Hot off the press — the oriented seam becomes an experiment", ["**Provisional integration note — 24 October 2026.** This result arrived after the chapter's main story was stabilized. It is included as a visible integration queue, not as settled narrative; once the mathematics, terminology and experimental interpretation firm, its pieces should be redistributed into the Jordan–Lie, detector and research-frontier sections.", "The exact result is narrower and more useful than a group-name correspondence. Monster 2A fermionization leaves the ten even genus-two spin sectors after the six odd sectors are killed by Majorana zero modes, while the nine-dimensional sum-zero seam carries a nontrivial orientation sign. But the additive fermionic sum is not the multiplicative Igusa product, the relevant Pfaffian objects live over different bases, and the canonical positive period matrix remains inside the Jordan cone at a separating surface rather than reaching its rank boundary.", "Those obstructions identify the detector. A phase-blind positive response sees the complex sewing parameter only through its magnitude; an isolated two-mode coupling phase can be removed by a basis change. The smallest intrinsic carrier is therefore a three-mode loop: its resonance spectrum identifies opposite loop orientations, while coherent directional transfer distinguishes them. This is now a realistic controlled experiment and an engineering result; it becomes a new-physics test only when a modular or Monster calculation predicts the loop record without fitting it to the device."]], ["Kenotic confidence", ["AI can map dispersed results, optimize separating interventions and maintain the evidence ledger, but it cannot award physical truth. Kenotic confidence means stating the route positively while allowing the experiment, the rival model and the independent reproducer to remain genuinely capable of changing the conclusion."]]] },
-  { slug: "08-result-ledger", title: "Result and reversal ledger", kicker: "Twenty-four retained findings", kind: "findings" },
+  { slug: "08-result-ledger", title: "Result and reversal ledger", kicker: "Twenty-five retained findings", kind: "findings" },
   { slug: "09-research-frontier", title: "Research frontier", kicker: "Legacy action gates, the graph lane and the current torsion-parent boundary", kind: "frontiers" },
   { slug: "10-provenance-and-reading-map", title: "Provenance and reading map", kicker: "How to audit the book", kind: "provenance" },
   { slug: "11-concept-atlas", title: "Concept atlas", kicker: "The programme as a navigable typed graph", kind: "concept-map" },
@@ -380,6 +407,20 @@ const admissibilityHotSection = chapterSkeletons
   .find(chapter => chapter.slug === "08-admissibility-frontier")
   .sections.find(([heading]) => heading === "Hot off the press — the oriented seam becomes an experiment");
 admissibilityHotSection[1][2] = "Those obstructions now assign two detectors rather than one. The binary Igusa character embeds only as loop holonomy zero or pi; both values are reciprocal and make the three-mode directional odd channel vanish, so that sign belongs in a referenced interferometer. The full spin-sector vector retains more: under a first-handle modular T transformation, four free-Majorana sectors acquire an eighth-root phase even though it cancels in the determinant. This supplies a conditional no-fit three-mode target of plus or minus pi over four. The complete Baby-Monster multiplier and the physical modular-to-control-loop map remain capable of cancelling it, so the result is a sharpened experiment rather than a new-physics prediction.";
+
+const admissibilitySections = chapterSkeletons
+  .find(chapter => chapter.slug === "08-admissibility-frontier")
+  .sections;
+const orientedSeamIndex = admissibilitySections
+  .findIndex(([heading]) => heading === "Hot off the press — the oriented seam becomes an experiment");
+admissibilitySections.splice(orientedSeamIndex + 1, 0, [
+  "Hot off the press — the mixed interface has an exact shape",
+  [
+    "The 27 typed relations divide into twelve constructive moves and fifteen guardrails. Their incidence images overlap on nine jointly reachable structures with one zero-sum condition. The resulting integral interface is the A8 root lattice: eight adjacent transfers running from detector and holonomy through memory, wall, response, overlap, selection and provenance.",
+    "With the equal-weight vertex pairing the interface is positive definite, has determinant nine and discriminant group Z9. It carries a natural permutation-invariant cubic, but the product obtained by projecting coordinate multiplication back to the zero-sum space is not Jordan. The result is therefore a definite transfer lattice, not an octonion, Leech, E6 or E8 identification and not a physical A8 symmetry.",
+    "The shape now terminates in decisions. The wall-response return gives one bounded three-step proposal with a positive Hessian and contractive update; the selection-memory-holonomy return is refused at the missing orientation lift. All twelve constructive arrows, fifteen guardrails and twelve return cycles have detector, nuisance, falsifier and reopening fields. Redundant routes, internal guardrails, edge subdivision and evidence-only enrichment preserve A8; a genuine new bridge expands it predictably to A9.",
+  ],
+]);
 
 // The interpretive contract precedes every group-centred construction. Slugs retain
 // their stable historical identifiers; reading order expresses explanatory priority.
@@ -456,7 +497,7 @@ const chapterSources = {
   "05-standard-model-seam": ["1390_a_decoupling_limit_can_fit_the_standard_model_but_a6_first_fails_at_the_unconstructed_chiral_fermion_operator.md", "1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md", "1451_the_maximal_a4_action_freezes_all_bulk_poles_but_the_chiral_fold_has_no_declared_physical_state_domain.md"],
   "06-proton-safety": ["1079_NCG_Pati_Salam_Model_C_realizes_the_safe_source_split_but_its_minimal_left_right_pair_still_closes_the_Wilson_triangle.md", "1092_the_Z9_extension_not_its_naive_mod3_reduction_realizes_baryon_triality_and_matches_the_Dai_Freed_mod9_anomaly.md", "1199_minimal_typed_closure_action_v1_separates_the_derived_bf_sector_from_the_still_spurionic_flavour_response.md"],
   "07-exceptional-horizon": ["33_octonions_leech_lattice_jordan_branch.md", "1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md"],
-  "08-admissibility-frontier": ["corpus/syntheses/the_admissibility_frontier_current_synthesis.md", "corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md", "corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md", "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md", "corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md", "corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md", "corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md", "corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md", "corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md"],
+  "08-admissibility-frontier": ["corpus/syntheses/the_admissibility_frontier_current_synthesis.md", "corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md", "corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md", "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md", "corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md", "corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md", "corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md", "corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md", "corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md", "corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md", "corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md", "corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md", "corpus/programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md", "corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md"],
   "08-result-ledger": ["1398_final_wave_red_team_audit_finds_two_substantive_errors_and_preserves_four_independent_stopping_boundaries.md"],
   "09-research-frontier": ["1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md", "1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md", "1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md", "1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md"],
   "10-provenance-and-reading-map": ["00_research_document_map.md", "30_research_frontier.md", "49_multi_branch_research_registry.md"],

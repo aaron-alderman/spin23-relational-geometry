@@ -165,6 +165,24 @@ _The terminal partition says where new information must enter._
 
 - [1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md](../../../corpus/claims/1700-1799/1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md)
 
+<a id="MIXED-INTERFACE"></a>
+## MIXED-INTERFACE · Realize one mixed-interface return on a calibrated carrier
+
+> **Gate state — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Priority:** `highest`
+
+**Question:** Can one platform co-realize the wall-response return or supply the missing orientation datum in the selection-memory-holonomy return?
+
+**Advance when:** A preregistered detector records the predicted invariant, nuisance model and return law on held-out data without refitting the bridge coefficient.
+
+**Stop or downgrade when:** The abstract A8 transfer lattice is not a laboratory conservation law or physical symmetry without an explicit carrier map.
+
+- [frontier_wave7_41_two_cross_carrier_vertical_slices.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md)
+- [frontier_wave7_42_instrumented_admissibility_atlas.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md)
+
 ## Chapter sources
 
 - [1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md](../../../corpus/claims/1400-1499/1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md)

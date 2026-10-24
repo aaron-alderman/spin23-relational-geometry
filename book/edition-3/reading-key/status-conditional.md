@@ -32,6 +32,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [A2 · Derive the defect rather than insert it](../chapters/09-research-frontier.md#A2)
 - [A9 · Predict a causal interacting spectrum](../chapters/09-research-frontier.md#A9)
 - [GRAPH · Derive the missing anisotropies](../chapters/09-research-frontier.md#GRAPH)
+- [MIXED-INTERFACE · Realize one mixed-interface return on a calibrated carrier](../chapters/09-research-frontier.md#MIXED-INTERFACE)
 - [Claim · The admissibility frontier · Dynamics moves the boundary (1)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-1.md)
 - [Claim · The admissibility frontier · Dynamics moves the boundary (2)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the oriented seam becomes an experiment (1)](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-1.md)

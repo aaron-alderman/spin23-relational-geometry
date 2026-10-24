@@ -100,6 +100,25 @@ Those obstructions now assign two detectors rather than one. The binary Igusa ch
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-3.md)
 
+<a id="hot-off-the-press-the-mixed-interface-has-an-exact-shape"></a>
+## Hot off the press — the mixed interface has an exact shape
+
+> **Section status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+The 27 typed relations divide into twelve constructive moves and fifteen guardrails. Their incidence images overlap on nine jointly reachable structures with one zero-sum condition. The resulting integral interface is the A8 root lattice: eight adjacent transfers running from detector and holonomy through memory, wall, response, overlap, selection and provenance.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-1.md)
+
+With the equal-weight vertex pairing the interface is positive definite, has determinant nine and discriminant group ℤ₉. It carries a natural permutation-invariant cubic, but the product obtained by projecting coordinate multiplication back to the zero-sum space is not Jordan. The result is therefore a definite transfer lattice, not an octonion, Leech, E₆ or E₈ identification and not a physical A8 symmetry.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-2.md)
+
+The shape now terminates in decisions. The wall-response return gives one bounded three-step proposal with a positive Hessian and contractive update; the selection-memory-holonomy return is refused at the missing orientation lift. All twelve constructive arrows, fifteen guardrails and twelve return cycles have detector, nuisance, falsifier and reopening fields. Redundant routes, internal guardrails, edge subdivision and evidence-only enrichment preserve A8; a genuine new bridge expands it predictably to A9.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -122,6 +141,11 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
 - [modular-sign-detector-reassignment.md](../../../corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md)
 - [metaplectic-phase-candidate.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md)
+- [frontier_wave7_39_mixed_interface_resolution.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md)
+- [frontier_wave7_41_two_cross_carrier_vertical_slices.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md)
+- [frontier_wave7_42_instrumented_admissibility_atlas.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md)
+- [frontier_wave7_43_sourcery_ale_algebra.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md)
+- [frontier_wave7_44_refinement_stability_of_the_mixed_interface.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md)
 
 ---
 

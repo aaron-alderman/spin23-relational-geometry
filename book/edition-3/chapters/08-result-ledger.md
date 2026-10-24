@@ -1,6 +1,6 @@
 # Result and reversal ledger
 
-_Twenty-four retained findings_
+_Twenty-five retained findings_
 
 > **Chapter status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
 
@@ -395,6 +395,22 @@ Ordinary Lorentz super-Yang--Mills is kinetically indefinite; self-duality requi
 **Boundary:** This is operational exhaustion under current inputs, not a theorem against future models. Reopening requires a complete action, vacuum, constraint solution, positive spectrum and normalized fermion matching.
 
 - [1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md](../../../corpus/claims/1700-1799/1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md)
+
+<a id="E3-F25"></a>
+## E3-F25 · The mixed admissibility interface is an A8 transfer lattice
+
+> **Ledger reading — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Detailed status:** `established-in-model`
+
+For the declared 16-node, 27-relation quotient-scar graph, the constructive and guardrail incidence images intersect on the zero-sum integral lattice of a nine-node mixed core, hence A8 with determinant nine.
+
+**Boundary:** The lattice is a corpus-derived transfer coordinate. It is not a physical A8 symmetry, octonion carrier, Leech lattice or exceptional-algebra identification; laboratory meaning requires an explicit cross-carrier map.
+
+- [frontier_wave7_39_mixed_interface_resolution.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md)
+- [frontier_wave7_44_refinement_stability_of_the_mixed_interface.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md)
 
 ## Chapter sources
 

@@ -11,6 +11,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 ## Every current use
 
 - [The admissibility frontier · Why Jordan and Lie must be balanced](../chapters/08-admissibility-frontier.md#why-jordan-and-lie-must-be-balanced)
+- [The admissibility frontier · Hot off the press — the mixed interface has an exact shape](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-mixed-interface-has-an-exact-shape)
 - [Chapter · The revised spine](../chapters/01-the-revised-spine.md)
 - [The revised spine · What closes](../chapters/01-the-revised-spine.md#what-closes)
 - [The revised spine · Begin with a measuring frame](../chapters/01-the-revised-spine.md#begin-with-a-measuring-frame)
@@ -27,9 +28,13 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [E3-F01 · The Jordan/TKK route reaches the Spin(2,3) hinge](../chapters/08-result-ledger.md#E3-F01)
 - [E3-F02 · A concrete lower-rank Jordan entry point exists](../chapters/08-result-ledger.md#E3-F02)
 - [E3-F03 · The odd-cycle intuition has a projective double-cover realization](../chapters/08-result-ledger.md#E3-F03)
+- [E3-F25 · The mixed admissibility interface is an A8 transfer lattice](../chapters/08-result-ledger.md#E3-F25)
 - [Proof · Furey participation: closure certificate](../details/furey-participation-proof.md)
 - [Claim · The admissibility frontier · Why Jordan and Lie must be balanced (1)](../details/08-admissibility-frontier-why-jordan-and-lie-must-be-balanced-claim-1.md)
 - [Claim · The admissibility frontier · Why Jordan and Lie must be balanced (2)](../details/08-admissibility-frontier-why-jordan-and-lie-must-be-balanced-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (1)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (2)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (3)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-3.md)
 - [Claim · The revised spine · What closes (1)](../details/01-the-revised-spine-what-closes-claim-1.md)
 - [Claim · The revised spine · What closes (2)](../details/01-the-revised-spine-what-closes-claim-2.md)
 - [Claim · The revised spine · Begin with a measuring frame (1)](../details/01-the-revised-spine-begin-with-a-measuring-frame-claim-1.md)

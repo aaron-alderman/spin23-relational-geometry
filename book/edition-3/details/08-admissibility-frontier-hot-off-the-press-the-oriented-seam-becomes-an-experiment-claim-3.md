@@ -43,9 +43,14 @@ Show that the named input is inconsistent, insufficient, unavailable, or fails t
 - **three-mode-loop-seam-preflight** — [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
 - **modular-sign-detector-reassignment** — [modular-sign-detector-reassignment.md](../../../corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md)
 - **metaplectic-phase-candidate** — [metaplectic-phase-candidate.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md)
+- **frontier wave7 39 mixed interface resolution** — [frontier_wave7_39_mixed_interface_resolution.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md)
+- **frontier wave7 41 two cross carrier vertical slices** — [frontier_wave7_41_two_cross_carrier_vertical_slices.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md)
+- **frontier wave7 42 instrumented admissibility atlas** — [frontier_wave7_42_instrumented_admissibility_atlas.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md)
+- **frontier wave7 43 sourcery ale algebra** — [frontier_wave7_43_sourcery_ale_algebra.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md)
+- **frontier wave7 44 refinement stability of the mixed interface** — [frontier_wave7_44_refinement_stability_of_the_mixed_interface.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-oriented-seam-becomes-an-experiment) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-2.md) · [Next claim →](08-admissibility-frontier-kenotic-confidence-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-oriented-seam-becomes-an-experiment) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-1.md)

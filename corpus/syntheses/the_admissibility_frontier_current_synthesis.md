@@ -130,6 +130,62 @@ The practical atlas contains:
 
 The open region is not rendered as a mystical blank. It is separated into computational inner rims, instrumented middle rims, translation gaps and fundamental firewalls. A null result remains useful because the conventional scientific residue is recorded in advance.
 
+### 7. The mixed frontier has an exact internal shape
+
+The finite quotient-scar map contains 16 structures and 27 typed relations.
+Twelve relations construct or instantiate a passage; fifteen record missing
+enrichment, separation, shared action without shared carrier, or a prohibited
+identification. These are semantic roles, not decorative colours.
+
+The two typed incidence images meet on nine jointly reachable structures with
+one zero-sum condition. Their integral intersection is therefore the (A_8)
+root lattice. Its eight elementary transfers run through detector, holonomy,
+memory, wall, response, overlap, selection and provenance. With the natural
+equal-weight vertex pairing it has determinant nine and discriminant group
+(\mathbb Z/9\mathbb Z).
+
+This is a strong finite result and a useful coordinate system. It is not a
+physical (A_8) symmetry, an octonion carrier, the Leech lattice or an
+exceptional-group derivation. The natural coordinate cubic is nonzero, but its
+projected product fails the Jordan identity. That negative test is part of the
+shape: the interface is a transfer lattice between constructive and critical
+languages, not a hidden exceptional algebra merely because its rank is eight.
+
+The shape is refinement-stable in the right sense. Redundant routes, internal
+guardrails, edge subdivision and evidence-only enrichment preserve (A_8). A
+genuinely new typed bridge that enlarges joint reachability grows it
+predictably to (A_9). Editorial detail does not move the boundary; new
+scientific content can.
+
+### 8. The passage from map to decision is executable
+
+Two returns demonstrate the full three-carrier discipline. In the
+wall-response return, a declared kink localizes a response, a positive Gaussian
+determinant supplies a selector Hessian and a gradient update contracts. This
+is one bounded effective-model proposal with an observable and falsifier. In
+the selection-memory-holonomy return, retained history selects a projective
+line and the line defines an axis-preserving half-turn, but the route refuses a
+signed quarter-turn because no orientation datum is present. The refusal names
+the required loop direction, phase reference, polarized channel or independent
+wall orientation.
+
+Every one of the twelve constructive arrows, fifteen guardrails and twelve
+fundamental returns now carries a common experimental contract: input, output,
+invariant, information loss, platform, protocol, observable, detector,
+nuisance model, decision rule, falsifier, status, reopening datum and source
+trail. This does not make all 39 records physical predictions. It makes clear
+what kind of computation, emulator, material device or provenance audit could
+move each one.
+
+Claimipedia and Sourcery preserve different parts of this passage. Claimipedia
+keeps the authored claims, qualifications, dependencies, evidence and
+provenance. Sourcery retains an ordered transformation word together with a
+commutative, idempotent assumption-loss-evidence ledger. Losses are monotone;
+a later persuasive step cannot erase an earlier projection. A rejected rule
+never becomes a negative edge that can be cancelled. This is how the corpus
+keeps reason attached to movement without confusing a checked route with a
+true conclusion.
+
 ## The technology thesis
 
 The result is not merely a new ordering of mathematical language. It changes where and how to look.
@@ -256,6 +312,10 @@ Choose the entrance that matches the work you want to do:
 - **See the frontier contacts:** [Current research frontier crosswalk](../programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md).
 - **Choose a physical target:** [Frontier physics target set](../programmes/frontier-physics-targets/frontier_physics_target_set_v1.md).
 - **Choose an experiment:** [Frontier experiment atlas](../programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md).
+- **Inspect the exact mixed frontier:** [Mixed-interface resolution](../programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md).
+- **Follow a closed route and a controlled refusal:** [Two cross-carrier vertical slices](../programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md).
+- **Choose among all 39 instrumented relations and returns:** [Instrumented admissibility atlas](../programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md).
+- **Inspect the reasoning algebra:** [Sourcery ALE algebra](../programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md).
 - **Choose an open problem:** [Open topics](../programmes/frontier-physics-targets/open_topics_v1.md).
 - **Audit every declared gate:** [Full-corpus census](../programmes/frontier-physics-targets/full_corpus_gate_census_v1.md).
 - **Inspect the strongest algebraic manuscript lead:** [Paper-worthiness ranking](../programmes/closure/programme_closure_08_paperworthiness_ranking.md).
