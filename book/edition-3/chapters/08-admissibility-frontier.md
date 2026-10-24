@@ -445,6 +445,25 @@ The frontier therefore moves outward. A successful inequality must start with th
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-3.md)
 
+<a id="hot-off-the-press-two-currents-require-three-calculations"></a>
+## Hot off the press — two currents require three calculations
+
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+
+> **Research move — [⌖ Cartographer](../reading-key/move-cartographer.md)** — maps territory, distinctions, dependencies and interfaces.
+
+**Provisional integration note — 25 October 2026.** The incidence and B minus L source plane has two labels, but its quantum-field-theory frontier is not one two-by-two matrix calculation. The work separates into ultraviolet composite-operator closure and running, broken-phase spectral and contact matching across thresholds, and a finite-temperature tensor problem with KMS and approximate-charge relaxation.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-1.md)
+
+The literature supplies the architecture but not the answer. Ward identities protect the Dirac B minus L row; general mixing theory says the nonconserved incidence insertion may still rescale, shear by the protected current and mix with closure sectors. Published ALP running is a useful cross-check for the broken incidence direction, but exact B minus L is derivative-null there, so the ALP route cannot realize the full two-port vector response. A Majorana mass removes the protected row and begins a separate branch.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-2.md)
+
+The next calculation is now finite: freeze a Dirac-neutrino branch, operator basis and subtraction scheme; compute the one-loop source subblock and source-source counterterms; and verify the protected Ward row before threshold matching or thermal continuation. A generic scale-dependent shear would demote basis components to conventions. A protected multiplicative frame or no-refit ratio would identify exactly where additional structure might live.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

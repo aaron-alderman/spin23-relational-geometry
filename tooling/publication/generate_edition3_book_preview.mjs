@@ -275,6 +275,7 @@ const sectionTaxonomy = {
   "Hot off the press — make the proposed cause move": "experiment",
   "Hot off the press — a loop and its outcome are different objects": "obstruction",
   "Hot off the press — the first new inequality is not new": "obstruction",
+  "Hot off the press — two currents require three calculations": "external",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -356,6 +357,7 @@ const sectionArchetype = {
   "Hot off the press — make the proposed cause move": "builder",
   "Hot off the press — a loop and its outcome are different objects": "auditor",
   "Hot off the press — the first new inequality is not new": "auditor",
+  "Hot off the press — two currents require three calculations": "cartographer",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -622,6 +624,15 @@ admissibilitySections.splice(orientedSeamIndex + 19, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 20, 0, [
+  "Hot off the press — two currents require three calculations",
+  [
+    "**Provisional integration note — 25 October 2026.** The incidence and B minus L source plane has two labels, but its quantum-field-theory frontier is not one two-by-two matrix calculation. The work separates into ultraviolet composite-operator closure and running, broken-phase spectral and contact matching across thresholds, and a finite-temperature tensor problem with KMS and approximate-charge relaxation.",
+    "The literature supplies the architecture but not the answer. Ward identities protect the Dirac B minus L row; general mixing theory says the nonconserved incidence insertion may still rescale, shear by the protected current and mix with closure sectors. Published ALP running is a useful cross-check for the broken incidence direction, but exact B minus L is derivative-null there, so the ALP route cannot realize the full two-port vector response. A Majorana mass removes the protected row and begins a separate branch.",
+    "The next calculation is now finite: freeze a Dirac-neutrino branch, operator basis and subtraction scheme; compute the one-loop source subblock and source-source counterterms; and verify the protected Ward row before threshold matching or thermal continuation. A generic scale-dependent shear would demote basis components to conventions. A protected multiplicative frame or no-refit ratio would identify exactly where additional structure might live.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -867,6 +878,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — make the proposed cause move": ["corpus/programmes/admissibility/admissibility_64_thermal_hall_activation_and_moving_crossing_discriminator.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md", "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md"],
   "Hot off the press — a loop and its outcome are different objects": ["corpus/programmes/admissibility/admissibility_65_exceptional_loop_topology_and_dynamic_selection.md", "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
   "Hot off the press — the first new inequality is not new": ["corpus/programmes/admissibility/admissibility_66_contextual_triangle_bound_reduces_to_standard_positivity.md", "corpus/programmes/admissibility/admissibility_08_finite_contextual_casimir_experiment.md", "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md"],
+  "Hot off the press — two currents require three calculations": ["corpus/programmes/admissibility/admissibility_67_two_current_source_and_scheme_census.md", "corpus/programmes/closure/programme_closure_03_a_controlled_standard_model_external_source_action_exists_but_does_not_fix_the_frame.md", "corpus/programmes/closure/programme_closure_04_vacuum_locality_closes_the_two_current_spectral_measure_on_h2r_but_not_the_thermal_response.md"],
 };
 
 const evidenceReading = key => ({

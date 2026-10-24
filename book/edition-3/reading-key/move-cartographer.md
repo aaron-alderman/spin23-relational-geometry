@@ -12,6 +12,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 
 - [Front matter · The route through the book](../chapters/00-front-matter.md#the-route-through-the-book)
 - [The admissibility frontier · The shift](../chapters/08-admissibility-frontier.md#the-shift)
+- [The admissibility frontier · Hot off the press — two currents require three calculations](../chapters/08-admissibility-frontier.md#hot-off-the-press-two-currents-require-three-calculations)
 - [Chapter · One carrier, two faces, three relations](../chapters/02-one-carrier-two-faces-three-relations.md)
 - [One carrier, two faces, three relations · The smallest relational closure](../chapters/02-one-carrier-two-faces-three-relations.md#the-smallest-relational-closure)
 - [One carrier, two faces, three relations · Jordan recursion](../chapters/02-one-carrier-two-faces-three-relations.md#jordan-recursion)
@@ -25,6 +26,9 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Claim · Front matter · The route through the book (1)](../details/00-front-matter-the-route-through-the-book-claim-1.md)
 - [Claim · The admissibility frontier · The shift (1)](../details/08-admissibility-frontier-the-shift-claim-1.md)
 - [Claim · The admissibility frontier · The shift (2)](../details/08-admissibility-frontier-the-shift-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — two currents require three calculations (1)](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — two currents require three calculations (2)](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — two currents require three calculations (3)](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-3.md)
 - [Claim · One carrier, two faces, three relations · The smallest relational closure (1)](../details/02-one-carrier-two-faces-three-relations-the-smallest-relational-closure-claim-1.md)
 - [Claim · One carrier, two faces, three relations · The smallest relational closure (2)](../details/02-one-carrier-two-faces-three-relations-the-smallest-relational-closure-claim-2.md)
 - [Claim · One carrier, two faces, three relations · Jordan recursion (1)](../details/02-one-carrier-two-faces-three-relations-jordan-recursion-claim-1.md)
