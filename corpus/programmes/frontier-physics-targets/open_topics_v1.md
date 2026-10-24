@@ -139,6 +139,15 @@ cellwise maximum held-out error is 3.914%. This establishes population-wide
 adequacy under per-cell calibration. A shared population law, covariance and
 generated dynamics remain open.
 
+[AZ-089](../admissibility/admissibility_89_unseen_cell_shared_parameter_near_miss.md)
+tests that stronger law without target-cell recalibration. The other 53 cells'
+median parameter vector passes 53 of 54 unseen cells, but `ID07` reaches 5.575%
+median error and fails the frozen 5% ceiling. The common passive shape is
+therefore nearly population-wide, while one localized heterogeneity prevents
+closure. The next honest object is a preregistered hierarchical predictive
+distribution with independent covariates or a minimal calibration record plus
+replicate and fixture covariance—not a post-hoc refit or a new-physics label.
+
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
 (\pi/4) phase depends on a common anomaly trivialization, while the (T_1)

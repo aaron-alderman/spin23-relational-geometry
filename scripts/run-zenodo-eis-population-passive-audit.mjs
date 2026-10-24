@@ -11,7 +11,7 @@ for (let index = 1; index <= 54; index += 1) {
   const id = `ID${String(index).padStart(2, "0")}`;
   const source = resolve(sourceRoot, `${id}.csv`);
   const output = JSON.parse(execFileSync(process.execPath, [runner, "--source", source], { encoding: "utf8", maxBuffer: 2_000_000 }));
-  cells.push({ id, sourceSha256: output.source.localNormalizedSha256, rows: output.source.rows, training: output.trainingMetrics, heldOut: output.heldOutMetrics, activeParameters: output.activeParameters, passed: output.decision.heldOutThresholdPassed });
+  cells.push({ id, sourceSha256: output.source.localNormalizedSha256, rows: output.source.rows, training: output.trainingMetrics, heldOut: output.heldOutMetrics, fittedParameters: output.fittedParameters, activeParameters: output.activeParameters, passed: output.decision.heldOutThresholdPassed });
 }
 const sortedMedian = [...cells].sort((a, b) => a.heldOut.medianRelativeError - b.heldOut.medianRelativeError);
 const sortedMaximum = [...cells].sort((a, b) => a.heldOut.maximumRelativeError - b.heldOut.maximumRelativeError);

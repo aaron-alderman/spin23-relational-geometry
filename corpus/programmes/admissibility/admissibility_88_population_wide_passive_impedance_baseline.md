@@ -1,7 +1,7 @@
 # The frozen passive basis predicts all 54 measured cells
 
 **Date:** 25 October 2026  
-**Status:** population held-out baseline closed under per-cell fitting; shared-law and covariance gates open  
+**Status:** population held-out baseline closed under per-cell fitting; shared-law gate tested and failed once in AZ-089
 **Topics:** OT-027  
 **Parent:** [AZ-087 one-cell measured bridge](admissibility_87_source_native_measured_impedance_held_out_prediction.md)  
 **Evidence:** [population audit](../../../evidence/data/zenodo-eis-population-passive-audit-v1.json)  
@@ -26,7 +26,7 @@ This closes cross-cell generalization of the *basis and decision rule*. It does 
 
 The implication is restrictive in the useful sense. Residuals at the few-percent level in this dataset are already compatible with a small passive family. A frontier claim cannot use such a residual without first beating this population baseline, instrument/fixture nuisance terms and uncertainty.
 
-The next exact gate is hierarchical: fit a shared population distribution or leave-one-cell-out parameter predictor using only other cells, then predict the held-out cell without recalibration. That separates a common law from a reusable model class. No new-physics reading is licensed here.
+AZ-089 executes the next exact gate. A leave-one-cell-out median parameter vector predicts 53 of 54 cells without target-cell calibration, but `ID07` exceeds the predeclared median-error ceiling. The shared family is therefore nearly reusable as one law but does not close population-wide. A hierarchical predictor, covariance and independently available cell information remain necessary. No new-physics reading is licensed here.
 
 ## Reproduction
 

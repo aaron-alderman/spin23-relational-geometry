@@ -1,0 +1,1229 @@
+{
+  "protocol": "zenodo-eis-leave-one-cell-out/1",
+  "date": "2026-10-25",
+  "source": {
+    "doi": "10.5281/zenodo.15422339",
+    "cells": 54
+  },
+  "protocolBoundary": {
+    "targetCellImpedanceUsedForParameters": false,
+    "donorFitsPerTarget": 53,
+    "aggregation": "coordinatewise median",
+    "basis": "nonnegative series R + series L + five fixed-centre Debye arcs + semi-infinite Warburg",
+    "heldOutRule": "source row index modulo 3 equals 1 is held out",
+    "thresholds": {
+      "heldOutMedianRelativeErrorMaximum": 0.05,
+      "heldOutMaximumRelativeErrorMaximum": 0.2
+    }
+  },
+  "population": {
+    "passedCells": 53,
+    "failedCells": 1,
+    "passFraction": 0.9814814814814815,
+    "medianCellMedianRelativeError": 0.018455910307240767,
+    "worstCellMedianRelativeError": 0.05574668583545721,
+    "medianCellMaximumRelativeError": 0.03743294679139747,
+    "worstCellMaximumRelativeError": 0.07094917624806113,
+    "worstMedianCell": "ID07",
+    "worstMaximumCell": "ID07"
+  },
+  "cells": [
+    {
+      "id": "ID01",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002645701008230034,
+        "medianRelativeError": 0.00847053790870224,
+        "maximumRelativeError": 0.05074329807206571
+      },
+      "passed": true
+    },
+    {
+      "id": "ID02",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005133339785982264,
+        "medianRelativeError": 0.027934932013377847,
+        "maximumRelativeError": 0.059051583096335646
+      },
+      "passed": true
+    },
+    {
+      "id": "ID03",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00030673014694050134,
+        "medianRelativeError": 0.01596705750604759,
+        "maximumRelativeError": 0.03446477319213208
+      },
+      "passed": true
+    },
+    {
+      "id": "ID04",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003318828040635689,
+        "medianRelativeError": 0.018455910307240767,
+        "maximumRelativeError": 0.030577780519593336
+      },
+      "passed": true
+    },
+    {
+      "id": "ID05",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002487022152177299,
+        "medianRelativeError": 0.00958594762758023,
+        "maximumRelativeError": 0.03192631518762766
+      },
+      "passed": true
+    },
+    {
+      "id": "ID06",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003907789158871731,
+        "medianRelativeError": 0.02326493286194973,
+        "maximumRelativeError": 0.03080916630690242
+      },
+      "passed": true
+    },
+    {
+      "id": "ID07",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018592173759934784,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0009622800788699066,
+        "medianRelativeError": 0.05574668583545721,
+        "maximumRelativeError": 0.07094917624806113
+      },
+      "passed": false
+    },
+    {
+      "id": "ID08",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005081954368165856,
+        "medianRelativeError": 0.03118413186589989,
+        "maximumRelativeError": 0.03357152005118209
+      },
+      "passed": true
+    },
+    {
+      "id": "ID09",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004959152408767617,
+        "medianRelativeError": 0.029889493673913862,
+        "maximumRelativeError": 0.03260642665942593
+      },
+      "passed": true
+    },
+    {
+      "id": "ID10",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00039525313538354,
+        "medianRelativeError": 0.021801928867758762,
+        "maximumRelativeError": 0.03475269002240262
+      },
+      "passed": true
+    },
+    {
+      "id": "ID11",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006794031139417563,
+        "medianRelativeError": 0.04140845905876223,
+        "maximumRelativeError": 0.04468264105300876
+      },
+      "passed": true
+    },
+    {
+      "id": "ID12",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0007939620063106024,
+        "medianRelativeError": 0.04804708762350573,
+        "maximumRelativeError": 0.05122153554908091
+      },
+      "passed": true
+    },
+    {
+      "id": "ID13",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006620640759163539,
+        "medianRelativeError": 0.03689948773176778,
+        "maximumRelativeError": 0.0437228153712492
+      },
+      "passed": true
+    },
+    {
+      "id": "ID14",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003186042706117505,
+        "medianRelativeError": 0.01647540535650598,
+        "maximumRelativeError": 0.033333389646267066
+      },
+      "passed": true
+    },
+    {
+      "id": "ID15",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004827517670562697,
+        "medianRelativeError": 0.02815715731616696,
+        "maximumRelativeError": 0.037296650054638295
+      },
+      "passed": true
+    },
+    {
+      "id": "ID16",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00025888391954655127,
+        "medianRelativeError": 0.010760998565923,
+        "maximumRelativeError": 0.03583413757515762
+      },
+      "passed": true
+    },
+    {
+      "id": "ID17",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000220352079870556,
+        "medianRelativeError": 0.004250341897345062,
+        "maximumRelativeError": 0.03228305147253545
+      },
+      "passed": true
+    },
+    {
+      "id": "ID18",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021302760015146148,
+        "medianRelativeError": 0.008025622021898394,
+        "maximumRelativeError": 0.029135544423565352
+      },
+      "passed": true
+    },
+    {
+      "id": "ID19",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020447545738620584,
+        "medianRelativeError": 0.004599138389124067,
+        "maximumRelativeError": 0.035578557002673164
+      },
+      "passed": true
+    },
+    {
+      "id": "ID20",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002952993241427337,
+        "medianRelativeError": 0.014872227250920135,
+        "maximumRelativeError": 0.03148614058331535
+      },
+      "passed": true
+    },
+    {
+      "id": "ID21",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00030258893016164325,
+        "medianRelativeError": 0.014550567235096741,
+        "maximumRelativeError": 0.03229654713290045
+      },
+      "passed": true
+    },
+    {
+      "id": "ID22",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0006880973430895614,
+        "medianRelativeError": 0.043981346976191535,
+        "maximumRelativeError": 0.051198879029622876
+      },
+      "passed": true
+    },
+    {
+      "id": "ID23",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00032431042386650783,
+        "medianRelativeError": 0.015544561482205121,
+        "maximumRelativeError": 0.05662132821809064
+      },
+      "passed": true
+    },
+    {
+      "id": "ID24",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00026798029636167215,
+        "medianRelativeError": 0.012699030679996658,
+        "maximumRelativeError": 0.034591355235423345
+      },
+      "passed": true
+    },
+    {
+      "id": "ID25",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002736570100306385,
+        "medianRelativeError": 0.007775251335797582,
+        "maximumRelativeError": 0.05277038668747873
+      },
+      "passed": true
+    },
+    {
+      "id": "ID26",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002773413928449611,
+        "medianRelativeError": 0.009786937843927467,
+        "maximumRelativeError": 0.0480460152341377
+      },
+      "passed": true
+    },
+    {
+      "id": "ID27",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003824495351686459,
+        "medianRelativeError": 0.019201122770942478,
+        "maximumRelativeError": 0.05283124154667179
+      },
+      "passed": true
+    },
+    {
+      "id": "ID28",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003575168825467415,
+        "medianRelativeError": 0.020602861037555428,
+        "maximumRelativeError": 0.03145472405788982
+      },
+      "passed": true
+    },
+    {
+      "id": "ID29",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002615577819492832,
+        "medianRelativeError": 0.011575986478057057,
+        "maximumRelativeError": 0.03255007757661625
+      },
+      "passed": true
+    },
+    {
+      "id": "ID30",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002544221408992336,
+        "medianRelativeError": 0.010673919241887826,
+        "maximumRelativeError": 0.031168006269064165
+      },
+      "passed": true
+    },
+    {
+      "id": "ID31",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00032034508025837746,
+        "medianRelativeError": 0.014679900141910665,
+        "maximumRelativeError": 0.04906127378285542
+      },
+      "passed": true
+    },
+    {
+      "id": "ID32",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002977301713244081,
+        "medianRelativeError": 0.012738899994885079,
+        "maximumRelativeError": 0.044751752163863255
+      },
+      "passed": true
+    },
+    {
+      "id": "ID33",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002923498283676431,
+        "medianRelativeError": 0.015088991649423303,
+        "maximumRelativeError": 0.031443273951195845
+      },
+      "passed": true
+    },
+    {
+      "id": "ID34",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002456959424381449,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002541164373305874,
+        "medianRelativeError": 0.009641194235643238,
+        "maximumRelativeError": 0.03289030708243178
+      },
+      "passed": true
+    },
+    {
+      "id": "ID35",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589001334697106e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002465312231125599,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462235111649797
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022565502197268488,
+        "medianRelativeError": 0.007114749809060587,
+        "maximumRelativeError": 0.0380349948959069
+      },
+      "passed": true
+    },
+    {
+      "id": "ID36",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005264324885605243,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004678504337911275,
+        "medianRelativeError": 0.024201666799090946,
+        "maximumRelativeError": 0.05101925728509926
+      },
+      "passed": true
+    },
+    {
+      "id": "ID37",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003424205592671701,
+        "medianRelativeError": 0.01872292817902214,
+        "maximumRelativeError": 0.031787166556034537
+      },
+      "passed": true
+    },
+    {
+      "id": "ID38",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00005289001628586415,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018590058424544282,
+        "warburgOhmSqrtRadPerSecond": 0.0014455646259664556
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002551220738192327,
+        "medianRelativeError": 0.011449657267692473,
+        "maximumRelativeError": 0.034341712253379
+      },
+      "passed": true
+    },
+    {
+      "id": "ID39",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003844850992481145,
+        "medianRelativeError": 0.02315896593494097,
+        "maximumRelativeError": 0.03042405420055573
+      },
+      "passed": true
+    },
+    {
+      "id": "ID40",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013467256865001217,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003205087434243185,
+        "medianRelativeError": 0.018175402519465544,
+        "maximumRelativeError": 0.033858939627686165
+      },
+      "passed": true
+    },
+    {
+      "id": "ID41",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002795983295281467,
+        "medianRelativeError": 0.010293578888828604,
+        "maximumRelativeError": 0.05232554908168767
+      },
+      "passed": true
+    },
+    {
+      "id": "ID42",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00032701664793189375,
+        "medianRelativeError": 0.01665478500008119,
+        "maximumRelativeError": 0.04612281987315542
+      },
+      "passed": true
+    },
+    {
+      "id": "ID43",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004669798835781843,
+        "medianRelativeError": 0.02884559018870396,
+        "maximumRelativeError": 0.03459542783165271
+      },
+      "passed": true
+    },
+    {
+      "id": "ID44",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0003679751002056012,
+        "medianRelativeError": 0.020779024605009747,
+        "maximumRelativeError": 0.045432145879677414
+      },
+      "passed": true
+    },
+    {
+      "id": "ID45",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004557321720021273,
+        "medianRelativeError": 0.02839583736065312,
+        "maximumRelativeError": 0.03743294679139747
+      },
+      "passed": true
+    },
+    {
+      "id": "ID46",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00035856900292264963,
+        "medianRelativeError": 0.020157587206642763,
+        "maximumRelativeError": 0.044922404133802246
+      },
+      "passed": true
+    },
+    {
+      "id": "ID47",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00038570807567919453,
+        "medianRelativeError": 0.022312590386191947,
+        "maximumRelativeError": 0.046845993774737964
+      },
+      "passed": true
+    },
+    {
+      "id": "ID48",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0004212148598100104,
+        "medianRelativeError": 0.02495751156796909,
+        "maximumRelativeError": 0.046431414744411
+      },
+      "passed": true
+    },
+    {
+      "id": "ID49",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00038262988436764834,
+        "medianRelativeError": 0.020889430286213907,
+        "maximumRelativeError": 0.053066154989416664
+      },
+      "passed": true
+    },
+    {
+      "id": "ID50",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00038259138547444115,
+        "medianRelativeError": 0.021089483069965425,
+        "maximumRelativeError": 0.05242257701792482
+      },
+      "passed": true
+    },
+    {
+      "id": "ID51",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0005200093014016265,
+        "medianRelativeError": 0.03419352008457428,
+        "maximumRelativeError": 0.03889154347577081
+      },
+      "passed": true
+    },
+    {
+      "id": "ID52",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.587332461937746e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00046655167517379524,
+        "medianRelativeError": 0.02830965638042514,
+        "maximumRelativeError": 0.05183672573626166
+      },
+      "passed": true
+    },
+    {
+      "id": "ID53",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.013465727585928651,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002713081445231348,
+        "medianRelativeError": 0.006503635768929163,
+        "maximumRelativeError": 0.05700847003453665
+      },
+      "passed": true
+    },
+    {
+      "id": "ID54",
+      "donorCells": 53,
+      "parameterRule": "coordinatewise median of the other 53 per-cell passive fits",
+      "predictedParameters": {
+        "seriesResistanceOhm": 0.01346790963153418,
+        "seriesInductanceH": 9.589774665952757e-8,
+        "debyeResistanceAt0.1HzOhm": 0.00004586007531018811,
+        "debyeResistanceAt1HzOhm": 0,
+        "debyeResistanceAt10HzOhm": 0,
+        "debyeResistanceAt100HzOhm": 0.002466255226381963,
+        "debyeResistanceAt1000HzOhm": 0.0018634777824486682,
+        "warburgOhmSqrtRadPerSecond": 0.0014462815031734929
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002932601957177362,
+        "medianRelativeError": 0.015157235408205851,
+        "maximumRelativeError": 0.03215420651674139
+      },
+      "passed": true
+    }
+  ],
+  "decision": {
+    "allUnseenCellsPassWithoutRecalibration": false,
+    "sharedPopulationParameterPredictorEstablished": false,
+    "cellSpecificDynamicsDerived": false,
+    "measurementCovarianceEstablished": false,
+    "detectorLikelihoodClosed": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The other-cell median law fails at least one unseen cell. The failure isolates population heterogeneity that must be modeled before residual interpretation."
+}

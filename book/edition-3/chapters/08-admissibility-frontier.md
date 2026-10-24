@@ -283,6 +283,10 @@ That population test now passes all 54 cells without changing the basis, split o
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-8.md)
 
+The stronger test is a revealing near-miss. For each target cell, one parameter vector is formed from the coordinatewise median of the other 53 cells, without reading any target impedance. It predicts 53 of 54 unseen cells inside the frozen limits; only ID07 fails, with 5.575% median error against the declared 5% ceiling while remaining well inside the 20% maximum-error limit. A common passive shape therefore spans almost the whole population, but one localized heterogeneity blocks the universal-law claim. The next look-here target is a preregistered hierarchical predictive distribution using independent cell metadata or a declared minimal calibration record, plus replicate and fixture covariance. That is a practical theoretical-engineering frontier. Neither the near-universality nor the exception is yet dynamics, a detector likelihood or new physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-9.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

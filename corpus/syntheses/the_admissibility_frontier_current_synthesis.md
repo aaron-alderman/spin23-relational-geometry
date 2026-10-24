@@ -262,6 +262,17 @@ This establishes a population-wide conventional baseline under per-cell
 calibration. It does not establish one shared parameter law, covariance or
 generated dynamics.
 
+[AZ-089](../programmes/admissibility/admissibility_89_unseen_cell_shared_parameter_near_miss.md)
+then removes target-cell calibration entirely. For each cell, the median
+parameter vector from the other 53 predicts the frozen held-out frequencies.
+Fifty-three cells pass, while `ID07` crosses the median-error ceiling at 5.575%.
+This is the shape of the admissibility frontier in a measured system: one common
+passive description travels much farther than a cell-by-cell fit, yet one
+localized exception prevents promotion to a universal law. The next useful
+work is hierarchical prediction with independently available covariates and
+replicate/fixture covariance. Neither the near-universality nor its exception
+is evidence for new physics or generated dynamics.
+
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one
 nonabelian semisimple factor, \(\mathfrak{sl}_2\); the reciprocal programme core

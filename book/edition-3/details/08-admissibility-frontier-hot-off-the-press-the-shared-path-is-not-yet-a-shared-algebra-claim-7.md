@@ -17,7 +17,7 @@ A specified candidate class fails under explicit assumptions. The conclusion doe
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the shared path is not yet a shared algebra”.
-- **Unit of argument:** assertion 7 of 8 in this section.
+- **Unit of argument:** assertion 7 of 9 in this section.
 - **Evidence posture:** Check the assumptions defining the ruled-out candidate class; the no-go does not automatically extend beyond that class.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
@@ -34,6 +34,7 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ## Controlling documents
 
+- **admissibility 89 unseen cell shared parameter near miss** — [admissibility_89_unseen_cell_shared_parameter_near_miss.md](../../../corpus/programmes/admissibility/admissibility_89_unseen_cell_shared_parameter_near_miss.md)
 - **admissibility 88 population wide passive impedance baseline** — [admissibility_88_population_wide_passive_impedance_baseline.md](../../../corpus/programmes/admissibility/admissibility_88_population_wide_passive_impedance_baseline.md)
 - **admissibility 87 source native measured impedance held out prediction** — [admissibility_87_source_native_measured_impedance_held_out_prediction.md](../../../corpus/programmes/admissibility/admissibility_87_source_native_measured_impedance_held_out_prediction.md)
 - **admissibility 86 positive spectral atom and measure evaluation witness** — [admissibility_86_positive_spectral_atom_and_measure_evaluation_witness.md](../../../corpus/programmes/admissibility/admissibility_86_positive_spectral_atom_and_measure_evaluation_witness.md)
