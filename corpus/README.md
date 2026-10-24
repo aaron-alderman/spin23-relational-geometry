@@ -10,6 +10,8 @@ The admissibility programme turns that question into an atlas. It tracks what is
 
 Start with [The admissibility frontier: the current story of the corpus](syntheses/the_admissibility_frontier_current_synthesis.md). It is the reader-facing synthesis of what has been found, what it means, why the programme remains hopeful, where the live edges are and how to join without surrendering the corpus's kenotic authority boundaries.
 
+To enter through a concrete task, use [Start here by role](START_HERE_BY_ROLE.md), the [working glossary](GLOSSARY.md) and the repository [contribution guide](../CONTRIBUTING.md).
+
 ## Contents
 
 - [`claims/`](claims/README.md) — the numbered, append-only research ledger;

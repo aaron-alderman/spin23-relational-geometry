@@ -1,10 +1,16 @@
 # Research Frontier: Spin(2,3), Division Algebras, the Standard Model, and Stress–Energy
 
+> **Warning: This page preserves an accretive argument history and is not a standalone synthesis. Later sections may revise or supersede earlier claims.**
+
+**Current authority — 24 October 2026:** use [The admissibility frontier](../../syntheses/the_admissibility_frontier_current_synthesis.md) for the integrated story and the [frontier exhaustion checkpoint](../../programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md) plus [open-topic register](../../programmes/frontier-physics-targets/open_topics_v1.md) for live status. This file remains the detailed chronological frontier ledger.
+
 > **Canonical target navigation:** the programme-level frontier is consolidated into the [frontier physics target set](../../programmes/frontier-physics-targets/frontier_physics_target_set_v1.md), with a [coverage and provenance map](../../programmes/frontier-physics-targets/frontier_physics_target_coverage_map_v1.md). This navigation layer does not change the status of any claim.
 
-**Status:** canonical synthesis and research-frontier document  
+**Status:** accretive research-frontier ledger; historically authoritative at each dated checkpoint, not the current standalone synthesis
+
 **Date:** 19 October 2026  
-**Scope:** synthesis of Aaron's Spin(2,3) thesis, the Standard Model stress–energy analysis, the review of Cohl Furey's programme, and the complete 525-file historical corpus audit  
+**Scope:** synthesis of Aaron's Spin(2,3) thesis, the Standard Model stress–energy analysis, the review of Cohl Furey's programme, the original 525-file historical audit and later appended branch work
+
 **Authority:** this document distinguishes established physics, exact model-local results, conditional constructions, analogies, and open conjectures. It is not a claim that a completed unified theory has been obtained.
 
 **Research grammar:** the claim labels below do not reduce the frontier to a binary true/false list. Live possibilities should be represented as branches—including uncomfortable branches—with explicit discriminants, dependencies, and stop-everything triggers. See the [open-branch research method](32_open_branch_research_method.md).

@@ -2,6 +2,8 @@
 
 **Question:** What, precisely, does Furey's division-algebra programme contribute to Aaron's Spin(2,3) proposal, and where do the two frameworks fail to meet?
 
+> **Scope boundary.** Internal division-algebra structure and spacetime/response carriers are not identified by resemblance. The comparison below admits an explicit finite-dimensional operator interface while requiring a common action, carrier map and physical tests before any unification claim.
+
 ## 1. Executive conclusion
 
 There is no result in Furey's published programme that derives \(\mathrm{Spin}(2,3)\), a second timelike coordinate, gravity, or the Standard Model stress tensor. Conversely, \(\mathrm{Spin}(2,3)\) by itself does not generate Furey's octonionic colour, charge ladder, three-generation multiplicities or triality structure.
@@ -284,4 +286,16 @@ Anything stronger remains to be demonstrated.
 - V. Branding, A. Lindström and M. Sobak, [*The energy-momentum tensor of the Standard Model with applications to energy conditions*](https://arxiv.org/abs/2605.08216) (2026).
 - S. MacDowell and F. Mansouri, *Unified geometric theory of gravity and supergravity*, Phys. Rev. Lett. 38 (1977) 739; erratum 38 (1977) 1376.
 - S. Coleman and J. Mandula, *All possible symmetries of the S matrix*, Phys. Rev. 159 (1967) 1251.
+
+## 13. The explicit interface and its boundary
+
+The factorised verdict and the explicit finite-dimensional interface can be stated together.
+
+1. **Exact finite hinge.** Positive two-channel response, Peirce–Schur/Jordan-triple recursion and TKK closure provide a declared path to \(\mathfrak{sp}(4,\mathbb R)\cong\mathfrak{so}(2,3)\). This is a response-carrier theorem, not yet a spacetime derivation.
+2. **Typed Furey participation.** A continuous Furey-shaped channel rotation supplies the generator needed for full closure on that carrier. The source action, gauge completion and canonical physical interpretation remain external.
+3. **Selection remains physical.** Symmetric or endpoint-blind data do not select orientation, chirality or the sterile phase reference. Boundary, history, anisotropy, environment or another independently sourced datum must enter through a declared portal.
+4. **Consistency gates are sharper.** Complete multiplets bring dangerous companion channels; the simplest protections fail; baryon triality survives conditionally; the family-index construction is anomalous in its minimal local parent; and the chiral fold still lacks a physical-state domain.
+5. **Admissibility is the present bridge language.** Jordan structure organizes positive composition, Lie structure organizes transformation, and dynamics is tested inside the jointly admissible state/history/detector region. This does not identify Furey's internal module with the response carrier.
+
+The conclusion is therefore positive but bounded: the two programmes share an explicit finite operator interface and a common set of research gates. They do not share a derived microscopic action, vacuum, operator dictionary or target-blind experimental prediction. See [The admissibility frontier](../../syntheses/the_admissibility_frontier_current_synthesis.md) and the [book chapter](../../../book/edition-3/chapters/08-admissibility-frontier.md).
 

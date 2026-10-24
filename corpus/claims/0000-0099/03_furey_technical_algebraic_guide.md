@@ -2,6 +2,8 @@
 
 **Purpose:** make the constructions usable without collapsing “division algebra,” “Clifford algebra,” “ideal,” “triality” and “particle” into one vague idea.
 
+> **Scope boundary.** This guide explains the division-algebra, Clifford, ideal, triality and particle-representation machinery and then tests several typed interfaces. Representation, dynamics and measurement remain separate questions throughout; results derived here or in linked certificates are not retroactively attributed to Furey's publications.
+
 ## 1. Four different layers
 
 The most common source of confusion is failure to distinguish:
@@ -324,4 +326,15 @@ Furey's work gives unusually rich answers to the first question. The synthesis w
 ## Sources
 
 See the primary bibliography in [the comprehensive review](02_furey_comprehensive_research_review.md). Particularly useful technical sources are Furey's [2016 thesis](https://arxiv.org/abs/1611.09182), the [2023 Roadmap Part III](https://arxiv.org/abs/2312.14207), the Furey–Hughes [triality paper](https://arxiv.org/abs/2409.17948), and the [2026 nested-embedding paper](https://arxiv.org/abs/2607.18450).
+
+## 15. Typed interfaces and open gates
+
+The layer discipline above can be used as a gate rather than only as a vocabulary list.
+
+- A specifically typed continuous Furey product rotation participates in the ten-generator closure of the declared four-real response carrier; the result is an operator participation theorem, not a microscopic derivation. See [claim 1058](../1000-1099/1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md) and [claim 1059](../1000-1099/1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md).
+- The same analysis isolates a selector obstruction: endpoint-blind invariant data cannot choose the remaining charged phase reference. A physically prepared or dynamically derived charge-minus-two reference is the minimal reopening datum; see [claim 1395](../1300-1399/1395_no_declared_cp_boundary_z3_flavor_or_index_datum_fixes_the_a5_sterile_phase_reference.md).
+- Ternary-operator, anomaly, Kantor, structurable and Freudenthal investigations in this programme are extensions inspired by adjacent mathematics. Their conclusions must not be attributed to Furey's published papers without an explicit source map.
+- Exceptional, magic-square, Golay and Leech continuations remain behind carrier, invariant and observable gates. Shared representation dimensions or group labels do not supply the intertwiner.
+
+For attribution, use the [Furey source-provenance matrix](../../programmes/document-acceptance/furey_source_provenance_matrix_20261024.md). The [admissibility synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md) supplies the larger programme architecture.
 

@@ -1,8 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
+import { resolveCorpusPath } from "./corpus_path_resolver.mjs";
 
 const root = process.cwd();
-const manifestPath = path.join(root, "programme_closure_manifest.json");
+const manifestPath = path.join(root, "corpus", "programmes", "closure", "programme_closure_manifest.json");
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
 const allowed = new Set(["established", "conditional", "underdetermined", "obstructed", "missing"]);
 const failures = [];
@@ -20,16 +21,18 @@ for (const gate of manifest.gates) {
 for (const gate of manifest.gates) {
   for (const dep of gate.depends_on) if (!ids.has(dep)) failures.push(`${gate.id} has unknown dependency ${dep}`);
   for (const item of gate.evidence) {
-    const docPath = path.join(root, item.document);
+    const docPath = resolveCorpusPath(root, item.document);
     if (!fs.existsSync(docPath)) {
       failures.push(`${gate.id} missing evidence document ${item.document}`);
       continue;
     }
     if (item.certificate_required) {
       const text = fs.readFileSync(docPath, "utf8");
-      const linkedScripts = [...text.matchAll(/scripts[\\/][A-Za-z0-9_.-]+\.mjs/g)]
-        .map((m) => m[0].replaceAll("\\", path.sep).replaceAll("/", path.sep));
-      const existing = linkedScripts.filter((p) => fs.existsSync(path.join(root, p)));
+      const markdownCertificates = [...text.matchAll(/\]\(([^)#?]+\.mjs)(?:[#?][^)]*)?\)/g)]
+        .map((m) => path.resolve(path.dirname(docPath), decodeURIComponent(m[1])));
+      const rootedCertificates = [...text.matchAll(/(?:verification|scripts)[\\/][A-Za-z0-9_./\\-]+\.mjs/g)]
+        .map((m) => path.resolve(root, m[0].replaceAll("\\", path.sep).replaceAll("/", path.sep)));
+      const existing = [...markdownCertificates, ...rootedCertificates].filter((p) => fs.existsSync(p));
       if (existing.length === 0) failures.push(`${gate.id} evidence ${item.document} has no existing linked MJS certificate`);
     }
   }

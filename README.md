@@ -19,9 +19,10 @@ This is **not a completed unified theory**. Established mathematics, reproducibl
 | Reader | Start here |
 |---|---|
 | Start with the present story | [The admissibility frontier: current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) |
-| General reader | [Edition 3.1 expanded book preview](book/edition-3/README.md) |
+| General reader | [Edition 3.2 admissibility book preview](book/edition-3/README.md) |
 | Researcher | [Canonical corpus guide](corpus/README.md) |
-| Auditor or contributor | [Verification guide](verification/README.md) |
+| Contributor | [Role-based entry map](corpus/START_HERE_BY_ROLE.md) and [contribution guide](CONTRIBUTING.md) |
+| Auditor | [Verification guide](verification/README.md) |
 | Visual explorer | [Interactive concept atlas](docs/concept-map/index.html) |
 
 The generated paged edition is available in [`docs/edition-3`](docs/edition-3/index.html) and is deployed to [GitHub Pages](https://aaron-alderman.github.io/spin23-relational-geometry/). The Pages workflow regenerates and tests the book before publishing the committed static site.
@@ -35,12 +36,14 @@ The corpus has found more than a collection of correspondences. It has found a c
 - **Jordan and Lie meet without being collapsed.** Jordan structure governs positive states, responses and composition; Lie structure governs transformation and transport. Their exact rank-two hinge is established, while its physical carrier remains a live question.
 - **Dynamics and admissibility constrain one another.** An action or update rule proposes motion; the admissibility stack tests type, composition, positivity, causality, stability, global extension and empirical record. This reversal has become executable rather than merely philosophical.
 - **Selection has become visible.** Symmetry usually supplies an orbit, not a realized member. The corpus identifies the independently sourced boundary, anisotropy, environment, history or record required to turn neutral preservation into physical selection.
-- **The frontier is mapped for use.** Twenty-two physics targets, twenty frontier areas, thirty-five detector bundles, twenty experiments and forty-nine maintained topics now connect exact mathematics to calculations, devices, controls and kill tests.
+- **The frontier is mapped for use.** 22 physics targets, 20 frontier areas, 35 detector bundles, 20 experiments and 49 maintained topics connect exact mathematics to calculations, devices, controls and kill tests.
 - **The negative results are constructive.** They prevent attractive shared shapes—whether \(A_2\), triality, Golay, Leech, Freudenthal, \(E_8\) or torsion—from being promoted without the missing carrier, action, normalization and observable.
 
 The strongest ontological claim remains open: the corpus has not established that admissibility generates all physical law. But it has established a powerful research method and an unusually detailed “look here” guide to the frontier. The [current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) tells that story, including the good news, the limits, the hope and the invitation to contribute.
 
 ## Canonical research controls
+
+The first five files below are accretive provenance ledgers. Current reader authority lives in the [current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) and maintained frontier registers; the ledgers remain essential for reconstructing how each verdict was reached.
 
 1. [Research document map](corpus/claims/0000-0099/00_research_document_map.md)
 2. [Current research frontier](corpus/claims/0000-0099/30_research_frontier.md)

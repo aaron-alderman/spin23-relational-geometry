@@ -1,4 +1,4 @@
-# Successor, not replacement — assertion 2
+# Scope and method — assertion 2
 
 _Expanded claim page · Front matter_
 
@@ -16,7 +16,7 @@ The claim organizes provenance, scope or stopping rules. It governs how evidence
 
 ## Logical anatomy
 
-- **Scope:** chapter “Front matter”, section “Successor, not replacement”.
+- **Scope:** chapter “Front matter”, section “Scope and method”.
 - **Unit of argument:** assertion 2 of 2 in this section.
 - **Evidence posture:** Use this passage to inspect provenance, scope and stopping rules rather than as independent physical evidence.
 - **Research move:** preserves provenance, memory, status and continuity.
@@ -41,4 +41,4 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 ---
 
-[Return to the assertion in the chapter](../chapters/00-front-matter.md#successor-not-replacement) · [Book contents](../README.md) · [← Previous claim](00-front-matter-successor-not-replacement-claim-1.md) · [Next claim →](00-front-matter-the-authority-boundary-claim-1.md)
+[Return to the assertion in the chapter](../chapters/00-front-matter.md#scope-and-method) · [Book contents](../README.md) · [← Previous claim](00-front-matter-scope-and-method-claim-1.md) · [Next claim →](00-front-matter-the-authority-boundary-claim-1.md)

@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 const root=process.cwd();
 const ignoredDirectories=new Set([
@@ -14,12 +15,16 @@ const ignoredDirectories=new Set([
   'node_modules',
   'spin23-relational-geometry',
 ]);
-const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>{
-  if(e.isDirectory()&&ignoredDirectories.has(e.name))return [];
-  const p=path.join(d,e.name);
-  return e.isDirectory()?walk(p):[p];
-});
-const files=walk(root).filter(p=>p.endsWith('.md'));
+// Audit repository-owned Markdown only. `--exclude-standard` keeps imported
+// migration caches and other ignored workspaces from becoming false failures,
+// while still including newly created, not-yet-staged documentation.
+const files=execFileSync('git',['ls-files','--cached','--others','--exclude-standard'],{cwd:root,encoding:'utf8'})
+  .split(/\r?\n/)
+  .filter(Boolean)
+  .filter(p=>p.endsWith('.md'))
+  .filter(p=>!p.split(/[\\/]/).some(part=>ignoredDirectories.has(part)))
+  .map(p=>path.join(root,p))
+  .filter(p=>fs.existsSync(p));
 const broken=[];
 for(const file of files){
   const text=fs.readFileSync(file,'utf8');

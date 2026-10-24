@@ -10,8 +10,8 @@ const repositoryReadme = readFileSync(new URL("README.md", root), "utf8");
 
 test("Edition 3 exposes matching Markdown and HTML books", () => {
   assert.equal(metadata.schema, "spin23-edition3-book/v1");
-  assert.equal(metadata.edition, "3.1 expanded preview");
-  assert.equal(metadata.chapters.length, 12);
+  assert.equal(metadata.edition, "3.2 admissibility preview");
+  assert.equal(metadata.chapters.length, 13);
   assert.equal(metadata.findings.length, 24);
   assert.equal(metadata.frontiers.length, 9);
   assert.equal(metadata.publicationAuthority.role, "canonical-publication-source");
@@ -31,6 +31,10 @@ test("the expanded narrative chapters are substantial rather than chapter stubs"
     assert.ok(markdown.length >= 2800, `${chapter.slug} is still too light`);
     assert.match(markdown, /## Chapter sources/u, `${chapter.slug} has no audit trail`);
   }
+  const admissibility = readFileSync(new URL("book/edition-3/chapters/08-admissibility-frontier.md", root), "utf8");
+  assert.ok(admissibility.length >= 5000, "the admissibility chapter is still too light");
+  assert.match(admissibility, /The structure between Jordan and Lie/u);
+  assert.match(admissibility, /Detectors draw the practical boundary/u);
 });
 
 test("the expanded edition distributes its archetype grammar and visual layer", () => {
@@ -110,7 +114,7 @@ test("Furey claims link at the point of assertion to inspectable proof pages", (
 });
 
 test("every narrative assertion has its own expanded claim page", () => {
-  assert.equal(metadata.claimDetails.length, 73);
+  assert.equal(metadata.claimDetails.length, 84);
   assert.equal(new Set(metadata.claimDetails.map(detail => detail.slug)).size, metadata.claimDetails.length);
   for (const detail of metadata.claimDetails) {
     const chapterHtml = readFileSync(new URL(`docs/edition-3/${detail.chapter}.html`, root), "utf8");
@@ -210,9 +214,10 @@ test("reader-facing mathematics uses mathematical typography rather than identif
 });
 
 test("the book preserves the authority boundary and physical firewall", () => {
-  assert.match(coverMarkdown, /successor to “Exact hinge, exceptional programme\.”/iu);
   assert.match(coverMarkdown, /not empirical confirmation, peer review or a derivation of the Standard Model/iu);
-  assert.match(coverHtml, /successor, not replacement/iu);
+  assert.match(coverMarkdown, /admissibility is ontologically prior to physics remains a research proposal/iu);
+  assert.match(coverHtml, /its stronger ontological status remains open/iu);
+  assert.doesNotMatch(coverMarkdown, /successor|current continuation/iu);
   assert.ok(metadata.findings.some(finding => finding.status === "closed-identification"));
   assert.ok(metadata.findings.some(finding => finding.status === "established-obstruction"));
   assert.ok(metadata.findings.some(finding => finding.status === "open-physical"));
@@ -239,7 +244,8 @@ test("every citation resolves inside the repository", () => {
 test("the repository front door advertises both reading surfaces", () => {
   assert.match(repositoryReadme, /book\/edition-3\/README\.md/u);
   assert.match(repositoryReadme, /docs\/edition-3\/index\.html/u);
-  assert.match(coverHtml, /Twelve substantial reader chapters \+ interactive atlas/u);
+  assert.match(coverHtml, /Thirteen substantial reader chapters \+ interactive atlas/u);
+  assert.match(coverHtml, /08-admissibility-frontier\.html/u);
   assert.match(coverHtml, /09-research-frontier\.html/u);
   assert.match(coverHtml, /10-provenance-and-reading-map\.html/u);
   assert.match(coverHtml, /11-concept-atlas\.html/u);

@@ -17,6 +17,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [The Standard-Model seam · The chiral fold obstruction](../chapters/05-standard-model-seam.md#the-chiral-fold-obstruction)
 - [Proton safety, Pati–Salam and triality · The current action and its limits](../chapters/06-proton-safety.md#the-current-action-and-its-limits)
 - [The exceptional horizon · Where the exceptional programme actually stands](../chapters/07-exceptional-horizon.md#where-the-exceptional-programme-actually-stands)
+- [The admissibility frontier · What is genuinely within reach](../chapters/08-admissibility-frontier.md#what-is-genuinely-within-reach)
 - [Chapter · Research frontier](../chapters/09-research-frontier.md)
 - [E3-F12 · Mathematical closure is not physical closure](../chapters/08-result-ledger.md#E3-F12)
 - [A4 · Define the chiral physical-state domain](../chapters/09-research-frontier.md#A4)
@@ -31,6 +32,8 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · Proton safety, Pati–Salam and triality · The current action and its limits (1)](../details/06-proton-safety-the-current-action-and-its-limits-claim-1.md)
 - [Claim · Proton safety, Pati–Salam and triality · The current action and its limits (2)](../details/06-proton-safety-the-current-action-and-its-limits-claim-2.md)
 - [Claim · The exceptional horizon · Where the exceptional programme actually stands (1)](../details/07-exceptional-horizon-where-the-exceptional-programme-actually-stands-claim-1.md)
+- [Claim · The admissibility frontier · What is genuinely within reach (1)](../details/08-admissibility-frontier-what-is-genuinely-within-reach-claim-1.md)
+- [Claim · The admissibility frontier · What is genuinely within reach (2)](../details/08-admissibility-frontier-what-is-genuinely-within-reach-claim-2.md)
 
 ---
 

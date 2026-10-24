@@ -41,4 +41,4 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 ---
 
-[Return to the assertion in the chapter](../chapters/00-front-matter.md#the-authority-boundary) · [Book contents](../README.md) · [← Previous claim](00-front-matter-successor-not-replacement-claim-2.md) · [Next claim →](00-front-matter-a-book-of-layers-claim-1.md)
+[Return to the assertion in the chapter](../chapters/00-front-matter.md#the-authority-boundary) · [Book contents](../README.md) · [← Previous claim](00-front-matter-scope-and-method-claim-2.md) · [Next claim →](00-front-matter-a-book-of-layers-claim-1.md)

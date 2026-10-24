@@ -7,9 +7,9 @@ This census is the corpus-wide backstop above the packet and programme audits. I
 
 ## Result
 
-- Narrative artifacts scanned: **2531**
-- Hashed inventory records: **2531**
-- Files containing gate language or an open-like structured status: **1529**
+- Narrative artifacts scanned: **2536**
+- Hashed inventory records: **2536**
+- Files containing gate language or an open-like structured status: **1530**
 - Matching claim files: **1176**
 - Claim files explicitly recorded with no declared gate: **399**
 - Evidence artifacts / evidence artifacts with gate language: **438 / 85**
@@ -17,11 +17,11 @@ This census is the corpus-wide backstop above the packet and programme audits. I
 
 | Disposition | Files |
 |---|---:|
-| delegated_audit | 259 |
+| delegated_audit | 260 |
 | evidence_record | 85 |
 | mapped | 1165 |
 | navigation | 9 |
-| no_declared_gate | 1002 |
+| no_declared_gate | 1006 |
 | separate_programme | 11 |
 
 ## Use rule
@@ -31,6 +31,6 @@ A zero unresolved count proves lexical ownership completeness in the declared fi
 ## Reproduction
 
 ~~~powershell
-node scripts/generate-full-corpus-frontier-gate-census.mjs
+node scripts/generate-full-corpus-frontier-gate-census.mjs --write
 node verification/frontier-physics-targets/verify_full_corpus_gate_census.mjs
 ~~~

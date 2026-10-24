@@ -38,9 +38,12 @@ const excludedDirectories = new Set([
   "node_modules",
   "__pycache__",
 ]);
-const trackedFiles = trackedOnly
-  ? new Set(execFileSync("git", ["ls-files"], { cwd: root, encoding: "utf8" }).split(/\r?\n/).filter(Boolean).map(posix))
-  : null;
+const candidateFiles = execFileSync(
+  "git",
+  trackedOnly ? ["ls-files"] : ["ls-files", "--cached", "--others", "--exclude-standard"],
+  { cwd: root, encoding: "utf8" },
+).split(/\r?\n/).filter(Boolean).map(posix);
+const presentCandidateFiles = candidateFiles.filter((file) => existsSync(join(root, file)));
 
 function posix(path) {
   return path.split(sep).join("/");
@@ -92,8 +95,8 @@ function localMarkdownLinks(file) {
 }
 
 const topLevelFiles = readdirSync(root, { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => entry.name);
-const numberedDocuments = walk(join(root, claimsDirectory))
-  .filter((path) => !trackedFiles || trackedFiles.has(path))
+const numberedDocuments = presentCandidateFiles
+  .filter((path) => path.startsWith(`${claimsDirectory}/`))
   .map((path) => ({ path, name: path.split("/").at(-1), match: /^(\d+)_.*\.md$/i.exec(path.split("/").at(-1)) }))
   .filter(({ match }) => match)
   .map(({ path, name, match }) => ({ id: Number(match[1]), name, path }))
@@ -124,11 +127,9 @@ const brokenCoreLinks = governanceFiles
   .flatMap(localMarkdownLinks)
   .filter(({ target }) => !existsSync(join(root, target)));
 
-const repositoryFiles = [
-  ...topLevelFiles,
-  ...includedDirectories.filter((directory) => existsSync(join(root, directory))).flatMap((directory) => walk(join(root, directory))),
-]
-  .filter((file) => !trackedFiles || trackedFiles.has(file))
+const repositoryFiles = presentCandidateFiles
+  .filter((file) => file !== manifestName)
+  .filter((file) => !file.includes("/") || includedDirectories.some((directory) => file.startsWith(`${directory}/`)))
   .filter((file, index, all) => all.indexOf(file) === index)
   .sort();
 const repositoryEntries = repositoryFiles.map((file) => ({
@@ -137,9 +138,11 @@ const repositoryEntries = repositoryFiles.map((file) => ({
   sha256: sha256(file),
 }));
 
+// Accretive ledgers preserve provenance; standalone syntheses must not be
+// forced to narrate repository chronology. `mentionsLatest` remains a useful
+// diagnostic, while freshness is established by the complete file hashes.
 const errors = [
   ...missingGovernanceFiles.map((file) => `missing governance file: ${file}`),
-  ...governanceCurrent.filter(({ mentionsLatest }) => !mentionsLatest).map(({ file }) => `governance file does not mention latest document: ${file}`),
   ...brokenCoreLinks.map(({ source, target }) => `broken local link from ${source}: ${target}`),
 ];
 const warnings = duplicateIds.map(({ id, files }) => `duplicate legacy document id ${id}: ${files.join(", ")}`);

@@ -280,7 +280,7 @@ const md = `# Full-corpus frontier gate census\n\n` +
   `- Unresolved ownership records: **${summary.unresolved}**\n\n` +
   `| Disposition | Files |\n|---|---:|\n${Object.entries(summary.byDisposition).map(([key, value]) => `| ${key} | ${value} |`).join("\n")}\n\n` +
   `## Use rule\n\nA zero unresolved count proves lexical ownership completeness in the declared filesystem scope. It does **not** prove that every scientific problem is solved, that the keyword pattern captures unstated tacit questions, or that semantic topic mappings establish the proposed physics. The live frontier remains the open-topic register; this census proves that explicit corpus gate language has nowhere else to hide.\n\n` +
-  `## Reproduction\n\n~~~powershell\nnode scripts/generate-full-corpus-frontier-gate-census.mjs\nnode verification/frontier-physics-targets/verify_full_corpus_gate_census.mjs\n~~~\n`;
+  `## Reproduction\n\n~~~powershell\nnode scripts/generate-full-corpus-frontier-gate-census.mjs --write\nnode verification/frontier-physics-targets/verify_full_corpus_gate_census.mjs\n~~~\n`;
 fs.writeFileSync(path.join(root, outMd), md);
 console.log(JSON.stringify({ result: unresolved.length ? "written-with-unresolved" : "pass", summary, outputs: [outJson, outMd], unresolved: unresolved.map(({ path: p, title }) => ({ path: p, title })) }, null, 2));
 process.exit(unresolved.length ? 1 : 0);

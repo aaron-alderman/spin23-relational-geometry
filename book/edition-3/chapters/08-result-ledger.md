@@ -402,4 +402,4 @@ Ordinary Lorentz super-Yang--Mills is kinetically indefinite; self-duality requi
 
 ---
 
-[← The exceptional horizon](07-exceptional-horizon.md) · [Contents](../README.md) · [Research frontier →](09-research-frontier.md)
+[← The admissibility frontier](08-admissibility-frontier.md) · [Contents](../README.md) · [Research frontier →](09-research-frontier.md)

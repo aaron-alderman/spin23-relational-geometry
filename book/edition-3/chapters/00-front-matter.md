@@ -39,20 +39,20 @@ These marks do not classify people. They tell you what the nearby passage is doi
 | **[⇄ Translator](../reading-key/move-translator.md)** | moves a structure between mathematical, physical or ordinary languages. | A temporary function of this passage, not a personality type. |
 | **[⊕ Integrator](../reading-key/move-integrator.md)** | joins several typed results while letting the weakest edge set the claim. | A temporary function of this passage, not a personality type. |
 
-<a id="successor-not-replacement"></a>
-## Successor, not replacement
+<a id="scope-and-method"></a>
+## Scope and method
 
 > **Section status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
 
 > **Research move — [▤ Steward](../reading-key/move-steward.md)** — preserves provenance, memory, status and continuity.
 
-Edition 3 is a reading of the corpus after the Jordan-triple, Möbius-cover, Furey-operator and Standard-Model source-selection investigations. It preserves earlier formulations as historical stages rather than silently rewriting them.
+This book asks how positive composition, typed carriers, transformation, dynamics and observation can be held in one research architecture without being declared identical. It begins from ordinary measuring ideas, states each mathematical object and then follows only the bridges for which a map or explicit test is available.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-successor-not-replacement-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-scope-and-method-claim-1.md)
 
 The labels established, conditional, obstruction and open are part of the result. A beautiful chain of mathematics is not converted into a physical theory by typography or narrative momentum.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-successor-not-replacement-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-scope-and-method-claim-2.md)
 
 <a id="the-authority-boundary"></a>
 ## The authority boundary

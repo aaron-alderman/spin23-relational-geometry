@@ -1,7 +1,8 @@
-# The admissibility frontier: the current story of the corpus
+# The admissibility frontier
 
 **Date:** 24 October 2026  
-**Status:** current reader-facing synthesis; exact results, bounded interpretations and open invitations retain their source status  
+**Status:** standalone reader-facing synthesis; exact results, bounded interpretations and open invitations retain their source status
+
 **Frontier authority:** [Frontier exhaustion checkpoint](../programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md)  
 **Working queue:** [Open topics](../programmes/frontier-physics-targets/open_topics_v1.md)  
 **Presentation rule:** [Claimipedia editorial standard](../../integrations/claimipedia/ARTICLE-EDITORIAL-STANDARD.md)

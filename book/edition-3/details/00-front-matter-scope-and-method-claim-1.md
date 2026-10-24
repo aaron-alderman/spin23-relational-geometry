@@ -1,4 +1,4 @@
-# Successor, not replacement — assertion 1
+# Scope and method — assertion 1
 
 _Expanded claim page · Front matter_
 
@@ -8,7 +8,7 @@ _Expanded claim page · Front matter_
 
 ## Exact assertion
 
-> Edition 3 is a reading of the corpus after the Jordan-triple, Möbius-cover, Furey-operator and Standard-Model source-selection investigations. It preserves earlier formulations as historical stages rather than silently rewriting them.
+> This book asks how positive composition, typed carriers, transformation, dynamics and observation can be held in one research architecture without being declared identical. It begins from ordinary measuring ideas, states each mathematical object and then follows only the bridges for which a map or explicit test is available.
 
 ## What this commits us to
 
@@ -16,7 +16,7 @@ The claim organizes provenance, scope or stopping rules. It governs how evidence
 
 ## Logical anatomy
 
-- **Scope:** chapter “Front matter”, section “Successor, not replacement”.
+- **Scope:** chapter “Front matter”, section “Scope and method”.
 - **Unit of argument:** assertion 1 of 2 in this section.
 - **Evidence posture:** Use this passage to inspect provenance, scope and stopping rules rather than as independent physical evidence.
 - **Research move:** preserves provenance, memory, status and continuity.
@@ -41,4 +41,4 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 ---
 
-[Return to the assertion in the chapter](../chapters/00-front-matter.md#successor-not-replacement) · [Book contents](../README.md) · [Next claim →](00-front-matter-successor-not-replacement-claim-2.md)
+[Return to the assertion in the chapter](../chapters/00-front-matter.md#scope-and-method) · [Book contents](../README.md) · [Next claim →](00-front-matter-scope-and-method-claim-2.md)

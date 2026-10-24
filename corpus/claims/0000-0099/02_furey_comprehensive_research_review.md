@@ -4,6 +4,8 @@
 **Scope:** the particle-physics programme from ideals and division algebras through the July 2026 nested-embedding paper.  
 **Terminology:** recent papers are published under N. Furey; earlier work often appears under C. Furey.
 
+> **Attribution boundary.** This review covers Furey's programme through the stated July 2026 source horizon. Ternary-operator closure, selector, anomaly, Kantor/Freudenthal and physical-carrier deductions made elsewhere are not claims of those papers unless a primary source is cited. The [source-provenance matrix](../../programmes/document-acceptance/furey_source_provenance_matrix_20261024.md) controls that separation.
+
 ## 1. The question driving the programme
 
 The Standard Model works extraordinarily well but takes much of its internal structure as input: the gauge group, chiral representations, hypercharges, three generations, Higgs representation and Yukawa parameters. Furey's programme asks whether a small algebraic seed can make some of those choices inevitable.

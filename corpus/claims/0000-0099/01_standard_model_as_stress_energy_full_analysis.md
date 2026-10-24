@@ -4,6 +4,8 @@
 **Status:** established Standard Model and GR results first; proposed Spin(2,3) extensions explicitly marked.  
 **Conventions:** natural units \(\hbar=c=1\) unless restored; metric signature \((-+++)\); \(T_{\mu\nu}=-(2/\sqrt{-g})\,\delta S_m/\delta g^{\mu\nu}\).
 
+> **Scope boundary.** This is a covariant stress–energy survey: it derives and interprets the Standard Model's metric response, then states the additional gates required of a Spin(2,3)-related extension. It does not identify stress–energy with the full microscopic theory or establish the proposed extension.
+
 ## 1. What “the Standard Model as a stress–energy tensor” can and cannot mean
 
 The Standard Model is not literally identical to a single tensor. It is a local chiral quantum gauge theory whose fields, representations, action, state and renormalisation prescription contain much more information than \(T_{\mu\nu}\). Once coupled to a background geometry, however, the entire matter theory has a single universal **metric response**:
@@ -232,7 +234,7 @@ G^A{}_{\mu\rho}G^A{}_{\nu}{}^{\rho}
 -\frac14g_{\mu\nu}B_{\rho\sigma}B^{\rho\sigma}\\
 &+(D_\mu H)^\dagger D_\nu H+(D_\nu H)^\dagger D_\mu H\\
 &-g_{\mu\nu}\left[(D_\rho H)^\dagger D^\rho H+V(H)\right]\\
-&+\frac{i}{4}\sum_{r,\psi}left[
+&+\frac{i}{4}\sum_{r,\psi}\left[
 \bar\psi_r\gamma_\mu\overleftrightarrow{D}_\nu\psi_r
 +\bar\psi_r\gamma_\nu\overleftrightarrow{D}_\mu\psi_r\right]\\
 &+2\xi\left[G_{\mu\nu}H^\dagger H
@@ -539,4 +541,15 @@ For the Spin(2,3) programme, the task is therefore not to “put all Standard Mo
 - C. G. Callan, S. Coleman and R. Jackiw, *A new improved energy-momentum tensor*, Annals of Physics 59 (1970) 42, DOI: 10.1016/0003-4916(70)90394-5.
 - N. D. Birrell and P. C. W. Davies, *Quantum Fields in Curved Space*, Cambridge University Press (1982).
 - R. M. Wald, *Quantum Field Theory in Curved Spacetime and Black Hole Thermodynamics*, University of Chicago Press (1994).
+
+## 17. Stress-response limits and experimental interfaces
+
+Stress–energy is a universal metric response but a many-to-one summary of microscopic structure. The following results sharpen the interfaces relevant to this analysis.
+
+- The conserved stress spectral kernel can be quotiented to a positive rank-two response, giving a precise local entrance to the Jordan carrier; see [claim 206](../0200-0299/206_conserved_stress_spectral_quotient_to_h2_response.md).
+- Improvement and contact choices prevent the full trace-mixed response direction from being universal. The robust object is the traceless threshold, not an arbitrary third matrix coordinate; see [claim 1393](../1300-1399/1393_the_full_scalar_stress_preserves_a_traceless_holonomy_threshold_but_not_a_scheme_invariant_third_matrix_direction.md) and [claim 1396](../1300-1399/1396_no_current_principle_predicts_the_reader_curvature_coupling_so_only_the_traceless_threshold_is_scheme_robust.md).
+- A healthy bosonic stress sector does not define the chiral physical-state domain, and the simplest higher-dimensional family-index parent is anomalous; see [claims 1450–1451](../1400-1499/1450_the_o3_twisted_cp1_operator_has_exactly_three_universal_chiral_zero_modes_but_its_minimal_local_six_dimensional_parent_is_anomalous.md).
+- A detector sees a port-folded spectral record rather than the tensor in isolation. The current experiment packet therefore requires a microscopic port, causal spectrum, residue, linewidth, calibration and preregistered decision rule; see [claim 1452](../1400-1499/1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md).
+
+The current research question is no longer whether stress response can be written. It is whether one action and one physical carrier derive the relevant response quotient, preserve the required domain and predict a detector-visible signal without importing its normalization.
 

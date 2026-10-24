@@ -10,7 +10,10 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 
 ## Every current use
 
+- [The admissibility frontier · Detectors draw the practical boundary](../chapters/08-admissibility-frontier.md#detectors-draw-the-practical-boundary)
 - [E3-F19 · A calibrated pole-and-band experiment can be specified](../chapters/08-result-ledger.md#E3-F19)
+- [Claim · The admissibility frontier · Detectors draw the practical boundary (1)](../details/08-admissibility-frontier-detectors-draw-the-practical-boundary-claim-1.md)
+- [Claim · The admissibility frontier · Detectors draw the practical boundary (2)](../details/08-admissibility-frontier-detectors-draw-the-practical-boundary-claim-2.md)
 
 ---
 

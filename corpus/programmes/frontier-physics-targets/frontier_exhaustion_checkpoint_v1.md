@@ -13,7 +13,7 @@ The corpus has a closed navigation loop from target to frontier area to detector
 - all 57 admissibility packets, including AZ-041--AZ-057 beyond the older zone register;
 - all 53 Wave 6--7 packets;
 - every remaining programme Markdown or JSON file containing the declared open-gate vocabulary: 69 files, of which 48 map to physics topics and 21 retain separate programme governance;
-- the complete corpus-and-evidence backstop: all 2,531 Markdown/JSON artifacts hashed and inventoried (2,093 corpus narratives and 438 evidence artifacts); 1,529 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 85 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
+- the complete corpus-and-evidence backstop: all 2,536 Markdown/JSON artifacts hashed and inventoried (2,098 corpus narratives and 438 evidence artifacts); 1,530 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 85 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
 - 49 independently closable topics: 9 active, 19 open, 3 audit, 13 gated, 2 blocked and 3 closed with retained evidence.
 
 No scanned gate is orphaned. The [full-corpus census](full_corpus_gate_census_v1.md) distinguishes old closure language, live semantic ownership, navigation surfaces and separately governed inquiries rather than equating every occurrence of “open” with a new target. “Exhausted” here means the declared corpus search and ownership problem is exhausted, not that nature, unstated tacit questions, the literature, or every possible experiment is exhausted.

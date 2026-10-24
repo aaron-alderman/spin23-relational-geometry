@@ -1,10 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import assert from "node:assert/strict";
+import { resolveCorpusPath } from "./corpus_path_resolver.mjs";
 
 const root = process.cwd();
-const atlas = JSON.parse(fs.readFileSync(path.join(root, "programme_no_go_atlas.json"), "utf8"));
-const manifest = JSON.parse(fs.readFileSync(path.join(root, "programme_closure_manifest.json"), "utf8"));
+const atlas = JSON.parse(fs.readFileSync(path.join(root, "corpus", "registers", "programme", "programme_no_go_atlas.json"), "utf8"));
+const manifest = JSON.parse(fs.readFileSync(path.join(root, "corpus", "programmes", "closure", "programme_closure_manifest.json"), "utf8"));
 const allowed = new Set(["conditional", "underdetermined", "obstructed", "missing"]);
 assert.equal(atlas.schema_version, 1);
 assert(atlas.routes.length >= 6);
@@ -19,7 +20,7 @@ for (const route of atlas.routes) {
     assert(route[key]?.length > 20, `${route.id} missing ${key}`);
   }
   for (const gate of route.gates_covered) covered.add(gate);
-  for (const doc of route.evidence) assert(fs.existsSync(path.join(root, doc)), `${route.id} missing ${doc}`);
+  for (const doc of route.evidence) assert(fs.existsSync(resolveCorpusPath(root, doc)), `${route.id} missing ${doc}`);
 }
 
 const openGates = manifest.gates.filter((g) => g.status !== "established").map((g) => g.id);

@@ -3,6 +3,7 @@
 **Status:** proposed research architecture, not an established theory.  
 **Aim:** combine the strongest parts of Aaron's sector-selection hypothesis and Furey's representation programme without treating an analogy as a derivation.
 
+
 ## 1. Synthesis in one sentence
 
 Use a constrained \(Spin(2,3)\)-related Cartan/configuration geometry to select the effective Lorentzian tetrad, use division-algebraic ideals and compatibility intersections to select the Standard Model internal module, and require one generally covariant action to generate the Dirac operator, gauge currents, Higgs dynamics and total stress–energy.

@@ -1,5 +1,7 @@
 # Active Research Goal Log
 
+> **Historical completed-goal log.** The theorem-level goal recorded here closed on 16 October 2026. It is retained as provenance, not as the active programme controller. The current programme is summarized in [The admissibility frontier](../../syntheses/the_admissibility_frontier_current_synthesis.md).
+
 **Opened:** 16 October 2026  
 **Goal:** determine precisely whether and under what hypotheses
 

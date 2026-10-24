@@ -1,7 +1,12 @@
 # Active Multi-Branch Programme Log
 
+> **Warning: This page preserves an accretive argument history and is not a standalone synthesis. Later sections may revise or supersede earlier claims.**
+
+**Current controller — 24 October 2026:** use the [frontier exhaustion checkpoint](../../programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md) and [open-topic register](../../programmes/frontier-physics-targets/open_topics_v1.md). This very large file remains the chronological work log and should not be read as though its earliest “active” labels override later closures.
+
 **Opened:** 16 October 2026  
-**Status:** active  
+**Status:** accretive historical work log; current statuses live in the maintained frontier registers
+
 **Objective:** advance as many mathematically credible Jordan/Furey/\(Spin(2,3)\)/Standard-Model branches as possible; pin genuine dependencies; preserve a continuously written and testable record.
 
 ## Live control documents

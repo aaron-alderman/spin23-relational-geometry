@@ -1,5 +1,9 @@
 # Spin(2,3), the Standard Model, and Furey: document map
 
+> **Warning: This page preserves an accretive argument history and is not a standalone synthesis. Later sections may revise or supersede earlier claims.**
+
+**Current front door — 24 October 2026:** [The admissibility frontier](../../syntheses/the_admissibility_frontier_current_synthesis.md) gives the current Jordan–carrier–Lie story; the [frontier target set](../../programmes/frontier-physics-targets/frontier_physics_target_set_v1.md), [experiment atlas](../../programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md) and [open-topic register](../../programmes/frontier-physics-targets/open_topics_v1.md) carry the live practical frontier. This document remains the chronological map into the full record.
+
 ## Separate inquiry: illegible knowledge
 
 - [From “this sounds stupid” to an inspectable structure](../../programmes/epistemology/frontier_epistemology_06_from_felt_wrong_to_legible_structure.md) — first applied reconstruction from a real pre-explanatory judgment, with contrast tests and held-out prediction criteria.

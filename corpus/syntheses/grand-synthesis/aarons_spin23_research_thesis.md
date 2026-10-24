@@ -1,7 +1,7 @@
 # Aaron's Spin(2,3) Programme: A Comprehensive Thesis and Critical Audit
 
 **Working synthesis — 16 October 2026**  
-**Status:** exploratory programme, not an established physical theory.
+**Status:** standalone exploratory thesis and critical audit, not an established physical theory.
 
 > **Core proposal:** The familiar 3+1 Lorentzian world might be an interaction-selected, statistically stable description of a larger configuration geometry with two timelike-signature directions. T1 is the dominant observable/null transport sector; T2 is off-axis configuration mixing, not necessarily a second clock. Electromagnetic observations preferentially sample local sectors, while gravity might couple to a more comprehensive stress–energy structure. Mass, spin, thermal phenomena and missing gravitational mass are potential manifestations to derive, not established results.
 

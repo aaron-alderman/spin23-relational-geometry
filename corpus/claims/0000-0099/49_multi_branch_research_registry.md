@@ -1,5 +1,9 @@
 # Multi-Branch Research Registry
 
+> **Warning: This page preserves an accretive argument history and is not a standalone synthesis. Later sections may revise or supersede earlier claims.**
+
+**Live navigation — 24 October 2026:** branch provenance remains here, while current frontier status is consolidated in the [frontier exhaustion checkpoint](../../programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md), [open-topic register](../../programmes/frontier-physics-targets/open_topics_v1.md) and [current synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md).
+
 **Opened:** 16 October 2026  
 **Programme:** Jordan / Furey / \(Spin(2,3)\) / Standard Model synthesis  
 **Policy:** pursue every mathematically credible branch; pin concrete blockers; preserve dependencies; reopen pinned work when another branch changes its premises.

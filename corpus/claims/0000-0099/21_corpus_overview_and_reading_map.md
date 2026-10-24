@@ -1,8 +1,12 @@
 # Physics corpus overview and reading map
 
-**Source:** `C:\Users\aaron\sourcery\other\random-thoughts\physics`  
-**Inventory:** 525 files, about 15.5 MB, including roughly 570,000 whitespace-delimited words of text and code.  
+**Repository:** `grand-theory` (the original 525-file import is now one historical layer inside the maintained corpus)
+
+**Current census:** 2,536 narrative/evidence artifacts; 1,530 artifacts containing gate language or an open-like structured status; zero unresolved ownership records at the 24 October 2026 census. See the [generated full-corpus census](../../programmes/frontier-physics-targets/full_corpus_gate_census_v1.md) for machine-derived counts.
+
 **Purpose:** explain what the corpus is, how its divisions relate, and which files should be treated as authoritative, exploratory, executable, rendered, or archival.
+
+> **Snapshot boundary.** The area-by-area inventory below describes the original 525-file source corpus and is retained for provenance. For the current architecture and entry points, use [The admissibility frontier](../../syntheses/the_admissibility_frontier_current_synthesis.md) and the repository [corpus README](../../README.md).
 
 ## Overall assessment
 

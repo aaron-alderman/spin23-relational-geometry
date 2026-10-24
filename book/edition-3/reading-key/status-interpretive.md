@@ -17,6 +17,8 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Chapter · The exceptional horizon](../chapters/07-exceptional-horizon.md)
 - [The exceptional horizon · E₈ as a crystal rather than a slogan](../chapters/07-exceptional-horizon.md#e8-as-a-crystal-rather-than-a-slogan)
 - [The exceptional horizon · Jordan freedom and the need for selectors](../chapters/07-exceptional-horizon.md#jordan-freedom-and-the-need-for-selectors)
+- [Chapter · The admissibility frontier](../chapters/08-admissibility-frontier.md)
+- [The admissibility frontier · The structure between Jordan and Lie](../chapters/08-admissibility-frontier.md#the-structure-between-jordan-and-lie)
 - [Chapter · Concept atlas](../chapters/11-concept-atlas.md)
 - [Claim · Front matter · A book of layers (1)](../details/00-front-matter-a-book-of-layers-claim-1.md)
 - [Claim · Front matter · A book of layers (2)](../details/00-front-matter-a-book-of-layers-claim-2.md)
@@ -30,6 +32,8 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The exceptional horizon · E₈ as a crystal rather than a slogan (2)](../details/07-exceptional-horizon-e8-as-a-crystal-rather-than-a-slogan-claim-2.md)
 - [Claim · The exceptional horizon · Jordan freedom and the need for selectors (1)](../details/07-exceptional-horizon-jordan-freedom-and-the-need-for-selectors-claim-1.md)
 - [Claim · The exceptional horizon · Jordan freedom and the need for selectors (2)](../details/07-exceptional-horizon-jordan-freedom-and-the-need-for-selectors-claim-2.md)
+- [Claim · The admissibility frontier · The structure between Jordan and Lie (1)](../details/08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-1.md)
+- [Claim · The admissibility frontier · The structure between Jordan and Lie (2)](../details/08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-2.md)
 
 ---
 
