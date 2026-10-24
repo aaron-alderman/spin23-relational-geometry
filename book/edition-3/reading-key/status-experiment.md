@@ -13,6 +13,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [The admissibility frontier · The finesse technology pathway](../chapters/08-admissibility-frontier.md#the-finesse-technology-pathway)
 - [The admissibility frontier · Hot off the press — the Casimir bridge has a frequency window](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-casimir-bridge-has-a-frequency-window)
 - [The admissibility frontier · Hot off the press — the four-mode bench is ready to build](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-four-mode-bench-is-ready-to-build)
+- [The admissibility frontier · Hot off the press — the selector chip has a design wedge](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-selector-chip-has-a-design-wedge)
 - [E3-F19 · A calibrated pole-and-band experiment can be specified](../chapters/08-result-ledger.md#E3-F19)
 - [Claim · The admissibility frontier · The finesse technology pathway (1)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md)
 - [Claim · The admissibility frontier · The finesse technology pathway (2)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)
@@ -22,6 +23,9 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Hot off the press — the four-mode bench is ready to build (1)](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the four-mode bench is ready to build (2)](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the four-mode bench is ready to build (3)](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — the selector chip has a design wedge (1)](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — the selector chip has a design wedge (2)](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — the selector chip has a design wedge (3)](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-3.md)
 
 ---
 

@@ -1,0 +1,3622 @@
+{
+  "protocol": "admissibility-photonic-selector-chip-sweep/1",
+  "date": "2026-10-25",
+  "model": {
+    "carrier": "four-waveguide chiral star with one bright central guide and a two-dimensional dark outer subspace",
+    "equation": "i dpsi/dz = (H(z)-i Gamma) psi",
+    "scope": "coupled-mode preflight; not full-wave electromagnetic simulation and not a fabrication certificate"
+  },
+  "publishedAnchor": {
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12006547/",
+    "reported": {
+      "platform": "two-layer silicon-nitride-on-insulator",
+      "waveguideCrossSectionNanometres": [
+        800,
+        450
+      ],
+      "so2FootprintMicrometres": [
+        5,
+        2,
+        600
+      ],
+      "darkOutputPowerApproximately": 0.95,
+      "operatingBandwidthNanometresGreaterThan": 100,
+      "insertionLossDecibelsLessThan": 2,
+      "matrixFidelityRange": [
+        0.991,
+        0.999
+      ]
+    },
+    "notReportedInRequiredForm": [
+      "kappa0",
+      "residual dark-doublet splitting delta/kappa0",
+      "differential dark-subspace loss gamma/kappa0"
+    ]
+  },
+  "corpusBudget": {
+    "latitudeSine": 0.6614378277661477,
+    "adiabaticTolerance": 0.02,
+    "relativeEvolutionTolerance": 0.05,
+    "maximumRelativeSplittingOrDifferentialLoss": 0.00024061965677016708,
+    "minimumCouplingLengthProduct": 207.79682205165204,
+    "couplingRequiredForPublishedLengthPerMillimetre": 346.3280367527534
+  },
+  "baselineConfig": {
+    "kappaPerMillimetre": 20,
+    "deviceLengthMillimetres": 12,
+    "couplingLengthProduct": 240,
+    "outerPath": "n(z)=(sqrt(7)/4 cos(2pi z/L), sqrt(7)/4 sin(2pi z/L), 3/4)",
+    "assumedResidualSplittingRatio": 0.0001,
+    "assumedDifferentialAmplitudeLossRatio": 0.0001,
+    "assumedCommonAmplitudeLossRatio": 0.001
+  },
+  "baseline": [
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.024,
+      "differentialLossAccumulation": 0.024,
+      "darkSubspacePowerRetention": 0.999689076397661,
+      "singularValues": [
+        0.7911356724600479,
+        0.7819015473469145
+      ],
+      "logSingularValueRatio": 0.011740639150733777,
+      "transferMatrix": [
+        [
+          [
+            -0.005139167711743699,
+            -0.00454144679800114
+          ],
+          [
+            -0.7865050859885424,
+            -0.000026630369755829424
+          ]
+        ],
+        [
+          [
+            0.7865050859885394,
+            0.000026630369755841302
+          ],
+          [
+            0.0040944363155798165,
+            0.004623829553864567
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.786505085988541,
+        0.000026630369755835363
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999828059197461,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.024,
+      "differentialLossAccumulation": 0.024,
+      "darkSubspacePowerRetention": 0.999689076397661,
+      "singularValues": [
+        0.7911356724600479,
+        0.7819015473469145
+      ],
+      "logSingularValueRatio": 0.011740639150733777,
+      "transferMatrix": [
+        [
+          [
+            -0.005139167711743699,
+            -0.00454144679800114
+          ],
+          [
+            0.7865050859885424,
+            0.000026630369755829424
+          ]
+        ],
+        [
+          [
+            -0.7865050859885394,
+            -0.000026630369755841302
+          ],
+          [
+            0.0040944363155798165,
+            0.004623829553864567
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.786505085988541,
+        -0.000026630369755835363
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999828059197461,
+      "phaseBlindSignDegeneracy": true
+    }
+  ],
+  "sweep": [
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.7953226908284278,
+      "singularValues": [
+        0.9526360329315605,
+        0.8033734773842272
+      ],
+      "logSingularValueRatio": 0.17041320511394065,
+      "transferMatrix": [
+        [
+          [
+            -0.2651896447287866,
+            0
+          ],
+          [
+            -0.8570763436609761,
+            0
+          ]
+        ],
+        [
+          [
+            0.8570763436609802,
+            0
+          ],
+          [
+            -0.11592708918145284,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8570763436609781,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9761636695314343,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.7953226908284278,
+      "singularValues": [
+        0.9526360329315605,
+        0.8033734773842272
+      ],
+      "logSingularValueRatio": 0.17041320511394065,
+      "transferMatrix": [
+        [
+          [
+            -0.2651896447287866,
+            0
+          ],
+          [
+            0.8570763436609761,
+            0
+          ]
+        ],
+        [
+          [
+            -0.8570763436609802,
+            0
+          ],
+          [
+            -0.11592708918145284,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8570763436609781,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9761636695314343,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0.0012,
+      "differentialLossAccumulation": 0.0012,
+      "darkSubspacePowerRetention": 0.7953329651241424,
+      "singularValues": [
+        0.9527671019498736,
+        0.803202341692241
+      ],
+      "logSingularValueRatio": 0.17076382529787315,
+      "transferMatrix": [
+        [
+          [
+            -0.2653689115326159,
+            -0.00017924115489001142
+          ],
+          [
+            -0.857049543965169,
+            0.000026754841199543858
+          ]
+        ],
+        [
+          [
+            0.8570495439651692,
+            -0.000026754841199544447
+          ],
+          [
+            -0.11580415687493076,
+            0.00012296136771206652
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8570495439651691,
+        -0.000026754841199544153
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9761554194304682,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0.0012,
+      "differentialLossAccumulation": 0.0012,
+      "darkSubspacePowerRetention": 0.7953329651241424,
+      "singularValues": [
+        0.9527671019498736,
+        0.803202341692241
+      ],
+      "logSingularValueRatio": 0.17076382529787315,
+      "transferMatrix": [
+        [
+          [
+            -0.2653689115326159,
+            -0.00017924115489001142
+          ],
+          [
+            0.857049543965169,
+            -0.000026754841199543858
+          ]
+        ],
+        [
+          [
+            -0.8570495439651692,
+            0.000026754841199544447
+          ],
+          [
+            -0.11580415687493076,
+            0.00012296136771206652
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8570495439651691,
+        0.000026754841199544153
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9761554194304682,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0.0028874358812420045,
+      "differentialLossAccumulation": 0.0028874358812420045,
+      "darkSubspacePowerRetention": 0.7953473840364141,
+      "singularValues": [
+        0.9529514681561191,
+        0.8029617303061594
+      ],
+      "logSingularValueRatio": 0.17125692261009873,
+      "transferMatrix": [
+        [
+          [
+            -0.265620995800546,
+            -0.00043120270610392484
+          ],
+          [
+            -0.857011858316768,
+            0.000064225634328724
+          ]
+        ],
+        [
+          [
+            0.8570118583167706,
+            -0.00006422563432872373
+          ],
+          [
+            -0.11563128994144774,
+            0.00029596757424069786
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8570118583167693,
+        -0.00006422563432872387
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.976143765504885,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0.0028874358812420045,
+      "differentialLossAccumulation": 0.0028874358812420045,
+      "darkSubspacePowerRetention": 0.7953473840364141,
+      "singularValues": [
+        0.9529514681561191,
+        0.8029617303061594
+      ],
+      "logSingularValueRatio": 0.17125692261009873,
+      "transferMatrix": [
+        [
+          [
+            -0.265620995800546,
+            -0.00043120270610392484
+          ],
+          [
+            0.857011858316768,
+            -0.000064225634328724
+          ]
+        ],
+        [
+          [
+            -0.8570118583167706,
+            0.00006422563432872373
+          ],
+          [
+            -0.11563128994144774,
+            0.00029596757424069786
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8570118583167693,
+        0.00006422563432872387
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.976143765504885,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0.006,
+      "differentialLossAccumulation": 0.006,
+      "darkSubspacePowerRetention": 0.7953738919055486,
+      "singularValues": [
+        0.9532917155801175,
+        0.8025180313123763
+      ],
+      "logSingularValueRatio": 0.1721666355301632,
+      "transferMatrix": [
+        [
+          [
+            -0.2660859777455178,
+            -0.0008956934646272431
+          ],
+          [
+            -0.8569423450968001,
+            0.00013287705762328244
+          ]
+        ],
+        [
+          [
+            0.8569423450968047,
+            -0.0001328770576232829
+          ],
+          [
+            -0.11531242821152189,
+            0.000615388436974349
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8569423450968023,
+        -0.00013287705762328266
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9761221076661416,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0.006,
+      "differentialLossAccumulation": 0.006,
+      "darkSubspacePowerRetention": 0.7953738919055486,
+      "singularValues": [
+        0.9532917155801175,
+        0.8025180313123763
+      ],
+      "logSingularValueRatio": 0.1721666355301632,
+      "transferMatrix": [
+        [
+          [
+            -0.2660859777455178,
+            -0.0008956934646272431
+          ],
+          [
+            0.8569423450968001,
+            -0.00013287705762328244
+          ]
+        ],
+        [
+          [
+            -0.8569423450968047,
+            0.0001328770576232829
+          ],
+          [
+            -0.11531242821152189,
+            0.000615388436974349
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8569423450968023,
+        0.00013287705762328266
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9761221076661416,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0.012,
+      "differentialLossAccumulation": 0.012,
+      "darkSubspacePowerRetention": 0.7954246638376147,
+      "singularValues": [
+        0.9539482272359824,
+        0.8016631802628238
+      ],
+      "logSingularValueRatio": 0.17392085591319809,
+      "transferMatrix": [
+        [
+          [
+            -0.2669823045046889,
+            -0.0017901099173112105
+          ],
+          [
+            -0.8568083459943974,
+            0.0002635109279507744
+          ]
+        ],
+        [
+          [
+            0.8568083459943956,
+            -0.0002635109279507694
+          ],
+          [
+            -0.11469777076382895,
+            0.0012322329774319557
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8568083459943965,
+        -0.0002635109279507719
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9760797666909639,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 12,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.3463280367527534,
+      "relativeSplittingAccumulation": 0.012,
+      "differentialLossAccumulation": 0.012,
+      "darkSubspacePowerRetention": 0.7954246638376147,
+      "singularValues": [
+        0.9539482272359824,
+        0.8016631802628238
+      ],
+      "logSingularValueRatio": 0.17392085591319809,
+      "transferMatrix": [
+        [
+          [
+            -0.2669823045046889,
+            -0.0017901099173112105
+          ],
+          [
+            0.8568083459943974,
+            -0.0002635109279507744
+          ]
+        ],
+        [
+          [
+            -0.8568083459943956,
+            0.0002635109279507694
+          ],
+          [
+            -0.11469777076382895,
+            0.0012322329774319557
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8568083459943965,
+        0.0002635109279507719
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9760797666909639,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9743698864511686,
+      "singularValues": [
+        0.9753356668922434,
+        0.9519086388214097
+      ],
+      "logSingularValueRatio": 0.02431262292326839,
+      "transferMatrix": [
+        [
+          [
+            -0.06905423340314273,
+            0
+          ],
+          [
+            -0.9619145987970138,
+            0
+          ]
+        ],
+        [
+          [
+            0.9619145987970106,
+            0
+          ],
+          [
+            -0.045627205332309496,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9619145987970121,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.998227983805943,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9743698864511686,
+      "singularValues": [
+        0.9753356668922434,
+        0.9519086388214097
+      ],
+      "logSingularValueRatio": 0.02431262292326839,
+      "transferMatrix": [
+        [
+          [
+            -0.06905423340314273,
+            0
+          ],
+          [
+            0.9619145987970138,
+            0
+          ]
+        ],
+        [
+          [
+            -0.9619145987970106,
+            0
+          ],
+          [
+            -0.045627205332309496,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9619145987970121,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.998227983805943,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0.0024,
+      "differentialLossAccumulation": 0.0024,
+      "darkSubspacePowerRetention": 0.974381929052501,
+      "singularValues": [
+        0.9758354315445132,
+        0.9514054074998112
+      ],
+      "logSingularValueRatio": 0.025353689264090977,
+      "transferMatrix": [
+        [
+          [
+            -0.06956963518991091,
+            -0.0005149639685127739
+          ],
+          [
+            -0.9619119024045888,
+            0.000002394537457734338
+          ]
+        ],
+        [
+          [
+            0.961911902404589,
+            -0.000002394537457734129
+          ],
+          [
+            -0.04513962132031397,
+            0.0004880056992518213
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9619119024045889,
+        -0.0000023945374577342335
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9982269812054831,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0.0024,
+      "differentialLossAccumulation": 0.0024,
+      "darkSubspacePowerRetention": 0.974381929052501,
+      "singularValues": [
+        0.9758354315445132,
+        0.9514054074998112
+      ],
+      "logSingularValueRatio": 0.025353689264090977,
+      "transferMatrix": [
+        [
+          [
+            -0.06956963518991091,
+            -0.0005149639685127739
+          ],
+          [
+            0.9619119024045888,
+            -0.000002394537457734338
+          ]
+        ],
+        [
+          [
+            -0.961911902404589,
+            0.000002394537457734129
+          ],
+          [
+            -0.04513962132031397,
+            0.0004880056992518213
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9619119024045889,
+        0.0000023945374577342335
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9982269812054831,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0.005774871762484009,
+      "differentialLossAccumulation": 0.005774871762484009,
+      "darkSubspacePowerRetention": 0.9743988329437355,
+      "singularValues": [
+        0.9765386506951497,
+        0.9506981973888783
+      ],
+      "logSingularValueRatio": 0.02681767110352652,
+      "transferMatrix": [
+        [
+          [
+            -0.07029438957706563,
+            -0.0012376238973410112
+          ],
+          [
+            -0.9619081107259297,
+            0.00000474036758456178
+          ]
+        ],
+        [
+          [
+            0.9619081107259287,
+            -0.000004740367584562423
+          ],
+          [
+            -0.0444539841499251,
+            0.001175665192766538
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9619081107259293,
+        -0.000004740367584562102
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9982251135286204,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0.005774871762484009,
+      "differentialLossAccumulation": 0.005774871762484009,
+      "darkSubspacePowerRetention": 0.9743988329437355,
+      "singularValues": [
+        0.9765386506951497,
+        0.9506981973888783
+      ],
+      "logSingularValueRatio": 0.02681767110352652,
+      "transferMatrix": [
+        [
+          [
+            -0.07029438957706563,
+            -0.0012376238973410112
+          ],
+          [
+            0.9619081107259297,
+            -0.00000474036758456178
+          ]
+        ],
+        [
+          [
+            -0.9619081107259287,
+            0.000004740367584562423
+          ],
+          [
+            -0.0444539841499251,
+            0.001175665192766538
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9619081107259293,
+        0.000004740367584562102
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9982251135286204,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0.012,
+      "differentialLossAccumulation": 0.012,
+      "darkSubspacePowerRetention": 0.9744299186032918,
+      "singularValues": [
+        0.977837125863003,
+        0.9493950703048312
+      ],
+      "logSingularValueRatio": 0.029518104521943003,
+      "transferMatrix": [
+        [
+          [
+            -0.07163122323707832,
+            -0.0025660762407943277
+          ],
+          [
+            -0.9619011166095424,
+            0.000005935449262168859
+          ]
+        ],
+        [
+          [
+            0.9619011166095361,
+            -0.00000593544926217094
+          ],
+          [
+            -0.04318930396944489,
+            0.0024484746759185234
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9619011166095393,
+        -0.000005935449262169899
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9982202648342264,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0.012,
+      "differentialLossAccumulation": 0.012,
+      "darkSubspacePowerRetention": 0.9744299186032918,
+      "singularValues": [
+        0.977837125863003,
+        0.9493950703048312
+      ],
+      "logSingularValueRatio": 0.029518104521943003,
+      "transferMatrix": [
+        [
+          [
+            -0.07163122323707832,
+            -0.0025660762407943277
+          ],
+          [
+            0.9619011166095424,
+            -0.000005935449262168859
+          ]
+        ],
+        [
+          [
+            -0.9619011166095361,
+            0.00000593544926217094
+          ],
+          [
+            -0.04318930396944489,
+            0.0024484746759185234
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9619011166095393,
+        0.000005935449262169899
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9982202648342264,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0.024,
+      "differentialLossAccumulation": 0.024,
+      "darkSubspacePowerRetention": 0.9744894871767285,
+      "singularValues": [
+        0.9803449518843418,
+        0.9468881894903948
+      ],
+      "logSingularValueRatio": 0.03472348335325601,
+      "transferMatrix": [
+        [
+          [
+            -0.07420809403455647,
+            -0.005110365262119641
+          ],
+          [
+            -0.9618876328843419,
+            -0.0000032229800513728377
+          ]
+        ],
+        [
+          [
+            0.9618876328843398,
+            0.0000032229800513723307
+          ],
+          [
+            -0.04075151980302818,
+            0.004918134752494783
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9618876328843409,
+        0.0000032229800513725844
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9982057824136477,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 24,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.1731640183763767,
+      "relativeSplittingAccumulation": 0.024,
+      "differentialLossAccumulation": 0.024,
+      "darkSubspacePowerRetention": 0.9744894871767285,
+      "singularValues": [
+        0.9803449518843418,
+        0.9468881894903948
+      ],
+      "logSingularValueRatio": 0.03472348335325601,
+      "transferMatrix": [
+        [
+          [
+            -0.07420809403455647,
+            -0.005110365262119641
+          ],
+          [
+            0.9618876328843419,
+            0.0000032229800513728377
+          ]
+        ],
+        [
+          [
+            -0.9618876328843398,
+            -0.0000032229800513723307
+          ],
+          [
+            -0.04075151980302818,
+            0.004918134752494783
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9618876328843409,
+        -0.0000032229800513725844
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9982057824136477,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9937046644790862,
+      "singularValues": [
+        0.9518219838476767,
+        0.9484327976306262
+      ],
+      "logSingularValueRatio": 0.003567089891090408,
+      "transferMatrix": [
+        [
+          [
+            -0.016933840504735894,
+            0
+          ],
+          [
+            -0.9499447563379175,
+            0
+          ]
+        ],
+        [
+          [
+            0.9499447563379161,
+            0
+          ],
+          [
+            -0.020323026721803365,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9499447563379169,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998077790378272,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9937046644790862,
+      "singularValues": [
+        0.9518219838476767,
+        0.9484327976306262
+      ],
+      "logSingularValueRatio": 0.003567089891090408,
+      "transferMatrix": [
+        [
+          [
+            -0.016933840504735894,
+            0
+          ],
+          [
+            0.9499447563379175,
+            0
+          ]
+        ],
+        [
+          [
+            -0.9499447563379161,
+            0
+          ],
+          [
+            -0.020323026721803365,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9499447563379169,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998077790378272,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0.0048,
+      "differentialLossAccumulation": 0.0048,
+      "darkSubspacePowerRetention": 0.9937006373863168,
+      "singularValues": [
+        0.9507439073351444,
+        0.9495142723763845
+      ],
+      "logSingularValueRatio": 0.0012941769108155185,
+      "transferMatrix": [
+        [
+          [
+            -0.018020376344619976,
+            -0.0010845726154720683
+          ],
+          [
+            -0.9499457097976698,
+            -0.0000022199708896259837
+          ]
+        ],
+        [
+          [
+            0.9499457097976736,
+            0.0000022199708896222754
+          ],
+          [
+            -0.019249980779891897,
+            0.0010749995838320555
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9499457097976717,
+        0.0000022199708896241295
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998069945889916,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0.0048,
+      "differentialLossAccumulation": 0.0048,
+      "darkSubspacePowerRetention": 0.9937006373863168,
+      "singularValues": [
+        0.9507439073351444,
+        0.9495142723763845
+      ],
+      "logSingularValueRatio": 0.0012941769108155185,
+      "transferMatrix": [
+        [
+          [
+            -0.018020376344619976,
+            -0.0010845726154720683
+          ],
+          [
+            0.9499457097976698,
+            0.0000022199708896259837
+          ]
+        ],
+        [
+          [
+            -0.9499457097976736,
+            -0.0000022199708896222754
+          ],
+          [
+            -0.019249980779891897,
+            0.0010749995838320555
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9499457097976717,
+        -0.0000022199708896241295
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998069945889916,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0.011549743524968018,
+      "differentialLossAccumulation": 0.011549743524968018,
+      "darkSubspacePowerRetention": 0.9936949616475447,
+      "singularValues": [
+        0.9510371700082894,
+        0.9492299404018356
+      ],
+      "logSingularValueRatio": 0.0019020801248617342,
+      "transferMatrix": [
+        [
+          [
+            -0.019548242600857142,
+            -0.0026030590882532003
+          ],
+          [
+            -0.9499470504868692,
+            -0.000009627053412986586
+          ]
+        ],
+        [
+          [
+            0.9499470504868723,
+            0.000009627053412988064
+          ],
+          [
+            -0.017741083859768362,
+            0.002593277455042892
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9499470504868708,
+        0.000009627053412987325
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998037068911121,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0.011549743524968018,
+      "differentialLossAccumulation": 0.011549743524968018,
+      "darkSubspacePowerRetention": 0.9936949616475447,
+      "singularValues": [
+        0.9510371700082894,
+        0.9492299404018356
+      ],
+      "logSingularValueRatio": 0.0019020801248617342,
+      "transferMatrix": [
+        [
+          [
+            -0.019548242600857142,
+            -0.0026030590882532003
+          ],
+          [
+            0.9499470504868692,
+            0.000009627053412986586
+          ]
+        ],
+        [
+          [
+            -0.9499470504868723,
+            -0.000009627053412988064
+          ],
+          [
+            -0.017741083859768362,
+            0.002593277455042892
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9499470504868708,
+        -0.000009627053412987325
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998037068911121,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0.024,
+      "differentialLossAccumulation": 0.024,
+      "darkSubspacePowerRetention": 0.9936844524829235,
+      "singularValues": [
+        0.9538525251105355,
+        0.9464437896827302
+      ],
+      "logSingularValueRatio": 0.00779749232604645,
+      "transferMatrix": [
+        [
+          [
+            -0.022366346082750944,
+            -0.005383714905441065
+          ],
+          [
+            -0.9499495228512894,
+            -0.000036430405719884814
+          ]
+        ],
+        [
+          [
+            0.9499495228512898,
+            0.00003643040571989321
+          ],
+          [
+            -0.014957970243568373,
+            0.005414185676037976
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9499495228512895,
+        0.000036430405719889016
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9997909443435248,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0.024,
+      "differentialLossAccumulation": 0.024,
+      "darkSubspacePowerRetention": 0.9936844524829235,
+      "singularValues": [
+        0.9538525251105355,
+        0.9464437896827302
+      ],
+      "logSingularValueRatio": 0.00779749232604645,
+      "transferMatrix": [
+        [
+          [
+            -0.022366346082750944,
+            -0.005383714905441065
+          ],
+          [
+            0.9499495228512894,
+            0.000036430405719884814
+          ]
+        ],
+        [
+          [
+            -0.9499495228512898,
+            -0.00003643040571989321
+          ],
+          [
+            -0.014957970243568373,
+            0.005414185676037976
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9499495228512895,
+        -0.000036430405719889016
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9997909443435248,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0.048,
+      "differentialLossAccumulation": 0.048,
+      "darkSubspacePowerRetention": 0.993664044465599,
+      "singularValues": [
+        0.9593033619924567,
+        0.9410958437471024
+      ],
+      "logSingularValueRatio": 0.019162368971240865,
+      "transferMatrix": [
+        [
+          [
+            -0.027797772916166006,
+            -0.010670213476319884
+          ],
+          [
+            -0.9499542822621749,
+            -0.0001361890884566932
+          ]
+        ],
+        [
+          [
+            0.9499542822621757,
+            0.00013618908845665565
+          ],
+          [
+            -0.009594002872155154,
+            0.010926987271711458
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9499542822621754,
+        0.00013618908845667443
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9997418323007415,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 48,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.08658200918818836,
+      "relativeSplittingAccumulation": 0.048,
+      "differentialLossAccumulation": 0.048,
+      "darkSubspacePowerRetention": 0.993664044465599,
+      "singularValues": [
+        0.9593033619924567,
+        0.9410958437471024
+      ],
+      "logSingularValueRatio": 0.019162368971240865,
+      "transferMatrix": [
+        [
+          [
+            -0.027797772916166006,
+            -0.010670213476319884
+          ],
+          [
+            0.9499542822621749,
+            0.0001361890884566932
+          ]
+        ],
+        [
+          [
+            -0.9499542822621757,
+            -0.00013618908845665565
+          ],
+          [
+            -0.009594002872155154,
+            0.010926987271711458
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9499542822621754,
+        -0.00013618908845667443
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9997418323007415,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9979408007884429,
+      "singularValues": [
+        0.907752847058614,
+        0.9073034570209576
+      ],
+      "logSingularValueRatio": 0.0004951802826490651,
+      "transferMatrix": [
+        [
+          [
+            -0.00401665300116519,
+            0
+          ],
+          [
+            -0.9075182409801592,
+            0
+          ]
+        ],
+        [
+          [
+            0.9075182409801593,
+            0
+          ],
+          [
+            -0.00446604303870422,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9075182409801592,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999890790609588,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9979408007884429,
+      "singularValues": [
+        0.907752847058614,
+        0.9073034570209576
+      ],
+      "logSingularValueRatio": 0.0004951802826490651,
+      "transferMatrix": [
+        [
+          [
+            -0.00401665300116519,
+            0
+          ],
+          [
+            0.9075182409801592,
+            0
+          ]
+        ],
+        [
+          [
+            -0.9075182409801593,
+            0
+          ],
+          [
+            -0.00446604303870422,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9075182409801592,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999890790609588,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0.0096,
+      "differentialLossAccumulation": 0.0096,
+      "darkSubspacePowerRetention": 0.9979396702343666,
+      "singularValues": [
+        0.9094109805962678,
+        0.9056507442804435
+      ],
+      "logSingularValueRatio": 0.004143376110899793,
+      "transferMatrix": [
+        [
+          [
+            -0.006124235197713459,
+            -0.0020998733008843916
+          ],
+          [
+            -0.9075184975450021,
+            -0.000005171222549684348
+          ]
+        ],
+        [
+          [
+            0.9075184975450067,
+            0.0000051712225496829975
+          ],
+          [
+            -0.0023640257659121307,
+            0.0021097573701269576
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9075184975450044,
+        0.0000051712225496836726
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999863752527549,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0.0096,
+      "differentialLossAccumulation": 0.0096,
+      "darkSubspacePowerRetention": 0.9979396702343666,
+      "singularValues": [
+        0.9094109805962678,
+        0.9056507442804435
+      ],
+      "logSingularValueRatio": 0.004143376110899793,
+      "transferMatrix": [
+        [
+          [
+            -0.006124235197713459,
+            -0.0020998733008843916
+          ],
+          [
+            0.9075184975450021,
+            0.000005171222549684348
+          ]
+        ],
+        [
+          [
+            -0.9075184975450067,
+            -0.0000051712225496829975
+          ],
+          [
+            -0.0023640257659121307,
+            0.0021097573701269576
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9075184975450044,
+        -0.0000051712225496836726
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999863752527549,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0.023099487049936036,
+      "differentialLossAccumulation": 0.023099487049936036,
+      "darkSubspacePowerRetention": 0.9979381057006853,
+      "singularValues": [
+        0.9123829039613257,
+        0.90270296153409
+      ],
+      "logSingularValueRatio": 0.010666199746511233,
+      "transferMatrix": [
+        [
+          [
+            -0.009087778494913018,
+            -0.0050266788725521015
+          ],
+          [
+            -0.9075188580122977,
+            -0.000029072156946566334
+          ]
+        ],
+        [
+          [
+            0.9075188580122983,
+            0.000029072156946568242
+          ],
+          [
+            0.0005916912410015653,
+            0.005102734567050763
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9075188580122979,
+        0.00002907215694656729
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999734731340179,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0.023099487049936036,
+      "differentialLossAccumulation": 0.023099487049936036,
+      "darkSubspacePowerRetention": 0.9979381057006853,
+      "singularValues": [
+        0.9123829039613257,
+        0.90270296153409
+      ],
+      "logSingularValueRatio": 0.010666199746511233,
+      "transferMatrix": [
+        [
+          [
+            -0.009087778494913018,
+            -0.0050266788725521015
+          ],
+          [
+            0.9075188580122977,
+            0.000029072156946566334
+          ]
+        ],
+        [
+          [
+            -0.9075188580122983,
+            -0.000029072156946568242
+          ],
+          [
+            0.0005916912410015653,
+            0.005102734567050763
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9075188580122979,
+        -0.00002907215694656729
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999734731340179,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0.048,
+      "differentialLossAccumulation": 0.048,
+      "darkSubspacePowerRetention": 0.9979352957434333,
+      "singularValues": [
+        0.9178907632480352,
+        0.897290291939912
+      ],
+      "logSingularValueRatio": 0.02269895420244286,
+      "transferMatrix": [
+        [
+          [
+            -0.014553200439884189,
+            -0.01034610665774284
+          ],
+          [
+            -0.9075195184593423,
+            -0.00012414978114343446
+          ]
+        ],
+        [
+          [
+            0.9075195184593415,
+            0.00012414978114341606
+          ],
+          [
+            0.006042657817972773,
+            0.010704503279620543
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9075195184593419,
+        0.00012414978114342527
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999217701809878,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0.048,
+      "differentialLossAccumulation": 0.048,
+      "darkSubspacePowerRetention": 0.9979352957434333,
+      "singularValues": [
+        0.9178907632480352,
+        0.897290291939912
+      ],
+      "logSingularValueRatio": 0.02269895420244286,
+      "transferMatrix": [
+        [
+          [
+            -0.014553200439884189,
+            -0.01034610665774284
+          ],
+          [
+            0.9075195184593423,
+            0.00012414978114343446
+          ]
+        ],
+        [
+          [
+            -0.9075195184593415,
+            -0.00012414978114341606
+          ],
+          [
+            0.006042657817972773,
+            0.010704503279620543
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9075195184593419,
+        -0.00012414978114342527
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999217701809878,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0.096,
+      "differentialLossAccumulation": 0.096,
+      "darkSubspacePowerRetention": 0.9979301470332632,
+      "singularValues": [
+        0.9286062032704855,
+        0.8869439328370652
+      ],
+      "logSingularValueRatio": 0.04590298537064525,
+      "transferMatrix": [
+        [
+          [
+            -0.025081327131317742,
+            -0.02031422433289315
+          ],
+          [
+            -0.907520728229968,
+            -0.0004940374119611651
+          ]
+        ],
+        [
+          [
+            0.9075207282299685,
+            0.0004940374119611755
+          ],
+          [
+            0.016542595617590947,
+            0.021803442805940435
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.9075207282299682,
+        0.0004940374119611703
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9997199687892168,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 96,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.04329100459409418,
+      "relativeSplittingAccumulation": 0.096,
+      "differentialLossAccumulation": 0.096,
+      "darkSubspacePowerRetention": 0.9979301470332632,
+      "singularValues": [
+        0.9286062032704855,
+        0.8869439328370652
+      ],
+      "logSingularValueRatio": 0.04590298537064525,
+      "transferMatrix": [
+        [
+          [
+            -0.025081327131317742,
+            -0.02031422433289315
+          ],
+          [
+            0.907520728229968,
+            0.0004940374119611651
+          ]
+        ],
+        [
+          [
+            -0.9075207282299685,
+            -0.0004940374119611755
+          ],
+          [
+            0.016542595617590947,
+            0.021803442805940435
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.9075207282299682,
+        -0.0004940374119611703
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9997199687892168,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9991877720934055,
+      "singularValues": [
+        0.8658609567188305,
+        0.8652109763067783
+      ],
+      "logSingularValueRatio": 0.0007509571730640778,
+      "transferMatrix": [
+        [
+          [
+            -0.0016994204267002902,
+            0
+          ],
+          [
+            -0.8655348752469907,
+            0
+          ]
+        ],
+        [
+          [
+            0.8655348752469896,
+            0
+          ],
+          [
+            -0.0010494400147944706,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8655348752469901,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999987392022325,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9991877720934055,
+      "singularValues": [
+        0.8658609567188305,
+        0.8652109763067783
+      ],
+      "logSingularValueRatio": 0.0007509571730640778,
+      "transferMatrix": [
+        [
+          [
+            -0.0016994204267002902,
+            0
+          ],
+          [
+            0.8655348752469907,
+            0
+          ]
+        ],
+        [
+          [
+            -0.8655348752469896,
+            0
+          ],
+          [
+            -0.0010494400147944706,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8655348752469901,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999987392022325,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0.014400000000000001,
+      "differentialLossAccumulation": 0.014400000000000001,
+      "darkSubspacePowerRetention": 0.9991903940731581,
+      "singularValues": [
+        0.8688861751201427,
+        0.862195189223093
+      ],
+      "logSingularValueRatio": 0.007730450290634027,
+      "transferMatrix": [
+        [
+          [
+            -0.0047217855209284385,
+            -0.003005765488459724
+          ],
+          [
+            -0.8655343174127614,
+            -0.000010016779055482421
+          ]
+        ],
+        [
+          [
+            0.8655343174127551,
+            0.000010016779055479302
+          ],
+          [
+            0.0019691061286801013,
+            0.0030352811604113512
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8655343174127583,
+        0.000010016779055480863
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999926465606657,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0.014400000000000001,
+      "differentialLossAccumulation": 0.014400000000000001,
+      "darkSubspacePowerRetention": 0.9991903940731581,
+      "singularValues": [
+        0.8688861751201427,
+        0.862195189223093
+      ],
+      "logSingularValueRatio": 0.007730450290634027,
+      "transferMatrix": [
+        [
+          [
+            -0.0047217855209284385,
+            -0.003005765488459724
+          ],
+          [
+            0.8655343174127614,
+            0.000010016779055482421
+          ]
+        ],
+        [
+          [
+            -0.8655343174127551,
+            -0.000010016779055479302
+          ],
+          [
+            0.0019691061286801013,
+            0.0030352811604113512
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8655343174127583,
+        -0.000010016779055480863
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999926465606657,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0.03464923057490406,
+      "differentialLossAccumulation": 0.03464923057490406,
+      "darkSubspacePowerRetention": 0.9991940881108516,
+      "singularValues": [
+        0.8731583119344994,
+        0.8579719843868241
+      ],
+      "logSingularValueRatio": 0.017545435096101954,
+      "transferMatrix": [
+        [
+          [
+            -0.008971400170960514,
+            -0.007176473428542707
+          ],
+          [
+            -0.865533531788907,
+            -0.00005988238754173406
+          ]
+        ],
+        [
+          [
+            0.8655335317889054,
+            0.00005988238754174134
+          ],
+          [
+            0.006213344782924835,
+            0.007360283549173649
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8655335317889061,
+        0.0000598823875417377
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999634755392753,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0.03464923057490406,
+      "differentialLossAccumulation": 0.03464923057490406,
+      "darkSubspacePowerRetention": 0.9991940881108516,
+      "singularValues": [
+        0.8731583119344994,
+        0.8579719843868241
+      ],
+      "logSingularValueRatio": 0.017545435096101954,
+      "transferMatrix": [
+        [
+          [
+            -0.008971400170960514,
+            -0.007176473428542707
+          ],
+          [
+            0.865533531788907,
+            0.00005988238754173406
+          ]
+        ],
+        [
+          [
+            -0.8655335317889054,
+            -0.00005988238754174134
+          ],
+          [
+            0.006213344782924835,
+            0.007360283549173649
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8655335317889061,
+        -0.0000598823875417377
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999634755392753,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0.07200000000000001,
+      "differentialLossAccumulation": 0.07200000000000001,
+      "darkSubspacePowerRetention": 0.9992009130771929,
+      "singularValues": [
+        0.8810954006275392,
+        0.8502345946822927
+      ],
+      "logSingularValueRatio": 0.035653601675519495,
+      "transferMatrix": [
+        [
+          [
+            -0.01680685321887666,
+            -0.01469980754587166
+          ],
+          [
+            -0.8655320634914023,
+            -0.0002615764351589874
+          ]
+        ],
+        [
+          [
+            0.8655320634914034,
+            0.0002615764351590157
+          ],
+          [
+            0.014038777006298828,
+            0.015514070287728962
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8655320634914029,
+        0.00026157643515900157
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998464826026653,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0.07200000000000001,
+      "differentialLossAccumulation": 0.07200000000000001,
+      "darkSubspacePowerRetention": 0.9992009130771929,
+      "singularValues": [
+        0.8810954006275392,
+        0.8502345946822927
+      ],
+      "logSingularValueRatio": 0.035653601675519495,
+      "transferMatrix": [
+        [
+          [
+            -0.01680685321887666,
+            -0.01469980754587166
+          ],
+          [
+            0.8655320634914023,
+            0.0002615764351589874
+          ]
+        ],
+        [
+          [
+            -0.8655320634914034,
+            -0.0002615764351590157
+          ],
+          [
+            0.014038777006298828,
+            0.015514070287728962
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8655320634914029,
+        -0.00026157643515900157
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998464826026653,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0.14400000000000002,
+      "differentialLossAccumulation": 0.14400000000000002,
+      "darkSubspacePowerRetention": 0.9992140417437093,
+      "singularValues": [
+        0.8966136048811654,
+        0.8355028333536638
+      ],
+      "logSingularValueRatio": 0.07059126622735332,
+      "transferMatrix": [
+        [
+          [
+            -0.031887322186496175,
+            -0.028593764429130815
+          ],
+          [
+            -0.8655289442916625,
+            -0.0010518895520249625
+          ]
+        ],
+        [
+          [
+            0.8655289442916655,
+            0.0010518895520250022
+          ],
+          [
+            0.029098275485856476,
+            0.03188897813900325
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.865528944291664,
+        0.0010518895520249824
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9993896072732734,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 144,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.02886066972939612,
+      "relativeSplittingAccumulation": 0.14400000000000002,
+      "differentialLossAccumulation": 0.14400000000000002,
+      "darkSubspacePowerRetention": 0.9992140417437093,
+      "singularValues": [
+        0.8966136048811654,
+        0.8355028333536638
+      ],
+      "logSingularValueRatio": 0.07059126622735332,
+      "transferMatrix": [
+        [
+          [
+            -0.031887322186496175,
+            -0.028593764429130815
+          ],
+          [
+            0.8655289442916625,
+            0.0010518895520249625
+          ]
+        ],
+        [
+          [
+            -0.8655289442916655,
+            -0.0010518895520250022
+          ],
+          [
+            0.029098275485856476,
+            0.03188897813900325
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.865528944291664,
+        -0.0010518895520249824
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9993896072732734,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9995884781008204,
+      "singularValues": [
+        0.8121644286929813,
+        0.8119153502511267
+      ],
+      "logSingularValueRatio": 0.0003067317837913655,
+      "transferMatrix": [
+        [
+          [
+            -0.00076402765086898,
+            0
+          ],
+          [
+            -0.8120396376706803,
+            0
+          ]
+        ],
+        [
+          [
+            0.8120396376706852,
+            0
+          ],
+          [
+            -0.0005149492090470225,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8120396376706828,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999996899150221,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9995884781008204,
+      "singularValues": [
+        0.8121644286929813,
+        0.8119153502511267
+      ],
+      "logSingularValueRatio": 0.0003067317837913655,
+      "transferMatrix": [
+        [
+          [
+            -0.00076402765086898,
+            0
+          ],
+          [
+            0.8120396376706803,
+            0
+          ]
+        ],
+        [
+          [
+            -0.8120396376706852,
+            0
+          ],
+          [
+            -0.0005149492090470225,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8120396376706828,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999996899150221,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0.020800000000000003,
+      "differentialLossAccumulation": 0.020800000000000003,
+      "darkSubspacePowerRetention": 0.9995900277483574,
+      "singularValues": [
+        0.8162736561817199,
+        0.8078261993814604
+      ],
+      "logSingularValueRatio": 0.010402726101909886,
+      "transferMatrix": [
+        [
+          [
+            -0.004864250561828787,
+            -0.004067723430104053
+          ],
+          [
+            -0.8120393285224153,
+            -0.000020413956135510656
+          ]
+        ],
+        [
+          [
+            0.8120393285224194,
+            0.000020413956135506038
+          ],
+          [
+            0.00358287280136668,
+            0.004130730043048862
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8120393285224174,
+        0.00002041395613550835
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999869478437031,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0.020800000000000003,
+      "differentialLossAccumulation": 0.020800000000000003,
+      "darkSubspacePowerRetention": 0.9995900277483574,
+      "singularValues": [
+        0.8162736561817199,
+        0.8078261993814604
+      ],
+      "logSingularValueRatio": 0.010402726101909886,
+      "transferMatrix": [
+        [
+          [
+            -0.004864250561828787,
+            -0.004067723430104053
+          ],
+          [
+            0.8120393285224153,
+            0.000020413956135510656
+          ]
+        ],
+        [
+          [
+            -0.8120393285224194,
+            -0.000020413956135506038
+          ],
+          [
+            0.00358287280136668,
+            0.004130730043048862
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8120393285224174,
+        -0.00002041395613550835
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999869478437031,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0.05004888860819475,
+      "differentialLossAccumulation": 0.05004888860819475,
+      "darkSubspacePowerRetention": 0.9995922211187921,
+      "singularValues": [
+        0.8220878925205352,
+        0.8021102276525056
+      ],
+      "logSingularValueRatio": 0.024601275161956374,
+      "transferMatrix": [
+        [
+          [
+            -0.010628770056861582,
+            -0.009678279478134912
+          ],
+          [
+            -0.812038889270708,
+            -0.00011923798833416902
+          ]
+        ],
+        [
+          [
+            0.8120388892707073,
+            0.00011923798833411928
+          ],
+          [
+            0.009343990818067449,
+            0.010051194516956422
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8120388892707077,
+        0.00011923798833414415
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999259178289339,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0.05004888860819475,
+      "differentialLossAccumulation": 0.05004888860819475,
+      "darkSubspacePowerRetention": 0.9995922211187921,
+      "singularValues": [
+        0.8220878925205352,
+        0.8021102276525056
+      ],
+      "logSingularValueRatio": 0.024601275161956374,
+      "transferMatrix": [
+        [
+          [
+            -0.010628770056861582,
+            -0.009678279478134912
+          ],
+          [
+            0.812038889270708,
+            0.00011923798833416902
+          ]
+        ],
+        [
+          [
+            -0.8120388892707073,
+            -0.00011923798833411928
+          ],
+          [
+            0.009343990818067449,
+            0.010051194516956422
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8120388892707077,
+        -0.00011923798833414415
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999259178289339,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0.10400000000000001,
+      "differentialLossAccumulation": 0.10400000000000001,
+      "darkSubspacePowerRetention": 0.9995962970972024,
+      "singularValues": [
+        0.8329266665055763,
+        0.791667732262584
+      ],
+      "logSingularValueRatio": 0.050803829068405686,
+      "transferMatrix": [
+        [
+          [
+            -0.021252771564198726,
+            -0.019697052826516934
+          ],
+          [
+            -0.8120380034669623,
+            -0.0005165303628748157
+          ]
+        ],
+        [
+          [
+            0.8120380034669611,
+            0.0005165303628748263
+          ],
+          [
+            0.019961277881137916,
+            0.0213202139193086
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.8120380034669616,
+        0.000516530362874821
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9996811122369011,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0.10400000000000001,
+      "differentialLossAccumulation": 0.10400000000000001,
+      "darkSubspacePowerRetention": 0.9995962970972024,
+      "singularValues": [
+        0.8329266665055763,
+        0.791667732262584
+      ],
+      "logSingularValueRatio": 0.050803829068405686,
+      "transferMatrix": [
+        [
+          [
+            -0.021252771564198726,
+            -0.019697052826516934
+          ],
+          [
+            0.8120380034669623,
+            0.0005165303628748157
+          ]
+        ],
+        [
+          [
+            -0.8120380034669611,
+            -0.0005165303628748263
+          ],
+          [
+            0.019961277881137916,
+            0.0213202139193086
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.8120380034669616,
+        -0.000516530362874821
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9996811122369011,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0.20800000000000002,
+      "differentialLossAccumulation": 0.20800000000000002,
+      "darkSubspacePowerRetention": 0.999604176040109,
+      "singularValues": [
+        0.854266408868953,
+        0.7718828543954565
+      ],
+      "logSingularValueRatio": 0.10141030382050994,
+      "transferMatrix": [
+        [
+          [
+            -0.041666192057347305,
+            -0.03783749226187068
+          ],
+          [
+            -0.8120351360368938,
+            -0.002069219034446277
+          ]
+        ],
+        [
+          [
+            0.8120351360368963,
+            0.002069219034446346
+          ],
+          [
+            0.04035488760630553,
+            0.04435410065425682
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.812035136036895,
+        0.002069219034446312
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9987247674707614,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 208,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.019980463658812696,
+      "relativeSplittingAccumulation": 0.20800000000000002,
+      "differentialLossAccumulation": 0.20800000000000002,
+      "darkSubspacePowerRetention": 0.999604176040109,
+      "singularValues": [
+        0.854266408868953,
+        0.7718828543954565
+      ],
+      "logSingularValueRatio": 0.10141030382050994,
+      "transferMatrix": [
+        [
+          [
+            -0.041666192057347305,
+            -0.03783749226187068
+          ],
+          [
+            0.8120351360368938,
+            0.002069219034446277
+          ]
+        ],
+        [
+          [
+            -0.8120351360368963,
+            -0.002069219034446346
+          ],
+          [
+            0.04035488760630553,
+            0.04435410065425682
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.812035136036895,
+        -0.002069219034446312
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9987247674707614,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9996885616984099,
+      "singularValues": [
+        0.7865398286824793,
+        0.7864708868144021
+      ],
+      "logSingularValueRatio": 0.00008765594212679429,
+      "transferMatrix": [
+        [
+          [
+            -0.000555833461878057,
+            0
+          ],
+          [
+            -0.7865051849467485,
+            0
+          ]
+        ],
+        [
+          [
+            0.7865051849467463,
+            0
+          ],
+          [
+            -0.0004868915938405073,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.7865051849467474,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999997802917786,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9996885616984099,
+      "singularValues": [
+        0.7865398286824793,
+        0.7864708868144021
+      ],
+      "logSingularValueRatio": 0.00008765594212679429,
+      "transferMatrix": [
+        [
+          [
+            -0.000555833461878057,
+            0
+          ],
+          [
+            0.7865051849467485,
+            0
+          ]
+        ],
+        [
+          [
+            -0.7865051849467463,
+            0
+          ],
+          [
+            -0.0004868915938405073,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.7865051849467474,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999997802917786,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.024,
+      "differentialLossAccumulation": 0.024,
+      "darkSubspacePowerRetention": 0.999689076397661,
+      "singularValues": [
+        0.7911356724600479,
+        0.7819015473469145
+      ],
+      "logSingularValueRatio": 0.011740639150733777,
+      "transferMatrix": [
+        [
+          [
+            -0.005139167711743699,
+            -0.00454144679800114
+          ],
+          [
+            -0.7865050859885424,
+            -0.000026630369755829424
+          ]
+        ],
+        [
+          [
+            0.7865050859885394,
+            0.000026630369755841302
+          ],
+          [
+            0.0040944363155798165,
+            0.004623829553864567
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.786505085988541,
+        0.000026630369755835363
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999828059197461,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.024,
+      "differentialLossAccumulation": 0.024,
+      "darkSubspacePowerRetention": 0.999689076397661,
+      "singularValues": [
+        0.7911356724600479,
+        0.7819015473469145
+      ],
+      "logSingularValueRatio": 0.011740639150733777,
+      "transferMatrix": [
+        [
+          [
+            -0.005139167711743699,
+            -0.00454144679800114
+          ],
+          [
+            0.7865050859885424,
+            0.000026630369755829424
+          ]
+        ],
+        [
+          [
+            -0.7865050859885394,
+            -0.000026630369755841302
+          ],
+          [
+            0.0040944363155798165,
+            0.004623829553864567
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.786505085988541,
+        -0.000026630369755835363
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999828059197461,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.057748717624840094,
+      "differentialLossAccumulation": 0.057748717624840094,
+      "darkSubspacePowerRetention": 0.9996898163082955,
+      "singularValues": [
+        0.7976448107453724,
+        0.7755200525647344
+      ],
+      "logSingularValueRatio": 0.02812955917007977,
+      "transferMatrix": [
+        [
+          [
+            -0.011582453312800722,
+            -0.010786631681314543
+          ],
+          [
+            -0.7865049391681447,
+            -0.0001545181416330664
+          ]
+        ],
+        [
+          [
+            0.7865049391681462,
+            0.0001545181416330599
+          ],
+          [
+            0.010534856602268354,
+            0.011270393255736307
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.7865049391681455,
+        0.00015451814163306316
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.999901501348953,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.057748717624840094,
+      "differentialLossAccumulation": 0.057748717624840094,
+      "darkSubspacePowerRetention": 0.9996898163082955,
+      "singularValues": [
+        0.7976448107453724,
+        0.7755200525647344
+      ],
+      "logSingularValueRatio": 0.02812955917007977,
+      "transferMatrix": [
+        [
+          [
+            -0.011582453312800722,
+            -0.010786631681314543
+          ],
+          [
+            0.7865049391681447,
+            0.0001545181416330664
+          ]
+        ],
+        [
+          [
+            -0.7865049391681462,
+            -0.0001545181416330599
+          ],
+          [
+            0.010534856602268354,
+            0.011270393255736307
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.7865049391681455,
+        -0.00015451814163306316
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.999901501348953,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.12,
+      "differentialLossAccumulation": 0.12,
+      "darkSubspacePowerRetention": 0.9996912203594421,
+      "singularValues": [
+        0.8098000137834345,
+        0.7638778924823153
+      ],
+      "logSingularValueRatio": 0.05837937081978769,
+      "transferMatrix": [
+        [
+          [
+            -0.023454147305283266,
+            -0.021882028409423014
+          ],
+          [
+            -0.7865045393885766,
+            -0.00066773504203547
+          ]
+        ],
+        [
+          [
+            0.7865045393885788,
+            0.0006677350420355575
+          ],
+          [
+            0.022400505434303126,
+            0.02398168910196038
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.7865045393885777,
+        0.0006677350420355138
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9995753511025396,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.12,
+      "differentialLossAccumulation": 0.12,
+      "darkSubspacePowerRetention": 0.9996912203594421,
+      "singularValues": [
+        0.8098000137834345,
+        0.7638778924823153
+      ],
+      "logSingularValueRatio": 0.05837937081978769,
+      "transferMatrix": [
+        [
+          [
+            -0.023454147305283266,
+            -0.021882028409423014
+          ],
+          [
+            0.7865045393885766,
+            0.00066773504203547
+          ]
+        ],
+        [
+          [
+            -0.7865045393885788,
+            -0.0006677350420355575
+          ],
+          [
+            0.022400505434303126,
+            0.02398168910196038
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.7865045393885777,
+        -0.0006677350420355138
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9995753511025396,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.24,
+      "differentialLossAccumulation": 0.24,
+      "darkSubspacePowerRetention": 0.9996940039432501,
+      "singularValues": [
+        0.8338186146613945,
+        0.7418711695784777
+      ],
+      "logSingularValueRatio": 0.11684028810147613,
+      "transferMatrix": [
+        [
+          [
+            -0.046241137524820064,
+            -0.04177142472828273
+          ],
+          [
+            -0.7865017830826065,
+            -0.0026719352485244474
+          ]
+        ],
+        [
+          [
+            0.7865017830826111,
+            0.002671935248524442
+          ],
+          [
+            0.04516401619128793,
+            0.05019007138316983
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.7865017830826089,
+        0.002671935248524445
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.998300972105961,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 240,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.01731640183763767,
+      "relativeSplittingAccumulation": 0.24,
+      "differentialLossAccumulation": 0.24,
+      "darkSubspacePowerRetention": 0.9996940039432501,
+      "singularValues": [
+        0.8338186146613945,
+        0.7418711695784777
+      ],
+      "logSingularValueRatio": 0.11684028810147613,
+      "transferMatrix": [
+        [
+          [
+            -0.046241137524820064,
+            -0.04177142472828273
+          ],
+          [
+            0.7865017830826065,
+            0.0026719352485244474
+          ]
+        ],
+        [
+          [
+            -0.7865017830826111,
+            -0.002671935248524442
+          ],
+          [
+            0.04516401619128793,
+            0.05019007138316983
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.7865017830826089,
+        -0.002671935248524445
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.998300972105961,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9998140147704266,
+      "singularValues": [
+        0.7407498347661117,
+        0.7407488189410166
+      ],
+      "logSingularValueRatio": 0.0000013713479825647616,
+      "transferMatrix": [
+        [
+          [
+            -0.00033501354639220134,
+            0
+          ],
+          [
+            -0.7407492513259737,
+            0
+          ]
+        ],
+        [
+          [
+            0.7407492513259769,
+            0
+          ],
+          [
+            -0.0003339977106172618,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.7407492513259752,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.999999898038937,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0,
+      "gammaRatio": 0,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0,
+      "differentialLossAccumulation": 0,
+      "darkSubspacePowerRetention": 0.9998140147704266,
+      "singularValues": [
+        0.7407498347661117,
+        0.7407488189410166
+      ],
+      "logSingularValueRatio": 0.0000013713479825647616,
+      "transferMatrix": [
+        [
+          [
+            -0.00033501354639220134,
+            0
+          ],
+          [
+            0.7407492513259737,
+            0
+          ]
+        ],
+        [
+          [
+            -0.7407492513259769,
+            0
+          ],
+          [
+            -0.0003339977106172618,
+            0
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.7407492513259752,
+        0
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.999999898038937,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0.03,
+      "differentialLossAccumulation": 0.03,
+      "darkSubspacePowerRetention": 0.9998140272662401,
+      "singularValues": [
+        0.7461663148447997,
+        0.7353716546425978
+      ],
+      "logSingularValueRatio": 0.014572493518442524,
+      "transferMatrix": [
+        [
+          [
+            -0.005732131864813922,
+            -0.005335559083855664
+          ],
+          [
+            -0.7407492489349721,
+            -0.000039343515966978
+          ]
+        ],
+        [
+          [
+            0.7407492489349766,
+            0.00003934351596696647
+          ],
+          [
+            0.005061544338983089,
+            0.005458242577133178
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.7407492489349743,
+        0.00003934351596697224
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999733590845432,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0.0001,
+      "gammaRatio": 0.0001,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0.03,
+      "differentialLossAccumulation": 0.03,
+      "darkSubspacePowerRetention": 0.9998140272662401,
+      "singularValues": [
+        0.7461663148447997,
+        0.7353716546425978
+      ],
+      "logSingularValueRatio": 0.014572493518442524,
+      "transferMatrix": [
+        [
+          [
+            -0.005732131864813922,
+            -0.005335559083855664
+          ],
+          [
+            0.7407492489349721,
+            0.000039343515966978
+          ]
+        ],
+        [
+          [
+            -0.7407492489349766,
+            -0.00003934351596696647
+          ],
+          [
+            0.005061544338983089,
+            0.005458242577133178
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.7407492489349743,
+        -0.00003934351596697224
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9999733590845432,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0.07218589703105012,
+      "differentialLossAccumulation": 0.07218589703105012,
+      "darkSubspacePowerRetention": 0.9998140518176555,
+      "singularValues": [
+        0.7538519258287144,
+        0.7278744380062113
+      ],
+      "logSingularValueRatio": 0.035067405824450386,
+      "transferMatrix": [
+        [
+          [
+            -0.013318269079836367,
+            -0.012631490326988204
+          ],
+          [
+            -0.7407492281706474,
+            -0.00022779670332831592
+          ]
+        ],
+        [
+          [
+            0.7407492281706474,
+            0.00022779670332836468
+          ],
+          [
+            0.012645362761829888,
+            0.01334712277914643
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.7407492281706474,
+        0.00022779670332834028
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998462351438903,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0.00024061965677016708,
+      "gammaRatio": 0.00024061965677016708,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0.07218589703105012,
+      "differentialLossAccumulation": 0.07218589703105012,
+      "darkSubspacePowerRetention": 0.9998140518176555,
+      "singularValues": [
+        0.7538519258287144,
+        0.7278744380062113
+      ],
+      "logSingularValueRatio": 0.035067405824450386,
+      "transferMatrix": [
+        [
+          [
+            -0.013318269079836367,
+            -0.012631490326988204
+          ],
+          [
+            0.7407492281706474,
+            0.00022779670332831592
+          ]
+        ],
+        [
+          [
+            -0.7407492281706474,
+            -0.00022779670332836468
+          ],
+          [
+            0.012645362761829888,
+            0.01334712277914643
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.7407492281706474,
+        -0.00022779670332834028
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9998462351438903,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0.15,
+      "differentialLossAccumulation": 0.15,
+      "darkSubspacePowerRetention": 0.9998141093432716,
+      "singularValues": [
+        0.7682515337659906,
+        0.7142316065575202
+      ],
+      "logSingularValueRatio": 0.07290990877763753,
+      "transferMatrix": [
+        [
+          [
+            -0.02728701850687848,
+            -0.0254696999378127
+          ],
+          [
+            -0.7407488949664992,
+            -0.0009836263485851083
+          ]
+        ],
+        [
+          [
+            0.7407488949664998,
+            0.0009836263485850766
+          ],
+          [
+            0.026608078767543543,
+            0.028568238660257317
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.7407488949664995,
+        0.0009836263485850925
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9993362189251072,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0.0005,
+      "gammaRatio": 0.0005,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0.15,
+      "differentialLossAccumulation": 0.15,
+      "darkSubspacePowerRetention": 0.9998141093432716,
+      "singularValues": [
+        0.7682515337659906,
+        0.7142316065575202
+      ],
+      "logSingularValueRatio": 0.07290990877763753,
+      "transferMatrix": [
+        [
+          [
+            -0.02728701850687848,
+            -0.0254696999378127
+          ],
+          [
+            0.7407488949664992,
+            0.0009836263485851083
+          ]
+        ],
+        [
+          [
+            -0.7407488949664998,
+            -0.0009836263485850766
+          ],
+          [
+            0.026608078767543543,
+            0.028568238660257317
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.7407488949664995,
+        -0.0009836263485850925
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9993362189251072,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": 1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0.3,
+      "differentialLossAccumulation": 0.3,
+      "darkSubspacePowerRetention": 0.9998142069295342,
+      "singularValues": [
+        0.7969064075289868,
+        0.6885494772462087
+      ],
+      "logSingularValueRatio": 0.14615006297659744,
+      "transferMatrix": [
+        [
+          [
+            -0.0540368937492457,
+            -0.04804858357649987
+          ],
+          [
+            -0.7407436982382908,
+            -0.003934530922421712
+          ]
+        ],
+        [
+          [
+            0.7407436982382923,
+            0.0039345309224213835
+          ],
+          [
+            0.05331905059909021,
+            0.060458394980170096
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        0.7407436982382916,
+        0.0039345309224215474
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9973425061965273,
+      "phaseBlindSignDegeneracy": true
+    },
+    {
+      "orientation": -1,
+      "couplingLengthProduct": 300,
+      "deltaRatio": 0.001,
+      "gammaRatio": 0.001,
+      "adiabaticEstimate": 0.013853121470110136,
+      "relativeSplittingAccumulation": 0.3,
+      "differentialLossAccumulation": 0.3,
+      "darkSubspacePowerRetention": 0.9998142069295342,
+      "singularValues": [
+        0.7969064075289868,
+        0.6885494772462087
+      ],
+      "logSingularValueRatio": 0.14615006297659744,
+      "transferMatrix": [
+        [
+          [
+            -0.0540368937492457,
+            -0.04804858357649987
+          ],
+          [
+            0.7407436982382908,
+            0.003934530922421712
+          ]
+        ],
+        [
+          [
+            -0.7407436982382923,
+            -0.0039345309224213835
+          ],
+          [
+            0.05331905059909021,
+            0.060458394980170096
+          ]
+        ]
+      ],
+      "orientedAntisymmetricAmplitude": [
+        -0.7407436982382916,
+        -0.0039345309224215474
+      ],
+      "phaseBlindProjectiveQuarterTurnFidelity": 0.9973425061965273,
+      "phaseBlindSignDegeneracy": true
+    }
+  ],
+  "fabricationPathGate": {
+    "verdict": "signed-coupling-schedule-not-yet-fabrication-native",
+    "reason": "The exact constant-latitude quarter-turn schedule crosses negative components of kappa, whereas ordinary passive gap-controlled evanescent couplings are nonnegative. The published SO(2) work treats theta=pi/2 as a limiting or separate braiding construction rather than a generic finite fixed-coupling loop.",
+    "reopenRoutes": [
+      "supply independently calibrated pi phase sections or auxiliary paths that realize signed effective couplings",
+      "cascade two separately returned SO(2) modules whose calibrated angles sum to pi/2",
+      "replace the exact latitude by a full-wave-verified positive-octant/braiding path and recompute the robustness budget"
+    ]
+  },
+  "twoModuleAlternative": {
+    "target": "two independently calibrated pi/4 holonomy modules with reversed copies",
+    "publishedStatus": "architecture-supported but not reported as the complete AZ-027 tuple",
+    "retainedPowerIfEachModuleRetains095": 0.9025,
+    "caution": "Published matrix fidelity and approximately 95% dark power do not identify delta/kappa0 or differential gamma/kappa0 and therefore do not certify the analytic budget."
+  },
+  "selectorCompatibility": {
+    "verdict": "separate-stage-required",
+    "reason": "A passive anisotropic selector strong enough to contract a dark-state projective coordinate is itself differential loss or splitting; leaving it active during the holonomy stage spends the same nu/delta budget used to certify geometry.",
+    "admissibleArchitecture": "calibrate Y independently; switch or spatially separate it from the holonomy loop; perform measurement-conditioned reinjection or a separately modelled dissipative cascade; report Y-off and Y-on records independently",
+    "forbiddenShortcut": "do not interpret unreported passive filtering inside the holonomy guide as independent two-datum selection"
+  },
+  "admission": {
+    "coupledModePassRequires": [
+      "adiabaticEstimate <= 0.02",
+      "delta*kappa0*L <= 0.05",
+      "gamma*kappa0*L <= 0.05",
+      "reversal flips the reference-anchored oriented amplitude",
+      "dark-subspace retention and full complex transfer are reported"
+    ],
+    "physicalPassRequires": [
+      "measured kappa(z)",
+      "measured residual dark-doublet propagation-constant split",
+      "measured differential dark-mode attenuation",
+      "full-wave verification",
+      "fabrication-tolerance ensemble",
+      "complex 2x2 process tomography against an external phase reference",
+      "independently calibrated selector stage"
+    ]
+  }
+}

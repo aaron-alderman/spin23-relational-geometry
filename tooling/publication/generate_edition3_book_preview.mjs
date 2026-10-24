@@ -269,6 +269,7 @@ const sectionTaxonomy = {
   "Hot off the press — the Casimir bridge has a frequency window": "experiment",
   "Hot off the press — the four-mode bench is ready to build": "experiment",
   "Hot off the press — the Lean fold now has a finite provenance gate": "governance",
+  "Hot off the press — the selector chip has a design wedge": "experiment",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -344,6 +345,7 @@ const sectionArchetype = {
   "Hot off the press — the Casimir bridge has a frequency window": "builder",
   "Hot off the press — the four-mode bench is ready to build": "builder",
   "Hot off the press — the Lean fold now has a finite provenance gate": "auditor",
+  "Hot off the press — the selector chip has a design wedge": "builder",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -553,6 +555,15 @@ admissibilitySections.splice(orientedSeamIndex + 13, 0, [
     "**Provisional integration note — 25 October 2026.** The public images behind the reported Monster-address census name the missing implementation artifacts: three `RequestProject/Ogg/DeclFold*.lean` files, the generated `fold/decls.json`, the `fold_certify` command and the worked declaration `HeckeFold.card_address`. This turns a vague request for “the code” into a finite reproduction bundle.",
     "The bundle has not been located in the audited public surfaces. None of the named paths occurs across 49 public branch tips of the related repository or the author’s 134 public gists. The posted totals—1,979 declarations, 908 addresses, 789 unclamped folds and 13 certificates—therefore remain reported counts. The existing synthetic adaptive-depth result proves something useful about its 32,766 generated chains, but it is not a substitute for the missing source-native environment.",
     "The reason is practical. A little difference in imported root module, declaration selection, metadata removal, DAG sharing, reduction policy or transparency can change which cells are occupied and which declarations collide. The next useful act is not to imitate the infographic. It is to obtain the named files, data and pinned Lean/Lake environment, regenerate the census from a clean checkout, compile the 13 certificates with their axiom dependencies, and then measure which distinctions the fold retains or loses. Only after that does the proposed Hecke reading face its own separate operator-law test.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 14, 0, [
+  "Hot off the press — the selector chip has a design wedge",
+  [
+    "**Provisional integration note — 25 October 2026.** The integrated-photonic carrier now has a finite coupled-mode design window. The strict two-percent adiabatic budget requires coupling–length product at least 207.7968; an illustrative 20 per millimetre, 12 mm schedule passes the adiabatic, accumulated splitting, accumulated differential-loss, dark-retention and nonunitarity tests when the unmeasured residual ratios are each assumed to be one part in ten thousand. Those assumptions are design targets, not properties inferred from published matrix fidelity or insertion loss.",
+    "The almost-same device is not yet the same experiment. The exact latitude schedule uses signed effective couplings, whereas passive gap-controlled evanescent couplings are ordinarily nonnegative. A fabrication-native route must therefore add calibrated phase sections, cascade returned half-angle modules, or replace the latitude by a positive-octant or braiding path and rerun the full-wave tolerance calculation. Reversal also needs an external phase reference: within an isolated two-dimensional dark space the two quarter-turn senses differ by a central sign that phase-blind process fidelity quotients away.",
+    "Selection must remain a separate intervention. A passive anisotropic section strong enough to attract one dark direction is itself splitting or differential loss, so leaving it active during the holonomy stage can counterfeit choice by ordinary mode filtering. The next useful build has a neutral holonomy stage, reference port, independently calibrated and switchable Y stage, and Y-off/Y-on multi-input tomography. Passing would be theoretical engineering; new physics would still require a source-native reason for nature to choose that carrier and selector.",
   ],
 ]);
 
@@ -795,6 +806,7 @@ const sectionEvidenceOverrides = {
   "The corrected octonionic two-branch model": ["1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md"],
   "Where the exceptional programme actually stands": ["40_grand_synthesis_spin23_pole.md", "1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md", "1455_the_corrected_octonionic_two_branch_flow_has_an_exact_cp_lindblad_completion_and_a_three_coordinate_lorentz_cone_but_not_full_spin23.md"],
   "Hot off the press — the Lean fold now has a finite provenance gate": ["corpus/programmes/admissibility/admissibility_60_monster_lean_fold_provenance_and_reproduction_gate.md", "corpus/programmes/frontier/wave-7/frontier_wave7_30_kernel_closure_and_expression_tree_reachability_sieve.md", "corpus/programmes/frontier/wave-7/frontier_wave7_35_adaptive_depth_census_and_detector_cost_curve.md"],
+  "Hot off the press — the selector chip has a design wedge": ["corpus/programmes/admissibility/admissibility_61_photonic_selector_chip_coupled_mode_preflight.md", "corpus/programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md", "corpus/programmes/admissibility/admissibility_28_platform_triage_for_the_quarter_turn_contraction_experiment.md"],
 };
 
 const evidenceReading = key => ({

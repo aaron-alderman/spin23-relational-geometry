@@ -42,4 +42,4 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-2.md) · [Next claim →](08-admissibility-frontier-kenotic-confidence-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-1.md)

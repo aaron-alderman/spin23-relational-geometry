@@ -331,6 +331,25 @@ The reason is practical. A little difference in imported root module, declaratio
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-3.md)
 
+<a id="hot-off-the-press-the-selector-chip-has-a-design-wedge"></a>
+## Hot off the press — the selector chip has a design wedge
+
+> **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** The integrated-photonic carrier now has a finite coupled-mode design window. The strict two-percent adiabatic budget requires coupling–length product at least 207.7968; an illustrative 20 per millimetre, 12 mm schedule passes the adiabatic, accumulated splitting, accumulated differential-loss, dark-retention and nonunitarity tests when the unmeasured residual ratios are each assumed to be one part in ten thousand. Those assumptions are design targets, not properties inferred from published matrix fidelity or insertion loss.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-1.md)
+
+The almost-same device is not yet the same experiment. The exact latitude schedule uses signed effective couplings, whereas passive gap-controlled evanescent couplings are ordinarily nonnegative. A fabrication-native route must therefore add calibrated phase sections, cascade returned half-angle modules, or replace the latitude by a positive-octant or braiding path and rerun the full-wave tolerance calculation. Reversal also needs an external phase reference: within an isolated two-dimensional dark space the two quarter-turn senses differ by a central sign that phase-blind process fidelity quotients away.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-2.md)
+
+Selection must remain a separate intervention. A passive anisotropic section strong enough to attract one dark direction is itself splitting or differential loss, so leaving it active during the holonomy stage can counterfeit choice by ordinary mode filtering. The next useful build has a neutral holonomy stage, reference port, independently calibrated and switchable Y stage, and Y-off/Y-on multi-input tomography. Passing would be theoretical engineering; new physics would still require a source-native reason for nature to choose that carrier and selector.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
