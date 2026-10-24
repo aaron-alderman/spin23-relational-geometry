@@ -26,6 +26,7 @@ const requiredFiles = [
   "period-matrix-jordan-boundary-gate.md",
   "sewing-response-codimension-gate.md",
   "two-quadrature-seam-experiment.md",
+  "two-resonator-transfer-preflight.md",
   "literature-review.md",
   "next-steps.md",
   "mece-ledger-v1.json"
@@ -56,6 +57,8 @@ const requiredEvidence = [
   ,"verification/verify/verify_lattice_subroutine_sewing_response_codimension_gate.mjs"
   ,"evidence/data/lattice-subroutine-two-quadrature-seam-experiment-v1.json"
   ,"verification/verify/verify_lattice_subroutine_two_quadrature_seam_experiment.mjs"
+  ,"evidence/data/lattice-subroutine-two-resonator-transfer-preflight-v1.json"
+  ,"verification/verify/verify_lattice_subroutine_two_resonator_transfer_preflight.mjs"
 ];
 
 for (const file of requiredFiles) {

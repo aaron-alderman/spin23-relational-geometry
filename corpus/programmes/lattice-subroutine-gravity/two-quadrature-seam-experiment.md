@@ -136,6 +136,8 @@ Fit or independently calibrate:
 
 The primary falsifier is a purported odd record reproduced by IQ leakage from the even power channel. Phase scrambling and reference-off runs directly test that failure.
 
+The [two-resonator transfer preflight](two-resonator-transfer-preflight.md) adds a second essential control. Coherent direct feedthrough can manufacture a linear odd term in raw power. Measuring and subtracting the coupling-disabled complex baseline removes that false channel while retaining the calibrated homodyne reference.
+
 ## Interpretation ladder
 
 | Outcome | Meaning |

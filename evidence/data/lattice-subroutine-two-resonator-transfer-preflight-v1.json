@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "A calibrated complex two-resonator transfer measurement separates the genuine orientation-odd seam amplitude from a false odd-power effect caused by coherent direct feedthrough.",
+  "nominalParameters": {
+    "kappa1": 1.0,
+    "kappa2": 1.3,
+    "externalKappa1": 0.8,
+    "externalKappa2": 0.9,
+    "detuning1": 0.07,
+    "detuning2": -0.04,
+    "feedthroughMagnitude": 0.08,
+    "feedthroughPhase": 0.7,
+    "referenceMagnitude": 1.0,
+    "referencePhase": 0.23,
+    "couplingRadii": [0.002, 0.004, 0.008, 0.016, 0.032],
+    "couplingPhases": [0, 1.5707963267948966, 3.141592653589793, 4.71238898038469]
+  },
+  "predictions": [
+    "background-subtracted complex transfer is odd under epsilon reversal",
+    "corrected seam power is even under epsilon reversal",
+    "raw power generally contains a false linear odd term from feedthrough",
+    "homodyne amplitude scales linearly and corrected power quadratically at small coupling"
+  ],
+  "decision": "Fit and validate one complex transfer model across orientations, phases and held-out points before treating any residual as anomalous.",
+  "terminalStatus": "synthetic_preflight_passed_measured_execution_open"
+}

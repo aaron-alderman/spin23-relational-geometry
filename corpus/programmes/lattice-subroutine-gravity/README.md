@@ -191,6 +191,8 @@ The [sewing-response codimension gate](sewing-response-codimension-gate.md) dete
 
 The [two-quadrature seam experiment](two-quadrature-seam-experiment.md) turns that specification into a buildable protocol. A pair of parametrically coupled resonators realizes \(\epsilon=g_x+ig_y\); IQ or homodyne readout compares an odd interference statistic, linear in \(|\epsilon|\), with an even power statistic, quadratic in \(|\epsilon|\). Reference-off, phase-scrambled and coupling-disabled controls distinguish a real coherent carrier from leakage. Success establishes the interface technology, not a Monster/Leech coupling or gravity.
 
+The [two-resonator transfer preflight](two-resonator-transfer-preflight.md) verifies the signal model with unequal linewidths, detunings and coherent feedthrough. It exposes a concrete false positive: raw power acquires a linear reversal-odd term by interfering with the feedthrough path. Complex coupling-off subtraction removes it and recovers the predicted linear homodyne and quadratic power scalings.
+
 ## Honest implications
 
 The positive implication is practical. The corpus has found a narrow place to look: pair-Gram data and genus-two sewing form a mathematically controlled boundary between discrete state organization and positive relational geometry. A new construction placed there can be checked without asking anyone to accept an ontology first. It may yield a theoretical-engineering improvement--better codes, modular spectral design, robust state classifiers, or controlled defect/selector devices--even if gravity never emerges. It could count as new physics only after it produces a nonconventional, falsifiable observable or a more constrained consistent theory.
@@ -212,6 +214,7 @@ The negative implication is equally useful. Images, number coincidences, group i
 - [Period-matrix/Jordan boundary gate](period-matrix-jordan-boundary-gate.md)
 - [Sewing-response codimension gate](sewing-response-codimension-gate.md)
 - [Two-quadrature seam experiment](two-quadrature-seam-experiment.md)
+- [Two-resonator transfer preflight](two-resonator-transfer-preflight.md)
 - [Literature review](literature-review.md)
 - [Calculations and next steps](next-steps.md)
 - [Machine verifier](../../../verification/verify/verify_lattice_subroutine_gravity_programme.mjs)
@@ -239,6 +242,8 @@ The negative implication is equally useful. Images, number coincidences, group i
 - [Sewing-response codimension verifier](../../../verification/verify/verify_lattice_subroutine_sewing_response_codimension_gate.mjs)
 - [Two-quadrature experiment evidence](../../../evidence/data/lattice-subroutine-two-quadrature-seam-experiment-v1.json)
 - [Two-quadrature experiment verifier](../../../verification/verify/verify_lattice_subroutine_two_quadrature_seam_experiment.mjs)
+- [Two-resonator preflight evidence](../../../evidence/data/lattice-subroutine-two-resonator-transfer-preflight-v1.json)
+- [Two-resonator preflight verifier](../../../verification/verify/verify_lattice_subroutine_two_resonator_transfer_preflight.mjs)
 - [Existing Leech pair-Gram claim](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Existing finite genus-two seam claim](../../claims/1700-1799/1738_the_2_state_3_symbol_universal_machine_selects_a_finite_genus_two_theta_seam_but_not_spin23_dynamics.md)
 - [Existing Spin(2,3) gravity checkpoint](../closure/spin23-gravity-route/README.md)
