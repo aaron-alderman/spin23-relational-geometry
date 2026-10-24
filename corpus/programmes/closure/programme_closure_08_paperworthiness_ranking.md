@@ -9,10 +9,10 @@
 There are currently
 
 \[
-\boxed{1\text{ strong manuscript cluster}+3\text{ conditional candidates}.}
+\boxed{1\text{ strong manuscript cluster}+3\text{ conditional structural candidates}+1\text{ phenomenology candidate}.}
 \]
 
-This is the charitable expansive count of four. It is not a claim that four papers are submission-ready. Hundreds of exploratory documents have condensed into a handful of coherent claims, which is exactly what the exploration was meant to do.
+This is the charitable expansive count of five recorded in the current machine register. It is not a claim that five papers are submission-ready. Hundreds of exploratory documents have condensed into a handful of coherent claims, which is exactly what the exploration was meant to do.
 
 ## Ranking
 
@@ -41,6 +41,10 @@ The paired-source quartic critical locus and scale obstruction are exact and ele
 ### 4. Programme-level falsifiability atlas — perspective rather than discovery
 
 The dependency graph and no-go atlas could become a useful methods or perspective paper about type errors in algebraic reconstruction programmes. Its value is critical synthesis. It should not be presented as a new fundamental theory.
+
+### 5. Restricted ultraviolet ALP charge patterns — phenomenology candidate
+
+The reduced-rank, scale-free comparison is paper-shaped only after a nuisance-profiled likelihood and systematic comparison with existing ALP benchmark analyses. Without an algebraic metric selecting the incidence normalization, it must remain an explicitly restricted benchmark rather than a derivation from the wider programme.
 
 ## What does not deserve a separate paper
 

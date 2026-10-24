@@ -2,6 +2,14 @@
 
 This directory is the source-of-truth research record. It is intentionally distinct from the curated books and generated website.
 
+## The current story
+
+The corpus is organized around a middle structure rather than a single symmetry slogan. Jordan structure describes positive composition, states and response; Lie structure describes transformation and transport. On the declared rank-two carrier their relationship closes exactly through the Jordan triple and TKK construction to \(\mathfrak{sp}(4,\mathbb R)\cong\mathfrak{so}(2,3)\). The physical question is then not whether the algebra exists, but which carrier, dynamics, selector, scale and detector admit it as realized structure.
+
+The admissibility programme turns that question into an atlas. It tracks what is mathematically filled, conditionally constructed, excluded, bounded, underidentified, experimentally inaccessible and still uncharted. Dynamics remains essential, but no longer enters as an unexplained sovereign: it must preserve or transform an admitted domain and leave records by which competing mechanisms can be separated.
+
+Start with [The admissibility frontier: the current story of the corpus](syntheses/the_admissibility_frontier_current_synthesis.md). It is the reader-facing synthesis of what has been found, what it means, why the programme remains hopeful, where the live edges are and how to join without surrendering the corpus's kenotic authority boundaries.
+
 ## Contents
 
 - [`claims/`](claims/README.md) — the numbered, append-only research ledger;

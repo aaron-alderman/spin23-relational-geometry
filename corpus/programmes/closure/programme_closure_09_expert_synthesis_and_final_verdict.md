@@ -106,7 +106,7 @@ This calculation is maximally informative in either outcome:
 
 ## 7. Publication verdict
 
-The 832-document exploration condenses to one strong manuscript cluster and three conditional candidates. The strongest is the Furey TRO/anomaly/Kantor/CP classification. The current-response paper needs an interacting correlator. The Freudenthal result needs a specialist novelty audit. The full closure atlas is suitable as a perspective or methods paper, not as a claimed fundamental theory.
+The original 832-document closure tranche condensed to one strong manuscript cluster and three conditional candidates. The current register additionally carries one restricted phenomenology candidate. The strongest remains the Furey TRO/anomaly/Kantor/CP classification. The current-response paper needs an interacting correlator. The Freudenthal result needs a specialist novelty audit. The full closure atlas is suitable as a perspective or methods paper, not as a claimed fundamental theory.
 
 ## Final verdict
 

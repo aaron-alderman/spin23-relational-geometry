@@ -8,6 +8,8 @@ _A provenance-preserving successor to “Exact hinge, exceptional programme.”_
 
 This expanded edition turns the research ledger into a reader's path. It begins with rulers, compasses, coupled signals and twisted paper loops before introducing the algebraic names. It then follows the exact Jordan/TKK hinge into the Standard-Model, defect, family-index, stress-response and experimental gates, preserving every important reversal and no-go result.
 
+> **Current continuation.** The corpus has since made its larger architecture explicit: Jordan admission/composition and Lie transformation/transport meet around a typed carrier, while dynamics is turned toward a practical admissibility atlas of states, histories, detectors and frontiers. Read [The admissibility frontier: the current story of the corpus](../../corpus/syntheses/the_admissibility_frontier_current_synthesis.md) after—or before—this edition. It supplies the present “good news / findings / meaning / hope / where to look / come join” synthesis without rewriting this edition's historical layer.
+
 > **Authority boundary.** This edition reports exact calculations, bounded constructions, conditional physical bridges and closed branches. It is not empirical confirmation, peer review or a derivation of the Standard Model.
 
 ## Contents

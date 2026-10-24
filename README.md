@@ -1,6 +1,16 @@
 # Spin(2,3) Relational Geometry
 
-An audited research corpus investigating \(Spin_0(2,3)\cong Sp(4,\mathbb R)\) as an interface between positive response geometry, two-face Jordan structures, typed relationships, holonomy, finite symplectic shadows and possible physical realizations.
+An audited research corpus investigating the passage from possible structure to physically admissible structure. Its exact mathematical hinge places positive two-face Jordan response and Lie transformation around the same typed carrier:
+
+\[
+H_2(\mathbb R)_+
+\xrightarrow{\text{Jordan triple / TKK}}
+\mathfrak{sp}(4,\mathbb R)
+\cong
+\mathfrak{so}(2,3).
+\]
+
+The larger programme turns dynamics toward admissibility: not only “what equations move a state?” but “which states, transformations, histories and records remain jointly realizable, and what dynamics can live inside that region?” The result is a practical atlas of exact structure, bounded bridges, exclusions, detectors and reachable frontiers.
 
 This is **not a completed unified theory**. Established mathematics, reproducible model-local results, conditional constructions, conjectures, analogies, obstructions and indeterminate inputs remain explicitly separated.
 
@@ -8,6 +18,7 @@ This is **not a completed unified theory**. Established mathematics, reproducibl
 
 | Reader | Start here |
 |---|---|
+| Start with the present story | [The admissibility frontier: current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) |
 | General reader | [Edition 3.1 expanded book preview](book/edition-3/README.md) |
 | Researcher | [Canonical corpus guide](corpus/README.md) |
 | Auditor or contributor | [Verification guide](verification/README.md) |
@@ -17,16 +28,17 @@ The generated paged edition is available in [`docs/edition-3`](docs/edition-3/in
 
 `book/edition-3/book.json` is the canonical machine-readable publication object. GitHub Pages renders it locally; Claimipedia mirrors its scientific fields and citation digest through the Sourcery MCP lane, and may add presentation metadata without becoming a second research source of truth. The [Claimipedia publication authority contract](integrations/claimipedia/PUBLICATION-AUTHORITY.md) defines that boundary.
 
-## Current position
+## The story now visible
 
-The strongest present synthesis remains conditional:
+The corpus has found more than a collection of correspondences. It has found a coherent middle architecture.
 
-- the \(H_2(\mathbb R)_+\) response cone gives an exact finite-dimensional Lorentzian carrier whose conformal completion is \(Sp(4,\mathbb R)\cong Spin_0(2,3)\), but this does not identify physical spacetime or a microscopic action;
-- the action programme contains one healthy critical classical/EFT \(0^-\) torsion sector, while local quantum closure generates an incompatible spin-two term and the known positive completions leave inverse or model-selection freedom;
-- public polarized-spin and hadronic data constrain combinations of the torsion portal but do not determine its ultraviolet flavour coefficients or select the proposed value \(1/8\);
-- supersymmetry, string normalization, compactification topology, higher-spin symmetry and known independent-connection supergravities organize possible parents without supplying the required healthy pole, protected normalization and threshold dictionary in one model;
-- the ordinary Lorentz vector-supermultiplet proposal has an unavoidable \((3,3)\) kinetic signature; self-duality moves the problem into complex reality constraints, while nonlinear realization yields a massive vector triplet rather than the target pseudoscalar;
-- under the present inputs, every finite escape now ends at a genuinely new complete action or microscopic vacuum. This is operational exhaustion, not a theorem that future models cannot exist, and physical admission remains false.
+- **Jordan and Lie meet without being collapsed.** Jordan structure governs positive states, responses and composition; Lie structure governs transformation and transport. Their exact rank-two hinge is established, while its physical carrier remains a live question.
+- **Dynamics and admissibility constrain one another.** An action or update rule proposes motion; the admissibility stack tests type, composition, positivity, causality, stability, global extension and empirical record. This reversal has become executable rather than merely philosophical.
+- **Selection has become visible.** Symmetry usually supplies an orbit, not a realized member. The corpus identifies the independently sourced boundary, anisotropy, environment, history or record required to turn neutral preservation into physical selection.
+- **The frontier is mapped for use.** Twenty-two physics targets, twenty frontier areas, thirty-five detector bundles, twenty experiments and forty-nine maintained topics now connect exact mathematics to calculations, devices, controls and kill tests.
+- **The negative results are constructive.** They prevent attractive shared shapes—whether \(A_2\), triality, Golay, Leech, Freudenthal, \(E_8\) or torsion—from being promoted without the missing carrier, action, normalization and observable.
+
+The strongest ontological claim remains open: the corpus has not established that admissibility generates all physical law. But it has established a powerful research method and an unusually detailed “look here” guide to the frontier. The [current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) tells that story, including the good news, the limits, the hope and the invitation to contribute.
 
 ## Canonical research controls
 

@@ -2,6 +2,8 @@
 
 This folder is the canonical navigation lane for physics targets in the corpus. It consolidates programme-level targets without replacing their source documents or promoting speculative material.
 
+The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and response structures say what can coexist and compose; Lie, symplectic and dynamical structures say how it can transform; the target register asks which of those structures survives scale, nuisance, detector and experimental gates. For the narrative connecting those layers, start with [The admissibility frontier: current synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md).
+
 ## Canonical artifacts
 
 - [Frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md) — current whole-corpus result, frontier shape and ranked next tranches.
@@ -49,9 +51,9 @@ The detector extension additionally normalizes:
 
 - 20 frontier regions;
 - 35 detector bundles; and
-- 49 maintained topics: 47 live across active, open, audit, gated and blocked states, plus two closed with retained evidence.
+- 49 maintained topics: 46 live across active, open, audit, gated and blocked states, plus three closed with retained evidence.
 
-The full-corpus census presently hashes and inventories all 2,530 Markdown/JSON artifacts across `corpus/` and the evidence ledger: 2,092 corpus narratives plus 438 evidence artifacts. It reconciles all 1,528 files containing the expanded gate vocabulary or an open-like structured status, including 1,176 of the 1,575 numbered claims and 85 evidence records; the other 399 claims are explicitly recorded as having no declared gate. It reports zero unmatched ownership records. This is a lexical, structured-status and governance exhaustion result, not a claim that every tacit scientific question has been discovered or solved.
+The full-corpus census presently hashes and inventories all 2,531 Markdown/JSON artifacts across `corpus/` and the evidence ledger: 2,093 corpus narratives plus 438 evidence artifacts. It reconciles all 1,529 files containing the expanded gate vocabulary or an open-like structured status, including 1,176 of the 1,575 numbered claims and 85 evidence records; the other 399 claims are explicitly recorded as having no declared gate. It reports zero unmatched ownership records. This is a lexical, structured-status and governance exhaustion result, not a claim that every tacit scientific question has been discovered or solved.
 
 Speculative entries remain visible but carry zero evidential weight. Crosswalk membership indicates relevance, not proof of a physical identification.
 

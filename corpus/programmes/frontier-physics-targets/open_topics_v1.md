@@ -118,5 +118,3 @@ The queue exposes eight recurring unknowns that should be reported for every new
 The maintained list is intentionally finite. New topics should be added only when they introduce a distinct carrier, detector, boundary, translation or falsifier not already represented here.
 
 AZ-056 deliberately adds no duplicate topic. Its exact kernel-invariance and defect-composition results sharpen OT-019; its commutator no-go sharpens OT-027 and OT-038; its detector-intersection law sharpens OT-034; and its unresolved modular-forms signpost remains behind OT-045. Repetition of the diagram without a source-native arrow does not create a new frontier.
-
-AZ-056 deliberately adds no duplicate topic. Its exact kernel-invariance and defect-composition results sharpen OT-019; its commutator no-go sharpens OT-027 and OT-038; its detector-intersection law sharpens OT-034; and its unresolved modular-forms signpost remains behind OT-045. Repetition of the diagram without a source-native arrow does not create a new frontier.
