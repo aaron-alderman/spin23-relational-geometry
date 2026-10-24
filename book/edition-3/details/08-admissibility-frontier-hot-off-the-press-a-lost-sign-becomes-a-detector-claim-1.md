@@ -90,6 +90,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **admissibility 105 fixed index defect information no go** — [admissibility_105_fixed_index_defect_information_no_go.md](../../../corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md)
 - **admissibility 106 reflection resolved defect transport** — [admissibility_106_reflection_resolved_defect_transport.md](../../../corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md)
 - **admissibility 107 global nonlinear detector injectivity** — [admissibility_107_global_nonlinear_detector_injectivity.md](../../../corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md)
+- **admissibility 108 d4 shared action operator boundary** — [admissibility_108_d4_shared_action_operator_boundary.md](../../../corpus/programmes/admissibility/admissibility_108_d4_shared_action_operator_boundary.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

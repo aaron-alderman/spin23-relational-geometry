@@ -1,0 +1,241 @@
+{
+  "protocol": "d4-shared-action-operator-boundary/1",
+  "packet": "AZ-108",
+  "target": "OT-046",
+  "dependencies": [
+    "OT-027"
+  ],
+  "commonData": {
+    "carrierShape": "one central coordinate and three outer coordinates",
+    "symmetryAction": "cyclic permutation of the three outer coordinates",
+    "fixedSectorDimension": 2,
+    "contrastSectorDimension": 2
+  },
+  "operators": {
+    "d4CartanIntersectionForm": {
+      "role": "root_or_vanishing_cycle_intersection_form",
+      "matrix": [
+        [
+          2,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          2,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          2,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          2
+        ]
+      ],
+      "spectrum": [
+        0.2679491924311228,
+        2,
+        2,
+        3.732050807568877
+      ],
+      "determinant": 4,
+      "trialityCommutatorResidual": 0,
+      "fixedSector": [
+        [
+          2,
+          -1.7320508075688776
+        ],
+        [
+          -1.7320508075688776,
+          2.0000000000000004
+        ]
+      ],
+      "contrastSector": [
+        [
+          1.9999999999999996,
+          0
+        ],
+        [
+          0,
+          2.0000000000000004
+        ]
+      ]
+    },
+    "d4StarLaplacian": {
+      "role": "positive_generator_for_markov_or_diffusive_dynamics",
+      "matrix": [
+        [
+          3,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "spectrum": [
+        0,
+        1,
+        1,
+        4
+      ],
+      "determinant": 0,
+      "trialityCommutatorResidual": 0,
+      "fixedSector": [
+        [
+          3,
+          -1.7320508075688776
+        ],
+        [
+          -1.7320508075688776,
+          1.0000000000000002
+        ]
+      ],
+      "contrastSector": [
+        [
+          0.9999999999999998,
+          0
+        ],
+        [
+          0,
+          1.0000000000000002
+        ]
+      ]
+    },
+    "d4StarAdjacency": {
+      "role": "coherent_hopping_before_diagonal_terms",
+      "matrix": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "spectrum": [
+        -1.7320508075688772,
+        0,
+        0,
+        1.7320508075688772
+      ],
+      "determinant": 0,
+      "trialityCommutatorResidual": 0,
+      "fixedSector": [
+        [
+          0,
+          1.7320508075688776
+        ],
+        [
+          1.7320508075688776,
+          0
+        ]
+      ],
+      "contrastSector": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "exactComparisons": {
+    "cartanFixedSector": [
+      [
+        2,
+        -1.7320508075688772
+      ],
+      [
+        -1.7320508075688772,
+        2
+      ]
+    ],
+    "laplacianFixedSector": [
+      [
+        3,
+        -1.7320508075688772
+      ],
+      [
+        -1.7320508075688772,
+        1
+      ]
+    ],
+    "adjacencyFixedSector": [
+      [
+        0,
+        1.7320508075688772
+      ],
+      [
+        1.7320508075688772,
+        0
+      ]
+    ],
+    "cartanContrastEigenvalue": 2,
+    "laplacianContrastEigenvalue": 1,
+    "adjacencyContrastEigenvalue": 0,
+    "sameTrialityAction": true,
+    "sameKernel": false,
+    "sameSpectrum": false,
+    "quotientDeterminesOperator": false
+  },
+  "localizationAudit": {
+    "spatialBaseCoordinatePresent": false,
+    "deformationParameterPresent": false,
+    "boundaryConditionPresent": false,
+    "fredholmDomainPresent": false,
+    "detectorFacingLocalizedPoleDerived": false,
+    "reason": "finite triality representation and its fixed/contrast split do not specify a spatial operator family whose asymptotic phases or boundary domain can carry a localization index"
+  },
+  "decision": {
+    "sharedActionSupportsCarrierIdentification": false,
+    "existingD4StarClosesOt046": false,
+    "ot046RemainsGated": true,
+    "requiredReopeningDatum": "one source-native operator family D(lambda) on a declared spatial or geometric domain, its boundary/asymptotic conditions, the quotient pushforward, and a regulator-stable index or pole ledger",
+    "newPhysicsEvidence": false
+  }
+}

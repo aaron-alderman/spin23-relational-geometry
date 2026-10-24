@@ -121,6 +121,23 @@ This closes one finite detector-design question, not nonlinear identification in
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-local-rank-is-not-global-identity-claim-3.md)
 
+<a id="hot-off-the-press-the-quotient-does-not-choose-the-operator"></a>
+## Hot off the press — the quotient does not choose the operator
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** Three D4-shaped objects now expose a sharp translation boundary. The root intersection form, star diffusion generator and coherent hopping matrix all permit the same cyclic permutation of three outer coordinates. They nevertheless have different spectra and kernels.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-quotient-does-not-choose-the-operator-claim-1.md)
+
+The quotient consistently retains a two-dimensional fixed sector and removes two contrast directions, but the operator induced on that sector depends on which carrier was present before quotienting. A dark resonator mode is not thereby a defect-localized state, and the conserved Markov zero mode is not a singularity index. Shared action is weaker than shared carrier and weaker again than shared dynamics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-quotient-does-not-choose-the-operator-claim-2.md)
+
+OT-046 therefore needs a physical noun before another spectral calculation: one spatial or geometric operator family, its deformation coordinate, boundary conditions, quotient pushforward and stable index or pole record. Supplying that package could yield useful defect engineering. Without it, a D4 diagram cannot support a new-physics inference.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-quotient-does-not-choose-the-operator-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 
@@ -966,6 +983,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_105_fixed_index_defect_information_no_go.md](../../../corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md)
 - [admissibility_106_reflection_resolved_defect_transport.md](../../../corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md)
 - [admissibility_107_global_nonlinear_detector_injectivity.md](../../../corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md)
+- [admissibility_108_d4_shared_action_operator_boundary.md](../../../corpus/programmes/admissibility/admissibility_108_d4_shared_action_operator_boundary.md)
 
 ---
 

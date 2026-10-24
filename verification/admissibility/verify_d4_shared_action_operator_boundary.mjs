@@ -1,0 +1,16 @@
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+const root=new URL("../../",import.meta.url);
+const evidence=JSON.parse(readFileSync(new URL("evidence/data/d4-shared-action-operator-boundary-v1.json",root),"utf8"));
+assert.equal(evidence.protocol,"d4-shared-action-operator-boundary/1");
+assert.equal(evidence.packet,"AZ-108"); assert.equal(evidence.target,"OT-046");
+assert.equal(evidence.commonData.fixedSectorDimension,2); assert.equal(evidence.commonData.contrastSectorDimension,2);
+assert.ok(Object.values(evidence.operators).every(operator=>operator.trialityCommutatorResidual<1e-12));
+assert.ok(Math.abs(evidence.operators.d4CartanIntersectionForm.determinant-4)<1e-12);
+assert.equal(evidence.operators.d4StarLaplacian.determinant,0); assert.equal(evidence.operators.d4StarAdjacency.determinant,0);
+assert.equal(evidence.exactComparisons.sameTrialityAction,true); assert.equal(evidence.exactComparisons.sameKernel,false);
+assert.equal(evidence.exactComparisons.sameSpectrum,false); assert.equal(evidence.exactComparisons.quotientDeterminesOperator,false);
+assert.equal(evidence.localizationAudit.spatialBaseCoordinatePresent,false); assert.equal(evidence.localizationAudit.detectorFacingLocalizedPoleDerived,false);
+assert.equal(evidence.decision.existingD4StarClosesOt046,false); assert.equal(evidence.decision.ot046RemainsGated,true);
+assert.equal(evidence.decision.newPhysicsEvidence,false);
+console.log(JSON.stringify({result:"pass",boundary:evidence.decision.requiredReopeningDatum},null,2));
