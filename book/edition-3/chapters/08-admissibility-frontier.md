@@ -303,6 +303,10 @@ The final adaptive freedom can also be removed. Fix 10 kHz and 2.8219349 Hz for 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-13.md)
 
+The whole predicted spectrum can now be scored as one object. With the two tones and three-neighbour rule still frozen, a donor-only threshold on the maximum error across all fifteen untouched frequencies covers 49 of 54 cells at nominal 90% and 52 of 54 at nominal 95%. ID07 and ID12 remain outside the 95% region. This is a useful internal error radius, not a prospective guarantee: the nested donor fits overlap, the low tone was learned from this batch, and no independent batch or fixture covariance is present. The look-here experiment is now exact—freeze the protocol on newly acquired cells, separate calibration from testing, repeat selected cells across fixtures, and do not retune on the two challenge cases.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-14.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

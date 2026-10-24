@@ -21,7 +21,7 @@ This is a concrete theoretical-engineering improvement, not new physics. It does
 
 ## Next gate
 
-Use donor residual vectors to predeclare a simultaneous whole-spectrum prediction region, then evaluate calibration and coverage without changing the two tones or three-neighbour rule. Separately acquired cells are the decisive external gate.
+Use [AZ-094](admissibility_94_internal_whole_spectrum_coverage_boundary.md)'s donor-only whole-spectrum score as the internal boundary, then replace its overlapping calibration fits with an independent calibration/test split on a separately acquired batch. Repeat selected cells across fixtures to estimate apparatus covariance without changing the two tones or three-neighbour rule.
 
 ## Reproduction
 

@@ -307,6 +307,16 @@ frequency, neighbourhood size or basis. The bridge is therefore deployable
 within this batch, while uncertainty calibration and external transfer remain
 the honest boundary.
 
+[AZ-094](../programmes/admissibility/admissibility_94_internal_whole_spectrum_coverage_boundary.md)
+makes that uncertainty question joint across frequency. Maximum error over the
+entire fifteen-point prediction is covered for 49 of 54 cells at the nominal
+90% threshold and 52 of 54 at the nominal 95% threshold, with `ID07` and
+`ID12` retained as failures. This supplies a practical internal error radius,
+not a prospective theorem: the nested calibration fits overlap, the low tone
+was learned in this batch, and no independent batch or fixture covariance is
+available. The next useful datum is therefore external calibration and transfer,
+not a new algebraic label.
+
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one
 nonabelian semisimple factor, \(\mathfrak{sl}_2\); the reciprocal programme core

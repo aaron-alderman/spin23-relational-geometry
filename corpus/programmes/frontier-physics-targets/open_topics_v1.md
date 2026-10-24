@@ -175,6 +175,15 @@ three-neighbour rule still passes all 54 cells and improves the worst median
 error to 2.290%. It is now a reproducible within-batch point predictor; joint
 uncertainty, fixture covariance and external-batch replication remain open.
 
+[AZ-094](../admissibility/admissibility_94_internal_whole_spectrum_coverage_boundary.md)
+tests the whole predicted curve as one object. A donor-only maximum-error score
+across all fifteen untouched frequencies covers 49/54 spectra at nominal 90%
+and 52/54 at nominal 95%; `ID07` and `ID12` remain outside the latter. This is
+useful internal uncertainty engineering, but the overlapping nested fits do
+not provide an independent split-conformal or external coverage guarantee.
+OT-027 now asks for a new batch with fixed calibration/test partitions, repeat
+and fixture covariance, and a separately generated action for dynamics.
+
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
 (\pi/4) phase depends on a common anomaly trivialization, while the (T_1)

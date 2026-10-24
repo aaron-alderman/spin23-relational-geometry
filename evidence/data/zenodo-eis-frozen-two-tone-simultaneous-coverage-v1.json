@@ -1,0 +1,865 @@
+{
+  "protocol": "zenodo-eis-frozen-two-tone-simultaneous-coverage/1",
+  "date": "2026-10-25",
+  "source": {
+    "doi": "10.5281/zenodo.15422339",
+    "cells": 54
+  },
+  "frozenProtocol": {
+    "calibrationFrequenciesHz": [
+      10000,
+      2.82193493843079
+    ],
+    "neighbourCount": 3,
+    "evaluationFrequenciesPerCell": 15,
+    "nonconformityScore": "maximum complex relative error across all fifteen evaluation frequencies",
+    "targetResidualUsedForItsThreshold": false,
+    "thresholdRule": "ceil((n+1)*coverage)-th ordered nested donor score",
+    "caveat": "Overlapping leave-one-donor-out fits are not independent split-conformal calibration; empirical coverage here is an internal jackknife-style audit, not a distribution-free prospective guarantee."
+  },
+  "population": {
+    "coveredCellsAt90": 49,
+    "coverageFractionAt90": 0.9074074074074074,
+    "coveredCellsAt95": 52,
+    "coverageFractionAt95": 0.9629629629629629,
+    "failuresAt90": [
+      "ID02",
+      "ID07",
+      "ID12",
+      "ID53",
+      "ID54"
+    ],
+    "failuresAt95": [
+      "ID07",
+      "ID12"
+    ],
+    "medianQ90": 0.04133207228558268,
+    "medianQ95": 0.04651327773226605,
+    "medianTargetMaximumRelativeError": 0.03612209874066091,
+    "worstTargetMaximumRelativeError": 0.05502871684594699
+  },
+  "cells": [
+    {
+      "id": "ID01",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03485803058365821,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID02",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.044772947518090606,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04067056760790621
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": false,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID03",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03734344702242571,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID04",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03215696175378034,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04293176025866944
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID05",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.030138686258724564,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID06",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.0326892028644284,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID07",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.05502871684594699,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04067056760790621
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.044772947518090606
+      },
+      "coveredAt90": false,
+      "coveredAt95": false
+    },
+    {
+      "id": "ID08",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03320423705288771,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04306395295724125
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04719472212904541
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID09",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03612209874066091,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID10",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.02919740112693037,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID11",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03915083222619615,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.05123079590807894
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID12",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.04651327773226605,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04293176025866944
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04558677288941216
+      },
+      "coveredAt90": false,
+      "coveredAt95": false
+    },
+    {
+      "id": "ID13",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03329996316732039,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04293176025866944
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.048220427740695876
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID14",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.035772875592420934,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID15",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03524714523358918,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04836385107117426
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID16",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03785024170970233,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID17",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.0349322701044285,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID18",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.030434854806983772,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.041430035418056184
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID19",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03786079964686424,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04306395295724125
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID20",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.033734726067966986,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID21",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.034793393029089216,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04067056760790621
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID22",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03548385131914687,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04306395295724125
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04719472212904541
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID23",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.04067056760790621,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID24",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03959813022769928,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID25",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03872574342515005,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID26",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03251047384437073,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID27",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.0356856873058419,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID28",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03343030689180837,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID29",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03354693588197175,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID30",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03258186285120467,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID31",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03791528878923304,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID32",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.037140435142860646,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID33",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03348682673683044,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID34",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03394531730430247,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04067056760790621
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID35",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03959414649282889,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID36",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.04054331117957282,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID37",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03929158565176206,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04092422761311547
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID38",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03744523732765633,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID39",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03690480493718354,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID40",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03791800576227089,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID41",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03867763465461803,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.042911433377468826
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID42",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.036885873794179534,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID43",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.032625031503720724,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID44",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.036124485029583694,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID45",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.030052309655025748,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID46",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.035158415818986884,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID47",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03526432429047371,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID48",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03287538580345892,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID49",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03903581122983244,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04246869872700183
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID50",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.038809152335532844,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.042876105355274134
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID51",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.03231921594361319,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID52",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.0401834366041626,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04133207228558268
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": true,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID53",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.04306395295724125,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04067056760790621
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": false,
+      "coveredAt95": true
+    },
+    {
+      "id": "ID54",
+      "calibrationDonors": 53,
+      "targetWholeSpectrumMaximumRelativeError": 0.04133207228558268,
+      "q90": {
+        "rank": 49,
+        "threshold": 0.04067056760790621
+      },
+      "q95": {
+        "rank": 52,
+        "threshold": 0.04651327773226605
+      },
+      "coveredAt90": false,
+      "coveredAt95": true
+    }
+  ],
+  "decision": {
+    "internalWholeSpectrumCoverageAudited": true,
+    "allCellsCoveredAt95": false,
+    "nominal95CoverageMetEmpirically": true,
+    "distributionFreeProspectiveCoverageEstablished": false,
+    "externalBatchReplicationEstablished": false,
+    "measurementCovarianceEstablished": false,
+    "detectorLikelihoodClosed": false,
+    "generatedDynamicsEstablished": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The frozen two-tone protocol meets nominal 95% simultaneous whole-spectrum coverage internally under nested donor scoring. Dependence among calibration fits prevents a distribution-free prospective claim; external split calibration remains required."
+}

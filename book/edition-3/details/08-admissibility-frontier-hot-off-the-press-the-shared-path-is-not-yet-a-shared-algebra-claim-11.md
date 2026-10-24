@@ -17,7 +17,7 @@ A specified candidate class fails under explicit assumptions. The conclusion doe
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the shared path is not yet a shared algebra”.
-- **Unit of argument:** assertion 11 of 13 in this section.
+- **Unit of argument:** assertion 11 of 14 in this section.
 - **Evidence posture:** Check the assumptions defining the ruled-out candidate class; the no-go does not automatically extend beyond that class.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
@@ -34,6 +34,7 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ## Controlling documents
 
+- **admissibility 94 internal whole spectrum coverage boundary** — [admissibility_94_internal_whole_spectrum_coverage_boundary.md](../../../corpus/programmes/admissibility/admissibility_94_internal_whole_spectrum_coverage_boundary.md)
 - **admissibility 93 frozen two tone within batch protocol** — [admissibility_93_frozen_two_tone_within_batch_protocol.md](../../../corpus/programmes/admissibility/admissibility_93_frozen_two_tone_within_batch_protocol.md)
 - **admissibility 92 two point population state bridge** — [admissibility_92_two_point_population_state_bridge.md](../../../corpus/programmes/admissibility/admissibility_92_two_point_population_state_bridge.md)
 - **admissibility 91 one point latent state boundary** — [admissibility_91_one_point_latent_state_boundary.md](../../../corpus/programmes/admissibility/admissibility_91_one_point_latent_state_boundary.md)
