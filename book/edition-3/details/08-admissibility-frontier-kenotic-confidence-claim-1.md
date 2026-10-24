@@ -82,9 +82,10 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 - **the weighted furey root is a flat horizontal double cover of its projector circle with central minus identity holonomy** — [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - **a local conservative real interface network realizes the nested c12 transport as antiperiodic six cycle holonomy** — [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 - **admissibility 99 three scale passive diffusion pushforward** — [admissibility_99_three_scale_passive_diffusion_pushforward.md](../../../corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md)
+- **admissibility 100 local derivative hydrodynamic frame invariance** — [admissibility_100_local_derivative_hydrodynamic_frame_invariance.md](../../../corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#kenotic-confidence) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-4.md) · [Next claim →](01-the-revised-spine-what-closes-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#kenotic-confidence) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-5.md) · [Next claim →](01-the-revised-spine-what-closes-claim-1.md)

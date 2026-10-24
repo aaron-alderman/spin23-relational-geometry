@@ -1,0 +1,570 @@
+{
+  "protocol": "hydrodynamic-local-derivative-frame-invariance/1",
+  "date": "2026-10-25",
+  "target": "OT-016",
+  "parent": "AZ-098",
+  "sourceFunctional": {
+    "bilinearForm": "W[J]=1/2 J_L^T A J_R + 1/2 J_L^T B_R D^{-1} B_L J_R",
+    "momentumLegs": "left fields carry -p and right fields carry p",
+    "sourceResponse": "A+B_R D^{-1} B_L"
+  },
+  "localFrame": {
+    "form": "M(p)=[[1, i alpha z + beta k^2],[0,1]]",
+    "alpha": 0.37,
+    "beta": 0.22,
+    "rightRule": "phi'_R(p)=M(p) phi_R(p)",
+    "leftRule": "phi'_L(-p)=M(-p) phi_L(-p)",
+    "transformedKernel": "D'=M(-p)^{-T} D M(p)^{-1}",
+    "transformedCouplings": "B'_R=B_R M(p)^{-1}; B'_L=M(-p)^{-T} B_L",
+    "locality": "M and M^{-1} are finite polynomials in the declared derivatives because the off-diagonal generator squares to zero",
+    "realityCondition": "for real frequency and momentum, M(-p)=M(p)^*",
+    "exactDeterminant": 1
+  },
+  "physicalParameters": {
+    "k": 0.65,
+    "T": 1.4,
+    "w": 6.530719999999999,
+    "eta": 0.6311199999999999,
+    "D": 0.22142857142857145,
+    "Gamma": 0.1928571428571429
+  },
+  "samples": [
+    {
+      "z": {
+        "re": 0.8,
+        "im": 0
+      },
+      "MRight": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.09295,
+            "im": 0.296
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "MLeft": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.09295,
+            "im": -0.296
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "rightFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "leftFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "response": [
+        [
+          {
+            "re": -5.434985619777659,
+            "im": 1.2146457557752097
+          },
+          {
+            "re": -5.434985619777659,
+            "im": 0.7097497557752098
+          }
+        ],
+        [
+          {
+            "re": -5.434985619777659,
+            "im": 0.7097497557752098
+          },
+          {
+            "re": -5.346880140904431,
+            "im": 1.4631617530114411
+          }
+        ]
+      ],
+      "transformedResponse": [
+        [
+          {
+            "re": -5.434985619777659,
+            "im": 1.2146457557752095
+          },
+          {
+            "re": -5.434985619777659,
+            "im": 0.7097497557752095
+          }
+        ],
+        [
+          {
+            "re": -5.434985619777659,
+            "im": 0.7097497557752094
+          },
+          {
+            "re": -5.346880140904431,
+            "im": 1.4631617530114407
+          }
+        ]
+      ],
+      "maximumResponseDifference": 4.440892098500626e-16
+    },
+    {
+      "z": {
+        "re": 0.45,
+        "im": 0.07
+      },
+      "MRight": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.06705,
+            "im": 0.1665
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "MLeft": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.11885000000000001,
+            "im": -0.1665
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "rightFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "leftFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "response": [
+        [
+          {
+            "re": -11.278938845294162,
+            "im": 22.21252945750955
+          },
+          {
+            "re": -11.234760445294162,
+            "im": 21.92852545750955
+          }
+        ],
+        [
+          {
+            "re": -11.234760445294162,
+            "im": 21.92852545750955
+          },
+          {
+            "re": -10.798874809441209,
+            "im": 23.12781774089141
+          }
+        ]
+      ],
+      "transformedResponse": [
+        [
+          {
+            "re": -11.278938845294162,
+            "im": 22.21252945750955
+          },
+          {
+            "re": -11.234760445294162,
+            "im": 21.928525457509547
+          }
+        ],
+        [
+          {
+            "re": -11.234760445294162,
+            "im": 21.928525457509554
+          },
+          {
+            "re": -10.798874809441209,
+            "im": 23.12781774089141
+          }
+        ]
+      ],
+      "maximumResponseDifference": 3.552713678800501e-15
+    },
+    {
+      "z": {
+        "re": -0.3,
+        "im": 0.11
+      },
+      "MRight": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.052250000000000005,
+            "im": -0.111
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "MLeft": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.13365,
+            "im": 0.111
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "rightFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "leftFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "response": [
+        [
+          {
+            "re": 14.791149583867398,
+            "im": -18.883732057737696
+          },
+          {
+            "re": 14.860572783867397,
+            "im": -18.694396057737695
+          }
+        ],
+        [
+          {
+            "re": 14.860572783867397,
+            "im": -18.694396057737695
+          },
+          {
+            "re": 15.8067930607864,
+            "im": -20.088948268654377
+          }
+        ]
+      ],
+      "transformedResponse": [
+        [
+          {
+            "re": 14.791149583867398,
+            "im": -18.88373205773769
+          },
+          {
+            "re": 14.860572783867399,
+            "im": -18.69439605773769
+          }
+        ],
+        [
+          {
+            "re": 14.860572783867397,
+            "im": -18.694396057737688
+          },
+          {
+            "re": 15.806793060786402,
+            "im": -20.088948268654374
+          }
+        ]
+      ],
+      "maximumResponseDifference": 7.105427357601002e-15
+    },
+    {
+      "z": {
+        "re": 0,
+        "im": 0.2
+      },
+      "MRight": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.01895000000000001,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "MLeft": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.16695,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "rightFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "leftFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "response": [
+        [
+          {
+            "re": 13.870795898664763,
+            "im": 0
+          },
+          {
+            "re": 13.997019898664764,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 13.997019898664764,
+            "im": 0
+          },
+          {
+            "re": 16.078316941063935,
+            "im": 0
+          }
+        ]
+      ],
+      "transformedResponse": [
+        [
+          {
+            "re": 13.870795898664763,
+            "im": 0
+          },
+          {
+            "re": 13.997019898664764,
+            "im": 0
+          }
+        ],
+        [
+          {
+            "re": 13.997019898664764,
+            "im": 0
+          },
+          {
+            "re": 16.078316941063935,
+            "im": 0
+          }
+        ]
+      ],
+      "maximumResponseDifference": 0
+    },
+    {
+      "z": {
+        "re": 1.1,
+        "im": -0.04
+      },
+      "MRight": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.10775000000000001,
+            "im": 0.40700000000000003
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "MLeft": [
+        [
+          {
+            "re": 1,
+            "im": 0
+          },
+          {
+            "re": 0.07815,
+            "im": -0.40700000000000003
+          }
+        ],
+        [
+          {
+            "re": 0,
+            "im": 0
+          },
+          {
+            "re": 1,
+            "im": 0
+          }
+        ]
+      ],
+      "rightFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "leftFrameDeterminant": {
+        "re": 1,
+        "im": 0
+      },
+      "response": [
+        [
+          {
+            "re": -2.5514790810153825,
+            "im": 0.6981551213767683
+          },
+          {
+            "re": -2.5767238810153823,
+            "im": 0.003923121376768362
+          }
+        ],
+        [
+          {
+            "re": -2.5767238810153823,
+            "im": 0.003923121376768362
+          },
+          {
+            "re": -2.549746713931402,
+            "im": 0.5580389907909752
+          }
+        ]
+      ],
+      "transformedResponse": [
+        [
+          {
+            "re": -2.5514790810153825,
+            "im": 0.6981551213767683
+          },
+          {
+            "re": -2.5767238810153823,
+            "im": 0.003923121376768424
+          }
+        ],
+        [
+          {
+            "re": -2.5767238810153827,
+            "im": 0.003923121376768349
+          },
+          {
+            "re": -2.549746713931402,
+            "im": 0.5580389907909751
+          }
+        ]
+      ],
+      "maximumResponseDifference": 4.442797513861861e-16
+    }
+  ],
+  "audit": {
+    "samplesChecked": 5,
+    "maximumFrameDeterminantError": 0,
+    "maximumResponseDifference": 7.105427357601002e-15,
+    "unimodularLocalFrame": true,
+    "sourceHessianInvariant": true,
+    "spectralAndKmsResponseInvariantReason": "the complete retarded source response is equal, hence its spectral matrix and any common-temperature KMS transform are equal",
+    "poleResidueInvariantReason": "equality of the complete meromorphic source response preserves physical poles and residues; internal kernel entries remain coordinate-dependent"
+  },
+  "decision": {
+    "localDerivativeFrameConstructed": true,
+    "polynomialInverseConstructed": true,
+    "separateMomentumLegsTyped": true,
+    "gaussianDerivativeFrameInvarianceEstablished": true,
+    "wardCompleteSchwingerKeldyshActionEstablished": false,
+    "nonlinearHydrodynamicFrameTheoremEstablished": false,
+    "microscopicMatchingEstablished": false,
+    "fullOt016Closure": false,
+    "generatedSpin23DynamicsEstablished": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "A finite local derivative mixing of the retained Gaussian shear and sound coordinates cannot create, remove or rotate a source-facing response direction when both momentum legs, the kernel and source couplings transform consistently. The remaining ambiguity is not generic derivative-coordinate choice but Ward-complete nonlinear hydrodynamic improvement/contact structure and microscopic matching."
+}

@@ -826,6 +826,10 @@ That first frame test now closes at Gaussian order. Put shear and sound inside o
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-4.md)
 
+The first local derivative test now closes too. A triangular determinant-one change of the internal fields includes both a time derivative and a spatial Laplacian, has a finite polynomial inverse and acts with opposite momentum on the two legs of the source bilinear. Transforming both couplings and the kernel leaves the full Gaussian response unchanged across five frequency samples to within one part in one hundred trillion. Physical poles, residues, the spectral matrix and its common-temperature KMS image survive. The open boundary is no longer generic derivative-coordinate choice; it is the nonlinear Ward-complete Schwinger–Keldysh improvement and contact structure plus microscopic matching.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-5.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -887,6 +891,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 - [admissibility_99_three_scale_passive_diffusion_pushforward.md](../../../corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md)
+- [admissibility_100_local_derivative_hydrodynamic_frame_invariance.md](../../../corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md)
 
 ---
 

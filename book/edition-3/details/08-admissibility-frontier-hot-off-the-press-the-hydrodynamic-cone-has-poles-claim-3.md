@@ -17,7 +17,7 @@ The claim supplies a map or analogy. It becomes a derivation only after an expli
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the hydrodynamic cone has poles”.
-- **Unit of argument:** assertion 3 of 4 in this section.
+- **Unit of argument:** assertion 3 of 5 in this section.
 - **Evidence posture:** Treat the passage as organization or analogy unless a cited carrier-preserving map is supplied.
 - **Research move:** joins several typed results while letting the weakest edge set the claim.
 
@@ -34,6 +34,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ## Controlling documents
 
+- **admissibility 100 local derivative hydrodynamic frame invariance** — [admissibility_100_local_derivative_hydrodynamic_frame_invariance.md](../../../corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md)
 - **admissibility 98 gaussian hydrodynamic source frame invariance** — [admissibility_98_gaussian_hydrodynamic_source_frame_invariance.md](../../../corpus/programmes/admissibility/admissibility_98_gaussian_hydrodynamic_source_frame_invariance.md)
 - **admissibility 97 hydrodynamic pole residue response ledger** — [admissibility_97_hydrodynamic_pole_residue_response_ledger.md](../../../corpus/programmes/admissibility/admissibility_97_hydrodynamic_pole_residue_response_ledger.md)
 - **hydrodynamic stress map can have local rank three** — [212_hydrodynamic_stress_map_can_have_local_rank_three.md](../../../corpus/claims/0200-0299/212_hydrodynamic_stress_map_can_have_local_rank_three.md)
