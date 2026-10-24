@@ -41,4 +41,4 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-a-defect-can-carry-a-second-label) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-2.md) · [Next claim →](08-admissibility-frontier-the-third-term-is-the-mediator-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-a-defect-can-carry-a-second-label) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-local-rank-is-not-global-identity-claim-1.md)

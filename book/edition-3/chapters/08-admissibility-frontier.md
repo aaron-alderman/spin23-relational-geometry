@@ -104,6 +104,23 @@ This is a constructive but kenotic closure. The chiral topology did not generate
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-3.md)
 
+<a id="hot-off-the-press-local-rank-is-not-global-identity"></a>
+## Hot off the press — local rank is not global identity
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** A compact history-dependent model now makes the difference between nearby distinguishability and whole-family identification exact. A pulse drives a latent amplitude, memory carries part of it into later steps, and a calibrated power detector squares the result. Its local information matrix has full rank across 34,782 audited points, yet positive and negative control couplings produce identical power records.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-local-rank-is-not-global-identity-claim-1.md)
+
+The collision is structural, not numerical. Gain calibration and three pulse histories recover the memory coefficient and coupling magnitude, but power has forgotten the coupling's orientation. The honest power-only answer is therefore a two-point sign quotient. One coherent amplitude measurement relative to a calibrated phase reference retains the missing relation and makes the five-record bundle globally injective on the declared compact family.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-local-rank-is-not-global-identity-claim-2.md)
+
+This closes one finite detector-design question, not nonlinear identification in general. The look-here experiment is a resonator or oscillator driven by the same preregistered histories while phase-reference drift, gain, saturation and model discrepancy are varied through measured covariances. A failure should first reopen the carrier or detector model. Only a stable residue across independently calibrated platforms would point beyond theoretical engineering toward new dynamics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-local-rank-is-not-global-identity-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 
@@ -948,6 +965,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md)
 - [admissibility_105_fixed_index_defect_information_no_go.md](../../../corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md)
 - [admissibility_106_reflection_resolved_defect_transport.md](../../../corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md)
+- [admissibility_107_global_nonlinear_detector_injectivity.md](../../../corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md)
 
 ---
 

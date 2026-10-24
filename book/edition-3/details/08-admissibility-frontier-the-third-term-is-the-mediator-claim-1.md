@@ -89,9 +89,10 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **admissibility 104 relaxation auxiliary gaussian kms completion** — [admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md)
 - **admissibility 105 fixed index defect information no go** — [admissibility_105_fixed_index_defect_information_no_go.md](../../../corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md)
 - **admissibility 106 reflection resolved defect transport** — [admissibility_106_reflection_resolved_defect_transport.md](../../../corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md)
+- **admissibility 107 global nonlinear detector injectivity** — [admissibility_107_global_nonlinear_detector_injectivity.md](../../../corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#the-third-term-is-the-mediator) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-3.md) · [Next claim →](08-admissibility-frontier-the-third-term-is-the-mediator-claim-2.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#the-third-term-is-the-mediator) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-local-rank-is-not-global-identity-claim-3.md) · [Next claim →](08-admissibility-frontier-the-third-term-is-the-mediator-claim-2.md)

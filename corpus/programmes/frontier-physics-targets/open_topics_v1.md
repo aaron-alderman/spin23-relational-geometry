@@ -5,7 +5,7 @@
 **Machine authority:** [open-topic register](open_topics_register_v1.json)  
 **Detector map:** [detector and frontier atlas](detector_frontier_atlas_v1.md)
 
-The register contains **50** independently closable topics: **44 remain live and six are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
+The register contains **50** independently closable topics: **42 remain live and eight are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
 
 ## Operating rule
 
@@ -61,7 +61,6 @@ for another dimensionless redesign.
 | OT-011 | Magnon-polaron versus skew scattering | AZ-064 replaces the non-minimal disorder reading with an activation-order plus moving-crossing protocol; same-specimen source data remain required |
 | OT-012 | YIG three-mode versus four-mode fork | AZ-062 closes the reported three-mode protected-doublet route and makes one calibrated four-mode tripod the active target |
 | OT-013 | Non-Hermitian topology versus active selection | AZ-065 separates instantaneous sheet exchange from finite-rate direction-selected evolution; measured-carrier execution remains required |
-| OT-015 | Defect information beyond index | closed by AZ-106: calibrated mirror parity is independent of the signed chiral index, survives symmetric wall homotopies and selects complementary coherent ports; device realization is an extension |
 | OT-016 | Hydrodynamic multichannel cone | AZ-103 gives a stable subluminal relaxation wedge; AZ-104 equips its auxiliary modes with positive classical Gaussian KMS noise; quantum/nonlinear dynamical KMS, the stress-Ward and contact theory, and microscopic matching remain |
 | OT-017 | Source-restricted logical generators | exact closures are 18/54/1,152/51,840 for the source-visible, compiled-cross, imported-local and universal alphabets; the open work is one carrier that physically supplies both mutual coupling and polarization change |
 | OT-018 | New contextual admissibility inequality | AZ-066 kills the triangle bound as full-matrix positivity; AZ-095 classifies the shared-measure theorem; AZ-096 shows storage typing flips all 54 fitted-cell verdicts and leaves measured slopes/covariance, shared dilation and detector context open |
@@ -84,7 +83,6 @@ for another dimensionless redesign.
 | OT-026 | Graph-to-Jordan translation | product-, norm- and rank-preserving map |
 | OT-027 | Physical operator and dynamics functor | action generating operators, amplitudes and detector map |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
-| OT-034 | Global nonlinear detector injectivity | finite intervention theorem or explicit residual quotient |
 | OT-038 | Source-bearing A2 commuting square | calibrate one common-carrier intertwiner from the selector primitive-form split to the rectangular ports, treat the nonzero channel as covariant symmetry breaking, and select the noncompact reverse-channel phase |
 | OT-039 | Microscopic wall-pseudoscalar coefficient | source-derived coupling with sign, magnitude and radiative stability |
 | OT-040 | Matter-plus-field Coulomb energy current | gauge- and limit-consistent total energy continuity |
@@ -207,7 +205,9 @@ route.
 |---|---|---|
 | OT-001 | Forward endpoint, reversal tomography and process singular values separate geometric holonomy, static splitting and differential loss in one generative simulator; global nonlinear injectivity remains OT-034. | [AZ-057](../admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md) |
 | OT-014 | The finite-chain ledger is (N_{\rm b}+\nu_S-1=N_C); all 14 original cases and a 36-case length census close. | [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md) |
+| OT-015 | A calibrated mirror representation distinguishes isospectral fixed-index defects, survives reflection-preserving wall homotopies and selects complementary coherent ports; device realization remains an extension. | [AZ-106](../admissibility/admissibility_106_reflection_resolved_defect_transport.md) |
 | OT-019 | A six-cell passive diffusion/RC carrier carries positivity and the constant mode through fixed six-to-three-to-two detector maps; direct and composed pushforwards agree, and held-out substitutions verify both exact autonomy and scale-dependent memory within a telescoping semigroup bound. | [AZ-099](../admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md) |
+| OT-034 | A nonlinear power detector has full local rank but an exact beta-sign quotient; gain calibration, three finite pulse histories and one coherent reference make the declared compact family globally injective. | [AZ-107](../admissibility/admissibility_107_global_nonlinear_detector_injectivity.md) |
 | OT-041 | Both band-edge collision controls and their linear local scaling are certified by cofactor and sheet continuation. | [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md) |
 | OT-043 | In the small-index calibrated LTI family, power-only records are exactly AM/FM blind; the carrier plus both coherent sidebands reconstruct mixed modulation across 972 held-out cases. | [Wave 7.65](../frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md) |
 | OT-044 | The normalized two-channel G2 fold is exactly an ordinary coupled-oscillator response; unequal addressed perturbations of a verified pre-fold D4 star provide the rank-two-to-rank-four reopening test. | [Wave 7.70](../frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md) |
