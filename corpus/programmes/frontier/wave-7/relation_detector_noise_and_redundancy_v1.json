@@ -1,0 +1,44 @@
+{
+  "schema": "relation-detector-noise-and-redundancy/1",
+  "date": "2026-10-24",
+  "minimalSchedule": "relation_minimal_detector_schedule_v1.json",
+  "noiseModel": "All normalized detector channels have independent equal variance sigma^2; parameter covariance is sigma^2 (R^T R)^-1.",
+  "minimal": {
+    "channels": 24,
+    "inverseNonzeroCoefficients": 44,
+    "inverseTotalCoefficients": 576,
+    "inverseCoefficientAlphabet": [-1, 0, 1],
+    "totalVarianceFactor": 44,
+    "maximumVarianceFactor": 8,
+    "worstRelations": [
+      {"relation": "QR-001", "varianceFactor": 8},
+      {"relation": "QR-019", "varianceFactor": 5},
+      {"relation": "QR-010", "varianceFactor": 3},
+      {"relation": "QR-015", "varianceFactor": 3},
+      {"relation": "QR-020", "varianceFactor": 3},
+      {"relation": "QR-027", "varianceFactor": 3}
+    ]
+  },
+  "greedyMinimaxAdditions": [
+    {"order": 1, "channel": "triangle_pair:QR-006*QR-008", "maximumVarianceFactor": 7.5, "totalVarianceFactor": 42.5},
+    {"order": 2, "channel": "triangle_pair:QR-023*QR-024", "maximumVarianceFactor": 7, "totalVarianceFactor": 41},
+    {"order": 3, "channel": "triangle_pair:QR-012*QR-014", "maximumVarianceFactor": 6.5, "totalVarianceFactor": 40},
+    {"order": 4, "channel": "triangle_pair:QR-014*QR-016", "maximumVarianceFactor": 6, "totalVarianceFactor": 39},
+    {"order": 5, "channel": "triangle_pair:QR-016*QR-017", "maximumVarianceFactor": 5.5, "totalVarianceFactor": 38},
+    {"order": 6, "channel": "triangle_pair:QR-018*QR-022", "maximumVarianceFactor": 5, "totalVarianceFactor": 37},
+    {"order": 7, "channel": "path_probe:QR-022", "maximumVarianceFactor": 4.944444444444445, "totalVarianceFactor": 35.55555555555556},
+    {"order": 8, "channel": "triangle_pair:QR-011*QR-012", "maximumVarianceFactor": 4.777777777777779, "totalVarianceFactor": 35.05555555555556}
+  ],
+  "allNonzeroCompositionChannelsPlusDirect": {
+    "channels": 57,
+    "maximumVarianceFactor": 4.273710945243522,
+    "totalVarianceFactor": 16.089221109576044,
+    "hardestRelation": "QR-001"
+  },
+  "qualifications": {
+    "designRule": "At each step minimize the largest diagonal covariance entry; break ties by total covariance trace and then channel label.",
+    "globalOptimumClaimed": false,
+    "physicalNoiseCalibrationRequired": true,
+    "interpretation": "The schedule quantifies statistical sensitivity only after channel normalization; frequency-dependent, correlated and heteroscedastic device noise requires a weighted Fisher redesign."
+  }
+}

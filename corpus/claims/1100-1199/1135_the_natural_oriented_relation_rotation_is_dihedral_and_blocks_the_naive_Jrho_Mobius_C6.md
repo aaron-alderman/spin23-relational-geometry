@@ -188,6 +188,8 @@ An extra central extension, grading shift, spectator path or nontrivial natural 
 
 **Group-order stop:** the six elements of \(D_3\) do not imply the existence of an element of order six. \(S_3\) has no such element.
 
+**Subsequent independent recurrence:** [Mystery Atlas 16](../../programmes/dynatology/mystery_atlas_16_parity_triangle_and_three_step_return.md) finds the same obstruction in the golden matrix's parity shadow. There \(GL(2,2)\cong S_3\) acts transitively on three index-two sublattices, but its trivial center and absence of order-six elements prevent the parity triangle itself from supplying a commuting sheet flip or \(C_6\) lift. The agreement is exact at the finite-group level; the carriers remain different.
+
 **Extension stop:** any proposed order-six lift must exhibit the extra datum that changes the relation \(JrJ=r^{-1}\) or enlarges the group.
 
 **Positive trigger:** derive \(c\) as a covariant frame transport on an opposite-category sheet, or construct a central/type extension in which the lifted reflection genuinely has order six.

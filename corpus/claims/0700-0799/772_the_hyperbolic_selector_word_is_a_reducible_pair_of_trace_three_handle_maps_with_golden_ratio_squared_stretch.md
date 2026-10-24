@@ -131,3 +131,8 @@ The certificate verifies block decomposition, determinant, trace, golden-ratio s
 
 - [The carrier color action is one-handle local](765_the_carrier_color_unipotent_is_exactly_a_one_handle_inverse_twist_fourier_word_not_a_microscopic_color_permutation_or_mutual_gate.md)
 - [The combined selectors contain a hyperbolic infinite-order word](771_the_three_carrier_selectors_generate_a_hyperbolic_infinite_order_word_so_no_positive_unitary_matter_intertwiner_can_realize_them_all.md)
+- [Girih inflation intertwiner and index-two scar](../../programmes/dynatology/mystery_atlas_15_girih_inflation_intertwiner_and_index_two_scar.md)
+
+## Subsequent exact identification
+
+The two trace-three blocks are integrally conjugate to the standard Fibonacci/Penrose inflation matrix (S=\left(\begin{smallmatrix}2&1\\1&1\end{smallmatrix}\right)). Explicit unimodular intertwiners are recorded in the [girih inflation analysis](../../programmes/dynatology/mystery_atlas_15_girih_inflation_intertwiner_and_index_two_scar.md). Thus the word is exactly (GL(4,\mathbb Z))-conjugate to (S\oplus S), while the carrier-identification boundary in this claim remains unchanged.

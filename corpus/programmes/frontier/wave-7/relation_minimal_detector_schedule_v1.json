@@ -1,0 +1,62 @@
+{
+  "schema": "relation-minimal-detector-schedule/1",
+  "date": "2026-10-24",
+  "sourceRegister": "corpus/programmes/quotient-scars/quotient_scar_register_v1.json",
+  "purpose": "A minimal integral measurement basis for reconstructing all 24 backbone-relation amplitudes in the directed emulator.",
+  "candidatePool": {
+    "formalChannels": 57,
+    "nonzeroChannels": 56,
+    "zeroFormalChannels": ["path_probe:QR-003"],
+    "families": ["path_probe", "triangle_pair", "direct"]
+  },
+  "compositionChannels": [
+    "path_probe:QR-020",
+    "triangle_pair:QR-023*QR-027",
+    "triangle_pair:QR-019*QR-023",
+    "triangle_pair:QR-018*QR-019",
+    "triangle_pair:QR-021*QR-024",
+    "triangle_pair:QR-016*QR-018",
+    "path_probe:QR-006",
+    "triangle_pair:QR-014*QR-015",
+    "triangle_pair:QR-021*QR-023",
+    "triangle_pair:QR-009*QR-015",
+    "path_probe:QR-005",
+    "path_probe:QR-027",
+    "triangle_pair:QR-012*QR-016",
+    "path_probe:QR-008",
+    "triangle_pair:QR-022*QR-024",
+    "triangle_pair:QR-009*QR-011",
+    "path_probe:QR-009",
+    "triangle_pair:QR-006*QR-009",
+    "path_probe:QR-026",
+    "triangle_pair:QR-015*QR-016",
+    "path_probe:QR-007",
+    "triangle_pair:QR-008*QR-009",
+    "path_probe:QR-025"
+  ],
+  "directChannel": "direct:QR-003",
+  "counts": {
+    "path": 9,
+    "triangle": 14,
+    "direct": 1,
+    "total": 24
+  },
+  "exact": {
+    "rank": 24,
+    "absoluteDeterminant": 1,
+    "inverseIsIntegral": true
+  },
+  "conditioning": {
+    "smallestSingularValue": 0.32844972406400064,
+    "largestSingularValue": 3.044605998223162,
+    "conditionNumber": 9.269625684416468
+  },
+  "searchQualification": {
+    "method": "best-conditioned unimodular basis found among 500 deterministic shuffled greedy bases",
+    "globalOptimumClaimed": false,
+    "sampledAbsoluteDeterminants": [1, 2],
+    "sampledDeterminantGcd": 1,
+    "ruledOutInference": "The determinant-eight value of the pivoted maximum-volume seed is basis-dependent and is not a canonical detector response-lattice index."
+  },
+  "minimality": "The composition response has rank 23 and kernel QR-003, so 23 independent composition channels plus one direct QR-003 channel are necessary and sufficient."
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "dynatology-girih-figure4f-defect-oracle/1",
+  "date": "2026-10-24",
+  "status": "exact_source_annotation_oracle_independent_detector_pending",
+  "source": {
+    "url": "https://peterlu.org/pdf/publications/2007/Science_315_1106_2007.pdf",
+    "sha256": "7D6BFA0A729C22E845699F0E6A8778ABA04D511BA8C1CF83C26186C2EEBD97CA",
+    "page": 6,
+    "figure": "4F"
+  },
+  "registeredSupports": {
+    "beforePurpleBBox": [155.858, 357.15, 216.324, 439.976],
+    "afterPurpleBBox": [292.24, 357.15, 352.705, 439.976],
+    "horizontalTranslation": 136.3815,
+    "translationRoundingTolerance": 0.0005,
+    "sameVerticalExtent": true,
+    "sameWidthWithinSourceRounding": true
+  },
+  "sourceAnnotation": {
+    "yellowFilledPathComponentsBefore": 2,
+    "yellowFilledPathComponentsAfter": 0,
+    "closedDotSubpathsPerComponent": [6, 6],
+    "displayDots": 12,
+    "violatedSeams": 2,
+    "connectedPointDefects": 1,
+    "yellowBBoxes": [
+      [155.186, 385.288, 173.748, 409.763],
+      [197.711, 416.171, 216.271, 440.648]
+    ]
+  },
+  "repair": {
+    "move": "exchange_positions_of_one_bowtie_and_one_hexagon",
+    "tileCountDelta": {"decagon": 0, "hexagon": 0, "bowtie": 0},
+    "beforeDefects": 1,
+    "afterDefects": 0
+  },
+  "blindDetectorProtocol": {
+    "allowedInputs": ["black_Penrose_subdivision_boundaries", "red_ribbon_vectors", "blue_ribbon_vectors", "edge_reversal_rule", "registered_support"],
+    "withheldInputs": ["yellow_annotation", "caption_defect_label", "hand_selected_mismatch_coordinates"],
+    "expectedBeforeViolatedSeams": 2,
+    "expectedBeforeConnectedDefects": 1,
+    "expectedAfterViolatedSeams": 0,
+    "translationInvariant": true
+  },
+  "stopRule": "after_the_blind_detector_passes_or_fails_do_not_expand_to_the_3700_tile_panel_without_a_held_out_source_or_demonstrated_parity_coupling"
+}
+

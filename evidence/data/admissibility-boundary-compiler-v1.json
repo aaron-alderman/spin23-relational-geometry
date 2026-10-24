@@ -1,0 +1,396 @@
+{
+  "schema": "admissibility.boundary-compiler/1",
+  "id": "AZ-053",
+  "generatedAt": "2026-10-24T08:37:05.341Z",
+  "theorem": {
+    "statement": "A detector D on realizations factors through a coarse map C iff D is constant on every fibre of C.",
+    "witnessCriterion": "C(x)=C(y) and D(x)!=D(y) proves that no function dBar can satisfy D=dBar_after_C."
+  },
+  "model": {
+    "description": "eight-site scalar tight-binding conductor with identical leads",
+    "coarseInventory": {
+      "sites": 8,
+      "onsiteZeros": 8,
+      "strongBonds": 4,
+      "weakBonds": 3,
+      "strong": 1,
+      "weak": 0.45,
+      "leadCoupling": 0.68
+    },
+    "placementA": "alternating",
+    "placementB": "clustered",
+    "sameInventory": true,
+    "sameTraceH2": true
+  },
+  "runs": {
+    "alternating": {
+      "bonds": [
+        1,
+        0.45,
+        1,
+        0.45,
+        1,
+        0.45,
+        1
+      ],
+      "traceH2": 9.215000000000002,
+      "traceH4": 13.106037500000003,
+      "thermoelectric": {
+        "units": "kB=e=hbar=1",
+        "chemicalPotential": 0.37,
+        "temperature": 0.08,
+        "conductanceMomentL0": 0.059032367190534,
+        "heatMomentL1": 0.012449429647681339,
+        "seebeck": -2.636144847346906,
+        "mottApproximation": -1.6921500139041594,
+        "transmissionAtChemicalPotential": 0.02101541180463096
+      },
+      "casimirProxy": -0.0024915843005676778
+    },
+    "clustered": {
+      "bonds": [
+        1,
+        1,
+        0.45,
+        1,
+        0.45,
+        0.45,
+        1
+      ],
+      "traceH2": 9.215000000000002,
+      "traceH4": 15.650062500000002,
+      "thermoelectric": {
+        "units": "kB=e=hbar=1",
+        "chemicalPotential": 0.37,
+        "temperature": 0.08,
+        "conductanceMomentL0": 0.14680458584663433,
+        "heatMomentL1": -0.019875875980443863,
+        "seebeck": 1.6923752641835081,
+        "mottApproximation": 1.661378613617346,
+        "transmissionAtChemicalPotential": 0.07875081724938013
+      },
+      "casimirProxy": -0.008509249898407551
+    }
+  },
+  "difference": {
+    "traceH2": 0,
+    "traceH4": 2.5440249999999995,
+    "seebeck": 4.328520111530414,
+    "casimirProxy": -0.006017665597839873
+  },
+  "completePlacementFibre": {
+    "size": 35,
+    "expectedBinomialSize": 35,
+    "seebeckRange": {
+      "minimum": {
+        "word": "SWSWSWS",
+        "value": -2.636144847346907
+      },
+      "maximum": {
+        "word": "SWWSWSS",
+        "value": 1.6923752641835181
+      },
+      "distinctAt1e9": 19
+    },
+    "casimirProxyRange": {
+      "minimum": {
+        "word": "WSWSWSS",
+        "value": -0.017007825903731493
+      },
+      "maximum": {
+        "word": "SWSWSWS",
+        "value": -0.0024914311020027297
+      },
+      "distinctAt1e9": 35
+    },
+    "traceH4Range": {
+      "minimum": {
+        "word": "SWSWSWS",
+        "value": 13.106037500000003
+      },
+      "maximum": {
+        "word": "WWSSSSW",
+        "value": 22.0300625
+      },
+      "distinctAt1e9": 8
+    },
+    "seebeckSigns": {
+      "negative": 9,
+      "nearZero": 0,
+      "positive": 26
+    },
+    "seebeckCasimirPearsonCorrelation": -0.012599027945643607,
+    "reversalAudit": {
+      "orbitCount": 19,
+      "palindromicOrbitCount": 3,
+      "maximumSeebeckDifference": 4.996003610813204e-16,
+      "maximumCasimirDifference": 0.009296338913978398,
+      "thermoelectricResponseIsReversalBlind": true,
+      "oneSidedCasimirProxyIsReversalSensitive": true
+    },
+    "members": [
+      {
+        "word": "SSSSWWW",
+        "traceH4": 21.384087500000003,
+        "seebeck": 0.27745108670781576,
+        "transmissionAtChemicalPotential": 0.6032397598182121,
+        "casimirProxy": -0.0057175321228188644
+      },
+      {
+        "word": "SSSWSWW",
+        "traceH4": 18.840062500000002,
+        "seebeck": -0.30388106034414386,
+        "transmissionAtChemicalPotential": 0.29639788130903316,
+        "casimirProxy": -0.003453824776120207
+      },
+      {
+        "word": "SSSWWSW",
+        "traceH4": 18.840062500000002,
+        "seebeck": 0.8816162274236364,
+        "transmissionAtChemicalPotential": 0.1571283610355342,
+        "casimirProxy": -0.004476538989954449
+      },
+      {
+        "word": "SSSWWWS",
+        "traceH4": 18.194087500000002,
+        "seebeck": -0.0017802741020668251,
+        "transmissionAtChemicalPotential": 0.9695283981872036,
+        "casimirProxy": -0.003761537188308918
+      },
+      {
+        "word": "SSWSSWW",
+        "traceH4": 18.840062500000002,
+        "seebeck": 0.5722491748903921,
+        "transmissionAtChemicalPotential": 0.6924328174025931,
+        "casimirProxy": -0.006842421657622961
+      },
+      {
+        "word": "SSWSWSW",
+        "traceH4": 16.296037500000004,
+        "seebeck": 0.10626294062927966,
+        "transmissionAtChemicalPotential": 0.056529119918596056,
+        "casimirProxy": -0.011307995716786654
+      },
+      {
+        "word": "SSWSWWS",
+        "traceH4": 15.650062500000002,
+        "seebeck": 1.6923752641835177,
+        "transmissionAtChemicalPotential": 0.07875081724938013,
+        "casimirProxy": -0.008504931527891923
+      },
+      {
+        "word": "SSWWSSW",
+        "traceH4": 18.840062500000002,
+        "seebeck": 0.3299358849520746,
+        "transmissionAtChemicalPotential": 0.9506785791836266,
+        "casimirProxy": -0.006131053768396134
+      },
+      {
+        "word": "SSWWSWS",
+        "traceH4": 15.650062500000004,
+        "seebeck": 0.5517213482321608,
+        "transmissionAtChemicalPotential": 0.1774514202165536,
+        "casimirProxy": -0.005398449008491854
+      },
+      {
+        "word": "SSWWWSS",
+        "traceH4": 18.194087500000002,
+        "seebeck": 0.18320765716995047,
+        "transmissionAtChemicalPotential": 0.5587154169120722,
+        "casimirProxy": -0.006650457910557427
+      },
+      {
+        "word": "SWSSSWW",
+        "traceH4": 18.840062500000002,
+        "seebeck": -0.5482444172171071,
+        "transmissionAtChemicalPotential": 0.26312124578528184,
+        "casimirProxy": -0.0026757135738788664
+      },
+      {
+        "word": "SWSSWSW",
+        "traceH4": 16.2960375,
+        "seebeck": 1.5498693075244745,
+        "transmissionAtChemicalPotential": 0.054527463031298885,
+        "casimirProxy": -0.003533906098327007
+      },
+      {
+        "word": "SWSSWWS",
+        "traceH4": 15.6500625,
+        "seebeck": 0.8120634490335749,
+        "transmissionAtChemicalPotential": 0.3265316286482096,
+        "casimirProxy": -0.0029556803333512555
+      },
+      {
+        "word": "SWSWSSW",
+        "traceH4": 16.2960375,
+        "seebeck": 0.3707343448140862,
+        "transmissionAtChemicalPotential": 0.0870036104503818,
+        "casimirProxy": -0.0025620206053831723
+      },
+      {
+        "word": "SWSWSWS",
+        "traceH4": 13.106037500000003,
+        "seebeck": -2.636144847346907,
+        "transmissionAtChemicalPotential": 0.02101541180463096,
+        "casimirProxy": -0.0024914311020027297
+      },
+      {
+        "word": "SWSWWSS",
+        "traceH4": 15.6500625,
+        "seebeck": 0.5517213482321611,
+        "transmissionAtChemicalPotential": 0.17745142021655352,
+        "casimirProxy": -0.0026233768224974384
+      },
+      {
+        "word": "SWWSSSW",
+        "traceH4": 18.840062500000002,
+        "seebeck": 0.6978175585352624,
+        "transmissionAtChemicalPotential": 0.1485780049323773,
+        "casimirProxy": -0.003979869193393523
+      },
+      {
+        "word": "SWWSSWS",
+        "traceH4": 15.6500625,
+        "seebeck": 0.8120634490335751,
+        "transmissionAtChemicalPotential": 0.32653162864820956,
+        "casimirProxy": -0.003326471794063971
+      },
+      {
+        "word": "SWWSWSS",
+        "traceH4": 15.6500625,
+        "seebeck": 1.6923752641835181,
+        "transmissionAtChemicalPotential": 0.07875081724938017,
+        "casimirProxy": -0.004348495078657144
+      },
+      {
+        "word": "SWWWSSS",
+        "traceH4": 18.194087500000002,
+        "seebeck": -0.0017802741020669095,
+        "transmissionAtChemicalPotential": 0.9695283981872038,
+        "casimirProxy": -0.0030820200861562987
+      },
+      {
+        "word": "WSSSSWW",
+        "traceH4": 22.0300625,
+        "seebeck": 0.5490979308057201,
+        "transmissionAtChemicalPotential": 0.7152166417908217,
+        "casimirProxy": -0.009320571965399743
+      },
+      {
+        "word": "WSSSWSW",
+        "traceH4": 19.486037500000002,
+        "seebeck": -0.7135670897439579,
+        "transmissionAtChemicalPotential": 0.1462107602337565,
+        "casimirProxy": -0.014801444881620659
+      },
+      {
+        "word": "WSSSWWS",
+        "traceH4": 18.840062500000002,
+        "seebeck": 0.697817558535262,
+        "transmissionAtChemicalPotential": 0.14857800493237724,
+        "casimirProxy": -0.011270911994958817
+      },
+      {
+        "word": "WSSWSSW",
+        "traceH4": 19.486037500000002,
+        "seebeck": 0.7747767444135559,
+        "transmissionAtChemicalPotential": 0.7592288690286424,
+        "casimirProxy": -0.008550400742064056
+      },
+      {
+        "word": "WSSWSWS",
+        "traceH4": 16.296037500000004,
+        "seebeck": 0.3707343448140862,
+        "transmissionAtChemicalPotential": 0.08700361045038178,
+        "casimirProxy": -0.00782153396999
+      },
+      {
+        "word": "WSSWWSS",
+        "traceH4": 18.840062500000002,
+        "seebeck": 0.3299358849520751,
+        "transmissionAtChemicalPotential": 0.9506785791836259,
+        "casimirProxy": -0.009098389216870511
+      },
+      {
+        "word": "WSWSSSW",
+        "traceH4": 19.486037500000002,
+        "seebeck": -0.713567089743958,
+        "transmissionAtChemicalPotential": 0.1462107602337566,
+        "casimirProxy": -0.015817284351188482
+      },
+      {
+        "word": "WSWSSWS",
+        "traceH4": 16.2960375,
+        "seebeck": 1.5498693075244747,
+        "transmissionAtChemicalPotential": 0.05452746303129891,
+        "casimirProxy": -0.012830245012305404
+      },
+      {
+        "word": "WSWSWSS",
+        "traceH4": 16.2960375,
+        "seebeck": 0.10626294062927956,
+        "transmissionAtChemicalPotential": 0.05652911991859604,
+        "casimirProxy": -0.017007825903731493
+      },
+      {
+        "word": "WSWWSSS",
+        "traceH4": 18.840062500000002,
+        "seebeck": 0.8816162274236364,
+        "transmissionAtChemicalPotential": 0.15712836103553418,
+        "casimirProxy": -0.01158979653814062
+      },
+      {
+        "word": "WWSSSSW",
+        "traceH4": 22.0300625,
+        "seebeck": 0.5490979308057201,
+        "transmissionAtChemicalPotential": 0.7152166417908218,
+        "casimirProxy": -0.007273793488477549
+      },
+      {
+        "word": "WWSSSWS",
+        "traceH4": 18.840062500000002,
+        "seebeck": -0.5482444172171071,
+        "transmissionAtChemicalPotential": 0.2631212457852816,
+        "casimirProxy": -0.006458849520608271
+      },
+      {
+        "word": "WWSSWSS",
+        "traceH4": 18.840062500000002,
+        "seebeck": 0.5722491748903918,
+        "transmissionAtChemicalPotential": 0.6924328174025932,
+        "casimirProxy": -0.007829920392593101
+      },
+      {
+        "word": "WWSWSSS",
+        "traceH4": 18.840062500000002,
+        "seebeck": -0.30388106034414397,
+        "transmissionAtChemicalPotential": 0.29639788130903305,
+        "casimirProxy": -0.006200679679642249
+      },
+      {
+        "word": "WWWSSSS",
+        "traceH4": 21.3840875,
+        "seebeck": 0.2774510867078153,
+        "transmissionAtChemicalPotential": 0.6032397598182119,
+        "casimirProxy": -0.008595717193892096
+      }
+    ]
+  },
+  "factorizationTests": {
+    "traceH2FactorsThroughInventoryForThisPair": true,
+    "traceH4FactorsThroughInventoryForThisPair": false,
+    "seebeckFactorsThroughInventoryForThisPair": false,
+    "casimirProxyFactorsThroughInventoryForThisPair": false
+  },
+  "absentChannels": {
+    "anomalousNernst": "not_represented_scalar_1d_model_has_no_transverse_time_reversal_odd_block",
+    "physicalCasimirForce": "not_claimed_proxy_is_a_declared_scalar_imaginary_frequency_round_trip_functional"
+  },
+  "admission": {
+    "sameInventoryDifferentResponseWitness": true,
+    "generalNoFactorizationTheoremInstantiated": true,
+    "commonCasimirSeebeckInvariantEstablished": false,
+    "nernstBridgeEstablished": false,
+    "materialPredictionEstablished": false
+  }
+}

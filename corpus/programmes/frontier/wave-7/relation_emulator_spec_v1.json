@@ -1,0 +1,49 @@
+{
+  "schema": "relation-emulator-spec/1",
+  "date": "2026-10-24",
+  "purpose": "Test the directed quotient-scar operatorization and its QR-003 composition null without claiming a fundamental Spin(2,3) carrier.",
+  "hardwareClass": "active non-Hermitian acoustic or equivalent programmable directed-wave network",
+  "network": {
+    "modes": 16,
+    "directedLinks": 24,
+    "linkSource": "corpus/programmes/quotient-scars/quotient_scar_register_v1.json excluding shares_action_not_carrier",
+    "disabledSeams": ["QR-002", "QR-004", "QR-013"],
+    "wallLink": "QR-003",
+    "sufficientStabilityCondition": "kappa > 7 |g| for uniform link scale g"
+  },
+  "observables": {
+    "direct": "Y1_e = <target(e)|A|source(e)>",
+    "path": "Y2 = <Omega|A^2|Omega>; two-tone derivatives recover the symmetrized path matrix",
+    "triangle": "Y3 is the polarized sum over the eleven undirected graph triangles",
+    "tomography": "full complex transfer matrix over drive frequency, not intensity alone"
+  },
+  "drive": {
+    "primary": "modulate QR-003 with calibrated amplitude delta and sweep omega",
+    "partnerProbe": "repeat with each edge as the second bilinear slot or use equivalent two-tone Hessian tomography",
+    "reversalControl": "inject a calibrated reverse QR-003 amplitude epsilon",
+    "seamControl": "inject QR-002 separately; keep QR-004 and QR-013 disabled during the first-order wall test"
+  },
+  "exactPredictions": {
+    "idealCompositionRank": 23,
+    "idealKernel": ["QR-003"],
+    "idealNextSingularValue": 0.4552467353503346,
+    "directChannelCompletedRank": 24,
+    "reciprocalLeakageLaw": "s_min = ||wall column|| = 4 |epsilon| until it meets the visible spectrum",
+    "gainDisorder": "arbitrary nonzero directed edge rescaling preserves the exact QR-003 null",
+    "firstOrderSeamContaminant": "QR-002",
+    "hermitianCompletion": "changes the claim by producing a QR-003 two-step return"
+  },
+  "calibrations": [
+    "measure forward and reverse complex transfer on every link",
+    "fit amplifier gain, phase and added noise independently",
+    "measure direct pickup with all partner probes disabled",
+    "toggle QR-002 to determine its wall-response template",
+    "repeat the singular-value reconstruction across frequency and drive amplitude",
+    "verify linear and quadratic scaling using fundamental and second-harmonic lock-in channels"
+  ],
+  "acceptance": {
+    "emulatorPass": "After subtracting calibrated reciprocal leakage, QR-002 seam response and direct pickup, the QR-003 composition residual is statistically consistent with zero while the other 23 directions retain rank.",
+    "graphFalsifier": "A coherent residual QR-003 path or triangle response persists across frequency and amplitude with scaling inconsistent with calibrated leakage or seam templates.",
+    "physicsPromotionGate": "An independent observable dictionary identifies the sixteen modes and directed couplings with a physical carrier and derives rather than programs their amplitudes."
+  }
+}

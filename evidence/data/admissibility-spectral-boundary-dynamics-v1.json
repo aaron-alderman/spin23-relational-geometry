@@ -1,0 +1,53 @@
+{
+  "schema": "admissibility.spectral-boundary-dynamics/1",
+  "id": "AZ-051",
+  "date": "2026-10-24",
+  "status": "typed_spectral_synthesis_no_fundamental_spin23_identification",
+  "strata": [
+    {"order": 1, "id": "free_continuum", "signature": "continuous generalized spectrum or branch cut", "dynamics": "translation and scattering"},
+    {"order": 2, "id": "bloch_band", "signature": "quasimomentum-labelled band", "dynamics": "group velocity and interband transitions"},
+    {"order": 3, "id": "interface_band", "signature": "normal localization with tangential Bloch or continuum label", "dynamics": "boundary transport"},
+    {"order": 4, "id": "resonance", "signature": "continued-sheet complex pole with positive width", "dynamics": "temporary capture and decay"},
+    {"order": 5, "id": "threshold", "signature": "pole zero or branch-point collision", "dynamics": "large scattering length and delay"},
+    {"order": 6, "id": "efimov_bound_side", "signature": "log-periodic bound poles accumulating at threshold", "dynamics": "geometric hierarchy of sizes and times"},
+    {"order": 7, "id": "discrete_bound", "signature": "physical-sheet real pole below continuum with normalizable eigenvector", "dynamics": "phase evolution and bound-bound transitions"}
+  ],
+  "standardIdentities": {
+    "stationaryState": "Psi_n(t)=exp(-i E_n t/hbar) psi_n",
+    "spectralShiftSchematic": "Delta rho(E)=sum_b delta(E-E_b)+(1/pi)d delta(E)/dE",
+    "levinsonSchematic": "delta(0)-delta(infinity)=N_b pi subject to dimensional and half-bound corrections",
+    "wignerSmith": "Q(E)=-i hbar S^dagger dS/dE",
+    "resolvent": "G^R(omega)=(omega-H+i0)^(-1)",
+    "efimovLengthRatio": 22.7,
+    "efimovEnergyRatioApprox": 515
+  },
+  "casimirFirewall": {
+    "lieCasimir": "representation invariant or invariant differential operator",
+    "casimirEffect": "boundary- and material-dependent free-energy difference",
+    "sharedNameIsMechanismIdentity": false
+  },
+  "spin23Firewall": {
+    "electronPoleEqualsAtomicallyBoundElectron": false,
+    "curvatureAloneImpliesBinding": false,
+    "closedLoopAloneImpliesLocalization": false,
+    "adsLevelSpacingEqualsElectronMass": false,
+    "currentAdvance": "dynamics grammar and executable bridge target"
+  },
+  "semanticFirewall": {
+    "greekFallWordMeansCurvature": false,
+    "biblicalFallDerivesSpectralPhysics": false,
+    "allowedUse": "heuristic type-shape for boundary crossing, deviation, restriction and retained history"
+  },
+  "minimalModel": {
+    "sectors": ["free_continuum", "periodic_boundary_band", "localized_level", "radiative_sink"],
+    "requiredOutputs": ["pole_locations", "boundary_dispersion", "localization_length", "scattering_phase", "wigner_smith_delay", "bound_state_count", "energy_ledger", "regularized_spectral_energy", "log_periodicity_control"]
+  },
+  "targetLinks": ["FPT-003", "FPT-007", "FPT-010", "FPT-017"],
+  "admission": {
+    "typedSynthesis": "SUPPORTED",
+    "executableThreeSectorModel": "OPEN",
+    "fundamentalSpin23ElectronBinding": "NOT_ADMITTED",
+    "theologicalPhysicalIdentity": "PROHIBITED"
+  }
+}
+

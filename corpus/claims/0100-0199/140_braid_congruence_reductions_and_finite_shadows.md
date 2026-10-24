@@ -171,9 +171,26 @@ It does not contradict the fact that no connected group maps nontrivially and co
 
 The [braid congruence certificate](../../../verification/verify/verify-braid_congruence_reductions.mjs) enumerates the generated matrix groups for \(p=2,3,5\), verifies their orders and determinants, tracks the full twist and computes the projective orders.
 
+## Subsequent exact identification: the golden parity triangle
+
+[Mystery Atlas 16](../../programmes/dynatology/mystery_atlas_16_parity_triangle_and_three_step_return.md) identifies a specific existing corpus action inside the \(p=2\) shadow. For the Penrose/corpus golden matrix
+
+\[
+S=\begin{pmatrix}2&1\\1&1\end{pmatrix},
+\]
+
+one has exactly
+
+\[
+S\bmod2=\rho_2(\sigma_1\sigma_2).
+\]
+
+It is the order-three element that cycles all three points of \(\mathbb P^1(\mathbb F_2)\), equivalently all three index-two sublattices of \(\mathbb Z^2\). The index-two girih intertwiner lands in one such sublattice and returns to it only under \(S^3\). This selects both the modulus and an explicit group element arithmetically, but still does not supply a physical braid or tile state-space identification.
+
 ## Companion documents
 
 - [Three-strand braid central twist](../0000-0099/57_braid_central_twist_to_sp4z_branch.md)
 - [Connected continuous/arithmetic separation](138_connected_continuous_vs_arithmetic_symmetry_separation.md)
 - [Metaplectic loop interferometer](135_minimal_metaplectic_loop_interferometer.md)
 - [Octonions and the Leech lattice branch](../0000-0099/33_octonions_leech_lattice_jordan_branch.md)
+- [Golden parity triangle](../../programmes/dynatology/mystery_atlas_16_parity_triangle_and_three_step_return.md)

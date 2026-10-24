@@ -1,0 +1,49 @@
+{
+  "schema": "dynatology-girih-boundary-choice-system/1",
+  "date": "2026-10-24",
+  "status": "exact_count_factorization_no_go_and_specified_collared_constraint_carrier",
+  "sourceFacts": {
+    "mappingBreaksBilateralTileSymmetry": true,
+    "choiceCardinalities": {"decagon": 10, "hexagon": 2, "bowtie": 2},
+    "choicesUsedToReducePenroseEdgeMismatches": true,
+    "reportedHistoricalTileCount": 3700,
+    "reportedDefectVariations": 11,
+    "repairExample": "exchange_or_shift_a_bowtie_hexagon_pair",
+    "secondaryCrossBoundaryObservation": "replacement_patches_protrude_but_symmetric_overlap_agrees"
+  },
+  "factorizationNoGo": {
+    "forgetfulMap": "q: oriented_collared_choice_assignments -> N^3_tile_counts",
+    "detector": "D: choice_assignment -> oriented_Penrose_edge_mismatch_record",
+    "countFibresContainMultipleChoiceAssignments": true,
+    "detectorVariesWithinCountFibres": true,
+    "conclusion": "no_D_equals_f_composed_with_q_and_no_boundary_lift_is_determined_by_G_B_P_or_count_parity_alone"
+  },
+  "constraintCarrier": {
+    "adjacencyObject": "finite_girih_patch_graph_Gamma=(V,E)",
+    "vertexVariables": "c_v_in_C_tile_type_with_C_D=Z10_and_C_H=C_B=Z2_as_rotation_sets",
+    "edgeDetector": "m_e(c_u,c_v)_in_{0,1}_compares_oriented_Penrose_ribbon_signatures",
+    "objective": "E(c)=sum_over_edges_m_e(c_u,c_v)",
+    "admissibleSet": "A_k={c:E(c)<=k}",
+    "physicalEnergyClaimed": false
+  },
+  "parityBoundary": {
+    "countParityIsConstantOnEachCountFibre": true,
+    "mismatchRecordCanVaryOnThatFibre": true,
+    "conclusion": "parity_triangle_does_not_predict_defect_locations_without_a_new_oriented_boundary_map"
+  },
+  "minimumTranscription": [
+    "ten_decagon_choice_boundary_signatures",
+    "two_hexagon_choice_boundary_signatures",
+    "two_bowtie_choice_boundary_signatures",
+    "edge_pair_compatibility_table",
+    "bowtie_hexagon_defect_patch_before_and_after_repair",
+    "one_closed_local_cycle_containing_the_patch"
+  ],
+  "promotionTests": [
+    "zero_mismatch_global_section_test",
+    "closed_cycle_holonomy_test",
+    "equivariant_map_to_the_three_count_parity_channels"
+  ],
+  "decision": "replace_the_naive_count_determined_boundary_lift_with_a_collared_choice_CSP;_withhold_any_identification_of_the_eleven_defects_as_parity_or_triality_defects"
+}
+

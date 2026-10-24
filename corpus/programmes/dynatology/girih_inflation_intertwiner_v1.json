@@ -1,0 +1,73 @@
+{
+  "schema": "dynatology-girih-inflation-intertwiner/1",
+  "date": "2026-10-24",
+  "status": "exact_external_to_corpus_integral_intertwiner_with_source_and_carrier_boundaries",
+  "sources": [
+    {
+      "role": "primary_historical_pattern_analysis",
+      "citation": "Peter J. Lu and Paul J. Steinhardt, Decagonal and Quasi-Crystalline Tilings in Medieval Islamic Architecture, Science 315 (2007) 1106-1110",
+      "url": "https://doi.org/10.1126/science.1135491",
+      "supports": ["girih_self_similar_subdivision", "direct_but_choice_bearing_map_to_Penrose_tiles", "asymptotic_hexagon_to_bowtie_ratio_phi", "eleven_point_mismatches_among_3700_Penrose_tiles_in_the_reported_mapping"]
+    },
+    {
+      "role": "published_matrix_transcription_from_the_subdivision_figures",
+      "citation": "Raymond Tennant, Medieval Islamic Architecture, Quasicrystals, and Penrose and Girih Tiles: Questions from the Classroom, Bridges 2008",
+      "url": "https://archive.bridgesmathart.org/2008/bridges2008-297.pdf",
+      "supports": ["three_tile_subdivision_counts", "three_by_three_transformation_matrix"]
+    }
+  ],
+  "girihCountMap": {
+    "basis": ["bowtie", "hexagon", "decagon"],
+    "outputBasis": ["small_decagon", "small_bowtie", "small_hexagon"],
+    "matrix": [[14, 22, 80], [14, 22, 80], [6, 10, 36]],
+    "rank": 2,
+    "kernelGeneratorInInputBasis": [-1, -3, 1],
+    "kernelRelation": "decagon_column=bowtie_column+3*hexagon_column",
+    "imageConstraint": "small_decagon_count=small_bowtie_count",
+    "eigenvalues": ["4*phi^6", "4*phi^-6", "0"]
+  },
+  "survivingQuotient": {
+    "coordinates": ["t_equal_decagon_bowtie_count", "h_hexagon_count"],
+    "countMatrixQ": [[36, 80], [16, 36]],
+    "projectiveNormalization": "B=Q/4",
+    "normalizedMatrixB": [[9, 20], [4, 9]],
+    "characteristicPolynomialB": "x^2-18*x+1",
+    "eigenvaluesB": ["phi^6", "phi^-6"],
+    "normalizationBoundary": "division_by_4_preserves_projective_tile_frequencies_but_is_not_itself_the_literal_count_substitution"
+  },
+  "penroseCorpusAction": {
+    "matrixS": [[2, 1], [1, 1]],
+    "characteristicPolynomialS": "x^2-3*x+1",
+    "eigenvaluesS": ["phi^2", "phi^-2"],
+    "penroseMeaning": "standard_two_tile_Fibonacci_or_Penrose_inflation_count_action",
+    "corpusMeaning": "the_exact_scalar_Riccati_return_matrix_in_claim_1138_and_the_common_integral_conjugacy_class_of_both_claim_772_handle_blocks"
+  },
+  "intertwiner": {
+    "equation": "S^3*P=P*B",
+    "P": [[1, 1], [0, 2]],
+    "determinantP": 2,
+    "allIntegralSolutions": "X(a,c)=[[a,a+2c],[c,2a-c]]",
+    "allIntegralDeterminants": "det(X)=2*(a^2-a*c-c^2)",
+    "minimalNonzeroAbsoluteDeterminant": 2,
+    "interpretation": "the_normalized_girih_quotient_embeds_into_an_index_two_sublattice_of_the_three_step_Penrose_corpus_carrier",
+    "integralScar": "rational_conjugacy_but_no_unimodular_integral_intertwiner_exists"
+  },
+  "claim772Conjugacy": {
+    "block1": [[1, -1], [-1, 2]],
+    "J": [[0, 1], [-1, 0]],
+    "equation1": "S*J=J*block1",
+    "determinantJ": 1,
+    "block2": [[0, 1], [-1, 3]],
+    "K": [[1, 0], [-2, 1]],
+    "equation2": "S*K=K*block2",
+    "determinantK": 1,
+    "conclusion": "claim_772_is_integrally_conjugate_to_two_independent_copies_of_the_Penrose_Fibonacci_inflation_action"
+  },
+  "carrierBoundary": {
+    "girih": "nonnegative_tile_count_cone_and_geometric_subdivision",
+    "penrose": "two_tile_count_cone_with_choice_bearing_refinement_from_girih",
+    "corpus": "signed_integral_homology_or_symplectic_response_lattice",
+    "warning": "matrix_intertwining_does_not_identify_tile_counts_with_physical_response_or_microscopic_states"
+  },
+  "decision": "The golden-ratio contact has advanced from a shared constant to an exact transformation-level relation. Girih subdivision reaches the corpus trace-three action only after a rank-two quotient, projective normalization, three inflation steps and an index-two lattice embedding; those operations are the admissibility data and quotient scars, not disposable details."
+}

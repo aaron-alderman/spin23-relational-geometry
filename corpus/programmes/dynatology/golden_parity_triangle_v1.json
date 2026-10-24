@@ -1,0 +1,47 @@
+{
+  "schema": "dynatology-golden-parity-triangle/1",
+  "date": "2026-10-24",
+  "status": "exact_mod_two_three_cycle_with_bounded_triality_comparison",
+  "integerAction": {
+    "S": [[2, 1], [1, 1]],
+    "intertwinerP": [[1, 1], [0, 2]],
+    "imageOfP": "L0={(x,y) in Z^2 : y=0 mod 2}",
+    "smithInvariantsP": [1, 2],
+    "cokernelP": "Z/2Z"
+  },
+  "modTwoAction": {
+    "Sbar": [[0, 1], [1, 1]],
+    "minimalPolynomial": "x^2+x+1",
+    "order": 3,
+    "nonzeroFixedVectors": 0,
+    "projectiveLineSize": 3,
+    "indexTwoLatticeOrbit": [
+      {"id": "L0", "condition": "y_even", "modTwoLineGenerator": [1, 0], "next": "L1"},
+      {"id": "L1", "condition": "x_even", "modTwoLineGenerator": [0, 1], "next": "L2"},
+      {"id": "L2", "condition": "x_congruent_y", "modTwoLineGenerator": [1, 1], "next": "L0"}
+    ]
+  },
+  "braidCollision": {
+    "sigma1Mod2": [[1, 1], [0, 1]],
+    "sigma2Mod2": [[1, 0], [1, 1]],
+    "equation": "rho2(sigma1*sigma2)=Sbar",
+    "ambientGroup": "SL(2,F2)=PSL(2,F2)~=S3",
+    "interpretation": "Sbar_is_the_order_three_braid_product_acting_on_the_three_points_of_P1_F2"
+  },
+  "trialityComparison": {
+    "exactCommonData": ["C3_action", "minimal_polynomial_x2_plus_x_plus_1", "no_fixed_contrast", "third_iterate_return"],
+    "parityCarrier": "F2^2_with_three_integral_index_two_lifts",
+    "trialityCarrier": "D4_outer_difference_integral_lattice",
+    "parityTorsion": "Z/2Z",
+    "trialityTorsion": "Z/3Z",
+    "status": "same_order_three_representation_pattern_not_an_identification_of_carriers"
+  },
+  "admissibilityInterpretation": {
+    "fixedChannel": "closed_only_under_S_cubed",
+    "oneStepClosure": "requires_carrying_the_three_channel_orbit",
+    "sixStateBoundary": "no_canonical_binary_sheet_connection_or_C6_holonomy_is_supplied",
+    "sixCycleNoGo": "GL(2,F2)~=S3_has_six_elements_but_no_order_six_element_and_trivial_center"
+  },
+  "nextGate": "lift_boundary_words_with_explicit_L0_L1_L2_labels_and_test_cyclic_transport_and_third_step_closure"
+}
+

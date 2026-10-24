@@ -1,0 +1,70 @@
+{
+  "schema": "dynatology-girih-figure4-pretranscription/0",
+  "date": "2026-10-24",
+  "status": "source_figure_audited_orbit_compression_conditional_edge_alphabet_unfilled",
+  "sources": [
+    {
+      "role": "primary_figure4",
+      "url": "https://peterlu.org/pdf/publications/2007/Science_315_1106_2007.pdf",
+      "sha256": "7D6BFA0A729C22E845699F0E6A8778ABA04D511BA8C1CF83C26186C2EEBD97CA",
+      "bytes": 1111884,
+      "pdfPage": 6,
+      "figure": "Figure 4"
+    },
+    {
+      "role": "published_secondary_figures19_and25",
+      "url": "https://archive.bridgesmathart.org/2008/bridges2008-297.pdf",
+      "sha256": "DBCEAC9CB9B9358E1DADEDE957F3465A30872BC29F6638D6EEA558DD73EED256",
+      "bytes": 1444556,
+      "pdfPages": [6, 7],
+      "figures": [19, 25]
+    }
+  ],
+  "canonicalPanels": [
+    {"tile": "hexagon", "coarseSideSlots": 6, "choiceOrbitSize": 2, "coarseSideTuple": null, "microEdgeCounts": null},
+    {"tile": "bowtie", "coarseSideSlots": 6, "choiceOrbitSize": 2, "coarseSideTuple": null, "microEdgeCounts": null},
+    {"tile": "decagon", "coarseSideSlots": 10, "choiceOrbitSize": 10, "coarseSideTuple": null, "microEdgeCounts": null}
+  ],
+  "orbitCompression": {
+    "independentChoiceCoarseSideRecords": 124,
+    "canonicalCoarseSideRecords": 22,
+    "savedCoarseSideRecords": 102,
+    "savedFraction": 0.8225806451612904,
+    "condition": "each_choice_side_tuple_must_equal_the_declared_symmetry_action_on_its_canonical_side_tuple",
+    "microSymbolCompressionClaimed": false
+  },
+  "visibleBoundaryData": {
+    "penroseRibbonColours": ["red", "blue"],
+    "colourAloneDeclaredCompleteAlphabet": false,
+    "coarseSideIsAtomicSymbol": false,
+    "coarseSideCarriesOrderedMicroWord": true,
+    "requiredCandidateFields": ["edge_entry_position", "tangent_or_handedness", "subtile_source", "ordered_colour_phase", "edge_reversal_action"]
+  },
+  "vectorAudit": {
+    "page": 6,
+    "imageXObjectCount": 0,
+    "nativeVectorArtwork": true,
+    "blueFilledPathComponents": 416,
+    "redFilledPathComponents": 407,
+    "totalRibbonColouredFilledPathComponents": 823,
+    "componentSemanticBoundary": "filled_PDF_path_components_are_not_yet_identified_with_ribbon_arcs_or_boundary_symbols",
+    "extractor": "verification/extract/extract_girih_figure4_vector_paths.py"
+  },
+  "repairWitness": {
+    "figure": "4F",
+    "before": "one_point_defect_with_yellow_dotted_Penrose_edge_mismatches",
+    "move": "exchange_positions_of_one_bowtie_and_one_hexagon",
+    "after": "defect_free_Penrose_patch",
+    "globalTileCountChange": {"decagon": 0, "hexagon": 0, "bowtie": 0},
+    "changesLocalPlacement": true,
+    "isOnlyAChoiceChangeOnFixedAdjacency": false
+  },
+  "nestedOptimization": {
+    "inner": "minimize_E(pi,c)_over_mapping_choices_c_for_fixed_placement_pi",
+    "outer": "minimize_the_inner_value_over_count_preserving_repairs_pi",
+    "objective": "Penrose_ribbon_edge_mismatch_count_or_record",
+    "physicalEnergyClaimed": false
+  },
+  "nextGate": "extract_black_boundaries_intersect_exact_red_blue_vectors_segment_coarse_sides_transcribe_three_canonical_side_tuples_generate_orbits_and_reproduce_the_Figure4F_before_after_detector"
+}
+

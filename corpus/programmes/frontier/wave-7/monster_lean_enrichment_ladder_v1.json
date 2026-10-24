@@ -1,0 +1,68 @@
+{
+  "schema": "monster-lean-enrichment-ladder/1",
+  "date": "2026-10-24",
+  "parent": "monster_lean_typed_canonical_atlas_v1.json",
+  "benchmarkObjects": 16,
+  "detectors": [
+    {
+      "id": "D0",
+      "name": "capped constructor-count address",
+      "distinctSignatures": 5,
+      "collisionGroups": 5,
+      "collisionPairs": 20,
+      "largestFibre": 4
+    },
+    {
+      "id": "D1",
+      "name": "D0 plus constant/literal leaf multiset",
+      "distinctSignatures": 12,
+      "collisionGroups": 4,
+      "collisionPairs": 4,
+      "largestFibre": 2
+    },
+    {
+      "id": "D2",
+      "name": "D1 plus role-labelled local edge multiset",
+      "distinctSignatures": 14,
+      "collisionGroups": 2,
+      "collisionPairs": 2,
+      "largestFibre": 2
+    },
+    {
+      "id": "D3",
+      "name": "D2 plus rooted role-path leaf multiset",
+      "distinctSignatures": 16,
+      "collisionGroups": 0,
+      "collisionPairs": 0,
+      "largestFibre": 1
+    }
+  ],
+  "expectedResidualCollisions": {
+    "D1": [
+      ["arrow_Nat_Bool", "arrow_Bool_Nat"],
+      ["eq_2_0", "eq_0_2"],
+      ["assoc_left", "assoc_right"],
+      ["quartet_A", "quartet_B"]
+    ],
+    "D2": [
+      ["eq_2_0", "eq_0_2"],
+      ["quartet_A", "quartet_B"]
+    ],
+    "D3": []
+  },
+  "lowerBounds": [
+    "unlabelled constructor counts cannot separate substitutions of unflagged constants",
+    "leaf multisets cannot recover argument order",
+    "role-labelled local edge multisets cannot recover correlations between separated neighbourhoods",
+    "the benchmark requires rooted information reaching at least the distinguishing rearrangement depth"
+  ],
+  "recommendedDetector": {
+    "core": "canonical Monster address",
+    "scar1": "stable leaf-label multiset digest",
+    "scar2": "role-labelled local-transition digest",
+    "adaptiveEscalation": "add rooted path depth only for fibres that remain impure",
+    "controlCeiling": "full canonical expression hash",
+    "reason": "preserve a coarse finite carrier while spending structural resolution only where observed semantic fibres demand it"
+  },
+  "boundary": "D3 is injective only on this adversarial benchmark. No fixed finite-radius bag is claimed to identify arbitrary expression trees."
+}

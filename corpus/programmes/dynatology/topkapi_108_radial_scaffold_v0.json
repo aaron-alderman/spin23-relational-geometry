@@ -1,0 +1,47 @@
+{
+  "schema": "dynatology-topkapi-108-radial-scaffold/0",
+  "date": "2026-10-24",
+  "status": "derived_raster_observation_catalogue_consistent_not_vector_ground_truth",
+  "sourceObservationRef": "corpus/programmes/dynatology/topkapi_drawing_108_observation_v0.json",
+  "method": {
+    "input": "220_dpi_render_of_pdf_page_296_cropped_to_catalogue_drawing_108",
+    "cropPixels": [560, 400, 1340, 1180],
+    "estimatedRadialOriginPixelsInCrop": [695, 714],
+    "angleDomainDegrees": [180.5, 269.6],
+    "radialSamplePixels": [35, 635],
+    "angularStepDegrees": 0.05,
+    "peakExclusionDegrees": 4.5,
+    "score": "mean_normalized_ink_density_along_each_candidate_ray",
+    "warning": "the calculation detects the principal radial scaffold only; it does not classify cell boundaries, subsidiary circles or stipple levels"
+  },
+  "detectedPeaks": [
+    {"angleDegrees": 180.50, "score": 0.3600, "role": "quadrant_boundary"},
+    {"angleDegrees": 187.55, "score": 0.2299, "role": "principal_internal_ray"},
+    {"angleDegrees": 195.05, "score": 0.2744, "role": "principal_internal_ray"},
+    {"angleDegrees": 202.40, "score": 0.3352, "role": "principal_internal_ray"},
+    {"angleDegrees": 209.80, "score": 0.4113, "role": "principal_internal_ray"},
+    {"angleDegrees": 216.85, "score": 0.4424, "role": "principal_internal_ray"},
+    {"angleDegrees": 224.65, "score": 0.4305, "role": "principal_internal_ray"},
+    {"angleDegrees": 232.05, "score": 0.3474, "role": "principal_internal_ray"},
+    {"angleDegrees": 239.40, "score": 0.3920, "role": "principal_internal_ray"},
+    {"angleDegrees": 247.00, "score": 0.3030, "role": "principal_internal_ray"},
+    {"angleDegrees": 254.35, "score": 0.3028, "role": "principal_internal_ray"},
+    {"angleDegrees": 261.85, "score": 0.2993, "role": "principal_internal_ray"},
+    {"angleDegrees": 269.60, "score": 0.6555, "role": "quadrant_boundary"}
+  ],
+  "derived": {
+    "internalRayCount": 11,
+    "quarterSectorCount": 12,
+    "mirroredHalfVaultSectorCount": 24,
+    "idealQuarterSpacingDegrees": 7.5,
+    "observedMeanSpacingDegrees": 7.425,
+    "maximumAbsoluteSpacingResidualDegrees": 0.45,
+    "generatorAngleRadians": "pi/24"
+  },
+  "interpretation": {
+    "positive": "the source image independently recovers the catalogue's eleven internal radii and twenty-four-sector half-vault construction",
+    "boundary": "the radial scaffold is a cyclic construction grid truncated by quarter-vault and half-vault boundaries, not evidence of octonion multiplication",
+    "next": "use the recovered rays as the scaffold layer while segmenting cell boundaries and stipple levels separately"
+  }
+}
+

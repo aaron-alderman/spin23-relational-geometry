@@ -1,0 +1,27 @@
+{
+  "schema": "monster-lean-bounded-locality-no-go/1",
+  "date": "2026-10-24",
+  "parent": "monster_lean_enrichment_ladder_v1.json",
+  "testedRadii": [1, 2, 3, 4, 5, 6, 7, 8],
+  "alphabet": {
+    "0": "Nat",
+    "1": "Bool",
+    "terminal": "Unit"
+  },
+  "expressionEncoding": "a bit word b1...bn denotes the closed right-associated type T(b1) -> ... -> T(bn) -> Unit",
+  "pairConstruction": {
+    "x_r": "0^r 1 0^(r+1) 0^r",
+    "y_r": "0^(2r+1) 1 0^r",
+    "commonLength": "3r+2",
+    "relation": "the length-(2r+2) cyclic cores are rotations, and both linearizations append their common 0^r prefix"
+  },
+  "boundedDetector": "root prefix of length r, terminal suffix of length r, and the multisets of all contiguous labelled windows of lengths 1 through r+1",
+  "expected": {
+    "pairsDistinct": true,
+    "sameMonsterAddress": true,
+    "sameBoundedDetectorAtEveryTestedRadius": true,
+    "firstRootDifferenceDepth": "r+1"
+  },
+  "theoremScope": "The construction works for every positive integer r, not only the tested radii. Rotation preserves cyclic window counts; appending the common r-symbol prefix converts them to identical linear window decks through length r+1 while retaining distinct global words.",
+  "boundary": "This is a no-go for bounded local window bags on a valid closed Lean-type family. It is not a no-go for unbounded rooted paths or full canonical expression hashes."
+}

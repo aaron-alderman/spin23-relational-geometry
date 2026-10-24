@@ -1,0 +1,87 @@
+{
+  "schema": "dynatology-topkapi-muqarnas-observation/0",
+  "date": "2026-10-24",
+  "status": "source_locked_visual_observation_not_vector_transcription",
+  "source": {
+    "work": "Gulru Necipoglu, The Topkapi Scroll: Geometry and Ornament in Islamic Architecture",
+    "canonicalUrl": "https://www.getty.edu/publications-reports/item/248TH5",
+    "mediaUrl": "https://media.getty.edu/Text/1b86616b-adb9-5fd6-a8be-4af5166a647f.pdf",
+    "pdfSha256": "443221B898EA7A90A1B42AC212F04346A1B648A13949BE5A0DAB6E11DD32E78F",
+    "pdfBytes": 31445355,
+    "pdfPage": 296,
+    "printedPage": 281,
+    "catalogueDrawing": 108,
+    "catalogueDimensionsCm": [24.5, 24.7]
+  },
+  "evidenceClasses": [
+    "catalogue_documented",
+    "directly_observed_on_render",
+    "inferred_requires_vector_transcription"
+  ],
+  "layers": [
+    {
+      "id": "T108-L1",
+      "name": "construction_scaffold",
+      "content": "radial lines, concentric quarter circles, subsidiary circles, horizontal and vertical centre lines",
+      "evidence": "catalogue_documented_and_directly_observed",
+      "warning": "line darkness in the reproduction is not a reliable classifier by itself"
+    },
+    {
+      "id": "T108-L2",
+      "name": "cell_and_motif_boundaries",
+      "content": "hexagons, arrow-shaped double bipeds, pentagon-contained five-pointed stars, four-pointed stars, six-pointed corner star and filler units",
+      "evidence": "catalogue_documented_with_partial_direct_observation",
+      "warning": "complete polygon segmentation remains open"
+    },
+    {
+      "id": "T108-L3",
+      "name": "spatial_level_marks",
+      "content": "black stippling differentiating spatial levels",
+      "evidence": "catalogue_documented_and_directly_observed",
+      "warning": "stars, double bipeds and filler units share stippling without further differentiation"
+    },
+    {
+      "id": "T108-L4",
+      "name": "boundary_and_repeat",
+      "content": "square crop, quarter-vault radial origin and asymmetric lower-edge units indicating a half-vault rather than full-vault repeat",
+      "evidence": "catalogue_documented_and_directly_observed",
+      "warning": "symmetrizing to a full vault would erase source-bearing boundary data"
+    }
+  ],
+  "selectedFrame": {
+    "radialOrigin": "southeast_corner_of_square_plan",
+    "centreAxes": "uninked_horizontal_and_vertical_lines_intersect_at_repeat_unit_centre",
+    "orientationCarrier": "ordered_pair_of_radial_direction_and_boundary_normal",
+    "evidence": "catalogue_documented_and_directly_observed",
+    "octonionBoundary": "an architectural frame exists, but no map from it to Im(O) is established"
+  },
+  "documentedCounts": {
+    "principalRadii": 11,
+    "impliedHalfVaultRadialSymmetry": 24,
+    "fivePointedStarsInPentagons": 2,
+    "smallFourPointedStars": 2,
+    "sixPointedSquinchStars": 1
+  },
+  "antiRetrofittingControls": [
+    "no_privileged_sevenfold_motif_is_documented",
+    "do_not_relabel_cells_by_octonion_units_before_native_segmentation",
+    "do_not_merge_construction_scaffold_with_cell_adjacency",
+    "do_not_complete_half_vault_symmetry_before_recording_boundary_asymmetry",
+    "do_not_infer_3d_height_from_stippling_without_a_decoding_rule"
+  ],
+  "nextTranscriptionObjects": [
+    "normalized_border_and_radial_origin",
+    "eleven_principal_rays",
+    "concentric_quarter_circle_family",
+    "subsidiary_circle_families",
+    "cell_boundary_planar_complex",
+    "stipple_mask",
+    "asymmetric_boundary_word",
+    "uncertain_crossing_and_line_class_table"
+  ],
+  "currentVerdict": "Drawing 108 supplies a native architectural frame and a multiplex plan-to-geometry encoding, but it supplies no current evidence of a Fano-plane or octonion multiplication structure.",
+  "derivedRecords": [
+    "corpus/programmes/dynatology/topkapi_108_radial_scaffold_v0.json"
+  ]
+}
+

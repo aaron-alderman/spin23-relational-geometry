@@ -1,0 +1,76 @@
+{
+  "schema": "dynatology-topkapi-drawing-5-lift-fibre/0",
+  "date": "2026-10-24",
+  "status": "source_derived_nonunique_lift_not_full_vector_transcription",
+  "source": {
+    "work": "Gulru Necipoglu, ed., The Topkapi Scroll: Geometry and Ornament in Islamic Architecture; Mohammad al-Asad, The Muqarnas: A Geometric Analysis",
+    "canonicalUrl": "https://www.getty.edu/publications-reports/item/248TH5",
+    "pdfSha256": "443221B898EA7A90A1B42AC212F04346A1B648A13949BE5A0DAB6E11DD32E78F",
+    "catalogueDrawing": 5,
+    "catalogueEntryPdfPage": 256,
+    "catalogueEntryPrintedPage": 241,
+    "analysisPdfPages": [366, 367, 368, 369, 370, 371, 372],
+    "analysisPrintedPages": [351, 352, 353, 354, 355, 356, 357]
+  },
+  "sourceClaims": {
+    "planType": "fan_shaped_radial_muqarnas_quarter_vault_intended_for_half_vault_completion",
+    "principalRadii": 11,
+    "quarterSectors": 12,
+    "impliedHalfVaultSectors": 24,
+    "rows": 8,
+    "rowRegimes": [
+      {
+        "rows": [5, 6, 7, 8],
+        "region": "inside_circular_construction_boundaries",
+        "symmetry": "regular_radial"
+      },
+      {
+        "rows": [1, 2, 3, 4],
+        "region": "near_outer_edges",
+        "symmetry": "irregular_diagonal_only",
+        "exception": "partial_eight_pointed_star_group"
+      }
+    ],
+    "tierRule": "a row is a tier of adjacent single units of equal height, often accompanied by bipeds at the same elevation",
+    "levelCode": "dotted star-surrounding units belong to the lower of two adjacent tiers",
+    "workedHeightChoice": "one common height for all tiers, equal to twice the depth of units in the uppermost row",
+    "heightFreedom": "a different height, or heights, for the tiers would be equally correct",
+    "realizationSequence": [
+      "divide_plan_into_rows",
+      "project_each_row_by_selected_height",
+      "carve_unit_profiles_using_al_Kashi_guideline",
+      "shift_each_tier_to_its_elevational_position",
+      "match_each_tier_roof_to_bottom_plane_of_tier_above"
+    ],
+    "projectionInvariant": "each row retains its plan location and is shifted only along the height coordinate"
+  },
+  "formalization": {
+    "planCarrier": "P=(K,S,L,B), with cell complex K, scaffold S, level marks L and boundary data B",
+    "heightCarrier": "H_P, the source-admissible tier-height assignments for P",
+    "realizationMap": "R_P:H_P->M_3D",
+    "forgetfulMap": "pi:M_3D->P",
+    "sectionLaw": "pi(R_P(h))=P for every h in H_P",
+    "sourceWitness": "H_P is non_singleton because the worked common-height choice and at least one different height or height assignment are both declared correct",
+    "provedBound": "cardinality(H_P)>=2",
+    "notProved": [
+      "dimension_or_connectedness_of_H_P",
+      "independent_variation_of_all_eight_tier_heights",
+      "change_of_cell_incidence_or_topology_under_height_variation",
+      "compiler_noncommutation",
+      "octonion_or_Jordan_structure"
+    ]
+  },
+  "relationToDrawing108": {
+    "sharedFamilyEvidence": [
+      "fan_shaped_radial_quarter_vault",
+      "eleven_principal_radii",
+      "twenty_four_sector_half_vault_completion",
+      "asymmetric_boundary_units_indicating_half_vault_use",
+      "stippled_spatial_level_information"
+    ],
+    "distinctObjects": true,
+    "drawing108WorkedLiftStatus": "not_demonstrated_by_the_located_geometric_analysis",
+    "transferRule": "the catalogue_5 compiler is a family_level hypothesis for drawing_108 until drawing_108_specific tier decoding or an extant realization is supplied"
+  },
+  "currentVerdict": "Catalogue drawing 5 establishes a source-native many-to-one plan-to-geometry lift and a regular-core/irregular-boundary transition. It does not establish a macro-collapse defect or nonassociative physical action."
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "dynatology-muqarnas-typed-compiler/1",
+  "date": "2026-10-24",
+  "authority": "syntax_geometry_and_detection_are_separate_typed_layers",
+  "baseObject": {
+    "name": "attributed_open_planar_cell_complex",
+    "components": ["construction_scaffold", "cell_complex", "level_field", "ordered_boundary", "provenance_uncertainty"]
+  },
+  "nodeTypes": ["radial_origin", "scaffold_intersection", "cell_corner", "boundary_port"],
+  "edgeTypes": ["scaffold_ray", "scaffold_arc", "cell_boundary", "repeat_boundary", "inferred_candidate"],
+  "faceTypes": ["hexagon", "double_biped", "five_point_star", "four_point_star", "six_point_star", "filler", "unclassified"],
+  "boundaryPortFields": ["edge_species", "tier", "orientation", "normal", "support_state", "evidence_status"],
+  "ruleFormalism": {
+    "local": "typed_attributed_double_pushout_rewriting",
+    "hierarchical": "coloured_operad_of_boundary_typed_patches",
+    "geometric": "constraint_based_realization_into_layered_3d_cell_complexes"
+  },
+  "rules": [
+    {"id": "MTC-R01", "name": "add_cell", "preserves": ["matched_interface", "planar_rotation_system", "provenance"]},
+    {"id": "MTC-R02", "name": "attach_cell", "preserves": ["typed_shared_boundary", "orientation_compatibility"]},
+    {"id": "MTC-R03", "name": "collapse_macro_cell", "preserves": ["external_boundary_word"], "records": ["hidden_internal_seams", "reduction_history"]},
+    {"id": "MTC-R04", "name": "assign_lift", "preserves": ["plan_projection"], "records": ["height", "tier", "bend", "normal"]},
+    {"id": "MTC-R05", "name": "sew_repeat", "preserves": ["boundary_type_matching"], "records": ["orientation_action", "seam_class"]}
+  ],
+  "compilerResidualClasses": ["exterior_geometry", "internal_seam", "tier_or_height", "orientation", "support", "undefined_intermediate", "solver_or_transcription_artifact"],
+  "detectors": [
+    {"id": "MTC-D01", "name": "exterior_silhouette", "observes": ["external_geometry"]},
+    {"id": "MTC-D02", "name": "unoriented_seam_count", "observes": ["number_of_visible_seams"]},
+    {"id": "MTC-D03", "name": "oriented_seam_position", "observes": ["signed_seam_location"]},
+    {"id": "MTC-D04", "name": "tier_scan", "observes": ["height", "level", "bend"]},
+    {"id": "MTC-D05", "name": "support_scan", "observes": ["load_path", "temporary_or_permanent_support"]}
+  ],
+  "admissionRules": [
+    "fine_composition_is_tested_before_macro_label_composition",
+    "undefined_products_are_not_counted_as_nonzero_associators",
+    "macro_rules_require_source_authority",
+    "every_residual_names_its_detector",
+    "exceptional_identities_are_tested_only_after_native_grammar_freeze",
+    "withheld_prediction_is_required_for_strong_exceptional_promotion"
+  ]
+}
+

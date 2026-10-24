@@ -1,0 +1,86 @@
+{
+  "schema": "dynatology-topkapi-angular-scaffold-fibre/0",
+  "date": "2026-10-24",
+  "status": "catalogue_derived_lower_bound_not_complete_family_classification",
+  "source": {
+    "work": "Gulru Necipoglu, The Topkapi Scroll: Geometry and Ornament in Islamic Architecture",
+    "canonicalUrl": "https://www.getty.edu/publications-reports/item/248TH5",
+    "pdfSha256": "443221B898EA7A90A1B42AC212F04346A1B648A13949BE5A0DAB6E11DD32E78F",
+    "catalogueEntryPdfPages": [256, 260, 296]
+  },
+  "angularSignature": {
+    "domain": "quarter_vault",
+    "internalPrincipalRadii": 11,
+    "angularIntervals": 12,
+    "idealStepDegrees": 7.5,
+    "idealStepRadians": "pi/24",
+    "scopeWarning": "shared_angular_signature_not_identical_full_scaffold_or_cell_complex"
+  },
+  "documentedPlans": [
+    {
+      "catalogueDrawing": 5,
+      "squinchStarPoints": 8,
+      "motifSummary": "five_pointed_stars_alternating_with_four_pointed_stars",
+      "boundaryUse": "half_vault_only",
+      "completionSectors": 24,
+      "reason": "asymmetric_upper_edge_polygonal_units"
+    },
+    {
+      "catalogueDrawing": 16,
+      "squinchStarPoints": 9,
+      "motifSummary": "rows_of_four_and_five_then_four_and_six_pointed_stars",
+      "boundaryUse": "full_vault",
+      "completionSectors": 48,
+      "reason": "catalogue_explicitly_reports_full_vault_forty_eight_fold_symmetry"
+    },
+    {
+      "catalogueDrawing": 108,
+      "squinchStarPoints": 6,
+      "motifSummary": "five_pointed_stars_in_pentagons_flanked_by_four_pointed_stars",
+      "boundaryUse": "half_vault_only",
+      "completionSectors": 24,
+      "reason": "asymmetric_bottom_edge_polygonal_units"
+    },
+    {
+      "catalogueDrawing": 110,
+      "squinchStarPoints": 6,
+      "motifSummary": "five_pointed_stars_in_pentagons_with_subsidiary_four_pointed_star_row",
+      "boundaryUse": "half_vault_only",
+      "completionSectors": 24,
+      "reason": "asymmetric_lower_left_edge_polygonal_units"
+    }
+  ],
+  "formalization": {
+    "angularCarrier": "A_11=(quarter_domain,eleven_internal_rays,twelve_intervals)",
+    "planForgetfulMap": "q:P_typed->A_11",
+    "catalogueWitnesses": "q(P_5)=q(P_16)=q(P_108)=q(P_110)=A_11",
+    "provedPlanFibreBound": "cardinality(q^-1(A_11))>=4_within_the_catalogued_witness_set",
+    "boundarySelector": "beta(P) in {half_only,full_allowed}",
+    "boundaryNonDetermination": "A_11_does_not_determine_beta",
+    "compositeTower": "A_11 <- P_typed <- R_P(H_P)",
+    "drawing5RealizationBound": "cardinality(H_P5)>=2"
+  },
+  "invariantsAndVariables": {
+    "heldInvariant": [
+      "quarter_domain",
+      "eleven_internal_principal_radii",
+      "twelve_angular_intervals"
+    ],
+    "observedVariables": [
+      "squinch_star_order",
+      "subsidiary_star_content",
+      "filler_and_biped_arrangement",
+      "level_coding_detail",
+      "boundary_asymmetry",
+      "half_versus_full_completion"
+    ]
+  },
+  "notProved": [
+    "complete_enumeration_of_all_plans_over_A_11",
+    "identity_of_concentric_circle_radii_or_subsidiary_scaffolds",
+    "a_finite_state_rule_generating_all_four_plans",
+    "equivalence_of_catalogue_5_and_108_tier_decodings",
+    "nonassociativity_or_exceptional_algebra"
+  ],
+  "currentVerdict": "The angular generator defines an admissibility base, not a unique vault. Cell grammar and boundary completion remain independent selection data, after which tier heights supply a further realization fibre."
+}

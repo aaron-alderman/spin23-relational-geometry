@@ -4,7 +4,11 @@
 
 This is the corpus's consolidated frontier-physics lane. It turns the distributed admissibility work into a finite target set without pretending that every mapped item has the same evidential status. The machine-readable authority is [the target register](frontier_physics_target_register_v1.json); this document is its working view.
 
+![Current research arms: executable tests, development lanes and fundamental firewalls](assets/current_research_arms_infographic_v1.png)
+
 The target set is deliberately organized around **objects that could be calculated, built, measured or ruled out**. It is not a catalogue of interesting words. A target remains useful when its strongest interpretation fails: the `usefulNull` field in the register records the conventional scientific residue.
+
+The target set is now complemented by the [detector and frontier atlas](detector_frontier_atlas_v1.md) and maintained [open-topic queue](open_topics_v1.md). Those artifacts make explicit which records can move each boundary and which questions remain live, gated or blocked.
 
 ## Core map
 

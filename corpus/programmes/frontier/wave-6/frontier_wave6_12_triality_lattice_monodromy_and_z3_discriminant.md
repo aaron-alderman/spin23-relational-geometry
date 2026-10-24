@@ -130,3 +130,13 @@ The integral root-lattice part of the monodromy branch is complete. A full singu
 - a physical boundary/defect operator; and
 - a localized observable carrying the \(\mathbb Z_3\) class.
 
+## Subsequent neighbouring result: parity monodromy, not carrier identity
+
+[Mystery Atlas 16](../../dynatology/mystery_atlas_16_parity_triangle_and_three_step_return.md) finds a second exact order-three monodromy. The golden Penrose/corpus matrix reduced modulo two satisfies the same polynomial
+
+\[
+X^2+X+1=0
+\]
+
+and has no fixed nonzero vector, but it acts on \(\mathbb F_2^2\) and permutes the three index-two sublattices of \(\mathbb Z^2\). Its embedding scar is \(\mathbb Z_2\), whereas the present \(D_4\) invariant-to-coinvariant scar is \(\mathbb Z_3\). The shared \(C_3\) representation pattern is exact; an identification with \(D_4\) triality is not.
+

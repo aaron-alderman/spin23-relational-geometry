@@ -1,0 +1,54 @@
+{
+  "schema": "dynatology-girih-figure4f-blind-continuity/1",
+  "date": "2026-10-24",
+  "status": "partial_success_blind_discriminator_not_defect_counter",
+  "source": {
+    "url": "https://peterlu.org/pdf/publications/2007/Science_315_1106_2007.pdf",
+    "sha256": "7D6BFA0A729C22E845699F0E6A8778ABA04D511BA8C1CF83C26186C2EEBD97CA",
+    "page": 6,
+    "figure": "4F"
+  },
+  "detector": {
+    "inputs": ["red_filled_vector_paths", "blue_filled_vector_paths", "frozen_registered_panel_boxes"],
+    "withheld": ["yellow_annotation", "purple_outline", "caption", "hand_selected_mismatch_coordinates"],
+    "operation": "rasterize_each_colour_independently_then_count_8_connected_filled_components",
+    "panelBoxesPdfPoints": {
+      "before": [130.0, 335.0, 242.0, 467.0],
+      "after": [266.3815, 335.0, 378.3815, 467.0]
+    }
+  },
+  "stabilitySweep": {
+    "scalesPixelsPerPdfPoint": [8, 12, 16, 20, 24, 32, 40, 48],
+    "minimumAreasSquarePdfPoints": [0.01, 0.03, 0.1],
+    "trials": 24,
+    "absoluteComponentCountsStableInAllTrials": false,
+    "registeredDeltasStableInAllTrials": true,
+    "representativeCountsAtScale12": {
+      "before": {"red": 19, "blue": 13},
+      "after": {"red": 21, "blue": 15}
+    },
+    "countRanges": {
+      "before": {"red": [19, 21], "blue": [13, 14]},
+      "after": {"red": [21, 23], "blue": [15, 16]}
+    },
+    "registeredDelta": {
+      "afterMinusBefore": {"red": 2, "blue": 2}
+    },
+    "resolutionCaveat": "absolute_counts_change_when_narrow_contacts_resolve_but_the_registered_after_minus_before_delta_remains_two_for_each_colour_in_all_24_trials"
+  },
+  "interpretation": {
+    "established": [
+      "the_unlabelled_red_blue_geometry_blindly_distinguishes_the_published_before_and_after_panels",
+      "the_count_preserving_repair_changes_the_connected_component_structure_of_both_ribbon_families",
+      "the_registered_component_delta_is_stable_over_the_frozen_parameter_grid"
+    ],
+    "notEstablished": [
+      "which_component_events_correspond_to_the_two_annotated_violated_seams",
+      "that_the_component_delta_is_a_defect_charge",
+      "that_the_signal_is_invariant_under_rotation_reflection_or_a_second_independent_patch",
+      "any_map_from_the_signal_to_the_parity_triangle"
+    ]
+  },
+  "verdict": "blind_topological_discriminator_passes_but_the_full_seam_and_defect_oracle_fails_for_lack_of_semantic_localization",
+  "stopRule": "close_the_current_girih_branch_at_partial_success_and_reopen_only_for_a_held_out_patch_or_an_explicit_boundary_word_or_parity_coupling"
+}

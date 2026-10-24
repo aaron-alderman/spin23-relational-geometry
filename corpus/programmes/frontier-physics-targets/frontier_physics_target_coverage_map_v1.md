@@ -6,7 +6,7 @@ A crosswalk says that two entries address the same research object or gate. It d
 
 ## Coverage spine
 
-The original 21 core targets are completely covered by the recent admissibility expansion: AZ-032 carries FPT-001--FPT-014 and AZ-036 adds FPT-015--FPT-021. Wave 6 adds FPT-022 as a new, separately certified quotient-scar target. AZ-033--AZ-035 and AZ-037--AZ-050 turn selected earlier targets into narrower execution, bridge, literature or no-go packets.
+The original 21 core targets are completely covered by the recent admissibility expansion: AZ-032 carries FPT-001--FPT-014 and AZ-036 adds FPT-015--FPT-021. Wave 6 adds FPT-022 as a new, separately certified quotient-scar target. AZ-033--AZ-035 and AZ-037--AZ-057 turn selected earlier targets into narrower execution, bridge, literature or no-go packets.
 
 | Packet | Canonical targets | Function |
 |---|---|---|
@@ -29,6 +29,13 @@ The original 21 core targets are completely covered by the recent admissibility 
 | AZ-048 | FPT-004 | Matrix-free balanced one-hole moments establish screened and unscreened q-min-squared gauge convergence through L=9. |
 | AZ-049 | FPT-004 | Exact finite-frequency pilot plus matrix-free integrated block/cross scaling supports rank two while leaving the low-frequency thermodynamic window open. |
 | AZ-050 | FPT-004 | Zeroth/second frequency moments disfavor ultraviolet escape and locate the remaining low-frequency calculation beyond the current execution envelope. |
+| AZ-051 | FPT-003, FPT-007, FPT-010, FPT-017 | Spectral shift, scattering phase and time delay join free, Bloch/interface, resonance, Efimov-threshold and bound sectors without identifying curvature, Casimir names, electron poles or theological language. |
+| AZ-052 | FPT-003, FPT-007, FPT-010, FPT-017 | Executes a continuum--SSH-rail--local-level pole sweep with topology, delay, memory, capture and scalar Casimir readouts; supports the deformation-path bridge while withholding the uncorrected phase winding as a universal index. |
+| AZ-053 | FPT-003 | Proves the fibre-factorization criterion and exhausts a 35-placement tight-binding fibre: symmetric thermopower resolves 19 reversal classes while a one-sided boundary probe resolves all 35, with Nernst and material prediction explicitly absent. |
+| AZ-054 | FPT-003 | Adds a reciprocal four-terminal flux model and Nernst-like odd channel; the joint detector resolves 21 of 35 placements and exactly saturates the apparatus's top--bottom reflection quotient rather than becoming injective. |
+| AZ-055 | FPT-007, FPT-010 | Closes the finite-chain Levinson ledger as (N_{\rm b}+\nu_S-1=N_C), certifies both band-edge pole collisions and reconciles winding, delay, residue and localization while withholding arbitrary-graph and Spin(2,3) promotion. |
+| AZ-056 | FPT-002, FPT-009, FPT-010, FPT-017, FPT-019 | Makes representation descent explicit: exact dynamics exists iff the coarse kernel is invariant, defects compose across scales, nonlinear detectors intersect blind fibres, and five current signposts are typed without importing a common physical mechanism. |
+| AZ-057 | FPT-001, FPT-002, FPT-005, FPT-015, FPT-016 | Integrates holonomy, local detector equivalence, independent (Y), complete measurement records and matched-contraction thermodynamic implementations; closes OT-001 locally and isolates physical provenance, efficiency and measured cost as the remaining gates. |
 | Wave 6 | FPT-002, FPT-005--007, FPT-016, FPT-018, FPT-021--022 | Triality fold, hidden modes, nonlinear detector scars, singularity quotient and four-mode experiment. |
 
 ## Legacy multi-branch registry

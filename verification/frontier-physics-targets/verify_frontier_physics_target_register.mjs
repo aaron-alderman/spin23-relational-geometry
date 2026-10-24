@@ -33,7 +33,7 @@ check(crosswalks.legacyBranches?.length === 14, "legacy branch count must be 14"
 check(crosswalks.externalValidation?.length === 8, "external validation count must be 8");
 check(crosswalks.speculativeArcs?.length === 8, "speculative arc count must be 8");
 check(crosswalks.terminalNewPhysicsGates?.length === 2, "terminal new-physics gate count must be 2");
-check(crosswalks.recentExecutionPackets?.length === 19, "recent execution packet count must be 19");
+check(crosswalks.recentExecutionPackets?.length === 25, "recent execution packet count must be 25");
 check(crosswalks.recentProgrammes?.length === 2, "recent programme count must be 2");
 
 const idSet = new Set(actualIds);
@@ -58,7 +58,7 @@ for (const gate of crosswalks.terminalNewPhysicsGates) {
 }
 
 const packetIds = crosswalks.recentExecutionPackets.map((entry) => entry.sourceId);
-check(JSON.stringify(packetIds) === JSON.stringify(Array.from({ length: 19 }, (_, index) => `AZ-${String(index + 32).padStart(3, "0")}`)), "recent packets must be AZ-032..AZ-050");
+check(JSON.stringify(packetIds) === JSON.stringify(Array.from({ length: 25 }, (_, index) => `AZ-${String(index + 32).padStart(3, "0")}`)), "recent packets must be AZ-032..AZ-056");
 const packetCoverage = new Set(crosswalks.recentExecutionPackets.flatMap((entry) => entry.targetIds));
 const programmeCoverage = new Set(crosswalks.recentProgrammes.flatMap((entry) => entry.targetIds));
 for (const id of actualIds) check(packetCoverage.has(id) || programmeCoverage.has(id), `${id}: not covered by an execution packet or recent programme`);
@@ -93,4 +93,4 @@ if (failures.length) {
 }
 
 console.log("frontier physics target register: PASS");
-console.log("22 core targets; 14 legacy branches; 8 external validations; 8 zero-weight speculative arcs; 2 terminal gates; 19 execution packets; 2 recent programmes");
+console.log("22 core targets; 14 legacy branches; 8 external validations; 8 zero-weight speculative arcs; 2 terminal gates; 25 execution packets; 2 recent programmes");

@@ -1,0 +1,1567 @@
+{
+  "schema": "monster-lean-typed-canonical-atlas/1",
+  "date": "2026-10-24",
+  "leanVersion": "Lean 4.35.0 x86_64-w64-windows-gnu commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc Release",
+  "source": "verification/lean/MonsterLeanTypedAtlas.lean",
+  "sourceSha256": "e6e8f77a563b4d38c3072e1040d6d848e6bee6c2ea46f676a2f24536b4e24d81",
+  "policy": "recursively apply kernel whnf; erase mdata; recurse through app/lam/forall; reduce reconstructible projections; retain loose bvars under binders",
+  "coordinateOrder": [
+    "app",
+    "const",
+    "forallE",
+    "bvar",
+    "lam",
+    "sort",
+    "lit",
+    "letE",
+    "proj",
+    "mdata",
+    "fvar",
+    "mvar",
+    "Eq",
+    "Iff",
+    "False_or_Not"
+  ],
+  "summary": {
+    "kernelCheckedExpressions": 32,
+    "semanticClasses": 13,
+    "rawDistinctAddresses": 14,
+    "canonicalDistinctAddresses": 7,
+    "movedByCanonicalization": 16,
+    "multiMemberClassesCollapsedToOneCanonicalAddress": 8,
+    "multiMemberClassesTested": 8,
+    "crossSemanticCollisionGroups": 3,
+    "crossSemanticCollisionPairs": 10
+  },
+  "semanticCollisionGroups": [
+    {
+      "address": "3",
+      "semanticClasses": [
+        "Nat",
+        "Bool",
+        "Unit",
+        "String"
+      ]
+    },
+    {
+      "address": "45",
+      "semanticClasses": [
+        "Nat_to_Nat",
+        "Bool_to_Bool",
+        "Nat_to_Bool"
+      ]
+    },
+    {
+      "address": "57528",
+      "semanticClasses": [
+        "Eq_Nat_2_2",
+        "Eq_Nat_0_0"
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "name": "Nat",
+      "members": [
+        "nat_base",
+        "nat_beta",
+        "nat_zeta",
+        "nat_abbrev",
+        "iota_base",
+        "iota_expanded"
+      ],
+      "rawAddresses": [
+        "3",
+        "6006",
+        "5187",
+        "55042416"
+      ],
+      "canonicalAddresses": [
+        "3"
+      ]
+    },
+    {
+      "name": "Bool",
+      "members": [
+        "bool_base",
+        "bool_beta",
+        "bool_zeta",
+        "bool_abbrev"
+      ],
+      "rawAddresses": [
+        "3",
+        "6006",
+        "5187"
+      ],
+      "canonicalAddresses": [
+        "3"
+      ]
+    },
+    {
+      "name": "Unit",
+      "members": [
+        "unit_base",
+        "unit_beta",
+        "unit_zeta",
+        "unit_abbrev"
+      ],
+      "rawAddresses": [
+        "3",
+        "6006",
+        "5187"
+      ],
+      "canonicalAddresses": [
+        "3"
+      ]
+    },
+    {
+      "name": "String",
+      "members": [
+        "string_base",
+        "string_beta",
+        "string_zeta",
+        "string_abbrev"
+      ],
+      "rawAddresses": [
+        "3",
+        "6006",
+        "5187"
+      ],
+      "canonicalAddresses": [
+        "3"
+      ]
+    },
+    {
+      "name": "Prop",
+      "members": [
+        "prop_base",
+        "prop_beta",
+        "prop_zeta"
+      ],
+      "rawAddresses": [
+        "13",
+        "26026",
+        "22477"
+      ],
+      "canonicalAddresses": [
+        "13"
+      ]
+    },
+    {
+      "name": "Nat_to_Nat",
+      "members": [
+        "arrow_nat"
+      ],
+      "rawAddresses": [
+        "45"
+      ],
+      "canonicalAddresses": [
+        "45"
+      ]
+    },
+    {
+      "name": "Bool_to_Bool",
+      "members": [
+        "arrow_bool"
+      ],
+      "rawAddresses": [
+        "45"
+      ],
+      "canonicalAddresses": [
+        "45"
+      ]
+    },
+    {
+      "name": "Nat_to_Bool",
+      "members": [
+        "arrow_mixed"
+      ],
+      "rawAddresses": [
+        "45"
+      ],
+      "canonicalAddresses": [
+        "45"
+      ]
+    },
+    {
+      "name": "Eq_Nat_2_2",
+      "members": [
+        "literal_compact",
+        "literal_expanded"
+      ],
+      "rawAddresses": [
+        "10736105472",
+        "39470976"
+      ],
+      "canonicalAddresses": [
+        "57528"
+      ]
+    },
+    {
+      "name": "forall_x_Nat_Eq_x_x",
+      "members": [
+        "alpha_x",
+        "alpha_y"
+      ],
+      "rawAddresses": [
+        "2487240"
+      ],
+      "canonicalAddresses": [
+        "2487240"
+      ]
+    },
+    {
+      "name": "Iff_True_True",
+      "members": [
+        "logical_iff"
+      ],
+      "rawAddresses": [
+        "6372"
+      ],
+      "canonicalAddresses": [
+        "6372"
+      ]
+    },
+    {
+      "name": "Not_False",
+      "members": [
+        "logical_not"
+      ],
+      "rawAddresses": [
+        "1278"
+      ],
+      "canonicalAddresses": [
+        "3195"
+      ]
+    },
+    {
+      "name": "Eq_Nat_0_0",
+      "members": [
+        "projection_reduced",
+        "projection_expanded"
+      ],
+      "rawAddresses": [
+        "10736105472",
+        "23931048702855723614208"
+      ],
+      "canonicalAddresses": [
+        "57528"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "name": "nat_base",
+      "semanticClass": "Nat",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "3",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": false
+    },
+    {
+      "name": "nat_beta",
+      "semanticClass": "Nat",
+      "rawProfile": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "6006",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": true
+    },
+    {
+      "name": "nat_zeta",
+      "semanticClass": "Nat",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "5187",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": true
+    },
+    {
+      "name": "nat_abbrev",
+      "semanticClass": "Nat",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "3",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": false
+    },
+    {
+      "name": "bool_base",
+      "semanticClass": "Bool",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "3",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": false
+    },
+    {
+      "name": "bool_beta",
+      "semanticClass": "Bool",
+      "rawProfile": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "6006",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": true
+    },
+    {
+      "name": "bool_zeta",
+      "semanticClass": "Bool",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "5187",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": true
+    },
+    {
+      "name": "bool_abbrev",
+      "semanticClass": "Bool",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "3",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": false
+    },
+    {
+      "name": "unit_base",
+      "semanticClass": "Unit",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "3",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": false
+    },
+    {
+      "name": "unit_beta",
+      "semanticClass": "Unit",
+      "rawProfile": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "6006",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": true
+    },
+    {
+      "name": "unit_zeta",
+      "semanticClass": "Unit",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "5187",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": true
+    },
+    {
+      "name": "unit_abbrev",
+      "semanticClass": "Unit",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "3",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": false
+    },
+    {
+      "name": "string_base",
+      "semanticClass": "String",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "3",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": false
+    },
+    {
+      "name": "string_beta",
+      "semanticClass": "String",
+      "rawProfile": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "6006",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": true
+    },
+    {
+      "name": "string_zeta",
+      "semanticClass": "String",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "5187",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": true
+    },
+    {
+      "name": "string_abbrev",
+      "semanticClass": "String",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "3",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": false
+    },
+    {
+      "name": "prop_base",
+      "semanticClass": "Prop",
+      "rawProfile": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "13",
+      "canonicalProfile": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "13",
+      "moved": false
+    },
+    {
+      "name": "prop_beta",
+      "semanticClass": "Prop",
+      "rawProfile": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "26026",
+      "canonicalProfile": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "13",
+      "moved": true
+    },
+    {
+      "name": "prop_zeta",
+      "semanticClass": "Prop",
+      "rawProfile": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "22477",
+      "canonicalProfile": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "13",
+      "moved": true
+    },
+    {
+      "name": "arrow_nat",
+      "semanticClass": "Nat_to_Nat",
+      "rawProfile": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "45",
+      "canonicalProfile": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "45",
+      "moved": false
+    },
+    {
+      "name": "arrow_bool",
+      "semanticClass": "Bool_to_Bool",
+      "rawProfile": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "45",
+      "canonicalProfile": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "45",
+      "moved": false
+    },
+    {
+      "name": "arrow_mixed",
+      "semanticClass": "Nat_to_Bool",
+      "rawProfile": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "45",
+      "canonicalProfile": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "45",
+      "moved": false
+    },
+    {
+      "name": "literal_compact",
+      "semanticClass": "Eq_Nat_2_2",
+      "rawProfile": [
+        11,
+        8,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "rawAddress": "10736105472",
+      "canonicalProfile": [
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "canonicalAddress": "57528",
+      "moved": true
+    },
+    {
+      "name": "literal_expanded",
+      "semanticClass": "Eq_Nat_2_2",
+      "rawProfile": [
+        7,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "rawAddress": "39470976",
+      "canonicalProfile": [
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "canonicalAddress": "57528",
+      "moved": true
+    },
+    {
+      "name": "alpha_x",
+      "semanticClass": "forall_x_Nat_Eq_x_x",
+      "rawProfile": [
+        3,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "rawAddress": "2487240",
+      "canonicalProfile": [
+        3,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "canonicalAddress": "2487240",
+      "moved": false
+    },
+    {
+      "name": "alpha_y",
+      "semanticClass": "forall_x_Nat_Eq_x_x",
+      "rawProfile": [
+        3,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "rawAddress": "2487240",
+      "canonicalProfile": [
+        3,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "canonicalAddress": "2487240",
+      "moved": false
+    },
+    {
+      "name": "logical_iff",
+      "semanticClass": "Iff_True_True",
+      "rawProfile": [
+        2,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "rawAddress": "6372",
+      "canonicalProfile": [
+        2,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "canonicalAddress": "6372",
+      "moved": false
+    },
+    {
+      "name": "logical_not",
+      "semanticClass": "Not_False",
+      "rawProfile": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "rawAddress": "1278",
+      "canonicalProfile": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "canonicalAddress": "3195",
+      "moved": true
+    },
+    {
+      "name": "iota_base",
+      "semanticClass": "Nat",
+      "rawProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "3",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": false
+    },
+    {
+      "name": "iota_expanded",
+      "semanticClass": "Nat",
+      "rawProfile": [
+        4,
+        7,
+        0,
+        0,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rawAddress": "55042416",
+      "canonicalProfile": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalAddress": "3",
+      "moved": true
+    },
+    {
+      "name": "projection_reduced",
+      "semanticClass": "Eq_Nat_0_0",
+      "rawProfile": [
+        11,
+        8,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "rawAddress": "10736105472",
+      "canonicalProfile": [
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "canonicalAddress": "57528",
+      "moved": true
+    },
+    {
+      "name": "projection_expanded",
+      "semanticClass": "Eq_Nat_0_0",
+      "rawProfile": [
+        33,
+        26,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "rawAddress": "23931048702855723614208",
+      "canonicalProfile": [
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "canonicalAddress": "57528",
+      "moved": true
+    }
+  ],
+  "boundary": "Finite constructive atlas only. Kernel type-checking and normalization are real; coverage is not exhaustive and canonical address equality is not semantic equivalence."
+}

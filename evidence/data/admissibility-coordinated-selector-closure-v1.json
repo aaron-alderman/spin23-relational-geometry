@@ -1,0 +1,336 @@
+{
+  "schema": "admissibility.coordinated-selector-closure/1",
+  "id": "AZ-057",
+  "generatedAt": "2026-10-24T09:08:41.047Z",
+  "scope": [
+    "OT-001",
+    "OT-002",
+    "OT-003",
+    "OT-004",
+    "OT-005"
+  ],
+  "commonGenerativeGraph": [
+    "control",
+    "three_mode_hamiltonian",
+    "projector_and_coherent_frame",
+    "selector_or_measurement_instrument",
+    "latent_state",
+    "detector_folding",
+    "raw_record"
+  ],
+  "holonomy": {
+    "latitudeCosine": 0.75,
+    "latitudeSine": 0.6614378277661477,
+    "gap": 1,
+    "loopRate": 0.02,
+    "cycleTime": 314.1592653589793,
+    "adiabaticRatio": 0.013228756555322954,
+    "projectorClosureError": 0,
+    "forwardGeometricAngle": 1.5707963267948966,
+    "reverseGeometricAngle": -1.5707963267948966,
+    "dynamicDoubletPhase": 314.1592653589793,
+    "requiredCalibration": "common_doublet_phase_removed_by_reference_or_echo"
+  },
+  "detectorEquivalence": {
+    "mechanisms": {
+      "geometricHolonomy": {
+        "forwardAngle": 1.5707963267948966,
+        "reverseAngle": -1.5707963267948966,
+        "logSingularRatio": 0,
+        "projectorClosureError": 0
+      },
+      "staticSplitting": {
+        "forwardAngle": 1.5707963267948966,
+        "reverseAngle": 1.5707963267948966,
+        "logSingularRatio": 0,
+        "projectorClosureError": 0
+      },
+      "differentialLoss": {
+        "forwardAngle": 1.5707963267948966,
+        "reverseAngle": 1.5707963267948966,
+        "logSingularRatio": 0.45,
+        "projectorClosureError": 0
+      }
+    },
+    "bundles": {
+      "forwardNormalizedEndpoint": {
+        "fields": [
+          "forwardAngle"
+        ],
+        "cost": 1,
+        "equivalenceClasses": [
+          [
+            "geometricHolonomy",
+            "staticSplitting",
+            "differentialLoss"
+          ]
+        ],
+        "pairwise": [
+          {
+            "pair": [
+              "geometricHolonomy",
+              "staticSplitting"
+            ],
+            "efficientInformation": 0
+          },
+          {
+            "pair": [
+              "geometricHolonomy",
+              "differentialLoss"
+            ],
+            "efficientInformation": 0
+          },
+          {
+            "pair": [
+              "staticSplitting",
+              "differentialLoss"
+            ],
+            "efficientInformation": 0
+          }
+        ],
+        "worstPairInformation": 0,
+        "worstPairInformationPerCost": 0
+      },
+      "addReverseComplexTomography": {
+        "fields": [
+          "forwardAngle",
+          "reverseAngle"
+        ],
+        "cost": 2,
+        "equivalenceClasses": [
+          [
+            "geometricHolonomy"
+          ],
+          [
+            "staticSplitting",
+            "differentialLoss"
+          ]
+        ],
+        "pairwise": [
+          {
+            "pair": [
+              "geometricHolonomy",
+              "staticSplitting"
+            ],
+            "efficientInformation": 3947.8417604357433
+          },
+          {
+            "pair": [
+              "geometricHolonomy",
+              "differentialLoss"
+            ],
+            "efficientInformation": 3947.8417604357433
+          },
+          {
+            "pair": [
+              "staticSplitting",
+              "differentialLoss"
+            ],
+            "efficientInformation": 0
+          }
+        ],
+        "worstPairInformation": 0,
+        "worstPairInformationPerCost": 0
+      },
+      "addProcessSingularValues": {
+        "fields": [
+          "forwardAngle",
+          "reverseAngle",
+          "logSingularRatio"
+        ],
+        "cost": 3,
+        "equivalenceClasses": [
+          [
+            "geometricHolonomy"
+          ],
+          [
+            "staticSplitting"
+          ],
+          [
+            "differentialLoss"
+          ]
+        ],
+        "pairwise": [
+          {
+            "pair": [
+              "geometricHolonomy",
+              "staticSplitting"
+            ],
+            "efficientInformation": 3947.8417604357433
+          },
+          {
+            "pair": [
+              "geometricHolonomy",
+              "differentialLoss"
+            ],
+            "efficientInformation": 4028.8417604357433
+          },
+          {
+            "pair": [
+              "staticSplitting",
+              "differentialLoss"
+            ],
+            "efficientInformation": 81
+          }
+        ],
+        "worstPairInformation": 81,
+        "worstPairInformationPerCost": 27
+      }
+    },
+    "minimumSeparatingBundle": "forward_plus_reverse_complex_tomography_plus_process_singular_values",
+    "heldOutControls": {
+      "echo": {
+        "geometricHolonomy": "unchanged",
+        "staticSplitting": "cancelled",
+        "differentialLoss": "not_cancelled"
+      },
+      "lossBalance": {
+        "geometricHolonomy": "unchanged",
+        "staticSplitting": "unchanged",
+        "differentialLoss": "log_singular_ratio_to_zero"
+      }
+    }
+  },
+  "independentSelector": {
+    "selector": {
+      "a": 1,
+      "b": 2,
+      "y": [
+        0,
+        0,
+        1
+      ],
+      "provenance": "externally_declared_reference_axis_not_fit_from_outputs"
+    },
+    "initialAngles": [
+      0.03,
+      0.1,
+      0.3,
+      0.8,
+      1.2
+    ],
+    "yOffAngles": [
+      0.03,
+      0.1,
+      0.3,
+      0.8,
+      1.2
+    ],
+    "yOnAngles": [
+      0.009998666266554638,
+      0.03328378549468107,
+      0.09862551794165611,
+      0.23469219308685849,
+      0.2456174026319649
+    ],
+    "fixedPoint": "Y",
+    "tangentMultiplierOff": 1,
+    "tangentMultiplierOn": 0.3333333333333333,
+    "yWasFitFromSelectedState": false
+  },
+  "instrument": {
+    "inputState": {
+      "p0": 0.3,
+      "p1": 0.7,
+      "coherence": 0.2
+    },
+    "outcomes": [
+      {
+        "sign": 1,
+        "probability": 0.38,
+        "conditioned": {
+          "p0": 0.631578947368421,
+          "p1": 0.3684210526315789,
+          "coherence": 0.21052631578947373
+        }
+      },
+      {
+        "sign": -1,
+        "probability": 0.6199999999999999,
+        "conditioned": {
+          "p0": 0.09677419354838711,
+          "p1": 0.903225806451613,
+          "coherence": 0.12903225806451618
+        }
+      }
+    ],
+    "unconditionalMeasurement": {
+      "p0": 0.3,
+      "p1": 0.7,
+      "coherence": 0.16000000000000003
+    },
+    "expectedCoherenceMultiplier": 0.8,
+    "measurementOnlyFixedSet": "all_diagonal_states",
+    "monitoredAfterSelectorPopulation": 0.7666666666666667,
+    "selectorFixedPopulation": 0.8,
+    "selectorContraction": 0.3333333333333333
+  },
+  "matchedThermodynamicImplementations": {
+    "sharedCoarseMap": {
+      "fixedPopulation": 0.8,
+      "contraction": 0.3333333333333333,
+      "observationTime": 0.21972245773362195
+    },
+    "equilibrium": {
+      "implementation": "single_detailed_balance_channel",
+      "forwardRates": [
+        4
+      ],
+      "reverseRates": [
+        1
+      ],
+      "fixedPopulation": 0.8,
+      "contraction": 0.3333333333333333,
+      "observationTime": 0.21972245773362195,
+      "stationaryEntropyProductionRate": 0
+    },
+    "driven": {
+      "implementation": "two_hidden_channels_with_opposed_stationary_currents",
+      "forwardRates": [
+        3.5,
+        0.5
+      ],
+      "reverseRates": [
+        0.2,
+        0.8
+      ],
+      "totalForwardRate": 4,
+      "totalReverseRate": 1,
+      "fixedPopulation": 0.8,
+      "contraction": 0.3333333333333333,
+      "observationTime": 0.21972245773362195,
+      "channelCurrents": [
+        0.5399999999999998,
+        -0.5400000000000001
+      ],
+      "stationaryEntropyProductionRate": 1.79939043549461
+    },
+    "monitored": {
+      "implementation": "weak_measurement_record_plus_same_coarse_population_selector",
+      "weakMeasurementStrength": 0.6,
+      "fixedPopulation": 0.8,
+      "contraction": 0.3333333333333333,
+      "observationTime": 0.21972245773362195,
+      "systemStationaryEntropyProductionRate": 0,
+      "stationaryOutcomeProbabilities": [
+        0.32,
+        0.6800000000000002
+      ],
+      "minimumResetWorkPerRecordedCycleInKBT": 0.6268694575724263,
+      "caveat": "Landauer_bound_only_not_a_complete_detector_hardware_cost"
+    }
+  },
+  "adjudication": {
+    "OT-001": "closed_for_declared_three_mechanism_local_family_global_nonlinear_injectivity_remains_OT-034",
+    "OT-002": "analytic_model_and_detector_bundle_closed_physical_carrier_calibration_open",
+    "OT-003": "independence_enforced_in_model_physical_provenance_of_Y_open",
+    "OT-004": "conditioned_and_unconditional_channels_jointly_identified_in_model_physical_record_efficiency_open",
+    "OT-005": "same_coarse_contraction_different_costs_computed_complete_precision_speed_cost_measurement_open"
+  },
+  "firewalls": {
+    "physicalCarrierChosen": false,
+    "materialScaleSet": false,
+    "completeDetectorHardwareCostComputed": false,
+    "spin23OrE8Derivation": false
+  }
+}

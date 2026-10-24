@@ -3,6 +3,8 @@
 **Date:** 24 October 2026  
 **Status:** cross-corpus synthesis with machine-readable boundary atlas
 
+![The shape of the frontier: a stratified, fibered atlas](assets/frontier_shape_atlas_infographic_v1.png)
+
 ## Result in one sentence
 
 The admissibility zone around the exceptional 27 is not a box in parameter space or one smooth frontier. It is a **stratified, fibered intersection of cones, symmetry orbits, linear kernels, arithmetic islands, dynamical basins and detector quotients**, with missing translation maps between several otherwise well-defined charts.

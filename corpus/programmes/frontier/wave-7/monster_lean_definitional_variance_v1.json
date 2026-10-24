@@ -1,0 +1,77 @@
+{
+  "schema": "monster-lean-definitional-variance/1",
+  "date": "2026-10-24",
+  "coordinateOrder": [
+    "app", "const", "forallE", "bvar", "lam", "sort", "lit", "letE",
+    "proj", "mdata", "fvar", "mvar", "Eq", "Iff", "False_or_Not"
+  ],
+  "witnesses": [
+    {
+      "id": "mdata_erasure",
+      "left": "Nat",
+      "right": "mdata Nat",
+      "relation": "definitionally equal by Lean.Expr mdata semantics",
+      "leftProfile": [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "rightProfile": [0,1,0,0,0,0,0,0,0,1,0,0,0,0,0],
+      "leftAddress": "3",
+      "rightAddress": "87",
+      "result": "address_changes"
+    },
+    {
+      "id": "beta_reduction",
+      "left": "Nat",
+      "right": "(fun X : Type => X) Nat",
+      "relation": "beta reduction",
+      "leftProfile": [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "rightProfile": [1,1,0,1,1,1,0,0,0,0,0,0,0,0,0],
+      "leftAddress": "3",
+      "rightAddress": "6006",
+      "result": "address_changes"
+    },
+    {
+      "id": "zeta_reduction",
+      "left": "Nat",
+      "right": "let X : Type := Nat; X",
+      "relation": "zeta reduction",
+      "leftProfile": [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "rightProfile": [0,1,0,1,0,1,0,1,0,0,0,0,0,0,0],
+      "leftAddress": "3",
+      "rightAddress": "5187",
+      "result": "address_changes"
+    },
+    {
+      "id": "literal_expansion_inside_type",
+      "left": "Eq Nat (natLit 2) (natLit 2)",
+      "right": "Eq Nat (Nat.succ (Nat.succ Nat.zero)) (Nat.succ (Nat.succ Nat.zero))",
+      "relation": "literal elaboration is definitionally equal to constructor expansion",
+      "leftProfile": [3,2,0,0,0,0,2,0,0,0,0,0,1,0,0],
+      "rightProfile": [7,8,0,0,0,0,0,0,0,0,0,0,1,0,0],
+      "leftAddress": "57528",
+      "rightAddress": "39470976",
+      "result": "address_changes"
+    },
+    {
+      "id": "alpha_renaming_control",
+      "left": "forall x : Nat, Eq Nat x x",
+      "right": "forall y : Nat, Eq Nat y y",
+      "relation": "alpha renaming",
+      "leftProfile": [3,3,1,2,0,0,0,0,0,0,0,0,1,0,0],
+      "rightProfile": [3,3,1,2,0,0,0,0,0,0,0,0,1,0,0],
+      "leftAddress": "2487240",
+      "rightAddress": "2487240",
+      "result": "address_preserved"
+    }
+  ],
+  "classification": {
+    "rawFoldDefinitionalInvariant": false,
+    "alphaInvariantForCountedNames": true,
+    "requiredRepair": "declare and verify a canonicalization pipeline before profiling, or weaken the target from invariant to representation-sensitive diagnostic"
+  },
+  "openPolicies": [
+    "recursive occurrence count versus unique shared-DAG-node count",
+    "normalization strength and unfolding transparency",
+    "metadata erasure",
+    "literal expansion or retention",
+    "projection expansion or retention"
+  ]
+}

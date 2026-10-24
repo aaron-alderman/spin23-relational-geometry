@@ -1,0 +1,26 @@
+{
+  "schema": "monster-lean-adaptive-depth-census-checkpoints/1",
+  "date": "2026-10-24",
+  "parent": "monster_lean_bounded_locality_no_go_v1.json",
+  "family": "all 32,766 binary-labelled right-associated arrow types at lengths 1 through 14",
+  "injectiveRadiusByLength": [1, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7],
+  "observedFormula": "max(1, floor(n/2)) for 1 <= n <= 14",
+  "length14": {
+    "objects": 16384,
+    "leafBagCollisionPairs": 20050108,
+    "radiusCensus": [
+      {"radius": 1, "distinct": 184, "collisionPairs": 1754574, "largestFibre": 400, "uniqueObjects": 32},
+      {"radius": 2, "distinct": 1678, "collisionPairs": 152644, "largestFibre": 60, "uniqueObjects": 276},
+      {"radius": 3, "distinct": 7692, "collisionPairs": 17506, "largestFibre": 12, "uniqueObjects": 3272},
+      {"radius": 4, "distinct": 14078, "collisionPairs": 2662, "largestFibre": 6, "uniqueObjects": 12032},
+      {"radius": 5, "distinct": 16102, "collisionPairs": 296, "largestFibre": 4, "uniqueObjects": 15832},
+      {"radius": 6, "distinct": 16366, "collisionPairs": 18, "largestFibre": 2, "uniqueObjects": 16348},
+      {"radius": 7, "distinct": 16384, "collisionPairs": 0, "largestFibre": 1, "uniqueObjects": 16384}
+    ],
+    "firstUniqueAtRadius": [32, 244, 2996, 8760, 3800, 516, 36],
+    "meanAdaptiveStoppingRadius": 4.0830078125,
+    "uniformRadius": 7,
+    "linearDepthWorkSavingFraction": 0.4167131696428571
+  },
+  "boundary": "The injective-radius formula is an exhaustive observation through length 14, not an all-length theorem. The all-radius collision theorem is recorded separately in monster_lean_bounded_locality_no_go_v1.json."
+}

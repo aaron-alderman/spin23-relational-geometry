@@ -1,0 +1,73 @@
+{
+  "schema": "monster-lean-fold-admissibility/1",
+  "date": "2026-10-24",
+  "externalSource": "https://x.com/introsp3ctor/status/2113631303455109413",
+  "assessmentScope": "The public post and its worked-example image; implementation source and decls.json were not located publicly during this audit.",
+  "coordinates": [
+    {"index": 0, "prime": 2, "bound": 46, "kind": "app", "role": "node"},
+    {"index": 1, "prime": 3, "bound": 20, "kind": "const", "role": "node"},
+    {"index": 2, "prime": 5, "bound": 9, "kind": "forall_or_lambda", "role": "node"},
+    {"index": 3, "prime": 7, "bound": 6, "kind": "bvar", "role": "node"},
+    {"index": 4, "prime": 11, "bound": 2, "kind": "fun", "role": "node"},
+    {"index": 5, "prime": 13, "bound": 3, "kind": "sort", "role": "node"},
+    {"index": 6, "prime": 17, "bound": 1, "kind": "literal", "role": "node"},
+    {"index": 7, "prime": 19, "bound": 1, "kind": "let", "role": "node"},
+    {"index": 8, "prime": 23, "bound": 1, "kind": "proj", "role": "node"},
+    {"index": 9, "prime": 29, "bound": 1, "kind": "mdata", "role": "node"},
+    {"index": 10, "prime": 31, "bound": 1, "kind": "fvar", "role": "node"},
+    {"index": 11, "prime": 41, "bound": 1, "kind": "mvar", "role": "node"},
+    {"index": 12, "prime": 47, "bound": 1, "kind": "Eq", "role": "flag"},
+    {"index": 13, "prime": 59, "bound": 1, "kind": "Iff", "role": "flag"},
+    {"index": 14, "prime": 71, "bound": 1, "kind": "False_or_Not", "role": "flag"}
+  ],
+  "exactArithmetic": {
+    "monsterOrder": "808017424794512875886459904961710757005754368000000000",
+    "addressCount": 424488960,
+    "strictInteriorAddressCount": 298080,
+    "strictInteriorFraction": 0.0007022090751194095,
+    "addressInterpretation": "positive divisors of the Monster order",
+    "meet": "coordinatewise minimum, encoded as gcd",
+    "join": "coordinatewise maximum, encoded as lcm",
+    "saturatedProduct": "coordinatewise min(a+c,b), encoded as gcd(encode(a) encode(c), |M|)"
+  },
+  "reportedCensus": {
+    "declarations": 1979,
+    "distinctAddresses": 908,
+    "unclampedDeclarations": 789,
+    "kernelCertifiedFolds": 13,
+    "verificationStatus": "transcribed from the post, not independently reproduced"
+  },
+  "workedExample": {
+    "rawProfile": [63, 50, 0, 2, 2, 0, 14, 0, 0, 0, 0, 0, 1, 0, 0],
+    "address": [46, 20, 0, 2, 2, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
+    "addressRank": 72,
+    "nodeCount": 131,
+    "encodedAddressDigits": 31,
+    "clampedKinds": ["app", "const", "literal"]
+  },
+  "typing": {
+    "established": [
+      "The displayed address space is a finite distributive divisor lattice.",
+      "The fifteen coordinate-increment opcodes generate a finite commutative saturated transformation monoid.",
+      "The cap map is injective on count profiles only below every bound.",
+      "At any saturated coordinate, the address has infinitely many possible overflow profiles.",
+      "The exactness bit is additional scar data and is not a function of a boundary address."
+    ],
+    "notEstablished": [
+      "a Monster action on declarations or addresses",
+      "a Monster module or vertex-operator algebra",
+      "Hecke-algebra relations or Hecke operators",
+      "a McKay-Thompson series or modular covariance",
+      "semantic invariance under definitionally equivalent Lean expressions",
+      "a physical carrier, action, dynamics or detector"
+    ]
+  },
+  "nextGates": [
+    "publish or obtain the Lean sources and fold/decls.json",
+    "reproduce the 1979-to-908 fibre census",
+    "test alpha, beta, iota, zeta, unfolding, proof-erasure, DAG-sharing and Lean-version invariance",
+    "test whether a declared composition operation makes the fold a saturated-monoid homomorphism",
+    "measure collision-fibre semantic heterogeneity and design minimal extra coordinates",
+    "reserve the word Hecke for an implemented action satisfying explicit Hecke relations or modular trace identities"
+  ]
+}

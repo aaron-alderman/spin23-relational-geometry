@@ -365,3 +365,8 @@ The immediate research frontier is therefore exact:
 - [typed TRO obstruction](1133_the_typed_TRO_preserves_the_null_mask_but_cannot_generate_the_third_odd_Mobius_edge.md)
 - [dihedral correction](1135_the_natural_oriented_relation_rotation_is_dihedral_and_blocks_the_naive_Jrho_Mobius_C6.md)
 - [global lossless Redheffer feedback realization](../0800-0899/836_the_selector_redheffer_orbit_is_a_lossless_feedback_cascade_with_global_schur_and_positive_residue_control.md)
+- [girih inflation intertwiner and index-two scar](../../programmes/dynatology/mystery_atlas_15_girih_inflation_intertwiner_and_index_two_scar.md)
+
+## Subsequent exact identification
+
+The scalar-return matrix (\left(\begin{smallmatrix}2&1\\1&1\end{smallmatrix}\right)) is also the standard two-tile Fibonacci/Penrose inflation matrix. Its response fixed point (x_*=\varphi^{-1}) and its Perron tile-count ratio \(\varphi\) are reciprocal projective charts of the same integral action. The [girih inflation analysis](../../programmes/dynatology/mystery_atlas_15_girih_inflation_intertwiner_and_index_two_scar.md) records the exact external transformation contact without identifying the count and response carriers.

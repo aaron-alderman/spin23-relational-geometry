@@ -1,0 +1,596 @@
+{
+  "schema": "admissibility.certificate-preserving-descent/1",
+  "id": "AZ-056",
+  "generatedAt": "2026-10-24T08:53:42.858Z",
+  "generatedBy": "scripts/run-certificate-preserving-descent.mjs",
+  "theorem": {
+    "exactDescent": "For a surjective linear map P:X->Y and F:X->X, a unique f:Y->Y with PF=fP exists iff ker(P) is F-invariant.",
+    "chosenSectionDefect": "For PJ=I and f=PFJ, Delta=PF-fP=PF(I-JP).",
+    "certificateFactorization": "A certificate D factors through P iff D is constant on every fibre of P.",
+    "detectorIntersection": "For a stacked linear detector D=(D1,D2), ker(D)=ker(D1) intersect ker(D2); common apparatus symmetries remain invisible to every invariant component.",
+    "composition": "For X--P1->Y--P2->Z with defects Delta1=P1F-f1P1 and Delta2=P2f1-f2P2, Delta21=(P2P1)F-f2(P2P1)=P2Delta1+Delta2P1.",
+    "hiddenStateElimination": "For F=[[A,B],[C,D]], exact elimination gives y_(n+1)=A y_n+B D^n h_0+sum_(j=0)^(n-1) B D^(n-1-j) C y_j. Kernel invariance is B=0; otherwise the exact shadow carries memory and initial slip."
+  },
+  "linearWitnesses": {
+    "projection": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "rightInverse": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "rightInverseResidual": 0,
+    "exact": {
+      "sourceDynamics": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0.5
+        ]
+      ],
+      "shadowDynamics": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "defect": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "defectFrobeniusNorm": 0,
+      "rightInverseIdentityResidual": 0,
+      "kernelLeakageColumn": [
+        0,
+        0
+      ]
+    },
+    "approximate": {
+      "sourceDynamics": [
+        [
+          0,
+          -1,
+          0.02
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0.5
+        ]
+      ],
+      "shadowDynamics": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "defect": [
+        [
+          0,
+          0,
+          0.02
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "defectFrobeniusNorm": 0.02,
+      "rightInverseIdentityResidual": 0,
+      "kernelLeakageColumn": [
+        0.02,
+        0
+      ],
+      "declaredLeakage": 0.02,
+      "errorBound": "||Delta x||_2 <= ||Delta||_2 ||x||_2; here the only leak is 0.02 times the hidden coordinate."
+    },
+    "impossible": {
+      "sourceDynamics": [
+        [
+          0,
+          -1,
+          0.4
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0.5
+        ]
+      ],
+      "shadowDynamics": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "defect": [
+        [
+          0,
+          0,
+          0.4
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "defectFrobeniusNorm": 0.4,
+      "rightInverseIdentityResidual": 0,
+      "kernelLeakageColumn": [
+        0.4,
+        0
+      ],
+      "collision": {
+        "x": [
+          0,
+          0,
+          0
+        ],
+        "xPlusKernel": [
+          0,
+          0,
+          1
+        ],
+        "sameInitialShadow": true,
+        "nextShadowX": [
+          0,
+          0
+        ],
+        "nextShadowXPlusKernel": [
+          0.4,
+          0
+        ]
+      }
+    }
+  },
+  "compositionWitness": {
+    "firstDefectNorm": 0.02,
+    "secondDefectNorm": 1,
+    "directDefect": [
+      [
+        0,
+        -1,
+        0.02
+      ]
+    ],
+    "composedDefect": [
+      [
+        0,
+        -1,
+        0.02
+      ]
+    ],
+    "identityResidual": 0,
+    "triangleBound": 1.02,
+    "directDefectNorm": 1.000199980003999
+  },
+  "memoryClosureWitness": {
+    "blockDynamics": {
+      "A": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0.2
+        ],
+        [
+          0
+        ]
+      ],
+      "C": [
+        [
+          0.3,
+          0
+        ]
+      ],
+      "D": 0.5
+    },
+    "initialState": [
+      0.4,
+      -0.2,
+      0.7
+    ],
+    "steps": 8,
+    "memoryKernelScalars": [
+      0.06,
+      0.03,
+      0.015,
+      0.0075,
+      0.00375,
+      0.001875,
+      0.0009375,
+      0.00046875
+    ],
+    "fullVisibleTrajectory": [
+      [
+        0.4,
+        -0.2
+      ],
+      [
+        0.33999999999999997,
+        0.4
+      ],
+      [
+        -0.30600000000000005,
+        0.33999999999999997
+      ],
+      [
+        -0.27259999999999995,
+        -0.30600000000000005
+      ],
+      [
+        0.32134000000000007,
+        -0.27259999999999995
+      ],
+      [
+        0.263914,
+        0.32134000000000007
+      ],
+      [
+        -0.3064026000000001,
+        0.263914
+      ],
+      [
+        -0.24061045999999997,
+        -0.3064026000000001
+      ],
+      [
+        0.2996702140000001,
+        -0.24061045999999997
+      ]
+    ],
+    "reconstructedVisibleTrajectory": [
+      [
+        0.4,
+        -0.2
+      ],
+      [
+        0.33999999999999997,
+        0.4
+      ],
+      [
+        -0.306,
+        0.33999999999999997
+      ],
+      [
+        -0.2726,
+        -0.306
+      ],
+      [
+        0.32134,
+        -0.2726
+      ],
+      [
+        0.263914,
+        0.32134
+      ],
+      [
+        -0.30640259999999997,
+        0.263914
+      ],
+      [
+        -0.24061045999999997,
+        -0.30640259999999997
+      ],
+      [
+        0.299670214,
+        -0.24061045999999997
+      ]
+    ],
+    "maximumResidual": 1.1102230246251565e-16,
+    "conclusion": "Non-invariant hidden directions admit exact non-Markovian visible closure even when autonomous Markovian descent is impossible."
+  },
+  "commutatorNoGo": {
+    "statement": "If PA=RP and PB=HP for a surjective P and commuting A,B, then [R,H]P=P[A,B]=0, hence [R,H]=0. A noncommuting target pair therefore cannot be the exact image of a commuting source pair.",
+    "targetRotation": [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "targetReflection": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "targetCommutator": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "targetCommutatorRank": 2,
+    "targetCommutatorFrobeniusNorm": 2.8284271247461903
+  },
+  "nonlinearDetectorWitness": {
+    "rhoMixed": [
+      [
+        0.5,
+        0
+      ],
+      [
+        0,
+        0.5
+      ]
+    ],
+    "rhoCoherent": [
+      [
+        0.5,
+        0.3
+      ],
+      [
+        0.3,
+        0.5
+      ]
+    ],
+    "sharedLinearZExpectation": 0,
+    "secondLinearZExpectation": 0,
+    "mixedPurity": 0.5,
+    "coherentPurity": 0.6799999999999999,
+    "conclusion": "A nonlinear certificate can split a selected linear-detector fibre, but this two-state witness is not a tomography theorem."
+  },
+  "corpusCrossChecks": {
+    "az052": {
+      "sameControl": 0,
+      "sameBoundCount": true,
+      "boundCount": 2,
+      "phaseWindingDifference": -1.9312330702482763,
+      "casimirProxyDifference": -0.020036585449994045,
+      "conclusion": "Bound count alone is not a sufficient certificate for the phase or boundary-response shadow."
+    },
+    "az053": {
+      "placementFibreSize": 35,
+      "inventoryClasses": 1,
+      "symmetricSeebeckClasses": 19,
+      "orientationSensitiveBoundaryClasses": 35,
+      "reversalOrbitCount": 19
+    },
+    "az054": {
+      "placementFibreSize": 35,
+      "longitudinalNernstJointClasses": 12,
+      "allDetectorClasses": 21,
+      "apparatusReflectionOrbitCount": 21,
+      "saturatesApparatusSymmetryBound": true
+    }
+  },
+  "corpusIntertwinerInventory": [
+    {
+      "claim": 811,
+      "sourceRef": "corpus/claims/0800-0899/811_the_completed_furey_matter_tro_has_no_proper_four_channel_ternary_quotient_so_the_bridge_must_use_higgs_dressed_pairing.md",
+      "classification": "NO_GO",
+      "map": "completed Furey matter TRO to a proper four-channel ternary quotient",
+      "certificate": "classification of ternary ideals in the four full rectangular summands",
+      "residual": "use a paired or Gram functor rather than a proper ternary quotient",
+      "sourceExists": true
+    },
+    {
+      "claim": 838,
+      "sourceRef": "corpus/claims/0800-0899/838_commuting_microscopic_color_and_handle_exchange_cannot_descend_to_R_and_H_and_the_central_repair_loses_the_singlet_lines.md",
+      "classification": "NO_GO",
+      "map": "commuting microscopic color and handle exchange to target R and H",
+      "certificate": "surjective-intertwiner commutator theorem; target commutator has rank four",
+      "residual": "treat H as a dressed response or accept a color-difference quotient that kills fixed lines",
+      "sourceExists": true
+    },
+    {
+      "claim": 843,
+      "sourceRef": "corpus/claims/0800-0899/843_a_color_equivariant_split_quotient_can_lift_the_quadratic_selector_but_is_highly_nonunique_and_not_yet_gauge_typed.md",
+      "classification": "EXACT_BUT_NONUNIQUE",
+      "map": "split rank-four quotient Pi:R8->R4 with Pi J=I and color intertwining",
+      "certificate": "exact quadratic congruence descent for every response matrix",
+      "residual": "fourteen-dimensional intertwiner space, eight-dimensional section freedom and missing gauge typing",
+      "sourceExists": true
+    },
+    {
+      "claim": 528,
+      "sourceRef": "corpus/claims/0500-0599/528_the_field_labelled_two_torsion_map_stops_at_two_intertwiners_and_needs_a_theta_extension.md",
+      "classification": "FINITE_AMBIGUITY_AND_OBSTRUCTION",
+      "map": "field-labelled binary support to a three-dimensional two-torsion shadow",
+      "certificate": "168 maps reduce to two under flags, orientation and puncture exchange",
+      "residual": "neither survivor preserves the natural mod-four quadratic data; a theta/metaplectic extension is required",
+      "sourceExists": true
+    },
+    {
+      "claim": 999,
+      "sourceRef": "corpus/claims/0900-0999/999_the_central_sign_is_invisible_on_even_furey_bilinears_and_reduces_coherent_c12_to_observable_c6.md",
+      "classification": "EXACT_OBSERVABLE_DESCENT",
+      "map": "coherent C12 carrier action to C6 on even bilinear observables",
+      "certificate": "the central -I acts trivially on same-character quadratic tensors",
+      "residual": "no microscopic Standard-Model gauge identification of the central sign",
+      "sourceExists": true
+    }
+  ],
+  "corpusLexicalCensus": {
+    "scope": "all Markdown files below corpus/ at generation time",
+    "caveat": "lexical navigation census only; occurrence does not establish a typed map, proof or physical relation",
+    "scannedMarkdownFiles": 1893,
+    "filesMatchingAtLeastOneTerm": 1408,
+    "termFileCounts": {
+      "intertwiner": 469,
+      "commutingSquare": 16,
+      "quotient": 578,
+      "descent": 270,
+      "kernel": 600,
+      "coarseGraining": 47,
+      "detector": 134,
+      "noGo": 569
+    },
+    "maintainedSemanticOwners": [
+      "corpus/programmes/frontier-physics-targets/frontier_gate_coverage_audit_v1.json",
+      "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json"
+    ]
+  },
+  "externalCases": [
+    {
+      "id": "gravity-compton-4pm",
+      "source": "worldline-QFT classical gravitational Compton amplitude at O(G^4)",
+      "map": "N-matrix extraction",
+      "target": "gravitational-wave scattering phase shift",
+      "certificate": "agreement with black-hole perturbation theory at the stated order",
+      "kernelOrLoss": "finite perturbative order; nonspinning compact object; not an all-orders equivalence",
+      "detector": "phase shift and independent perturbation-theory comparison",
+      "status": "ORDER_RESTRICTED_CERTIFIED_DESCENT",
+      "url": "https://journals.aps.org/prd/abstract/10.1103/nbxl-68tz"
+    },
+    {
+      "id": "k215-pa",
+      "source": "Peano-arithmetic formalization of a fixed 215-state Turing machine and coded ZFC proofs",
+      "map": "formal arithmetization and Metamath Zero proof compilation",
+      "target": "K215 halts iff ZFC is inconsistent",
+      "certificate": "machine-checked PA derivation with declared axioms, hashes and receipt",
+      "kernelOrLoss": "the theorem proves an equivalence; it proves neither that K215 halts nor that ZFC is inconsistent",
+      "detector": "small proof verifier plus false-conclusion control",
+      "status": "FORMALLY_CERTIFIED_EQUIVALENCE",
+      "url": "https://github.com/elliotglazer/k215-pa"
+    },
+    {
+      "id": "qft-four-manifolds",
+      "source": "supersymmetric quantum field theories on four-manifolds or complex surfaces",
+      "map": "topological twist and protected correlation-function construction",
+      "target": "intersection-theoretic invariants of instanton, sheaf or Higgs-sheaf moduli spaces",
+      "certificate": "protected/topological quantities related across physics and geometry",
+      "kernelOrLoss": "metric-dependent and unprotected dynamical content is not retained by the topological sector",
+      "detector": "twisted correlators and corresponding moduli-space invariants",
+      "status": "PROTECTED_SECTOR_DESCENT_REVIEW",
+      "url": "https://arxiv.org/abs/2610.30288"
+    },
+    {
+      "id": "sw-ssb-processor",
+      "source": "dephased matrix-product mixed states on a superconducting processor",
+      "map": "measurement plus channel-aware classical reconstruction",
+      "target": "fidelity, Renyi-2, linear and string correlators",
+      "certificate": "finite-size crossings and scaling collapse in nonlinear correlators while linear correlations decay",
+      "kernelOrLoss": "linear observables erase the order; finite-size evidence is not a thermodynamic-limit proof",
+      "detector": "two-setting nonlinear mixed-state reconstruction",
+      "status": "FINITE_SIZE_NONLINEAR_DETECTOR_WITNESS",
+      "url": "https://arxiv.org/abs/2610.26229"
+    },
+    {
+      "id": "riemann-modular-signpost",
+      "source": "social post pointing from an introductory Riemann-hypothesis talk toward modular forms",
+      "map": "unspecified",
+      "target": "unspecified",
+      "certificate": "none supplied in the linked post",
+      "kernelOrLoss": "no accessible theorem, construction or artifact was supplied from which to infer a descent",
+      "detector": "none",
+      "status": "UNRESOLVED_SIGNPOST",
+      "url": "https://x.com/cosminnegruseri/status/2113692628923584934"
+    }
+  ],
+  "admission": {
+    "exactDescentCriterionProvedAndWitnessed": true,
+    "approximateLeakageQuantified": true,
+    "quotientDynamicsNoGoWitnessed": true,
+    "compositionIdentityCloses": true,
+    "exactMemoryClosureCloses": true,
+    "noncommutingTargetBlocksCommutingSourceDescent": true,
+    "nonlinearDetectorLiftsSelectedBlindSpot": true,
+    "commonPhysicalMechanismEstablishedAcrossExternalCases": false,
+    "spin23PhysicalDescentEstablished": false
+  },
+  "irreducibleGates": [
+    {
+      "topicId": "OT-019",
+      "missing": "one source-native three-scale carrier with direct and composed physical pushforwards and held-out substitutions"
+    },
+    {
+      "topicId": "OT-027",
+      "missing": "an action generating the operator, amplitude, loss and calibrated detector maps"
+    },
+    {
+      "topicId": "OT-034",
+      "missing": "global injectivity or a characterized residual quotient over a frozen nonlinear model family"
+    },
+    {
+      "topicId": "OT-038",
+      "missing": "one labelled, unit-preserving, orientation- and loss-aware cross-carrier commuting square"
+    },
+    {
+      "topicId": "OT-045",
+      "missing": "an explicit operator domain satisfying preregistered Hecke or modular identities"
+    }
+  ]
+}

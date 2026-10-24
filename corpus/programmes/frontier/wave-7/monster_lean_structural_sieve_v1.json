@@ -1,0 +1,58 @@
+{
+  "schema": "monster-lean-structural-sieve/1",
+  "date": "2026-10-24",
+  "parent": "monster_lean_fold_frontier_geometry_v1.json",
+  "coordinateOrder": [
+    "app", "const", "forallE", "bvar", "lam", "sort", "lit", "letE",
+    "proj", "mdata", "fvar", "mvar", "Eq", "Iff", "False_or_Not"
+  ],
+  "formalAddressCount": 424488960,
+  "rules": [
+    {
+      "id": "kernel_closure",
+      "rule": "fvar = 0 and mvar = 0",
+      "status": "necessary for declarations admitted to a Lean Environment"
+    },
+    {
+      "id": "tree_euler",
+      "rule": "bvar + fvar + mvar + sort + const + lit = 1 + app + lam + forallE + 2*letE",
+      "status": "necessary for recursive occurrence counting of a finite rooted Expr tree"
+    },
+    {
+      "id": "basic_bvar_scope",
+      "rule": "a profile with bvar occurrences needs a binder and a closed binder-domain witness; a lam/forallE witness needs at least one non-bvar leaf and a letE-only witness needs at least two",
+      "status": "necessary but not a complete de Bruijn well-scoping decision procedure"
+    },
+    {
+      "id": "logical_flag_incidence",
+      "rule": "an unsaturated const count is at least the number of asserted distinct Eq, Iff and False_or_Not flags",
+      "status": "necessary under the posted presence-flag interpretation"
+    }
+  ],
+  "orderedPartition": {
+    "excludedByFvarOrMvarAxis": 318366720,
+    "closedFormalAddresses": 106122240,
+    "excludedByBasicBvarScopeAfterClosure": 2066496,
+    "excludedByTreeEulerAfterClosureAndScope": 33598208,
+    "excludedByLogicalFlagIncidenceAfterEarlierRules": 4953772,
+    "survivingNecessarySieve": 65503764
+  },
+  "fractions": {
+    "survivingOfFormalBox": 0.15431205560681718,
+    "excludedOfFormalBox": 0.8456879443931828,
+    "survivingOfClosedSubspace": 0.6172482224272687,
+    "reported908OfSurvivingSieve": 0.000013861798842582542
+  },
+  "capSemantics": {
+    "unsaturated": "actual count equals address coordinate",
+    "saturated": "actual count may be any integer at least the coordinate bound",
+    "decision": "solve the Euler residual over the resulting one-sided integer intervals"
+  },
+  "sourceAudit": {
+    "relatedRepository": "https://github.com/meta-introspector/monster",
+    "auditedCommit": "b82b09439139155dd031b5b8e0f8fa777b917a52",
+    "finding": "related Lean/Monster material exists, but the exact exprProfile fold and the reported declarations export were not present in the audited public history; the repository must not be treated as reproduction of the post",
+    "upstreamImplementationStatus": "not located"
+  },
+  "boundary": "The surviving set is an upper bound from necessary syntactic conditions. It is not the constructibly well-typed image of ConstantInfo.type and does not reproduce the reported census."
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "monster-lean-fold-frontier-geometry/1",
+  "date": "2026-10-24",
+  "parent": "monster_lean_fold_admissibility_v1.json",
+  "factorization": {
+    "gradedCoordinateBounds": [46, 20, 9, 6, 2, 3],
+    "gradedBoxSize": 829080,
+    "booleanCoordinateCount": 9,
+    "booleanCubeSize": 512,
+    "addressSpace": "A_M = A_deep x {0,1}^9"
+  },
+  "rankGeometry": {
+    "rank": "sum of the fifteen address exponents",
+    "minimum": 0,
+    "maximum": 95,
+    "levels": 96,
+    "meanUnderUniformAddress": 47.5,
+    "peakRanks": [47, 48],
+    "addressesAtEachPeak": 9031664,
+    "rankGeneratingFunction": "product_j (1 + q + ... + q^b_j)",
+    "complement": "a maps to b-a and reverses rank r to 95-r"
+  },
+  "saturationGeometry": {
+    "addressesByNumberOfSaturatedCoordinates": [
+      298080, 3035304, 14052420, 39093970, 72764765, 95457101,
+      90558643, 62720745, 31624530, 11444010, 2893722, 490164,
+      52225, 3185, 95, 1
+    ],
+    "strictInterior": 298080,
+    "boundary": 424190880,
+    "boundaryFraction": 0.9992977909248806,
+    "expectedSaturatedCoordinatesUnderUniformAddress": 5.395086119554205,
+    "interpretation": "Saturation is typical in the formal Monster box because nine axes are Boolean; it is a stratum label, not evidence that a declaration overflowed."
+  },
+  "reportedOccupancy": {
+    "observedAddresses": 908,
+    "formalAddresses": 424488960,
+    "unobservedFormalAddresses": 424488052,
+    "occupancyFraction": 0.0000021390426738071113,
+    "occupancyPercent": 0.00021390426738071116,
+    "averageDeclarationsPerObservedAddress": 2.1795154185022025,
+    "uniformDeclarationIdentityInformationLossLowerBoundBits": 1.124007409756597,
+    "unclampedDeclarationFraction": 0.39868620515411823,
+    "kernelCertificateCoverageFraction": 0.006568974229408792,
+    "status": "derived from the post's reported counts, not independently reproduced"
+  },
+  "frontierPartition": [
+    {"zone": "filled", "definition": "addresses observed among the reported 1,979 declarations", "knownCount": 908},
+    {"zone": "reachable_unfilled", "definition": "addresses realized by some valid Lean kernel expression but absent from the sampled environment", "knownCount": null},
+    {"zone": "structurally_forbidden", "definition": "box points violating expression-tree or logical-incidence constraints", "knownCount": null},
+    {"zone": "encoding_unstable", "definition": "addresses changed by meaning-preserving elaboration or reduction choices", "knownCount": null},
+    {"zone": "semantic_collision", "definition": "one address containing declarations separated by the chosen semantic equivalence", "knownCount": null}
+  ],
+  "nextComputation": "Determine the realizable image R of Lean.Expr profiles inside A_M, then stratify A_M as observed, constructibly reachable, structurally forbidden and encoding-unstable before adding detector channels."
+}
