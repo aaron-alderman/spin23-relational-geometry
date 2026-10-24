@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "A three-mode closed coupling loop is the minimum intrinsic seam-phase carrier; its spectrum is even in loop flux while directional complex transfer can retain flux orientation.",
+  "model": {
+    "modes": 3,
+    "edgeMagnitude": 0.23,
+    "linewidth": 0.18,
+    "probeFrequency": 0.11,
+    "fluxes": [0, 1.5707963267948966, 3.141592653589793, -1.5707963267948966]
+  },
+  "invariants": {
+    "loopFlux": "phi12+phi23+phi31 mod 2pi",
+    "determinant": "2*g^3*cos(Phi)",
+    "spectrumUnderFluxReversal": "unchanged",
+    "directionalTransferUnderFluxReversal": "odd component reverses"
+  },
+  "mandatoryControls": [
+    "redistribute phases among edges at fixed loop flux",
+    "open each edge in turn",
+    "swap input and output cables",
+    "hold edge magnitudes fixed",
+    "reserve held-out phase distributions"
+  ],
+  "interpretation": "The loop supplies an intrinsic synthetic-flux carrier. A source-derived map from modular, Monster or Golay data remains open.",
+  "terminalStatus": "intrinsic_carrier_preflight_passed_hardware_and_source_binding_open"
+}

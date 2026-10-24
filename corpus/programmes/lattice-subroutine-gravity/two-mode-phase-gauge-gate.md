@@ -115,3 +115,5 @@ Mapping the complex sewing normal to a single laboratory coupling cannot produce
 2. map the seam to a gauge-invariant loop product in a three-or-more-mode network.
 
 The second route is structurally closer to a holonomy and supplies the stronger test.
+
+The [three-mode loop preflight](three-mode-loop-seam-preflight.md) now supplies that test. It verifies phase-redistribution invariance and shows that the loop spectrum is even under flux reversal while directional complex transport retains the orientation.

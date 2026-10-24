@@ -28,6 +28,7 @@ const requiredFiles = [
   "two-quadrature-seam-experiment.md",
   "two-resonator-transfer-preflight.md",
   "two-mode-phase-gauge-gate.md",
+  "three-mode-loop-seam-preflight.md",
   "literature-review.md",
   "next-steps.md",
   "mece-ledger-v1.json"
@@ -62,6 +63,8 @@ const requiredEvidence = [
   ,"verification/verify/verify_lattice_subroutine_two_resonator_transfer_preflight.mjs"
   ,"evidence/data/lattice-subroutine-two-mode-phase-gauge-gate-v1.json"
   ,"verification/verify/verify_lattice_subroutine_two_mode_phase_gauge_gate.mjs"
+  ,"evidence/data/lattice-subroutine-three-mode-loop-seam-preflight-v1.json"
+  ,"verification/verify/verify_lattice_subroutine_three_mode_loop_seam_preflight.mjs"
 ];
 
 for (const file of requiredFiles) {
