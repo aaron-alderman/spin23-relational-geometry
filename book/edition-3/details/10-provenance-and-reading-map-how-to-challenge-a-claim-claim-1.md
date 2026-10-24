@@ -42,4 +42,4 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 ---
 
-[Return to the assertion in the chapter](../chapters/10-provenance-and-reading-map.md#how-to-challenge-a-claim) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-kenotic-confidence-claim-1.md) · [Next claim →](10-provenance-and-reading-map-how-to-challenge-a-claim-claim-2.md)
+[Return to the assertion in the chapter](../chapters/10-provenance-and-reading-map.md#how-to-challenge-a-claim) · [Book contents](../README.md) · [← Previous claim](07-exceptional-horizon-where-the-exceptional-programme-actually-stands-claim-1.md) · [Next claim →](10-provenance-and-reading-map-how-to-challenge-a-claim-claim-2.md)

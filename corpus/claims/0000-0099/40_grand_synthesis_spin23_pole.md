@@ -2,6 +2,8 @@
 
 > **Warning: This page preserves an accretive argument history and is not a standalone synthesis. Later sections may revise or supersede earlier claims.**
 
+> **Interpretive order:** apply the [canonical reading contract](../../READING_CONTRACT.md): Jordan admission → typed admissibility → Lie transport. Spin(2,3) is an exact completion on a declared carrier, not the programme's prior container.
+
 **Reading boundary:** this is the expansive branch ledger behind the programme's syntheses. Each bridge carries its local status and must be judged by its cited carrier, invariant, map and test; narrative continuity does not raise the authority of a conditional or speculative edge. For a self-contained argument, use [The admissibility frontier](../../syntheses/the_admissibility_frontier_current_synthesis.md) or the [reader book](../../../book/edition-3/README.md).
 
 ## A grand synthesis of carrier, face, relation, holonomy, symmetry breaking, arithmetic consistency, and physical descent

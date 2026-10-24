@@ -7,18 +7,26 @@
 **Working queue:** [Open topics](../programmes/frontier-physics-targets/open_topics_v1.md)  
 **Presentation rule:** [Claimipedia editorial standard](../../integrations/claimipedia/ARTICLE-EDITORIAL-STANDARD.md)
 
+## The reading contract
+
+This programme must be read from admission outward, not from a preferred symmetry group inward: **Jordan admission and composition → typed admissibility region → Lie transformation and transport → dynamics, selection and records**. Jordan structure first delimits what can coexist as positive states, responses, observables and compositions. The typed middle then asks which carrier, histories, selectors and records remain jointly realizable. Lie structure describes how those admitted possibilities can be transformed and transported. Dynamics proposes paths through or across the resulting region; detectors decide which distinctions survive into records.
+
+In this order, \(\operatorname{Spin}_0(2,3)\cong\operatorname{Sp}(4,\mathbb R)\) is not the starting claim. It is the exact conformal completion obtained from the rank-two positive response cone through the Jordan triple/TKK construction. The group is a symmetry of the possibility space that the Jordan side has already delimited. The live research object is the compatibility region between admission and transport, not the group alone. The concise normative version is the [canonical reading contract](../READING_CONTRACT.md).
+
 ## The good news
 
 The corpus has found a coherent way to hold together two mathematical languages that physics repeatedly needs and repeatedly risks confusing.
 
-Jordan structure describes what can coexist as a state, response, observable or positive composition. Lie structure describes how a system can transform, move and preserve relations. The corpus does not ask one language to replace the other. It places them around a typed middle:
+Jordan structure describes what can coexist as a state, response, observable or positive composition. Lie structure describes how a system can transform, move and preserve relations. The corpus does not ask one language to replace the other, but the order of explanation is not reversible:
 
 \[
 \boxed{\text{Jordan admission and composition}}
-\quad\longleftrightarrow\quad
-\boxed{\text{typed relational carrier}}
-\quad\longleftrightarrow\quad
-\boxed{\text{Lie transformation and transport}}.
+\quad\longrightarrow\quad
+\boxed{\text{typed admissibility region}}
+\quad\longrightarrow\quad
+\boxed{\text{Lie transformation and transport}}
+\quad\longrightarrow\quad
+\boxed{\text{dynamics, selection and records}}.
 \]
 
 For the rank-two real response carrier this middle closes exactly:
@@ -148,13 +156,13 @@ The corpus is therefore already valuable in two ways:
 1. as a mathematical programme, because it contains exact classifications, constructions and obstructions; and
 2. as a frontier instrument, because it tells researchers where a calculation, device or dataset can genuinely change the map.
 
-## Why there is hope
+## Why there is hope: this is where to look
 
 Hope here does not depend on pretending that every bridge closed. It comes from the shape of the failures.
 
 The programme has not dissolved into arbitrary numerology. Repeated investigations converge on a small set of missing objects: a physical carrier, a source-derived second datum, a common action, a protected normalization, a scale-stable descent and a detector that remains discriminating after nuisance folding. That convergence is informative. It means the next work can be narrower, harder and more decisive.
 
-Several fronts are reachable without waiting for a final theory:
+Several fronts are reachable without waiting for a final theory. Each has a two-outcome value: it should return a theoretical or engineering improvement under established physics, while preserving a predeclared discriminator by which a controlled residual could count as new physics.
 
 - programmable photonic, acoustic and hybrid-mode platforms can test projector return, coherent holonomy and contractive selection;
 - same-film transport and optical data can be propagated into a no-refit Casimir force or torque prediction;
@@ -163,7 +171,7 @@ Several fronts are reachable without waiting for a final theory:
 - current polarized-force experiments already constrain the surviving torsion/pseudoscalar EFT, even though they cannot yet identify a Spin(2,3) parent;
 - source-native exceptional and modular tests can return useful no-go results before any speculative unification claim is entertained.
 
-The route is difficult, but it is no longer shapeless.
+The invitation is therefore concrete: **look here**. Improve the projector control, material-response pipeline, thermodynamic-limit calculation, topological-memory device, polarized-force bound or carrier-preserving classification. Most successful work will improve theory, inference or engineering. If a residual survives the declared conventional model, reversal tests and detector controls, the same work provides an honest route to new physics. The route is difficult, but it is no longer shapeless.
 
 ## Kenotic confidence
 
@@ -247,3 +255,7 @@ You can contribute by:
 The standard is simple: preserve the alternatives, declare the types, expose the strongest objection, state what would change the verdict and let the evidence carry only the authority it has earned.
 
 The corpus does not ask a reader to be overwhelmed by its size. It asks them to find one live edge and make it clearer.
+
+## Optional final arcs
+
+After the scientific and practical argument is complete, readers may continue to [desired endpoints, speculative arcs, mythic pictures and a theological analysis that explicitly assumes God exists](admissibility_optional_endpoints_mythic_and_theological_readings.md). These are a menu, not a necessity. They may orient imagination and purpose, but they do not supply premises for the mathematics, experiments or new-physics claims above.

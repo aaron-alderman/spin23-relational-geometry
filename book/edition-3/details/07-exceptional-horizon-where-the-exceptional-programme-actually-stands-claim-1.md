@@ -42,4 +42,4 @@ Supply the missing datum with a physical definition and demonstrate that it conn
 
 ---
 
-[Return to the assertion in the chapter](../chapters/07-exceptional-horizon.md#where-the-exceptional-programme-actually-stands) · [Book contents](../README.md) · [← Previous claim](07-exceptional-horizon-the-corrected-octonionic-two-branch-model-claim-2.md) · [Next claim →](08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-1.md)
+[Return to the assertion in the chapter](../chapters/07-exceptional-horizon.md#where-the-exceptional-programme-actually-stands) · [Book contents](../README.md) · [← Previous claim](07-exceptional-horizon-the-corrected-octonionic-two-branch-model-claim-2.md) · [Next claim →](10-provenance-and-reading-map-how-to-challenge-a-claim-claim-1.md)

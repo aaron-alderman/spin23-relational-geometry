@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> Each route must preserve the corpus firewall: a shared mathematical object is not automatically a shared physical carrier, and sensitivity is not a predicted signal. Progress requires a predeclared observable, nuisance model, decision rule and interpretation ladder.
+> Each is a two-outcome research design: established physics should return a theoretical, inferential or engineering improvement, while a predeclared residual surviving the full nuisance model may point toward new physics. A shared mathematical object is not automatically a shared physical carrier, and sensitivity is not a predicted signal; progress requires a named observable, control model, decision rule and interpretation ladder.
 
 ## What this commits us to
 

@@ -37,4 +37,4 @@ A path inherits its weakest edge status. In particular, an analogy does not beco
 
 ---
 
-[← Provenance and reading map](10-provenance-and-reading-map.md) · [Contents](../README.md)
+[← Provenance and reading map](10-provenance-and-reading-map.md) · [Contents](../README.md) · [Optional endpoints and larger readings →](12-optional-endpoints-and-readings.md)

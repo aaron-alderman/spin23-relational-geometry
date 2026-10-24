@@ -2,6 +2,8 @@
 
 > **Warning: This page preserves an accretive argument history and is not a standalone synthesis. Later sections may revise or supersede earlier claims.**
 
+> **Interpretive order:** apply the [canonical reading contract](../../READING_CONTRACT.md): Jordan admission → typed admissibility → Lie transport. Spin(2,3) is an exact completion on a declared carrier, not the programme's prior container.
+
 **Current front door — 24 October 2026:** [The admissibility frontier](../../syntheses/the_admissibility_frontier_current_synthesis.md) gives the current Jordan–carrier–Lie story; the [frontier target set](../../programmes/frontier-physics-targets/frontier_physics_target_set_v1.md), [experiment atlas](../../programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md) and [open-topic register](../../programmes/frontier-physics-targets/open_topics_v1.md) carry the live practical frontier. This document remains the chronological map into the full record.
 
 ## Separate inquiry: illegible knowledge

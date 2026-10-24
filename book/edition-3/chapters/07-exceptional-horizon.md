@@ -91,4 +91,4 @@ H₂(ℝ), J₃(𝕆), E₆, E₇, E₈, lattice constructions and moonshine occ
 
 ---
 
-[← Proton safety, Pati–Salam and triality](06-proton-safety.md) · [Contents](../README.md) · [The admissibility frontier →](08-admissibility-frontier.md)
+[← Proton safety, Pati–Salam and triality](06-proton-safety.md) · [Contents](../README.md) · [Result and reversal ledger →](08-result-ledger.md)

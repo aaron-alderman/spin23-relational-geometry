@@ -1,6 +1,6 @@
 # The revised spine
 
-_Response data to Spin(2,3)_
+_One exact Jordan-to-Lie completion_
 
 > **Chapter status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
 
@@ -97,4 +97,4 @@ A symmetry can act on response coordinates without acting on physical events. Ca
 
 ---
 
-[← Front matter](00-front-matter.md) · [Contents](../README.md) · [One carrier, two faces, three relations →](02-one-carrier-two-faces-three-relations.md)
+[← The admissibility frontier](08-admissibility-frontier.md) · [Contents](../README.md) · [One carrier, two faces, three relations →](02-one-carrier-two-faces-three-relations.md)

@@ -102,9 +102,48 @@ None of these labels means true of nature. Even an exact theorem can describe th
 
 > **Research move — [⌖ Cartographer](../reading-key/move-cartographer.md)** — maps territory, distinctions, dependencies and interfaces.
 
-Chapters 1–3 build the mathematical spine from response measurements and relational loops. Chapters 4–7 ask whether that spine can carry Standard-Model matter, safe interactions and exceptional structure. The ledger then records both positive results and reversals. The frontier chapter ends with concrete reopen conditions rather than an invitation to continue indefinitely.
+The admissibility frontier comes first because it supplies the reading contract: Jordan admission delimits the possibilities, the typed middle is the live object, and Lie transport acts on what has been admitted. The following chapters then build one exact rank-two completion from response measurements and relational loops before asking whether it can carry Standard-Model matter, safe interactions or exceptional structure. The ledger records both positive results and reversals, and the research frontier ends with concrete reopen conditions rather than an invitation to continue indefinitely.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-the-route-through-the-book-claim-1.md)
+
+<a id="things-before-names"></a>
+## Things before names
+
+> **Research move — [▤ Steward](../reading-key/move-steward.md)** — preserves provenance, memory, status and continuity.
+
+Begin with the preparation, response table, path, boundary, update or detector record before introducing the algebraic name that compresses it. Show what can be done to the thing and what remains unchanged. Technical language then becomes earned precision rather than an entrance fee.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-things-before-names-claim-1.md)
+
+For example, two coupled readouts and their nonnegative response come before H₂(ℝ); eliminating a hidden component comes before the Schur complement and Jordan triple; transport around a loop and a changed return come before holonomy.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-things-before-names-claim-2.md)
+
+<a id="every-bridge-carries-a-reason"></a>
+## Every bridge carries a reason
+
+> **Research move — [▤ Steward](../reading-key/move-steward.md)** — preserves provenance, memory, status and continuity.
+
+Two technical nouns placed beside one another do not explain their relationship. Every material bridge must say why the things are alike, why they differ, what produces the difference, whether its mathematical and physical parts are open or closed, what follows, what does not follow and which calculation or observation would decide the remainder.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-every-bridge-carries-a-reason-claim-1.md)
+
+The compact grammar is because—but—therefore—still open. An unlabeled arrow, shared name, repeated number or similar diagram is a prompt to investigate, not a completed bridge.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-every-bridge-carries-a-reason-claim-2.md)
+
+<a id="pictures-and-speculation-are-optional"></a>
+## Pictures and speculation are optional
+
+> **Research move — [▤ Steward](../reading-key/move-steward.md)** — preserves provenance, memory, status and continuity.
+
+Landscape, grammar, network, workshop, ecological, mythic and theological pictures may be offered after the reason-bearing core. They form a menu, not a ladder of belief: a reader may use the theorem or experiment while rejecting every optional interpretation.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-pictures-and-speculation-are-optional-claim-1.md)
+
+A picture must pass deletion and substitution tests. Removing it or replacing it with another picture must leave the typed objects, reason, status, implication and test unchanged; otherwise it carries a hidden premise.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-pictures-and-speculation-are-optional-claim-2.md)
 
 ## Chapter sources
 
@@ -113,4 +152,4 @@ Chapters 1–3 build the mathematical spine from response measurements and relat
 
 ---
 
-[← Edition 3 cover](../README.md) · [Contents](../README.md) · [The revised spine →](01-the-revised-spine.md)
+[← Edition 3 cover](../README.md) · [Contents](../README.md) · [The admissibility frontier →](08-admissibility-frontier.md)

@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> Neither side is sufficient by itself. Lie closure without an admitted state or observable cone can be formally beautiful and physically empty; a Jordan cone without transformation, time, selection or records can be stable and sterile. The programme lives in the passage between them.
+> This order is asymmetric and non-negotiable. Spin₀(2,3) is an exact conformal completion of the declared rank-two Jordan response cone, not the starting premise or prior container of the physics. Lie closure without an admitted domain can be formally beautiful and physically empty; a Jordan cone without transformation, time, selection or records can be stable and sterile. The programme lives in the passage between them.
 
 ## What this commits us to
 

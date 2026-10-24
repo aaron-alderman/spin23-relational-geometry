@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> Jordan structure describes what can coexist as a positive state, response, observable or composition. Lie structure describes how a carrier can transform while preserving relations. The corpus places them around a typed middle: Jordan admission and composition ↔ typed relational carrier ↔ Lie transformation and transport.
+> Jordan structure delimits what can coexist as a positive state, response, observable or composition. The typed admissibility region is the live object: it asks which carriers, compositions, histories, selectors and records remain jointly realizable. Lie structure then describes how admitted possibilities can transform while preserving declared relations.
 
 ## What this commits us to
 
@@ -43,4 +43,4 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#the-structure-between-jordan-and-lie) · [Book contents](../README.md) · [← Previous claim](07-exceptional-horizon-where-the-exceptional-programme-actually-stands-claim-1.md) · [Next claim →](08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-2.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#the-structure-between-jordan-and-lie) · [Book contents](../README.md) · [← Previous claim](00-front-matter-pictures-and-speculation-are-optional-claim-2.md) · [Next claim →](08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-2.md)

@@ -40,4 +40,4 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 ---
 
-[Return to the assertion in the chapter](../chapters/11-concept-atlas.md#a-compact-vocabulary) · [Book contents](../README.md) · [← Previous claim](11-concept-atlas-a-compact-vocabulary-claim-1.md)
+[Return to the assertion in the chapter](../chapters/11-concept-atlas.md#a-compact-vocabulary) · [Book contents](../README.md) · [← Previous claim](11-concept-atlas-a-compact-vocabulary-claim-1.md) · [Next claim →](12-optional-endpoints-and-readings-practical-hope-ends-in-work-claim-1.md)

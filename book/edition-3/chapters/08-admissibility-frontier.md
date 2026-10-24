@@ -1,6 +1,6 @@
 # The admissibility frontier
 
-_The structure between Jordan and Lie_
+_Admission before symmetry_
 
 > **Chapter status — [◎ Interpretive map](../reading-key/status-interpretive.md)** — Organizes thought or workflow but is not evidence for a physical claim.
 
@@ -13,11 +13,11 @@ _The structure between Jordan and Lie_
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-Jordan structure describes what can coexist as a positive state, response, observable or composition. Lie structure describes how a carrier can transform while preserving relations. The corpus places them around a typed middle: Jordan admission and composition ↔ typed relational carrier ↔ Lie transformation and transport.
+Jordan structure delimits what can coexist as a positive state, response, observable or composition. The typed admissibility region is the live object: it asks which carriers, compositions, histories, selectors and records remain jointly realizable. Lie structure then describes how admitted possibilities can transform while preserving declared relations.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-1.md)
 
-Neither side is sufficient by itself. Lie closure without an admitted state or observable cone can be formally beautiful and physically empty; a Jordan cone without transformation, time, selection or records can be stable and sterile. The programme lives in the passage between them.
+This order is asymmetric and non-negotiable. Spin₀(2,3) is an exact conformal completion of the declared rank-two Jordan response cone, not the starting premise or prior container of the physics. Lie closure without an admitted domain can be formally beautiful and physically empty; a Jordan cone without transformation, time, selection or records can be stable and sterile. The programme lives in the passage between them.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-2.md)
 
@@ -77,7 +77,7 @@ Several fronts can move without a final theory: projector return and holonomy in
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-what-is-genuinely-within-reach-claim-1.md)
 
-Each route must preserve the corpus firewall: a shared mathematical object is not automatically a shared physical carrier, and sensitivity is not a predicted signal. Progress requires a predeclared observable, nuisance model, decision rule and interpretation ladder.
+Each is a two-outcome research design: established physics should return a theoretical, inferential or engineering improvement, while a predeclared residual surviving the full nuisance model may point toward new physics. A shared mathematical object is not automatically a shared physical carrier, and sensitivity is not a predicted signal; progress requires a named observable, control model, decision rule and interpretation ladder.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-what-is-genuinely-within-reach-claim-2.md)
 
@@ -101,4 +101,4 @@ The exact hinge, the coherence of the map and the usefulness of its obstructions
 
 ---
 
-[← The exceptional horizon](07-exceptional-horizon.md) · [Contents](../README.md) · [Result and reversal ledger →](08-result-ledger.md)
+[← Front matter](00-front-matter.md) · [Contents](../README.md) · [The revised spine →](01-the-revised-spine.md)

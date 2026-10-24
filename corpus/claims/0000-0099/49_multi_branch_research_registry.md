@@ -2,6 +2,8 @@
 
 > **Warning: This page preserves an accretive argument history and is not a standalone synthesis. Later sections may revise or supersede earlier claims.**
 
+> **Interpretive order:** apply the [canonical reading contract](../../READING_CONTRACT.md): Jordan admission → typed admissibility → Lie transport. Spin(2,3) is an exact completion on a declared carrier, not the programme's prior container.
+
 **Live navigation — 24 October 2026:** branch provenance remains here, while current frontier status is consolidated in the [frontier exhaustion checkpoint](../../programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md), [open-topic register](../../programmes/frontier-physics-targets/open_topics_v1.md) and [current synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md).
 
 **Opened:** 16 October 2026  

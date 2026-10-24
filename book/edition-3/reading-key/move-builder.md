@@ -19,6 +19,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Proton safety, Pati–Salam and triality · Why a multiplet brings unwanted companions](../chapters/06-proton-safety.md#why-a-multiplet-brings-unwanted-companions)
 - [Proton safety, Pati–Salam and triality · From continuous charges to triality](../chapters/06-proton-safety.md#from-continuous-charges-to-triality)
 - [The exceptional horizon · The corrected octonionic two-branch model](../chapters/07-exceptional-horizon.md#the-corrected-octonionic-two-branch-model)
+- [Optional endpoints and larger readings · Practical hope ends in work](../chapters/12-optional-endpoints-and-readings.md#practical-hope-ends-in-work)
 - [E3-F05 · The Furey channel rotation participates in exact sp(4) closure](../chapters/08-result-ledger.md#E3-F05)
 - [E3-F08 · Pati–Salam finite geometry supplies a concrete source split](../chapters/08-result-ledger.md#E3-F08)
 - [E3-F10 · Baryon triality is the first surviving cyclic protection](../chapters/08-result-ledger.md#E3-F10)
@@ -47,6 +48,8 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Claim · Proton safety, Pati–Salam and triality · From continuous charges to triality (2)](../details/06-proton-safety-from-continuous-charges-to-triality-claim-2.md)
 - [Claim · The exceptional horizon · The corrected octonionic two-branch model (1)](../details/07-exceptional-horizon-the-corrected-octonionic-two-branch-model-claim-1.md)
 - [Claim · The exceptional horizon · The corrected octonionic two-branch model (2)](../details/07-exceptional-horizon-the-corrected-octonionic-two-branch-model-claim-2.md)
+- [Claim · Optional endpoints and larger readings · Practical hope ends in work (1)](../details/12-optional-endpoints-and-readings-practical-hope-ends-in-work-claim-1.md)
+- [Claim · Optional endpoints and larger readings · Practical hope ends in work (2)](../details/12-optional-endpoints-and-readings-practical-hope-ends-in-work-claim-2.md)
 
 ---
 

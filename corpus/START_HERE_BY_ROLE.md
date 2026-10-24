@@ -4,7 +4,8 @@ The corpus is large because it preserves both discoveries and failed routes. Ent
 
 | You want to… | Read first | Then do one bounded thing |
 |---|---|---|
-| Understand the whole claim | [Current synthesis](syntheses/the_admissibility_frontier_current_synthesis.md) and [Edition 3.2](../book/edition-3/README.md) | Challenge the Jordan–carrier–Lie framing at its weakest typed edge. |
+| Understand the whole claim | [Reading contract](READING_CONTRACT.md), [current synthesis](syntheses/the_admissibility_frontier_current_synthesis.md) and [Edition 3.2](../book/edition-3/README.md) | Challenge the Jordan–carrier–Lie framing at its weakest typed edge without reversing its explanatory order. |
+| Explain, translate or summarize | [Explanatory standard](EXPLANATORY_STANDARD.md) | Put things before names; give the reason, difference, two-dimensional status, implication, non-implication and next discriminator for every material bridge. |
 | Check the mathematics | [Book result ledger](../book/edition-3/chapters/08-result-ledger.md) and cited certificates | Reproduce one theorem or replace one computational certificate with a conventional proof. |
 | Work on Furey/division algebras | [Technical guide](claims/0000-0099/03_furey_technical_algebraic_guide.md) and [source-provenance matrix](programmes/document-acceptance/furey_source_provenance_matrix_20261024.md) | Separate a primary-source result from a later corpus deduction and verify the map. |
 | Work on exceptional mathematics | [Exceptional horizon](../book/edition-3/chapters/07-exceptional-horizon.md) and [paper-worthiness ranking](programmes/closure/programme_closure_08_paperworthiness_ranking.md) | Test one carrier/invariant/intertwiner; do not infer a physical identification from a shared number. |
@@ -18,8 +19,8 @@ The corpus is large because it preserves both discoveries and failed routes. Ent
 
 ## The shortest reliable path
 
-1. Read the [current synthesis](syntheses/the_admissibility_frontier_current_synthesis.md).
-2. Use the [glossary](GLOSSARY.md) to keep carrier, selector, dynamics, detector and admissibility distinct.
+1. Read the [canonical reading contract](READING_CONTRACT.md), then the [current synthesis](syntheses/the_admissibility_frontier_current_synthesis.md).
+2. Use the [explanatory standard](EXPLANATORY_STANDARD.md) and [glossary](GLOSSARY.md) to keep the things, reasons, carrier, selector, dynamics, detector and admissibility distinct.
 3. Choose one item from the [49-topic live queue](programmes/frontier-physics-targets/open_topics_v1.md).
 4. Open its controlling corpus links and kill test.
 5. Return a proof, calculation, source, protocol, correction or explicit failure.

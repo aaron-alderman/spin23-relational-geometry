@@ -8,7 +8,7 @@ _Expanded claim page · Front matter_
 
 ## Exact assertion
 
-> Chapters 1–3 build the mathematical spine from response measurements and relational loops. Chapters 4–7 ask whether that spine can carry Standard-Model matter, safe interactions and exceptional structure. The ledger then records both positive results and reversals. The frontier chapter ends with concrete reopen conditions rather than an invitation to continue indefinitely.
+> The admissibility frontier comes first because it supplies the reading contract: Jordan admission delimits the possibilities, the typed middle is the live object, and Lie transport acts on what has been admitted. The following chapters then build one exact rank-two completion from response measurements and relational loops before asking whether it can carry Standard-Model matter, safe interactions or exceptional structure. The ledger records both positive results and reversals, and the research frontier ends with concrete reopen conditions rather than an invitation to continue indefinitely.
 
 ## What this commits us to
 
@@ -41,4 +41,4 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 ---
 
-[Return to the assertion in the chapter](../chapters/00-front-matter.md#the-route-through-the-book) · [Book contents](../README.md) · [← Previous claim](00-front-matter-four-labels-used-throughout-claim-2.md) · [Next claim →](01-the-revised-spine-what-closes-claim-1.md)
+[Return to the assertion in the chapter](../chapters/00-front-matter.md#the-route-through-the-book) · [Book contents](../README.md) · [← Previous claim](00-front-matter-four-labels-used-throughout-claim-2.md) · [Next claim →](00-front-matter-things-before-names-claim-1.md)

@@ -1,6 +1,20 @@
-# Spin(2,3) Relational Geometry
+# The Admissibility Frontier
 
-An audited research corpus investigating the passage from possible structure to physically admissible structure. Its exact mathematical hinge places positive two-face Jordan response and Lie transformation around the same typed carrier:
+_A Jordan–carrier–Lie research programme, with Spin(2,3) as one exact completion rather than its starting premise._
+
+An audited research corpus investigating the passage from possible structure to physically admissible structure. Read it from admission outward: Jordan structure delimits what can coexist as positive states, responses and compositions; a typed middle asks which carriers, histories, selections and records remain jointly realizable; Lie structure describes how admitted possibilities can be transformed and transported. The live object is that admissibility region, not a symmetry group named in advance.
+
+\[
+\boxed{\text{Jordan admission and composition}}
+\longrightarrow
+\boxed{\text{typed admissibility region}}
+\longrightarrow
+\boxed{\text{Lie transformation and transport}}
+\longrightarrow
+\boxed{\text{dynamics, selection and records}}.
+\]
+
+On the declared rank-two response carrier, one important exact completion is:
 
 \[
 H_2(\mathbb R)_+
@@ -10,7 +24,7 @@ H_2(\mathbb R)_+
 \mathfrak{so}(2,3).
 \]
 
-The larger programme turns dynamics toward admissibility: not only “what equations move a state?” but “which states, transformations, histories and records remain jointly realizable, and what dynamics can live inside that region?” The result is a practical atlas of exact structure, bounded bridges, exclusions, detectors and reachable frontiers.
+The group is therefore a symmetry of a possibility space already delimited on the Jordan side; it is not the prior container into which physics is fitted. The larger programme turns dynamics toward admissibility: not only “what equations move a state?” but “which states, transformations, histories and records remain jointly realizable, and what dynamics can live inside that region?” The result is a practical atlas of exact structure, bounded bridges, exclusions, detectors and reachable frontiers. The [canonical reading contract](corpus/READING_CONTRACT.md) fixes the order; the [explanatory standard](corpus/EXPLANATORY_STANDARD.md) requires things before jargon, reasons on every bridge, separate mathematical and physical status, adjacent implications and non-implications, and optional pictures that carry no hidden premises.
 
 This is **not a completed unified theory**. Established mathematics, reproducible model-local results, conditional constructions, conjectures, analogies, obstructions and indeterminate inputs remain explicitly separated.
 
@@ -18,6 +32,8 @@ This is **not a completed unified theory**. Established mathematics, reproducibl
 
 | Reader | Start here |
 |---|---|
+| Any reader or summarizing model | [Canonical reading contract](corpus/READING_CONTRACT.md) |
+| Writer, translator or reviewer | [Explanatory standard](corpus/EXPLANATORY_STANDARD.md) |
 | Start with the present story | [The admissibility frontier: current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) |
 | General reader | [Edition 3.2 admissibility book preview](book/edition-3/README.md) |
 | Researcher | [Canonical corpus guide](corpus/README.md) |
@@ -33,13 +49,15 @@ The generated paged edition is available in [`docs/edition-3`](docs/edition-3/in
 
 The corpus has found more than a collection of correspondences. It has found a coherent middle architecture.
 
-- **Jordan and Lie meet without being collapsed.** Jordan structure governs positive states, responses and composition; Lie structure governs transformation and transport. Their exact rank-two hinge is established, while its physical carrier remains a live question.
+- **The middle, not either endpoint, is primary.** Jordan structure delimits positive coexistence and composition; Lie structure governs transformation and transport of what has been admitted. Their typed compatibility region is the object under investigation, while its physical carrier remains a live question.
 - **Dynamics and admissibility constrain one another.** An action or update rule proposes motion; the admissibility stack tests type, composition, positivity, causality, stability, global extension and empirical record. This reversal has become executable rather than merely philosophical.
 - **Selection has become visible.** Symmetry usually supplies an orbit, not a realized member. The corpus identifies the independently sourced boundary, anisotropy, environment, history or record required to turn neutral preservation into physical selection.
 - **The frontier is mapped for use.** 22 physics targets, 20 frontier areas, 35 detector bundles, 20 experiments and 49 maintained topics connect exact mathematics to calculations, devices, controls and kill tests.
 - **The negative results are constructive.** They prevent attractive shared shapes—whether \(A_2\), triality, Golay, Leech, Freudenthal, \(E_8\) or torsion—from being promoted without the missing carrier, action, normalization and observable.
 
 The strongest ontological claim remains open: the corpus has not established that admissibility generates all physical law. But it has established a powerful research method and an unusually detailed “look here” guide to the frontier. The [current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) tells that story, including the good news, the limits, the hope and the invitation to contribute.
+
+The scientific story ends with places to work: each should return a theoretical or engineering improvement under established physics and retain a controlled discriminator for new physics. Only after that boundary does the corpus offer an [optional menu of desired endpoints, speculative and mythic arcs, and theology under the explicit assumption that God exists](corpus/syntheses/admissibility_optional_endpoints_mythic_and_theological_readings.md). Those readings orient possibility and purpose; they are not premises for the mathematics or experiments.
 
 ## Canonical research controls
 

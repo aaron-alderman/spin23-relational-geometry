@@ -2,7 +2,9 @@
 
 This corpus welcomes corrections, reproductions, conventional reformulations, no-go results, literature provenance, simulations, detector models and experiments. You do not need to accept the programme's larger interpretation. The most valuable contribution may be a clean proof that a proposed bridge fails.
 
-Start with the [role-based entry map](corpus/START_HERE_BY_ROLE.md), [current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) and [glossary](corpus/GLOSSARY.md). Choose one live edge from the [open-topic register](corpus/programmes/frontier-physics-targets/open_topics_v1.md); do not treat the giant historical logs as the current queue.
+Start with the [role-based entry map](corpus/START_HERE_BY_ROLE.md), [current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md), [explanatory standard](corpus/EXPLANATORY_STANDARD.md) and [glossary](corpus/GLOSSARY.md). Choose one live edge from the [open-topic register](corpus/programmes/frontier-physics-targets/open_topics_v1.md); do not treat the giant historical logs as the current queue.
+
+For every material bridge, make the source and target things recoverable, say why they are alike and why they differ, identify the reason for the difference, report mathematical and physical closure separately, and place the implication beside its non-implication. Pictures and speculative readings are welcome as an explicitly optional menu; they must pass the deletion and substitution tests in the explanatory standard.
 
 ## The contribution contract
 

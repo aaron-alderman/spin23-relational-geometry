@@ -43,4 +43,4 @@ Locate a mismatched definition, an omitted assumption, a failed certificate step
 
 ---
 
-[Return to the assertion in the chapter](../chapters/01-the-revised-spine.md#what-closes) · [Book contents](../README.md) · [← Previous claim](00-front-matter-the-route-through-the-book-claim-1.md) · [Next claim →](01-the-revised-spine-what-closes-claim-2.md)
+[Return to the assertion in the chapter](../chapters/01-the-revised-spine.md#what-closes) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-kenotic-confidence-claim-1.md) · [Next claim →](01-the-revised-spine-what-closes-claim-2.md)
