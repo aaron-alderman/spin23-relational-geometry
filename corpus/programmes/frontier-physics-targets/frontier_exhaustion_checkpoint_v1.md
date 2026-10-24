@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 **Status:** explicit gate enumeration exhausted across the complete corpus Markdown/JSON scope; physics programme remains open  
-**Queue authority:** [49-topic register](open_topics_register_v1.json)
+**Queue authority:** [50-topic register](open_topics_register_v1.json)
 
 ## What is now complete
 
@@ -11,10 +11,10 @@ The corpus has a closed navigation loop from target to frontier area to detector
 - all 22 canonical physics targets and all 20 frontier areas;
 - 35 detector bundles, including records, controls, maturity and source provenance;
 - all 57 admissibility packets, including AZ-041--AZ-057 beyond the older zone register;
-- all 91 Wave 6--7 packet files in the reconciled audit (17 Wave 6 and 74 Wave 7), with reused display numbers held under distinct audit identities;
+- all 92 Wave 6--7 packet files in the reconciled audit (17 Wave 6 and 75 Wave 7), with reused display numbers held under distinct audit identities;
 - every remaining programme Markdown or JSON file containing the declared open-gate vocabulary: 69 files, of which 48 map to physics topics and 21 retain separate programme governance;
-- the complete source corpus-and-evidence backstop: all 2,656 in-scope Markdown/JSON artifacts hashed and inventoried (2,201 corpus narratives and 455 evidence artifacts, excluding the independently verified generated control surfaces); 1,590 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 89 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
-- 49 independently closable topics: 9 active, 17 open, 3 audit, 13 gated, 2 blocked and 5 closed with retained evidence.
+- the complete source corpus-and-evidence backstop: all 2,658 in-scope Markdown/JSON artifacts hashed and inventoried (2,203 corpus narratives and 455 evidence artifacts, excluding the independently verified generated control surfaces); 1,591 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 89 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
+- 50 independently closable topics: 9 active, 17 open, 3 audit, 14 gated, 2 blocked and 5 closed with retained evidence.
 
 No scanned gate is orphaned. The [full-corpus census](full_corpus_gate_census_v1.md) distinguishes old closure language, live semantic ownership, navigation surfaces and separately governed inquiries rather than equating every occurrence of “open” with a new target. “Exhausted” here means the declared corpus search and ownership problem is exhausted, not that nature, unstated tacit questions, the literature, or every possible experiment is exhausted.
 
@@ -25,6 +25,8 @@ AZ-057 closes OT-001 for the declared three-mechanism selector family and integr
 The [complexity-card audit](frontier_complexity_cards_v1.md) completes OT-021's target-level pass across FPT-001--010 and FPT-022. Most declared records are polynomial after a carrier exists, but that favorable result is sharply conditional. FPT-004 retains exponential many-body preparation, sampling and verification through its Hilbert-space dimension; generic FPT-009 logical tomography costs exponentially in logical-qubit count; FPT-003 material yield remains empirical; FPT-008 microscopic origin and FPT-010 relaxation convergence remain unbounded; and FPT-022 is exact only at fixed four-mode size. OT-021 therefore remains an audit until the same five-stage schema is enforced on every newly active packet.
 
 [Wave 7.71](../frontier/wave-7/frontier_wave7_71_source_restricted_logical_generator_boundary.md) completes OT-017's present finite-algebra audit without closing its physical gate. The maximal source-visible qutrit alphabet has order 18; adding the source-labelled compiled mutual shear gives 54; granting local Fourier controls without mutual coupling gives the order-1,152 imprimitive group; and only both additions give all 51,840 elements of $Sp(4,\mathbb F_3)$. The remaining task is no longer abstract group search. It is one carrier that physically supplies both controls and predicts held-out words and forbidden orbits with leakage recorded.
+
+[Wave 7.72](../frontier/wave-7/frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md) exhausts the direct Claimipedia-to-Sourcery extraction test for the pinned relationship capture. Its 43 relations retain direction, endpoints and epistemic type, but zero directly satisfy the scientific-transformation admission contract. The common structure is an ordered path skeleton, not an ALE valuation, Jordan product or physical operator. OT-026 and OT-027 remain gated until one source-native path supplies exact endpoint typing, losses, evidence and a held-out compositional prediction.
 
 The [finesse technology pathway](finesse_technology_pathway_v1.md) is the execution overlay: begin with a 90-day resonator-chain design and blind challenge, reuse its schema on a three-mode coherent selector platform, then advance to same-film response/force closure. Its escalation rule withholds “new physics” until a residual survives preregistered nuisance controls, independent-carrier replication and a common-parameter operator model.
 

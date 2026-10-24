@@ -125,26 +125,21 @@
       "intervention": [
         "Reveal label, role, rooted depth, phase, sideband and intervention channels sequentially",
         "Hold out complete mechanism families rather than random rows",
-        "Adversarially search for record-equivalent parameter pairs",
-        "For the G2 branch, compare the normalized two-channel fit with a four-port D4 star before and after unequal addressed outer detunings"
+        "Adversarially search for record-equivalent parameter pairs"
       ],
       "record": [
         "Separation depth",
         "Efficient Fisher singular values",
         "Global equivalence-class diameter",
-        "Cost per acquired channel",
-        "Coherent three-line AM/FM reconstruction error and the matched power-only residual",
-        "Accessible Krylov rank and held-out pole residues before and after pre-fold perturbations"
+        "Cost per acquired channel"
       ],
       "controls": [
         "Known tangent-degenerate pairs",
         "AZ-057 three-mechanism closed benchmark",
-        "Wave 7.65 carrier-plus-two-sideband positive control and exact power-only no-go",
-        "Wave 7.70 exact generic-two-mode containment control",
         "Label permutations",
         "Noise and calibration folds"
       ],
-      "analysis": "Plot information gained per marginal cost and certify global injectivity only after interval or adversarial optimization over nuisance parameters. For modulation records, compare every richer model with the frozen Wave 7.65 mixed-AM/FM nuisance family before attributing a residual to root geometry or new dynamics. For a folded-root claim, first accept the Wave 7.70 two-channel equivalence; only a preregistered rank-two-to-rank-four response under addressed pre-fold perturbations can identify the quotient architecture.",
+      "analysis": "Plot information gained per marginal cost and certify global injectivity only after interval or adversarial optimization over nuisance parameters.",
       "success": "Every declared pair is separated on held-out interventions or assigned to an explicit quotient class.",
       "nullValue": "A nontrivial model pair remains exactly record-equivalent.",
       "stopRule": "Do not add more detectors when the residual equality is algebraic rather than noise-limited."
@@ -261,42 +256,33 @@
         "DET-013",
         "DET-014"
       ],
-      "title": "Three-mode projector-return, holonomy and oriented-seam transfer",
+      "title": "Three-mode projector-return and coherent-holonomy chip",
       "mode": "laboratory",
       "readiness": "ready_after_design",
       "estimate": "9–18 months including foundry cycle",
-      "platform": "Silicon-nitride, microwave or femtosecond-written modes implementing a closed three-mode coupling loop with programmable edge phases, a dark subspace and calibrated directional ports.",
-      "hypothesis": "The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy. Independently, the gauge-invariant edge-phase sum survives phase redistribution: resonance poles identify opposite loop orientations, while directional complex transfer distinguishes them. A central -I2 return is tested separately: it is reversal-even, so it must be identified by coherent endpoint-frame comparison and one-loop/two-loop traversal parity.",
+      "platform": "Silicon-nitride or femtosecond-written waveguides implementing a dark three-mode subspace with programmable coupling path.",
+      "hypothesis": "The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy.",
       "intervention": [
         "Fabricate forward, reverse and path-order-swapped coupling profiles",
         "Inject a tomographically complete input set",
-        "Sweep wavelength and deliberately add calibrated splitting and loss",
-        "Redistribute phase among the three edges while holding the loop sum fixed",
-        "Reverse the loop phase with edge magnitudes and detunings fixed",
-        "Execute one and two identical traversals with the same independently calibrated endpoint reference"
+        "Sweep wavelength and deliberately add calibrated splitting and loss"
       ],
       "record": [
         "Full complex 3×3 transfer matrix",
         "Projector distance",
         "Process singular values",
-        "Forward and reverse complex transfer across the full resonance band",
-        "Flux-reversal-odd directional statistic",
-        "Leakage and insertion loss",
-        "Endpoint frame-overlap matrix H=A_final A_initial^T, its centrality residual and sign(tr(H)/2)"
+        "Leakage and insertion loss"
       ],
       "controls": [
         "Zero-area loop",
         "Dynamical-phase echo",
         "Static splitter",
-        "Differential-loss mimic",
-        "Open-loop control showing that an isolated edge phase is basis-removable",
-        "Direct-feedthrough injection followed by frozen complex background subtraction",
-        "Endpoint-reference recalibration without selected-state data and a static sign-flip/cable-order mimic"
+        "Differential-loss mimic"
       ],
-      "analysis": "Blindly compare geometric, static-splitting, reciprocal-network and loss models using held-out wavelengths and reversal data. Require fixed-flux phase redistributions to agree before interpreting the flux-reversal-odd directional record. Analyze the central-return channel separately: require projector closure, H inside a predeclared centrality band around -I2 after one traversal and +I2 after two, and stability under endpoint-reference recalibration.",
-      "success": "Projector closure and reversed noncommuting transport survive independent loss calibration; phase redistributions at fixed loop sum agree, opposite loop phases are isospectral and the held-out directional statistic changes sign with its predicted magnitude. If the binary central channel is claimed, the one-loop -I2 and two-loop +I2 endpoint returns must also pass their independent centrality and reference controls.",
-      "nullValue": "A static, reciprocal or non-Hermitian nuisance model predicts every record, improving coherent-network calibration while closing the claimed discriminator at the achieved sensitivity.",
-      "stopRule": "Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin. Stop at an engineering demonstration unless an independent source calculation predicts a continuous loop phase beyond the binary modular sign, coupling ratios or a defect response without fitting them to the device; require replication on a second carrier before a new-physics interpretation.",
+      "analysis": "Blindly compare geometric, static-splitting and loss models using held-out wavelengths and reversal data.",
+      "success": "Projector closure and reversed noncommuting transport survive independent loss calibration.",
+      "nullValue": "A static or non-Hermitian nuisance model predicts every record.",
+      "stopRule": "Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin.",
       "precedents": [
         "https://doi.org/10.1038/s41467-025-58794-3",
         "https://doi.org/10.1038/s41467-025-62481-8"
@@ -329,33 +315,28 @@
       "readiness": "ready_after_design",
       "estimate": "9–18 months; can share EX-006 hardware",
       "platform": "The holonomy chip or modular acoustic loop extended by a separately addressable dissipative or anisotropic selector segment Y.",
-    "hypothesis": "A carrier-native Y changes the fixed point and contraction tangent rather than merely relabelling a preselected outcome; its independently declared, correctly typed objective predicts the measured Gram point and, when objectives share that point, a distinct path or cost record.",
+      "hypothesis": "A carrier-native Y changes the fixed point and contraction tangent rather than merely relabelling a preselected outcome.",
       "intervention": [
         "Prepare at least twelve initial states spanning the accessible manifold",
         "Toggle Y on/off and reverse its axis",
-        "Match total loss and cycle time across conditions",
-        "At each frequency run phase-referenced L, R, L+R and L+iR preparations"
+        "Match total loss and cycle time across conditions"
       ],
       "record": [
         "Cycle-by-cycle state tomography",
         "Return-map Jacobian",
         "Fixed-point location",
-        "Escape and convergence times",
-        "Complex transfers f0 and f1, coherence s, normalized Gram-disk coordinate u and slack Delta"
+        "Escape and convergence times"
       ],
       "controls": [
         "Loss-matched dummy segment",
         "Y inferred only from independent calibration",
         "Multiple initial states",
-        "Axis reversal",
-        "Intensity-only reconstruction as a declared blind detector",
-      "Frequency sweep and pole/zero audit before any causal-volume claim",
-      "Three-ray environment determinant versus two-column channel determinant type audit"
+        "Axis reversal"
       ],
-    "analysis": "Fit a common generative return map with Y as a preregistered intervention and compare contraction spectra, not endpoint images alone. Separately propagate covariance into u=|s-conj(f1)f0|^2/((1-|f0|^2)(1-|f1|^2)) and test predeclared centre, nearest-origin, boundary and mixed-objective selector classes. For the convex mixed model fit lambda=alpha/(alpha+beta), relaxation time tau, phase lag and loop area over frequency; reject it on zero-frequency remanence or multistability. Treat u=25/256 as a shared endpoint prediction of channel-volume and nearest-origin entropy in the rational checkpoint; distinguish those principles only with an independently predicted path, intervention or cost observable.",
-      "success": "Y produces the predicted fixed-point shift and subunit tangent eigenvalue across initial states, while the phase-referenced record selects its preregistered Gram/coherence class on held-out frequencies.",
+      "analysis": "Fit a common generative return map with Y as a preregistered intervention and compare contraction spectra, not endpoint images alone.",
+      "success": "Y produces the predicted fixed-point shift and subunit tangent eigenvalue across initial states.",
       "nullValue": "The same contraction occurs with Y absent or after loss matching.",
-    "stopRule": "Stop if Y or its objective can only be defined retrospectively from the selected state, if a one-frequency centre hit is used to establish causal globalization, or if endpoint tomography is used to distinguish objectives that select the same point."
+      "stopRule": "Stop if Y can only be defined retrospectively from the selected state."
     },
     {
       "id": "EX-008",
@@ -747,7 +728,8 @@
       "topicIds": [
         "OT-017",
         "OT-025",
-        "OT-045"
+        "OT-045",
+        "OT-050"
       ],
       "detectorIds": [
         "DET-027",
@@ -800,7 +782,8 @@
         "OT-046",
         "OT-047",
         "OT-048",
-        "OT-049"
+        "OT-049",
+        "OT-050"
       ],
       "detectorIds": [
         "DET-027",
@@ -896,7 +879,8 @@
         "OT-042",
         "OT-047",
         "OT-048",
-        "OT-049"
+        "OT-049",
+        "OT-050"
       ],
       "detectorIds": [
         "DET-029",
@@ -949,7 +933,8 @@
         "OT-038",
         "OT-042",
         "OT-045",
-        "OT-049"
+        "OT-049",
+        "OT-050"
       ],
       "detectorIds": [
         "DET-028",

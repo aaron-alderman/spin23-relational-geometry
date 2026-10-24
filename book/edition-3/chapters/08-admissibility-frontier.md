@@ -244,6 +244,21 @@ The selector fork also admits an exact reduced dynamics. A convex competition se
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-logical-frontier-is-two-controls-not-one-group-name-claim-1.md)
 
+<a id="hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra"></a>
+## Hot off the press — the shared path is not yet a shared algebra
+
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** Claimipedia and Sourcery now have a direct extraction test rather than a verbal resemblance. The pinned Claimipedia capture contains 43 directed relationship records on 38 claim nodes, but zero records carry the exact endpoint signatures, dimensions, declared changes, assumptions, irreversible losses, evidence references, analogy status and authority required for admission as a Sourcery scientific transformation. What is genuinely shared is an ordered directed path skeleton. The four Claimipedia relations say how claims bear on one another; they do not determine a scientific operation or its assumption-loss-evidence valuation.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-1.md)
+
+This is a useful no-go. Wrapping every claim in the same opaque signature and assigning synthetic rule metadata would produce a runnable graph, but the typing would come from the wrapper rather than the corpus. The product-preserving and physical-operator gates therefore remain open. Their next datum is finite: type one source-native path without changing Sourcery's admission rules, keep epistemic relations outside the transformation category where appropriate, and predict one held-out composition, product identity or detector record. That would be theoretical engineering; only a source-specific physical residue beyond generic graph programmability would reopen the new-physics reading.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

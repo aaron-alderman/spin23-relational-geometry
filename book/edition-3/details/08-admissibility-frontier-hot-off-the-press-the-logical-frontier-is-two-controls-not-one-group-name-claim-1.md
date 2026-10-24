@@ -82,4 +82,4 @@ Show that the named input is inconsistent, insufficient, unavailable, or fails t
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-logical-frontier-is-two-controls-not-one-group-name) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-reachable-frontier-has-a-cost-shape-claim-1.md) · [Next claim →](08-admissibility-frontier-kenotic-confidence-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-logical-frontier-is-two-controls-not-one-group-name) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-reachable-frontier-has-a-cost-shape-claim-1.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-1.md)

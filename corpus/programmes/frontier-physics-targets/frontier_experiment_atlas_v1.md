@@ -1,7 +1,7 @@
 # Frontier experiment atlas v1
 
 **Date:** 2026-10-24  
-**Coverage:** 20/20 frontier areas; 49/49 maintained topics; 35/35 detector bundles.
+**Coverage:** 20/20 frontier areas; 50/50 maintained topics; 35/35 detector bundles.
 
 This atlas converts every canonical frontier into a realistic controlled experiment. “Experiment” is used in the broad scientific sense: a laboratory intervention where a physical carrier exists, a reproducible computation where the object is discrete, and a theorem/falsification benchmark where uniform limits or an action are the actual missing datum. A blocked fundamental frontier is not disguised as build-ready hardware.
 
@@ -37,7 +37,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-01 — Structural reachability (constraint sieve)  
 **Mode/readiness:** computational; ready_now  
 **Indicative scale:** 2–4 weeks; one proof engineer plus one independent reproducer  
-**Topics:** OT-033, OT-035  
+**Topics:** OT-033, OT-035
+
 **Detector bundles:** DET-001, DET-002
 
 **Platform.** A pinned Lean toolchain and a stratified sample of real declarations, synthetic edge cases and deliberately unreachable constructor trees.
@@ -79,7 +80,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-02 — Representation and normalization stability (quotient)  
 **Mode/readiness:** computational; ready_now  
 **Indicative scale:** 4–8 weeks; proof engineer and data engineer  
-**Topics:** OT-033  
+**Topics:** OT-033
+
 **Detector bundles:** DET-001, DET-002
 
 **Platform.** The same declaration corpus expanded into equivalence families by alpha, beta, zeta, metadata, notation and definitional rewrites.
@@ -121,7 +123,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-03 — Detector resolution and semantic fibres (detector fold)  
 **Mode/readiness:** computational_hybrid; ready_now  
 **Indicative scale:** 6–10 weeks; modelling, statistics and domain-review trio  
-**Topics:** OT-001, OT-010, OT-019, OT-021, OT-033, OT-034, OT-035, OT-043, OT-044, OT-048  
+**Topics:** OT-001, OT-010, OT-019, OT-021, OT-033, OT-034, OT-035, OT-043, OT-044, OT-048
+
 **Detector bundles:** DET-002, DET-003, DET-026, DET-029, DET-030
 
 **Platform.** A benchmark mixing real declaration trees, driven-oscillator records, five-coordinate incidence records and synthetic mechanism pairs with controlled collisions.
@@ -133,7 +136,6 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Reveal label, role, rooted depth, phase, sideband and intervention channels sequentially
 - Hold out complete mechanism families rather than random rows
 - Adversarially search for record-equivalent parameter pairs
-- For the G2 branch, compare the normalized two-channel fit with a four-port D4 star before and after unequal addressed outer detunings
 
 **Recorded observables**
 
@@ -141,19 +143,15 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Efficient Fisher singular values
 - Global equivalence-class diameter
 - Cost per acquired channel
-- Coherent three-line AM/FM reconstruction error and the matched power-only residual
-- Accessible Krylov rank and held-out pole residues before and after pre-fold perturbations
 
 **Controls**
 
 - Known tangent-degenerate pairs
 - AZ-057 three-mechanism closed benchmark
-- Wave 7.65 carrier-plus-two-sideband positive control and exact power-only no-go
-- Wave 7.70 exact generic-two-mode containment control
 - Label permutations
 - Noise and calibration folds
 
-**Analysis.** Plot information gained per marginal cost and certify global injectivity only after interval or adversarial optimization over nuisance parameters. For modulation records, compare every richer model with the frozen Wave 7.65 mixed-AM/FM nuisance family before attributing a residual to root geometry or new dynamics. For a folded-root claim, first accept the Wave 7.70 two-channel equivalence; only a preregistered rank-two-to-rank-four response under addressed pre-fold perturbations can identify the quotient architecture.
+**Analysis.** Plot information gained per marginal cost and certify global injectivity only after interval or adversarial optimization over nuisance parameters.
 
 **Decisive positive result.** Every declared pair is separated on held-out interventions or assigned to an explicit quotient class.
 
@@ -168,7 +166,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-04 — Positivity, rank and response cones (cone and rank surface)  
 **Mode/readiness:** hybrid; ready_after_design  
 **Indicative scale:** 3–6 months on an existing microwave or transport platform  
-**Topics:** OT-008, OT-047  
+**Topics:** OT-008, OT-047
+
 **Detector bundles:** DET-004, DET-019
 
 **Platform.** A passive two-port microwave network first, followed by a common-sample particle/energy response implementation.
@@ -210,7 +209,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-05 — Orientation and phase lifts (branched cover)  
 **Mode/readiness:** laboratory; ready_after_design  
 **Indicative scale:** 6–12 months using an integrated-photonic or microwave platform  
-**Topics:** OT-003, OT-039  
+**Topics:** OT-003, OT-039
+
 **Detector bundles:** DET-004, DET-005, DET-007, DET-012, DET-015, DET-017
 
 **Platform.** A three-mode interferometric loop with an independently calibrated birefringent, chiral or boundary reference axis.
@@ -249,36 +249,31 @@ This atlas converts every canonical frontier into a realistic controlled experim
 
 ---
 
-### EX-006 — Three-mode projector-return, holonomy and oriented-seam transfer
+### EX-006 — Three-mode projector-return and coherent-holonomy chip
 
 **Frontier:** FA-06 — Projector holonomy and coherent transport (loop and lift)  
 **Mode/readiness:** laboratory; ready_after_design  
 **Indicative scale:** 9–18 months including foundry cycle  
-**Topics:** OT-002, OT-009, OT-010, OT-012, OT-013, OT-037, OT-043, OT-044  
+**Topics:** OT-002, OT-009, OT-010, OT-012, OT-013, OT-037, OT-043, OT-044
+
 **Detector bundles:** DET-004, DET-005, DET-006, DET-013, DET-014
 
-**Platform.** Silicon-nitride, microwave or femtosecond-written modes implementing a closed three-mode coupling loop with programmable edge phases, a dark subspace and calibrated directional ports.
+**Platform.** Silicon-nitride or femtosecond-written waveguides implementing a dark three-mode subspace with programmable coupling path.
 
-**Hypothesis.** The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy. Independently, the gauge-invariant edge-phase sum survives phase redistribution: resonance poles identify opposite loop orientations, while directional complex transfer distinguishes them. A central \(-I_2\) return is tested separately: it is reversal-even, so it must be identified by coherent endpoint-frame comparison and one-loop/two-loop traversal parity.
+**Hypothesis.** The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy.
 
 **Interventions**
 
 - Fabricate forward, reverse and path-order-swapped coupling profiles
 - Inject a tomographically complete input set
 - Sweep wavelength and deliberately add calibrated splitting and loss
-- Redistribute phase among the three edges while holding the loop sum fixed
-- Reverse the loop phase with edge magnitudes and detunings fixed
-- Execute one and two identical traversals with the same independently calibrated endpoint reference
 
 **Recorded observables**
 
 - Full complex 3×3 transfer matrix
 - Projector distance
 - Process singular values
-- Forward and reverse complex transfer across the full resonance band
-- Flux-reversal-odd directional statistic
 - Leakage and insertion loss
-- Endpoint frame-overlap matrix \(H=A_{\rm final}A_{\rm initial}^T\), its centrality residual and \(\operatorname{sign}(\operatorname{tr}H/2)\)
 
 **Controls**
 
@@ -286,19 +281,14 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Dynamical-phase echo
 - Static splitter
 - Differential-loss mimic
-- Open-loop control showing that an isolated edge phase is basis-removable
-- Direct-feedthrough injection followed by frozen complex background subtraction
-- Endpoint-reference recalibration without selected-state data and a static sign-flip/cable-order mimic
 
-**Analysis.** Blindly compare geometric, static-splitting, reciprocal-network and loss models using held-out wavelengths and reversal data. Require fixed-flux phase redistributions to agree before interpreting the flux-reversal-odd directional record. Analyze the central-return channel separately: require projector closure, \(H\) inside a predeclared centrality band around \(-I_2\) after one traversal and \(+I_2\) after two, and stability under endpoint-reference recalibration.
+**Analysis.** Blindly compare geometric, static-splitting and loss models using held-out wavelengths and reversal data.
 
-**Decisive positive result.** Projector closure and reversed noncommuting transport survive independent loss calibration; phase redistributions at fixed loop sum agree, opposite loop phases are isospectral and the held-out directional statistic changes sign with its predicted magnitude. If the binary central channel is claimed, the one-loop \(-I_2\) and two-loop \(+I_2\) endpoint returns must also pass their independent centrality and reference controls.
+**Decisive positive result.** Projector closure and reversed noncommuting transport survive independent loss calibration.
 
-**Useful null result.** A static, reciprocal or non-Hermitian nuisance model predicts every record, improving coherent-network calibration while closing the claimed discriminator at the achieved sensitivity.
+**Useful null result.** A static or non-Hermitian nuisance model predicts every record.
 
-**Stop rule.** Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin. Stop at an engineering demonstration unless an independent source calculation predicts a continuous loop phase beyond the binary modular sign, coupling ratios or a defect response without fitting them to the device; require replication on a second carrier before a new-physics interpretation.
-
-**Current preflight.** The [three-mode oriented-seam calculation](../lattice-subroutine-gravity/three-mode-loop-seam-preflight.md) verifies phase-redistribution invariance, spectral evenness and directional-transfer oddness for the declared coupled-mode model. The [modular-sign reassignment](../lattice-subroutine-gravity/modular-sign-detector-reassignment.md) proves that the \(\chi_5\) sign reaches only reciprocal \(0/\pi\) sectors. The [metaplectic calculation](../lattice-subroutine-gravity/metaplectic-phase-candidate.md) supplies a conditional \(\pm\pi/4\) target from the free-Majorana sector, pending the complete Baby-Monster multiplier and physical transport map. These are detector certificates, not evidence that nature uses the proposed lattice or Monster carrier.
+**Stop rule.** Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin.
 
 **Primary precedents.** [https://doi.org/10.1038/s41467-025-58794-3](https://doi.org/10.1038/s41467-025-58794-3); [https://doi.org/10.1038/s41467-025-62481-8](https://doi.org/10.1038/s41467-025-62481-8)
 
@@ -309,19 +299,19 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-07 — Dynamical selection and attraction (basin boundary)  
 **Mode/readiness:** laboratory; ready_after_design  
 **Indicative scale:** 9–18 months; can share EX-006 hardware  
-**Topics:** OT-003, OT-009, OT-013, OT-022, OT-037, OT-039  
+**Topics:** OT-003, OT-009, OT-013, OT-022, OT-037, OT-039
+
 **Detector bundles:** DET-004, DET-006, DET-007, DET-008, DET-011, DET-017, DET-025
 
 **Platform.** The holonomy chip or modular acoustic loop extended by a separately addressable dissipative or anisotropic selector segment Y.
 
-**Hypothesis.** A carrier-native Y changes the fixed point and contraction tangent rather than merely relabelling a preselected outcome; its independently declared, correctly typed objective predicts the measured Gram point and, when objectives share that point, a distinct path or cost record.
+**Hypothesis.** A carrier-native Y changes the fixed point and contraction tangent rather than merely relabelling a preselected outcome.
 
 **Interventions**
 
 - Prepare at least twelve initial states spanning the accessible manifold
 - Toggle Y on/off and reverse its axis
 - Match total loss and cycle time across conditions
-- At each frequency run phase-referenced L, R, L+R and L+iR preparations
 
 **Recorded observables**
 
@@ -329,7 +319,6 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Return-map Jacobian
 - Fixed-point location
 - Escape and convergence times
-- Complex transfers $f_0$ and $f_1$, coherence $s$, normalized Gram-disk coordinate $u$ and slack $\Delta$
 
 **Controls**
 
@@ -337,17 +326,14 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Y inferred only from independent calibration
 - Multiple initial states
 - Axis reversal
-- Intensity-only reconstruction as a declared blind detector
-- Frequency sweep and pole/zero audit before any causal-volume claim
-- Three-ray environment determinant versus two-column channel determinant type audit
 
-**Analysis.** Fit a common generative return map with Y as a preregistered intervention and compare contraction spectra, not endpoint images alone. Separately propagate covariance into $u=|s-\bar f_1f_0|^2/[(1-|f_0|^2)(1-|f_1|^2)]$ and test predeclared centre, nearest-origin, boundary and mixed-objective selector classes. For the convex mixed model fit $\lambda=\alpha/(\alpha+\beta)$, relaxation time $\tau$, phase lag and loop area over frequency; reject it on zero-frequency remanence or multistability. Treat $u=25/256$ as a shared endpoint prediction of channel-volume and nearest-origin entropy in the rational checkpoint; distinguish those principles only with an independently predicted path, intervention or cost observable.
+**Analysis.** Fit a common generative return map with Y as a preregistered intervention and compare contraction spectra, not endpoint images alone.
 
-**Decisive positive result.** Y produces the predicted fixed-point shift and subunit tangent eigenvalue across initial states, while the phase-referenced record selects its preregistered Gram/coherence class on held-out frequencies.
+**Decisive positive result.** Y produces the predicted fixed-point shift and subunit tangent eigenvalue across initial states.
 
 **Useful null result.** The same contraction occurs with Y absent or after loss matching.
 
-**Stop rule.** Stop if Y or its objective can only be defined retrospectively from the selected state, if a one-frequency centre hit is used to establish causal globalization, or if endpoint tomography is used to distinguish objectives that select the same point.
+**Stop rule.** Stop if Y can only be defined retrospectively from the selected state.
 
 ---
 
@@ -356,7 +342,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-08 — Measurement backaction and conditioning (measurement quotient)  
 **Mode/readiness:** laboratory; ready_now_on_existing_hardware  
 **Indicative scale:** 6–12 months on a superconducting qutrit or continuously monitored qubit  
-**Topics:** OT-004, OT-043  
+**Topics:** OT-004, OT-043
+
 **Detector bundles:** DET-008, DET-009
 
 **Platform.** A three-level superconducting circuit with single-shot IQ readout, real-time feedback and calibrated missed-record efficiency.
@@ -400,7 +387,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-09 — Thermodynamic cost and resource budgets (resource tradeoff)  
 **Mode/readiness:** laboratory; ready_now  
 **Indicative scale:** 4–8 months on an optical-feedback trap  
-**Topics:** OT-005, OT-036  
+**Topics:** OT-005, OT-036
+
 **Detector bundles:** DET-009, DET-010
 
 **Platform.** A 1–2 μm colloidal bead in a programmable double-well optical or feedback potential.
@@ -444,7 +432,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-10 — Metastability, rare events and hysteresis (large-deviation boundary)  
 **Mode/readiness:** laboratory; ready_now  
 **Indicative scale:** 6–12 months; long unattended acquisition required  
-**Topics:** OT-010, OT-020, OT-023, OT-043  
+**Topics:** OT-010, OT-020, OT-023, OT-043
+
 **Detector bundles:** DET-007, DET-008, DET-011, DET-013
 
 **Platform.** An injection-locked VCSEL, Kerr resonator or nanomagnetic element with tunable bistability and single-event readout.
@@ -486,7 +475,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-11 — Spectral boundary dynamics (pole, cut and threshold)  
 **Mode/readiness:** laboratory; ready_now  
 **Indicative scale:** 4–9 months with microwave or acoustic resonators  
-**Topics:** OT-012, OT-013, OT-014, OT-036, OT-041  
+**Topics:** OT-012, OT-013, OT-014, OT-036, OT-041
+
 **Detector bundles:** DET-006, DET-013, DET-014, DET-022, DET-023
 
 **Platform.** A 10–40 site coupled-resonator chain with one tunable side-coupled defect and access to both end-port scattering and local density of states.
@@ -528,7 +518,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-12 — Material response and fluctuation forces (response surface)  
 **Mode/readiness:** laboratory; multi_stage  
 **Indicative scale:** 18–36 months across materials, transport, optics and force metrology teams  
-**Topics:** OT-006, OT-007, OT-011  
+**Topics:** OT-006, OT-007, OT-011
+
 **Detector bundles:** DET-012, DET-013, DET-014, DET-015, DET-016, DET-017, DET-018, DET-029
 
 **Platform.** One batch of anisotropic magnetic films split into witness coupons and a force/torque device, with common growth and metrology records.
@@ -572,7 +563,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-13 — Multichannel transport and hydrodynamic rank (rank surface and order of limits)  
 **Mode/readiness:** laboratory_computational; ready_after_design  
 **Indicative scale:** 12–24 months including microfabrication  
-**Topics:** OT-008, OT-016, OT-040, OT-044, OT-047  
+**Topics:** OT-008, OT-016, OT-040, OT-044, OT-047
+
 **Detector bundles:** DET-012, DET-013, DET-019, DET-020, DET-021, DET-029
 
 **Platform.** A suspended four-terminal microbridge allowing independent electrical and thermal biases, magnetic-field reversal and AC thermometry.
@@ -616,7 +608,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-14 — Topology, defects and protected transport (topological wall)  
 **Mode/readiness:** laboratory; ready_now  
 **Indicative scale:** 6–12 months with acoustic or topoelectric resonator arrays  
-**Topics:** OT-015, OT-046  
+**Topics:** OT-015, OT-046
+
 **Detector bundles:** DET-023, DET-024
 
 **Platform.** A reconfigurable 2D acoustic or circuit lattice containing matched trivial, domain-wall, partial-dislocation and threefold-quotient defects.
@@ -660,7 +653,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-15 — Disorder, causal spread and scale (scaling frontier)  
 **Mode/readiness:** laboratory_computational; ready_after_design  
 **Indicative scale:** 6–12 months on a programmable resonator or qubit array  
-**Topics:** OT-011, OT-019, OT-021, OT-022, OT-023  
+**Topics:** OT-011, OT-019, OT-021, OT-022, OT-023
+
 **Detector bundles:** DET-011, DET-012, DET-014, DET-015, DET-020, DET-021, DET-024, DET-025, DET-026, DET-030
 
 **Platform.** Arrays of 16–128 microwave/acoustic resonators or available quantum-simulator sites with programmable onsite disorder and couplings.
@@ -702,7 +696,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-16 — Arithmetic and code islands (arithmetic cliff)  
 **Mode/readiness:** exact_computational; ready_now  
 **Indicative scale:** 2–6 months; algebra, coding and proof expertise  
-**Topics:** OT-017, OT-025, OT-045  
+**Topics:** OT-017, OT-025, OT-045, OT-050
+
 **Detector bundles:** DET-027, DET-028
 
 **Platform.** The finite Monster-address, Golay/Leech-neighbour and 24-dimensional form data already represented in the corpus.
@@ -744,7 +739,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-17 — Operator and carrier translation (translation gap)  
 **Mode/readiness:** hybrid; staged  
 **Indicative scale:** 12–24 months after a source-native map is written  
-**Topics:** OT-017, OT-024, OT-025, OT-026, OT-027, OT-035, OT-038, OT-039, OT-042, OT-045, OT-046, OT-047, OT-048, OT-049  
+**Topics:** OT-017, OT-024, OT-025, OT-026, OT-027, OT-035, OT-038, OT-039, OT-042, OT-045, OT-046, OT-047, OT-048, OT-049, OT-050
+
 **Detector bundles:** DET-027, DET-035
 
 **Platform.** A photonic three-mode chip and an acoustic or microwave three-port emulator implementing the same declared A2 operation in native units.
@@ -786,7 +782,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-18 — Consistency, scattering and continuum control (consistency boundary)  
 **Mode/readiness:** theorem_computation; ready_now  
 **Indicative scale:** 6–18 months depending on whether a theorem survives  
-**Topics:** OT-014, OT-016, OT-018, OT-021, OT-031, OT-040, OT-046  
+**Topics:** OT-014, OT-016, OT-018, OT-021, OT-031, OT-040, OT-046
+
 **Detector bundles:** DET-016, DET-022, DET-023, DET-030, DET-034
 
 **Platform.** Families of finite chains, lattice gauge Hamiltonians and D4 defect operators with controllable volume, regulator, time and observable class.
@@ -828,7 +825,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-19 — Flavour, gravity and cosmology (fundamental firewall)  
 **Mode/readiness:** conditional_hybrid; conditional_on_action  
 **Indicative scale:** 12–36 months after a frozen action and matching packet exist  
-**Topics:** OT-028, OT-029, OT-030, OT-031, OT-042, OT-047, OT-048, OT-049  
+**Topics:** OT-028, OT-029, OT-030, OT-031, OT-042, OT-047, OT-048, OT-049, OT-050
+
 **Detector bundles:** DET-029, DET-031, DET-032, DET-033, DET-034, DET-035
 
 **Platform.** A rotating unpolarized source mass near a K–Rb–Ne comagnetometer or polarized spin sensor, joined to collider/flavour and cosmological public likelihoods through one action.
@@ -872,7 +870,8 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-20 — Exceptional and unification interpretation (fundamental firewall)  
 **Mode/readiness:** theory_computation; conditional_on_model  
 **Indicative scale:** 12–36 months for one fully specified candidate  
-**Topics:** OT-026, OT-032, OT-038, OT-042, OT-045, OT-049  
+**Topics:** OT-026, OT-032, OT-038, OT-042, OT-045, OT-049, OT-050
+
 **Detector bundles:** DET-028, DET-035
 
 **Platform.** A symbolic and numerical pipeline accepting one exceptional-group action, representation dictionary, vacuum and symmetry-breaking chain.
@@ -915,4 +914,4 @@ This atlas converts every canonical frontier into a realistic controlled experim
 4. **Materials and transport campaign:** EX-012, EX-013 and EX-015.
 5. **Model-gated fundamental tests:** EX-019 and EX-020 only after their action/dictionary entry conditions are met.
 
-The shared-device sequence is deliberate: EX-005–EX-007 can use one three-mode carrier, with EX-006 asking which phase and orientation records that carrier can preserve, while EX-012 forces the response tensor to be frozen before the Casimir record is opened. These dependencies make null results informative and limit refitting freedom.
+The shared-device sequence is deliberate: EX-005–EX-007 can use one three-mode carrier, while EX-012 forces the response tensor to be frozen before the Casimir record is opened. These dependencies make null results informative and limit refitting freedom.

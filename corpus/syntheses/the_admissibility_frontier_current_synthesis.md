@@ -128,7 +128,7 @@ The practical atlas contains:
 - 20 frontier areas;
 - 35 detector bundles;
 - 20 realistic experiment designs; and
-- 49 maintained open topics, each with a next action, closure condition and kill test.
+- 50 maintained topics, each with a next action, closure condition and kill test.
 
 The open region is not rendered as a mystical blank. It is separated into computational inner rims, instrumented middle rims, translation gaps and fundamental firewalls. A null result remains useful because the conventional scientific residue is recorded in advance.
 
@@ -191,6 +191,19 @@ a later persuasive step cannot erase an earlier projection. A rejected rule
 never becomes a negative edge that can be cancelled. This is how the corpus
 keeps reason attached to movement without confusing a checked route with a
 true conclusion.
+
+The [direct extraction test](../programmes/frontier/wave-7/frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md)
+now fixes the overlap exactly. The captured Claimipedia graph has 43 directed
+relationship records on 38 nodes, but none carries the endpoint signatures,
+dimensions, declared changes, assumptions, irreversible losses, evidence
+references, analogy status and bounded authority required for admission as a
+Sourcery scientific transformation. The direct count is therefore zero of 43.
+What survives is an ordered directed path skeleton. `Supports`, `Challenges`,
+`Qualifies` and `DependsOn` describe how claims bear on one another; they do not
+by themselves specify scientific operations. Wrapping every node in the same
+opaque signature would make a runnable graph, but the typing would come from
+the wrapper rather than the corpus. That is the difference between encoding a
+bridge and extracting one.
 
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one

@@ -92,7 +92,7 @@ These cover FA-11 and FA-13–FA-15. The immediate computational edge is the low
 
 ### Formal, arithmetic and statistical detectors
 
-- **DET-027 — relation-emulator schedule:** nine path, fourteen triangle and one direct `QR-003` channel.
+- **DET-027 — relation-emulator schedule:** nine path, fourteen triangle and one direct `QR-003` channel, plus the typed-path admission/rejection receipt and an opaque-signature wrapper negative control. Wave 7.72 shows why this formal detector must retain endpoint typing and ALE provenance: graph paths alone admit zero source-native scientific transformations.
 - **DET-028 — arithmetic lattice and code invariants:** exact Gram, discriminant, norm, weight, distance and radical data. Wave 7.71 adds restricted logical-group order, Pauli-orbit size, forbidden-transition and leakage records, with generator removal, a universal-compiler positive control and held-out gate words. These records verify the declared finite alphabet without paying for unrestricted logical tomography.
 - **DET-029 — efficient information:** nuisance-projected Fisher/Schur separation and information per calibrated cost. Wave 7.65 adds held-out modulation classification and latent-depth error, with exact power-only equivalence as a mandatory null control. Wave 7.70 requires model-containment testing before classification: the normalized G2 transfer lies exactly inside the generic two-mode family, so only the pre-fold rank jump remains discriminating.
 - **DET-030 — complexity card:** preparation, sampling, detection, verification and error scaling.
@@ -105,7 +105,7 @@ These span FA-03 and FA-16–FA-18. DET-027 is sufficient for the declared emula
 - **DET-032 — torsion/spin-force comparison bundle.**
 - **DET-033 — cosmological joined likelihood.**
 - **DET-034 — uniform continuum/mass-gap certificate.**
-- **DET-035 — typed action and observable dictionary.**
+- **DET-035 — typed action and observable dictionary:** field content, action, representation map, anomaly ledger, scale matching, endpoint signatures, irreversible losses and a held-out prediction, checked against generic graph programmability.
 
 These are called missing detectors because no corpus-specific model presently maps the proposed latent structure into their ordinary observables. They occupy FA-17–FA-20 and are the fundamental firewall.
 

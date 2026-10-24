@@ -1,0 +1,61 @@
+{
+  "schema": "claimipedia-sourcery-typed-extraction-boundary/1",
+  "date": "2026-10-25",
+  "sources": {
+    "claimipedia": "claimipedia_relationship_operator_source_v1.json",
+    "sourceryAlgebra": "sourcery_ale_algebra_v1.json",
+    "composerProtocol": "integrations/sourcery/mcp-admission/scientific-derivation-composer/scientific-derivation-process.json"
+  },
+  "claimipediaCapture": {
+    "relationshipRecords": 43,
+    "nodeCount": 38,
+    "uniqueTriples": 41,
+    "duplicateTripleClasses": 2,
+    "relationTypeCounts": {
+      "Qualifies": 27,
+      "DependsOn": 7,
+      "Challenges": 2,
+      "Supports": 7
+    },
+    "retainedPerRecord": ["source identity", "target identity", "relationship type", "capture position"],
+    "notExposedPerRecord": ["stable relationship identity", "scientific endpoint signatures", "SI dimensions", "operation kind", "declared changes", "assumptions", "irreversible losses", "evidence references", "analogy firewall", "proposal authority"]
+  },
+  "pathAudit": {
+    "lengthTwoPathInstances": 39,
+    "uniqueLengthTwoEndpointWords": 37,
+    "relationTypeWords": 12,
+    "qualifiesQualifiesEndpointPairs": 12,
+    "conclusion": "Relationship-type words are many-to-one summaries of paths. They do not determine endpoints, scientific signatures or an ALE valuation."
+  },
+  "directExtraction": {
+    "composerProtocol": "scientific-derivation-composition/common-algebra-2",
+    "requiredAuthoredMetadata": ["stableTransformationId", "fromSignature", "toSignature", "fromDimension", "toDimension", "dimensionRule", "dimensionDelta", "changes", "assumptions", "losses", "evidenceRefs", "analogyOnly", "authority"],
+    "directlyAdmissibleTransformations": 0,
+    "reason": "The relationship capture is an epistemic directed graph, not a collection of ScientificTransformation records. Supplying uniform opaque signatures, zero dimensions, synthetic evidence and positional rule IDs would be a programmable completion, not extraction."
+  },
+  "semanticCollision": {
+    "Challenges": "A Claimipedia challenge is an authored epistemic relation. A failed Sourcery transformation is excluded from the admitted category and retained in a rejection receipt; it is not a negative composable edge.",
+    "Supports": "Support does not state a scientific operation, its endpoint signature changes or its irreversible information loss.",
+    "Qualifies": "Qualification does not determine projection, continuation, transport or update semantics.",
+    "DependsOn": "Dependency does not distinguish an assumption token from evidence, a required object, a computational prerequisite or a causal transformation."
+  },
+  "decision": {
+    "graphSkeletonRetained": true,
+    "orderedPathDistinctionRetainedWithinCapture": true,
+    "claimipediaToSourceryTypedFunctorExtracted": false,
+    "aleValuationExtracted": false,
+    "jordanProductExtracted": false,
+    "physicalOperatorExtracted": false,
+    "ot026Closed": false,
+    "ot027Closed": false,
+    "classification": "exact source-native no-go for direct typed extraction from the pinned relationship capture"
+  },
+  "reopenGate": [
+    "Expose stable authored relationship IDs rather than relying on capture position.",
+    "Type every participating claim as a scientific object with exact signature and dimension metadata.",
+    "Classify each edge as a scientific transformation or retain it outside the admitted path category as an epistemic relation.",
+    "Attach declared changes, assumptions, irreversible losses, evidence references, analogy status and bounded authority.",
+    "Admit at least one nontrivial path through the unchanged Sourcery protocol and predict a held-out composition, product identity or detector record."
+  ],
+  "boundary": "The common object is a directed path skeleton plus provenance of the capture. Claimipedia's epistemic relation algebra and Sourcery's typed scientific-transformation category are not the same algebra. No Jordan, Lie, physical or authority-bearing structure follows from the graph-only overlap."
+}

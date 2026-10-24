@@ -72,6 +72,15 @@ An open topic stays on this list until one of four things happens:
 | OT-045 | Hecke operator or modular-trace test | explicit operator domain and exact Hecke relations or modular identities |
 | OT-046 | D4 quotient-singularity localized operator | source-native Hamiltonian/Dirac/Fredholm operator with quotient-controlled spectrum |
 | OT-049 | Exceptional rank-one vacuum Hessian and gauge spectrum | stable action-level vacuum with coloured directions and matched current geometry |
+| OT-050 | Lattice-subroutine gravitational action and observable | one complete typed route from the Golay–Leech–Monster/genus-two carrier to a healthy local action or continuum and a no-refit record |
+
+Wave 7.72 sharpens OT-026 and OT-027 without closing them. The pinned
+Claimipedia capture retains 43 directed epistemic relations, but zero records
+directly satisfy Sourcery's scientific-transformation admission contract. The
+shared structure is an ordered graph path, not yet an ALE valuation, Jordan
+product or physical operator. The next admissible bridge must type one real
+path at its source and predict a held-out composition or detector record; an
+opaque uniform wrapper fires the existing programmable-encoding kill test.
 
 ## P3 — fundamental firewall
 

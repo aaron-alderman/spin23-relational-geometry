@@ -264,6 +264,7 @@ const sectionTaxonomy = {
   "Hot off the press — the missing middle has a type": "conditional",
   "Hot off the press — the reachable frontier has a cost shape": "governance",
   "Hot off the press — the logical frontier is two controls, not one group name": "conditional",
+  "Hot off the press — the shared path is not yet a shared algebra": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -334,6 +335,7 @@ const sectionArchetype = {
   "Hot off the press — the missing middle has a type": "integrator",
   "Hot off the press — the reachable frontier has a cost shape": "auditor",
   "Hot off the press — the logical frontier is two controls, not one group name": "auditor",
+  "Hot off the press — the shared path is not yet a shared algebra": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -500,6 +502,14 @@ admissibilitySections.splice(orientedSeamIndex + 8, 0, [
   "Hot off the press — the logical frontier is two controls, not one group name",
   [
     "**Provisional integration note — 25 October 2026.** The two-qutrit code now has an exact control boundary. Source-visible charge-word self-shears plus the optional puncture swap close to order 18; adding the source-labelled compiled mutual shear reaches 54; admitting local Fourier changes without the mutual shear reaches the order-1,152 imprimitive subgroup; and only admitting both reaches all 51,840 elements of Sp(4,F3). The coupled word is real mathematics, but it does not yet explain why one physical carrier executes it, and a Fourier or Legendre change of polarization is not automatically dynamics. The next work is therefore not a search for the group. It is to build one carrier with independently calibrated mutual and polarization-changing controls, record leakage, and predict held-out allowed and forbidden gate words with restricted stabilizer witnesses. Success would be a source-restricted logical laboratory; failure would leave the exact code/Jordan match as compatibility rather than a physical law.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 9, 0, [
+  "Hot off the press — the shared path is not yet a shared algebra",
+  [
+    "**Provisional integration note — 25 October 2026.** Claimipedia and Sourcery now have a direct extraction test rather than a verbal resemblance. The pinned Claimipedia capture contains 43 directed relationship records on 38 claim nodes, but zero records carry the exact endpoint signatures, dimensions, declared changes, assumptions, irreversible losses, evidence references, analogy status and authority required for admission as a Sourcery scientific transformation. What is genuinely shared is an ordered directed path skeleton. The four Claimipedia relations say how claims bear on one another; they do not determine a scientific operation or its assumption-loss-evidence valuation.",
+    "This is a useful no-go. Wrapping every claim in the same opaque signature and assigning synthetic rule metadata would produce a runnable graph, but the typing would come from the wrapper rather than the corpus. The product-preserving and physical-operator gates therefore remain open. Their next datum is finite: type one source-native path without changing Sourcery's admission rules, keep epistemic relations outside the transformation category where appropriate, and predict one held-out composition, product identity or detector record. That would be theoretical engineering; only a source-specific physical residue beyond generic graph programmability would reopen the new-physics reading.",
   ],
 ]);
 
