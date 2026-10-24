@@ -9,7 +9,7 @@ const outputPath = resolve(root, "evidence/data/claimipedia-sourcery-live-path-a
 const processPath = resolve(root, "integrations/sourcery/mcp-admission/scientific-derivation-composer/scientific-derivation-process.json");
 
 const families = [
-  { id: "local", review: "d02-sourcery-review.json", runner: "run-d02-sourcery-review.mjs", positiveKey: "localCandidateSteps", negativeCount: 1 },
+  { id: "local", review: "d02-sourcery-review.json", runner: "run-d02-sourcery-review.mjs", dimensionSource: "d02-scientific-transformation-graph.mjs", positiveKey: "localCandidateSteps", negativeCount: 1 },
   { id: "operator", review: "d02-operator-sourcery-review.json", runner: "run-d02-operator-sourcery-review.mjs", positiveKey: "positiveCandidateSteps" },
   { id: "rank-change", review: "d02-exhaustion-sourcery-review.json", runner: "run-d02-exhaustion-sourcery-review.mjs", positiveKey: "positiveCandidateSteps" },
   { id: "boundary", review: "d02-boundary-sourcery-review.json", runner: "run-d02-boundary-sourcery-review.mjs", positiveKey: "positiveCandidateSteps" },
@@ -20,6 +20,9 @@ const rows = [];
 for (const family of families) {
   const review = JSON.parse(await readFile(resolve(generatedRoot, family.review), "utf8"));
   const runnerText = await readFile(resolve(reviewRoot, family.runner), "utf8");
+  const dimensionText = family.dimensionSource
+    ? await readFile(resolve(reviewRoot, family.dimensionSource), "utf8")
+    : runnerText;
   const positivePaths = review.summary[family.positiveKey];
   const positiveQuery = review.queries.find(({ result }) => result.candidates.length > 0);
   const candidate = positiveQuery?.result.candidates[0];
@@ -45,11 +48,11 @@ for (const family of families) {
       applicationAdmission: candidate?.applicationAdmission,
     },
     commonAlgebra2DimensionFieldsPresent: {
-      objectDimension: /\bdimension\s*:/.test(runnerText),
-      fromDimension: /\bfromDimension\s*:/.test(runnerText),
-      toDimension: /\btoDimension\s*:/.test(runnerText),
-      dimensionRule: /\bdimensionRule\s*:/.test(runnerText),
-      dimensionDelta: /\bdimensionDelta\s*:/.test(runnerText),
+      objectDimension: /\bdimension\s*:/.test(dimensionText),
+      fromDimension: /\bfromDimension\s*:/.test(dimensionText),
+      toDimension: /\btoDimension\s*:/.test(dimensionText),
+      dimensionRule: /\bdimensionRule\s*:/.test(dimensionText),
+      dimensionDelta: /\bdimensionDelta\s*:/.test(dimensionText),
     },
   });
 }
@@ -58,6 +61,7 @@ const allSteps = rows.flatMap(row => row.positiveSteps);
 const negativeQueries = rows.reduce((total, row) => total + Object.keys(row.negativeCandidateCounts).length, 0);
 const negativeCandidates = rows.reduce((total, row) => total + Object.values(row.negativeCandidateCounts).reduce((sum, count) => sum + count, 0), 0);
 const invalidRuleIds = rows.flatMap(row => row.invalidRuleIds);
+const dimensionedFamilies = rows.filter(row => Object.values(row.commonAlgebra2DimensionFieldsPresent).every(Boolean)).map(row => row.id);
 const dimensionTokens = ["fromDimensionMatches", "toDimensionMatches", "dimensionRuleRecognized", "dimensionallyValid", "dimensionChangeDeclared"];
 const processText = JSON.stringify(composer);
 
@@ -80,7 +84,7 @@ const result = {
     activeResultProtocols: [...new Set(rows.map(row => row.resultProtocol))],
     stricterLocalProtocol: composer.protocol,
     stricterDimensionChecksPresent: dimensionTokens.filter(token => processText.includes(token)),
-    runnersSupplyingAllRequiredDimensionFields: rows.filter(row => Object.values(row.commonAlgebra2DimensionFieldsPresent).every(Boolean)).map(row => row.id),
+    runnersSupplyingAllRequiredDimensionFields: dimensionedFamilies,
   },
   decision: {
     liveV1SourceNativeAdmissionClosed: rows.every(row => row.passed && row.positiveCandidateCount === 1),
@@ -88,7 +92,8 @@ const result = {
     authorityFirewallRetained: rows.every(row => row.candidateLedger.entails === false && row.candidateLedger.empiricalAuthority === false && row.candidateLedger.applicationAdmission === false),
     heldOutNegativeControlsRetained: negativeQueries === 14 && negativeCandidates === 0 && invalidRuleIds.length === 15,
     wave72GraphOnlyNoGoUnchanged: true,
-    commonAlgebra2DimensionMigrationOpen: rows.every(row => Object.values(row.commonAlgebra2DimensionFieldsPresent).every(value => value === false)),
+    primaryCommonAlgebra2DimensionMigrationClosed: dimensionedFamilies.includes("local"),
+    commonAlgebra2DimensionMigrationOpen: dimensionedFamilies.length < rows.length,
     jordanProductExtracted: false,
     physicalOperatorAssignmentExtracted: false,
     detectorRecordPredicted: false,
@@ -96,7 +101,7 @@ const result = {
     ot027Closed: false,
   },
   reason: "The relationship capture and the D02 transformation graphs are different source objects. The former remains an epistemic graph with zero directly admissible scientific transformations; the latter authors scientific operations with typed endpoints, assumptions, losses, evidence and bounded authority.",
-  implication: "A real Claimipedia-to-Sourcery workflow bridge now exists at protocol v1. It is theoretical engineering, not yet a graph-derived Jordan algebra or a physical law. The next exact gate is SI-dimension migration to common-algebra-2, followed by a held-out product/operator or detector prediction.",
+  implication: "A real Claimipedia-to-Sourcery workflow bridge exists at protocol v1, and its primary local-theorem path now passes common-algebra-2 through an explicit dimensionless-record convention. The other three families still need dimensional migration; none of the four yet yields a graph-derived Jordan product, physical operator or detector prediction.",
 };
 
 if (write) await writeFile(outputPath, `${JSON.stringify(result, null, 2)}\n`, "utf8");

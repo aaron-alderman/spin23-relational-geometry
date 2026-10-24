@@ -17,7 +17,7 @@ A specified candidate class fails under explicit assumptions. The conclusion doe
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the shared path is not yet a shared algebra”.
-- **Unit of argument:** assertion 1 of 3 in this section.
+- **Unit of argument:** assertion 1 of 4 in this section.
 - **Evidence posture:** Check the assumptions defining the ruled-out candidate class; the no-go does not automatically extend beyond that class.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
@@ -34,6 +34,7 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ## Controlling documents
 
+- **admissibility 83 first common algebra2 path and legacy dimension projection** — [admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md](../../../corpus/programmes/admissibility/admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md)
 - **admissibility 82 claimipedia source native paths pass live sourcery but dimension and operator gates remain** — [admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md](../../../corpus/programmes/admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md)
 - **frontier wave7 72 claimipedia sourcery typed extraction no go** — [frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md)
 

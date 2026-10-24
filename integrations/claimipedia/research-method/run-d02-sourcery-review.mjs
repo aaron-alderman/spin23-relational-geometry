@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { createInterface } from "node:readline";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { authority, graph, queries } from "./d02-scientific-transformation-graph.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const generated = resolve(here, "generated");
@@ -23,45 +24,10 @@ const expectedHost = {
   requiredBasisGenerationId: "host-claim-adapter-v18",
   requiredBasisHash: "28fbfa709c2f8a18716d76450a196abba8074e45b908334316c7e0c147d2b1a3"
 };
-const fields = ["domain", "rank", "variance", "basis", "regime", "order", "scheme", "symmetry", "cp", "support"];
-const authority = { proposalOnly: true, entails: false, empiricalAuthority: false };
-
-const objects = [
-  { id: "d02.raw-block-family", signature: { domain: "block-herglotz-family", rank: 2, variance: "matrix", basis: "external-interior-block", regime: "upper-half-plane", order: "exact-finite", scheme: "unclassified-singular", symmetry: "declared-in-scope", cp: "unrestricted", support: "mixed-unknown" } },
-  { id: "d02.fixed-support-family", signature: { domain: "block-herglotz-family", rank: 2, variance: "matrix", basis: "support-split", regime: "constant-rank-patch", order: "exact-finite", scheme: "range-compatible", symmetry: "support-frame-covariant", cp: "unrestricted", support: "fixed-rank-plus-null" } },
-  { id: "d02.local-effective-response", signature: { domain: "effective-herglotz-response", rank: 2, variance: "matrix", basis: "external-ports", regime: "constant-rank-patch", order: "exact-finite", scheme: "support-schur", symmetry: "support-frame-covariant", cp: "unrestricted", support: "positive-operator-measure" } },
-  { id: "d02.decorated-local-response", signature: { domain: "decorated-effective-response", rank: 2, variance: "matrix", basis: "external-ports", regime: "constant-rank-patch", order: "exact-finite", scheme: "typed-decoration-transport", symmetry: "declared-compatible-subset", cp: "unrestricted", support: "positive-operator-measure" } },
-  { id: "d02.local-theorem-triage", signature: { domain: "d02-theorem-candidate", rank: 2, variance: "record", basis: "proof-and-receipt", regime: "bounded-finite", order: "review-candidate", scheme: "proposal-only", symmetry: "scoped-audited", cp: "unrestricted", support: "theorem-counterexample-boundary" } },
-  { id: "d02.rank-changing-family", signature: { domain: "block-herglotz-family", rank: 2, variance: "matrix", basis: "external-interior-block", regime: "rank-changing-locus", order: "exact-finite", scheme: "two-path-limit", symmetry: "declared-in-scope", cp: "unrestricted", support: "changing-rank" } },
-  { id: "d02.global-single-law", signature: { domain: "global-stratified-response", rank: 2, variance: "matrix", basis: "global-support-frame", regime: "across-rank-change", order: "conjectural", scheme: "single-canonical-continuation", symmetry: "globally-preserved", cp: "unrestricted", support: "all-strata" } }
-];
-const byId = new Map(objects.map((object) => [object.id, object]));
-
-function rule({ id, kind, from, to, assumptions, losses = [], evidenceRefs, analogyOnly = false }) {
-  const fromSignature = byId.get(from).signature;
-  const toSignature = byId.get(to).signature;
-  return {
-    id, kind, from, to, fromSignature, toSignature,
-    changes: fields.filter((field) => fromSignature[field] !== toSignature[field]),
-    assumptions, losses, removes: [], evidenceRefs, analogyOnly, authority
-  };
-}
-
-const transformations = [
-  rule({ id: "classify-fixed-support-stratum", kind: "model-specialization", from: "d02.raw-block-family", to: "d02.fixed-support-family", assumptions: ["constant kernel on the selected patch", "support projector transported with the frame", "coupling annihilates the null bundle"], evidenceRefs: ["215_constant_kernel_ward_herglotz_pseudoinverse_sewing.md#constant-kernel-hypothesis", "generated/d02-execution-receipt.json#wardRegulatorIndependence"], tests: ["support rank is constant", "null regulator independence"] }),
-  rule({ id: "apply-local-support-schur-theorem", kind: "schur-elimination", from: "d02.fixed-support-family", to: "d02.local-effective-response", assumptions: ["restricted eliminated block is invertible", "real frequency-independent reciprocal coupling", "upper-half-plane passivity"], evidenceRefs: ["213_fixed_temperature_kms_herglotz_schur_sewing.md#closed-schur-class", "generated/d02-execution-receipt.json#localHerglotzPassivity"], tests: ["imaginary-part identity", "support-frame covariance"] }),
-  rule({ id: "transport-compatible-decorations", kind: "decoration-transport", from: "d02.local-effective-response", to: "d02.decorated-local-response", assumptions: ["Ward support is fixed", "thermal channels share one temperature", "wall residue is probe-visible"], losses: ["bulk wall index is not determined by the projected response", "global rank-change continuation"], evidenceRefs: ["D02-RESULT.md#decoration-transport", "generated/d02-execution-receipt.json#projectedResponseDoesNotDetermineBulkIndex"], tests: ["common-temperature KMS multiplier", "invisible-index direct-sum counterexample", "loss receipt present"] }),
-  rule({ id: "handoff-bounded-theorem-and-obstruction", kind: "review-handoff", from: "d02.decorated-local-response", to: "d02.local-theorem-triage", assumptions: ["the theorem is restricted to finite constant-support patches", "the rank-change counterexample is retained beside the positive theorem"], losses: ["no operator-theoretic or empirical authority", "no single global law across rank change"], evidenceRefs: ["D02-RESULT.md", "generated/d02-execution-result.json"], tests: ["positive and negative cases reproducible", "authority bits remain false"] }),
-  rule({ id: "counterexample-silent-rank-change-continuation", kind: "analytic-continuation", from: "d02.rank-changing-family", to: "d02.global-single-law", assumptions: ["deliberate invalid fixture: limiting block alone selects one continuation"], evidenceRefs: ["D02-RESULT.md#minimal-rank-change-obstruction"], tests: ["must be rejected because two coupling scalings have different eliminated limits"], analogyOnly: true }),
-  rule({ id: "counterexample-boundary-response-determines-wall-index", kind: "projection", from: "d02.local-effective-response", to: "d02.global-single-law", assumptions: ["deliberate invalid fixture: projected response determines invisible bulk index"], losses: ["uncoupled graded zero modes"], evidenceRefs: ["D02-RESULT.md#decoration-transport"], tests: ["must be rejected by direct-sum invisible-index example"], analogyOnly: true })
-];
-
-const graph = { objects, transformations };
-const queries = [
-  { id: "bounded-local-theorem", source: "d02.raw-block-family", target: "d02.local-theorem-triage", maxDepth: 5 },
-  { id: "global-rank-change-law", source: "d02.rank-changing-family", target: "d02.global-single-law", maxDepth: 2 }
-];
-
+const liveV1Graph = {
+  objects: graph.objects.map(({ dimension: _dimension, ...object }) => object),
+  transformations: graph.transformations.map(({ fromDimension: _fromDimension, toDimension: _toDimension, dimensionRule: _dimensionRule, dimensionDelta: _dimensionDelta, ...transformation }) => transformation),
+};
 const child = spawn(node, bridgeArgs, { stdio: ["pipe", "pipe", "pipe"], windowsHide: true });
 const lines = createInterface({ input: child.stdout, crlfDelay: Infinity });
 const pending = new Map();
@@ -98,7 +64,19 @@ function payload(result) {
   return text ? JSON.parse(text) : result;
 }
 const call = async (name, args) => payload(await rpc("tools/call", { name, arguments: args }));
-const report = { protocol: "claimipedia-d02-sourcery-review/1", graphSha256: createHash("sha256").update(JSON.stringify(graph)).digest("hex"), queries: [], authority };
+const report = {
+  protocol: "claimipedia-d02-sourcery-review/1",
+  graphSha256: createHash("sha256").update(JSON.stringify(liveV1Graph)).digest("hex"),
+  sourceGraphSha256: createHash("sha256").update(JSON.stringify(graph)).digest("hex"),
+  protocolAdapter: {
+    from: "scientific-derivation-composition/common-algebra-2",
+    to: "scientific-derivation-composition/1",
+    operation: "erase-dimension-metadata-for-legacy-host",
+    loss: "The live v1 receipt does not certify SI-dimension consistency; common-algebra-2 is checked separately against the unprojected source graph.",
+  },
+  queries: [],
+  authority,
+};
 
 try {
   await rpc("initialize", { protocolVersion: "2025-03-26", capabilities: {}, clientInfo: { name: "d02-lightning-strike-review", version: "1" } });
@@ -114,7 +92,7 @@ try {
   const actions = operation.inputSchema?.properties?.action?.enum ?? [];
   if (!actions.includes("compose-derivation")) throw new Error("selected successor does not preserve scientific_derivation_compose");
   for (const query of queries) {
-    const result = await call("temple_system_execute_operation", { operationId: "scientific_derivation_compose", input: { action: "compose-derivation", request: { graph, query: { source: query.source, target: query.target, maxDepth: query.maxDepth } } } });
+    const result = await call("temple_system_execute_operation", { operationId: "scientific_derivation_compose", input: { action: "compose-derivation", request: { graph: liveV1Graph, query: { source: query.source, target: query.target, maxDepth: query.maxDepth } } } });
     report.queries.push({ query, result });
   }
   const local = report.queries.find(({ query }) => query.id === "bounded-local-theorem").result;

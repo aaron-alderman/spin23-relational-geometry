@@ -217,14 +217,23 @@ The epistemic edges remain epistemic; the admitted edges were authored as
 scientific operations. What is newly established is an executable seam between
 reason-preserving corpus work and checked transformation paths.
 
-That seam is still upstream of physics. The active host returned protocol v1,
-whereas the local `common-algebra-2` contract also requires exact SI-dimension
-vectors and declared dimension changes. The four runners do not yet carry that
-ledger. Nor do they extract a Jordan product, assign a physical action or
-predict a detector record. The next bridge is therefore precise: dimension one
-source-native path, pass the stricter contract unchanged, and withhold a
+That seam is still upstream of physics, but its first dimensional gate now
+closes. [AZ-083](../programmes/admissibility/admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md)
+passes the primary four-step path through `common-algebra-2` with exact SI
+metadata and fail-closed mutations. The dimension belongs to the proposal and
+review record, so its exponent vector is zero; this does not declare the
+represented response matrix dimensionless. The active v1 host cannot accept
+the newer object shape, so a named compatibility projection erases dimension
+metadata and records that loss, while the unprojected source graph receives a
+separate v2 receipt.
+
+The operator, rank-change and boundary families still need the same migration.
+More importantly, no path yet extracts a Jordan product, assigns quantity-level
+units and a physical action, or predicts a detector record. The next bridge is
+therefore precise: complete the remaining record-level migrations, then expose
+the actual physical quantities on one Schur-response step and withhold a
 product identity, operator composition or calibrated record for prediction.
-Success would be theoretical engineering; a source-specific residue surviving
+That would be theoretical engineering; a source-specific residue surviving
 those controls would be the point at which a new-physics reading could reopen.
 
 The distinction is now algebraically tested rather than merely asserted. On the

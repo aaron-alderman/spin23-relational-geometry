@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The result is theoretical engineering, not yet a shared physical algebra. The stricter local common-algebra-2 contract requires exact SI-dimension vectors and declared dimension changes, which the four runners do not yet supply. No Jordan product, physical action or detector prediction has been extracted. The next datum is finite: dimension one source-native path, pass the stricter contract unchanged, and predict a withheld product identity, operator composition or calibrated record. Only a source-specific residue surviving those controls would reopen the new-physics reading.
+> The primary local-theorem path now passes the stricter common-algebra-2 contract. Its four steps retain eleven assumptions, four losses and eight evidence references, and malformed dimension metadata kills the path. The SI zero vector belongs to the proposal-and-review record, not to the response matrix represented inside it. The active v1 host cannot accept the dimension-bearing shape, so a named compatibility projection erases that metadata and records the loss; the unprojected source graph receives a separate v2 receipt.
 
 ## What this commits us to
 
@@ -17,7 +17,7 @@ A specified candidate class fails under explicit assumptions. The conclusion doe
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the shared path is not yet a shared algebra”.
-- **Unit of argument:** assertion 3 of 3 in this section.
+- **Unit of argument:** assertion 3 of 4 in this section.
 - **Evidence posture:** Check the assumptions defining the ruled-out candidate class; the no-go does not automatically extend beyond that class.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
@@ -34,6 +34,7 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ## Controlling documents
 
+- **admissibility 83 first common algebra2 path and legacy dimension projection** — [admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md](../../../corpus/programmes/admissibility/admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md)
 - **admissibility 82 claimipedia source native paths pass live sourcery but dimension and operator gates remain** — [admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md](../../../corpus/programmes/admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md)
 - **frontier wave7 72 claimipedia sourcery typed extraction no go** — [frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md)
 
@@ -41,4 +42,4 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-phase-target-is-relative-not-absolute-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-4.md)

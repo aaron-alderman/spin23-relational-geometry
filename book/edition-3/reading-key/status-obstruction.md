@@ -40,6 +40,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra (1)](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra (2)](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra (3)](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — the shared path is not yet a shared algebra (4)](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-4.md)
 - [Claim · The admissibility frontier · Hot off the press — three hybrid modes are one short (1)](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — three hybrid modes are one short (2)](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — three hybrid modes are one short (3)](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-3.md)

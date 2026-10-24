@@ -15,13 +15,14 @@ check(audit.totals.invalidRuleFixturesRetained === 15 && audit.totals.distinctIn
 check(JSON.stringify(audit.protocolBoundary.activeResultProtocols) === JSON.stringify(["scientific-derivation-composition/1"]), "active protocol changed");
 check(audit.protocolBoundary.stricterLocalProtocol === "scientific-derivation-composition/common-algebra-2", "local strict protocol changed");
 check(audit.protocolBoundary.stricterDimensionChecksPresent.length === 5, "strict dimension checks missing");
-check(audit.protocolBoundary.runnersSupplyingAllRequiredDimensionFields.length === 0, "dimension migration unexpectedly complete");
+check(JSON.stringify(audit.protocolBoundary.runnersSupplyingAllRequiredDimensionFields) === JSON.stringify(["local"]), "primary dimension migration missing or scope drifted");
 check(Object.values(audit.decision).filter(value => value === undefined).length === 0, "decision field missing");
 check(audit.decision.liveV1SourceNativeAdmissionClosed === true, "live v1 admission must pass");
 check(audit.decision.sourceNativeAssumptionLossEvidenceLedgersRetained === true, "ALE ledgers must be retained");
 check(audit.decision.authorityFirewallRetained === true, "authority firewall must remain closed");
 check(audit.decision.heldOutNegativeControlsRetained === true, "negative controls must remain retained");
 check(audit.decision.wave72GraphOnlyNoGoUnchanged === true, "graph-only no-go must remain unchanged");
+check(audit.decision.primaryCommonAlgebra2DimensionMigrationClosed === true, "primary common-algebra-2 migration must be closed");
 check(audit.decision.commonAlgebra2DimensionMigrationOpen === true, "dimension migration must remain open");
 for (const key of ["jordanProductExtracted", "physicalOperatorAssignmentExtracted", "detectorRecordPredicted", "ot026Closed", "ot027Closed"]) {
   check(audit.decision[key] === false, `${key} was overclaimed`);

@@ -259,9 +259,13 @@ That no-go remains exact, but the positive side has moved. Four separately autho
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md)
 
-The result is theoretical engineering, not yet a shared physical algebra. The stricter local common-algebra-2 contract requires exact SI-dimension vectors and declared dimension changes, which the four runners do not yet supply. No Jordan product, physical action or detector prediction has been extracted. The next datum is finite: dimension one source-native path, pass the stricter contract unchanged, and predict a withheld product identity, operator composition or calibrated record. Only a source-specific residue surviving those controls would reopen the new-physics reading.
+The primary local-theorem path now passes the stricter common-algebra-2 contract. Its four steps retain eleven assumptions, four losses and eight evidence references, and malformed dimension metadata kills the path. The SI zero vector belongs to the proposal-and-review record, not to the response matrix represented inside it. The active v1 host cannot accept the dimension-bearing shape, so a named compatibility projection erases that metadata and records the loss; the unprojected source graph receives a separate v2 receipt.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-3.md)
+
+The result is theoretical engineering, not yet a shared physical algebra. The operator, rank-change and boundary families still need migration. No quantity-level response units, Jordan product, physical action or detector prediction has been extracted. The next datum is finite: finish the record-level migrations, expose the actual units on one Schur-response step, and predict a withheld product identity, operator composition or calibrated record. Only a source-specific residue surviving those controls would reopen the new-physics reading.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-4.md)
 
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
