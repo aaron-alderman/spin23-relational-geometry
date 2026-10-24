@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+
+const root = resolve(import.meta.dirname, "../..");
+const evidence = JSON.parse(await readFile(resolve(root, "evidence/data/zenodo-eis-distribution-free-population-envelope-v1.json"), "utf8"));
+assert.equal(evidence.protocol, "zenodo-eis-distribution-free-population-envelope/1");
+assert.equal(evidence.preregistration.targetCellUsedToConstructEnvelope, false);
+assert.equal(evidence.preregistration.donorsPerTarget, 53);
+assert.equal(evidence.preregistration.tuningParameters, 0);
+assert.equal(evidence.cells.length, 54);
+assert.ok(Math.abs(evidence.population.scalarCoordinateCoverage - 52 / 54) < 1e-15);
+assert.equal(evidence.population.cellsWithAll15ComplexPointsInside, 42);
+assert.equal(evidence.population.cellsWithAnyComplexPointOutside, 12);
+assert.equal(evidence.cells.find(cell => cell.id === "ID07").realCoverage, 0);
+assert.equal(evidence.cells.find(cell => cell.id === "ID07").outsidePoints.length, 15);
+assert.equal(evidence.cells.find(cell => cell.id === "ID52").outsidePoints.length, 10);
+assert.equal(evidence.decision.allCellsInsideDonorPopulationEnvelope, false);
+assert.equal(evidence.decision.simultaneousCellLevelCoverageProved, false);
+assert.equal(evidence.decision.measurementCovarianceEstablished, false);
+assert.equal(evidence.decision.generatedDynamicsEstablished, false);
+assert.equal(evidence.decision.newPhysicsEvidence, false);
+console.log(JSON.stringify({ result: "pass", scalarCoverage: evidence.population.scalarCoordinateCoverage, completeCells: evidence.population.cellsWithAll15ComplexPointsInside, persistentRealExtreme: "ID07", persistentImaginaryExtreme: "ID52", boundary: "pointwise rank coverage is automatic; correlated cell-level structure remains unexplained" }, null, 2));

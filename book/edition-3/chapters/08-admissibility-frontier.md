@@ -287,6 +287,10 @@ The stronger test is a revealing near-miss. For each target cell, one parameter 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-9.md)
 
+The simplest predictive envelope also exposes a trap. At each held-out frequency, the componentwise minimum and maximum of the other 53 cells cover exactly 52 of 54 scalar ranks: the apparent 96.296% coverage is forced because the global minimum and maximum must exclude themselves. It is not validation of a population law. The real datum is relational across frequency. ID07 is above the donor real-part range at all fifteen evaluation points, ID52 is repeatedly extreme in the imaginary part, and only 42 cells keep every complex point inside. A useful population model must carry a latent cell state coherently through the spectrum. The next experiment is nested prediction from one predeclared calibration record or independent metadata, with simultaneous spectral coverage and replicate covariance—not wider pointwise bars.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-10.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

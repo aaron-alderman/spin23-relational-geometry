@@ -23,11 +23,11 @@ This is a genuine near-universality result and a genuine failed closure. The pas
 
 The useful object is now visible between two overstatements. It is stronger than a merely reusable fitting vocabulary: a single donor-derived parameter vector predicts 98.15% of unseen cells under a demanding no-target-data rule. It is weaker than a shared law: one cell breaks the declared all-cell criterion. This is exactly an admissibility boundary—what remains jointly realizable under a common description, and where additional state information becomes necessary.
 
-The result is not evidence for new physics, generated dynamics, a detector likelihood or a Jordan product. It says where theoretical engineering can improve: replace one global median by a preregistered hierarchical population model with uncertainty, physical covariates or a minimal calibration record, and test whether ID07 is predictable rather than merely fit after inspection. Replicate spectra and fixture covariance are required before assigning the residual to material structure rather than measurement variation.
+The result is not evidence for new physics, generated dynamics, a detector likelihood or a Jordan product. AZ-090 tests the simplest distribution-free uncertainty envelope and shows why pointwise widening is insufficient: its aggregate coverage is a forced rank identity, while coherent cell-level extremes persist across frequency. Replicate spectra and fixture covariance are required before assigning the residual to material structure rather than measurement variation.
 
 ## Next gate
 
-Freeze a hierarchical or mixture predictor before reading the target spectra. Its inputs must be independently available cell metadata or a declared minimal calibration record; its output must be a predictive distribution, not only a point estimate. Evaluate complete-cell coverage, calibration and held-out complex impedance, retaining `ID07` as an untouched challenge. A surviving, reproducible residual becomes a materials or detector question only after fixture, repeatability and covariance controls; a new-physics interpretation remains farther out.
+Use AZ-090's cell-level boundary. Freeze a nested latent-state predictor whose target input is only independently available metadata or a declared minimal calibration record; its output must be a joint predictive distribution across untouched frequencies. Evaluate complete-cell coverage, retaining the coherent `ID07`, `ID22` and `ID52` rank patterns as challenges. A surviving, reproducible residual becomes a materials or detector question only after fixture, repeatability and covariance controls; a new-physics interpretation remains farther out.
 
 ## Reproduction
 

@@ -148,6 +148,14 @@ closure. The next honest object is a preregistered hierarchical predictive
 distribution with independent covariates or a minimal calibration record plus
 replicate and fixture covariance—not a post-hoc refit or a new-physics label.
 
+[AZ-090](../admissibility/admissibility_90_pointwise_population_envelope_rank_identity_and_cell_level_boundary.md)
+proves that simply widening this to the other cells' pointwise min-max range
+does not supply that object. Its 52/54 scalar coverage is forced by ranks. The
+informative residue is cross-frequency coherence: `ID07` is real-part extreme
+at all fifteen evaluation frequencies, while `ID52` is repeatedly
+imaginary-part extreme. OT-027 now requires a donor-selected latent cell state
+and simultaneous spectral coverage, not independent pointwise bars.
+
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
 (\pi/4) phase depends on a common anomaly trivialization, while the (T_1)
