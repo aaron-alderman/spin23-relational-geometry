@@ -2,7 +2,8 @@
 
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { initializeBeliefState, updateBeliefState } from "./belief_state.mjs";
+import { readFileSync } from "node:fs";
+import { initializeBeliefState, sha256, updateBeliefState } from "./belief_state.mjs";
 import { searchCorpus } from "./search_corpus.mjs";
 
 const defaultRoot = new URL("../../", import.meta.url);
@@ -25,16 +26,18 @@ export function runBeliefEvaluation({ root = defaultRoot } = {}) {
   const identity = searchCorpus({ root, query: "Casimir boundaries and thermoelectric detection", limit: 1 }).corpusContentSha256;
   const initial = initializeBeliefState({ objective: "Casimir boundaries and thermoelectric detection", profile: "experiment", corpusContentSha256: identity });
   const evidenceSha256 = "e".repeat(64);
+  const sourceVersion = sourcePath => sha256(readFileSync(new URL(`../../${sourcePath}`, import.meta.url), "utf8"));
+  const observed = (type, sourcePath, receipt, family = receipt) => ({ type, sourcePath, evidenceSha256: receipt, evidenceFamilySha256: family, sourceVersionSha256: sourceVersion(sourcePath), producer: "synthetic-evaluation", independenceClass: type.startsWith("verification-") ? "independent-verifier" : "same-run", selectionArm: "external" });
   const consistent = runSequence(initial, [
-    { type: "sweep-invariant", sourcePath: usefulSource, evidenceSha256 },
-    { type: "answer-stable", sourcePath: usefulSource, evidenceSha256 },
-    { type: "verification-pass", sourcePath: usefulSource, evidenceSha256 },
-    { type: "answer-conflict", sourcePath: distractorSource, evidenceSha256 },
-    { type: "verification-fail", sourcePath: distractorSource, evidenceSha256 },
+    observed("sweep-invariant", usefulSource, evidenceSha256, "1".repeat(64)),
+    observed("answer-stable", usefulSource, "2".repeat(64)),
+    observed("verification-pass", usefulSource, "3".repeat(64)),
+    observed("answer-conflict", distractorSource, "4".repeat(64)),
+    observed("verification-fail", distractorSource, "5".repeat(64)),
   ]);
   const beforeConflict = consistent.state.sources[usefulSource];
-  const conflict = updateBeliefState({ beliefState: consistent.state, observations: [{ type: "answer-conflict", sourcePath: usefulSource, evidenceSha256: "f".repeat(64) }] });
-  const recovered = updateBeliefState({ beliefState: conflict.state, observations: [{ type: "verification-pass", sourcePath: usefulSource, evidenceSha256: "a".repeat(64) }] });
+  const conflict = updateBeliefState({ beliefState: consistent.state, observations: [observed("answer-conflict", usefulSource, "f".repeat(64))] });
+  const recovered = updateBeliefState({ beliefState: conflict.state, observations: [observed("verification-pass", usefulSource, "a".repeat(64))] });
   const brier = consistent.predictions.reduce((sum, item) => sum + (item.predicted - item.observed) ** 2, 0) / consistent.predictions.length;
   const metrics = {
     usefulPosterior: consistent.state.sources[usefulSource].utilityMean,
@@ -44,11 +47,11 @@ export function runBeliefEvaluation({ root = defaultRoot } = {}) {
     usefulPosteriorAfterRecovery: recovered.state.sources[usefulSource].utilityMean,
     meanBrierScore: Number(brier.toFixed(6)),
     deterministicReplay: JSON.stringify(runSequence(initial, [
-      { type: "sweep-invariant", sourcePath: usefulSource, evidenceSha256 },
-      { type: "answer-stable", sourcePath: usefulSource, evidenceSha256 },
-      { type: "verification-pass", sourcePath: usefulSource, evidenceSha256 },
-      { type: "answer-conflict", sourcePath: distractorSource, evidenceSha256 },
-      { type: "verification-fail", sourcePath: distractorSource, evidenceSha256 },
+      observed("sweep-invariant", usefulSource, evidenceSha256, "1".repeat(64)),
+      observed("answer-stable", usefulSource, "2".repeat(64)),
+      observed("verification-pass", usefulSource, "3".repeat(64)),
+      observed("answer-conflict", distractorSource, "4".repeat(64)),
+      observed("verification-fail", distractorSource, "5".repeat(64)),
     ]).state) === JSON.stringify(consistent.state),
   };
   const gates = {

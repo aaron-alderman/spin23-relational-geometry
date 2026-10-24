@@ -59,11 +59,11 @@ Creates a deterministic caller-owned state for one externally supplied objective
 
 ### `corpus_belief_update`
 
-Consumes a hash-verified prior state and typed observations, then returns a successor state and innovation receipt. The scalar Kalman-like update is governed by a fixed observation policy. Conflicts reopen uncertainty; corpus-identity mismatch and state tampering fail closed. The server retains nothing.
+Consumes a hash-verified prior state and causally typed observation views, then returns a candidate successor and innovation receipt. Every view names its receipt, causal evidence family, exact source version, producer, independence class and selection arm. Correlated views from one family collapse to one effective update per source, and that family cannot influence the source again. Conflicts reopen uncertainty; receipt replay, source-version mismatch, corpus-identity mismatch and state tampering fail closed. The server retains and admits nothing.
 
 ### `corpus_adaptive_context`
 
-Builds both baseline and adaptive context selections. Learned source utility contributes at most 0.2 and exploration at most 0.05. The response exposes all movements and posterior estimates and preserves the source's declared status. See the [belief-loop contract](BELIEF_LOOP.md).
+Builds both baseline and adaptive context selections for the exact objective and profile bound into the state. Learned source utility contributes at most 0.2 and exploration at most 0.05. When exploration is active, one slot is reserved for an eligible unselected source, preferring sources with no prior exposure. The response exposes all movements and posterior estimates and preserves the source's declared status. See the [attention-utility contract](BELIEF_LOOP.md).
 
 ### `corpus_read`
 

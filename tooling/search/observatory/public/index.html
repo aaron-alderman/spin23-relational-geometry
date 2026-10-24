@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspect, tune and replay the Spin(2,3) corpus context belief loop.">
+  <title>Context Hub Observatory</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <header class="brand">
+        <div class="brand-mark" aria-hidden="true">◎</div>
+        <div><p class="eyebrow">SPIN(2,3) CORPUS</p><h1>Context Hub<br>Observatory</h1></div>
+      </header>
+
+      <section class="create-panel">
+        <label for="objective">New externally governed objective</label>
+        <textarea id="objective" rows="3" placeholder="What should this episode attend to?"></textarea>
+        <div class="form-row"><select id="new-profile" aria-label="New episode profile"><option>all</option><option>interpret</option><option>choose-work</option><option>audit</option><option>experiment</option></select><button id="create-episode" class="primary">Create episode</button></div>
+      </section>
+
+      <div class="rail-heading"><span>Episodes</span><button id="refresh" class="icon-button" title="Refresh episodes">↻</button></div>
+      <nav id="episode-list" class="episode-list" aria-label="Context episodes"></nav>
+      <footer class="authority-note">Local, append-only memory<br><strong>No truth promotion</strong></footer>
+    </aside>
+
+    <main class="workspace">
+      <section id="empty-state" class="empty-state">
+        <div class="orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+        <p class="eyebrow">NOTHING HIDDEN</p>
+        <h2>Create or select an episode.</h2>
+        <p>The Observatory holds attention in public: every context choice, innovation and accepted update remains inspectable and replayable.</p>
+      </section>
+
+      <div id="episode-view" hidden>
+        <header class="episode-header">
+          <div><p class="eyebrow" id="episode-id"></p><h2 id="episode-objective"></h2><p id="episode-meta" class="muted"></p><p class="attention-warning">Attention utility, not truth probability.</p></div>
+          <div class="header-actions"><span id="freeze-state" class="state-pill"></span><button id="freeze-toggle" class="secondary"></button></div>
+        </header>
+
+        <section id="metrics" class="metric-grid" aria-label="Episode metrics"></section>
+
+        <div class="layout-grid">
+          <section class="panel controls-panel">
+            <div class="panel-title"><div><p class="eyebrow">CONTROL SURFACE</p><h3>Tune attention</h3></div><span class="guardrail">bounded</span></div>
+            <form id="controls-form" class="controls-grid">
+              <label>Graph influence <output id="graph-out"></output><input name="graphWeight" type="range" min="0" max="0.6" step="0.01"></label>
+              <label>Adaptive influence <output id="adaptive-out"></output><input name="adaptiveWeight" type="range" min="0" max="0.2" step="0.01"></label>
+              <label>Exploration <output id="explore-out"></output><input name="explorationWeight" type="range" min="0" max="0.05" step="0.005"></label>
+              <label>Source budget <output id="sources-out"></output><input name="maxSources" type="range" min="2" max="10" step="1"></label>
+              <button class="secondary" type="submit">Save as a new control event</button>
+            </form>
+          </section>
+
+          <section class="panel turn-panel">
+            <div class="panel-title"><div><p class="eyebrow">LIVE LOOP</p><h3>Plan the next turn</h3></div><span id="corpus-short" class="hash"></span></div>
+            <form id="turn-form"><textarea name="task" rows="3" placeholder="Ask the corpus a concrete question…" required></textarea><button class="primary" type="submit">Run baseline + adaptive selection</button></form>
+          </section>
+        </div>
+
+        <section class="panel" id="context-panel">
+          <div class="panel-title"><div><p class="eyebrow">SELECTION DIFFERENCE</p><h3>Baseline / adaptive</h3></div><span id="context-jaccard" class="state-pill"></span></div>
+          <div id="context-comparison" class="context-comparison"><p class="muted">Plan a turn to inspect selection.</p></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title"><div><p class="eyebrow">ANSWER PROVENANCE</p><h3>Bind an answer to the selected context</h3></div><span id="answer-receipt" class="hash">no receipt</span></div>
+          <form id="answer-form" class="answer-form">
+            <label>Model name<input name="modelName" value="local-or-host-model" required></label>
+            <label>Exact prompt<textarea name="prompt" rows="2" required></textarea></label>
+            <label>Answer<textarea name="answer" rows="4" required></textarea></label>
+            <label>Atomic claims JSON<textarea name="claims" rows="5" required placeholder='[{"key":"claim.key","statement":"...","verdict":"supported","sourcePaths":["corpus/..."]}]'></textarea></label>
+            <button class="secondary" type="submit">Create answer receipt for latest turn</button>
+          </form>
+        </section>
+
+        <div class="layout-grid lower-grid">
+          <section class="panel">
+            <div class="panel-title"><div><p class="eyebrow">ADMITTED ATTENTION STATE</p><h3>Utility ± uncertainty</h3></div><span id="belief-count" class="hash"></span></div>
+            <div id="belief-list" class="belief-list"></div>
+          </section>
+          <section class="panel">
+            <div class="panel-title"><div><p class="eyebrow">ADMISSION BOUNDARY</p><h3>Pending update</h3></div><span class="guardrail">human gate</span></div>
+            <div id="proposal-panel"></div>
+            <form id="rollback-form" class="stacked-form"><label>Previously admitted state<select name="targetStateSha256"></select></label><label>Rollback reason<input name="reason" maxlength="1000" placeholder="Why restore this admitted state?"></label><button class="secondary" type="submit">Append rollback event</button></form>
+          </section>
+        </div>
+
+        <div class="layout-grid lower-grid">
+          <section class="panel">
+            <div class="panel-title"><div><p class="eyebrow">OBSERVE</p><h3>Propose evidence</h3></div></div>
+            <form id="observation-form" class="stacked-form">
+              <label>Source<select name="sourcePath" required></select></label>
+              <label>Observation<select name="type"><option>verification-pass</option><option>verification-fail</option><option>answer-stable</option><option>answer-conflict</option><option>sweep-invariant</option><option>retrieved</option><option>user-rating</option></select></label>
+              <label>Evidence SHA-256<input name="evidenceSha256" placeholder="Required except for user-rating"></label>
+              <label>Evidence family SHA-256<input name="evidenceFamilySha256" placeholder="Optional; same causal episode = same family"></label>
+              <p class="muted">Provenance is host-derived: direct machine proposals are <code>same-run</code>; ratings are <code>human-policy</code>. Independent evidence requires a separate verified interface.</p>
+              <div class="form-row"><label>Manual value<input name="value" type="number" min="0" max="1" step="0.05" value="0.5"></label><label>Noise<input name="noiseVariance" type="number" min="0.01" max="1" step="0.01" value="0.2"></label></div>
+              <button class="secondary" type="submit">Calculate proposed update</button>
+            </form>
+          </section>
+          <section class="panel">
+            <div class="panel-title"><div><p class="eyebrow">COUNTERFACTUAL</p><h3>Replay without mutation</h3></div></div>
+            <form id="replay-form" class="stacked-form"><div class="form-row"><label>Process variance<input name="processVariance" type="number" min="0.0001" max="0.1" step="0.001"></label><label>Adaptive weight<input name="adaptiveWeight" type="number" min="0" max="0.2" step="0.01"></label></div><button class="secondary" type="submit">Replay recorded history</button></form>
+            <div id="replay-result" class="replay-result muted">No counterfactual replay yet.</div>
+          </section>
+        </div>
+
+        <section class="panel timeline-panel">
+          <div class="panel-title"><div><p class="eyebrow">APPEND-ONLY LEDGER</p><h3>Episode timeline</h3></div><span id="head-hash" class="hash"></span></div>
+          <ol id="timeline" class="timeline"></ol>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

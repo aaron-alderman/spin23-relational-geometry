@@ -332,7 +332,7 @@
     },
     {
       "name": "corpus_belief_update",
-      "description": "Apply one to 200 typed observations to a hash-verified caller-owned belief state using bounded scalar Kalman-like source-utility updates. Returns a successor state and innovation receipt without server-side persistence or corpus mutation.",
+      "description": "Apply one to 200 causally typed observations to a hash-verified caller-owned attention-utility state. Observations from one evidence family can influence a source only once and correlated views collapse to one effective update. Returns a candidate successor and innovation receipt without persistence, admission or corpus mutation.",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -475,8 +475,8 @@
     },
     {
       "path": "tooling/search/context_hub.mjs",
-      "bytes": 13372,
-      "sha256": "ccf0bbe8c093c8bd3dd9114cf8de4ebd9a999d6b80c3502f308b427f508615f8"
+      "bytes": 14449,
+      "sha256": "f66fd49b74353c20028af8b611af820974166ab5431a063e8676c720f9acebb0"
     },
     {
       "path": "tooling/search/context_sweep.mjs",
@@ -490,23 +490,23 @@
     },
     {
       "path": "tooling/search/belief_state.mjs",
-      "bytes": 14478,
-      "sha256": "3c03421b374bb70b3785c1395f950fb25e6fa0e09f17613e21a2b99387eea09d"
+      "bytes": 20658,
+      "sha256": "dd6232006e7959dfa5457910f58df74bb96b2bd80184fe82d73e223ace53ff8d"
     },
     {
       "path": "tooling/search/belief_observations.mjs",
-      "bytes": 3132,
-      "sha256": "fa394c4ba5a0109db5dbadb9192b199d55661c6026dc45bdd095f89d46fb3404"
+      "bytes": 4302,
+      "sha256": "9b0c6acb789419a2f2cb082ee6fd89f067bb8bfe6ebb6bea8cc072180f7c4f92"
     },
     {
       "path": "tooling/search/adaptive_context.mjs",
-      "bytes": 4177,
-      "sha256": "6aa44b2da165093cc775317c526650bb6dc88b751cc55e9dcbb715f32e1b5820"
+      "bytes": 5259,
+      "sha256": "b789f184e4f8c77265c10b0b784e2408b74db246e3834b917695f7f289117e5c"
     },
     {
       "path": "tooling/search/corpus_search_mcp.mjs",
-      "bytes": 21021,
-      "sha256": "7db340b7a195f37a3245c6f93b33f859bf398bbe33fcff82a7817e2880055937"
+      "bytes": 21539,
+      "sha256": "454937891e1c2f72b51064405390a386fae59068b04c8ec49a39f9cfdc4ced43"
     },
     {
       "path": "tooling/search/benchmark_cases.json",
@@ -516,7 +516,7 @@
     {
       "path": "tooling/search/benchmark_baseline_v1.json",
       "bytes": 45859,
-      "sha256": "ea2f697cb5b04050b32de6edb3be0381fbd4b0129fa4892f234ac79839c2d551"
+      "sha256": "14d23c4551f8150f329bfe8888186e75d1b79f6595279c543d30ae27f02f6f74"
     },
     {
       "path": "tooling/search/run_benchmark.mjs",
@@ -525,18 +525,18 @@
     },
     {
       "path": "tooling/search/run_belief_evaluation.mjs",
-      "bytes": 4485,
-      "sha256": "97a86f85d2a6a4784dc65081eaaef476333d2de6343ffca742880c14bafdc6fd"
+      "bytes": 4852,
+      "sha256": "f67a21594b0d9a4832761d0d9f0a49b516286dfd2fc2efd8a3423e51fc948bfa"
     },
     {
       "path": "tooling/search/MCP.md",
-      "bytes": 7079,
-      "sha256": "02dd793e44ef571bb5906a365e25a25ed93e71b87fc9206f315aa0eac54d4119"
+      "bytes": 7519,
+      "sha256": "9d4f9617cf6dfb0ea5ff505b3816ff43ca38ef2870ea3dc99e049e89a098d4be"
     },
     {
       "path": "tooling/search/BELIEF_LOOP.md",
-      "bytes": 5434,
-      "sha256": "f2591752504de9d2a9dcd365bf9c493501658495249bc7dc3fc4cf3e6753f714"
+      "bytes": 7397,
+      "sha256": "fe2a55d340bfd8ca215604e66664687220a3bf5b83e9c63a9a6574326399f3c3"
     },
     {
       "path": "tests/repository/corpus_search.test.mjs",
@@ -545,8 +545,8 @@
     },
     {
       "path": "tests/repository/corpus_search_mcp.test.mjs",
-      "bytes": 8256,
-      "sha256": "536405521c07c2c57c7ed1efa8eb3da09234e71c680cbc6399e6c6fe3edf1729"
+      "bytes": 8956,
+      "sha256": "0960b4daf5ac5059c0f482beaf96564a866aa9d817963895a89b1dfe92d358fe"
     },
     {
       "path": "tests/repository/corpus_answer_stability.test.mjs",
@@ -555,8 +555,8 @@
     },
     {
       "path": "tests/repository/corpus_belief_state.test.mjs",
-      "bytes": 9331,
-      "sha256": "ee573c67115cef638e491570420b9c4f8a090916bd4151eeeeb582f4677d6fd1"
+      "bytes": 12112,
+      "sha256": "c8136deefeac6ebc15ce6b9797d2646f914c16e72f5055f4d4b6972817dea4a4"
     },
     {
       "path": "tests/repository/corpus_belief_evaluation.test.mjs",
@@ -605,5 +605,5 @@
     "admit through the protected lifecycle",
     "verify all nine operations through a fresh MCP connection"
   ],
-  "candidateSha256": "edd4d10fed68df73f9561929e38d167130f3442c1c8df64c2934ee488d84a1ca"
+  "candidateSha256": "98b02dbf09f79b7863605d81cbab8a89e893ef8a4651254056e0dbf04bd15ea5"
 }

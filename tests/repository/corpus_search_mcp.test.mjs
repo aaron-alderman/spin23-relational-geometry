@@ -1,10 +1,15 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { createCorpusSearchMcp } from "../../tooling/search/corpus_search_mcp.mjs";
+import { sha256 } from "../../tooling/search/belief_state.mjs";
 
 const root = new URL("../../", import.meta.url);
 const server = createCorpusSearchMcp({ root });
 const request = (id, method, params) => server.rpc({ jsonrpc: "2.0", id, method, ...(params ? { params } : {}) });
+const sourcePath = "corpus/programmes/admissibility/admissibility_02_casimir_as_first_generative_probe.md";
+const sourceVersionSha256 = sha256(readFileSync(new URL(`../../${sourcePath}`, import.meta.url), "utf8"));
+const observation = (type, path = sourcePath) => ({ type, sourcePath: path, evidenceSha256: "e".repeat(64), evidenceFamilySha256: "e".repeat(64), sourceVersionSha256, producer: "mcp-test", independenceClass: "external-observation", selectionArm: "external" });
 
 test("MCP advertises bounded read-only corpus retrieval", async () => {
   const initialized = await request(1, "initialize");
@@ -99,14 +104,13 @@ test("MCP belief loop is caller-owned, hash-bound and context-adaptive", async (
   });
   assert.equal(initialized.result.isError, undefined);
   const initial = initialized.result.structuredContent;
-  assert.equal(initial.protocol, "spin23-corpus-belief-state/1");
+  assert.equal(initial.protocol, "spin23-corpus-belief-state/2");
   assert.equal(initial.authority.corpusPromotion, false);
   assert.match(initialized.result.content[0].text, /No server-side state was stored/iu);
 
-  const sourcePath = "corpus/programmes/admissibility/admissibility_02_casimir_as_first_generative_probe.md";
   const updated = await request(10, "tools/call", {
     name: "corpus_belief_update",
-    arguments: { beliefState: initial, observations: [{ type: "verification-pass", sourcePath, evidenceSha256: "e".repeat(64) }] },
+    arguments: { beliefState: initial, observations: [observation("verification-pass")] },
   });
   assert.equal(updated.result.isError, undefined);
   const successor = updated.result.structuredContent.state;
@@ -129,13 +133,16 @@ test("MCP belief loop rejects tampered state and excess adaptive influence", asy
   const initialized = await request(12, "tools/call", { name: "corpus_belief_initialize", arguments: { objective: "Casimir boundary" } });
   const tampered = structuredClone(initialized.result.structuredContent);
   tampered.episode.objective = "silently changed";
-  const rejectedState = await request(13, "tools/call", { name: "corpus_belief_update", arguments: { beliefState: tampered, observations: [{ type: "retrieved", sourcePath: "corpus/README.md", evidenceSha256: "e".repeat(64) }] } });
+  const rejectedState = await request(13, "tools/call", { name: "corpus_belief_update", arguments: { beliefState: tampered, observations: [observation("retrieved")] } });
   assert.equal(rejectedState.result.isError, true);
   assert.match(rejectedState.result.content[0].text, /integrity/iu);
   const rejectedWeight = await request(14, "tools/call", { name: "corpus_adaptive_context", arguments: { task: "Casimir boundary", beliefState: initialized.result.structuredContent, adaptiveWeight: 0.21 } });
   assert.equal(rejectedWeight.result.isError, true);
   assert.match(rejectedWeight.result.content[0].text, /adaptiveWeight/iu);
-  const rejectedSource = await request(15, "tools/call", { name: "corpus_belief_update", arguments: { beliefState: initialized.result.structuredContent, observations: [{ type: "retrieved", sourcePath: "corpus/not-present.md", evidenceSha256: "e".repeat(64) }] } });
+  const rejectedSource = await request(15, "tools/call", { name: "corpus_belief_update", arguments: { beliefState: initialized.result.structuredContent, observations: [observation("retrieved", "corpus/not-present.md")] } });
   assert.equal(rejectedSource.result.isError, true);
   assert.match(rejectedSource.result.content[0].text, /does not exist/iu);
+  const staleSource = await request(16, "tools/call", { name: "corpus_belief_update", arguments: { beliefState: initialized.result.structuredContent, observations: [{ ...observation("retrieved"), sourceVersionSha256: "0".repeat(64) }] } });
+  assert.equal(staleSource.result.isError, true);
+  assert.match(staleSource.result.content[0].text, /source identity is stale/iu);
 });

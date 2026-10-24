@@ -36,7 +36,7 @@ function sensitivity(spread) {
   return "low";
 }
 
-function selectSources(candidates, maximum, task, adaptation) {
+export function selectSources(candidates, maximum, task, adaptation) {
   if (!candidates.length) return [];
   const navigationRequested = /\b(?:map|overview|navigate|navigation|start|structure|front door|what is here)\b/iu.test(task);
   const answerBearing = candidates.filter(item => sourceKind(item.path) !== "navigation");
@@ -68,7 +68,16 @@ function selectSources(candidates, maximum, task, adaptation) {
     selectedKinds.add(sourceKind(best.candidate.path));
   }
   if (adaptation && selected.length) {
-    const explorationTarget = [...selected].sort((left, right) => right.posteriorVariance - left.posteriorVariance || left.rank - right.rank)[0];
+    let explorationTarget = null;
+    if (adaptation.explorationWeight > 0) {
+      explorationTarget = pool.filter(item => !selected.includes(item)).sort((left, right) => {
+        const leftUnobserved = Object.hasOwn(adaptation.sources, left.path) ? 0 : 1;
+        const rightUnobserved = Object.hasOwn(adaptation.sources, right.path) ? 0 : 1;
+        return rightUnobserved - leftUnobserved || right.posteriorVariance - left.posteriorVariance || right.selectionScore - left.selectionScore || left.rank - right.rank;
+      })[0] ?? null;
+      if (explorationTarget) selected[selected.length - 1] = explorationTarget;
+    }
+    explorationTarget ??= [...selected].sort((left, right) => right.posteriorVariance - left.posteriorVariance || left.rank - right.rank)[0];
     for (const item of selected) item.selectionRole = item === explorationTarget ? "explore" : "exploit";
   }
   return selected;
@@ -118,6 +127,10 @@ export function buildCorpusContext({ root = defaultRoot, task, profile = "all", 
     if (typeof adaptation.explorationWeight !== "number" || adaptation.explorationWeight < 0 || adaptation.explorationWeight > 0.05) throw new Error("adaptation.explorationWeight must be from 0 to 0.05");
   }
   const selected = selectSources(search.results, maxSources, task, adaptation);
+  const candidateUniverse = search.results.map(item => ({
+    ...item,
+    sourceSha256: sha256(readFileSync(join(corpusRoot, ...item.path.split("/")), "utf8")),
+  }));
   const selectedPaths = new Set(selected.map(item => item.path));
   const followUps = search.results.filter(item => !selectedPaths.has(item.path)).slice(0, 5).map(item => ({ path: item.path, title: item.title, status: item.status }));
   const adaptationLine = adaptation
@@ -163,9 +176,11 @@ export function buildCorpusContext({ root = defaultRoot, task, profile = "all", 
     query: { corrected: search.correctedQuery, corrections: search.corrections, documentsSearched: search.documents },
     authority: { readOnly: true, entails: false, empiricalAuthority: false, corpusPromotion: false },
     coverage: { sourceKinds: [...new Set(sources.map(source => source.kind))], navigationSuppressedUnlessRequested: true },
-    receipt: { contextSha256: sha256(context), sourceSetSha256, selector: { profile, graphWeight, sweep: search.method.selectorSweep, ...(adaptation ? { adaptiveWeight: adaptation.adaptiveWeight, explorationWeight: adaptation.explorationWeight, beliefStateSha256: adaptation.stateSha256 } : {}) } },
-    adaptation: adaptation ? { active: true, stateSha256: adaptation.stateSha256, adaptiveWeight: adaptation.adaptiveWeight, explorationWeight: adaptation.explorationWeight, learnedSources: Object.keys(adaptation.sources).length } : { active: false },
+    receipt: { contextSha256: sha256(context), sourceSetSha256, selector: { profile, graphWeight, sweep: search.method.selectorSweep, ...(adaptation ? { adaptiveWeight: adaptation.adaptiveWeight, explorationWeight: adaptation.explorationWeight, explorationReserved: adaptation.explorationWeight > 0, beliefStateSha256: adaptation.stateSha256 } : {}) } },
+    adaptation: adaptation ? { active: true, stateSha256: adaptation.stateSha256, adaptiveWeight: adaptation.adaptiveWeight, explorationWeight: adaptation.explorationWeight, explorationReserved: adaptation.explorationWeight > 0, learnedSources: Object.keys(adaptation.sources).length } : { active: false },
     sources,
+    candidateUniverse,
+    candidateUniverseSha256: sha256(candidateUniverse.map(item => `${item.path}\0${item.sourceSha256}\0${item.rank}\0${item.score}`).join("\n")),
     omittedCandidates: followUps,
     context,
   };

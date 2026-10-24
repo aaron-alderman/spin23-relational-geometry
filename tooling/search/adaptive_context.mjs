@@ -10,11 +10,29 @@ function sourceView(source) {
     path: source.path,
     title: source.title,
     status: source.status,
+    sourceSha256: source.sourceSha256,
+    kind: source.kind,
+    reason: source.reason,
     rank: source.rank,
     selectionScore: Number((source.selectionScore ?? source.score).toFixed(6)),
     posteriorUtility: source.posteriorUtility,
     posteriorVariance: source.posteriorVariance,
     selectionRole: source.selectionRole ?? null,
+  };
+}
+
+function candidateView(source) {
+  return {
+    path: source.path,
+    title: source.title,
+    status: source.status,
+    sourceSha256: source.sourceSha256,
+    rank: source.rank,
+    score: source.score,
+    lexicalScore: source.lexicalScore,
+    graphScore: source.graphScore,
+    selectorRankSpread: source.selectorRankSpread,
+    snippet: source.snippet,
   };
 }
 
@@ -31,6 +49,9 @@ export function buildAdaptiveCorpusContext({
 } = {}) {
   const state = verifyBeliefState(beliefState);
   const selectedProfile = profile ?? state.episode.profile;
+  const normalizedTask = typeof task === "string" ? task.trim() : "";
+  if (normalizedTask !== state.episode.objective) throw new Error("adaptive task must exactly match the belief episode objective; create a new episode or an explicit governed transfer for a different task");
+  if (selectedProfile !== state.episode.profile) throw new Error("adaptive profile must exactly match the belief episode profile; create a new episode or an explicit governed transfer for a different profile");
   if (typeof adaptiveWeight !== "number" || !Number.isFinite(adaptiveWeight) || adaptiveWeight < 0 || adaptiveWeight > 0.2) throw new Error("adaptiveWeight must be from 0 to 0.2");
   if (typeof explorationWeight !== "number" || !Number.isFinite(explorationWeight) || explorationWeight < 0 || explorationWeight > 0.05) throw new Error("explorationWeight must be from 0 to 0.05");
   const identity = searchCorpus({ root, query: task, profile: selectedProfile, graphWeight, limit: 1 });
@@ -64,12 +85,14 @@ export function buildAdaptiveCorpusContext({
   }));
   const payload = {
     protocol: "spin23-corpus-adaptive-context/1",
-    task: task.trim(),
+    task: normalizedTask,
     beliefStateSha256: state.stateSha256,
     corpusContentSha256: identity.corpusContentSha256,
     controls: { requestedAdaptiveWeight: adaptiveWeight, effectiveAdaptiveWeight, maximumAdaptiveWeight: 0.2, requestedExplorationWeight: explorationWeight, effectiveExplorationWeight, maximumExplorationWeight: 0.05, emptyStatePreservesBaseline: !hasLearnedSources },
     baseline: { receipt: baseline.receipt, sources: baseline.sources.map(sourceView) },
     adaptive: { ...adaptive, context: undefined, sources: adaptive.sources.map(sourceView) },
+    candidateUniverse: adaptive.candidateUniverse.map(candidateView),
+    candidateUniverseSha256: adaptive.candidateUniverseSha256,
     movements,
     context: adaptive.context,
     authority: { readOnly: true, entails: false, empiricalAuthority: false, corpusPromotion: false, changesTruthStatus: false, modelWeightTraining: false },

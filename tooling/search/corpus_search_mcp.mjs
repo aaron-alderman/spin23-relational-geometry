@@ -8,7 +8,7 @@ import { searchCorpus } from "./search_corpus.mjs";
 import { buildCorpusContext } from "./context_hub.mjs";
 import { buildContextSweep } from "./context_sweep.mjs";
 import { compareAnswerReceipts, createAnswerReceipt } from "./answer_stability.mjs";
-import { initializeBeliefState, updateBeliefState } from "./belief_state.mjs";
+import { initializeBeliefState, sha256, updateBeliefState } from "./belief_state.mjs";
 import { buildAdaptiveCorpusContext } from "./adaptive_context.mjs";
 
 const moduleDirectory = dirname(fileURLToPath(import.meta.url));
@@ -93,7 +93,7 @@ export const corpusSearchMcpTools = Object.freeze([
   },
   {
     name: "corpus_belief_update",
-    description: "Apply one to 200 typed observations to a hash-verified caller-owned belief state using bounded scalar Kalman-like source-utility updates. Returns a successor state and innovation receipt without server-side persistence or corpus mutation.",
+    description: "Apply one to 200 causally typed observations to a hash-verified caller-owned attention-utility state. Observations from one evidence family can influence a source only once and correlated views collapse to one effective update. Returns a candidate successor and innovation receipt without persistence, admission or corpus mutation.",
     inputSchema: objectSchema({
       beliefState: { type: "object" },
       observations: { type: "array", minItems: 1, maxItems: 200, items: { type: "object" } },
@@ -266,10 +266,13 @@ export function createCorpusSearchMcp({ root = defaultRoot } = {}) {
           const allowed = new Set(["beliefState", "observations"]);
           if (!args || Array.isArray(args) || Object.keys(args).some(key => !allowed.has(key))) throw new Error("corpus_belief_update received invalid arguments");
           if (!Array.isArray(args.observations)) throw new Error("corpus_belief_update observations must be an array");
-          for (const observation of args.observations) validateReadArguments(corpusRoot, { path: observation?.sourcePath });
+          for (const observation of args.observations) {
+            const source = validateReadArguments(corpusRoot, { path: observation?.sourcePath });
+            if (sha256(readFileSync(source.absolute, "utf8")) !== observation?.sourceVersionSha256) throw new Error(`observation source identity is stale or incorrect: ${observation?.sourcePath}`);
+          }
           const identity = searchCorpus({ root: corpusRoot, query: args.beliefState?.episode?.objective ?? "corpus identity", profile: args.beliefState?.episode?.profile ?? "all", limit: 1 });
           const value = updateBeliefState({ ...args, corpusContentSha256: identity.corpusContentSha256 });
-          return success(message.id, value, `Belief update ${value.report.updateSha256}: ${value.report.observations.length} typed observations; successor ${value.state.stateSha256}. No corpus or server state was changed.`);
+          return success(message.id, value, `Attention update ${value.report.updateSha256}: ${value.report.observations.length} typed views, ${value.report.effectiveObservations.length} independent family/source updates, ${value.report.collapsedObservations} correlated views collapsed; candidate successor ${value.state.stateSha256}. No state was admitted and no corpus or server state was changed.`);
         }
         if (name === "corpus_adaptive_context") {
           const allowed = new Set(["task", "beliefState", "profile", "maxSources", "maxCharacters", "graphWeight", "adaptiveWeight", "explorationWeight"]);

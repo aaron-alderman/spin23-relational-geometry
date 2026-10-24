@@ -1,6 +1,6 @@
 # Visible Context Hub contract
 
-**Status:** product contract; UI not yet implemented
+**Status:** local Observatory implemented; protected-runtime or hosted admission not attempted
 
 ## Primary interaction
 
@@ -26,6 +26,8 @@ The user supplies a task, chooses or accepts a task profile and receives a propo
 - “Stable” means stable across the executed variants, not universally true.
 - Full source text remains one explicit action away from every excerpt.
 
-## First implementation slice
+## Implemented local slice
 
-The smallest honest UI consumes the nine local MCP tools, shows one tailored packet and one context sweep, then accepts structured atomic claims from the host model to generate answer receipts and a stability comparison. An optional belief panel shows the externally supplied objective, corpus identity, source-utility mean and variance, innovations, baseline/adaptive movements and the explicit `explore` selection. The state remains caller-owned; editing, corpus promotion, external federation, model-weight training and protected admission are out of scope for the first slice.
+The [Context Hub Observatory](OBSERVATORY.md) is the explicit state-owning host around the pure search and attention-state modules. It records baseline and adaptive contexts, exact candidate universes, answer receipts, causally grouped observations, separate approval or rejection decisions, rollback, control changes, freeze state and counterfactual replay in a local append-only hash chain. It shows attention-utility mean and variance, independent-family counts, innovations, baseline/adaptive movements, the explicit `explore` selection, candidate/admitted state identities, monitoring metrics and the complete event timeline.
+
+The state remains outside the canonical corpus under ignored `.context-hub/`. The Observatory is a local single-writer tool: editing, corpus promotion, external federation, model-weight training and protected admission remain out of scope.
