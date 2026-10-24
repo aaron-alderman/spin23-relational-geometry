@@ -1,0 +1,66 @@
+{
+  "protocol": "relation-emulator-readiness-reconciliation/1",
+  "packet": "AZ-110",
+  "target": "OT-024",
+  "sources": {
+    "specification": {
+      "path": "corpus/programmes/frontier/wave-7/relation_emulator_spec_v1.json",
+      "sha256": "bbfa6b7918ca0953c3065bfa0cd740ea09904a638c7535edd0bc3548493dd00b"
+    },
+    "schedule": {
+      "path": "corpus/programmes/frontier/wave-7/relation_minimal_detector_schedule_v1.json",
+      "sha256": "8f3c295529c223ecf1f79bb57021f22dbf0e16e5870d60e92d89769792006b9d"
+    },
+    "noise": {
+      "path": "corpus/programmes/frontier/wave-7/relation_detector_noise_and_redundancy_v1.json",
+      "sha256": "927487cb7cc5185402478e5d7f09c3b7aabb37583efd81ba61853884a8db37b6"
+    },
+    "bridge": {
+      "path": "corpus/programmes/frontier/wave-7/relation_physical_bridge_ledger_v1.json",
+      "sha256": "1b209368bd1d7c0b17f1ddfd38a1907e8a658c9b98b1a58a6664e7c811ad5b28"
+    }
+  },
+  "frozenContract": {
+    "modes": 16,
+    "directedLinks": 24,
+    "disabledSeams": [
+      "QR-002",
+      "QR-004",
+      "QR-013"
+    ],
+    "wallLink": "QR-003",
+    "compositionRank": 23,
+    "completedRank": 24,
+    "pathChannels": 9,
+    "triangleChannels": 14,
+    "directChannels": 1,
+    "minimalChannels": 24,
+    "absoluteDeterminant": 1,
+    "conditionNumber": 9.269625684416468,
+    "withheldNonzeroCompositionWitnesses": 33,
+    "wallLeakageSlope": 4,
+    "visibleGap": 0.4552467353503346,
+    "stabilityCondition": "kappa > 7 |g| for uniform link scale g",
+    "worstEqualNoiseVarianceFactor": 8,
+    "hardestRelation": "QR-001"
+  },
+  "readiness": {
+    "networkChosen": true,
+    "relationLinksAssigned": true,
+    "controlsFrozen": true,
+    "minimalDetectorScheduleProved": true,
+    "noiseGeometryComputed": true,
+    "withheldWitnessesAvailable": true,
+    "physicalDeviceBuilt": false,
+    "hardwareCovarianceMeasured": false,
+    "blindOutOfSampleExecutionComplete": false
+  },
+  "decision": {
+    "ot024DesignLayerClosed": true,
+    "ot024ShouldBeActiveNotGated": true,
+    "ot024ClosureConditionMet": false,
+    "physicsPromotionGatePassed": false,
+    "newPhysicsEvidence": false
+  },
+  "nextGate": "build the frozen 16-mode directed network, measure complex channel covariance, rerun weighted detector selection without opening withheld witnesses, and execute the QR-003 leakage/seam/direct-pickup acceptance test blind"
+}

@@ -38,4 +38,4 @@ The next route to new physics may begin not with higher energy but with greater 
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `3df03cb13854c7436c1f26db4e36a5db560ade8d6069cf6ea53a117a4691da9c`
+Citation-set digest: `dcefd1e0395ec1e02c136834a0d39255ef05ad533e381591ca7baa1058a545b9`

@@ -155,6 +155,23 @@ The boundary remains decisive. The D4-shaped couplings were programmed into the 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-one-action-reaches-the-four-detector-ports-claim-3.md)
 
+<a id="hot-off-the-press-the-relation-emulator-is-ready-to-build"></a>
+## Hot off the press — the relation emulator is ready to build
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** The relation-emulator register was behind its own evidence. The sixteen modes, twenty-four directed links, disabled seams, QR-003 wall control and minimum detector schedule have already been chosen and independently verified. OT-024 is therefore active laboratory work rather than an unfilled design gate.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-relation-emulator-is-ready-to-build-claim-1.md)
+
+The detector needs nine path channels, fourteen triangle channels and one direct wall channel. Its response basis is unimodular, the visible singular gap is about 0.455, reciprocal leakage opens the wall channel with slope four, and thirty-three unused nonzero composition records remain for precision and withheld validation. QR-001, not the wall, is the equal-noise statistical bottleneck.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-relation-emulator-is-ready-to-build-claim-2.md)
+
+The next work is concrete: build the directed network, measure complex covariance, redesign the redundant schedule without opening held-out records, and execute the wall-null test blind. Passing validates a programmed operatorization protocol. It does not identify the sixteen modes with fundamental sectors; that requires a carrier whose amplitudes were not chosen to reproduce the graph.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-relation-emulator-is-ready-to-build-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 
@@ -1002,6 +1019,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_107_global_nonlinear_detector_injectivity.md](../../../corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md)
 - [admissibility_108_d4_shared_action_operator_boundary.md](../../../corpus/programmes/admissibility/admissibility_108_d4_shared_action_operator_boundary.md)
 - [admissibility_109_four_mode_sk_action_to_record.md](../../../corpus/programmes/admissibility/admissibility_109_four_mode_sk_action_to_record.md)
+- [admissibility_110_relation_emulator_readiness_reconciliation.md](../../../corpus/programmes/admissibility/admissibility_110_relation_emulator_readiness_reconciliation.md)
 
 ---
 

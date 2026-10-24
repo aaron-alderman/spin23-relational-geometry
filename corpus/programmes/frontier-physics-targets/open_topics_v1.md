@@ -78,7 +78,7 @@ for another dimensionless redesign.
 
 | ID | Topic | Reopen datum required |
 |---|---|---|
-| OT-024 | Relation-emulator hardware dictionary | calibrated device meaning for every relation coordinate |
+| OT-024 | Relation-emulator hardware dictionary | AZ-110 closes network and detector design; build the frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
 | OT-025 | Nonlocal 24-dimensional form or code functor | a source-derived replacement for the incidence form or explicit sacrificed property |
 | OT-026 | Graph-to-Jordan translation | product-, norm- and rank-preserving map |
 | OT-027 | Physical operator and dynamics functor | action generating operators, amplitudes and detector map |
