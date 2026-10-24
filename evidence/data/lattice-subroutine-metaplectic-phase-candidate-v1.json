@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "The first-handle T transformation of the ten even genus-two characteristics contains fixed-sector exp(i*pi/4) phases that cancel in the determinant but survive in the vector-valued metaplectic action.",
+  "convention": {
+    "characteristic": "(a1,a2;b1,b2) with binary entries and parity a1*b1+a2*b2 mod 2",
+    "T1Action": "b1 -> b1+a1+1 mod 2",
+    "phase": "exp(i*pi*a1/4)"
+  },
+  "expected": {
+    "evenCharacteristics": 10,
+    "twoCycles": 3,
+    "fixedSectors": 4,
+    "nonvanishingFixedAtSeparation": 3,
+    "fixedPhase": 0.7853981633974483,
+    "permutationDeterminant": -1,
+    "phaseProduct": -1,
+    "monomialDeterminant": 1
+  },
+  "conditionalDeviceTarget": {
+    "forwardFlux": 0.7853981633974483,
+    "reverseFlux": -0.7853981633974483,
+    "condition": "The complete Baby-Monster multiplier and source-derived trivialization do not cancel or alter the free-Majorana fixed-sector phase."
+  },
+  "nextGate": "Compute complete Monster 2A spin-sector T1 and S1 multiplier matrices and their gauge-invariant cycle phases.",
+  "terminalStatus": "free_majorana_phase_established_complete_2A_multiplier_open"
+}

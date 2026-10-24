@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> Those obstructions now assign two detectors rather than one. The binary Igusa character embeds only as loop holonomy zero or pi; both values are reciprocal and make the three-mode directional odd channel vanish. Its sign belongs in a referenced two-quadrature interferometer, while the three-mode ring tests a genuinely continuous intrinsic phase. The engineering protocols are ready, but a frontier claim now requires either a no-refit referenced amplitude or a source-derived fermionic multiplier phase beyond the binary character.
+> Those obstructions now assign two detectors rather than one. The binary Igusa character embeds only as loop holonomy zero or pi; both values are reciprocal and make the three-mode directional odd channel vanish, so that sign belongs in a referenced interferometer. The full spin-sector vector retains more: under a first-handle modular T transformation, four free-Majorana sectors acquire an eighth-root phase even though it cancels in the determinant. This supplies a conditional no-fit three-mode target of plus or minus pi over four. The complete Baby-Monster multiplier and the physical modular-to-control-loop map remain capable of cancelling it, so the result is a sharpened experiment rather than a new-physics prediction.
 
 ## What this commits us to
 
@@ -42,6 +42,7 @@ Show that the named input is inconsistent, insufficient, unavailable, or fails t
 - **period-matrix-jordan-boundary-gate** — [period-matrix-jordan-boundary-gate.md](../../../corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md)
 - **three-mode-loop-seam-preflight** — [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
 - **modular-sign-detector-reassignment** — [modular-sign-detector-reassignment.md](../../../corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md)
+- **metaplectic-phase-candidate** — [metaplectic-phase-candidate.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
