@@ -38,6 +38,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **kenotic governance tri omni theism and a lawful world** — [kenotic_governance_tri_omni_theism_and_a_lawful_world.md](../../../corpus/syntheses/kenotic_governance_tri_omni_theism_and_a_lawful_world.md)
 - **orientation architecture** — [orientation_architecture.md](../../../corpus/programmes/orientation/orientation_architecture.md)
 - **frontier wave7 45 kenotic pole topology audit** — [frontier_wave7_45_kenotic_pole_topology_audit.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)
+- **frontier wave7 46 kenotic cover gluing no go** — [frontier_wave7_46_kenotic_cover_gluing_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md)
 - **EXPLANATORY STANDARD** — [EXPLANATORY_STANDARD.md](../../../corpus/EXPLANATORY_STANDARD.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.

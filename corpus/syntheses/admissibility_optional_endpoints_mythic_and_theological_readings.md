@@ -117,6 +117,14 @@ cohomological obstruction. The exact result is only a cycle-bearing
 articulation with directed non-return. The theological reading begins after
 that result and depends on T0–T3; it supplies no evidence for those assumptions.
 
+The most economical gluing attempt also closes negatively. Restoring the same
+junction to each of the three surrounding branches makes every pairwise and
+triple overlap identical. The cover's nerve is a filled triangle, so its
+constant-coefficient first Čech cohomology vanishes and matching scalar data
+glue uniquely. A genuine “presence through absence” obstruction would require
+new local section spaces and authored transition maps on distinct or richer
+overlaps. It cannot be read out of the present adjacency pattern.
+
 ### Incarnation, cross and resurrection as the Christian arc
 
 Under an explicitly Christian continuation, incarnation says that God does not merely govern the admissible region from outside but enters creaturely conditions without abolishing them. The cross pictures power refusing domination and sharing the cost of a world with genuine consequence. Resurrection names a desired endpoint of restoration without erasure: history is not denied, suffering is not renamed good, and what is broken is not the final boundary. This arc may orient kenotic practice; it is not a physics model, symmetry breaking mechanism or empirical prediction.
@@ -153,3 +161,4 @@ The theological reading is allowed positive content because its assumptions are 
 - [Frontier experiment atlas](../programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md)
 - [Current research frontier crosswalk](../programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md)
 - [Claimipedia kenotic-pole topology audit](../programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)
+- [Claimipedia kenotic-cover gluing no-go](../programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md)

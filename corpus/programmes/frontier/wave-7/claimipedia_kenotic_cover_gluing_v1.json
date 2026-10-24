@@ -1,0 +1,64 @@
+{
+  "schema": "claimipedia-kenotic-cover-gluing/1",
+  "date": "2026-10-24",
+  "sourceHash": "82d9c5a47f4957ddbd302927baed0acb05522773762966a4c9ffc34ed86f94c3",
+  "junction": "claim.grandThesis.christianity-kenosis",
+  "relevantComponentSize": 24,
+  "cover": [
+    {
+      "id": "U1",
+      "name": "resurrection and load-bearing sector",
+      "branchSizeWithoutJunction": 15,
+      "coverSize": 16,
+      "seed": "claim.biblicalResurrection.relationalFieldRupture"
+    },
+    {
+      "id": "U2",
+      "name": "liberalism sector",
+      "branchSizeWithoutJunction": 1,
+      "coverSize": 2,
+      "seed": "claim.grandThesis.liberalism"
+    },
+    {
+      "id": "U3",
+      "name": "Temple, Spin and comparison sector",
+      "branchSizeWithoutJunction": 7,
+      "coverSize": 8,
+      "seed": "claim.grandThesis.temple-sourcery"
+    }
+  ],
+  "intersections": {
+    "U1_U2": ["claim.grandThesis.christianity-kenosis"],
+    "U1_U3": ["claim.grandThesis.christianity-kenosis"],
+    "U2_U3": ["claim.grandThesis.christianity-kenosis"],
+    "U1_U2_U3": ["claim.grandThesis.christianity-kenosis"]
+  },
+  "nerve": {
+    "vertices": 3,
+    "edges": 3,
+    "filledTwoSimplices": 1,
+    "beta0": 1,
+    "beta1": 0,
+    "beta2": 0
+  },
+  "constantCoefficientCech": {
+    "field": "Q",
+    "dimensions": {"C0": 3, "C1": 3, "C2": 1},
+    "ranks": {"d0": 2, "d1": 1},
+    "cohomologyDimensions": {"H0": 1, "H1": 0, "H2": 0},
+    "gluing": "Any three local scalar sections whose values agree at the common junction glue uniquely on the 24-node union."
+  },
+  "operatorBoundary": {
+    "overlapCarrierDimension": 1,
+    "nondegenerateAlternatingFormPossible": false,
+    "authoredDistinctOverlapTransitions": false,
+    "c2OrSymplecticObstructionDetectable": false
+  },
+  "verdict": "The natural three-branch cover is a filled simplex with a single common overlap. It cannot witness a nontrivial first Cech class or absent-pole holonomy with constant/scalar coefficients.",
+  "reopenGate": [
+    "Declare local section spaces rather than infer them from adjacency.",
+    "Supply distinct overlap carriers or an overlap of dimension at least two.",
+    "Supply authored restriction or transition maps on every overlap.",
+    "Test the cocycle and invariant-pairing conditions without filling the obstruction by definition."
+  ]
+}

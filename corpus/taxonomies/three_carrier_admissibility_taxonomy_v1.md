@@ -271,6 +271,15 @@ Neither node is an absent pole or puncture. The next admissible object would be
 a three-sector cover with declared local sections and overlap maps, followed by
 a globalization test. See the [topology audit](../programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md).
 
+The natural cover is now resolved. Its branches have sizes 15, 1 and 7 before
+the junction is restored, and covers of sizes 16, 2 and 8 afterward. All
+pairwise and triple overlaps are the same singleton. The **Kenotic Filled-Nerve
+Cover** is therefore a full two-simplex with constant-coefficient
+\(H^1=0\); scalar sections that agree at the junction glue uniquely. This
+closes the adjacency-only absent-pole route. A richer test requires distinct or
+higher-dimensional overlaps with authored restriction maps. See the
+[cover-gluing no-go](../programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md).
+
 ## III. Sourcery
 
 Sourcery accepts caller-supplied graphs, so it has no single fixed node count.

@@ -191,6 +191,15 @@ The [kenotic-pole topology audit](../../../corpus/programmes/frontier/wave-7/fro
 therefore ends with a three-sector globalization test rather than a metaphysical
 identification.
 
+That test has now been run in its minimal form. Adding the junction back to the
+three branches produces covers of sizes 16, 2 and 8, but every pairwise overlap
+and the triple overlap are the same singleton node. The nerve is a filled
+triangle. Its constant-coefficient Čech complex has
+\(\operatorname{rank}d_0=2\), \(\operatorname{rank}d_1=1\) and \(H^1=0\).
+Matching scalar sections therefore glue uniquely. The [cover-gluing no-go](../../../corpus/programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md)
+closes the naïve absent-pole construction: a live obstruction needs distinct
+overlap carriers or authored higher-dimensional restriction maps.
+
 ## The relation to admissibility
 
 This construction clarifies the corpus's Jordan–Lie reading without turning
@@ -295,7 +304,8 @@ These examples are detailed in the
 | Is the Spin–Temple compressed channel a full two-by-two matrix algebra? | **Closed for this capture.** It is \(M_2(\mathbb Q)\), with commutator algebra \(\mathfrak{sl}_2(\mathbb Q)\). |
 | Is that two-claim subsystem autonomous? | **Closed negatively.** The kenosis predecessor prevents descent to an isolated two-node system. |
 | What exact role does that kenosis predecessor play? | **Closed for the pinned one-complex.** It is a cycle-bearing articulation with an acyclic funnel orientation: three undirected cycle classes depend on it, but no directed return passes through it. |
-| Is the kenosis junction a puncture or globalization obstruction? | **Open and unsupported at present.** A declared cell complex or three-sector cover with local sections and overlap maps is required. |
+| Does the natural three-branch cover produce a globalization obstruction? | **Closed negatively for constant/scalar coefficients.** Its nerve is a filled triangle and \(H^1=0\); matching local values glue uniquely. |
+| Can richer authored local sections still obstruct globalization? | **Open with an exact gate.** Distinct or higher-dimensional overlap carriers and authored restriction maps must be supplied before a cocycle or surviving invariant can be tested. |
 | What survives after predecessor closure and removal of one-way history? | **Closed for the declared aggregation.** The semisimple quotient is \(\mathbb Q\oplus M_2(\mathbb Q)\), with a 30-dimensional radical. |
 | Does the current relationship graph close to \(C_2\) or \(Spin(2,3)\)? | **Closed negatively for the direct current-graph route.** There is no second root channel. |
 | Is this the unique algebra of Claimipedia? | **Open, and probably the wrong question without a declared representation.** Different weights, edge identities, evidence operators or provenance operators can produce different algebras. |
