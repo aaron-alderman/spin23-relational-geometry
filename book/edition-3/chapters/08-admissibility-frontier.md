@@ -786,6 +786,23 @@ The implication is constructive. Flavor searches remain real detectors and valua
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-term-is-not-a-detector-row-claim-3.md)
 
+<a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
+## Hot off the press — the hydrodynamic cone has poles
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** The hydrodynamic rank witness now has a full effective response rather than three positive shapes. The tensor term is local at first derivative order, the shear channel has a diffusive pole, and the sound channel has two attenuated propagating poles. At the declared point every pole is retarded, every residue is nonzero and the assembled two-port spectral matrix is positive definite.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-1.md)
+
+A common-temperature KMS multiplier produces the noise matrix without changing rank. An invertible port change acts by congruence and preserves rank, while a real analytic contact changes the dispersive part without changing the spectral matrix. The extra direction is therefore not created by port names or an ordinary real contact term, and Ward/KMS structure does not force the effective cone onto one ray.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-2.md)
+
+The remaining word is effective. Port congruence is not a hydrodynamic frame transformation: the latter must be performed inside one source-generating functional and leave source derivatives, poles and residues invariant. Microscopic or measured matching is also absent. The look-here calculation is now precise—derive that functional, change frame explicitly and ask which response directions survive before making any symmetry or new-physics claim.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

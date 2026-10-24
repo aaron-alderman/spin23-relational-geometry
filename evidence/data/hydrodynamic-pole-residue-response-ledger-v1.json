@@ -1,0 +1,213 @@
+{
+  "protocol": "hydrodynamic-pole-residue-response-ledger/1",
+  "date": "2026-10-25",
+  "target": "OT-016",
+  "convention": "Fourier convention chosen so the positive-frequency dissipative spectral matrix is Im G_R; signs must be translated if another convention uses -Im G_R.",
+  "model": {
+    "constants": {
+      "w0": 1.7,
+      "eta0": 0.23,
+      "d0": 0.31,
+      "g0": 0.27,
+      "cs2": 0.3333333333333333
+    },
+    "point": {
+      "omega": 0.8,
+      "k": 0.65,
+      "T": 1.4
+    },
+    "medium": {
+      "w": 6.530719999999999,
+      "eta": 0.6311199999999999,
+      "D": 0.22142857142857145,
+      "Gamma": 0.1928571428571429,
+      "cs": 0.5773502691896257
+    },
+    "channels": {
+      "tensor": "G_T(z)=i eta z (local first-order hydrodynamic term; no pole)",
+      "shear": "G_V(z)=w D k^2/(D k^2-i z)",
+      "sound": "G_S(z)=w k^2/(c_s^2 k^2-z^2-i Gamma k^2 z)"
+    },
+    "grams": {
+      "tensor": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "shear": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "sound": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "responseAtPoint": {
+    "channelValues": {
+      "tensor": {
+        "re": 0,
+        "im": 0.5048959999999999
+      },
+      "shear": {
+        "re": 0.08810547887322802,
+        "im": 0.7534119972362312
+      },
+      "sound": {
+        "re": -5.434985619777657,
+        "im": 0.7097497557752097
+      }
+    },
+    "spectralMatrix": [
+      [
+        1.2146457557752095,
+        0.7097497557752097
+      ],
+      [
+        0.7097497557752097,
+        1.463161753011441
+      ]
+    ],
+    "determinant": 1.2734784974849922,
+    "rank": 2,
+    "positiveDefinite": true
+  },
+  "poleLedger": {
+    "shear": {
+      "pole": {
+        "re": 0,
+        "im": -0.09355357142857144
+      },
+      "residue": {
+        "re": 0,
+        "im": 0.61097218
+      }
+    },
+    "sound": [
+      {
+        "pole": {
+          "re": 0.3730596446041643,
+          "im": -0.04074107142857144
+        },
+        "residue": {
+          "re": -3.6981073132792015,
+          "im": 0
+        }
+      },
+      {
+        "pole": {
+          "re": -0.3730596446041643,
+          "im": -0.04074107142857144
+        },
+        "residue": {
+          "re": 3.6981073132792015,
+          "im": 0
+        }
+      }
+    ],
+    "allPolesRetarded": true,
+    "underdampedSound": true
+  },
+  "kms": {
+    "beta": 0.7142857142857143,
+    "multiplier": 3.594723789616739,
+    "symmetrizedNoise": [
+      [
+        4.366315994242149,
+        2.551354331759817
+      ],
+      [
+        2.551354331759817,
+        5.259662361607559
+      ]
+    ],
+    "rankPreserved": true,
+    "determinantScaleCheck": true
+  },
+  "invariance": {
+    "portBasis": {
+      "S": [
+        [
+          1,
+          0.3
+        ],
+        [
+          -0.2,
+          1.1
+        ]
+      ],
+      "determinantS": 1.1600000000000001,
+      "transformedSpectralMatrix": [
+        [
+          1.7721801670113648,
+          0.9780539733449518
+        ],
+        [
+          0.9780539733449518,
+          1.5067216588337597
+        ]
+      ],
+      "rankPreserved": true,
+      "determinantCongruenceCheck": true
+    },
+    "realContact": {
+      "contact": [
+        [
+          0.7,
+          -0.2
+        ],
+        [
+          -0.2,
+          0.5
+        ]
+      ],
+      "spectralMatrixAfterContact": [
+        [
+          1.2146457557752095,
+          0.7097497557752097
+        ],
+        [
+          0.7097497557752097,
+          1.463161753011441
+        ]
+      ],
+      "unchanged": true,
+      "reason": "A real analytic contact term changes the dispersive real part but has no positive-frequency spectral residue in this prototype."
+    },
+    "hydrodynamicFrame": {
+      "certified": false,
+      "missing": "a source-generating functional showing invariance under an explicit hydrodynamic field redefinition, rather than only port-basis congruence"
+    }
+  },
+  "decision": {
+    "frequencyWavevectorResponseConstructed": true,
+    "poleAndResidueLedgerConstructed": true,
+    "kmsNoiseConstructed": true,
+    "positivityAtWitness": true,
+    "portBasisAndRealContactRankStable": true,
+    "hydrodynamicFrameIndependenceEstablished": false,
+    "microscopicCarrierEstablished": false,
+    "fullOt016Closure": false,
+    "generatedSpin23DynamicsEstablished": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The effective prototype now has poles, residues, KMS noise and two nuisance invariances. OT-016 remains open only at the physical-frame and microscopic matching gates; local response rank is not forced onto a ray by Ward/KMS structure alone."
+}
