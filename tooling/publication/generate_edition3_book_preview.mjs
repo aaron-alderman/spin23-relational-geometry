@@ -277,6 +277,7 @@ const sectionTaxonomy = {
   "Hot off the press — the first new inequality is not new": "obstruction",
   "Hot off the press — two currents require three calculations": "external",
   "Hot off the press — the microscopic source quotient has five coordinates": "obstruction",
+  "Hot off the press — the two-current window has a resolution ceiling": "conditional",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -360,6 +361,7 @@ const sectionArchetype = {
   "Hot off the press — the first new inequality is not new": "auditor",
   "Hot off the press — two currents require three calculations": "cartographer",
   "Hot off the press — the microscopic source quotient has five coordinates": "auditor",
+  "Hot off the press — the two-current window has a resolution ceiling": "integrator",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -644,6 +646,15 @@ admissibilitySections.splice(orientedSeamIndex + 21, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 22, 0, [
+  "Hot off the press — the two-current window has a resolution ceiling",
+  [
+    "**Provisional integration note — 25 October 2026.** The five-coordinate response now has a first energy-and-resolution map. In the inherited broken-phase threshold model, the bottom-dominated region from 10 to 300 GeV retains a second generalized mode at roughly seven to eleven percent. It is not one broken port even for a detector that resolves only percent-level structure. Above the top threshold, the Yukawa-only second mode falls below one part in a thousand and an effective one-port description reopens.",
+    "The weak-anomaly cut sets the sharper ceiling. Its leading vacuum normalization is fixed by the perturbative topological-density spectral function. On the exact five-coordinate source metric and with the declared illustrative weak-coupling inputs, the second mode is 0.1217 percent of the first. The high-energy broken response is therefore rank one at one-percent resolution but rank two at one-per-mille resolution. Top dominance is not a tolerance-free conservation law.",
+    "The result does not yet certify a physical energy window. Running couplings, broken-phase electroweak cuts, hadronic matching, interference and detector covariance must preserve the gap across preregistered and held-out energies. If they do, protected B minus L plus one top-dominated port becomes a justified reduced model and a piece of theoretical engineering. If they do not, the two-current reduction closes while the five-coordinate response remains the honest object.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -891,6 +902,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the first new inequality is not new": ["corpus/programmes/admissibility/admissibility_66_contextual_triangle_bound_reduces_to_standard_positivity.md", "corpus/programmes/admissibility/admissibility_08_finite_contextual_casimir_experiment.md", "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md"],
   "Hot off the press — two currents require three calculations": ["corpus/programmes/admissibility/admissibility_67_two_current_source_and_scheme_census.md", "corpus/programmes/closure/programme_closure_03_a_controlled_standard_model_external_source_action_exists_but_does_not_fix_the_frame.md", "corpus/programmes/closure/programme_closure_04_vacuum_locality_closes_the_two_current_spectral_measure_on_h2r_but_not_the_thermal_response.md"],
   "Hot off the press — the microscopic source quotient has five coordinates": ["corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md", "corpus/programmes/lane-expansion/programme_lane_expansion_33_the_action_derived_two_current_block_removes_bl_shear_but_not_the_incidence_normalisation_fork.md", "corpus/programmes/lane-expansion/programme_lane_expansion_35_the_gauge_typed_source_quotient_has_one_anomaly_coordinate_and_no_incidence_eigenray.md"],
+  "Hot off the press — the two-current window has a resolution ceiling": ["corpus/programmes/admissibility/admissibility_69_threshold_spectrum_and_resolution_ceiling.md", "corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md", "corpus/programmes/lane-expansion/programme_lane_expansion_20_the_broken_current_anchor_is_a_threshold_staircase_not_a_universal_axis.md"],
 };
 
 const evidenceReading = key => ({

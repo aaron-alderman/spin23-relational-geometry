@@ -8,6 +8,8 @@
 **Generator:** [quotient calculation](../../../scripts/run-five-coordinate-source-quotient.mjs)  
 **Verifier:** [quotient certificate](../../../verification/admissibility/verify_five_coordinate_source_quotient.mjs)
 
+**Continuation:** [AZ-069](admissibility_69_threshold_spectrum_and_resolution_ceiling.md) computes the leading threshold spectrum and weak-anomaly normalization. Its resolution-dependent result supersedes this packet's unqualified next-calculation wording.
+
 ## Result
 
 The corpus already contained more of WP-A than the frontier register recognized. Once the completed Standard-Model phase currents, Higgs current, hypercharge equation-of-motion representative and four Yukawa-breaking channels are typed correctly, the contact-insensitive physical source quotient is exactly five-dimensional:

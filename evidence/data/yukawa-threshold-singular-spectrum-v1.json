@@ -1,0 +1,445 @@
+{
+  "protocol": "yukawa-threshold-singular-spectrum/1",
+  "date": "2026-10-25",
+  "target": "OT-047",
+  "parent": "AZ-068",
+  "coordinateOrder": [
+    "v_u",
+    "v_d",
+    "v_e",
+    "v_nu"
+  ],
+  "quotientMetric": [
+    [
+      1.5,
+      -0.8333333333333334,
+      -1,
+      1
+    ],
+    [
+      -0.8333333333333334,
+      1.5,
+      1,
+      -1
+    ],
+    [
+      -1,
+      1,
+      2.5,
+      -0.5
+    ],
+    [
+      1,
+      -1,
+      -0.5,
+      2.5
+    ]
+  ],
+  "thresholdModel": {
+    "formula": "w_f(E)=n_f m_f^2 sqrt(1-4m_f^2/E^2) Theta(E-2m_f)",
+    "status": "leading broken-phase free-fermion diagnostic",
+    "massesAndMultiplicities": [
+      {
+        "name": "top",
+        "coordinate": "v_u",
+        "massGeV": 172.5,
+        "multiplicity": 3
+      },
+      {
+        "name": "bottom",
+        "coordinate": "v_d",
+        "massGeV": 4.18,
+        "multiplicity": 3
+      },
+      {
+        "name": "tau",
+        "coordinate": "v_e",
+        "massGeV": 1.77686,
+        "multiplicity": 1
+      },
+      {
+        "name": "Dirac-neutrino",
+        "coordinate": "v_nu",
+        "massGeV": 5e-11,
+        "multiplicity": 1
+      }
+    ],
+    "limitations": [
+      "The bottom and low-energy quark regions need hadronic spectral data rather than free-quark thresholds.",
+      "Running masses, radiative mixing, detector response and uncertainty bands are not included.",
+      "The independent weak-anomaly coordinate a_2 is not assigned a weight because its matched normalization and cuts are a separate calculation."
+    ]
+  },
+  "generalizedProblem": "The nonzero eigenvalues of V^T W V x = r D x equal the eigenvalues of sqrt(W) M sqrt(W).",
+  "relativeTolerances": [
+    0.01,
+    0.001,
+    0.0001,
+    0.000001,
+    1e-12
+  ],
+  "spectra": [
+    {
+      "rootSGeV": 4,
+      "openChannels": [
+        "tau",
+        "Dirac-neutrino"
+      ],
+      "weights": {
+        "top": 0,
+        "bottom": 0,
+        "tau": 1.4492075358425796,
+        "Dirac-neutrino": 2.5000000000000002e-21
+      },
+      "exactYukawaRank": 2,
+      "generalizedEigenvaluesDescending": [
+        3.6230188396064484,
+        6.000000000016923e-21,
+        0,
+        0
+      ],
+      "relativeSpectrum": [
+        1,
+        1.656077504876755e-21,
+        0,
+        0
+      ],
+      "effectiveRanks": {
+        "0.01": 1,
+        "0.001": 1,
+        "0.0001": 1,
+        "0.000001": 1,
+        "1e-12": 1
+      },
+      "leadingChannelVector": {
+        "v_u": 0,
+        "v_d": 0,
+        "v_e": -1,
+        "v_nu": 8.306749902585378e-12
+      }
+    },
+    {
+      "rootSGeV": 10,
+      "openChannels": [
+        "bottom",
+        "tau",
+        "Dirac-neutrino"
+      ],
+      "weights": {
+        "top": 0,
+        "bottom": 28.76286088247912,
+        "tau": 2.9511430341955203,
+        "Dirac-neutrino": 2.5000000000000002e-21
+      },
+      "exactYukawaRank": 3,
+      "generalizedEigenvaluesDescending": [
+        45.37805141747418,
+        5.1440974917332944,
+        4.545454545522603e-21,
+        0
+      ],
+      "relativeSpectrum": [
+        1,
+        0.1133609163691944,
+        1.0016857056520146e-22,
+        0
+      ],
+      "effectiveRanks": {
+        "0.01": 2,
+        "0.001": 2,
+        "0.0001": 2,
+        "0.000001": 2,
+        "1e-12": 2
+      },
+      "leadingChannelVector": {
+        "v_u": 0,
+        "v_d": -0.9718439800118038,
+        "v_e": -0.23562529260420362,
+        "v_nu": 5.965955677465698e-12
+      }
+    },
+    {
+      "rootSGeV": 100,
+      "openChannels": [
+        "bottom",
+        "tau",
+        "Dirac-neutrino"
+      ],
+      "weights": {
+        "top": 0,
+        "bottom": 52.23370797620104,
+        "tau": 3.155237207671695,
+        "Dirac-neutrino": 2.5000000000000002e-21
+      },
+      "exactYukawaRank": 3,
+      "generalizedEigenvaluesDescending": [
+        80.61665568138278,
+        5.621999302098017,
+        4.5454545454906866e-21,
+        0
+      ],
+      "relativeSpectrum": [
+        1,
+        0.0697374414081076,
+        5.638356623791814e-23,
+        0
+      ],
+      "effectiveRanks": {
+        "0.01": 2,
+        "0.001": 2,
+        "0.0001": 2,
+        "0.000001": 2,
+        "1e-12": 2
+      },
+      "leadingChannelVector": {
+        "v_u": 0,
+        "v_d": -0.9847757431086769,
+        "v_e": -0.17382961711041484,
+        "v_nu": 4.510009202972269e-12
+      }
+    },
+    {
+      "rootSGeV": 170,
+      "openChannels": [
+        "bottom",
+        "tau",
+        "Dirac-neutrino"
+      ],
+      "weights": {
+        "top": 0,
+        "bottom": 52.35378071527991,
+        "tau": 3.1565415495853775,
+        "Dirac-neutrino": 2.5000000000000002e-21
+      },
+      "exactYukawaRank": 3,
+      "generalizedEigenvaluesDescending": [
+        80.79738191356395,
+        5.624643033319377,
+        4.5454545459057545e-21,
+        0
+      ],
+      "relativeSpectrum": [
+        1,
+        0.06961417437184476,
+        5.625744842535153e-23,
+        0
+      ],
+      "effectiveRanks": {
+        "0.01": 2,
+        "0.001": 2,
+        "0.0001": 2,
+        "0.000001": 2,
+        "1e-12": 2
+      },
+      "leadingChannelVector": {
+        "v_u": 0,
+        "v_d": -0.9848079191220893,
+        "v_e": -0.17364723560834616,
+        "v_nu": 4.505124221663917e-12
+      }
+    },
+    {
+      "rootSGeV": 300,
+      "openChannels": [
+        "bottom",
+        "tau",
+        "Dirac-neutrino"
+      ],
+      "weights": {
+        "top": 0,
+        "bottom": 52.39684372986076,
+        "tau": 3.1570099382622487,
+        "Dirac-neutrino": 2.5000000000000002e-21
+      },
+      "exactYukawaRank": 3,
+      "generalizedEigenvaluesDescending": [
+        80.86219852790343,
+        5.625591912543336,
+        4.5454545459244165e-21,
+        0
+      ],
+      "relativeSpectrum": [
+        1,
+        0.06957010834428513,
+        5.621235421092216e-23,
+        0
+      ],
+      "effectiveRanks": {
+        "0.01": 2,
+        "0.001": 2,
+        "0.0001": 2,
+        "0.000001": 2,
+        "1e-12": 2
+      },
+      "leadingChannelVector": {
+        "v_u": 0,
+        "v_d": -0.9848194162312426,
+        "v_e": -0.17358201927029956,
+        "v_nu": 4.503347864824517e-12
+      }
+    },
+    {
+      "rootSGeV": 400,
+      "openChannels": [
+        "top",
+        "bottom",
+        "tau",
+        "Dirac-neutrino"
+      ],
+      "weights": {
+        "top": 45175.08135340617,
+        "bottom": 52.40575057099116,
+        "tau": 3.157106855760063,
+        "Dirac-neutrino": 2.5000000000000002e-21
+      },
+      "exactYukawaRank": 4,
+      "generalizedEigenvaluesDescending": [
+        67789.00954230486,
+        54.989863771594486,
+        5.124017028698509,
+        3.913043478263596e-21
+      ],
+      "relativeSpectrum": [
+        1,
+        0.0008111914326949584,
+        0.00007558772525656656,
+        5.77238626833985e-26
+      ],
+      "effectiveRanks": {
+        "0.01": 1,
+        "0.001": 1,
+        "0.0001": 2,
+        "0.000001": 3,
+        "1e-12": 3
+      },
+      "leadingChannelVector": {
+        "v_u": 0.9998051974329745,
+        "v_d": -0.018933983415989078,
+        "v_e": -0.005574177788152602,
+        "v_nu": 1.568432113271346e-13
+      }
+    },
+    {
+      "rootSGeV": 1000,
+      "openChannels": [
+        "top",
+        "bottom",
+        "tau",
+        "Dirac-neutrino"
+      ],
+      "weights": {
+        "top": 83787.88842284067,
+        "bottom": 52.41536825942397,
+        "tau": 3.1572115233160774,
+        "Dirac-neutrino": 2.5000000000000002e-21
+      },
+      "exactYukawaRank": 4,
+      "generalizedEigenvaluesDescending": [
+        125708.21506091887,
+        55.009430829315065,
+        5.124223710214875,
+        3.9130434783232594e-21
+      ],
+      "relativeSpectrum": [
+        1,
+        0.0004375961491669992,
+        0.0000407628388306337,
+        3.112798536218956e-26
+      ],
+      "effectiveRanks": {
+        "0.01": 1,
+        "0.001": 1,
+        "0.0001": 2,
+        "0.000001": 3,
+        "1e-12": 3
+      },
+      "leadingChannelVector": {
+        "v_u": 0.9998950145798972,
+        "v_d": -0.013899982238247982,
+        "v_e": -0.004092714507983462,
+        "v_nu": 1.1516162918849332e-13
+      }
+    }
+  ],
+  "highEnergyFiveCoordinateBenchmark": {
+    "inputs": {
+      "regime": "illustrative weakly coupled unbroken phase",
+      "yukawaWeights": {
+        "v_u": 3,
+        "v_d": 0.0018,
+        "v_e": 0.0001,
+        "v_nu": 1e-24
+      },
+      "weakGaugeCoupling": 0.65,
+      "primaryNormalization": "chi=(g_2^2/(64 pi^2)) epsilon W W; rho_chi/s^2=d_A c_chi^2 g_2^4/pi at T=0 with d_A=3"
+    },
+    "anomalyWeightInCommonYukawaUnits": 0.0025434090755936806,
+    "coordinateMetric": [
+      [
+        1.5,
+        -0.8333333333333334,
+        -1,
+        1,
+        0.5
+      ],
+      [
+        -0.8333333333333334,
+        1.5,
+        1,
+        -1,
+        0.5
+      ],
+      [
+        -1,
+        1,
+        2.5,
+        -0.5,
+        0.5
+      ],
+      [
+        1,
+        -1,
+        -0.5,
+        2.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        2
+      ]
+    ],
+    "generalizedEigenvaluesDescending": [
+      4.501324237928614,
+      0.005478347404441777,
+      0.0010910107451455127,
+      0.0001432220729854019,
+      1.83307797848299e-24
+    ],
+    "relativeSpectrum": [
+      1,
+      0.00121705238611355,
+      0.00024237550717909757,
+      0.00003181776415451218,
+      4.0723082399558986e-25
+    ],
+    "effectiveRanks": {
+      "0.01": 1,
+      "0.001": 2,
+      "0.0001": 3,
+      "0.000001": 4,
+      "1e-12": 4
+    },
+    "interpretation": "The weak-anomaly atom is loop suppressed but comparable to the illustrative bottom weight. The top mode is unique at percent resolution but a second mode is resolved at 0.1% in this benchmark; this is an unbroken-phase normalization check, not a threshold-matched Standard-Model prediction.",
+    "primaryReference": "https://arxiv.org/abs/2209.13804, eqs. (2.1) and (A.42 footnote continuum result)"
+  },
+  "conclusions": {
+    "exactRankOneWindow": "absent above the tau threshold on the nonzero-Dirac-neutrino branch; every newly open exclusive cut adds a positive direction",
+    "effectiveRankOneWindows": "present in this leading Yukawa-only diagnostic at 4 GeV and again above the top threshold for percent-to-per-mille tolerances",
+    "bottomWindow": "not rank one at percent resolution in the sampled 10-300 GeV range because the tau direction remains visible",
+    "anomalyFirewall": "The leading unbroken-phase weak-anomaly normalization can be included: it leaves the illustrative top mode isolated at 1% but not 0.1%; no broken-phase five-coordinate verdict is permitted until electroweak threshold matching is supplied.",
+    "operationalMeaning": "A rank-two full-current description can only mean protected B-L plus one experimentally unresolved broken mode over a declared finite window; it is never an exact microscopic closure here."
+  }
+}

@@ -483,6 +483,25 @@ The rank-two Jordan cone remains exact for any pair of ports that an experiment 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates-claim-3.md)
 
+<a id="hot-off-the-press-the-two-current-window-has-a-resolution-ceiling"></a>
+## Hot off the press — the two-current window has a resolution ceiling
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** The five-coordinate response now has a first energy-and-resolution map. In the inherited broken-phase threshold model, the bottom-dominated region from 10 to 300 GeV retains a second generalized mode at roughly seven to eleven percent. It is not one broken port even for a detector that resolves only percent-level structure. Above the top threshold, the Yukawa-only second mode falls below one part in a thousand and an effective one-port description reopens.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-current-window-has-a-resolution-ceiling-claim-1.md)
+
+The weak-anomaly cut sets the sharper ceiling. Its leading vacuum normalization is fixed by the perturbative topological-density spectral function. On the exact five-coordinate source metric and with the declared illustrative weak-coupling inputs, the second mode is 0.1217 percent of the first. The high-energy broken response is therefore rank one at one-percent resolution but rank two at one-per-mille resolution. Top dominance is not a tolerance-free conservation law.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-current-window-has-a-resolution-ceiling-claim-2.md)
+
+The result does not yet certify a physical energy window. Running couplings, broken-phase electroweak cuts, hadronic matching, interference and detector covariance must preserve the gap across preregistered and held-out energies. If they do, protected B minus L plus one top-dominated port becomes a justified reduced model and a piece of theoretical engineering. If they do not, the two-current reduction closes while the five-coordinate response remains the honest object.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-current-window-has-a-resolution-ceiling-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
