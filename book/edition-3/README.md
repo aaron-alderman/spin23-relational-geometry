@@ -21,7 +21,7 @@ The next route to new physics may begin not with higher energy but with greater 
 7. [The Standard-Model seam](chapters/05-standard-model-seam.md) — **[↗ Externally open](reading-key/status-external.md)** · **[⌕ Auditor](reading-key/move-auditor.md)** · Mediator completion and the third edge
 8. [Proton safety, Pati–Salam and triality](chapters/06-proton-safety.md) — **[◇ Conditional](reading-key/status-conditional.md)** · **[⚒ Builder](reading-key/move-builder.md)** · Selection is the physics
 9. [The exceptional horizon](chapters/07-exceptional-horizon.md) — **[◎ Interpretive map](reading-key/status-interpretive.md)** · **[⌖ Cartographer](reading-key/move-cartographer.md)** · Jordan, Leech and Monster without overclaim
-10. [Result and reversal ledger](chapters/08-result-ledger.md) — **[▦ Ledger / governance](reading-key/status-governance.md)** · **[▤ Steward](reading-key/move-steward.md)** · Twenty-six retained findings
+10. [Result and reversal ledger](chapters/08-result-ledger.md) — **[▦ Ledger / governance](reading-key/status-governance.md)** · **[▤ Steward](reading-key/move-steward.md)** · Twenty-seven retained findings
 11. [Research frontier](chapters/09-research-frontier.md) — **[↗ Externally open](reading-key/status-external.md)** · **[✦ Scout](reading-key/move-scout.md)** · Legacy action gates, the graph lane and the current torsion-parent boundary
 12. [Provenance and reading map](chapters/10-provenance-and-reading-map.md) — **[▦ Ledger / governance](reading-key/status-governance.md)** · **[▤ Steward](reading-key/move-steward.md)** · How to audit the book
 13. [Concept atlas](chapters/11-concept-atlas.md) — **[◎ Interpretive map](reading-key/status-interpretive.md)** · **[⌖ Cartographer](reading-key/move-cartographer.md)** · The programme as a navigable typed graph
@@ -38,4 +38,4 @@ The next route to new physics may begin not with higher energy but with greater 
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `dcefd1e0395ec1e02c136834a0d39255ef05ad533e381591ca7baa1058a545b9`
+Citation-set digest: `2d4c5f63180ec7779b2c567c23469440a3ec6c371a2f8d371318b9805e7370a1`

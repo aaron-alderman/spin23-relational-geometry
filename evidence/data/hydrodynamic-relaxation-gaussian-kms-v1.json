@@ -3,6 +3,10 @@
   "date": "2026-10-25",
   "target": "OT-016",
   "parent": "AZ-103",
+  "parentEvidence": {
+    "path": "evidence/data/hydrodynamic-causal-relaxation-wedge-v1.json",
+    "sha256": "764d28d96a10b81676be09114eeb52fb9d72cf31ed4a884e44dec59a3e0b78ee"
+  },
   "primaryLiterature": [
     {
       "title": "Schwinger-Keldysh effective field theory for stable and causal relativistic hydrodynamics",
@@ -27,7 +31,19 @@
     ],
     "gaussianAction": "S=a_dagger(partial_t-A)r+(i/2)a_dagger Q a",
     "equilibriumCondition": "A C+C A_dagger+Q=0",
-    "interpretation": "classical Gaussian KMS/fluctuation-dissipation condition for the Markovian enlarged state"
+    "timeReversalParity": {
+      "shear": [
+        -1,
+        1
+      ],
+      "sound": [
+        1,
+        -1,
+        1
+      ]
+    },
+    "onsagerCasimirCondition": "A C=E C A_dagger E",
+    "interpretation": "classical stationary Gaussian fluctuation-dissipation compatibility with an explicit Onsager-Casimir parity audit"
   },
   "parameters": {
     "D": 0.22142857142857145,
@@ -106,6 +122,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 0,
       "soundGenerator": [
         [
           {
@@ -238,7 +255,8 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 3.469446951953614e-18
     },
     {
       "k": 0.05,
@@ -309,6 +327,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 6.938893903907228e-18,
       "soundGenerator": [
         [
           {
@@ -441,7 +460,8 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 3.469446951953614e-18
     },
     {
       "k": 0.1,
@@ -512,6 +532,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 1.3877787807814457e-17,
       "soundGenerator": [
         [
           {
@@ -644,7 +665,8 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 6.938893903907228e-18
     },
     {
       "k": 0.2,
@@ -715,6 +737,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 2.7755575615628914e-17,
       "soundGenerator": [
         [
           {
@@ -847,7 +870,8 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 1.3877787807814457e-17
     },
     {
       "k": 0.5,
@@ -918,6 +942,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 0,
       "soundGenerator": [
         [
           {
@@ -1050,7 +1075,8 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 0
     },
     {
       "k": 1,
@@ -1121,6 +1147,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 0,
       "soundGenerator": [
         [
           {
@@ -1253,7 +1280,8 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 0
     },
     {
       "k": 2,
@@ -1324,6 +1352,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 0,
       "soundGenerator": [
         [
           {
@@ -1456,7 +1485,8 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 0
     },
     {
       "k": 5,
@@ -1527,6 +1557,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 0,
       "soundGenerator": [
         [
           {
@@ -1659,7 +1690,8 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 0
     },
     {
       "k": 10,
@@ -1730,6 +1762,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 0,
       "soundGenerator": [
         [
           {
@@ -1862,7 +1895,8 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 0
     },
     {
       "k": 20,
@@ -1933,6 +1967,7 @@
         ]
       ],
       "shearLyapunovResidual": 8.881784197001252e-16,
+      "shearOnsagerCasimirResidual": 0,
       "soundGenerator": [
         [
           {
@@ -2065,20 +2100,24 @@
           }
         ]
       ],
-      "soundLyapunovResidual": 4.440892098500626e-16
+      "soundLyapunovResidual": 4.440892098500626e-16,
+      "soundOnsagerCasimirResidual": 0
     }
   ],
   "audit": {
     "samplesChecked": 10,
     "maximumShearLyapunovResidual": 8.881784197001252e-16,
     "maximumSoundLyapunovResidual": 4.440892098500626e-16,
+    "maximumShearOnsagerCasimirResidual": 2.7755575615628914e-17,
+    "maximumSoundOnsagerCasimirResidual": 1.3877787807814457e-17,
     "minimumStationaryCovarianceEigenvalue": 0.5333333333333333,
     "minimumNoiseEigenvalue": 0,
     "positiveShearNoiseEigenvalue": 5.780645161290322,
     "positiveSoundNoiseEigenvalue": 2.9497942386831277,
     "stationaryCovariancePositive": true,
     "noisePositiveSemidefinite": true,
-    "gaussianClassicalKmsPassed": true
+    "onsagerCasimirPassed": true,
+    "stationaryGaussianFdtPassed": true
   },
   "decision": {
     "auxiliaryRelaxationNoiseConstructed": true,
@@ -2091,5 +2130,5 @@
     "fullOt016Closure": false,
     "newPhysicsEvidence": false
   },
-  "implication": "The causal relaxation poles of AZ-103 can be thermalized without negative noise: noise acts only on the relaxing flux and stress, while conservation transports it into the hydrodynamic variables. This closes the classical Gaussian auxiliary-mode KMS gate. Quantum frequency dependence, nonlinear dynamical KMS, improvement/contact classification and physical relaxation data remain open."
+  "implication": "The causal relaxation poles of AZ-103 admit positive stationary Gaussian fluctuations: noise acts only on the relaxing flux and stress, conservation transports it into the hydrodynamic variables, and the declared time-reversal parities satisfy Onsager-Casimir reciprocity. This establishes classical Gaussian FDT compatibility, not exact quantum-frequency or nonlinear dynamical KMS. Improvement/contact classification and physical relaxation data remain open."
 }

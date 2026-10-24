@@ -172,6 +172,23 @@ The next work is concrete: build the directed network, measure complex covarianc
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-relation-emulator-is-ready-to-build-claim-3.md)
 
+<a id="hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone"></a>
+## Hot off the press — the graph has a Jordan face, but does not choose its cone
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** The Claimipedia relation algebra contains more Jordan structure than the earlier gate language allowed. Removing its directed-path radical leaves a reversible two-state matrix block. Transpose exchanges the two reverse arrows, and its fixed three-coordinate space is exactly the rank-two Jordan algebra of symmetric two-by-two matrices.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-1.md)
+
+The gain is exact and the loss is visible. Symmetrized relation composition supplies the Jordan product, while determinant and matrix rank come from the same block. But thirty dimensions of one-way history have been discarded, the two relation labels are folded into one off-diagonal coordinate, and positive-semidefinite order is supplied by the real matrix representation rather than forced by the authored graph.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-2.md)
+
+So the next question is no longer whether any Jordan face can be found. It is why this positive face should be selected and what it predicts. A source-native order must be declared before quotienting, survive the radical and recover one held-out composition or observable. Until then the construction is a faithful mathematical view of the relation system, not evidence that nature uses it.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 
@@ -940,11 +957,11 @@ The first nonlinear audit identifies what that next claim must carry. A unit-vol
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-7.md)
 
-Causality supplies a further boundary. The inherited diffusion and wave-damping laws are long-wavelength expansions and have no global finite-speed interpretation. Adding one relaxing shear flux and one relaxing viscous stress produces a stable subluminal parameter wedge and recovers the original poles at low momentum. This shows that the response can live inside a causal completion; it does not tell us which completion nature uses. The relaxation poles and their thermal noise must still be derived from or measured on the same carrier.
+Causality supplies a further boundary. The inherited diffusion and wave-damping laws are long-wavelength expansions and have no global finite-speed interpretation. Adding one relaxing shear flux and one relaxing viscous stress produces a stable subluminal parameter wedge and recovers the original poles at low momentum. This shows that the response can live inside a causal completion; it does not tell us which completion nature uses. The physical relaxation spectrum, noise normalization and microscopic carrier must still be derived or measured.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-8.md)
 
-Those relaxation variables can be thermalized consistently at classical Gaussian order. Positive noise acts only on the relaxing flux and stress, while conservation carries their fluctuations into the observed hydrodynamic variables. The resulting stationary covariance is positive and satisfies fluctuation–dissipation throughout the causal momentum scan. What remains is no longer generic auxiliary noise: it is exact quantum-frequency and nonlinear dynamical KMS, the stress Ward and contact structure, and source-native relaxation data.
+Conditionally, those relaxation variables admit positive stationary Gaussian fluctuations. Noise acts only on the relaxing flux and stress, while conservation carries their fluctuations into the observed hydrodynamic variables. The resulting covariance is positive, satisfies fluctuation–dissipation and passes an explicit Onsager–Casimir parity audit throughout the causal momentum scan. The evidence ladder is now effective infrared poles → causal auxiliary completion → positive stationary Gaussian FDT and reciprocity. Exact quantum-frequency and nonlinear dynamical KMS, the stress Ward and contact structure, physical noise normalization and source-native relaxation data remain open.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-9.md)
 

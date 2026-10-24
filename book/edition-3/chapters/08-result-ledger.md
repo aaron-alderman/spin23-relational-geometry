@@ -1,6 +1,6 @@
 # Result and reversal ledger
 
-_Twenty-six retained findings_
+_Twenty-seven retained findings_
 
 > **Chapter status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
 
@@ -427,6 +427,22 @@ The full relationship-path algebra contributes sl2, the reciprocal programme cor
 
 - [frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md)
 - [frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md)
+
+<a id="E3-F27"></a>
+## E3-F27 · Causal hydrodynamic relaxation admits positive stationary Gaussian fluctuations
+
+> **Ledger reading — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Detailed status:** `constructed-conditional`
+
+The AZ-103 subluminal relaxation wedge admits positive stationary covariances and positive-semidefinite auxiliary noise satisfying the Lyapunov fluctuation–dissipation identity and explicit Onsager–Casimir reciprocity across the declared momentum scan.
+
+**Boundary:** This is an effective classical Gaussian construction, not a unique physical noise model or a proof of exact quantum-frequency or nonlinear dynamical KMS. Stress Ward identities, contacts, physical normalization and microscopic matching remain open.
+
+- [admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md](../../../corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md)
+- [admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md)
 
 ## Chapter sources
 

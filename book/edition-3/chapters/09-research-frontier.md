@@ -113,6 +113,24 @@ _The terminal partition says where new information must enter._
 - [1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md](../../../corpus/claims/1400-1499/1452_the_scheme_invariant_a11_experiment_is_a_calibrated_spectral_pole_and_band_contrast_with_a_device_prediction_gate.md)
 - [1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md](../../../corpus/claims/1400-1499/1454_the_zenodo_chern_quadrature_reproduces_but_is_not_the_exact_sigma_z_lindblad_hall_response.md)
 
+<a id="HYDRO-RELAX"></a>
+## HYDRO-RELAX · Match the causal stochastic carrier
+
+> **Gate state — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Priority:** `highest`
+
+**Question:** Which microscopic theory or measurement fixes the relaxation spectrum, physical noise normalization and nonlinear couplings of the causal hydrodynamic auxiliaries?
+
+**Advance when:** One source-native stress-response functional reproduces the causal poles, positive covariance and Onsager–Casimir parities while passing exact quantum-frequency and nonlinear dynamical KMS, Ward, contact and entropy gates.
+
+**Stop or downgrade when:** Another positive Gaussian covariance or phenomenological relaxation pole does not select the carrier or close KMS.
+
+- [admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md](../../../corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md)
+- [admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md)
+
 <a id="A11"></a>
 ## A11 · Turn sensitivity into a physical test
 

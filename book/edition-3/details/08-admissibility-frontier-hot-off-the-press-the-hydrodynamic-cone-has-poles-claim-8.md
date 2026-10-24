@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> Causality supplies a further boundary. The inherited diffusion and wave-damping laws are long-wavelength expansions and have no global finite-speed interpretation. Adding one relaxing shear flux and one relaxing viscous stress produces a stable subluminal parameter wedge and recovers the original poles at low momentum. This shows that the response can live inside a causal completion; it does not tell us which completion nature uses. The relaxation poles and their thermal noise must still be derived from or measured on the same carrier.
+> Causality supplies a further boundary. The inherited diffusion and wave-damping laws are long-wavelength expansions and have no global finite-speed interpretation. Adding one relaxing shear flux and one relaxing viscous stress produces a stable subluminal parameter wedge and recovers the original poles at low momentum. This shows that the response can live inside a causal completion; it does not tell us which completion nature uses. The physical relaxation spectrum, noise normalization and microscopic carrier must still be derived or measured.
 
 ## What this commits us to
 

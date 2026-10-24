@@ -61,7 +61,7 @@ for another dimensionless redesign.
 | OT-011 | Magnon-polaron versus skew scattering | AZ-064 replaces the non-minimal disorder reading with an activation-order plus moving-crossing protocol; same-specimen source data remain required |
 | OT-012 | YIG three-mode versus four-mode fork | AZ-062 closes the reported three-mode protected-doublet route and makes one calibrated four-mode tripod the active target |
 | OT-013 | Non-Hermitian topology versus active selection | AZ-065 separates instantaneous sheet exchange from finite-rate direction-selected evolution; measured-carrier execution remains required |
-| OT-016 | Hydrodynamic multichannel cone | AZ-103 gives a stable subluminal relaxation wedge; AZ-104 equips its auxiliary modes with positive classical Gaussian KMS noise; quantum/nonlinear dynamical KMS, the stress-Ward and contact theory, and microscopic matching remain |
+| OT-016 | Hydrodynamic multichannel cone | AZ-103 gives a stable subluminal relaxation wedge; AZ-104 establishes positive stationary Gaussian FDT compatibility and Onsager--Casimir reciprocity for its auxiliary modes; exact quantum/nonlinear dynamical KMS, the stress-Ward and contact theory, physical noise normalization and microscopic matching remain |
 | OT-017 | Source-restricted logical generators | exact closures are 18/54/1,152/51,840 for the source-visible, compiled-cross, imported-local and universal alphabets; the open work is one carrier that physically supplies both mutual coupling and polarization change |
 | OT-018 | New contextual admissibility inequality | AZ-066 kills the triangle bound as full-matrix positivity; AZ-095 classifies the shared-measure theorem; AZ-096 shows storage typing flips all 54 fitted-cell verdicts and leaves measured slopes/covariance, shared dilation and detector context open |
 | OT-020 | Rare-event selector geometry | separates equilibrium breaking from kinetic freezing |
@@ -80,7 +80,7 @@ for another dimensionless redesign.
 |---|---|---|
 | OT-024 | Relation-emulator hardware dictionary | AZ-110 closes network and detector design; build the frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
 | OT-025 | Nonlocal 24-dimensional form or code functor | a source-derived replacement for the incidence form or explicit sacrificed property |
-| OT-026 | Graph-to-Jordan translation | product-, norm- and rank-preserving map |
+| OT-026 | Graph-to-Jordan translation | AZ-111 constructs an exact local $H_2(\mathbb Q)$ face; source-native positive order, radical transport and one held-out prediction remain |
 | OT-027 | Physical operator and dynamics functor | action generating operators, amplitudes and detector map |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
 | OT-038 | Source-bearing A2 commuting square | calibrate one common-carrier intertwiner from the selector primitive-form split to the rectangular ports, treat the nonzero channel as covariant symmetry breaking, and select the noncompact reverse-channel phase |
@@ -122,6 +122,16 @@ contribution is recovered independently. The atom correctly loses the coupling
 sign. This closes the scalar measure translation, not general operator
 reconstruction or graph-to-Jordan extraction. The next datum must be a
 source-native measured response or a non-imported product identity.
+
+[AZ-111](../admissibility/admissibility_111_relation_quotient_jordan_face_and_positive_order_boundary.md)
+now changes the strongest reading of that boundary. The reversible
+Spin--Temple block induces an exact special Jordan product: transpose fixes a
+three-dimensional $H_2(\mathbb Q)$ face, and determinant and matrix rank come
+with it. Reaching the face discards the 30-dimensional path radical, folds two
+relation labels into one symmetric coordinate and supplies positive order from
+the real matrix representation. OT-026 remains gated on a source-native order
+that survives the radical and predicts a withheld composition or physical
+record.
 
 [AZ-087](../admissibility/admissibility_87_source_native_measured_impedance_held_out_prediction.md)
 supplies that first measured response. A checksum-identified Zenodo EIS file is

@@ -42,4 +42,4 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-relation-emulator-is-ready-to-build) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-relation-emulator-is-ready-to-build-claim-2.md) · [Next claim →](08-admissibility-frontier-the-third-term-is-the-mediator-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-relation-emulator-is-ready-to-build) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-relation-emulator-is-ready-to-build-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-1.md)

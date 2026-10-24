@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> Those relaxation variables can be thermalized consistently at classical Gaussian order. Positive noise acts only on the relaxing flux and stress, while conservation carries their fluctuations into the observed hydrodynamic variables. The resulting stationary covariance is positive and satisfies fluctuation–dissipation throughout the causal momentum scan. What remains is no longer generic auxiliary noise: it is exact quantum-frequency and nonlinear dynamical KMS, the stress Ward and contact structure, and source-native relaxation data.
+> Conditionally, those relaxation variables admit positive stationary Gaussian fluctuations. Noise acts only on the relaxing flux and stress, while conservation carries their fluctuations into the observed hydrodynamic variables. The resulting covariance is positive, satisfies fluctuation–dissipation and passes an explicit Onsager–Casimir parity audit throughout the causal momentum scan. The evidence ladder is now effective infrared poles → causal auxiliary completion → positive stationary Gaussian FDT and reciprocity. Exact quantum-frequency and nonlinear dynamical KMS, the stress Ward and contact structure, physical noise normalization and source-native relaxation data remain open.
 
 ## What this commits us to
 
