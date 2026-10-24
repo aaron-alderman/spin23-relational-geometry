@@ -295,6 +295,10 @@ One fixed 10 kHz complex calibration record then tests the smallest latent-state
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-11.md)
 
+That second view closes the point-prediction gate. Donor-only nested validation pairs the fixed 10 kHz record with approximately 2.82 Hz for 51 of 54 targets; two alternatives choose nearby low-frequency scales. All 54 cells then pass on fifteen untouched frequencies. The median cellwise median error is 0.674%, the worst median is 3.261%, and the worst maximum is 5.503%. The practical result is a two-tone population-state protocol: one point locates the high-frequency port and one locates relaxation or diffusion. It remains a within-batch point predictor, not simultaneous uncertainty, fixture covariance, external replication, dynamics or new physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-12.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

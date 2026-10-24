@@ -292,6 +292,14 @@ The state is therefore low-dimensional enough to be strongly localized by one
 point, but it is not merely a constant and slope; the next calibration must
 touch a separated relaxation or diffusion scale.
 
+[AZ-092](../programmes/admissibility/admissibility_92_two_point_population_state_bridge.md)
+adds that second view. The donor population selects approximately 2.82 Hz for
+51 of 54 targets, and the resulting two-tone record predicts every untouched
+spectrum inside the frozen limits. The high-frequency point locates the port;
+the low-frequency point locates relaxation/diffusion state. This is a practical
+population-state bridge, while joint uncertainty, causal material meaning,
+external replication and generated dynamics remain distinct open gates.
+
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one
 nonabelian semisimple factor, \(\mathfrak{sl}_2\); the reciprocal programme core

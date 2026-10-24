@@ -163,6 +163,12 @@ error. Solving only series resistance and inductance from that point passes just
 36 of 54. One point is informative but does not span the relaxation state; the
 next record needs a second, separated frequency.
 
+[AZ-092](../admissibility/admissibility_92_two_point_population_state_bridge.md)
+closes that point-prediction gate. Nested donor-only selection pairs 10 kHz
+with 2.8219349 Hz for 51 targets, and all 54 cells pass on fifteen untouched
+frequencies. The result is a two-tone population-state bridge, not yet a joint
+predictive distribution, external replication, detector likelihood or dynamics.
+
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
 (\pi/4) phase depends on a common anomaly trivialization, while the (T_1)

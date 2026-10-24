@@ -27,7 +27,7 @@ This is a practical design result. A minimal calibration protocol should span se
 
 ## Next gate
 
-Use two predeclared complex calibration points: one at the fixed high-frequency port and one in the relaxation/diffusion regime. Select the second frequency and model complexity using donor-only nested validation, then predict the untouched rows. Compare against the one-point neighbour baseline. Only after population-wide passage should a joint predictive distribution and replicate/fixture covariance be attempted.
+AZ-092 executes this test and closes population-wide point prediction: all 54 cells pass, with donor-only selection choosing 2.8219349 Hz as the second coordinate for 51 targets. The remaining gates are a globally frozen two-tone protocol, joint whole-spectrum uncertainty and external-batch replication.
 
 ## Reproduction
 

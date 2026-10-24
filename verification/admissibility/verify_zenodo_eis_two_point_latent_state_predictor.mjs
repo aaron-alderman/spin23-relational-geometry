@@ -1,0 +1,18 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+const root = resolve(import.meta.dirname, "../..");
+const evidence = JSON.parse(await readFile(resolve(root, "evidence/data/zenodo-eis-two-point-latent-state-predictor-v1.json"), "utf8"));
+assert.equal(evidence.protocol, "zenodo-eis-two-point-latent-state-predictor/1");
+assert.equal(evidence.preregistration.targetEvaluationValuesUsedForPrediction, false);
+assert.equal(evidence.population.passedCells, 54);
+assert.equal(evidence.population.failedCells, 0);
+assert.equal(evidence.population.selectedFrequencyCounts["2.82193493843079"], 51);
+assert.ok(evidence.population.worstCellMedianRelativeError < 0.05);
+assert.ok(evidence.population.worstCellMaximumRelativeError < 0.20);
+assert.equal(evidence.decision.twoPointLatentStatePredictorEstablishedForThisPopulation, true);
+assert.equal(evidence.decision.simultaneousPredictiveDistributionEstablished, false);
+assert.equal(evidence.decision.measurementCovarianceEstablished, false);
+assert.equal(evidence.decision.generatedDynamicsEstablished, false);
+assert.equal(evidence.decision.newPhysicsEvidence, false);
+console.log(JSON.stringify({ result: "pass", cells: 54, dominantSecondFrequencyHz: 2.82193493843079, medianCellMedianError: evidence.population.medianCellMedianRelativeError, worstCellMedianError: evidence.population.worstCellMedianRelativeError, boundary: "population-wide point prediction closed; joint uncertainty, covariance and dynamics remain open" }, null, 2));
