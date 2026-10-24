@@ -1,0 +1,54 @@
+{
+  "schema": "sourcery-ale-algebra/1",
+  "date": "2026-10-24",
+  "sourceProtocol": "scientific-derivation-composition/common-algebra-2",
+  "carrier": {
+    "name": "Ordered Path with ALE Join Valuation",
+    "pathWord": "free noncommutative word in admitted transformation identities",
+    "valuation": "P(A) x P(L) x P(E)",
+    "components": ["assumptions", "irreversibleLosses", "evidenceTokens"]
+  },
+  "composition": {
+    "pathWord": "ordered concatenation",
+    "valuation": "componentwise canonical distinct union",
+    "identity": {"pathWord": [], "assumptions": [], "irreversibleLosses": [], "evidenceTokens": []},
+    "laws": ["associative", "valuation-commutative", "valuation-idempotent", "loss-monotone"],
+    "nonLaws": ["path-commutative", "cancellative", "invertible", "loss-erasing"]
+  },
+  "canonicalKeys": {
+    "assumption": "normalized statement plus declared scope and version",
+    "loss": "normalized lost distinction plus source and target signature hashes",
+    "evidence": "URI plus content hash plus version plus authority scope",
+    "rule": "stable transformation identity plus exact endpoint signature hashes"
+  },
+  "duplicatePolicy": {
+    "sameCanonicalKey": "one ledger token with multiplicity recorded separately for audit",
+    "sameUriDifferentHash": "distinct evidence tokens",
+    "sameWordsDifferentScope": "distinct assumption tokens",
+    "reason": "set idempotence must not collapse materially different provenance"
+  },
+  "irreversibility": {
+    "rule": "once a loss token enters a path valuation it remains in every extension",
+    "repair": "a later reconstruction creates a new object with new evidence and assumptions; it does not delete the earlier loss",
+    "ordering": "the path word retains operation order even when two words have the same ALE valuation"
+  },
+  "rejection": {
+    "rule": "a failing transformation is excluded before path composition",
+    "receipt": "the failed rule and every failed gate remain visible outside the admitted path algebra",
+    "noNegativeEdge": true,
+    "cannotBeCancelledByLaterSuccess": true
+  },
+  "authority": {
+    "proposalOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "applicationAdmission": false,
+    "compositionRule": "path composition cannot raise authority above the least-authorized input or the protocol ceiling"
+  },
+  "classification": {
+    "valuationAlgebra": "commutative idempotent monoid / finite join-semilattice when token universes are finite",
+    "pathAlgebra": "free category restricted by exact endpoint typing and validation gates",
+    "valuationMap": "monoid homomorphism from admitted path concatenation to ALE join",
+    "notA": ["vector algebra", "Lie algebra", "Jordan algebra", "proof calculus", "empirical confirmation"]
+  }
+}

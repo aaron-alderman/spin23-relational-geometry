@@ -266,6 +266,13 @@ with componentwise distinct set union, so for composable paths
 \(\nu(pq)=\nu(p)\cup\nu(q)\). This is the exact sense in which a route remembers
 its cost and warrant.
 
+More precisely, an admitted derivation is an **Ordered Path with ALE Join
+Valuation**. The path word composes by noncommutative concatenation while the
+ALE ledger is a commutative idempotent monoid (a finite join-semilattice for a
+finite token universe). Loss is monotone, exact duplicates require canonical
+scope-and-version keys, and rejected rules remain outside the path algebra in a
+separate receipt. See the [ALE algebra](../programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md).
+
 ### Verification envelope
 
 The **Derivation Verification Envelope** contains four surfaces:
