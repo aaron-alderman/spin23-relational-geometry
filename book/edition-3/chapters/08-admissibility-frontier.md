@@ -138,6 +138,23 @@ OT-046 therefore needs a physical noun before another spectral calculation: one 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-quotient-does-not-choose-the-operator-claim-3.md)
 
+<a id="hot-off-the-press-one-action-reaches-the-four-detector-ports"></a>
+## Hot off the press — one action reaches the four detector ports
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** The engineered four-resonator bench now has one generative object rather than a Hamiltonian, damping rule and detector map placed side by side. A Gaussian doubled action produces the retarded operator, driven amplitudes, dissipated power, positive fluctuation kernel and all four calibrated complex port records.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-one-action-reaches-the-four-detector-ports-claim-1.md)
+
+The same action covers both the exact quotient setting and the resolved outer-detuning intervention. Across 98 frequency and setting cases, its equation residual and injected-versus-dissipated power residual remain below numerical tolerance. This is the positive control OT-027 lacked: operator, amplitude, loss and record can belong to one causal model.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-one-action-reaches-the-four-detector-ports-claim-2.md)
+
+The boundary remains decisive. The D4-shaped couplings were programmed into the apparatus, so the action does not explain why a natural carrier or a Claimipedia relation should realize them. The next look-here target is a source-native relation-to-hardware dictionary with a held-out detector consequence; building the bench tests action-to-record engineering, not fundamental D4 physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-one-action-reaches-the-four-detector-ports-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 
@@ -984,6 +1001,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_106_reflection_resolved_defect_transport.md](../../../corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md)
 - [admissibility_107_global_nonlinear_detector_injectivity.md](../../../corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md)
 - [admissibility_108_d4_shared_action_operator_boundary.md](../../../corpus/programmes/admissibility/admissibility_108_d4_shared_action_operator_boundary.md)
+- [admissibility_109_four_mode_sk_action_to_record.md](../../../corpus/programmes/admissibility/admissibility_109_four_mode_sk_action_to_record.md)
 
 ---
 
