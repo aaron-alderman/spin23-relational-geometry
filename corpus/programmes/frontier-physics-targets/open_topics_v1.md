@@ -46,7 +46,7 @@ An open topic stays on this list until one of four things happens:
 | OT-018 | New contextual admissibility inequality | tests whether the principle adds to standard consistency |
 | OT-019 | Three-scale admissibility functor | asks which exclusions and invariants survive coarse-graining |
 | OT-020 | Rare-event selector geometry | separates equilibrium breaking from kinetic freezing |
-| OT-021 | Complexity cards | prevents hidden exponential preparation or tomography |
+| OT-021 | Complexity cards | target audit complete; packet enforcement prevents hidden Hilbert dimension, preparation or tomography |
 | OT-022 | Causal selector propagation | bounds how quickly selection and records can spread |
 | OT-023 | Disorder and glassy-memory audit | separates robust branches from rare samples and history |
 | OT-033 | Real declaration-corpus adaptive census | replaces synthetic Lean chains with source-native occupancy and fibre data |

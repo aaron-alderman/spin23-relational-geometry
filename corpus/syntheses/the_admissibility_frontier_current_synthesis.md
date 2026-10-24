@@ -61,6 +61,8 @@ Sp(4,\mathbb R)\cong Spin_0(2,3).
 
 This reverses the status of \(Spin_0(2,3)\). It is no longer the hero from which reality is supposed to descend. It is a recovered symmetry of an already admitted positive-response geometry—a valuable pole and exact completion, but not the prior container of physics.
 
+The explanatory order is therefore **Jordan admission and composition → typed admissibility region → Lie transformation and transport → dynamics, selection and records**. Spin(2,3) is not the starting claim; it is one exact completion recovered after the carrier, positivity and compositional structure have been declared.
+
 ## Dynamics is the motion of the boundary
 
 In the revised story, dynamics is not appended after a static classification. Dynamics continually changes which distinctions remain admissible. A bound state, resonance, Bloch-like boundary mode and free continuum state are not simply four nouns; they are regions connected by pole motion, spectral flow, capture, decay and memory. Casimir response, thermoelectric transport, hysteresis, metastability and scattering delay are useful because each reads a different part of that changing boundary.
@@ -256,6 +258,8 @@ Several fronts are reachable without waiting for a final theory. Each has a two-
 
 The invitation is therefore concrete: **look where established mechanisms become observationally equivalent, then recover the distinction they lose.** Improve the projector control, material-response pipeline, thermodynamic-limit calculation, topological-memory device, polarized-force bound or carrier-preserving classification. Most successful work will improve theory, inference or engineering. If a residual survives the declared conventional model, reversal tests and detector controls, the same work provides an honest route to new physics.
 
+The practical boundary also includes cost. The [frontier complexity cards](../programmes/frontier-physics-targets/frontier_complexity_cards_v1.md) now ask five separate questions of the nearest targets: does the object exist, can it be prepared, can enough instances be sampled, can the relevant difference be detected and can another route verify it? This prevents a small exact demonstration from silently becoming a scalability claim. It exposes a real exponential wall in the many-body two-current calculation and in unrestricted logical tomography, while locating several nearer limits in material yield, conditioning and unknown continuum convergence. Those distinctions are hopeful because they say where engineering can help—and honest because they show where engineering has not yet changed the asymptotics.
+
 The [finesse technology pathway](../programmes/frontier-physics-targets/finesse_technology_pathway_v1.md) turns that route into three execution horizons: a no-foundry resonator and inference programme, a shared coherent/open-system device and a same-material transport-to-Casimir closure experiment. Each is useful if conventional physics wins. Each also preserves a predeclared escalation path from improved instrument to replicated anomaly to new effective operator. That two-sided usefulness is not a consolation prize; it is what makes the route buildable now.
 
 PageRank supplies a precise control theorem for the same story. A bare stochastic relation can leave a multidimensional family of stationary states; a small positive mixing term selects one Perron state and makes iteration contractive. But the selector also permits motion across boundaries absent from the original graph. The lesson is double-edged: global order can emerge from sparse local relation plus an independently supplied selector, yet the uniqueness and stability of that order do not make it intrinsic. The relevant finesse object is therefore the [selector response surface](../programmes/frontier-physics-targets/page_rank_perron_selector_bridge_v1.md), not one dominant eigenvector.
@@ -343,7 +347,7 @@ Together these practices form a humane research loop:
 
 That loop is kenotic because it does not seize more authority than the work has earned. It is generative because it refuses to confuse humility with silence.
 
-## Here is where to look
+## Why there is hope: this is where to look
 
 Choose the entrance that matches the work you want to do:
 
@@ -353,6 +357,7 @@ Choose the entrance that matches the work you want to do:
 - **See the frontier contacts:** [Current research frontier crosswalk](../programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md).
 - **Choose a physical target:** [Frontier physics target set](../programmes/frontier-physics-targets/frontier_physics_target_set_v1.md).
 - **Choose an experiment:** [Frontier experiment atlas](../programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md).
+- **Audit whether it can actually be reached and checked:** [Frontier complexity cards](../programmes/frontier-physics-targets/frontier_complexity_cards_v1.md).
 - **Inspect the exact mixed frontier:** [Mixed-interface resolution](../programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md).
 - **Follow a closed route and a controlled refusal:** [Two cross-carrier vertical slices](../programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md).
 - **Choose among all 39 instrumented relations and returns:** [Instrumented admissibility atlas](../programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md).

@@ -6,7 +6,7 @@
 
 ![Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon](../../docs/edition-3/assets/relational-geometry-hero.png)
 
-The next route to new physics may begin not with higher energy but with greater finesse: preserving phase, delay, boundary order, memory, orientation and cross-channel relation that ordinary measurements erase. This book follows that experimental problem backward into mathematics. Jordan structure delimits what can coexist and compose; Lie structure describes how the admitted domain moves; dynamics and detectors determine which distinctions survive as records. Spin₀(2,3) is one exact recovered completion in that passage, not its protagonist.
+The next route to new physics may begin not with higher energy but with greater finesse: preserving phase, delay, boundary order, memory, orientation and cross-channel relation that ordinary measurements erase. This book follows that experimental problem backward into mathematics. Jordan structure delimits what can coexist and compose; Lie structure describes how the admitted domain moves; dynamics and detectors determine which distinctions survive as records. Spin₀(2,3) is one exact recovered completion in that passage, not the premise or centre of the programme.
 
 > **Authority boundary.** This edition reports exact calculations, bounded constructions, conditional physical bridges and closed branches. It is not empirical confirmation, peer review or a derivation of the Standard Model. The strong claim that admissibility is ontologically prior to physics remains a research proposal; the finesse pathway and its typed tests are the practical result established here.
 
@@ -38,4 +38,4 @@ The next route to new physics may begin not with higher energy but with greater 
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `5e048542be3d9b136b6c8ddd5b4ba1a271355f6eecd0a80724969454dfe05634`
+Citation-set digest: `cedadd1e6e63fb53ee5393906c0a91b89afc62084f71eeac4038fac472e2e624`

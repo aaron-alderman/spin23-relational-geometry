@@ -262,6 +262,7 @@ const sectionTaxonomy = {
   "Hot off the press — the oriented seam becomes an experiment": "conditional",
   "Hot off the press — the mixed interface has an exact shape": "established",
   "Hot off the press — the missing middle has a type": "conditional",
+  "Hot off the press — the reachable frontier has a cost shape": "governance",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -330,6 +331,7 @@ const sectionArchetype = {
   "Hot off the press — the oriented seam becomes an experiment": "builder",
   "Hot off the press — the mixed interface has an exact shape": "integrator",
   "Hot off the press — the missing middle has a type": "integrator",
+  "Hot off the press — the reachable frontier has a cost shape": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -485,6 +487,13 @@ admissibilitySections.splice(orientedSeamIndex + 6, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 7, 0, [
+  "Hot off the press — the reachable frontier has a cost shape",
+  [
+    "**Provisional integration note — 25 October 2026.** The nearest eleven target families now carry separate existence, preparation, sampling, detection and independent-verification costs. Most proposed records are polynomial after a small carrier has been prepared, but that does not make the whole frontier easy: the two-current many-body calculation remains exponential through its Hilbert-space dimension, unrestricted logical tomography remains exponential in logical-qubit count, matched-film yield is empirical, continuum and bootstrap convergence remain unbounded, and the exact quotient-scar result is constant-size rather than a scaling theorem. This changes where to look. Sparse system identification, restricted witnesses, differential measurements and common-sample estimators are genuine theoretical-engineering opportunities; hidden Hilbert dimension, unrestricted tomography and unproved limit convergence are stop signs. Complexity is not promoted to a new fundamental law here. It is part of the practical admissibility boundary because a mathematically allowed distinction does not become physical evidence until it can be prepared, retained and independently checked.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -591,6 +600,7 @@ chapterSources["08-admissibility-frontier"].splice(-2, 0,
   "corpus/programmes/frontier/wave-7/frontier_wave7_68_selector_split_fingerprint_and_channel_breaking_gate.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_69_q_provenance_terminal_synthesis.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+  "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md",
 );
 
 const chapters = chapterSkeletons.map(chapter => ({
@@ -1003,7 +1013,7 @@ const tocMd = chapters.map((chapter, index) => {
   return `${index + 1}. [${typeset(chapter.title)}](chapters/${chapter.slug}.md) — **[${item.icon} ${item.label}](reading-key/status-${chapterTaxonomy[chapter.slug]}.md)** · **[${role.icon} ${role.name}](reading-key/move-${chapterArchetype[chapter.slug]}.md)** · ${typeset(chapter.kicker)}`;
 }).join("\n");
 const coverMd = `# The admissibility frontier\n\n## New physics by preserving distinctions\n\n**Edition 3.2 admissibility preview · 24 October 2026**\n\n![Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon](../../docs/edition-3/assets/relational-geometry-hero.png)\n\nThe next route to new physics may begin not with higher energy but with greater finesse: preserving phase, delay, boundary order, memory, orientation and cross-channel relation that ordinary measurements erase. This book follows that experimental problem backward into mathematics. Jordan structure delimits what can coexist and compose; Lie structure describes how the admitted domain moves; dynamics and detectors determine which distinctions survive as records. Spin₀(2,3) is one exact recovered completion in that passage, not its protagonist.\n\n> **Authority boundary.** This edition reports exact calculations, bounded constructions, conditional physical bridges and closed branches. It is not empirical confirmation, peer review or a derivation of the Standard Model. The strong claim that admissibility is ontologically prior to physics remains a research proposal; the finesse pathway and its typed tests are the practical result established here.\n\n## Contents\n\n${tocMd}\n\n## Other reading surfaces\n\n- [Read the canonical reading contract](../../corpus/READING_CONTRACT.md)\n- [Read the admissibility synthesis](../../corpus/syntheses/the_admissibility_frontier_current_synthesis.md)\n- [Browse the status and research-move index](reading-key.md)\n- [Open the live paged HTML edition](https://aaron-alderman.github.io/spin23-relational-geometry/)\n- [Open the interactive concept atlas](../../docs/concept-map/index.html)\n- [Inspect the paged HTML source](../../docs/edition-3/index.html)\n- [Return to the repository front door](../../README.md)\n- [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)\n\nCitation-set digest: \`${sourceDigest}\`\n`;
-writeFileSync(join(bookRoot, "README.md"), coverMd);
+writeFileSync(join(bookRoot, "README.md"), coverMd.replace("not its protagonist", "not the premise or centre of the programme"));
 writeFileSync(join(bookRoot, "reading-key.md"), readingKeyMarkdown());
 Object.keys(taxonomy).forEach(key => writeFileSync(join(readingKeyRoot, `status-${key}.md`), readingKeyDetailMarkdown("taxonomy", key)));
 archetypes.forEach(item => writeFileSync(join(readingKeyRoot, `move-${item.key}.md`), readingKeyDetailMarkdown("archetype", item.key)));

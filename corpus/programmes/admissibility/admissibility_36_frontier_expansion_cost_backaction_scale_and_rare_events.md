@@ -58,7 +58,9 @@ Existence, efficient preparation, efficient sampling and efficient verification 
 
 The 2026 postselection-free monitored-circuit experiment is instructive: the tree architecture matters because it changes classical decoding from an otherwise prohibitive task to linear scaling in the implemented protocol.
 
-**First rule:** every emulator or numerical frontier claim should carry a four-entry complexity card—prepare, evolve/sample, detect, verify—with system-size scaling and approximation error.
+**First rule:** every emulator or numerical frontier claim should carry a resource card with system-size scaling and approximation error.
+
+**25 October refinement:** the [certified target audit](../frontier-physics-targets/frontier_complexity_cards_v1.md) separates five stages: existence, preparation, sampling, detection and verification. Existence must be explicit because an efficiently measured low-dimensional record can still depend on an exponentially large represented state space; FPT-004 is the concrete example. Fixed-size exactness is also its own class rather than a synonym for scalable access. The original four operational entries remain useful inside the refined card, but they no longer carry the burden of the existence question.
 
 ## Lane 20 — causal spread, scrambling and speed limits
 
@@ -80,7 +82,7 @@ Topology, metastability and selection are currently treated mostly in clean or p
 | measurement backaction | channel/trajectory distinction | monitored mode or qudit network | current platform exists | insert corpus selector datum (Y) |
 | scale stability | coarse-graining semigroup | finite projector/response model | language abundant | explicit three-scale pushforward |
 | rare events | rate function / fluctuation symmetry | metastable selector or domains | basic lifetime map | trajectory-level data |
-| complexity | scaling of prepare/sample/verify | every emulator | almost absent | mandatory complexity cards |
+| complexity | scaling of existence/prepare/sample/detect/verify | every emulator | target-level cards certified for FPT-001--010 and FPT-022 | packet-level schema enforcement |
 | causal speed | speed/locality bound | spatial open system | external bounds known | compare with selector mixing |
 | disorder/glass | disorder-averaged and rare-region scaling | photonic, acoustic, magnetic carriers | scattered mentions | joint topology/selection audit |
 

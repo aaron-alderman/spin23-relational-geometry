@@ -10,6 +10,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 
 ## Every current use
 
+- [The admissibility frontier · Hot off the press — the reachable frontier has a cost shape](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-reachable-frontier-has-a-cost-shape)
 - [The revised spine · Why ten generators are a real gate](../chapters/01-the-revised-spine.md#why-ten-generators-are-a-real-gate)
 - [The revised spine · Algebra is not yet spacetime](../chapters/01-the-revised-spine.md#algebra-is-not-yet-spacetime)
 - [One carrier, two faces, three relations · Three relations do not select an orientation](../chapters/02-one-carrier-two-faces-three-relations.md#three-relations-do-not-select-an-orientation)
@@ -45,6 +46,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [E3-F26 · The pinned Claimipedia operator layers contain sl2 plus sl3, not sp4](../chapters/08-result-ledger.md#E3-F26)
 - [Proof · Furey participation: closure certificate](../details/furey-participation-proof.md)
 - [Proof · Furey interface: selector obstruction](../details/furey-selector-obstruction.md)
+- [Claim · The admissibility frontier · Hot off the press — the reachable frontier has a cost shape (1)](../details/08-admissibility-frontier-hot-off-the-press-the-reachable-frontier-has-a-cost-shape-claim-1.md)
 - [Claim · The revised spine · Why ten generators are a real gate (1)](../details/01-the-revised-spine-why-ten-generators-are-a-real-gate-claim-1.md)
 - [Claim · The revised spine · Algebra is not yet spacetime (1)](../details/01-the-revised-spine-algebra-is-not-yet-spacetime-claim-1.md)
 - [Claim · One carrier, two faces, three relations · Three relations do not select an orientation (1)](../details/02-one-carrier-two-faces-three-relations-three-relations-do-not-select-an-orientation-claim-1.md)

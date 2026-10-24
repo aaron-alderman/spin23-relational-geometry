@@ -194,10 +194,10 @@ These are reach assessments, not truth probabilities. “Within reach” means t
 
 **Complexity and computational admissibility — audit column immediately within reach.**
 
-- **Corpus assets:** the [frontier complexity docket](../admissibility/admissibility_36_frontier_expansion_cost_backaction_scale_and_rare_events.md), the [detector-equivalence atlas](../admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md), the distinction between projective and coherent data in the [universal crossbar](../admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md), and the [K215 trust-boundary/descent assessment](../admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md).
-- **Why it is close:** no new physics is required to begin; every emulator and numerical claim can report preparation, sampling, detection and verification costs now.
-- **Missing join:** those costs are not yet a required schema field across the corpus.
-- **Next promotion test:** attach a four-part complexity card to each active packet and test whether the proposed distinguishing observable remains efficiently accessible as size grows.
+- **Corpus assets:** the [certified target complexity cards](frontier_complexity_cards_v1.md), [frontier complexity docket](../admissibility/admissibility_36_frontier_expansion_cost_backaction_scale_and_rare_events.md), [detector-equivalence atlas](../admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md), the distinction between projective and coherent data in the [universal crossbar](../admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md), and the [K215 trust-boundary/descent assessment](../admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md).
+- **Why it is close:** the target-level audit now separates existence, preparation, sampling, detection and verification for FPT-001--010 and FPT-022, exposes the exponential walls in FPT-004 and generic FPT-009 tomography, and retains material-yield and convergence unknowns rather than calling them constant cost.
+- **Missing join:** newly active packets are not yet mechanically required to link or replace the applicable target card.
+- **Next promotion test:** enforce the five-stage schema at packet admission and reject any packet that hides Hilbert dimension, unrestricted tomography, an oracle in preparation or an unbounded continuum/truncation limit.
 - **Related targets:** FPT-002, FPT-004, FPT-009, FPT-014 and FPT-016.
 
 ## FPT-020

@@ -18,6 +18,8 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Detector/frontier register](detector_frontier_register_v1.json) — machine-readable authority for detector records, controls, maturity, target coverage and source provenance.
 - [Frontier experiment atlas](frontier_experiment_atlas_v1.md) — one realistic controlled experiment for every frontier area, with platform, interventions, records, controls, decisive outcomes and stop rules.
 - [Frontier experiment register](frontier_experiment_atlas_v1.json) — machine-readable 20-experiment portfolio covering all maintained topics and detector bundles.
+- [Frontier complexity cards](frontier_complexity_cards_v1.md) — five-stage existence, preparation, sampling, detection and independent-verification audit for FPT-001--010 and FPT-022.
+- [Complexity-card register](frontier_complexity_cards_v1.json) — machine-readable scaling classes, variables, approximation boundaries, independent checks and stop rules.
 - [Open topics](open_topics_v1.md) — maintained priority queue with explicit stop rules.
 - [Open-topic register](open_topics_register_v1.json) — machine-readable questions, dependencies, next actions, closure conditions and kill tests.
 - [AZ gate coverage audit](frontier_gate_coverage_audit_v1.md) — reconciles every AZ-001--AZ-057 gate as live, superseded or closed.
@@ -31,6 +33,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Verifier](../../../verification/frontier-physics-targets/verify_frontier_physics_target_register.mjs) — checks completeness, identifiers, mappings, epistemic firewalls and referenced source paths.
 - [Detector/open-topic verifier](../../../verification/frontier-physics-targets/verify_detector_frontier_and_open_topics.mjs) — checks identifier integrity, source existence and complete detector/topic coverage of all targets and frontier regions.
 - [Experiment-atlas verifier](../../../verification/frontier-physics-targets/verify_frontier_experiment_atlas.mjs) — proves one experiment per frontier area and complete coverage of all topics and detector bundles.
+- [Complexity-card verifier](../../../verification/frontier-physics-targets/verify_frontier_complexity_cards.mjs) — checks exact target coverage, all five resource stages, source provenance and the retained exponential/unknown boundaries.
 - [AZ gate verifier](../../../verification/frontier-physics-targets/verify_frontier_gate_coverage_audit.mjs) — checks complete packet coverage, topic ownership and resolution paths.
 - [Wave gate verifier](../../../verification/frontier-physics-targets/verify_frontier_wave_gate_audit.mjs) — discovers and checks every retained Wave 6--7 packet file and its live owner, including distinct packets that reused a display number.
 - [Residual programme verifier](../../../verification/frontier-physics-targets/verify_residual_programme_gate_audit.mjs) — ensures every remaining matching programme file has a queue mapping or separate owner.
@@ -53,9 +56,9 @@ The detector extension additionally normalizes:
 
 - 20 frontier regions;
 - 35 detector bundles; and
-- 49 maintained topics: 46 live across active, open, audit, gated and blocked states, plus three closed with retained evidence.
+- 49 maintained topics: 44 live across active, open, audit, gated and blocked states, plus five closed with retained evidence.
 
-The full-corpus census presently hashes and inventories all 2,536 Markdown/JSON artifacts across `corpus/` and the evidence ledger: 2,098 corpus narratives plus 438 evidence artifacts. It reconciles all 1,530 files containing the expanded gate vocabulary or an open-like structured status, including 1,176 of the 1,575 numbered claims and 85 evidence records; the other 399 claims are explicitly recorded as having no declared gate. It reports zero unmatched ownership records. This is a lexical, structured-status and governance exhaustion result, not a claim that every tacit scientific question has been discovered or solved.
+The full-corpus census presently hashes and inventories all 2,654 in-scope Markdown/JSON artifacts across `corpus/` and the evidence ledger: 2,199 corpus narratives plus 455 evidence artifacts. It reconciles all 1,588 files containing the expanded gate vocabulary or an open-like structured status, including 1,176 of the 1,575 numbered claims and 89 evidence records; the other 399 claims are explicitly recorded as having no declared gate. It reports zero unmatched ownership records. This is a lexical, structured-status and governance exhaustion result, not a claim that every tacit scientific question has been discovered or solved.
 
 Speculative entries remain visible but carry zero evidential weight. Crosswalk membership indicates relevance, not proof of a physical identification.
 

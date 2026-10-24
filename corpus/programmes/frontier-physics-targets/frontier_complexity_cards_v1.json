@@ -1,0 +1,192 @@
+{
+  "schema": "frontier.complexity-cards/1",
+  "date": "2026-10-25",
+  "authority": "resource_audit_not_physical_admission",
+  "scope": "FPT-001 through FPT-010 and FPT-022",
+  "stageOrder": ["existence", "preparation", "sampling", "detection", "verification"],
+  "scalingClasses": ["fixed_size_only", "polynomial", "exponential", "empirical_unknown", "convergence_unknown"],
+  "variables": {
+    "n": "physical sites, modes, ports or carrier degrees of freedom",
+    "p": "fitted physical and nuisance parameters",
+    "m": "independent controls or detector settings",
+    "k": "frequency, time, momentum or path-grid points",
+    "s": "independent samples, shots, disorder realizations or trajectories",
+    "epsilon": "declared additive estimation error",
+    "D(n)": "many-body Hilbert-space dimension, generally exponential at fixed filling",
+    "b": "truncated bootstrap or moment-basis dimension"
+  },
+  "rules": [
+    "Fixed-size exact execution is not evidence of scalable access.",
+    "Shot-noise scaling s=O(epsilon^-2) is a baseline, not a promise in the presence of drift or correlated noise.",
+    "A polynomial forward model does not make parameter identifiability or global model selection polynomial.",
+    "Full state, process or logical tomography is presumed exponential unless a sufficient restricted record is proved.",
+    "Unknown fabrication yield, continuum convergence and condition-number growth remain unknown rather than O(1)."
+  ],
+  "cards": [
+    {
+      "targetId": "FPT-001",
+      "verdict": "conditionally_scalable",
+      "asymptoticConclusion": "The certified three-mode selector is fixed-size exact. A scalable selector remains polynomial only with local or low-rank system identification; unrestricted process tomography grows exponentially with carrier dimension.",
+      "stages": {
+        "existence": {"scalingClass": "polynomial", "scaling": "local return-map and stability certificates use sparse O(n^3) linear algebra", "approximationError": "controlled by residual and spectral-gap bounds", "basis": "exact finite return map and Hessian certificates"},
+        "preparation": {"scalingClass": "empirical_unknown", "scaling": "O(n) calibrated local components if a modular carrier exists; yield and cross-talk scaling are unmeasured", "approximationError": "calibration and fabrication errors", "basis": "platform proposal only"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(k epsilon^-2) trajectories per initial-condition family under independent-noise sampling", "approximationError": "shot noise plus mixing and drift bias", "basis": "trajectory-resolved return protocol"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(m k epsilon^-2) for the declared projector, phase and population records", "approximationError": "detector folding and finite bandwidth", "basis": "restricted sufficient record"},
+        "verification": {"scalingClass": "polynomial", "scaling": "O(n^3 + m k epsilon^-2) for local transfer reconstruction, held-out initial states and datum-removal control", "approximationError": "confidence interval on contraction and neutral-manifold control", "basis": "independent system-identification path; full process tomography is excluded"}
+      },
+      "independentVerification": "Fit local transfer elements on one set of trajectories, predict held-out initial projectors, then remove the second datum and recover neutral orientation.",
+      "killTest": "The only verification route is unrestricted process tomography, or apparent contraction vanishes under held-out initialization and loss controls.",
+      "sourceRefs": ["corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md", "corpus/programmes/admissibility/admissibility_38_measurement_creates_branches_not_unique_unconditional_selection.md"]
+    },
+    {
+      "targetId": "FPT-002",
+      "verdict": "polynomial_for_declared_library",
+      "asymptoticConclusion": "Inverse detector design is tractable for a finite preregistered mechanism library and differentiable nuisance model. It is not a global injectivity theorem over unrestricted mechanisms.",
+      "stages": {
+        "existence": {"scalingClass": "polynomial", "scaling": "O(p^3 + m p^2) for Fisher/Schur rank tests", "approximationError": "local-linearization residual", "basis": "efficient-score and nuisance-projection theorem"},
+        "preparation": {"scalingClass": "polynomial", "scaling": "O(m) control settings for a declared candidate detector", "approximationError": "control calibration", "basis": "finite design matrix"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(m epsilon^-2) baseline, multiplied by mixing time or rare-event factor", "approximationError": "sampling variance and model discrepancy", "basis": "finite held-out mechanism library"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(s m p) score evaluation after forward simulation", "approximationError": "nuisance projection and detector-response calibration", "basis": "raw-record likelihood"},
+        "verification": {"scalingClass": "polynomial", "scaling": "O(L m s) for L preregistered mechanisms plus adversarial held-out pairs", "approximationError": "finite-library coverage error remains explicit", "basis": "blind simulation challenge and independent nuisance fit"}
+      },
+      "independentVerification": "A second implementation generates blinded raw records from held-out mechanisms; the proposed added channel must separate them after nuisance refitting.",
+      "killTest": "The target score lies in the nuisance span, or success depends on an unrestricted hidden oracle choosing the correct mechanism family.",
+      "sourceRefs": ["corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md", "corpus/claims/0700-0799/739_detector_folding_is_a_positive_markov_compression_that_can_only_contract_cp_fisher_information.md"]
+    },
+    {
+      "targetId": "FPT-003",
+      "verdict": "measurement_polynomial_material_scaling_unknown",
+      "asymptoticConclusion": "Tensor acquisition, Lifshitz propagation and differential-force sampling are polynomial in the declared grid and precision. Reproducible matched-film preparation and broadband tail control do not yet have a defensible asymptotic law.",
+      "stages": {
+        "existence": {"scalingClass": "polynomial", "scaling": "O(k p^3) causal tensor fitting and quadrature on a fixed model family", "approximationError": "frequency-grid, analytic-continuation and model-tail error", "basis": "causal response plus Lifshitz forward model"},
+        "preparation": {"scalingClass": "empirical_unknown", "scaling": "matched-film yield versus area, thickness and domain count is not established", "approximationError": "sample mismatch, domains, roughness and contamination", "basis": "same-carrier requirement"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(k m epsilon^-2) spectroscopy and force repeats before drift overhead", "approximationError": "correlated drift may exceed shot-noise scaling", "basis": "finite frequency, angle and separation grid"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(k m) calibrated transport/optical/force records per sample", "approximationError": "bandwidth, patches and magnetic backgrounds", "basis": "differential parallel-minus-antiparallel observable"},
+        "verification": {"scalingClass": "polynomial", "scaling": "O(k p^3 + k m epsilon^-2) no-refit prediction on held-out separations and angles", "approximationError": "propagated tensor covariance plus nuisance envelope", "basis": "independent force apparatus and matched witness films"}
+      },
+      "independentVerification": "Freeze the tensor and covariance before force data are opened; predict held-out angle/separation bins and repeat on a witness film from the same growth run.",
+      "killTest": "Allowed optical tails, patch potentials, domains or ordinary magnetic forces span the signal, or material matching requires post-force refitting.",
+      "sourceRefs": ["corpus/programmes/admissibility/admissibility_31_same_carrier_platform_closure_for_casimir_thermoelectric_response.md"]
+    },
+    {
+      "targetId": "FPT-004",
+      "verdict": "exponential_compute_wall",
+      "asymptoticConclusion": "Exact and matrix-free source-native calculations remain exponential in site count through D(n), even when polynomial in the represented Hilbert dimension. Low-frequency thermodynamic rank is therefore externally gated by symmetry reduction, distributed typicality or a new approximation theorem.",
+      "stages": {
+        "existence": {"scalingClass": "exponential", "scaling": "D(n) grows combinatorially at fixed filling; exact diagonalization is at least polynomial in D(n)", "approximationError": "zero for the finite oracle but no thermodynamic inference", "basis": "source-native many-body carrier"},
+        "preparation": {"scalingClass": "exponential", "scaling": "state/vector memory O(D(n)); sparse Hamiltonian and current assembly O(poly(n) D(n))", "approximationError": "operator convention exact after source audit", "basis": "compiled symmetry sector still exponential asymptotically"},
+        "sampling": {"scalingClass": "exponential", "scaling": "KPM/typicality O(r k poly(n) D(n)) with stochastic-vector count r", "approximationError": "O(r^-1/2) stochastic plus kernel, broadening and finite-size bias", "basis": "common-sample matrix-free estimator"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(k) once the 2x2 spectral block is produced", "approximationError": "frequency-window and normalization error", "basis": "determinant and normalized determinant are low-dimensional records"},
+        "verification": {"scalingClass": "exponential", "scaling": "independent exact small-cluster reconstruction plus sum rules; larger-size reproduction inherits D(n)", "approximationError": "gauge, moment and size residuals remain separately bounded", "basis": "exact oracle, continuity identities and independent estimator"}
+      },
+      "independentVerification": "Reproduce the 3x3 block/cross spectrum on exact clusters, enforce sum rules and gauge convergence, then compare an independently compiled common-sample estimator.",
+      "killTest": "Any claimed scalable result hides D(n), uses different random samples for cross channels, or infers dc rank from integrated moments alone.",
+      "sourceRefs": ["corpus/programmes/admissibility/admissibility_48_matrix_free_fixed_density_moment_convergence.md", "corpus/programmes/admissibility/admissibility_50_frequency_moment_bounds_and_compute_boundary.md"]
+    },
+    {
+      "targetId": "FPT-005",
+      "verdict": "conditionally_polynomial",
+      "asymptoticConclusion": "Sparse multimode preparation and transfer reconstruction can scale polynomially; dense all-to-all mode tomography and uncontrolled material disorder can erase that advantage.",
+      "stages": {
+        "existence": {"scalingClass": "polynomial", "scaling": "O(n^3) dense eigensystem or less for sparse local mode models", "approximationError": "model truncation and linewidth uncertainty", "basis": "linear hybrid-mode dynamics"},
+        "preparation": {"scalingClass": "empirical_unknown", "scaling": "O(n) nominal local resonators/couplers; yield and mode-crowding scaling unmeasured", "approximationError": "disorder, cross-talk and damping spread", "basis": "programmable versus material platforms differ"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(k m epsilon^-2) coherent sweeps or lifetime records", "approximationError": "drift, finite linewidth and thermal occupation", "basis": "complex transfer records"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(n k epsilon^-2) for resolved ports; O(n^2 k epsilon^-2) for dense transfer tomography", "approximationError": "port gain/phase and bandwidth", "basis": "individual complex readout"},
+        "verification": {"scalingClass": "polynomial", "scaling": "O(n^3 + n k epsilon^-2) for model fit plus reversal and scattering controls", "approximationError": "held-out frequency and disorder residual", "basis": "independent damping/scattering model"}
+      },
+      "independentVerification": "Fit splitting and damping from complex transfer data, then predict loop reversal, temperature dependence and a held-out port without refitting.",
+      "killTest": "The claimed geometric signal is reproduced by loss, gain, skew scattering or unresolved mode crowding within the calibrated nuisance model.",
+      "sourceRefs": ["corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"]
+    },
+    {
+      "targetId": "FPT-006",
+      "verdict": "polynomial_linear_regime",
+      "asymptoticConclusion": "Finite-dimensional non-Hermitian/Floquet reconstruction is polynomial in mode count, settings and precision. This does not identify nonlinear many-body Floquet phases, whose heating and state complexity remain outside the card.",
+      "stages": {
+        "existence": {"scalingClass": "polynomial", "scaling": "O(n^3 k) eigensystem or propagator analysis along a discretized loop", "approximationError": "path discretization and conditioning near exceptional points", "basis": "linear effective generator"},
+        "preparation": {"scalingClass": "polynomial", "scaling": "O(n+k) local elements and programmed loop segments for a sparse carrier", "approximationError": "drive and gain/loss calibration", "basis": "programmable linear platform"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(k m epsilon^-2) forward/reverse and rate sweeps", "approximationError": "nonadiabatic, drift and transient bias", "basis": "finite path family"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(n^2 k epsilon^-2) worst-case left/right transfer reconstruction", "approximationError": "biorthogonal condition number amplifies noise", "basis": "phase-sensitive port tomography"},
+        "verification": {"scalingClass": "polynomial", "scaling": "O(n^3 k + n^2 k epsilon^-2) singular-value, reversal and rate audit", "approximationError": "pseudospectral confidence region", "basis": "independent coherent versus gain/loss decomposition"}
+      },
+      "independentVerification": "Reconstruct the passive/coherent generator independently of gain/loss, then predict rate and orientation reversal with singular-value controls.",
+      "killTest": "Endpoint exchange changes under rate reversal in a way fully explained by nonadiabatic gain/loss while the inferred topology is unchanged.",
+      "sourceRefs": ["corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"]
+    },
+    {
+      "targetId": "FPT-007",
+      "verdict": "polynomial_for_sparse_single_particle_carriers",
+      "asymptoticConclusion": "Sparse single-particle defect models and localized-mode detection are polynomial. Interacting defects, continuum control and the claim that a wall transports information beyond an index are not covered by that favorable scaling.",
+      "stages": {
+        "existence": {"scalingClass": "polynomial", "scaling": "O(n^3) dense spectral flow or sparse polynomial eigensolvers for a finite carrier", "approximationError": "finite volume and spectral truncation", "basis": "single-particle/Fredholm proxy"},
+        "preparation": {"scalingClass": "polynomial", "scaling": "O(n) local couplings and one defect profile in a programmable lattice", "approximationError": "wall width, disorder and boundary mismatch", "basis": "local sparse device"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(k s) spectral/transport records with s=O(epsilon^-2) baseline", "approximationError": "disorder and lifetime variance", "basis": "finite parameter sweep"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(n k epsilon^-2) resolved local intensity/phase records", "approximationError": "detector overlap with localized subspace", "basis": "spatially resolved readout"},
+        "verification": {"scalingClass": "polynomial", "scaling": "O(c n^3) for c homotopic controls plus disorder ensemble", "approximationError": "finite control-family coverage", "basis": "same-index scrambled-information controls"}
+      },
+      "independentVerification": "Compare the target defect with homotopic same-index controls that scramble phase, endpoint representation or selector data while preserving mode count.",
+      "killTest": "Only the protected mode count survives; every proposed extra datum changes under a same-index control or arbitrary boundary choice.",
+      "sourceRefs": ["corpus/programmes/frontier/wave-7/frontier_wave7_08_when_memory_becomes_a_wall_and_changes_topology.md", "corpus/programmes/frontier/wave-7/frontier_wave7_13_lambda_provenance_exhaustion_and_reopen_gates.md"]
+    },
+    {
+      "targetId": "FPT-008",
+      "verdict": "observable_polynomial_microscopic_origin_unknown",
+      "asymptoticConclusion": "A fixed p-channel hydrodynamic response fit is polynomial, but deriving its coefficients and spectral rank from a microscopic strongly coupled carrier can inherit an uncontrolled or exponential many-body cost.",
+      "stages": {
+        "existence": {"scalingClass": "convergence_unknown", "scaling": "effective response algebra O(p^3 k), microscopic derivation not assigned a general scaling", "approximationError": "hydrodynamic truncation and constitutive-model error", "basis": "effective versus microscopic layers kept separate"},
+        "preparation": {"scalingClass": "empirical_unknown", "scaling": "sample and source preparation depends on the chosen fluid/material carrier", "approximationError": "inhomogeneity and boundary conditions", "basis": "no common platform frozen"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(p^2 k epsilon^-2) for all declared auto/cross channels", "approximationError": "finite window, correlated noise and long-time tails", "basis": "linear response matrix"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(p^2 k) calibrated response records", "approximationError": "source/readout mixing and inaccessible stress components", "basis": "multichannel detector"},
+        "verification": {"scalingClass": "polynomial", "scaling": "O(p^3 k) Ward/KMS/positivity residuals plus held-out cross-channel prediction", "approximationError": "model discrepancy remains separate from statistical error", "basis": "identity checks and independent perturbation channel"}
+      },
+      "independentVerification": "Fit a subset of auto/cross responses, then predict held-out channels while independently checking Ward identities, KMS relations and positivity.",
+      "killTest": "Distinct hidden spectra remain equivalent after every accessible stress probe, or the inferred rank depends on an unmeasured constitutive component.",
+      "sourceRefs": ["corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md"]
+    },
+    {
+      "targetId": "FPT-009",
+      "verdict": "polynomial_stabilizer_sector_exponential_generic_sector",
+      "asymptoticConclusion": "Stabilizer/symplectic certification is polynomial, while generic k-logical-qubit tomography scales as 4^k and unrestricted reachability may require exponential search. Source-restricted generators must be certified without universal tomography.",
+      "stages": {
+        "existence": {"scalingClass": "polynomial", "scaling": "O(n^3) tableau/group closure for declared Clifford-like generators", "approximationError": "exact in the finite algebra; excludes generic non-Clifford reachability", "basis": "finite symplectic shadow"},
+        "preparation": {"scalingClass": "convergence_unknown", "scaling": "compiled word length may be polynomial for declared generators but unrestricted synthesis can grow exponentially", "approximationError": "gate synthesis and leakage", "basis": "source-derived word required"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(m epsilon^-2) for selected logical witnesses; generic amplitude estimation is not assumed", "approximationError": "SPAM and coherent gate error", "basis": "restricted witness set"},
+        "detection": {"scalingClass": "exponential", "scaling": "generic logical tomography O(4^k epsilon^-2); stabilizer witnesses remain polynomial", "approximationError": "tomographic incompleteness if restricted", "basis": "explicit favorable/unfavorable fork"},
+        "verification": {"scalingClass": "polynomial", "scaling": "O(poly(n,m,epsilon^-1)) only with generator provenance, randomized/local witnesses and leakage checks", "approximationError": "certificate covers the restricted reachable group, not all unitaries", "basis": "independent compiler and witness schedule"}
+      },
+      "independentVerification": "Derive generators from the carrier, compile with an independent implementation, and verify the restricted logical action with randomized or stabilizer witnesses plus leakage records.",
+      "killTest": "Success requires O(4^k) unrestricted tomography, exponential word search, or arbitrary universal controls that erase source provenance.",
+      "sourceRefs": ["corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md", "corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md"]
+    },
+    {
+      "targetId": "FPT-010",
+      "verdict": "finite_relaxations_polynomial_convergence_unknown",
+      "asymptoticConclusion": "Each frozen finite bootstrap or moment relaxation can be polynomial in basis dimension b, but b grows with truncation and no corpus result supplies a uniform convergence rate to the physical amplitude region.",
+      "stages": {
+        "existence": {"scalingClass": "convergence_unknown", "scaling": "finite SDP/moment relaxations are polynomial in b at fixed precision; b versus physical accuracy is unproved", "approximationError": "truncation and solver tolerance", "basis": "finite positivity/causality relaxation"},
+        "preparation": {"scalingClass": "polynomial", "scaling": "O(b^2) or greater to assemble moments, crossing equations and known poles for a fixed relaxation", "approximationError": "input and discretization error", "basis": "declared finite basis"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(k epsilon^-2) for held-out cross sections or response points", "approximationError": "experimental covariance and unfolding", "basis": "finite observable grid"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(k p) likelihood evaluation against the allowed region", "approximationError": "detector acceptance and nuisance projection", "basis": "held-out observable"},
+        "verification": {"scalingClass": "convergence_unknown", "scaling": "repeat under basis enlargement and independent standard-bound derivation; cost polynomial in each b but limit rate unknown", "approximationError": "relaxation gap and reparameterization risk", "basis": "independent theorem comparison"}
+      },
+      "independentVerification": "Prove non-reducibility against the standard unitarity/analyticity/causality/positivity basis, then test monotone stability under basis enlargement and held-out data.",
+      "killTest": "The proposed inequality is a reparameterized standard bound or disappears under the next controlled basis enlargement.",
+      "sourceRefs": ["corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md"]
+    },
+    {
+      "targetId": "FPT-022",
+      "verdict": "fixed_four_mode_exact_scaling_conditional",
+      "asymptoticConclusion": "The four-mode quotient-scar experiment is constant-size and completely certifiable. A larger cyclic family is polynomial for resolved linear readout, but oriented invariants can become severely ill-conditioned; no favorable asymptotic claim is made for them.",
+      "stages": {
+        "existence": {"scalingClass": "fixed_size_only", "scaling": "exact constant-size four-mode algebra; generalized n-port linear algebra O(n^3)", "approximationError": "zero symbolically at four modes", "basis": "certified finite quotient-scar model"},
+        "preparation": {"scalingClass": "polynomial", "scaling": "O(n) resonators and calibrated sparse couplings for a hub-plus-n-outer extension", "approximationError": "cyclic mismatch and coupling disorder", "basis": "modular resonator proposal"},
+        "sampling": {"scalingClass": "polynomial", "scaling": "O(k n epsilon^-2) individual and summed complex sweeps plus waiting-time records", "approximationError": "drift, nonlinear memory and finite bandwidth", "basis": "resolved port schedule"},
+        "detection": {"scalingClass": "polynomial", "scaling": "O(k n epsilon^-2) resolved records; oriented high-degree invariant conditioning is not bounded", "approximationError": "gain/phase calibration and Vandermonde condition number", "basis": "individual, summed and oriented faces"},
+        "verification": {"scalingClass": "polynomial", "scaling": "O(n^3 + k n epsilon^-2) linear model challenge, symmetry breaking and cyclic reversal at fixed n", "approximationError": "model-selection and calibration residual", "basis": "independent resolved-versus-lumped fit"}
+      },
+      "independentVerification": "Blindly fit resolved and lumped models, disable detector faces in turn, weakly break cyclic symmetry and require predicted recovery of the two contrast modes and orientation sign.",
+      "killTest": "No contrast modes exist under individual readout, or gain, bandwidth, relabeling and ordinary hidden-state nuisances explain the linked signature package.",
+      "sourceRefs": ["corpus/programmes/frontier/wave-6/frontier_wave6_15_four_mode_quotient_scar_platform.md", "corpus/programmes/frontier/wave-6/frontier_wave6_16_final_exhaustion_and_branch_register.md"]
+    }
+  ]
+}

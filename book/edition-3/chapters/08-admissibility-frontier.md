@@ -222,6 +222,17 @@ The selector fork also admits an exact reduced dynamics. A convex competition se
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-form-was-already-latent-claim-1.md)
 
+<a id="hot-off-the-press-the-reachable-frontier-has-a-cost-shape"></a>
+## Hot off the press — the reachable frontier has a cost shape
+
+> **Section status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The nearest eleven target families now carry separate existence, preparation, sampling, detection and independent-verification costs. Most proposed records are polynomial after a small carrier has been prepared, but that does not make the whole frontier easy: the two-current many-body calculation remains exponential through its Hilbert-space dimension, unrestricted logical tomography remains exponential in logical-qubit count, matched-film yield is empirical, continuum and bootstrap convergence remain unbounded, and the exact quotient-scar result is constant-size rather than a scaling theorem. This changes where to look. Sparse system identification, restricted witnesses, differential measurements and common-sample estimators are genuine theoretical-engineering opportunities; hidden Hilbert dimension, unrestricted tomography and unproved limit convergence are stop signs. Complexity is not promoted to a new fundamental law here. It is part of the practical admissibility boundary because a mathematically allowed distinction does not become physical evidence until it can be prepared, retained and independently checked.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-reachable-frontier-has-a-cost-shape-claim-1.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -274,6 +285,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [frontier_wave7_68_selector_split_fingerprint_and_channel_breaking_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_68_selector_split_fingerprint_and_channel_breaking_gate.md)
 - [frontier_wave7_69_q_provenance_terminal_synthesis.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_69_q_provenance_terminal_synthesis.md)
 - [frontier_wave7_70_g2_response_folding_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md)
+- [frontier_complexity_cards_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md)
 - [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 

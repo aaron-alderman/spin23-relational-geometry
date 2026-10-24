@@ -1,6 +1,6 @@
 # Frontier exhaustion checkpoint v1
 
-**Date:** 24 October 2026  
+**Date:** 25 October 2026
 **Status:** explicit gate enumeration exhausted across the complete corpus Markdown/JSON scope; physics programme remains open  
 **Queue authority:** [49-topic register](open_topics_register_v1.json)
 
@@ -13,7 +13,7 @@ The corpus has a closed navigation loop from target to frontier area to detector
 - all 57 admissibility packets, including AZ-041--AZ-057 beyond the older zone register;
 - all 90 Wave 6--7 packet files in the reconciled audit (17 Wave 6 and 73 Wave 7), with reused display numbers held under distinct audit identities;
 - every remaining programme Markdown or JSON file containing the declared open-gate vocabulary: 69 files, of which 48 map to physics topics and 21 retain separate programme governance;
-- the complete source corpus-and-evidence backstop: all 2,643 in-scope Markdown/JSON artifacts hashed and inventoried (2,188 corpus narratives and 455 evidence artifacts, excluding the independently verified generated control surfaces); 1,580 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 89 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
+- the complete source corpus-and-evidence backstop: all 2,654 in-scope Markdown/JSON artifacts hashed and inventoried (2,199 corpus narratives and 455 evidence artifacts, excluding the independently verified generated control surfaces); 1,588 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 89 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
 - 49 independently closable topics: 9 active, 17 open, 3 audit, 13 gated, 2 blocked and 5 closed with retained evidence.
 
 No scanned gate is orphaned. The [full-corpus census](full_corpus_gate_census_v1.md) distinguishes old closure language, live semantic ownership, navigation surfaces and separately governed inquiries rather than equating every occurrence of “open” with a new target. “Exhausted” here means the declared corpus search and ownership problem is exhausted, not that nature, unstated tacit questions, the literature, or every possible experiment is exhausted.
@@ -22,13 +22,15 @@ AZ-056 adds a second coordinate to this result. AZ-052 charts horizontal motion 
 
 AZ-057 closes OT-001 for the declared three-mechanism selector family and integrates OT-002--OT-005 in one generative simulator. Reversal tomography separates geometric holonomy from even splitting/loss effects, and process singular values finish the separation. The same run proves that an independently declared (Y), complete measurement record and matched-contraction thermodynamic ledgers are algebraically compatible. Their remaining gates are physical: carrier calibration, source-native (Y), record efficiency and measured heat/work/activity.
 
+The [complexity-card audit](frontier_complexity_cards_v1.md) completes OT-021's target-level pass across FPT-001--010 and FPT-022. Most declared records are polynomial after a carrier exists, but that favorable result is sharply conditional. FPT-004 retains exponential many-body preparation, sampling and verification through its Hilbert-space dimension; generic FPT-009 logical tomography costs exponentially in logical-qubit count; FPT-003 material yield remains empirical; FPT-008 microscopic origin and FPT-010 relaxation convergence remain unbounded; and FPT-022 is exact only at fixed four-mode size. OT-021 therefore remains an audit until the same five-stage schema is enforced on every newly active packet.
+
 The [finesse technology pathway](finesse_technology_pathway_v1.md) is the execution overlay: begin with a 90-day resonator-chain design and blind challenge, reuse its schema on a three-mode coherent selector platform, then advance to same-film response/force closure. Its escalation rule withholds “new physics” until a residual survives preregistered nuisance controls, independent-carrier replication and a common-parameter operator model.
 
 ## Shape of the remaining frontier
 
 The live frontier is not a sphere around one grand theory. It is a layered, perforated boundary:
 
-1. **Computational inner rim:** exact mathematics exists and the next result needs only derivation or simulation—finite-band Levinson correction, adaptive pole continuation, source-native detector census, G2 response folding, chip simulation and QFT mixing/KMS calculations.
+1. **Computational inner rim:** exact mathematics exists and the next result needs derivation or simulation, but its cost is now typed—finite-dimensional linear carriers are usually polynomial; the two-current many-body lane is exponential in Hilbert dimension; and continuum/relaxation convergence is not assumed.
 2. **Instrumented middle rim:** a physical carrier exists or has close precedent, but a decisive record bundle is missing—projector/process tomography, selector Y, conditioned versus unconditional maps, same-film response-to-Casimir closure, low-frequency two-current rank and quotient-scar hardware.
 3. **Translation gaps:** the mathematics is exact but the arrow to operators, amplitudes, actions or observables is absent—A2 carrier maps, graph-to-Jordan products, triality/Furey reflection, D4 singularity operators and the Hecke test.
 4. **Fundamental firewall:** torsion, cosmology, continuum mass gap and exceptional unification remain blocked or gated until an action, anomaly audit, scale matching and a no-refit prediction arrive together.
