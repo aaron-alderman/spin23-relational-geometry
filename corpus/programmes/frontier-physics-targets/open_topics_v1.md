@@ -73,7 +73,7 @@ for another dimensionless redesign.
 | OT-033 | Real declaration-corpus adaptive census | gated by AZ-060 on the named DeclFold sources, `fold/decls.json` and the pinned Lean/Lake environment; replaces synthetic chains only after source-native occupancy and fibre data reproduce |
 | OT-036 | Microscopic capture and radiation ledger | replaces the successful toy bath with a source-native radiative or phononic channel |
 | OT-037 | Integrated-photonic selector chip | AZ-061 supplies a passing coupled-mode wedge but exposes signed-coupling, reference-port, full-wave tolerance and separate-selector gates; one fabrication-native route must now be chosen and simulated |
-| OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-069 finds a resolution-dependent high-energy reopening: one broken mode at 1% but two at 0.1% in the illustrative five-coordinate benchmark; run and threshold-match the gap before any KMS projection |
+| OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-070 keeps the five-coordinate response at one broken mode for 1% but two for 0.1% across 400 GeV--100 TeV at one loop; precision-match and instrument the stable gap before KMS projection |
 | OT-048 | Five-coordinate incidence observable likelihood | joins bottom, weak and neutrino compasses with signed interference and covariance |
 
 ## P2 — gated translation problems

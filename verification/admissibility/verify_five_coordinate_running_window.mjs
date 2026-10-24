@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+const data = JSON.parse(await readFile(new URL("../../evidence/data/five-coordinate-running-window-v1.json", import.meta.url)));
+assert.equal(data.protocol, "five-coordinate-running-window/1");
+assert.deepEqual(data.sampleGeV, [400, 1000, 3000, 10000, 100000]);
+assert.equal(data.gates.percentRankOneAcrossWindow, true);
+assert.equal(data.gates.perMilleRankOneAcrossWindow, false);
+assert.equal(data.gates.leadingDirectionStableAt1eMinus5, true);
+assert(data.gates.secondRatioRange[0] > 1e-3);
+assert(data.gates.secondRatioRange[1] < 1e-2);
+assert(data.rows.every(row => row.relativeSpectrum[0] === 1));
+assert(data.rows.at(-1).couplings.yt < data.rows[0].couplings.yt);
+assert(data.rows.at(-1).couplings.g2 < data.rows[0].couplings.g2);
+assert.match(data.firewall, /does not include electroweak threshold matching/);
+console.log("PASS five-coordinate running window");
+console.log(`second_ratio_range=${data.gates.secondRatioRange.join("..")}`);
+console.log(`minimum_leading_overlap=${Math.min(...data.rows.map(row => row.leadingOverlapWith400GeV))}`);

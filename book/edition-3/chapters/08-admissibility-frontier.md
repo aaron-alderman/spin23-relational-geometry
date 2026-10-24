@@ -502,6 +502,25 @@ The result does not yet certify a physical energy window. Running couplings, bro
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-current-window-has-a-resolution-ceiling-claim-3.md)
 
+<a id="hot-off-the-press-the-high-energy-window-survives-running"></a>
+## Hot off the press — the high-energy window survives running
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** The high-energy reopening is not confined to one illustrative point. A declared one-loop third-family run from 400 GeV to 100 TeV keeps the second mode between 0.1315 and 0.1637 percent of the first. The leading orientation changes by less than two parts in a million in overlap.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-high-energy-window-survives-running-claim-1.md)
+
+The sampled window therefore remains one broken port at one-percent resolution and two broken ports at one-per-mille resolution. Ordinary running does not rapidly rotate the response out of its top-dominated direction. The resolution ceiling, rather than scale instability, is the immediate limitation.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-high-energy-window-survives-running-claim-2.md)
+
+This remains a diagnostic, not a precision Standard-Model prediction. Broken-phase electroweak matching, higher-order uncertainty, detector covariance and a real interference-sensitive observable are still required. The practical invitation is exact: look above top production, attempt the percent-level reduced model, and use per-mille sensitivity as the stress test that should reveal the second microscopic direction.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-high-energy-window-survives-running-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

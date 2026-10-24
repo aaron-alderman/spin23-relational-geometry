@@ -21,6 +21,12 @@ const KNOWN_CORRECTIONS = new Map([
 
 const toPosix = value => value.split(sep).join("/");
 const markdownRoots = ["corpus", "book/edition-3/chapters", "verification"];
+// Generated navigation certificates remain searchable, but cannot define the
+// scientific-content identity that they themselves report.  In particular,
+// FRONT_DOOR inventories the retained retrieval baseline; hashing it here
+// would make baseline and front-door regeneration recursively invalidate one
+// another.  Its dedicated repository test governs its own byte identity.
+const contentIdentityExcludedPaths = new Set(["corpus/FRONT_DOOR.md"]);
 const cacheValidationIntervalMs = 5000;
 let cache = null;
 
@@ -172,9 +178,11 @@ function buildIndex(root) {
   const contentHash = createHash("sha256");
   const documents = paths.map((path, id) => {
     const text = readFileSync(join(resolvedRoot, path), "utf8");
-    contentHash.update(`${path}\0`);
-    contentHash.update(text);
-    contentHash.update("\n");
+    if (!contentIdentityExcludedPaths.has(path)) {
+      contentHash.update(`${path}\0`);
+      contentHash.update(text);
+      contentHash.update("\n");
+    }
     const semanticText = semanticMarkdown(text);
     const title = extractTitle(text, path);
     const headings = [...semanticText.matchAll(/^#{2,6}\s+(.+)$/gmu)].map(match => match[1]).join(" ");

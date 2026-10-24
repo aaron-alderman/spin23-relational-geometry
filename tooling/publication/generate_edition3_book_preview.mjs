@@ -278,6 +278,7 @@ const sectionTaxonomy = {
   "Hot off the press — two currents require three calculations": "external",
   "Hot off the press — the microscopic source quotient has five coordinates": "obstruction",
   "Hot off the press — the two-current window has a resolution ceiling": "conditional",
+  "Hot off the press — the high-energy window survives running": "conditional",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -362,6 +363,7 @@ const sectionArchetype = {
   "Hot off the press — two currents require three calculations": "cartographer",
   "Hot off the press — the microscopic source quotient has five coordinates": "auditor",
   "Hot off the press — the two-current window has a resolution ceiling": "integrator",
+  "Hot off the press — the high-energy window survives running": "builder",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -655,6 +657,15 @@ admissibilitySections.splice(orientedSeamIndex + 22, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 23, 0, [
+  "Hot off the press — the high-energy window survives running",
+  [
+    "**Provisional integration note — 25 October 2026.** The high-energy reopening is not confined to one illustrative point. A declared one-loop third-family run from 400 GeV to 100 TeV keeps the second mode between 0.1315 and 0.1637 percent of the first. The leading orientation changes by less than two parts in a million in overlap.",
+    "The sampled window therefore remains one broken port at one-percent resolution and two broken ports at one-per-mille resolution. Ordinary running does not rapidly rotate the response out of its top-dominated direction. The resolution ceiling, rather than scale instability, is the immediate limitation.",
+    "This remains a diagnostic, not a precision Standard-Model prediction. Broken-phase electroweak matching, higher-order uncertainty, detector covariance and a real interference-sensitive observable are still required. The practical invitation is exact: look above top production, attempt the percent-level reduced model, and use per-mille sensitivity as the stress test that should reveal the second microscopic direction.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -903,6 +914,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — two currents require three calculations": ["corpus/programmes/admissibility/admissibility_67_two_current_source_and_scheme_census.md", "corpus/programmes/closure/programme_closure_03_a_controlled_standard_model_external_source_action_exists_but_does_not_fix_the_frame.md", "corpus/programmes/closure/programme_closure_04_vacuum_locality_closes_the_two_current_spectral_measure_on_h2r_but_not_the_thermal_response.md"],
   "Hot off the press — the microscopic source quotient has five coordinates": ["corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md", "corpus/programmes/lane-expansion/programme_lane_expansion_33_the_action_derived_two_current_block_removes_bl_shear_but_not_the_incidence_normalisation_fork.md", "corpus/programmes/lane-expansion/programme_lane_expansion_35_the_gauge_typed_source_quotient_has_one_anomaly_coordinate_and_no_incidence_eigenray.md"],
   "Hot off the press — the two-current window has a resolution ceiling": ["corpus/programmes/admissibility/admissibility_69_threshold_spectrum_and_resolution_ceiling.md", "corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md", "corpus/programmes/lane-expansion/programme_lane_expansion_20_the_broken_current_anchor_is_a_threshold_staircase_not_a_universal_axis.md"],
+  "Hot off the press — the high-energy window survives running": ["corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md", "corpus/programmes/admissibility/admissibility_69_threshold_spectrum_and_resolution_ceiling.md", "corpus/programmes/lane-expansion/programme_lane_expansion_19_absorptive_yukawa_spectroscopy_supplies_a_physical_broken_current_anchor.md"],
 };
 
 const evidenceReading = key => ({
