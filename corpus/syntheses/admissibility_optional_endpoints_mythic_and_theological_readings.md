@@ -100,6 +100,23 @@ A world with real regularity, underdetermination, selection and consequence perm
 
 Finite observers receive the world through limited ports, histories and records. Under the theological assumptions, epistemic limitation can be compatible with a creation intended for responsible inquiry rather than compulsory recognition. It does not follow that every instance or degree of divine hiddenness is justified. Detector limits explain neither God nor unbelief; they supply a picture of creaturely, situated knowledge.
 
+### Presence as junction, not inserted centre
+
+The pinned Claimipedia graph supplies a bounded picture for this reading. Its
+principal kenosis node is load-bearing in the undirected graph: several cycle
+classes depend on it and deleting it separates the surrounding discourse. Yet
+the authored arrows flow into the node and onward without returning through it.
+Under T0–T3, this may picture a form of presence that joins and makes passage
+possible without forcing every relation to circulate around a dominating
+centre.
+
+The picture must not be promoted beyond its source. The node is explicitly
+present, so it is not an “absent God” encoded as a puncture. The graph does not
+contain the local sections, overlap maps or higher cells required for a
+cohomological obstruction. The exact result is only a cycle-bearing
+articulation with directed non-return. The theological reading begins after
+that result and depends on T0–T3; it supplies no evidence for those assumptions.
+
 ### Incarnation, cross and resurrection as the Christian arc
 
 Under an explicitly Christian continuation, incarnation says that God does not merely govern the admissible region from outside but enters creaturely conditions without abolishing them. The cross pictures power refusing domination and sharing the cost of a world with genuine consequence. Resurrection names a desired endpoint of restoration without erasure: history is not denied, suffering is not renamed good, and what is broken is not the final boundary. This arc may orient kenotic practice; it is not a physics model, symmetry breaking mechanism or empirical prediction.
@@ -135,3 +152,4 @@ The theological reading is allowed positive content because its assumptions are 
 - [Orientation architecture](../programmes/orientation/orientation_architecture.md)
 - [Frontier experiment atlas](../programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md)
 - [Current research frontier crosswalk](../programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md)
+- [Claimipedia kenotic-pole topology audit](../programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)

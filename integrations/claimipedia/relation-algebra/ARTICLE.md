@@ -159,6 +159,38 @@ obligations have not been made reversible. The quotient shows the stable
 transformation skeleton; the radical preserves the route-dependent history
 that the quotient forgets.
 
+## The kenotic junction: load-bearing without return
+
+The outside predecessor can now be described more exactly. In the simple
+undirected relationship complex, the *Christianity–kenosis* node is an
+articulation of degree six. Deleting it increases the component count from five
+to seven and lowers the graph's first cycle rank from seven to four. Three
+independent undirected cycle classes therefore use the node.
+
+The authored arrows tell a different part of the story. Five arrows enter the
+node, one leaves toward Temple, and no directed path returns. Its strongly
+connected component is a singleton. The exact signature is therefore:
+
+\[
+\text{undirected cycle support}
++\text{articulation}
++\text{directed non-return}.
+\]
+
+This is stronger than saying that the node is “central.” It says that several
+redundant antecedent routes depend on the junction, while passage into the
+Temple–Spin reversible domain occurs through one cut edge. A second kenosis
+node in the Wick-Rotation lane is simpler: an acyclic one-way bridge whose
+deletion changes connectivity but not cycle rank.
+
+Neither node is a puncture. Both are present, and the capture supplies only a
+one-complex, with no declared triangles or higher cells whose removal could
+create a persistent hole. A defensible absent-pole claim would require a cover,
+local sections, overlap maps and a cover-independent obstruction to gluing.
+The [kenotic-pole topology audit](../../../corpus/programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)
+therefore ends with a three-sector globalization test rather than a metaphysical
+identification.
+
 ## The relation to admissibility
 
 This construction clarifies the corpus's Jordan–Lie reading without turning
@@ -262,6 +294,8 @@ These examples are detailed in the
 | Does the pinned relation graph generate an order-sensitive algebra? | **Closed for this capture.** The exact unital closure has dimension 66 and all six generator pairs have nonzero commutators. |
 | Is the Spin–Temple compressed channel a full two-by-two matrix algebra? | **Closed for this capture.** It is \(M_2(\mathbb Q)\), with commutator algebra \(\mathfrak{sl}_2(\mathbb Q)\). |
 | Is that two-claim subsystem autonomous? | **Closed negatively.** The kenosis predecessor prevents descent to an isolated two-node system. |
+| What exact role does that kenosis predecessor play? | **Closed for the pinned one-complex.** It is a cycle-bearing articulation with an acyclic funnel orientation: three undirected cycle classes depend on it, but no directed return passes through it. |
+| Is the kenosis junction a puncture or globalization obstruction? | **Open and unsupported at present.** A declared cell complex or three-sector cover with local sections and overlap maps is required. |
 | What survives after predecessor closure and removal of one-way history? | **Closed for the declared aggregation.** The semisimple quotient is \(\mathbb Q\oplus M_2(\mathbb Q)\), with a 30-dimensional radical. |
 | Does the current relationship graph close to \(C_2\) or \(Spin(2,3)\)? | **Closed negatively for the direct current-graph route.** There is no second root channel. |
 | Is this the unique algebra of Claimipedia? | **Open, and probably the wrong question without a declared representation.** Different weights, edge identities, evidence operators or provenance operators can produce different algebras. |

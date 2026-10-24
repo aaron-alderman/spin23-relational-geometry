@@ -1,0 +1,70 @@
+{
+  "schema": "claimipedia-kenotic-pole-topology/1",
+  "date": "2026-10-24",
+  "sourceHash": "82d9c5a47f4957ddbd302927baed0acb05522773762966a4c9ffc34ed86f94c3",
+  "base": {
+    "vertices": 38,
+    "undirectedEdges": 40,
+    "components": 5,
+    "beta1": 7
+  },
+  "nodes": [
+    {
+      "node": "claim.grandThesis.christianity-kenosis",
+      "undirectedDegree": 6,
+      "incomingCount": 5,
+      "outgoingCount": 1,
+      "incidentTypes": {
+        "incoming": {"Qualifies": 3, "DependsOn": 2},
+        "outgoing": {"Qualifies": 1}
+      },
+      "directedCycleMember": false,
+      "stronglyConnectedComponentSize": 1,
+      "articulation": true,
+      "componentIncreaseOnDeletion": 2,
+      "beta1AfterDeletion": 4,
+      "cycleRankLostOnDeletion": 3,
+      "incidentBridgeEdges": [
+        ["claim.grandThesis.christianity-kenosis", "claim.grandThesis.liberalism"],
+        ["claim.grandThesis.christianity-kenosis", "claim.grandThesis.temple-sourcery"]
+      ],
+      "neighborComponentsAfterDeletion": [
+        [
+          "claim.biblicalResurrection.relationalFieldRupture",
+          "claim.biblicalResurrection.simulationRupture",
+          "claim.claimipedia.loadBearing.followMeThirdOrder",
+          "claim.claimipedia.loadBearing.jesusIsKing"
+        ],
+        ["claim.grandThesis.liberalism"],
+        ["claim.grandThesis.temple-sourcery"]
+      ],
+      "classification": "cycle-bearing articulation with acyclic funnel orientation"
+    },
+    {
+      "node": "claim.wickRotatedWisdom.kenosis",
+      "undirectedDegree": 2,
+      "incomingCount": 1,
+      "outgoingCount": 1,
+      "incidentTypes": {
+        "incoming": {"DependsOn": 1},
+        "outgoing": {"Supports": 1}
+      },
+      "directedCycleMember": false,
+      "stronglyConnectedComponentSize": 1,
+      "articulation": true,
+      "componentIncreaseOnDeletion": 1,
+      "beta1AfterDeletion": 7,
+      "cycleRankLostOnDeletion": 0,
+      "incidentBridgeEdges": [
+        ["claim.wickRotatedWisdom.kenosis", "claim.wickRotatedWisdom.twoLoves"],
+        ["claim.wickRotatedWisdom.kenosis", "claim.wickRotatedWisdom.wickRotation"]
+      ],
+      "neighborComponentsAfterDeletion": [
+        ["claim.wickRotatedWisdom.twoLoves"],
+        ["claim.wickRotatedWisdom.wickRotation"]
+      ],
+      "classification": "acyclic one-way bridge"
+    }
+  ],
+  "boundary": "This is graph topology of the pinned authored Claimipedia relationship capture. The first Betti number belongs to its simple undirected one-complex; arrow direction and relation type are audited separately. It does not establish a puncture, sheaf obstruction, divine referent, physical defect or field."
+}

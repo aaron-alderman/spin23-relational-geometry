@@ -66,11 +66,16 @@ An explicitly Christian continuation reads incarnation as entry into creaturely 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/12-optional-endpoints-and-readings-theology-under-a-declared-assumption-claim-2.md)
 
+The pinned Claimipedia graph offers one bounded picture of presence without domination. Its principal kenosis node supports three undirected cycle classes and is an articulation, yet the authored arrows flow through it without directed return. Under the chapter's declared theological premises this may picture a load-bearing junction that does not force every relation to circulate around itself. The exact result remains graph topology: the node is present, not a puncture; no cohomology or divine referent follows without a separately declared cover, local sections and failed globalization test.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/12-optional-endpoints-and-readings-theology-under-a-declared-assumption-claim-3.md)
+
 ## Chapter sources
 
 - [admissibility_optional_endpoints_mythic_and_theological_readings.md](../../../corpus/syntheses/admissibility_optional_endpoints_mythic_and_theological_readings.md)
 - [kenotic_governance_tri_omni_theism_and_a_lawful_world.md](../../../corpus/syntheses/kenotic_governance_tri_omni_theism_and_a_lawful_world.md)
 - [orientation_architecture.md](../../../corpus/programmes/orientation/orientation_architecture.md)
+- [frontier_wave7_45_kenotic_pole_topology_audit.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)
 - [EXPLANATORY_STANDARD.md](../../../corpus/EXPLANATORY_STANDARD.md)
 
 ---

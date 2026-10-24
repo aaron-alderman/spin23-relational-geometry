@@ -40,6 +40,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Claim · Optional endpoints and larger readings · Mythic arcs are pictures (2)](../details/12-optional-endpoints-and-readings-mythic-arcs-are-pictures-claim-2.md)
 - [Claim · Optional endpoints and larger readings · Theology under a declared assumption (1)](../details/12-optional-endpoints-and-readings-theology-under-a-declared-assumption-claim-1.md)
 - [Claim · Optional endpoints and larger readings · Theology under a declared assumption (2)](../details/12-optional-endpoints-and-readings-theology-under-a-declared-assumption-claim-2.md)
+- [Claim · Optional endpoints and larger readings · Theology under a declared assumption (3)](../details/12-optional-endpoints-and-readings-theology-under-a-declared-assumption-claim-3.md)
 
 ---
 

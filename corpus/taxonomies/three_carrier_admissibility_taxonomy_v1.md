@@ -256,6 +256,21 @@ alternating form, the asymmetric \((-1,-2)\) Cartan coupling and the \(C_2\)
 Serre relations. See the [programme-core calculation](../programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md)
 and [operator exhaustion](../programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md).
 
+### Kenotic junction topology
+
+The pinned relationship one-complex has 38 vertices, 40 simple undirected
+edges, five components and first cycle rank seven. The Christianity–kenosis
+node is the **Kenotic Cycle-Bearing Articulation**: its deletion adds two
+components and removes three cycle classes, while its authored orientation has
+five incoming arrows, one outgoing arrow and no directed return. The distinct
+Wick-Rotation kenosis node is the **Kenotic Acyclic Bridge**: its deletion adds
+one component but removes no cycle class.
+
+These names classify exact graph roles, not theological or physical objects.
+Neither node is an absent pole or puncture. The next admissible object would be
+a three-sector cover with declared local sections and overlap maps, followed by
+a globalization test. See the [topology audit](../programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md).
+
 ## III. Sourcery
 
 Sourcery accepts caller-supplied graphs, so it has no single fixed node count.
