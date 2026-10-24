@@ -1,0 +1,40 @@
+{
+  "schema": "two-gram-selector-collision/1",
+  "date": "2026-10-25",
+  "objects": {
+    "environmentGram": "G3=Gram(e_ref,e0,e1)",
+    "channelGram": "G2=E^dagger E=Gram(e0,e1)"
+  },
+  "selectors": {
+    "environmentVolume": {
+      "determinant": "det G3=R^2-|s-c|^2",
+      "maximum": "s=c=conj(f1)f0",
+      "orthogonality": "the residuals after removing the reference ray are orthogonal"
+    },
+    "channelVolume": {
+      "determinantForNormalizedColumns": "det G2=1-|s|^2",
+      "maximumWhenZeroIsAdmissible": "s=0",
+      "orthogonality": "the complete conditioned environment rays are orthogonal",
+      "lockingDiscriminant": "(tr G2)^2-4 det G2=4|s|^2"
+    }
+  },
+  "compatibility": {
+    "simultaneousInteriorMaximum": "c=0",
+    "strictNonzeroTransferVerdict": "distinct whenever c is nonzero and the Gram disk contains zero",
+    "meaning": "orthogonal residual ports and an isotropic two-column lock are different physical requirements"
+  },
+  "rationalCheckpoint": {
+    "f0": "3/5",
+    "f1": "5/13",
+    "c": "3/13",
+    "R2": "2304/4225",
+    "environmentDetAtCentre": "2304/4225",
+    "environmentDetAtZero": "2079/4225",
+    "channelDetAtCentre": "160/169",
+    "channelDetAtZero": 1,
+    "lockingDiscriminantAtCentre": "36/169",
+    "lockingDiscriminantAtZero": 0
+  },
+  "corpusConsequence": "The causal partial-sewing centre is an anisotropic locking tensor at nonzero c. The earlier isotropic locking vacuum lies at a different admissible sewing point.",
+  "status": "exact selector no-go; the physical objective or a combined functional remains to be derived"
+}

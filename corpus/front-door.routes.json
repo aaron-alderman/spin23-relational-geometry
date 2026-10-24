@@ -1,0 +1,185 @@
+{
+  "schema": "spin23-corpus-front-door-routes/v1",
+  "principle": "The corpus front door is an executable atlas of the interior: every assertion resolves to an exact retained object, and every retained object is either reachable from a declared entrance or explicitly classified.",
+  "authorityBoundary": "This atlas reports repository structure and declared epistemic surfaces. It does not promote claims, replace source evidence, or grant publication, corpus-admission, runtime, or deployment authority.",
+  "routes": [
+    {
+      "id": "orientation",
+      "title": "Understand the present claim",
+      "purpose": "Recover the corpus's explanatory order, current synthesis, vocabulary, and limits before following historical branches.",
+      "roots": [
+        {
+          "id": "reading-contract",
+          "path": "corpus/READING_CONTRACT.md",
+          "epistemicStatus": "canonical interpretation",
+          "authority": "controls explanatory order; does not establish empirical truth",
+          "provenance": "maintained corpus source"
+        },
+        {
+          "id": "current-synthesis",
+          "path": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+          "epistemicStatus": "current reader synthesis",
+          "authority": "summarizes typed results and open boundaries; cited evidence remains controlling",
+          "provenance": "maintained corpus synthesis"
+        },
+        {
+          "id": "explanatory-standard",
+          "path": "corpus/EXPLANATORY_STANDARD.md",
+          "epistemicStatus": "editorial and reasoning standard",
+          "authority": "controls presentation discipline; does not promote claims",
+          "provenance": "maintained corpus governance"
+        },
+        {
+          "id": "glossary",
+          "path": "corpus/GLOSSARY.md",
+          "epistemicStatus": "working vocabulary",
+          "authority": "defines local usage; underlying claims retain their own status",
+          "provenance": "maintained corpus source"
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "Find bounded work",
+      "purpose": "Enter through a role, live topic, target, experiment, or detector rather than through chronology.",
+      "roots": [
+        {
+          "id": "role-map",
+          "path": "corpus/START_HERE_BY_ROLE.md",
+          "epistemicStatus": "task navigation",
+          "authority": "routes readers to controlling objects; grants no research authority",
+          "provenance": "maintained corpus source"
+        },
+        {
+          "id": "open-topics",
+          "path": "corpus/programmes/frontier-physics-targets/open_topics_v1.md",
+          "epistemicStatus": "maintained research queue",
+          "authority": "describes live topics; Mission Control remains authoritative for scheduling",
+          "provenance": "frontier-physics target programme"
+        },
+        {
+          "id": "target-set",
+          "path": "corpus/programmes/frontier-physics-targets/frontier_physics_target_set_v1.md",
+          "epistemicStatus": "maintained target atlas",
+          "authority": "maps targets and gates; does not establish a physical result",
+          "provenance": "frontier-physics target programme"
+        },
+        {
+          "id": "experiment-atlas",
+          "path": "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md",
+          "epistemicStatus": "experiment design atlas",
+          "authority": "records proposed discriminators and controls; does not report completed experiments unless cited",
+          "provenance": "frontier-physics target programme"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "Inspect claims and evidence",
+      "purpose": "Move from a statement to its status, certificate, data, counterevidence, and reproducibility boundary.",
+      "roots": [
+        {
+          "id": "evidence-spine",
+          "path": "corpus/EVIDENCE_SPINE.md",
+          "epistemicStatus": "generated structural evidence index",
+          "authority": "joins exact observed references and marked inferences; does not promote scientific status or widen certificate scope",
+          "provenance": "generated from the canonical manifest and current retained claim text"
+        },
+        {
+          "id": "result-ledger",
+          "path": "book/edition-3/chapters/08-result-ledger.md",
+          "epistemicStatus": "curated result ledger",
+          "authority": "reader index only; exact claims and certificates remain controlling",
+          "provenance": "generated Edition 3 source"
+        },
+        {
+          "id": "verification-guide",
+          "path": "verification/README.md",
+          "epistemicStatus": "verification navigation",
+          "authority": "routes to executable certificates; a passing certificate has only its declared scope",
+          "provenance": "repository verification layer"
+        },
+        {
+          "id": "document-map",
+          "path": "corpus/claims/0000-0099/00_research_document_map.md",
+          "epistemicStatus": "accretive provenance ledger",
+          "authority": "preserves chronology and links; not a standalone current synthesis",
+          "provenance": "append-only claims ledger"
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "title": "Audit authority and provenance",
+      "purpose": "Inspect the exact inventory, publication boundary, repository history, and stewardship constraints.",
+      "roots": [
+        {
+          "id": "corpus-manifest",
+          "path": "corpus/registers/spin23_corpus_manifest.json",
+          "epistemicStatus": "canonical file inventory",
+          "authority": "records canonical paths, sizes, and hashes at its generation point",
+          "provenance": "generated by tooling/audit/audit_spin23_corpus_manifest.mjs"
+        },
+        {
+          "id": "publication-authority",
+          "path": "integrations/claimipedia/PUBLICATION-AUTHORITY.md",
+          "epistemicStatus": "publication authority contract",
+          "authority": "defines the repository/Claimipedia boundary",
+          "provenance": "Claimipedia integration source"
+        },
+        {
+          "id": "repository-proposal",
+          "path": "corpus/governance/REPOSITORY_PROPOSAL.md",
+          "epistemicStatus": "repository governance record",
+          "authority": "describes repository structure and transition history",
+          "provenance": "corpus governance source"
+        },
+        {
+          "id": "license",
+          "path": "LICENSE.md",
+          "epistemicStatus": "license",
+          "authority": "controls reuse terms within its stated scope",
+          "provenance": "repository root"
+        }
+      ]
+    }
+  ],
+  "minimumViableProfiles": [
+    {
+      "id": "interpret",
+      "title": "Interpret faithfully",
+      "rootIds": ["reading-contract", "current-synthesis", "explanatory-standard", "glossary"],
+      "requiredPaths": []
+    },
+    {
+      "id": "choose-work",
+      "title": "Choose one bounded research task",
+      "rootIds": ["reading-contract", "role-map", "open-topics", "target-set"],
+      "requiredPaths": [
+        "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_register_v1.json"
+      ]
+    },
+    {
+      "id": "audit",
+      "title": "Audit claims, provenance, and authority",
+      "rootIds": ["reading-contract", "evidence-spine", "result-ledger", "verification-guide", "document-map", "corpus-manifest", "publication-authority"],
+      "requiredPaths": [
+        "corpus/registers/corpus_evidence_spine.json",
+        "tooling/indexing/generate_corpus_evidence_spine.mjs",
+        "tooling/audit/audit_spin23_corpus_manifest.mjs",
+        "tooling/audit/audit_markdown_links.mjs"
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "Design a discriminating experiment",
+      "rootIds": ["reading-contract", "current-synthesis", "experiment-atlas", "target-set", "verification-guide"],
+      "requiredPaths": [
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_register_v1.json",
+        "corpus/programmes/frontier-physics-targets/experiment_starter_kit.md"
+      ]
+    }
+  ]
+}

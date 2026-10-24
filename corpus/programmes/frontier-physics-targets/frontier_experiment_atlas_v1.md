@@ -309,13 +309,14 @@ This atlas converts every canonical frontier into a realistic controlled experim
 
 **Platform.** The holonomy chip or modular acoustic loop extended by a separately addressable dissipative or anisotropic selector segment Y.
 
-**Hypothesis.** A carrier-native Y changes the fixed point and contraction tangent rather than merely relabelling a preselected outcome.
+**Hypothesis.** A carrier-native Y changes the fixed point and contraction tangent rather than merely relabelling a preselected outcome; its independently declared, correctly typed objective predicts the measured Gram point and, when objectives share that point, a distinct path or cost record.
 
 **Interventions**
 
 - Prepare at least twelve initial states spanning the accessible manifold
 - Toggle Y on/off and reverse its axis
 - Match total loss and cycle time across conditions
+- At each frequency run phase-referenced L, R, L+R and L+iR preparations
 
 **Recorded observables**
 
@@ -323,6 +324,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Return-map Jacobian
 - Fixed-point location
 - Escape and convergence times
+- Complex transfers $f_0$ and $f_1$, coherence $s$, normalized Gram-disk coordinate $u$ and slack $\Delta$
 
 **Controls**
 
@@ -330,14 +332,17 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Y inferred only from independent calibration
 - Multiple initial states
 - Axis reversal
+- Intensity-only reconstruction as a declared blind detector
+- Frequency sweep and pole/zero audit before any causal-volume claim
+- Three-ray environment determinant versus two-column channel determinant type audit
 
-**Analysis.** Fit a common generative return map with Y as a preregistered intervention and compare contraction spectra, not endpoint images alone.
+**Analysis.** Fit a common generative return map with Y as a preregistered intervention and compare contraction spectra, not endpoint images alone. Separately propagate covariance into $u=|s-\bar f_1f_0|^2/[(1-|f_0|^2)(1-|f_1|^2)]$ and test predeclared centre, nearest-origin, boundary and mixed-objective selector classes. For the convex mixed model fit $\lambda=\alpha/(\alpha+\beta)$, relaxation time $\tau$, phase lag and loop area over frequency; reject it on zero-frequency remanence or multistability. Treat $u=25/256$ as a shared endpoint prediction of channel-volume and nearest-origin entropy in the rational checkpoint; distinguish those principles only with an independently predicted path, intervention or cost observable.
 
-**Decisive positive result.** Y produces the predicted fixed-point shift and subunit tangent eigenvalue across initial states.
+**Decisive positive result.** Y produces the predicted fixed-point shift and subunit tangent eigenvalue across initial states, while the phase-referenced record selects its preregistered Gram/coherence class on held-out frequencies.
 
 **Useful null result.** The same contraction occurs with Y absent or after loss matching.
 
-**Stop rule.** Stop if Y can only be defined retrospectively from the selected state.
+**Stop rule.** Stop if Y or its objective can only be defined retrospectively from the selected state, if a one-frequency centre hit is used to establish causal globalization, or if endpoint tomography is used to distinguish objectives that select the same point.
 
 ---
 

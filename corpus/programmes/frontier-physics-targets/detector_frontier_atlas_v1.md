@@ -57,7 +57,7 @@ These detectors map FA-01 through FA-03. They are exact within the pinned comput
 - **DET-004 — projector and mode tomography:** reconstructs (P), (Y) and (operatorname{Tr}(PY)).
 - **DET-005 — coherent transfer and holonomy interferometry:** reconstructs complex transfer, loop-order commutator, forward/reverse lifted phase and the coherently referenced endpoint-frame matrix. A central sign uses one-loop/two-loop parity because it is reversal-even.
 - **DET-006 — complex spectral and biorthogonal tomography:** records complex eigenvalues, left/right modes and singular values.
-- **DET-007 — three-record selector bundle:** records even response, odd response and branch populations on the same runs.
+- **DET-007 — three-record selector bundle:** records even response, odd response and branch populations on the same runs; phase-referenced four-setting tomography reconstructs the Gram-disk coordinate and separates centre, nearest-origin and boundary selected points. Wave 7.59 adds a hard limit: two-column channel volume and nearest-origin entropy can select the same point, so their principles require an additional path, intervention or cost record.
 - **DET-008 — return-map identification:** estimates fixed points, basins and tangent spectral radius.
 - **DET-009 — instrument and trajectory tomography:** separates conditioned trajectories from the unconditional channel.
 - **DET-010 — thermodynamic resource ledger:** records heat, work, entropy production, activity, mixing time and reset cost.

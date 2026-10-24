@@ -1,0 +1,42 @@
+{
+  "schema": "gram-disk-dynamics-and-causal-globalization/1",
+  "date": "2026-10-25",
+  "combinedPotential": {
+    "formula": "V(s)=alpha|s-c|^2+beta|s|^2, alpha,beta>=0",
+    "unconstrainedMinimum": "s_*=[alpha/(alpha+beta)]c",
+    "interpretation": "alpha weights full-environment volume; beta weights channel isotropy/dephasing",
+    "admissibility": "if 0 and c lie in the Gram disk, the entire interpolation segment is admissible"
+  },
+  "relaxation": {
+    "equation": "tau s_dot+s=lambda c(t), lambda=alpha/(alpha+beta)",
+    "sinusoidalGain": "lambda/sqrt(1+(Omega tau)^2)",
+    "phaseLag": "atan(Omega tau)",
+    "lagLoopArea": "pi lambda |C|^2 Omega tau/[1+(Omega tau)^2]",
+    "warning": "this is rate-dependent lag, not rate-independent hysteresis or multistability"
+  },
+  "movingConstraint": {
+    "fixedDisk": "convex relaxation to an interior target preserves admissibility",
+    "movingDisk": "requires projected dynamics or a barrier; unconstrained lag can leave the instantaneous disk"
+  },
+  "causalGlobalization": {
+    "centreFamily": "c_ell(z)=f_t(-z)f_n(z)",
+    "nonzeroMixture": "s=lambda c_ell with lambda nonzero inherits the same upper-half-plane pole",
+    "uniqueNonzeroSilverRepair": "ell=arsinh(1)",
+    "zeroSelector": "lambda=0 is trivially Schur analytic but represents complete coherence removal",
+    "scope": "constant lambda mixtures; general analytic disk sections remain a separate interpolation problem"
+  },
+  "rationalCheckpoint": {
+    "c": "3/13",
+    "cSquaredOverR2": "25/256",
+    "equalWeightLambda": "1/2",
+    "equalWeightS": "3/26",
+    "equalWeightU": "25/1024"
+  },
+  "remainingPhysicalGates": [
+    "derive alpha, beta and tau from a microscopic action or environment model",
+    "derive the signature-(2,3) form and Q-adjoint channel completion",
+    "identify laboratory ports and their covariance model",
+    "test stability under renormalization and frequency-dependent coefficients"
+  ],
+  "status": "exact reduced dynamics and causal inheritance theorem; coefficients and carrier provenance remain physical inputs"
+}

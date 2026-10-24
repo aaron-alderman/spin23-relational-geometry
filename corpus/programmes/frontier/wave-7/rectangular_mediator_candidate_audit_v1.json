@@ -1,0 +1,72 @@
+{
+  "schema": "rectangular-mediator-candidate-audit/1",
+  "date": "2026-10-24",
+  "target": "an authored one-way 2-by-3 or 3-by-2 cross-operator joining the established sl2 and sl3 representations",
+  "candidates": [
+    {
+      "id": "typed-partial-sewing",
+      "sourceClaim": 1021,
+      "map": "E:C^2 -> C^3",
+      "correctRectangularShape": true,
+      "complexCoordinateCount": 6,
+      "rank": 2,
+      "kernelDimensionOfAdjoint": 1,
+      "analyticFamily": true,
+      "basisIndependentReadout": "E^dagger E Gram overlap",
+      "oneWaySquareZeroBlockEmbedding": true,
+      "fullSl2Sl3CovarianceEstablished": false,
+      "claimipediaIntertwinerEstablished": false,
+      "criticalTypingBoundary": "Its A2 is the real two-dimensional S3 standard representation on residual directions, not the three-dimensional fundamental representation of the programme sl3.",
+      "verdict": "nearest structural candidate; promotion withheld"
+    },
+    {
+      "id": "proper-gaussian-wick-map",
+      "sourceClaim": 1028,
+      "map": "Fix_XK(H2(C)+) -> H2(R)+",
+      "surjectiveOnPositiveCone": true,
+      "linearIntertwiner": false,
+      "jordanHomomorphism": false,
+      "schurHomomorphism": false,
+      "verdict": "exact Wick/cone map, not the rectangular K"
+    },
+    {
+      "id": "three-port-schur-coupling",
+      "sourceClaims": [386, 390, 391],
+      "map": "B:C -> C^2 inside a 2+1 kernel split",
+      "retainsEliminatedPathResidue": true,
+      "correctRectangularShape": false,
+      "verdict": "exact eliminative mediator and detector, not a 2-by-3 bifundamental"
+    },
+    {
+      "id": "internal-third-furey-port",
+      "sourceClaim": 387,
+      "map": "attempted M2(C) -> M3(C) gauge-commuting enlargement",
+      "gaugeCommutantAllowsExtension": false,
+      "reason": "the four required charged off-diagonal matrix units are not gauge singlets",
+      "verdict": "exact no-go; third port must be a composite response"
+    },
+    {
+      "id": "three-boundary-scalar-star",
+      "sourceClaim": 203,
+      "map": "X:C -> C^3",
+      "realSchurRecursion": true,
+      "orientedComplexLoop": false,
+      "correctRectangularShape": false,
+      "verdict": "physical recursion prototype, not the target K"
+    }
+  ],
+  "rationalCheckpoint": {
+    "E": [[0.6, 0.38461538461538464], [0.8, 0], [0, 0.9230769230769231]],
+    "columnNorms": [1, 1],
+    "gram": [[1, 0.23076923076923078], [0.23076923076923078, 1]],
+    "gramDeterminant": 0.9467455621301775,
+    "adjointKernelGenerator": [12, -9, -5],
+    "blockEmbeddingSquareZero": true
+  },
+  "conclusion": {
+    "rectangularCarrierExistsInCorpus": true,
+    "targetIntertwinerExistsInCorpus": false,
+    "reason": "The partial-sewing carrier has the correct dimensions and operational readout, but the required programme-sl3 and relationship-sl2 actions on its domain and codomain are not established.",
+    "nextGate": "Construct explicit actions of the captured sl2 and sl3 on the partial-sewing spaces and test equivariance; failure closes this candidate, success promotes its six-dimensional orbit."
+  }
+}

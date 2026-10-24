@@ -23,7 +23,7 @@ An open topic stays on this list until one of four things happens:
 | ID | Topic | Next decisive action |
 |---|---|---|
 | OT-002 | Three-mode projector-holonomy Hamiltonian | freeze one physical matrix; calculate forward/reverse transport and coherent one-loop/two-loop endpoint return |
-| OT-003 | Independent selector datum (Y) | add one separately calibrated boundary or anisotropy and predict the return map |
+| OT-003 | Independent selector datum (Y) | predeclare a typed environment-volume, channel-volume, entropy or rank objective and predict both the return map and a path/cost record when endpoint classes collide |
 | OT-004 | Conditioned versus unconditional selector | reconstruct the full instrument without discarding outcomes |
 | OT-005 | Selector thermodynamic ledger | compare three selector classes at matched contraction |
 | OT-006 | Same-film causal tensor closure | assemble transport and optical tensors with covariance before force fitting |
@@ -67,7 +67,7 @@ An open topic stays on this list until one of four things happens:
 | OT-027 | Physical operator and dynamics functor | action generating operators, amplitudes and detector map |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
 | OT-034 | Global nonlinear detector injectivity | finite intervention theorem or explicit residual quotient |
-| OT-038 | Source-bearing A2 commuting square | one labelled, unit-preserving and loss-aware map between physical carriers |
+| OT-038 | Source-bearing A2 commuting square | identify the existing cyclic bifundamental candidate's two port spaces with the captured two- and three-carriers, then derive the physical selector of its occupied orbit point |
 | OT-039 | Microscopic wall-pseudoscalar coefficient | source-derived coupling with sign, magnitude and radiative stability |
 | OT-040 | Matter-plus-field Coulomb energy current | gauge- and limit-consistent total energy continuity |
 | OT-042 | Typed triality-Furey reflection | full module, charge and orientation intertwiner |

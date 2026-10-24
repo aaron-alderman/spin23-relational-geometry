@@ -1,0 +1,31 @@
+{
+  "schema": "grassmannian-channel-globalization/1",
+  "date": "2026-10-25",
+  "ambientCarrier": "C^5=C^2+C^3",
+  "homogeneousSpace": "Gr(2,5)=SL5/P_(2,3)",
+  "complexDimension": 6,
+  "parabolic": {
+    "stabilizedPlane": "C^2+0",
+    "nilradical": "Hom(C^3,C^2)",
+    "blockPosition": "upper right"
+  },
+  "oppositeCell": {
+    "coordinate": "E in Hom(C^2,C^3)",
+    "blockPosition": "lower left",
+    "nilpotent": "N_E^2=0",
+    "exponential": "exp(N_E)=I+N_E",
+    "plane": "graph(E)={(v,Ev)}"
+  },
+  "strata": {
+    "rank0": "the reference plane",
+    "rank1": "graph(E) intersects the reference C^2 in a line",
+    "rank2": "graph(E) intersects the reference C^2 trivially",
+    "chartBoundary": "Plucker coordinate p12=0; distinct from rank loss of E inside the chart"
+  },
+  "metricGeometry": {
+    "chartPotential": "Phi(E)=log det(I2+E^dagger E)",
+    "cauchyBinet": "det(I2+E^dagger E)=sum_{i<j}|p_ij|^2 with p12=1",
+    "interpretation": "the positive metric is the standard Grassmannian chart metric, but homogeneity alone selects no E"
+  },
+  "conclusion": "The partial-sewing channel is a globalizable Grassmannian displacement. Wave 7.50 and Wave 7.52 use opposite nilradicals rather than inconsistent matrix shapes."
+}

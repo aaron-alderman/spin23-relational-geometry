@@ -1,0 +1,609 @@
+{
+  "protocol": "spin23-corpus-search-sourcery-admission-candidate/1",
+  "status": "local-candidate-not-protected-runtime-admitted",
+  "purpose": "A sealed-source candidate for read-only corpus retrieval, tailored context, selector sweeps, answer-provenance comparison and caller-owned bounded source-utility learning through the Sourcery MCP lifecycle.",
+  "authorityBoundary": {
+    "readOnly": true,
+    "entails": false,
+    "empiricalAuthority": false,
+    "corpusPromotion": false,
+    "applicationAdmission": false,
+    "protectedRuntimeSelected": false
+  },
+  "tools": [
+    {
+      "name": "corpus_search",
+      "description": "Search the canonical research corpus. Combines weighted lexical relevance with personalized PageRank over authored Markdown links, returns declared epistemic status and reports selector-prior sensitivity. Ranking is a navigation aid, not evidence or truth.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 500,
+            "description": "Natural-language question or compact concept query."
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 25,
+            "default": 8
+          },
+          "profile": {
+            "type": "string",
+            "enum": [
+              "all",
+              "interpret",
+              "choose-work",
+              "audit",
+              "experiment"
+            ],
+            "default": "all",
+            "description": "Optional front-door prior matching the LLM's present task."
+          },
+          "graphWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.6,
+            "default": 0.3,
+            "description": "Declared contribution of graph context to final navigation order."
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "corpus_context",
+      "description": "Build a task-tailored, character-budgeted context packet from diverse corpus sources. Includes query-centered excerpts, source boundaries, declared statuses, inclusion reasons, selector-sensitivity warnings and explicit omissions. Use this to prepare an LLM working context; it does not establish truth.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 500,
+            "description": "The concrete question or work the receiving LLM must perform."
+          },
+          "profile": {
+            "type": "string",
+            "enum": [
+              "all",
+              "interpret",
+              "choose-work",
+              "audit",
+              "experiment"
+            ],
+            "default": "all"
+          },
+          "maxSources": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 10,
+            "default": 6
+          },
+          "maxCharacters": {
+            "type": "integer",
+            "minimum": 4000,
+            "maximum": 30000,
+            "default": 12000
+          },
+          "graphWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.6,
+            "default": 0.3
+          }
+        },
+        "required": [
+          "task"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "corpus_context_sweep",
+      "description": "Run a bounded one-factor-at-a-time sweep over context profile and graph influence. Reports invariant, robust and selector-sensitive source sets with pairwise overlap and reproducible receipts. This measures context stability; the host must run the same model prompt on each included packet to test answer stability.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 500
+          },
+          "baselineProfile": {
+            "type": "string",
+            "enum": [
+              "all",
+              "interpret",
+              "choose-work",
+              "audit",
+              "experiment"
+            ],
+            "default": "all"
+          },
+          "profiles": {
+            "type": "array",
+            "maxItems": 5,
+            "items": {
+              "type": "string",
+              "enum": [
+                "all",
+                "interpret",
+                "choose-work",
+                "audit",
+                "experiment"
+              ]
+            },
+            "default": [
+              "interpret",
+              "experiment",
+              "audit"
+            ]
+          },
+          "baselineGraphWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.6,
+            "default": 0.3
+          },
+          "graphWeights": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 0.6
+            },
+            "default": [
+              0.15,
+              0.3,
+              0.45
+            ]
+          },
+          "maxSources": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 10,
+            "default": 6
+          },
+          "maxCharacters": {
+            "type": "integer",
+            "minimum": 4000,
+            "maximum": 16000,
+            "default": 8000
+          },
+          "includeContexts": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "task"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "corpus_answer_receipt",
+      "description": "Bind one LLM answer and its atomic claims to an exact context receipt, model configuration and cited source identities. Reports citations outside the supplied context. This is provenance, not scientific certification.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "contextReceipt": {
+            "type": "object"
+          },
+          "contextSources": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "type": "object"
+            }
+          },
+          "model": {
+            "type": "object"
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100000
+          },
+          "answer": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200000
+          },
+          "claims": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 100,
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "contextReceipt",
+          "contextSources",
+          "model",
+          "prompt",
+          "answer",
+          "claims"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "corpus_answer_stability",
+      "description": "Compare two to eight answer receipts produced under distinct context packets. Classifies stable exact claims, stable verdicts with wording drift, context-conditional claims, verdict conflicts and unsupported citations. Exact-key comparison does not prove semantic equivalence.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "receipts": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 8,
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "receipts"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "corpus_belief_initialize",
+      "description": "Initialize a caller-owned, corpus-bound belief state for one externally supplied objective. The state estimates source utility for context selection; it does not estimate truth, change claim status, mutate the corpus or train model weights.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "objective": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 500
+          },
+          "profile": {
+            "type": "string",
+            "enum": [
+              "all",
+              "interpret",
+              "choose-work",
+              "audit",
+              "experiment"
+            ],
+            "default": "all"
+          },
+          "processVariance": {
+            "type": "number",
+            "minimum": 0.0001,
+            "maximum": 0.1,
+            "default": 0.01
+          }
+        },
+        "required": [
+          "objective"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "corpus_belief_update",
+      "description": "Apply one to 200 typed observations to a hash-verified caller-owned belief state using bounded scalar Kalman-like source-utility updates. Returns a successor state and innovation receipt without server-side persistence or corpus mutation.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "beliefState": {
+            "type": "object"
+          },
+          "observations": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 200,
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "beliefState",
+          "observations"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "corpus_adaptive_context",
+      "description": "Build a context packet using bounded learned source utility and uncertainty while returning the unadapted baseline, rank movements and authority limits. Adaptive influence is capped at 0.2 and cannot change truth or corpus status.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 500
+          },
+          "beliefState": {
+            "type": "object"
+          },
+          "profile": {
+            "type": "string",
+            "enum": [
+              "all",
+              "interpret",
+              "choose-work",
+              "audit",
+              "experiment"
+            ]
+          },
+          "maxSources": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 10,
+            "default": 6
+          },
+          "maxCharacters": {
+            "type": "integer",
+            "minimum": 4000,
+            "maximum": 30000,
+            "default": 12000
+          },
+          "graphWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.6,
+            "default": 0.3
+          },
+          "adaptiveWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.2,
+            "default": 0.15
+          },
+          "explorationWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.05,
+            "default": 0.03
+          }
+        },
+        "required": [
+          "task",
+          "beliefState"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "corpus_read",
+      "description": "Read a bounded UTF-8 slice of one Markdown document returned by corpus_search. Read-only and restricted to the indexed corpus roots.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500,
+            "description": "Repository-relative path returned by corpus_search."
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 0,
+            "description": "Character offset in the UTF-8 text."
+          },
+          "maxCharacters": {
+            "type": "integer",
+            "minimum": 256,
+            "maximum": 30000,
+            "default": 12000
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ],
+  "members": [
+    {
+      "path": "tooling/search/search_corpus.mjs",
+      "bytes": 21869,
+      "sha256": "9ba8b220d4ba9e523f4b616979ea7d4a12ee42ad80b21fcf8dcfe049c3a771db"
+    },
+    {
+      "path": "tooling/search/context_hub.mjs",
+      "bytes": 13372,
+      "sha256": "ccf0bbe8c093c8bd3dd9114cf8de4ebd9a999d6b80c3502f308b427f508615f8"
+    },
+    {
+      "path": "tooling/search/context_sweep.mjs",
+      "bytes": 9159,
+      "sha256": "2285f450d614a59e3291f78116ac8a990dba9dca46c3152804c9d19f5596d33c"
+    },
+    {
+      "path": "tooling/search/answer_stability.mjs",
+      "bytes": 8089,
+      "sha256": "1d52a5141982ae041365b96356d61f3c8972c7639cd2ff6d387e2847a9e8cdcb"
+    },
+    {
+      "path": "tooling/search/belief_state.mjs",
+      "bytes": 14478,
+      "sha256": "3c03421b374bb70b3785c1395f950fb25e6fa0e09f17613e21a2b99387eea09d"
+    },
+    {
+      "path": "tooling/search/belief_observations.mjs",
+      "bytes": 3132,
+      "sha256": "fa394c4ba5a0109db5dbadb9192b199d55661c6026dc45bdd095f89d46fb3404"
+    },
+    {
+      "path": "tooling/search/adaptive_context.mjs",
+      "bytes": 4177,
+      "sha256": "6aa44b2da165093cc775317c526650bb6dc88b751cc55e9dcbb715f32e1b5820"
+    },
+    {
+      "path": "tooling/search/corpus_search_mcp.mjs",
+      "bytes": 21021,
+      "sha256": "7db340b7a195f37a3245c6f93b33f859bf398bbe33fcff82a7817e2880055937"
+    },
+    {
+      "path": "tooling/search/benchmark_cases.json",
+      "bytes": 9055,
+      "sha256": "539e8d4506eee0d2c2bc6ea7f95ce6c2027bc7ace997ee8bddd3094b0ef4b717"
+    },
+    {
+      "path": "tooling/search/benchmark_baseline_v1.json",
+      "bytes": 45859,
+      "sha256": "ea2f697cb5b04050b32de6edb3be0381fbd4b0129fa4892f234ac79839c2d551"
+    },
+    {
+      "path": "tooling/search/run_benchmark.mjs",
+      "bytes": 6762,
+      "sha256": "47072abd21a84c449f958ed6396ab870f57a3b19823885497b680c5628ba705a"
+    },
+    {
+      "path": "tooling/search/run_belief_evaluation.mjs",
+      "bytes": 4485,
+      "sha256": "97a86f85d2a6a4784dc65081eaaef476333d2de6343ffca742880c14bafdc6fd"
+    },
+    {
+      "path": "tooling/search/MCP.md",
+      "bytes": 7079,
+      "sha256": "02dd793e44ef571bb5906a365e25a25ed93e71b87fc9206f315aa0eac54d4119"
+    },
+    {
+      "path": "tooling/search/BELIEF_LOOP.md",
+      "bytes": 5434,
+      "sha256": "f2591752504de9d2a9dcd365bf9c493501658495249bc7dc3fc4cf3e6753f714"
+    },
+    {
+      "path": "tests/repository/corpus_search.test.mjs",
+      "bytes": 2473,
+      "sha256": "45e5d13442572a48861e7883315c3d26ca82a4a16aa9d64f6eaf40855a48c0a0"
+    },
+    {
+      "path": "tests/repository/corpus_search_mcp.test.mjs",
+      "bytes": 8256,
+      "sha256": "536405521c07c2c57c7ed1efa8eb3da09234e71c680cbc6399e6c6fe3edf1729"
+    },
+    {
+      "path": "tests/repository/corpus_answer_stability.test.mjs",
+      "bytes": 3744,
+      "sha256": "704c81597a2b160210ddc1265ba0e2312182194441d2e7bc3dee6706034063fe"
+    },
+    {
+      "path": "tests/repository/corpus_belief_state.test.mjs",
+      "bytes": 9331,
+      "sha256": "ee573c67115cef638e491570420b9c4f8a090916bd4151eeeeb582f4677d6fd1"
+    },
+    {
+      "path": "tests/repository/corpus_belief_evaluation.test.mjs",
+      "bytes": 601,
+      "sha256": "5f73f1b72f8fb9426079ee1d82be9817a6f4272ad8107518f3dcf8f0a42b9017"
+    },
+    {
+      "path": "tests/repository/corpus_search_benchmark.test.mjs",
+      "bytes": 1009,
+      "sha256": "04949ee0acc164b7f8ac021b92a5429e5e725265020cdcb6e0b61a7d78483166"
+    }
+  ],
+  "qualification": {
+    "benchmark": {
+      "cases": 30,
+      "requiredPassRate": 1,
+      "minimumMeanReciprocalRank": 0.8
+    },
+    "commands": [
+      "node tooling/search/run_benchmark.mjs",
+      "node --test tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
+      "node tooling/search/run_belief_evaluation.mjs",
+      "node tooling/audit/audit_markdown_links.mjs",
+      "git diff --check"
+    ],
+    "negativeControls": [
+      "path traversal rejected",
+      "unknown arguments rejected",
+      "graph weight bounded",
+      "outside-context citations retained and marked",
+      "answer stability withheld when prompt or model settings differ",
+      "context stability never reported as scientific truth",
+      "belief state tampering and stale corpus identity rejected",
+      "empty belief state preserves baseline source selection",
+      "adaptive influence capped and never changes epistemic status",
+      "MCP server retains no hidden belief state"
+    ]
+  },
+  "admissionSequence": [
+    "open a fresh Sourcery development lane from the selected protected base",
+    "commit these exact members and reflected contracts into the candidate overlay",
+    "run the declared tests in an explicit projection",
+    "inspect source and authority receipts",
+    "bless the tested candidate snapshot",
+    "seal and qualify a successor package",
+    "admit through the protected lifecycle",
+    "verify all nine operations through a fresh MCP connection"
+  ],
+  "candidateSha256": "edd4d10fed68df73f9561929e38d167130f3442c1c8df64c2934ee488d84a1ca"
+}

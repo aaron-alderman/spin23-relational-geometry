@@ -1,0 +1,34 @@
+{
+  "schema": "c2-inside-a4-compatibility/1",
+  "date": "2026-10-25",
+  "ambient": {
+    "algebra": "sl5(R)",
+    "dimension": 24,
+    "splitting": "R^5=R^2+R^3"
+  },
+  "involution": {
+    "metric": "Q=diag(-I2,+I3)",
+    "fixedAlgebra": "so(2,3) isomorphic to sp4(R)",
+    "dimension": 10,
+    "condition": "X^T Q+QX=0"
+  },
+  "blockDecomposition": {
+    "diagonal": "so2+so3",
+    "diagonalDimension": 4,
+    "cross": "Mat(2,3), with reverse block fixed as the Q-adjoint",
+    "crossDimension": 6,
+    "crossGeneratorsCloseFullAlgebra": true
+  },
+  "capturedLeviCompatibility": {
+    "captured": "sl2+sl3+gl1",
+    "intersectionWithSo23InStandardBlockEmbedding": "so2+so3",
+    "fullSl2SurvivesOnTwoBlock": false,
+    "fullSl3SurvivesOnThreeBlock": false,
+    "gl1Survives": false,
+    "abstractSl3SubalgebraOfSo5": false,
+    "reason": "a faithful five-dimensional orthogonal sl3 module cannot be assembled because the 3 and 3bar must be paired and already require dimension six"
+  },
+  "interpretation": "Spin(2,3) can be selected inside the A4 envelope by an indefinite metric involution, but this is symmetry reduction and role reassignment, not preservation of the captured A1+A2 factors.",
+  "missingDatum": "a derived nondegenerate signature-(2,3) form Q and a physical rule tying the two mediator orientations by Q-adjointness",
+  "status": "exact conditional construction plus exact compatibility no-go"
+}

@@ -4,6 +4,8 @@
 **Status:** execution roadmap; technology-first, anomaly-disciplined  
 **Inputs:** [AZ-056 descent atlas](../admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md), [AZ-057 coordinated selector](../admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md), [experiment atlas](frontier_experiment_atlas_v1.md), [detector atlas](detector_frontier_atlas_v1.md)
 
+**Selector control:** [PageRank, Perron selection and the finesse trade-off](page_rank_perron_selector_bridge_v1.md) supplies the exact warning that a weak positive completion can guarantee one stable global state while erasing the disconnected or slowly mixing structure one intended to measure.
+
 ## Thesis
 
 The nearest frontier is not necessarily higher collision energy. It is finer control of which distinctions an apparatus preserves. The practical opportunity is to engineer a carrier, transformation and detector together so that phase, orientation, memory, nonlinear order and boundary response survive the descent from physical state to recorded data.

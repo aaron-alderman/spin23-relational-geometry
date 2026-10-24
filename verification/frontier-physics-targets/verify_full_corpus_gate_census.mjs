@@ -9,7 +9,15 @@ const census = JSON.parse(fs.readFileSync(path.join(root, censusPath), "utf8"));
 const topics = JSON.parse(fs.readFileSync(path.join(root, "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json"), "utf8"));
 const topicIds = new Set(topics.topics.map((topic) => topic.id));
 const posix = (value) => value.split(path.sep).join("/");
-const excluded = new Set([censusPath, censusMdPath]);
+const excluded = new Set([
+  censusPath,
+  censusMdPath,
+  "corpus/EVIDENCE_SPINE.md",
+  "corpus/FRONT_DOOR.md",
+  "corpus/registers/spin23_corpus_manifest.json",
+  "corpus/registers/corpus_evidence_spine.json",
+  "corpus/registers/corpus_front_door.json",
+]);
 const pattern = new RegExp(census.pattern, "i");
 const statusPattern = new RegExp(census.statusPattern, "im");
 const failures = [];

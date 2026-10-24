@@ -140,6 +140,61 @@ This result reuses the EX-006 photonic, microwave or acoustic detector packet, b
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-lost-sign-becomes-a-detector-claim-3.md)
 
+<a id="hot-off-the-press-the-missing-middle-has-a-type"></a>
+## Hot off the press — the missing middle has a type
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 24 October 2026.** The natural three-branch kenotic cover does not contain a hidden loop: before removing its junction the cover is a filled triangle, and afterwards it is three disconnected pieces. Its exact residue is therefore a two-dimensional reduced H0 cut signature, not a nonzero H1 winding class. A genuine sign holonomy still requires three independently evidenced pairwise overlaps and authored transition rules that the present graph does not contain.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-1.md)
+
+The nearest algebraic replacement for a missing common symmetry is a typed one-way passage. A two-state carrier and a three-state carrier with a rectangular mediator form the (2,3) parabolic subalgebra of sl5: the internal sl2 and sl3 transformations remain distinct, while a six-dimensional off-diagonal module carries information between them without becoming an invertible symmetry. Freely adding the reverse block closes to all of sl5, not sp4. This rules out obtaining the science programme's C2 hinge merely by reversing the relation.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-2.md)
+
+The corpus already contains a rank-two partial-sewing map from two channels into a three-dimensional environment. Under the standard sl2 plus sl3 action, that one map is cyclic: its orbit spans the full six-dimensional bifundamental module. The missing result is now narrower and more physical. The two port spaces have not been identified with the particular captured Claimipedia carriers, and no independent dynamics or boundary datum selects the observed map from its continuous orbit. A separate positive three-port model shows how locally real faces, a globally complex loop and Schur elimination can leave phase-bearing memory. The next test is the source-bearing carrier-identification square, selector provenance and a phase-sensitive retained-path measurement—not another dimension match.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-3.md)
+
+The balance among admission, transport and selection is exact in this local model. Under the full complex endpoint group every rank-two rectangular map belongs to one open orbit, so Lie motion alone cannot distinguish the observed channel. Retaining the positive metric makes the two eigenvalues of the Gram matrix E-dagger E invariant under admissible unitary frame changes. Dynamics or boundary data must still select one metric-positive point. Lie supplies the available motion, positivity supplies observable distinctions and dynamics must supply realization.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-4.md)
+
+Admissibility still does not choose its own objective. On the same Gram disk, full-environment volume selects the centre, nearest-origin objectives select zero when it is allowed, and minimum implementation dimension selects a boundary circle. The correct order is variables, feasible region, correctly typed objective, then selected point or attractor. A cone can be prior to a particular action without secretly determining that action.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-5.md)
+
+The selected-point classes are experimentally separable. Phase-referenced L, R, L+R and L+iR preparations reconstruct two compressed transfers and their complex coherence. The normalized distance from the Gram-disk centre is zero for full-environment volume, one on the minimum-rank boundary and 25/256 for the nearest-origin point in the exact checkpoint. A violation of the disk rejects the shared-environment architecture; an intermediate nonspecial point rejects these pure point selectors. Physical port identification and a platform noise model remain open.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-6.md)
+
+The rectangular channel now has an exact global home. Its graph is a moving two-plane in Gr(2,5), the opposite big cell of the same parabolic whose one-way radical appeared locally. Rank loss of the rectangular map lies inside this chart; loss of transversality lies on the Pluecker chart boundary. This globalizes the carrier geometry without identifying any Grassmannian plane with a physical vacuum.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-7.md)
+
+A second type correction limits the detector claim. The determinant of the full three-ray environment Gram matrix is maximized at the causal centre, while the determinant of the two conditioned channel columns is maximized at the origin when that point is admissible. The latter then collides with the nearest-origin entropy selector: endpoint tomography measures the selected point but cannot identify which of those principles selected it. That distinction requires an independently predicted path, intervention or thermodynamic record.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-8.md)
+
+The two selector points occupy different symmetry strata. The isotropic channel keeps a diagonal rotation, while the causal-centre checkpoint has unequal singular values and no connected stabilizer in the real locking model. A minimal unspurioned quartic selects isotropy or stays flat in anisotropy; an isolated unequal pair requires a sourced axis or reflection datum. The causal construction therefore cannot inherit the old locking symmetry for free.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-9.md)
+
+There is now an exact conditional route from the five-dimensional A4 envelope back to the Spin(2,3) hinge. A signature-(2,3) form pairs each forward rectangular channel with its adjoint reverse, and the six paired cross directions generate all ten directions of so(2,3), isomorphic to 𝔰𝔭(4,ℝ). The price is exact: the captured sl2+sl3+gl1 diagonal structure reduces to so2+so3, and a full sl3 cannot survive in the five-dimensional orthogonal algebra. The missing physical result is a derivation of the indefinite form and adjoint rule, not another group-name match.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-10.md)
+
+Representation type makes the remaining endpoint bridge small but not canonical. After choosing actions, the three-carrier identification retains two equivariant scales, four normalized real sign choices and six labelings; the two-carrier identification is unique only up to a phase. One provenance-bearing observable or authored record must fix those labels, bases and relative phases before the indefinite form and adjoint pairing can become a physical construction.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-11.md)
+
+The selector fork also admits an exact reduced dynamics. A convex competition selects every point between the causal centre and isotropic endpoint, while first-order relaxation predicts a frequency-dependent lag loop rather than true hysteresis. Every nonzero constant mixture inherits the centre's causal pole obstruction, leaving the silver value as the unique nonzero same-chart repair. This completes the abstract six-part channel programme; further progress requires source-derived coefficients and metric data or physical measurement.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-12.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -171,6 +226,21 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [frontier_wave7_44_refinement_stability_of_the_mixed_interface.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md)
 - [frontier_wave7_47_kenotic_enriched_loop_reopening_template.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md)
 - [frontier_wave7_48_sign_holonomy_physical_detector_bridge.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md)
+- [frontier_wave7_49_kenotic_cover_h0_signature_and_h1_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_49_kenotic_cover_h0_signature_and_h1_no_go.md)
+- [frontier_wave7_50_a1_a2_parabolic_kenotic_envelope.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_50_a1_a2_parabolic_kenotic_envelope.md)
+- [frontier_wave7_51_three_port_wick_kenosis_bridge.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_51_three_port_wick_kenosis_bridge.md)
+- [frontier_wave7_52_rectangular_mediator_candidate_audit.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_52_rectangular_mediator_candidate_audit.md)
+- [frontier_wave7_53_bifundamental_retyping_and_selection_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_53_bifundamental_retyping_and_selection_gate.md)
+- [frontier_wave7_54_metric_selection_on_the_bifundamental_open_orbit.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_54_metric_selection_on_the_bifundamental_open_orbit.md)
+- [frontier_wave7_55_channel_selector_atlas_and_entropy_guardrail.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_55_channel_selector_atlas_and_entropy_guardrail.md)
+- [frontier_wave7_56_gram_disk_selector_discriminator.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_56_gram_disk_selector_discriminator.md)
+- [frontier_wave7_58_grassmannian_globalization_of_the_kenotic_channel.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_58_grassmannian_globalization_of_the_kenotic_channel.md)
+- [frontier_wave7_59_two_gram_selector_collision.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_59_two_gram_selector_collision.md)
+- [frontier_wave7_60_bifundamental_stabilizers_and_quartic_selection.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_60_bifundamental_stabilizers_and_quartic_selection.md)
+- [frontier_wave7_61_spin23_as_an_involutive_reduction_of_the_a4_envelope.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_61_spin23_as_an_involutive_reduction_of_the_a4_envelope.md)
+- [frontier_wave7_62_endpoint_identification_hom_spaces.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_62_endpoint_identification_hom_spaces.md)
+- [frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md)
+- [frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md)
 - [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 

@@ -8,6 +8,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 
 - [Frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md) — current whole-corpus result, frontier shape and ranked next tranches.
 - [Finesse technology pathway](finesse_technology_pathway_v1.md) — converts certificate-preserving descent, detector lifting and memory closure into a 90-day launch, a shared finesse device and a strict anomaly-to-new-physics escalation ladder.
+- [PageRank, Perron selection and the finesse trade-off](page_rank_perron_selector_bridge_v1.md) — exact control model for stationary-family collapse, explicit selector provenance, contraction and the price paid in structural fidelity.
 - [Frontier physics target set](frontier_physics_target_set_v1.md) — human-readable map, priorities and use rules.
 - [Per-target corpus assessments](frontier_physics_target_assessments_v1.md) — reach band, internal assets, missing join, promotion test and neighbouring targets for every FPT entry.
 - [Target register](frontier_physics_target_register_v1.json) — machine-readable source of truth for the normalized target set and all declared crosswalks.
@@ -31,7 +32,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Detector/open-topic verifier](../../../verification/frontier-physics-targets/verify_detector_frontier_and_open_topics.mjs) — checks identifier integrity, source existence and complete detector/topic coverage of all targets and frontier regions.
 - [Experiment-atlas verifier](../../../verification/frontier-physics-targets/verify_frontier_experiment_atlas.mjs) — proves one experiment per frontier area and complete coverage of all topics and detector bundles.
 - [AZ gate verifier](../../../verification/frontier-physics-targets/verify_frontier_gate_coverage_audit.mjs) — checks complete packet coverage, topic ownership and resolution paths.
-- [Wave gate verifier](../../../verification/frontier-physics-targets/verify_frontier_wave_gate_audit.mjs) — checks all 53 Wave 6--7 packets and their live owners.
+- [Wave gate verifier](../../../verification/frontier-physics-targets/verify_frontier_wave_gate_audit.mjs) — discovers and checks every retained Wave 6--7 packet file and its live owner, including distinct packets that reused a display number.
 - [Residual programme verifier](../../../verification/frontier-physics-targets/verify_residual_programme_gate_audit.mjs) — ensures every remaining matching programme file has a queue mapping or separate owner.
 - [Full-corpus census verifier](../../../verification/frontier-physics-targets/verify_full_corpus_gate_census.mjs) — rescans the complete corpus scope, checks source hashes and proves exact record equality, valid topic references and zero unresolved owners.
 

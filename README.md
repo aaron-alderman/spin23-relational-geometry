@@ -39,9 +39,24 @@ This is **not a completed unified theory**. Established mathematics, reproducibl
 | Start with the present story | [The admissibility frontier: current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) |
 | General reader | [Edition 3.2 admissibility book preview](book/edition-3/README.md) |
 | Researcher | [Canonical corpus guide](corpus/README.md) |
+| Map the whole interior | [Generated corpus front door](corpus/FRONT_DOOR.md) |
+| Trace a claim to evidence | [Generated corpus evidence spine](corpus/EVIDENCE_SPINE.md) |
 | Contributor | [Role-based entry map](corpus/START_HERE_BY_ROLE.md) and [contribution guide](CONTRIBUTING.md) |
 | Auditor | [Verification guide](verification/README.md) |
 | Visual explorer | [Interactive concept atlas](docs/concept-map/index.html) |
+
+## Search the corpus
+
+The corpus has a local hybrid search that combines weighted text matching with personalized PageRank over its real Markdown links. It corrects common domain misspellings, preserves declared epistemic status in every result and shows a selector sweep so graph-prior-sensitive rankings remain visible rather than silently becoming authority.
+
+```powershell
+node tooling/search/search_corpus.mjs --query "Casimir boundary response"
+node tooling/search/search_corpus.mjs --query "selector metastability" --profile experiment --json
+```
+
+Profiles are `all`, `interpret`, `choose-work`, `audit` and `experiment`. Scores help navigate the corpus; they do not promote claims or establish truth.
+
+LLM hosts can use the same engine through the locally tested [read-only MCP search candidate](tooling/search/MCP.md), which exposes bounded search, tailored context, context sweeps, answer receipts, answer-stability comparison and source reading. Tailored packets replace generic document dumps; controlled sweeps expose their invariant core and selector-sensitive perimeter; receipts bind downstream claims to exact context and source identities. The [30-case retrieval baseline](tooling/search/benchmark_baseline_v1.json) currently passes in full. Admission into the protected Sourcery/Claimipedia runtime remains a distinct governed step.
 
 The generated paged edition is available in [`docs/edition-3`](docs/edition-3/index.html) and is deployed to [GitHub Pages](https://aaron-alderman.github.io/spin23-relational-geometry/). The Pages workflow regenerates and tests the book before publishing the committed static site.
 
@@ -93,8 +108,13 @@ Run from the repository root:
 ```powershell
 node tooling/publication/generate_edition3_book_preview.mjs
 node tooling/publication/generate_concept_map.mjs
+node tooling/indexing/generate_corpus_front_door.mjs --write
+node tooling/indexing/generate_corpus_front_door.mjs --check
+node tooling/indexing/generate_corpus_evidence_spine.mjs --write
+node tooling/indexing/generate_corpus_evidence_spine.mjs --check
 node --test tests/publication/edition3_book_preview.test.mjs
 node --test tests/publication/concept_map.test.mjs
+node --test tests/repository/corpus_front_door.test.mjs
 node tooling/audit/audit_markdown_links.mjs
 node tooling/audit/audit_spin23_corpus_manifest.mjs --write
 ```

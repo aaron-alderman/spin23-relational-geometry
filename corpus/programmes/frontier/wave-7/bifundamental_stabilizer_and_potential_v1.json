@@ -1,0 +1,39 @@
+{
+  "schema": "bifundamental-stabilizer-and-potential/1",
+  "date": "2026-10-25",
+  "realCarrier": {
+    "group": "SO3 x SO2",
+    "dimension": 4,
+    "strata": [
+      {"type": "zero", "connectedStabilizer": "SO3 x SO2", "stabilizerDimension": 4, "orbitDimension": 0},
+      {"type": "rank1", "connectedStabilizer": "SO2 internal rotations about the image line", "stabilizerDimension": 1, "orbitDimension": 3},
+      {"type": "rank2 equal singular values", "connectedStabilizer": "diagonal SO2", "stabilizerDimension": 1, "orbitDimension": 3},
+      {"type": "rank2 unequal singular values", "connectedStabilizer": "trivial", "stabilizerDimension": 0, "orbitDimension": 4}
+    ]
+  },
+  "complexMetricCarrier": {
+    "group": "SU3 x SU2",
+    "dimension": 11,
+    "strata": [
+      {"type": "zero", "stabilizerDimension": 11, "orbitDimension": 0},
+      {"type": "rank1 fixed singular value", "connectedStabilizer": "four-dimensional compact subgroup", "stabilizerDimension": 4, "orbitDimension": 7},
+      {"type": "rank2 equal fixed singular values", "connectedStabilizer": "diagonal SU2", "stabilizerDimension": 3, "orbitDimension": 8},
+      {"type": "rank2 unequal fixed singular values", "connectedStabilizer": "U1", "stabilizerDimension": 1, "orbitDimension": 10}
+    ]
+  },
+  "quarticInvariantPotential": {
+    "invariants": ["I1=tr(E^dagger E)", "I2=det(E^dagger E)"],
+    "equivalentSingularCoordinates": "a=sigma1^2, b=sigma2^2",
+    "genericInteriorEquation": "permutation symmetry forces a=b unless the anisotropy coefficient vanishes",
+    "isotropicWitness": "V=alpha(a+b-v^2)^2+beta(a-b)^2, alpha,beta>0",
+    "anisotropicRepair": "a term linear in a-b or unequal quadratic masses requires a declared source-axis/reflection spurion",
+    "conclusion": "a stable isolated unequal full-rank checkpoint is not selected by the minimal unspurioned quartic"
+  },
+  "checkpoint": {
+    "squaredSingularValues": ["16/13", "10/13"],
+    "stratumReal": "rank2 unequal; no connected SO3xSO2 stabilizer",
+    "stratumComplex": "rank2 unequal; U1 stabilizer",
+    "requiredAnisotropy": "3/13 in the normalized channel Gram off-diagonal"
+  },
+  "status": "exact compact stabilizer and quartic-selection classification; microscopic spurion provenance remains open"
+}

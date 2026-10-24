@@ -1,0 +1,59 @@
+{
+  "schema": "channel-selector-atlas/1",
+  "date": "2026-10-24",
+  "admissibleSet": "the Gram disk |s-c|<=R, c=conj(f1)f0, R=sqrt((1-|f0|^2)(1-|f1|^2))",
+  "selectors": [
+    {
+      "name": "maximum Gram volume",
+      "objective": "maximize det G(s)=R^2-|s-c|^2",
+      "selection": "s=c",
+      "rank": 3,
+      "meaning": "orthogonal residual directions",
+      "status": "exact unique selector for strict loss"
+    },
+    {
+      "name": "maximum two-channel dephasing entropy",
+      "objective": "minimize |s| for the equal conditioned-ray mixture",
+      "selection": "metric projection of 0 onto the Gram disk",
+      "rank": "usually 3; depends on disk geometry",
+      "meaning": "make the two conditioned environment states as distinguishable as admissibility allows",
+      "status": "exact and generally different from the Gram centre"
+    },
+    {
+      "name": "minimum equal-three-ray purity",
+      "objective": "minimize Tr(rho^2)=[3+2(|f0|^2+|f1|^2+|s|^2)]/9",
+      "selection": "metric projection of 0 onto the Gram disk",
+      "rank": "usually 3; depends on disk geometry",
+      "meaning": "Renyi-2 mixing of reference plus two conditioned rays",
+      "status": "exact and generally different from the Gram centre"
+    },
+    {
+      "name": "minimum environment dimension",
+      "objective": "minimize rank G",
+      "selection": "the boundary |s-c|=R",
+      "rank": 2,
+      "meaning": "one residual direction rather than two",
+      "status": "nonunique circle before further data"
+    },
+    {
+      "name": "causal Gram extremality",
+      "objective": "first select s=c, then require one-chart Schur analyticity",
+      "selection": "ell=arsinh(1) in the silver family",
+      "rank": 3,
+      "meaning": "maximum residual volume compatible with the unique pole-zero seam",
+      "status": "exact conditional selector, not microscopic dynamics"
+    }
+  ],
+  "rationalCheckpoint": {
+    "f0": "3/5",
+    "f1": "5/13",
+    "centre": "3/13",
+    "radius": "48/65",
+    "diskContainsZero": true,
+    "volumeSelection": "3/13",
+    "puritySelection": 0,
+    "centreDeterminant": "2304/4225",
+    "zeroDeterminant": "2079/4225"
+  },
+  "conclusion": "Admissibility supplies a feasible set. A physical objective is additional structure, and different natural objectives select different channel strata."
+}

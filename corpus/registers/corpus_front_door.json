@@ -1,0 +1,496 @@
+{
+  "schema": "spin23-corpus-front-door/v1",
+  "principle": "The corpus front door is an executable atlas of the interior: every assertion resolves to an exact retained object, and every retained object is either reachable from a declared entrance or explicitly classified.",
+  "authorityBoundary": "This atlas reports repository structure and declared epistemic surfaces. It does not promote claims, replace source evidence, or grant publication, corpus-admission, runtime, or deployment authority.",
+  "source": {
+    "routes": {
+      "path": "corpus/front-door.routes.json",
+      "sha256": "794d505fb4ffd6931b5e5e058f74c9423dbe267acc74e35ac153b11b5222adde"
+    },
+    "canonicalInventory": {
+      "path": "corpus/registers/spin23_corpus_manifest.json",
+      "schema": "spin23-corpus-manifest/v1",
+      "generatedAt": "2026-10-24T16:14:48.551Z",
+      "passed": true,
+      "summary": {
+        "latestDocumentId": 1793,
+        "latestDocuments": [
+          "corpus/claims/1700-1799/1793_the_rule60_golay_kernel_supplies_the_unique_tm23_leech_affine_seam_torsor.md"
+        ],
+        "numberedDocumentCount": 1573,
+        "repositoryFileCount": 5257,
+        "repositoryBytes": 97950766
+      },
+      "sha256": "af7cb5eb310882e6707b636ba2dfd61ac3c9ce36e015ff88a8ac8a92c9bb145a"
+    },
+    "inventoryBasis": "canonical manifest plus the declared front-door control surfaces"
+  },
+  "passed": true,
+  "summary": {
+    "routes": 4,
+    "roots": 16,
+    "inventoryObjects": 5258,
+    "reachableObjects": 4122,
+    "explicitlyClassifiedObjects": 5258,
+    "unclassifiedObjects": 0,
+    "rootClosureLinks": 16852,
+    "closureBrokenLinks": 0
+  },
+  "routes": [
+    {
+      "id": "orientation",
+      "title": "Understand the present claim",
+      "purpose": "Recover the corpus's explanatory order, current synthesis, vocabulary, and limits before following historical branches.",
+      "roots": [
+        {
+          "id": "reading-contract",
+          "path": "corpus/READING_CONTRACT.md",
+          "epistemicStatus": "canonical interpretation",
+          "authority": "controls explanatory order; does not establish empirical truth",
+          "provenance": "maintained corpus source"
+        },
+        {
+          "id": "current-synthesis",
+          "path": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+          "epistemicStatus": "current reader synthesis",
+          "authority": "summarizes typed results and open boundaries; cited evidence remains controlling",
+          "provenance": "maintained corpus synthesis"
+        },
+        {
+          "id": "explanatory-standard",
+          "path": "corpus/EXPLANATORY_STANDARD.md",
+          "epistemicStatus": "editorial and reasoning standard",
+          "authority": "controls presentation discipline; does not promote claims",
+          "provenance": "maintained corpus governance"
+        },
+        {
+          "id": "glossary",
+          "path": "corpus/GLOSSARY.md",
+          "epistemicStatus": "working vocabulary",
+          "authority": "defines local usage; underlying claims retain their own status",
+          "provenance": "maintained corpus source"
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "Find bounded work",
+      "purpose": "Enter through a role, live topic, target, experiment, or detector rather than through chronology.",
+      "roots": [
+        {
+          "id": "role-map",
+          "path": "corpus/START_HERE_BY_ROLE.md",
+          "epistemicStatus": "task navigation",
+          "authority": "routes readers to controlling objects; grants no research authority",
+          "provenance": "maintained corpus source"
+        },
+        {
+          "id": "open-topics",
+          "path": "corpus/programmes/frontier-physics-targets/open_topics_v1.md",
+          "epistemicStatus": "maintained research queue",
+          "authority": "describes live topics; Mission Control remains authoritative for scheduling",
+          "provenance": "frontier-physics target programme"
+        },
+        {
+          "id": "target-set",
+          "path": "corpus/programmes/frontier-physics-targets/frontier_physics_target_set_v1.md",
+          "epistemicStatus": "maintained target atlas",
+          "authority": "maps targets and gates; does not establish a physical result",
+          "provenance": "frontier-physics target programme"
+        },
+        {
+          "id": "experiment-atlas",
+          "path": "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md",
+          "epistemicStatus": "experiment design atlas",
+          "authority": "records proposed discriminators and controls; does not report completed experiments unless cited",
+          "provenance": "frontier-physics target programme"
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "Inspect claims and evidence",
+      "purpose": "Move from a statement to its status, certificate, data, counterevidence, and reproducibility boundary.",
+      "roots": [
+        {
+          "id": "evidence-spine",
+          "path": "corpus/EVIDENCE_SPINE.md",
+          "epistemicStatus": "generated structural evidence index",
+          "authority": "joins exact observed references and marked inferences; does not promote scientific status or widen certificate scope",
+          "provenance": "generated from the canonical manifest and current retained claim text"
+        },
+        {
+          "id": "result-ledger",
+          "path": "book/edition-3/chapters/08-result-ledger.md",
+          "epistemicStatus": "curated result ledger",
+          "authority": "reader index only; exact claims and certificates remain controlling",
+          "provenance": "generated Edition 3 source"
+        },
+        {
+          "id": "verification-guide",
+          "path": "verification/README.md",
+          "epistemicStatus": "verification navigation",
+          "authority": "routes to executable certificates; a passing certificate has only its declared scope",
+          "provenance": "repository verification layer"
+        },
+        {
+          "id": "document-map",
+          "path": "corpus/claims/0000-0099/00_research_document_map.md",
+          "epistemicStatus": "accretive provenance ledger",
+          "authority": "preserves chronology and links; not a standalone current synthesis",
+          "provenance": "append-only claims ledger"
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "title": "Audit authority and provenance",
+      "purpose": "Inspect the exact inventory, publication boundary, repository history, and stewardship constraints.",
+      "roots": [
+        {
+          "id": "corpus-manifest",
+          "path": "corpus/registers/spin23_corpus_manifest.json",
+          "epistemicStatus": "canonical file inventory",
+          "authority": "records canonical paths, sizes, and hashes at its generation point",
+          "provenance": "generated by tooling/audit/audit_spin23_corpus_manifest.mjs"
+        },
+        {
+          "id": "publication-authority",
+          "path": "integrations/claimipedia/PUBLICATION-AUTHORITY.md",
+          "epistemicStatus": "publication authority contract",
+          "authority": "defines the repository/Claimipedia boundary",
+          "provenance": "Claimipedia integration source"
+        },
+        {
+          "id": "repository-proposal",
+          "path": "corpus/governance/REPOSITORY_PROPOSAL.md",
+          "epistemicStatus": "repository governance record",
+          "authority": "describes repository structure and transition history",
+          "provenance": "corpus governance source"
+        },
+        {
+          "id": "license",
+          "path": "LICENSE.md",
+          "epistemicStatus": "license",
+          "authority": "controls reuse terms within its stated scope",
+          "provenance": "repository root"
+        }
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "id": "automation",
+      "reason": "repository workflow automation",
+      "files": 1,
+      "canonicalBytes": 1357,
+      "reachableFiles": 0
+    },
+    {
+      "id": "claims",
+      "reason": "append-only claim and provenance ledger",
+      "files": 1575,
+      "canonicalBytes": 16202427,
+      "reachableFiles": 1566
+    },
+    {
+      "id": "corpus-navigation",
+      "reason": "canonical corpus navigation, vocabulary, and reading rules",
+      "files": 11,
+      "canonicalBytes": 105886,
+      "reachableFiles": 11
+    },
+    {
+      "id": "evidence",
+      "reason": "data, figures, and retained observations",
+      "files": 460,
+      "canonicalBytes": 12947950,
+      "reachableFiles": 408
+    },
+    {
+      "id": "generated-publication",
+      "reason": "generated deployable reading surfaces",
+      "files": 260,
+      "canonicalBytes": 11159161,
+      "reachableFiles": 12
+    },
+    {
+      "id": "governance",
+      "reason": "repository and publication governance",
+      "files": 2,
+      "canonicalBytes": 7845,
+      "reachableFiles": 1
+    },
+    {
+      "id": "integrations",
+      "reason": "application and publication boundary packets",
+      "files": 268,
+      "canonicalBytes": 20717558,
+      "reachableFiles": 3
+    },
+    {
+      "id": "legal",
+      "reason": "legal notices and policy",
+      "files": 2,
+      "canonicalBytes": 55289,
+      "reachableFiles": 2
+    },
+    {
+      "id": "programmes",
+      "reason": "bounded research programmes, registers, and closure work",
+      "files": 593,
+      "canonicalBytes": 11894198,
+      "reachableFiles": 390
+    },
+    {
+      "id": "reader-editions",
+      "reason": "curated reader-facing editions",
+      "files": 158,
+      "canonicalBytes": 1189249,
+      "reachableFiles": 158
+    },
+    {
+      "id": "registers",
+      "reason": "machine-readable inventory, state, and audit records",
+      "files": 13,
+      "canonicalBytes": 13835071,
+      "reachableFiles": 6
+    },
+    {
+      "id": "repository-front-door",
+      "reason": "root navigation, machine retrieval, stewardship, contribution, and legal surfaces",
+      "files": 7,
+      "canonicalBytes": 26505,
+      "reachableFiles": 5
+    },
+    {
+      "id": "syntheses",
+      "reason": "current and thesis-scale interpretive surfaces",
+      "files": 4,
+      "canonicalBytes": 146860,
+      "reachableFiles": 4
+    },
+    {
+      "id": "tests",
+      "reason": "repository and publication invariants",
+      "files": 13,
+      "canonicalBytes": 58930,
+      "reachableFiles": 2
+    },
+    {
+      "id": "tooling",
+      "reason": "generation, audit, migration, and publication utilities",
+      "files": 114,
+      "canonicalBytes": 3463620,
+      "reachableFiles": 15
+    },
+    {
+      "id": "verification",
+      "reason": "executable certificates and verification navigation",
+      "files": 1777,
+      "canonicalBytes": 6138860,
+      "reachableFiles": 1539
+    }
+  ],
+  "minimumViableProfiles": [
+    {
+      "id": "interpret",
+      "title": "Interpret faithfully",
+      "rootIds": [
+        "reading-contract",
+        "current-synthesis",
+        "explanatory-standard",
+        "glossary"
+      ],
+      "requiredPaths": [],
+      "missingRootIds": [],
+      "missingRequiredPaths": [],
+      "roots": [
+        "corpus/READING_CONTRACT.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/EXPLANATORY_STANDARD.md",
+        "corpus/GLOSSARY.md"
+      ],
+      "entrySurface": {
+        "files": 4,
+        "canonicalBytes": 62714,
+        "observedBytes": 62714,
+        "unknownByteFiles": 0,
+        "paths": [
+          "corpus/EXPLANATORY_STANDARD.md",
+          "corpus/GLOSSARY.md",
+          "corpus/READING_CONTRACT.md",
+          "corpus/syntheses/the_admissibility_frontier_current_synthesis.md"
+        ]
+      },
+      "discoverableClosure": {
+        "files": 4211,
+        "canonicalBytes": 56981006,
+        "observedBytes": 58629790,
+        "unknownByteFiles": 90,
+        "brokenLinks": [],
+        "pathSetSha256": "2182f10ba0885a9cd5b529fef88f62368da32ea59cf46faa10845d168e0d44b0"
+      },
+      "qualification": "map-only; independently qualify any derived package and add execution dependencies for the selected capability"
+    },
+    {
+      "id": "choose-work",
+      "title": "Choose one bounded research task",
+      "rootIds": [
+        "reading-contract",
+        "role-map",
+        "open-topics",
+        "target-set"
+      ],
+      "requiredPaths": [
+        "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_register_v1.json"
+      ],
+      "missingRootIds": [],
+      "missingRequiredPaths": [],
+      "roots": [
+        "corpus/READING_CONTRACT.md",
+        "corpus/START_HERE_BY_ROLE.md",
+        "corpus/programmes/frontier-physics-targets/open_topics_v1.md",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_set_v1.md"
+      ],
+      "entrySurface": {
+        "files": 6,
+        "canonicalBytes": 98621,
+        "observedBytes": 98621,
+        "unknownByteFiles": 0,
+        "paths": [
+          "corpus/READING_CONTRACT.md",
+          "corpus/START_HERE_BY_ROLE.md",
+          "corpus/programmes/frontier-physics-targets/frontier_physics_target_register_v1.json",
+          "corpus/programmes/frontier-physics-targets/frontier_physics_target_set_v1.md",
+          "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json",
+          "corpus/programmes/frontier-physics-targets/open_topics_v1.md"
+        ]
+      },
+      "discoverableClosure": {
+        "files": 4211,
+        "canonicalBytes": 56981006,
+        "observedBytes": 58629790,
+        "unknownByteFiles": 90,
+        "brokenLinks": [],
+        "pathSetSha256": "2182f10ba0885a9cd5b529fef88f62368da32ea59cf46faa10845d168e0d44b0"
+      },
+      "qualification": "map-only; independently qualify any derived package and add execution dependencies for the selected capability"
+    },
+    {
+      "id": "audit",
+      "title": "Audit claims, provenance, and authority",
+      "rootIds": [
+        "reading-contract",
+        "evidence-spine",
+        "result-ledger",
+        "verification-guide",
+        "document-map",
+        "corpus-manifest",
+        "publication-authority"
+      ],
+      "requiredPaths": [
+        "corpus/registers/corpus_evidence_spine.json",
+        "tooling/indexing/generate_corpus_evidence_spine.mjs",
+        "tooling/audit/audit_spin23_corpus_manifest.mjs",
+        "tooling/audit/audit_markdown_links.mjs"
+      ],
+      "missingRootIds": [],
+      "missingRequiredPaths": [],
+      "roots": [
+        "corpus/READING_CONTRACT.md",
+        "corpus/EVIDENCE_SPINE.md",
+        "book/edition-3/chapters/08-result-ledger.md",
+        "verification/README.md",
+        "corpus/claims/0000-0099/00_research_document_map.md",
+        "corpus/registers/spin23_corpus_manifest.json",
+        "integrations/claimipedia/PUBLICATION-AUTHORITY.md"
+      ],
+      "entrySurface": {
+        "files": 11,
+        "canonicalBytes": 14145992,
+        "observedBytes": 15359036,
+        "unknownByteFiles": 1,
+        "paths": [
+          "book/edition-3/chapters/08-result-ledger.md",
+          "corpus/EVIDENCE_SPINE.md",
+          "corpus/READING_CONTRACT.md",
+          "corpus/claims/0000-0099/00_research_document_map.md",
+          "corpus/registers/corpus_evidence_spine.json",
+          "corpus/registers/spin23_corpus_manifest.json",
+          "integrations/claimipedia/PUBLICATION-AUTHORITY.md",
+          "tooling/audit/audit_markdown_links.mjs",
+          "tooling/audit/audit_spin23_corpus_manifest.mjs",
+          "tooling/indexing/generate_corpus_evidence_spine.mjs",
+          "verification/README.md"
+        ]
+      },
+      "discoverableClosure": {
+        "files": 4211,
+        "canonicalBytes": 56981006,
+        "observedBytes": 58629790,
+        "unknownByteFiles": 90,
+        "brokenLinks": [],
+        "pathSetSha256": "2182f10ba0885a9cd5b529fef88f62368da32ea59cf46faa10845d168e0d44b0"
+      },
+      "qualification": "map-only; independently qualify any derived package and add execution dependencies for the selected capability"
+    },
+    {
+      "id": "experiment",
+      "title": "Design a discriminating experiment",
+      "rootIds": [
+        "reading-contract",
+        "current-synthesis",
+        "experiment-atlas",
+        "target-set",
+        "verification-guide"
+      ],
+      "requiredPaths": [
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_register_v1.json",
+        "corpus/programmes/frontier-physics-targets/experiment_starter_kit.md"
+      ],
+      "missingRootIds": [],
+      "missingRequiredPaths": [],
+      "roots": [
+        "corpus/READING_CONTRACT.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_set_v1.md",
+        "verification/README.md"
+      ],
+      "entrySurface": {
+        "files": 8,
+        "canonicalBytes": 180327,
+        "observedBytes": 180342,
+        "unknownByteFiles": 0,
+        "paths": [
+          "corpus/READING_CONTRACT.md",
+          "corpus/programmes/frontier-physics-targets/experiment_starter_kit.md",
+          "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+          "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md",
+          "corpus/programmes/frontier-physics-targets/frontier_physics_target_register_v1.json",
+          "corpus/programmes/frontier-physics-targets/frontier_physics_target_set_v1.md",
+          "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+          "verification/README.md"
+        ]
+      },
+      "discoverableClosure": {
+        "files": 4211,
+        "canonicalBytes": 56981006,
+        "observedBytes": 58629790,
+        "unknownByteFiles": 90,
+        "brokenLinks": [],
+        "pathSetSha256": "2182f10ba0885a9cd5b529fef88f62368da32ea59cf46faa10845d168e0d44b0"
+      },
+      "qualification": "map-only; independently qualify any derived package and add execution dependencies for the selected capability"
+    }
+  ],
+  "diagnostics": {
+    "errors": [],
+    "unclassifiedObjects": [],
+    "directRootBrokenLinks": [],
+    "closureBrokenLinks": []
+  }
+}

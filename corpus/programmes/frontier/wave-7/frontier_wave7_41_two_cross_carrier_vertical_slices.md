@@ -1,4 +1,4 @@
-# Frontier Wave 7.40: Two Cross-Carrier Vertical Slices
+# Frontier Wave 7.41: Two Cross-Carrier Vertical Slices
 
 **Date:** 24 October 2026  
 **Status:** one exact effective-model route and one exact controlled refusal; both remain proposal-only outside their stated models

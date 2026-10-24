@@ -36,6 +36,19 @@ Desire does not make an endpoint true, while kenotic caution does not require pr
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/12-optional-endpoints-and-readings-desired-endpoints-are-aims-claim-2.md)
 
+<a id="three-roles-are-not-three-maxima"></a>
+## Three roles are not three maxima
+
+> **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
+
+Security, selfhood and kenosis become less paradoxical when they are typed as different mathematical roles: a viability boundary, an invariant carried through change and an outward flow. They are not three rival scalar objectives. The practical question is which trajectories preserve enough capacity and identity for something real to keep passing outward.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/12-optional-endpoints-and-readings-three-roles-are-not-three-maxima-claim-1.md)
+
+This picture does not solve moral tragedy or derive an ethic from mathematics. It shows where a decision actually crosses a declared boundary, destroys an identity-bearing relation or spends future capacity. Values still choose among admissible paths; the feasible region does not choose its own objective.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/12-optional-endpoints-and-readings-three-roles-are-not-three-maxima-claim-2.md)
+
 <a id="mythic-arcs-are-pictures"></a>
 ## Mythic arcs are pictures
 
@@ -78,6 +91,7 @@ The pinned Claimipedia graph offers one bounded picture of presence without domi
 - [frontier_wave7_45_kenotic_pole_topology_audit.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)
 - [frontier_wave7_46_kenotic_cover_gluing_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md)
 - [frontier_wave7_47_kenotic_enriched_loop_reopening_template.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md)
+- [frontier_wave7_57_security_selfhood_and_kenosis_as_three_mathematical_roles.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_57_security_selfhood_and_kenosis_as_three_mathematical_roles.md)
 - [EXPLANATORY_STANDARD.md](../../../corpus/EXPLANATORY_STANDARD.md)
 
 ---

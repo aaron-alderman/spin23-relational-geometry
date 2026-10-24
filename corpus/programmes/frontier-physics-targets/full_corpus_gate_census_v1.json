@@ -1,7 +1,7 @@
 {
   "schema": "frontier.full-corpus-gate-census/1",
   "date": "2026-10-24",
-  "scope": "Every Markdown or JSON artifact below corpus/ and evidence/, excluding the two generated census artifacts themselves; every scanned file receives a hashed inventory record, including files with no declared gate.",
+  "scope": "Every source Markdown or JSON artifact below corpus/ and evidence/, excluding this generated census and the independently verified front-door/evidence-spine derivatives; every scanned file receives a hashed inventory record, including files with no declared gate.",
   "pattern": "next gate|reopen gate|reopening gate|remains open|remain open|still open|next experiment|next executable|what remains|missing bridge|missing translation|unresolved|future work|next decisive|next finite|pinned dependency|pinned sub-branch|candidate bridge|open conjecture|next step|remaining gate|remaining input|missing input|not yet|blocked|future test|reopening contract|work remains|still missing|external input|open problem|open question",
   "statusPattern": "^\\*\\*Status:\\*\\*\\s*.*(?:open|active|candidate|speculative|pinned|blocked|pending|incomplete|frontier|not exhausted|unproved|reopening)",
   "authorities": [
@@ -15,36 +15,36 @@
   "integrityMethod": "Current SHA-256 is computed directly for every in-scope corpus/evidence Markdown or JSON artifact; the older repository-wide manifest is not relied on for census freshness.",
   "interpretation": "A lexical match is a candidate gate, not evidence that the gate remains live. Disposition and stateSignal separate navigation, separately governed inquiries, historical closure boundaries, and live topic ownership.",
   "summary": {
-    "scannedNarrativeFiles": 2536,
-    "inventoriedFiles": 2536,
-    "matchedFiles": 1530,
+    "scannedNarrativeFiles": 2643,
+    "inventoriedFiles": 2643,
+    "matchedFiles": 1580,
     "matchedClaims": 1176,
     "claimsWithoutDeclaredGate": 399,
-    "evidenceFiles": 438,
-    "matchedEvidenceFiles": 85,
+    "evidenceFiles": 455,
+    "matchedEvidenceFiles": 89,
     "byCorpusClass": {
       "claim": 1575,
-      "evidence": 438,
+      "evidence": 455,
       "navigation": 13,
-      "programme": 503,
-      "synthesis": 7
+      "programme": 588,
+      "synthesis": 12
     },
     "byDisposition": {
-      "delegated_audit": 260,
-      "evidence_record": 85,
-      "mapped": 1165,
-      "navigation": 9,
-      "no_declared_gate": 1006,
-      "separate_programme": 11
+      "delegated_audit": 304,
+      "evidence_record": 89,
+      "mapped": 1166,
+      "navigation": 8,
+      "no_declared_gate": 1063,
+      "separate_programme": 13
     },
     "byStateSignal": {
       "closure_boundary": 164,
-      "established_or_verified": 205,
+      "established_or_verified": 206,
       "live_or_conditional": 51,
-      "undeclared": 759
+      "undeclared": 761
     },
     "byTopic": {
-      "OT-001": 14,
+      "OT-001": 15,
       "OT-002": 51,
       "OT-003": 268,
       "OT-004": 268,
@@ -52,31 +52,31 @@
       "OT-010": 1,
       "OT-015": 69,
       "OT-016": 1,
-      "OT-018": 16,
-      "OT-019": 16,
+      "OT-018": 17,
+      "OT-019": 17,
       "OT-020": 1,
       "OT-022": 9,
       "OT-023": 1,
-      "OT-025": 138,
+      "OT-025": 141,
       "OT-026": 100,
       "OT-027": 284,
-      "OT-028": 453,
+      "OT-028": 454,
       "OT-029": 240,
       "OT-031": 9,
       "OT-032": 155,
       "OT-033": 45,
-      "OT-034": 14,
+      "OT-034": 15,
       "OT-035": 45,
       "OT-036": 3,
       "OT-038": 30,
       "OT-039": 240,
       "OT-040": 3,
-      "OT-042": 476,
+      "OT-042": 477,
       "OT-043": 1,
-      "OT-045": 138,
+      "OT-045": 141,
       "OT-046": 69,
       "OT-047": 215,
-      "OT-048": 14,
+      "OT-048": 15,
       "OT-049": 23
     },
     "unresolved": 0
@@ -84,7 +84,7 @@
   "records": [
     {
       "path": "corpus/claims/0000-0099/00_research_document_map.md",
-      "sha256": "75c993f1313f46287c27cc34c9e3865eac72927d694d1ae7365eb34f0aba3032",
+      "sha256": "e8c0301286e69b96bfd391131d77f71749e9b7ba051fcd6bc294d98caccfc398",
       "title": "Spin(2,3), the Standard Model, and Furey: document map",
       "gatePhrases": [
         "blocked",
@@ -381,7 +381,7 @@
     },
     {
       "path": "corpus/claims/0000-0099/30_research_frontier.md",
-      "sha256": "1197410b379723c3b0558599c1654d426b28786433a99571f57931690e1a52e2",
+      "sha256": "3f16b146d2993626386e83a8175c7e13ceae073e7c52d6674a678d09a6269bbd",
       "title": "Research Frontier: Spin(2,3), Division Algebras, the Standard Model, and Stress–Energy",
       "gatePhrases": [
         "blocked",
@@ -515,7 +515,7 @@
     },
     {
       "path": "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
-      "sha256": "05200be844269de542fb90ac4e44370ba590d3258efdf1b2f8017dde57308bc2",
+      "sha256": "fba25c771d844175f3579f5b39c4bde164dba28bd64d6ca897384c957a5d6278",
       "title": "The Spin(2,3) Pole",
       "gatePhrases": [
         "candidate bridge",
@@ -540,14 +540,14 @@
       "claimId": 40,
       "disposition": "mapped",
       "domains": [
-        "arithmetic-modular"
+        "admissibility-bound"
       ],
       "topicIds": [
-        "OT-025",
-        "OT-045"
+        "OT-018",
+        "OT-019"
       ],
       "mappingScores": {
-        "arithmetic-modular": 5
+        "admissibility-bound": 5
       },
       "stateSignal": "undeclared",
       "mappingBasis": "title/status/lead-section semantic route",
@@ -737,7 +737,7 @@
     },
     {
       "path": "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
-      "sha256": "810e4b6658d3efe1fc0c33bcab16242c96a51daa2d19919d403a28e11f187c22",
+      "sha256": "20b921a28efb820698f2c3950faac597ff026740e675c1ff89d8e2477bb9f79e",
       "title": "Multi-Branch Research Registry",
       "gatePhrases": [
         "blocked",
@@ -1721,7 +1721,7 @@
     },
     {
       "path": "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
-      "sha256": "cb566e6433d412106a4286c892b883dac8b832b0b67eaed4fe0f80ca99f8e402",
+      "sha256": "b5695eab2621c1cd6ad30168dc1b4b608efdb2fc794259db3e98597890420213",
       "title": "Active Multi-Branch Programme Log",
       "gatePhrases": [
         "blocked",
@@ -35421,6 +35421,39 @@
       "note": "Match occurs in a manifest, graph, register, or navigation surface rather than an independent research gate."
     },
     {
+      "path": "corpus/EXPLANATORY_STANDARD.md",
+      "sha256": "498ade9ee6207450a4c86dd53cc271dce26825ffeb42cf9ef4bbdbe5487c0176",
+      "title": "Explanatory standard: things, reasons, differences and optional readings",
+      "gatePhrases": [
+        "still open"
+      ],
+      "corpusClass": "synthesis",
+      "disposition": "mapped",
+      "domains": [
+        "detector-identifiability"
+      ],
+      "topicIds": [
+        "OT-001",
+        "OT-034",
+        "OT-048"
+      ],
+      "mappingScores": {
+        "detector-identifiability": 5
+      },
+      "stateSignal": "undeclared",
+      "mappingBasis": "title/status/lead-section semantic route",
+      "note": "Synthesis-level residual is attached to explicit closure-tested topics."
+    },
+    {
+      "path": "corpus/front-door.routes.json",
+      "sha256": "794d505fb4ffd6931b5e5e058f74c9423dbe267acc74e35ac153b11b5222adde",
+      "title": "front-door.routes.json",
+      "gatePhrases": [],
+      "corpusClass": "synthesis",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
       "path": "corpus/GLOSSARY.md",
       "sha256": "e8a8ef193c95b59fa226f2d91026a7f1ecd6b22f10620a275b8dfdd06aa30328",
       "title": "Working glossary",
@@ -38708,7 +38741,7 @@
     },
     {
       "path": "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md",
-      "sha256": "f7b3ba629dd737fa7d34d314668de01ae8bddab8b27e2bc36dde9400e4f9048f",
+      "sha256": "90844ad4ae424f209299ab23d27e66d9665242977c77c4d41c1bfcfde48e284d",
       "title": "Detector and frontier atlas v1",
       "gatePhrases": [
         "missing translation",
@@ -38723,7 +38756,7 @@
     },
     {
       "path": "corpus/programmes/frontier-physics-targets/detector_frontier_register_v1.json",
-      "sha256": "be4bbee4d86ac2b3dc7738390ef7c5dbe559895dc52a092d61581f07dd30f1a5",
+      "sha256": "80866aa5f6e7c82fc27022bd77f6579a77797a75e86c0303d3093e241e882a04",
       "title": "detector_frontier_register_v1.json",
       "gatePhrases": [],
       "corpusClass": "programme",
@@ -38740,8 +38773,21 @@
       "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
     },
     {
+      "path": "corpus/programmes/frontier-physics-targets/finesse_technology_pathway_v1.md",
+      "sha256": "719c14fae890b0fa52c5275f79d3f69ac50e4a161d5d8d4ed10fb64f758bcc0c",
+      "title": "Finesse technology pathway v1",
+      "gatePhrases": [
+        "not yet",
+        "unresolved"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/README.md",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
       "path": "corpus/programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md",
-      "sha256": "1eb23d0be7a4463cd5211e937c300738bab522b3fdbae5640c167aba2bbc39e0",
+      "sha256": "715b60f3445e8d2b522e5e1c7511da19523642e3763e8035bbae85eeed56936d",
       "title": "Frontier exhaustion checkpoint v1",
       "gatePhrases": [
         "blocked",
@@ -38758,7 +38804,7 @@
     },
     {
       "path": "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
-      "sha256": "c31a8745a312920d8f5fb96592b4345a670f89b88c9d5d4b6538dff630c2324e",
+      "sha256": "d01d8b76ec776c0a78161361b7ee509ac48b72debc821a72b797164a0384a3d6",
       "title": "frontier_experiment_atlas_v1.json",
       "gatePhrases": [],
       "corpusClass": "programme",
@@ -38767,7 +38813,7 @@
     },
     {
       "path": "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md",
-      "sha256": "acb5c064399f98832be9f7b79ce5dc16f86b99e5e65243724c5c344d8b6f5b2d",
+      "sha256": "65a63d4113419b10d4b6daba911125567b00bb30ff82dea23819aa7294a84c78",
       "title": "Frontier experiment atlas v1",
       "gatePhrases": [
         "blocked"
@@ -38870,7 +38916,7 @@
     },
     {
       "path": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
-      "sha256": "3ee1f30873a4fa74bea2ea7198557774eb27294c28f33017e915a03f60c7e95a",
+      "sha256": "6b854351d1d71975964d7102e9035262842a001d4c03814b5b63023e4e24c075",
       "title": "frontier_wave_gate_audit_v1.json",
       "gatePhrases": [],
       "corpusClass": "programme",
@@ -38879,7 +38925,7 @@
     },
     {
       "path": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.md",
-      "sha256": "9ea2ea713f53e5854c880fc8808b3f048c960e125117327715f90c792f18d92a",
+      "sha256": "c82a1c78a51a479180863f5ee2203bf6927a6baafcd2062b2eaddff1c36f0a73",
       "title": "Frontier Wave 6--7 gate audit v1",
       "gatePhrases": [],
       "corpusClass": "programme",
@@ -38888,7 +38934,7 @@
     },
     {
       "path": "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json",
-      "sha256": "5035bec00b9372e50cbfd5069fc9c1caf0f621854c743770d757d770c6702f72",
+      "sha256": "90aafd55b847b247775a2a3256d764dfd7c2ee61bf9542fdcbe077516dbfcf8c",
       "title": "open_topics_register_v1.json",
       "gatePhrases": [
         "blocked",
@@ -38901,7 +38947,7 @@
     },
     {
       "path": "corpus/programmes/frontier-physics-targets/open_topics_v1.md",
-      "sha256": "47538e59a59da449d63e3aa6c286c726df8bbfd2bdebca9bb5178f763dbc3fef",
+      "sha256": "cb2d7dae728e5b705c4170958a4c211bb7ba94296a7ac221ae1bc7cd56442524",
       "title": "Open topics v1",
       "gatePhrases": [
         "blocked",
@@ -38914,8 +38960,17 @@
       "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
     },
     {
+      "path": "corpus/programmes/frontier-physics-targets/page_rank_perron_selector_bridge_v1.md",
+      "sha256": "1605b0475f61bf1cfcba493aafcc9f0b911a466dadc9339c6607833fd79ec99e",
+      "title": "PageRank, Perron selection and the finesse trade-off",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
       "path": "corpus/programmes/frontier-physics-targets/README.md",
-      "sha256": "0c6060ce8a1db2f359fefe92612c2222e47744733746db9cca5550ef8b6fd63d",
+      "sha256": "69ed7b8bf717c4228a56dcc9ce692aac208d9704c2f61d15757e4cbf13ce8dd7",
       "title": "Frontier physics targets",
       "gatePhrases": [
         "blocked",
@@ -39788,9 +39843,165 @@
       "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
     },
     {
+      "path": "corpus/programmes/frontier/wave-7/a1_a2_parabolic_kenotic_envelope_v1.json",
+      "sha256": "acd299dcc53ae2cf74adad161f4cc713192ee88cfbb19f30f9ecc7e2134e09fd",
+      "title": "a1_a2_parabolic_kenotic_envelope_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
       "path": "corpus/programmes/frontier/wave-7/admissibility_bound_shape_v1.json",
       "sha256": "a2b9a479b65d6d601014a19d13dd43cad8d2206ae6e5b2ee155f38b76044d249",
       "title": "admissibility_bound_shape_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/admissibility_refinement_stress_v1.json",
+      "sha256": "676251aa3630cc39d0e9e09ccf6f602c5eb872486f80731c07671b66ccd7cb84",
+      "title": "admissibility_refinement_stress_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/bifundamental_retyping_checkpoint_v1.json",
+      "sha256": "616749e0e34b372ec32b732e160e0846ccdbd5c768a6655ac83ef069edc63037",
+      "title": "bifundamental_retyping_checkpoint_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/bifundamental_stabilizer_and_potential_v1.json",
+      "sha256": "b53cdc4f2a0ce4b23c4b9b0fc201337d94d9cc6309f58f9ef34bc79d7453c8d2",
+      "title": "bifundamental_stabilizer_and_potential_v1.json",
+      "gatePhrases": [
+        "remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/c2_inside_a4_compatibility_v1.json",
+      "sha256": "7bd46ad86ba07b330731ea5d905261a208538f71a167ff10846d118d0412fb89",
+      "title": "c2_inside_a4_compatibility_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/channel_selector_atlas_v1.json",
+      "sha256": "d537b516bccf420c647edcb6bb35b1be5137528891507dc81b61424004124683",
+      "title": "channel_selector_atlas_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_kenotic_cover_gluing_v1.json",
+      "sha256": "f10b18d7c4f820b143f81c79d505b60a5d0b9292630bf4ba45d11ad25b03ee8d",
+      "title": "claimipedia_kenotic_cover_gluing_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_kenotic_cover_no_go_v1.json",
+      "sha256": "b101a1faea020b13e4dd9e414f8f8a2333a986bb07736774fc44d4b38bd8a651",
+      "title": "claimipedia_kenotic_cover_no_go_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_kenotic_enriched_loop_toy_v1.json",
+      "sha256": "448c6dc29cc97ece9ac6fc0580096bb0722e2e091736d854d306dad851a405f0",
+      "title": "claimipedia_kenotic_enriched_loop_toy_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_kenotic_pole_topology_v1.json",
+      "sha256": "1a86e7bafbc719a7fc1de48814a8478f73f2b62fbc88c608083a5b4302c7cfbc",
+      "title": "claimipedia_kenotic_pole_topology_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_operator_exhaustion_v1.json",
+      "sha256": "e83ae37a9da2f7cea1ef1d0e7abbea41ce728b5bbeb99f600c5621a8e5426c85",
+      "title": "claimipedia_operator_exhaustion_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_programme_core_source_v1.json",
+      "sha256": "d928b67c708ebc1774e6f24895f5ec13a94b2feddfa0558c69b7e5be11408602",
+      "title": "claimipedia_programme_core_source_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_relationship_operator_algebra_v1.json",
+      "sha256": "75251492ce28657b8a39e3b85807e6e6e15f78b6e660f886a124ca924f9e0e9e",
+      "title": "claimipedia_relationship_operator_algebra_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_relationship_operator_source_v1.json",
+      "sha256": "2049529614d665ce21ee151f42352a6a72665c208f8b57059e45ade8d3ba7458",
+      "title": "claimipedia_relationship_operator_source_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_sign_holonomy_physical_detector_bridge_v1.json",
+      "sha256": "810a1fdf9157b1c82ec45618b92337f121f278ca6383c582bd1c7d0dd53c1ca4",
+      "title": "claimipedia_sign_holonomy_physical_detector_bridge_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/claimipedia_spin_temple_closed_carrier_v1.json",
+      "sha256": "381db8656b99aee6a3a1240e6c5cff8e46a0f58a48b69fafeed93c6fa143dd26",
+      "title": "claimipedia_spin_temple_closed_carrier_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/endpoint_identification_hom_space_v1.json",
+      "sha256": "dbb080c0b49d140a0e9182ba4d7fc1971130042c8c4e4f0fa786bc688dad79c8",
+      "title": "endpoint_identification_hom_space_v1.json",
       "gatePhrases": [],
       "corpusClass": "programme",
       "disposition": "no_declared_gate",
@@ -40241,9 +40452,421 @@
       "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
     },
     {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_36_hecke_commutant_and_spin23_corner_bridge.md",
+      "sha256": "a333ff9c51794f04b3d86fc12688eb40c6626be76960fb34946a0e62913efd15",
+      "title": "Frontier Wave 7.36: Hecke, Claimipedia and Spin(2,3) Meet at the Corner, Not as One Algebra",
+      "gatePhrases": [
+        "not yet",
+        "remain open",
+        "status:source-level audit and exact algebraic comparison; current fold source and a shared representation remain open",
+        "unresolved"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_37_claimipedia_relation_algebra_and_sl2_corner.md",
+      "sha256": "3bb226b090a68ae70724f1bceb5113be0ebf1d94f70fd02cf920df1d1bc4d806",
+      "title": "Frontier Wave 7.37: Claimipedia's Relation Algebra Contains an Exact \\(\\mathfrak{sl}_2\\) Corner",
+      "gatePhrases": [
+        "not yet"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_38_radical_quotient_and_c2_exhaustion.md",
+      "sha256": "dc6759884ea3f7bba21a231a38431fcb47328568e8c2c08cd94143560aaa3b0b",
+      "title": "Frontier Wave 7.38: The Spin--Temple Channel Has Semisimple Core \\(\\mathbb Q\\oplus M_2(\\mathbb Q)\\)",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md",
+      "sha256": "e31b2d8c2b98b514a39dd2d6be1d5a0cef03bde928b130f04d59ce1a0ef68fd4",
+      "title": "Frontier Wave 7.39: The Mixed Interface Is an A8 Transfer Lattice",
+      "gatePhrases": [
+        "not yet",
+        "remain open",
+        "status:exact graph-and-integral-lattice result; physical and exceptional interpretations remain open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md",
+      "sha256": "c70a183218ad5187be315a0ef0570338ef19fb32ece4e16bcf62a81da3b73277",
+      "title": "Frontier Wave 7.39: The Programme Core Is an \\(A_2\\) Double-Centralizer, Not \\(C_2\\)",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md",
+      "sha256": "1852e519f1949318ab00f14f81cfeb8106b948de615103d9afbb1e2d4935c0ed",
+      "title": "Frontier Wave 7.40: Claimipedia Operator Exhaustion and the Exact \\(Sp_4\\) Reopen Gate",
+      "gatePhrases": [
+        "reopen gate",
+        "status:relationship, nonlocal-path, programme, evidence and provenance branches exhausted for the pinned"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md",
+      "sha256": "2b30d15ecb5c297929e155e47751d3d58213db64d1a4e0db9d5325a3f2663146",
+      "title": "Frontier Wave 7.41: Two Cross-Carrier Vertical Slices",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md",
+      "sha256": "115b37eeb2ca8d90509e8d12695ccd599c849f3be01dfc856debd8b68fa0c6cf",
+      "title": "Frontier Wave 7.42: The Instrumented Admissibility Atlas",
+      "gatePhrases": [
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md",
+      "sha256": "60ccf365278e59e350277a6c9c83466f05ad064d745d302468e020c26546d203",
+      "title": "Frontier Wave 7.43: Sourcery's ALE Algebra Is an Ordered Path with a Join Valuation",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md",
+      "sha256": "cad43416f346fcd8312d755819d3c89edd89757c4ba529469c645471619f5cc4",
+      "title": "Frontier Wave 7.44: Refinement Stability of the Mixed Interface",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md",
+      "sha256": "ddaea1751411f067a268e1bff6340b95aed8175f1c18cf9ed8350116f7709844",
+      "title": "Frontier Wave 7.45: Kenotic Pole Topology Audit",
+      "gatePhrases": [
+        "not yet"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_45_three_carrier_programme_checkpoint.md",
+      "sha256": "df39bd0ffe77c04bce169055354e4cdb1adeb833042cb794992504960b6bbe63",
+      "title": "Frontier Wave 7.45: Three-Carrier Programme Checkpoint",
+      "gatePhrases": [
+        "status:finite architecture exhausted; physical execution open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md",
+      "sha256": "c2fa4d4c9852b16f1a974c62d016e9bee6465d77cf0d4d56ec591d2d8c81828d",
+      "title": "Frontier Wave 7.46: The Natural Kenotic Cover Glues Trivially",
+      "gatePhrases": [
+        "not yet",
+        "reopening gate"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md",
+      "sha256": "cf7f2cf527d7407097a7619534c4370020b8b5af4e38b717cf88e9fac08c006c",
+      "title": "Frontier Wave 7.47: Minimal Enriched Loop Reopening Template",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md",
+      "sha256": "f90a822c10641003183e3705754bfc2c688544328361562b712b26996e99a50c",
+      "title": "Frontier Wave 7.48: The Sign-Holonomy Toy Has an Existing Physical Detector",
+      "gatePhrases": [
+        "not yet"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_49_kenotic_cover_h0_signature_and_h1_no_go.md",
+      "sha256": "b2c9e066e6101ce8231058c6b5b9b3595df542e594c662ebd71eb9c3b337d6e7",
+      "title": "Frontier Wave 7.49: Kenotic Cover — \\(H_0\\) Signature and \\(H^1\\) No-Go",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_50_a1_a2_parabolic_kenotic_envelope.md",
+      "sha256": "d1e1028bbda7e0e1cfa3d412ce98dcaedd47fb87e5bad5e842f1931343c6493c",
+      "title": "Frontier Wave 7.50: The \\(A_1+A_2\\) Parabolic Kenotic Envelope",
+      "gatePhrases": [
+        "next gate",
+        "remains open",
+        "status:exact minimal representation-theoretic envelope; corpus realization remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_51_three_port_wick_kenosis_bridge.md",
+      "sha256": "a6a963133d0bd0588576b903c0a4d47bed0983bf6fe084c54d5f8f2913f132cd",
+      "title": "Frontier Wave 7.51: Three-Port Wick--Kenosis Bridge",
+      "gatePhrases": [
+        "status:exact finite bridge model; Claimipedia and physical identifications remain candidate"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_52_rectangular_mediator_candidate_audit.md",
+      "sha256": "e4217180960d1bd56add5ead7c28813029285f63da360defbbf7769dd7f16792",
+      "title": "Frontier Wave 7.52: Rectangular Mediator Candidate Audit",
+      "gatePhrases": [
+        "not yet"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_53_bifundamental_retyping_and_selection_gate.md",
+      "sha256": "bd678a9c9e832a3761d875e87e8507ca5890cc249cdee9eca1e3badbf00309af",
+      "title": "Frontier Wave 7.53: Bifundamental Retyping and the Selection Gate",
+      "gatePhrases": [
+        "remain open",
+        "status:six-dimensional module closes conditionally; carrier identity and physical selection remain open",
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_54_metric_selection_on_the_bifundamental_open_orbit.md",
+      "sha256": "b895022a356e9a046f7d97979abe67d7c890212a7c41d7858c21b609de45ed78",
+      "title": "Frontier Wave 7.54: Metric Selection on the Bifundamental Open Orbit",
+      "gatePhrases": [
+        "remains open",
+        "status:exact orbit--stabilizer result; physical endpoint identification remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_55_channel_selector_atlas_and_entropy_guardrail.md",
+      "sha256": "729616dd7f55d1385998e86199ba986fd3399a367ad7508dcda7697cfe458df6",
+      "title": "Frontier Wave 7.55: Channel Selector Atlas and the Entropy Guardrail",
+      "gatePhrases": [
+        "not yet",
+        "remains open",
+        "status:exact selector separation; microscopic objective remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_56_gram_disk_selector_discriminator.md",
+      "sha256": "4b13639a353f125c4df2fb60d133da2a35a6612f4b821aae2d9360415cf097b2",
+      "title": "Frontier Wave 7.56: Gram-Disk Selector Discriminator",
+      "gatePhrases": [
+        "remain open",
+        "status:exact preregistration mathematics; suitable apparatus and physical port identification remain open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_57_security_selfhood_and_kenosis_as_three_mathematical_roles.md",
+      "sha256": "cb8d34652f43a62482c906473d87d57081efcac3633cc5582d6618c032800ab1",
+      "title": "Frontier Wave 7.57: Security, Selfhood and Kenosis as Three Mathematical Roles",
+      "gatePhrases": [
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_58_grassmannian_globalization_of_the_kenotic_channel.md",
+      "sha256": "76a1a24743db5dd18c27d7ac90596726403303c9e80723ad68a0cec92b5fa6c0",
+      "title": "Frontier Wave 7.58: Grassmannian Globalization of the Kenotic Channel",
+      "gatePhrases": [
+        "remains open",
+        "status:exact global carrier geometry; physical identification remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_59_two_gram_selector_collision.md",
+      "sha256": "6d8d9a1de6bce4b2338bfff5076f0fe69a2649ca26583ac3fa3b4096cadebfbb",
+      "title": "Frontier Wave 7.59: The Two-Gram Selector Collision",
+      "gatePhrases": [
+        "next gate",
+        "remains open",
+        "status:exact selector no-go; physical objective remains open",
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_60_bifundamental_stabilizers_and_quartic_selection.md",
+      "sha256": "7cbdd7294fae45bb023c2f9b449fae75c6c309edce2787efe11b5bb3828a10d5",
+      "title": "Frontier Wave 7.60: Bifundamental Stabilizers and Quartic Selection",
+      "gatePhrases": [
+        "next gate"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_61_spin23_as_an_involutive_reduction_of_the_a4_envelope.md",
+      "sha256": "c9cf29f8e36d1a9e459999cdca00f8d5fc2faa9b53390df1c686ac740a584cc4",
+      "title": "Frontier Wave 7.61: (Spin(2,3)) as an Involutive Reduction of the (A_4) Envelope",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_62_endpoint_identification_hom_spaces.md",
+      "sha256": "41d37bd4bebe82796fccb7cdd78ebac5b434984cf48f2b1cdf74ddc617c1a001",
+      "title": "Frontier Wave 7.62: Endpoint-Identification Hom-Spaces",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md",
+      "sha256": "83d8fd9f0ba603671dd2f13119c1a627bf1f535e5b7e8bf0fed1a977705e7ccc",
+      "title": "Frontier Wave 7.63: Gram-Disk Dynamics and Causal Globalization",
+      "gatePhrases": [
+        "remain open",
+        "status:exact reduced dynamics and causal inheritance result; microscopic coefficients remain open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md",
+      "sha256": "72bda3bf21a9769122e08ad5fabb61870403c56b557a4c7227b097f7164d4548",
+      "title": "Frontier Wave 7.64: Grassmannian--(Spin(2,3)) Channel Terminal Synthesis",
+      "gatePhrases": [
+        "remains open",
+        "status:six-part mathematical programme complete; physical provenance remains open",
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/gram_disk_dynamics_and_causal_globalization_v1.json",
+      "sha256": "bd582001337303be829c69395e1f20f7cffea86e0387d898c666130736f15f71",
+      "title": "gram_disk_dynamics_and_causal_globalization_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/gram_disk_selector_discriminator_v1.json",
+      "sha256": "acabfe2a8e72785c3b8e1c5da592c8b443c5e78a9880b9c4a647bd6c10058719",
+      "title": "gram_disk_selector_discriminator_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/grassmannian_channel_globalization_v1.json",
+      "sha256": "b399d43d8adb5635fee2f2ab0496d5336608288605cb15237755f20cfb6e0a82",
+      "title": "grassmannian_channel_globalization_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
       "path": "corpus/programmes/frontier/wave-7/lambda_provenance_ledger_v1.json",
       "sha256": "e590090776f35df8d7892834739df44fb68a52f267c1635bd00b7f3206b1fe6a",
       "title": "lambda_provenance_ledger_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/metric_selected_bifundamental_orbit_v1.json",
+      "sha256": "f633bed164da0c53b9862ee7f204ec3ab48f5fa720e0393791e9a785cc6ee38f",
+      "title": "metric_selected_bifundamental_orbit_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/mixed_admissibility_interface_v1.json",
+      "sha256": "a397023e9c977ff2732f28c015f5f41612212e67bae6c5268957d09f1c540118",
+      "title": "mixed_admissibility_interface_v1.json",
       "gatePhrases": [],
       "corpusClass": "programme",
       "disposition": "no_declared_gate",
@@ -40304,6 +40927,15 @@
       "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
     },
     {
+      "path": "corpus/programmes/frontier/wave-7/monster_lean_hecke_commutant_audit_v1.json",
+      "sha256": "de6618a597e96d0dde675871e5f2bd9e452a1141b6d18e268e3c1696a7c4498c",
+      "title": "monster_lean_hecke_commutant_audit_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
       "path": "corpus/programmes/frontier/wave-7/monster_lean_structural_sieve_v1.json",
       "sha256": "f3bdaa23fe8362bc161bdf3af4837ecc866561a18b3ff9e20b0ee8855048b6c5",
       "title": "monster_lean_structural_sieve_v1.json",
@@ -40316,6 +40948,15 @@
       "path": "corpus/programmes/frontier/wave-7/monster_lean_typed_canonical_atlas_v1.json",
       "sha256": "cfb23a7cecd76e19fdc0581a9b5fd5e6f8cd87e3ee58cbcce0bd9bac630b4064",
       "title": "monster_lean_typed_canonical_atlas_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/rectangular_mediator_candidate_audit_v1.json",
+      "sha256": "5efedc0f1de7419524cf7bf7735bc73c253bbafbb586e44702cfdddccf37bedb",
+      "title": "rectangular_mediator_candidate_audit_v1.json",
       "gatePhrases": [],
       "corpusClass": "programme",
       "disposition": "no_declared_gate",
@@ -40371,9 +41012,78 @@
       "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
     },
     {
+      "path": "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
+      "sha256": "8a217dd2e81760b198cbabd52cd6370517b7373f2b168d3dead3412b6be68c07",
+      "title": "science_admissibility_instrumentation_v1.json",
+      "gatePhrases": [
+        "remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/six_part_channel_programme_closure_v1.json",
+      "sha256": "67dc90e83f9b8cdbcfc3f3a56e8732959e930c8c4361221546e2ad4019387067",
+      "title": "six_part_channel_programme_closure_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/sourcery_ale_algebra_v1.json",
+      "sha256": "25d4f2b0aba3115cf6b056a93b1c840fec242359cfe3449e87066fff23e363aa",
+      "title": "sourcery_ale_algebra_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/three_carrier_programme_checkpoint_v1.json",
+      "sha256": "6de85ca8b406eedf9c96166c94d864ed6ca6e6d5fb137512d38b6a5091880555",
+      "title": "three_carrier_programme_checkpoint_v1.json",
+      "gatePhrases": [
+        "reopen gate"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/three_port_wick_kenosis_bridge_v1.json",
+      "sha256": "78324ee6bcfd4cf7efb7c69678eb14b89440670d484f1fdcf19b7b762d522cfd",
+      "title": "three_port_wick_kenosis_bridge_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
       "path": "corpus/programmes/frontier/wave-7/three_record_experiment_preregistration_v1.json",
       "sha256": "5c085198f3a76a5e5c5759db7505bf8ae811712822a53875489f9a44a8788700",
       "title": "three_record_experiment_preregistration_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/three_role_life_admissibility_model_v1.json",
+      "sha256": "8104417ca8e6453e9cb4b67cfae928352dc68f184347fb11416a28f500bc6e9d",
+      "title": "three_role_life_admissibility_model_v1.json",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/frontier/wave-7/two_gram_selector_collision_v1.json",
+      "sha256": "109534a7c91adb12837b546e340969e3ff174cbfe3892228f042daf2667075e3",
+      "title": "two_gram_selector_collision_v1.json",
       "gatePhrases": [],
       "corpusClass": "programme",
       "disposition": "no_declared_gate",
@@ -40813,6 +41523,276 @@
       "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
     },
     {
+      "path": "corpus/programmes/lattice-subroutine-gravity/bridge-assessment.md",
+      "sha256": "02da743eb1911acb9bd6054233126a02d66d5a633b5212e4cffac29be55b2622",
+      "title": "Bridge assessment: from modular counting to Einstein dynamics",
+      "gatePhrases": [
+        "blocked",
+        "missing input",
+        "not yet"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/cartan-seam-gate.md",
+      "sha256": "6d744e6b85b5f21272b94afc3d0d3e300d02a5a736e811e0146c036e94fc0bd2",
+      "title": "The affine seam is not the Cartan compensator",
+      "gatePhrases": [
+        "remains open",
+        "status:exact carrier and connected-orbit obstruction; marked defect role remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/corpus-crosswalk.md",
+      "sha256": "6b8afe26a2152481e537964900cb961ecc3e57dd7d74f1ad47368ff8d9f4cf0d",
+      "title": "Corpus crosswalk: what this programme inherits and what it changes",
+      "gatePhrases": [
+        "not yet",
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/genus-two-seam-closure.md",
+      "sha256": "e94c5bed9e646bc2e56d0d17db3f7c0e4c1edf28812e1ae759d43c91a6b2568c",
+      "title": "The genus-two seam closes only as marked or enlarged modular data",
+      "gatePhrases": [
+        "not yet",
+        "remains open",
+        "status:exact finite modular-orbit obstruction and exact separating-order distinction; full multiplier system remains open",
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/induced-action-preflight.md",
+      "sha256": "0036c574da4faeef21cacdba80a849381ed753932ce0c1f74a6ea8262dc96550",
+      "title": "Induced-action preflight: degeneracy is not a stress tensor",
+      "gatePhrases": [
+        "remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/literature-review.md",
+      "sha256": "bc1110262283593b2f9ab5a28f809954ceab38eab07ac8f18c09cd4f06222970",
+      "title": "Literature review: lattice, moonshine and the gravity interface",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/mece-ledger-v1.json",
+      "sha256": "32ea07df682aaeb1c6202ce7493706690528123332d2511fa0ca605e61b93580",
+      "title": "mece-ledger-v1.json",
+      "gatePhrases": [
+        "remain open",
+        "remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md",
+      "sha256": "d304d2d6e6501b71759a259d65d50100903a9e2694a765ca37cf026660d114ac",
+      "title": "The spin-sector vector contains a beyond-sign metaplectic phase",
+      "gatePhrases": [
+        "not yet",
+        "remain open",
+        "status:exact theta-transformation result; complete Monster (2A) multiplier and physical transport map remain open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md",
+      "sha256": "b3f444c37a18393fb1bed24bcaca5f04c6fecc38e06b1474c9a2336aa8c9ddf7",
+      "title": "The modular sign selects parity interferometry, not chiral loop flux",
+      "gatePhrases": [
+        "remains open",
+        "status:exact detector-assignment obstruction; beyond-sign fermionic multiplier remains open",
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md",
+      "sha256": "5fb5d0f412cb6433f6103373e7de1407e49ce5987c6fb9c5c20ab35ff0f08b2b",
+      "title": "Monster fermionization supplies the missing kind of seam carrier",
+      "gatePhrases": [
+        "not yet",
+        "status:exact published fermionization and defect source; genus-two seam intertwiner open",
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/next-steps.md",
+      "sha256": "6154b7576ac2eb21503d8cd170dbc36d2468eb32fadc50a0e03e82953ba11572",
+      "title": "Calculations, experiments and open topics",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/oriented-seam-modular-line.md",
+      "sha256": "610c4220d4fc528d40f79e0ce65f6eb99fa4851410f6b67321b119c5c1cf0234",
+      "title": "The oriented seam survives as a modular character line",
+      "gatePhrases": [
+        "not yet",
+        "remains open",
+        "status:exact finite representation and standard Igusa-character completion; physical Leech coupling remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md",
+      "sha256": "edaf4a017dc0a30e6be0d15256385ae0705f780283438edf5ee039b5e3db8692",
+      "title": "The canonical period-matrix map does not send separation to the Jordan boundary",
+      "gatePhrases": [
+        "remain open",
+        "status:exact no-go for \\(Q=\\operatorname{Im}\\Omega\\); noncanonical response maps remain open",
+        "what remains"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/pfaffian-line-type-audit.md",
+      "sha256": "47c828f6e19607448267edd0248dbe5caf4f5ebad6e5d2f0ff06ec167a084433",
+      "title": "The Pfaffian lines agree in parity but live over different spaces",
+      "gatePhrases": [
+        "not yet",
+        "remain open",
+        "status:exact type separation and corpus crosswalk; all physical intertwiners remain open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/README.md",
+      "sha256": "662dfa70036c24b5bcd874a8985e5bccffba15cb115a273b26ecb9e416fd0d6c",
+      "title": "The lattice subroutine and the gravity boundary",
+      "gatePhrases": [
+        "missing bridge",
+        "next step",
+        "not yet"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/sewing-response-codimension-gate.md",
+      "sha256": "cd93cc08be17eb4156a0fa7882525ce276b93a4670b5107c0bf95270c85798e2",
+      "title": "A phase-blind positive response necessarily squares the modular seam",
+      "gatePhrases": [
+        "remains open",
+        "status:exact local codimension and invariant-theory obstruction; phase-sensitive enrichment remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/thermodynamic-gravity-preflight.md",
+      "sha256": "f3a35fa8475dde6fe765f8a3bfc9065760179d17a011fbb48d2ebf3bfbcb2928",
+      "title": "Thermodynamic-gravity preflight: state entropy is not yet area entropy",
+      "gatePhrases": [
+        "not yet",
+        "remains open",
+        "status:exact entropy-type separation; local geometric realization remains open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md",
+      "sha256": "158c384025308bc60328a6761062985bea51671a20b363ebfe7ddb07903d6d82",
+      "title": "Three-mode intrinsic seam-flux preflight",
+      "gatePhrases": [
+        "status:exact loop invariant and verified directional transfer preflight; hardware execution and modular binding open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/two-mode-phase-gauge-gate.md",
+      "sha256": "01929d4447cfd2b61cb032ed54c62b5f60511137fbe798eef85097e8cfbdfefd",
+      "title": "A two-mode coupling phase is not an intrinsic seam",
+      "gatePhrases": [
+        "not yet",
+        "remain open",
+        "status:exact gauge-removability result; externally anchored and three-mode-loop realizations remain open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/two-quadrature-seam-experiment.md",
+      "sha256": "bd88d06a58260ccad649cfca2f81942253d8a206a24f4889919dcc5b00d73a0b",
+      "title": "A realistic two-quadrature seam experiment",
+      "gatePhrases": [],
+      "corpusClass": "programme",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/programmes/lattice-subroutine-gravity/two-resonator-transfer-preflight.md",
+      "sha256": "c308f5ee357f8fbbe6538d39fc9b46736d36c528fd094aade1589ccb3e78e3d9",
+      "title": "Two-resonator transfer-function preflight",
+      "gatePhrases": [
+        "status:verified synthetic transfer-function and nuisance-rejection preflight; measured-device execution open"
+      ],
+      "corpusClass": "programme",
+      "disposition": "delegated_audit",
+      "auditRef": "corpus/programmes/frontier-physics-targets/residual_programme_gate_audit_v1.json",
+      "note": "Programme ownership is checked by the dedicated packet, wave, or residual programme audit."
+    },
+    {
       "path": "corpus/programmes/open-letters/spin23_open_letter_answer_programme.md",
       "sha256": "dea87b629b1cc93a652a3bd55f3ff65f3ec6fec6a31d1b482a7637e7c15cf77b",
       "title": "Spin(2,3) Open-Letter Answer Programme",
@@ -41000,8 +41980,22 @@
       "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
     },
     {
+      "path": "corpus/READING_CONTRACT.md",
+      "sha256": "fa38a9bde065c82e5f0c179feccfb7f77c7eaf5b0f35083539547e0e62d34ee6",
+      "title": "Reading contract: preserve the distinction",
+      "gatePhrases": [
+        "remains open"
+      ],
+      "corpusClass": "synthesis",
+      "disposition": "separate_programme",
+      "domain": "theology",
+      "ownerRef": "corpus/syntheses/grand-synthesis/aarons_spin23_research_thesis.md",
+      "stateSignal": "undeclared",
+      "note": "The gate belongs to an explicitly separate non-frontier-physics inquiry."
+    },
+    {
       "path": "corpus/README.md",
-      "sha256": "8c1f09775c54ac5986ca96e79ec0b1e20a33735ae8667ad7864c8b7a69e8a4f2",
+      "sha256": "180b7d9e2cbd03e73ff74aa9f9856bc0570b39ec21dd87e3980ea2d600179d32",
       "title": "Canonical research corpus",
       "gatePhrases": [
         "not yet",
@@ -41100,21 +42094,27 @@
       "note": "Match occurs in a manifest, graph, register, or navigation surface rather than an independent research gate."
     },
     {
-      "path": "corpus/registers/spin23_corpus_manifest.json",
-      "sha256": "b452a5608d1c9e0db58b7a03fd1c7c2717635642adbd48acb3e253cdd20095c5",
-      "title": "spin23_corpus_manifest.json",
-      "gatePhrases": [
-        "unresolved"
-      ],
+      "path": "corpus/registers/three_carrier_admissibility_taxonomy_v1.json",
+      "sha256": "c3829ebf1975884c2c7863f2f4559da9093e2191c7fabddfc1ca0ad8665a6ce1",
+      "title": "three_carrier_admissibility_taxonomy_v1.json",
+      "gatePhrases": [],
       "corpusClass": "navigation",
-      "disposition": "navigation",
-      "ownerRef": "corpus/claims/0000-0099/00_research_document_map.md",
-      "note": "Match occurs in a manifest, graph, register, or navigation surface rather than an independent research gate."
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
     },
     {
       "path": "corpus/START_HERE_BY_ROLE.md",
-      "sha256": "63b05508bb33c8da7480cf20dd460278305f88e633c5e8611adb81681c076177",
+      "sha256": "24edadb2f3e8017d540c8f1df582c4a37ec8c6adbc257e1c068b5a8f5a066979",
       "title": "Start here by role",
+      "gatePhrases": [],
+      "corpusClass": "synthesis",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "corpus/syntheses/admissibility_optional_endpoints_mythic_and_theological_readings.md",
+      "sha256": "bf9cd0e9ebebb0af91a888ecf0a43d4964d987efeef8b8503197abbc97fac6ee",
+      "title": "Optional endpoints: practical hope, speculative arcs, mythic readings and theology",
       "gatePhrases": [],
       "corpusClass": "synthesis",
       "disposition": "no_declared_gate",
@@ -41147,7 +42147,7 @@
     },
     {
       "path": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
-      "sha256": "f75069a25aaad786a0e7039c7063d3305d5aa700b1010b914ab0cf3ea5555858",
+      "sha256": "bb839b8d4f1b652d2a519d8856fb739874b5f6428c3de6284c1a6948e406b26a",
       "title": "The admissibility frontier",
       "gatePhrases": [
         "not yet",
@@ -41155,6 +42155,20 @@
         "remain open",
         "remains open",
         "status:standalone reader-facing synthesis; exact results, bounded interpretations and open"
+      ],
+      "corpusClass": "synthesis",
+      "disposition": "separate_programme",
+      "domain": "theology",
+      "ownerRef": "corpus/syntheses/grand-synthesis/aarons_spin23_research_thesis.md",
+      "stateSignal": "established_or_verified",
+      "note": "The gate belongs to an explicitly separate non-frontier-physics inquiry."
+    },
+    {
+      "path": "corpus/taxonomies/three_carrier_admissibility_taxonomy_v1.md",
+      "sha256": "27847952d6b91668471a80b5f1ea6e3abd0840f8fbb5bf12af40fe4e287a1395",
+      "title": "Three-Carrier Admissibility Taxonomy v1",
+      "gatePhrases": [
+        "remain open"
       ],
       "corpusClass": "synthesis",
       "disposition": "mapped",
@@ -41981,6 +42995,215 @@
       "path": "evidence/data/graph-two-mode-spin23-exhaustion.json",
       "sha256": "cfc8384881adf67c82e95365aa3d7fde4c53279b5bf9370a4b29f9a104ecabda",
       "title": "graph-two-mode-spin23-exhaustion.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-cartan-seam-gate-v1.json",
+      "sha256": "29d3fff4d4f8d66c2cd59d57197e3cb31ed818bb437ca8c7cb70dce397875218",
+      "title": "lattice-subroutine-cartan-seam-gate-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-genus-two-seam-closure-v1.json",
+      "sha256": "e2cb683ce6ffbc495fd83c2b3a935d3382bd6fc52e1a889d45bc9fc807eff3d3",
+      "title": "lattice-subroutine-genus-two-seam-closure-v1.json",
+      "gatePhrases": [
+        "remain open"
+      ],
+      "corpusClass": "evidence",
+      "disposition": "evidence_record",
+      "domains": [
+        "arithmetic-modular"
+      ],
+      "topicIds": [
+        "OT-025",
+        "OT-045"
+      ],
+      "mappingScores": {
+        "arithmetic-modular": 17
+      },
+      "mappingBasis": "evidence filename/content semantic route",
+      "note": "Evidence-side gate language records a result, implementation boundary or promotion condition; it does not create an independent claim target."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-gravity-preflight-v1.json",
+      "sha256": "cdce7b1227ec692a653717f859471a014a0293effa1931042e5948ccdb937a77",
+      "title": "lattice-subroutine-gravity-preflight-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-igusa-seam-completion-v1.json",
+      "sha256": "70bcf2be0723772d608a74f334ca7689d84727a029ce757e69a02d166b26f1c7",
+      "title": "lattice-subroutine-igusa-seam-completion-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-induced-gravity-preflight-v1.json",
+      "sha256": "e7d157baa4d25a7d4d3ff85b04f0a0d02956b4739f314035f73ae6b575c4293b",
+      "title": "lattice-subroutine-induced-gravity-preflight-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-metaplectic-phase-candidate-v1.json",
+      "sha256": "7562956f4f013497f80ba14df3364863ed2663aea2feeb5721bc8b8a5cd894b7",
+      "title": "lattice-subroutine-metaplectic-phase-candidate-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-modular-sign-detector-reassignment-v1.json",
+      "sha256": "6bbc44ab35ecc929ce01de5948cf1e446652f5464c5c607d6458bd99dc39634a",
+      "title": "lattice-subroutine-modular-sign-detector-reassignment-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-monster-fermionization-bridge-v1.json",
+      "sha256": "976d685f6c4f66535d0763de7358ad739f184c6b43f8724a5247d20142a90159",
+      "title": "lattice-subroutine-monster-fermionization-bridge-v1.json",
+      "gatePhrases": [
+        "not yet"
+      ],
+      "corpusClass": "evidence",
+      "disposition": "evidence_record",
+      "domains": [
+        "arithmetic-modular",
+        "furey-flavour"
+      ],
+      "topicIds": [
+        "OT-025",
+        "OT-045",
+        "OT-028",
+        "OT-042"
+      ],
+      "mappingScores": {
+        "arithmetic-modular": 17,
+        "furey-flavour": 17
+      },
+      "mappingBasis": "evidence filename/content semantic route",
+      "note": "Evidence-side gate language records a result, implementation boundary or promotion condition; it does not create an independent claim target."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-oriented-seam-modular-line-v1.json",
+      "sha256": "b637bb7678d98b78f7cdb0910775148b28d72ca67bb9ea0d6eec3089d1d60108",
+      "title": "lattice-subroutine-oriented-seam-modular-line-v1.json",
+      "gatePhrases": [
+        "remains open"
+      ],
+      "corpusClass": "evidence",
+      "disposition": "evidence_record",
+      "domains": [
+        "arithmetic-modular"
+      ],
+      "topicIds": [
+        "OT-025",
+        "OT-045"
+      ],
+      "mappingScores": {
+        "arithmetic-modular": 17
+      },
+      "mappingBasis": "evidence filename/content semantic route",
+      "note": "Evidence-side gate language records a result, implementation boundary or promotion condition; it does not create an independent claim target."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-period-matrix-jordan-boundary-gate-v1.json",
+      "sha256": "b66c569ddb5df221b17723cb59fe546aaa5e9da35fc1eb0ebeeacbb1f96c9ee8",
+      "title": "lattice-subroutine-period-matrix-jordan-boundary-gate-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-pfaffian-line-type-audit-v1.json",
+      "sha256": "ab8289d0d77968eef92c87317db3a82e47d9c607562e8272c06a40d88a44ec27",
+      "title": "lattice-subroutine-pfaffian-line-type-audit-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-sewing-response-codimension-gate-v1.json",
+      "sha256": "4c1995f61161cd0c884f5b3359a5ce6700328a17657d8f468a89020539b42a8a",
+      "title": "lattice-subroutine-sewing-response-codimension-gate-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-thermodynamic-gravity-preflight-v1.json",
+      "sha256": "d68edafa18106d58b0565fd4ebe46232be48be13ea2a292c59f6b67abc91a36a",
+      "title": "lattice-subroutine-thermodynamic-gravity-preflight-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-three-mode-loop-seam-preflight-v1.json",
+      "sha256": "c0c5cf9b0b154f9e96d6cd4d9a1f8177789d23ba0cf8270314d8edec98fd7cd5",
+      "title": "lattice-subroutine-three-mode-loop-seam-preflight-v1.json",
+      "gatePhrases": [
+        "remains open"
+      ],
+      "corpusClass": "evidence",
+      "disposition": "evidence_record",
+      "domains": [
+        "arithmetic-modular"
+      ],
+      "topicIds": [
+        "OT-025",
+        "OT-045"
+      ],
+      "mappingScores": {
+        "arithmetic-modular": 16
+      },
+      "mappingBasis": "evidence filename/content semantic route",
+      "note": "Evidence-side gate language records a result, implementation boundary or promotion condition; it does not create an independent claim target."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-two-mode-phase-gauge-gate-v1.json",
+      "sha256": "5c721ff5dc6c592fb672eca5416a78322dfb65452e6138e0b9a0451a472e3775",
+      "title": "lattice-subroutine-two-mode-phase-gauge-gate-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-two-quadrature-seam-experiment-v1.json",
+      "sha256": "fb89c825211dff9686f2c61a62dec5ea4caec6b68879eaf833ecf954aad43934",
+      "title": "lattice-subroutine-two-quadrature-seam-experiment-v1.json",
+      "gatePhrases": [],
+      "corpusClass": "evidence",
+      "disposition": "no_declared_gate",
+      "note": "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present."
+    },
+    {
+      "path": "evidence/data/lattice-subroutine-two-resonator-transfer-preflight-v1.json",
+      "sha256": "358cdf69b771ab6271fee135173708896f39b32fdd1602a848f9cf69b79e1579",
+      "title": "lattice-subroutine-two-resonator-transfer-preflight-v1.json",
       "gatePhrases": [],
       "corpusClass": "evidence",
       "disposition": "no_declared_gate",

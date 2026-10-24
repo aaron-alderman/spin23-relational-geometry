@@ -40,10 +40,11 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **frontier wave7 45 kenotic pole topology audit** — [frontier_wave7_45_kenotic_pole_topology_audit.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)
 - **frontier wave7 46 kenotic cover gluing no go** — [frontier_wave7_46_kenotic_cover_gluing_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md)
 - **frontier wave7 47 kenotic enriched loop reopening template** — [frontier_wave7_47_kenotic_enriched_loop_reopening_template.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md)
+- **frontier wave7 57 security selfhood and kenosis as three mathematical roles** — [frontier_wave7_57_security_selfhood_and_kenosis_as_three_mathematical_roles.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_57_security_selfhood_and_kenosis_as_three_mathematical_roles.md)
 - **EXPLANATORY STANDARD** — [EXPLANATORY_STANDARD.md](../../../corpus/EXPLANATORY_STANDARD.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 
-[Return to the assertion in the chapter](../chapters/12-optional-endpoints-and-readings.md#mythic-arcs-are-pictures) · [Book contents](../README.md) · [← Previous claim](12-optional-endpoints-and-readings-desired-endpoints-are-aims-claim-2.md) · [Next claim →](12-optional-endpoints-and-readings-mythic-arcs-are-pictures-claim-2.md)
+[Return to the assertion in the chapter](../chapters/12-optional-endpoints-and-readings.md#mythic-arcs-are-pictures) · [Book contents](../README.md) · [← Previous claim](12-optional-endpoints-and-readings-three-roles-are-not-three-maxima-claim-2.md) · [Next claim →](12-optional-endpoints-and-readings-mythic-arcs-are-pictures-claim-2.md)

@@ -53,7 +53,7 @@ assert.equal(signPlus.left, signMinus.left);
 assert.equal(signPlus.right, signMinus.right);
 assert.notEqual(signPlus.plus, signMinus.plus);
 
-const data = JSON.parse(fs.readFileSync(new URL('../frontier_wave3_incidence_alpaca_pair_summary.json', import.meta.url)));
+const data = JSON.parse(fs.readFileSync(new URL('../../corpus/programmes/frontier/wave-3/frontier_wave3_incidence_alpaca_pair_summary.json', import.meta.url)));
 const d100 = data.models.deduplicated.mass_points['0.1'];
 const m100 = data.models.multiplicity_preserving.mass_points['0.1'];
 const d300 = data.models.deduplicated.mass_points['0.3'];

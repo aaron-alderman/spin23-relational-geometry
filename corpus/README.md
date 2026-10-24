@@ -2,6 +2,16 @@
 
 This directory is the source-of-truth research record. It is intentionally distinct from the curated books and generated website.
 
+The [generated corpus front door](FRONT_DOOR.md) maps this interior through declared roots, exact authority and provenance labels, capability-specific minimum closures, link reachability and an explicit classification for every object in the canonical inventory. Use it when the question is not merely “where should I start?” but “what is here, how is it connected, and what would a bounded subset omit?”
+
+The [generated evidence spine](EVIDENCE_SPINE.md) is the claim-level drill-down beneath that map. It preserves canonical and observed file identity, exact declaration and link locations, certificate/evidence joins, scoped verdict text, marked title inferences and inbound consumer candidates. Missing joins remain visible; backlinks are not treated as endorsement, and structural indexing never promotes scientific status.
+
+For a question rather than a declared entrance, run the repository's [hybrid corpus search](../tooling/search/search_corpus.mjs). Weighted lexical retrieval supplies the query signal; personalized PageRank follows the corpus's actual links to recover surrounding context; and a selector sweep exposes dependence on the navigation prior. Results retain declared status and remain navigation aids, never evidence or epistemic promotion.
+
+```powershell
+node tooling/search/search_corpus.mjs --query "Casimir boundary response"
+```
+
 ## The current story
 
 The corpus is organized around a middle structure rather than a single symmetry slogan. Its non-negotiable explanatory order is **Jordan admission and composition → typed admissibility region → Lie transformation and transport → dynamics, selection and records**. Jordan structure delimits positive composition, states and response; the typed middle tracks their joint realizability; Lie structure describes transformations of what has already been admitted. On the declared rank-two carrier their relationship closes exactly through the Jordan triple and TKK construction to \(\mathfrak{sp}(4,\mathbb R)\cong\mathfrak{so}(2,3)\). That closure is a theorem about the possibility space, not the programme's starting premise. Read the [canonical reading contract](READING_CONTRACT.md) before interpreting any group-centred branch, and use the [explanatory standard](EXPLANATORY_STANDARD.md) to keep things, reasons, differences, status, implications and optional readings visible.

@@ -46,7 +46,14 @@ const patternSource = [
 const gatePattern = new RegExp(patternSource, "ig");
 const statusPatternSource = "^\\*\\*Status:\\*\\*\\s*.*(?:open|active|candidate|speculative|pinned|blocked|pending|incomplete|frontier|not exhausted|unproved|reopening)";
 const statusGatePattern = new RegExp(statusPatternSource, "im");
-const excluded = new Set([outJson, outMd]);
+const derivedControlSurfaces = [
+  "corpus/EVIDENCE_SPINE.md",
+  "corpus/FRONT_DOOR.md",
+  "corpus/registers/spin23_corpus_manifest.json",
+  "corpus/registers/corpus_evidence_spine.json",
+  "corpus/registers/corpus_front_door.json",
+];
+const excluded = new Set([outJson, outMd, ...derivedControlSurfaces]);
 
 const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
   const full = path.join(dir, entry.name);
@@ -243,7 +250,7 @@ summary.byStateSignal = countBy((record) => record.stateSignal ?? []);
 const output = {
   schema: "frontier.full-corpus-gate-census/1",
   date: new Date().toISOString().slice(0, 10),
-  scope: "Every Markdown or JSON artifact below corpus/ and evidence/, excluding the two generated census artifacts themselves; every scanned file receives a hashed inventory record, including files with no declared gate.",
+  scope: "Every source Markdown or JSON artifact below corpus/ and evidence/, excluding this generated census and the independently verified front-door/evidence-spine derivatives; every scanned file receives a hashed inventory record, including files with no declared gate.",
   pattern: patternSource,
   statusPattern: statusPatternSource,
   authorities: [

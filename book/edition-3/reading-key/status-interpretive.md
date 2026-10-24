@@ -46,6 +46,8 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The exceptional horizon · Jordan freedom and the need for selectors (2)](../details/07-exceptional-horizon-jordan-freedom-and-the-need-for-selectors-claim-2.md)
 - [Claim · Optional endpoints and larger readings · Desired endpoints are aims (1)](../details/12-optional-endpoints-and-readings-desired-endpoints-are-aims-claim-1.md)
 - [Claim · Optional endpoints and larger readings · Desired endpoints are aims (2)](../details/12-optional-endpoints-and-readings-desired-endpoints-are-aims-claim-2.md)
+- [Claim · Optional endpoints and larger readings · Three roles are not three maxima (1)](../details/12-optional-endpoints-and-readings-three-roles-are-not-three-maxima-claim-1.md)
+- [Claim · Optional endpoints and larger readings · Three roles are not three maxima (2)](../details/12-optional-endpoints-and-readings-three-roles-are-not-three-maxima-claim-2.md)
 - [Claim · Optional endpoints and larger readings · Mythic arcs are pictures (1)](../details/12-optional-endpoints-and-readings-mythic-arcs-are-pictures-claim-1.md)
 - [Claim · Optional endpoints and larger readings · Mythic arcs are pictures (2)](../details/12-optional-endpoints-and-readings-mythic-arcs-are-pictures-claim-2.md)
 - [Claim · Optional endpoints and larger readings · Theology under a declared assumption (1)](../details/12-optional-endpoints-and-readings-theology-under-a-declared-assumption-claim-1.md)
