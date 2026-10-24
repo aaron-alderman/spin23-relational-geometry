@@ -616,6 +616,44 @@ This matters before combining the ALP papers: the chiral rotations used to defin
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-name-the-coordinates-before-reading-the-signs-claim-3.md)
 
+<a id="hot-off-the-press-the-weak-record-hides-one-direction"></a>
+## Hot off the press — the weak record hides one direction
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
+
+**Provisional integration note — 25 October 2026.** The signed tree-level dictionary is now explicit in one standard ALP normalization. On the corpus's zero-Higgs-current representative, the measured fermion coefficients satisfy \(c_t=-v_u\) and \(c_b=-v_d\), while the weak bosonic coefficient after the anomaly trade is \(\widetilde c_{WW}=c_{WW}-a_2/2\). The minus signs and factor of two are therefore fixed rather than inferred from matching labels.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-weak-record-hides-one-direction-claim-1.md)
+
+The result exposes a scope boundary. The five-coordinate quotient is the quotient of phase-current sources. A general ALP effective theory also allows an independent direct weak-boson operator. A W-associated record by itself sees only \(c_{WW}-a_2/2\), so shifting \((a_2,c_{WW})\) by \((2\lambda,\lambda)\) leaves that record unchanged. Calling it a measurement of \(a_2\) would silently impose the current-only hypothesis.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-weak-record-hides-one-direction-claim-2.md)
+
+There are now two clean experiments rather than one blurred one. Set \(c_{WW}=0\) and test whether weak emission is inherited from the current anomaly; or retain the direct coefficient as a sixth coordinate and add a record that separates it. The next work is running, electroweak matching, covariance and the 27-setting amplitude in the chosen model. Agreement would provide a justified reduced theory. Failure repaired by the sixth coordinate would locate the edge of the current-source description; a residual beyond the complete model is where new physics should be sought.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-weak-record-hides-one-direction-claim-3.md)
+
+<a id="hot-off-the-press-more-energies-do-not-add-a-coordinate"></a>
+## Hot off the press — more energies do not add a coordinate
+
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The current-only hypothesis survives the published running order. In the derivative basis the direct weak coefficient \(c_{WW}\) is scale independent, while \(\widetilde c_{WW}\) changes because the fermion-current anomaly changes. If \(c_{WW}=0\) in the ultraviolet, then \(\widetilde c_{WW}(\mu)=-a_2(\mu)/2\) remains true along the flow.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-energies-do-not-add-a-coordinate-claim-1.md)
+
+This does not make the hidden coordinate observable. The shift \((a_2,c_{WW})\mapsto(a_2+2\lambda,c_{WW}+\lambda)\) leaves \(\widetilde c_{WW}\) unchanged at every scale in the analytic approximation. Repeating the same weak measurement at more energies changes its value but not the information it retains. The record still folds two source directions into one.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-energies-do-not-add-a-coordinate-claim-2.md)
+
+A different record is required—one that couples to the direct bosonic operator and the current anomaly in different combinations. Crossing the electroweak threshold does not provide the same weak node at lower energy because the W field has been integrated out; low-energy Bc information is separately matched validation. The look-here instruction is therefore to add operator diversity, not merely an energy scan.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-energies-do-not-add-a-coordinate-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

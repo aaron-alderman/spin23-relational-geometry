@@ -1,0 +1,232 @@
+{
+  "protocol": "alp-current-anomaly-quotient-gate/1",
+  "date": "2026-10-25",
+  "targets": [
+    "OT-047",
+    "OT-048"
+  ],
+  "parent": "AZ-075",
+  "sourceConvention": {
+    "reference": "Bauer et al., arXiv:2012.12272v2, Eqs. (1), (10) and (11)",
+    "derivativeBasis": [
+      "c_Q",
+      "c_u",
+      "c_d",
+      "c_L",
+      "c_WW"
+    ],
+    "invariantCoordinates": [
+      "c_t",
+      "c_b",
+      "a_2",
+      "ctilde_WW"
+    ],
+    "equations": [
+      "c_t=-c_Q+c_u",
+      "c_b=-c_Q+c_d",
+      "a_2=3c_Q+c_L",
+      "ctilde_WW=c_WW-a_2/2"
+    ],
+    "derivativeToInvariant": [
+      [
+        -1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        -1.5,
+        0,
+        0,
+        -0.5,
+        1
+      ]
+    ]
+  },
+  "quotientCertificate": {
+    "baryonNull": [
+      1,
+      1,
+      1,
+      -3,
+      0
+    ],
+    "imageOfBaryonNull": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "rawExample": [
+      2,
+      7,
+      5,
+      -1,
+      11
+    ],
+    "shiftedExample": [
+      6,
+      11,
+      9,
+      -13,
+      11
+    ],
+    "invariantExample": [
+      5,
+      3,
+      5,
+      8.5
+    ],
+    "shiftedInvariantExample": [
+      5,
+      3,
+      5,
+      8.5
+    ],
+    "invariantUnderBaryonShift": true
+  },
+  "corpusTranslation": {
+    "declaredSlice": "one diagonal generation, corpus all-left-handed convention, redundant Higgs-current coefficient fixed to c_H=0",
+    "equations": [
+      "v_u=c_Q-c_u=-c_t",
+      "v_d=c_Q-c_d=-c_b",
+      "a_2=3c_Q+c_L",
+      "ctilde_WW=c_WW-a_2/2"
+    ],
+    "corpusPlusDirectWeakCoordinates": [
+      "v_u",
+      "v_d",
+      "a_2",
+      "c_WW"
+    ],
+    "measuredCoordinates": [
+      "c_t",
+      "c_b",
+      "ctilde_WW"
+    ],
+    "corpusToMeasured": [
+      [
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -0.5,
+        1
+      ]
+    ],
+    "weakBlindDirection": [
+      0,
+      0,
+      2,
+      1
+    ],
+    "imageOfWeakBlindDirection": [
+      0,
+      0,
+      0
+    ],
+    "measuredExample": [
+      -5,
+      -3,
+      8.5
+    ],
+    "measuredBlindShift": [
+      -5,
+      -3,
+      8.5
+    ],
+    "currentOnlySlice": {
+      "condition": "c_WW=0",
+      "map": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -0.5
+        ]
+      ],
+      "inverseEquations": [
+        "v_u=-c_t",
+        "v_d=-c_b",
+        "a_2=-2 ctilde_WW"
+      ],
+      "determinant": -0.5,
+      "responseTransport": "F_corpus=T^T F_measured T",
+      "responseExample": [
+        [
+          9,
+          -3,
+          6
+        ],
+        [
+          -3,
+          4,
+          -4
+        ],
+        [
+          6,
+          -4,
+          16
+        ]
+      ],
+      "transportedResponseExample": [
+        [
+          9,
+          -3,
+          3
+        ],
+        [
+          -3,
+          4,
+          -2
+        ],
+        [
+          3,
+          -2,
+          4
+        ]
+      ]
+    }
+  },
+  "boundary": {
+    "closed": "The signed tree-level translation is exact in the cited normalization and the c_H=0 operator basis. The corpus current-source slice maps invertibly to (c_t,c_b,ctilde_WW) only when the independent direct coefficient c_WW is fixed.",
+    "correctedClaim": "The five-coordinate quotient is the physical quotient of phase-current sources, not the complete parameter space of a general ALP EFT with independent bosonic operators.",
+    "nonIdentification": "A W-associated measurement of ctilde_WW alone cannot separate the current anomaly a_2 from an independent c_WW because (delta a_2,delta c_WW)=(2 lambda,lambda) is invisible.",
+    "open": "RG evolution, electroweak matching, flavor matrices, covariance transport and the source-native three-coupling amplitude remain to be computed at one declared scale and scheme.",
+    "nextCalculation": "Choose either the current-only UV hypothesis c_WW=0 or retain c_WW as a sixth source coordinate; then run the RG and weak-threshold map into the measured basis before evaluating the 27 settings."
+  }
+}

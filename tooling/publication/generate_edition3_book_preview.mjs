@@ -284,6 +284,8 @@ const sectionTaxonomy = {
   "Hot off the press — two edges identify; three edges audit": "experiment",
   "Hot off the press — the third edge tests the whole triangle": "experiment",
   "Hot off the press — name the coordinates before reading the signs": "obstruction",
+  "Hot off the press — the weak record hides one direction": "conditional",
+  "Hot off the press — more energies do not add a coordinate": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -374,6 +376,8 @@ const sectionArchetype = {
   "Hot off the press — two edges identify; three edges audit": "builder",
   "Hot off the press — the third edge tests the whole triangle": "builder",
   "Hot off the press — name the coordinates before reading the signs": "auditor",
+  "Hot off the press — the weak record hides one direction": "translator",
+  "Hot off the press — more energies do not add a coordinate": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -721,6 +725,24 @@ admissibilitySections.splice(orientedSeamIndex + 28, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 29, 0, [
+  "Hot off the press — the weak record hides one direction",
+  [
+    "**Provisional integration note — 25 October 2026.** The signed tree-level dictionary is now explicit in one standard ALP normalization. On the corpus's zero-Higgs-current representative, the measured fermion coefficients satisfy \\(c_t=-v_u\\) and \\(c_b=-v_d\\), while the weak bosonic coefficient after the anomaly trade is \\(\\widetilde c_{WW}=c_{WW}-a_2/2\\). The minus signs and factor of two are therefore fixed rather than inferred from matching labels.",
+    "The result exposes a scope boundary. The five-coordinate quotient is the quotient of phase-current sources. A general ALP effective theory also allows an independent direct weak-boson operator. A W-associated record by itself sees only \\(c_{WW}-a_2/2\\), so shifting \\((a_2,c_{WW})\\) by \\((2\\lambda,\\lambda)\\) leaves that record unchanged. Calling it a measurement of \\(a_2\\) would silently impose the current-only hypothesis.",
+    "There are now two clean experiments rather than one blurred one. Set \\(c_{WW}=0\\) and test whether weak emission is inherited from the current anomaly; or retain the direct coefficient as a sixth coordinate and add a record that separates it. The next work is running, electroweak matching, covariance and the 27-setting amplitude in the chosen model. Agreement would provide a justified reduced theory. Failure repaired by the sixth coordinate would locate the edge of the current-source description; a residual beyond the complete model is where new physics should be sought.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 30, 0, [
+  "Hot off the press — more energies do not add a coordinate",
+  [
+    "**Provisional integration note — 25 October 2026.** The current-only hypothesis survives the published running order. In the derivative basis the direct weak coefficient \\(c_{WW}\\) is scale independent, while \\(\\widetilde c_{WW}\\) changes because the fermion-current anomaly changes. If \\(c_{WW}=0\\) in the ultraviolet, then \\(\\widetilde c_{WW}(\\mu)=-a_2(\\mu)/2\\) remains true along the flow.",
+    "This does not make the hidden coordinate observable. The shift \\((a_2,c_{WW})\\mapsto(a_2+2\\lambda,c_{WW}+\\lambda)\\) leaves \\(\\widetilde c_{WW}\\) unchanged at every scale in the analytic approximation. Repeating the same weak measurement at more energies changes its value but not the information it retains. The record still folds two source directions into one.",
+    "A different record is required—one that couples to the direct bosonic operator and the current anomaly in different combinations. Crossing the electroweak threshold does not provide the same weak node at lower energy because the W field has been integrated out; low-energy Bc information is separately matched validation. The look-here instruction is therefore to add operator diversity, not merely an energy scan.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -975,6 +997,8 @@ const sectionEvidenceOverrides = {
   "Hot off the press — two edges identify; three edges audit": ["corpus/programmes/admissibility/admissibility_73_signed_edge_extraction_and_cycle_audit.md", "corpus/programmes/admissibility/admissibility_72_candidate_phase_edges_and_scale_bridge.md", "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md"],
   "Hot off the press — the third edge tests the whole triangle": ["corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md", "corpus/programmes/admissibility/admissibility_73_signed_edge_extraction_and_cycle_audit.md", "corpus/programmes/admissibility/admissibility_66_contextual_triangle_bound_reduces_to_standard_positivity.md"],
   "Hot off the press — name the coordinates before reading the signs": ["corpus/programmes/admissibility/admissibility_75_operator_basis_covariance_and_cycle_boundary.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md", "corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md"],
+  "Hot off the press — the weak record hides one direction": ["corpus/programmes/admissibility/admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md", "corpus/programmes/admissibility/admissibility_75_operator_basis_covariance_and_cycle_boundary.md", "corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md"],
+  "Hot off the press — more energies do not add a coordinate": ["corpus/programmes/admissibility/admissibility_77_current_only_rg_stability_and_scale_sweep_no_go.md", "corpus/programmes/admissibility/admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md", "corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md"],
 };
 
 const evidenceReading = key => ({

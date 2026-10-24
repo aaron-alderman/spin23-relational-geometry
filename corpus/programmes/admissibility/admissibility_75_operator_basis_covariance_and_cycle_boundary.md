@@ -14,6 +14,8 @@
 
 **Verifier:** [basis-boundary certificate](../../../verification/admissibility/verify_three_source_basis_covariance_gate.mjs)
 
+**Continuation:** [AZ-076](admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md) derives the signed tree-level dictionary and shows that a general ALP EFT carries an independent weak-boson coordinate beyond the five-dimensional phase-current quotient.
+
 ## Result
 
 AZ-074's cycle sign has a narrower authority than its determinant. Independent reversals of the three named nodes preserve the product of the three edge signs. A general effective-field-theory basis change can mix those nodes, however, and need not preserve that product or even the same edge-zero pattern.
@@ -49,7 +51,7 @@ Closed:
 
 Open:
 
-- the complete signed chiral/anomaly dictionary joining the two cited ALP conventions;
+- the RG- and threshold-completed chiral/anomaly dictionary joining the two cited ALP conventions (the signed tree-level map is closed by AZ-076);
 - its RG and electroweak-threshold dependence;
 - the map into the corpus five-coordinate quotient;
 - the physical three-source response after that map is fixed.
