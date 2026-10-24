@@ -1,0 +1,83 @@
+{
+  "protocol": "admissibility-vertical-slices/1",
+  "composerProtocol": "scientific-derivation-composition/common-algebra-2",
+  "authority": {"proposalOnly": true, "entails": false, "empiricalAuthority": false, "applicationAdmission": false},
+  "dimensionConvention": "nondimensionalized effective-model coordinates; all SI exponent deltas are zero",
+  "slices": [
+    {
+      "id": "F05-wall-response-feedback",
+      "expectedDisposition": "one-valid-proposal",
+      "scienceCycle": ["QR-011", "QR-014", "QR-015"],
+      "interfaceCoordinates": ["A03", "A04"],
+      "objects": ["metastable-wall-record", "localized-two-channel-response", "selector-effective-potential", "contractive-projector-return"],
+      "transformations": [
+        {
+          "id": "wall-localizes-response", "from": "metastable-wall-record", "to": "localized-two-channel-response", "kind": "projection", "admitted": true,
+          "assumptions": ["one-mass Dirac kink family", "normalizable wall mode", "response embedding Y is retained"],
+          "losses": ["bulk mode profile outside the localized response face"],
+          "evidenceRefs": ["corpus/programmes/frontier/wave-7/frontier_wave7_09_wall_localized_response_closes_the_first_toy_loop.md#1-the-wall-localizes-a-mode"]
+        },
+        {
+          "id": "integrate-positive-fluctuation", "from": "localized-two-channel-response", "to": "selector-effective-potential", "kind": "projection", "admitted": true,
+          "assumptions": ["m squared is positive", "g is positive", "A=m squared I+g(P-Y) squared"],
+          "losses": ["resolved Gaussian fluctuation", "orientation sign of the relative angle"],
+          "evidenceRefs": ["corpus/programmes/frontier/wave-7/frontier_wave7_09_wall_localized_response_closes_the_first_toy_loop.md#2-the-localized-response-generates-a-selector-hessian"]
+        },
+        {
+          "id": "gradient-return-step", "from": "selector-effective-potential", "to": "contractive-projector-return", "kind": "dynamical-update", "admitted": true,
+          "assumptions": ["0 < alpha g/m squared < 1", "gradient response is the declared update law"],
+          "losses": [],
+          "evidenceRefs": ["corpus/programmes/frontier/wave-7/frontier_wave7_09_wall_localized_response_closes_the_first_toy_loop.md#3-the-induced-return-map-contracts"]
+        }
+      ],
+      "query": {"source": "metastable-wall-record", "target": "contractive-projector-return", "maxDepth": 3},
+      "ale": {
+        "assumptions": ["one-mass kink", "retained embedding Y", "positive response kernel", "declared gradient dynamics"],
+        "losses": ["bulk profile", "resolved Gaussian fluctuation", "orientation sign"],
+        "evidence": ["localized zero-mode certificate", "determinant and Hessian certificate", "return-multiplier certificate"]
+      },
+      "observable": "rho=1-2 alpha g/m squared",
+      "decisionRule": "accept only with positive fitted Hessian and detector-corrected absolute rho below one",
+      "falsifier": "nonpositive Hessian, absolute rho at least one, or response independent of Y"
+    },
+    {
+      "id": "F01-selection-memory-holonomy",
+      "expectedDisposition": "controlled-refusal-missing-orientation",
+      "scienceCycle": ["QR-006", "QR-008", "QR-009"],
+      "interfaceCoordinates": ["A02"],
+      "outsideInterfaceNode": "QS-008",
+      "objects": ["retained-projective-memory", "selected-projector", "axis-preserving-half-turn", "oriented-quarter-turn"],
+      "transformations": [
+        {
+          "id": "anchor-projective-memory", "from": "retained-projective-memory", "to": "selected-projector", "kind": "projection", "admitted": true,
+          "assumptions": ["independent retained boundary datum", "anchored contraction parameters inside the unit disk"],
+          "losses": ["rail difference after convergence", "orientation lift"],
+          "evidenceRefs": ["corpus/programmes/frontier/wave-7/frontier_wave7_07_minimal_reflexive_closure_and_neutral_mode.md#the-smallest-datum-that-closes-the-remaining-direction"]
+        },
+        {
+          "id": "projector-generates-half-turn", "from": "selected-projector", "to": "axis-preserving-half-turn", "kind": "coherent-transport", "admitted": true,
+          "assumptions": ["self-generated equivariant holonomy H_pi(P)=2P-I"],
+          "losses": [],
+          "evidenceRefs": ["corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md#director-defined-versus-orientation-defined-holonomy"]
+        },
+        {
+          "id": "forbidden-orientation-promotion", "from": "axis-preserving-half-turn", "to": "oriented-quarter-turn", "kind": "analogy", "admitted": false,
+          "refusal": "projector and memory data are director-valued; no orientation bit or loop direction is present",
+          "assumptions": ["an unprovided orientation datum"],
+          "losses": [],
+          "evidenceRefs": ["corpus/programmes/frontier/wave-7/frontier_wave7_06_selection_rotation_memory_trichotomy.md#the-minimal-combined-machine"]
+        }
+      ],
+      "query": {"source": "retained-projective-memory", "target": "oriented-quarter-turn", "maxDepth": 3},
+      "ale": {
+        "assumptions": ["independent memory", "director-valued projector"],
+        "losses": ["orientation lift"],
+        "evidence": ["anchored contraction certificate", "equivariant projector-only no-go"]
+      },
+      "observable": "loop-reversal-odd coherent frame rotation at fixed returned projector",
+      "decisionRule": "accept only after an independently measured orientation or phase reference is supplied",
+      "falsifier": "any inference of quarter-turn sign from projector and memory data alone",
+      "reopenDatum": "oriented loop direction, coherent phase reference, polarized channel, or independently sourced wall orientation"
+    }
+  ]
+}
