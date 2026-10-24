@@ -195,6 +195,15 @@ The selector fork also admits an exact reduced dynamics. A convex competition se
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-12.md)
 
+<a id="hot-off-the-press-detector-folding-has-an-exact-am-fm-boundary"></a>
+## Hot off the press — detector folding has an exact AM/FM boundary
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** In the calibrated small-index linear-response model, the carrier and both coherent sidebands reconstruct mixed amplitude and frequency modulation across 972 held-out settings, with a clock-origin-invariant sideband product fixing the difference of their squared depths. The same calculation proves an exact limit: line powers alone are identical for equal-index AM and FM after any linear time-invariant detector fold, while one sideband, sideband-excluding bandwidth and ringdown alone also lose the required relation. This closes the declared benchmark and makes its coherent three-line record the ordinary-physics nuisance baseline for the next G2 long/short-root response test; nonlinear, time-varying, large-index and genuinely hysteretic extensions remain open.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-detector-folding-has-an-exact-am-fm-boundary-claim-1.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -241,6 +250,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [frontier_wave7_62_endpoint_identification_hom_spaces.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_62_endpoint_identification_hom_spaces.md)
 - [frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md)
 - [frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md)
+- [frontier_wave7_65_drive_to_record_am_fm_benchmark.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md)
 - [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
 

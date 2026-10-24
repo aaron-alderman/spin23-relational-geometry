@@ -1,0 +1,76 @@
+{
+  "schema": "drive-to-record-am-fm-benchmark/1",
+  "date": "2026-10-25",
+  "status": "exact three-line small-index LTI benchmark; nonlinear and nonstationary extensions remain open",
+  "driveModel": {
+    "carrier": "omega_c",
+    "sidebands": ["omega_c-Omega", "omega_c+Omega"],
+    "normalizedCoefficients": {
+      "carrier": "x0=1",
+      "lower": "x_-=(m-beta)/2",
+      "upper": "x_+=(m+beta)/2"
+    },
+    "pureAM": "beta=0, equal sideband phase",
+    "pureFM": "m=0, opposite sideband sign",
+    "scope": "first order in amplitude depth m and phase/frequency modulation index beta"
+  },
+  "responseChain": {
+    "oscillator": "H(omega)=1/(k-mass*omega^2-i*gamma*omega)",
+    "detector": "D(omega)=1/(1-i*omega/omega_D)",
+    "record": "y_n=H(omega_n)D(omega_n)x_n plus complex calibrated noise",
+    "calibration": "F_n=H(omega_n)D(omega_n) is measured independently at all retained lines"
+  },
+  "invariants": {
+    "clockShift": "y_n -> exp(i*omega_n*t0)y_n",
+    "sidebandProduct": "K=(y_+ y_-/y_0^2)/(F_+ F_-/F_0^2)=x_+x_-=(m^2-beta^2)/4",
+    "amEstimator": "m_hat=x_+/x_0+x_-/x_0",
+    "fmEstimator": "beta_hat=x_+/x_0-x_-/x_0",
+    "pureClassRule": "sign Re(K): positive AM, negative FM",
+    "timeOriginInvariant": true
+  },
+  "informationLossLedger": [
+    {
+      "record": "carrier and both coherent complex sidebands with calibrated F_n",
+      "retains": ["AM depth", "FM index", "relative sideband sign", "mixed modulation"],
+      "loses": ["higher modulation orders outside the declared approximation"]
+    },
+    {
+      "record": "three line powers only",
+      "retains": ["sideband power"],
+      "loses": ["AM versus equal-index FM", "relative sideband sign", "mixed-modulation direction"]
+    },
+    {
+      "record": "carrier plus one sideband",
+      "retains": ["one complex sideband coefficient"],
+      "loses": ["clock-invariant AM/FM separation without an independent phase convention"]
+    },
+    {
+      "record": "post-drive ringdown only",
+      "retains": ["oscillator pole", "damping", "detector impulse response"],
+      "loses": ["modulation class after matched final state"]
+    },
+    {
+      "record": "bandwidth excluding either sideband",
+      "retains": ["in-band carrier response"],
+      "loses": ["sideband-product invariant", "complete mixed AM/FM reconstruction"]
+    }
+  ],
+  "benchmark": {
+    "carrierFrequencies": [0.72, 0.88, 1.03, 1.18],
+    "modulationFrequencies": [0.03, 0.07, 0.12],
+    "detectorCutoffs": [0.65, 1.1, 2.5],
+    "amDepths": [0.16, 0.28, 0.4],
+    "fmIndices": [0.12, 0.24, 0.36],
+    "clockOffsets": [0, 0.37, 1.13],
+    "heldOutPolicy": "fit no response parameters from class labels; use independently known F_n and test every Cartesian combination",
+    "expectedCases": 972,
+    "noiseStandardDeviation": 0.0005,
+    "seed": 23064
+  },
+  "closure": {
+    "exact": "coherent three-line tomography separates and reconstructs the declared AM/FM mixture after arbitrary calibrated LTI oscillator and detector folding",
+    "noGo": "power-only, one-sideband, ringdown-only and sideband-excluding records do not identify modulation class",
+    "nextUse": "the record bundle is the preregistered nuisance baseline for the G2 long/short-root response demonstrator",
+    "boundary": "large-index Bessel ladders, nonlinear mixing, time-varying response, clock drift within a record and metastable hysteresis require separate extensions"
+  }
+}

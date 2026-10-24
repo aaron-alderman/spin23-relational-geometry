@@ -11,10 +11,10 @@ The corpus has a closed navigation loop from target to frontier area to detector
 - all 22 canonical physics targets and all 20 frontier areas;
 - 35 detector bundles, including records, controls, maturity and source provenance;
 - all 57 admissibility packets, including AZ-041--AZ-057 beyond the older zone register;
-- all 84 Wave 6--7 packet files currently retained (17 Wave 6 and 67 Wave 7), with reused display numbers held under distinct audit identities;
+- all 85 Wave 6--7 packet files currently retained (17 Wave 6 and 68 Wave 7), with reused display numbers held under distinct audit identities;
 - every remaining programme Markdown or JSON file containing the declared open-gate vocabulary: 69 files, of which 48 map to physics topics and 21 retain separate programme governance;
 - the complete source corpus-and-evidence backstop: all 2,643 in-scope Markdown/JSON artifacts hashed and inventoried (2,188 corpus narratives and 455 evidence artifacts, excluding the independently verified generated control surfaces); 1,580 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 89 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
-- 49 independently closable topics: 9 active, 19 open, 3 audit, 13 gated, 2 blocked and 3 closed with retained evidence.
+- 49 independently closable topics: 9 active, 18 open, 3 audit, 13 gated, 2 blocked and 4 closed with retained evidence.
 
 No scanned gate is orphaned. The [full-corpus census](full_corpus_gate_census_v1.md) distinguishes old closure language, live semantic ownership, navigation surfaces and separately governed inquiries rather than equating every occurrence of “open” with a new target. “Exhausted” here means the declared corpus search and ownership problem is exhausted, not that nature, unstated tacit questions, the literature, or every possible experiment is exhausted.
 
@@ -39,7 +39,7 @@ Filled areas are exact constructions, executable emulators and established detec
 
 ### Tranche A — no new laboratory required
 
-OT-014 and OT-041 are now closed by [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md): the finite-chain phase/count ledger and both pole collisions are certified. The next executable order must respect the maintained dependency graph: run the AM/FM detector benchmark OT-043 before the G2 folding test OT-044, and complete the source-bearing operator assignment OT-024 → OT-027 before claiming the full renormalized two-current calculation OT-047. A preliminary OT-047 source and scheme census may proceed in parallel, but not its closure claim. Each path can return a useful no-go.
+OT-014 and OT-041 are closed by [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md): the finite-chain phase/count ledger and both pole collisions are certified. OT-043 is now closed by [Wave 7.65](../frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md): its exact power-only no-go and coherent three-line reconstruction supply the nuisance baseline that unblocks the G2 folding test OT-044. The remaining dependency order is to run OT-044 against that baseline, and to complete the source-bearing operator assignment OT-024 → OT-027 before claiming the full renormalized two-current calculation OT-047. A preliminary OT-047 source and scheme census may proceed in parallel, but not its closure claim. Each path can return a useful no-go.
 
 ### Tranche B — simulation and design closure
 
@@ -47,7 +47,7 @@ OT-001's coordinated simulator is closed by AZ-057. Run OT-002, OT-003, OT-033 a
 
 ### Tranche C — nearest experiments
 
-Advance OT-006/007, OT-009/010, OT-011/012 and OT-043. These are the same-film Casimir/thermoelectric test, acoustic and four-mode quotient-scar platforms, hybrid-magnon discrimination, and the AM/FM drive-to-record benchmark.
+Advance OT-006/007, OT-009/010 and OT-011/012. These are the same-film Casimir/thermoelectric test, acoustic and four-mode quotient-scar platforms, and hybrid-magnon discrimination. Reuse OT-043's closed coherent-sideband bundle whenever modulation is a nuisance rather than reopening the benchmark by default.
 
 ### Tranche D — reopen only on new typed data
 

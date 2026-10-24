@@ -464,6 +464,13 @@ admissibilitySections.splice(orientedSeamIndex + 3, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 4, 0, [
+  "Hot off the press — detector folding has an exact AM/FM boundary",
+  [
+    "**Provisional integration note — 25 October 2026.** In the calibrated small-index linear-response model, the carrier and both coherent sidebands reconstruct mixed amplitude and frequency modulation across 972 held-out settings, with a clock-origin-invariant sideband product fixing the difference of their squared depths. The same calculation proves an exact limit: line powers alone are identical for equal-index AM and FM after any linear time-invariant detector fold, while one sideband, sideband-excluding bandwidth and ringdown alone also lose the required relation. This closes the declared benchmark and makes its coherent three-line record the ordinary-physics nuisance baseline for the next G2 long/short-root response test; nonlinear, time-varying, large-index and genuinely hysteretic extensions remain open.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -564,6 +571,7 @@ chapterSources["08-admissibility-frontier"].splice(-2, 0,
   "corpus/programmes/frontier/wave-7/frontier_wave7_62_endpoint_identification_hom_spaces.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md",
+  "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
 );
 
 const chapters = chapterSkeletons.map(chapter => ({

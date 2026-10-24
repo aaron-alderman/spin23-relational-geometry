@@ -130,6 +130,8 @@ The practical atlas contains:
 
 The open region is not rendered as a mystical blank. It is separated into computational inner rims, instrumented middle rims, translation gaps and fundamental firewalls. A null result remains useful because the conventional scientific residue is recorded in advance.
 
+One detector boundary is now exact in a declared model. For small modulation depths passed through a calibrated linear time-invariant oscillator and detector, the carrier plus both coherent sidebands reconstruct mixed AM and FM, and their normalized product is independent of clock origin. Power spectra alone cannot do this: equal-index AM and FM have exactly the same three line powers after the fold. The result closes OT-043 over 972 held-out settings and turns its coherent three-line record into the nuisance baseline for OT-044. The implication is practical rather than grandiose: any proposed long-root/short-root response scar must first beat ordinary mixed modulation using phase-bearing records; a power-only excess is not yet exceptional physics. Nonlinear, time-varying, large-index and remanent-hysteresis regimes remain outside the closure.
+
 ### 7. The mixed frontier has an exact internal shape
 
 The finite quotient-scar map contains 16 structures and 27 typed relations.

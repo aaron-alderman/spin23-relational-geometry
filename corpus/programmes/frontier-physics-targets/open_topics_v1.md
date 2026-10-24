@@ -5,7 +5,7 @@
 **Machine authority:** [open-topic register](open_topics_register_v1.json)  
 **Detector map:** [detector and frontier atlas](detector_frontier_atlas_v1.md)
 
-The register contains **49** independently closable topics: **46 remain live and three are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
+The register contains **49** independently closable topics: **45 remain live and four are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
 
 ## Operating rule
 
@@ -52,7 +52,6 @@ An open topic stays on this list until one of four things happens:
 | OT-033 | Real declaration-corpus adaptive census | replaces synthetic Lean chains with source-native occupancy and fibre data |
 | OT-036 | Microscopic capture and radiation ledger | replaces the successful toy bath with a source-native radiative or phononic channel |
 | OT-037 | Integrated-photonic selector chip | turns robustness inequalities into a fabrication-ready simulation |
-| OT-043 | Drive-to-record AM/FM benchmark | measures which phase, sideband, ringdown and reversal records survive detector folding |
 | OT-044 | G2 long/short-root response demonstrator | tests which root-length response scars survive damping and detector folding |
 | OT-047 | Renormalized two-current source frame and KMS response | computes operator mixing, contact terms, thresholds and the finite-temperature tensor |
 | OT-048 | Five-coordinate incidence observable likelihood | joins bottom, weak and neutrino compasses with signed interference and covariance |
@@ -91,6 +90,7 @@ An open topic stays on this list until one of four things happens:
 | OT-001 | Forward endpoint, reversal tomography and process singular values separate geometric holonomy, static splitting and differential loss in one generative simulator; global nonlinear injectivity remains OT-034. | [AZ-057](../admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md) |
 | OT-014 | The finite-chain ledger is (N_{\rm b}+\nu_S-1=N_C); all 14 original cases and a 36-case length census close. | [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md) |
 | OT-041 | Both band-edge collision controls and their linear local scaling are certified by cofactor and sheet continuation. | [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md) |
+| OT-043 | In the small-index calibrated LTI family, power-only records are exactly AM/FM blind; the carrier plus both coherent sidebands reconstruct mixed modulation across 972 held-out cases. | [Wave 7.65](../frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md) |
 
 ## Cross-cutting unknowns
 

@@ -140,15 +140,17 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Efficient Fisher singular values
 - Global equivalence-class diameter
 - Cost per acquired channel
+- Coherent three-line AM/FM reconstruction error and the matched power-only residual
 
 **Controls**
 
 - Known tangent-degenerate pairs
 - AZ-057 three-mechanism closed benchmark
+- Wave 7.65 carrier-plus-two-sideband positive control and exact power-only no-go
 - Label permutations
 - Noise and calibration folds
 
-**Analysis.** Plot information gained per marginal cost and certify global injectivity only after interval or adversarial optimization over nuisance parameters.
+**Analysis.** Plot information gained per marginal cost and certify global injectivity only after interval or adversarial optimization over nuisance parameters. For modulation records, compare every richer model with the frozen Wave 7.65 mixed-AM/FM nuisance family before attributing a residual to root geometry or new dynamics.
 
 **Decisive positive result.** Every declared pair is separated on held-out interventions or assigned to an explicit quotient class.
 
