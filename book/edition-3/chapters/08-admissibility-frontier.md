@@ -941,6 +941,23 @@ The implication is constructive. Flavor searches remain real detectors and valua
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-term-is-not-a-detector-row-claim-3.md)
 
+<a id="hot-off-the-press-the-public-model-has-one-control-too-few"></a>
+## Hot off the press — the public model has one control too few
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** The official linear ALP UFO reaches the right process family, but not the full intervention space. It exposes one `CaPhi` control for the Higgs-current direction and one `CWtil` control for direct weak-boson emission. After the known masses are stripped away, the same `CaPhi` makes the top and bottom couplings equal in magnitude and opposite in sign.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-public-model-has-one-control-too-few-claim-1.md)
+
+This means the available file can move only on the plane ((c_t,c_b,c_{WW})=(x,-x,y)). Nine of the twenty-seven signed settings lie on that plane. A general three-source quadratic response has six coefficients, while this slice retains only three combinations. Seeing top, bottom and weak vertices in the model is therefore not the same as being able to move their causes independently.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-public-model-has-one-control-too-few-claim-2.md)
+
+The result is hopeful because the missing work is now sharply bounded. Export one nonredundant gauge-invariant model with independent third-generation currents and (c_{WW}), carry the anomaly shifts into the gauge coefficients, generate every completing vertex and pass Ward tests before running the factorial design. A new-physics claim begins only after that complete model, the held-out corners and detector folding fail together; until then this is model engineering, not an anomaly.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-public-model-has-one-control-too-few-claim-3.md)
+
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
 ## Hot off the press — the hydrodynamic cone has poles
 

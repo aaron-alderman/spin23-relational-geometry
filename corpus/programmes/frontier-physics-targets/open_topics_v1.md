@@ -71,8 +71,8 @@ for another dimensionless redesign.
 | OT-033 | Real declaration-corpus adaptive census | gated by AZ-060 on the named DeclFold sources, `fold/decls.json` and the pinned Lean/Lake environment; replaces synthetic chains only after source-native occupancy and fibre data reproduce |
 | OT-036 | Microscopic capture and radiation ledger | replaces the successful toy bath with a source-native radiative or phononic channel |
 | OT-037 | Integrated-photonic selector chip | AZ-061 supplies a passing coupled-mode wedge but exposes signed-coupling, reference-port, full-wave tolerance and separate-selector gates; one fabrication-native route must now be chosen and simulated |
-| OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-071 sets the window-wide detector gate: 0.279% combined one-sigma error certifies the 1% reduction at 3 sigma, while resolving the second mode needs below 438 ppm plus sub-degree mode alignment |
-| OT-048 | Five-coordinate incidence observable likelihood | AZ-078 splits the full flavor current space into five singlets plus forty traceless directions and corrects the protected null current to completed B-L. AZ-079 isolates a finite matching term proportional to unprimed c_WW, but AZ-081 supplies the required correction: the published source-complete MFV numerical flavor kernel recombines that term with evolution and matching into ctilde_WW, so its (A_2,c_WW) row is parallel to the weak row and the determinant remains zero. AZ-080's six-item Belle release packet is still worth obtaining for constraint and cross-scale validation. Move sixth-coordinate identification to a gauge-complete differential W-associated amplitude or another source-complete non-collinear observable, then apply AZ-074's 27 settings |
+| OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-071 fixes the detector budget; AZ-113 shows the official public linear ALP UFO has intervention rank two in the required three-source space, so the next calculation first needs an independent-current model export |
+| OT-048 | Five-coordinate incidence observable likelihood | AZ-081 restores the weak quotient in the source-complete MFV flavor row. AZ-113 then shows the official public UFO reaches only the slice \((c_t,c_b,c_{WW})=(x,-x,y)\): 9 of 27 settings and 3 of 6 kernel combinations. Build or locate a gauge-invariant three-control model, validate anomaly shifts and Ward identities, then run AZ-074 before detector folding; retain Belle as validation |
 
 ## P2 — gated translation problems
 
@@ -141,6 +141,15 @@ most two of seventeen records: the local Spin--Temple pair. The Jordan face is
 therefore exact but quotient-local. Reopening now requires an authored dagger,
 a provenance-bearing nonlocal anti-automorphism, or a held-out prediction that
 selects one.
+
+[AZ-113](../admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md)
+audits the nearest official collider implementation. Its `CaPhi` control fixes
+the normalized top and bottom ALP couplings to opposite signs, while `CWtil`
+supplies the direct weak-boson control. The resulting intervention map has rank
+two: only nine of the twenty-seven signed settings are reachable, and a general
+six-coefficient quadratic kernel collapses to three combinations. The file is
+valid for that two-control slice; it cannot execute the corpus's three-source
+test. This is an implementation-rank boundary, not a physical no-go.
 
 [AZ-087](../admissibility/admissibility_87_source_native_measured_impedance_held_out_prediction.md)
 supplies that first measured response. A checksum-identified Zenodo EIS file is

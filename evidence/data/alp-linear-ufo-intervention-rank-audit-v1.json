@@ -1,0 +1,137 @@
+{
+  "protocol": "alp-linear-ufo-intervention-rank-audit/1",
+  "packet": "AZ-113",
+  "targets": [
+    "OT-047",
+    "OT-048"
+  ],
+  "sources": {
+    "modelPage": "https://cp3.irmp.ucl.ac.be/projects/feynrules/wiki/ALPsEFT",
+    "paper": "https://arxiv.org/abs/1701.05379",
+    "archiveUrl": "https://cp3.irmp.ucl.ac.be/projects/feynrules/raw-attachment/wiki/ALPsEFT/ALP_linear_UFO.tar.gz",
+    "archiveSha256": "d5c27f76bcf87d84cba09c4ca30d852c68eb18962cd9da148973d9deb7373a7b",
+    "archiveFiles": 14
+  },
+  "export": {
+    "feynRulesVersion": "2.3.26",
+    "flavoredVertices": 101,
+    "couplings": 79,
+    "alpExternalParameters": [
+      "fa",
+      "CGtil",
+      "CWtil",
+      "CBtil",
+      "CaPhi"
+    ]
+  },
+  "sourceDependencies": {
+    "normalizedTargetCoordinates": [
+      "c_t",
+      "c_b",
+      "c_WW"
+    ],
+    "independentUfoControls": [
+      "CaPhi",
+      "CWtil"
+    ],
+    "interventionMatrix": [
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "interventionRank": 2,
+    "reachableConstraint": "c_b = -c_t",
+    "directCouplingExpressions": {
+      "bottom": "-((CaPhi*vev*yb)/(fa*cmath.sqrt(2)))",
+      "top": "(CaPhi*vev*yt)/(fa*cmath.sqrt(2))",
+      "weak": "(2*CWtil*complex(0,1))/fa"
+    }
+  },
+  "factorialCeiling": {
+    "declaredThreeSourceSettings": 27,
+    "reachableSettings": 9,
+    "unreachableSettings": 18,
+    "reachableSettingList": [
+      [
+        -1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        0
+      ],
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        -1,
+        1
+      ]
+    ],
+    "generalSymmetricKernelCoefficients": 6,
+    "identifiableRestrictedCombinations": 3,
+    "unidentifiedKernelDirections": 3,
+    "retainedCombinations": [
+      "K_tt + K_bb - 2 K_tb",
+      "K_tW - K_bW",
+      "K_WW"
+    ]
+  },
+  "decision": {
+    "publishedUfoCanRunCaPhiCwSlice": true,
+    "publishedUfoCanRunIndependentCtCbCwTriangle": false,
+    "publishedUfoCanExecuteAz074Design": false,
+    "amplitudeComputed": false,
+    "physicsNoGoEstablished": false,
+    "modelExtensionRequired": true
+  },
+  "implementationContract": [
+    "Choose one nonredundant gauge-invariant ALP EFT basis with independent third-generation current coefficients and c_WW.",
+    "Export c_t, c_b and c_WW as independent signed controls without simultaneously retaining a redundant O_aPhi direction.",
+    "Carry the chiral-field-redefinition anomaly shifts into c_GG, c_WW and c_BB in the same convention.",
+    "Generate all gauge-completing vertices and record coupling orders; do not split only the broken-phase Yukawa vertices by hand.",
+    "Validate hermiticity, quantum numbers and Ward identities before running the 27 common-phase-space settings.",
+    "Fit 19 settings, audit the pair planes and predict the eight held-out corners before detector folding."
+  ],
+  "implication": "The official public model is a valid two-control CaPhi-CWtil slice, but it cannot answer the corpus's three-source question. This is an implementation-rank boundary, not evidence that nature has only two directions.",
+  "nextGate": "Build or locate a source-complete UFO with independent gauge-invariant top-current, bottom-current and c_WW controls, validate the signed anomaly dictionary and Ward identities, then execute AZ-074's 27 settings."
+}
