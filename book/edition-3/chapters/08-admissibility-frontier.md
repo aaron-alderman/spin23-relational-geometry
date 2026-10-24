@@ -803,6 +803,10 @@ The remaining word is effective. Port congruence is not a hydrodynamic frame tra
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-3.md)
 
+That first frame test now closes at Gaussian order. Put shear and sound inside one quadratic source functional and mix the two internal fields by a nontrivial invertible matrix, transforming both their inverse kernel and their source coupling. The complete source Hessian agrees at four complex frequencies to better than one part in ten trillion; its pole set and residues are therefore unchanged. Internal coordinate names cannot create the channel. Derivative-dependent Ward-complete frame changes and microscopic matching remain the exact boundary.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-4.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

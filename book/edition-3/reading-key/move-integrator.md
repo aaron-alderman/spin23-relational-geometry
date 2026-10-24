@@ -55,6 +55,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Claim · The admissibility frontier · Hot off the press — the hydrodynamic cone has poles (1)](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the hydrodynamic cone has poles (2)](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the hydrodynamic cone has poles (3)](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — the hydrodynamic cone has poles (4)](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-4.md)
 - [Claim · The admissibility frontier · Kenotic confidence (1)](../details/08-admissibility-frontier-kenotic-confidence-claim-1.md)
 - [Claim · The revised spine · What closes (1)](../details/01-the-revised-spine-what-closes-claim-1.md)
 - [Claim · The revised spine · What closes (2)](../details/01-the-revised-spine-what-closes-claim-2.md)
