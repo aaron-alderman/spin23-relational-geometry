@@ -283,6 +283,7 @@ const sectionTaxonomy = {
   "Hot off the press — the spanning tree is not yet one experiment": "external",
   "Hot off the press — two edges identify; three edges audit": "experiment",
   "Hot off the press — the third edge tests the whole triangle": "experiment",
+  "Hot off the press — name the coordinates before reading the signs": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -372,6 +373,7 @@ const sectionArchetype = {
   "Hot off the press — the spanning tree is not yet one experiment": "scout",
   "Hot off the press — two edges identify; three edges audit": "builder",
   "Hot off the press — the third edge tests the whole triangle": "builder",
+  "Hot off the press — name the coordinates before reading the signs": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -710,6 +712,15 @@ admissibilitySections.splice(orientedSeamIndex + 27, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 28, 0, [
+  "Hot off the press — name the coordinates before reading the signs",
+  [
+    "**Provisional integration note — 25 October 2026.** The triangle has two different kinds of content. Positivity, rank and determinant sign describe whether the joint response exists independently of an invertible change of source coordinates. The signs assigned to particular edges describe that response only after those coordinates have been named and held fixed.",
+    "An exact counterexample makes the boundary visible. A unit-determinant shear of the synthetic positive response preserves its determinant at 288 and preserves positivity, yet reverses the product of its three edge signs. The cycle product is therefore invariant under independent sign reversals of already named nodes, but not under a general effective-field-theory basis transformation that mixes them.",
+    "This matters before combining the ALP papers: the chiral rotations used to define the top and bottom fermion coefficients also shift anomalous gauge couplings. The next deliverable is one signed operator dictionary—including anomaly normalization, running, threshold matching and covariance—followed by the 27-setting response in that basis. Rank and positivity come first; edge signs become physical statements only inside the declared dictionary.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -963,6 +974,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the spanning tree is not yet one experiment": ["corpus/programmes/admissibility/admissibility_72_candidate_phase_edges_and_scale_bridge.md", "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md", "corpus/programmes/lane-expansion/programme_lane_expansion_37_the_five_coordinate_observable_map_needs_bottom_weak_and_neutrino_compasses.md"],
   "Hot off the press — two edges identify; three edges audit": ["corpus/programmes/admissibility/admissibility_73_signed_edge_extraction_and_cycle_audit.md", "corpus/programmes/admissibility/admissibility_72_candidate_phase_edges_and_scale_bridge.md", "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md"],
   "Hot off the press — the third edge tests the whole triangle": ["corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md", "corpus/programmes/admissibility/admissibility_73_signed_edge_extraction_and_cycle_audit.md", "corpus/programmes/admissibility/admissibility_66_contextual_triangle_bound_reduces_to_standard_positivity.md"],
+  "Hot off the press — name the coordinates before reading the signs": ["corpus/programmes/admissibility/admissibility_75_operator_basis_covariance_and_cycle_boundary.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md", "corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md"],
 };
 
 const evidenceReading = key => ({

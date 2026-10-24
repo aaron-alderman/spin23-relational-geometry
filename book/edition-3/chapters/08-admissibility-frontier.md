@@ -597,6 +597,25 @@ A completed triangle is also more than three acceptable pairs. Joint positivity 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-3.md)
 
+<a id="hot-off-the-press-name-the-coordinates-before-reading-the-signs"></a>
+## Hot off the press — name the coordinates before reading the signs
+
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The triangle has two different kinds of content. Positivity, rank and determinant sign describe whether the joint response exists independently of an invertible change of source coordinates. The signs assigned to particular edges describe that response only after those coordinates have been named and held fixed.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-name-the-coordinates-before-reading-the-signs-claim-1.md)
+
+An exact counterexample makes the boundary visible. A unit-determinant shear of the synthetic positive response preserves its determinant at 288 and preserves positivity, yet reverses the product of its three edge signs. The cycle product is therefore invariant under independent sign reversals of already named nodes, but not under a general effective-field-theory basis transformation that mixes them.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-name-the-coordinates-before-reading-the-signs-claim-2.md)
+
+This matters before combining the ALP papers: the chiral rotations used to define the top and bottom fermion coefficients also shift anomalous gauge couplings. The next deliverable is one signed operator dictionary—including anomaly normalization, running, threshold matching and covariance—followed by the 27-setting response in that basis. Rank and positivity come first; edge signs become physical statements only inside the declared dictionary.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-name-the-coordinates-before-reading-the-signs-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

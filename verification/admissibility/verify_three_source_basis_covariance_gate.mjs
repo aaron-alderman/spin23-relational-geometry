@@ -1,0 +1,11 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+const d=JSON.parse(await readFile(new URL("../../evidence/data/three-source-basis-covariance-gate-v1.json",import.meta.url)));
+assert.equal(d.protocol,"three-source-basis-covariance-gate/1");
+assert.equal(d.parent,"AZ-074");
+assert.equal(d.certificate.determinants.old,288);
+assert.equal(d.certificate.determinants.new,288);
+assert.equal(d.certificate.cycleSigns.old,1);
+assert.equal(d.certificate.cycleSigns.new,-1);
+assert.match(d.verdict.closed,/not a general EFT-basis invariant/);
+console.log("PASS three-source basis-covariance gate");

@@ -40,6 +40,7 @@ test("the expanded narrative chapters are substantial rather than chapter stubs"
   assert.match(admissibility, /Hot off the press — the oriented seam becomes an experiment/u);
   assert.match(admissibility, /Hot off the press — the mixed interface has an exact shape/u);
   assert.match(admissibility, /Hot off the press — the third edge tests the whole triangle/u);
+  assert.match(admissibility, /Hot off the press — name the coordinates before reading the signs/u);
   assert.match(admissibility, /Provisional integration note — 24 October 2026/u);
 });
 
@@ -120,7 +121,7 @@ test("Furey claims link at the point of assertion to inspectable proof pages", (
 });
 
 test("every narrative assertion has its own expanded claim page", () => {
-  assert.equal(metadata.claimDetails.length, 183);
+  assert.equal(metadata.claimDetails.length, 186);
   assert.equal(new Set(metadata.claimDetails.map(detail => detail.slug)).size, metadata.claimDetails.length);
   for (const detail of metadata.claimDetails) {
     const chapterHtml = readFileSync(new URL(`docs/edition-3/${detail.chapter}.html`, root), "utf8");
