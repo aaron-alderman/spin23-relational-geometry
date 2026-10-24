@@ -44,6 +44,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Hot off the press — the hydrodynamic cone has poles (5)](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-5.md)
 - [Claim · The admissibility frontier · Hot off the press — the hydrodynamic cone has poles (6)](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-6.md)
 - [Claim · The admissibility frontier · Hot off the press — the hydrodynamic cone has poles (7)](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-7.md)
+- [Claim · The admissibility frontier · Hot off the press — the hydrodynamic cone has poles (8)](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-8.md)
 - [Claim · One carrier, two faces, three relations · Why two is comparison and three is consistency (1)](../details/02-one-carrier-two-faces-three-relations-why-two-is-comparison-and-three-is-consistency-claim-1.md)
 - [Claim · One carrier, two faces, three relations · Why two is comparison and three is consistency (2)](../details/02-one-carrier-two-faces-three-relations-why-two-is-comparison-and-three-is-consistency-claim-2.md)
 - [Claim · The projective loop · A familiar twisted-loop picture (1)](../details/03-projective-loop-a-familiar-twisted-loop-picture-claim-1.md)

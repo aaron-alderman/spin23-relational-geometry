@@ -1,0 +1,389 @@
+{
+  "protocol": "hydrodynamic-causal-relaxation-wedge/1",
+  "date": "2026-10-25",
+  "target": "OT-016",
+  "parent": "AZ-102",
+  "primaryLiterature": [
+    {
+      "title": "Schwinger-Keldysh effective field theory for stable and causal relativistic hydrodynamics",
+      "url": "https://arxiv.org/abs/2309.00511",
+      "role": "nonlinear stable and causal relaxation-type hydrodynamic EFT"
+    },
+    {
+      "title": "Relativistic hydrodynamic fluctuations from an effective action",
+      "url": "https://arxiv.org/abs/2309.00512",
+      "role": "causality and stability as conditions on the stochastic hydrodynamic validity regime"
+    }
+  ],
+  "inheritedFirstOrderModel": {
+    "shear": "s=-D k^2",
+    "sound": "s^2+Gamma k^2 s+c_s^2 k^2=0",
+    "obstruction": "the shear heat kernel and k^2 damping have no finite propagation front when extrapolated beyond their hydrodynamic regime"
+  },
+  "relaxationCompletion": {
+    "shear": "tau_q s^2+s+D k^2=0",
+    "sound": "tau_pi s^3+s^2+(tau_pi c_s^2+Gamma)k^2 s+c_s^2 k^2=0",
+    "shearFrontSpeed": "sqrt(D/tau_q)",
+    "soundFrontSpeed": "sqrt(c_s^2+Gamma/tau_pi)",
+    "soundRouthHurwitzMargin": "Gamma k^2 > 0"
+  },
+  "parameters": {
+    "D": 0.22142857142857145,
+    "Gamma": 0.1928571428571429,
+    "cs2": 0.3333333333333333,
+    "cs": 0.5773502691896257,
+    "tauShear": 0.2767857142857143,
+    "tauSound": 0.3616071428571429,
+    "shearCausalThreshold": 0.22142857142857145,
+    "soundCausalThreshold": 0.2892857142857143
+  },
+  "samples": [
+    {
+      "k": 0.02,
+      "shearGrowthRates": [
+        {
+          "re": -0.0000885736000335161,
+          "im": 0
+        },
+        {
+          "re": -3.612814652206418,
+          "im": 0
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.00003857183205529861,
+          "im": -0.011547102020746445
+        },
+        {
+          "re": -2.7653549551013215,
+          "im": 2.7369110631344083e-48
+        },
+        {
+          "re": -0.00003857183205529861,
+          "im": 0.011547102020746445
+        }
+      ],
+      "maximumRealPart": -0.00003857183205529861,
+      "shearHydrodynamicRatio": 1.0000245165074397,
+      "soundPhaseSpeed": 0.5773551010373222,
+      "soundAttenuationCoefficient": 0.19285916027649305,
+      "maximumPolynomialResidual": 1.1287899868289708e-15
+    },
+    {
+      "k": 0.05,
+      "shearGrowthRates": [
+        {
+          "re": -0.0005536562731548706,
+          "im": 0
+        },
+        {
+          "re": -3.6123495695332966,
+          "im": 0
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.00024108718898548947,
+          "im": -0.028869023775000523
+        },
+        {
+          "re": -2.764949924387461,
+          "im": -3.61188545776969e-34
+        },
+        {
+          "re": -0.00024108718898548944,
+          "im": 0.02886902377500052
+        }
+      ],
+      "maximumRealPart": -0.00024108718898548944,
+      "shearHydrodynamicRatio": 1.0001532676346045,
+      "soundPhaseSpeed": 0.5773804755000104,
+      "soundAttenuationCoefficient": 0.1928697511883915,
+      "maximumPolynomialResidual": 4.077684370717982e-16
+    },
+    {
+      "k": 0.1,
+      "shearGrowthRates": [
+        {
+          "re": -0.0022156444776248504,
+          "im": 0
+        },
+        {
+          "re": -3.6106875813288264,
+          "im": 0
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.0009645378421009457,
+          "im": -0.05774711982751526
+        },
+        {
+          "re": -2.76350302308123,
+          "im": -4.2521270052557695e-33
+        },
+        {
+          "re": -0.0009645378421009457,
+          "im": 0.05774711982751526
+        }
+      ],
+      "maximumRealPart": -0.0009645378421009457,
+      "shearHydrodynamicRatio": 1.0006136350563837,
+      "soundPhaseSpeed": 0.5774711982751526,
+      "soundAttenuationCoefficient": 0.1929075684201891,
+      "maximumPolynomialResidual": 2.949029909160572e-16
+    },
+    {
+      "k": 0.2,
+      "shearGrowthRates": [
+        {
+          "re": -0.008878963533897506,
+          "im": 0
+        },
+        {
+          "re": -3.604024262272554,
+          "im": 0
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.0038611743527751487,
+          "im": -0.11556713062383175
+        },
+        {
+          "re": -2.7577097500598815,
+          "im": -2.8651199050787747e-32
+        },
+        {
+          "re": -0.003861174352775148,
+          "im": 0.11556713062383175
+        }
+      ],
+      "maximumRealPart": -0.003861174352775148,
+      "shearHydrodynamicRatio": 1.0024636247948793,
+      "soundPhaseSpeed": 0.5778356531191587,
+      "soundAttenuationCoefficient": 0.19305871763875737,
+      "maximumPolynomialResidual": 2.480654570646834e-16
+    },
+    {
+      "k": 0.5,
+      "shearGrowthRates": [
+        {
+          "re": -0.05623236099200703,
+          "im": 0
+        },
+        {
+          "re": -3.5566708648144445,
+          "im": 0
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.024263805963630373,
+          "im": -0.29022930211491343
+        },
+        {
+          "re": -2.716904486838171,
+          "im": 0
+        },
+        {
+          "re": -0.024263805963630376,
+          "im": 0.29022930211491343
+        }
+      ],
+      "maximumRealPart": -0.024263805963630373,
+      "shearHydrodynamicRatio": 1.0158103921136752,
+      "soundPhaseSpeed": 0.5804586042298269,
+      "soundAttenuationCoefficient": 0.194110447709043,
+      "maximumPolynomialResidual": 4.996003610813204e-16
+    },
+    {
+      "k": 1,
+      "shearGrowthRates": [
+        {
+          "re": -0.2369716258499771,
+          "im": 0
+        },
+        {
+          "re": -3.3759315999564743,
+          "im": 0
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.0988555832850913,
+          "im": -0.5909544308904296
+        },
+        {
+          "re": -2.5677209321952494,
+          "im": -2.3743105095648892e-33
+        },
+        {
+          "re": -0.09885558328509127,
+          "im": 0.5909544308904296
+        }
+      ],
+      "maximumRealPart": -0.09885558328509127,
+      "shearHydrodynamicRatio": 1.0701944393224772,
+      "soundPhaseSpeed": 0.5909544308904296,
+      "soundAttenuationCoefficient": 0.19771116657018256,
+      "maximumPolynomialResidual": 7.771561172376096e-16
+    },
+    {
+      "k": 2,
+      "shearGrowthRates": [
+        {
+          "re": -1.554921436262995,
+          "im": 0
+        },
+        {
+          "re": -2.0579817895434567,
+          "im": 0
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.40431903470190816,
+          "im": -1.3118134923534261
+        },
+        {
+          "re": -1.9567940293616155,
+          "im": -6.162975822039155e-33
+        },
+        {
+          "re": -0.4043190347019083,
+          "im": 1.3118134923534261
+        }
+      ],
+      "maximumRealPart": -0.40431903470190816,
+      "shearHydrodynamicRatio": 1.7555564602969298,
+      "soundPhaseSpeed": 0.6559067461767131,
+      "soundAttenuationCoefficient": 0.2021595173509541,
+      "maximumPolynomialResidual": 2.7755575615628914e-16
+    },
+    {
+      "k": 5,
+      "shearGrowthRates": [
+        {
+          "re": -1.8064516129032258,
+          "im": 4.091055190319405
+        },
+        {
+          "re": -1.8064516129032258,
+          "im": -4.091055190319405
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.8008445546225528,
+          "im": -4.3773690949842265
+        },
+        {
+          "re": -1.1637429895203264,
+          "im": 0
+        },
+        {
+          "re": -0.8008445546225528,
+          "im": 4.3773690949842265
+        }
+      ],
+      "maximumRealPart": -0.8008445546225528,
+      "shearHydrodynamicRatio": 0.32632674297606656,
+      "soundPhaseSpeed": 0.8754738189968453,
+      "soundAttenuationCoefficient": 0.06406756436980422,
+      "maximumPolynomialResidual": 2.673771110915334e-15
+    },
+    {
+      "k": 10,
+      "shearGrowthRates": [
+        {
+          "re": -1.8064516129032258,
+          "im": 8.759950489028995
+        },
+        {
+          "re": -1.8064516129032258,
+          "im": -8.759950489028995
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.8394679130246849,
+          "im": -9.17266606677342
+        },
+        {
+          "re": -1.0864962727160623,
+          "im": -1.781485198558193e-33
+        },
+        {
+          "re": -0.8394679130246849,
+          "im": 9.17266606677342
+        }
+      ],
+      "maximumRealPart": -0.8394679130246849,
+      "shearHydrodynamicRatio": 0.08158168574401664,
+      "soundPhaseSpeed": 0.9172666066773421,
+      "soundAttenuationCoefficient": 0.0167893582604937,
+      "maximumPolynomialResidual": 8.157835381809785e-14
+    },
+    {
+      "k": 20,
+      "shearGrowthRates": [
+        {
+          "re": -1.8064516129032258,
+          "im": 17.797098993101073
+        },
+        {
+          "re": -1.8064516129032258,
+          "im": -17.797098993101073
+        }
+      ],
+      "soundGrowthRates": [
+        {
+          "re": -0.8481053092979487,
+          "im": -18.550842547515543
+        },
+        {
+          "re": -1.0692214801695346,
+          "im": 0
+        },
+        {
+          "re": -0.8481053092979487,
+          "im": 18.550842547515543
+        }
+      ],
+      "maximumRealPart": -0.8481053092979487,
+      "shearHydrodynamicRatio": 0.02039542143600416,
+      "soundPhaseSpeed": 0.9275421273757771,
+      "soundAttenuationCoefficient": 0.004240526546489744,
+      "maximumPolynomialResidual": 5.407599016518943e-13
+    }
+  ],
+  "audit": {
+    "samplesChecked": 10,
+    "shearFrontSpeed": 0.8944271909999159,
+    "soundFrontSpeed": 0.9309493362512627,
+    "maximumGrowthRateRealPart": -0.00003857183205529861,
+    "maximumPolynomialResidual": 5.407599016518943e-13,
+    "lowKShearRecoveryError": 0.000024516507439731328,
+    "lowKSoundSpeedRecoveryError": 0.000004831847696507019,
+    "lowKSoundAttenuationRecoveryError": 0.0000020174193501587556,
+    "routhHurwitzMarginCoefficient": 0.1928571428571429,
+    "shearCausalityPassed": true,
+    "soundCausalityPassed": true,
+    "sampledStabilityPassed": true,
+    "analyticSoundStabilityPassed": true
+  },
+  "decision": {
+    "firstOrderGlobalCausalityEstablished": false,
+    "finiteCausalStableRelaxationWedgeExhibited": true,
+    "lowMomentumHydrodynamicRecoveryEstablished": true,
+    "uniqueRelaxationCompletionDerived": false,
+    "stochasticKmsCompletionOfAuxiliaryModesEstablished": false,
+    "nonlinearStressWardCompletionEstablished": false,
+    "microscopicMatchingEstablished": false,
+    "fullOt016Closure": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The inherited first-order shear/sound response is an infrared expansion, not a globally causal theory. Adding one shear-flux and one viscous-stress relaxation time yields a nonempty stable subluminal wedge and recovers the original poles at low momentum. This proves compatibility, not selection: the relaxation times, auxiliary noise and microscopic carrier still have to be derived or measured."
+}

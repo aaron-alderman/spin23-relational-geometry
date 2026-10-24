@@ -838,6 +838,10 @@ The first nonlinear audit identifies what that next claim must carry. A unit-vol
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-7.md)
 
+Causality supplies a further boundary. The inherited diffusion and wave-damping laws are long-wavelength expansions and have no global finite-speed interpretation. Adding one relaxing shear flux and one relaxing viscous stress produces a stable subluminal parameter wedge and recovers the original poles at low momentum. This shows that the response can live inside a causal completion; it does not tell us which completion nature uses. The relaxation poles and their thermal noise must still be derived from or measured on the same carrier.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-8.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -902,6 +906,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_100_local_derivative_hydrodynamic_frame_invariance.md](../../../corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md)
 - [admissibility_101_gaussian_schwinger_keldysh_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md)
 - [admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md](../../../corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md)
+- [admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md](../../../corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md)
 
 ---
 
