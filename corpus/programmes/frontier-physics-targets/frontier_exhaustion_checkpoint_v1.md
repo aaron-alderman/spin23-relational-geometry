@@ -150,6 +150,8 @@ The [complexity-card audit](frontier_complexity_cards_v1.md) completes OT-021's 
 
 [Wave 7.73](../frontier/wave-7/frontier_wave7_73_relative_metaplectic_phase_boundary.md) completes the reduced free-Majorana (T_1/S_1) action on the ten even genus-two characteristics. It corrects the detector target: an absolute (\pi/4) generator phase depends on a common anomaly trivialization, while the (T_1) fixed-square/two-cycle ratio and the (S_1) odd--odd/even--even fixed ratio are both the invariant (i). OT-050 remains gated on a genuinely new source object—the genus-two fermionic Baby-Monster spin family—and on a coherent relative-sector detector map.
 
+[Wave 7.107](../frontier/wave-7/frontier_wave7_107_boundary_domain_admissibility_bridge.md) adds a current-literature boundary/domain bridge without claiming a universal identification. One abelian Chern--Simons bulk supports twenty-two code boundaries; a fuzzy-sphere flux turns a declared monodromy into fractional-spin defect records; exact free-lattice Onsager structure reaches a larger infrared symmetry while trading locality and failing to survive ordinary gauging intact; and the Hitchin/Perelman operator explicitly leaves its physical real slice and eigenfunction domain undecided. The Narain handlebody coefficient supplies the hard positivity control: it vanishes for two pairs and is negative from three onward, so linear closure is not a positive ensemble. OT-051 converts this architecture into a finite test: freeze one bulk carrier, vary only declared boundary selectors, refine the regulator and demand held-out selector-specific spectra without bulk retuning. The authors state that the numerical energies, matrix elements, fit scripts and figure/table code will be released upon publication; until that release, the exact half-grid construction and published extrapolated summaries are audit fixtures, not an independent finite-size reproduction.
+
 The [finesse technology pathway](finesse_technology_pathway_v1.md) is the execution overlay: begin with a 90-day resonator-chain design and blind challenge, reuse its schema on a three-mode coherent selector platform, then advance to same-film response/force closure. Its escalation rule withholds “new physics” until a residual survives preregistered nuisance controls, independent-carrier replication and a common-parameter operator model.
 
 ## Shape of the remaining frontier
@@ -171,7 +173,7 @@ OT-014 and OT-041 are closed by [AZ-055](../admissibility/admissibility_55_finit
 
 ### Tranche B — simulation and design closure
 
-OT-001's coordinated simulator is closed by AZ-057. Run OT-002, OT-003 and OT-037 as the remaining internal design layer: instantiate the frozen Hamiltonian and (Y) on a carrier and turn the photonic inequalities into a fabrication-ready device. OT-033 joins this tranche only when AZ-060's named external source/data bundle is available; a reconstructed near-copy is not a reproduction.
+OT-001's coordinated simulator is closed by AZ-057. Run OT-002, OT-003 and OT-037 as the remaining internal design layer: instantiate the frozen Hamiltonian and (Y) on a carrier and turn the photonic inequalities into a fabrication-ready device. OT-051 joins this tranche only when the promised fuzzy-sphere data and code are released; a table extraction is not a finite-size reproduction. OT-033 likewise joins only when AZ-060's named external source/data bundle is available; a reconstructed near-copy is not a reproduction.
 
 ### Tranche C — nearest experiments
 

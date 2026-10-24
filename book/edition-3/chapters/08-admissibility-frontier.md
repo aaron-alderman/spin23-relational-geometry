@@ -1036,6 +1036,25 @@ The statistic is exact only in the local analytic model. A real likelihood must 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-3.md)
 
+<a id="hot-off-the-press-the-operator-does-not-choose-its-boundary"></a>
+## Hot off the press — the operator does not choose its boundary
+
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+
+> **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
+
+**Provisional integration note — 25 October 2026.** Four new papers make one distinction unusually concrete: a bulk action or spectral operator can be held fixed while different boundary conditions, real slices or operator domains produce different physical theories. One abelian Chern--Simons carrier supports twenty-two code boundaries; a symmetry-selective flux on the fuzzy sphere turns a monodromy choice into fractional transverse spin and defect OPE data; and the Hitchin/Perelman construction explicitly leaves the physical eigenfunction domain unchosen.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-operator-does-not-choose-its-boundary-claim-1.md)
+
+The reason is that an equation says which motions are available, while a domain says which states and motions are admitted. The lattice-fermion example adds the translation warning: exact microscopic Onsager structure can appear as a larger infrared symmetry in a different representation, but locality, compactness and gauging do not all survive unchanged. The Narain handlebody coefficient gives the positivity warning: it is zero for two pairs and negative from three onward, so an exact linear expansion need not be a positive physical ensemble.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-operator-does-not-choose-its-boundary-claim-2.md)
+
+This opens a finite look-here experiment rather than a universal identification. The authors promise the energies, matrix elements and fit code upon publication; until that bundle appears, the table is an audit fixture rather than an independent reproduction. Then freeze one fuzzy-sphere bulk coupling; run untwisted, pi-twisted and symmetry-breaking controls; refine the sphere size; and predict held-out fractional-spin levels and OPE coefficients without retuning the bulk. Success would improve boundary engineering and defect spectroscopy. A new-physics claim begins only if a replicated selector-specific residue survives the complete bulk, boundary, regulator and detector model. None of these papers by itself identifies its system with the corpus's Jordan, Spin(2,3), exceptional or Standard-Model candidates.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-operator-does-not-choose-its-boundary-claim-3.md)
+
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
 ## Hot off the press — the hydrodynamic cone has poles
 
@@ -1103,6 +1122,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [metaplectic-phase-candidate.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md)
 - [metaplectic-t1-s1-boundary.md](../../../corpus/programmes/lattice-subroutine-gravity/metaplectic-t1-s1-boundary.md)
 - [frontier_wave7_73_relative_metaplectic_phase_boundary.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_73_relative_metaplectic_phase_boundary.md)
+- [frontier_wave7_107_boundary_domain_admissibility_bridge.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_107_boundary_domain_admissibility_bridge.md)
 - [frontier_wave7_39_mixed_interface_resolution.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md)
 - [frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md)
 - [frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md)

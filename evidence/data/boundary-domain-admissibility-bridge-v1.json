@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "boundary-domain-admissibility-bridge-v1",
+  "date": "2026-10-25",
+  "status": "typed_architecture_not_universal_identification",
+  "architecture": [
+    "bulk_carrier",
+    "admissible_boundary_or_domain",
+    "regulated_microscopic_realization",
+    "scale_flow",
+    "observable_spectrum"
+  ],
+  "papers": [
+    {
+      "arxiv": "2610.30525",
+      "role": "bulk_to_boundary_classification",
+      "system": "Narain code CFT boundaries of one abelian Chern-Simons bulk",
+      "controls": ["code boundary", "bulk symmetry orbit", "finite gauging"],
+      "readouts": ["partition vectors", "boundary orbit", "handlebody coefficients"],
+      "exactData": {
+        "codesForTwoPairs": 22,
+        "inequivalentTheories": 7,
+        "boundaryOrbits": 3,
+        "handlebodyCoefficient": "4^(1-d)-2^(-d)",
+        "negativeFromIntegerD": 3
+      },
+      "boundary": "no identification with the corpus Z3 or nine-state carrier"
+    },
+    {
+      "arxiv": "2610.31269",
+      "role": "boundary_to_spectrum_transduction",
+      "system": "monodromy defects of Wilson-Fisher CFTs on the fuzzy sphere",
+      "controls": ["monodromy element", "symmetry-selective Aharonov-Bohm flux", "sphere size"],
+      "readouts": ["fractional transverse spin", "defect spectrum", "bulk-to-defect OPE", "defect-defect OPE"],
+      "exactData": {
+        "piFluxGridShift": 0.5,
+        "defectsExamined": 5,
+        "resolvedSymmetryPreservingRelevantScalar": false,
+        "rawNumericalBundlePubliclyLinkedInPreprint": false,
+        "releaseStatement": "energies, matrix elements, fit scripts and figure/table code promised upon publication"
+      },
+      "boundary": "finite-size numerical evidence is not an all-regulator stability theorem"
+    },
+    {
+      "arxiv": "2610.31653",
+      "role": "microscopic_to_continuum_translation",
+      "system": "Onsager algebras of free staggered, Wilson and overlap lattice fermions",
+      "controls": ["fermion discretization", "locality class", "quantized versus unquantized generator"],
+      "readouts": ["exact lattice algebra", "infrared U(2N) chiral symmetry", "compact subgroup"],
+      "exactData": {
+        "continuumSymmetry": "U(2N)",
+        "classification": "emanant",
+        "freeFermionResult": true,
+        "interactingExtensionEstablished": false
+      },
+      "boundary": "standard gauging removes much of the exact free-lattice algebra"
+    },
+    {
+      "arxiv": "2610.31672",
+      "role": "flow_to_spectral_dynamics",
+      "system": "integrable sigma models, Hitchin quantization and the Perelman operator",
+      "controls": ["sigma-model coupling", "RG time", "real slice", "operator domain"],
+      "readouts": ["Perelman spectrum", "lowest eigenvalue", "c-function relation", "finite-volume levels"],
+      "exactData": {
+        "regime": "one-loop point-particle reduction",
+        "operatorMatchInExaminedCases": true,
+        "domainFixedByOperatorAlone": false,
+        "higherLoopEquivalenceEstablished": false
+      },
+      "boundary": "the physical domain and higher-loop completion remain open"
+    }
+  ],
+  "admissionGates": [
+    "carrier",
+    "selector",
+    "translation",
+    "flow",
+    "positivity",
+    "probe",
+    "controls",
+    "shared_parameters"
+  ],
+  "nearestExperimentStatus": "gated_on_promised_fuzzy_sphere_numerical_bundle",
+  "verdict": "retain a boundary-domain admissibility architecture; do not identify the four systems with one universal Spin(2,3), Jordan, E6 or Chain-Theory mechanism"
+}
