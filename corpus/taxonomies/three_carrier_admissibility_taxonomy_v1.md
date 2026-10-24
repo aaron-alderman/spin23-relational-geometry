@@ -142,6 +142,24 @@ It records closed paths that exist only because constructive moves and critical
 boundaries compensate one another. The exact sequence has dimensions
 \(0\to(2+2)\to12\to8\to0\).
 
+The interface is now resolved integrally. Seven vertices are forced to zero by
+being isolated in one of the two typed subgraphs. The remaining **Mixed Core
+Nine** is
+`QS-002`, `QS-009`, `QS-010`, `QS-011`, `QS-012`, `QS-013`, `QS-014`,
+`QS-015`, `QS-016`; the only constraint is zero coordinate sum. Therefore
+
+\[
+I_{\rm mix}(Q_{\rm QS}^{(1)};\mathbb Z)\cong A_8.
+\]
+
+In source-node order its eight simple transfers are detector–holonomy,
+holonomy–memory, memory–wall, wall–response, response–overlap,
+overlap–detector, detector–selector and selector–provenance. The equal-weight
+vertex pairing has Cartan determinant nine and discriminant group
+\(\mathbb Z/9\mathbb Z\). Its coordinate cubic is real but its projected
+product is not Jordan. See the
+[resolution](../programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md).
+
 The three `shares_action_not_carrier` arrows form the **Carrier-Separation
 Cocircuit** \(S_3\). Deleting all three disconnects the graph; any one reconnects
 it. Their deletion leaves the **Relation Backbone** \(R_{24}\), which carries:

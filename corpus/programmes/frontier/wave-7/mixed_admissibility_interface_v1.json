@@ -1,0 +1,77 @@
+{
+  "schema": "mixed-admissibility-interface/1",
+  "date": "2026-10-24",
+  "source": "corpus/programmes/quotient-scars/quotient_scar_register_v1.json",
+  "typing": {
+    "constructive": ["extends_to", "instantiates"],
+    "guardrail": ["requires_enrichment", "separates_from", "shares_action_not_carrier", "rules_out_identification"]
+  },
+  "qualifiedName": "Quotient-Scar Mixed Admissibility Interface",
+  "symbol": "I_mix(Q_QS^(1))",
+  "mixedCoreNine": ["QS-002", "QS-009", "QS-010", "QS-011", "QS-012", "QS-013", "QS-014", "QS-015", "QS-016"],
+  "forcedZeroVertices": ["QS-001", "QS-003", "QS-004", "QS-005", "QS-006", "QS-007", "QS-008"],
+  "integralInterface": {
+    "definition": "integer vertex vectors supported on mixedCoreNine whose coordinates sum to zero",
+    "latticeType": "A8",
+    "rank": 8,
+    "gramType": "Cartan(A8)",
+    "determinant": 9,
+    "discriminantGroup": "Z/9Z",
+    "minimumSquaredNorm": 2,
+    "rootCount": 72,
+    "ambientMetric": "equal-weight vertex counting metric"
+  },
+  "basisConvention": "mixedCoreNine in ascending source-node identifier order; alpha_i=e(v_i)-e(v_i+1)",
+  "basis": [
+    {
+      "id": "A01", "name": "detector-holonomy exchange", "from": "QS-009", "to": "QS-002",
+      "constructiveFlow": {"QR-001": -1, "QR-006": -1, "QR-008": 1, "QR-011": 1, "QR-014": 1, "QR-017": 1, "QR-019": 1, "QR-020": 1},
+      "guardrailFlow": {"QR-007": 1}
+    },
+    {
+      "id": "A02", "name": "holonomy-memory exchange", "from": "QS-010", "to": "QS-009",
+      "constructiveFlow": {"QR-006": 1, "QR-008": -1},
+      "guardrailFlow": {"QR-009": 1}
+    },
+    {
+      "id": "A03", "name": "memory-wall exchange", "from": "QS-011", "to": "QS-010",
+      "constructiveFlow": {"QR-011": -1},
+      "guardrailFlow": {"QR-009": -1, "QR-012": 1}
+    },
+    {
+      "id": "A04", "name": "wall-response exchange", "from": "QS-012", "to": "QS-011",
+      "constructiveFlow": {"QR-014": -1},
+      "guardrailFlow": {"QR-012": -1, "QR-016": 1}
+    },
+    {
+      "id": "A05", "name": "response-overlap exchange", "from": "QS-013", "to": "QS-012",
+      "constructiveFlow": {"QR-017": -1},
+      "guardrailFlow": {"QR-016": -1, "QR-018": 1}
+    },
+    {
+      "id": "A06", "name": "overlap-detector exchange", "from": "QS-014", "to": "QS-013",
+      "constructiveFlow": {"QR-019": -1},
+      "guardrailFlow": {"QR-018": -1, "QR-021": 1}
+    },
+    {
+      "id": "A07", "name": "detector-selector exchange", "from": "QS-015", "to": "QS-014",
+      "constructiveFlow": {"QR-023": 1},
+      "guardrailFlow": {"QR-021": -1, "QR-024": 1}
+    },
+    {
+      "id": "A08", "name": "selector-provenance exchange", "from": "QS-016", "to": "QS-015",
+      "constructiveFlow": {"QR-025": -1},
+      "guardrailFlow": {"QR-021": 1, "QR-024": -1, "QR-027": 1}
+    }
+  ],
+  "compositionAudit": {
+    "bilinear": "the ambient counting pairing restricts to the positive-definite A8 form",
+    "cubic": "p3(x)=sum_i x_i^3 is a nonzero S9-invariant cubic on the zero-sum carrier",
+    "projectedProduct": "x star y = projection_to_sum_zero(x_i y_i) polarizes p3",
+    "projectedProductIsJordan": false,
+    "exceptionalIdentification": false,
+    "physicalSymmetryClaim": false,
+    "warning": "S9 is the automorphism group of the abstract equal-weight coordinate model; the typed source graph need not realize that symmetry"
+  },
+  "status": "exact graph-and-lattice theorem relative to the registered semantic split and equal-weight vertex metric"
+}

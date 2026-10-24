@@ -60,6 +60,9 @@ assert.deepEqual(chords, S.qrOrderedFundamentalBasis.chordIds);
 assert.equal(tree.length, 15);
 assert.equal(chords.length, 12);
 assert.deepEqual(S.carrierSeparationCocircuit, ["QR-002", "QR-004", "QR-013"]);
+assert.equal(S.mixedAdmissibilityInterface.dimension, 8);
+assert.equal(S.mixedAdmissibilityInterface.integralLattice, "A8");
+assert.equal(S.mixedAdmissibilityInterface.equalWeightGramDeterminant, 9);
 
 const C = taxonomy.carriers.claimipedia;
 const claimNodes = new Set(claimSource.edges.flatMap((edge) => edge.slice(0, 2)));
