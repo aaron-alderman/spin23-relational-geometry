@@ -1,0 +1,95 @@
+{
+  "schema": "admissibility.alp-charged-neutral-detector-rank/1",
+  "date": "2026-10-25",
+  "sourceCoordinates": [
+    "A_2",
+    "c_WW",
+    "c_BB"
+  ],
+  "amplitudeRecords": {
+    "chargedWeakAfterKnownTerms": "R_W = c_WW - A_2/2",
+    "neutralPhotonAfterKnownFermionAndThresholdTerms": "R_gamma = c_WW + c_BB"
+  },
+  "fullAmplitudeMap": [
+    [
+      -0.5,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ]
+  ],
+  "fullNull": [
+    2,
+    1,
+    -1
+  ],
+  "fullNullImage": [
+    0,
+    0
+  ],
+  "fixedCbb": {
+    "map": [
+      [
+        -0.5,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "determinant": -0.5,
+    "inverse": [
+      "c_WW = R_gamma",
+      "A_2 = 2*(R_gamma - R_W)"
+    ],
+    "amplitudeIdentifiable": true
+  },
+  "rateOnlyExample": {
+    "measuredSquares": {
+      "weak": 4,
+      "photon": 9
+    },
+    "branches": [
+      {
+        "weakSign": -1,
+        "photonSign": -1,
+        "cWW": -3,
+        "A2": -2
+      },
+      {
+        "weakSign": -1,
+        "photonSign": 1,
+        "cWW": 3,
+        "A2": 10
+      },
+      {
+        "weakSign": 1,
+        "photonSign": -1,
+        "cWW": -3,
+        "A2": -10
+      },
+      {
+        "weakSign": 1,
+        "photonSign": 1,
+        "cWW": 3,
+        "A2": 2
+      }
+    ],
+    "branchesBeforeGlobalSignQuotient": 4,
+    "relativeSignBranches": 2,
+    "uniqueSignedIdentification": false
+  },
+  "decisions": {
+    "chargedPlusNeutralAmplitudeRowsSufficeWhenCbbFixed": true,
+    "chargedPlusNeutralRatesAloneSufficeForSignedIdentification": false,
+    "coherentInterferenceOrPhaseReferenceRequired": true,
+    "unrestrictedThreeOriginLabelsIdentifiable": false,
+    "sourceCompleteLoopsThresholdsWidthsAcceptanceRequired": true,
+    "newPhysicsEvidence": false
+  }
+}

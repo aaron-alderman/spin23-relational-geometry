@@ -998,6 +998,25 @@ The look-here instruction is therefore conditional and buildable: finish the cha
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice-claim-3.md)
 
+<a id="hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference"></a>
+## Hot off the press — the second gauge detector needs a phase reference
+
+> **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** The conditional detector now has a physical form. After known loop and threshold contributions are carried, charged weak production reads \(R_W=c_{WW}-A_2/2\), while the neutral photon amplitude reads \(R_{\gamma\gamma}=c_{WW}+c_{BB}\). On the declared \(c_{BB}=0\) slice these two amplitudes invert exactly to \(c_{WW}=R_{\gamma\gamma}\) and \(A_2=2(R_{\gamma\gamma}-R_W)\).
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-1.md)
+
+Two event counts are not yet those two amplitudes. Production and decay rates retain squared magnitudes, leaving two relative-sign branches after a common reversal is removed. A diphoton branching fraction also depends on the total ALP width. The minimal successful detector therefore needs calibrated interference, a coherent phase reference or a third signed response, together with the complete width and acceptance model.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-2.md)
+
+The realistic experiment is now finite: choose a mass window, freeze the source-complete \(c_{BB}=0\) model, run the charged factorial settings and a signed photon or photon–Z reference scan, and profile lifetime, resolution and correlated backgrounds. Passing gives a justified reduced theory and a new detector capability. Releasing \(c_{BB}\) restores the exact null; a new-physics claim requires a replicated residual outside the complete seven-coordinate likelihood.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-3.md)
+
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
 ## Hot off the press — the hydrodynamic cone has poles
 

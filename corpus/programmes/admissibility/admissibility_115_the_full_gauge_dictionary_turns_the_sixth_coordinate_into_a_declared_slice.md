@@ -14,6 +14,8 @@
 
 **Verifier:** [rank and null certificate](../../../verification/admissibility/verify_alp_full_gauge_anomaly_rank_audit.mjs)
 
+**Continuation:** [AZ-116](admissibility_116_the_minimal_second_gauge_detector_needs_a_phase_reference.md) translates the conditional hypercharge row into a charged/neutral detector pair and proves that rate-only records retain a relative-sign branch.
+
 ## Result
 
 The phrase “the sixth coordinate” needs a boundary condition. Once the complete dimension-five gauge dictionary is retained, the one-generation physical coordinates can be written as

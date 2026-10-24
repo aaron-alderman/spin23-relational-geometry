@@ -50,6 +50,7 @@ test("the expanded narrative chapters are substantial rather than chapter stubs"
   assert.match(admissibility, /Hot off the press — the public model has one control too few/u);
   assert.match(admissibility, /Hot off the press — more detail cannot restore an erased coordinate/u);
   assert.match(admissibility, /Hot off the press — the missing coordinate depends on the declared slice/u);
+  assert.match(admissibility, /Hot off the press — the second gauge detector needs a phase reference/u);
   assert.match(admissibility, /Hot off the press — the graph has a Jordan face, but does not choose its cone/u);
   assert.match(admissibility, /Hot off the press — the local reversal stops at the path memory/u);
   assert.match(admissibility, /Provisional integration note — 24 October 2026/u);
@@ -132,7 +133,7 @@ test("Furey claims link at the point of assertion to inspectable proof pages", (
 });
 
 test("every narrative assertion has its own expanded claim page", () => {
-  assert.equal(metadata.claimDetails.length, 263);
+  assert.equal(metadata.claimDetails.length, 266);
   assert.equal(new Set(metadata.claimDetails.map(detail => detail.slug)).size, metadata.claimDetails.length);
   for (const detail of metadata.claimDetails) {
     const chapterHtml = readFileSync(new URL(`docs/edition-3/${detail.chapter}.html`, root), "utf8");

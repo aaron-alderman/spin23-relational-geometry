@@ -319,6 +319,7 @@ const sectionTaxonomy = {
   "Hot off the press — the public model has one control too few": "obstruction",
   "Hot off the press — more detail cannot restore an erased coordinate": "obstruction",
   "Hot off the press — the missing coordinate depends on the declared slice": "conditional",
+  "Hot off the press — the second gauge detector needs a phase reference": "experiment",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -419,6 +420,7 @@ const sectionArchetype = {
   "Hot off the press — the public model has one control too few": "auditor",
   "Hot off the press — more detail cannot restore an erased coordinate": "auditor",
   "Hot off the press — the missing coordinate depends on the declared slice": "translator",
+  "Hot off the press — the second gauge detector needs a phase reference": "builder",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -862,6 +864,15 @@ admissibilitySections.splice(orientedSeamIndex + 37, 0, [
 ]);
 
 admissibilitySections.splice(orientedSeamIndex + 38, 0, [
+  "Hot off the press — the second gauge detector needs a phase reference",
+  [
+    "**Provisional integration note — 25 October 2026.** The conditional detector now has a physical form. After known loop and threshold contributions are carried, charged weak production reads \\(R_W=c_{WW}-A_2/2\\), while the neutral photon amplitude reads \\(R_{\\gamma\\gamma}=c_{WW}+c_{BB}\\). On the declared \\(c_{BB}=0\\) slice these two amplitudes invert exactly to \\(c_{WW}=R_{\\gamma\\gamma}\\) and \\(A_2=2(R_{\\gamma\\gamma}-R_W)\\).",
+    "Two event counts are not yet those two amplitudes. Production and decay rates retain squared magnitudes, leaving two relative-sign branches after a common reversal is removed. A diphoton branching fraction also depends on the total ALP width. The minimal successful detector therefore needs calibrated interference, a coherent phase reference or a third signed response, together with the complete width and acceptance model.",
+    "The realistic experiment is now finite: choose a mass window, freeze the source-complete \\(c_{BB}=0\\) model, run the charged factorial settings and a signed photon or photon–Z reference scan, and profile lifetime, resolution and correlated backgrounds. Passing gives a justified reduced theory and a new detector capability. Releasing \\(c_{BB}\\) restores the exact null; a new-physics claim requires a replicated residual outside the complete seven-coordinate likelihood.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 39, 0, [
   "Hot off the press — the hydrodynamic cone has poles",
   [
     "**Provisional integration note — 25 October 2026.** The hydrodynamic rank witness now has a full effective response rather than three positive shapes. The tensor term is local at first derivative order, the shear channel has a diffusive pole, and the sound channel has two attenuated propagating poles. At the declared point every pole is retarded, every residue is nonzero and the assembled two-port spectral matrix is positive definite.",
@@ -1217,6 +1228,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the public model has one control too few": ["corpus/programmes/admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md", "corpus/programmes/admissibility/admissibility_75_operator_basis_covariance_and_cycle_boundary.md"],
   "Hot off the press — more detail cannot restore an erased coordinate": ["corpus/programmes/admissibility/admissibility_114_more_detail_of_the_same_w_associated_process_cannot_open_the_sixth_coordinate.md", "corpus/programmes/admissibility/admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md", "corpus/programmes/admissibility/admissibility_77_current_only_rg_stability_and_scale_sweep_no_go.md"],
   "Hot off the press — the missing coordinate depends on the declared slice": ["corpus/programmes/admissibility/admissibility_115_the_full_gauge_dictionary_turns_the_sixth_coordinate_into_a_declared_slice.md", "corpus/programmes/admissibility/admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md", "corpus/programmes/admissibility/admissibility_114_more_detail_of_the_same_w_associated_process_cannot_open_the_sixth_coordinate.md"],
+  "Hot off the press — the second gauge detector needs a phase reference": ["corpus/programmes/admissibility/admissibility_116_the_minimal_second_gauge_detector_needs_a_phase_reference.md", "corpus/programmes/admissibility/admissibility_115_the_full_gauge_dictionary_turns_the_sixth_coordinate_into_a_declared_slice.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md"],
   "Hot off the press — the hydrodynamic cone has poles": ["corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md", "corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md", "corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md", "corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md", "corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md", "corpus/programmes/admissibility/admissibility_98_gaussian_hydrodynamic_source_frame_invariance.md", "corpus/programmes/admissibility/admissibility_97_hydrodynamic_pole_residue_response_ledger.md", "corpus/claims/0200-0299/212_hydrodynamic_stress_map_can_have_local_rank_three.md", "corpus/claims/0200-0299/213_fixed_temperature_kms_herglotz_schur_sewing.md"],
   "Hot off the press — memory depends on the detector scale": ["corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md", "corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md", "corpus/claims/0200-0299/201_recursive_schur_jordan_descent_and_functorial_sewing.md"],
   "Hot off the press — a zero mode does not fix its detector weight": ["corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md", "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"],
