@@ -280,6 +280,17 @@ closes the adjacency-only absent-pole route. A richer test requires distinct or
 higher-dimensional overlaps with authored restriction maps. See the
 [cover-gluing no-go](../programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md).
 
+The smallest exact enrichment is the **Kenotic Sign-Holonomy Loop**: three
+distinct pairwise overlaps, no triple overlap and transition signs
+\(g_{12},g_{23},g_{31}\). Its gauge-invariant classifier is
+\(h=g_{31}g_{23}g_{12}\). The \(h=+1\) control admits a nonzero global marker;
+the \(h=-1\) control returns the marker reversed and admits none. Over rational
+vector-space coefficients the twisted local system has \(H^0=H^1=0\); the
+surviving datum is the nontrivial \(\mathbb Z_2\) line-bundle class, not a
+nonzero rational \(H^1\). This is a proposed reopening template, not a fourth
+structure extracted from the current graph. See the
+[enriched-loop template](../programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md).
+
 ## III. Sourcery
 
 Sourcery accepts caller-supplied graphs, so it has no single fixed node count.

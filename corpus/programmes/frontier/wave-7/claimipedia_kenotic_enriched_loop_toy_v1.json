@@ -1,0 +1,55 @@
+{
+  "schema": "claimipedia-kenotic-enriched-loop-toy/1",
+  "date": "2026-10-24",
+  "status": "proposed conditional witness; not extracted from the pinned Claimipedia graph",
+  "inheritsBoundaryFrom": "frontier_wave7_46_kenotic_cover_gluing_no_go.md",
+  "cover": {
+    "patches": ["U1", "U2", "U3"],
+    "pairwiseOverlaps": ["U1_U2", "U2_U3", "U3_U1"],
+    "tripleOverlap": false,
+    "nerve": "boundary of a triangle",
+    "bettiNumbers": {"beta0": 1, "beta1": 1}
+  },
+  "carrier": {
+    "localSectionSpace": "one-dimensional real line on each patch",
+    "normalizedMarker": "a nonzero local section reduced to a sign",
+    "transitionGroup": "Z2 = {+1,-1}",
+    "gluingEquations": [
+      "s2 = g12 s1",
+      "s3 = g23 s2",
+      "s1 = g31 s3"
+    ],
+    "holonomy": "h = g31 g23 g12"
+  },
+  "controls": [
+    {
+      "id": "untwisted",
+      "transitions": {"g12": 1, "g23": 1, "g31": 1},
+      "holonomy": 1,
+      "transitionMatrixRankOverQ": 2,
+      "cohomologyDimensionsOverQ": {"H0": 1, "H1": 1},
+      "normalizedGlobalSections": 2,
+      "verdict": "a nonzero global section exists"
+    },
+    {
+      "id": "twisted",
+      "transitions": {"g12": 1, "g23": 1, "g31": -1},
+      "holonomy": -1,
+      "transitionMatrixRankOverQ": 3,
+      "cohomologyDimensionsOverQ": {"H0": 0, "H1": 0},
+      "normalizedGlobalSections": 0,
+      "principalZ2Class": "nontrivial element of H1(S1; Z2)",
+      "verdict": "no nonzero global section exists; a transported marker returns reversed"
+    }
+  ],
+  "gaugeRule": "gij transforms to epsilon_j gij epsilon_i^-1 under independent patch sign choices epsilon_i",
+  "gaugeInvariant": "the ordered product h = g31 g23 g12",
+  "minimalReadout": "prepare a normalized marker on one patch, transport it through all three overlaps, and compare its return sign with the prepared sign",
+  "admissionDecision": {
+    "positiveControl": "h = +1 and a normalized global section is recovered",
+    "twistedControl": "h = -1 and no normalized global section exists",
+    "claimipediaPromotionGate": "identify three authored pairwise overlap carriers with no common triple overlap and attach evidence-backed transition signs",
+    "physicalPromotionGate": "implement the same loop on a declared carrier and show a reversal-odd return signal that survives calibration, gauge choice and nuisance models"
+  },
+  "boundary": "This ledger proves what the smallest enriched cyclic model would do. Claimipedia currently supplies neither this cyclic overlap cover nor its transition signs. The construction is a reopening template, not evidence that the knowledge graph, kenosis, theology or nature realizes the twist."
+}

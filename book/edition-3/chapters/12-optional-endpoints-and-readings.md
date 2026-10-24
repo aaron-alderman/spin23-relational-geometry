@@ -66,7 +66,7 @@ An explicitly Christian continuation reads incarnation as entry into creaturely 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/12-optional-endpoints-and-readings-theology-under-a-declared-assumption-claim-2.md)
 
-The pinned Claimipedia graph offers one bounded picture of presence without domination. Its principal kenosis node supports three undirected cycle classes and is an articulation, yet the authored arrows flow through it without directed return. Under the chapter's declared theological premises this may picture a load-bearing junction that does not force every relation to circulate around itself. The exact result remains graph topology: the node is present, not a puncture. The natural three-branch cover also has a filled triangular nerve and vanishing constant-coefficient H1, so matching scalar data glue uniquely. A genuine globalization obstruction would require new local section spaces and authored transition maps on distinct or richer overlaps; no cohomology or divine referent follows from the present capture.
+The pinned Claimipedia graph offers one bounded picture of presence without domination. Its principal kenosis node supports three undirected cycle classes and is an articulation, yet the authored arrows flow through it without directed return. Under the chapter's declared theological premises this may picture a load-bearing junction that does not force every relation to circulate around itself. The exact result remains graph topology: the node is present, not a puncture. The natural three-branch cover also has a filled triangular nerve and vanishing constant-coefficient H1, so matching scalar data glue uniquely. The smallest exact reopening template replaces that cover with three distinct pairwise overlaps and transition signs: product +1 permits a global nonzero marker, while product -1 returns it reversed. This is proposed new data, not an extraction; the current graph supplies neither the overlap loop nor its transitions, and no divine referent follows from either construction.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/12-optional-endpoints-and-readings-theology-under-a-declared-assumption-claim-3.md)
 
@@ -77,6 +77,7 @@ The pinned Claimipedia graph offers one bounded picture of presence without domi
 - [orientation_architecture.md](../../../corpus/programmes/orientation/orientation_architecture.md)
 - [frontier_wave7_45_kenotic_pole_topology_audit.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)
 - [frontier_wave7_46_kenotic_cover_gluing_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md)
+- [frontier_wave7_47_kenotic_enriched_loop_reopening_template.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md)
 - [EXPLANATORY_STANDARD.md](../../../corpus/EXPLANATORY_STANDARD.md)
 
 ---

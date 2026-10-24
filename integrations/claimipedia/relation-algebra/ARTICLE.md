@@ -200,6 +200,19 @@ Matching scalar sections therefore glue uniquely. The [cover-gluing no-go](../..
 closes the naïve absent-pole construction: a live obstruction needs distinct
 overlap carriers or authored higher-dimensional restriction maps.
 
+The reopening gate can itself be made exact without claiming it is already
+present. The [minimal enriched-loop template](../../../corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md)
+uses three distinct pairwise overlaps, no triple overlap and one transition
+sign on each overlap. Its invariant is the loop product
+\(h=g_{31}g_{23}g_{12}\). The untwisted control has \(h=+1\) and admits a
+nonzero global section; the twisted control has \(h=-1\), returns a marker with
+reversed sign and admits none. This also corrects a tempting overstatement:
+with rational vector-space coefficients the twisted local system has
+\(H^0=H^1=0\). What survives is the \(\mathbb Z_2\) holonomy or line-bundle
+class, not a nonzero rational cohomology group. Claimipedia has not yet supplied
+the distinct overlap records or evidence-backed transition signs needed to
+instantiate the template.
+
 ## The relation to admissibility
 
 This construction clarifies the corpus's Jordan–Lie reading without turning
@@ -305,7 +318,7 @@ These examples are detailed in the
 | Is that two-claim subsystem autonomous? | **Closed negatively.** The kenosis predecessor prevents descent to an isolated two-node system. |
 | What exact role does that kenosis predecessor play? | **Closed for the pinned one-complex.** It is a cycle-bearing articulation with an acyclic funnel orientation: three undirected cycle classes depend on it, but no directed return passes through it. |
 | Does the natural three-branch cover produce a globalization obstruction? | **Closed negatively for constant/scalar coefficients.** Its nerve is a filled triangle and \(H^1=0\); matching local values glue uniquely. |
-| Can richer authored local sections still obstruct globalization? | **Open with an exact gate.** Distinct or higher-dimensional overlap carriers and authored restriction maps must be supplied before a cocycle or surviving invariant can be tested. |
+| Can richer authored local sections still obstruct globalization? | **Constructively open with an exact witness.** A three-overlap sign loop blocks every nonzero global section exactly when its gauge-invariant holonomy is \(-1\). Claimipedia still lacks the authored overlaps and transitions that would instantiate it. |
 | What survives after predecessor closure and removal of one-way history? | **Closed for the declared aggregation.** The semisimple quotient is \(\mathbb Q\oplus M_2(\mathbb Q)\), with a 30-dimensional radical. |
 | Does the current relationship graph close to \(C_2\) or \(Spin(2,3)\)? | **Closed negatively for the direct current-graph route.** There is no second root channel. |
 | Is this the unique algebra of Claimipedia? | **Open, and probably the wrong question without a declared representation.** Different weights, edge identities, evidence operators or provenance operators can produce different algebras. |

@@ -8,7 +8,7 @@ _Expanded claim page · Optional endpoints and larger readings_
 
 ## Exact assertion
 
-> The pinned Claimipedia graph offers one bounded picture of presence without domination. Its principal kenosis node supports three undirected cycle classes and is an articulation, yet the authored arrows flow through it without directed return. Under the chapter's declared theological premises this may picture a load-bearing junction that does not force every relation to circulate around itself. The exact result remains graph topology: the node is present, not a puncture. The natural three-branch cover also has a filled triangular nerve and vanishing constant-coefficient H1, so matching scalar data glue uniquely. A genuine globalization obstruction would require new local section spaces and authored transition maps on distinct or richer overlaps; no cohomology or divine referent follows from the present capture.
+> The pinned Claimipedia graph offers one bounded picture of presence without domination. Its principal kenosis node supports three undirected cycle classes and is an articulation, yet the authored arrows flow through it without directed return. Under the chapter's declared theological premises this may picture a load-bearing junction that does not force every relation to circulate around itself. The exact result remains graph topology: the node is present, not a puncture. The natural three-branch cover also has a filled triangular nerve and vanishing constant-coefficient H1, so matching scalar data glue uniquely. The smallest exact reopening template replaces that cover with three distinct pairwise overlaps and transition signs: product +1 permits a global nonzero marker, while product -1 returns it reversed. This is proposed new data, not an extraction; the current graph supplies neither the overlap loop nor its transitions, and no divine referent follows from either construction.
 
 ## What this commits us to
 
@@ -39,6 +39,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **orientation architecture** — [orientation_architecture.md](../../../corpus/programmes/orientation/orientation_architecture.md)
 - **frontier wave7 45 kenotic pole topology audit** — [frontier_wave7_45_kenotic_pole_topology_audit.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)
 - **frontier wave7 46 kenotic cover gluing no go** — [frontier_wave7_46_kenotic_cover_gluing_no_go.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md)
+- **frontier wave7 47 kenotic enriched loop reopening template** — [frontier_wave7_47_kenotic_enriched_loop_reopening_template.md](../../../corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md)
 - **EXPLANATORY STANDARD** — [EXPLANATORY_STANDARD.md](../../../corpus/EXPLANATORY_STANDARD.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.

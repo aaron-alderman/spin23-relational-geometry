@@ -125,6 +125,16 @@ glue uniquely. A genuine “presence through absence” obstruction would requir
 new local section spaces and authored transition maps on distinct or richer
 overlaps. It cannot be read out of the present adjacency pattern.
 
+The minimum richer picture is now explicit, but remains conditional. Three
+distinct pairwise overlaps with no common triple overlap can carry transition
+signs whose ordered product is gauge invariant. Product \(+1\) permits a
+global nonzero marker; product \(-1\) returns it reversed and prevents such a
+global choice. The theological analogy may picture local fidelity without a
+globally dominating orientation, but the mathematics says only what the
+proposed sign loop would do. The current Claimipedia capture supplies neither
+the loop nor its transitions. Even within the toy, the precise residue is a
+\(\mathbb Z_2\) holonomy class, not a nonzero rational first cohomology group.
+
 ### Incarnation, cross and resurrection as the Christian arc
 
 Under an explicitly Christian continuation, incarnation says that God does not merely govern the admissible region from outside but enters creaturely conditions without abolishing them. The cross pictures power refusing domination and sharing the cost of a world with genuine consequence. Resurrection names a desired endpoint of restoration without erasure: history is not denied, suffering is not renamed good, and what is broken is not the final boundary. This arc may orient kenotic practice; it is not a physics model, symmetry breaking mechanism or empirical prediction.
@@ -162,3 +172,4 @@ The theological reading is allowed positive content because its assumptions are 
 - [Current research frontier crosswalk](../programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md)
 - [Claimipedia kenotic-pole topology audit](../programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md)
 - [Claimipedia kenotic-cover gluing no-go](../programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md)
+- [Claimipedia enriched-loop reopening template](../programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md)
