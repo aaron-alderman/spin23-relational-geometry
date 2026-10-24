@@ -1,0 +1,16 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+const root = resolve(import.meta.dirname, "../..");
+const evidence = JSON.parse(await readFile(resolve(root, "evidence/data/zenodo-eis-population-passive-audit-v1.json"), "utf8"));
+assert.equal(evidence.protocol, "zenodo-eis-population-passive-audit/1");
+assert.equal(evidence.cells.length, 54);
+assert.equal(evidence.population.passedCells, 54);
+assert.equal(evidence.population.failedCells, 0);
+assert.equal(evidence.decision.allCellsPassFrozenHeldOutThresholds, true);
+assert.equal(evidence.decision.populationPassiveBaselineEstablished, true);
+assert.equal(evidence.decision.sharedPopulationParameterModelEstablished, false);
+assert.equal(evidence.decision.measurementCovarianceEstablished, false);
+assert.equal(evidence.decision.newPhysicsEvidence, false);
+assert.ok(evidence.cells.every(cell => cell.rows === 44 && cell.training.count === 29 && cell.heldOut.count === 15 && cell.passed));
+console.log(JSON.stringify({ result: "pass", cells: 54, passFraction: evidence.population.passFraction, medianCellMedianError: evidence.population.medianOfCellMedianRelativeErrors, worstCellMaximumError: evidence.population.worstCellMaximumRelativeError, boundary: "per-cell calibration; shared population law, covariance and new physics remain open" }, null, 2));

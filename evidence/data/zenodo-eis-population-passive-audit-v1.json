@@ -1,0 +1,1445 @@
+{
+  "protocol": "zenodo-eis-population-passive-audit/1",
+  "date": "2026-10-25",
+  "source": {
+    "doi": "10.5281/zenodo.15422339",
+    "cells": 54,
+    "condition": "NMC811 21700 cells at 30% state of charge",
+    "localDirectory": "evidence/sources/zenodo-15422339"
+  },
+  "frozenProtocol": {
+    "splitRule": "source row index modulo 3 equals 1 is held out",
+    "model": "nonnegative series R + series L + five fixed-centre Debye arcs + semi-infinite Warburg",
+    "thresholds": {
+      "heldOutMedianRelativeErrorMaximum": 0.05,
+      "heldOutMaximumRelativeErrorMaximum": 0.2
+    },
+    "perCellRefittingWithinFrozenBasis": true,
+    "crossCellParameterSharing": false
+  },
+  "population": {
+    "passedCells": 54,
+    "failedCells": 0,
+    "passFraction": 1,
+    "medianOfCellMedianRelativeErrors": 0.0057637705880233285,
+    "worstCellMedianRelativeError": 0.007127289062591589,
+    "medianOfCellMaximumRelativeErrors": 0.03622722133061023,
+    "worstCellMaximumRelativeError": 0.039136883449445,
+    "worstMedianCell": "ID15",
+    "worstMaximumCell": "ID21"
+  },
+  "cells": [
+    {
+      "id": "ID01",
+      "sourceSha256": "1d39c825e8004fd526055fa778c3329205480c787db3c767d5ea143535ffe08e",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020957110797648824,
+        "medianRelativeError": 0.005756121245121508,
+        "maximumRelativeError": 0.044158942124115724
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002120098436430571,
+        "medianRelativeError": 0.004621318762703248,
+        "maximumRelativeError": 0.035747758005282765
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID02",
+      "sourceSha256": "d49054498ae4d03e62e963e056f2e2553a6e1743577ce906e66412c482dbe602",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020533239452296586,
+        "medianRelativeError": 0.004880340714115958,
+        "maximumRelativeError": 0.042960660118679585
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020799507123503682,
+        "medianRelativeError": 0.004266881162054079,
+        "maximumRelativeError": 0.034843870413492586
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID03",
+      "sourceSha256": "c268685c818760ebf12b2383aca395b9ba38f3c96039ec331e3f8e211c3c9c44",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0001979587872828633,
+        "medianRelativeError": 0.0048777901841675,
+        "maximumRelativeError": 0.041612149830441356
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002003483784592077,
+        "medianRelativeError": 0.0037113548416484315,
+        "maximumRelativeError": 0.03374648116841883
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID04",
+      "sourceSha256": "514d84f29ccc45278dddf55bbae8802b00a3fd5c598893c83f41df2dfa896af6",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019324934149371644,
+        "medianRelativeError": 0.004635041412632324,
+        "maximumRelativeError": 0.040346807892672226
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019684567799719562,
+        "medianRelativeError": 0.004188890124002955,
+        "maximumRelativeError": 0.033159888293956837
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID05",
+      "sourceSha256": "988d886e1e6704dba47769cd399fea8c263e4f1fc68b446d53474046f44bcff9",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019845472216478027,
+        "medianRelativeError": 0.0045491314634510584,
+        "maximumRelativeError": 0.042733652420091674
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002027364580135372,
+        "medianRelativeError": 0.0044881764564162156,
+        "maximumRelativeError": 0.035182905877575506
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID06",
+      "sourceSha256": "519bcc143aec18579fe553ff196934b41b3b302eab6f85638b049248f4784ee7",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019968886935277147,
+        "medianRelativeError": 0.004176504044577247,
+        "maximumRelativeError": 0.04196484565980446
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020343364159900232,
+        "medianRelativeError": 0.004219490931171765,
+        "maximumRelativeError": 0.0347353944566829
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID07",
+      "sourceSha256": "f8dbdd8ec1c8e498a52b87c4d4cd78125887c7222fb72e06597a0d7b94118423",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021092695317257256,
+        "medianRelativeError": 0.005245445116819815,
+        "maximumRelativeError": 0.043007947521779666
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021406858931769885,
+        "medianRelativeError": 0.004283834462335428,
+        "maximumRelativeError": 0.0350652644833027
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID08",
+      "sourceSha256": "c8d5ae35c0e437d12612f00da6b3935a496b1a93016987b070eb4a48e243d068",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019426760483237925,
+        "medianRelativeError": 0.0031176939755877832,
+        "maximumRelativeError": 0.041824488715234566
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019445641452134755,
+        "medianRelativeError": 0.003862624743914754,
+        "maximumRelativeError": 0.03288134059800104
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID09",
+      "sourceSha256": "112666406a5bf3dc91d30e559b7c8a299da1712513f35a6381ce49518beda2fd",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019566068433949673,
+        "medianRelativeError": 0.004420658759866288,
+        "maximumRelativeError": 0.040785131477812084
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020106794531105286,
+        "medianRelativeError": 0.0041176234276487245,
+        "maximumRelativeError": 0.0340435172026743
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID10",
+      "sourceSha256": "589f678767facf684d8f7ab9716bc94b0c626f5336b0c6a94300f1585a8f040a",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019487828933192384,
+        "medianRelativeError": 0.004592656199243727,
+        "maximumRelativeError": 0.04133596053572014
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019903531758097765,
+        "medianRelativeError": 0.00479637831711871,
+        "maximumRelativeError": 0.03400523601228258
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID11",
+      "sourceSha256": "c1dae5105fe9d280394288aa483c299ed578838ed82d5368da66fd8dd56c267a",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020837296991285545,
+        "medianRelativeError": 0.00530011479316724,
+        "maximumRelativeError": 0.04320512214332165
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021082458792458412,
+        "medianRelativeError": 0.004158642811425343,
+        "maximumRelativeError": 0.03504600805298453
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID12",
+      "sourceSha256": "25ce3a8b05cd4d189f778dc847ef6ffcd3d3c16a3d3dba73c6e3345b714f71fa",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002102205543313966,
+        "medianRelativeError": 0.005524267897068581,
+        "maximumRelativeError": 0.04320001004866738
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021253257595474665,
+        "medianRelativeError": 0.0041037460189301475,
+        "maximumRelativeError": 0.03505333094039596
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID13",
+      "sourceSha256": "8ef30ce569c214b28f77dc6839c0c98451bba4b30a4d814c5f472b3fcb25e181",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020125397373040052,
+        "medianRelativeError": 0.004505868275419993,
+        "maximumRelativeError": 0.04216508571978454
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020689807261065497,
+        "medianRelativeError": 0.00601875942076608,
+        "maximumRelativeError": 0.034730047468687415
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID14",
+      "sourceSha256": "c1d80f88dda0a900bedf36cd730bf9cbf3127970ffa966bde0f192ff2f7569eb",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002092109148122152,
+        "medianRelativeError": 0.004702998072430837,
+        "maximumRelativeError": 0.04398763917314708
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002160455655840884,
+        "medianRelativeError": 0.006767031968640793,
+        "maximumRelativeError": 0.03668814910601271
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID15",
+      "sourceSha256": "d6625f82d39312377aa5f5aeadf6cc7ce926953ff055b296086c38b748fb85a0",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020878857290886334,
+        "medianRelativeError": 0.005014785113611911,
+        "maximumRelativeError": 0.04379195604895755
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021604511316559896,
+        "medianRelativeError": 0.007127289062591589,
+        "maximumRelativeError": 0.03627278218779544
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID16",
+      "sourceSha256": "23ff61fecfea732284a976097e08248eb76ce0c331a27441588968aeac657859",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020733620385695732,
+        "medianRelativeError": 0.004185952025212274,
+        "maximumRelativeError": 0.044454545567869604
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002136491923210086,
+        "medianRelativeError": 0.005656231553127556,
+        "maximumRelativeError": 0.03662444740110002
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID17",
+      "sourceSha256": "bd6932f3ed09fc66cb81d0ab5fd9b5fa038cd57685b7b5272e1e6dd53d267ae4",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021087561429485044,
+        "medianRelativeError": 0.004443332974126125,
+        "maximumRelativeError": 0.04468773998177384
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021486206020498031,
+        "medianRelativeError": 0.006246593278034213,
+        "maximumRelativeError": 0.036701180892801784
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID18",
+      "sourceSha256": "8b4b39bd99f7e6efb4365f818abdf82a843b71d8ec4f97e7aa16783b6d6b6b14",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019556489571211663,
+        "medianRelativeError": 0.0034133731785168883,
+        "maximumRelativeError": 0.04131565058407209
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019853135034649316,
+        "medianRelativeError": 0.0058420176074639694,
+        "maximumRelativeError": 0.03364996167318305
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID19",
+      "sourceSha256": "16873ce13e77e144bd880577b69594343157d729b3c72b9cb0d03731455b6dac",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019698896968620762,
+        "medianRelativeError": 0.004331842271960389,
+        "maximumRelativeError": 0.04153649904253069
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019890569407046487,
+        "medianRelativeError": 0.006143305236967199,
+        "maximumRelativeError": 0.03335268724858637
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID20",
+      "sourceSha256": "91bf9c388ee088c1966cc25c83fbb31ba3c90bc586204d98a521bb711bd585e0",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020242482205837874,
+        "medianRelativeError": 0.004339907702850996,
+        "maximumRelativeError": 0.043767424337878
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020588270984926387,
+        "medianRelativeError": 0.00604411368016287,
+        "maximumRelativeError": 0.03491506652574504
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID21",
+      "sourceSha256": "240e48515ba977d8fd6288fe7a80e53d7f81f49060331d31fa295e55dd362c46",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021550182914866883,
+        "medianRelativeError": 0.0042810164163162735,
+        "maximumRelativeError": 0.04714268673872377
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022378473481247965,
+        "medianRelativeError": 0.006493622806981463,
+        "maximumRelativeError": 0.039136883449445
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID22",
+      "sourceSha256": "b682b5931d53140d198d9fda4d2bad3a2a4a64e0e34e36acee44380bad1027bf",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0001920287566272783,
+        "medianRelativeError": 0.004613474349696588,
+        "maximumRelativeError": 0.04260501153423213
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019423767954646488,
+        "medianRelativeError": 0.00491465208509492,
+        "maximumRelativeError": 0.0342700933688586
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID23",
+      "sourceSha256": "0653378677d53312a7390cc8e2c8f14ebf9a34bb15c5ccbb83a7b77d4d6d211c",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00022053809709867404,
+        "medianRelativeError": 0.0060743445898986306,
+        "maximumRelativeError": 0.045149925252983454
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00023202800774787668,
+        "medianRelativeError": 0.006195614408257919,
+        "maximumRelativeError": 0.03760660060185462
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID24",
+      "sourceSha256": "39b554f9c4c3924816c60e5e0139c28967a19a5832c53a2241e0bbec560ab2bb",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020260939526565826,
+        "medianRelativeError": 0.004470436459289791,
+        "maximumRelativeError": 0.044252714136816314
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002083941172980409,
+        "medianRelativeError": 0.004510994549477927,
+        "maximumRelativeError": 0.03694323184953444
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID25",
+      "sourceSha256": "6c1b5f4f11831fa11ea4a16cad2da8cf191a4c80d0516e747dc668065d3c77c9",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002131521560886011,
+        "medianRelativeError": 0.005294487179547327,
+        "maximumRelativeError": 0.04515705180866843
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021759588753354666,
+        "medianRelativeError": 0.005516888853891973,
+        "maximumRelativeError": 0.037381605549764337
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID26",
+      "sourceSha256": "3a6f0e8f816531bbfa1add33c755217bc5aae8c284823c0f54ce4b8f1b2cc09f",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002126460698680869,
+        "medianRelativeError": 0.0044318735897248595,
+        "maximumRelativeError": 0.04468073455274742
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021609624689787122,
+        "medianRelativeError": 0.006261025828846366,
+        "maximumRelativeError": 0.03657725788075054
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID27",
+      "sourceSha256": "4e81ae5471cd9496020c911edfe0a4265bea20748fc712095f80b05879c8c212",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021292914489600987,
+        "medianRelativeError": 0.005347295634345539,
+        "maximumRelativeError": 0.04476604892600908
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002181000954884402,
+        "medianRelativeError": 0.004213695226374453,
+        "maximumRelativeError": 0.03680173530163644
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID28",
+      "sourceSha256": "28ef6fbaaf43075f97ebed1c351883e5ccc1172663fd3e49a6e2717af642c93e",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019605999110834307,
+        "medianRelativeError": 0.0029077692972752137,
+        "maximumRelativeError": 0.04216893117066672
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019935040976237967,
+        "medianRelativeError": 0.00414019116845322,
+        "maximumRelativeError": 0.034117348720192515
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt1HzOhm",
+        "debyeResistanceAt10HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID29",
+      "sourceSha256": "d791fbb46d03fc1d7b5d880c5d4246da249b2daeedbe008d7d690847d5aed192",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020010690650709847,
+        "medianRelativeError": 0.005006894209967121,
+        "maximumRelativeError": 0.04403931809160062
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020611825749085617,
+        "medianRelativeError": 0.004059474219992227,
+        "maximumRelativeError": 0.03607691835773913
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID30",
+      "sourceSha256": "573e4d032e4812504bb001637213c32e5f4bde1c2b9835f84ece860d79825e84",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019926448838578014,
+        "medianRelativeError": 0.0045668669702595656,
+        "maximumRelativeError": 0.04254425446316079
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020063129435565386,
+        "medianRelativeError": 0.00463477894188082,
+        "maximumRelativeError": 0.03407081409312892
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID31",
+      "sourceSha256": "5633e8b79efbad9583e0956a2423cefdd4920e2eaa9b2e099e24e8d1e79010f6",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.000210435671753075,
+        "medianRelativeError": 0.005801908031090164,
+        "maximumRelativeError": 0.04456319595170972
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021567152075427216,
+        "medianRelativeError": 0.004355903162509996,
+        "maximumRelativeError": 0.037020627630011675
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID32",
+      "sourceSha256": "ac202f1d22e069b7f9583433c367dc5f71b4c2c7948baa570d6e6e4a24efd7fa",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021255690586167278,
+        "medianRelativeError": 0.004269233644242725,
+        "maximumRelativeError": 0.0453472640799095
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021807124067019232,
+        "medianRelativeError": 0.006672363110192388,
+        "maximumRelativeError": 0.03719922287163332
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID33",
+      "sourceSha256": "c9a992c025577da279f2cefd646c655bbc038b9180d648ade173941848104aa4",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019520004243606012,
+        "medianRelativeError": 0.004152210383216597,
+        "maximumRelativeError": 0.04150670792862653
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00019855710740496681,
+        "medianRelativeError": 0.0058952147575512545,
+        "maximumRelativeError": 0.033593374806332454
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID34",
+      "sourceSha256": "5e3a1bf5499948ea32647fef8e68b90c305e585dbfce08a19b8bb9f687d51a72",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002110368208387347,
+        "medianRelativeError": 0.004590544823310648,
+        "maximumRelativeError": 0.04674276293955288
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021643751586709672,
+        "medianRelativeError": 0.006771120532295874,
+        "maximumRelativeError": 0.037892216263749015
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID35",
+      "sourceSha256": "cc7997edceb1972c233808d1d98850ae690ae18697391330a328f593c2492f33",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021626861150639151,
+        "medianRelativeError": 0.004757170675649725,
+        "maximumRelativeError": 0.04624302936357966
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022202908091127673,
+        "medianRelativeError": 0.00637206085654385,
+        "maximumRelativeError": 0.038571632732643045
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID36",
+      "sourceSha256": "749c936744482c1bd7a2f13aaab7c80c99f6a1b88fdbc2456e7357c206400fdd",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019929045697977536,
+        "medianRelativeError": 0.003753578816610007,
+        "maximumRelativeError": 0.043273671509656386
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020476469860437736,
+        "medianRelativeError": 0.0055188679363644905,
+        "maximumRelativeError": 0.035270391939477966
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID37",
+      "sourceSha256": "2c9ff493031b31f39985b705c43d5fbe9943f3128d43196abee3e64914a63ca5",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021352222267192228,
+        "medianRelativeError": 0.004551117043963796,
+        "maximumRelativeError": 0.046276662506754114
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00022134741884180382,
+        "medianRelativeError": 0.005524278362132874,
+        "maximumRelativeError": 0.03821734097176493
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID38",
+      "sourceSha256": "1db4a63efd1cf89914d7bd14a6a08d5444d683b83467101b1be13f8319b4b54b",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020874993825829264,
+        "medianRelativeError": 0.004262356091947787,
+        "maximumRelativeError": 0.04517355965355163
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002137986623378679,
+        "medianRelativeError": 0.006082959238300257,
+        "maximumRelativeError": 0.03644720193505985
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID39",
+      "sourceSha256": "ac10e68523001eb5642006098a07f6ec7d40da5ebdd79aaa80291eea51d96b64",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021405536909723826,
+        "medianRelativeError": 0.004743425186755654,
+        "maximumRelativeError": 0.04604120786680766
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021632752693002356,
+        "medianRelativeError": 0.0057637705880233285,
+        "maximumRelativeError": 0.03683252343049621
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID40",
+      "sourceSha256": "3ebfabc01ac5f86ea0f3f45e0194efab5e554bb6a2e1d154896072bba043defd",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00019953034905604964,
+        "medianRelativeError": 0.0038261319761627977,
+        "maximumRelativeError": 0.04231468042164969
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020026696901037202,
+        "medianRelativeError": 0.005705948085418101,
+        "maximumRelativeError": 0.033502695789985805
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID41",
+      "sourceSha256": "9e4158e25e237f5d3ac1620a5fd001bae51d19f51042caa2e671041357be5a00",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021689738807243453,
+        "medianRelativeError": 0.0051266990068925865,
+        "maximumRelativeError": 0.045722309802899236
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002198318702574688,
+        "medianRelativeError": 0.0059446501861522595,
+        "maximumRelativeError": 0.03622722133061023
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID42",
+      "sourceSha256": "ebbd76c57e53956074e7db83db9b404a98e04d4e5f1fe9d88b219ca2417060fc",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002103479714560948,
+        "medianRelativeError": 0.004148191238787229,
+        "maximumRelativeError": 0.045133006513996744
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021593707146587584,
+        "medianRelativeError": 0.006205985045147734,
+        "maximumRelativeError": 0.03620811709028698
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID43",
+      "sourceSha256": "5cca1dff9adca2ff476ae73c400fb384317a2c80cb825bd9bb1bf4d50b316211",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002088830379771459,
+        "medianRelativeError": 0.004049992140862566,
+        "maximumRelativeError": 0.045946891517696056
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021383444930840527,
+        "medianRelativeError": 0.006165670921236748,
+        "maximumRelativeError": 0.03631960711583607
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID44",
+      "sourceSha256": "1dff8e3282763bf40eb495d379dc0dd38bdbda572e3d4f4de56ed50d2ca7742c",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021125828898134615,
+        "medianRelativeError": 0.0049782705359640265,
+        "maximumRelativeError": 0.044635709333367676
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021471690307157056,
+        "medianRelativeError": 0.005709411606600583,
+        "maximumRelativeError": 0.03552213022687217
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID45",
+      "sourceSha256": "0781eaab867fc4f56ed939b5610b5ca6b7e2434c2764ed5b0889ce07a4bf4135",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021303785047714134,
+        "medianRelativeError": 0.003875085525912168,
+        "maximumRelativeError": 0.0468195750423748
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002174095329201718,
+        "medianRelativeError": 0.005827301002258796,
+        "maximumRelativeError": 0.0371218505462312
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID46",
+      "sourceSha256": "2c0a0e281d80e05125e22a749d1ab30f4e921ea1c128ef0e588ee2d3da9031b6",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020992398522862106,
+        "medianRelativeError": 0.00490073383167383,
+        "maximumRelativeError": 0.044805636173712644
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021440993808825398,
+        "medianRelativeError": 0.00614179748189062,
+        "maximumRelativeError": 0.03594228880743468
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID47",
+      "sourceSha256": "d0b314e153101f3c5981b5e88f10689ad9239d5b25e45aa433f8ae12178d4989",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021420676959736128,
+        "medianRelativeError": 0.004442722663757507,
+        "maximumRelativeError": 0.04616979285832314
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021900491589136418,
+        "medianRelativeError": 0.005995251765961447,
+        "maximumRelativeError": 0.03728617440069057
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID48",
+      "sourceSha256": "b0c42600cd72ec95ccc53243533a9b2a8e883560444e9ca8861233d30e578bae",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021616082392464709,
+        "medianRelativeError": 0.004789536371286578,
+        "maximumRelativeError": 0.04604741970568111
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021950008659703358,
+        "medianRelativeError": 0.00630906502586036,
+        "maximumRelativeError": 0.03681311428121437
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID49",
+      "sourceSha256": "a5bb9c70db81481ec8b1ffbf6ca4886e61533f40655aa126722f4f4d8b811998",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00021847145888897999,
+        "medianRelativeError": 0.004576993012930794,
+        "maximumRelativeError": 0.04634086061189379
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002238928362542198,
+        "medianRelativeError": 0.006481592681784549,
+        "maximumRelativeError": 0.03796746993551567
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID50",
+      "sourceSha256": "9679b0ee5123a182dfaf089226c68ba977bdedb2bcb4f6d97cde52bb64076c6c",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002156070170286873,
+        "medianRelativeError": 0.00442102438308328,
+        "maximumRelativeError": 0.04664114711050614
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.000217281834750441,
+        "medianRelativeError": 0.006097579552204912,
+        "maximumRelativeError": 0.036443848189179964
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID51",
+      "sourceSha256": "8b07b7254982e64fac8e25ab835c995d6b39db765393d4cc069a0219a8e7e0c4",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002053851267864317,
+        "medianRelativeError": 0.004548353579675706,
+        "maximumRelativeError": 0.0446482838331315
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00020799355407223613,
+        "medianRelativeError": 0.00648284450288507,
+        "maximumRelativeError": 0.03522812735459296
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID52",
+      "sourceSha256": "0a8975c4e0aba0afcff5c9fa9b7c5aa454cf3f7ed00242e7f2da2a109cd94035",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.0002139036332767603,
+        "medianRelativeError": 0.004686756129335709,
+        "maximumRelativeError": 0.04578270558768756
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.0002170012638356195,
+        "medianRelativeError": 0.006429046729454073,
+        "maximumRelativeError": 0.03632319704523959
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID53",
+      "sourceSha256": "2e1fef94c92232fc063ed07830911d61751a2331afe3534c51e1261a20f96177",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020978679663023826,
+        "medianRelativeError": 0.004101248033794621,
+        "maximumRelativeError": 0.04524976669983859
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021409138180338542,
+        "medianRelativeError": 0.005151813023247623,
+        "maximumRelativeError": 0.0363274326019126
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ID54",
+      "sourceSha256": "3b0068639e959b34ff921d2598344b935193ef3bbb3e487294012f79bf7cfc76",
+      "rows": 44,
+      "training": {
+        "count": 29,
+        "rmseOhm": 0.00020771041570291364,
+        "medianRelativeError": 0.005648499659360113,
+        "maximumRelativeError": 0.045286881865386604
+      },
+      "heldOut": {
+        "count": 15,
+        "rmseOhm": 0.00021406935464435165,
+        "medianRelativeError": 0.005000264680661189,
+        "maximumRelativeError": 0.037529275326877366
+      },
+      "activeParameters": [
+        "seriesResistanceOhm",
+        "seriesInductanceH",
+        "debyeResistanceAt0.1HzOhm",
+        "debyeResistanceAt1HzOhm",
+        "debyeResistanceAt100HzOhm",
+        "debyeResistanceAt1000HzOhm",
+        "warburgOhmSqrtRadPerSecond"
+      ],
+      "passed": true
+    }
+  ],
+  "decision": {
+    "allCellsPassFrozenHeldOutThresholds": true,
+    "populationPassiveBaselineEstablished": true,
+    "sharedPopulationParameterModelEstablished": false,
+    "measurementCovarianceEstablished": false,
+    "detectorLikelihoodClosed": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The frozen passive basis and held-out rule pass all 54 measured cells. This establishes a population-wide conventional response baseline under per-cell fitting, not one shared parameter law, detector likelihood or new physics."
+}

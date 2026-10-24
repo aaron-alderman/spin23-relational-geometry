@@ -8,6 +8,8 @@
 **Source:** [Zenodo ID01 provenance](../../../evidence/sources/zenodo-15422339-id01-provenance.md)  
 **Verifier:** [held-out fit certificate](../../../verification/admissibility/verify_zenodo_eis_held_out_passive_fit.mjs)
 
+**Continued by:** [AZ-088 population passive baseline](admissibility_88_population_wide_passive_impedance_baseline.md)
+
 ## Result
 
 The operator-and-measure chain now reaches a source-native measured record. Zenodo DOI `10.5281/zenodo.15422339` supplies raw galvanostatic complex impedance for 54 NMC811 21700 cells at 30% state of charge. Cell `ID01.csv` contains 44 frequency points from 0.05 Hz to 10 kHz with real and imaginary impedance in ohms.

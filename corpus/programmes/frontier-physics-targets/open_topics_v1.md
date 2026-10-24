@@ -133,6 +133,12 @@ held-out complex impedances with 0.462% median and 3.575% maximum relative
 error. This closes one-cell translation, not uncertainty, detector likelihood,
 cross-cell generalization or dynamics.
 
+[AZ-088](../admissibility/admissibility_88_population_wide_passive_impedance_baseline.md)
+runs the frozen protocol across all 54 cells. Every cell passes; the worst
+cellwise maximum held-out error is 3.914%. This establishes population-wide
+adequacy under per-cell calibration. A shared population law, covariance and
+generated dynamics remain open.
+
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
 (\pi/4) phase depends on a common anomaly trivialization, while the (T_1)

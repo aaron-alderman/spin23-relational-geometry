@@ -255,6 +255,13 @@ ordinary-physics baseline. The file supplies no pointwise uncertainty, and one
 cell supplies no population generalization; neither detector likelihood nor new
 physics follows.
 
+[AZ-088](../programmes/admissibility/admissibility_88_population_wide_passive_impedance_baseline.md)
+extends the frozen test to all 54 source cells. Every cell passes; the worst
+cellwise median error is 0.713% and the worst single-cell maximum is 3.914%.
+This establishes a population-wide conventional baseline under per-cell
+calibration. It does not establish one shared parameter law, covariance or
+generated dynamics.
+
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one
 nonabelian semisimple factor, \(\mathfrak{sl}_2\); the reciprocal programme core

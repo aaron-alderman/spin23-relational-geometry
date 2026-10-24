@@ -279,6 +279,10 @@ A first source-native measurement now enters. A checksum-identified Zenodo imped
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-7.md)
 
+That population test now passes all 54 cells without changing the basis, split or thresholds. The median cell has 0.576% median held-out error; the worst cellwise median is 0.713%, and the worst cellwise maximum is 3.914%. This is strong evidence that the modest residuals belong inside an ordinary passive model class. Each cell was still fitted separately, so one shared population law and detector covariance remain open. The next test must predict an unseen cell without per-cell recalibration.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-8.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

@@ -1,10 +1,12 @@
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
-import { resolve } from "node:path";
+import { basename, resolve } from "node:path";
 
 const write = process.argv.includes("--write");
 const root = resolve(import.meta.dirname, "..");
-const sourcePath = resolve(root, "evidence/sources/zenodo-15422339-id01.csv");
+const sourceArgumentIndex = process.argv.indexOf("--source");
+const sourcePath = sourceArgumentIndex >= 0 ? resolve(process.argv[sourceArgumentIndex + 1]) : resolve(root, "evidence/sources/zenodo-15422339-id01.csv");
+const sourceFile = basename(sourcePath);
 const sourceText = await readFile(sourcePath, "utf8");
 const rows = sourceText.trim().split(/\r?\n/u).slice(1).map((line, index) => {
   const [frequencyHz, realOhm, imagOhm] = line.split(",").map(Number);
@@ -88,7 +90,7 @@ const thresholdPassed = heldOutMetrics.medianRelativeError <= thresholds.heldOut
 const output = {
   protocol: "zenodo-eis-held-out-passive-fit/1",
   date: "2026-10-25",
-  source: { doi: "10.5281/zenodo.15422339", file: "ID01.csv", remoteMd5: "13ff29e7f0510a2453bcccacfb8afd0d", localNormalizedSha256: createHash("sha256").update(sourceText).digest("hex"), rows: rows.length, measurement: "galvanostatic EIS, NMC811 21700 cell, 30% state of charge" },
+  source: { doi: "10.5281/zenodo.15422339", file: sourceFile, remoteMd5: sourceFile === "ID01.csv" ? "13ff29e7f0510a2453bcccacfb8afd0d" : null, localNormalizedSha256: createHash("sha256").update(sourceText).digest("hex"), rows: rows.length, measurement: "galvanostatic EIS, NMC811 21700 cell, 30% state of charge" },
   preregistration: { splitRule: "source row index modulo 3 equals 1 is held out", model: "nonnegative series R + series L + five fixed-centre Debye arcs + semi-infinite Warburg", relaxationHz, parameterSign: "all coefficients nonnegative", thresholds },
   fittedParameters: Object.fromEntries(parameterNames.map((name, index) => [name, coefficients[index]])),
   activeParameters: parameterNames.filter((_, index) => coefficients[index] > 1e-14),
