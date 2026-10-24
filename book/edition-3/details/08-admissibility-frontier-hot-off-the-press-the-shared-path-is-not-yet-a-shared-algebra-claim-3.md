@@ -17,7 +17,7 @@ A specified candidate class fails under explicit assumptions. The conclusion doe
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the shared path is not yet a shared algebra”.
-- **Unit of argument:** assertion 3 of 6 in this section.
+- **Unit of argument:** assertion 3 of 7 in this section.
 - **Evidence posture:** Check the assumptions defining the ruled-out candidate class; the no-go does not automatically extend beyond that class.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
@@ -34,6 +34,7 @@ Break one of the no-go assumptions in a controlled construction, or show that th
 
 ## Controlling documents
 
+- **admissibility 87 source native measured impedance held out prediction** — [admissibility_87_source_native_measured_impedance_held_out_prediction.md](../../../corpus/programmes/admissibility/admissibility_87_source_native_measured_impedance_held_out_prediction.md)
 - **admissibility 86 positive spectral atom and measure evaluation witness** — [admissibility_86_positive_spectral_atom_and_measure_evaluation_witness.md](../../../corpus/programmes/admissibility/admissibility_86_positive_spectral_atom_and_measure_evaluation_witness.md)
 - **admissibility 85 physical admittance operator and held out current witness** — [admissibility_85_physical_admittance_operator_and_held_out_current_witness.md](../../../corpus/programmes/admissibility/admissibility_85_physical_admittance_operator_and_held_out_current_witness.md)
 - **admissibility 84 all d02 families pass common algebra2 record layer** — [admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md](../../../corpus/programmes/admissibility/admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md)

@@ -246,6 +246,15 @@ measured data or a product identity induced by source composition. A residue
 surviving frozen conventional and nuisance models would be the point at which a
 new-physics reading could reopen.
 
+[AZ-087](../programmes/admissibility/admissibility_87_source_native_measured_impedance_held_out_prediction.md)
+then binds the chain to a public measured record. On Zenodo cell ID01, a
+nonnegative passive circuit family fitted to 29 frequencies predicts 15
+predeclared held-out complex impedances with 0.462% median and 3.575% maximum
+relative error. This closes one measured translation while strengthening the
+ordinary-physics baseline. The file supplies no pointwise uncertainty, and one
+cell supplies no population generalization; neither detector likelihood nor new
+physics follows.
+
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one
 nonabelian semisimple factor, \(\mathfrak{sl}_2\); the reciprocal programme core

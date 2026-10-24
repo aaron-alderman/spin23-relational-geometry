@@ -1,0 +1,295 @@
+{
+  "protocol": "zenodo-eis-held-out-passive-fit/1",
+  "date": "2026-10-25",
+  "source": {
+    "doi": "10.5281/zenodo.15422339",
+    "file": "ID01.csv",
+    "remoteMd5": "13ff29e7f0510a2453bcccacfb8afd0d",
+    "localNormalizedSha256": "45d309f1f1741d656655d5bdb8835c5dccecc4b29d2f5e9c0a315130abe9d385",
+    "rows": 44,
+    "measurement": "galvanostatic EIS, NMC811 21700 cell, 30% state of charge"
+  },
+  "preregistration": {
+    "splitRule": "source row index modulo 3 equals 1 is held out",
+    "model": "nonnegative series R + series L + five fixed-centre Debye arcs + semi-infinite Warburg",
+    "relaxationHz": [
+      0.1,
+      1,
+      10,
+      100,
+      1000
+    ],
+    "parameterSign": "all coefficients nonnegative",
+    "thresholds": {
+      "heldOutMedianRelativeErrorMaximum": 0.05,
+      "heldOutMaximumRelativeErrorMaximum": 0.2
+    }
+  },
+  "fittedParameters": {
+    "seriesResistanceOhm": 0.013695219455329534,
+    "seriesInductanceH": 9.638472963557211e-8,
+    "debyeResistanceAt0.1HzOhm": 0.00011365580877954751,
+    "debyeResistanceAt1HzOhm": 0,
+    "debyeResistanceAt10HzOhm": 0,
+    "debyeResistanceAt100HzOhm": 0.0024872452136011974,
+    "debyeResistanceAt1000HzOhm": 0.0017215437091606788,
+    "warburgOhmSqrtRadPerSecond": 0.0014469403883720171
+  },
+  "activeParameters": [
+    "seriesResistanceOhm",
+    "seriesInductanceH",
+    "debyeResistanceAt0.1HzOhm",
+    "debyeResistanceAt100HzOhm",
+    "debyeResistanceAt1000HzOhm",
+    "warburgOhmSqrtRadPerSecond"
+  ],
+  "trainingMetrics": {
+    "count": 29,
+    "rmseOhm": 0.00020957110797648824,
+    "medianRelativeError": 0.005756121245121508,
+    "maximumRelativeError": 0.044158942124115724
+  },
+  "heldOutMetrics": {
+    "count": 15,
+    "rmseOhm": 0.0002120098436430571,
+    "medianRelativeError": 0.004621318762703248,
+    "maximumRelativeError": 0.035747758005282765
+  },
+  "heldOutRows": [
+    {
+      "index": 1,
+      "frequencyHz": 8923.7412109375,
+      "measured": {
+        "re": 0.0142628142493777,
+        "im": 0.00515697151422501
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.013721202954202132,
+        "im": 0.005181529883885859
+      },
+      "absoluteErrorOhm": 0.0005421677863744344,
+      "relativeError": 0.035747758005282765
+    },
+    {
+      "index": 4,
+      "frequencyHz": 3763.11059570312,
+      "measured": {
+        "re": 0.0137167598586529,
+        "im": 0.00187073228880763
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.013817179250617484,
+        "im": 0.001778941643105152
+      },
+      "absoluteErrorOhm": 0.00013604990599414043,
+      "relativeError": 0.009827539731576102
+    },
+    {
+      "index": 7,
+      "frequencyHz": 1586.890625,
+      "measured": {
+        "re": 0.0139406244707061,
+        "im": 0.0000423877499997616
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.014204625900886614,
+        "im": 0.000018154592273701196
+      },
+      "absoluteErrorOhm": 0.0002651112994022191,
+      "relativeError": 0.01901708739550504
+    },
+    {
+      "index": 10,
+      "frequencyHz": 669.186218261719,
+      "measured": {
+        "re": 0.0146664932835847,
+        "im": -0.00095805199816823
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.014954394638727797,
+        "im": -0.0007698052673679972
+      },
+      "absoluteErrorOhm": 0.00034398258960332157,
+      "relativeError": 0.02340375654014827
+    },
+    {
+      "index": 13,
+      "frequencyHz": 282.193481445312,
+      "measured": {
+        "re": 0.0156626336793124,
+        "im": -0.00136854406446218
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.015591572767974717,
+        "im": -0.0010864798617008025
+      },
+      "absoluteErrorOhm": 0.0002908777537034305,
+      "relativeError": 0.018500956187467152
+    },
+    {
+      "index": 16,
+      "frequencyHz": 119.000007629395,
+      "measured": {
+        "re": 0.0166618070015829,
+        "im": -0.00130943057592958
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.016459588374555658,
+        "im": -0.0013924902484338101
+      },
+      "absoluteErrorOhm": 0.00021861217329621253,
+      "relativeError": 0.01308022527676421
+    },
+    {
+      "index": 19,
+      "frequencyHz": 50.181884765625,
+      "measured": {
+        "re": 0.0174082186031228,
+        "im": -0.00096434017905267
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.017456958958139035,
+        "im": -0.00111069312580233
+      },
+      "absoluteErrorOhm": 0.00015425565542117836,
+      "relativeError": 0.008847517457358097
+    },
+    {
+      "index": 22,
+      "frequencyHz": 21.1615257263184,
+      "measured": {
+        "re": 0.0178131137472519,
+        "im": -0.000591384210565593
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.01788536330791981,
+        "im": -0.0006166454157833598
+      },
+      "absoluteErrorOhm": 0.00007653840542995278,
+      "relativeError": 0.00429437891086431
+    },
+    {
+      "index": 25,
+      "frequencyHz": 8.92374134063721,
+      "measured": {
+        "re": 0.0179999334063723,
+        "im": -0.000371582471416332
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.018020873557012394,
+        "im": -0.00036807063674364036
+      },
+      "absoluteErrorOhm": 0.00002123259031767385,
+      "relativeError": 0.0011793414500869959
+    },
+    {
+      "index": 28,
+      "frequencyHz": 3.76311063766479,
+      "measured": {
+        "re": 0.0181140265294744,
+        "im": -0.000303537137369858
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.018110959823242467,
+        "im": -0.0003110957080426199
+      },
+      "absoluteErrorOhm": 0.000008157001760948487,
+      "relativeError": 0.00045025090113535684
+    },
+    {
+      "index": 31,
+      "frequencyHz": 1.58689057826996,
+      "measured": {
+        "re": 0.0182380551746064,
+        "im": -0.000348398845289921
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.018227847702988777,
+        "im": -0.0003723849309011958
+      },
+      "absoluteErrorOhm": 0.000026067696096432387,
+      "relativeError": 0.0014290416851304457
+    },
+    {
+      "index": 34,
+      "frequencyHz": 0.666760742664337,
+      "measured": {
+        "re": 0.0184129325393769,
+        "im": -0.000507583585999782
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.01840627150606142,
+        "im": -0.0005338724475244572
+      },
+      "absoluteErrorOhm": 0.000027119616610370516,
+      "relativeError": 0.001472297691867
+    },
+    {
+      "index": 37,
+      "frequencyHz": 0.281170666217804,
+      "measured": {
+        "re": 0.0187000383821214,
+        "im": -0.000793830709596932
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.01868652023406126,
+        "im": -0.0008129600461862705
+      },
+      "absoluteErrorOhm": 0.000023423745330839062,
+      "relativeError": 0.001251477016387109
+    },
+    {
+      "index": 40,
+      "frequencyHz": 0.118568688631058,
+      "measured": {
+        "re": 0.0191418657354916,
+        "im": -0.00123384830190787
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.019136634697384178,
+        "im": -0.0012444833484738464
+      },
+      "absoluteErrorOhm": 0.000011851918627031589,
+      "relativeError": 0.0006178798763439305
+    },
+    {
+      "index": 43,
+      "frequencyHz": 0.0500000007450581,
+      "measured": {
+        "re": 0.0198337409719898,
+        "im": -0.00196329933092443
+      },
+      "split": "held-out",
+      "predicted": {
+        "re": 0.019820343560520655,
+        "im": -0.0018721729053255156
+      },
+      "absoluteErrorOhm": 0.00009210600456272165,
+      "relativeError": 0.004621318762703248
+    }
+  ],
+  "decision": {
+    "passiveCoefficientConstraintSatisfied": true,
+    "heldOutThresholdPassed": true,
+    "sourceNativeMeasuredBridgeClosedForOneCell": true,
+    "measurementUncertaintyAvailableInSourceFile": false,
+    "detectorLikelihoodClosed": false,
+    "generalizationAcrossCellsClosed": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "One preregistered passive equivalent-circuit family predicts the held-out complex impedance values of source cell ID01 within the declared error ceiling. This closes a measured-response bridge for one cell, not detector likelihood, cross-cell generalization or new physics."
+}

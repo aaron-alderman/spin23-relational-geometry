@@ -8,6 +8,8 @@
 **Generator:** [operator-measure witness runner](../../../scripts/run-claimipedia-d02-physical-operator-measure-witness.mjs)  
 **Verifier:** [operator-measure witness certificate](../../../verification/admissibility/verify_claimipedia_d02_physical_operator_measure_witness.mjs)
 
+**Continued by:** [AZ-087 source-native held-out impedance](admissibility_87_source_native_measured_impedance_held_out_prediction.md)
+
 ## Result
 
 The named D02 step `extract-positive-operator-measure` now has a physical scalar specialization. The internal branch of AZ-085's passive RC network has

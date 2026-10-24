@@ -1,0 +1,18 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+const root = resolve(import.meta.dirname, "../..");
+const evidence = JSON.parse(await readFile(resolve(root, "evidence/data/zenodo-eis-held-out-passive-fit-v1.json"), "utf8"));
+assert.equal(evidence.protocol, "zenodo-eis-held-out-passive-fit/1");
+assert.equal(evidence.source.rows, 44);
+assert.equal(evidence.trainingMetrics.count, 29);
+assert.equal(evidence.heldOutMetrics.count, 15);
+assert.equal(evidence.decision.passiveCoefficientConstraintSatisfied, true);
+assert.equal(evidence.decision.heldOutThresholdPassed, true);
+assert.ok(evidence.heldOutMetrics.medianRelativeError < 0.05);
+assert.ok(evidence.heldOutMetrics.maximumRelativeError < 0.20);
+assert.equal(evidence.decision.measurementUncertaintyAvailableInSourceFile, false);
+assert.equal(evidence.decision.detectorLikelihoodClosed, false);
+assert.equal(evidence.decision.generalizationAcrossCellsClosed, false);
+assert.equal(evidence.decision.newPhysicsEvidence, false);
+console.log(JSON.stringify({ result: "pass", protocol: evidence.protocol, heldOutCount: evidence.heldOutMetrics.count, heldOutMedianRelativeError: evidence.heldOutMetrics.medianRelativeError, heldOutMaximumRelativeError: evidence.heldOutMetrics.maximumRelativeError, boundary: "one source cell; no supplied uncertainty, detector likelihood, cross-cell generalization or new physics" }, null, 2));

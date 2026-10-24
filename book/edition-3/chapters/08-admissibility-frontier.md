@@ -275,6 +275,10 @@ The positive-measure branch now closes at scalar rank one. The same RC network s
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-6.md)
 
+A first source-native measurement now enters. A checksum-identified Zenodo impedance spectrum for one NMC811 cell is split before fitting; a nonnegative passive circuit family trained on 29 frequencies predicts fifteen held-out complex values with 0.462% median and 3.575% maximum relative error. The result closes one measured-response bridge and makes the conventional baseline stronger. It does not close detector likelihood because the source file has no pointwise uncertainty, and it does not establish cross-cell generalization or dynamics. The next honest test is the same frozen protocol across the other 53 cells.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-7.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

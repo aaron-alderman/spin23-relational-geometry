@@ -126,6 +126,13 @@ sign. This closes the scalar measure translation, not general operator
 reconstruction or graph-to-Jordan extraction. The next datum must be a
 source-native measured response or a non-imported product identity.
 
+[AZ-087](../admissibility/admissibility_87_source_native_measured_impedance_held_out_prediction.md)
+supplies that first measured response. A checksum-identified Zenodo EIS file is
+split before fitting; a nonnegative passive circuit family predicts fifteen
+held-out complex impedances with 0.462% median and 3.575% maximum relative
+error. This closes one-cell translation, not uncertainty, detector likelihood,
+cross-cell generalization or dynamics.
+
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
 (\pi/4) phase depends on a common anomaly trivialization, while the (T_1)
