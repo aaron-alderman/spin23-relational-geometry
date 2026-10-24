@@ -274,6 +274,7 @@ const sectionTaxonomy = {
   "Hot off the press — selection is a channel, not a filter": "obstruction",
   "Hot off the press — make the proposed cause move": "experiment",
   "Hot off the press — a loop and its outcome are different objects": "obstruction",
+  "Hot off the press — the first new inequality is not new": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -354,6 +355,7 @@ const sectionArchetype = {
   "Hot off the press — selection is a channel, not a filter": "auditor",
   "Hot off the press — make the proposed cause move": "builder",
   "Hot off the press — a loop and its outcome are different objects": "auditor",
+  "Hot off the press — the first new inequality is not new": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -611,6 +613,15 @@ admissibilitySections.splice(orientedSeamIndex + 18, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 19, 0, [
+  "Hot off the press — the first new inequality is not new",
+  [
+    "**Provisional integration note — 25 October 2026.** Three response channels expose a genuine pairwise-to-global gap. Each normalized two-port block can be positive while the joint three-port response is impossible. For equal real correlation the pairwise interval minus one to one tightens globally to minus one half to one. For equal magnitude three fifths, the gauge-invariant phase around the triangle must satisfy cosine Phi at least five twenty-sevenths, giving an exact saturating phase boundary.",
+    "This looks like contextual admissibility doing additional work, but the novelty audit fails. The triangle inequality is exactly the determinant condition in the ordinary positive-semidefinite principal-minor test. Pairwise positivity was merely an incomplete conventional envelope. The result is useful global consistency and a detector warning, but it is neither a new law nor a restriction beyond standard full-matrix positivity.",
+    "The frontier therefore moves outward. A successful inequality must start with the complete positive causal family and then constrain compatibility across frequencies, common environmental dilations, independently calibrated detector contexts or regulator limits. It must exhibit a conventional point that passes all standard tests and is excluded only by the declared contextual premise. Anything weaker is a rediscovery, however suggestive its language.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -855,6 +866,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — selection is a channel, not a filter": ["corpus/programmes/admissibility/admissibility_63_acoustic_selector_channel_type_and_passive_no_go.md", "corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
   "Hot off the press — make the proposed cause move": ["corpus/programmes/admissibility/admissibility_64_thermal_hall_activation_and_moving_crossing_discriminator.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md", "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md"],
   "Hot off the press — a loop and its outcome are different objects": ["corpus/programmes/admissibility/admissibility_65_exceptional_loop_topology_and_dynamic_selection.md", "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md", "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"],
+  "Hot off the press — the first new inequality is not new": ["corpus/programmes/admissibility/admissibility_66_contextual_triangle_bound_reduces_to_standard_positivity.md", "corpus/programmes/admissibility/admissibility_08_finite_contextual_casimir_experiment.md", "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md"],
 };
 
 const evidenceReading = key => ({

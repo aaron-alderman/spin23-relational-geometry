@@ -426,6 +426,25 @@ The experiment must therefore pair complex eigenvalue and biorthogonal left/righ
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-loop-and-its-outcome-are-different-objects-claim-3.md)
 
+<a id="hot-off-the-press-the-first-new-inequality-is-not-new"></a>
+## Hot off the press — the first new inequality is not new
+
+> **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** Three response channels expose a genuine pairwise-to-global gap. Each normalized two-port block can be positive while the joint three-port response is impossible. For equal real correlation the pairwise interval minus one to one tightens globally to minus one half to one. For equal magnitude three fifths, the gauge-invariant phase around the triangle must satisfy cosine Phi at least five twenty-sevenths, giving an exact saturating phase boundary.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-1.md)
+
+This looks like contextual admissibility doing additional work, but the novelty audit fails. The triangle inequality is exactly the determinant condition in the ordinary positive-semidefinite principal-minor test. Pairwise positivity was merely an incomplete conventional envelope. The result is useful global consistency and a detector warning, but it is neither a new law nor a restriction beyond standard full-matrix positivity.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-2.md)
+
+The frontier therefore moves outward. A successful inequality must start with the complete positive causal family and then constrain compatibility across frequencies, common environmental dilations, independently calibrated detector contexts or regulator limits. It must exhibit a conventional point that passes all standard tests and is excluded only by the declared contextual premise. Anything weaker is a rediscovery, however suggestive its language.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
