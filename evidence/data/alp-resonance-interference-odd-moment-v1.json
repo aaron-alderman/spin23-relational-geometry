@@ -1,0 +1,60 @@
+{
+  "schema": "admissibility.alp-resonance-interference-odd-moment/1",
+  "date": "2026-10-25",
+  "amplitudeModel": "A(x)=B+S/(x+i*gamma), x=m_gg^2-m_a^2, with real locally constant B and S",
+  "parameters": {
+    "background": 1.7,
+    "signalResidue": -0.42,
+    "widthScale": 0.08,
+    "window": 0.6
+  },
+  "identities": {
+    "pairedDifference": "rate(+x)-rate(-x)=4*B*S*x/(x^2+gamma^2)",
+    "symmetricCountInterference": 0,
+    "signWeightedMoment": "2*B*S*log((L^2+gamma^2)/gamma^2)"
+  },
+  "pairedDifferences": [
+    {
+      "x": 0.05,
+      "numeric": -16.044943820224717,
+      "analytic": -16.044943820224717
+    },
+    {
+      "x": 0.12,
+      "numeric": -16.476923076923075,
+      "analytic": -16.476923076923075
+    },
+    {
+      "x": 0.25,
+      "numeric": -10.362844702467342,
+      "analytic": -10.362844702467344
+    },
+    {
+      "x": 0.5,
+      "numeric": -5.569422776911075,
+      "analytic": -5.569422776911076
+    }
+  ],
+  "oddMoment": -5.77972667339625,
+  "reversedOddMoment": 5.77972667339625,
+  "evenCancellation": {
+    "constantBackgroundSquared": true,
+    "pureBreitWignerSignalSquared": true,
+    "realInterferenceInSymmetricCount": true
+  },
+  "detectorConditions": {
+    "symmetricMassResolutionPreservesOddParity": true,
+    "asymmetricAcceptanceCanLeakEvenTerms": true,
+    "backgroundSlopeRequiresSidebandNuisance": true,
+    "absorptivePhasesRequireEvenOddJointFit": true,
+    "sourceSignReversalRequired": true
+  },
+  "decisions": {
+    "ordinarySymmetricYieldRetainsRealInterferenceSign": false,
+    "oddMassMomentRetainsResidueSignInDeclaredModel": true,
+    "signalAndLeadingEvenBackgroundCancelFromOddMoment": true,
+    "detectorLevelLikelihoodComputed": false,
+    "publicDataRecastCompleted": false,
+    "newPhysicsEvidence": false
+  }
+}

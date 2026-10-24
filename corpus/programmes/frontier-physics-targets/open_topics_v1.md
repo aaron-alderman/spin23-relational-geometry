@@ -72,7 +72,7 @@ for another dimensionless redesign.
 | OT-036 | Microscopic capture and radiation ledger | replaces the successful toy bath with a source-native radiative or phononic channel |
 | OT-037 | Integrated-photonic selector chip | AZ-061 supplies a passing coupled-mode wedge but exposes signed-coupling, reference-port, full-wave tolerance and separate-selector gates; one fabrication-native route must now be chosen and simulated |
 | OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-071 fixes the detector budget; AZ-113 requires an independent-current export and AZ-114 closes differential detail of the same process as a source-coordinate escape. AZ-115 fixes the general dimension-five count at seven physical coordinates. The amplitude calculation still needs the three-control export for its own closure |
-| OT-048 | Five-coordinate incidence observable likelihood | AZ-081 restores the weak quotient; AZ-113--AZ-115 close the public-model, same-process and unrestricted-coordinate shortcuts. AZ-116 gives the minimal conditional detector: charged weak plus photon/photon--Z amplitude on a declared \(c_{BB}=0\) slice, with a phase reference because rate-only data retain a relative-sign branch. Build the amplitude triangle and the signed charged/neutral likelihood |
+| OT-048 | Five-coordinate incidence observable likelihood | AZ-081 restores the weak quotient; AZ-113--AZ-115 close the public-model, same-process and unrestricted-coordinate shortcuts. AZ-116 gives the conditional charged/neutral detector, and AZ-117 supplies an odd diphoton mass moment that can retain its missing sign against the continuum. Compute one source-complete helicity and detector likelihood across the 27 settings |
 
 ## P2 — gated translation problems
 
@@ -149,6 +149,8 @@ selects one.
 [AZ-115](../admissibility/admissibility_115_the_full_gauge_dictionary_turns_the_sixth_coordinate_into_a_declared_slice.md) restores the omitted hypercharge and gluon anomaly shifts. The five-coordinate current quotient plus three direct gauge labels has rank seven, with exact null \((\Delta A_2,\Delta c_{WW},\Delta c_{BB})=(2,1,-1)\). A neutral-gauge record supplies the missing row only after a direct-operator slice is declared; the unrestricted EFT should be fitted in basis-invariant coordinates rather than asked to reveal an unobservable origin label.
 
 [AZ-116](../admissibility/admissibility_116_the_minimal_second_gauge_detector_needs_a_phase_reference.md) identifies the conditional detector pair and its remaining loss. Charged weak and diphoton amplitudes invert \((A_2,c_{WW})\) when \(c_{BB}=0\), but their separate rates retain two relative-sign branches. A coherent reference, full width model and nuisance-profiled joint likelihood are the exact remaining experimental inputs.
+
+[AZ-117](../admissibility/admissibility_117_an_odd_resonance_moment_can_supply_the_missing_sign.md) provides the coherent-reference statistic: paired mass bins about the ALP pole isolate the odd real interference term, and a sign-weighted moment reverses with the resonant source residue. The remaining gate is no longer conceptual; it is the source-complete continuum/resonance helicity calculation and detector convolution for one declared channel.
 audits the nearest official collider implementation. Its `CaPhi` control fixes
 the normalized top and bottom ALP couplings to opposite signs, while `CWtil`
 supplies the direct weak-boson control. The resulting intervention map has rank

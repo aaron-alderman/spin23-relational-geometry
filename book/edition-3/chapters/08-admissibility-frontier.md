@@ -1017,6 +1017,25 @@ The realistic experiment is now finite: choose a mass window, freeze the source-
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-3.md)
 
+<a id="hot-off-the-press-an-odd-resonance-moment-retains-the-sign"></a>
+## Hot off the press — an odd resonance moment retains the sign
+
+> **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** The missing phase reference can be supplied by a calibrated continuum with the same quantum numbers. Near a narrow diphoton pole, write the amplitude as \(B+S/(x+i\gamma)\), where \(x=m_{\gamma\gamma}^2-m_a^2\). The above-minus-below bin difference is \(4BSx/(x^2+\gamma^2)\): the leading continuum square and signal square cancel, while the sign of the resonant residue remains.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-1.md)
+
+An ordinary symmetric resonance count integrates this real interference away. Weighting events by the sign of \(x\) instead gives a nonzero odd moment proportional to \(BS\), and reversing the signed source reverses the moment. Applied across the twenty-seven charged-source settings, this can connect the photon amplitude to the already signed top–bottom–weak triangle rather than treating a diphoton branching fraction as an unrelated magnitude.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-2.md)
+
+The statistic is exact only in the local analytic model. A real likelihood must carry complex continuum helicities, absorptive phases, all open widths, symmetric-resolution suppression, acceptance asymmetry and background-slope leakage constrained by sidebands. The next step is therefore one declared final-state calculation and detector convolution. Passing would be a practical signed-coupling measurement; only a replicated residual outside the complete seven-coordinate model would point toward new physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-3.md)
+
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
 ## Hot off the press — the hydrodynamic cone has poles
 

@@ -48,4 +48,4 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-hydrodynamic-cone-has-poles) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-3.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-2.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-hydrodynamic-cone-has-poles) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-3.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-2.md)

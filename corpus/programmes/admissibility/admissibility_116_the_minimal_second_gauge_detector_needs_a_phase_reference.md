@@ -14,6 +14,8 @@
 
 **Verifier:** [rank and branch certificate](../../../verification/admissibility/verify_alp_charged_neutral_detector_rank.mjs)
 
+**Continuation:** [AZ-117](admissibility_117_an_odd_resonance_moment_can_supply_the_missing_sign.md) supplies an analytic continuum-interference statistic that retains the relative sign and identifies the remaining detector-level likelihood inputs.
+
 ## Result
 
 The conditional second detector in AZ-115 has a concrete post-electroweak form. After the source-complete fermion, running and threshold contributions are accounted for, use the amplitude-level records

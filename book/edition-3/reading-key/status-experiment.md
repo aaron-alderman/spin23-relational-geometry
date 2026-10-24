@@ -20,6 +20,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [The admissibility frontier · Hot off the press — the third edge tests the whole triangle](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-third-edge-tests-the-whole-triangle)
 - [The admissibility frontier · Hot off the press — change the record, not just the energy](../chapters/08-admissibility-frontier.md#hot-off-the-press-change-the-record-not-just-the-energy)
 - [The admissibility frontier · Hot off the press — the second gauge detector needs a phase reference](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference)
+- [The admissibility frontier · Hot off the press — an odd resonance moment retains the sign](../chapters/08-admissibility-frontier.md#hot-off-the-press-an-odd-resonance-moment-retains-the-sign)
 - [E3-F19 · A calibrated pole-and-band experiment can be specified](../chapters/08-result-ledger.md#E3-F19)
 - [Claim · The admissibility frontier · The finesse technology pathway (1)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md)
 - [Claim · The admissibility frontier · The finesse technology pathway (2)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)
@@ -50,6 +51,9 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Hot off the press — the second gauge detector needs a phase reference (1)](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the second gauge detector needs a phase reference (2)](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the second gauge detector needs a phase reference (3)](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — an odd resonance moment retains the sign (1)](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — an odd resonance moment retains the sign (2)](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — an odd resonance moment retains the sign (3)](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-3.md)
 
 ---
 
