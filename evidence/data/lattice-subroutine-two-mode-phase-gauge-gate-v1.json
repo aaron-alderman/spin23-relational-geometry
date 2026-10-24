@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "The phase and sign of one complex coupling between two isolated modes are removable by local mode rephasing; an observable seam phase requires an external phase frame or a gauge-invariant closed loop of at least three couplings.",
+  "twoMode": {
+    "transformation": "epsilon12 -> exp(i(alpha1-alpha2))*epsilon12",
+    "phaseInvariant": false,
+    "signInvariant": false,
+    "interpretation": "IQ/homodyne phase is relational to the pump, ports and local oscillator"
+  },
+  "threeMode": {
+    "loopProduct": "B=epsilon12*epsilon23*epsilon31",
+    "transformation": "B -> B under independent local mode rephasings",
+    "invariant": "arg(B)",
+    "minimumClosedLoopEdges": 3
+  },
+  "controls": [
+    "redistribute edge phases while holding loop flux fixed",
+    "scramble or remove the external reference",
+    "hold edge magnitudes and single-edge spectra fixed",
+    "verify invariance under software basis rephasings"
+  ],
+  "terminalStatus": "isolated_two_mode_intrinsic_phase_ruled_out_external_or_loop_carrier_open"
+}

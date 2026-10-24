@@ -150,6 +150,8 @@ The [two-resonator transfer preflight](two-resonator-transfer-preflight.md) adds
 
 The first successful experiment should be expected to stop at the third row. That is still useful: it builds the detector required by the theory without claiming the theory has already supplied the coupling.
 
+The [two-mode phase-gauge gate](two-mode-phase-gauge-gate.md) further limits that interpretation. A single complex coupling phase is removable inside an isolated two-mode Hamiltonian. The measured odd phase is meaningful relative to the pump and local oscillator; an intrinsic device phase requires a closed three-mode coupling loop.
+
 ## Existing technical precedents
 
 - Peropadre et al., [tunable complex couplings and effective gauge fields between superconducting resonators](https://arxiv.org/abs/1207.3408)
