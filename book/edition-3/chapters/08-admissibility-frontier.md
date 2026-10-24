@@ -189,6 +189,23 @@ So the next question is no longer whether any Jordan face can be found. It is wh
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-3.md)
 
+<a id="hot-off-the-press-the-local-reversal-stops-at-the-path-memory"></a>
+## Hot off the press — the local reversal stops at the path memory
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** The obvious attempt to promote the local Jordan face back to the whole relation graph fails exactly. None of the four aggregate relation operators remains inside the 35-dimensional algebra when transposed.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-local-reversal-stops-at-the-path-memory-claim-1.md)
+
+The same obstruction is visible without algebra. Reversing every edge while trying all twenty-four permutations of the four relation labels recovers at most two of seventeen records: the Spin–Temple pair itself. The surrounding reasons are directed histories, not unrecorded reverse processes.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-local-reversal-stops-at-the-path-memory-claim-2.md)
+
+This tells us where to look. A full bridge needs a source-native dagger or order, a provenance-bearing nonlocal reversal, or a prediction that selects one candidate. The local symmetric response remains exact, but it cannot erase path memory and then claim that the erased graph selected the cone.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-local-reversal-stops-at-the-path-memory-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 

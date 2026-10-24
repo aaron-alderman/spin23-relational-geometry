@@ -1,0 +1,68 @@
+{
+  "protocol": "relation-jordan-involution-lift-audit/1",
+  "packet": "AZ-112",
+  "target": "OT-026",
+  "source": {
+    "path": "corpus/programmes/frontier/wave-7/claimipedia_relationship_operator_source_v1.json",
+    "sha256": "2049529614d665ce21ee151f42352a6a72665c208f8b57059e45ade8d3ba7458"
+  },
+  "carrier": {
+    "nodes": 15,
+    "retainedEdges": 17,
+    "relationTypes": [
+      "Challenges",
+      "DependsOn",
+      "Qualifies",
+      "Supports"
+    ],
+    "generatedAlgebraDimension": 35
+  },
+  "transposeMembership": {
+    "Challenges": {
+      "inGeneratedAlgebra": false,
+      "rankIncreaseWhenAdjoined": 1
+    },
+    "DependsOn": {
+      "inGeneratedAlgebra": false,
+      "rankIncreaseWhenAdjoined": 1
+    },
+    "Qualifies": {
+      "inGeneratedAlgebra": false,
+      "rankIncreaseWhenAdjoined": 1
+    },
+    "Supports": {
+      "inGeneratedAlgebra": false,
+      "rankIncreaseWhenAdjoined": 1
+    }
+  },
+  "allGeneratorTransposesInternal": false,
+  "typedReversalSearch": {
+    "permutationsChecked": 24,
+    "best": {
+      "mapping": {
+        "Challenges": "Challenges",
+        "DependsOn": "DependsOn",
+        "Qualifies": "Supports",
+        "Supports": "Qualifies"
+      },
+      "matchedEdges": 2,
+      "unmatchedEdges": 15
+    },
+    "maximumMatchedEdges": 2,
+    "fractionMatched": 0.11764705882352941,
+    "onlyCompleteReversePair": [
+      "claim.grandThesis.spin-2-3",
+      "claim.grandThesis.temple-sourcery"
+    ]
+  },
+  "decision": {
+    "ordinaryTransposeLiftsToFullRelationAlgebra": false,
+    "globalTypedEdgeReversalExists": false,
+    "localJordanFaceRemainsExact": true,
+    "positiveOrderSourceNative": false,
+    "ot026ClosureConditionMet": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "The transpose-fixed H2 face of AZ-111 is a quotient-local enrichment, not the fixed space of a hidden involution of the full predecessor-closed typed relation algebra. Reopening requires an authored dagger/order, a weighted nonlocal anti-automorphism, or a held-out prediction that selects one.",
+  "nextGate": "Add or derive a source-native dagger/order before quotienting, or construct a nonlocal weighted anti-automorphism with declared provenance; then test whether its positive fixed space predicts a withheld composition or observable."
+}

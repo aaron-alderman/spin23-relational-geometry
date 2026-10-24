@@ -80,7 +80,7 @@ for another dimensionless redesign.
 |---|---|---|
 | OT-024 | Relation-emulator hardware dictionary | AZ-110 closes network and detector design; build the frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
 | OT-025 | Nonlocal 24-dimensional form or code functor | a source-derived replacement for the incidence form or explicit sacrificed property |
-| OT-026 | Graph-to-Jordan translation | AZ-111 constructs an exact local $H_2(\mathbb Q)$ face; source-native positive order, radical transport and one held-out prediction remain |
+| OT-026 | Graph-to-Jordan translation | AZ-111 constructs an exact local $H_2(\mathbb Q)$ face; AZ-112 proves ordinary transpose and typed edge reversal do not lift through path memory |
 | OT-027 | Physical operator and dynamics functor | action generating operators, amplitudes and detector map |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
 | OT-038 | Source-bearing A2 commuting square | calibrate one common-carrier intertwiner from the selector primitive-form split to the rectangular ports, treat the nonzero channel as covariant symmetry breaking, and select the noncompact reverse-channel phase |
@@ -132,6 +132,15 @@ relation labels into one symmetric coordinate and supplies positive order from
 the real matrix representation. OT-026 remains gated on a source-native order
 that survives the radical and predicts a withheld composition or physical
 record.
+
+[AZ-112](../admissibility/admissibility_112_the_jordan_face_involution_does_not_lift_through_path_memory.md)
+tests that order at its source. None of the four aggregate relation-generator
+transposes belongs to the 35-dimensional predecessor-closed algebra. Across
+all 24 permutations of the relation labels, global edge reversal recovers at
+most two of seventeen records: the local Spin--Temple pair. The Jordan face is
+therefore exact but quotient-local. Reopening now requires an authored dagger,
+a provenance-bearing nonlocal anti-automorphism, or a held-out prediction that
+selects one.
 
 [AZ-087](../admissibility/admissibility_87_source_native_measured_impedance_held_out_prediction.md)
 supplies that first measured response. A checksum-identified Zenodo EIS file is
