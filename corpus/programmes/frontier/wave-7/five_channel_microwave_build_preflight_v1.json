@@ -1,0 +1,50 @@
+{
+  "schema": "five-channel-microwave-build-preflight/1",
+  "date": "2026-10-25",
+  "status": "conceptual BOM and error budget frozen; discrete compiler gate open",
+  "topology": {
+    "channels": 5,
+    "phaseLayers": 6,
+    "fixedMixingLayers": 7,
+    "phaseElementsPerLayer": 5,
+    "totalPhaseElements": 30,
+    "dutInputPorts": 5,
+    "dutOutputPorts": 5,
+    "referencePaths": 1
+  },
+  "componentAnchor": {
+    "phaseBits": 6,
+    "phaseStepDegrees": 5.625,
+    "halfStepRadians": 0.04908738521234052,
+    "phaseLayersWorstCaseRadians": 0.2945243112740431,
+    "packagedPhaseElementLossDb": 5,
+    "phasePathLossDb": 30,
+    "rmsPhaseErrorDegrees": 3
+  },
+  "compileGate": {
+    "targets": ["H", "R", "RH", "HR", "S_plus"],
+    "centreFrequencyNormalizedFrobeniusMaximum": 0.03,
+    "analysisBandNormalizedFrobeniusMaximum": 0.05,
+    "failureActions": ["higher phase resolution", "additional phase plane", "matrix-specific low-loss network"]
+  },
+  "directionalErrorBudget": {
+    "discreteCompilation": 0.03,
+    "amplitudeImbalance": 0.015,
+    "deembedding": 0.01,
+    "drift": 0.01,
+    "noiseAndLeakage": 0.005,
+    "contingency": 0.005,
+    "totalPerDirection": 0.075,
+    "twoDirectionTotal": 0.15,
+    "guaranteedSignedResidualMargin": 1.7
+  },
+  "measurementGates": {
+    "minimumLeakageClearanceDb": 20,
+    "firstMatrix": "H",
+    "requiresUnnormalizedComplexRecord": true,
+    "requiresReferenceThrough": true,
+    "allowsDistributedGainInCore": false
+  },
+  "boundary": "passing builds a reciprocal emulator; source-native endpoint parity remains open"
+}
+

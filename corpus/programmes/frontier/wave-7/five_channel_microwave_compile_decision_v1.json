@@ -1,0 +1,22 @@
+{
+  "schema": "five-channel-microwave-compile-decision/1",
+  "date": "2026-10-25",
+  "threshold": 0.03,
+  "targets": ["H", "R", "RH", "HR", "S_plus"],
+  "variants": {
+    "sixLayerSixBit": {"worstError": 0.04637771326645723, "passed": false},
+    "sixLayerSevenBit": {"worstError": 0.02505129944809547, "passed": true},
+    "sevenLayerSixBit": {"worstError": 0.044246155612915755, "passed": false},
+    "sixLayerEightBit": {"worstError": 0.010960366375667932, "passed": true}
+  },
+  "decision": {
+    "selected": "six layers, eight-bit phase control",
+    "reason": "passes every ideal-mixer target below 1.10 percent and has a current component-class anchor near 2.1 GHz",
+    "phaseElements": 30,
+    "phaseElementLossDb": 6,
+    "phasePathLossDb": 36,
+    "purchaseAuthorized": false
+  },
+  "nextGate": "compile all five targets against measured or full-wave F(f) at the centre frequency and across the analysis band"
+}
+

@@ -1,0 +1,156 @@
+{
+  "schema": "five-channel-microwave-drift-envelope/1",
+  "date": "2026-10-25",
+  "seed": "0xd21f7a9b",
+  "trialsPerScale": 1000,
+  "metric": "global-complex-scale-invariant normalized shape error",
+  "baseUnit": {
+    "couplerAngleDegrees": 0.05,
+    "phaseStateDegrees": 0.1,
+    "amplitudeStateDb": 0.01
+  },
+  "allowance": 0.015,
+  "rows": [
+    {
+      "scale": 0,
+      "couplerAngleDegrees": 0,
+      "phaseStateDegrees": 0,
+      "amplitudeStateDb": 0,
+      "median": 0,
+      "p95": 0,
+      "maximum": 0,
+      "passesP95": true
+    },
+    {
+      "scale": 0.25,
+      "couplerAngleDegrees": 0.0125,
+      "phaseStateDegrees": 0.025,
+      "amplitudeStateDb": 0.0025,
+      "median": 0.0008646029597135213,
+      "p95": 0.0010050329485997314,
+      "maximum": 0.0011622966687297842,
+      "passesP95": true
+    },
+    {
+      "scale": 0.5,
+      "couplerAngleDegrees": 0.025,
+      "phaseStateDegrees": 0.05,
+      "amplitudeStateDb": 0.005,
+      "median": 0.0017201012307315338,
+      "p95": 0.002026106679372488,
+      "maximum": 0.0024598450426010186,
+      "passesP95": true
+    },
+    {
+      "scale": 1,
+      "couplerAngleDegrees": 0.05,
+      "phaseStateDegrees": 0.1,
+      "amplitudeStateDb": 0.01,
+      "median": 0.003448661235971863,
+      "p95": 0.004078679493056538,
+      "maximum": 0.004471034342813462,
+      "passesP95": true
+    },
+    {
+      "scale": 2,
+      "couplerAngleDegrees": 0.1,
+      "phaseStateDegrees": 0.2,
+      "amplitudeStateDb": 0.02,
+      "median": 0.006910523683801941,
+      "p95": 0.008109499103137751,
+      "maximum": 0.009118350622696624,
+      "passesP95": true
+    },
+    {
+      "scale": 2.5,
+      "couplerAngleDegrees": 0.125,
+      "phaseStateDegrees": 0.25,
+      "amplitudeStateDb": 0.025,
+      "median": 0.008594630678573838,
+      "p95": 0.010153703762622103,
+      "maximum": 0.011590450477367023,
+      "passesP95": true
+    },
+    {
+      "scale": 3,
+      "couplerAngleDegrees": 0.15000000000000002,
+      "phaseStateDegrees": 0.30000000000000004,
+      "amplitudeStateDb": 0.03,
+      "median": 0.010409968979481555,
+      "p95": 0.012068308936173814,
+      "maximum": 0.014820604881991887,
+      "passesP95": true
+    },
+    {
+      "scale": 3.5,
+      "couplerAngleDegrees": 0.17500000000000002,
+      "phaseStateDegrees": 0.35000000000000003,
+      "amplitudeStateDb": 0.035,
+      "median": 0.012134000477248727,
+      "p95": 0.01418452343937333,
+      "maximum": 0.01635647095114891,
+      "passesP95": true
+    },
+    {
+      "scale": 3.75,
+      "couplerAngleDegrees": 0.1875,
+      "phaseStateDegrees": 0.375,
+      "amplitudeStateDb": 0.0375,
+      "median": 0.012920488199163936,
+      "p95": 0.015202940912899381,
+      "maximum": 0.017905037320431624,
+      "passesP95": false
+    },
+    {
+      "scale": 4,
+      "couplerAngleDegrees": 0.2,
+      "phaseStateDegrees": 0.4,
+      "amplitudeStateDb": 0.04,
+      "median": 0.013813619535041262,
+      "p95": 0.016125184998065863,
+      "maximum": 0.018439661477553305,
+      "passesP95": false
+    },
+    {
+      "scale": 8,
+      "couplerAngleDegrees": 0.4,
+      "phaseStateDegrees": 0.8,
+      "amplitudeStateDb": 0.08,
+      "median": 0.027290054913717984,
+      "p95": 0.03194040080596802,
+      "maximum": 0.03703408159608364,
+      "passesP95": false
+    }
+  ],
+  "lastPassing": {
+    "scale": 3.5,
+    "couplerAngleDegrees": 0.17500000000000002,
+    "phaseStateDegrees": 0.35000000000000003,
+    "amplitudeStateDb": 0.035,
+    "median": 0.012134000477248727,
+    "p95": 0.01418452343937333,
+    "maximum": 0.01635647095114891,
+    "passesP95": true
+  },
+  "dynamicRange": {
+    "weakestCrossAmplitude": 0.3076923076923077,
+    "weakestCrossRelativeDb": 10.237667219577487,
+    "phasePathLossDb": 36,
+    "requiredFormula": "phasePathLossDb + ancillaryLossDb + weakestCrossRelativeDb + clearanceDb",
+    "examples": [
+      {
+        "ancillaryLossDb": 5,
+        "requiredDynamicRangeDb": 71.23766721957749
+      },
+      {
+        "ancillaryLossDb": 10,
+        "requiredDynamicRangeDb": 76.23766721957749
+      },
+      {
+        "ancillaryLossDb": 15,
+        "requiredDynamicRangeDb": 81.23766721957749
+      }
+    ]
+  },
+  "boundary": "drift envelope uses the ideal calibrated mixer and frozen eight-bit words; it does not replace measured/full-wave F(f) compilation"
+}

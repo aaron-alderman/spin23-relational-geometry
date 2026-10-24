@@ -1,0 +1,25 @@
+{
+  "schema": "five-channel-microwave-drift-frontier/1",
+  "date": "2026-10-25",
+  "status": "post-calibration drift envelope closed; static measured-mixer gate open",
+  "conservativeEnvelope": {
+    "couplerAngleDegrees": 0.15,
+    "phaseStateDegrees": 0.3,
+    "amplitudeStateDb": 0.03,
+    "trials": 1000,
+    "medianShapeError": 0.010409968979481555,
+    "p95ShapeError": 0.012068308936173814,
+    "maximumShapeError": 0.014820604881991887,
+    "allowance": 0.015
+  },
+  "dynamicRange": {
+    "phasePathLossDb": 36,
+    "weakestCrossRelativeDb": 10.237667219577487,
+    "requiredLeakageClearanceDb": 20,
+    "formula": "66.23766721957749 dB + measured ancillary loss",
+    "designTargetDb": 85,
+    "maximumAncillaryLossAtDesignTargetDb": 18.76233278042251
+  },
+  "boundary": "the envelope governs drift after calibration; full-wave or measured F(f) is still required for static compilation"
+}
+

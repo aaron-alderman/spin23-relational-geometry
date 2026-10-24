@@ -1,0 +1,49 @@
+{
+  "schema": "five-channel-microwave-carrier/1",
+  "date": "2026-10-25",
+  "status": "selected as first physical emulator; source-native parity remains open",
+  "platform": {
+    "signalChannels": 5,
+    "sectorSplit": [2, 3],
+    "referenceChannels": 1,
+    "implementation": "programmable reciprocal room-temperature microwave interferometer",
+    "measurement": "full complex bidirectional S-parameter tomography"
+  },
+  "selector": {
+    "orderTwo": {
+      "aggregateTrace": -3,
+      "aggregateDeterminant": 1,
+      "order": 2,
+      "twoSector": "-I2",
+      "threeSector": "negative transposition (12)"
+    },
+    "orderThree": {
+      "aggregateTrace": -1,
+      "aggregateDeterminant": 1,
+      "order": 3,
+      "twoSector": "120-degree rotation",
+      "threeSector": "cyclic permutation"
+    }
+  },
+  "channel": {
+    "E": [[0.6, 0.38461538461538464], [0.8, 0], [0, 0.9230769230769231]],
+    "unscaledSingularValuesSquared": [1.2307692307692308, 0.7692307692307693],
+    "passiveScale": 0.8,
+    "scaledSingularValuesSquared": [0.7876923076923077, 0.49230769230769234],
+    "completion": "symmetric orthogonal Julia dilation",
+    "nativeBranch": "+transpose"
+  },
+  "decisionOrder": [
+    "phase and cable metrology",
+    "order-two sector fingerprints",
+    "order-three sector fingerprints and held-out words",
+    "scaled channel and full reciprocal dilation",
+    "adversarial phase, cable, attenuation and blinding controls"
+  ],
+  "interpretationBoundary": {
+    "successfulRunShows": "physical emulator of the repaired two-plus-three representation and reciprocal response grammar",
+    "successfulRunDoesNotShow": "source-native Spin(2,3), a fundamental selector, or new physics",
+    "nextSourceNativeInput": "independently known endpoint Onsager parities"
+  }
+}
+

@@ -1,0 +1,84 @@
+{
+  "schema": "post-q-five-option-programme/1",
+  "date": "2026-10-25",
+  "status": "complete at algebraic, effective-action and emulator levels; physical endpoint realization remains open",
+  "options": [
+    {
+      "option": 1,
+      "name": "common-carrier intertwiner",
+      "result": "naive authored endpoint action fails; a parity-twisted repair admits invertible block intertwiners",
+      "exactData": {
+        "naiveTwoHomDimension": 0,
+        "naiveThreeHomDimension": 1,
+        "naiveThreeMaxRank": 2,
+        "repairedTwoHomDimension": 2,
+        "repairedThreeHomDimension": 2
+      },
+      "remainingInput": "physical derivation of central parity on the two-sector and sign parity on the three-sector singlet"
+    },
+    {
+      "option": 2,
+      "name": "TKK bridge",
+      "result": "the two three-dimensional TKK wings project with combined rank six onto the full rectangular cross module",
+      "exactData": {
+        "translationCrossRank": 3,
+        "specialConformalCrossRank": 3,
+        "combinedCrossRank": 6,
+        "targetDimension": 6
+      },
+      "remainingInput": "identify the measured channel normalization and endpoint basis with the transported TKK basis"
+    },
+    {
+      "option": 3,
+      "name": "reverse-channel phase",
+      "result": "causality, stability, passivity and stationary covariance do not universally select the sign",
+      "exactData": {
+        "sameTimeReversalParity": "+E^T and the noncompact branch",
+        "oppositeTimeReversalParity": "-E^T and the compact branch",
+        "checkpointSigmaMax": 1.1094003924504583
+      },
+      "remainingInput": "independently measured endpoint time-reversal parities or a typed coherent/Wick structure"
+    },
+    {
+      "option": 4,
+      "name": "selector-covariant order-parameter potential",
+      "result": "a quartic Gram-spurion potential selects the measured Gram matrix and singular values",
+      "exactData": {
+        "gram": [[1, 0.23076923076923078], [0.23076923076923078, 1]],
+        "singularValuesSquared": [1.2307692307692308, 0.7692307692307693],
+        "vacuumManifold": "V_2(R^3) isomorphic to SO(3)"
+      },
+      "remainingInput": "a target frame or cross spurion to select the full matrix rather than its Gram orbit"
+    },
+    {
+      "option": 5,
+      "name": "calibration emulator",
+      "result": "both reciprocity branches are perfectly classified in the frozen noise benchmark",
+      "exactData": {
+        "trialsPerBranch": 500,
+        "entryNoiseSigma": 0.02,
+        "shotsPerEntry": 32,
+        "plusAccuracy": 1,
+        "minusAccuracy": 1,
+        "maxFingerprintError": 0.012501553038754186
+      },
+      "remainingInput": "physical two-input/three-output ports and implementable selector pulses"
+    }
+  ],
+  "combinedVerdict": {
+    "algebraicCrossDirectionsMissing": false,
+    "naiveAuthoredIdentificationWorks": false,
+    "minimalRepairKnown": true,
+    "genericPhysicalPrinciplesChooseRealForm": false,
+    "measurableDiscriminatorExists": true,
+    "nextAuthority": "derive or calibrate endpoint parity and the parity-twisted common response quotient"
+  },
+  "certificates": [
+    "verification/verify/verify_common_carrier_intertwiner_options.mjs",
+    "verification/verify/verify_tkk_wings_cover_rectangular_cross_module.mjs",
+    "verification/verify/verify_reverse_phase_physical_principles.mjs",
+    "verification/verify/verify_selector_covariant_channel_potential.mjs",
+    "verification/verify/verify_two_by_three_selector_calibration_emulator.mjs",
+    "verification/verify/verify_post_q_five_option_programme.mjs"
+  ]
+}
