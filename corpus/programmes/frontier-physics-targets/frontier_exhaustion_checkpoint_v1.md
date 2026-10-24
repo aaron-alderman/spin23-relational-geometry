@@ -11,7 +11,7 @@ The corpus has a closed navigation loop from target to frontier area to detector
 - all 22 canonical physics targets and all 20 frontier areas;
 - 35 detector bundles, including records, controls, maturity and source provenance;
 - all 57 admissibility packets, including AZ-041--AZ-057 beyond the older zone register;
-- all 85 Wave 6--7 packet files in the latest reconciled audit (17 Wave 6 and 68 Wave 7), with reused display numbers held under distinct audit identities; newly concurrent Waves 7.66--7.70 await one joined audit refresh;
+- all 90 Wave 6--7 packet files in the reconciled audit (17 Wave 6 and 73 Wave 7), with reused display numbers held under distinct audit identities;
 - every remaining programme Markdown or JSON file containing the declared open-gate vocabulary: 69 files, of which 48 map to physics topics and 21 retain separate programme governance;
 - the complete source corpus-and-evidence backstop: all 2,643 in-scope Markdown/JSON artifacts hashed and inventoried (2,188 corpus narratives and 455 evidence artifacts, excluding the independently verified generated control surfaces); 1,580 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 89 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
 - 49 independently closable topics: 9 active, 17 open, 3 audit, 13 gated, 2 blocked and 5 closed with retained evidence.

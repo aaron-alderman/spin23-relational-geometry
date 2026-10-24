@@ -65,7 +65,7 @@ An open topic stays on this list until one of four things happens:
 | OT-027 | Physical operator and dynamics functor | action generating operators, amplitudes and detector map |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
 | OT-034 | Global nonlinear detector injectivity | finite intervention theorem or explicit residual quotient |
-| OT-038 | Source-bearing A2 commuting square | identify the existing cyclic bifundamental candidate's two port spaces with the captured two- and three-carriers, then derive the physical selector of its occupied orbit point |
+| OT-038 | Source-bearing A2 commuting square | calibrate one common-carrier intertwiner from the selector primitive-form split to the rectangular ports, treat the nonzero channel as covariant symmetry breaking, and select the noncompact reverse-channel phase |
 | OT-039 | Microscopic wall-pseudoscalar coefficient | source-derived coupling with sign, magnitude and radiative stability |
 | OT-040 | Matter-plus-field Coulomb energy current | gauge- and limit-consistent total energy continuity |
 | OT-042 | Typed triality-Furey reflection | full module, charge and orientation intertwiner |

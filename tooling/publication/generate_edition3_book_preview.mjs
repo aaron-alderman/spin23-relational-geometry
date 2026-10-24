@@ -478,6 +478,13 @@ admissibilitySections.splice(orientedSeamIndex + 5, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 6, 0, [
+  "Hot off the press — the missing form was already latent",
+  [
+    "**Provisional integration note — 25 October 2026.** The signature-(2,3) form used by the rectangular Spin(2,3) closure can now be derived, up to scale, from selector data that predates that closure: a symplectic form and its uniquely compatible positive metric define a complex structure, whose action on primitive two-forms splits five real directions into two and three with opposite wedge-pairing signs. This is a real anti-retrofit advance, but it does not identify those abstract sectors with physical ports. The native positive adjoint still admits two completions: one closes to compact SO(5), the other to noncompact SO(2,3). Worse, the unbroken selector has no invariant map from its two-sector to its three-sector. The remaining experiment and theory target is therefore one independently calibrated common-carrier map that reproduces a selector operation at the ports, treats the observed cross-channel as symmetry breaking, and fixes the noncompact reverse-channel phase.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -579,6 +586,10 @@ chapterSources["08-admissibility-frontier"].splice(-2, 0,
   "corpus/programmes/frontier/wave-7/frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_64_grassmannian_spin23_channel_terminal_synthesis.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+  "corpus/programmes/frontier/wave-7/frontier_wave7_66_selector_induced_signature23_form.md",
+  "corpus/programmes/frontier/wave-7/frontier_wave7_67_q_transport_and_reverse_channel_fork.md",
+  "corpus/programmes/frontier/wave-7/frontier_wave7_68_selector_split_fingerprint_and_channel_breaking_gate.md",
+  "corpus/programmes/frontier/wave-7/frontier_wave7_69_q_provenance_terminal_synthesis.md",
   "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
 );
 
