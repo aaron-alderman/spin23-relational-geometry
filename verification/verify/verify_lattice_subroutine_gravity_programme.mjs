@@ -25,6 +25,7 @@ const requiredFiles = [
   "pfaffian-line-type-audit.md",
   "period-matrix-jordan-boundary-gate.md",
   "sewing-response-codimension-gate.md",
+  "two-quadrature-seam-experiment.md",
   "literature-review.md",
   "next-steps.md",
   "mece-ledger-v1.json"
@@ -53,6 +54,8 @@ const requiredEvidence = [
   ,"verification/verify/verify_lattice_subroutine_period_matrix_jordan_boundary_gate.mjs"
   ,"evidence/data/lattice-subroutine-sewing-response-codimension-gate-v1.json"
   ,"verification/verify/verify_lattice_subroutine_sewing_response_codimension_gate.mjs"
+  ,"evidence/data/lattice-subroutine-two-quadrature-seam-experiment-v1.json"
+  ,"verification/verify/verify_lattice_subroutine_two_quadrature_seam_experiment.mjs"
 ];
 
 for (const file of requiredFiles) {

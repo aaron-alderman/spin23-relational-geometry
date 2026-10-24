@@ -131,6 +131,8 @@ Implement a sign-reversed double and affine boundary twist in a topological, aco
 - **decision:** distinguish a true orientation-sensitive response from relabelling;
 - **payoff:** tests whether the extra seam data has operational residue.
 
+The [fully specified first implementation](two-quadrature-seam-experiment.md) uses a complex programmable resonator coupling and IQ/homodyne detection. Its preregistered discriminator is linear odd interference versus quadratic even power under coupling-phase reversal.
+
 None of these experiments tests quantum gravity directly. They determine whether the proposed interface can exist as controlled physics before it is asked to carry gravity.
 
 ## Open-topic register

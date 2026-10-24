@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "A two-mode network with programmable complex coupling and coherent IQ readout can operationally distinguish the orientation-odd seam amplitude from its orientation-blind power square.",
+  "platform": {
+    "preferred": "two parametrically coupled microwave resonators with IQ or vector-network-analyser readout",
+    "alternatives": ["programmable photonic interferometer with balanced homodyne", "two-mode acoustic network with dual-phase lock-in"],
+    "control": "epsilon=gx+i*gy; seam reversal is a pi pump-phase shift"
+  },
+  "observables": {
+    "odd": "Dodd=(Xtheta(+epsilon)-Xtheta(-epsilon))/2, predicted linear in |epsilon|",
+    "even": "Peven=|Aseam|^2, predicted quadratic in |epsilon| and invariant under reversal"
+  },
+  "mandatoryControls": [
+    "reference off",
+    "phase-scrambled averaging",
+    "coupling disabled",
+    "gx-only and gy-only",
+    "held-out calibration",
+    "second readout phase"
+  ],
+  "decisionRules": [
+    "Dodd reverses sign and follows the programmed phase.",
+    "Dodd vanishes without coherent reference.",
+    "Peven is unchanged by reversal.",
+    "Small-amplitude exponents are one for Dodd and two for Peven within uncertainty."
+  ],
+  "interpretation": "Success establishes an operational seam carrier predicted by conventional coherent coupled-mode physics. It is not evidence for a Monster/Leech coupling or four-dimensional gravity without a no-refit source-derived parameter map.",
+  "sources": [
+    "https://arxiv.org/abs/1207.3408",
+    "https://arxiv.org/abs/2012.05673",
+    "https://arxiv.org/abs/1007.5203"
+  ]
+}
