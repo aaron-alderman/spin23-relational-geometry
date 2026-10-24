@@ -3,7 +3,7 @@
 - `audit/` checks Markdown links and regenerates the canonical manifest;
 - `publication/` builds reader-facing editions and deployable HTML;
 - `migration/` records the one-time reproducible transition from the original flat corpus layout;
-- `indexing/` regenerates claim-range and certificate-operation indexes, plus the executable [corpus front door](../corpus/FRONT_DOOR.md), its capability-specific minimum closures and the drill-down-preserving [corpus evidence spine](../corpus/EVIDENCE_SPINE.md).
+- `indexing/` regenerates claim-range and certificate-operation indexes, plus the executable [corpus front door](../corpus/FRONT_DOOR.md), its capability-specific minimum closures and the drill-down-preserving [corpus evidence spine](../corpus/EVIDENCE_SPINE.md). Use `node tooling/indexing/refresh_corpus_entry_surfaces.mjs --write` after corpus changes: it refreshes the canonical manifest once, then iterates the mutually observing evidence/front-door surfaces until both check cleanly. Omit `--write` for a read-only freshness check.
 - `search/` provides hybrid corpus retrieval: weighted lexical matching seeds personalized PageRank over actual Markdown links, while selector sweeps expose results that depend strongly on the navigation prior.
 
 Search from the repository root:
