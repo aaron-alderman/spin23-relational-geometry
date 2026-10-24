@@ -87,6 +87,23 @@ The practical implication is a no-go and a new target. The minimal SSH or Jackiw
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight-claim-3.md)
 
+<a id="hot-off-the-press-a-defect-can-carry-a-second-label"></a>
+## Hot off the press — a defect can carry a second label
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+**Provisional integration note — 25 October 2026.** The beyond-index question closes only after an independent crystalline datum is added. Two reflection-symmetric wall carriers can have the same spectrum, one zero mode and the same signed chiral index while their defect orbitals have opposite mirror parity relative to a calibrated reference.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-1.md)
+
+Coherent mirror-even and mirror-odd ports distinguish the two branches exactly throughout six symmetry-preserving wall deformations. Deliberately changing one bond without its reflected partner keeps the zero mode and index but opens the forbidden port. The extra label is therefore protected by reflection and read through a selection rule, rather than inferred from localization or a raw wavefunction phase.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-2.md)
+
+This is a constructive but kenotic closure. The chiral topology did not generate the mirror label; the carrier supplied an orbital representation and the apparatus supplied a reference. The immediate engineering target is an isospectral pair of domain-wall channels with opposite calibrated parity. Material realization is open, and a residual beyond fabrication covariance would first indicate missing couplings rather than new physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 
@@ -930,6 +947,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md](../../../corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md)
 - [admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md)
 - [admissibility_105_fixed_index_defect_information_no_go.md](../../../corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md)
+- [admissibility_106_reflection_resolved_defect_transport.md](../../../corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md)
 
 ---
 
