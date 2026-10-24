@@ -42,4 +42,4 @@ Show that the named input is inconsistent, insufficient, unavailable, or fails t
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-high-energy-window-survives-running) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-high-energy-window-survives-running-claim-2.md) · [Next claim →](08-admissibility-frontier-kenotic-confidence-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-high-energy-window-survives-running) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-high-energy-window-survives-running-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-1.md)

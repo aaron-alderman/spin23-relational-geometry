@@ -521,6 +521,25 @@ This remains a diagnostic, not a precision Standard-Model prediction. Broken-pha
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-high-energy-window-survives-running-claim-3.md)
 
+<a id="hot-off-the-press-the-detector-has-two-different-jobs"></a>
+## Hot off the press — the detector has two different jobs
+
+> **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** Certifying a useful one-percent reduced response and detecting the predicted per-mille second mode are different experiments. Across the sampled high-energy window, a three-sigma one-percent certificate permits about 0.279 percent combined one-sigma error. A three-sigma detection of the second mode requires less than 438 parts per million; equal theory and detector budgets receive about 310 parts per million each.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-1.md)
+
+Orientation is part of the measurement. A few degrees of analyser error can leak as much leading response as the entire second mode, and keeping that leakage below ten percent requires roughly seven-tenths of a degree alignment. A scalar sensitivity number is therefore not an adequate detector description; the apparatus must reconstruct the response direction and its covariance.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-2.md)
+
+There is a second, independent information gate. Rates on the up, bottom and weak-anomaly amplitudes leave two relative-sign choices after a global convention. One interference term fixes only one. Testing the signed relation therefore requires two coherent phase links that connect all three amplitudes. The ideal contrasts are large; the open task is to find source-matched common processes and carry their electroweak and detector covariance without fitting the answer afterward.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 

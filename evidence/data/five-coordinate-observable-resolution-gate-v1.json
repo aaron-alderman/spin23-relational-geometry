@@ -1,0 +1,196 @@
+{
+  "protocol": "five-coordinate-observable-resolution-gate/1",
+  "date": "2026-10-25",
+  "targets": [
+    "OT-047",
+    "OT-048"
+  ],
+  "parent": "AZ-070",
+  "sourceWindow": {
+    "protocol": "five-coordinate-running-window/1",
+    "ratios": [
+      {
+        "muGeV": 400,
+        "secondToFirst": 0.0013152328730219722
+      },
+      {
+        "muGeV": 1000,
+        "secondToFirst": 0.0013788453023519042
+      },
+      {
+        "muGeV": 3000,
+        "secondToFirst": 0.0014490029844131647
+      },
+      {
+        "muGeV": 10000,
+        "secondToFirst": 0.0015191383862507104
+      },
+      {
+        "muGeV": 100000,
+        "secondToFirst": 0.0016366942713023594
+      }
+    ],
+    "minimumRatio": 0.0013152328730219722,
+    "maximumRatio": 0.0016366942713023594
+  },
+  "significanceTargets": [
+    {
+      "sigma": 1,
+      "maximumCombinedRelativeOneSigmaForDetectionAcrossWindow": 0.0013152328730219722,
+      "maximumCombinedPpmForDetectionAcrossWindow": 1315.2328730219722,
+      "equalTheoryAndDetectorBudgetPpmEach": 930.0100833533019
+    },
+    {
+      "sigma": 3,
+      "maximumCombinedRelativeOneSigmaForDetectionAcrossWindow": 0.0004384109576739907,
+      "maximumCombinedPpmForDetectionAcrossWindow": 438.4109576739907,
+      "equalTheoryAndDetectorBudgetPpmEach": 310.00336111776727
+    },
+    {
+      "sigma": 5,
+      "maximumCombinedRelativeOneSigmaForDetectionAcrossWindow": 0.0002630465746043944,
+      "maximumCombinedPpmForDetectionAcrossWindow": 263.04657460439444,
+      "equalTheoryAndDetectorBudgetPpmEach": 186.00201667066037
+    }
+  ],
+  "rankOneCertification": {
+    "tolerance": 0.01,
+    "maximumCombinedRelativeOneSigmaForThreeSigmaCertificationAcrossWindow": 0.002787768576232547,
+    "maximumCombinedPpm": 2787.768576232547
+  },
+  "modeAlignment": {
+    "model": "leading-mode leakage into a nominal second-mode power measurement obeys leakage/second=tan(theta)^2/(lambda_2/lambda_1)",
+    "leakageAngles": [
+      {
+        "maximumLeakageRelativeToSecondMode": 1,
+        "angleRangeDegrees": [
+          2.0769864771397035,
+          2.3166991838961026
+        ]
+      },
+      {
+        "maximumLeakageRelativeToSecondMode": 0.1,
+        "angleRangeDegrees": [
+          0.6570598362427225,
+          0.732964130223494
+        ]
+      },
+      {
+        "maximumLeakageRelativeToSecondMode": 0.3333333333333333,
+        "angleRangeDegrees": [
+          1.1994989666772782,
+          1.3380330051942029
+        ]
+      }
+    ]
+  },
+  "interferenceGate": {
+    "amplitudes": [
+      "v_u",
+      "v_d",
+      "a_2"
+    ],
+    "independentRelativeSignsAfterGlobalConvention": 2,
+    "singleEdgeRanks": [
+      {
+        "edge": [
+          "v_u",
+          "v_d"
+        ],
+        "rank": 1
+      },
+      {
+        "edge": [
+          "v_u",
+          "a_2"
+        ],
+        "rank": 1
+      },
+      {
+        "edge": [
+          "v_d",
+          "a_2"
+        ],
+        "rank": 1
+      }
+    ],
+    "spanningTrees": [
+      [
+        [
+          "v_u",
+          "v_d"
+        ],
+        [
+          "v_u",
+          "a_2"
+        ]
+      ],
+      [
+        [
+          "v_u",
+          "v_d"
+        ],
+        [
+          "v_d",
+          "a_2"
+        ]
+      ],
+      [
+        [
+          "v_u",
+          "a_2"
+        ],
+        [
+          "v_d",
+          "a_2"
+        ]
+      ]
+    ],
+    "edgeContrastsAtDeduplicatedIncidencePoint": [
+      {
+        "left": "v_u",
+        "right": "v_d",
+        "normalizedSignedContrast": 0.8823529411764706
+      },
+      {
+        "left": "v_u",
+        "right": "a_2",
+        "normalizedSignedContrast": 0.898876404494382
+      },
+      {
+        "left": "v_d",
+        "right": "a_2",
+        "normalizedSignedContrast": 0.6575342465753424
+      }
+    ],
+    "conclusion": "Rates leave two independent relative sign bits. One interference edge fixes only one. A connected two-edge spanning tree is the minimum independent phase record for the signed relation a_2=v_u+v_d."
+  },
+  "idealizedOnePercentAmplitudeDesigns": {
+    "directRows": {
+      "rows": [
+        "T",
+        "B",
+        "L",
+        "W"
+      ],
+      "incidenceResidualOneSigma": 0.1979898987322333
+    },
+    "sourceMatchedRows": {
+      "rows": [
+        "T",
+        "B",
+        "L",
+        "P"
+      ],
+      "photonMatchingAmplitudeAtPoint": 336,
+      "incidenceResidualOneSigma": 0.2542090128658349
+    },
+    "firewall": "Independent Gaussian amplitude errors are assumed. Real process maps, theory errors and shared detector covariance can only be supplied by a source-native likelihood."
+  },
+  "conclusions": {
+    "secondModeDetection": "A one-per-mille total uncertainty is insufficient for a three-sigma detection throughout the running window; the combined one-sigma floor must be below about 440 ppm.",
+    "percentRankOneCertification": "The weaker statement that the response is below one-percent operational rank needs a combined one-sigma budget below about 0.279 percent for a three-sigma window-wide certificate.",
+    "signedRelation": "Rates leave two independent relative sign bits. One interference edge fixes only one. A connected two-edge spanning tree is the minimum independent phase record for the signed relation a_2=v_u+v_d.",
+    "physicalFirewall": "This packet designs the information and precision boundary. It does not identify a real process that realizes the external source rows or supply electroweak matching."
+  }
+}

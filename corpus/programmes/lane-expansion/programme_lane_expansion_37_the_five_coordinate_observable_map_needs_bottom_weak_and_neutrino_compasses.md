@@ -5,6 +5,8 @@
 **Status:** exact linear identifiability result with experimentally typed proxy rows; full likelihood and detector covariances remain open  
 **Certificate:** [verify_programme_five_coordinate_observable_map.mjs](../../../verification/verify/verify_programme_five_coordinate_observable_map.mjs)
 
+**Continuation:** [AZ-071](../admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md) quantifies the resolution/alignment budgets and sharpens the signed-readout requirement: one interference edge rejects one specified sign flip, while two connected phase links are required to reconstruct the three-amplitude signed relation independently.
+
 ## Result in ordinary language
 
 Result 35 reduced the current problem to five physical coordinates:

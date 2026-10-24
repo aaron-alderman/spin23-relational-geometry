@@ -279,6 +279,7 @@ const sectionTaxonomy = {
   "Hot off the press — the microscopic source quotient has five coordinates": "obstruction",
   "Hot off the press — the two-current window has a resolution ceiling": "conditional",
   "Hot off the press — the high-energy window survives running": "conditional",
+  "Hot off the press — the detector has two different jobs": "experiment",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -364,6 +365,7 @@ const sectionArchetype = {
   "Hot off the press — the microscopic source quotient has five coordinates": "auditor",
   "Hot off the press — the two-current window has a resolution ceiling": "integrator",
   "Hot off the press — the high-energy window survives running": "builder",
+  "Hot off the press — the detector has two different jobs": "builder",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -666,6 +668,15 @@ admissibilitySections.splice(orientedSeamIndex + 23, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 24, 0, [
+  "Hot off the press — the detector has two different jobs",
+  [
+    "**Provisional integration note — 25 October 2026.** Certifying a useful one-percent reduced response and detecting the predicted per-mille second mode are different experiments. Across the sampled high-energy window, a three-sigma one-percent certificate permits about 0.279 percent combined one-sigma error. A three-sigma detection of the second mode requires less than 438 parts per million; equal theory and detector budgets receive about 310 parts per million each.",
+    "Orientation is part of the measurement. A few degrees of analyser error can leak as much leading response as the entire second mode, and keeping that leakage below ten percent requires roughly seven-tenths of a degree alignment. A scalar sensitivity number is therefore not an adequate detector description; the apparatus must reconstruct the response direction and its covariance.",
+    "There is a second, independent information gate. Rates on the up, bottom and weak-anomaly amplitudes leave two relative-sign choices after a global convention. One interference term fixes only one. Testing the signed relation therefore requires two coherent phase links that connect all three amplitudes. The ideal contrasts are large; the open task is to find source-matched common processes and carry their electroweak and detector covariance without fitting the answer afterward.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -915,6 +926,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the microscopic source quotient has five coordinates": ["corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md", "corpus/programmes/lane-expansion/programme_lane_expansion_33_the_action_derived_two_current_block_removes_bl_shear_but_not_the_incidence_normalisation_fork.md", "corpus/programmes/lane-expansion/programme_lane_expansion_35_the_gauge_typed_source_quotient_has_one_anomaly_coordinate_and_no_incidence_eigenray.md"],
   "Hot off the press — the two-current window has a resolution ceiling": ["corpus/programmes/admissibility/admissibility_69_threshold_spectrum_and_resolution_ceiling.md", "corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md", "corpus/programmes/lane-expansion/programme_lane_expansion_20_the_broken_current_anchor_is_a_threshold_staircase_not_a_universal_axis.md"],
   "Hot off the press — the high-energy window survives running": ["corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md", "corpus/programmes/admissibility/admissibility_69_threshold_spectrum_and_resolution_ceiling.md", "corpus/programmes/lane-expansion/programme_lane_expansion_19_absorptive_yukawa_spectroscopy_supplies_a_physical_broken_current_anchor.md"],
+  "Hot off the press — the detector has two different jobs": ["corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md", "corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md", "corpus/programmes/lane-expansion/programme_lane_expansion_37_the_five_coordinate_observable_map_needs_bottom_weak_and_neutrino_compasses.md"],
 };
 
 const evidenceReading = key => ({

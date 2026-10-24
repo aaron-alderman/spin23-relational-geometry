@@ -1,0 +1,25 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+
+const data = JSON.parse(await readFile(new URL("../../evidence/data/five-coordinate-observable-resolution-gate-v1.json", import.meta.url)));
+assert.equal(data.protocol, "five-coordinate-observable-resolution-gate/1");
+assert.deepEqual(data.targets, ["OT-047", "OT-048"]);
+assert.equal(data.sourceWindow.ratios.length, 5);
+assert(data.sourceWindow.minimumRatio > 0.0013);
+assert(data.sourceWindow.maximumRatio < 0.0017);
+const threeSigma = data.significanceTargets.find(row => row.sigma === 3);
+assert(threeSigma.maximumCombinedPpmForDetectionAcrossWindow > 438);
+assert(threeSigma.maximumCombinedPpmForDetectionAcrossWindow < 439);
+assert(data.rankOneCertification.maximumCombinedPpm > 2787);
+assert(data.rankOneCertification.maximumCombinedPpm < 2788);
+assert.equal(data.interferenceGate.singleEdgeRanks.every(row => row.rank === 1), true);
+assert.equal(data.interferenceGate.spanningTrees.length, 3);
+assert.equal(data.interferenceGate.spanningTrees.every(tree => tree.length === 2), true);
+assert(data.modeAlignment.leakageAngles.find(row => row.maximumLeakageRelativeToSecondMode === 0.1).angleRangeDegrees[1] < 0.74);
+assert(data.idealizedOnePercentAmplitudeDesigns.directRows.incidenceResidualOneSigma < 0.2);
+assert(data.idealizedOnePercentAmplitudeDesigns.sourceMatchedRows.incidenceResidualOneSigma < 0.26);
+assert.match(data.conclusions.physicalFirewall, /does not identify a real process/i);
+console.log("PASS five-coordinate observable resolution gate");
+console.log(`three_sigma_detection_ppm=${threeSigma.maximumCombinedPpmForDetectionAcrossWindow}`);
+console.log(`three_sigma_rank_one_certificate_ppm=${data.rankOneCertification.maximumCombinedPpm}`);
+console.log(`minimum_interference_edges=${data.interferenceGate.spanningTrees[0].length}`);

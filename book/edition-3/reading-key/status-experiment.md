@@ -15,6 +15,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [The admissibility frontier · Hot off the press — the four-mode bench is ready to build](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-four-mode-bench-is-ready-to-build)
 - [The admissibility frontier · Hot off the press — the selector chip has a design wedge](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-selector-chip-has-a-design-wedge)
 - [The admissibility frontier · Hot off the press — make the proposed cause move](../chapters/08-admissibility-frontier.md#hot-off-the-press-make-the-proposed-cause-move)
+- [The admissibility frontier · Hot off the press — the detector has two different jobs](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-detector-has-two-different-jobs)
 - [E3-F19 · A calibrated pole-and-band experiment can be specified](../chapters/08-result-ledger.md#E3-F19)
 - [Claim · The admissibility frontier · The finesse technology pathway (1)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md)
 - [Claim · The admissibility frontier · The finesse technology pathway (2)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)
@@ -30,6 +31,9 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Hot off the press — make the proposed cause move (1)](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — make the proposed cause move (2)](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — make the proposed cause move (3)](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — the detector has two different jobs (1)](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — the detector has two different jobs (2)](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — the detector has two different jobs (3)](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-3.md)
 
 ---
 
