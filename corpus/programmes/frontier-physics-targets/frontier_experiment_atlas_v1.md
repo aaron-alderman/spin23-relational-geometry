@@ -254,7 +254,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 
 **Platform.** Silicon-nitride, microwave or femtosecond-written modes implementing a closed three-mode coupling loop with programmable edge phases, a dark subspace and calibrated directional ports.
 
-**Hypothesis.** The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy. Independently, the gauge-invariant edge-phase sum survives phase redistribution: resonance poles identify opposite loop orientations, while directional complex transfer distinguishes them.
+**Hypothesis.** The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy. Independently, the gauge-invariant edge-phase sum survives phase redistribution: resonance poles identify opposite loop orientations, while directional complex transfer distinguishes them. A central \(-I_2\) return is tested separately: it is reversal-even, so it must be identified by coherent endpoint-frame comparison and one-loop/two-loop traversal parity.
 
 **Interventions**
 
@@ -263,6 +263,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Sweep wavelength and deliberately add calibrated splitting and loss
 - Redistribute phase among the three edges while holding the loop sum fixed
 - Reverse the loop phase with edge magnitudes and detunings fixed
+- Execute one and two identical traversals with the same independently calibrated endpoint reference
 
 **Recorded observables**
 
@@ -272,6 +273,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Forward and reverse complex transfer across the full resonance band
 - Flux-reversal-odd directional statistic
 - Leakage and insertion loss
+- Endpoint frame-overlap matrix \(H=A_{\rm final}A_{\rm initial}^T\), its centrality residual and \(\operatorname{sign}(\operatorname{tr}H/2)\)
 
 **Controls**
 
@@ -281,10 +283,11 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Differential-loss mimic
 - Open-loop control showing that an isolated edge phase is basis-removable
 - Direct-feedthrough injection followed by frozen complex background subtraction
+- Endpoint-reference recalibration without selected-state data and a static sign-flip/cable-order mimic
 
-**Analysis.** Blindly compare geometric, static-splitting, reciprocal-network and loss models using held-out wavelengths and reversal data. Require fixed-flux phase redistributions to agree before interpreting the flux-reversal-odd directional record.
+**Analysis.** Blindly compare geometric, static-splitting, reciprocal-network and loss models using held-out wavelengths and reversal data. Require fixed-flux phase redistributions to agree before interpreting the flux-reversal-odd directional record. Analyze the central-return channel separately: require projector closure, \(H\) inside a predeclared centrality band around \(-I_2\) after one traversal and \(+I_2\) after two, and stability under endpoint-reference recalibration.
 
-**Decisive positive result.** Projector closure and reversed noncommuting transport survive independent loss calibration; phase redistributions at fixed loop sum agree, opposite loop phases are isospectral and the held-out directional statistic changes sign with its predicted magnitude.
+**Decisive positive result.** Projector closure and reversed noncommuting transport survive independent loss calibration; phase redistributions at fixed loop sum agree, opposite loop phases are isospectral and the held-out directional statistic changes sign with its predicted magnitude. If the binary central channel is claimed, the one-loop \(-I_2\) and two-loop \(+I_2\) endpoint returns must also pass their independent centrality and reference controls.
 
 **Useful null result.** A static, reciprocal or non-Hermitian nuisance model predicts every record, improving coherent-network calibration while closing the claimed discriminator at the achieved sensitivity.
 

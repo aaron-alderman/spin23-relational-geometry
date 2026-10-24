@@ -22,7 +22,7 @@ An open topic stays on this list until one of four things happens:
 
 | ID | Topic | Next decisive action |
 |---|---|---|
-| OT-002 | Three-mode projector-holonomy Hamiltonian | freeze the physical matrix and calculate forward/reverse projector and process transport |
+| OT-002 | Three-mode projector-holonomy Hamiltonian | freeze one physical matrix; calculate forward/reverse transport and coherent one-loop/two-loop endpoint return |
 | OT-003 | Independent selector datum (Y) | add one separately calibrated boundary or anisotropy and predict the return map |
 | OT-004 | Conditioned versus unconditional selector | reconstruct the full instrument without discarding outcomes |
 | OT-005 | Selector thermodynamic ledger | compare three selector classes at matched contraction |

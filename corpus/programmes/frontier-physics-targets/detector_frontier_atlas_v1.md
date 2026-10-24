@@ -55,7 +55,7 @@ These detectors map FA-01 through FA-03. They are exact within the pinned comput
 ### Geometry, holonomy and selection detectors
 
 - **DET-004 — projector and mode tomography:** reconstructs (P), (Y) and (operatorname{Tr}(PY)).
-- **DET-005 — coherent transfer and holonomy interferometry:** reconstructs complex transfer, loop-order commutator and forward/reverse lifted phase.
+- **DET-005 — coherent transfer and holonomy interferometry:** reconstructs complex transfer, loop-order commutator, forward/reverse lifted phase and the coherently referenced endpoint-frame matrix. A central sign uses one-loop/two-loop parity because it is reversal-even.
 - **DET-006 — complex spectral and biorthogonal tomography:** records complex eigenvalues, left/right modes and singular values.
 - **DET-007 — three-record selector bundle:** records even response, odd response and branch populations on the same runs.
 - **DET-008 — return-map identification:** estimates fixed points, basins and tangent spectral radius.

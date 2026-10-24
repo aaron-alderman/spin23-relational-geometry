@@ -261,13 +261,14 @@
       "readiness": "ready_after_design",
       "estimate": "9–18 months including foundry cycle",
       "platform": "Silicon-nitride, microwave or femtosecond-written modes implementing a closed three-mode coupling loop with programmable edge phases, a dark subspace and calibrated directional ports.",
-      "hypothesis": "The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy. Independently, the gauge-invariant edge-phase sum survives phase redistribution: resonance poles identify opposite loop orientations, while directional complex transfer distinguishes them.",
+      "hypothesis": "The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy. Independently, the gauge-invariant edge-phase sum survives phase redistribution: resonance poles identify opposite loop orientations, while directional complex transfer distinguishes them. A central -I2 return is tested separately: it is reversal-even, so it must be identified by coherent endpoint-frame comparison and one-loop/two-loop traversal parity.",
       "intervention": [
         "Fabricate forward, reverse and path-order-swapped coupling profiles",
         "Inject a tomographically complete input set",
         "Sweep wavelength and deliberately add calibrated splitting and loss",
         "Redistribute phase among the three edges while holding the loop sum fixed",
-        "Reverse the loop phase with edge magnitudes and detunings fixed"
+        "Reverse the loop phase with edge magnitudes and detunings fixed",
+        "Execute one and two identical traversals with the same independently calibrated endpoint reference"
       ],
       "record": [
         "Full complex 3×3 transfer matrix",
@@ -275,7 +276,8 @@
         "Process singular values",
         "Forward and reverse complex transfer across the full resonance band",
         "Flux-reversal-odd directional statistic",
-        "Leakage and insertion loss"
+        "Leakage and insertion loss",
+        "Endpoint frame-overlap matrix H=A_final A_initial^T, its centrality residual and sign(tr(H)/2)"
       ],
       "controls": [
         "Zero-area loop",
@@ -283,10 +285,11 @@
         "Static splitter",
         "Differential-loss mimic",
         "Open-loop control showing that an isolated edge phase is basis-removable",
-        "Direct-feedthrough injection followed by frozen complex background subtraction"
+        "Direct-feedthrough injection followed by frozen complex background subtraction",
+        "Endpoint-reference recalibration without selected-state data and a static sign-flip/cable-order mimic"
       ],
-      "analysis": "Blindly compare geometric, static-splitting, reciprocal-network and loss models using held-out wavelengths and reversal data. Require fixed-flux phase redistributions to agree before interpreting the flux-reversal-odd directional record.",
-      "success": "Projector closure and reversed noncommuting transport survive independent loss calibration; phase redistributions at fixed loop sum agree, opposite loop phases are isospectral and the held-out directional statistic changes sign with its predicted magnitude.",
+      "analysis": "Blindly compare geometric, static-splitting, reciprocal-network and loss models using held-out wavelengths and reversal data. Require fixed-flux phase redistributions to agree before interpreting the flux-reversal-odd directional record. Analyze the central-return channel separately: require projector closure, H inside a predeclared centrality band around -I2 after one traversal and +I2 after two, and stability under endpoint-reference recalibration.",
+      "success": "Projector closure and reversed noncommuting transport survive independent loss calibration; phase redistributions at fixed loop sum agree, opposite loop phases are isospectral and the held-out directional statistic changes sign with its predicted magnitude. If the binary central channel is claimed, the one-loop -I2 and two-loop +I2 endpoint returns must also pass their independent centrality and reference controls.",
       "nullValue": "A static, reciprocal or non-Hermitian nuisance model predicts every record, improving coherent-network calibration while closing the claimed discriminator at the achieved sensitivity.",
       "stopRule": "Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin. Stop at an engineering demonstration unless an independent source calculation predicts a continuous loop phase beyond the binary modular sign, coupling ratios or a defect response without fitting them to the device; require replication on a second carrier before a new-physics interpretation.",
       "precedents": [
