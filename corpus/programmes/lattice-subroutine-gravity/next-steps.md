@@ -22,7 +22,7 @@ The characteristic-orbit and separating-order parts are now complete in the [sea
 1. Compute the Leech and Monster genus-two partition data in the same sewing normalization.
 2. Match Fourier coefficients to pair-Gram strata \(0,12,15,16\) where the comparison is mathematically defined.
 3. Compute the genus-two spin-structure vector of the now-identified Monster \(2A\) fermionization (Majorana--Weyl times Baby Monster), lift the established finite determinant sign to the analytic \(\chi_5\) line, and construct or rule out a junction to the distinct \(2B\)/Leech Rule-60 seam. Do not substitute the additive bosonization sum for this determinant calculation.
-4. If the analytic line closes, construct the base-space map taking the separating divisor to the response-root rank-one boundary \(\det\Psi=0\). Shared sign parity without this zero-locus/transport map does not identify the modular and response Pfaffian lines.
+4. If the analytic line closes, construct a derived physical response map taking the separating divisor to the response-root rank-one boundary \(\det\Psi=0\). The canonical map \(Q=\operatorname{Im}\Omega\) has now failed this test: separation leaves \(Q\) positive definite. Shared sign parity without a different zero-locus/transport map does not identify the modular and response Pfaffian lines.
 4. Test factorization, positivity and whether the seam produces a distinct correlation/sewing observable.
 
 **Success:** either a modularly consistent ten-sector completion or a precisely marked subgroup defect with a new computable invariant.  

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-24",
+  "claim": "The canonical map Q=Im(Omega) sends the genus-two Siegel upper half-space into H2(R)+, but it does not send the separating divisor Omega12=0 to the rank-one Jordan boundary det(Q)=0.",
+  "canonicalMap": {
+    "source": "Omega=X+iY in Siegel upper half-space H_2",
+    "target": "Q=Y in the positive definite rank-two Jordan cone",
+    "status": "established"
+  },
+  "separatingTest": {
+    "sourceCondition": "Omega12=0 with Im(tau1)>0 and Im(tau2)>0",
+    "image": "Q=diag(Im(tau1),Im(tau2))",
+    "determinant": "Im(tau1)*Im(tau2)>0",
+    "verdict": "does_not_reach_rank_one_boundary"
+  },
+  "strata": {
+    "modular": "complex codimension-one factorization locus",
+    "jordan": "real codimension-one positive-cone rank-loss boundary",
+    "identified": false
+  },
+  "modularPositivity": "The fractional Sp(4,R) action preserves positive definiteness of Im(Omega), so an interior period matrix remains away from det(Q)=0.",
+  "reopenCondition": "Derive a positive physical response map whose determinant vanishes on the intended seam and whose covariance and detector meaning are independently fixed.",
+  "terminalStatus": "canonical_map_ruled_out_stronger_maps_open"
+}

@@ -72,6 +72,8 @@ Every dashed arrow is a distinct gate:
 3. **microscopic response map:** derive the Furey/Higgs alternating bilinear as the pullback \(\Psi^T J\Psi\);
 4. **real-structure gate:** only then ask whether a complex flavour Majorana determinant restricts to the same real line.
 
+The [canonical period-matrix gate](period-matrix-jordan-boundary-gate.md) now rules out the shortest version of the second arrow. Although \(\operatorname{Im}\Omega\) is naturally an element of \(H_2(\mathbb R)_+\), the separating divisor maps to a diagonal positive-definite matrix with nonzero determinant, not to the rank-one response boundary.
+
 There is currently no complete path. In particular, transitivity cannot be claimed from pairwise equality of abstract \(\mathbb Z_2\) characters.
 
 ## A useful falsification test

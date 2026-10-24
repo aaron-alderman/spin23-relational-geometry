@@ -23,6 +23,7 @@ const requiredFiles = [
   "oriented-seam-modular-line.md",
   "monster-fermionization-bridge.md",
   "pfaffian-line-type-audit.md",
+  "period-matrix-jordan-boundary-gate.md",
   "literature-review.md",
   "next-steps.md",
   "mece-ledger-v1.json"
@@ -47,6 +48,8 @@ const requiredEvidence = [
   ,"verification/verify/verify_lattice_subroutine_monster_fermionization_bridge.mjs"
   ,"evidence/data/lattice-subroutine-pfaffian-line-type-audit-v1.json"
   ,"verification/verify/verify_lattice_subroutine_pfaffian_line_type_audit.mjs"
+  ,"evidence/data/lattice-subroutine-period-matrix-jordan-boundary-gate-v1.json"
+  ,"verification/verify/verify_lattice_subroutine_period_matrix_jordan_boundary_gate.mjs"
 ];
 
 for (const file of requiredFiles) {
