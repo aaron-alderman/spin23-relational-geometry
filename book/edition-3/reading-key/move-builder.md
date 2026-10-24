@@ -10,6 +10,9 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 
 ## Every current use
 
+- [The admissibility frontier · Dynamics moves the boundary](../chapters/08-admissibility-frontier.md#dynamics-moves-the-boundary)
+- [The admissibility frontier · The finesse technology pathway](../chapters/08-admissibility-frontier.md#the-finesse-technology-pathway)
+- [The admissibility frontier · Hot off the press — the oriented seam becomes an experiment](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-oriented-seam-becomes-an-experiment)
 - [One carrier, two faces, three relations · The graph result](../chapters/02-one-carrier-two-faces-three-relations.md#the-graph-result)
 - [The projective loop · From topology to a defect](../chapters/03-projective-loop.md#from-topology-to-a-defect)
 - [The Standard-Model seam · Three generations and the index](../chapters/05-standard-model-seam.md#three-generations-and-the-index)
@@ -35,6 +38,13 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [A11 · Turn sensitivity into a physical test](../chapters/09-research-frontier.md#A11)
 - [GRAPH · Derive the missing anisotropies](../chapters/09-research-frontier.md#GRAPH)
 - [TORSION-UV · Construct the protected torsion parent](../chapters/09-research-frontier.md#TORSION-UV)
+- [Claim · The admissibility frontier · Dynamics moves the boundary (1)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-1.md)
+- [Claim · The admissibility frontier · Dynamics moves the boundary (2)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-2.md)
+- [Claim · The admissibility frontier · The finesse technology pathway (1)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md)
+- [Claim · The admissibility frontier · The finesse technology pathway (2)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — the oriented seam becomes an experiment (1)](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — the oriented seam becomes an experiment (2)](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — the oriented seam becomes an experiment (3)](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-3.md)
 - [Claim · One carrier, two faces, three relations · The graph result (1)](../details/02-one-carrier-two-faces-three-relations-the-graph-result-claim-1.md)
 - [Claim · The projective loop · From topology to a defect (1)](../details/03-projective-loop-from-topology-to-a-defect-claim-1.md)
 - [Claim · The projective loop · From topology to a defect (2)](../details/03-projective-loop-from-topology-to-a-defect-claim-2.md)

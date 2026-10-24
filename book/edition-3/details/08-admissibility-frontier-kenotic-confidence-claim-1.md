@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The exact hinge, the coherence of the map and the usefulness of its obstructions can be stated positively. Kenotic presentation does not require sterile prose; it requires authority proportional to reasons. The invitation is therefore to reproduce, challenge, translate, build and correct—not to accept the programme as a package.
+> AI can map dispersed results, optimize separating interventions and maintain the evidence ledger, but it cannot award physical truth. Kenotic confidence means stating the route positively while allowing the experiment, the rival model and the independent reproducer to remain genuinely capable of changing the conclusion.
 
 ## What this commits us to
 
@@ -38,9 +38,12 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 - **admissibility 07 zone known unknown frontiers** — [admissibility_07_zone_known_unknown_frontiers.md](../../../corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md)
 - **admissibility 25 current research frontier crosswalk** — [admissibility_25_current_research_frontier_crosswalk.md](../../../corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md)
 - **frontier experiment atlas v1** — [frontier_experiment_atlas_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md)
+- **monster-fermionization-bridge** — [monster-fermionization-bridge.md](../../../corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md)
+- **period-matrix-jordan-boundary-gate** — [period-matrix-jordan-boundary-gate.md](../../../corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md)
+- **three-mode-loop-seam-preflight** — [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#kenotic-confidence) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-what-is-genuinely-within-reach-claim-2.md) · [Next claim →](01-the-revised-spine-what-closes-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#kenotic-confidence) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-3.md) · [Next claim →](01-the-revised-spine-what-closes-claim-1.md)

@@ -244,7 +244,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 
 ---
 
-### EX-006 — Three-mode projector-return and coherent-holonomy chip
+### EX-006 — Three-mode projector-return, holonomy and oriented-seam transfer
 
 **Frontier:** FA-06 — Projector holonomy and coherent transport (loop and lift)  
 **Mode/readiness:** laboratory; ready_after_design  
@@ -252,21 +252,25 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Topics:** OT-002, OT-009, OT-010, OT-012, OT-013, OT-037, OT-043, OT-044  
 **Detector bundles:** DET-004, DET-005, DET-006, DET-013, DET-014
 
-**Platform.** Silicon-nitride or femtosecond-written waveguides implementing a dark three-mode subspace with programmable coupling path.
+**Platform.** Silicon-nitride, microwave or femtosecond-written modes implementing a closed three-mode coupling loop with programmable edge phases, a dark subspace and calibrated directional ports.
 
-**Hypothesis.** The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy.
+**Hypothesis.** The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy. Independently, the gauge-invariant edge-phase sum survives phase redistribution: resonance poles identify opposite loop orientations, while directional complex transfer distinguishes them.
 
 **Interventions**
 
 - Fabricate forward, reverse and path-order-swapped coupling profiles
 - Inject a tomographically complete input set
 - Sweep wavelength and deliberately add calibrated splitting and loss
+- Redistribute phase among the three edges while holding the loop sum fixed
+- Reverse the loop phase with edge magnitudes and detunings fixed
 
 **Recorded observables**
 
 - Full complex 3×3 transfer matrix
 - Projector distance
 - Process singular values
+- Forward and reverse complex transfer across the full resonance band
+- Flux-reversal-odd directional statistic
 - Leakage and insertion loss
 
 **Controls**
@@ -275,14 +279,18 @@ This atlas converts every canonical frontier into a realistic controlled experim
 - Dynamical-phase echo
 - Static splitter
 - Differential-loss mimic
+- Open-loop control showing that an isolated edge phase is basis-removable
+- Direct-feedthrough injection followed by frozen complex background subtraction
 
-**Analysis.** Blindly compare geometric, static-splitting and loss models using held-out wavelengths and reversal data.
+**Analysis.** Blindly compare geometric, static-splitting, reciprocal-network and loss models using held-out wavelengths and reversal data. Require fixed-flux phase redistributions to agree before interpreting the flux-reversal-odd directional record.
 
-**Decisive positive result.** Projector closure and reversed noncommuting transport survive independent loss calibration.
+**Decisive positive result.** Projector closure and reversed noncommuting transport survive independent loss calibration; phase redistributions at fixed loop sum agree, opposite loop phases are isospectral and the held-out directional statistic changes sign with its predicted magnitude.
 
-**Useful null result.** A static or non-Hermitian nuisance model predicts every record.
+**Useful null result.** A static, reciprocal or non-Hermitian nuisance model predicts every record, improving coherent-network calibration while closing the claimed discriminator at the achieved sensitivity.
 
-**Stop rule.** Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin.
+**Stop rule.** Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin. Stop at an engineering demonstration unless an independent modular or Monster calculation predicts the loop phase, coupling ratios or defect response without fitting them to the device; require replication on a second carrier before a new-physics interpretation.
+
+**Current preflight.** The [three-mode oriented-seam calculation](../lattice-subroutine-gravity/three-mode-loop-seam-preflight.md) verifies phase-redistribution invariance, spectral evenness and directional-transfer oddness for the declared coupled-mode model. It is a detector certificate, not evidence that nature uses the proposed lattice or Monster carrier.
 
 **Primary precedents.** [https://doi.org/10.1038/s41467-025-58794-3](https://doi.org/10.1038/s41467-025-58794-3); [https://doi.org/10.1038/s41467-025-62481-8](https://doi.org/10.1038/s41467-025-62481-8)
 
@@ -894,4 +902,4 @@ This atlas converts every canonical frontier into a realistic controlled experim
 4. **Materials and transport campaign:** EX-012, EX-013 and EX-015.
 5. **Model-gated fundamental tests:** EX-019 and EX-020 only after their action/dictionary entry conditions are met.
 
-The shared-device sequence is deliberate: EX-005–EX-007 can use one three-mode carrier, while EX-012 forces the response tensor to be frozen before the Casimir record is opened. These dependencies make null results informative and limit refitting freedom.
+The shared-device sequence is deliberate: EX-005–EX-007 can use one three-mode carrier, with EX-006 asking which phase and orientation records that carrier can preserve, while EX-012 forces the response tensor to be frozen before the Casimir record is opened. These dependencies make null results informative and limit refitting freedom.

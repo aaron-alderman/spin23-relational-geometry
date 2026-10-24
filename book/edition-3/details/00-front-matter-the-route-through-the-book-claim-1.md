@@ -8,7 +8,7 @@ _Expanded claim page · Front matter_
 
 ## Exact assertion
 
-> The admissibility frontier comes first because it supplies the reading contract: Jordan admission delimits the possibilities, the typed middle is the live object, and Lie transport acts on what has been admitted. The following chapters then build one exact rank-two completion from response measurements and relational loops before asking whether it can carry Standard-Model matter, safe interactions or exceptional structure. The ledger records both positive results and reversals, and the research frontier ends with concrete reopen conditions rather than an invitation to continue indefinitely.
+> The admissibility frontier comes first because it identifies the changed route to discovery: recover distinctions that ordinary measurements erase, then trace their admission, dynamics and detection. The following chapters build one exact Jordan-to-Lie rank-two hinge from response measurements and relational loops before asking whether it can carry Standard-Model matter, safe interactions or exceptional structure. The result ledger records positive findings and reversals; the research frontier ends in controlled experiments and explicit reopening conditions rather than in a larger symmetry slogan.
 
 ## What this commits us to
 

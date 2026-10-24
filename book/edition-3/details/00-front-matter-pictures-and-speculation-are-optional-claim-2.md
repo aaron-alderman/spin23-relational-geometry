@@ -41,4 +41,4 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 ---
 
-[Return to the assertion in the chapter](../chapters/00-front-matter.md#pictures-and-speculation-are-optional) · [Book contents](../README.md) · [← Previous claim](00-front-matter-pictures-and-speculation-are-optional-claim-1.md) · [Next claim →](08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-1.md)
+[Return to the assertion in the chapter](../chapters/00-front-matter.md#pictures-and-speculation-are-optional) · [Book contents](../README.md) · [← Previous claim](00-front-matter-pictures-and-speculation-are-optional-claim-1.md) · [Next claim →](08-admissibility-frontier-the-shift-claim-1.md)

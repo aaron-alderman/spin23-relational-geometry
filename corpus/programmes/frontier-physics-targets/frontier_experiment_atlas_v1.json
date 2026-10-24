@@ -256,33 +256,39 @@
         "DET-013",
         "DET-014"
       ],
-      "title": "Three-mode projector-return and coherent-holonomy chip",
+      "title": "Three-mode projector-return, holonomy and oriented-seam transfer",
       "mode": "laboratory",
       "readiness": "ready_after_design",
       "estimate": "9–18 months including foundry cycle",
-      "platform": "Silicon-nitride or femtosecond-written waveguides implementing a dark three-mode subspace with programmable coupling path.",
-      "hypothesis": "The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy.",
+      "platform": "Silicon-nitride, microwave or femtosecond-written modes implementing a closed three-mode coupling loop with programmable edge phases, a dark subspace and calibrated directional ports.",
+      "hypothesis": "The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy. Independently, the gauge-invariant edge-phase sum survives phase redistribution: resonance poles identify opposite loop orientations, while directional complex transfer distinguishes them.",
       "intervention": [
         "Fabricate forward, reverse and path-order-swapped coupling profiles",
         "Inject a tomographically complete input set",
-        "Sweep wavelength and deliberately add calibrated splitting and loss"
+        "Sweep wavelength and deliberately add calibrated splitting and loss",
+        "Redistribute phase among the three edges while holding the loop sum fixed",
+        "Reverse the loop phase with edge magnitudes and detunings fixed"
       ],
       "record": [
         "Full complex 3×3 transfer matrix",
         "Projector distance",
         "Process singular values",
+        "Forward and reverse complex transfer across the full resonance band",
+        "Flux-reversal-odd directional statistic",
         "Leakage and insertion loss"
       ],
       "controls": [
         "Zero-area loop",
         "Dynamical-phase echo",
         "Static splitter",
-        "Differential-loss mimic"
+        "Differential-loss mimic",
+        "Open-loop control showing that an isolated edge phase is basis-removable",
+        "Direct-feedthrough injection followed by frozen complex background subtraction"
       ],
-      "analysis": "Blindly compare geometric, static-splitting and loss models using held-out wavelengths and reversal data.",
-      "success": "Projector closure and reversed noncommuting transport survive independent loss calibration.",
-      "nullValue": "A static or non-Hermitian nuisance model predicts every record.",
-      "stopRule": "Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin.",
+      "analysis": "Blindly compare geometric, static-splitting, reciprocal-network and loss models using held-out wavelengths and reversal data. Require fixed-flux phase redistributions to agree before interpreting the flux-reversal-odd directional record.",
+      "success": "Projector closure and reversed noncommuting transport survive independent loss calibration; phase redistributions at fixed loop sum agree, opposite loop phases are isospectral and the held-out directional statistic changes sign with its predicted magnitude.",
+      "nullValue": "A static, reciprocal or non-Hermitian nuisance model predicts every record, improving coherent-network calibration while closing the claimed discriminator at the achieved sensitivity.",
+      "stopRule": "Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin. Stop at an engineering demonstration unless an independent modular or Monster calculation predicts the loop phase, coupling ratios or defect response without fitting them to the device; require replication on a second carrier before a new-physics interpretation.",
       "precedents": [
         "https://doi.org/10.1038/s41467-025-58794-3",
         "https://doi.org/10.1038/s41467-025-62481-8"

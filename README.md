@@ -1,17 +1,19 @@
 # The Admissibility Frontier
 
-_A Jordan–carrier–Lie research programme, with Spin(2,3) as one exact completion rather than its starting premise._
+_A route to new physics through greater experimental finesse: preserve the distinctions that present measurements erase._
 
-An audited research corpus investigating the passage from possible structure to physically admissible structure. Read it from admission outward: Jordan structure delimits what can coexist as positive states, responses and compositions; a typed middle asks which carriers, histories, selections and records remain jointly realizable; Lie structure describes how admitted possibilities can be transformed and transported. The live object is that admissibility region, not a symmetry group named in advance.
+This corpus began by looking for a symmetry large enough to contain the physics. It ended with a different question: **what if the next frontier is not primarily higher energy, but finer preservation of phase, boundary order, delay, memory, orientation and cross-channel relation?** An experiment sees only what survives its ports, bandwidth, geometry, calibration and reduction pipeline. New physics can therefore remain hidden not because it is energetically unreachable, but because the distinction that identifies it has been averaged away.
+
+The programme now works from that experimental fact backward. Jordan structure delimits which states, responses and observables can coexist and compose positively. Lie structure describes how those admitted possibilities transform and circulate. Dynamics moves through their shared boundary; detectors decide what reaches a record. The live object is the full admission–motion–detection loop, not a symmetry group named in advance.
 
 \[
-\boxed{\text{Jordan admission and composition}}
-\longrightarrow
-\boxed{\text{typed admissibility region}}
-\longrightarrow
-\boxed{\text{Lie transformation and transport}}
-\longrightarrow
-\boxed{\text{dynamics, selection and records}}.
+\boxed{\text{possible distinctions}}
+\xrightarrow{\text{admission}}
+\boxed{\text{realizable relations}}
+\xrightarrow{\text{dynamics}}
+\boxed{\text{histories and boundaries}}
+\xrightarrow{\text{detection}}
+\boxed{\text{records and revised bounds}}.
 \]
 
 On the declared rank-two response carrier, one important exact completion is:
@@ -24,7 +26,7 @@ H_2(\mathbb R)_+
 \mathfrak{so}(2,3).
 \]
 
-The group is therefore a symmetry of a possibility space already delimited on the Jordan side; it is not the prior container into which physics is fitted. The larger programme turns dynamics toward admissibility: not only “what equations move a state?” but “which states, transformations, histories and records remain jointly realizable, and what dynamics can live inside that region?” The result is a practical atlas of exact structure, bounded bridges, exclusions, detectors and reachable frontiers. The [canonical reading contract](corpus/READING_CONTRACT.md) fixes the order; the [explanatory standard](corpus/EXPLANATORY_STANDARD.md) requires things before jargon, reasons on every bridge, separate mathematical and physical status, adjacent implications and non-implications, and optional pictures that carry no hidden premises.
+The group is therefore a symmetry recovered from an admitted response geometry; it is not the prior container into which physics is fitted. This is the algebraic expression of the larger reversal from **symmetry first** to **distinction, admission and measurement first**. The practical consequence is a finesse technology programme: find where rival mechanisms become observationally equivalent, identify the erased distinction, design a detector or reversal that restores it and replicate any residual on an independent carrier. The [canonical reading contract](corpus/READING_CONTRACT.md) fixes the order; the [current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) tells the full changed story.
 
 This is **not a completed unified theory**. Established mathematics, reproducible model-local results, conditional constructions, conjectures, analogies, obstructions and indeterminate inputs remain explicitly separated.
 
@@ -47,15 +49,14 @@ The generated paged edition is available in [`docs/edition-3`](docs/edition-3/in
 
 ## The story now visible
 
-The corpus has found more than a collection of correspondences. It has found a coherent middle architecture.
+- **The frontier is informational as well as energetic.** Phase, delay, boundary order, hysteresis, metastable history and nonlinear correlation can distinguish mechanisms whose ordinary endpoint measurements coincide.
+- **The Lie-only view hid the experimental problem.** A transformation algebra can supply an orbit without supplying positivity, realization, an observable or a detector. Jordan admission and Lie transport must be balanced on a declared carrier.
+- **Dynamics is motion of an admissibility boundary.** Bound states, boundary bands, resonances and free continua are joined by spectral flow, capture and decay; memory and topology record parts of that passage.
+- **The third term is physical context.** A boundary, selector, environment or detector mediates the relation between nominal endpoints. Ternary structure makes this dependence explicit rather than treating it as nuisance.
+- **The technology pathway is two-outcome by design.** Better phase-sensitive controls, same-material Casimir closure, memory-aware inference and cross-carrier replication improve established physics even if every anomaly disappears; a residual earns promotion only by surviving those controls.
+- **AI's role is cartographic and experimental.** It can join dispersed no-go results, optimize interventions, propagate covariance and maintain the decision ledger. It does not get to declare which mechanism nature uses.
 
-- **The middle, not either endpoint, is primary.** Jordan structure delimits positive coexistence and composition; Lie structure governs transformation and transport of what has been admitted. Their typed compatibility region is the object under investigation, while its physical carrier remains a live question.
-- **Dynamics and admissibility constrain one another.** An action or update rule proposes motion; the admissibility stack tests type, composition, positivity, causality, stability, global extension and empirical record. This reversal has become executable rather than merely philosophical.
-- **Selection has become visible.** Symmetry usually supplies an orbit, not a realized member. The corpus identifies the independently sourced boundary, anisotropy, environment, history or record required to turn neutral preservation into physical selection.
-- **The frontier is mapped for use.** 22 physics targets, 20 frontier areas, 35 detector bundles, 20 experiments and 49 maintained topics connect exact mathematics to calculations, devices, controls and kill tests.
-- **The negative results are constructive.** They prevent attractive shared shapes—whether \(A_2\), triality, Golay, Leech, Freudenthal, \(E_8\) or torsion—from being promoted without the missing carrier, action, normalization and observable.
-
-The strongest ontological claim remains open: the corpus has not established that admissibility generates all physical law. But it has established a powerful research method and an unusually detailed “look here” guide to the frontier. The [current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) tells that story, including the good news, the limits, the hope and the invitation to contribute.
+The corpus has not established that admissibility generates all physical law or that a new effect has already been observed. It has established a sharper place to look and a buildable way to look there. The [finesse technology pathway](corpus/programmes/frontier-physics-targets/finesse_technology_pathway_v1.md) begins with a 90-day no-foundry programme and escalates only through controlled, replicated evidence.
 
 The scientific story ends with places to work: each should return a theoretical or engineering improvement under established physics and retain a controlled discriminator for new physics. Only after that boundary does the corpus offer an [optional menu of desired endpoints, speculative and mythic arcs, and theology under the explicit assumption that God exists](corpus/syntheses/admissibility_optional_endpoints_mythic_and_theological_readings.md). Those readings orient possibility and purpose; they are not premises for the mathematics or experiments.
 

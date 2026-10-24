@@ -1,14 +1,14 @@
-# Detectors draw the practical boundary — assertion 1
+# The finesse technology pathway — assertion 1
 
 _Expanded claim page · The admissibility frontier_
 
 > **Claim status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
-> **Research function — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+> **Research function — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
 ## Exact assertion
 
-> An experiment does not see the full state space. A detector folds fields and histories through ports, bandwidth, calibration, noise, geometry and data reduction into a record. The practical admissibility boundary is therefore partly a detector boundary: it separates distinctions the apparatus can retain from distinctions it necessarily quotients away.
+> The practical sequence is to find a mechanism collision, identify the erased distinction, build a detector or reversal that retains it and replicate any residual on an independent carrier. Phase-sensitive controls, nonlinear correlators, boundary-order probes, memory-aware inference and same-material response closure are the immediate tools.
 
 ## What this commits us to
 
@@ -16,10 +16,10 @@ The claim concerns a protocol, sensitivity or decision rule. It must be kept sep
 
 ## Logical anatomy
 
-- **Scope:** chapter “The admissibility frontier”, section “Detectors draw the practical boundary”.
+- **Scope:** chapter “The admissibility frontier”, section “The finesse technology pathway”.
 - **Unit of argument:** assertion 1 of 2 in this section.
 - **Evidence posture:** Separate predicted signal from sensitivity, calibration and decision protocol.
-- **Research move:** joins several typed results while letting the weakest edge set the claim.
+- **Research move:** constructs a model, mechanism, calculation, protocol or intervention.
 
 ## Verification route
 
@@ -38,9 +38,12 @@ Specify the apparatus, calibration, null distribution, preregistered threshold a
 - **admissibility 07 zone known unknown frontiers** — [admissibility_07_zone_known_unknown_frontiers.md](../../../corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md)
 - **admissibility 25 current research frontier crosswalk** — [admissibility_25_current_research_frontier_crosswalk.md](../../../corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md)
 - **frontier experiment atlas v1** — [frontier_experiment_atlas_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md)
+- **monster-fermionization-bridge** — [monster-fermionization-bridge.md](../../../corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md)
+- **period-matrix-jordan-boundary-gate** — [period-matrix-jordan-boundary-gate.md](../../../corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md)
+- **three-mode-loop-seam-preflight** — [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#detectors-draw-the-practical-boundary) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-dynamics-inside-the-admissible-region-claim-2.md) · [Next claim →](08-admissibility-frontier-detectors-draw-the-practical-boundary-claim-2.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#the-finesse-technology-pathway) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-the-third-term-is-the-mediator-claim-2.md) · [Next claim →](08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)

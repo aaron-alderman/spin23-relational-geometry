@@ -1,85 +1,104 @@
 # The admissibility frontier
 
-_Admission before symmetry_
+_New physics by finesse_
 
 > **Chapter status — [◎ Interpretive map](../reading-key/status-interpretive.md)** — Organizes thought or workflow but is not evidence for a physical claim.
 
 > **Chapter function — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-<a id="the-structure-between-jordan-and-lie"></a>
-## The structure between Jordan and Lie
+<a id="the-shift"></a>
+## The shift
 
 > **Section status — [◎ Interpretive map](../reading-key/status-interpretive.md)** — Organizes thought or workflow but is not evidence for a physical claim.
 
+> **Research move — [⌖ Cartographer](../reading-key/move-cartographer.md)** — maps territory, distinctions, dependencies and interfaces.
+
+The next route to new physics may begin not with higher energy but with greater finesse: preserving phase, delay, boundary order, memory, orientation and cross-channel relation that ordinary measurements average away. The programme therefore begins where candidate mechanisms become observationally equivalent and asks which erased distinction would separate them.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shift-claim-1.md)
+
+This is a change of protagonist. Spin₀(2,3) and the larger symmetry landscape no longer lead the story. The admission–dynamics–detection loop does, because it determines which mathematical differences can become physical records.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shift-claim-2.md)
+
+<a id="why-jordan-and-lie-must-be-balanced"></a>
+## Why Jordan and Lie must be balanced
+
+> **Section status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
+
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-Jordan structure delimits what can coexist as a positive state, response, observable or composition. The typed admissibility region is the live object: it asks which carriers, compositions, histories, selectors and records remain jointly realizable. Lie structure then describes how admitted possibilities can transform while preserving declared relations.
+Jordan structure delimits what can coexist and compose as positive states, responses and observables. Lie structure describes how those admitted objects transform and circulate. Jordan has explanatory priority; Lie has dynamical necessity; neither can supply the carrier, selector and detector alone.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-why-jordan-and-lie-must-be-balanced-claim-1.md)
 
-This order is asymmetric and non-negotiable. Spin₀(2,3) is an exact conformal completion of the declared rank-two Jordan response cone, not the starting premise or prior container of the physics. Lie closure without an admitted domain can be formally beautiful and physically empty; a Jordan cone without transformation, time, selection or records can be stable and sterile. The programme lives in the passage between them.
+Spin₀(2,3) is an exact conformal completion of one declared rank-two Jordan response cone. It is therefore a recovered symmetry of an admitted geometry, not the prior container of physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-structure-between-jordan-and-lie-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-why-jordan-and-lie-must-be-balanced-claim-2.md)
 
-<a id="dynamics-inside-the-admissible-region"></a>
-## Dynamics inside the admissible region
+<a id="dynamics-moves-the-boundary"></a>
+## Dynamics moves the boundary
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
-> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-Admissibility does not replace dynamics. It asks which states, transformations, histories and records can remain compatible, then tests whether a proposed dynamics stays inside that region. Linear flow, antiunitary sheet change, dissipative attraction, measurement-conditioned update, thermodynamic cost and metastable memory are kept as different operations with different invariants.
+Bound states, boundary bands, resonances and free continua are joined by spectral flow, capture, decay and memory. Dynamics is tested by what it preserves, which context selects a history and which record survives finite detection—not only by whether an equation of motion can be written.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-dynamics-inside-the-admissible-region-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-1.md)
 
-The strong ontological proposal—that admissibility is prior to physics and generates physical structure—remains open. The established methodological result is already useful: admissibility exposes hidden inputs, types mechanisms, preserves no-go results and identifies the datum needed to reopen a branch.
+This turns Casimir response, thermoelectric transport, holonomy, hysteresis, metastability and scattering delay into complementary probes of a changing admissibility boundary.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-dynamics-inside-the-admissible-region-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-2.md)
 
-<a id="detectors-draw-the-practical-boundary"></a>
-## Detectors draw the practical boundary
+<a id="the-third-term-is-the-mediator"></a>
+## The third term is the mediator
+
+> **Section status — [◎ Interpretive map](../reading-key/status-interpretive.md)** — Organizes thought or workflow but is not evidence for a physical claim.
+
+> **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
+
+A boundary, selector, environment, memory kernel or detector orientation can mediate the relation between nominal endpoints. Ternary structure makes this context-dependence explicit: changing the middle term can change the admissible relation without changing the endpoints.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-third-term-is-the-mediator-claim-1.md)
+
+The scientific question behind retained identity or ‘soul’ is whether a measurable invariant survives transformation, descent and observation. This does not declare a soul to be a field or particle.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-third-term-is-the-mediator-claim-2.md)
+
+<a id="the-finesse-technology-pathway"></a>
+## The finesse technology pathway
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
-> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-An experiment does not see the full state space. A detector folds fields and histories through ports, bandwidth, calibration, noise, geometry and data reduction into a record. The practical admissibility boundary is therefore partly a detector boundary: it separates distinctions the apparatus can retain from distinctions it necessarily quotients away.
+The practical sequence is to find a mechanism collision, identify the erased distinction, build a detector or reversal that retains it and replicate any residual on an independent carrier. Phase-sensitive controls, nonlinear correlators, boundary-order probes, memory-aware inference and same-material response closure are the immediate tools.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-detectors-draw-the-practical-boundary-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md)
 
-This makes null results constructive. A well-designed experiment records which conventional model survives, which nuisance effect dominates and which part of the proposed bridge has actually been excluded.
+Each experiment has two valuable outcomes: improved theory or technology if established physics closes the record, and a disciplined anomaly path if a preregistered residual survives nuisance models, reversals and cross-carrier replication. Only the latter sequence can promote the result toward new physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-detectors-draw-the-practical-boundary-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)
 
-<a id="filled-bounded-and-unfilled-territory"></a>
-## Filled, bounded and unfilled territory
+<a id="hot-off-the-press-the-oriented-seam-becomes-an-experiment"></a>
+## Hot off the press — the oriented seam becomes an experiment
 
-> **Section status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
-> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-The atlas marks territory as established, conditionally constructed, externally open, internally exhausted, excluded, instrumented or underidentified. Filled regions contain a typed object and certificate. Bounded regions carry an explicit stopping or reopening rule. Unfilled regions name the missing carrier, action, normalization, operator dictionary or discriminating detector rather than presenting mystery as evidence.
+**Provisional integration note — 24 October 2026.** This result arrived after the chapter's main story was stabilized. It is included as a visible integration queue, not as settled narrative; once the mathematics, terminology and experimental interpretation firm, its pieces should be redistributed into the Jordan–Lie, detector and research-frontier sections.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-filled-bounded-and-unfilled-territory-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-1.md)
 
-The map is not the territory and completeness is not claimed. Its value is that a researcher can enter at one boundary, know what controls it and return a result that changes the shared map.
+The exact result is narrower and more useful than a group-name correspondence. Monster 2A fermionization leaves the ten even genus-two spin sectors after the six odd sectors are killed by Majorana zero modes, while the nine-dimensional sum-zero seam carries a nontrivial orientation sign. But the additive fermionic sum is not the multiplicative Igusa product, the relevant Pfaffian objects live over different bases, and the canonical positive period matrix remains inside the Jordan cone at a separating surface rather than reaching its rank boundary.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-filled-bounded-and-unfilled-territory-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-2.md)
 
-<a id="what-is-genuinely-within-reach"></a>
-## What is genuinely within reach
+Those obstructions identify the detector. A phase-blind positive response sees the complex sewing parameter only through its magnitude; an isolated two-mode coupling phase can be removed by a basis change. The smallest intrinsic carrier is therefore a three-mode loop: its resonance spectrum identifies opposite loop orientations, while coherent directional transfer distinguishes them. This is now a realistic controlled experiment and an engineering result; it becomes a new-physics test only when a modular or Monster calculation predicts the loop record without fitting it to the device.
 
-> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
-
-> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
-
-Several fronts can move without a final theory: projector return and holonomy in programmable wave systems; open-system selection and metastability; same-sample transport-to-Casimir prediction; low-frequency thermoelectric rank; defect and quotient-scar memory; polarized-force constraints on torsion-like sectors; and source-native exceptional or modular no-go tests.
-
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-what-is-genuinely-within-reach-claim-1.md)
-
-Each is a two-outcome research design: established physics should return a theoretical, inferential or engineering improvement, while a predeclared residual surviving the full nuisance model may point toward new physics. A shared mathematical object is not automatically a shared physical carrier, and sensitivity is not a predicted signal; progress requires a named observable, control model, decision rule and interpretation ladder.
-
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-what-is-genuinely-within-reach-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-3.md)
 
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
@@ -88,7 +107,7 @@ Each is a two-outcome research design: established physics should return a theor
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-The exact hinge, the coherence of the map and the usefulness of its obstructions can be stated positively. Kenotic presentation does not require sterile prose; it requires authority proportional to reasons. The invitation is therefore to reproduce, challenge, translate, build and correct—not to accept the programme as a package.
+AI can map dispersed results, optimize separating interventions and maintain the evidence ledger, but it cannot award physical truth. Kenotic confidence means stating the route positively while allowing the experiment, the rival model and the independent reproducer to remain genuinely capable of changing the conclusion.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-kenotic-confidence-claim-1.md)
 
@@ -98,6 +117,9 @@ The exact hinge, the coherence of the map and the usefulness of its obstructions
 - [admissibility_07_zone_known_unknown_frontiers.md](../../../corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md)
 - [admissibility_25_current_research_frontier_crosswalk.md](../../../corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md)
 - [frontier_experiment_atlas_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md)
+- [monster-fermionization-bridge.md](../../../corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md)
+- [period-matrix-jordan-boundary-gate.md](../../../corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md)
+- [three-mode-loop-seam-preflight.md](../../../corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md)
 
 ---
 

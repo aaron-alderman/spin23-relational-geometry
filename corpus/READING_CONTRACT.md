@@ -1,6 +1,8 @@
-# Reading contract: admission before symmetry
+# Reading contract: preserve the distinction
 
-This corpus must be read from the admissible domain outward, not from a preferred symmetry group inward.
+This corpus must be read as a change in where physics looks. The route to new physics is not assumed to be higher energy alone. It may be greater experimental finesse: preserving phase, delay, boundary order, memory, orientation or correlation that a coarser detector erases. The first question is therefore not “which large symmetry contains reality?” but “which distinction separates the candidate mechanisms, what admits it, how does it move and can an apparatus retain it?”
+
+The algebraic rule—admission before symmetry—serves that experimental rule.
 
 The governing explanatory order is:
 
@@ -15,6 +17,22 @@ The governing explanatory order is:
 \]
 
 The arrows do not claim that one mathematical structure temporally manufactures the next. They specify the order of explanation and the type of question assigned to each layer. Once the carrier and types are declared, the operative relation is balanced rather than one-way: Jordan composition constrains admissible Lie transport, while transport tests which Jordan relations remain dynamically stable.
+
+Every reader-facing account must also complete the return path:
+
+\[
+\boxed{\text{candidate mechanisms}}
+\longrightarrow
+\boxed{\text{distinguishing invariant}}
+\longrightarrow
+\boxed{\text{detector and reversal}}
+\longrightarrow
+\boxed{\text{record}}
+\longrightarrow
+\boxed{\text{updated admissible region}}.
+\]
+
+Without that return, the corpus is only a classification of possible structures. With it, admissibility becomes an experimental programme.
 
 The [explanatory standard](EXPLANATORY_STANDARD.md) governs each arrow: begin with the things being related, state why they are alike and different, identify the reason for the difference, report mathematical and physical closure separately, and place implications beside non-implications. Pictures and speculative readings may be offered as a menu, but none is required to accept the core result.
 
@@ -51,16 +69,17 @@ This is an important theorem about the admitted space. It is not the starting pr
 
 ## Summary test
 
-A faithful summary must still make sense if every exceptional or Lie-group name is temporarily hidden. It should first identify:
+A faithful summary must begin with the finesse reversal and must still make sense if every exceptional or Lie-group name is temporarily hidden. It should first identify:
 
+- which presently erased distinction is worth recovering;
 - what is admitted;
 - on which carrier;
 - under which composition and positivity rules;
 - which transformations preserve or cross the domain;
 - what selects a realized history; and
-- what detector record could distinguish the proposal.
+- what detector, reversal and independent replication could distinguish the proposal.
 
-Only then should it name the resulting Lie closure. A summary that begins with `Spin(2,3)`, treats the group as the programme's prior container, or describes the work primarily as a search for that symmetry has reversed the explanatory order.
+Only then should it name the resulting Lie closure. A summary that begins with `Spin(2,3)`, treats the group as the programme's prior container, describes the work primarily as a search for that symmetry or relegates the finesse pathway to its conclusion has preserved the old narrative.
 
 ## Authority boundary
 

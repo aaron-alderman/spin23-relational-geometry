@@ -33,8 +33,12 @@ test("the expanded narrative chapters are substantial rather than chapter stubs"
   }
   const admissibility = readFileSync(new URL("book/edition-3/chapters/08-admissibility-frontier.md", root), "utf8");
   assert.ok(admissibility.length >= 5000, "the admissibility chapter is still too light");
-  assert.match(admissibility, /The structure between Jordan and Lie/u);
-  assert.match(admissibility, /Detectors draw the practical boundary/u);
+  assert.match(admissibility, /The shift/u);
+  assert.match(admissibility, /new physics may begin not with higher energy but with greater finesse/iu);
+  assert.match(admissibility, /Why Jordan and Lie must be balanced/u);
+  assert.match(admissibility, /The finesse technology pathway/u);
+  assert.match(admissibility, /Hot off the press — the oriented seam becomes an experiment/u);
+  assert.match(admissibility, /Provisional integration note — 24 October 2026/u);
 });
 
 test("the expanded edition distributes its archetype grammar and visual layer", () => {
@@ -114,7 +118,7 @@ test("Furey claims link at the point of assertion to inspectable proof pages", (
 });
 
 test("every narrative assertion has its own expanded claim page", () => {
-  assert.equal(metadata.claimDetails.length, 98);
+  assert.equal(metadata.claimDetails.length, 101);
   assert.equal(new Set(metadata.claimDetails.map(detail => detail.slug)).size, metadata.claimDetails.length);
   for (const detail of metadata.claimDetails) {
     const chapterHtml = readFileSync(new URL(`docs/edition-3/${detail.chapter}.html`, root), "utf8");

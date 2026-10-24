@@ -1,19 +1,19 @@
 # The admissibility frontier
 
-## Jordan admission, typed realization and Lie transport
+## New physics by preserving distinctions
 
 **Edition 3.2 admissibility preview · 24 October 2026**
 
 ![Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon](../../docs/edition-3/assets/relational-geometry-hero.png)
 
-Read this book from admission outward. Jordan structure delimits positive states, responses and compositions; the typed admissibility region asks which carriers, histories, selectors and records remain jointly realizable; Lie structure describes transformation and transport of what has already been admitted. Spin₀(2,3) is one exact rank-two conformal completion in that passage, not the premise or centre of the programme.
+The next route to new physics may begin not with higher energy but with greater finesse: preserving phase, delay, boundary order, memory, orientation and cross-channel relation that ordinary measurements erase. This book follows that experimental problem backward into mathematics. Jordan structure delimits what can coexist and compose; Lie structure describes how the admitted domain moves; dynamics and detectors determine which distinctions survive as records. Spin₀(2,3) is one exact recovered completion in that passage, not its protagonist.
 
-> **Authority boundary.** This edition reports exact calculations, bounded constructions, conditional physical bridges and closed branches. It is not empirical confirmation, peer review or a derivation of the Standard Model. The strong claim that admissibility is ontologically prior to physics remains a research proposal; the atlas and its typed tests are the practical result established here.
+> **Authority boundary.** This edition reports exact calculations, bounded constructions, conditional physical bridges and closed branches. It is not empirical confirmation, peer review or a derivation of the Standard Model. The strong claim that admissibility is ontologically prior to physics remains a research proposal; the finesse pathway and its typed tests are the practical result established here.
 
 ## Contents
 
 1. [Front matter](chapters/00-front-matter.md) — **[▦ Ledger / governance](reading-key/status-governance.md)** · **[▤ Steward](reading-key/move-steward.md)** · How to read this volume
-2. [The admissibility frontier](chapters/08-admissibility-frontier.md) — **[◎ Interpretive map](reading-key/status-interpretive.md)** · **[⊕ Integrator](reading-key/move-integrator.md)** · Admission before symmetry
+2. [The admissibility frontier](chapters/08-admissibility-frontier.md) — **[◎ Interpretive map](reading-key/status-interpretive.md)** · **[⊕ Integrator](reading-key/move-integrator.md)** · New physics by finesse
 3. [The revised spine](chapters/01-the-revised-spine.md) — **[✓ Established](reading-key/status-established.md)** · **[⊕ Integrator](reading-key/move-integrator.md)** · One exact Jordan-to-Lie completion
 4. [One carrier, two faces, three relations](chapters/02-one-carrier-two-faces-three-relations.md) — **[✓ Established](reading-key/status-established.md)** · **[⌖ Cartographer](reading-key/move-cartographer.md)** · Why three is meaningful
 5. [The projective loop](chapters/03-projective-loop.md) — **[⊘ Obstruction / no-go](reading-key/status-obstruction.md)** · **[⌕ Auditor](reading-key/move-auditor.md)** · Möbius intuition, double covers and central sign
@@ -38,4 +38,4 @@ Read this book from admission outward. Jordan structure delimits positive states
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `3a6edbb8dd5ec68c87ca83b52a9751ee6fdffbb70f03d6327e3ba091fb32af62`
+Citation-set digest: `1cff7ffc7b1981a11c1933154e52d6b04b3687b2ac19f9a8ca05c8a54db01438`
