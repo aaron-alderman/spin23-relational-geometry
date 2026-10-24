@@ -1,0 +1,96 @@
+{
+  "protocol": "alp-three-generation-flavor-quotient-gate/1",
+  "date": "2026-10-25",
+  "targets": [
+    "OT-047",
+    "OT-048"
+  ],
+  "parent": "AZ-077",
+  "sourceConvention": {
+    "reference": "Bauer et al., arXiv:2012.12272v2, Eqs. (10), (11), and (41)-(43)",
+    "matrices": [
+      "c_Q",
+      "c_u",
+      "c_d",
+      "c_L",
+      "c_e"
+    ],
+    "equations": [
+      "k_D=V^dagger c_Q V",
+      "C_u=c_u-c_Q",
+      "C_d=c_d-k_D",
+      "C_e=c_e-c_L",
+      "A_2=Tr(3 c_Q+c_L)",
+      "ctilde_WW=c_WW-A_2/2"
+    ]
+  },
+  "ckmTransportCertificate": {
+    "V": [
+      [
+        0.6,
+        0.8,
+        0
+      ],
+      [
+        -0.3076923076923077,
+        0.23076923076923078,
+        0.9230769230769231
+      ],
+      [
+        0.7384615384615385,
+        -0.5538461538461539,
+        0.38461538461538464
+      ]
+    ],
+    "unitarityResidual": 2.220446049250313e-16,
+    "traceBefore": 4,
+    "traceAfter": 4,
+    "frobenius2Before": 14.579999999999998,
+    "frobenius2After": 14.580000000000004,
+    "invariantsPreserved": true,
+    "entriesChanged": true
+  },
+  "quotientCertificate": {
+    "correctedNullName": "completed B-L-type vector current, not baryon number alone",
+    "uniformMatrixShift": [
+      1,
+      1,
+      1,
+      -3,
+      -3
+    ],
+    "shiftAmount": 2.75,
+    "A2Before": 13,
+    "A2After": 13,
+    "massRecordsInvariant": true,
+    "weakAnomalyInvariant": true
+  },
+  "singletFlavorSplit": {
+    "realDimensionOfFiveHermitianThreeByThreeMatrices": 45,
+    "familySingletDimensions": 5,
+    "tracelessFlavorDimensions": 40,
+    "weakAnomalyRankOnCurrentMatrices": 1,
+    "weakAnomalyKernelDimension": 44,
+    "tracelessDirectionTrace": 0,
+    "A2Before": 13,
+    "A2AfterTracelessShift": 13,
+    "ctildeWWBefore": 0.5,
+    "ctildeWWAfterTracelessShift": 0.5,
+    "weakRecordBlind": true,
+    "fermionRecordsChange": true
+  },
+  "normalizationCertificate": {
+    "universalQCoefficient": 2,
+    "universalLCoefficient": -1,
+    "perFamilyA2": 5,
+    "threeFamilyTraceA2": 15,
+    "multiplicityRatio": 3
+  },
+  "boundary": {
+    "closed": "The three-generation tree-level map splits exactly into five family-singlet coordinates and forty traceless flavor coordinates. CKM rotation transports the left-handed quark matrix without adding a coordinate, while the weak anomaly sees only Tr(3 c_Q+c_L).",
+    "correction": "The AZ-076 null vector (1,1,1,-3) is B-L-type, not baryon number. Baryon number alone is weak-anomalous and is not a null direction at fixed c_WW.",
+    "scope": "The corpus five-coordinate source quotient is a family-universal gauge-typed slice, not the complete 45-real-dimensional flavor-matrix current space. Its anomaly normalization must declare whether it is per-family or generation-summed; the latter is three times the former on a universal three-family source.",
+    "open": "Full gauge/Yukawa RG evolution, finite weak matching, covariance, and physical amplitudes remain necessary. Traceless flavor directions cannot be inferred from a bosonic weak record and require flavor-sensitive records.",
+    "nextCalculation": "Use the finite flavor-changing down-sector matching term as a candidate second record for c_WW, while profiling c_tt, k_U, ctilde_GG, CKM and hadronic uncertainties."
+  }
+}

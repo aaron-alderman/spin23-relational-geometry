@@ -286,6 +286,9 @@ const sectionTaxonomy = {
   "Hot off the press — name the coordinates before reading the signs": "obstruction",
   "Hot off the press — the weak record hides one direction": "conditional",
   "Hot off the press — more energies do not add a coordinate": "obstruction",
+  "Hot off the press — three generations add flavor, not another anomaly": "conditional",
+  "Hot off the press — change the record, not just the energy": "experiment",
+  "Hot off the press — ask for the likelihood, not the plot": "obstruction",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -378,6 +381,9 @@ const sectionArchetype = {
   "Hot off the press — name the coordinates before reading the signs": "auditor",
   "Hot off the press — the weak record hides one direction": "translator",
   "Hot off the press — more energies do not add a coordinate": "auditor",
+  "Hot off the press — three generations add flavor, not another anomaly": "translator",
+  "Hot off the press — change the record, not just the energy": "builder",
+  "Hot off the press — ask for the likelihood, not the plot": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -743,6 +749,33 @@ admissibilitySections.splice(orientedSeamIndex + 30, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 31, 0, [
+  "Hot off the press — three generations add flavor, not another anomaly",
+  [
+    "**Provisional integration note — 25 October 2026.** The one-generation dictionary lifts to five Hermitian three-by-three current matrices. Their 45 real coordinates split into five family singlets and forty traceless flavor directions. The corpus's five-coordinate quotient is the family-universal source slice; it should not be described as the complete general flavor-matrix ALP theory.",
+    "CKM transport changes the entries seen in the down-quark mass basis but preserves trace and norm. The weak anomaly sees only \\(A_2=\\operatorname{Tr}(3\\mathbf c_Q+\\mathbf c_L)\\), a rank-one record on the 45-dimensional current space. Traceless flavor perturbations can therefore change fermion records while remaining invisible to the weak bosonic coefficient. More families add flavor structure, not another weak-anomaly coordinate.",
+    "The calculation also corrects an inherited name: the displayed null vector \\((1,1,1,-3)\\) is the restricted projection of completed \\(B-L\\), not baryon number alone. A family-universal generation-summed anomaly is three times its per-family normalization. The next bridge must freeze that normalization and use flavor-sensitive records instead of asking one bosonic detector to reconstruct the forty directions it necessarily discards.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 32, 0, [
+  "Hot off the press — change the record, not just the energy",
+  [
+    "**Provisional integration note — 25 October 2026.** The published finite weak matching contains the missing kind of record. A flavor-changing down-sector coefficient includes an explicit term proportional to the unprimed direct \\(c_{WW}\\), while the bosonic record measures \\(c_{WW}-A_2/2\\). The two idealized rows have nonzero determinant and the flavor row breaks the blind shift that survives every energy point of the bosonic record.",
+    "The exit is physically instrumented: \\(B\\to K^{(*)}a\\) and \\(K\\to\\pi a\\) probe the flavor-changing coefficient, and Belle/Belle II have already searched for the diphoton B-decay channel. But the relevant matching coefficient is only about \\(-2.65\\times10^{-5}\\) before CKM and detector folding. Inverting it amplifies error by roughly \\(3.8\\times10^4\\), so a published one-coupling limit is evidence that the detector arm exists, not proof that the two source coordinates are identified.",
+    "The buildable experiment is a joint likelihood: combine one W-associated high-energy kernel with binned visible or missing-energy flavor-decay data; profile top-current, gluonic, CKM, form-factor, lifetime, branching, acceptance and background uncertainties; then ask whether the smallest singular value survives. Success separates inherited anomaly response from a direct interaction. Failure after the full covariance closes this route and records exactly which distinction the available detectors erase.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 33, 0, [
+  "Hot off the press — ask for the likelihood, not the plot",
+  [
+    "**Provisional integration note — 25 October 2026.** The Belle/Belle II search supplies a real detector record: four exclusive B-decay modes, declared mass windows, 711 inverse femtobarns, an unbinned diphoton-mass fit, lifetime-dependent acceptance and a published one-coupling limit. It establishes where the flavor-changing arm touches experiment. It does not by itself preserve the distinctions needed for a joint \\((A_2,c_{WW})\\) inference.",
+    "An exact public recast requires six machine-readable objects: each mode's mass grid and profile likelihood, efficiency versus mass and lifetime, the correlated nuisance model, the background and resolution response, and the map from production and decay parameters to accepted yield. No such complete packet was found on the official publication, paper and HEPData search surfaces inspected on 25 October 2026. This is a public-availability boundary, not a claim that the collaboration lacks the information.",
+    "Digitizing published curves can orient the search but cannot reconstruct an unbinned likelihood or its covariance, so it cannot establish that the small second singular value survives profiling. The practical instruction is two-track: finish and freeze the common-basis forward kernels now; request the six-item release packet or perform the fit with collaboration-level access. A surviving rank would open the sixth coordinate. A collapse would map the detector quotient honestly.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -999,6 +1032,9 @@ const sectionEvidenceOverrides = {
   "Hot off the press — name the coordinates before reading the signs": ["corpus/programmes/admissibility/admissibility_75_operator_basis_covariance_and_cycle_boundary.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md", "corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md"],
   "Hot off the press — the weak record hides one direction": ["corpus/programmes/admissibility/admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md", "corpus/programmes/admissibility/admissibility_75_operator_basis_covariance_and_cycle_boundary.md", "corpus/programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md"],
   "Hot off the press — more energies do not add a coordinate": ["corpus/programmes/admissibility/admissibility_77_current_only_rg_stability_and_scale_sweep_no_go.md", "corpus/programmes/admissibility/admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md", "corpus/programmes/admissibility/admissibility_70_running_high_energy_rank_window.md"],
+  "Hot off the press — three generations add flavor, not another anomaly": ["corpus/programmes/admissibility/admissibility_78_three_generation_singlet_flavor_split_and_bl_correction.md", "corpus/programmes/admissibility/admissibility_76_alp_current_anomaly_quotient_and_sixth_coordinate_boundary.md", "corpus/programmes/lane-expansion/programme_lane_expansion_35_the_gauge_typed_source_quotient_has_one_anomaly_coordinate_and_no_incidence_eigenray.md"],
+  "Hot off the press — change the record, not just the energy": ["corpus/programmes/admissibility/admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md", "corpus/programmes/admissibility/admissibility_77_current_only_rg_stability_and_scale_sweep_no_go.md", "corpus/programmes/admissibility/admissibility_78_three_generation_singlet_flavor_split_and_bl_correction.md"],
+  "Hot off the press — ask for the likelihood, not the plot": ["corpus/programmes/admissibility/admissibility_80_belle_public_likelihood_release_gate.md", "corpus/programmes/admissibility/admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md", "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md"],
 };
 
 const evidenceReading = key => ({

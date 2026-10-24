@@ -1,0 +1,75 @@
+import { writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+
+const write = process.argv.includes("--write");
+const outputPath = resolve(import.meta.dirname, "../evidence/data/belle-alp-public-likelihood-availability-gate-v1.json");
+
+const releaseRequirements = [
+  "mass-hypothesis grid for each K and K* mode",
+  "per-mode profile likelihood or signal-yield likelihood at each mass point",
+  "signal efficiency as a joint function of ALP mass and lifetime",
+  "correlated nuisance model across the four modes and neighboring mass points",
+  "background-shape and mass-resolution nuisance response",
+  "mapping from production coefficient and decay model to accepted yield",
+];
+
+const publishedObjects = [
+  "four-mode extracted signal-yield and local-significance curves in Figure 3",
+  "combined expected and observed 90-percent g_aW limit curve in Figure 4",
+  "combined comparison curve in Figure 5",
+  "selection, fit, resolution, lifetime and systematic methodology in the article",
+  "single conservative 22.3-percent total systematic uncertainty used for all modes and mass hypotheses",
+];
+
+const result = {
+  protocol: "belle-alp-public-likelihood-availability-gate/1",
+  date: "2026-10-25",
+  targets: ["OT-048"],
+  parent: "AZ-079",
+  inspectedPrimarySurfaces: [
+    {
+      name: "Belle/Belle II publication record",
+      url: "https://docs.belle2.org/pub_data/publications/3783/",
+      linkedObjects: ["paper PDF", "arXiv", "INSPIRE", "JHEP"],
+      auxiliaryLikelihoodLinked: false,
+    },
+    {
+      name: "Belle II preprint 2025-017",
+      url: "https://docs.belle2.org/files/3783/BELLE2-PUB-DRAFT-2024-020/15/BELLE2-PUB-DRAFT-2024-020.pdf",
+      linkedObjects: publishedObjects,
+      auxiliaryLikelihoodLinked: false,
+    },
+    {
+      name: "HEPData title/collaboration search",
+      url: "https://www.hepdata.net/search/?q=Belle%20axion-like%20B%20K%20gamma%20gamma",
+      recordLocatedForThisAnalysis: false,
+    },
+  ],
+  paperExtraction: {
+    integratedLuminosityFb: 711,
+    upsilon4SEvents: 772000000,
+    modes: ["K_S^0", "K+", "K*0", "K*+"],
+    massRangeGeV: { K: [0.16, 4.50], KStar: [0.16, 4.20] },
+    fit: "unbinned maximum likelihood in diphoton invariant mass",
+    totalSystematicFraction: 0.223,
+    interpretation: "one direct aWW coupling with nearly unit diphoton branching fraction in the analyzed model",
+    publishedObjects,
+  },
+  recastGate: {
+    releaseRequirements,
+    requirementsPublishedMachineReadably: releaseRequirements.map(item => ({ item, available: false })),
+    exactJointRecastPossibleFromInspectedPublicObjects: false,
+    plotDigitizationPermittedUse: "orientation and rough sensitivity only",
+    plotDigitizationForbiddenUse: "claiming nuisance-profiled rank, covariance, or exclusion in the two-coordinate model",
+    reason: "Curves and aggregate limits do not retain the per-mode, per-mass likelihood and correlated efficiency/nuisance response needed to profile (A_2,c_WW) with arbitrary production and decay assumptions.",
+  },
+  boundary: {
+    closed: "The current official paper and publication page define the detector, fit and aggregate one-coupling result but do not expose the machine-readable likelihood packet required for an exact public two-coordinate recast.",
+    scope: "This is an availability statement for the inspected official surfaces on 25 October 2026, not a claim that the collaboration lacks the information or that no future release can supply it.",
+    usefulNow: "The public article fixes modes, mass range, fit family, resolution/lifetime dependence and systematic categories. These are sufficient to specify the request and build the theory-side forward model, but not to certify practical identifiability.",
+    nextAction: "Request or locate the six-item release packet; in parallel compute the complete W-associated and flavor-changing forward kernels so a released likelihood can be consumed without redefining the model after seeing data.",
+  },
+};
+
+if (write) await writeFile(outputPath, `${JSON.stringify(result, null, 2)}\n`, "utf8");
+console.log(JSON.stringify({ outputPath, ...result }, null, 2));

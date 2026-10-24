@@ -80,7 +80,7 @@ The map from (r) to ((c_t,c_b,a_2,\widetilde c_{WW})) has the null direction
 (1,1,1,-3,0).
 \]
 
-This is the baryon-current direction in the right-handed ALP convention. It preserves the two Yukawa differences, has no weak anomaly and does not move the weak bosonic coefficient. The executable witness shifts an arbitrary raw coefficient vector along this direction and verifies that all four translated coordinates remain unchanged.
+This is the projection of the completed (B-L)-type vector-current direction in the right-handed ALP convention, not baryon number alone. The charged-lepton coefficient, omitted from this restricted four-record slice, shifts by the same lepton charge as (c_L). The direction preserves the two displayed Yukawa differences, has no weak anomaly and does not move the weak bosonic coefficient. Baryon number alone is weak-anomalous. The executable witness shifts an arbitrary raw coefficient vector along the displayed projection and verifies that all four translated coordinates remain unchanged. [AZ-078](admissibility_78_three_generation_singlet_flavor_split_and_bl_correction.md) supplies the full matrix statement and correction.
 
 This is the practical meaning of a quotient: several descriptions of the underlying fields are the same physical point for these records. The Jordan-side object is the positive response on the resulting physical coordinates; the Lie-side transport changes representatives and scales. Neither licenses identifying the anomaly source with the direct bosonic operator.
 
@@ -91,7 +91,7 @@ Closed:
 - the signed one-generation tree-level translation in the cited normalization;
 - the minus signs (c_t=-v_u), (c_b=-v_d) on the zero-Higgs-current representative;
 - the weak anomaly factor (widetilde c_{WW}=c_{WW}-a_2/2);
-- the baryon null direction;
+- the completed (B-L)-type null direction on the restricted slice;
 - the invertible current-only map and its response congruence;
 - the non-identifiability direction when (c_{WW}) is free.
 

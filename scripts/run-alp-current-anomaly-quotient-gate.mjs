@@ -19,7 +19,9 @@ const derivativeToInvariant = [
   [3, 0, 0, 1, 0],
   [-1.5, 0, 0, -0.5, 1],
 ];
-const baryonNull = [1, 1, 1, -3, 0];
+// Projection of the completed B-L vector current onto this restricted
+// (c_Q,c_u,c_d,c_L,c_WW) slice.  It is not baryon number alone.
+const bMinusLNull = [1, 1, 1, -3, 0];
 
 // In the corpus all-left-handed convention and the non-redundant c_H=0 basis:
 // v_u=c_Q-c_u=-c_t, v_d=c_Q-c_d=-c_b.
@@ -36,7 +38,7 @@ const currentOnlyMap = [
 ];
 
 const rawExample = [2, 7, 5, -1, 11];
-const shiftedExample = rawExample.map((x, i) => x + 4 * baryonNull[i]);
+const shiftedExample = rawExample.map((x, i) => x + 4 * bMinusLNull[i]);
 const invariantExample = matVec(derivativeToInvariant, rawExample);
 const shiftedInvariantExample = matVec(derivativeToInvariant, shiftedExample);
 const measuredExample = matVec(corpusToMeasured, [5, 3, 5, 11]);
@@ -67,13 +69,14 @@ const result = {
     derivativeToInvariant,
   },
   quotientCertificate: {
-    baryonNull,
-    imageOfBaryonNull: matVec(derivativeToInvariant, baryonNull),
+    nullDirectionName: "projection of completed B-L, not baryon number alone",
+    bMinusLNull,
+    imageOfBMinusLNull: matVec(derivativeToInvariant, bMinusLNull),
     rawExample,
     shiftedExample,
     invariantExample,
     shiftedInvariantExample,
-    invariantUnderBaryonShift: invariantExample.every((x, i) => close(x, shiftedInvariantExample[i])),
+    invariantUnderBMinusLShift: invariantExample.every((x, i) => close(x, shiftedInvariantExample[i])),
   },
   corpusTranslation: {
     declaredSlice: "one diagonal generation, corpus all-left-handed convention, redundant Higgs-current coefficient fixed to c_H=0",

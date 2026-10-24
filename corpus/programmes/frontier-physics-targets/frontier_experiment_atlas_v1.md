@@ -1,7 +1,7 @@
 # Frontier experiment atlas v1
 
 **Date:** 2026-10-24  
-**Coverage:** 20/20 frontier areas; 50/50 maintained topics; 35/35 detector bundles.
+**Coverage:** 20/20 frontier areas; 50/50 maintained topics; 36/36 detector bundles.
 
 This atlas converts every canonical frontier into a realistic controlled experiment. “Experiment” is used in the broad scientific sense: a laboratory intervention where a physical carrier exists, a reproducible computation where the object is discrete, and a theorem/falsification benchmark where uniform limits or an action are the actual missing datum. A blocked fundamental frontier is not disguised as build-ready hardware.
 
@@ -29,6 +29,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 | EX-018 | Consistency, scattering and continuum control | theorem_computation | ready_now | 6–18 months depending on whether a theorem survives |
 | EX-019 | Flavour, gravity and cosmology | conditional_hybrid | conditional_on_action | 12–36 months after a frozen action and matching packet exist |
 | EX-020 | Exceptional and unification interpretation | theory_computation | conditional_on_model | 12–36 months for one fully specified candidate |
+| EX-021 | Flavour, gravity and cosmology | public_data_recast_then_joint_experiment | specified_source_likelihood_required | 3–9 months for a public-likelihood recast; experiment-internal joint fit depends on access |
 
 ## Experiment cards
 
@@ -125,7 +126,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Indicative scale:** 6–10 weeks; modelling, statistics and domain-review trio  
 **Topics:** OT-001, OT-010, OT-019, OT-021, OT-033, OT-034, OT-035, OT-043, OT-044, OT-048
 
-**Detector bundles:** DET-002, DET-003, DET-026, DET-029, DET-030
+**Detector bundles:** DET-002, DET-003, DET-026, DET-029, DET-030, DET-036
 
 **Platform.** A benchmark mixing real declaration trees, driven-oscillator records, five-coordinate incidence records and synthetic mechanism pairs with controlled collisions.
 
@@ -741,7 +742,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Indicative scale:** 12–24 months after a source-native map is written  
 **Topics:** OT-017, OT-024, OT-025, OT-026, OT-027, OT-035, OT-038, OT-039, OT-042, OT-045, OT-046, OT-047, OT-048, OT-049, OT-050
 
-**Detector bundles:** DET-027, DET-035
+**Detector bundles:** DET-027, DET-035, DET-036
 
 **Platform.** A photonic three-mode chip and an acoustic or microwave three-port emulator implementing the same declared A2 operation in native units.
 
@@ -827,7 +828,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Indicative scale:** 12–36 months after a frozen action and matching packet exist  
 **Topics:** OT-028, OT-029, OT-030, OT-031, OT-042, OT-047, OT-048, OT-049, OT-050
 
-**Detector bundles:** DET-029, DET-031, DET-032, DET-033, DET-034, DET-035
+**Detector bundles:** DET-029, DET-031, DET-032, DET-033, DET-034, DET-035, DET-036
 
 **Platform.** A rotating unpolarized source mass near a K–Rb–Ne comagnetometer or polarized spin sensor, joined to collider/flavour and cosmological public likelihoods through one action.
 
@@ -905,6 +906,53 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Useful null result.** The construction relies on dimension matches, arbitrary embeddings or compensating free parameters.
 
 **Stop rule.** Terminate a candidate immediately on anomaly, ghost, unstable coloured direction or underdetermined matching.
+
+---
+
+### EX-021 — Joint W-associated and flavor-changing meson ALP fit
+
+**Frontier:** FA-19 — Flavour, gravity and cosmology (sixth-coordinate detector quotient)  
+**Mode/readiness:** public_data_recast_then_joint_experiment; specified_source_likelihood_required  
+**Indicative scale:** 3–9 months for a public-likelihood recast; experiment-internal joint fit depends on access  
+**Topics:** OT-047, OT-048
+
+**Detector bundles:** DET-029, DET-036
+
+**Platform.** A common ALP EFT likelihood joining a high-energy W-associated response with Belle/Belle II or successor B-to-K(*)a visible and missing-energy bins.
+
+**Hypothesis.** The bosonic row c_WW-A_2/2 and the finite flavor-changing row proportional to unprimed c_WW retain nuisance-profiled rank two.
+
+**Interventions**
+
+- Scan the ALP mass and lifetime on one shared grid
+- Separate charged/neutral B and K/K* categories
+- Combine visible resonance and missing-energy categories where available
+- Hold out at least one decay or collider category until the joint coefficients are frozen
+
+**Recorded observables**
+
+- W-associated signed response coefficients and covariance
+- B-to-K(*) diphoton, dilepton or missing-energy binned likelihood
+- Profiled smallest singular value for (A_2,c_WW)
+- Held-out category prediction
+
+**Controls**
+
+- One-coupling g_aW interpretation
+- Current-only c_WW=0 hypothesis
+- Mass sidebands and lifetime/acceptance closure
+- CKM and form-factor covariance
+- Alternative ALP branching-fraction models
+
+**Analysis.** Transport every coefficient through one frozen basis, running and weak-threshold dictionary. Profile current, gluonic, CKM, hadronic, decay and detector nuisances; compare the profiled rank-two model with its exact rank-one null and current-only restriction.
+
+**Decisive positive result.** The second profiled singular value clears its preregistered threshold and the joint coefficients predict the held-out category without refitting.
+
+**Useful null result.** Loop suppression and nuisances collapse the second direction, yielding a documented detector quotient rather than a false A_2 measurement.
+
+**Stop rule.** Do not claim separation from published one-coupling limits or an idealized nonzero Jacobian; stop at the residual quotient unless the full covariance retains rank two.
+
+**Primary precedents.** [https://arxiv.org/abs/2012.12272](https://arxiv.org/abs/2012.12272); [https://arxiv.org/abs/2507.01249](https://arxiv.org/abs/2507.01249)
 
 ## Execution order
 

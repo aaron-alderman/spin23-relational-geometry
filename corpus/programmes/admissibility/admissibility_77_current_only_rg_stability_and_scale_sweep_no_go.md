@@ -8,6 +8,8 @@
 **Generator:** [analytic running witness](../../../scripts/run-alp-current-only-rg-stability-gate.mjs)  
 **Verifier:** [RG-stability certificate](../../../verification/admissibility/verify_alp_current_only_rg_stability_gate.mjs)
 
+**Continuation:** [AZ-078](admissibility_78_three_generation_singlet_flavor_split_and_bl_correction.md) lifts the dictionary to flavor matrices, corrects the null-current name to completed (B-L), and separates the five family singlets from forty traceless flavor directions.
+
 ## Result
 
 The sixth-coordinate fork is not an artifact that ordinary running automatically repairs.

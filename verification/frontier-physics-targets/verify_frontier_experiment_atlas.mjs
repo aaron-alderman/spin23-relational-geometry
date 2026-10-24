@@ -14,15 +14,18 @@ const requiredText = ["title", "mode", "readiness", "estimate", "platform", "hyp
 const requiredLists = ["intervention", "record", "controls", "topicIds", "detectorIds"];
 
 if (atlas.schema !== "frontier.experiment-atlas/1") failures.push(`Unexpected schema ${atlas.schema}`);
-if (atlas.experiments.length !== areaIds.size) failures.push(`${atlas.experiments.length} experiments for ${areaIds.size} frontier areas`);
-const seenExperiments = new Set(), seenAreas = new Set(), coveredTopics = new Set(), coveredDetectors = new Set();
+if (atlas.experiments.length < areaIds.size) failures.push(`${atlas.experiments.length} experiments for ${areaIds.size} frontier areas`);
+const seenExperiments = new Set(), seenAreas = new Set(), portfolioAreas = new Set(), coveredTopics = new Set(), coveredDetectors = new Set();
 
 for (const experiment of atlas.experiments) {
   if (seenExperiments.has(experiment.id)) failures.push(`Duplicate experiment ${experiment.id}`);
   seenExperiments.add(experiment.id);
   if (!areaIds.has(experiment.frontierAreaId)) failures.push(`${experiment.id}: unknown area ${experiment.frontierAreaId}`);
-  if (seenAreas.has(experiment.frontierAreaId)) failures.push(`Multiple experiments for ${experiment.frontierAreaId}`);
   seenAreas.add(experiment.frontierAreaId);
+  if (experiment.crosswalkScope !== "focused") {
+    if (portfolioAreas.has(experiment.frontierAreaId)) failures.push(`Multiple portfolio experiments for ${experiment.frontierAreaId}`);
+    portfolioAreas.add(experiment.frontierAreaId);
+  }
   for (const key of requiredText) if (typeof experiment[key] !== "string" || !experiment[key].trim()) failures.push(`${experiment.id}: missing ${key}`);
   for (const key of requiredLists) if (!Array.isArray(experiment[key]) || !experiment[key].length) failures.push(`${experiment.id}: missing ${key}`);
   if ((experiment.intervention?.length ?? 0) < 3 || (experiment.record?.length ?? 0) < 3 || (experiment.controls?.length ?? 0) < 3) failures.push(`${experiment.id}: protocol lacks intervention/record/control depth`);
@@ -36,18 +39,26 @@ for (const experiment of atlas.experiments) {
   }
   const expectedTopics = topics.topics.filter((topic) => topic.frontierAreaIds.includes(experiment.frontierAreaId)).map((topic) => topic.id).sort();
   const expectedDetectors = detectors.detectors.filter((detector) => detector.frontierAreaIds.includes(experiment.frontierAreaId)).map((detector) => detector.id).sort();
-  if (JSON.stringify([...experiment.topicIds].sort()) !== JSON.stringify(expectedTopics)) failures.push(`${experiment.id}: topic crosswalk drift`);
-  if (JSON.stringify([...experiment.detectorIds].sort()) !== JSON.stringify(expectedDetectors)) failures.push(`${experiment.id}: detector crosswalk drift`);
+  if (experiment.crosswalkScope === "focused") {
+    if (!experiment.topicIds.every(id => expectedTopics.includes(id))) failures.push(`${experiment.id}: focused topic outside area crosswalk`);
+    if (!experiment.detectorIds.every(id => expectedDetectors.includes(id))) failures.push(`${experiment.id}: focused detector outside area crosswalk`);
+  } else {
+    if (JSON.stringify([...experiment.topicIds].sort()) !== JSON.stringify(expectedTopics)) failures.push(`${experiment.id}: topic crosswalk drift`);
+    if (JSON.stringify([...experiment.detectorIds].sort()) !== JSON.stringify(expectedDetectors)) failures.push(`${experiment.id}: detector crosswalk drift`);
+  }
   for (const url of experiment.precedents ?? []) if (!/^https:\/\//.test(url)) failures.push(`${experiment.id}: malformed precedent ${url}`);
 }
 
 for (const id of areaIds) if (!seenAreas.has(id)) failures.push(`Uncovered frontier area ${id}`);
+for (const id of areaIds) if (!portfolioAreas.has(id)) failures.push(`No portfolio experiment for frontier area ${id}`);
 for (const id of topicIds) if (!coveredTopics.has(id)) failures.push(`Uncovered topic ${id}`);
 for (const id of detectorIds) if (!coveredDetectors.has(id)) failures.push(`Uncovered detector ${id}`);
 for (const id of ["EX-019", "EX-020"]) {
   const experiment = atlas.experiments.find((item) => item.id === id);
   if (!experiment?.readiness.includes("conditional")) failures.push(`${id}: fundamental frontier is not marked conditional`);
 }
+const sixthCoordinate = atlas.experiments.find((item) => item.id === "EX-021");
+if (sixthCoordinate?.crosswalkScope !== "focused" || !sixthCoordinate.detectorIds.includes("DET-036")) failures.push("EX-021: focused sixth-coordinate detector experiment missing");
 
 if (failures.length) {
   console.error(JSON.stringify({ result: "fail", failures }, null, 2));

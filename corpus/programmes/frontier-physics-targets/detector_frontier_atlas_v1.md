@@ -96,6 +96,7 @@ These cover FA-11 and FA-13–FA-15. The immediate computational edge is the low
 - **DET-028 — arithmetic lattice and code invariants:** exact Gram, discriminant, norm, weight, distance and radical data. Wave 7.71 adds restricted logical-group order, Pauli-orbit size, forbidden-transition and leakage records, with generator removal, a universal-compiler positive control and held-out gate words. These records verify the declared finite alphabet without paying for unrestricted logical tomography.
 - **DET-029 — efficient information:** nuisance-projected Fisher/Schur separation and information per calibrated cost. Wave 7.65 adds held-out modulation classification and latent-depth error, with exact power-only equivalence as a mandatory null control. Wave 7.70 requires model-containment testing before classification: the normalized G2 transfer lies exactly inside the generic two-mode family, so only the pre-fold rank jump remains discriminating.
 - **DET-030 — complexity card:** preparation, sampling, detection, verification and error scaling.
+- **DET-036 — flavor-changing meson ALP likelihood:** binned visible and missing-energy (B\to K^{(*)}a) records, decay-length acceptance and the nuisance-profiled ((A_2,c_{WW})) information block. AZ-079 shows that the finite matching row breaks the weak-record null direction in principle; mass sidebands, charged/neutral and (K/K^*) splits, form-factor covariance and a one-coupling comparator decide whether that rank survives in practice.
 
 These span FA-03 and FA-16–FA-18. DET-027 is sufficient for the declared emulator, not yet for a physical relation carrier.
 
@@ -128,6 +129,7 @@ These are called missing detectors because no corpus-specific model presently ma
 | Is an invariant stable across scale/disorder? | DET-025 + DET-026 + DET-030 |
 | Does the formal relation carrier reconstruct? | DET-027 + withheld channels |
 | Is an exceptional arithmetic identification possible? | DET-028 plus a missing DET-035 |
+| Can inherited anomaly response be separated from a direct weak operator? | W-associated kernel + DET-029 + DET-036 |
 | Is new physics distinguishable? | relevant physical bundle + DET-029 + DET-035 |
 
 ## 4. Admission rule

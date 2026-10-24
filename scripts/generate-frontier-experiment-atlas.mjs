@@ -216,6 +216,18 @@ const designs = [
     controls: ["Basis and embedding changes", "Known inconsistent truncations", "Parameter-count audit", "Generic low-energy EFT baseline"],
     analysis: "Use a sequential gate: failure at any exact consistency stage prevents phenomenological fitting; successful candidates are compared by predictive compression.",
     success: "One anomaly-free stable vacuum produces a no-refit low-energy prediction that beats the independent EFT.", nullValue: "The construction relies on dimension matches, arbitrary embeddings or compensating free parameters.", stopRule: "Terminate a candidate immediately on anomaly, ghost, unstable coloured direction or underdetermined matching."
+  },
+  {
+    id: "EX-021", area: "FA-19", title: "Joint W-associated and flavor-changing meson ALP fit", mode: "public_data_recast_then_joint_experiment", readiness: "specified_source_likelihood_required", estimate: "3–9 months for a public-likelihood recast; experiment-internal joint fit depends on access",
+    crosswalkScope: "focused", boundaryType: "sixth-coordinate detector quotient", topicIds: ["OT-047", "OT-048"], detectorIds: ["DET-029", "DET-036"],
+    platform: "A common ALP EFT likelihood joining a high-energy W-associated response with Belle/Belle II or successor B-to-K(*)a visible and missing-energy bins.",
+    hypothesis: "The bosonic row c_WW-A_2/2 and the finite flavor-changing row proportional to unprimed c_WW retain nuisance-profiled rank two.",
+    intervention: ["Scan the ALP mass and lifetime on one shared grid", "Separate charged/neutral B and K/K* categories", "Combine visible resonance and missing-energy categories where available", "Hold out at least one decay or collider category until the joint coefficients are frozen"],
+    record: ["W-associated signed response coefficients and covariance", "B-to-K(*) diphoton, dilepton or missing-energy binned likelihood", "Profiled smallest singular value for (A_2,c_WW)", "Held-out category prediction"],
+    controls: ["One-coupling g_aW interpretation", "Current-only c_WW=0 hypothesis", "Mass sidebands and lifetime/acceptance closure", "CKM and form-factor covariance", "Alternative ALP branching-fraction models"],
+    analysis: "Transport every coefficient through one frozen basis, running and weak-threshold dictionary. Profile current, gluonic, CKM, hadronic, decay and detector nuisances; compare the profiled rank-two model with its exact rank-one null and current-only restriction.",
+    success: "The second profiled singular value clears its preregistered threshold and the joint coefficients predict the held-out category without refitting.", nullValue: "Loop suppression and nuisances collapse the second direction, yielding a documented detector quotient rather than a false A_2 measurement.", stopRule: "Do not claim separation from published one-coupling limits or an idealized nonzero Jacobian; stop at the residual quotient unless the full covariance retains rank two.",
+    precedents: ["https://arxiv.org/abs/2012.12272", "https://arxiv.org/abs/2507.01249"]
   }
 ];
 

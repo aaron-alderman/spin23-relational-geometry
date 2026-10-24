@@ -1,0 +1,72 @@
+{
+  "protocol": "alp-fcnc-sixth-coordinate-gate/1",
+  "date": "2026-10-25",
+  "targets": [
+    "OT-048"
+  ],
+  "parent": "AZ-078",
+  "sourceConvention": {
+    "primaryReference": "Bauer et al., arXiv:2012.12272v2, Eqs. (60), (68), and (70)-(74)",
+    "experimentalReference": "Belle and Belle II Collaborations, arXiv:2507.01249",
+    "physicalInputs": {
+      "alpha": 0.007815552950371238,
+      "sin2ThetaW": 0.23122,
+      "mtGeV": 172.69,
+      "mWGeV": 80.377,
+      "higgsVevGeV": 246.22,
+      "yTop": 0.9918793765177882
+    },
+    "xTop": 4.616053078638827,
+    "loopFunction": 0.26341595731557943,
+    "directWeakBracketCoefficient": -0.004251261106772971,
+    "directWeakMatchingCoefficient": -0.000026485963258083206,
+    "equation": "Delta k_D contains K_W c_WW V_ti^* V_tj with K_W=[y_t^2/(16 pi^2)][-3 alpha F(x_t)/(2 pi s_w^2)]"
+  },
+  "rankCertificate": {
+    "coordinates": [
+      "A_2",
+      "c_WW"
+    ],
+    "weakBosonicRow": [
+      -0.5,
+      1
+    ],
+    "fcncDirectRow": [
+      0,
+      -0.000026485963258083206
+    ],
+    "determinant": 0.000013242981629041603,
+    "fullRank": true,
+    "oldBlindDirection": [
+      2,
+      1
+    ],
+    "weakImageOfBlindDirection": 0,
+    "fcncImageOfBlindDirection": -0.000026485963258083206,
+    "blindDirectionBroken": true,
+    "inverseSensitivityAmplification": 37755.847890290024
+  },
+  "nuisanceFirewall": {
+    "otherSourceCoordinates": [
+      "c_tt",
+      "k_U",
+      "ctilde_GG",
+      "CKM"
+    ],
+    "detectorAndHadronicCoordinates": [
+      "B-to-K form factors",
+      "ALP decay branching fraction",
+      "lifetime and acceptance",
+      "mass resolution",
+      "background model"
+    ],
+    "publishedLimitScope": "The Belle B->K(*)a(a->gamma gamma) result reports a one-coupling g_aW interpretation. It is evidence that the detector record exists, not a ready-made two-coordinate likelihood.",
+    "admissionRule": "Promote the pair to an identified (A_2,c_WW) measurement only after the nuisance-profiled Fisher/Jacobian retains rank two with the full experimental covariance."
+  },
+  "boundary": {
+    "closed": "The published finite weak matching supplies a mathematically independent row: its flavor-changing down-sector term is proportional to the unprimed direct c_WW, whereas the weak bosonic record sees c_WW-A_2/2. The two idealized rows have nonzero determinant.",
+    "notClosed": "No existing published single-coupling limit performs the required joint fit, and the direct matching coefficient is loop suppressed. Existing B-decay data therefore nominate a realistic detector arm but do not yet resolve the sixth coordinate.",
+    "implication": "The scale-sweep no-go has a concrete exit. Add a different process family—flavor-changing B or K decay—not another energy point of the same W-associated coefficient.",
+    "nextCalculation": "Construct a joint likelihood using one W-associated high-energy kernel and B->K(*)a bins (visible and/or missing-energy), profile the listed current, CKM, form-factor, decay and detector nuisances, and test the smallest singular value against the preregistered resolution threshold."
+  }
+}
