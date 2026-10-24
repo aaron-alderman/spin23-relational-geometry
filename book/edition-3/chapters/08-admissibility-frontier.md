@@ -271,6 +271,10 @@ That first quantity-level datum now exists in a deliberately ordinary setting. A
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-5.md)
 
+The positive-measure branch now closes at scalar rank one. The same RC network supplies a positive relaxation atom with units of siemens per second; evaluating it at the held-out frequency recovers the Schur correction in siemens, while the coupling sign is correctly lost in the positive quotient. A negative atom and an incorrect dimension delta are refused. This shows that the reasoning seam can carry both a physical response operator and its spectral measure. It does not reconstruct an unrestricted operator-valued measure, generate a Jordan product or predict laboratory data. Those remaining gates require new source information, not another wrapper.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-6.md)
+
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
 ## Hot off the press — the phase target is relative, not absolute
 

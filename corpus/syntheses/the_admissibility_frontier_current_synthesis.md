@@ -237,9 +237,14 @@ changes the output dimension to amperes; and a computationally held-out current
 is recovered by an independent Kirchhoff solve to numerical precision. The
 operator assignment is now real for this conventional witness. No Jordan
 product, generating action or independently measured detector record follows.
-The next bridge is therefore source-native data or the positive-operator-measure
-path. A residue surviving frozen conventional and nuisance models would be the
-point at which a new-physics reading could reopen.
+[AZ-086](../programmes/admissibility/admissibility_86_positive_spectral_atom_and_measure_evaluation_witness.md)
+then carries the positive-operator-measure step at scalar rank one. The RC pole
+has a positive spectral weight in siemens per second, its Stieltjes evaluation
+recovers the held-out Schur contribution, and the lost coupling sign is recorded
+rather than silently reconstructed. The next bridge is therefore source-native
+measured data or a product identity induced by source composition. A residue
+surviving frozen conventional and nuisance models would be the point at which a
+new-physics reading could reopen.
 
 The distinction is now algebraically tested rather than merely asserted. On the
 pinned Claimipedia capture, arbitrary finite relationship paths contribute one

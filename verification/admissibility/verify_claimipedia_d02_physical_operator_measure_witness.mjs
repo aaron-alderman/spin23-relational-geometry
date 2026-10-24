@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+
+const root = resolve(import.meta.dirname, "../..");
+const evidence = JSON.parse(await readFile(resolve(root, "evidence/data/claimipedia-d02-physical-operator-measure-witness-v1.json"), "utf8"));
+assert.equal(evidence.protocol, "claimipedia-d02-physical-operator-measure-witness/1");
+assert.equal(evidence.decision.passed, true);
+assert.deepEqual(evidence.composition.steps, ["extract-positive-operator-measure", "evaluate-positive-atom-at-held-out-frequency"]);
+assert.equal(evidence.composition.dimensionRejectedTransformationCount, 0);
+assert.equal(evidence.extractedAtom.positive, true);
+assert.ok(Math.abs(evidence.extractedAtom.identities.poleTimesCapacitanceS - evidence.extractedAtom.identities.expectedTotalInternalConductanceS) < 1e-15);
+assert.ok(Math.abs(evidence.extractedAtom.identities.atomTimesCapacitanceSiemensSquared - evidence.extractedAtom.identities.expectedCouplingConductanceSquaredSiemensSquared) < 1e-20);
+assert.ok(evidence.heldOutPrediction.correctionErrorS < 1e-15);
+assert.equal(evidence.negativeControls.wrongExtractionDeltaCandidateCount, 0);
+assert.equal(evidence.negativeControls.wrongExtractionDeltaRejected, true);
+assert.equal(evidence.negativeControls.missingEvaluationCandidateCount, 0);
+assert.equal(evidence.negativeControls.signedResidueControlRejectedByPositivity, true);
+assert.equal(evidence.decision.fullOperatorMeasureReconstructedFromFiniteProbes, false);
+assert.equal(evidence.decision.jordanProductExtracted, false);
+assert.equal(evidence.decision.independentlyMeasuredDetectorRecordPredicted, false);
+assert.equal(evidence.decision.newPhysicsEvidence, false);
+console.log(JSON.stringify({ result: "pass", protocol: evidence.protocol, graphSha256: evidence.graphSha256, atomWeightSiemensPerSecond: evidence.extractedAtom.atomWeightSiemensPerSecond, correctionErrorS: evidence.heldOutPrediction.correctionErrorS, boundary: "scalar physical atom only; general operator reconstruction, Jordan product and measured record remain open" }, null, 2));

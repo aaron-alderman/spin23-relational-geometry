@@ -1,0 +1,105 @@
+{
+  "protocol": "claimipedia-d02-physical-operator-measure-witness/1",
+  "date": "2026-10-25",
+  "graphSha256": "f4a15f44e5afeab6f64e0beada0c35738d62d3c3218031cdf367cb48861d858c",
+  "quantityConvention": {
+    "spectralCoordinate": "Laplace relaxation rate in inverse seconds; radians are dimensionless",
+    "dimensions": {
+      "responseAdmittanceSiemens": {
+        "mass": -1,
+        "length": -2,
+        "time": 3,
+        "current": 2,
+        "temperature": 0,
+        "amount": 0,
+        "luminousIntensity": 0
+      },
+      "atomicMeasureWeightSiemensPerSecond": {
+        "mass": -1,
+        "length": -2,
+        "time": 2,
+        "current": 2,
+        "temperature": 0,
+        "amount": 0,
+        "luminousIntensity": 0
+      },
+      "evaluatedCorrectionSiemens": {
+        "mass": -1,
+        "length": -2,
+        "time": 3,
+        "current": 2,
+        "temperature": 0,
+        "amount": 0,
+        "luminousIntensity": 0
+      }
+    }
+  },
+  "fixture": {
+    "conductanceInternalS": 0.0008,
+    "couplingConductanceS": 0.0025,
+    "capacitanceInternalF": 4.7e-7,
+    "heldOutFrequencyHz": 997
+  },
+  "extractedAtom": {
+    "poleRatePerSecond": 7021.276595744681,
+    "atomWeightSiemensPerSecond": 13.297872340425533,
+    "positive": true,
+    "couplingSignLost": true,
+    "identities": {
+      "poleTimesCapacitanceS": 0.0033,
+      "expectedTotalInternalConductanceS": 0.0033,
+      "atomTimesCapacitanceSiemensSquared": 0.00000625,
+      "expectedCouplingConductanceSquaredSiemensSquared": 0.00000625
+    }
+  },
+  "heldOutPrediction": {
+    "atomicCorrectionS": {
+      "re": 0.0010545267675299928,
+      "im": -0.0009408416888889264
+    },
+    "directBlockCorrectionS": {
+      "re": 0.0010545267675299925,
+      "im": -0.0009408416888889263
+    },
+    "correctionErrorS": 2.42434975903054e-19,
+    "status": "recovered"
+  },
+  "composition": {
+    "protocol": "scientific-derivation-composition/2",
+    "candidateCount": 1,
+    "steps": [
+      "extract-positive-operator-measure",
+      "evaluate-positive-atom-at-held-out-frequency"
+    ],
+    "assumptions": [
+      "the internal branch is a passive RC admittance with positive conductance and capacitance",
+      "the relaxation coordinate is a rate in inverse seconds",
+      "the scalar atom is the rank-one specialization of the positive operator-valued measure",
+      "the held-out evaluation point is s=i 2 pi 997 per second",
+      "the pole rate and atom weight are fixed from component values before evaluation"
+    ],
+    "losses": [
+      "the coupling square-root sign is not retained by the positive residue"
+    ],
+    "dimensionRejectedTransformationCount": 0
+  },
+  "negativeControls": {
+    "wrongExtractionDeltaCandidateCount": 0,
+    "wrongExtractionDeltaRejected": true,
+    "missingEvaluationCandidateCount": 0,
+    "signedResidueControlRejectedByPositivity": true
+  },
+  "decision": {
+    "passed": true,
+    "positiveOperatorMeasureUnitsAssigned": true,
+    "positiveAtomExtracted": true,
+    "heldOutMeasureContributionPredicted": true,
+    "fullOperatorMeasureReconstructedFromFiniteProbes": false,
+    "jordanProductExtracted": false,
+    "independentlyMeasuredDetectorRecordPredicted": false,
+    "newPhysicsEvidence": false,
+    "ot026Closed": false,
+    "ot027Closed": false
+  },
+  "implication": "The D02 boundary-measure step now has one physical scalar specialization. A passive RC pole yields a positive atomic spectral weight in siemens per second, and Stieltjes evaluation recovers the held-out Schur correction in siemens. The coupling sign is correctly lost. This is not reconstruction of a general operator-valued measure, a Jordan product, a measured detector prediction or new-physics evidence."
+}

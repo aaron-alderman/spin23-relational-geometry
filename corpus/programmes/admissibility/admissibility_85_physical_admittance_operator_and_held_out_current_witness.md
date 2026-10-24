@@ -8,6 +8,8 @@
 **Generator:** [physical witness runner](../../../scripts/run-claimipedia-d02-physical-admittance-witness.mjs)  
 **Verifier:** [physical witness certificate](../../../verification/admissibility/verify_claimipedia_d02_physical_admittance_witness.mjs)
 
+**Continued by:** [AZ-086 positive spectral atom](admissibility_86_positive_spectral_atom_and_measure_evaluation_witness.md)
+
 ## Result
 
 The first quantity-level D02 path now closes for an ordinary physical system. A reciprocal two-node RC network is represented by its calibrated nodal-admittance matrix. Its entries carry siemens, not the dimensionless record units used in AZ-084. The fixed-support Schur step maps the two-node matrix to a one-port effective admittance, still in siemens. Applying a declared voltage probe then maps that admittance to a current in amperes.
@@ -58,7 +60,7 @@ OT-027 is narrowed but not closed. One operator assignment exists; the closure c
 The next useful fork is now clean.
 
 - **Theoretical engineering:** attach the same prediction to a source-native measured impedance or admittance dataset, freeze the nuisance and calibration model, and predict a genuinely withheld frequency or component configuration.
-- **Algebraic frontier:** apply the quantity-layer discipline to `extract-positive-operator-measure`, then ask whether composition predicts a positive measure identity or rank statement not written into an edge.
+- **Algebraic frontier:** AZ-086 applies the quantity-layer discipline to `extract-positive-operator-measure`; the remaining question is whether source composition can predict a product identity rather than receive one as an authored edge.
 - **New-physics frontier:** only reopen that reading if the calibrated measured record disagrees after the conventional circuit family, parasitics and uncertainty model have been fixed.
 
 The lesson is modest but important: the metadata barrier was real, and now one physical bridge passes it. The remaining question is no longer whether the machinery can carry units. It is whether source-native structure can remove freedom or predict a record that ordinary modeling did not already guarantee.

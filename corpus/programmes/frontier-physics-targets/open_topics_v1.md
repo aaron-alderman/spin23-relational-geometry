@@ -118,6 +118,14 @@ an independent Kirchhoff solve. OT-027 is narrowed to source-native measured
 data and a rule generating both operator and detector map. OT-026 remains open:
 no Jordan product or identity has been extracted from relation composition.
 
+[AZ-086](../admissibility/admissibility_86_positive_spectral_atom_and_measure_evaluation_witness.md)
+extends the physical bridge to `extract-positive-operator-measure`. The RC pole
+becomes a positive atom in siemens per second, and its held-out Stieltjes
+contribution is recovered independently. The atom correctly loses the coupling
+sign. This closes the scalar measure translation, not general operator
+reconstruction or graph-to-Jordan extraction. The next datum must be a
+source-native measured response or a non-imported product identity.
+
 Wave 7.73 sharpens OT-050 without closing it. The reduced free-Majorana
 (T_1/S_1) action is complete on the ten even spin sectors. A lone absolute
 (\pi/4) phase depends on a common anomaly trivialization, while the (T_1)
