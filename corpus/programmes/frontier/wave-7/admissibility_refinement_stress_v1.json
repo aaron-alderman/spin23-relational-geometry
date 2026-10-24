@@ -1,0 +1,39 @@
+{
+  "schema": "admissibility-refinement-stress/1",
+  "date": "2026-10-24",
+  "source": "corpus/programmes/quotient-scars/quotient_scar_register_v1.json",
+  "baseline": {"nodes":16,"edges":27,"fullRank":15,"cycleRank":12,"constructiveRank":10,"constructiveKernel":2,"guardrailRank":13,"guardrailKernel":2,"interfaceRank":8,"interfaceLattice":"A8"},
+  "scenarios": [
+    {
+      "id":"redundant-constructive-edge",
+      "operation":"add a second constructive QS-008 to QS-009 arrow",
+      "expected":{"nodes":16,"edges":28,"fullRank":15,"cycleRank":13,"constructiveRank":10,"constructiveKernel":3,"guardrailRank":13,"guardrailKernel":2,"interfaceRank":8,"interfaceLattice":"A8"},
+      "interpretation":"a redundant route adds a pure constructive cycle but does not change the jointly reachable interface"
+    },
+    {
+      "id":"genuine-constructive-bridge",
+      "operation":"add a constructive QS-001 to QS-002 bridge from a formerly isolated constructive component",
+      "expected":{"nodes":16,"edges":28,"fullRank":15,"cycleRank":13,"constructiveRank":11,"constructiveKernel":2,"guardrailRank":13,"guardrailKernel":2,"interfaceRank":9,"interfaceLattice":"A9"},
+      "interpretation":"new semantic reach expands the mixed core from nine to ten; this is new content, not harmless refinement"
+    },
+    {
+      "id":"guardrail-within-component",
+      "operation":"add a separates-from guardrail between QS-012 and QS-013 inside the existing guardrail component",
+      "expected":{"nodes":16,"edges":28,"fullRank":15,"cycleRank":13,"constructiveRank":10,"constructiveKernel":2,"guardrailRank":13,"guardrailKernel":3,"interfaceRank":8,"interfaceLattice":"A8"},
+      "interpretation":"a new internal warning adds a pure guardrail cycle but leaves the interface unchanged"
+    },
+    {
+      "id":"split-constructive-relation",
+      "operation":"replace QR-006 by QS-008 to QS-017 to QS-009 using two constructive arrows",
+      "expected":{"nodes":17,"edges":28,"fullRank":16,"cycleRank":12,"constructiveRank":11,"constructiveKernel":2,"guardrailRank":13,"guardrailKernel":2,"interfaceRank":8,"interfaceLattice":"A8"},
+      "interpretation":"subdivision adds one node and one incidence rank; the new node is guardrail-isolated, so contraction recovers the same interface"
+    },
+    {
+      "id":"evidence-only-link",
+      "operation":"attach an evidence reference without adding a science relation",
+      "expected":{"nodes":16,"edges":27,"fullRank":15,"cycleRank":12,"constructiveRank":10,"constructiveKernel":2,"guardrailRank":13,"guardrailKernel":2,"interfaceRank":8,"interfaceLattice":"A8"},
+      "interpretation":"provenance enrichment belongs to another carrier and cannot silently change the science incidence graph"
+    }
+  ],
+  "verdict":"A8 is stable under redundant routes, internal guardrails, edge subdivision and evidence enrichment; it expands predictably when a genuinely new typed bridge enlarges joint reachability."
+}
