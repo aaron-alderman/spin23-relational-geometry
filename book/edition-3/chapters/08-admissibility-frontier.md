@@ -842,6 +842,10 @@ Causality supplies a further boundary. The inherited diffusion and wave-damping 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-8.md)
 
+Those relaxation variables can be thermalized consistently at classical Gaussian order. Positive noise acts only on the relaxing flux and stress, while conservation carries their fluctuations into the observed hydrodynamic variables. The resulting stationary covariance is positive and satisfies fluctuation–dissipation throughout the causal momentum scan. What remains is no longer generic auxiliary noise: it is exact quantum-frequency and nonlinear dynamical KMS, the stress Ward and contact structure, and source-native relaxation data.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-9.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -907,6 +911,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_101_gaussian_schwinger_keldysh_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md)
 - [admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md](../../../corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md)
 - [admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md](../../../corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md)
+- [admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md)
 
 ---
 

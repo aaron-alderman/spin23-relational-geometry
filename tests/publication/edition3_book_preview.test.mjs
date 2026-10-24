@@ -127,7 +127,7 @@ test("Furey claims link at the point of assertion to inspectable proof pages", (
 });
 
 test("every narrative assertion has its own expanded claim page", () => {
-  assert.equal(metadata.claimDetails.length, 229);
+  assert.equal(metadata.claimDetails.length, 230);
   assert.equal(new Set(metadata.claimDetails.map(detail => detail.slug)).size, metadata.claimDetails.length);
   for (const detail of metadata.claimDetails) {
     const chapterHtml = readFileSync(new URL(`docs/edition-3/${detail.chapter}.html`, root), "utf8");

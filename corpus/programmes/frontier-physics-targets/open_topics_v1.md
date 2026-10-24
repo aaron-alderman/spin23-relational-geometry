@@ -62,7 +62,7 @@ for another dimensionless redesign.
 | OT-012 | YIG three-mode versus four-mode fork | AZ-062 closes the reported three-mode protected-doublet route and makes one calibrated four-mode tripod the active target |
 | OT-013 | Non-Hermitian topology versus active selection | AZ-065 separates instantaneous sheet exchange from finite-rate direction-selected evolution; measured-carrier execution remains required |
 | OT-015 | Defect information beyond index | tests what a wall transports beyond mode count |
-| OT-016 | Hydrodynamic multichannel cone | AZ-101 closes Gaussian SK/KMS covariance; AZ-102 fixes nonlinear noise-induced drift; AZ-103 exhibits a stable subluminal relaxation wedge and types first-order kernels as infrared; auxiliary-mode KMS, the nonlinear stress-Ward theory, contacts and microscopic matching remain |
+| OT-016 | Hydrodynamic multichannel cone | AZ-103 gives a stable subluminal relaxation wedge; AZ-104 equips its auxiliary modes with positive classical Gaussian KMS noise; quantum/nonlinear dynamical KMS, the stress-Ward and contact theory, and microscopic matching remain |
 | OT-017 | Source-restricted logical generators | exact closures are 18/54/1,152/51,840 for the source-visible, compiled-cross, imported-local and universal alphabets; the open work is one carrier that physically supplies both mutual coupling and polarization change |
 | OT-018 | New contextual admissibility inequality | AZ-066 kills the triangle bound as full-matrix positivity; AZ-095 classifies the shared-measure theorem; AZ-096 shows storage typing flips all 54 fitted-cell verdicts and leaves measured slopes/covariance, shared dilation and detector context open |
 | OT-020 | Rare-event selector geometry | separates equilibrium breaking from kinetic freezing |

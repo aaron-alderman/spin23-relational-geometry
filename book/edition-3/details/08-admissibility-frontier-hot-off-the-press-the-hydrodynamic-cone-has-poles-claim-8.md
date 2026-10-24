@@ -17,7 +17,7 @@ The claim supplies a map or analogy. It becomes a derivation only after an expli
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the hydrodynamic cone has poles”.
-- **Unit of argument:** assertion 8 of 8 in this section.
+- **Unit of argument:** assertion 8 of 9 in this section.
 - **Evidence posture:** Treat the passage as organization or analogy unless a cited carrier-preserving map is supplied.
 - **Research move:** joins several typed results while letting the weakest edge set the claim.
 
@@ -34,6 +34,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ## Controlling documents
 
+- **admissibility 104 relaxation auxiliary gaussian kms completion** — [admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md)
 - **admissibility 103 causal stable hydrodynamic relaxation wedge** — [admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md](../../../corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md)
 - **admissibility 102 nonlinear stochastic frame and noise induced drift** — [admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md](../../../corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md)
 - **admissibility 101 gaussian schwinger keldysh kms completion** — [admissibility_101_gaussian_schwinger_keldysh_kms_completion.md](../../../corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md)
@@ -47,4 +48,4 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-hydrodynamic-cone-has-poles) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-7.md) · [Next claim →](08-admissibility-frontier-kenotic-confidence-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-hydrodynamic-cone-has-poles) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-7.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-9.md)
