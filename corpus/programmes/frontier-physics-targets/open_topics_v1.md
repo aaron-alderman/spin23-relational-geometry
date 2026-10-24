@@ -28,7 +28,7 @@ An open topic stays on this list until one of four things happens:
 | OT-005 | Selector thermodynamic ledger | compare three selector classes at matched contraction |
 | OT-006 | Same-film causal tensor closure | measure the complex diagonal and Hall tensor on one batch/specimen from DC through at least 0.1–1 eV, with covariance, before force fitting |
 | OT-009 | Acoustic repeated-return selector | simulate and fabricate modular loop-plus-selector blocks |
-| OT-010 | Four-mode quotient-scar platform | freeze the hub-plus-three-outer device and its individual/summed/oriented readouts |
+| OT-010 | Four-mode quotient-scar platform | build AZ-059's frozen 100 MHz bench and run the blind exact/weak/resolved/reversal schedule |
 | OT-035 | Frontier-register maintenance | synchronize status, dependencies and closure evidence after every packet |
 
 ## P0 — gated executable work
@@ -45,6 +45,14 @@ samples a characteristic 24–239 THz (0.099–0.987 eV), so the missing
 off-diagonal band begins 15.9 times above the current ceiling. The nearest
 experiment is same-film spectroscopy; force metrology follows only after a
 no-refit resolvability calculation.
+
+[AZ-059](../admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md)
+closes OT-010's specification layer. The exact hub record has rank two; a
+resolved centred detuning releases rank four; weak breaking produces quadratic
+memory; and a physical outer-port exchange flips the oriented contrast cubic.
+All 5,000 frozen tolerance draws retain the declared gap, visibility and rank
+conditioning. OT-010 remains active for construction and blind execution, not
+for another dimensionless redesign.
 
 ## P1 — executable development and mandatory audits
 

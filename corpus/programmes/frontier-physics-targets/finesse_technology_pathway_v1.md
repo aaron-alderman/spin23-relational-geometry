@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026  
 **Status:** execution roadmap; technology-first, anomaly-disciplined  
-**Inputs:** [AZ-056 descent atlas](../admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md), [AZ-057 coordinated selector](../admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md), [AZ-058 Casimir coverage gate](../admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md), [experiment atlas](frontier_experiment_atlas_v1.md), [detector atlas](detector_frontier_atlas_v1.md)
+**Inputs:** [AZ-056 descent atlas](../admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md), [AZ-057 coordinated selector](../admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md), [AZ-058 Casimir coverage gate](../admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md), [AZ-059 four-mode bench](../admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md), [experiment atlas](frontier_experiment_atlas_v1.md), [detector atlas](detector_frontier_atlas_v1.md)
 
 **Selector control:** [PageRank, Perron selection and the finesse trade-off](page_rank_perron_selector_bridge_v1.md) supplies the exact warning that a weak positive completion can guarantee one stable global state while erasing the disconnected or slowly mixing structure one intended to measure.
 
@@ -62,6 +62,8 @@ AI proposes the next intervention by expected reduction of the current mechanism
 - uncertainty-propagating pole/phase/delay analysis;
 - preregistered choice between the two variants;
 - public null, anomaly and stop criteria.
+
+AZ-059 supplies a second no-foundry build that can proceed beside the chain: a four-resonator 100 MHz star with off-the-shelf coherent RF instrumentation. Its specification is no longer open. The decision is whether to build it and execute the frozen exact/weak/resolved/reversal sequence. That bench trains precisely the individual-versus-summed detector discipline needed by the larger programme while remaining useful hidden-mode metrology under a complete fundamental null.
 
 ## Programme B — shared finesse device, 6–18 months
 

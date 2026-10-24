@@ -293,6 +293,25 @@ The nearest work is now spectroscopy, not force metrology: measure complex diago
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-casimir-bridge-has-a-frequency-window-claim-3.md)
 
+<a id="hot-off-the-press-the-four-mode-bench-is-ready-to-build"></a>
+## Hot off the press — the four-mode bench is ready to build
+
+> **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** The quotient-scar carrier is now specified in engineering units. A 100 MHz hub resonator couples at 2 MHz to three individually driven and read outer resonators with 0.1 MHz linewidth. Exact cyclic symmetry gives a rank-two hub record because only the bright outer sum couples; two contrast modes remain dark but are directly visible through the individual ports. A centred resolved detuning then releases all four poles and raises the same hub record to rank four.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-1.md)
+
+The detector logic now has two independent residues. Along a weak centred detuning ladder, the correction left by eliminating the outer modes begins quadratically because the first moment cancels. In the resolved setting, exchanging two physical outer ports reverses an ordered contrast cubic while leaving the unordered quadratic and product data unchanged. Across 5,000 frozen component-tolerance draws, every device retains more than twelve linewidths of minimum pole separation, more than four percent hub visibility and the preregistered rank-conditioning margin.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-2.md)
+
+This is a construction decision rather than an invitation to redesign the algebra. Building and blindly running the exact, weak, resolved and port-exchange settings would establish useful hidden-mode and detector-loss metrology in ordinary coupled resonators. It would not prove a natural D4, G2 or triality mechanism, because the network was intentionally programmed to realize that grammar. A fundamental claim still requires a source-native carrier that predicts the same record without being built from the answer.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -310,6 +329,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_07_zone_known_unknown_frontiers.md](../../../corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md)
 - [admissibility_25_current_research_frontier_crosswalk.md](../../../corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md)
 - [admissibility_58_casimir_spectral_coverage_and_distance_gate.md](../../../corpus/programmes/admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md)
+- [admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md](../../../corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md)
 - [frontier_experiment_atlas_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md)
 - [monster-fermionization-bridge.md](../../../corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - [period-matrix-jordan-boundary-gate.md](../../../corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md)
