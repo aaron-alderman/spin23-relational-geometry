@@ -11,6 +11,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 ## Every current use
 
 - [The admissibility frontier · Why Jordan and Lie must be balanced](../chapters/08-admissibility-frontier.md#why-jordan-and-lie-must-be-balanced)
+- [The admissibility frontier · Hot off the press — memory depends on the detector scale](../chapters/08-admissibility-frontier.md#hot-off-the-press-memory-depends-on-the-detector-scale)
 - [The admissibility frontier · Hot off the press — the mixed interface has an exact shape](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-mixed-interface-has-an-exact-shape)
 - [Chapter · The revised spine](../chapters/01-the-revised-spine.md)
 - [The revised spine · What closes](../chapters/01-the-revised-spine.md#what-closes)
@@ -32,6 +33,9 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Proof · Furey participation: closure certificate](../details/furey-participation-proof.md)
 - [Claim · The admissibility frontier · Why Jordan and Lie must be balanced (1)](../details/08-admissibility-frontier-why-jordan-and-lie-must-be-balanced-claim-1.md)
 - [Claim · The admissibility frontier · Why Jordan and Lie must be balanced (2)](../details/08-admissibility-frontier-why-jordan-and-lie-must-be-balanced-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — memory depends on the detector scale (1)](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — memory depends on the detector scale (2)](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — memory depends on the detector scale (3)](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-3.md)
 - [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (1)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (2)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the mixed interface has an exact shape (3)](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-3.md)

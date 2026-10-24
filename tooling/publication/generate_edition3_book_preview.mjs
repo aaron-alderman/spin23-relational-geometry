@@ -257,6 +257,7 @@ const sectionTaxonomy = {
   "The shift": "interpretive",
   "Why Jordan and Lie must be balanced": "established",
   "Dynamics moves the boundary": "conditional",
+  "Hot off the press — memory depends on the detector scale": "established",
   "The third term is the mediator": "interpretive",
   "The finesse technology pathway": "experiment",
   "Hot off the press — the oriented seam becomes an experiment": "conditional",
@@ -353,6 +354,7 @@ const sectionArchetype = {
   "The shift": "cartographer",
   "Why Jordan and Lie must be balanced": "integrator",
   "Dynamics moves the boundary": "builder",
+  "Hot off the press — memory depends on the detector scale": "builder",
   "The third term is the mediator": "translator",
   "The finesse technology pathway": "builder",
   "Hot off the press — the oriented seam becomes an experiment": "builder",
@@ -826,6 +828,14 @@ chapterSkeletons.sort((a, b) => {
   return 0;
 });
 
+const admissibilityChapter = chapterSkeletons.find(chapter => chapter.slug === "08-admissibility-frontier");
+const dynamicsSectionIndex = admissibilityChapter.sections.findIndex(([heading]) => heading === "Dynamics moves the boundary");
+admissibilityChapter.sections.splice(dynamicsSectionIndex + 1, 0, ["Hot off the press — memory depends on the detector scale", [
+  "**Provisional integration note — 25 October 2026.** A six-cell passive thermal or RC carrier now supplies the physical three-scale construction that the abstract descent calculus lacked. Fixed detector regions average six cell readings to three and then two, with no fitted interscale basis. Across three held-out conductance substitutions, nonnegative temperatures and the uniform mode survive, and direct compression agrees with staged compression. This closes AZ-099's finite OT-019 construction, not a universal coarse-graining theorem.",
+  "The stronger question is whether a detector-hidden difference stays hidden after motion. Balanced wiring and a held-out change confined within detector regions descend exactly. A mild asymmetric edge makes a hidden fine difference visible to the three-region detector, but the two-region detector identifies it again. A stronger asymmetry survives into the coarsest record. Memory is therefore not a property of the carrier alone: it belongs to a carrier, dynamics and detector scale together.",
+  "The exact two-stage defect identity and five-step telescoping bound say how much history a memoryless reduced model omits. The practical look-here target is a six-node network: prepare two fine voltage or temperature patterns with the same reported averages, substitute declared edges and measure whether later coarse records split at the predicted scale. Success improves reduced-model engineering; a preregistered residual beyond component and readout covariance would indicate missing dynamics. Neither outcome by itself establishes Spin(2,3) or new physics."
+]]);
+
 const chapterExpansions = {
   "00-front-matter": [
     ["A book of layers", ["A ruler can tell you the length of a table without telling you why the table exists. A compass can preserve a direction without choosing which direction should count as north. Much of this programme has the same layered character. It contains exact measuring structures, conditional mechanisms and proposed physical interpretations. The reader should not flatten those layers into one claim.", "Each chapter therefore moves in the same order: ordinary picture, defined object, exact result, and authority boundary. A term such as symplectic is introduced only after the familiar idea it formalizes: preserving oriented area in a phase-space plane. A term such as chirality is introduced only after the familiar idea: left- and right-handed patterns cannot always be superposed by rotation."]],
@@ -926,6 +936,9 @@ chapterSources["08-admissibility-frontier"].splice(-2, 0,
 // unrelated claims; sectionEvidence below supplies the narrow provenance links.
 chapterSources["08-admissibility-frontier"] = chapterSources["08-admissibility-frontier"].filter(
   source => source !== "corpus/programmes/admissibility/admissibility_60_monster_lean_fold_provenance_and_reproduction_gate.md",
+);
+chapterSources["08-admissibility-frontier"].push(
+  "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
 );
 
 const chapters = chapterSkeletons.map(chapter => ({
@@ -1072,6 +1085,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — ask for the likelihood, not the plot": ["corpus/programmes/admissibility/admissibility_80_belle_public_likelihood_release_gate.md", "corpus/programmes/admissibility/admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md", "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md"],
   "Hot off the press — a term is not a detector row": ["corpus/programmes/admissibility/admissibility_81_source_complete_fcnc_kernel_restores_the_weak_quotient.md", "corpus/programmes/admissibility/admissibility_79_flavor_changing_second_record_for_the_sixth_coordinate.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md"],
   "Hot off the press — the hydrodynamic cone has poles": ["corpus/programmes/admissibility/admissibility_98_gaussian_hydrodynamic_source_frame_invariance.md", "corpus/programmes/admissibility/admissibility_97_hydrodynamic_pole_residue_response_ledger.md", "corpus/claims/0200-0299/212_hydrodynamic_stress_map_can_have_local_rank_three.md", "corpus/claims/0200-0299/213_fixed_temperature_kms_herglotz_schur_sewing.md"],
+  "Hot off the press — memory depends on the detector scale": ["corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md", "corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md", "corpus/claims/0200-0299/201_recursive_schur_jordan_descent_and_functorial_sewing.md"],
   "Hot off the press — the shared path is not yet a shared algebra": ["corpus/programmes/admissibility/admissibility_94_internal_whole_spectrum_coverage_boundary.md", "corpus/programmes/admissibility/admissibility_93_frozen_two_tone_within_batch_protocol.md", "corpus/programmes/admissibility/admissibility_92_two_point_population_state_bridge.md", "corpus/programmes/admissibility/admissibility_91_one_point_latent_state_boundary.md", "corpus/programmes/admissibility/admissibility_90_pointwise_population_envelope_rank_identity_and_cell_level_boundary.md", "corpus/programmes/admissibility/admissibility_89_unseen_cell_shared_parameter_near_miss.md", "corpus/programmes/admissibility/admissibility_88_population_wide_passive_impedance_baseline.md", "corpus/programmes/admissibility/admissibility_87_source_native_measured_impedance_held_out_prediction.md", "corpus/programmes/admissibility/admissibility_86_positive_spectral_atom_and_measure_evaluation_witness.md", "corpus/programmes/admissibility/admissibility_85_physical_admittance_operator_and_held_out_current_witness.md", "corpus/programmes/admissibility/admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md", "corpus/programmes/admissibility/admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md", "corpus/programmes/admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md", "corpus/programmes/frontier/wave-7/frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md"],
 };
 

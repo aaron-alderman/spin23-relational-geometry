@@ -11,6 +11,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 ## Every current use
 
 - [The admissibility frontier · Dynamics moves the boundary](../chapters/08-admissibility-frontier.md#dynamics-moves-the-boundary)
+- [The admissibility frontier · Hot off the press — memory depends on the detector scale](../chapters/08-admissibility-frontier.md#hot-off-the-press-memory-depends-on-the-detector-scale)
 - [The admissibility frontier · The finesse technology pathway](../chapters/08-admissibility-frontier.md#the-finesse-technology-pathway)
 - [The admissibility frontier · Hot off the press — the oriented seam becomes an experiment](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-oriented-seam-becomes-an-experiment)
 - [The admissibility frontier · Hot off the press — the Casimir bridge has a frequency window](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-casimir-bridge-has-a-frequency-window)
@@ -50,6 +51,9 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [MIXED-INTERFACE · Realize one mixed-interface return on a calibrated carrier](../chapters/09-research-frontier.md#MIXED-INTERFACE)
 - [Claim · The admissibility frontier · Dynamics moves the boundary (1)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-1.md)
 - [Claim · The admissibility frontier · Dynamics moves the boundary (2)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — memory depends on the detector scale (1)](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-1.md)
+- [Claim · The admissibility frontier · Hot off the press — memory depends on the detector scale (2)](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-2.md)
+- [Claim · The admissibility frontier · Hot off the press — memory depends on the detector scale (3)](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-3.md)
 - [Claim · The admissibility frontier · The finesse technology pathway (1)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md)
 - [Claim · The admissibility frontier · The finesse technology pathway (2)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the oriented seam becomes an experiment (1)](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-1.md)

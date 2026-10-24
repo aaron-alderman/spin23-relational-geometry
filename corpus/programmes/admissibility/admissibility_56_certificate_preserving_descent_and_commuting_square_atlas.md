@@ -58,7 +58,7 @@ Consequently
 \|\Delta_{21}\|\leq \|P_2\|\,\|\Delta_1\|+\|\Delta_2\|\,\|P_1\|.
 \]
 
-The generated three-scale witness closes this identity exactly. This is the algebraic core of OT-019, but it does not close that topic: OT-019 requires source-native physical pushforwards and held-out substitutions, not chosen matrices.
+The generated three-scale witness closes this identity exactly. At publication this was only the algebraic core of OT-019 because its matrices were chosen. [AZ-099](admissibility_99_three_scale_passive_diffusion_pushforward.md) subsequently supplies the missing source-native six-cell carrier, fixed detector maps and held-out component substitutions, and closes the stated OT-019 construction.
 
 ### When the square fails, dynamics becomes memory
 
@@ -163,11 +163,10 @@ Representation resemblance, dimension matching, a quarter-turn, or the word “s
 
 ## 8. Filled and unfilled atlas
 
-**Filled:** the exact kernel-invariance theorem; a section-independent criterion for autonomous quotient dynamics; exact/approximate/impossible witnesses; the three-scale defect identity and norm bound; the detector-kernel intersection law; the commutator no-go; the AZ-052/053/054 cross-checks; and typed assessments of all five signposts.
+**Filled:** the exact kernel-invariance theorem; a section-independent criterion for autonomous quotient dynamics; exact/approximate/impossible witnesses; the three-scale defect identity and norm bound; AZ-099's source-native passive-carrier realization; the detector-kernel intersection law; the commutator no-go; the AZ-052/053/054 cross-checks; and typed assessments of all five signposts.
 
 **Unfilled but sharply bounded:**
 
-- **OT-019:** replace chosen matrices by one source-native three-scale carrier and compare direct with composed physical pushforwards on held-out inputs.
 - **OT-027:** derive the operator, amplitude, irreversible loss and detector maps from one action.
 - **OT-034:** prove finite nonlinear detector injectivity on a frozen model family or characterize its residual quotient.
 - **OT-038:** build one provenance-bearing A2 commuting square preserving labels, units and orientation while accounting for losses.

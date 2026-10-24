@@ -51,6 +51,25 @@ This turns Casimir response, thermoelectric transport, holonomy, hysteresis, met
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-2.md)
 
+<a id="hot-off-the-press-memory-depends-on-the-detector-scale"></a>
+## Hot off the press — memory depends on the detector scale
+
+> **Section status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** A six-cell passive thermal or RC carrier now supplies the physical three-scale construction that the abstract descent calculus lacked. Fixed detector regions average six cell readings to three and then two, with no fitted interscale basis. Across three held-out conductance substitutions, nonnegative temperatures and the uniform mode survive, and direct compression agrees with staged compression. This closes AZ-099's finite OT-019 construction, not a universal coarse-graining theorem.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-1.md)
+
+The stronger question is whether a detector-hidden difference stays hidden after motion. Balanced wiring and a held-out change confined within detector regions descend exactly. A mild asymmetric edge makes a hidden fine difference visible to the three-region detector, but the two-region detector identifies it again. A stronger asymmetry survives into the coarsest record. Memory is therefore not a property of the carrier alone: it belongs to a carrier, dynamics and detector scale together.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-2.md)
+
+The exact two-stage defect identity and five-step telescoping bound say how much history a memoryless reduced model omits. The practical look-here target is a six-node network: prepare two fine voltage or temperature patterns with the same reported averages, substitute declared edges and measure whether later coarse records split at the predicted scale. Success improves reduced-model engineering; a preregistered residual beyond component and readout covariance would indicate missing dynamics. Neither outcome by itself establishes Spin(2,3) or new physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 
@@ -867,6 +886,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [frontier_complexity_cards_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md)
 - [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
+- [admissibility_99_three_scale_passive_diffusion_pushforward.md](../../../corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md)
 
 ---
 

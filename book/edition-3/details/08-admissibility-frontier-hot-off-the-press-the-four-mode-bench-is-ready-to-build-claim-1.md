@@ -81,6 +81,7 @@ Specify the apparatus, calibration, null distribution, preregistered threshold a
 - **frontier complexity cards v1** — [frontier_complexity_cards_v1.md](../../../corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md)
 - **the weighted furey root is a flat horizontal double cover of its projector circle with central minus identity holonomy** — [1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md](../../../corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md)
 - **a local conservative real interface network realizes the nested c12 transport as antiperiodic six cycle holonomy** — [997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md](../../../corpus/claims/0900-0999/997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md)
+- **admissibility 99 three scale passive diffusion pushforward** — [admissibility_99_three_scale_passive_diffusion_pushforward.md](../../../corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

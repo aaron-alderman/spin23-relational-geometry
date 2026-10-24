@@ -372,6 +372,8 @@ Hope here does not depend on pretending that every bridge closed. It comes from 
 
 The programme has not dissolved into arbitrary numerology. Repeated investigations converge on a small set of missing objects: a physical carrier, a source-derived second datum, a common action, a protected normalization, a scale-stable descent and a detector that remains discriminating after nuisance folding. That convergence is informative. It means the next work can be narrower, harder and more decisive.
 
+One of those objects is now concrete in a deliberately ordinary setting. [AZ-099](../programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md) replaces abstract coarse-graining arrows with six passive thermal or RC cells and fixed detector averages from six readings to three and then two. Positive temperatures and the uniform mode survive held-out component changes, direct and staged compression agree, and an exact defect identity bounds the error of pretending the reduced dynamics is memoryless. The surprising part is that memory is detector-relative: a hidden difference can become visible at the middle scale and be erased again at the coarsest scale. This closes the finite construction, not a universal renormalization theorem or an experiment.
+
 Several fronts are reachable without waiting for a final theory. Each has a two-outcome value: it should return a theoretical or engineering improvement under established physics, while preserving a predeclared discriminator by which a controlled residual could count as new physics.
 
 - programmable photonic, acoustic and hybrid-mode platforms can test projector return, coherent holonomy and contractive selection;

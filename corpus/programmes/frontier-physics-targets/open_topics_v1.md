@@ -5,7 +5,7 @@
 **Machine authority:** [open-topic register](open_topics_register_v1.json)  
 **Detector map:** [detector and frontier atlas](detector_frontier_atlas_v1.md)
 
-The register contains **50** independently closable topics: **45 remain live and five are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
+The register contains **50** independently closable topics: **44 remain live and six are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
 
 ## Operating rule
 
@@ -65,7 +65,6 @@ for another dimensionless redesign.
 | OT-016 | Hydrodynamic multichannel cone | AZ-097 supplies poles/residues/KMS; AZ-098 proves Gaussian source-frame invariance; derivative-dependent Ward-complete frames and microscopic matching remain |
 | OT-017 | Source-restricted logical generators | exact closures are 18/54/1,152/51,840 for the source-visible, compiled-cross, imported-local and universal alphabets; the open work is one carrier that physically supplies both mutual coupling and polarization change |
 | OT-018 | New contextual admissibility inequality | AZ-066 kills the triangle bound as full-matrix positivity; AZ-095 classifies the shared-measure theorem; AZ-096 shows storage typing flips all 54 fitted-cell verdicts and leaves measured slopes/covariance, shared dilation and detector context open |
-| OT-019 | Three-scale admissibility functor | asks which exclusions and invariants survive coarse-graining |
 | OT-020 | Rare-event selector geometry | separates equilibrium breaking from kinetic freezing |
 | OT-021 | Complexity cards | target audit complete; packet enforcement prevents hidden Hilbert dimension, preparation or tomography |
 | OT-022 | Causal selector propagation | bounds how quickly selection and records can spread |
@@ -208,6 +207,7 @@ route.
 |---|---|---|
 | OT-001 | Forward endpoint, reversal tomography and process singular values separate geometric holonomy, static splitting and differential loss in one generative simulator; global nonlinear injectivity remains OT-034. | [AZ-057](../admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md) |
 | OT-014 | The finite-chain ledger is (N_{\rm b}+\nu_S-1=N_C); all 14 original cases and a 36-case length census close. | [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md) |
+| OT-019 | A six-cell passive diffusion/RC carrier carries positivity and the constant mode through fixed six-to-three-to-two detector maps; direct and composed pushforwards agree, and held-out substitutions verify both exact autonomy and scale-dependent memory within a telescoping semigroup bound. | [AZ-099](../admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md) |
 | OT-041 | Both band-edge collision controls and their linear local scaling are certified by cofactor and sheet continuation. | [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md) |
 | OT-043 | In the small-index calibrated LTI family, power-only records are exactly AM/FM blind; the carrier plus both coherent sidebands reconstruct mixed modulation across 972 held-out cases. | [Wave 7.65](../frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md) |
 | OT-044 | The normalized two-channel G2 fold is exactly an ordinary coupled-oscillator response; unequal addressed perturbations of a verified pre-fold D4 star provide the rank-two-to-rank-four reopening test. | [Wave 7.70](../frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md) |
@@ -237,7 +237,7 @@ The queue exposes eight recurring unknowns that should be reported for every new
 
 The maintained list is intentionally finite. New topics should be added only when they introduce a distinct carrier, detector, boundary, translation or falsifier not already represented here.
 
-AZ-056 deliberately adds no duplicate topic. Its exact kernel-invariance and defect-composition results sharpen OT-019; its commutator no-go sharpens OT-027 and OT-038; its detector-intersection law sharpens OT-034; and its unresolved modular-forms signpost remains behind OT-045. Repetition of the diagram without a source-native arrow does not create a new frontier.
+AZ-056 deliberately adds no duplicate topic. Its exact kernel-invariance and defect-composition calculus is physically instantiated by AZ-099, which closes OT-019's stated construction. Its commutator no-go still sharpens OT-027 and OT-038; its detector-intersection law sharpens OT-034; and its unresolved modular-forms signpost remains behind OT-045. Repetition of the diagram without a source-native arrow does not create a new frontier.
 
 The [three-carrier programme checkpoint](../frontier/wave-7/frontier_wave7_45_three_carrier_programme_checkpoint.md)
 also adds no duplicate topic. Its exact `A8` mixed interface sharpens OT-019;

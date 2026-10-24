@@ -1,0 +1,181 @@
+{
+  "protocol": "three-scale-passive-diffusion-pushforward/1",
+  "date": "2026-10-25",
+  "target": "OT-019",
+  "carrier": {
+    "description": "six equal-capacity thermal/RC cells joined by positive conductances",
+    "fineUpdate": "F=I-dt L with the weighted graph Laplacian L",
+    "timeStep": 0.08,
+    "admissibleSet": "nonnegative cell temperatures; the constant mode is retained",
+    "componentSource": "each edge list is a declared physical conductance substitution"
+  },
+  "fixedMaps": {
+    "fineToIntermediate": "average the named pairs (0,1), (2,3), (4,5)",
+    "intermediateToCoarse": "average the first two named regions and retain the third",
+    "lifting": "assign one regional temperature uniformly to every cell in that region",
+    "fittedParameters": 0,
+    "identities": {
+      "P1J1": 0,
+      "P2J2": 0,
+      "directMapComposition": 0,
+      "directLiftComposition": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "balanced-reference",
+      "role": "declared reference, exactly equitable at both detector scales",
+      "componentCount": 15,
+      "maximumFineDegree": 0.7,
+      "fineStepMinimumEntry": 0.0064,
+      "maximumRowSumError": 1.1102230246251565e-16,
+      "directVersusComposedOneStepError": 1.1102230246251565e-16,
+      "levelOneDefect": 0,
+      "levelTwoDefect": 0,
+      "directDefect": 3.925231146709438e-17,
+      "defectCompositionResidual": 3.925231146709438e-17,
+      "oneStepDefectBound": 0,
+      "oneStepDefectWithinBound": true,
+      "horizon": 5,
+      "semigroupError": 1.1210126175528405e-16,
+      "semigroupTelescopingBound": 2.6461110157267623e-16,
+      "semigroupErrorWithinBound": true,
+      "detectorKernelLeakage": {
+        "withinFirstPairAtIntermediateDetector": 0,
+        "withinFirstPairAtCoarseDetector": 0,
+        "betweenFirstTwoRegionsAtCoarseDetector": 5.551115123125783e-17
+      },
+      "exactIntermediateAutonomousDescent": true,
+      "exactCoarseAutonomousDescent": true,
+      "admissibility": {
+        "nonnegativeUpdate": true,
+        "constantModePreserved": true,
+        "positiveTemperatureConePreserved": true
+      }
+    },
+    {
+      "id": "held-out-internal-substitution",
+      "role": "held out; internal pair conductances changed without changing regional exchange",
+      "componentCount": 15,
+      "maximumFineDegree": 1.11,
+      "fineStepMinimumEntry": 0.004,
+      "maximumRowSumError": 1.1102230246251565e-16,
+      "directVersusComposedOneStepError": 1.1102230246251565e-16,
+      "levelOneDefect": 0,
+      "levelTwoDefect": 0,
+      "directDefect": 3.925231146709438e-17,
+      "defectCompositionResidual": 3.925231146709438e-17,
+      "oneStepDefectBound": 0,
+      "oneStepDefectWithinBound": true,
+      "horizon": 5,
+      "semigroupError": 2.225860458774576e-16,
+      "semigroupTelescopingBound": 2.646111015726763e-16,
+      "semigroupErrorWithinBound": true,
+      "detectorKernelLeakage": {
+        "withinFirstPairAtIntermediateDetector": 0,
+        "withinFirstPairAtCoarseDetector": 0,
+        "betweenFirstTwoRegionsAtCoarseDetector": 5.551115123125783e-17
+      },
+      "exactIntermediateAutonomousDescent": true,
+      "exactCoarseAutonomousDescent": true,
+      "admissibility": {
+        "nonnegativeUpdate": true,
+        "constantModePreserved": true,
+        "positiveTemperatureConePreserved": true
+      }
+    },
+    {
+      "id": "held-out-mild-asymmetry",
+      "role": "held out; one inter-region component is substituted",
+      "componentCount": 15,
+      "maximumFineDegree": 0.7599999999999999,
+      "fineStepMinimumEntry": 0.0064,
+      "maximumRowSumError": 1.1102230246251565e-16,
+      "directVersusComposedOneStepError": 1.1102230246251565e-16,
+      "levelOneDefect": 0.0033941125496954184,
+      "levelTwoDefect": 0,
+      "directDefect": 3.925231146709438e-17,
+      "defectCompositionResidual": 4.745982780490922e-17,
+      "oneStepDefectBound": 0.004156921938165293,
+      "oneStepDefectWithinBound": true,
+      "horizon": 5,
+      "semigroupError": 1.1210126175528405e-16,
+      "semigroupTelescopingBound": 2.6461110157267623e-16,
+      "semigroupErrorWithinBound": true,
+      "detectorKernelLeakage": {
+        "withinFirstPairAtIntermediateDetector": 0.003394112549695399,
+        "withinFirstPairAtCoarseDetector": 0,
+        "betweenFirstTwoRegionsAtCoarseDetector": 5.551115123125783e-17
+      },
+      "exactIntermediateAutonomousDescent": false,
+      "exactCoarseAutonomousDescent": true,
+      "admissibility": {
+        "nonnegativeUpdate": true,
+        "constantModePreserved": true,
+        "positiveTemperatureConePreserved": true
+      }
+    },
+    {
+      "id": "held-out-strong-asymmetry",
+      "role": "held out; several inter-region components are substituted",
+      "componentCount": 15,
+      "maximumFineDegree": 0.92,
+      "fineStepMinimumEntry": 0.0016,
+      "maximumRowSumError": 0,
+      "directVersusComposedOneStepError": 0,
+      "levelOneDefect": 0.013127071265137562,
+      "levelTwoDefect": 0.00031622776601682943,
+      "directDefect": 0.005315072906367319,
+      "defectCompositionResidual": 2.3115637826150914e-17,
+      "oneStepDefectBound": 0.01646461154298986,
+      "oneStepDefectWithinBound": true,
+      "horizon": 5,
+      "semigroupError": 0.0006027787194040154,
+      "semigroupTelescopingBound": 0.000602778719404098,
+      "semigroupErrorWithinBound": true,
+      "detectorKernelLeakage": {
+        "withinFirstPairAtIntermediateDetector": 0.011771151175649728,
+        "withinFirstPairAtCoarseDetector": 0.005813776741499461,
+        "betweenFirstTwoRegionsAtCoarseDetector": 0.00044721359549997156
+      },
+      "exactIntermediateAutonomousDescent": false,
+      "exactCoarseAutonomousDescent": false,
+      "admissibility": {
+        "nonnegativeUpdate": true,
+        "constantModePreserved": true,
+        "positiveTemperatureConePreserved": true
+      }
+    }
+  ],
+  "audit": {
+    "casesChecked": 4,
+    "heldOutCases": 3,
+    "allDirectComposedOneStepAgree": true,
+    "allDefectIdentitiesClose": true,
+    "allDefectsRespectCompositionBound": true,
+    "allSemigroupErrorsRespectTelescopingBound": true,
+    "allUpdatesPreserveDeclaredAdmissibleSet": true,
+    "exactAtEveryScale": [
+      "balanced-reference",
+      "held-out-internal-substitution"
+    ],
+    "intermediateMemoryOnly": [
+      "held-out-mild-asymmetry"
+    ],
+    "coarseMemoryBearing": [
+      "held-out-strong-asymmetry"
+    ]
+  },
+  "decision": {
+    "sourceNativeThreeScaleCarrierConstructed": true,
+    "interscaleMapsFitted": false,
+    "directAndComposedPhysicalPushforwardsAgree": true,
+    "nontrivialInvariantSurvivesHeldOutSubstitutions": true,
+    "semigroupErrorBoundSurvivesHeldOutSubstitutions": true,
+    "detectorEquivalenceAlwaysDynamicallyClosed": false,
+    "fullOt019Closure": true,
+    "generatedSpin23DynamicsEstablished": false,
+    "newPhysicsEvidence": false
+  },
+  "implication": "Fixed physical averaging maps preserve positivity and the constant mode through both coarse-graining stages, and direct and composed one-step pushforwards agree without fitted bases. Exact autonomy survives internal substitutions that respect the detector partition. Asymmetric component substitutions make detector-hidden differences reappear after evolution; the measured defect and telescoping bound quantify the memory that a Markovian coarse model omits."
+}
