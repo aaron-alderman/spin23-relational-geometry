@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "leech-24port-commissioning-digital-twin-v1",
+  "date": "2026-10-26",
+  "inputs": [
+    "leech-gram-first-ideal-network-manifest-v1",
+    "leech-24port-admittance-commissioning-packet-v1"
+  ],
+  "schedule": {
+    "frequencies": 7,
+    "singlePortConfigurations": 168,
+    "heldOutConfigurations": 84,
+    "repeats": 100,
+    "totalComplexAcquisitions": 25200
+  },
+  "counterfeit": {
+    "construction": "positive rank-one perturbation aligned with the softest Gram-first eigenvector",
+    "relativeSpectralStrength": 0.00002,
+    "targetMinimumEigenvalue": 0.023324849535001285
+  },
+  "cases": [
+    {
+      "id": "ideal-gram-first",
+      "injected": {
+        "lossTangent": 0.0001,
+        "perAcquisitionRelativeNoise": 0.00002,
+        "repeats": 100
+      },
+      "reconstruction": {
+        "alpha": 1.0000000053560518,
+        "maximumReciprocity": 0.000001968115296895005,
+        "lossRatio": 0.00010009234463195735,
+        "dispersion": 8.878416487278189e-7,
+        "minimumEigenvalue": 0.023324647012280188,
+        "inverseMetricError": 0.00003376805096800918,
+        "heldOutWorstRelativeError": 7.433495044865319e-7
+      },
+      "gates": {
+        "reciprocity": true,
+        "passivity": true,
+        "loss": true,
+        "dispersion": true,
+        "positiveDefinite": true,
+        "inverseMetric": true,
+        "heldOutDrive": true
+      },
+      "allPass": true
+    },
+    {
+      "id": "soft-mode-counterfeit",
+      "injected": {
+        "lossTangent": 0.0001,
+        "perAcquisitionRelativeNoise": 0.00002,
+        "repeats": 100
+      },
+      "reconstruction": {
+        "alpha": 1.0000000070707684,
+        "maximumReciprocity": 0.0000018959431360571215,
+        "lossRatio": 0.00010004078866646271,
+        "dispersion": 9.23787526453244e-7,
+        "minimumEigenvalue": 0.023769498166706385,
+        "inverseMetricError": 0.0187066879412305,
+        "heldOutWorstRelativeError": 8.890647740510154e-7
+      },
+      "gates": {
+        "reciprocity": true,
+        "passivity": true,
+        "loss": true,
+        "dispersion": true,
+        "positiveDefinite": true,
+        "inverseMetric": false,
+        "heldOutDrive": true
+      },
+      "allPass": false
+    }
+  ],
+  "decision": {
+    "idealAccepted": true,
+    "counterfeitRejectedByInverseMetric": true,
+    "counterfeitPassesOrdinaryLinearChecks": true,
+    "implication": "the executable recovery accepts the declared ideal carrier and distinguishes predictive reconstruction from Leech provenance: a flat passive model can predict held-out drives yet fail the inverse metric"
+  },
+  "boundary": "This is a deterministic synthetic digital twin with Gaussian acquisition noise, not measured hardware data. It validates the analysis path and one adversarial counterfeit only."
+}

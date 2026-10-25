@@ -367,6 +367,10 @@ Wave 7.224 materializes the chosen ideal carrier as a complete port-level
 manifest: 24 capacitors, 24 unity paths and 252 signed off-diagonal ratios.
 It reconstructs the Gram-first metric exactly and supplies the measurement
 handoff, while deliberately leaving layout, bandwidth and loss unclaimed.
+Wave 7.225 validates the complete synthetic commissioning path. The declared
+carrier passes all reconstructed linear gates, whereas a soft-mode counterfeit
+passes flatness, loss and held-out prediction but fails the inverse-metric
+Leech test at 1.87%. This establishes discriminator function, not a device.
 
 ## Corpus links
 
@@ -448,6 +452,7 @@ handoff, while deliberately leaving layout, bandwidth and loss unclaimed.
 - [Drift-robust likelihood](frontier_wave7_222_leech_drift_robust_likelihood.md)
 - [Signal--artifact identifiability](frontier_wave7_223_leech_signal_artifact_identifiability.md)
 - [Gram-first ideal network manifest](frontier_wave7_224_leech_gram_first_network_manifest.md)
+- [24-port commissioning digital twin](frontier_wave7_225_leech_24port_commissioning_digital_twin.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

@@ -440,6 +440,12 @@ carrier is now a machine-readable 24-port manifest with 24 capacitor branches,
 24 unity paths and all 252 signed off-diagonal transformer ratios. Exact
 rational reconstruction returns the target metric; finite-bandwidth layout,
 loss, phase, parasitic and crosstalk models remain physical work.
+Wave 7.225 executes the 252-configuration commissioning recovery as a digital
+twin. The ideal manifest passes with inverse-metric error
+$3.38\times10^{-5}$. A positive, passive, flat soft-mode counterfeit predicts
+all 84 held-out drives but fails Leech provenance at 1.87% inverse error. The
+packet therefore validates both the recovery path and the necessity of the
+inverse-sensitive gate, while supplying no hardware data.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -531,6 +537,7 @@ P4 questions.
 - [Drift-robust likelihood](frontier_wave7_222_leech_drift_robust_likelihood.md)
 - [Signal--artifact identifiability](frontier_wave7_223_leech_signal_artifact_identifiability.md)
 - [Gram-first ideal network manifest](frontier_wave7_224_leech_gram_first_network_manifest.md)
+- [24-port commissioning digital twin](frontier_wave7_225_leech_24port_commissioning_digital_twin.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

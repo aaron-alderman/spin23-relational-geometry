@@ -1087,6 +1087,13 @@ reconstructs the chosen Gram-first metric, turning the prior factor count into
 a compile target while retaining finite bandwidth, loss and layout as open
 engineering rather than theoretical facts.
 
+Wave 7.225 exercises that compile target through the full seven-frequency
+commissioning schedule. The ideal digital twin is recovered at
+$3.38\times10^{-5}$ inverse-metric error. A passive frequency-flat rank-one
+counterfeit aligned with the soft mode continues to predict every held-out
+drive but is rejected at 1.87% inverse error. Thus held-out circuit prediction
+and Leech quadratic provenance are demonstrably distinct gates.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

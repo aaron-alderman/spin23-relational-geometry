@@ -60,3 +60,4 @@ node verification/verify/verify_leech_gram_first_network_manifest.mjs
 - [Transformer-factor audit](frontier_wave7_174_leech_pareto_transformer_factor_audit.md)
 - [Exact transformer recovery](frontier_wave7_170_leech_transformer_capacitance_recovery.md)
 - [Monster laboratory promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
+- [24-port commissioning digital twin](frontier_wave7_225_leech_24port_commissioning_digital_twin.md)
