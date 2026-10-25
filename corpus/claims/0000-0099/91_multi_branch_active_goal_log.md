@@ -27435,3 +27435,27 @@ The [PageRank/Perron bridge](../../programmes/frontier-physics-targets/page_rank
 ### Cycle 1318 — Q provenance closes at one symmetry-breaking common-carrier intertwiner
 
 [Wave 7.69](../../programmes/frontier/wave-7/frontier_wave7_69_q_provenance_terminal_synthesis.md) completes the source audit. The selector module and rectangular carrier are isometric as signature-$(2,3)$ spaces, but a split-preserving identification remains an $O(2)\times O(3)$ torsor, with the earlier endpoint label and phase ambiguities still present. Walsh, intrinsic $M_{11}$ and naive Golay-adjoint routes remain exact no-gos; Grassmannian, linking, $H_2(\mathbb R)$ and TKK structures are partial contributors with typed boundaries. Further five-by-five metric search is closed. The single highest-value gate is an independently calibrated intertwiner carrying the selector $2+3$ eigenspaces to the measured rectangular ports, treating $E$ as a covariant symmetry-breaking datum and selecting the $+E^T$ noncompact completion.
+
+### Cycle 1319 — the naive endpoint representations fail by parity, not dimension
+
+[Wave 7.76](../../programmes/frontier/wave-7/frontier_wave7_76_common_carrier_intertwiner_classification.md) compares the exact selector fingerprints with the proposed channel endpoints. The selector two-sector has central order-two action $-I_2$, so its Hom-space with the standard $S_3$ doublet is zero. The selector three-sector is $\operatorname{sgn}\oplus A_2$; the untwisted $\mathbf1\oplus A_2$ environment shares only a rank-two summand. No invertible naive common-carrier map exists. Replacing the source reflection by central parity and making the target singlet odd is the minimal repair, after which normalized transports retain one $SO(2)$ phase and discrete signs. The repair is exact but remains new physical endpoint data.
+
+### Cycle 1320 — the two TKK wings fill the entire rectangular channel
+
+[Wave 7.77](../../programmes/frontier/wave-7/frontier_wave7_77_tkk_wings_cover_the_rectangular_cross_module.md) transports the canonical TKK generators through the certified symplectic map and the selector-induced primitive split. The translation wing projects with rank three, the special-conformal wing with rank three and their combined projection has rank six, equal to $\dim\operatorname{Hom}(\mathbb R^2,\mathbb R^3)$. Every projected cross generator already carries its $Q$-adjoint transpose. The measured checkpoint has a unique six-wing coordinate vector in the declared adapted basis. No abstract mediator direction is missing; only physical basis and normalization remain.
+
+### Cycle 1321 — Onsager parity, not generic causality, selects the real form
+
+[Wave 7.78](../../programmes/frontier/wave-7/frontier_wave7_78_reverse_phase_physical_selection_boundary.md) proves that both $+E^T$ and $-E^T$ branches admit causal, stable and positive-noise realizations after damping. Bare $X_+$ is a real saddle and bare $X_-$ a positive-norm rotation, but this role difference is not a universal exclusion. Onsager--Casimir reciprocity supplies the decisive sign: equal endpoint time-reversal parity yields $+E^T$ and the noncompact $SO(2,3)$ branch; opposite parity yields $-E^T$ and compact $SO(5)$. Failure of both signed reciprocity residuals falsifies the two-branch completion.
+
+### Cycle 1322 — a quartic covariant potential selects the Gram orbit
+
+[Wave 7.79](../../programmes/frontier/wave-7/frontier_wave7_79_selector_covariant_channel_potential.md) treats $E$ correctly as an order parameter or covariant spurion. The quartic potential built from $E^TE-G_*$ has its minima at the measured Gram matrix and reproduces squared singular values $(16/13,10/13)$. Its unspurioned limit returns to equal singular values. The vacuum remains $V_2(\mathbb R^3)\cong SO(3)$ because Gram data do not select a target frame; a boundary or target-frame spurion is still required to choose the full matrix.
+
+### Cycle 1323 — signed reciprocal tomography becomes executable
+
+[Wave 7.80](../../programmes/frontier/wave-7/frontier_wave7_80_two_by_three_selector_calibration_protocol.md) freezes the minimum port protocol. Order-three and order-two process tomography first tests the parity-repaired endpoint fingerprints; forward and reverse transfer tomography then compares $r_+=\|B-E^T\|/\|E\|$ and $r_-=\|B+E^T\|/\|E\|$. At entry noise $0.02$, 32 repeats and 500 trials per branch, both signs classify perfectly and the maximum fingerprint error stays below $0.01251$. Port-phase calibration, blind labels and the neither-branch null are mandatory controls.
+
+### Cycle 1324 — all five post-Q options close at three physical inputs
+
+[Wave 7.81](../../programmes/frontier/wave-7/frontier_wave7_81_post_q_five_option_terminal_synthesis.md) joins the intertwiner, TKK, phase, potential and detector results. The algebra supplies every cross direction and a conditional signature form; the naive endpoint identity is false but its minimal parity repair is known; and the real-form sign is experimentally identifiable. The remaining authority is concentrated in endpoint parity, selector fingerprints and target-frame calibration. The next rational action is to choose one concrete reciprocal two-input/three-output platform and test the order-two fingerprint before attempting the rest of the programme.
