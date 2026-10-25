@@ -1,0 +1,47 @@
+{
+  "protocol": "relation-face-compiler/1",
+  "packet": "AZ-124",
+  "targets": ["OT-026", "OT-027"],
+  "results": {
+    "edgeAtoms": {
+      "difference": "w(e_i-e_j)(e_i-e_j)^T",
+      "sum": "w(e_i+e_j)(e_i+e_j)^T",
+      "rank": 1,
+      "positiveSemidefinite": true,
+      "localJordanCone": "boundary rays of H2(R)+"
+    },
+    "graphAssembly": {
+      "laplacianIdentity": true,
+      "formula": "L=BWB^T=D-A",
+      "signlessIdentity": true,
+      "signlessFormula": "Q=CWC^T=D+A",
+      "adjacencyAloneSuppliesPositiveOrder": false
+    },
+    "schurFace": {
+      "formula": "K_eff=K_BB-K_BI K_II^-1 K_IB",
+      "determinantIdentity": true,
+      "interpretation": "hidden path elimination compiles a positive boundary response"
+    },
+    "phaseThreshold": {
+      "independentAbelianHolonomies": "E-V+c",
+      "treeIndependentHolonomies": 0,
+      "triangleIndependentHolonomies": 1,
+      "singleEdgePhaseGaugeRemovable": true
+    },
+    "orientation": {
+      "threePortDeterminantTerm": "2|u||v||w| cos(Phi)",
+      "orientationOddTerm": "2|u||v||w| sin(Phi)",
+      "determinantIdentifiesOppositeOrientations": true,
+      "detectorRequired": true
+    }
+  },
+  "decision": {
+    "compilerMathematicallyClosed": true,
+    "relationToPositiveFaceTranslationClosedConditionally": true,
+    "sourceNativeOrderDerived": false,
+    "physicalCarrierIdentified": false,
+    "heldOutPredictionMade": false,
+    "newPhysicsEvidence": false
+  },
+  "nextGate": "Derive a dagger, positive kernel and boundary partition from one source-native Claimipedia relation family before inspecting the desired Jordan face; then predict a held-out response or oriented cycle record."
+}

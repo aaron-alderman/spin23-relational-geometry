@@ -81,8 +81,8 @@ for another dimensionless redesign.
 |---|---|---|
 | OT-024 | Relation-emulator hardware dictionary | AZ-110 closes network and detector design; build the frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
 | OT-025 | Nonlocal 24-dimensional form or code functor | a source-derived replacement for the incidence form or explicit sacrificed property |
-| OT-026 | Graph-to-Jordan translation | AZ-111 constructs an exact local $H_2(\mathbb Q)$ face; AZ-112 proves ordinary transpose and typed edge reversal do not lift through path memory |
-| OT-027 | Physical operator and dynamics functor | action generating operators, amplitudes and detector map |
+| OT-026 | Graph-to-Jordan translation | AZ-124 closes the finite relation--face compiler, but AZ-112 still bars promotion until a source-native dagger/order generates the positive kernel before quotienting and predicts a held-out record |
+| OT-027 | Physical operator and dynamics functor | AZ-124 separates support, positive kernel, Schur face, holonomy and detector; a source-native action must still generate those operators, amplitudes and records |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
 | OT-038 | Source-bearing A2 commuting square | calibrate one common-carrier intertwiner from the selector primitive-form split to the rectangular ports, treat the nonzero channel as covariant symmetry breaking, and select the noncompact reverse-channel phase |
 | OT-039 | Microscopic wall-pseudoscalar coefficient | source-derived coupling with sign, magnitude and radiative stability |
@@ -142,6 +142,18 @@ most two of seventeen records: the local Spin--Temple pair. The Jordan face is
 therefore exact but quotient-local. Reopening now requires an authored dagger,
 a provenance-bearing nonlocal anti-automorphism, or a held-out prediction that
 selects one.
+
+[AZ-124](../admissibility/admissibility_124_relation_face_compiler_from_adjacency_to_jordan_holonomy.md)
+closes the finite translation grammar without weakening that no-go. Every
+weighted edge supplies a rank-one boundary atom of $H_2(\mathbb R)^+$;
+incidence glues these atoms into $D-A$ or $D+A$; Schur elimination compiles
+hidden paths into an effective two-port face. A complex edge coordinate is
+gauge-removable on a tree. The first intrinsic phase appears on a cycle, and
+the $H_3(\mathbb C)$ determinant reads its cosine while an orientation-odd
+detector is required for its sine. OT-026 now lacks neither a mathematical
+compiler nor a precise failure location. It remains gated because Claimipedia
+has not generated the dagger, positive kernel and boundary partition before
+the desired quotient was inspected, and no held-out record has been predicted.
 
 [AZ-113](../admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md)
 
