@@ -7,6 +7,9 @@
 **Evidence:** [machine-readable bridge ledger](../../../evidence/data/moonshine-program-lattice-bridge-v1.json)
 **Certificate:** [exact bridge verifier](../../../verification/verify/verify_moonshine_program_lattice_bridge.mjs)
 
+**Joined map:** [the order-46 junction and admissibility ladder](joined-bridge-map.md)
+**Joined certificate:** [cross-branch verifier](../../../verification/verify/verify_moonshine_joined_bridge_map.mjs)
+
 ## Result
 
 The Monster branch does contain a mathematically defensible sense in which a
@@ -556,15 +559,85 @@ For \(p=3,5,7,11,13,17,19\) the genus is smaller than the defect rank; for
 signpost for further work, but not evidence of a correspondence: no source
 maps the twelve simple defect types to the twelve holomorphic differentials.
 
-Volpato supplies the constructive algorithm without supplying a tabulated
-\(p=23\) defect series: Fourier-transform the twisted--twining functions
+Volpato supplies the constructive algorithm without tabulating the \(p=23\)
+defect series: Fourier-transform the twisted--twining functions
 \(T_{g^a,g^k}\) to the module characters \(\widetilde T_{a,b}\), invert the
 \(su(2)_{23}\) character decomposition to obtain the commutant characters
-\(f_{[l,t]}\), and insert \(f_{[l,0]}\) into the duality-defect trace.  The
-missing input is therefore exact: the scalar \(T_{23}\) does not determine the
-required 529-sector twisted--twining table.  An explicit table (and an
-orientation convention tying it to the corpus cycle) is the next gate, not
-more manipulation of the common Hauptmodul.
+\(f_{[l,t]}\), and insert \(f_{[l,0]}\) into the duality-defect trace.
+
+The modular-orbit audit now corrects an overstatement in the earlier frontier.
+The 529 entries are not 529 independent missing functions.  For prime order
+23, reduction modulo 23 makes all 528 nonzero pairs one
+\(SL_2(\mathbb F_{23})\) orbit.  The exact label stabilizer gives index 528,
+but the scalar \(T_{23}\) is invariant under the larger
+\(\Gamma_0(23)\) stabilizer.  Its modular orbit therefore has only
+
+\[
+[SL_2(\mathbb Z):\Gamma_0(23)]=24
+\]
+
+branches, indexed by \(\mathbb P^1(\mathbb F_{23})\), with each branch shared
+by 22 nonzero scalar multiples of a label.  Once Volpato's convention
+\(h(V_{a,b})=ab/23\pmod{\mathbb Z}\) fixes the twisted-sector lift, modular
+covariance gives a functional prescription: choose a modular matrix whose
+bottom row is \((a,b)\bmod23\) and transport \(T_{23}\).  Thus the common
+Hauptmodul determines the scalar modular branches, but it still does not name
+the oriented generator: the 22-fold quotient is exactly where that datum was
+erased.
+
+Fricke invariance makes those branches explicit.  If \(a\ne0\) and
+\(r=ba^{-1}\bmod23\), then in the fixed non-anomalous convention
+
+\[
+T_{g^a,g^b}(\tau)=T_{23}\!\left(\frac{\tau+r}{23}\right).
+\]
+
+Writing \(T_{23}=\sum_n c(n)q^n\), Volpato's finite Fourier projection is
+therefore just a residue filter:
+
+\[
+\operatorname{ch}V_{a,b}
+=\sum_{n\equiv ab\;(23)}c(n)q^{n/23},\qquad a\ne0.
+\]
+
+Together with the two untwisted neutral/charged characters, this reconstructs
+all 529 module characters as 25 scalar character types.  The next gate is now
+the defect assembly rather than the commutant inversion: the verifier now
+executes Volpato's equation (2.33) and obtains the first three integral-grade
+terms of all twelve required even-\(l\), \(t=0\) characters:
+
+| \(l\) | verified character seed |
+|---:|---|
+| 0 | \(q^{-139/150}(1+1878q^2+150556q^3+\cdots)\) |
+| 2 | \(q^{149/150}(3551+324584q+11288976q^2+\cdots)\) |
+| 4 | \(q^{5/6}(2362+273654q+10649486q^2+\cdots)\) |
+| 6 | \(q^{89/150}(698+131234q+6172744q^2+\cdots)\) |
+| 8 | \(q^{41/150}(74+35960q+2309204q^2+\cdots)\) |
+| 10 | \(q^{131/150}(4944+537726q+20325080q^2+\cdots)\) |
+| 12 | \(q^{59/150}(214+69682q+3943190q^2+\cdots)\) |
+| 14 | \(q^{5/6}(3801+442966q+17230152q^2+\cdots)\) |
+| 16 | \(q^{29/150}(33+22764q+1600562q^2+\cdots)\) |
+| 18 | \(q^{71/150}(274+68679q+3599952q^2+\cdots)\) |
+| 20 | \(q^{101/150}(738+115520q+5085020q^2+\cdots)\) |
+| 22 | \(q^{119/150}(792+98342q+3941684q^2+\cdots)\) |
+
+The vacuum exponent \(-139/150=-c_{\mathrm{Com}}/24\) is an internal check,
+and every displayed coefficient is positive.  Equations (2.52)--(2.54) can
+then be assembled directly. Exact Gaussian-integer phase bookkeeping gives
+
+\[
+\frac{Z^{\mathcal N}_{23}(\tau)}{\sqrt{23}}
+=q^{-1}+2+2446q+115834q^2+2446684q^3+33295322q^4+\cdots .
+\]
+
+All fractional powers and imaginary parts cancel. This scalar trace also
+closes negatively as an orientation detector: the fifth-power map preserves
+\(ab\), and every module character entering the construction depends only on
+that product. The whole unrefined defect trace is therefore unchanged under
+the 23A/23B orientation exchange. The next finite task requires an additional
+commuting insertion that is not a function only of \(ab\), or genus-two
+sewing. The oriented VOA lift and conditional dual-pair question remain
+separate.
 
 ## 5. Four non-equivalent meanings of program
 

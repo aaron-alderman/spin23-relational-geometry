@@ -75,7 +75,7 @@
     "orientationFact": "the nonprincipal pair is distinct under proper SL_2(Z) equivalence but exchanged by determinant-minus-one orientation reversal",
     "thetaDegeneracy": "Theta_[2,1,3] = Theta_[2,-1,3]",
     "etaIdentity": "Theta_[1,1,6] - Theta_[2,1,3] = 2 eta(tau)eta(23tau)",
-    "verifiedCoefficientRange": "through q^40",
+    "verifiedCoefficientRange": "through q^100",
     "interpretation": "a scalar theta trace necessarily forgets which oriented nonprincipal rail was selected",
     "survivingObservable": "an oriented, chiral, defect, vector-valued or otherwise class-sensitive refinement"
   },
@@ -146,20 +146,55 @@
     "consequence": "untwisted genus-one Fourier projection distinguishes neutral from nonzero charge but collapses all 22 nonzero charges, so it cannot recover the 23A/23B orientation",
     "nextAdmissibleObservable": "a genuinely twisted-twining function, a defect trace, an additional commuting insertion, or higher-genus sewn data"
   },
+  "modularTransportReconstruction": {
+    "sourceBasis": "generalized-moonshine modular covariance together with Volpato's non-anomalous normalization h(V_{a,b})=ab/23 mod Z and group-like fusion",
+    "nonzeroLabelOrbit": 528,
+    "exactLabelStabilizer": "Gamma_1(23) modulo 23 has order 23, so its SL_2(F_23) orbit has 528 nonzero labels",
+    "scalarModularImages": 24,
+    "scalarStabilizer": "the common 23A/23B Hauptmodul is Gamma_0(23)-invariant inside SL_2(Z); its modular orbit is P^1(F_23), of size 24",
+    "multiplicity": "each projective modular image represents 22 nonzero scalar multiples (a,b)~lambda(a,b)",
+    "functionalPrescription": "for each nonzero (a,b), choose gamma in SL_2(Z) whose bottom row is congruent to (a,b) mod 23 and transport T_23 by gamma; Gamma_0(23) invariance makes the scalar result depend only on [a:b]",
+    "explicitMixedBranch": "for a nonzero and r=b*a^-1 mod 23, T_{g^a,g^b}(tau)=T_23((tau+r)/23) in the fixed non-anomalous convention",
+    "fourierProjectionRule": "if T_23=sum_n c(n)q^n, then ch(V_{a,b})=sum_{n congruent ab mod 23} c(n)q^(n/23) for a nonzero; a=0 gives the neutral/charged pair already recorded",
+    "moduleCharacterTypes": 25,
+    "moduleCharacterStatus": "the scalar characters of all 529 V_{a,b} modules are functionally reconstructed: 23 product-residue types for a nonzero plus two untwisted types",
+    "correction": "the 529 twisted--twining entries are not 529 independent missing source functions: J supplies (0,0), while modular transport of T_23 supplies 24 scalar branches assigned to the other 528 labels",
+    "remainingCalculation": "add an orientation-sensitive commuting insertion or sew at genus two; the unrefined duality-defect trace is now assembled and is invariant under fifth-power exchange",
+    "boundary": "the reconstruction does not restore the oriented 23A/23B name, prove the conditional full dual-pair statement, perform genus-two sewing, or supply a physical carrier and detector"
+  },
   "parafermionRefinementBoundary": {
     "sourceStatus": "Honda-Kaidi-Orii arXiv v2 (24 July 2026), conditional general-p construction; Volpato arXiv v2 (11 September 2026), unconditional P(N) embedding for Fricke non-anomalous classes",
     "p": 23,
     "parafermionCentralCharge": "44/25",
     "commutantCentralCharge": "556/25",
     "repSo3Rank": 12,
+    "evenLCommutantCharacters": 12,
+    "commutantInversionStatus": "Volpato equation (2.33) has been executed exactly for the first three integral-grade terms of every f_[l,0] with even l; the verifier checks positivity and unit grade spacing",
+    "normalizedDualityDefectTrace": "sqrt(23)*(q^-1 + 2 + 2446q + 115834q^2 + 2446684q^3 + 33295322q^4 + ...)",
+    "defectAssemblyStatus": "Volpato equations (2.52)--(2.54) are assembled through q^4 with exact Gaussian-integer phase bookkeeping; all imaginary and fractional-power residues cancel",
+    "orientationResult": "the unrefined scalar defect trace is invariant under D_5 because the reconstructed module characters depend only on ab, which D_5 preserves; it cannot name 23A versus 23B",
+    "evenLCommutantFirstTerms": {
+      "f_[0,0]": [["-139/150", "1"], ["161/150", "1878"], ["311/150", "150556"]],
+      "f_[2,0]": [["149/150", "3551"], ["299/150", "324584"], ["449/150", "11288976"]],
+      "f_[4,0]": [["5/6", "2362"], ["11/6", "273654"], ["17/6", "10649486"]],
+      "f_[6,0]": [["89/150", "698"], ["239/150", "131234"], ["389/150", "6172744"]],
+      "f_[8,0]": [["41/150", "74"], ["191/150", "35960"], ["341/150", "2309204"]],
+      "f_[10,0]": [["131/150", "4944"], ["281/150", "537726"], ["431/150", "20325080"]],
+      "f_[12,0]": [["59/150", "214"], ["209/150", "69682"], ["359/150", "3943190"]],
+      "f_[14,0]": [["5/6", "3801"], ["11/6", "442966"], ["17/6", "17230152"]],
+      "f_[16,0]": [["29/150", "33"], ["179/150", "22764"], ["329/150", "1600562"]],
+      "f_[18,0]": [["71/150", "274"], ["221/150", "68679"], ["371/150", "3599952"]],
+      "f_[20,0]": [["101/150", "738"], ["251/150", "115520"], ["401/150", "5085020"]],
+      "f_[22,0]": [["119/150", "792"], ["269/150", "98342"], ["419/150", "3941684"]]
+    },
     "conditionalDefectInvarianceGroup": "Gamma_1(25)",
     "modularCurveGenus": 12,
     "genusZeroStatus": "X_1(25) has genus 12; Gamma_1(N) is genus zero only for N<=10 or N=12",
     "rankGenusCoincidence": "rank Rep(so(3)_23)=12 equals genus X_1(25)=12; this numerical equality is not a derived identification",
     "interpretation": "the class-sensitive refinement, if the stronger p=23 decomposition is completed, leaves the genus-zero Hauptmodul regime rather than producing another scalar moonshine Hauptmodul",
     "knownAlgorithm": "derive commutant characters f_[l,t] by finite Fourier projection of the 23-twisted-twining functions and insert f_[l,0] in the published duality-defect trace formula",
-    "missingInput": "an explicit p=23 character/decomposition table, evaluated after declaring the generator orientation that relates the corpus Golay rail to one member of the inverse 23A/23B pair",
-    "boundary": "the general formula is constructive, but the p=23 numerical defect McKay-Thompson series is not tabulated in the cited work and cannot be recovered from the common scalar T_23 alone"
+    "missingInput": "an orientation-sensitive additional commuting insertion or genus-two sewn amplitude tied to the corpus Golay rail",
+    "boundary": "modular transport, Fourier projection, all twelve even-l commutant seeds and the scalar duality-defect trace are now executed; the scalar trace fails the orientation test, so only a refined insertion or higher-genus record can reopen it"
   },
   "rankGenusSurvey": {
     "domain": "odd prime divisors p of the Monster order, comparing rank Rep(so(3)_p)=(p+1)/2 with genus X_1(p+2)",
@@ -199,6 +234,11 @@
       "route": "order-23 twist-charge channel on the Monster fixed-point VOA",
       "status": "established_current_frontier",
       "reason": "the 23AB self-orbifold has 529 sectors with the U(23) discriminant form, a finite Fourier bicharacter, an embedded P(23) parafermion algebra and a Tambara-Yamagami duality defect"
+    },
+    {
+      "route": "unrefined order-23 duality-defect trace as an orientation detector",
+      "status": "ruled_out",
+      "reason": "the trace is explicitly sqrt(23)*(q^-1+2+2446q+115834q^2+2446684q^3+33295322q^4+...), but all inputs depend only on ab and are invariant under the fifth-power 23A/23B exchange"
     },
     {
       "route": "untwined genus-two Monster vacuum amplitude",

@@ -196,7 +196,28 @@ holomorphic differentials and the latter simple defect types.  This locates
 the missing “program”: it is a vector of defect/commutant
 characters assembled from the 529 twist--charge sectors, not another scalar
 eta quotient.  The literature supplies the algorithm but not a published
-explicit \(p=23\) table.
+explicit \(p=23\) coefficient table.
+
+A modular-orbit audit narrows that omission substantially.  All 528 nonzero
+labels form one \(SL_2(\mathbb F_{23})\) orbit, while the
+\(\Gamma_0(23)\)-invariance of the scalar Hauptmodul collapses them to the 24
+directions of \(\mathbb P^1(\mathbb F_{23})\), each with multiplicity 22.
+Together with the non-anomalous normalization
+\(h(V_{a,b})=ab/23\pmod{\mathbb Z}\), modular covariance therefore gives a
+functional prescription for every twisted--twining entry from \(T_{23}\).
+Fricke invariance gives the mixed branches as
+\(T_{g^a,g^b}(\tau)=T_{23}((\tau+ba^{-1})/23)\).  The Fourier transform then
+keeps precisely the coefficients \(c(n)\) with \(n\equiv ab\pmod{23}\).
+Thus all 529 module characters reduce to 23 twisted product-residue types and
+the two untwisted characters.  Executing Volpato's equation (2.33) then gives
+positive first terms for all twelve even-\(l\), \(t=0\) commutant characters;
+the vacuum begins \(q^{-139/150}(1+1878q^2+150556q^3+\cdots)\), matching
+\(-c_{\mathrm{Com}}/24\). Direct assembly gives
+\(Z^{\mathcal N}_{23}/\sqrt{23}=q^{-1}+2+2446q+115834q^2+2446684q^3+
+33295322q^4+\cdots\). The scalar trace is invariant under fifth-power
+orientation exchange because every input character depends only on the
+preserved product \(ab\). What remains is a refined insertion or genus-two
+record, not 529 independent source functions.
 
 The 22 nonidentity powers of a chosen order-23 generator also form eleven
 inverse pairs, transitively cycled by fifth power; adding the identity gives
@@ -233,13 +254,15 @@ factors with the two oriented ideal/Monster classes, or a \(23AB\) defect
 junction to the corpus's \(2A\) fermionic seam.  Those are the three live
 mathematical targets.
 
-The scalar specialization is exhausted by the two-character no-go above.  The
-next calculation cannot proceed from \(J\) and \(T_{23}\) alone: it needs the
-full \(T_{g^a,g^k}\) input or an equivalent explicit commutant-character table.
-Once supplied, the prescribed test is to compute the twelve defect characters
-and compare their Galois action under multiplication by \(5\).  A positive
-result would be the first class-sensitive observable in this lane; a negative
-result would force genus-two insertions.
+The untwisted scalar specialization is exhausted by the two-character no-go
+above, but modular transport reopens a finite route from \(T_{23}\).  The 24
+branches and their Fourier projections are now explicit coefficient filters,
+and the first three terms of all twelve needed even-\(l\) commutant characters
+are verified. The scalar defect assembly is also complete through \(q^4\) and
+fails the orientation test exactly. The next calculation must add a commuting
+insertion or genus-two sewing and compare its Galois action under multiplication
+by \(5\). The scalar negative result has already forced that refinement, and
+the oriented generator convention remains necessary.
 
 ## Primary sources
 

@@ -17,7 +17,7 @@ The construction is admitted only after the named additional input is supplied. 
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the two rails share a plane, not a group”.
-- **Unit of argument:** assertion 3 of 3 in this section.
+- **Unit of argument:** assertion 3 of 4 in this section.
 - **Evidence posture:** Identify the named external input and verify that the construction follows after it is supplied.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 
@@ -42,4 +42,4 @@ Show that the named input is inconsistent, insufficient, unavailable, or fails t
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-two-rails-share-a-plane-not-a-group) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-two-rails-share-a-plane-not-a-group) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-4.md)

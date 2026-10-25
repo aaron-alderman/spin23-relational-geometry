@@ -166,7 +166,7 @@ assert.equal(gaussianPeriodResidue(complement), 1);
 // McKay-Thompson series:
 //   F = eta(tau)eta(23tau)/(eta(2tau)eta(46tau)),
 //   T_23 = (F+1)(F^2+4)/F^2 = F+1+4/F+4/F^2.
-const maxQ = 40;
+const maxQ = 100;
 const multiplySeries = (left, right, minExponent = -2, maxExponent = maxQ) => {
   const out = new Map();
   for (const [i, a] of left) for (const [j, b] of right) {
@@ -432,24 +432,262 @@ for (let a = 0; a < modulus; a += 1) {
 }
 assert.equal(gcd(24, 23), 1); // an order-24 anomaly restricts trivially to C_23
 
+// The modular reconstruction problem is smaller than 529 independent
+// functions. Reduction of SL_2(Z) modulo 23 is onto SL_2(F_23). The exact
+// stabilizer of the row label (0,1) has order 23, whereas its projective
+// stabilizer has order 23*22. Thus the nonzero labels form one 528-element
+// orbit, while a scalar Gamma_0(23)-invariant trace has only 24 modular
+// images, one for each direction in P^1(F_23). Each image is used by 22
+// scalar multiples.
+const sl2Mod23 = [];
+for (let a = 0; a < modulus; a += 1) {
+  for (let b = 0; b < modulus; b += 1) {
+    for (let c = 0; c < modulus; c += 1) {
+      for (let d = 0; d < modulus; d += 1) {
+        if (mod(a * d - b * c) === 1) sl2Mod23.push([a, b, c, d]);
+      }
+    }
+  }
+}
+assert.equal(sl2Mod23.length, modulus * (modulus ** 2 - 1));
+const exactVectorStabilizer = sl2Mod23.filter(([, , c, d]) => c === 0 && d === 1);
+const projectiveVectorStabilizer = sl2Mod23.filter(([, , c]) => c === 0);
+assert.equal(exactVectorStabilizer.length, modulus);
+assert.equal(projectiveVectorStabilizer.length, modulus * (modulus - 1));
+assert.equal(sl2Mod23.length / exactVectorStabilizer.length, modulus ** 2 - 1);
+assert.equal(sl2Mod23.length / projectiveVectorStabilizer.length, modulus + 1);
+const modularOrbitOf01 = new Set(sl2Mod23.map(([, , c, d]) => `${c},${d}`));
+assert.equal(modularOrbitOf01.size, modulus ** 2 - 1);
+const modularProjectiveOrbit = new Set(sl2Mod23.map(([, , c, d]) => canonicalDirection([c, d])));
+assert.equal(modularProjectiveOrbit.size, modulus + 1);
+const projectiveMultiplicity = new Map();
+for (const [a, b] of finiteLabels.filter(([x, y]) => x !== 0 || y !== 0)) {
+  const direction = canonicalDirection([a, b]);
+  projectiveMultiplicity.set(direction, (projectiveMultiplicity.get(direction) ?? 0) + 1);
+}
+assert.equal(projectiveMultiplicity.size, 24);
+assert.equal([...projectiveMultiplicity.values()].every((count) => count === 22), true);
+assert.equal(evidence.modularTransportReconstruction.nonzeroLabelOrbit, 528);
+assert.equal(evidence.modularTransportReconstruction.scalarModularImages, 24);
+
 // Because T_23A=T_23B and every nonidentity power of an order-23 generator
 // lies in one of those two classes, the untwisted discrete Fourier projection
 // has only a neutral and a universal nonzero-charge character.
-const Jfirst = new Map([[-1, 1n], [0, 0n], [1, 196884n], [2, 21493760n]]);
+const sigma3 = (n) => {
+  let total = 0n;
+  for (let divisor = 1; divisor <= n; divisor += 1) {
+    if (n % divisor === 0) total += BigInt(divisor) ** 3n;
+  }
+  return total;
+};
+const binomialBigInt = (n, k) => {
+  let out = 1n;
+  for (let i = 1; i <= k; i += 1) out = out * BigInt(n - k + i) / BigInt(i);
+  return out;
+};
+const E4 = new Map([[0, 1n]]);
+for (let exponent = 1; exponent <= maxQ + 1; exponent += 1) E4.set(exponent, 240n * sigma3(exponent));
+const E4Cubed = multiplySeries(multiplySeries(E4, E4, 0, maxQ + 1), E4, 0, maxQ + 1);
+let inverseDeltaUnshifted = new Map([[0, 1n]]);
+for (let n = 1; n <= maxQ + 1; n += 1) {
+  const factor = new Map();
+  for (let multiplicity = 0; n * multiplicity <= maxQ + 1; multiplicity += 1) {
+    factor.set(n * multiplicity, binomialBigInt(23 + multiplicity, 23));
+  }
+  inverseDeltaUnshifted = multiplySeries(inverseDeltaUnshifted, factor, 0, maxQ + 1);
+}
+const inverseDelta = new Map([...inverseDeltaUnshifted].map(([exponent, coefficient]) => [exponent - 1, coefficient]));
+const Jfirst = multiplySeries(E4Cubed, inverseDelta, -1, maxQ);
+Jfirst.set(0, (Jfirst.get(0) ?? 0n) - 744n);
+assert.deepEqual(
+  [-1, 0, 1, 2].map((exponent) => Jfirst.get(exponent) ?? 0n),
+  [1n, 0n, 196884n, 21493760n],
+);
 const neutralCharge = new Map();
 const nonzeroCharge = new Map();
-for (const exponent of [-1, 0, 1, 2]) {
+for (let exponent = -1; exponent <= maxQ; exponent += 1) {
   neutralCharge.set(exponent, ((Jfirst.get(exponent) ?? 0n) + 22n * (T23.get(exponent) ?? 0n)) / 23n);
   nonzeroCharge.set(exponent, ((Jfirst.get(exponent) ?? 0n) - (T23.get(exponent) ?? 0n)) / 23n);
 }
-assert.deepEqual([...neutralCharge.values()], [1n, 0n, 8564n, 934518n]);
-assert.deepEqual([...nonzeroCharge.values()], [0n, 0n, 8560n, 934511n]);
+assert.deepEqual([-1, 0, 1, 2].map((e) => neutralCharge.get(e)), [1n, 0n, 8564n, 934518n]);
+assert.deepEqual([-1, 0, 1, 2].map((e) => nonzeroCharge.get(e)), [0n, 0n, 8560n, 934511n]);
 for (let charge = 1; charge < modulus; charge += 1) {
   // sum_{k=1}^{22} zeta^(-charge*k)=-1, encoded by residue counts.
   const residues = Array(modulus).fill(0);
   for (let k = 1; k < modulus; k += 1) residues[mod(-charge * k)] += 1;
   assert.deepEqual(residues, [0, ...Array(22).fill(1)]);
 }
+
+// Fricke invariance makes the 24 modular branches explicit. For a!=0 and
+// r=b/a mod 23, a matrix with bottom row (1,r) sends tau to -1/(tau+r),
+// and T_23(-1/(tau+r))=T_23((tau+r)/23). Fourier projection over r then
+// filters the T_23 coefficients by their exponent modulo 23:
+//   ch V_{a,b} = sum_{n == ab (23)} c(n) q^(n/23).
+// This supplies every scalar V_{a,b} character from one known q-series.
+const twistedCharacter = (a, b) => {
+  const aa = mod(a);
+  const bb = mod(b);
+  if (aa === 0) return bb === 0 ? new Map(neutralCharge) : new Map(nonzeroCharge);
+  const residue = mod(aa * bb);
+  return new Map([...T23].filter(([exponent]) => mod(exponent) === residue));
+};
+const twistedCharacterFingerprint = (a, b) => {
+  if (mod(a) === 0) return mod(b) === 0 ? "untwisted-neutral" : "untwisted-charged";
+  return `twisted-product-${mod(a * b)}`;
+};
+const moduleCharacterFingerprints = new Set(finiteLabels.map(([a, b]) => twistedCharacterFingerprint(a, b)));
+assert.equal(moduleCharacterFingerprints.size, 25);
+for (let a = 1; a < modulus; a += 1) {
+  for (let b = 0; b < modulus; b += 1) {
+    const character = twistedCharacter(a, b);
+    for (const exponent of character.keys()) assert.equal(mod(exponent), mod(a * b));
+  }
+}
+// The unique twisted ground state sits in product class -1, agreeing with
+// Volpato's V_{1,-1} convention.
+assert.equal(twistedCharacter(1, -1).get(-1), 1n);
+assert.equal(twistedCharacter(1, 0).has(-1), false);
+assert.equal(evidence.modularTransportReconstruction.moduleCharacterTypes, 25);
+
+// Execute Volpato's equation (2.33) for the twelve even-l, t=0 commutant
+// characters. Exponents are stored exactly in units of 1/13800, the lcm of
+// the parafermion shift denominator 8*23*25, the twisted 1/23 grading and
+// eta's 1/24 shift. The available T_23 coefficients through q^100 suffice for
+// the first three integral-grade terms of every series.
+const exponentDenominator = 13800;
+const partitionNumbers = Array(21).fill(0n);
+partitionNumbers[0] = 1n;
+for (let part = 1; part < partitionNumbers.length; part += 1) {
+  for (let total = part; total < partitionNumbers.length; total += 1) {
+    partitionNumbers[total] += partitionNumbers[total - part];
+  }
+}
+const moduleCharacterInUnits = (a, b) => {
+  const aa = mod(a);
+  const bb = mod(b);
+  if (aa === 0) {
+    const source = bb === 0 ? neutralCharge : nonzeroCharge;
+    return new Map([...source].map(([exponent, coefficient]) => [exponent * exponentDenominator, coefficient]));
+  }
+  const source = twistedCharacter(aa, bb);
+  return new Map([...source].map(([exponent, coefficient]) => [exponent * 600, coefficient]));
+};
+const firstCommutantTerms = new Map();
+for (let ell = 0; ell <= 22; ell += 2) {
+  const series = new Map();
+  for (let n = -30; n <= 30; n += 1) {
+    const shiftBase = 2 * n * (modulus + 2) - modulus * (ell + 1);
+    const parafermionShiftUnits = 3 * shiftBase * shiftBase;
+    const sign = ((ell / 2 - n) & 1) === 0 ? 1n : -1n;
+    for (const [sourceExponentUnits, sourceCoefficient] of moduleCharacterInUnits(n, -n)) {
+      for (let etaGrade = 0; etaGrade < partitionNumbers.length; etaGrade += 1) {
+        const exponentUnits = parafermionShiftUnits + sourceExponentUnits - 575 + etaGrade * exponentDenominator;
+        const coefficient = sign * sourceCoefficient * partitionNumbers[etaGrade];
+        series.set(exponentUnits, (series.get(exponentUnits) ?? 0n) + coefficient);
+      }
+    }
+  }
+  const firstThree = [...series]
+    .filter(([, coefficient]) => coefficient !== 0n)
+    .sort(([left], [right]) => left - right)
+    .slice(0, 3);
+  assert.equal(firstThree.length, 3);
+  assert.equal(
+    firstThree.every(([, coefficient]) => coefficient > 0n),
+    true,
+    `negative commutant coefficient for ell=${ell}: ${JSON.stringify(firstThree.map(([u, c]) => [u, c.toString()]))}`,
+  );
+  const gradeGaps = firstThree.slice(1).map(([units]) => (units - firstThree[0][0]) / exponentDenominator);
+  assert.equal(gradeGaps.every((gap) => Number.isInteger(gap) && gap > 0), true);
+  firstCommutantTerms.set(ell, firstThree);
+}
+assert.equal(firstCommutantTerms.size, 12);
+const rationalExponent = (units) => {
+  const divisor = gcd(Math.abs(units), exponentDenominator);
+  return `${units / divisor}/${exponentDenominator / divisor}`;
+};
+const commutantCharacterCertificate = Object.fromEntries(
+  [...firstCommutantTerms].map(([ell, terms]) => [
+    `f_[${ell},0]`,
+    terms.map(([units, coefficient]) => [rationalExponent(units), coefficient.toString()]),
+  ]),
+);
+assert.equal(evidence.parafermionRefinementBoundary.evenLCommutantCharacters, 12);
+assert.deepEqual(evidence.parafermionRefinementBoundary.evenLCommutantFirstTerms, commutantCharacterCertificate);
+
+// Assemble Volpato's equation (2.52)--(2.54) directly. Dividing the duality
+// defect trace by sqrt(23) gives eta(2tau)/eta(tau)^2 times the theta-weighted
+// module-character sum. Gaussian-integer bookkeeping keeps every quarter-turn
+// phase exact.
+const defectMaxExponent = 4;
+const gaussianAdd = ([ar, ai], [br, bi]) => [ar + br, ai + bi];
+const gaussianScale = ([ar, ai], scalar) => [ar * scalar, ai * scalar];
+const iPower = (power) => {
+  const residue = ((power % 4) + 4) % 4;
+  return [[1n, 0n], [0n, 1n], [-1n, 0n], [0n, -1n]][residue];
+};
+const defectCore = new Map();
+for (let n = 0; n < modulus; n += 1) {
+  const moduleCharacter = moduleCharacterInUnits(n, -n);
+  for (let winding = -4; winding <= 4; winding += 1) {
+    const charge = n + modulus * winding;
+    const thetaUnits = charge * charge;
+    const phase = iPower(charge);
+    for (const [sourceUnits13800, coefficient] of moduleCharacter) {
+      const sourceUnits23 = sourceUnits13800 / 600;
+      assert.equal(Number.isInteger(sourceUnits23), true);
+      const exponentUnits23 = thetaUnits + sourceUnits23;
+      if (exponentUnits23 > defectMaxExponent * modulus) continue;
+      const previous = defectCore.get(exponentUnits23) ?? [0n, 0n];
+      defectCore.set(exponentUnits23, gaussianAdd(previous, gaussianScale(phase, coefficient)));
+    }
+  }
+}
+// eta(2tau)/eta(tau)^2 = product_m (1+q^m)/(1-q^m).
+let etaDefectRatio = new Map([[0, 1n]]);
+for (let m = 1; m <= defectMaxExponent + 1; m += 1) {
+  const factor = new Map([[0, 1n]]);
+  for (let multiple = 1; m * multiple <= defectMaxExponent + 1; multiple += 1) {
+    factor.set(m * multiple, 2n);
+  }
+  etaDefectRatio = multiplySeries(etaDefectRatio, factor, 0, defectMaxExponent + 1);
+}
+const normalizedDualityDefect = new Map();
+for (const [coreUnits, coreCoefficient] of defectCore) {
+  for (const [grade, ratioCoefficient] of etaDefectRatio) {
+    const exponentUnits = coreUnits + grade * modulus;
+    if (exponentUnits > defectMaxExponent * modulus) continue;
+    const previous = normalizedDualityDefect.get(exponentUnits) ?? [0n, 0n];
+    normalizedDualityDefect.set(
+      exponentUnits,
+      gaussianAdd(previous, gaussianScale(coreCoefficient, ratioCoefficient)),
+    );
+  }
+}
+const normalizedDefectTerms = [...normalizedDualityDefect]
+  .filter(([, [real, imaginary]]) => real !== 0n || imaginary !== 0n)
+  .sort(([left], [right]) => left - right);
+assert.equal(normalizedDefectTerms.every(([, [, imaginary]]) => imaginary === 0n), true);
+const normalizedDefectIntegerTerms = normalizedDefectTerms.map(([units, [real]]) => {
+  assert.equal(Math.abs(units % modulus), 0);
+  return [units / modulus, real];
+});
+assert.deepEqual(normalizedDefectIntegerTerms[0], [-1, 1n]);
+const normalizedDefectCertificate = normalizedDefectIntegerTerms.map(([exponent, coefficient]) => [
+  exponent,
+  coefficient.toString(),
+]);
+assert.deepEqual(normalizedDefectCertificate, [
+  [-1, "1"], [0, "2"], [1, "2446"], [2, "115834"], [3, "2446684"], [4, "33295322"],
+]);
+// D_5 preserves ab and merely changes the chosen generator coordinates.
+// Therefore the scalar module characters, the even-l inversion and the
+// assembled unrefined defect trace are fifth-power/orientation invariant.
+for (const [a, b] of finiteLabels) {
+  const [aa, bb] = orientationExchange([a, b]);
+  assert.equal(twistedCharacterFingerprint(a, b), twistedCharacterFingerprint(aa, bb));
+}
+assert.equal(evidence.parafermionRefinementBoundary.normalizedDualityDefectTrace, "sqrt(23)*(q^-1 + 2 + 2446q + 115834q^2 + 2446684q^3 + 33295322q^4 + ...)");
 
 // Exact rational invariants of the p=23 parafermionic refinement.
 const parafermionCentralCharge = {numerator: 2 * (modulus - 1), denominator: modulus + 2};
@@ -521,6 +759,10 @@ assert.deepEqual(rankGenusSurvey.filter(([, genus, rank]) => genus === rank), [[
 
 assert.equal(evidence.rule60GolayDecomposition.primaryIdentity, "T^89 = sigma^2 on im(T)");
 assert.equal(evidence.routeVerdicts.find((x) => x.route === "Rule 60 equals a Monster element").status, "ruled_out");
+assert.equal(
+  evidence.routeVerdicts.find((x) => x.route === "unrefined order-23 duality-defect trace as an orientation detector").status,
+  "ruled_out",
+);
 
 console.log(JSON.stringify({
   diagonalPlane: "II_1,1 embedded in H_2(R) by (m,n) -> diag(m,n)",
@@ -563,9 +805,24 @@ console.log(JSON.stringify({
     twelveCountIdentificationEstablished: false,
   },
   genusOneChargeProjection: {
-    neutral: Object.fromEntries([...neutralCharge].map(([k, v]) => [k, v.toString()])),
-    eachNonzeroCharge: Object.fromEntries([...nonzeroCharge].map(([k, v]) => [k, v.toString()])),
+    neutral: Object.fromEntries([-1, 0, 1, 2].map((k) => [k, neutralCharge.get(k).toString()])),
+    eachNonzeroCharge: Object.fromEntries([-1, 0, 1, 2].map((k) => [k, nonzeroCharge.get(k).toString()])),
     orientationRecovered: false,
+  },
+  modularTransportReconstruction: {
+    sl2Mod23Order: sl2Mod23.length,
+    exactLabelStabilizerOrder: exactVectorStabilizer.length,
+    exactLabelOrbit: modularOrbitOf01.size,
+    projectiveStabilizerOrder: projectiveVectorStabilizer.length,
+    scalarModularImages: modularProjectiveOrbit.size,
+    labelsPerScalarImage: [...new Set(projectiveMultiplicity.values())][0],
+    moduleCharacterTypesAfterFourierProjection: moduleCharacterFingerprints.size,
+    characterRule: "ch(V_ab)=sum_{n congruent ab mod 23} c(n) q^(n/23) for a nonzero",
+    independent529FunctionInputRequired: false,
+    twistedModuleCharacterTransformComplete: true,
+    parafermionInversionFirstTermsComplete: true,
+    evenLCommutantCharacters: commutantCharacterCertificate,
+    normalizedDualityDefectTrace: normalizedDefectCertificate,
   },
   parafermionRefinement: {
     centralCharge: "44/25",

@@ -1074,6 +1074,10 @@ The scalar \(\sigma\) bridge now closes exactly. Its fixed Leech lattice has Gra
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-3.md)
 
+The modular calculation now goes further. Fricke invariance gives the mixed branches as \(T_{23}((\tau+r)/23)\), and Fourier projection filters coefficients by \(n\equiv ab\pmod{23}\), reconstructing all 529 module characters as 25 scalar types. Volpato's inversion yields positive seeds for the twelve even-\(l\) commutant characters, and exact phase bookkeeping gives \(Z^{\mathcal N}_{23}/\sqrt{23}=q^{-1}+2+2446q+115834q^2+2446684q^3+33295322q^4+\cdots\). Fifth-power exchange preserves \(ab\), so this scalar defect trace is orientation-blind. The look-here calculation must add a commuting insertion or sew at genus two; another unrefined scalar trace cannot name 23A versus 23B.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-4.md)
+
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
 ## Hot off the press — the hydrodynamic cone has poles
 

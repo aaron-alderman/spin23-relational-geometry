@@ -17,7 +17,7 @@ The construction is admitted only after the named additional input is supplied. 
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the two rails share a plane, not a group”.
-- **Unit of argument:** assertion 2 of 3 in this section.
+- **Unit of argument:** assertion 2 of 4 in this section.
 - **Evidence posture:** Identify the named external input and verify that the construction follows after it is supplied.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.
 

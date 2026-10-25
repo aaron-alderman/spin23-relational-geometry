@@ -121,6 +121,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Claim · The admissibility frontier · Hot off the press — the two rails share a plane, not a group (1)](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the two rails share a plane, not a group (2)](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the two rails share a plane, not a group (3)](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — the two rails share a plane, not a group (4)](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-4.md)
 - [Claim · The revised spine · Why ten generators are a real gate (1)](../details/01-the-revised-spine-why-ten-generators-are-a-real-gate-claim-1.md)
 - [Claim · The revised spine · Algebra is not yet spacetime (1)](../details/01-the-revised-spine-algebra-is-not-yet-spacetime-claim-1.md)
 - [Claim · One carrier, two faces, three relations · Three relations do not select an orientation (1)](../details/02-one-carrier-two-faces-three-relations-three-relations-do-not-select-an-orientation-claim-1.md)

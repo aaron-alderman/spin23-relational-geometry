@@ -88,7 +88,7 @@ for another dimensionless redesign.
 | OT-039 | Microscopic wall-pseudoscalar coefficient | source-derived coupling with sign, magnitude and radiative stability |
 | OT-040 | Matter-plus-field Coulomb energy current | gauge- and limit-consistent total energy continuity |
 | OT-042 | Typed triality-Furey reflection | full module, charge and orientation intertwiner |
-| OT-045 | Hecke operator or modular-trace test | identify the corpus cycle with an oriented 23AB generator, compute its now-established parafermionic duality-defect records and sew them at genus two |
+| OT-045 | Hecke operator or modular-trace test | add an orientation-sensitive commuting insertion to the now-assembled order-23 defect trace, identify the corpus cycle with an oriented 23AB generator, and sew the refined record at genus two |
 | OT-046 | D4 quotient-singularity localized operator | source-native Hamiltonian/Dirac/Fredholm operator with quotient-controlled spectrum |
 | OT-049 | Exceptional rank-one vacuum Hessian and gauge spectrum | stable action-level vacuum with coloured directions and matched current geometry |
 | OT-050 | Lattice-subroutine gravitational action and observable | order-23 twined genus-two and fermionic Baby-Monster data, a derived off-diagonal Jordan response, and one complete typed route to a healthy action or continuum and no-refit record |
@@ -259,11 +259,21 @@ and charge. Ordinary genus-one charge projection still collapses all twenty-two
 nonzero charges to one series. A separate conditional construction predicts
 twelve \(\operatorname{Rep}(\mathfrak{so}(3)_{23})\) defect lines with
 \(\Gamma_1(25)\) invariance; \(X_1(25)\) has genus twelve, an exact but
-unexplained rank/genus coincidence. The next finite work is no longer to invent the abstract defect:
-identify the corpus cycle with an oriented 23A/23B generator, compute the
-corresponding twisted--twining and defect characters, and sew them at genus
-two. The off-diagonal physical Jordan response and a gravitational action
-remain separate gates.
+unexplained rank/genus coincidence. A modular-orbit audit further shows that
+the 529 entries are not independent: the 528 nonzero labels are one
+\(SL_2(\mathbb F_{23})\) orbit, while \(\Gamma_0(23)\) invariance collapses
+their scalar realizations to 24 projective branches, each shared by 22 labels.
+Fricke invariance turns the branches into \(T_{23}((\tau+r)/23)\), and Fourier
+projection filters coefficients by \(n\equiv ab\pmod{23}\); all 529 module
+characters thereby reduce to 25 scalar types. Volpato's commutant inversion
+now yields three verified terms for each of the twelve required even-\(l\)
+characters. The scalar duality-defect trace is now assembled through \(q^4\)
+and remains invariant under fifth-power exchange, so it closes negatively as
+an orientation detector. The next finite work must add a commuting insertion
+not determined only by \(ab\), identify the corpus cycle with an oriented
+23A/23B generator, and sew the defect characters at genus two. The
+off-diagonal physical Jordan response and a gravitational action remain
+separate gates.
 
 ## P3 — fundamental firewall
 

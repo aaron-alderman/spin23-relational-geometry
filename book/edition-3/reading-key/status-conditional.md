@@ -82,6 +82,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Hot off the press — the two rails share a plane, not a group (1)](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-1.md)
 - [Claim · The admissibility frontier · Hot off the press — the two rails share a plane, not a group (2)](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-2.md)
 - [Claim · The admissibility frontier · Hot off the press — the two rails share a plane, not a group (3)](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-3.md)
+- [Claim · The admissibility frontier · Hot off the press — the two rails share a plane, not a group (4)](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-4.md)
 - [Claim · One carrier, two faces, three relations · The graph result (1)](../details/02-one-carrier-two-faces-three-relations-the-graph-result-claim-1.md)
 - [Claim · The projective loop · From topology to a defect (1)](../details/03-projective-loop-from-topology-to-a-defect-claim-1.md)
 - [Claim · The projective loop · From topology to a defect (2)](../details/03-projective-loop-from-topology-to-a-defect-claim-2.md)
