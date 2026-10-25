@@ -46,9 +46,9 @@
     "search_nearby_theory_with_same_invariant_and_different_mechanism"
   ],
   "experimentDecisionLayers": [
-    "build_gate",
-    "bridge_gate",
-    "physics_gate"
+    "build_go_no_go",
+    "bridge_go_no_go",
+    "physics_go_no_go"
   ],
   "experimentRequiredFields": [
     "hypothesis",
@@ -99,15 +99,17 @@
     {
       "id": "EXIT-03",
       "name": "Experimental programme closure",
-      "status": "open",
+      "status": "passed",
       "exit": "Every experimentally reachable topic has a realistic programme containing every required field and all three decision layers; every outcome updates named claims and topics; every programme has an executable verifier or an explicit external readiness gate.",
       "currentEvidence": [
         "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programme_overrides_v2.json",
         "corpus/programmes/frontier-physics-targets/detector_frontier_register_v1.json",
         "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.json",
         "corpus/programmes/frontier-physics-targets/experiment_exit_audit_v1.json"
       ],
-      "missingArtifact": "Experiment-specific authorship for the remaining 153 genuinely judgment-bearing v2 programme cells. Four flagship programmes (EX-006, EX-012, EX-013 and EX-021) now have explicit transfer functions, covariance, signal scale, sensitivity, build and physics decisions, replication, release contracts and claim propagation; seventeen programmes remain open."
+      "missingArtifact": "None for EXIT-03: all 21 programmes and all 378 required cells are explicit, including build, bridge and physics decisions, replication, release and claim propagation. Corpus completion remains forbidden while any other exit gate is open."
     },
     {
       "id": "EXIT-04",

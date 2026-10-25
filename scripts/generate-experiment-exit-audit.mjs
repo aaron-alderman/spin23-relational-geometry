@@ -28,7 +28,7 @@ const records = experiments.map(experiment => {
     fields,
     explicitFields: explicit,
     missingFields: criteria.experimentRequiredFields.length - explicit,
-    threeDecisionLayersExplicit: criteria.experimentDecisionLayers.every(layer => Object.hasOwn(experiment, layer)),
+    threeDecisionLayersExplicit: criteria.experimentDecisionLayers.every(layer => Object.hasOwn(experiment, layer) && experiment[layer] !== null && experiment[layer] !== ""),
     exitReady: explicit === criteria.experimentRequiredFields.length
   };
 });

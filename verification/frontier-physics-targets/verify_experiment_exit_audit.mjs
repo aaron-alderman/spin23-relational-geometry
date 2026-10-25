@@ -24,8 +24,10 @@ for (const record of audit.records) {
 const total = experiments.length * criteria.experimentRequiredFields.length;
 const explicit = audit.records.reduce((sum, record) => sum + record.explicitFields, 0);
 const ready = audit.records.filter(record => record.exitReady).length;
+const decisionReady = audit.records.filter(record => record.threeDecisionLayersExplicit).length;
 if (audit.summary.totalRequiredCells !== total || audit.summary.explicitCells !== explicit || audit.summary.missingCells !== total - explicit || audit.summary.exitReadyExperiments !== ready) failures.push("summary drift");
-if (audit.summary.exit03Passed !== (ready === experiments.length)) failures.push("EXIT-03 flag drift");
+if (audit.summary.threeDecisionLayersExplicit !== decisionReady) failures.push("decision-layer summary drift");
+if (audit.summary.exit03Passed !== (ready === experiments.length && decisionReady === experiments.length)) failures.push("EXIT-03 flag drift");
 if (failures.length) {
   console.error(JSON.stringify({ result: "fail", failures }, null, 2));
   process.exit(1);

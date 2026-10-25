@@ -12,7 +12,7 @@ if (contract.completionClaimAllowed !== false) failures.push("completion is allo
 if (!Array.isArray(contract.requiredAdjacencyFamilies) || contract.requiredAdjacencyFamilies.length !== 12) failures.push("adjacency universe is incomplete");
 if (!Array.isArray(contract.requiredAdjacencyDispositions) || contract.requiredAdjacencyDispositions.length !== 8) failures.push("adjacency dispositions are incomplete");
 if (!Array.isArray(contract.terminalNeighbourhoodMoves) || contract.terminalNeighbourhoodMoves.length !== 8) failures.push("terminal neighbourhood protocol is incomplete");
-if (JSON.stringify(contract.experimentDecisionLayers) !== JSON.stringify(["build_gate", "bridge_gate", "physics_gate"])) failures.push("experiment decision layers drifted");
+if (JSON.stringify(contract.experimentDecisionLayers) !== JSON.stringify(["build_go_no_go", "bridge_go_no_go", "physics_go_no_go"])) failures.push("experiment decision layers drifted");
 if (!Array.isArray(contract.experimentRequiredFields) || contract.experimentRequiredFields.length < 18) failures.push("experiment programme contract is incomplete");
 if (!Array.isArray(contract.gates) || contract.gates.length !== 9) failures.push("nine exit gates are required");
 
