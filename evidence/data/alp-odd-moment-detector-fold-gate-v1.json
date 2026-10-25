@@ -1,0 +1,189 @@
+{
+  "schema": "admissibility.alp-odd-moment-detector-fold-gate/1",
+  "date": "2026-10-25",
+  "targets": [
+    "OT-047",
+    "OT-048"
+  ],
+  "parent": "AZ-117",
+  "authority": "synthetic detector-transfer certificate; not a collider forecast or empirical result",
+  "parameters": {
+    "backgroundAmplitude": 1.7,
+    "backgroundSlope": 0.16,
+    "absorptiveBackground": 0.11,
+    "widthScale": 0.08,
+    "analysisHalfWindow": 0.6,
+    "truthHalfRange": 1.2,
+    "resolutionSigma": 0.06,
+    "acceptanceOddSlope": 0.12,
+    "sourceResidues": [
+      0.24,
+      -0.18,
+      0.31
+    ],
+    "gridStep": 0.004
+  },
+  "detectorFold": {
+    "truthModel": "A(x)=B0+B1*x+i*BI+S/(x+i*gamma)",
+    "resolution": "normalized symmetric Gaussian convolution in reconstructed x",
+    "acceptance": "1+alpha*x/L inside the symmetric analysis window",
+    "ideal": {
+      "plus": -5.5913296063598406,
+      "minus": 5.985620806359838,
+      "zero": 0.1971456,
+      "sourceOdd": -5.7884752063598395,
+      "sourceEven": 0.19714559999999892,
+      "sourceEvenLeakageAfterBackgroundSubtraction": -1.0824674490095276e-15
+    },
+    "symmetricResolution": {
+      "plus": -5.06330448769601,
+      "minus": 5.457595687695998,
+      "zero": 0.19714559999999978,
+      "sourceOdd": -5.260450087696004,
+      "sourceEven": 0.19714559999999404,
+      "sourceEvenLeakageAfterBackgroundSubtraction": -5.745404152435185e-15
+    },
+    "asymmetricAcceptance": {
+      "plus": -4.69625447034986,
+      "minus": 5.829281834322227,
+      "zero": 0.4078327021823996,
+      "sourceOdd": -5.262768152336044,
+      "sourceEven": 0.5665136819861836,
+      "sourceEvenLeakageAfterBackgroundSubtraction": 0.15868097980378398
+    },
+    "symmetricParityControl": -2.6467716907063746e-16,
+    "attenuationFromResolution": 0.9087799291109184,
+    "conclusions": {
+      "symmetricResolutionPreservesParity": true,
+      "symmetricResolutionRetainsSignedInterference": true,
+      "oddAcceptanceLeaksSourceEvenTerms": true,
+      "templateSourceReversalCancelsSourceEvenLeakage": true
+    }
+  },
+  "factorialTransfer": {
+    "settingCount": 27,
+    "fitSettings": 19,
+    "heldOutSettings": 8,
+    "responseClass": "fixed linear detector folding of an amplitude linear in three declared source coefficients remains quadratic in those coefficients",
+    "extracted": {
+      "baseline": 0.4078327021823996,
+      "linear": [
+        3.0072960870491654,
+        -2.2554720652868756,
+        3.8844241124385066
+      ],
+      "kernel": [
+        [
+          0.051814197486949654,
+          -0.03886064811521231,
+          0.06692667175397571
+        ],
+        [
+          -0.03886064811521231,
+          0.029145486086408157,
+          -0.05019500381548253
+        ],
+        [
+          0.06692667175397571,
+          -0.05019500381548253,
+          0.08644695101555161
+        ]
+      ]
+    },
+    "heldOut": [
+      {
+        "c": [
+          -1,
+          -1,
+          -1
+        ],
+        "observed": -4.105266757782923,
+        "predicted": -4.105266757782926,
+        "residual": 2.6645352591003757e-15
+      },
+      {
+        "c": [
+          -1,
+          -1,
+          1
+        ],
+        "observed": 3.5966547953401133,
+        "predicted": 3.596654795340115,
+        "residual": -1.7763568394002505e-15
+      },
+      {
+        "c": [
+          -1,
+          1,
+          -1
+        ],
+        "observed": -8.259988280633904,
+        "predicted": -8.259988280633896,
+        "residual": -7.105427357601002e-15
+      },
+      {
+        "c": [
+          -1,
+          1,
+          1
+        ],
+        "observed": -0.9596267580347169,
+        "predicted": -0.9596267580347173,
+        "residual": 4.440892098500626e-16
+      },
+      {
+        "c": [
+          1,
+          -1,
+          -1
+        ],
+        "observed": 1.7970613217603526,
+        "predicted": 1.7970613217603515,
+        "residual": 1.1102230246251565e-15
+      },
+      {
+        "c": [
+          1,
+          -1,
+          1
+        ],
+        "observed": 10.034396248915193,
+        "predicted": 10.034396248915199,
+        "residual": -5.329070518200751e-15
+      },
+      {
+        "c": [
+          1,
+          1,
+          -1
+        ],
+        "observed": -2.6685453860123167,
+        "predicted": -2.6685453860123185,
+        "residual": 1.7763568394002505e-15
+      },
+      {
+        "c": [
+          1,
+          1,
+          1
+        ],
+        "observed": 5.167229510618677,
+        "predicted": 5.167229510618667,
+        "residual": 9.769962616701378e-15
+      }
+    ],
+    "maxHeldOutResidual": 9.769962616701378e-15
+  },
+  "experimentSemantics": {
+    "simulatedSettings": "The 27 signed settings are generator/template evaluations used to identify and validate the response surface.",
+    "observedWorld": "Collider data provide one unknown physical coefficient point, not 27 experimentally reversible source settings.",
+    "reversalUse": "S -> -S is an internal template and implementation diagnostic. It can isolate source-odd response in simulation but is not assumed to be a laboratory control.",
+    "physicalLeakageControl": "Acceptance-odd and background-slope leakage must be constrained with calibrated response, sidebands, control categories and nuisance covariance in the one physical data set."
+  },
+  "verdict": {
+    "closed": "For the declared toy amplitude and fixed linear detector, symmetric smearing preserves odd parity and the interference sign while attenuating it. Odd acceptance creates an even-to-odd leakage, but the 19-setting quadratic fit still predicts all eight held-out corners to numerical precision.",
+    "implication": "Detector folding does not by itself invalidate AZ-074. It changes the coefficients and can create nuisance odd moments; a fixed response remains inside the quadratic design, while coupling-dependent widths, selections or migrations must be exposed by held-out failures or modeled explicitly.",
+    "open": "No source-complete charged-production diphoton helicity amplitude, physical mass window, calibrated response matrix, event covariance or public-data likelihood has been supplied.",
+    "nextCalculation": "Choose one physical charged-production diphoton channel; generate the gauge-complete continuum and resonant helicity amplitudes in one frozen EFT basis; derive its response matrix and nuisance covariance; then use the 27 templates to predict held-out simulations before fitting the single observed data set."
+  }
+}
