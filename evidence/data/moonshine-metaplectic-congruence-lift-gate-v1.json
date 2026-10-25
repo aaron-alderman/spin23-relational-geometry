@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "date": "2026-10-25",
-  "claim": "The finite Dic11 subgroup at level 23 has no faithful finite-order lift to Sp(4,Z); its integral preimage is a nonsplit infinite extension by Gamma(23), so metaplectic C4 compatibility must be tested on the pulled-back congruence extension rather than on the finite quotient alone.",
+  "claim": "The finite Dic11 subgroup has no faithful finite-order integral lift; an explicit symmetric lift has one cyclic relation-defect rail, and the proposed genuine scalar C4 character is obstructed by the metaplectic quarter-turn relation.",
   "finiteQuotient": {
     "group": "Dic11",
     "order": 44,
@@ -30,8 +30,15 @@
     "requiredQuarterTurnImage": "i",
     "requiredMetaplecticCenterImage": "-1",
     "finiteC4DataSufficient": false,
-    "missingDatum": "the theta/metaplectic cocycle on congruence-kernel relations produced by explicit integral lifts"
+    "quarterTurnLiftRelation": "S_tilde^4=epsilon",
+    "requirementsCompatible": false,
+    "missingDatum": "a vector-valued action separating the dicyclic center, metaplectic kernel and congruence relation defect"
   },
-  "nextTest": "choose integral symplectic generator lifts, record their relation defects in Gamma(23), pull back the theta cocycle and compare the resulting genuine character with the sewn order-23 defect anomaly line",
-  "boundary": "The result obstructs a direct finite integral lift; it does not rule out a genuine multiplier on the infinite congruence preimage."
+  "selectedLift": {
+    "evidence": "evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json",
+    "kernelInsideGeneratedSubgroup": "<K> isomorphic to Z",
+    "K": "S^2 R^-11"
+  },
+  "nextTest": "construct a vector-valued metaplectic/Weil action on the selected congruence relation rail and compare it with sewn order-23 defect data",
+  "boundary": "The result rules out the stated one-dimensional genuine character, not vector-valued multipliers or a different embedding with explicitly different Maslov parity."
 }

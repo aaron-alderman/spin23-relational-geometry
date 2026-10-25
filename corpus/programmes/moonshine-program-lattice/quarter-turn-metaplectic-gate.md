@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 
-**Status:** finite character channels classified; direct finite integral lift obstructed; congruence compatibility open
+**Status:** finite character channels classified; genuine scalar metaplectic \(C_4\) lift ruled out for the declared one-block embedding
 
 **Evidence:** [quarter-turn ledger](../../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json)  
 **Certificate:** [abelianization and phase verifier](../../../verification/verify/verify_moonshine_quarter_turn_metaplectic_gate.mjs)
@@ -97,21 +97,14 @@ Their phase group contains the required order-four subgroup
 \mu_4=\{1,i,-1,-i\}\subset\mu_8.
 \]
 
-Accordingly, the next compatibility test is no longer “does the sign
-match?” It is:
-
-> Does the restriction of the genus-two theta/Pfaffian multiplier line to
-> the proposed level-23 defect lift realize the character
-> \(s\mapsto i,\ -I\mapsto-1\)?
-
-Three outcomes are distinct:
-
-1. **only \(C_2\) matches:** the projective 240-label seam is admissible, but
-   the central sign remains lost;
-2. **a \(C_4\) lift matches:** the 5,280-label sign-retaining seam has the
-   required phase channel;
-3. **the cocycles disagree:** the mixed-level bridge is obstructed even
-   though its label counts and finite groups coexist.
+The [explicit integral-lift audit](integral-relation-defect-metaplectic-no-go.md)
+shows that the finite \(C_4\) character cannot itself be genuine. For the
+one-block embedding, every lift \(\widetilde S\) satisfies
+\(\widetilde S^4=\varepsilon\), the nontrivial metaplectic kernel element. A
+genuine character has \(\chi(\varepsilon)=-1\), so
+\(\chi(\widetilde S)^4=-1\): its value is a primitive eighth root, never
+\(i\). Thus the \(C_4\) phase remains an exact finite character but is not a
+scalar metaplectic lift.
 
 ## 4. The minimum coupling table
 
@@ -119,7 +112,8 @@ Three outcomes are distinct:
 |---|---|---|---|
 | \(D_{11}\) | \(C_2\) reflection parity | seam determinant / \(\chi_5\) sign | projective orientation only |
 | \(\mathrm{Dic}_{11}\) through \(C_2\) | binary quotient of \(C_4\) | seam determinant / \(\chi_5\) sign | central \(-I\) lost |
-| \(\mathrm{Dic}_{11}\) through \(C_4\) | \(s\mapsto i\) | metaplectic theta/Pfaffian multiplier | central \(-I\) retained |
+| \(\mathrm{Dic}_{11}\) through \(C_4\) | \(s\mapsto i\) | ordinary finite character only | central \(-I\) retained, metaplectic kernel lost |
+| one-block genuine metaplectic lift | primitive eighth root | vector-valued theta/Weil carrier required | metaplectic kernel retained; no scalar \(C_4\) identification |
 
 The table prevents the \(\chi_5\) sign line from being credited with more
 information than it has. The scalar \(\chi_5\) character is order two; the
@@ -128,19 +122,14 @@ vector-valued data.
 
 ## 5. Exhaustion boundary
 
-At the finite one-dimensional level the coupling classification is complete.
-There is a unique nontrivial projective \(C_2\) channel, and no ordinary
-finite characteristic character can retain the dicyclic center. The only
-remaining scalar-phase route is the \(C_4\) metaplectic lift.
-
-Evaluating that lift requires the actual theta and twisted-module cocycles.
-The subsequent [congruence-lift gate](metaplectic-congruence-lift-gate.md)
-sharpens the domain: \(\mathrm{Dic}_{11}\) has no faithful finite-order lift
-to \(Sp(4,\mathbb Z)\), because that would create forbidden order-eleven
-torsion. The cocycle must therefore be tested on its infinite preimage under
-reduction modulo 23, including the relations that close only in
-\(\Gamma(23)\). It cannot be decided from group orders, carrier counts or the
-equality \(S^2=-I\) alone.
+At the one-dimensional level the coupling classification is complete. There
+is a unique nontrivial projective \(C_2\) channel. The finite \(C_4\) channel
+retains the dicyclic center only by killing the metaplectic center, while a
+genuine scalar channel necessarily takes eighth-root values and cannot send
+the lifted quarter-turn to \(i\). The sign-retaining scalar route is therefore
+closed for the declared one-block embedding. What remains is vector-valued
+theta/Weil data capable of representing the two central operations and the
+explicit congruence relation defect separately.
 
 ## Sources and corpus links
 
@@ -150,3 +139,4 @@ equality \(S^2=-I\) alone.
 - [Oriented seam modular line](../lattice-subroutine-gravity/oriented-seam-modular-line.md)
 - [Order-46 Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
+- [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)

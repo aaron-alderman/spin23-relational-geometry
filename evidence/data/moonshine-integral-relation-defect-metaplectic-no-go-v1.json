@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "A symmetric integral lift reduces the congruence problem to one infinite cyclic relation defect, while the proposed genuine scalar character is impossible because a metaplectic quarter-turn lift has fourth power equal to the nontrivial cover kernel.",
+  "embedding": "one symplectic-pair block SL(2) -> Sp(4), with the other pair fixed",
+  "generators": {
+    "R": [["5", "23"], ["23", "106"]],
+    "S": [["0", "1"], ["-1", "0"]],
+    "reductionsModulo23": {
+      "R": [[5, 0], [0, 14]],
+      "S": [[0, 1], [22, 0]]
+    },
+    "exactRelations": ["det(R)=det(S)=1", "S^2=-I", "S R S^-1=R^-1"]
+  },
+  "relationDefect": {
+    "failedFiniteRelation": "S^2=R^11",
+    "R11": [
+      ["1416117336519507874666", "6525899079200191817257"],
+      ["6525899079200191817257", "30073326336485567593925"]
+    ],
+    "KDefinition": "K=S^2 R^-11=-R^-11",
+    "K": [
+      ["-30073326336485567593925", "6525899079200191817257"],
+      ["6525899079200191817257", "-1416117336519507874666"]
+    ],
+    "KModulo23": [[1, 0], [0, 1]],
+    "K2": "R^-22",
+    "selectedSubgroupKernel": "<R,S> intersect Gamma(23) = <K> isomorphic to Z",
+    "normalFormIdentityConditions": [
+      "j=0 and n=0 mod 22",
+      "j=2 and n=11 mod 22"
+    ]
+  },
+  "metaplecticNoGo": {
+    "coverKernel": "epsilon",
+    "coverKernelOrder": 2,
+    "quarterTurnLiftRelation": "S_tilde^4=epsilon",
+    "genuineCharacterRequirement": "chi(epsilon)=-1",
+    "consequence": "chi(S_tilde)^4=-1",
+    "allowedQuarterTurnExponentsModulo8": [1, 3, 5, 7],
+    "proposedQuarterTurnExponentForI": 2,
+    "proposedC4CharacterGenuine": false,
+    "simultaneousIAndGenuineCenterPossible": false,
+    "baseCentralLiftImagesForGenuineCharacters": ["i", "-i"]
+  },
+  "outcome": {
+    "scalarSignRetaining5280Route": "ruled out in the stated one-block genuine-character form",
+    "projective240Route": "remains admissible through C2 parity",
+    "next": "construct a vector-valued metaplectic/Weil sewing kernel that represents the base dicyclic center, the metaplectic kernel and K separately"
+  },
+  "boundary": "The no-go is for one-dimensional genuine characters on the declared one-block embedding; it does not rule out vector-valued kernels or embeddings with different Maslov parity."
+}

@@ -10,6 +10,7 @@ const projective = load("../../evidence/data/moonshine-order23-projective-centra
 const seam = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
 const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
 const congruenceLift = load("../../evidence/data/moonshine-metaplectic-congruence-lift-gate-v1.json");
+const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
 const frontier = load("../../evidence/data/moonshine-frontier-crosswalk-v1.json");
 
 assert.equal(checkpoint.closed.arithmeticAndLattice, true);
@@ -42,10 +43,13 @@ assert.equal(checkpoint.scalarBoundary.projectiveCharacter, quarterTurn.coupling
 assert.equal(checkpoint.scalarBoundary.signRetainingCharacter, "C4");
 assert.equal(checkpoint.scalarBoundary.quarterTurnImage, quarterTurn.couplingChannels.metaplecticLift.quarterTurnImage);
 assert.equal(checkpoint.scalarBoundary.centralSquareImage, quarterTurn.couplingChannels.metaplecticLift.centralSquareImage);
-assert(quarterTurn.couplingChannels.metaplecticLift.status.includes("candidate"));
+assert(quarterTurn.couplingChannels.metaplecticLift.status.includes("ruled out"));
 assert.equal(checkpoint.scalarBoundary.integralDomain, congruenceLift.congruencePreimage.exactSequence);
 assert.equal(checkpoint.scalarBoundary.finiteSectionExists, congruenceLift.integralObstruction.finiteSectionExists);
 assert.equal(checkpoint.scalarBoundary.finiteC4DataSufficient, congruenceLift.metaplecticPullback.finiteC4DataSufficient);
+assert.equal(checkpoint.scalarBoundary.genuineScalarPromotionPossible, false);
+assert.equal(checkpoint.scalarBoundary.genuineScalarPromotionPossible, scalarNoGo.metaplecticNoGo.simultaneousIAndGenuineCenterPossible);
+assert(checkpoint.scalarBoundary.nextCarrier.includes("vector-valued"));
 
 assert.deepEqual(
   checkpoint.openSourceGated.map(({ rank }) => rank),

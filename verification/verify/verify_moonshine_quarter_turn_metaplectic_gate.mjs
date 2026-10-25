@@ -4,6 +4,7 @@ import fs from "node:fs";
 const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, import.meta.url), "utf8"));
 const gate = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
 const congruenceLift = load("../../evidence/data/moonshine-metaplectic-congruence-lift-gate-v1.json");
+const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const seam = load("../../evidence/data/lattice-subroutine-oriented-seam-modular-line-v1.json");
 const mixed = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
@@ -31,6 +32,13 @@ const iSquared = {re: i.re * i.re - i.im * i.im, im: 2 * i.re * i.im};
 assert.deepEqual(iSquared, {re: -1, im: 0});
 assert.equal(gate.couplingChannels.metaplecticLift.centralSquareImage, "-1");
 assert.equal(gate.couplingChannels.metaplecticLift.retainsCentralSign, true);
+assert.equal(gate.couplingChannels.metaplecticLift.retainsMetaplecticKernel, false);
+assert.equal(gate.couplingChannels.metaplecticLift.genuine, false);
+assert.deepEqual(
+  gate.couplingChannels.genuineOneBlockLift.allowedExponentsModulo8,
+  scalarNoGo.metaplecticNoGo.allowedQuarterTurnExponentsModulo8,
+);
+assert.equal(gate.couplingChannels.genuineOneBlockLift.oneDimensionalDic11CentralSignMatch, false);
 assert.equal(gate.directFiniteIntegralLift, false);
 assert.equal(congruenceLift.integralObstruction.finiteSectionExists, false);
 assert.equal(mixed.analyticBoundary.thetaMultiplierRequiresMetaplecticLift, true);
@@ -41,11 +49,12 @@ console.log(JSON.stringify({
   finiteCommonCharacter: "C2 sign/reflection parity",
   dic11Abelianization: gate.abelianizations.Dic11.abelianization,
   binaryChannelRetainsCentralSign: false,
-  metaplecticCandidate: {
+  finiteC4Character: {
     quarterTurn: "i",
     square: "-1",
-    phaseGroup: "mu4 inside mu8",
+    genuine: false,
   },
-  cocycleCompatibilityComputed: false,
+  genuineQuarterTurnPhaseGroup: "primitive eighth roots",
+  scalarMetaplecticPromotionPossible: false,
 }, null, 2));
 console.log("PASS verify_moonshine_quarter_turn_metaplectic_gate");

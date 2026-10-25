@@ -15,6 +15,8 @@
 
 **Metaplectic lift gate:** [the finite quotient lifts only through an infinite congruence extension](metaplectic-congruence-lift-gate.md)
 
+**Metaplectic scalar no-go:** [the explicit relation rail forces a genuine eighth-root rather than the finite \(C_4\) phase](integral-relation-defect-metaplectic-no-go.md)
+
 ## Result
 
 The Monster branch does contain a mathematically defensible sense in which a
@@ -861,13 +863,15 @@ Without one of those inputs, further scalar coefficient work is repetition
 rather than progress.  Beyond them, a physical
 promotion still requires a carrier action, clock and detector law.
 
-The metaplectic phase route is now typed more precisely. The finite
-\(\mathrm{Dic}_{11}\) quotient has the required \(C_4\) character, but it
-cannot embed faithfully as finite-order torsion in \(Sp(4,\mathbb Z)\).
-Its integral lift is a nonsplit infinite extension by \(\Gamma(23)\). The
-next sewing calculation must therefore evaluate the theta cocycle on those
-congruence-kernel relation defects; matching only \(S\mapsto i\) in the
-finite quotient is insufficient.
+The metaplectic phase route is now closed at scalar rank one. The finite
+\(\mathrm{Dic}_{11}\) quotient has the \(C_4\) character \(S\mapsto i\), but
+it cannot embed faithfully as finite-order torsion in \(Sp(4,\mathbb Z)\).
+An explicit symmetric lift reduces the selected congruence kernel to one
+infinite cyclic relation rail. On the metaplectic double cover,
+\(\widetilde S^4=\varepsilon\); hence a genuine character must take a
+primitive eighth-root value and cannot take \(i\). The next sewing
+calculation must therefore be vector-valued and keep the dicyclic center,
+metaplectic kernel and congruence relation defect distinct.
 
 ## Sources and corpus links
 
@@ -894,3 +898,4 @@ finite quotient is insufficient.
 - [Hecke/commutant audit](../frontier/wave-7/frontier_wave7_36_hecke_commutant_and_spin23_corner_bridge.md)
 - [Order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md)
 - [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
+- [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)

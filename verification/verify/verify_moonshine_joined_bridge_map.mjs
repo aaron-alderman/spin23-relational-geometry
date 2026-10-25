@@ -8,6 +8,7 @@ const galois = load("../../evidence/data/moonshine-order46-galois-orientation-v1
 const mixed = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
 const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
 const projectiveNoGo = load("../../evidence/data/moonshine-order23-projective-centralizer-no-go-v1.json");
+const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const fermionic = load("../../evidence/data/lattice-subroutine-monster-fermionization-bridge-v1.json");
 const igusa = load("../../evidence/data/lattice-subroutine-igusa-seam-completion-v1.json");
@@ -105,10 +106,9 @@ assert.equal(
   mixed.labelResolutions.projective.productLabels,
 );
 assert(joined.generalizedMoonshineTarget.mixedLevelSeam.boundary.includes("non-factorized"));
-assert.equal(
-  joined.generalizedMoonshineTarget.mixedLevelSeam.signRetainingScalarCoupling.includes("quarter-turn image i"),
-  quarterTurn.couplingChannels.metaplecticLift.quarterTurnImage === "i",
-);
+assert(joined.generalizedMoonshineTarget.mixedLevelSeam.signRetainingScalarCoupling.includes("ruled out"));
+assert.equal(quarterTurn.couplingChannels.metaplecticLift.genuine, false);
+assert.equal(scalarNoGo.metaplecticNoGo.simultaneousIAndGenuineCenterPossible, false);
 assert.equal(projectiveNoGo.genusOneOutcome.orientationRecovered, false);
 assert(joined.generalizedMoonshineTarget.mixedLevelSeam.genusOneCentralizerRepresentationStatus.includes("exhausted"));
 assert.equal(joined.openGates.length, 5);
