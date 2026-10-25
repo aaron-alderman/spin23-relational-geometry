@@ -52,6 +52,8 @@ const derivedControlSurfaces = [
   "corpus/registers/spin23_corpus_manifest.json",
   "corpus/registers/corpus_evidence_spine.json",
   "corpus/registers/corpus_front_door.json",
+  "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+  "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.md",
 ];
 const excluded = new Set([outJson, outMd, ...derivedControlSurfaces]);
 
@@ -69,6 +71,7 @@ const topicRules = [
   { domain: "detector-identifiability", topics: ["OT-001", "OT-034", "OT-048"], rx: /detector|likelihood|tomograph|identifiab|fisher|nuisance|observable discriminator|measurement protocol/i },
   { domain: "drive-modulation", topics: ["OT-043"], rx: /\bAM\b|\bFM\b|frequency modulation|amplitude modulation|sweep|lock.in|drive.to.record/i },
   { domain: "photonic-hardware", topics: ["OT-024", "OT-037"], rx: /photonic|waveguide|resonator chip|hardware dictionary|emulator/i },
+  { domain: "microwave-selector-hardware", topics: ["OT-024", "OT-038"], rx: /five.channel|microwave|phase shifter|mixer layout|measured.mixer/i },
   { domain: "acoustic-return", topics: ["OT-009"], rx: /acoustic|phonon|repeated.return/i },
   { domain: "hydrodynamic-cone", topics: ["OT-016"], rx: /hydrodynamic|viscos|fluid cone|constitutive cone/i },
   { domain: "metastable-disorder", topics: ["OT-020", "OT-023"], rx: /metastab|rare.event|disorder|glassy|hysteresis|memory state/i },
@@ -89,6 +92,8 @@ const topicRules = [
   { domain: "torsion-gravity", topics: ["OT-029", "OT-039"], rx: /torsion|poincar[eé].gauge|axial coupling|einstein.cartan|im(mirzi)?|lorentz connection/i },
   { domain: "cosmology", topics: ["OT-030"], rx: /cosmolog|inflation|dark energy|early universe|hubble/i },
   { domain: "exceptional-unification", topics: ["OT-032", "OT-049"], rx: /freudenthal|magic square|\be[678]\b|exceptional jordan|albert|rank.one vacuum|vacuum hessian|spin\(10\)/i },
+  { domain: "lattice-gravity", topics: ["OT-050"], rx: /lattice.subroutine.*gravit|gravit.*lattice.subroutine|genus.two seam|metaplectic.*gravit|moonshine.*gravit/i },
+  { domain: "boundary-domain-spectrum", topics: ["OT-051"], rx: /boundary.domain|domain selector|monodromy family|fuzzy.sphere|fractional.spin|narain.*positiv|hitchin.*slice/i },
   { domain: "symmetry-root-demonstrator", topics: ["OT-044"], rx: /\bg2\b|long.short.root|dynkin.*triple/i },
   { domain: "corpus-governance", topics: ["OT-033", "OT-035"], rx: /corpus|registry|provenance|declaration|claimipedia|audit|research log|document map/i },
   { domain: "action-construction", topics: ["OT-027", "OT-032"], rx: /\baction\b|lagrangian|unitarity|ghost.free|model construction|microscopic parent|candidate parent|field theory|potential|kinetic|portal/i },
@@ -154,7 +159,27 @@ for (const abs of scopeRoots.flatMap((scopeRoot) => fs.existsSync(scopeRoot) ? w
   };
   if (!matches.length && !statusMatch) {
     const corpusClass = rel.startsWith("evidence/") ? "evidence" : rel.startsWith("corpus/claims/") ? "claim" : rel.startsWith("corpus/programmes/") ? "programme" : rel.startsWith("corpus/registers/") || rel.startsWith("corpus/concept-map/") || rel === "corpus/README.md" ? "navigation" : "synthesis";
-    records.push({ ...record, corpusClass, ...(corpusClass === "claim" ? { claimId: claimIdOf(rel) } : {}), disposition: "no_declared_gate", note: "The complete file was scanned; neither declared gate vocabulary nor an open-like structured Status line was present." });
+    const head = `${title}\n${text.slice(0, 7000)}`;
+    const separate = !["evidence", "navigation"].includes(corpusClass) ? separateRules.find((rule) => rule.rx.test(head)) : null;
+    const chosen = !["evidence", "navigation"].includes(corpusClass) && !separate ? selectTopicRules(title, text) : [];
+    records.push({
+      ...record,
+      corpusClass,
+      ...(corpusClass === "claim" ? { claimId: claimIdOf(rel) } : {}),
+      disposition: "no_declared_gate",
+      ...(separate ? { separateDomain: separate.domain, separateOwnerRef: separate.ownerRef } : {}),
+      ...(chosen.length ? {
+        domains: chosen.map((rule) => rule.domain),
+        topicIds: [...new Set(chosen.flatMap((rule) => rule.topics))],
+        mappingScores: Object.fromEntries(chosen.map((rule) => [rule.domain, rule.score])),
+        mappingBasis: "title/lead semantic content route without a declared live gate"
+      } : {}),
+      note: separate
+        ? "The object belongs to an explicitly separate non-frontier-physics inquiry even though it declares no live gate."
+        : chosen.length
+          ? "No live gate is declared; the content route exists only to expand physics-mathematics adjacency coverage below topic level."
+          : "The complete file was scanned; neither declared gate vocabulary, an open-like structured Status line nor a confident topic content route was present."
+    });
     continue;
   }
 

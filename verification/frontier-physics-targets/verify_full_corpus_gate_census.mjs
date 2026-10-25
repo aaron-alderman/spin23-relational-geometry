@@ -17,6 +17,8 @@ const excluded = new Set([
   "corpus/registers/spin23_corpus_manifest.json",
   "corpus/registers/corpus_evidence_spine.json",
   "corpus/registers/corpus_front_door.json",
+  "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+  "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.md",
 ]);
 const pattern = new RegExp(census.pattern, "i");
 const statusPattern = new RegExp(census.statusPattern, "im");

@@ -8,8 +8,8 @@ This census is the corpus-wide backstop above the packet and programme audits. I
 
 ## Result
 
-- Narrative artifacts scanned: **2895**
-- Hashed inventory records: **2895**
+- Narrative artifacts scanned: **2896**
+- Hashed inventory records: **2896**
 - Files containing gate language or an open-like structured status: **1716**
 - Matching claim files: **1176**
 - Claim files explicitly recorded with no declared gate: **399**
@@ -22,7 +22,7 @@ This census is the corpus-wide backstop above the packet and programme audits. I
 | evidence_record | 101 |
 | mapped | 1166 |
 | navigation | 8 |
-| no_declared_gate | 1179 |
+| no_declared_gate | 1180 |
 | separate_programme | 13 |
 
 ## Use rule
