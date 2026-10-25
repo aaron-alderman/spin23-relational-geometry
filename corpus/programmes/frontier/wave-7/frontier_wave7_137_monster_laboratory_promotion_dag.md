@@ -263,6 +263,11 @@ $U/u=10^{-2}$ its variational gap falls from 0.6811 at charge cutoff one to
 residual proxies exceed the proposed gap and catalogue-order dependence is
 still visible, so the result proves computational feasibility while
 explicitly failing the convergence and lower-enclosure gates.
+Wave 7.194 holds cutoff four fixed and resumes identical states through bonds
+32, 48 and 64. The gap continues to move from 0.12005 to 0.11674 and the
+residual proxies remain comparable to the whole gap; the last shift is 69.1%
+of the preceding shift. Higher cutoff is therefore deferred until tensor
+convergence is actually established.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -323,6 +328,7 @@ P4 questions.
 - [Joined-cell MPO certificate architecture](frontier_wave7_191_leech_joined_cell_mpo_certificate_architecture.md)
 - [Metric-optimized joined-cell MPS ordering](frontier_wave7_192_leech_joined_cell_mps_order.md)
 - [Full joined-cell DMRG reconnaissance](frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md)
+- [Fixed-cutoff joined-cell bond convergence](frontier_wave7_194_leech_joined_cell_bond_convergence.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

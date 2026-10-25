@@ -204,6 +204,10 @@ Wave 7.193 performs the first direct full-carrier calculation through charge
 cutoff four. Its monotonically falling variational gap and residuals larger
 than the final gap reject premature extrapolation; they demonstrate
 feasibility, not a joined-cell gap certificate.
+Wave 7.194 separates tensor error from cutoff error: resumed bond-32, 48 and
+64 states keep lowering both energies and residuals, but the residual scale
+is still comparable to the proposed gap. The next promotion remains
+fixed-cutoff tensor convergence, not another extrapolated number.
 
 ## Corpus links
 
@@ -254,6 +258,7 @@ feasibility, not a joined-cell gap certificate.
 - [Joined-cell MPO certificate architecture](frontier_wave7_191_leech_joined_cell_mpo_certificate_architecture.md)
 - [Metric-optimized joined-cell MPS ordering](frontier_wave7_192_leech_joined_cell_mps_order.md)
 - [Full joined-cell DMRG reconnaissance](frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md)
+- [Fixed-cutoff joined-cell bond convergence](frontier_wave7_194_leech_joined_cell_bond_convergence.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

@@ -1022,3 +1022,4 @@ recovers the ten Baby-Monster components.
 - [Joined-cell MPO certificate architecture](../frontier/wave-7/frontier_wave7_191_leech_joined_cell_mpo_certificate_architecture.md)
 - [Metric-optimized joined-cell MPS ordering](../frontier/wave-7/frontier_wave7_192_leech_joined_cell_mps_order.md)
 - [Full joined-cell DMRG reconnaissance](../frontier/wave-7/frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md)
+- [Fixed-cutoff joined-cell bond convergence](../frontier/wave-7/frontier_wave7_194_leech_joined_cell_bond_convergence.md)

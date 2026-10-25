@@ -7,6 +7,7 @@ not a spectral certificate; see Wave 7.191 for the required lower enclosure.
 import argparse
 import json
 import os
+import pickle
 import subprocess
 import sys
 
@@ -91,10 +92,17 @@ def expectation(state, *operators):
 
 
 def solve_sector(hamiltonian, parity, cutoff, sector, bond_dims, sweeps, seed, penalty,
-                 verbosity):
-    np.random.seed(seed)
-    initial = qtn.MPS_rand_state(24, bond_dim=min(4, bond_dims[0]),
-                                 phys_dim=2 * cutoff + 1, dtype="float64")
+                 verbosity, state_prefix_in, state_prefix_out, compute_variance):
+    state_input_path = None if state_prefix_in is None else f"{state_prefix_in}-{sector}.pkl"
+    if state_input_path is not None:
+        with open(state_input_path, "rb") as handle:
+            initial = pickle.load(handle)
+        if initial.L != 24 or initial.phys_dim(0) != 2 * cutoff + 1:
+            raise ValueError("saved MPS does not match the requested channel count and cutoff")
+    else:
+        np.random.seed(seed)
+        initial = qtn.MPS_rand_state(24, bond_dim=min(4, bond_dims[0]),
+                                     phys_dim=2 * cutoff + 1, dtype="float64")
     effective = hamiltonian if sector == "even" else hamiltonian + penalty * parity
     solver = qtn.DMRG2(effective, bond_dims=bond_dims, cutoffs=1e-10, p0=initial)
     converged = solver.solve(tol=1e-8, max_sweeps=sweeps, sweep_sequence="RL",
@@ -103,17 +111,29 @@ def solve_sector(hamiltonian, parity, cutoff, sector, bond_dims, sweeps, seed, p
     norm = expectation(state)
     energy = expectation(state, hamiltonian) / norm
     parity_value = expectation(state, parity) / norm
-    energy2 = expectation(state, hamiltonian, hamiltonian) / norm
-    variance = max(0.0, energy2 - energy ** 2)
+    if compute_variance:
+        energy2 = expectation(state, hamiltonian, hamiltonian) / norm
+        variance = max(0.0, energy2 - energy ** 2)
+        residual = variance ** 0.5
+    else:
+        variance = None
+        residual = None
+    state_output_path = None if state_prefix_out is None else f"{state_prefix_out}-{sector}.pkl"
+    if state_output_path is not None:
+        os.makedirs(os.path.dirname(os.path.abspath(state_output_path)), exist_ok=True)
+        with open(state_output_path, "wb") as handle:
+            pickle.dump(state, handle, protocol=pickle.HIGHEST_PROTOCOL)
     return {
         "sectorTarget": sector,
         "convergedByEnergyTolerance": bool(converged),
         "energy": energy,
         "parityExpectation": parity_value,
         "energyVariance": variance,
-        "residualNormProxy": variance ** 0.5,
+        "residualNormProxy": residual,
         "reportedEffectiveEnergy": float(np.real(solver.energy)),
         "maximumBond": int(state.max_bond()),
+        "loadedState": state_input_path,
+        "savedState": state_output_path,
         "sweepEnergies": [float(np.real(value)) for value in solver.energies],
     }
 
@@ -129,6 +149,10 @@ def main():
     parser.add_argument("--penalty", type=float, default=1.0)
     parser.add_argument("--sector", choices=["both", "even", "odd"], default="both")
     parser.add_argument("--verbosity", type=int, default=0)
+    parser.add_argument("--state-prefix-in")
+    parser.add_argument("--state-prefix-out")
+    parser.add_argument("--result-prefix")
+    parser.add_argument("--skip-variance", action="store_true")
     args = parser.parse_args()
     bond_dims = [int(value) for value in args.bond_dims.split(",")]
     metric, permutation = load_metric(args.order)
@@ -136,10 +160,20 @@ def main():
     parity = build_parity_mpo(24, args.cutoff)
     even = None if args.sector == "odd" else solve_sector(
         hamiltonian, parity, args.cutoff, "even", bond_dims, args.sweeps,
-        args.seed, args.penalty, args.verbosity)
+        args.seed, args.penalty, args.verbosity, args.state_prefix_in,
+        args.state_prefix_out, not args.skip_variance)
+    if even is not None and args.result_prefix is not None:
+        os.makedirs(os.path.dirname(os.path.abspath(args.result_prefix)), exist_ok=True)
+        with open(f"{args.result_prefix}-even.json", "w", encoding="utf8") as handle:
+            json.dump(even, handle, indent=2)
     odd = None if args.sector == "even" else solve_sector(
         hamiltonian, parity, args.cutoff, "odd", bond_dims, args.sweeps,
-        args.seed + 1, args.penalty, args.verbosity)
+        args.seed + 1, args.penalty, args.verbosity, args.state_prefix_in,
+        args.state_prefix_out, not args.skip_variance)
+    if odd is not None and args.result_prefix is not None:
+        os.makedirs(os.path.dirname(os.path.abspath(args.result_prefix)), exist_ok=True)
+        with open(f"{args.result_prefix}-odd.json", "w", encoding="utf8") as handle:
+            json.dump(odd, handle, indent=2)
     output = {
         "schemaVersion": "leech-joined-cell-dmrg-reconnaissance-run-v1",
         "channels": 24,

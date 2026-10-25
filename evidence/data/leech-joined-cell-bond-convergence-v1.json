@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "leech-joined-cell-bond-convergence-v1",
+  "date": "2026-10-25",
+  "model": "24-channel Gram-first joined compact rotor at U/u=0.01 and charge cutoff four",
+  "method": "resume the same saved parity-sector MPS states through two alternating sweeps at each larger maximum bond",
+  "rungs": [
+    {
+      "maximumBond": 32,
+      "evenEnergy": 2.352585348902324,
+      "oddEnergy": 2.472634638223026,
+      "variationalGap": 0.12004928932070236,
+      "evenResidualNormProxy": 0.15265305970962595,
+      "oddResidualNormProxy": 0.16285990835272673,
+      "evenParity": 0.9988304038097339,
+      "oddParity": -0.9999955081659369
+    },
+    {
+      "maximumBond": 48,
+      "evenEnergy": 2.345487086960429,
+      "oddEnergy": 2.463579848953014,
+      "variationalGap": 0.1180927619925849,
+      "evenResidualNormProxy": 0.12211934401553967,
+      "oddResidualNormProxy": 0.13222159108962217,
+      "evenParity": 0.9996474299159024,
+      "oddParity": -0.9999991152912643
+    },
+    {
+      "maximumBond": 64,
+      "evenEnergy": 2.3417607264041496,
+      "oddEnergy": 2.458501503223766,
+      "variationalGap": 0.11674077681961625,
+      "evenResidualNormProxy": 0.10218722645698619,
+      "oddResidualNormProxy": 0.11348680092863268,
+      "evenParity": 0.9998763729444455,
+      "oddParity": -0.999999946520651
+    }
+  ],
+  "derived": {
+    "gapShifts": [-0.0019565273281174633,-0.0013519851729686394],
+    "latestToPreviousGapShiftMagnitudeRatio": 0.6910126700195371,
+    "evenResidualRatios": [0.7999796679335024,0.8367816522498096],
+    "oddResidualRatios": [0.8118731763206744,0.8583076333706292],
+    "energyMonotoneDown": true,
+    "residualMonotoneDown": true,
+    "converged": false
+  },
+  "monitorabilityUpgrade": "runner now supports saved-state input/output, independent even or odd execution, per-sector JSON output and optional deferred variance evaluation",
+  "decision": "do not increase charge cutoff yet; continue fixed-cutoff bond/subspace convergence because residual proxies remain comparable to the variational gap and the latest gap shift is 69.1 percent of the previous shift",
+  "boundary": "These are resumed variational upper estimates; the residual proxies are not validated lower enclosures. The sequence does not supply lower spectral bounds or a certified gap.",
+  "epistemicStatus": "quantified fixed-cutoff tensor convergence failure and resumable numerical lane"
+}

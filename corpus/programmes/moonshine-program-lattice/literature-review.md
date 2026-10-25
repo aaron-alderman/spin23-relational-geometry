@@ -846,6 +846,14 @@ catalogue-order control differs by 0.188% at cutoff two. The calculation
 therefore establishes full-carrier feasibility and fixes the next
 bond/cutoff grid while refusing a gap certificate.
 
+Wave 7.194 then isolates tensor error at cutoff four by resuming the same
+states through bond dimensions 32, 48 and 64. The variational gap moves
+0.12005 to 0.11809 to 0.11674, while residual proxies fall but remain
+0.102/0.113. The latest gap shift is still 69.1% of the previous shift. This
+quantifies a convergence failure and defers cutoff five; it also adds
+sector-level checkpoints and optional deferred variance evaluation so the
+long calculation is monitorable and resumable.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each
