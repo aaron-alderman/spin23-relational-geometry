@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "Ordinary order-46 moonshine recovers the 2A-versus-2B involution rail lost by the common order-23 scalar trace, and the desired commuting-pair function is a modular transport of the corresponding order-46 Hauptmodul up to a possible two-torsion multiplier.",
+  "scalarHierarchy": {
+    "order23": {
+      "classes": ["23A", "23B"],
+      "distinctScalarOutputs": 1,
+      "lost": ["generator orientation", "which order-2 rail completed the element to order 46"]
+    },
+    "order46": {
+      "classes": ["46A", "46B", "46C", "46D"],
+      "classPairs": {
+        "46AB": {
+          "involution": "2B",
+          "genusZeroGroup": "46+23",
+          "atkinLehnerExtensionOrder": 2,
+          "psl2Index": 36
+        },
+        "46CD": {
+          "involution": "2A",
+          "genusZeroGroup": "46+",
+          "atkinLehnerExtensionOrder": 4,
+          "psl2Index": 18
+        }
+      },
+      "distinctScalarOutputs": 2,
+      "retained": "2A versus 2B involution rail",
+      "lost": "orientation within AB and within CD"
+    }
+  },
+  "cyclicReconstruction": {
+    "definitions": ["g=h^2", "z=h^23"],
+    "orders": {"h": 46, "g": 23, "z": 2},
+    "formula": "h=g^12*z",
+    "exponentCheck": "2*12+23=47=1 mod 46"
+  },
+  "modularTransport": {
+    "matrix": [[1, 11], [2, 23]],
+    "determinant": 1,
+    "sourcePair": ["1", "h"],
+    "targetPair": ["h^2", "h^23"],
+    "fractionalLinearMap": "tau -> (tau+11)/(2*tau+23)",
+    "formulaUpToMultiplier": "Z(h^2,h^23;tau) is the gamma_(2,23) modular branch of T_h",
+    "conventionBoundary": "depending on left/right modular-action convention, use the displayed matrix or its inverse"
+  },
+  "anomalyBoundary": {
+    "monsterAnomalyOrder": 24,
+    "cyclicChannelOrder": 46,
+    "maximumRestrictionOrder": 2,
+    "reason": "the restriction order divides gcd(24,46)=2",
+    "status": "possible two-torsion multiplier, not proved nontrivial and not identified with the Pfaffian sign"
+  },
+  "groupIndices": {
+    "gamma0_46InPSL2Z": 72,
+    "gamma0_46Plus23InPSL2Z": 36,
+    "gamma0_46PlusInPSL2Z": 18
+  },
+  "nextGate": "transport the two known order-46 Hauptmoduln with fixed generalized-moonshine conventions, evaluate the projective multiplier for all four classes, and only then attempt genus-two sewing",
+  "physicalBoundary": "modular transport is not real-time dynamics and a projective multiplier is not automatically a detector-visible parity"
+}
