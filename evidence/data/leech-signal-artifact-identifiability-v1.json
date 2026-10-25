@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "leech-signal-artifact-identifiability-v1",
+  "date": "2026-10-26",
+  "theorem": {
+    "baseDesign": {
+      "rows": 2,
+      "columns": [
+        "intercept",
+        "physical_signal",
+        "signal_label_artifact"
+      ],
+      "rank": 2,
+      "nullity": 1,
+      "conclusion": "signal/blank observations alone cannot distinguish physical signal from an artifact carrying the same signal label"
+    },
+    "routeSwappedInjectionDesign": {
+      "rows": 16,
+      "columns": [
+        "intercept",
+        "physical_routed_signal",
+        "common_signal_state_artifact",
+        "detector_offset",
+        "detector_specific_signal_artifact",
+        "injection_response",
+        "signal_dependent_injection_response",
+        "detector_dependent_injection_response"
+      ],
+      "rank": 8,
+      "nullity": 0,
+      "conclusion": "random route swapping across two detectors with randomized injection identifies the routed physical coefficient against common and detector-specific signal-state artifacts and injection-response changes"
+    },
+    "adversarialExtension": {
+      "rows": 16,
+      "columns": [
+        "intercept",
+        "physical_routed_signal",
+        "common_signal_state_artifact",
+        "detector_offset",
+        "detector_specific_signal_artifact",
+        "injection_response",
+        "signal_dependent_injection_response",
+        "detector_dependent_injection_response",
+        "route_following_artifact"
+      ],
+      "rank": 8,
+      "nullity": 1,
+      "exactCollision": [
+        "physical_routed_signal",
+        "route_following_artifact"
+      ],
+      "conclusion": "an artifact that follows the same randomized route as the physical signal is observationally identical to that signal"
+    }
+  },
+  "factorialCells": [
+    {
+      "signal": 0,
+      "route": 0,
+      "detector": 0,
+      "injection": 0
+    },
+    {
+      "signal": 0,
+      "route": 0,
+      "detector": 0,
+      "injection": 1
+    },
+    {
+      "signal": 0,
+      "route": 0,
+      "detector": 1,
+      "injection": 0
+    },
+    {
+      "signal": 0,
+      "route": 0,
+      "detector": 1,
+      "injection": 1
+    },
+    {
+      "signal": 0,
+      "route": 1,
+      "detector": 0,
+      "injection": 0
+    },
+    {
+      "signal": 0,
+      "route": 1,
+      "detector": 0,
+      "injection": 1
+    },
+    {
+      "signal": 0,
+      "route": 1,
+      "detector": 1,
+      "injection": 0
+    },
+    {
+      "signal": 0,
+      "route": 1,
+      "detector": 1,
+      "injection": 1
+    },
+    {
+      "signal": 1,
+      "route": 0,
+      "detector": 0,
+      "injection": 0
+    },
+    {
+      "signal": 1,
+      "route": 0,
+      "detector": 0,
+      "injection": 1
+    },
+    {
+      "signal": 1,
+      "route": 0,
+      "detector": 1,
+      "injection": 0
+    },
+    {
+      "signal": 1,
+      "route": 0,
+      "detector": 1,
+      "injection": 1
+    },
+    {
+      "signal": 1,
+      "route": 1,
+      "detector": 0,
+      "injection": 0
+    },
+    {
+      "signal": 1,
+      "route": 1,
+      "detector": 0,
+      "injection": 1
+    },
+    {
+      "signal": 1,
+      "route": 1,
+      "detector": 1,
+      "injection": 0
+    },
+    {
+      "signal": 1,
+      "route": 1,
+      "detector": 1,
+      "injection": 1
+    }
+  ],
+  "executionContract": [
+    "randomize signal state, route assignment and synthetic injection independently inside every acquisition block",
+    "record both detectors on every trial and retain the committed route schedule",
+    "fit the full controlled design including signal-by-detector and injection interactions",
+    "require full column rank and a lower confidence bound on injection response in both signal states",
+    "repeat with the physical route exchanged while detector electronics and analysis labels remain fixed",
+    "do not claim identification against route-following artifacts without a second physical modality or an independently calibrated causal intervention"
+  ],
+  "promotionRule": "The route-swapped coefficient may qualify the Wave 7.222 likelihood only when the controlled design remains full rank after missing-cell removal and both detector-specific injection efficiencies meet the preregistered lower bound.",
+  "boundary": "This is an exact identifiability certificate for a declared linear response model. It neither supplies the carrier nor excludes nonlinear, history-dependent or route-following artifacts."
+}

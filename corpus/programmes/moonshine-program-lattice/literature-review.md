@@ -1073,6 +1073,20 @@ requires within-block balance, sentinel estimates of label asymmetry and a
 time-series estimate of effective sample size. Nonergodic state changes and
 signal-specific detector response are explicitly not covered.
 
+Wave 7.223 shows that this last caveat is partly an identifiability theorem,
+not merely conservative wording. Signal/blank measurements give rank two for
+three effects because physical signal and label artifact are the same column.
+A sixteen-cell route-swapped dual-detector injection design is full rank for
+eight controlled effects. A route-following artifact, however, exactly
+duplicates the physical column and demands a second modality.
+
+Wave 7.224 then makes the selected quadratic carrier portable. Its generated
+ideal-network manifest lists 24 capacitor branches, 24 unity paths and every
+one of the 252 signed off-diagonal transformer ratios. Exact arithmetic
+reconstructs the chosen Gram-first metric, turning the prior factor count into
+a compile target while retaining finite bandwidth, loss and layout as open
+engineering rather than theoretical facts.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

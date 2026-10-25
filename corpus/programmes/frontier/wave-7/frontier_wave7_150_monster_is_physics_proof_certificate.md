@@ -358,6 +358,15 @@ effect 2, the rootlessness arm costs 2478300 trials and the sixteen-pair odd
 family costs 8337280. The protocol now requires committed block randomization,
 sentinel-based asymmetry bounds and an estimated autocorrelation penalty;
 nonergodic and signal-specific detector changes remain open.
+Wave 7.223 separates the controllable part from the irreducible one. Ordinary
+signal/blank data are rank deficient; route-swapped dual-detector injection
+is full rank against the declared common and detector-specific nuisance
+terms. An artifact following the same physical route is exactly collinear
+with the signal and still requires a second modality.
+Wave 7.224 materializes the chosen ideal carrier as a complete port-level
+manifest: 24 capacitors, 24 unity paths and 252 signed off-diagonal ratios.
+It reconstructs the Gram-first metric exactly and supplies the measurement
+handoff, while deliberately leaving layout, bandwidth and loss unclaimed.
 
 ## Corpus links
 
@@ -437,6 +446,8 @@ nonergodic and signal-specific detector changes remain open.
 - [Detector, background and drift burden](frontier_wave7_220_leech_charge_shell_detector_burden.md)
 - [Background-likelihood repair](frontier_wave7_221_leech_background_likelihood_repair.md)
 - [Drift-robust likelihood](frontier_wave7_222_leech_drift_robust_likelihood.md)
+- [Signal--artifact identifiability](frontier_wave7_223_leech_signal_artifact_identifiability.md)
+- [Gram-first ideal network manifest](frontier_wave7_224_leech_gram_first_network_manifest.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

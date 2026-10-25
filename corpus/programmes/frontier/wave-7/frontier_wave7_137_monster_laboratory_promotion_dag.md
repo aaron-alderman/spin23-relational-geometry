@@ -428,6 +428,18 @@ Allowing label asymmetry up to 25% of the decision threshold and design effect
 pairs. Randomized block balance, sentinel labels and time-ordered
 autocorrelation estimation are now mandatory. Nonergodic changes and
 signal-specific detector response remain outside the guarantee.
+Wave 7.223 proves why the latter cannot be dismissed by more shots. The plain
+signal/blank design has rank two for three declared effects. A sixteen-cell
+route-swapped, dual-detector injection design has full rank eight against
+common and detector-specific artifacts, but adding an artifact that follows
+the routed signal restores nullity one. Promotion therefore requires the
+full-rank control and reserves the exact route-following collision for a
+second physical modality.
+Wave 7.224 closes the ideal-network handoff ambiguity. The selected Gram-first
+carrier is now a machine-readable 24-port manifest with 24 capacitor branches,
+24 unity paths and all 252 signed off-diagonal transformer ratios. Exact
+rational reconstruction returns the target metric; finite-bandwidth layout,
+loss, phase, parasitic and crosstalk models remain physical work.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -517,6 +529,8 @@ P4 questions.
 - [Detector, background and drift burden](frontier_wave7_220_leech_charge_shell_detector_burden.md)
 - [Background-likelihood repair](frontier_wave7_221_leech_background_likelihood_repair.md)
 - [Drift-robust likelihood](frontier_wave7_222_leech_drift_robust_likelihood.md)
+- [Signal--artifact identifiability](frontier_wave7_223_leech_signal_artifact_identifiability.md)
+- [Gram-first ideal network manifest](frontier_wave7_224_leech_gram_first_network_manifest.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
