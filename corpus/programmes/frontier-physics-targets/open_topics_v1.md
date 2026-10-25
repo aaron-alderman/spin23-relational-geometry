@@ -81,7 +81,7 @@ for another dimensionless redesign.
 |---|---|---|
 | OT-024 | Relation-emulator hardware dictionary | AZ-110 closes network and detector design; build the frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
 | OT-025 | Nonlocal 24-dimensional form or code functor | a source-derived replacement for the incidence form or explicit sacrificed property |
-| OT-026 | Graph-to-Jordan translation | AZ-124 closes the finite relation--face compiler, but AZ-112 still bars promotion until a source-native dagger/order generates the positive kernel before quotienting and predicts a held-out record |
+| OT-026 | Graph-to-Jordan translation | AZ-125 derives a support-native positive kernel, but it erases direction and relation type; semantic dagger/order, source-selected ports and a held-out record remain required |
 | OT-027 | Physical operator and dynamics functor | AZ-124 separates support, positive kernel, Schur face, holonomy and detector; a source-native action must still generate those operators, amplitudes and records |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
 | OT-038 | Source-bearing A2 commuting square | calibrate one common-carrier intertwiner from the selector primitive-form split to the rectangular ports, treat the nonzero channel as covariant symmetry breaking, and select the noncompact reverse-channel phase |
@@ -154,6 +154,18 @@ detector is required for its sine. OT-026 now lacks neither a mathematical
 compiler nor a precise failure location. It remains gated because Claimipedia
 has not generated the dagger, positive kernel and boundary partition before
 the desired quotient was inspected, and no held-out record has been predicted.
+
+[AZ-125](../admissibility/admissibility_125_claimipedia_support_native_order_and_semantic_boundary.md)
+executes that collision against the hash-matched live captured source. Counting
+measure and incidence derive a positive kernel, but reversing every arrow or
+permuting every relation label leaves it unchanged. Schur reduction gives an
+exact Spin--Temple rank-one face, yet its conductance is two when reciprocal
+authored records are counted separately and one when they are treated as one
+undirected relation. Positivity is therefore support-native but not semantic.
+The nearest nontrivial source cycle is instead the all-DependsOn river
+flow--calibration--nitrate triangle; its current evidence is fixture-only and
+contains no maps or held-out numerical record, so it defines the next honest
+experiment rather than closing the translation.
 
 [AZ-113](../admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md)
 

@@ -1,0 +1,61 @@
+{
+  "protocol": "claimipedia-support-native-order-boundary/1",
+  "packet": "AZ-125",
+  "target": "OT-026",
+  "source": {
+    "applicationId": "app.claimipedia",
+    "contextId": "claimipedia.captured-witness.operator.v1",
+    "path": "corpus/programmes/frontier/wave-7/claimipedia_relationship_operator_source_v1.json",
+    "sourceHash": "82d9c5a47f4957ddbd302927baed0acb05522773762966a4c9ffc34ed86f94c3",
+    "liveReadDate": "2026-10-26",
+    "liveReadAssurance": "exact-captured-corpus-operator-read; not a live service or public projection"
+  },
+  "census": {
+    "nodes": 38,
+    "relationshipRecords": 43,
+    "distinctTypedRecords": 41,
+    "relationTypeCounts": {
+      "Challenges": 2,
+      "DependsOn": 7,
+      "Qualifies": 27,
+      "Supports": 7
+    },
+    "undirectedComponents": 5,
+    "multigraphCycleRank": 10,
+    "simpleUndirectedCycleRank": 7,
+    "recordsWithAuthoredReverse": 2
+  },
+  "order": {
+    "construction": "Choose the canonical counting inner product on the finite claim set, orient each authored record from source to target, form incidence B, and set L=BB^T.",
+    "positiveSemidefinite": true,
+    "dagger": "B^T relative to the imported counting inner product",
+    "supportNative": true,
+    "semanticsNative": false,
+    "arrowDirectionRetained": false,
+    "relationTypeRetained": false,
+    "recordMultiplicityRetained": true,
+    "invariance": "L is unchanged by reversing every arrow or permuting every relationType label."
+  },
+  "twoPort": {
+    "boundary": [
+      "claim.grandThesis.spin-2-3",
+      "claim.grandThesis.temple-sourcery"
+    ],
+    "boundarySelectionSourceNative": false,
+    "recordLevelKernel": [[2, -2], [-2, 2]],
+    "recordLevelConductance": 2,
+    "relationLevelKernelAfterUndirectedDeduplication": [[1, -1], [-1, 1]],
+    "relationLevelConductance": 1,
+    "interpretation": "The Schur face is an exact rank-one H2(R)+ boundary ray, but its scale changes under an unresolved record-versus-relation convention."
+  },
+  "decision": {
+    "canonicalPositiveKernelExists": true,
+    "sourceNativeSemanticOrderExists": false,
+    "typedPathDaggerDerived": false,
+    "boundaryDerivedFromSourceSemantics": false,
+    "heldOutPhysicalRecordPredicted": false,
+    "ot026ClosureConditionMet": false,
+    "newPhysicsEvidence": false
+  },
+  "nextGate": "Author or derive a relation-type involution and positive weighting rule with independent semantics, declare why Spin and Temple are detector ports, and reserve a response or orientation-sensitive cycle record before fitting."
+}
