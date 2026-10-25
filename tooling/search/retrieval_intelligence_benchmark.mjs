@@ -115,7 +115,7 @@ function summarize(rows, split) {
 export function runRetrievalIntelligenceBenchmark({
   root = resolve("."),
   limit = 25,
-  enhancedWeights = { graphWeight: 0.3, claimWeight: 0.17, semanticWeight: 0.08 },
+  enhancedWeights = { graphWeight: 0.2, claimWeight: 0.2, semanticWeight: 0.2 },
 } = {}) {
   let corpusContentSha256 = null;
   const rows = benchmarkCases.map(testCase => {
@@ -152,6 +152,8 @@ export function runRetrievalIntelligenceBenchmark({
     holdout: summarize(rows, "holdout"),
   };
   const gates = {
+    calibrationRecallAt6NonRegressing: summary.calibration.enhanced.recallAt6 >= summary.calibration.legacy.recallAt6,
+    calibrationMrrNonRegressing: summary.calibration.enhanced.meanReciprocalRank >= summary.calibration.legacy.meanReciprocalRank,
     holdoutRecallAt6NonRegressing: summary.holdout.enhanced.recallAt6 >= summary.holdout.legacy.recallAt6,
     holdoutMrrNonRegressing: summary.holdout.enhanced.meanReciprocalRank >= summary.holdout.legacy.meanReciprocalRank,
     atLeastOneHeldOutImprovement: rows.some(row => row.split === "holdout" && row.movement > 0),

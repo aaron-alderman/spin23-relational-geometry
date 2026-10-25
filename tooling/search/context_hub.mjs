@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { searchCorpus } from "./search_corpus.mjs";
+import { DEFAULT_RETRIEVAL_WEIGHTS, searchCorpus } from "./search_corpus.mjs";
 
 const defaultRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -114,7 +114,7 @@ function inclusionReason(item, kind, newKind) {
   return reasons.join("; ");
 }
 
-export function buildCorpusContext({ root = defaultRoot, task, profile = "all", maxSources = 6, maxCharacters = 12000, graphWeight = 0.3, claimWeight = 0.17, semanticWeight = 0.08, adaptation = null } = {}) {
+export function buildCorpusContext({ root = defaultRoot, task, profile = "all", maxSources = 6, maxCharacters = 12000, graphWeight = DEFAULT_RETRIEVAL_WEIGHTS.graphWeight, claimWeight = DEFAULT_RETRIEVAL_WEIGHTS.claimWeight, semanticWeight = DEFAULT_RETRIEVAL_WEIGHTS.semanticWeight, adaptation = null } = {}) {
   if (typeof task !== "string" || task.trim().length < 2 || task.length > 500) throw new Error("task must contain 2 to 500 characters");
   if (!Number.isInteger(maxSources) || maxSources < 2 || maxSources > 10) throw new Error("maxSources must be an integer from 2 to 10");
   if (!Number.isInteger(maxCharacters) || maxCharacters < 4000 || maxCharacters > 30000) throw new Error("maxCharacters must be an integer from 4000 to 30000");

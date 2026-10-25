@@ -35,6 +35,12 @@ const contentIdentityExcludedPaths = new Set([
 const cacheValidationIntervalMs = 5000;
 let cache = null;
 
+export const DEFAULT_RETRIEVAL_WEIGHTS = Object.freeze({
+  graphWeight: 0.2,
+  claimWeight: 0.2,
+  semanticWeight: 0.2,
+});
+
 const claimRolePatterns = [
   ["status", /^\*\*(?:status|claim status|outcome):\*\*/iu],
   ["evidence", /^\*\*evidence:\*\*/iu],
@@ -663,7 +669,10 @@ function bestSnippet(document, tokens) {
   return clean.length > 260 ? `${clean.slice(0, 257)}…` : clean;
 }
 
-export function searchCorpus({ root = process.cwd(), query, limit = 12, profile = "all", graphWeight = 0.3, claimWeight = 0.17, semanticWeight = 0.08 } = {}) {
+export function searchCorpus({ root = process.cwd(), query, limit = 12, profile = "all", ...weights } = {}) {
+  const graphWeight = weights.graphWeight ?? DEFAULT_RETRIEVAL_WEIGHTS.graphWeight;
+  const claimWeight = weights.claimWeight ?? DEFAULT_RETRIEVAL_WEIGHTS.claimWeight;
+  const semanticWeight = weights.semanticWeight ?? DEFAULT_RETRIEVAL_WEIGHTS.semanticWeight;
   if (!query?.trim()) throw new Error("search query is required");
   for (const [name, value, maximum] of [["graphWeight", graphWeight, 0.6], ["claimWeight", claimWeight, 0.35], ["semanticWeight", semanticWeight, 0.2]]) {
     if (typeof value !== "number" || !Number.isFinite(value) || value < 0 || value > maximum) throw new Error(`${name} must be from 0 to ${maximum}`);
@@ -677,7 +686,7 @@ export function searchCorpus({ root = process.cwd(), query, limit = 12, profile 
   const claims = claimLevelScores(index, tokens, query, semanticExpansion);
   const linkContexts = linkContextScores(index, tokens, query);
   const mixingValues = [0.08, 0.15, 0.35];
-  const lexicalWeight = 1 - graphWeight - claimWeight - semanticWeight;
+  const lexicalWeight = Number((1 - graphWeight - claimWeight - semanticWeight).toFixed(12));
   const method = {
     lexical: "BM25-style weighted title, heading, path and body relevance",
     claim: "best structurally bounded Markdown paragraph, list item or table row BM25 relevance with exact line and byte-derived identity",
@@ -732,6 +741,20 @@ export function searchCorpus({ root = process.cwd(), query, limit = 12, profile 
     .slice(0, Math.max(1, Number(limit)))
     .map((document, position) => {
       const sweepRanks = sweepPositions.map(positions => positions[document.id]);
+      const distinctQueryTokens = [...new Set(tokens)];
+      const matchedQueryTokens = distinctQueryTokens.filter(token => document.counts.has(token));
+      const queryTokenCoverage = distinctQueryTokens.length ? matchedQueryTokens.length / distinctQueryTokens.length : 0;
+      const normalizedLexical = lexical[document.id] / maxLexical;
+      const normalizedClaim = claims.direct[document.id] / maxClaim;
+      const normalizedSemantic = Math.max(claims.semantic[document.id] / maxSemantic, linkContexts.scores[document.id] / maxLinkContext);
+      const normalizedGraph = defaultRank[document.id] / maxGraph;
+      const supportClass = queryTokenCoverage >= 0.5 && normalizedClaim >= 0.25
+        ? "direct-passage"
+        : normalizedSemantic >= 0.25 && linkContexts.best[document.id]
+          ? "cross-reference-bridge"
+          : normalizedGraph > Math.max(normalizedLexical, normalizedClaim, normalizedSemantic)
+            ? "graph-assisted"
+            : "weak-local-match";
       return {
         rank: position + 1,
         path: document.path,
@@ -739,10 +762,16 @@ export function searchCorpus({ root = process.cwd(), query, limit = 12, profile 
         status: document.status,
         claimEvidence: document.claimEvidence,
         score: Number(finalScores[document.id].toFixed(6)),
-        lexicalScore: Number((lexical[document.id] / maxLexical).toFixed(6)),
-        claimScore: Number((claims.direct[document.id] / maxClaim).toFixed(6)),
-        semanticScore: Number(Math.max(claims.semantic[document.id] / maxSemantic, linkContexts.scores[document.id] / maxLinkContext).toFixed(6)),
-        graphScore: Number((defaultRank[document.id] / maxGraph).toFixed(6)),
+        lexicalScore: Number(normalizedLexical.toFixed(6)),
+        claimScore: Number(normalizedClaim.toFixed(6)),
+        semanticScore: Number(normalizedSemantic.toFixed(6)),
+        graphScore: Number(normalizedGraph.toFixed(6)),
+        retrievalSupport: {
+          class: supportClass,
+          queryTokenCoverage: Number(queryTokenCoverage.toFixed(6)),
+          matchedQueryTokens,
+          authorityBoundary: "Retrieval support explains navigation fit; it is not confidence in truth or claim validity.",
+        },
         claimMatch: claims.best[document.id],
         semanticBridge: linkContexts.best[document.id],
         navigationPrior: document.prior,
@@ -766,7 +795,7 @@ export function searchCorpus({ root = process.cwd(), query, limit = 12, profile 
 }
 
 function parseArguments(argv) {
-  const options = { limit: 12, profile: "all", graphWeight: 0.3, claimWeight: 0.17, semanticWeight: 0.08, json: false };
+  const options = { limit: 12, profile: "all", ...DEFAULT_RETRIEVAL_WEIGHTS, json: false };
   const positional = [];
   for (let index = 0; index < argv.length; index += 1) {
     const value = argv[index];
@@ -798,7 +827,7 @@ if (invokedPath === fileURLToPath(import.meta.url)) {
     console.log(options.json ? JSON.stringify(result, null, 2) : renderText(result));
   } catch (error) {
     console.error(error.message);
-    console.error("Usage: node tooling/search/search_corpus.mjs --query \"casimir boundary response\" [--limit 12] [--profile all|interpret|choose-work|audit|experiment] [--graph-weight 0.3] [--claim-weight 0.17] [--semantic-weight 0.08] [--json]");
+    console.error("Usage: node tooling/search/search_corpus.mjs --query \"casimir boundary response\" [--limit 12] [--profile all|interpret|choose-work|audit|experiment] [--graph-weight 0.2] [--claim-weight 0.2] [--semantic-weight 0.2] [--json]");
     process.exitCode = 1;
   }
 }

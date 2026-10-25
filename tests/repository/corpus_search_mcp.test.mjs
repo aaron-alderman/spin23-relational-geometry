@@ -76,7 +76,7 @@ test("MCP context sweep separates invariant core from selector-sensitive perimet
       task: "How do Casimir boundaries connect to thermoelectric detection?",
       baselineProfile: "all",
       profiles: ["interpret", "experiment"],
-      graphWeights: [0.15, 0.3, 0.45],
+      graphWeights: [0.1, 0.2, 0.35],
       maxSources: 4,
       maxCharacters: 5000,
     },

@@ -4,7 +4,7 @@ import { existsSync, readFileSync, statSync } from "node:fs";
 import { createInterface } from "node:readline";
 import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
-import { searchCorpus } from "./search_corpus.mjs";
+import { DEFAULT_RETRIEVAL_WEIGHTS, searchCorpus } from "./search_corpus.mjs";
 import { buildCorpusContext } from "./context_hub.mjs";
 import { buildContextSweep } from "./context_sweep.mjs";
 import { compareAnswerReceipts, createAnswerReceipt } from "./answer_stability.mjs";
@@ -31,9 +31,9 @@ export const corpusSearchMcpTools = Object.freeze([
       query: { type: "string", minLength: 2, maxLength: 500, description: "Natural-language question or compact concept query." },
       limit: { type: "integer", minimum: 1, maximum: 25, default: 8 },
       profile: { type: "string", enum: profiles, default: "all", description: "Optional front-door prior matching the LLM's present task." },
-      graphWeight: { type: "number", minimum: 0, maximum: 0.6, default: 0.3, description: "Declared contribution of graph context to final navigation order." },
-      claimWeight: { type: "number", minimum: 0, maximum: 0.35, default: 0.17, description: "Declared contribution of the best exact claim passage." },
-      semanticWeight: { type: "number", minimum: 0, maximum: 0.2, default: 0.08, description: "Declared contribution of confidence-gated corpus-local co-occurrence and exact cross-reference passage bridges; no opaque embedding model." },
+      graphWeight: { type: "number", minimum: 0, maximum: 0.6, default: DEFAULT_RETRIEVAL_WEIGHTS.graphWeight, description: "Declared contribution of graph context to final navigation order." },
+      claimWeight: { type: "number", minimum: 0, maximum: 0.35, default: DEFAULT_RETRIEVAL_WEIGHTS.claimWeight, description: "Declared contribution of the best exact claim passage." },
+      semanticWeight: { type: "number", minimum: 0, maximum: 0.2, default: DEFAULT_RETRIEVAL_WEIGHTS.semanticWeight, description: "Declared contribution of confidence-gated corpus-local co-occurrence and exact cross-reference passage bridges; no opaque embedding model." },
     }, ["query"]),
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   },
@@ -45,9 +45,9 @@ export const corpusSearchMcpTools = Object.freeze([
       profile: { type: "string", enum: profiles, default: "all" },
       maxSources: { type: "integer", minimum: 2, maximum: 10, default: 6 },
       maxCharacters: { type: "integer", minimum: 4000, maximum: 30000, default: 12000 },
-      graphWeight: { type: "number", minimum: 0, maximum: 0.6, default: 0.3 },
-      claimWeight: { type: "number", minimum: 0, maximum: 0.35, default: 0.17 },
-      semanticWeight: { type: "number", minimum: 0, maximum: 0.2, default: 0.08 },
+      graphWeight: { type: "number", minimum: 0, maximum: 0.6, default: DEFAULT_RETRIEVAL_WEIGHTS.graphWeight },
+      claimWeight: { type: "number", minimum: 0, maximum: 0.35, default: DEFAULT_RETRIEVAL_WEIGHTS.claimWeight },
+      semanticWeight: { type: "number", minimum: 0, maximum: 0.2, default: DEFAULT_RETRIEVAL_WEIGHTS.semanticWeight },
     }, ["task"]),
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   },
@@ -58,8 +58,8 @@ export const corpusSearchMcpTools = Object.freeze([
       task: { type: "string", minLength: 2, maxLength: 500 },
       baselineProfile: { type: "string", enum: profiles, default: "all" },
       profiles: { type: "array", maxItems: 5, items: { type: "string", enum: profiles }, default: ["interpret", "experiment", "audit"] },
-      baselineGraphWeight: { type: "number", minimum: 0, maximum: 0.6, default: 0.3 },
-      graphWeights: { type: "array", minItems: 1, maxItems: 5, items: { type: "number", minimum: 0, maximum: 0.6 }, default: [0.15, 0.3, 0.45] },
+      baselineGraphWeight: { type: "number", minimum: 0, maximum: 0.6, default: DEFAULT_RETRIEVAL_WEIGHTS.graphWeight },
+      graphWeights: { type: "array", minItems: 1, maxItems: 5, items: { type: "number", minimum: 0, maximum: 0.6 }, default: [0.1, 0.2, 0.35] },
       maxSources: { type: "integer", minimum: 2, maximum: 10, default: 6 },
       maxCharacters: { type: "integer", minimum: 4000, maximum: 16000, default: 8000 },
       includeContexts: { type: "boolean", default: false },
@@ -113,9 +113,9 @@ export const corpusSearchMcpTools = Object.freeze([
       profile: { type: "string", enum: profiles },
       maxSources: { type: "integer", minimum: 2, maximum: 10, default: 6 },
       maxCharacters: { type: "integer", minimum: 4000, maximum: 30000, default: 12000 },
-      graphWeight: { type: "number", minimum: 0, maximum: 0.6, default: 0.3 },
-      claimWeight: { type: "number", minimum: 0, maximum: 0.35, default: 0.17 },
-      semanticWeight: { type: "number", minimum: 0, maximum: 0.2, default: 0.08 },
+      graphWeight: { type: "number", minimum: 0, maximum: 0.6, default: DEFAULT_RETRIEVAL_WEIGHTS.graphWeight },
+      claimWeight: { type: "number", minimum: 0, maximum: 0.35, default: DEFAULT_RETRIEVAL_WEIGHTS.claimWeight },
+      semanticWeight: { type: "number", minimum: 0, maximum: 0.2, default: DEFAULT_RETRIEVAL_WEIGHTS.semanticWeight },
       adaptiveWeight: { type: "number", minimum: 0, maximum: 0.2, default: 0.15 },
       explorationWeight: { type: "number", minimum: 0, maximum: 0.05, default: 0.03 },
     }, ["task", "beliefState"]),
@@ -141,9 +141,9 @@ function validateSearchArguments(args) {
   if (Object.keys(args).some(key => !allowed.has(key))) throw new Error("corpus_search received an unknown argument");
   const limit = args.limit ?? 8;
   const profile = args.profile ?? "all";
-  const graphWeight = args.graphWeight ?? 0.3;
-  const claimWeight = args.claimWeight ?? 0.17;
-  const semanticWeight = args.semanticWeight ?? 0.08;
+  const graphWeight = args.graphWeight ?? DEFAULT_RETRIEVAL_WEIGHTS.graphWeight;
+  const claimWeight = args.claimWeight ?? DEFAULT_RETRIEVAL_WEIGHTS.claimWeight;
+  const semanticWeight = args.semanticWeight ?? DEFAULT_RETRIEVAL_WEIGHTS.semanticWeight;
   if (!Number.isInteger(limit) || limit < 1 || limit > 25) throw new Error("limit must be an integer from 1 to 25");
   if (!profiles.includes(profile)) throw new Error(`profile must be one of: ${profiles.join(", ")}`);
   if (typeof graphWeight !== "number" || !Number.isFinite(graphWeight) || graphWeight < 0 || graphWeight > 0.6) {

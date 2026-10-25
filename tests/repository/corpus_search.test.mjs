@@ -43,6 +43,10 @@ test("claim-level and cross-reference retrieval exposes exact passage identity w
   assert.ok(target.semanticBridge.lineEnd - target.semanticBridge.lineStart <= 8, "bridge receipts must remain bounded passages rather than whole navigation lists");
   assert.match(result.method.claim, /list item|table row/iu);
   assert.deepEqual(Object.keys(result.method.finalWeights), ["lexical", "claim", "semantic", "graph"]);
+  assert.deepEqual(result.method.finalWeights, { lexical: 0.4, claim: 0.2, semantic: 0.2, graph: 0.2 });
+  assert.ok(["direct-passage", "cross-reference-bridge", "graph-assisted", "weak-local-match"].includes(target.retrievalSupport.class));
+  assert.ok(target.retrievalSupport.queryTokenCoverage >= 0 && target.retrievalSupport.queryTokenCoverage <= 1);
+  assert.match(target.retrievalSupport.authorityBoundary, /not confidence in truth/iu);
 });
 
 test("warm retrieval is byte-for-byte deterministic after sparse candidate evaluation", () => {

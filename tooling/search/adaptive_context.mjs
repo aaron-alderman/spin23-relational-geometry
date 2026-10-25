@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { buildCorpusContext } from "./context_hub.mjs";
-import { searchCorpus } from "./search_corpus.mjs";
+import { DEFAULT_RETRIEVAL_WEIGHTS, searchCorpus } from "./search_corpus.mjs";
 import { verifyBeliefState } from "./belief_state.mjs";
 
 const sha256 = value => createHash("sha256").update(typeof value === "string" ? value : JSON.stringify(value)).digest("hex");
@@ -51,9 +51,9 @@ export function buildAdaptiveCorpusContext({
   profile,
   maxSources = 6,
   maxCharacters = 12000,
-  graphWeight = 0.3,
-  claimWeight = 0.17,
-  semanticWeight = 0.08,
+  graphWeight = DEFAULT_RETRIEVAL_WEIGHTS.graphWeight,
+  claimWeight = DEFAULT_RETRIEVAL_WEIGHTS.claimWeight,
+  semanticWeight = DEFAULT_RETRIEVAL_WEIGHTS.semanticWeight,
   adaptiveWeight = 0.15,
   explorationWeight = 0.03,
 } = {}) {

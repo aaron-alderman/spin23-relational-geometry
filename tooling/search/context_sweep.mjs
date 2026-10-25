@@ -59,8 +59,8 @@ export function buildContextSweep({
   task,
   baselineProfile = "all",
   profiles = ["interpret", "experiment", "audit"],
-  baselineGraphWeight = 0.3,
-  graphWeights = [0.15, 0.3, 0.45],
+  baselineGraphWeight = 0.2,
+  graphWeights = [0.1, 0.2, 0.35],
   maxSources = 6,
   maxCharacters = 8000,
   includeContexts = false,
@@ -158,7 +158,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     console.log(options.json ? JSON.stringify(result, null, 2) : result.summary);
   } catch (error) {
     console.error(error.message);
-    console.error("Usage: node tooling/search/context_sweep.mjs --task \"Casimir boundary detection\" [--profiles interpret,experiment,audit] [--graph-weights 0.15,0.3,0.45] [--include-contexts] [--json]");
+    console.error("Usage: node tooling/search/context_sweep.mjs --task \"Casimir boundary detection\" [--profiles interpret,experiment,audit] [--graph-weights 0.1,0.2,0.35] [--include-contexts] [--json]");
     process.exitCode = 1;
   }
 }

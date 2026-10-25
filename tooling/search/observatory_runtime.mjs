@@ -26,7 +26,7 @@ function normalizedControls(controls = {}) {
   if (!Number.isInteger(maxCharacters) || maxCharacters < 4000 || maxCharacters > 30000) throw new Error("controls.maxCharacters must be from 4000 to 30000");
   return {
     profile,
-    graphWeight: bounded(controls.graphWeight ?? 0.3, 0, 0.6, "controls.graphWeight"),
+    graphWeight: bounded(controls.graphWeight ?? 0.2, 0, 0.6, "controls.graphWeight"),
     adaptiveWeight: bounded(controls.adaptiveWeight ?? 0.15, 0, 0.2, "controls.adaptiveWeight"),
     explorationWeight: bounded(controls.explorationWeight ?? 0.03, 0, 0.05, "controls.explorationWeight"),
     processVariance: bounded(controls.processVariance ?? 0.01, 0.0001, 0.1, "controls.processVariance"),
