@@ -20,6 +20,13 @@ Two different operational tasks require different minimum datasets.
    \]
    no sign measurement is needed. A top-sensitive production measurement plus a charged-lepton partial width is sufficient ideally. Experimentally this becomes the three-observable set: production branching ratio, proper lifetime, and leptonic decay fraction.
 
+These three readings form a field-theory [operator-to-record
+ledger](../../admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md),
+not three interchangeable rate proxies: production prepares the sector, the
+leptonic operator and phase space give one partial width, all competing widths
+give the proper lifetime, and acceptance maps the decay position and channel
+into a record.
+
 The existing NA62/ALP programme implements the second, weaker test. It does not perform complete two-face tomography.
 
 ## 1. Ideal rank-complete tomography

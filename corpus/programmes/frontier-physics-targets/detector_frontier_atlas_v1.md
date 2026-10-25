@@ -7,7 +7,7 @@
 
 ## Result
 
-The corpus currently resolves twenty distinct frontier regions with thirty-five detector bundles. Eight bundles are exact computational detectors, eight have physical precedents, three are directly executable, ten are specified but not yet implemented as a complete packet, one is a formal emulator schedule and five are missing translation-level detectors.
+The corpus currently resolves twenty distinct frontier regions with thirty-seven detector bundles. The machine register, rather than this prose count, is authoritative for status totals as bundles are added or reclassified.
 
 The word **detector** is used operationally:
 
@@ -70,6 +70,7 @@ Together these span FA-04 through FA-10. No single headline signal—endpoint re
 - **DET-012 — full thermoelectric/Hall tensor:** jointly measures electrical, thermopower, thermoelectric, thermal and magnetic channels.
 - **DET-013 — frequency, phase and lag spectroscopy:** measures complex response, poles, linewidths and relaxation. Wave 7.65 adds the minimal small-index AM/FM record: a calibrated carrier and both coherent sidebands. Power-only, one-sideband, sideband-excluding bandwidth and ringdown-only ablations are certified insufficient in that model. Wave 7.70 adds an addressed-perturbation control: a genuine pre-fold D4 star moves from two accessible modes to four when its three outer channels are unequally detuned.
 - **DET-014 — hybrid avoided-crossing spectroscopy:** resolves modes, splittings, lifetimes and hybridization.
+- **DET-037 — transition-operator lifetime and polarization ledger:** joins prepared initial/final sectors, the addressed tensor or multipole component, time-domain survival, partial branching, frequency-domain line shape, polarization/angular dependence, environmental reopening channels and detector acceptance. It prevents a possible destination, an allowed representation coupling, a nonzero amplitude and a measured rate from being treated as one fact. The full ledger is [AZ-127](../admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md).
 - **DET-015 — adversarial thermal-Hall bundle:** joins thermal Hall with spectra, disorder, angle and nonlinear response.
 - **DET-016 — broadband optical tensor:** supplies causal diagonal/off-diagonal response and imaginary-frequency continuation.
 - **DET-017 — Casimir force/torque metrology:** records force, torque, distance law, angular equilibria and switching.
@@ -121,6 +122,8 @@ These are called missing detectors because no corpus-specific model presently ma
 | Was selection only postselection? | DET-008 + DET-009 |
 | What did selection cost? | DET-009 + DET-010 |
 | Was persistence equilibrium or kinetic? | DET-007 + DET-011 |
+| Is a long lifetime caused by a weak/closed operator channel? | DET-013 + DET-014 + DET-037 |
+| Does a linewidth equal a population lifetime? | DET-013 + DET-037, with pure dephasing and detector response separated |
 | Was a transverse material signal intrinsic? | DET-012–DET-015 + DET-029 |
 | Did one material tensor predict Casimir? | DET-012 + DET-016–DET-018 |
 | Is transport genuinely rank two? | DET-019–DET-021 |

@@ -191,3 +191,36 @@ A synthesis should complete its scientific argument before opening symbolic or t
 5. **Here is an optional menu of speculative, mythic and theological readings.** State assumptions and prevent conclusions from flowing backward into the physics.
 
 The [optional-endpoints synthesis](syntheses/admissibility_optional_endpoints_mythic_and_theological_readings.md) implements this ending. Its theological analysis explicitly assumes that God exists; it does not infer God from the scientific programme.
+
+## 10. Do not infer a transition from a destination
+
+Whenever a physical claim involves decay, capture, emission, absorption, a
+spectral lifetime or operator-limited metastability, the explanation must keep
+the following things separate:
+
+1. the prepared initial sector and possible final sectors;
+2. the physical interaction operator that could connect them;
+3. the tensor, multipole or other transformation type of that operator;
+4. the reduced or full matrix element, including any exact or approximate zero;
+5. final-state phase space and competing channels;
+6. intrinsic population decay, coherence loss and environmental broadening;
+7. polarization or angular information retained by the measurement; and
+8. detector acceptance, time window and the perturbation that can reopen a
+   closed or weak channel.
+
+A lower-energy state is a possible destination, not by itself a decay route.
+A symmetry-allowed channel need not have appreciable strength, and a measured
+linewidth need not be a natural lifetime. Conversely, “forbidden” means zero
+for a named operator in a stated approximation; it does not mean impossible
+under every higher-order interaction, environment or symmetry-breaking
+perturbation.
+
+This ledger is not required for an effective pole, resonator or hysteresis
+model that makes no microscopic transition claim. Such a document must instead
+say that its width or escape law is effective and identify the additional
+operator-level data needed for a microscopic interpretation. Barrier crossing,
+detector lag, dephasing and radiative or weak decay are not interchangeable
+forms of metastability.
+
+The established reference bridge is [AZ-127: transition operators, selection
+rules and lifetime frontier](programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md).

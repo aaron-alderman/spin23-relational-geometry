@@ -73,6 +73,25 @@ Choose a finite incoming wavepacket with declared energy width and launch positi
 
 The route advances if a nonzero bound population and emitted spectrum converge on a time window that grows with both rails while the ledger closes. It closes if coherent bond cancellation or the material derivative kills the form factor, the required phonon lies outside the band, or the apparent captured population vanishes as wavepacket and rail limits are taken. This is theoretical engineering before it is new physics.
 
+## Transition-operator ledger
+
+This packet fills the matrix-element cell of the [AZ-127
+operator-to-record chain](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md), but deliberately stops before a probability or width.
+
+| Field | Present value or boundary |
+|---|---|
+| Initial/final sectors | energy-normalized incoming scattering state; normalized bound state plus an emitted phonon to be supplied |
+| Operator/type | bond-modulation operator (B_j); its material displacement coupling remains external |
+| Matrix element | all eight complex (F_j(E)) are computed as amplitude densities |
+| Phase space/competitors | incoming energy and the required phonon energy are explicit; full phonon density and competing channels await the packet calculation |
+| Intrinsic/environmental width | none inferred from the stationary form factor |
+| Angular/polarization data | not present in this one-dimensional scalar model |
+| Detector/window | no detector record yet; proposed records are reflection, transmission, bound population and emitted spectrum |
+| Reopening variable | wavepacket profile, material (dt/du), coherent bond phases, temperature and continuum limits |
+
+Thus a nonzero overlap density establishes operator access, not a capture
+probability, lifetime or measured transition.
+
 ## Reproduction
 
 ~~~powershell

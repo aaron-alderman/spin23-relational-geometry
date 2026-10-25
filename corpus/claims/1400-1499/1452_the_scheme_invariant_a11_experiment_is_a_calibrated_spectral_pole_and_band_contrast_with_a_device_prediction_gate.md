@@ -79,6 +79,14 @@ give a positive Lorentzian absorptive line. Slowly wandering offset charge adds 
 Gaussian distribution of line centres, so the measured average is a Voigt line:
 a Lorentzian blurred by a Gaussian.
 
+This is an effective device pole and port-response statement. It does not by
+itself identify a microscopic atomic or nuclear transition operator, and its
+homogeneous linewidth is not automatically a population lifetime. The
+[AZ-127 transition ledger](../../programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+applies only if this device response is promoted to such a microscopic claim;
+the present experiment instead retains \(\Sigma_h\), \(\Gamma_h\), port residue,
+inhomogeneous broadening and detector transfer as separately calibrated data.
+
 This produces four rules.
 
 - Interactions may shift or broaden the first pole, change its residue, create a

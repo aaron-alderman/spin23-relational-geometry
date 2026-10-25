@@ -249,6 +249,14 @@ The representation Casimir and the dispersion-force landscape can meet, but only
 
 A Casimir invariant can constrain degeneracies, selection rules or mode spectra. It does not determine oscillator strengths, material filling, damping, boundary geometry or temperature. The bridge becomes physical only if the same microscopic representation data calculates the response functions used in the force law.
 
+More explicitly, a representation label is not a radiative line: a physical
+line also requires a named transition operator, a nonzero reduced matrix
+element, phase space and a detector model. The eight-field ledger in
+[AZ-127](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+governs any attempt to use microscopic lines or lifetimes as inputs to the
+dispersion response. The force calculation may use an effective causal
+response without claiming that microscopic operator derivation.
+
 ## Research packet D
 
 ### D1 — response-cone reconstruction

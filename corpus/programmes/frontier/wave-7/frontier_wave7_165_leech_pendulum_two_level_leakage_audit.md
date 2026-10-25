@@ -12,6 +12,14 @@
 > and a general warning about leakage.  Its transition matrix elements and
 > threshold are not values for the coupled Gram-first cell.
 
+> **Operator boundary (AZ-127).** These are coherent closed-system matrix
+> elements of a declared rotor operator. They quantify addressed transfer and
+> leakage but do not define a decay width or natural lifetime. Environmental
+> spectral density, competing channels and detector folding would be required
+> before the [full transition-to-record
+> ledger](../../admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+> applied.
+
 ## The projection is not free
 
 Wave 7.164's exact hopping threshold belongs to a two-state effective model.

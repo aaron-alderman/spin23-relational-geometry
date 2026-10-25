@@ -34,6 +34,13 @@ S_{xx}:&\text{longitudinal energy-slope response},\\
 \end{aligned}}
 \]
 
+On this rung, sector labels and selection rules do not yet constitute a
+physical transition. If a lifetime, oscillator strength or radiative channel
+is used, apply the [AZ-127 transition-operator
+ledger](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md):
+operator type, matrix element, phase space, width decomposition, angular data,
+detector window and reopening perturbation must accompany the sector labels.
+
 This is useful because the three observables interrogate different projections of a potentially common spectral object. It is not evidence that they have a common microscopic cause until the response functions are calculated or measured on the same carrier.
 
 ## The three experimental rails

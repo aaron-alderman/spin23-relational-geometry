@@ -391,6 +391,13 @@ List every scale entering one dispersion-force crossover and form all independen
 
 Choose a rotationally organized microscopic spectrum, calculate the Casimir-controlled selection rules, derive its anisotropic polarizability and propagate it to a measurable dispersion force or torque.
 
+Here “calculate the selection rules” is only the classification step. The
+bridge must also name the electromagnetic or other interaction operator,
+reduced matrix elements, phase space, intrinsic and environmental widths,
+polarization acceptance and the perturbation that opens suppressed channels.
+Those requirements and their single-ion test are fixed in
+[AZ-127](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md).
+
 **Target:** produce the first explicit path from a representation invariant to material response and force.
 
 ## Provisional answer

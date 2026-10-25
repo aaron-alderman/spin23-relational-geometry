@@ -166,6 +166,13 @@ They must not be collapsed.  A one-electron pole is not an atomically bound elec
 
 Spin(2,3) can presently organize the total causal/symplectic geometry and contains relevant conformal substructures.  It does not yet supply the microscopic \(H_F,H_B,H_L,V\) that reproduces the hydrogen spectrum, radiative capture and flat-space limit.  The new packet therefore advances a dynamics grammar and an executable bridge target, not physical admission.
 
+[AZ-127](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+now sharpens that missing datum: a pole or lower state is a possible
+destination, while capture requires a typed operator, nonzero matrix element,
+phase space and detector-retained event. AZ-120–AZ-122 instantiate that chain
+for a scalar phonon surrogate. They still do not supply electromagnetic
+hydrogen capture or a Spin(2,3) origin for its operator.
+
 ## 9. Greek geometric signpost and authority boundary
 
 The useful lexical sequence is

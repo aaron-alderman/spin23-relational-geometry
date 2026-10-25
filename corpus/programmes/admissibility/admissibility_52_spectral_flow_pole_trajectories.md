@@ -153,6 +153,15 @@ Starting in \(|e,0\rangle\) at \(E_e=0.65\), with \(E_b=-0.55\), the evolved pop
 
 The bath remains finite and scalar and its spectral density is prescribed.  The result therefore does not derive microscopic capture, electromagnetic selection rules, photon polarizations or QED rates.  Finite-bath recurrences will also occur beyond the reported time window.
 
+This is an effective spectral claim, not a microscopic transition claim. Its
+width belongs to the continued-sheet pole of the declared toy Hamiltonian. To
+promote it to a physical lifetime, the [AZ-127
+ledger](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+requires initial/final sectors, a physical operator and matrix element, phase
+space, competing channels, dephasing/environmental separation, angular data
+and detector acceptance. AZ-120–AZ-122 fill part of that reopening path for a
+phonon carrier.
+
 ## 6. Casimir placement
 
 The toy Casimir quantity is calculated from the same cluster Green function by a scalar imaginary-frequency scattering integral,

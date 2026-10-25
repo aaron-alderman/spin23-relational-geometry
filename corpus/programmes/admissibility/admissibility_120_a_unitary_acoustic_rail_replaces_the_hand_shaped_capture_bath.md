@@ -66,6 +66,24 @@ The scalar (D) is still declared. It has not been computed from the AZ-055 scatt
 
 The next calculation is exact in form: choose the bond-modulation operator on the AZ-055 cluster, evaluate it between the normalized bound state and the energy-normalized incoming scattering state, and use that matrix element in a converged or infinite acoustic rail. Sweep the incoming energy, gap, rail size and temperature. Permanent capture is admitted only if an intermediate-time plateau and emitted spectrum converge before recurrence while the reverse and detailed-balance ledgers continue to close.
 
+## Transition-operator ledger
+
+Under the [AZ-127 operator-to-record standard](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md), this packet is an operator-resolved finite surrogate, not yet a material rate calculation.
+
+| Field | Present value or boundary |
+|---|---|
+| Initial/final sectors | normalized excited matter with no phonon; lower bound matter plus one acoustic phonon |
+| Operator/type | local bond strain times the matter lowering/raising map; scalar one-phonon benchmark on the declared rail |
+| Matrix element | discrete coefficient (D=0.2) is declared here; its graph and material factors are not yet derived |
+| Phase space/competitors | finite acoustic band and mode density are explicit; multiphonon, anharmonic and other disposal channels are omitted |
+| Intrinsic/environmental width | no irreversible width is claimed; finite unitary transfer recurs |
+| Angular/polarization data | not applicable to the scalar rail; a vector or tensor material coupling would require enrichment |
+| Detector/window | bound-plus-phonon population and emitted energy before finite-rail recurrence |
+| Reopening variable | bond derivative, gap, rail spectrum, temperature and added channels |
+
+The ledger prevents the strong finite transfer from being read as a natural
+linewidth or a source-native capture rate.
+
 ## Literature boundary
 
 The microscopic shape follows the bond-displacement origin of the [Su--Schrieffer--Heeger model](https://doi.org/10.1103/PhysRevLett.42.1698). [Shaw and Young](https://doi.org/10.1103/PhysRevB.24.714) provide a one-dimensional acoustic deformation-potential precedent, including phonon spectral restructuring. [Thorwart, Eckel and Mucciolo](https://arxiv.org/abs/cond-mat/0505621) show why acoustic-phonon dynamics can be non-Markovian. None of these sources supplies the particular AZ-055 transition matrix element.

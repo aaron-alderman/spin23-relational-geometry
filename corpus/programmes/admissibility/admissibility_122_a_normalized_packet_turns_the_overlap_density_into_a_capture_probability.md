@@ -59,3 +59,22 @@ The resulting sub-percent number is less dramatic than AZ-120's deliberately str
 This is not yet a material capture prediction. A named realization must supply bond-resolved \(dt/du\), ionic masses, spring constants, geometry and temperature. The equal derivative on all bonds is a declared simplification. The calculation also retains a one-phonon truncation and finite matter and phonon continua. Thermal absorption, multiphonon relaxation and anharmonic irreversibility remain outside the certificate.
 
 The next frontier is therefore no longer “invent a capture mechanism.” It is narrower and experimentally legible: calibrate one material or engineered device, replace the common benchmark by its bond-resolved mechanical derivatives, and test whether the same probability and emitted spectrum survive joint continuum refinement and finite-temperature detailed balance.
+
+## Transition-operator ledger
+
+This is the most complete capture-side instance of the [AZ-127
+operator-to-record standard](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md) presently in the corpus.
+
+| Field | Present value or boundary |
+|---|---|
+| Initial/final sectors | normalized incoming wavepacket; normalized bound electronic state plus one finite-rail phonon |
+| Operator/type | coherent sum of all eight bond-modulation operators coupled to acoustic strain |
+| Matrix element | source-derived complex form factors multiplied by the declared common benchmark derivative (D=0.2) |
+| Phase space/competitors | finite electronic and one-phonon grids are explicit; thermal, multiphonon and anharmonic channels remain out of scope |
+| Intrinsic/environmental width | no asymptotic irreversible width is claimed; the finite Hermitian model is reversible |
+| Angular/polarization data | absent by construction in the scalar one-dimensional carrier |
+| Detector/window | bound-plus-phonon probability and emitted spectrum on the pre-recurrence time window |
+| Reopening variable | bond-resolved material derivatives, masses, springs, geometry, temperature and joint continuum refinement |
+
+The result is therefore a finite transition probability with a complete type
+ledger, not yet a measured material capture rate or natural linewidth.

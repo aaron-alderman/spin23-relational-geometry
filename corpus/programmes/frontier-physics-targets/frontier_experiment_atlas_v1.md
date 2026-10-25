@@ -1,7 +1,7 @@
 # Frontier experiment atlas v1
 
 **Date:** 2026-10-25  
-**Coverage:** 20/20 frontier areas; 51/51 maintained topics; 36/36 detector bundles.
+**Coverage:** 20/20 frontier areas; 51/51 maintained topics; 37/37 detector bundles.
 
 This atlas converts every canonical frontier into a realistic controlled experiment. “Experiment” is used in the broad scientific sense: a laboratory intervention where a physical carrier exists, a reproducible computation where the object is discrete, and a theorem/falsification benchmark where uniform limits or an action are the actual missing datum. A blocked fundamental frontier is not disguised as build-ready hardware.
 
@@ -30,6 +30,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 | EX-019 | Flavour, gravity and cosmology | conditional_hybrid | conditional_on_action | 12–36 months after a frozen action and matching packet exist |
 | EX-020 | Exceptional and unification interpretation | theory_computation | conditional_on_model | 12–36 months for one fully specified candidate |
 | EX-021 | Flavour, gravity and cosmology | theory_kernel_then_public_data_recast | source_complete_amplitude_required | 2–6 months for the amplitude audit; 3–9 months for a public-likelihood recast after release |
+| EX-022 | Spectral boundary dynamics | laboratory_atomic_spectroscopy | ready_on_established_platform | 6–12 months on an equipped trapped-ion platform; helium transfer arm is a separate specialist campaign |
 
 ## Experiment cards
 
@@ -212,7 +213,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Indicative scale:** 6–12 months using an integrated-photonic or microwave platform  
 **Topics:** OT-003, OT-039
 
-**Detector bundles:** DET-004, DET-005, DET-007, DET-012, DET-015, DET-017
+**Detector bundles:** DET-004, DET-005, DET-007, DET-012, DET-015, DET-017, DET-037
 
 **Platform.** A three-mode interferometric loop with an independently calibrated birefringent, chiral or boundary reference axis.
 
@@ -435,7 +436,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Indicative scale:** 6–12 months; long unattended acquisition required  
 **Topics:** OT-010, OT-020, OT-023, OT-043
 
-**Detector bundles:** DET-007, DET-008, DET-011, DET-013
+**Detector bundles:** DET-007, DET-008, DET-011, DET-013, DET-037
 
 **Platform.** An injection-locked VCSEL, Kerr resonator or nanomagnetic element with tunable bistability and single-event readout.
 
@@ -478,7 +479,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Indicative scale:** 4–9 months with microwave or acoustic resonators  
 **Topics:** OT-012, OT-013, OT-014, OT-036, OT-041, OT-051
 
-**Detector bundles:** DET-006, DET-013, DET-014, DET-022, DET-023
+**Detector bundles:** DET-006, DET-013, DET-014, DET-022, DET-023, DET-037
 
 **Platform.** A 10–40 site coupled-resonator chain with one tunable side-coupled defect and access to both end-port scattering and local density of states.
 
@@ -956,10 +957,61 @@ This atlas converts every canonical frontier into a realistic controlled experim
 
 **Primary precedents.** [https://arxiv.org/abs/2012.12272](https://arxiv.org/abs/2012.12272); [https://arxiv.org/abs/2507.01249](https://arxiv.org/abs/2507.01249)
 
+---
+
+### EX-022 — Single-ion operator-opening and lifetime ledger
+
+**Frontier:** FA-11 — Spectral boundary dynamics (operator-to-record admissibility boundary)  
+**Mode/readiness:** laboratory_atomic_spectroscopy; ready_on_established_platform  
+**Indicative scale:** 6–12 months on an equipped trapped-ion platform; helium transfer arm is a separate specialist campaign  
+**Topics:** OT-036
+
+**Detector bundles:** DET-013, DET-014, DET-037
+
+**Platform.** A single trapped calcium-40 ion prepared in the metastable 3d 2D5/2 level through the 729 nm electric-quadrupole line, with an independently calibrated 854 nm electric-dipole quench and state-dependent fluorescence readout.
+
+**Hypothesis.** One typed operator model predicts the added decay rate, detuning curve, angular dependence and helicity reversal when a calibrated electric-dipole disposal channel is opened from an otherwise metastable level.
+
+**Interventions**
+
+- Sweep 854 nm intensity and detuning in the weak unsaturated regime
+- Rotate the polarization relative to the magnetic quantization axis
+- Reverse helicity and resolve addressed Zeeman sublevels
+- Vary observation time while holding state preparation and fluorescence thresholds fixed
+- Repeat intrinsic-lifetime measurements with the quench beam physically blocked
+
+**Recorded observables**
+
+- State-survival curves and inferred partial and total rates
+- Polarization- and sublevel-resolved photon counts
+- Frequency-domain line shape and time-domain lifetime
+- Branching fractions, quench power, detuning and magnetic-field metadata
+- Background-gas, leakage-light, motional, magnetic-noise and detector-dead-time witnesses
+
+**Controls**
+
+- Blocked-quench intrinsic-lifetime control
+- Off-resonant and wrong-polarization controls
+- Known Clebsch–Gordan angular ratios
+- Collision and stray-light pressure/power sweeps
+- Independent power, polarization, frequency and fluorescence calibration
+
+**Analysis.** Fit all survival, detuning, orientation and helicity records with one level Hamiltonian, one reduced matrix element and shared detector/nuisance parameters. In the weak regime require the added rate to begin linearly in intensity with the predicted tensor-component ratios; do not infer a microscopic lifetime from linewidth alone.
+
+**Decisive positive result.** The same operator model predicts the added rate, reversal, angular and spectral records on held-out settings while independently bounded collision, leakage and detector models remain below the effect.
+
+**Useful null result.** No added rate is resolved at the calibrated sensitivity, or a conventional collision, leakage, saturation, dephasing or detector model spans the record without the proposed operator opening.
+
+**Stop rule.** Stop operator interpretation if the intrinsic lifetime is not reproduced, the quench field is not independently calibrated, time- and frequency-domain widths disagree outside the declared dephasing model, or polarization leakage spans the tensor signature.
+
+**Primary precedents.** [https://doi.org/10.1103/PhysRevA.91.022511](https://doi.org/10.1103/PhysRevA.91.022511); [https://doi.org/10.1103/RevModPhys.84.175](https://doi.org/10.1103/RevModPhys.84.175); [https://doi.org/10.1103/PhysRevLett.125.013002](https://doi.org/10.1103/PhysRevLett.125.013002)
+
+**Reference bridge.** [AZ-127](../admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+
 ## Execution order
 
 1. **Immediate, no new apparatus:** EX-001, EX-002, EX-003, EX-016 and EX-018.
-2. **Existing-platform pilots:** EX-004, EX-008, EX-009, EX-010, EX-011 and EX-014.
+2. **Existing-platform pilots:** EX-004, EX-008, EX-009, EX-010, EX-011, EX-014 and EX-022.
 3. **Shared-device build programme:** EX-005, EX-006 and EX-007, followed by EX-017.
 4. **Materials and transport campaign:** EX-012, EX-013 and EX-015.
 5. **Model-gated fundamental tests:** EX-019 and EX-020 only after their action/dictionary entry conditions are met.

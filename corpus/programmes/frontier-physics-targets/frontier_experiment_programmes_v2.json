@@ -419,7 +419,8 @@
         "DET-007",
         "DET-012",
         "DET-015",
-        "DET-017"
+        "DET-017",
+        "DET-037"
       ],
       "title": "Reversal-calibrated orientation lift",
       "mode": "laboratory",
@@ -892,7 +893,8 @@
         "DET-007",
         "DET-008",
         "DET-011",
-        "DET-013"
+        "DET-013",
+        "DET-037"
       ],
       "title": "Rare-event and hysteresis trajectory campaign",
       "mode": "laboratory",
@@ -987,7 +989,8 @@
         "DET-013",
         "DET-014",
         "DET-022",
-        "DET-023"
+        "DET-023",
+        "DET-037"
       ],
       "title": "Tunable finite-chain pole-to-cut spectrometer",
       "mode": "laboratory",
@@ -2025,6 +2028,101 @@
       "precedents": [
         "https://arxiv.org/abs/2012.12272",
         "https://arxiv.org/abs/2507.01249"
+      ],
+      "authoredOverridesPreserved": [
+        "detector_transfer_function",
+        "nuisance_and_covariance_model",
+        "predicted_signal_scale",
+        "power_or_sensitivity_calculation",
+        "build_go_no_go",
+        "physics_go_no_go",
+        "replication_rule",
+        "data_metadata_and_code_release_contract",
+        "claim_status_propagation"
+      ]
+    },
+    {
+      "id": "EX-022",
+      "sourceExperimentId": "EX-022",
+      "frontierAreaId": "FA-11",
+      "topicIds": [
+        "OT-036"
+      ],
+      "detectorIds": [
+        "DET-013",
+        "DET-014",
+        "DET-037"
+      ],
+      "title": "Single-ion operator-opening and lifetime ledger",
+      "mode": "laboratory_atomic_spectroscopy",
+      "readiness": "ready_on_established_platform",
+      "estimate": "6–12 months on an equipped trapped-ion platform; helium transfer arm is a separate specialist campaign",
+      "hypothesis": "One typed operator model predicts the added decay rate, detuning curve, angular dependence and helicity reversal when a calibrated electric-dipole disposal channel is opened from an otherwise metastable level.",
+      "strongest_conventional_null": "No added rate is resolved at the calibrated sensitivity, or a conventional collision, leakage, saturation, dephasing or detector model spans the record without the proposed operator opening.",
+      "carrier_and_preparation": "A single trapped calcium-40 ion prepared in the metastable 3d 2D5/2 level through the 729 nm electric-quadrupole line, with an independently calibrated 854 nm electric-dipole quench and state-dependent fluorescence readout.",
+      "controlled_variables": [
+        "Sweep 854 nm intensity and detuning in the weak unsaturated regime",
+        "Rotate the polarization relative to the magnetic quantization axis",
+        "Reverse helicity and resolve addressed Zeeman sublevels",
+        "Vary observation time while holding state preparation and fluorescence thresholds fixed",
+        "Repeat intrinsic-lifetime measurements with the quench beam physically blocked"
+      ],
+      "observables": [
+        "State-survival curves and inferred partial and total rates",
+        "Polarization- and sublevel-resolved photon counts",
+        "Frequency-domain line shape and time-domain lifetime",
+        "Branching fractions, quench power, detuning and magnetic-field metadata",
+        "Background-gas, leakage-light, motional, magnetic-noise and detector-dead-time witnesses"
+      ],
+      "detector_transfer_function": "Convert time-tagged state-dependent fluorescence into prepared-state survival using independently measured bright/dark confusion, dead time and shelving errors. Convert calibrated 854 nm power, frequency and polarization at the ion into the addressed spherical-tensor components, and fit the same level Hamiltonian to spectral and time-domain records without equating total linewidth with population decay.",
+      "calibration_and_reference_channels": [
+        "Blocked-quench intrinsic-lifetime control",
+        "Off-resonant and wrong-polarization controls",
+        "Known Clebsch–Gordan angular ratios",
+        "Collision and stray-light pressure/power sweeps",
+        "Independent power, polarization, frequency and fluorescence calibration"
+      ],
+      "nuisance_and_covariance_model": "Jointly model state-preparation and readout error, quench-beam intensity/frequency drift, polarization impurity, magnetic-field magnitude and direction, off-resonant coupling, saturation and power broadening, collision quenching, cooling/trap-light leakage, motional sidebands, pure dephasing, background counts and dead time. Share calibration covariance across detuning, intensity, orientation and helicity runs.",
+      "predicted_signal_scale": "In the weak unsaturated regime the added population-decay rate is linear in calibrated 854 nm intensity at fixed detuning, with detuning and polarization ratios fixed by the same level Hamiltonian, Clebsch–Gordan coefficients and reduced electric-dipole matrix element. The absolute forecast and detectable minimum must be computed from platform calibration before data unblinding.",
+      "power_or_sensitivity_calculation": "Use pilot bright/dark confusion, intrinsic survival variance and laser/polarization calibration to simulate the joint survival and spectral likelihood. Freeze an intensity-detuning-polarization grid giving at least 90% power at alpha=0.05 to reject collision/leakage-only and polarization-independent alternatives while resolving the weakest preregistered nonzero tensor component; report an upper limit if that grid is infeasible.",
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Fit all survival, detuning, orientation and helicity records with one level Hamiltonian, one reduced matrix element and shared detector/nuisance parameters. In the weak regime require the added rate to begin linearly in intensity with the predicted tensor-component ratios; do not infer a microscopic lifetime from linewidth alone.",
+        "stoppingRule": "Stop operator interpretation if the intrinsic lifetime is not reproduced, the quench field is not independently calibrated, time- and frequency-domain widths disagree outside the declared dephasing model, or polarization leakage spans the tensor signature."
+      },
+      "build_go_no_go": {
+        "go": "The apparatus reproduces the accepted intrinsic D5/2 lifetime and dark-state quantum jump; 854 nm power, frequency and polarization at the ion are calibrated; off-resonant, wrong-polarization, pressure and blocked-beam controls bound nuisance openings below the forecast; and the frozen grid reaches 90% discrimination power.",
+        "noGo": "Intrinsic lifetime or fluorescence classification fails, calibration uncertainty spans the operator ratios, time- and frequency-domain records cannot be joined after dephasing, or a nuisance opening exceeds the target. Repair the platform before interpreting selection or lifetime."
+      },
+      "bridge_go_no_go": {
+        "go": "The same operator model predicts the added rate, reversal, angular and spectral records on held-out settings while independently bounded collision, leakage and detector models remain below the effect.",
+        "noGo": "Stop operator interpretation if the intrinsic lifetime is not reproduced, the quench field is not independently calibrated, time- and frequency-domain widths disagree outside the declared dephasing model, or polarization leakage spans the tensor signature.",
+        "conventionalNull": "No added rate is resolved at the calibrated sensitivity, or a conventional collision, leakage, saturation, dephasing or detector model spans the record without the proposed operator opening."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "A pass establishes a calibrated way to open, close and measure a weak channel and validates the complete operator-to-record ledger on one carrier.",
+        "newPhysicsGo": "Escalate only a replicated residual with a stable but wrong angular, helicity, intensity or detuning signature after known multipoles, relativistic/hyperfine mixing, environmental channels, saturation, dephasing and detector effects fail quantitatively.",
+        "noGo": "Agreement with the standard operator model is useful calibration, not new physics; a null bounds the opening coefficient or sensitivity; a nuisance explanation closes only the tested interpretation."
+      },
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "The same operator model predicts the added rate, reversal, angular and spectral records on held-out settings while independently bounded collision, leakage and detector models remain below the effect.",
+        "null": "No added rate is resolved at the calibrated sensitivity, or a conventional collision, leakage, saturation, dephasing or detector model spans the record without the proposed operator opening.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": "Repeat the frozen operator and nuisance model on a second ion/trap calibration, then reproduce any anomalous tensor signature on an independently calibrated apparatus. The helium arm is a transfer test of the ledger, not a substitute for ion replication.",
+      "data_metadata_and_code_release_contract": "Release time-tagged fluorescence, preparation/readout calibration, quench power/frequency/polarimetry at the ion, magnetic-field and pressure logs, observation windows, level-Hamiltonian and reduced-matrix-element conventions, nuisance priors/covariance, blinded settings, likelihood and power code, and a checksum manifest.",
+      "claim_status_propagation": {
+        "positive": "Advance OT-036 only to demonstrated operator opening and detector closure on this atomic carrier; do not infer exceptional, Jordan or Spin(2,3) origin.",
+        "null": "Publish the matrix-element or rate upper bound and the sensitivity/nuisance boundary; leave other operators and carriers open.",
+        "ambiguous": "Record whether strength, environment, dephasing, polarization or detector folding remains unidentified and prohibit a transition-mechanism claim."
+      },
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+        "evidence/data/transition-operator-admissibility-bridge-v1.json"
+      ],
+      "precedents": [
+        "https://doi.org/10.1103/PhysRevA.91.022511",
+        "https://doi.org/10.1103/RevModPhys.84.175",
+        "https://doi.org/10.1103/PhysRevLett.125.013002"
       ],
       "authoredOverridesPreserved": [
         "detector_transfer_function",

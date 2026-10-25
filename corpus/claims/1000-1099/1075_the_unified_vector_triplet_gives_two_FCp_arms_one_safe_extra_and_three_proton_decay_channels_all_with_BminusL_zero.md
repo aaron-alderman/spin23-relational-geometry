@@ -203,6 +203,13 @@ Treat the extra channels as part of the ultraviolet relational closure, with low
 
 **Rate gate:** before claiming exclusion or viability, supply mediator masses, flavor tensors, running and hadronic matrix elements. The present census alone gives no lifetime.
 
+In the corpus-wide transition language, this is an explicit incomplete
+[AZ-127 operator-to-record ledger](../../programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md):
+the candidate interaction sectors and operators are named, but the physical
+matrix elements, phase space, competing channels and detector-folded proton
+lifetime are not. Representation permission is therefore not a decay-rate
+prediction.
+
 ## 8. Verdict
 
 | Question | Answer |

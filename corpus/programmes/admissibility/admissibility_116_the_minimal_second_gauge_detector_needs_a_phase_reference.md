@@ -48,6 +48,13 @@ The minimal experiment therefore needs one of:
 
 A branching ratio alone also mixes the desired partial width with the total ALP width. The likelihood must carry production, all relevant decay channels, lifetime, acceptance, mass resolution and correlated backgrounds. A one-coupling diphoton limit is a detector precedent, not the required joint record.
 
+This is the relativistic-field-theory instance of the [AZ-127
+operator-to-record rule](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md):
+the effective interaction fixes candidate amplitudes, phase space and all open
+partial widths fix the lifetime, and the displaced/prompt/invisible acceptance
+maps that lifetime into a record. The atomic multipole taxonomy is not imported;
+only the typed rate-to-record architecture transfers.
+
 ## Realistic experiment
 
 Choose an ALP mass window in which both a charged weak production channel and a neutral photon channel are experimentally accessible. Freeze a complete dimension-five model with (c_{BB}=0), independent top and bottom controls, running and weak-scale matching. Generate the twenty-seven charged-channel settings from AZ-074 and a signed photon-reference scan on common parameter points. Fit production and decay jointly, holding out factorial corners and at least one mass window. The preregistered decision statistic is the smallest singular value of the nuisance-profiled signed amplitude map.

@@ -201,7 +201,8 @@
         "DET-007",
         "DET-012",
         "DET-015",
-        "DET-017"
+        "DET-017",
+        "DET-037"
       ],
       "title": "Reversal-calibrated orientation lift",
       "mode": "laboratory",
@@ -444,7 +445,8 @@
         "DET-007",
         "DET-008",
         "DET-011",
-        "DET-013"
+        "DET-013",
+        "DET-037"
       ],
       "title": "Rare-event and hysteresis trajectory campaign",
       "mode": "laboratory",
@@ -492,7 +494,8 @@
         "DET-013",
         "DET-014",
         "DET-022",
-        "DET-023"
+        "DET-023",
+        "DET-037"
       ],
       "title": "Tunable finite-chain pole-to-cut spectrometer",
       "mode": "laboratory",
@@ -1025,6 +1028,58 @@
         "https://arxiv.org/abs/2012.12272",
         "https://arxiv.org/abs/2507.01249"
       ]
+    },
+    {
+      "id": "EX-022",
+      "frontierAreaId": "FA-11",
+      "frontierLabel": "Spectral boundary dynamics",
+      "boundaryType": "operator-to-record admissibility boundary",
+      "topicIds": [
+        "OT-036"
+      ],
+      "detectorIds": [
+        "DET-013",
+        "DET-014",
+        "DET-037"
+      ],
+      "title": "Single-ion operator-opening and lifetime ledger",
+      "mode": "laboratory_atomic_spectroscopy",
+      "readiness": "ready_on_established_platform",
+      "estimate": "6–12 months on an equipped trapped-ion platform; helium transfer arm is a separate specialist campaign",
+      "crosswalkScope": "focused",
+      "platform": "A single trapped calcium-40 ion prepared in the metastable 3d 2D5/2 level through the 729 nm electric-quadrupole line, with an independently calibrated 854 nm electric-dipole quench and state-dependent fluorescence readout.",
+      "hypothesis": "One typed operator model predicts the added decay rate, detuning curve, angular dependence and helicity reversal when a calibrated electric-dipole disposal channel is opened from an otherwise metastable level.",
+      "intervention": [
+        "Sweep 854 nm intensity and detuning in the weak unsaturated regime",
+        "Rotate the polarization relative to the magnetic quantization axis",
+        "Reverse helicity and resolve addressed Zeeman sublevels",
+        "Vary observation time while holding state preparation and fluorescence thresholds fixed",
+        "Repeat intrinsic-lifetime measurements with the quench beam physically blocked"
+      ],
+      "record": [
+        "State-survival curves and inferred partial and total rates",
+        "Polarization- and sublevel-resolved photon counts",
+        "Frequency-domain line shape and time-domain lifetime",
+        "Branching fractions, quench power, detuning and magnetic-field metadata",
+        "Background-gas, leakage-light, motional, magnetic-noise and detector-dead-time witnesses"
+      ],
+      "controls": [
+        "Blocked-quench intrinsic-lifetime control",
+        "Off-resonant and wrong-polarization controls",
+        "Known Clebsch–Gordan angular ratios",
+        "Collision and stray-light pressure/power sweeps",
+        "Independent power, polarization, frequency and fluorescence calibration"
+      ],
+      "analysis": "Fit all survival, detuning, orientation and helicity records with one level Hamiltonian, one reduced matrix element and shared detector/nuisance parameters. In the weak regime require the added rate to begin linearly in intensity with the predicted tensor-component ratios; do not infer a microscopic lifetime from linewidth alone.",
+      "success": "The same operator model predicts the added rate, reversal, angular and spectral records on held-out settings while independently bounded collision, leakage and detector models remain below the effect.",
+      "nullValue": "No added rate is resolved at the calibrated sensitivity, or a conventional collision, leakage, saturation, dephasing or detector model spans the record without the proposed operator opening.",
+      "stopRule": "Stop operator interpretation if the intrinsic lifetime is not reproduced, the quench field is not independently calibrated, time- and frequency-domain widths disagree outside the declared dephasing model, or polarization leakage spans the tensor signature.",
+      "precedents": [
+        "https://doi.org/10.1103/PhysRevA.91.022511",
+        "https://doi.org/10.1103/RevModPhys.84.175",
+        "https://doi.org/10.1103/PhysRevLett.125.013002"
+      ],
+      "referenceBridge": "../admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md"
     }
   ]
 }

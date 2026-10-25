@@ -164,6 +164,12 @@ Noncompact real forms place additional pressure on admissibility. The same compl
 
 The corpus proposes that compact/noncompact transitions may organize bound, free and threshold behavior around the \(Spin(2,3)\) pole. Casimir data can label those representations, but the physical interpretation requires:
 
+The word *transition* needs an additional firewall. A Casimir can label initial
+and final sectors and can help state a symmetry selection rule; it does not
+supply the interaction operator, its reduced matrix element, final-state phase
+space or a detector-visible width. [AZ-127](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+gives the complete operator-to-record ledger and a laboratory discriminator.
+
 - a declared self-adjoint operator;
 - a positive physical inner product;
 - boundary conditions and domain;

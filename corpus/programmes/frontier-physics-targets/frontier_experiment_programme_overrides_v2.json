@@ -517,6 +517,33 @@
       "replication_rule": "Require independent symbolic anomaly/Hessian implementation and reproduce the held-out prediction in a second observable or dataset with embeddings and thresholds frozen. Near-zero stability directions need certified high-precision replication.",
       "data_metadata_and_code_release_contract": "Release action and conventions, representation/embedding tables, vacuum solution, anomaly certificates, gauge fixing, Hessian and eigenvalue certificates, spectrum, RG/threshold code, full parameter ledger, EFT baseline, likelihood inputs, held-out labels and executable locks.",
       "claim_status_propagation": {"positive": "Promote each passed gate separately for OT-026/OT-032/OT-038/OT-042/OT-045/OT-049/OT-050; reserve physical support for replicated predictions.", "null": "Terminate the candidate at the first failed hard gate and propagate that dependency without generalizing to all exceptional models.", "ambiguous": "Keep the candidate unpromoted and name the unresolved embedding, zero mode, threshold or likelihood coordinate."}
+    },
+    {
+      "id": "EX-022",
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+        "evidence/data/transition-operator-admissibility-bridge-v1.json"
+      ],
+      "detector_transfer_function": "Convert time-tagged state-dependent fluorescence into prepared-state survival using independently measured bright/dark confusion, dead time and shelving errors. Convert calibrated 854 nm power, frequency and polarization at the ion into the addressed spherical-tensor components, and fit the same level Hamiltonian to spectral and time-domain records without equating total linewidth with population decay.",
+      "nuisance_and_covariance_model": "Jointly model state-preparation and readout error, quench-beam intensity/frequency drift, polarization impurity, magnetic-field magnitude and direction, off-resonant coupling, saturation and power broadening, collision quenching, cooling/trap-light leakage, motional sidebands, pure dephasing, background counts and dead time. Share calibration covariance across detuning, intensity, orientation and helicity runs.",
+      "predicted_signal_scale": "In the weak unsaturated regime the added population-decay rate is linear in calibrated 854 nm intensity at fixed detuning, with detuning and polarization ratios fixed by the same level Hamiltonian, Clebsch–Gordan coefficients and reduced electric-dipole matrix element. The absolute forecast and detectable minimum must be computed from platform calibration before data unblinding.",
+      "power_or_sensitivity_calculation": "Use pilot bright/dark confusion, intrinsic survival variance and laser/polarization calibration to simulate the joint survival and spectral likelihood. Freeze an intensity-detuning-polarization grid giving at least 90% power at alpha=0.05 to reject collision/leakage-only and polarization-independent alternatives while resolving the weakest preregistered nonzero tensor component; report an upper limit if that grid is infeasible.",
+      "build_go_no_go": {
+        "go": "The apparatus reproduces the accepted intrinsic D5/2 lifetime and dark-state quantum jump; 854 nm power, frequency and polarization at the ion are calibrated; off-resonant, wrong-polarization, pressure and blocked-beam controls bound nuisance openings below the forecast; and the frozen grid reaches 90% discrimination power.",
+        "noGo": "Intrinsic lifetime or fluorescence classification fails, calibration uncertainty spans the operator ratios, time- and frequency-domain records cannot be joined after dephasing, or a nuisance opening exceeds the target. Repair the platform before interpreting selection or lifetime."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "A pass establishes a calibrated way to open, close and measure a weak channel and validates the complete operator-to-record ledger on one carrier.",
+        "newPhysicsGo": "Escalate only a replicated residual with a stable but wrong angular, helicity, intensity or detuning signature after known multipoles, relativistic/hyperfine mixing, environmental channels, saturation, dephasing and detector effects fail quantitatively.",
+        "noGo": "Agreement with the standard operator model is useful calibration, not new physics; a null bounds the opening coefficient or sensitivity; a nuisance explanation closes only the tested interpretation."
+      },
+      "replication_rule": "Repeat the frozen operator and nuisance model on a second ion/trap calibration, then reproduce any anomalous tensor signature on an independently calibrated apparatus. The helium arm is a transfer test of the ledger, not a substitute for ion replication.",
+      "data_metadata_and_code_release_contract": "Release time-tagged fluorescence, preparation/readout calibration, quench power/frequency/polarimetry at the ion, magnetic-field and pressure logs, observation windows, level-Hamiltonian and reduced-matrix-element conventions, nuisance priors/covariance, blinded settings, likelihood and power code, and a checksum manifest.",
+      "claim_status_propagation": {
+        "positive": "Advance OT-036 only to demonstrated operator opening and detector closure on this atomic carrier; do not infer exceptional, Jordan or Spin(2,3) origin.",
+        "null": "Publish the matrix-element or rate upper bound and the sensitivity/nuisance boundary; leave other operators and carriers open.",
+        "ambiguous": "Record whether strength, environment, dephasing, polarization or detector folding remains unidentified and prohibit a transition-mechanism claim."
+      }
     }
   ]
 }

@@ -79,6 +79,13 @@ before RG and threshold corrections are applied.
 
 This statement is deliberately narrower than a factor-four prediction for total lifetime or branching fraction. Running changes the low-energy coefficients, and other open channels change the total width. The full phenomenological discriminator is the already identified production-times-lifetime pattern.
 
+The scope is exactly the [AZ-127 transition-operator
+boundary](../../admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md):
+the displayed ratio concerns one typed partial width at fixed mass, scale and
+phase space. A total lifetime additionally requires every competing channel;
+an observed displaced or prompt fraction additionally requires the detector
+acceptance and observation window. No atomic multipole claim is being made.
+
 ## Why this model is useful even though it does not select
 
 The hypotheses share their dominant quark-production coordinates while differing sharply in the lepton decay coordinate. Consequently production can approximately normalize the common overall coupling, while decay length or leptonic branching data test the discrete topology convention.

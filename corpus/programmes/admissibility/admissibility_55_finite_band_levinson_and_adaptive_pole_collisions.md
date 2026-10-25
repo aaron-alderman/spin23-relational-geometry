@@ -95,3 +95,10 @@ Thus the count jump, integer phase rotation, delay singularity, residue continua
 OT-014 and OT-041 close positively but narrowly. The useful invariant is a carrier-specific conservation ledger: a bound state lost to the band reappears as one unit of scattering winding after the fixed threshold/background normalization. Reversing the SSH dimerization moves the collision controls and residues but does not change the ledger. The result therefore supplies a benchmark that a more fundamental action would have to reproduce; it does not identify that action.
 
 The next independent question is OT-036: replace the phenomenological capture bath with a microscopic radiative or phononic channel while retaining this spectral ledger.
+
+That question now has two distinct continuations. AZ-120–AZ-122 construct a
+typed scalar phonon operator and normalized finite capture probability;
+[AZ-127](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+states the general operator-to-width-to-record ledger. Neither continuation
+turns the finite-band pole width into an atomic radiative lifetime without the
+additional interaction, matrix-element, phase-space and detector data.

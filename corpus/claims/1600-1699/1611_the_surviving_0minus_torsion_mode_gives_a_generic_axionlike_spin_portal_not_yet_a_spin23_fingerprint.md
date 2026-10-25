@@ -215,6 +215,12 @@ This natural point has no laboratory-range pole: it is a Planck-scale contact co
 
 The force shape has already been sought directly. Terrano *et al.* used polarized electron spin distributions to test pseudoscalar dipole--dipole interactions for mediator masses up to $500\,\mu$eV, reaching sensitivities described as fourteen orders below electromagnetism. Atomic and molecular spin spectroscopy probes the shorter-range tensor and delta-function pieces, but requires system-specific matrix elements.
 
+If those spectroscopic matrix elements are converted into line shifts, widths
+or transition rates, the conversion is governed by the [AZ-127
+operator-to-record ledger](../../programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md).
+The force-potential calculation itself is a different observable and does not
+acquire an atomic decay interpretation from the shared spin algebra.
+
 Astrophysical bounds reach much smaller Yukawa couplings than laboratory force searches, with important modeling qualifications:
 
 - the classic red-giant calculation of Raffelt and Weiss found $\alpha_a<0.5\times10^{-26}$ for a sufficiently light electron-coupled pseudoscalar, corresponding to $y_e\lesssim2.5\times10^{-13}$;
