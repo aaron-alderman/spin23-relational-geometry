@@ -1153,7 +1153,7 @@ The phase ledger matters as much as the population. Backward evolution of the co
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-2.md)
 
-The remaining word is “source.” The overall bond-strain matrix element is still declared rather than evaluated from the AZ-055 bound and scattering states, and a finite harmonic rail ultimately recurs. The look-here calculation is to compute that matrix element from one bond-modulation operator, attach it to an infinite or converged rail, and demand a rail-size-stable plateau and emitted spectrum across gap and temperature. Success would improve phonon-assisted state preparation and boundary capture engineering. Failure would show that the attractive spectral path lacks a physical disposal channel; neither outcome by itself establishes new fundamental physics.
+The graph part of the missing source has now been computed. The lower AZ-055 pole is normalized across its cluster and lead tail, the incoming state is normalized per unit energy, and all eight bond-modulation overlaps are evaluated. At emitted energy 1.2 the strongest bond overlap is 0.0214705 and it varies sharply with incoming energy. The correction is conceptual: this is a continuum amplitude density, not the discrete two-level coefficient used by the finite-bath benchmark, so direct substitution or a squared-ratio capture estimate would be invalid. The look-here calculation is now a material-normalized incoming wavepacket with coherent multi-bond phonon phases and joint lead/rail convergence. Success would improve phonon-assisted state preparation and boundary capture engineering; failure would show that the spectral path lacks a physical disposal channel.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-3.md)
 
@@ -1232,6 +1232,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_110_relation_emulator_readiness_reconciliation.md](../../../corpus/programmes/admissibility/admissibility_110_relation_emulator_readiness_reconciliation.md)
 - [admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md](../../../corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md)
 - [admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md](../../../corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md)
+- [admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md](../../../corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md)
 
 ---
 
