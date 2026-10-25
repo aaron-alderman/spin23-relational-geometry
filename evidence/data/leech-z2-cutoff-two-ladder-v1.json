@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "leech-z2-cutoff-two-ladder-v1",
+  "date": "2026-10-25",
+  "configuration": {"sites":24,"cutoff":2,"ratioUOveru":0.01,"order":"Wave 7.192 optimized","eigensolver":"iterative exact Z2 sectors"},
+  "bondLadder": [
+    {"bond":16,"totalSweeps":10,"evenEnergy":3.8740153147062504,"oddEnergy":4.207773675282694,"gap":0.3337583605764438,"finalFixedBondGapShift":0.0000063910937302402715,"solverConvergedAtTolerance":false},
+    {"bond":24,"totalSweeps":6,"evenEnergy":3.873432489361604,"oddEnergy":4.206422805997774,"gap":0.3329903166361703,"finalFixedBondGapShift":-0.000019605689169477358,"solverConvergedAtTolerance":false}
+  ],
+  "bond16To24": {
+    "evenEnergyShift": -0.000582825344646487,
+    "oddEnergyShift": -0.0013508692849200088,
+    "gapShift": -0.0007680439402735217,
+    "relativeGapShift": 0.0023011976057978312,
+    "bothVariationalEnergiesDecrease": true
+  },
+  "penaltyComparator": {
+    "source": "Wave 7.193 optimized-order cutoff-two result",
+    "gap": 0.3327496639536207,
+    "bond24Difference": 0.00024065268254958028,
+    "bond24RelativeDifference": 0.0007232244194936976
+  },
+  "scaling": {
+    "maximumChargedBlockDimension": 7218,
+    "maximumRecordedLocalResidual": 4.1669012959413044e-10,
+    "dominantOpenCost": "forming and multiplying dense effective charge blocks"
+  },
+  "established": "The first full 24-channel cutoff-two calculation in exact symmetry sectors is executable. Raising bond 16 to 24 lowers both energies and reduces the gap toward the independent penalty-sector result, leaving a 0.0723 percent difference.",
+  "boundary": "The 0.230 percent bond correction and 5.89e-5 final fixed-bond relative drift are too large for a gap certificate. Bond 32, further cutoff points and lower enclosures remain open.",
+  "epistemicStatus": "full-carrier exact-sector cutoff-two feasibility and quantified nonconvergence"
+}

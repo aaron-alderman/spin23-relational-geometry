@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "leech-z2-iterative-checkpoint-dmrg-v1",
+  "date": "2026-10-25",
+  "implementation": {
+    "script": "scripts/smoke-leech-z2-block-dmrg.py",
+    "localSolver": "ARPACK lowest-eigenpair iteration on the occupied Z2 charge block",
+    "checkpoint": "sector-separated pickle payload containing sites, cutoff, sector, Hamiltonian signature and block-sparse MPS",
+    "importantBoundary": "the charged effective block is still formed densely before iterative diagonalization"
+  },
+  "iterativeExactControls": [
+    {"sites":4,"cutoff":1,"bond":8,"evenAbsoluteError":1.8547385849387865e-12,"oddAbsoluteError":6.661338147750939e-16,"maximumLocalResidual":1.4814179231499182e-14},
+    {"sites":6,"cutoff":1,"bond":16,"evenAbsoluteError":7.526423928538861e-12,"oddAbsoluteError":1.0098588631990424e-12,"maximumLocalResidual":1.180958419592816e-10},
+    {"sites":4,"cutoff":2,"bond":24,"evenAbsoluteError":1.315947351088198e-12,"oddAbsoluteError":3.6350922272276875e-12,"maximumLocalResidual":1.7460881354870905e-11}
+  ],
+  "checkpointRoundTrip": {
+    "sites": 4,
+    "cutoff": 1,
+    "freshProcessReload": true,
+    "evenAbsoluteErrorAfterReload": 1.8540724511240114e-12,
+    "oddAbsoluteErrorAfterReload": 1.7763568394002505e-15,
+    "blockSparseAfterReload": true,
+    "hamiltonianSignatureValidated": true,
+    "mismatchedOrderRejected": true
+  },
+  "fullCarrierDenseIterativeEquivalence": {
+    "cutoff": 1,
+    "bond": 16,
+    "denseEvenEnergy": 7.3608882129848405,
+    "iterativeEvenEnergy": 7.360888212984859,
+    "evenDifference": 1.865174681370263e-14,
+    "denseOddEnergy": 8.041861779812306,
+    "iterativeOddEnergy": 8.041861779815063,
+    "oddDifference": 2.7569058147491887e-12,
+    "gapDifference": 2.738254067935486e-12,
+    "iterativeSectorSolverSeconds": 12.741278299989062,
+    "maximumLocalBlockDimension": 1160,
+    "maximumLocalResidual": 1.4559017493010293e-9
+  },
+  "checkpointedCutoffOneLadder": [
+    {"bond":24,"sweepsAfterExpansion":10,"evenEnergy":7.360879259078425,"oddEnergy":8.041812923611579,"gap":0.6809336645331534,"fixedBondFinalGapShift":2.402199328344068e-9},
+    {"bond":32,"sweepsAfterExpansion":7,"evenEnergy":7.360877694370389,"oddEnergy":8.041801087002167,"gap":0.6809233926317777,"fixedBondFinalGapShift":-5.410310954800934e-8}
+  ],
+  "bond24To32": {
+    "evenEnergyShift": -0.0000015647080360281507,
+    "oddEnergyShift": -0.000011836609411730592,
+    "gapShift": -0.000010271901375702441,
+    "relativeGapShift": 0.000015085025033598292,
+    "bothVariationalEnergiesDecrease": true
+  },
+  "established": "The iterative charged-block solver reproduces exact controls and the dense-local full-carrier result, survives a fresh-process checkpoint round trip, and extends the exact-sector cutoff-one ladder to a stabilized bond-32 gap.",
+  "boundary": "This is not a fully matrix-free DMRG because the effective charged block is formed densely. Global solver convergence flags remain false and no lower spectral enclosure is supplied.",
+  "epistemicStatus": "validated restartable iterative exact-sector engine and extended cutoff-one stability"
+}

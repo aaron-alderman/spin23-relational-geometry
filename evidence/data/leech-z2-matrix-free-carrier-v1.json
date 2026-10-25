@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "leech-z2-matrix-free-carrier-v1",
+  "date": "2026-10-25",
+  "implementation": {
+    "script": "scripts/smoke-leech-z2-block-dmrg.py",
+    "method": "inject an ndarray Ritz vector into one Symmray Z2 charge block, reshape it as the two-site tensor, contract it through the effective MPO/environment tensor network, and extract the same output charge block",
+    "effectiveMatrixMaterialized": false,
+    "outerSolver": "ARPACK lowest algebraic eigenpair",
+    "scope": "open-boundary two-site DMRG with real Hermitian local operator"
+  },
+  "matrixFreeExactControls": [
+    {"sites":4,"cutoff":1,"bond":8,"evenAbsoluteError":1.8547385849387865e-12,"oddAbsoluteError":1.3322676295501878e-15,"maximumLocalResidual":1.4795954038327896e-14},
+    {"sites":6,"cutoff":1,"bond":16,"evenAbsoluteError":7.526423928538861e-12,"oddAbsoluteError":1.0094147739891923e-12,"maximumLocalResidual":1.1809585748820633e-10},
+    {"sites":4,"cutoff":2,"bond":24,"evenAbsoluteError":1.315503261878348e-12,"oddAbsoluteError":3.6350922272276875e-12,"maximumLocalResidual":1.7460943842025004e-11}
+  ],
+  "fullCarrierCutoffOne": {
+    "bond": 32,
+    "evenEnergy": 7.360877693852631,
+    "oddEnergy": 8.041801073281459,
+    "gap": 0.6809233794288279,
+    "gapShiftFromMaterializedIterative": -1.3202949844526302e-8,
+    "maximumSectorDimension": 4668,
+    "sectorSolverSeconds": 6.265225099996314,
+    "effectiveMatrixMaterialized": false
+  },
+  "fullCarrierCutoffTwo": {
+    "bond24": {"evenEnergy":3.873419885142281,"oddEnergy":4.206371398606361,"gap":0.33295151346408014},
+    "bond32": {"evenEnergy":3.8732382536682235,"oddEnergy":4.205870978094475,"gap":0.33263272442625125,"finalFixedBondGapShift":-0.000023724986099260548},
+    "bond24To32": {"evenEnergyShift":-0.00018163147405747537,"oddEnergyShift":-0.000500420511886368,"gapShift":-0.0003187890378288927,"relativeGapShift":0.0009574638496523448,"bothVariationalEnergiesDecrease":true},
+    "maximumSectorDimension": 12832,
+    "maximumLocalResidual": 4.1876852187296135e-10,
+    "effectiveMatrixMaterialized": false
+  },
+  "penaltyComparatorRetyping": {
+    "wave193CutoffTwoGap": 0.3327496639536207,
+    "matrixFreeBond32Difference": -0.000116939527369464,
+    "relativeDifference": 0.00035143394580787094,
+    "interpretation": "the exact-sector variational gap has crossed below the penalty-sector value, so the latter is an independent comparator, not a target, upper bound or lower bound"
+  },
+  "established": "The full 24-channel joined Leech rotor can be optimized in exact parity sectors through cutoff two and bond 32 without materializing its local effective Hamiltonian. Three exact controls and the full cutoff-one checkpoint reproduce prior results.",
+  "boundary": "The bond-24 to bond-32 correction is 0.0957 percent and two more bond-32 sweeps still shift the gap by 7.13e-5 relatively. The global convergence flag is false and no lower enclosure exists; this removes an architecture obstruction but does not certify the gap.",
+  "epistemicStatus": "verified non-materialized exact-sector carrier solver; cutoff-two spectrum remains quantitatively unconverged"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "leech-z2-matrix-free-bond40-v1",
+  "date": "2026-10-25",
+  "configuration": {"sites":24,"cutoff":2,"ratioUOveru":0.01,"order":"Wave 7.192 optimized","eigensolver":"non-materialized Z2 tensor-network ARPACK"},
+  "stabilizedBondLadder": [
+    {"bond":24,"evenEnergy":3.873419885142281,"oddEnergy":4.206371398606361,"gap":0.33295151346408014},
+    {"bond":32,"evenEnergy":3.8732382536682235,"oddEnergy":4.205870978094475,"gap":0.33263272442625125},
+    {"bond":40,"evenEnergy":3.8731736011592868,"oddEnergy":4.2056457145306165,"gap":0.33247211337132976,"finalFixedBondGapShift":-0.000006010736815387219,"finalFixedBondRelativeGapShift":0.000018078920227134892}
+  ],
+  "bondCorrections": {
+    "bond24To32": -0.0003187890378288927,
+    "bond32To40": -0.00016061105492148897,
+    "absoluteCorrectionRatio": 0.5038161161855748,
+    "bond40RelativeCorrection": 0.0004828480276512854,
+    "allSectorEnergiesDecrease": true
+  },
+  "scaling": {
+    "maximumSectorDimension": 20060,
+    "effectiveMatrixMaterialized": false,
+    "maximumLocalResidual": 4.204071019898585e-10
+  },
+  "quarantinedHeuristic": {
+    "method": "three-point Aitken delta-squared acceleration on bonds 24, 32 and 40",
+    "estimatedGap": 0.33230903181921456,
+    "distanceBelowBond40": 0.00016308155211519626,
+    "admissibility": "diagnostic only; not a bound, prediction or promoted continuum estimate"
+  },
+  "established": "The cutoff-two exact-sector bond correction contracts by a factor 0.504 from the 24-to-32 step to the 32-to-40 step while both sector energies decrease; matrix-free execution reaches sector dimension 20060.",
+  "boundary": "The bond-40 correction is still 4.83e-4 relatively, the global solver flag is false, and no lower enclosure exists. The apparent geometric correction ratio and Aitken value are not certified asymptotics.",
+  "epistemicStatus": "three-point matrix-free bond-convergence evidence with extrapolation explicitly quarantined"
+}

@@ -287,6 +287,32 @@ lowers both variational energies and changes the cutoff-one gap by only
 $4.08\times10^{-5}$ (0.00599%). Both solves remain unconverged, so the result
 is stability evidence rather than a lower enclosure; dense local charged-block
 diagonalization is now the scaling bottleneck.
+Wave 7.199 replaces full local diagonalization with a validated iterative
+lowest-eigenpair solve, adds fresh-process sector checkpoints and extends
+cutoff one to a stabilized bond-32 gap. The effective charged block is still
+materialized densely, so the solver is not fully matrix free.
+Wave 7.200 executes the first full-carrier exact-sector cutoff-two ladder.
+Bond 16 to 24 lowers both sector energies and moves the gap toward the
+independent penalty result, leaving a 0.0723% difference; the 0.230% bond
+correction and continuing sweep drift keep the spectral gate open.
+Wave 7.201 removes the remaining effective-matrix wall. A charged Ritz vector
+is contracted directly through the MPO environments, all three exact controls
+pass, and the full cutoff-two carrier reaches bond 32 with a maximum sector
+dimension 12832 but no materialized matrix. Both energies again fall. The gap
+is 0.3326327244; its 0.0957% bond correction and $7.13\times10^{-5}$ resumed
+sweep drift still keep the spectral gate open.
+Wave 7.202 extends cutoff two to bond 40. Both sector energies decrease and
+successive gap corrections contract by a factor 0.504, but the latest
+correction remains 0.0483% and no lower enclosure exists. A three-point Aitken
+value is recorded and explicitly quarantined rather than promoted.
+Wave 7.203 reaches bond 48. Both sector energies decrease for four consecutive
+points; correction ratios are 0.504 and 0.481, while final fixed-bond drift is
+4.03 ppm. The latest capacity correction remains 232 ppm and no lower
+enclosure exists, so the spectral gate remains open.
+Wave 7.204 opens cutoff three through bond 24 without materializing the local
+operator. Both sector energies decrease, but the 1.02% bond correction and
+opposite-sign fixed-bond gap shifts constitute an explicit convergence
+failure. No cutoff-three gap is promoted.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -352,6 +378,12 @@ P4 questions.
 - [Exact joined-cell Z2 sector compiler](frontier_wave7_196_leech_joined_cell_z2_sector_compiler.md)
 - [Symmetry-native joined-cell DMRG execution](frontier_wave7_197_leech_z2_block_dmrg_execution.md)
 - [Exact-sector joined-cell bond ladder](frontier_wave7_198_leech_z2_block_dmrg_bond_ladder.md)
+- [Iterative checkpointed exact-sector DMRG](frontier_wave7_199_leech_z2_iterative_checkpoint_dmrg.md)
+- [Full-carrier exact-sector cutoff-two ladder](frontier_wave7_200_leech_z2_cutoff_two_ladder.md)
+- [Matrix-free exact-sector Leech carrier](frontier_wave7_201_leech_z2_matrix_free_carrier.md)
+- [Matrix-free cutoff-two bond 40](frontier_wave7_202_leech_z2_matrix_free_bond40.md)
+- [Matrix-free cutoff-two bond 48](frontier_wave7_203_leech_z2_matrix_free_bond48.md)
+- [Exact-sector cutoff-three opening](frontier_wave7_204_leech_z2_cutoff_three_opening.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

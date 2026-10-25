@@ -227,6 +227,34 @@ Wave 7.198 raises the exact-sector bond from 16 to 24. Both variational
 energies fall and the gap moves by only 0.00599%, strengthening numerical
 stability while still refusing a certificate because both optimizations are
 unconverged and no lower enclosure exists.
+Wave 7.199 validates iterative charged-sector updates and fresh-process
+checkpoints, reproduces the dense-local carrier gap to $2.74\times10^{-12}$
+and reaches a stabilized cutoff-one bond-32 point. Wave 7.200 then carries the
+exact symmetry implementation through the first full cutoff-two bond ladder.
+Its bond-24 gap is within 0.0723% of the independent penalty result, but its
+0.230% bond correction and remaining fixed-bond drift still forbid a spectral
+certificate.
+Wave 7.201 then removes local effective-matrix materialization entirely. The
+charge-sector Ritz vector is contracted directly through the MPO environments;
+three exact controls pass and the full cutoff-two carrier reaches bond 32 with
+sector dimension 12832. The gap moves to 0.3326327244 while both sector
+energies fall. This closes the architecture obstruction, but its 0.0957% bond
+correction, ongoing sweep drift and absent lower enclosure keep the spectrum
+and downstream laboratory promotion open.
+Wave 7.202 reaches cutoff-two bond 40 without materializing a 20060-dimensional
+sector matrix. Both sector energies fall and successive gap corrections
+contract by a factor 0.504. The latest correction is still 0.0483%, so the
+tempting three-point accelerated estimate is quarantined and the proof
+certificate continues to refuse a joined-cell spectral claim.
+Wave 7.203 extends the same exact-sector ladder through bond 48. Both energies
+decrease at every point, successive correction ratios are 0.504 and 0.481,
+and fixed-bond drift falls to 4.03 ppm. The remaining bond correction is still
+232 ppm and no lower enclosure exists, so this is convergence evidence rather
+than a proof of the joined-cell gap.
+Wave 7.204 opens the full cutoff-three carrier through bond 24. Both sector
+energies decrease, but the gap has opposite-sign fixed-bond shifts and a 1.02%
+bond correction. The result is recorded as a convergence failure rather than
+used to manufacture a cutoff extrapolation.
 
 ## Corpus links
 
@@ -282,6 +310,12 @@ unconverged and no lower enclosure exists.
 - [Exact joined-cell Z2 sector compiler](frontier_wave7_196_leech_joined_cell_z2_sector_compiler.md)
 - [Symmetry-native joined-cell DMRG execution](frontier_wave7_197_leech_z2_block_dmrg_execution.md)
 - [Exact-sector joined-cell bond ladder](frontier_wave7_198_leech_z2_block_dmrg_bond_ladder.md)
+- [Iterative checkpointed exact-sector DMRG](frontier_wave7_199_leech_z2_iterative_checkpoint_dmrg.md)
+- [Full-carrier exact-sector cutoff-two ladder](frontier_wave7_200_leech_z2_cutoff_two_ladder.md)
+- [Matrix-free exact-sector Leech carrier](frontier_wave7_201_leech_z2_matrix_free_carrier.md)
+- [Matrix-free cutoff-two bond 40](frontier_wave7_202_leech_z2_matrix_free_bond40.md)
+- [Matrix-free cutoff-two bond 48](frontier_wave7_203_leech_z2_matrix_free_bond48.md)
+- [Exact-sector cutoff-three opening](frontier_wave7_204_leech_z2_cutoff_three_opening.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

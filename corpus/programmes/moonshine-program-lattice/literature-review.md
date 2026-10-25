@@ -877,6 +877,40 @@ Both sector energies fall, while the gap changes by $4.08\times10^{-5}$, or
 variational upper-bound differences remain insufficient for a spectral
 enclosure. The local dense charged-block eigensolve, rather than the MPO bond,
 is now the measured computational frontier.
+Wave 7.199 replaces full local diagonalization by iterative lowest-eigenpair
+updates, verifies the same three exact controls, survives fresh-process MPS
+checkpoint reload and extends cutoff one to bond 32. Iterative and dense-local
+full-carrier gaps agree to $2.74\times10^{-12}$. The effective charge block is
+still materialized, so this is not yet a fully matrix-free contraction.
+
+Wave 7.200 supplies the first full-carrier exact-sector cutoff-two ladder.
+Bond 16 to 24 lowers both variational energies and changes the gap by 0.230%;
+the bond-24 value is within 0.0723% of the earlier penalty-sector result.
+Because two further sweeps still move the gap by $1.96\times10^{-5}$ and no
+lower enclosure exists, this establishes feasibility and the direction of
+convergence rather than a cutoff-stable spectrum.
+Wave 7.201 removes the dense effective block rather than merely diagonalizing
+it iteratively. A charged trial vector is inserted into the effective tensor
+network and contracted through the MPO environments at each ARPACK matvec.
+All exact controls survive; cutoff one reproduces the stabilized bond-32 gap,
+and cutoff two reaches bond 32 with sector dimension 12832. Both energies
+decrease and the gap becomes 0.3326327244. The remaining 0.0957% bond
+correction and $7.13\times10^{-5}$ fixed-bond relative drift prevent a
+spectral certificate, but effective-matrix storage is no longer the blocker.
+Wave 7.202 grows the same cutoff-two checkpoints to bond 40. Both sector
+energies decrease and the gap corrections from 24 to 32 and 32 to 40 contract
+in magnitude by a factor 0.504. The latest correction remains 0.0483% and no
+lower enclosure exists. A three-point Aitken value is retained only as a
+quarantined diagnostic, not as a continuum prediction.
+Wave 7.203 adds bond 48. Both sector energies decrease throughout bonds 24,
+32, 40 and 48; successive gap-correction ratios are 0.504 and 0.481, and
+fixed-bond drift falls to 4.03 ppm. The latest bond correction remains 232
+ppm, however, and an independently justified lower enclosure is still absent.
+Wave 7.204 opens cutoff three through bond 24 with the same non-materialized
+exact-sector solver. Both energies decrease, but the bond correction is 1.02%
+and successive fixed-bond gap shifts have opposite signs. The corpus records
+this as feasibility plus a convergence failure, not as a cutoff-three gap or
+an extrapolation datum.
 
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

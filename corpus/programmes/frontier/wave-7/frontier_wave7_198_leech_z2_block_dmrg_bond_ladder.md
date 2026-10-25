@@ -4,6 +4,8 @@
 
 **Status:** quantified bond stability; spectral certificate open
 
+**Supersession:** Wave 7.199 adds checkpointed bond 32 and iterative local solves.
+
 **Evidence:** [bond-ladder record](../../../../evidence/data/leech-z2-block-dmrg-bond-convergence-v1.json)
 
 **Executable:** [Z2 block-sparse runner](../../../../scripts/smoke-leech-z2-block-dmrg.py)

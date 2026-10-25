@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "leech-z2-matrix-free-bond48-v1",
+  "date": "2026-10-25",
+  "configuration": {"sites":24,"cutoff":2,"ratioUOveru":0.01,"order":"Wave 7.192 optimized","eigensolver":"non-materialized Z2 tensor-network ARPACK"},
+  "stabilizedBondLadder": [
+    {"bond":24,"evenEnergy":3.873419885142281,"oddEnergy":4.206371398606361,"gap":0.33295151346408014},
+    {"bond":32,"evenEnergy":3.8732382536682235,"oddEnergy":4.205870978094475,"gap":0.33263272442625125},
+    {"bond":40,"evenEnergy":3.8731736011592868,"oddEnergy":4.2056457145306165,"gap":0.33247211337132976},
+    {"bond":48,"evenEnergy":3.8731403625321517,"oddEnergy":4.205535260672709,"gap":0.3323948981405578,"finalFixedBondGapShift":-0.0000013387696959910045,"finalFixedBondRelativeGapShift":0.000004027648148272382}
+  ],
+  "gapCorrections": [-0.0003187890378288927,-0.00016061105492148897,-0.00007721523077197645],
+  "absoluteCorrectionRatios": [0.5038161161855748,0.48075912837831336],
+  "latestRelativeBondCorrection": 0.00023224573630852672,
+  "scaling": {"maximumSectorDimension":28840,"effectiveMatrixMaterialized":false,"maximumLocalResidual":4.079905879535109e-10},
+  "quarantinedHeuristic": {"method":"Aitken delta-squared on bonds 32, 40 and 48","estimatedGap":0.33232340544983885,"distanceBelowBond48":0.00007149269071893283,"admissibility":"diagnostic only; not a lower bound or promoted infinite-bond estimate"},
+  "established": "Across bonds 24, 32, 40 and 48, both sector energies decrease and successive gap-correction ratios are 0.504 and 0.481. The final fixed-bond sweep drift is 4.03 ppm relative.",
+  "boundary": "The latest bond correction is still 232 ppm, all global convergence flags are false and no lower enclosure exists. The stable correction ratio is evidence for convergence, not proof of its limit.",
+  "epistemicStatus": "four-point matrix-free bond convergence with ppm sweep stability and no promoted extrapolation"
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small exact-vs-block-sparse DMRG test for the joined-rotor Z2 compiler."""
+"""Exact-control and checkpointable block-sparse DMRG for the joined Leech rotor."""
 import argparse
 import json
 import os
@@ -46,11 +46,43 @@ class Z2DMRG2(qtn.DMRG2):
         if B is not None:
             raise NotImplementedError("cyclic generalized block eigensolve is not implemented")
         charge = v0.charge
-        block = operator.blocks[(charge, charge)]
         initial = np.asarray(v0.blocks[(charge,)]).reshape(-1)
         started = time.perf_counter()
         matvecs = 0
-        if self.eigensolver_mode == "iterative" and block.shape[0] > 4:
+        if self.eigensolver_mode == "tn-matrix-free":
+            dims, lix, uix = self.matrix_free_context
+
+            def matvec(vector):
+                nonlocal matvecs
+                matvecs += 1
+                charged = type(v0)(
+                    indices=v0.indices, charge=charge,
+                    blocks={(charge,): np.asarray(vector)},
+                )
+                ket = qtn.Tensor(charged.reshape(dims), inds=uix)
+                network = qtn.TensorNetwork(self._eff_ham["_HAM"])
+                applied = (network | ket).contract(all)
+                applied.transpose_(*lix)
+                flat = applied.data.reshape((int(np.prod(dims)),))
+                return np.asarray(flat.blocks[(charge,)]).reshape(-1)
+
+            block_dimension = len(initial)
+            linear = scipy.sparse.linalg.LinearOperator(
+                (block_dimension, block_dimension), matvec=matvec,
+                rmatvec=matvec, dtype=initial.dtype,
+            )
+            values, vectors = scipy.sparse.linalg.eigsh(
+                linear, k=1, which="SA", v0=initial,
+                tol=self.eig_tolerance, maxiter=self.eig_max_iterations
+            )
+            index = int(np.argmin(values))
+            residual = float(np.linalg.norm(
+                matvec(vectors[:, index]) - values[index] * vectors[:, index]
+            ))
+        else:
+            block = operator.blocks[(charge, charge)]
+            block_dimension = block.shape[0]
+        if self.eigensolver_mode == "iterative" and block_dimension > 4:
             def matvec(vector):
                 nonlocal matvecs
                 matvecs += 1
@@ -63,18 +95,19 @@ class Z2DMRG2(qtn.DMRG2):
                 tol=self.eig_tolerance, maxiter=self.eig_max_iterations
             )
             index = int(np.argmin(values))
-        else:
+        elif self.eigensolver_mode != "tn-matrix-free":
             values, vectors = scipy.linalg.eigh(
                 block, subset_by_index=(0, 0), driver="evr", check_finite=False
             )
             index = 0
-        residual = float(np.linalg.norm(
-            block @ vectors[:, index] - values[index] * vectors[:, index]
-        ))
+        if self.eigensolver_mode != "tn-matrix-free":
+            residual = float(np.linalg.norm(
+                block @ vectors[:, index] - values[index] * vectors[:, index]
+            ))
         self.eig_diagnostics["solves"] += 1
         self.eig_diagnostics["matvecs"] += matvecs
         self.eig_diagnostics["maximumBlockDimension"] = max(
-            self.eig_diagnostics["maximumBlockDimension"], block.shape[0]
+            self.eig_diagnostics["maximumBlockDimension"], block_dimension
         )
         self.eig_diagnostics["maximumResidual"] = max(
             self.eig_diagnostics["maximumResidual"], residual
@@ -88,6 +121,7 @@ class Z2DMRG2(qtn.DMRG2):
         (dims, lix_L, lix_R, lix, uix_L, uix_R, uix,
          l_bond_ind, u_bond_ind) = parse_2site_inds_dims(self._k, self._b, i)
         effective, norm = self.form_local_ops(i, dims, lix, uix)
+        self.matrix_free_context = (dims, lix, uix)
         old = self._k[i].contract(self._k[i + 1]).to_dense(uix)
         local_energy, ground = self._eigs(effective, B=norm, v0=old)
         local_energy, ground = self.post_check(i, norm, ground, local_energy, old)
@@ -197,16 +231,19 @@ def checkpoint_path(prefix, sector):
     return f"{prefix}-{sector}.pkl"
 
 
-def load_checkpoint(prefix, sector, sites, cutoff):
+def load_checkpoint(prefix, sector, sites, cutoff, model_signature):
     path = checkpoint_path(prefix, sector)
     with open(path, "rb") as stream:
         payload = pickle.load(stream)
     if payload["sites"] != sites or payload["cutoff"] != cutoff or payload["sector"] != sector:
         raise ValueError(f"checkpoint metadata mismatch: {path}")
-    return payload["state"], path
+    stored_signature = payload.get("modelSignature")
+    if stored_signature is not None and stored_signature != model_signature:
+        raise ValueError(f"checkpoint Hamiltonian signature mismatch: {path}")
+    return payload["state"], path, stored_signature is not None
 
 
-def save_checkpoint(prefix, sector, sites, cutoff, state):
+def save_checkpoint(prefix, sector, sites, cutoff, model_signature, state):
     path = checkpoint_path(prefix, sector)
     parent = os.path.dirname(os.path.abspath(path))
     os.makedirs(parent, exist_ok=True)
@@ -216,6 +253,7 @@ def save_checkpoint(prefix, sector, sites, cutoff, state):
             "sites": sites,
             "cutoff": cutoff,
             "sector": sector,
+            "modelSignature": model_signature,
             "state": state,
         }, stream, protocol=pickle.HIGHEST_PROTOCOL)
     return path
@@ -223,18 +261,22 @@ def save_checkpoint(prefix, sector, sites, cutoff, state):
 
 def block_dmrg(mpo, cutoff, sites, sector, bond, sweeps, seed,
                inspect_effective=False, eigensolver="dense", eig_tolerance=1e-10,
-               eig_max_iterations=2000, state_prefix_in=None, state_prefix_out=None):
+               eig_max_iterations=2000, state_prefix_in=None, state_prefix_out=None,
+               model_signature=None):
     physical = {0: cutoff + 1, 1: cutoff}
     if state_prefix_in:
-        state, state_source = load_checkpoint(state_prefix_in, sector, sites, cutoff)
+        state, state_source, checkpoint_metadata_validated = load_checkpoint(
+            state_prefix_in, sector, sites, cutoff, model_signature
+        )
     else:
         site_charge = (lambda site: 1 if sector == "odd" and site == 0 else 0)
         state = sr.MPS_abelian_rand("Z2", sites, bond, phys_dim=physical, seed=seed,
                                     site_charge=site_charge, dtype="float64")
         state_source = "random"
+        checkpoint_metadata_validated = True
     solver_class = InspectEffectiveDMRG2 if inspect_effective else Z2DMRG2
     solver = solver_class(mpo, bond_dims=[bond], cutoffs=1e-12, p0=state)
-    solver.opts["local_eig_ham_dense"] = True
+    solver.opts["local_eig_ham_dense"] = eigensolver != "tn-matrix-free"
     solver.eigensolver_mode = eigensolver
     solver.eig_tolerance = eig_tolerance
     solver.eig_max_iterations = eig_max_iterations
@@ -246,13 +288,16 @@ def block_dmrg(mpo, cutoff, sites, sector, bond, sweeps, seed,
     converged = solver.solve(tol=1e-10, max_sweeps=sweeps,
                              sweep_sequence="RL", verbosity=0)
     elapsed = time.perf_counter() - started
-    checkpoint = (save_checkpoint(state_prefix_out, sector, sites, cutoff, solver.state)
+    checkpoint = (save_checkpoint(state_prefix_out, sector, sites, cutoff,
+                                  model_signature, solver.state)
                   if state_prefix_out else None)
     return {"energy": float(np.real(solver.energy)), "converged": bool(converged),
             "maximumBond": int(solver.state.max_bond()),
             "isBlockSparse": bool(solver.state.isblocksparse()),
             "stateSource": state_source, "checkpoint": checkpoint,
+            "checkpointMetadataValidated": checkpoint_metadata_validated,
             "elapsedSeconds": elapsed, "eigensolver": eigensolver,
+            "effectiveMatrixMaterialized": eigensolver != "tn-matrix-free",
             "eigensolverDiagnostics": solver.eig_diagnostics}
 
 
@@ -265,7 +310,7 @@ def main():
     parser.add_argument("--sweeps", type=int, default=8)
     parser.add_argument("--skip-exact", action="store_true")
     parser.add_argument("--order", choices=("natural", "optimized"), default="natural")
-    parser.add_argument("--eigensolver", choices=("dense", "iterative"), default="dense")
+    parser.add_argument("--eigensolver", choices=("dense", "iterative", "tn-matrix-free"), default="dense")
     parser.add_argument("--eig-tolerance", type=float, default=1e-10)
     parser.add_argument("--eig-max-iterations", type=int, default=2000)
     parser.add_argument("--state-prefix-in")
@@ -278,11 +323,16 @@ def main():
     dense_mpo = None if args.skip_exact else build_mpo(metric, args.cutoff, args.ratio, False)
     block_mpo = build_mpo(metric, args.cutoff, args.ratio, True)
     exact = None if args.skip_exact else exact_levels(dense_mpo, args.cutoff, args.sites)
+    model_signature = json.dumps({
+        "sites": args.sites, "cutoff": args.cutoff, "ratio": args.ratio,
+        "order": args.order, "metric": "gram-first-inverse-rounded-v1",
+    }, sort_keys=True, separators=(",", ":"))
     dmrg = {sector: block_dmrg(block_mpo, args.cutoff, args.sites, sector,
                               args.bond, args.sweeps, 1960 + index,
                               args.inspect_effective, args.eigensolver,
                               args.eig_tolerance, args.eig_max_iterations,
-                              args.state_prefix_in, args.state_prefix_out)
+                              args.state_prefix_in, args.state_prefix_out,
+                              model_signature)
             for index, sector in enumerate(("even", "odd"))}
     print(json.dumps({
         "schemaVersion": "leech-z2-block-dmrg-smoke-run-v1",

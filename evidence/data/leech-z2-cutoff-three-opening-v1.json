@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "leech-z2-cutoff-three-opening-v1",
+  "date": "2026-10-25",
+  "configuration": {"sites":24,"cutoff":3,"ratioUOveru":0.01,"order":"Wave 7.192 optimized","eigensolver":"non-materialized Z2 tensor-network ARPACK"},
+  "bond16": {"evenEnergy":2.7778164980334696,"oddEnergy":2.967328254798478,"gap":0.18951175676500842,"finalGapShift":-0.00002410043687772756},
+  "bond24Trajectory": [
+    {"cumulativeSweeps":4,"evenEnergy":2.7733960367388137,"oddEnergy":2.960939389553298,"gap":0.1875433528144841},
+    {"cumulativeSweeps":6,"evenEnergy":2.773110623557391,"oddEnergy":2.9607290475092163,"gap":0.18761842395182526,"gapShift":0.0000750711373411761},
+    {"cumulativeSweeps":8,"evenEnergy":2.7730487361318,"oddEnergy":2.960622074531472,"gap":0.18757333839967183,"gapShift":-0.00004508555215343435}
+  ],
+  "bond16To24Final": {"evenEnergyShift":-0.004767761901669498,"oddEnergyShift":-0.00670618026700609,"gapShift":-0.0019384183653365916,"relativeGapShift":0.010228486076144605,"bothVariationalEnergiesDecrease":true},
+  "penaltyComparator": {"wave193Gap":0.1869742088423747,"finalDifference":0.0005991295572971289,"relativeDifference":0.0032043433209668747},
+  "scaling": {"maximumSectorDimension":14130,"effectiveMatrixMaterialized":false,"maximumLocalResidual":2.947176447507079e-10},
+  "established": "The full 24-channel cutoff-three Hamiltonian is executable in exact sectors through bond 24 without materializing its effective matrix. Both energies decrease with sweeps and bond, while the gap exhibits opposite-sign fixed-bond shifts.",
+  "boundary": "The 1.02 percent bond correction and oscillatory +7.51e-5 then -4.51e-5 fixed-bond gap shifts are a convergence failure. The final gap is not admitted as a prediction or cutoff-three spectral estimate.",
+  "epistemicStatus": "cutoff-three feasibility with explicit bond and sweep nonconvergence"
+}
