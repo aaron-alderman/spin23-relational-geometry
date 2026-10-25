@@ -82,6 +82,43 @@ This distinction lets the same invariant relation support nontrivial
 holonomy, memory and topology rather than freezing the system into global
 uniformity.
 
+## The first graph-level carrier: relation before quotient
+
+The live Claimipedia collision now supplies a finite pre-quotient version of
+the same explanatory discipline. For vertices (V), authored relation types
+\(\mathcal T\), and an edge \(e=(u\to v,t)\), define
+
+\[
+\mathcal H_{\rm rel}
+=\mathbb R^V\otimes\mathbb R^{\{S,T\}}\otimes\mathbb R^{\mathcal T},
+\qquad
+d_e=|v,T,t\rangle-|u,S,t\rangle,
+\]
+
+and
+
+\[
+K=\sum_e d_ed_e^T\succeq0.
+\]
+
+This positive kernel retains the entire directed typed adjacency in its
+source--target blocks. Swapping the rails is exactly equivariant with reversing
+every arrow. Only after source and target rails and relation-type channels are
+identified does the ordinary support Laplacian appear. On the captured
+Claimipedia graph that collapse lowers rank from 41 to 33, locating an exact
+eight-direction quotient scar.
+
+This result strengthens the foundational thesis in a bounded way. Positive
+admission need not destroy relational identity; the loss occurs at a declared
+realization map. It does not yet derive a path-algebra dagger, relation-type
+semantics, dynamics, a symplectic form or a physical boundary. The rail swap is
+an involution, not automatically the quarter-turn or contragredient mirror of
+the central symplectic model.
+
+The canonical development is [AZ-124](admissibility_124_relation_face_compiler_from_adjacency_to_jordan_holonomy.md),
+[AZ-125](admissibility_125_claimipedia_support_native_order_and_semantic_boundary.md)
+and [AZ-126](admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md).
+
 ## What “admissible” must mean
 
 “Admissible” cannot mean merely “whatever occurs in the actual world.” That would redescribe physics without explaining it. Nor may it mean “whatever satisfies all known physical laws,” because those are among the structures the programme aims to derive. The starting notion must be thinner than the target physics and independently stateable.

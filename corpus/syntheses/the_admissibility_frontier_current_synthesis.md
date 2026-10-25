@@ -136,6 +136,25 @@ A proposed action, flow or update still matters. But its physical content is now
 
 This is how apparently static structure becomes dynamics. The “bound” object is not motionless; it is a history confined to an admissible sector. The “free” object is not structureless; it is a history whose relevant pole, phase or support is no longer localized by that boundary. The frontier lies in the transitions and intermediate states—the places where phase, delay, topology and detector geometry retain information that endpoint spectra alone lose.
 
+### Transition operators make the boundary measurable
+
+One mature piece of physics makes the dynamic boundary concrete. A
+lower-energy state is only a possible destination; a typed interaction
+operator must connect the initial and final sectors before a decay can occur.
+Rotation symmetry organizes the operator into multipoles, and Wigner--Eckart
+factorization separates its universal angular grammar from its system-specific
+reduced matrix element. Phase space turns a nonzero element into a partial
+width, and the detector turns competing widths into a lifetime, line shape,
+polarization and branching record.
+
+Metastable helium is the clean picture: the ground state is energetically
+available, but the leading electric-dipole route is closed by parity and spin,
+so only much weaker channels remain. Nuclear gamma and beta decay retain the
+same source-to-record architecture while using different multipole or weak
+operators. The [transition-operator bridge](../programmes/admissibility/admissibility_126_transition_operators_selection_rules_and_lifetime_frontier.md)
+therefore supplies a standard-physics calibration for the programme: symmetry
+classifies possible maps; it does not supply their strength or make them happen.
+
 ## The third term is the mediator
 
 The balanced view also explains why ternary structure recurs. Binary language says that \(x\) acts on \(z\). A triple product asks how \(x\) and \(z\) are related through a middle term \(y\):
@@ -501,6 +520,12 @@ The first explicit search for a new contextual inequality has also produced a di
 [AZ-111](../programmes/admissibility/admissibility_111_relation_quotient_jordan_face_and_positive_order_boundary.md) then locates the precise Jordan content of the authored relation graph. After quotienting its thirty-dimensional directed-path radical, the reversible $M_2(\mathbb Q)$ block has a transpose-fixed $H_2(\mathbb Q)$ face. Symmetrized relation composition closes on that face, and determinant and matrix rank are exact. This is a real graph-to-Jordan construction, not a dimension analogy. It is also an enriched construction: transpose folds the two reverse relation types together, positive order enters from the real matrix representation, and no held-out relation or physical record follows yet. OT-026 therefore remains gated on selection and prediction rather than on the bare existence of a product.
 
 [AZ-112](../programmes/admissibility/admissibility_112_the_jordan_face_involution_does_not_lift_through_path_memory.md) shows why that enrichment cannot be silently promoted. On the full fifteen-node carrier, adjoining the transpose of any one of the four relation generators increases the exact algebra span. At record level, even the best of all twenty-four relation-label permutations reverses only the Spin--Temple pair. The symmetric Jordan face exists after path memory is removed; the directed reason ecology has no global transpose. A valid continuation must therefore author or derive a dagger/order with provenance, or find a nonlocal anti-automorphism that earns its place by predicting a withheld record.
+
+[AZ-124](../programmes/admissibility/admissibility_124_relation_face_compiler_from_adjacency_to_jordan_holonomy.md) reorganizes the surviving pieces into one loss-bearing compiler. A weighted edge supplies a rank-one positive boundary atom; incidence glues those atoms into Laplacian or signless-Laplacian kernels; Schur elimination compiles hidden paths into an effective Jordan face; and only cycles carry gauge-invariant phase. On a triangle the cubic determinant retains the cosine of holonomy while identifying opposite orientations, so an odd detector is required for the sine. This joins existing results without claiming that an adjacency matrix already contains order, phase or dynamics.
+
+[AZ-125](../programmes/admissibility/admissibility_125_claimipedia_support_native_order_and_semantic_boundary.md) executes the compiler against the hash-matched captured Claimipedia source. Counting-measure incidence does derive a positive kernel, but it is unchanged by reversing every arrow or permuting every relation label. The Spin--Temple Schur face is exact, yet its conductance is two when reciprocal authored records are counted separately and one when treated as a single undirected relation. The graph therefore has support-native positivity but not a semantic order. Its closest empirical cycle is the flow--calibration--nitrate dependency triangle, whose present evidence is fixture-only and supplies no calibrated return map.
+
+[AZ-126](../programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md) then shows that this erasure was caused by an early quotient, not by positivity. The free node by source/target rail by relation-type carrier has dimension 304; its positive Gram kernel reconstructs all 41 distinct directed typed records, and rail swap is exactly equivariant with arrow reversal. Identifying the rails and type channels recovers the rank-33 scalar Laplacian, leaving an eight-direction quotient scar. The missing step is now sharply localized: compose this faithful positive carrier with the path algebra and derive a semantic star operation before selecting a physical boundary or predicting a record.
 
 The two-current quantum-field-theory lane is now decomposed rather than merely deferred. [AZ-067](../programmes/admissibility/admissibility_67_two_current_source_and_scheme_census.md) shows that the two source labels do not make the full problem two-component. Ultraviolet operator mixing, broken-phase threshold/contact matching and finite-temperature KMS/relaxation are three distinct work packages. Established literature fixes their architecture and protects the Dirac $B-L$ Ward row, but does not calculate the corpus-specific incidence shear, contact tensor, thermal coefficients or invariant ratios. The first permissible computation is therefore a declared-scheme one-loop source subblock; a Majorana mass is a separate branch, and published ALP running tests only the broken incidence direction rather than realizing the full two-port vector response.
 

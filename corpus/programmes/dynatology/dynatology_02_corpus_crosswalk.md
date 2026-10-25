@@ -8,6 +8,7 @@
 | Existing lane | Primary dynatological role | What it contributes | What it does not by itself supply |
 |---|---|---|---|
 | [Admissibility](../admissibility/admissibility_00_foundational_programme.md) | \(A,T\) | allowed regions, transformations, invariants and physical contact gates | a universal objective or unique realized state |
+| [Typed two-rail relation carrier](../admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md) | \(X,A,\rho,I\) | a positive pre-quotient carrier retaining source, target and relation type; an exact rail/type collapse and rank scar | path composition, semantic adjoint, dynamics or physical port selection |
 | Representation and exceptional algebra | \(X,T\) | ambient carriers, actions, decompositions and compatible maps | physical admission or scale matching |
 | Jordan/Spin response | \(A,\rho,L\) | positive cones, causal response carriers and typed symmetry closure | the unique matter embedding |
 | [Freudenthal](../freudenthal/freudenthal_parallel_synthesis_decision_memo.md) | \(X,J,\rho\) | exceptional completion of source--dual-response inverse matching | triality orientation, physical \(E_7/E_8\) symmetry or a new scale |

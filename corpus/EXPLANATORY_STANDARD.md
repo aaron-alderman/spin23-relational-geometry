@@ -38,6 +38,23 @@ Adjacency, a shared name, a similar diagram or an unlabeled arrow is not an expl
 8. **Non-implication:** the nearest tempting conclusion that does not transfer.
 9. **Discriminator:** the proof, calculation, control or observation that would close, separate or kill the remaining alternatives.
 
+For a relation matrix or graph reduction, also publish the **relation-loss
+ledger**:
+
+1. whether source and target roles occupy distinct rails;
+2. whether relation types remain distinct channels;
+3. which inner product or positive weight makes the adjoint meaningful;
+4. whether reverse arrows are authored, formal or absent;
+5. whether paths compose before or after the reduction;
+6. the exact quotient map to adjacency, Laplacian, response or detector space;
+7. the rank, kernel or other scar created by that quotient; and
+8. which oriented or typed record could reveal the lost distinction.
+
+The preferred default for finite authored relations is the free typed two-rail
+Gram lift of AZ-126. A smaller scalar matrix may still be correct, but its
+direction and type losses must be stated rather than treated as properties of
+the original relation set.
+
 For transformation claims, also identify the **invariance depth**:
 
 - **pointwise:** \(M_x^T\Omega_xM_x=\Omega_x\);

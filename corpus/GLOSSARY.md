@@ -11,6 +11,10 @@ These definitions are local to the corpus unless a standard mathematical meaning
 | **Locally invariant carrier** | The comparison structure that is preserved under every admitted local perspective change; in the central symplectic instance, \(M^T\Omega M=\Omega\). The intuitive name emphasizes that a relation can carry identity across changing coordinates. | A claim that \(\Omega\) is globally constant, dynamically selected, unique in nature or itself the full state space. |
 | **Perspective transformation** | An allowed local change \(M\) acting on the living carrier while preserving a declared comparison structure. | A passive coordinate relabelling in every context; it may be an active control or transport only when typed as such. |
 | **Mirror face** | The dual or contragredient action \(M^{-T}\) paired with the direct action \(M\) through the locally invariant carrier. | A second independent system, literal spatial reflection or antimatter without an additional bridge. |
+| **Typed two-rail carrier** | The free pre-quotient relation carrier \(\mathbb R^V\otimes\mathbb R^{\{S,T\}}\otimes\mathbb R^{\mathcal T}\), separating authored source, target and relation-type roles. Its positive Gram kernel reconstructs directed typed adjacency exactly. | A claim that source and target are physical dimensions, that the type channels have derived dynamics, or that the rail swap is already a symplectic quarter-turn. |
+| **Rail-swap mirror** | The involution \(J\) exchanging source and target rails. On the typed two-rail kernel it obeys \(JK(G)J^T=K(G^{\rm rev})\). | The contragredient mirror \(M^{-T}\), a path-algebra dagger or Wick rotation without a typed bridge. |
+| **Relation--face compiler** | The typed route from directed relations through a positive kernel and Schur boundary reduction to a Jordan face, cycle holonomy and orientation-sensitive record. | A guarantee that adjacency alone supplies order, dynamics, phase or a physical detector. |
+| **Support-native order** | Positivity derived canonically from finite incidence and counting measure. It orders variation on the relation support but may erase direction and relation type after quotienting. | A semantic order among Supports, Challenges, Qualifies and DependsOn. |
 | **Carried invariant** | A locally invariant structure equipped with compatible transport, normally expressed as \(\nabla\Omega=0\). | Pointwise invariance alone or trivial global return. |
 | **Higher relation space** | A derived carrier of relations among directions of a lower carrier; centrally, \(W=\Lambda^2_0V^*\) is the five-dimensional primitive remainder after the invariant \(\Omega\)-line is separated from \(\Lambda^2V^*\). | Hidden physical dimensions merely because its dimension is larger. |
 | **Jordan structure** | Here, the commutative product/triple structure organizing positive response, composition and elimination on a declared carrier. | All observables in nature or a substitute for dynamics. |
@@ -51,3 +55,18 @@ The corpus's present architecture is:
 \]
 
 with compatible connection carrying the invariant, dynamics proposing histories, holonomy retaining global difference, detectors producing records and admissibility tracking which combinations survive all declared gates. The sentence is a research architecture, not a completed ontology of physics.
+
+For authored relation graphs, the canonical pre-quotient refinement is:
+
+\[
+\text{directed typed records}
+\longrightarrow
+\text{typed two-rail positive carrier}
+\longrightarrow
+\text{declared rail/type quotient}
+\longrightarrow
+\text{effective Jordan face and record}.
+\]
+
+The quotient must name which distinctions it erases. Positivity does not by
+itself require direction or type to be forgotten.

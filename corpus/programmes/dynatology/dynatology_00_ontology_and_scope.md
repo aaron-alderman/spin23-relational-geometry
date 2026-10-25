@@ -102,6 +102,20 @@ A detector can impose an observational quotient even when the microscopic carrie
 
 This distinction is central to the [quotient-scar calculus](../frontier/wave-7/frontier_wave7_00_quotient_scar_calculus.md).
 
+For a directed typed relation set, the free realization prior to quotient is
+the typed two-rail carrier
+
+\[
+X_{\rm rel}=\mathbb R^V\otimes\mathbb R^{\{S,T\}}
+\otimes\mathbb R^{\mathcal T}.
+\]
+
+Its positive Gram kernel retains source, target and type. The map identifying
+the two rails and summing the type channels is a concrete realization quotient
+\(\rho_{\rm support}\); it produces the ordinary Laplacian and may erase
+direction and semantic type before any detector acts. Dynatology must therefore
+allow realization loss and detector loss to occur at different stages.
+
 ## Dynatological defects
 
 The programme tracks failures of expected commutation:

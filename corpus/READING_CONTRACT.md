@@ -40,6 +40,10 @@ The [explanatory standard](EXPLANATORY_STANDARD.md) governs each arrow: begin wi
 
 1. **Jordan asks what can coexist.** Positive states, responses, observables, compositions and eliminations delimit a cone or domain of mutually admissible possibilities.
 2. **The typed middle is the live object.** A carrier, its allowed compositions, its histories, its selectors and its records must remain jointly realizable. This compatibility region—not a group name—is the centre of the programme.
+   For a directed typed relation graph, the default pre-quotient object is now
+   the source/target-and-type two-rail carrier of AZ-126. A scalar adjacency or
+   Laplacian is a declared quotient of that carrier, not a neutral synonym for
+   the complete relation.
 3. **The locally invariant carrier keeps perspectives comparable.** In the central symplectic instance, \(M^T\Omega M=\Omega\) joins the direct action \(M\) to its mirror face \(M^{-T}\). Pointwise invariance, compatible transport \(\nabla\Omega=0\), and globally trivial return are three different claims.
 4. **Lie asks how admitted possibilities can be transported.** Infinitesimal transformations and their closure describe motion or relation that preserves the locally declared comparison. They do not decide which states are admissible, which carrier nature realizes or which member of an orbit is selected.
 5. **Dynamics lives inside, on or across the boundary.** An action, flow or update proposes histories. The admissibility gates determine whether those histories preserve positivity, type, causality, stability, global consistency and observable records.
@@ -49,6 +53,10 @@ The [explanatory standard](EXPLANATORY_STANDARD.md) governs each arrow: begin wi
 
 The canonical development of this vocabulary is [The locally invariant
 carrier and its mirror face](programmes/admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md).
+Its graph-level pre-quotient realization is the [typed two-rail positive
+lift](programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md),
+and its reduction discipline is the [relation--face
+compiler](programmes/admissibility/admissibility_124_relation_face_compiler_from_adjacency_to_jordan_holonomy.md).
 
 ## Originating language and the third-order arc
 
