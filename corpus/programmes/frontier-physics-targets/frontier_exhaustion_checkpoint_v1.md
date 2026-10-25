@@ -4,6 +4,8 @@
 **Status:** explicit gate enumeration exhausted across the complete corpus Markdown/JSON scope; physics programme remains open  
 **Queue authority:** [50-topic register](open_topics_register_v1.json)
 
+**Durable completion authority:** [corpus completion exit criteria](corpus_completion_exit_criteria_v1.md). The checkpoint below establishes current-input search and ownership exhaustion only; it does not establish full physics–mathematics saturation.
+
 ## What is now complete
 
 The corpus has a closed navigation loop from target to frontier area to detector bundle to open topic to next action, closure condition and kill test. The audit covers:

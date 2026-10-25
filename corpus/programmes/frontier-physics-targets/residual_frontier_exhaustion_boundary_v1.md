@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 
-**Status:** corpus-ready finite work exhausted; physical and theoretical frontier remains open
+**Status:** current-input corpus-ready finite work exhausted; full physics–mathematics saturation not yet demonstrated
 
 **Machine authority:** [residual frontier boundary](residual_frontier_exhaustion_boundary_v1.json)
 
@@ -10,7 +10,9 @@
 
 ## The honest result
 
-The corpus has reached an exhaustion boundary, not the end of the science. The maintained register contains 51 topics: eight are closed and 43 are not. The full-corpus census assigns every explicit gate-bearing source to an owner, and the residual register assigns every nonclosed topic to one of five reasons it cannot be closed by another self-contained repository calculation. No topic is left in an unnamed “perhaps more algebra” bucket.
+The corpus has reached a current-input computational exhaustion boundary, not corpus completion and not the end of the science. The maintained register contains 51 topics: eight are closed and 43 are not. The full-corpus census assigns every explicit gate-bearing source to an owner, and the residual register assigns every nonclosed topic to one of five reasons it cannot be closed by another self-contained repository calculation. No topic is left in an unnamed “perhaps more algebra” bucket.
+
+The controlling endpoint is now the [corpus completion exit contract](corpus_completion_exit_criteria_v1.md). It additionally requires systematic physics–mathematics adjacency generation, terminal-neighbourhood sweeps, experiment-grade three-layer go/no-go programmes, theory and literature audits, implication propagation, narrative and retrieval closure, and an adversarial reproducible release. This document proves one milestone under that contract; it is not itself a completion certificate.
 
 The admission rule is deliberately strict. A corpus-ready finite task must already have a named carrier, all required source inputs, a bounded computation or proof, an independent verifier and a stopping rule. None of the 43 nonclosed topics currently satisfies all five without making a new physical or mathematical choice. That does not mean no further thinking is possible. It means more calculation would cease to be evidence unless the missing choice were declared and sourced first.
 

@@ -1,0 +1,46 @@
+import fs from "node:fs";
+import path from "node:path";
+
+const root = process.cwd();
+const target = "corpus/programmes/frontier-physics-targets/corpus_completion_exit_criteria_v1.json";
+const contract = JSON.parse(fs.readFileSync(path.join(root, target), "utf8"));
+const failures = [];
+
+if (contract.schema !== "frontier.corpus-completion-exit-criteria/1") failures.push("schema mismatch");
+if (contract.status !== "active") failures.push("durable target is not active");
+if (contract.completionClaimAllowed !== false) failures.push("completion is allowed before all exit gates pass");
+if (!Array.isArray(contract.requiredAdjacencyFamilies) || contract.requiredAdjacencyFamilies.length !== 12) failures.push("adjacency universe is incomplete");
+if (!Array.isArray(contract.requiredAdjacencyDispositions) || contract.requiredAdjacencyDispositions.length !== 8) failures.push("adjacency dispositions are incomplete");
+if (!Array.isArray(contract.terminalNeighbourhoodMoves) || contract.terminalNeighbourhoodMoves.length !== 8) failures.push("terminal neighbourhood protocol is incomplete");
+if (JSON.stringify(contract.experimentDecisionLayers) !== JSON.stringify(["build_gate", "bridge_gate", "physics_gate"])) failures.push("experiment decision layers drifted");
+if (!Array.isArray(contract.experimentRequiredFields) || contract.experimentRequiredFields.length < 18) failures.push("experiment programme contract is incomplete");
+if (!Array.isArray(contract.gates) || contract.gates.length !== 9) failures.push("nine exit gates are required");
+
+const expectedGateIds = Array.from({ length: 9 }, (_, index) => `EXIT-${String(index + 1).padStart(2, "0")}`);
+const actualGateIds = contract.gates.map(gate => gate.id);
+if (JSON.stringify(actualGateIds) !== JSON.stringify(expectedGateIds)) failures.push("exit gate identifiers drifted");
+for (const gate of contract.gates ?? []) {
+  if (!gate.name || !gate.exit || !gate.missingArtifact) failures.push(`${gate.id}: incomplete gate definition`);
+  if (!Array.isArray(gate.currentEvidence) || !gate.currentEvidence.length) failures.push(`${gate.id}: no current evidence`);
+  for (const source of gate.currentEvidence ?? []) if (!fs.existsSync(path.join(root, source))) failures.push(`${gate.id}: missing evidence ${source}`);
+}
+
+const allPass = contract.gates?.every(gate => gate.status === "passed") ?? false;
+if (contract.globalExit?.allGatesMustPass !== true) failures.push("global exit does not require every gate");
+if (!Array.isArray(contract.globalExit?.externalBlockerContract) || contract.globalExit.externalBlockerContract.length !== 6) failures.push("external blocker contract is incomplete");
+if (allPass !== contract.completionClaimAllowed) failures.push("completion flag is inconsistent with gate states");
+if (contract.globalExit?.presentStatus !== "current_input_computational_exhaustion_only") failures.push("present status overclaims completion");
+
+if (failures.length) {
+  console.error(JSON.stringify({ result: "fail", failures }, null, 2));
+  process.exit(1);
+}
+
+console.log(JSON.stringify({
+  result: "pass",
+  target,
+  gates: contract.gates.length,
+  open: contract.gates.filter(gate => gate.status === "open").length,
+  completionClaimAllowed: contract.completionClaimAllowed,
+  presentStatus: contract.globalExit.presentStatus
+}, null, 2));
