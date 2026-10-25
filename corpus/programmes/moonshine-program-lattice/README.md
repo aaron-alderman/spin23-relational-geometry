@@ -1040,3 +1040,5 @@ recovers the ten Baby-Monster components.
 - [Diagonal-enclosure no-go](../frontier/wave-7/frontier_wave7_209_leech_diagonal_enclosure_no_go.md)
 - [Pair-block enclosure no-go and triple frontier](../frontier/wave-7/frontier_wave7_210_leech_pair_block_enclosure_no_go.md)
 - [Triple principal-block enclosure reconnaissance](../frontier/wave-7/frontier_wave7_211_leech_triple_block_reconnaissance.md)
+- [Temple separator and odd-subspace burden](../frontier/wave-7/frontier_wave7_212_leech_temple_separator_burden.md)
+- [Bare odd Ritz-seed failure](../frontier/wave-7/frontier_wave7_213_leech_odd_ritz_seed_failure.md)

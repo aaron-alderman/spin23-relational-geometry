@@ -288,6 +288,19 @@ Wave 7.211 checks the simplest such construction and refuses promotion:
 independent block weights barely improve the best point. Because the search
 is sampled, floating point and restricted to principal-block directions, it
 is evidence against that ansatz rather than a theorem against triples.
+Wave 7.212 then finds the sharper global route. Positivity of charging makes
+the exactly enumerable potential spectrum an ordered lower spectrum. It
+supplies a one-vector even separator and proves that exactly 24 odd lower
+states precede a 25th-level separator above the odd Ritz value. The stored
+even checkpoint's directly contracted residual yields a narrow numerical
+Temple interval \([3.8721241518,3.87312391]\). Its theorem premises are
+present, but ordinary floating point is not promoted as rigorous interval
+arithmetic; the odd 24-vector block remains uncomputed.
+Wave 7.213 builds the bare 24-vector potential-band seed and rejects it. Its
+lowest Ritz value, 4.3491721940, already exceeds the exact odd separator
+4.3134665205, while the residual block has norm 0.6339. This proves neither
+gap closure nor gap absence; it proves that the required odd spectral cluster
+must include strong outside-band mixing.
 
 ## Corpus links
 
@@ -356,6 +369,8 @@ is evidence against that ansatz rather than a theorem against triples.
 - [Diagonal-enclosure no-go](frontier_wave7_209_leech_diagonal_enclosure_no_go.md)
 - [Pair-block enclosure no-go and triple frontier](frontier_wave7_210_leech_pair_block_enclosure_no_go.md)
 - [Triple principal-block reconnaissance](frontier_wave7_211_leech_triple_block_reconnaissance.md)
+- [Temple separator and odd-subspace burden](frontier_wave7_212_leech_temple_separator_burden.md)
+- [Bare odd Ritz-seed failure](frontier_wave7_213_leech_odd_ritz_seed_failure.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

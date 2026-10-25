@@ -351,6 +351,22 @@ Independent optimization of all eight block weights improves it only to
 \(-0.2841525847\). This is scoped negative reconnaissance, not a general
 triple-block no-go; it redirects the enclosure toward overlapping
 sum-of-squares terms, general block SDPs or global eigenvalue counting.
+Wave 7.212 converts the global route into finite work. The potential-only
+lower spectrum gives an exact even-sector separator
+\(\beta_2=3.9474411167\) and an odd-sector 25th-level separator
+\(\beta_{25}=4.3134665205\). Direct uncompressed contraction of the signed
+bond-56 checkpoint gives global residual \(0.0086196568444\), stable across
+three compression tolerances and dense-controlled to \(1.4\times10^{-15}\)
+on reduced systems. A padded Temple calculation narrows the even ground to a
+numerical interval of width \(9.9976\times10^{-4}\). Rigorous floating-point
+rounding remains open, and the odd route now requires exactly 24 Ritz vectors
+or an equivalent inertia count.
+Wave 7.213 constructs the canonical 24-dimensional odd seed rather than
+assuming it works. All its Ritz values lie above the exact 25th-level
+separator, beginning at 4.3491721940, and its residual-block norm is 0.6339.
+Dense reduced controls pass below \(1.6\times10^{-15}\). The seed therefore
+fails admission: the 24 directions must be DMRG/Davidson/Krylov enriched, or
+replaced by shifted inertia.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -429,6 +445,8 @@ P4 questions.
 - [Diagonal-enclosure no-go](frontier_wave7_209_leech_diagonal_enclosure_no_go.md)
 - [Pair-block enclosure no-go and triple frontier](frontier_wave7_210_leech_pair_block_enclosure_no_go.md)
 - [Triple principal-block reconnaissance](frontier_wave7_211_leech_triple_block_reconnaissance.md)
+- [Temple separator and odd-subspace burden](frontier_wave7_212_leech_temple_separator_burden.md)
+- [Bare odd Ritz-seed failure](frontier_wave7_213_leech_odd_ritz_seed_failure.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

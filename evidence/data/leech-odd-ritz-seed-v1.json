@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "leech-odd-ritz-seed-v1",
+  "date": "2026-10-25",
+  "configuration": {
+    "sites": 24,
+    "cutoff": 2,
+    "ratio": 0.01,
+    "order": "optimized",
+    "subspace": "one lowest local inversion-odd potential mode on one site, lowest even mode elsewhere",
+    "dimension": 24
+  },
+  "localPotential": {
+    "eigenvalues": [
+      0.13397459621556135,
+      0.5,
+      0.9999999999999999,
+      1.5,
+      1.8660254037844386
+    ],
+    "parities": [
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "evenModeIndex": 0,
+    "oddModeIndex": 1,
+    "unperturbedBandEnergy": 3.581415712957911
+  },
+  "projectedProblem": {
+    "ritzValues": [
+      4.349172193972214,
+      4.36676902450146,
+      4.3758309751243925,
+      4.38188207947202,
+      4.3857653703459,
+      4.3872979467988324,
+      4.390040949510387,
+      4.3910035090457304,
+      4.391967762940316,
+      4.392651947592278,
+      4.395620243216062,
+      4.396400425865746,
+      4.399352300827904,
+      4.399854589905246,
+      4.403407012543789,
+      4.409129187273445,
+      4.424896867869547,
+      4.439560239339024,
+      4.457295714635458,
+      4.474215569538588,
+      4.54017377586086,
+      4.628112786203767,
+      4.750880061522295,
+      4.849363243751277
+    ],
+    "lowestRitz": 4.349172193972214,
+    "highestRitz": 4.849363243751277,
+    "valuesBelowOddSeparator": 0,
+    "oddSeparator": 4.313466520526788
+  },
+  "residualBlock": {
+    "individualNorms": [
+      0.4317363935630791,
+      0.4502488691810738,
+      0.45831426288604826,
+      0.4603083210929125,
+      0.4626687276301518,
+      0.46436905286834174,
+      0.4636783378446398,
+      0.46555601656763107,
+      0.46516530543387447,
+      0.46645476171664646,
+      0.46664284999090155,
+      0.46537310986272695,
+      0.46430631934447897,
+      0.46601146144653954,
+      0.4653079365568104,
+      0.46652850412941543,
+      0.46439820887382094,
+      0.46633624617668995,
+      0.46702464065992716,
+      0.46919447898893574,
+      0.48253963831069796,
+      0.510300657214443,
+      0.5732991850634218,
+      0.6318370573321401
+    ],
+    "minimumIndividualNorm": 0.4317363935630791,
+    "maximumIndividualNorm": 0.6318370573321401,
+    "spectralNorm": 0.6339192917397188,
+    "minimumGramEigenvalue": 0.18058380705272306,
+    "maximumGramEigenvalue": 0.4018536684397868
+  },
+  "sparsity": {
+    "distinctConfigurationsInChargingImages": 14656,
+    "maximumConfigurationsPerImage": 974
+  },
+  "denseControl": {
+    "sites": 4,
+    "rayleighMatrixMaximumError": 1.5543122344752192e-15,
+    "residualGramMaximumError": 6.245004513516506e-17
+  },
+  "admission": {
+    "orthonormalRitzDimension": 24,
+    "separatorDimensionRequirementMet": true,
+    "allRitzValuesBelowSeparator": false,
+    "lehmannLowerBoundsComputed": false,
+    "reason": "This is an exact algebraic seed subspace in floating arithmetic; a validated block Lehmann solve and enriched residual convergence are still required."
+  }
+}

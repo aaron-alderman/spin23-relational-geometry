@@ -964,6 +964,28 @@ reconnaissance, not an exhaustive no-go. It disfavors block-Jacobi principal
 triples and increases the value of overlapping \(LDL^T\) sums of squares,
 general block semidefinite optimization and Lehmann/inertia routes.
 
+Wave 7.212 makes the Lehmann/Temple route quantitative. Ordered min--max
+comparison with the potential-only Hamiltonian gives
+\(\beta_2^{(+)}=3.9474411167\), above the even Ritz energy, and
+\(\beta_{25}^{(-)}=4.3134665205\), above the odd Ritz energy after a
+24-fold lowest odd band. An uncompressed full-state contraction of the
+bond-56 even MPS gives residual \(0.0086196568444\), agrees across compression
+tolerances within \(2\times10^{-12}\), and reproduces dense reduced controls
+within \(1.4\times10^{-15}\). The resulting padded Temple interval is only
+\(9.9976\times10^{-4}\) wide. It remains a numerical candidate pending
+outward-rounded arithmetic; the odd calculation has become a precise
+24-vector block-Ritz task rather than an unspecified lower-bound problem.
+
+Wave 7.213 executes the first such block seed. The 24 one-local-odd-mode
+product vectors give a dense-controlled Rayleigh and residual calculation,
+but every Ritz value lies above the exact 25th-level separator and the
+residual-block norm is 0.6339. The result is an admission failure, not evidence
+for a closed physical gap: it demonstrates that the low odd cluster is
+strongly dressed by configurations outside the bare potential band. The next
+subspace must be block-DMRG, Davidson or Krylov enriched, consistent with
+quadratic residual analyses designed for clustered Rayleigh--Ritz values
+rather than independent scalar residual assignment.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

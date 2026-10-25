@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "leech-temple-separator-burden-v1",
+  "date": "2026-10-25",
+  "cutoff": 2,
+  "potentialOnlySpectrum": {
+    "localEigenvalues": [
+      0.1339745962155613,
+      0.4999999999999999,
+      0.9999999999999999,
+      1.4999999999999998,
+      1.8660254037844388
+    ],
+    "globalGround": 3.215390309173471,
+    "evenSecondCandidates": {
+      "twoLowestOddLocalFactors": 3.9474411167423487,
+      "oneSecondEvenLocalFactor": 4.081415712957909
+    },
+    "evenSeparator": 3.9474411167423487,
+    "oddFirstBand": {
+      "energy": 3.58141571295791,
+      "multiplicity": 24
+    },
+    "oddTwentyFifthCandidates": {
+      "threeLowestOddLocalFactors": 4.313466520526786,
+      "lowestOddPlusSecondEven": 4.447441116742349,
+      "oneSecondOddLocalFactor": 4.581415712957909
+    },
+    "oddTwentyFifthSeparator": 4.313466520526786
+  },
+  "fullCarrierEvenResidual": {
+    "directUncompressedRun": {
+      "checkpoint": ".tmp/leech-z2-c2-b56-matrix-free-r2-even.pkl",
+      "checkpointSha256": "f62f9a90756a5a96a90050335ce499d39560dea7112636abc40b7d1a4e0dee54",
+      "compressed": false,
+      "norm": 0.9999999999999997,
+      "rayleigh": 3.8731239099585166,
+      "energySquaredExpectation": 15.001163120376463,
+      "variance": 0.00007429848411533158,
+      "residualNorm": 0.00861965684440695
+    },
+    "compressionRuns": [
+      {
+        "eps": 1e-8,
+        "residualNorm": 0.008619656844613032
+      },
+      {
+        "eps": 1e-10,
+        "residualNorm": 0.008619656842758294
+      },
+      {
+        "eps": 1e-12,
+        "residualNorm": 0.008619656844200867
+      }
+    ],
+    "reducedDenseControls": {
+      "sites": 4,
+      "cutoff": 2,
+      "evenMaximumDenseContractionError": 3.3306690738754696e-16,
+      "oddMaximumDenseContractionError": 1.3322676295501878e-15
+    },
+    "maximumCompressionResidualSpread": 1.8547385849387865e-12
+  },
+  "evenTempleCandidate": {
+    "paddedInputs": {
+      "rayleighLower": 3.8731239,
+      "rayleighUpper": 3.87312391,
+      "residualUpper": 0.008619657,
+      "separatorLower": 3.9474411
+    },
+    "lower": 3.872124151801768,
+    "upper": 3.87312391,
+    "width": 0.0009997581982319481,
+    "theoremPremisesSatisfiedExceptRigorousFloatingPointEnclosure": true,
+    "rigorousMachineIntervalCertified": false
+  },
+  "oddSeparatorBurden": {
+    "oddRitzUpper": 4.205473825505905,
+    "lowerOperatorStatesBelowRitz": 24,
+    "nextLowerOperatorEigenvalue": 4.313466520526786,
+    "nextLowerOperatorEigenvalueAboveRitz": true,
+    "requiredRitzSubspaceDimensionForThisRoute": 24
+  },
+  "established": "The potential lower operator supplies a one-vector even-sector separator and a 24-vector odd-sector separator. The stored even checkpoint has a stable directly contracted global residual, yielding a narrow numerical Temple interval.",
+  "boundary": "The even interval is not promoted to a rigorous machine certificate until floating-point contraction and elementary functions receive outward error bounds. The odd lower interval still requires a 24-vector Ritz/Lehmann block or equivalent inertia count."
+}
