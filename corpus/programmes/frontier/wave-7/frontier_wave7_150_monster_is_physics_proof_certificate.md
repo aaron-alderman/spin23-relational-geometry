@@ -208,6 +208,10 @@ Wave 7.194 separates tensor error from cutoff error: resumed bond-32, 48 and
 64 states keep lowering both energies and residuals, but the residual scale
 is still comparable to the proposed gap. The next promotion remains
 fixed-cutoff tensor convergence, not another extrapolated number.
+Wave 7.195 shows that two further sweeps change the bond-64 gap by only
+0.000235, much less than the previous bond correction. The next computational
+gain must therefore come from bond capacity or symmetry-native sectors, not
+indefinite repetition of the same sweep.
 
 ## Corpus links
 
@@ -259,6 +263,7 @@ fixed-cutoff tensor convergence, not another extrapolated number.
 - [Metric-optimized joined-cell MPS ordering](frontier_wave7_192_leech_joined_cell_mps_order.md)
 - [Full joined-cell DMRG reconnaissance](frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md)
 - [Fixed-cutoff joined-cell bond convergence](frontier_wave7_194_leech_joined_cell_bond_convergence.md)
+- [Fixed-bond joined-cell sweep convergence](frontier_wave7_195_leech_joined_cell_sweep_convergence.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

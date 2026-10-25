@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "leech-joined-cell-sweep-convergence-v1",
+  "date": "2026-10-25",
+  "model": "24-channel Gram-first joined compact rotor at U/u=0.01, charge cutoff four, maximum bond 64",
+  "method": "resume the same bond-64 even and odd states independently for two additional alternating sweeps with deferred variance evaluation",
+  "initial": {
+    "completedSweepsAtBond64": 2,
+    "evenEnergy": 2.3417607264041496,
+    "oddEnergy": 2.458501503223766,
+    "variationalGap": 0.11674077681961625
+  },
+  "continuation": {
+    "additionalSweeps": 2,
+    "evenReportedSweepEnergies": [2.3414425890648864,2.341339737694869],
+    "oddReportedSweepEnergiesAfterRemovingUnitPenalty": [2.458022206196413,2.457845430066231],
+    "finalEvenExpectation": 2.3413397379098515,
+    "finalOddExpectation": 2.4578453710869153,
+    "finalEvenParity": 0.9999554205056344,
+    "finalOddParity": -0.9999999409930873,
+    "finalVariationalGap": 0.11650563317706375
+  },
+  "derived": {
+    "evenNetEnergyShift": -0.00042098849429805796,
+    "oddNetEnergyShift": -0.0006561321368505624,
+    "gapShift": -0.00023514364255250442,
+    "gapShiftRelativeToPreviousBond48To64Shift": 0.17392471992587363,
+    "evenPerSweepShifts": [-0.0003181373392631137,-0.00010285137001764255],
+    "oddPerSweepShifts": [-0.00047929702735283186,-0.00017677613018207694],
+    "sweepShiftsContract": true,
+    "sweepConverged": false
+  },
+  "interpretation": "added sweep depth changes the gap by only 17.4 percent of the preceding bond-48-to-64 change, so bond capacity now dominates sweep depth, but neither error source is below the required scale",
+  "nextMethod": "use a symmetry-native global-inversion sector or controlled subspace expansion before bonds 80 and 96; recompute residuals only at accepted checkpoints",
+  "boundary": "The continuation deferred H-squared residual evaluation and supplies variational upper estimates only. Contracting sweep shifts do not constitute a lower spectral bound or certified gap.",
+  "epistemicStatus": "fixed-bond sweep-depth diagnostic; bond-capacity limitation isolated but unresolved"
+}

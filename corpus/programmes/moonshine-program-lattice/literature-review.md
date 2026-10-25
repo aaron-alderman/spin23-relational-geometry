@@ -854,6 +854,13 @@ quantifies a convergence failure and defers cutoff five; it also adds
 sector-level checkpoints and optional deferred variance evaluation so the
 long calculation is monitorable and resumable.
 
+Wave 7.195 resumes the bond-64 states for two more sweeps at fixed cutoff.
+The gap changes only 0.000235, 17.4% of the preceding bond-48-to-64 shift,
+and the per-sweep energy shifts contract. This isolates bond capacity as the
+larger tensor error. It does not certify convergence; it selects a
+symmetry-native parity implementation or subspace expansion before bonds 80
+and 96, with residual evaluation deferred to accepted checkpoints.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each
