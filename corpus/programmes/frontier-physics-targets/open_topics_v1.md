@@ -88,7 +88,7 @@ for another dimensionless redesign.
 | OT-039 | Microscopic wall-pseudoscalar coefficient | source-derived coupling with sign, magnitude and radiative stability |
 | OT-040 | Matter-plus-field Coulomb energy current | gauge- and limit-consistent total energy continuity |
 | OT-042 | Typed triality-Furey reflection | full module, charge and orientation intertwiner |
-| OT-045 | Hecke operator or modular-trace test | add an orientation-sensitive commuting insertion to the now-assembled order-23 defect trace, identify the corpus cycle with an oriented 23AB generator, and sew the refined record at genus two |
+| OT-045 | Hecke operator or modular-trace test | compute a vector-valued/projective \(S_4\) centralizer action or relational multi-insertion record—the complete scalar insertion search is exhausted—then test whether the surviving orientation can be sewn at genus two |
 | OT-046 | D4 quotient-singularity localized operator | source-native Hamiltonian/Dirac/Fredholm operator with quotient-controlled spectrum |
 | OT-049 | Exceptional rank-one vacuum Hessian and gauge spectrum | stable action-level vacuum with coloured directions and matched current geometry |
 | OT-050 | Lattice-subroutine gravitational action and observable | order-23 twined genus-two and fermionic Baby-Monster data, a derived off-diagonal Jordan response, and one complete typed route to a healthy action or continuum and no-refit record |
@@ -269,9 +269,14 @@ characters thereby reduce to 25 scalar types. Volpato's commutant inversion
 now yields three verified terms for each of the twelve required even-\(l\)
 characters. The scalar duality-defect trace is now assembled through \(q^4\)
 and remains invariant under fifth-power exchange, so it closes negatively as
-an orientation detector. The next finite work must add a commuting insertion
-not determined only by \(ab\), identify the corpus cycle with an oriented
-23A/23B generator, and sew the defect characters at genus two. The
+an orientation detector. The full commuting-insertion census now closes the
+scalar version of that proposal. For an order-23 element the centralizer is
+\(C_{23}\times S_4\); its five insertion classes yield cyclic products of
+orders \(23,46,46,69,92\), and every corresponding A/B McKay--Thompson pair
+is equal. The next finite work must therefore compute the vector-valued
+projective \(S_4\) action or retain genuinely relational multi-insertion data,
+identify the corpus cycle with an oriented 23A/23B generator, and sew the
+defect characters at genus two. The
 off-diagonal physical Jordan response and a gravitational action remain
 separate gates.
 

@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The modular calculation now goes further. Fricke invariance gives the mixed branches as \(T_{23}((\tau+r)/23)\), and Fourier projection filters coefficients by \(n\equiv ab\pmod{23}\), reconstructing all 529 module characters as 25 scalar types. Volpato's inversion yields positive seeds for the twelve even-\(l\) commutant characters, and exact phase bookkeeping gives \(Z^{\mathcal N}_{23}/\sqrt{23}=q^{-1}+2+2446q+115834q^2+2446684q^3+33295322q^4+\cdots\). Fifth-power exchange preserves \(ab\), so this scalar defect trace is orientation-blind. The look-here calculation must add a commuting insertion or sew at genus two; another unrefined scalar trace cannot name 23A versus 23B.
+> The modular calculation now goes further. Fricke invariance gives the mixed branches as \(T_{23}((\tau+r)/23)\), and Fourier projection filters coefficients by \(n\equiv ab\pmod{23}\), reconstructing all 529 module characters as 25 scalar types. Volpato's inversion yields positive seeds for the twelve even-\(l\) commutant characters, and exact phase bookkeeping gives \(Z^{\mathcal N}_{23}/\sqrt{23}=q^{-1}+2+2446q+115834q^2+2446684q^3+33295322q^4+\cdots\). Fifth-power exchange preserves \(ab\), so this scalar defect trace is orientation-blind. The complete \(C_{23}\times S_4\) insertion census now rules out every additional scalar one-insertion trace. The look-here calculation must instead retain a vector-valued/projective \(S_4\) action, a relation among several insertions, or sew at genus two; another scalar trace cannot name 23A versus 23B.
 
 ## What this commits us to
 
