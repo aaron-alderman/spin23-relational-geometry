@@ -12,6 +12,7 @@ const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic
 const congruenceLift = load("../../evidence/data/moonshine-metaplectic-congruence-lift-gate-v1.json");
 const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
+const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
 const frontier = load("../../evidence/data/moonshine-frontier-crosswalk-v1.json");
 
 assert.equal(checkpoint.closed.arithmeticAndLattice, true);
@@ -52,7 +53,9 @@ assert.equal(checkpoint.scalarBoundary.genuineScalarPromotionPossible, false);
 assert.equal(checkpoint.scalarBoundary.genuineScalarPromotionPossible, scalarNoGo.metaplecticNoGo.simultaneousIAndGenuineCenterPossible);
 assert.equal(checkpoint.scalarBoundary.genuineEtaScalarLineExists, true);
 assert.equal(checkpoint.scalarBoundary.etaRelationDefectPhase, eta.relationDefect.phase);
-assert(checkpoint.scalarBoundary.nextCarrier.includes("sewn defect"));
+assert.deepEqual(checkpoint.scalarBoundary.level2RelationDefectCycleType, seamAction.cycleType);
+assert.equal(checkpoint.scalarBoundary.permutationDeterminant, seamAction.quotients.permutationSign);
+assert(checkpoint.scalarBoundary.nextCarrier.includes("D_K P_K"));
 
 assert.deepEqual(
   checkpoint.openSourceGated.map(({ rank }) => rank),

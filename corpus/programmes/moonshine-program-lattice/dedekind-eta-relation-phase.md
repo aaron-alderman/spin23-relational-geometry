@@ -117,7 +117,7 @@ order-four phase whose square is the metaplectic sign. Calling both objects
 
 ## 3. Revised decisive comparison
 
-The mathematical target is now concrete:
+The scalar mathematical target is concrete:
 
 > Restrict the sewn order-23 defect/Pfaffian anomaly line to the selected
 > relation rail and compare its phase on \(K\) with \(i\).
@@ -135,6 +135,12 @@ The outcomes are sharp:
 
 No further finite-group counting can decide this comparison.
 
+The subsequent [seam-permutation audit](relation-defect-seam-permutation.md)
+shows why a scalar match is only necessary. Although \(K\) is identity modulo
+23, it has order three modulo 2 and permutes the ten even characteristics
+with cycle type \(3^3\,1\). The full target is therefore the monomial operator
+\(\rho(K)=D_KP_K\), not the phase \(i\) alone.
+
 ## Boundary
 
 The eta multiplier is a canonical metaplectic character of the modular
@@ -150,3 +156,4 @@ has acquired time, energy or a detector.
 - [Integral relation rail and scalar \(C_4\) no-go](integral-relation-defect-metaplectic-no-go.md)
 - [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
 - [Exhaustion checkpoint](exhaustion-checkpoint.md)
+- [Relation-defect seam permutation](relation-defect-seam-permutation.md)

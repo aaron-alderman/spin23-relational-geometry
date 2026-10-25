@@ -12,6 +12,7 @@ const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic
 const projectiveNoGo = load("../../evidence/data/moonshine-order23-projective-centralizer-no-go-v1.json");
 const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
+const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
 
 const declaredTargetIds = new Set(register.coreTargets.map((target) => target.id));
 const mappedIds = crosswalk.targets.map((target) => target.id);
@@ -54,12 +55,13 @@ assert.equal(
 );
 assert.deepEqual(
   crosswalk.rankedTranches[0].scalarCouplingSequence,
-  ["C2 projective sign survives", "finite C4 metaplectic lift ruled out", "genuine eta line has K phase i", "vector-valued Weil kernel if defect phase mismatches"],
+  ["C2 projective sign survives", "finite C4 metaplectic lift ruled out", "genuine eta line has K phase i", "level-2 K permutation has cycle type 3^3 1", "compute monomial operator D_K P_K"],
 );
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.quarterTurnImage, "i");
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.genuine, false);
 assert.equal(scalarNoGo.outcome.projective240Route.includes("remains admissible"), true);
 assert.equal(eta.relationDefect.phase, "i");
+assert.deepEqual(seamAction.cycleType, [3, 3, 3, 1]);
 assert.equal(projectiveNoGo.anomalyTransgression.projectiveClassOnCentralizer, "trivial");
 assert.equal(crosswalk.rankedTranches[2].requiresNewExperiment, true);
 assert.equal(crosswalk.rankedTranches[3].requiresNewExperiment, true);

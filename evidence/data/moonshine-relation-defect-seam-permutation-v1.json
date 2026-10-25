@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The congruence defect K is identity modulo 23 but an order-three first-handle symplectic transformation modulo 2; on the ten even genus-two characteristics it has cycle type 3^3 1 and determinant +1.",
+  "relationDefect": {
+    "word": "K=S^2 R^-11",
+    "modulo23": [[1, 0], [0, 1]],
+    "modulo2": [[1, 1], [1, 0]],
+    "orderModulo2": 3
+  },
+  "oneBlockEmbeddingModulo2": [
+    [1, 0, 1, 0],
+    [0, 1, 0, 0],
+    [1, 0, 0, 0],
+    [0, 0, 0, 1]
+  ],
+  "evenCharacteristics": [
+    "00|00",
+    "00|01",
+    "00|10",
+    "00|11",
+    "01|00",
+    "01|10",
+    "10|00",
+    "10|01",
+    "11|00",
+    "11|11"
+  ],
+  "cycles": [
+    ["00|00", "00|10", "10|00"],
+    ["00|01", "00|11", "10|01"],
+    ["01|00", "01|10", "11|00"],
+    ["11|11"]
+  ],
+  "cycleType": [3, 3, 3, 1],
+  "movedCharacteristics": 9,
+  "fixedCharacteristic": {
+    "label": "11|11",
+    "handleParities": ["odd", "odd"],
+    "genusTwoParity": "even",
+    "separatingThetaConstant": "zero"
+  },
+  "quotients": {
+    "permutationSign": 1,
+    "determinantLineDetectsK": false,
+    "level23LabelsDetectK": false,
+    "level2SectorVectorDetectsK": true,
+    "etaPhase": "i"
+  },
+  "operatorTarget": {
+    "form": "rho(K)=D_K P_K",
+    "permutationPartKnown": true,
+    "characteristicPhaseMatrixKnown": false,
+    "monsterSewnDefectActionKnown": false,
+    "scalarEtaMatchNecessaryButSufficient": false
+  },
+  "nextTest": "compute D_K and the sewn order-23 defect action on the same cycle decomposition, then compare full monomial operators and separating degeneration",
+  "boundary": "This is an exact label action, not the full theta multiplier, Monster sewing or a physical dynamics."
+}

@@ -263,8 +263,10 @@ projective seam. The finite dicyclic \(C_4\) character has quarter-turn value
 \(i\), but its genuine scalar metaplectic promotion is impossible in the
 declared one-block embedding because a lifted quarter-turn has fourth power
 equal to the metaplectic kernel. A genuine scalar eta line survives with
-quarter-turn value \(\zeta_8\) and relation-defect value \(v_\eta(K)=i\);
-the unresolved gate is equality with the sewn defect/Pfaffian phase.
+quarter-turn value \(\zeta_8\) and relation-defect value \(v_\eta(K)=i\).
+But \(K\) also acts on the level-2 seam with cycle type \(3^3\,1\). The
+unresolved gate is equality of full monomial sewn operators, not scalar
+phases alone.
 The order-23 projective-centralizer audit also closes the remaining
 genus-one representation escape: coprimality forces the transgressed cocycle
 to be trivial, and the five class traces determine the full ordinary
@@ -288,6 +290,7 @@ composition data.
 - [Projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
+- [Relation-defect seam permutation](relation-defect-seam-permutation.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - [Leech pair-Gram / Spin(2,3) bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Rule-60 affine seam torsor](../../claims/1700-1799/1793_the_rule60_golay_kernel_supplies_the_unique_tm23_leech_affine_seam_torsor.md)

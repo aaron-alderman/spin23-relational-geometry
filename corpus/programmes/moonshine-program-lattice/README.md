@@ -19,6 +19,8 @@
 
 **Genuine scalar survivor:** [the Dedekind eta line assigns the relation defect \(K\) the exact phase \(i\)](dedekind-eta-relation-phase.md)
 
+**Seam action of \(K\):** [three 3-cycles plus the fixed odd--odd characteristic](relation-defect-seam-permutation.md)
+
 ## Result
 
 The Monster branch does contain a mathematically defensible sense in which a
@@ -872,10 +874,11 @@ An explicit symmetric lift reduces the selected congruence kernel to one
 infinite cyclic relation rail. On the metaplectic double cover,
 \(\widetilde S^4=\varepsilon\); hence a genuine character must take a
 primitive eighth-root value and cannot take \(i\). The next sewing
-calculation must therefore first compare the genuine Dedekind eta value
-\(v_\eta(K)=i\) with the sewn defect/Pfaffian line. A mismatch forces the
-calculation to become vector-valued and keep the dicyclic center, metaplectic
-kernel and congruence relation defect distinct.
+calculation must therefore compare full monomial operators. The eta line gives
+\(v_\eta(K)=i\), while the level-2 seam contributes a permutation of cycle
+type \(3^3\,1\). Its determinant is \(+1\), so the sign quotient misses the
+action. The missing datum is the characteristic-dependent phase matrix and
+the sewn Monster-defect action on the same cycles.
 
 ## Sources and corpus links
 
@@ -904,3 +907,4 @@ kernel and congruence relation defect distinct.
 - [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
+- [Relation-defect seam permutation](relation-defect-seam-permutation.md)

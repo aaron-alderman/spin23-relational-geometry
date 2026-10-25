@@ -139,6 +139,9 @@ assigns the relation defect \(K\) the phase \(i\). The 5,280-label carrier is
 admissible only if the sewn defect/Pfaffian line has the same phase (up to a
 globally consistent alternate lift); otherwise it requires a vector-valued
 kernel.
+In fact \(K\bmod2\) already permutes the ten even characteristics with cycle
+type \(3^3\,1\). The complete seam target is therefore the monomial operator
+\(\rho(K)=D_KP_K\); a scalar eta-phase match cannot by itself close the gate.
 
 ## 4. Why “level 46” is not yet the analytic answer
 
@@ -198,6 +201,7 @@ identifies the precise multiplier line that must be lifted analytically.
 - [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
+- [Relation-defect seam permutation](relation-defect-seam-permutation.md)
 - [Genus-two seam closure](../lattice-subroutine-gravity/genus-two-seam-closure.md)
 - [Oriented seam modular line](../lattice-subroutine-gravity/oriented-seam-modular-line.md)
 - [Leech pair-Gram / Spin bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)

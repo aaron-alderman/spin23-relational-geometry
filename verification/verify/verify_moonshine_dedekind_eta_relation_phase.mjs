@@ -4,6 +4,7 @@ import fs from "node:fs";
 const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, import.meta.url), "utf8"));
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 const relation = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
+const seam = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
 
 const gcd = (a0, b0) => {
   let a = a0 < 0n ? -a0 : a0;
@@ -56,6 +57,8 @@ assert.equal(relation.metaplecticNoGo.proposedC4CharacterGenuine, false);
 assert.equal(eta.classification.genuineScalarEtaLineExists, true);
 assert.equal(eta.classification.genuineEtaLineMatchesFiniteC4Values, false);
 assert.equal(eta.relationDefect.phase, "i");
+assert.deepEqual(eta.classification.level2PermutationCycleType, seam.cycleType);
+assert.equal(eta.classification.fullOperatorRequired, seam.operatorTarget.form);
 
 console.log(JSON.stringify({
   dedekindSum: eta.R.dedekindSum.value,
