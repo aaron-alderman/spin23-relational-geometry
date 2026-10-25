@@ -154,6 +154,15 @@ operators. The [transition-operator bridge](../programmes/admissibility/admissib
 therefore supplies a standard-physics calibration for the programme: symmetry
 classifies possible maps; it does not supply their strength or make them happen.
 
+The calibration continues one step further in the [width, coherence and escape
+ledger](../programmes/admissibility/admissibility_128_widths_coherence_and_escape_are_not_one_lifetime.md).
+A measured linewidth need not be the population lifetime: pure dephasing,
+quasistatic spread, drive, effective-pole damping and the apparatus kernel can
+make similar lines, while barrier escape supplies a different clock again. The
+proposed joint survival, Ramsey, echo, drive and resolution experiment asks
+those mechanisms to disagree and propagates the independently measured pieces
+into the spectrum without refitting each line.
+
 ## The third term is the mediator
 
 The balanced view also explains why ternary structure recurs. Binary language says that \(x\) acts on \(z\). A triple product asks how \(x\) and \(z\) are related through a middle term \(y\):

@@ -254,6 +254,10 @@ The practical test prepares one metastable ion, opens a calibrated electric-dipo
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-3.md)
 
+A measured width still need not be that population lifetime. Pure dephasing, quasistatic frequency spread, power broadening, an effective continuum pole and the apparatus kernel can make similar lines. The next test therefore joins dark survival, Ramsey, echo, drive and resolution sweeps and propagates their independently measured contributions into the spectrum without refitting each line.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-4.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 

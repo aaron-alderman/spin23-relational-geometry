@@ -384,6 +384,10 @@ admissibility claims can be made precise and defeated.
 
 ## Endpoint
 
+The companion [width, coherence and escape ledger](admissibility_128_widths_coherence_and_escape_are_not_one_lifetime.md)
+continues this bridge wherever a measured linewidth or waiting time cannot be
+identified with population decay alone.
+
 The mature result can be stated without jargon:
 
 > A system does not decay merely because a lower state exists. It decays when

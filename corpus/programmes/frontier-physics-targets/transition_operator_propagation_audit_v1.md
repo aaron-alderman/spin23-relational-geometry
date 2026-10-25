@@ -7,7 +7,7 @@
 
 ## Result
 
-The audit scans **2226** Markdown documents and routes **310** for possible transition, spectral or metastability relevance. **63** authoritative documents have an explicit reviewed disposition, **12** additional operator/rate candidates carry the AZ-127 boundary in context, **97** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
+The audit scans **2227** Markdown documents and routes **311** for possible transition, spectral or metastability relevance. **64** authoritative documents have an explicit reviewed disposition, **12** additional operator/rate candidates carry the AZ-127 boundary in context, **97** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
 
 This is intentionally not a global search-and-replace. “Radiative stability,” a graph transition, a resonance pole, detector lag and an atomic decay do not name the same thing. The audit makes that difference visible and keeps the unresolved set enumerable.
 
@@ -23,6 +23,7 @@ Barrier escape and hysteresis use a different mechanism ledger. Effective pole o
 |---|---|---|
 | `corpus/EXPLANATORY_STANDARD.md` | `governing_rule` | The eight-field ledger is a publication rule and separates operator bottlenecks from effective widths and barrier escape. |
 | `corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md` | `complete_reference_bridge` | Established atomic/nuclear bridge, rate architecture and three-gate ion experiment. |
+| `corpus/programmes/admissibility/admissibility_128_widths_coherence_and_escape_are_not_one_lifetime.md` | `spectral_width_reference_bridge` | Separates population loss, dephasing, static spread, drive, effective-pole and apparatus widths and keeps barrier escape in its own mechanism class. |
 | `corpus/programmes/admissibility/admissibility_02_casimir_as_first_generative_probe.md` | `classification_not_amplitude` | Casimir labels sectors but supplies neither the physical operator nor its strength. |
 | `corpus/programmes/admissibility/admissibility_04_dispersion_force_landscape.md` | `effective_response_boundary` | A causal response may be used effectively; microscopic line claims require the operator ledger. |
 | `corpus/programmes/admissibility/admissibility_05_invariant_atlas_time_force_measure_material_rotation.md` | `classification_not_amplitude` | Rotational organization and selection rules are followed by operator, matrix-element and detector data. |

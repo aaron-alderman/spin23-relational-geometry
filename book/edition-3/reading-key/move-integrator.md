@@ -62,6 +62,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Claim · The admissibility frontier · Transition operators make the boundary measurable (1)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-1.md)
 - [Claim · The admissibility frontier · Transition operators make the boundary measurable (2)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-2.md)
 - [Claim · The admissibility frontier · Transition operators make the boundary measurable (3)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-3.md)
+- [Claim · The admissibility frontier · Transition operators make the boundary measurable (4)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-4.md)
 - [Claim · The admissibility frontier · the mixed interface has an exact shape (1)](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-1.md)
 - [Claim · The admissibility frontier · the mixed interface has an exact shape (2)](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-2.md)
 - [Claim · The admissibility frontier · the mixed interface has an exact shape (3)](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-3.md)
