@@ -82,8 +82,8 @@ const readableArtifacts = [
 for (const ref of readableArtifacts) check(fs.existsSync(path.join(root, ref)), `missing readable artifact ${ref}`);
 
 const assessmentText = fs.readFileSync(path.join(root, "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md"), "utf8");
-for (const id of actualIds) check(assessmentText.includes(`## ${id}\n`), `${id}: missing corpus assessment section`);
-const assessmentSections = [...assessmentText.matchAll(/^## FPT-\d{3}$/gm)].map((match) => match[0]);
+for (const id of actualIds) check(new RegExp(`^## ${id}\\r?$`, "m").test(assessmentText), `${id}: missing corpus assessment section`);
+const assessmentSections = [...assessmentText.matchAll(/^## FPT-\d{3}\r?$/gm)].map((match) => match[0]);
 check(assessmentSections.length === 22, "assessment dossier must contain exactly 22 FPT sections");
 
 if (failures.length) {

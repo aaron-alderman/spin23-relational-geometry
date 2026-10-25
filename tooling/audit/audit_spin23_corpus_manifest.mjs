@@ -129,6 +129,9 @@ const brokenCoreLinks = governanceFiles
 
 const repositoryFiles = presentCandidateFiles
   .filter((file) => file !== manifestName)
+  // Release receipts attest a frozen projection and are deliberately outside
+  // the content inventory they certify. They remain tracked audit evidence.
+  .filter((file) => !file.startsWith("verification/releases/"))
   .filter((file) => !file.includes("/") || includedDirectories.some((directory) => file.startsWith(`${directory}/`)))
   .filter((file, index, all) => all.indexOf(file) === index)
   .sort();

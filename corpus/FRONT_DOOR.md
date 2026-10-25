@@ -6,7 +6,7 @@ This is a generated atlas, not a claim of truth or completeness. Its machine-rea
 
 **Authority boundary.** This atlas reports repository structure and declared epistemic surfaces. It does not promote claims, replace source evidence, or grant publication, corpus-admission, runtime, or deployment authority.
 
-**Coverage.** 16 declared roots across 4 routes; 6427 retained inventory objects; 4652 objects reachable through local links; 6427 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
+**Coverage.** 16 declared roots across 4 routes; 6425 retained inventory objects; 4652 objects reachable through local links; 6425 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
 
 ## Understand the present claim
 
@@ -86,7 +86,7 @@ Reachability measures what the declared entrances actually expose through local 
 | syntheses | 4 | 4 | 206.2 KiB | current and thesis-scale interpretive surfaces |
 | tests | 14 | 3 | 74.9 KiB | repository and publication invariants |
 | tooling | 125 | 20 | 3.6 MiB | generation, audit, migration, and publication utilities |
-| verification | 1920 | 1657 | 6.3 MiB | executable certificates and verification navigation |
+| verification | 1918 | 1657 | 6.3 MiB | executable certificates and verification navigation |
 
 ## Structural contract
 
