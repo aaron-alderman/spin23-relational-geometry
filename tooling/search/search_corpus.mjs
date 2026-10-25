@@ -154,7 +154,6 @@ function extractClaimUnits(text, path) {
         lowerText: normalized.toLowerCase(),
         length: Math.max(unitTokens.length, 1),
         counts,
-        tokenSet: new Set(counts.keys()),
         claimSha256: createHash("sha256").update(`${path}\0${start}\0${endLine}\0${value}`).digest("hex"),
       });
     }
@@ -331,7 +330,7 @@ function buildIndex(root) {
   const claimDocumentFrequency = new Map();
   const claimUnitIdsByToken = new Map();
   for (const unit of claimUnits) {
-    for (const token of unit.tokenSet) {
+    for (const token of unit.counts.keys()) {
       claimDocumentFrequency.set(token, (claimDocumentFrequency.get(token) ?? 0) + 1);
       if (!claimUnitIdsByToken.has(token)) claimUnitIdsByToken.set(token, []);
       claimUnitIdsByToken.get(token).push(unit);
@@ -342,18 +341,16 @@ function buildIndex(root) {
     for (const context of document.linkContexts) {
       const targetDocumentId = pathToId.get(context.targetPath);
       if (targetDocumentId === undefined || targetDocumentId === document.id) continue;
-      linkContexts.push({
-        ...context,
-        sourceDocumentId: document.id,
-        targetDocumentId,
-        sourcePath: document.path,
-        targetPath: context.targetPath,
-      });
+      context.sourceDocumentId = document.id;
+      context.targetDocumentId = targetDocumentId;
+      context.sourcePath = document.path;
+      linkContexts.push(context);
     }
+    delete document.linkContexts;
   }
   const linkContextDocumentFrequency = new Map();
   const linkContextsByToken = new Map();
-  for (const context of linkContexts) for (const token of context.unit.tokenSet) {
+  for (const context of linkContexts) for (const token of context.unit.counts.keys()) {
     linkContextDocumentFrequency.set(token, (linkContextDocumentFrequency.get(token) ?? 0) + 1);
     if (!linkContextsByToken.has(token)) linkContextsByToken.set(token, []);
     linkContextsByToken.get(token).push(context);
@@ -486,7 +483,7 @@ function distributionalExpansion(index, tokens) {
     if (!units.length) continue;
     const cooccurrence = new Map();
     for (const unit of units) {
-      for (const candidate of unit.tokenSet) {
+      for (const candidate of unit.counts.keys()) {
         if (candidate === sourceToken || tokens.includes(candidate)) continue;
         cooccurrence.set(candidate, (cooccurrence.get(candidate) ?? 0) + 1);
       }
