@@ -170,6 +170,13 @@ function extractClaimUnits(text, path) {
       flush(index);
       continue;
     }
+    // Markdown lists and tables often contain many independent claims without
+    // blank lines between them.  Treating the whole block as one passage made
+    // navigation maps look semantically relevant to almost every query and
+    // produced receipts spanning hundreds of lines.  Start a new bounded unit
+    // at each structural row while retaining indented continuation lines.
+    const structuralRow = /^(?:[-*+]\s+|\d+[.)]\s+|\|)/u.test(line);
+    if (structuralRow && buffer.length) flush(index);
     if (start === null) start = index + 1;
     buffer.push(line);
   }
@@ -308,7 +315,12 @@ function buildIndex(root) {
   });
   const pathToId = new Map(documents.map(document => [document.path, document.id]));
   const documentFrequency = new Map();
-  for (const document of documents) for (const token of document.counts.keys()) documentFrequency.set(token, (documentFrequency.get(token) ?? 0) + 1);
+  const documentIdsByToken = new Map();
+  for (const document of documents) for (const token of document.counts.keys()) {
+    documentFrequency.set(token, (documentFrequency.get(token) ?? 0) + 1);
+    if (!documentIdsByToken.has(token)) documentIdsByToken.set(token, []);
+    documentIdsByToken.get(token).push(document.id);
+  }
   const claimUnits = documents.flatMap(document => document.claimUnits.map(unit => ({ ...unit, documentId: document.id })));
   const claimDocumentFrequency = new Map();
   const claimUnitIdsByToken = new Map();
@@ -334,7 +346,12 @@ function buildIndex(root) {
     }
   }
   const linkContextDocumentFrequency = new Map();
-  for (const context of linkContexts) for (const token of context.tokenSet) linkContextDocumentFrequency.set(token, (linkContextDocumentFrequency.get(token) ?? 0) + 1);
+  const linkContextsByToken = new Map();
+  for (const context of linkContexts) for (const token of context.tokenSet) {
+    linkContextDocumentFrequency.set(token, (linkContextDocumentFrequency.get(token) ?? 0) + 1);
+    if (!linkContextsByToken.has(token)) linkContextsByToken.set(token, []);
+    linkContextsByToken.get(token).push(context);
+  }
   const adjacency = documents.map(() => new Map());
   const connect = (from, to, weight) => {
     if (from === to) return;
@@ -348,6 +365,10 @@ function buildIndex(root) {
       connect(target, document.id, 0.35);
     }
   }
+  const graphRows = adjacency.map(edges => {
+    const entries = [...edges];
+    return { entries, totalWeight: entries.reduce((sum, [, weight]) => sum + weight, 0) };
+  });
   const index = {
     root: resolvedRoot,
     documents,
@@ -355,10 +376,12 @@ function buildIndex(root) {
     claimUnitIdsByToken,
     claimDocumentFrequency,
     linkContexts,
+    linkContextsByToken,
     linkContextDocumentFrequency,
     documentFrequency,
+    documentIdsByToken,
     vocabulary: [...documentFrequency.keys()],
-    adjacency,
+    graphRows,
     contentSha256: contentHash.update(`evidence-spine\0${evidenceSpine.sha256 ?? "missing"}`).digest("hex"),
     evidenceSpineSha256: evidenceSpine.sha256,
     averageLength: documents.reduce((sum, document) => sum + document.length, 0) / Math.max(documents.length, 1),
@@ -424,7 +447,11 @@ function lexicalScores(index, tokens, rawQuery) {
   const n = index.documents.length;
   const k1 = 1.35;
   const b = 0.72;
-  for (const document of index.documents) {
+  const candidateIds = tokens.length
+    ? new Set(tokens.flatMap(token => index.documentIdsByToken.get(token) ?? []))
+    : new Set(index.documents.map(document => document.id));
+  for (const id of candidateIds) {
+    const document = index.documents[id];
     let score = 0;
     for (const token of tokens) {
       const tf = document.counts.get(token) ?? 0;
@@ -500,7 +527,10 @@ function linkContextScores(index, tokens, rawQuery) {
   const k1 = 1.2;
   const b = 0.68;
   const phrase = rawQuery.trim().toLowerCase();
-  for (const context of index.linkContexts) {
+  const candidates = tokens.length
+    ? new Set(tokens.flatMap(token => index.linkContextsByToken.get(token) ?? []))
+    : new Set(index.linkContexts);
+  for (const context of candidates) {
     let score = 0;
     for (const token of tokens) {
       const tf = context.counts.get(token) ?? 0;
@@ -543,11 +573,15 @@ function claimLevelScores(index, tokens, rawQuery, expansion) {
     const denominator = tf + k1 * (1 - b + b * unit.length / index.averageClaimLength);
     return sum + item.weight * idf * (tf * (k1 + 1)) / denominator;
   }, 0);
-  for (const unit of index.claimUnits) {
+  const scoringTokens = [...tokens, ...expansion.map(item => item.token)];
+  const candidates = scoringTokens.length
+    ? new Set(scoringTokens.flatMap(token => index.claimUnitIdsByToken.get(token) ?? []))
+    : new Set(index.claimUnits);
+  const boundaryRequested = /\b(?:open|boundary|gate|limit|fail|falsif|obstruction|no-go)\b/iu.test(rawQuery);
+  for (const unit of candidates) {
     let directScore = scoreTokens(unit, tokens.map(token => ({ token, weight: 1 })));
     if (phrase.length >= 4 && unit.lowerText.includes(phrase)) directScore += 3;
     const semanticScore = scoreTokens(unit, expansion.map(item => ({ token: item.token, weight: Math.min(0.45, item.weight) })));
-    const boundaryRequested = /\b(?:open|boundary|gate|limit|fail|falsif|obstruction|no-go)\b/iu.test(rawQuery);
     const roleMultiplier = boundaryRequested && ["boundary", "falsifier", "status"].includes(unit.role) ? 1.12 : 1;
     directScore *= roleMultiplier;
     const total = directScore + semanticScore;
@@ -600,13 +634,13 @@ function personalizedPageRank(index, teleport, mixing, iterations = 160, toleran
     for (let i = 0; i < size; i += 1) next[i] = mixing * teleport[i];
     let dangling = 0;
     for (let source = 0; source < size; source += 1) {
-      const edges = index.adjacency[source];
-      if (!edges.size) {
+      const row = index.graphRows[source];
+      if (!row.entries.length) {
         dangling += rank[source];
         continue;
       }
-      const totalWeight = [...edges.values()].reduce((sum, value) => sum + value, 0);
-      for (const [target, weight] of edges) next[target] += (1 - mixing) * rank[source] * weight / totalWeight;
+      const propagated = (1 - mixing) * rank[source] / row.totalWeight;
+      for (const [target, weight] of row.entries) next[target] += propagated * weight;
     }
     if (dangling) for (let i = 0; i < size; i += 1) next[i] += (1 - mixing) * dangling * teleport[i];
     let delta = 0;
@@ -646,7 +680,7 @@ export function searchCorpus({ root = process.cwd(), query, limit = 12, profile 
   const lexicalWeight = 1 - graphWeight - claimWeight - semanticWeight;
   const method = {
     lexical: "BM25-style weighted title, heading, path and body relevance",
-    claim: "best bounded Markdown claim/paragraph BM25 relevance with exact line and byte-derived identity",
+    claim: "best structurally bounded Markdown paragraph, list item or table row BM25 relevance with exact line and byte-derived identity",
     semantic: "confidence-gated corpus-local distributional expansion plus exact cross-reference passage bridges; no external embedding model",
     graph: "personalized PageRank over local Markdown links with 0.35 reverse-navigation edges",
     finalWeights: { lexical: lexicalWeight, claim: claimWeight, semantic: semanticWeight, graph: graphWeight },

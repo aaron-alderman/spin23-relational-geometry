@@ -40,7 +40,16 @@ test("claim-level and cross-reference retrieval exposes exact passage identity w
   assert.equal(target.semanticBridge?.targetPath, target.path);
   assert.match(target.semanticBridge?.bridgeSha256 ?? "", /^[0-9a-f]{64}$/u);
   assert.ok(target.semanticBridge.lineStart >= 1);
+  assert.ok(target.semanticBridge.lineEnd - target.semanticBridge.lineStart <= 8, "bridge receipts must remain bounded passages rather than whole navigation lists");
+  assert.match(result.method.claim, /list item|table row/iu);
   assert.deepEqual(Object.keys(result.method.finalWeights), ["lexical", "claim", "semantic", "graph"]);
+});
+
+test("warm retrieval is byte-for-byte deterministic after sparse candidate evaluation", () => {
+  const options = { root, query: "global detector identification phase reference", limit: 10, profile: "audit" };
+  const first = searchCorpus(options);
+  const second = searchCorpus(options);
+  assert.deepEqual(second, first);
 });
 
 test("graph propagation surfaces linked context while preserving declared status", () => {
