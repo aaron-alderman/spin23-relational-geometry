@@ -6,7 +6,7 @@ This is a generated atlas, not a claim of truth or completeness. Its machine-rea
 
 **Authority boundary.** This atlas reports repository structure and declared epistemic surfaces. It does not promote claims, replace source evidence, or grant publication, corpus-admission, runtime, or deployment authority.
 
-**Coverage.** 16 declared roots across 4 routes; 6423 retained inventory objects; 4650 objects reachable through local links; 6423 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
+**Coverage.** 16 declared roots across 4 routes; 6426 retained inventory objects; 4652 objects reachable through local links; 6426 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
 
 ## Understand the present claim
 
@@ -77,7 +77,7 @@ Reachability measures what the declared entrances actually expose through local 
 | evidence | 611 | 495 | 13.8 MiB | data, figures, and retained observations |
 | generated-publication | 600 | 12 | 12.2 MiB | generated deployable reading surfaces |
 | governance | 2 | 1 | 7.7 KiB | repository and publication governance |
-| integrations | 273 | 3 | 19.9 MiB | application and publication boundary packets |
+| integrations | 275 | 5 | 19.9 MiB | application and publication boundary packets |
 | legal | 2 | 2 | 54.0 KiB | legal notices and policy |
 | programmes | 769 | 548 | 37.5 MiB | bounded research programmes, registers, and closure work |
 | reader-editions | 498 | 317 | 2.7 MiB | curated reader-facing editions |
@@ -86,7 +86,7 @@ Reachability measures what the declared entrances actually expose through local 
 | syntheses | 4 | 4 | 206.2 KiB | current and thesis-scale interpretive surfaces |
 | tests | 14 | 3 | 74.9 KiB | repository and publication invariants |
 | tooling | 125 | 20 | 3.6 MiB | generation, audit, migration, and publication utilities |
-| verification | 1918 | 1657 | 6.3 MiB | executable certificates and verification navigation |
+| verification | 1919 | 1657 | 6.3 MiB | executable certificates and verification navigation |
 
 ## Structural contract
 
