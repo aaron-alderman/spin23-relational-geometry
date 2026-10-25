@@ -66,9 +66,11 @@ An external blocker is admissible at the endpoint only if it records the exact m
 
 The [residual frontier boundary](residual_frontier_exhaustion_boundary_v1.md) establishes **current-input computational exhaustion**: no maintained nonclosed topic presently has every input, bounded task, independent verifier and stopping rule needed for another evidential repository calculation. It is a valid milestone beneath this contract, not the endpoint.
 
+The first item is now instantiated by the [physics–mathematics adjacency candidate register](physics_math_adjacency_candidates_v1.md): 518 topic-level candidate questions have been generated across all 51 maintained topics and all twelve relation families. All begin unreviewed. This is a measured queue, not evidence that 518 relationships exist, and claim-family/object-level expansion remains downstream.
+
 The immediate programme is therefore:
 
-1. generate the complete candidate adjacency register;
+1. disposition the 518 normalized topic-level adjacency candidates, then expand and deduplicate at claim-family and object level;
 2. create terminal-neighbourhood certificates for every closed, killed, blocked and exhausted branch;
 3. upgrade the existing experiment atlas to the three-decision programme contract;
 4. build theory, literature and implication audits at claim and branch level;

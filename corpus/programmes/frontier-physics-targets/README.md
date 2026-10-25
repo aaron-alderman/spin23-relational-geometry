@@ -7,6 +7,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 ## Canonical artifacts
 
 - [Corpus completion exit criteria](corpus_completion_exit_criteria_v1.md) — durable nine-gate target for dated physics–mathematics saturation; explicitly places current-input computational exhaustion below corpus completion.
+- [Physics–mathematics adjacency candidates](physics_math_adjacency_candidates_v1.md) — generated first-layer EXIT-01 universe crossing every maintained topic with the applicable relation families; generation is non-evidential until each candidate is dispositioned.
 - [Frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md) — current whole-corpus result, frontier shape and ranked next tranches.
 - [Finesse technology pathway](finesse_technology_pathway_v1.md) — converts certificate-preserving descent, detector lifting and memory closure into a 90-day launch, a shared finesse device and a strict anomaly-to-new-physics escalation ladder.
 - [PageRank, Perron selection and the finesse trade-off](page_rank_perron_selector_bridge_v1.md) — exact control model for stationary-family collapse, explicit selector provenance, contraction and the price paid in structural fidelity.
@@ -40,6 +41,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Residual programme verifier](../../../verification/frontier-physics-targets/verify_residual_programme_gate_audit.mjs) — ensures every remaining matching programme file has a queue mapping or separate owner.
 - [Full-corpus census verifier](../../../verification/frontier-physics-targets/verify_full_corpus_gate_census.mjs) — rescans the complete corpus scope, checks source hashes and proves exact record equality, valid topic references and zero unresolved owners.
 - [Completion-contract verifier](../../../verification/frontier-physics-targets/verify_corpus_completion_exit_criteria.mjs) — enforces the nine simultaneous exit gates, finite adjacency universe, terminal-neighbourhood protocol, experiment decision layers and non-completion status while any gate remains open.
+- [Adjacency-candidate verifier](../../../verification/frontier-physics-targets/verify_physics_math_adjacency_candidates.mjs) — proves exact topic/area/family coverage, validates evidence-bearing dispositions and refuses EXIT-01 closure while any candidate remains unreviewed.
 
 ## Scope
 
