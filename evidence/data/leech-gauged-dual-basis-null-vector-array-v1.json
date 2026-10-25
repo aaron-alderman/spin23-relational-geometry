@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "leech-gauged-dual-basis-null-vector-array-v1",
+  "date": "2026-10-25",
+  "inputs": ["leech-explicit-k-matrix-v1", "leech-unimodular-dual-basis-compiler-v1", "local-z2-inversion-gauge-module-v1"],
+  "edgeBasis": {
+    "topologicalMatrix": "K inverse on right movers and minus K inverse on left movers",
+    "channels": 24
+  },
+  "gaugedBond": {
+    "oneGaugeSignPerWireBond": true,
+    "interaction": "H_gap=-sum_(y,I) u_I cos(phi_prime_L,y+1,I - s_y phi_prime_R,y,I)",
+    "nullVector": "lambda_(I,s)=(-s e_I on R_y, +e_I on L_y+1)",
+    "mutualNullIdentity": "lambda_(I,s)^T [K direct-sum (-K)] lambda_(J,s)=(s^2-1)K_IJ=0"
+  },
+  "localGaugeAction": {
+    "wire": "all 24 phi_prime_R/L,y map to their negatives",
+    "links": "both adjacent signs s_(y-1),s_y flip",
+    "coherence": "one sign acts on all 24 channels; independent per-channel signs are forbidden",
+    "invariance": "a left endpoint transformation leaves the cosine argument fixed; a right endpoint transformation negates it, leaving cosine unchanged"
+  },
+  "fluxSectors": {
+    "sPlus": "ordinary channel matching",
+    "sMinus": "inversion branch cut",
+    "dynamicalTerm": "-Gamma sum_y X_y permits branch-cut fluctuations"
+  },
+  "promotion": {
+    "closes": "continuum-local coherent coupling of one dynamical inversion gauge field to all 24 Leech edge channels while retaining the commuting null-vector gap",
+    "open": "microscopic hardware realization, modular-sector tomography, and proof that the infrared fixed point has the complete V_Lambda^+ orbifold data"
+  }
+}

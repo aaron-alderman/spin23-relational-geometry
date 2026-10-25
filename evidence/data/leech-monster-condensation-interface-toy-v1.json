@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "leech-monster-condensation-interface-toy-v1",
+  "date": "2026-10-25",
+  "toyCarrier": {
+    "model": "toric/surface-code patch with alternating e-condensed and m-condensed boundary segments",
+    "junctionType": "electric-magnetic boundary-condition-changing twist",
+    "junctionQuantumDimension": 1.4142135623730951,
+    "fusion": "sigma times sigma = 1 + psi"
+  },
+  "fusionSpaceScaling": [
+    {"twists": 2, "fixedTotalParityDimension": 1},
+    {"twists": 4, "fixedTotalParityDimension": 2},
+    {"twists": 6, "fixedTotalParityDimension": 4},
+    {"twists": 8, "fixedTotalParityDimension": 8},
+    {"twists": 10, "fixedTotalParityDimension": 16}
+  ],
+  "fourTwistProtocol": {
+    "majoranaRepresentation": [
+      "gamma1=X tensor I",
+      "gamma2=Y tensor I",
+      "gamma3=Z tensor X",
+      "gamma4=Z tensor Y"
+    ],
+    "fixedParityBasis": ["|00>", "|11>"],
+    "braidRule": "U_i=(I+gamma_i gamma_{i+1})/sqrt(2)",
+    "tests": [
+      "unitarity of every U_i",
+      "Yang-Baxter braid relation U1 U2 U1 = U2 U1 U2",
+      "noncommutativity of adjacent braids",
+      "two-dimensional four-twist fusion space",
+      "fusion-parity readout before and after code deformation"
+    ]
+  },
+  "controls": [
+    "uniform e-condensed boundary has no e/m junction fusion qubit",
+    "uniform m-condensed boundary has no e/m junction fusion qubit",
+    "removing a pair of junctions halves the unconstrained fusion-space dimension",
+    "local perturbations that do not close the gap may split finite-size states only exponentially"
+  ],
+  "promotionBoundary": {
+    "provedByToy": "the e/m condensation fork and sqrt(2) interface admit local stabilizer-code preparation, fusion readout and braiding",
+    "notProvedByToy": "the parent chiral algebra is V_Lambda^+, the m-condensed edge is V-natural, or the twist is the Monster 2A defect",
+    "nextJoin": "place the same boundary selection and interface protocol on the Leech coupled-wire carrier, then demand the zero-current and J-character gates"
+  }
+}

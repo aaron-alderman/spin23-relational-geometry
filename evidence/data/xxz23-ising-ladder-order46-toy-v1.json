@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "xxz23-ising-ladder-order46-toy-v1",
+  "date": "2026-10-25",
+  "model": {
+    "sitesPerLeg": 4,
+    "qubits": 8,
+    "hilbertDimension": 256,
+    "beta": 1,
+    "xxzAnisotropy": 0.9906859460363308,
+    "isingExchange": 1,
+    "isingField": 1,
+    "interaction": "lambda sum_j sigmaZ_j tauZ_j",
+    "order23": "g=exp(2 pi i Q_sigma/23)",
+    "involution": "z=product_j tauZ_j",
+    "order46Root": "h=g^12 z"
+  },
+  "exactSymmetry": {
+    "commutators": ["[H,g]=0", "[H,z]=0", "[H,h]=0"],
+    "powerRelations": ["h^2=g", "h^23=z", "h^46=1"],
+    "sectorCount": 10
+  },
+  "connectedRatios": [
+    {"lambda": 0, "re": 0.9999999999999999, "im": 1.1310880316649462e-16, "magnitude": 0.9999999999999999},
+    {"lambda": 0.2, "re": 0.9994441511071618, "im": 0.020757132785165618, "magnitude": 0.9996596769620031},
+    {"lambda": 0.5, "re": 0.9962383828304382, "im": 0.06233548330025318, "magnitude": 0.9981866698683581},
+    {"lambda": 1, "re": 0.97587232111494, "im": 0.21504376620451296, "magnitude": 0.999285048673141},
+    {"lambda": 2, "re": 1.158991873082477, "im": 0.9877789573706003, "magnitude": 1.5228162825815132}
+  ],
+  "scalingBoundary": {
+    "publishedTyMpoMinimumPeriodicLength": 46,
+    "smallToyRealizesTyMpo": false,
+    "nextCalculation": "evaluate the same sector-resolved traces at L=46 with MPS/MPO or transfer-matrix methods and independently extract the associator"
+  },
+  "verdict": "a local one-Hamiltonian order-46 trace architecture exists, but the small instance is a protocol control and neither matches the Monster curve nor realizes the published commensurate TY MPO"
+}

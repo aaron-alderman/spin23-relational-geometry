@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "monster-order46-cyclic-factorization-no-go-v1",
+  "date": "2026-10-25",
+  "group": {
+    "ambient": "C46",
+    "factors": ["C2", "C23"],
+    "coprime": true,
+    "crtMap": "x mod 46 -> (x mod 2, x mod 23)"
+  },
+  "cohomology": {
+    "ambient": "H^3(C46,U(1)) = Z46",
+    "factorized": "H^3(C2 x C23,U(1)) = Z2 x Z23",
+    "mixedTerm": "Z_gcd(2,23) = 0",
+    "restriction": "p -> (p mod 2, p mod 23)",
+    "restrictionIsIsomorphism": true,
+    "consequence": "no nontrivial order-46 three-cocycle is invisible on both factor subgroups"
+  },
+  "cyclicCocycle": {
+    "formula": "omega_p(a,b,c)=exp(2 pi i p a floor((b+c)/46)/46)",
+    "parameterRange": [0, 45],
+    "order2Generator": 23,
+    "order23Generator": 2
+  },
+  "monsterPowerMap": [
+    {
+      "rootClasses": ["46A", "46B"],
+      "squareClasses": ["23A", "23B"],
+      "twentyThirdPower": "2B",
+      "linkedLayer": "Griess Sym24 Jordan fixed sector"
+    },
+    {
+      "rootClasses": ["46C", "46D"],
+      "squareClasses": ["23A", "23B"],
+      "twentyThirdPower": "2A",
+      "linkedLayer": "Ising-pair Norton-Sakuma affine-E8 atlas"
+    }
+  ],
+  "connectedObservable": {
+    "definition": "R(g,z;tau)=Z(g,z;tau) Z(1,1;tau)/(Z(g,1;tau) Z(1,z;tau))",
+    "commutingPair": "g=h^2, z=h^23",
+    "factorizedNull": "R=1",
+    "logConnectedForm": "K=log R",
+    "factorizedLogNull": "K=0",
+    "requiredControls": [
+      "same normalization and modular frame for all four traces",
+      "denominators bounded away from zero",
+      "factorized C2 tensor C23 positive control",
+      "blind comparison of 46AB and 46CD branches",
+      "phase uncertainty propagated before taking a logarithm"
+    ],
+    "interpretation": "R not equal to 1 witnesses cross-layer state or operator coupling, not by itself Monster provenance",
+    "monsterPredictionStatus": "the cyclic genus-one target is a modular transport of known order-46 Hauptmoduln and is numerically benchmarked at tau=i; cross-grade VOA and genus-two targets remain open"
+  },
+  "verdict": "order 46 proves a shared Monster group carrier but cannot by cyclic cohomology alone prove a non-factorized physical junction; the connected four-trace ratio is the minimal discriminating observable"
+}

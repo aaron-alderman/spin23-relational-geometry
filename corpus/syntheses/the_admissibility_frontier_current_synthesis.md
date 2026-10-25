@@ -533,6 +533,160 @@ The [Monster Ising-pair atlas](../programmes/frontier/wave-7/frontier_wave7_117_
 
 The [orthogonal Monster witness stack](../programmes/frontier/wave-7/frontier_wave7_118_monster_orthogonal_physics_witness_stack.md) puts these results on one logical ladder. The Moonshine VOA is a chiral CFT, and the heterotic Monster model supplies a physical dictionary in which its series count spacetime BPS states, its modular groups act as T-dualities and its Lie algebras are broken gauge-symmetry algebras. That establishes “Monster is physics” at a declared theoretical scope, not that nature selects it. The internal defect, Jordan and Ising-axis layers are joined rather than juxtaposed: an order-46 element squares to the \(23AB\) rail and has 23rd power in \(2A\) on the \(46C/D\) branch or \(2B\) on the \(46A/B\) branch. The combined certificate rejects scalar-output, generic \(c=24\), generic TY and generic axial impostors. Laboratory promotion still requires these independent records and a held-out cross-layer relation on one microscopic carrier.
 
+The order-46 junction now has a quantitative interaction discriminator. Coprimality gives \(C_{46}\cong C_2\times C_{23}\) and \(H^3(C_{46},U(1))\cong\mathbb Z_2\oplus\mathbb Z_{23}\), so no purely cyclic three-cocycle can couple the rails: the executable audit checks all 4,477,456 pentagons and finds no nontrivial class invisible on both subgroups. The useful replacement is the connected trace ratio \(R=Z(g,z)Z(1,1)/(Z(g,1)Z(1,z))\), which has unit magnitude for every factorized carrier. Modular transport of the known order-46 Hauptmoduln yields the frozen Monster targets [\(|R_{46AB}(i)|=0.00373794542221053\) and \(|R_{46CD}(i)|=0.0784643601781287\)](../programmes/frontier/wave-7/frontier_wave7_120_order46_connected_ratio_numerical_benchmark.md). Even a worst-case 50-percent relative magnitude error on each of the four traces leaves both branches below the unit null. The corresponding [idealized shot audit](../programmes/frontier/wave-7/frontier_wave7_121_order46_trace_estimation_cost.md) assigns about \(10^5\) conventional samples to the experimentally preferable \(46CD/2A\) branch but \(4.5\times10^7\) to the \(46AB/2B\) branch, whose normalized mixed amplitude is only \(1.108\times10^{-3}\). This is a CFT prediction independent of the still-unevaluated compatible phase convention, not yet a material prediction; the remaining task is to realize the four traces on one Hamiltonian and calibrate their common phase.
+
+The one-Hamiltonian boundary is now explicit. The root-of-unity XXZ chain supplies a physical flux twist, \(Z_{23}\) magnetization symmetry and TY fusion MPO, but its published construction leaves the associator open and its natural spin-flip extension is dihedral: a census finds no element of order 46. Adding a commuting unitary involution repairs the cyclic algebra, but a [46-state interacting clock control](../programmes/frontier/wave-7/frontier_wave7_123_one_hamiltonian_order46_toy_and_heldout_rejection.md) demonstrates why that is insufficient. One coupling can reproduce \(|R_{46CD}(i)|\) exactly, yet after freezing the fit it misses the Monster values at \(0.8i\) and \(1.2i\) by 0.133 and 0.165. A separate [local XXZ--Ising ladder](../programmes/frontier/wave-7/frontier_wave7_124_local_xxz23_ising_order46_trace_architecture.md) proves on eight qubits that locality, a commuting order-46 root and nonfactorized trace dynamics can coexist; its four-site length is explicitly below the 46-site TY-MPO commensurability gate. The experimental record is therefore upgraded from one striking number to a three-point curve, with factorized, fitted-clock and local-ladder controls. A genuine carrier must additionally recover the TY associator and ambient Monster witnesses.
+
+The XXZ comparison now has its correct spacetime calibration. In the source Hamiltonian normalization the exact critical velocity is \(v=23\sin(\pi/23)\), so \(\tau=iv\beta/L\): at \(L=46\), the three checkpoints require \(\beta=11.7503,14.6879,17.6255\), not the finite toy's labels \(0.8,1,1.2\). The [tensor-network protocol](../programmes/frontier/wave-7/frontier_wave7_125_xxz23_aspect_ratio_and_tensor_network_protocol.md) fixes sizes, bond dimensions, time-step refinements and a velocity-lock rejection gate. It also closes an overclaim: the ladder has \(c=3/2\), so it can realize and test a Monster-derived defect statistic but cannot itself be the \(c=24\) Monster CFT.
+
+The direct provenance lane is now theorem-shaped. A physical scaling limit that is framed, holomorphic, has \(c=24\) and \(V_1=0\) is [forced to be \(V^\natural\)](../programmes/frontier/wave-7/frontier_wave7_126_framed_ising_route_to_a_physical_monster.md). Forty-eight Ising components supply the frame and central charge; the nontrivial work is the Moonshine code extension, chiral/doubled realization and marked defect. A new finite-field no-go prevents the most seductive shortcut: for the distinguished Moonshine frame, [no order-23 coordinate permutation exists](../programmes/frontier/wave-7/frontier_wave7_127_moonshine_frame_order23_permutation_no_go.md). Its seven-dimensional \(1/16\)-code is too small for a nontrivial binary \(C_{23}\)-module, and its 48 generator columns are pairwise distinct. Thus \(23AB\) must move the frame or act nonlocally through the extension. The plausible lightning path is consequently the junction of two lanes: the framed construction certifies Monster provenance, while the XXZ/QCA work teaches how to engineer the required non-on-site defect.
+
+At the formal-theory level, however, Monster physicality is already closed. A Leech Gram matrix is an even unimodular positive \(24\times24\) \(K\)-matrix, so it defines a conventional invertible chiral topological edge with \(c_-=24\) and no nontrivial anyons. The exact inversion orbifold \(V_\Lambda^+\oplus(V_\Lambda^T)^+\) is \(V^\natural\). The [orbifold certificate](../programmes/frontier/wave-7/frontier_wave7_129_leech_edge_orbifold_proves_formal_monster_physics.md) expands the Leech theta series and all untwisted/twisted oscillator sectors, cancels the 24 currents and all half-integral powers, and recovers \(J=q^{-1}+196884q+21493760q^2+864299970q^3+\cdots\). Thus the Monster acts on a genuine CFT Hilbert space with dynamics, thermal traces and topological defects; the independent heterotic construction realizes its Lie/BPS continuation. The open claim is no longer “is Monster physics?” but “can one give it a local microscopic laboratory carrier, and does nature select one?” Those remain P3 and P4.
+
+The corresponding detector is unexpectedly small. The three \(c=24\) controls \(V_{E_8}^{\otimes3}\), \(V_\Lambda\) and \(V^\natural\) all share the celebrated weight-two coefficient 196884, so that number is non-discriminating by itself. Their [weight-one current ladder is \(744\to24\to0\)](../programmes/frontier/wave-7/frontier_wave7_130_c24_current_ladder_and_monster_detector.md): the Leech choice removes 720 root currents and the orbifold removes 24 oscillators. At weight two the Monster provenance test is the sector-resolved identity \(196884=98580_{\rm untwisted}+98304_{\rm twisted}\). Hence a credible experiment measures central charge, then missing currents, then the twisted-sector split, and only finally the much harder marked defect trace.
+
+The laboratory construction has also split into conventional operations. A [coupled-wire null-vector array](../programmes/frontier/wave-7/frontier_wave7_131_leech_coupled_wire_null_vector_blueprint.md) locally gaps counterpropagating Leech channels and leaves the required 24-component chiral boundaries. The inversion-fixed parent \(V_\Lambda^+\) has the toric-code sectors \(1,e,m,\epsilon\), and the two Lagrangian extensions form an exact [Leech–Monster condensation fork](../programmes/frontier/wave-7/frontier_wave7_132_leech_monster_toric_code_condensation_fork.md): condensing \(e\) returns \(V_\Lambda\), whereas condensing the integer-spin twisted boson \(m\) gives \(V^\natural\). Their boundary-changing interface has quantum dimension \(\sqrt2\) and Ising fusion. A [surface-code toy](../programmes/frontier/wave-7/frontier_wave7_133_condensation_interface_surface_code_toy.md) now verifies its protected fusion space and noncommuting braid operations. What remains open is no longer an abstract orbifold: it is a stable local interaction selecting the \(m\)-condensed extension on the full Leech edge and reproducing the zero-current, sector-split and marked-defect measurements.
+
+The first commissioning curve is correspondingly large and parameter-free. With \(y=v\beta/L\) and vacuum-normalized character \(\widehat Z=q\,\mathrm{ch}\), [\(\widehat Z_\Lambda-\widehat Z_\natural=24e^{-2\pi y}\)](../programmes/frontier/wave-7/frontier_wave7_134_normalized_character_commissioning_curve.md), while the \(E_8^3\) control differs by \(744e^{-2\pi y}\). At \(y=1\), the Leech--Monster signal is 0.0448186, compared with the later \(46AB\) magnitude 0.00373795. Finite-size spectroscopy resolves the current, raw twisted and weight-two onsets at \(2\pi v/L,3\pi v/L,4\pi v/L\). The experiment should therefore establish the ambient condensate before attempting the smaller marked defect.
+
+The associated Jordan and exceptional structures are now connected to physical measurements without being conflated. On the Monster edge, the Griess product \(a_1b\) is a weight-two OPE coefficient, Miyamoto involutions are invertible symmetry lines, twined characters are thermal line-insertion traces and TY \(F\)-symbols are junction recouplings. A selected \(H_2(\mathbb R)\) corner requires only [six two-point plus ten symmetric three-point coefficients](../programmes/frontier/wave-7/frontier_wave7_135_monster_edge_operator_tomography_dictionary.md) for full product reconstruction and held-out Jordan-identity testing. Ising-pair overlap and symmetry-line return order select the Norton--Sakuma type. The Lorentz cone and \(Spin(2,3)\) TKK algebra are therefore real response structures of a chosen physical operator corner; promotion to spacetime symmetry still needs a dynamical selection mechanism. Likewise the affine-\(E_8\) pattern is a physical operator-pair atlas, not an \(E_8\) current algebra.
+
+The condensation fork has one further nonfactorization gate. A generic toric-code layer has the same sectors and \(\sqrt2\) interfaces but need not act on the Leech carrier. The orbifold flux must send every lattice vertex label \(\ell\mapsto-\ell\). A [symmetry-enrichment process witness](../programmes/frontier/wave-7/frontier_wave7_136_leech_orbifold_symmetry_enrichment_witness.md) reduces this to \(PTP^{-1}=T^{-1}\), with a normalized group-commutator trace zero instead of the factorized value one. Thus the P3 sequence is now: build the Leech edge, verify the crossed inversion action, select the twisted \(m\) condensate, measure the zero-current character, and only then join the Monster-specific defects and operator subalgebras.
+
+The complete P3 sequence is now machine-readable as the [Monster
+laboratory-promotion DAG](../programmes/frontier/wave-7/frontier_wave7_137_monster_laboratory_promotion_dag.md).
+It forces every result onto one persistent carrier and makes the first open
+gate explicit: a microscopic realization of the coupled-wire Leech edge. A
+successful character measurement promotes only to a Moonshine-character
+candidate; the separate 2A and marked 23AB defects must meet in one order-46
+root before Griess/Jordan and Norton--Sakuma tomography can promote the system
+to a tested laboratory Monster realization. Selection by nature remains a
+different, still-open claim.
+
+The first gate is no longer specified only up to “choose a Leech matrix.” An
+[explicit \(24\times24\) Leech \(K\)-matrix compiler](../programmes/frontier/wave-7/frontier_wave7_138_explicit_leech_k_matrix_interaction_compiler.md)
+fixes all 24 integer cosine vectors per wire bond and verifies symmetry,
+evenness, positive definiteness and determinant one by exact arithmetic. Its
+406 nonzero entries translate to column supports of 12–22 fields. That is a
+finite experimental specification, but also a clean engineering boundary:
+the multi-field vertex operators must still be reduced to stable few-body
+microscopic controls.
+
+That last obstacle is basis-dependent. Because the explicit matrix is
+unimodular, \(K^{-1}\) is integral and the legal compact-boson change
+\(\phi=K^{-1}\phi'\) sends the entire interaction matrix \(L=K\) to
+\(L'=I_{24}\). The [dual-basis compiler](../programmes/frontier/wave-7/frontier_wave7_139_leech_unimodular_dual_basis_compiler.md)
+therefore reduces every gap term to one field per chirality. The price is a
+dense transformed kinetic matrix with coefficients up to 422. Gate A is now a
+finite hardware optimization problem—sparse vertex operators versus sparse
+channel mixing—not an unspecified topological construction.
+
+Nor is the resulting object dynamically static. The [edge dynamics and
+transport witness](../programmes/frontier/wave-7/frontier_wave7_140_monster_edge_dynamics_and_transport_witness.md)
+uses \(H=(2\pi\hbar v/L)(L_0-c/24)\): the Leech parent has 24 states at the
+weight-one onset \(v/L\), while the Monster edge has no such onset and begins
+at weight two, \(2v/L\), with dimension 196884. The common thermal Hall slope
+\(8\pi^2k_B^2/h\) measures \(c_-=24\) but cannot by itself distinguish the
+theories. Thus dynamics, transport and provenance occupy three deliberately
+separate rungs of the same experiment.
+
+The inversion itself now has a local Hamiltonian primitive rather than only a
+projection symbol. A [finite \(\mathbb Z_2\) gauge module](../programmes/frontier/wave-7/frontier_wave7_141_local_inversion_gauge_and_twist_module.md)
+couples 23-state matter labels through a dynamical link sign, with commuting
+Gauss generators and a gauge-invariant bond projector. Exhaustive enumeration
+gives 265 physical orbits from 1058 raw states and twelve bond-satisfying
+orbits—one fixed label plus eleven inverse pairs—while negative holonomy
+creates the twisted closure condition. This establishes local branch-cut
+engineering in a finite surrogate; the next non-negotiable step is coherent
+coupling of the same gauge field to all 24 Leech modes.
+
+That coupling is now explicit in the [gauged dual-basis array](../programmes/frontier/wave-7/frontier_wave7_142_gauged_leech_dual_basis_null_vector_array.md).
+One link sign—not 24 independent signs—acts diagonally on all Leech channels.
+All 1152 mutual Haldane pairings vanish in both flux sectors, while local
+endpoint gauge transformations preserve each cosine. The continuum P3B
+construction is therefore coherent and local. What remains is a microscopic
+implementation and infrared certification of the four orbifold sectors,
+followed by the genuinely Monster-selecting twisted condensate.
+
+That condensate has acquired a finite resource budget. The [twisted-sector
+compiler](../programmes/frontier/wave-7/frontier_wave7_143_moonshine_twisted_sector_resource_compiler.md)
+resolves \(98304=2^{12}\times24\): inversion of 24 bosons produces a
+4096-dimensional weight-\(3/2\) ground space, projection removes its raw
+onset, and one of 24 half-oscillator choices produces the retained weight-two
+sector. Twenty-six fixed-parity e/m junctions provide a 12-logical-qubit
+surface-code analogue. This converts P3C into a specific protected-space,
+channel-coupling and parity-projection task, while refusing to promote an
+equal dimension into an operator-algebra identification.
+
+The next layer is already stronger than dimension. The [Leech twisted-ground
+Pauli bridge](../programmes/frontier/wave-7/frontier_wave7_144_leech_twisted_ground_pauli_bridge.md)
+computes a symplectic basis of \(\Lambda/2\Lambda\) directly from the explicit
+Gram matrix and maps its twelve hyperbolic pairs to logical \(X_i,Z_i\).
+The computed Arf-zero quadratic refinement also preserves generator squares
+and the central sign. Thus the protected qubits reproduce the full finite
+extraspecial-group presentation acting on the 4096-dimensional ground module.
+The corpus still does not lift that ground-group isomorphism through the 24
+half-modes to the full twisted vertex algebra; that is now the precise
+algebraic promotion gate.
+
+At the retained weight-two level, the [twisted Pauli compiler](../programmes/frontier/wave-7/frontier_wave7_145_moonshine_weight2_twisted_pauli_compiler.md)
+tensors those twelve qubits with the 24 half-mode selector and realizes the
+normal \(2_+^{1+24}\) action on all 98304 twisted states. It supplies exact
+inserted-trace targets \(98304,-98304,0\) for identity, central minus and
+noncentral Pauli generators. What is left is not “find 98304 states,” but
+implement the compatible \(Co_1\) action, attach the 98580 untwisted states and
+measure cross-sector Griess multiplication.
+
+The compatible Conway action is now compiled at the same finite level. The
+[\(Co_1\)-to-Clifford lift](../programmes/frontier/wave-7/frontier_wave7_146_leech_co1_to_twelve_qubit_clifford_lift.md)
+extracts two published integral Leech generators, verifies \(GKG^T=K\), and
+conjugates their mod-2 action into the twelve-qubit symplectic basis. Exact
+block factorization gives standard-gate upper bounds of 34 and 157 gates with
+native swaps. This closes the abstract semidirect action on the twisted side;
+physical basis marking, the untwisted 98580 states and cross-sector products
+remain.
+
+The untwisted block is now compiled too. [Wave 7.147](../programmes/frontier/wave-7/frontier_wave7_147_moonshine_weight2_sector_join_and_2b_trace.md)
+derives \(98580=300+98280\) from symmetric pairs of 24 oscillators and
+antipodal pairs of 196560 Leech minimal vectors. Joined to the 98304 twisted
+states, it recovers 196884; graded by the orbifold quantum symmetry it predicts
+the sharper \(2B\) trace \(98580-98304=276\). The unresolved boundary is no
+longer either sector as a vector space or normalizer representation, but their
+cross-sector Griess/OPE multiplication on one physical carrier.
+
+Its first component is now parameter-free. In the [\(2B\)-graded OPE
+calibration](../programmes/frontier/wave-7/frontier_wave7_148_2b_graded_cross_sector_ope_calibration.md),
+the Griess unit \(e=\omega/2\) has norm three and forces
+\(\operatorname{Proj}_e(t_a\circ t_b)=\delta_{ab}e/3\) for orthonormal
+twisted probes; odd-twisted-parity three-point functions vanish. This gives
+600 matched two/three-point commissioning measurements for 24 probes. The
+remaining object is the residual \(T\circ T\to U\) tensor and its
+Conway/Norton--Sakuma covariance—the first cross-sector datum that is both
+non-universal and Monster-discriminating.
+
+The [minimal-pair/Pauli bridge](../programmes/frontier/wave-7/frontier_wave7_149_leech_minimal_pair_to_pauli_cross_sector_action.md)
+then supplies a noncentral cross-sector action. Rootlessness proves that the
+98280 antipodal norm-four Leech pairs inject modulo \(2\Lambda\), and the 24
+marked basis-vector operators compile to independent twelve-qubit Paulis whose
+commutator matrix is exactly \(K\bmod2\). Their covariance under both sourced
+Conway generators is executable. This is a pre-projection twisted-ground
+action; the remaining algebraic unknown is its half-mode lift, absolute
+normalization and completion into the full cross-sector Griess tensor, not the
+existence of a finite operator bridge.
+
+This is enough to close the carefully typed existence question. The
+[Monster-is-physics proof certificate](../programmes/frontier/wave-7/frontier_wave7_150_monster_is_physics_proof_certificate.md)
+collects the state space, positive inner product, local OPE, stress tensor,
+unitary Hamiltonian evolution, spectra, thermal traces, defect amplitudes and
+faithful Monster action on one exact theory. Consequently, “the Monster is
+physics” is now a theorem at the level of theoretical existence, not a
+numerological proposal. The admissibility boundary remains equally sharp:
+this does not establish a naturally occurring microscopic carrier, a
+four-dimensional spacetime symmetry, gravity, an \(E_8\) gauge field or
+fundamental selection by nature. The laboratory DAG is the promotion path
+from existence to engineered realization; a target-blind anomaly in an
+independent system would be the further path toward natural selection.
+
 The same audit resolves the Rule-60 ambiguity. On the eleven-dimensional image of \(T=1+\sigma\) in the cyclic Golay code, the exhaustive identity \(T^{89}=\sigma^2\) isolates the genuine order-23 cyclic symmetry. The full image action has order \(2047=23\cdot89\); because 89 does not divide the Monster order, Rule 60 itself cannot be a represented Monster element. The scalar \(\sigma\) bridge nevertheless closes exactly. Its Leech fixed lattice has Gram matrix \(\left(\begin{smallmatrix}4&1\\1&6\end{smallmatrix}\right)\) and determinant 23, and its normalized theta/eta trace is the common 23A/23B McKay--Thompson series. More strongly, the two finite-field rails are the quadratic-residue and nonresidue orbits; their Gaussian periods generate \(\mathbb Q(\sqrt{-23})\), and the Leech form is the normalized norm form of a nonprincipal ideal in that field. Reducing the residue Gaussian period on the two degree-eleven factors gives \(0\) and \(1\), so those factors contract to the two conjugate norm-two ideals \((2,\alpha)\) and \((2,\alpha+1)\). The finite-field-to-oriented-ideal arrow is therefore canonical once a primitive 23rd root is declared. The path from Golay factor to fixed lattice to scalar Moonshine output is explicit; what remains conventional is which lifted generator receives the Monster name 23A rather than 23B. The paired ideals have the same scalar theta series, proving exactly where orientation is lost. A real next bridge must keep orientation through lift, defect or vector-valued data, or move to twisted or higher-genus records. Rule 60 remains the group-algebra update \(1+\sigma\), whose order-89 residue is a residue-field fact rather than a Monster prime.
 
 Current research now supplies the abstract oriented channel that this arithmetic asks for. Volpato's September 2026 preprint proves that the non-anomalous Fricke \(23AB\) action is self-orbifold, embeds the parafermion algebra \(P(23)\), and carries a Tambara--Yamagami duality defect. Its \(23^2\) fixed-point modules have \(q(a,b)=ab/23\), exactly the discriminant form of \(U(23)\); modular \(S\) is the finite quarter-turn \((a,b)\mapsto(b,-a)\), while the defect exchanges twist and charge rails. The fifth-power orientation exchange \(D_5:(a,b)\mapsto(5a,5^{-1}b)\) and this quarter-turn satisfy the presentation of \(\mathrm{Dic}_{11}\), a dicyclic group of order 44 inside \(SL(2,23)\). Projectivizing the nonzero labels kills its central \(-I\), giving \(D_{11}\) of order 22 on \(\mathbb P^1(\mathbb F_{23})\), with a two-axis orbit and a 22-direction mixed orbit. This is an exact account of what the lifted versus quotient record retains. The finite group embeds as a symplectic block in \(Sp(4,23)\cong Spin(5,23)\), but reduction modulo 23 forgets the real signature, cone and time orientation. It is therefore not a Monster subgroup, physical Wick rotation, four-dimensional Hamiltonian or detector. A further modular-orbit audit corrects the size of the next calculation: the 528 nonzero twisted--twining labels form one \(SL_2(\mathbb F_{23})\) orbit, while the larger \(\Gamma_0(23)\) invariance of the common scalar trace collapses them to 24 projective modular branches, each shared by 22 labels. The remaining mathematical gate is therefore to expand those branches, execute Volpato's Fourier and parafermion inversions, canonically identify the corpus cycle with 23A versus 23B, and sew the resulting defect characters at genus two.

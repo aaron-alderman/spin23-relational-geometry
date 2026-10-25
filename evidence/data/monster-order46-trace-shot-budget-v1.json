@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "monster-order46-trace-shot-budget-v1",
+  "date": "2026-10-25",
+  "point": "tau=i",
+  "normalization": "divide each trace by J(i)=984",
+  "normalizedRealAmplitudes": {
+    "mixed46AB": 0.0011080677994477893,
+    "mixed46CD": 0.02360695250163566,
+    "twisted23": 0.5442064530406433,
+    "insertion2B": 0.5447154471547554,
+    "insertion2A": 0.552845528455564
+  },
+  "samplingModel": {
+    "measurementRange": [-1, 1],
+    "estimator": "independent sample mean or Hadamard-test real component",
+    "relativeErrorPerAmplitude": 0.5,
+    "familywiseAlpha": 0.01,
+    "bonferroniAmplitudes": 5,
+    "hoeffdingFormula": "N_i=ceil(2 ln(2m/alpha)/(r |mu_i|)^2)",
+    "assumptions": [
+      "unbiased independent bounded samples",
+      "state preparation and controlled insertion errors excluded",
+      "all target representatives are real at tau=i in the declared eta convention",
+      "J(i) normalization is known rather than separately sampled",
+      "no covariance advantage or common-random-number cancellation"
+    ]
+  },
+  "shotBudget": {
+    "mixed46AB": 45008472,
+    "mixed46CD": 99163,
+    "twisted23": 187,
+    "insertion2B": 187,
+    "insertion2A": 181,
+    "total": 45108190,
+    "dominantFractionMixed46AB": 0.9977893593159025
+  },
+  "ratioGuarantee": {
+    "multiplicativeUpperFactor": 9,
+    "upperMagnitude46AB": 0.03364150879989477,
+    "upperMagnitude46CD": 0.7061792416031583,
+    "factorizedNull": 1,
+    "bothRejectNullOnSimultaneousConfidenceEvent": true
+  },
+  "coherentAlternative": {
+    "asymptoticQueryScaling": "O(1/epsilon) rather than O(1/epsilon^2)",
+    "smallestAbsoluteTolerance": 0.0005540338997238947,
+    "inverseTolerance": 1804.9437056078239,
+    "boundary": "this is an asymptotic query indicator, not a hardware gate count; controlled Gibbs preparation and insertion oracles dominate implementation"
+  },
+  "verdict": "the ratio separation is generous but conventional sampling is dominated by the small 46AB mixed amplitude; 45,108,190 idealized shots is the preregistered conservative budget"
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "moonshine-frame-code-projector-blueprint-v1",
+  "date": "2026-10-25",
+  "codes": {
+    "length": 48,
+    "Ddimension": 7,
+    "Cdimension": 41,
+    "relation": "C=D^perp",
+    "chosenDGeneratorWeights": [16, 16, 48, 24, 24, 24, 24],
+    "DweightEnumerator": {"0": 1, "16": 3, "24": 120, "32": 3, "48": 1},
+    "CminimumWeight": 4,
+    "CweightFourWords": 3300,
+    "CweightEnumerator": {
+      "0": 1,
+      "4": 3300,
+      "6": 189504,
+      "8": 5907810,
+      "10": 102156864,
+      "12": 1088684372,
+      "14": 7535996160,
+      "16": 35232581487,
+      "18": 114215080192,
+      "20": 261496913352,
+      "22": 427898196864,
+      "24": 503871835740,
+      "26": 427898196864,
+      "28": 261496913352,
+      "30": 114215080192,
+      "32": 35232581487,
+      "34": 7535996160,
+      "36": 1088684372,
+      "38": 102156864,
+      "40": 5907810,
+      "42": 189504,
+      "44": 3300,
+      "48": 1
+    }
+  },
+  "digitalProjector": {
+    "formula": "P_C=2^-7 sum_{d in D} Z^d",
+    "independentParityChecks": 7,
+    "ancillasForParallelSyndromeRound": 7,
+    "dataQubitsPerTimeSlice": 48,
+    "naiveDataAncillaEntanglingGatesPerRound": 176,
+    "projectedComputationalDimension": 2199023255552,
+    "projectorTermCount": 128
+  },
+  "implementationStages": [
+    {"id": "C0", "task": "prepare and verify the seven-check C-code projector", "status": "fully specified finite circuit layer"},
+    {"id": "C1", "task": "attach critical Ising transfer tensors to all 48 coordinates", "status": "standard components, integrated simulation open"},
+    {"id": "C2", "task": "add the 128 D-labelled simple-current/twisted sectors with the correct extension phases", "status": "open microscopic multiplication layer"},
+    {"id": "C3", "task": "verify modular closure, holomorphicity and V_1=0", "status": "open provenance gate"},
+    {"id": "C4", "task": "construct the non-permutation 23AB defect and measure twined/recoupling data", "status": "open marked-defect gate"}
+  ],
+  "antiOverclaim": [
+    "the seven stabilizer checks realize membership in C, not the full Moonshine VOA",
+    "the D-sector extension requires multiplication/intertwiner phases not encoded by the binary weight enumerator",
+    "finite-qubit parity projection does not by itself establish a chiral scaling limit",
+    "the order-23 operator is not a coordinate permutation of this frame"
+  ]
+}

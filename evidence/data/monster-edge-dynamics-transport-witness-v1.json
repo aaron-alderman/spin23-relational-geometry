@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "monster-edge-dynamics-transport-witness-v1",
+  "date": "2026-10-25",
+  "carrier": "unitary chiral Moonshine CFT V-natural",
+  "universalDynamics": {
+    "hamiltonian": "H=(2 pi hbar v/L)(L0-c/24)",
+    "momentum": "P=(2 pi hbar/L)(L0-c/24) for a purely right-moving edge",
+    "centralCharge": 24,
+    "groundCasimirEnergy": "E0=-2 pi hbar v/L",
+    "timeEvolution": "O(t)=exp(iHt/hbar) O exp(-iHt/hbar)"
+  },
+  "spectralWitness": {
+    "monsterWeightOneDegeneracy": 0,
+    "monsterFirstExcitedWeight": 2,
+    "monsterFirstExcitedDegeneracy": 196884,
+    "leechWeightOneDegeneracy": 24,
+    "leechFirstExcitedWeight": 1,
+    "frequencyRuleHz": "Delta f_h = h v/L",
+    "monsterFirstOnsetHz": "2 v/L",
+    "leechFirstOnsetHz": "v/L"
+  },
+  "thermalTransport": {
+    "law": "kappa_xy/T=c_minus pi^2 k_B^2/(3h)",
+    "cMinus": 24,
+    "exactCoefficient": "8 pi^2 k_B^2/h",
+    "constantsSI": {
+      "boltzmannJK": 1.380649e-23,
+      "planckJs": 6.62607015e-34
+    },
+    "expectedWPerK2": 2.2714347639327938e-11
+  },
+  "benchmark": {
+    "edgeLengthM": 0.001,
+    "velocityMPerS": 100000,
+    "monsterFirstOnsetHz": 200000000,
+    "leechFirstOnsetHz": 100000000,
+    "monsterGapJ": 1.32521403e-25,
+    "monsterGapK": 0.009598486146732442,
+    "temperatureK": 0.1,
+    "thermalHallWPerK": 2.271434763932794e-12
+  },
+  "measurementOrder": [
+    "thermal Hall slope establishes c_minus=24 but is not Monster-specific",
+    "finite-size spectroscopy distinguishes the Leech h=1 current onset from the Moonshine h=2 onset",
+    "sector resolution tests the 98580 plus 98304 weight-two split",
+    "marked defects and operator tomography establish Monster provenance"
+  ],
+  "boundary": "These are universal scaling-limit predictions conditional on the carrier flowing to V-natural. Thermal transport alone cannot distinguish the Monster from another c=24 chiral phase."
+}

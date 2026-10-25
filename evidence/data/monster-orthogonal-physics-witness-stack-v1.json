@@ -14,6 +14,15 @@
   ],
   "witnesses": [
     {
+      "id": "K",
+      "name": "Leech K-matrix inversion orbifold",
+      "kind": "physical-realization",
+      "status": "established-in-theory",
+      "tests": ["state-space", "operator-composition", "dynamics-or-amplitudes", "observable-readout", "provenance"],
+      "signature": "even unimodular rank-24 chiral edge whose projected inversion orbifold has character J and automorphism group Monster",
+      "scopeBoundary": "continuum/topological-edge realization is exact, while a local microscopic laboratory Hamiltonian and natural material remain open"
+    },
+    {
       "id": "H",
       "name": "heterotic BPS dictionary",
       "kind": "physical-realization",
@@ -118,6 +127,19 @@
       "verdict": "full mathematical CFT realization"
     },
     {
+      "id": "leech-orbifold-edge",
+      "passes": [
+        "c24-v1zero",
+        "monster-character",
+        "ty23-fourier-associator",
+        "sym24-jordan-fixed-sector",
+        "norton-sakuma-e8-atlas",
+        "order46-2a-2b-junction",
+        "single-carrier-coherence"
+      ],
+      "verdict": "explicit chiral topological-edge realization of the Moonshine VOA; microscopic laboratory carrier open"
+    },
+    {
       "id": "heterotic-monster-model",
       "passes": [
         "c24-v1zero",
@@ -133,6 +155,8 @@
     }
   ],
   "jointLaboratoryPromotionGate": {
+    "endToEndProtocol": "monster-laboratory-promotion-dag-v1",
+    "firstUnclosedGate": "A: microscopic Leech chiral edge",
     "requiredOnOneCarrier": [
       "c24-v1zero",
       "monster-character",
@@ -147,6 +171,8 @@
       "predict an untrained Norton-Sakuma pair type from order and overlap",
       "predict a TY23 recoupling phase not used in calibration",
       "realize an order-46 root whose powers recover the tested order-23 and 2A or 2B operators",
+      "recover the frozen tau=i connected-ratio magnitudes 0.00373794542221053 and 0.0784643601781287 without fitting",
+      "predict the held-out connected-ratio magnitudes at tau=0.8i and tau=1.2i after calibrating at tau=i",
       "verify that both records arise from the same c=24 V1=0 carrier",
       "reject generator relabelling as the source of any claimed 23A/23B orientation"
     ]

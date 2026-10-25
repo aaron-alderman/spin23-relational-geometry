@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "leech-minimal-pair-to-pauli-action-v1",
+  "date": "2026-10-25",
+  "sourceLayer": {
+    "untwistedOperators": "for every Leech minimal vector alpha of norm four, u_alpha=e^alpha+e^-alpha is an inversion-even weight-two state",
+    "twistedAction": "the class alpha mod 2Lambda acts on the twisted ground module through the extraspecial central extension",
+    "antipodalCount": 98280
+  },
+  "injectivity": {
+    "statement": "if norm-four alpha and beta have the same class modulo 2Lambda, then beta equals plus or minus alpha",
+    "proof": "lambda=(alpha-beta)/2 lies in Lambda and lambda squared=2-(alpha dot beta)/2; Leech minimum norm four plus Cauchy forces lambda=0 or alpha dot beta=-4, the latter giving beta=-alpha"
+  },
+  "executableCompiler": {
+    "markedOperators": 24,
+    "choice": "the 24 basis vectors of the explicit Gram matrix, each of norm four",
+    "map": "reduce the basis vector mod 2 and apply S inverse to obtain its canonical twelve-qubit (X|Z) Pauli label",
+    "checks": [
+      "all 24 Pauli labels are nonzero and independent",
+      "their Pauli commutators reproduce K modulo 2",
+      "every nonidentity marked Pauli has zero twisted-ground trace",
+      "the compiled catalogue Clifford generators conjugate labels exactly as the Leech automorphisms act modulo 2"
+    ]
+  },
+  "promotion": {
+    "established": "a concrete covariant map from 24 marked untwisted minimal-vector operators to Pauli actions on the twisted ground module, extending abstract sector joining to noncentral operators",
+    "open": "the lift through the half-oscillator projection to the retained weight-two twisted sector, the absolute OPE normalization, the remaining 98256 minimal-pair operators as an enumerated hardware dictionary, the 300 oscillator-bilinear actions, and full Griess multiplication"
+  },
+  "boundary": "This is a source-backed representation action of untwisted vertex operators on the pre-projection twisted ground module. The verifier certifies the integral/mod-2 labels and covariance, while the VOA source supplies that these labels act through the twisted central extension. Lifting the action to the retained weight-two half-mode states is separate."
+}

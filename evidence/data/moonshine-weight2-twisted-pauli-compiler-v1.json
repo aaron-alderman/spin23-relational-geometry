@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "moonshine-weight2-twisted-pauli-compiler-v1",
+  "date": "2026-10-25",
+  "space": {
+    "definition": "C^24 half-mode selector tensor (C^2)^tensor12 twisted ground module",
+    "channelDimension": 24,
+    "qubits": 12,
+    "groundDimension": 4096,
+    "totalDimension": 98304,
+    "conformalWeight": 2
+  },
+  "extraspecialAction": {
+    "element": "central sign times P(u,v)=X^u Z^v for u,v in F2^12",
+    "multiplication": "P(u,v)P(u_prime,v_prime)=(-1)^(v dot u_prime) P(u+u_prime,v+v_prime)",
+    "action": "identity on the 24 half-mode selector tensor the real Pauli action on twelve qubits",
+    "groupOrder": 33554432,
+    "centralMinusTraceOnWeight2Twisted": -98304,
+    "identityTraceOnWeight2Twisted": 98304,
+    "noncentralPauliTraceOnWeight2Twisted": 0
+  },
+  "monsterJoin": {
+    "centralizer": "2B centralizer 2_+^(1+24).Co1",
+    "closedLayer": "the normal extraspecial 2-group representation and the catalogue-generator Co1 symplectic/Clifford semidirect action on the first retained twisted level",
+    "openLayer": "physical marking and hardware execution of the Clifford basis, the 98580-dimensional untwisted partner, and cross-sector Griess multiplication"
+  },
+  "boundary": "This is an exact finite representation compiler for the normal 2-group on the 98304 twisted weight-two states. It is not yet the full 2B centralizer representation or the 196884-dimensional Griess algebra."
+}

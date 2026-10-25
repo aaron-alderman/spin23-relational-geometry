@@ -22,7 +22,7 @@ The spine never promotes a claim, converts a passing script into a broader proof
 | scopedVerdict | 526 | 343 | 704 |
 | knownConsumer | 0 | 254 | 1319 |
 
-The index contains 12560 observed outgoing links, 773 inbound consumer candidates, and 0 unresolved local claim links.
+The index contains 12560 observed outgoing links, 774 inbound consumer candidates, and 0 unresolved local claim links.
 
 ## Record contract
 

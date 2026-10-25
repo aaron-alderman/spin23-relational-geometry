@@ -22,7 +22,7 @@ assert.deepEqual([...criteria], [
 ]);
 
 const witnesses = new Map(evidence.witnesses.map((witness) => [witness.id, witness]));
-assert.deepEqual([...witnesses.keys()], ["H", "T", "J", "E", "L", "C"]);
+assert.deepEqual([...witnesses.keys()], ["K", "H", "T", "J", "E", "L", "C"]);
 for (const witness of witnesses.values()) {
   for (const criterion of witness.tests) {
     assert.ok(criteria.has(criterion), `${witness.id} has unknown criterion ${criterion}`);
@@ -30,6 +30,7 @@ for (const witness of witnesses.values()) {
   assert.ok(witness.scopeBoundary.length > 20, `${witness.id} lacks a scope boundary`);
 }
 assert.match(witnesses.get("E").scopeBoundary, /excludes an affine E8 current algebra/);
+assert.match(witnesses.get("K").signature, /character J and automorphism group Monster/);
 assert.match(witnesses.get("L").scopeBoundary, /without the c=24 Monster/);
 assert.match(witnesses.get("C").signature, /2A for 46CD and 2B for 46AB/);
 
@@ -69,6 +70,7 @@ const mathematicalRealizations = evidence.candidateMatrix
   .map((candidate) => candidate.id);
 assert.deepEqual(mathematicalRealizations, [
   "abstract-moonshine-voa",
+  "leech-orbifold-edge",
   "heterotic-monster-model",
 ]);
 
@@ -87,6 +89,11 @@ assert.deepEqual(
   evidence.features.filter((feature) => feature !== "heterotic-bps-dictionary"),
 );
 assert.equal(evidence.jointLaboratoryPromotionGate.currentStatus, "open");
+assert.equal(
+  evidence.jointLaboratoryPromotionGate.endToEndProtocol,
+  "monster-laboratory-promotion-dag-v1",
+);
+assert.match(evidence.jointLaboratoryPromotionGate.firstUnclosedGate, /Leech chiral edge/);
 assert.ok(evidence.jointLaboratoryPromotionGate.minimumHeldOutChecks.length >= 4);
 assert.deepEqual(evidence.logicalConclusion, {
   P1: "proved",

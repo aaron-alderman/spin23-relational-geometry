@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "moonshine-2b-graded-cross-sector-ope-calibration-v1",
+  "date": "2026-10-25",
+  "gradedSpace": {
+    "untwistedDimension": 98580,
+    "twistedDimension": 98304,
+    "totalDimension": 196884,
+    "grading": "z=2B acts plus on U and minus on T",
+    "productSelection": ["U circle U subset U", "U circle T subset T", "T circle T subset U"]
+  },
+  "griessUnit": {
+    "definition": "e=omega/2",
+    "centralCharge": 24,
+    "normSquared": 3,
+    "identityLaw": "e circle x=x for every weight-two state x"
+  },
+  "crossSectorPrediction": {
+    "orthonormalTwistedProbes": "<t_a,t_b>=delta_ab",
+    "threePoint": "<e,t_a circle t_b>=delta_ab",
+    "unitProjection": "Proj_e(t_a circle t_b)=(delta_ab/3)e",
+    "forbiddenParity": "every invariant three-point coefficient with an odd number of T arguments is zero"
+  },
+  "commissioningProtocol": {
+    "markedTwistedProbes": 24,
+    "symmetricGramMeasurements": 300,
+    "identityCoupledThreePointMeasurements": 300,
+    "tests": [
+      "orthonormalize the 24 probes from their two-point Gram matrix",
+      "verify all 300 identity-coupled UTT coefficients reproduce that Gram matrix",
+      "verify representative UUT and TTT coefficients vanish",
+      "subtract the universal delta_ab e/3 component and retain the untwisted residual for Monster-specific tomography"
+    ]
+  },
+  "boundary": "The unit projection and parity rules are exact for the c=24 Z2-graded Griess algebra and prove a nonzero calibrated cross-sector coupling. They are not Monster-specific; the residual untwisted tensor and its Norton-Sakuma/Conway covariance carry the discriminating information."
+}

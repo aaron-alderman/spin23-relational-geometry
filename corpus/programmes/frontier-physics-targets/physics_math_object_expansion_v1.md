@@ -1,7 +1,7 @@
 # Physics–mathematics claim-family and object expansion
 
 **Date:** 2026-10-25  
-**Status:** complete
+**Status:** open
 
 This is the adversarial expansion below the normalized topic register. It does not treat topic completion as proof that every local corpus object has been admitted, excluded or correctly mapped.
 
@@ -9,15 +9,15 @@ This is the adversarial expansion below the normalized topic register. It does n
 
 | Measure | Count |
 |---|---:|
-| Inventory objects | 2896 |
-| Explicitly mapped in-scope objects | 1654 |
-| Typed exclusions | 1242 |
+| Inventory objects | 2914 |
+| Explicitly mapped in-scope objects | 1656 |
+| Typed exclusions | 1258 |
 | Unmapped scientific objects requiring scope review | 0 |
-| Weak semantic routes requiring independent review | 0 |
-| Object × topic × applicable-family cells | 54205 |
-| Unique inherited claim cells | 54205 |
+| Weak semantic routes requiring independent review | 1 |
+| Object × topic × applicable-family cells | 54275 |
+| Unique inherited claim cells | 54275 |
 | Authored local-exception resolutions | 0 |
-| Objects with multiple topic-specific dispositions for one family | 9110 |
+| Objects with multiple topic-specific dispositions for one family | 9122 |
 | Deduplicated claim-family clusters | 457 |
 
 ## Reading the result
@@ -26,4 +26,4 @@ Each inherited cell is one object-to-topic claim family with exactly one disposi
 
 ## Current decision
 
-The topic layer is complete. The object layer is complete because 0 objects lack a route and 0 mapped objects still have weak semantic routes requiring independent review.
+The topic layer is complete. The object layer is open because 0 objects lack a route and 1 mapped objects still have weak semantic routes requiring independent review.

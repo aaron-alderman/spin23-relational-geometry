@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "monster-edge-operator-tomography-dictionary-v1",
+  "date": "2026-10-25",
+  "physicalDictionary": [
+    {"voaObject": "state a", "physicalObject": "chiral edge operator O_a by state-operator correspondence"},
+    {"voaObject": "L_0-c/24", "physicalObject": "dimensionless finite-size edge Hamiltonian"},
+    {"voaObject": "a_3 b for weight-two states", "physicalObject": "two-point/OPE vacuum coefficient"},
+    {"voaObject": "a_1 b for weight-two states", "physicalObject": "Griess product from the second-order OPE pole"},
+    {"voaObject": "Miyamoto involution", "physicalObject": "invertible symmetry line acting by Ising-sector parity"},
+    {"voaObject": "twined character", "physicalObject": "thermal trace with a symmetry/defect insertion"},
+    {"voaObject": "TY F-symbol", "physicalObject": "four-junction recoupling amplitude"},
+    {"voaObject": "Norton-Sakuma type", "physicalObject": "two-Ising-operator algebra classified by overlap and symmetry-line return order"}
+  ],
+  "h2JordanTomography": {
+    "dimension": 3,
+    "basis": ["E11", "E22", "E12+E21"],
+    "product": "A circle B=(AB+BA)/2",
+    "bilinearForm": "Tr(AB)",
+    "independentTwoPointCoefficients": 6,
+    "independentSymmetricThreePointCoefficients": 10,
+    "totalIndependentCorrelators": 16,
+    "reconstruction": "C_ijk=<B_i circle B_j,B_k>; raise k with the inverse Gram matrix",
+    "heldOutIdentity": "(x^2 circle y) circle x = x^2 circle (y circle x)",
+    "determinant": "det[[a,b],[b,c]]=ac-b^2=t^2-x^2-y^2",
+    "cone": "positive-definite matrices give the future Lorentz cone"
+  },
+  "exceptionalAtlasProtocol": {
+    "inputs": ["two Ising conformal vectors", "their normalized two-point overlap", "return order of the product of their Miyamoto lines"],
+    "output": "one of the nine Norton-Sakuma algebras",
+    "e8Meaning": "the nine pair types follow the affine-E8 mark pattern",
+    "e8NonMeaning": "there are no weight-one E8 currents because (V-natural)_1=0"
+  },
+  "promotionGates": [
+    "identify all measured fields on the same zero-current c=24 edge",
+    "reconstruct the H2 Jordan product from held-out correlators rather than programming it",
+    "predict an untrained Norton-Sakuma pair type from overlap and return order",
+    "measure a TY recoupling amplitude in a distinct junction experiment",
+    "show that the selected Jordan corner and exceptional pair operators share the same Monster defect action"
+  ],
+  "scope": {
+    "established": "these structures are operator subalgebras and defect data of a genuine physical chiral CFT",
+    "open": "a laboratory carrier, a dynamical mechanism selecting one Jordan corner, and any promotion of Spin(2,3) from response algebra to spacetime symmetry",
+    "forbiddenInference": "an affine-E8 pair atlas or TKK prolongation is not by itself an E8 gauge field or four-dimensional spacetime symmetry"
+  }
+}

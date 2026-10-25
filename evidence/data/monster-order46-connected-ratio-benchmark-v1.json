@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "monster-order46-connected-ratio-benchmark-v1",
+  "date": "2026-10-25",
+  "evaluationPoint": "tau=i",
+  "modularTransport": {
+    "matrix": [[1, 11], [2, 23]],
+    "target": "gamma(i)=(i+11)/(2i+23)",
+    "determinant": 1
+  },
+  "etaQuotient": "A(tau)=eta(tau) eta(23 tau)/(eta(2 tau) eta(46 tau))",
+  "functions": {
+    "T46AB": "1+A",
+    "T46CD": "1+A+2/A",
+    "T23AB": "(A+1)(A^2+4)/A^2",
+    "T2B": "(eta(tau)/eta(2 tau))^24+24",
+    "T2A": "(eta(tau)/eta(2 tau))^24+4096(eta(2 tau)/eta(tau))^24+24",
+    "JAtI": 984
+  },
+  "connectedRatios": {
+    "46AB_2B": {
+      "definition": "T46AB(gamma tau) J(tau)/(T23AB(-1/tau) T2B(tau))",
+      "normalization": "canonical eta-product branch",
+      "expectedFactorizedNull": 1
+    },
+    "46CD_2A": {
+      "definition": "T46CD(gamma tau) J(tau)/(T23AB(-1/tau) T2A(tau))",
+      "normalization": "canonical eta-product branch",
+      "expectedFactorizedNull": 1
+    }
+  },
+  "frozenTargetsAtI": {
+    "T46ABTransported": 1.0903387146566248,
+    "T46CDTransported": 23.22924126160949,
+    "T23Twisted": 535.499149791993,
+    "T2B": 536.0000000002793,
+    "T2A": 544.000000000275,
+    "magnitudeRatio46AB": 0.00373794542221053,
+    "magnitudeRatio46CD": 0.0784643601781287,
+    "factorizedNull": 1,
+    "absoluteTolerance": 1e-9
+  },
+  "errorEnvelope": {
+    "assumption": "each of the four trace magnitudes has independent or worst-case bounded relative error r and no denominator crosses zero",
+    "ratioMultiplicativeInterval": "[(1-r)^2/(1+r)^2,(1+r)^2/(1-r)^2]",
+    "preregisteredRelativeErrorPerTrace": 0.5,
+    "worstCaseUpperRatio46AB": 0.03364150879989477,
+    "worstCaseUpperRatio46CD": 0.7061792416031583,
+    "bothRejectUnitNull": true
+  },
+  "numericalMethod": {
+    "eta": "direct logarithmic Euler product",
+    "primaryTolerance": 1e-13,
+    "crossCheckTolerance": 1e-15,
+    "requiredAgreement": 1e-9
+  },
+  "interpretationBoundary": "the frozen complex representatives use the displayed right-action modular convention and canonical eta-product branches; the robust predictions are their magnitudes because compatible generalized-moonshine phases remain unevaluated. A nonunit magnitude is an exact Monster genus-one interaction benchmark, while laboratory interpretation still requires a physical trace protocol and phase calibration"
+}

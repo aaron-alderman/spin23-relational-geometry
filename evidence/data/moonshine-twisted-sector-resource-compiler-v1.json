@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "moonshine-twisted-sector-resource-compiler-v1",
+  "date": "2026-10-25",
+  "orbifoldInput": {
+    "invertedBosons": 24,
+    "twistWeightPerBoson": "1/16",
+    "rawTwistedGroundWeight": "24/16=3/2",
+    "twistedGroundDegeneracy": 4096,
+    "twistedGroundQubits": 12,
+    "projection": "the selected plus extension removes the raw weight-3/2 term; one half-integer oscillator raises the first retained states to weight 2"
+  },
+  "firstRetainedTwistedLevel": {
+    "halfOscillatorChoices": 24,
+    "weight": 2,
+    "degeneracy": 98304,
+    "factorization": "98304=4096*24=2^12*24"
+  },
+  "surfaceCodeResourceAnalogue": {
+    "fixedParityDimensionFor2nTwists": "2^(n-1)",
+    "twistDefects": 26,
+    "twistPairs": 13,
+    "fixedParityLogicalQubits": 12,
+    "fixedParityDimension": 4096,
+    "channelSelectorDimension": 24,
+    "combinedDimension": 98304
+  },
+  "protocol": [
+    "prepare 26 alternating e/m boundary junctions at fixed total parity",
+    "verify the protected 4096-dimensional fusion space by removing junction pairs and checking dimension halving",
+    "couple that space coherently to a single excitation chosen from the 24 Leech edge channels",
+    "project out the raw weight-3/2 sector and measure a first retained onset at weight 2",
+    "verify 98304 twisted and 98580 untwisted states in the common 196884-dimensional level"
+  ],
+  "boundary": "The dimension and conformal-weight bookkeeping are exact properties of the Moonshine orbifold, while 26 surface-code twists are only a resource analogue. Matching 4096 times 24 does not prove the junction fusion space is the Leech twisted module; operator products, modular data and the same-carrier current-removal test remain required."
+}

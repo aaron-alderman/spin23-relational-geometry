@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "leech-unimodular-dual-basis-compiler-v1",
+  "date": "2026-10-25",
+  "input": "leech-explicit-k-matrix-v1",
+  "basisChange": {
+    "oldToNew": "phi = W phi_prime",
+    "W": "K inverse",
+    "integralReason": "K is an integral matrix with determinant one, so K inverse is integral and W lies in GL(24,Z)",
+    "newK": "W^T K W = K inverse",
+    "oldInteractionColumns": "L=K",
+    "newInteractionColumns": "W^T L = identity"
+  },
+  "compiledInteraction": "H_gap=-sum_(y,I) u_I cos(phi_prime_R,y,I + phi_prime_L,y+1,I)",
+  "meaning": "All 24 Haldane-null interwire terms become channel-diagonal in an allowed integral compact-boson basis.",
+  "boundary": "A GL(24,Z) field redefinition simplifies the continuum vertex operators but does not guarantee that a chosen microscopic platform implements the transformed K inverse kinetic couplings or exposes the new fields as spatially local hardware modes."
+}

@@ -24,11 +24,18 @@ latter P4. P2 is established at the stated zero-coupling, effectively
 0+1-dimensional heterotic scope. P3, a provenance-sensitive laboratory
 carrier, and P4 remain open.
 
+The broader formal existence statement, including the chiral edge carrier,
+local observables and Hamiltonian dynamics, is consolidated in the
+[Monster-is-physics proof certificate](frontier_wave7_150_monster_is_physics_proof_certificate.md).
+That certificate proves theoretical physicality while retaining the present
+document's stricter laboratory and nature-selection boundaries.
+
 The proof is not carried by one spectacular integer. It is overdetermined by
 four independently typed internal structures on the same Moonshine carrier:
 
 | layer | physical/mathematical content | what it excludes |
 |---|---|---|
+| K | Leech \(K\)-matrix edge and exact inversion orbifold | “Monster has no conventional carrier or dynamics” |
 | H | heterotic BPS state/index/duality dictionary | “Moonshine has no physical interpretation” |
 | T | \(23AB\) Tambara--Yamagami defect and Fourier associator | scalar-character-only explanations |
 | J | genuine \(\operatorname{Sym}_{24}(\mathbb R)\) Jordan fixed sector | claims based only on nonassociative resemblance |
@@ -47,6 +54,13 @@ the order-23 rail to the involution centralizer from which the
 \(\operatorname{Sym}_{24}\) Jordan fixed sector is taken. This is an exact
 class-level common-carrier statement. The corresponding twisted--twining
 amplitudes remain an open, stronger coherence test.
+
+The K layer is now executable rather than implicit. Its orbifold character
+calculation removes the Leech theory's 24 weight-one currents, cancels all
+half-integral twisted powers and recovers \(J\) through the first four graded
+levels. The companion current ladder \(744\to24\to0\) distinguishes the
+\(E_8^3\), Leech and Monster \(c=24\) carriers even though all share the
+weight-two coefficient 196884.
 
 ## 1. Why “physics” is no longer the open word
 
@@ -102,15 +116,25 @@ microscopic carrier, certify:
    order and axis overlap;
 5. an order-46 root whose powers recover the measured order-23 and \(2A\) or
    \(2B\) operators;
-6. a cross-layer coherence relation proving these records belong to the same
+6. the preregistered connected-ratio magnitudes
+   \(|R_{46AB}(i)|=0.00373794542221053\) and
+   \(|R_{46CD}(i)|=0.0784643601781287\), rather than the factorized value one;
+7. the held-out \(0.8i\) and \(1.2i\) values after calibration only at
+   \(\tau=i\), rejecting the fitted interacting clock control;
+8. a cross-layer coherence relation proving these records belong to the same
    carrier;
-7. an orientation test that cannot be explained by relabelling the
+9. an orientation test that cannot be explained by relabelling the
    \(\mathbb Z_{23}\) generator.
 
 The word **same** is crucial. Building four unrelated devices, one for each
 algebraic layer, proves emulatability. Demonstrating their prescribed
 coherence on one carrier establishes a provenance-sensitive Monster
 subtheory.
+
+This target is expanded into the dependency-checked
+[Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md).
+Its first unclosed gate is a microscopic Leech chiral edge; disconnected toy
+passes cannot be accumulated as if they belonged to one carrier.
 
 ## 4. What would falsify the claim
 
@@ -135,3 +159,6 @@ the frontier, not a premise hidden inside the word “physics.”
 - [Griess--Jordan corner](frontier_wave7_116_monster_griess_jordan_corner_to_spin23.md)
 - [Ising-pair affine-\(E_8\) atlas](frontier_wave7_117_monster_ising_pair_affine_e8_operator_atlas.md)
 - [Joined order-46 bridge](../../moonshine-program-lattice/joined-bridge-map.md)
+- [Leech-edge orbifold proof](frontier_wave7_129_leech_edge_orbifold_proves_formal_monster_physics.md)
+- [\(744\to24\to0\) current detector](frontier_wave7_130_c24_current_ladder_and_monster_detector.md)
+- [Monster-is-physics proof certificate](frontier_wave7_150_monster_is_physics_proof_certificate.md)

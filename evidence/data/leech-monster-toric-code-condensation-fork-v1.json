@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "leech-monster-toric-code-condensation-fork-v1",
+  "date": "2026-10-25",
+  "parent": {
+    "chiralAlgebra": "V_Lambda^+",
+    "description": "inversion-fixed subalgebra of the Leech lattice VOA",
+    "centralCharge": 24,
+    "simpleSectors": 4,
+    "fusionGroup": "Z2 x Z2",
+    "totalQuantumDimension": 2
+  },
+  "sectors": [
+    {"label": "1", "voaModule": "V_Lambda^+", "lowestWeightModulo1": 0, "topologicalSpin": 1, "quantumDimension": 1},
+    {"label": "e", "voaModule": "V_Lambda^-", "lowestWeightModulo1": 0, "lowestWeightRepresentative": 1, "topologicalSpin": 1, "quantumDimension": 1},
+    {"label": "m", "voaModule": "V_Lambda^{T,integer}", "lowestWeightModulo1": 0, "lowestWeightRepresentative": 2, "topologicalSpin": 1, "quantumDimension": 1},
+    {"label": "epsilon", "voaModule": "V_Lambda^{T,half-integer}", "lowestWeightModulo1": 0.5, "lowestWeightRepresentative": 1.5, "topologicalSpin": -1, "quantumDimension": 1}
+  ],
+  "fusion": {
+    "encoding": {"1": 0, "e": 1, "m": 2, "epsilon": 3},
+    "rule": "bitwise XOR in Z2^2",
+    "keyProducts": ["e*e=1", "m*m=1", "e*m=epsilon", "epsilon*epsilon=1"]
+  },
+  "modularS": [
+    [0.5, 0.5, 0.5, 0.5],
+    [0.5, 0.5, -0.5, -0.5],
+    [0.5, -0.5, 0.5, -0.5],
+    [0.5, -0.5, -0.5, 0.5]
+  ],
+  "condensationFork": [
+    {
+      "algebra": "1+e",
+      "condensedBoson": "e",
+      "extension": "V_Lambda^+ direct-sum V_Lambda^- = V_Lambda",
+      "output": "Leech lattice VOA",
+      "holomorphic": true
+    },
+    {
+      "algebra": "1+m",
+      "condensedBoson": "m",
+      "extension": "V_Lambda^+ direct-sum V_Lambda^{T,integer} = V-natural",
+      "output": "Moonshine VOA",
+      "holomorphic": true
+    }
+  ],
+  "interface": {
+    "between": ["1+e", "1+m"],
+    "quantumDimension": 1.4142135623730951,
+    "fusionSignature": "sigma times sigma = 1 + psi",
+    "physicalInterpretation": "electric/magnetic boundary-condition change carrying an Ising/Majorana duality defect",
+    "relationToMonster": "matches the categorical shape of the 2A Kramers-Wannier duality defect, but microscopic operator equality must be verified on the carrier"
+  },
+  "p3Dictionary": {
+    "projection": "realize the V_Lambda^+ parent with its four toric-code sectors",
+    "twistCompletion": "select and condense the integer-spin twisted boson m rather than the untwisted odd boson e",
+    "firstReadout": "distinguish the m-condensed zero-current edge from the e-condensed 24-current Leech edge",
+    "open": "construct a stable local interaction that selects the m condensate and demonstrate its scaling limit and defect operators"
+  },
+  "antiOverclaim": [
+    "the toric-code fusion category alone does not determine the c=24 chiral algebra",
+    "anyon-condensation language identifies the extension data but is not yet a microscopic Hamiltonian",
+    "the sqrt(2) interface signature does not by itself identify the Monster 2A defect"
+  ]
+}

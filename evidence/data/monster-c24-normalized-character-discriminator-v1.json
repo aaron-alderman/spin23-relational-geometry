@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "monster-c24-normalized-character-discriminator-v1",
+  "date": "2026-10-25",
+  "definition": {
+    "q": "exp(-2 pi y)",
+    "normalizedCharacter": "Zhat(y)=q ch(i y)",
+    "monster": "q J",
+    "leech": "q (J+24)",
+    "e8Cubed": "q (J+744)"
+  },
+  "exactDifferences": {
+    "leechMinusMonster": "24 exp(-2 pi y)",
+    "e8CubedMinusMonster": "744 exp(-2 pi y)",
+    "e8CubedMinusLeech": "720 exp(-2 pi y)"
+  },
+  "checkpoints": [
+    {"y": 0.8, "q": 0.0065614199363060715, "leechMonsterSignal": 0.1574740784713457, "e8MonsterSignal": 4.881696432611717, "sharedWeightTwoContribution": 8.476295562505946},
+    {"y": 1, "q": 0.0018674427317079893, "leechMonsterSignal": 0.04481862556099174, "e8MonsterSignal": 1.389377392390744, "sharedWeightTwoContribution": 0.6866019124598522},
+    {"y": 1.2, "q": 0.0005314920230775979, "leechMonsterSignal": 0.01275580855386235, "e8MonsterSignal": 0.3954300651697329, "sharedWeightTwoContribution": 0.055616534689849194},
+    {"y": 1.5, "q": 0.00008069951757030463, "leechMonsterSignal": 0.001936788421687311, "e8MonsterSignal": 0.06004044107230665, "sharedWeightTwoContribution": 0.001282189750999956},
+    {"y": 2, "q": 0.0000034873423562089973, "leechMonsterSignal": 0.00008369621654901594, "e8MonsterSignal": 0.002594582713019494, "sharedWeightTwoContribution": 0.000002394415931175345}
+  ],
+  "finiteSizeDictionary": {
+    "modulus": "y=v beta/L",
+    "chiralEnergy": "E_h-E_0=(2 pi v/L) h",
+    "weightOneGap": "2 pi v/L",
+    "unprojectedTwistGap": "3 pi v/L",
+    "weightTwoGap": "4 pi v/L",
+    "minimumResolutionToSeparateOneOnePointFiveTwo": "strictly less than pi v/L"
+  },
+  "commissioningOrder": [
+    "E8^3 versus Leech tests removal of 720 root currents",
+    "Leech versus Monster tests removal of 24 oscillator currents",
+    "twisted versus untwisted weight-two resolution tests the orbifold extension",
+    "order-46 connected ratios are attempted only after all character gates pass"
+  ],
+  "interpretationBoundary": [
+    "the exact curve assumes the infrared fixed point characters and does not include finite-size or irrelevant-operator corrections",
+    "absolute partition-function normalization must be calibrated or replaced by direct spectral degeneracy counting",
+    "matching the zero-current character is a strong provenance gate but marked Monster defects remain independent tests"
+  ]
+}

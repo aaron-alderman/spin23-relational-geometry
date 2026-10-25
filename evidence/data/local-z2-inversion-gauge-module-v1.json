@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "local-z2-inversion-gauge-module-v1",
+  "date": "2026-10-25",
+  "clockOrder": 23,
+  "degreesOfFreedom": {
+    "matter": "one Z23 label a_i per site",
+    "gauge": "one sign s_ij in {+1,-1} per link",
+    "inversion": "P_i: a_i maps to -a_i mod 23",
+    "linkElectric": "X_ij: s_ij maps to -s_ij"
+  },
+  "localGaussGenerators": {
+    "leftOnOneLink": "G_L(a,s,b)=(-a,-s,b)",
+    "rightOnOneLink": "G_R(a,s,b)=(a,-s,-b)",
+    "generalGraph": "G_i=P_i product_(links incident on i) X_link"
+  },
+  "hamiltonianTemplate": {
+    "bond": "-J delta_(b,s*a)",
+    "matterKinetic": "-g sum_i (T_i+T_i^-1)",
+    "electric": "-Gamma sum_links X_link",
+    "gaussPenalty": "-U sum_i G_i",
+    "statement": "Every displayed term is local and commutes with every Gauss generator."
+  },
+  "finiteCertificateTargets": {
+    "rawBasisStates": 1058,
+    "gaugeOrbits": 265,
+    "bondSatisfiedStates": 46,
+    "bondSatisfiedGaugeOrbits": 12,
+    "orbitInterpretation": "one zero-label orbit plus eleven inverse-paired nonzero label orbits",
+    "untwistedRingClosureLabels": 23,
+    "inversionTwistedRingClosureLabels": 1
+  },
+  "physicalMeaning": "The Z2 gauge link is a dynamical local branch cut. Negative holonomy imposes a=-a after transport and therefore produces the finite analogue of an inversion-twisted sector.",
+  "promotion": {
+    "closes": "a local gauge-invariant Hamiltonian module for the inversion projection and branch-cut sectors",
+    "doesNotClose": "the 24-component Leech continuum limit, twisted-module conformal weights, m condensation, or the J character",
+    "next": "couple one gauge sign coherently to the 24 compact-boson channels and verify that the gauged edge retains the required gap and flows to the V_Lambda^+ sector data"
+  }
+}

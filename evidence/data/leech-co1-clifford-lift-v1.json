@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "leech-co1-clifford-lift-v1",
+  "date": "2026-10-25",
+  "inputs": [
+    "leech-explicit-k-matrix-v1",
+    "leech-catalogue-automorphism-generators-v1",
+    "leech-twisted-ground-pauli-bridge-v1"
+  ],
+  "construction": {
+    "integerAction": "each catalogue row-action generator G satisfies G K G^T=K",
+    "columnAction": "A=G^T acts on Lambda/2Lambda",
+    "canonicalAction": "C=S^-1 A S over F2, where S is the executable quadratic-symplectic basis",
+    "cliffordLift": "each C preserves the canonical symplectic form and is compiled by block factorization into Hadamard, phase, controlled-Z, CNOT and swap resources on twelve qubits"
+  },
+  "representationJoin": {
+    "halfModes": "the same integral Leech automorphism acts on the 24-dimensional half-mode selector",
+    "twistedGround": "its mod-2 symplectic action acts by Clifford conjugation on the twelve-qubit Pauli module",
+    "combined": "the tensor action realizes the sourced Co0/Co1 compatibility with the normal extraspecial group at the first twisted level"
+  },
+  "boundary": "The catalogue sources that the two integral matrices generate C2.Co1. The verifier checks their Gram, quadratic and symplectic actions and constructs standard-gate resource decompositions, but does not enumerate that enormous group or fix irrelevant Clifford phases. Physical marking and cross-sector Griess multiplication remain open."
+}

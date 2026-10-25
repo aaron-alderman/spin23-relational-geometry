@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "xxz23-order46-carrier-gap-v1",
+  "date": "2026-10-25",
+  "sourceModel": {
+    "hamiltonian": "H=sum_j(sigma+_j sigma-_j+1 + sigma-_j sigma+_j+1 + Delta sigmaZ_j sigmaZ_j+1/2)",
+    "q": "exp(i pi/23)",
+    "anisotropy": 0.9906859460363308,
+    "minimumCommensuratePeriodicLength": 46,
+    "twistedBoundary": "sigma+_(L+1)=q^(-L) sigma+_1 and sigma-_(L+1)=q^(L) sigma-_1",
+    "physicalTwistMeaning": "magnetic flux through the spin ring",
+    "infraredCentralCharge": 1,
+    "infraredRadiusSquared": "23/2"
+  },
+  "availableOperators": {
+    "z23": "Z_pm=exp(i pi (L minus-or-plus 2 Sz)/23)",
+    "dualityMpo": "D_pm=limit of semicyclic transfer matrix",
+    "fusion": "D_pm^2=(sum_k Z_pm^k) T(0)",
+    "commutesWithHamiltonian": true,
+    "additionalTwofoldSymmetry": "global spin flip combined with time reversal exchanges D_plus and D_minus"
+  },
+  "provedCarrierLayers": [
+    "one local spin-half Hamiltonian",
+    "physical flux twist",
+    "Z23 invertible symmetry",
+    "TY(Z23) fusion algebra via MPO duality defect",
+    "c=1 compact-boson continuum limit"
+  ],
+  "openCarrierLayers": [
+    "TY bicharacter and associator extraction",
+    "Frobenius-Schur sign",
+    "unitary commuting 2A or 2B involution",
+    "order-46 element h with h^2=g and h^23=z",
+    "c=24 V1=0 ambient sector",
+    "Monster character and order-46 connected-ratio targets",
+    "Griess Jordan fixed sector",
+    "Norton-Sakuma pair atlas"
+  ],
+  "dihedralObstruction": {
+    "presentation": "g^23=r^2=1, r g r^-1=g^-1",
+    "groupOrder": 46,
+    "rotationOrders": [1, 23],
+    "reflectionOrder": 2,
+    "maximumElementOrder": 23,
+    "hasElementOfOrder46": false,
+    "warning": "a symmetry group of order 46 is not a cyclic order-46 Monster junction"
+  },
+  "minimalRepairSpecification": {
+    "newOperator": "unitary involution z",
+    "relations": ["z^2=1", "[z,g]=0", "[z,H]=0"],
+    "reconstructedRoot": "h=g^12 z",
+    "requiredOrder": 46,
+    "nonfactorization": "an interaction V must couple the C23 and C2 sectors while commuting with g and z",
+    "nullIfAbsent": "if H=H23 tensor 1 + 1 tensor H2 then the connected ratio has magnitude one",
+    "provenanceBoundary": "matching one connected ratio after tuning is emulation; Monster provenance requires held-out tau dependence and the ambient CFT witnesses"
+  },
+  "verdict": "XXZ23 is an explicit W0 fusion-algebra carrier and a route to W1 associator tomography, but its natural twofold extension is not the cyclic order-46 Monster carrier"
+}

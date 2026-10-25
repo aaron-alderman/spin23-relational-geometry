@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "leech-twisted-ground-pauli-bridge-v1",
+  "date": "2026-10-25",
+  "sourceStatement": {
+    "latticeQuotient": "Lambda/2Lambda is a 24-dimensional F2 vector space with alternating pairing induced by the Leech inner product",
+    "centralExtension": "the inversion-twisted ground module carries the unique 4096-dimensional irreducible representation of the extraspecial central extension 2_+^(1+24)",
+    "references": [
+      "Frenkel-Lepowsky-Meurman moonshine construction",
+      "Yamauchi, The 2A-orbifold construction and the baby-monster vertex operator superalgebra, Section 6.2"
+    ]
+  },
+  "executableBridge": {
+    "input": "the explicit Leech Gram matrix reduced modulo 2",
+    "algorithm": "symplectic Gram-Schmidt over F2 followed by q(v)=v squared over 2 mod 2 hyperbolic normalization",
+    "output": "twelve hyperbolic pairs (a_i,b_i) with <a_i,b_j>=delta_ij, all a-a and b-b pairings zero, and q(a_i)=q(b_i)=0",
+    "pauliMap": "a_i maps to logical X_i and b_i maps to logical Z_i; this preserves generator squares, commutators and the central minus identity",
+    "groupOrder": "2^(1+24)=33554432",
+    "irreducibleDimension": "2^12=4096"
+  },
+  "surfaceCodeJoin": {
+    "twistDefects": 26,
+    "fixedParityLogicalQubits": 12,
+    "statement": "The fixed-parity fusion space carries the same 12-qubit extraspecial Pauli-group presentation as the Leech twisted ground module after choosing the computed quadratic-symplectic basis."
+  },
+  "promotion": {
+    "established": "an explicit presentation-preserving isomorphism from the finite extraspecial twisted-ground group to the 12-qubit real Pauli group",
+    "open": "a canonical physical choice of basis, coupling to half-oscillator modes, and the lift from the finite ground-group action to the full twisted vertex-operator products"
+  },
+  "boundary": "The bridge is algebraic rather than dimensional and includes the quadratic refinement, but it identifies only the finite twisted-ground extraspecial layer. It does not identify the full surface-code theory with the Leech orbifold or Moonshine VOA."
+}

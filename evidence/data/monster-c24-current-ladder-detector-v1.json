@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "monster-c24-current-ladder-detector-v1",
+  "date": "2026-10-25",
+  "sharedData": {
+    "centralCharge": 24,
+    "weightTwoCharacterCoefficient": 196884,
+    "lesson": "central charge 24 and the coefficient 196884 do not distinguish the three carriers"
+  },
+  "carriers": [
+    {
+      "id": "E8cubed",
+      "construction": "E8 lattice VOA tensor cubed",
+      "rankCurrents": 24,
+      "rootCurrents": 720,
+      "weightOneDimension": 744,
+      "character": "J+744=j"
+    },
+    {
+      "id": "Leech",
+      "construction": "Leech lattice VOA",
+      "rankCurrents": 24,
+      "rootCurrents": 0,
+      "weightOneDimension": 24,
+      "character": "J+24"
+    },
+    {
+      "id": "Monster",
+      "construction": "inversion orbifold and twisted-sector extension of the Leech VOA",
+      "rankCurrents": 0,
+      "rootCurrents": 0,
+      "weightOneDimension": 0,
+      "character": "J"
+    }
+  ],
+  "orbifoldResolution": {
+    "unorbifoldedLeechWeightOne": 24,
+    "inversionInsertionWeightOne": -24,
+    "projectedUntwistedWeightOne": 0,
+    "twistedGroundWeight": 1.5,
+    "twistedGroundRawDegeneracy": 4096,
+    "untwistedProjectedWeightTwo": 98580,
+    "twistedProjectedWeightTwo": 98304,
+    "monsterWeightTwo": 196884
+  },
+  "physicalAction": {
+    "bulk": "S=(1/4pi) integral K_IJ a_I wedge d a_J",
+    "edge": "S=(1/4pi) integral (K_IJ partial_t phi_I partial_x phi_J - V_IJ partial_x phi_I partial_x phi_J)",
+    "vertexWeight": "h_l=(1/2) l^T K^-1 l",
+    "inversion": "phi -> -phi",
+    "thermalHall": "kappa_xy/T = 24 pi^2 k_B^2/(3h)"
+  },
+  "detectorOrder": [
+    "measure c_-=24 from thermal transport or finite-size energy",
+    "count weight-one current towers and require zero",
+    "resolve the h=3/2 inversion-twisted onset and its projected integer spectrum",
+    "separate the weight-two count into 98580 untwisted and 98304 twisted states",
+    "measure a marked Monster defect trace only after the carrier gates pass"
+  ],
+  "falsifiers": [
+    "744 weight-one currents selects the E8^3 control, not Monster",
+    "24 weight-one currents selects the unorbifolded Leech control, not Monster",
+    "a nonzero weight-one count rejects the Moonshine VOA",
+    "196884 without the zero-current and twisted-sector gates is non-discriminating"
+  ]
+}

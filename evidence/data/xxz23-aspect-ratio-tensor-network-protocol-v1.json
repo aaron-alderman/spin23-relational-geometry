@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "xxz23-aspect-ratio-tensor-network-protocol-v1",
+  "date": "2026-10-25",
+  "normalization": {
+    "gamma": 0.13659098493868665,
+    "delta": 0.9906859460363308,
+    "paperHamiltonian": "sum_j (sigma+_j sigma-_{j+1} + sigma-_j sigma+_{j+1} + Delta sigmaZ_j sigmaZ_{j+1}/2)",
+    "standardSpinHamiltonian": "sum_j (Sx_j Sx_{j+1} + Sy_j Sy_{j+1} + Delta Sz_j Sz_{j+1})",
+    "paperToStandardEnergyFactor": 2,
+    "standardSpinonVelocity": "pi sin(gamma)/(2 gamma)",
+    "paperVelocity": "pi sin(gamma)/gamma = 23 sin(pi/23)",
+    "velocity": 3.1318329292136715,
+    "modularMap": "tau = i v beta/L"
+  },
+  "checkpoints": [
+    {"L": 46, "imTau": 0.8, "beta": 11.750307513766261, "temperature": 0.0851041556851541},
+    {"L": 46, "imTau": 1, "beta": 14.687884392207826, "temperature": 0.0680833245481233},
+    {"L": 46, "imTau": 1.2, "beta": 17.62546127064939, "temperature": 0.05673610379010275},
+    {"L": 92, "imTau": 0.8, "beta": 23.500615027532522, "temperature": 0.04255207784257705},
+    {"L": 92, "imTau": 1, "beta": 29.37576878441565, "temperature": 0.03404166227406165},
+    {"L": 92, "imTau": 1.2, "beta": 35.25092254129878, "temperature": 0.028368051895051375},
+    {"L": 138, "imTau": 0.8, "beta": 35.250922541298785, "temperature": 0.02836805189505137},
+    {"L": 138, "imTau": 1, "beta": 44.063653176623475, "temperature": 0.022694441516041098},
+    {"L": 138, "imTau": 1.2, "beta": 52.876383811948166, "temperature": 0.018912034596700916}
+  ],
+  "velocityLockControl": {
+    "criticalIsingVelocityAtJIEqualsHI": "2 JI",
+    "matchedJI": 1.5659164646068357,
+    "matchedHI": 1.5659164646068357,
+    "interactingRequirement": "measure all low-energy velocities independently and reject a one-modulus comparison unless they converge to one common light cone"
+  },
+  "tensorNetworkPlan": {
+    "rungPhysicalDimension": 4,
+    "purifiedRungDimension": 16,
+    "bulkHamiltonianMpoBondDimension": 6,
+    "symmetryInsertionMpoBondDimension": 1,
+    "dualityMpoBondDimension": 23,
+    "finiteSizes": [46, 92, 138],
+    "imTauValues": [0.8, 1, 1.2],
+    "bondDimensions": [64, 128, 256],
+    "timeStepLevels": 2,
+    "convergenceCells": 54,
+    "normalizedAmplitudesPerCell": 5,
+    "memoryAtL46MiB": [
+      {"chi": 64, "purifiedMps": 46},
+      {"chi": 128, "purifiedMps": 184},
+      {"chi": 256, "purifiedMps": 736}
+    ],
+    "denseContractionUpperProxyAtL46": [
+      {"chi": 64, "insertionBondDimension": 1, "proxy": 192937984},
+      {"chi": 64, "insertionBondDimension": 23, "proxy": 4437573632},
+      {"chi": 128, "insertionBondDimension": 1, "proxy": 1543503872},
+      {"chi": 128, "insertionBondDimension": 23, "proxy": 35500589056},
+      {"chi": 256, "insertionBondDimension": 1, "proxy": 12348030976},
+      {"chi": 256, "insertionBondDimension": 23, "proxy": 284004712448}
+    ]
+  },
+  "preregisteredGates": [
+    "recover R=1 at lambda=0 within numerical error",
+    "halve imaginary-time step and double chi until every target magnitude changes by less than one quarter of its declared comparison tolerance",
+    "fit any coupling only on imTau=1 at L=46, then freeze it",
+    "predict imTau=0.8 and 1.2 and L=92 and 138 without retuning",
+    "compare both 1/L and 1/L^2 extrapolations and treat their spread as model-form uncertainty",
+    "reject the Monster interpretation if the low-energy sectors do not share one emergent velocity",
+    "do not infer the TY associator from trace agreement; reconstruct it separately"
+  ],
+  "scope": {
+    "centralChargeOfTwoLegLadder": 1.5,
+    "monsterCentralCharge": 24,
+    "verdict": "the ladder is a calibrated defect/trace surrogate, not a Monster-CFT realization"
+  }
+}

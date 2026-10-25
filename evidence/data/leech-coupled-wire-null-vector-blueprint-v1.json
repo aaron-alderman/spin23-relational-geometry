@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "leech-coupled-wire-null-vector-blueprint-v1",
+  "date": "2026-10-25",
+  "targetK": {
+    "rank": 24,
+    "symmetric": true,
+    "integral": true,
+    "even": true,
+    "positiveDefinite": true,
+    "determinant": 1,
+    "name": "Leech Gram matrix",
+    "explicitEvidence": "leech-explicit-k-matrix-v1"
+  },
+  "wireConstruction": {
+    "wireK": "K direct-sum (-K)",
+    "modesPerWire": 48,
+    "neighborInteraction": "cos[(K e_I) dot phi_R,y + (K e_I) dot phi_L,y+1]",
+    "interactionChannelsPerBond": 24,
+    "selfNullIdentity": "(K e_I)^T K^-1 (K e_J) - (K e_I)^T K^-1 (K e_J)=0",
+    "primitiveBecause": "det(K)=1 implies every column K e_I is primitive",
+    "locality": "each cosine couples only adjacent wires",
+    "openArrayExamples": [
+      {"wires": 2, "totalModes": 96, "nullVectors": 24, "gappedModes": 48, "boundaryModes": 48},
+      {"wires": 3, "totalModes": 144, "nullVectors": 48, "gappedModes": 96, "boundaryModes": 48},
+      {"wires": 4, "totalModes": 192, "nullVectors": 72, "gappedModes": 144, "boundaryModes": 48},
+      {"wires": 8, "totalModes": 384, "nullVectors": 168, "gappedModes": 336, "boundaryModes": 48}
+    ],
+    "boundaryContent": "24 left-moving modes on one edge and 24 right-moving modes on the opposite edge"
+  },
+  "p3Stages": [
+    {
+      "id": "P3A",
+      "target": "Leech chiral edge",
+      "construction": "coupled-wire null-vector array",
+      "status": "continuum-local blueprint complete; microscopic channel implementation open"
+    },
+    {
+      "id": "P3B",
+      "target": "inversion orbifold projection",
+      "construction": "couple the edge to a dynamical Z2 branch-cut/gauge degree of freedom and enforce invariant states",
+      "status": "coherent continuum coupling to all 24 channels complete in the dual basis; microscopic hardware and infrared orbifold-sector certification open"
+    },
+    {
+      "id": "P3C",
+      "target": "twisted-sector extension",
+      "construction": "include and condense/extend by the integer-spin projected twisted module",
+      "status": "local microscopic multiplication and stability open"
+    },
+    {
+      "id": "P3D",
+      "target": "Monster provenance readout",
+      "construction": "measure dim V1=0, the 98580+98304 split and marked defects",
+      "status": "protocol specified; carrier-dependent readout open"
+    }
+  ],
+  "literatureBoundary": {
+    "known": [
+      "coupled-wire methods realize chiral and orbifold edge theories through local interwire interactions",
+      "the Leech inversion extension is mathematically exactly V-natural"
+    ],
+    "notLocated": "a published local coupled-wire, spin, boson, photonic or circuit Hamiltonian whose verified edge scaling limit is the full Leech inversion extension V-natural"
+  },
+  "falsifiers": [
+    "failure of the null-vector interactions to gap all bulk counterpropagating modes",
+    "residual ground-state degeneracy inconsistent with det(K)=1",
+    "surviving 24 weight-one edge currents after the proposed orbifold",
+    "twist excitations that do not project to the J character",
+    "instability of the orbifold extension under symmetry-allowed local perturbations"
+  ]
+}

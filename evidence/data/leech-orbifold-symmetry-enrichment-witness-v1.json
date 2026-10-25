@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "leech-orbifold-symmetry-enrichment-witness-v1",
+  "date": "2026-10-25",
+  "fullCarrierRequirement": {
+    "leechVertexOperator": "V_l=exp(i l dot phi)",
+    "inversionAction": "g V_l g^-1 = V_-l",
+    "branchCutMeaning": "transport across the Z2 flux implements l -> -l",
+    "factorizedImpostor": "a decoupled toric-code flux acts trivially on the Leech momentum label"
+  },
+  "finiteClockToy": {
+    "dimension": 23,
+    "basis": "|l>, l in Z_23",
+    "translation": "T|l>=|l+1>",
+    "inversion": "P|l>=|-l>",
+    "enrichedRelation": "P T P^-1 = T^-1",
+    "factorizedRelation": "P0 T P0^-1 = T",
+    "commutatorWitness": "W=(1/23) Tr(P T P^-1 T^-1)",
+    "enrichedWitness": 0,
+    "factorizedWitness": 1,
+    "fixedLabelsUnderInversion": 1,
+    "twoCyclesUnderInversion": 11
+  },
+  "protocol": [
+    "prepare all 23 clock labels or a tomographically complete subset",
+    "apply one translation before and after branch-cut transport",
+    "reconstruct whether conjugation sends T to T or T^-1",
+    "measure the normalized group-commutator trace",
+    "repeat with the branch cut removed as the factorized control"
+  ],
+  "promotionGate": {
+    "pass": "branch-cut transport inverts the carrier label and the same flux participates in the m-condensed boundary extension",
+    "fail": "the toric-code fusion and sqrt(2) interface are present but the flux acts trivially on carrier operators",
+    "meaning": "passing establishes the symmetry-enriched orbifold parent; it still does not by itself establish the J-character or Monster defects"
+  },
+  "scope": {
+    "toyRole": "a finite order-23 process-tomography surrogate for the infinite Leech momentum-label action",
+    "notClaimed": "the Z23 clock labels are literally a basis of the Leech lattice or already identify Monster class 23AB"
+  }
+}

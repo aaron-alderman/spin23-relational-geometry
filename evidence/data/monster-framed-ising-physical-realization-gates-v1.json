@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "monster-framed-ising-physical-realization-gates-v1",
+  "date": "2026-10-25",
+  "exactMathematicalRoute": {
+    "isingFrameFactors": 48,
+    "centralChargePerFactor": 0.5,
+    "totalCentralCharge": 24,
+    "structure": "a framed VOA is a code-controlled extension of L(1/2,0)^tensor48",
+    "characterizationTheorem": "a holomorphic framed VOA of central charge 24 with V_1=0 is isomorphic to the Moonshine VOA",
+    "characterGate": "ch(V)=q^-1(1 + dim(V_1) q + dim(V_2) q^2 + ...)",
+    "monsterValues": {"dimV1": 0, "dimV2": 196884}
+  },
+  "order23Scaffold": {
+    "coordinateCount": 48,
+    "candidateCycleLengths": [23, 23, 1, 1],
+    "candidatePermutation": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,0,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,23,46,47],
+    "permutationOrder": 23,
+    "provedToPreserveMoonshineStructureCodes": false,
+    "provedToLiftToMonster23AB": false
+  },
+  "physicalGates": [
+    {"id": "F1", "condition": "48 critical Ising chiral sectors or a nonchiral doubled realization", "status": "standard ingredients"},
+    {"id": "F2", "condition": "local gauging/projection realizes the published Moonshine structure-code extension", "status": "open microscopic construction"},
+    {"id": "F3", "condition": "finite-size spectrum is holomorphic at c=24 and has V_1=0", "status": "open physical verification"},
+    {"id": "F4", "condition": "an order-23 operation preserves both structure codes and lifts to the desired 23AB automorphism", "status": "open marked-symmetry dictionary"},
+    {"id": "F5", "condition": "twisted traces and the TY associator agree with the Monster targets", "status": "open discriminating measurement"}
+  ],
+  "laneJunction": {
+    "xxz23LaneSupplies": "explicit lattice TY(Z_23) fusion MPO, but c=1 and an undetermined associator",
+    "framedIsingLaneSupplies": "an exact sufficient theorem for V-natural provenance, but no explicit lattice 23AB MPO",
+    "lightningTarget": "construct the 23AB defect on a physical realization of the Moonshine frame and recover both the order-46 connected-ratio curve and the TY recoupling data"
+  },
+  "antiOverclaim": [
+    "48 decoupled Ising factors are not V-natural",
+    "central charge 24 is necessary here but not sufficient",
+    "a cycle type 23^2 1^2 in S_48 need not preserve the Moonshine structure codes",
+    "an abstract order-23 code automorphism must still be identified with the marked 23AB Monster class",
+    "an isolated chiral VOA requires a boundary or anomaly-inflow realization; an ordinary 1D lattice naturally yields a doubled CFT"
+  ]
+}

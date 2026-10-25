@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "monster-laboratory-promotion-dag-v1",
+  "date": "2026-10-25",
+  "objective": "Promote one physical carrier from a Leech edge blueprint to a laboratory realization of the Moonshine VOA without substituting disconnected toys or fitted scalar traces for provenance.",
+  "statusVocabulary": ["formal-exact", "executable-surrogate", "continuum-blueprint", "laboratory-open"],
+  "carrierRule": {
+    "required": "Every gate B through I must be measured on the same carrier that passed gate A, with persistent operator identifiers and calibration records.",
+    "forbiddenSubstitution": "Passing a gate on a separate XXZ chain, clock model, surface code, numerical VOA, or classical emulator does not advance the laboratory carrier.",
+    "resetCondition": "Changing the Hilbert space, Hamiltonian phase, boundary termination, or defect implementation resets all downstream gates unless an experimentally verified isometry transports their observables."
+  },
+  "gates": [
+    {
+      "id": "A", "name": "Leech chiral edge", "dependsOn": [], "status": "continuum-blueprint",
+      "formalTarget": "even unimodular rank-24 K matrix, c_minus=24 and trivial bulk anyon group",
+      "measurement": "verify 24 chiral edge modes, the Leech momentum Gram form and primitive Haldane-null gapping of the opposite bulk modes",
+      "pass": "one microscopic carrier realizes the rank-24 Leech edge within declared finite-size and spectral tolerances",
+      "failMeaning": "not a Leech carrier"
+    },
+    {
+      "id": "B", "name": "crossed inversion enrichment", "dependsOn": ["A"], "status": "executable-surrogate",
+      "formalTarget": "P V_l P^-1 = V_-l rather than a factorized toric-code action",
+      "measurement": "process tomography of PTP^-1 against T^-1 plus a branch-cut-removed control",
+      "pass": "preregistered proposal: |W_enriched|<=0.1, |W_control-1|<=0.1 and their separation exceeds five standard errors",
+      "failMeaning": "factorized orbifold impostor or uncontrolled branch cut"
+    },
+    {
+      "id": "C", "name": "orbifold parent sectors", "dependsOn": ["B"], "status": "formal-exact",
+      "formalTarget": "four V_Lambda^+ sectors with Z2 squared fusion, spins (1,1,1,-1) and toric-code S matrix",
+      "measurement": "sector fusion, topological-spin and modular-interferometry tomography using the same inversion flux from B",
+      "pass": "all fusion products, four spins and sixteen S entries agree with the frozen toric-code record",
+      "failMeaning": "wrong orbifold parent"
+    },
+    {
+      "id": "D", "name": "twisted m condensation and current removal", "dependsOn": ["C"], "status": "laboratory-open",
+      "formalTarget": "select 1+m rather than 1+e, producing V-natural rather than V-Lambda",
+      "measurement": "condensation boundary tomography and the normalized thermal coefficient at weight one",
+      "pass": "m is transparent at the chosen boundary and the weight-one current count changes from 24 to 0 while c_minus remains 24",
+      "failMeaning": "Leech extension, incomplete condensation, or loss of the c=24 carrier"
+    },
+    {
+      "id": "E", "name": "Moonshine character and twisted split", "dependsOn": ["D"], "status": "laboratory-open",
+      "formalTarget": "J=q^-1+196884q+21493760q^2+... with 196884=98580+98304",
+      "measurement": "finite-size spectroscopy and sector-resolved thermal traces over at least three sizes and three aspect ratios",
+      "pass": "zero weight-one coefficient, convergent 196884 and 21493760 degeneracies, and the frozen untwisted/twisted weight-two split without fitting those values",
+      "failMeaning": "a different c=24 theory or an unresolved finite-size emulator"
+    },
+    {
+      "id": "F", "name": "2A duality defect", "dependsOn": ["E"], "status": "laboratory-open",
+      "formalTarget": "the Monster 2A duality line and its square-root-two condensation interface",
+      "measurement": "defect fusion, junction recoupling and quantum-dimension scaling on the same Moonshine edge",
+      "pass": "the measured defect algebra and held-out junction amplitude match the sourced 2A record",
+      "failMeaning": "generic Ising interface without Monster defect provenance"
+    },
+    {
+      "id": "G", "name": "marked 23AB Tambara-Yamagami sector", "dependsOn": ["E"], "status": "laboratory-open",
+      "formalTarget": "TY(Z23,chi,epsilon), chi(a,b)=exp(2 pi i ab/23), qdim(N)=sqrt(23)",
+      "measurement": "fusion and recoupling tomography with a physically marked order-23 generator",
+      "pass": "all entry magnitudes equal 1/sqrt(23), held-out plaquette phases equal exp[-2 pi i (a-a_prime)(b-b_prime)/23], F squared is charge conjugation, and the FS sign is recorded",
+      "failMeaning": "generic Z23 noninvertible symmetry or unmarked generator relabelling"
+    },
+    {
+      "id": "H", "name": "order-46 common-root junction", "dependsOn": ["F", "G"], "status": "laboratory-open",
+      "formalTarget": "one operator h with h squared in 23AB and h^23 in 2A or 2B",
+      "measurement": "power-map process tomography and connected thermal traces at y=0.8, 1.0 and 1.2",
+      "pass": "the same h passes both power maps and, at y=1, reproduces the frozen magnitudes 0.00373794542221053 for 46AB/2B and 0.0784643601781287 for 46CD/2A; y=0.8 and 1.2 are held out",
+      "failMeaning": "factorized Z23 and Z2 layers, a fitted one-point toy, or the wrong Monster class"
+    },
+    {
+      "id": "I", "name": "operator-algebra closure", "dependsOn": ["H"], "status": "laboratory-open",
+      "formalTarget": "Griess product, a selected H2(R) Jordan corner and the Norton-Sakuma pair atlas",
+      "measurement": "six two-point plus ten symmetric three-point correlators for the corner, followed by held-out Jordan and Ising-pair tests",
+      "pass": "the reconstructed product passes the held-out Jordan identity and predicts untrained Norton-Sakuma pair types from overlap and involution-product order",
+      "failMeaning": "character-level agreement without the Monster operator algebra"
+    }
+  ],
+  "promotion": {
+    "requiredGateOrder": ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+    "parallelAfterE": [["F", "G"]],
+    "claimAfterA": "laboratory Leech-edge candidate",
+    "claimAfterE": "laboratory Moonshine-character candidate",
+    "claimAfterI": "laboratory Monster realization at the tested operator-and-defect scope",
+    "natureSelectionStillOpen": true
+  },
+  "currentFrontier": {
+    "formalPhysics": "proved by the Leech inversion orbifold and heterotic constructions",
+    "laboratoryProgress": "A has a local continuum coupled-wire blueprint, an explicit verified 24 by 24 interaction matrix and an integral dual basis that diagonalizes all 24 gap-opening cosines; B has an exact local Z2 inversion-gauge module coherently coupled to all 24 Leech channels with 1152 verified null pairings; P3C compiles both weight-two sectors, the normal extraspecial and Conway-Clifford actions, the central 2B trace 276, the universal delta_ab e/3 product, and 24 explicit untwisted-minimal-vector to twisted-Pauli actions; platform-local realization, infrared orbifold certification, absolute OPE normalization and the residual Monster-specific Griess tensor remain open; no single microscopic carrier has passed A through I",
+    "firstUnclosedGate": "A",
+    "highestValueNextResult": "a microscopic Hamiltonian or programmable simulator whose low-energy edge passes A and exposes the inversion branch cut required for B"
+  },
+  "epistemicBoundary": "This DAG can prove that a tested laboratory carrier realizes the declared Moonshine-CFT structure. It cannot prove that the Monster is fundamental, unique in nature, or a symmetry of four-dimensional spacetime."
+}

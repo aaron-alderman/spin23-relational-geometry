@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "moonshine-frame-order23-permutation-no-go-v1",
+  "date": "2026-10-25",
+  "distinguishedFrameCode": {
+    "length": 48,
+    "field": "F_2",
+    "definition": "D=span{(1^16,0^32),(0^32,1^16),(alpha,alpha,alpha): alpha in RM(1,4)}",
+    "rm14Dimension": 5,
+    "dimension": 7,
+    "generatorColumnCount": 48,
+    "distinctGeneratorColumns": 48
+  },
+  "representationObstruction": {
+    "prime": 23,
+    "multiplicativeOrderOf2Modulo23": 11,
+    "smallestNontrivialF2RepresentationDimension": 11,
+    "codeDimension": 7,
+    "consequence": "every C_23 action on D is trivial"
+  },
+  "coordinateConsequence": {
+    "statement": "a coordinate permutation acting trivially on D can only permute equal generator-matrix columns",
+    "equalColumnClasses": 48,
+    "largestEqualColumnClass": 1,
+    "order23CoordinateAutomorphismExists": false
+  },
+  "publishedCrossCheck": {
+    "coordinateAutomorphismGroup": "2^12 . (Sym_3 x GL(4,2))",
+    "GL4F2Order": 20160,
+    "groupOrder": 495452160,
+    "primeFactorization": "2^19 * 3^3 * 5 * 7",
+    "divisibleBy23": false,
+    "source": "Lam and Shimakura, Frame stabilizers for framed vertex operator algebras associated to lattices having 4-frames, arXiv:0905.4769"
+  },
+  "scope": {
+    "ruledOut": "an order-23 symmetry realized as a coordinate permutation stabilizing this distinguished Ising frame",
+    "notRuledOut": [
+      "a Monster order-23 automorphism that moves this Ising frame to another frame",
+      "an order-23 operation acting nonlocally on the code extension or twisted sectors",
+      "another physical presentation not based on coordinate permutations of this frame"
+    ],
+    "physicalImplication": "the 23AB defect cannot be implemented in this frame as two simple 23-site wire cycles"
+  }
+}
