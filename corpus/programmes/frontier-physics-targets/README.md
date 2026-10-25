@@ -25,6 +25,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Frontier experiment programmes v2](frontier_experiment_programmes_v2.json) — decision-complete EXIT-03 surface for all 21 experiments and all 378 required cells, while preserving direct v1 content.
 - [Experiment programme overrides v2](frontier_experiment_programme_overrides_v2.json) — durable experiment-specific authorship for all transfer functions, covariance models, sensitivity calculations, decision gates, replication rules, release contracts and claim propagation; never overwritten by regeneration.
 - [Terminal-neighbourhood authored reviews](terminal_neighbourhood_reviews_v1.json) — durable move-by-move findings, consequences and reopening data merged into the generated EXIT-02 queue without overwriting review judgment.
+- [Terminal-review adjacency crosswalk](adjacency_terminal_review_crosswalk_v1.json) — explicit family-to-neighbourhood mapping that derives EXIT-01 dispositions for terminal topics without treating closure labels as evidence.
 - [Frontier complexity cards](frontier_complexity_cards_v1.md) — five-stage existence, preparation, sampling, detection and independent-verification audit for FPT-001--010 and FPT-022.
 - [Complexity-card register](frontier_complexity_cards_v1.json) — machine-readable scaling classes, variables, approximation boundaries, independent checks and stop rules.
 - [Open topics](open_topics_v1.md) — maintained priority queue with explicit stop rules.

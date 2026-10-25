@@ -1,7 +1,9 @@
 # Physics–mathematics adjacency candidates v1
 
-**Generated:** 2026-10-25  
-**Status:** topic-level candidate universe generated; 518 candidates remain unreviewed  
+**Generated:** 2026-10-25
+
+**Status:** topic-level candidate universe generated; 422 candidates remain unreviewed
+
 **Machine authority:** [adjacency candidate register](physics_math_adjacency_candidates_v1.json)
 
 This is the first finite search universe under [EXIT-01](corpus_completion_exit_criteria_v1.md). It crosses all 51 maintained topics with every adjacency family applicable to their 20 frontier areas, producing **518 candidate questions**. Generation is not evidence of a relationship. Every candidate begins unreviewed and must acquire one allowed disposition, exact evidence, a reason, preserved and lost structure, implications and a reopening trigger.

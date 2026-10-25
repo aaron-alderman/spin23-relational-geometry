@@ -8,11 +8,16 @@ const topicsPath = `${lane}/open_topics_register_v1.json`;
 const detectorPath = `${lane}/detector_frontier_register_v1.json`;
 const outputPath = `${lane}/physics_math_adjacency_candidates_v1.json`;
 const markdownPath = `${lane}/physics_math_adjacency_candidates_v1.md`;
+const terminalPath = `${lane}/terminal_neighbourhood_candidates_v1.json`;
+const crosswalkPath = `${lane}/adjacency_terminal_review_crosswalk_v1.json`;
 const read = rel => JSON.parse(fs.readFileSync(path.join(root, rel), "utf8"));
 
 const criteria = read(criteriaPath);
 const topics = read(topicsPath);
 const detectors = read(detectorPath);
+const terminal = read(terminalPath);
+const crosswalk = read(crosswalkPath);
+const terminalReviews = new Map(terminal.candidates.filter(candidate => candidate.workflowStatus === "reviewed").map(candidate => [candidate.id, candidate]));
 const existing = fs.existsSync(path.join(root, outputPath)) ? read(outputPath) : null;
 const existingCandidates = new Map((existing?.candidates ?? []).map(candidate => [candidate.id, candidate]));
 
@@ -49,6 +54,9 @@ for (const topic of topics.topics) {
     const basisAreas = topic.frontierAreaIds.filter(area => areaFamilies[area]?.includes(family));
     const id = `${topic.id}:${family}`;
     const previous = existingCandidates.get(id);
+    const mappedMove = crosswalk.familyToMove[family];
+    const terminalReview = terminalReviews.get(`${topic.id}:${mappedMove}`);
+    const derivedDisposition = terminalReview ? crosswalk.resultToDisposition[terminalReview.result] : null;
     candidates.push({
       id,
       topicId: topic.id,
@@ -58,15 +66,17 @@ for (const topic of topics.topics) {
       frontierAreaIds: topic.frontierAreaIds,
       family,
       applicabilityBasis: basisAreas.map(area => ({ frontierAreaId: area, label: areaLabels.get(area) })),
-      workflowStatus: previous?.workflowStatus ?? "unreviewed",
-      disposition: previous?.disposition ?? null,
-      evidenceRefs: previous?.evidenceRefs ?? [],
-      reason: previous?.reason ?? null,
-      preservedStructure: previous?.preservedStructure ?? [],
-      lostStructure: previous?.lostStructure ?? [],
-      implications: previous?.implications ?? [],
-      reopeningTrigger: previous?.reopeningTrigger ?? null,
-      reviewer: previous?.reviewer ?? null
+      workflowStatus: derivedDisposition ? "dispositioned" : previous?.workflowStatus ?? "unreviewed",
+      disposition: derivedDisposition ?? previous?.disposition ?? null,
+      evidenceRefs: terminalReview?.evidenceRefs ?? previous?.evidenceRefs ?? [],
+      reason: terminalReview ? `${terminalReview.finding} This EXIT-01 disposition is derived through the declared ${family} -> ${mappedMove} crosswalk.` : previous?.reason ?? null,
+      preservedStructure: terminalReview ? crosswalk.preservedStructure : previous?.preservedStructure ?? [],
+      lostStructure: terminalReview ? crosswalk.lostStructure : previous?.lostStructure ?? [],
+      implications: terminalReview ? terminalReview.inheritedConsequences : previous?.implications ?? [],
+      reopeningTrigger: terminalReview?.minimalReopeningDatum ?? previous?.reopeningTrigger ?? null,
+      reviewer: terminalReview?.reviewer ?? previous?.reviewer ?? null,
+      derivationRef: terminalReview ? crosswalkPath : previous?.derivationRef ?? null,
+      sourceReviewId: terminalReview?.id ?? previous?.sourceReviewId ?? null
     });
   }
 }
@@ -80,7 +90,7 @@ const output = {
   authority: "First normalized topic-level candidate universe for EXIT-01. It generates questions, not scientific relationships; no candidate is admitted until reviewed and dispositioned with evidence.",
   scope: "All maintained open-topic records crossed with every adjacency family declared applicable to any of their frontier areas. Claim-family and object-level expansion remains a later EXIT-01 layer.",
   criteriaRef: criteriaPath,
-  sourceRefs: [topicsPath, detectorPath],
+  sourceRefs: [topicsPath, detectorPath, terminalPath, crosswalkPath],
   workflowStatuses: ["unreviewed", "in_review", "dispositioned", "challenged"],
   allowedDispositions: criteria.requiredAdjacencyDispositions,
   areaFamilyMatrix: Object.fromEntries(Object.entries(areaFamilies).map(([area, families]) => [area, { label: areaLabels.get(area), families }])),
@@ -99,7 +109,7 @@ const output = {
 };
 
 const markdown = `# Physics–mathematics adjacency candidates v1\n\n` +
-  `**Generated:** ${output.date}  \n**Status:** topic-level candidate universe generated; ${output.summary.unreviewed} candidates remain unreviewed  \n**Machine authority:** [adjacency candidate register](physics_math_adjacency_candidates_v1.json)\n\n` +
+  `**Generated:** ${output.date}\n\n**Status:** topic-level candidate universe generated; ${output.summary.unreviewed} candidates remain unreviewed\n\n**Machine authority:** [adjacency candidate register](physics_math_adjacency_candidates_v1.json)\n\n` +
   `This is the first finite search universe under [EXIT-01](corpus_completion_exit_criteria_v1.md). It crosses all ${output.summary.topics} maintained topics with every adjacency family applicable to their ${output.summary.frontierAreas} frontier areas, producing **${output.summary.candidates} candidate questions**. Generation is not evidence of a relationship. Every candidate begins unreviewed and must acquire one allowed disposition, exact evidence, a reason, preserved and lost structure, implications and a reopening trigger.\n\n` +
   `## Candidate counts by relation family\n\n| Family | Candidates |\n|---|---:|\n${Object.entries(byFamily).map(([family, count]) => `| ${family.replaceAll("_", " ")} | ${count} |`).join("\n")}\n\n` +
   `## Completion boundary\n\nEXIT-01 cannot pass when a candidate is unreviewed, multiply classified, unsupported, or missing consequence and reopening data. Topic-level completion will still not be whole-corpus completion: authoritative claim families and newly discovered physical or mathematical objects must then be expanded and deduplicated against this normalized layer.\n\n` +
