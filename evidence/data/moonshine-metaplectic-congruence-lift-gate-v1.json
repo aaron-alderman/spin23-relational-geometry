@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The finite Dic11 subgroup at level 23 has no faithful finite-order lift to Sp(4,Z); its integral preimage is a nonsplit infinite extension by Gamma(23), so metaplectic C4 compatibility must be tested on the pulled-back congruence extension rather than on the finite quotient alone.",
+  "finiteQuotient": {
+    "group": "Dic11",
+    "order": 44,
+    "ambient": "Sp(4,F23)",
+    "rotationOrder": 11,
+    "quarterTurnOrder": 4,
+    "abelianization": "C4"
+  },
+  "integralObstruction": {
+    "ambient": "Sp(4,Z)",
+    "matrixDimension": 4,
+    "cyclotomicPolynomial": "Phi_11",
+    "cyclotomicDegree": 10,
+    "hasOrder11Torsion": false,
+    "finiteSectionExists": false
+  },
+  "congruencePreimage": {
+    "exactSequence": "1 -> Gamma(23) -> D_hat -> Dic11 -> 1",
+    "kernel": "principal congruence subgroup Gamma(23)",
+    "infinite": true,
+    "split": false,
+    "reason": "a section would create an order-11 element in Sp(4,Z)"
+  },
+  "metaplecticPullback": {
+    "exactSequence": "1 -> mu2 -> D_tilde -> D_hat -> 1",
+    "requiredQuarterTurnImage": "i",
+    "requiredMetaplecticCenterImage": "-1",
+    "finiteC4DataSufficient": false,
+    "missingDatum": "the theta/metaplectic cocycle on congruence-kernel relations produced by explicit integral lifts"
+  },
+  "nextTest": "choose integral symplectic generator lifts, record their relation defects in Gamma(23), pull back the theta cocycle and compare the resulting genuine character with the sewn order-23 defect anomaly line",
+  "boundary": "The result obstructs a direct finite integral lift; it does not rule out a genuine multiplier on the infinite congruence preimage."
+}

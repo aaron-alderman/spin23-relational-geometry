@@ -115,8 +115,19 @@ s^2=-I\longmapsto -1,
 
 inside a metaplectic theta multiplier. This is the exact finite content of the
 corpus's “quarter turn behaves like \(i\)” observation. It is not a physical
-Wick rotation. Whether the theta multiplier and order-23 defect cocycle
-actually agree on this \(C_4\) is source-gated and remains open.
+Wick rotation. The finite group does not lift as a finite subgroup of
+\(Sp(4,\mathbb Z)\): its integral domain is instead the nonsplit congruence
+extension
+
+\[
+1\longrightarrow\Gamma(23)\longrightarrow\widehat D
+\longrightarrow\mathrm{Dic}_{11}\longrightarrow1.
+\]
+
+Whether the pulled-back theta multiplier and order-23 defect cocycle actually
+agree on this extension is source-gated and remains open. Quotient-level
+\(C_4\) values alone are insufficient because relations may accumulate a
+phase in \(\Gamma(23)\).
 
 ## Open region and required new inputs
 
@@ -157,4 +168,5 @@ traces or centralizer words is repetition, not frontier progress.
 - [Projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 - [Mixed-level genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Quarter-turn metaplectic gate](quarter-turn-metaplectic-gate.md)
+- [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
 - [Admissibility synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md)

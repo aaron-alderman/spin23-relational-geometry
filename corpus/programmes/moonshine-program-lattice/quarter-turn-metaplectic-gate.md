@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 
-**Status:** finite character channels classified; metaplectic compatibility calculation open
+**Status:** finite character channels classified; direct finite integral lift obstructed; congruence compatibility open
 
 **Evidence:** [quarter-turn ledger](../../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json)  
 **Certificate:** [abelianization and phase verifier](../../../verification/verify/verify_moonshine_quarter_turn_metaplectic_gate.mjs)
@@ -134,10 +134,13 @@ finite characteristic character can retain the dicyclic center. The only
 remaining scalar-phase route is the \(C_4\) metaplectic lift.
 
 Evaluating that lift requires the actual theta and twisted-module cocycles.
-It cannot be decided from group orders, carrier counts or the equality
-\(S^2=-I\) alone. A successful calculation would identify the missing
-anomaly line; failure would force the programme to a higher-dimensional
-vector-valued intertwiner rather than a scalar phase coupling.
+The subsequent [congruence-lift gate](metaplectic-congruence-lift-gate.md)
+sharpens the domain: \(\mathrm{Dic}_{11}\) has no faithful finite-order lift
+to \(Sp(4,\mathbb Z)\), because that would create forbidden order-eleven
+torsion. The cocycle must therefore be tested on its infinite preimage under
+reduction modulo 23, including the relations that close only in
+\(\Gamma(23)\). It cannot be decided from group orders, carrier counts or the
+equality \(S^2=-I\) alone.
 
 ## Sources and corpus links
 
@@ -146,3 +149,4 @@ vector-valued intertwiner rather than a scalar phase coupling.
 - [Mixed-level 46 genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Oriented seam modular line](../lattice-subroutine-gravity/oriented-seam-modular-line.md)
 - [Order-46 Galois orientation gate](order-46-galois-orientation-gate.md)
+- [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)

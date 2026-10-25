@@ -13,6 +13,8 @@
 **Exhaustion boundary:** [closed routes, live corridor and stopping rule](exhaustion-checkpoint.md)
 **Exhaustion certificate:** [checkpoint verifier](../../../verification/verify/verify_moonshine_exhaustion_checkpoint.mjs)
 
+**Metaplectic lift gate:** [the finite quotient lifts only through an infinite congruence extension](metaplectic-congruence-lift-gate.md)
+
 ## Result
 
 The Monster branch does contain a mathematically defensible sense in which a
@@ -859,6 +861,14 @@ Without one of those inputs, further scalar coefficient work is repetition
 rather than progress.  Beyond them, a physical
 promotion still requires a carrier action, clock and detector law.
 
+The metaplectic phase route is now typed more precisely. The finite
+\(\mathrm{Dic}_{11}\) quotient has the required \(C_4\) character, but it
+cannot embed faithfully as finite-order torsion in \(Sp(4,\mathbb Z)\).
+Its integral lift is a nonsplit infinite extension by \(\Gamma(23)\). The
+next sewing calculation must therefore evaluate the theta cocycle on those
+congruence-kernel relation defects; matching only \(S\mapsto i\) in the
+finite quotient is insufficient.
+
 ## Sources and corpus links
 
 - Borcherds, [*Monstrous moonshine and monstrous Lie superalgebras*](https://math.berkeley.edu/~reb/papers/monster/monster.pdf)
@@ -883,3 +893,4 @@ promotion still requires a carrier action, clock and detector law.
 - [Leech pair-Gram bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Hecke/commutant audit](../frontier/wave-7/frontier_wave7_36_hecke_commutant_and_spin23_corner_bridge.md)
 - [Order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md)
+- [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)

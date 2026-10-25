@@ -9,6 +9,7 @@ const centralizer = load("../../evidence/data/moonshine-order23-centralizer-exha
 const projective = load("../../evidence/data/moonshine-order23-projective-centralizer-no-go-v1.json");
 const seam = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
 const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
+const congruenceLift = load("../../evidence/data/moonshine-metaplectic-congruence-lift-gate-v1.json");
 const frontier = load("../../evidence/data/moonshine-frontier-crosswalk-v1.json");
 
 assert.equal(checkpoint.closed.arithmeticAndLattice, true);
@@ -42,6 +43,9 @@ assert.equal(checkpoint.scalarBoundary.signRetainingCharacter, "C4");
 assert.equal(checkpoint.scalarBoundary.quarterTurnImage, quarterTurn.couplingChannels.metaplecticLift.quarterTurnImage);
 assert.equal(checkpoint.scalarBoundary.centralSquareImage, quarterTurn.couplingChannels.metaplecticLift.centralSquareImage);
 assert(quarterTurn.couplingChannels.metaplecticLift.status.includes("candidate"));
+assert.equal(checkpoint.scalarBoundary.integralDomain, congruenceLift.congruencePreimage.exactSequence);
+assert.equal(checkpoint.scalarBoundary.finiteSectionExists, congruenceLift.integralObstruction.finiteSectionExists);
+assert.equal(checkpoint.scalarBoundary.finiteC4DataSufficient, congruenceLift.metaplecticPullback.finiteC4DataSufficient);
 
 assert.deepEqual(
   checkpoint.openSourceGated.map(({ rank }) => rank),

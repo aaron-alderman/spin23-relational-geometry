@@ -125,6 +125,10 @@ unique nontrivial common quotient is \(C_2\), matching seam determinant sign
 to dihedral reflection parity. It necessarily loses the dicyclic center.
 Retaining that sign requires the order-four character
 \(S\mapsto i,\ S^2=-I\mapsto-1\) from the metaplectic multiplier data.
+This is not a finite subgroup lift: the order-eleven rotation cannot lift as
+finite-order torsion in \(Sp(4,\mathbb Z)\). The relevant domain is the
+infinite congruence preimage of \(\mathrm{Dic}_{11}<Sp(4,23)\), and its
+\(\Gamma(23)\) relation phases must be checked explicitly.
 
 ## 4. Why “level 46” is not yet the analytic answer
 
@@ -181,6 +185,7 @@ identifies the precise multiplier line that must be lifted analytically.
 - Gaberdiel, Persson and Volpato, [*Generalised Moonshine and Holomorphic Orbifolds*](https://arxiv.org/abs/1302.5425)
 - [Order-46 Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Quarter-turn metaplectic coupling gate](quarter-turn-metaplectic-gate.md)
+- [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
 - [Genus-two seam closure](../lattice-subroutine-gravity/genus-two-seam-closure.md)
 - [Oriented seam modular line](../lattice-subroutine-gravity/oriented-seam-modular-line.md)
 - [Leech pair-Gram / Spin bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)

@@ -3,6 +3,7 @@ import fs from "node:fs";
 
 const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, import.meta.url), "utf8"));
 const gate = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
+const congruenceLift = load("../../evidence/data/moonshine-metaplectic-congruence-lift-gate-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const seam = load("../../evidence/data/lattice-subroutine-oriented-seam-modular-line-v1.json");
 const mixed = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
@@ -30,6 +31,8 @@ const iSquared = {re: i.re * i.re - i.im * i.im, im: 2 * i.re * i.im};
 assert.deepEqual(iSquared, {re: -1, im: 0});
 assert.equal(gate.couplingChannels.metaplecticLift.centralSquareImage, "-1");
 assert.equal(gate.couplingChannels.metaplecticLift.retainsCentralSign, true);
+assert.equal(gate.directFiniteIntegralLift, false);
+assert.equal(congruenceLift.integralObstruction.finiteSectionExists, false);
 assert.equal(mixed.analyticBoundary.thetaMultiplierRequiresMetaplecticLift, true);
 assert(moonshine.finiteTransitionSkeleton.relations.includes("S^2=D_5^11=-I"));
 assert(gate.semanticBoundary.notEstablished.includes("physical time"));
