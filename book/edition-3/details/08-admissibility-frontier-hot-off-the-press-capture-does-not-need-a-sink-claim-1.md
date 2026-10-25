@@ -8,22 +8,38 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> A harmonic rail fixes the phonon band and dispersion; a local bond-strain transition fixes the relative mode weights and automatically removes the translational zero mode. With a declared transition matrix element, complete unitary evolution transfers 0.99662 of the population to bound matter plus phonons before recurrence while conserving norm and total energy within five parts in one hundred billion.
+> **Provisional integration note — 25 October 2026.** The spectral-flow bath can now be replaced by a recognizable acoustic carrier. A harmonic rail fixes the phonon band and dispersion; a local bond-strain transition fixes the relative mode weights and automatically removes the translational zero mode. With a declared transition matrix element, complete unitary evolution transfers 0.99662 of the population to bound matter plus phonons before recurrence while conserving norm and total energy within five parts in one hundred billion.
 
 ## What this commits us to
 
-This is a finite one-excitation benchmark. It establishes a source-shaped channel, not a material capture rate or an irreversible asymptotic limit.
+The construction is admitted only after the named additional input is supplied. The page records the dependency instead of hiding it inside the conclusion.
+
+## Logical anatomy
+
+- **Scope:** chapter “The admissibility frontier”, section “Hot off the press — capture does not need a sink”.
+- **Unit of argument:** assertion 1 of 3 in this section.
+- **Evidence posture:** Identify the named external input and verify that the construction follows after it is supplied.
+- **Research move:** constructs a model, mechanism, calculation, protocol or intervention.
+
+## Verification route
+
+1. Read the controlling documents below and recover their declared objects and assumptions.
+2. Check the calculation, construction, obstruction or stopping rule on those same objects.
+3. Compare the source conclusion with the exact assertion above; do not strengthen its verbs or enlarge its domain.
+4. Apply the status rule and retain every named external dependency.
 
 ## What would move or defeat this claim
 
-Repeat the calculation with a transition matrix element derived from the AZ-055 carrier and show convergence with rail size, timestep and excitation number.
+Show that the named input is inconsistent, insufficient, unavailable, or fails to imply the claimed construction.
 
 ## Controlling documents
 
-- [admissibility 120](../../../corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md)
-- [phonon-capture evidence](../../../evidence/data/ssh-acoustic-phonon-capture-gate-v1.json)
+- **admissibility 122 a normalized packet turns the overlap density into a capture probability** — [admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md](../../../corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md)
+- **admissibility 121 the capture matrix element is a scattering density not a two level number** — [admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md](../../../corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md)
+- **admissibility 120 a unitary acoustic rail replaces the hand shaped capture bath** — [admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md](../../../corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md)
+- **admissibility 55 finite band levinson and adaptive pole collisions** — [admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md](../../../corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md)
 
-> **Authority boundary.** The cited research document and executable certificate remain authoritative.
+> **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 

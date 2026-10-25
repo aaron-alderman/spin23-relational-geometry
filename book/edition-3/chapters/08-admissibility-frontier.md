@@ -1032,7 +1032,7 @@ An ordinary symmetric resonance count integrates this real interference away. We
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-2.md)
 
-The first finite detector transfer now sharpens that boundary. Symmetric smearing preserves odd/even parity and the interference sign while attenuating the moment; asymmetric acceptance leaks even background and signal-square terms into the odd record. A fixed linear detector still leaves every reconstructed statistic quadratic in the three source coefficients, so nineteen generator settings predict the eight held-out corners after folding. Those twenty-seven settings are simulation templates, not twenty-seven reversible controls on collider data. The physical next step is one source-complete helicity calculation, calibrated response and nuisance covariance, followed by a likelihood for the single observed record. Only a replicated residual outside the complete seven-coordinate model would point toward new physics.
+The statistic is exact only in the local analytic model. A real likelihood must carry complex continuum helicities, absorptive phases, all open widths, symmetric-resolution suppression, acceptance asymmetry and background-slope leakage constrained by sidebands. The next step is therefore one declared final-state calculation and detector convolution. Passing would be a practical signed-coupling measurement; only a replicated residual outside the complete seven-coordinate model would point toward new physics.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-3.md)
 
@@ -1081,7 +1081,9 @@ The modular calculation now goes further. Fricke invariance gives the mixed bran
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
 ## Hot off the press — the hydrodynamic cone has poles
 
-> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
 **Provisional integration note — 25 October 2026.** The hydrodynamic rank witness now has a full effective response rather than three positive shapes. The tensor term is local at first derivative order, the shear channel has a diffusive pole, and the sound channel has two attenuated propagating poles. At the declared point every pole is retarded, every residue is nonzero and the assembled two-port spectral matrix is positive definite.
 
@@ -1130,7 +1132,7 @@ Conditionally, those relaxation variables admit positive stationary Gaussian flu
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-screened-field-is-not-the-whole-carrier-claim-1.md)
 
-That does not make every microscopic energy current identical. Moving a bounded divergence between local energy densities changes the current by a total time derivative. It leaves regular dc Green--Kubo transport unchanged, but it can change finite-frequency records; singular infrared polarization is exactly where the regularity premise may fail. “Gauge” therefore names a controlled equivalence, not permission to ignore the order of limits.
+That does not make every microscopic energy current identical. Moving a bounded divergence between local energy densities changes the current by a total time derivative. It leaves regular dc Green--Kubo transport unchanged, but it can change finite-frequency records; singular infrared polarization is exactly where the regularity premise may fail. ‘Gauge’ therefore names a controlled equivalence, not permission to ignore the order of limits.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-screened-field-is-not-the-whole-carrier-claim-2.md)
 
@@ -1153,7 +1155,7 @@ The phase ledger matters as much as the population. Backward evolution of the co
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-2.md)
 
-The graph part of the missing source has now been computed and correctly normalized. The lower AZ-055 pole, an incoming energy-space packet, all eight complex bond-modulation overlaps and a finite acoustic rail evolve under one Hermitian Hamiltonian. For the declared common bond derivative (D=0.2), the 96-bin/240-site calculation gives a capture probability of (1.0892761\times10^{-3}) and a conditional emitted-phonon energy of 1.2182162; the preceding refinement changes the probability by only 0.258%. Norm, energy and backward phase recovery close below (1.4\times10^{-9}). The modest sub-percent result is more informative than the earlier strong two-level benchmark because continuum normalization is no longer being mistaken for a discrete coefficient. The look-here calculation has now narrowed to a named material or engineered device: measure bond-resolved (dt/du), masses and springs, then test thermal and multiphonon convergence. Success could improve phonon-assisted state preparation and boundary capture engineering; failure would locate the missing disposal channel precisely.
+The graph part of the missing source has now been computed and correctly normalized. The lower AZ-055 pole, an incoming energy-space packet, all eight complex bond-modulation overlaps and a finite acoustic rail evolve under one Hermitian Hamiltonian. For the declared common bond derivative \(D=0.2\), the 96-bin/240-site calculation gives a capture probability of \(1.0892761\times10^{-3}\) and a conditional emitted-phonon energy of 1.2182162; the preceding refinement changes the probability by only 0.258%. Norm, energy and backward phase recovery close below \(1.4\times10^{-9}\). The modest sub-percent result is more informative than the earlier strong two-level benchmark because continuum normalization is no longer being mistaken for a discrete coefficient. The look-here calculation has now narrowed to a named material or engineered device: measure bond-resolved \(dt/du\), masses and springs, then test thermal and multiphonon convergence. Success could improve phonon-assisted state preparation and boundary capture engineering; failure would locate the missing disposal channel precisely.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-3.md)
 

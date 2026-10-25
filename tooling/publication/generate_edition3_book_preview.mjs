@@ -323,6 +323,9 @@ const sectionTaxonomy = {
   "Hot off the press — an odd resonance moment retains the sign": "experiment",
   "Hot off the press — the operator does not choose its boundary": "external",
   "Hot off the press — the two rails share a plane, not a group": "conditional",
+  "Hot off the press — the hydrodynamic cone has poles": "conditional",
+  "Hot off the press — the screened field is not the whole carrier": "conditional",
+  "Hot off the press — capture does not need a sink": "conditional",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -427,6 +430,9 @@ const sectionArchetype = {
   "Hot off the press — an odd resonance moment retains the sign": "builder",
   "Hot off the press — the operator does not choose its boundary": "translator",
   "Hot off the press — the two rails share a plane, not a group": "auditor",
+  "Hot off the press — the hydrodynamic cone has poles": "builder",
+  "Hot off the press — the screened field is not the whole carrier": "translator",
+  "Hot off the press — capture does not need a sink": "builder",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -921,6 +927,24 @@ admissibilitySections.splice(orientedSeamIndex + 42, 0, [
   ],
 ]);
 
+admissibilitySections.splice(orientedSeamIndex + 43, 0, [
+  "Hot off the press — the screened field is not the whole carrier",
+  [
+    "**Provisional integration note — 25 October 2026.** The long-range energy-current problem has a conventional local completion when matter and finite-speed electromagnetic fields are retained together. Matter gains the work density \\(\\mathbf j\\cdot\\mathbf E\\); field energy loses the same amount through Poynting continuity. Their sum therefore has a local finite-\\(q\\) current without assigning every Coulomb bond to one endpoint. A finite Fourier certificate closes this identity and its ordinary potential-gauge invariance.",
+    "That does not make every microscopic energy current identical. Moving a bounded divergence between local energy densities changes the current by a total time derivative. It leaves regular dc Green--Kubo transport unchanged, but it can change finite-frequency records; singular infrared polarization is exactly where the regularity premise may fail. ‘Gauge’ therefore names a controlled equivalence, not permission to ignore the order of limits.",
+    "Screening reveals the missing thing. In the minimal local scalar completion of a static kernel \\(1/(q^2+\\kappa^2)\\), the electric-gradient share of mode energy is \\(q^2/(q^2+\\kappa^2)\\), while the non-gradient screening sector holds \\(\\kappa^2/(q^2+\\kappa^2)\\). At \\(q\\ll\\kappa\\), adding Maxwell \\(E^2\\) alone omits almost all the energy in that completion. A physical model must identify the sector represented by the \\(\\kappa\\) term and give it dynamics, energy and flux; the fractions are not asserted for every microscopic screening theory. The look-here calculation is now concrete: build matched finite-speed and explicit-screening completions of the projected lattice model, integrate them out to recover the same Ewald kernel, and compare total KMS transport under one order of size, wavevector, screening, frequency and light-speed limits. Agreement gives a robust engineered heat-current definition; disagreement before matching diagnoses a missing carrier, not new physics.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 44, 0, [
+  "Hot off the press — capture does not need a sink",
+  [
+    "**Provisional integration note — 25 October 2026.** The spectral-flow bath can now be replaced by a recognizable acoustic carrier. A harmonic rail fixes the phonon band and dispersion; a local bond-strain transition fixes the relative mode weights and automatically removes the translational zero mode. With a declared transition matrix element, complete unitary evolution transfers 0.99662 of the population to bound matter plus phonons before recurrence while conserving norm and total energy within five parts in one hundred billion.",
+    "The phase ledger matters as much as the population. Backward evolution of the complete final state reconstructs the initial excited state, showing that the apparent capture is coherent redistribution, not a concealed absorber. The finite-temperature upward/downward factors also reproduce the exact Boltzmann ratio. A source-shaped unitary environment can therefore produce a long capture window without a Markov sink or a freely drawn spectral envelope.",
+    "The graph part of the missing source has now been computed and correctly normalized. The lower AZ-055 pole, an incoming energy-space packet, all eight complex bond-modulation overlaps and a finite acoustic rail evolve under one Hermitian Hamiltonian. For the declared common bond derivative \\(D=0.2\\), the 96-bin/240-site calculation gives a capture probability of \\(1.0892761\\times10^{-3}\\) and a conditional emitted-phonon energy of 1.2182162; the preceding refinement changes the probability by only 0.258%. Norm, energy and backward phase recovery close below \\(1.4\\times10^{-9}\\). The modest sub-percent result is more informative than the earlier strong two-level benchmark because continuum normalization is no longer being mistaken for a discrete coefficient. The look-here calculation has now narrowed to a named material or engineered device: measure bond-resolved \\(dt/du\\), masses and springs, then test thermal and multiphonon convergence. Success could improve phonon-assisted state preparation and boundary capture engineering; failure would locate the missing disposal channel precisely.",
+  ],
+]);
+
 const optionalTheologySection = chapterSkeletons
   .find(chapter => chapter.slug === "12-optional-endpoints-and-readings")
   .sections.find(([heading]) => heading === "Theology under a declared assumption");
@@ -1114,6 +1138,10 @@ chapterSources["08-admissibility-frontier"].push(
   "corpus/programmes/admissibility/admissibility_108_d4_shared_action_operator_boundary.md",
   "corpus/programmes/admissibility/admissibility_109_four_mode_sk_action_to_record.md",
   "corpus/programmes/admissibility/admissibility_110_relation_emulator_readiness_reconciliation.md",
+  "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md",
+  "corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md",
+  "corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md",
+  "corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md",
 );
 
 const chapters = chapterSkeletons.map(chapter => ({
@@ -1267,6 +1295,8 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the operator does not choose its boundary": ["corpus/programmes/frontier/wave-7/frontier_wave7_107_boundary_domain_admissibility_bridge.md", "corpus/programmes/frontier-physics-targets/open_topics_v1.md", "corpus/programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md"],
   "Hot off the press — the two rails share a plane, not a group": ["corpus/programmes/moonshine-program-lattice/README.md", "corpus/programmes/frontier-physics-targets/open_topics_v1.md", "corpus/programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md"],
   "Hot off the press — the hydrodynamic cone has poles": ["corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md", "corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md", "corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md", "corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md", "corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md", "corpus/programmes/admissibility/admissibility_98_gaussian_hydrodynamic_source_frame_invariance.md", "corpus/programmes/admissibility/admissibility_97_hydrodynamic_pole_residue_response_ledger.md", "corpus/claims/0200-0299/212_hydrodynamic_stress_map_can_have_local_rank_three.md", "corpus/claims/0200-0299/213_fixed_temperature_kms_herglotz_schur_sewing.md"],
+  "Hot off the press — the screened field is not the whole carrier": ["corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md", "corpus/programmes/admissibility/admissibility_44_finite_q_energy_continuity_kernel_and_gauge_boundary.md", "corpus/programmes/admissibility/admissibility_46_screened_finite_q_order_of_limits_ladder.md"],
+  "Hot off the press — capture does not need a sink": ["corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md", "corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md", "corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md", "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"],
   "Hot off the press — memory depends on the detector scale": ["corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md", "corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md", "corpus/claims/0200-0299/201_recursive_schur_jordan_descent_and_functorial_sewing.md"],
   "Hot off the press — a zero mode does not fix its detector weight": ["corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md", "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"],
   "Hot off the press — a defect can carry a second label": ["corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md", "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md"],

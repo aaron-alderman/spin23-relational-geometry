@@ -8,24 +8,38 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The graph overlap has now been integrated rather than substituted. A normalized incoming packet, all eight complex bond form factors and the acoustic rail evolve in one Hermitian model. For the declared common derivative (D=0.2), joint matter/phonon refinement converges to capture probability (1.0892761\times10^{-3}) with conditional phonon energy 1.2182162, while norm, energy and reverse recovery close below (1.4\times10^{-9}). The remaining look-here step is material calibration, not another freely shaped capture mechanism.
+> The graph part of the missing source has now been computed and correctly normalized. The lower AZ-055 pole, an incoming energy-space packet, all eight complex bond-modulation overlaps and a finite acoustic rail evolve under one Hermitian Hamiltonian. For the declared common bond derivative \(D=0.2\), the 96-bin/240-site calculation gives a capture probability of \(1.0892761\times10^{-3}\) and a conditional emitted-phonon energy of 1.2182162; the preceding refinement changes the probability by only 0.258%. Norm, energy and backward phase recovery close below \(1.4\times10^{-9}\). The modest sub-percent result is more informative than the earlier strong two-level benchmark because continuum normalization is no longer being mistaken for a discrete coefficient. The look-here calculation has now narrowed to a named material or engineered device: measure bond-resolved \(dt/du\), masses and springs, then test thermal and multiphonon convergence. Success could improve phonon-assisted state preparation and boundary capture engineering; failure would locate the missing disposal channel precisely.
 
 ## What this commits us to
 
-The graph operator, wavepacket normalization, coherent bond phases and finite continuum checks are explicit. The mechanism becomes a physical prediction only when a named realization supplies its bond derivatives, masses, springs, temperature and larger excitation sectors.
+The construction is admitted only after the named additional input is supplied. The page records the dependency instead of hiding it inside the conclusion.
+
+## Logical anatomy
+
+- **Scope:** chapter “The admissibility frontier”, section “Hot off the press — capture does not need a sink”.
+- **Unit of argument:** assertion 3 of 3 in this section.
+- **Evidence posture:** Identify the named external input and verify that the construction follows after it is supplied.
+- **Research move:** constructs a model, mechanism, calculation, protocol or intervention.
+
+## Verification route
+
+1. Read the controlling documents below and recover their declared objects and assumptions.
+2. Check the calculation, construction, obstruction or stopping rule on those same objects.
+3. Compare the source conclusion with the exact assertion above; do not strengthen its verbs or enlarge its domain.
+4. Apply the status rule and retain every named external dependency.
 
 ## What would move or defeat this claim
 
-Replace the common benchmark derivative by independently calibrated bond-resolved mechanical data. Then test whether the probability and emitted spectrum survive thermal, multiphonon and continuum refinement.
+Show that the named input is inconsistent, insufficient, unavailable, or fails to imply the claimed construction.
 
 ## Controlling documents
 
-- [admissibility 122](../../../corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md)
-- [admissibility 121](../../../corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md)
-- [admissibility 120](../../../corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md)
-- [AZ-055 finite-band ledger](../../../corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md)
+- **admissibility 122 a normalized packet turns the overlap density into a capture probability** — [admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md](../../../corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md)
+- **admissibility 121 the capture matrix element is a scattering density not a two level number** — [admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md](../../../corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md)
+- **admissibility 120 a unitary acoustic rail replaces the hand shaped capture bath** — [admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md](../../../corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md)
+- **admissibility 55 finite band levinson and adaptive pole collisions** — [admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md](../../../corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md)
 
-> **Authority boundary.** The cited research document and executable certificate remain authoritative.
+> **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 

@@ -2,9 +2,9 @@
 
 _Expanded claim page · The admissibility frontier_
 
-> **Claim status — [◎ Interpretive map](../reading-key/status-interpretive.md)** — Organizes thought or workflow but is not evidence for a physical claim.
+> **Claim status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
-> **Research function — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+> **Research function — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
 ## Exact assertion
 
@@ -12,14 +12,14 @@ _Expanded claim page · The admissibility frontier_
 
 ## What this commits us to
 
-The claim supplies a map or analogy. It becomes a derivation only after an explicit carrier-preserving map and invariant are given.
+The construction is admitted only after the named additional input is supplied. The page records the dependency instead of hiding it inside the conclusion.
 
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the hydrodynamic cone has poles”.
 - **Unit of argument:** assertion 7 of 9 in this section.
-- **Evidence posture:** Treat the passage as organization or analogy unless a cited carrier-preserving map is supplied.
-- **Research move:** joins several typed results while letting the weakest edge set the claim.
+- **Evidence posture:** Identify the named external input and verify that the construction follows after it is supplied.
+- **Research move:** constructs a model, mechanism, calculation, protocol or intervention.
 
 ## Verification route
 
@@ -30,7 +30,7 @@ The claim supplies a map or analogy. It becomes a derivation only after an expli
 
 ## What would move or defeat this claim
 
-Provide an explicit map that preserves the claimed structure, then identify an observable consequence that the analogy alone did not supply.
+Show that the named input is inconsistent, insufficient, unavailable, or fails to imply the claimed construction.
 
 ## Controlling documents
 

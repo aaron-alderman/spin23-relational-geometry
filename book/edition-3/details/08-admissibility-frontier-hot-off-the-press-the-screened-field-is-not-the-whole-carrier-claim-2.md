@@ -8,22 +8,37 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> Moving a bounded divergence between local energy densities changes the current by a total time derivative. It leaves regular dc Green--Kubo transport unchanged, but it can change finite-frequency records; singular infrared polarization is exactly where the regularity premise may fail. “Gauge” therefore names a controlled equivalence, not permission to ignore the order of limits.
+> That does not make every microscopic energy current identical. Moving a bounded divergence between local energy densities changes the current by a total time derivative. It leaves regular dc Green--Kubo transport unchanged, but it can change finite-frequency records; singular infrared polarization is exactly where the regularity premise may fail. ‘Gauge’ therefore names a controlled equivalence, not permission to ignore the order of limits.
 
 ## What this commits us to
 
-Every invariance claim must name its frequency limit, boundedness premise, transport/magnetization split and allowed energy-density retyping.
+The construction is admitted only after the named additional input is supplied. The page records the dependency instead of hiding it inside the conclusion.
+
+## Logical anatomy
+
+- **Scope:** chapter “The admissibility frontier”, section “Hot off the press — the screened field is not the whole carrier”.
+- **Unit of argument:** assertion 2 of 3 in this section.
+- **Evidence posture:** Identify the named external input and verify that the construction follows after it is supplied.
+- **Research move:** moves a structure between mathematical, physical or ordinary languages.
+
+## Verification route
+
+1. Read the controlling documents below and recover their declared objects and assumptions.
+2. Check the calculation, construction, obstruction or stopping rule on those same objects.
+3. Compare the source conclusion with the exact assertion above; do not strengthen its verbs or enlarge its domain.
+4. Apply the status rule and retain every named external dependency.
 
 ## What would move or defeat this claim
 
-Compute the same low-frequency response in two admissible energy gauges with common magnetization subtraction and show whether their difference vanishes under the declared limit order.
+Show that the named input is inconsistent, insufficient, unavailable, or fails to imply the claimed construction.
 
 ## Controlling documents
 
-- [admissibility 119](../../../corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md)
-- [Ercole et al., gauge invariance of thermal transport](https://arxiv.org/abs/1601.00158)
+- **admissibility 119 the field closes continuity but screening needs its own carrier** — [admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md](../../../corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md)
+- **admissibility 44 finite q energy continuity kernel and gauge boundary** — [admissibility_44_finite_q_energy_continuity_kernel_and_gauge_boundary.md](../../../corpus/programmes/admissibility/admissibility_44_finite_q_energy_continuity_kernel_and_gauge_boundary.md)
+- **admissibility 46 screened finite q order of limits ladder** — [admissibility_46_screened_finite_q_order_of_limits_ladder.md](../../../corpus/programmes/admissibility/admissibility_46_screened_finite_q_order_of_limits_ladder.md)
 
-> **Authority boundary.** The cited research document and executable certificate remain authoritative.
+> **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 

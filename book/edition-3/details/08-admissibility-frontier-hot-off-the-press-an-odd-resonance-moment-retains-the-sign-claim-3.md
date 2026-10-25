@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The first finite detector transfer now sharpens that boundary. Symmetric smearing preserves odd/even parity and the interference sign while attenuating the moment; asymmetric acceptance leaks even background and signal-square terms into the odd record. A fixed linear detector still leaves every reconstructed statistic quadratic in the three source coefficients, so nineteen generator settings predict the eight held-out corners after folding. Those twenty-seven settings are simulation templates, not twenty-seven reversible controls on collider data. The physical next step is one source-complete helicity calculation, calibrated response and nuisance covariance, followed by a likelihood for the single observed record. Only a replicated residual outside the complete seven-coordinate model would point toward new physics.
+> The statistic is exact only in the local analytic model. A real likelihood must carry complex continuum helicities, absorptive phases, all open widths, symmetric-resolution suppression, acceptance asymmetry and background-slope leakage constrained by sidebands. The next step is therefore one declared final-state calculation and detector convolution. Passing would be a practical signed-coupling measurement; only a replicated residual outside the complete seven-coordinate model would point toward new physics.
 
 ## What this commits us to
 
@@ -30,11 +30,10 @@ The claim concerns a protocol, sensitivity or decision rule. It must be kept sep
 
 ## What would move or defeat this claim
 
-Specify the physical channel, helicity amplitudes, apparatus response, sideband/control covariance, null distribution, preregistered threshold and independently predicted effect size.
+Specify the apparatus, calibration, null distribution, preregistered threshold and independently predicted effect size.
 
 ## Controlling documents
 
-- **admissibility 118 detector folding preserves the design but not a clean odd record** — [admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md](../../../corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md)
 - **admissibility 117 an odd resonance moment can supply the missing sign** — [admissibility_117_an_odd_resonance_moment_can_supply_the_missing_sign.md](../../../corpus/programmes/admissibility/admissibility_117_an_odd_resonance_moment_can_supply_the_missing_sign.md)
 - **admissibility 116 the minimal second gauge detector needs a phase reference** — [admissibility_116_the_minimal_second_gauge_detector_needs_a_phase_reference.md](../../../corpus/programmes/admissibility/admissibility_116_the_minimal_second_gauge_detector_needs_a_phase_reference.md)
 - **admissibility 74 one family triangle and global positivity gate** — [admissibility_74_one_family_triangle_and_global_positivity_gate.md](../../../corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md)
