@@ -17,7 +17,7 @@ The next route to new physics may begin not with higher energy but with greater 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shift-claim-1.md)
 
-This is a change of protagonist. Spin₀(2,3) and the larger symmetry landscape no longer lead the story. The admission–dynamics–detection loop does, because it determines which mathematical differences can become physical records.
+The protagonist is the admission–dynamics–detection loop, not Spin₀(2,3) or a larger symmetry landscape, because it determines which mathematical differences can become physical records.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shift-claim-2.md)
 
@@ -52,159 +52,168 @@ This turns Casimir response, thermoelectric transport, holonomy, hysteresis, met
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-2.md)
 
 <a id="hot-off-the-press-memory-depends-on-the-detector-scale"></a>
-## Hot off the press — memory depends on the detector scale
+<a id="memory-depends-on-the-detector-scale"></a>
+## Memory depends on the detector scale
 
 > **Section status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** A six-cell passive thermal or RC carrier now supplies the physical three-scale construction that the abstract descent calculus lacked. Fixed detector regions average six cell readings to three and then two, with no fitted interscale basis. Across three held-out conductance substitutions, nonnegative temperatures and the uniform mode survive, and direct compression agrees with staged compression. This closes AZ-099's finite OT-019 construction, not a universal coarse-graining theorem.
+A six-cell passive thermal or RC carrier now supplies the physical three-scale construction that the abstract descent calculus lacked. Fixed detector regions average six cell readings to three and then two, with no fitted interscale basis. Across three held-out conductance substitutions, nonnegative temperatures and the uniform mode survive, and direct compression agrees with staged compression. This closes AZ-099's finite OT-019 construction, not a universal coarse-graining theorem.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-memory-depends-on-the-detector-scale-claim-1.md)
 
 The stronger question is whether a detector-hidden difference stays hidden after motion. Balanced wiring and a held-out change confined within detector regions descend exactly. A mild asymmetric edge makes a hidden fine difference visible to the three-region detector, but the two-region detector identifies it again. A stronger asymmetry survives into the coarsest record. Memory is therefore not a property of the carrier alone: it belongs to a carrier, dynamics and detector scale together.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-memory-depends-on-the-detector-scale-claim-2.md)
 
 The exact two-stage defect identity and five-step telescoping bound say how much history a memoryless reduced model omits. The practical look-here target is a six-node network: prepare two fine voltage or temperature patterns with the same reported averages, substitute declared edges and measure whether later coarse records split at the predicted scale. Success improves reduced-model engineering; a preregistered residual beyond component and readout covariance would indicate missing dynamics. Neither outcome by itself establishes Spin(2,3) or new physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-memory-depends-on-the-detector-scale-claim-3.md)
 
 <a id="hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight"></a>
-## Hot off the press — a zero mode does not fix its detector weight
+<a id="a-zero-mode-does-not-fix-its-detector-weight"></a>
+## A zero mode does not fix its detector weight
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** A minimal chiral wall was deformed through six profiles while its one zero mode, signed index and nonzero gap were held fixed. The centre-port residue nevertheless changed by more than a factor of three, and localization changed with it. A protected pole therefore does not supply a protected detector weight.
+A minimal chiral wall was deformed through six profiles while its one zero mode, signed index and nonzero gap were held fixed. The centre-port residue nevertheless changed by more than a factor of three, and localization changed with it. A protected pole therefore does not supply a protected detector weight.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-zero-mode-does-not-fix-its-detector-weight-claim-1.md)
 
 Raw zero-mode phase also fails: a unitary site gauge changes it without changing the spectrum or any intensity. Sublattice support remains exact, but in this carrier it is simply the signed chiral index written as a detector statement. Counting it again as information beyond the index would duplicate the same protection.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-zero-mode-does-not-fix-its-detector-weight-claim-2.md)
 
 The practical implication is a no-go and a new target. The minimal SSH or Jackiw–Rebbi wall cannot close the beyond-index frontier. A reopening must add an independently protected crystalline representation, projective label, multichannel scattering eigenphase or non-Abelian datum, then hold the signed index fixed while trying to scramble that extra record.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-zero-mode-does-not-fix-its-detector-weight-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-zero-mode-does-not-fix-its-detector-weight-claim-3.md)
 
 <a id="hot-off-the-press-a-defect-can-carry-a-second-label"></a>
-## Hot off the press — a defect can carry a second label
+<a id="a-defect-can-carry-a-second-label"></a>
+## A defect can carry a second label
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** The beyond-index question closes only after an independent crystalline datum is added. Two reflection-symmetric wall carriers can have the same spectrum, one zero mode and the same signed chiral index while their defect orbitals have opposite mirror parity relative to a calibrated reference.
+The beyond-index question closes only after an independent crystalline datum is added. Two reflection-symmetric wall carriers can have the same spectrum, one zero mode and the same signed chiral index while their defect orbitals have opposite mirror parity relative to a calibrated reference.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-defect-can-carry-a-second-label-claim-1.md)
 
 Coherent mirror-even and mirror-odd ports distinguish the two branches exactly throughout six symmetry-preserving wall deformations. Deliberately changing one bond without its reflected partner keeps the zero mode and index but opens the forbidden port. The extra label is therefore protected by reflection and read through a selection rule, rather than inferred from localization or a raw wavefunction phase.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-defect-can-carry-a-second-label-claim-2.md)
 
 This is a constructive but kenotic closure. The chiral topology did not generate the mirror label; the carrier supplied an orbital representation and the apparatus supplied a reference. The immediate engineering target is an isospectral pair of domain-wall channels with opposite calibrated parity. Material realization is open, and a residual beyond fabrication covariance would first indicate missing couplings rather than new physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-defect-can-carry-a-second-label-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-defect-can-carry-a-second-label-claim-3.md)
 
 <a id="hot-off-the-press-local-rank-is-not-global-identity"></a>
-## Hot off the press — local rank is not global identity
+<a id="local-rank-is-not-global-identity"></a>
+## Local rank is not global identity
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** A compact history-dependent model now makes the difference between nearby distinguishability and whole-family identification exact. A pulse drives a latent amplitude, memory carries part of it into later steps, and a calibrated power detector squares the result. Its local information matrix has full rank across 34,782 audited points, yet positive and negative control couplings produce identical power records.
+A compact history-dependent model now makes the difference between nearby distinguishability and whole-family identification exact. A pulse drives a latent amplitude, memory carries part of it into later steps, and a calibrated power detector squares the result. Its local information matrix has full rank across 34,782 audited points, yet positive and negative control couplings produce identical power records.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-local-rank-is-not-global-identity-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-local-rank-is-not-global-identity-claim-1.md)
 
 The collision is structural, not numerical. Gain calibration and three pulse histories recover the memory coefficient and coupling magnitude, but power has forgotten the coupling's orientation. The honest power-only answer is therefore a two-point sign quotient. One coherent amplitude measurement relative to a calibrated phase reference retains the missing relation and makes the five-record bundle globally injective on the declared compact family.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-local-rank-is-not-global-identity-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-local-rank-is-not-global-identity-claim-2.md)
 
 This closes one finite detector-design question, not nonlinear identification in general. The look-here experiment is a resonator or oscillator driven by the same preregistered histories while phase-reference drift, gain, saturation and model discrepancy are varied through measured covariances. A failure should first reopen the carrier or detector model. Only a stable residue across independently calibrated platforms would point beyond theoretical engineering toward new dynamics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-local-rank-is-not-global-identity-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-local-rank-is-not-global-identity-claim-3.md)
 
 <a id="hot-off-the-press-the-quotient-does-not-choose-the-operator"></a>
-## Hot off the press — the quotient does not choose the operator
+<a id="the-quotient-does-not-choose-the-operator"></a>
+## The quotient does not choose the operator
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** Three D4-shaped objects now expose a sharp translation boundary. The root intersection form, star diffusion generator and coherent hopping matrix all permit the same cyclic permutation of three outer coordinates. They nevertheless have different spectra and kernels.
+Three D4-shaped objects now expose a sharp translation boundary. The root intersection form, star diffusion generator and coherent hopping matrix all permit the same cyclic permutation of three outer coordinates. They nevertheless have different spectra and kernels.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-quotient-does-not-choose-the-operator-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-quotient-does-not-choose-the-operator-claim-1.md)
 
 The quotient consistently retains a two-dimensional fixed sector and removes two contrast directions, but the operator induced on that sector depends on which carrier was present before quotienting. A dark resonator mode is not thereby a defect-localized state, and the conserved Markov zero mode is not a singularity index. Shared action is weaker than shared carrier and weaker again than shared dynamics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-quotient-does-not-choose-the-operator-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-quotient-does-not-choose-the-operator-claim-2.md)
 
 OT-046 therefore needs a physical noun before another spectral calculation: one spatial or geometric operator family, its deformation coordinate, boundary conditions, quotient pushforward and stable index or pole record. Supplying that package could yield useful defect engineering. Without it, a D4 diagram cannot support a new-physics inference.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-quotient-does-not-choose-the-operator-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-quotient-does-not-choose-the-operator-claim-3.md)
 
 <a id="hot-off-the-press-one-action-reaches-the-four-detector-ports"></a>
-## Hot off the press — one action reaches the four detector ports
+<a id="one-action-reaches-the-four-detector-ports"></a>
+## One action reaches the four detector ports
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** The engineered four-resonator bench now has one generative object rather than a Hamiltonian, damping rule and detector map placed side by side. A Gaussian doubled action produces the retarded operator, driven amplitudes, dissipated power, positive fluctuation kernel and all four calibrated complex port records.
+The engineered four-resonator bench now has one generative object rather than a Hamiltonian, damping rule and detector map placed side by side. A Gaussian doubled action produces the retarded operator, driven amplitudes, dissipated power, positive fluctuation kernel and all four calibrated complex port records.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-one-action-reaches-the-four-detector-ports-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-one-action-reaches-the-four-detector-ports-claim-1.md)
 
 The same action covers both the exact quotient setting and the resolved outer-detuning intervention. Across 98 frequency and setting cases, its equation residual and injected-versus-dissipated power residual remain below numerical tolerance. This is the positive control OT-027 lacked: operator, amplitude, loss and record can belong to one causal model.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-one-action-reaches-the-four-detector-ports-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-one-action-reaches-the-four-detector-ports-claim-2.md)
 
 The boundary remains decisive. The D4-shaped couplings were programmed into the apparatus, so the action does not explain why a natural carrier or a Claimipedia relation should realize them. The next look-here target is a source-native relation-to-hardware dictionary with a held-out detector consequence; building the bench tests action-to-record engineering, not fundamental D4 physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-one-action-reaches-the-four-detector-ports-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-one-action-reaches-the-four-detector-ports-claim-3.md)
 
 <a id="hot-off-the-press-the-relation-emulator-is-ready-to-build"></a>
-## Hot off the press — the relation emulator is ready to build
+<a id="the-relation-emulator-is-ready-to-build"></a>
+## The relation emulator is ready to build
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** The relation-emulator register was behind its own evidence. The sixteen modes, twenty-four directed links, disabled seams, QR-003 wall control and minimum detector schedule have already been chosen and independently verified. OT-024 is therefore active laboratory work rather than an unfilled design gate.
+The relation-emulator register was behind its own evidence. The sixteen modes, twenty-four directed links, disabled seams, QR-003 wall control and minimum detector schedule have already been chosen and independently verified. OT-024 is therefore active laboratory work rather than an unfilled design gate.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-relation-emulator-is-ready-to-build-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-relation-emulator-is-ready-to-build-claim-1.md)
 
 The detector needs nine path channels, fourteen triangle channels and one direct wall channel. Its response basis is unimodular, the visible singular gap is about 0.455, reciprocal leakage opens the wall channel with slope four, and thirty-three unused nonzero composition records remain for precision and withheld validation. QR-001, not the wall, is the equal-noise statistical bottleneck.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-relation-emulator-is-ready-to-build-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-relation-emulator-is-ready-to-build-claim-2.md)
 
 The next work is concrete: build the directed network, measure complex covariance, redesign the redundant schedule without opening held-out records, and execute the wall-null test blind. Passing validates a programmed operatorization protocol. It does not identify the sixteen modes with fundamental sectors; that requires a carrier whose amplitudes were not chosen to reproduce the graph.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-relation-emulator-is-ready-to-build-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-relation-emulator-is-ready-to-build-claim-3.md)
 
 <a id="hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone"></a>
-## Hot off the press — the graph has a Jordan face, but does not choose its cone
+<a id="the-graph-has-a-jordan-face-but-does-not-choose-its-cone"></a>
+## The graph has a Jordan face, but does not choose its cone
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** The Claimipedia relation algebra contains more Jordan structure than the earlier gate language allowed. Removing its directed-path radical leaves a reversible two-state matrix block. Transpose exchanges the two reverse arrows, and its fixed three-coordinate space is exactly the rank-two Jordan algebra of symmetric two-by-two matrices.
+The Claimipedia relation algebra contains more Jordan structure than the earlier gate language allowed. Removing its directed-path radical leaves a reversible two-state matrix block. Transpose exchanges the two reverse arrows, and its fixed three-coordinate space is exactly the rank-two Jordan algebra of symmetric two-by-two matrices.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-1.md)
 
 The gain is exact and the loss is visible. Symmetrized relation composition supplies the Jordan product, while determinant and matrix rank come from the same block. But thirty dimensions of one-way history have been discarded, the two relation labels are folded into one off-diagonal coordinate, and positive-semidefinite order is supplied by the real matrix representation rather than forced by the authored graph.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-2.md)
 
 So the next question is no longer whether any Jordan face can be found. It is why this positive face should be selected and what it predicts. A source-native order must be declared before quotienting, survive the radical and recover one held-out composition or observable. Until then the construction is a faithful mathematical view of the relation system, not evidence that nature uses it.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-graph-has-a-jordan-face-but-does-not-choose-its-cone-claim-3.md)
 
 <a id="hot-off-the-press-the-local-reversal-stops-at-the-path-memory"></a>
-## Hot off the press — the local reversal stops at the path memory
+<a id="the-local-reversal-stops-at-the-path-memory"></a>
+## The local reversal stops at the path memory
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** The obvious attempt to promote the local Jordan face back to the whole relation graph fails exactly. None of the four aggregate relation operators remains inside the 35-dimensional algebra when transposed.
+The obvious attempt to promote the local Jordan face back to the whole relation graph fails exactly. None of the four aggregate relation operators remains inside the 35-dimensional algebra when transposed.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-local-reversal-stops-at-the-path-memory-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-local-reversal-stops-at-the-path-memory-claim-1.md)
 
 The same obstruction is visible without algebra. Reversing every edge while trying all twenty-four permutations of the four relation labels recovers at most two of seventeen records: the Spin–Temple pair itself. The surrounding reasons are directed histories, not unrecorded reverse processes.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-local-reversal-stops-at-the-path-memory-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-local-reversal-stops-at-the-path-memory-claim-2.md)
 
 This tells us where to look. A full bridge needs a source-native dagger or order, a provenance-bearing nonlocal reversal, or a prediction that selects one candidate. The local symmetric response remains exact, but it cannot erase path memory and then claim that the erased graph selected the cone.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-local-reversal-stops-at-the-path-memory-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-local-reversal-stops-at-the-path-memory-claim-3.md)
 
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
@@ -237,26 +246,28 @@ Each experiment has two valuable outcomes: improved theory or technology if esta
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)
 
 <a id="hot-off-the-press-the-oriented-seam-becomes-an-experiment"></a>
-## Hot off the press — the oriented seam becomes an experiment
+<a id="the-oriented-seam-becomes-an-experiment"></a>
+## The oriented seam becomes an experiment
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 24 October 2026.** This result arrived after the chapter's main story was stabilized. It is included as a visible integration queue, not as settled narrative; once the mathematics, terminology and experimental interpretation firm, its pieces should be redistributed into the Jordan–Lie, detector and research-frontier sections.
+This result arrived after the chapter's main story was stabilized. It is included as a visible integration queue, not as settled narrative; once the mathematics, terminology and experimental interpretation firm, its pieces should be redistributed into the Jordan–Lie, detector and research-frontier sections.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-1.md)
 
 The exact result is narrower and more useful than a group-name correspondence. Monster 2A fermionization leaves the ten even genus-two spin sectors after the six odd sectors are killed by Majorana zero modes, while the nine-dimensional sum-zero seam carries a nontrivial orientation sign. But the additive fermionic sum is not the multiplicative Igusa product, the relevant Pfaffian objects live over different bases, and the canonical positive period matrix remains inside the Jordan cone at a separating surface rather than reaching its rank boundary.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-2.md)
 
 Those obstructions now assign two detectors rather than one. The binary Igusa character embeds only as loop holonomy zero or pi; both values are reciprocal and make the three-mode directional odd channel vanish, so that sign belongs in a referenced interferometer. The full spin-sector vector retains more: under a first-handle modular T transformation, four free-Majorana sectors acquire an eighth-root phase even though it cancels in the determinant. This supplies a conditional no-fit three-mode target of plus or minus pi over four. The complete Baby-Monster multiplier and the physical modular-to-control-loop map remain capable of cancelling it, so the result is a sharpened experiment rather than a new-physics prediction.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-3.md)
 
 <a id="hot-off-the-press-the-mixed-interface-has-an-exact-shape"></a>
-## Hot off the press — the mixed interface has an exact shape
+<a id="the-mixed-interface-has-an-exact-shape"></a>
+## The mixed interface has an exact shape
 
 > **Section status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
 
@@ -264,900 +275,943 @@ Those obstructions now assign two detectors rather than one. The binary Igusa ch
 
 The 27 typed relations divide into twelve constructive moves and fifteen guardrails. Their incidence images overlap on nine jointly reachable structures with one zero-sum condition. The resulting integral interface is the A8 root lattice: eight adjacent transfers running from detector and holonomy through memory, wall, response, overlap, selection and provenance.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-1.md)
 
 With the equal-weight vertex pairing the interface is positive definite, has determinant nine and discriminant group ℤ₉. It carries a natural permutation-invariant cubic, but the product obtained by projecting coordinate multiplication back to the zero-sum space is not Jordan. The result is therefore a definite transfer lattice, not an octonion, Leech, E₆ or E₈ identification and not a physical A8 symmetry.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-2.md)
 
 The shape now terminates in decisions. The wall-response return gives one bounded three-step proposal with a positive Hessian and contractive update; the selection-memory-holonomy return is refused at the missing orientation lift. All twelve constructive arrows, fifteen guardrails and twelve return cycles have detector, nuisance, falsifier and reopening fields. Redundant routes, internal guardrails, edge subdivision and evidence-only enrichment preserve A8; a genuine new bridge expands it predictably to A9.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-3.md)
 
 The same typed discipline prevents a false cross-carrier closure. Exhausting the pinned Claimipedia relationship, programme, evidence and provenance operators yields semisimple Lie content sl2 plus sl3, not sp4. The knowledge graph does not secretly reproduce the physics symmetry; a new evidence-bound cross-operator on one shared carrier is the exact reopening datum.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-mixed-interface-has-an-exact-shape-claim-4.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-4.md)
 
 <a id="hot-off-the-press-a-lost-sign-becomes-a-detector"></a>
-## Hot off the press — a lost sign becomes a detector
+<a id="a-lost-sign-becomes-a-detector"></a>
+## A lost sign becomes a detector
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
 The newest cross-carrier bridge is deliberately small. A proposed three-overlap sign loop in Claimipedia would be classified by a binary return product, but the present knowledge graph does not contain the required overlaps or transition signs. The science programme already contains the same detector shape on a different carrier: a response projector returns while its coherently marked two-frame comes back through the central transport -I2.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-lost-sign-becomes-a-detector-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-lost-sign-becomes-a-detector-claim-1.md)
 
 The exact map sends central endpoint transports +I2 and -I2 to binary signs +1 and -1. It preserves composition, and a second traversal squares the negative return to +I2. Projector-only detection erases the sign, while determinant also misses it because det(-I2)=+1. A successful measurement therefore needs projector closure plus coherently referenced endpoint-frame tomography and a one-loop/two-loop parity control.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-lost-sign-becomes-a-detector-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-lost-sign-becomes-a-detector-claim-2.md)
 
 This result reuses the EX-006 photonic, microwave or acoustic detector packet, but corrects its discriminator: a central -I2 return is reversal-even, unlike a generic reversal-odd non-Abelian holonomy. An engineered success validates the detector architecture. New physics requires a source-native prediction, nuisance survival and replication; the physical result cannot manufacture Claimipedia's missing authored overlaps.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-lost-sign-becomes-a-detector-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-lost-sign-becomes-a-detector-claim-3.md)
 
 <a id="hot-off-the-press-the-missing-middle-has-a-type"></a>
-## Hot off the press — the missing middle has a type
+<a id="the-missing-middle-has-a-type"></a>
+## The missing middle has a type
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 24 October 2026.** The natural three-branch kenotic cover does not contain a hidden loop: before removing its junction the cover is a filled triangle, and afterwards it is three disconnected pieces. Its exact residue is therefore a two-dimensional reduced H0 cut signature, not a nonzero H1 winding class. A genuine sign holonomy still requires three independently evidenced pairwise overlaps and authored transition rules that the present graph does not contain.
+The natural three-branch kenotic cover does not contain a hidden loop: before removing its junction the cover is a filled triangle, and afterwards it is three disconnected pieces. Its exact residue is therefore a two-dimensional reduced H0 cut signature, not a nonzero H1 winding class. A genuine sign holonomy still requires three independently evidenced pairwise overlaps and authored transition rules that the present graph does not contain.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-1.md)
 
 The nearest algebraic replacement for a missing common symmetry is a typed one-way passage. A two-state carrier and a three-state carrier with a rectangular mediator form the (2,3) parabolic subalgebra of sl5: the internal sl2 and sl3 transformations remain distinct, while a six-dimensional off-diagonal module carries information between them without becoming an invertible symmetry. Freely adding the reverse block closes to all of sl5, not sp4. This rules out obtaining the science programme's C2 hinge merely by reversing the relation.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-2.md)
 
 The corpus already contains a rank-two partial-sewing map from two channels into a three-dimensional environment. Under the standard sl2 plus sl3 action, that one map is cyclic: its orbit spans the full six-dimensional bifundamental module. The missing result is now narrower and more physical. The two port spaces have not been identified with the particular captured Claimipedia carriers, and no independent dynamics or boundary datum selects the observed map from its continuous orbit. A separate positive three-port model shows how locally real faces, a globally complex loop and Schur elimination can leave phase-bearing memory. The next test is the source-bearing carrier-identification square, selector provenance and a phase-sensitive retained-path measurement—not another dimension match.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-3.md)
 
 The balance among admission, transport and selection is exact in this local model. Under the full complex endpoint group every rank-two rectangular map belongs to one open orbit, so Lie motion alone cannot distinguish the observed channel. Retaining the positive metric makes the two eigenvalues of the Gram matrix E-dagger E invariant under admissible unitary frame changes. Dynamics or boundary data must still select one metric-positive point. Lie supplies the available motion, positivity supplies observable distinctions and dynamics must supply realization.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-4.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-4.md)
 
 Admissibility still does not choose its own objective. On the same Gram disk, full-environment volume selects the centre, nearest-origin objectives select zero when it is allowed, and minimum implementation dimension selects a boundary circle. The correct order is variables, feasible region, correctly typed objective, then selected point or attractor. A cone can be prior to a particular action without secretly determining that action.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-5.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-5.md)
 
 The selected-point classes are experimentally separable. Phase-referenced L, R, L+R and L+iR preparations reconstruct two compressed transfers and their complex coherence. The normalized distance from the Gram-disk centre is zero for full-environment volume, one on the minimum-rank boundary and 25/256 for the nearest-origin point in the exact checkpoint. A violation of the disk rejects the shared-environment architecture; an intermediate nonspecial point rejects these pure point selectors. Physical port identification and a platform noise model remain open.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-6.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-6.md)
 
 The rectangular channel now has an exact global home. Its graph is a moving two-plane in Gr(2,5), the opposite big cell of the same parabolic whose one-way radical appeared locally. Rank loss of the rectangular map lies inside this chart; loss of transversality lies on the Pluecker chart boundary. This globalizes the carrier geometry without identifying any Grassmannian plane with a physical vacuum.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-7.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-7.md)
 
 A second type correction limits the detector claim. The determinant of the full three-ray environment Gram matrix is maximized at the causal centre, while the determinant of the two conditioned channel columns is maximized at the origin when that point is admissible. The latter then collides with the nearest-origin entropy selector: endpoint tomography measures the selected point but cannot identify which of those principles selected it. That distinction requires an independently predicted path, intervention or thermodynamic record.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-8.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-8.md)
 
 The two selector points occupy different symmetry strata. The isotropic channel keeps a diagonal rotation, while the causal-centre checkpoint has unequal singular values and no connected stabilizer in the real locking model. A minimal unspurioned quartic selects isotropy or stays flat in anisotropy; an isolated unequal pair requires a sourced axis or reflection datum. The causal construction therefore cannot inherit the old locking symmetry for free.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-9.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-9.md)
 
 There is now an exact conditional route from the five-dimensional A4 envelope back to the Spin(2,3) hinge. A signature-(2,3) form pairs each forward rectangular channel with its adjoint reverse, and the six paired cross directions generate all ten directions of so(2,3), isomorphic to 𝔰𝔭(4,ℝ). The price is exact: the captured sl2+sl3+gl1 diagonal structure reduces to so2+so3, and a full sl3 cannot survive in the five-dimensional orthogonal algebra. The missing physical result is a derivation of the indefinite form and adjoint rule, not another group-name match.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-10.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-10.md)
 
 Representation type makes the remaining endpoint bridge small but not canonical. After choosing actions, the three-carrier identification retains two equivariant scales, four normalized real sign choices and six labelings; the two-carrier identification is unique only up to a phase. One provenance-bearing observable or authored record must fix those labels, bases and relative phases before the indefinite form and adjoint pairing can become a physical construction.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-11.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-11.md)
 
 The selector fork also admits an exact reduced dynamics. A convex competition selects every point between the causal centre and isotropic endpoint, while first-order relaxation predicts a frequency-dependent lag loop rather than true hysteresis. Every nonzero constant mixture inherits the centre's causal pole obstruction, leaving the silver value as the unique nonzero same-chart repair. This completes the abstract six-part channel programme; further progress requires source-derived coefficients and metric data or physical measurement.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-middle-has-a-type-claim-12.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-middle-has-a-type-claim-12.md)
 
 <a id="hot-off-the-press-detector-folding-has-an-exact-am-fm-boundary"></a>
-## Hot off the press — detector folding has an exact AM/FM boundary
+<a id="detector-folding-has-an-exact-am-fm-boundary"></a>
+## Detector folding has an exact AM/FM boundary
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** In the calibrated small-index linear-response model, the carrier and both coherent sidebands reconstruct mixed amplitude and frequency modulation across 972 held-out settings, with a clock-origin-invariant sideband product fixing the difference of their squared depths. The same calculation proves an exact limit: line powers alone are identical for equal-index AM and FM after any linear time-invariant detector fold, while one sideband, sideband-excluding bandwidth and ringdown alone also lose the required relation. This closes the declared benchmark and makes its coherent three-line record the ordinary-physics nuisance baseline for the next G2 long/short-root response test; nonlinear, time-varying, large-index and genuinely hysteretic extensions remain open.
+In the calibrated small-index linear-response model, the carrier and both coherent sidebands reconstruct mixed amplitude and frequency modulation across 972 held-out settings, with a clock-origin-invariant sideband product fixing the difference of their squared depths. The same calculation proves an exact limit: line powers alone are identical for equal-index AM and FM after any linear time-invariant detector fold, while one sideband, sideband-excluding bandwidth and ringdown alone also lose the required relation. This closes the declared benchmark and makes its coherent three-line record the ordinary-physics nuisance baseline for the next G2 long/short-root response test; nonlinear, time-varying, large-index and genuinely hysteretic extensions remain open.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-detector-folding-has-an-exact-am-fm-boundary-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-detector-folding-has-an-exact-am-fm-boundary-claim-1.md)
 
 <a id="hot-off-the-press-the-g2-scar-moves-upstream"></a>
-## Hot off the press — the G2 scar moves upstream
+<a id="the-g2-scar-moves-upstream"></a>
+## The G2 scar moves upstream
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** The D4/ℤ₃ fold really does carry a threefold weight, but after canonical normalization its complete damped two-channel transfer is exactly an ordinary coupled-oscillator response; coherent phase and sideband records remove AM/FM blindness without identifying a G2 origin. The surviving experiment must retain the quotient map: a four-resonator D4 star driven through its symmetric central port has two accessible modes, while unequal addressed detunings of the three outer resonators raise the accessible Krylov rank to four and removal restores rank two. This closes the two-channel root-scar claim by no-go and relocates the positive target to a controlled dark-mode release; fundamental G2 interpretation would still require a source-native triality carrier.
+The D4/ℤ₃ fold really does carry a threefold weight, but after canonical normalization its complete damped two-channel transfer is exactly an ordinary coupled-oscillator response; coherent phase and sideband records remove AM/FM blindness without identifying a G2 origin. The surviving experiment must retain the quotient map: a four-resonator D4 star driven through its symmetric central port has two accessible modes, while unequal addressed detunings of the three outer resonators raise the accessible Krylov rank to four and removal restores rank two. This closes the two-channel root-scar claim by no-go and relocates the positive target to a controlled dark-mode release; fundamental G2 interpretation would still require a source-native triality carrier.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-g2-scar-moves-upstream-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-g2-scar-moves-upstream-claim-1.md)
 
 <a id="hot-off-the-press-the-missing-form-was-already-latent"></a>
-## Hot off the press — the missing form was already latent
+<a id="the-missing-form-was-already-latent"></a>
+## The missing form was already latent
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** The signature-(2,3) form used by the rectangular Spin(2,3) closure can now be derived, up to scale, from selector data that predates that closure: a symplectic form and its uniquely compatible positive metric define a complex structure, whose action on primitive two-forms splits five real directions into two and three with opposite wedge-pairing signs. This is a real anti-retrofit advance, but it does not identify those abstract sectors with physical ports. The native positive adjoint still admits two completions: one closes to compact SO(5), the other to noncompact SO(2,3). Worse, the unbroken selector has no invariant map from its two-sector to its three-sector. The remaining experiment and theory target is therefore one independently calibrated common-carrier map that reproduces a selector operation at the ports, treats the observed cross-channel as symmetry breaking, and fixes the noncompact reverse-channel phase.
+The signature-(2,3) form used by the rectangular Spin(2,3) closure can now be derived, up to scale, from selector data that predates that closure: a symplectic form and its uniquely compatible positive metric define a complex structure, whose action on primitive two-forms splits five real directions into two and three with opposite wedge-pairing signs. This is a real anti-retrofit advance, but it does not identify those abstract sectors with physical ports. The native positive adjoint still admits two completions: one closes to compact SO(5), the other to noncompact SO(2,3). Worse, the unbroken selector has no invariant map from its two-sector to its three-sector. The remaining experiment and theory target is therefore one independently calibrated common-carrier map that reproduces a selector operation at the ports, treats the observed cross-channel as symmetry breaking, and fixes the noncompact reverse-channel phase.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-form-was-already-latent-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-form-was-already-latent-claim-1.md)
 
 <a id="hot-off-the-press-the-reachable-frontier-has-a-cost-shape"></a>
-## Hot off the press — the reachable frontier has a cost shape
+<a id="the-reachable-frontier-has-a-cost-shape"></a>
+## The reachable frontier has a cost shape
 
 > **Section status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The nearest eleven target families now carry separate existence, preparation, sampling, detection and independent-verification costs. Most proposed records are polynomial after a small carrier has been prepared, but that does not make the whole frontier easy: the two-current many-body calculation remains exponential through its Hilbert-space dimension, unrestricted logical tomography remains exponential in logical-qubit count, matched-film yield is empirical, continuum and bootstrap convergence remain unbounded, and the exact quotient-scar result is constant-size rather than a scaling theorem. This changes where to look. Sparse system identification, restricted witnesses, differential measurements and common-sample estimators are genuine theoretical-engineering opportunities; hidden Hilbert dimension, unrestricted tomography and unproved limit convergence are stop signs. Complexity is not promoted to a new fundamental law here. It is part of the practical admissibility boundary because a mathematically allowed distinction does not become physical evidence until it can be prepared, retained and independently checked.
+The nearest eleven target families now carry separate existence, preparation, sampling, detection and independent-verification costs. Most proposed records are polynomial after a small carrier has been prepared, but that does not make the whole frontier easy: the two-current many-body calculation remains exponential through its Hilbert-space dimension, unrestricted logical tomography remains exponential in logical-qubit count, matched-film yield is empirical, continuum and bootstrap convergence remain unbounded, and the exact quotient-scar result is constant-size rather than a scaling theorem. This changes where to look. Sparse system identification, restricted witnesses, differential measurements and common-sample estimators are genuine theoretical-engineering opportunities; hidden Hilbert dimension, unrestricted tomography and unproved limit convergence are stop signs. Complexity is not promoted to a new fundamental law here. It is part of the practical admissibility boundary because a mathematically allowed distinction does not become physical evidence until it can be prepared, retained and independently checked.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-reachable-frontier-has-a-cost-shape-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-reachable-frontier-has-a-cost-shape-claim-1.md)
 
 <a id="hot-off-the-press-the-logical-frontier-is-two-controls-not-one-group-name"></a>
-## Hot off the press — the logical frontier is two controls, not one group name
+<a id="the-logical-frontier-is-two-controls-not-one-group-name"></a>
+## The logical frontier is two controls, not one group name
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The two-qutrit code now has an exact control boundary. Source-visible charge-word self-shears plus the optional puncture swap close to order 18; adding the source-labelled compiled mutual shear reaches 54; admitting local Fourier changes without the mutual shear reaches the order-1,152 imprimitive subgroup; and only admitting both reaches all 51,840 elements of Sp(4,F3). The coupled word is real mathematics, but it does not yet explain why one physical carrier executes it, and a Fourier or Legendre change of polarization is not automatically dynamics. The next work is therefore not a search for the group. It is to build one carrier with independently calibrated mutual and polarization-changing controls, record leakage, and predict held-out allowed and forbidden gate words with restricted stabilizer witnesses. Success would be a source-restricted logical laboratory; failure would leave the exact code/Jordan match as compatibility rather than a physical law.
+The two-qutrit code now has an exact control boundary. Source-visible charge-word self-shears plus the optional puncture swap close to order 18; adding the source-labelled compiled mutual shear reaches 54; admitting local Fourier changes without the mutual shear reaches the order-1,152 imprimitive subgroup; and only admitting both reaches all 51,840 elements of Sp(4,F3). The coupled word is real mathematics, but it does not yet explain why one physical carrier executes it, and a Fourier or Legendre change of polarization is not automatically dynamics. The next work is therefore not a search for the group. It is to build one carrier with independently calibrated mutual and polarization-changing controls, record leakage, and predict held-out allowed and forbidden gate words with restricted stabilizer witnesses. Success would be a source-restricted logical laboratory; failure would leave the exact code/Jordan match as compatibility rather than a physical law.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-logical-frontier-is-two-controls-not-one-group-name-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-logical-frontier-is-two-controls-not-one-group-name-claim-1.md)
 
 <a id="hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra"></a>
-## Hot off the press — the shared path is not yet a shared algebra
+<a id="the-shared-path-is-not-yet-a-shared-algebra"></a>
+## The shared path is not yet a shared algebra
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** Claimipedia and Sourcery now have a direct extraction test rather than a verbal resemblance. The pinned Claimipedia capture contains 43 directed relationship records on 38 claim nodes, but zero records carry the exact endpoint signatures, dimensions, declared changes, assumptions, irreversible losses, evidence references, analogy status and authority required for admission as a Sourcery scientific transformation. What is genuinely shared is an ordered directed path skeleton. The four Claimipedia relations say how claims bear on one another; they do not determine a scientific operation or its assumption-loss-evidence valuation.
+Claimipedia and Sourcery now have a direct extraction test rather than a verbal resemblance. The pinned Claimipedia capture contains 43 directed relationship records on 38 claim nodes, but zero records carry the exact endpoint signatures, dimensions, declared changes, assumptions, irreversible losses, evidence references, analogy status and authority required for admission as a Sourcery scientific transformation. What is genuinely shared is an ordered directed path skeleton. The four Claimipedia relations say how claims bear on one another; they do not determine a scientific operation or its assumption-loss-evidence valuation.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-1.md)
 
 That no-go remains exact, but the positive side has moved. Four separately authored D02 research paths now pass the active Sourcery v1 protocol: fixed-support local reasoning, operator-range classification, rank-change approach-arc dispatch and boundary-measure dispatch. Their sixteen named steps preserve assumptions, irreversible losses, evidence and proposal-only authority. Fourteen deliberately overstrong queries return no candidates, while fifteen invalid rules remain in rejection receipts. This is not a contradiction: the 43 records are epistemic relations, whereas the admitted D02 edges were authored as scientific operations. A real reason-preserving workflow bridge now exists without pretending that every relation is an operator.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-2.md)
 
 The primary local-theorem path now passes the stricter common-algebra-2 contract. Its four steps retain eleven assumptions, four losses and eight evidence references, and malformed dimension metadata kills the path. The SI zero vector belongs to the proposal-and-review record, not to the response matrix represented inside it. The active v1 host cannot accept the dimension-bearing shape, so a named compatibility projection erases that metadata and records the loss; the unprojected source graph receives a separate v2 receipt.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-3.md)
 
 The result now extends to all four D02 families. Sixteen positive steps pass common-algebra-2; fourteen overstrong queries remain empty; fifteen invalid rules remain rejected; and every family fails closed when a dimension rule is removed or a delta is corrupted. Record-level dimensional migration is closed. This is theoretical engineering, not yet a shared physical algebra: no quantity-level response units, Jordan product, physical action or detector prediction has been extracted. The next datum is finite: expose the actual units on one Schur-response step and predict a withheld product identity, operator composition or calibrated record. Only a source-specific residue surviving those controls would reopen the new-physics reading.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-4.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-4.md)
 
 That first quantity-level datum now exists in a deliberately ordinary setting. A calibrated passive RC network carries siemens through the local Schur step; applying a declared voltage changes the output to amperes; and an independent Kirchhoff solve recovers the computationally held-out current. Corrupting the voltage dimension or removing the probe kills the path. This closes one physical operator witness, not the programme: no Jordan product, generating action or independently measured detector record follows. The next look-here target is a source-native admittance dataset or the positive-operator-measure path. New physics enters only if a measured residue survives frozen conventional, parasitic and uncertainty models.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-5.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-5.md)
 
 The positive-measure branch now closes at scalar rank one. The same RC network supplies a positive relaxation atom with units of siemens per second; evaluating it at the held-out frequency recovers the Schur correction in siemens, while the coupling sign is correctly lost in the positive quotient. A negative atom and an incorrect dimension delta are refused. This shows that the reasoning seam can carry both a physical response operator and its spectral measure. It does not reconstruct an unrestricted operator-valued measure, generate a Jordan product or predict laboratory data. Those remaining gates require new source information, not another wrapper.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-6.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-6.md)
 
 A first source-native measurement now enters. A checksum-identified Zenodo impedance spectrum for one NMC811 cell is split before fitting; a nonnegative passive circuit family trained on 29 frequencies predicts fifteen held-out complex values with 0.462% median and 3.575% maximum relative error. The result closes one measured-response bridge and makes the conventional baseline stronger. It does not close detector likelihood because the source file has no pointwise uncertainty, and it does not establish cross-cell generalization or dynamics. The next honest test is the same frozen protocol across the other 53 cells.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-7.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-7.md)
 
 That population test now passes all 54 cells without changing the basis, split or thresholds. The median cell has 0.576% median held-out error; the worst cellwise median is 0.713%, and the worst cellwise maximum is 3.914%. This is strong evidence that the modest residuals belong inside an ordinary passive model class. Each cell was still fitted separately, so one shared population law and detector covariance remain open. The next test must predict an unseen cell without per-cell recalibration.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-8.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-8.md)
 
 The stronger test is a revealing near-miss. For each target cell, one parameter vector is formed from the coordinatewise median of the other 53 cells, without reading any target impedance. It predicts 53 of 54 unseen cells inside the frozen limits; only ID07 fails, with 5.575% median error against the declared 5% ceiling while remaining well inside the 20% maximum-error limit. A common passive shape therefore spans almost the whole population, but one localized heterogeneity blocks the universal-law claim. The next look-here target is a preregistered hierarchical predictive distribution using independent cell metadata or a declared minimal calibration record, plus replicate and fixture covariance. That is a practical theoretical-engineering frontier. Neither the near-universality nor the exception is yet dynamics, a detector likelihood or new physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-9.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-9.md)
 
 The simplest predictive envelope also exposes a trap. At each held-out frequency, the componentwise minimum and maximum of the other 53 cells cover exactly 52 of 54 scalar ranks: the apparent 96.296% coverage is forced because the global minimum and maximum must exclude themselves. It is not validation of a population law. The real datum is relational across frequency. ID07 is above the donor real-part range at all fifteen evaluation points, ID52 is repeatedly extreme in the imaginary part, and only 42 cells keep every complex point inside. A useful population model must carry a latent cell state coherently through the spectrum. The next experiment is nested prediction from one predeclared calibration record or independent metadata, with simultaneous spectral coverage and replicate covariance—not wider pointwise bars.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-10.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-10.md)
 
 One fixed 10 kHz complex calibration record then tests the smallest latent-state bridge. A neighbour count chosen entirely inside the other 53 cells lets their passive parameters predict 53 of 54 untouched spectra; ID07 improves but remains outside at 5.250% median error. A more literal physical reading—use the point to solve only series resistance and inductance while keeping donor-median relaxation weights—passes just 36 of 54. One point therefore carries real state information, but the state is not only an offset and slope. The next look-here experiment uses a second, separated calibration frequency that can see relaxation or diffusion, while keeping all evaluation rows untouched.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-11.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-11.md)
 
 That second view closes the point-prediction gate. Donor-only nested validation pairs the fixed 10 kHz record with approximately 2.82 Hz for 51 of 54 targets; two alternatives choose nearby low-frequency scales. All 54 cells then pass on fifteen untouched frequencies. The median cellwise median error is 0.674%, the worst median is 3.261%, and the worst maximum is 5.503%. The practical result is a two-tone population-state protocol: one point locates the high-frequency port and one locates relaxation or diffusion. It remains a within-batch point predictor, not simultaneous uncertainty, fixture covariance, external replication, dynamics or new physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-12.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-12.md)
 
 The final adaptive freedom can also be removed. Fix 10 kHz and 2.8219349 Hz for every target, fix three nearest donors, and keep the passive basis unchanged: all 54 cells still pass. The median cellwise median error remains 0.674%, the worst median improves to 2.290%, and the worst maximum remains 5.503%. This is a reproducible within-batch two-tone point-prediction rule, and therefore a concrete theoretical-engineering gain. It still does not provide simultaneous uncertainty, fixture covariance, external-batch transfer, dynamics or new physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-13.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-13.md)
 
 The whole predicted spectrum can now be scored as one object. With the two tones and three-neighbour rule still frozen, a donor-only threshold on the maximum error across all fifteen untouched frequencies covers 49 of 54 cells at nominal 90% and 52 of 54 at nominal 95%. ID07 and ID12 remain outside the 95% region. This is a useful internal error radius, not a prospective guarantee: the nested donor fits overlap, the low tone was learned from this batch, and no independent batch or fixture covariance is present. The look-here experiment is now exact—freeze the protocol on newly acquired cells, separate calibration from testing, repeat selected cells across fixtures, and do not retune on the two challenge cases.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-shared-path-is-not-yet-a-shared-algebra-claim-14.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-shared-path-is-not-yet-a-shared-algebra-claim-14.md)
 
 <a id="hot-off-the-press-the-phase-target-is-relative-not-absolute"></a>
-## Hot off the press — the phase target is relative, not absolute
+<a id="the-phase-target-is-relative-not-absolute"></a>
+## The phase target is relative, not absolute
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The free-Majorana part of the Monster 2A route now has exact reduced T1 and S₁ actions on all ten even genus-two spin sectors. The earlier exp(i*pi/4) fixed-sector phase was genuine but not yet an intrinsic device flux: a common anomaly-line convention can shift every phase assigned to one generator. What survives is relational. Under T1, a fixed-sector phase squared divided by a two-cycle product is exactly i. Under S₁, the odd--odd fixed sector divided by an even--even fixed sector is also i. Both comparisons survive sector rephasing and a common generator phase.
+The free-Majorana part of the Monster 2A route now has exact reduced T1 and S₁ actions on all ten even genus-two spin sectors. The earlier exp(i*pi/4) fixed-sector phase was genuine but not yet an intrinsic device flux: a common anomaly-line convention can shift every phase assigned to one generator. What survives is relational. Under T1, a fixed-sector phase squared divided by a two-cycle product is exactly i. Under S₁, the odd--odd fixed sector divided by an even--even fixed sector is also i. Both comparisons survive sector rephasing and a common generator phase.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-phase-target-is-relative-not-absolute-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-phase-target-is-relative-not-absolute-claim-1.md)
 
 The detector consequence is concrete. One ring programmed to pi/4 is an emulator, not a source-bound prediction. A faithful test needs two coherently referenced sectors, or a fixed channel and a two-cycle channel, driven by the same calibrated control so the common phase cancels. This narrows the theoretical-engineering opportunity to relative-sector interferometry. A complete Monster or new-physics claim still requires genus-two fermionic Baby-Monster amplitudes, their anomaly line and a no-refit physical control map; gravity additionally requires a local action or controlled continuum.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-phase-target-is-relative-not-absolute-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-phase-target-is-relative-not-absolute-claim-2.md)
 
 <a id="hot-off-the-press-the-casimir-bridge-has-a-frequency-window"></a>
-## Hot off the press — the Casimir bridge has a frequency window
+<a id="the-casimir-bridge-has-a-frequency-window"></a>
+## The Casimir bridge has a frequency window
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** The same-film Casimir proposal now has a quantitative spectral boundary. A separation d weights imaginary frequencies around the ordinary-frequency scale c/(4*pi*d). The published complex Co2MnGa Hall response from 0.2 to 1.5 THz therefore maps mainly to separations near 119 to 16 micrometres. A practical 0.1 to 1 micrometre force experiment instead calls for off-diagonal response around 24 to 239 THz, or 0.099 to 0.987 eV—15.9 to 159 times above the published Hall ceiling.
+The same-film Casimir proposal now has a quantitative spectral boundary. A separation d weights imaginary frequencies around the ordinary-frequency scale c/(4*pi*d). The published complex Co2MnGa Hall response from 0.2 to 1.5 THz therefore maps mainly to separations near 119 to 16 micrometres. A practical 0.1 to 1 micrometre force experiment instead calls for off-diagonal response around 24 to 239 THz, or 0.099 to 0.987 eV—15.9 to 159 times above the published Hall ceiling.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-casimir-bridge-has-a-frequency-window-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-casimir-bridge-has-a-frequency-window-claim-1.md)
 
 Broadband longitudinal optical data already cross that energy range, but they do not supply the missing complex Hall tensor, and measurements from different specimens, stacks and histories cannot be joined as though they were one causal material record. At 300 K the first nonzero Matsubara frequency is about 6.25 THz, also above the present Hall band. A large DC or THz Hall angle consequently does not establish a resolvable boundary-force differential.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-casimir-bridge-has-a-frequency-window-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-casimir-bridge-has-a-frequency-window-claim-2.md)
 
 The nearest work is now spectroscopy, not force metrology: measure complex diagonal and off-diagonal conductivity on one batch or specimen in both magnetic states from DC through at least 0.1 to 1 eV, fit one passive causal posterior with covariance, and freeze its continuation to imaginary frequency. Only if the predicted parallel-minus-antiparallel force or torque exceeds optical-tail, patch, roughness, magnetic, drift and separation uncertainties should a no-refit force experiment advance. A null remains useful material and metrology engineering; a residual becomes a new-physics lead only after that complete conventional closure fails.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-casimir-bridge-has-a-frequency-window-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-casimir-bridge-has-a-frequency-window-claim-3.md)
 
 <a id="hot-off-the-press-the-four-mode-bench-is-ready-to-build"></a>
-## Hot off the press — the four-mode bench is ready to build
+<a id="the-four-mode-bench-is-ready-to-build"></a>
+## The four-mode bench is ready to build
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** The quotient-scar carrier is now specified in engineering units. A 100 MHz hub resonator couples at 2 MHz to three individually driven and read outer resonators with 0.1 MHz linewidth. Exact cyclic symmetry gives a rank-two hub record because only the bright outer sum couples; two contrast modes remain dark but are directly visible through the individual ports. A centred resolved detuning then releases all four poles and raises the same hub record to rank four.
+The quotient-scar carrier is now specified in engineering units. A 100 MHz hub resonator couples at 2 MHz to three individually driven and read outer resonators with 0.1 MHz linewidth. Exact cyclic symmetry gives a rank-two hub record because only the bright outer sum couples; two contrast modes remain dark but are directly visible through the individual ports. A centred resolved detuning then releases all four poles and raises the same hub record to rank four.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-four-mode-bench-is-ready-to-build-claim-1.md)
 
 The detector logic now has two independent residues. Along a weak centred detuning ladder, the correction left by eliminating the outer modes begins quadratically because the first moment cancels. In the resolved setting, exchanging two physical outer ports reverses an ordered contrast cubic while leaving the unordered quadratic and product data unchanged. Across 5,000 frozen component-tolerance draws, every device retains more than twelve linewidths of minimum pole separation, more than four percent hub visibility and the preregistered rank-conditioning margin.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-four-mode-bench-is-ready-to-build-claim-2.md)
 
 This is a construction decision rather than an invitation to redesign the algebra. Building and blindly running the exact, weak, resolved and port-exchange settings would establish useful hidden-mode and detector-loss metrology in ordinary coupled resonators. It would not prove a natural D4, G2 or triality mechanism, because the network was intentionally programmed to realize that grammar. A fundamental claim still requires a source-native carrier that predicts the same record without being built from the answer.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-four-mode-bench-is-ready-to-build-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-four-mode-bench-is-ready-to-build-claim-3.md)
 
 <a id="hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate"></a>
-## Hot off the press — the Lean fold now has a finite provenance gate
+<a id="the-lean-fold-now-has-a-finite-provenance-gate"></a>
+## The Lean fold now has a finite provenance gate
 
 > **Section status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The public images behind the reported Monster-address census name the missing implementation artifacts: three `RequestProject/Ogg/DeclFold*.lean` files, the generated `fold/decls.json`, the `fold_certify` command and the worked declaration `HeckeFold.card_address`. This turns a vague request for “the code” into a finite reproduction bundle.
+The public images behind the reported Monster-address census name the missing implementation artifacts: three `RequestProject/Ogg/DeclFold*.lean` files, the generated `fold/decls.json`, the `fold_certify` command and the worked declaration `HeckeFold.card_address`. This turns a vague request for “the code” into a finite reproduction bundle.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-lean-fold-now-has-a-finite-provenance-gate-claim-1.md)
 
 The bundle has not been located in the audited public surfaces. None of the named paths occurs across 49 public branch tips of the related repository or the author’s 134 public gists. The posted totals—1,979 declarations, 908 addresses, 789 unclamped folds and 13 certificates—therefore remain reported counts. The existing synthetic adaptive-depth result proves something useful about its 32,766 generated chains, but it is not a substitute for the missing source-native environment.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-lean-fold-now-has-a-finite-provenance-gate-claim-2.md)
 
 The reason is practical. A little difference in imported root module, declaration selection, metadata removal, DAG sharing, reduction policy or transparency can change which cells are occupied and which declarations collide. The next useful act is not to imitate the infographic. It is to obtain the named files, data and pinned Lean/Lake environment, regenerate the census from a clean checkout, compile the 13 certificates with their axiom dependencies, and then measure which distinctions the fold retains or loses. Only after that does the proposed Hecke reading face its own separate operator-law test.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-lean-fold-now-has-a-finite-provenance-gate-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-lean-fold-now-has-a-finite-provenance-gate-claim-3.md)
 
 <a id="hot-off-the-press-the-selector-chip-has-a-design-wedge"></a>
-## Hot off the press — the selector chip has a design wedge
+<a id="the-selector-chip-has-a-design-wedge"></a>
+## The selector chip has a design wedge
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** The integrated-photonic carrier now has a finite coupled-mode design window. The strict two-percent adiabatic budget requires coupling–length product at least 207.7968; an illustrative 20 per millimetre, 12 mm schedule passes the adiabatic, accumulated splitting, accumulated differential-loss, dark-retention and nonunitarity tests when the unmeasured residual ratios are each assumed to be one part in ten thousand. Those assumptions are design targets, not properties inferred from published matrix fidelity or insertion loss.
+The integrated-photonic carrier now has a finite coupled-mode design window. The strict two-percent adiabatic budget requires coupling–length product at least 207.7968; an illustrative 20 per millimetre, 12 mm schedule passes the adiabatic, accumulated splitting, accumulated differential-loss, dark-retention and nonunitarity tests when the unmeasured residual ratios are each assumed to be one part in ten thousand. Those assumptions are design targets, not properties inferred from published matrix fidelity or insertion loss.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-selector-chip-has-a-design-wedge-claim-1.md)
 
 The almost-same device is not yet the same experiment. The exact latitude schedule uses signed effective couplings, whereas passive gap-controlled evanescent couplings are ordinarily nonnegative. A fabrication-native route must therefore add calibrated phase sections, cascade returned half-angle modules, or replace the latitude by a positive-octant or braiding path and rerun the full-wave tolerance calculation. Reversal also needs an external phase reference: within an isolated two-dimensional dark space the two quarter-turn senses differ by a central sign that phase-blind process fidelity quotients away.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-selector-chip-has-a-design-wedge-claim-2.md)
 
 Selection must remain a separate intervention. A passive anisotropic section strong enough to attract one dark direction is itself splitting or differential loss, so leaving it active during the holonomy stage can counterfeit choice by ordinary mode filtering. The next useful build has a neutral holonomy stage, reference port, independently calibrated and switchable Y stage, and Y-off/Y-on multi-input tomography. Passing would be theoretical engineering; new physics would still require a source-native reason for nature to choose that carrier and selector.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-selector-chip-has-a-design-wedge-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-selector-chip-has-a-design-wedge-claim-3.md)
 
 <a id="hot-off-the-press-three-hybrid-modes-are-one-short"></a>
-## Hot off the press — three hybrid modes are one short
+<a id="three-hybrid-modes-are-one-short"></a>
+## Three hybrid modes are one short
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The reported YIG photon–magnon–phonon device is a genuine triple-strong-coupling system, but its rotating-frame matrix is an irreducible three-node chain. With both couplings nonzero that Jacobi matrix has simple eigenvalues and only one dark direction. Three hybrid species are therefore not the same object as one bright direction plus a protected two-dimensional dark space.
+The reported YIG photon–magnon–phonon device is a genuine triple-strong-coupling system, but its rotating-frame matrix is an irreducible three-node chain. With both couplings nonzero that Jacobi matrix has simple eigenvalues and only one dark direction. Three hybrid species are therefore not the same object as one bright direction plus a protected two-dimensional dark space.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-hybrid-modes-are-one-short-claim-1.md)
 
 The strongest near-doublet reading also fails the present reference budget. Using the 13.26 MHz resonant polariton separation as the remote gap, the three reported polaromechanical pair splittings exceed the AZ-027 relative-splitting limit by factors 1.92, 3.38 and 16.12; the weakest pair is not resolved from its reported polariton linewidth. Reducing the pump coupling does not manufacture the missing protected plane or its three-component control loop.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-hybrid-modes-are-one-short-claim-2.md)
 
 The positive target is now structurally definite: one central mode coupled to three independently controlled outer modes has spectrum plus/minus the coupling norm and a two-dimensional zero eigenspace. A second cavity mode, mechanical sideband or magnon mode could supply the missing outer partner, but no such tripod, closed loop, dark-space tomography or independent selector is present in the reported experiment. This selects the next architecture; it does not infer new physics from hybridization.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-hybrid-modes-are-one-short-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-hybrid-modes-are-one-short-claim-3.md)
 
 <a id="hot-off-the-press-selection-is-a-channel-not-a-filter"></a>
-## Hot off the press — selection is a channel, not a filter
+<a id="selection-is-a-channel-not-a-filter"></a>
+## Selection is a channel, not a filter
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The acoustic repeated-return proposal contained a type error. A lossless coherent pressure-transfer matrix preserves projective distance and cannot attract distinct preparations. A fixed passive matrix can attract after normalization, but the contraction is then completely controlled by unequal singular values: it is ordinary attenuation or gain filtering, not an additional selection mechanism.
+The acoustic repeated-return proposal contained a type error. A lossless coherent pressure-transfer matrix preserves projective distance and cannot attract distinct preparations. A fixed passive matrix can attract after normalization, but the contraction is then completely controlled by unequal singular values: it is ordinary attenuation or gain filtering, not an additional selection mechanism.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-selection-is-a-channel-not-a-filter-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-selection-is-a-channel-not-a-filter-claim-1.md)
 
 The exact one-third selector map acts affinely on a density matrix or ensemble covariance. It can be built by indexed acoustic shots: route the returned field with probability one third, inject the independently calibrated Y preparation with probability two thirds, retain the branch labels and reconstruct the covariance. Every traceless covariance perturbation then contracts by exactly one third. Individual coherent shots do not contract; only the ensemble does.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-selection-is-a-channel-not-a-filter-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-selection-is-a-channel-not-a-filter-claim-2.md)
 
 A passive filter adjusted to the same local angular slope has singular-value log ratio log three and transmits the orthogonal input with only one ninth of its power. Unnormalized power plus coherence- and population-direction tomography separates it from affine replacement. Single-trajectory attraction requires declared feedback or a nonlinear reservoir with a work, latency, reset and noise ledger. The acoustic platform remains valuable because it can make the distinction among transport, admitted mixing and discarded information experimentally explicit.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-selection-is-a-channel-not-a-filter-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-selection-is-a-channel-not-a-filter-claim-3.md)
 
 <a id="hot-off-the-press-make-the-proposed-cause-move"></a>
-## Hot off the press — make the proposed cause move
+<a id="make-the-proposed-cause-move"></a>
+## Make the proposed cause move
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** Thermal Hall response is an output port, not a mechanism label. Magnon–phonon Berry curvature and intrinsic many-body magnon skew scattering can both produce a field-odd transverse heat current. The earlier spectroscopy, linewidth and disorder bundle was not minimal: the collision mechanism is itself disorder-free, so clean-limit persistence cannot certify band geometry, and linewidth constrains both stories.
+Thermal Hall response is an output port, not a mechanism label. Magnon–phonon Berry curvature and intrinsic many-body magnon skew scattering can both produce a field-odd transverse heat current. The earlier spectroscopy, linewidth and disorder bundle was not minimal: the collision mechanism is itself disorder-free, so clean-limit persistence cannot certify band geometry, and linewidth constrains both stories.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-make-the-proposed-cause-move-claim-1.md)
 
 Two sharper coordinates are now specified. First, freeze the relevant one-particle gap from same-specimen spectroscopy and fit the low-temperature occupation order while profiling amplitude and power-law nuisances. A leading hybrid-band term has one-particle activation, whereas the derived collision term has doubled activation. Second, move the phonon crossing with isotope, strain or another lattice-native control, measure the direct magnetic-spectrum shift, and ask whether the Hall feature follows the remaining avoided-crossing motion. Ideal hybrid and collision endpoints occupy approximately (one, one) and (two, zero) in activation-order and crossing-tracking coordinates.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-make-the-proposed-cause-move-claim-2.md)
 
 The useful experiment is therefore not simply a more precise Hall trace. It is a joint, held-out mixture test in which the alleged cause is made to move and its rival is allowed to remain present. Intermediate or unstable coordinates mean mixture, crossover or unresolved detector equivalence—not permission to choose the preferred story. This is where the corpus says to look; no existing material is assigned from the local calculation alone.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-make-the-proposed-cause-move-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-make-the-proposed-cause-move-claim-3.md)
 
 <a id="hot-off-the-press-a-loop-and-its-outcome-are-different-objects"></a>
-## Hot off the press — a loop and its outcome are different objects
+<a id="a-loop-and-its-outcome-are-different-objects"></a>
+## A loop and its outcome are different objects
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** An exceptional-point loop carries two records that a dramatic endpoint image can hide. The instantaneous spectrum has a braid: in the declared two-mode model its discriminant winds once, the square root changes sign and the eigenstate sheets exchange after one circuit in either orientation. The driven state has a history: gain, loss, loop rate and nonadiabatic jumps decide which component remains visible.
+An exceptional-point loop carries two records that a dramatic endpoint image can hide. The instantaneous spectrum has a braid: in the declared two-mode model its discriminant winds once, the square root changes sign and the eigenstate sheets exchange after one circuit in either orientation. The driven state has a history: gain, loss, loop rate and nonadiabatic jumps decide which component remains visible.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-loop-and-its-outcome-are-different-objects-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-loop-and-its-outcome-are-different-objects-claim-1.md)
 
 Direct evolution makes the difference quantitative. A period-one loop retains a plus-population difference of about 0.681 between the two inputs. By period sixteen, both clockwise inputs reach the plus endpoint with population about 0.996626 while both counterclockwise inputs reach the minus endpoint by the same amount. At period sixty-four the initial-state difference vanishes at recorded precision and the direction-selected population exceeds 0.9998. Slower evolution strengthens selection here; it does not recover the naive symmetric sheet permutation.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-loop-and-its-outcome-are-different-objects-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-loop-and-its-outcome-are-different-objects-claim-2.md)
 
 The experiment must therefore pair complex eigenvalue and biorthogonal left/right tomography with both initial states, both orientations, a rate ladder and unnormalized gain/loss. An EP-excluding loop with matched imaginary-spectrum exposure tests whether chirality belongs to winding or to the propagator. A useful asymmetric switch may be entirely real engineering while still being the wrong evidence for a topological or spontaneous-selection claim.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-loop-and-its-outcome-are-different-objects-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-loop-and-its-outcome-are-different-objects-claim-3.md)
 
 <a id="hot-off-the-press-the-first-new-inequality-is-not-new"></a>
-## Hot off the press — the first new inequality is not new
+<a id="the-first-new-inequality-is-not-new"></a>
+## The first new inequality is not new
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** Three response channels expose a genuine pairwise-to-global gap. Each normalized two-port block can be positive while the joint three-port response is impossible. For equal real correlation the pairwise interval minus one to one tightens globally to minus one half to one. For equal magnitude three fifths, the gauge-invariant phase around the triangle must satisfy cosine Phi at least five twenty-sevenths, giving an exact saturating phase boundary.
+Three response channels expose a genuine pairwise-to-global gap. Each normalized two-port block can be positive while the joint three-port response is impossible. For equal real correlation the pairwise interval minus one to one tightens globally to minus one half to one. For equal magnitude three fifths, the gauge-invariant phase around the triangle must satisfy cosine Phi at least five twenty-sevenths, giving an exact saturating phase boundary.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-first-new-inequality-is-not-new-claim-1.md)
 
 This looks like contextual admissibility doing additional work, but the novelty audit fails. The triangle inequality is exactly the determinant condition in the ordinary positive-semidefinite principal-minor test. Pairwise positivity was merely an incomplete conventional envelope. The result is useful global consistency and a detector warning, but it is neither a new law nor a restriction beyond standard full-matrix positivity.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-first-new-inequality-is-not-new-claim-2.md)
 
 The frontier therefore moves outward. A successful inequality must start with the complete positive causal family and then constrain compatibility across frequencies, common environmental dilations, independently calibrated detector contexts or regulator limits. It must exhibit a conventional point that passes all standard tests and is excluded only by the declared contextual premise. Anything weaker is a rediscovery, however suggestive its language.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-first-new-inequality-is-not-new-claim-3.md)
 
 The first cross-frequency test now makes that lesson concrete. One positive relaxation spectrum forces the divided differences and slopes at several frequencies to form a positive Loewner kernel. A conventional passive response made from one relaxation branch plus a small inductive term stays positive and decreasing yet violates every two-frequency kernel minor; naming and subtracting the inductive storage restores the kernel exactly. This is useful model discrimination—do these records share the declared relaxation carrier?—but it is standard Stieltjes–Loewner theory, not a new fundamental law. The next look-here test needs measured covariance and then a premise not equivalent to choosing a narrower conventional carrier class.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-4.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-first-new-inequality-is-not-new-claim-4.md)
 
 Storage typing changes the verdict on the real impedance lane. At 1 kHz, 3.162 kHz and 10 kHz, the complete fitted impedance fails the relaxation-only Loewner test for all 54 cells. Remove the series inductance already present in the frozen model and all 54 pass, with a positive smallest corrected eigenvalue. This dramatic reversal is not new physics and not independent validation—the nonnegative basis imposed the shared relaxation measure, while the source lacks measured slopes and repeat covariance. It is a practical detector design: report raw and storage-corrected kernels together, vary fixture inductance, and ask whether only the raw verdict moves.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-first-new-inequality-is-not-new-claim-5.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-first-new-inequality-is-not-new-claim-5.md)
 
 <a id="hot-off-the-press-two-currents-require-three-calculations"></a>
-## Hot off the press — two currents require three calculations
+<a id="two-currents-require-three-calculations"></a>
+## Two currents require three calculations
 
-> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research move — [⌖ Cartographer](../reading-key/move-cartographer.md)** — maps territory, distinctions, dependencies and interfaces.
 
-**Provisional integration note — 25 October 2026.** The incidence and B minus L source plane has two labels, but its quantum-field-theory frontier is not one two-by-two matrix calculation. The work separates into ultraviolet composite-operator closure and running, broken-phase spectral and contact matching across thresholds, and a finite-temperature tensor problem with KMS and approximate-charge relaxation.
+The incidence and B minus L source plane has two labels, but its quantum-field-theory frontier is not one two-by-two matrix calculation. The work separates into ultraviolet composite-operator closure and running, broken-phase spectral and contact matching across thresholds, and a finite-temperature tensor problem with KMS and approximate-charge relaxation.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-two-currents-require-three-calculations-claim-1.md)
 
 The literature supplies the architecture but not the answer. Ward identities protect the Dirac B minus L row; general mixing theory says the nonconserved incidence insertion may still rescale, shear by the protected current and mix with closure sectors. Published ALP running is a useful cross-check for the broken incidence direction, but exact B minus L is derivative-null there, so the ALP route cannot realize the full two-port vector response. A Majorana mass removes the protected row and begins a separate branch.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-two-currents-require-three-calculations-claim-2.md)
 
 The census makes the work finite, and whole-corpus reconciliation sharpens it further: existing source-native calculations already determine the scheme-insensitive quotient and show that the broken sector has more than one channel. The next section states that no-go. The remaining task is not to assume a closed two-by-two block, but to find whether the full response develops an operational low-rank window before thermal continuation.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-currents-require-three-calculations-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-two-currents-require-three-calculations-claim-3.md)
 
 <a id="hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates"></a>
-## Hot off the press — the microscopic source quotient has five coordinates
+<a id="the-microscopic-source-quotient-has-five-coordinates"></a>
+## The microscopic source quotient has five coordinates
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** After hypercharge, equation-of-motion and contact redundancies are removed, the completed Standard-Model source quotient has five physical coordinates: four Yukawa violations and one independent weak-anomaly coordinate. Completed B minus L is the unique remaining null direction. This exact result was already present in the corpus but had not been carried into the frontier register.
+After hypercharge, equation-of-motion and contact redundancies are removed, the completed Standard-Model source quotient has five physical coordinates: four Yukawa violations and one independent weak-anomaly coordinate. Completed B minus L is the unique remaining null direction. This exact result was already present in the corpus but had not been carried into the frontier register.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-microscopic-source-quotient-has-five-coordinates-claim-1.md)
 
 The leading noncontact Yukawa metric is positive and has four distinct eigenvalues. Neither retained incidence vector is one of its eigenrays. Exact incidence/B minus L two-current closure therefore fails: the protected current is real, but its broken complement contains several independently propagating channels. Rotating coordinates cannot repair that failure because it would merely rename the sources.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-microscopic-source-quotient-has-five-coordinates-claim-2.md)
 
 The rank-two Jordan cone remains exact for any pair of ports that an experiment actually isolates. The missing reason is now operational rather than algebraic: compute the energy-dependent five-channel response and look for one stable broken singular direction separated from the others across a declared window. A spectral gap would justify a two-port reduced model and guide detector design; its absence would rule out that reduction while leaving the wider admissibility method intact.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-microscopic-source-quotient-has-five-coordinates-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-microscopic-source-quotient-has-five-coordinates-claim-3.md)
 
 <a id="hot-off-the-press-the-two-current-window-has-a-resolution-ceiling"></a>
-## Hot off the press — the two-current window has a resolution ceiling
+<a id="the-two-current-window-has-a-resolution-ceiling"></a>
+## The two-current window has a resolution ceiling
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-**Provisional integration note — 25 October 2026.** The five-coordinate response now has a first energy-and-resolution map. In the inherited broken-phase threshold model, the bottom-dominated region from 10 to 300 GeV retains a second generalized mode at roughly seven to eleven percent. It is not one broken port even for a detector that resolves only percent-level structure. Above the top threshold, the Yukawa-only second mode falls below one part in a thousand and an effective one-port description reopens.
+The five-coordinate response now has a first energy-and-resolution map. In the inherited broken-phase threshold model, the bottom-dominated region from 10 to 300 GeV retains a second generalized mode at roughly seven to eleven percent. It is not one broken port even for a detector that resolves only percent-level structure. Above the top threshold, the Yukawa-only second mode falls below one part in a thousand and an effective one-port description reopens.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-current-window-has-a-resolution-ceiling-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-two-current-window-has-a-resolution-ceiling-claim-1.md)
 
 The weak-anomaly cut sets the sharper ceiling. Its leading vacuum normalization is fixed by the perturbative topological-density spectral function. On the exact five-coordinate source metric and with the declared illustrative weak-coupling inputs, the second mode is 0.1217 percent of the first. The high-energy broken response is therefore rank one at one-percent resolution but rank two at one-per-mille resolution. Top dominance is not a tolerance-free conservation law.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-current-window-has-a-resolution-ceiling-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-two-current-window-has-a-resolution-ceiling-claim-2.md)
 
 The result does not yet certify a physical energy window. Running couplings, broken-phase electroweak cuts, hadronic matching, interference and detector covariance must preserve the gap across preregistered and held-out energies. If they do, protected B minus L plus one top-dominated port becomes a justified reduced model and a piece of theoretical engineering. If they do not, the two-current reduction closes while the five-coordinate response remains the honest object.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-current-window-has-a-resolution-ceiling-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-two-current-window-has-a-resolution-ceiling-claim-3.md)
 
 <a id="hot-off-the-press-the-high-energy-window-survives-running"></a>
-## Hot off the press — the high-energy window survives running
+<a id="the-high-energy-window-survives-running"></a>
+## The high-energy window survives running
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** The high-energy reopening is not confined to one illustrative point. A declared one-loop third-family run from 400 GeV to 100 TeV keeps the second mode between 0.1315 and 0.1637 percent of the first. The leading orientation changes by less than two parts in a million in overlap.
+The high-energy reopening is not confined to one illustrative point. A declared one-loop third-family run from 400 GeV to 100 TeV keeps the second mode between 0.1315 and 0.1637 percent of the first. The leading orientation changes by less than two parts in a million in overlap.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-high-energy-window-survives-running-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-high-energy-window-survives-running-claim-1.md)
 
 The sampled window therefore remains one broken port at one-percent resolution and two broken ports at one-per-mille resolution. Ordinary running does not rapidly rotate the response out of its top-dominated direction. The resolution ceiling, rather than scale instability, is the immediate limitation.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-high-energy-window-survives-running-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-high-energy-window-survives-running-claim-2.md)
 
 This remains a diagnostic, not a precision Standard-Model prediction. Broken-phase electroweak matching, higher-order uncertainty, detector covariance and a real interference-sensitive observable are still required. The practical invitation is exact: look above top production, attempt the percent-level reduced model, and use per-mille sensitivity as the stress test that should reveal the second microscopic direction.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-high-energy-window-survives-running-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-high-energy-window-survives-running-claim-3.md)
 
 <a id="hot-off-the-press-the-detector-has-two-different-jobs"></a>
-## Hot off the press — the detector has two different jobs
+<a id="the-detector-has-two-different-jobs"></a>
+## The detector has two different jobs
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** Certifying a useful one-percent reduced response and detecting the predicted per-mille second mode are different experiments. Across the sampled high-energy window, a three-sigma one-percent certificate permits about 0.279 percent combined one-sigma error. A three-sigma detection of the second mode requires less than 438 parts per million; equal theory and detector budgets receive about 310 parts per million each.
+Certifying a useful one-percent reduced response and detecting the predicted per-mille second mode are different experiments. Across the sampled high-energy window, a three-sigma one-percent certificate permits about 0.279 percent combined one-sigma error. A three-sigma detection of the second mode requires less than 438 parts per million; equal theory and detector budgets receive about 310 parts per million each.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-detector-has-two-different-jobs-claim-1.md)
 
 Orientation is part of the measurement. A few degrees of analyser error can leak as much leading response as the entire second mode, and keeping that leakage below ten percent requires roughly seven-tenths of a degree alignment. A scalar sensitivity number is therefore not an adequate detector description; the apparatus must reconstruct the response direction and its covariance.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-detector-has-two-different-jobs-claim-2.md)
 
 There is a second, independent information gate. Rates on the up, bottom and weak-anomaly amplitudes leave two relative-sign choices after a global convention. One interference term fixes only one. Testing the signed relation therefore requires two coherent phase links that connect all three amplitudes. The ideal contrasts are large; the open task is to find source-matched common processes and carry their electroweak and detector covariance without fitting the answer afterward.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-detector-has-two-different-jobs-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-detector-has-two-different-jobs-claim-3.md)
 
 <a id="hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment"></a>
-## Hot off the press — the spanning tree is not yet one experiment
+<a id="the-spanning-tree-is-not-yet-one-experiment"></a>
+## The spanning tree is not yet one experiment
 
-> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research move — [✦ Scout](../reading-key/move-scout.md)** — opens a plausible new route or searches beyond the present ingredients.
 
-**Provisional integration note — 25 October 2026.** Primary calculations now suggest common-final-state processes for both phase links. Leptonic heavy-meson decay contains an explicit quark-line interference term and gives a low-energy template for the up-type/bottom edge. Associated top, W and ALP production contains top-like and weak-gauge emission diagrams in one final state and gives the high-energy topology for the up-type/weak edge.
+Primary calculations now suggest common-final-state processes for both phase links. Leptonic heavy-meson decay contains an explicit quark-line interference term and gives a low-energy template for the up-type/bottom edge. Associated top, W and ALP production contains top-like and weak-gauge emission diagrams in one final state and gives the high-energy topology for the up-type/weak edge.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-spanning-tree-is-not-yet-one-experiment-claim-1.md)
 
 Neither link is yet admitted. The heavy-meson result must be recomputed for the Bc two-coefficient source convention and covariance. The tW plus ALP analysis generates one nonzero coefficient at a time, so it does not retain the signed top/weak cross term. Shared sensitivity is not the same thing as measured interference.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-spanning-tree-is-not-yet-one-experiment-claim-2.md)
 
 The two candidates also live on opposite sides of the electroweak threshold. Their coefficient names form a graph, but their phases form one experimental record only if a declared operator basis, running, threshold matching and correlated nuisance model transport the sign between them. The next task is therefore two quadratic differential response polynomials and one common matching ledger; a vanished or nuisance-collinear cross term kills the corresponding edge.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-spanning-tree-is-not-yet-one-experiment-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-spanning-tree-is-not-yet-one-experiment-claim-3.md)
 
 <a id="hot-off-the-press-two-edges-identify-three-edges-audit"></a>
-## Hot off the press — two edges identify; three edges audit
+<a id="two-edges-identify-three-edges-audit"></a>
+## Two edges identify; three edges audit
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** The candidate phase links now have a finite extraction protocol. A signed nine-setting grid separates the baseline, possible linear response, both self-responses and the cross-response in every differential bin. Three leftover contrasts test whether the quadratic description itself survives. The cross-response must also remain inside the ordinary positivity bound set by the two self-responses.
+The candidate phase links now have a finite extraction protocol. A signed nine-setting grid separates the baseline, possible linear response, both self-responses and the cross-response in every differential bin. Three leftover contrasts test whether the quadratic description itself survives. The cross-response must also remain inside the ordinary positivity bound set by the two self-responses.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-two-edges-identify-three-edges-audit-claim-1.md)
 
 Two admitted links do one job: after the process templates and one overall convention are fixed, they recover the two relative signs among the up-type, bottom and weak amplitudes. A third link does a different job. The product of the three edge signs is unchanged when any node convention is reversed, so the completed triangle is the first internal audit of whether the sign really survived the journey between scales.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-two-edges-identify-three-edges-audit-claim-2.md)
 
 This does not supply the missing physics. The heavy-meson coefficients, top/weak collider interference, third bottom/weak process and signed electroweak matching matrix remain uncomputed. It does make the invitation buildable: publish the signed response table and covariance, require positivity and held-out prediction, then let the third edge decide whether the joined graph is physical structure or only coordinated naming.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-two-edges-identify-three-edges-audit-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-two-edges-identify-three-edges-audit-claim-3.md)
 
 <a id="hot-off-the-press-the-third-edge-tests-the-whole-triangle"></a>
-## Hot off the press — the third edge tests the whole triangle
+<a id="the-third-edge-tests-the-whole-triangle"></a>
+## The third edge tests the whole triangle
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** A published broken-phase W-associated axion calculation already retains independent top and bottom couplings with mixed terms. This moves the candidate up–down phase edge into the same broad electroweak process family as the top-like and weak-gauge emission topologies. It does not yet supply a three-coupling calculation, but it removes the assumption that sign identification must begin by joining a collider process to a heavy-meson decay.
+A published broken-phase W-associated axion calculation already retains independent top and bottom couplings with mixed terms. This moves the candidate up–down phase edge into the same broad electroweak process family as the top-like and weak-gauge emission topologies. It does not yet supply a three-coupling calculation, but it removes the assumption that sign identification must begin by joining a collider process to a heavy-meson decay.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-third-edge-tests-the-whole-triangle-claim-1.md)
 
 The complete three-source protocol has 27 signed settings. Nineteen settings—one origin, six axes and twelve pair corners—recover the ten coefficients of a symmetric quadratic response and leave nine pair-plane closure tests. The eight corners where all three sources are nonzero are held out. They ask whether the fitted pairwise story predicts genuinely joint records without adding a three-way term after seeing the answer.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-third-edge-tests-the-whole-triangle-claim-2.md)
 
 A completed triangle is also more than three acceptable pairs. Joint positivity requires the determinant of the full three-by-three response to be nonnegative; pairwise bounds can all pass while that global condition fails. Node-sign conventions transport the kernel without changing either its determinant or the product of the three edge signs. The look-here instruction is therefore exact: calculate one gauge-complete top–bottom–weak amplitude, run the 27 settings on common phase-space points and let closure, held-out prediction, determinant positivity and detector folding decide whether the triangle exists. Bc decay remains an independent low-energy validation arm.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-third-edge-tests-the-whole-triangle-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-third-edge-tests-the-whole-triangle-claim-3.md)
 
 <a id="hot-off-the-press-name-the-coordinates-before-reading-the-signs"></a>
-## Hot off the press — name the coordinates before reading the signs
+<a id="name-the-coordinates-before-reading-the-signs"></a>
+## Name the coordinates before reading the signs
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The triangle has two different kinds of content. Positivity, rank and determinant sign describe whether the joint response exists independently of an invertible change of source coordinates. The signs assigned to particular edges describe that response only after those coordinates have been named and held fixed.
+The triangle has two different kinds of content. Positivity, rank and determinant sign describe whether the joint response exists independently of an invertible change of source coordinates. The signs assigned to particular edges describe that response only after those coordinates have been named and held fixed.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-name-the-coordinates-before-reading-the-signs-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-name-the-coordinates-before-reading-the-signs-claim-1.md)
 
 An exact counterexample makes the boundary visible. A unit-determinant shear of the synthetic positive response preserves its determinant at 288 and preserves positivity, yet reverses the product of its three edge signs. The cycle product is therefore invariant under independent sign reversals of already named nodes, but not under a general effective-field-theory basis transformation that mixes them.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-name-the-coordinates-before-reading-the-signs-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-name-the-coordinates-before-reading-the-signs-claim-2.md)
 
 This matters before combining the ALP papers: the chiral rotations used to define the top and bottom fermion coefficients also shift anomalous gauge couplings. The next deliverable is one signed operator dictionary—including anomaly normalization, running, threshold matching and covariance—followed by the 27-setting response in that basis. Rank and positivity come first; edge signs become physical statements only inside the declared dictionary.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-name-the-coordinates-before-reading-the-signs-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-name-the-coordinates-before-reading-the-signs-claim-3.md)
 
 <a id="hot-off-the-press-the-weak-record-hides-one-direction"></a>
-## Hot off the press — the weak record hides one direction
+<a id="the-weak-record-hides-one-direction"></a>
+## The weak record hides one direction
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
 
-**Provisional integration note — 25 October 2026.** The signed tree-level dictionary is now explicit in one standard ALP normalization. On the corpus's zero-Higgs-current representative, the measured fermion coefficients satisfy \(c_t=-v_u\) and \(c_b=-v_d\), while the weak bosonic coefficient after the anomaly trade is \(\widetilde c_{WW}=c_{WW}-a_2/2\). The minus signs and factor of two are therefore fixed rather than inferred from matching labels.
+The signed tree-level dictionary is now explicit in one standard ALP normalization. On the corpus's zero-Higgs-current representative, the measured fermion coefficients satisfy \(c_t=-v_u\) and \(c_b=-v_d\), while the weak bosonic coefficient after the anomaly trade is \(\widetilde c_{WW}=c_{WW}-a_2/2\). The minus signs and factor of two are therefore fixed rather than inferred from matching labels.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-weak-record-hides-one-direction-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-weak-record-hides-one-direction-claim-1.md)
 
 The result exposes a scope boundary. The five-coordinate quotient is the quotient of phase-current sources. A general ALP effective theory also allows an independent direct weak-boson operator. A W-associated record by itself sees only \(c_{WW}-a_2/2\), so shifting \((a_2,c_{WW})\) by \((2\lambda,\lambda)\) leaves that record unchanged. Calling it a measurement of \(a_2\) would silently impose the current-only hypothesis.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-weak-record-hides-one-direction-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-weak-record-hides-one-direction-claim-2.md)
 
 There are now two clean experiments rather than one blurred one. Set \(c_{WW}=0\) and test whether weak emission is inherited from the current anomaly; or retain the direct coefficient as a sixth coordinate and add a record that separates it. The next work is running, electroweak matching, covariance and the 27-setting amplitude in the chosen model. Agreement would provide a justified reduced theory. Failure repaired by the sixth coordinate would locate the edge of the current-source description; a residual beyond the complete model is where new physics should be sought.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-weak-record-hides-one-direction-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-weak-record-hides-one-direction-claim-3.md)
 
 <a id="hot-off-the-press-more-energies-do-not-add-a-coordinate"></a>
-## Hot off the press — more energies do not add a coordinate
+<a id="more-energies-do-not-add-a-coordinate"></a>
+## More energies do not add a coordinate
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The current-only hypothesis survives the published running order. In the derivative basis the direct weak coefficient \(c_{WW}\) is scale independent, while \(\widetilde c_{WW}\) changes because the fermion-current anomaly changes. If \(c_{WW}=0\) in the ultraviolet, then \(\widetilde c_{WW}(\mu)=-a_2(\mu)/2\) remains true along the flow.
+The current-only hypothesis survives the published running order. In the derivative basis the direct weak coefficient \(c_{WW}\) is scale independent, while \(\widetilde c_{WW}\) changes because the fermion-current anomaly changes. If \(c_{WW}=0\) in the ultraviolet, then \(\widetilde c_{WW}(\mu)=-a_2(\mu)/2\) remains true along the flow.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-energies-do-not-add-a-coordinate-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-more-energies-do-not-add-a-coordinate-claim-1.md)
 
 This does not make the hidden coordinate observable. The shift \((a_2,c_{WW})\mapsto(a_2+2\lambda,c_{WW}+\lambda)\) leaves \(\widetilde c_{WW}\) unchanged at every scale in the analytic approximation. Repeating the same weak measurement at more energies changes its value but not the information it retains. The record still folds two source directions into one.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-energies-do-not-add-a-coordinate-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-more-energies-do-not-add-a-coordinate-claim-2.md)
 
 A different record is required—one that couples to the direct bosonic operator and the current anomaly in different combinations. Crossing the electroweak threshold does not provide the same weak node at lower energy because the W field has been integrated out; low-energy Bc information is separately matched validation. The look-here instruction is therefore to add operator diversity, not merely an energy scan.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-energies-do-not-add-a-coordinate-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-more-energies-do-not-add-a-coordinate-claim-3.md)
 
 <a id="hot-off-the-press-three-generations-add-flavor-not-another-anomaly"></a>
-## Hot off the press — three generations add flavor, not another anomaly
+<a id="three-generations-add-flavor-not-another-anomaly"></a>
+## Three generations add flavor, not another anomaly
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
 
-**Provisional integration note — 25 October 2026.** The one-generation dictionary lifts to five Hermitian three-by-three current matrices. Their 45 real coordinates split into five family singlets and forty traceless flavor directions. The corpus's five-coordinate quotient is the family-universal source slice; it should not be described as the complete general flavor-matrix ALP theory.
+The one-generation dictionary lifts to five Hermitian three-by-three current matrices. Their 45 real coordinates split into five family singlets and forty traceless flavor directions. The corpus's five-coordinate quotient is the family-universal source slice; it should not be described as the complete general flavor-matrix ALP theory.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-generations-add-flavor-not-another-anomaly-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-generations-add-flavor-not-another-anomaly-claim-1.md)
 
 CKM transport changes the entries seen in the down-quark mass basis but preserves trace and norm. The weak anomaly sees only \(A_2=\operatorname{Tr}(3\mathbf c_Q+\mathbf c_L)\), a rank-one record on the 45-dimensional current space. Traceless flavor perturbations can therefore change fermion records while remaining invisible to the weak bosonic coefficient. More families add flavor structure, not another weak-anomaly coordinate.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-generations-add-flavor-not-another-anomaly-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-generations-add-flavor-not-another-anomaly-claim-2.md)
 
 The calculation also corrects an inherited name: the displayed null vector \((1,1,1,-3)\) is the restricted projection of completed \(B-L\), not baryon number alone. A family-universal generation-summed anomaly is three times its per-family normalization. The next bridge must freeze that normalization and use flavor-sensitive records instead of asking one bosonic detector to reconstruct the forty directions it necessarily discards.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-three-generations-add-flavor-not-another-anomaly-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-generations-add-flavor-not-another-anomaly-claim-3.md)
 
 <a id="hot-off-the-press-change-the-record-not-just-the-energy"></a>
-## Hot off the press — change the record, not just the energy
+<a id="change-the-record-not-just-the-energy"></a>
+## Change the record, not just the energy
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** One term in the published finite weak matching points toward a different record: the flavor-changing down-sector expression contains an explicit contribution proportional to unprimed \(c_{WW}\), whereas the weak bosonic record measures \(c_{WW}-A_2/2\). Taken by itself, that term gives an independent formal row. It is a candidate mechanism, not yet the coefficient of a complete observable.
+One term in the published finite weak matching points toward a different record: the flavor-changing down-sector expression contains an explicit contribution proportional to unprimed \(c_{WW}\), whereas the weak bosonic record measures \(c_{WW}-A_2/2\). Taken by itself, that term gives an independent formal row. It is a candidate mechanism, not yet the coefficient of a complete observable.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-change-the-record-not-just-the-energy-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-change-the-record-not-just-the-energy-claim-1.md)
 
 The source-complete MFV expression in the same paper changes the conclusion. After running, matching and basis conversion are assembled, its \((A_2,c_{WW})\) dependence is again proportional to \((-1/2,1)\). The determinant with the weak row is exactly zero, so the old displacement \((2,1)\) remains invisible. Belle and Belle II therefore constrain and cross-check the common EFT direction in this scope; they do not open a sixth coordinate.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-change-the-record-not-just-the-energy-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-change-the-record-not-just-the-energy-claim-2.md)
 
 The buildable next experiment starts one level earlier, with a gauge-complete differential W-associated amplitude. Compute every diagram in one convention, verify Ward identities, fold the result through the 27-setting programme and detector response, and ask whether any retained kinematic shape has a non-collinear \((A_2,c_{WW})\) derivative. If it does, flavor data become a held-out cross-scale test. If it does not, this process family closes the route rather than merely failing to measure it well.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-change-the-record-not-just-the-energy-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-change-the-record-not-just-the-energy-claim-3.md)
 
 <a id="hot-off-the-press-ask-for-the-likelihood-not-the-plot"></a>
-## Hot off the press — ask for the likelihood, not the plot
+<a id="ask-for-the-likelihood-not-the-plot"></a>
+## Ask for the likelihood, not the plot
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The Belle/Belle II search supplies a real detector record: four exclusive B-decay modes, declared mass windows, 711 inverse femtobarns, an unbinned diphoton-mass fit, lifetime-dependent acceptance and a published one-coupling limit. It establishes where the flavor-changing arm touches experiment. It does not by itself preserve the distinctions needed for a joint \((A_2,c_{WW})\) inference.
+The Belle/Belle II search supplies a real detector record: four exclusive B-decay modes, declared mass windows, 711 inverse femtobarns, an unbinned diphoton-mass fit, lifetime-dependent acceptance and a published one-coupling limit. It establishes where the flavor-changing arm touches experiment. It does not by itself preserve the distinctions needed for a joint \((A_2,c_{WW})\) inference.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-ask-for-the-likelihood-not-the-plot-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-ask-for-the-likelihood-not-the-plot-claim-1.md)
 
 An exact public recast requires six machine-readable objects: each mode's mass grid and profile likelihood, efficiency versus mass and lifetime, the correlated nuisance model, the background and resolution response, and the map from production and decay parameters to accepted yield. No such complete packet was found on the official publication, paper and HEPData search surfaces inspected on 25 October 2026. This is a public-availability boundary, not a claim that the collaboration lacks the information.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-ask-for-the-likelihood-not-the-plot-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-ask-for-the-likelihood-not-the-plot-claim-2.md)
 
 Digitizing published curves can orient the search but cannot reconstruct an unbinned likelihood or its covariance. The release packet remains valuable for a faithful recast and a cross-scale validation of the common EFT direction, but the source-complete MFV kernel shows that it cannot open the sixth coordinate in this declared scope. That requires a different, complete observable whose \((A_2,c_{WW})\) derivative is demonstrably non-collinear before detector profiling begins.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-ask-for-the-likelihood-not-the-plot-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-ask-for-the-likelihood-not-the-plot-claim-3.md)
 
 <a id="hot-off-the-press-a-term-is-not-a-detector-row"></a>
-## Hot off the press — a term is not a detector row
+<a id="a-term-is-not-a-detector-row"></a>
+## A term is not a detector row
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** This correction separates three objects that can look alike in an equation: an individual matching term, the source-complete coefficient after all contributions are combined, and the detector record after decays, acceptance and nuisance profiling. Independence of the first does not prove independence of the second or third.
+This correction separates three objects that can look alike in an equation: an individual matching term, the source-complete coefficient after all contributions are combined, and the detector record after decays, acceptance and nuisance profiling. Independence of the first does not prove independence of the second or third.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-term-is-not-a-detector-row-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-term-is-not-a-detector-row-claim-1.md)
 
 For the published MFV numerical kernel at the stated scale, the flavor row on \((A_2,c_{WW})\) is \(0.019(-0.0057)(-1/2,1)\). It is a scalar multiple of the weak row \((-1/2,1)\); their determinant vanishes and both annihilate \((2,1)\). The isolated \(c_{WW}\) term remains a correct piece of the matching calculation, but other pieces restore the quotient in the complete expression.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-term-is-not-a-detector-row-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-term-is-not-a-detector-row-claim-2.md)
 
 The implication is constructive. Flavor searches remain real detectors and valuable consistency tests, while the frontier moves to observables that retain more of the amplitude: angular, energy, polarization or interference information in a gauge-complete W-associated calculation. The practical question is no longer whether a named process mentions \(c_{WW}\), but whether its complete, measurable shape responds in a direction the existing record erases.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-a-term-is-not-a-detector-row-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-term-is-not-a-detector-row-claim-3.md)
 
 <a id="hot-off-the-press-the-public-model-has-one-control-too-few"></a>
-## Hot off the press — the public model has one control too few
+<a id="the-public-model-has-one-control-too-few"></a>
+## The public model has one control too few
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The official linear ALP UFO reaches the right process family, but not the full intervention space. It exposes one `CaPhi` control for the Higgs-current direction and one `CWtil` control for direct weak-boson emission. After the known masses are stripped away, the same `CaPhi` makes the top and bottom couplings equal in magnitude and opposite in sign.
+The official linear ALP UFO reaches the right process family, but not the full intervention space. It exposes one `CaPhi` control for the Higgs-current direction and one `CWtil` control for direct weak-boson emission. After the known masses are stripped away, the same `CaPhi` makes the top and bottom couplings equal in magnitude and opposite in sign.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-public-model-has-one-control-too-few-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-public-model-has-one-control-too-few-claim-1.md)
 
 This means the available file can move only on the plane ((c_t,c_b,c_{WW})=(x,-x,y)). Nine of the twenty-seven signed settings lie on that plane. A general three-source quadratic response has six coefficients, while this slice retains only three combinations. Seeing top, bottom and weak vertices in the model is therefore not the same as being able to move their causes independently.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-public-model-has-one-control-too-few-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-public-model-has-one-control-too-few-claim-2.md)
 
 The result is hopeful because the missing work is now sharply bounded. Export one nonredundant gauge-invariant model with independent third-generation currents and (c_{WW}), carry the anomaly shifts into the gauge coefficients, generate every completing vertex and pass Ward tests before running the factorial design. A new-physics claim begins only after that complete model, the held-out corners and detector folding fail together; until then this is model engineering, not an anomaly.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-public-model-has-one-control-too-few-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-public-model-has-one-control-too-few-claim-3.md)
 
 <a id="hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate"></a>
-## Hot off the press — more detail cannot restore an erased coordinate
+<a id="more-detail-cannot-restore-an-erased-coordinate"></a>
+## More detail cannot restore an erased coordinate
 
 > **Section status — [⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The hoped-for differential escape from the weak-source quotient is now closed at the declared dimension-five order. The exact source map is \(v_u,v_d,a_2,c_{WW}\) \mapsto (c_t,c_b,\widetilde c_{WW})=(-v_u,-v_d,c_{WW}-a_2/2\). It annihilates the displacement \(0,0,2,1\) before a phase-space point, polarization or detector has been chosen.
+The hoped-for differential escape from the weak-source quotient is now closed at the declared dimension-five order. The exact source map is \(v_u,v_d,a_2,c_{WW}\) \mapsto (c_t,c_b,\widetilde c_{WW})=(-v_u,-v_d,c_{WW}-a_2/2\). It annihilates the displacement \(0,0,2,1\) before a phase-space point, polarization or detector has been chosen.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-more-detail-cannot-restore-an-erased-coordinate-claim-1.md)
 
 That ordering matters. Every angular, energy and polarization Jacobian of the same process factors through those three amplitude coordinates, so it kills the same displacement point by point. A linear detector fold can discard more information but cannot recreate this lost coordinate. The quadratic response says the same thing: pulling a three-coordinate kernel back to the four source coordinates leaves the exact null direction intact.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-more-detail-cannot-restore-an-erased-coordinate-claim-2.md)
 
 The result redirects rather than ends the experiment. An independent top, bottom and weak model is still needed to run the twenty-seven settings and audit the three-coordinate amplitude triangle. But separating the current anomaly from a direct weak operator now requires a genuinely current-sensitive record, an explicit ultraviolet restriction such as \(c_{WW}=0\), higher-dimensional structure or a new state. More detail of the same measurement is engineering improvement; a different retained distinction is the frontier.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-more-detail-cannot-restore-an-erased-coordinate-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-more-detail-cannot-restore-an-erased-coordinate-claim-3.md)
 
 <a id="hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice"></a>
-## Hot off the press — the missing coordinate depends on the declared slice
+<a id="the-missing-coordinate-depends-on-the-declared-slice"></a>
+## The missing coordinate depends on the declared slice
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
 
-**Provisional integration note — 25 October 2026.** Restoring the full gauge dictionary changes the coordinate count. The five current coordinates plus the three direct gauge labels do not give eight independently observable dimension-five directions. They map to seven physical coefficients and forget the exact redistribution \(\Delta A_2,\Delta c_{WW},\Delta c_{BB}\) = \(2,1,-1\). The missing direction is a change of representation, not a hidden detector target.
+Restoring the full gauge dictionary changes the coordinate count. The five current coordinates plus the three direct gauge labels do not give eight independently observable dimension-five directions. They map to seven physical coefficients and forget the exact redistribution \(\Delta A_2,\Delta c_{WW},\Delta c_{BB}\) = \(2,1,-1\). The missing direction is a change of representation, not a hidden detector target.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-coordinate-depends-on-the-declared-slice-claim-1.md)
 
 A second gauge record can still do useful work on a declared slice. If \(c_{BB}=0\), the weak row \((-1/2,1)\) and the hypercharge row \((1/2,0)\) have nonzero determinant on \(A_2,c_{WW}\). A neutral-gauge measurement can then separate them after the measured fermion differences are removed. If \(c_{BB}\) is free, the two records retain the full \(2,1,-1\) null and no dimension-five experiment can assign all three origin labels separately.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-coordinate-depends-on-the-declared-slice-claim-2.md)
 
 The look-here instruction is therefore conditional and buildable: finish the charged top–bottom–weak amplitude triangle; then choose an ALP mass window, declare the direct-operator slice and calculate a complete neutral-gauge likelihood through electroweak rotation, decays, acceptance and nuisance profiling. The unrestricted theory should instead be fit in seven basis-invariant coordinates. A residual becomes a new-physics lead only if it requires a direction outside that physical map.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-missing-coordinate-depends-on-the-declared-slice-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-missing-coordinate-depends-on-the-declared-slice-claim-3.md)
 
 <a id="hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference"></a>
-## Hot off the press — the second gauge detector needs a phase reference
+<a id="the-second-gauge-detector-needs-a-phase-reference"></a>
+## The second gauge detector needs a phase reference
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** The conditional detector now has a physical form. After known loop and threshold contributions are carried, charged weak production reads \(R_W=c_{WW}-A_2/2\), while the neutral photon amplitude reads \(R_{\gamma\gamma}=c_{WW}+c_{BB}\). On the declared \(c_{BB}=0\) slice these two amplitudes invert exactly to \(c_{WW}=R_{\gamma\gamma}\) and \(A_2=2(R_{\gamma\gamma}-R_W)\).
+The conditional detector now has a physical form. After known loop and threshold contributions are carried, charged weak production reads \(R_W=c_{WW}-A_2/2\), while the neutral photon amplitude reads \(R_{\gamma\gamma}=c_{WW}+c_{BB}\). On the declared \(c_{BB}=0\) slice these two amplitudes invert exactly to \(c_{WW}=R_{\gamma\gamma}\) and \(A_2=2(R_{\gamma\gamma}-R_W)\).
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-second-gauge-detector-needs-a-phase-reference-claim-1.md)
 
 Two event counts are not yet those two amplitudes. Production and decay rates retain squared magnitudes, leaving two relative-sign branches after a common reversal is removed. A diphoton branching fraction also depends on the total ALP width. The minimal successful detector therefore needs calibrated interference, a coherent phase reference or a third signed response, together with the complete width and acceptance model.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-second-gauge-detector-needs-a-phase-reference-claim-2.md)
 
 The realistic experiment is now finite: choose a mass window, freeze the source-complete \(c_{BB}=0\) model, run the charged factorial settings and a signed photon or photon–Z reference scan, and profile lifetime, resolution and correlated backgrounds. Passing gives a justified reduced theory and a new detector capability. Releasing \(c_{BB}\) restores the exact null; a new-physics claim requires a replicated residual outside the complete seven-coordinate likelihood.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-second-gauge-detector-needs-a-phase-reference-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-second-gauge-detector-needs-a-phase-reference-claim-3.md)
 
 <a id="hot-off-the-press-an-odd-resonance-moment-retains-the-sign"></a>
-## Hot off the press — an odd resonance moment retains the sign
+<a id="an-odd-resonance-moment-retains-the-sign"></a>
+## An odd resonance moment retains the sign
 
 > **Section status — [⌁ Experiment / protocol](../reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** The missing phase reference can be supplied by a calibrated continuum with the same quantum numbers. Near a narrow diphoton pole, write the amplitude as \(B+S/(x+i\gamma)\), where \(x=m_{\gamma\gamma}^2-m_a^2\). The above-minus-below bin difference is \(4BSx/(x^2+\gamma^2)\): the leading continuum square and signal square cancel, while the sign of the resonant residue remains.
+The missing phase reference can be supplied by a calibrated continuum with the same quantum numbers. Near a narrow diphoton pole, write the amplitude as \(B+S/(x+i\gamma)\), where \(x=m_{\gamma\gamma}^2-m_a^2\). The above-minus-below bin difference is \(4BSx/(x^2+\gamma^2)\): the leading continuum square and signal square cancel, while the sign of the resonant residue remains.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-an-odd-resonance-moment-retains-the-sign-claim-1.md)
 
 An ordinary symmetric resonance count integrates this real interference away. Weighting events by the sign of \(x\) instead gives a nonzero odd moment proportional to \(BS\), and reversing the signed source reverses the moment. Applied across the twenty-seven charged-source settings, this can connect the photon amplitude to the already signed top–bottom–weak triangle rather than treating a diphoton branching fraction as an unrelated magnitude.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-an-odd-resonance-moment-retains-the-sign-claim-2.md)
 
 The statistic is exact only in the local analytic model. A real likelihood must carry complex continuum helicities, absorptive phases, all open widths, symmetric-resolution suppression, acceptance asymmetry and background-slope leakage constrained by sidebands. The next step is therefore one declared final-state calculation and detector convolution. Passing would be a practical signed-coupling measurement; only a replicated residual outside the complete seven-coordinate model would point toward new physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-an-odd-resonance-moment-retains-the-sign-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-an-odd-resonance-moment-retains-the-sign-claim-3.md)
 
 <a id="hot-off-the-press-the-operator-does-not-choose-its-boundary"></a>
-## Hot off the press — the operator does not choose its boundary
+<a id="the-operator-does-not-choose-its-boundary"></a>
+## The operator does not choose its boundary
 
-> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
 
-**Provisional integration note — 25 October 2026.** Four new papers make one distinction unusually concrete: a bulk action or spectral operator can be held fixed while different boundary conditions, real slices or operator domains produce different physical theories. One abelian Chern--Simons carrier supports twenty-two code boundaries; a symmetry-selective flux on the fuzzy sphere turns a monodromy choice into fractional transverse spin and defect OPE data; and the Hitchin/Perelman construction explicitly leaves the physical eigenfunction domain unchosen.
+Four new papers make one distinction unusually concrete: a bulk action or spectral operator can be held fixed while different boundary conditions, real slices or operator domains produce different physical theories. One abelian Chern--Simons carrier supports twenty-two code boundaries; a symmetry-selective flux on the fuzzy sphere turns a monodromy choice into fractional transverse spin and defect OPE data; and the Hitchin/Perelman construction explicitly leaves the physical eigenfunction domain unchosen.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-operator-does-not-choose-its-boundary-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-operator-does-not-choose-its-boundary-claim-1.md)
 
 The reason is that an equation says which motions are available, while a domain says which states and motions are admitted. The lattice-fermion example adds the translation warning: exact microscopic Onsager structure can appear as a larger infrared symmetry in a different representation, but locality, compactness and gauging do not all survive unchanged. The Narain handlebody coefficient gives the positivity warning: it is zero for two pairs and negative from three onward, so an exact linear expansion need not be a positive physical ensemble.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-operator-does-not-choose-its-boundary-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-operator-does-not-choose-its-boundary-claim-2.md)
 
 This opens a finite look-here experiment rather than a universal identification. The authors promise the energies, matrix elements and fit code upon publication; until that bundle appears, the table is an audit fixture rather than an independent reproduction. Then freeze one fuzzy-sphere bulk coupling; run untwisted, pi-twisted and symmetry-breaking controls; refine the sphere size; and predict held-out fractional-spin levels and OPE coefficients without retuning the bulk. Success would improve boundary engineering and defect spectroscopy. A new-physics claim begins only if a replicated selector-specific residue survives the complete bulk, boundary, regulator and detector model. None of these papers by itself identifies its system with the corpus's Jordan, Spin(2,3), exceptional or Standard-Model candidates.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-operator-does-not-choose-its-boundary-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-operator-does-not-choose-its-boundary-claim-3.md)
 
 <a id="hot-off-the-press-the-two-rails-share-a-plane-not-a-group"></a>
-## Hot off the press — the two rails share a plane, not a group
+<a id="the-two-rails-share-a-plane-not-a-group"></a>
+## The two rails share a plane, not a group
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-**Provisional integration note — 25 October 2026.** The Monster Lie algebra's Lorentzian grading lattice \(II_{1,1}\) sits exactly inside the rank-two Jordan carrier as the diagonal matrices \(\operatorname{diag}(m,n)\). The determinant becomes \(mn\), and the Weyl exchange swaps the two primitive diagonal directions. This is a shared kinematic plane, not a Monster action on the full cone and not a map from the finite Monster group to \(\operatorname{Spin}_0(2,3)\).
+The Monster Lie algebra's Lorentzian grading lattice \(II_{1,1}\) sits exactly inside the rank-two Jordan carrier as the diagonal matrices \(\operatorname{diag}(m,n)\). The determinant becomes \(mn\), and the Weyl exchange swaps the two primitive diagonal directions. This is a shared kinematic plane, not a Monster action on the full cone and not a map from the finite Monster group to \(\operatorname{Spin}_0(2,3)\).
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-two-rails-share-a-plane-not-a-group-claim-1.md)
 
 The Rule-60 calculation makes the same boundary operational. On the eleven-dimensional image of \(T=1+\sigma\) in the cyclic Golay code, \(T^{89}=\sigma^2\), while \(T\) has order \(2047=23\cdot89\). Because 89 does not divide the Monster order, Rule 60 itself cannot be a Monster element. The genuine finite symmetry is the order-23 shift \(\sigma\); Rule 60 remains a group-algebra update with an order-89 residue the proposed symmetry does not retain.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-two-rails-share-a-plane-not-a-group-claim-2.md)
 
 The scalar \(\sigma\) bridge now closes exactly. Its fixed Leech lattice has Gram matrix \(\left(\begin{smallmatrix}4&1\\1&6\end{smallmatrix}\right)\) and determinant 23, and its normalized theta/eta trace is the common 23A/23B McKay--Thompson series. The quadratic-residue and nonresidue rails have Gaussian periods in \(\mathbb Q(\sqrt{-23})\), and reduction on the two Golay factors contracts them to the conjugate ideals \(\left(2,\alpha\right)\) and \(\left(2,\alpha+1\right)\): the finite-field-to-oriented-ideal-to-lattice-to-trace compiler is literal once a primitive root is declared. The inverse ideals have the same scalar theta series, so this record provably forgets orientation. A September 2026 preprint supplies a self-orbifold 23AB channel with 529 sectors, the \(U(23)\) discriminant form, an embedded \(P(23)\) parafermion algebra and a duality defect exchanging twist and charge. Its quarter-turn and fifth-power orientation exchange generate \(\mathrm{Dic}_{11}\), an exact order-44 instruction set on sector labels. Projectivizing removes its central sign and leaves \(D_{11}\) acting with a two-axis orbit and a 22-direction mixed orbit. The finite action embeds in \(Sp(4,23)\cong Spin(5,23)\), but finite reduction retains no real signature, cone or time orientation. Ordinary genus-one charge projection still collapses the twenty-two nonzero charges. A separate conditional construction predicts twelve defect lines governed by \(\Gamma_1(25)\); \(X_1(25)\) also has genus twelve, uniquely in the odd Monster-prime survey. The identity plus eleven inverse-paired generator orientations gives a third, differently typed twelve. No bijection among these counts has been derived. The full scalar commuting-insertion search is now also closed: \(C_{\mathbb M}(g)\cong C_{23}\times S_4\), its five insertion classes reduce to cyclic products of orders 23, 46, 46, 69 and 92, and every corresponding A/B McKay--Thompson pair is equal. The projective escape closes too: the order-24 Monster anomaly transgresses trivially along the order-23 twist, so the action is linearisable and those five class traces determine the full graded \(S_4\) module. The look-here calculation is therefore to identify the corpus cycle with an oriented generator, construct cross-grade VOA/defect composition, and sew it at genus two with the required metaplectic multiplier. A useful result would improve code, defect and modular engineering. A physical claim additionally requires the missing off-diagonal response, a dynamics and a detector record; the shared plane and chiral defect alone supply none of them.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-two-rails-share-a-plane-not-a-group-claim-3.md)
 
 The modular calculation now goes further. Fricke invariance gives the mixed branches as \(T_{23}((\tau+r)/23)\), and Fourier projection filters coefficients by \(n\equiv ab\pmod{23}\), reconstructing all 529 module characters as 25 scalar types. Volpato's inversion yields positive seeds for the twelve even-\(l\) commutant characters, and exact phase bookkeeping gives \(Z^{\mathcal N}_{23}/\sqrt{23}=q^{-1}+2+2446q+115834q^2+2446684q^3+33295322q^4+\cdots\). Fifth-power exchange preserves \(ab\), so this scalar defect trace is orientation-blind. The complete \(C_{23}\times S_4\) insertion census now rules out every additional scalar one-insertion trace. The look-here calculation must instead retain a vector-valued/projective \(S_4\) action, a relation among several insertions, or sew at genus two; another scalar trace cannot name 23A versus 23B.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-4.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-two-rails-share-a-plane-not-a-group-claim-4.md)
 
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
-## Hot off the press — the hydrodynamic cone has poles
+<a id="the-hydrodynamic-cone-has-poles"></a>
+## The hydrodynamic cone has poles
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** The hydrodynamic rank witness now has a full effective response rather than three positive shapes. The tensor term is local at first derivative order, the shear channel has a diffusive pole, and the sound channel has two attenuated propagating poles. At the declared point every pole is retarded, every residue is nonzero and the assembled two-port spectral matrix is positive definite.
+The hydrodynamic rank witness now has a full effective response rather than three positive shapes. The tensor term is local at first derivative order, the shear channel has a diffusive pole, and the sound channel has two attenuated propagating poles. At the declared point every pole is retarded, every residue is nonzero and the assembled two-port spectral matrix is positive definite.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-hydrodynamic-cone-has-poles-claim-1.md)
 
 A common-temperature KMS multiplier produces the noise matrix without changing rank. An invertible port change acts by congruence and preserves rank, while a real analytic contact changes the dispersive part without changing the spectral matrix. The extra direction is therefore not created by port names or an ordinary real contact term, and Ward/KMS structure does not force the effective cone onto one ray.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-hydrodynamic-cone-has-poles-claim-2.md)
 
 The remaining word is effective. Port congruence is not a hydrodynamic frame transformation: the latter must be performed inside one source-generating functional and leave source derivatives, poles and residues invariant. Microscopic or measured matching is also absent. The look-here calculation is now precise—derive that functional, change frame explicitly and ask which response directions survive before making any symmetry or new-physics claim.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-hydrodynamic-cone-has-poles-claim-3.md)
 
 That first frame test now closes at Gaussian order. Put shear and sound inside one quadratic source functional and mix the two internal fields by a nontrivial invertible matrix, transforming both their inverse kernel and their source coupling. The complete source Hessian agrees at four complex frequencies to better than one part in ten trillion; its pole set and residues are therefore unchanged. Internal coordinate names cannot create the channel. Derivative-dependent Ward-complete frame changes and microscopic matching remain the exact boundary.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-4.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-hydrodynamic-cone-has-poles-claim-4.md)
 
 The first local derivative test now closes too. A triangular determinant-one change of the internal fields includes both a time derivative and a spatial Laplacian, has a finite polynomial inverse and acts with opposite momentum on the two legs of the source bilinear. Transforming both couplings and the kernel leaves the full Gaussian response unchanged across five frequency samples to within one part in one hundred trillion. Physical poles, residues, the spectral matrix and its common-temperature KMS image survive. The open boundary is no longer generic derivative-coordinate choice; it is the nonlinear Ward-complete Schwinger–Keldysh improvement and contact structure plus microscopic matching.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-5.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-hydrodynamic-cone-has-poles-claim-5.md)
 
 The thermal doubling test now closes at the same Gaussian order. Retarded response, advanced response and equilibrium noise are placed in one Schwinger–Keldysh kernel, and the local derivative frame is applied to both doubled fields and their source couplings. The noise remains positive, fluctuation–dissipation remains exact to numerical precision and the complete doubled source record is unchanged. This is good news with a sharp limit: equilibrium fluctuations do not erase the multichannel direction, but the next claim must survive nonlinear dynamical KMS, stress Ward identities, entropy and validity control, improvement/contact classification and microscopic or measured matching.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-6.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-hydrodynamic-cone-has-poles-claim-6.md)
 
 The first nonlinear audit identifies what that next claim must carry. A unit-volume nonlinear change of two equilibrium variables turns constant noise into state-dependent noise and induces an additional drift. Carrying both effects preserves zero equilibrium current; changing only the deterministic equation manufactures a false irreversible current. The hydrodynamic implication is concrete: nonlinear response fields, noise, measure terms and stochastic prescription must transform together. This finite-dimensional result is a guardrail, not yet the derivative-ordered stress-Ward-complete fluid action.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-7.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-hydrodynamic-cone-has-poles-claim-7.md)
 
 Causality supplies a further boundary. The inherited diffusion and wave-damping laws are long-wavelength expansions and have no global finite-speed interpretation. Adding one relaxing shear flux and one relaxing viscous stress produces a stable subluminal parameter wedge and recovers the original poles at low momentum. This shows that the response can live inside a causal completion; it does not tell us which completion nature uses. The physical relaxation spectrum, noise normalization and microscopic carrier must still be derived or measured.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-8.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-hydrodynamic-cone-has-poles-claim-8.md)
 
 Conditionally, those relaxation variables admit positive stationary Gaussian fluctuations. Noise acts only on the relaxing flux and stress, while conservation carries their fluctuations into the observed hydrodynamic variables. The resulting covariance is positive, satisfies fluctuation–dissipation and passes an explicit Onsager–Casimir parity audit throughout the causal momentum scan. The evidence ladder is now effective infrared poles → causal auxiliary completion → positive stationary Gaussian FDT and reciprocity. Exact quantum-frequency and nonlinear dynamical KMS, the stress Ward and contact structure, physical noise normalization and source-native relaxation data remain open.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-9.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-hydrodynamic-cone-has-poles-claim-9.md)
 
 <a id="hot-off-the-press-the-screened-field-is-not-the-whole-carrier"></a>
-## Hot off the press — the screened field is not the whole carrier
+<a id="the-screened-field-is-not-the-whole-carrier"></a>
+## The screened field is not the whole carrier
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
 
-**Provisional integration note — 25 October 2026.** The long-range energy-current problem has a conventional local completion when matter and finite-speed electromagnetic fields are retained together. Matter gains the work density \(\mathbf j\cdot\mathbf E\); field energy loses the same amount through Poynting continuity. Their sum therefore has a local finite-\(q\) current without assigning every Coulomb bond to one endpoint. A finite Fourier certificate closes this identity and its ordinary potential-gauge invariance.
+The long-range energy-current problem has a conventional local completion when matter and finite-speed electromagnetic fields are retained together. Matter gains the work density \(\mathbf j\cdot\mathbf E\); field energy loses the same amount through Poynting continuity. Their sum therefore has a local finite-\(q\) current without assigning every Coulomb bond to one endpoint. A finite Fourier certificate closes this identity and its ordinary potential-gauge invariance.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-screened-field-is-not-the-whole-carrier-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-screened-field-is-not-the-whole-carrier-claim-1.md)
 
 That does not make every microscopic energy current identical. Moving a bounded divergence between local energy densities changes the current by a total time derivative. It leaves regular dc Green--Kubo transport unchanged, but it can change finite-frequency records; singular infrared polarization is exactly where the regularity premise may fail. ‘Gauge’ therefore names a controlled equivalence, not permission to ignore the order of limits.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-screened-field-is-not-the-whole-carrier-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-screened-field-is-not-the-whole-carrier-claim-2.md)
 
 Screening reveals the missing thing. In the minimal local scalar completion of a static kernel \(1/(q^2+\kappa^2)\), the electric-gradient share of mode energy is \(q^2/(q^2+\kappa^2)\), while the non-gradient screening sector holds \(\kappa^2/(q^2+\kappa^2)\). At \(q\ll\kappa\), adding Maxwell \(E^2\) alone omits almost all the energy in that completion. A physical model must identify the sector represented by the \(\kappa\) term and give it dynamics, energy and flux; the fractions are not asserted for every microscopic screening theory. The look-here calculation is now concrete: build matched finite-speed and explicit-screening completions of the projected lattice model, integrate them out to recover the same Ewald kernel, and compare total KMS transport under one order of size, wavevector, screening, frequency and light-speed limits. Agreement gives a robust engineered heat-current definition; disagreement before matching diagnoses a missing carrier, not new physics.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-screened-field-is-not-the-whole-carrier-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-screened-field-is-not-the-whole-carrier-claim-3.md)
 
 <a id="hot-off-the-press-capture-does-not-need-a-sink"></a>
-## Hot off the press — capture does not need a sink
+<a id="capture-does-not-need-a-sink"></a>
+## Capture does not need a sink
 
 > **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-**Provisional integration note — 25 October 2026.** The spectral-flow bath can now be replaced by a recognizable acoustic carrier. A harmonic rail fixes the phonon band and dispersion; a local bond-strain transition fixes the relative mode weights and automatically removes the translational zero mode. With a declared transition matrix element, complete unitary evolution transfers 0.99662 of the population to bound matter plus phonons before recurrence while conserving norm and total energy within five parts in one hundred billion.
+The spectral-flow bath can now be replaced by a recognizable acoustic carrier. A harmonic rail fixes the phonon band and dispersion; a local bond-strain transition fixes the relative mode weights and automatically removes the translational zero mode. With a declared transition matrix element, complete unitary evolution transfers 0.99662 of the population to bound matter plus phonons before recurrence while conserving norm and total energy within five parts in one hundred billion.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-1.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-capture-does-not-need-a-sink-claim-1.md)
 
 The phase ledger matters as much as the population. Backward evolution of the complete final state reconstructs the initial excited state, showing that the apparent capture is coherent redistribution, not a concealed absorber. The finite-temperature upward/downward factors also reproduce the exact Boltzmann ratio. A source-shaped unitary environment can therefore produce a long capture window without a Markov sink or a freely drawn spectral envelope.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-2.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-capture-does-not-need-a-sink-claim-2.md)
 
 The graph part of the missing source has now been computed and correctly normalized. The lower AZ-055 pole, an incoming energy-space packet, all eight complex bond-modulation overlaps and a finite acoustic rail evolve under one Hermitian Hamiltonian. For the declared common bond derivative \(D=0.2\), the 96-bin/240-site calculation gives a capture probability of \(1.0892761\times10^{-3}\) and a conditional emitted-phonon energy of 1.2182162; the preceding refinement changes the probability by only 0.258%. Norm, energy and backward phase recovery close below \(1.4\times10^{-9}\). The modest sub-percent result is more informative than the earlier strong two-level benchmark because continuum normalization is no longer being mistaken for a discrete coefficient. The look-here calculation has now narrowed to a named material or engineered device: measure bond-resolved \(dt/du\), masses and springs, then test thermal and multiphonon convergence. Success could improve phonon-assisted state preparation and boundary capture engineering; failure would locate the missing disposal channel precisely.
 
-> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-3.md)
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-capture-does-not-need-a-sink-claim-3.md)
 
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
@@ -1239,4 +1293,4 @@ AI can map dispersed results, optimize separating interventions and maintain the
 
 ---
 
-[← Front matter](00-front-matter.md) · [Contents](../README.md) · [The revised spine →](01-the-revised-spine.md)
+[← Front matter](00-front-matter.md) · [Contents](../README.md) · [The Jordan–Lie hinge →](01-the-revised-spine.md)

@@ -76,7 +76,7 @@ The resulting three bilinears form an SO(2,1) cone, while the four-real amplitud
 <a id="where-the-exceptional-programme-actually-stands"></a>
 ## Where the exceptional programme actually stands
 
-> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research move — [⌖ Cartographer](../reading-key/move-cartographer.md)** — maps territory, distinctions, dependencies and interfaces.
 

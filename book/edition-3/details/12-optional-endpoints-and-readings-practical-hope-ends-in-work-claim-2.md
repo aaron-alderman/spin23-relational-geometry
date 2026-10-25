@@ -2,7 +2,7 @@
 
 _Expanded claim page · Optional endpoints and larger readings_
 
-> **Claim status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Claim status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research function — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 

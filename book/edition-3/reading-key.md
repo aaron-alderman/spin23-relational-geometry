@@ -8,7 +8,7 @@ The two badge families answer different questions. A **status** asks how far a c
 
 - **[✓ Established](reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
 - **[◇ Conditional](reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
-- **[↗ Externally open](reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+- **[↗ Externally open](reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 - **[■ Internally exhausted](reading-key/status-exhausted.md)** — Rearranging the present ingredients no longer addresses the missing datum.
 - **[⊘ Obstruction / no-go](reading-key/status-obstruction.md)** — A stated candidate class or identification has been ruled out under explicit assumptions.
 - **[⌁ Experiment / protocol](reading-key/status-experiment.md)** — Defines a measurement, sensitivity calculation or empirical decision rule.

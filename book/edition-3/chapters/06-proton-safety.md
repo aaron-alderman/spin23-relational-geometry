@@ -61,7 +61,7 @@ A quotient here is like identifying clock readings that differ by a full turn: t
 <a id="the-current-action-and-its-limits"></a>
 ## The current action and its limits
 
-> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 

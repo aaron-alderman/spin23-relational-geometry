@@ -1,6 +1,6 @@
 # What closes — assertion 1
 
-_Expanded claim page · The revised spine_
+_Expanded claim page · The Jordan–Lie hinge_
 
 > **Claim status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
 
@@ -8,7 +8,7 @@ _Expanded claim page · The revised spine_
 
 ## Exact assertion
 
-> The programme no longer reaches Spin(2,3) only from a top-down list of low-rank coincidences. Positive two-face response data supplies H₂(ℝ); Schur elimination becomes a Jordan-triple operation; Tits–Kantor–Koecher prolongation supplies the graded generators; and the resulting ten-dimensional real Lie algebra is 𝔰𝔭(4,ℝ).
+> The route to Spin(2,3) begins with positive two-face response data rather than a top-down list of low-rank coincidences. Positive two-face response data supplies H₂(ℝ); Schur elimination becomes a Jordan-triple operation; Tits–Kantor–Koecher prolongation supplies the graded generators; and the resulting ten-dimensional real Lie algebra is 𝔰𝔭(4,ℝ).
 
 ## What this commits us to
 
@@ -16,7 +16,7 @@ The stated conclusion follows inside the declared model. Reusing it elsewhere re
 
 ## Logical anatomy
 
-- **Scope:** chapter “The revised spine”, section “What closes”.
+- **Scope:** chapter “The Jordan–Lie hinge”, section “What closes”.
 - **Unit of argument:** assertion 1 of 2 in this section.
 - **Evidence posture:** Audit the declared carrier, assumptions and certificate. The result is exact only within that written scope.
 - **Research move:** joins several typed results while letting the weakest edge set the claim.

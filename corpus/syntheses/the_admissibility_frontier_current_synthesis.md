@@ -13,11 +13,9 @@ _New physics by preserving distinctions, not only by increasing energy_
 
 The pathway to new physics may not begin at a higher energy. It may begin with more finesse.
 
-That is the narrative reversal this corpus has earned. Present experiments do not observe reality without loss: they average over phase, boundary order, delay, orientation, memory, metastable history and correlations between channels. If the effect that separates two mechanisms lives in one of those discarded distinctions, increasing energy can leave it invisible. A better experiment is then not merely a stronger source. It is an apparatus, protocol and analysis chain that preserves the distinction long enough for it to become a record.
+Present experiments do not observe reality without loss: they average over phase, boundary order, delay, orientation, memory, metastable history and correlations between channels. If the effect that separates two mechanisms lives in one of those discarded distinctions, increasing energy can leave it invisible. A better experiment is then not merely a stronger source. It is an apparatus, protocol and analysis chain that preserves the distinction long enough for it to become a record.
 
-The corpus began from the opposite direction. It searched for a sufficiently rich Lie symmetry, treated that symmetry as the likely container of the physics and tried to descend toward observed structure. That programme found many exact and suggestive relations, but it repeatedly failed at the same places: a symmetry orbit did not select a realized state; a generator algebra did not supply positivity; a representation did not identify an observable; and formal closure did not say which distinctions an experiment could retain.
-
-The failure was diagnostic. The missing beginning was **admissibility**: before asking how a state transforms, ask what may coexist, compose, remain positive, persist through time and reach a detector together. This makes the central object neither a group nor a static cone but the changing boundary between what a physical arrangement admits and what its dynamics or measurement erases.
+A Lie symmetry can describe how admitted objects transform, but it cannot by itself supply the positive state space, select one realized member of an orbit, identify an observable or determine which distinctions an experiment retains. Those are different jobs. The necessary beginning is therefore **admissibility**: before asking how a state transforms, ask what may coexist, compose, remain positive, persist through time and reach a detector together. The central object is neither a group nor a static cone but the changing boundary between what a physical arrangement admits and what its dynamics or measurement erases.
 
 \[
 \boxed{\text{possible distinctions}}
@@ -31,7 +29,7 @@ The failure was diagnostic. The missing beginning was **admissibility**: before 
 \boxed{\text{a revised admissible region}}.
 \]
 
-This loop, rather than a symmetry name, is the new spine of the programme.
+This loop, rather than a symmetry name, is the spine of the programme.
 
 ## Why Jordan and Lie must be balanced
 
@@ -45,7 +43,7 @@ The algebraic correction follows from the experimental one. Jordan structure ask
 \boxed{\text{Lie: transformation and transport}}.
 \]
 
-The initial Lie-only view was not wrong because symmetry is unimportant. It was wrong because it asked transformation to provide its own state space, selector, observable and detector. The repair is not a Jordan-only view. A Jordan cone without time, transport or records is just as incomplete. The physical question lives in their balance: **what dynamics can inhabit an admitted domain without destroying the very distinctions by which that dynamics could be known?**
+A Lie-only view is incomplete because it asks transformation to provide its own state space, selector, observable and detector. A Jordan-only view is also incomplete: a cone without time, transport or records is stable but sterile. The physical question lives in their balance: **what dynamics can inhabit an admitted domain without destroying the very distinctions by which that dynamics could be known?**
 
 On one declared rank-two response carrier, this balance has an exact mathematical hinge:
 
@@ -59,13 +57,13 @@ H_2(\mathbb R)_+
 Sp(4,\mathbb R)\cong Spin_0(2,3).
 \]
 
-This reverses the status of \(Spin_0(2,3)\). It is no longer the hero from which reality is supposed to descend. It is a recovered symmetry of an already admitted positive-response geometry—a valuable pole and exact completion, but not the prior container of physics.
+In this ordering, \(Spin_0(2,3)\) is not the source from which reality is supposed to descend. It is a recovered symmetry of an already admitted positive-response geometry—a valuable pole and exact completion, but not the prior container of physics.
 
 The explanatory order is therefore **Jordan admission and composition → typed admissibility region → Lie transformation and transport → dynamics, selection and records**. Spin(2,3) is not the starting claim; it is one exact completion recovered after the carrier, positivity and compositional structure have been declared.
 
 ## Dynamics is the motion of the boundary
 
-In the revised story, dynamics is not appended after a static classification. Dynamics continually changes which distinctions remain admissible. A bound state, resonance, Bloch-like boundary mode and free continuum state are not simply four nouns; they are regions connected by pole motion, spectral flow, capture, decay and memory. Casimir response, thermoelectric transport, hysteresis, metastability and scattering delay are useful because each reads a different part of that changing boundary.
+Dynamics is not appended after a static classification. It continually changes which distinctions remain admissible. A bound state, resonance, Bloch-like boundary mode and free continuum state are not simply four nouns; they are regions connected by pole motion, spectral flow, capture, decay and memory. Casimir response, thermoelectric transport, hysteresis, metastability and scattering delay are useful because each reads a different part of that changing boundary.
 
 A proposed action, flow or update still matters. But its physical content is now tested by asking:
 
@@ -80,7 +78,7 @@ This is how apparently static structure becomes dynamics. The “bound” object
 
 ## The third term is the mediator
 
-The balanced view also explains why the corpus repeatedly reaches ternary structure. Binary language says that \(x\) acts on \(z\). A triple product asks how \(x\) and \(z\) are related through a middle term \(y\):
+The balanced view also explains why ternary structure recurs. Binary language says that \(x\) acts on \(z\). A triple product asks how \(x\) and \(z\) are related through a middle term \(y\):
 
 \[
 \{x,y,z\}.
@@ -94,19 +92,21 @@ The phrase nevertheless points toward the programme's most practical question: *
 
 ## What has been found
 
+Every result below reports two statuses separately: **mathematical closure** asks whether the stated map or calculation is complete on its declared carrier, while **physical realization** asks whether nature supplies that carrier, mechanism, scale and detector record. Closed mathematics with open physical identification is a legitimate and common outcome.
+
 ### 1. An exact response-to-symmetry hinge
 
-Positive two-channel response supplies the cone \(H_2(\mathbb R)_+\). Schur/Feshbach elimination polarizes into its Jordan triple. Tits–Kantor–Koecher closure supplies \(\mathfrak{sp}(4,\mathbb R)\), and the global construction reaches \(Spin_0(2,3)\). The corpus has executable certificates for the finite-dimensional hinge and repeatedly tests when a proposed carrier reaches the full ten generators rather than a suggestive lower-rank subalgebra.
+Positive two-channel response supplies the cone \(H_2(\mathbb R)_+\). Schur/Feshbach elimination polarizes into its Jordan triple. Tits–Kantor–Koecher closure supplies \(\mathfrak{sp}(4,\mathbb R)\), and the global construction reaches \(Spin_0(2,3)\). Executable certificates establish the finite-dimensional hinge and test whether a proposed carrier reaches the full ten generators rather than a suggestive lower-rank subalgebra.
 
 ### 2. Selection is not an afterthought
 
-The corpus repeatedly finds that symmetry supplies families of possibilities more readily than it supplies the realized member. Projector-only feedback preserves every orientation; it cannot choose one. Holonomy can change spectra and transport frames, but a physical selector still needs a second datum: boundary, anisotropy, environment, measurement record, preparation history or another independently sourced relation.
+Across the tested cases, symmetry supplies families of possibilities more readily than it supplies the realized member. Projector-only feedback preserves every orientation; it cannot choose one. Holonomy can change spectra and transport frames, but a physical selector still needs a second datum: boundary, anisotropy, environment, measurement record, preparation history or another independently sourced relation.
 
 This is not a defeat of spontaneous symmetry breaking. It makes explicit what finite, dynamical and experimentally readable symmetry breaking must contain.
 
 ### 3. Dynamics has acquired a typed home
 
-Linear flow, antiunitary sheet change, dissipative attraction, measurement-conditioned update, thermodynamic cost and metastable memory are no longer allowed to masquerade as one operation. The corpus separates them and asks what each preserves, what record it leaves and which detector can distinguish it. Exact return maps, contraction bounds, process tomography and no-go results now sit beside the more traditional action programme.
+Linear flow, antiunitary sheet change, dissipative attraction, measurement-conditioned update, thermodynamic cost and metastable memory are distinct operations. Each must state what it preserves, what record it leaves and which detector can distinguish it. Exact return maps, contraction bounds, process tomography and no-go results sit beside the more traditional action programme.
 
 ### 4. The mathematical bridges have been tested rather than merely admired
 
@@ -118,9 +118,9 @@ The strongest potentially original mathematical cluster is the combined Furey te
 
 The same mathematical objects occur, with properly bounded meanings, in projector quantum geometry, non-Abelian holonomy, open-system selection, Floquet and non-Hermitian dynamics, generalized symmetries, defects, response theory, thermal and anomalous Hall transport, Seebeck/Nernst effects, Casimir/Lifshitz forces, metastability, scattering bounds and consistency-first physics.
 
-The corpus therefore provides a “look here” guide. It does not say that these fields prove the programme. It shows where a shared object is exact, where only a mechanism is shared, where the relationship is analogical, and which measurement could promote or kill the bridge.
+The resulting “look here” guide does not say that these fields prove the programme. It shows where a shared object is exact, where only a mechanism is shared, where the relationship is analogical, and which measurement could promote or kill the bridge.
 
-### 6. The frontier is now instrumented
+### 6. The frontier is instrumented
 
 The practical atlas contains:
 
@@ -332,7 +332,7 @@ Serre and nondegenerate symplectic-form tests.
 
 The result is not merely a new ordering of mathematical language. It changes where and how to look.
 
-The twentieth-century frontier was repeatedly opened by increasing energy, lowering temperature, enlarging baselines or improving precision. Those routes remain indispensable. This corpus identifies a complementary frontier: increase the **fidelity with which an experiment preserves relational information**. Measure not only an endpoint but its phase and delay; not only bulk response but boundary order; not only a mean but cross-channel correlation; not only a final state but preparation history and hysteresis; not only one carrier but the same dimensionless law on a second carrier.
+The twentieth-century frontier was repeatedly opened by increasing energy, lowering temperature, enlarging baselines or improving precision. Those routes remain indispensable. A complementary frontier is to increase the **fidelity with which an experiment preserves relational information**. Measure not only an endpoint but its phase and delay; not only bulk response but boundary order; not only a mean but cross-channel correlation; not only a final state but preparation history and hysteresis; not only one carrier but the same dimensionless law on a second carrier.
 
 That is what “more finesse” means here. It is not a euphemism for generic sensitivity. It is targeted recovery of a distinction that the competing mechanisms treat differently and the ordinary measurement quotients away.
 
@@ -554,12 +554,12 @@ an additional commuting insertion or genus-two sewing, not the acquisition of
 
 ## Kenotic confidence
 
-The corpus uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.
+This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.
 
 It permits us to say, positively:
 
 - the mathematical hinge is exact;
-- the cross-corpus coherence is real;
+- the cross-domain coherence is real;
 - the no-go results are discoveries about the shape of the problem;
 - the admissibility atlas is already practically useful;
 - several experiments and calculations are genuinely within reach; and
@@ -577,7 +577,7 @@ This is positive valence without domination. The invitation is to inspect, repro
 
 ## Usewords, Claimipedia and Worldwright
 
-The corpus also preserves a distinction that matters for discovery. A person's originating words can carry a real orientation toward a problem before the formal bridge exists. In the **usewords** posture, those words are not scrubbed away as embarrassment and are not promoted as proof. They are retained with attribution as search coordinates: possible distinctions, proposed relations and questions whose mathematical and empirical consequences can be tested.
+A person's originating words can carry a real orientation toward a problem before the formal bridge exists. In the **usewords** posture, those words are not scrubbed away as embarrassment and are not promoted as proof. They are retained with attribution as search coordinates: possible distinctions, proposed relations and questions whose mathematical and empirical consequences can be tested.
 
 Claimipedia supplies the public discipline around that originating language. It asks a synthesis to separate argument, evidence, analogy, speculation and confession; to integrate later corrections rather than burying them in chronology; and to make the authority of the page proportional to its reasons. This allows an idea to remain alive without allowing narrative force to substitute for warrant.
 
@@ -623,7 +623,7 @@ Choose the entrance that matches the work you want to do:
 
 ## Come join
 
-This corpus is built to be entered at a boundary, not accepted as a package.
+The work is built to be entered at a boundary, not accepted as a package.
 
 You can contribute by:
 
@@ -635,11 +635,11 @@ You can contribute by:
 - improving a detector or nuisance model;
 - translating an open topic into a fabrication, analysis or likelihood plan;
 - reproducing a no-go result independently;
-- or showing that a proposed bridge fails earlier than the corpus currently believes.
+- or showing that a proposed bridge fails earlier than its present boundary states.
 
 The standard is simple: preserve the alternatives, declare the types, expose the strongest objection, state what would change the verdict and let the evidence carry only the authority it has earned.
 
-The corpus does not ask a reader to be overwhelmed by its size. It asks them to find one live edge and make it clearer.
+The invitation is not to absorb the whole archive. It is to find one live edge and make it clearer.
 
 ## Optional final arcs
 

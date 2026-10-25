@@ -9,7 +9,7 @@ _Practical hope first; speculation, myth and theology afterwards_
 <a id="practical-hope-ends-in-work"></a>
 ## Practical hope ends in work
 
-> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 

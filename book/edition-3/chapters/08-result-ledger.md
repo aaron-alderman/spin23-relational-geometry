@@ -198,7 +198,7 @@ The local H₂(ℝ)/TKK result strengthens the route into Spin(2,3), but does no
 <a id="E3-F12"></a>
 ## E3-F12 · Mathematical closure is not physical closure
 
-> **Ledger reading — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Ledger reading — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research move — [✦ Scout](../reading-key/move-scout.md)** — opens a plausible new route or searches beyond the present ingredients.
 

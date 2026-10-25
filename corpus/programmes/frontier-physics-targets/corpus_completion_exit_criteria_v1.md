@@ -23,7 +23,7 @@ Completion never means that nature or mathematics has no unknown structure. It m
 | EXIT-04 · Theory and mathematics closure | Every bridge is type-, unit-, map-, invariant-, limit-, counterexample- and equivalence-audited, with its physical non-implications explicit. | Passed |
 | EXIT-05 · Literature-frontier saturation | Every major branch has a dated reproducible search receipt and a bounded residual novelty statement. | Passed |
 | EXIT-06 · Claim implication and defeat closure | Every authoritative claim has upstream assumptions, downstream consequences, defeat conditions and machine-auditable status propagation. | Passed |
-| EXIT-07 · Standalone narrative closure | Every authoritative route tells the Jordan–Lie middle through things, reasons, alternatives, pictures, status and implications while keeping optional readings typed. | Open |
+| EXIT-07 · Standalone narrative closure | Every authoritative route tells the Jordan–Lie middle through things, reasons, alternatives, pictures, status and implications while keeping optional readings typed. | Passed |
 | EXIT-08 · Documentation, linking and retrieval closure | Authority, links, hashes, generated surfaces, duplication, contradiction, centrality bias and stratified held-out retrieval all pass. | Open |
 | EXIT-09 · Adversarial reproducible release | One clean frozen checkout regenerates, verifies, survives red-team sampling and emits one identity-consistent dated release certificate. | Open |
 
@@ -70,13 +70,15 @@ The first item is now instantiated at two resolutions. The [physics–mathematic
 
 The [claim implication and defeat graph](claim_implication_defeat_graph_v1.md) now covers all 1,573 canonical numbered claims. It binds exact-form witnesses and direct boundary prose to source coordinates, retains typed theory-bridge assumptions as inherited context rather than silently promoting them to claim premises, and records 795 observed `Depends on` edges. Defeat or revision propagates only by placing direct explicit consumers under review; ordinary links, shared topics, lexical similarity and PageRank paths carry no scientific status. EXIT-06 therefore passes under this deliberately non-promotional graph protocol.
 
+The [standalone narrative audit](standalone_narrative_audit_v1.md) verifies the scientific synthesis, Edition 3 book and orientation/explanatory route against one common reading test. All three begin from things and experimental loss before technical names, preserve the Jordan–typed-middle–Lie division of labour, explain reasons and nearest alternatives, separate mathematical closure from physical realization, place implications beside non-implications, bring hope down to bounded work and put optional mythic or theological readings last. The former “hot off the press” material is integrated into the book's subject order; provenance dates remain in controlling sources rather than steering the narrative. EXIT-07 passes.
+
 The immediate programme is therefore:
 
 1. disposition the 518 normalized topic-level adjacency candidates, then expand and deduplicate at claim-family and object level;
 2. preserve the now-passed terminal-neighbourhood matrix and automatically review any new closed or blocked topic;
 3. preserve the now-passed experiment programme contract and execute programmes only when their external build gates are met;
 4. preserve the now-passed theory, literature and implication/defeat audits;
-5. close the standalone narrative gate, then integrate authority, links, contradiction checks, PageRank-bias checks and held-out retrieval into one release gate;
+5. preserve the standalone narrative gate and integrate authority, links, contradiction checks, PageRank-bias checks and held-out retrieval into one release gate;
 6. run an adversarial clean-checkout release and issue the dated saturation certificate only when all nine gates pass.
 
 Until then, the honest status is:

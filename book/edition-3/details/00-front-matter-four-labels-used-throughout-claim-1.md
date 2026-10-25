@@ -8,7 +8,7 @@ _Expanded claim page · Front matter_
 
 ## Exact assertion
 
-> Established means that a calculation follows from its written assumptions and has an executable or inspectable certificate. Conditional means that a construction works after a named field, coefficient, boundary condition or control is supplied. Externally open means that the missing ingredient is not contained in the current corpus. Internally exhausted means that further rearrangement of the same ingredients no longer addresses the missing datum.
+> Established means that a calculation follows from its written assumptions and has an executable or inspectable certificate. Conditional means that a construction works after a named field, coefficient, boundary condition or control is supplied. Externally open means that the missing ingredient is not yet supplied by the declared model or evidence. Internally exhausted means that further rearrangement of the same ingredients no longer addresses the missing datum.
 
 ## What this commits us to
 

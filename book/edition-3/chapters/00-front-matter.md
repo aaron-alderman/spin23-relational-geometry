@@ -17,7 +17,7 @@ The first four marks report the epistemic state of a claim or gate. The next fou
 |---|---|---|
 | **[✓ Established](../reading-key/status-established.md)** | Follows from declared assumptions and has an inspectable certificate. | Core epistemic state |
 | **[◇ Conditional](../reading-key/status-conditional.md)** | Works after a named field, coefficient, boundary condition or control is supplied. | Core epistemic state |
-| **[↗ Externally open](../reading-key/status-external.md)** | Needs an ingredient, calculation or observation not contained in the current corpus. | Core epistemic state |
+| **[↗ Externally open](../reading-key/status-external.md)** | Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence. | Core epistemic state |
 | **[■ Internally exhausted](../reading-key/status-exhausted.md)** | Rearranging the present ingredients no longer addresses the missing datum. | Core epistemic state |
 | **[⊘ Obstruction / no-go](../reading-key/status-obstruction.md)** | A stated candidate class or identification has been ruled out under explicit assumptions. | Companion content marker |
 | **[⌁ Experiment / protocol](../reading-key/status-experiment.md)** | Defines a measurement, sensitivity calculation or empirical decision rule. | Companion content marker |
@@ -87,7 +87,7 @@ Each chapter therefore moves in the same order: ordinary picture, defined object
 
 > **Research move — [▤ Steward](../reading-key/move-steward.md)** — preserves provenance, memory, status and continuity.
 
-Established means that a calculation follows from its written assumptions and has an executable or inspectable certificate. Conditional means that a construction works after a named field, coefficient, boundary condition or control is supplied. Externally open means that the missing ingredient is not contained in the current corpus. Internally exhausted means that further rearrangement of the same ingredients no longer addresses the missing datum.
+Established means that a calculation follows from its written assumptions and has an executable or inspectable certificate. Conditional means that a construction works after a named field, coefficient, boundary condition or control is supplied. Externally open means that the missing ingredient is not yet supplied by the declared model or evidence. Internally exhausted means that further rearrangement of the same ingredients no longer addresses the missing datum.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/00-front-matter-four-labels-used-throughout-claim-1.md)
 

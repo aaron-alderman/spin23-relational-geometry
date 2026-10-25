@@ -1,6 +1,6 @@
 # Why ten generators are a real gate — assertion 1
 
-_Expanded claim page · The revised spine_
+_Expanded claim page · The Jordan–Lie hinge_
 
 > **Claim status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
 
@@ -8,7 +8,7 @@ _Expanded claim page · The revised spine_
 
 ## Exact assertion
 
-> Four real coordinates do not automatically imply 𝔰𝔭(4,ℝ). A pair of ordinary oscillators can explore only a three-generator squeezing/rotation subalgebra. Reaching ten requires independently available anisotropies and shears. The corpus therefore treats generator rank as a kill test: if commutators close at three, the model is a lower-rank control, not hidden full Spin(2,3).
+> Four real coordinates do not automatically imply 𝔰𝔭(4,ℝ). A pair of ordinary oscillators can explore only a three-generator squeezing/rotation subalgebra. Reaching ten requires independently available anisotropies and shears. Generator rank is therefore a kill test: if commutators close at three, the model is a lower-rank control, not hidden full Spin(2,3).
 
 ## What this commits us to
 
@@ -16,7 +16,7 @@ The stated conclusion follows inside the declared model. Reusing it elsewhere re
 
 ## Logical anatomy
 
-- **Scope:** chapter “The revised spine”, section “Why ten generators are a real gate”.
+- **Scope:** chapter “The Jordan–Lie hinge”, section “Why ten generators are a real gate”.
 - **Unit of argument:** assertion 1 of 1 in this section.
 - **Evidence posture:** Audit the declared carrier, assumptions and certificate. The result is exact only within that written scope.
 - **Research move:** checks assumptions, certificates, counterexamples and stopping rules.

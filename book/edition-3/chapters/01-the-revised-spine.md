@@ -1,6 +1,6 @@
-# The revised spine
+# The Jordan–Lie hinge
 
-_One exact Jordan-to-Lie completion_
+_One exact response-to-symmetry completion_
 
 > **Chapter status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
 
@@ -18,7 +18,7 @@ _The exact mathematical spine and the physical firewall._
 
 > **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
 
-The programme no longer reaches Spin(2,3) only from a top-down list of low-rank coincidences. Positive two-face response data supplies H₂(ℝ); Schur elimination becomes a Jordan-triple operation; Tits–Kantor–Koecher prolongation supplies the graded generators; and the resulting ten-dimensional real Lie algebra is 𝔰𝔭(4,ℝ).
+The route to Spin(2,3) begins with positive two-face response data rather than a top-down list of low-rank coincidences. Positive two-face response data supplies H₂(ℝ); Schur elimination becomes a Jordan-triple operation; Tits–Kantor–Koecher prolongation supplies the graded generators; and the resulting ten-dimensional real Lie algebra is 𝔰𝔭(4,ℝ).
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/01-the-revised-spine-what-closes-claim-1.md)
 
@@ -29,7 +29,7 @@ The global low-rank isomorphism then identifies Sp(4,ℝ) with Spin₀(2,3). Thi
 <a id="what-remains-open"></a>
 ## What remains open
 
-> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research move — [✦ Scout](../reading-key/move-scout.md)** — opens a plausible new route or searches beyond the present ingredients.
 
@@ -74,14 +74,14 @@ For the declared carrier, the closure is ten-dimensional 𝔰𝔭(4,ℝ). This a
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-Four real coordinates do not automatically imply 𝔰𝔭(4,ℝ). A pair of ordinary oscillators can explore only a three-generator squeezing/rotation subalgebra. Reaching ten requires independently available anisotropies and shears. The corpus therefore treats generator rank as a kill test: if commutators close at three, the model is a lower-rank control, not hidden full Spin(2,3).
+Four real coordinates do not automatically imply 𝔰𝔭(4,ℝ). A pair of ordinary oscillators can explore only a three-generator squeezing/rotation subalgebra. Reaching ten requires independently available anisotropies and shears. Generator rank is therefore a kill test: if commutators close at three, the model is a lower-rank control, not hidden full Spin(2,3).
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/01-the-revised-spine-why-ten-generators-are-a-real-gate-claim-1.md)
 
 <a id="algebra-is-not-yet-spacetime"></a>
 ## Algebra is not yet spacetime
 
-> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Section status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 

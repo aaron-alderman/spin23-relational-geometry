@@ -1,8 +1,8 @@
 # What remains open — assertion 1
 
-_Expanded claim page · The revised spine_
+_Expanded claim page · The Jordan–Lie hinge_
 
-> **Claim status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Claim status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research function — [✦ Scout](../reading-key/move-scout.md)** — opens a plausible new route or searches beyond the present ingredients.
 
@@ -16,7 +16,7 @@ The corpus identifies the missing datum but does not currently contain it. This 
 
 ## Logical anatomy
 
-- **Scope:** chapter “The revised spine”, section “What remains open”.
+- **Scope:** chapter “The Jordan–Lie hinge”, section “What remains open”.
 - **Unit of argument:** assertion 1 of 1 in this section.
 - **Evidence posture:** The cited documents locate the boundary; they do not contain the missing physical ingredient.
 - **Research move:** opens a plausible new route or searches beyond the present ingredients.

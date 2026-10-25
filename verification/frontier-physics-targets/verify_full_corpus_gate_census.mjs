@@ -26,6 +26,8 @@ const excluded = new Set([
   "corpus/programmes/frontier-physics-targets/literature_frontier_search_register_v1.md",
   "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
   "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.md",
+  "corpus/programmes/frontier-physics-targets/standalone_narrative_audit_v1.json",
+  "corpus/programmes/frontier-physics-targets/standalone_narrative_audit_v1.md",
 ]);
 const pattern = new RegExp(census.pattern, "i");
 const statusPattern = new RegExp(census.statusPattern, "im");

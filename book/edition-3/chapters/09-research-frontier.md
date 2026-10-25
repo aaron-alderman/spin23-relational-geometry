@@ -2,7 +2,7 @@
 
 _Legacy action gates, the graph lane and the current torsion-parent boundary_
 
-> **Chapter status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Chapter status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Chapter function — [✦ Scout](../reading-key/move-scout.md)** — opens a plausible new route or searches beyond the present ingredients.
 
@@ -30,7 +30,7 @@ _The terminal partition says where new information must enter._
 <a id="A4"></a>
 ## A4 · Define the chiral physical-state domain
 
-> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
@@ -64,7 +64,7 @@ _The terminal partition says where new information must enter._
 <a id="A6"></a>
 ## A6 · Make index three anomaly-free and mirror-free
 
-> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
@@ -134,7 +134,7 @@ _The terminal partition says where new information must enter._
 <a id="A11"></a>
 ## A11 · Turn sensitivity into a physical test
 
-> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
@@ -169,7 +169,7 @@ _The terminal partition says where new information must enter._
 <a id="TORSION-UV"></a>
 ## TORSION-UV · Construct the protected torsion parent
 
-> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Gate state — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Needed move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 

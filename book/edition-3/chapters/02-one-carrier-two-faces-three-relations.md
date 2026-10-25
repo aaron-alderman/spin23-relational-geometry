@@ -95,4 +95,4 @@ A scaled cycle graph canonically isolates a real first-harmonic plane under refi
 
 ---
 
-[← The revised spine](01-the-revised-spine.md) · [Contents](../README.md) · [The projective loop →](03-projective-loop.md)
+[← The Jordan–Lie hinge](01-the-revised-spine.md) · [Contents](../README.md) · [The projective loop →](03-projective-loop.md)

@@ -14,7 +14,7 @@ The next route to new physics may begin not with higher energy but with greater 
 
 1. [Front matter](chapters/00-front-matter.md) — **[▦ Ledger / governance](reading-key/status-governance.md)** · **[▤ Steward](reading-key/move-steward.md)** · How to read this volume
 2. [The admissibility frontier](chapters/08-admissibility-frontier.md) — **[◎ Interpretive map](reading-key/status-interpretive.md)** · **[⊕ Integrator](reading-key/move-integrator.md)** · New physics by finesse
-3. [The revised spine](chapters/01-the-revised-spine.md) — **[✓ Established](reading-key/status-established.md)** · **[⊕ Integrator](reading-key/move-integrator.md)** · One exact Jordan-to-Lie completion
+3. [The Jordan–Lie hinge](chapters/01-the-revised-spine.md) — **[✓ Established](reading-key/status-established.md)** · **[⊕ Integrator](reading-key/move-integrator.md)** · One exact response-to-symmetry completion
 4. [One carrier, two faces, three relations](chapters/02-one-carrier-two-faces-three-relations.md) — **[✓ Established](reading-key/status-established.md)** · **[⌖ Cartographer](reading-key/move-cartographer.md)** · Why three is meaningful
 5. [The projective loop](chapters/03-projective-loop.md) — **[⊘ Obstruction / no-go](reading-key/status-obstruction.md)** · **[⌕ Auditor](reading-key/move-auditor.md)** · Möbius intuition, double covers and central sign
 6. [The Furey interface](chapters/04-furey-interface.md) — **[◇ Conditional](reading-key/status-conditional.md)** · **[⇄ Translator](reading-key/move-translator.md)** · A real operator bridge with a hard boundary
@@ -38,4 +38,4 @@ The next route to new physics may begin not with higher energy but with greater 
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `b91a17ddff357f24db34d4db52fbbad1709ec51937534eb6e7c649e24617bfe6`
+Citation-set digest: `eb62ed177abe2cc0d0920e8a12251a14b2910cc72cfe82117ef96e42080af3da`

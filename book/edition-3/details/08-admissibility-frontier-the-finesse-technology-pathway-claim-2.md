@@ -103,4 +103,4 @@ Specify the apparatus, calibration, null distribution, preregistered threshold a
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#the-finesse-technology-pathway) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-oriented-seam-becomes-an-experiment-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#the-finesse-technology-pathway) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md) · [Next claim →](08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-1.md)

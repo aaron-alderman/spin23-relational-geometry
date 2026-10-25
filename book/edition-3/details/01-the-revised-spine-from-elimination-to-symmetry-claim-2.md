@@ -1,6 +1,6 @@
 # From elimination to symmetry — assertion 2
 
-_Expanded claim page · The revised spine_
+_Expanded claim page · The Jordan–Lie hinge_
 
 > **Claim status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
 
@@ -16,7 +16,7 @@ The stated conclusion follows inside the declared model. Reusing it elsewhere re
 
 ## Logical anatomy
 
-- **Scope:** chapter “The revised spine”, section “From elimination to symmetry”.
+- **Scope:** chapter “The Jordan–Lie hinge”, section “From elimination to symmetry”.
 - **Unit of argument:** assertion 2 of 2 in this section.
 - **Evidence posture:** Audit the declared carrier, assumptions and certificate. The result is exact only within that written scope.
 - **Research move:** moves a structure between mathematical, physical or ordinary languages.

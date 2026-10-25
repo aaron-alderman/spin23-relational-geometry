@@ -2,7 +2,7 @@
 
 _Expanded claim page · The exceptional horizon_
 
-> **Claim status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not contained in the current corpus.
+> **Claim status — [↗ Externally open](../reading-key/status-external.md)** — Needs an ingredient, calculation or observation not yet supplied by the declared model or evidence.
 
 > **Research function — [⌖ Cartographer](../reading-key/move-cartographer.md)** — maps territory, distinctions, dependencies and interfaces.
 

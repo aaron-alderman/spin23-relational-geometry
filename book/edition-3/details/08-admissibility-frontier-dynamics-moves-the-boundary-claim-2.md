@@ -103,4 +103,4 @@ Show that the named input is inconsistent, insufficient, unavailable, or fails t
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#dynamics-moves-the-boundary) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-dynamics-moves-the-boundary-claim-1.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-memory-depends-on-the-detector-scale-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#dynamics-moves-the-boundary) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-dynamics-moves-the-boundary-claim-1.md) · [Next claim →](08-admissibility-frontier-memory-depends-on-the-detector-scale-claim-1.md)

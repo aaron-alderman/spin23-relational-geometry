@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> This is a change of protagonist. Spin₀(2,3) and the larger symmetry landscape no longer lead the story. The admission–dynamics–detection loop does, because it determines which mathematical differences can become physical records.
+> The protagonist is the admission–dynamics–detection loop, not Spin₀(2,3) or a larger symmetry landscape, because it determines which mathematical differences can become physical records.
 
 ## What this commits us to
 
