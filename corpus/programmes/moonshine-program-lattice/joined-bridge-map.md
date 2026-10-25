@@ -269,6 +269,7 @@ composition data.
 
 ## Sources and corpus links
 
+- [Moonshine branch exhaustion checkpoint](exhaustion-checkpoint.md)
 - [ATLAS Monster conjugacy classes and power-up map](https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M)
 - [ATLAS Baby Monster conjugacy classes](https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/B)
 - [ATLAS Conway group \(Co_1\) conjugacy classes](https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/Co1)

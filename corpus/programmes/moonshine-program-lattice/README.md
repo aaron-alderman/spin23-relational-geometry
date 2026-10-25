@@ -10,6 +10,9 @@
 **Joined map:** [the order-46 junction and admissibility ladder](joined-bridge-map.md)
 **Joined certificate:** [cross-branch verifier](../../../verification/verify/verify_moonshine_joined_bridge_map.mjs)
 
+**Exhaustion boundary:** [closed routes, live corridor and stopping rule](exhaustion-checkpoint.md)
+**Exhaustion certificate:** [checkpoint verifier](../../../verification/verify/verify_moonshine_exhaustion_checkpoint.mjs)
+
 ## Result
 
 The Monster branch does contain a mathematically defensible sense in which a

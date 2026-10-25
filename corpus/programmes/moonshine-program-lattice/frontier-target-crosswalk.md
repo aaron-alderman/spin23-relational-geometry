@@ -122,6 +122,7 @@ geometry that motivated the admissibility language.
 
 ## Corpus links
 
+- [Moonshine branch exhaustion checkpoint](exhaustion-checkpoint.md)
 - [Joined order-46 bridge](joined-bridge-map.md)
 - [Order-46 observable ladder](order-46-observable-ladder.md)
 - [Centralizer augmentation gate](order-46-centralizer-augmentation.md)
