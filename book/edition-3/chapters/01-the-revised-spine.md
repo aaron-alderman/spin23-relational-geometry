@@ -26,49 +26,6 @@ The global low-rank isomorphism then identifies Sp(4,ℝ) with Spin₀(2,3). Thi
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/01-the-revised-spine-what-closes-claim-2.md)
 
-<a id="locally-invariant-carrier"></a>
-## The locally invariant carrier
-
-The four-dimensional space is best pictured as a living carrier rather than
-as spacetime. An admitted change of perspective \(M\) preserves an
-antisymmetric comparison \(\Omega\):
-
-\[
-M^T\Omega M=\Omega.
-\]
-
-The thing transforms by \(M\), while its mirror face transforms by
-\(M^{-T}\). The equivalent relation
-
-\[
-\Omega M=M^{-T}\Omega
-\]
-
-says that \(\Omega\) keeps the two faces mutually intelligible. We call it the
-**locally invariant carrier**: the relation borne through changing local
-descriptions.
-
-“Locally invariant” does not mean globally inert. A compatible connection may
-satisfy \(\nabla\Omega=0\), while transport around a loop returns a nontrivial
-holonomy \(H_\gamma\ne I\) that still preserves \(\Omega\). This is how local
-continuity can coexist with global phase, orientation and memory.
-
-The four-dimensional carrier is embedded in a higher relation space through
-its two-forms. Of the six directions in \(\Lambda^2V^*\), one is the invariant
-\(\Omega\)-line. The remaining five primitive directions carry a symmetric
-wedge pairing of signature \((2,3)\):
-
-\[
-\Lambda^2V^*=\mathbb R\Omega\oplus\Lambda^2_0V^*.
-\]
-
-This is the concrete mechanism behind
-\(Sp(4,\mathbb R)\cong Spin_0(2,3)\): the orthogonal five-space records
-relations among pairs of directions in the symplectic four-space. It is not a
-claim of five physical spacetime coordinates.
-
-> **Canonical development →** [The locally invariant carrier and its mirror face](../../../corpus/programmes/admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md)
-
 <a id="what-remains-open"></a>
 ## What remains open
 
@@ -106,7 +63,7 @@ When an internal degree of freedom is removed from a coupled quadratic system, t
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/01-the-revised-spine-from-elimination-to-symmetry-claim-1.md)
 
-For the declared carrier, the closure is ten-dimensional 𝔰𝔭(4,ℝ). This algebra preserves the locally invariant oriented-area comparison \(\Omega\) on four real carrier coordinates, pairing each direct action with its mirror face. Its induced action on the five primitive two-form relations preserves a signature-\((2,3)\) wedge form. A standard low-rank isomorphism identifies its connected group with Spin₀(2,3), the double cover of the identity component of SO(2,3).
+For the declared carrier, the closure is ten-dimensional 𝔰𝔭(4,ℝ). This algebra preserves a nondegenerate oriented-area form on four real phase-space coordinates. A standard low-rank isomorphism identifies its connected group with Spin₀(2,3), the double cover of the identity component of SO(2,3).
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/01-the-revised-spine-from-elimination-to-symmetry-claim-2.md)
 

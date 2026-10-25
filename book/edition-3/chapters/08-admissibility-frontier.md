@@ -215,6 +215,41 @@ This tells us where to look. A full bridge needs a source-native dagger or order
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-local-reversal-stops-at-the-path-memory-claim-3.md)
 
+<a id="hot-off-the-press-the-mirror-face-exists-before-the-quotient"></a>
+<a id="the-mirror-face-exists-before-the-quotient"></a>
+## The mirror face exists before the quotient
+
+> **Section status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+There is nevertheless a source-native positive object before the radical quotient. Put every authored relation on two rails—source and target—and keep the four relation types as separate channels. Each record u→v of type t contributes the rank-one positive atom (|v,T,t〉−|u,S,t〉)(〈v,T,t|−〈u,S,t|). Their sum is a positive-semidefinite Gram kernel on a 38×2×4=304 dimensional carrier, and its source-to-target blocks reconstruct the directed typed records.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-1.md)
+
+The audited snapshot has 43 records, 41 distinct typed edge atoms and lift rank 41. Swapping the two rails carries the kernel of the graph to the kernel of the arrow-reversed graph even when no reverse records were authored. This mirror is an involution: it squares to +1. It is neither the missing path-algebra dagger nor the symplectic quarter-turn that squares to −1.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-2.md)
+
+Collapsing rails and relation types gives the ordinary support Laplacian of rank 33. The rank drop 41→33 is an eight-direction quotient scar, so the scalar graph face can now state exactly what it forgot. The next gate is to add compositional transport and a semantic star, then predict a held-out relation or measurement. The free positive lift is a carrier construction, not yet a physical law.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-3.md)
+
+<a id="transition-operators-make-the-boundary-measurable"></a>
+## Transition operators make the boundary measurable
+
+> **Section status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+A lower-energy state is only a possible destination. A physical interaction operator must connect the initial and final sectors; its tensor type fixes the angular and polarization grammar, its reduced matrix element and phase space fix the partial width, and competing widths become a lifetime and detector record.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-1.md)
+
+Metastable helium is the clean calibration: energy permits decay while parity and spin close the leading electric-dipole route. Nuclear gamma and beta decays preserve the source-to-record architecture but use different multipole or weak operators. Symmetry classifies possible maps; it does not supply their strength or make them happen.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-2.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 

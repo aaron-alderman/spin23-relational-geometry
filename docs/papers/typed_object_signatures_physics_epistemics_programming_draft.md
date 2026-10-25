@@ -457,6 +457,58 @@ The construction establishes an exact Jordan face. It does not show that the
 graph intrinsically selects that face, that discarded provenance is
 recoverable, or that the face predicts a physical observable.
 
+### 4.4 A positive carrier before the quotient
+
+The preceding cost is not the end of the graph-to-order question.  A
+support-native positive carrier can be built *before* the path radical is
+removed.  Let (V) be the 38-node relationship vertex set, let
+({S,T}) distinguish source and target rails, and let (mathcal T) be
+the four authored relationship types.  Define
+
+\[
+\mathcal H_{\rm rel}
+=\mathbb R^V\otimes\mathbb R^{\{S,T\}}\otimes\mathbb R^{\mathcal T},
+\qquad \dim\mathcal H_{\rm rel}=38\cdot2\cdot4=304.
+\]
+
+For a typed record (e=(u\to v,t)), set
+
+\[
+d_e=|v,T,t\rangle-|u,S,t\rangle,
+\qquad
+K=\sum_e d_ed_e^{\mathsf T}\succeq0.
+\]
+
+The source--target block of (K) retains the directed typed multiplicity:
+
+\[
+K[(u,S,t),(v,T,t)]=-N_t(u\to v).
+\]
+
+Thus positivity need not be imported only after collapsing the graph to a
+small matrix block.  On the audited snapshot, 43 records determine 41
+distinct typed edge atoms and (operatorname{rank}K=41).  The rail swap
+(J|v,S,t\rangle=|v,T,t\rangle) obeys
+
+\[
+J K(G)J^{\mathsf T}=K(G^{\rm rev}),
+\qquad J^2=I.
+\]
+
+This is an equivariant mirror operation, not an authored reverse edge and not
+the path-algebra adjoint whose absence was established above.  It is also not
+the symplectic quarter-turn, which squares to (-I).  Collapsing the rails and
+relation types recovers the ordinary graph Laplacian of rank 33.  The rank
+drop (41\to33) is therefore an eight-direction quotient scar: an exact
+measure of information erased by the scalar support view.
+
+The lift supplies a positive, direction-retaining relation carrier; it does
+not yet supply path composition, semantic adjoints, learned edge weights, or
+a physical identification.  Those are the remaining gates.  This separates
+two formerly conflated questions: whether the graph admits a positive order
+(yes, on the free typed two-rail lift) and whether its authored dynamics
+select a Jordan face with predictive meaning (still open).
+
 ## 5. The two-plus-three bridge and its competing closures
 
 The Claimipedia audit produces a two-state reversible sector and a three-state
@@ -964,6 +1016,8 @@ them as interchangeable.
 | Full reversible block closure | bridge model | \(24\) | \(\mathfrak{sl}_5\) | exact |
 | Local relation algebra | epistemic graph | \(35=30+5\) | radical plus \(\mathbb Q\oplus M_2\) quotient | exact |
 | Relationship-path algebra | epistemic graph | \(66=58+8\) | radical plus \(\mathbb Q\oplus M_2\oplus\mathbb Q[C_3]\) | exact finite model |
+| Typed two-rail relation carrier | epistemic graph | \(304\) ambient; rank \(41\) | positive Gram kernel with rail-swap mirror | exact free lift |
+| Scalar support quotient | epistemic graph | rank \(33\) | ordinary Laplacian after rail/type collapse | exact lossy quotient |
 | Scientific signature | programming/schema | 10 fields plus \(\mathbb Z^7\) | heterogeneous product, not vector dimension | exact protocol |
 | ALE valuation | programming/provenance | finite-set cardinalities | commutative idempotent monoid | exact protocol |
 | Admitted paths | programming/provenance | unbounded path length | typed free category | exact protocol |
@@ -982,6 +1036,11 @@ only \(\mathfrak{so}_2\oplus\mathfrak{so}_3\) from that Levi.
 Third, quotienting can expose a small reversible algebra while erasing a much
 larger history-bearing radical. A clean semisimple answer may therefore be a
 lossy epistemic projection.
+
+Fourth, a positive pre-quotient lift can preserve direction and type without
+solving the composition problem.  Positivity, reversibility, path memory, and
+semantic adjunction are separate structural properties and must be certified
+separately.
 
 ## 13. Propositions and conjectures
 

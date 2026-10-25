@@ -5,6 +5,7 @@
 **Parent:** [Invariant atlas](admissibility_05_invariant_atlas_time_force_measure_material_rotation.md)  
 **Related:** [Dispersion-force landscape](admissibility_04_dispersion_force_landscape.md)  
 **Zone map:** [filled regions, open regions and known/unknown frontiers](admissibility_07_zone_known_unknown_frontiers.md)
+**Transition-operator continuation:** [selection rules, widths and lifetimes](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
 
 ## The joined picture
 
@@ -296,6 +297,17 @@ Metastability can appear as:
 These descriptions are not automatically equivalent. A topological label can suppress some decay channels without guaranteeing infinite lifetime; a local energy minimum can be destroyed by a new collective path; and an apparent resonance can be detector-limited rather than intrinsically long lived.
 
 Metastability is the physical bridge from microscopic dynamics to memory. It explains how history can remain present after the drive is removed without requiring a fundamental violation of reversible microscopic laws.
+
+There is a second, physically distinct source of metastability. A quantum state
+may have lower-energy destinations but no nonzero matrix element for the
+leading interaction operator. Atomic helium makes this visible: energy permits
+decay, while parity and spin close the ordinary electric-dipole route, leaving
+only much weaker higher-order or mixing-induced channels. The resulting
+lifetime is an **operator-access bottleneck**, not a barrier-crossing time. The
+[transition-operator bridge](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+connects Wigner--Eckart factorization, multipole selection rules, partial
+widths, atomic metastability and nuclear decay without treating them as one
+mechanism.
 
 ## Detection and detectors
 

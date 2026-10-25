@@ -12,6 +12,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 
 - [The admissibility frontier · Dynamics moves the boundary](../chapters/08-admissibility-frontier.md#dynamics-moves-the-boundary)
 - [The admissibility frontier · memory depends on the detector scale](../chapters/08-admissibility-frontier.md#memory-depends-on-the-detector-scale)
+- [The admissibility frontier · the mirror face exists before the quotient](../chapters/08-admissibility-frontier.md#the-mirror-face-exists-before-the-quotient)
 - [The admissibility frontier · The finesse technology pathway](../chapters/08-admissibility-frontier.md#the-finesse-technology-pathway)
 - [The admissibility frontier · the oriented seam becomes an experiment](../chapters/08-admissibility-frontier.md#the-oriented-seam-becomes-an-experiment)
 - [The admissibility frontier · the Casimir bridge has a frequency window](../chapters/08-admissibility-frontier.md#the-casimir-bridge-has-a-frequency-window)
@@ -60,6 +61,9 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Claim · The admissibility frontier · memory depends on the detector scale (1)](../details/08-admissibility-frontier-memory-depends-on-the-detector-scale-claim-1.md)
 - [Claim · The admissibility frontier · memory depends on the detector scale (2)](../details/08-admissibility-frontier-memory-depends-on-the-detector-scale-claim-2.md)
 - [Claim · The admissibility frontier · memory depends on the detector scale (3)](../details/08-admissibility-frontier-memory-depends-on-the-detector-scale-claim-3.md)
+- [Claim · The admissibility frontier · the mirror face exists before the quotient (1)](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-1.md)
+- [Claim · The admissibility frontier · the mirror face exists before the quotient (2)](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-2.md)
+- [Claim · The admissibility frontier · the mirror face exists before the quotient (3)](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-3.md)
 - [Claim · The admissibility frontier · The finesse technology pathway (1)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-1.md)
 - [Claim · The admissibility frontier · The finesse technology pathway (2)](../details/08-admissibility-frontier-the-finesse-technology-pathway-claim-2.md)
 - [Claim · The admissibility frontier · the oriented seam becomes an experiment (1)](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-1.md)

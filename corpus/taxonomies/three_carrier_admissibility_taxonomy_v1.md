@@ -203,6 +203,47 @@ Relation Algebra** \(\mathcal A_{38}\):
 \quad\dim[\mathcal A_{38},\mathcal A_{38}]=53.
 \]
 
+### Typed two-rail carrier and mirror
+
+Before adjacency, path quotient or Jordanization, the same capture has a
+canonical **Typed Two-Rail Relation Carrier**
+
+\[
+\mathcal H_{\rm rel}
+=V_{38}\otimes\mathbb R^{\{S,T\}}\otimes\mathbb R^{\{C,D,Q,S\}},
+\qquad \dim\mathcal H_{\rm rel}=304.
+\]
+
+Each record \(e=(u\to v,t)\) contributes the **Typed Relation Ray**
+
+\[
+d_e d_e^{\mathsf T},
+\qquad d_e=|v,T,t\rangle-|u,S,t\rangle.
+\]
+
+Their sum is the **Relation Gram Kernel** \(K_{\rm rel}\succeq0\).  Its
+source--target blocks reconstruct all 41 distinct directed typed records, and
+its rank is 41.  The **Rail-Swap Mirror** \(J\) exchanges source and target
+rails and satisfies
+
+\[
+J K_{\rm rel}(G)J^{\mathsf T}=K_{\rm rel}(G^{\rm rev}),
+\qquad J^2=I.
+\]
+
+This is an exact pre-quotient positive order and arrow-reversal covariance. It
+is not an authored reverse relation, a path-algebra dagger, a contragredient
+map, or the symplectic quarter-turn whose square is \(-I\).
+
+Identifying rails and relation types produces the **Scalar Support Quotient**,
+the ordinary rank-33 Laplacian.  The rank loss \(41\to33\) is the
+**Eight-Direction Relation Quotient Scar**.  It records exactly how much
+independent edge information the scalar support face forgets, without claiming
+that rank alone identifies the lost semantics.  See the
+[relation--face compiler](../programmes/admissibility/admissibility_124_relation_face_compiler_from_adjacency_to_jordan_holonomy.md),
+[live support-order audit](../programmes/admissibility/admissibility_125_claimipedia_support_native_order_and_semantic_boundary.md)
+and [typed two-rail lift](../programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md).
+
 ### Spin–Temple cell and context
 
 The opposite `Supports` and `Qualifies` arrows between Spin and Temple define

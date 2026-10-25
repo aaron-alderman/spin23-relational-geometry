@@ -119,6 +119,15 @@ The canonical development is [AZ-124](admissibility_124_relation_face_compiler_f
 [AZ-125](admissibility_125_claimipedia_support_native_order_and_semantic_boundary.md)
 and [AZ-126](admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md).
 
+The same separation is already ordinary laboratory physics. [AZ-127](admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
+shows that symmetry labels initial and final sectors while a typed transition
+operator, reduced matrix element and phase space decide whether and how quickly
+they are connected. Metastable helium is long-lived not because a lower state
+is absent but because the leading physical maps to it vanish; its width is the
+measurable residue of the weaker surviving maps. This does not derive atomic
+physics from the programme. It supplies a mature calibration of what an
+admissibility claim must eventually calculate.
+
 ## What “admissible” must mean
 
 “Admissible” cannot mean merely “whatever occurs in the actual world.” That would redescribe physics without explaining it. Nor may it mean “whatever satisfies all known physical laws,” because those are among the structures the programme aims to derive. The starting notion must be thinner than the target physics and independently stateable.

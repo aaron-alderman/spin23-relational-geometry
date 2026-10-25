@@ -151,7 +151,7 @@ Metastable helium is the clean picture: the ground state is energetically
 available, but the leading electric-dipole route is closed by parity and spin,
 so only much weaker channels remain. Nuclear gamma and beta decay retain the
 same source-to-record architecture while using different multipole or weak
-operators. The [transition-operator bridge](../programmes/admissibility/admissibility_126_transition_operators_selection_rules_and_lifetime_frontier.md)
+operators. The [transition-operator bridge](../programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md)
 therefore supplies a standard-physics calibration for the programme: symmetry
 classifies possible maps; it does not supply their strength or make them happen.
 
