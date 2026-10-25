@@ -158,7 +158,7 @@ const errors = [
 const warnings = duplicateIds.map(({ id, files }) => `duplicate legacy document id ${id}: ${files.join(", ")}`);
 const manifest = {
   schema: "spin23-corpus-manifest/v1",
-  generatedAt: new Date().toISOString(),
+  generatedAt: "2026-10-25T00:00:00.000Z",
   sourceRootName: "spin23-relational-geometry",
   proposedRepositoryScope: "owned corpus files; excludes external checkouts, caches, local environments and private review state",
   passed: errors.length === 0,

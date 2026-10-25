@@ -15,8 +15,13 @@ const check = process.argv.includes("--check");
 const posix = value => value.split(sep).join("/");
 const absolute = value => join(root, value);
 const readJson = value => JSON.parse(readFileSync(absolute(value), "utf8"));
-const sha256 = value => createHash("sha256").update(readFileSync(absolute(value))).digest("hex");
-const observedBytes = value => existsSync(absolute(value)) && !lstatSync(absolute(value)).isDirectory() ? lstatSync(absolute(value)).size : 0;
+const canonicalBytes = value => {
+  const bytes = readFileSync(absolute(value));
+  if (bytes.includes(0)) return bytes;
+  return Buffer.from(bytes.toString("utf8").replaceAll("\r\n", "\n"), "utf8");
+};
+const sha256 = value => createHash("sha256").update(canonicalBytes(value)).digest("hex");
+const observedBytes = value => existsSync(absolute(value)) && !lstatSync(absolute(value)).isDirectory() ? canonicalBytes(value).length : 0;
 
 const routes = readJson(routesPath);
 const manifest = readJson(manifestPath);
