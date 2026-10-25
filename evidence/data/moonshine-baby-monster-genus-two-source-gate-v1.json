@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The Baby-Monster SVOA, its three Ising-fusion modules and the Monster 2A fermionization are established, but the reviewed sources do not evaluate the order-23-twined genus-two ten-spin vector; completing K requires sewing data beyond characters and fusion rules.",
+  "established": {
+    "babyMonsterCentralCharge": "47/2",
+    "freeMajoranaCentralCharge": "1/2",
+    "sumCentralCharge": 24,
+    "evenAlgebraModules": ["VB0", "VB1", "VBT"],
+    "twistedModule": "VBT",
+    "fusionRing": {
+      "VB1xVB1": "VB0",
+      "VB1xVBT": "VBT",
+      "VBTxVBT": "VB0+VB1"
+    },
+    "fermionization": "F_(1/2) tensor VB-natural"
+  },
+  "insufficientInputs": [
+    "central charge",
+    "three genus-one vacuum characters",
+    "Ising fusion rules",
+    "untwined aggregate genus-two Moonshine partition function"
+  ],
+  "minimalConstructionPacket": [
+    "order-23 Baby-Monster action on VB0, VB1 and VBT and compatible intertwining spaces",
+    "order-23-twined torus one-point functions for sewing states",
+    "invariant bilinear forms and dual-basis contractions",
+    "convergent genus-two vector on the ten even spin structures",
+    "monomial action of K=S^2 R^-11 in the free-factor lift convention",
+    "separating-degeneration check against genus-one order-23 traces"
+  ],
+  "freeInput": {
+    "cycleType": [3, 3, 3, 1],
+    "etaNormalizedThreeCycleHolonomies": ["1", "1", "1"],
+    "fixedOddOddEigenvalue": "-1",
+    "determinant": "-1"
+  },
+  "comparisonRule": {
+    "babyHolonomies": ["beta1", "beta2", "beta3", "betaFixed"],
+    "full2AHolonomies": ["beta1", "beta2", "beta3", "-betaFixed"],
+    "basisInvariant": "closed-cycle holonomies and fixed-sector eigenvalues"
+  },
+  "sourceStatus": {
+    "generalFermionicGenusTwoSewingFormalism": true,
+    "explicitFreeFermionGenusTwoVector": true,
+    "explicitBabyMonsterGenusTwoSpinVector": false,
+    "explicitOrder23TwinedBabyMonsterGenusTwoSpinVector": false
+  },
+  "boundary": "A sewing formalism, fusion ring or central-charge cancellation does not determine the missing sectorwise Baby-Monster multiplier."
+}

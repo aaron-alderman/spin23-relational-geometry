@@ -14,6 +14,7 @@ const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
 const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
+const babyGate = load("../../evidence/data/moonshine-baby-monster-genus-two-source-gate-v1.json");
 const frontier = load("../../evidence/data/moonshine-frontier-crosswalk-v1.json");
 
 assert.equal(checkpoint.closed.arithmeticAndLattice, true);
@@ -60,6 +61,8 @@ assert.deepEqual(checkpoint.scalarBoundary.freeMajoranaK.etaNormalizedCycleProdu
 assert.equal(checkpoint.scalarBoundary.freeMajoranaK.fixedOddOddEigenvalue, "-1");
 assert.equal(checkpoint.scalarBoundary.freeMajoranaK.determinant, freeMajorana.etaNormalizedCycleData.determinant);
 assert(checkpoint.scalarBoundary.nextCarrier.includes("Baby-Monster"));
+assert.equal(babyGate.sourceStatus.explicitOrder23TwinedBabyMonsterGenusTwoSpinVector, false);
+assert(checkpoint.stoppingRule.resumeWhen.some((entry) => entry.includes("Baby-Monster torus one-point")));
 
 assert.deepEqual(
   checkpoint.openSourceGated.map(({ rank }) => rank),

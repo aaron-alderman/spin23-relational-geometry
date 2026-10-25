@@ -14,6 +14,7 @@ const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
 const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
+const babyGate = load("../../evidence/data/moonshine-baby-monster-genus-two-source-gate-v1.json");
 
 const declaredTargetIds = new Set(register.coreTargets.map((target) => target.id));
 const mappedIds = crosswalk.targets.map((target) => target.id);
@@ -65,6 +66,8 @@ assert.equal(eta.relationDefect.phase, "i");
 assert.deepEqual(seamAction.cycleType, [3, 3, 3, 1]);
 assert.equal(freeMajorana.interpretation.freeMajoranaFactorComplete, true);
 assert.equal(freeMajorana.interpretation.completeMonster2AActionKnown, false);
+assert.equal(crosswalk.rankedTranches[0].babyMonsterSourcePacketKnown, false);
+assert.equal(babyGate.sourceStatus.explicitOrder23TwinedBabyMonsterGenusTwoSpinVector, false);
 assert.equal(projectiveNoGo.anomalyTransgression.projectiveClassOnCentralizer, "trivial");
 assert.equal(crosswalk.rankedTranches[2].requiresNewExperiment, true);
 assert.equal(crosswalk.rankedTranches[3].requiresNewExperiment, true);

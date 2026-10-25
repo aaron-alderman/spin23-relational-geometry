@@ -295,6 +295,7 @@ composition data.
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
+- [Baby-Monster genus-two source gate](baby-monster-genus-two-source-gate.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - [Leech pair-Gram / Spin(2,3) bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Rule-60 affine seam torsor](../../claims/1700-1799/1793_the_rule60_golay_kernel_supplies_the_unique_tm23_leech_affine_seam_torsor.md)

@@ -23,6 +23,8 @@
 
 **Free-factor multiplier:** [eta-normalized 3-cycles close with product \(1\), while the fixed odd--odd sector has eigenvalue \(-1\)](relation-defect-free-majorana-multiplier.md)
 
+**Baby-Monster source gate:** [the missing object is twined sewing data beyond characters and Ising fusion](baby-monster-genus-two-source-gate.md)
+
 ## Result
 
 The Monster branch does contain a mathematically defensible sense in which a
@@ -883,6 +885,10 @@ each 3-cycle has product \(1\), the fixed odd--odd sector has eigenvalue
 \(-1\), and the determinant is \(-1\). The remaining sewing datum is the
 fermionic Baby-Monster action on those same spin-sector cycles; the full
 Monster comparison cannot be inferred from the free factor alone.
+The source audit sharpens this further: the Baby-Monster SVOA and its
+three-object Ising fusion ring are known, but the needed order-23-twined
+torus one-point functions, intertwiners and genus-two spin vector are not
+evaluated in the reviewed literature.
 
 ## Sources and corpus links
 
@@ -913,3 +919,4 @@ Monster comparison cannot be inferred from the free factor alone.
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
+- [Baby-Monster genus-two source gate](baby-monster-genus-two-source-gate.md)
