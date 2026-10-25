@@ -1,7 +1,7 @@
 # Frontier experiment atlas v1
 
-**Date:** 2026-10-24  
-**Coverage:** 20/20 frontier areas; 50/50 maintained topics; 36/36 detector bundles.
+**Date:** 2026-10-25  
+**Coverage:** 20/20 frontier areas; 51/51 maintained topics; 36/36 detector bundles.
 
 This atlas converts every canonical frontier into a realistic controlled experiment. “Experiment” is used in the broad scientific sense: a laboratory intervention where a physical carrier exists, a reproducible computation where the object is discrete, and a theorem/falsification benchmark where uniform limits or an action are the actual missing datum. A blocked fundamental frontier is not disguised as build-ready hardware.
 
@@ -476,7 +476,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-11 — Spectral boundary dynamics (pole, cut and threshold)  
 **Mode/readiness:** laboratory; ready_now  
 **Indicative scale:** 4–9 months with microwave or acoustic resonators  
-**Topics:** OT-012, OT-013, OT-014, OT-036, OT-041
+**Topics:** OT-012, OT-013, OT-014, OT-036, OT-041, OT-051
 
 **Detector bundles:** DET-006, DET-013, DET-014, DET-022, DET-023
 
@@ -609,7 +609,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-14 — Topology, defects and protected transport (topological wall)  
 **Mode/readiness:** laboratory; ready_now  
 **Indicative scale:** 6–12 months with acoustic or topoelectric resonator arrays  
-**Topics:** OT-015, OT-046
+**Topics:** OT-015, OT-046, OT-051
 
 **Detector bundles:** DET-023, DET-024
 
@@ -654,7 +654,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-15 — Disorder, causal spread and scale (scaling frontier)  
 **Mode/readiness:** laboratory_computational; ready_after_design  
 **Indicative scale:** 6–12 months on a programmable resonator or qubit array  
-**Topics:** OT-011, OT-019, OT-021, OT-022, OT-023
+**Topics:** OT-011, OT-019, OT-021, OT-022, OT-023, OT-051
 
 **Detector bundles:** DET-011, DET-012, DET-014, DET-015, DET-020, DET-021, DET-024, DET-025, DET-026, DET-030
 
@@ -740,7 +740,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-17 — Operator and carrier translation (translation gap)  
 **Mode/readiness:** hybrid; staged  
 **Indicative scale:** 12–24 months after a source-native map is written  
-**Topics:** OT-017, OT-024, OT-025, OT-026, OT-027, OT-035, OT-038, OT-039, OT-042, OT-045, OT-046, OT-047, OT-048, OT-049, OT-050
+**Topics:** OT-017, OT-024, OT-025, OT-026, OT-027, OT-035, OT-038, OT-039, OT-042, OT-045, OT-046, OT-047, OT-048, OT-049, OT-050, OT-051
 
 **Detector bundles:** DET-027, DET-035, DET-036
 
@@ -783,7 +783,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-18 — Consistency, scattering and continuum control (consistency boundary)  
 **Mode/readiness:** theorem_computation; ready_now  
 **Indicative scale:** 6–18 months depending on whether a theorem survives  
-**Topics:** OT-014, OT-016, OT-018, OT-021, OT-031, OT-040, OT-046
+**Topics:** OT-014, OT-016, OT-018, OT-021, OT-031, OT-040, OT-046, OT-051
 
 **Detector bundles:** DET-016, DET-022, DET-023, DET-030, DET-034
 

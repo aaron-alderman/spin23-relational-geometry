@@ -16,11 +16,14 @@ const narrativeAuditTarget = "corpus/programmes/frontier-physics-targets/standal
 const narrativeAudit = JSON.parse(fs.readFileSync(path.join(root, narrativeAuditTarget), "utf8"));
 const documentationGateTarget = "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json";
 const documentationGate = JSON.parse(fs.readFileSync(path.join(root, documentationGateTarget), "utf8"));
+const adversarialAuditTarget = "corpus/programmes/frontier-physics-targets/adversarial_release_audit_v1.json";
+const adversarialAudit = JSON.parse(fs.readFileSync(path.join(root, adversarialAuditTarget), "utf8"));
+const releaseCertificateTarget = "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.json";
+const releaseCertificate = JSON.parse(fs.readFileSync(path.join(root, releaseCertificateTarget), "utf8"));
 const failures = [];
 
 if (contract.schema !== "frontier.corpus-completion-exit-criteria/1") failures.push("schema mismatch");
 if (contract.status !== "active") failures.push("durable target is not active");
-if (contract.completionClaimAllowed !== false) failures.push("completion is allowed before all exit gates pass");
 if (!Array.isArray(contract.requiredAdjacencyFamilies) || contract.requiredAdjacencyFamilies.length !== 12) failures.push("adjacency universe is incomplete");
 if (!Array.isArray(contract.requiredAdjacencyDispositions) || contract.requiredAdjacencyDispositions.length !== 8) failures.push("adjacency dispositions are incomplete");
 if (!Array.isArray(contract.terminalNeighbourhoodMoves) || contract.terminalNeighbourhoodMoves.length !== 8) failures.push("terminal neighbourhood protocol is incomplete");
@@ -97,11 +100,22 @@ const documentationLayerPasses = documentationGate.summary?.pass === true
 if (!documentationLayerPasses) failures.push("EXIT-08: documentation, linking and retrieval gate is incomplete");
 if (documentationExitGate?.status !== (documentationLayerPasses ? "passed" : "open")) failures.push("EXIT-08: contract status is inconsistent with the documentation gate summary");
 
+const releaseGate = contract.gates?.find(gate => gate.id === "EXIT-09");
+const releaseLayerPasses = adversarialAudit.summary?.pass === true
+  && adversarialAudit.summary?.provenanceFailures === 0
+  && adversarialAudit.summary?.unresolvedSemanticConflicts === 0
+  && adversarialAudit.summary?.mutationFailures === 0
+  && releaseCertificate.status === "dated_saturation_under_declared_protocol"
+  && Object.values(releaseCertificate.gates ?? {}).every(status => status === "passed");
+if (!releaseLayerPasses) failures.push("EXIT-09: adversarial reproducible release is incomplete");
+if (releaseGate?.status !== (releaseLayerPasses ? "passed" : "open")) failures.push("EXIT-09: contract status is inconsistent with the release evidence");
+
 const allPass = contract.gates?.every(gate => gate.status === "passed") ?? false;
 if (contract.globalExit?.allGatesMustPass !== true) failures.push("global exit does not require every gate");
 if (!Array.isArray(contract.globalExit?.externalBlockerContract) || contract.globalExit.externalBlockerContract.length !== 6) failures.push("external blocker contract is incomplete");
 if (allPass !== contract.completionClaimAllowed) failures.push("completion flag is inconsistent with gate states");
-if (contract.globalExit?.presentStatus !== "current_input_computational_exhaustion_only") failures.push("present status overclaims completion");
+const expectedPresentStatus = allPass ? contract.globalExit?.releaseStatusWhenSatisfied : "current_input_computational_exhaustion_only";
+if (contract.globalExit?.presentStatus !== expectedPresentStatus) failures.push("present status is inconsistent with gate states");
 
 if (failures.length) {
   console.error(JSON.stringify({ result: "fail", failures }, null, 2));

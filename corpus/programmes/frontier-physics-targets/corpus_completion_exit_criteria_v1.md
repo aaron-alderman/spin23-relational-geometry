@@ -1,7 +1,7 @@
 # Corpus completion exit criteria v1
 
 **Date:** 25 October 2026  
-**Status:** active durable target; completion not yet claimed  
+**Status:** dated saturation under the declared protocol  
 **Machine authority:** [completion exit register](corpus_completion_exit_criteria_v1.json)  
 **Verifier:** [completion-contract verifier](../../../verification/frontier-physics-targets/verify_corpus_completion_exit_criteria.mjs)
 
@@ -25,7 +25,7 @@ Completion never means that nature or mathematics has no unknown structure. It m
 | EXIT-06 · Claim implication and defeat closure | Every authoritative claim has upstream assumptions, downstream consequences, defeat conditions and machine-auditable status propagation. | Passed |
 | EXIT-07 · Standalone narrative closure | Every authoritative route tells the Jordan–Lie middle through things, reasons, alternatives, pictures, status and implications while keeping optional readings typed. | Passed |
 | EXIT-08 · Documentation, linking and retrieval closure | Authority, links, hashes, generated surfaces, duplication, contradiction, centrality bias and stratified held-out retrieval all pass. | Passed |
-| EXIT-09 · Adversarial reproducible release | One clean frozen checkout regenerates, verifies, survives red-team sampling and emits one identity-consistent dated release certificate. | Open |
+| EXIT-09 · Adversarial reproducible release | One clean frozen checkout regenerates, verifies, survives red-team sampling and emits one identity-consistent dated release certificate. | Passed |
 
 No gate can compensate for another. A beautiful narrative cannot close an untyped physical map. A passing experiment cannot repair missing provenance. Complete linking cannot turn PageRank into evidence. A true theorem cannot supply a detector, and a detector cannot choose an ontology by itself.
 
@@ -83,6 +83,8 @@ The immediate programme is therefore:
 5. preserve the now-passed standalone narrative and documentation/linking/retrieval gates;
 6. run an adversarial clean-checkout release and issue the dated saturation certificate only when all nine gates pass.
 
-Until then, the honest status is:
+The dated release has now reached that endpoint. The [adversarial release audit](adversarial_release_audit_v1.md) tests deterministic provenance samples, likely cross-wording conflicts and deliberately corrupted overclaim, type, provenance and propagation cases. The [release certificate](corpus_saturation_release_certificate_v1.md) binds the non-self-referential scientific-content projection and names every reopening condition. The clean-checkout orchestrator regenerates the derived surfaces, runs every frontier verifier and all repository tests, and fails on any tracked difference.
 
-> **Current-input computational exhaustion achieved; full physics–mathematics saturation not yet demonstrated.**
+The honest status is:
+
+> **Dated physics–mathematics saturation achieved under the declared protocol; the certificate reopens on changed content, new evidence, a failed check, or a qualifying external result.**

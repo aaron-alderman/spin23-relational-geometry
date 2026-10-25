@@ -2,7 +2,7 @@
   "schema": "frontier.corpus-completion-exit-criteria/1",
   "date": "2026-10-25",
   "status": "active",
-  "completionClaimAllowed": false,
+  "completionClaimAllowed": true,
   "authority": "Durable release-level exit contract for the whole corpus. It supersedes any reading of current-input computational exhaustion as corpus completion.",
   "completionDefinition": "The corpus is complete only as a dated saturation claim under a declared search protocol: every generated physics-mathematics adjacency is dispositioned, every terminal branch has had its nearest reopening neighbourhood swept, every experiment has executable build/bridge/physics decision gates and outcome propagation, and the theory, literature, implication, narrative, retrieval, provenance and reproducible-release gates all pass together.",
   "nonClaims": [
@@ -188,13 +188,18 @@
     {
       "id": "EXIT-09",
       "name": "Adversarial reproducible release",
-      "status": "open",
+      "status": "passed",
       "exit": "A frozen clean checkout regenerates every derived artifact, passes all tests and verifiers, survives independent overclaim/type-change and random provenance audits, records external blockers and reopening triggers, and emits a dated release certificate whose corpus identity matches every included receipt.",
       "currentEvidence": [
         "corpus/registers/spin23_corpus_manifest.json",
-        "corpus/programmes/frontier-physics-targets/residual_frontier_exhaustion_boundary_v1.json"
+        "corpus/programmes/frontier-physics-targets/residual_frontier_exhaustion_boundary_v1.json",
+        "corpus/programmes/frontier-physics-targets/adversarial_release_audit_v1.json",
+        "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.json",
+        "verification/frontier-physics-targets/verify_adversarial_release_audit.mjs",
+        "verification/frontier-physics-targets/verify_corpus_release_certificate.mjs",
+        "tooling/release/run_corpus_release_audit.mjs"
       ],
-      "missingArtifact": "A clean-checkout release orchestrator, adversarial audit register and signed completion certificate."
+      "missingArtifact": "None under the dated release protocol. A deterministic 32-claim provenance sample, six authored cross-wording conflict reviews, four fail-closed mutations and two complete external-blocker contracts pass. The release orchestrator requires a clean checkout, regenerates all declared derived surfaces, runs every frontier verifier and all repository tests, rejects any tracked diff and emits a commit-, tree- and projection-bound receipt. The certificate uses an explicitly declared non-self-referential projection and reopens on any included-file change or qualifying new evidence."
     }
   ],
   "globalExit": {
@@ -209,6 +214,6 @@
       "named_review_date_or_event"
     ],
     "releaseStatusWhenSatisfied": "dated_saturation_under_declared_protocol",
-    "presentStatus": "current_input_computational_exhaustion_only"
+    "presentStatus": "dated_saturation_under_declared_protocol"
   }
 }

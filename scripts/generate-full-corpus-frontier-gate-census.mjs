@@ -65,6 +65,10 @@ const derivedControlSurfaces = [
   "corpus/programmes/frontier-physics-targets/standalone_narrative_audit_v1.md",
   "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json",
   "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.md",
+  "corpus/programmes/frontier-physics-targets/adversarial_release_audit_v1.json",
+  "corpus/programmes/frontier-physics-targets/adversarial_release_audit_v1.md",
+  "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.json",
+  "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
 ];
 const excluded = new Set([outJson, outMd, ...derivedControlSurfaces]);
 

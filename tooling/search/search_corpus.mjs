@@ -26,7 +26,12 @@ const markdownRoots = ["corpus", "book/edition-3/chapters", "verification"];
 // FRONT_DOOR inventories the retained retrieval baseline; hashing it here
 // would make baseline and front-door regeneration recursively invalidate one
 // another.  Its dedicated repository test governs its own byte identity.
-const contentIdentityExcludedPaths = new Set(["corpus/FRONT_DOOR.md"]);
+const contentIdentityExcludedPaths = new Set([
+  "corpus/FRONT_DOOR.md",
+  // The release certificate contains the projection hash it reports. It stays
+  // searchable, but cannot recursively define the retained search identity.
+  "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
+]);
 const cacheValidationIntervalMs = 5000;
 let cache = null;
 

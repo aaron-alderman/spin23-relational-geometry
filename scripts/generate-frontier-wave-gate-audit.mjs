@@ -1,0 +1,35 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const ROOT = process.cwd();
+const WRITE = process.argv.includes('--write');
+const OUT = 'corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json';
+const OUT_MD = 'corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.md';
+const current = JSON.parse(fs.readFileSync(path.join(ROOT, OUT), 'utf8'));
+const existing = new Map(current.packets.map(packet => [packet.sourceRef, packet]));
+const topicMap = {
+  76:['OT-038','OT-042'],77:['OT-026','OT-027','OT-038'],78:['OT-029','OT-039'],79:['OT-003','OT-004','OT-027','OT-032'],80:['OT-003','OT-004','OT-038'],81:['OT-027','OT-032'],
+  82:['OT-027','OT-032'],83:['OT-027','OT-032'],84:['OT-027','OT-032'],85:['OT-026','OT-027'],86:['OT-027','OT-038'],87:['OT-024','OT-038'],88:['OT-033','OT-035'],
+  89:['OT-026','OT-027'],90:['OT-027','OT-032'],91:['OT-001','OT-034','OT-048'],92:['OT-025','OT-045'],93:['OT-024','OT-038'],94:['OT-024','OT-038'],95:['OT-025','OT-045'],96:['OT-025','OT-045'],97:['OT-024','OT-038'],
+  100:['OT-027','OT-032'],101:['OT-027','OT-032'],102:['OT-001','OT-034','OT-048'],103:['OT-001','OT-034','OT-048'],104:['OT-025','OT-045'],105:['OT-029','OT-039'],106:['OT-029','OT-039'],107:['OT-018','OT-019','OT-027'],108:['OT-033','OT-035'],109:['OT-033','OT-035']
+};
+const sources = ['wave-6','wave-7'].flatMap(wave => fs.readdirSync(path.join(ROOT, 'corpus/programmes/frontier', wave))
+  .filter(name => name.startsWith(`frontier_${wave.replace('-', '')}_`) && name.endsWith('.md'))
+  .map(name => `corpus/programmes/frontier/${wave}/${name}`)).sort();
+const packets = sources.map(sourceRef => {
+  if (existing.has(sourceRef)) return existing.get(sourceRef);
+  const wave = /wave-(\d)/u.exec(sourceRef)?.[1];
+  const number = Number(/frontier_wave\d+_(\d+)_/u.exec(sourceRef)?.[1]);
+  const topics = topicMap[number] ?? [];
+  if (!topics.length) throw new Error(`No authored topic ownership for ${sourceRef}`);
+  return { id: `W${wave}-${number}`, status: /no_go|does_not_fix/u.test(sourceRef) ? 'closed' : 'live', sourceRef, topicIds: topics };
+});
+const output = { ...current, date: '2026-10-25', packets };
+const wave6 = packets.filter(packet => packet.id.startsWith('W6-')).length;
+const wave7 = packets.length - wave6;
+const counts = Object.fromEntries(['live','superseded','closed'].map(status => [status, packets.filter(packet => packet.status === status).length]));
+const md = `# Frontier Wave 6--7 gate audit v1\n\n**Date:** 25 October 2026  \n**Machine authority:** [wave gate audit](frontier_wave_gate_audit_v1.json)\n\nAll **${wave6} Wave 6** packets and **${wave7} Wave 7** packet files resolve to the maintained queue as live, superseded or closed. Reused display numbers retain stable audit identities instead of collapsing distinct files. The later chain-theory, detector, microwave, normalization, boundary and arithmetic packets are separately owned by their actual maintained topics; an exact no-go closes only its declared packet scope and does not erase the live neighbouring topic.\n\nStatus totals: live ${counts.live}; superseded ${counts.superseded}; closed ${counts.closed}.\n\nThe audit preserves the waves' stop rules. Exact quotient, lattice, composition and canonicalization results remain exact; their surviving physical or semantic translations are not promoted by association.\n`;
+if (WRITE) {
+  fs.writeFileSync(path.join(ROOT, OUT), `${JSON.stringify(output, null, 2)}\n`);
+  fs.writeFileSync(path.join(ROOT, OUT_MD), md);
+}
+console.log(JSON.stringify({ result: 'pass', packets: packets.length, wave6, wave7, statusCounts: counts, outputs: [OUT, OUT_MD] }, null, 2));

@@ -1,0 +1,44 @@
+{
+  "schema": "frontier.corpus-saturation-release-certificate/1",
+  "date": "2026-10-25",
+  "status": "dated_saturation_under_declared_protocol",
+  "authority": "This certificate attests protocol saturation of a normalized scientific-content projection. It does not claim final truth, empirical confirmation, or exhaustion of nature and mathematics.",
+  "projection": {
+    "algorithm": "Sort repository files by POSIX path; exclude self-referential certificates, release receipts and volatile generated navigation/search surfaces; normalize CRLF to LF for text; hash path, byte length and SHA-256 records.",
+    "sha256": "01f2d1fcc85d6660f802a4c2459864495dc415c8f71303418ba7e4d737ac387e",
+    "files": 6499,
+    "bytes": 117934239,
+    "exclusions": [
+      "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.json",
+      "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
+      "corpus/EVIDENCE_SPINE.md",
+      "corpus/FRONT_DOOR.md",
+      "corpus/registers/spin23_corpus_manifest.json",
+      "corpus/registers/corpus_evidence_spine.json",
+      "corpus/registers/corpus_front_door.json",
+      "tooling/search/benchmark_baseline_v1.json",
+      "tooling/search/sourcery_admission_candidate_v1.json",
+      "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json",
+      "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.md",
+      "verification/releases/**"
+    ]
+  },
+  "gates": {
+    "EXIT-01": "passed",
+    "EXIT-02": "passed",
+    "EXIT-03": "passed",
+    "EXIT-04": "passed",
+    "EXIT-05": "passed",
+    "EXIT-06": "passed",
+    "EXIT-07": "passed",
+    "EXIT-08": "passed",
+    "EXIT-09": "passed"
+  },
+  "controls": {
+    "adversarialAuditSha256": "cb2b7411438ecb46b5bde2928a7523c9499f9200c6240aee2b347c18e71dbb03",
+    "documentationGateSha256": "0f6eb57d8846869fce4d5d048cf282a816fea149239640c01584cf1647a749da",
+    "requiredCleanCheckoutCommand": "node tooling/release/run_corpus_release_audit.mjs --write-receipt <outside-or-excluded-receipt-path>",
+    "cleanCheckoutRequirement": "The committed checkout must be clean before regeneration; every declared generator, every frontier verifier and all repository tests must pass; regeneration must leave no tracked diff."
+  },
+  "reopening": "Any changed included file, failed gate, new adjacency, new evidence, new contradiction candidate, failed regeneration, or qualifying external result invalidates this certificate and requires a new dated release."
+}
