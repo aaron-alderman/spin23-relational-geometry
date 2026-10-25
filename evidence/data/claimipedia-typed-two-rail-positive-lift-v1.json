@@ -1,0 +1,45 @@
+{
+  "protocol": "claimipedia-typed-two-rail-positive-lift/1",
+  "packet": "AZ-126",
+  "target": "OT-026",
+  "sourceHash": "82d9c5a47f4957ddbd302927baed0acb05522773762966a4c9ffc34ed86f94c3",
+  "lift": {
+    "carrier": "R^V tensor R^{source,target} tensor R^{Challenges,DependsOn,Qualifies,Supports}",
+    "nodes": 38,
+    "relationTypes": 4,
+    "dimension": 304,
+    "records": 43,
+    "distinctTypedRecords": 41,
+    "rank": 41,
+    "edgeVector": "d_(u->v,t)=|v,target,t>-|u,source,t>",
+    "kernel": "K=sum_e d_e d_e^T",
+    "positiveSemidefinite": true,
+    "directedTypedAdjacencyRecoverable": true,
+    "recoveryRule": "K[(u,source,t),(v,target,t)] is minus the multiplicity of u->v of type t"
+  },
+  "mirror": {
+    "operator": "swap source and target rails",
+    "railSwapEqualsArrowReversal": true,
+    "formula": "J K(G) J^T = K(G^rev)",
+    "sourceAuthoredReverseEdgesRequired": false
+  },
+  "collapse": {
+    "map": "identify source and target rails and sum the four type channels",
+    "result": "ordinary multigraph Laplacian",
+    "ordinaryLaplacianRank": 33,
+    "directionLostAtThisStep": true,
+    "relationTypeLostAtThisStep": true
+  },
+  "decision": {
+    "positiveTypedDirectionalLiftClosed": true,
+    "mirrorFaceClosed": true,
+    "lossLocationExact": true,
+    "pathCompositionDerived": false,
+    "semanticAdjointBetweenRelationTypesDerived": false,
+    "sourceSelectedPhysicalBoundaryDerived": false,
+    "heldOutPredictionMade": false,
+    "ot026ClosureConditionMet": false,
+    "newPhysicsEvidence": false
+  },
+  "nextGate": "Compose the typed two-rail incidence carrier with the existing path algebra without identifying the rails; require an independently authored relation-type adjoint and test whether a source-selected boundary response survives the collapse."
+}

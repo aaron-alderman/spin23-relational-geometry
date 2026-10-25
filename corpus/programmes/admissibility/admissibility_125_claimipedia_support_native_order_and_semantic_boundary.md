@@ -116,7 +116,7 @@ opposite authored arrows. None of the ten slots carries a source-native unitary
 gain, phase connection or dynamical return map.
 
 One cycle is nevertheless qualitatively better than the Spin--Temple pair.
-Claimipedia contains the directed triangle
+Claimipedia contains the stored relation triangle
 
 \[
 \text{river flow}
@@ -125,7 +125,10 @@ Claimipedia contains the directed triangle
 \to\text{river flow},
 \]
 
-with all three edges typed DependsOn. Its active claims concern comparable
+with all three edges typed DependsOn. The stored arrow points from the claim
+that depends to its prerequisite; a functional influence map would normally
+run in the opposite direction. The cycle survives this global reversal, but
+its orientation does not. Its active claims concern comparable
 2024/2025 flow, declared instrument tolerance and a claimed nitrate reduction.
 This is an epistemic dependency loop, not yet physical holonomy. But it is the
 smallest source-native location where three fitted transfer maps could be
@@ -138,23 +141,26 @@ computed from the captured corpus.
 
 ## What a real river-cycle test would be
 
-Let the three calibrated local maps be
+After explicitly choosing the prerequisite-to-dependent convention, let the
+three calibrated local maps be
 
 \[
-T_{FC}:F\to C,
+T_{FN}:F\to N,
 \qquad
-T_{CN}:C\to N,
+T_{NC}:N\to C,
 \qquad
-T_{NF}:N\to F.
+T_{CF}:C\to F.
 \]
 
 The return operator is
 
 \[
-H_F=T_{NF}T_{CN}T_{FC}.
+H_F=T_{CF}T_{NC}T_{FN}.
 \]
 
-The null is not automatically $H_F=I$: seasonal dynamics, sampling delay and
+Using the stored-arrow convention would reverse this return. That choice must
+be declared before any orientation-odd statistic is evaluated. The null is
+not automatically $H_F=I$: seasonal dynamics, sampling delay and
 model mismatch can generate a legitimate return. The preregistered test must
 therefore specify the state spaces, units, time alignment, uncertainty
 transport and expected null return before viewing the held-out year or site.

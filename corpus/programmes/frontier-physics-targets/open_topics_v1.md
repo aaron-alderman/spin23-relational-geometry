@@ -81,7 +81,7 @@ for another dimensionless redesign.
 |---|---|---|
 | OT-024 | Relation-emulator hardware dictionary | AZ-110 closes network and detector design; build the frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
 | OT-025 | Nonlocal 24-dimensional form or code functor | a source-derived replacement for the incidence form or explicit sacrificed property |
-| OT-026 | Graph-to-Jordan translation | AZ-125 derives a support-native positive kernel, but it erases direction and relation type; semantic dagger/order, source-selected ports and a held-out record remain required |
+| OT-026 | Graph-to-Jordan translation | AZ-126 gives a faithful positive typed two-rail lift and exact mirror reversal; composition with the path algebra, a semantic adjoint, source-selected ports and a held-out record remain required |
 | OT-027 | Physical operator and dynamics functor | AZ-124 separates support, positive kernel, Schur face, holonomy and detector; a source-native action must still generate those operators, amplitudes and records |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
 | OT-038 | Source-bearing A2 commuting square | calibrate one common-carrier intertwiner from the selector primitive-form split to the rectangular ports, treat the nonzero channel as covariant symmetry breaking, and select the noncompact reverse-channel phase |
@@ -166,6 +166,17 @@ The nearest nontrivial source cycle is instead the all-DependsOn river
 flow--calibration--nitrate triangle; its current evidence is fixture-only and
 contains no maps or held-out numerical record, so it defines the next honest
 experiment rather than closing the translation.
+
+[AZ-126](../admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md)
+shows that AZ-125's loss was caused by an early quotient rather than positivity
+itself. On the free node by source/target rail by relation-type carrier, the
+Gram kernel is positive and its source--target blocks reconstruct all 41
+distinct directed typed records. Rail swap is exactly equivariant with global
+arrow reversal. Identifying the rails and type channels recovers the ordinary
+rank-33 Laplacian from the rank-41 lift, localizing an eight-direction quotient
+scar. This closes faithful positive representation, not the required path
+product or semantic star operation; no physical boundary or prediction is yet
+source-selected.
 
 [AZ-113](../admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md)
 
