@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "Composing the certified first-handle T1/S1 actions along the explicit word for K gives three reduced 3-cycles of product i and one fixed odd-odd eigenphase i; the common eta phase i normalizes the cycle products to 1 and the fixed eigenvalue to -1, giving determinant -1.",
+  "generatorConvention": {
+    "root": "zeta8=exp(i*pi/4)",
+    "RWord": [["S", 1], ["T", -5], ["S", 1], ["T", -3], ["S", 1], ["T", -2], ["S", 3], ["T", 4]],
+    "RMatrix": [[5, 23], [23, 106]],
+    "KWord": "S^2 R^-11",
+    "commonEtaExponentOnK": 2
+  },
+  "reducedAction": [
+    {"source": "00|00", "target": "00|10", "exponent": 3},
+    {"source": "00|01", "target": "00|11", "exponent": 3},
+    {"source": "00|10", "target": "10|00", "exponent": 6},
+    {"source": "00|11", "target": "10|01", "exponent": 6},
+    {"source": "01|00", "target": "01|10", "exponent": 3},
+    {"source": "01|10", "target": "11|00", "exponent": 6},
+    {"source": "10|00", "target": "00|00", "exponent": 1},
+    {"source": "10|01", "target": "00|01", "exponent": 1},
+    {"source": "11|00", "target": "01|00", "exponent": 1},
+    {"source": "11|11", "target": "11|11", "exponent": 2}
+  ],
+  "reducedCycleData": {
+    "cycleType": [3, 3, 3, 1],
+    "threeCycleProducts": [2, 2, 2],
+    "fixedExponent": 2,
+    "determinantExponent": 0
+  },
+  "etaNormalizedCycleData": {
+    "threeCycleProducts": [0, 0, 0],
+    "fixedExponent": 4,
+    "determinantExponent": 4,
+    "determinant": "-1"
+  },
+  "interpretation": {
+    "permutationSign": 1,
+    "bareDeterminantDetectsK": false,
+    "etaNormalizedDeterminantDetectsK": true,
+    "freeMajoranaFactorComplete": true,
+    "completeMonster2AActionKnown": false
+  },
+  "nextTest": "obtain the genus-two fermionic Baby-Monster spin-sector action on K and combine it with the certified free-Majorana monomial operator",
+  "boundary": "The result is free-Majorana and convention-relative; it is not the full Monster 2A multiplier or a physical dynamics."
+}

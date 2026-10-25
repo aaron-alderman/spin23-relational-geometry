@@ -13,6 +13,7 @@ const projectiveNoGo = load("../../evidence/data/moonshine-order23-projective-ce
 const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
+const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
 
 const declaredTargetIds = new Set(register.coreTargets.map((target) => target.id));
 const mappedIds = crosswalk.targets.map((target) => target.id);
@@ -55,13 +56,15 @@ assert.equal(
 );
 assert.deepEqual(
   crosswalk.rankedTranches[0].scalarCouplingSequence,
-  ["C2 projective sign survives", "finite C4 metaplectic lift ruled out", "genuine eta line has K phase i", "level-2 K permutation has cycle type 3^3 1", "compute monomial operator D_K P_K"],
+  ["C2 projective sign survives", "finite C4 metaplectic lift ruled out", "genuine eta line has K phase i", "level-2 K permutation has cycle type 3^3 1", "eta-normalized free-Majorana cycles have products 1,1,1 with fixed odd-odd eigenvalue -1", "compute fermionic Baby-Monster K action and combine the monomial factors"],
 );
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.quarterTurnImage, "i");
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.genuine, false);
 assert.equal(scalarNoGo.outcome.projective240Route.includes("remains admissible"), true);
 assert.equal(eta.relationDefect.phase, "i");
 assert.deepEqual(seamAction.cycleType, [3, 3, 3, 1]);
+assert.equal(freeMajorana.interpretation.freeMajoranaFactorComplete, true);
+assert.equal(freeMajorana.interpretation.completeMonster2AActionKnown, false);
 assert.equal(projectiveNoGo.anomalyTransgression.projectiveClassOnCentralizer, "trivial");
 assert.equal(crosswalk.rankedTranches[2].requiresNewExperiment, true);
 assert.equal(crosswalk.rankedTranches[3].requiresNewExperiment, true);

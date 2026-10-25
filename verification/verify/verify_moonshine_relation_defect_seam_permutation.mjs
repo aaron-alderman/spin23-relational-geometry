@@ -5,6 +5,7 @@ const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, 
 const seam = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
 const relation = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
+const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
 
 const multiply2 = (a, b) => a.map((row, i) => row.map((_, j) => (
   a[i][0] * b[0][j] + a[i][1] * b[1][j]
@@ -73,6 +74,11 @@ assert.equal(seam.quotients.determinantLineDetectsK, false);
 assert.equal(seam.quotients.level2SectorVectorDetectsK, true);
 assert.equal(seam.quotients.etaPhase, eta.relationDefect.phase);
 assert.equal(seam.operatorTarget.scalarEtaMatchNecessaryButSufficient, false);
+assert.equal(seam.operatorTarget.freeMajoranaPhaseMatrixKnown, true);
+assert.deepEqual(seam.operatorTarget.freeMajoranaEtaNormalizedCycleProducts, ["1", "1", "1"]);
+assert.equal(seam.operatorTarget.freeMajoranaFixedOddOddEigenvalue, "-1");
+assert.equal(seam.operatorTarget.freeMajoranaDeterminant, freeMajorana.etaNormalizedCycleData.determinant);
+assert.equal(seam.operatorTarget.monsterSewnDefectActionKnown, false);
 
 console.log(JSON.stringify({
   Kmod23: "identity",

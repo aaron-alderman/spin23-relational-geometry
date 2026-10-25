@@ -21,6 +21,8 @@
 
 **Seam action of \(K\):** [three 3-cycles plus the fixed odd--odd characteristic](relation-defect-seam-permutation.md)
 
+**Free-factor multiplier:** [eta-normalized 3-cycles close with product \(1\), while the fixed odd--odd sector has eigenvalue \(-1\)](relation-defect-free-majorana-multiplier.md)
+
 ## Result
 
 The Monster branch does contain a mathematically defensible sense in which a
@@ -873,12 +875,14 @@ it cannot embed faithfully as finite-order torsion in \(Sp(4,\mathbb Z)\).
 An explicit symmetric lift reduces the selected congruence kernel to one
 infinite cyclic relation rail. On the metaplectic double cover,
 \(\widetilde S^4=\varepsilon\); hence a genuine character must take a
-primitive eighth-root value and cannot take \(i\). The next sewing
-calculation must therefore compare full monomial operators. The eta line gives
+primitive eighth-root value and cannot take \(i\). The eta line gives
 \(v_\eta(K)=i\), while the level-2 seam contributes a permutation of cycle
-type \(3^3\,1\). Its determinant is \(+1\), so the sign quotient misses the
-action. The missing datum is the characteristic-dependent phase matrix and
-the sewn Monster-defect action on the same cycles.
+type \(3^3\,1\). Composing the certified free-Majorana \(T_1/S_1\) action
+along the exact word for \(K\) completes that factor: after eta normalization,
+each 3-cycle has product \(1\), the fixed odd--odd sector has eigenvalue
+\(-1\), and the determinant is \(-1\). The remaining sewing datum is the
+fermionic Baby-Monster action on those same spin-sector cycles; the full
+Monster comparison cannot be inferred from the free factor alone.
 
 ## Sources and corpus links
 
@@ -908,3 +912,4 @@ the sewn Monster-defect action on the same cycles.
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
+- [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)

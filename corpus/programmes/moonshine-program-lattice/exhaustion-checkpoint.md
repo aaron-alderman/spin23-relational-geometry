@@ -133,11 +133,13 @@ root when \(\varepsilon\mapsto-1\), never \(i\). The finite \(C_4\) character
 and genuine metaplectic character therefore cannot be the same line. A
 The canonical Dedekind eta line supplies the genuine scalar assignment
 \(\widetilde S\mapsto\zeta_8\), lifted base center \(\mapsto i\),
-metaplectic kernel \(\mapsto-1\), and \(K\mapsto i\). The first surviving
-higher-genus target is nevertheless vector-valued: modulo 2, \(K\) permutes
-the ten even characteristics with cycle type \(3^3\,1\), while its
-permutation determinant is \(+1\). The missing object is the full monomial
-operator \(D_KP_K\) and its sewn Monster-defect counterpart.
+metaplectic kernel \(\mapsto-1\), and \(K\mapsto i\). Modulo 2, \(K\)
+permutes the ten even characteristics with cycle type \(3^3\,1\), while its
+permutation determinant is \(+1\). The free-Majorana multiplier is now exact:
+after eta normalization the three cycle products are \(1\), the fixed
+odd--odd eigenvalue is \(-1\), and the ten-sector determinant is \(-1\).
+The missing object is therefore the fermionic Baby-Monster spin-sector action
+on \(K\), required to complete the sewn Monster operator.
 
 ## Open region and required new inputs
 
@@ -145,7 +147,7 @@ Only four fronts remain admissible:
 
 | Front | Missing object | Decisive test |
 |---|---|---|
-| mixed-level genus two | an order-23-twined monomial seam operator | compute \(D_K\), retain the known \(3^3\,1\) permutation, compare with the sewn defect action and test separating degeneration |
+| mixed-level genus two | the fermionic Baby-Monster spin-sector action on \(K\) | combine it with the exact eta-normalized free-Majorana operator, compare with the sewn defect action and test separating degeneration |
 | cross-grade VOA structure | explicit fusion, intertwining or vertex-operator data | find an A/B-sensitive invariant not determined by graded characters |
 | finite emulator | a provenance-preserving realization of the \(\mathrm{Dic}_{11}/D_{11}\) quotient | distinguish the 44-element sign-retaining closure from the 22-element projective closure |
 | physical lift | a real carrier, action, scale and detector map | select signature, time orientation, positive energy and an observable response |
@@ -182,4 +184,5 @@ traces or centralizer words is repetition, not frontier progress.
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
+- [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Admissibility synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md)

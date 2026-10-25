@@ -109,8 +109,11 @@ detector map.  None follows from reduction modulo 23.
    coupling survives, while the scalar metaplectic \(C_4\) lift is ruled out
    for the one-block embedding. The genuine eta line instead gives
    \(v_\eta(K)=i\), while \(K\) permutes the ten even characteristics with
-   cycle type \(3^3\,1\). Compute the diagonal phase matrix \(D_K\) and compare
-   the full monomial operator \(D_KP_K\) with the sewn defect action.
+   cycle type \(3^3\,1\). The eta-normalized free-Majorana action is now
+   complete: its three cycle products are \(1\), its fixed odd--odd eigenvalue
+   is \(-1\), and its determinant is \(-1\). Compute the fermionic
+   Baby-Monster action on the same cycles and compare the combined monomial
+   operator with the sewn defect action.
 2. **Cross-grade VOA/defect composition:** test fusion or intertwining data
    not determined by the now-exhausted graded \(S_4\) characters.
 3. **Finite \(\mathrm{Dic}_{11}/D_{11}\) emulator:** conventional but sharp
@@ -135,6 +138,7 @@ geometry that motivated the admissibility language.
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
+- [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 - [Main Moonshine programme](README.md)
 - [Per-target corpus assessments](../frontier-physics-targets/frontier_physics_target_assessments_v1.md)

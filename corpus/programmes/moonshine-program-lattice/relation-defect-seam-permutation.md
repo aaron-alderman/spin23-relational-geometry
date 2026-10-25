@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 
-**Status:** exact level-\(2\) action constructed; determinant line shown insufficient; characteristic phases and Monster sewing remain open
+**Status:** exact level-\(2\) action and free-Majorana multiplier constructed; fermionic Baby-Monster sewing remains open
 
 **Evidence:** [machine-readable seam-action ledger](../../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json)
 
@@ -59,9 +59,12 @@ minimum form is already monomial:
 \rho(K)=D_KP_K,
 \]
 
-where \(P_K\) has cycle type \(3^3\,1\) and \(D_K\) is the still-uncomputed
-theta/defect phase matrix. The eta result constrains a scalar multiplier
-factor of this operator; it does not erase the permutation.
+where \(P_K\) has cycle type \(3^3\,1\). The free-Majorana part of \(D_K\)
+is now computed from the certified \(T_1/S_1\) action. After eta
+normalization, all three cycle products are \(1\), the fixed odd--odd sector
+has eigenvalue \(-1\), and the determinant is \(-1\). The uncomputed factor
+is the fermionic Baby-Monster action; the eta scalar does not erase the
+permutation.
 
 ## 1. Exact characteristic action
 
@@ -124,13 +127,12 @@ permutation are independent pieces of the lifted action.
 
 ## 3. Revised next calculation
 
-The next source-gated target is now a matrix rather than a single phase:
+The free matrix factor is complete. The remaining source-gated target is:
 
-1. compute the characteristic-dependent theta/Pfaffian phases \(D_K\);
-2. compute the order-23 sewn defect action on the same three 3-cycles and
+1. retain the computed eta-normalized free-Majorana monomial action;
+2. compute the fermionic Baby-Monster order-23 sewn action on the same three 3-cycles and
    fixed odd--odd sector;
-3. test whether the common scalar part agrees with \(v_\eta(K)=i\);
-4. test whether the full monomial operators agree, including separating
+3. combine the two factors and test whether the full monomial operators agree, including separating
    degeneration.
 
 A scalar phase match is necessary but no longer sufficient. Failure of the
@@ -147,6 +149,7 @@ the modular operation with laboratory dynamics.
 ## Sources and corpus links
 
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
+- [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Integral relation rail](integral-relation-defect-metaplectic-no-go.md)
 - [Mixed-level genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Oriented seam modular line](../lattice-subroutine-gravity/oriented-seam-modular-line.md)

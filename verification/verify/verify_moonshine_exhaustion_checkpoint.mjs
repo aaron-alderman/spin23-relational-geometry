@@ -13,6 +13,7 @@ const congruenceLift = load("../../evidence/data/moonshine-metaplectic-congruenc
 const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
+const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
 const frontier = load("../../evidence/data/moonshine-frontier-crosswalk-v1.json");
 
 assert.equal(checkpoint.closed.arithmeticAndLattice, true);
@@ -55,7 +56,10 @@ assert.equal(checkpoint.scalarBoundary.genuineEtaScalarLineExists, true);
 assert.equal(checkpoint.scalarBoundary.etaRelationDefectPhase, eta.relationDefect.phase);
 assert.deepEqual(checkpoint.scalarBoundary.level2RelationDefectCycleType, seamAction.cycleType);
 assert.equal(checkpoint.scalarBoundary.permutationDeterminant, seamAction.quotients.permutationSign);
-assert(checkpoint.scalarBoundary.nextCarrier.includes("D_K P_K"));
+assert.deepEqual(checkpoint.scalarBoundary.freeMajoranaK.etaNormalizedCycleProducts, ["1", "1", "1"]);
+assert.equal(checkpoint.scalarBoundary.freeMajoranaK.fixedOddOddEigenvalue, "-1");
+assert.equal(checkpoint.scalarBoundary.freeMajoranaK.determinant, freeMajorana.etaNormalizedCycleData.determinant);
+assert(checkpoint.scalarBoundary.nextCarrier.includes("Baby-Monster"));
 
 assert.deepEqual(
   checkpoint.openSourceGated.map(({ rank }) => rank),
