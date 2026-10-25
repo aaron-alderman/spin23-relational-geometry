@@ -301,6 +301,13 @@ lowest Ritz value, 4.3491721940, already exceeds the exact odd separator
 4.3134665205, while the residual block has norm 0.6339. This proves neither
 gap closure nor gap absence; it proves that the required odd spectral cluster
 must include strong outside-band mixing.
+Wave 7.214 supplies that mixing with one exact residual block-Lanczos step.
+The enriched 48-dimensional projection lowers the first Ritz value to
+4.2268329143 and moves 18 of the required 24 Ritz values below the exact
+separator. It does not yet certify the odd cluster: six directions remain
+above the separator, and no exterior residual enclosure has yet been formed.
+The next admissible result is therefore a targeted second enrichment plus a
+cluster residual/Lehmann bound, or an independent shifted-inertia count.
 
 ## Corpus links
 
@@ -371,6 +378,7 @@ must include strong outside-band mixing.
 - [Triple principal-block reconnaissance](frontier_wave7_211_leech_triple_block_reconnaissance.md)
 - [Temple separator and odd-subspace burden](frontier_wave7_212_leech_temple_separator_burden.md)
 - [Bare odd Ritz-seed failure](frontier_wave7_213_leech_odd_ritz_seed_failure.md)
+- [First odd block-Lanczos enrichment](frontier_wave7_214_leech_odd_block_lanczos_step.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

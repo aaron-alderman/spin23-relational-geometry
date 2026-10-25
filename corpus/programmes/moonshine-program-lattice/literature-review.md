@@ -986,6 +986,17 @@ subspace must be block-DMRG, Davidson or Krylov enriched, consistent with
 quadratic residual analyses designed for clustered Rayleigh--Ritz values
 rather than independent scalar residual assignment.
 
+Wave 7.214 takes the corresponding constructive step: the exact residual of
+the 24-vector seed is orthonormalized into a second block and the resulting
+48-dimensional Rayleigh--Ritz problem is solved. Its lowest value falls from
+4.3491721940 to 4.2268329143, and 18 values now lie below the exact
+\(\beta_{25}^{(-)}\) separator. A four-site dense reconstruction agrees with
+the sparse block calculation below \(9\times10^{-15}\). The calculation thus
+measures real convergence toward the needed odd cluster, while also locating
+the remaining obstruction precisely: six additional subspace directions and
+an exterior cluster-residual enclosure (or shifted inertia) are necessary
+before a lower bound can enter the physical gap certificate.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

@@ -367,6 +367,12 @@ separator, beginning at 4.3491721940, and its residual-block norm is 0.6339.
 Dense reduced controls pass below \(1.6\times10^{-15}\). The seed therefore
 fails admission: the 24 directions must be DMRG/Davidson/Krylov enriched, or
 replaced by shifted inertia.
+Wave 7.214 performs the first exact residual block-Lanczos enrichment. The
+48-dimensional projected problem lowers the first Ritz value by 0.1223393 to
+4.2268329143 and places 18 Ritz values below the exact separator. Dense
+four-site controls agree below \(9\times10^{-15}\). This is constructive
+progress but not admission: six further directions and an exterior residual
+bound (or a shifted-inertia count) are still required.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -447,6 +453,7 @@ P4 questions.
 - [Triple principal-block reconnaissance](frontier_wave7_211_leech_triple_block_reconnaissance.md)
 - [Temple separator and odd-subspace burden](frontier_wave7_212_leech_temple_separator_burden.md)
 - [Bare odd Ritz-seed failure](frontier_wave7_213_leech_odd_ritz_seed_failure.md)
+- [First odd block-Lanczos enrichment](frontier_wave7_214_leech_odd_block_lanczos_step.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
