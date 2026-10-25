@@ -45,12 +45,19 @@ const homDimension=homBasis.length-rank(equations);
 assert.equal(homDimension,0);
 
 const fingerprint=M=>({trace:Number(trace(M).toFixed(10)),determinant:Number(determinant(M).toFixed(10)),order:order(M)});
+const commutes=(A,B)=>maxAbs(add(mm(A,B),scale(-1,mm(B,A))))<EPS;
+const inverseRelation=(A,B)=>maxAbs(add(mm(mm(B,A),B),scale(-1,mm(A,A))))<EPS; // B A B = A^-1 = A^2 for A^3=1
+assert.equal(commutes(Rm,Hm),true);
+assert.equal(inverseRelation(Rm,Hm),false);
+assert.equal(commutes(Rp,Hp),false);
+assert.equal(inverseRelation(Rp,Hp),true);
 console.log(JSON.stringify({
   status:"PASS",
   split:{minusDimension:2,plusDimension:3},
   selectorCommutesWithSplit:true,
   twoSector:{R:fingerprint(Rm),H:fingerprint(Hm)},
   threeSector:{R:fingerprint(Rp),H:fingerprint(Hp)},
+  relations:{twoSector:{commutes:commutes(Rm,Hm),dihedral:inverseRelation(Rm,Hm)},threeSector:{commutes:commutes(Rp,Hp),dihedral:inverseRelation(Rp,Hp)}},
   invariantCrossHomDimension:homDimension,
   consequence:"the exact finite selector derives and preserves Q but cannot itself choose a nonzero E:W2->W3; the channel must break the selector, transform covariantly, or be sourced by an additional operator"
 }));
