@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "leech-24mode-full-cosine-order-two-v1",
+  "date": "2026-10-25",
+  "input": "leech-24mode-full-cosine-order-three-halves-v1",
+  "orderTwoTerms": {
+    "quarticThirdOrder": -0.02593630758624993,
+    "quarticSexticMixedSecondOrder": 0.021424310121504808,
+    "octicFirstOrder": -0.002431312666506139,
+    "sum": -0.00694331013125126,
+    "scaling": "U^2 at fixed u=1"
+  },
+  "sparseContractionAudit": {
+    "groundResolventStates": 17850,
+    "softestResolventStates": 20173,
+    "groundMaximumThetaSquaredStates": 492871,
+    "softestMaximumThetaSquaredStates": 575924,
+    "quarticThirdOrderIdentity": "E_n^(3)[V4]=<y_n|V4|y_n>-V4_nn<y_n|y_n>, y_n=R_n V4|n>",
+    "mixedIdentity": "E_n^(2)[V4,V6]=2<y_n|V6|n>=2 sum_i <theta_i^2 y_n|theta_i^4 n>/720"
+  },
+  "fullExpansion": "Delta=0.2120981525497628 sqrt(U)-0.04764668730530097 U-0.011403676531685385 U^(3/2)-0.00694331013125126 U^2+O(U^(5/2)) at u=1",
+  "scans": [
+    {"chargingToCosineRatio":0.0001,"orderTwoCorrection":-6.943310131251261e-11,"orderTwoRelativeToHarmonic":-3.273630650612202e-8,"gapThroughOrderTwo":0.002116205383657465},
+    {"chargingToCosineRatio":0.001,"orderTwoCorrection":-6.94331013125126e-9,"orderTwoRelativeToHarmonic":-0.0000010352129074073443,"gapThroughOrderTwo":0.006659118249180167,"eightModeFullCosineGap":0.006659662450776954,"relativeDifferenceFromEightModeGap":0.00008171609309168651},
+    {"chargingToCosineRatio":0.01,"orderTwoCorrection":-6.943310131251261e-7,"orderTwoRelativeToHarmonic":-0.00003273630650612202,"gapThroughOrderTwo":0.020721250374378462,"eightModeFullCosineGap":0.02073890314762028,"relativeDifferenceFromEightModeGap":0.000851191266778414}
+  ],
+  "interpretation": "large quartic-third-order and mixed quartic-sextic pieces cancel strongly; the complete order-U^2 correction remains below 3.28e-5 of the harmonic gap throughout the declared precision window",
+  "established": "all 24 normal modes and every full-cosine perturbative contribution through absolute order U^2 are included for the softest one-well transition",
+  "boundary": "This is an order-complete asymptotic coefficient, not a rigorous remainder bound or convergence proof. Order U^(5/2), compact winding prefactors, dissipation and the thermodynamic coupled-wire limit remain outside the calculation.",
+  "epistemicStatus": "all-24-mode one-well full-cosine perturbation theory complete through absolute order U^2 at fixed u=1"
+}

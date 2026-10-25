@@ -173,10 +173,11 @@ edge and cross-sector products are promoted. Four soft modes are already
 full-cosine converged, six modes are independently excitation-cutoff converged
 and an eight-mode reconnaissance is stable; the unbounded 8-to-24 tail remains
 open as a rigorous theorem. Independently, all 24 modes are now included in a
-full-cosine perturbative calculation through absolute order $U^{3/2}$, and
-that result agrees with the eight-mode nonperturbative active-space gap within
-0.0818% at the strongest declared ratio. The $U^2$ remainder and compact
-tunnelling prefactor are the remaining nonlinear-gap calculations. The
+full-cosine perturbative calculation through absolute order $U^2$. The
+complete order-$U^2$ term is only $3.27\times10^{-5}$ of the harmonic gap at
+the strongest declared ratio and the resulting series agrees with the
+eight-mode active-space gap within 0.0852%. Order $U^{5/2}$, a rigorous
+remainder theorem and the compact tunnelling prefactor remain open. The
 compact exponent itself is bounded exactly: every winding has
 $S_E\ge8\sqrt{u/(22U)}$, giving a bare exponential factor below
 $3.9\times10^{-8}$ even at $U/u=10^{-2}$.
@@ -184,6 +185,21 @@ A frozen nonlinear packet now turns those results into 228 same-carrier
 configurations and 22,800 repeated acquisitions with twelve calibration and
 twelve held-out modes. Passing it commissions the finite compact Leech rotor,
 not yet its chiral edge or Monster orbifold.
+The backward dependency audit in Wave 7.190 preserves the exact 48-mode
+open-edge count but retypes the old strip spectrum: there are $Y-1$ coupled
+24-channel cells, not $24(Y-1)$ independent pendula. Consequently the
+single-pendulum gap, thermal targets, leakage thresholds and 17-level
+compiler costs are calibration surrogates. A joined finite-cutoff even/odd
+cell spectrum is now the precise missing certificate connecting nonlinear
+commissioning to the strip stability theorem.
+The exponential dense matrix is not an operator-complexity obstruction:
+Wave 7.191 gives the full joined cell an exact MPO of bond dimension at most
+26 and verifies its matrix elements on exhaustive reduced systems. What
+remains is a parity-resolved tensor calculation with certified lower as well
+as upper spectral enclosures.
+Wave 7.192 reduces that calculation's harmonic maximum cut entropy by 20.75%
+with a frozen metric-derived ordering, while retaining catalogue order as a
+convergence control.
 
 ## Corpus links
 
@@ -227,8 +243,12 @@ not yet its chiral edge or Monster orbifold.
 - [Full-cosine active-mode ladder](frontier_wave7_184_leech_full_cosine_active_mode_ladder.md)
 - [Complete 24-mode quartic second order](frontier_wave7_185_leech_24mode_quartic_second_order.md)
 - [All-24-mode full-cosine order completion](frontier_wave7_186_leech_24mode_full_cosine_order_three_halves.md)
+- [All-24-mode full-cosine order two](frontier_wave7_189_leech_24mode_full_cosine_order_two.md)
 - [Compact-winding action bound](frontier_wave7_187_leech_compact_winding_action_bound.md)
 - [Nonlinear Leech commissioning packet](frontier_wave7_188_leech_nonlinear_commissioning_packet.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
+- [Joined-cell MPO certificate architecture](frontier_wave7_191_leech_joined_cell_mpo_certificate_architecture.md)
+- [Metric-optimized joined-cell MPS ordering](frontier_wave7_192_leech_joined_cell_mps_order.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

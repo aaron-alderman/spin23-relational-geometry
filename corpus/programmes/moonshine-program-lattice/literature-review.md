@@ -786,6 +786,16 @@ $10^{-2}$. This makes the bare exponential factor tiny, but does not rigorously
 bound its fluctuation determinant, multi-instanton prefactor or dissipative
 renormalization.
 
+The next full-cosine order is also explicit.
+[Wave 7.189](../frontier/wave-7/frontier_wave7_189_leech_24mode_full_cosine_order_two.md)
+rewrites quartic third order as a sparse resolvent norm, evaluates the mixed
+quartic--sextic term through an operator overlap and adds the octic moment.
+The three coefficients are -0.0259363, +0.0214243 and -0.00243131, leaving a
+strongly cancelled net $-0.00694331U^2$. At $U/u=10^{-2}$ this is only
+$3.27\times10^{-5}$ of the harmonic gap. The computation is order complete,
+but it remains an asymptotic coefficient rather than a rigorous remainder
+bound.
+
 The theory outputs are now collected into an executable same-carrier packet.
 [Wave 7.188](../frontier/wave-7/frontier_wave7_188_leech_nonlinear_commissioning_packet.md)
 freezes twelve calibration and twelve held-out modes, 228 configurations and
@@ -794,6 +804,47 @@ anharmonic coefficients, soft gap, parity, zero-power stability and compact
 offset-phase trend without mode-specific refitting. Passing commissions a
 finite nonlinear compact Leech-metric rotor only; it does not promote the
 chiral edge, orbifold or Monster operator algebra.
+
+The dependency graph has now been audited backward as well as extended
+forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
+shows that the strip endpoint matching still leaves exactly 24 modes on each
+open edge, but each inter-wire bond is one coupled 24-channel cell rather
+than 24 pendula. The old 0.8784249807 gap, thermal table, leakage thresholds
+and 17-level compiler costs are therefore calibration-surrogate results.
+The edge preregistration and weak-interaction stability theorem survive only
+conditionally on a joined-cell gap certificate. This correction narrows the
+next decisive computation to interval-certified lowest even and odd
+eigenvalues of one finite-cutoff Gram-first cell.
+
+[Wave 7.191](../frontier/wave-7/frontier_wave7_191_leech_joined_cell_mpo_certificate_architecture.md)
+removes the apparent storage obstruction. Although the cutoff Hilbert space
+has dimension $(2N+1)^{24}$, the joined Hamiltonian has an exact MPO of bond
+dimension at most 26 because its nonlocal terms are only bilinear charge
+couplings. The inverse-metric cross-block rank peaks at 12, giving a
+compressed target of 14. Dense one-to-four-channel reconstruction is exact
+to $8.9\times10^{-16}$. This makes parity-resolved tensor optimization
+practical, while explicitly requiring validated lower spectral enclosures
+before any Ritz-value gap is promoted.
+
+The tensor ordering is also no longer arbitrary.
+[Wave 7.192](../frontier/wave-7/frontier_wave7_192_leech_joined_cell_mps_order.md)
+computes exact harmonic Gaussian cut entropies from $G^{\pm1/2}$ and selects
+a deterministic coordinate order. It reduces maximum cut entropy by 20.75%
+and the exponential entropy proxy by a factor 2.55. The catalogue order is
+retained as an adversarial convergence control; agreement between both
+orders is required because this harmonic optimization does not certify the
+nonlinear state.
+
+The dependency graph has now been audited backward as well as extended
+forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
+shows that the strip endpoint matching still leaves exactly 24 modes on each
+open edge, but each inter-wire bond is one coupled 24-channel cell rather
+than 24 pendula. The old 0.8784249807 gap, thermal table, leakage thresholds
+and 17-level compiler costs are therefore calibration-surrogate results.
+The edge preregistration and weak-interaction stability theorem survive only
+conditionally on a joined-cell gap certificate. This correction narrows the
+next decisive computation to interval-certified lowest even and odd
+eigenvalues of one finite-cutoff Gram-first cell.
 
 The same carrier now has a quantitative dynamics record in
 [Wave 7.140](../frontier/wave-7/frontier_wave7_140_monster_edge_dynamics_and_transport_witness.md).

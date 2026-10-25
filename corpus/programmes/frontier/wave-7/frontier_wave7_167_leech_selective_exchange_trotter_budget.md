@@ -8,6 +8,11 @@
 
 **Certificate:** [commutator-spectrum and resource verifier](../../../../verification/verify/verify_leech_selective_exchange_trotter_budget.mjs)
 
+> **Scope notice (Wave 7.190).** The one-excitation commutator result survives
+> after a valid cell-level two-state projection.  Basis-change and hardware
+> counts inherited from the 17-level pendulum do not transport to the joined
+> Gram-first cell.
+
 ## Exact even--odd commutator
 
 In the one-excitation sector, the onsite term is \(\Delta I\) and commutes
@@ -83,3 +88,4 @@ rotations.
 - [Transition-selective exchange compiler](frontier_wave7_166_leech_transition_selective_exchange_compiler.md)
 - [Excitation-hopping stress lane](frontier_wave7_164_leech_pendulum_excitation_hopping_stress_lane.md)
 - [Exact free-fermion evolution selected by this budget](frontier_wave7_168_leech_free_fermion_matchgate_evolution.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

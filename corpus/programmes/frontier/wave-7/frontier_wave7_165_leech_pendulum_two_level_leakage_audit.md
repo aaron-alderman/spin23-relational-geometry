@@ -8,6 +8,10 @@
 
 **Certificate:** [eigenvector and matrix-element verifier](../../../../verification/verify/verify_leech_pendulum_two_level_leakage_audit.mjs)
 
+> **Scope notice (Wave 7.190).** This is a single-pendulum coupler calibration
+> and a general warning about leakage.  Its transition matrix elements and
+> threshold are not values for the coupled Gram-first cell.
+
 ## The projection is not free
 
 Wave 7.164's exact hopping threshold belongs to a two-state effective model.
@@ -84,3 +88,4 @@ typed as an engineered effective-Hamiltonian experiment.
 - [Rotor-native pendulum gap](frontier_wave7_160_leech_rotor_native_pendulum_gap.md)
 - [Fixed-cutoff local gap stability](frontier_wave7_163_leech_fixed_cutoff_local_gap_stability.md)
 - [Transition-selective exchange compiler](frontier_wave7_166_leech_transition_selective_exchange_compiler.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

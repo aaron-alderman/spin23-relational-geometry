@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "leech-product-to-coupled-dependency-audit-v1",
+  "date": "2026-10-25",
+  "correctedCarrier": {
+    "perInterwireBondHamiltonian": "H_cell=(U/2)n^T G^{-1}n+u sum_i(1-cos(theta_i))",
+    "channelsPerCell": 24,
+    "nonzeroOffDiagonalGramPairs": 179,
+    "stripFactorization": "Y-1 disjoint coupled 24-channel cells, not 24(Y-1) independent pendula",
+    "obsoleteImportedGap": 0.8784249806868974
+  },
+  "dependencyClassification": [
+    {
+      "wave": 160,
+      "status": "survives-as-local-element-calibration-only",
+      "survives": ["single compact-rotor cutoff convergence", "single-coordinate spectroscopy benchmark"],
+      "doesNotTransport": ["the numerical gap as the gap of the joined Gram-first cell"]
+    },
+    {
+      "wave": 161,
+      "status": "partly-survives",
+      "survives": ["disjoint inter-wire bond matching", "48 open-boundary modes", "zero unpaired modes after periodic closure", "width-independent cell gap if the identical coupled cell is itself gapped"],
+      "doesNotTransport": ["factorization into 24(Y-1) pendula", "0.8784249806868974 bulk gap", "published thermal and perturbation numbers"]
+    },
+    {
+      "wave": 162,
+      "status": "survives-conditionally",
+      "survives": ["edge dispersion, chirality, Casimir, current-count and rootlessness preregistration"],
+      "condition": "bulk qualification must use the joined Gram-first carrier"
+    },
+    {
+      "wave": 163,
+      "status": "theorem-template-survives-conditionally",
+      "survives": ["fixed-cutoff weak-interaction stability template for disjoint finite-dimensional cells"],
+      "doesNotTransport": ["17-dimensional cell", "0.8784249806868974 numerical anchor", "72-setting normalization by that anchor"],
+      "condition": "certify a positive gap for the 24-channel cutoff cell of dimension (2N+1)^24, or a symmetry-reduced equivalent"
+    },
+    {
+      "wave": 164,
+      "status": "abstract-projected-stress-family",
+      "survives": ["Delta-2|t| band edge for a genuine two-level cell projection"],
+      "doesNotTransport": ["the old numerical Delta and closure point as Gram-first-carrier predictions"]
+    },
+    {
+      "wave": 165,
+      "status": "single-pendulum-calibration-surrogate",
+      "survives": ["warning that a natural coupler leaks outside a two-level projection"],
+      "doesNotTransport": ["single-pendulum matrix elements and leakage threshold as joined-cell values"]
+    },
+    {
+      "wave": 166,
+      "status": "logical-method-survives-resource-count-does-not",
+      "survives": ["selective exchange between two chosen cell eigenstates"],
+      "doesNotTransport": ["17-level basis transform and its gate counts"]
+    },
+    {
+      "wave": 167,
+      "status": "logical-chain-calibration-surrogate",
+      "survives": ["one-excitation even-odd commutator and Trotter formula after a valid cell-level two-state compilation"],
+      "doesNotTransport": ["hardware resource counts inherited from the 17-level pendulum"]
+    },
+    {
+      "wave": 168,
+      "status": "logical-chain-calibration-surrogate",
+      "survives": ["free-fermion solution of the declared nearest-neighbour two-level chain"],
+      "doesNotTransport": ["evidence that the physical Gram-first carrier has that projection or those compiler costs"]
+    },
+    {
+      "waves": "169-179",
+      "status": "joined-linear-carrier-route",
+      "survives": ["metric implementation, conditioning, tolerance and linear commissioning programme"]
+    },
+    {
+      "waves": "180-189",
+      "status": "joined-nonlinear-carrier-route",
+      "survives": ["coupled harmonic spectrum", "all-mode weak-cosine expansion through U^2", "compact winding action floor", "nonlinear commissioning packet"]
+    }
+  ],
+  "replacementNumericalAnchors": {
+    "type": "all-24-mode one-well asymptotic predictions, not rigorous global compact-cell gaps",
+    "gapAtUOveru0p001": 0.006659118249180167,
+    "gapAtUOveru0p01": 0.020721250374378462,
+    "source": "leech-24mode-full-cosine-order-two-v1"
+  },
+  "promotionRule": "No Wave 7.160 value, including 0.8784249806868974, may be used as a Gate-A gap, thermal scale, perturbation normalization or resource anchor for the Gram-first carrier. Promote only quantities rederived from the joined 24-channel cell and measured on the same marked hardware.",
+  "nextCertificate": "At a declared finite cutoff, obtain a rigorous or interval-certified lowest even and odd eigenvalue of one joined 24-channel cell, then rebuild the strip thermal, stability and projected-hopping packets from that certified cell spectrum.",
+  "epistemicStatus": "exact dependency and type correction; joined finite-cutoff cell gap remains open"
+}

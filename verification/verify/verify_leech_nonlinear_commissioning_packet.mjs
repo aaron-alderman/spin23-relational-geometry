@@ -8,7 +8,7 @@ const record = read("leech-nonlinear-commissioning-packet-v1.json");
 const harmonic = read("leech-coupled-metric-pendulum-gap-audit-v1.json");
 const anharmonic = read("leech-coupled-anharmonic-spectroscopy-v1.json");
 const mixing = read("leech-one-quantum-quartic-mixing-v1.json");
-const order = read("leech-24mode-full-cosine-order-three-halves-v1.json");
+const order = read("leech-24mode-full-cosine-order-two-v1.json");
 const winding = read("leech-compact-winding-action-bound-v1.json");
 
 assert.equal(record.schemaVersion, "leech-nonlinear-commissioning-packet-v1");
@@ -43,7 +43,7 @@ assert.ok(record.gates.find(({id}) => id === "N5").pass.includes("no absolute am
 const discrepancies = order.scans.filter((scan) => scan.relativeDifferenceFromEightModeGap)
   .map((scan) => scan.relativeDifferenceFromEightModeGap);
 assert.ok(Math.max(...discrepancies) < 0.001);
-assert.ok(record.boundary.includes("0.0081-0.0818 percent theory-ladder discrepancies"));
+assert.ok(record.boundary.includes("0.0082-0.0852 percent theory-ladder discrepancies"));
 assert.equal(winding.exactMetricData.minimumCoordinateOneBased, 2);
 assert.ok(record.notPromoted.includes("Monster defects"));
 

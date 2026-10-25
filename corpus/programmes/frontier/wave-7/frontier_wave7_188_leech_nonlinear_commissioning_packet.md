@@ -50,7 +50,7 @@ At 100 repeats per configuration this is 22,800 acquisitions.
 - **N6:** zero-power extrapolation from three drive powers must remain inside
   N1--N3 tolerances.
 
-The nonlinear tolerances deliberately exceed the known 0.0081--0.0818%
+The nonlinear tolerances deliberately exceed the known 0.0082--0.0852%
 discrepancy between the independent perturbative and active-space ladders.
 They are engineering gates, not fundamental constants.
 
@@ -62,5 +62,6 @@ Moonshine character, Monster defects or Griess product.
 
 - [24-port linear commissioning](frontier_wave7_177_leech_24port_admittance_commissioning_packet.md)
 - [All-24-mode full-cosine order completion](frontier_wave7_186_leech_24mode_full_cosine_order_three_halves.md)
+- [All-24-mode full-cosine order two](frontier_wave7_189_leech_24mode_full_cosine_order_two.md)
 - [Compact-winding action bound](frontier_wave7_187_leech_compact_winding_action_bound.md)
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)

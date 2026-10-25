@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "leech-joined-cell-mpo-certificate-architecture-v1",
+  "date": "2026-10-25",
+  "carrier": "H=(U/2)n^T G^-1 n+u sum_i(1-cos theta_i)",
+  "channels": 24,
+  "exactMetric": {
+    "inverseIntegral": true,
+    "nonzeroOffDiagonalPairsInInverse": 220
+  },
+  "exactMpo": {
+    "automatonBondDimensionUpperBound": 26,
+    "construction": "start one charge channel at site i, propagate identity, and close it at site j with U(G^-1)_ij n_j; send local diagonal and cosine terms directly from start to end",
+    "crossCutRanks": [1,2,3,4,5,6,7,8,9,10,11,12,11,10,9,8,7,6,5,4,3,2,1],
+    "maximumCrossCutRank": 12,
+    "compressedQuadraticBondDimensionTarget": 14
+  },
+  "denseReconstructionChecks": [
+    {"channels":1,"cutoff":1,"HilbertDimension":3,"maximumMatrixElementError":0,"maximumParityCommutatorElement":0},
+    {"channels":2,"cutoff":1,"HilbertDimension":9,"maximumMatrixElementError":4.440892098500626e-16,"maximumParityCommutatorElement":0},
+    {"channels":3,"cutoff":1,"HilbertDimension":27,"maximumMatrixElementError":4.440892098500626e-16,"maximumParityCommutatorElement":0},
+    {"channels":4,"cutoff":1,"HilbertDimension":81,"maximumMatrixElementError":8.881784197001252e-16,"maximumParityCommutatorElement":0}
+  ],
+  "symmetry": "global inversion n_i -> -n_i is exact and splits the lowest even and odd levels",
+  "certificateProtocol": [
+    "optimize the lowest even and odd MPS independently while increasing bond dimension and local cutoff",
+    "freeze normalized tensors and compute Rayleigh values plus full MPO residual norms",
+    "obtain lower enclosures using a validated block-Lanczos or Lehmann-Goerisch/inertia step, not residual proximity alone",
+    "require disjoint even-ground and odd-first intervals and convergence under cutoff, bond dimension and site ordering",
+    "rebuild strip thermal, stability and hopping packets only from the resulting joined-cell interval"
+  ],
+  "established": "the full joined 24-channel cutoff Hamiltonian has an exact MPO representation of bond dimension at most 26, so its exponential Hilbert dimension is not an exponential operator-representation barrier",
+  "boundary": "The MPO identity is exact, but DMRG Ritz values alone are upper bounds. No spectral gap is certified until a validated lower-enclosure step is executed.",
+  "epistemicStatus": "exact operator representation and executable reconstruction checks; spectral interval computation open"
+}

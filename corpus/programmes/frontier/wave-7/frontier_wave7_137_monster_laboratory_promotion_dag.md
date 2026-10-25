@@ -224,6 +224,11 @@ making the full cosine order consistent through absolute order $U^{3/2}$.
 The result agrees with the independent eight-mode full-cosine gap within
 0.0081% at $U/u=10^{-3}$ and 0.0818% at $10^{-2}$; the $U^2$ remainder and
 compact tunnelling remain open.
+Wave 7.189 closes the next perturbative order. A matrix-free resolvent
+contraction evaluates quartic third order, mixed quartic--sextic second order
+and octic first order across all 24 modes. Their strongly cancelling sum is
+$-0.0069433101U^2$, only $3.27\times10^{-5}$ of the harmonic gap at
+$U/u=10^{-2}$. A rigorous remainder bound remains open.
 Wave 7.187 turns the compact caveat into a metric theorem. Exact inversion of
 the Gram-first form gives minimum Schur mass $1/22$, so every nonzero winding
 obeys $S_E\ge8\sqrt{u/(22U)}$. The action floor is 53.94 at $U/u=10^{-3}$
@@ -236,6 +241,29 @@ scale and $U/u$ model; twelve held-out modes test the harmonic ratios,
 anharmonic coefficients, projected mixing, soft gap, parity, drive-power
 stability and offset-phase trend without mode-specific refits. Passing
 commissions only a finite nonlinear compact Leech-metric carrier.
+Wave 7.190 propagates the coupled-metric correction backward through the
+strip lane. The exact endpoint matching and 48 open-edge modes survive, but
+the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
+pendula. The old gap, thermal table, leakage thresholds and 17-level compiler
+costs are now explicitly typed as calibration surrogates. A finite-cutoff
+interval certificate for the joined cell's lowest even and odd eigenvalues
+is required before the strip stability and hopping packets can be promoted.
+Wave 7.191 makes that certificate computationally addressable: the complete
+cutoff Hamiltonian has an exact MPO of bond dimension at most 26, with exact
+inverse-metric cross-cut rank no larger than 12. A parity-resolved MPS search
+can therefore produce candidates, but promotion still requires validated
+lower enclosures, not DMRG Ritz values alone.
+Wave 7.192 fixes a metric-derived MPS ordering that lowers the harmonic
+maximum cut entropy by 20.75% and its exponential proxy by a factor 2.55.
+Catalogue-order agreement remains a required control against nonlinear
+optimizer trapping.
+Wave 7.190 propagates the coupled-metric correction backward through the
+strip lane. The exact endpoint matching and 48 open-edge modes survive, but
+the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
+pendula. The old gap, thermal table, leakage thresholds and 17-level compiler
+costs are now explicitly typed as calibration surrogates. A finite-cutoff
+interval certificate for the joined cell's lowest even and odd eigenvalues
+is required before the strip stability and hopping packets can be promoted.
 Wave 7.142 then uses one shared dynamical sign per wire bond to gauge the
 diagonal inversion of all 24 channels and verifies all 1152 mutual null
 pairings. The remaining gate is microscopic realization plus infrared sector
@@ -282,8 +310,13 @@ P4 questions.
 - [Full-cosine active-mode ladder](frontier_wave7_184_leech_full_cosine_active_mode_ladder.md)
 - [Complete 24-mode quartic second order](frontier_wave7_185_leech_24mode_quartic_second_order.md)
 - [All-24-mode full-cosine order completion](frontier_wave7_186_leech_24mode_full_cosine_order_three_halves.md)
+- [All-24-mode full-cosine order two](frontier_wave7_189_leech_24mode_full_cosine_order_two.md)
 - [Compact-winding action bound](frontier_wave7_187_leech_compact_winding_action_bound.md)
 - [Nonlinear Leech commissioning packet](frontier_wave7_188_leech_nonlinear_commissioning_packet.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
+- [Joined-cell MPO certificate architecture](frontier_wave7_191_leech_joined_cell_mpo_certificate_architecture.md)
+- [Metric-optimized joined-cell MPS ordering](frontier_wave7_192_leech_joined_cell_mps_order.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
 - [Fixed-cutoff local gap stability](frontier_wave7_163_leech_fixed_cutoff_local_gap_stability.md)

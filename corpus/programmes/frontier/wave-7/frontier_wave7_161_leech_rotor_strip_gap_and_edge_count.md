@@ -8,6 +8,13 @@
 
 **Certificate:** [pairing, spectrum and perturbation verifier](../../../../verification/verify/verify_leech_rotor_strip_gap_and_edge_count.mjs)
 
+> **Supersession notice (Wave 7.190).** The endpoint matching and 48-mode
+> open-edge count below remain exact.  The physical Gram-first strip instead
+> contains \(Y-1\) disjoint *coupled 24-channel cells*.  Factorization into
+> \(24(Y-1)\) pendula, the imported gap \(0.8784249807\), and the thermal and
+> global-perturbation numbers below are retained as an ideal product
+> surrogate, not as predictions for the joined carrier.
+
 ## From one bond to a strip
 
 In the dual Leech basis, every open-strip interaction pairs
@@ -18,7 +25,7 @@ In the dual Leech basis, every open-strip interaction pairs
 \]
 
 These pairs are disjoint: no chiral mode occurs in two ideal locking terms.
-For \(Y\) wires, the microscopic surrogate therefore factorizes into
+For \(Y\) wires, the original product surrogate therefore factorizes into
 \(24(Y-1)\) copies of the convergent Wave 7.160 pendulum, leaving only
 
 \[
@@ -36,7 +43,7 @@ picture.
 
 ## Gap and finite-size targets
 
-Every ideal bulk pair has the fixed-strength rotor gap
+In the original product surrogate, every ideal bulk pair has the gap
 
 \[
  \Delta_{\rm loc}=0.8784249806868974
@@ -85,7 +92,8 @@ The rotor route now passes three tests that the naïve clock route did not:
 3. exact survival of 48 open-boundary modes and their disappearance under
    periodic closure.
 
-This is still not a laboratory Leech phase. The unpaired fields must acquire
+For the joined carrier, only the exact pairing and edge counts in this packet
+are promoted. This is still not a laboratory Leech phase. The unpaired fields must acquire
 the correct chiral dispersion and Leech commutator matrix, and the interacting
 bulk gap must remain stable under local—not merely globally bounded—
 perturbations. Thermal Hall response, finite-size Casimir scaling and the
@@ -99,3 +107,4 @@ perturbations. Thermal Hall response, finite-size Casimir scaling and the
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
 - [Fixed-cutoff local bulk-gap stability](frontier_wave7_163_leech_fixed_cutoff_local_gap_stability.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

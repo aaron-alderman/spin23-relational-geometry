@@ -119,8 +119,76 @@ const corrections = (vector, source) => {
     reachableStatesIncludingSource: vector.size
   };
 };
+const resolventVector = (vector, source) => {
+  const output = new Map();
+  const sourceKey = key(source);
+  const sourceEnergy = energy(source);
+  for (const [stateKey, state] of vector) if (stateKey !== sourceKey) {
+    output.set(stateKey, {
+      occupation: state.occupation,
+      amplitude: state.amplitude / (sourceEnergy - energy(state.occupation))
+    });
+  }
+  return output;
+};
+const normSquared = (vector) => {
+  let value = 0;
+  for (const state of vector.values()) value += state.amplitude ** 2;
+  return value;
+};
+const innerProduct = (first, second) => {
+  let value = 0;
+  const [small, large] = first.size < second.size ? [first, second] : [second, first];
+  for (const [stateKey, state] of small) {
+    const match = large.get(stateKey);
+    if (match) value += state.amplitude * match.amplitude;
+  }
+  return value;
+};
+const quarticExpectation = (vector, source) => {
+  let expectation = 0;
+  let quarticSexticOverlap = 0;
+  let maximumIntermediateStates = 0;
+  for (let coordinate = 0; coordinate < modes; coordinate += 1) {
+    let transformed = applyTheta(vector, coordinate);
+    transformed = applyTheta(transformed, coordinate);
+    maximumIntermediateStates = Math.max(maximumIntermediateStates, transformed.size);
+    expectation -= normSquared(transformed) / 24;
+    let sourceTransformed = singleton(source);
+    for (let power = 0; power < 4; power += 1) {
+      sourceTransformed = applyTheta(sourceTransformed, coordinate);
+    }
+    quarticSexticOverlap += innerProduct(transformed, sourceTransformed) / 720;
+  }
+  return {expectation, quarticSexticOverlap, maximumIntermediateStates};
+};
 const ground = corrections(groundVector, zero);
 const excited = corrections(softVector, soft);
+const computeOrderTwo = process.argv.includes("--order-two");
+let groundResolvent;
+let excitedResolvent;
+let groundQuarticResolvent;
+let excitedQuarticResolvent;
+let groundThirdOrderQuartic = null;
+let excitedThirdOrderQuartic = null;
+let thirdOrderQuarticGapCoefficient = null;
+let groundMixedQuarticSextic = null;
+let excitedMixedQuarticSextic = null;
+let mixedQuarticSexticGapCoefficient = null;
+if (computeOrderTwo) {
+  groundResolvent = resolventVector(groundVector, zero);
+  excitedResolvent = resolventVector(softVector, soft);
+  groundQuarticResolvent = quarticExpectation(groundResolvent, zero);
+  excitedQuarticResolvent = quarticExpectation(excitedResolvent, soft);
+  groundThirdOrderQuartic = groundQuarticResolvent.expectation
+    - ground.diagonalFirstOrder * normSquared(groundResolvent);
+  excitedThirdOrderQuartic = excitedQuarticResolvent.expectation
+    - excited.diagonalFirstOrder * normSquared(excitedResolvent);
+  thirdOrderQuarticGapCoefficient = excitedThirdOrderQuartic - groundThirdOrderQuartic;
+  groundMixedQuarticSextic = 2 * groundQuarticResolvent.quarticSexticOverlap;
+  excitedMixedQuarticSextic = 2 * excitedQuarticResolvent.quarticSexticOverlap;
+  mixedQuarticSexticGapCoefficient = excitedMixedQuarticSextic - groundMixedQuarticSextic;
+}
 const firstOrderGapCoefficient = excited.diagonalFirstOrder - ground.diagonalFirstOrder;
 const secondOrderGapCoefficient = excited.secondOrder - ground.secondOrder;
 const physicalCoordinateVariances = Array.from({length: modes}, (_, coordinate) =>
@@ -131,6 +199,12 @@ const sexticFirstOrderGapCoefficient = variances[0] * pairs[0].vector.reduce(
 ) / 8;
 const fullCosineOrderThreeHalvesCoefficient = secondOrderGapCoefficient
   + sexticFirstOrderGapCoefficient;
+const octicFirstOrderGapCoefficient = -variances[0] * pairs[0].vector.reduce(
+  (sum, value, coordinate) => sum + value ** 2 * physicalCoordinateVariances[coordinate] ** 3, 0
+) / 48;
+const fullCosineOrderTwoCoefficient = computeOrderTwo
+  ? thirdOrderQuarticGapCoefficient + mixedQuarticSexticGapCoefficient
+    + octicFirstOrderGapCoefficient : null;
 
 const ratios = [0.0001, 0.001, 0.01];
 const scans = ratios.map((ratio) => {
@@ -140,6 +214,10 @@ const scans = ratios.map((ratio) => {
   const sexticFirstOrderGapCorrection = sexticFirstOrderGapCoefficient * ratio ** 1.5;
   const fullCosineOrderThreeHalvesCorrection = fullCosineOrderThreeHalvesCoefficient
     * ratio ** 1.5;
+  const thirdOrderQuarticGapCorrection = computeOrderTwo
+    ? thirdOrderQuarticGapCoefficient * ratio ** 2 : null;
+  const fullCosineOrderTwoCorrection = computeOrderTwo
+    ? fullCosineOrderTwoCoefficient * ratio ** 2 : null;
   return {
     chargingToCosineRatio: ratio,
     harmonicGap,
@@ -147,12 +225,16 @@ const scans = ratios.map((ratio) => {
     secondOrderQuarticGapCorrection: secondOrderGapCorrection,
     firstOrderSexticGapCorrection: sexticFirstOrderGapCorrection,
     fullCosineOrderThreeHalvesCorrection,
+    thirdOrderQuarticGapCorrection,
+    fullCosineOrderTwoCorrection,
     secondOrderRelativeToHarmonic: secondOrderGapCorrection / harmonicGap,
     fullCosineOrderThreeHalvesRelativeToHarmonic:
       fullCosineOrderThreeHalvesCorrection / harmonicGap,
     gapThroughSecondOrderQuartic: harmonicGap + firstOrderGapCorrection + secondOrderGapCorrection,
     gapThroughFullCosineOrderThreeHalves:
-      harmonicGap + firstOrderGapCorrection + fullCosineOrderThreeHalvesCorrection
+      harmonicGap + firstOrderGapCorrection + fullCosineOrderThreeHalvesCorrection,
+    gapThroughFullCosineOrderTwo: computeOrderTwo ? harmonicGap + firstOrderGapCorrection
+      + fullCosineOrderThreeHalvesCorrection + fullCosineOrderTwoCorrection : null
   };
 });
 
@@ -161,6 +243,7 @@ console.log(JSON.stringify({
   modes,
   sourceTransition: "harmonic vacuum to the softest one-quantum mode",
   perturbation: "V4=-(1/24) sum_i theta_i^4 at u=1",
+  orderTwoComputed: computeOrderTwo,
   scaling: "first-order gap correction scales as U; second order scales as U^(3/2) at fixed u=1",
   reachableStateAudit: {
     ground: {
@@ -180,7 +263,21 @@ console.log(JSON.stringify({
     softestSecondOrder: excited.secondOrder,
     secondOrderGap: secondOrderGapCoefficient,
     sexticFirstOrderGap: sexticFirstOrderGapCoefficient,
-    fullCosineOrderThreeHalvesGap: fullCosineOrderThreeHalvesCoefficient
+    fullCosineOrderThreeHalvesGap: fullCosineOrderThreeHalvesCoefficient,
+    groundThirdOrderQuartic,
+    softestThirdOrderQuartic: excitedThirdOrderQuartic,
+    thirdOrderQuarticGap: thirdOrderQuarticGapCoefficient,
+    groundMixedQuarticSextic,
+    softestMixedQuarticSextic: excitedMixedQuarticSextic,
+    mixedQuarticSexticGap: mixedQuarticSexticGapCoefficient,
+    octicFirstOrderGap: octicFirstOrderGapCoefficient,
+    fullCosineOrderTwoGap: fullCosineOrderTwoCoefficient
   },
+  thirdOrderSparseAudit: computeOrderTwo ? {
+    groundResolventStates: groundResolvent.size,
+    softestResolventStates: excitedResolvent.size,
+    groundMaximumThetaSquaredStates: groundQuarticResolvent.maximumIntermediateStates,
+    softestMaximumThetaSquaredStates: excitedQuarticResolvent.maximumIntermediateStates
+  } : null,
   scans
 }, null, 2));

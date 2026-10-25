@@ -8,6 +8,11 @@
 
 **Certificate:** [eigenbasis and selective-rotation verifier](../../../../verification/verify/verify_leech_transition_selective_exchange_compiler.mjs)
 
+> **Scope notice (Wave 7.190).** Selective exchange remains a valid logical
+> construction for any two certified cell eigenstates.  The 17-level basis
+> transform and resource counts below belong only to the single-pendulum
+> surrogate; the joined 24-channel cell has a different Hilbert-space cost.
+
 ## Exact finite-cutoff construction
 
 The leakage problem in Wave 7.165 is avoided digitally by using the actual
@@ -88,3 +93,4 @@ unless a native analog exchange implements the full hopping Hamiltonian.
 - [Excitation-hopping stress lane](frontier_wave7_164_leech_pendulum_excitation_hopping_stress_lane.md)
 - [Rotor-native pendulum gap](frontier_wave7_160_leech_rotor_native_pendulum_gap.md)
 - [Selective-exchange Trotter budget](frontier_wave7_167_leech_selective_exchange_trotter_budget.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

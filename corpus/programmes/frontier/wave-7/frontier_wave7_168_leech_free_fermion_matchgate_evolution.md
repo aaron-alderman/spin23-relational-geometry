@@ -8,6 +8,11 @@
 
 **Certificate:** [sine-diagonalization and resource verifier](../../../../verification/verify/verify_leech_free_fermion_matchgate_evolution.mjs)
 
+> **Scope notice (Wave 7.190).** The free-fermion solution remains an exact
+> logical calibration null.  It is evidence for the joined carrier only after
+> a coupled-cell two-state dictionary and its physical exchange operator have
+> been certified; its old local compiler cost does not transport.
+
 ## The selected lane is exactly soluble
 
 The transition-selective two-level chain from Wave 7.166 is a hard-core
@@ -86,3 +91,4 @@ the Leech lattice or Monster.
 - [Selective-exchange Trotter budget](frontier_wave7_167_leech_selective_exchange_trotter_budget.md)
 - [Transition-selective exchange compiler](frontier_wave7_166_leech_transition_selective_exchange_compiler.md)
 - [Excitation-hopping stress lane](frontier_wave7_164_leech_pendulum_excitation_hopping_stress_lane.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

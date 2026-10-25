@@ -8,6 +8,12 @@
 
 **Certificate:** [hypothesis and scope verifier](../../../../verification/verify/verify_leech_fixed_cutoff_local_gap_stability_ledger.mjs)
 
+> **Retyping notice (Wave 7.190).** The weak-interaction stability theorem
+> remains applicable in form to disjoint, finite-dimensional joined cells.
+> The 17-dimensional cell and \(0.8784249807\) anchor below describe the old
+> product-pendulum surrogate.  Applying the theorem to the Gram-first carrier
+> now requires a positive-gap certificate for one cutoff 24-channel cell.
+
 ## The theorem-level bridge
 
 At cutoff \(N=8\), every ideal bulk bond is a 17-dimensional system with a
@@ -82,3 +88,4 @@ before the bulk criterion is met.
 - [Leech-edge chiral preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
 - [Pendulum excitation-hopping stress lane](frontier_wave7_164_leech_pendulum_excitation_hopping_stress_lane.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

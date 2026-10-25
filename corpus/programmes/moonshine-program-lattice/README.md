@@ -1017,3 +1017,7 @@ recovers the ten Baby-Monster components.
 - [All-24-mode full-cosine order completion](../frontier/wave-7/frontier_wave7_186_leech_24mode_full_cosine_order_three_halves.md)
 - [Compact-winding action bound](../frontier/wave-7/frontier_wave7_187_leech_compact_winding_action_bound.md)
 - [Nonlinear Leech commissioning packet](../frontier/wave-7/frontier_wave7_188_leech_nonlinear_commissioning_packet.md)
+- [All-24-mode full-cosine order two](../frontier/wave-7/frontier_wave7_189_leech_24mode_full_cosine_order_two.md)
+- [Product-to-coupled dependency audit](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
+- [Joined-cell MPO certificate architecture](../frontier/wave-7/frontier_wave7_191_leech_joined_cell_mpo_certificate_architecture.md)
+- [Metric-optimized joined-cell MPS ordering](../frontier/wave-7/frontier_wave7_192_leech_joined_cell_mps_order.md)

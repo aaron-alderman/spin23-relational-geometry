@@ -8,6 +8,12 @@
 
 **Certificate:** [dispersion and gap verifier](../../../../verification/verify/verify_leech_pendulum_excitation_hopping_stress_lane.mjs)
 
+> **Retyping notice (Wave 7.190).** The cosine band and
+> \(\Delta-2|t|\) closure are exact for the declared two-state chain.  Its
+> numerical \(\Delta\) is a single-pendulum calibration value, not the joined
+> Gram-first cell gap.  Physical transport requires projection onto two
+> certified eigenstates of the coupled 24-channel cell.
+
 ## A perturbation radius with a number
 
 Wave 7.163 proves that some volume-independent local stability neighborhood
@@ -91,3 +97,4 @@ fixed-cutoff theorem.
 - [Rotor-strip gap and edge count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Rotor-native pendulum gap](frontier_wave7_160_leech_rotor_native_pendulum_gap.md)
 - [Pendulum two-level leakage audit](frontier_wave7_165_leech_pendulum_two_level_leakage_audit.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

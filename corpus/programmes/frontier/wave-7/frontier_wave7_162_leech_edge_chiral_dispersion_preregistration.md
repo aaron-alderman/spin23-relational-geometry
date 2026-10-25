@@ -8,6 +8,11 @@
 
 **Certificate:** [spectrum, transport and impostor verifier](../../../../verification/verify/verify_leech_edge_chiral_dispersion_preregistration.mjs)
 
+> **Dependency note (Wave 7.190).** These edge observables remain the correct
+> preregistered targets, but their bulk prerequisite is the joined Gram-first
+> 24-channel cell, not the product-pendulum gap previously imported by Wave
+> 7.161.
+
 ## The promotion test
 
 Wave 7.161 leaves exactly 24 unpaired modes on each open boundary. A mode
@@ -87,3 +92,4 @@ promote the inversion orbifold, twisted sector or Monster operator algebra.
 - [Current ladder and Monster detector](frontier_wave7_130_c24_current_ladder_and_monster_detector.md)
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
 - [Fixed-cutoff local bulk-gap stability](frontier_wave7_163_leech_fixed_cutoff_local_gap_stability.md)
+- [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

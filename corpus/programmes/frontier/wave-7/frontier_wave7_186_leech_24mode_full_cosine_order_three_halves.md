@@ -60,6 +60,10 @@ quartic third order, mixed quartic--sextic second order and octic first order,
 and it needs consistent treatment of near-degenerate subspaces. Compact
 interwell tunnelling and the thermodynamic bulk are also outside this proof.
 
+[Wave 7.189](frontier_wave7_189_leech_24mode_full_cosine_order_two.md)
+continues the same all-24-mode expansion through absolute order $U^2$ using
+a matrix-free sparse resolvent contraction.
+
 [Wave 7.187](frontier_wave7_187_leech_compact_winding_action_bound.md)
 controls the missing compact sector at the exponent level: every nontrivial
 winding has $S_E\ge8\sqrt{u/(22U)}$. Its fluctuation prefactor remains open.
@@ -71,3 +75,4 @@ winding has $S_E\ge8\sqrt{u/(22U)}$. Its fluctuation prefactor remains open.
 - [Coupled anharmonic spectroscopy](frontier_wave7_181_leech_coupled_anharmonic_spectroscopy.md)
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
 - [Compact-winding action bound](frontier_wave7_187_leech_compact_winding_action_bound.md)
+- [All-24-mode full-cosine order two](frontier_wave7_189_leech_24mode_full_cosine_order_two.md)
