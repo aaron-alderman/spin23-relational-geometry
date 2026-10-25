@@ -24,7 +24,7 @@ Completion never means that nature or mathematics has no unknown structure. It m
 | EXIT-05 · Literature-frontier saturation | Every major branch has a dated reproducible search receipt and a bounded residual novelty statement. | Passed |
 | EXIT-06 · Claim implication and defeat closure | Every authoritative claim has upstream assumptions, downstream consequences, defeat conditions and machine-auditable status propagation. | Passed |
 | EXIT-07 · Standalone narrative closure | Every authoritative route tells the Jordan–Lie middle through things, reasons, alternatives, pictures, status and implications while keeping optional readings typed. | Passed |
-| EXIT-08 · Documentation, linking and retrieval closure | Authority, links, hashes, generated surfaces, duplication, contradiction, centrality bias and stratified held-out retrieval all pass. | Open |
+| EXIT-08 · Documentation, linking and retrieval closure | Authority, links, hashes, generated surfaces, duplication, contradiction, centrality bias and stratified held-out retrieval all pass. | Passed |
 | EXIT-09 · Adversarial reproducible release | One clean frozen checkout regenerates, verifies, survives red-team sampling and emits one identity-consistent dated release certificate. | Open |
 
 No gate can compensate for another. A beautiful narrative cannot close an untyped physical map. A passing experiment cannot repair missing provenance. Complete linking cannot turn PageRank into evidence. A true theorem cannot supply a detector, and a detector cannot choose an ontology by itself.
@@ -72,13 +72,15 @@ The [claim implication and defeat graph](claim_implication_defeat_graph_v1.md) n
 
 The [standalone narrative audit](standalone_narrative_audit_v1.md) verifies the scientific synthesis, Edition 3 book and orientation/explanatory route against one common reading test. All three begin from things and experimental loss before technical names, preserve the Jordan–typed-middle–Lie division of labour, explain reasons and nearest alternatives, separate mathematical closure from physical realization, place implications beside non-implications, bring hope down to bounded work and put optional mythic or theological readings last. The former “hot off the press” material is integrated into the book's subject order; provenance dates remain in controlling sources rather than steering the narrative. EXIT-07 passes.
 
+The [documentation, linking and retrieval gate](documentation_linking_retrieval_gate_v1.md) joins the front-door authority map, complete object classification, link closure, canonical claim identities, generated provenance and governed search benchmark. All 16 roots are present and typed; no inventoried object is unclassified; no closure or claim link is missing; and no canonical claim diverges from its working copy. The only legacy numeric collision, claim 963, remains two distinct path-plus-hash identities. Exact-hash and normalized-title duplicate and status-conflict candidates are exhausted. All 30 governed search cases pass at MRR 0.848333, while five extra held-out routes remain visible through fifteen selector runs spanning zero, default and maximum graph weight, including a newer minority branch. This is deliberately not presented as a proof of global semantic consistency: cross-wording contradiction is tested adversarially at release. EXIT-08 passes.
+
 The immediate programme is therefore:
 
 1. disposition the 518 normalized topic-level adjacency candidates, then expand and deduplicate at claim-family and object level;
 2. preserve the now-passed terminal-neighbourhood matrix and automatically review any new closed or blocked topic;
 3. preserve the now-passed experiment programme contract and execute programmes only when their external build gates are met;
 4. preserve the now-passed theory, literature and implication/defeat audits;
-5. preserve the standalone narrative gate and integrate authority, links, contradiction checks, PageRank-bias checks and held-out retrieval into one release gate;
+5. preserve the now-passed standalone narrative and documentation/linking/retrieval gates;
 6. run an adversarial clean-checkout release and issue the dated saturation certificate only when all nine gates pass.
 
 Until then, the honest status is:

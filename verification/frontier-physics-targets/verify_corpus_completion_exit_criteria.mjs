@@ -14,6 +14,8 @@ const implicationGraphTarget = "corpus/programmes/frontier-physics-targets/claim
 const implicationGraph = JSON.parse(fs.readFileSync(path.join(root, implicationGraphTarget), "utf8"));
 const narrativeAuditTarget = "corpus/programmes/frontier-physics-targets/standalone_narrative_audit_v1.json";
 const narrativeAudit = JSON.parse(fs.readFileSync(path.join(root, narrativeAuditTarget), "utf8"));
+const documentationGateTarget = "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json";
+const documentationGate = JSON.parse(fs.readFileSync(path.join(root, documentationGateTarget), "utf8"));
 const failures = [];
 
 if (contract.schema !== "frontier.corpus-completion-exit-criteria/1") failures.push("schema mismatch");
@@ -82,6 +84,18 @@ const narrativeLayerPasses = narrativeAudit.summary?.routes === 3
   && narrativeAudit.summary?.theologyAssumptionPass === true;
 if (!narrativeLayerPasses) failures.push("EXIT-07: standalone narrative audit is incomplete");
 if (narrativeGate?.status !== (narrativeLayerPasses ? "passed" : "open")) failures.push("EXIT-07: contract status is inconsistent with the narrative audit summary");
+
+const documentationExitGate = contract.gates?.find(gate => gate.id === "EXIT-08");
+const documentationLayerPasses = documentationGate.summary?.pass === true
+  && documentationGate.summary?.failures?.length === 0
+  && documentationGate.sections?.linkAuthority?.pass === true
+  && documentationGate.sections?.duplicates?.pass === true
+  && documentationGate.sections?.contradictions?.pass === true
+  && documentationGate.sections?.provenance?.pass === true
+  && documentationGate.sections?.retrieval?.pass === true
+  && documentationGate.sections?.centrality?.pass === true;
+if (!documentationLayerPasses) failures.push("EXIT-08: documentation, linking and retrieval gate is incomplete");
+if (documentationExitGate?.status !== (documentationLayerPasses ? "passed" : "open")) failures.push("EXIT-08: contract status is inconsistent with the documentation gate summary");
 
 const allPass = contract.gates?.every(gate => gate.status === "passed") ?? false;
 if (contract.globalExit?.allGatesMustPass !== true) failures.push("global exit does not require every gate");

@@ -63,6 +63,8 @@ const derivedControlSurfaces = [
   "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.md",
   "corpus/programmes/frontier-physics-targets/standalone_narrative_audit_v1.json",
   "corpus/programmes/frontier-physics-targets/standalone_narrative_audit_v1.md",
+  "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json",
+  "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.md",
 ];
 const excluded = new Set([outJson, outMd, ...derivedControlSurfaces]);
 

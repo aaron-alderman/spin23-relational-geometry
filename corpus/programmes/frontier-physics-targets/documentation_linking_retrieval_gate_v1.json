@@ -1,0 +1,502 @@
+{
+  "schema": "frontier.documentation-linking-retrieval-gate/1",
+  "date": "2026-10-25",
+  "authority": "Release-control evidence only. Linkage, provenance and retrieval do not establish the scientific truth of a claim or make centrality authoritative.",
+  "completionBoundary": "Passing closes EXIT-08 under the declared mechanical and retrieval protocol. Global semantic consistency and release reproducibility remain subject to EXIT-09.",
+  "summary": {
+    "pass": true,
+    "failures": [],
+    "roots": 16,
+    "inventoriedObjects": 6416,
+    "claims": 1573,
+    "benchmarkCases": 30,
+    "benchmarkMRR": 0.848333,
+    "heldOutQueries": 5,
+    "selectorRuns": 15,
+    "duplicateCandidates": 1,
+    "unresolvedDuplicateCandidates": 0,
+    "unresolvedContradictionCandidates": 0
+  },
+  "sections": {
+    "linkAuthority": {
+      "pass": true,
+      "roots": 16,
+      "rootFailures": [],
+      "inventoryObjects": 6416,
+      "explicitlyClassifiedObjects": 6416,
+      "closureLinks": 21781,
+      "brokenClosureLinks": 0,
+      "claims": 1573,
+      "missingClaimLinks": 0,
+      "workingCopyDivergences": 0,
+      "inventoriedObjects": 6416
+    },
+    "duplicates": {
+      "pass": true,
+      "scope": "Exhaustive over exact canonical content hashes, normalized claim titles and legacy numeric identifiers. It does not assert semantic equivalence of differently worded claims.",
+      "exactContentCandidates": [],
+      "normalizedTitleCandidates": [],
+      "legacyIdentifierCollisions": [
+        {
+          "id": 963,
+          "files": [
+            "963_the_landscape_response_geometry_conjecture_and_metric_higgs_strike.md",
+            "963_the_minimal_outgoing_port_pair_is_canonically_the_a2_doublet_and_its_three_face_loss_orbit_is_globally_isotropic.md"
+          ],
+          "disposition": "known identifier collision; canonical path-plus-hash identities remain distinct"
+        }
+      ]
+    },
+    "contradictions": {
+      "pass": true,
+      "scope": "Exhaustive for exact-content and normalized-title status conflicts. This is a candidate audit, not a proof of global logical consistency; cross-wording and cross-document semantic conflicts remain subjects of EXIT-09 adversarial review.",
+      "candidates": [],
+      "classifiedCandidates": 0,
+      "unresolvedCandidates": 0
+    },
+    "provenance": {
+      "pass": true,
+      "inputs": [
+        {
+          "role": "evidenceSpine",
+          "source": "corpus/registers/corpus_evidence_spine.json",
+          "sha256": "c2103a05b00127afb487047156ee85b53c0e9419e1b4b7c1821b17c429f0231a"
+        },
+        {
+          "role": "manifest",
+          "source": "corpus/registers/spin23_corpus_manifest.json",
+          "sha256": "7758b5eaef9bfd87311147eed187cac54d51f6756f6ea6c1d3a61556591b0067"
+        },
+        {
+          "role": "implicationGraph",
+          "source": "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+          "sha256": "462c92d19b58b910ed3caadc90cbd38da32456b85fbcefefc1fa8acb0b3a7b3d"
+        },
+        {
+          "role": "benchmark",
+          "source": "tooling/search/benchmark_baseline_v1.json",
+          "sha256": "aee31c60ac886995d4ae9660318d07a8d3575931355ae85017f22a0a7f24e20e"
+        },
+        {
+          "role": "benchmarkCases",
+          "source": "tooling/search/benchmark_cases.json",
+          "sha256": "539e8d4506eee0d2c2bc6ea7f95ce6c2027bc7ace997ee8bddd3094b0ef4b717"
+        },
+        {
+          "role": "sourceryCandidate",
+          "source": "tooling/search/sourcery_admission_candidate_v1.json",
+          "sha256": "4b9976e68d562d714a3c281f7c3c11f914616d4ad253bb8b7659116ca7c351a7"
+        }
+      ],
+      "frontDoorFreshnessAuthority": "Compared structurally by this verifier and byte-for-byte by tests/repository/corpus_front_door.test.mjs; deliberately not self-hashed here.",
+      "sourceryStatus": "local-candidate-not-protected-runtime-admitted",
+      "sourceryCandidateSha256": "3273aaf2d5a7575ed93a4d7991753bbc88376f1a8b97949f0abb932516d24447",
+      "benchmarkBaselineSha256": "85c01084ae483fbfb0e2f88b1f1fff253e90b95d340c4f82addca0e9f7e0d205"
+    },
+    "retrieval": {
+      "pass": true,
+      "cases": 30,
+      "failed": 0,
+      "passRate": 1,
+      "meanReciprocalRank": 0.848333,
+      "lanes": {
+        "audit": {
+          "cases": 1,
+          "passed": 1
+        },
+        "claim": {
+          "cases": 3,
+          "passed": 3
+        },
+        "concept-collision": {
+          "cases": 1,
+          "passed": 1
+        },
+        "direct": {
+          "cases": 5,
+          "passed": 5
+        },
+        "experiment": {
+          "cases": 7,
+          "passed": 7
+        },
+        "obstruction": {
+          "cases": 5,
+          "passed": 5
+        },
+        "planning": {
+          "cases": 2,
+          "passed": 2
+        },
+        "selector": {
+          "cases": 1,
+          "passed": 1
+        },
+        "spelling": {
+          "cases": 2,
+          "passed": 2
+        },
+        "synthesis": {
+          "cases": 3,
+          "passed": 3
+        }
+      },
+      "strata": {
+        "mathematics": {
+          "ids": [
+            "jordan-sp4-certificate",
+            "link-spin23-envelope",
+            "e8-a2-obstruction"
+          ],
+          "pass": true,
+          "meanReciprocalRank": 0.7333333333333334
+        },
+        "physics": {
+          "ids": [
+            "direct-casimir-probe",
+            "direct-dispersion-landscape",
+            "spectral-boundary"
+          ],
+          "pass": true,
+          "meanReciprocalRank": 1
+        },
+        "experiment": {
+          "ids": [
+            "selector-contraction",
+            "same-carrier-platform",
+            "detector-equivalence",
+            "physical-energy-current"
+          ],
+          "pass": true,
+          "meanReciprocalRank": 1
+        },
+        "ordinary_language": {
+          "ids": [
+            "direct-invariant-atlas",
+            "direct-dynamic-response",
+            "direct-admissibility-zone",
+            "current-synthesis"
+          ],
+          "pass": true,
+          "meanReciprocalRank": 1
+        }
+      },
+      "heldOutSelectorSweep": [
+        {
+          "id": "plain-detector-loss",
+          "stratum": "ordinary_language",
+          "profile": "all",
+          "query": "what information does an experiment lose when a detector turns a field into a record",
+          "targets": [
+            "corpus/syntheses/the_admissibility_frontier_current_synthesis.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "id": "plain-practical-hope",
+          "stratum": "ordinary_language",
+          "profile": "all",
+          "query": "where can this produce a practical engineering improvement or a test for new physics",
+          "targets": [
+            "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+            "corpus/programmes/frontier-physics-targets/finesse_technology_pathway_v1.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "id": "mathematical-hinge",
+          "stratum": "mathematics",
+          "profile": "audit",
+          "query": "positive two by two real matrices Jordan triple sp4",
+          "targets": [
+            "corpus/claims/0000-0099/42_jordan_triple_to_sp4r_determination.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 4,
+              "topPath": "corpus/claims/0000-0099/52_phase_space_lagrangian_grassmannian_branch.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 2,
+              "topPath": "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 2,
+              "topPath": "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "id": "experimental-record-boundary",
+          "stratum": "experiment",
+          "profile": "experiment",
+          "query": "detector nuisance projection reversal frequency geometry waiting time",
+          "targets": [
+            "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 1,
+              "topPath": "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 1,
+              "topPath": "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 4,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "id": "minority-sign-holonomy",
+          "stratum": "minority_new_branch",
+          "profile": "all",
+          "query": "sign holonomy physical detector central minus identity",
+          "targets": [
+            "corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 3,
+              "topPath": "corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 2,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 8,
+              "topPath": "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        }
+      ]
+    },
+    "centrality": {
+      "pass": true,
+      "authorityBoundaryPresent": true,
+      "graphWeights": [
+        0,
+        0.3,
+        0.6
+      ],
+      "tests": [
+        {
+          "id": "plain-detector-loss",
+          "stratum": "ordinary_language",
+          "profile": "all",
+          "query": "what information does an experiment lose when a detector turns a field into a record",
+          "targets": [
+            "corpus/syntheses/the_admissibility_frontier_current_synthesis.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "id": "plain-practical-hope",
+          "stratum": "ordinary_language",
+          "profile": "all",
+          "query": "where can this produce a practical engineering improvement or a test for new physics",
+          "targets": [
+            "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+            "corpus/programmes/frontier-physics-targets/finesse_technology_pathway_v1.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 1,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "id": "mathematical-hinge",
+          "stratum": "mathematics",
+          "profile": "audit",
+          "query": "positive two by two real matrices Jordan triple sp4",
+          "targets": [
+            "corpus/claims/0000-0099/42_jordan_triple_to_sp4r_determination.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 4,
+              "topPath": "corpus/claims/0000-0099/52_phase_space_lagrangian_grassmannian_branch.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 2,
+              "topPath": "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 2,
+              "topPath": "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "id": "experimental-record-boundary",
+          "stratum": "experiment",
+          "profile": "experiment",
+          "query": "detector nuisance projection reversal frequency geometry waiting time",
+          "targets": [
+            "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 1,
+              "topPath": "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 1,
+              "topPath": "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 4,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "id": "minority-sign-holonomy",
+          "stratum": "minority_new_branch",
+          "profile": "all",
+          "query": "sign holonomy physical detector central minus identity",
+          "targets": [
+            "corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md"
+          ],
+          "runs": [
+            {
+              "graphWeight": 0,
+              "firstTargetRank": 3,
+              "topPath": "corpus/claims/1000-1099/1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.3,
+              "firstTargetRank": 2,
+              "topPath": "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            },
+            {
+              "graphWeight": 0.6,
+              "firstTargetRank": 8,
+              "topPath": "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+              "corpusContentSha256": "47204bc7ef6aeebc2d067803b7df35957c194bfffb8834d2661048ce138c8e50"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "criterion": "Every declared target remains in the first ten results at zero, default and maximum graph weight; therefore centrality may reorder but cannot erase these technical, plain-language and minority/new-branch routes."
+    }
+  }
+}
