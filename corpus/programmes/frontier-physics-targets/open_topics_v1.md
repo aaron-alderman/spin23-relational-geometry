@@ -246,7 +246,11 @@ canonical relative to a declared primitive root; the unresolved convention is
 which resulting Monster generator is called 23A. On the 529 sector labels,
 the fifth-power exchange and modular quarter-turn generate the exact dicyclic
 group \(\mathrm{Dic}_{11}\) of order 44. This is a reversible label calculus,
-not a Monster subgroup or physical dynamics.
+not a Monster subgroup or physical dynamics. Projectivizing removes its
+central sign and gives \(D_{11}\) of order 22, with the pure axes separated
+from all 22 mixed directions. The finite action embeds in
+\(Sp(4,23)\cong Spin(5,23)\), but this preserves algebraic type rather than
+the real signature, cone or time orientation.
 Current work sharpens that reopening again: Volpato's September 2026 preprint
 supplies a self-orbifold \(23AB\) channel with 529 sectors,
 \(q(a,b)=ab/23\), the \(U(23)\) discriminant form, an embedded \(P(23)\)
