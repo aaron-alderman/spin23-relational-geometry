@@ -271,6 +271,12 @@ $[0.3756663388,1.0123638218]$. This is a genuine finite-cutoff certificate,
 not a continuum result. The same analytic bound remains 0.2917081970 short at
 cutoff two and 0.7271192632 short at cutoff three, precisely quantifying the
 lower-enclosure work still required.
+Wave 7.209 proves that this work cannot be completed by any positive diagonal
+charging split. The rank-one downdate bound \(d_i\le1/G_{ii}=1/4\) gives a
+universal ceiling on every such separable lower operator; its best possible
+gap-lower ceiling remains \(-0.1717081970\) at cutoff two and
+\(-0.4571192632\) at cutoff three. A valid continuation must retain
+off-diagonal correlations or certify eigenvalue order by Lehmann/inertia.
 
 ## Corpus links
 
@@ -336,6 +342,7 @@ lower-enclosure work still required.
 - [Cutoff-three bond-32 recovery audit](frontier_wave7_206_leech_z2_cutoff_three_bond32.md)
 - [Joined-cell spectral-enclosure admission](frontier_wave7_207_leech_spectral_enclosure_admission.md)
 - [Positive-charging full-carrier enclosure](frontier_wave7_208_leech_positive_charging_enclosure.md)
+- [Diagonal-enclosure no-go](frontier_wave7_209_leech_diagonal_enclosure_no_go.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

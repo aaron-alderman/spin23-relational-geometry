@@ -934,6 +934,16 @@ cutoffs two and three this deliberately coarse lower operator falls short by
 therefore advances, while continuum cutoff stability and the physical strip
 gap remain explicitly open.
 
+Wave 7.209 closes the diagonal branch of that strengthening problem. If
+\(K-D\succeq0\) for positive diagonal \(D\), then each rank-one downdate
+obeys \(d_i\le1/(K^{-1})_{ii}=1/G_{ii}=1/4\), hence
+\(\sum_i d_i\le6\). The finite charge norm then places a universal ceiling on
+the lower-energy gain. That ceiling still yields negative best-possible gap
+lower endpoints, \(-0.1717081970\) at cutoff two and \(-0.4571192632\) at
+cutoff three. The next lower enclosure must therefore retain correlations
+through multi-site blocks, sum-of-squares structure, or eigenvalue-counting
+machinery; tuning independent one-site charging penalties cannot succeed.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

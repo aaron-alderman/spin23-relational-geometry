@@ -72,10 +72,10 @@ quantified strengthening problem.
 
 ## Next fork
 
-1. Split \(K=D+R\) with a diagonal \(D\succeq0\) and certified
-   \(R\succeq0\), optimizing \(D\) to strengthen the separable bound.
-2. If no diagonal split closes cutoff two, use small positive blocks or a
-   validated shifted-inertia/Lehmann calculation.
+1. Wave 7.209 proves that no positive diagonal split can close cutoff two or
+   cutoff three.
+2. Use small correlation-preserving positive blocks or a validated
+   shifted-inertia/Lehmann calculation.
 3. Promote no continuum statement until positive intervals persist under
    increasing charge cutoff and tensor capacity.
 
@@ -84,3 +84,4 @@ quantified strengthening problem.
 - [Spectral-enclosure admission](frontier_wave7_207_leech_spectral_enclosure_admission.md)
 - [Cutoff-two bond 56](frontier_wave7_205_leech_z2_matrix_free_bond56.md)
 - [Cutoff-three bond 32](frontier_wave7_206_leech_z2_cutoff_three_bond32.md)
+- [Diagonal-enclosure no-go](frontier_wave7_209_leech_diagonal_enclosure_no_go.md)

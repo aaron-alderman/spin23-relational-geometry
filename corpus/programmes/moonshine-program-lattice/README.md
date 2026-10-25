@@ -1037,3 +1037,4 @@ recovers the ten Baby-Monster components.
 - [Cutoff-three bond-32 recovery audit](../frontier/wave-7/frontier_wave7_206_leech_z2_cutoff_three_bond32.md)
 - [Joined-cell spectral-enclosure admission](../frontier/wave-7/frontier_wave7_207_leech_spectral_enclosure_admission.md)
 - [Positive-charging full-carrier enclosure](../frontier/wave-7/frontier_wave7_208_leech_positive_charging_enclosure.md)
+- [Diagonal-enclosure no-go](../frontier/wave-7/frontier_wave7_209_leech_diagonal_enclosure_no_go.md)

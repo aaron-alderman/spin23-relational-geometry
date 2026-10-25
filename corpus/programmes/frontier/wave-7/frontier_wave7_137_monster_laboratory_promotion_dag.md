@@ -329,6 +329,13 @@ $\Delta_{N=1}\in[0.3756663388,1.0123638218]$. The same lower operator misses
 closure by 0.2917081970 at cutoff two and 0.7271192632 at cutoff three, so
 continuum and strip promotion remain open but the needed enclosure gain is
 now quantitative.
+Wave 7.209 rules out the cheapest proposed strengthening. For every positive
+diagonal split \(K=D+R\), the Leech identity \(G_{ii}=4\) forces
+\(d_i\le1/4\) and \(\sum_i d_i\le6\). Even the resulting universal energy
+ceiling leaves the cutoff-two gap lower endpoint below zero by 0.1717081970
+and the cutoff-three endpoint below zero by 0.4571192632. The next enclosure
+must therefore preserve off-diagonal charging correlations rather than merely
+optimize 24 one-site terms.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -404,6 +411,7 @@ P4 questions.
 - [Cutoff-three bond-32 recovery audit](frontier_wave7_206_leech_z2_cutoff_three_bond32.md)
 - [Joined-cell spectral-enclosure admission](frontier_wave7_207_leech_spectral_enclosure_admission.md)
 - [Positive-charging full-carrier enclosure](frontier_wave7_208_leech_positive_charging_enclosure.md)
+- [Diagonal-enclosure no-go](frontier_wave7_209_leech_diagonal_enclosure_no_go.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

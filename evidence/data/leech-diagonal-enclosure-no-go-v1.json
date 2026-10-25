@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "leech-diagonal-enclosure-no-go-v1",
+  "date": "2026-10-25",
+  "premise": "For every diagonal D>=0 with K-D>=0, K-d_i e_i e_i^T>=0, so the rank-one update criterion gives d_i<=1/(K^{-1})_ii=1/G_ii=1/4.",
+  "traceCeiling": 6,
+  "energyCeiling": "On cutoff N, (U/2)d_i q_i^2 <= (U/2)d_i N^2 I. Therefore no diagonal separable lower operator can raise its odd-sector lower endpoint by more than (U/2)N^2 sum_i d_i.",
+  "ratio": 0.01,
+  "results": [
+    {
+      "cutoff": 1,
+      "potentialOnlyOddLower": 7.736544032709406,
+      "evenRitzUpper": 7.360877693852631,
+      "maximumAddedLowerEnergy": 0.03,
+      "universalDiagonalOddCeiling": 7.766544032709406,
+      "bestPossibleDiagonalGapLowerCeiling": 0.4056663388567756,
+      "diagonalClosureRuledOut": false
+    },
+    {
+      "cutoff": 2,
+      "potentialOnlyOddLower": 3.58141571295791,
+      "evenRitzUpper": 3.8731239099585157,
+      "maximumAddedLowerEnergy": 0.12,
+      "universalDiagonalOddCeiling": 3.70141571295791,
+      "bestPossibleDiagonalGapLowerCeiling": -0.1717081970006058,
+      "diagonalClosureRuledOut": true
+    },
+    {
+      "cutoff": 3,
+      "potentialOnlyOddLower": 2.0436639710538573,
+      "evenRitzUpper": 2.7707832342081073,
+      "maximumAddedLowerEnergy": 0.27,
+      "universalDiagonalOddCeiling": 2.3136639710538573,
+      "bestPossibleDiagonalGapLowerCeiling": -0.45711926315425,
+      "diagonalClosureRuledOut": true
+    }
+  ],
+  "conclusion": "Every positive diagonal split is rigorously too weak to close the cutoff-two or cutoff-three full-carrier gap interval.",
+  "nextRequirement": "retain off-diagonal charging correlations through certified two-site or larger blocks, or use a validated Lehmann/shifted-inertia enclosure"
+}
