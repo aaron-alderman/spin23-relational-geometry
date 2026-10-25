@@ -36,6 +36,11 @@ test("the expanded narrative chapters are substantial rather than chapter stubs"
   assert.match(admissibility, /The shift/u);
   assert.match(admissibility, /new physics may begin not with higher energy but with greater finesse/iu);
   assert.match(admissibility, /Why Jordan and Lie must be balanced/u);
+  assert.match(admissibility, /Three local motion types/u);
+  assert.match(admissibility, /split-complex boost or squeeze/u);
+  assert.match(admissibility, /Signed trace curvature separates the three branches/u);
+  assert.match(admissibility, /generate Cl\(1,1\)/u);
+  assert.match(admissibility, /two square-zero directed rungs/u);
   assert.match(admissibility, /The finesse technology pathway/u);
   assert.match(admissibility, /The oriented seam becomes an experiment/iu);
   assert.match(admissibility, /The mixed interface has an exact shape/iu);

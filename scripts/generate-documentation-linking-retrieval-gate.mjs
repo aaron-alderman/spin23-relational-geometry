@@ -128,6 +128,16 @@ const heldOut = [
     id: 'transition-polarization-nuclear', stratum: 'physics', profile: 'all',
     query: 'selection rules lifetime circular polarization nuclear beta gamma decay operator',
     targets: ['corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md']
+  },
+  {
+    id: 'split-complex-dual-seam', stratum: 'mathematics', profile: 'all',
+    query: 'split complex dual numbers mirror rails elliptic hyperbolic parabolic symplectic',
+    targets: ['corpus/programmes/admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md']
+  },
+  {
+    id: 'quarter-turn-mirror-clifford-seam', stratum: 'mathematics', profile: 'all',
+    query: 'quarter turn mirror anticommute Clifford Cl 1 1 nilpotent directed rungs dual seam',
+    targets: ['corpus/programmes/admissibility/admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md']
   }
 ];
 // Claim and semantic evidence each retain their default 0.2 share.  A 0.59

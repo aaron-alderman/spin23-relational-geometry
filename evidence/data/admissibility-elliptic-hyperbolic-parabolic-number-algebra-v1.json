@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-26",
+  "protocol": "admissibility-elliptic-hyperbolic-parabolic-number-algebra/1",
+  "packet": "AZ-129",
+  "family": {
+    "algebra": "A_kappa = R[u]/(u^2-kappa)",
+    "generator": "X_kappa = [[0,kappa],[1,0]]",
+    "symplecticForm": "Omega = [[0,1],[-1,0]]",
+    "identities": [
+      "X_kappa^2 = kappa I",
+      "X_kappa^T Omega + Omega X_kappa = 0",
+      "exp(t X_kappa)^T Omega exp(t X_kappa) = Omega"
+    ]
+  },
+  "branches": [
+    {
+      "kappa": -1,
+      "name": "complex",
+      "orbitType": "elliptic",
+      "exponential": "cos(t) I + sin(t) X_-1",
+      "localMeaning": "rotation_phase_oscillation"
+    },
+    {
+      "kappa": 1,
+      "name": "split_complex",
+      "orbitType": "hyperbolic",
+      "exponential": "cosh(t) I + sinh(t) X_+1",
+      "localMeaning": "boost_squeeze_counter_scaling_null_rails"
+    },
+    {
+      "kappa": 0,
+      "name": "dual",
+      "orbitType": "parabolic",
+      "exponential": "I + t X_0",
+      "localMeaning": "shear_tangent_first_order_deformation"
+    }
+  ],
+  "mirrorTyping": {
+    "railSwap": "J = X_+1",
+    "asDiscreteMap": ["J^2=I", "det(J)=-1", "J^T Omega J=-Omega"],
+    "asGenerator": ["J^T Omega + Omega J=0", "exp(eta J) is symplectic"],
+    "verdict": "The discrete mirror is not the connected boost, but the same matrix generates the boost after exponentiation."
+  },
+  "splitComplexRails": {
+    "idempotents": ["e_plus=(1+j)/2", "e_minus=(1-j)/2"],
+    "relations": ["e_plus^2=e_plus", "e_minus^2=e_minus", "e_plus e_minus=0"],
+    "flow": ["exp(eta j)e_plus=exp(eta)e_plus", "exp(eta j)e_minus=exp(-eta)e_minus"]
+  },
+  "dualBoundary": {
+    "realDualNumbers": "R[epsilon]/(epsilon^2)",
+    "tangentRule": "f(x+v epsilon)=f(x)+v f'(x) epsilon",
+    "corpusArithmeticOccurrence": "Z[i]/(2) ~= F2[epsilon]/(epsilon^2), epsilon=i+1",
+    "typingBoundary": "The real tangent algebra and finite-characteristic ramified thickening share square-zero grammar but have different base rings and authority."
+  },
+  "separatingRecord": {
+    "observable": "D_kappa(t) = (trace(exp(t X_kappa))-2)/t^2",
+    "shortTimeLimit": "lim_{t->0} D_kappa(t) = kappa",
+    "signs": {
+      "complex": "negative",
+      "splitComplex": "positive",
+      "dual": "zero"
+    },
+    "detectorBoundary": "Requires a two-port transfer invariant or equivalent tomography and finite-time nuisance bounds; one intensity trace can erase the sign."
+  },
+  "boundaries": {
+    "physicalBranchSelected": false,
+    "spacetimeWickRotationDerived": false,
+    "gravityDerived": false,
+    "aetherDerived": false,
+    "dualPointIsPhysicalPhaseTransition": false
+  },
+  "nextGate": "Find a source-native operator on the typed two-rail carrier whose square class is derived before interpretation, then test whether its elliptic, hyperbolic or parabolic record survives the declared quotient and detector."
+}

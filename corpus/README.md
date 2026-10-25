@@ -62,6 +62,10 @@ To enter through a concrete task, use [Start here by role](START_HERE_BY_ROLE.md
 
 - [Typed two-rail positive lift](programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md) — shows that positivity need not erase the relation: a 304-dimensional free source/target-and-type carrier reconstructs all 41 distinct directed typed records, realizes arrow reversal as a rail-swap mirror, and identifies the ordinary rank-33 Laplacian as an eight-direction quotient scar.
 
+- [Complex, split-complex and dual-number local alphabet](programmes/admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md) — places rotation, boost/squeeze and shear in the exact family \(\mathbb R[u]/(u^2-\kappa)\). It proves that the discrete rail swap is anti-symplectic while the same matrix generates a symplectic hyperbolic flow, and identifies the square-zero dual branch as the first-order contraction seam rather than another rotation.
+
+- [Quarter-turn and mirror generate the dual seam](programmes/admissibility/admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md) — proves that an anticommuting complex quarter-turn and split mirror generate \(Cl(1,1)\cong M_2(\mathbb R)\), with the two dual-number rungs \((J\pm I)/2\) arising as null directions rather than imported third structures.
+
 - [Admissibility robustness window](programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md) — separates projector closure, coherent quarter-turn, nonunitary loss distortion and genuine return-map contraction into four independently testable channels, and derives their simultaneous timing, degeneracy and noise budget.
 
 - [Quarter-turn platform triage](programmes/admissibility/admissibility_28_platform_triage_for_the_quarter_turn_contraction_experiment.md) — compares primary-source integrated-photonic, atomic, synthetic-frequency and superconducting holonomy demonstrations against that typed budget; no platform is yet admitted, integrated silicon nitride is the closest carrier, and Rb-87 supplies the closest reversal-and-tomography protocol.

@@ -25,6 +25,13 @@ This gives precise content to the proposed “wick around a candle” picture. A
 \text{Wick rotation}=\text{complex structure}+\text{typed time continuation}.}
 \]
 
+The quarter-turn is now one branch of a larger exact local alphabet. Replacing
+its square \(-I\) by \(+I\) gives the split-complex/hyperbolic generator;
+degenerating it to square zero gives the dual-number/parabolic generator. All
+three exponentiate inside the same two-dimensional symplectic group, but only
+the negative-square branch is a rotation. See
+[AZ-129](admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md).
+
 ## One operator, six typed appearances
 
 The repetition is now exact rather than metaphorical.

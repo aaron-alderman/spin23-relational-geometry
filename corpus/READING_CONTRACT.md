@@ -45,11 +45,12 @@ The [explanatory standard](EXPLANATORY_STANDARD.md) governs each arrow: begin wi
    Laplacian is a declared quotient of that carrier, not a neutral synonym for
    the complete relation.
 3. **The locally invariant carrier keeps perspectives comparable.** In the central symplectic instance, \(M^T\Omega M=\Omega\) joins the direct action \(M\) to its mirror face \(M^{-T}\). Pointwise invariance, compatible transport \(\nabla\Omega=0\), and globally trivial return are three different claims.
-4. **Lie transformation and transport ask how admitted possibilities can move.** Infinitesimal transformations and their closure describe motion or relation that preserves the locally declared comparison. They do not decide which states are admissible, which carrier nature realizes or which member of an orbit is selected.
-5. **Dynamics lives inside, on or across the boundary.** An action, flow or update proposes histories. The admissibility gates determine whether those histories preserve positivity, type, causality, stability, global consistency and observable records.
-6. **Detectors return the construction to evidence.** A detector folds histories into records and thereby reveals some distinctions while quotienting away others.
+4. **The invariant does not choose the generator type.** On the same local symplectic carrier, negative-square, positive-square and square-zero generators produce elliptic, hyperbolic and parabolic flows. Complex, split-complex and dual-number language classifies those motions; it does not select which is physical.
+5. **Lie transformation and transport ask how admitted possibilities can move.** Infinitesimal transformations and their closure describe motion or relation that preserves the locally declared comparison. They do not decide which states are admissible, which carrier nature realizes or which member of an orbit is selected.
+6. **Dynamics lives inside, on or across the boundary.** An action, flow or update proposes histories. The admissibility gates determine whether those histories preserve positivity, type, causality, stability, global consistency and observable records.
+7. **Detectors return the construction to evidence.** A detector folds histories into records and thereby reveals some distinctions while quotienting away others.
 
-7. **Ternary structure records mediated influence.** A Jordan triple, ternary operator product or typed three-way compatibility law may encode how two terms relate through a third context. This is a mathematical form of mediated dependence, not permission to rename a cubic expression as a new physical force.
+8. **Ternary structure records mediated influence.** A Jordan triple, ternary operator product or typed three-way compatibility law may encode how two terms relate through a third context. This is a mathematical form of mediated dependence, not permission to rename a cubic expression as a new physical force.
 
 The canonical development of this vocabulary is [The locally invariant
 carrier and its mirror face](programmes/admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md).
@@ -57,6 +58,8 @@ Its graph-level pre-quotient realization is the [typed two-rail positive
 lift](programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md),
 and its reduction discipline is the [relation--face
 compiler](programmes/admissibility/admissibility_124_relation_face_compiler_from_adjacency_to_jordan_holonomy.md).
+The local motion trichotomy is fixed by
+[AZ-129](programmes/admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md).
 
 ## Originating language and the third-order arc
 

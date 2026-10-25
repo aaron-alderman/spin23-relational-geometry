@@ -67,6 +67,13 @@ Use the intuitive names **living carrier**, **perspective transformation**,
 explanation, but accompany them with their exact carrier and action. Local
 invariance must never be silently upgraded to global triviality.
 
+When a two-dimensional generator appears, state its square class before using
+motion language: negative square is elliptic/complex, positive square is
+hyperbolic/split-complex, and square zero is parabolic/dual. Distinguish a
+discrete map from the Lie-algebra role of the same matrix. In particular, the
+rail swap may be anti-symplectic as a map even when its exponential as a
+generator is symplectic.
+
 The compact prose grammar is:
 
 > **Because — but — therefore — still open.**  
@@ -97,6 +104,7 @@ Examples:
 
 - Exact Jordan/TKK closure implies a definite conformal transformation algebra for the declared positive response carrier. It does not imply that the carrier is physical spacetime.
 - Exact symplectic invariance joins \(M\) to the mirror action \(M^{-T}\) and induces an orthogonal action on primitive two-forms. It does not imply that the four-dimensional carrier is spacetime or that the five-dimensional relation space consists of physical extra dimensions.
+- A common presentation \(\mathbb R[u]/(u^2-\kappa)\) classifies elliptic, hyperbolic and parabolic local flows. It does not imply that changing \(\kappa\) is a physical Wick rotation or phase transition.
 - Nontrivial holonomy implies path-dependent return or frame transport. It does not imply selection of one member of a symmetric orbit without an independently sourced odd datum.
 - Shared spectral response can allow transport data to constrain a Casimir calculation. It does not imply a no-refit force prediction without the required frequency range, tensor components, geometry and nuisance control.
 

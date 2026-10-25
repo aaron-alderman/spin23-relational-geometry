@@ -71,6 +71,16 @@ The blocks are constrained together by \(M^T\Omega M=\Omega\). Neither face
 is autonomous: shearing, squeezing or rotating one changes the compatible
 description of the other while preserving their cross-pairing.
 
+The invariant form alone does not choose the local motion type. On a real
+two-plane, complex, split-complex and dual-number generators respectively
+produce elliptic rotation, hyperbolic counter-scaling and parabolic shear
+while their exponentials preserve the same \(\Omega\). The exact separation is
+given in [the elliptic/hyperbolic/parabolic local alphabet](admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md).
+When the negative-square quarter-turn and positive-square mirror anticommute,
+[their local closure](admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md)
+also derives the two square-zero directions as null mixtures. This supplies a
+universal comparator, not a source-native Claimipedia action.
+
 ## Three meanings of invariant
 
 The corpus must keep three levels separate.
@@ -243,6 +253,8 @@ global return and detector record are independently measurable.
 - [Quarter-turn, holonomy and open closure](admissibility_21_quarter_turn_wick_goldstone_cloud_and_open_closure.md)
 - [Universal projector connection](admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md)
 - [Holonomy-driven selector breaking](admissibility_23_holonomy_driven_selector_breaking_and_reflexive_closure.md)
+- [Complex, split-complex and dual-number local alphabet](admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md)
+- [Quarter-turn and mirror generate the dual seam](admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md)
 
 ## Compact corpus sentence
 

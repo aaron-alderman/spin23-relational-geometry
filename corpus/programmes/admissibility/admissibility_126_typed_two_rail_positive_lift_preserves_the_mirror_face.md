@@ -151,6 +151,22 @@ be written on any even-dimensional free rail space, but the source has not
 selected one or shown that its transformations preserve it. Calling this
 (Spin(2,3)), Wick rotation or physical duality would therefore be premature.
 
+[AZ-129](admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md)
+now sharpens that boundary. On a declared two-plane the rail-swap matrix has
+split-complex type: used discretely it is anti-symplectic, while used as an
+infinitesimal Hamiltonian generator its exponential is a symplectic
+hyperbolic flow. The live Claimipedia carrier still does not supply the
+required symplectic plane, coefficient or physical action, so the algebraic
+classification narrows the missing bridge without closing it.
+
+[AZ-130](admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md)
+makes the next gate exact. If a source-native negative-square quarter-turn
+anticommutes with the rail swap, the pair generates the full local
+\(M_2(\mathbb R)\) algebra and its two directed square-zero rungs. The current
+carrier has not yet authored that quarter-turn or anticommutation relation;
+the dual seams therefore remain a held-out target rather than inferred
+dynamics.
+
 ## Relation to established mathematics
 
 The finite Gram lift is elementary. Its next step touches established path and

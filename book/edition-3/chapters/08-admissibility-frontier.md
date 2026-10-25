@@ -235,6 +235,25 @@ Collapsing rails and relation types gives the ordinary support Laplacian of rank
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-3.md)
 
+<a id="three-local-motion-types"></a>
+## Three local motion types
+
+> **Section status — [✓ Established](../reading-key/status-established.md)** — Follows from declared assumptions and has an inspectable certificate.
+
+> **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
+
+On one real two-dimensional symplectic carrier, a generator squaring to minus one produces complex rotation, one squaring to plus one produces split-complex boost or squeeze, and a square-zero generator produces dual-number shear. The invariant form admits all three; it does not choose among them.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-local-motion-types-claim-1.md)
+
+The rail-swap mirror is therefore subtler than a second Wick rotation. Applied discretely it is anti-symplectic, but the same matrix satisfies the infinitesimal symplectic condition and its exponential is a connected hyperbolic flow. Signed trace curvature separates the three branches when a short-time intensity record would make them all look linear.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-local-motion-types-claim-2.md)
+
+The quarter-turn and mirror do more than name two endpoints. When they anticommute on the same typed plane they generate Cl(1,1), equivalently the full real two-by-two matrix algebra. Their equal and opposite mixtures are two square-zero directed rungs: the dual-number branch is therefore the null seam between compact rotation and noncompact squeeze, not an unrelated third metaphor. The traceless closure is the local Spin(2,1) algebra; lifting it to the corpus's Spin(2,3) architecture still requires a source-native carrier, action and held-out record.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-local-motion-types-claim-3.md)
+
 <a id="transition-operators-make-the-boundary-measurable"></a>
 ## Transition operators make the boundary measurable
 

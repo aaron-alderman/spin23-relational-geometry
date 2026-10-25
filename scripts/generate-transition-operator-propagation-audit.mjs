@@ -77,6 +77,9 @@ const census = documents.map(document => {
   if (matches.operator_rate_claim.length) route = "operator_rate_claim_candidate";
   else if (matches.effective_spectral_claim.length) route = "effective_spectral_claim_candidate";
   else if (matches.barrier_or_kinetic_metastability.length) route = "barrier_or_kinetic_metastability_candidate";
+  if (document.path === "corpus/programmes/frontier-physics-targets/transition_operator_propagation_audit_v1.md"
+    || document.path === "corpus/programmes/frontier-physics-targets/spectral_width_propagation_audit_v1.md"
+    || document.path === "corpus/programmes/frontier-physics-targets/barrier_kinetic_propagation_audit_v1.md") route = "no_transition_operator_trigger";
   return {
     path: document.path,
     route,
@@ -273,7 +276,7 @@ ${reviewed.map(record => `| \`${record.path}\` | \`${record.disposition}\` | ${r
 
 ## Remaining boundary
 
-The operator/rate queue is empty under the declared vocabulary: every hit is in the reviewed spine, carries the AZ-127 boundary in context, has no rate context, or has an explicit semantic exclusion. This does not close the 104 effective-spectral or 35 barrier/kinetic candidates as physical theories. It prevents those mechanisms from being silently collapsed into atomic or nuclear transition language; their own frontier audits remain authoritative.
+The operator/rate queue is empty under the declared vocabulary: every hit is in the reviewed spine, carries the AZ-127 boundary in context, has no rate context, or has an explicit semantic exclusion. The **${output.totals.byRoute.effective_spectral_claim_candidate}** effective-spectral candidates are now exhaustively routed by the [spectral-width audit](spectral_width_propagation_audit_v1.md); this closes their width/lifetime typing queue, not their physical theories. The **${output.totals.byRoute.barrier_or_kinetic_metastability_candidate}** barrier/kinetic candidates remain a separately typed queue. None may be silently collapsed into atomic or nuclear transition language.
 
 ## Exit criterion
 

@@ -11,6 +11,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 ## Every current use
 
 - [Front matter · A book of layers](../chapters/00-front-matter.md#a-book-of-layers)
+- [The admissibility frontier · Three local motion types](../chapters/08-admissibility-frontier.md#three-local-motion-types)
 - [The admissibility frontier · The third term is the mediator](../chapters/08-admissibility-frontier.md#the-third-term-is-the-mediator)
 - [The admissibility frontier · the weak record hides one direction](../chapters/08-admissibility-frontier.md#the-weak-record-hides-one-direction)
 - [The admissibility frontier · three generations add flavor, not another anomaly](../chapters/08-admissibility-frontier.md#three-generations-add-flavor-not-another-anomaly)
@@ -30,6 +31,9 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [A7 · Match the stress operator in curved microscopic theory](../chapters/09-research-frontier.md#A7)
 - [Claim · Front matter · A book of layers (1)](../details/00-front-matter-a-book-of-layers-claim-1.md)
 - [Claim · Front matter · A book of layers (2)](../details/00-front-matter-a-book-of-layers-claim-2.md)
+- [Claim · The admissibility frontier · Three local motion types (1)](../details/08-admissibility-frontier-three-local-motion-types-claim-1.md)
+- [Claim · The admissibility frontier · Three local motion types (2)](../details/08-admissibility-frontier-three-local-motion-types-claim-2.md)
+- [Claim · The admissibility frontier · Three local motion types (3)](../details/08-admissibility-frontier-three-local-motion-types-claim-3.md)
 - [Claim · The admissibility frontier · The third term is the mediator (1)](../details/08-admissibility-frontier-the-third-term-is-the-mediator-claim-1.md)
 - [Claim · The admissibility frontier · The third term is the mediator (2)](../details/08-admissibility-frontier-the-third-term-is-the-mediator-claim-2.md)
 - [Claim · The admissibility frontier · the weak record hides one direction (1)](../details/08-admissibility-frontier-the-weak-record-hides-one-direction-claim-1.md)

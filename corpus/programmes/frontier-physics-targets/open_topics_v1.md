@@ -81,7 +81,7 @@ for another dimensionless redesign.
 |---|---|---|
 | OT-024 | Relation-emulator hardware dictionary | AZ-110 closes network and detector design; build the frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
 | OT-025 | Nonlocal 24-dimensional form or code functor | a source-derived replacement for the incidence form or explicit sacrificed property |
-| OT-026 | Graph-to-Jordan translation | AZ-126 gives a faithful positive typed two-rail lift and exact mirror reversal; composition with the path algebra, a semantic adjoint, source-selected ports and a held-out record remain required |
+| OT-026 | Graph-to-Jordan translation | AZ-126 gives the faithful positive rails; AZ-129 classifies their three local motion types; AZ-130 derives dual rungs from an anticommuting quarter-turn/mirror pair. A source-native quarter-turn, semantic adjoint, path composition and held-out oriented record remain required |
 | OT-027 | Physical operator and dynamics functor | AZ-124 separates support, positive kernel, Schur face, holonomy and detector; a source-native action must still generate those operators, amplitudes and records |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
 | OT-038 | Source-bearing A2 commuting square | calibrate one common-carrier intertwiner from the selector primitive-form split to the rectangular ports, treat the nonzero channel as covariant symmetry breaking, and select the noncompact reverse-channel phase |
@@ -177,6 +177,26 @@ rank-33 Laplacian from the rank-41 lift, localizing an eight-direction quotient
 scar. This closes faithful positive representation, not the required path
 product or semantic star operation; no physical boundary or prediction is yet
 source-selected.
+
+[AZ-129](../admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md)
+then classifies the local motion that the mirror could support. Complex,
+split-complex and dual-number generators are the negative-square,
+positive-square and square-zero branches of one symplectic family. The rail
+swap is anti-symplectic as a discrete exchange but generates a symplectic
+hyperbolic flow after exponentiation. This supplies a precise candidate
+grammar, not the missing source semantics: OT-026 must still derive which
+square class, if any, the authored path composition selects. A signed
+two-port trace curvature is the smallest proposed held-out discriminator.
+
+[AZ-130](../admissibility/admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md)
+closes the universal local algebra more strongly. An anticommuting negative-
+square quarter-turn and positive-square mirror generate
+$Cl(1,1)\cong M_2(\mathbb R)$, while their two null mixtures are directed
+square-zero rungs. OT-026 therefore has a decisive next test: derive the
+negative-square partner from source semantics and check anticommutation with
+the existing rail swap. Failure keeps the three-algebra family as a comparator;
+success produces directed nilpotent maps that can be composed with authored
+paths and tested on a withheld orientation record.
 
 [AZ-113](../admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md)
 

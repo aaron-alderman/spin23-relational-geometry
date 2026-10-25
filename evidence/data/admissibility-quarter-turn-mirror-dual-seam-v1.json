@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-26",
+  "protocol": "admissibility-quarter-turn-mirror-dual-seam/1",
+  "packet": "AZ-130",
+  "generators": {
+    "quarterTurn": "I=[[0,-1],[1,0]]",
+    "mirror": "J=[[0,1],[1,0]]",
+    "grading": "K=I J=[[-1,0],[0,1]]",
+    "relations": ["I^2=-1", "J^2=1", "K^2=1", "I J=-J I"]
+  },
+  "closure": {
+    "basis": ["1", "I", "J", "K"],
+    "dimension": 4,
+    "algebra": "Cl(1,1) ~= M2(R)",
+    "tracelessLieAlgebra": "span(I,J,K)=sl2(R)=sp2(R)"
+  },
+  "nilpotentSeams": {
+    "Nplus": "(J+I)/2=[[0,0],[1,0]]",
+    "Nminus": "(J-I)/2=[[0,1],[0,0]]",
+    "relations": ["Nplus^2=0", "Nminus^2=0", "Nplus Nminus + Nminus Nplus=1", "[Nplus,Nminus]=K"],
+    "reconstruction": ["J=Nplus+Nminus", "I=Nplus-Nminus"]
+  },
+  "family": {
+    "formula": "X_kappa=((1+kappa)/2)J+((1-kappa)/2)I",
+    "square": "X_kappa^2=kappa",
+    "quadraticClassifier": "-det(X_kappa)=kappa",
+    "types": ["negative:elliptic", "zero:parabolic", "positive:hyperbolic"]
+  },
+  "boundaries": {
+    "sourceNativeAnticommutingPairDerived": false,
+    "physicalActionDerived": false,
+    "spin23PhysicalAssemblyDerived": false,
+    "biologicalIdentification": false
+  },
+  "nextGate": "Construct a source-native negative-square operator on the typed two-rail carrier, test its anticommutation with rail swap, and use the resulting directed nilpotent rungs to predict a held-out orientation-sensitive record."
+}
