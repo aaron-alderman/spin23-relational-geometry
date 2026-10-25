@@ -126,6 +126,10 @@ const statusOf = (text, title) => {
   return "undeclared";
 };
 const claimIdOf = (rel) => Number(path.posix.basename(rel).match(/^(\d+)/)?.[1] ?? NaN);
+const selectSeparateRule = (title, head) => separateRules.find((rule) => rule.rx.test(head))
+  ?? (/christian-specific field tilt/i.test(title)
+    ? { domain: "theology", ownerRef: "corpus/syntheses/grand-synthesis/aarons_spin23_research_thesis.md" }
+    : null);
 const navigationArtifacts = new Map([
   ["corpus/EXPLANATORY_STANDARD.md", "corpus/README.md"],
   ["corpus/START_HERE_BY_ROLE.md", "corpus/claims/0000-0099/00_research_document_map.md"],
@@ -193,7 +197,7 @@ for (const abs of scopeRoots.flatMap((scopeRoot) => fs.existsSync(scopeRoot) ? w
   if (!matches.length && !statusMatch) {
     const corpusClass = rel.startsWith("evidence/") ? "evidence" : rel.startsWith("corpus/claims/") ? "claim" : rel.startsWith("corpus/programmes/") ? "programme" : rel.startsWith("corpus/registers/") || rel.startsWith("corpus/concept-map/") || rel === "corpus/README.md" ? "navigation" : "synthesis";
     const head = `${title}\n${text.slice(0, 7000)}`;
-    const separate = !["evidence", "navigation"].includes(corpusClass) ? separateRules.find((rule) => rule.rx.test(head)) : null;
+    const separate = !["evidence", "navigation"].includes(corpusClass) ? selectSeparateRule(title, head) : null;
     const chosen = !["evidence", "navigation"].includes(corpusClass) && !separate ? selectTopicRules(title, text) : [];
     records.push({
       ...record,
@@ -241,7 +245,7 @@ for (const abs of scopeRoots.flatMap((scopeRoot) => fs.existsSync(scopeRoot) ? w
   }
 
   const head = `${title}\n${text.slice(0, 7000)}`;
-  const separate = separateRules.find((rule) => rule.rx.test(head));
+  const separate = selectSeparateRule(title, head);
   if (separate) {
     records.push({ ...record, corpusClass: rel.startsWith("corpus/claims/") ? "claim" : "synthesis", disposition: "separate_programme", domain: separate.domain, ownerRef: separate.ownerRef, stateSignal: statusOf(text, title), note: "The gate belongs to an explicitly separate non-frontier-physics inquiry." });
     continue;
