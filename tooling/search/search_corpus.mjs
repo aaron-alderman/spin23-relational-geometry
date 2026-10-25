@@ -117,7 +117,9 @@ function addTokens(counts, tokens, weight) {
 function semanticMarkdown(text) {
   // Commands and examples explain how to use the corpus; they are not claims
   // that should make their container rank for the example query itself.
-  return text.replace(/^\s*```[^\r\n]*\r?\n[\s\S]*?^\s*```\s*$/gmu, "");
+  return text
+    .replace(/^\s*(```|~~~)[^\r\n]*\r?\n[\s\S]*?^\s*\1\s*$/gmu, "")
+    .replace(/<!--[\s\S]*?-->/gu, "");
 }
 
 function claimRole(text, heading) {
@@ -150,9 +152,9 @@ function extractClaimUnits(text, path) {
         rawText: value,
         lowerText: normalized.toLowerCase(),
         length: Math.max(unitTokens.length, 1),
-        tokens: unitTokens,
         counts,
         tokenSet: new Set(counts.keys()),
+        claimSha256: createHash("sha256").update(`${path}\0${start}\0${endLine}\0${value}`).digest("hex"),
       });
     }
     start = null;
@@ -160,7 +162,7 @@ function extractClaimUnits(text, path) {
   };
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
-    if (/^\s*```/u.test(line)) {
+    if (/^\s*(?:```|~~~)/u.test(line)) {
       if (!fenced) flush(index);
       fenced = !fenced;
       continue;
@@ -181,8 +183,9 @@ function extractClaimUnits(text, path) {
     // navigation maps look semantically relevant to almost every query and
     // produced receipts spanning hundreds of lines.  Start a new bounded unit
     // at each structural row while retaining indented continuation lines.
-    const structuralRow = /^(?:[-*+]\s+|\d+[.)]\s+|\|)/u.test(line);
+    const structuralRow = /^(?:[-*+]\s+|\d+[.)]\s+|>|\|)/u.test(line);
     if (structuralRow && buffer.length) flush(index);
+    if (/^\|?(?:\s*:?-{3,}:?\s*\|)+\s*$/u.test(line)) continue;
     if (start === null) start = index + 1;
     buffer.push(line);
   }
@@ -214,14 +217,8 @@ function localLinkContexts(root, path, units) {
   for (const unit of units) {
     for (const targetPath of new Set(localLinks(root, path, unit.rawText))) contexts.push({
       targetPath,
-      heading: unit.heading,
-      lineStart: unit.lineStart,
-      lineEnd: unit.lineEnd,
-      text: unit.text,
-      rawText: unit.rawText,
-      length: unit.length,
-      counts: unit.counts,
-      tokenSet: unit.tokenSet,
+      unit,
+      bridgeSha256: createHash("sha256").update(`${path}\0${unit.lineStart}\0${unit.lineEnd}\0${targetPath}\0${unit.rawText}`).digest("hex"),
     });
   }
   return contexts;
@@ -295,6 +292,7 @@ function buildIndex(root) {
     const title = extractTitle(text, path);
     const claimUnits = extractClaimUnits(text, path);
     const linkContexts = localLinkContexts(resolvedRoot, path, claimUnits);
+    for (const unit of claimUnits) delete unit.rawText;
     const headings = [...semanticText.matchAll(/^#{2,6}\s+(.+)$/gmu)].map(match => match[1]).join(" ");
     const bodyTokens = tokenize(semanticText);
     const counts = new Map();
@@ -309,8 +307,6 @@ function buildIndex(root) {
       status: extractStatus(text, path),
       claimEvidence: evidenceSpine.byPath.get(path) ?? null,
       prior: navigationPrior(path),
-      text,
-      semanticText,
       lowerText: semanticText.toLowerCase(),
       length: Math.max(bodyTokens.length, 1),
       counts,
@@ -327,7 +323,10 @@ function buildIndex(root) {
     if (!documentIdsByToken.has(token)) documentIdsByToken.set(token, []);
     documentIdsByToken.get(token).push(document.id);
   }
-  const claimUnits = documents.flatMap(document => document.claimUnits.map(unit => ({ ...unit, documentId: document.id })));
+  const claimUnits = documents.flatMap(document => document.claimUnits.map(unit => {
+    unit.documentId = document.id;
+    return unit;
+  }));
   const claimDocumentFrequency = new Map();
   const claimUnitIdsByToken = new Map();
   for (const unit of claimUnits) {
@@ -353,7 +352,7 @@ function buildIndex(root) {
   }
   const linkContextDocumentFrequency = new Map();
   const linkContextsByToken = new Map();
-  for (const context of linkContexts) for (const token of context.tokenSet) {
+  for (const context of linkContexts) for (const token of context.unit.tokenSet) {
     linkContextDocumentFrequency.set(token, (linkContextDocumentFrequency.get(token) ?? 0) + 1);
     if (!linkContextsByToken.has(token)) linkContextsByToken.set(token, []);
     linkContextsByToken.get(token).push(context);
@@ -392,7 +391,7 @@ function buildIndex(root) {
     evidenceSpineSha256: evidenceSpine.sha256,
     averageLength: documents.reduce((sum, document) => sum + document.length, 0) / Math.max(documents.length, 1),
     averageClaimLength: claimUnits.reduce((sum, unit) => sum + unit.length, 0) / Math.max(claimUnits.length, 1),
-    averageLinkContextLength: linkContexts.reduce((sum, context) => sum + context.length, 0) / Math.max(linkContexts.length, 1),
+    averageLinkContextLength: linkContexts.reduce((sum, context) => sum + context.unit.length, 0) / Math.max(linkContexts.length, 1),
   };
   cache = { root: resolvedRoot, fingerprint, checkedAt: now, index };
   return index;
@@ -539,25 +538,25 @@ function linkContextScores(index, tokens, rawQuery) {
   for (const context of candidates) {
     let score = 0;
     for (const token of tokens) {
-      const tf = context.counts.get(token) ?? 0;
+      const tf = context.unit.counts.get(token) ?? 0;
       if (!tf) continue;
       const df = index.linkContextDocumentFrequency.get(token) ?? 0;
       const idf = Math.log(1 + (n - df + 0.5) / (df + 0.5));
-      const denominator = tf + k1 * (1 - b + b * context.length / index.averageLinkContextLength);
+      const denominator = tf + k1 * (1 - b + b * context.unit.length / index.averageLinkContextLength);
       score += idf * (tf * (k1 + 1)) / denominator;
     }
-    if (phrase.length >= 4 && context.text.toLowerCase().includes(phrase)) score += 3;
+    if (phrase.length >= 4 && context.unit.lowerText.includes(phrase)) score += 3;
     if (score <= scores[context.targetDocumentId]) continue;
     scores[context.targetDocumentId] = score;
     best[context.targetDocumentId] = {
       kind: "link-context",
       sourcePath: context.sourcePath,
       targetPath: context.targetPath,
-      heading: context.heading,
-      lineStart: context.lineStart,
-      lineEnd: context.lineEnd,
-      text: context.text.length > 420 ? `${context.text.slice(0, 417)}…` : context.text,
-      bridgeSha256: createHash("sha256").update(`${context.sourcePath}\0${context.lineStart}\0${context.lineEnd}\0${context.targetPath}\0${context.rawText}`).digest("hex"),
+      heading: context.unit.heading,
+      lineStart: context.unit.lineStart,
+      lineEnd: context.unit.lineEnd,
+      text: context.unit.text.length > 420 ? `${context.unit.text.slice(0, 417)}…` : context.unit.text,
+      bridgeSha256: context.bridgeSha256,
     };
   }
   return { scores, best };
@@ -600,7 +599,7 @@ function claimLevelScores(index, tokens, rawQuery, expansion) {
       lineStart: unit.lineStart,
       lineEnd: unit.lineEnd,
       text: unit.text.length > 420 ? `${unit.text.slice(0, 417)}…` : unit.text,
-      claimSha256: createHash("sha256").update(`${unit.path}\0${unit.lineStart}\0${unit.lineEnd}\0${unit.rawText}`).digest("hex"),
+      claimSha256: unit.claimSha256,
     };
   }
   return { direct, semantic, best };
@@ -658,7 +657,7 @@ function personalizedPageRank(index, teleport, mixing, iterations = 160, toleran
 }
 
 function bestSnippet(document, tokens) {
-  const lines = document.semanticText.split(/\r?\n/u).filter(line => line.trim() && !/^\s*(?:```|\||[-*]\s*\[)/u.test(line));
+  const lines = document.claimUnits.map(unit => unit.text).filter(line => line.trim() && !/^\s*(?:\||[-*]\s*\[)/u.test(line));
   let best = { score: -1, line: "" };
   for (const line of lines) {
     const normalized = line.toLowerCase();

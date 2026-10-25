@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import test from "node:test";
 import { searchCorpus } from "../../tooling/search/search_corpus.mjs";
 
@@ -54,6 +56,19 @@ test("warm retrieval is byte-for-byte deterministic after sparse candidate evalu
   const first = searchCorpus(options);
   const second = searchCorpus(options);
   assert.deepEqual(second, first);
+});
+
+test("semantic indexing excludes tilde fences, comments and table separators", t => {
+  const fixture = mkdtempSync(join(tmpdir(), "corpus-search-cleanliness-"));
+  t.after(() => rmSync(fixture, { recursive: true, force: true }));
+  mkdirSync(join(fixture, "corpus"), { recursive: true });
+  writeFileSync(join(fixture, "corpus", "clean.md"), `# Clean evidence\n\nVisible alpha evidence.\n\n~~~text\nphantomneedle\n~~~\n\n<!-- hiddenneedle -->\n\n| Claim | State |\n|---|---|\n| visible beta | open |\n`);
+  assert.deepEqual(searchCorpus({ root: fixture, query: "phantomneedle", limit: 5 }).results, []);
+  assert.deepEqual(searchCorpus({ root: fixture, query: "hiddenneedle", limit: 5 }).results, []);
+  const visible = searchCorpus({ root: fixture, query: "visible beta", limit: 5 });
+  assert.equal(visible.results[0].path, "corpus/clean.md");
+  assert.equal(visible.results[0].claimMatch.lineStart, 13);
+  assert.equal(visible.results[0].claimMatch.lineEnd, 13);
 });
 
 test("graph propagation surfaces linked context while preserving declared status", () => {
