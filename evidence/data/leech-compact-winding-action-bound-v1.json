@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "leech-compact-winding-action-bound-v1",
+  "date": "2026-10-25",
+  "input": "gram-first candidate from leech-hardware-basis-pareto-frontier-v1",
+  "hamiltonian": "H=(U/2)n^T G^-1 n+u sum_i(1-cos theta_i)",
+  "euclideanLagrangian": "L_E=(1/(2U)) dot(theta)^T G dot(theta)+u sum_i(1-cos theta_i)",
+  "exactMetricData": {
+    "inverseIntegral": true,
+    "inverseDiagonal": [8,22,4,14,10,4,6,6,4,4,6,4,4,4,4,6,4,4,4,4,4,4,4,4],
+    "effectiveSchurMasses": ["1/8","1/22","1/4","1/14","1/10","1/4","1/6","1/6","1/4","1/4","1/6","1/4","1/4","1/4","1/4","1/6","1/4","1/4","1/4","1/4","1/4","1/4","1/4","1/4"],
+    "minimumEffectiveSchurMass": "1/22",
+    "minimumCoordinateOneBased": 2,
+    "gramDiagonal": [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]
+  },
+  "theorem": {
+    "kineticSchurBound": "for fixed dot(theta_i), dot(theta)^T G dot(theta) >= dot(theta_i)^2/(G^-1)_ii",
+    "windingActionBound": "every nonzero integer winding obeys S_E >= 8 sqrt(u/(22U))",
+    "proofSketch": "choose any coordinate with nonzero winding, apply the Schur kinetic bound and V>=u(1-cos theta_i), then integrate the AM-GM line element over at least one full 2pi traversal",
+    "straightCoordinateTrialAction": "all G_ii=4, so a straight single-coordinate path has S_E=16 sqrt(u/U)"
+  },
+  "scans": [
+    {"chargingToCosineRatio":0.0001,"rigorousActionFloor":170.56057308448834,"bareExponentialCeilingIgnoringPrefactor":8.442756797633936e-75,"smallestStraightTrialAction":1600,"actionBracketRatio":9.38083151964686},
+    {"chargingToCosineRatio":0.001,"rigorousActionFloor":53.93598899705937,"bareExponentialCeilingIgnoringPrefactor":3.7661499069668525e-24,"smallestStraightTrialAction":505.9644256269407,"actionBracketRatio":9.38083151964686},
+    {"chargingToCosineRatio":0.01,"rigorousActionFloor":17.056057308448835,"bareExponentialCeilingIgnoringPrefactor":3.9142488073048575e-8,"smallestStraightTrialAction":160,"actionBracketRatio":9.38083151964686}
+  ],
+  "experimentalUse": "offset-charge or twisted-boundary spectroscopy should find any compact charge-dispersion scale below the perturbative anharmonic shifts and exponentially decreasing with 1/sqrt(U/u); a larger or nonexponential signal rejects the ideal joined Hamiltonian or exposes uncontrolled phase slips",
+  "established": "a rigorous Euclidean action floor for every nontrivial compact winding of the Gram-first joined Hamiltonian",
+  "boundary": "The action floor rigorously bounds the semiclassical exponent, not the fluctuation determinant or total tunnelling amplitude. Multi-instanton combinatorics, dissipative renormalization, offset charges and ultraviolet junction physics can alter the prefactor. The straight path is a trial upper action, not the minimizing instanton.",
+  "epistemicStatus": "exact metric and variational action theorem; exponential amplitude estimate remains semiclassical because its prefactor is unbounded"
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "leech-24port-admittance-commissioning-packet-v1",
+  "date": "2026-10-25",
+  "inputs": ["leech-pareto-transformer-factor-audit-v1", "leech-transformer-correlated-tolerance-v1"],
+  "target": {
+    "basis": "gram-first trial 43",
+    "matrix": "G=U^T K U",
+    "quadraticModel": "Y(omega)=G_loss+i omega alpha G plus calibrated fixtures and declared higher-order residuals",
+    "freeFitParameters": "one positive global capacitance scale alpha, a frequency-independent dissipative matrix if statistically resolved, and independently calibrated fixture parameters; no entrywise refit of G"
+  },
+  "schedule": {
+    "ports": 24,
+    "frequenciesInUnitsOfCommissioningCenter": [0.1,0.1778279410038923,0.31622776601683794,0.5623413251903491,1,1.7782794100389228,3.1622776601683795],
+    "singlePortComplexDriveConfigurationsPerFrequency": 24,
+    "singlePortConfigurations": 168,
+    "heldOutRademacherMultiportDrivesPerFrequency": 12,
+    "heldOutConfigurations": 84,
+    "totalConfigurations": 252,
+    "repeatsPerConfiguration": 100,
+    "totalComplexAcquisitions": 25200,
+    "independentSymmetricMatrixEntries": 300,
+    "offDiagonalReciprocityPairs": 276
+  },
+  "reconstruction": {
+    "calibration": "subtract open, short and through fixture standards with their covariance retained",
+    "singlePortTomography": "each complex single-port drive estimates one full admittance column; symmetrize only after testing reciprocity",
+    "capacitanceExtraction": "joint generalized least squares fit of Im Y(omega)/omega to alpha G over all seven frequencies",
+    "covariance": "retain the full real-imaginary, cross-port and cross-frequency covariance; propagate it through alpha fitting, eigendecomposition and matrix inversion by parametric bootstrap",
+    "heldOutPrediction": "predict all 24 complex currents for twelve preregistered Rademacher multiport voltages per frequency without refitting"
+  },
+  "proposedPassGates": [
+    {"id":"fixture","metric":"all open/short/through residuals","pass":"inside the preregistered calibration covariance envelope","failMeaning":"fixture or de-embedding failure"},
+    {"id":"reciprocity","metric":"||Y-Y^T||_F/||Y||_F","pass":"at most 0.001 at every frequency and statistically consistent with the retained covariance","failMeaning":"nonreciprocity, port-map error or unmodelled active coupling"},
+    {"id":"passivity","metric":"minimum eigenvalue of Hermitian Re Y","pass":"not below minus three propagated standard errors at any frequency","failMeaning":"calibration failure or an active/nonpassive element outside the declared model"},
+    {"id":"loss","metric":"||Re Y||_2/||Im Y||_2","pass":"at most 0.001 throughout the commissioning band","failMeaning":"loss invalidates the ideal reactive-network approximation"},
+    {"id":"dispersion","metric":"maximum pairwise spectral-norm change of Im Y/omega after one global scale","pass":"at most 0.005","failMeaning":"frequency-dependent parasitic modes invalidate a static capacitance matrix"},
+    {"id":"positive-definite","metric":"minimum eigenvalue of reconstructed C","pass":"positive by at least five propagated standard errors","failMeaning":"singular or incorrectly de-embedded quadratic network"},
+    {"id":"inverse-metric","metric":"||C_fit^-1-(alpha G)^-1||_2/||(alpha G)^-1||_2","pass":"at most 0.01 with the bootstrap 95 percent upper limit also at most 0.01","failMeaning":"the implemented quadratic form lacks Leech provenance at the global 24-mode scope"},
+    {"id":"held-out-drive","metric":"covariance-weighted prediction error on 84 held-out multiport configurations","pass":"global chi-square p value between 0.01 and 0.99 and worst relative spectral response error at most 0.01","failMeaning":"the fitted matrix does not predict superposed multiport response"}
+  ],
+  "decisionTree": {
+    "allPass": "commissioned quadratic Leech-metric candidate; proceed to nonlinear pendulum gap, strip edge and inversion-branch-cut tests",
+    "inverseOnlyFails": "retune signed mixing coefficients or choose another Pareto basis; do not claim Leech provenance",
+    "dispersionFails": "enlarge the admittance model to include explicit parasitic poles and repeat on a held-out frequency set",
+    "reciprocityOrPassivityFails": "reject the passive-transformer model before any topological interpretation",
+    "heldOutFails": "reject overfit or incomplete matrix reconstruction"
+  },
+  "epistemicBoundary": {
+    "passClaims": "the measured linear network realizes the selected Leech quadratic metric within the declared frequency band and uncertainty",
+    "passDoesNotClaim": "a bulk gap, 24 chiral edge modes, rootlessness, inversion orbifold, Moonshine spectrum, Monster defects or Griess closure",
+    "gateStatus": "pre-Gate-A hardware commissioning"
+  },
+  "established": "a finite 252-configuration, 25200-acquisition protocol can accept or reject the complete 24-port quadratic Leech metric with reciprocity, passivity, dispersion and held-out prediction controls",
+  "boundary": "Numerical thresholds are preregistered proposed engineering gates, not universal constants. Instrument bandwidth, fixture geometry, absolute frequency scale and achievable covariance must be supplied by the selected platform."
+}

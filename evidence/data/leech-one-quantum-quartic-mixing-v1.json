@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "leech-one-quantum-quartic-mixing-v1",
+  "date": "2026-10-25",
+  "input": "leech-coupled-anharmonic-spectroscopy-v1",
+  "effectiveBlock": {
+    "basis": "the 24 one-quantum harmonic states",
+    "matrix": "M_ab=omega_a delta_ab-(u/2)sqrt(s_a s_b) sum_i O_ia O_ib v_i",
+    "physicalCoordinateVacuumVariance": "v_i=sum_c O_ic^2 s_c",
+    "meaning": "projection of the quartic-truncated Hamiltonian minus the quartic vacuum energy onto the complete one-quantum block"
+  },
+  "scans": [
+    {
+      "chargingToCosineRatio": 0.0001,
+      "maximumAbsoluteOffDiagonalMixing": 0.000025616042105950918,
+      "closestHarmonicPair": {"indicesAscendingFrequency":[1,2],"separation":0.00002915792978504944,"mixing":3.855213963198558e-7},
+      "strongestMixingPair": {"indicesAscendingFrequency":[21,23],"separation":0.018623666154856666,"mixing":0.000025616042105950918},
+      "maximumAbsoluteMixedVersusDiagonalDifference": 6.916407180312945e-8,
+      "maximumRelativeMixedVersusDiagonalDifference": 0.0000022316444446643574,
+      "mixedTransitionsAscending": [0.0021162149052309054,0.0027228116732785665,0.0027505308495344182,0.003137435078334093,0.0035476911380907987,0.003938405744900761,0.004238788922842899,0.00515021556925473,0.005317762448449925,0.006136967573868308,0.007723456495312863,0.00800588352247566,0.010132784624963125,0.010923233929572243,0.011951090351861366,0.013418087898194252,0.018220028422943155,0.021063543387896358,0.025397178335443974,0.02797411456951435,0.03663888790667592,0.046741308864976516,0.05744303626816007,0.06527160880275994]
+    },
+    {
+      "chargingToCosineRatio": 0.001,
+      "maximumAbsoluteOffDiagonalMixing": 0.0002561604210595087,
+      "closestHarmonicPair": {"indicesAscendingFrequency":[1,2],"separation":0.00009220546997602136,"mixing":0.000003855213963198556},
+      "strongestMixingPair": {"indicesAscendingFrequency":[21,23],"separation":0.058893203431937186,"mixing":0.0002561604210595087},
+      "maximumAbsoluteMixedVersusDiagonalDifference": 0.000002208349946963839,
+      "maximumRelativeMixedVersusDiagonalDifference": 0.0000251280270974004,
+      "mixedTransitionsAscending": [0.006659423519403106,0.008573179884192766,0.008651205425723266,0.009881821791812571,0.01117166050096844,0.012395909256286832,0.01334522876208903,0.016224191355066607,0.016748153600384477,0.019328426113528873,0.024325435363717212,0.025216801197611778,0.0319117354135152,0.034383354043206124,0.03763018421675238,0.04225364306386258,0.05737414734416882,0.06633977533819017,0.07993857836824514,0.08805449366967201,0.11536325257718665,0.14704049991553325,0.18058059916579136,0.2050022017063008]
+    },
+    {
+      "chargingToCosineRatio": 0.01,
+      "maximumAbsoluteOffDiagonalMixing": 0.00256160421059509,
+      "closestHarmonicPair": {"indicesAscendingFrequency":[1,2],"separation":0.0002915792978504979,"mixing":0.000038552139631985566},
+      "strongestMixingPair": {"indicesAscendingFrequency":[21,23],"separation":0.18623666154856672,"mixing":0.00256160421059509},
+      "maximumAbsoluteMixedVersusDiagonalDifference": 0.00007202367562431089,
+      "maximumRelativeMixedVersusDiagonalDifference": 0.0004034195301277533,
+      "mixedTransitionsAscending": [0.02073131850928177,0.026731563837703073,0.026895297979783322,0.030852697549656992,0.034856029691568854,0.038614658082934,0.04161063957978551,0.05068322754851452,0.052281117184906405,0.06033749945246472,0.07594053950243798,0.0787412443372748,0.09960299215002631,0.10713614645016617,0.11737131258400459,0.13183658238999768,0.17900508092352263,0.20709498503545468,0.24903994640223,0.2743815148715582,0.3598165597822869,0.457278534999105,0.5603394295554449,0.6342715401224431]
+    }
+  ],
+  "interpretation": "the Wave 7.181 diagonal coefficients are the correct leading nondegenerate asymptotic shifts; within the declared scan, diagonalizing the complete projected quartic block changes any transition by at most 0.0404 percent relative at U/u=0.01",
+  "experimentalUse": "freeze the mixed transition arrays as the next held-out spectroscopy target if measurement precision reaches below the diagonal-only discrepancy",
+  "established": "near-degenerate and off-diagonal quartic mixing have been explicitly audited rather than assumed absent",
+  "boundary": "Diagonalizing the projected quartic block partially resums mixing but is not a systematic second-order calculation: virtual zero-, two-, three- and higher-quantum states, higher cosine terms, compact tunnelling and dissipation remain omitted. It is not the exact nonlinear spectrum.",
+  "epistemicStatus": "exact matrix-element calculation inside a declared perturbative projection; full multimode compact spectrum remains open"
+}

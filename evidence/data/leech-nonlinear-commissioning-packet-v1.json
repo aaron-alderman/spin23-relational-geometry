@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "leech-nonlinear-commissioning-packet-v1",
+  "date": "2026-10-25",
+  "prerequisite": "pass all eight Wave 7.177 linear 24-port gates on the same marked carrier",
+  "carrierModel": "H=(U/2)n^T G^-1 n+u sum_i(1-cos theta_i) with the measured Gram-first G",
+  "modeSplit": {
+    "oneBasedCalibrationModes": [1,3,5,7,9,11,13,15,17,19,21,23],
+    "oneBasedHeldOutModes": [2,4,6,8,10,12,14,16,18,20,22,24],
+    "rule": "fit shared scale and U/u only on calibration modes; no mode-specific Kerr or frequency refits are allowed before scoring held-out modes"
+  },
+  "settings": {
+    "precisionRatios": [0.0001,0.001,0.01],
+    "anharmonicRatios": [0.001,0.01],
+    "offsetPhasePointsPerRatio": 32,
+    "repeatsPerConfiguration": 100
+  },
+  "configurations": {
+    "weakDriveModeSpectroscopy": 72,
+    "twoToneAnharmonicSpectroscopy": 48,
+    "offsetPhaseWeakestCoordinate": 96,
+    "parityAndPowerControls": 12,
+    "total": 228,
+    "totalRepeatedAcquisitions": 22800
+  },
+  "frozenTheoryTargets": {
+    "harmonicScaleFreeRatiosSource": "leech-coupled-metric-pendulum-gap-audit-v1",
+    "anharmonicCoefficientSource": "leech-coupled-anharmonic-spectroscopy-v1",
+    "projectedMixingSource": "leech-one-quantum-quartic-mixing-v1",
+    "softGapOrderConsistentSource": "leech-24mode-full-cosine-order-three-halves-v1",
+    "compactActionSource": "leech-compact-winding-action-bound-v1"
+  },
+  "gates": [
+    {"id":"N1","name":"harmonic fingerprint","fit":"one overall energy scale per calibrated U/u setting on the twelve calibration modes","pass":"held-out RMS relative residual <=0.005 and maximum relative residual <=0.01 across all three settings","failMeaning":"the measured quadratic metric does not generate the observed dynamics"},
+    {"id":"N2","name":"shared anharmonic fingerprint","fit":"one shared calibrated U/u model using calibration modes only","pass":"held-out 0-to-1 shifts match the frozen 24-coefficient pattern including projected mixing within 0.001 relative at U/u=0.001 and 0.0025 at U/u=0.01","failMeaning":"mode-specific Kerr physics or the wrong cosine-coordinate dictionary"},
+    {"id":"N3","name":"soft-gap join","fit":"none beyond N1-N2 shared parameters","pass":"softest transition agrees with the all-24-mode order-consistent target within 0.001 relative at U/u=0.001 and 0.0025 at U/u=0.01","failMeaning":"higher-order remainder, omitted hardware mode or non-cosine nonlinearity exceeds the declared window"},
+    {"id":"N4","name":"parity and two-tone ordering","fit":"line strengths only","pass":"the first transition is odd-drive active at every precision setting and the 1-to-2 ordering is reproduced without relabelling modes","failMeaning":"wrong low-energy sector or uncontrolled hybridization"},
+    {"id":"N5","name":"compact charge-dispersion control","fit":"sinusoidal offset-phase amplitude independently at each ratio","pass":"report the full profile and upper limit; no absolute amplitude promotion is allowed without a prefactor model; any resolved nonexponential or increasing trend under decreasing U/u rejects the ideal compact carrier","failMeaning":"uncontrolled phase slips, dissipation, offset-charge aliasing or ultraviolet junction structure"},
+    {"id":"N6","name":"held-out power stability","fit":"none","pass":"extrapolated zero-power centers from three drive powers remain inside the corresponding N1-N3 tolerance","failMeaning":"drive-induced Stark shift or saturation was mistaken for intrinsic spectrum"}
+  ],
+  "promotionAfterPass": "commissioned nonlinear compact Leech-metric rotor carrier at the finite-device scope",
+  "notPromoted": "thermodynamic bulk gap, 24 chiral edge modes, Leech rootlessness, inversion orbifold, Moonshine character, Monster defects or Griess product",
+  "established": "a finite same-carrier packet that jointly tests the measured metric-to-dynamics dictionary, nonlinear cosine fingerprint, parity and compactness without mode-specific fitting",
+  "boundary": "The numerical tolerances are preregistered engineering gates chosen above the known 0.0081-0.0818 percent theory-ladder discrepancies; they are not universal constants. N5 is a falsifying trend control, not an absolute tunnelling-amplitude theorem, because the instanton prefactor is unbounded.",
+  "epistemicStatus": "executable proposed experiment with theorem-backed targets and explicitly conditional engineering tolerances"
+}

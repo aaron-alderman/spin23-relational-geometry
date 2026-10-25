@@ -72,6 +72,13 @@ the wires, the velocity matrix, gauge fluctuations and the thermodynamic
 two-dimensional bulk. A complete carrier must retain this local gap while
 showing 24 net chiral edge modes and the Leech \(K\)-matrix response.
 
+[Wave 7.180](frontier_wave7_180_leech_coupled_metric_pendulum_gap_audit.md)
+closes an important bookkeeping ambiguity: the 0.8784249807 product gap does
+not transport unchanged after the physical \(G^{-1}\) charging metric is
+joined to the diagonal cosines. The joined carrier is a coupled
+24-dimensional compact Hamiltonian; only its harmonic spectrum is currently
+certified.
+
 ## Corpus links
 
 - [Clock-locking gap no-go](frontier_wave7_159_leech_clock_locking_gap_scaling.md)
@@ -80,3 +87,4 @@ showing 24 net chiral edge modes and the Leech \(K\)-matrix response.
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
 - [Rotor-strip bulk gap and edge count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Passive-capacitance sign no-go](frontier_wave7_169_leech_passive_capacitance_sign_no_go.md)
+- [Coupled-metric pendulum-gap audit](frontier_wave7_180_leech_coupled_metric_pendulum_gap_audit.md)

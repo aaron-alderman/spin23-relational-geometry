@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "leech-adversarial-psd-parasitic-bound-v1",
+  "date": "2026-10-25",
+  "inputs": ["leech-integral-hardware-basis-search-v1", "leech-admittance-parasitic-pole-stress-v1"],
+  "matrix": {
+    "basis": "gram-first trial 43",
+    "minimumEigenvalue": 0.023324849535001285,
+    "maximumEigenvalue": 22.22932260623125,
+    "conditionNumber": 953.0317686668852
+  },
+  "theorem": {
+    "assumptions": "A is the calibrated positive-definite target capacitance and E is any positive-semidefinite sum of unresolved static parasitic capacitances",
+    "relativeStrength": "eta=||E||_2/||A||_2",
+    "bound": "||(A+E)^-1-A^-1||_2/||A^-1||_2 <= kappa_2(A) eta/(1+kappa_2(A) eta)",
+    "tightness": "equality is reached when E is rank one and aligned with the minimum-eigenvalue eigenvector of A",
+    "onePercentStaticStrengthLimit": 0.000010598817828643363,
+    "onePercentStaticStrengthLimitPpm": 10.598817828643362
+  },
+  "seriesRlcPacketCorrection": {
+    "qualityFactor": 30,
+    "frequenciesOverCenter": [0.1,0.1778279410038923,0.31622776601683794,0.5623413251903491,1,1.7782794100389228,3.1622776601683795],
+    "poles": [
+      {"poleFrequencyOverCenter":4,"meanExtractedCapacitanceAmplification":1.2850102185269896,"maximumInBandAmplification":2.653562653562654,"jointFitAdversarialLowFrequencyLimit":0.000008248041669888675,"everyFrequencyAdversarialLowFrequencyLimit":0.000003994184126164673},
+      {"poleFrequencyOverCenter":10,"meanExtractedCapacitanceAmplification":1.0226070771713456,"maximumInBandAmplification":1.1109587162254835,"jointFitAdversarialLowFrequencyLimit":0.000010364506627473154,"everyFrequencyAdversarialLowFrequencyLimit":0.000009540244541807255}
+    ]
+  },
+  "decision": {
+    "supersededRandomOrientationHeadline": "the 10-ppm random-orientation target is not an adversarial guarantee",
+    "jointPacketTarget": "use at most 8 ppm total unresolved low-frequency PSD parasitic norm for the current seven-frequency joint-fit claim",
+    "everyFrequencyTarget": "use at most 3.9 ppm if one-percent inverse agreement is claimed independently at every measured frequency",
+    "multipleModes": "the bound covers any coherent sum of passive static parasitic modes when eta is computed from the total PSD perturbation norm",
+    "measurementRule": "a resolved parasitic may exceed these limits only if it is included in the fitted model and passes new held-out frequency and drive tests"
+  },
+  "epistemicStatus": {
+    "theorem": "the PSD inverse-perturbation bound and its soft-mode rank-one saturation",
+    "conditionalApplication": "the RLC correction assumes Q=30, the recorded frequency grid, a correctly calibrated global target scale and below-pole positive extracted capacitance",
+    "notEstablished": "the bound covers indefinite de-embedding errors, active/nonreciprocal parasitics or dissipative model mismatch"
+  },
+  "established": "the soft Gram mode makes the parasitic limit condition-number controlled; 8 ppm is a conservative rounded joint-packet target covering arbitrary passive PSD alignment and multiple coherent modes under the declared RLC band model",
+  "boundary": "The theorem controls additive positive-semidefinite capacitance after scale calibration. It does not bound indefinite calibration error, complex dissipative admittance or poles inside the band, which must be rejected or modeled separately."
+}

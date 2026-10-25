@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "leech-transformer-structured-tolerance-v1",
+  "date": "2026-10-25",
+  "input": "leech-pareto-transformer-factor-audit-v1",
+  "executable": "scripts/simulate-leech-transformer-tolerance.mjs",
+  "model": {
+    "selectedBasis": "gram-first",
+    "independentParameters": 276,
+    "nonzeroTransformerRatios": 252,
+    "diagonalCapacitors": 24,
+    "distribution": "independent mean-one lognormal multiplicative errors with common log standard deviation sigma on every nonzero L ratio and D capacitor",
+    "calibration": "least-squares removal of one positive global capacitance scale",
+    "metric": "relative spectral-norm error of the calibrated inverse capacitance matrix",
+    "passThreshold": 0.01,
+    "drawsPerSigma": 5000,
+    "seed": 271828
+  },
+  "results": [
+    {"sigma":0.00001,"passCount":5000,"passFraction":1,"wilson95":[0.9992322980549431,1],"medianInverseError":0.000020076191894858465,"p95InverseError":0.000031388986695139315,"p99InverseError":0.00003740572811506054,"maximumInverseError":0.00004793724069394571},
+    {"sigma":0.0001,"passCount":5000,"passFraction":1,"wilson95":[0.9992322980549431,1],"medianInverseError":0.0002041934030822574,"p95InverseError":0.0003172922567234843,"p99InverseError":0.0003760284480643099,"maximumInverseError":0.00046444559054978205},
+    {"sigma":0.0003,"passCount":5000,"passFraction":1,"wilson95":[0.9992322980549431,1],"medianInverseError":0.000605622899649383,"p95InverseError":0.0009419459682235274,"p99InverseError":0.0011466914332150353,"maximumInverseError":0.0014273372721506396},
+    {"sigma":0.001,"passCount":5000,"passFraction":1,"wilson95":[0.9992322980549431,1],"medianInverseError":0.0020039636219118043,"p95InverseError":0.0031900939103167336,"p99InverseError":0.0037894754113817703,"maximumInverseError":0.005002037587754105},
+    {"sigma":0.002,"passCount":4999,"passFraction":0.9998,"wilson95":[0.9988679109191605,0.9999646942165608],"medianInverseError":0.004009543849278497,"p95InverseError":0.006344306391500075,"p99InverseError":0.007504167433374487,"maximumInverseError":0.011014458009388597},
+    {"sigma":0.003,"passCount":4806,"passFraction":0.9612,"wilson95":[0.9554834301365837,0.9662084415892959],"medianInverseError":0.006008402655415924,"p95InverseError":0.009671540082501685,"p99InverseError":0.011261424469917198,"maximumInverseError":0.01637215152694224},
+    {"sigma":0.005,"passCount":2381,"passFraction":0.4762,"wilson95":[0.4623802453265814,0.4900562972860034],"medianInverseError":0.010155374510250283,"p95InverseError":0.01598331824676359,"p99InverseError":0.019131485557303513,"maximumInverseError":0.026347513791994143},
+    {"sigma":0.01,"passCount":14,"passFraction":0.0028,"wilson95":[0.0016686770757911352,0.00469472573837367],"medianInverseError":0.020042547494340358,"p95InverseError":0.03184349968437393,"p99InverseError":0.038622244826980186,"maximumInverseError":0.049214710681036555}
+  ],
+  "designDecision": {
+    "modelBasedQualificationTarget": "sigma at or below 0.002 gives an observed 99.98 percent pass fraction and a 95 percent Wilson lower bound above 99.88 percent",
+    "warningBand": "sigma 0.003 gives 96.12 percent observed yield and p95 inverse error 0.967 percent, leaving little unmodelled margin",
+    "transition": "sigma 0.005 gives 47.62 percent observed yield and median inverse error 1.016 percent",
+    "rejectBand": "sigma 0.01 gives 0.28 percent observed yield",
+    "commissioningRule": "use sigma 0.002 only as an iid component-procurement prior; acceptance still requires direct full-matrix measurement and covariance propagation on every realized device",
+    "supersededBy": "leech-transformer-correlated-tolerance-v1 revises the cross-model procurement target to sigma 0.0015"
+  },
+  "epistemicStatus": {
+    "theorem": "for every sampled positive D and unit-lower-triangular L, the synthesized capacitance matrix remains positive definite",
+    "conditionalInference": "the recorded yields estimate performance only under the declared independent lognormal component model and calibration rule",
+    "notEstablished": "real fabrication errors are independent, lognormal, stationary or fully represented by the 276 modeled parameters"
+  },
+  "established": "under the declared structured-error model, the selected exact factor tolerates roughly 0.2 percent component log scatter at greater than 99 percent model yield, while the yield transition occurs near 0.5 percent",
+  "boundary": "Monte Carlo yield is conditional engineering evidence, not a theorem about hardware. Correlated gradients, parasitic modes, frequency dependence, loss, drift, nonreciprocity and readout covariance are absent and must be measured before Gate A promotion."
+}

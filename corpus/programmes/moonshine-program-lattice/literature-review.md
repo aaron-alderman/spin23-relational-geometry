@@ -652,6 +652,149 @@ covariance, loss/bandwidth cost per mixer coefficient, routing cost per Gram
 pair and signed-ratio fabrication cost. The mathematical candidate set is now
 finite and executable; the remaining weights are platform data.
 
+The coordinate proxies have now been lowered to actual ideal transformer
+factors.
+[Wave 7.174](../frontier/wave-7/frontier_wave7_174_leech_pareto_transformer_factor_audit.md)
+reconstructs exact rational (G=LDL^T) factors for all four candidates. Each
+has capacitor dynamic range 16 and maximum physical ratio (1/2), proving
+that the largest integral coordinate-map entry was not a turns-ratio proxy.
+The Gram-first basis gives the sparsest factor: 252 nonzero and 174 distinct
+signed ratios at condition number 953.03. It is selected for the next ideal
+circuit pass, with a full-matrix covariance-propagation commissioning rule.
+
+The first component-yield curve is now frozen.
+[Wave 7.175](../frontier/wave-7/frontier_wave7_175_leech_transformer_structured_tolerance.md)
+perturbs all 276 selected-factor parameters independently under a declared
+mean-one lognormal model, removes one global scale and evaluates 40000 inverse
+matrix reconstructions. At 0.2% component log scatter, 4999 of 5000 draws pass
+the one-percent inverse-metric target; the 95% Wilson lower yield is 99.887%.
+At 0.3% the observed yield is 96.12%, at 0.5% it is 47.62%, and at 1% it is
+0.28%. These are conditional procurement predictions, not substitutes for a
+measured 24-port covariance matrix.
+
+That iid procurement target does not survive correlation unchanged.
+[Wave 7.176](../frontier/wave-7/frontier_wave7_176_leech_transformer_correlated_tolerance.md)
+puts 90% of component-error variance into either six four-row process blocks
+or one smooth row gradient. At 0.2% scatter their yields fall to 97.02% and
+98.08%. At 0.15%, both retain a 95% Wilson lower yield above 99%, so 0.15%
+replaces 0.2% as the cross-model conditional target. Arbitrary covariance,
+additive parasitics and frequency-dependent loss remain unmodelled.
+
+The resulting device-acceptance experiment is now explicit.
+[Wave 7.177](../frontier/wave-7/frontier_wave7_177_leech_24port_admittance_commissioning_packet.md)
+uses seven frequencies, 168 single-port tomography settings, 84 held-out
+multiport drives and 25200 complex acquisitions. Eight frozen gates test
+fixture removal, reciprocity, passivity, loss, dispersion, positive
+definiteness, one-percent inverse-metric agreement and prediction without
+refitting. Passing commissions only the measured quadratic Leech metric; it
+does not establish a gap, chiral edge, orbifold or Monster structure.
+
+The packet has also survived a discriminating parasitic-pole audit, with an
+important qualification.
+[Wave 7.178](../frontier/wave-7/frontier_wave7_178_leech_admittance_parasitic_pole_stress.md)
+adds a passive rank-one series-RLC branch at four or ten times the band center.
+Ten ppm relative low-frequency capacitance passes all 4000 orientations with
+a 99.808% Wilson lower yield; at 100 ppm, yields collapse to 60.65% and 71.4%
+even though dispersion and loss remain comfortably inside their gates. The
+inverse-metric test, amplified by the soft Gram direction, is the necessary
+detector. This is a one-pole ensemble, not a general parasitic theorem.
+
+The general passive static statement is now exact.
+[Wave 7.179](../frontier/wave-7/frontier_wave7_179_leech_adversarial_psd_parasitic_bound.md)
+proves the tight bound
+\(\kappa\eta/(1+\kappa\eta)\) for any PSD sum of parasitic capacitances,
+saturated by a rank-one perturbation along the soft Gram eigenvector. The
+static one-percent limit is 10.599 ppm. Correcting for the seven-frequency
+\(Q=30\) near-pole amplification lowers the adversarial joint-fit target to
+8 ppm, or 3.9 ppm for a separate inverse claim at every frequency.
+
+The nonlinear carrier cannot be obtained by simply appending the earlier
+independent-pendulum result.
+[Wave 7.180](../frontier/wave-7/frontier_wave7_180_leech_coupled_metric_pendulum_gap_audit.md)
+joins the measured Gram-first charging metric to 24 local compact cosines.
+Because the metric has 179 off-diagonal pairs, the result is a coupled
+24-dimensional Hamiltonian. Its harmonic frequencies are exactly
+\(\sqrt{Uu/\lambda_a(G)}\), spanning 0.21210--6.54773 for the unit benchmark.
+The 0.8784249807 single-pendulum gap is therefore a local cutoff benchmark,
+not the physical joined gap. Weak 24-mode spectroscopy followed by held-out
+anharmonic spectroscopy and finite-cutoff diagonalization is now an explicit
+pre-Gate-A requirement.
+
+[Wave 7.181](../frontier/wave-7/frontier_wave7_181_leech_coupled_anharmonic_spectroscopy.md)
+derives the first nonlinear fingerprint instead of assigning independent
+phenomenological Kerr shifts. The Gram-first eigenvectors fix all 24 leading
+quartic corrections through
+$\delta\omega_a/\omega_a=-\alpha_a\sqrt{U/u}$, with
+$0.17638\leq\alpha_a\leq0.31420$ and every shift downward. At
+$U/u=10^{-3}$ the largest correction is 0.994%; at $10^{-2}$ it is 3.142%.
+This is a controlled semiclassical perturbative target, not the exact compact
+spectrum. Held-out modes and independently calibrated tunable-ratio settings
+now distinguish the joined Hamiltonian from mode-by-mode fitting.
+
+The near-degenerate-mode loophole is separately closed at projected quartic
+order in
+[Wave 7.182](../frontier/wave-7/frontier_wave7_182_leech_one_quantum_quartic_mixing.md).
+The full $24\times24$ one-quantum transition block includes every off-diagonal
+quartic matrix element. At $U/u=10^{-2}$ its diagonalization changes the
+diagonal-only transitions by at most 0.0404% relative. This preserves the
+Wave 7.181 leading fingerprint but does not count as a systematic second-order
+calculation, because virtual three- and five-quantum states and higher cosine
+terms remain absent.
+
+[Wave 7.183](../frontier/wave-7/frontier_wave7_183_leech_four_mode_full_cosine_active_space.md)
+moves beyond that polynomial block for the four softest modes. It projects the
+other twenty modes onto their harmonic vacuum with Debye--Waller factors,
+retains the full cosine, and diagonalizes parity-resolved Fock spaces through
+total excitation cutoff eight. The gap converges to 0.0066596911 at
+$U/u=10^{-3}$ and 0.0207397902 at $10^{-2}$, with final cutoff changes below
+$6\times10^{-10}$ relative. This establishes excitation-cutoff convergence
+inside one declared active space, not convergence in active-mode count or the
+full 24-mode compact gap.
+
+[Wave 7.184](../frontier/wave-7/frontier_wave7_184_leech_full_cosine_active_mode_ladder.md)
+starts the independent active-mode convergence axis. Two-, four- and six-mode
+gaps are excitation-cutoff converged, while an eight-mode cutoff-six
+reconnaissance contains 3003 parity-split states. Every gap stays positive and
+each two-mode enlargement changes it by less than $3\times10^{-5}$ relative
+through the declared scan. Because the increments are not monotone and no
+tail bound controls the omitted sixteen modes, this is strong finite-mode
+stability evidence rather than a 24-mode gap proof.
+
+The leading omitted-mode contribution is nevertheless finite and now fully
+enumerated.
+[Wave 7.185](../frontier/wave-7/frontier_wave7_185_leech_24mode_quartic_second_order.md)
+applies the quartic interaction in the complete 24-mode basis and sums 17,851
+ground-sector plus 20,174 excited-sector reachable states. Its second-order
+gap correction is only $-1.11\times10^{-4}$ of the harmonic gap at
+$U/u=10^{-3}$ and $-1.11\times10^{-3}$ at $10^{-2}$.
+
+[Wave 7.186](../frontier/wave-7/frontier_wave7_186_leech_24mode_full_cosine_order_three_halves.md)
+then adds the sextic first-order term required at the same $U^{3/2}$ order.
+It cancels 51.72% of the quartic second-order coefficient. The resulting
+all-24-mode, order-consistent one-well prediction agrees with the independent
+eight-mode full-cosine ladder within 0.0081% and 0.0818% at the two principal
+ratios. This is convergence between two approximation schemes, not yet a
+rigorous $U^2$ remainder bound or a compact-tunnelling calculation.
+
+Compact winding now has an exact exponent-level constraint.
+[Wave 7.187](../frontier/wave-7/frontier_wave7_187_leech_compact_winding_action_bound.md)
+uses the integral inverse of the Gram-first metric. Minimizing kinetic cost
+over all spectator velocities gives effective coordinate masses
+$1/(G^{-1})_{ii}$ and a minimum $1/22$. Every nonzero winding therefore obeys
+$S_E\ge8\sqrt{u/(22U)}$. The floor is 53.94 at $U/u=10^{-3}$ and 17.06 at
+$10^{-2}$. This makes the bare exponential factor tiny, but does not rigorously
+bound its fluctuation determinant, multi-instanton prefactor or dissipative
+renormalization.
+
+The theory outputs are now collected into an executable same-carrier packet.
+[Wave 7.188](../frontier/wave-7/frontier_wave7_188_leech_nonlinear_commissioning_packet.md)
+freezes twelve calibration and twelve held-out modes, 228 configurations and
+22,800 repeated acquisitions. Six gates test the harmonic fingerprint, shared
+anharmonic coefficients, soft gap, parity, zero-power stability and compact
+offset-phase trend without mode-specific refitting. Passing commissions a
+finite nonlinear compact Leech-metric rotor only; it does not promote the
+chiral edge, orbifold or Monster operator algebra.
+
 The same carrier now has a quantitative dynamics record in
 [Wave 7.140](../frontier/wave-7/frontier_wave7_140_monster_edge_dynamics_and_transport_witness.md).
 For \(H=(2\pi\hbar v/L)(L_0-c/24)\), the Leech edge has a 24-fold weight-one

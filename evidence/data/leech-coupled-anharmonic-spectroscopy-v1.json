@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "leech-coupled-anharmonic-spectroscopy-v1",
+  "date": "2026-10-25",
+  "input": "leech-coupled-metric-pendulum-gap-audit-v1",
+  "model": "H=(U/2)n^T G^-1 n+u sum_i(1-cos theta_i)",
+  "perturbationTheory": {
+    "expansion": "cos theta=1-theta^2/2+theta^4/24+O(theta^6)",
+    "normalModeVariance": "s_a=(1/2)sqrt(U/(u lambda_a))",
+    "modeOverlap": "C_ab=sum_i O_ia^2 O_ib^2",
+    "firstOrderShift": "delta_omega_a=-(u/2)[s_a^2 C_aa+s_a sum_{b!=a}s_b C_ab]",
+    "scaleFreeLaw": "delta_omega_a/omega_a=-alpha_a sqrt(U/u)+higher orders",
+    "maximumEigenResidual": 7.356615316922444e-14
+  },
+  "scaleFreeFractionalCoefficientsAscendingFrequency": [0.22464451826907125,0.1978603949235451,0.24821837120330356,0.18430326423738633,0.19377022707555616,0.2164075717774017,0.2030373407128142,0.17637600010525098,0.18686393056808231,0.18634061552695935,0.18571126527273302,0.18230693259827296,0.1885498352969676,0.2121055897714061,0.19838537582395166,0.19369413820435163,0.19432994749883858,0.1864267224373412,0.2149849975813162,0.21261816619159715,0.19876204163181613,0.23961306978806562,0.27168825972872834,0.3142036834878776],
+  "semiclassicalScans": [
+    {"chargingToCosineRatio":0.0001,"maximumNormalModeVariance":0.03273863581901108,"maximumPhysicalCoordinateVariance":0.018662400400766724,"softestModeFractionalCorrection":-0.0022464451826907125,"largestAbsoluteFractionalCorrection":0.003142036834878776},
+    {"chargingToCosineRatio":0.001,"maximumNormalModeVariance":0.10352865667484706,"maximumPhysicalCoordinateVariance":0.05901569187246201,"softestModeFractionalCorrection":-0.007103883416015714,"largestAbsoluteFractionalCorrection":0.009935992890363315},
+    {"chargingToCosineRatio":0.01,"maximumNormalModeVariance":0.32738635819011086,"maximumPhysicalCoordinateVariance":0.1866240040076672,"softestModeFractionalCorrection":-0.022464451826907123,"largestAbsoluteFractionalCorrection":0.03142036834878776}
+  ],
+  "experimentalUse": {
+    "fit": "fit U/u from a weak-drive subset, then predict all 24 downward 0-to-1 transition shifts without mode-specific coefficients",
+    "heldOut": "reserve at least half the modes and two independently calibrated tunable U/u settings; compare the measured weak-drive transitions and leading square-root-in-U/u shifts to the frozen arrays",
+    "failure": "mode-specific refits, upward leading shifts, or coefficient patterns inconsistent with the measured G reject the diagonal-cosine joined Hamiltonian",
+    "handoff": "use the first systematic failure of the quartic law to set the cutoff and coupling range for exact sparse many-body diagonalization"
+  },
+  "established": "the measured Gram-first eigenvectors fix a 24-component leading anharmonic spectroscopy fingerprint rather than only a linear frequency band",
+  "boundary": "This is first-order quartic perturbation theory for the 0-to-1 transitions in the semiclassical regime sqrt(U/u)<<1. It omits sixth and higher cosine terms, second-order virtual transitions, compact tunnelling between wells, dissipation, drive-induced mixing and the thermodynamic coupled-wire limit. It is not the exact nonlinear gap.",
+  "epistemicStatus": "analytic perturbative prediction with executable matrix reconstruction; exact nonlinear spectrum and laboratory realization remain open"
+}

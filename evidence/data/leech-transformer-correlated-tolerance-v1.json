@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "leech-transformer-correlated-tolerance-v1",
+  "date": "2026-10-25",
+  "input": "leech-transformer-structured-tolerance-v1",
+  "executable": "scripts/simulate-leech-transformer-tolerance.mjs",
+  "commonProtocol": {
+    "selectedBasis": "gram-first",
+    "parameters": 276,
+    "drawsPerPoint": 5000,
+    "inverseMetricPassThreshold": 0.01,
+    "sharedVarianceFraction": 0.9,
+    "globalScaleFitted": true
+  },
+  "models": [
+    {
+      "id": "row-block",
+      "definition": "six independent process shocks, each shared by four consecutive factor rows, plus independent residuals",
+      "seed": 314159,
+      "results": [
+        {"sigma":0.001,"passCount":5000,"passFraction":1,"wilson95":[0.9992322980549431,1],"p95InverseError":0.004668013439923391},
+        {"sigma":0.0015,"passCount":4978,"passFraction":0.9956,"wilson95":[0.9933466185850587,0.9970924352470009],"p95InverseError":0.007012146941936335},
+        {"sigma":0.002,"passCount":4851,"passFraction":0.9702,"wilson95":[0.9651139794808733,0.9745640736099951],"p95InverseError":0.009295269402061337},
+        {"sigma":0.003,"passCount":3901,"passFraction":0.7802,"wilson95":[0.7685089188103543,0.7914608610196358],"p95InverseError":0.01409321916417403},
+        {"sigma":0.005,"passCount":1908,"passFraction":0.3816,"wilson95":[0.36823089321520264,0.395150898605387],"p95InverseError":0.02337598572295508}
+      ]
+    },
+    {
+      "id": "smooth-gradient",
+      "definition": "one normalized linear row-gradient shock plus independent residuals",
+      "seed": 161803,
+      "results": [
+        {"sigma":0.001,"passCount":5000,"passFraction":1,"wilson95":[0.9992322980549431,1],"p95InverseError":0.0043279336664615985},
+        {"sigma":0.0015,"passCount":4987,"passFraction":0.9974,"wilson95":[0.9955564171048898,0.9984798730001674],"p95InverseError":0.006496736966314111},
+        {"sigma":0.002,"passCount":4904,"passFraction":0.9808,"wilson95":[0.9766107953587554,0.9842509824508777],"p95InverseError":0.008453798309114113},
+        {"sigma":0.003,"passCount":4322,"passFraction":0.8644,"wilson95":[0.8546301160030333,0.873610382819409],"p95InverseError":0.012868510470179496},
+        {"sigma":0.005,"passCount":3145,"passFraction":0.629,"wilson95":[0.6155159014197054,0.64228603147847],"p95InverseError":0.02142693026709607}
+      ]
+    }
+  ],
+  "iidComparison": [
+    {"sigma":0.001,"passFraction":1,"wilson95Lower":0.9992322980549431,"p95InverseError":0.0031900939103167336},
+    {"sigma":0.002,"passFraction":0.9998,"wilson95Lower":0.9988679109191605,"p95InverseError":0.006344306391500075},
+    {"sigma":0.003,"passFraction":0.9612,"wilson95Lower":0.9554834301365837,"p95InverseError":0.009671540082501685},
+    {"sigma":0.005,"passFraction":0.4762,"wilson95Lower":0.4623802453265814,"p95InverseError":0.01598331824676359}
+  ],
+  "decision": {
+    "supersededProcurementTarget": "the iid-only sigma 0.002 target is not retained as the robust headline",
+    "robustModelConditionalTarget": "sigma at or below 0.0015, or 0.15 percent, keeps the 95 percent Wilson lower yield above 99 percent in both declared correlated models",
+    "failureOfOldTarget": "at sigma 0.002, row-block and smooth-gradient yields fall to 97.02 and 98.08 percent",
+    "qualificationRule": "procure or tune to at most 0.15 percent estimated component log scatter until measured platform covariance replaces the surrogate correlation models",
+    "devicePassRule": "regardless of component scatter, accept only by direct full-matrix inverse-metric residual and covariance propagation"
+  },
+  "epistemicStatus": {
+    "conditionalInference": "the revised 0.15 percent target is robust across three declared stochastic models, not across all possible correlated errors",
+    "notEstablished": "the two surrogate correlations span the covariance, parasitic, drift or frequency-dependent structure of a real device"
+  },
+  "established": "strong row correlation invalidates the iid-only 0.2 percent procurement headline; 0.15 percent is the largest sampled scatter retaining a greater-than-99-percent Wilson lower yield in both correlated surrogates",
+  "boundary": "The correlation models are deliberately simple stress tests. They omit arbitrary covariance eigenvectors, additive parasitic capacitance, dissipative admittance, frequency dependence and temporal drift; direct matrix measurement remains decisive."
+}

@@ -68,7 +68,7 @@ The theorem does not imply a natural material, four-dimensional Monster
 symmetry, gravity from the Jordan cone, an \(E_8\) gauge field or unique
 selection by nature. Those would be different propositions.
 
-The laboratory route is nevertheless no longer vague. Waves 7.137–173 now
+The laboratory route is nevertheless no longer vague. Waves 7.137–179 now
 provide an end-to-end promotion DAG, an explicit Leech interaction matrix, a
 channel-diagonal basis, a 555-gate finite-qudit channel mixer, coherent local
 inversion gauging, a twelve-qubit
@@ -138,8 +138,52 @@ choice.
 Four mutually nondominated sub-1000-condition bases now expose the remaining
 selection variables as platform measurements: admittance covariance, mixer
 loss and bandwidth, pair-routing cost and signed-ratio range.
-The first blocking requirement is one physically marked microscopic platform whose
-infrared edge and cross-sector products pass those tests together.
+Exact factorization then selects the Gram-first circuit coordinate: 252
+nonzero and 174 distinct signed transformer ratios, maximum magnitude (1/2),
+positive-capacitor range 16 and condition number 953.03. This is an ideal
+network target, not yet a device.
+For the declared independent lognormal component model, a 40000-draw audit
+sets 0.2% log scatter as a procurement target: 4999/5000 runs pass the
+one-percent inverse-metric gate at that point, whereas the observed yield
+falls to 47.62% at 0.5%. This conditional inference does not replace measured
+device covariance.
+Row-block and smooth-gradient stress models reduce the robust conditional
+procurement target to 0.15% scatter: both retain a 95% lower yield above 99%
+there, while the former 0.2% iid target falls below that criterion.
+A finite 24-port packet now turns that prior into acceptance data: 252 drive
+configurations and 25200 complex acquisitions test the complete matrix,
+frequency dispersion and held-out superposition before nonlinear or
+topological claims are permitted.
+A passive rank-one parasitic audit then sets a conditional 10-ppm normalized
+capacitance target. At 100 ppm, flatness and loss checks can still pass while
+the inverse metric fails, so full matrix inversion remains mandatory.
+A tight PSD perturbation theorem covers arbitrary soft-mode alignment and
+multiple passive static modes. Including the near-pole band amplification
+sets the conservative joint-packet target at 8 ppm total unresolved
+parasitic norm.
+The nonlinear join is not a product of the 24 Wave 7.160 pendula. In the
+Gram-first compact coordinates the charging matrix has 179 off-diagonal
+pairs; its harmonic band is 0.21210--6.54773 at the benchmark scale, and the
+exact nonlinear gap remains open. The first blocking requirement is one
+physically marked microscopic platform that passes the linear packet, the
+24-mode resonance-ratio test, the frozen 24-coefficient leading anharmonic
+shift pattern with its complete projected mixing audit, and a cutoff-stable
+coupled nonlinear gap across increasing active-mode counts before its infrared
+edge and cross-sector products are promoted. Four soft modes are already
+full-cosine converged, six modes are independently excitation-cutoff converged
+and an eight-mode reconnaissance is stable; the unbounded 8-to-24 tail remains
+open as a rigorous theorem. Independently, all 24 modes are now included in a
+full-cosine perturbative calculation through absolute order $U^{3/2}$, and
+that result agrees with the eight-mode nonperturbative active-space gap within
+0.0818% at the strongest declared ratio. The $U^2$ remainder and compact
+tunnelling prefactor are the remaining nonlinear-gap calculations. The
+compact exponent itself is bounded exactly: every winding has
+$S_E\ge8\sqrt{u/(22U)}$, giving a bare exponential factor below
+$3.9\times10^{-8}$ even at $U/u=10^{-2}$.
+A frozen nonlinear packet now turns those results into 228 same-carrier
+configurations and 22,800 repeated acquisitions with twelve calibration and
+twelve held-out modes. Passing it commissions the finite compact Leech rotor,
+not yet its chiral edge or Monster orbifold.
 
 ## Corpus links
 
@@ -170,6 +214,21 @@ infrared edge and cross-sector products pass those tests together.
 - [Transformer conditioning and tolerance](frontier_wave7_171_leech_transformer_conditioning_tolerance.md)
 - [Integral hardware-basis search](frontier_wave7_172_leech_integral_hardware_basis_search.md)
 - [Hardware-basis Pareto frontier](frontier_wave7_173_leech_hardware_basis_pareto_frontier.md)
+- [Pareto transformer-factor audit](frontier_wave7_174_leech_pareto_transformer_factor_audit.md)
+- [Structured transformer tolerance](frontier_wave7_175_leech_transformer_structured_tolerance.md)
+- [Correlated transformer tolerance](frontier_wave7_176_leech_transformer_correlated_tolerance.md)
+- [24-port admittance commissioning](frontier_wave7_177_leech_24port_admittance_commissioning_packet.md)
+- [Parasitic-pole stress test](frontier_wave7_178_leech_admittance_parasitic_pole_stress.md)
+- [Adversarial PSD parasitic bound](frontier_wave7_179_leech_adversarial_psd_parasitic_bound.md)
+- [Coupled-metric pendulum-gap audit](frontier_wave7_180_leech_coupled_metric_pendulum_gap_audit.md)
+- [Coupled anharmonic spectroscopy](frontier_wave7_181_leech_coupled_anharmonic_spectroscopy.md)
+- [One-quantum quartic mixing audit](frontier_wave7_182_leech_one_quantum_quartic_mixing.md)
+- [Four-mode full-cosine active space](frontier_wave7_183_leech_four_mode_full_cosine_active_space.md)
+- [Full-cosine active-mode ladder](frontier_wave7_184_leech_full_cosine_active_mode_ladder.md)
+- [Complete 24-mode quartic second order](frontier_wave7_185_leech_24mode_quartic_second_order.md)
+- [All-24-mode full-cosine order completion](frontier_wave7_186_leech_24mode_full_cosine_order_three_halves.md)
+- [Compact-winding action bound](frontier_wave7_187_leech_compact_winding_action_bound.md)
+- [Nonlinear Leech commissioning packet](frontier_wave7_188_leech_nonlinear_commissioning_packet.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

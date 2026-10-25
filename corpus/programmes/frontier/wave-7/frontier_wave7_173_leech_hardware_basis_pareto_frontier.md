@@ -20,7 +20,7 @@ number 1000:
 | precision-first | 740.225 | 195 | 160 | 7 |
 | transform-first | 916.479 | 200 | 143 | 7 |
 | Gram-first | 953.032 | 179 | 184 | 8 |
-| balanced small-ratio | 954.159 | 182 | 165 | 6 |
+| coordinate-small-entry | 954.159 | 182 | 165 | 6 |
 
 All four improve the catalogue-basis conditioning by more than a factor of
 33. Their sufficient one-percent worst-case inverse tolerances lie between
@@ -38,7 +38,9 @@ Choosing among them requires four platform measurements:
 
 If calibration precision is binding, use the precision-first basis. If the
 integral mixer dominates, use transform-first. If pair routing dominates, use
-Gram-first. If signed ratio range dominates, use balanced small-ratio. A
+Gram-first. If the largest integral coordinate-map coefficient dominates, use
+coordinate-small-entry. This last quantity is not yet the physical (LDL^T)
+transformer turns ratio; Wave 7.174 performs that synthesis. A
 universal selection before those measurements would replace physics with an
 unstated engineering preference.
 
@@ -63,3 +65,4 @@ infrared Leech edge.
 - [Conditioning and tolerance audit](frontier_wave7_171_leech_transformer_conditioning_tolerance.md)
 - [Exact transformer recovery](frontier_wave7_170_leech_transformer_capacitance_recovery.md)
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
+- [Pareto transformer-factor audit](frontier_wave7_174_leech_pareto_transformer_factor_audit.md)

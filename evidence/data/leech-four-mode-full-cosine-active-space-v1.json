@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "leech-four-mode-full-cosine-active-space-v1",
+  "date": "2026-10-25",
+  "input": "leech-one-quantum-quartic-mixing-v1",
+  "projection": {
+    "activeModes": "four lowest Gram-first harmonic frequencies",
+    "omittedModes": "twenty modes projected onto their harmonic vacuum",
+    "omittedModeTreatment": "exact vacuum expectation inside the projection, including coordinate-resolved Debye-Waller factors",
+    "potential": "full cosine in the four active modes with no Taylor truncation",
+    "basis": "four-mode harmonic Fock states at or below a total-excitation cutoff, split by total parity"
+  },
+  "scans": [
+    {
+      "chargingToCosineRatio": 0.001,
+      "rungs": [
+        {"totalExcitationCutoff":2,"evenDimension":11,"oddDimension":4,"groundEnergy":0.014672016185841814,"gap":0.006660252208578573,"firstExcitationParity":"odd","maximumRitzResidual":0},
+        {"totalExcitationCutoff":4,"evenDimension":46,"oddDimension":24,"groundEnergy":0.01467201609789425,"gap":0.006659691194329425,"firstExcitationParity":"odd","maximumRitzResidual":0},
+        {"totalExcitationCutoff":6,"evenDimension":130,"oddDimension":80,"groundEnergy":0.014672016097884535,"gap":0.0066596910571403625,"firstExcitationParity":"odd","maximumRitzResidual":0},
+        {"totalExcitationCutoff":8,"evenDimension":295,"oddDimension":200,"groundEnergy":0.014672016097884535,"gap":0.0066596910571225226,"firstExcitationParity":"odd","maximumRitzResidual":3.3248385283777173e-16}
+      ],
+      "cutoff6To8RelativeGapChange": 2.678814535132346e-12,
+      "projectedQuarticBlockSoftestTransition": 0.006659423519403106,
+      "fullCosineGapRelativeToProjectedQuarticBlock": 0.0000401743061748822
+    },
+    {
+      "chargingToCosineRatio": 0.01,
+      "rungs": [
+        {"totalExcitationCutoff":2,"evenDimension":11,"oddDimension":4,"groundEnergy":0.030774035400422513,"gap":0.02075720484912357,"firstExcitationParity":"odd","maximumRitzResidual":0},
+        {"totalExcitationCutoff":4,"evenDimension":46,"oddDimension":24,"groundEnergy":0.030774026184912814,"gap":0.020739806402653414,"firstExcitationParity":"odd","maximumRitzResidual":0},
+        {"totalExcitationCutoff":6,"evenDimension":130,"oddDimension":80,"groundEnergy":0.03077402617907152,"gap":0.02073979018638689,"firstExcitationParity":"odd","maximumRitzResidual":0},
+        {"totalExcitationCutoff":8,"evenDimension":295,"oddDimension":200,"groundEnergy":0.030774026179067358,"gap":0.02073979017446519,"firstExcitationParity":"odd","maximumRitzResidual":1.1775987058770785e-16}
+      ],
+      "cutoff6To8RelativeGapChange": 5.748239918066054e-10,
+      "projectedQuarticBlockSoftestTransition": 0.02073131850928177,
+      "fullCosineGapRelativeToProjectedQuarticBlock": 0.0004086409255458272
+    }
+  ],
+  "result": "within the four-soft-mode projection, the full-cosine gap is cutoff stable, remains odd parity and differs from the projected quartic-block softest transition by only 0.00402 percent at U/u=0.001 and 0.04086 percent at U/u=0.01",
+  "nextConvergenceAxis": "increase the active-mode count while retaining full-cosine matrix elements and independently converge the total-excitation cutoff at every active count",
+  "established": "higher active-sector excitations and all cosine orders do not destabilize the four-soft-mode projected gap in the declared semiclassical scan",
+  "boundary": "This is a Ritz spectrum of a four-mode projected Hamiltonian, not the full 24-mode compact spectrum. Projection onto the other twenty harmonic vacua omits their virtual excitations and compact interwell tunnelling; cutoff convergence within the projection does not prove active-mode-count convergence or the thermodynamic coupled-wire bulk gap.",
+  "epistemicStatus": "numerically converged full-cosine active-space result with explicit projection boundary; physical 24-mode nonlinear gap remains open"
+}

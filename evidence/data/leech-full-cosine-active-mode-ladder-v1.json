@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "leech-full-cosine-active-mode-ladder-v1",
+  "date": "2026-10-25",
+  "input": "leech-four-mode-full-cosine-active-space-v1",
+  "method": "retain the full cosine; project omitted modes onto their harmonic vacuum with Debye-Waller factors; split by parity; converge total harmonic excitation cutoff independently",
+  "scans": [
+    {
+      "chargingToCosineRatio": 0.001,
+      "activeModeRungs": [
+        {"activeModes":2,"cutoff":10,"evenDimension":36,"oddDimension":30,"gap":0.006659698083620193,"cutoffStatus":"converged"},
+        {"activeModes":4,"cutoff":8,"evenDimension":295,"oddDimension":200,"gap":0.0066596910571225226,"cutoffStatus":"converged"},
+        {"activeModes":6,"cutoff":8,"evenDimension":1897,"oddDimension":1106,"gap":0.0066596718309228295,"cutoff6To8RelativeChange":9.904560934108654e-12,"cutoffStatus":"converged"},
+        {"activeModes":8,"cutoff":6,"evenDimension":2083,"oddDimension":920,"gap":0.006659662450776954,"cutoff4To6RelativeChange":1.508970079470518e-7,"cutoffStatus":"reconnaissance"}
+      ],
+      "relativeModeCountChanges": {"twoToFour":-0.0000010550786230012063,"fourToSix":-0.0000028869590245861494,"sixToEightAtCutoff6":-0.0000014085116033690575}
+    },
+    {
+      "chargingToCosineRatio": 0.01,
+      "activeModeRungs": [
+        {"activeModes":2,"cutoff":10,"evenDimension":36,"oddDimension":30,"gap":0.020740002441103706,"cutoffStatus":"converged"},
+        {"activeModes":4,"cutoff":8,"evenDimension":295,"oddDimension":200,"gap":0.02073979017446519,"cutoffStatus":"converged"},
+        {"activeModes":6,"cutoff":8,"evenDimension":1897,"oddDimension":1106,"gap":0.020739196158941195,"cutoff6To8RelativeChange":1.79410951429363e-9,"cutoffStatus":"converged"},
+        {"activeModes":8,"cutoff":6,"evenDimension":2083,"oddDimension":920,"gap":0.02073890314762028,"cutoff4To6RelativeChange":0.000003524839053375193,"cutoffStatus":"reconnaissance"}
+      ],
+      "relativeModeCountChanges": {"twoToFour":-0.000010234753424728417,"fourToSix":-0.000028642167200814257,"sixToEightAtCutoff6":-0.000014130377446583227}
+    }
+  ],
+  "observation": "the full-cosine odd gap remains positive and changes by less than 3e-5 relative at every two-mode enlargement through eight active modes in the declared scan; the increments are not monotone, so no tail extrapolation is certified",
+  "scalingBoundary": "eight active modes at cutoff six already require 3003 parity-split basis states; a dense full-cosine matrix makes the next simultaneous mode-and-cutoff rung the computational bottleneck",
+  "nextAlgorithm": "replace dense matrix storage with on-the-fly tensor-product cosine application and a parity-preserving Krylov or tensor-network eigensolver, then require agreement with every frozen 2-8-mode rung before extending toward 24",
+  "established": "active-mode enlargement through six independently cutoff-converged modes and an eight-mode reconnaissance do not destabilize or close the projected nonlinear gap",
+  "boundary": "The eight-mode rung is not independently cutoff-converged to the same standard as the six-mode rung, and no monotone or rigorous truncation-error bound controls the omitted sixteen modes. These data do not establish the 24-mode gap or the thermodynamic coupled-wire bulk gap.",
+  "epistemicStatus": "controlled finite active-space convergence evidence with an explicit unresolved mode-count tail"
+}

@@ -13,7 +13,7 @@ assert.equal(record.scan.candidatesEvaluated,
 
 const candidates = record.sub1000EngineeringShortlist;
 assert.deepEqual(candidates.map((candidate) => candidate.id), [
-  "precision-first", "transform-first", "gram-first", "balanced-small-ratio"
+  "precision-first", "transform-first", "gram-first", "coordinate-small-entry"
 ]);
 assert.ok(candidates.every((candidate) => candidate.conditionNumber < 1000));
 const dominates = (left, right) => left.conditionNumber <= right.conditionNumber
@@ -33,7 +33,7 @@ assert.equal(byId.get("transform-first").transformNonzeroEntries,
   Math.min(...candidates.map((candidate) => candidate.transformNonzeroEntries)));
 assert.equal(byId.get("gram-first").gramOffDiagonalPairs,
   Math.min(...candidates.map((candidate) => candidate.gramOffDiagonalPairs)));
-assert.equal(byId.get("balanced-small-ratio").transformMaximumAbsoluteEntry,
+assert.equal(byId.get("coordinate-small-entry").transformMaximumAbsoluteEntry,
   Math.min(...candidates.map((candidate) => candidate.transformMaximumAbsoluteEntry)));
 
 const frozenWinner = byId.get("precision-first");

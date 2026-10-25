@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "leech-24mode-quartic-second-order-v1",
+  "date": "2026-10-25",
+  "input": "leech-full-cosine-active-mode-ladder-v1",
+  "calculation": {
+    "unperturbedModel": "all 24 Gram-first harmonic normal modes",
+    "transition": "harmonic vacuum to the softest one-quantum mode",
+    "perturbation": "V4=-(u/24) sum_i theta_i^4",
+    "method": "apply V4 exactly as four sparse ladder operations for each of 24 compact coordinates, then sum every nondegenerate Rayleigh-Schrödinger second-order denominator",
+    "scaling": "at fixed u=1, the first-order gap correction scales as U and the second-order gap correction as U^(3/2)"
+  },
+  "reachableStateAudit": {
+    "ground": {"statesIncludingSource":17851,"virtualExcitationSectors":[2,4],"secondOrderByExcitation":{"2":-0.5975296755163146,"4":-0.06613304966310142}},
+    "softestOneQuantum": {"statesIncludingSource":20174,"virtualExcitationSectors":[1,3,5],"secondOrderByExcitation":{"1":-0.001943235335996532,"3":-0.6176164470534665,"5":-0.06772316561146631}}
+  },
+  "coefficientsAtUnitRatio": {
+    "firstOrderGap": -0.04764668730530097,
+    "groundSecondOrder": -0.6636627251794202,
+    "softestSecondOrder": -0.687282848000936,
+    "secondOrderGap": -0.02362012282151582,
+    "secondOrderGapDecomposition": {"otherOneQuantumMixing":-0.001943235335996532,"threeMinusTwoQuantumChannels":-0.020086771537151882,"fiveMinusFourQuantumChannels":-0.0015901159483648897}
+  },
+  "scans": [
+    {"chargingToCosineRatio":0.0001,"harmonicGap":0.002120981525497628,"firstOrderQuarticGapCorrection":-0.000004764668730530097,"secondOrderQuarticGapCorrection":-2.3620122821515827e-8,"secondOrderRelativeToHarmonic":-0.000011136411391407116,"gapThroughSecondOrderQuartic":0.0021161932366442764},
+    {"chargingToCosineRatio":0.001,"harmonicGap":0.0067071324957109985,"firstOrderQuarticGapCorrection":-0.000047646687305300974,"secondOrderQuarticGapCorrection":-7.46933867289128e-7,"secondOrderRelativeToHarmonic":-0.00011136411391407114,"gapThroughSecondOrderQuartic":0.006658738874538408},
+    {"chargingToCosineRatio":0.01,"harmonicGap":0.021209815254976283,"firstOrderQuarticGapCorrection":-0.00047646687305300976,"secondOrderQuarticGapCorrection":-0.00002362012282151582,"secondOrderRelativeToHarmonic":-0.0011136411391407112,"gapThroughSecondOrderQuartic":0.020709728259101758}
+  ],
+  "crossChecks": {
+    "wave181FirstOrderCoefficient": "exactly reproduced at recorded precision",
+    "groundReachableStateCount": "1+C(25,2)+C(27,4)=17851",
+    "parity": "V4 connects the even vacuum only to even 0/2/4 sectors and the odd one-quantum source only to odd 1/3/5 sectors"
+  },
+  "interpretation": "the leading virtual contribution of all 24 modes is explicitly finite and small in the declared semiclassical window; the dominant gap term is the difference between excited three-quantum and ground two-quantum channels",
+  "established": "all 24-mode quartic virtual states contributing through second order to the softest transition have been enumerated and summed",
+  "boundary": "This is nondegenerate second-order perturbation theory in the quartic Taylor term. It omits the sextic first-order contribution at the same U^(3/2) scaling, mixed quartic-sextic and higher orders, compact interwell tunnelling, dissipation and the thermodynamic coupled-wire limit. It is not by itself a controlled second-order expansion of the full cosine until the sextic term is added.",
+  "epistemicStatus": "exact finite perturbative sum for V4 across all 24 modes; full-cosine order consistency remains open"
+}

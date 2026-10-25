@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "leech-pareto-transformer-factor-audit-v1",
+  "date": "2026-10-25",
+  "input": "leech-hardware-basis-pareto-frontier-v1",
+  "executable": "scripts/analyze-leech-pareto-transformers.mjs",
+  "factorization": "for each shortlisted G, exact rational G=L D L^T and transformer coordinates x=L^T phi",
+  "candidates": [
+    {"id":"precision-first","conditionNumber":740.2250115149669,"diagonalCapacitanceDynamicRange":16,"nonzeroTransformerRatios":271,"distinctSignedTransformerRatios":210,"maximumAbsoluteTransformerRatio":"1/2","maximumRatioNumeratorMagnitude":2359,"maximumRatioDenominator":4873},
+    {"id":"transform-first","conditionNumber":916.4789132966196,"diagonalCapacitanceDynamicRange":16,"nonzeroTransformerRatios":271,"distinctSignedTransformerRatios":200,"maximumAbsoluteTransformerRatio":"1/2","maximumRatioNumeratorMagnitude":3131,"maximumRatioDenominator":6842},
+    {"id":"gram-first","conditionNumber":953.0317686668852,"diagonalCapacitanceDynamicRange":16,"nonzeroTransformerRatios":252,"distinctSignedTransformerRatios":174,"maximumAbsoluteTransformerRatio":"1/2","maximumRatioNumeratorMagnitude":1944,"maximumRatioDenominator":4135},
+    {"id":"coordinate-small-entry","conditionNumber":954.158527037057,"diagonalCapacitanceDynamicRange":16,"nonzeroTransformerRatios":264,"distinctSignedTransformerRatios":202,"maximumAbsoluteTransformerRatio":"1/2","maximumRatioNumeratorMagnitude":3625,"maximumRatioDenominator":10383}
+  ],
+  "selectedCircuitBasis": {
+    "id": "gram-first",
+    "trialZeroBased": 43,
+    "reason": "among the sub-1000-condition shortlist it has the fewest nonzero and distinct physical LDL transformer ratios, while also having the smallest recorded ratio numerator and denominator bounds",
+    "diagonalCapacitances": ["4","4","3","4","11/4","106/33","807/424","342/269","229/342","811/687","1324/811","371/331","183/212","4135/5124","3984/4135","137/249","56/137","111/224","15/37","7/15","8/21","3/8","1/3","1/4"],
+    "relativeDeltaForOnePercentWorstCaseInverse": 0.000010388940247878148,
+    "conditionPenaltyAgainstPrecisionFirst": 1.287489282098671,
+    "nonzeroRatioReductionAgainstPrecisionFirst": 0.07011070110701112,
+    "distinctRatioReductionAgainstPrecisionFirst": 0.17142857142857137
+  },
+  "proxyCorrection": {
+    "finding": "the maximum integral coordinate-transform entry from Wave 7.173 is not the maximum physical LDL transformer ratio",
+    "result": "all four synthesized factors have maximum absolute transformer ratio one half and diagonal capacitance dynamic range 16",
+    "implication": "physical circuit factorization must be evaluated explicitly; coordinate-map sparsity and coefficient bounds are insufficient proxies"
+  },
+  "commissioningTarget": {
+    "network": "24 positive diagonal capacitors with the selected exact D values behind the exact rational L transpose mode transformer",
+    "measurement": "fit a single positive scale to the measured 24-port capacitance matrix and test the full residual against the selected G with covariance propagation",
+    "pass": "the matrix is positive definite and the propagated inverse-metric error is below one percent on the preregistered occupied subspace or globally if the global claim is made",
+    "failMeaning": "the network does not implement the selected Leech quadratic metric at the claimed scope"
+  },
+  "established": "explicit factorization changes the engineering ranking: the Gram-first integral basis is the sparsest shortlisted physical transformer factor, using 252 nonzero ratios and 174 distinct signed values at condition number 953.03",
+  "boundary": "The selected factor is exact only in the ideal lossless multiport-transformer abstraction. Counts of rational coefficients are not a planar layout or a loss model, and the selection can change when measured platform covariance, bandwidth, parasitics and routing weights are supplied."
+}

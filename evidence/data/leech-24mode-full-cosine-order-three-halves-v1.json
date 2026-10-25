@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "leech-24mode-full-cosine-order-three-halves-v1",
+  "date": "2026-10-25",
+  "input": "leech-24mode-quartic-second-order-v1",
+  "derivation": {
+    "cosineTerms": "1-cos(theta)=theta^2/2-theta^4/24+theta^6/720+O(theta^8)",
+    "orderCounting": "V4 second order and V6 first order both scale as U^(3/2) at fixed u=1",
+    "gaussianMomentIdentity": "<1_a|theta_i^6|1_a>-<0|theta_i^6|0>=90 O_ia^2 s_a v_i^2",
+    "sexticGapFormula": "deltaDelta_6=(u/8)s_a sum_i O_ia^2 v_i^2"
+  },
+  "coefficientsAtUnitRatio": {
+    "harmonic": 0.2120981525497628,
+    "quarticFirstOrder": -0.04764668730530097,
+    "quarticSecondOrder": -0.02362012282151582,
+    "sexticFirstOrder": 0.012216446289830436,
+    "fullCosineOrderThreeHalves": -0.011403676531685385,
+    "sexticCancellationFractionOfQuarticSecondOrder": 0.5172050281932635
+  },
+  "scans": [
+    {"chargingToCosineRatio":0.0001,"harmonicGap":0.002120981525497628,"quarticFirstOrderCorrection":-0.000004764668730530097,"fullCosineOrderThreeHalvesCorrection":-1.1403676531685387e-8,"relativeOrderThreeHalvesCorrection":-0.000005376603423742617,"gapThroughOrderThreeHalves":0.0021162054530905663},
+    {"chargingToCosineRatio":0.001,"harmonicGap":0.0067071324957109985,"quarticFirstOrderCorrection":-0.000047646687305300974,"fullCosineOrderThreeHalvesCorrection":-3.606159153993512e-7,"relativeOrderThreeHalvesCorrection":-0.000053766034237426174,"gapThroughOrderThreeHalves":0.006659125192490298,"eightModeFullCosineGap":0.006659662450776954,"relativeDifferenceFromEightModeGap":0.00008067350119124719},
+    {"chargingToCosineRatio":0.01,"harmonicGap":0.021209815254976283,"quarticFirstOrderCorrection":-0.00047646687305300976,"fullCosineOrderThreeHalvesCorrection":-0.000011403676531685385,"relativeOrderThreeHalvesCorrection":-0.0005376603423742616,"gapThroughOrderThreeHalves":0.020721944705391588,"eightModeFullCosineGap":0.02073890314762028,"relativeDifferenceFromEightModeGap":0.0008177116266941068}
+  ],
+  "interpretation": "adding the mandatory sextic term cancels 51.72 percent of the negative quartic second-order coefficient; the resulting all-24-mode order-consistent prediction stays within 0.0081 percent and 0.0818 percent of the eight-mode full-cosine gaps at U/u=0.001 and 0.01",
+  "nextOrder": "order U^2 requires quartic third order, quartic-sextic mixed second order and octic first order, with consistent treatment of near-degenerate subspaces",
+  "established": "the softest all-24-mode transition is perturbatively complete through relative order U/u for the full cosine in the one-well harmonic expansion",
+  "boundary": "Order consistency in the one-well expansion is not a rigorous remainder bound. Order U^2 terms, compact interwell tunnelling, dissipation, active-mode tail convergence and the thermodynamic coupled-wire bulk remain open.",
+  "epistemicStatus": "all-24-mode full-cosine perturbation theory complete through absolute order U^(3/2) at fixed u=1"
+}

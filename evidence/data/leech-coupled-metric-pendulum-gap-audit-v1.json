@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "leech-coupled-metric-pendulum-gap-audit-v1",
+  "date": "2026-10-25",
+  "inputs": {
+    "physicalMetric": "gram-first candidate from leech-hardware-basis-pareto-frontier-v1",
+    "nonlinearSurrogate": "leech-rotor-native-pendulum-gap-v1"
+  },
+  "candidateJoin": {
+    "hamiltonian": "H=(U/2)n^T G^-1 n + u sum_i(1-cos(theta_i))",
+    "canonicalCoordinates": "[theta_i,n_j]=i delta_ij; theta_i are compact cosine coordinates",
+    "benchmark": {"U": 1, "u": 1, "channels": 24},
+    "physicalMeaning": "a capacitance matrix proportional to G produces the charging metric G^-1; local junction or rotor locking supplies the diagonal cosines"
+  },
+  "separabilityAudit": {
+    "gramOffDiagonalPairs": 179,
+    "isProductOfTwentyFourPendula": false,
+    "criterion": "the Wave 7.160 product spectrum transports only when the charging matrix is diagonal in the same integral compact coordinates as the cosine arguments",
+    "obstruction": "orthogonal whitening diagonalizes the quadratic kinetic term over the reals but turns the compact local cosines into coupled nonintegral vertex operators in general"
+  },
+  "harmonicSmallOscillationCertificate": {
+    "quadraticHamiltonian": "H_harm=(U/2)n^T G^-1 n+(u/2)theta^T theta",
+    "formula": "omega_a=sqrt(U*u/lambda_a(G))",
+    "minimumMetricEigenvalue": 0.023324849535001285,
+    "maximumMetricEigenvalue": 22.22932260623125,
+    "conditionNumber": 953.0317686668852,
+    "minimumAngularFrequencyInEnergyUnits": 0.2120981525497628,
+    "maximumAngularFrequencyInEnergyUnits": 6.547727163802217,
+    "frequencyRatio": 30.871212620609597,
+    "metricEigenvaluesAscending": [0.023324849535001285,0.030141305629973136,0.04555268360175993,0.07419714164557244,0.1272444083073995,0.15436877919111072,0.2245517043610371,0.3000628413914064,0.553266856508848,0.697364712921662,0.8345507115343098,0.9702930740226492,1.5545201455870454,1.6701748650775783,2.64528307594145,3.5230390329132844,3.756780833696583,5.5430761008857825,6.4191453950571775,7.914499549140418,10.121575431608038,13.152512709610447,13.435151185600217,22.22932260623125],
+    "harmonicFrequenciesAscending": [0.2120981525497628,0.2728215808212166,0.2757373737997216,0.31432284156945917,0.3554579817257467,0.3946947899589099,0.42474138559017977,0.5159315307150104,0.5327718531222547,0.6148425616214855,0.7737827223443299,0.8020507009428332,1.0151928124680674,1.0946458480109749,1.1974848178693303,1.3444129053734384,1.8255506681221332,2.1102884507888913,2.5451903338534363,2.8033714539611183,3.6711862030151488,4.68536054831655,5.75995339735887,6.547727163802217],
+    "scaleFreeFrequencyRatiosToSoftest": [1,1.2862987137863295,1.3000460894397825,1.4819687856343409,1.6759126727534726,1.860906307829843,2.002569944547378,2.4325130818570506,2.5119118045936535,2.8988586379941723,3.6482294307716034,3.7815072470027986,4.786429302960954,5.161034336469043,5.645899332330933,6.338635623231136,8.607103108518682,9.949584309998984,12.000058950330931,13.217330845460273,17.308902311885102,22.09052974762363,27.157018239503337,30.871212620609597]
+  },
+  "comparisonWithIndependentSurrogate": {
+    "wave160ConvergedSinglePendulumGap": 0.8784249806868974,
+    "lowestHarmonicFrequencyOverIndependentGap": 0.24145277879496266,
+    "independentGapOverLowestHarmonicFrequency": 4.141596568036112,
+    "interpretation": "the independent-channel nonlinear gap is not the gap of the joined metric-plus-cosine carrier; even its small-oscillation scale begins about 4.14 times lower"
+  },
+  "measurementGate": {
+    "prerequisite": "pass the Wave 7.177 linear 24-port matrix and held-out-drive packet",
+    "driveRegime": "add the local cosine elements, cool below the soft-mode scale and sweep weak spectroscopy through all 24 linearized normal modes",
+    "predictedLinearizedInvariant": "after one fitted overall energy scale, the 24 frozen scale-free resonance ratios equal sqrt(lambda_max(G)/lambda_a(G)) up to the declared loss and matrix-error budgets",
+    "nonlinearContinuation": "use weak-drive and two-tone spectroscopy while sweeping a calibrated tunable U/u ratio; extract anharmonic 0-to-1 and 1-to-2 transitions and compare to a finite-cutoff diagonalization of the same measured G and fitted U,u",
+    "rejection": "reject this carrier if the resonance ratios fail the measured-matrix prediction, if one U,u model cannot predict held-out modes and tunable-ratio settings, or if the finite-cutoff gap is not stable"
+  },
+  "established": "the physical quadratic metric and diagonal rotor locking define a coupled 24-dimensional compact Hamiltonian with a certified harmonic spectrum; the previously quoted product-pendulum gap does not transport to it",
+  "boundary": "No exact nonlinear 24-channel gap, thermodynamic bulk gap, chiral edge, orbifold sector or Monster operator product is established here. The harmonic frequencies are a small-oscillation prediction, not a rigorous lower bound on the nonlinear gap.",
+  "epistemicStatus": "theorem for the harmonic reduction and nonseparability; experimental protocol for the nonlinear continuation; Monster identification remains conditional on later gates"
+}

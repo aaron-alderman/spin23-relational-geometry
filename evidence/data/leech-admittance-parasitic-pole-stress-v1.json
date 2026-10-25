@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "leech-admittance-parasitic-pole-stress-v1",
+  "date": "2026-10-25",
+  "inputs": ["leech-24port-admittance-commissioning-packet-v1", "leech-transformer-correlated-tolerance-v1"],
+  "executable": "scripts/simulate-leech-admittance-parasitics.mjs",
+  "model": {
+    "selectedBasis": "gram-first",
+    "parasitic": "one passive series-RLC rank-one branch",
+    "couplingDirection": "uniform random Rademacher unit vector",
+    "qualityFactor": 30,
+    "poleFrequencyOverCommissioningCenter": [4,10],
+    "drawsPerPoint": 2000,
+    "strength": "low-frequency parasitic capacitance spectral norm divided by target G spectral norm",
+    "gates": {"dispersion":0.005,"lossRatio":0.001,"inverseMetric":0.01}
+  },
+  "results": [
+    {"poleRatio":4,"strength":0.000001,"passCount":2000,"passFraction":1,"wilson95":[0.9980829527187469,1],"p95Dispersion":0.0000016529378780703728,"p95LossRatio":1.8647337544952196e-7,"p95InverseError":0.0002511706664903371,"maximumInverseError":0.0004976956920860952},
+    {"poleRatio":4,"strength":0.000003,"passCount":2000,"passFraction":1,"wilson95":[0.9980829527187469,1],"p95Dispersion":0.000004958813151987223,"p95LossRatio":5.594201255176125e-7,"p95InverseError":0.0007266496717721793,"maximumInverseError":0.0014348499070156733},
+    {"poleRatio":4,"strength":0.00001,"passCount":2000,"passFraction":1,"wilson95":[0.9980829527187469,1],"p95Dispersion":0.00001652937224622244,"p95LossRatio":0.0000018647337477263384,"p95InverseError":0.0023923193426575134,"maximumInverseError":0.004888448977400247},
+    {"poleRatio":4,"strength":0.00003,"passCount":1980,"passFraction":0.99,"wilson95":[0.9846040615409247,0.9935172321234472],"p95Dispersion":0.000049588066419737955,"p95LossRatio":0.000005594201213307273,"p95InverseError":0.007209230347126999,"maximumInverseError":0.01703234598676175},
+    {"poleRatio":4,"strength":0.0001,"passCount":1213,"passFraction":0.6065,"wilson95":[0.584905185237529,0.6276864836915642],"p95Dispersion":0.00016529299214136019,"p95LossRatio":0.00001864733670670262,"p95InverseError":0.02332614156956966,"maximumInverseError":0.04414876116689872},
+    {"poleRatio":10,"strength":0.000001,"passCount":2000,"passFraction":1,"wilson95":[0.9980829527187469,1],"p95Dispersion":1.1085881307935539e-7,"p95LossRatio":1.3011703440810445e-8,"p95InverseError":0.00020624468320216795,"maximumInverseError":0.0004939235485896114},
+    {"poleRatio":10,"strength":0.000003,"passCount":2000,"passFraction":1,"wilson95":[0.9980829527187469,1],"p95Dispersion":3.3257641350066756e-7,"p95LossRatio":3.903511030110387e-8,"p95InverseError":0.000597519470157108,"maximumInverseError":0.001275086643210891},
+    {"poleRatio":10,"strength":0.00001,"passCount":2000,"passFraction":1,"wilson95":[0.9980829527187469,1],"p95Dispersion":0.0000011085877447326815,"p95LossRatio":1.3011703428015476e-7,"p95InverseError":0.0019482807145032703,"maximumInverseError":0.003998928771390173},
+    {"poleRatio":10,"strength":0.00003,"passCount":1994,"passFraction":0.997,"wilson95":[0.9934700849260646,0.9986243700763698],"p95Dispersion":0.000003325760660461779,"p95LossRatio":3.903510998251107e-7,"p95InverseError":0.005851774730965185,"maximumInverseError":0.012991862183104398},
+    {"poleRatio":10,"strength":0.0001,"passCount":1428,"passFraction":0.714,"wilson95":[0.693799930595619,0.7333795731680047],"p95Dispersion":0.000011085838841387424,"p95LossRatio":0.0000013011703230274694,"p95InverseError":0.018946872064519525,"maximumInverseError":0.04430397740852207}
+  ],
+  "decision": {
+    "robustConditionalTarget": "keep every unresolved rank-one parasitic low-frequency capacitance norm below 0.00001 of the target G norm until its coupling orientation is measured",
+    "reason": "at 10 ppm all 4000 draws across both pole locations pass and the 95 percent Wilson lower yield is 99.808 percent; at 30 ppm the nearer-pole lower yield falls to 98.46 percent",
+    "dominantGate": "inverse-metric agreement, not dispersion or loss",
+    "warning": "at 100 ppm the dispersion and loss p95 values remain far below their gates while inverse-metric yields fall to 60.65 and 71.4 percent",
+    "measurementConsequence": "the full inverse-metric gate in Wave 7.177 must not be replaced by a frequency-flatness or low-loss check",
+    "supersededBy": "leech-adversarial-psd-parasitic-bound-v1 lowers the joint-packet design target to 8 ppm for arbitrary PSD alignment"
+  },
+  "epistemicStatus": {
+    "theorem": "the added series-RLC branch is passive for positive C, L and R and the simulated static capacitance update is positive semidefinite below resonance",
+    "conditionalInference": "the 10-ppm target is robust only across the two declared pole locations, Q=30 and random Rademacher coupling directions",
+    "notEstablished": "one rank-one pole spans multiple parasitic modes, adversarial soft-mode alignment, distributed loss or arbitrary frequency-dependent admittance"
+  },
+  "established": "a weak frequency-flat parasitic can evade dispersion and loss diagnostics while failing the inverse Leech metric; 10 ppm is the largest sampled cross-pole strength with a greater-than-99-percent Wilson lower pass yield",
+  "boundary": "This is a one-pole orientation ensemble, not a device-independent tolerance theorem. Multiple coherent parasitics or alignment with the soft eigenvector can be worse and require direct measured-mode reconstruction."
+}

@@ -158,14 +158,94 @@ The selection rule now consumes measured admittance covariance, mixer loss,
 pair-routing cost and signed-ratio range. Until a platform supplies those
 weights, no basis is called universally optimal; after it does, Gate A has a
 deterministic coordinate-selection procedure.
+Wave 7.174 performs the missing circuit factorization and corrects one proxy:
+all four candidates have maximum physical transformer ratio (1/2) and
+capacitor range 16, irrespective of their integral coordinate-map maximum.
+The Gram-first basis supplies the sparsest exact factor, with 252 nonzero and
+174 distinct signed ratios at condition number 953.03, and is selected for
+the first full-admittance commissioning design.
+Wave 7.175 adds a 40000-draw structured tolerance curve for that design.
+Under independent mean-one lognormal errors, 0.2% component scatter gives
+99.98% observed yield for the one-percent inverse-metric target, with a 95%
+Wilson lower bound of 99.887%; yield falls to 47.62% at 0.5% and 0.28% at 1%.
+The 0.2% value is a procurement prior only. Direct full-matrix measurement
+and covariance propagation remain the Gate-A acceptance test.
+Wave 7.176 attacks the independence assumption with 50000 further draws. With
+90% variance in row-block or smooth-gradient modes, the 0.2% yields fall to
+97.02% and 98.08%. The largest sampled scatter retaining a 95% lower yield
+above 99% in both models is 0.15%, which supersedes the iid-only procurement
+headline. Measured covariance remains decisive.
+Wave 7.177 makes that measurement finite: 252 configurations and 25200 complex
+acquisitions reconstruct the 24-port response over seven frequencies and test
+eight preregistered fixture, reciprocity, passivity, loss, dispersion,
+positive-definiteness, inverse-metric and held-out-prediction gates. Passing
+commissions the quadratic Leech metric only; the nonlinear gap and chiral
+edge still define Gate A.
+Wave 7.178 shows why the inverse gate is indispensable. A random rank-one
+passive parasitic at 100 ppm often looks flat and low-loss but reduces the
+inverse-metric yield to 60.65–71.4%. In the declared (Q=30), two-pole-location
+ensemble, 10 ppm is the largest sampled strength with a 95% lower yield above
+99%. Multiple or soft-mode-aligned parasitics remain open.
+Wave 7.179 closes the passive static alignment problem with a tight theorem:
+any PSD sum obeys relative inverse error at most
+\(\kappa\eta/(1+\kappa\eta)\), with equality on the soft eigenvector. The
+seven-frequency near-pole correction lowers the adversarial joint-packet
+target from the random-orientation 10 ppm to 8 ppm; an every-frequency claim
+would require 3.9 ppm.
+Wave 7.180 then corrects the nonlinear join. The physical Gram-first charging
+metric has 179 off-diagonal pairs, so adding 24 local cosines gives a coupled
+compact Hamiltonian, not the product used in Wave 7.160. Its certified
+small-oscillation band is 0.21210--6.54773 in benchmark energy units; the
+exact nonlinear 24-channel gap remains an experimental and numerical gate.
+Wave 7.181 adds the leading nonlinear discriminator. The measured metric fixes
+24 quartic shift coefficients, all downward and ranging from 0.17638 to
+0.31420 in the scale-free law $\delta\omega/\omega=-\alpha\sqrt{U/u}$.
+Those coefficients must predict held-out modes and tunable-ratio settings
+without mode-specific Kerr fits.
+Wave 7.182 verifies that near-degenerate one-quantum mixing does not erase
+that target: diagonalizing the complete projected quartic block changes any
+transition by at most 0.0404% relative at $U/u=10^{-2}$. Virtual higher-
+quantum sectors and the exact compact spectrum remain open.
+Wave 7.183 retains the full cosine and all Fock states through total
+excitation cutoff eight for the four softest modes. Its odd gap converges to
+0.0066596911 at $U/u=10^{-3}$ and 0.0207397902 at $10^{-2}$, with final-rung
+changes below $6\times10^{-10}$ relative. The twenty-mode projection, not
+the excitation cutoff inside this active space, is now the leading numerical
+gap uncertainty.
+Wave 7.184 advances that axis through two, four, six and eight active modes.
+The six-mode full-cosine gap is independently cutoff converged; the eight-mode
+reconnaissance remains positive and shifts the gap by only $1.41\times10^{-6}$
+relative at $U/u=10^{-3}$ and $1.41\times10^{-5}$ at $10^{-2}$. The increments
+are not monotone, so the unresolved 8-to-24 tail is not extrapolated.
+Wave 7.185 computes the complete all-24-mode quartic second-order correction
+by summing 17,851 ground-sector and 20,174 excited-sector reachable states.
+Wave 7.186 adds the mandatory sextic first-order term at the same scaling,
+making the full cosine order consistent through absolute order $U^{3/2}$.
+The result agrees with the independent eight-mode full-cosine gap within
+0.0081% at $U/u=10^{-3}$ and 0.0818% at $10^{-2}$; the $U^2$ remainder and
+compact tunnelling remain open.
+Wave 7.187 turns the compact caveat into a metric theorem. Exact inversion of
+the Gram-first form gives minimum Schur mass $1/22$, so every nonzero winding
+obeys $S_E\ge8\sqrt{u/(22U)}$. The action floor is 53.94 at $U/u=10^{-3}$
+and 17.06 at $10^{-2}$; the corresponding bare exponential factors are below
+$3.8\times10^{-24}$ and $3.9\times10^{-8}$. The fluctuation prefactor is not
+rigorously bounded.
+Wave 7.188 consolidates the entire nonlinear join into 228 configurations and
+22,800 repeated acquisitions. Twelve interleaved modes calibrate one shared
+scale and $U/u$ model; twelve held-out modes test the harmonic ratios,
+anharmonic coefficients, projected mixing, soft gap, parity, drive-power
+stability and offset-phase trend without mode-specific refits. Passing
+commissions only a finite nonlinear compact Leech-metric carrier.
 Wave 7.142 then uses one shared dynamical sign per wire bond to gauge the
 diagonal inversion of all 24 channels and verifies all 1152 mutual null
 pairings. The remaining gate is microscopic realization plus infrared sector
 certification, not coherent continuum coupling.
 Waves 7.133–136 supply executable commissioning operations and discriminators,
 not a single carrier that has passed them. The highest-value next result is
-therefore a microscopic Hamiltonian or programmable simulator whose low-energy
-edge passes A and exposes the same inversion branch cut needed for B.
+therefore to pass the linear 24-port packet, add the cosine elements, verify
+all 24 measured-matrix normal-mode ratios and then obtain a cutoff-stable
+nonlinear gap on that same carrier before claiming the low-energy edge and
+inversion branch cut needed for A and B.
 Waves 7.151–154 close the abstract first-level semidirect representation,
 source-normalized zero modes and full cross-sector Griess product. Wave 7.155
 turns their sharpest entries into a blind eight-seed protocol with target
@@ -195,6 +275,15 @@ P4 questions.
 - [Wrap-free rotor-cutoff ladder](frontier_wave7_158_leech_wrap_free_rotor_cutoff_ladder.md)
 - [Clock-locking gap scaling](frontier_wave7_159_leech_clock_locking_gap_scaling.md)
 - [Rotor-native pendulum-gap convergence](frontier_wave7_160_leech_rotor_native_pendulum_gap.md)
+- [Coupled-metric pendulum-gap audit](frontier_wave7_180_leech_coupled_metric_pendulum_gap_audit.md)
+- [Coupled anharmonic spectroscopy](frontier_wave7_181_leech_coupled_anharmonic_spectroscopy.md)
+- [One-quantum quartic mixing audit](frontier_wave7_182_leech_one_quantum_quartic_mixing.md)
+- [Four-mode full-cosine active space](frontier_wave7_183_leech_four_mode_full_cosine_active_space.md)
+- [Full-cosine active-mode ladder](frontier_wave7_184_leech_full_cosine_active_mode_ladder.md)
+- [Complete 24-mode quartic second order](frontier_wave7_185_leech_24mode_quartic_second_order.md)
+- [All-24-mode full-cosine order completion](frontier_wave7_186_leech_24mode_full_cosine_order_three_halves.md)
+- [Compact-winding action bound](frontier_wave7_187_leech_compact_winding_action_bound.md)
+- [Nonlinear Leech commissioning packet](frontier_wave7_188_leech_nonlinear_commissioning_packet.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
 - [Fixed-cutoff local gap stability](frontier_wave7_163_leech_fixed_cutoff_local_gap_stability.md)
@@ -208,3 +297,9 @@ P4 questions.
 - [Transformer conditioning and tolerance](frontier_wave7_171_leech_transformer_conditioning_tolerance.md)
 - [Integral hardware-basis search](frontier_wave7_172_leech_integral_hardware_basis_search.md)
 - [Hardware-basis Pareto frontier](frontier_wave7_173_leech_hardware_basis_pareto_frontier.md)
+- [Pareto transformer-factor audit](frontier_wave7_174_leech_pareto_transformer_factor_audit.md)
+- [Structured transformer tolerance](frontier_wave7_175_leech_transformer_structured_tolerance.md)
+- [Correlated transformer tolerance](frontier_wave7_176_leech_transformer_correlated_tolerance.md)
+- [24-port admittance commissioning packet](frontier_wave7_177_leech_24port_admittance_commissioning_packet.md)
+- [Parasitic-pole stress test](frontier_wave7_178_leech_admittance_parasitic_pole_stress.md)
+- [Adversarial PSD parasitic bound](frontier_wave7_179_leech_adversarial_psd_parasitic_bound.md)
