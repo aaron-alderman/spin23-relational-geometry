@@ -44,8 +44,13 @@ failure probability (5.7330314\times10^{-7}):
 - use 5,766 shots on each of the 16 odd inversion pairs, 92,256 total, to
   place zero-charge leakage below (10^{-3}) with a family-wise 95%
   confidence;
-- use 8,077 bounded Hadamard-test samples on each even control, 129,232 total,
+- use 32,308 bounded Hadamard-test samples on each even control, 516,928 total,
   to recover (1/\sqrt2) within 0.02 with family-wise 95% confidence.
+
+The even-arm count uses the actual \(\pm1\) Hadamard estimator
+\(\hat m=2\hat p-1\). Thus amplitude tolerance 0.02 is Bernoulli-probability
+tolerance 0.01. The earlier 8,077-shot count omitted this factor of two and
+was underpowered by a factor of four; Wave 7.227 exposed and repairs it.
 
 The tolerances are 0.01 for the isolated and exterior fractions and 0.03 for
 the mean degree. They are fixed before data collection.
@@ -82,4 +87,5 @@ node verification/verify/verify_leech_charge_shell_commissioning.mjs
 - [Exact charge-shell geometry](frontier_wave7_217_leech_cutoff_charge_shell_geometry.md)
 - [24-port admittance commissioning](frontier_wave7_177_leech_24port_admittance_commissioning_packet.md)
 - [Nonlinear Leech commissioning](frontier_wave7_188_leech_nonlinear_commissioning_packet.md)
+- [Digital twin and Hadamard-count repair](frontier_wave7_227_leech_charge_shell_digital_twin_and_hadamard_repair.md)
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)

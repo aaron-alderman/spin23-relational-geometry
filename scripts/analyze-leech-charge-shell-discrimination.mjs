@@ -48,7 +48,7 @@ const counterfeits = [
     id: 'single-pair-even-control-bias',
     perturbation: {evenMatrixElementBias: 0.06},
     rejectingObservable: 'even Hadamard-test control',
-    falseAcceptanceUpperBound: proportionFalseAccept(0.06, sampling.evenControlMatrixElementTolerance, sampling.evenControlShotsPerPair),
+    falseAcceptanceUpperBound: proportionFalseAccept(0.06 / 2, sampling.evenControlBernoulliProbabilityTolerance, sampling.evenControlShotsPerPair),
     failMeaning: 'state preparation, readout, or selective hopping calibration failure'
   }
 ];

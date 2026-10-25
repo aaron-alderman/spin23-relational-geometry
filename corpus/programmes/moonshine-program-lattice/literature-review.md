@@ -1101,6 +1101,12 @@ compactness and power extrapolation acceptable but fails the frozen
 anharmonic pattern at both ratios. The measured-metric-to-dynamics dictionary
 therefore has a functioning holdout test rather than only a target table.
 
+Wave 7.227 closes the synthetic charge-shell loop and corrects the even-arm
+sample dictionary. For a \(\pm1\) Hadamard estimator, amplitude tolerance
+0.02 corresponds to Bernoulli tolerance 0.01; the family-wise count is 32308
+per pair and 516928 total, four times the former budget. With that repair the
+ideal shell passes and all five named counterfeits are rejected and localized.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

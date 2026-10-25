@@ -31,10 +31,11 @@ const rootlessUpperRate = 1e-4;
 const familyAlpha = 0.05;
 const oddLeakageUpperRate = 1e-3;
 const evenMatrixElementTolerance = 0.02;
+const evenBernoulliProbabilityTolerance = evenMatrixElementTolerance / 2;
 const zeroChargeDirectedHops = graph.exteriorHopsByTargetNorm['0'];
 const inversionPairsToZero = zeroChargeDirectedHops / 2;
 const oddShotsPerPair = zeroEventSamples(oddLeakageUpperRate, familyAlpha / inversionPairsToZero);
-const evenShotsPerPair = hoeffdingSamples(evenMatrixElementTolerance, familyAlpha / inversionPairsToZero);
+const evenShotsPerPair = hoeffdingSamples(evenBernoulliProbabilityTolerance, familyAlpha / inversionPairsToZero);
 const isolatedSamples = hoeffdingSamples(isolatedTolerance, structuralPerTestAlpha);
 const degreeSamples = bernsteinSamples(variance, Math.max(mean, 12 - mean), degreeTolerance, structuralPerTestAlpha);
 const stateSamples = Math.max(isolatedSamples, degreeSamples);
@@ -80,6 +81,8 @@ const output = {
     oddCancellationShotsPerPair: oddShotsPerPair,
     oddCancellationTotalShots: oddShotsPerPair * inversionPairsToZero,
     evenControlMatrixElementTolerance: evenMatrixElementTolerance,
+    evenControlEstimator: 'm_hat=2 p_hat-1 for a plus/minus-one Hadamard outcome',
+    evenControlBernoulliProbabilityTolerance: evenBernoulliProbabilityTolerance,
     evenControlFamilyConfidence: 1 - familyAlpha,
     evenControlShotsPerPair: evenShotsPerPair,
     evenControlTotalShots: evenShotsPerPair * inversionPairsToZero

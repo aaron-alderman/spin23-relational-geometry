@@ -375,6 +375,10 @@ Wave 7.226 executes the nonlinear follow-up. The declared shared-cosine model
 passes N1--N6; a held-out-mode Kerr counterfeit preserves the other five
 controls but fails the anharmonic fingerprint by about 0.5%. This validates
 the finite nonlinear discriminator without promoting synthetic data.
+Wave 7.227 completes the synthetic three-packet path and repairs the even-arm
+Hoeffding dictionary. The actual \(\pm1\) estimator requires 32308 shots per
+pair, four times the old count. The corrected twin accepts the exact shell and
+rejects every named counterfeit on its preregistered observable.
 
 ## Corpus links
 
@@ -458,6 +462,7 @@ the finite nonlinear discriminator without promoting synthetic data.
 - [Gram-first ideal network manifest](frontier_wave7_224_leech_gram_first_network_manifest.md)
 - [24-port commissioning digital twin](frontier_wave7_225_leech_24port_commissioning_digital_twin.md)
 - [Nonlinear commissioning digital twin](frontier_wave7_226_leech_nonlinear_commissioning_digital_twin.md)
+- [Charge-shell digital twin and Hadamard repair](frontier_wave7_227_leech_charge_shell_digital_twin_and_hadamard_repair.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

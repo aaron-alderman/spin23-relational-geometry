@@ -1,0 +1,1844 @@
+{
+  "schemaVersion": "leech-charge-shell-commissioning-digital-twin-v1",
+  "date": "2026-10-26",
+  "inputs": [
+    "leech-cutoff-charge-shell-enumeration-v1",
+    "leech-charge-shell-commissioning-v1",
+    "leech-charge-shell-discrimination-v1",
+    "leech-charge-shell-drift-robust-likelihood-v1"
+  ],
+  "acquisitionModel": {
+    "structuralStateSamples": 82257,
+    "exteriorHopSamples": 82257,
+    "robustRootfulTotalTrials": 2478300,
+    "robustOddFamilyTotalTrials": 8337280,
+    "evenControlTotalShots": 516928,
+    "commonBackground": 0.00001,
+    "detectorEfficiency": {
+      "rootful": 0.9,
+      "odd": 0.5
+    },
+    "randomization": "deterministic seeded Bernoulli and exact categorical sampling from the enumerated shell histograms"
+  },
+  "cases": [
+    {
+      "id": "ideal-leech-shell",
+      "structural": {
+        "isolatedFraction": 0.5624810046561387,
+        "meanDegree": 0.7677887596192421,
+        "normSixFraction": 0.17625247699283952,
+        "normEightFraction": 0.3693181127442041,
+        "pass": {
+          "isolatedFraction": true,
+          "meanDegree": true,
+          "normSixFraction": true,
+          "normEightFraction": true
+        }
+      },
+      "detector": {
+        "root": {
+          "trialsPerArm": 1239150,
+          "signalEvents": 8,
+          "blankEvents": 20,
+          "difference": -0.00000968405762014284,
+          "threshold": 0.000225,
+          "pass": true
+        },
+        "oddPairs": [
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 1,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 5,
+            "blankEvents": 0,
+            "difference": 0.000019190911184463037,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 4,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 2,
+            "difference": 0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 2,
+            "difference": 0.000007676364473785216,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 3,
+            "difference": -0.000007676364473785214,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 2,
+            "difference": -0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 3,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 7,
+            "difference": -0.000019190911184463037,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 1,
+            "difference": 0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 0,
+            "blankEvents": 2,
+            "difference": -0.000007676364473785216,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 5,
+            "blankEvents": 4,
+            "difference": 0.000003838182236892605,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 6,
+            "blankEvents": 2,
+            "difference": 0.000015352728947570428,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 7,
+            "difference": -0.000023029093421355645,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 3,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 1,
+            "difference": 0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          }
+        ],
+        "evenPairs": [
+          {
+            "pair": 0,
+            "shots": 32308,
+            "plus": 27606,
+            "estimate": 0.7089265816516033,
+            "residual": 0.0018198004650558097,
+            "pass": true
+          },
+          {
+            "pair": 1,
+            "shots": 32308,
+            "plus": 27472,
+            "estimate": 0.7006314225578805,
+            "residual": -0.006475358628666994,
+            "pass": true
+          },
+          {
+            "pair": 2,
+            "shots": 32308,
+            "plus": 27506,
+            "estimate": 0.7027361644174817,
+            "residual": -0.004370616769065805,
+            "pass": true
+          },
+          {
+            "pair": 3,
+            "shots": 32308,
+            "plus": 27620,
+            "estimate": 0.7097932400643803,
+            "residual": 0.002686458877832809,
+            "pass": true
+          },
+          {
+            "pair": 4,
+            "shots": 32308,
+            "plus": 27589,
+            "estimate": 0.7078742107218026,
+            "residual": 0.0007674295352551042,
+            "pass": true
+          },
+          {
+            "pair": 5,
+            "shots": 32308,
+            "plus": 27443,
+            "estimate": 0.6988362015599852,
+            "residual": -0.008270579626562302,
+            "pass": true
+          },
+          {
+            "pair": 6,
+            "shots": 32308,
+            "plus": 27550,
+            "estimate": 0.7054599480004953,
+            "residual": -0.0016468331860521879,
+            "pass": true
+          },
+          {
+            "pair": 7,
+            "shots": 32308,
+            "plus": 27666,
+            "estimate": 0.7126408319920763,
+            "residual": 0.005534050805528823,
+            "pass": true
+          },
+          {
+            "pair": 8,
+            "shots": 32308,
+            "plus": 27582,
+            "estimate": 0.7074408815154141,
+            "residual": 0.00033410032886660446,
+            "pass": true
+          },
+          {
+            "pair": 9,
+            "shots": 32308,
+            "plus": 27575,
+            "estimate": 0.7070075523090256,
+            "residual": -0.00009922887752189524,
+            "pass": true
+          },
+          {
+            "pair": 10,
+            "shots": 32308,
+            "plus": 27494,
+            "estimate": 0.701993314349387,
+            "residual": -0.0051134668371604075,
+            "pass": true
+          },
+          {
+            "pair": 11,
+            "shots": 32308,
+            "plus": 27626,
+            "estimate": 0.7101646650984277,
+            "residual": 0.0030578839118802215,
+            "pass": true
+          },
+          {
+            "pair": 12,
+            "shots": 32308,
+            "plus": 27602,
+            "estimate": 0.7086789649622385,
+            "residual": 0.0015721837756910162,
+            "pass": true
+          },
+          {
+            "pair": 13,
+            "shots": 32308,
+            "plus": 27591,
+            "estimate": 0.7079980190664852,
+            "residual": 0.000891237879937723,
+            "pass": true
+          },
+          {
+            "pair": 14,
+            "shots": 32308,
+            "plus": 27597,
+            "estimate": 0.7083694441005324,
+            "residual": 0.0012626629139849133,
+            "pass": true
+          },
+          {
+            "pair": 15,
+            "shots": 32308,
+            "plus": 27482,
+            "estimate": 0.7012504642812925,
+            "residual": -0.00585631690525501,
+            "pass": true
+          }
+        ],
+        "pass": {
+          "root": true,
+          "odd": true,
+          "even": true
+        }
+      },
+      "phaseControlMeaning": "inversion pair commissioned at declared scope",
+      "gates": {
+        "isolatedFraction": true,
+        "meanDegree": true,
+        "normSixFraction": true,
+        "normEightFraction": true,
+        "rootlessness": true,
+        "oddCancellation": true,
+        "evenControl": true
+      },
+      "allPass": true
+    },
+    {
+      "id": "graph-isolation-shift",
+      "structural": {
+        "isolatedFraction": 0.5884848705885214,
+        "meanDegree": 0.756944697715696,
+        "normSixFraction": 0.1751583451864279,
+        "normEightFraction": 0.3694275259248453,
+        "pass": {
+          "isolatedFraction": false,
+          "meanDegree": true,
+          "normSixFraction": true,
+          "normEightFraction": true
+        }
+      },
+      "detector": {
+        "root": {
+          "trialsPerArm": 1239150,
+          "signalEvents": 18,
+          "blankEvents": 13,
+          "difference": 0.00000403502400839285,
+          "threshold": 0.000225,
+          "pass": true
+        },
+        "oddPairs": [
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 0,
+            "blankEvents": 1,
+            "difference": -0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 4,
+            "difference": -0.000003838182236892609,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 3,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 3,
+            "difference": -0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 5,
+            "blankEvents": 6,
+            "difference": -0.000003838182236892609,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 6,
+            "difference": -0.000015352728947570428,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 2,
+            "difference": -0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 2,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 1,
+            "difference": 0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 2,
+            "difference": 0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 5,
+            "blankEvents": 2,
+            "difference": 0.000011514546710677821,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 2,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 4,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 6,
+            "blankEvents": 2,
+            "difference": 0.000015352728947570428,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 2,
+            "difference": 0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 1,
+            "difference": 0.000007676364473785214,
+            "threshold": 0.00125,
+            "pass": true
+          }
+        ],
+        "evenPairs": [
+          {
+            "pair": 0,
+            "shots": 32308,
+            "plus": 27549,
+            "estimate": 0.705398043828154,
+            "residual": -0.0017087373583934973,
+            "pass": true
+          },
+          {
+            "pair": 1,
+            "shots": 32308,
+            "plus": 27620,
+            "estimate": 0.7097932400643803,
+            "residual": 0.002686458877832809,
+            "pass": true
+          },
+          {
+            "pair": 2,
+            "shots": 32308,
+            "plus": 27565,
+            "estimate": 0.7063885105856134,
+            "residual": -0.0007182706009341011,
+            "pass": true
+          },
+          {
+            "pair": 3,
+            "shots": 32308,
+            "plus": 27472,
+            "estimate": 0.7006314225578805,
+            "residual": -0.006475358628666994,
+            "pass": true
+          },
+          {
+            "pair": 4,
+            "shots": 32308,
+            "plus": 27666,
+            "estimate": 0.7126408319920763,
+            "residual": 0.005534050805528823,
+            "pass": true
+          },
+          {
+            "pair": 5,
+            "shots": 32308,
+            "plus": 27652,
+            "estimate": 0.7117741735792993,
+            "residual": 0.0046673923927518235,
+            "pass": true
+          },
+          {
+            "pair": 6,
+            "shots": 32308,
+            "plus": 27646,
+            "estimate": 0.7114027485452519,
+            "residual": 0.004295967358704411,
+            "pass": true
+          },
+          {
+            "pair": 7,
+            "shots": 32308,
+            "plus": 27536,
+            "estimate": 0.7045932895877183,
+            "residual": -0.0025134915988291873,
+            "pass": true
+          },
+          {
+            "pair": 8,
+            "shots": 32308,
+            "plus": 27521,
+            "estimate": 0.7036647270026,
+            "residual": -0.003442054183947496,
+            "pass": true
+          },
+          {
+            "pair": 9,
+            "shots": 32308,
+            "plus": 27548,
+            "estimate": 0.7053361396558129,
+            "residual": -0.0017706415307345846,
+            "pass": true
+          },
+          {
+            "pair": 10,
+            "shots": 32308,
+            "plus": 27555,
+            "estimate": 0.7057694688622014,
+            "residual": -0.001337312324346085,
+            "pass": true
+          },
+          {
+            "pair": 11,
+            "shots": 32308,
+            "plus": 27562,
+            "estimate": 0.7062027980685899,
+            "residual": -0.0009039831179575852,
+            "pass": true
+          },
+          {
+            "pair": 12,
+            "shots": 32308,
+            "plus": 27437,
+            "estimate": 0.6984647765259377,
+            "residual": -0.008642004660609715,
+            "pass": true
+          },
+          {
+            "pair": 13,
+            "shots": 32308,
+            "plus": 27542,
+            "estimate": 0.7049647146217655,
+            "residual": -0.002142066564781997,
+            "pass": true
+          },
+          {
+            "pair": 14,
+            "shots": 32308,
+            "plus": 27528,
+            "estimate": 0.7040980562089885,
+            "residual": -0.0030087249775589964,
+            "pass": true
+          },
+          {
+            "pair": 15,
+            "shots": 32308,
+            "plus": 27535,
+            "estimate": 0.704531385415377,
+            "residual": -0.0025753957711704967,
+            "pass": true
+          }
+        ],
+        "pass": {
+          "root": true,
+          "odd": true,
+          "even": true
+        }
+      },
+      "phaseControlMeaning": "inversion pair commissioned at declared scope",
+      "gates": {
+        "isolatedFraction": false,
+        "meanDegree": true,
+        "normSixFraction": true,
+        "normEightFraction": true,
+        "rootlessness": true,
+        "oddCancellation": true,
+        "evenControl": true
+      },
+      "allPass": false
+    },
+    {
+      "id": "corona-norm-eight-shift",
+      "structural": {
+        "isolatedFraction": 0.5602805840232442,
+        "meanDegree": 0.7634973315340944,
+        "normSixFraction": 0.18154078072382898,
+        "normEightFraction": 0.3464386009701302,
+        "pass": {
+          "isolatedFraction": true,
+          "meanDegree": true,
+          "normSixFraction": true,
+          "normEightFraction": false
+        }
+      },
+      "detector": {
+        "root": {
+          "trialsPerArm": 1239150,
+          "signalEvents": 12,
+          "blankEvents": 6,
+          "difference": 0.00000484202881007142,
+          "threshold": 0.000225,
+          "pass": true
+        },
+        "oddPairs": [
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 1,
+            "difference": 0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 2,
+            "difference": 0.000007676364473785216,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 2,
+            "difference": 0.000007676364473785216,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 2,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 0,
+            "blankEvents": 1,
+            "difference": -0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 0,
+            "blankEvents": 2,
+            "difference": -0.000007676364473785216,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 3,
+            "difference": -0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 2,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 3,
+            "difference": -0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 4,
+            "difference": -0.000007676364473785216,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 2,
+            "difference": -0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 5,
+            "blankEvents": 4,
+            "difference": 0.000003838182236892605,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 6,
+            "blankEvents": 8,
+            "difference": -0.000007676364473785217,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 0,
+            "blankEvents": 6,
+            "difference": -0.000023029093421355645,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 6,
+            "blankEvents": 5,
+            "difference": 0.000003838182236892609,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 1,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          }
+        ],
+        "evenPairs": [
+          {
+            "pair": 0,
+            "shots": 32308,
+            "plus": 27521,
+            "estimate": 0.7036647270026,
+            "residual": -0.003442054183947496,
+            "pass": true
+          },
+          {
+            "pair": 1,
+            "shots": 32308,
+            "plus": 27680,
+            "estimate": 0.7135074904048533,
+            "residual": 0.006400709218305822,
+            "pass": true
+          },
+          {
+            "pair": 2,
+            "shots": 32308,
+            "plus": 27644,
+            "estimate": 0.7112789402005695,
+            "residual": 0.004172159014022014,
+            "pass": true
+          },
+          {
+            "pair": 3,
+            "shots": 32308,
+            "plus": 27552,
+            "estimate": 0.7055837563451777,
+            "residual": -0.001523024841369791,
+            "pass": true
+          },
+          {
+            "pair": 4,
+            "shots": 32308,
+            "plus": 27577,
+            "estimate": 0.707131360653708,
+            "residual": 0.000024579467160501522,
+            "pass": true
+          },
+          {
+            "pair": 5,
+            "shots": 32308,
+            "plus": 27562,
+            "estimate": 0.7062027980685899,
+            "residual": -0.0009039831179575852,
+            "pass": true
+          },
+          {
+            "pair": 6,
+            "shots": 32308,
+            "plus": 27538,
+            "estimate": 0.7047170979324007,
+            "residual": -0.0023896832541467905,
+            "pass": true
+          },
+          {
+            "pair": 7,
+            "shots": 32308,
+            "plus": 27620,
+            "estimate": 0.7097932400643803,
+            "residual": 0.002686458877832809,
+            "pass": true
+          },
+          {
+            "pair": 8,
+            "shots": 32308,
+            "plus": 27636,
+            "estimate": 0.7107837068218399,
+            "residual": 0.0036769256352924273,
+            "pass": true
+          },
+          {
+            "pair": 9,
+            "shots": 32308,
+            "plus": 27501,
+            "estimate": 0.7024266435557756,
+            "residual": -0.004680137630771908,
+            "pass": true
+          },
+          {
+            "pair": 10,
+            "shots": 32308,
+            "plus": 27602,
+            "estimate": 0.7086789649622385,
+            "residual": 0.0015721837756910162,
+            "pass": true
+          },
+          {
+            "pair": 11,
+            "shots": 32308,
+            "plus": 27496,
+            "estimate": 0.7021171226940697,
+            "residual": -0.004989658492477789,
+            "pass": true
+          },
+          {
+            "pair": 12,
+            "shots": 32308,
+            "plus": 27538,
+            "estimate": 0.7047170979324007,
+            "residual": -0.0023896832541467905,
+            "pass": true
+          },
+          {
+            "pair": 13,
+            "shots": 32308,
+            "plus": 27614,
+            "estimate": 0.7094218150303331,
+            "residual": 0.002315033843785619,
+            "pass": true
+          },
+          {
+            "pair": 14,
+            "shots": 32308,
+            "plus": 27504,
+            "estimate": 0.7026123560727993,
+            "residual": -0.004494425113748202,
+            "pass": true
+          },
+          {
+            "pair": 15,
+            "shots": 32308,
+            "plus": 27566,
+            "estimate": 0.7064504147579547,
+            "residual": -0.0006563664285927917,
+            "pass": true
+          }
+        ],
+        "pass": {
+          "root": true,
+          "odd": true,
+          "even": true
+        }
+      },
+      "phaseControlMeaning": "inversion pair commissioned at declared scope",
+      "gates": {
+        "isolatedFraction": true,
+        "meanDegree": true,
+        "normSixFraction": true,
+        "normEightFraction": false,
+        "rootlessness": true,
+        "oddCancellation": true,
+        "evenControl": true
+      },
+      "allPass": false
+    },
+    {
+      "id": "rootful-contamination",
+      "structural": {
+        "isolatedFraction": 0.5597578321601809,
+        "meanDegree": 0.7714237086205429,
+        "normSixFraction": 0.1758877663907023,
+        "normEightFraction": 0.3685279064395735,
+        "pass": {
+          "isolatedFraction": true,
+          "meanDegree": true,
+          "normSixFraction": true,
+          "normEightFraction": true
+        }
+      },
+      "detector": {
+        "root": {
+          "trialsPerArm": 1239150,
+          "signalEvents": 561,
+          "blankEvents": 9,
+          "difference": 0.00044546665052657065,
+          "threshold": 0.000225,
+          "pass": false
+        },
+        "oddPairs": [
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 2,
+            "difference": -0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 3,
+            "difference": -0.000007676364473785214,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 0,
+            "blankEvents": 3,
+            "difference": -0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 2,
+            "difference": 0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 3,
+            "difference": -0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 3,
+            "difference": -0.000007676364473785214,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 9,
+            "difference": -0.000026867275658248254,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 2,
+            "difference": 0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 6,
+            "blankEvents": 2,
+            "difference": 0.000015352728947570428,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 4,
+            "difference": -0.000003838182236892609,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 2,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 1,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 4,
+            "difference": -0.000007676364473785216,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 3,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 3,
+            "difference": -0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 7,
+            "difference": -0.000023029093421355645,
+            "threshold": 0.00125,
+            "pass": true
+          }
+        ],
+        "evenPairs": [
+          {
+            "pair": 0,
+            "shots": 32308,
+            "plus": 27542,
+            "estimate": 0.7049647146217655,
+            "residual": -0.002142066564781997,
+            "pass": true
+          },
+          {
+            "pair": 1,
+            "shots": 32308,
+            "plus": 27663,
+            "estimate": 0.7124551194750526,
+            "residual": 0.005348338288505117,
+            "pass": true
+          },
+          {
+            "pair": 2,
+            "shots": 32308,
+            "plus": 27592,
+            "estimate": 0.7080599232388263,
+            "residual": 0.0009531420522788103,
+            "pass": true
+          },
+          {
+            "pair": 3,
+            "shots": 32308,
+            "plus": 27538,
+            "estimate": 0.7047170979324007,
+            "residual": -0.0023896832541467905,
+            "pass": true
+          },
+          {
+            "pair": 4,
+            "shots": 32308,
+            "plus": 27434,
+            "estimate": 0.6982790640089143,
+            "residual": -0.008827717177633199,
+            "pass": true
+          },
+          {
+            "pair": 5,
+            "shots": 32308,
+            "plus": 27610,
+            "estimate": 0.7091741983409683,
+            "residual": 0.0020674171544208253,
+            "pass": true
+          },
+          {
+            "pair": 6,
+            "shots": 32308,
+            "plus": 27631,
+            "estimate": 0.7104741859601338,
+            "residual": 0.0033674047735863244,
+            "pass": true
+          },
+          {
+            "pair": 7,
+            "shots": 32308,
+            "plus": 27582,
+            "estimate": 0.7074408815154141,
+            "residual": 0.00033410032886660446,
+            "pass": true
+          },
+          {
+            "pair": 8,
+            "shots": 32308,
+            "plus": 27603,
+            "estimate": 0.7087408691345796,
+            "residual": 0.0016340879480321036,
+            "pass": true
+          },
+          {
+            "pair": 9,
+            "shots": 32308,
+            "plus": 27639,
+            "estimate": 0.7109694193388634,
+            "residual": 0.0038626381523159115,
+            "pass": true
+          },
+          {
+            "pair": 10,
+            "shots": 32308,
+            "plus": 27579,
+            "estimate": 0.7072551689983906,
+            "residual": 0.00014838781184312033,
+            "pass": true
+          },
+          {
+            "pair": 11,
+            "shots": 32308,
+            "plus": 27717,
+            "estimate": 0.7157979447814782,
+            "residual": 0.008691163594930718,
+            "pass": true
+          },
+          {
+            "pair": 12,
+            "shots": 32308,
+            "plus": 27613,
+            "estimate": 0.7093599108579918,
+            "residual": 0.0022531296714443094,
+            "pass": true
+          },
+          {
+            "pair": 13,
+            "shots": 32308,
+            "plus": 27615,
+            "estimate": 0.7094837192026742,
+            "residual": 0.002376938016126706,
+            "pass": true
+          },
+          {
+            "pair": 14,
+            "shots": 32308,
+            "plus": 27462,
+            "estimate": 0.7000123808344683,
+            "residual": -0.0070944003520792,
+            "pass": true
+          },
+          {
+            "pair": 15,
+            "shots": 32308,
+            "plus": 27726,
+            "estimate": 0.7163550823325493,
+            "residual": 0.009248301146001836,
+            "pass": true
+          }
+        ],
+        "pass": {
+          "root": false,
+          "odd": true,
+          "even": true
+        }
+      },
+      "phaseControlMeaning": "inversion pair commissioned at declared scope",
+      "gates": {
+        "isolatedFraction": true,
+        "meanDegree": true,
+        "normSixFraction": true,
+        "normEightFraction": true,
+        "rootlessness": false,
+        "oddCancellation": true,
+        "evenControl": true
+      },
+      "allPass": false
+    },
+    {
+      "id": "single-pair-inversion-phase-leak",
+      "structural": {
+        "isolatedFraction": 0.5606452946253814,
+        "meanDegree": 0.7687856352650838,
+        "normSixFraction": 0.1743681388817973,
+        "normEightFraction": 0.3705216577312569,
+        "pass": {
+          "isolatedFraction": true,
+          "meanDegree": true,
+          "normSixFraction": true,
+          "normEightFraction": true
+        }
+      },
+      "detector": {
+        "root": {
+          "trialsPerArm": 1239150,
+          "signalEvents": 14,
+          "blankEvents": 14,
+          "difference": 0,
+          "threshold": 0.000225,
+          "pass": true
+        },
+        "oddPairs": [
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 2,
+            "difference": -0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 5,
+            "difference": -0.000003838182236892605,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 7,
+            "difference": -0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 5,
+            "blankEvents": 2,
+            "difference": 0.000011514546710677821,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 0,
+            "blankEvents": 3,
+            "difference": -0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 2,
+            "difference": 0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 2,
+            "difference": -0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 646,
+            "blankEvents": 1,
+            "difference": 0.0024756275427957317,
+            "threshold": 0.00125,
+            "pass": false
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 2,
+            "difference": 0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 1,
+            "difference": 0.000007676364473785214,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 4,
+            "difference": -0.000003838182236892609,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 4,
+            "difference": -0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 4,
+            "difference": -0.000003838182236892609,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 2,
+            "blankEvents": 2,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 5,
+            "difference": -0.000007676364473785214,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 4,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          }
+        ],
+        "evenPairs": [
+          {
+            "pair": 0,
+            "shots": 32308,
+            "plus": 27520,
+            "estimate": 0.7036028228302587,
+            "residual": -0.0035039583562888055,
+            "pass": true
+          },
+          {
+            "pair": 1,
+            "shots": 32308,
+            "plus": 27615,
+            "estimate": 0.7094837192026742,
+            "residual": 0.002376938016126706,
+            "pass": true
+          },
+          {
+            "pair": 2,
+            "shots": 32308,
+            "plus": 27478,
+            "estimate": 0.7010028475919277,
+            "residual": -0.006103933594619804,
+            "pass": true
+          },
+          {
+            "pair": 3,
+            "shots": 32308,
+            "plus": 27505,
+            "estimate": 0.7026742602451406,
+            "residual": -0.004432520941406892,
+            "pass": true
+          },
+          {
+            "pair": 4,
+            "shots": 32308,
+            "plus": 27577,
+            "estimate": 0.707131360653708,
+            "residual": 0.000024579467160501522,
+            "pass": true
+          },
+          {
+            "pair": 5,
+            "shots": 32308,
+            "plus": 27562,
+            "estimate": 0.7062027980685899,
+            "residual": -0.0009039831179575852,
+            "pass": true
+          },
+          {
+            "pair": 6,
+            "shots": 32308,
+            "plus": 27657,
+            "estimate": 0.7120836944410054,
+            "residual": 0.004976913254457926,
+            "pass": true
+          },
+          {
+            "pair": 7,
+            "shots": 32308,
+            "plus": 27628,
+            "estimate": 0.7102884734431101,
+            "residual": 0.0031816922565626182,
+            "pass": true
+          },
+          {
+            "pair": 8,
+            "shots": 32308,
+            "plus": 27554,
+            "estimate": 0.7057075646898601,
+            "residual": -0.0013992164966873943,
+            "pass": true
+          },
+          {
+            "pair": 9,
+            "shots": 32308,
+            "plus": 27581,
+            "estimate": 0.707378977343073,
+            "residual": 0.0002721961565255171,
+            "pass": true
+          },
+          {
+            "pair": 10,
+            "shots": 32308,
+            "plus": 27475,
+            "estimate": 0.700817135074904,
+            "residual": -0.00628964611164351,
+            "pass": true
+          },
+          {
+            "pair": 11,
+            "shots": 32308,
+            "plus": 27621,
+            "estimate": 0.7098551442367216,
+            "residual": 0.0027483630501741185,
+            "pass": true
+          },
+          {
+            "pair": 12,
+            "shots": 32308,
+            "plus": 27606,
+            "estimate": 0.7089265816516033,
+            "residual": 0.0018198004650558097,
+            "pass": true
+          },
+          {
+            "pair": 13,
+            "shots": 32308,
+            "plus": 27462,
+            "estimate": 0.7000123808344683,
+            "residual": -0.0070944003520792,
+            "pass": true
+          },
+          {
+            "pair": 14,
+            "shots": 32308,
+            "plus": 27599,
+            "estimate": 0.7084932524452148,
+            "residual": 0.00138647125866731,
+            "pass": true
+          },
+          {
+            "pair": 15,
+            "shots": 32308,
+            "plus": 27452,
+            "estimate": 0.6993933391110561,
+            "residual": -0.007713442075491406,
+            "pass": true
+          }
+        ],
+        "pass": {
+          "root": true,
+          "odd": false,
+          "even": true
+        }
+      },
+      "phaseControlMeaning": "relative inversion phase/coherence failure",
+      "gates": {
+        "isolatedFraction": true,
+        "meanDegree": true,
+        "normSixFraction": true,
+        "normEightFraction": true,
+        "rootlessness": true,
+        "oddCancellation": false,
+        "evenControl": true
+      },
+      "allPass": false
+    },
+    {
+      "id": "single-pair-even-control-bias",
+      "structural": {
+        "isolatedFraction": 0.5602562699831017,
+        "meanDegree": 0.7721288157846748,
+        "normSixFraction": 0.17545011366813767,
+        "normEightFraction": 0.3707647981326817,
+        "pass": {
+          "isolatedFraction": true,
+          "meanDegree": true,
+          "normSixFraction": true,
+          "normEightFraction": true
+        }
+      },
+      "detector": {
+        "root": {
+          "trialsPerArm": 1239150,
+          "signalEvents": 18,
+          "blankEvents": 4,
+          "difference": 0.00001129806722349998,
+          "threshold": 0.000225,
+          "pass": true
+        },
+        "oddPairs": [
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 4,
+            "difference": -0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 0,
+            "blankEvents": 4,
+            "difference": -0.00001535272894757043,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 3,
+            "difference": -0.000007676364473785214,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 0,
+            "blankEvents": 2,
+            "difference": -0.000007676364473785216,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 4,
+            "difference": -0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 7,
+            "blankEvents": 0,
+            "difference": 0.000026867275658248254,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 5,
+            "blankEvents": 2,
+            "difference": 0.000011514546710677821,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 1,
+            "difference": 0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 2,
+            "difference": -0.000003838182236892608,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 6,
+            "difference": -0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 7,
+            "blankEvents": 6,
+            "difference": 0.000003838182236892609,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 4,
+            "difference": -0.000011514546710677823,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 2,
+            "difference": 0.000003838182236892607,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 3,
+            "blankEvents": 4,
+            "difference": -0.000003838182236892609,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 4,
+            "blankEvents": 8,
+            "difference": -0.00001535272894757043,
+            "threshold": 0.00125,
+            "pass": true
+          },
+          {
+            "trialsPerArm": 260540,
+            "signalEvents": 1,
+            "blankEvents": 1,
+            "difference": 0,
+            "threshold": 0.00125,
+            "pass": true
+          }
+        ],
+        "evenPairs": [
+          {
+            "pair": 0,
+            "shots": 32308,
+            "plus": 27498,
+            "estimate": 0.7022409310387521,
+            "residual": -0.004865850147795392,
+            "pass": true
+          },
+          {
+            "pair": 1,
+            "shots": 32308,
+            "plus": 27601,
+            "estimate": 0.7086170607898972,
+            "residual": 0.0015102796033497068,
+            "pass": true
+          },
+          {
+            "pair": 2,
+            "shots": 32308,
+            "plus": 27552,
+            "estimate": 0.7055837563451777,
+            "residual": -0.001523024841369791,
+            "pass": true
+          },
+          {
+            "pair": 3,
+            "shots": 32308,
+            "plus": 27474,
+            "estimate": 0.7007552309025629,
+            "residual": -0.006351550283984597,
+            "pass": true
+          },
+          {
+            "pair": 4,
+            "shots": 32308,
+            "plus": 27579,
+            "estimate": 0.7072551689983906,
+            "residual": 0.00014838781184312033,
+            "pass": true
+          },
+          {
+            "pair": 5,
+            "shots": 32308,
+            "plus": 27654,
+            "estimate": 0.7118979819239817,
+            "residual": 0.00479120073743422,
+            "pass": true
+          },
+          {
+            "pair": 6,
+            "shots": 32308,
+            "plus": 27505,
+            "estimate": 0.7026742602451406,
+            "residual": -0.004432520941406892,
+            "pass": true
+          },
+          {
+            "pair": 7,
+            "shots": 32308,
+            "plus": 27462,
+            "estimate": 0.7000123808344683,
+            "residual": -0.0070944003520792,
+            "pass": true
+          },
+          {
+            "pair": 8,
+            "shots": 32308,
+            "plus": 27609,
+            "estimate": 0.709112294168627,
+            "residual": 0.002005512982079516,
+            "pass": true
+          },
+          {
+            "pair": 9,
+            "shots": 32308,
+            "plus": 27659,
+            "estimate": 0.7122075027856878,
+            "residual": 0.005100721599140323,
+            "pass": true
+          },
+          {
+            "pair": 10,
+            "shots": 32308,
+            "plus": 27611,
+            "estimate": 0.7092361025133094,
+            "residual": 0.0021293213267619127,
+            "pass": true
+          },
+          {
+            "pair": 11,
+            "shots": 32308,
+            "plus": 28639,
+            "estimate": 0.7728735916800793,
+            "residual": 0.06576681049353184,
+            "pass": false
+          },
+          {
+            "pair": 12,
+            "shots": 32308,
+            "plus": 27492,
+            "estimate": 0.7018695060047047,
+            "residual": -0.005237275181842804,
+            "pass": true
+          },
+          {
+            "pair": 13,
+            "shots": 32308,
+            "plus": 27595,
+            "estimate": 0.70824563575585,
+            "residual": 0.0011388545693025165,
+            "pass": true
+          },
+          {
+            "pair": 14,
+            "shots": 32308,
+            "plus": 27693,
+            "estimate": 0.7143122446452892,
+            "residual": 0.007205463458741734,
+            "pass": true
+          },
+          {
+            "pair": 15,
+            "shots": 32308,
+            "plus": 27467,
+            "estimate": 0.7003219016961744,
+            "residual": -0.006784879490373097,
+            "pass": true
+          }
+        ],
+        "pass": {
+          "root": true,
+          "odd": true,
+          "even": false
+        }
+      },
+      "phaseControlMeaning": "even-arm preparation/readout/selective-hop failure; phase inference withheld",
+      "gates": {
+        "isolatedFraction": true,
+        "meanDegree": true,
+        "normSixFraction": true,
+        "normEightFraction": true,
+        "rootlessness": true,
+        "oddCancellation": true,
+        "evenControl": false
+      },
+      "allPass": false
+    }
+  ],
+  "decision": {
+    "idealAccepted": true,
+    "everyNamedCounterfeitRejected": true,
+    "eachCounterfeitRejectedByNamedObservable": {
+      "graphIsolation": true,
+      "coronaNormEight": true,
+      "rootful": true,
+      "inversionLeak": true,
+      "evenBias": true
+    },
+    "implication": "one frozen synthetic acquisition and truth-table path accepts the exact shell and localizes every named counterfeit to its preregistered observable class"
+  },
+  "boundary": "This aggregate seeded digital twin assumes independent trials, known efficiencies and declared backgrounds. It validates the decision plumbing, not the physical carrier, the bounded-drift estimates or the route-swapped detector implementation."
+}

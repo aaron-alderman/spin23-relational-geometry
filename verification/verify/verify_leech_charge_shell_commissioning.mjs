@@ -30,8 +30,10 @@ assert(sampling.rootlessZeroEventSamples === 29956, 'wrong rootlessness zero-eve
 assert(sampling.oddCancellationShotsPerPair === 5766, 'wrong odd-pair budget');
 assert(sampling.oddCancellationTotalShots === 92256, 'wrong odd total');
 assert(sampling.evenControlMatrixElementTolerance === 0.02, 'wrong even-control tolerance');
-assert(sampling.evenControlShotsPerPair === 8077, 'wrong even-control pair budget');
-assert(sampling.evenControlTotalShots === 129232, 'wrong even-control total');
+assert(sampling.evenControlEstimator.includes('2 p_hat-1'), 'Hadamard estimator missing');
+assert(sampling.evenControlBernoulliProbabilityTolerance === 0.01, 'wrong Bernoulli tolerance');
+assert(sampling.evenControlShotsPerPair === 32308, 'wrong even-control pair budget');
+assert(sampling.evenControlTotalShots === 516928, 'wrong even-control total');
 assert(record.pass.length === 6, 'pass contract incomplete');
 
 console.log(JSON.stringify({

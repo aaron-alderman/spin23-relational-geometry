@@ -451,6 +451,12 @@ shared-cosine twin passes N1--N6. A 0.5% held-out-mode Kerr counterfeit passes
 the harmonic, soft-gap, parity, compactness and power controls but fails the
 shared anharmonic fingerprint at both ratios. The nonlinear dictionary is
 therefore executable and discriminating, though still synthetic.
+Wave 7.227 executes the remaining charge-shell packet and catches an upstream
+counting error: a \(\pm1\) Hadamard amplitude tolerance 0.02 is probability
+tolerance 0.01, so the even-control family needs 32308 shots per pair and
+516928 total. After correction, the ideal shell passes and all five named
+graph, corona, rootful, phase and calibration counterfeits fail their frozen
+observables with the truth-table interpretation preserved.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -544,6 +550,7 @@ P4 questions.
 - [Gram-first ideal network manifest](frontier_wave7_224_leech_gram_first_network_manifest.md)
 - [24-port commissioning digital twin](frontier_wave7_225_leech_24port_commissioning_digital_twin.md)
 - [Nonlinear commissioning digital twin](frontier_wave7_226_leech_nonlinear_commissioning_digital_twin.md)
+- [Charge-shell digital twin and Hadamard repair](frontier_wave7_227_leech_charge_shell_digital_twin_and_hadamard_repair.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
