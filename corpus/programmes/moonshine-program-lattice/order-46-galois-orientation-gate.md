@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 
-**Status:** inner power transport and finite label action closed; twisted-character Galois transport open
+**Status:** inner power transport closed; all scalar genus-one insertions exhausted; vector/projective transport open
 
 **Evidence:** [Galois-orientation ledger](../../../evidence/data/moonshine-order46-galois-orientation-v1.json)  
 **Certificate:** [arithmetic and automorphism verifier](../../../verification/verify/verify_moonshine_order46_galois_orientation.mjs)
@@ -61,8 +61,11 @@ abelian.
 
 Consequently the three nonidentity \(C_2^2\) labels and the single
 nonidentity \(C_2\) label are not merged by any inner power transport
-available in the Monster.  They are genuine separate inputs to the next
-trace calculation, even though their resulting functions may still agree.
+available in the Monster. They remain distinct quotient coordinates. The
+full centralizer census, however, now proves that evaluating one scalar trace
+at each coordinate cannot restore the orientation: each insertion forms a
+cyclic subgroup with the order-23 element and reduces to an ordinary
+McKay--Thompson branch.
 
 ## 2. What fifth power actually acts on
 
@@ -81,7 +84,7 @@ canonical Monster conjugator transporting an auxiliary insertion \(k\)
 between the two classes.  A correspondence of their \(Q_h\)-labels must be
 constructed from character data or a common rational form.
 
-## 3. The reduced trace matrix
+## 3. The reduced label matrix, and why its scalar realization closes
 
 Before Galois comparison, the complete nonidentity insertion inventory has
 shape
@@ -95,16 +98,30 @@ shape
 \end{array}
 \]
 
-Thus at most eight oriented nonidentity traces are required:
+The quotient bookkeeping therefore contains eight oriented nonidentity
+slots:
 
 \[
 2\cdot3+2\cdot1=8.
 \]
 
-The identity-coset traces are the four cyclic cases already reduced to two
-scalar Hauptmoduln.  No 529-function computation is required.
+This was formerly an eight-trace ceiling. The complete order-23 centralizer
+calculation closes it without requiring eight independent VOA character
+computations. ATLAS gives
 
-For each quotient label \(\lambda\), compute
+\[
+C_{\mathbb M}(g)\cong C_{23}\times S_4.
+\]
+
+The five conjugacy classes of the \(S_4\) complement have orders
+\(1,2,2,3,4\), and their products with \(g\) have orders
+\(23,46,46,69,92\). Because every insertion order is coprime to 23,
+\(\langle g,k\rangle\) is cyclic in every case. The resulting product classes
+are \(23AB,46AB,46CD,69AB,92AB\), and each A/B scalar series pair agrees.
+The eight slots are therefore useful labels for a future centralizer
+representation, but not eight missing scalar functions.
+
+Had the scalar route remained open, one would have computed
 
 \[
 F_{X,\lambda}(\tau)
@@ -123,9 +140,11 @@ F_{46D,\lambda^{\sigma_5}}
 \stackrel{?}{=}\sigma_5(F_{46C,\lambda}).
 \]
 
-An equality means the label carries no extra oriented information.  A
-failure, after cocycle phases are accounted for, is the desired
-orientation-sensitive character.
+The centralizer census decides this test structurally: all such individual
+scalar functions are modular branches of orientation-blind cyclic series.
+The failure condition is realized. A surviving observable must retain how
+several \(S_4\) operations compose, or retain their action on a multiplicity
+space, rather than trace one insertion at a time.
 
 ## 4. Admissibility consequence
 
@@ -134,8 +153,9 @@ The finite quotient and the arithmetic orientation occupy different layers:
 - \(Q_h\) supplies the smallest additional **input labels**;
 - the Monster normalizer supplies only square-power **inner covariance**;
 - \(\sigma_5\) supplies the nonsquare **Galois comparison**;
-- the twisted-module projective character decides whether the comparison is
-  observable.
+- an individual scalar character loses the comparison;
+- a vector-valued/projective centralizer representation or relational sewing
+  may still retain it.
 
 This prevents a recurrent category error in the wider corpus: an outer
 arithmetic symmetry may pair observables without being a physical symmetry
@@ -144,16 +164,16 @@ requires an operator, state space and detector map.
 
 ## 5. Exhaustion boundary
 
-The group-theoretic search is exhausted at this level.  The quotient types,
-number of labels, inner normalizer image and its action are fixed.  What
-remains is not more finite-group guessing but one explicit projective
-character computation, bounded by eight oriented nonidentity traces.
+The group-theoretic and scalar genus-one searches are exhausted at this
+level. The quotient types, number of labels, inner normalizer image, full
+\(S_4\) insertion census and scalar product classes are fixed. No additional
+single-insertion scalar trace can distinguish the orientation.
 
-If every pair is Galois-covariant, scalar genus-one centralizer insertions
-fail as orientation detectors.  The next admissible carrier is then a
-vector-valued module or genus-two sewing representation.  If a pair splits,
-its multiplier and degeneration become the data to match to the genus-two
-determinant line.
+What remains is a change of record type: compute the vector-valued or
+projective \(S_4\) action on twisted multiplicity spaces, retain noncommuting
+relations among several insertions, or sew the order-23-twined data at genus
+two. A successful refinement must state which relation survives that the
+scalar character quotients away.
 
 ## Sources and corpus links
 
@@ -162,5 +182,6 @@ determinant line.
 - Carnahan, [*Generalized Moonshine IV: Monstrous Lie algebras*](https://arxiv.org/abs/1208.6254)
 - Gaberdiel, Persson and Volpato, [*Generalised Moonshine and Holomorphic Orbifolds*](https://arxiv.org/abs/1302.5425)
 - [Centralizer augmentation gate](order-46-centralizer-augmentation.md)
+- [Complete order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md)
 - [Order-46 observable ladder](order-46-observable-ladder.md)
 - [Joined bridge map](joined-bridge-map.md)

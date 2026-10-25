@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "For an order-23 Monster element g, C_M(g) is C23 x S4; the five S4 insertion classes give cyclic product families of orders 23, 46, 46, 69 and 92, and every corresponding A/B McKay-Thompson pair is scalar-degenerate. Scalar genus-one centralizer insertions cannot recover orientation.",
+  "centralizer": {
+    "monsterOrder": 552,
+    "cyclicFactorOrder": 23,
+    "complementOrder": 24,
+    "structure": "C23 x S4",
+    "splitReason": "<g> is central and gcd(23,24)=1; Schur-Zassenhaus supplies a complement, and the product-class centralizer census identifies its S4 class structure"
+  },
+  "insertionClasses": [
+    {"type": "identity", "order": 1, "classSize": 1, "centralizerOrderInS4": 24, "productOrder": 23, "monsterClasses": ["23A", "23B"], "seriesEqual": true},
+    {"type": "double_transposition", "order": 2, "classSize": 3, "centralizerOrderInS4": 8, "productOrder": 46, "monsterClasses": ["46A", "46B"], "seriesEqual": true},
+    {"type": "transposition", "order": 2, "classSize": 6, "centralizerOrderInS4": 4, "productOrder": 46, "monsterClasses": ["46C", "46D"], "seriesEqual": true},
+    {"type": "three_cycle", "order": 3, "classSize": 8, "centralizerOrderInS4": 3, "productOrder": 69, "monsterClasses": ["69A", "69B"], "seriesEqual": true},
+    {"type": "four_cycle", "order": 4, "classSize": 6, "centralizerOrderInS4": 4, "productOrder": 92, "monsterClasses": ["92A", "92B"], "seriesEqual": true}
+  ],
+  "cyclicReduction": {
+    "reason": "every insertion order in S4 is coprime to 23, so <g,k> is cyclic of order 23*order(k)",
+    "distinctInsertionConjugacyClasses": 5,
+    "distinctOrientedClassPairs": 5,
+    "orientationSensitiveScalarPairs": 0,
+    "scalarGenusOneCentralizerSearchExhausted": true
+  },
+  "powerMap": {
+    "map": "x -> x^5",
+    "role": "cyclotomic Galois/power-map exchange of distinct A/B Monster classes",
+    "innerConjugation": false,
+    "normalizerImageOrder": 11,
+    "normalizerImage": "quadratic residues in F23^*"
+  },
+  "remaining": [
+    "vector-valued projective S4 centralizer characters and their Galois transport",
+    "multi-insertion or junction data retaining noncommuting S4 relations",
+    "order-23-twined genus-two sewing",
+    "an externally oriented VOA/lattice lift with an orientation-sensitive detector"
+  ],
+  "sources": [
+    "https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M/",
+    "https://arxiv.org/abs/2412.12182",
+    "https://arxiv.org/abs/1208.6254",
+    "https://doi.org/10.1080/00927879408825127"
+  ]
+}
+

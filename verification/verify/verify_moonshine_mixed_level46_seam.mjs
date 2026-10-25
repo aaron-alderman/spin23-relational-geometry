@@ -6,6 +6,7 @@ const mixed = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const seam = load("../../evidence/data/lattice-subroutine-genus-two-seam-closure-v1.json");
 const galois = load("../../evidence/data/moonshine-order46-galois-orientation-v1.json");
+const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
 
 const sp4Order = (q) => q ** 4 * (q ** 2 - 1) * (q ** 4 - 1);
 
@@ -45,11 +46,14 @@ assert.equal(
 assert.equal(labels.projective.order23Directions, 24);
 assert.equal(labels.projective.productLabels, labels.projective.spinLabels * labels.projective.order23Directions);
 assert.equal(mixed.candidate.smallestInitialCarrier, labels.projective.productLabels);
-assert.equal(
-  mixed.candidate.boundaryTraceCeiling,
-  galois.traceInventory.orientedNonidentityTracesMaximum,
-);
+assert.equal(mixed.candidate.scalarBoundaryChannelsRemaining, 0);
+assert.equal(galois.traceInventory.scalarSearchStatus, "exhausted");
 assert.equal(mixed.analyticBoundary.thetaMultiplierRequiresMetaplecticLift, true);
+assert(mixed.candidate.scalarCouplingGate.projective.includes("C2"));
+assert.equal(
+  mixed.candidate.scalarCouplingGate.signRetaining.includes("quarter-turn to i"),
+  quarterTurn.couplingChannels.metaplecticLift.quarterTurnImage === "i",
+);
 assert(mixed.physicalBoundary.includes("does not select real Spin(2,3)"));
 
 console.log(JSON.stringify({
@@ -64,7 +68,7 @@ console.log(JSON.stringify({
     nonzeroSignRetaining: labels.nonzeroSignRetaining.productLabels,
     projective: labels.projective.productLabels,
   },
-  boundaryTraceCeiling: galois.traceInventory.orientedNonidentityTracesMaximum,
+  scalarBoundaryChannelsRemaining: mixed.candidate.scalarBoundaryChannelsRemaining,
   analyticKernelConstructed: false,
 }, null, 2));
 console.log("PASS verify_moonshine_mixed_level46_seam");

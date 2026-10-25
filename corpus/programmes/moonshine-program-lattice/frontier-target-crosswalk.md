@@ -46,17 +46,19 @@ produces a discriminator or fails:
    centralizer lifts;
 4. record the resulting no-go: fifth power fixes the involution and leaves
    each orientation pair scalar-degenerate;
-5. add the smallest noncyclic centralizer insertions,
-   \(Q_{46AB}\cong C_2^2\) and \(Q_{46CD}\cong C_2\);
-6. evaluate the at most eight oriented nonidentity traces and compare them by
-   fifth-power Galois transport; inner \(C_{11}\) transport acts trivially on
-   both quotient label sets;
+5. identify the complete \(C_{23}\times S_4\) centralizer and place the
+   \(Q_{46AB}\cong C_2^2\), \(Q_{46CD}\cong C_2\) quotient labels inside its
+   five insertion classes;
+6. close every single-insertion scalar route: the product orders
+   \(23,46,46,69,92\) are cyclic and all A/B scalar series pairs agree;
 7. construct the smallest matrix kernel from the surviving order-23 branches
    to the ten even genus-two characteristics;
 8. reject the join if the modular representations or anomaly lines cannot
    intertwine.
 
-Steps 1--6 move FPT-002.  Step 7 is the FPT-007 junction.  Step 8 is useful
+Steps 1--6 close the scalar part of FPT-002 and force a change of record to a
+vector-valued/projective \(S_4\) action or relational multi-insertion data.
+Step 7 is the FPT-007 junction. Step 8 is useful
 even when negative: it converts a speculative bridge into a typed no-go.
 
 ## The finite emulator tranche
@@ -100,12 +102,14 @@ detector map.  None follows from reduction modulo 23.
 
 ## Ranked continuation
 
-1. **Order-46 generalized traces:** highest information gain; no new
-   experiment; can close or kill the central junction.
+1. **Vector/projective order-23 centralizer action:** highest information
+   gain; no new experiment; tests whether twisted multiplicity spaces retain
+   the \(S_4\) relations erased by all scalar one-insertion traces.
 2. **Mixed-level genus-two intertwiner:** use the exact
    \(Sp(4,2)\times Sp(4,23)\) CRT carrier; a direct order-11 action on the ten
-   characteristics is impossible, so compare a coupled representation rather
-   than raw counts 12 and 10.
+   characteristics is impossible. Test first the unique projective \(C_2\)
+   sign coupling, then the metaplectic \(C_4\) lift
+   \(S\mapsto i,\ S^2\mapsto-1\), rather than raw counts 12 and 10.
 3. **Finite \(\mathrm{Dic}_{11}/D_{11}\) emulator:** conventional but sharp
    test of quotient scars and detector equivalence.
 4. **Scale/RG and Spin lift:** hold until a physical carrier and action exist.
@@ -123,6 +127,7 @@ geometry that motivated the admissibility language.
 - [Centralizer augmentation gate](order-46-centralizer-augmentation.md)
 - [Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Mixed-level 46 genus-two seam](mixed-level-46-genus-two-seam.md)
+- [Quarter-turn metaplectic gate](quarter-turn-metaplectic-gate.md)
 - [Main Moonshine programme](README.md)
 - [Per-target corpus assessments](../frontier-physics-targets/frontier_physics_target_assessments_v1.md)
 - [Admissibility frontier synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md)

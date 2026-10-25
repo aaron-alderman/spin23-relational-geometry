@@ -5,6 +5,7 @@ const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, 
 const gate = load("../../evidence/data/moonshine-order46-galois-orientation-v1.json");
 const augmentation = load("../../evidence/data/moonshine-order46-centralizer-augmentation-v1.json");
 const ladder = load("../../evidence/data/moonshine-order46-observable-ladder-v1.json");
+const exhaustion = load("../../evidence/data/moonshine-order23-centralizer-exhaustion-v1.json");
 
 const gcd = (a0, b0) => {
   let a = a0;
@@ -49,6 +50,11 @@ const traceCount = 2 * ab.nonidentityLabelsPerOrientedClass
   + 2 * cd.nonidentityLabelsPerOrientedClass;
 assert.equal(traceCount, 8);
 assert.equal(traceCount, gate.traceInventory.orientedNonidentityTracesMaximum);
+assert.equal(gate.traceInventory.scalarSearchStatus, "exhausted");
+assert.equal(exhaustion.centralizer.structure, "C23 x S4");
+assert.equal(exhaustion.cyclicReduction.orientationSensitiveScalarPairs, 0);
+assert.equal(exhaustion.cyclicReduction.scalarGenusOneCentralizerSearchExhausted, true);
+assert(exhaustion.insertionClasses.every((entry) => gcd(23, entry.order) === 1));
 assert.equal(ladder.cyclicOrientationNoGo.orientationRecovered, false);
 assert(gate.boundaries.some((entry) => entry.includes("not conjugation")));
 assert(gate.boundaries.some((entry) => entry.includes("not a real-time")));
@@ -62,6 +68,7 @@ console.log(JSON.stringify({
     "46AB": ab.innerC11Action,
     "46CD": cd.innerC11Action,
   },
-  maximumNewOrientedTraces: traceCount,
+  quotientSlots: traceCount,
+  scalarOrientationChannels: exhaustion.cyclicReduction.orientationSensitiveScalarPairs,
 }, null, 2));
 console.log("PASS verify_moonshine_order46_galois_orientation");

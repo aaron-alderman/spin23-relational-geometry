@@ -177,8 +177,9 @@ order-46 scalar T_h
 generalized pair Z(h^2,h^23)
   2 normalized scalar outputs: the inverse/power-five pairs remain collapsed
         |
-        | add noncyclic centralizer data, a vector-valued lift,
-        | or genus-two sewing and determinant line
+        | scalar centralizer insertions are exhausted;
+        | change record type to a vector/projective S4 action,
+        | relational multi-insertion, or genus-two sewing
         v
 candidate seam-sensitive vector
 ```
@@ -196,9 +197,12 @@ the same matrix \(\gamma_{2,23}\) to the same normalized Hauptmodul therefore
 gives the same normalized cyclic commuting-pair function for \((g,z)\) and
 \((g^5,z)\).  A convention-dependent scalar cannot serve as an orientation
 observable.  Thus cyclic generalized moonshine recovers the 2A/2B rail but
-does not recover the 23A/23B generator orientation.  The next refinement must
-leave the cyclic subgroup: use a noncyclic centralizer insertion, a genuinely
-vector-valued character, or higher-genus sewing.
+does not recover the 23A/23B generator orientation. The subsequent complete
+\(C_{23}\times S_4\) census shows that every individual centralizer insertion
+also generates a cyclic subgroup and is equally scalar-degenerate. The next
+refinement must therefore change the record type: use a genuinely
+vector-valued/projective \(S_4\) character, retain relations among several
+insertions, or pass to higher-genus sewing.
 
 ## 5. Consequence for the frontier programme
 
@@ -208,8 +212,8 @@ work.  Start from the two known Hauptmoduln, transport them by the explicit
 matrix and audit the compatible normalization.  This is an FPT-002 inverse-detector problem:
 the order-46 insertion is the minimal extra channel already known to separate
 the two involution rails.  It is also an FPT-019 complexity reduction: the
-unknown input is a compatible normalization and then a noncyclic or
-higher-genus refinement, not a 529-function oracle.
+unknown input is a non-scalar centralizer representation or higher-genus
+refinement, not a 529-function oracle or another scalar insertion table.
 
 The physical boundary is unchanged.  Modular transport is worldsheet/VOA
 transport, not real-time evolution, and its normalization phase is not

@@ -258,6 +258,9 @@ ten level-2 characteristic labels or lift as finite order in
 \(Sp(4,\mathbb Z)\). The exact common finite ambient carrier is instead
 \(Sp(4,\mathbb Z/46)\cong Sp(4,2)\times Sp(4,23)\); the missing object is a
 non-factorized vector-valued kernel coupling its two prime factors.
+Its minimal scalar channels are now classified: a \(C_2\) sign can couple
+the projective seam, while retention of the dicyclic central sign requires a
+metaplectic \(C_4\) phase with quarter-turn value \(i\).
 
 ## Sources and corpus links
 
@@ -271,6 +274,7 @@ non-factorized vector-valued kernel coupling its two prime factors.
 - [Centralizer augmentation gate](order-46-centralizer-augmentation.md)
 - [Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Mixed-level 46 genus-two seam](mixed-level-46-genus-two-seam.md)
+- [Quarter-turn metaplectic gate](quarter-turn-metaplectic-gate.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - [Leech pair-Gram / Spin(2,3) bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Rule-60 affine seam torsor](../../claims/1700-1799/1793_the_rule60_golay_kernel_supplies_the_unique_tm23_leech_affine_seam_torsor.md)

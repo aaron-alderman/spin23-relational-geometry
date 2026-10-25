@@ -515,8 +515,8 @@ C_{b\ne0}=8560q+934511q^2+\cdots.
 Thus the ordinary genus-one charge decomposition sees “neutral versus
 charged,” but identifies all twenty-two nonzero charges.  It cannot select an
 oriented Golay rail or distinguish \(23A\) from \(23B\).  Any successful
-observable must use a twisted sector, defect, additional commuting insertion,
-or sewing operation.
+observable must use a twisted sector, defect, non-scalar centralizer action,
+relational multi-insertion record, or sewing operation.
 
 Honda--Kaidi--Orii provide the adjacent refinement. Under a stronger
 parafermionic decomposition assumption they obtain
@@ -634,10 +634,22 @@ All fractional powers and imaginary parts cancel. This scalar trace also
 closes negatively as an orientation detector: the fifth-power map preserves
 \(ab\), and every module character entering the construction depends only on
 that product. The whole unrefined defect trace is therefore unchanged under
-the 23A/23B orientation exchange. The next finite task requires an additional
-commuting insertion that is not a function only of \(ab\), or genus-two
-sewing. The oriented VOA lift and conditional dual-pair question remain
-separate.
+the 23A/23B orientation exchange.
+
+The apparently open “additional commuting insertion” branch has also been
+exhausted at scalar genus one. ATLAS gives
+\(C_{\mathbb M}(g)\cong C_{23}\times S_4\). The five \(S_4\) conjugacy
+classes produce product orders \(23,46,46,69,92\), and every pair
+\(\langle g,k\rangle\) is cyclic because \(|k|\in\{1,2,3,4\}\) is coprime
+to 23. Their product classes are respectively
+\(23AB,46AB,46CD,69AB,92AB\); each A/B pair has the same ordinary
+McKay--Thompson series. Hence every normalized scalar
+\(Z(g,k;\tau)\) is a modular branch of an already orientation-blind cyclic
+series. The finite proof and class census are recorded in the
+[order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md).
+The next finite task is therefore vector-valued/projective centralizer data,
+a genuinely relational multi-insertion, or genus-two sewing. The oriented VOA
+lift and conditional dual-pair question remain separate.
 
 ## 5. Four non-equivalent meanings of program
 
@@ -730,12 +742,13 @@ not complete the physical identification.
 | Borcherds product as lattice program | established mathematically | physical promotion requires a clock/action/observable dictionary |
 | generalized moonshine as typed transition language | established mathematically | physical promotion requires a carrier interpretation for twisted sectors and modular transport |
 | \(II_{1,1}\) as a slice of \(H_2(\mathbb R)\) | established kinematically | derive the off-diagonal coordinate and an action on the full carrier |
-| order-(23) finite twist--charge plane | established in current preprint | compute class-sensitive defect characters and a corpus-cycle intertwiner |
+| order-(23) finite twist--charge plane | established in current preprint | compute class-sensitive vector-valued defect characters and a corpus-cycle intertwiner |
 | \(P(23)\) parafermion and duality defect | established in current preprint | determine whether its oriented data couple to the corpus seam and survive genus-two sewing |
 | \(\mathrm{Dic}_{11}<SL(2,23)<Sp(4,23)\) transition skeleton | exact finite arithmetic bridge | a real \(Spin_0(2,3)\) lift must independently recover signature, cone and time orientation |
 | untwisted order-\(23\) charge projection | ruled out as an orientation detector | all nonzero charges have \((J-T_{23})/23\); twisted or defect input is necessary |
 | \(\operatorname{Rep}(\mathfrak{so}(3)_{23})\) defect McKay series | conditional construction; 12 lines and expected \(\Gamma_1(25)\) invariance | explicit \(p=23\) decomposition/characters; genus 12 precludes a Hauptmodul shortcut, while the rank/genus equality remains unexplained |
 | untwined genus-two Monster partition function | published aggregate | insufficient to identify the underlying program or seam |
+| full order-23 scalar centralizer insertion | ruled out as an orientation detector | \(C_M(g)/\langle g\rangle\cong S_4\), but all five insertion classes reduce to scalar-degenerate cyclic products of orders 23, 46, 46, 69 and 92 |
 | twined genus-two order-(23) bridge | open | construct the sewn twined amplitude and check factorisation/multipliers |
 | \(2A\) fermionization as seam carrier | exact type match | Baby-Monster genus-two multipliers and a \(2A\)-\(2B\) junction |
 | Moonshine coefficients as real-time populations or species | rejected without new map | Hamiltonian, measure, normalization and detector law |
@@ -749,10 +762,11 @@ The remaining work should be attempted in this order:
    is closed relative to \(\zeta_{23}\), and A/B naming is recognized as a
    generator convention. Determine whether a defect character retains this
    declared orientation; the common scalar trace provably cannot.
-2. **Defect-character extraction.**  Specialize the published general
-   \(P(N)\)-commutant and defect formulas to \(N=23\).  Compute the first
-   twisted--twining and duality-defect coefficients and test whether their
-   Galois/orientation behavior separates \(23A\) from \(23B\).
+2. **Vector-valued defect-character extraction.**  The scalar commutant and
+   duality-defect traces, including every scalar insertion from the full
+   \(C_{23}\times S_4\) centralizer, are now exhausted. Compute the projective
+   \(S_4\) action on the twisted multiplicity spaces and compare the 23A/23B
+   rational forms under fifth-power Galois transport.
 3. **Rule-60 spectral transform.** Compare the \(\sigma\)-eigenvalue data with
    the transformed eigenvalues \(1+\zeta_{23}^k\). Determine whether the
    order-\(89\) component acts on any natural multiplicity, defect or quotient
@@ -833,10 +847,11 @@ calculations above, or ruled out.  Route 7 remains a new physical construction.
 The scalar order-(23) lift/twining and the untwisted charge-resolution test are
 now completed.  The latter is a no-go: it proves that no rearrangement of the
 common genus-one scalar trace can recover orientation.  The remaining branch
-is narrowed to three source objects: an explicit \(23AB\) twisted--twining or
-defect-character table, a twined genus-two sewing construction, and a junction
-to the \(2A\) fermionic seam.  Without one of those inputs, further scalar
-coefficient work is repetition rather than progress.  Beyond them, a physical
+is narrowed to three source objects: a vector-valued/projective \(S_4\)
+centralizer character table for the order-23 twisted module, a twined
+genus-two sewing construction, and a junction to the \(2A\) fermionic seam.
+Without one of those inputs, further scalar coefficient work is repetition
+rather than progress.  Beyond them, a physical
 promotion still requires a carrier action, clock and detector law.
 
 ## Sources and corpus links
@@ -862,3 +877,4 @@ promotion still requires a carrier action, clock and detector law.
 - [Connected/discrete symmetry separation](../../claims/0100-0199/138_connected_continuous_vs_arithmetic_symmetry_separation.md)
 - [Leech pair-Gram bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Hecke/commutant audit](../frontier/wave-7/frontier_wave7_36_hecke_commutant_and_spin23_corner_bridge.md)
+- [Order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md)

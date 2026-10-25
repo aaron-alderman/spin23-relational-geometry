@@ -6,6 +6,7 @@ const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, 
 const joined = load("../../evidence/data/moonshine-joined-bridge-map-v1.json");
 const galois = load("../../evidence/data/moonshine-order46-galois-orientation-v1.json");
 const mixed = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
+const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const fermionic = load("../../evidence/data/lattice-subroutine-monster-fermionization-bridge-v1.json");
 const igusa = load("../../evidence/data/lattice-subroutine-igusa-seam-completion-v1.json");
@@ -103,6 +104,10 @@ assert.equal(
   mixed.labelResolutions.projective.productLabels,
 );
 assert(joined.generalizedMoonshineTarget.mixedLevelSeam.boundary.includes("non-factorized"));
+assert.equal(
+  joined.generalizedMoonshineTarget.mixedLevelSeam.signRetainingScalarCoupling.includes("quarter-turn image i"),
+  quarterTurn.couplingChannels.metaplecticLift.quarterTurnImage === "i",
+);
 assert.equal(joined.openGates.length, 5);
 
 console.log(JSON.stringify({

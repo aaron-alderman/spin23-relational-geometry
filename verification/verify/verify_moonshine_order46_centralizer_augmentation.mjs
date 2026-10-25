@@ -5,6 +5,7 @@ const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, 
 const augmentation = load("../../evidence/data/moonshine-order46-centralizer-augmentation-v1.json");
 const joined = load("../../evidence/data/moonshine-joined-bridge-map-v1.json");
 const ladder = load("../../evidence/data/moonshine-order46-observable-ladder-v1.json");
+const fullCentralizer = load("../../evidence/data/moonshine-order23-centralizer-exhaustion-v1.json");
 
 const ab = augmentation.quotients["46AB"];
 const cd = augmentation.quotients["46CD"];
@@ -41,6 +42,10 @@ assert(augmentation.traceTarget.transportType.includes("not conjugation"));
 assert(augmentation.boundaries.some((entry) => entry.includes("need not give distinct trace functions")));
 assert(augmentation.boundaries.some((entry) => entry.includes("cannot be implemented by inner conjugation")));
 assert(augmentation.boundaries.some((entry) => entry.includes("not vector-valued or genus-two")));
+assert.equal(fullCentralizer.centralizer.structure, "C23 x S4");
+assert.equal(fullCentralizer.cyclicReduction.scalarGenusOneCentralizerSearchExhausted, true);
+assert.equal(fullCentralizer.insertionClasses.filter((row) => row.order === 2).length, 2);
+assert(fullCentralizer.insertionClasses.every((row) => row.seriesEqual));
 
 console.log(JSON.stringify({
   minimalNoncyclicInsertionSpaces: {
@@ -57,5 +62,6 @@ console.log(JSON.stringify({
   },
   newCosetsBeforeIdentifications: 4,
   orientationRecovered: false,
+  scalarSearchExhaustedByFullCentralizerCensus: true,
 }, null, 2));
 console.log("PASS verify_moonshine_order46_centralizer_augmentation");

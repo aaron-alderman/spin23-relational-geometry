@@ -109,7 +109,8 @@ with four properties:
 2. its level-23 action reproduces the declared
    \(\mathrm{Dic}_{11}\) or \(D_{11}\) transition skeleton;
 3. its separating degeneration lands on the order-46
-   centralizer-augmented twisted--twining traces; and
+   vector-valued/projective \(S_4\) centralizer data or relational
+   multi-insertion data; and
 4. its scalar contractions recover the known \(T_{23}\), Leech theta and
    fermionic factorization limits without identifying their lost data.
 
@@ -118,6 +119,13 @@ tensor product of independent level-2 and level-23 pieces. If it does, CRT
 has merely juxtaposed the carriers. The sought join requires a sourced
 off-diagonal coupling or extension class that survives all degeneration
 tests.
+
+The [quarter-turn metaplectic gate](quarter-turn-metaplectic-gate.md)
+classifies the one-dimensional coupling channels. At projective level the
+unique nontrivial common quotient is \(C_2\), matching seam determinant sign
+to dihedral reflection parity. It necessarily loses the dicyclic center.
+Retaining that sign requires the order-four character
+\(S\mapsto i,\ S^2=-I\mapsto-1\) from the metaplectic multiplier data.
 
 ## 4. Why “level 46” is not yet the analytic answer
 
@@ -161,7 +169,8 @@ The remaining mathematical route is uniquely narrowed to mixed-level,
 vector-valued or defect data. The next calculation should construct the
 smallest candidate \(\mathcal K_{\delta,\lambda}\), beginning with the
 240-component projective carrier, and test whether its separating boundary
-can reproduce the at-most-eight order-46 Galois-oriented traces. Failure of
+can reproduce a non-scalar \(S_4\) relation after the complete scalar
+one-insertion exhaustion. Failure of
 that boundary test kills the present genus-two lightning path; success
 identifies the precise multiplier line that must be lifted analytically.
 
@@ -172,6 +181,7 @@ identifies the precise multiplier line that must be lifted analytically.
 - Wang, [*Siegel modular forms associated to Weil representations*](https://arxiv.org/abs/2501.12140)
 - Gaberdiel, Persson and Volpato, [*Generalised Moonshine and Holomorphic Orbifolds*](https://arxiv.org/abs/1302.5425)
 - [Order-46 Galois orientation gate](order-46-galois-orientation-gate.md)
+- [Quarter-turn metaplectic coupling gate](quarter-turn-metaplectic-gate.md)
 - [Genus-two seam closure](../lattice-subroutine-gravity/genus-two-seam-closure.md)
 - [Oriented seam modular line](../lattice-subroutine-gravity/oriented-seam-modular-line.md)
 - [Leech pair-Gram / Spin bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)

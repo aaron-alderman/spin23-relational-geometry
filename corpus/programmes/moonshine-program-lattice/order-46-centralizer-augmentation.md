@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 
-**Status:** minimal noncyclic insertion spaces and quotient types identified exactly; Galois action and orientation separation open
+**Status:** quotient structures identified; scalar trace route subsequently exhausted by the full order-23 centralizer census
 
 **Evidence:** [centralizer-augmentation ledger](../../../evidence/data/moonshine-order46-centralizer-augmentation-v1.json)  
 **Certificate:** [quotient-order verifier](../../../verification/verify/verify_moonshine_order46_centralizer_augmentation.mjs)
@@ -168,21 +168,39 @@ smallest extension that:
 - remembers the different 2A and 2B lift geometries; and
 - has a finite complete enumeration.
 
-## 5. Exhaustion boundary
+## 5. Subsequent scalar exhaustion
 
-The quotient types close the label search space but do not compute how those
-labels occur in the Monster twisted-module characters.  The
-[Galois-orientation gate](order-46-galois-orientation-gate.md) further proves
-that the inner \(C_{11}\) power action is trivial on both quotients and reduces
-the remaining calculation to at most eight oriented nonidentity traces.
-No claim is made that \(Q_{46AB}\) is the Rule-60 deck carrier, that
-\(Q_{46CD}\) is fermion parity, or that either quotient acts on the ten
-even-characteristic genus-two family.  Those are exactly the next
-intertwiner tests.
+The [full order-23 centralizer census](order-23-centralizer-exhaustion.md)
+closes the scalar question left open here. For \(g=h^2\),
 
-If the five finite steps above fail to split orientation, additional scalar
-genus-one Monster traces are exhausted.  The programme must then move to a
-vector-valued centralizer representation or genus-two sewing.
+\[
+C_{\mathbb M}(g)/\langle g\rangle\cong S_4.
+\]
+
+The quotients \(C_2^2\) and \(C_2\) found above sit inside centralizers of the
+two involution types of that \(S_4\). Every individual auxiliary insertion
+has order \(1,2,3\), or \(4\), coprime to 23, so together with \(g\) it
+generates a cyclic subgroup. Its generalized trace is therefore a modular
+branch of an ordinary series from one of
+
+\[
+23AB,\quad46AB,\quad46CD,\quad69AB,\quad92AB.
+\]
+
+All five A/B series pairs coincide. Thus the four nonidentity quotient cosets
+do not recover orientation as normalized scalar genus-one traces. The
+quotients remain useful carriers for a vector-valued/projective character
+calculation, but no additional scalar evaluation is warranted.
+
+## 6. Exhaustion boundary
+
+The quotient types close the label search space. The scalar failure is now
+established by the larger \(S_4\) census rather than left as a future
+conditional. No claim is made that \(Q_{46AB}\) is the Rule-60 deck carrier,
+that \(Q_{46CD}\) is fermion parity, or that either quotient acts on the ten
+even-characteristic genus-two family. Those are exactly the next intertwiner
+tests. The programme must move to a vector-valued centralizer representation,
+relational multi-insertion, or genus-two sewing.
 
 ## Sources and corpus links
 
@@ -190,5 +208,6 @@ vector-valued centralizer representation or genus-two sewing.
 - Breuer, Magaard and Wilson, [*Verification of the conjugacy classes and ordinary character table of the Monster*](https://arxiv.org/abs/2412.12182)
 - [Order-46 observable ladder](order-46-observable-ladder.md)
 - [Order-46 Galois orientation gate](order-46-galois-orientation-gate.md)
+- [Order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md)
 - [Joined order-46 bridge](joined-bridge-map.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)

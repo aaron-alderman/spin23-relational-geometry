@@ -5,6 +5,7 @@ const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, 
 const ladder = load("../../evidence/data/moonshine-order46-observable-ladder-v1.json");
 const joined = load("../../evidence/data/moonshine-joined-bridge-map-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
+const exhaustion = load("../../evidence/data/moonshine-order23-centralizer-exhaustion-v1.json");
 
 const mod = (value, modulus) => ((value % modulus) + modulus) % modulus;
 const gcd = (a0, b0) => {
@@ -53,7 +54,8 @@ assert.equal(mod(5 * 23, 46), 23);
 assert.equal(mod(5 * 2, 46), 10);
 assert.equal(ladder.cyclicOrientationNoGo.distinctNormalizedCyclicPairOutputs, 2);
 assert.equal(ladder.cyclicOrientationNoGo.orientationRecovered, false);
-assert(ladder.cyclicOrientationNoGo.requiredEscape.includes("noncyclic centralizer insertion"));
+assert(ladder.cyclicOrientationNoGo.requiredEscape.includes("scalar one-insertion search is exhausted"));
+assert.equal(exhaustion.cyclicReduction.orientationSensitiveScalarPairs, 0);
 
 // Arithmetic alone allows order two, but the Conway--Norton h parameter is
 // one for both 46+23 and 46+, so these cyclic classes are non-anomalous.

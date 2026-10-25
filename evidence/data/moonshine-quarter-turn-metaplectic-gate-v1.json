@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The unique finite scalar coupling between the level-2 seam carrier and projective D11 data is a C2 sign, while retaining the Dic11 central sign requires a C4 metaplectic character sending the quarter-turn to i and its square to -1.",
+  "abelianizations": {
+    "Sp4F2": {
+      "isomorphism": "S6",
+      "abelianization": "C2",
+      "character": "determinant of the nine-dimensional sum-zero seam carrier"
+    },
+    "D11": {
+      "abelianization": "C2",
+      "character": "reflection parity"
+    },
+    "Dic11": {
+      "presentation": "r^22=1, s^2=r^11, s*r*s^-1=r^-1",
+      "abelianization": "C4",
+      "abelianGenerator": "s",
+      "abelianRelation": "r=s^2"
+    }
+  },
+  "couplingChannels": {
+    "projective": {
+      "commonCharacter": "C2",
+      "uniqueNontrivial": true,
+      "retains": "reflection/oriented-seam parity",
+      "loses": "dicyclic central sign"
+    },
+    "binaryLiftOfDic11": {
+      "map": "C4 -> C2",
+      "quarterTurnImage": -1,
+      "centralSquareImage": 1,
+      "retainsCentralSign": false
+    },
+    "metaplecticLift": {
+      "map": "C4 -> mu4 inside mu8",
+      "quarterTurnImage": "i",
+      "centralSquareImage": "-1",
+      "retainsCentralSign": true,
+      "status": "candidate requiring theta and twisted-module cocycle comparison"
+    }
+  },
+  "semanticBoundary": {
+    "exact": "S acts as a finite quarter-turn with S^2=-I and has a faithful scalar character S -> i",
+    "notEstablished": "analytic continuation of physical time, a Hamiltonian Wick rotation or a detector-visible phase"
+  },
+  "nextTest": "restrict the genus-two theta/Pfaffian metaplectic multiplier and the order-23 defect cocycle to the proposed mixed-level lift and test equality of their C4 characters"
+}
