@@ -56,7 +56,7 @@ This last number is close to, but below, the maximum \(1/4\) for a positive \(2\
 
 ## Source-channel-complete t-J oracle
 
-The external Planckian-tJ working copy now contains a dependency-light [tagged physical-current API](../../../external/Planckian-tJ/physical_energy_current.py), a [SciPy sparse adapter](../../../external/Planckian-tJ/physical_energy_current_sparse.py), an exact [no-double-occupancy t-J term builder](../../../external/Planckian-tJ/tagged_tj_small_cluster.py), 20 regression tests across the existing and new paths, and a [JSON diagnostic runner](../../../external/Planckian-tJ/run_tagged_tj_bridge.py).
+The external Planckian-tJ working copy used for this result contained a dependency-light tagged physical-current API (`physical_energy_current.py`), a SciPy sparse adapter (`physical_energy_current_sparse.py`), an exact no-double-occupancy t-J term builder (`tagged_tj_small_cluster.py`), 20 regression tests across the existing and new paths, and a JSON diagnostic runner (`run_tagged_tj_bridge.py`). Those four files are uncommitted working-copy additions inside a separately governed external repository, so they are deliberately **not** represented as reproducible internal links. The retained [evidence record](../../../evidence/data/admissibility-periodic-physical-energy-current-bridge-v1.json) and [independent corpus verifier](../../../verification/admissibility/verify_periodic_physical_energy_current_bridge.mjs) control the finite result; publication of the external source additions is an explicit reopening/dependency event rather than an invisible release prerequisite.
 
 The exact open cluster carries the same five interaction families observed in the audited source:
 
