@@ -244,6 +244,31 @@ that rank alone identifies the lost semantics.  See the
 [live support-order audit](../programmes/admissibility/admissibility_125_claimipedia_support_native_order_and_semantic_boundary.md)
 and [typed two-rail lift](../programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md).
 
+### Source-native Clifford rail cell
+
+The rail carrier also has an exact **Source-Native Clifford Cell**. Authored
+role grading (G=\operatorname{diag}(-1,+1)) anticommutes with rail swap (J),
+so (I=GJ) squares to minus one and the null mixtures ((J\pm I)/2) are the
+two directed within-fibre rail transfers. This cell does not survive the
+scalar support quotient. More importantly, (I) exchanges the signed
+Relation Gram Kernel with an unsigned **Co-incidence Kernel** rather than
+preserving either one separately. It is exact pre-quotient role geometry;
+path dynamics and a semantic relation-type adjoint remain open. See
+[AZ-131](../programmes/admissibility/admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md)
+and the [cross-corpus atlas](../programmes/admissibility/admissibility_132_cross_corpus_clifford_cell_atlas_and_exhaustion.md).
+
+### Scalar topology shadow and adjoint boundary
+
+The doubled rail response has an exact scalar topology shadow. Signed
+incidence descends to the rank-33 Laplacian; unsigned co-incidence descends to
+the rank-35 signless Laplacian. Their two-rank difference counts the two
+non-bipartite connected components. However, exhausting every involution of
+the four authored relation types leaves only the reciprocal Spin--Temple
+Supports/Qualifies pair and fails on 41 records. The whole-source semantic
+adjoint is therefore absent; the free mirror must not be relabelled as an
+authored path star. See [AZ-133](../programmes/admissibility/admissibility_133_the_incidence_coincidence_doublet_detects_odd_cycle_topology.md)
+and [AZ-134](../programmes/admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md).
+
 ### Spin–Temple cell and context
 
 The opposite `Supports` and `Qualifies` arrows between Spin and Temple define

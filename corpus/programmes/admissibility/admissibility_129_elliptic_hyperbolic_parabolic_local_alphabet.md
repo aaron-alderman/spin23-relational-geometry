@@ -248,6 +248,12 @@ typed plane, they generate all of \(M_2(\mathbb R)\), and their equal and
 opposite mixtures are the two square-zero directed rungs. The dual branch is
 then derived from the complex and split generators rather than appended.
 
+[AZ-131](admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md)
+finds that complete cell on the typed Claimipedia rails. The authored grading
+and mirror supply the anticommuting pair, but the quarter-turn exchanges the
+incidence and co-incidence kernels. Thus source selection of an operator does
+not imply invariance of the selected response.
+
 ## Consequences for the corpus
 
 The three algebras refine several existing phrases:

@@ -74,6 +74,14 @@ discrete map from the Lie-algebra role of the same matrix. In particular, the
 rail swap may be anti-symplectic as a map even when its exponential as a
 generator is symplectic.
 
+When a negative-square direction and positive-square reflection anticommute,
+name the resulting local \(Cl(1,1)\cong M_2(\mathbb R)\) cell, but do not stop
+there. State whether the pair is real-linear or antiunitary, which response
+object it preserves or exchanges, whether it descends through the declared
+quotient, and which source semantics make the grading and exchange canonical.
+Repeated local algebra is evidence for a reusable grammar, not for a shared
+carrier or physical mechanism.
+
 The compact prose grammar is:
 
 > **Because — but — therefore — still open.**  

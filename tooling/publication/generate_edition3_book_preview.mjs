@@ -533,6 +533,8 @@ const localMotionSection = chapterSkeletons
   .find(chapter => chapter.slug === "08-admissibility-frontier")
   .sections.find(([heading]) => heading === "Three local motion types");
 localMotionSection[1].push("The quarter-turn and mirror do more than name two endpoints. When they anticommute on the same typed plane they generate Cl(1,1), equivalently the full real two-by-two matrix algebra. Their equal and opposite mixtures are two square-zero directed rungs: the dual-number branch is therefore the null seam between compact rotation and noncompact squeeze, not an unrelated third metaphor. The traceless closure is the local Spin(2,1) algebra; lifting it to the corpus's Spin(2,3) architecture still requires a source-native carrier, action and held-out record.");
+localMotionSection[1].push("The live Claimipedia carrier now supplies that local cell without fitting: authored source and target roles define a grading that anticommutes with rail exchange, and their product is the negative-square quarter-turn. Its null mixtures are canonical within-fibre rail transfers. The crucial refusal is equally exact: the quarter-turn exchanges signed incidence with unsigned co-incidence rather than preserving the original response, and the scalar rail quotient erases it. Three other certified corpus carriers repeat the same Cl(1,1) grammar, but no cross-carrier intertwiner, shared action or detector record yet makes them one physical operator.");
+localMotionSection[1].push("The two rail responses nevertheless have a sharp quotient signature: incidence becomes the ordinary Laplacian of rank thirty-three, while co-incidence becomes the signless Laplacian of rank thirty-five. The two-rank difference counts the two graph components containing odd cycles. This topology does not supply the missing path adjoint. Exhausting all twenty-four permutations and ten involutions of the four authored relation types reverses only the two-record Spin–Temple cell and leaves forty-one records unmatched, so the whole-source star route is closed until new reverse semantics or an independently tested contravariant map is supplied.");
 
 // This provisional section is intentionally updated as the live result firms.
 // Keep the main chapter stable while making the newest detector reassignment explicit.
@@ -1257,6 +1259,10 @@ const sectionEvidenceOverrides = {
   "Three local motion types": [
     "corpus/programmes/admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md",
     "corpus/programmes/admissibility/admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md",
+    "corpus/programmes/admissibility/admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md",
+    "corpus/programmes/admissibility/admissibility_132_cross_corpus_clifford_cell_atlas_and_exhaustion.md",
+    "corpus/programmes/admissibility/admissibility_133_the_incidence_coincidence_doublet_detects_odd_cycle_topology.md",
+    "corpus/programmes/admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md",
     "corpus/programmes/admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md",
     "corpus/programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md",
   ],

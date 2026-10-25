@@ -1,0 +1,48 @@
+{
+  "protocol": "claimipedia-semantic-adjoint-exhaustion/1",
+  "packet": "AZ-134",
+  "target": "OT-026",
+  "sourceHash": "82d9c5a47f4957ddbd302927baed0acb05522773762966a4c9ffc34ed86f94c3",
+  "search": {
+    "relationTypes": ["Challenges", "DependsOn", "Qualifies", "Supports"],
+    "allTypePermutations": 24,
+    "involutiveTypePermutations": 10,
+    "records": 43,
+    "bestReverseMatchedRecords": 2,
+    "unmatchedRecordsAtBest": 41,
+    "globalAdjointExists": false
+  },
+  "bestInvolutions": [
+    {
+      "Challenges": "Challenges",
+      "DependsOn": "DependsOn",
+      "Qualifies": "Supports",
+      "Supports": "Qualifies"
+    },
+    {
+      "Challenges": "DependsOn",
+      "DependsOn": "Challenges",
+      "Qualifies": "Supports",
+      "Supports": "Qualifies"
+    }
+  ],
+  "onlyMatchedRecords": [
+    ["claim.grandThesis.spin-2-3", "claim.grandThesis.temple-sourcery", "Supports"],
+    ["claim.grandThesis.temple-sourcery", "claim.grandThesis.spin-2-3", "Qualifies"]
+  ],
+  "oddCycleBoundary": {
+    "riverTriangleType": "DependsOn",
+    "reverseEdgesPresent": 0,
+    "orientationCanBeAdjointedFromCurrentSource": false
+  },
+  "decision": {
+    "spinTempleLocalAdjointClosed": true,
+    "globalSemanticAdjointClosed": false,
+    "currentSourceRouteExhausted": true,
+    "formalReverseCompletionPossible": true,
+    "formalReverseCompletionSourceAuthored": false,
+    "graphToJordanTranslationClosed": false,
+    "newPhysicsEvidence": false
+  },
+  "reopeningDatum": "Add independently authored reverse-relation semantics and records covering the nonreciprocal edges, or supply an external contravariant functor whose predictions are tested on held-out paths."
+}

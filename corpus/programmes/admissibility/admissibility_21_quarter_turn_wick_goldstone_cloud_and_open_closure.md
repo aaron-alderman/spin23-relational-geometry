@@ -32,6 +32,14 @@ three exponentiate inside the same two-dimensional symplectic group, but only
 the negative-square branch is a rotation. See
 [AZ-129](admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md).
 
+The stronger corpus-wide result is now typed in
+[AZ-131](admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md)
+and [AZ-132](admissibility_132_cross_corpus_clifford_cell_atlas_and_exhaustion.md):
+an authored grading and its reversing exchange can generate the quarter-turn,
+with the two dual directions appearing as null mixtures. Several carriers
+realize this local grammar independently; none is identified physically
+without an intertwiner preserving its response and record.
+
 ## One operator, six typed appearances
 
 The repetition is now exact rather than metaphorical.

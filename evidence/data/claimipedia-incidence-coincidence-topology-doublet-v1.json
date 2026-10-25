@@ -1,0 +1,45 @@
+{
+  "protocol": "claimipedia-incidence-coincidence-topology-doublet/1",
+  "packet": "AZ-133",
+  "target": "OT-026",
+  "sourceHash": "82d9c5a47f4957ddbd302927baed0acb05522773762966a4c9ffc34ed86f94c3",
+  "graph": {
+    "nodes": 38,
+    "records": 43,
+    "connectedComponents": 5,
+    "bipartiteComponents": 3,
+    "oddCycleComponents": 2
+  },
+  "twoRail": {
+    "incidenceKernel": "K-=sum_e d_e d_e^T",
+    "coincidenceKernel": "K+=sum_e c_e c_e^T",
+    "gradingExchange": "G K- G^T=K+",
+    "commonPart": "D=(K-+K+)/2 is the typed endpoint-degree operator",
+    "oddPart": "A=(K+-K-)/2 is the symmetric typed source-target adjacency"
+  },
+  "scalarQuotients": {
+    "incidence": "C K- C^T=L",
+    "coincidence": "C K+ C^T=Q",
+    "laplacianRank": 33,
+    "signlessLaplacianRank": 35,
+    "laplacianNullity": 5,
+    "signlessLaplacianNullity": 3,
+    "rankDifference": 2,
+    "interpretation": "L nullity counts connected components; Q nullity counts bipartite connected components, so the rank difference counts odd-cycle components"
+  },
+  "oddCycleComponentRepresentatives": [
+    "the 24-node main Claimipedia component",
+    "the instrumentCalibration-riverNitrate-riverFlow triangle"
+  ],
+  "decision": {
+    "doubledPositiveResponseDerived": true,
+    "directedTypedAdjacencyRecoverable": true,
+    "oddCycleTopologyDetectedAfterQuotient": true,
+    "pathCompositionDerived": false,
+    "semanticAdjointDerived": false,
+    "physicalConfigurationSpaceDerived": false,
+    "gravityDerived": false,
+    "newPhysicsEvidence": false
+  },
+  "nextGate": "AZ-134 proves that the current relation source has no global semantic adjoint; reopen with new reverse semantics and a reserved oriented path record."
+}

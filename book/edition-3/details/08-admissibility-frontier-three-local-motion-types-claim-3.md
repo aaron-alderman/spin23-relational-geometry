@@ -17,7 +17,7 @@ The stated conclusion follows inside the declared model. Reusing it elsewhere re
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Three local motion types”.
-- **Unit of argument:** assertion 3 of 3 in this section.
+- **Unit of argument:** assertion 3 of 5 in this section.
 - **Evidence posture:** Audit the declared carrier, assumptions and certificate. The result is exact only within that written scope.
 - **Research move:** moves a structure between mathematical, physical or ordinary languages.
 
@@ -36,6 +36,10 @@ Locate a mismatched definition, an omitted assumption, a failed certificate step
 
 - **admissibility 129 elliptic hyperbolic parabolic local alphabet** — [admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md](../../../corpus/programmes/admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md)
 - **admissibility 130 quarter turn and mirror generate the dual seam** — [admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md](../../../corpus/programmes/admissibility/admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md)
+- **admissibility 131 the authored rail grading closes the local clifford cell but opens a coincidence channel** — [admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md](../../../corpus/programmes/admissibility/admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md)
+- **admissibility 132 cross corpus clifford cell atlas and exhaustion** — [admissibility_132_cross_corpus_clifford_cell_atlas_and_exhaustion.md](../../../corpus/programmes/admissibility/admissibility_132_cross_corpus_clifford_cell_atlas_and_exhaustion.md)
+- **admissibility 133 the incidence coincidence doublet detects odd cycle topology** — [admissibility_133_the_incidence_coincidence_doublet_detects_odd_cycle_topology.md](../../../corpus/programmes/admissibility/admissibility_133_the_incidence_coincidence_doublet_detects_odd_cycle_topology.md)
+- **admissibility 134 no global semantic adjoint exists on the current claimipedia relation source** — [admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md](../../../corpus/programmes/admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md)
 - **admissibility 123 locally invariant carrier and mirror face spine** — [admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md](../../../corpus/programmes/admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md)
 - **admissibility 126 typed two rail positive lift preserves the mirror face** — [admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md](../../../corpus/programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md)
 
@@ -43,4 +47,4 @@ Locate a mismatched definition, an omitted assumption, a failed certificate step
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#three-local-motion-types) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-three-local-motion-types-claim-2.md) · [Next claim →](08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#three-local-motion-types) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-three-local-motion-types-claim-2.md) · [Next claim →](08-admissibility-frontier-three-local-motion-types-claim-4.md)

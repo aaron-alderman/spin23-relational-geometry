@@ -81,7 +81,7 @@ for another dimensionless redesign.
 |---|---|---|
 | OT-024 | Relation-emulator hardware dictionary | AZ-110 closes network and detector design; build the frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
 | OT-025 | Nonlocal 24-dimensional form or code functor | a source-derived replacement for the incidence form or explicit sacrificed property |
-| OT-026 | Graph-to-Jordan translation | AZ-126 gives the faithful positive rails; AZ-129 classifies their three local motion types; AZ-130 derives dual rungs from an anticommuting quarter-turn/mirror pair. A source-native quarter-turn, semantic adjoint, path composition and held-out oriented record remain required |
+| OT-026 | Graph-to-Jordan translation | AZ-131--AZ-134 close the local rail cell, doubled positive response and current-source adjoint search. Only the Spin–Temple pair is reciprocal; reopen globally with independently authored reverse semantics or an external contravariant functor predicting held-out paths |
 | OT-027 | Physical operator and dynamics functor | AZ-124 separates support, positive kernel, Schur face, holonomy and detector; a source-native action must still generate those operators, amplitudes and records |
 | OT-028 | Gauge-compatible flavour path | one action deriving path, overlaps and parameter count |
 | OT-038 | Source-bearing A2 commuting square | calibrate one common-carrier intertwiner from the selector primitive-form split to the rectangular ports, treat the nonzero channel as covariant symmetry breaking, and select the noncompact reverse-channel phase |
@@ -192,11 +192,42 @@ two-port trace curvature is the smallest proposed held-out discriminator.
 closes the universal local algebra more strongly. An anticommuting negative-
 square quarter-turn and positive-square mirror generate
 $Cl(1,1)\cong M_2(\mathbb R)$, while their two null mixtures are directed
-square-zero rungs. OT-026 therefore has a decisive next test: derive the
-negative-square partner from source semantics and check anticommutation with
-the existing rail swap. Failure keeps the three-algebra family as a comparator;
-success produces directed nilpotent maps that can be composed with authored
-paths and tested on a withheld orientation record.
+square-zero rungs. This set the decisive source-native test: derive the
+negative-square partner and check anticommutation with the existing rail swap.
+AZ-131 subsequently passes that algebraic test, so OT-026 no longer waits on
+the local operator; it waits on response closure, path semantics and a held-out
+orientation record.
+
+[AZ-131](../admissibility/admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md)
+passes that source-native test. The authored source/target grading \(G\) and
+rail mirror \(J\) anticommute, so \(I=GJ\) is a canonical negative-square
+operator and its null mixtures are within-fibre rail transfers. The result
+does not close OT-026 because \(I\) carries the signed incidence kernel to an
+unsigned co-incidence kernel rather than preserving it. The next object is a
+doubled response with both channels, an authored path product and a semantic
+adjoint.
+
+[AZ-132](../admissibility/admissibility_132_cross_corpus_clifford_cell_atlas_and_exhaustion.md)
+then exhausts the vocabulary across the corpus. It finds the complete local
+grammar independently on the Claimipedia rails, neutral Peirce/selector
+planes, bi-symplectic recursion and Furey--Higgs aggregate plane, while
+keeping antiunitary, KO-sign and lone-nilpotent neighbours separate. This
+closes semantic propagation, not the cross-carrier intertwiner.
+
+[AZ-133](../admissibility/admissibility_133_the_incidence_coincidence_doublet_detects_odd_cycle_topology.md)
+derives the doubled response. Incidence and co-incidence descend to the
+ordinary and signless Laplacians with ranks 33 and 35. Their rank difference
+is exactly the two connected components containing odd cycles, so the second
+channel detects an alternating-sign topological obstruction rather than an
+extra dimension.
+
+[AZ-134](../admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md)
+then exhausts all 24 type permutations and all 10 involutions. The best rule
+reverses only the Spin--Temple Supports/Qualifies pair and leaves 41 of 43
+records unmatched. The current-source path-adjoint route is therefore closed
+negatively. OT-026 reopens only with independently authored reverse semantics,
+an external contravariant functor or a device dictionary predicting held-out
+reverse-path records.
 
 [AZ-113](../admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md)
 

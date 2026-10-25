@@ -79,7 +79,10 @@ given in [the elliptic/hyperbolic/parabolic local alphabet](admissibility_129_el
 When the negative-square quarter-turn and positive-square mirror anticommute,
 [their local closure](admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md)
 also derives the two square-zero directions as null mixtures. This supplies a
-universal comparator, not a source-native Claimipedia action.
+universal comparator. [AZ-131](admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md)
+then derives the same cell source-natively from authored rail grading and
+mirror exchange, while showing that it exchanges incidence and co-incidence
+responses rather than defining dynamics within either one.
 
 ## Three meanings of invariant
 
@@ -255,6 +258,8 @@ global return and detector record are independently measurable.
 - [Holonomy-driven selector breaking](admissibility_23_holonomy_driven_selector_breaking_and_reflexive_closure.md)
 - [Complex, split-complex and dual-number local alphabet](admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md)
 - [Quarter-turn and mirror generate the dual seam](admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md)
+- [Authored rail grading closes the local Clifford cell](admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md)
+- [Cross-corpus Clifford-cell atlas](admissibility_132_cross_corpus_clifford_cell_atlas_and_exhaustion.md)
 
 ## Compact corpus sentence
 

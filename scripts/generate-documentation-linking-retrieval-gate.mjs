@@ -138,6 +138,19 @@ const heldOut = [
     id: 'quarter-turn-mirror-clifford-seam', stratum: 'mathematics', profile: 'all',
     query: 'quarter turn mirror anticommute Clifford Cl 1 1 nilpotent directed rungs dual seam',
     targets: ['corpus/programmes/admissibility/admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md']
+  },
+  {
+    id: 'source-native-rail-coincidence', stratum: 'mathematics', profile: 'all',
+    query: 'authored source target grading rail mirror incidence coincidence Clifford cell',
+    targets: ['corpus/programmes/admissibility/admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md']
+  },
+  {
+    id: 'signless-topology-semantic-adjoint', stratum: 'mathematics', profile: 'all',
+    query: 'signless Laplacian odd cycle topology semantic adjoint relation type permutation exhaustion',
+    targets: [
+      'corpus/programmes/admissibility/admissibility_133_the_incidence_coincidence_doublet_detects_odd_cycle_topology.md',
+      'corpus/programmes/admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md'
+    ]
   }
 ];
 // Claim and semantic evidence each retain their default 0.2 share.  A 0.59

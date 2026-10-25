@@ -1,7 +1,7 @@
 # A Typed Two-Rail Positive Lift Preserves the Mirror Face
 
 **Date:** 26 October 2026
-**Status:** exact free positive lift on the captured Claimipedia relation set; directed typed adjacency, mirror reversal and the scalar-collapse loss are verified; path composition and semantic adjoint remain open
+**Status:** exact free positive lift on the captured Claimipedia relation set; directed typed adjacency, mirror reversal and scalar-collapse loss are verified; the source-native Clifford closure is later obtained, while the current-source global semantic adjoint is exhausted negatively
 **Target:** OT-026
 **Evidence:** [typed two-rail lift](../../../evidence/data/claimipedia-typed-two-rail-positive-lift-v1.json)
 **Verifier:** [executable audit](../../../verification/admissibility/verify_claimipedia_typed_two_rail_positive_lift.mjs)
@@ -162,10 +162,15 @@ classification narrows the missing bridge without closing it.
 [AZ-130](admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md)
 makes the next gate exact. If a source-native negative-square quarter-turn
 anticommutes with the rail swap, the pair generates the full local
-\(M_2(\mathbb R)\) algebra and its two directed square-zero rungs. The current
-carrier has not yet authored that quarter-turn or anticommutation relation;
-the dual seams therefore remain a held-out target rather than inferred
-dynamics.
+\(M_2(\mathbb R)\) algebra and its two directed square-zero rungs.
+
+[AZ-131](admissibility_131_the_authored_rail_grading_closes_the_local_clifford_cell_but_opens_a_coincidence_channel.md)
+passes that algebraic gate. The authored source/target distinction already
+defines (G=\operatorname{diag}(-1,+1)), so (I=GJ) squares to minus one and
+anticommutes with the mirror. The resulting rungs are canonical within-fibre
+source-to-target and target-to-source transfers. The stronger dynamics claim
+still fails: (I) rotates the signed incidence kernel into a complementary
+unsigned co-incidence kernel rather than preserving the selected response.
 
 ## Relation to established mathematics
 
@@ -187,8 +192,9 @@ mathematical realization so far of the user's â€œsomething and its mirror faceâ€
 intuition at the graph level.
 
 OT-026 remains open at a narrower boundary. The next construction must compose
-this two-rail incidence carrier with the existing path algebra while keeping
-the rails distinct. It must then obtain a relation-type adjoint from authored
-semantics or independent observations, not from the desired Jordan quotient.
+the doubled incidence/co-incidence carrier with the existing path algebra
+while keeping the rails distinct. It must then obtain a relation-type adjoint
+from authored semantics or independent observations, not from the desired
+Jordan quotient.
 Only after product, adjoint and positive order coexist on one carrier should a
 source-selected boundary be Schur-reduced and tested against a held-out record.

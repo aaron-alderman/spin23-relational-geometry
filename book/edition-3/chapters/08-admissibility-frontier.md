@@ -254,6 +254,14 @@ The quarter-turn and mirror do more than name two endpoints. When they anticommu
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-local-motion-types-claim-3.md)
 
+The live Claimipedia carrier now supplies that local cell without fitting: authored source and target roles define a grading that anticommutes with rail exchange, and their product is the negative-square quarter-turn. Its null mixtures are canonical within-fibre rail transfers. The crucial refusal is equally exact: the quarter-turn exchanges signed incidence with unsigned co-incidence rather than preserving the original response, and the scalar rail quotient erases it. Three other certified corpus carriers repeat the same Cl(1,1) grammar, but no cross-carrier intertwiner, shared action or detector record yet makes them one physical operator.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-local-motion-types-claim-4.md)
+
+The two rail responses nevertheless have a sharp quotient signature: incidence becomes the ordinary Laplacian of rank thirty-three, while co-incidence becomes the signless Laplacian of rank thirty-five. The two-rank difference counts the two graph components containing odd cycles. This topology does not supply the missing path adjoint. Exhausting all twenty-four permutations and ten involutions of the four authored relation types reverses only the two-record Spin–Temple cell and leaves forty-one records unmatched, so the whole-source star route is closed until new reverse semantics or an independently tested contravariant map is supplied.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-local-motion-types-claim-5.md)
+
 <a id="transition-operators-make-the-boundary-measurable"></a>
 ## Transition operators make the boundary measurable
 

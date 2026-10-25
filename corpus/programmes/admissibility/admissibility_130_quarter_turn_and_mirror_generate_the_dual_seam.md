@@ -208,16 +208,18 @@ elliptic/hyperbolic class while erasing which nilpotent rung was used.
 
 ## Physical firewall
 
-The result is an exact matrix-algebra theorem. It does not show that the
-Claimipedia rail swap anticommutes with a source-native physical quarter-turn,
-that the nilpotent rungs are time evolution, that a local \(Spin(2,1)\) cell
+The result is an exact matrix-algebra theorem. AZ-131 subsequently shows that
+the Claimipedia rail swap anticommutes with a source-native **role**
+quarter-turn. Neither result shows that the nilpotent rungs are time
+evolution, that a local \(Spin(2,1)\) cell
 is spacetime, or that the full \(Spin(2,3)\) theory is assembled from such
 cells. Each of those claims requires a typed intertwiner, action and record.
 
 ## Next gate
 
-On the 304-dimensional typed two-rail carrier, construct an independently
-authored quarter-turn candidate \(I_{\rm src}\). Test
+AZ-131 subsequently finds the independently authored candidate on the
+304-dimensional typed two-rail carrier. The source/target grading \(G\) and
+rail swap \(J\) give \(I_{\rm src}=GJ\), and the tests
 
 \[
 I_{\rm src}^2=-1,
@@ -225,6 +227,7 @@ I_{\rm src}^2=-1,
 I_{\rm src}J+JI_{\rm src}=0,
 \]
 
-without fitting to the desired closure. If both pass, form the two nilpotent
-rungs, compose them with the path algebra and predict a held-out oriented
-record. If either fails, retain AZ-130 only as the universal local comparator.
+pass without fitting. The remaining gate is stronger: join the incidence and
+co-incidence kernels exchanged by \(I_{\rm src}\), compose both with the path
+algebra and predict a held-out oriented record. AZ-130 therefore remains the
+universal comparator while AZ-131 supplies its first source-native realization.

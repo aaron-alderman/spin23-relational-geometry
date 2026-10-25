@@ -1,0 +1,57 @@
+{
+  "protocol": "claimipedia-source-native-clifford-rail-closure/1",
+  "packet": "AZ-131",
+  "target": "OT-026",
+  "sourcePacket": "AZ-126",
+  "carrier": {
+    "dimension": 304,
+    "fibres": 152,
+    "railBasis": ["source", "target"],
+    "grading": "G=diag(-1,+1)",
+    "mirror": "J swaps source and target",
+    "quarterTurn": "I=GJ"
+  },
+  "relations": {
+    "gradingSquare": "+1",
+    "mirrorSquare": "+1",
+    "quarterTurnSquare": "-1",
+    "gradingMirrorAnticommutator": 0,
+    "quarterTurnMirrorAnticommutator": 0,
+    "generatedAlgebraPerFibre": "Cl(1,1)=M2(R)",
+    "globalAction": "M2(R) tensor identity on node and relation-type coordinates"
+  },
+  "nilpotentRungs": {
+    "forward": "N+=(J+I)/2 maps source rail to target rail",
+    "reverse": "N-=(J-I)/2 maps target rail to source rail",
+    "bothSquareZero": true,
+    "anticommutator": "N+N-+N-N+=1",
+    "commutator": "[N+,N-]=G"
+  },
+  "kernelTransport": {
+    "incidenceRay": "d_(u->v,t)=|v,T,t>-|u,S,t>",
+    "coincidenceRay": "c_(u->v,t)=|v,T,t>+|u,S,t>",
+    "mirror": "J d_(u->v,t)=-d_(v->u,t)",
+    "grading": "G d_(u->v,t)=c_(u->v,t)",
+    "quarterTurn": "I d_(u->v,t)=-c_(v->u,t)",
+    "forwardRung": "N+ d_(u->v,t)=-|u,T,t>",
+    "reverseRung": "N- d_(u->v,t)=|v,S,t>"
+  },
+  "quotient": {
+    "railIdentificationPreservesMirror": true,
+    "railIdentificationQuarterTurnDescends": false,
+    "reason": "the quarter-turn sends the anti-diagonal kernel of rail identification to its diagonal complement"
+  },
+  "decision": {
+    "sourceNativeNegativeSquareOperatorDerived": true,
+    "sourceNativeAnticommutationDerived": true,
+    "dualRungsDerived": true,
+    "originalPositiveKernelInvariantUnderQuarterTurn": false,
+    "complementaryCoincidenceChannelDerived": true,
+    "pathCompositionDerived": false,
+    "relationTypeAdjointDerived": false,
+    "physicalActionDerived": false,
+    "newPhysicsEvidence": false,
+    "ot026ClosureConditionMet": false
+  },
+  "nextGate": "AZ-133 derives the doubled response and AZ-134 exhausts the current-source semantic adjoint negatively; reopen with independently authored reverse semantics or an externally tested contravariant functor."
+}
