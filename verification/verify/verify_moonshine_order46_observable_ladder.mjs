@@ -45,10 +45,13 @@ assert.equal(ladder.scalarHierarchy.order46.classPairs["46CD"].involution, joine
 assert.equal(ladder.scalarHierarchy.order23.distinctScalarOutputs, 1);
 assert.equal(ladder.scalarHierarchy.order46.distinctScalarOutputs, 2);
 
-// An order-24 anomaly can restrict to at most order two on C_46.
+// Arithmetic alone allows order two, but the Conway--Norton h parameter is
+// one for both 46+23 and 46+, so these cyclic classes are non-anomalous.
 assert.equal(gcd(ladder.anomalyBoundary.monsterAnomalyOrder, ladder.anomalyBoundary.cyclicChannelOrder), 2);
-assert.equal(ladder.anomalyBoundary.maximumRestrictionOrder, 2);
-assert(ladder.anomalyBoundary.status.includes("not proved nontrivial"));
+assert.equal(ladder.anomalyBoundary.arithmeticMaximumRestrictionOrder, 2);
+assert.deepEqual(ladder.anomalyBoundary.moonshineAnomalyParameters, {"46AB": 1, "46CD": 1});
+assert.equal(ladder.anomalyBoundary.resolvedRestrictionOrder, 1);
+assert(ladder.anomalyBoundary.remaining.includes("not a nontrivial cyclic anomaly"));
 assert(ladder.physicalBoundary.includes("not real-time dynamics"));
 
 console.log(JSON.stringify({
@@ -63,7 +66,8 @@ console.log(JSON.stringify({
     leechRail46AB: "46+23",
     fermionicRail46CD: "46+",
   },
-  possibleAnomalyOrder: 2,
-  multiplierEvaluated: false,
+  arithmeticAnomalyCeiling: 2,
+  resolvedCyclicAnomalyOrder: 1,
+  normalizationPhasesEvaluated: false,
 }, null, 2));
 console.log("PASS verify_moonshine_order46_observable_ladder");

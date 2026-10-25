@@ -47,15 +47,19 @@
   "anomalyBoundary": {
     "monsterAnomalyOrder": 24,
     "cyclicChannelOrder": 46,
-    "maximumRestrictionOrder": 2,
-    "reason": "the restriction order divides gcd(24,46)=2",
-    "status": "possible two-torsion multiplier, not proved nontrivial and not identified with the Pfaffian sign"
+    "arithmeticMaximumRestrictionOrder": 2,
+    "arithmeticReason": "before using the class data, the restriction order can only divide gcd(24,46)=2",
+    "moonshineAnomalyParameters": {"46AB": 1, "46CD": 1},
+    "resolvedRestrictionOrder": 1,
+    "reason": "both fixing groups are written without an n|h denominator: 46+23 and 46+ have h=1 and are normal/non-anomalous",
+    "remaining": "compatible trivialization and generalized-moonshine normalization phases, not a nontrivial cyclic anomaly",
+    "boundary": "the absent cyclic anomaly cannot be identified with the genus-two Pfaffian sign"
   },
   "groupIndices": {
     "gamma0_46InPSL2Z": 72,
     "gamma0_46Plus23InPSL2Z": 36,
     "gamma0_46PlusInPSL2Z": 18
   },
-  "nextGate": "transport the two known order-46 Hauptmoduln with fixed generalized-moonshine conventions, evaluate the projective multiplier for all four classes, and only then attempt genus-two sewing",
+  "nextGate": "transport the two known order-46 Hauptmoduln with compatible anomaly trivializations, fix normalization phases for all four classes, and only then attempt genus-two sewing",
   "physicalBoundary": "modular transport is not real-time dynamics and a projective multiplier is not automatically a detector-visible parity"
 }
