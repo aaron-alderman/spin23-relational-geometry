@@ -13,7 +13,7 @@
   "tools": [
     {
       "name": "corpus_search",
-      "description": "Search the canonical research corpus. Combines weighted lexical relevance with personalized PageRank over authored Markdown links, returns declared epistemic status and reports selector-prior sensitivity. Ranking is a navigation aid, not evidence or truth.",
+      "description": "Search the canonical research corpus. Combines document BM25, exact claim-passage matching, confidence-gated corpus-local distributional expansion, exact cross-reference passage bridges and personalized PageRank. Returns drill-down identities, declared epistemic status and selector sensitivity. Ranking is a navigation aid, not evidence or truth.",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -47,6 +47,20 @@
             "maximum": 0.6,
             "default": 0.3,
             "description": "Declared contribution of graph context to final navigation order."
+          },
+          "claimWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.35,
+            "default": 0.17,
+            "description": "Declared contribution of the best exact claim passage."
+          },
+          "semanticWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.2,
+            "default": 0.08,
+            "description": "Declared contribution of confidence-gated corpus-local co-occurrence and exact cross-reference passage bridges; no opaque embedding model."
           }
         },
         "required": [
@@ -101,6 +115,18 @@
             "minimum": 0,
             "maximum": 0.6,
             "default": 0.3
+          },
+          "claimWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.35,
+            "default": 0.17
+          },
+          "semanticWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.2,
+            "default": 0.08
           }
         },
         "required": [
@@ -403,6 +429,18 @@
             "maximum": 0.6,
             "default": 0.3
           },
+          "claimWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.35,
+            "default": 0.17
+          },
+          "semanticWeight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 0.2,
+            "default": 0.08
+          },
           "adaptiveWeight": {
             "type": "number",
             "minimum": 0,
@@ -470,13 +508,13 @@
   "members": [
     {
       "path": "tooling/search/search_corpus.mjs",
-      "bytes": 21869,
-      "sha256": "9ba8b220d4ba9e523f4b616979ea7d4a12ee42ad80b21fcf8dcfe049c3a771db"
+      "bytes": 35916,
+      "sha256": "58182f8a4d9d17b083cdd60d18d5094e320c72b207f5bf00cbe3ce10cf0493ab"
     },
     {
       "path": "tooling/search/context_hub.mjs",
-      "bytes": 14449,
-      "sha256": "f66fd49b74353c20028af8b611af820974166ab5431a063e8676c720f9acebb0"
+      "bytes": 15187,
+      "sha256": "13b406c9144d7cee2502e4eb8a0a7a20a661baeee15add87a3b70b2ddf5d92cb"
     },
     {
       "path": "tooling/search/context_sweep.mjs",
@@ -500,13 +538,13 @@
     },
     {
       "path": "tooling/search/adaptive_context.mjs",
-      "bytes": 5259,
-      "sha256": "b789f184e4f8c77265c10b0b784e2408b74db246e3834b917695f7f289117e5c"
+      "bytes": 5724,
+      "sha256": "e6d12dc294b97f3621d68da8becb82d272a659bceea394ed51fbbc22fd0625ba"
     },
     {
       "path": "tooling/search/corpus_search_mcp.mjs",
-      "bytes": 21539,
-      "sha256": "454937891e1c2f72b51064405390a386fae59068b04c8ec49a39f9cfdc4ced43"
+      "bytes": 23484,
+      "sha256": "23422aac62a36511c55c33eeaef6a5d24166d2b3e7d39d2e4c035f7c29206935"
     },
     {
       "path": "tooling/search/benchmark_cases.json",
@@ -515,13 +553,18 @@
     },
     {
       "path": "tooling/search/benchmark_baseline_v1.json",
-      "bytes": 45859,
-      "sha256": "14d23c4551f8150f329bfe8888186e75d1b79f6595279c543d30ae27f02f6f74"
+      "bytes": 46177,
+      "sha256": "1238decdd3f94418fc418e6618c24a2c47c95328129356f0b7aa093e31d35489"
     },
     {
       "path": "tooling/search/run_benchmark.mjs",
       "bytes": 6762,
       "sha256": "47072abd21a84c449f958ed6396ab870f57a3b19823885497b680c5628ba705a"
+    },
+    {
+      "path": "tooling/search/retrieval_intelligence_benchmark.mjs",
+      "bytes": 9923,
+      "sha256": "4bf89d935364afda24f2089e46f0820fd905f63457a290fcb52d475787cb772d"
     },
     {
       "path": "tooling/search/run_belief_evaluation.mjs",
@@ -530,8 +573,8 @@
     },
     {
       "path": "tooling/search/MCP.md",
-      "bytes": 7519,
-      "sha256": "9d4f9617cf6dfb0ea5ff505b3816ff43ca38ef2870ea3dc99e049e89a098d4be"
+      "bytes": 9368,
+      "sha256": "a8d0190c0d657a5fba0be60f9ac7383286d278523a621dedac05bae8d9c61041"
     },
     {
       "path": "tooling/search/BELIEF_LOOP.md",
@@ -540,13 +583,13 @@
     },
     {
       "path": "tests/repository/corpus_search.test.mjs",
-      "bytes": 2473,
-      "sha256": "45e5d13442572a48861e7883315c3d26ca82a4a16aa9d64f6eaf40855a48c0a0"
+      "bytes": 4447,
+      "sha256": "577ee2b5522bb36813fc55d99e4a046019b49adb2ff3e9048759caeadbd82d27"
     },
     {
       "path": "tests/repository/corpus_search_mcp.test.mjs",
-      "bytes": 8956,
-      "sha256": "0960b4daf5ac5059c0f482beaf96564a866aa9d817963895a89b1dfe92d358fe"
+      "bytes": 9277,
+      "sha256": "9d8cb76f01fddf2272fa23ba4ed63433d9a41dfdbee43e97d89f3b1ed557e02d"
     },
     {
       "path": "tests/repository/corpus_answer_stability.test.mjs",
@@ -571,12 +614,15 @@
   ],
   "qualification": {
     "benchmark": {
-      "cases": 30,
+      "legacyCases": 30,
+      "paraphraseCases": 12,
+      "holdoutCases": 6,
       "requiredPassRate": 1,
       "minimumMeanReciprocalRank": 0.8
     },
     "commands": [
       "node tooling/search/run_benchmark.mjs",
+      "node tooling/search/retrieval_intelligence_benchmark.mjs",
       "node --test tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
       "node tooling/search/run_belief_evaluation.mjs",
       "node tooling/audit/audit_markdown_links.mjs",
@@ -605,5 +651,5 @@
     "admit through the protected lifecycle",
     "verify all nine operations through a fresh MCP connection"
   ],
-  "candidateSha256": "98b02dbf09f79b7863605d81cbab8a89e893ef8a4651254056e0dbf04bd15ea5"
+  "candidateSha256": "ff7e8af53a2a4ccb34c18eed355b6d6c45147c36c9331d329f5564edb83e806c"
 }

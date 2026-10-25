@@ -11,7 +11,7 @@ The user supplies a task, chooses or accepts a task profile and receives a propo
 1. **Task and budget** — task text, profile, source count, context characters and estimated tokens.
 2. **Invariant core** — sources retained across the controlled context sweep.
 3. **Selector-sensitive perimeter** — sources that enter or leave under profile or graph changes.
-4. **Source cards** — title, path, lane, declared status, inclusion reason, excerpt, evidence-spine coverage and full-source expansion.
+4. **Source cards** — title, path, lane, declared status, inclusion reason, excerpt, best claim role/lines/hash, any contributing cross-reference bridge with source/lines/hash, evidence-spine coverage and full-source expansion.
 5. **Omissions** — high-ranking candidates excluded by budget, diversity or authority controls.
 6. **Controls** — profile, graph influence, source budget, lane quota and evidence requirements.
 7. **Answer comparison** — stable claims, wording drift, context-conditional claims, conflicts and unsupported citations.
@@ -25,6 +25,7 @@ The user supplies a task, chooses or accepts a task profile and receives a propo
 - The interface may recommend a source but cannot promote it.
 - “Stable” means stable across the executed variants, not universally true.
 - Full source text remains one explicit action away from every excerpt.
+- A semantic score must retain its mechanism. Low-confidence co-occurrence expansion is displayed as absent, not silently replaced by an opaque similarity; an authored bridge remains drillable to the exact linking paragraph.
 
 ## Implemented local slice
 

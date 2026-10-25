@@ -28,6 +28,8 @@ test("MCP search returns structured, authority-bounded graph results", async () 
   assert.equal(response.result.structuredContent.protocol, "spin23-corpus-search-mcp/1");
   assert.equal(response.result.structuredContent.results.length, 4);
   assert.match(response.result.structuredContent.results[0].uri, /^corpus:\/\/\//u);
+  assert.ok(response.result.structuredContent.results[0].claimMatch);
+  assert.equal(typeof response.result.structuredContent.results[0].semanticScore, "number");
   assert.equal(response.result.structuredContent.authority.entails, false);
   assert.match(response.result.content[0].text, /Ranks guide retrieval only/iu);
 });
@@ -49,7 +51,7 @@ test("MCP read returns bounded source text and rejects traversal", async () => {
 test("MCP context hub produces a tailored packet inside its context budget", async () => {
   const response = await request(7, "tools/call", {
     name: "corpus_context",
-    arguments: { task: "How do Casimir boundaries connect to thermoelectric detection?", profile: "experiment", maxSources: 4, maxCharacters: 8000 },
+    arguments: { task: "How do Casimir boundaries connect to thermoelectric detection?", profile: "experiment", maxSources: 4, maxCharacters: 8000, claimWeight: 0.2, semanticWeight: 0.1 },
   });
   assert.equal(response.result.isError, undefined);
   const packet = response.result.structuredContent;
@@ -58,6 +60,8 @@ test("MCP context hub produces a tailored packet inside its context budget", asy
   assert.ok(packet.budget.usedCharacters <= 8000);
   assert.match(packet.receipt.contextSha256, /^[0-9a-f]{64}$/u);
   assert.match(packet.receipt.sourceSetSha256, /^[0-9a-f]{64}$/u);
+  assert.equal(packet.receipt.selector.claimWeight, 0.2);
+  assert.equal(packet.receipt.selector.semanticWeight, 0.1);
   assert.match(response.result.content[0].text, /Tailored corpus context/iu);
   assert.match(response.result.content[0].text, /Declared status/iu);
   assert.match(response.result.content[0].text, /Deliberate omissions/iu);

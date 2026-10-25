@@ -26,12 +26,14 @@ const objectSchema = (properties, required = []) => ({
 export const corpusSearchMcpTools = Object.freeze([
   {
     name: "corpus_search",
-    description: "Search the canonical research corpus. Combines weighted lexical relevance with personalized PageRank over authored Markdown links, returns declared epistemic status and reports selector-prior sensitivity. Ranking is a navigation aid, not evidence or truth.",
+    description: "Search the canonical research corpus. Combines document BM25, exact claim-passage matching, confidence-gated corpus-local distributional expansion, exact cross-reference passage bridges and personalized PageRank. Returns drill-down identities, declared epistemic status and selector sensitivity. Ranking is a navigation aid, not evidence or truth.",
     inputSchema: objectSchema({
       query: { type: "string", minLength: 2, maxLength: 500, description: "Natural-language question or compact concept query." },
       limit: { type: "integer", minimum: 1, maximum: 25, default: 8 },
       profile: { type: "string", enum: profiles, default: "all", description: "Optional front-door prior matching the LLM's present task." },
       graphWeight: { type: "number", minimum: 0, maximum: 0.6, default: 0.3, description: "Declared contribution of graph context to final navigation order." },
+      claimWeight: { type: "number", minimum: 0, maximum: 0.35, default: 0.17, description: "Declared contribution of the best exact claim passage." },
+      semanticWeight: { type: "number", minimum: 0, maximum: 0.2, default: 0.08, description: "Declared contribution of confidence-gated corpus-local co-occurrence and exact cross-reference passage bridges; no opaque embedding model." },
     }, ["query"]),
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   },
@@ -44,6 +46,8 @@ export const corpusSearchMcpTools = Object.freeze([
       maxSources: { type: "integer", minimum: 2, maximum: 10, default: 6 },
       maxCharacters: { type: "integer", minimum: 4000, maximum: 30000, default: 12000 },
       graphWeight: { type: "number", minimum: 0, maximum: 0.6, default: 0.3 },
+      claimWeight: { type: "number", minimum: 0, maximum: 0.35, default: 0.17 },
+      semanticWeight: { type: "number", minimum: 0, maximum: 0.2, default: 0.08 },
     }, ["task"]),
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   },
@@ -110,6 +114,8 @@ export const corpusSearchMcpTools = Object.freeze([
       maxSources: { type: "integer", minimum: 2, maximum: 10, default: 6 },
       maxCharacters: { type: "integer", minimum: 4000, maximum: 30000, default: 12000 },
       graphWeight: { type: "number", minimum: 0, maximum: 0.6, default: 0.3 },
+      claimWeight: { type: "number", minimum: 0, maximum: 0.35, default: 0.17 },
+      semanticWeight: { type: "number", minimum: 0, maximum: 0.2, default: 0.08 },
       adaptiveWeight: { type: "number", minimum: 0, maximum: 0.2, default: 0.15 },
       explorationWeight: { type: "number", minimum: 0, maximum: 0.05, default: 0.03 },
     }, ["task", "beliefState"]),
@@ -131,17 +137,22 @@ function validateSearchArguments(args) {
   if (!args || Array.isArray(args) || typeof args.query !== "string" || args.query.trim().length < 2 || args.query.length > 500) {
     throw new Error("query must contain 2 to 500 characters");
   }
-  const allowed = new Set(["query", "limit", "profile", "graphWeight"]);
+  const allowed = new Set(["query", "limit", "profile", "graphWeight", "claimWeight", "semanticWeight"]);
   if (Object.keys(args).some(key => !allowed.has(key))) throw new Error("corpus_search received an unknown argument");
   const limit = args.limit ?? 8;
   const profile = args.profile ?? "all";
   const graphWeight = args.graphWeight ?? 0.3;
+  const claimWeight = args.claimWeight ?? 0.17;
+  const semanticWeight = args.semanticWeight ?? 0.08;
   if (!Number.isInteger(limit) || limit < 1 || limit > 25) throw new Error("limit must be an integer from 1 to 25");
   if (!profiles.includes(profile)) throw new Error(`profile must be one of: ${profiles.join(", ")}`);
   if (typeof graphWeight !== "number" || !Number.isFinite(graphWeight) || graphWeight < 0 || graphWeight > 0.6) {
     throw new Error("graphWeight must be a finite number from 0 to 0.6");
   }
-  return { query: args.query.trim(), limit, profile, graphWeight };
+  if (typeof claimWeight !== "number" || !Number.isFinite(claimWeight) || claimWeight < 0 || claimWeight > 0.35) throw new Error("claimWeight must be a finite number from 0 to 0.35");
+  if (typeof semanticWeight !== "number" || !Number.isFinite(semanticWeight) || semanticWeight < 0 || semanticWeight > 0.2) throw new Error("semanticWeight must be a finite number from 0 to 0.2");
+  if (graphWeight + claimWeight + semanticWeight >= 1) throw new Error("graphWeight + claimWeight + semanticWeight must be less than 1");
+  return { query: args.query.trim(), limit, profile, graphWeight, claimWeight, semanticWeight };
 }
 
 function validateReadArguments(root, args) {
@@ -173,7 +184,7 @@ function searchText(result) {
   const correction = result.corrections.length
     ? ` Corrected ${result.corrections.map(item => `${item.from} to ${item.to}`).join(", ")}.`
     : "";
-  const rows = result.results.map(item => `${item.rank}. ${item.title}\n${item.path}\nstatus: ${item.status}\n${item.snippet}`);
+  const rows = result.results.map(item => `${item.rank}. ${item.title}\n${item.path}\nstatus: ${item.status}\nclaim focus: ${item.claimMatch?.role ?? "none"} lines ${item.claimMatch?.lineStart ?? "?"}-${item.claimMatch?.lineEnd ?? "?"} ${item.claimMatch?.claimSha256 ?? ""}${item.semanticBridge ? `\ncross-reference bridge: ${item.semanticBridge.sourcePath} lines ${item.semanticBridge.lineStart}-${item.semanticBridge.lineEnd} ${item.semanticBridge.bridgeSha256}` : ""}\n${item.claimMatch?.text ?? item.snippet}`);
   return `Found ${result.results.length} navigation candidates across ${result.documents} documents.${correction}\n\n${rows.join("\n\n")}\n\nRanks guide retrieval only; inspect the source and its status before using a claim.`;
 }
 
@@ -232,7 +243,7 @@ export function createCorpusSearchMcp({ root = defaultRoot } = {}) {
           return success(message.id, value, searchText(value));
         }
         if (name === "corpus_context") {
-          const allowed = new Set(["task", "profile", "maxSources", "maxCharacters", "graphWeight"]);
+          const allowed = new Set(["task", "profile", "maxSources", "maxCharacters", "graphWeight", "claimWeight", "semanticWeight"]);
           if (!args || Array.isArray(args) || Object.keys(args).some(key => !allowed.has(key))) throw new Error("corpus_context received invalid arguments");
           const value = buildCorpusContext({ root: corpusRoot, ...args });
           return success(message.id, { ...value, context: undefined }, value.context);
@@ -275,7 +286,7 @@ export function createCorpusSearchMcp({ root = defaultRoot } = {}) {
           return success(message.id, value, `Attention update ${value.report.updateSha256}: ${value.report.observations.length} typed views, ${value.report.effectiveObservations.length} independent family/source updates, ${value.report.collapsedObservations} correlated views collapsed; candidate successor ${value.state.stateSha256}. No state was admitted and no corpus or server state was changed.`);
         }
         if (name === "corpus_adaptive_context") {
-          const allowed = new Set(["task", "beliefState", "profile", "maxSources", "maxCharacters", "graphWeight", "adaptiveWeight", "explorationWeight"]);
+          const allowed = new Set(["task", "beliefState", "profile", "maxSources", "maxCharacters", "graphWeight", "claimWeight", "semanticWeight", "adaptiveWeight", "explorationWeight"]);
           if (!args || Array.isArray(args) || Object.keys(args).some(key => !allowed.has(key))) throw new Error("corpus_adaptive_context received invalid arguments");
           const value = buildAdaptiveCorpusContext({ root: corpusRoot, ...args });
           return success(message.id, { ...value, context: undefined }, value.context);

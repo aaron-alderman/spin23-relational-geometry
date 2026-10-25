@@ -9,7 +9,7 @@ test("Sourcery admission candidate exactly matches retained local sources and re
   const built = buildSourceryAdmissionCandidate();
   assert.deepEqual(retained, built);
   assert.equal(built.tools.length, 9);
-  assert.equal(built.members.length, 20);
+  assert.equal(built.members.length, 21);
   assert.equal(built.authorityBoundary.protectedRuntimeSelected, false);
   assert.match(built.candidateSha256, /^[0-9a-f]{64}$/u);
 });

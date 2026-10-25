@@ -1,6 +1,6 @@
 # Corpus search MCP candidate
 
-**Status:** locally implemented and tested read-only MCP candidate; not admitted into the protected Sourcery or Claimipedia runtime  
+**Status:** locally implemented and tested read-only successor; not sealed or admitted into the protected Sourcery or Claimipedia runtime
 **Implementation:** [corpus search MCP server](corpus_search_mcp.mjs)  
 **Regression:** [MCP search tests](../../tests/repository/corpus_search_mcp.test.mjs)
 
@@ -13,14 +13,16 @@ This candidate gives an LLM a bounded way to find, assemble and inspect the corp
 \[
 \text{query}
 \longrightarrow
-\text{weighted lexical seeds}
+\text{document and exact-claim seeds}
+\longrightarrow
+\text{confidence-gated associations and authored cross-reference bridges}
 \longrightarrow
 \text{personalized PageRank context}
 \longrightarrow
-\text{ranked sources with status and selector sensitivity}.
+\text{ranked sources with drill-down receipts, status and selector sensitivity}.
 \]
 
-The graph is built from authored local Markdown links. Reverse-navigation edges help recover context, but are downweighted. A selector sweep reports how rankings move under three PageRank mixing values. None of these quantities changes the source's declared epistemic status.
+The graph is built from authored local Markdown links. Exact Markdown paragraphs form bounded claim units with role, line range and a content-derived identity. Link-bearing paragraphs can route a query through a synthesis or register to its underlying source while retaining the bridge source, line range and hash. Corpus-local co-occurrence expansion is admitted only when at least two sufficiently specific query terms independently support the same candidate term; otherwise it returns no expansion rather than inventing semantic confidence. Reverse-navigation edges help recover context, but are downweighted. A selector sweep reports how rankings move under three PageRank mixing values. None of these quantities changes the source's declared epistemic status.
 
 ## Reflected operations
 
@@ -30,10 +32,12 @@ Builds the smallest useful working set for a concrete LLM task. It retrieves a l
 
 ### `corpus_search`
 
-Accepts a natural-language query, a result bound of at most 25, a declared task profile and a graph weight capped at 0.6. It returns:
+Accepts a natural-language query, a result bound of at most 25, a declared task profile and bounded document/claim/semantic/graph weights. It returns:
 
 - corrected query terms;
-- lexical, graph and combined navigation scores;
+- document, claim, semantic-bridge, graph and combined navigation scores;
+- the best exact claim passage with role, line range and hash;
+- an exact authored cross-reference passage when it contributed to semantic routing;
 - declared status and source snippet;
 - selector-sweep ranks and rank spread;
 - a repository path and `corpus:///` URI;
@@ -70,6 +74,12 @@ Builds both baseline and adaptive context selections for the exact objective and
 Reads at most 30,000 characters from one Markdown path under `corpus/`, `book/edition-3/chapters/` or `verification/`. Absolute paths, traversal, non-Markdown files, unknown arguments and out-of-range bounds fail closed.
 
 All nine operations declare `readOnlyHint`, `idempotentHint`, `destructiveHint: false` and `openWorldHint: false`. The index checks indexed source metadata after a short cache-validation interval and rebuilds automatically when the corpus changes.
+
+## Retrieval intelligence evaluation
+
+`retrieval_intelligence_benchmark.mjs` compares the predecessor fusion (`0.70` document / `0.30` graph) with the local successor (`0.45` document / `0.17` claim / `0.08` semantic / `0.30` graph) on twelve paraphrased objectives, with six cases reserved as holdout. It records recall at 6 and 12, mean reciprocal rank, per-case movement, exact claim receipts, exact bridge receipts and the corpus-content hash. Qualification requires no held-out recall or MRR regression, at least one held-out improvement, at least 25% held-out MRR improvement and valid drill-down hashes. A corpus identity change aborts the run.
+
+This benchmark measures recovery of preregistered navigation targets. It does not show that the expected source is uniquely relevant, complete or true. The retained `sourcery_admission_candidate_v1.json` hashes this local successor and its qualification benchmark, but remains an unsealed, unadmitted candidate; a fresh protected-lifecycle package is still required before runtime admission.
 
 ## Authority boundary
 

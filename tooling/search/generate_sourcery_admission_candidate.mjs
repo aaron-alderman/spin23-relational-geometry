@@ -21,6 +21,7 @@ const sources = [
   "tooling/search/benchmark_cases.json",
   "tooling/search/benchmark_baseline_v1.json",
   "tooling/search/run_benchmark.mjs",
+  "tooling/search/retrieval_intelligence_benchmark.mjs",
   "tooling/search/run_belief_evaluation.mjs",
   "tooling/search/MCP.md",
   "tooling/search/BELIEF_LOOP.md",
@@ -54,9 +55,10 @@ export function buildSourceryAdmissionCandidate() {
     tools: corpusSearchMcpTools,
     members,
     qualification: {
-      benchmark: { cases: 30, requiredPassRate: 1, minimumMeanReciprocalRank: 0.8 },
+      benchmark: { legacyCases: 30, paraphraseCases: 12, holdoutCases: 6, requiredPassRate: 1, minimumMeanReciprocalRank: 0.8 },
       commands: [
         "node tooling/search/run_benchmark.mjs",
+        "node tooling/search/retrieval_intelligence_benchmark.mjs",
         "node --test tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
         "node tooling/search/run_belief_evaluation.mjs",
         "node tooling/audit/audit_markdown_links.mjs",

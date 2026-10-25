@@ -114,12 +114,12 @@ function inclusionReason(item, kind, newKind) {
   return reasons.join("; ");
 }
 
-export function buildCorpusContext({ root = defaultRoot, task, profile = "all", maxSources = 6, maxCharacters = 12000, graphWeight = 0.3, adaptation = null } = {}) {
+export function buildCorpusContext({ root = defaultRoot, task, profile = "all", maxSources = 6, maxCharacters = 12000, graphWeight = 0.3, claimWeight = 0.17, semanticWeight = 0.08, adaptation = null } = {}) {
   if (typeof task !== "string" || task.trim().length < 2 || task.length > 500) throw new Error("task must contain 2 to 500 characters");
   if (!Number.isInteger(maxSources) || maxSources < 2 || maxSources > 10) throw new Error("maxSources must be an integer from 2 to 10");
   if (!Number.isInteger(maxCharacters) || maxCharacters < 4000 || maxCharacters > 30000) throw new Error("maxCharacters must be an integer from 4000 to 30000");
   const corpusRoot = resolve(root instanceof URL ? fileURLToPath(root) : root);
-  const search = searchCorpus({ root: corpusRoot, query: task.trim(), profile, graphWeight, limit: Math.max(24, maxSources * 4) });
+  const search = searchCorpus({ root: corpusRoot, query: task.trim(), profile, graphWeight, claimWeight, semanticWeight, limit: Math.max(24, maxSources * 4) });
   if (adaptation) {
     if (!adaptation.sources || typeof adaptation.sources !== "object" || Array.isArray(adaptation.sources)) throw new Error("adaptation.sources must be an object");
     if (!adaptation.prior || typeof adaptation.prior.utilityMean !== "number" || typeof adaptation.prior.utilityVariance !== "number") throw new Error("adaptation.prior is invalid");
@@ -136,7 +136,7 @@ export function buildCorpusContext({ root = defaultRoot, task, profile = "all", 
   const adaptationLine = adaptation
     ? `**Adaptation:** bounded source-utility weight ${adaptation.adaptiveWeight}; exploration weight ${adaptation.explorationWeight}; state ${adaptation.stateSha256}. Utility estimates guide context only and are not truth probabilities.  \n`
     : "";
-  const header = `# Tailored corpus context\n\n**Task:** ${task.trim()}  \n**Profile:** ${profile}  \n**Retrieval:** weighted lexical relevance plus personalized PageRank; selector sweep ${search.method.selectorSweep.join(", ")}  \n${adaptationLine}**Authority:** navigation and context only. Preserve every source's declared status; links and ranks do not establish truth.\n\n`;
+  const header = `# Tailored corpus context\n\n**Task:** ${task.trim()}  \n**Profile:** ${profile}  \n**Retrieval:** document BM25, claim-level passage matching, confidence-gated corpus-local distributional expansion, exact cross-reference passage bridges and personalized PageRank; selector sweep ${search.method.selectorSweep.join(", ")}  \n${adaptationLine}**Authority:** navigation and context only. Preserve every source's declared status; links, semantic associations and ranks do not establish truth.\n\n`;
   const footer = `\n## Deliberate omissions\n\nThis packet is budgeted, not exhaustive. ${search.results.length - selected.length} retrieved candidates were omitted from the packet. Use \`corpus_read\` for full sources and rerun \`corpus_context\` when the task changes.\n\n**Next candidates:** ${followUps.map(item => `${item.title} (${item.path})`).join("; ") || "none"}.`;
   const seenKinds = new Set();
   const metadata = selected.map((item, index) => {
@@ -152,7 +152,7 @@ export function buildCorpusContext({ root = defaultRoot, task, profile = "all", 
       selectorSensitivity: sensitivity(item.selectorRankSpread),
       reason: inclusionReason(item, kind, newKind),
       uri: `corpus:///${item.path}`,
-      heading: `## Source ${index + 1}: ${item.title}\n\n- Path: \`${item.path}\`\n- Kind: ${kind}\n- Declared status: ${item.status}\n${evidenceLine}- Inclusion: ${inclusionReason(item, kind, newKind)}\n- Retrieval: score ${item.score}; lexical ${item.lexicalScore}; graph ${item.graphScore}; selector sensitivity ${sensitivity(item.selectorRankSpread)} (rank spread ${item.selectorRankSpread})${item.posteriorUtility === null || item.posteriorUtility === undefined ? "" : `; posterior utility ${item.posteriorUtility}; variance ${item.posteriorVariance}; role ${item.selectionRole}`}\n\n`,
+      heading: `## Source ${index + 1}: ${item.title}\n\n- Path: \`${item.path}\`\n- Kind: ${kind}\n- Declared status: ${item.status}\n${evidenceLine}- Inclusion: ${inclusionReason(item, kind, newKind)}\n- Retrieval: score ${item.score}; lexical ${item.lexicalScore}; claim ${item.claimScore ?? 0}; semantic ${item.semanticScore ?? 0}; graph ${item.graphScore}; selector sensitivity ${sensitivity(item.selectorRankSpread)} (rank spread ${item.selectorRankSpread})${item.posteriorUtility === null || item.posteriorUtility === undefined ? "" : `; posterior utility ${item.posteriorUtility}; variance ${item.posteriorVariance}; role ${item.selectionRole}`}\n${item.claimMatch ? `- Claim focus: ${item.claimMatch.role} at lines ${item.claimMatch.lineStart}-${item.claimMatch.lineEnd}; identity ${item.claimMatch.claimSha256}\n` : ""}${item.semanticBridge ? `- Cross-reference bridge: ${item.semanticBridge.sourcePath} lines ${item.semanticBridge.lineStart}-${item.semanticBridge.lineEnd}; identity ${item.semanticBridge.bridgeSha256}\n` : ""}\n`,
     };
   });
   const separators = Math.max(0, metadata.length - 1) * 2;
@@ -176,7 +176,7 @@ export function buildCorpusContext({ root = defaultRoot, task, profile = "all", 
     query: { corrected: search.correctedQuery, corrections: search.corrections, documentsSearched: search.documents },
     authority: { readOnly: true, entails: false, empiricalAuthority: false, corpusPromotion: false },
     coverage: { sourceKinds: [...new Set(sources.map(source => source.kind))], navigationSuppressedUnlessRequested: true },
-    receipt: { contextSha256: sha256(context), sourceSetSha256, selector: { profile, graphWeight, sweep: search.method.selectorSweep, ...(adaptation ? { adaptiveWeight: adaptation.adaptiveWeight, explorationWeight: adaptation.explorationWeight, explorationReserved: adaptation.explorationWeight > 0, beliefStateSha256: adaptation.stateSha256 } : {}) } },
+    receipt: { contextSha256: sha256(context), sourceSetSha256, selector: { profile, graphWeight, claimWeight, semanticWeight, sweep: search.method.selectorSweep, semanticExpansion: search.method.semanticExpansion, ...(adaptation ? { adaptiveWeight: adaptation.adaptiveWeight, explorationWeight: adaptation.explorationWeight, explorationReserved: adaptation.explorationWeight > 0, beliefStateSha256: adaptation.stateSha256 } : {}) } },
     adaptation: adaptation ? { active: true, stateSha256: adaptation.stateSha256, adaptiveWeight: adaptation.adaptiveWeight, explorationWeight: adaptation.explorationWeight, explorationReserved: adaptation.explorationWeight > 0, learnedSources: Object.keys(adaptation.sources).length } : { active: false },
     sources,
     candidateUniverse,

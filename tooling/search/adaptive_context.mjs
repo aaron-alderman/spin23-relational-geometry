@@ -18,6 +18,10 @@ function sourceView(source) {
     posteriorUtility: source.posteriorUtility,
     posteriorVariance: source.posteriorVariance,
     selectionRole: source.selectionRole ?? null,
+    claimScore: source.claimScore ?? 0,
+    semanticScore: source.semanticScore ?? 0,
+    claimMatch: source.claimMatch ?? null,
+    semanticBridge: source.semanticBridge ?? null,
   };
 }
 
@@ -30,7 +34,11 @@ function candidateView(source) {
     rank: source.rank,
     score: source.score,
     lexicalScore: source.lexicalScore,
+    claimScore: source.claimScore ?? 0,
+    semanticScore: source.semanticScore ?? 0,
     graphScore: source.graphScore,
+    claimMatch: source.claimMatch ?? null,
+    semanticBridge: source.semanticBridge ?? null,
     selectorRankSpread: source.selectorRankSpread,
     snippet: source.snippet,
   };
@@ -44,6 +52,8 @@ export function buildAdaptiveCorpusContext({
   maxSources = 6,
   maxCharacters = 12000,
   graphWeight = 0.3,
+  claimWeight = 0.17,
+  semanticWeight = 0.08,
   adaptiveWeight = 0.15,
   explorationWeight = 0.03,
 } = {}) {
@@ -54,12 +64,12 @@ export function buildAdaptiveCorpusContext({
   if (selectedProfile !== state.episode.profile) throw new Error("adaptive profile must exactly match the belief episode profile; create a new episode or an explicit governed transfer for a different profile");
   if (typeof adaptiveWeight !== "number" || !Number.isFinite(adaptiveWeight) || adaptiveWeight < 0 || adaptiveWeight > 0.2) throw new Error("adaptiveWeight must be from 0 to 0.2");
   if (typeof explorationWeight !== "number" || !Number.isFinite(explorationWeight) || explorationWeight < 0 || explorationWeight > 0.05) throw new Error("explorationWeight must be from 0 to 0.05");
-  const identity = searchCorpus({ root, query: task, profile: selectedProfile, graphWeight, limit: 1 });
+  const identity = searchCorpus({ root, query: task, profile: selectedProfile, graphWeight, claimWeight, semanticWeight, limit: 1 });
   if (identity.corpusContentSha256 !== state.episode.corpusContentSha256) throw new Error("beliefState corpus identity is stale; initialize a new episode before adaptive selection");
   const hasLearnedSources = Object.keys(state.sources).length > 0;
   const effectiveAdaptiveWeight = hasLearnedSources ? adaptiveWeight : 0;
   const effectiveExplorationWeight = hasLearnedSources ? explorationWeight : 0;
-  const common = { root, task, profile: selectedProfile, maxSources, maxCharacters, graphWeight };
+  const common = { root, task, profile: selectedProfile, maxSources, maxCharacters, graphWeight, claimWeight, semanticWeight };
   const baseline = buildCorpusContext(common);
   const adaptive = buildCorpusContext({
     ...common,
