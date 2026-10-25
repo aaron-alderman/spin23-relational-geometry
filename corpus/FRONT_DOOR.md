@@ -58,10 +58,10 @@ A minimum dataset is capability-specific, not one universal subset. The **declar
 
 | Capability | Roots | Declared core files | Observed core bytes | Discoverable files | Observed discoverable bytes |
 |---|---|---:|---:|---:|---:|
-| Interpret faithfully | `reading-contract`, `current-synthesis`, `explanatory-standard`, `glossary` | 4 | 124.3 KiB | 4785 | 62.3 MiB |
-| Choose one bounded research task | `reading-contract`, `role-map`, `open-topics`, `target-set` | 6 | 139.5 KiB | 4785 | 62.3 MiB |
-| Audit claims, provenance, and authority | `reading-contract`, `evidence-spine`, `result-ledger`, `verification-guide`, `document-map`, `corpus-manifest`, `publication-authority` | 11 | 14.9 MiB | 4785 | 62.3 MiB |
-| Design a discriminating experiment | `reading-contract`, `current-synthesis`, `experiment-atlas`, `target-set`, `verification-guide` | 8 | 237.9 KiB | 4785 | 62.3 MiB |
+| Interpret faithfully | `reading-contract`, `current-synthesis`, `explanatory-standard`, `glossary` | 4 | 124.3 KiB | 4785 | 62.4 MiB |
+| Choose one bounded research task | `reading-contract`, `role-map`, `open-topics`, `target-set` | 6 | 139.5 KiB | 4785 | 62.4 MiB |
+| Audit claims, provenance, and authority | `reading-contract`, `evidence-spine`, `result-ledger`, `verification-guide`, `document-map`, `corpus-manifest`, `publication-authority` | 11 | 14.9 MiB | 4785 | 62.4 MiB |
+| Design a discriminating experiment | `reading-contract`, `current-synthesis`, `experiment-atlas`, `target-set`, `verification-guide` | 8 | 237.9 KiB | 4785 | 62.4 MiB |
 
 These profiles are map-only candidates, not admitted packages. Before extracting one, add the selected capability's exact runtime, provenance and falsification dependencies, then independently qualify the derived artifact. Use the full sealed or canonical corpus when custody, exact release reproduction, history, or unknown future questions matter.
 
