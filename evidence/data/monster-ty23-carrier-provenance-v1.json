@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "monster-ty23-carrier-provenance-v1",
+  "date": "2026-10-25",
+  "status": "carrier routes sourced; provenance ladder executable; laboratory realization not claimed",
+  "carrierRoutes": [
+    {
+      "id": "qca",
+      "carrier": "tensor-product Hilbert space with QCA refinement",
+      "scope": "general weakly integral fusion categories, explicitly including general TY",
+      "ty23CarrierEstablishedInTheory": true,
+      "monsterProvenance": false
+    },
+    {
+      "id": "xxz",
+      "carrier": "root-of-unity XXZ spin-1/2 chain with MPO duality",
+      "scope": "Z_N TY fusion relations for general N",
+      "ty23FusionRingEstablishedInTheory": true,
+      "ty23AssociatorTomographyPublished": false,
+      "monsterProvenance": false
+    },
+    {
+      "id": "adaptive-string-net",
+      "carrier": "adaptive finite-depth circuit for solvable string nets",
+      "scope": "general solvable construction; worked TY example Z_3",
+      "explicitZ23CircuitPublishedInCitedSource": false,
+      "monsterProvenance": false
+    }
+  ],
+  "witnessLevels": [
+    {"level": 0, "id": "W0", "name": "fusion ring", "requires": ["D squared fusion", "Z23 action"]},
+    {"level": 1, "id": "W1", "name": "Monster-marked bicharacter", "requires": ["W0", "flat 1/sqrt(23) recoupling", "Fourier plaquette phases"]},
+    {"level": 2, "id": "W2", "name": "full spherical TY category", "requires": ["W1", "closed Frobenius-Schur indicator"]},
+    {"level": 3, "id": "W3", "name": "Monster-CFT candidate subtheory", "requires": ["W2", "same-carrier c=24", "same-carrier V1=0", "23AB trace or commutant characters"]},
+    {"level": 4, "id": "W4", "name": "Monster provenance", "requires": ["W3", "sufficient compatible Monster action or V-natural identification", "defect/OPE sewing coherence"]}
+  ],
+  "claimRules": {
+    "W0": "TY-like fusion carrier",
+    "W1": "sourced Z23 Fourier defect kernel",
+    "W2": "verified TY(Z23,chi,epsilon) simulator",
+    "W3": "Monster-CFT candidate subtheory",
+    "W4": "Monster realization with provenance"
+  },
+  "sameCarrierRequired": true,
+  "currentAssessment": {
+    "mathematicalQFT": "established",
+    "heteroticStringTheory": "established-in-theory",
+    "engineeredTY23Carrier": "established-in-theory",
+    "measuredTY23MonsterAssociator": "open",
+    "laboratoryMonsterProvenance": "open",
+    "selectionByNature": "open"
+  },
+  "verdict": "a physical TY(Z23) carrier is theoretically available, but Monster identification requires consecutive same-carrier witnesses through W4"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "heterotic-monster-bps-orientation-gate-v1",
+  "date": "2026-10-25",
+  "order": 23,
+  "generatorChange": {
+    "power": 5,
+    "inversePowerModOrder": 14,
+    "map": "D_5(l,k)=(5l,14k) mod 23",
+    "derivedCharacterIdentity": "F^(g^a)_(l,k)=F^g_(a l,a^-1 k)",
+    "physicalLabels": {
+      "l": "twist or winding residue",
+      "k": "eigencharge or momentum residue"
+    }
+  },
+  "physicalCarrier": {
+    "rootGrade": "(n,m) winding and momentum",
+    "bilinear": "kappa((n,m),(n',m'))=(n m'+n' m)/23",
+    "energy": "E=(m/R+nR/23)/sqrt(2)",
+    "refinedIndex": "Tr_BPS((-1)^F exp(-beta H) exp(2pi i bW) exp(2pi i vM))",
+    "fourierControls": ["b conjugate to winding W", "v conjugate to momentum M"]
+  },
+  "dicyclicRelations": [
+    "D_5^22=1",
+    "D_5^11=-I",
+    "S^2=-I",
+    "S D_5 S^-1=D_5^-1"
+  ],
+  "orientationBlindObservables": [
+    "scalar McKay-Thompson series",
+    "second-quantized supersymmetric index",
+    "BPS energy spectrum",
+    "winding and momentum multiplicities",
+    "root norms",
+    "two-point selection rules",
+    "every statistic depending only on n*m mod 23"
+  ],
+  "survivingWitness": {
+    "kind": "closed cross-grade interaction or defect-junction amplitude",
+    "candidate": "rephasing-invariant associator or tetrahedral loop of BPS intertwiners",
+    "requirements": [
+      "invariant under external-state rephasing",
+      "not determined by multiplicities or bilinear form",
+      "declared D_5 covariance",
+      "order-46 junction to the 2A seam",
+      "measurable interference phase or normalized amplitude ratio"
+    ],
+    "status": "open"
+  },
+  "verdict": "the heterotic construction physically realizes the winding-momentum carrier and D_5 label action, but every BPS multiplicity and index factors through the orientation-blind product n*m; the next witness must measure composition"
+}
+

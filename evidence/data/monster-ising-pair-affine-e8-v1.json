@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "monster-ising-pair-affine-e8-v1",
+  "date": "2026-10-25",
+  "status": "exact Monster/VOA pair atlas with executable affine-E8 certificate",
+  "nodes": [
+    {"type": "1A", "order": 1, "overlapNumerator": 1, "overlapDenominator": 4},
+    {"type": "2A", "order": 2, "overlapNumerator": 1, "overlapDenominator": 32},
+    {"type": "3A", "order": 3, "overlapNumerator": 13, "overlapDenominator": 1024},
+    {"type": "4A", "order": 4, "overlapNumerator": 1, "overlapDenominator": 128},
+    {"type": "5A", "order": 5, "overlapNumerator": 3, "overlapDenominator": 512},
+    {"type": "6A", "order": 6, "overlapNumerator": 5, "overlapDenominator": 1024},
+    {"type": "4B", "order": 4, "overlapNumerator": 1, "overlapDenominator": 256},
+    {"type": "2B", "order": 2, "overlapNumerator": 0, "overlapDenominator": 1},
+    {"type": "3C", "order": 3, "overlapNumerator": 1, "overlapDenominator": 256}
+  ],
+  "edges": [
+    ["1A", "2A"], ["2A", "3A"], ["3A", "4A"], ["4A", "5A"],
+    ["5A", "6A"], ["6A", "4B"], ["4B", "2B"], ["6A", "3C"]
+  ],
+  "markVectorByNode": {"1A": 1, "2A": 2, "3A": 3, "4A": 4, "5A": 5, "6A": 6, "4B": 4, "2B": 2, "3C": 3},
+  "classification": {
+    "pair": ["order(tau_e tau_f)", "inner product <e,f>"],
+    "unique": true,
+    "overlapOnlyUnique": false,
+    "overlapCollision": ["3C", "4B"],
+    "minimumDistinctOverlapSpacing": 0.0009765625,
+    "unsafeNearestOverlapError": 0.00048828125
+  },
+  "physicalBoundary": {
+    "isingCentralCharge": 0.5,
+    "axisNorm": 0.25,
+    "monsterWeightOneDimension": 0,
+    "affineE8CurrentAlgebraPresent": false,
+    "interpretation": "affine-E8-shaped atlas of two-Ising operator subtheories, not a continuous E8 gauge symmetry"
+  },
+  "verdict": "the exceptional E8 structure is an exact composition atlas for pairs of physical Ising fields in the Monster CFT; it is not an E8 current algebra"
+}

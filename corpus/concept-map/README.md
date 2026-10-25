@@ -50,7 +50,20 @@ flowchart LR
   AO -. conditional .-> EX[E6 / E8]
   L[Golay / Leech] -. pair-Gram bridge .-> H
   EX -. analogy only .-> MO[Monster / moonshine]
+  MO --> GJ[Sym24 Griess fixed Jordan sector]
+  GJ --> H
+  MO --> IE[Ising-pair affine-E8 atlas]
+  IE -- diagram, not current symmetry --> EX
 ```
+
+The last three solid arrows are algebraic existence statements, not a claim that
+the Monster dynamically chooses a unique physical two-port face. The
+\(\operatorname{Sym}_{24}(\mathbb R)\) fixed sector contains 276 coordinate
+\(H_2(\mathbb R)\) corners, so physical projection and corner selection remain
+separate gates. The Ising-pair arrow is independently exact: the nine
+Norton--Sakuma pair types carry the affine-\(E_8\) marks. It separates that
+finite operator-composition atlas from a continuous \(E_8\) symmetry; the
+Monster VOA has no weight-one current algebra.
 
 ## Files
 

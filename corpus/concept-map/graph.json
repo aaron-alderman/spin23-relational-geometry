@@ -1,7 +1,7 @@
 {
   "schema": "spin23-concept-graph/v1",
   "title": "Spin(2,3) relational-geometry concept graph",
-  "date": "2026-10-19",
+  "date": "2026-10-25",
   "epistemic_rule": "A visible path inherits its weakest edge status. Analogy is never promoted to derivation.",
   "statuses": {
     "established": "Exact at the stated mathematical or model-local scope.",
@@ -44,7 +44,9 @@
     {"id":"j3o","label":"J₃(O) / cubic norm","group":"exceptional","status":"conditional","x":-360,"y":520,"z":160,"description":"The exceptional Jordan continuation is a higher-rank horizon, not an automatic consequence of H₂(R).","evidence":["corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md"]},
     {"id":"e6e8","label":"E₆ / E₈ structures","group":"exceptional","status":"conditional","x":-100,"y":520,"z":160,"description":"Candidate exceptional symmetry layers require explicit real-form, invariant and carrier maps.","evidence":["corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"]},
     {"id":"leech","label":"Golay / Leech arithmetic","group":"exceptional","status":"conditional","x":180,"y":520,"z":160,"description":"Pair-Gram geometry reaches H₂(R) and genus-two symplectic structure only after an orientation twist and affine theta shift.","evidence":["corpus/claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md"]},
-    {"id":"moonshine","label":"Monster / moonshine","group":"exceptional","status":"analogical","x":450,"y":520,"z":160,"description":"An arithmetic and modular horizon. No present map makes it a dynamical rule-set for the carrier.","evidence":["corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"]}
+    {"id":"moonshine","label":"Monster / moonshine","group":"exceptional","status":"established","x":450,"y":520,"z":160,"description":"The Monster VOA, heterotic BPS realization and 23AB defect category are established at their declared theoretical scope; laboratory provenance remains open.","evidence":["corpus/programmes/frontier/wave-7/frontier_wave7_110_monster_physics_realization_ladder.md","corpus/programmes/frontier/wave-7/frontier_wave7_113_monster_z23_tambara_yamagami_recoupling.md"]},
+    {"id":"griess-jordan","label":"Sym₂₄ Griess fixed Jordan sector","group":"exceptional","status":"established","x":410,"y":360,"z":80,"description":"The O₂(C)-fixed weight-two Griess subalgebra is Sym₂₄(R); every declared principal two-corner is an exact H₂(R) Jordan carrier, although no physical principle selects one of the 276 coordinate corners.","evidence":["corpus/programmes/frontier/wave-7/frontier_wave7_116_monster_griess_jordan_corner_to_spin23.md"]},
+    {"id":"ising-e8-atlas","label":"Monster Ising-pair affine-E₈ atlas","group":"exceptional","status":"established","x":620,"y":390,"z":130,"description":"Nine two-Ising operator subalgebras form the affine-E₈ diagram through their Monster product classes and overlaps. This is an exact finite composition atlas, not an E₈ current or gauge symmetry.","evidence":["corpus/programmes/frontier/wave-7/frontier_wave7_117_monster_ising_pair_affine_e8_operator_atlas.md"]}
   ],
   "edges": [
     {"source":"response","target":"h2r","type":"derives","status":"established","label":"positive reciprocal reduction"},
@@ -87,6 +89,10 @@
     {"source":"leech","target":"h2r","type":"realizes","status":"conditional","label":"pair-Gram bridge"},
     {"source":"leech","target":"sp4","type":"extends","status":"conditional","label":"genus-two symplectic shadow"},
     {"source":"e6e8","target":"moonshine","type":"analogous","status":"analogical","label":"no carrier-preserving chain"},
-    {"source":"leech","target":"moonshine","type":"extends","status":"conditional","label":"modular/arithmetic adjacency"}
+    {"source":"leech","target":"moonshine","type":"extends","status":"conditional","label":"modular/arithmetic adjacency"},
+    {"source":"moonshine","target":"griess-jordan","type":"derives","status":"established","label":"O₂(C)-fixed weight-two product"},
+    {"source":"griess-jordan","target":"h2r","type":"derives","status":"established","label":"principal two-corner; selection not implied"},
+    {"source":"moonshine","target":"ising-e8-atlas","type":"derives","status":"established","label":"2A Ising-pair operator products"},
+    {"source":"ising-e8-atlas","target":"e6e8","type":"separates","status":"established","label":"affine-E8 diagram; no E8 current algebra"}
   ]
 }

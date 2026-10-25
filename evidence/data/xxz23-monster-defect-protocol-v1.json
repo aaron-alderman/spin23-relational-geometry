@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "xxz23-monster-defect-protocol-v1",
+  "date": "2026-10-25",
+  "status": "exact XXZ control point and preregistered tests; experiment not performed",
+  "N": 23,
+  "rootOfUnity": "q=exp(i*pi/23)",
+  "anisotropy": 0.9906859460363308,
+  "anisotropyFormula": "Delta=cos(pi/23)",
+  "minimumPeriodicCommensurateSites": 46,
+  "periodicSizes": "L in 46 Z",
+  "continuumRadiusSquared": 11.5,
+  "continuumRadius": 3.391164991562634,
+  "w0Predictions": {
+    "chargeOrder": "Z_pm^23=1",
+    "absorption": "Z_pm D_pm = D_pm Z_pm = D_pm",
+    "fusion": "D_pm^2=(sum_(k=0)^22 Z_pm^k) T(0)",
+    "normalizedSectorResponse": [23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "w1Predictions": {
+    "entryMagnitude": 0.20851441405707477,
+    "adjacentPlaquettePhaseRadians": -0.2731819698773733,
+    "adjacentPlaquettes": 484,
+    "unsafePhaseErrorRadians": 0.13659098493868665,
+    "preregisteredPhaseMarginRadians": 0.06829549246934333
+  },
+  "planningShotBound": {
+    "assumption": "independent bounded [-1,1] estimators with Hoeffding and Bonferroni correction",
+    "components": 968,
+    "familywiseAlpha": 0.01,
+    "euclideanTolerance": 0.06824241336467098,
+    "shotsPerComponent": 1308,
+    "totalComponentShots": 1266144,
+    "excludes": ["state preparation", "postselection", "readout mitigation", "correlations", "drift"]
+  },
+  "mandatoryControls": [
+    "anisotropy detuning on both sides",
+    "noncommensurate chain size",
+    "D_plus versus D_minus spin-flip/time-reversal exchange",
+    "bond-dimension or implementation refinement",
+    "unrestricted complex-Hadamard and nearby Fourier-kernel model comparison"
+  ],
+  "claimBoundary": "W0 is a sourced lattice fusion-ring test; W1 is a proposed associator test; neither alone establishes Monster provenance",
+  "verdict": "the shortest carrier experiment is now fixed at Delta=cos(pi/23), L=46, with a 23-versus-zero fusion response and a separate 484-plaquette Fourier-associator test"
+}

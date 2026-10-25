@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "monster-physics-realization-ladder-v1",
+  "date": "2026-10-25",
+  "claimLevels": [
+    {
+      "id": "P1",
+      "claim": "V-natural is an internally consistent chiral conformal field theory",
+      "status": "established",
+      "requires": []
+    },
+    {
+      "id": "P2",
+      "claim": "Monster data have a specified realization as BPS states, indices, dualities and broken gauge symmetries in heterotic string models",
+      "status": "established-in-theory",
+      "requires": ["P1"]
+    },
+    {
+      "id": "P3",
+      "claim": "A controllable laboratory carrier realizes a provenance-sensitive Monster subtheory",
+      "status": "open",
+      "requires": ["P1", "P2"]
+    },
+    {
+      "id": "P4",
+      "claim": "Monster structure is selected by the fundamental physics of our universe",
+      "status": "open",
+      "requires": ["P1", "P2", "P3"]
+    }
+  ],
+  "heteroticDictionary": [
+    ["McKay-Thompson coefficient", "indexed spacetime BPS-state degeneracy"],
+    ["Monster twining element", "orbifold or twining operation"],
+    ["modular invariance group", "spacetime T-duality group"],
+    ["denominator product", "second-quantized BPS-state product"],
+    ["Monstrous Lie algebra", "spontaneously broken gauge-symmetry algebra"],
+    ["root multiplicity", "BPS-state multiplicity"]
+  ],
+  "heteroticIndexIdentity": "Z_g1(T,U)=(T_1g(T)-T_g1(U))^24",
+  "heteroticScope": {
+    "effectiveDimension": "0+1",
+    "stringCoupling": "zero",
+    "firewall": "gravitational-anomaly subtleties prevent promotion to a complete finite-coupling cosmology"
+  },
+  "realizationFunctorObligations": [
+    "preparation",
+    "composition",
+    "dynamics",
+    "detection",
+    "provenance"
+  ],
+  "finiteWitness": {
+    "centralCharge": 24,
+    "weightOneDimension": 0,
+    "uniquenessQualifier": "framed or Griess data required; unrestricted FLM uniqueness is not assumed",
+    "majoranaCentralCharge": "1/2",
+    "babyMonsterCentralCharge": "47/2",
+    "arfInputComponents": 16,
+    "arfOddZeros": 6,
+    "arfEvenComponents": 10,
+    "requiredStructuralLayers": [
+      "2A fermionization",
+      "23AB orientation-sensitive defect observable",
+      "order-46 junction",
+      "nontrivial sewing or coherence relation"
+    ]
+  },
+  "scalarNoGos": [
+    "T_23A equals T_23B",
+    "central charge alone does not identify V-natural",
+    "a programmed finite permutation does not establish Monster provenance",
+    "an emulator does not establish selection by nature"
+  ],
+  "p3PromotionGates": [
+    {"id": "carrier", "status": "open"},
+    {"id": "sector-preparation", "status": "open"},
+    {"id": "composition-tomography", "status": "open"},
+    {"id": "orientation-sensitive-amplitude", "status": "open"},
+    {"id": "held-out-prediction", "status": "open"},
+    {"id": "perturbation-robustness", "status": "open"},
+    {"id": "smaller-rival-rejection", "status": "open"},
+    {"id": "preregistered-record", "status": "open"}
+  ],
+  "rankedRoutes": [
+    {"rank": 1, "id": "heterotic-bps", "ceiling": "P2", "status": "established-in-theory"},
+    {"rank": 2, "id": "chiral-c24-boundary", "ceiling": "P3", "status": "missing-microscopic-carrier"},
+    {"rank": 3, "id": "quantum-simulator", "ceiling": "P3", "status": "protocol-open"},
+    {"rank": 4, "id": "ads3-gravity", "ceiling": "P4", "status": "conditional"}
+  ],
+  "currentConclusion": "P1 and P2 are established at their declared scope; P3 and P4 remain open",
+  "forbiddenConclusion": "nature is Monster"
+}
+

@@ -47,6 +47,7 @@ four-dimensional physical interpretation.
 | Breuer--Magaard--Wilson (2026) | independently verifies Monster conjugacy classes, Sylow normalizers and power-map data; order 23 has two generator orbits and normalizer quotient of order 11 | grounds the QR/QNR and inversion interpretation of \(23A/23B\) | the A/B names still require a representative convention |
 | ATLAS class table plus the order-23 centralizer and anomaly-transgression audits (2026 corpus calculations) | \(C_{\mathbb M}(g)\cong C_{23}\times S_4\); five insertion types exhaust scalar traces, while coprimality makes the twisted projective class trivial | exhausts the full genus-one centralizer representation up to isomorphism | cross-grade VOA products and genus-two relations are not supplied |
 | Borcherds (1992) | Monster Lie algebra graded by \(II_{1,1}\), denominator product and Hecke recursion | makes “lattice-like formula” literal and supplies the integral hyperbolic carrier | does not identify \(II_{1,1}\) with spacetime or real-time evolution |
+| Paquette--Persson--Volpato (2016--17) | Monstrous CHL models interpret \(T_g\) as spacetime BPS indices, their invariance groups as T-dualities and \(\mathfrak m_g\) as spontaneously broken gauge-symmetry algebras | supplies a genuine physical carrier in which the root grades are winding and momentum and \(Z_{g,1}(T,U)=(T_{1,g}(T)-T_{g,1}(U))^{24}\) | compactification is effectively \(0+1\)-dimensional and treated at zero string coupling because of gravitational-anomaly subtleties; it is not laboratory evidence or a four-dimensional lift |
 | Kondo--Tasaka (1986) | fixed Leech sublattice theta quotients for \(M_{24}\) automorphisms are genus-zero functions; cycle shape \(1\,23\) maps to \(23+\) | closes the order-23 Leech-theta/Hauptmodul bridge | a scalar function does not retain the oriented generator |
 | Höhn--Mason (2016) and Lam--Shimakura | classification of Leech fixed lattices; order-23 fixed lattice has rank two and Gram \(\left(\begin{smallmatrix}4&1\\1&6\end{smallmatrix}\right)\); the two order-23 lattice classes generate conjugate cyclic subgroups | fixes the exact lattice, determinant and lift ambiguity | conjugate subgroups do not canonically label Monster \(23A\) versus \(23B\) |
 | Beneish et al. (2024) | code--lattice fixed theta quotients, replicability and lift/order-doubling criteria | confirms that code automorphisms can generate replicable modular outputs through fixed sublattices | replicability alone is not a VOA isomorphism or dynamics |
@@ -247,9 +248,63 @@ mn\quad\longrightarrow\quad \frac{ab}{23}\pmod1.
 This remains a kinematic/arithmetic descent.  No continuous Monster action,
 four-dimensional field equation or physical clock follows.
 
+### 5.1 Direct Griess--Jordan relation
+
+The diagonal \(II_{1,1}\) bridge is not the only contact. Griess records that
+if \(C\) is the centralizer of a Monster \(2B\)-involution, the fixed points of
+its extraspecial normal subgroup \(O_2(C)\) in the 196,884-dimensional unital
+Griess algebra form the 300-dimensional Jordan algebra
+
+\[
+ (B^\natural)^{O_2(C)}\cong\operatorname{Sym}_{24}(\mathbb R).
+\]
+
+Every declared principal two-corner is a product-preserving copy of
+\(H_2(\mathbb R)\). The corpus certificate checks its Jordan identity, triple
+product and ten-dimensional TKK closure
+\(\mathfrak{sp}(4,\mathbb R)\cong\mathfrak{so}(2,3)\). This is a direct
+weight-two VOA-product bridge and does not pass through a conjectural
+\(E_8\to\mathbb M\) map.
+
+It is an existence theorem, not a physical selector. There are
+\(\binom{24}{2}=276\) coordinate two-corners and a continuous family of general
+rank-two choices. A laboratory or dynamical realization must derive the fixed
+sector and mark one corner on the same carrier. Moreover, the TKK group is a
+continuous prolongation of that selected corner, not a subgroup of the finite
+Monster group. See [Wave 7.116](../frontier/wave-7/frontier_wave7_116_monster_griess_jordan_corner_to_spin23.md).
+
+### 5.2 The Ising-pair affine-E8 atlas
+
+McKay's extended-\(E_8\) observation has a precise operator-algebraic form.
+Lam--Yamada--Yamauchi construct the node-labelled subalgebras, and Sakuma's
+theorem classifies the nine positive two-Ising-vector possibilities. In the
+Moonshine VOA an Ising vector defines a Monster \(2A\) Miyamoto involution.
+For a pair \(e,f\), the order and class of \(\tau_e\tau_f\), together with
+the normalized overlap \(\langle e,f\rangle\), identify one of the nine
+Norton--Sakuma algebras. Their product orders
+
+\[
+(1,2,3,4,5,6,4,2;3)
+\]
+
+are the affine-\(E_8\) marks and obey the affine Cartan null relation. This
+is therefore an exact \(E_8\)-shaped atlas of physical conformal-field
+operators, not merely a numerical resemblance.
+
+The type statement also supplies its own no-go boundary. Since
+\((V^\natural)_1=0\), the Moonshine VOA has no weight-one currents generating
+an affine \(\mathfrak e_8\) current algebra. The diagram classifies finite
+pair composition; it is not evidence for 248 conserved currents or an
+\(E_8\) gauge group. The executable certificate reconstructs the rank-eight
+affine Cartan matrix and shows why overlap alone is insufficient: the
+\(3C\) and \(4B\) types both have overlap \(1/256\) but different return
+orders. See [Wave 7.117](../frontier/wave-7/frontier_wave7_117_monster_ising_pair_affine_e8_operator_atlas.md).
+
 ## Frontier after the review
 
-The literature search did not locate a completed \(23AB\)-twined genus-two
+The literature does supply a physical string-theory realization of the
+Moonshine series and Monster Lie algebra through BPS indices and broken gauge
+symmetry.  It did not locate a completed \(23AB\)-twined genus-two
 Monster amplitude, a published canonical identification of the two Golay
 factors with the two oriented ideal/Monster classes, or a \(23AB\) defect
 junction to the corpus's \(2A\) fermionic seam.  Those are the three live
@@ -268,6 +323,7 @@ the oriented generator convention remains necessary.
 ## Primary sources
 
 - Borcherds, [*Monstrous moonshine and monstrous Lie superalgebras*](https://math.berkeley.edu/~reb/papers/monster/monster.pdf)
+- Paquette, Persson and Volpato, [*Monstrous BPS-Algebras and the Superstring Origin of Moonshine*](https://arxiv.org/abs/1601.05412) and [*BPS Algebras, Genus Zero, and the Heterotic Monster*](https://arxiv.org/abs/1701.05169)
 - Conway and Norton, [*Monstrous Moonshine*](https://doi.org/10.1112/blms/11.3.308)
 - Breuer, Magaard and Wilson, [*Verification of the conjugacy classes and ordinary character table of the Monster*](https://arxiv.org/abs/2412.12182)
 - Kondo and Tasaka, [*The theta functions of sublattices of the Leech lattice*](https://doi.org/10.1017/S0027763000000374)
@@ -282,3 +338,46 @@ the oriented generator convention remains necessary.
 - Gilroy and Tuite, [*Genus Two Zhu Theory for Vertex Operator Algebras*](https://arxiv.org/abs/1511.07664)
 - Gaberdiel and Volpato, [*Higher genus partition functions of meromorphic conformal field theories*](https://arxiv.org/abs/0903.4107)
 - Lin and Shao, [*Duality Defect of the Monster CFT*](https://arxiv.org/abs/1911.00042)
+- Griess, [*Nonassociativity in VOA theory and finite group theory*](https://www.kurims.kyoto-u.ac.jp/EMIS/journals/CMUC/pdf/cmuc1002/griess.pdf)
+
+## Sourced order-23 composition law
+
+Volpato's 2026 construction supplies part of the cross-grade composition data
+that this review previously listed as missing. For the non-anomalous Fricke
+class \(23AB\), the self-orbifold duality defect and the invertible
+\(\mathbb Z_{23}\) defects generate
+\(\operatorname{TY}(\mathbb Z_{23},\chi,\epsilon)\), with the explicitly
+fixed bicharacter
+
+\[
+ \chi(g^a,g^b)=e^{2\pi iab/23}.
+\]
+
+In a standard skeletal gauge this gives the three-defect recoupling matrix
+\(F_{ab}=\epsilon e^{-2\pi iab/23}/\sqrt{23}\). The associated executable
+certificate checks its 529 entries, unitarity, \(F^2=C\), \(F^4=1\), and
+rephasing-invariant plaquette ratios. This is genuine Monster interaction
+data, not another scalar trace.
+
+Two boundaries matter. First, the cited construction does not evaluate the
+Frobenius--Schur sign \(\epsilon\). That sign is nevertheless a closed
+categorical observable: \(\nu_2(\mathcal N)=\epsilon\), and odd-order TY
+categories are distinguished by closed three-manifold state sums. Second,
+the fifth-power generator change sends the bicharacter parameter
+\(s\mapsto25s=2s\), but \(2=5^2\) is a square modulo 23. Hence it is exactly
+the channel relabelling \(a\mapsto5a\) and does not change the abstract fusion
+category. A \(23A/23B\) orientation detector therefore still needs a marked
+physical identification of the charge/twist channels; no unmarked TY state
+sum can supply it. See [Wave 7.113](../frontier/wave-7/frontier_wave7_113_monster_z23_tambara_yamagami_recoupling.md).
+
+The carrier question has also moved. Wen--Inamura--Schafer-Nameki give a
+QCA-refined tensor-product lattice realization for any weakly integral fusion
+category and explicitly cover general Tambara--Yamagami symmetry. Independently,
+Vernier--Miao--Yamazaki construct \(\mathbb Z_N\) TY fusion relations in a
+root-of-unity XXZ spin chain, while Ren--Tantivasadakarn--Williamson provide
+adaptive finite-depth preparation for solvable string nets with an explicit
+\(\mathbb Z_3\) TY example. These results make a \(\mathbb Z_{23}\) physical
+carrier plausible or constructive at the category level, but none identifies
+that carrier with \(V^\natural\). The corpus therefore separates fusion-ring,
+bicharacter, Frobenius--Schur, Monster-CFT and full-provenance witnesses in
+[Wave 7.114](../frontier/wave-7/frontier_wave7_114_monster_ty23_carrier_and_provenance_protocol.md).

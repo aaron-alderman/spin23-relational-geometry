@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "monster-z23-ty-recoupling-v1",
+  "date": "2026-10-25",
+  "status": "sourced Monster defect category with executable recoupling certificate",
+  "groupOrder": 23,
+  "monsterClass": "23AB",
+  "fusionCategory": "TY(Z_23, chi, epsilon)",
+  "fusionRules": {
+    "invertible": "L_a tensor L_b = L_(a+b)",
+    "mixed": "L_a tensor N = N tensor L_a = N",
+    "noninvertible": "N tensor N = direct_sum_(a in Z_23) L_a",
+    "quantumDimensionN": "sqrt(23)"
+  },
+  "bicharacter": "chi_s(a,b)=exp(2pi i s*a*b/23), with sourced Monster marking s=1",
+  "recoupling": "F_NNN^N[a,b]=epsilon/sqrt(23)*exp(-2pi i*a*b/23)",
+  "matrixPredictions": {
+    "entryMagnitude": 0.20851441405707477,
+    "unitary": true,
+    "square": "charge conjugation a -> -a",
+    "fourthPower": "identity"
+  },
+  "gaugeInvariantTomography": "F_ab*F_a'b'/(F_ab'*F_a'b)=exp(-2pi i (a-a')(b-b')/23)",
+  "frobeniusSchur": {
+    "candidates": [-1, 1],
+    "monsterValue": "not fixed by the cited Volpato construction",
+    "closedWitness": "nu_2(N)=sign(tau)=epsilon",
+    "stateSumDetectableForOddGroupOrder": true
+  },
+  "fifthPower": {
+    "generatorPower": 5,
+    "kernelParameterMap": "s -> 25s = 2s mod 23",
+    "twoIsSquare": true,
+    "equivalencePermutation": "a -> 5a",
+    "abstractCategoryDetectsOrientation": false,
+    "markedEmbeddingRequired": true
+  },
+  "claimBoundary": {
+    "established": "Monster CFT realizes a TY(Z_23,chi,epsilon) noninvertible defect sector with exact Fourier bicharacter and recoupling law up to epsilon",
+    "open": "Monster epsilon, laboratory carrier, marked channel dictionary, and selection by nature"
+  },
+  "verdict": "genuine Monster interaction data is now explicit; the FS sign has a closed detector, while fifth-power orientation is erased by category equivalence unless the generator is physically marked"
+}

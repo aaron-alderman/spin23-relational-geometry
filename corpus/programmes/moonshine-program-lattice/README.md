@@ -1,5 +1,11 @@
 # Moonshine as program, lattice formula and constrained carrier
 
+**Physical-realization ladder:** [Monster is already a physical theory; nature is the open gate](../frontier/wave-7/frontier_wave7_110_monster_physics_realization_ladder.md)
+
+**Heterotic orientation gate:** [the BPS carrier realizes the twist--charge plane, but its indices still forget 23A/23B orientation](../frontier/wave-7/frontier_wave7_111_heterotic_bps_orientation_no_go_and_interaction_gate.md)
+
+**Executable composition toy:** [a closed Z23 associator loop distinguishes 23 spectrally identical type systems](../frontier/wave-7/frontier_wave7_112_z23_composition_witness_toy_reconstruction.md)
+
 **Date:** 25 October 2026
 
 **Status:** scalar genus-one and arithmetic orientation bridges closed exactly; direct Rule-60/Monster identification ruled out; class-sensitive defect and genus-two completion remain open
@@ -935,3 +941,9 @@ recovers the ten Baby-Monster components.
 - [Baby-Monster genus-two source gate](baby-monster-genus-two-source-gate.md)
 - [Arf/Fourier Baby-Monster reconstruction](arf-fourier-baby-monster-reconstruction.md)
 - [Arf-conjugated Baby-Monster \(K\) multiplier](arf-conjugated-baby-monster-k-multiplier.md)
+- [Monster \(\mathbb Z_{23}\) Tambara--Yamagami recoupling](../frontier/wave-7/frontier_wave7_113_monster_z23_tambara_yamagami_recoupling.md)
+- [TY(\(\mathbb Z_{23}\)) physical carrier and Monster provenance protocol](../frontier/wave-7/frontier_wave7_114_monster_ty23_carrier_and_provenance_protocol.md)
+- [Quantitative XXZ-23 preregistered protocol](../frontier/wave-7/frontier_wave7_115_xxz23_quantitative_preregistered_protocol.md)
+- [Monster Griess--Jordan corner to \(Spin(2,3)\)](../frontier/wave-7/frontier_wave7_116_monster_griess_jordan_corner_to_spin23.md)
+- [Monster Ising-pair affine-E8 operator atlas](../frontier/wave-7/frontier_wave7_117_monster_ising_pair_affine_e8_operator_atlas.md)
+- [Orthogonal Monster physics witness stack](../frontier/wave-7/frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)

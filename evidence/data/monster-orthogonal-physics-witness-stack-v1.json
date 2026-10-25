@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "monster-orthogonal-physics-witness-stack-v1",
+  "date": "2026-10-25",
+  "claim": {
+    "proved": "Monster structure has a genuine realization in physics as a chiral conformal field theory and in a heterotic BPS construction",
+    "notProved": "the fundamental physics of our universe selects the Monster or that a laboratory realizes the full Moonshine module"
+  },
+  "physicsCriteria": [
+    "state-space",
+    "operator-composition",
+    "dynamics-or-amplitudes",
+    "observable-readout",
+    "provenance"
+  ],
+  "witnesses": [
+    {
+      "id": "H",
+      "name": "heterotic BPS dictionary",
+      "kind": "physical-realization",
+      "status": "established-in-theory",
+      "tests": ["state-space", "dynamics-or-amplitudes", "observable-readout", "provenance"],
+      "signature": "Monster-twined spacetime BPS index and T-duality denominator product",
+      "scopeBoundary": "zero string coupling and effective 0+1-dimensional model"
+    },
+    {
+      "id": "T",
+      "name": "23AB Tambara-Yamagami defect",
+      "kind": "operator-composition",
+      "status": "established-in-monster-cft",
+      "tests": ["operator-composition", "provenance"],
+      "signature": "TY(Z23,chi,epsilon) with chi(a,b)=exp(2 pi i ab/23)",
+      "scopeBoundary": "fifth-power generator exchange is an abstract relabelling unless the generator is physically marked"
+    },
+    {
+      "id": "J",
+      "name": "Griess fixed Jordan sector",
+      "kind": "operator-product",
+      "status": "established-in-monster-voa",
+      "tests": ["operator-composition", "provenance"],
+      "signature": "O2(C)-fixed weight-two product is Sym24(R), containing H2(R) principal corners",
+      "scopeBoundary": "the Monster does not select one of 276 coordinate corners"
+    },
+    {
+      "id": "E",
+      "name": "Ising-pair affine-E8 atlas",
+      "kind": "operator-pair-classification",
+      "status": "established-in-monster-voa",
+      "tests": ["operator-composition", "observable-readout", "provenance"],
+      "signature": "nine Norton-Sakuma types classified by involution-product order and axis overlap",
+      "scopeBoundary": "V1=0 excludes an affine E8 current algebra"
+    },
+    {
+      "id": "L",
+      "name": "XXZ root-of-unity carrier",
+      "kind": "laboratory-route",
+      "status": "protocol-ready-not-monster-provenance",
+      "tests": ["state-space", "operator-composition", "dynamics-or-amplitudes", "observable-readout"],
+      "signature": "q=exp(i pi/23), L=46 and Z23 TY fusion/Fourier response",
+      "scopeBoundary": "realizes the category layer without the c=24 Monster ambient theory"
+    },
+    {
+      "id": "C",
+      "name": "order-46 cross-layer junction",
+      "kind": "same-carrier-provenance",
+      "status": "established-class-level-junction",
+      "tests": ["operator-composition", "provenance"],
+      "signature": "h squared is 23AB while h to the 23rd power is 2A for 46CD and 2B for 46AB",
+      "scopeBoundary": "the power map proves a common Monster carrier but not the unresolved twisted-twining or genus-two amplitudes"
+    }
+  ],
+  "features": [
+    "c24-v1zero",
+    "monster-character",
+    "heterotic-bps-dictionary",
+    "ty23-fourier-associator",
+    "sym24-jordan-fixed-sector",
+    "norton-sakuma-e8-atlas",
+    "order46-2a-2b-junction",
+    "single-carrier-coherence"
+  ],
+  "candidateMatrix": [
+    {
+      "id": "scalar-moonshine-output",
+      "passes": ["monster-character"],
+      "verdict": "output emulation only"
+    },
+    {
+      "id": "generic-c24-chiral-theory",
+      "passes": ["c24-v1zero"],
+      "verdict": "ambient checksum without Monster provenance"
+    },
+    {
+      "id": "generic-ty23-system",
+      "passes": ["ty23-fourier-associator"],
+      "verdict": "correct defect category without Monster provenance"
+    },
+    {
+      "id": "generic-monster-type-axial-system",
+      "passes": ["norton-sakuma-e8-atlas"],
+      "verdict": "local pair atlas without ambient Moonshine module"
+    },
+    {
+      "id": "xxz23-carrier",
+      "passes": ["ty23-fourier-associator"],
+      "verdict": "dynamical laboratory carrier for one layer"
+    },
+    {
+      "id": "abstract-moonshine-voa",
+      "passes": [
+        "c24-v1zero",
+        "monster-character",
+        "ty23-fourier-associator",
+        "sym24-jordan-fixed-sector",
+        "norton-sakuma-e8-atlas",
+        "order46-2a-2b-junction",
+        "single-carrier-coherence"
+      ],
+      "verdict": "full mathematical CFT realization"
+    },
+    {
+      "id": "heterotic-monster-model",
+      "passes": [
+        "c24-v1zero",
+        "monster-character",
+        "heterotic-bps-dictionary",
+        "ty23-fourier-associator",
+        "sym24-jordan-fixed-sector",
+        "norton-sakuma-e8-atlas",
+        "order46-2a-2b-junction",
+        "single-carrier-coherence"
+      ],
+      "verdict": "physical realization established at the declared string-theory scope"
+    }
+  ],
+  "jointLaboratoryPromotionGate": {
+    "requiredOnOneCarrier": [
+      "c24-v1zero",
+      "monster-character",
+      "ty23-fourier-associator",
+      "sym24-jordan-fixed-sector",
+      "norton-sakuma-e8-atlas",
+      "order46-2a-2b-junction",
+      "single-carrier-coherence"
+    ],
+    "currentStatus": "open",
+    "minimumHeldOutChecks": [
+      "predict an untrained Norton-Sakuma pair type from order and overlap",
+      "predict a TY23 recoupling phase not used in calibration",
+      "realize an order-46 root whose powers recover the tested order-23 and 2A or 2B operators",
+      "verify that both records arise from the same c=24 V1=0 carrier",
+      "reject generator relabelling as the source of any claimed 23A/23B orientation"
+    ]
+  },
+  "logicalConclusion": {
+    "P1": "proved",
+    "P2": "proved-at-declared-theoretical-scope",
+    "P3": "open",
+    "P4": "open"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "z23-composition-witness-toy-v1",
+  "date": "2026-10-25",
+  "groupOrder": 23,
+  "candidateClasses": 23,
+  "associator": "omega_p(a,b,c)=exp(2pi i p a floor((b+c)/23)/23)",
+  "closedWitness": "I_p(u)=product_(j=0)^22 omega_p(u,u*j mod 23,u)=exp(2pi i p*u^2/23)",
+  "gaugeRule": "omega maps to omega times delta(beta) for a normalized 2-cochain beta",
+  "gaugeInvariant": true,
+  "orientation": {
+    "generatorPower": 5,
+    "classMultiplier": 2,
+    "identity": "5^2=2 mod 23"
+  },
+  "blindTrial": {
+    "hiddenClass": 7,
+    "noiseModel": "deterministic bounded constituent phase errors with zero total phase",
+    "recoveredClass": 7,
+    "unique": true
+  },
+  "spectralControl": {
+    "sameFusionForAllClasses": true,
+    "sameMultiplicitiesForAllClasses": true,
+    "spectrumCanRecoverClass": false
+  },
+  "monsterPromotionInputs": [
+    "order-23 cross-grade VOA intertwiner coefficients",
+    "defect-junction F-symbols",
+    "order-23-twined genus-two sewing amplitudes",
+    "equivalent normalized BPS OPE data"
+  ],
+  "verdict": "closed composition distinguishes 23 otherwise spectrally identical toy theories; replacing the toy cocycle by sourced Monster intertwiner data is the promotion gate"
+}
+
