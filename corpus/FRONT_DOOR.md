@@ -79,7 +79,7 @@ Reachability measures what the declared entrances actually expose through local 
 | governance | 2 | 1 | 7.7 KiB | repository and publication governance |
 | integrations | 273 | 3 | 19.9 MiB | application and publication boundary packets |
 | legal | 2 | 2 | 54.0 KiB | legal notices and policy |
-| programmes | 751 | 533 | 17.3 MiB | bounded research programmes, registers, and closure work |
+| programmes | 751 | 533 | 17.4 MiB | bounded research programmes, registers, and closure work |
 | reader-editions | 317 | 317 | 2.7 MiB | curated reader-facing editions |
 | registers | 13 | 6 | 13.3 MiB | machine-readable inventory, state, and audit records |
 | repository-front-door | 7 | 5 | 26.3 KiB | root navigation, machine retrieval, stewardship, contribution, and legal surfaces |
