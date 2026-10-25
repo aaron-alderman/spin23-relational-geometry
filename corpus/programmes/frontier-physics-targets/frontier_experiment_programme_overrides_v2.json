@@ -1,0 +1,118 @@
+{
+  "schema": "frontier.experiment-programme-overrides/2",
+  "date": "2026-10-25",
+  "authority": "Experiment-specific EXIT-03 authorship. Values here are merged into the generated v2 programme surface and must cite corpus evidence; omission remains an explicit open cell.",
+  "overrides": [
+    {
+      "id": "EX-006",
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md",
+        "corpus/programmes/admissibility/admissibility_61_photonic_selector_chip_coupled_mode_preflight.md"
+      ],
+      "detector_transfer_function": "Calibrate the complex input-to-output scattering matrix against a bright reference arm and port standards, de-embed coupling and propagation loss, then restrict the polar-decomposed transfer to the independently reconstructed dark projector. Report projector chord distance, polar-unitary angle, log singular-value ratio and surviving unnormalised power; never normalize away the loss channel.",
+      "nuisance_and_covariance_model": "Jointly propagate input-state preparation, coherent receiver gain/phase, wavelength drift, port cross-talk, common and differential loss, residual splitting, lithographic coupling errors and path-end error. Fit geometric, static-splitting and loss-only models to the same complex data, with calibration covariance shared across forward, reverse and path-order-swapped devices.",
+      "predicted_signal_scale": "The reference design requires adiabatic error at most 0.02, relative splitting and differential-loss budgets at most 0.05, projector closure distance at most 0.01 and endpoint error about 0.01512 rad or less. The illustrative coupled-mode witness has kappa_0 L=240, dark-power retention 0.999689, log singular-value ratio 0.01174 and phase-blind quarter-turn fidelity 0.999983; these are design targets, not fabricated-device forecasts.",
+      "power_or_sensitivity_calculation": "Before fabrication, inject the full calibrated covariance into a full-wave tolerance ensemble and require at least 90% power at one-sided alpha=0.05 to distinguish the reversed polar-unitary angle from both the static-splitting and differential-loss models while separately passing the 0.01 projector-closure and 0.05 nonunitarity budgets. For a contraction subtest, use the declared K>[z sigma/((1-m) theta_0)]^2 inequality rather than repetitions chosen after inspection.",
+      "build_go_no_go": {
+        "go": "A positive-coupling, phase-assisted or two-module full-wave layout realizes kappa_0 L at least 207.7968; at least 95% of the preregistered fabrication/noise ensemble passes closure, dark-space retention, reference visibility and the 0.05 splitting/loss budgets; and the power calculation clears 90% before mask release.",
+        "noGo": "No signed-effective-coupling or positive-path layout retains a nonempty robustness wedge, reference visibility is insufficient to distinguish orientation, or the tolerance ensemble fails the preregistered pass fraction. Close the passive strict-quarter-turn build and move to the fast-holonomy or actively modulated branch."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "A passing device establishes programmable projector return with coherent noncommuting transport and supplies a calibrated platform for selector experiments.",
+        "newPhysicsGo": "None from this emulator alone. Escalation requires the same unexplained residual on an independently fabricated carrier after the complete geometric, static, loss, calibration and detector models fail.",
+        "noGo": "A nuisance model spans the full record or the apparent sign disappears without the chosen reference; retain the result as a detector or control-engineering bound."
+      },
+      "replication_rule": "Repeat the blind protocol on a second fabrication run and on at least one independently routed forward/reverse device pair. Freeze the de-embedding and reference convention on the first run; the second run must pass the same absolute budgets without refitting their thresholds.",
+      "data_metadata_and_code_release_contract": "Release masks or layout parameters, measured coupling and loss calibration, raw coherent port sweeps, reference-arm records, environmental metadata, covariance estimates, de-embedding code, full-wave model, tolerance draws, blinded labels and the frozen analysis configuration under one checksum manifest.",
+      "claim_status_propagation": {
+        "positive": "Advance OT-002 and the transport portion of OT-037 to experimentally demonstrated on this carrier; leave OT-003, fundamental symmetry and spontaneous-selection claims open.",
+        "null": "Close the tested passive layout and update OT-002/OT-037 to the measured nuisance or feasibility boundary; do not propagate the null to unrelated carriers.",
+        "ambiguous": "Retain the equivalence class in OT-001 and keep every mechanism claim unpromoted until the reference or covariance deficit is removed."
+      }
+    },
+    {
+      "id": "EX-012",
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_31_same_carrier_platform_closure_for_casimir_thermoelectric_response.md",
+        "corpus/programmes/admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md"
+      ],
+      "detector_transfer_function": "Map raw transport voltages, currents and temperature gradients plus ellipsometric and magneto-optic readouts into one complex causal conductivity tensor with shared thickness/domain calibration. Freeze its imaginary-frequency posterior. Separately map calibrated resonator frequency shift or torsion angle into force gradient or torque versus distance and orientation, including separation and angular response; the force record may not update the tensor posterior.",
+      "nuisance_and_covariance_model": "Carry same-batch and coupon-to-device variation, thickness, roughness spectrum, magnetic domains, temperature, field, optical extrapolation, Kramers-Kronig completion, absolute separation, patch-potential maps, electrostatic drift, ordinary magnetic force, oscillator calibration and temporal drift in one hierarchical covariance. Compare the frozen Lifshitz prediction with patch, roughness and magnetic alternatives and their mixtures.",
+      "predicted_signal_scale": "No admissible force scale exists until the same-film off-diagonal tensor reaches the relevant band. For 0.1-1 micrometre separation the characteristic band is about 24-239 THz or 0.099-0.987 eV, whereas the retained Hall data end at 1.5 THz. The first quantitative prediction is therefore the posterior differential curve and its covariance after OT-006, not an extrapolated headline force.",
+      "power_or_sensitivity_calculation": "Before force-device fabrication, propagate the frozen tensor and full nuisance covariance to the planned distance/angle grid. Require at least 90% power at alpha=0.05 for the parallel-minus-antiparallel or orientation-odd curve against the union of patch, roughness and ordinary magnetic models, with at least three independently calibrated separations contributing. If the covariance envelope spans the prediction, stop at spectroscopy.",
+      "build_go_no_go": {
+        "go": "One batch supplies overlapping complex sigma_xx and sigma_xy through at least 0.1-1 eV in both magnetic states; held-out transport/magneto-optic channels pass the frozen causal tensor; and the no-refit differential prediction exceeds the complete planned systematic covariance with the preregistered power.",
+        "noGo": "The same-film tensor cannot be closed, allowed causal tails dominate, or the predicted differential remains inside the complete force-systematics envelope. Do not build or interpret the force stage."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "Agreement validates a same-carrier response-to-boundary-force pipeline and improves materials and force metrology.",
+        "newPhysicsGo": "Only a replicated residual with the same distance/orientation signature, surviving independent tensor measurement and complete patch, roughness, magnetic, separation and drift models, may enter a new-physics lane.",
+        "noGo": "Agreement with a conventional nuisance or failure of the tensor closure updates the materials model; it is not evidence against admissibility or for new physics."
+      },
+      "replication_rule": "Repeat tensor closure on a second deposition batch before unblinding force data, then reproduce any force residual on an independently fabricated device or apparatus with separately measured patches and separation calibration. Shared growth or analysis code must be recorded as correlated, not counted as independent replication.",
+      "data_metadata_and_code_release_contract": "Release raw transport, thermal-gradient, ellipsometry, magneto-optic and force/torque streams; specimen lineage; thickness, roughness, domain and patch maps; temperature/field/distance logs; calibration and covariance files; causal-tensor posterior samples; Lifshitz and nuisance code; blind labels; and frozen decision configuration with checksums.",
+      "claim_status_propagation": {
+        "positive": "Close OT-006 for the measured architecture and OT-007 for the tested geometry; promote only the no-refit same-carrier prediction, not a universal Jordan/Spin identification.",
+        "null": "If spectroscopy fails, narrow OT-006 and stop OT-007. If spectroscopy passes but force does not, retain the tensor and update the boundary/nuisance model.",
+        "ambiguous": "Keep OT-007 gated and publish the posterior overlap showing which tensor or nuisance coordinate prevents a decision."
+      }
+    },
+    {
+      "id": "EX-013",
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_50_frequency_moment_bounds_and_compute_boundary.md",
+        "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "detector_transfer_function": "Infer the complex 2x2 response from independently calibrated voltage and heater drives to charge-current and heat-current records, including electrical bandwidth, thermometer thermal impedance, phase delay and contact de-embedding. Apply source-basis changes by congruence and track the energy-current convention explicitly; retain raw forces and currents so rank is not computed from normalized plots.",
+      "nuisance_and_covariance_model": "Jointly model electrical contact impedance, heater leakage, thermometry gain and lag, substrate loss, radiative heat loss, geometry, magnetic pickup, common clock phase, energy-zero/current retyping and finite-frequency contact terms. Propagate correlated calibration errors into response eigenvalues, determinant and reciprocity residuals across the full frequency/temperature grid.",
+      "predicted_signal_scale": "The existing five-coordinate benchmark places the second-to-first response ratio near 1.315e-3 to 1.637e-3 in its high-energy window. Certifying only a one-percent reduction permits about 0.279% combined one-sigma error at three sigma; resolving the predicted second direction requires below 438 ppm combined error, or about 310 ppm each for equal theory and detector budgets. These are design diagnostics until translated to the chosen microbridge.",
+      "power_or_sensitivity_calculation": "Use the smallest preregistered eigenvalue ratio over the held-out frequency window as the effect size. Require three-sigma lower confidence above zero and 90% power at alpha=0.05 after the full errors-in-variables covariance, while reciprocity and passivity controls remain inside their calibrated bands. If the chosen device cannot reach 438 ppm for detection, predeclare the weaker one-percent rank-reduction test instead.",
+      "build_go_no_go": {
+        "go": "Independent charge and heat drives have a full-rank calibrated actuation matrix; electrical and thermal detector bandwidths overlap the declared window; thermal cross-talk and contact leakage remain below the selected 0.279% or 438 ppm objective; and simulation plus standards recover a known rank-two control with 90% power.",
+        "noGo": "The drive matrix is rank deficient, thermal lag destroys phase recovery, energy-current convention cannot be controlled, or calibrated leakage exceeds the smaller singular direction. Stop rank interpretation and retain only instrument bounds."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "A stable second direction validates multichannel transport and informs thermoelectric or hydrodynamic model design.",
+        "newPhysicsGo": "Escalation requires a replicated response component outside the complete Kubo, contact, screening-carrier, Ward/KMS and detector model—not rank two by itself.",
+        "noGo": "A rank-one result closes the declared operational window only; a nuisance-dominated result improves calibration without deciding the carrier theory."
+      },
+      "replication_rule": "Repeat the frozen protocol on a second microbridge from the same batch and one independent batch or platform. The second-batch analysis must reuse the source basis, energy-current convention, frequency window and thresholds fixed on the first without target-specific recalibration beyond declared standards.",
+      "data_metadata_and_code_release_contract": "Release raw drive and current time streams, geometry and contact maps, thermometer/heater calibrations, environmental logs, response and covariance matrices, source-basis transformations, energy-current convention, KPM/typicality comparison inputs, inference code and frozen thresholds with checksums.",
+      "claim_status_propagation": {
+        "positive": "Advance the operational portion of OT-008 and constrain OT-016/OT-047 with the measured rank window; do not infer a universal H2(R) carrier or Spin symmetry.",
+        "null": "Close the rank-two claim only for the declared window and device; update contact, screening or low-frequency limits according to the winning null model.",
+        "ambiguous": "Leave OT-008 gated and record which calibration or convention direction overlaps the putative second mode."
+      }
+    },
+    {
+      "id": "EX-021",
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md",
+        "corpus/programmes/admissibility/admissibility_115_the_full_gauge_dictionary_turns_the_sixth_coordinate_into_a_declared_slice.md",
+        "corpus/programmes/admissibility/admissibility_117_an_odd_resonance_moment_can_supply_the_missing_sign.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "detector_transfer_function": "Generate gauge-complete complex helicity amplitudes on common phase-space points, fold them through the response/acceptance matrix and mass resolution, and expose the resulting quadratic coefficient matrix plus odd sideband moment. The 27 signed settings are simulation templates, not laboratory controls; observed data enter one frozen likelihood with charged, neutral and sideband categories.",
+      "nuisance_and_covariance_model": "Profile renormalization and factorization scales, PDFs, matching and running, total width and branching assumptions, continuum phases, absorptive parts, top/bottom masses, direct gauge coefficients, CKM and form factors, background slope, odd acceptance leakage, mass resolution, category migration and finite Monte Carlo statistics. Preserve the exact (2,1,-1) electroweak redistribution null when the unrestricted EFT is fitted.",
+      "predicted_signal_scale": "No physical event-yield forecast is admissible before the source-complete amplitudes are computed. The pre-data design scale is algebraic: 19 of 27 templates fit the ten quadratic coefficients, nine pair-plane contrasts audit closure and eight three-source corners remain held out; a surviving second singular shape and odd interference moment must exceed their propagated theory-plus-detector uncertainty.",
+      "power_or_sensitivity_calculation": "After amplitude and detector folding but before observed-data unblinding, run Asimov and toy likelihoods over the declared mass/lifetime grid. Require at least 90% power at alpha=0.05 to reject the weak-quotient rank-one null at the preregistered non-collinearity threshold while all eight held-out corners and Ward residuals pass. Report exclusion-only regions where sign identification lacks power.",
+      "build_go_no_go": {
+        "go": "The full gauge-complete amplitude passes Ward checks, the 27-setting quadratic closure and held-out corners; a non-collinear signed shape survives detector folding; public likelihood inputs or a reproducible recast exist; and the power study clears the declared region before data unblinding.",
+        "noGo": "The second shape disappears under source completion, violates Ward or held-out closure, is erased by detector folding, or no public likelihood supports the covariance. Retain the rank-one cross-scale constraint and stop the sixth-coordinate claim."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "A positive result establishes an identifiable EFT coordinate combination and a reusable source-complete collider/meson likelihood.",
+        "newPhysicsGo": "Only observed data inconsistent with the complete seven-coordinate EFT, widths, running, hadronic and detector nuisance model and replicated in an independent channel may enter a new-physics escalation.",
+        "noGo": "Failure of the second shape closes this detector route without falsifying the EFT or the broader admissibility programme."
+      },
+      "replication_rule": "Validate the fitted kernel on all eight held-out simulation corners, then require an independent physical category or experiment—such as a separately reconstructed charged/neutral mode or meson channel—to reproduce the inferred invariant combination with the basis and thresholds frozen.",
+      "data_metadata_and_code_release_contract": "Release model/UFO and parameter-card versions, amplitude and Ward-test code, phase-space seeds, all 27 template weights, response matrices, sideband definitions, covariance and nuisance priors, public-data identifiers, likelihood/recast code, held-out labels and frozen decision configuration under checksums.",
+      "claim_status_propagation": {
+        "positive": "Advance OT-048 for the declared process and constrain OT-047 with the measured invariant combination; preserve the unrestricted EFT null and do not infer ultraviolet origin labels.",
+        "null": "Close the proposed sixth-coordinate detector route if source completion restores the weak quotient; retain the resulting cross-scale likelihood and exact null structure.",
+        "ambiguous": "Keep OT-048 open, report whether theory, detector or public-likelihood covariance dominates, and forbid sign or rank promotion."
+      }
+    }
+  ]
+}

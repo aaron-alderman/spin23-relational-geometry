@@ -1,0 +1,1607 @@
+{
+  "schema": "frontier.experiment-programmes/2",
+  "date": "2026-10-25",
+  "authority": "EXIT-03 programme surface. Direct v1 fields are migrated without changing their scientific meaning; null v2 fields require new experiment-specific judgment and cannot be filled by generic prose.",
+  "sourceRef": "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+  "overrideRef": "corpus/programmes/frontier-physics-targets/frontier_experiment_programme_overrides_v2.json",
+  "migration": {
+    "direct": {
+      "hypothesis": "hypothesis",
+      "strongest_conventional_null": "nullValue",
+      "carrier_and_preparation": "platform",
+      "controlled_variables": "intervention",
+      "observables": "record",
+      "calibration_and_reference_channels": "controls"
+    },
+    "structured": {
+      "blind_or_preregistered_analysis_rule": [
+        "analysis",
+        "stopRule"
+      ],
+      "bridge_go_no_go": [
+        "success",
+        "stopRule",
+        "nullValue"
+      ],
+      "positive_null_ambiguous_outcome_branches": [
+        "success",
+        "nullValue",
+        "explicit hold branch"
+      ]
+    },
+    "requiresNewJudgment": [
+      "detector_transfer_function",
+      "nuisance_and_covariance_model",
+      "predicted_signal_scale",
+      "power_or_sensitivity_calculation",
+      "build_go_no_go",
+      "physics_go_no_go",
+      "replication_rule",
+      "data_metadata_and_code_release_contract",
+      "claim_status_propagation"
+    ]
+  },
+  "programmes": [
+    {
+      "id": "EX-001",
+      "sourceExperimentId": "EX-001",
+      "frontierAreaId": "FA-01",
+      "topicIds": [
+        "OT-033",
+        "OT-035"
+      ],
+      "detectorIds": [
+        "DET-001",
+        "DET-002"
+      ],
+      "title": "Pinned-kernel reachability tournament",
+      "mode": "computational",
+      "readiness": "ready_now",
+      "estimate": "2–4 weeks; one proof engineer plus one independent reproducer",
+      "hypothesis": "Kernel elaboration and constructor closure identify a strict reachable image whose failures are stable under harmless presentation changes.",
+      "strongest_conventional_null": "Reachability depends materially on undeclared environment state or resource limits.",
+      "carrier_and_preparation": "A pinned Lean toolchain and a stratified sample of real declarations, synthetic edge cases and deliberately unreachable constructor trees.",
+      "controlled_variables": [
+        "Vary constructor depth, arity and closure while holding the target type fixed",
+        "Blind the analyst to reachable versus adversarial cases",
+        "Repeat under pinned transparency and compact-constructor policies"
+      ],
+      "observables": [
+        "Elaboration outcome and inferred type",
+        "Minimal failed constraint",
+        "Reachability certificate or counterexample",
+        "Runtime and memory"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Alpha renaming",
+        "Literal expansion",
+        "Known overflow witnesses",
+        "Tree Euler and closure identities"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Estimate reachable occupancy by stratum, then require every classifier error to reduce to a named missing constructor, environment dependency or timeout class.",
+        "stoppingRule": "Stop promotion if two pinned rebuilds disagree on any held-out declaration."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "A held-out reachability sieve predicts all outcomes and emits checkable witnesses.",
+        "noGo": "Stop promotion if two pinned rebuilds disagree on any held-out declaration.",
+        "conventionalNull": "Reachability depends materially on undeclared environment state or resource limits."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "A held-out reachability sieve predicts all outcomes and emits checkable witnesses.",
+        "null": "Reachability depends materially on undeclared environment state or resource limits.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-002",
+      "sourceExperimentId": "EX-002",
+      "frontierAreaId": "FA-02",
+      "topicIds": [
+        "OT-033"
+      ],
+      "detectorIds": [
+        "DET-001",
+        "DET-002"
+      ],
+      "title": "Normalization-orbit stability challenge",
+      "mode": "computational",
+      "readiness": "ready_now",
+      "estimate": "4–8 weeks; proof engineer and data engineer",
+      "hypothesis": "A canonical address is constant on declared equivalence orbits while retaining distinctions needed by later detectors.",
+      "strongest_conventional_null": "No single policy is stable across source-native families.",
+      "carrier_and_preparation": "The same declaration corpus expanded into equivalence families by alpha, beta, zeta, metadata, notation and definitional rewrites.",
+      "controlled_variables": [
+        "Generate 20–100 semantics-preserving variants per declaration",
+        "Change normalization policy one rule at a time",
+        "Insert non-equivalent near neighbours with matched surface statistics"
+      ],
+      "observables": [
+        "Raw and normalized terms",
+        "Address mobility matrix",
+        "Collision and split rates",
+        "Proof of equivalence or non-equivalence"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Identity transformation",
+        "Known beta/zeta pairs",
+        "Adversarial near-equivalent terms",
+        "Cross-version rebuild"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Treat normalization as a quotient experiment: measure false splits within orbits and false merges between orbits with bootstrap intervals by declaration family.",
+        "stoppingRule": "Retain a multi-chart atlas if global canonicalization requires erasing a detector-relevant distinction."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "A preregistered policy achieves zero false merges and bounded, explained false splits on held-out families.",
+        "noGo": "Retain a multi-chart atlas if global canonicalization requires erasing a detector-relevant distinction.",
+        "conventionalNull": "No single policy is stable across source-native families."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "A preregistered policy achieves zero false merges and bounded, explained false splits on held-out families.",
+        "null": "No single policy is stable across source-native families.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-003",
+      "sourceExperimentId": "EX-003",
+      "frontierAreaId": "FA-03",
+      "topicIds": [
+        "OT-001",
+        "OT-010",
+        "OT-019",
+        "OT-021",
+        "OT-033",
+        "OT-034",
+        "OT-035",
+        "OT-043",
+        "OT-044",
+        "OT-048"
+      ],
+      "detectorIds": [
+        "DET-002",
+        "DET-003",
+        "DET-026",
+        "DET-029",
+        "DET-030",
+        "DET-036"
+      ],
+      "title": "Blind detector-fibre identification challenge",
+      "mode": "computational_hybrid",
+      "readiness": "ready_now",
+      "estimate": "6–10 weeks; modelling, statistics and domain-review trio",
+      "hypothesis": "Adaptive detector enrichment separates mechanisms at finite cost, or exposes an exact residual equivalence class.",
+      "strongest_conventional_null": "A nontrivial model pair remains exactly record-equivalent.",
+      "carrier_and_preparation": "A benchmark mixing real declaration trees, driven-oscillator records, five-coordinate incidence records and synthetic mechanism pairs with controlled collisions.",
+      "controlled_variables": [
+        "Reveal label, role, rooted depth, phase, sideband and intervention channels sequentially",
+        "Hold out complete mechanism families rather than random rows",
+        "Adversarially search for record-equivalent parameter pairs"
+      ],
+      "observables": [
+        "Separation depth",
+        "Efficient Fisher singular values",
+        "Global equivalence-class diameter",
+        "Cost per acquired channel"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Known tangent-degenerate pairs",
+        "AZ-057 three-mechanism closed benchmark",
+        "Label permutations",
+        "Noise and calibration folds"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Plot information gained per marginal cost and certify global injectivity only after interval or adversarial optimization over nuisance parameters.",
+        "stoppingRule": "Do not add more detectors when the residual equality is algebraic rather than noise-limited."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "Every declared pair is separated on held-out interventions or assigned to an explicit quotient class.",
+        "noGo": "Do not add more detectors when the residual equality is algebraic rather than noise-limited.",
+        "conventionalNull": "A nontrivial model pair remains exactly record-equivalent."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "Every declared pair is separated on held-out interventions or assigned to an explicit quotient class.",
+        "null": "A nontrivial model pair remains exactly record-equivalent.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-004",
+      "sourceExperimentId": "EX-004",
+      "frontierAreaId": "FA-04",
+      "topicIds": [
+        "OT-008",
+        "OT-047"
+      ],
+      "detectorIds": [
+        "DET-004",
+        "DET-019"
+      ],
+      "title": "Two-port positive-response cone tomography",
+      "mode": "hybrid",
+      "readiness": "ready_after_design",
+      "estimate": "3–6 months on an existing microwave or transport platform",
+      "hypothesis": "A source-native 2×2 response remains positive and genuinely rank two over a controlled frequency window.",
+      "strongest_conventional_null": "Every controlled window becomes rank one or scheme-sheared.",
+      "carrier_and_preparation": "A passive two-port microwave network first, followed by a common-sample particle/energy response implementation.",
+      "controlled_variables": [
+        "Drive each port independently and coherently",
+        "Sweep frequency, temperature and relative phase",
+        "Change the declared source basis without refitting physics"
+      ],
+      "observables": [
+        "Complex 2×2 transfer or Kubo matrix",
+        "Eigenvalues and determinant",
+        "Cross-spectrum phase",
+        "Calibration covariance"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Passive standards",
+        "Rank-one synthetic channel",
+        "Source-basis congruence",
+        "Energy-gauge repartition"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Use covariance-aware cone projection; test whether the smaller eigenvalue remains positive after de-embedding and order-of-limits checks.",
+        "stoppingRule": "Stop physical interpretation if passivity violations exceed the calibrated systematic envelope."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "The second response direction survives calibration, basis and low-frequency scaling.",
+        "noGo": "Stop physical interpretation if passivity violations exceed the calibrated systematic envelope.",
+        "conventionalNull": "Every controlled window becomes rank one or scheme-sheared."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "The second response direction survives calibration, basis and low-frequency scaling.",
+        "null": "Every controlled window becomes rank one or scheme-sheared.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-005",
+      "sourceExperimentId": "EX-005",
+      "frontierAreaId": "FA-05",
+      "topicIds": [
+        "OT-003",
+        "OT-039"
+      ],
+      "detectorIds": [
+        "DET-004",
+        "DET-005",
+        "DET-007",
+        "DET-012",
+        "DET-015",
+        "DET-017"
+      ],
+      "title": "Reversal-calibrated orientation lift",
+      "mode": "laboratory",
+      "readiness": "ready_after_design",
+      "estimate": "6–12 months using an integrated-photonic or microwave platform",
+      "hypothesis": "An oriented phase changes sign under physical reversal while even overlap and attenuation do not.",
+      "strongest_conventional_null": "The signal is removable by basis phase or reproduced by differential loss.",
+      "carrier_and_preparation": "A three-mode interferometric loop with an independently calibrated birefringent, chiral or boundary reference axis.",
+      "controlled_variables": [
+        "Run forward and reversed loops",
+        "Flip the external orientation reference",
+        "Remove the reference element while preserving the loop"
+      ],
+      "observables": [
+        "Complex output amplitudes",
+        "Wilson-loop or process matrix",
+        "Even intensity overlap",
+        "Odd phase contrast"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Reciprocal phase shifter",
+        "Matched insertion loss",
+        "Basis relabelling",
+        "Reference-off device"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Fit even and odd channels jointly; the claimed lift is the interaction term between loop reversal and reference reversal, not a fitted absolute phase.",
+        "stoppingRule": "Reject the orientation claim if the reference cannot be calibrated without selected-state data."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "The odd contrast reverses twice as predicted and is stable to gauge choice.",
+        "noGo": "Reject the orientation claim if the reference cannot be calibrated without selected-state data.",
+        "conventionalNull": "The signal is removable by basis phase or reproduced by differential loss."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "The odd contrast reverses twice as predicted and is stable to gauge choice.",
+        "null": "The signal is removable by basis phase or reproduced by differential loss.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [
+        "https://doi.org/10.1038/s41467-025-58794-3",
+        "https://doi.org/10.1038/s41566-022-00976-2"
+      ],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-006",
+      "sourceExperimentId": "EX-006",
+      "frontierAreaId": "FA-06",
+      "topicIds": [
+        "OT-002",
+        "OT-009",
+        "OT-010",
+        "OT-012",
+        "OT-013",
+        "OT-037",
+        "OT-043",
+        "OT-044"
+      ],
+      "detectorIds": [
+        "DET-004",
+        "DET-005",
+        "DET-006",
+        "DET-013",
+        "DET-014"
+      ],
+      "title": "Three-mode projector-return and coherent-holonomy chip",
+      "mode": "laboratory",
+      "readiness": "ready_after_design",
+      "estimate": "9–18 months including foundry cycle",
+      "hypothesis": "The spectral projector returns after a closed control loop while the coherent frame acquires a nontrivial, order-sensitive holonomy.",
+      "strongest_conventional_null": "A static or non-Hermitian nuisance model predicts every record.",
+      "carrier_and_preparation": "Silicon-nitride or femtosecond-written waveguides implementing a dark three-mode subspace with programmable coupling path.",
+      "controlled_variables": [
+        "Fabricate forward, reverse and path-order-swapped coupling profiles",
+        "Inject a tomographically complete input set",
+        "Sweep wavelength and deliberately add calibrated splitting and loss"
+      ],
+      "observables": [
+        "Full complex 3×3 transfer matrix",
+        "Projector distance",
+        "Process singular values",
+        "Leakage and insertion loss"
+      ],
+      "detector_transfer_function": "Calibrate the complex input-to-output scattering matrix against a bright reference arm and port standards, de-embed coupling and propagation loss, then restrict the polar-decomposed transfer to the independently reconstructed dark projector. Report projector chord distance, polar-unitary angle, log singular-value ratio and surviving unnormalised power; never normalize away the loss channel.",
+      "calibration_and_reference_channels": [
+        "Zero-area loop",
+        "Dynamical-phase echo",
+        "Static splitter",
+        "Differential-loss mimic"
+      ],
+      "nuisance_and_covariance_model": "Jointly propagate input-state preparation, coherent receiver gain/phase, wavelength drift, port cross-talk, common and differential loss, residual splitting, lithographic coupling errors and path-end error. Fit geometric, static-splitting and loss-only models to the same complex data, with calibration covariance shared across forward, reverse and path-order-swapped devices.",
+      "predicted_signal_scale": "The reference design requires adiabatic error at most 0.02, relative splitting and differential-loss budgets at most 0.05, projector closure distance at most 0.01 and endpoint error about 0.01512 rad or less. The illustrative coupled-mode witness has kappa_0 L=240, dark-power retention 0.999689, log singular-value ratio 0.01174 and phase-blind quarter-turn fidelity 0.999983; these are design targets, not fabricated-device forecasts.",
+      "power_or_sensitivity_calculation": "Before fabrication, inject the full calibrated covariance into a full-wave tolerance ensemble and require at least 90% power at one-sided alpha=0.05 to distinguish the reversed polar-unitary angle from both the static-splitting and differential-loss models while separately passing the 0.01 projector-closure and 0.05 nonunitarity budgets. For a contraction subtest, use the declared K>[z sigma/((1-m) theta_0)]^2 inequality rather than repetitions chosen after inspection.",
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Blindly compare geometric, static-splitting and loss models using held-out wavelengths and reversal data.",
+        "stoppingRule": "Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin."
+      },
+      "build_go_no_go": {
+        "go": "A positive-coupling, phase-assisted or two-module full-wave layout realizes kappa_0 L at least 207.7968; at least 95% of the preregistered fabrication/noise ensemble passes closure, dark-space retention, reference visibility and the 0.05 splitting/loss budgets; and the power calculation clears 90% before mask release.",
+        "noGo": "No signed-effective-coupling or positive-path layout retains a nonempty robustness wedge, reference visibility is insufficient to distinguish orientation, or the tolerance ensemble fails the preregistered pass fraction. Close the passive strict-quarter-turn build and move to the fast-holonomy or actively modulated branch."
+      },
+      "bridge_go_no_go": {
+        "go": "Projector closure and reversed noncommuting transport survive independent loss calibration.",
+        "noGo": "Do not fabricate until full-wave tolerancing leaves a resolvable process-matrix margin.",
+        "conventionalNull": "A static or non-Hermitian nuisance model predicts every record."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "A passing device establishes programmable projector return with coherent noncommuting transport and supplies a calibrated platform for selector experiments.",
+        "newPhysicsGo": "None from this emulator alone. Escalation requires the same unexplained residual on an independently fabricated carrier after the complete geometric, static, loss, calibration and detector models fail.",
+        "noGo": "A nuisance model spans the full record or the apparent sign disappears without the chosen reference; retain the result as a detector or control-engineering bound."
+      },
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "Projector closure and reversed noncommuting transport survive independent loss calibration.",
+        "null": "A static or non-Hermitian nuisance model predicts every record.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": "Repeat the blind protocol on a second fabrication run and on at least one independently routed forward/reverse device pair. Freeze the de-embedding and reference convention on the first run; the second run must pass the same absolute budgets without refitting their thresholds.",
+      "data_metadata_and_code_release_contract": "Release masks or layout parameters, measured coupling and loss calibration, raw coherent port sweeps, reference-arm records, environmental metadata, covariance estimates, de-embedding code, full-wave model, tolerance draws, blinded labels and the frozen analysis configuration under one checksum manifest.",
+      "claim_status_propagation": {
+        "positive": "Advance OT-002 and the transport portion of OT-037 to experimentally demonstrated on this carrier; leave OT-003, fundamental symmetry and spontaneous-selection claims open.",
+        "null": "Close the tested passive layout and update OT-002/OT-037 to the measured nuisance or feasibility boundary; do not propagate the null to unrelated carriers.",
+        "ambiguous": "Retain the equivalence class in OT-001 and keep every mechanism claim unpromoted until the reference or covariance deficit is removed."
+      },
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md",
+        "corpus/programmes/admissibility/admissibility_61_photonic_selector_chip_coupled_mode_preflight.md"
+      ],
+      "precedents": [
+        "https://doi.org/10.1038/s41467-025-58794-3",
+        "https://doi.org/10.1038/s41467-025-62481-8"
+      ],
+      "authoredOverridesPreserved": [
+        "detector_transfer_function",
+        "nuisance_and_covariance_model",
+        "predicted_signal_scale",
+        "power_or_sensitivity_calculation",
+        "build_go_no_go",
+        "physics_go_no_go",
+        "replication_rule",
+        "data_metadata_and_code_release_contract",
+        "claim_status_propagation"
+      ]
+    },
+    {
+      "id": "EX-007",
+      "sourceExperimentId": "EX-007",
+      "frontierAreaId": "FA-07",
+      "topicIds": [
+        "OT-003",
+        "OT-009",
+        "OT-013",
+        "OT-022",
+        "OT-037",
+        "OT-039"
+      ],
+      "detectorIds": [
+        "DET-004",
+        "DET-006",
+        "DET-007",
+        "DET-008",
+        "DET-011",
+        "DET-017",
+        "DET-025"
+      ],
+      "title": "Selector-on/off basin tomography",
+      "mode": "laboratory",
+      "readiness": "ready_after_design",
+      "estimate": "9–18 months; can share EX-006 hardware",
+      "hypothesis": "A carrier-native Y changes the fixed point and contraction tangent rather than merely relabelling a preselected outcome.",
+      "strongest_conventional_null": "The same contraction occurs with Y absent or after loss matching.",
+      "carrier_and_preparation": "The holonomy chip or modular acoustic loop extended by a separately addressable dissipative or anisotropic selector segment Y.",
+      "controlled_variables": [
+        "Prepare at least twelve initial states spanning the accessible manifold",
+        "Toggle Y on/off and reverse its axis",
+        "Match total loss and cycle time across conditions"
+      ],
+      "observables": [
+        "Cycle-by-cycle state tomography",
+        "Return-map Jacobian",
+        "Fixed-point location",
+        "Escape and convergence times"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Loss-matched dummy segment",
+        "Y inferred only from independent calibration",
+        "Multiple initial states",
+        "Axis reversal"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Fit a common generative return map with Y as a preregistered intervention and compare contraction spectra, not endpoint images alone.",
+        "stoppingRule": "Stop if Y can only be defined retrospectively from the selected state."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "Y produces the predicted fixed-point shift and subunit tangent eigenvalue across initial states.",
+        "noGo": "Stop if Y can only be defined retrospectively from the selected state.",
+        "conventionalNull": "The same contraction occurs with Y absent or after loss matching."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "Y produces the predicted fixed-point shift and subunit tangent eigenvalue across initial states.",
+        "null": "The same contraction occurs with Y absent or after loss matching.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-008",
+      "sourceExperimentId": "EX-008",
+      "frontierAreaId": "FA-08",
+      "topicIds": [
+        "OT-004",
+        "OT-043"
+      ],
+      "detectorIds": [
+        "DET-008",
+        "DET-009"
+      ],
+      "title": "Complete-outcome instrument tomography",
+      "mode": "laboratory",
+      "readiness": "ready_now_on_existing_hardware",
+      "estimate": "6–12 months on a superconducting qutrit or continuously monitored qubit",
+      "hypothesis": "Apparent attraction can be separated into unconditional channel dynamics and record-conditioned trajectory branches.",
+      "strongest_conventional_null": "Only postselected branches contract while the unconditional manifold remains neutral.",
+      "carrier_and_preparation": "A three-level superconducting circuit with single-shot IQ readout, real-time feedback and calibrated missed-record efficiency.",
+      "controlled_variables": [
+        "Vary measurement strength and efficiency",
+        "Run feedback on/off",
+        "Retain every outcome including null and discarded records"
+      ],
+      "observables": [
+        "Raw time-tagged IQ stream",
+        "Conditioned trajectories",
+        "Unconditional density matrix",
+        "Reconstructed quantum instrument"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Detector tomography",
+        "Feedback-disabled channel",
+        "Artificial record erasure",
+        "State-preparation cross-validation"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Reconstruct completely positive outcome maps, sum them to the unconditional channel and propagate efficiency uncertainty.",
+        "stoppingRule": "No selection claim is admitted if unrecorded outcomes can span the effect."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "Conditioned and unconditional maps are separately identifiable and predict held-out sequences.",
+        "noGo": "No selection claim is admitted if unrecorded outcomes can span the effect.",
+        "conventionalNull": "Only postselected branches contract while the unconditional manifold remains neutral."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "Conditioned and unconditional maps are separately identifiable and predict held-out sequences.",
+        "null": "Only postselected branches contract while the unconditional manifold remains neutral.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [
+        "https://doi.org/10.1038/s41586-019-1287-z",
+        "https://doi.org/10.1038/s42005-024-01790-8"
+      ],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-009",
+      "sourceExperimentId": "EX-009",
+      "frontierAreaId": "FA-09",
+      "topicIds": [
+        "OT-005",
+        "OT-036"
+      ],
+      "detectorIds": [
+        "DET-009",
+        "DET-010"
+      ],
+      "title": "Matched-contraction stochastic energetics trial",
+      "mode": "laboratory",
+      "readiness": "ready_now",
+      "estimate": "4–8 months on an optical-feedback trap",
+      "hypothesis": "Protocols with matched endpoint contraction can have measurably different heat, work, activity and information-reset costs.",
+      "strongest_conventional_null": "Differences vanish after complete apparatus accounting.",
+      "carrier_and_preparation": "A 1–2 μm colloidal bead in a programmable double-well optical or feedback potential.",
+      "controlled_variables": [
+        "Implement equilibrium relaxation, hidden-cycle drive and measurement-feedback protocols",
+        "Match endpoint error and completion time",
+        "Sweep protocol duration"
+      ],
+      "observables": [
+        "Full bead trajectory",
+        "Calibrated potential",
+        "Stochastic work and heat",
+        "Jump activity and record-reset bits"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Quasistatic Landauer erasure",
+        "No-feedback cycle",
+        "Time-reversed protocol",
+        "Trap-stiffness calibration"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Infer trajectory-level energetics before comparing equal-precision/equal-speed frontiers; keep controller energy as a separate ledger.",
+        "stoppingRule": "Do not infer cost from convergence rate alone."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "Distinct protocols occupy separated precision-speed-cost surfaces despite equal contraction.",
+        "noGo": "Do not infer cost from convergence rate alone.",
+        "conventionalNull": "Differences vanish after complete apparatus accounting."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "Distinct protocols occupy separated precision-speed-cost surfaces despite equal contraction.",
+        "null": "Differences vanish after complete apparatus accounting.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [
+        "https://doi.org/10.1038/nature10872",
+        "https://doi.org/10.1038/s41467-018-03686-y"
+      ],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-010",
+      "sourceExperimentId": "EX-010",
+      "frontierAreaId": "FA-10",
+      "topicIds": [
+        "OT-010",
+        "OT-020",
+        "OT-023",
+        "OT-043"
+      ],
+      "detectorIds": [
+        "DET-007",
+        "DET-008",
+        "DET-011",
+        "DET-013"
+      ],
+      "title": "Rare-event and hysteresis trajectory campaign",
+      "mode": "laboratory",
+      "readiness": "ready_now",
+      "estimate": "6–12 months; long unattended acquisition required",
+      "hypothesis": "Waiting-time tails, sweep hysteresis and reversal asymmetry distinguish metastable selection from a unique deterministic attractor.",
+      "strongest_conventional_null": "Observed memory is detector lag or ordinary bandwidth filtering.",
+      "carrier_and_preparation": "An injection-locked VCSEL, Kerr resonator or nanomagnetic element with tunable bistability and single-event readout.",
+      "controlled_variables": [
+        "Sweep control in both directions at logarithmically spaced rates",
+        "Hold inside the bistable region for long dwell windows",
+        "Apply calibrated weak perturbation pulses"
+      ],
+      "observables": [
+        "Every switching time",
+        "Full drive and output trace",
+        "Residence-time distributions",
+        "Ringdown and sidebands"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Noise-floor injection",
+        "Monostable operating points",
+        "Randomized sweep order",
+        "Detector-dead-time audit"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Fit survival curves and large-deviation rate functions jointly; reserve late trajectories for posterior predictive tests.",
+        "stoppingRule": "Stop adding dwell time once confidence intervals are dominated by nonstationary drift rather than rare-event count."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "One mechanistic landscape predicts rates, hysteresis width and perturbation response across sweeps.",
+        "noGo": "Stop adding dwell time once confidence intervals are dominated by nonstationary drift rather than rare-event count.",
+        "conventionalNull": "Observed memory is detector lag or ordinary bandwidth filtering."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "One mechanistic landscape predicts rates, hysteresis width and perturbation response across sweeps.",
+        "null": "Observed memory is detector lag or ordinary bandwidth filtering.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-011",
+      "sourceExperimentId": "EX-011",
+      "frontierAreaId": "FA-11",
+      "topicIds": [
+        "OT-012",
+        "OT-013",
+        "OT-014",
+        "OT-036",
+        "OT-041"
+      ],
+      "detectorIds": [
+        "DET-006",
+        "DET-013",
+        "DET-014",
+        "DET-022",
+        "DET-023"
+      ],
+      "title": "Tunable finite-chain pole-to-cut spectrometer",
+      "mode": "laboratory",
+      "readiness": "ready_now",
+      "estimate": "4–9 months with microwave or acoustic resonators",
+      "hypothesis": "Bound states, edge collisions, resonances, phase winding and time delay form one branch-consistent ledger on the same carrier.",
+      "strongest_conventional_null": "Crossings depend on sampling, fit order or Riemann-sheet convention.",
+      "carrier_and_preparation": "A 10–40 site coupled-resonator chain with one tunable side-coupled defect and access to both end-port scattering and local density of states.",
+      "controlled_variables": [
+        "Tune defect frequency and coupling through both certified pole collisions",
+        "Repeat for several chain lengths and losses",
+        "Excite locally and from both scattering ports"
+      ],
+      "observables": [
+        "Complex S-matrix",
+        "Local spectra",
+        "Ringdown",
+        "Pole fits and phase winding"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Disconnected defect",
+        "Uniform chain",
+        "Known rank-one impurity",
+        "Synthetic branch-choice challenge"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Fit a causal rational model globally, continue poles with uncertainty and compare the finite-band Levinson ledger before extrapolating length.",
+        "stoppingRule": "Freeze the result at the finite carrier if loss prevents stable continuation."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "Every spectral stratum and both collision laws agree without changing the model family.",
+        "noGo": "Freeze the result at the finite carrier if loss prevents stable continuation.",
+        "conventionalNull": "Crossings depend on sampling, fit order or Riemann-sheet convention."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "Every spectral stratum and both collision laws agree without changing the model family.",
+        "null": "Crossings depend on sampling, fit order or Riemann-sheet convention.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-012",
+      "sourceExperimentId": "EX-012",
+      "frontierAreaId": "FA-12",
+      "topicIds": [
+        "OT-006",
+        "OT-007",
+        "OT-011"
+      ],
+      "detectorIds": [
+        "DET-012",
+        "DET-013",
+        "DET-014",
+        "DET-015",
+        "DET-016",
+        "DET-017",
+        "DET-018",
+        "DET-029"
+      ],
+      "title": "Same-film tensor-to-Casimir closure",
+      "mode": "laboratory",
+      "readiness": "multi_stage",
+      "estimate": "18–36 months across materials, transport, optics and force metrology teams",
+      "hypothesis": "Broadband causal response inferred without force data predicts a differential Casimir force or torque after all ordinary nuisances are propagated.",
+      "strongest_conventional_null": "Optical-tail, patch, roughness or magnetic freedom spans the effect.",
+      "carrier_and_preparation": "One batch of anisotropic magnetic films split into witness coupons and a force/torque device, with common growth and metrology records.",
+      "controlled_variables": [
+        "Measure Hall, Seebeck, Nernst and magneto-optical response versus temperature, field and angle",
+        "Freeze a causal tensor posterior",
+        "Measure angle- and distance-dependent parallel-minus-antiparallel force/torque"
+      ],
+      "observables": [
+        "Transport and ellipsometry tensors",
+        "Film thickness, roughness and domains",
+        "Force/torque curves",
+        "Patch and magnetic backgrounds"
+      ],
+      "detector_transfer_function": "Map raw transport voltages, currents and temperature gradients plus ellipsometric and magneto-optic readouts into one complex causal conductivity tensor with shared thickness/domain calibration. Freeze its imaginary-frequency posterior. Separately map calibrated resonator frequency shift or torsion angle into force gradient or torque versus distance and orientation, including separation and angular response; the force record may not update the tensor posterior.",
+      "calibration_and_reference_channels": [
+        "Nonmagnetic sibling film",
+        "Orientation reversal",
+        "Multiple separations",
+        "Blind force analysis and dummy spacing scans"
+      ],
+      "nuisance_and_covariance_model": "Carry same-batch and coupon-to-device variation, thickness, roughness spectrum, magnetic domains, temperature, field, optical extrapolation, Kramers-Kronig completion, absolute separation, patch-potential maps, electrostatic drift, ordinary magnetic force, oscillator calibration and temporal drift in one hierarchical covariance. Compare the frozen Lifshitz prediction with patch, roughness and magnetic alternatives and their mixtures.",
+      "predicted_signal_scale": "No admissible force scale exists until the same-film off-diagonal tensor reaches the relevant band. For 0.1-1 micrometre separation the characteristic band is about 24-239 THz or 0.099-0.987 eV, whereas the retained Hall data end at 1.5 THz. The first quantitative prediction is therefore the posterior differential curve and its covariance after OT-006, not an extrapolated headline force.",
+      "power_or_sensitivity_calculation": "Before force-device fabrication, propagate the frozen tensor and full nuisance covariance to the planned distance/angle grid. Require at least 90% power at alpha=0.05 for the parallel-minus-antiparallel or orientation-odd curve against the union of patch, roughness and ordinary magnetic models, with at least three independently calibrated separations contributing. If the covariance envelope spans the prediction, stop at spectroscopy.",
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Propagate the pre-force tensor posterior through Lifshitz theory with a full nuisance covariance; prohibit response refitting to force data.",
+        "stoppingRule": "Do not proceed to force fabrication until OT-006 cross-channel prediction passes on held-out films."
+      },
+      "build_go_no_go": {
+        "go": "One batch supplies overlapping complex sigma_xx and sigma_xy through at least 0.1-1 eV in both magnetic states; held-out transport/magneto-optic channels pass the frozen causal tensor; and the no-refit differential prediction exceeds the complete planned systematic covariance with the preregistered power.",
+        "noGo": "The same-film tensor cannot be closed, allowed causal tails dominate, or the predicted differential remains inside the complete force-systematics envelope. Do not build or interpret the force stage."
+      },
+      "bridge_go_no_go": {
+        "go": "The preregistered differential curve is recovered with nuisance alternatives disfavoured.",
+        "noGo": "Do not proceed to force fabrication until OT-006 cross-channel prediction passes on held-out films.",
+        "conventionalNull": "Optical-tail, patch, roughness or magnetic freedom spans the effect."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "Agreement validates a same-carrier response-to-boundary-force pipeline and improves materials and force metrology.",
+        "newPhysicsGo": "Only a replicated residual with the same distance/orientation signature, surviving independent tensor measurement and complete patch, roughness, magnetic, separation and drift models, may enter a new-physics lane.",
+        "noGo": "Agreement with a conventional nuisance or failure of the tensor closure updates the materials model; it is not evidence against admissibility or for new physics."
+      },
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "The preregistered differential curve is recovered with nuisance alternatives disfavoured.",
+        "null": "Optical-tail, patch, roughness or magnetic freedom spans the effect.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": "Repeat tensor closure on a second deposition batch before unblinding force data, then reproduce any force residual on an independently fabricated device or apparatus with separately measured patches and separation calibration. Shared growth or analysis code must be recorded as correlated, not counted as independent replication.",
+      "data_metadata_and_code_release_contract": "Release raw transport, thermal-gradient, ellipsometry, magneto-optic and force/torque streams; specimen lineage; thickness, roughness, domain and patch maps; temperature/field/distance logs; calibration and covariance files; causal-tensor posterior samples; Lifshitz and nuisance code; blind labels; and frozen decision configuration with checksums.",
+      "claim_status_propagation": {
+        "positive": "Close OT-006 for the measured architecture and OT-007 for the tested geometry; promote only the no-refit same-carrier prediction, not a universal Jordan/Spin identification.",
+        "null": "If spectroscopy fails, narrow OT-006 and stop OT-007. If spectroscopy passes but force does not, retain the tensor and update the boundary/nuisance model.",
+        "ambiguous": "Keep OT-007 gated and publish the posterior overlap showing which tensor or nuisance coordinate prevents a decision."
+      },
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_31_same_carrier_platform_closure_for_casimir_thermoelectric_response.md",
+        "corpus/programmes/admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md"
+      ],
+      "precedents": [
+        "https://doi.org/10.1103/RevModPhys.81.1827",
+        "https://doi.org/10.1103/PhysRevLett.119.183001"
+      ],
+      "authoredOverridesPreserved": [
+        "detector_transfer_function",
+        "nuisance_and_covariance_model",
+        "predicted_signal_scale",
+        "power_or_sensitivity_calculation",
+        "build_go_no_go",
+        "physics_go_no_go",
+        "replication_rule",
+        "data_metadata_and_code_release_contract",
+        "claim_status_propagation"
+      ]
+    },
+    {
+      "id": "EX-013",
+      "sourceExperimentId": "EX-013",
+      "frontierAreaId": "FA-13",
+      "topicIds": [
+        "OT-008",
+        "OT-016",
+        "OT-040",
+        "OT-044",
+        "OT-047"
+      ],
+      "detectorIds": [
+        "DET-012",
+        "DET-013",
+        "DET-019",
+        "DET-020",
+        "DET-021",
+        "DET-029"
+      ],
+      "title": "Common-sample multichannel Onsager-rank experiment",
+      "mode": "laboratory_computational",
+      "readiness": "ready_after_design",
+      "estimate": "12–24 months including microfabrication",
+      "hypothesis": "The particle/energy response has a stable second eigen-direction in a declared low-frequency transport window.",
+      "strongest_conventional_null": "The second direction is contact leakage or exits every controlled low-frequency window.",
+      "carrier_and_preparation": "A suspended four-terminal microbridge allowing independent electrical and thermal biases, magnetic-field reversal and AC thermometry.",
+      "controlled_variables": [
+        "Independently modulate voltage and heater power",
+        "Sweep frequency, temperature, field, filling and contact geometry",
+        "Reverse injection/emission contacts"
+      ],
+      "observables": [
+        "Complex charge and heat currents",
+        "Full 2×2 Onsager matrix",
+        "Noise cross spectra",
+        "Thermal and electrical calibration covariance"
+      ],
+      "detector_transfer_function": "Infer the complex 2x2 response from independently calibrated voltage and heater drives to charge-current and heat-current records, including electrical bandwidth, thermometer thermal impedance, phase delay and contact de-embedding. Apply source-basis changes by congruence and track the energy-current convention explicitly; retain raw forces and currents so rank is not computed from normalized plots.",
+      "calibration_and_reference_channels": [
+        "Onsager-Casimir reciprocity",
+        "Open/short thermal standards",
+        "Energy-zero shift",
+        "Contact-swap reversal"
+      ],
+      "nuisance_and_covariance_model": "Jointly model electrical contact impedance, heater leakage, thermometry gain and lag, substrate loss, radiative heat loss, geometry, magnetic pickup, common clock phase, energy-zero/current retyping and finite-frequency contact terms. Propagate correlated calibration errors into response eigenvalues, determinant and reciprocity residuals across the full frequency/temperature grid.",
+      "predicted_signal_scale": "The existing five-coordinate benchmark places the second-to-first response ratio near 1.315e-3 to 1.637e-3 in its high-energy window. Certifying only a one-percent reduction permits about 0.279% combined one-sigma error at three sigma; resolving the predicted second direction requires below 438 ppm combined error, or about 310 ppm each for equal theory and detector budgets. These are design diagnostics until translated to the chosen microbridge.",
+      "power_or_sensitivity_calculation": "Use the smallest preregistered eigenvalue ratio over the held-out frequency window as the effect size. Require three-sigma lower confidence above zero and 90% power at alpha=0.05 after the full errors-in-variables covariance, while reciprocity and passivity controls remain inside their calibrated bands. If the chosen device cannot reach 438 ppm for detection, predeclare the weaker one-percent rank-reduction test instead.",
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Infer eigenvalues with errors in both currents and forces; test limit ordering and compare with common-sample KPM/typicality.",
+        "stoppingRule": "Stop rank claims when thermal cross-talk exceeds the smaller singular value."
+      },
+      "build_go_no_go": {
+        "go": "Independent charge and heat drives have a full-rank calibrated actuation matrix; electrical and thermal detector bandwidths overlap the declared window; thermal cross-talk and contact leakage remain below the selected 0.279% or 438 ppm objective; and simulation plus standards recover a known rank-two control with 90% power.",
+        "noGo": "The drive matrix is rank deficient, thermal lag destroys phase recovery, energy-current convention cannot be controlled, or calibrated leakage exceeds the smaller singular direction. Stop rank interpretation and retain only instrument bounds."
+      },
+      "bridge_go_no_go": {
+        "go": "Rank two and reciprocity survive frequency-window, size and energy-gauge changes.",
+        "noGo": "Stop rank claims when thermal cross-talk exceeds the smaller singular value.",
+        "conventionalNull": "The second direction is contact leakage or exits every controlled low-frequency window."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "A stable second direction validates multichannel transport and informs thermoelectric or hydrodynamic model design.",
+        "newPhysicsGo": "Escalation requires a replicated response component outside the complete Kubo, contact, screening-carrier, Ward/KMS and detector model—not rank two by itself.",
+        "noGo": "A rank-one result closes the declared operational window only; a nuisance-dominated result improves calibration without deciding the carrier theory."
+      },
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "Rank two and reciprocity survive frequency-window, size and energy-gauge changes.",
+        "null": "The second direction is contact leakage or exits every controlled low-frequency window.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": "Repeat the frozen protocol on a second microbridge from the same batch and one independent batch or platform. The second-batch analysis must reuse the source basis, energy-current convention, frequency window and thresholds fixed on the first without target-specific recalibration beyond declared standards.",
+      "data_metadata_and_code_release_contract": "Release raw drive and current time streams, geometry and contact maps, thermometer/heater calibrations, environmental logs, response and covariance matrices, source-basis transformations, energy-current convention, KPM/typicality comparison inputs, inference code and frozen thresholds with checksums.",
+      "claim_status_propagation": {
+        "positive": "Advance the operational portion of OT-008 and constrain OT-016/OT-047 with the measured rank window; do not infer a universal H2(R) carrier or Spin symmetry.",
+        "null": "Close the rank-two claim only for the declared window and device; update contact, screening or low-frequency limits according to the winning null model.",
+        "ambiguous": "Leave OT-008 gated and record which calibration or convention direction overlaps the putative second mode."
+      },
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_50_frequency_moment_bounds_and_compute_boundary.md",
+        "corpus/programmes/admissibility/admissibility_71_observable_resolution_and_phase_connectivity_gate.md",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "precedents": [
+        "https://arxiv.org/abs/1306.3694"
+      ],
+      "authoredOverridesPreserved": [
+        "detector_transfer_function",
+        "nuisance_and_covariance_model",
+        "predicted_signal_scale",
+        "power_or_sensitivity_calculation",
+        "build_go_no_go",
+        "physics_go_no_go",
+        "replication_rule",
+        "data_metadata_and_code_release_contract",
+        "claim_status_propagation"
+      ]
+    },
+    {
+      "id": "EX-014",
+      "sourceExperimentId": "EX-014",
+      "frontierAreaId": "FA-14",
+      "topicIds": [
+        "OT-015",
+        "OT-046"
+      ],
+      "detectorIds": [
+        "DET-023",
+        "DET-024"
+      ],
+      "title": "Defect information beyond mode count",
+      "mode": "laboratory",
+      "readiness": "ready_now",
+      "estimate": "6–12 months with acoustic or topoelectric resonator arrays",
+      "hypothesis": "Defects with the same protected mode count remain distinguishable by oriented transport, spatial texture and scattering phase.",
+      "strongest_conventional_null": "All extra information is arbitrary boundary data.",
+      "carrier_and_preparation": "A reconfigurable 2D acoustic or circuit lattice containing matched trivial, domain-wall, partial-dislocation and threefold-quotient defects.",
+      "controlled_variables": [
+        "Move source and detector around the defect",
+        "Reverse helicity or circulation",
+        "Add controlled symmetry-preserving and symmetry-breaking disorder"
+      ],
+      "observables": [
+        "Site-resolved complex field",
+        "Local density of states",
+        "Scattering matrix",
+        "Winding, delay and localization length"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Defect-free lattice",
+        "Same-index inequivalent defects",
+        "Boundary-condition variants",
+        "Blind geometric relabelling"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Condition on equal index and compare the remaining response tensor; demand a held-out observable beyond mode count.",
+        "stoppingRule": "Retain only the topological count if disorder destroys the extra record before the bulk gap closes."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "A non-index record robustly tracks defect geometry and quotient operation.",
+        "noGo": "Retain only the topological count if disorder destroys the extra record before the bulk gap closes.",
+        "conventionalNull": "All extra information is arbitrary boundary data."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "A non-index record robustly tracks defect geometry and quotient operation.",
+        "null": "All extra information is arbitrary boundary data.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [
+        "https://doi.org/10.1038/s41467-022-29785-5",
+        "https://doi.org/10.1038/s41467-024-50666-6"
+      ],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-015",
+      "sourceExperimentId": "EX-015",
+      "frontierAreaId": "FA-15",
+      "topicIds": [
+        "OT-011",
+        "OT-019",
+        "OT-021",
+        "OT-022",
+        "OT-023"
+      ],
+      "detectorIds": [
+        "DET-011",
+        "DET-012",
+        "DET-014",
+        "DET-015",
+        "DET-020",
+        "DET-021",
+        "DET-024",
+        "DET-025",
+        "DET-026",
+        "DET-030"
+      ],
+      "title": "Disorder–spread–coarse-graining scaling tube",
+      "mode": "laboratory_computational",
+      "readiness": "ready_after_design",
+      "estimate": "6–12 months on a programmable resonator or qubit array",
+      "hypothesis": "A small set of propagation and memory invariants remains stable across disorder, size, time and coarse-graining.",
+      "strongest_conventional_null": "Every apparent bound is detector- or size-specific.",
+      "carrier_and_preparation": "Arrays of 16–128 microwave/acoustic resonators or available quantum-simulator sites with programmable onsite disorder and couplings.",
+      "controlled_variables": [
+        "Quench a local excitation",
+        "Sweep disorder distribution and correlation length",
+        "Repeat across array sizes and detector aggregation scales"
+      ],
+      "observables": [
+        "Space-time response cone",
+        "Out-of-cone leakage",
+        "Participation ratio",
+        "Memory and return statistics"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Clean ballistic array",
+        "Strongly localized array",
+        "Detector convolution",
+        "Randomized disorder seeds"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Fit a joint finite-size/time scaling model and test semigroup consistency between raw and coarse observations.",
+        "stoppingRule": "Do not extrapolate if fitted constants drift monotonically with the largest available size."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "One invariant scaling tube predicts held-out size and disorder ensembles.",
+        "noGo": "Do not extrapolate if fitted constants drift monotonically with the largest available size.",
+        "conventionalNull": "Every apparent bound is detector- or size-specific."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "One invariant scaling tube predicts held-out size and disorder ensembles.",
+        "null": "Every apparent bound is detector- or size-specific.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-016",
+      "sourceExperimentId": "EX-016",
+      "frontierAreaId": "FA-16",
+      "topicIds": [
+        "OT-017",
+        "OT-025",
+        "OT-045",
+        "OT-050"
+      ],
+      "detectorIds": [
+        "DET-027",
+        "DET-028"
+      ],
+      "title": "Code-island operator-law falsification",
+      "mode": "exact_computational",
+      "readiness": "ready_now",
+      "estimate": "2–6 months; algebra, coding and proof expertise",
+      "hypothesis": "At least one source-derived operator family—not labels alone—satisfies preregistered Hecke, modular-trace or product-preserving relations.",
+      "strongest_conventional_null": "Only numerology, dimensions or divisor labels survive.",
+      "carrier_and_preparation": "The finite Monster-address, Golay/Leech-neighbour and 24-dimensional form data already represented in the corpus.",
+      "controlled_variables": [
+        "Define operators before inspecting occupancy coincidences",
+        "Apply them to the full finite atlas",
+        "Compare integral, rational and mod-p reductions"
+      ],
+      "observables": [
+        "Exact operator matrices",
+        "Relation residuals",
+        "Graded traces",
+        "Integrality and orbit certificates"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Random label permutations",
+        "Same divisor multiset with destroyed multiplication",
+        "Known Hecke toy module",
+        "Independent exact implementation"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Require exact identities over integers or declared rings; numerical near-equality has no evidential weight.",
+        "stoppingRule": "Close the branch after all natural source-derived multiplications fail the preregistered identities."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "A nontrivial operator law holds without fitting prime-address occupancy.",
+        "noGo": "Close the branch after all natural source-derived multiplications fail the preregistered identities.",
+        "conventionalNull": "Only numerology, dimensions or divisor labels survive."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "A nontrivial operator law holds without fitting prime-address occupancy.",
+        "null": "Only numerology, dimensions or divisor labels survive.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-017",
+      "sourceExperimentId": "EX-017",
+      "frontierAreaId": "FA-17",
+      "topicIds": [
+        "OT-017",
+        "OT-024",
+        "OT-025",
+        "OT-026",
+        "OT-027",
+        "OT-035",
+        "OT-038",
+        "OT-039",
+        "OT-042",
+        "OT-045",
+        "OT-046",
+        "OT-047",
+        "OT-048",
+        "OT-049",
+        "OT-050"
+      ],
+      "detectorIds": [
+        "DET-027",
+        "DET-035",
+        "DET-036"
+      ],
+      "title": "Two-carrier commuting-square hardware-in-the-loop test",
+      "mode": "hybrid",
+      "readiness": "staged",
+      "estimate": "12–24 months after a source-native map is written",
+      "hypothesis": "A provenance-bearing transformation transports projector, complex structure, losses and observable records between carriers while preserving composition.",
+      "strongest_conventional_null": "Agreement exists only after erasing labels, units or orientation.",
+      "carrier_and_preparation": "A photonic three-mode chip and an acoustic or microwave three-port emulator implementing the same declared A2 operation in native units.",
+      "controlled_variables": [
+        "Prepare matched labelled states in both carriers",
+        "Apply generators singly and in compositions",
+        "Transport predictions in both directions without basis refitting"
+      ],
+      "observables": [
+        "Native process matrices",
+        "Unit and label dictionary",
+        "Composition residual",
+        "Irreversible loss ledger"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Unlabelled matrix similarity",
+        "Fitted basis alignment",
+        "One-generator-only agreement",
+        "Held-out composite paths"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Test path equality in the commuting square on held-out states, with separate structural and calibrated physical error budgets.",
+        "stoppingRule": "Do not build the second device until the source-side map preserves products symbolically."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "Both paths agree and the map predicts a native observable in the second carrier.",
+        "noGo": "Do not build the second device until the source-side map preserves products symbolically.",
+        "conventionalNull": "Agreement exists only after erasing labels, units or orientation."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "Both paths agree and the map predicts a native observable in the second carrier.",
+        "null": "Agreement exists only after erasing labels, units or orientation.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-018",
+      "sourceExperimentId": "EX-018",
+      "frontierAreaId": "FA-18",
+      "topicIds": [
+        "OT-014",
+        "OT-016",
+        "OT-018",
+        "OT-021",
+        "OT-031",
+        "OT-040",
+        "OT-046"
+      ],
+      "detectorIds": [
+        "DET-016",
+        "DET-022",
+        "DET-023",
+        "DET-030",
+        "DET-034"
+      ],
+      "title": "Uniform-limit adversarial scattering benchmark",
+      "mode": "theorem_computation",
+      "readiness": "ready_now",
+      "estimate": "6–18 months depending on whether a theorem survives",
+      "hypothesis": "A proposed positivity, gap or admissibility bound has constants uniform in every declared limiting direction.",
+      "strongest_conventional_null": "An admissible sequence drives the bound to zero or changes its sign.",
+      "carrier_and_preparation": "Families of finite chains, lattice gauge Hamiltonians and D4 defect operators with controllable volume, regulator, time and observable class.",
+      "controlled_variables": [
+        "Search adversarial sequences jointly over volume, regulator and boundary condition",
+        "Enlarge the observable class",
+        "Compare pole, phase, Euclidean and real-time estimators"
+      ],
+      "observables": [
+        "Best lower bound by scale",
+        "Extremizing sequence",
+        "Finite-size drift",
+        "Proof-assistant-checkable inequalities where available"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Known gapped and gapless models",
+        "Order-of-limits swaps",
+        "Boundary-localized false gaps",
+        "Synthetic positivity violations"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Attempt to falsify uniformity first; a successful result must supply explicit constants and domain assumptions.",
+        "stoppingRule": "Record a scoped no-go once a countersequence is certified; do not replace it with larger finite numerics."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "One bound remains positive and stable under all declared limits.",
+        "noGo": "Record a scoped no-go once a countersequence is certified; do not replace it with larger finite numerics.",
+        "conventionalNull": "An admissible sequence drives the bound to zero or changes its sign."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "One bound remains positive and stable under all declared limits.",
+        "null": "An admissible sequence drives the bound to zero or changes its sign.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-019",
+      "sourceExperimentId": "EX-019",
+      "frontierAreaId": "FA-19",
+      "topicIds": [
+        "OT-028",
+        "OT-029",
+        "OT-030",
+        "OT-031",
+        "OT-042",
+        "OT-047",
+        "OT-048",
+        "OT-049",
+        "OT-050"
+      ],
+      "detectorIds": [
+        "DET-029",
+        "DET-031",
+        "DET-032",
+        "DET-033",
+        "DET-034",
+        "DET-035",
+        "DET-036"
+      ],
+      "title": "Joined torsion–flavour–cosmology likelihood with a polarized null experiment",
+      "mode": "conditional_hybrid",
+      "readiness": "conditional_on_action",
+      "estimate": "12–36 months after a frozen action and matching packet exist",
+      "hypothesis": "One protected parameter map predicts range, species ratios and signs across laboratory, flavour and cosmological observables.",
+      "strongest_conventional_null": "Generic free pseudoscalar coefficients fit equally well or one dataset requires an incompatible parameter value.",
+      "carrier_and_preparation": "A rotating unpolarized source mass near a K–Rb–Ne comagnetometer or polarized spin sensor, joined to collider/flavour and cosmological public likelihoods through one action.",
+      "controlled_variables": [
+        "Modulate source distance, velocity and orientation",
+        "Reverse sensor polarization and source rotation",
+        "Freeze threshold matching before opening laboratory data"
+      ],
+      "observables": [
+        "Time-series pseudomagnetic field",
+        "Environmental witness channels",
+        "Flavour/collider likelihood terms",
+        "Expansion, lensing and structure likelihoods"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Nonmagnetic dummy source",
+        "Blind rotation phase",
+        "Multiple source distances",
+        "Generic pseudoscalar comparison model"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Perform one hierarchical likelihood with shared parameters and explicit theory errors; report the generic-EFT fit beside the protected model.",
+        "stoppingRule": "No apparatus-specific interpretation begins until the action fixes the measured operator and species ratios."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "A common no-refit parameter point survives all channels and predicts a held-out reversal or range curve.",
+        "noGo": "No apparatus-specific interpretation begins until the action fixes the measured operator and species ratios.",
+        "conventionalNull": "Generic free pseudoscalar coefficients fit equally well or one dataset requires an incompatible parameter value."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "A common no-refit parameter point survives all channels and predicts a held-out reversal or range curve.",
+        "null": "Generic free pseudoscalar coefficients fit equally well or one dataset requires an incompatible parameter value.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [
+        "https://arxiv.org/abs/2203.07050",
+        "https://arxiv.org/abs/2408.15691"
+      ],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-020",
+      "sourceExperimentId": "EX-020",
+      "frontierAreaId": "FA-20",
+      "topicIds": [
+        "OT-026",
+        "OT-032",
+        "OT-038",
+        "OT-042",
+        "OT-045",
+        "OT-049",
+        "OT-050"
+      ],
+      "detectorIds": [
+        "DET-028",
+        "DET-035"
+      ],
+      "title": "Exceptional-model end-to-end red-team",
+      "mode": "theory_computation",
+      "readiness": "conditional_on_model",
+      "estimate": "12–36 months for one fully specified candidate",
+      "hypothesis": "A single candidate can pass anomaly, Hessian, gauge-spectrum, threshold and observable gates without freely chosen embeddings.",
+      "strongest_conventional_null": "The construction relies on dimension matches, arbitrary embeddings or compensating free parameters.",
+      "carrier_and_preparation": "A symbolic and numerical pipeline accepting one exceptional-group action, representation dictionary, vacuum and symmetry-breaking chain.",
+      "controlled_variables": [
+        "Enumerate the full chiral spectrum and anomaly polynomial",
+        "Compute the complete scalar Hessian and gauge masses including coloured directions",
+        "Run RG and threshold matching to a frozen low-energy likelihood"
+      ],
+      "observables": [
+        "Anomaly coefficients",
+        "Hessian eigenpairs",
+        "Gauge and matter spectrum",
+        "Running couplings and held-out observable predictions"
+      ],
+      "detector_transfer_function": null,
+      "calibration_and_reference_channels": [
+        "Basis and embedding changes",
+        "Known inconsistent truncations",
+        "Parameter-count audit",
+        "Generic low-energy EFT baseline"
+      ],
+      "nuisance_and_covariance_model": null,
+      "predicted_signal_scale": null,
+      "power_or_sensitivity_calculation": null,
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Use a sequential gate: failure at any exact consistency stage prevents phenomenological fitting; successful candidates are compared by predictive compression.",
+        "stoppingRule": "Terminate a candidate immediately on anomaly, ghost, unstable coloured direction or underdetermined matching."
+      },
+      "build_go_no_go": null,
+      "bridge_go_no_go": {
+        "go": "One anomaly-free stable vacuum produces a no-refit low-energy prediction that beats the independent EFT.",
+        "noGo": "Terminate a candidate immediately on anomaly, ghost, unstable coloured direction or underdetermined matching.",
+        "conventionalNull": "The construction relies on dimension matches, arbitrary embeddings or compensating free parameters."
+      },
+      "physics_go_no_go": null,
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "One anomaly-free stable vacuum produces a no-refit low-energy prediction that beats the independent EFT.",
+        "null": "The construction relies on dimension matches, arbitrary embeddings or compensating free parameters.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": null,
+      "data_metadata_and_code_release_contract": null,
+      "claim_status_propagation": null,
+      "programmeEvidenceRefs": [],
+      "precedents": [],
+      "authoredOverridesPreserved": []
+    },
+    {
+      "id": "EX-021",
+      "sourceExperimentId": "EX-021",
+      "frontierAreaId": "FA-19",
+      "topicIds": [
+        "OT-047",
+        "OT-048"
+      ],
+      "detectorIds": [
+        "DET-029",
+        "DET-036"
+      ],
+      "title": "Source-complete W-associated amplitude and meson validation",
+      "mode": "theory_kernel_then_public_data_recast",
+      "readiness": "source_complete_amplitude_required",
+      "estimate": "2–6 months for the amplitude audit; 3–9 months for a public-likelihood recast after release",
+      "hypothesis": "A differential W-associated interference shape survives source completion and is not proportional to the weak quotient (-1/2,1), while the meson arm consistently constrains the ctilde_WW/current/gluon/UV-flavor combination identified by AZ-081.",
+      "strongest_conventional_null": "The full amplitude recombines to the weak quotient, as the MFV meson kernel does, closing the proposed sixth-coordinate route while retaining a useful cross-scale constraint.",
+      "carrier_and_preparation": "A gauge-complete W-associated ALP amplitude with independently signed current and direct-boson sources, followed by Belle/Belle II or successor B-to-K(*)a validation in the same EFT basis.",
+      "controlled_variables": [
+        "Run AZ-074's 27 signed source settings on common phase-space points",
+        "Ablate direct-boson, top-current and bottom-current diagrams only in gauge-complete subsets",
+        "Scan the ALP mass and lifetime on one shared grid",
+        "Separate charged/neutral B and K/K* categories",
+        "Hold out at least one decay or collider category until the joint coefficients are frozen"
+      ],
+      "observables": [
+        "Differential W-associated quadratic response coefficients and Ward residuals",
+        "Source-complete (A_2,c_WW) singular spectrum by phase-space bin",
+        "B-to-K(*) diphoton, dilepton or missing-energy binned likelihood",
+        "Cross-scale held-out category prediction"
+      ],
+      "detector_transfer_function": "Generate gauge-complete complex helicity amplitudes on common phase-space points, fold them through the response/acceptance matrix and mass resolution, and expose the resulting quadratic coefficient matrix plus odd sideband moment. The 27 signed settings are simulation templates, not laboratory controls; observed data enter one frozen likelihood with charged, neutral and sideband categories.",
+      "calibration_and_reference_channels": [
+        "Published Eq. (74) rank-one MFV kernel",
+        "Isolated c_WW matching-term false-positive comparator",
+        "One-coupling g_aW interpretation",
+        "Current-only c_WW=0 hypothesis",
+        "Mass sidebands and lifetime/acceptance closure",
+        "CKM and form-factor covariance"
+      ],
+      "nuisance_and_covariance_model": "Profile renormalization and factorization scales, PDFs, matching and running, total width and branching assumptions, continuum phases, absorptive parts, top/bottom masses, direct gauge coefficients, CKM and form factors, background slope, odd acceptance leakage, mass resolution, category migration and finite Monte Carlo statistics. Preserve the exact (2,1,-1) electroweak redistribution null when the unrestricted EFT is fitted.",
+      "predicted_signal_scale": "No physical event-yield forecast is admissible before the source-complete amplitudes are computed. The pre-data design scale is algebraic: 19 of 27 templates fit the ten quadratic coefficients, nine pair-plane contrasts audit closure and eight three-source corners remain held out; a surviving second singular shape and odd interference moment must exceed their propagated theory-plus-detector uncertainty.",
+      "power_or_sensitivity_calculation": "After amplitude and detector folding but before observed-data unblinding, run Asimov and toy likelihoods over the declared mass/lifetime grid. Require at least 90% power at alpha=0.05 to reject the weak-quotient rank-one null at the preregistered non-collinearity threshold while all eight held-out corners and Ward residuals pass. Report exclusion-only regions where sign identification lacks power.",
+      "blind_or_preregistered_analysis_rule": {
+        "analysis": "Complete every coefficient through one frozen basis, running and weak-threshold dictionary before calculating rank. Test Ward identities and the 27-setting quadratic closure at differential level; only a non-collinear surviving shape proceeds to detector folding. Use the meson likelihood as a common-EFT validation arm and profile current, gluonic, CKM, hadronic, decay and detector nuisances.",
+        "stoppingRule": "Do not claim separation from an isolated matching term, one-coupling limit or diagram subset; stop unless source completion, Ward checks, held-out prediction and the full covariance all preserve the second shape."
+      },
+      "build_go_no_go": {
+        "go": "The full gauge-complete amplitude passes Ward checks, the 27-setting quadratic closure and held-out corners; a non-collinear signed shape survives detector folding; public likelihood inputs or a reproducible recast exist; and the power study clears the declared region before data unblinding.",
+        "noGo": "The second shape disappears under source completion, violates Ward or held-out closure, is erased by detector folding, or no public likelihood supports the covariance. Retain the rank-one cross-scale constraint and stop the sixth-coordinate claim."
+      },
+      "bridge_go_no_go": {
+        "go": "A source-complete non-collinear differential shape clears its preregistered singular-value threshold, survives detector folding and predicts the held-out meson or collider category without refitting.",
+        "noGo": "Do not claim separation from an isolated matching term, one-coupling limit or diagram subset; stop unless source completion, Ward checks, held-out prediction and the full covariance all preserve the second shape.",
+        "conventionalNull": "The full amplitude recombines to the weak quotient, as the MFV meson kernel does, closing the proposed sixth-coordinate route while retaining a useful cross-scale constraint."
+      },
+      "physics_go_no_go": {
+        "engineeringGo": "A positive result establishes an identifiable EFT coordinate combination and a reusable source-complete collider/meson likelihood.",
+        "newPhysicsGo": "Only observed data inconsistent with the complete seven-coordinate EFT, widths, running, hadronic and detector nuisance model and replicated in an independent channel may enter a new-physics escalation.",
+        "noGo": "Failure of the second shape closes this detector route without falsifying the EFT or the broader admissibility programme."
+      },
+      "positive_null_ambiguous_outcome_branches": {
+        "positive": "A source-complete non-collinear differential shape clears its preregistered singular-value threshold, survives detector folding and predicts the held-out meson or collider category without refitting.",
+        "null": "The full amplitude recombines to the weak quotient, as the MFV meson kernel does, closing the proposed sixth-coordinate route while retaining a useful cross-scale constraint.",
+        "ambiguous": "Hold every scientific promotion, repeat the calibration and declared controls, and report the unresolved likelihood or equivalence class rather than selecting a preferred mechanism."
+      },
+      "replication_rule": "Validate the fitted kernel on all eight held-out simulation corners, then require an independent physical category or experiment—such as a separately reconstructed charged/neutral mode or meson channel—to reproduce the inferred invariant combination with the basis and thresholds frozen.",
+      "data_metadata_and_code_release_contract": "Release model/UFO and parameter-card versions, amplitude and Ward-test code, phase-space seeds, all 27 template weights, response matrices, sideband definitions, covariance and nuisance priors, public-data identifiers, likelihood/recast code, held-out labels and frozen decision configuration under checksums.",
+      "claim_status_propagation": {
+        "positive": "Advance OT-048 for the declared process and constrain OT-047 with the measured invariant combination; preserve the unrestricted EFT null and do not infer ultraviolet origin labels.",
+        "null": "Close the proposed sixth-coordinate detector route if source completion restores the weak quotient; retain the resulting cross-scale likelihood and exact null structure.",
+        "ambiguous": "Keep OT-048 open, report whether theory, detector or public-likelihood covariance dominates, and forbid sign or rank promotion."
+      },
+      "programmeEvidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md",
+        "corpus/programmes/admissibility/admissibility_115_the_full_gauge_dictionary_turns_the_sixth_coordinate_into_a_declared_slice.md",
+        "corpus/programmes/admissibility/admissibility_117_an_odd_resonance_moment_can_supply_the_missing_sign.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "precedents": [
+        "https://arxiv.org/abs/2012.12272",
+        "https://arxiv.org/abs/2507.01249"
+      ],
+      "authoredOverridesPreserved": [
+        "detector_transfer_function",
+        "nuisance_and_covariance_model",
+        "predicted_signal_scale",
+        "power_or_sensitivity_calculation",
+        "build_go_no_go",
+        "physics_go_no_go",
+        "replication_rule",
+        "data_metadata_and_code_release_contract",
+        "claim_status_propagation"
+      ]
+    }
+  ]
+}

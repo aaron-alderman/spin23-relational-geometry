@@ -22,6 +22,8 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Detector/frontier register](detector_frontier_register_v1.json) — machine-readable authority for detector records, controls, maturity, target coverage and source provenance.
 - [Frontier experiment atlas](frontier_experiment_atlas_v1.md) — one realistic controlled experiment for every frontier area, with platform, interventions, records, controls, decisive outcomes and stop rules.
 - [Frontier experiment register](frontier_experiment_atlas_v1.json) — machine-readable 20-experiment portfolio covering all maintained topics and detector bundles.
+- [Frontier experiment programmes v2](frontier_experiment_programmes_v2.json) — EXIT-03 normalization of the experiment atlas; preserves direct v1 content and leaves nine genuinely judgment-bearing programme fields explicit and null until authored.
+- [Experiment programme overrides v2](frontier_experiment_programme_overrides_v2.json) — durable experiment-specific authorship for transfer functions, covariance, sensitivity, decision gates, replication, release and claim propagation; never overwritten by regeneration.
 - [Frontier complexity cards](frontier_complexity_cards_v1.md) — five-stage existence, preparation, sampling, detection and independent-verification audit for FPT-001--010 and FPT-022.
 - [Complexity-card register](frontier_complexity_cards_v1.json) — machine-readable scaling classes, variables, approximation boundaries, independent checks and stop rules.
 - [Open topics](open_topics_v1.md) — maintained priority queue with explicit stop rules.
@@ -46,6 +48,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Adjacency-candidate verifier](../../../verification/frontier-physics-targets/verify_physics_math_adjacency_candidates.mjs) — proves exact topic/area/family coverage, validates evidence-bearing dispositions and refuses EXIT-01 closure while any candidate remains unreviewed.
 - [Terminal-neighbourhood verifier](../../../verification/frontier-physics-targets/verify_terminal_neighbourhood_candidates.mjs) — proves exact terminal-topic/move coverage and validates each evidence-bearing reopening review.
 - [Experiment-exit verifier](../../../verification/frontier-physics-targets/verify_experiment_exit_audit.mjs) — compares every experiment against the explicit eighteen-field programme contract and refuses EXIT-03 closure while any cell is missing.
+- [Experiment-programme provenance verifier](../../../verification/frontier-physics-targets/verify_frontier_experiment_programmes_v2.mjs) — proves exact v1 migration, authored-override preservation, valid experiment IDs and the existence of every cited programme evidence file.
 
 ## Scope
 
