@@ -8,7 +8,9 @@
 
 **Evidence packet:** [typed screw-extension record](../../../../evidence/data/z9-discrete-screw-and-paired-twist-helix-v1.json)
 
-**Infographic:** [split, screw and paired-twist comparison](assets/z9_twist_helix_infographic.png)
+**Infographic:** [split, screw and paired-twist comparison in the Rodin role palette](assets/z9_twist_helix_infographic_rodin_palette.png)
+
+**Alternate:** [earlier neutral-palette version](assets/z9_twist_helix_infographic.png)
 
 ## Result
 
