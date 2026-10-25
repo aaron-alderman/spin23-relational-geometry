@@ -228,10 +228,12 @@ For each \(h\in46A,46B,46C,46D\):
    retaining compatible normalization rather than only scalar coefficients;
 3. compare the 2A pair with the Majorana-Weyl x Baby-Monster decomposition and
    the 2B pair with the Leech orbifold decomposition;
-4. test degeneration to the already verified common scalar \(T_{23}\);
-5. sew the resulting functions through two handles and ask whether their
+4. use the fifth-power pairing to verify that the normalized cyclic trace
+   still collapses A/B and C/D, then add a noncyclic centralizer insertion;
+5. test degeneration to the already verified common scalar \(T_{23}\);
+6. sew the resulting functions through two handles and ask whether their
    determinant/anomaly lines land on the ten-even-characteristic carrier;
-6. only after that, test whether the off-diagonal \(H_2(\mathbb R)\) coordinate
+7. only after that, test whether the off-diagonal \(H_2(\mathbb R)\) coordinate
    is supplied by the sewing parameter or a defect-junction modulus.
 
 Three outcomes are useful.  Equality after orientation-forgetting would

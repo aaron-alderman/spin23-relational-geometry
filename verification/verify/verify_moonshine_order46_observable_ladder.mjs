@@ -45,6 +45,16 @@ assert.equal(ladder.scalarHierarchy.order46.classPairs["46CD"].involution, joine
 assert.equal(ladder.scalarHierarchy.order23.distinctScalarOutputs, 1);
 assert.equal(ladder.scalarHierarchy.order46.distinctScalarOutputs, 2);
 
+// Fifth power exchanges each oriented order-46 pair, changes g to g^5 and
+// fixes the central involution z. Equal ordinary traces therefore remain
+// equal after the same normalized cyclic modular transport.
+assert.equal(gcd(5, 46), 1);
+assert.equal(mod(5 * 23, 46), 23);
+assert.equal(mod(5 * 2, 46), 10);
+assert.equal(ladder.cyclicOrientationNoGo.distinctNormalizedCyclicPairOutputs, 2);
+assert.equal(ladder.cyclicOrientationNoGo.orientationRecovered, false);
+assert(ladder.cyclicOrientationNoGo.requiredEscape.includes("noncyclic centralizer insertion"));
+
 // Arithmetic alone allows order two, but the Conway--Norton h parameter is
 // one for both 46+23 and 46+, so these cyclic classes are non-anomalous.
 assert.equal(gcd(ladder.anomalyBoundary.monsterAnomalyOrder, ladder.anomalyBoundary.cyclicChannelOrder), 2);
@@ -60,7 +70,7 @@ console.log(JSON.stringify({
   scalarOutputs: {
     order23: ladder.scalarHierarchy.order23.distinctScalarOutputs,
     order46: ladder.scalarHierarchy.order46.distinctScalarOutputs,
-    possibleOrientedCeiling: 4,
+    normalizedCyclicPair: ladder.cyclicOrientationNoGo.distinctNormalizedCyclicPairOutputs,
   },
   genusZeroGroups: {
     leechRail46AB: "46+23",
@@ -69,5 +79,6 @@ console.log(JSON.stringify({
   arithmeticAnomalyCeiling: 2,
   resolvedCyclicAnomalyOrder: 1,
   normalizationPhasesEvaluated: false,
+  cyclicOrientationRecovered: ladder.cyclicOrientationNoGo.orientationRecovered,
 }, null, 2));
 console.log("PASS verify_moonshine_order46_observable_ladder");

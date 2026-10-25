@@ -41,17 +41,21 @@ produces a discriminator or fails:
 
 1. enumerate the four oriented order-46 cases and their power-map labels;
 2. modularly transport the known order-46 Hauptmoduln to
-   \(Z(h^2,h^{23};\tau)\), including compatible normalizations;
+   \(Z(h^2,h^{23};\tau)\) and normalize them compatibly;
 3. group the 46A/B and 46C/D results by their Conway and Baby-Monster
    centralizer lifts;
-4. test which quotients reproduce the common scalar \(T_{23}\) and which
-   retain A/B or 2A/2B information;
-5. construct the smallest matrix kernel from the surviving order-23 branches
+4. record the resulting no-go: fifth power fixes the involution and leaves
+   each orientation pair scalar-degenerate;
+5. add the smallest noncyclic centralizer insertion capable of distinguishing
+   those pairs;
+6. test which quotients reproduce the common scalar \(T_{23}\) and which
+   retain 2A/2B rail information;
+7. construct the smallest matrix kernel from the surviving order-23 branches
    to the ten even genus-two characteristics;
-6. reject the join if the modular representations or anomaly lines cannot
+8. reject the join if the modular representations or anomaly lines cannot
    intertwine.
 
-Steps 1--4 move FPT-002.  Step 5 is the FPT-007 junction.  Step 6 is useful
+Steps 1--6 move FPT-002.  Step 7 is the FPT-007 junction.  Step 8 is useful
 even when negative: it converts a speculative bridge into a typed no-go.
 
 ## The finite emulator tranche

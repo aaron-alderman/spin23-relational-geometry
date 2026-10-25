@@ -44,6 +44,16 @@
     "formulaUpToMultiplier": "Z(h^2,h^23;tau) is the gamma_(2,23) modular branch of T_h",
     "conventionBoundary": "depending on left/right modular-action convention, use the displayed matrix or its inverse"
   },
+  "cyclicOrientationNoGo": {
+    "powerMap": "h -> h^5 exchanges 46A/46B and 46C/46D",
+    "order23Effect": "g=h^2 -> g^5",
+    "involutionEffect": "z=h^23 -> z^5=z",
+    "ordinaryTraceInput": "T_h=T_(h^5) within each class pair",
+    "transportConsequence": "the same modular matrix applied to the same normalized Hauptmodul gives the same normalized cyclic commuting-pair scalar function",
+    "distinctNormalizedCyclicPairOutputs": 2,
+    "orientationRecovered": false,
+    "requiredEscape": "a noncyclic centralizer insertion, vector-valued refinement or genus-two sewing"
+  },
   "anomalyBoundary": {
     "monsterAnomalyOrder": 24,
     "cyclicChannelOrder": 46,
@@ -60,6 +70,6 @@
     "gamma0_46Plus23InPSL2Z": 36,
     "gamma0_46PlusInPSL2Z": 18
   },
-  "nextGate": "transport the two known order-46 Hauptmoduln with compatible anomaly trivializations, fix normalization phases for all four classes, and only then attempt genus-two sewing",
+  "nextGate": "normalize the two modularly transported cyclic-pair functions, then add a noncyclic centralizer insertion or genus-two sewing because the power-five orientation pair remains scalar-degenerate",
   "physicalBoundary": "modular transport is not real-time dynamics and a projective multiplier is not automatically a detector-visible parity"
 }

@@ -141,8 +141,8 @@ The immediate source-level calculation is therefore:
    normalizations for 46A--46D;
 2. transport \(T_{46AB}\) and \(T_{46CD}\) by
    \(\gamma_{2,23}\) (or its inverse under the chosen convention);
-3. evaluate the resulting normalization phases and determine whether A/B or
-   C/D remain paired;
+3. normalize the transported functions by a common principal-part convention
+   and verify the power-five pairing described below;
 4. compare the surviving sign/character with the 2A fermionic determinant line
    and the 2B order-eight lift kernel;
 5. only then sew at genus two.
@@ -172,19 +172,33 @@ order-23 scalar T_23
 order-46 scalar T_h
   2 outputs: 46AB (2B rail) versus 46CD (2A rail)
         |
-        | retain twisted-sector normalization
+        | modularly transport within the same cyclic subgroup
         v
 generalized pair Z(h^2,h^23)
-  at most 4 oriented class outputs; actual degeneracies must be computed
+  2 normalized scalar outputs: the inverse/power-five pairs remain collapsed
         |
-        | genus-two sewing and determinant line
+        | add noncyclic centralizer data, a vector-valued lift,
+        | or genus-two sewing and determinant line
         v
 candidate seam-sensitive vector
 ```
 
-“At most four” is essential.  The normalization may still identify the
-inverse class pairs.  The ladder specifies where orientation could re-enter;
-it does not assume that it does.
+The pairing follows directly.  Fifth power exchanges \(46A\leftrightarrow
+46B\) and \(46C\leftrightarrow46D\).  Under \(h\mapsto h^5\),
+
+\[
+g=h^2\mapsto g^5,\qquad
+z=h^{23}\mapsto z^5=z.
+\]
+
+The ordinary functions satisfy \(T_h=T_{h^5}\) within each pair.  Applying
+the same matrix \(\gamma_{2,23}\) to the same normalized Hauptmodul therefore
+gives the same normalized cyclic commuting-pair function for \((g,z)\) and
+\((g^5,z)\).  A convention-dependent scalar cannot serve as an orientation
+observable.  Thus cyclic generalized moonshine recovers the 2A/2B rail but
+does not recover the 23A/23B generator orientation.  The next refinement must
+leave the cyclic subgroup: use a noncyclic centralizer insertion, a genuinely
+vector-valued character, or higher-genus sewing.
 
 ## 5. Consequence for the frontier programme
 
@@ -194,8 +208,8 @@ work.  Start from the two known Hauptmoduln, transport them by the explicit
 matrix and audit the compatible normalization.  This is an FPT-002 inverse-detector problem:
 the order-46 insertion is the minimal extra channel already known to separate
 the two involution rails.  It is also an FPT-019 complexity reduction: the
-unknown input is a finite normalization/anomaly datum, not a 529-function
-oracle.
+unknown input is a compatible normalization and then a noncyclic or
+higher-genus refinement, not a 529-function oracle.
 
 The physical boundary is unchanged.  Modular transport is worldsheet/VOA
 transport, not real-time evolution, and its normalization phase is not
