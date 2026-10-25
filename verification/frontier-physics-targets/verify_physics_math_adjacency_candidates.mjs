@@ -10,6 +10,7 @@ const topics = read(`${lane}/open_topics_register_v1.json`);
 const detectors = read(`${lane}/detector_frontier_register_v1.json`);
 const terminal = read(`${lane}/terminal_neighbourhood_candidates_v1.json`);
 const crosswalk = read(`${lane}/adjacency_terminal_review_crosswalk_v1.json`);
+const reviews = read(`${lane}/physics_math_adjacency_reviews_v1.json`);
 const failures = [];
 
 if (register.schema !== "frontier.physics-math-adjacency-candidates/1") failures.push("schema mismatch");
@@ -19,6 +20,7 @@ const topicMap = new Map(topics.topics.map(topic => [topic.id, topic]));
 const areaSet = new Set(detectors.frontierAreas.map(area => area.id));
 const ids = new Set();
 const terminalMap = new Map(terminal.candidates.map(candidate => [candidate.id, candidate]));
+const candidateMap = new Map(register.candidates.map(candidate => [candidate.id, candidate]));
 if (crosswalk.schema !== "frontier.adjacency-terminal-crosswalk/1") failures.push("terminal crosswalk schema mismatch");
 for (const family of criteria.requiredAdjacencyFamilies) {
   const move = crosswalk.familyToMove?.[family];
@@ -66,6 +68,25 @@ for (const topic of topics.topics) {
   if (expected.length !== actual.length || expected.some(family => !actual.includes(family))) failures.push(`${topic.id}: candidate coverage drift`);
 }
 
+const authoredTopicIds = new Set();
+for (const topicReview of reviews.topics ?? []) {
+  if (authoredTopicIds.has(topicReview.topicId)) failures.push(`${topicReview.topicId}: duplicate authored adjacency topic`);
+  authoredTopicIds.add(topicReview.topicId);
+  const topic = topicMap.get(topicReview.topicId);
+  if (!topic) failures.push(`${topicReview.topicId}: unknown authored adjacency topic`);
+  if (!topicReview.reviewer || !topicReview.evidenceRefs?.length) failures.push(`${topicReview.topicId}: incomplete authored adjacency metadata`);
+  for (const ref of topicReview.evidenceRefs ?? []) if (!fs.existsSync(path.join(root, ref))) failures.push(`${topicReview.topicId}: missing authored evidence ${ref}`);
+  const expectedFamilies = register.candidates.filter(candidate => candidate.topicId === topicReview.topicId).map(candidate => candidate.family).sort();
+  const authoredFamilies = Object.keys(topicReview.relations ?? {}).sort();
+  if (JSON.stringify(expectedFamilies) !== JSON.stringify(authoredFamilies)) failures.push(`${topicReview.topicId}: authored family coverage drift`);
+  for (const [family, authored] of Object.entries(topicReview.relations ?? {})) {
+    const candidate = candidateMap.get(`${topicReview.topicId}:${family}`);
+    if (!candidate || candidate.derivationRef !== `${lane}/physics_math_adjacency_reviews_v1.json`) failures.push(`${topicReview.topicId}:${family}: authored derivation missing`);
+    for (const field of ["disposition", "reason", "preservedStructure", "lostStructure", "implications", "reopeningTrigger"]) if (JSON.stringify(candidate?.[field]) !== JSON.stringify(authored[field])) failures.push(`${topicReview.topicId}:${family}: authored ${field} drift`);
+    if (!dispositionSet.has(authored.disposition) || !authored.reason || !authored.preservedStructure?.length || !authored.lostStructure?.length || !authored.implications?.length || !authored.reopeningTrigger) failures.push(`${topicReview.topicId}:${family}: incomplete authored disposition`);
+  }
+}
+
 const dispositioned = register.candidates.filter(candidate => candidate.workflowStatus === "dispositioned").length;
 const complete = dispositioned === register.candidates.length && register.candidates.length > 0;
 if (register.summary.candidates !== register.candidates.length) failures.push("candidate count drift");
@@ -76,4 +97,4 @@ if (failures.length) {
   console.error(JSON.stringify({ result: "fail", failures }, null, 2));
   process.exit(1);
 }
-console.log(JSON.stringify({ result: "pass", structuralIntegrity: true, topics: topics.topics.length, areas: areaSet.size, families: familySet.size, candidates: register.candidates.length, dispositioned, unreviewed: register.candidates.length - dispositioned, exit01Passed: complete }, null, 2));
+console.log(JSON.stringify({ result: "pass", structuralIntegrity: true, topics: topics.topics.length, authoredTopicReviews: authoredTopicIds.size, areas: areaSet.size, families: familySet.size, candidates: register.candidates.length, dispositioned, unreviewed: register.candidates.length - dispositioned, exit01Passed: complete }, null, 2));

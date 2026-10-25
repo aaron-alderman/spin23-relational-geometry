@@ -10,6 +10,7 @@ const outputPath = `${lane}/physics_math_adjacency_candidates_v1.json`;
 const markdownPath = `${lane}/physics_math_adjacency_candidates_v1.md`;
 const terminalPath = `${lane}/terminal_neighbourhood_candidates_v1.json`;
 const crosswalkPath = `${lane}/adjacency_terminal_review_crosswalk_v1.json`;
+const reviewsPath = `${lane}/physics_math_adjacency_reviews_v1.json`;
 const read = rel => JSON.parse(fs.readFileSync(path.join(root, rel), "utf8"));
 
 const criteria = read(criteriaPath);
@@ -17,6 +18,8 @@ const topics = read(topicsPath);
 const detectors = read(detectorPath);
 const terminal = read(terminalPath);
 const crosswalk = read(crosswalkPath);
+const reviews = read(reviewsPath);
+const authoredTopics = new Map(reviews.topics.map(topic => [topic.topicId, topic]));
 const terminalReviews = new Map(terminal.candidates.filter(candidate => candidate.workflowStatus === "reviewed").map(candidate => [candidate.id, candidate]));
 const existing = fs.existsSync(path.join(root, outputPath)) ? read(outputPath) : null;
 const existingCandidates = new Map((existing?.candidates ?? []).map(candidate => [candidate.id, candidate]));
@@ -57,6 +60,8 @@ for (const topic of topics.topics) {
     const mappedMove = crosswalk.familyToMove[family];
     const terminalReview = terminalReviews.get(`${topic.id}:${mappedMove}`);
     const derivedDisposition = terminalReview ? crosswalk.resultToDisposition[terminalReview.result] : null;
+    const topicReview = authoredTopics.get(topic.id);
+    const authored = topicReview?.relations?.[family];
     candidates.push({
       id,
       topicId: topic.id,
@@ -66,16 +71,16 @@ for (const topic of topics.topics) {
       frontierAreaIds: topic.frontierAreaIds,
       family,
       applicabilityBasis: basisAreas.map(area => ({ frontierAreaId: area, label: areaLabels.get(area) })),
-      workflowStatus: derivedDisposition ? "dispositioned" : previous?.workflowStatus ?? "unreviewed",
-      disposition: derivedDisposition ?? previous?.disposition ?? null,
-      evidenceRefs: terminalReview?.evidenceRefs ?? previous?.evidenceRefs ?? [],
-      reason: terminalReview ? `${terminalReview.finding} This EXIT-01 disposition is derived through the declared ${family} -> ${mappedMove} crosswalk.` : previous?.reason ?? null,
-      preservedStructure: terminalReview ? crosswalk.preservedStructure : previous?.preservedStructure ?? [],
-      lostStructure: terminalReview ? crosswalk.lostStructure : previous?.lostStructure ?? [],
-      implications: terminalReview ? terminalReview.inheritedConsequences : previous?.implications ?? [],
-      reopeningTrigger: terminalReview?.minimalReopeningDatum ?? previous?.reopeningTrigger ?? null,
-      reviewer: terminalReview?.reviewer ?? previous?.reviewer ?? null,
-      derivationRef: terminalReview ? crosswalkPath : previous?.derivationRef ?? null,
+      workflowStatus: authored || derivedDisposition ? "dispositioned" : previous?.workflowStatus ?? "unreviewed",
+      disposition: authored?.disposition ?? derivedDisposition ?? previous?.disposition ?? null,
+      evidenceRefs: topicReview?.evidenceRefs ?? terminalReview?.evidenceRefs ?? previous?.evidenceRefs ?? [],
+      reason: authored?.reason ?? (terminalReview ? `${terminalReview.finding} This EXIT-01 disposition is derived through the declared ${family} -> ${mappedMove} crosswalk.` : previous?.reason ?? null),
+      preservedStructure: authored?.preservedStructure ?? (terminalReview ? crosswalk.preservedStructure : previous?.preservedStructure ?? []),
+      lostStructure: authored?.lostStructure ?? (terminalReview ? crosswalk.lostStructure : previous?.lostStructure ?? []),
+      implications: authored?.implications ?? (terminalReview ? terminalReview.inheritedConsequences : previous?.implications ?? []),
+      reopeningTrigger: authored?.reopeningTrigger ?? terminalReview?.minimalReopeningDatum ?? previous?.reopeningTrigger ?? null,
+      reviewer: topicReview?.reviewer ?? terminalReview?.reviewer ?? previous?.reviewer ?? null,
+      derivationRef: authored ? reviewsPath : terminalReview ? crosswalkPath : previous?.derivationRef ?? null,
       sourceReviewId: terminalReview?.id ?? previous?.sourceReviewId ?? null
     });
   }
@@ -90,7 +95,7 @@ const output = {
   authority: "First normalized topic-level candidate universe for EXIT-01. It generates questions, not scientific relationships; no candidate is admitted until reviewed and dispositioned with evidence.",
   scope: "All maintained open-topic records crossed with every adjacency family declared applicable to any of their frontier areas. Claim-family and object-level expansion remains a later EXIT-01 layer.",
   criteriaRef: criteriaPath,
-  sourceRefs: [topicsPath, detectorPath, terminalPath, crosswalkPath],
+  sourceRefs: [topicsPath, detectorPath, terminalPath, crosswalkPath, reviewsPath],
   workflowStatuses: ["unreviewed", "in_review", "dispositioned", "challenged"],
   allowedDispositions: criteria.requiredAdjacencyDispositions,
   areaFamilyMatrix: Object.fromEntries(Object.entries(areaFamilies).map(([area, families]) => [area, { label: areaLabels.get(area), families }])),
