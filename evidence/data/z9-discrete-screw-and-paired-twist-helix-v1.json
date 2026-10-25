@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "z9-discrete-screw-and-paired-twist-helix-v1",
+  "date": "2026-10-25",
+  "kMatrices": [
+    {
+      "p": 0,
+      "matrix": [[0, 3], [3, 0]],
+      "smith": [3, 3],
+      "discriminantGroup": "Z3 x Z3",
+      "liftOrder": 3,
+      "cubicReturn": "identity"
+    },
+    {
+      "p": 1,
+      "matrix": [[0, 3], [3, 2]],
+      "smith": [1, 9],
+      "discriminantGroup": "Z9",
+      "liftOrder": 9,
+      "cubicReturn": "fibre +1"
+    },
+    {
+      "p": 2,
+      "matrix": [[0, 3], [3, 4]],
+      "smith": [1, 9],
+      "discriminantGroup": "Z9",
+      "liftOrder": 9,
+      "cubicReturn": "fibre -1"
+    }
+  ],
+  "markedLift": {
+    "coordinates": "(q,f) in Z3 x Z3",
+    "map": "G_p(q,f)=(q+1, f+p if q=2 else f) mod 3",
+    "identity": "G_p^3(q,f)=(q,f+p)",
+    "interpretation": "a base circuit closes for p=0 and translates one fibre sheet for p=+1 or -1"
+  },
+  "extensionCocycle": {
+    "formula": "c_p(a,b)=p*floor((a+b)/3) mod 3 for representatives 0,1,2",
+    "classification": "p=0 split; p=1,2 non-split marked extensions with opposite fibre orientation",
+    "firewall": "the H2 extension cocycle describes the discriminant group; it is not itself the H3 Dijkgraaf-Witten action cocycle"
+  },
+  "affineAction": {
+    "translation": "T(n)=n+1 mod 9",
+    "redTranslation": "T^4(n)=n+4 mod 9",
+    "doubling": "D(n)=2n mod 9",
+    "inverseDoubling": "D^-1(n)=5n mod 9",
+    "relations": ["T^9=1", "D^6=1", "D T D^-1=T^2", "D^3(n)=-n"],
+    "group": "AGL(1,Z9)=Z9 semidirect U(9)",
+    "order": 54
+  },
+  "topologicalPhases": [
+    {"p": 0, "primitiveSelfPhase": "1", "mutualPhase": "exp(2pi i/3)"},
+    {"p": 1, "primitiveSelfPhase": "exp(-2pi i/9)", "mutualPhase": "exp(2pi i/3)"},
+    {"p": 2, "primitiveSelfPhase": "exp(-4pi i/9)", "orientationRelabelledGenerator": "2e1", "orientationMatchedPhase": "exp(+2pi i/9)", "mutualPhase": "exp(2pi i/3)"}
+  ],
+  "detectorProtocol": [
+    "process tomography after one, three and nine applications of G_p",
+    "reverse drive order to exchange p and -p",
+    "randomize spatial embedding while retaining the transition matrix",
+    "retain complex amplitudes rather than populations alone",
+    "require protected self-statistics or modular-T phase for topological promotion"
+  ],
+  "platformLadder": [
+    {
+      "platform": "classical finite controller",
+      "admittedTest": "cycle structure and cubic fibre shift",
+      "ceiling": "no quantum statistics or topological order"
+    },
+    {
+      "platform": "synthetic-frequency photonics",
+      "admittedTest": "complex screw transport, reversal and layout controls",
+      "ceiling": "no Dijkgraaf-Witten phase without a many-body gauge construction"
+    },
+    {
+      "platform": "digital qutrit or qubit circuit",
+      "admittedTest": "paired 18-state emulator, exchange and tomography",
+      "ceiling": "not intrinsically topologically protected"
+    },
+    {
+      "platform": "twisted-quantum-double code",
+      "admittedTest": "self and mutual phases with gauge protection",
+      "ceiling": "no automatic map to corpus matter labels"
+    },
+    {
+      "platform": "material screw defect",
+      "admittedTest": "geometric screw-bound response",
+      "ceiling": "no Z9 or Dijkgraaf-Witten identification without an explicit map"
+    }
+  ],
+  "doubleHelixRequirements": [
+    "both p and -p sectors coexist",
+    "an exchange or Real symmetry pairs them",
+    "a cross-strand pairing or intertwiner supplies rungs",
+    "an orientation-sensitive probe distinguishes the sectors"
+  ],
+  "minimalPairedEmulator": {
+    "dimension": 18,
+    "fibreReflection": "R(q,f)=(q,-f)",
+    "intertwining": "R G_+ R^-1 = G_-",
+    "strandExchange": "J|q,f,+>=|q,-f,-> and J|q,f,->=|q,-f,+>",
+    "relations": ["J^2=1", "J commutes with G_+ direct-sum G_-"],
+    "tunableRung": "exp(-i lambda J)",
+    "firewall": "an 18-state paired controller is an emulator until a physical interface derives and protects the exchange"
+  },
+  "notEstablished": [
+    "physical spacetime helix",
+    "biological DNA mechanism",
+    "new electromagnetic interaction",
+    "topological order from a bare nine-state permutation",
+    "identification of the Rodin six-cycle with the additive Z9 staircase"
+  ],
+  "verdict": "the non-split Z9 carrier is exactly a discrete screw extension; a DNA-like double helix requires a separately derived paired-sector completion and rungs"
+}
