@@ -28,6 +28,7 @@ const decisionReady = audit.records.filter(record => record.threeDecisionLayersE
 if (audit.summary.totalRequiredCells !== total || audit.summary.explicitCells !== explicit || audit.summary.missingCells !== total - explicit || audit.summary.exitReadyExperiments !== ready) failures.push("summary drift");
 if (audit.summary.threeDecisionLayersExplicit !== decisionReady) failures.push("decision-layer summary drift");
 if (audit.summary.exit03Passed !== (ready === experiments.length && decisionReady === experiments.length)) failures.push("EXIT-03 flag drift");
+if (criteria.gates.find(gate => gate.id === "EXIT-03")?.status !== (audit.summary.exit03Passed ? "passed" : "open")) failures.push("EXIT-03 contract status drift");
 if (failures.length) {
   console.error(JSON.stringify({ result: "fail", failures }, null, 2));
   process.exit(1);

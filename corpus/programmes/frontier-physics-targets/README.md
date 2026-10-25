@@ -8,7 +8,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 
 - [Corpus completion exit criteria](corpus_completion_exit_criteria_v1.md) — durable nine-gate target for dated physics–mathematics saturation; explicitly places current-input computational exhaustion below corpus completion.
 - [Physics–mathematics adjacency candidates](physics_math_adjacency_candidates_v1.md) — generated first-layer EXIT-01 universe crossing every maintained topic with the applicable relation families; generation is non-evidential until each candidate is dispositioned.
-- [Terminal-neighbourhood candidates](terminal_neighbourhood_candidates_v1.md) — EXIT-02 matrix applying eight reopening moves to every closed or blocked topic.
+- [Terminal-neighbourhood register](terminal_neighbourhood_candidates_v1.md) — passed EXIT-02 matrix applying eight reopening moves to every closed or blocked topic; regeneration reopens the gate when a new terminal topic appears.
 - [Experiment exit audit](experiment_exit_audit_v1.md) — strict EXIT-03 field audit that measures what separates the existing design atlas from decision-complete experimental programmes.
 - [Frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md) — current whole-corpus result, frontier shape and ranked next tranches.
 - [Finesse technology pathway](finesse_technology_pathway_v1.md) — converts certificate-preserving descent, detector lifting and memory closure into a 90-day launch, a shared finesse device and a strict anomaly-to-new-physics escalation ladder.
@@ -24,6 +24,7 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Frontier experiment register](frontier_experiment_atlas_v1.json) — machine-readable 20-experiment portfolio covering all maintained topics and detector bundles.
 - [Frontier experiment programmes v2](frontier_experiment_programmes_v2.json) — decision-complete EXIT-03 surface for all 21 experiments and all 378 required cells, while preserving direct v1 content.
 - [Experiment programme overrides v2](frontier_experiment_programme_overrides_v2.json) — durable experiment-specific authorship for all transfer functions, covariance models, sensitivity calculations, decision gates, replication rules, release contracts and claim propagation; never overwritten by regeneration.
+- [Terminal-neighbourhood authored reviews](terminal_neighbourhood_reviews_v1.json) — durable move-by-move findings, consequences and reopening data merged into the generated EXIT-02 queue without overwriting review judgment.
 - [Frontier complexity cards](frontier_complexity_cards_v1.md) — five-stage existence, preparation, sampling, detection and independent-verification audit for FPT-001--010 and FPT-022.
 - [Complexity-card register](frontier_complexity_cards_v1.json) — machine-readable scaling classes, variables, approximation boundaries, independent checks and stop rules.
 - [Open topics](open_topics_v1.md) — maintained priority queue with explicit stop rules.

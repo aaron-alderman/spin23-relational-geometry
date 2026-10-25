@@ -18,7 +18,7 @@ Completion never means that nature or mathematics has no unknown structure. It m
 | Gate | Required endpoint | Present state |
 |---|---|---|
 | EXIT-01 · Physics–mathematics adjacency saturation | Every applicable relation family has been generated and every candidate edge has exactly one disposition, receipt, consequence and reopening trigger. | Open |
-| EXIT-02 · Exhausted-end neighbourhood saturation | Every terminal branch has tested weakened assumptions, changed carriers, extra data, lifted quotients, alternative detectors, boundary/nonlocal variants, limit order and nearby mechanisms. | Open |
+| EXIT-02 · Exhausted-end neighbourhood saturation | Every terminal branch has tested weakened assumptions, changed carriers, extra data, lifted quotients, alternative detectors, boundary/nonlocal variants, limit order and nearby mechanisms. | Passed |
 | EXIT-03 · Experimental programme closure | Every reachable experiment has conventional null, transfer function, covariance, sensitivity, preregistration, replication, three go/no-go layers and outcome propagation. | Passed |
 | EXIT-04 · Theory and mathematics closure | Every bridge is type-, unit-, map-, invariant-, limit-, counterexample- and equivalence-audited, with its physical non-implications explicit. | Open |
 | EXIT-05 · Literature-frontier saturation | Every major branch has a dated reproducible search receipt and a bounded residual novelty statement. | Open |
@@ -66,12 +66,12 @@ An external blocker is admissible at the endpoint only if it records the exact m
 
 The [residual frontier boundary](residual_frontier_exhaustion_boundary_v1.md) establishes **current-input computational exhaustion**: no maintained nonclosed topic presently has every input, bounded task, independent verifier and stopping rule needed for another evidential repository calculation. It is a valid milestone beneath this contract, not the endpoint.
 
-The first item is now instantiated by the [physics–mathematics adjacency candidate register](physics_math_adjacency_candidates_v1.md): 518 topic-level candidate questions have been generated across all 51 maintained topics and all twelve relation families. All begin unreviewed. EXIT-02 likewise has an [80-cell terminal-neighbourhood queue](terminal_neighbourhood_candidates_v1.md) covering eight closed and two blocked topics. The [v2 programme surface](frontier_experiment_programmes_v2.json) now makes all 378 required cells explicit across all 21 experiments, and the [experiment exit audit](experiment_exit_audit_v1.md) verifies every build, bridge and physics decision layer. EXIT-03 is therefore passed. This closes experimental programme specification, not experimental execution and not any other corpus-completion gate.
+The first item is now instantiated by the [physics–mathematics adjacency candidate register](physics_math_adjacency_candidates_v1.md): 518 topic-level candidate questions have been generated across all 51 maintained topics and all twelve relation families. All begin unreviewed. EXIT-02 now passes: the [80-cell terminal-neighbourhood register](terminal_neighbourhood_candidates_v1.md) covers eight closed and two blocked topics with evidence, findings, inherited consequences and exact reopening data for every required move. The [v2 programme surface](frontier_experiment_programmes_v2.json) likewise makes all 378 required cells explicit across all 21 experiments, and the [experiment exit audit](experiment_exit_audit_v1.md) verifies every build, bridge and physics decision layer. EXIT-03 passes. These closures concern terminal-neighbourhood accounting and experimental programme specification; they do not imply that experiments have run or that the remaining corpus gates are closed.
 
 The immediate programme is therefore:
 
 1. disposition the 518 normalized topic-level adjacency candidates, then expand and deduplicate at claim-family and object level;
-2. create terminal-neighbourhood certificates for every closed, killed, blocked and exhausted branch;
+2. preserve the now-passed terminal-neighbourhood matrix and automatically review any new closed or blocked topic;
 3. preserve the now-passed experiment programme contract and execute programmes only when their external build gates are met;
 4. build theory, literature and implication audits at claim and branch level;
 5. integrate narrative, authority, links, contradiction checks, PageRank-bias checks and held-out retrieval into one release gate;

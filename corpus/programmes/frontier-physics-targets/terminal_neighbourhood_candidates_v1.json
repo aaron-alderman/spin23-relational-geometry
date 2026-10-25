@@ -4,6 +4,7 @@
   "authority": "EXIT-02 review queue. A closed or blocked topic is not neighbourhood-exhausted merely because its original closure or blocker is valid.",
   "criteriaRef": "corpus/programmes/frontier-physics-targets/corpus_completion_exit_criteria_v1.json",
   "sourceRef": "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json",
+  "reviewsRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json",
   "allowedResults": [
     "reopens_branch",
     "does_not_reopen",
@@ -17,9 +18,9 @@
     "blockedTopics": 2,
     "movesPerTopic": 8,
     "candidates": 80,
-    "reviewed": 0,
-    "unreviewed": 80,
-    "exit02Passed": false
+    "reviewed": 80,
+    "unreviewed": 0,
+    "exit02Passed": true
   },
   "candidates": [
     {
@@ -29,13 +30,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "Removing linearity or finite-memory restrictions creates the compact nonlinear history-family problem; AZ-107 solves one such family but does not enlarge AZ-057 retroactively.",
+      "inheritedConsequences": [
+        "The AZ-057 closure remains valid only for the declared geometric-holonomy, static-splitting and differential-loss family.",
+        "Claims of global nonlinear identifiability inherit OT-034 rather than OT-001's finite-family closure.",
+        "Physical use inherits the calibrated-carrier and detector-transfer requirements of EX-003."
+      ],
+      "minimalReopeningDatum": "An explicit enlarged mechanism family with parameter domain, recurrence law and a pair not covered by the AZ-107 injectivity proof.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-001:change_the_carrier",
@@ -44,13 +54,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "The simulator-level separation survives symbolically, but carrier coupling, detector bandwidth and nuisance covariance are not supplied by the abstract closure.",
+      "inheritedConsequences": [
+        "The AZ-057 closure remains valid only for the declared geometric-holonomy, static-splitting and differential-loss family.",
+        "Claims of global nonlinear identifiability inherit OT-034 rather than OT-001's finite-family closure.",
+        "Physical use inherits the calibrated-carrier and detector-transfer requirements of EX-003."
+      ],
+      "minimalReopeningDatum": "One calibrated physical carrier providing the complete intervention-to-record transfer map and nuisance covariance required by EX-003.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-001:add_one_independent_datum",
@@ -59,13 +78,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "AZ-057 already uses coordinated controls to separate every declared pair or retain an explicit quotient; another datum can improve margin but cannot undo that scoped classification.",
+      "inheritedConsequences": [
+        "The AZ-057 closure remains valid only for the declared geometric-holonomy, static-splitting and differential-loss family.",
+        "Claims of global nonlinear identifiability inherit OT-034 rather than OT-001's finite-family closure.",
+        "Physical use inherits the calibrated-carrier and detector-transfer requirements of EX-003."
+      ],
+      "minimalReopeningDatum": "A declared-family pair whose new datum contradicts its AZ-057 separation or quotient certificate.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-001:lift_or_change_the_quotient_or_detector",
@@ -74,13 +102,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "Replacing power-only detection with a coherent reference removes an exact sign quotient in AZ-107; this is the detector-lift branch already represented by OT-034.",
+      "inheritedConsequences": [
+        "The AZ-057 closure remains valid only for the declared geometric-holonomy, static-splitting and differential-loss family.",
+        "Claims of global nonlinear identifiability inherit OT-034 rather than OT-001's finite-family closure.",
+        "Physical use inherits the calibrated-carrier and detector-transfer requirements of EX-003."
+      ],
+      "minimalReopeningDatum": "A detector lift outside AZ-057/AZ-107 with an explicit transfer map and a previously unresolved equivalence class.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-001:test_boundary_defect_or_nonlocal_variant",
@@ -89,13 +126,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "not_applicable_with_reason",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "OT-001's declared objects are mechanism-to-record maps without spatial bulk, boundary or defect structure. Adding one changes the model family and belongs in a typed child topic.",
+      "inheritedConsequences": [
+        "The AZ-057 closure remains valid only for the declared geometric-holonomy, static-splitting and differential-loss family.",
+        "Claims of global nonlinear identifiability inherit OT-034 rather than OT-001's finite-family closure.",
+        "Physical use inherits the calibrated-carrier and detector-transfer requirements of EX-003."
+      ],
+      "minimalReopeningDatum": "A spatially typed mechanism family showing how boundary or nonlocal degrees of freedom enter the detector map.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-001:change_scale_or_order_of_limits",
@@ -104,13 +150,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "Noise and sample size change statistical power, but AZ-057's exact finite-family separations and retained algebraic quotient are not limit-order claims.",
+      "inheritedConsequences": [
+        "The AZ-057 closure remains valid only for the declared geometric-holonomy, static-splitting and differential-loss family.",
+        "Claims of global nonlinear identifiability inherit OT-034 rather than OT-001's finite-family closure.",
+        "Physical use inherits the calibrated-carrier and detector-transfer requirements of EX-003."
+      ],
+      "minimalReopeningDatum": "A specified limit in which a certified separation distance vanishes or a retained quotient splits.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-001:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -119,13 +174,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "The residual obstruction is representational and detector-induced: distinct latent mechanisms share the same admitted record after nuisance projection. It is not a topological or dynamical no-go.",
+      "inheritedConsequences": [
+        "The AZ-057 closure remains valid only for the declared geometric-holonomy, static-splitting and differential-loss family.",
+        "Claims of global nonlinear identifiability inherit OT-034 rather than OT-001's finite-family closure.",
+        "Physical use inherits the calibrated-carrier and detector-transfer requirements of EX-003."
+      ],
+      "minimalReopeningDatum": "A proof that the residual equality arises from a different obstruction class and changes the admissible intervention set.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-001:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -134,13 +198,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_57_coordinated_selector_closure_and_physical_provenance_boundary.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "Nonlinear recurrent and history-dependent mechanisms can share the same local Fisher invariant while differing globally; AZ-107 is the nearest completed child and leaves larger recurrences open.",
+      "inheritedConsequences": [
+        "The AZ-057 closure remains valid only for the declared geometric-holonomy, static-splitting and differential-loss family.",
+        "Claims of global nonlinear identifiability inherit OT-034 rather than OT-001's finite-family closure.",
+        "Physical use inherits the calibrated-carrier and detector-transfer requirements of EX-003."
+      ],
+      "minimalReopeningDatum": "A compact alternative model family with the same local response invariant and an explicit global record-equivalence question beyond AZ-107.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-014:weaken_one_assumption",
@@ -149,13 +222,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_51_spectral_boundary_dynamics_free_bloch_efimov_casimir.md",
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Dropping the one-channel/simple-threshold assumptions removes the scalar phase ledger used by AZ-055 and produces matrix-valued or degenerate scattering data.",
+      "inheritedConsequences": [
+        "The corrected winding ledger is closed only for the declared finite one-channel chain and attachments.",
+        "Arbitrary graphs, multichannel leads and threshold-degenerate attachments remain typed child problems.",
+        "Experimental transport of the ledger inherits EX-011's finite-band, branch and detector calibrations."
+      ],
+      "minimalReopeningDatum": "An explicit arbitrary-graph or multichannel scattering family with a proposed corrected winding identity.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-014:change_the_carrier",
@@ -164,13 +246,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_51_spectral_boundary_dynamics_free_bloch_efimov_casimir.md",
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "The finite-chain identity is carrier-agnostic at the model level, but a photonic, acoustic or microwave realization adds loss, probe loading and finite detector band not certified by AZ-055.",
+      "inheritedConsequences": [
+        "The corrected winding ledger is closed only for the declared finite one-channel chain and attachments.",
+        "Arbitrary graphs, multichannel leads and threshold-degenerate attachments remain typed child problems.",
+        "Experimental transport of the ledger inherits EX-011's finite-band, branch and detector calibrations."
+      ],
+      "minimalReopeningDatum": "Calibrated complex scattering, local density and ringdown data from one carrier satisfying EX-011's coverage gate.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-014:add_one_independent_datum",
@@ -179,13 +270,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_51_spectral_boundary_dynamics_free_bloch_efimov_casimir.md",
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "AZ-055 already joins corrected phase, pole count, delay and localization at both edges; an additional record tests the ledger but does not alter the proved finite model.",
+      "inheritedConsequences": [
+        "The corrected winding ledger is closed only for the declared finite one-channel chain and attachments.",
+        "Arbitrary graphs, multichannel leads and threshold-degenerate attachments remain typed child problems.",
+        "Experimental transport of the ledger inherits EX-011's finite-band, branch and detector calibrations."
+      ],
+      "minimalReopeningDatum": "An independent observable that disagrees with the common pole model after branch and background corrections.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-014:lift_or_change_the_quotient_or_detector",
@@ -194,13 +294,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_51_spectral_boundary_dynamics_free_bloch_efimov_casimir.md",
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Matrix scattering from multichannel leads retains eigenphase and channel-mixing information erased by the scalar determinant phase, so its Levinson correction is a distinct problem.",
+      "inheritedConsequences": [
+        "The corrected winding ledger is closed only for the declared finite one-channel chain and attachments.",
+        "Arbitrary graphs, multichannel leads and threshold-degenerate attachments remain typed child problems.",
+        "Experimental transport of the ledger inherits EX-011's finite-band, branch and detector calibrations."
+      ],
+      "minimalReopeningDatum": "A multichannel detector map with channel-resolved S matrix and a candidate basis-invariant winding/count relation.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-014:test_boundary_defect_or_nonlocal_variant",
@@ -209,13 +318,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_51_spectral_boundary_dynamics_free_bloch_efimov_casimir.md",
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Threshold-degenerate, nonlocal or graph attachments change edge multiplicity and background subtraction and were explicitly excluded from the closure.",
+      "inheritedConsequences": [
+        "The corrected winding ledger is closed only for the declared finite one-channel chain and attachments.",
+        "Arbitrary graphs, multichannel leads and threshold-degenerate attachments remain typed child problems.",
+        "Experimental transport of the ledger inherits EX-011's finite-band, branch and detector calibrations."
+      ],
+      "minimalReopeningDatum": "One specified attachment with its self-energy, threshold multiplicity and physical-sheet convention.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-014:change_scale_or_order_of_limits",
@@ -224,13 +342,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_51_spectral_boundary_dynamics_free_bloch_efimov_casimir.md",
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "The finite-band result does not prove a continuum or infinite-graph Levinson theorem; band edges and background phases can change when those limits precede zero loss.",
+      "inheritedConsequences": [
+        "The corrected winding ledger is closed only for the declared finite one-channel chain and attachments.",
+        "Arbitrary graphs, multichannel leads and threshold-degenerate attachments remain typed child problems.",
+        "Experimental transport of the ledger inherits EX-011's finite-band, branch and detector calibrations."
+      ],
+      "minimalReopeningDatum": "A controlled sequence with declared volume, continuum and loss order plus uniform pole/phase bounds.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-014:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -239,13 +366,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_51_spectral_boundary_dynamics_free_bloch_efimov_casimir.md",
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "The resolved obstruction was global analytic bookkeeping—finite-band backgrounds, edge contributions and sheet choice—not absence of local spectral data.",
+      "inheritedConsequences": [
+        "The corrected winding ledger is closed only for the declared finite one-channel chain and attachments.",
+        "Arbitrary graphs, multichannel leads and threshold-degenerate attachments remain typed child problems.",
+        "Experimental transport of the ledger inherits EX-011's finite-band, branch and detector calibrations."
+      ],
+      "minimalReopeningDatum": "A counterexample within the declared chain where the corrected analytic ledger fails despite consistent sheet and edge data.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-014:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -254,13 +390,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_51_spectral_boundary_dynamics_free_bloch_efimov_casimir.md",
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Non-Hermitian and Floquet scattering can exhibit phase winding and delay with gain/loss or quasienergy mechanisms not represented by the passive static chain.",
+      "inheritedConsequences": [
+        "The corrected winding ledger is closed only for the declared finite one-channel chain and attachments.",
+        "Arbitrary graphs, multichannel leads and threshold-degenerate attachments remain typed child problems.",
+        "Experimental transport of the ledger inherits EX-011's finite-band, branch and detector calibrations."
+      ],
+      "minimalReopeningDatum": "A concrete passive-to-non-Hermitian or Floquet model sharing the winding invariant with a declared replacement for bound-state count.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-015:weaken_one_assumption",
@@ -269,13 +414,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md"
+      ],
+      "finding": "Weakening robustness to mere finite-profile distinguishability admits many unprotected records but does not challenge AZ-105's no-go or AZ-106's symmetry-protected construction.",
+      "inheritedConsequences": [
+        "Continuous residue, localization and raw phase are not protected beyond index in the minimal chiral chain.",
+        "The calibrated mirror representation is protected only while reflection symmetry and its reference remain available.",
+        "D4, non-Abelian and fabricated-wall realizations are operator- or experiment-specific children."
+      ],
+      "minimalReopeningDatum": "A precise weaker protection criterion plus a record that survives every homotopy admitted by that criterion.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-015:change_the_carrier",
@@ -284,13 +438,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md"
+      ],
+      "finding": "AZ-106 gives a finite existence construction; an acoustic, circuit or photonic carrier must independently preserve the mirror calibration and forbidden-port contrast under fabrication disorder.",
+      "inheritedConsequences": [
+        "Continuous residue, localization and raw phase are not protected beyond index in the minimal chiral chain.",
+        "The calibrated mirror representation is protected only while reflection symmetry and its reference remain available.",
+        "D4, non-Abelian and fabricated-wall realizations are operator- or experiment-specific children."
+      ],
+      "minimalReopeningDatum": "A fabricated mirror-even/odd wall with calibrated site/port transfer, open bulk gap and disorder covariance as specified by EX-014.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-015:add_one_independent_datum",
@@ -299,13 +462,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md"
+      ],
+      "finding": "Additional localization or phase data remain homotopy-sensitive; only independently calibrated representation data supplied the protection mechanism in AZ-106.",
+      "inheritedConsequences": [
+        "Continuous residue, localization and raw phase are not protected beyond index in the minimal chiral chain.",
+        "The calibrated mirror representation is protected only while reflection symmetry and its reference remain available.",
+        "D4, non-Abelian and fabricated-wall realizations are operator- or experiment-specific children."
+      ],
+      "minimalReopeningDatum": "A new datum with an explicit protecting symmetry or invariant not reducible to the mirror character already used.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-015:lift_or_change_the_quotient_or_detector",
@@ -314,13 +486,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md"
+      ],
+      "finding": "Resolving the full defect representation or non-Abelian scattering matrix can retain information erased by mode count and the two-port mirror record.",
+      "inheritedConsequences": [
+        "Continuous residue, localization and raw phase are not protected beyond index in the minimal chiral chain.",
+        "The calibrated mirror representation is protected only while reflection symmetry and its reference remain available.",
+        "D4, non-Abelian and fabricated-wall realizations are operator- or experiment-specific children."
+      ],
+      "minimalReopeningDatum": "A specified higher-rank detector/quotient and a same-index defect pair it separates with a proved protection law.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-015:test_boundary_defect_or_nonlocal_variant",
@@ -329,13 +510,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md"
+      ],
+      "finding": "D4 quotient scars, partial dislocations and nonlocal defects alter the symmetry representation and are not homotopies of the AZ-106 wall family.",
+      "inheritedConsequences": [
+        "Continuous residue, localization and raw phase are not protected beyond index in the minimal chiral chain.",
+        "The calibrated mirror representation is protected only while reflection symmetry and its reference remain available.",
+        "D4, non-Abelian and fabricated-wall realizations are operator- or experiment-specific children."
+      ],
+      "minimalReopeningDatum": "One explicit defect Hamiltonian, symmetry action and candidate non-index observable with a gap-preserving perturbation class.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-015:change_scale_or_order_of_limits",
@@ -344,13 +534,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md"
+      ],
+      "finding": "AZ-106 is finite; thermodynamic size before disorder or symmetry-breaking limits may erase or sharpen the representation contrast and lacks a uniform theorem.",
+      "inheritedConsequences": [
+        "Continuous residue, localization and raw phase are not protected beyond index in the minimal chiral chain.",
+        "The calibrated mirror representation is protected only while reflection symmetry and its reference remain available.",
+        "D4, non-Abelian and fabricated-wall realizations are operator- or experiment-specific children."
+      ],
+      "minimalReopeningDatum": "A size/disorder sequence with uniform gap and mirror-sector leakage bounds.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-015:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -359,13 +558,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md"
+      ],
+      "finding": "AZ-105's obstruction is representational: fixed index omits continuous wavefunction data. AZ-106 succeeds by adjoining crystalline representation data, not by changing the index.",
+      "inheritedConsequences": [
+        "Continuous residue, localization and raw phase are not protected beyond index in the minimal chiral chain.",
+        "The calibrated mirror representation is protected only while reflection symmetry and its reference remain available.",
+        "D4, non-Abelian and fabricated-wall realizations are operator- or experiment-specific children."
+      ],
+      "minimalReopeningDatum": "A within-scope datum proved invariant without any additional representation or protecting symmetry.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-015:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -374,13 +582,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md"
+      ],
+      "finding": "Crystalline, non-Abelian and scattering-topological defects can share mode count while carrying different symmetry or braid data.",
+      "inheritedConsequences": [
+        "Continuous residue, localization and raw phase are not protected beyond index in the minimal chiral chain.",
+        "The calibrated mirror representation is protected only while reflection symmetry and its reference remain available.",
+        "D4, non-Abelian and fabricated-wall realizations are operator- or experiment-specific children."
+      ],
+      "minimalReopeningDatum": "A concrete same-index alternative with a source-native action and a detector capable of reading its extra invariant.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-019:weaken_one_assumption",
@@ -389,13 +606,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_19_shape_of_the_admissibility_bounds.md"
+      ],
+      "finding": "Allowing active, nonlinear or non-Markovian dynamics removes passive positivity and semigroup structure used by AZ-099.",
+      "inheritedConsequences": [
+        "AZ-099 closes one equal-capacity passive six-cell three-scale construction with fixed averaging maps.",
+        "Scale-dependent detector equivalence and the exact quotient-defect identity remain established for that carrier.",
+        "Unequal capacities, covariance-aware inference and physical fabrication remain extensions."
+      ],
+      "minimalReopeningDatum": "An explicit nonpassive or memoryful carrier with declared admissible sets and composable interscale maps.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-019:change_the_carrier",
@@ -404,13 +629,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_19_shape_of_the_admissibility_bounds.md"
+      ],
+      "finding": "The RC/diffusion construction is exact, but another physical carrier needs independently measured averaging maps, capacities and detector folds.",
+      "inheritedConsequences": [
+        "AZ-099 closes one equal-capacity passive six-cell three-scale construction with fixed averaging maps.",
+        "Scale-dependent detector equivalence and the exact quotient-defect identity remain established for that carrier.",
+        "Unequal capacities, covariance-aware inference and physical fabrication remain extensions."
+      ],
+      "minimalReopeningDatum": "A fabricated multiscale carrier with calibrated fine, intermediate and coarse transfer matrices and no fitted interscale map.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-019:add_one_independent_datum",
@@ -419,13 +652,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_19_shape_of_the_admissibility_bounds.md"
+      ],
+      "finding": "Covariance and cross-spectrum data can distinguish mechanisms that share mean pushforwards, extending the admissible record beyond AZ-099's deterministic state map.",
+      "inheritedConsequences": [
+        "AZ-099 closes one equal-capacity passive six-cell three-scale construction with fixed averaging maps.",
+        "Scale-dependent detector equivalence and the exact quotient-defect identity remain established for that carrier.",
+        "Unequal capacities, covariance-aware inference and physical fabrication remain extensions."
+      ],
+      "minimalReopeningDatum": "A source-derived noise model and measured multiscale covariance whose pushforward law is specified.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-019:lift_or_change_the_quotient_or_detector",
@@ -434,13 +675,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_19_shape_of_the_admissibility_bounds.md"
+      ],
+      "finding": "A detector retaining intermediate memory or unequal cell weights changes the quotient and can expose distinctions erased by equal averaging.",
+      "inheritedConsequences": [
+        "AZ-099 closes one equal-capacity passive six-cell three-scale construction with fixed averaging maps.",
+        "Scale-dependent detector equivalence and the exact quotient-defect identity remain established for that carrier.",
+        "Unequal capacities, covariance-aware inference and physical fabrication remain extensions."
+      ],
+      "minimalReopeningDatum": "A fixed weighted or history-retaining detector map plus a held-out substitution showing a new equivalence split.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-019:test_boundary_defect_or_nonlocal_variant",
@@ -449,13 +698,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_19_shape_of_the_admissibility_bounds.md"
+      ],
+      "finding": "Nonlocal couplings and boundary reservoirs can violate the local two-stage defect decomposition without contradicting the AZ-099 network.",
+      "inheritedConsequences": [
+        "AZ-099 closes one equal-capacity passive six-cell three-scale construction with fixed averaging maps.",
+        "Scale-dependent detector equivalence and the exact quotient-defect identity remain established for that carrier.",
+        "Unequal capacities, covariance-aware inference and physical fabrication remain extensions."
+      ],
+      "minimalReopeningDatum": "A specified boundary/nonlocal generator and proposed replacement for the exact two-stage identity.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-019:change_scale_or_order_of_limits",
@@ -464,13 +721,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_19_shape_of_the_admissibility_bounds.md"
+      ],
+      "finding": "Three finite scales do not establish a continuum renormalization functor or uniform telescoping constant over arbitrarily many levels.",
+      "inheritedConsequences": [
+        "AZ-099 closes one equal-capacity passive six-cell three-scale construction with fixed averaging maps.",
+        "Scale-dependent detector equivalence and the exact quotient-defect identity remain established for that carrier.",
+        "Unequal capacities, covariance-aware inference and physical fabrication remain extensions."
+      ],
+      "minimalReopeningDatum": "A scale-indexed family with uniform positivity, composition and error bounds as the number of levels grows.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-019:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -479,13 +744,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_19_shape_of_the_admissibility_bounds.md"
+      ],
+      "finding": "The lost information is detector/quotient representational and sometimes dynamical memory; AZ-099 explicitly locates whether memory dies at the intermediate or coarse scale.",
+      "inheritedConsequences": [
+        "AZ-099 closes one equal-capacity passive six-cell three-scale construction with fixed averaging maps.",
+        "Scale-dependent detector equivalence and the exact quotient-defect identity remain established for that carrier.",
+        "Unequal capacities, covariance-aware inference and physical fabrication remain extensions."
+      ],
+      "minimalReopeningDatum": "A substitution showing failure of the classified quotient-defect identity within the declared passive network.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-019:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -494,13 +767,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_19_shape_of_the_admissibility_bounds.md"
+      ],
+      "finding": "Markov lumpability, renormalization and information-bottleneck constructions share compositional coarse maps but impose different invariants and error measures.",
+      "inheritedConsequences": [
+        "AZ-099 closes one equal-capacity passive six-cell three-scale construction with fixed averaging maps.",
+        "Scale-dependent detector equivalence and the exact quotient-defect identity remain established for that carrier.",
+        "Unequal capacities, covariance-aware inference and physical fabrication remain extensions."
+      ],
+      "minimalReopeningDatum": "One alternative formalism mapped to the same six-cell carrier with a prediction not implied by AZ-099.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-029:weaken_one_assumption",
@@ -509,13 +790,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md",
+        "corpus/claims/1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md",
+        "corpus/claims/1700-1799/1757_healthy_axion_torsion_mixing_preserves_only_a_total_residue_norm_not_the_pgt_pole_coupling.md",
+        "corpus/claims/1700-1799/1780_the_torsionful_supersymmetry_route_now_ends_at_a_new_four_gate_parent_not_a_known_completion.md"
+      ],
+      "finding": "Dropping distinctiveness yields an ordinary generic pseudoscalar portal already admitted by claim 1611, but no protected torsion parent.",
+      "inheritedConsequences": [
+        "The healthy 0-minus torsion sector supplies a generic axionlike polarized portal but not a distinctive Spin(2,3) fingerprint.",
+        "Known symmetry and UV routes do not fix the portal through thresholds; free pseudoscalar coefficients retain the same records.",
+        "Reopening requires new parent-model construction or a computed fixed trajectory, not another group-theory resemblance."
+      ],
+      "minimalReopeningDatum": "A weaker target with a new observable that generic pseudoscalar coefficients cannot reproduce.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-029:change_the_carrier",
@@ -524,13 +815,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md",
+        "corpus/claims/1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md",
+        "corpus/claims/1700-1799/1757_healthy_axion_torsion_mixing_preserves_only_a_total_residue_norm_not_the_pgt_pole_coupling.md",
+        "corpus/claims/1700-1799/1780_the_torsionful_supersymmetry_route_now_ends_at_a_new_four_gate_parent_not_a_known_completion.md"
+      ],
+      "finding": "Changing laboratory carrier can improve coupling reach but cannot fix the action-level species ratios or threshold protection missing from the parent.",
+      "inheritedConsequences": [
+        "The healthy 0-minus torsion sector supplies a generic axionlike polarized portal but not a distinctive Spin(2,3) fingerprint.",
+        "Known symmetry and UV routes do not fix the portal through thresholds; free pseudoscalar coefficients retain the same records.",
+        "Reopening requires new parent-model construction or a computed fixed trajectory, not another group-theory resemblance."
+      ],
+      "minimalReopeningDatum": "A UV-complete action and matching map predicting the new carrier's operator and species ratio before its data are used.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-029:add_one_independent_datum",
@@ -539,13 +840,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md",
+        "corpus/claims/1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md",
+        "corpus/claims/1700-1799/1757_healthy_axion_torsion_mixing_preserves_only_a_total_residue_norm_not_the_pgt_pole_coupling.md",
+        "corpus/claims/1700-1799/1780_the_torsionful_supersymmetry_route_now_ends_at_a_new_four_gate_parent_not_a_known_completion.md"
+      ],
+      "finding": "Dual orientations or species can separate mass and effective couplings experimentally, yet generic axionlike freedom remains unless the parent fixes their ratio.",
+      "inheritedConsequences": [
+        "The healthy 0-minus torsion sector supplies a generic axionlike polarized portal but not a distinctive Spin(2,3) fingerprint.",
+        "Known symmetry and UV routes do not fix the portal through thresholds; free pseudoscalar coefficients retain the same records.",
+        "Reopening requires new parent-model construction or a computed fixed trajectory, not another group-theory resemblance."
+      ],
+      "minimalReopeningDatum": "A replicated multi-species/range record plus a parent-derived no-refit coupling ratio inconsistent with the generic-free alternative.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-029:lift_or_change_the_quotient_or_detector",
@@ -554,13 +865,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md",
+        "corpus/claims/1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md",
+        "corpus/claims/1700-1799/1757_healthy_axion_torsion_mixing_preserves_only_a_total_residue_norm_not_the_pgt_pole_coupling.md",
+        "corpus/claims/1700-1799/1780_the_torsionful_supersymmetry_route_now_ends_at_a_new_four_gate_parent_not_a_known_completion.md"
+      ],
+      "finding": "Detector enrichment identifies more EFT coordinates but does not supply radiative protection; the obstruction lies upstream in matching.",
+      "inheritedConsequences": [
+        "The healthy 0-minus torsion sector supplies a generic axionlike polarized portal but not a distinctive Spin(2,3) fingerprint.",
+        "Known symmetry and UV routes do not fix the portal through thresholds; free pseudoscalar coefficients retain the same records.",
+        "Reopening requires new parent-model construction or a computed fixed trajectory, not another group-theory resemblance."
+      ],
+      "minimalReopeningDatum": "A detector-visible invariant proved insensitive to all allowed threshold and mixing redefinitions.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-029:test_boundary_defect_or_nonlocal_variant",
@@ -569,13 +890,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md",
+        "corpus/claims/1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md",
+        "corpus/claims/1700-1799/1757_healthy_axion_torsion_mixing_preserves_only_a_total_residue_norm_not_the_pgt_pole_coupling.md",
+        "corpus/claims/1700-1799/1780_the_torsionful_supersymmetry_route_now_ends_at_a_new_four_gate_parent_not_a_known_completion.md"
+      ],
+      "finding": "Walls, boundary phases and nonlocal completions can source oriented pseudoscalar records, but they introduce new parent data and are not completions of the blocked local action.",
+      "inheritedConsequences": [
+        "The healthy 0-minus torsion sector supplies a generic axionlike polarized portal but not a distinctive Spin(2,3) fingerprint.",
+        "Known symmetry and UV routes do not fix the portal through thresholds; free pseudoscalar coefficients retain the same records.",
+        "Reopening requires new parent-model construction or a computed fixed trajectory, not another group-theory resemblance."
+      ],
+      "minimalReopeningDatum": "An explicit boundary/nonlocal action with healthy spectrum, anomaly closure, matching and a protected portal prediction.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-029:change_scale_or_order_of_limits",
@@ -584,13 +915,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md",
+        "corpus/claims/1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md",
+        "corpus/claims/1700-1799/1757_healthy_axion_torsion_mixing_preserves_only_a_total_residue_norm_not_the_pgt_pole_coupling.md",
+        "corpus/claims/1700-1799/1780_the_torsionful_supersymmetry_route_now_ends_at_a_new_four_gate_parent_not_a_known_completion.md"
+      ],
+      "finding": "Threshold running and gravity/matter limits are precisely where the coupling loses protection; no known uniform trajectory fixes the order.",
+      "inheritedConsequences": [
+        "The healthy 0-minus torsion sector supplies a generic axionlike polarized portal but not a distinctive Spin(2,3) fingerprint.",
+        "Known symmetry and UV routes do not fix the portal through thresholds; free pseudoscalar coefficients retain the same records.",
+        "Reopening requires new parent-model construction or a computed fixed trajectory, not another group-theory resemblance."
+      ],
+      "minimalReopeningDatum": "A computed interacting matter-gravity fixed point and matched RG trajectory reaching the healthy infrared 0-minus sector.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-029:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -599,13 +940,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md",
+        "corpus/claims/1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md",
+        "corpus/claims/1700-1799/1757_healthy_axion_torsion_mixing_preserves_only_a_total_residue_norm_not_the_pgt_pole_coupling.md",
+        "corpus/claims/1700-1799/1780_the_torsionful_supersymmetry_route_now_ends_at_a_new_four_gate_parent_not_a_known_completion.md"
+      ],
+      "finding": "The blocker is dynamical and representational: healthy spectra exist, but mixing and threshold matching preserve only broader residue data, not the desired pole coupling.",
+      "inheritedConsequences": [
+        "The healthy 0-minus torsion sector supplies a generic axionlike polarized portal but not a distinctive Spin(2,3) fingerprint.",
+        "Known symmetry and UV routes do not fix the portal through thresholds; free pseudoscalar coefficients retain the same records.",
+        "Reopening requires new parent-model construction or a computed fixed trajectory, not another group-theory resemblance."
+      ],
+      "minimalReopeningDatum": "A grading or nonrenormalization theorem that protects the specific coupling rather than only total residue norm.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-029:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -614,13 +965,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md",
+        "corpus/claims/1600-1699/1623_the_critical_0minus_sector_leaves_unpolarized_lense_thirring_exactly_gr_but_adds_a_polarized_yukawa_torque.md",
+        "corpus/claims/1700-1799/1757_healthy_axion_torsion_mixing_preserves_only_a_total_residue_norm_not_the_pgt_pole_coupling.md",
+        "corpus/claims/1700-1799/1780_the_torsionful_supersymmetry_route_now_ends_at_a_new_four_gate_parent_not_a_known_completion.md"
+      ],
+      "finding": "Axions, pseudoscalars and torsion-mixed modes share the polarized Yukawa invariant, so the invariant alone cannot identify the torsion parent.",
+      "inheritedConsequences": [
+        "The healthy 0-minus torsion sector supplies a generic axionlike polarized portal but not a distinctive Spin(2,3) fingerprint.",
+        "Known symmetry and UV routes do not fix the portal through thresholds; free pseudoscalar coefficients retain the same records.",
+        "Reopening requires new parent-model construction or a computed fixed trajectory, not another group-theory resemblance."
+      ],
+      "minimalReopeningDatum": "A parent-specific correlated observable or species ratio derived across thresholds and absent from generic pseudoscalar EFT.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-031:weaken_one_assumption",
@@ -629,13 +990,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/claims/1500-1599/1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md",
+        "corpus/claims/1600-1699/1608_numerical_lattice_glueball_convergence_is_strong_gap_evidence_not_a_constructive_r4_theorem.md",
+        "corpus/claims/1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md",
+        "corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md"
+      ],
+      "finding": "Finite-volume, fixed-regulator or restricted-operator gaps are tractable and sometimes certified, but they are strictly weaker theorems than OT-031.",
+      "inheritedConsequences": [
+        "Finite spectra and lattice convergence are evidence, not a regulator-, volume-, time- and operator-uniform theorem.",
+        "Every shortcut surveyed leaves at least one of five irreducible constructive-QFT gates open.",
+        "Only an explicit uniform estimate or certified countersequence can change the blocked status."
+      ],
+      "minimalReopeningDatum": "A precisely scoped finite theorem with constants and an explicit statement of which uniform directions are abandoned.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-031:change_the_carrier",
@@ -644,13 +1015,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/claims/1500-1599/1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md",
+        "corpus/claims/1600-1699/1608_numerical_lattice_glueball_convergence_is_strong_gap_evidence_not_a_constructive_r4_theorem.md",
+        "corpus/claims/1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md",
+        "corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md"
+      ],
+      "finding": "Quantum simulators and lattice implementations can measure finite gaps but do not by themselves construct the four-dimensional continuum theory.",
+      "inheritedConsequences": [
+        "Finite spectra and lattice convergence are evidence, not a regulator-, volume-, time- and operator-uniform theorem.",
+        "Every shortcut surveyed leaves at least one of five irreducible constructive-QFT gates open.",
+        "Only an explicit uniform estimate or certified countersequence can change the blocked status."
+      ],
+      "minimalReopeningDatum": "A proved faithful simulator-to-continuum map with uniform error and spectral bounds.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-031:add_one_independent_datum",
@@ -659,13 +1040,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/claims/1500-1599/1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md",
+        "corpus/claims/1600-1699/1608_numerical_lattice_glueball_convergence_is_strong_gap_evidence_not_a_constructive_r4_theorem.md",
+        "corpus/claims/1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md",
+        "corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md"
+      ],
+      "finding": "Additional glueball masses, Wilson loops or moments strengthen evidence yet cannot provide a lower bound uniform over all states and limits.",
+      "inheritedConsequences": [
+        "Finite spectra and lattice convergence are evidence, not a regulator-, volume-, time- and operator-uniform theorem.",
+        "Every shortcut surveyed leaves at least one of five irreducible constructive-QFT gates open.",
+        "Only an explicit uniform estimate or certified countersequence can change the blocked status."
+      ],
+      "minimalReopeningDatum": "An inequality turning the new datum into a strictly positive lower spectral bound with explicit uniform constants.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-031:lift_or_change_the_quotient_or_detector",
@@ -674,13 +1065,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/claims/1500-1599/1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md",
+        "corpus/claims/1600-1699/1608_numerical_lattice_glueball_convergence_is_strong_gap_evidence_not_a_constructive_r4_theorem.md",
+        "corpus/claims/1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md",
+        "corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md"
+      ],
+      "finding": "Broader operator bases test more channels but worsen the required uniformity; detector restriction can hide near-zero states rather than exclude them.",
+      "inheritedConsequences": [
+        "Finite spectra and lattice convergence are evidence, not a regulator-, volume-, time- and operator-uniform theorem.",
+        "Every shortcut surveyed leaves at least one of five irreducible constructive-QFT gates open.",
+        "Only an explicit uniform estimate or certified countersequence can change the blocked status."
+      ],
+      "minimalReopeningDatum": "An operator-complete norm or reconstruction theorem transporting a measured bound to the full physical Hilbert space.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-031:test_boundary_defect_or_nonlocal_variant",
@@ -689,13 +1090,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/claims/1500-1599/1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md",
+        "corpus/claims/1600-1699/1608_numerical_lattice_glueball_convergence_is_strong_gap_evidence_not_a_constructive_r4_theorem.md",
+        "corpus/claims/1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md",
+        "corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md"
+      ],
+      "finding": "Boundaries, defects and nonlocal regulators define different spectral problems and can introduce localized false gaps; they do not settle the bulk R4 theorem.",
+      "inheritedConsequences": [
+        "Finite spectra and lattice convergence are evidence, not a regulator-, volume-, time- and operator-uniform theorem.",
+        "Every shortcut surveyed leaves at least one of five irreducible constructive-QFT gates open.",
+        "Only an explicit uniform estimate or certified countersequence can change the blocked status."
+      ],
+      "minimalReopeningDatum": "A boundary/defect estimate with a proved bulk projection and constants uniform as the boundary is removed.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-031:change_scale_or_order_of_limits",
@@ -704,13 +1115,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/claims/1500-1599/1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md",
+        "corpus/claims/1600-1699/1608_numerical_lattice_glueball_convergence_is_strong_gap_evidence_not_a_constructive_r4_theorem.md",
+        "corpus/claims/1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md",
+        "corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md"
+      ],
+      "finding": "This is the central blocker: known positive finite bounds are not uniform when volume, continuum, time and operator enlargement are taken in competing orders.",
+      "inheritedConsequences": [
+        "Finite spectra and lattice convergence are evidence, not a regulator-, volume-, time- and operator-uniform theorem.",
+        "Every shortcut surveyed leaves at least one of five irreducible constructive-QFT gates open.",
+        "Only an explicit uniform estimate or certified countersequence can change the blocked status."
+      ],
+      "minimalReopeningDatum": "One infinite-dimensional estimate with explicit positive constants uniform in every declared limit direction.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-031:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -719,13 +1140,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/claims/1500-1599/1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md",
+        "corpus/claims/1600-1699/1608_numerical_lattice_glueball_convergence_is_strong_gap_evidence_not_a_constructive_r4_theorem.md",
+        "corpus/claims/1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md",
+        "corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md"
+      ],
+      "finding": "The obstruction is global analytic and constructive: local spectra and symmetries do not control the full infinite-dimensional measure and Hamiltonian uniformly.",
+      "inheritedConsequences": [
+        "Finite spectra and lattice convergence are evidence, not a regulator-, volume-, time- and operator-uniform theorem.",
+        "Every shortcut surveyed leaves at least one of five irreducible constructive-QFT gates open.",
+        "Only an explicit uniform estimate or certified countersequence can change the blocked status."
+      ],
+      "minimalReopeningDatum": "A constructive measure/Hamiltonian result linking local estimates to a global positive spectral bound.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-031:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -734,13 +1165,23 @@
       "topicStatusAtGeneration": "blocked",
       "closureEvidence": null,
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/claims/1500-1599/1594_the_joined_mass_gap_investigation_closes_every_shortcut_and_leaves_five_irreducible_proof_arms.md",
+        "corpus/claims/1600-1699/1608_numerical_lattice_glueball_convergence_is_strong_gap_evidence_not_a_constructive_r4_theorem.md",
+        "corpus/claims/1600-1699/1617_the_su2_one_plaquette_hamiltonian_gap_is_certifiable_but_its_bounds_are_not_uniform_in_volume_or_continuum_limits.md",
+        "corpus/claims/1600-1699/1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md"
+      ],
+      "finding": "Semiclassical compactifications, large-N reduction, stochastic relaxation and finite transfer systems all generate gap-like quantities through mechanisms not equivalent to the physical finite-N R4 Hamiltonian gap.",
+      "inheritedConsequences": [
+        "Finite spectra and lattice convergence are evidence, not a regulator-, volume-, time- and operator-uniform theorem.",
+        "Every shortcut surveyed leaves at least one of five irreducible constructive-QFT gates open.",
+        "Only an explicit uniform estimate or certified countersequence can change the blocked status."
+      ],
+      "minimalReopeningDatum": "A proved transport theorem from one nearby mechanism to the target Hilbert space preserving gap type and uniform constants.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-034:weaken_one_assumption",
@@ -749,13 +1190,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "Removing compactness, finite recurrence or known drive history can reintroduce global fibres not covered by AZ-107.",
+      "inheritedConsequences": [
+        "Power-only detection is globally two-to-one in the sign of beta despite full local Fisher rank.",
+        "One calibrated coherent-amplitude record closes the quotient for the declared compact recurrence family.",
+        "Larger recurrence, unknown detector phase and physical-carrier validation remain outside the closure."
+      ],
+      "minimalReopeningDatum": "An enlarged parameter/history family containing an explicit record-equivalent pair after the AZ-107 coherent intervention.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-034:change_the_carrier",
@@ -764,13 +1213,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "AZ-107 proves injectivity for an analytic benchmark; detector phase drift, saturation and hidden state on a physical carrier require a new calibrated map.",
+      "inheritedConsequences": [
+        "Power-only detection is globally two-to-one in the sign of beta despite full local Fisher rank.",
+        "One calibrated coherent-amplitude record closes the quotient for the declared compact recurrence family.",
+        "Larger recurrence, unknown detector phase and physical-carrier validation remain outside the closure."
+      ],
+      "minimalReopeningDatum": "A carrier implementing the power-history plus coherent-reference schedule with full transfer and nuisance covariance.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-034:add_one_independent_datum",
@@ -779,13 +1236,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "The calibrated coherent record is already the minimal independent datum that resolves the exact beta-sign quotient in the declared family.",
+      "inheritedConsequences": [
+        "Power-only detection is globally two-to-one in the sign of beta despite full local Fisher rank.",
+        "One calibrated coherent-amplitude record closes the quotient for the declared compact recurrence family.",
+        "Larger recurrence, unknown detector phase and physical-carrier validation remain outside the closure."
+      ],
+      "minimalReopeningDatum": "A within-family pair remaining equivalent after the complete calibrated coherent record.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-034:lift_or_change_the_quotient_or_detector",
@@ -794,13 +1259,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "Unknown-reference, phase-insensitive or saturating detectors alter the quotient; richer heterodyne or state-resolved detectors can address different fibres.",
+      "inheritedConsequences": [
+        "Power-only detection is globally two-to-one in the sign of beta despite full local Fisher rank.",
+        "One calibrated coherent-amplitude record closes the quotient for the declared compact recurrence family.",
+        "Larger recurrence, unknown detector phase and physical-carrier validation remain outside the closure."
+      ],
+      "minimalReopeningDatum": "A declared detector transfer map whose global fibre differs from the AZ-107 power/coherent pair.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-034:test_boundary_defect_or_nonlocal_variant",
@@ -809,13 +1282,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "not_applicable_with_reason",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "The compact recurrence benchmark has no bulk-boundary or defect typing. Adding spatial nonlocal state produces a new dynamical model family.",
+      "inheritedConsequences": [
+        "Power-only detection is globally two-to-one in the sign of beta despite full local Fisher rank.",
+        "One calibrated coherent-amplitude record closes the quotient for the declared compact recurrence family.",
+        "Larger recurrence, unknown detector phase and physical-carrier validation remain outside the closure."
+      ],
+      "minimalReopeningDatum": "A spatially typed nonlinear recurrence with boundary state entering the recorded history.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-034:change_scale_or_order_of_limits",
@@ -824,13 +1305,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "Infinite memory, vanishing coherent reference and long-time limits need not commute and are not covered by finite compact injectivity.",
+      "inheritedConsequences": [
+        "Power-only detection is globally two-to-one in the sign of beta despite full local Fisher rank.",
+        "One calibrated coherent-amplitude record closes the quotient for the declared compact recurrence family.",
+        "Larger recurrence, unknown detector phase and physical-carrier validation remain outside the closure."
+      ],
+      "minimalReopeningDatum": "A controlled limit family with uniform separation bounds or an explicit collapse sequence.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-034:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -839,13 +1328,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "The obstruction is global representational symmetry of the power detector, not local Fisher degeneracy; coherent phase breaks that quotient.",
+      "inheritedConsequences": [
+        "Power-only detection is globally two-to-one in the sign of beta despite full local Fisher rank.",
+        "One calibrated coherent-amplitude record closes the quotient for the declared compact recurrence family.",
+        "Larger recurrence, unknown detector phase and physical-carrier validation remain outside the closure."
+      ],
+      "minimalReopeningDatum": "A distinct within-scope global obstruction surviving coherent phase and not generated by beta sign.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-034:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -854,13 +1351,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "finding": "Phase-retrieval, nonlinear observability and hidden-state identification share locally full-rank yet globally noninjective maps through different symmetries.",
+      "inheritedConsequences": [
+        "Power-only detection is globally two-to-one in the sign of beta despite full local Fisher rank.",
+        "One calibrated coherent-amplitude record closes the quotient for the declared compact recurrence family.",
+        "Larger recurrence, unknown detector phase and physical-carrier validation remain outside the closure."
+      ],
+      "minimalReopeningDatum": "A compact alternative family with a characterized symmetry fibre and a finite separating intervention schedule.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-041:weaken_one_assumption",
@@ -869,13 +1374,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Allowing degenerate thresholds, multiple simultaneous poles or higher-order zeros invalidates the simple collision scaling used by AZ-055.",
+      "inheritedConsequences": [
+        "The two simple band-edge collision parameters and local scaling laws remain closed for the AZ-055 carrier.",
+        "Higher-order, multichannel and exceptional-point collisions are separate child topics.",
+        "Physical localization inherits EX-011's loss, branch and sampling identifiability gate."
+      ],
+      "minimalReopeningDatum": "An explicit higher-order or multipole edge collision with a candidate local normal form.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-041:change_the_carrier",
@@ -884,13 +1397,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "AZ-055 certifies the model collision; laboratory loss, disorder and sampling can merge or shift it and require a carrier-specific identifiability calculation.",
+      "inheritedConsequences": [
+        "The two simple band-edge collision parameters and local scaling laws remain closed for the AZ-055 carrier.",
+        "Higher-order, multichannel and exceptional-point collisions are separate child topics.",
+        "Physical localization inherits EX-011's loss, branch and sampling identifiability gate."
+      ],
+      "minimalReopeningDatum": "A calibrated tunable chain with pole uncertainty small enough to resolve both edge collisions and their scaling windows.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-041:add_one_independent_datum",
@@ -899,13 +1420,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Pole position, phase, delay and localization already cross-check the collision; another observable can replicate but does not change the closed simple-edge result.",
+      "inheritedConsequences": [
+        "The two simple band-edge collision parameters and local scaling laws remain closed for the AZ-055 carrier.",
+        "Higher-order, multichannel and exceptional-point collisions are separate child topics.",
+        "Physical localization inherits EX-011's loss, branch and sampling identifiability gate."
+      ],
+      "minimalReopeningDatum": "A branch-independent record that contradicts the certified collision parameter outside its uncertainty.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-041:lift_or_change_the_quotient_or_detector",
@@ -914,13 +1443,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Channel-resolved or local probes can split collisions hidden in a scalar end-port record; that is a multichannel localization problem, not a failure of the scalar closure.",
+      "inheritedConsequences": [
+        "The two simple band-edge collision parameters and local scaling laws remain closed for the AZ-055 carrier.",
+        "Higher-order, multichannel and exceptional-point collisions are separate child topics.",
+        "Physical localization inherits EX-011's loss, branch and sampling identifiability gate."
+      ],
+      "minimalReopeningDatum": "A channel/local detector model proving that two distinct collision structures share the AZ-055 scalar record.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-041:test_boundary_defect_or_nonlocal_variant",
@@ -929,13 +1466,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Nonlocal or threshold-degenerate attachments change the self-energy branch point and can produce a different collision normal form.",
+      "inheritedConsequences": [
+        "The two simple band-edge collision parameters and local scaling laws remain closed for the AZ-055 carrier.",
+        "Higher-order, multichannel and exceptional-point collisions are separate child topics.",
+        "Physical localization inherits EX-011's loss, branch and sampling identifiability gate."
+      ],
+      "minimalReopeningDatum": "A specified boundary attachment with exact self-energy and a trackable physical-to-resonance sheet path.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-041:change_scale_or_order_of_limits",
@@ -944,13 +1489,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Taking chain length to infinity or loss to zero in a different order can sharpen or hide the collision; AZ-055 supplies no uniform interchange theorem.",
+      "inheritedConsequences": [
+        "The two simple band-edge collision parameters and local scaling laws remain closed for the AZ-055 carrier.",
+        "Higher-order, multichannel and exceptional-point collisions are separate child topics.",
+        "Physical localization inherits EX-011's loss, branch and sampling identifiability gate."
+      ],
+      "minimalReopeningDatum": "A finite-size/loss sequence with certified uniform pole tracking and an explicit order-of-limits comparison.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-041:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -959,13 +1512,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "The defeated alternatives were representational and numerical—sampling density and Riemann-sheet choice—rather than a topological obstruction.",
+      "inheritedConsequences": [
+        "The two simple band-edge collision parameters and local scaling laws remain closed for the AZ-055 carrier.",
+        "Higher-order, multichannel and exceptional-point collisions are separate child topics.",
+        "Physical localization inherits EX-011's loss, branch and sampling identifiability gate."
+      ],
+      "minimalReopeningDatum": "A within-scope collision whose location changes under two equally valid branch conventions after analytic continuation is fixed.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-041:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -974,13 +1535,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md",
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/admissibility/admissibility_52_spectral_flow_pole_trajectories.md",
+        "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"
+      ],
+      "finding": "Exceptional points and Floquet resonances also exhibit pole collisions but use non-Hermitian degeneracy or quasienergy rather than a passive bound-state edge crossing.",
+      "inheritedConsequences": [
+        "The two simple band-edge collision parameters and local scaling laws remain closed for the AZ-055 carrier.",
+        "Higher-order, multichannel and exceptional-point collisions are separate child topics.",
+        "Physical localization inherits EX-011's loss, branch and sampling identifiability gate."
+      ],
+      "minimalReopeningDatum": "One explicit alternative model with the same measured pole-winding signature and a discriminating residue or time-domain prediction.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-043:weaken_one_assumption",
@@ -989,13 +1558,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "finding": "Removing small-index or LTI assumptions introduces higher sidebands, intermodulation and time-varying transfer not present in the certified inversion.",
+      "inheritedConsequences": [
+        "Power, ringdown or one-sideband records are insufficient for the declared small-index LTI AM/FM family.",
+        "Calibrated coherent carrier plus both sidebands reconstruct the declared family across 972 held-out cases.",
+        "Nonlinear, time-varying and large-index modulation are child problems."
+      ],
+      "minimalReopeningDatum": "A bounded nonlinear/time-varying modulation family with a proposed finite sufficient record.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-043:change_the_carrier",
@@ -1004,13 +1581,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "requires_external_datum",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "finding": "The information result is model-level; a new carrier needs coherent phase, sideband transfer and detector nonlinearity calibrated independently.",
+      "inheritedConsequences": [
+        "Power, ringdown or one-sideband records are insufficient for the declared small-index LTI AM/FM family.",
+        "Calibrated coherent carrier plus both sidebands reconstruct the declared family across 972 held-out cases.",
+        "Nonlinear, time-varying and large-index modulation are child problems."
+      ],
+      "minimalReopeningDatum": "One physical carrier with raw coherent carrier/two-sideband data and a complete transfer covariance.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-043:add_one_independent_datum",
@@ -1019,13 +1604,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "finding": "Within the declared family, the two coherent sidebands already close the AM/FM depths; more LTI records add redundancy rather than a new ambiguity.",
+      "inheritedConsequences": [
+        "Power, ringdown or one-sideband records are insufficient for the declared small-index LTI AM/FM family.",
+        "Calibrated coherent carrier plus both sidebands reconstruct the declared family across 972 held-out cases.",
+        "Nonlinear, time-varying and large-index modulation are child problems."
+      ],
+      "minimalReopeningDatum": "A held-out small-index LTI case violating the certified reconstruction after calibration.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-043:lift_or_change_the_quotient_or_detector",
@@ -1034,13 +1627,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "finding": "Dropping coherent phase recreates exact information loss, while time-resolved or higher-sideband detectors define richer nonlinear quotients.",
+      "inheritedConsequences": [
+        "Power, ringdown or one-sideband records are insufficient for the declared small-index LTI AM/FM family.",
+        "Calibrated coherent carrier plus both sidebands reconstruct the declared family across 972 held-out cases.",
+        "Nonlinear, time-varying and large-index modulation are child problems."
+      ],
+      "minimalReopeningDatum": "A detector map outside the certified coherent three-line record and an explicit ambiguity or recovery theorem.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-043:test_boundary_defect_or_nonlocal_variant",
@@ -1049,13 +1650,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "not_applicable_with_reason",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "finding": "The benchmark is a lumped drive-to-record channel without bulk/defect typing; spatial boundaries require a new carrier model.",
+      "inheritedConsequences": [
+        "Power, ringdown or one-sideband records are insufficient for the declared small-index LTI AM/FM family.",
+        "Calibrated coherent carrier plus both sidebands reconstruct the declared family across 972 held-out cases.",
+        "Nonlinear, time-varying and large-index modulation are child problems."
+      ],
+      "minimalReopeningDatum": "A distributed modulated system whose boundary modes enter the sideband transfer map.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-043:change_scale_or_order_of_limits",
@@ -1064,13 +1673,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "finding": "Large modulation index, long memory and vanishing linewidth limits can reorder the sufficient sideband set and are excluded from the closure.",
+      "inheritedConsequences": [
+        "Power, ringdown or one-sideband records are insufficient for the declared small-index LTI AM/FM family.",
+        "Calibrated coherent carrier plus both sidebands reconstruct the declared family across 972 held-out cases.",
+        "Nonlinear, time-varying and large-index modulation are child problems."
+      ],
+      "minimalReopeningDatum": "A controlled limit sequence showing convergence or failure of the three-line reconstruction.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-043:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -1079,13 +1696,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "finding": "The obstruction is detector-representational: magnitude-only folding erases relative phase; it is not a resonance or topological no-go.",
+      "inheritedConsequences": [
+        "Power, ringdown or one-sideband records are insufficient for the declared small-index LTI AM/FM family.",
+        "Calibrated coherent carrier plus both sidebands reconstruct the declared family across 972 held-out cases.",
+        "Nonlinear, time-varying and large-index modulation are child problems."
+      ],
+      "minimalReopeningDatum": "A within-scope ambiguity surviving the complete calibrated coherent record.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-043:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -1094,13 +1719,21 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md",
+        "corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md"
+      ],
+      "finding": "Phase modulation, frequency noise and delayed nonlinear response can share first sideband powers while producing different coherent higher-order records.",
+      "inheritedConsequences": [
+        "Power, ringdown or one-sideband records are insufficient for the declared small-index LTI AM/FM family.",
+        "Calibrated coherent carrier plus both sidebands reconstruct the declared family across 972 held-out cases.",
+        "Nonlinear, time-varying and large-index modulation are child problems."
+      ],
+      "minimalReopeningDatum": "A specified alternative mechanism matching the three-line record and a preregistered additional discriminator.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-044:weaken_one_assumption",
@@ -1109,13 +1742,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
       "move": "weaken_one_assumption",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+        "corpus/programmes/frontier/wave-7/g2_response_folding_no_go_v1.json",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "finding": "Weakening the demand from G2-specific identification to two-mode emulation succeeds trivially but abandons the discriminating claim.",
+      "inheritedConsequences": [
+        "The canonically normalized two-channel folded G2 response is exactly an ordinary two-oscillator response across the declared 1,604 tests.",
+        "Unequal addressed outer detunings raise pre-fold Krylov rank from two to four but require resolved outer channels.",
+        "Source-native triality and nonlinear invariants remain child branches, not evidence inside the folded detector."
+      ],
+      "minimalReopeningDatum": "A weaker yet G2-specific observable proved absent from generic two-mode models.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-044:change_the_carrier",
@@ -1124,13 +1766,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
       "move": "change_the_carrier",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+        "corpus/programmes/frontier/wave-7/g2_response_folding_no_go_v1.json",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "finding": "Any carrier implementing only the same normalized two-channel LTI transfer inherits the exact generic-oscillator equivalence.",
+      "inheritedConsequences": [
+        "The canonically normalized two-channel folded G2 response is exactly an ordinary two-oscillator response across the declared 1,604 tests.",
+        "Unequal addressed outer detunings raise pre-fold Krylov rank from two to four but require resolved outer channels.",
+        "Source-native triality and nonlinear invariants remain child branches, not evidence inside the folded detector."
+      ],
+      "minimalReopeningDatum": "A carrier exposing additional source-native channels or operations not factored through the two-channel fold.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-044:add_one_independent_datum",
@@ -1139,13 +1790,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
       "move": "add_one_independent_datum",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+        "corpus/programmes/frontier/wave-7/g2_response_folding_no_go_v1.json",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "finding": "Resolved pre-fold outer-channel responses supply the missing information; unequal outer detunings produce a rank-four Krylov witness.",
+      "inheritedConsequences": [
+        "The canonically normalized two-channel folded G2 response is exactly an ordinary two-oscillator response across the declared 1,604 tests.",
+        "Unequal addressed outer detunings raise pre-fold Krylov rank from two to four but require resolved outer channels.",
+        "Source-native triality and nonlinear invariants remain child branches, not evidence inside the folded detector."
+      ],
+      "minimalReopeningDatum": "Calibrated independent access to the outer channels and a held-out rank-four response surviving nuisance projection.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-044:lift_or_change_the_quotient_or_detector",
@@ -1154,13 +1814,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
       "move": "lift_or_change_the_quotient_or_detector",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+        "corpus/programmes/frontier/wave-7/g2_response_folding_no_go_v1.json",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "finding": "Unfolding the detector or adding a source-native triality-resolved readout can escape the exact two-channel quotient.",
+      "inheritedConsequences": [
+        "The canonically normalized two-channel folded G2 response is exactly an ordinary two-oscillator response across the declared 1,604 tests.",
+        "Unequal addressed outer detunings raise pre-fold Krylov rank from two to four but require resolved outer channels.",
+        "Source-native triality and nonlinear invariants remain child branches, not evidence inside the folded detector."
+      ],
+      "minimalReopeningDatum": "An explicit unfold map with independently addressable outer channels and a generic-two-mode exclusion test.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-044:test_boundary_defect_or_nonlocal_variant",
@@ -1169,13 +1838,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
       "move": "test_boundary_defect_or_nonlocal_variant",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+        "corpus/programmes/frontier/wave-7/g2_response_folding_no_go_v1.json",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "finding": "Boundary or defect couplings may retain the outer-channel distinction before folding, but the folded two-port record still cannot identify its origin.",
+      "inheritedConsequences": [
+        "The canonically normalized two-channel folded G2 response is exactly an ordinary two-oscillator response across the declared 1,604 tests.",
+        "Unequal addressed outer detunings raise pre-fold Krylov rank from two to four but require resolved outer channels.",
+        "Source-native triality and nonlinear invariants remain child branches, not evidence inside the folded detector."
+      ],
+      "minimalReopeningDatum": "A specified defect/boundary model with a pre-fold observable not reproducible by a generic carrier.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-044:change_scale_or_order_of_limits",
@@ -1184,13 +1862,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
       "move": "change_scale_or_order_of_limits",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+        "corpus/programmes/frontier/wave-7/g2_response_folding_no_go_v1.json",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "finding": "Nonlinear drive, large amplitude or time-varying coupling can generate invariants beyond LTI response; frequency or damping limits within LTI cannot.",
+      "inheritedConsequences": [
+        "The canonically normalized two-channel folded G2 response is exactly an ordinary two-oscillator response across the declared 1,604 tests.",
+        "Unequal addressed outer detunings raise pre-fold Krylov rank from two to four but require resolved outer channels.",
+        "Source-native triality and nonlinear invariants remain child branches, not evidence inside the folded detector."
+      ],
+      "minimalReopeningDatum": "A controlled nonlinear/time-varying G2 prediction and a detector record outside the generic two-mode closure.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-044:classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
@@ -1199,13 +1886,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
       "move": "classify_the_obstruction_as_local_global_topological_dynamical_or_representational",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "does_not_reopen",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+        "corpus/programmes/frontier/wave-7/g2_response_folding_no_go_v1.json",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "finding": "The no-go is representational and detector-induced: folding quotients the long/short-root origin to an ordinary two-mode transfer. It is not failure of G2 mathematics.",
+      "inheritedConsequences": [
+        "The canonically normalized two-channel folded G2 response is exactly an ordinary two-oscillator response across the declared 1,604 tests.",
+        "Unequal addressed outer detunings raise pre-fold Krylov rank from two to four but require resolved outer channels.",
+        "Source-native triality and nonlinear invariants remain child branches, not evidence inside the folded detector."
+      ],
+      "minimalReopeningDatum": "A source-native invariant proved to descend through the fold while remaining absent from all generic two-mode responses.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     },
     {
       "id": "OT-044:search_nearby_theory_with_same_invariant_and_different_mechanism",
@@ -1214,13 +1910,22 @@
       "topicStatusAtGeneration": "closed",
       "closureEvidence": "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
       "move": "search_nearby_theory_with_same_invariant_and_different_mechanism",
-      "workflowStatus": "unreviewed",
-      "result": null,
-      "evidenceRefs": [],
-      "finding": null,
-      "inheritedConsequences": [],
-      "minimalReopeningDatum": null,
-      "reviewer": null
+      "workflowStatus": "reviewed",
+      "result": "new_child_topic",
+      "evidenceRefs": [
+        "corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md",
+        "corpus/programmes/frontier/wave-7/g2_response_folding_no_go_v1.json",
+        "corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md"
+      ],
+      "finding": "Generic coupled oscillators, Toda reductions and folded root systems share the same two-mode response, demonstrating mechanism non-identifiability rather than G2 selection.",
+      "inheritedConsequences": [
+        "The canonically normalized two-channel folded G2 response is exactly an ordinary two-oscillator response across the declared 1,604 tests.",
+        "Unequal addressed outer detunings raise pre-fold Krylov rank from two to four but require resolved outer channels.",
+        "Source-native triality and nonlinear invariants remain child branches, not evidence inside the folded detector."
+      ],
+      "minimalReopeningDatum": "A triality or nonlinear operator law that distinguishes the source mechanism on held-out records without label fitting.",
+      "reviewer": "corpus-saturation-audit-2026-10-25",
+      "authoredReviewRef": "corpus/programmes/frontier-physics-targets/terminal_neighbourhood_reviews_v1.json"
     }
   ]
 }
