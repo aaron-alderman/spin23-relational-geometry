@@ -8,6 +8,8 @@ const objectExpansionTarget = "corpus/programmes/frontier-physics-targets/physic
 const objectExpansion = JSON.parse(fs.readFileSync(path.join(root, objectExpansionTarget), "utf8"));
 const theoryAuditTarget = "corpus/programmes/frontier-physics-targets/theory_bridge_audit_v1.json";
 const theoryAudit = JSON.parse(fs.readFileSync(path.join(root, theoryAuditTarget), "utf8"));
+const literatureAuditTarget = "corpus/programmes/frontier-physics-targets/literature_frontier_search_register_v1.json";
+const literatureAudit = JSON.parse(fs.readFileSync(path.join(root, literatureAuditTarget), "utf8"));
 const failures = [];
 
 if (contract.schema !== "frontier.corpus-completion-exit-criteria/1") failures.push("schema mismatch");
@@ -47,6 +49,15 @@ const theoryLayerPasses = theoryAudit.summary?.unresolvedStructuralRecords === 0
   && theoryAudit.records.length === theoryAudit.summary.bridgeClusters;
 if (!theoryLayerPasses) failures.push("EXIT-04: theory-bridge audit is not structurally complete");
 if (theoryGate?.status !== (theoryLayerPasses ? "passed" : "open")) failures.push("EXIT-04: contract status is inconsistent with the theory-bridge audit summary");
+
+const literatureGate = contract.gates?.find(gate => gate.id === "EXIT-05");
+const literatureLayerPasses = literatureAudit.summary?.branches === 22
+  && literatureAudit.summary?.receiptsComplete === 22
+  && literatureAudit.summary?.missingReceipts === 0
+  && Array.isArray(literatureAudit.records)
+  && literatureAudit.records.length === 22;
+if (!literatureLayerPasses) failures.push("EXIT-05: literature-frontier register is incomplete");
+if (literatureGate?.status !== (literatureLayerPasses ? "passed" : "open")) failures.push("EXIT-05: contract status is inconsistent with the literature register summary");
 
 const allPass = contract.gates?.every(gate => gate.status === "passed") ?? false;
 if (contract.globalExit?.allGatesMustPass !== true) failures.push("global exit does not require every gate");
