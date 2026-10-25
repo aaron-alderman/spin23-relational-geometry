@@ -8,6 +8,8 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 
 - [Corpus completion exit criteria](corpus_completion_exit_criteria_v1.md) — durable nine-gate target for dated physics–mathematics saturation; explicitly places current-input computational exhaustion below corpus completion.
 - [Physics–mathematics adjacency candidates](physics_math_adjacency_candidates_v1.md) — generated first-layer EXIT-01 universe crossing every maintained topic with the applicable relation families; generation is non-evidential until each candidate is dispositioned.
+- [Terminal-neighbourhood candidates](terminal_neighbourhood_candidates_v1.md) — EXIT-02 matrix applying eight reopening moves to every closed or blocked topic.
+- [Experiment exit audit](experiment_exit_audit_v1.md) — strict EXIT-03 field audit that measures what separates the existing design atlas from decision-complete experimental programmes.
 - [Frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md) — current whole-corpus result, frontier shape and ranked next tranches.
 - [Finesse technology pathway](finesse_technology_pathway_v1.md) — converts certificate-preserving descent, detector lifting and memory closure into a 90-day launch, a shared finesse device and a strict anomaly-to-new-physics escalation ladder.
 - [PageRank, Perron selection and the finesse trade-off](page_rank_perron_selector_bridge_v1.md) — exact control model for stationary-family collapse, explicit selector provenance, contraction and the price paid in structural fidelity.
@@ -42,6 +44,8 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Full-corpus census verifier](../../../verification/frontier-physics-targets/verify_full_corpus_gate_census.mjs) — rescans the complete corpus scope, checks source hashes and proves exact record equality, valid topic references and zero unresolved owners.
 - [Completion-contract verifier](../../../verification/frontier-physics-targets/verify_corpus_completion_exit_criteria.mjs) — enforces the nine simultaneous exit gates, finite adjacency universe, terminal-neighbourhood protocol, experiment decision layers and non-completion status while any gate remains open.
 - [Adjacency-candidate verifier](../../../verification/frontier-physics-targets/verify_physics_math_adjacency_candidates.mjs) — proves exact topic/area/family coverage, validates evidence-bearing dispositions and refuses EXIT-01 closure while any candidate remains unreviewed.
+- [Terminal-neighbourhood verifier](../../../verification/frontier-physics-targets/verify_terminal_neighbourhood_candidates.mjs) — proves exact terminal-topic/move coverage and validates each evidence-bearing reopening review.
+- [Experiment-exit verifier](../../../verification/frontier-physics-targets/verify_experiment_exit_audit.mjs) — compares every experiment against the explicit eighteen-field programme contract and refuses EXIT-03 closure while any cell is missing.
 
 ## Scope
 

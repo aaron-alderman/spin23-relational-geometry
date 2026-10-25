@@ -66,7 +66,7 @@ An external blocker is admissible at the endpoint only if it records the exact m
 
 The [residual frontier boundary](residual_frontier_exhaustion_boundary_v1.md) establishes **current-input computational exhaustion**: no maintained nonclosed topic presently has every input, bounded task, independent verifier and stopping rule needed for another evidential repository calculation. It is a valid milestone beneath this contract, not the endpoint.
 
-The first item is now instantiated by the [physics–mathematics adjacency candidate register](physics_math_adjacency_candidates_v1.md): 518 topic-level candidate questions have been generated across all 51 maintained topics and all twelve relation families. All begin unreviewed. This is a measured queue, not evidence that 518 relationships exist, and claim-family/object-level expansion remains downstream.
+The first item is now instantiated by the [physics–mathematics adjacency candidate register](physics_math_adjacency_candidates_v1.md): 518 topic-level candidate questions have been generated across all 51 maintained topics and all twelve relation families. All begin unreviewed. EXIT-02 likewise has an [80-cell terminal-neighbourhood queue](terminal_neighbourhood_candidates_v1.md) covering eight closed and two blocked topics. The [experiment exit audit](experiment_exit_audit_v1.md) finds 357 missing explicit cells across 21 existing programme designs. These are measured queues, not evidence that candidate relationships exist or that the experiments are presently decision-complete.
 
 The immediate programme is therefore:
 
