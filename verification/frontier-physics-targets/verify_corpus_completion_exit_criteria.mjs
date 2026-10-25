@@ -10,6 +10,8 @@ const theoryAuditTarget = "corpus/programmes/frontier-physics-targets/theory_bri
 const theoryAudit = JSON.parse(fs.readFileSync(path.join(root, theoryAuditTarget), "utf8"));
 const literatureAuditTarget = "corpus/programmes/frontier-physics-targets/literature_frontier_search_register_v1.json";
 const literatureAudit = JSON.parse(fs.readFileSync(path.join(root, literatureAuditTarget), "utf8"));
+const implicationGraphTarget = "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json";
+const implicationGraph = JSON.parse(fs.readFileSync(path.join(root, implicationGraphTarget), "utf8"));
 const failures = [];
 
 if (contract.schema !== "frontier.corpus-completion-exit-criteria/1") failures.push("schema mismatch");
@@ -58,6 +60,16 @@ const literatureLayerPasses = literatureAudit.summary?.branches === 22
   && literatureAudit.records.length === 22;
 if (!literatureLayerPasses) failures.push("EXIT-05: literature-frontier register is incomplete");
 if (literatureGate?.status !== (literatureLayerPasses ? "passed" : "open")) failures.push("EXIT-05: contract status is inconsistent with the literature register summary");
+
+const implicationGate = contract.gates?.find(gate => gate.id === "EXIT-06");
+const implicationLayerPasses = implicationGraph.summary?.claims === 1573
+  && implicationGraph.summary?.unresolvedClaims === 0
+  && Array.isArray(implicationGraph.nodes)
+  && implicationGraph.nodes.length === implicationGraph.summary.claims
+  && Array.isArray(implicationGraph.dependencyEdges)
+  && implicationGraph.dependencyEdges.length === implicationGraph.summary.explicitDependencyEdges;
+if (!implicationLayerPasses) failures.push("EXIT-06: claim implication/defeat graph is incomplete");
+if (implicationGate?.status !== (implicationLayerPasses ? "passed" : "open")) failures.push("EXIT-06: contract status is inconsistent with the implication graph summary");
 
 const allPass = contract.gates?.every(gate => gate.status === "passed") ?? false;
 if (contract.globalExit?.allGatesMustPass !== true) failures.push("global exit does not require every gate");

@@ -144,13 +144,16 @@
     {
       "id": "EXIT-06",
       "name": "Claim implication and defeat closure",
-      "status": "open",
+      "status": "passed",
       "exit": "Every authoritative claim states why it has its exact form, what it implies and does not imply, what defeats it, which assumptions support it and which downstream claims change under each outcome; propagation is machine-auditable.",
       "currentEvidence": [
         "corpus/registers/corpus_evidence_spine.json",
-        "book/edition-3/book.json"
+        "book/edition-3/book.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.md",
+        "verification/frontier-physics-targets/verify_claim_implication_defeat_graph.mjs"
       ],
-      "missingArtifact": "A claim implication/defeat graph with typed upstream and downstream propagation rules."
+      "missingArtifact": "None under the declared claim-graph protocol. Reopens if a canonical claim lacks exact-form, assumption, consequence, non-implication, defeat or propagation coverage, or if an unobserved reference is promoted into an implication edge."
     },
     {
       "id": "EXIT-07",
