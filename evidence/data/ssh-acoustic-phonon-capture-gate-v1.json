@@ -1,0 +1,393 @@
+{
+  "schema": "admissibility.ssh-acoustic-phonon-capture-gate/1",
+  "date": "2026-10-25",
+  "targets": [
+    "OT-036"
+  ],
+  "parent": "AZ-055",
+  "authority": "finite one-excitation unitary phonon benchmark; not a material-specific electron-capture prediction",
+  "parameters": {
+    "excitedEnergy": 0.65,
+    "boundEnergy": -0.55,
+    "railSites": 240,
+    "mass": 1,
+    "springConstant": 1,
+    "bondStrainMatrixElement": 0.2,
+    "totalTime": 100,
+    "timeStep": 0.01,
+    "inverseTemperature": 2,
+    "spectrumBins": 24
+  },
+  "microscopicChannel": {
+    "railHamiltonian": "H_ph=sum_n p_n^2/(2M)+K(u_(n+1)-u_n)^2/2",
+    "dispersion": "omega_k=2 sqrt(K/M)|sin(k/2)|",
+    "interaction": "H_int=D(u_1-u_0)(|b><e|+|e><b|)",
+    "modeCoupling": "|g_k|=D*2|sin(k/2)|/sqrt(2 M N omega_k)",
+    "zeroModeDecouples": true,
+    "modeCount": 239,
+    "phononBand": [
+      0,
+      2
+    ],
+    "gapInsideBand": true,
+    "nearestResonantModes": [
+      {
+        "modeNumber": 191,
+        "k": 5.000368306963754,
+        "omega": 1.1966492011413183,
+        "coupling": 0.009986028578057273,
+        "energy": 0.6466492011413183
+      },
+      {
+        "modeNumber": 49,
+        "k": 1.2828170002158321,
+        "omega": 1.1966492011413181,
+        "coupling": 0.009986028578057271,
+        "energy": 0.6466492011413181
+      },
+      {
+        "modeNumber": 190,
+        "k": 4.97418836818384,
+        "omega": 1.2175228580174409,
+        "coupling": 0.010072747299923693,
+        "energy": 0.6675228580174408
+      },
+      {
+        "modeNumber": 50,
+        "k": 1.3089969389957472,
+        "omega": 1.2175228580174413,
+        "coupling": 0.010072747299923697,
+        "energy": 0.6675228580174413
+      }
+    ]
+  },
+  "dynamics": {
+    "method": "fourth-order Runge-Kutta evolution of the complete star Hamiltonian, with no sink term",
+    "checkpoints": [
+      {
+        "time": 0,
+        "excitedPopulation": 1,
+        "capturedPopulation": 0
+      },
+      {
+        "time": 5,
+        "excitedPopulation": 0.7159995663003433,
+        "capturedPopulation": 0.2840004336977281
+      },
+      {
+        "time": 10,
+        "excitedPopulation": 0.5613033164150856,
+        "capturedPopulation": 0.43869668358105823
+      },
+      {
+        "time": 15,
+        "excitedPopulation": 0.42830729605663237,
+        "capturedPopulation": 0.5716927039375836
+      },
+      {
+        "time": 20,
+        "excitedPopulation": 0.30424949506776744,
+        "capturedPopulation": 0.6957505049245221
+      },
+      {
+        "time": 25,
+        "excitedPopulation": 0.23708598454430732,
+        "capturedPopulation": 0.7629140154460539
+      },
+      {
+        "time": 30,
+        "excitedPopulation": 0.18233455268409862,
+        "capturedPopulation": 0.8176654473043363
+      },
+      {
+        "time": 35,
+        "excitedPopulation": 0.12768143537655152,
+        "capturedPopulation": 0.8723185646099543
+      },
+      {
+        "time": 40,
+        "excitedPopulation": 0.10046472384504115,
+        "capturedPopulation": 0.8995352761395377
+      },
+      {
+        "time": 45,
+        "excitedPopulation": 0.07798263295996222,
+        "capturedPopulation": 0.9220173670226889
+      },
+      {
+        "time": 50,
+        "excitedPopulation": 0.05320541384556946,
+        "capturedPopulation": 0.9467945861351542
+      },
+      {
+        "time": 55,
+        "excitedPopulation": 0.042669126431563974,
+        "capturedPopulation": 0.9573308735472318
+      },
+      {
+        "time": 60,
+        "excitedPopulation": 0.033541249933556984,
+        "capturedPopulation": 0.9664587500433118
+      },
+      {
+        "time": 65,
+        "excitedPopulation": 0.021965987777812886,
+        "capturedPopulation": 0.9780340121971287
+      },
+      {
+        "time": 70,
+        "excitedPopulation": 0.018186056875676107,
+        "capturedPopulation": 0.9818139430973379
+      },
+      {
+        "time": 75,
+        "excitedPopulation": 0.014540926745853174,
+        "capturedPopulation": 0.9854590732252327
+      },
+      {
+        "time": 80,
+        "excitedPopulation": 0.008942426172216286,
+        "capturedPopulation": 0.9910575737969411
+      },
+      {
+        "time": 85,
+        "excitedPopulation": 0.0077984670232216155,
+        "capturedPopulation": 0.9922015329440093
+      },
+      {
+        "time": 90,
+        "excitedPopulation": 0.0063758785710847305,
+        "capturedPopulation": 0.9936241213942199
+      },
+      {
+        "time": 95,
+        "excitedPopulation": 0.003560810861193229,
+        "capturedPopulation": 0.9964391891021835
+      },
+      {
+        "time": 100,
+        "excitedPopulation": 0.0033802271834249735,
+        "capturedPopulation": 0.9966197727780232
+      }
+    ],
+    "recurrenceEstimate": 300,
+    "final": {
+      "excitedPopulation": 0.0033802271834249735,
+      "capturedPopulation": 0.9966197727780232,
+      "conditionalMeanPhononEnergy": 1.200014474414266,
+      "norm": 0.9999999999614483,
+      "normResidual": -3.8551717373991323e-11,
+      "excitedMatterEnergy": 0.002197147669226233,
+      "boundMatterEnergy": -0.5481408750279128,
+      "phononEnergy": 1.1959581528210848,
+      "interactionEnergy": -0.00001442550769856751,
+      "totalEnergy": 0.6499999999546996,
+      "energyResidual": -4.530043007378026e-11
+    },
+    "timeReversal": {
+      "reverseExcitedPopulation": 0.9999999999229012,
+      "reverseBathPopulation": 2.4936971308462497e-20,
+      "reverseExcitedAmplitudeError": 3.8549385911011916e-11,
+      "interpretation": "Backward evolution with the same Hamiltonian reconstructs the initial coherent state; apparent capture before recurrence is unitary transfer, not an irreversible sink."
+    },
+    "emittedSpectrum": [
+      {
+        "omegaMin": 0,
+        "omegaMax": 0.08333333333333333,
+        "population": 0.000021587693257922265,
+        "energy": 0.0000013524564970053575
+      },
+      {
+        "omegaMin": 0.08333333333333333,
+        "omegaMax": 0.16666666666666666,
+        "population": 0.00005881945811597321,
+        "energy": 0.000007940191405991285
+      },
+      {
+        "omegaMin": 0.16666666666666666,
+        "omegaMax": 0.25,
+        "population": 0.00011142025993331081,
+        "energy": 0.000023521081660494495
+      },
+      {
+        "omegaMin": 0.25,
+        "omegaMax": 0.3333333333333333,
+        "population": 0.0001880202151578545,
+        "energy": 0.0000544231918057604
+      },
+      {
+        "omegaMin": 0.3333333333333333,
+        "omegaMax": 0.41666666666666663,
+        "population": 0.0003913575974844994,
+        "energy": 0.00014908022722148647
+      },
+      {
+        "omegaMin": 0.41666666666666663,
+        "omegaMax": 0.5,
+        "population": 0.00047441630179691793,
+        "energy": 0.0002220835747405935
+      },
+      {
+        "omegaMin": 0.5,
+        "omegaMax": 0.5833333333333333,
+        "population": 0.0007069457013762737,
+        "energy": 0.0003855239934751557
+      },
+      {
+        "omegaMin": 0.5833333333333333,
+        "omegaMax": 0.6666666666666666,
+        "population": 0.0010239502041405205,
+        "energy": 0.0006361801297888557
+      },
+      {
+        "omegaMin": 0.6666666666666666,
+        "omegaMax": 0.75,
+        "population": 0.002136944211634341,
+        "energy": 0.0015146205488199501
+      },
+      {
+        "omegaMin": 0.75,
+        "omegaMax": 0.8333333333333333,
+        "population": 0.0027832582311019924,
+        "energy": 0.002203799929625512
+      },
+      {
+        "omegaMin": 0.8333333333333333,
+        "omegaMax": 0.9166666666666666,
+        "population": 0.006672997052075134,
+        "energy": 0.0058582796501362965
+      },
+      {
+        "omegaMin": 0.9166666666666666,
+        "omegaMax": 1,
+        "population": 0.01019666243084141,
+        "energy": 0.009758322857214211
+      },
+      {
+        "omegaMin": 1,
+        "omegaMax": 1.0833333333333333,
+        "population": 0.04078888147844155,
+        "energy": 0.042562125206785054
+      },
+      {
+        "omegaMin": 1.0833333333333333,
+        "omegaMax": 1.1666666666666665,
+        "population": 0.34764780968665593,
+        "energy": 0.39576891825018073
+      },
+      {
+        "omegaMin": 1.1666666666666665,
+        "omegaMax": 1.25,
+        "population": 0.4342810356919483,
+        "energy": 0.5180292621667757
+      },
+      {
+        "omegaMin": 1.25,
+        "omegaMax": 1.3333333333333333,
+        "population": 0.0629279751871619,
+        "energy": 0.08057891713286906
+      },
+      {
+        "omegaMin": 1.3333333333333333,
+        "omegaMax": 1.4166666666666665,
+        "population": 0.02678055605344449,
+        "energy": 0.0366880104248664
+      },
+      {
+        "omegaMin": 1.4166666666666665,
+        "omegaMax": 1.5,
+        "population": 0.011355975372738716,
+        "energy": 0.016539098522722666
+      },
+      {
+        "omegaMin": 1.5,
+        "omegaMax": 1.5833333333333333,
+        "population": 0.009566694421246316,
+        "energy": 0.0146788193641013
+      },
+      {
+        "omegaMin": 1.5833333333333333,
+        "omegaMax": 1.6666666666666665,
+        "population": 0.0077118122617514055,
+        "energy": 0.012513632517971444
+      },
+      {
+        "omegaMin": 1.6666666666666665,
+        "omegaMax": 1.75,
+        "population": 0.005682367095808792,
+        "energy": 0.009714636710107652
+      },
+      {
+        "omegaMin": 1.75,
+        "omegaMax": 1.8333333333333333,
+        "population": 0.0054184667193437844,
+        "energy": 0.009707755386008841
+      },
+      {
+        "omegaMin": 1.8333333333333333,
+        "omegaMax": 1.9166666666666665,
+        "population": 0.005452259764191581,
+        "energy": 0.010218199084432729
+      },
+      {
+        "omegaMin": 1.9166666666666665,
+        "omegaMax": 2,
+        "population": 0.014239559688373963,
+        "energy": 0.02814365022187137
+      }
+    ]
+  },
+  "detailedBalance": {
+    "inverseTemperature": 2,
+    "gap": 1.2000000000000002,
+    "boseOccupation": 0.09976877209617535,
+    "downwardFactor": 1.0997687720961753,
+    "upwardFactor": 0.09976877209617535,
+    "upwardToDownwardRatio": 0.09071795328941248,
+    "expectedBoltzmannRatio": 0.09071795328941247
+  },
+  "comparisonToToyBath": {
+    "toyModel": "unitary_friedrichs_one_excitation_bath",
+    "toyFinalTime": 80,
+    "toyCapturedPopulation": 0.9995478275161455,
+    "toyConditionalMeanEmissionEnergy": 1.1999999999998983,
+    "phononCapturedPopulation": 0.9966197727780232,
+    "phononConditionalMeanEmissionEnergy": 1.200014474414266,
+    "difference": "The toy bath prescribed a Gaussian-like spectral envelope around the gap. The phonon benchmark derives its finite band, density of states, zero-mode suppression and coupling weights from one harmonic rail and a local bond-strain operator."
+  },
+  "sourceBoundary": {
+    "admitted": [
+      "the phonon frequencies and relative mode couplings follow from the declared harmonic rail and local strain interaction",
+      "norm, total energy and complex phase information remain inside one finite unitary state",
+      "the Bose upward/downward factors satisfy detailed balance exactly"
+    ],
+    "withheld": [
+      "the transition matrix element D is not derived from the static SSH cluster wavefunctions or a named material",
+      "the one-excitation truncation omits multiphonon relaxation, lattice anharmonicity and thermal initial mixtures",
+      "finite rail dynamics recur; the reported transfer is a pre-recurrence benchmark, not permanent irreversible capture"
+    ],
+    "literature": [
+      {
+        "title": "Solitons in Polyacetylene",
+        "url": "https://doi.org/10.1103/PhysRevLett.42.1698",
+        "use": "the SSH ancestor ties electronic hopping to bond displacement"
+      },
+      {
+        "title": "Strong-coupled electron-acoustic-phonon system in one dimension",
+        "url": "https://doi.org/10.1103/PhysRevB.24.714",
+        "use": "one-dimensional acoustic deformation-potential coupling and phonon spectral restructuring"
+      },
+      {
+        "title": "Non-Markovian dynamics of double quantum dot charge qubits due to acoustic phonons",
+        "url": "https://arxiv.org/abs/cond-mat/0505621",
+        "use": "finite-memory acoustic-phonon dynamics as a warning against assuming a Markov sink"
+      }
+    ]
+  },
+  "verdict": {
+    "closed": "A source-shaped acoustic channel now replaces the hand-shaped scalar spectrum: its dispersion and relative couplings are derived from a harmonic rail and local bond strain, and the finite unitary evolution closes norm, energy, phase reversal and detailed balance.",
+    "implication": "Substantial pre-recurrence population transfer does not require a fitted sink. It does require the transition gap to lie in the phonon band and a nonzero strain matrix element; the finite bath remains reversible.",
+    "open": "The strain matrix element has not been computed from the actual SSH-plus-local eigenstates or calibrated to a material, and multiphonon, thermal, anharmonic and infinite-volume limits remain absent.",
+    "nextCalculation": "Use the AZ-055 cluster eigenvectors to evaluate a declared bond-modulation operator between the incoming/resonant and bound states; attach that matrix element to an infinite or converged phonon rail, scan gap versus band and temperature, and test whether the pre-recurrence plateau converges before calling the process capture."
+  }
+}

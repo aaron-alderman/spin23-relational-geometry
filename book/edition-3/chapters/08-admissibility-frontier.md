@@ -1138,6 +1138,25 @@ Screening reveals the missing thing. In the minimal local scalar completion of a
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-screened-field-is-not-the-whole-carrier-claim-3.md)
 
+<a id="hot-off-the-press-capture-does-not-need-a-sink"></a>
+## Hot off the press — capture does not need a sink
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
+
+**Provisional integration note — 25 October 2026.** The spectral-flow bath can now be replaced by a recognizable acoustic carrier. A harmonic rail fixes the phonon band and dispersion; a local bond-strain transition fixes the relative mode weights and automatically removes the translational zero mode. With a declared transition matrix element, complete unitary evolution transfers 0.99662 of the population to bound matter plus phonons before recurrence while conserving norm and total energy within five parts in one hundred billion.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-1.md)
+
+The phase ledger matters as much as the population. Backward evolution of the complete final state reconstructs the initial excited state, showing that the apparent capture is coherent redistribution, not a concealed absorber. The finite-temperature upward/downward factors also reproduce the exact Boltzmann ratio. A source-shaped unitary environment can therefore produce a long capture window without a Markov sink or a freely drawn spectral envelope.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-2.md)
+
+The remaining word is “source.” The overall bond-strain matrix element is still declared rather than evaluated from the AZ-055 bound and scattering states, and a finite harmonic rail ultimately recurs. The look-here calculation is to compute that matrix element from one bond-modulation operator, attach it to an infinite or converged rail, and demand a rail-size-stable plateau and emitted spectrum across gap and temperature. Success would improve phonon-assisted state preparation and boundary capture engineering. Failure would show that the attractive spectral path lacks a physical disposal channel; neither outcome by itself establishes new fundamental physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-capture-does-not-need-a-sink-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -1212,6 +1231,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_109_four_mode_sk_action_to_record.md](../../../corpus/programmes/admissibility/admissibility_109_four_mode_sk_action_to_record.md)
 - [admissibility_110_relation_emulator_readiness_reconciliation.md](../../../corpus/programmes/admissibility/admissibility_110_relation_emulator_readiness_reconciliation.md)
 - [admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md](../../../corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md)
+- [admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md](../../../corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md)
 
 ---
 
