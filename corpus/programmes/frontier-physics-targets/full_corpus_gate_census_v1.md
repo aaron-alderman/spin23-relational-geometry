@@ -1,27 +1,28 @@
 # Full-corpus frontier gate census
 
-**Generated:** 2026-10-24  
+**Generated:** 2026-10-25
+
 **Scope:** Every source Markdown or JSON artifact below corpus/ and evidence/, excluding this generated census and the independently verified front-door/evidence-spine derivatives; every scanned file receives a hashed inventory record, including files with no declared gate.
 
 This census is the corpus-wide backstop above the packet and programme audits. It treats lexical gate language as a candidate, not as proof that an old gate is still live. Claim records are routed from their title, declared status and lead section to maintained topics with closure and kill tests; navigation and independently governed inquiries remain explicit.
 
 ## Result
 
-- Narrative artifacts scanned: **2725**
-- Hashed inventory records: **2725**
-- Files containing gate language or an open-like structured status: **1625**
+- Narrative artifacts scanned: **2882**
+- Hashed inventory records: **2882**
+- Files containing gate language or an open-like structured status: **1706**
 - Matching claim files: **1176**
 - Claim files explicitly recorded with no declared gate: **399**
-- Evidence artifacts / evidence artifacts with gate language: **488 / 93**
+- Evidence artifacts / evidence artifacts with gate language: **551 / 101**
 - Unresolved ownership records: **0**
 
 | Disposition | Files |
 |---|---:|
-| delegated_audit | 345 |
-| evidence_record | 93 |
+| delegated_audit | 418 |
+| evidence_record | 101 |
 | mapped | 1166 |
 | navigation | 8 |
-| no_declared_gate | 1100 |
+| no_declared_gate | 1176 |
 | separate_programme | 13 |
 
 ## Use rule

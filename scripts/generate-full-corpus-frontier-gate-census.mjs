@@ -274,7 +274,7 @@ if (!process.argv.includes("--write")) {
 
 fs.writeFileSync(path.join(root, outJson), `${JSON.stringify(output, null, 2)}\n`);
 const md = `# Full-corpus frontier gate census\n\n` +
-  `**Generated:** ${output.date}  \n` +
+  `**Generated:** ${output.date}\n\n` +
   `**Scope:** ${output.scope}\n\n` +
   `This census is the corpus-wide backstop above the packet and programme audits. It treats lexical gate language as a candidate, not as proof that an old gate is still live. Claim records are routed from their title, declared status and lead section to maintained topics with closure and kill tests; navigation and independently governed inquiries remain explicit.\n\n` +
   `## Result\n\n` +
