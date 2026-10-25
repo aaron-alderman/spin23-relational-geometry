@@ -451,6 +451,16 @@ oriented rails, or quarter-turn twist into charge.  It is not yet physical
 dynamics—there is no energy, clock, locality or detector map—and it is not a
 continuous Monster-to-\(Spin(2,3)\) homomorphism.
 
+The full label plane remembers the central sign.  If nonzero labels are instead
+projectivized by \((a,b)\sim\lambda(a,b)\), the 528 labels become the 24
+directions of \(\mathbb P^1(\mathbb F_{23})\), \(-I\) becomes invisible and
+\(\mathrm{Dic}_{11}\) descends to the dihedral group \(D_{11}\) of order 22.
+Its direction action has two orbits: the two pure axes \([1:0],[0:1]\), and
+all 22 mixed directions \([1:r]\) with \(r\ne0\).  This gives an exact
+open/closed distinction: keeping the sign yields the dicyclic lift; quotienting
+it yields the dihedral shadow.  It also shows precisely what a scalar or
+projective record cannot later reconstruct.
+
 There is nevertheless an exact, correctly typed Spin adjacency.  Since
 
 \[
@@ -526,6 +536,13 @@ rank \(12\) of \(\operatorname{Rep}(\mathfrak{so}(3)_{23})\) is exact but, at
 present, only numerical: genus counts holomorphic differentials on the modular
 curve, while rank counts simple defect types.  No map identifying those two
 sets has been derived.
+
+There is, however, a second typed reason for the nearby count twelve.  The 22
+nonidentity powers of a chosen order-23 generator form 11 inverse pairs
+\(\{g^k,g^{-k}\}\), and fifth power cycles all eleven; adjoining the identity
+gives \(1+11=12\).  The certificate verifies this orbit.  It does not identify
+those generator pairs with the twelve defect objects: that bijection, if it
+exists, must be constructed rather than inferred from the count.
 
 The verifier extends this comparison over every odd prime divisor of the
 Monster order.  In that finite set, \(p=23\) is the unique solution of

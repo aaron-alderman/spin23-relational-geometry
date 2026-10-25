@@ -147,6 +147,13 @@ The two relevant transformations close exactly.  Orientation exchange acts by
 QR/QNR swap to the twist/charge rotation; its physical interpretation remains
 open.
 
+Projectivizing the nonzero sector labels removes the central \(-I\), so the
+dicyclic group descends to \(D_{11}\) of order 22 on
+\(\mathbb P^1(\mathbb F_{23})\).  The 24 directions split into the two-axis
+orbit and one 22-direction mixed orbit.  This quotient is useful precisely
+because it exposes the lost datum: the dicyclic lift distinguishes a central
+sign that the dihedral/projective record cannot retain.
+
 It also has a precise finite Spin adjacency:
 \(SL(2,23)=Sp(2,23)\) embeds as a symplectic block in
 \(Sp(4,23)\cong Spin(5,23)\).  The latter has the same algebraic
@@ -190,6 +197,11 @@ the missing “program”: it is a vector of defect/commutant
 characters assembled from the 529 twist--charge sectors, not another scalar
 eta quotient.  The literature supplies the algorithm but not a published
 explicit \(p=23\) table.
+
+The 22 nonidentity powers of a chosen order-23 generator also form eleven
+inverse pairs, transitively cycled by fifth power; adding the identity gives
+another exact \(1+11=12\) decomposition.  This makes the count less arbitrary
+without supplying the missing map from generator pairs to defect objects.
 
 An exact survey over the odd Monster primes makes the coincidence sharper:
 \(p=23\) is the unique member for which
