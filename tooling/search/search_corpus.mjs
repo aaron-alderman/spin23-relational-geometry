@@ -33,6 +33,7 @@ const contentIdentityExcludedPaths = new Set([
   "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
 ]);
 const cacheValidationIntervalMs = 5000;
+const pageRankTolerance = 1e-8;
 let cache = null;
 
 export const DEFAULT_RETRIEVAL_WEIGHTS = Object.freeze({
@@ -631,7 +632,7 @@ function personalization(index, lexical, profile) {
   return vector;
 }
 
-function personalizedPageRank(index, teleport, mixing, iterations = 160, tolerance = 1e-12) {
+function personalizedPageRank(index, teleport, mixing, iterations = 160, tolerance = pageRankTolerance) {
   const size = index.documents.length;
   let rank = Float64Array.from(teleport);
   for (let iteration = 0; iteration < iterations; iteration += 1) {
@@ -694,6 +695,7 @@ export function searchCorpus({ root = process.cwd(), query, limit = 12, profile 
     finalWeights: { lexical: lexicalWeight, claim: claimWeight, semantic: semanticWeight, graph: graphWeight },
     semanticExpansion: semanticExpansion.map(item => ({ token: item.token, via: item.via, cooccurrence: item.cooccurrence, weight: Number(item.weight.toFixed(6)) })),
     selectorSweep: mixingValues,
+    numericalConvergence: { norm: "L1", tolerance: pageRankTolerance, maximumIterations: 160 },
     authorityBoundary: "Scores order navigation candidates; they do not change epistemic status or establish truth.",
   };
   const teleport = personalization(index, lexical, profile);

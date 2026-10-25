@@ -26,6 +26,7 @@ test("PageRank selector query retrieves the dedicated bridge with transparent sc
   assert.match(result.results[0].claimMatch.claimSha256, /^[0-9a-f]{64}$/u);
   assert.ok(result.results[0].claimMatch.lineStart >= 1);
   assert.equal(Object.keys(result.results[0].selectorSweep).length, 3);
+  assert.deepEqual(result.method.numericalConvergence, { norm: "L1", tolerance: 1e-8, maximumIterations: 160 });
   assert.match(result.method.authorityBoundary, /do not change epistemic status/iu);
 });
 
