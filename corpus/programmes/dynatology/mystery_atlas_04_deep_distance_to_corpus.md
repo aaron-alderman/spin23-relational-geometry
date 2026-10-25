@@ -1,7 +1,7 @@
 # Mystery Atlas 04: Deep Distance to the Corpus
 
-**Date:** 24 October 2026  
-**Status:** complete first-pass distance audit of all 21 registered mysteries; heuristic prioritization, not a probability of truth  
+**Date:** 25 October 2026
+**Status:** complete first-pass distance audit of all 22 registered mysteries; heuristic prioritization, not a probability of truth
 **Machine record:** [distance register](mystery_distance_register_v1.json)
 
 ## Distance definition
@@ -316,9 +316,21 @@ The ranks order **distance to this corpus**, not scientific importance. The exac
 
 **Stop rule.** If the effect tracks ordinary resonance, visual salience, expectation or environmental exposure, the extraordinary coupling closes while the geometry's ordinary physical and experiential effects remain real.
 
+## MY-022 — Aether, vacuum substrate and emergent universal causal cone
+
+**Distance:** \((2,2,1,2,3)=10\), bridged but unjoined.
+
+**Nearest corpus object.** The corpus already has a locally invariant response carrier, exact symplectic preservation, generator--state--port discipline, detector-equivalence methods and scale-aware recovery tests. These provide unusually close formal and experimental grammar without identifying the physical vacuum with the corpus carrier.
+
+**Missing arrows.** A stable substrate action, a background solution, derived matter and gravity ports, a radiatively stable universal-cone theorem, and one detector residual beyond Lorentz-invariant effective field theory and general relativity.
+
+**Shortest bridge.** Freeze one multi-species carrier action, derive the infrared cone and compulsory response--noise kernel, then confront one no-refit anisotropy, dispersion, extra-mode or noise observable.
+
+**Stop rule.** If the substrate changes no record, if equal limiting speeds are separately tuned, or if all ports are set to zero only after constraints are applied, the physical branch compiles out.
+
 ## Cross-target structure
 
-The 21 targets reduce to five recurring missing arrows:
+The 22 targets reduce to five recurring missing arrows:
 
 1. **Carrier debt:** what physical state actually bears the proposed distinction?
 2. **Transduction debt:** how does that state alter the next scale rather than merely correlate with it?
@@ -333,7 +345,7 @@ The corpus is strongest on detector and selection debt, moderately strong on gen
 Distance suggests three different workflows:
 
 - **Adjacent:** execute MY-014 using existing channel models and MY-019 using exact sacred-form construction and invariant packets.
-- **Bridged but unjoined:** perform finite bridge audits for MY-001, MY-002, MY-004, MY-005, MY-008, MY-009 and MY-013; do not add more analogy.
+- **Bridged but unjoined:** perform finite bridge audits for MY-001, MY-002, MY-004, MY-005, MY-008, MY-009, MY-013 and MY-022; do not add more analogy.
 - **Remote or disconnected:** first obtain a carrier, calibrated dataset or prospective statistic. Corpus mathematics should serve experiment design, not be proposed as the hidden cause.
 
 The most revealing near-term combination is MY-014 + MY-001: use the exact conditioned/unconditional measurement distinction to sharpen what a consciousness-caused-collapse proposal would actually have to change. The most useful external stress test is MY-003: if Dynatology cannot turn the Schumann claim into a quantitative magnitude and identifiability budget, its mystery ontology has not yet earned practical force.

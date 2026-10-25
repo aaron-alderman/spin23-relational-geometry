@@ -38,7 +38,7 @@ assert.equal(sorted[0].mysteryId, "MY-014", "quantum measurement should remain t
 assert.equal(sorted.at(-1).mysteryId, "MY-018", "untyped metaphysical bundle should remain the farthest target");
 
 const bandCounts = Object.fromEntries(distance.bands.map((band) => [band.id, distance.entries.filter((entry) => entry.band === band.id).length]));
-assert.deepEqual(bandCounts, {embedded:0, adjacent:2, bridged_but_unjoined:9, method_only_or_remote:7, currently_disconnected:3});
+assert.deepEqual(bandCounts, {embedded:0, adjacent:2, bridged_but_unjoined:10, method_only_or_remote:7, currently_disconnected:3});
 
 console.log("Dynatology mystery distance: PASS");
 console.log(JSON.stringify(bandCounts));

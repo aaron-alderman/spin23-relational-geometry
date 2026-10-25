@@ -76,7 +76,7 @@ The machine register instantiates the following open portfolio.
 | Ancient structures | pyramids, megaliths, construction logistics, voids, acoustics, EM/thermal/seismic response, astronomical alignment | physical property mistaken for intended technology |
 | Sacred geometry | exact forms, construction grammars, ritual architecture, mandalas/yantras, labyrinths, cosmograms and geometric ontology | collapsing formal, historical, physical and sacred status |
 | Anomalous physical events | ball lightning, UAP and sensor anomalies | heterogeneous cases and missing calibration |
-| Fundamental frontiers | dark sector, cosmological tensions, quantum measurement, origin of life | attaching local anomalies to an unconstrained grand theory |
+| Fundamental frontiers | dark sector, cosmological tensions, quantum measurement, origin of life, vacuum substrate and preferred-frame hypotheses | attaching local anomalies to an unconstrained grand theory or treating ordinary vacuum structure as proof of a material aether |
 | Cultural/esoteric systems | divination, synchronicity and subtle-energy language | post-hoc pattern selection and unfalsifiable translation |
 
 This is extensible rather than literally complete. “All mysteries” is implemented as an **open intake schema with audited omissions**, not a claim that a finite list exhausts human uncertainty.
@@ -97,6 +97,7 @@ This is extensible rather than literally complete. “All mysteries” is implem
 - [Consciousness compile-out trilemma](../../claims/1100-1199/1144_consciousness_is_a_live_organizational_spike_but_not_yet_the_missing_physical_coupling.md) prevents a label from masquerading as an independent physical variable.
 - [Neural alternation response slice](../../claims/1200-1299/1224_rapid_seen_suppressed_neural_alternation_defines_a_testable_spin24_to_spin23_response_slice_not_an_orch_or_derivation.md) is the model for a speculative but falsifiable bridge.
 - [Altered-state signposts](../../claims/1400-1499/1468_theology_altered_state_and_beauty_signposts_generate_eight_typed_spin23_missing_middle_experiments.md) shows how inspiration can enter with zero initial evidential weight.
+- [Aether, substrate and the universal-cone problem](mystery_atlas_21_aether_substrate_and_universal_cone.md) separates six commonly conflated meanings of aether and requires a carrier action, ports, recovery limit and discriminating record.
 - [Adversarial detector-equivalence atlas](../admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md) governs nuisance and added-channel design.
 - [Quotient-scar programme](../quotient-scars/README.md) asks whether apparently missing information leaves recoverable records.
 

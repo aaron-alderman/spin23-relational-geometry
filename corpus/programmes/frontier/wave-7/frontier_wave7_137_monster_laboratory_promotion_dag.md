@@ -373,6 +373,61 @@ Wave 7.214 performs the first exact residual block-Lanczos enrichment. The
 four-site controls agree below \(9\times10^{-15}\). This is constructive
 progress but not admission: six further directions and an exterior residual
 bound (or a shifted-inertia count) are still required.
+Wave 7.215 targets those six directions with their exact first-layer
+residuals. A 50,000-configuration aggregate correction, re-orthogonalized
+against the full 48-dimensional space, raises the count below the separator
+from 18 to 20. Its twenty-first Ritz value remains 4.3647030493, above the
+4.3134665205 separator. The remaining obstruction is collective over a
+2,002,387-configuration residual support; a tensor-network second block or
+shifted inertia is now preferable to blind sparse-support growth.
+Wave 7.216 strengthens the opposite side of the enclosure exactly. Odd
+inversion parity excludes the zero-charge state, while unimodularity and
+Leech minimum norm four imply (q^TG^{-1}q\ge4) for every remaining charge.
+Thus charging contributes a uniform 0.02 floor and raises the exact 25th
+separator to 4.3334665205. The targeted space still has only 20 values below
+it; the next missing value is 4.3647030493, only 0.0312365287 higher.
+Wave 7.217 resolves the minimum-charge shell exactly. The stored Conway
+generators generate all 196560 norm-four vectors; 196512 survive cutoff two.
+Their single-charge graph has 75856 edges, 110242 isolated vertices and
+maximum degree 12, so the shell-restricted Hamiltonian is at least 18.02.
+The physical low state therefore depends on coherent inter-shell hopping.
+A charge-shell lower operator must retain that coupling rather than project
+onto the cheapest shell alone.
+The exact first corona contains 1,592,382 norm-six and 3,339,938 norm-eight
+hops. Its 32 zero-charge hops cancel in the odd sector, selecting an explicit
+odd (4\leftrightarrow6\leftrightarrow8) shell complex as the next compressed
+lower operator.
+Wave 7.218 turns those invariants into a preregistered commissioning packet.
+It fixes 82257 uniformly sampled norm-four states, 3948336 one-hop commands,
+82257 exterior-hop samples, a 29956-sample rootlessness null and 92256 shots
+for the 16 odd/even zero-charge interference pairs. The packet separates a
+wrong Leech graph, a norm-two/rootlessness failure, and an inversion-phase
+failure before any bulk-gap or orbifold claim is attempted.
+Wave 7.219 stress-tests those budgets against five named counterfeits. The
+largest false-acceptance upper bound is (3.12\times10^{-7}), set by a
+norm-two event rate (5\times10^{-4}); the graph, corona and parity
+counterfeits are rejected more strongly at their declared effect sizes. A
+four-branch odd/even truth table withholds phase inference whenever the even
+control fails.
+Wave 7.220 audits the hidden detector dictionary. The raw zero-event tests
+need backgrounds below (1.71\times10^{-6}) for norm two and
+(5.56\times10^{-7}) for the odd family, while retaining the named
+false-acceptance target requires norm-two efficiency at least 0.9222. A 0.02
+selection bias can hide either structural counterfeit. Laboratory promotion
+therefore requires measured efficiencies and backgrounds or an interleaved
+two-sample likelihood with blinded randomized scheduling.
+Wave 7.221 supplies that repair. At background (10^{-5}), a norm-two test
+with 90% efficiency needs 676560 paired-arm trials, while a 0.005 odd-leak
+test with 50% efficiency needs 142134 trials per inversion pair and 2274144
+across all sixteen. A twelve-point background/efficiency surface forbids
+unregistered interpolation. Stationary common background is handled; drift,
+afterpulsing, crosstalk and label-dependent background remain controls.
+Wave 7.222 turns bounded versions of those controls into a costed likelihood.
+Allowing label asymmetry up to 25% of the decision threshold and design effect
+2 costs 2478300 rootlessness trials and 8337280 trials across the sixteen odd
+pairs. Randomized block balance, sentinel labels and time-ordered
+autocorrelation estimation are now mandatory. Nonergodic changes and
+signal-specific detector response remain outside the guarantee.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -454,6 +509,14 @@ P4 questions.
 - [Temple separator and odd-subspace burden](frontier_wave7_212_leech_temple_separator_burden.md)
 - [Bare odd Ritz-seed failure](frontier_wave7_213_leech_odd_ritz_seed_failure.md)
 - [First odd block-Lanczos enrichment](frontier_wave7_214_leech_odd_block_lanczos_step.md)
+- [Targeted second odd-sector enrichment](frontier_wave7_215_leech_odd_targeted_second_enrichment.md)
+- [Exact inversion-odd charging floor](frontier_wave7_216_leech_odd_charging_floor.md)
+- [Cutoff-two charge-shell geometry](frontier_wave7_217_leech_cutoff_charge_shell_geometry.md)
+- [Charge-shell commissioning packet](frontier_wave7_218_leech_charge_shell_commissioning.md)
+- [Charge-shell counterfeit power](frontier_wave7_219_leech_charge_shell_counterfeit_power.md)
+- [Detector, background and drift burden](frontier_wave7_220_leech_charge_shell_detector_burden.md)
+- [Background-likelihood repair](frontier_wave7_221_leech_background_likelihood_repair.md)
+- [Drift-robust likelihood](frontier_wave7_222_leech_drift_robust_likelihood.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

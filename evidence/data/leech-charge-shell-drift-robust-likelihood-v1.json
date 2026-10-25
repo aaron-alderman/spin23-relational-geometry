@@ -1,0 +1,417 @@
+{
+  "schemaVersion": "leech-charge-shell-drift-robust-likelihood-v1",
+  "date": "2026-10-25",
+  "input": "leech-charge-shell-background-likelihood-v1",
+  "interpretation": {
+    "labelDifferenceBound": "absolute signal-versus-blank background difference after randomized interleaving",
+    "designEffect": "variance inflation from autocorrelation, afterpulsing or clustered trials; equals effective raw trials divided by independent trials",
+    "guard": "label difference must stay strictly below the decision threshold"
+  },
+  "referenceDesign": {
+    "commonBackgroundUpper": 0.00001,
+    "selectedLabelBiasFraction": 0.25,
+    "selectedDesignEffect": 2,
+    "rootful": {
+      "labelBiasFractionOfDecisionThreshold": 0.25,
+      "labelDifferenceBound": 0.000056250000000000005,
+      "designEffect": 2,
+      "remainingDecisionGap": 0.00016875,
+      "independentTrialsPerArm": 619575,
+      "trialsPerArm": 1239150,
+      "totalTrials": 2478300,
+      "falsePositiveIndependent": 183142,
+      "falseNegativeIndependent": 619575
+    },
+    "oddSinglePair": {
+      "labelBiasFractionOfDecisionThreshold": 0.25,
+      "labelDifferenceBound": 0.0003125,
+      "designEffect": 2,
+      "remainingDecisionGap": 0.0009375,
+      "independentTrialsPerArm": 130270,
+      "trialsPerArm": 260540,
+      "totalTrials": 521080,
+      "falsePositiveIndependent": 36139,
+      "falseNegativeIndependent": 130270
+    },
+    "oddPairCount": 16,
+    "oddFamilyTotalTrials": 8337280
+  },
+  "costSurface": {
+    "labelBiasFractions": [
+      0,
+      0.1,
+      0.25,
+      0.4
+    ],
+    "designEffects": [
+      1,
+      1.5,
+      2,
+      4
+    ],
+    "rootful": [
+      {
+        "labelBiasFractionOfDecisionThreshold": 0,
+        "labelDifferenceBound": 0,
+        "designEffect": 1,
+        "remainingDecisionGap": 0.00022500000000000002,
+        "independentTrialsPerArm": 338280,
+        "trialsPerArm": 338280,
+        "totalTrials": 676560,
+        "falsePositiveIndependent": 92786,
+        "falseNegativeIndependent": 338280
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0,
+        "labelDifferenceBound": 0,
+        "designEffect": 1.5,
+        "remainingDecisionGap": 0.00022500000000000002,
+        "independentTrialsPerArm": 338280,
+        "trialsPerArm": 507420,
+        "totalTrials": 1014840,
+        "falsePositiveIndependent": 92786,
+        "falseNegativeIndependent": 338280
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0,
+        "labelDifferenceBound": 0,
+        "designEffect": 2,
+        "remainingDecisionGap": 0.00022500000000000002,
+        "independentTrialsPerArm": 338280,
+        "trialsPerArm": 676560,
+        "totalTrials": 1353120,
+        "falsePositiveIndependent": 92786,
+        "falseNegativeIndependent": 338280
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0,
+        "labelDifferenceBound": 0,
+        "designEffect": 4,
+        "remainingDecisionGap": 0.00022500000000000002,
+        "independentTrialsPerArm": 338280,
+        "trialsPerArm": 1353120,
+        "totalTrials": 2706240,
+        "falsePositiveIndependent": 92786,
+        "falseNegativeIndependent": 338280
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.1,
+        "labelDifferenceBound": 0.000022500000000000005,
+        "designEffect": 1,
+        "remainingDecisionGap": 0.00020250000000000002,
+        "independentTrialsPerArm": 422682,
+        "trialsPerArm": 422682,
+        "totalTrials": 845364,
+        "falsePositiveIndependent": 119604,
+        "falseNegativeIndependent": 422682
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.1,
+        "labelDifferenceBound": 0.000022500000000000005,
+        "designEffect": 1.5,
+        "remainingDecisionGap": 0.00020250000000000002,
+        "independentTrialsPerArm": 422682,
+        "trialsPerArm": 634023,
+        "totalTrials": 1268046,
+        "falsePositiveIndependent": 119604,
+        "falseNegativeIndependent": 422682
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.1,
+        "labelDifferenceBound": 0.000022500000000000005,
+        "designEffect": 2,
+        "remainingDecisionGap": 0.00020250000000000002,
+        "independentTrialsPerArm": 422682,
+        "trialsPerArm": 845364,
+        "totalTrials": 1690728,
+        "falsePositiveIndependent": 119604,
+        "falseNegativeIndependent": 422682
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.1,
+        "labelDifferenceBound": 0.000022500000000000005,
+        "designEffect": 4,
+        "remainingDecisionGap": 0.00020250000000000002,
+        "independentTrialsPerArm": 422682,
+        "trialsPerArm": 1690728,
+        "totalTrials": 3381456,
+        "falsePositiveIndependent": 119604,
+        "falseNegativeIndependent": 422682
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.25,
+        "labelDifferenceBound": 0.000056250000000000005,
+        "designEffect": 1,
+        "remainingDecisionGap": 0.00016875,
+        "independentTrialsPerArm": 619575,
+        "trialsPerArm": 619575,
+        "totalTrials": 1239150,
+        "falsePositiveIndependent": 183142,
+        "falseNegativeIndependent": 619575
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.25,
+        "labelDifferenceBound": 0.000056250000000000005,
+        "designEffect": 1.5,
+        "remainingDecisionGap": 0.00016875,
+        "independentTrialsPerArm": 619575,
+        "trialsPerArm": 929363,
+        "totalTrials": 1858726,
+        "falsePositiveIndependent": 183142,
+        "falseNegativeIndependent": 619575
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.25,
+        "labelDifferenceBound": 0.000056250000000000005,
+        "designEffect": 2,
+        "remainingDecisionGap": 0.00016875,
+        "independentTrialsPerArm": 619575,
+        "trialsPerArm": 1239150,
+        "totalTrials": 2478300,
+        "falsePositiveIndependent": 183142,
+        "falseNegativeIndependent": 619575
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.25,
+        "labelDifferenceBound": 0.000056250000000000005,
+        "designEffect": 4,
+        "remainingDecisionGap": 0.00016875,
+        "independentTrialsPerArm": 619575,
+        "trialsPerArm": 2478300,
+        "totalTrials": 4956600,
+        "falsePositiveIndependent": 183142,
+        "falseNegativeIndependent": 619575
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.4,
+        "labelDifferenceBound": 0.00009000000000000002,
+        "designEffect": 1,
+        "remainingDecisionGap": 0.000135,
+        "independentTrialsPerArm": 985133,
+        "trialsPerArm": 985133,
+        "totalTrials": 1970266,
+        "falsePositiveIndependent": 303206,
+        "falseNegativeIndependent": 985133
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.4,
+        "labelDifferenceBound": 0.00009000000000000002,
+        "designEffect": 1.5,
+        "remainingDecisionGap": 0.000135,
+        "independentTrialsPerArm": 985133,
+        "trialsPerArm": 1477700,
+        "totalTrials": 2955400,
+        "falsePositiveIndependent": 303206,
+        "falseNegativeIndependent": 985133
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.4,
+        "labelDifferenceBound": 0.00009000000000000002,
+        "designEffect": 2,
+        "remainingDecisionGap": 0.000135,
+        "independentTrialsPerArm": 985133,
+        "trialsPerArm": 1970266,
+        "totalTrials": 3940532,
+        "falsePositiveIndependent": 303206,
+        "falseNegativeIndependent": 985133
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.4,
+        "labelDifferenceBound": 0.00009000000000000002,
+        "designEffect": 4,
+        "remainingDecisionGap": 0.000135,
+        "independentTrialsPerArm": 985133,
+        "trialsPerArm": 3940532,
+        "totalTrials": 7881064,
+        "falsePositiveIndependent": 303206,
+        "falseNegativeIndependent": 985133
+      }
+    ],
+    "oddSinglePair": [
+      {
+        "labelBiasFractionOfDecisionThreshold": 0,
+        "labelDifferenceBound": 0,
+        "designEffect": 1,
+        "remainingDecisionGap": 0.00125,
+        "independentTrialsPerArm": 71067,
+        "trialsPerArm": 71067,
+        "totalTrials": 142134,
+        "falsePositiveIndependent": 18119,
+        "falseNegativeIndependent": 71067
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0,
+        "labelDifferenceBound": 0,
+        "designEffect": 1.5,
+        "remainingDecisionGap": 0.00125,
+        "independentTrialsPerArm": 71067,
+        "trialsPerArm": 106601,
+        "totalTrials": 213202,
+        "falsePositiveIndependent": 18119,
+        "falseNegativeIndependent": 71067
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0,
+        "labelDifferenceBound": 0,
+        "designEffect": 2,
+        "remainingDecisionGap": 0.00125,
+        "independentTrialsPerArm": 71067,
+        "trialsPerArm": 142134,
+        "totalTrials": 284268,
+        "falsePositiveIndependent": 18119,
+        "falseNegativeIndependent": 71067
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0,
+        "labelDifferenceBound": 0,
+        "designEffect": 4,
+        "remainingDecisionGap": 0.00125,
+        "independentTrialsPerArm": 71067,
+        "trialsPerArm": 284268,
+        "totalTrials": 568536,
+        "falsePositiveIndependent": 18119,
+        "falseNegativeIndependent": 71067
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.1,
+        "labelDifferenceBound": 0.000125,
+        "designEffect": 1,
+        "remainingDecisionGap": 0.0011250000000000001,
+        "independentTrialsPerArm": 88829,
+        "trialsPerArm": 88829,
+        "totalTrials": 177658,
+        "falsePositiveIndependent": 23461,
+        "falseNegativeIndependent": 88829
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.1,
+        "labelDifferenceBound": 0.000125,
+        "designEffect": 1.5,
+        "remainingDecisionGap": 0.0011250000000000001,
+        "independentTrialsPerArm": 88829,
+        "trialsPerArm": 133244,
+        "totalTrials": 266488,
+        "falsePositiveIndependent": 23461,
+        "falseNegativeIndependent": 88829
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.1,
+        "labelDifferenceBound": 0.000125,
+        "designEffect": 2,
+        "remainingDecisionGap": 0.0011250000000000001,
+        "independentTrialsPerArm": 88829,
+        "trialsPerArm": 177658,
+        "totalTrials": 355316,
+        "falsePositiveIndependent": 23461,
+        "falseNegativeIndependent": 88829
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.1,
+        "labelDifferenceBound": 0.000125,
+        "designEffect": 4,
+        "remainingDecisionGap": 0.0011250000000000001,
+        "independentTrialsPerArm": 88829,
+        "trialsPerArm": 355316,
+        "totalTrials": 710632,
+        "falsePositiveIndependent": 23461,
+        "falseNegativeIndependent": 88829
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.25,
+        "labelDifferenceBound": 0.0003125,
+        "designEffect": 1,
+        "remainingDecisionGap": 0.0009375,
+        "independentTrialsPerArm": 130270,
+        "trialsPerArm": 130270,
+        "totalTrials": 260540,
+        "falsePositiveIndependent": 36139,
+        "falseNegativeIndependent": 130270
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.25,
+        "labelDifferenceBound": 0.0003125,
+        "designEffect": 1.5,
+        "remainingDecisionGap": 0.0009375,
+        "independentTrialsPerArm": 130270,
+        "trialsPerArm": 195405,
+        "totalTrials": 390810,
+        "falsePositiveIndependent": 36139,
+        "falseNegativeIndependent": 130270
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.25,
+        "labelDifferenceBound": 0.0003125,
+        "designEffect": 2,
+        "remainingDecisionGap": 0.0009375,
+        "independentTrialsPerArm": 130270,
+        "trialsPerArm": 260540,
+        "totalTrials": 521080,
+        "falsePositiveIndependent": 36139,
+        "falseNegativeIndependent": 130270
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.25,
+        "labelDifferenceBound": 0.0003125,
+        "designEffect": 4,
+        "remainingDecisionGap": 0.0009375,
+        "independentTrialsPerArm": 130270,
+        "trialsPerArm": 521080,
+        "totalTrials": 1042160,
+        "falsePositiveIndependent": 36139,
+        "falseNegativeIndependent": 130270
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.4,
+        "labelDifferenceBound": 0.0005,
+        "designEffect": 1,
+        "remainingDecisionGap": 0.00075,
+        "independentTrialsPerArm": 207223,
+        "trialsPerArm": 207223,
+        "totalTrials": 414446,
+        "falsePositiveIndependent": 60145,
+        "falseNegativeIndependent": 207223
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.4,
+        "labelDifferenceBound": 0.0005,
+        "designEffect": 1.5,
+        "remainingDecisionGap": 0.00075,
+        "independentTrialsPerArm": 207223,
+        "trialsPerArm": 310835,
+        "totalTrials": 621670,
+        "falsePositiveIndependent": 60145,
+        "falseNegativeIndependent": 207223
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.4,
+        "labelDifferenceBound": 0.0005,
+        "designEffect": 2,
+        "remainingDecisionGap": 0.00075,
+        "independentTrialsPerArm": 207223,
+        "trialsPerArm": 414446,
+        "totalTrials": 828892,
+        "falsePositiveIndependent": 60145,
+        "falseNegativeIndependent": 207223
+      },
+      {
+        "labelBiasFractionOfDecisionThreshold": 0.4,
+        "labelDifferenceBound": 0.0005,
+        "designEffect": 4,
+        "remainingDecisionGap": 0.00075,
+        "independentTrialsPerArm": 207223,
+        "trialsPerArm": 828892,
+        "totalTrials": 1657784,
+        "falsePositiveIndependent": 60145,
+        "falseNegativeIndependent": 207223
+      }
+    ]
+  },
+  "executionContract": [
+    "cryptographically commit the signal/blank labels and acquisition order before unblinding",
+    "balance signal and blank counts inside every acquisition block",
+    "estimate the label-dependent background difference from interleaved blank-label sentinels",
+    "estimate the integrated autocorrelation/design effect from the same time-ordered record",
+    "select a cost-surface cell no more favorable than both measured bounds; otherwise regenerate before hypothesis testing"
+  ],
+  "boundary": "The robust surface covers bounded label asymmetry and variance inflation. It does not cover nonergodic state changes, unbounded adversarial drift, or a detector response that changes specifically when the physical signal is present."
+}

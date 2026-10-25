@@ -160,9 +160,12 @@ const factor = (G) => {
 
 const results = frontier.sub1000EngineeringShortlist.map((candidate) => {
   const permutation = permutationAtTrial(frontier.scan.seed, candidate.trialZeroBased);
-  const {G} = reduce(permutation, candidate.lovaszDelta);
+  const {U, G} = reduce(permutation, candidate.lovaszDelta);
   const result = {id: candidate.id, trialZeroBased: candidate.trialZeroBased, ...factor(G)};
-  if (fullOutput) result.gram = G.map((row) => row.map(Number));
+  if (fullOutput) {
+    result.gram = G.map((row) => row.map(Number));
+    result.transform = U.map((row) => row.map(Number));
+  }
   return result;
 });
 console.log(JSON.stringify({

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "leech-charge-shell-detector-burden-v1",
+  "date": "2026-10-25",
+  "inputs": [
+    "leech-charge-shell-commissioning-v1",
+    "leech-charge-shell-discrimination-v1"
+  ],
+  "zeroEventBackgroundBurden": {
+    "requiredIdealPassProbability": 0.95,
+    "normTwoSamples": 29956,
+    "maximumNormTwoBackgroundPerTrial": 0.0000017122863691376722,
+    "oddPairSamplesEach": 5766,
+    "oddPairCount": 16,
+    "maximumOddBackgroundPerTrialForFamilyPass": 5.559885549732968e-7
+  },
+  "detectorEfficiencyBurden": {
+    "desiredFalseAcceptance": 0.000001,
+    "normTwoCounterfeitRate": 0.0005,
+    "minimumNormTwoDetectionEfficiency": 0.9221742045850689,
+    "oddLeakCounterfeitRate": 0.005,
+    "minimumOddLeakDetectionEfficiency": 0.4786324168688738
+  },
+  "adversarialMaskingMargins": {
+    "graphSamplingBiasNeededToEnterAcceptanceBand": 0.019999999999999997,
+    "coronaSamplingBiasNeededToEnterAcceptanceBand": 0.019999999999999997,
+    "evenControlCalibrationBiasNeededToEnterAcceptanceBand": 0.039999999999999994
+  },
+  "requiredPromotion": {
+    "options": [
+      "demonstrate raw background and efficiency beyond all recorded burdens on the selected platform",
+      "replace zero-event acceptance with a preregistered signal-versus-background likelihood ratio using interleaved blank controls",
+      "cryptographically commit randomized state/command order and bound selection imbalance below the masking margins"
+    ],
+    "recommended": "interleaved two-sample likelihood with blinded randomized scheduling, because the raw zero-background burdens are substantially stronger than the current hardware dictionary establishes"
+  },
+  "boundary": "This audit does not retract the ideal-model power calculation. It proves that those powers cannot be transported to laboratory data without measured efficiency, background, drift, and randomization guarantees."
+}

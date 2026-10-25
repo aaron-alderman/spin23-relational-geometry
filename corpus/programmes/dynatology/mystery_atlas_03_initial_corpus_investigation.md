@@ -1,6 +1,6 @@
 # Mystery Atlas 03: Initial Corpus Investigation
 
-**Date:** 24 October 2026  
+**Date:** 25 October 2026
 **Status:** first corpus collision and priority assessment; no mystery promoted above its prior evidence zone  
 **Machine record:** [mystery collision register](mystery_collision_register_v1.json)
 
@@ -170,6 +170,8 @@ The mystery atlas overlaps the existing frontier most directly in cosmology and 
 
 Origin of life has only methodological contact so far. The reflexive ladder suggests useful roles—state, memory, comparator, update and retained structural change—but these are generic adaptive-system types. A real bridge requires prebiotic chemical carriers, energy and material accounting, replication fidelity and ecological selection. No exceptional-algebra identification follows.
 
+The aether/substrate question has closer candidate-level contact, but not because the corpus already contains a hidden medium. The [substrate frontier map](mystery_atlas_21_aether_substrate_and_universal_cone.md) translates it into a carrier action, background state, species ports, noise kernel, detector and recovery limit. Its sharpest problem is universal-cone convergence: a deeper theory must derive why photons, matter and gravity share one radiatively stable infrared metric rather than imposing equal speeds separately. The second new gate is response--noise closure: any carrier susceptibility invoked to generate inertia or gravity must bring a compatible fluctuation and dissipation ledger, or demonstrate a protected lossless limit.
+
 ## 10. Sacred, esoteric and metaphysical collision
 
 Sacred geometry now has a [dedicated bridge](mystery_atlas_05_sacred_geometry_bridge.md): much of its formal and generative content is directly adjacent to the corpus, while historical meaning and physical effect remain separate proof obligations. Synchronicity, dreams, visionary forms, panpsychism and idealism can still enter as signposts. The corpus has already formalized the correct permissive discipline:
@@ -196,8 +198,9 @@ The [participatory comparison](../../claims/1600-1699/1685_participatory_theolog
 | 6 | UAP/ball-lightning multi-sensor event schema | yes | minimum event packet that can identify mechanism classes |
 | 7 | Sacred-form invariant and provenance harness | yes | construction-rule packets, historical provenance and null distributions for ratios and alignments |
 | 8 | Origin-of-life reflexive-role crosswalk | yes | typed chemical requirements and where analogy stops |
+| 9 | Substrate universal-cone and response--noise audit | yes at model level; external coefficients needed for bounds | one action-level recovery theorem or an explicit no-go |
 
-Ranks 1, 2, 4, 5, 6 and 7 can advance substantially without acquiring new experimental data. Rank 3 can establish whether a direct Schumann experiment is even dimensionally worthwhile. None requires assuming the corpus's preferred mathematics is physically present.
+Ranks 1, 2, 4, 5, 6, 7 and 9 can advance substantially without acquiring new experimental data. Rank 3 can establish whether a direct Schumann experiment is even dimensionally worthwhile. None requires assuming the corpus's preferred mathematics is physically present.
 
 ## 12. Implications for the programme
 
@@ -216,12 +219,12 @@ The mystery branch is admitted as a serious adversarial application of the corpu
 \[
 \boxed{
 4\ \text{direct contacts},\quad
-3\ \text{candidate contacts},\quad
+4\ \text{candidate contacts},\quad
 12\ \text{method transfers},\quad
 2\ \text{analogy-only contacts},\quad
 0\ \text{new-physics promotions}.
 }
 \]
 
-The next useful act is executing the first two corpus-only matrices, the sacred-form construction census and the Schumann magnitude budget.
+The next useful act is executing the first two corpus-only matrices, the substrate universal-cone/noise audit, the sacred-form construction census and the Schumann magnitude budget.
 

@@ -308,6 +308,56 @@ separator. It does not yet certify the odd cluster: six directions remain
 above the separator, and no exterior residual enclosure has yet been formed.
 The next admissible result is therefore a targeted second enrichment plus a
 cluster residual/Lehmann bound, or an independent shifted-inertia count.
+Wave 7.215 tests the most economical six-direction correction explicitly. A
+50,000-configuration residual tranche produces a valid 54-dimensional
+variational projection and raises the count below the separator from 18 to
+20, but the twenty-first through twenty-fourth values remain too high. The
+underlying selected residual has 2,002,387 configurations. This rejects a
+small sparse repair and redirects the proof toward a tensor-network second
+block with an exterior residual, or shifted inertia.
+Wave 7.216 then recovers a theorem-level margin from the Leech dictionary:
+odd parity removes the zero-charge kernel and the dual Leech minimum norm is
+four, so the charging term is at least 0.02 throughout the odd sector. The
+25th separator rises exactly to 4.3334665205. Twenty trial values remain
+below it; the twenty-first misses by 0.0312365287. This is a stronger
+separator, not yet an odd-sector eigenvalue enclosure.
+Wave 7.217 tests the natural shell refinement and finds why it is not a
+shortcut. The exact 196560-vector minimal orbit leaves 196512 vectors in the
+cutoff box, but 110242 are isolated under one-charge hopping and the maximum
+degree is only 12. The norm-four projected block lies above 18.02; energies
+near 4.2 arise through inter-shell coherence. A valid lower operator must
+preserve that coherence, so a minimum-shell projection cannot close the gap.
+The enumerated first corona selects norms six and eight as the dominant next
+blocks, while parity cancels all 32 links to zero charge. This turns the next
+shell model into a preregistered odd (4\leftrightarrow6\leftrightarrow8)
+construction rather than a fitted truncation.
+Wave 7.218 makes this new finite dictionary experimentally refutable. It
+freezes non-asymptotic sampling budgets for the isolated fraction, degree,
+norm-six/eight corona, norm-two null and sixteen odd/even interference pairs.
+Passing would commission the cutoff-two Leech charging and inversion phase;
+it would not by itself promote the carrier through laboratory Gate A.
+Wave 7.219 confirms that the packet has discriminating power rather than only
+target precision. Named graph, corona, rootful, inversion-phase and even-arm
+counterfeits all have false-acceptance upper bounds below
+(3.12\times10^{-7}) at the declared effect sizes. Correlated drift and
+smaller adversarial deviations remain outside that guarantee.
+Wave 7.220 quantifies that boundary rather than leaving it rhetorical. The
+zero-event arms demand sub-(1.8\times10^{-6}) raw backgrounds, the norm-two
+counterfeit demands at least 92.2% event efficiency, and a 0.02 scheduler
+bias can hide either structural alternative. Until those platform quantities
+are measured or replaced by interleaved background inference, Wave 7.219 is
+ideal-model power rather than laboratory power.
+Wave 7.221 removes the zero-background assumption with an interleaved
+signal-minus-blank Bernstein test. The reference (10^{-5})-background design
+costs 676560 trials for the rootlessness arm and 2274144 across the sixteen
+odd pairs. It is now executable under measured stationary common background,
+but not yet under label-dependent drift, afterpulsing or crosstalk.
+Wave 7.222 prices bounded label asymmetry and correlated trials rather than
+assuming them away. At a 25%-of-threshold asymmetry allowance and design
+effect 2, the rootlessness arm costs 2478300 trials and the sixteen-pair odd
+family costs 8337280. The protocol now requires committed block randomization,
+sentinel-based asymmetry bounds and an estimated autocorrelation penalty;
+nonergodic and signal-specific detector changes remain open.
 
 ## Corpus links
 
@@ -379,6 +429,14 @@ cluster residual/Lehmann bound, or an independent shifted-inertia count.
 - [Temple separator and odd-subspace burden](frontier_wave7_212_leech_temple_separator_burden.md)
 - [Bare odd Ritz-seed failure](frontier_wave7_213_leech_odd_ritz_seed_failure.md)
 - [First odd block-Lanczos enrichment](frontier_wave7_214_leech_odd_block_lanczos_step.md)
+- [Targeted second odd-sector enrichment](frontier_wave7_215_leech_odd_targeted_second_enrichment.md)
+- [Exact inversion-odd charging floor](frontier_wave7_216_leech_odd_charging_floor.md)
+- [Cutoff-two charge-shell geometry](frontier_wave7_217_leech_cutoff_charge_shell_geometry.md)
+- [Charge-shell commissioning packet](frontier_wave7_218_leech_charge_shell_commissioning.md)
+- [Charge-shell counterfeit power](frontier_wave7_219_leech_charge_shell_counterfeit_power.md)
+- [Detector, background and drift burden](frontier_wave7_220_leech_charge_shell_detector_burden.md)
+- [Background-likelihood repair](frontier_wave7_221_leech_background_likelihood_repair.md)
+- [Drift-robust likelihood](frontier_wave7_222_leech_drift_robust_likelihood.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

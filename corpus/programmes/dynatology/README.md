@@ -59,6 +59,8 @@ It does not replace physics, ontology, dynamics, optimization or modal logic. It
 43. [Figure 4F oracle record](girih_figure4f_defect_oracle_v1.json) freezes the vector bounding boxes, exact translation, count-preserving repair, allowed and withheld detector inputs, expected outputs and terminal stop rule.
 44. [Blind Figure 4F continuity result](mystery_atlas_20_figure4f_blind_continuity_result.md) finds a parameter-stable, annotation-blind topological difference in both ribbon families while refusing to mislabel it as a seam count or defect charge.
 45. [Blind Figure 4F continuity record](girih_figure4f_blind_continuity_v1.json) freezes the twenty-four-trial stability sweep, resolution-sensitive raw counts, invariant registered delta, allowed inputs, non-results and branch-closing reopen conditions.
+46. [Aether, substrate and the universal-cone problem](mystery_atlas_21_aether_substrate_and_universal_cone.md) separates structured vacuum, preferred-frame fields, emergent Lorentz symmetry, analogue media, relational microstructure and dark condensates, then turns the surviving question into eight falsifiable research fronts.
+47. [Aether/substrate frontier register](aether_substrate_frontier_register_v1.json) freezes the seven branch types, their recovery burdens and kill tests, plus the eight ranked research fronts.
 
 ## Relation to neighbouring programmes
 
@@ -75,5 +77,7 @@ Run:
 
 ```text
 node verification/verify/verify_dynatology_register.mjs
+node verification/verify/verify_dynatology_mystery_atlas.mjs
+node verification/verify/verify_dynatology_aether_substrate_frontier.mjs
 ```
 

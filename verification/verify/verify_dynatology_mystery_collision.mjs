@@ -28,7 +28,7 @@ for (const entry of collision.entries) {
 }
 
 const counts = Object.fromEntries(collision.contactTypes.map((type) => [type, collision.entries.filter((entry) => entry.contactType === type).length]));
-assert.deepEqual(counts, {direct: 4, candidate: 3, methodological: 12, analogy_only: 2, none: 0});
+assert.deepEqual(counts, {direct: 4, candidate: 4, methodological: 12, analogy_only: 2, none: 0});
 assert.ok(atlas.entries.every((entry) => !["M4", "M5"].includes(entry.zone)), "collision audit must not silently promote a mystery");
 
 console.log("Dynatology mystery collision: PASS");

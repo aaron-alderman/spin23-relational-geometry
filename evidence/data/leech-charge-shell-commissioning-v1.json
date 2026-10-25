@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "leech-charge-shell-commissioning-v1",
+  "date": "2026-10-25",
+  "source": "leech-cutoff-charge-shell-enumeration-v1",
+  "exactTargets": {
+    "normFourStates": 196512,
+    "isolatedFraction": 0.5609937306627585,
+    "meanInternalDegree": 0.7720241003093958,
+    "degreeVariance": 1.2912324931498378,
+    "exteriorHops": 9060320,
+    "normSixExteriorFraction": 0.17575339502357532,
+    "normEightExteriorFraction": 0.36863355819661997,
+    "normTwoExteriorHops": 0,
+    "zeroChargeDirectedHops": 32,
+    "inversionPairsToZero": 16,
+    "evenPairZeroChargeMatrixElementMagnitude": 0.7071067811865475,
+    "oddPairZeroChargeMatrixElementMagnitude": 0
+  },
+  "preregisteredSampling": {
+    "structuralTwoSidedFailureProbability": 5.733031437583866e-7,
+    "structuralTestCount": 4,
+    "structuralPerTestFailureProbability": 1.4332578593959664e-7,
+    "concentrationBounds": "Hoeffding for proportions and Bernstein with the frozen degree variance and range for the mean degree",
+    "isolatedFractionTolerance": 0.01,
+    "meanDegreeTolerance": 0.03,
+    "exteriorFractionTolerance": 0.01,
+    "uniformlySampledNormFourStates": 82257,
+    "isolatedFractionMinimumSamples": 82257,
+    "meanDegreeMinimumSamples": 51311,
+    "singleChargeCommandsPerState": 48,
+    "stateSurveyTransitionCommands": 3948336,
+    "uniformlySampledExteriorHops": 82257,
+    "rootlessNormTwoUpperRate": 0.0001,
+    "rootlessConfidence": 0.95,
+    "rootlessZeroEventSamples": 29956,
+    "oddZeroChargeLeakageUpperRate": 0.001,
+    "oddCancellationFamilyConfidence": 0.95,
+    "oddCancellationShotsPerPair": 5766,
+    "oddCancellationTotalShots": 92256,
+    "evenControlMatrixElementTolerance": 0.02,
+    "evenControlFamilyConfidence": 0.95,
+    "evenControlShotsPerPair": 8077,
+    "evenControlTotalShots": 129232
+  },
+  "pass": [
+    "sampled isolated fraction is within 0.01 of 0.5609937306627585",
+    "sampled mean internal degree is within 0.03 of 0.7720241003093958",
+    "sampled norm-six and norm-eight exterior fractions are each within 0.01 of their frozen targets",
+    "no norm-two target is observed in at least 29956 exterior-hop samples",
+    "all 16 odd charge-pair states have zero-charge leakage below 0.001 at family confidence 0.95",
+    "all 16 even controls reproduce matrix-element magnitude 1/sqrt(2) within 0.02 at family confidence 0.95"
+  ],
+  "failMeaning": {
+    "degreeOrCoronaMismatch": "wrong Gram basis, cutoff map, or single-charge hopping operator",
+    "normTwoEvent": "rootlessness failure or charge-norm calibration error",
+    "oddCancellationFailureWithEvenControlPassing": "inversion phase/coherence failure",
+    "bothOddAndEvenControlFail": "state preparation, zero-charge readout, or hopping calibration failure"
+  },
+  "boundary": "This packet commissions the finite cutoff-two Leech charging and cosine dictionary. Passing it does not establish the bulk gap, chiral edge, inversion orbifold, Moonshine character, Monster defects, or Griess product."
+}

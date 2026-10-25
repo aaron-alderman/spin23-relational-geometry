@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "leech-odd-charging-floor-v1",
+  "date": "2026-10-25",
+  "premises": {
+    "chargingOperator": "(U/2) q^T G^{-1} q",
+    "chargeCoordinatesIntegral": true,
+    "leechUnimodular": true,
+    "minimumDualNorm": 4,
+    "inversionMapsCharge": "q -> -q",
+    "oddSectorExcludesZeroCharge": true,
+    "ratio": 0.01,
+    "sourceRecords": [
+      "leech-explicit-k-matrix-v1",
+      "leech-unimodular-dual-basis-compiler-v1"
+    ]
+  },
+  "operatorBound": {
+    "statement": "T restricted to the inversion-odd sector is at least (U/2)*4 times the identity",
+    "oddChargingFloor": 0.02,
+    "potentialTwentyFifthSeparator": 4.313466520526786,
+    "strengthenedTwentyFifthSeparator": 4.333466520526786
+  },
+  "targetedProjection": {
+    "dimension": 54,
+    "numberBelowPotentialSeparator": 20,
+    "numberBelowStrengthenedSeparator": 20,
+    "twentieth": 4.311288365976402,
+    "twentyFirst": 4.364703049260699,
+    "twentyFourth": 4.567522699577261,
+    "allLowest24BelowStrengthenedSeparator": false
+  },
+  "boundary": "The uniform odd-sector charging floor is an exact operator inequality once the integral dual-Leech identification and minimum norm four are accepted. It strengthens but does not yet close the 24-vector separator condition."
+}

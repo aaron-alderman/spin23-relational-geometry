@@ -997,6 +997,82 @@ the remaining obstruction precisely: six additional subspace directions and
 an exterior cluster-residual enclosure (or shifted inertia) are necessary
 before a lower bound can enter the physical gap certificate.
 
+Wave 7.215 asks whether only the six lagging directions need a compact repair.
+Their exact residuals span 2,002,387 product configurations. Keeping the
+50,000 configurations with largest aggregate six-direction weight and
+re-orthogonalizing against the first 48 vectors gives a valid 54-dimensional
+projection. The separator count improves from 18 to 20, but the twenty-first
+Ritz value remains 4.3647030493, above 4.3134665205. Thus the first sparse
+second-layer correction is useful but insufficient. The calculation favors
+a compressed tensor-network representation of the collective residual or an
+independent shifted-inertia count over unstructured support enlargement.
+
+Wave 7.216 adds a parity-resolved lower-operator fact that positivity alone
+misses. The integral charging quadratic form is the dual Leech norm;
+unimodularity and minimum norm four make every nonzero charge cost at least
+0.02 at the declared coupling. Inversion-odd states have no zero-charge
+component, so this is a uniform operator floor on the entire odd sector. It
+raises the exact 25th separator to 4.3334665205. The 54-dimensional trial
+space still places 20 values below it, with the twenty-first only 0.0312365
+too high. A refined charge-shell lower operator or a better collective trial
+space can now attack that smaller, explicitly quantified margin.
+
+Wave 7.217 supplies the corresponding charge-shell geometry. The catalogue
+Conway generators close on all 196560 Leech minimal vectors, and exact
+integral transport puts 196512 of them inside the cutoff-two box. Their
+one-charge graph is sparse: 75856 edges, 110242 isolated vertices and maximum
+degree 12. Consequently the norm-four projected Hamiltonian is bounded below
+by 18.02, far above the physical odd level. Low energy is an inter-shell
+coherence effect, not confinement to the minimum charging shell. Any useful
+charge-resolved enclosure must therefore retain hopping between shells;
+projecting onto the cheapest shell is a scoped no-go.
+The first corona contains 1,592,382 hops to norm six and 3,339,938 to norm
+eight; no norm-two target exists, and the 32 zero-charge links cancel after
+odd projection. These exact counts nominate the parity-resolved
+(4\leftrightarrow6\leftrightarrow8) shell complex as the next non-arbitrary
+lower-operator compression.
+
+Wave 7.218 exports the shell result into a falsifiable carrier test. Exact
+degree and corona proportions are paired with Hoeffding/Bernstein budgets,
+a zero-event rootlessness test and an orientation-sensitive interference
+measurement on the sixteen charge pairs connected to zero. The odd amplitude
+must cancel while the even control has magnitude (1/\sqrt2). This is a
+finite Leech/inversion commissioning layer below the gap and Moonshine gates,
+with distinct failure meanings for graph, norm calibration and phase control.
+
+Wave 7.219 then computes analytic power against five preregistered impostors.
+At the declared effect sizes the weakest arm is a norm-two contamination rate
+of \(5\times10^{-4}\), whose false-acceptance probability is at most
+\(3.12\times10^{-7}\); graph, corona and inversion-phase alternatives are
+smaller still. The accompanying truth table refuses to infer a bad inversion
+phase when the even calibration arm also fails. These powers do not transfer
+to smaller, correlated or drifting errors without a new analysis.
+
+Wave 7.220 performs that first transport audit. It derives the detector
+efficiencies, background ceilings and masking biases implicit in the ideal
+power calculation. The zero-event arms require backgrounds below
+\(1.7123\times10^{-6}\) and \(5.5599\times10^{-7}\), while the norm-two
+alternative requires 0.9222 detection efficiency to retain a \(10^{-6}\)
+false-acceptance target. This motivates interleaved blank controls, a
+two-sample likelihood and blinded randomized scheduling before hardware data
+can inherit the ideal powers.
+
+Wave 7.221 implements the proposed repair as a two-sample Bernstein design.
+At background \(10^{-5}\), the reference rootlessness test uses 676560 total
+signal/blank trials at 90% efficiency; the sixteen-pair odd family uses
+2274144 trials at 50% efficiency. A background/efficiency cost surface and
+out-of-grid regeneration rule make the detector choice executable. The
+remaining transport problem is nonstationary or label-dependent noise, not
+unmodelled stationary background.
+
+Wave 7.222 admits bounded label-dependent noise and correlated acquisitions.
+Its conservative reference reserves 25% of the decision threshold for label
+asymmetry and applies design effect 2, raising the rootlessness budget to
+2478300 trials and the sixteen-pair odd-family budget to 8337280. The protocol
+requires within-block balance, sentinel estimates of label asymmetry and a
+time-series estimate of effective sample size. Nonergodic state changes and
+signal-specific detector response are explicitly not covered.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

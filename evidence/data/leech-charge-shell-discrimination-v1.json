@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "leech-charge-shell-discrimination-v1",
+  "date": "2026-10-25",
+  "protocol": "leech-charge-shell-commissioning-v1",
+  "targetSnapshot": {
+    "isolatedFraction": 0.5609937306627585,
+    "normEightExteriorFraction": 0.36863355819661997,
+    "normTwoEventRate": 0,
+    "oddZeroChargeLeakageRate": 0,
+    "evenMatrixElementMagnitude": 0.7071067811865475
+  },
+  "counterfeits": [
+    {
+      "id": "graph-isolation-shift",
+      "perturbation": {
+        "isolatedFractionShift": 0.03
+      },
+      "rejectingObservable": "isolated fraction",
+      "falseAcceptanceUpperBound": 2.636277005926843e-29,
+      "failMeaning": "wrong Gram basis, cutoff map, or hopping graph",
+      "rejectionProbabilityLowerBound": null,
+      "rejectionStatement": "rejection probability is at least 1 - 2.636277005926843e-29"
+    },
+    {
+      "id": "corona-norm-eight-shift",
+      "perturbation": {
+        "normEightExteriorFractionShift": -0.03
+      },
+      "rejectingObservable": "norm-eight exterior fraction",
+      "falseAcceptanceUpperBound": 2.636277005926843e-29,
+      "failMeaning": "wrong inter-shell hopping corona",
+      "rejectionProbabilityLowerBound": null,
+      "rejectionStatement": "rejection probability is at least 1 - 2.636277005926843e-29"
+    },
+    {
+      "id": "rootful-contamination",
+      "perturbation": {
+        "normTwoEventRate": 0.0005
+      },
+      "rejectingObservable": "zero-event norm-two null",
+      "falseAcceptanceUpperBound": 3.1153761592269324e-7,
+      "failMeaning": "rootlessness failure or norm calibration error",
+      "rejectionProbabilityLowerBound": 0.9999996884623841,
+      "rejectionStatement": "rejection probability is at least 1 - 3.1153761592269324e-7"
+    },
+    {
+      "id": "single-pair-inversion-phase-leak",
+      "perturbation": {
+        "oddZeroChargeLeakageRateOnOnePair": 0.005
+      },
+      "rejectingObservable": "odd zero-charge cancellation",
+      "falseAcceptanceUpperBound": 2.8046816937351497e-13,
+      "failMeaning": "inversion phase/coherence failure when the even control passes",
+      "rejectionProbabilityLowerBound": 0.9999999999997196,
+      "rejectionStatement": "rejection probability is at least 1 - 2.8046816937351497e-13"
+    },
+    {
+      "id": "single-pair-even-control-bias",
+      "perturbation": {
+        "evenMatrixElementBias": 0.06
+      },
+      "rejectingObservable": "even Hadamard-test control",
+      "falseAcceptanceUpperBound": 5.95732238537214e-12,
+      "failMeaning": "state preparation, readout, or selective hopping calibration failure",
+      "rejectionProbabilityLowerBound": 0.9999999999940427,
+      "rejectionStatement": "rejection probability is at least 1 - 5.95732238537214e-12"
+    }
+  ],
+  "decisionTruthTable": [
+    {
+      "oddCancellation": "pass",
+      "evenControl": "pass",
+      "meaning": "inversion pair commissioned at declared scope"
+    },
+    {
+      "oddCancellation": "fail",
+      "evenControl": "pass",
+      "meaning": "relative inversion phase/coherence failure"
+    },
+    {
+      "oddCancellation": "pass",
+      "evenControl": "fail",
+      "meaning": "even-arm preparation/readout/selective-hop failure; phase inference withheld"
+    },
+    {
+      "oddCancellation": "fail",
+      "evenControl": "fail",
+      "meaning": "shared preparation/readout/selective-hop failure; phase inference withheld"
+    }
+  ],
+  "maximumCounterfeitFalseAcceptanceUpperBound": 3.1153761592269324e-7,
+  "minimumCounterfeitRejectionProbabilityLowerBound": 0.9999996884623841,
+  "boundary": "Power bounds apply only to the named effect sizes and declared independent bounded-sample models. Smaller, correlated, drifting, or adversarial errors require a revised protocol and must not inherit these powers."
+}
