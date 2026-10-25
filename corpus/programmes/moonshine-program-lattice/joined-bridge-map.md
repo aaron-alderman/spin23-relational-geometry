@@ -79,6 +79,44 @@ sector.
 
 ## 2. The joined compiler
 
+Before passing to the compiler, the same diamond can be resolved through the
+two involution centralizers.  These are the two canonical Monster local
+geometries already used by the corpus:
+
+\[
+C_{\mathbb M}(2A)=2.B,
+\qquad
+C_{\mathbb M}(2B)=2^{1+24}.Co_1.
+\]
+
+For (h\in46C,46D), the central involution is 2A.  Hence (h\) lies in
+(2.B), and quotienting by its central involution sends it to an order-23
+element of the Baby Monster.  The centralizer arithmetic closes exactly:
+
+\[
+|C_{\mathbb M}(h)|=92=2\cdot46,
+\]
+
+while the two Baby-Monster order-23 classes have centralizer order 46.  Thus
+the 46C/D rail is literally the central double-cover lift of the Baby-Monster
+23A/B rail selected by 2A fermionization.
+
+For (h\in46A,46B), the central involution is 2B, so (h) lies in
+(2^{1+24}.Co_1).  Projection through the normal 2-group sends it to an
+order-23 element of (Co_1), whose two order-23 classes have centralizer order
+23.  Here
+
+\[
+|C_{\mathbb M}(h)|=184=8\cdot23.
+\]
+
+The kernel of the centralizer projection therefore has order eight.  This is
+an exact residue in the Leech-side lift, but the corpus does not yet identify
+that kernel with the Rule-60 affine deck bit or with a physical seam.  The
+asymmetry (2\cdot46) versus (8\cdot23) is a new discriminator for the
+twisted--twining calculation, not permission to force the two rails into the
+same finite carrier.
+
 The pieces now form a typed chain rather than a list of resonances:
 
 ```text
@@ -213,6 +251,8 @@ twisted--twining and sewn intertwiners exist.
 ## Sources and corpus links
 
 - [ATLAS Monster conjugacy classes and power-up map](https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M)
+- [ATLAS Baby Monster conjugacy classes](https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/B)
+- [ATLAS Conway group (Co_1) conjugacy classes](https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/Co1)
 - Carnahan, [*Generalized Moonshine IV: Monstrous Lie algebras*](https://arxiv.org/abs/1208.6254)
 - Carnahan, [*Generalized Moonshine I: Genus zero functions*](https://arxiv.org/abs/0812.3440)
 - [Main Moonshine programme](README.md)

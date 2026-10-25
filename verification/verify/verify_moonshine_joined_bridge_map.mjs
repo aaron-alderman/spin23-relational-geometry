@@ -33,6 +33,24 @@ assert.deepEqual(
 // Powers of one cyclic generator commute: h^(2+23)=h^(23+2).
 assert.equal((2 + 23) % 46, (23 + 2) % 46);
 
+// Resolve the two rails through the canonical involution centralizers.
+// ATLAS orders give C_M(2A)=2.B and C_M(2B)=2^(1+24).Co1.
+const babyMonsterOrder = 4154781481226426191177580544000000n;
+const monsterTwoACentralizerOrder = 8309562962452852382355161088000000n;
+const conwayOneOrder = 4157776806543360000n;
+const monsterTwoBCentralizerOrder = 139511839126336328171520000n;
+assert.equal(monsterTwoACentralizerOrder / babyMonsterOrder, 2n);
+assert.equal(monsterTwoBCentralizerOrder / conwayOneOrder, 2n ** 25n);
+const lifts = joined.centralizerLiftResolution;
+assert.equal(lifts.twoA.rootCentralizerOrderInMonster, 92);
+assert.equal(lifts.twoA.quotientOrder23CentralizerOrderInBabyMonster, 46);
+assert.equal(92 / 46, 2);
+assert.equal(lifts.twoB.rootCentralizerOrderInMonster, 184);
+assert.equal(lifts.twoB.quotientOrder23CentralizerOrderInCo1, 23);
+assert.equal(184 / 23, 8);
+assert.equal(lifts.twoB.centralizerProjectionKernelOrder, 8);
+assert.equal(lifts.twoB.normalTwoGroupOrder, 2 ** 25);
+
 // Cross-ledger consistency of the order-23 carrier.
 assert.equal(moonshine.order23DefectChannel.moduleCount, 23 ** 2);
 assert.equal(joined.joinedCarriers.order23TwistChargeLabels, 23 ** 2);
@@ -80,6 +98,10 @@ console.log(JSON.stringify({
     leechRail: "46A/B -> (23AB,2B)",
     fermionicRail: "46C/D -> (23AB,2A)",
     commutingPair: "(h^2,h^23)",
+  },
+  centralizerLifts: {
+    twoA: "46C/D in 2.B -> Baby Monster 23AB; 92=2*46",
+    twoB: "46A/B in 2^(1+24).Co1 -> Conway 23AB; 184=8*23",
   },
   order23Carrier: {
     labels: joined.joinedCarriers.order23TwistChargeLabels,
