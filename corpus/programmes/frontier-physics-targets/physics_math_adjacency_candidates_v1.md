@@ -2,7 +2,7 @@
 
 **Generated:** 2026-10-25
 
-**Status:** topic-level candidate universe generated; 363 candidates remain unreviewed
+**Status:** topic-level candidate universe generated; 332 candidates remain unreviewed
 
 **Machine authority:** [adjacency candidate register](physics_math_adjacency_candidates_v1.json)
 
