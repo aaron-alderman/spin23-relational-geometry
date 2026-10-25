@@ -50,6 +50,7 @@ assert.deepEqual(ledger.relationDefect.freeCycleHolonomies, ["1", "1", "1"]);
 assert.equal(ledger.relationDefect.freeFixedOddOddEigenvalue, "-1");
 assert.equal(ledger.sourceStatus.finiteTransformComplete, true);
 assert.equal(ledger.sourceStatus.sixteenTwinedMonsterBackgroundAmplitudesKnown, false);
+assert.equal(ledger.sourceStatus.babyMonsterKOperatorKnown, true);
 
 console.log(JSON.stringify({
   carrierSize: bits.length,

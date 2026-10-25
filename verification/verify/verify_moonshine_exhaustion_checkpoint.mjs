@@ -16,6 +16,7 @@ const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-perm
 const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
 const babyGate = load("../../evidence/data/moonshine-baby-monster-genus-two-source-gate-v1.json");
 const arf = load("../../evidence/data/moonshine-arf-fourier-baby-monster-reconstruction-v1.json");
+const full2A = load("../../evidence/data/moonshine-arf-conjugated-baby-monster-k-multiplier-v1.json");
 const frontier = load("../../evidence/data/moonshine-frontier-crosswalk-v1.json");
 
 assert.equal(checkpoint.closed.arithmeticAndLattice, true);
@@ -61,7 +62,9 @@ assert.equal(checkpoint.scalarBoundary.permutationDeterminant, seamAction.quotie
 assert.deepEqual(checkpoint.scalarBoundary.freeMajoranaK.etaNormalizedCycleProducts, ["1", "1", "1"]);
 assert.equal(checkpoint.scalarBoundary.freeMajoranaK.fixedOddOddEigenvalue, "-1");
 assert.equal(checkpoint.scalarBoundary.freeMajoranaK.determinant, freeMajorana.etaNormalizedCycleData.determinant);
-assert(checkpoint.scalarBoundary.nextCarrier.includes("Baby-Monster"));
+assert.equal(checkpoint.scalarBoundary.babyMonsterK.determinant, full2A.babyMonsterAction.determinant);
+assert.equal(checkpoint.scalarBoundary.complete2AK.determinant, full2A.conjugatedTotalAction.determinant);
+assert(checkpoint.scalarBoundary.nextCarrier.includes("amplitude vector"));
 assert.equal(babyGate.sourceStatus.explicitOrder23TwinedBabyMonsterGenusTwoSpinVector, false);
 assert(checkpoint.stoppingRule.resumeWhen.some((entry) => entry.includes("Baby-Monster torus one-point")));
 assert(checkpoint.stoppingRule.resumeWhen.some((entry) => entry.includes("Arf-Fourier")));

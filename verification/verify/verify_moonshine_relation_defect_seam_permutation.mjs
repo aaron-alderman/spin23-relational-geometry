@@ -6,6 +6,7 @@ const seam = load("../../evidence/data/moonshine-relation-defect-seam-permutatio
 const relation = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
+const full2A = load("../../evidence/data/moonshine-arf-conjugated-baby-monster-k-multiplier-v1.json");
 
 const multiply2 = (a, b) => a.map((row, i) => row.map((_, j) => (
   a[i][0] * b[0][j] + a[i][1] * b[1][j]
@@ -78,6 +79,10 @@ assert.equal(seam.operatorTarget.freeMajoranaPhaseMatrixKnown, true);
 assert.deepEqual(seam.operatorTarget.freeMajoranaEtaNormalizedCycleProducts, ["1", "1", "1"]);
 assert.equal(seam.operatorTarget.freeMajoranaFixedOddOddEigenvalue, "-1");
 assert.equal(seam.operatorTarget.freeMajoranaDeterminant, freeMajorana.etaNormalizedCycleData.determinant);
+assert.equal(seam.operatorTarget.babyMonsterPhaseMatrixKnown, true);
+assert.equal(seam.operatorTarget.babyMonsterDeterminant, full2A.babyMonsterAction.determinant);
+assert.equal(seam.operatorTarget.complete2AMultiplierKnown, true);
+assert.equal(seam.operatorTarget.complete2ADeterminant, full2A.conjugatedTotalAction.determinant);
 assert.equal(seam.operatorTarget.monsterSewnDefectActionKnown, false);
 
 console.log(JSON.stringify({

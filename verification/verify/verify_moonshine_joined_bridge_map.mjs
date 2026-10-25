@@ -14,6 +14,7 @@ const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-perm
 const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
 const babyGate = load("../../evidence/data/moonshine-baby-monster-genus-two-source-gate-v1.json");
 const arf = load("../../evidence/data/moonshine-arf-fourier-baby-monster-reconstruction-v1.json");
+const full2A = load("../../evidence/data/moonshine-arf-conjugated-baby-monster-k-multiplier-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const fermionic = load("../../evidence/data/lattice-subroutine-monster-fermionization-bridge-v1.json");
 const igusa = load("../../evidence/data/lattice-subroutine-igusa-seam-completion-v1.json");
@@ -115,9 +116,10 @@ assert(joined.generalizedMoonshineTarget.mixedLevelSeam.signRetainingScalarCoupl
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.genuine, false);
 assert.equal(scalarNoGo.metaplecticNoGo.simultaneousIAndGenuineCenterPossible, false);
 assert.equal(eta.relationDefect.phase, "i");
-assert(joined.generalizedMoonshineTarget.mixedLevelSeam.signRetainingScalarCoupling.includes("free-Majorana"));
 assert(joined.generalizedMoonshineTarget.mixedLevelSeam.signRetainingScalarCoupling.includes("Baby-Monster"));
 assert.equal(freeMajorana.etaNormalizedCycleData.determinant, "-1");
+assert(joined.generalizedMoonshineTarget.mixedLevelSeam.signRetainingScalarCoupling.includes("determinant +1"));
+assert.equal(full2A.conjugatedTotalAction.determinant, "1");
 assert.deepEqual(seamAction.cycleType, [3, 3, 3, 1]);
 assert.equal(projectiveNoGo.genusOneOutcome.orientationRecovered, false);
 assert(joined.generalizedMoonshineTarget.mixedLevelSeam.genusOneCentralizerRepresentationStatus.includes("exhausted"));

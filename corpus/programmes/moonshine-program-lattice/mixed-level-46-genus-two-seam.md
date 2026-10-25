@@ -142,10 +142,12 @@ kernel.
 In fact \(K\bmod2\) already permutes the ten even characteristics with cycle
 type \(3^3\,1\). The complete seam target is therefore the monomial operator
 \(\rho(K)=D_KP_K\); a scalar eta-phase match cannot by itself close the gate.
-The free-Majorana part is now exact: after eta normalization the three
-3-cycle products are \(1\), the fixed odd--odd sector has eigenvalue \(-1\),
-and the determinant is \(-1\). The remaining factor is the fermionic
-Baby-Monster spin-sector action on \(K\).
+The free-Majorana part is exact: after eta normalization the three 3-cycle
+products are \(1\), the fixed odd--odd sector has eigenvalue \(-1\), and the
+determinant is \(-1\). Arf conjugation fixes the Baby-Monster phase as the
+edgewise inverse, also with determinant \(-1\). The complete \(2A\)
+multiplier is the pure \(3^3\,1\) permutation with determinant \(+1\). The
+remaining object is the amplitude vector and its separating degeneration.
 
 ## 4. Why “level 46” is not yet the analytic answer
 
@@ -207,6 +209,7 @@ identifies the precise multiplier line that must be lifted analytically.
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
+- [Arf-conjugated Baby-Monster \(K\) multiplier](arf-conjugated-baby-monster-k-multiplier.md)
 - [Genus-two seam closure](../lattice-subroutine-gravity/genus-two-seam-closure.md)
 - [Oriented seam modular line](../lattice-subroutine-gravity/oriented-seam-modular-line.md)
 - [Leech pair-Gram / Spin bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)

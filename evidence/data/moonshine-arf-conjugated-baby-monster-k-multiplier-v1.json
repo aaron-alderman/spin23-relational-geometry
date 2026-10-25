@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "In the canonical Arf convention and anomaly-free 46C/D channel, conjugating the K background permutation by the genus-two Arf transform gives the pure 3^3 1 spin permutation; the Baby-Monster phases are therefore the inverses of the eta-normalized free-Majorana phases.",
+  "inputs": {
+    "relationDefect": "K=S^2 R^-11",
+    "order23Action": "identity because K is in Gamma(23)",
+    "order46CyclicAnomalyRestriction": "trivial",
+    "arfTransform": "A/4 with A A^T=16 I_16"
+  },
+  "conjugatedTotalAction": {
+    "cycleTypeEven": [3, 3, 3, 1],
+    "allNonzeroMatrixEntries": "1",
+    "threeCycleHolonomies": ["1", "1", "1"],
+    "fixedOddOddEigenvalue": "1",
+    "determinant": "1"
+  },
+  "babyMonsterAction": {
+    "edgeExponents": [3, 3, 0, 0, 3, 0, 5, 5, 5, 4],
+    "threeCycleHolonomies": ["1", "1", "1"],
+    "fixedOddOddEigenvalue": "-1",
+    "determinant": "-1"
+  },
+  "freeMajoranaAction": {
+    "edgeExponents": [5, 5, 0, 0, 5, 0, 3, 3, 3, 4],
+    "threeCycleHolonomies": ["1", "1", "1"],
+    "fixedOddOddEigenvalue": "-1",
+    "determinant": "-1"
+  },
+  "implication": {
+    "freeDeterminantSignSurvivesComplete2A": false,
+    "complete2ADeterminantDetectsK": false,
+    "complete2ASectorVectorDetectsK": true,
+    "chi5SignRequiresIndependentSource": true
+  },
+  "remaining": "construct the twined amplitude vector with this fixed multiplier and test its six odd zeros and separating degeneration",
+  "boundary": "This closes the mapping-class multiplier, not the existence or equality of the twined genus-two amplitude functions."
+}

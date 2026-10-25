@@ -111,9 +111,10 @@ detector map.  None follows from reduction modulo 23.
    \(v_\eta(K)=i\), while \(K\) permutes the ten even characteristics with
    cycle type \(3^3\,1\). The eta-normalized free-Majorana action is now
    complete: its three cycle products are \(1\), its fixed odd--odd eigenvalue
-   is \(-1\), and its determinant is \(-1\). Compute the fermionic
-   Baby-Monster action on the same cycles and compare the combined monomial
-   operator with the sewn defect action.
+   is \(-1\), and its determinant is \(-1\). Arf conjugation fixes the
+   Baby-Monster multiplier to the inverse phase, so the complete \(2A\)
+   action is the pure \(3^3\,1\) permutation with determinant \(+1\).
+   Construct an amplitude vector carrying it and test degeneration.
 2. **Cross-grade VOA/defect composition:** test fusion or intertwining data
    not determined by the now-exhausted graded \(S_4\) characters.
 3. **Finite \(\mathrm{Dic}_{11}/D_{11}\) emulator:** conventional but sharp
@@ -141,6 +142,7 @@ geometry that motivated the admissibility language.
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Baby-Monster genus-two source gate](baby-monster-genus-two-source-gate.md)
 - [Arf/Fourier Baby-Monster reconstruction](arf-fourier-baby-monster-reconstruction.md)
+- [Arf-conjugated Baby-Monster \(K\) multiplier](arf-conjugated-baby-monster-k-multiplier.md)
 - [Projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 - [Main Moonshine programme](README.md)
 - [Per-target corpus assessments](../frontier-physics-targets/frontier_physics_target_assessments_v1.md)

@@ -267,9 +267,10 @@ quarter-turn value \(\zeta_8\) and relation-defect value \(v_\eta(K)=i\).
 But \(K\) also acts on the level-2 seam with cycle type \(3^3\,1\). The
 eta-normalized free-Majorana operator is now exact: its three cycle products
 are \(1\), its fixed odd--odd eigenvalue is \(-1\), and its determinant is
-\(-1\). The unresolved gate is the fermionic Baby-Monster action needed to
-complete and compare the full sewn monomial operators, not scalar phases
-alone.
+\(-1\). Arf conjugation fixes the Baby-Monster multiplier to the inverse
+phase, also of determinant \(-1\). The complete \(2A\) multiplier is the pure
+\(3^3\,1\) permutation with determinant \(+1\). The unresolved gate is now
+the sewn amplitude vector and its degeneration, not its modular multiplier.
 The order-23 projective-centralizer audit also closes the remaining
 genus-one representation escape: coprimality forces the transgressed cocycle
 to be trivial, and the five class traces determine the full ordinary
@@ -297,6 +298,7 @@ composition data.
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Baby-Monster genus-two source gate](baby-monster-genus-two-source-gate.md)
 - [Arf/Fourier Baby-Monster reconstruction](arf-fourier-baby-monster-reconstruction.md)
+- [Arf-conjugated Baby-Monster \(K\) multiplier](arf-conjugated-baby-monster-k-multiplier.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - [Leech pair-Gram / Spin(2,3) bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Rule-60 affine seam torsor](../../claims/1700-1799/1793_the_rule60_golay_kernel_supplies_the_unique_tm23_leech_affine_seam_torsor.md)

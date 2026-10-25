@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 
-**Status:** complete for the reduced free-Majorana characteristic action and eta normalization; fermionic Baby-Monster factor remains source-gated
+**Status:** complete for the reduced free-Majorana characteristic action and eta normalization; subsequent Arf conjugation fixes the compensating Baby-Monster multiplier
 
 **Evidence:** [machine-readable multiplier ledger](../../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json)
 
@@ -116,10 +116,11 @@ factor. Let the unknown Baby-Monster action on the same cycles be
 
 with compatible anomaly trivialization and separating degeneration.
 
-The next source object is therefore sharply specified: genus-two fermionic
-Baby-Monster spin-sector amplitudes, or an equivalent sewn defect module,
-evaluated on \(K\). More manipulation of the free theta characteristics
-cannot supply it.
+The subsequent [Arf-conjugation calculation](arf-conjugated-baby-monster-k-multiplier.md)
+fixes this multiplier to the edgewise inverse of the free action. What remains
+source-gated is the genus-two fermionic Baby-Monster amplitude vector, or an
+equivalent sewn defect module, carrying that multiplier and satisfying the
+required degeneration.
 
 ## Boundary
 
@@ -135,3 +136,4 @@ multiplier, a \(2B\) Leech-seam result, or a physical detector prediction.
 - [Existing \(T_1/S_1\) boundary](../lattice-subroutine-gravity/metaplectic-t1-s1-boundary.md)
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
+- [Arf-conjugated Baby-Monster \(K\) multiplier](arf-conjugated-baby-monster-k-multiplier.md)

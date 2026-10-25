@@ -16,6 +16,7 @@ const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-perm
 const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
 const babyGate = load("../../evidence/data/moonshine-baby-monster-genus-two-source-gate-v1.json");
 const arf = load("../../evidence/data/moonshine-arf-fourier-baby-monster-reconstruction-v1.json");
+const full2A = load("../../evidence/data/moonshine-arf-conjugated-baby-monster-k-multiplier-v1.json");
 
 const declaredTargetIds = new Set(register.coreTargets.map((target) => target.id));
 const mappedIds = crosswalk.targets.map((target) => target.id);
@@ -58,7 +59,7 @@ assert.equal(
 );
 assert.deepEqual(
   crosswalk.rankedTranches[0].scalarCouplingSequence,
-  ["C2 projective sign survives", "finite C4 metaplectic lift ruled out", "genuine eta line has K phase i", "level-2 K permutation has cycle type 3^3 1", "eta-normalized free-Majorana cycles have products 1,1,1 with fixed odd-odd eigenvalue -1", "compute fermionic Baby-Monster K action and combine the monomial factors"],
+  ["C2 projective sign survives", "finite C4 metaplectic lift ruled out", "genuine eta line has K phase i", "level-2 K permutation has cycle type 3^3 1", "eta-normalized free-Majorana cycles have products 1,1,1 with fixed odd-odd eigenvalue -1", "Arf conjugation fixes the inverse Baby-Monster phase and cancels the determinant sign", "construct the twined amplitude vector carrying the pure 3^3 1 multiplier"],
 );
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.quarterTurnImage, "i");
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.genuine, false);
@@ -67,6 +68,8 @@ assert.equal(eta.relationDefect.phase, "i");
 assert.deepEqual(seamAction.cycleType, [3, 3, 3, 1]);
 assert.equal(freeMajorana.interpretation.freeMajoranaFactorComplete, true);
 assert.equal(freeMajorana.interpretation.completeMonster2AActionKnown, false);
+assert.equal(freeMajorana.interpretation.completeMonster2AMultiplierKnown, true);
+assert.equal(full2A.implication.complete2ADeterminantDetectsK, false);
 assert.equal(crosswalk.rankedTranches[0].babyMonsterSourcePacketKnown, false);
 assert.equal(crosswalk.rankedTranches[0].arfFourierAlternativeInputs, arf.reconstruction.bosonicInputs);
 assert.equal(babyGate.sourceStatus.explicitOrder23TwinedBabyMonsterGenusTwoSpinVector, false);

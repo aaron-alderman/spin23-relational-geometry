@@ -25,7 +25,9 @@
 
 **Baby-Monster source gate:** [the missing object is twined sewing data beyond characters and Ising fusion](baby-monster-genus-two-source-gate.md)
 
-**Arf/Fourier reconstruction:** [sixteen (2A)-background Monster amplitudes reconstruct the ten even Baby-Monster sectors](arf-fourier-baby-monster-reconstruction.md)
+**Arf/Fourier reconstruction:** [sixteen \(2A\)-background Monster amplitudes reconstruct the ten even Baby-Monster sectors](arf-fourier-baby-monster-reconstruction.md)
+
+**Complete \(2A\) multiplier:** [Arf conjugation forces the Baby factor to cancel the free determinant sign](arf-conjugated-baby-monster-k-multiplier.md)
 
 ## Result
 
@@ -884,17 +886,20 @@ primitive eighth-root value and cannot take \(i\). The eta line gives
 type \(3^3\,1\). Composing the certified free-Majorana \(T_1/S_1\) action
 along the exact word for \(K\) completes that factor: after eta normalization,
 each 3-cycle has product \(1\), the fixed odd--odd sector has eigenvalue
-\(-1\), and the determinant is \(-1\). The remaining sewing datum is the
-fermionic Baby-Monster action on those same spin-sector cycles; the full
-Monster comparison cannot be inferred from the free factor alone.
+\(-1\), and the determinant is \(-1\). Arf conjugation now fixes the
+fermionic Baby-Monster multiplier on those same cycles: it is the edgewise
+inverse of the free multiplier. Both factor determinants are \(-1\), so the
+complete \(2A\) determinant is \(+1\); the surviving record is the
+\(3^3\,1\) sector permutation, not a determinant sign. The amplitude
+comparison still cannot be inferred from multiplier data alone.
 The source audit sharpens this further: the Baby-Monster SVOA and its
 three-object Ising fusion ring are known, but the needed order-23-twined
 torus one-point functions, intertwiners and genus-two spin vector are not
 evaluated in the reviewed literature.
 There is nevertheless an exact lightning route back through the Monster rail:
-the genus-two fermionization kernel is an invertible (16\times16)
+the genus-two fermionization kernel is an invertible \(16\times16\)
 Arf-weighted Fourier transform. Sixteen order-23-twined Monster amplitudes
-with all flat (2A) backgrounds would transform into the fermionic spin
+with all flat \(2A\) backgrounds would transform into the fermionic spin
 vector; six odd components must vanish, and division by the known free factor
 recovers the ten Baby-Monster components.
 
@@ -929,3 +934,4 @@ recovers the ten Baby-Monster components.
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Baby-Monster genus-two source gate](baby-monster-genus-two-source-gate.md)
 - [Arf/Fourier Baby-Monster reconstruction](arf-fourier-baby-monster-reconstruction.md)
+- [Arf-conjugated Baby-Monster \(K\) multiplier](arf-conjugated-baby-monster-k-multiplier.md)

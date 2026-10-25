@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 
-**Status:** exact level-\(2\) action and free-Majorana multiplier constructed; fermionic Baby-Monster sewing remains open
+**Status:** exact level-\(2\), free-Majorana and Arf-reconstructed Baby-Monster multipliers; amplitude sewing remains open
 
 **Evidence:** [machine-readable seam-action ledger](../../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json)
 
@@ -62,9 +62,10 @@ minimum form is already monomial:
 where \(P_K\) has cycle type \(3^3\,1\). The free-Majorana part of \(D_K\)
 is now computed from the certified \(T_1/S_1\) action. After eta
 normalization, all three cycle products are \(1\), the fixed odd--odd sector
-has eigenvalue \(-1\), and the determinant is \(-1\). The uncomputed factor
-is the fermionic Baby-Monster action; the eta scalar does not erase the
-permutation.
+has eigenvalue \(-1\), and the determinant is \(-1\). Arf conjugation forces
+the Baby-Monster phase matrix to be its edgewise inverse. The complete
+\(2A\) multiplier is therefore the pure \(3^3\,1\) permutation with
+determinant \(+1\).
 
 ## 1. Exact characteristic action
 
@@ -127,13 +128,13 @@ permutation are independent pieces of the lifted action.
 
 ## 3. Revised next calculation
 
-The free matrix factor is complete. The remaining source-gated target is:
+Both matrix multipliers are complete. The remaining source-gated target is:
 
 1. retain the computed eta-normalized free-Majorana monomial action;
-2. compute the fermionic Baby-Monster order-23 sewn action on the same three 3-cycles and
-   fixed odd--odd sector;
-3. combine the two factors and test whether the full monomial operators agree, including separating
-   degeneration.
+2. construct the fermionic Baby-Monster order-23 amplitude vector carrying
+   the reconstructed inverse multiplier;
+3. test its six odd-spin zeros and separating degeneration;
+4. compare the resulting sewn functions, not only their monomial action.
 
 A scalar phase match is necessary but no longer sufficient. Failure of the
 permutation or diagonal phase comparison rules out the seam even if both
@@ -150,6 +151,7 @@ the modular operation with laboratory dynamics.
 
 - [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
+- [Arf-conjugated Baby-Monster \(K\) multiplier](arf-conjugated-baby-monster-k-multiplier.md)
 - [Integral relation rail](integral-relation-defect-metaplectic-no-go.md)
 - [Mixed-level genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Oriented seam modular line](../lattice-subroutine-gravity/oriented-seam-modular-line.md)

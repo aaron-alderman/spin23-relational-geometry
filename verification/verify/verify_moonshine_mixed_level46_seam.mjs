@@ -13,6 +13,7 @@ const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-
 const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
 const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
+const full2A = load("../../evidence/data/moonshine-arf-conjugated-baby-monster-k-multiplier-v1.json");
 
 const sp4Order = (q) => q ** 4 * (q ** 2 - 1) * (q ** 4 - 1);
 
@@ -64,9 +65,10 @@ assert(mixed.candidate.scalarCouplingGate.signRetaining.includes("ruled out"));
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.genuine, false);
 assert.equal(scalarNoGo.outcome.projective240Route.includes("remains admissible"), true);
 assert.equal(eta.classification.genuineScalarEtaLineExists, true);
-assert(mixed.candidate.scalarCouplingGate.signRetaining.includes("free-Majorana"));
 assert(mixed.candidate.scalarCouplingGate.signRetaining.includes("Baby-Monster"));
 assert.equal(freeMajorana.etaNormalizedCycleData.determinant, "-1");
+assert(mixed.candidate.scalarCouplingGate.signRetaining.includes("determinant +1"));
+assert.equal(full2A.conjugatedTotalAction.determinant, "1");
 assert.deepEqual(seamAction.cycleType, [3, 3, 3, 1]);
 assert(mixed.physicalBoundary.includes("does not select real Spin(2,3)"));
 

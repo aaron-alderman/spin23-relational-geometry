@@ -36,6 +36,7 @@ assert.equal(gate.sourceStatus.explicitOrder23TwinedBabyMonsterGenusTwoSpinVecto
 assert.equal(gate.alternativeReconstruction.monsterInputs, arf.reconstruction.bosonicInputs);
 assert.equal(gate.alternativeReconstruction.oddZeroTests, arf.reconstruction.oddZeroTests);
 assert.equal(gate.alternativeReconstruction.evenBabyMonsterOutputs, arf.reconstruction.evenBabyMonsterOutputs);
+assert.equal(gate.alternativeReconstruction.kMultiplierKnown, true);
 assert.equal(gate.alternativeReconstruction.inputKnown, false);
 assert(joined.generalizedMoonshineTarget.requiredComparisons["46C_46D"].includes("Baby Monster"));
 
