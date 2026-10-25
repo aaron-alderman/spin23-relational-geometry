@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import test from "node:test";
 
@@ -6,8 +7,12 @@ const root = new URL("../../", import.meta.url);
 const path = value => new URL(value, root);
 
 test("the repository root exposes only front-door and legal files", () => {
-  const files = readdirSync(root, { withFileTypes: true }).filter(entry => entry.isFile()).map(entry => entry.name).sort();
+  const files = execFileSync("git", ["ls-files"], { cwd: root, encoding: "utf8" })
+    .split(/\r?\n/u)
+    .filter(name => name && !name.includes("/"))
+    .sort();
   assert.deepEqual(files, [
+    ".gitattributes",
     ".gitignore",
     "CHRISTIAN_STEWARDSHIP_COVENANT.md",
     "CONTRIBUTING.md",
