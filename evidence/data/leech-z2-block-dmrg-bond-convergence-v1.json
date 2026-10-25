@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "leech-z2-block-dmrg-bond-convergence-v1",
+  "date": "2026-10-25",
+  "sharedConfiguration": {
+    "sites": 24,
+    "cutoff": 1,
+    "ratioUOveru": 0.01,
+    "sweeps": 6,
+    "order": "Wave 7.192 optimized",
+    "sectorMethod": "exact Z2 block-sparse boundary charge",
+    "parityPenalty": false
+  },
+  "bondLadder": [
+    {
+      "bond": 16,
+      "evenEnergy": 7.3608882129848405,
+      "oddEnergy": 8.041861779812306,
+      "gap": 0.6809735668274657,
+      "solverConvergedAtTolerance": false
+    },
+    {
+      "bond": 24,
+      "evenEnergy": 7.3608792498516555,
+      "oddEnergy": 8.041812043946926,
+      "gap": 0.6809327940952707,
+      "solverConvergedAtTolerance": false
+    }
+  ],
+  "bond16To24": {
+    "evenEnergyShift": -0.000008963133184991534,
+    "oddEnergyShift": -0.00004973586537992958,
+    "gapShift": -0.000040772732194938044,
+    "relativeGapShift": 0.000059874177473423716,
+    "bothVariationalEnergiesDecrease": true
+  },
+  "penaltyComparatorAtBond24": {
+    "gap": 0.68114473695,
+    "difference": -0.00021194285472925234,
+    "relativeDifference": 0.000311156855851637
+  },
+  "established": "Increasing the exact-sector bond from 16 to 24 lowers both variational energies and changes the cutoff-one full-carrier gap by 4.08e-5, or 0.00599 percent.",
+  "boundary": "Two unconverged points do not establish asymptotic bond convergence or a lower spectral enclosure. The gap can be nonmonotone even though each sector energy is variational. Dense local charged-block diagonalization is now the measured scaling bottleneck.",
+  "epistemicStatus": "quantified exact-sector bond stability; joined-cell spectral certificate still open"
+}

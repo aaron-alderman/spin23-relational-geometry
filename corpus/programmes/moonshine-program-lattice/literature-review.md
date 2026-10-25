@@ -861,6 +861,23 @@ larger tensor error. It does not certify convergence; it selects a
 symmetry-native parity implementation or subspace expansion before bonds 80
 and 96, with residual evaluation deferred to accepted checkpoints.
 
+Wave 7.196 compiles global inversion into an exact local and virtual Z2
+charge. In the parity basis, $n$ is odd, $n^2$ and the cosine are even, and
+$n_i n_j$ conserves the global charge; all selection-rule residuals vanish
+through cutoff eight. The 26-state MPO automaton splits into two even
+boundary states and 24 odd open-charge states. Wave 7.197 now executes those
+charges in a block-sparse MPS/MPO solver. It agrees with three exact controls
+below $8\times10^{-12}$ and reproduces the independent full-carrier
+cutoff-one penalty-sector gap to 0.0252%. This validates the symmetry-native
+bridge and removes the artificial penalty, but the bond-16 run is not
+converged and supplies no cutoff-stable spectral certificate.
+Wave 7.198 then raises the exact-sector bond from 16 to 24 at fixed cutoff.
+Both sector energies fall, while the gap changes by $4.08\times10^{-5}$, or
+0.00599%. This is encouraging bond stability, but two unconverged
+variational upper-bound differences remain insufficient for a spectral
+enclosure. The local dense charged-block eigensolve, rather than the MPO bond,
+is now the measured computational frontier.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

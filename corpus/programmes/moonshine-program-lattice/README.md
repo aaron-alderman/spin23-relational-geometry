@@ -1024,3 +1024,6 @@ recovers the ten Baby-Monster components.
 - [Full joined-cell DMRG reconnaissance](../frontier/wave-7/frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md)
 - [Fixed-cutoff joined-cell bond convergence](../frontier/wave-7/frontier_wave7_194_leech_joined_cell_bond_convergence.md)
 - [Fixed-bond joined-cell sweep convergence](../frontier/wave-7/frontier_wave7_195_leech_joined_cell_sweep_convergence.md)
+- [Exact joined-cell Z2 sector compiler](../frontier/wave-7/frontier_wave7_196_leech_joined_cell_z2_sector_compiler.md)
+- [Symmetry-native joined-cell DMRG execution](../frontier/wave-7/frontier_wave7_197_leech_z2_block_dmrg_execution.md)
+- [Exact-sector joined-cell bond ladder](../frontier/wave-7/frontier_wave7_198_leech_z2_block_dmrg_bond_ladder.md)

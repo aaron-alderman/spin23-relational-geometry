@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "leech-z2-block-dmrg-execution-v1",
+  "date": "2026-10-25",
+  "implementation": {
+    "script": "scripts/smoke-leech-z2-block-dmrg.py",
+    "backend": "Quimb MPS/MPO with Symmray Z2Array tensors",
+    "adapter": "minimal open-boundary two-site DMRG adapter preserving block-sparse local vectors through eigensolve and SVD",
+    "unsupported": "cyclic generalized local eigensystems"
+  },
+  "heldOutExactValidations": [
+    {
+      "sites": 4,
+      "cutoff": 1,
+      "bond": 8,
+      "exactEven": 1.2869395378671875,
+      "dmrgEven": 1.2869395378690418,
+      "evenAbsoluteError": 1.8542944957289365e-12,
+      "exactOdd": 1.9870242284839947,
+      "dmrgOdd": 1.9870242284839978,
+      "oddAbsoluteError": 3.1086244689504383e-15
+    },
+    {
+      "sites": 6,
+      "cutoff": 1,
+      "bond": 16,
+      "exactEven": 1.9065435210805397,
+      "dmrgEvenAbsoluteError": 7.527e-12,
+      "exactOdd": 2.59829358194123,
+      "dmrgOddAbsoluteError": 1.015e-12
+    },
+    {
+      "sites": 4,
+      "cutoff": 2,
+      "bond": 24,
+      "exactEven": 0.7746896191684329,
+      "dmrgEvenAbsoluteError": 1.316e-12,
+      "exactOdd": 1.1398482370381997,
+      "dmrgOddAbsoluteError": 3.638e-12
+    }
+  ],
+  "fullCarrierRun": {
+    "sites": 24,
+    "cutoff": 1,
+    "ratioUOveru": 0.01,
+    "bond": 16,
+    "sweeps": 6,
+    "order": "Wave 7.192 optimized",
+    "blockMpo": true,
+    "blockSparseMps": true,
+    "solverConvergedAtTolerance": false,
+    "evenEnergy": 7.3608882129848405,
+    "oddEnergy": 8.041861779812306,
+    "gap": 0.6809735668274657
+  },
+  "independentPenaltyComparator": {
+    "source": "Wave 7.193 cutoff-one optimized-order dense-MPO parity-penalty run",
+    "evenEnergy": 7.3608777242,
+    "oddEnergy": 8.04202246115,
+    "gap": 0.68114473695,
+    "evenDifference": 0.00001048878484066762,
+    "oddDifference": -0.00016068133769309156,
+    "gapDifference": -0.0001711701225343143,
+    "relativeGapDifference": 0.000251297724622776
+  },
+  "established": "The exact local and virtual Z2 compiler is executable as a block-sparse two-site DMRG. It reproduces three exact reduced-system controls to below 8e-12 and reproduces the independent full 24-channel cutoff-one penalty-sector gap to 0.0252 percent without a parity penalty.",
+  "boundary": "The 24-channel run did not meet the solver tolerance, is only at cutoff one and bond 16, and supplies neither a certified spectral enclosure nor a laboratory realization. It validates the symmetry-native numerical bridge, not cutoff or bond convergence and not the Monster provenance of the rotor by itself.",
+  "epistemicStatus": "executed and cross-validated symmetry-native Leech-cell solver; spectral and laboratory promotion open"
+}

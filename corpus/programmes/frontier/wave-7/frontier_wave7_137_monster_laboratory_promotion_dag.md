@@ -273,6 +273,20 @@ the preceding bond correction and the per-sweep shifts contract, isolating
 bond capacity rather than sweep depth as the next numerical bottleneck. A
 symmetry-native parity sector or controlled subspace expansion is selected
 before bonds 80 and 96.
+Wave 7.196 supplies that symmetry dictionary exactly. Local parity gives
+$N+1$ even and $N$ odd states, the metric term flips parity twice, and the
+MPO virtual channels receive conserved Z2 charges. A block-sparse backend
+must reproduce the cutoff-one and cutoff-two dense baselines before its
+higher-bond output is admitted. Wave 7.197 executes that backend: three
+reduced exact controls pass below $8\times10^{-12}$, and the full 24-channel
+cutoff-one gap matches the independent penalty-sector value to 0.0252%.
+This admits the implementation bridge, not the unconverged spectrum; the next
+gate is exact-sector bond and cutoff convergence.
+Wave 7.198 begins that gate. Raising the exact-sector bond from 16 to 24
+lowers both variational energies and changes the cutoff-one gap by only
+$4.08\times10^{-5}$ (0.00599%). Both solves remain unconverged, so the result
+is stability evidence rather than a lower enclosure; dense local charged-block
+diagonalization is now the scaling bottleneck.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -335,6 +349,9 @@ P4 questions.
 - [Full joined-cell DMRG reconnaissance](frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md)
 - [Fixed-cutoff joined-cell bond convergence](frontier_wave7_194_leech_joined_cell_bond_convergence.md)
 - [Fixed-bond joined-cell sweep convergence](frontier_wave7_195_leech_joined_cell_sweep_convergence.md)
+- [Exact joined-cell Z2 sector compiler](frontier_wave7_196_leech_joined_cell_z2_sector_compiler.md)
+- [Symmetry-native joined-cell DMRG execution](frontier_wave7_197_leech_z2_block_dmrg_execution.md)
+- [Exact-sector joined-cell bond ladder](frontier_wave7_198_leech_z2_block_dmrg_bond_ladder.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

@@ -212,6 +212,21 @@ Wave 7.195 shows that two further sweeps change the bond-64 gap by only
 0.000235, much less than the previous bond correction. The next computational
 gain must therefore come from bond capacity or symmetry-native sectors, not
 indefinite repetition of the same sweep.
+Wave 7.196 then compiles global inversion into exact local, MPO-virtual and
+MPS-boundary Z2 charges through cutoff eight. It removes the need for a
+parity-penalty term and set reproduction of the dense low-cutoff baselines as
+the admission test for a symmetry-aware backend.
+Wave 7.197 supplies that backend and passes three exact reduced-system tests
+below $8\times10^{-12}$. On the full 24-channel cutoff-one cell its exact-sector
+gap is 0.68097357, within 0.0252% of the independent penalty-sector result.
+This proves that the Leech metric, compact dynamics and compiled inversion
+charge coexist in one executable many-body solver. The calculation remains
+unconverged in bond and cutoff and therefore advances the laboratory bridge
+without promoting the rotor itself to a Monster realization.
+Wave 7.198 raises the exact-sector bond from 16 to 24. Both variational
+energies fall and the gap moves by only 0.00599%, strengthening numerical
+stability while still refusing a certificate because both optimizations are
+unconverged and no lower enclosure exists.
 
 ## Corpus links
 
@@ -264,6 +279,9 @@ indefinite repetition of the same sweep.
 - [Full joined-cell DMRG reconnaissance](frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md)
 - [Fixed-cutoff joined-cell bond convergence](frontier_wave7_194_leech_joined_cell_bond_convergence.md)
 - [Fixed-bond joined-cell sweep convergence](frontier_wave7_195_leech_joined_cell_sweep_convergence.md)
+- [Exact joined-cell Z2 sector compiler](frontier_wave7_196_leech_joined_cell_z2_sector_compiler.md)
+- [Symmetry-native joined-cell DMRG execution](frontier_wave7_197_leech_z2_block_dmrg_execution.md)
+- [Exact-sector joined-cell bond ladder](frontier_wave7_198_leech_z2_block_dmrg_bond_ladder.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

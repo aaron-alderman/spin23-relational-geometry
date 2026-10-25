@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "leech-joined-cell-z2-sector-compiler-v1",
+  "date": "2026-10-25",
+  "basis": "|0>, (|n>+|-n>)/sqrt(2) for n=1..N, (|n>-|-n>)/sqrt(2) for n=1..N",
+  "localRules": {
+    "inversion": "diagonal with N+1 even and N odd states",
+    "charge": "Z2-odd; maps local even to odd and odd to even",
+    "chargeSquared": "Z2-even; preserves local parity",
+    "cosineShift": "Z2-even; preserves local parity",
+    "metricCoupling": "n_i n_j flips two local parities and conserves global Z2"
+  },
+  "mpoVirtualCharges": {
+    "start": 0,
+    "end": 0,
+    "openChargeChannels": 1,
+    "rule": "opening with n changes virtual charge 0 to 1; propagation preserves it; closing with n returns 1 to 0",
+    "automatonChargeSplit": "two even boundary states plus 24 odd open-charge states before compression"
+  },
+  "targetMpsBoundaryCharge": "0 for the even ground state and 1 for the odd first state",
+  "cutoffs": [
+    {"cutoff":1,"localDimension":3,"localEvenDimension":2,"localOddDimension":1,"globalEvenDimension":"141214768241","globalOddDimension":"141214768240"},
+    {"cutoff":2,"localDimension":5,"localEvenDimension":3,"localOddDimension":2,"globalEvenDimension":"29802322387695313","globalOddDimension":"29802322387695312"},
+    {"cutoff":3,"localDimension":7,"localEvenDimension":4,"localOddDimension":3,"globalEvenDimension":"95790615690283207201","globalOddDimension":"95790615690283207200"},
+    {"cutoff":4,"localDimension":9,"localEvenDimension":5,"localOddDimension":4,"globalEvenDimension":"39883221538436254931681","globalOddDimension":"39883221538436254931680"},
+    {"cutoff":5,"localDimension":11,"localEvenDimension":6,"localOddDimension":5,"globalEvenDimension":"4924866337903805547355921","globalOddDimension":"4924866337903805547355920"},
+    {"cutoff":6,"localDimension":13,"localEvenDimension":7,"localOddDimension":6,"globalEvenDimension":"271400385187185256385797681","globalOddDimension":"271400385187185256385797680"},
+    {"cutoff":7,"localDimension":15,"localEvenDimension":8,"localOddDimension":7,"globalEvenDimension":"8417056098014116287231445313","globalOddDimension":"8417056098014116287231445312"},
+    {"cutoff":8,"localDimension":17,"localEvenDimension":9,"localOddDimension":8,"globalEvenDimension":"169724335657305952321752058561","globalOddDimension":"169724335657305952321752058560"}
+  ],
+  "verification": {
+    "maximumBasisOrParityError": 2.220446049250313e-16,
+    "chargeAnticommutatorError": 0,
+    "chargeSquaredCommutatorError": 0,
+    "cosineShiftCommutatorError": 0,
+    "pairChargeCommutatorError": 0
+  },
+  "backendAssessment": {
+    "symmray": "supplies Z2 block-sparse arrays compatible with generic tensor-network operations",
+    "quimbOperatorBuilder": "supplies explicit Z2-sector sparse-matrix construction",
+    "installedDenseDmrg": "the stock dense local update did not preserve block arrays, so Wave 7.197 supplies a minimal open-boundary two-site adapter that does",
+    "nextImplementation": "replace the adapter's dense local block eigensolve with a matrix-free charged-sector solver, then establish fixed-cutoff bond convergence"
+  },
+  "sources": [
+    "https://github.com/jcmgray/symmray",
+    "https://quimb.readthedocs.io/en/latest/autoapi/quimb/operator/builder/index.html",
+    "https://github.com/jcmgray/quimb/discussions/339"
+  ],
+  "established": "the joined rotor admits an exact local and virtual Z2 charge compiler for every cutoff, so even and odd states can be targeted without a physical parity-penalty term in a symmetry-aware backend",
+  "boundary": "This record compiles and verifies the symmetry data. Wave 7.197 separately executes it and reproduces the cutoff-one full-carrier baseline, but the joined-cell spectrum remains uncertified in cutoff and bond.",
+  "epistemicStatus": "exact Z2 sector dictionary; execution supplied by Wave 7.197"
+}
