@@ -65,3 +65,4 @@ Moonshine character, Monster defects or Griess product.
 - [All-24-mode full-cosine order two](frontier_wave7_189_leech_24mode_full_cosine_order_two.md)
 - [Compact-winding action bound](frontier_wave7_187_leech_compact_winding_action_bound.md)
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
+- [Nonlinear commissioning digital twin](frontier_wave7_226_leech_nonlinear_commissioning_digital_twin.md)

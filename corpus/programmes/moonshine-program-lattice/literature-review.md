@@ -1094,6 +1094,13 @@ counterfeit aligned with the soft mode continues to predict every held-out
 drive but is rejected at 1.87% inverse error. Thus held-out circuit prediction
 and Leech quadratic provenance are demonstrably distinct gates.
 
+Wave 7.226 extends the exercise through the 228-configuration nonlinear
+packet. A shared-cosine synthetic carrier passes all six gates. A 0.5%
+held-out-mode Kerr distortion leaves harmonic ratios, soft gap, parity,
+compactness and power extrapolation acceptable but fails the frozen
+anharmonic pattern at both ratios. The measured-metric-to-dynamics dictionary
+therefore has a functioning holdout test rather than only a target table.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

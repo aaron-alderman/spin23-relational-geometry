@@ -371,6 +371,10 @@ Wave 7.225 validates the complete synthetic commissioning path. The declared
 carrier passes all reconstructed linear gates, whereas a soft-mode counterfeit
 passes flatness, loss and held-out prediction but fails the inverse-metric
 Leech test at 1.87%. This establishes discriminator function, not a device.
+Wave 7.226 executes the nonlinear follow-up. The declared shared-cosine model
+passes N1--N6; a held-out-mode Kerr counterfeit preserves the other five
+controls but fails the anharmonic fingerprint by about 0.5%. This validates
+the finite nonlinear discriminator without promoting synthetic data.
 
 ## Corpus links
 
@@ -453,6 +457,7 @@ Leech test at 1.87%. This establishes discriminator function, not a device.
 - [Signal--artifact identifiability](frontier_wave7_223_leech_signal_artifact_identifiability.md)
 - [Gram-first ideal network manifest](frontier_wave7_224_leech_gram_first_network_manifest.md)
 - [24-port commissioning digital twin](frontier_wave7_225_leech_24port_commissioning_digital_twin.md)
+- [Nonlinear commissioning digital twin](frontier_wave7_226_leech_nonlinear_commissioning_digital_twin.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

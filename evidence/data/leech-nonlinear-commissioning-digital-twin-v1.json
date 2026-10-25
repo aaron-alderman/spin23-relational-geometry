@@ -1,0 +1,1066 @@
+{
+  "schemaVersion": "leech-nonlinear-commissioning-digital-twin-v1",
+  "date": "2026-10-26",
+  "inputs": [
+    "leech-nonlinear-commissioning-packet-v1",
+    "leech-coupled-metric-pendulum-gap-audit-v1",
+    "leech-one-quantum-quartic-mixing-v1",
+    "leech-24mode-full-cosine-order-two-v1",
+    "leech-compact-winding-action-bound-v1"
+  ],
+  "schedule": {
+    "weakDriveModeSpectroscopy": 72,
+    "twoToneAnharmonicSpectroscopy": 48,
+    "offsetPhaseWeakestCoordinate": 96,
+    "parityAndPowerControls": 12,
+    "total": 228,
+    "totalRepeatedAcquisitions": 22800
+  },
+  "cases": [
+    {
+      "id": "shared-cosine-carrier",
+      "injected": {
+        "harmonicRelativeNoise": 0.00008,
+        "shiftRelativeNoise": 0.0001,
+        "gapRelativeNoise": 0.00008,
+        "heldOutKerrMultiplier": 1
+      },
+      "harmonicFits": [
+        {
+          "ratio": 0.0001,
+          "fittedScale": 1.0000271828231524,
+          "heldOutRmsRelativeResidual": 0.00009256347136270984,
+          "heldOutMaximumRelativeResidual": 0.00018399810196224236
+        },
+        {
+          "ratio": 0.001,
+          "fittedScale": 0.9999944022129877,
+          "heldOutRmsRelativeResidual": 0.00006963804060806426,
+          "heldOutMaximumRelativeResidual": 0.00013417176946327287
+        },
+        {
+          "ratio": 0.01,
+          "fittedScale": 0.9999582060848607,
+          "heldOutRmsRelativeResidual": 0.00008822962774787552,
+          "heldOutMaximumRelativeResidual": 0.00014207978621448661
+        }
+      ],
+      "sharedShiftScale": 1.000071245826395,
+      "shiftScores": [
+        {
+          "ratio": 0.001,
+          "tolerance": 0.001,
+          "heldOutRmsRelativeShiftResidual": 0.00017992019448104281,
+          "heldOutMaximumRelativeShiftResidual": 0.00035837098039467,
+          "pass": true
+        },
+        {
+          "ratio": 0.01,
+          "tolerance": 0.0025,
+          "heldOutRmsRelativeShiftResidual": 0.00014531201366200727,
+          "heldOutMaximumRelativeShiftResidual": 0.00022948817896477298,
+          "pass": true
+        }
+      ],
+      "softGapScores": [
+        {
+          "ratio": 0.001,
+          "target": 0.006659118249180167,
+          "measured": 0.006659073897908542,
+          "relativeResidual": 0.000006660231875346934,
+          "tolerance": 0.001,
+          "pass": true
+        },
+        {
+          "ratio": 0.01,
+          "target": 0.020721250374378462,
+          "measured": 0.02072182561960912,
+          "relativeResidual": 0.000027761125427506364,
+          "tolerance": 0.0025,
+          "pass": true
+        }
+      ],
+      "parityAndOrdering": [
+        {
+          "ratio": 0.001,
+          "firstTransitionOddDriveActive": true,
+          "strictlyAscendingWithoutRelabelling": true
+        },
+        {
+          "ratio": 0.01,
+          "firstTransitionOddDriveActive": true,
+          "strictlyAscendingWithoutRelabelling": true
+        }
+      ],
+      "offsetProfiles": [
+        {
+          "ratio": 0.0001,
+          "actionFloor": 170.56057308448834,
+          "fittedAmplitude": 8.442756797633936e-76,
+          "samples": [
+            {
+              "phase": 0,
+              "response": 8.442756797633936e-76
+            },
+            {
+              "phase": 0.19634954084936207,
+              "response": 8.280531593143681e-76
+            },
+            {
+              "phase": 0.39269908169872414,
+              "response": 7.80009020330453e-76
+            },
+            {
+              "phase": 0.5890486225480862,
+              "response": 7.019895721293368e-76
+            },
+            {
+              "phase": 0.7853981633974483,
+              "response": 5.969930583515777e-76
+            },
+            {
+              "phase": 0.9817477042468103,
+              "response": 4.690544361389317e-76
+            },
+            {
+              "phase": 1.1780972450961724,
+              "response": 3.230903149942249e-76
+            },
+            {
+              "phase": 1.3744467859455345,
+              "response": 1.647100142354261e-76
+            },
+            {
+              "phase": 1.5707963267948966,
+              "response": 5.169697544100979e-92
+            },
+            {
+              "phase": 1.7671458676442586,
+              "response": -1.6471001423542598e-76
+            },
+            {
+              "phase": 1.9634954084936207,
+              "response": -3.230903149942248e-76
+            },
+            {
+              "phase": 2.1598449493429825,
+              "response": -4.690544361389315e-76
+            },
+            {
+              "phase": 2.356194490192345,
+              "response": -5.969930583515776e-76
+            },
+            {
+              "phase": 2.552544031041707,
+              "response": -7.019895721293368e-76
+            },
+            {
+              "phase": 2.748893571891069,
+              "response": -7.80009020330453e-76
+            },
+            {
+              "phase": 2.945243112740431,
+              "response": -8.280531593143681e-76
+            },
+            {
+              "phase": 3.141592653589793,
+              "response": -8.442756797633936e-76
+            },
+            {
+              "phase": 3.3379421944391554,
+              "response": -8.280531593143681e-76
+            },
+            {
+              "phase": 3.5342917352885173,
+              "response": -7.800090203304531e-76
+            },
+            {
+              "phase": 3.730641276137879,
+              "response": -7.019895721293369e-76
+            },
+            {
+              "phase": 3.9269908169872414,
+              "response": -5.969930583515777e-76
+            },
+            {
+              "phase": 4.123340357836604,
+              "response": -4.6905443613893166e-76
+            },
+            {
+              "phase": 4.319689898685965,
+              "response": -3.230903149942253e-76
+            },
+            {
+              "phase": 4.516039439535327,
+              "response": -1.6471001423542638e-76
+            },
+            {
+              "phase": 4.71238898038469,
+              "response": -1.5509092632302937e-91
+            },
+            {
+              "phase": 4.908738521234052,
+              "response": 1.6471001423542607e-76
+            },
+            {
+              "phase": 5.105088062083414,
+              "response": 3.2309031499422505e-76
+            },
+            {
+              "phase": 5.301437602932776,
+              "response": 4.6905443613893135e-76
+            },
+            {
+              "phase": 5.497787143782138,
+              "response": 5.969930583515775e-76
+            },
+            {
+              "phase": 5.6941366846315,
+              "response": 7.019895721293368e-76
+            },
+            {
+              "phase": 5.890486225480862,
+              "response": 7.800090203304527e-76
+            },
+            {
+              "phase": 6.086835766330224,
+              "response": 8.28053159314368e-76
+            }
+          ]
+        },
+        {
+          "ratio": 0.001,
+          "actionFloor": 53.93598899705937,
+          "fittedAmplitude": 3.7661499069668527e-25,
+          "samples": [
+            {
+              "phase": 0,
+              "response": 3.7661499069668527e-25
+            },
+            {
+              "phase": 0.19634954084936207,
+              "response": 3.693784392545085e-25
+            },
+            {
+              "phase": 0.39269908169872414,
+              "response": 3.479468815415962e-25
+            },
+            {
+              "phase": 0.5890486225480862,
+              "response": 3.131439203018996e-25
+            },
+            {
+              "phase": 0.7853981633974483,
+              "response": 2.663070138181347e-25
+            },
+            {
+              "phase": 0.9817477042468103,
+              "response": 2.0923607814003277e-25
+            },
+            {
+              "phase": 1.1780972450961724,
+              "response": 1.441243173199539e-25
+            },
+            {
+              "phase": 1.3744467859455345,
+              "response": 7.34739398111175e-26
+            },
+            {
+              "phase": 1.5707963267948966,
+              "response": 2.3061017143380293e-41
+            },
+            {
+              "phase": 1.7671458676442586,
+              "response": -7.347393981111745e-26
+            },
+            {
+              "phase": 1.9634954084936207,
+              "response": -1.4412431731995386e-25
+            },
+            {
+              "phase": 2.1598449493429825,
+              "response": -2.0923607814003267e-25
+            },
+            {
+              "phase": 2.356194490192345,
+              "response": -2.6630701381813464e-25
+            },
+            {
+              "phase": 2.552544031041707,
+              "response": -3.1314392030189964e-25
+            },
+            {
+              "phase": 2.748893571891069,
+              "response": -3.479468815415962e-25
+            },
+            {
+              "phase": 2.945243112740431,
+              "response": -3.693784392545085e-25
+            },
+            {
+              "phase": 3.141592653589793,
+              "response": -3.7661499069668527e-25
+            },
+            {
+              "phase": 3.3379421944391554,
+              "response": -3.693784392545085e-25
+            },
+            {
+              "phase": 3.5342917352885173,
+              "response": -3.4794688154159625e-25
+            },
+            {
+              "phase": 3.730641276137879,
+              "response": -3.1314392030189964e-25
+            },
+            {
+              "phase": 3.9269908169872414,
+              "response": -2.6630701381813473e-25
+            },
+            {
+              "phase": 4.123340357836604,
+              "response": -2.092360781400327e-25
+            },
+            {
+              "phase": 4.319689898685965,
+              "response": -1.4412431731995409e-25
+            },
+            {
+              "phase": 4.516039439535327,
+              "response": -7.347393981111763e-26
+            },
+            {
+              "phase": 4.71238898038469,
+              "response": -6.918305143014086e-41
+            },
+            {
+              "phase": 4.908738521234052,
+              "response": 7.34739398111175e-26
+            },
+            {
+              "phase": 5.105088062083414,
+              "response": 1.4412431731995395e-25
+            },
+            {
+              "phase": 5.301437602932776,
+              "response": 2.0923607814003263e-25
+            },
+            {
+              "phase": 5.497787143782138,
+              "response": 2.663070138181346e-25
+            },
+            {
+              "phase": 5.6941366846315,
+              "response": 3.131439203018996e-25
+            },
+            {
+              "phase": 5.890486225480862,
+              "response": 3.479468815415961e-25
+            },
+            {
+              "phase": 6.086835766330224,
+              "response": 3.6937843925450844e-25
+            }
+          ]
+        },
+        {
+          "ratio": 0.01,
+          "actionFloor": 17.056057308448835,
+          "fittedAmplitude": 3.914248807304858e-9,
+          "samples": [
+            {
+              "phase": 0,
+              "response": 3.914248807304858e-9
+            },
+            {
+              "phase": 0.19634954084936207,
+              "response": 3.839037614040505e-9
+            },
+            {
+              "phase": 0.39269908169872414,
+              "response": 3.6162943582256737e-9
+            },
+            {
+              "phase": 0.5890486225480862,
+              "response": 3.2545789382654705e-9
+            },
+            {
+              "phase": 0.7853981633974483,
+              "response": 2.767791874896621e-9
+            },
+            {
+              "phase": 0.9817477042468103,
+              "response": 2.17464012197106e-9
+            },
+            {
+              "phase": 1.1780972450961724,
+              "response": 1.497918168710382e-9
+            },
+            {
+              "phase": 1.3744467859455345,
+              "response": 7.63632060268351e-10
+            },
+            {
+              "phase": 1.5707963267948966,
+              "response": 2.39678613646612e-25
+            },
+            {
+              "phase": 1.7671458676442586,
+              "response": -7.636320602683505e-10
+            },
+            {
+              "phase": 1.9634954084936207,
+              "response": -1.4979181687103816e-9
+            },
+            {
+              "phase": 2.1598449493429825,
+              "response": -2.174640121971059e-9
+            },
+            {
+              "phase": 2.356194490192345,
+              "response": -2.7677918748966204e-9
+            },
+            {
+              "phase": 2.552544031041707,
+              "response": -3.254578938265471e-9
+            },
+            {
+              "phase": 2.748893571891069,
+              "response": -3.6162943582256737e-9
+            },
+            {
+              "phase": 2.945243112740431,
+              "response": -3.839037614040505e-9
+            },
+            {
+              "phase": 3.141592653589793,
+              "response": -3.914248807304858e-9
+            },
+            {
+              "phase": 3.3379421944391554,
+              "response": -3.839037614040505e-9
+            },
+            {
+              "phase": 3.5342917352885173,
+              "response": -3.616294358225674e-9
+            },
+            {
+              "phase": 3.730641276137879,
+              "response": -3.2545789382654713e-9
+            },
+            {
+              "phase": 3.9269908169872414,
+              "response": -2.7677918748966212e-9
+            },
+            {
+              "phase": 4.123340357836604,
+              "response": -2.1746401219710597e-9
+            },
+            {
+              "phase": 4.319689898685965,
+              "response": -1.4979181687103841e-9
+            },
+            {
+              "phase": 4.516039439535327,
+              "response": -7.636320602683522e-10
+            },
+            {
+              "phase": 4.71238898038469,
+              "response": -7.190358409398358e-25
+            },
+            {
+              "phase": 4.908738521234052,
+              "response": 7.636320602683509e-10
+            },
+            {
+              "phase": 5.105088062083414,
+              "response": 1.4979181687103829e-9
+            },
+            {
+              "phase": 5.301437602932776,
+              "response": 2.1746401219710585e-9
+            },
+            {
+              "phase": 5.497787143782138,
+              "response": 2.76779187489662e-9
+            },
+            {
+              "phase": 5.6941366846315,
+              "response": 3.2545789382654705e-9
+            },
+            {
+              "phase": 5.890486225480862,
+              "response": 3.616294358225673e-9
+            },
+            {
+              "phase": 6.086835766330224,
+              "response": 3.839037614040505e-9
+            }
+          ]
+        }
+      ],
+      "exponentialTrendPass": true,
+      "powerControls": [
+        {
+          "modeOneBased": 1,
+          "intercept": 0.006659423519403106,
+          "intrinsic": 0.006659423519403106,
+          "relativeZeroPowerError": 0
+        },
+        {
+          "modeOneBased": 2,
+          "intercept": 0.008573179884192766,
+          "intrinsic": 0.008573179884192766,
+          "relativeZeroPowerError": 0
+        },
+        {
+          "modeOneBased": 13,
+          "intercept": 0.03191173541351519,
+          "intrinsic": 0.0319117354135152,
+          "relativeZeroPowerError": 2.174401928943194e-16
+        },
+        {
+          "modeOneBased": 14,
+          "intercept": 0.034383354043206124,
+          "intrinsic": 0.034383354043206124,
+          "relativeZeroPowerError": 0
+        }
+      ],
+      "gates": {
+        "N1": true,
+        "N2": true,
+        "N3": true,
+        "N4": true,
+        "N5": true,
+        "N6": true
+      },
+      "allPass": true
+    },
+    {
+      "id": "held-out-mode-kerr-counterfeit",
+      "injected": {
+        "harmonicRelativeNoise": 0.00008,
+        "shiftRelativeNoise": 0.0001,
+        "gapRelativeNoise": 0.00008,
+        "heldOutKerrMultiplier": 1.005
+      },
+      "harmonicFits": [
+        {
+          "ratio": 0.0001,
+          "fittedScale": 0.9999957684335798,
+          "heldOutRmsRelativeResidual": 0.0000534467573939087,
+          "heldOutMaximumRelativeResidual": 0.00012036411044473704
+        },
+        {
+          "ratio": 0.001,
+          "fittedScale": 0.999982045597838,
+          "heldOutRmsRelativeResidual": 0.00007443845562961175,
+          "heldOutMaximumRelativeResidual": 0.00015262101355905113
+        },
+        {
+          "ratio": 0.01,
+          "fittedScale": 1.0000776602609103,
+          "heldOutRmsRelativeResidual": 0.00009828531345327096,
+          "heldOutMaximumRelativeResidual": 0.00016386339933851558
+        }
+      ],
+      "sharedShiftScale": 0.9999543672504837,
+      "shiftScores": [
+        {
+          "ratio": 0.001,
+          "tolerance": 0.001,
+          "heldOutRmsRelativeShiftResidual": 0.005006139849114343,
+          "heldOutMaximumRelativeShiftResidual": 0.005163381070423771,
+          "pass": false
+        },
+        {
+          "ratio": 0.01,
+          "tolerance": 0.0025,
+          "heldOutRmsRelativeShiftResidual": 0.0050305497058357965,
+          "heldOutMaximumRelativeShiftResidual": 0.005296097027962545,
+          "pass": false
+        }
+      ],
+      "softGapScores": [
+        {
+          "ratio": 0.001,
+          "target": 0.006659118249180167,
+          "measured": 0.0066600264032211825,
+          "relativeResidual": 0.00013637752132228295,
+          "tolerance": 0.001,
+          "pass": true
+        },
+        {
+          "ratio": 0.01,
+          "target": 0.020721250374378462,
+          "measured": 0.02072309519783596,
+          "relativeResidual": 0.00008903050849569282,
+          "tolerance": 0.0025,
+          "pass": true
+        }
+      ],
+      "parityAndOrdering": [
+        {
+          "ratio": 0.001,
+          "firstTransitionOddDriveActive": true,
+          "strictlyAscendingWithoutRelabelling": true
+        },
+        {
+          "ratio": 0.01,
+          "firstTransitionOddDriveActive": true,
+          "strictlyAscendingWithoutRelabelling": true
+        }
+      ],
+      "offsetProfiles": [
+        {
+          "ratio": 0.0001,
+          "actionFloor": 170.56057308448834,
+          "fittedAmplitude": 8.442756797633936e-76,
+          "samples": [
+            {
+              "phase": 0,
+              "response": 8.442756797633936e-76
+            },
+            {
+              "phase": 0.19634954084936207,
+              "response": 8.280531593143681e-76
+            },
+            {
+              "phase": 0.39269908169872414,
+              "response": 7.80009020330453e-76
+            },
+            {
+              "phase": 0.5890486225480862,
+              "response": 7.019895721293368e-76
+            },
+            {
+              "phase": 0.7853981633974483,
+              "response": 5.969930583515777e-76
+            },
+            {
+              "phase": 0.9817477042468103,
+              "response": 4.690544361389317e-76
+            },
+            {
+              "phase": 1.1780972450961724,
+              "response": 3.230903149942249e-76
+            },
+            {
+              "phase": 1.3744467859455345,
+              "response": 1.647100142354261e-76
+            },
+            {
+              "phase": 1.5707963267948966,
+              "response": 5.169697544100979e-92
+            },
+            {
+              "phase": 1.7671458676442586,
+              "response": -1.6471001423542598e-76
+            },
+            {
+              "phase": 1.9634954084936207,
+              "response": -3.230903149942248e-76
+            },
+            {
+              "phase": 2.1598449493429825,
+              "response": -4.690544361389315e-76
+            },
+            {
+              "phase": 2.356194490192345,
+              "response": -5.969930583515776e-76
+            },
+            {
+              "phase": 2.552544031041707,
+              "response": -7.019895721293368e-76
+            },
+            {
+              "phase": 2.748893571891069,
+              "response": -7.80009020330453e-76
+            },
+            {
+              "phase": 2.945243112740431,
+              "response": -8.280531593143681e-76
+            },
+            {
+              "phase": 3.141592653589793,
+              "response": -8.442756797633936e-76
+            },
+            {
+              "phase": 3.3379421944391554,
+              "response": -8.280531593143681e-76
+            },
+            {
+              "phase": 3.5342917352885173,
+              "response": -7.800090203304531e-76
+            },
+            {
+              "phase": 3.730641276137879,
+              "response": -7.019895721293369e-76
+            },
+            {
+              "phase": 3.9269908169872414,
+              "response": -5.969930583515777e-76
+            },
+            {
+              "phase": 4.123340357836604,
+              "response": -4.6905443613893166e-76
+            },
+            {
+              "phase": 4.319689898685965,
+              "response": -3.230903149942253e-76
+            },
+            {
+              "phase": 4.516039439535327,
+              "response": -1.6471001423542638e-76
+            },
+            {
+              "phase": 4.71238898038469,
+              "response": -1.5509092632302937e-91
+            },
+            {
+              "phase": 4.908738521234052,
+              "response": 1.6471001423542607e-76
+            },
+            {
+              "phase": 5.105088062083414,
+              "response": 3.2309031499422505e-76
+            },
+            {
+              "phase": 5.301437602932776,
+              "response": 4.6905443613893135e-76
+            },
+            {
+              "phase": 5.497787143782138,
+              "response": 5.969930583515775e-76
+            },
+            {
+              "phase": 5.6941366846315,
+              "response": 7.019895721293368e-76
+            },
+            {
+              "phase": 5.890486225480862,
+              "response": 7.800090203304527e-76
+            },
+            {
+              "phase": 6.086835766330224,
+              "response": 8.28053159314368e-76
+            }
+          ]
+        },
+        {
+          "ratio": 0.001,
+          "actionFloor": 53.93598899705937,
+          "fittedAmplitude": 3.7661499069668527e-25,
+          "samples": [
+            {
+              "phase": 0,
+              "response": 3.7661499069668527e-25
+            },
+            {
+              "phase": 0.19634954084936207,
+              "response": 3.693784392545085e-25
+            },
+            {
+              "phase": 0.39269908169872414,
+              "response": 3.479468815415962e-25
+            },
+            {
+              "phase": 0.5890486225480862,
+              "response": 3.131439203018996e-25
+            },
+            {
+              "phase": 0.7853981633974483,
+              "response": 2.663070138181347e-25
+            },
+            {
+              "phase": 0.9817477042468103,
+              "response": 2.0923607814003277e-25
+            },
+            {
+              "phase": 1.1780972450961724,
+              "response": 1.441243173199539e-25
+            },
+            {
+              "phase": 1.3744467859455345,
+              "response": 7.34739398111175e-26
+            },
+            {
+              "phase": 1.5707963267948966,
+              "response": 2.3061017143380293e-41
+            },
+            {
+              "phase": 1.7671458676442586,
+              "response": -7.347393981111745e-26
+            },
+            {
+              "phase": 1.9634954084936207,
+              "response": -1.4412431731995386e-25
+            },
+            {
+              "phase": 2.1598449493429825,
+              "response": -2.0923607814003267e-25
+            },
+            {
+              "phase": 2.356194490192345,
+              "response": -2.6630701381813464e-25
+            },
+            {
+              "phase": 2.552544031041707,
+              "response": -3.1314392030189964e-25
+            },
+            {
+              "phase": 2.748893571891069,
+              "response": -3.479468815415962e-25
+            },
+            {
+              "phase": 2.945243112740431,
+              "response": -3.693784392545085e-25
+            },
+            {
+              "phase": 3.141592653589793,
+              "response": -3.7661499069668527e-25
+            },
+            {
+              "phase": 3.3379421944391554,
+              "response": -3.693784392545085e-25
+            },
+            {
+              "phase": 3.5342917352885173,
+              "response": -3.4794688154159625e-25
+            },
+            {
+              "phase": 3.730641276137879,
+              "response": -3.1314392030189964e-25
+            },
+            {
+              "phase": 3.9269908169872414,
+              "response": -2.6630701381813473e-25
+            },
+            {
+              "phase": 4.123340357836604,
+              "response": -2.092360781400327e-25
+            },
+            {
+              "phase": 4.319689898685965,
+              "response": -1.4412431731995409e-25
+            },
+            {
+              "phase": 4.516039439535327,
+              "response": -7.347393981111763e-26
+            },
+            {
+              "phase": 4.71238898038469,
+              "response": -6.918305143014086e-41
+            },
+            {
+              "phase": 4.908738521234052,
+              "response": 7.34739398111175e-26
+            },
+            {
+              "phase": 5.105088062083414,
+              "response": 1.4412431731995395e-25
+            },
+            {
+              "phase": 5.301437602932776,
+              "response": 2.0923607814003263e-25
+            },
+            {
+              "phase": 5.497787143782138,
+              "response": 2.663070138181346e-25
+            },
+            {
+              "phase": 5.6941366846315,
+              "response": 3.131439203018996e-25
+            },
+            {
+              "phase": 5.890486225480862,
+              "response": 3.479468815415961e-25
+            },
+            {
+              "phase": 6.086835766330224,
+              "response": 3.6937843925450844e-25
+            }
+          ]
+        },
+        {
+          "ratio": 0.01,
+          "actionFloor": 17.056057308448835,
+          "fittedAmplitude": 3.914248807304858e-9,
+          "samples": [
+            {
+              "phase": 0,
+              "response": 3.914248807304858e-9
+            },
+            {
+              "phase": 0.19634954084936207,
+              "response": 3.839037614040505e-9
+            },
+            {
+              "phase": 0.39269908169872414,
+              "response": 3.6162943582256737e-9
+            },
+            {
+              "phase": 0.5890486225480862,
+              "response": 3.2545789382654705e-9
+            },
+            {
+              "phase": 0.7853981633974483,
+              "response": 2.767791874896621e-9
+            },
+            {
+              "phase": 0.9817477042468103,
+              "response": 2.17464012197106e-9
+            },
+            {
+              "phase": 1.1780972450961724,
+              "response": 1.497918168710382e-9
+            },
+            {
+              "phase": 1.3744467859455345,
+              "response": 7.63632060268351e-10
+            },
+            {
+              "phase": 1.5707963267948966,
+              "response": 2.39678613646612e-25
+            },
+            {
+              "phase": 1.7671458676442586,
+              "response": -7.636320602683505e-10
+            },
+            {
+              "phase": 1.9634954084936207,
+              "response": -1.4979181687103816e-9
+            },
+            {
+              "phase": 2.1598449493429825,
+              "response": -2.174640121971059e-9
+            },
+            {
+              "phase": 2.356194490192345,
+              "response": -2.7677918748966204e-9
+            },
+            {
+              "phase": 2.552544031041707,
+              "response": -3.254578938265471e-9
+            },
+            {
+              "phase": 2.748893571891069,
+              "response": -3.6162943582256737e-9
+            },
+            {
+              "phase": 2.945243112740431,
+              "response": -3.839037614040505e-9
+            },
+            {
+              "phase": 3.141592653589793,
+              "response": -3.914248807304858e-9
+            },
+            {
+              "phase": 3.3379421944391554,
+              "response": -3.839037614040505e-9
+            },
+            {
+              "phase": 3.5342917352885173,
+              "response": -3.616294358225674e-9
+            },
+            {
+              "phase": 3.730641276137879,
+              "response": -3.2545789382654713e-9
+            },
+            {
+              "phase": 3.9269908169872414,
+              "response": -2.7677918748966212e-9
+            },
+            {
+              "phase": 4.123340357836604,
+              "response": -2.1746401219710597e-9
+            },
+            {
+              "phase": 4.319689898685965,
+              "response": -1.4979181687103841e-9
+            },
+            {
+              "phase": 4.516039439535327,
+              "response": -7.636320602683522e-10
+            },
+            {
+              "phase": 4.71238898038469,
+              "response": -7.190358409398358e-25
+            },
+            {
+              "phase": 4.908738521234052,
+              "response": 7.636320602683509e-10
+            },
+            {
+              "phase": 5.105088062083414,
+              "response": 1.4979181687103829e-9
+            },
+            {
+              "phase": 5.301437602932776,
+              "response": 2.1746401219710585e-9
+            },
+            {
+              "phase": 5.497787143782138,
+              "response": 2.76779187489662e-9
+            },
+            {
+              "phase": 5.6941366846315,
+              "response": 3.2545789382654705e-9
+            },
+            {
+              "phase": 5.890486225480862,
+              "response": 3.616294358225673e-9
+            },
+            {
+              "phase": 6.086835766330224,
+              "response": 3.839037614040505e-9
+            }
+          ]
+        }
+      ],
+      "exponentialTrendPass": true,
+      "powerControls": [
+        {
+          "modeOneBased": 1,
+          "intercept": 0.006659423519403106,
+          "intrinsic": 0.006659423519403106,
+          "relativeZeroPowerError": 0
+        },
+        {
+          "modeOneBased": 2,
+          "intercept": 0.008573179884192766,
+          "intrinsic": 0.008573179884192766,
+          "relativeZeroPowerError": 0
+        },
+        {
+          "modeOneBased": 13,
+          "intercept": 0.03191173541351519,
+          "intrinsic": 0.0319117354135152,
+          "relativeZeroPowerError": 2.174401928943194e-16
+        },
+        {
+          "modeOneBased": 14,
+          "intercept": 0.034383354043206124,
+          "intrinsic": 0.034383354043206124,
+          "relativeZeroPowerError": 0
+        }
+      ],
+      "gates": {
+        "N1": true,
+        "N2": false,
+        "N3": true,
+        "N4": true,
+        "N5": true,
+        "N6": true
+      },
+      "allPass": false
+    }
+  ],
+  "decision": {
+    "idealAccepted": true,
+    "counterfeitRejectedBySharedAnharmonicFingerprint": true,
+    "counterfeitPassesOtherGates": true,
+    "implication": "the calibration/holdout split distinguishes a shared diagonal-cosine fingerprint from a mode-selective Kerr counterfeit without weakening the harmonic, soft-gap, parity, compactness or power controls"
+  },
+  "boundary": "This deterministic synthetic twin validates the analysis logic under small Gaussian spectroscopy noise and one deliberately structured Kerr counterfeit. It is not laboratory evidence, a nonlinear likelihood calibration or a proof of the asymptotic remainder."
+}
