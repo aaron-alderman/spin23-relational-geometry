@@ -1119,6 +1119,25 @@ Conditionally, those relaxation variables admit positive stationary Gaussian flu
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-9.md)
 
+<a id="hot-off-the-press-the-screened-field-is-not-the-whole-carrier"></a>
+## Hot off the press — the screened field is not the whole carrier
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⇄ Translator](../reading-key/move-translator.md)** — moves a structure between mathematical, physical or ordinary languages.
+
+**Provisional integration note — 25 October 2026.** The long-range energy-current problem has a conventional local completion when matter and finite-speed electromagnetic fields are retained together. Matter gains the work density \(\mathbf j\cdot\mathbf E\); field energy loses the same amount through Poynting continuity. Their sum therefore has a local finite-\(q\) current without assigning every Coulomb bond to one endpoint. A finite Fourier certificate closes this identity and its ordinary potential-gauge invariance.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-screened-field-is-not-the-whole-carrier-claim-1.md)
+
+That does not make every microscopic energy current identical. Moving a bounded divergence between local energy densities changes the current by a total time derivative. It leaves regular dc Green--Kubo transport unchanged, but it can change finite-frequency records; singular infrared polarization is exactly where the regularity premise may fail. “Gauge” therefore names a controlled equivalence, not permission to ignore the order of limits.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-screened-field-is-not-the-whole-carrier-claim-2.md)
+
+Screening reveals the missing thing. In the minimal local scalar completion of a static kernel \(1/(q^2+\kappa^2)\), the electric-gradient share of mode energy is \(q^2/(q^2+\kappa^2)\), while the non-gradient screening sector holds \(\kappa^2/(q^2+\kappa^2)\). At \(q\ll\kappa\), adding Maxwell \(E^2\) alone omits almost all the energy in that completion. A physical model must identify the sector represented by the \(\kappa\) term and give it dynamics, energy and flux; the fractions are not asserted for every microscopic screening theory. The look-here calculation is now concrete: build matched finite-speed and explicit-screening completions of the projected lattice model, integrate them out to recover the same Ewald kernel, and compare total KMS transport under one order of size, wavevector, screening, frequency and light-speed limits. Agreement gives a robust engineered heat-current definition; disagreement before matching diagnoses a missing carrier, not new physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-screened-field-is-not-the-whole-carrier-claim-3.md)
+
 <a id="kenotic-confidence"></a>
 ## Kenotic confidence
 
@@ -1192,6 +1211,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_108_d4_shared_action_operator_boundary.md](../../../corpus/programmes/admissibility/admissibility_108_d4_shared_action_operator_boundary.md)
 - [admissibility_109_four_mode_sk_action_to_record.md](../../../corpus/programmes/admissibility/admissibility_109_four_mode_sk_action_to_record.md)
 - [admissibility_110_relation_emulator_readiness_reconciliation.md](../../../corpus/programmes/admissibility/admissibility_110_relation_emulator_readiness_reconciliation.md)
+- [admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md](../../../corpus/programmes/admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md)
 
 ---
 
