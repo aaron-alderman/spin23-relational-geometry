@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The Monster inner normalizer realizes only the order-11 square-power subgroup and acts trivially on the C2^2 and C2 augmentation quotients; fifth-power orientation exchange is instead a cyclotomic Galois comparison of projective twisted-character data.",
+  "unitArithmetic": {
+    "modulus": 46,
+    "unitGroupOrder": 22,
+    "squareSubgroupOrder": 11,
+    "orientationExchangePower": 5,
+    "powerFiveOrder": 22,
+    "powerFiveEleventhPower": 45,
+    "minusOneModulo46": 45,
+    "powerFiveIsSquare": false
+  },
+  "innerNormalizer": {
+    "quotient": "N_M(<h>)/C_M(h)",
+    "isomorphismType": "C11",
+    "imageInUnits": "square subgroup of (Z/46Z)^x",
+    "doesNotContainPowerFive": true,
+    "reason": "power five exchanges distinct Monster conjugacy classes, whereas inner conjugation preserves conjugacy class"
+  },
+  "augmentationActions": {
+    "46AB": {
+      "quotient": "C2^2",
+      "automorphismGroup": "S3",
+      "automorphismGroupOrder": 6,
+      "innerC11Action": "trivial",
+      "nonidentityLabelsPerOrientedClass": 3
+    },
+    "46CD": {
+      "quotient": "C2",
+      "automorphismGroup": "trivial",
+      "automorphismGroupOrder": 1,
+      "innerC11Action": "trivial",
+      "nonidentityLabelsPerOrientedClass": 1
+    }
+  },
+  "traceInventory": {
+    "orientedClasses": 4,
+    "identityCosetTracesAlreadyReducedToScalarOutputs": 2,
+    "orientedNonidentityTracesMaximum": 8,
+    "calculation": "2*3 + 2*1",
+    "comparison": "apply fifth-power cyclotomic Galois transport to projective centralizer-character coefficients and cocycle phases"
+  },
+  "success": "at least one compatible Galois pair differs after all forced projective phases and label correspondences",
+  "failure": "all eight oriented nonidentity traces pair Galois-covariantly, exhausting scalar genus-one centralizer insertions as orientation detectors",
+  "boundaries": [
+    "fifth-power class exchange is not conjugation inside the Monster",
+    "trivial inner action on quotient labels does not imply equality of their trace functions",
+    "Galois covariance is not a real-time symmetry operator",
+    "a cross-class label correspondence must come from character data or a common rational form"
+  ]
+}

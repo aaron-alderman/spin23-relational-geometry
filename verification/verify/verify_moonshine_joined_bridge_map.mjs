@@ -4,6 +4,7 @@ import fs from "node:fs";
 const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, import.meta.url), "utf8"));
 
 const joined = load("../../evidence/data/moonshine-joined-bridge-map-v1.json");
+const galois = load("../../evidence/data/moonshine-order46-galois-orientation-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const fermionic = load("../../evidence/data/lattice-subroutine-monster-fermionization-bridge-v1.json");
 const igusa = load("../../evidence/data/lattice-subroutine-igusa-seam-completion-v1.json");
@@ -91,6 +92,11 @@ for (const gate of joined.admissibilityLosses) {
 assert(joined.forbiddenPromotions.some((entry) => entry.includes("Spin_0(2,3)")));
 assert(joined.forbiddenPromotions.some((entry) => entry.includes("real-time dynamics")));
 assert.equal(joined.generalizedMoonshineTarget.fourCases.length, 4);
+assert.equal(
+  joined.generalizedMoonshineTarget.noncyclicAugmentation.maximumOrientedNonidentityTraces,
+  galois.traceInventory.orientedNonidentityTracesMaximum,
+);
+assert(joined.generalizedMoonshineTarget.noncyclicAugmentation.orientationTransport.includes("not Monster conjugation"));
 assert.equal(joined.openGates.length, 5);
 
 console.log(JSON.stringify({

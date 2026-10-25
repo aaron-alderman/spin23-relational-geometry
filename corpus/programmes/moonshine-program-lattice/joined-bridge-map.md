@@ -228,8 +228,9 @@ For each \(h\in46A,46B,46C,46D\):
    retaining compatible normalization rather than only scalar coefficients;
 3. compare the 2A pair with the Majorana-Weyl x Baby-Monster decomposition and
    the 2B pair with the Leech orbifold decomposition;
-4. use the fifth-power pairing to verify that the normalized cyclic trace
-   still collapses A/B and C/D, then add a noncyclic centralizer insertion;
+4. use the fifth-power Galois pairing to verify that the normalized cyclic
+   trace still collapses A/B and C/D, then add the exactly bounded noncyclic
+   insertions \(Q_{46AB}\cong C_2^2\) and \(Q_{46CD}\cong C_2\);
 5. test degeneration to the already verified common scalar \(T_{23}\);
 6. sew the resulting functions through two handles and ask whether their
    determinant/anomaly lines land on the ten-even-characteristic carrier;
@@ -260,6 +261,8 @@ twisted--twining and sewn intertwiners exist.
 - Carnahan, [*Generalized Moonshine I: Genus zero functions*](https://arxiv.org/abs/0812.3440)
 - [Main Moonshine programme](README.md)
 - [Order-46 observable ladder](order-46-observable-ladder.md)
+- [Centralizer augmentation gate](order-46-centralizer-augmentation.md)
+- [Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - [Leech pair-Gram / Spin(2,3) bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Rule-60 affine seam torsor](../../claims/1700-1799/1793_the_rule60_golay_kernel_supplies_the_unique_tm23_leech_affine_seam_torsor.md)

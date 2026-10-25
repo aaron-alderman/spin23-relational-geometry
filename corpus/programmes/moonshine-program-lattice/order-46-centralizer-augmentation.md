@@ -171,7 +171,10 @@ smallest extension that:
 ## 5. Exhaustion boundary
 
 The quotient types close the label search space but do not compute how those
-labels occur in the Monster twisted-module characters.
+labels occur in the Monster twisted-module characters.  The
+[Galois-orientation gate](order-46-galois-orientation-gate.md) further proves
+that the inner \(C_{11}\) power action is trivial on both quotients and reduces
+the remaining calculation to at most eight oriented nonidentity traces.
 No claim is made that \(Q_{46AB}\) is the Rule-60 deck carrier, that
 \(Q_{46CD}\) is fermion parity, or that either quotient acts on the ten
 even-characteristic genus-two family.  Those are exactly the next
@@ -186,5 +189,6 @@ vector-valued centralizer representation or genus-two sewing.
 - [ATLAS Monster conjugacy classes and centralizer orders](https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M)
 - Breuer, Magaard and Wilson, [*Verification of the conjugacy classes and ordinary character table of the Monster*](https://arxiv.org/abs/2412.12182)
 - [Order-46 observable ladder](order-46-observable-ladder.md)
+- [Order-46 Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Joined order-46 bridge](joined-bridge-map.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)

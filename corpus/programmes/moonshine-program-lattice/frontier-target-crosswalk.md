@@ -46,10 +46,11 @@ produces a discriminator or fails:
    centralizer lifts;
 4. record the resulting no-go: fifth power fixes the involution and leaves
    each orientation pair scalar-degenerate;
-5. add the smallest noncyclic centralizer insertion capable of distinguishing
-   those pairs;
-6. test which quotients reproduce the common scalar \(T_{23}\) and which
-   retain 2A/2B rail information;
+5. add the smallest noncyclic centralizer insertions,
+   \(Q_{46AB}\cong C_2^2\) and \(Q_{46CD}\cong C_2\);
+6. evaluate the at most eight oriented nonidentity traces and compare them by
+   fifth-power Galois transport; inner \(C_{11}\) transport acts trivially on
+   both quotient label sets;
 7. construct the smallest matrix kernel from the surviving order-23 branches
    to the ten even genus-two characteristics;
 8. reject the join if the modular representations or anomaly lines cannot
@@ -117,6 +118,8 @@ geometry that motivated the admissibility language.
 
 - [Joined order-46 bridge](joined-bridge-map.md)
 - [Order-46 observable ladder](order-46-observable-ladder.md)
+- [Centralizer augmentation gate](order-46-centralizer-augmentation.md)
+- [Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Main Moonshine programme](README.md)
 - [Per-target corpus assessments](../frontier-physics-targets/frontier_physics_target_assessments_v1.md)
 - [Admissibility frontier synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md)
