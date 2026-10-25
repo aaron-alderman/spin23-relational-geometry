@@ -835,6 +835,17 @@ retained as an adversarial convergence control; agreement between both
 orders is required because this harmonic optimization does not certify the
 nonlinear state.
 
+The full compact carrier has now been attacked directly in
+[Wave 7.193](../frontier/wave-7/frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md).
+At a common bond-32/six-sweep budget and $U/u=10^{-2}$, the parity-resolved
+variational gap falls from 0.6811 to 0.3327, 0.1870 and 0.1195 as the charge
+cutoff rises from one to four. This monotone sequence is a convergence
+failure, not an extrapolation: the cutoff-four residual proxies exceed the
+reported gap, which remains 5.77 times the perturbative reference. A
+catalogue-order control differs by 0.188% at cutoff two. The calculation
+therefore establishes full-carrier feasibility and fixes the next
+bond/cutoff grid while refusing a gap certificate.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

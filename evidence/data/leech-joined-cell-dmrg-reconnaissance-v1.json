@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "leech-joined-cell-dmrg-reconnaissance-v1",
+  "date": "2026-10-25",
+  "model": "24-channel Gram-first joined compact rotor at U/u=0.01",
+  "method": {
+    "mpo": "exact automaton MPO, bond dimension at most 26",
+    "sectorSelection": "ground state of H for even; ground state of H+P with unit global-inversion penalty for odd",
+    "sweepSequence": "alternating R,L",
+    "bondDimensions": [8,16,32],
+    "sweeps": 6,
+    "order": "metric-optimized Wave 7.192 order unless marked natural",
+    "status": "variational reconnaissance"
+  },
+  "weakCosineReference": {
+    "gapThroughOrderU2": 0.020721250374378462,
+    "source": "leech-24mode-full-cosine-order-two-v1"
+  },
+  "cutoffLadder": [
+    {
+      "cutoff": 1,
+      "localDimension": 3,
+      "HilbertDimension": "282429536481",
+      "evenEnergy": 7.360877724198865,
+      "oddEnergy": 8.0420224611524,
+      "variationalGap": 0.6811447369535344,
+      "evenParity": 0.9999999966031949,
+      "oddParity": -0.999997374393361,
+      "evenResidualNormProxy": 0.0014375543399300884,
+      "oddResidualNormProxy": 0.008373489766584181
+    },
+    {
+      "cutoff": 2,
+      "localDimension": 5,
+      "HilbertDimension": "59604644775390625",
+      "evenEnergy": 3.873242256811217,
+      "oddEnergy": 4.205991920764838,
+      "variationalGap": 0.3327496639536207,
+      "evenParity": 0.9999952372739257,
+      "oddParity": -0.9999980551621207,
+      "evenResidualNormProxy": 0.018305856119371123,
+      "oddResidualNormProxy": 0.0304609081030087
+    },
+    {
+      "cutoff": 3,
+      "localDimension": 7,
+      "HilbertDimension": "191581231380566414401",
+      "evenEnergy": 2.7709236750117694,
+      "oddEnergy": 2.957897883854144,
+      "variationalGap": 0.1869742088423747,
+      "evenParity": 0.9998018186519475,
+      "oddParity": -0.9999982661407466,
+      "evenResidualNormProxy": 0.07453526678722897,
+      "oddResidualNormProxy": 0.0886770153583941
+    },
+    {
+      "cutoff": 4,
+      "localDimension": 9,
+      "HilbertDimension": "79766443076872509863361",
+      "evenEnergy": 2.352938288961584,
+      "oddEnergy": 2.4724255850949435,
+      "variationalGap": 0.11948729613335951,
+      "evenParity": 0.9977676212918979,
+      "oddParity": -0.9999986572369324,
+      "evenResidualNormProxy": 0.15174079564896592,
+      "oddResidualNormProxy": 0.16299452862616054
+    }
+  ],
+  "derived": {
+    "gapMonotonicallyDecreasesAcrossRecordedCutoffs": true,
+    "gapToWeakCosineRatios": [32.87179705119342,16.058377652975086,9.023307255317262,5.766413414950281],
+    "successiveGapRatios": [0.48851535643050836,0.5619065294335971,0.6390576372706631],
+    "cutoffFourResidualsExceedReportedGap": true,
+    "extrapolationAdmitted": false
+  },
+  "orderingControlAtCutoffTwo": {
+    "naturalGap": 0.33337558229654585,
+    "optimizedGap": 0.3327496639536207,
+    "relativeDifference": 0.0018810487604650971,
+    "naturalEvenResidual": 0.024491988787698687,
+    "optimizedEvenResidual": 0.018305856119371123,
+    "naturalOddResidual": 0.04237586404098019,
+    "optimizedOddResidual": 0.0304609081030087,
+    "interpretation": "optimized order lowers both variational energies and residual proxies at the frozen budget; remaining order dependence rejects convergence"
+  },
+  "established": "the full 24-channel compact Hamiltonian can be optimized directly at Hilbert dimensions through 9^24, and the first consistent ladder exposes severe local-cutoff dependence rather than supporting a premature gap value",
+  "nextRun": "increase bond dimension at fixed cutoff four until both residual proxies are far below the gap change, then extend cutoffs five through eight in optimized and catalogue control orders",
+  "boundary": "All reported energies are variational upper estimates and the residual quantities are numerical proxies, not validated lower enclosures. The gap is not certified, no cutoff extrapolation is admitted, and the result is not evidence for a Leech edge or Monster phase.",
+  "epistemicStatus": "full-carrier variational reconnaissance with explicit convergence failure"
+}

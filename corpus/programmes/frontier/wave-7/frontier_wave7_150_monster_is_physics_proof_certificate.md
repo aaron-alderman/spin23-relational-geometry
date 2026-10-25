@@ -200,6 +200,10 @@ as upper spectral enclosures.
 Wave 7.192 reduces that calculation's harmonic maximum cut entropy by 20.75%
 with a frozen metric-derived ordering, while retaining catalogue order as a
 convergence control.
+Wave 7.193 performs the first direct full-carrier calculation through charge
+cutoff four. Its monotonically falling variational gap and residuals larger
+than the final gap reject premature extrapolation; they demonstrate
+feasibility, not a joined-cell gap certificate.
 
 ## Corpus links
 
@@ -249,6 +253,7 @@ convergence control.
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Joined-cell MPO certificate architecture](frontier_wave7_191_leech_joined_cell_mpo_certificate_architecture.md)
 - [Metric-optimized joined-cell MPS ordering](frontier_wave7_192_leech_joined_cell_mps_order.md)
+- [Full joined-cell DMRG reconnaissance](frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

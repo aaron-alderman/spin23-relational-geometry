@@ -257,6 +257,12 @@ Wave 7.192 fixes a metric-derived MPS ordering that lowers the harmonic
 maximum cut entropy by 20.75% and its exponential proxy by a factor 2.55.
 Catalogue-order agreement remains a required control against nonlinear
 optimizer trapping.
+Wave 7.193 executes the first full 24-channel compact DMRG ladder. At
+$U/u=10^{-2}$ its variational gap falls from 0.6811 at charge cutoff one to
+0.1195 at cutoff four, still 5.77 times the order-$U^2$ reference. The final
+residual proxies exceed the proposed gap and catalogue-order dependence is
+still visible, so the result proves computational feasibility while
+explicitly failing the convergence and lower-enclosure gates.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -316,6 +322,7 @@ P4 questions.
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Joined-cell MPO certificate architecture](frontier_wave7_191_leech_joined_cell_mpo_certificate_architecture.md)
 - [Metric-optimized joined-cell MPS ordering](frontier_wave7_192_leech_joined_cell_mps_order.md)
+- [Full joined-cell DMRG reconnaissance](frontier_wave7_193_leech_joined_cell_dmrg_reconnaissance.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
