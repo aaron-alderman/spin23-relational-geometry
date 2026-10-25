@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> So the next question is no longer whether any Jordan face can be found. It is why this positive face should be selected and what it predicts. A source-native order must be declared before quotienting, survive the radical and recover one held-out composition or observable. Until then the construction is a faithful mathematical view of the relation system, not evidence that nature uses it.
+> The later two-rail construction answers the narrower positivity question: the graph admits a source-native positive carrier before quotienting. It does not yet say why this particular Jordan face should be selected or what it predicts. The live gate is therefore compositional and semantic—derive a star operation, transport path memory and recover one held-out composition or observable. Until then the face is a faithful mathematical view of the relation system, not evidence that nature uses it.
 
 ## What this commits us to
 

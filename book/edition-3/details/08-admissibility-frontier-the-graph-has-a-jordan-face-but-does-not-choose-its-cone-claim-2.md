@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The gain is exact and the loss is visible. Symmetrized relation composition supplies the Jordan product, while determinant and matrix rank come from the same block. But thirty dimensions of one-way history have been discarded, the two relation labels are folded into one off-diagonal coordinate, and positive-semidefinite order is supplied by the real matrix representation rather than forced by the authored graph.
+> The gain is exact and the loss is visible. Symmetrized relation composition supplies the Jordan product, while determinant and matrix rank come from the same block. But thirty dimensions of one-way history have been discarded, the two relation labels are folded into one off-diagonal coordinate, and at this quotient stage positive-semidefinite order is supplied by the real matrix representation rather than forced by the authored path algebra.
 
 ## What this commits us to
 
