@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "leech-transformer-conditioning-tolerance-v1",
+  "date": "2026-10-25",
+  "inputs": ["leech-explicit-k-matrix-v1", "leech-transformer-capacitance-recovery-v1"],
+  "spectrumInRecordedBasis": {
+    "minimumEigenvalue": 0.000750631043666106,
+    "maximumEigenvalue": 23.882400791660626,
+    "twoNormConditionNumber": 31816.430979217457,
+    "inverseTwoNorm": 1332.212421053049,
+    "quadraticModeScaleRatio": 31816.430979217457,
+    "frequencyScaleRatioIfCommonInductance": 178.37160922976912
+  },
+  "worstCasePerturbationBounds": {
+    "notation": "C_measured=K+E and delta=||E||_2/||K||_2",
+    "positiveDefinitenessSufficientRelativeDelta": 0.00003143030092385917,
+    "inverseErrorBound": "||C_measured^-1-K^-1||_2/||K^-1||_2 <= kappa_2(K) delta/(1-kappa_2(K) delta)",
+    "relativeDeltaForAtMostOnePercentInverseError": 3.111910982560314e-7,
+    "relativeDeltaForAtMostOnePermilleInverseError": 3.1398902021837334e-8
+  },
+  "decision": {
+    "result": "the exact transformer synthesis is algebraically mild in component ratios but worst-case ill-conditioned in the recorded 24-channel coordinates",
+    "requiredCommissioning": "measure and invert the complete 24-port matrix with uncertainty propagation; do not infer the charging metric from nominal component tolerances",
+    "mitigations": [
+      "search GL(24,Z)-equivalent Leech bases that jointly reduce conditioning, transformer density and interaction locality",
+      "calibrate the realized matrix and digitally or parametrically compensate coherent errors",
+      "target only the experimentally occupied spectral subspace and certify the resulting isometry",
+      "include parasitic modes in the measured admittance model rather than treating them as independent scalar tolerances"
+    ],
+    "rejectionRule": "a nominal transformer bill of materials without a full-matrix spectral certificate is insufficient for Gate A provenance"
+  },
+  "established": "the recorded exact K basis has two-norm condition number about 3.18e4, making sub-part-per-million relative matrix control sufficient for a one-percent worst-case inverse-metric guarantee",
+  "boundary": "The bound is sufficient and adversarial, not a prediction of typical fabrication error. Congruent GL(24,Z) bases change Euclidean conditioning, structured errors may be less damaging, calibration may compensate them, and physical observables need not require uniform accuracy over all 24 eigen-directions."
+}

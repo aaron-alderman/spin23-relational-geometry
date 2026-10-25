@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "leech-fixed-cutoff-local-gap-stability-ledger-v1",
+  "date": "2026-10-25",
+  "sources": [
+    {
+      "name": "Yarotsky, Perturbations of ground states in weakly interacting quantum spin systems",
+      "url": "https://doi.org/10.1007/s10955-004-8780-x",
+      "usedFor": "a weak bounded finite-range perturbation of a noninteracting lattice with nondegenerate uniformly gapped local ground states retains a unique gapped ground state for sufficiently small local strength"
+    },
+    {
+      "name": "Yarotsky, Quasi-particles in weak perturbations of non-interacting quantum lattice systems",
+      "url": "https://arxiv.org/abs/math-ph/0411042",
+      "usedFor": "the same noninteracting gapped setting and perturbative quasiparticle continuation"
+    },
+    {
+      "name": "Bravyi-Hastings-Michalakis, Topological quantum order: stability under local perturbations",
+      "url": "https://arxiv.org/abs/1001.0344",
+      "usedFor": "comparison boundary only; its commuting-projector and topological-order hypotheses are not established for the rotor strip"
+    }
+  ],
+  "fixedCutoffHypotheses": {
+    "cutoffN": 8,
+    "localDimension": 17,
+    "localGroundStateNondegenerate": true,
+    "uniformLocalGap": 0.8784249806868974,
+    "periodicBulkCellsDisjoint": true,
+    "finiteRangePerturbationRequired": true,
+    "uniformBoundedLocalTermRequired": true,
+    "openEdgeExcludedFromBulkTheorem": true
+  },
+  "theoremLevelConclusion": {
+    "statement": "For fixed N=8 there exists a nonzero local perturbation-strength threshold, independent of the number of periodic bulk cells, below which the unique bulk ground state and a positive spectral gap persist.",
+    "thresholdNumericallyKnownHere": false,
+    "uniformInVolume": true,
+    "uniformInRotorCutoffN": false,
+    "appliesToOpenChiralEdge": false,
+    "provesLeechCFT": false
+  },
+  "nonApplications": [
+    "The finite-device global-norm inequality is not a thermodynamic local-perturbation bound.",
+    "The Bravyi-Hastings-Michalakis commuting-projector TQO theorem is not invoked because LTQO and a commuting-projector parent were not established.",
+    "The fixed-cutoff theorem does not justify interchanging weak-coupling, thermodynamic and N-to-infinity limits.",
+    "A stable trivial product bulk does not by itself determine the Leech K-matrix or chiral boundary CFT."
+  ],
+  "experimentalRadiusProtocol": {
+    "cutoffsN": [4,8,16],
+    "periodicWidthsY": [4,8,16,32],
+    "localStrengthFractionsOfUnperturbedGap": [0,0.01,0.02,0.05,0.1,0.2],
+    "observables": [
+      "lowest periodic-bulk excitation gap",
+      "ground-state fidelity susceptibility per bulk cell",
+      "bulk correlation length",
+      "open-strip edge tower measured separately after the periodic bulk scan"
+    ],
+    "pass": "at least one nonzero contiguous strength interval has a positive thermodynamic gap lower confidence bound stable across Y and unchanged within tolerance from N=8 to N=16",
+    "fail": "all nonzero strengths extrapolate to gap closure, the apparent radius shrinks to zero with Y or N, or the edge record changes before the bulk criterion is met"
+  },
+  "established": "a source-backed thermodynamic existence bridge for weak local perturbations at fixed finite rotor cutoff, plus an explicit protocol for measuring the otherwise unknown stability radius",
+  "boundary": "No numerical stability threshold is claimed. Uniform control as N tends to infinity, chiral-edge stability, the Leech response and the Monster extension remain open."
+}

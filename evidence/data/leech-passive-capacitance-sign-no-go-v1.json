@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "leech-passive-capacitance-sign-no-go-v1",
+  "date": "2026-10-25",
+  "inputs": ["leech-explicit-k-matrix-v1", "leech-unimodular-dual-basis-compiler-v1"],
+  "source": {
+    "name": "Krantz et al., A Quantum Engineer's Guide to Superconducting Qubits",
+    "url": "https://doi.org/10.1063/1.5089550",
+    "circuitRule": "for an ordinary grounded capacitor network, C_ij=-C_ij_mutual is nonpositive off diagonal and the charging Hamiltonian is proportional to n^T C^-1 n"
+  },
+  "candidateMapping": {
+    "targetChargingForm": "H_C=(E/2) n^T K^-1 n in the dual Leech coordinates",
+    "requiredNodeCapacitanceUpToScale": "C=K",
+    "allowedLocalConvention": "simultaneous sign reversal of each canonical pair, represented by C -> D C D for diagonal D with entries plus or minus one",
+    "passiveCapacitorCondition": "all off-diagonal entries of D K D must be nonpositive"
+  },
+  "matrixAudit": {
+    "rank": 24,
+    "offDiagonalPairs": 276,
+    "positivePairs": 88,
+    "negativePairs": 103,
+    "zeroPairs": 85,
+    "frustratedTriangleZeroBased": [0, 1, 4],
+    "frustratedTriangleOneBased": [1, 2, 5],
+    "edgeValuesInCycleOrder": [-2, -2, 2],
+    "edgeProduct": 8,
+    "proof": "The product of edge signs around a cycle is invariant under D K D. Three nonpositive nonzero off-diagonal entries would have negative product, whereas the recorded triangle has positive product. Therefore no local sign convention makes K a passive node-capacitance matrix."
+  },
+  "consequence": {
+    "rejected": "a direct 24-node network made only of positive mutual and ground capacitances that exactly realizes the dual-coordinate K^-1 charging form",
+    "notRejected": [
+      "the continuum Leech edge or its coupled-wire construction",
+      "the original-coordinate implementation with multi-field cosine interactions",
+      "transformer-, resonator-, inductive-, driven- or active-mediated network synthesis",
+      "digital simulation of the integral mixer and selected interactions",
+      "approximate low-energy realization with an experimentally verified isometry"
+    ],
+    "nextEngineeringFork": "either synthesize the signed 24-mode mixing through mediated couplers and verify its admittance, or retain a simple passive kinetic network and implement the original 12-to-22-field cosine columns"
+  },
+  "established": "the most literal capacitance-only realization of the exact dual Leech charging metric is impossible even after arbitrary node sign conventions",
+  "boundary": "The no-go applies only to the explicit identification C proportional to K in an ordinary node-flux circuit with positive capacitors. K is fundamentally a topological response/commutation matrix, not automatically a capacitance matrix; general passive networks with additional element types and effective Hamiltonian synthesis are not excluded."
+}

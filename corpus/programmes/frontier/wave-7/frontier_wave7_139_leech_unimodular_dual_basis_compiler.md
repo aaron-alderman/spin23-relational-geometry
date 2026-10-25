@@ -67,3 +67,4 @@ physical locality remain open.
 - [Coupled-wire blueprint](frontier_wave7_131_leech_coupled_wire_null_vector_blueprint.md)
 - [Laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
 - [Finite-qudit channel mixer](frontier_wave7_157_leech_finite_qudit_channel_mixer.md)
+- [Passive-capacitance sign no-go](frontier_wave7_169_leech_passive_capacitance_sign_no_go.md)

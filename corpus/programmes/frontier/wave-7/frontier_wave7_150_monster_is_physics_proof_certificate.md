@@ -68,7 +68,7 @@ The theorem does not imply a natural material, four-dimensional Monster
 symmetry, gravity from the Jordan cone, an \(E_8\) gauge field or unique
 selection by nature. Those would be different propositions.
 
-The laboratory route is nevertheless no longer vague. Waves 7.137–160 now
+The laboratory route is nevertheless no longer vague. Waves 7.137–173 now
 provide an end-to-end promotion DAG, an explicit Leech interaction matrix, a
 channel-diagonal basis, a 555-gate finite-qudit channel mixer, coherent local
 inversion gauging, a twelve-qubit
@@ -92,6 +92,52 @@ The subsequent gap audit rejects fixed-strength clock locking through its
 The selected open-boundary rotor replacement instead has a fixed-strength
 gap converging to 0.8784249807, with \(N=4\) already accurate to
 \(1.21\times10^{-7}\) against the recorded \(N=64\) benchmark.
+Its ideal finite strips preserve that gap through 32 wires, leave 24 modes on
+each open edge and remove them under periodic closure.
+The Gate-A readout now separately tests chiral velocity signs, conformal
+\(1/L\) scaling, Casimir energy, thermal Hall transport, 24 Leech currents
+and the absence of norm-two roots before any zero-current Monster claim.
+At fixed rotor cutoff, a sourced weak-interaction theorem additionally gives
+a nonzero bulk stability neighborhood uniform in volume; its numerical
+radius and its \(N\to\infty\) limit remain open.
+For the declared two-level excitation-hopping perturbation, the gap closure
+is quantitative: \(|t_c|/\Delta=1/2\), with held-out dispersion tests.
+The natural static rotor coupler realizes only the low-strength part:
+operator-level leakage limits it to \(t_{\rm eff}/\Delta\approx0.1956\)
+under the stated first-order criterion, so stronger points require selective
+exchange.
+An exact finite-cutoff eigenbasis compiler now supplies that selective
+exchange with zero ideal leakage; only platform gate synthesis and accumulated
+circuit error remain.
+The one-excitation even--odd commutator fixes that accumulated first-order
+error: short-time commissioning is finite, while the strongest long-time
+benchmark exceeds 1.6 million logical gates and selects a different evolution
+strategy.
+That selected alternative is now explicit for the ideal hopping lane: exact
+free-fermion sine-mode evolution costs at most 660672 logical gates at 744
+cells including pendulum-basis I/O, has no Trotter error and beats the
+first-order route from 746 steps onward. Its classical simulability makes it
+a stringent calibration null; it does not itself add Monster specificity.
+The literal positive-capacitor implementation of the dual Leech charging
+metric is also now excluded by an exact sign-frustrated triangle. A physical
+carrier must add mediated signed couplers, retain the original multi-field
+interactions or certify a digital effective isometry.
+At the ideal-network level, the mediated option now has an exact passive
+construction: (K=LDL^T) with 24 positive capacitors of dynamic range 16
+behind a signed transformer whose ratios are bounded by (1/2). Its dense
+242-coefficient layout and parasitic tolerance remain laboratory work.
+The recorded basis has (\kappa_2(K)=31816.43); a one-percent uniform
+worst-case inverse guarantee would require relative full-matrix error below
+(3.11\times10^{-7}). This is a conservative calibration requirement, not a
+claim that every physical implementation needs sub-ppm components.
+A deterministic 3000-candidate integral search improves the recorded basis
+condition number by a factor of 42.98 to 740.225 while preserving 24
+norm-four Leech basis vectors. The new coordinate is exactly unimodular, but
+its slightly denser Gram matrix leaves circuit routing as an explicit Pareto
+choice.
+Four mutually nondominated sub-1000-condition bases now expose the remaining
+selection variables as platform measurements: admittance covariance, mixer
+loss and bandwidth, pair-routing cost and signed-ratio range.
 The first blocking requirement is one physically marked microscopic platform whose
 infrared edge and cross-sector products pass those tests together.
 
@@ -111,6 +157,19 @@ infrared edge and cross-sector products pass those tests together.
 - [Wrap-free Leech rotor-cutoff ladder](frontier_wave7_158_leech_wrap_free_rotor_cutoff_ladder.md)
 - [Leech clock-locking gap scaling](frontier_wave7_159_leech_clock_locking_gap_scaling.md)
 - [Rotor-native Leech pendulum gap](frontier_wave7_160_leech_rotor_native_pendulum_gap.md)
+- [Rotor-strip bulk gap and edge count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
+- [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
+- [Fixed-cutoff local bulk-gap stability](frontier_wave7_163_leech_fixed_cutoff_local_gap_stability.md)
+- [Pendulum excitation-hopping stress lane](frontier_wave7_164_leech_pendulum_excitation_hopping_stress_lane.md)
+- [Pendulum two-level leakage audit](frontier_wave7_165_leech_pendulum_two_level_leakage_audit.md)
+- [Transition-selective exchange compiler](frontier_wave7_166_leech_transition_selective_exchange_compiler.md)
+- [Selective-exchange Trotter budget](frontier_wave7_167_leech_selective_exchange_trotter_budget.md)
+- [Exact free-fermion stress-lane evolution](frontier_wave7_168_leech_free_fermion_matchgate_evolution.md)
+- [Passive-capacitance sign no-go](frontier_wave7_169_leech_passive_capacitance_sign_no_go.md)
+- [Exact transformer recovery](frontier_wave7_170_leech_transformer_capacitance_recovery.md)
+- [Transformer conditioning and tolerance](frontier_wave7_171_leech_transformer_conditioning_tolerance.md)
+- [Integral hardware-basis search](frontier_wave7_172_leech_integral_hardware_basis_search.md)
+- [Hardware-basis Pareto frontier](frontier_wave7_173_leech_hardware_basis_pareto_frontier.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

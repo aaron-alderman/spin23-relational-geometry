@@ -95,9 +95,69 @@ control range up to \(5.52\times10^9\) by \(N=64\). The naïve clock route is
 therefore rejected in favor of a rotor-native or multiscale design.
 Wave 7.160 supplies the first rotor-native mode: its fixed-strength gap
 converges to 0.8784249807 and reaches \(1.21\times10^{-7}\) relative accuracy
-by cutoff \(N=4\). Local locking is therefore viable; collective interwire
-gap scaling, spatial hardware locality and the infrared Leech edge remain
-unproved.
+by cutoff \(N=4\). Wave 7.161 joins these modes into ideal strips through 32
+wires without gap collapse and leaves exactly 24 modes per open edge, while
+periodic closure removes them. Local locking and ideal finite-strip mode
+counting are therefore viable; thermodynamic local-perturbation stability,
+spatial hardware locality and the infrared Leech edge remain unproved.
+Wave 7.162 freezes the missing edge measurements: spatially resolved
+chirality, \(1/L\) onsets, Casimir ratio, thermal Hall slope, exactly 24
+weight-one currents, no norm-two roots and the periodic-closure control.
+Wave 7.163 adds a sourced thermodynamic statement at fixed cutoff: some
+nonzero bounded local-perturbation interval preserves the periodic bulk gap
+uniformly in volume. Its numerical radius and uniformity as \(N\to\infty\)
+remain a 72-setting experimental scan, and the theorem does not cover the
+open chiral edge.
+Wave 7.164 fixes one quantitative stress axis inside that scan: projected
+nearest-neighbor excitation hopping closes the bulk band exactly at
+\(|t|/\Delta=1/2\), with three stronger-coupling points held out from the
+low-strength dispersion fit.
+Wave 7.165 then audits the physical projection: a natural static
+\(\sin\theta\sin\theta\) coupler is leakage-limited to
+\(t_{\rm eff}/\Delta\approx0.1956\) under the declared one-percent
+first-order proxy. Stronger held-out points require engineered selective
+exchange or a multilevel model.
+Wave 7.166 closes the logical selective-exchange primitive at finite cutoff:
+an eigenbasis rotation followed by a two-label Givens gate has zero ideal
+leakage. Its platform decomposition, hardware fidelity and overlapping-bond
+Trotter error remain open. Wave 7.167 quantifies the latter in the
+one-excitation sector: short-time first-order runs need 9–21 steps, whereas
+the strongest long-time 744-cell point exceeds 1.6 million logical gates and
+should use analog, matchgate or higher-order evolution.
+Wave 7.168 closes the named matchgate branch for the ideal selected-subspace
+chain: an open-boundary sine transform, diagonal mode phases and its inverse
+give zero Trotter error with a \(M^2+144M\) logical upper bound. At 744 cells
+the 660672-gate count beats first-order brickwork from 746 steps onward. This
+is an exact free-fermion null model for dynamic calibration, not progress
+beyond Gate A and not a Monster discriminator.
+Wave 7.169 then audits the most literal superconducting implementation and
+finds a three-channel sign-frustration certificate: no local polarity choice
+can make the required (C\propto K) into an ordinary positive-capacitor node
+matrix. Gate A therefore requires mediated signed mixing, the original
+many-field cosine basis or a digitally verified effective isometry; a bare
+24-node capacitive schematic is excluded.
+Wave 7.170 supplies the ideal passive recovery: an exact rational
+(K=LDL^T) factorization uses 24 positive capacitors behind a signed linear
+mode transformer. Its dynamic range is only 16 and every transformer ratio
+has magnitude at most (1/2), but 242 of 276 possible mixing entries are
+nonzero. The next Gate-A object is therefore a measured 24-port admittance
+matrix, followed by a parasitic and finite-bandwidth stability analysis.
+Wave 7.171 performs the first such spectral audit in the recorded basis:
+(\kappa_2(K)=31816.43), so a uniform one-percent worst-case inverse guarantee
+has the sufficient threshold (\delta\leq3.11\times10^{-7}). This adversarial
+bound does not prove impracticality, but it makes full-matrix calibration and
+integral-basis co-optimization mandatory parts of a credible Gate-A design.
+Wave 7.172 executes the first frozen co-ordinate search. Among 3000 integral
+candidates, a certified determinant-(-1) basis reduces the condition number
+to 740.225, improving the adversarial inverse tolerance by a factor of 42.98,
+while retaining 24 norm-four Leech basis vectors. Its Gram matrix is slightly
+denser, so the remaining design choice is a Pareto trade among calibration,
+transformer mixing and physical routing rather than a missing basis.
+Wave 7.173 freezes that Pareto choice as four sub-1000-condition candidates.
+The selection rule now consumes measured admittance covariance, mixer loss,
+pair-routing cost and signed-ratio range. Until a platform supplies those
+weights, no basis is called universally optimal; after it does, Gate A has a
+deterministic coordinate-selection procedure.
 Wave 7.142 then uses one shared dynamical sign per wire bond to gauge the
 diagonal inversion of all 24 channels and verifies all 1152 mutual null
 pairings. The remaining gate is microscopic realization plus infrared sector
@@ -135,3 +195,16 @@ P4 questions.
 - [Wrap-free rotor-cutoff ladder](frontier_wave7_158_leech_wrap_free_rotor_cutoff_ladder.md)
 - [Clock-locking gap scaling](frontier_wave7_159_leech_clock_locking_gap_scaling.md)
 - [Rotor-native pendulum-gap convergence](frontier_wave7_160_leech_rotor_native_pendulum_gap.md)
+- [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
+- [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
+- [Fixed-cutoff local gap stability](frontier_wave7_163_leech_fixed_cutoff_local_gap_stability.md)
+- [Pendulum excitation-hopping stress lane](frontier_wave7_164_leech_pendulum_excitation_hopping_stress_lane.md)
+- [Pendulum two-level leakage audit](frontier_wave7_165_leech_pendulum_two_level_leakage_audit.md)
+- [Transition-selective exchange compiler](frontier_wave7_166_leech_transition_selective_exchange_compiler.md)
+- [Selective-exchange Trotter budget](frontier_wave7_167_leech_selective_exchange_trotter_budget.md)
+- [Exact free-fermion stress-lane evolution](frontier_wave7_168_leech_free_fermion_matchgate_evolution.md)
+- [Passive-capacitance sign no-go](frontier_wave7_169_leech_passive_capacitance_sign_no_go.md)
+- [Exact transformer recovery](frontier_wave7_170_leech_transformer_capacitance_recovery.md)
+- [Transformer conditioning and tolerance](frontier_wave7_171_leech_transformer_conditioning_tolerance.md)
+- [Integral hardware-basis search](frontier_wave7_172_leech_integral_hardware_basis_search.md)
+- [Hardware-basis Pareto frontier](frontier_wave7_173_leech_hardware_basis_pareto_frontier.md)

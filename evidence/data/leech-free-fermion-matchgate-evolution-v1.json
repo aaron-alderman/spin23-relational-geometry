@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "leech-free-fermion-matchgate-evolution-v1",
+  "date": "2026-10-25",
+  "inputs": [
+    "leech-pendulum-excitation-hopping-stress-lane-v1",
+    "leech-transition-selective-exchange-compiler-v1",
+    "leech-selective-exchange-trotter-budget-v1"
+  ],
+  "sources": [
+    {
+      "name": "Knill, Fermionic Linear Optics and Matchgates",
+      "url": "https://arxiv.org/abs/quant-ph/0108033"
+    },
+    {
+      "name": "Jozsa and Miyake, Matchgates and classical simulation",
+      "url": "https://arxiv.org/abs/0804.4050"
+    }
+  ],
+  "model": {
+    "sector": "the selected two-level pendulum subspace on an open M-cell chain",
+    "hamiltonian": "H=Delta sum_j n_j+t sum_j(a_j^dagger a_{j+1}+a_{j+1}^dagger a_j)",
+    "mapping": "the nearest-neighbour hard-core chain maps by Jordan-Wigner to number-conserving free fermions; in the one-excitation sector this is the open path adjacency problem",
+    "sineTransform": "S_jk=sqrt(2/(M+1)) sin((j+1)(k+1)pi/(M+1))",
+    "modeEnergies": "epsilon_k=Delta+2t cos((k+1)pi/(M+1))",
+    "evolution": "U(T)=S diag(exp(-i T epsilon_k)) S^T",
+    "trotterError": 0
+  },
+  "logicalCompiler": {
+    "assumption": "arbitrary-pair logical fermionic Givens rotations; hardware routing and synthesis precision are excluded",
+    "forwardSineTransformUpperBound": "M(M-1)/2 Givens rotations",
+    "modePhases": "M single-mode phases",
+    "inverseSineTransformUpperBound": "M(M-1)/2 Givens rotations",
+    "modeEvolutionUpperBound": "M^2 logical mode gates",
+    "pendulumBasisInputOutput": "144M local Givens rotations from the 72-Givens per-cell transform in Wave 7.166",
+    "totalUpperBound": "M^2+144M logical gates"
+  },
+  "resourceLadder": [
+    {"cells":24,"modeEvolutionGates":576,"localBasisInputOutputGates":3456,"totalLogicalGates":4032},
+    {"cells":72,"modeEvolutionGates":5184,"localBasisInputOutputGates":10368,"totalLogicalGates":15552},
+    {"cells":168,"modeEvolutionGates":28224,"localBasisInputOutputGates":24192,"totalLogicalGates":52416},
+    {"cells":744,"modeEvolutionGates":553536,"localBasisInputOutputGates":107136,"totalLogicalGates":660672}
+  ],
+  "largestChainComparison": {
+    "cells": 744,
+    "firstOrderExchangeGatesPerStep": 743,
+    "matchgateWinsWhenTrotterStepsAtLeast": 746,
+    "exactCrossoverBeforeCeiling": 745.0013458950202,
+    "shortBenchmark": {"timeTimesGap":1,"hoppingOverGap":0.45,"firstOrderTotal":122739,"matchgateTotal":660672,"selected":"first-order brickwork"},
+    "longBenchmark": {"timeTimesGap":10,"hoppingOverGap":0.45,"firstOrderTotal":1611711,"matchgateTotal":660672,"firstOrderOverMatchgate":2.4395025065387967,"selected":"exact matchgate compiler"}
+  },
+  "commissioning": {
+    "prediction": "site-resolved amplitudes and phases must equal S diag(exp(-iT epsilon_k)) S^T applied to the prepared state",
+    "nullUse": "the exactly soluble evolution is a baseline for separating ordinary free propagation, basis leakage, disorder and edge effects from any later Monster-specific claim",
+    "failureMeaning": "disagreement beyond calibrated preparation, synthesis and measurement errors falsifies the implemented selected-subspace hopping model; it is not evidence for moonshine by itself"
+  },
+  "established": "the ideal selected-exchange stress lane has an exact number-conserving free-fermion/matchgate compilation with zero product-formula error and an explicit O(M^2) logical resource upper bound",
+  "boundary": "This result is exact only for the ideal selected two-level nearest-neighbour chain. It neither realizes the Leech lattice nor the Monster, and it excludes multilevel leakage, finite-precision gate synthesis, connectivity routing, disorder and hardware noise. Matchgate simulability makes it a calibration null model, not a quantum-advantage or new-physics result."
+}

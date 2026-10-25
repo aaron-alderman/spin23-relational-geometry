@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "leech-transformer-capacitance-recovery-v1",
+  "date": "2026-10-25",
+  "inputs": ["leech-explicit-k-matrix-v1", "leech-passive-capacitance-sign-no-go-v1"],
+  "target": "realize C=K, and hence a charging form proportional to n^T K^-1 n, using positive diagonal capacitors behind an ideal signed linear transformer",
+  "factorization": {
+    "identity": "K=L D L^T",
+    "algorithm": "exact rational unpivoted LDL^T in the recorded channel order",
+    "transformerCoordinates": "x=L^T phi",
+    "energyIdentity": "(1/2) dot(x)^T D dot(x)=(1/2) dot(phi)^T K dot(phi)",
+    "diagonalCapacitances": ["4","3","8/3","2","2","3/2","2","3/2","3/2","4/3","1","7/6","15/14","9/10","3/4","3/4","20/27","28/45","15/28","7/15","8/21","3/8","1/3","1/4"],
+    "allDiagonalCapacitancesPositive": true,
+    "diagonalDynamicRange": 16,
+    "strictLowerTriangleNonzeroRatios": 242,
+    "strictLowerTriangleAvailableEntries": 276,
+    "distinctSignedRatioValues": 34,
+    "maximumAbsoluteOffDiagonalRatio": "1/2",
+    "maximumRatioNumeratorMagnitude": 9,
+    "maximumRatioDenominator": 28
+  },
+  "interpretation": {
+    "recovery": "the capacitor-only node no-go does not force active energy injection: an ideal lossless signed mode transformer followed by 24 positive capacitors realizes the exact quadratic form",
+    "cost": "the particular exact factor is dense, using 242 of 276 possible lower-triangular mixing coefficients, so physical layout, bandwidth, parasitics and transformer synthesis become the next bottleneck",
+    "measurement": "measure the 24-port small-signal capacitance/admittance matrix and compare every entry with a globally scaled K before adding Josephson nonlinearities",
+    "passRule": "after one fitted positive global scale, the residual matrix must lie inside a preregistered fabrication-and-readout error norm and remain positive definite",
+    "failMeaning": "the proposed mixing network does not implement the dual Leech quadratic form; downstream pendulum and edge claims do not inherit Leech provenance"
+  },
+  "established": "an exact passive-component recovery exists in the ideal signed-transformer abstraction, with positive capacitances spanning only a factor of 16 and transformer coefficients of magnitude at most one half",
+  "boundary": "This is an algebraic network synthesis, not a fabricated circuit. Ideal multiport transformer coordinates are an extra resource; the record does not supply a planar local layout, finite-bandwidth implementation, parasitic tolerance, quantum-noise budget or proof that the full Josephson/coupled-wire device flows to the Leech edge."
+}

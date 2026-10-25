@@ -78,3 +78,5 @@ showing 24 net chiral edge modes and the Leech \(K\)-matrix response.
 - [Wrap-free cutoff ladder](frontier_wave7_158_leech_wrap_free_rotor_cutoff_ladder.md)
 - [Integral dual-basis compiler](frontier_wave7_139_leech_unimodular_dual_basis_compiler.md)
 - [Monster laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
+- [Rotor-strip bulk gap and edge count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
+- [Passive-capacitance sign no-go](frontier_wave7_169_leech_passive_capacitance_sign_no_go.md)

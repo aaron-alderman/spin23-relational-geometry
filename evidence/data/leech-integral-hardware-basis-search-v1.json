@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "leech-integral-hardware-basis-search-v1",
+  "date": "2026-10-25",
+  "input": "leech-explicit-k-matrix-v1",
+  "search": {
+    "algorithm": "deterministic random-permutation Gram-LLL scan",
+    "executable": "scripts/search-leech-hardware-basis.mjs",
+    "seed": 1729,
+    "permutationTrials": 1000,
+    "lovaszDeltaValues": [0.75, 0.9, 0.99],
+    "candidatesEvaluated": 3000,
+    "objective": "minimum observed two-norm condition number; density and transform complexity recorded but not scalarized",
+    "globalOptimalityClaimed": false
+  },
+  "baseline": {
+    "minimumEigenvalue": 0.000750631043666106,
+    "maximumEigenvalue": 23.882400791660626,
+    "conditionNumber": 31816.430979217457,
+    "offDiagonalNonzeroPairs": 191
+  },
+  "winner": {
+    "trialZeroBased": 668,
+    "lovaszDelta": 0.75,
+    "inputPermutationZeroBased": [11,22,1,13,21,12,0,16,6,7,19,10,17,20,9,5,14,3,15,18,4,2,8,23],
+    "lllIterations": 75,
+    "minimumEigenvalue": 0.035086598639262244,
+    "maximumEigenvalue": 25.971977881768918,
+    "conditionNumber": 740.2250115149669,
+    "conditionImprovementFactor": 42.98210744608722,
+    "allBasisVectorNorms": 4,
+    "gramMaximumAbsoluteEntry": 4,
+    "offDiagonalNonzeroPairs": 195,
+    "unimodularTransformNonzeroEntries": 160,
+    "unimodularTransformMaximumAbsoluteEntry": 7,
+    "commonInductanceFrequencyScaleRatio": 27.20707649702494,
+    "positiveDefinitenessSufficientRelativeDelta": 0.0013509405713721693,
+    "relativeDeltaForAtMostOnePercentWorstCaseInverseError": 0.000013375649221506627
+  },
+  "decision": {
+    "selected": "replace the catalogue basis by the recorded trial-668 integral basis for the next transformer and calibration design pass",
+    "gain": "the adversarial one-percent inverse-metric tolerance relaxes by the same factor 42.98, from 3.11e-7 to 1.34e-5",
+    "tradeoff": "the reduced Gram matrix has four more nonzero off-diagonal pairs, and the coordinate transform is moderately dense; condition number improved without a sparsity improvement",
+    "next": "factor the winning Gram matrix, quantify its transformer network, and search the Pareto frontier rather than treating condition number alone as the design objective"
+  },
+  "established": "a verified GL(24,Z)-equivalent Leech basis in the declared finite scan reduces the recorded-basis condition number by a factor of about 43 while retaining 24 minimum-norm-four basis vectors",
+  "boundary": "This is the best observed candidate in a finite deterministic heuristic scan, not a proof of global or local optimality. Euclidean conditioning is a hardware-coordinate criterion rather than a lattice invariant, and the improvement does not establish a realizable layout, parasitic tolerance or the Leech infrared phase."
+}

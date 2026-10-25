@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "leech-pendulum-two-level-leakage-audit-v1",
+  "date": "2026-10-25",
+  "input": "leech-rotor-native-pendulum-gap-v1",
+  "pendulumCutoff": 8,
+  "lowSpectrum": {
+    "energies": [0.4649351477121849,1.3433601283990833,1.8536343543207976,3.0565044112661015],
+    "groundReferenced": [0.0,0.8784249806868983,1.3886992066086128,2.5915692635539167],
+    "firstTransition": 0.8784249806868983,
+    "secondTransitionFromFirst": 0.5102742259217145,
+    "anharmonicity": -0.3681507547651839
+  },
+  "naturalSinThetaMatrixElements": {
+    "absolute0To1": 0.5661648603890705,
+    "absolute0To3": 0.13596037963991678,
+    "absolute0To5": 0.013439771995629476,
+    "absolute1To2": 0.4576109126766232,
+    "absolute1To4": 0.4204224442392932,
+    "groundTotalSinSquared": 0.3392087983182276,
+    "groundDesiredWeight": 0.32054264913937575,
+    "groundDesiredFraction": 0.9449715064249593,
+    "groundLeakageFraction": 0.05502849357504061
+  },
+  "staticSinSinCoupler": {
+    "formula": "V=J sin(theta_j) sin(theta_(j+1))",
+    "projectedHopping": "t_eff=J |<1|sin theta|0>|^2",
+    "maximumFirstOrderLeakageAmplitude": 0.1,
+    "pairCreationLimitedJ": 0.5480861801357041,
+    "higherLevelLimitedJ": 0.5360050777169609,
+    "selectedMaximumJ": 0.5360050777169609,
+    "selectedMaximumEffectiveHopping": 0.17181248756355164,
+    "selectedMaximumEffectiveHoppingOverGap": 0.1955915318223306,
+    "pairCreationLeakageProbabilityProxy": 0.009564011830151441,
+    "oneToTwoLeakageProbabilityProxy": 0.010000000000000002
+  },
+  "consequence": {
+    "naturalStaticCalibrationRange": "the excitation-hopping lane through t/Delta approximately 0.19 can be attempted with the natural sin-sin coupler under the declared perturbative leakage proxy",
+    "strongStressRequirement": "the held-out t/Delta values 0.3, 0.4 and 0.45 require a transition-selective exchange, Floquet rotating-wave construction, or a full multilevel simulation",
+    "forbiddenInference": "the exact two-level critical point t/Delta=1/2 is not a prediction of the unmodified static sin-sin rotor Hamiltonian"
+  },
+  "established": "a numerical operator-level dictionary from the rotor pendulum to the projected hopping model, including the first leakage-limited analog range",
+  "boundary": "The one-percent values are squared first-order admixture proxies, not rigorous long-time leakage bounds. Drive envelopes, counter-rotating terms, accumulated coherent error and many-cell resonances require full multilevel dynamics."
+}

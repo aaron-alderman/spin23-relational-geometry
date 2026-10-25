@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "leech-hardware-basis-pareto-frontier-v1",
+  "date": "2026-10-25",
+  "input": "leech-integral-hardware-basis-search-v1",
+  "scan": {
+    "seed": 1729,
+    "permutationTrials": 1000,
+    "lovaszDeltaValues": [0.75, 0.9, 0.99],
+    "candidatesEvaluated": 3000,
+    "paretoObjectives": ["conditionNumber", "gramOffDiagonalPairs", "transformNonzeroEntries"]
+  },
+  "sub1000EngineeringShortlist": [
+    {"id":"precision-first","trialZeroBased":668,"lovaszDelta":0.75,"conditionNumber":740.2250115149669,"gramOffDiagonalPairs":195,"transformNonzeroEntries":160,"transformMaximumAbsoluteEntry":7},
+    {"id":"transform-first","trialZeroBased":160,"lovaszDelta":0.75,"conditionNumber":916.4789132966196,"gramOffDiagonalPairs":200,"transformNonzeroEntries":143,"transformMaximumAbsoluteEntry":7},
+    {"id":"gram-first","trialZeroBased":43,"lovaszDelta":0.75,"conditionNumber":953.0317686668852,"gramOffDiagonalPairs":179,"transformNonzeroEntries":184,"transformMaximumAbsoluteEntry":8},
+    {"id":"balanced-small-ratio","trialZeroBased":209,"lovaszDelta":0.75,"conditionNumber":954.158527037057,"gramOffDiagonalPairs":182,"transformNonzeroEntries":165,"transformMaximumAbsoluteEntry":6}
+  ],
+  "derivedTolerances": [
+    {"id":"precision-first","relativeDeltaForOnePercentWorstCaseInverse":0.000013375649221506627},
+    {"id":"transform-first","relativeDeltaForOnePercentWorstCaseInverse":0.000010803292858529123},
+    {"id":"gram-first","relativeDeltaForOnePercentWorstCaseInverse":0.000010388940247878148},
+    {"id":"balanced-small-ratio","relativeDeltaForOnePercentWorstCaseInverse":0.00001037667202928573}
+  ],
+  "selectionContract": {
+    "precisionLimitedPlatform": "select precision-first when calibration error dominates routing and mixer count",
+    "couplerCountLimitedPlatform": "select transform-first when implementing the integral coordinate mixer dominates",
+    "gramRoutingLimitedPlatform": "select gram-first when physical pair routing of the transformed quadratic form dominates",
+    "turnsRatioLimitedPlatform": "select balanced-small-ratio when the maximum signed transformer ratio is the binding fabrication constraint",
+    "forbidden": "do not declare one basis universally optimal without measured platform cost weights"
+  },
+  "missingPhysicalDictionary": {
+    "requiredMeasurements": [
+      "error covariance of the calibrated 24-port admittance matrix",
+      "loss and bandwidth cost per nonzero transformer coefficient",
+      "layout or control cost per nonzero Gram pair",
+      "penalty for the largest signed turns or parametric-coupling ratio"
+    ],
+    "use": "convert the abstract Pareto frontier into a platform-specific expected spectral and inverse-metric error"
+  },
+  "established": "the finite scan does not select one universal hardware basis; it supplies four mutually nondominated sub-1000-condition designs tied to explicit physical bottlenecks",
+  "boundary": "The shortlist is Pareto-nondominated within the declared scan objectives and candidate set, not over all GL(24,Z). The scalar hardware costs and correlated error model must be measured on a chosen platform before one design can be selected."
+}

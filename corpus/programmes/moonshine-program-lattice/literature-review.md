@@ -510,6 +510,148 @@ relative modes gives \(\beta E_{\rm unit}\ge8.86675\), corresponding to a
 does not yet address collective interwire propagation, bulk-gap scaling or
 the extraction of 24 net chiral edge modes.
 
+The ideal finite strip is now compiled as well.
+[Wave 7.161](../frontier/wave-7/frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
+proves that the dual-basis bonds form a disjoint matching:
+\(24(Y-1)\) convergent rotor pendula gap all interior chiral modes while
+exactly 24 modes survive on each open boundary. Periodic closure leaves none.
+The ideal bulk gap remains 0.8784249807 through \(Y=32\); the one-percent
+whole-strip thermal energy scale at 10 mK rises only from 1.84753 GHz at
+\(Y=2\) to 2.65993 GHz at \(Y=32\). A finite-device Weyl bound controls
+globally bounded perturbations, but thermodynamic stability under extensive
+local perturbations and the edge dispersion remain open.
+
+Gate A now has a complete observable preregistration rather than only a
+construction. [Wave 7.162](../frontier/wave-7/frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)
+requires spatially separated velocity signs, \(|c_-|=24\) per edge, the
+dimensionless onsets \(f_1L/v=1\) and \(f_{\rm lattice}L/v=2\), Casimir ratio
+\(-1\), and signed thermal Hall slope
+\(2.2714347639\times10^{-11}\ {\rm W\,K^{-2}}\). Exactly 24 weight-one
+oscillator currents must appear with no norm-two lattice roots; the 196560
+norm-four primaries plus 324 oscillator states give 196884 states at weight
+two. Rooted Niemeier, nonchiral, generic \(c=24\), clock and premature
+Monster interpretations each fail a separate part of this record.
+
+Weak local interactions no longer leave the finite-cutoff bulk without a
+theorem. [Wave 7.163](../frontier/wave-7/frontier_wave7_163_leech_fixed_cutoff_local_gap_stability.md)
+maps the periodic \(N=8\) rotor product into Yarotsky's noninteracting,
+nondegenerate and uniformly gapped finite-spin setting. The sourced result
+implies a nonzero perturbation-strength neighborhood, uniform in bulk volume,
+for bounded finite-range local terms. The threshold is not numerically known
+here and is not proved uniform as \(N\to\infty\); the open chiral edge is also
+outside the bulk theorem. A 72-setting cutoff-width-strength scan is frozen
+to measure the missing radius rather than infer it from the theorem.
+
+One local perturbation direction now has an exact radius.
+[Wave 7.164](../frontier/wave-7/frontier_wave7_164_leech_pendulum_excitation_hopping_stress_lane.md)
+projects each converged pendulum to its lowest doublet and couples neighboring
+excitations with hopping \(t\). The exact band
+\(E(k)=\Delta+2t\cos k\) closes at
+\(|t_c|=\Delta/2=0.4392124903\), independent of even periodic size.
+Low-strength data calibrate the band and the 0.3, 0.4 and 0.45
+\(|t|/\Delta\) points are held out. This is a quantitative extensive-local
+stress test, not the general Yarotsky radius or a substitute for higher-level
+leakage measurements.
+
+The physical operator dictionary narrows that lane further.
+[Wave 7.165](../frontier/wave-7/frontier_wave7_165_leech_pendulum_two_level_leakage_audit.md)
+diagonalizes the \(N=8\) rotor with eigenvectors and evaluates the natural
+\(\sin\theta\) matrix elements. The desired \(0\to1\) transition carries
+94.4972% of the ground-state \(\sin^2\theta\) weight, but negative
+anharmonicity and a large \(1\to2\) matrix element restrict a static
+\(\sin\theta_j\sin\theta_{j+1}\) coupler to
+\(t_{\rm eff}/\Delta\lesssim0.1956\) under the declared one-percent
+first-order leakage proxy. Stronger stress points require transition-selective
+or Floquet exchange, or a full multilevel prediction.
+
+The strong lane now has an exact digital alternative.
+[Wave 7.166](../frontier/wave-7/frontier_wave7_166_leech_transition_selective_exchange_compiler.md)
+diagonalizes each 17-level pendulum and applies a two-register Givens rotation
+only on \(|1,0\rangle,|0,1\rangle\), giving zero ideal leakage in the
+finite-cutoff model. Reflection parity lowers the local basis-change upper
+bound from 136 to 72 Givens rotations. A 744-cell chain needs 743 selective
+exchanges per bond step and, under a conservative one-percent telescoping
+budget, per-exchange operator error below \(1.35\times10^{-5}\). Platform
+decomposition and overlapping-bond Trotter error remain open.
+
+The one-excitation Trotter cost is now explicit.
+[Wave 7.167](../frontier/wave-7/frontier_wave7_167_leech_selective_exchange_trotter_budget.md)
+derives
+\(\lVert[A,B]\rVert=2t^2\cos[\pi/(M/2+1)]\) for the even--odd split.
+At 744 cells the coefficient is 1.999929. A one-percent first-order bound
+needs only 9–21 steps for \(T\Delta=1\) across the held-out stress range, but
+2,025 steps and 1.61 million logical gates at
+\(T\Delta=10,t/\Delta=0.45\). Short-time brickwork is retained; long-time
+work is routed to analog exchange, matchgates/free fermions or higher-order
+formulas. The bound is explicitly one-excitation only.
+
+That routing decision is now executable rather than aspirational.
+[Wave 7.168](../frontier/wave-7/frontier_wave7_168_leech_free_fermion_matchgate_evolution.md)
+uses the Jordan--Wigner/free-fermion form of the ideal selected chain and its
+open-boundary sine modes to compile
+\(U(T)=S\operatorname{diag}(e^{-iT\epsilon_k})S^T\) exactly. A generic
+logical upper bound is \(M^2+144M\) gates including pendulum-basis I/O. At
+744 cells this is 660672 gates, independent of simulated time, and becomes
+cheaper than first-order brickwork at 746 Trotter steps. It is 2.44 times
+smaller at the strongest long-time point. Matchgate simulability is treated
+as a calibration null model: it removes product-formula ambiguity but is not
+Monster evidence or quantum advantage.
+
+The corresponding literal circuit map has now been tested and rejected.
+[Wave 7.169](../frontier/wave-7/frontier_wave7_169_leech_passive_capacitance_sign_no_go.md)
+asks whether the dual-coordinate charging form
+\(n^TK^{-1}n/2\) can come from an ordinary positive-capacitor network, which
+would require a node capacitance matrix proportional to (K). The Leech
+matrix contains the sign-frustrated triangle
+\((K_{12},K_{25},K_{51})=(-2,-2,+2)\). Its positive edge product is invariant
+under every local polarity reversal, whereas three passive mutual-capacitance
+off-diagonals would have negative product. This is an exact no-go for the
+direct capacitor-only mapping, not for the Leech phase: it selects mediated
+signed couplers, the original many-field interactions or a digitally
+certified low-energy isometry.
+
+The no-go has a constructive passive recovery at the ideal-network level.
+[Wave 7.170](../frontier/wave-7/frontier_wave7_170_leech_transformer_capacitance_recovery.md)
+computes the exact rational factorization (K=LDL^T). A signed lossless
+mode transformer (x=L^T\phi) feeding 24 positive diagonal capacitors
+reproduces (C=K) exactly. The capacitor values span only a factor of 16 and
+every off-diagonal transformer ratio has magnitude at most (1/2), but the
+network is dense: 242 of 276 lower-triangular coefficients are nonzero. This
+turns the platform problem into a measurable 24-port admittance target while
+leaving layout, parasitics, bandwidth and the infrared Leech phase open.
+
+The first robustness number is less forgiving.
+[Wave 7.171](../frontier/wave-7/frontier_wave7_171_leech_transformer_conditioning_tolerance.md)
+finds (\kappa_2(K)=31816.43) in the recorded coordinates, corresponding to
+a 178.37 extreme frequency ratio under a common inductive scale. The standard
+inverse-perturbation bound demands relative matrix error below
+(3.11\times10^{-7}) for a uniform one-percent worst-case guarantee on
+(K^{-1}). This is an adversarial sufficient bound, not a per-component
+fabrication prediction; it selects full-matrix admittance calibration and a
+joint search over equivalent integral bases for conditioning, density and
+interaction locality.
+
+That integral-basis search has now produced a concrete improvement.
+[Wave 7.172](../frontier/wave-7/frontier_wave7_172_leech_integral_hardware_basis_search.md)
+tests 3000 candidates from 1000 frozen permutations and three LLL parameters.
+The best observed integral basis lowers the condition number from 31816.43 to
+740.225, a factor of 42.98, while all 24 basis vectors remain norm-four Leech
+minimal vectors. Exact reconstruction gives a unimodular transform with
+determinant (-1). The cost is not hidden: the Gram matrix has 195 rather than
+191 nonzero off-diagonal pairs and the transform has 160 nonzero entries.
+This is a better calibration basis, not a sparse-layout solution or an
+optimality theorem.
+
+The finite scan also resolves the basis-selection ambiguity into a physical
+dictionary rather than a single arbitrary score.
+[Wave 7.173](../frontier/wave-7/frontier_wave7_173_leech_hardware_basis_pareto_frontier.md)
+retains four mutually nondominated designs below condition number 1000:
+precision-first, transform-count-first, Gram-routing-first and
+small-ratio-balanced. Selecting among them requires measured admittance-error
+covariance, loss/bandwidth cost per mixer coefficient, routing cost per Gram
+pair and signed-ratio fabrication cost. The mathematical candidate set is now
+finite and executable; the remaining weights are platform data.
+
 The same carrier now has a quantitative dynamics record in
 [Wave 7.140](../frontier/wave-7/frontier_wave7_140_monster_edge_dynamics_and_transport_witness.md).
 For \(H=(2\pi\hbar v/L)(L_0-c/24)\), the Leech edge has a 24-fold weight-one

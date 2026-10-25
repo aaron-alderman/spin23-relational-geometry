@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "leech-pendulum-excitation-hopping-stress-lane-v1",
+  "date": "2026-10-25",
+  "input": "leech-rotor-native-pendulum-gap-v1",
+  "effectiveModel": {
+    "cellStates": "ground and first excited state of each converged rotor pendulum",
+    "unperturbedGap": 0.8784249806868974,
+    "perturbation": "V=t sum_j (b_j^dagger b_(j+1)+b_(j+1)^dagger b_j)",
+    "oneParticleDispersion": "E(k)=Delta+2t cos(k)",
+    "periodicEvenCellGap": "Delta-2|t|",
+    "criticalHopping": 0.4392124903434487
+  },
+  "periodicStressLadder": [
+    {"hoppingOverGap":0.00,"hopping":0.0,"gap":0.8784249806868974},
+    {"hoppingOverGap":0.01,"hopping":0.008784249806868975,"gap":0.8608564810731595},
+    {"hoppingOverGap":0.02,"hopping":0.01756849961373795,"gap":0.8432879814594215},
+    {"hoppingOverGap":0.05,"hopping":0.04392124903434488,"gap":0.7905824826182077},
+    {"hoppingOverGap":0.10,"hopping":0.08784249806868975,"gap":0.702739984549518},
+    {"hoppingOverGap":0.20,"hopping":0.1756849961373795,"gap":0.5270549884121385},
+    {"hoppingOverGap":0.30,"hopping":0.26352749420606925,"gap":0.351369992274759},
+    {"hoppingOverGap":0.40,"hopping":0.351369992274759,"gap":0.17568499613737945},
+    {"hoppingOverGap":0.45,"hopping":0.39529124130910387,"gap":0.08784249806868973},
+    {"hoppingOverGap":0.49,"hopping":0.43042824053657974,"gap":0.017568499613737965},
+    {"hoppingOverGap":0.50,"hopping":0.4392124903434487,"gap":0.0}
+  ],
+  "openChainAtHoppingOverGapPointFour": [
+    {"cells":24,"gap":0.1812263108138116},
+    {"cells":72,"gap":0.17633565247613298},
+    {"cells":168,"gap":0.17580641285805412},
+    {"cells":744,"gap":0.1756912442841896}
+  ],
+  "measurementProtocol": {
+    "preparation": "prepare one marked pendulum in its first excited state and all other bulk cells in their ground state",
+    "measurement": "record momentum-resolved oscillation frequencies and real-space spreading, fit E(k)=Delta+2t cos(k), and independently measure the many-body gap",
+    "heldOut": "fit Delta and t below t/Delta=0.2, then predict the band edge at 0.3, 0.4 and 0.45",
+    "falsifiers": [
+      "bandwidth differs from 4|t| beyond calibration tolerance",
+      "gap closes before the predicted band edge without resolved leakage from the two-level cell subspace",
+      "the fitted critical point drifts with even periodic system size",
+      "higher pendulum levels hybridize before the declared stress interval"
+    ]
+  },
+  "established": "an exactly solvable extensive local-perturbation lane with a quantitative gap closure at |t|=Delta/2 and a time-domain calibration protocol",
+  "boundary": "This threshold belongs only to the number-conserving two-level excitation-hopping family. It is not the general Yarotsky stability radius and does not include higher pendulum levels, arbitrary symmetry-breaking terms, the chiral edge, or the rotor continuum limit."
+}

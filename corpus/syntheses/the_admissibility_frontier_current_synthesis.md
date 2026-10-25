@@ -622,6 +622,76 @@ locking mode therefore survives the cutoff without quadratic rescaling; the
 remaining Gate-A uncertainty has moved to collective propagation, bulk-gap
 stability and chiral-edge scaling.
 
+The first collective layer also closes in the ideal finite strip. The
+[rotor-strip compiler](../programmes/frontier/wave-7/frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
+constructs a disjoint matching of \(24(Y-1)\) interior pendula and verifies
+that the fixed-strength bulk gap stays 0.8784249807 through 32 wires.
+Exactly 24 modes remain on each open edge, while periodic closure removes all
+48. This is the required finite mode topology, not yet its thermodynamic
+phase certificate: local extensive perturbations, chiral dispersion and
+central-charge extraction remain the live tests.
+
+Those edge tests are now preregistered in the [Leech chiral-dispersion
+protocol](../programmes/frontier/wave-7/frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md).
+Each boundary must separately show 24 same-sign modes, \(|c_-|=24\),
+\(f_1L/v=1\), first lattice onset \(2v/L\), Casimir ratio \(-1\), and thermal
+Hall slope \(2.2714347639\times10^{-11}\ {\rm W\,K^{-2}}\); periodic closure
+must remove the tower. The Leech-specific spectral discriminator is exactly
+24 weight-one currents with no norm-two lattice roots, followed by
+\(196560+324=196884\) weight-two states. This also enforces the stage
+boundary: 24 currents are correct at Gate A, while zero currents become
+correct only after the Monster extension.
+
+The periodic finite-cutoff bulk now also has a theorem-level stability
+bridge. The [local-gap stability ledger](../programmes/frontier/wave-7/frontier_wave7_163_leech_fixed_cutoff_local_gap_stability.md)
+checks the hypotheses of weakly interacting noninteracting-spin results:
+finite local dimension 17 at \(N=8\), a nondegenerate cell ground state,
+uniform gap 0.8784249807 and bounded finite-range perturbations. It follows
+that some nonzero local-strength neighborhood preserves the bulk gap
+independently of volume. No numerical radius or \(N\to\infty\) uniformity is
+claimed, and the open chiral edge is excluded. Those missing limits are
+promoted to a 72-setting cutoff-width-strength experiment.
+
+One axis through that stability neighborhood is exactly soluble. The
+[pendulum hopping lane](../programmes/frontier/wave-7/frontier_wave7_164_leech_pendulum_excitation_hopping_stress_lane.md)
+couples first-excited cell states into the band
+\(E(k)=\Delta+2t\cos k\). It predicts a volume-independent closure at
+\(|t_c|=\Delta/2=0.4392124903\), with 0.3, 0.4 and 0.45
+\(|t|/\Delta\) held out after low-strength calibration. This supplies a
+time-domain falsifier for excitation transport while remaining explicitly
+narrower than arbitrary local perturbations.
+
+The natural analog implementation does not inherit the whole exact band for
+free. The [two-level leakage audit](../programmes/frontier/wave-7/frontier_wave7_165_leech_pendulum_two_level_leakage_audit.md)
+finds negative pendulum anharmonicity \(-0.3681507548\) and sizable
+\(1\to2\) coupling. Although the desired \(0\to1\) line carries 94.4972% of
+the ground \(\sin^2\theta\) weight, a static
+\(\sin\theta_j\sin\theta_{j+1}\) coupler reaches only
+\(t_{\rm eff}/\Delta\approx0.1956\) before the leading first-order leakage
+proxy reaches one percent. The 0.3–0.45 held-out stress points are therefore
+typed as transition-selective/Floquet experiments, not natural-coupler
+predictions.
+
+The strong stress points nevertheless have an exact finite-cutoff digital
+route. The [transition-selective compiler](../programmes/frontier/wave-7/frontier_wave7_166_leech_transition_selective_exchange_compiler.md)
+works in the true 17-level pendulum eigenbasis and rotates only
+\(|1,0\rangle\leftrightarrow|0,1\rangle\), with zero ideal leakage.
+Reflection parity gives a 72-Givens upper bound per local basis transform.
+For 744 cells, 743 selective exchanges form one bond step and the conservative
+one-percent error allocation is \(1.35\times10^{-5}\) per exchange. The
+remaining translation is into a platform-native gate set and a controlled
+overlapping-bond evolution.
+
+That last digital cost is now bounded in the one-excitation sector. The
+[selective-exchange Trotter audit](../programmes/frontier/wave-7/frontier_wave7_167_leech_selective_exchange_trotter_budget.md)
+finds an exact even--odd commutator coefficient approaching two, independent
+of chain length. A one-percent first-order simulation at \(T\Delta=1\) needs
+9–21 steps across the held-out couplings, but the strongest
+\(T\Delta=10\) case reaches 2,025 steps and 1.61 million logical gates.
+Accordingly brickwork remains a commissioning instrument, while long-time
+dynamics select analog exchange, a matchgate/free-fermion compiler or a
+higher-order product formula.
+
 Nor is the resulting object dynamically static. The [edge dynamics and
 transport witness](../programmes/frontier/wave-7/frontier_wave7_140_monster_edge_dynamics_and_transport_witness.md)
 uses \(H=(2\pi\hbar v/L)(L_0-c/24)\): the Leech parent has 24 states at the

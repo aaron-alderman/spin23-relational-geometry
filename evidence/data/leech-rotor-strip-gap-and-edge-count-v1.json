@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "leech-rotor-strip-gap-and-edge-count-v1",
+  "date": "2026-10-25",
+  "input": "leech-rotor-native-pendulum-gap-v1",
+  "idealStrip": {
+    "channels": 24,
+    "modesPerWire": 48,
+    "bondRule": "pair R(y,I) with L(y+1,I) for every channel I",
+    "localPendulumCutoff": 8,
+    "singlePendulumGap": 0.8784249806868974,
+    "openBoundaryModes": "L(1,I) and R(Y,I), 24 on each boundary",
+    "periodicBoundaryModes": 0
+  },
+  "openStripLadder": [
+    {"wires":2,"totalChiralModes":96,"bulkPendula":24,"gappedChiralModes":48,"edgeModes":48,"betaEnergyUnitForOnePercentAnyBulkExcitation":8.86675169764199,"minimumEnergyUnitGHzAt10mK":1.847531279848843},
+    {"wires":3,"totalChiralModes":144,"bulkPendula":48,"gappedChiralModes":96,"edgeModes":48,"betaEnergyUnitForOnePercentAnyBulkExcitation":9.651912737160172,"minimumEnergyUnitGHzAt10mK":2.0111322951580064},
+    {"wires":4,"totalChiralModes":192,"bulkPendula":72,"gappedChiralModes":144,"edgeModes":48,"betaEnergyUnitForOnePercentAnyBulkExcitation":10.1118162899845,"minimumEnergyUnitGHzAt10mK":2.106960646794663},
+    {"wires":8,"totalChiralModes":384,"bulkPendula":168,"gappedChiralModes":336,"edgeModes":48,"betaEnergyUnitForOnePercentAnyBulkExcitation":11.073901945681285,"minimumEnergyUnitGHzAt10mK":2.307426770512371},
+    {"wires":16,"totalChiralModes":768,"bulkPendula":360,"gappedChiralModes":720,"edgeModes":48,"betaEnergyUnitForOnePercentAnyBulkExcitation":11.940115785968164,"minimumEnergyUnitGHzAt10mK":2.4879164492064967},
+    {"wires":32,"totalChiralModes":1536,"bulkPendula":744,"gappedChiralModes":1488,"edgeModes":48,"betaEnergyUnitForOnePercentAnyBulkExcitation":12.765648998371143,"minimumEnergyUnitGHzAt10mK":2.6599296604114766}
+  ],
+  "periodicChecks": [
+    {"wires":2,"bulkPendula":48,"gappedChiralModes":96,"edgeModes":0},
+    {"wires":4,"bulkPendula":96,"gappedChiralModes":192,"edgeModes":0},
+    {"wires":8,"bulkPendula":192,"gappedChiralModes":384,"edgeModes":0}
+  ],
+  "finiteDevicePerturbationBounds": [
+    {"globalNormOverGap":0.10,"certifiedGapLowerBound":0.7027399845495179},
+    {"globalNormOverGap":0.25,"certifiedGapLowerBound":0.4392124903434487},
+    {"globalNormOverGap":0.49,"certifiedGapLowerBound":0.01756849961373796}
+  ],
+  "established": "the ideal open strip factorizes into 24(Y-1) cutoff-stable rotor pendula plus exactly 48 unpaired boundary chiral modes, while periodic closure removes all boundary modes",
+  "boundary": "The finite-strip pairing and global-norm perturbation bounds do not prove thermodynamic stability under an extensive local perturbation, a microscopic velocity matrix, or the Leech edge CFT. Chiral dispersion and central charge still require dynamical finite-size measurements."
+}

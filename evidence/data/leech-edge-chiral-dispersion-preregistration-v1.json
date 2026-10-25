@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "leech-edge-chiral-dispersion-preregistration-v1",
+  "date": "2026-10-25",
+  "stage": "Gate A Leech edge before inversion orbifold and twisted condensation",
+  "universalTargets": {
+    "chiralCentralChargePerBoundaryMagnitude": 24,
+    "weightOneCurrentCount": 24,
+    "weightOneLatticeRootCount": 0,
+    "minimumLatticeNorm": 4,
+    "minimumVectorMultiplicity": 196560,
+    "weightTwoOscillatorCount": 324,
+    "weightTwoTotalCount": 196884,
+    "torusGroundStateDegeneracy": 1,
+    "thermalHallSlopeMagnitudeWPerK2": 2.271434763932794e-11
+  },
+  "dimensionlessFiniteSizeTargets": {
+    "firstCurrentFrequencyTimesLOverV": 1,
+    "firstLatticePrimaryFrequencyTimesLOverV": 2,
+    "casimirEnergyOverHFirstCurrentFrequency": -1,
+    "formula": "H=(h v/L)(L0-c/24), c=24"
+  },
+  "benchmark": {
+    "velocityMPerS": 100000,
+    "circumferencesM": [0.0005,0.001,0.002,0.004],
+    "firstCurrentFrequenciesMHz": [200,100,50,25],
+    "firstLatticePrimaryFrequenciesMHz": [400,200,100,50],
+    "casimirFrequenciesMHz": [-200,-100,-50,-25]
+  },
+  "spatialChirality": {
+    "leftBoundary": {"modes":24,"velocitySign":-1,"thermalHallSign":-1},
+    "rightBoundary": {"modes":24,"velocitySign":1,"thermalHallSign":1},
+    "periodicStripBoundaryModes":0,
+    "warning": "summing both open boundaries gives zero net chirality and is not a valid single-edge measurement"
+  },
+  "impostorRejections": [
+    {"candidate":"nonchiral 24-boson boundary","fails":"each spatial boundary contains both velocity signs and has zero local chiral thermal response"},
+    {"candidate":"generic chiral c=24 edge","fails":"need not have exactly 24 weight-one states, zero norm-two lattice roots, the Leech Gram response, or 196560 norm-four vectors"},
+    {"candidate":"rooted Niemeier lattice edge","fails":"norm-two roots add weight-one vertex currents, so dim V1 exceeds 24"},
+    {"candidate":"24 decoupled cyclic clocks","fails":"does not reproduce the 1/L conformal tower, Casimir ratio and Leech integral response"},
+    {"candidate":"premature Monster claim","fails":"Gate A must have 24 Leech currents; the zero-current target occurs only after the orbifold extension"}
+  ],
+  "protocol": {
+    "sizes": 4,
+    "requiredMeasurements": [
+      "spatially resolved signs of all 24 low-energy group velocities on each edge",
+      "1/L scaling of the current and first lattice-primary onsets",
+      "Casimir coefficient after fitting and subtracting nonuniversal extensive and constant terms",
+      "signed thermal Hall slope on each boundary",
+      "weight-one count and absence of additional norm-two vertex currents",
+      "periodic-closure control with no boundary tower"
+    ],
+    "passMeaning": "laboratory Leech-edge candidate at Gate A, conditional on the independently measured Leech Gram form and bulk gap",
+    "notYetMonster": true
+  },
+  "established": "a quantitative, spatially resolved finite-size and transport preregistration for promoting the ideal rotor strip to a Leech-edge candidate",
+  "boundary": "These are exact continuum targets and benchmark values, not experimental observations. Matching them does not establish the inversion orbifold, twisted-sector extension, Monster operator algebra, or selection by nature."
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "leech-selective-exchange-trotter-budget-v1",
+  "date": "2026-10-25",
+  "input": "leech-transition-selective-exchange-compiler-v1",
+  "source": {
+    "name": "Childs-Su-Tran-Wiebe-Zhu, A Theory of Trotter Error",
+    "url": "https://arxiv.org/abs/1912.08854"
+  },
+  "sector": "one excitation on an open even-length chain",
+  "split": {
+    "A": "selective exchanges on bonds (0,1),(2,3),...",
+    "B": "selective exchanges on bonds (1,2),(3,4),...",
+    "onsite": "Delta times identity in the one-excitation sector and therefore commutes with A and B",
+    "commutatorNorm": "||[A,B]||=2 t^2 cos[pi/(M/2+1)] for even M divisible by four"
+  },
+  "commutatorLadderWithoutTSquared": [
+    {"cells":24,"coefficient":1.941883634852104},
+    {"cells":72,"coefficient":1.992794977085053},
+    {"cells":168,"coefficient":1.9986341202860458},
+    {"cells":744,"coefficient":1.999929061906169}
+  ],
+  "firstOrderBound": {
+    "formula": "error <= T^2 ||[A,B]||/(2r)",
+    "operatorErrorBudget": 0.01,
+    "largestChainCells": 744,
+    "largestChainExchangeGatesPerStep": 743,
+    "inputOutputLocalGivens": 107136
+  },
+  "largestChainBudget": [
+    {"timeTimesGap":1,"hoppingOverGap":0.30,"trotterSteps":9,"exchangeGates":6687,"totalLogicalGatesIncludingInputOutput":113823},
+    {"timeTimesGap":1,"hoppingOverGap":0.40,"trotterSteps":16,"exchangeGates":11888,"totalLogicalGatesIncludingInputOutput":119024},
+    {"timeTimesGap":1,"hoppingOverGap":0.45,"trotterSteps":21,"exchangeGates":15603,"totalLogicalGatesIncludingInputOutput":122739},
+    {"timeTimesGap":5,"hoppingOverGap":0.30,"trotterSteps":225,"exchangeGates":167175,"totalLogicalGatesIncludingInputOutput":274311},
+    {"timeTimesGap":5,"hoppingOverGap":0.40,"trotterSteps":400,"exchangeGates":297200,"totalLogicalGatesIncludingInputOutput":404336},
+    {"timeTimesGap":5,"hoppingOverGap":0.45,"trotterSteps":507,"exchangeGates":376701,"totalLogicalGatesIncludingInputOutput":483837},
+    {"timeTimesGap":10,"hoppingOverGap":0.30,"trotterSteps":900,"exchangeGates":668700,"totalLogicalGatesIncludingInputOutput":775836},
+    {"timeTimesGap":10,"hoppingOverGap":0.40,"trotterSteps":1600,"exchangeGates":1188800,"totalLogicalGatesIncludingInputOutput":1295936},
+    {"timeTimesGap":10,"hoppingOverGap":0.45,"trotterSteps":2025,"exchangeGates":1504575,"totalLogicalGatesIncludingInputOutput":1611711}
+  ],
+  "designDecision": {
+    "shortTime": "first-order brickwork is a finite commissioning path",
+    "longTime": "the conservative gate count exceeds one million at the strongest 744-cell benchmark, selecting native analog exchange, free-fermion/matchgate compilation, or a higher-order product formula",
+    "heldOutCheck": "compare measured digital error against the commutator bound as the step number is doubled"
+  },
+  "established": "an explicit one-excitation even-odd commutator and conservative first-order Trotter resource budget for the selective exchange lane",
+  "boundary": "The norm and budget apply only to the one-excitation sector. Many-excitation operator norms, hardware gate error, higher-order formulas and analog exchange require separate analyses; the bound is sufficient and need not be tight."
+}

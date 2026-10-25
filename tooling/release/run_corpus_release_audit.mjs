@@ -22,6 +22,10 @@ const head = git(['rev-parse', 'HEAD']);
 const tree = git(['rev-parse', 'HEAD^{tree}']);
 const steps = [];
 const generators = [
+  // Source-derived identities must be current before any graph records their
+  // hashes. This makes a clean release converge even after authorial prose
+  // changes, rather than assuming a separately refreshed manifest.
+  ['tooling/indexing/refresh_corpus_entry_surfaces.mjs', '--write'],
   ['scripts/generate-frontier-wave-gate-audit.mjs', '--write'],
   ['scripts/generate-physics-math-adjacency-candidates.mjs', '--write'],
   ['scripts/generate-terminal-neighbourhood-candidates.mjs', '--write'],

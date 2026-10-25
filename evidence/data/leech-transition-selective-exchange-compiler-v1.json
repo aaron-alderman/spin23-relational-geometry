@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "leech-transition-selective-exchange-compiler-v1",
+  "date": "2026-10-25",
+  "inputs": [
+    "leech-rotor-native-pendulum-gap-v1",
+    "leech-pendulum-excitation-hopping-stress-lane-v1",
+    "leech-pendulum-two-level-leakage-audit-v1"
+  ],
+  "localRegister": {
+    "rotorCutoffN": 8,
+    "dimension": 17,
+    "binaryQubitsCeiling": 5,
+    "invalidBinaryStates": 15,
+    "eigenbasisOrthogonalityResidual": 7.771561172376096e-16,
+    "eigenEquationResidual": 1.4210854715202004e-14,
+    "diagonalizationResidual": 1.7763568394002505e-14
+  },
+  "basisCompiler": {
+    "reflectionParityDimensions": [9,8],
+    "pairwiseParityRotations": 8,
+    "genericGivensWithinParityBlocks": 64,
+    "totalSingleRegisterGivensUpperBound": 72,
+    "unoptimizedGenericGivensUpperBound": 136
+  },
+  "selectiveExchange": {
+    "operator": "X_ij=|1,0><0,1|+|0,1><1,0| in the exact local pendulum eigenbasis",
+    "unitary": "exp(-i theta X_ij)",
+    "actedSubspaceDimension": 2,
+    "fullTwoRegisterDimension": 289,
+    "idealLeakageOutsideSelectedSubspace": 0,
+    "piOverFourAction": "|1,0> maps to (|1,0>-i|0,1>)/sqrt(2)",
+    "piOverTwoAction": "|1,0> maps to -i|0,1>"
+  },
+  "openChainResourcesPerInputOutputCycle": [
+    {"cells":24,"localGivensForInitialAndFinalBasisChanges":3456,"selectiveExchangeGatesPerTrotterStep":23,"maximumExchangeOperatorErrorForOnePercentStepBudget":0.0004347826086956522},
+    {"cells":72,"localGivensForInitialAndFinalBasisChanges":10368,"selectiveExchangeGatesPerTrotterStep":71,"maximumExchangeOperatorErrorForOnePercentStepBudget":0.00014084507042253522},
+    {"cells":168,"localGivensForInitialAndFinalBasisChanges":24192,"selectiveExchangeGatesPerTrotterStep":167,"maximumExchangeOperatorErrorForOnePercentStepBudget":0.00005988023952095808},
+    {"cells":744,"localGivensForInitialAndFinalBasisChanges":107136,"selectiveExchangeGatesPerTrotterStep":743,"maximumExchangeOperatorErrorForOnePercentStepBudget":0.000013458950201884253}
+  ],
+  "commissioning": {
+    "tests": [
+      "round-trip each local eigenbasis transform and bound population in the fifteen invalid binary states",
+      "apply theta=pi/4 to |1,0> and |0,1> and verify the two target amplitudes and relative phase",
+      "apply theta=pi/2 and verify phase-correct excitation swap",
+      "prepare every other two-register eigenlabel and verify it is unchanged",
+      "repeat a full even-odd exchange layer and bound accumulated operator error"
+    ],
+    "pass": "selected-subspace leakage and invalid-state population remain below the allocated circuit budget, and held-out hopping-band points match Wave 7.164"
+  },
+  "established": "an exact finite-cutoff digital construction of the transition-selective exchange required to reach the strong projected hopping lane without native sin-sin leakage",
+  "boundary": "The compiler assumes logical access to arbitrary single-register Givens rotations and a two-register selective Givens primitive. It does not decompose those primitives into a platform gate set, bound hardware noise, or remove Trotter error between overlapping exchange bonds."
+}
