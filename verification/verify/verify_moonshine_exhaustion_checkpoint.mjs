@@ -69,4 +69,3 @@ console.log(JSON.stringify({
   status: "source-gated",
 }, null, 2));
 console.log("PASS verify_moonshine_exhaustion_checkpoint");
-

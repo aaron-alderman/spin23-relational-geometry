@@ -4,7 +4,8 @@
 
 **Status:** the no-new-source deduction programme is exhausted through genus one; the surviving work is higher-genus, cross-grade or physical and requires new mathematical input
 
-**Evidence:** [machine-readable checkpoint](../../../evidence/data/moonshine-exhaustion-checkpoint-v1.json)  
+**Evidence:** [machine-readable checkpoint](../../../evidence/data/moonshine-exhaustion-checkpoint-v1.json)
+
 **Certificate:** [checkpoint verifier](../../../verification/verify/verify_moonshine_exhaustion_checkpoint.mjs)
 
 ## Result
@@ -157,4 +158,3 @@ traces or centralizer words is repetition, not frontier progress.
 - [Mixed-level genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Quarter-turn metaplectic gate](quarter-turn-metaplectic-gate.md)
 - [Admissibility synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md)
-
