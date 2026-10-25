@@ -7,6 +7,7 @@ const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.
 const seam = load("../../evidence/data/lattice-subroutine-genus-two-seam-closure-v1.json");
 const galois = load("../../evidence/data/moonshine-order46-galois-orientation-v1.json");
 const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
+const projectiveNoGo = load("../../evidence/data/moonshine-order23-projective-centralizer-no-go-v1.json");
 
 const sp4Order = (q) => q ** 4 * (q ** 2 - 1) * (q ** 4 - 1);
 
@@ -47,6 +48,8 @@ assert.equal(labels.projective.order23Directions, 24);
 assert.equal(labels.projective.productLabels, labels.projective.spinLabels * labels.projective.order23Directions);
 assert.equal(mixed.candidate.smallestInitialCarrier, labels.projective.productLabels);
 assert.equal(mixed.candidate.scalarBoundaryChannelsRemaining, 0);
+assert.equal(mixed.candidate.genusOneCentralizerRepresentationChannelsRemaining, 0);
+assert.equal(projectiveNoGo.anomalyTransgression.projectiveClassOnCentralizer, "trivial");
 assert.equal(galois.traceInventory.scalarSearchStatus, "exhausted");
 assert.equal(mixed.analyticBoundary.thetaMultiplierRequiresMetaplecticLift, true);
 assert(mixed.candidate.scalarCouplingGate.projective.includes("C2"));
@@ -69,6 +72,8 @@ console.log(JSON.stringify({
     projective: labels.projective.productLabels,
   },
   scalarBoundaryChannelsRemaining: mixed.candidate.scalarBoundaryChannelsRemaining,
+  genusOneCentralizerRepresentationChannelsRemaining:
+    mixed.candidate.genusOneCentralizerRepresentationChannelsRemaining,
   analyticKernelConstructed: false,
 }, null, 2));
 console.log("PASS verify_moonshine_mixed_level46_seam");

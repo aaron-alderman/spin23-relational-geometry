@@ -178,8 +178,8 @@ generalized pair Z(h^2,h^23)
   2 normalized scalar outputs: the inverse/power-five pairs remain collapsed
         |
         | scalar centralizer insertions are exhausted;
-        | change record type to a vector/projective S4 action,
-        | relational multi-insertion, or genus-two sewing
+        | the linear/projective S4 action is also exhausted;
+        | change compositional level to VOA products or genus-two sewing
         v
 candidate seam-sensitive vector
 ```
@@ -200,9 +200,10 @@ observable.  Thus cyclic generalized moonshine recovers the 2A/2B rail but
 does not recover the 23A/23B generator orientation. The subsequent complete
 \(C_{23}\times S_4\) census shows that every individual centralizer insertion
 also generates a cyclic subgroup and is equally scalar-degenerate. The next
-refinement must therefore change the record type: use a genuinely
-vector-valued/projective \(S_4\) character, retain relations among several
-insertions, or pass to higher-genus sewing.
+refinement must therefore change compositional level. The anomaly
+transgression to the centralizer is trivial, so even the full ordinary
+\(S_4\) character is determined by those five traces. Only cross-grade VOA
+operations or higher-genus sewing remain.
 
 ## 5. Consequence for the frontier programme
 
@@ -212,8 +213,8 @@ work.  Start from the two known Hauptmoduln, transport them by the explicit
 matrix and audit the compatible normalization.  This is an FPT-002 inverse-detector problem:
 the order-46 insertion is the minimal extra channel already known to separate
 the two involution rails.  It is also an FPT-019 complexity reduction: the
-unknown input is a non-scalar centralizer representation or higher-genus
-refinement, not a 529-function oracle or another scalar insertion table.
+unknown input is cross-grade VOA composition or a higher-genus refinement,
+not a 529-function oracle or another centralizer representation table.
 
 The physical boundary is unchanged.  Modular transport is worldsheet/VOA
 transport, not real-time evolution, and its normalization phase is not

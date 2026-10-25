@@ -54,7 +54,7 @@ assert.equal(mod(5 * 23, 46), 23);
 assert.equal(mod(5 * 2, 46), 10);
 assert.equal(ladder.cyclicOrientationNoGo.distinctNormalizedCyclicPairOutputs, 2);
 assert.equal(ladder.cyclicOrientationNoGo.orientationRecovered, false);
-assert(ladder.cyclicOrientationNoGo.requiredEscape.includes("scalar one-insertion search is exhausted"));
+assert(ladder.cyclicOrientationNoGo.requiredEscape.includes("centralizer-representation searches are exhausted"));
 assert.equal(exhaustion.cyclicReduction.orientationSensitiveScalarPairs, 0);
 
 // Arithmetic alone allows order two, but the Conway--Norton h parameter is

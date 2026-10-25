@@ -189,8 +189,9 @@ branch of an ordinary series from one of
 
 All five A/B series pairs coincide. Thus the four nonidentity quotient cosets
 do not recover orientation as normalized scalar genus-one traces. The
-quotients remain useful carriers for a vector-valued/projective character
-calculation, but no additional scalar evaluation is warranted.
+projective-centralizer audit further proves that the transgressed cocycle is
+trivial and the five traces determine the full ordinary \(S_4\) module, so
+no additional genus-one representation calculation is warranted.
 
 ## 6. Exhaustion boundary
 
@@ -199,8 +200,8 @@ established by the larger \(S_4\) census rather than left as a future
 conditional. No claim is made that \(Q_{46AB}\) is the Rule-60 deck carrier,
 that \(Q_{46CD}\) is fermion parity, or that either quotient acts on the ten
 even-characteristic genus-two family. Those are exactly the next intertwiner
-tests. The programme must move to a vector-valued centralizer representation,
-relational multi-insertion, or genus-two sewing.
+tests. The programme must move to cross-grade VOA composition or genus-two
+sewing.
 
 ## Sources and corpus links
 
@@ -209,5 +210,6 @@ relational multi-insertion, or genus-two sewing.
 - [Order-46 observable ladder](order-46-observable-ladder.md)
 - [Order-46 Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md)
+- [Order-23 projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 - [Joined order-46 bridge](joined-bridge-map.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)

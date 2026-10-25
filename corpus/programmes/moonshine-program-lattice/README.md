@@ -515,8 +515,8 @@ C_{b\ne0}=8560q+934511q^2+\cdots.
 Thus the ordinary genus-one charge decomposition sees “neutral versus
 charged,” but identifies all twenty-two nonzero charges.  It cannot select an
 oriented Golay rail or distinguish \(23A\) from \(23B\).  Any successful
-observable must use a twisted sector, defect, non-scalar centralizer action,
-relational multi-insertion record, or sewing operation.
+observable must use cross-grade VOA/defect composition, an externally marked
+orientation, or sewing.
 
 Honda--Kaidi--Orii provide the adjacent refinement. Under a stronger
 parafermionic decomposition assumption they obtain
@@ -647,9 +647,11 @@ McKay--Thompson series. Hence every normalized scalar
 \(Z(g,k;\tau)\) is a modular branch of an already orientation-blind cyclic
 series. The finite proof and class census are recorded in the
 [order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md).
-The next finite task is therefore vector-valued/projective centralizer data,
-a genuinely relational multi-insertion, or genus-two sewing. The oriented VOA
-lift and conditional dual-pair question remain separate.
+The transgressed projective cocycle is also trivial, so the five traces
+determine the complete ordinary graded \(S_4\) module; scalar word traces add
+nothing. The next task is therefore cross-grade VOA composition or genus-two
+sewing. The oriented VOA lift and conditional dual-pair question remain
+separate.
 
 ## 5. Four non-equivalent meanings of program
 
@@ -847,9 +849,9 @@ calculations above, or ruled out.  Route 7 remains a new physical construction.
 The scalar order-(23) lift/twining and the untwisted charge-resolution test are
 now completed.  The latter is a no-go: it proves that no rearrangement of the
 common genus-one scalar trace can recover orientation.  The remaining branch
-is narrowed to three source objects: a vector-valued/projective \(S_4\)
-centralizer character table for the order-23 twisted module, a twined
-genus-two sewing construction, and a junction to the \(2A\) fermionic seam.
+is narrowed to three source objects: cross-grade order-23 VOA
+intertwining/fusion data, a twined genus-two sewing construction, and a
+junction to the \(2A\) fermionic seam.
 Without one of those inputs, further scalar coefficient work is repetition
 rather than progress.  Beyond them, a physical
 promotion still requires a carrier action, clock and detector law.

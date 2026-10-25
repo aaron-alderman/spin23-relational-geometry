@@ -9,6 +9,7 @@ const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.
 const galois = load("../../evidence/data/moonshine-order46-galois-orientation-v1.json");
 const mixed = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
 const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
+const projectiveNoGo = load("../../evidence/data/moonshine-order23-projective-centralizer-no-go-v1.json");
 
 const declaredTargetIds = new Set(register.coreTargets.map((target) => target.id));
 const mappedIds = crosswalk.targets.map((target) => target.id);
@@ -40,20 +41,21 @@ assert.deepEqual(crosswalk.rankedTranches.map((tranche) => tranche.rank), [1, 2,
 assert.equal(crosswalk.rankedTranches[0].requiresNewExperiment, false);
 assert.equal(crosswalk.rankedTranches[1].requiresNewExperiment, false);
 assert.equal(
-  crosswalk.rankedTranches[0].scalarOrientationChannelsRemaining,
-  0,
-);
-assert.equal(galois.traceInventory.scalarSearchStatus, "exhausted");
-assert(crosswalk.targets.find(({id}) => id === "FPT-002").nextGate.includes("vector-valued"));
-assert.equal(
-  crosswalk.rankedTranches[1].smallestFiniteProductCarrier,
+  crosswalk.rankedTranches[0].smallestFiniteProductCarrier,
   mixed.labelResolutions.projective.productLabels,
 );
+assert.equal(galois.traceInventory.scalarSearchStatus, "exhausted");
+assert(crosswalk.targets.find(({id}) => id === "FPT-002").nextGate.includes("cross-grade"));
+assert.equal(
+  crosswalk.rankedTranches[1].genusOneCentralizerRepresentationChannelsRemaining,
+  0,
+);
 assert.deepEqual(
-  crosswalk.rankedTranches[1].scalarCouplingSequence,
+  crosswalk.rankedTranches[0].scalarCouplingSequence,
   ["C2 projective sign", "C4 metaplectic central-sign lift"],
 );
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.quarterTurnImage, "i");
+assert.equal(projectiveNoGo.anomalyTransgression.projectiveClassOnCentralizer, "trivial");
 assert.equal(crosswalk.rankedTranches[2].requiresNewExperiment, true);
 assert.equal(crosswalk.rankedTranches[3].requiresNewExperiment, true);
 assert(crosswalk.epistemicBoundary.includes("not evidence"));

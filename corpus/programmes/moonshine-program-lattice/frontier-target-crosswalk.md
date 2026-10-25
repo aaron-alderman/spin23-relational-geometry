@@ -56,9 +56,10 @@ produces a discriminator or fails:
 8. reject the join if the modular representations or anomaly lines cannot
    intertwine.
 
-Steps 1--6 close the scalar part of FPT-002 and force a change of record to a
-vector-valued/projective \(S_4\) action or relational multi-insertion data.
-Step 7 is the FPT-007 junction. Step 8 is useful
+Steps 1--6 close the scalar part of FPT-002. The projective-centralizer audit
+then closes the remaining genus-one \(S_4\) representation route: the
+transgressed cocycle is trivial and the five class traces determine the
+module. Step 7 is therefore the FPT-007 higher-genus junction. Step 8 is useful
 even when negative: it converts a speculative bridge into a typed no-go.
 
 ## The finite emulator tranche
@@ -102,14 +103,13 @@ detector map.  None follows from reduction modulo 23.
 
 ## Ranked continuation
 
-1. **Vector/projective order-23 centralizer action:** highest information
-   gain; no new experiment; tests whether twisted multiplicity spaces retain
-   the \(S_4\) relations erased by all scalar one-insertion traces.
-2. **Mixed-level genus-two intertwiner:** use the exact
+1. **Mixed-level genus-two intertwiner:** use the exact
    \(Sp(4,2)\times Sp(4,23)\) CRT carrier; a direct order-11 action on the ten
    characteristics is impossible. Test first the unique projective \(C_2\)
    sign coupling, then the metaplectic \(C_4\) lift
    \(S\mapsto i,\ S^2\mapsto-1\), rather than raw counts 12 and 10.
+2. **Cross-grade VOA/defect composition:** test fusion or intertwining data
+   not determined by the now-exhausted graded \(S_4\) characters.
 3. **Finite \(\mathrm{Dic}_{11}/D_{11}\) emulator:** conventional but sharp
    test of quotient scars and detector equivalence.
 4. **Scale/RG and Spin lift:** hold until a physical carrier and action exist.
@@ -128,6 +128,7 @@ geometry that motivated the admissibility language.
 - [Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Mixed-level 46 genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Quarter-turn metaplectic gate](quarter-turn-metaplectic-gate.md)
+- [Projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 - [Main Moonshine programme](README.md)
 - [Per-target corpus assessments](../frontier-physics-targets/frontier_physics_target_assessments_v1.md)
 - [Admissibility frontier synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md)

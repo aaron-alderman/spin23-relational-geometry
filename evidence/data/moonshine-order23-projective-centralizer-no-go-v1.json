@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The order-23 twisted centralizer action is linearisable: the order-24 Monster anomaly has trivial transgression along the C23 factor of C23 x S4, so the five already-degenerate S4 class traces determine and exhaust the full genus-one centralizer representation.",
+  "centralizer": {
+    "structure": "C23 x S4",
+    "factorOrders": [23, 24],
+    "coprime": true
+  },
+  "abstractProjectivePossibility": {
+    "schurMultiplierC23": "trivial",
+    "abelianizationS4": "C2",
+    "crossTensor": "C23 tensor C2 is trivial",
+    "schurMultiplierS4": "C2",
+    "schurMultiplierProduct": "C2",
+    "schurCover": "2.S4",
+    "spinIrrepDegrees": [2, 2, 4],
+    "spinDegreeSquareSum": 24
+  },
+  "anomalyTransgression": {
+    "monsterAnomalyOrder": 24,
+    "twistOrder": 23,
+    "restrictionToC23": "trivial by coprimality",
+    "mixedKunnethTerms": "trivial because the positive-degree factor cohomologies have disjoint prime support",
+    "S4InflatedComponentSlantWithC23": "trivial",
+    "projectiveClassOnCentralizer": "trivial",
+    "centralizerAction": "linearisable"
+  },
+  "ordinaryS4": {
+    "conjugacyClasses": 5,
+    "irrepDegrees": [1, 1, 2, 3, 3],
+    "degreeSquareSum": 24,
+    "classTraceFamilies": ["23AB", "46AB", "46CD", "69AB", "92AB"],
+    "allClassTracePairsEqual": true,
+    "characterDeterminesRepresentation": true
+  },
+  "genusOneOutcome": {
+    "scalarClassFunctions": "exhausted",
+    "ordinaryVectorValuedCentralizerRepresentation": "exhausted up to isomorphism",
+    "projectiveCentralizerRepresentation": "not activated; transgressed cocycle class is trivial",
+    "scalarMultiInsertionWordTraces": "exhausted because each word trace is the character of its product",
+    "orientationRecovered": false
+  },
+  "remaining": [
+    "genus-two sewing with relational or bilinear handle data",
+    "cross-grade VOA intertwining, fusion or vertex-operator structure",
+    "an externally sourced oriented lattice or defect marking"
+  ],
+  "boundary": "The result exhausts genus-one centralizer representation invariants, not the full graded VOA algebra or higher-genus sewing."
+}

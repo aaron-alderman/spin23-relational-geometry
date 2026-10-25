@@ -84,19 +84,17 @@ cyclotomic forms of the two projective centralizer representations.
 
 ## What remains open
 
-Scalar genus-one centralizer insertion is exhausted. A surviving orientation
-record must therefore use structure that is not a single class function of a
-commuting pair:
+Scalar genus-one centralizer insertion is exhausted. The subsequent
+[projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
+also proves that the anomaly transgression is trivial, so the action is
+linearisable and its five class traces determine the full graded \(S_4\)
+module. Scalar word traces add nothing because each word reduces to one
+product class.
 
-1. the vector-valued/projective \(S_4\) centralizer representation on the
-   \(g\)-twisted module, with an explicit Galois comparison of the 23A and 23B
-   rational forms;
-2. a junction or multi-insertion observable retaining relations among
-   noncommuting elements of the \(S_4\) complement;
-3. order-23-twined genus-two sewing, where two handles can retain relational
-   data erased by each genus-one trace; or
-4. an externally declared oriented VOA/lattice lift, followed by a detector
-   that reads that orientation rather than quotienting it away.
+A surviving orientation record must therefore use order-23-twined genus-two
+sewing, cross-grade VOA composition such as fusion/intertwining operators, or
+an externally declared oriented VOA/lattice lift followed by a detector that
+does not quotient it away.
 
 This is a useful negative result. It prevents more scalar coefficient work
 from being mistaken for progress and moves the look-here guide to a specific
@@ -110,4 +108,5 @@ representation-valued or higher-genus datum.
 - Ford, McKay and Norton, [*More on replicable functions*](https://doi.org/10.1080/00927879408825127)
 - [Order-46 observable ladder](order-46-observable-ladder.md)
 - [Order-46 centralizer augmentation](order-46-centralizer-augmentation.md)
+- [Order-23 projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 

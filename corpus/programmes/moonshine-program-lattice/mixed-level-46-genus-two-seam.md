@@ -108,9 +108,8 @@ with four properties:
    theta/Pfaffian multipliers;
 2. its level-23 action reproduces the declared
    \(\mathrm{Dic}_{11}\) or \(D_{11}\) transition skeleton;
-3. its separating degeneration lands on the order-46
-   vector-valued/projective \(S_4\) centralizer data or relational
-   multi-insertion data; and
+3. its separating degeneration lands on sourced cross-grade VOA
+   composition data beyond the exhausted \(S_4\) graded characters; and
 4. its scalar contractions recover the known \(T_{23}\), Leech theta and
    fermionic factorization limits without identifying their lost data.
 

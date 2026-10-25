@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 
-**Status:** inner power transport closed; all scalar genus-one insertions exhausted; vector/projective transport open
+**Status:** all genus-one centralizer representation routes exhausted; cross-grade and genus-two transport open
 
 **Evidence:** [Galois-orientation ledger](../../../evidence/data/moonshine-order46-galois-orientation-v1.json)  
 **Certificate:** [arithmetic and automorphism verifier](../../../verification/verify/verify_moonshine_order46_galois_orientation.mjs)
@@ -154,8 +154,8 @@ The finite quotient and the arithmetic orientation occupy different layers:
 - the Monster normalizer supplies only square-power **inner covariance**;
 - \(\sigma_5\) supplies the nonsquare **Galois comparison**;
 - an individual scalar character loses the comparison;
-- a vector-valued/projective centralizer representation or relational sewing
-  may still retain it.
+- cross-grade VOA composition or genus-two relational sewing may still
+  retain it.
 
 This prevents a recurrent category error in the wider corpus: an outer
 arithmetic symmetry may pair observables without being a physical symmetry
@@ -169,11 +169,12 @@ level. The quotient types, number of labels, inner normalizer image, full
 \(S_4\) insertion census and scalar product classes are fixed. No additional
 single-insertion scalar trace can distinguish the orientation.
 
-What remains is a change of record type: compute the vector-valued or
-projective \(S_4\) action on twisted multiplicity spaces, retain noncommuting
-relations among several insertions, or sew the order-23-twined data at genus
-two. A successful refinement must state which relation survives that the
-scalar character quotients away.
+The projective-centralizer no-go subsequently proves that the transgressed
+cocycle is trivial and the five class traces determine the full ordinary
+\(S_4\) module. What remains is a change of compositional level: cross-grade
+VOA products or order-23-twined genus-two sewing. A successful refinement
+must state which relation survives that every graded group character
+quotients away.
 
 ## Sources and corpus links
 
@@ -183,5 +184,6 @@ scalar character quotients away.
 - Gaberdiel, Persson and Volpato, [*Generalised Moonshine and Holomorphic Orbifolds*](https://arxiv.org/abs/1302.5425)
 - [Centralizer augmentation gate](order-46-centralizer-augmentation.md)
 - [Complete order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md)
+- [Order-23 projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 - [Order-46 observable ladder](order-46-observable-ladder.md)
 - [Joined bridge map](joined-bridge-map.md)
