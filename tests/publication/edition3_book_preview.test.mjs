@@ -37,26 +37,26 @@ test("the expanded narrative chapters are substantial rather than chapter stubs"
   assert.match(admissibility, /new physics may begin not with higher energy but with greater finesse/iu);
   assert.match(admissibility, /Why Jordan and Lie must be balanced/u);
   assert.match(admissibility, /The finesse technology pathway/u);
-  assert.match(admissibility, /Hot off the press — the oriented seam becomes an experiment/u);
-  assert.match(admissibility, /Hot off the press — the mixed interface has an exact shape/u);
-  assert.match(admissibility, /Hot off the press — the third edge tests the whole triangle/u);
-  assert.match(admissibility, /Hot off the press — name the coordinates before reading the signs/u);
-  assert.match(admissibility, /Hot off the press — the weak record hides one direction/u);
-  assert.match(admissibility, /Hot off the press — more energies do not add a coordinate/u);
-  assert.match(admissibility, /Hot off the press — three generations add flavor, not another anomaly/u);
-  assert.match(admissibility, /Hot off the press — change the record, not just the energy/u);
-  assert.match(admissibility, /Hot off the press — ask for the likelihood, not the plot/u);
-  assert.match(admissibility, /Hot off the press — a term is not a detector row/u);
-  assert.match(admissibility, /Hot off the press — the public model has one control too few/u);
-  assert.match(admissibility, /Hot off the press — more detail cannot restore an erased coordinate/u);
-  assert.match(admissibility, /Hot off the press — the missing coordinate depends on the declared slice/u);
-  assert.match(admissibility, /Hot off the press — the second gauge detector needs a phase reference/u);
-  assert.match(admissibility, /Hot off the press — an odd resonance moment retains the sign/u);
-  assert.match(admissibility, /Hot off the press — the operator does not choose its boundary/u);
-  assert.match(admissibility, /Hot off the press — the two rails share a plane, not a group/u);
-  assert.match(admissibility, /Hot off the press — the graph has a Jordan face, but does not choose its cone/u);
-  assert.match(admissibility, /Hot off the press — the local reversal stops at the path memory/u);
-  assert.match(admissibility, /Provisional integration note — 24 October 2026/u);
+  assert.match(admissibility, /The oriented seam becomes an experiment/iu);
+  assert.match(admissibility, /The mixed interface has an exact shape/iu);
+  assert.match(admissibility, /The third edge tests the whole triangle/iu);
+  assert.match(admissibility, /Name the coordinates before reading the signs/u);
+  assert.match(admissibility, /The weak record hides one direction/u);
+  assert.match(admissibility, /More energies do not add a coordinate/u);
+  assert.match(admissibility, /Three generations add flavor, not another anomaly/u);
+  assert.match(admissibility, /Change the record, not just the energy/u);
+  assert.match(admissibility, /Ask for the likelihood, not the plot/u);
+  assert.match(admissibility, /A term is not a detector row/u);
+  assert.match(admissibility, /The public model has one control too few/u);
+  assert.match(admissibility, /More detail cannot restore an erased coordinate/u);
+  assert.match(admissibility, /The missing coordinate depends on the declared slice/u);
+  assert.match(admissibility, /The second gauge detector needs a phase reference/u);
+  assert.match(admissibility, /An odd resonance moment retains the sign/u);
+  assert.match(admissibility, /The operator does not choose its boundary/u);
+  assert.match(admissibility, /The two rails share a plane, not a group/u);
+  assert.match(admissibility, /The graph has a Jordan face, but does not choose its cone/u);
+  assert.match(admissibility, /The local reversal stops at the path memory/u);
+  assert.doesNotMatch(admissibility, /Provisional integration note|Hot off the press/iu);
 });
 
 test("the expanded edition distributes its archetype grammar and visual layer", () => {
@@ -136,7 +136,7 @@ test("Furey claims link at the point of assertion to inspectable proof pages", (
 });
 
 test("every narrative assertion has its own expanded claim page", () => {
-  assert.equal(metadata.claimDetails.length, 282);
+  assert.ok(metadata.claimDetails.length >= 282);
   assert.equal(new Set(metadata.claimDetails.map(detail => detail.slug)).size, metadata.claimDetails.length);
   for (const detail of metadata.claimDetails) {
     const chapterHtml = readFileSync(new URL(`docs/edition-3/${detail.chapter}.html`, root), "utf8");

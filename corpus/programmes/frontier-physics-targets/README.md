@@ -21,9 +21,11 @@ The lane is the practical face of the corpus's Jordan/Lie middle. Jordan and res
 - [Detector and frontier atlas](detector_frontier_atlas_v1.md) — maps actual computational, laboratory, statistical and missing translation-level detectors onto twenty frontier regions.
 - [Detector/frontier register](detector_frontier_register_v1.json) — machine-readable authority for detector records, controls, maturity, target coverage and source provenance.
 - [Frontier experiment atlas](frontier_experiment_atlas_v1.md) — one realistic controlled experiment for every frontier area, with platform, interventions, records, controls, decisive outcomes and stop rules.
-- [Frontier experiment register](frontier_experiment_atlas_v1.json) — machine-readable 20-experiment portfolio covering all maintained topics and detector bundles.
-- [Frontier experiment programmes v2](frontier_experiment_programmes_v2.json) — decision-complete EXIT-03 surface for all 21 experiments and all 378 required cells, while preserving direct v1 content.
+- [Frontier experiment register](frontier_experiment_atlas_v1.json) — machine-readable 22-experiment portfolio covering all maintained topics and detector bundles.
+- [Frontier experiment programmes v2](frontier_experiment_programmes_v2.json) — decision-complete EXIT-03 surface for all 22 experiments and all 396 required cells, while preserving direct v1 content.
 - [Experiment programme overrides v2](frontier_experiment_programme_overrides_v2.json) — durable experiment-specific authorship for all transfer functions, covariance models, sensitivity calculations, decision gates, replication rules, release contracts and claim propagation; never overwritten by regeneration.
+- [Transition-operator propagation audit](transition_operator_propagation_audit_v1.md) — scans every corpus Markdown document, propagates the eight-field operator-to-record boundary, and semantically separates genuine rate claims from effective poles, barrier metastability and unrelated uses of selection or matrix language.
+- [Transition-operator semantic dispositions](transition_operator_semantic_dispositions_v1.json) — durable human review of the rate-context keyword collisions that do not make an operator-to-rate inference.
 - [Terminal-neighbourhood authored reviews](terminal_neighbourhood_reviews_v1.json) — durable move-by-move findings, consequences and reopening data merged into the generated EXIT-02 queue without overwriting review judgment.
 - [Terminal-review adjacency crosswalk](adjacency_terminal_review_crosswalk_v1.json) — explicit family-to-neighbourhood mapping that derives EXIT-01 dispositions for terminal topics without treating closure labels as evidence.
 - [Authored non-terminal adjacency reviews](physics_math_adjacency_reviews_v1.json) — relation-by-relation evidence, preserved/lost structure, implications and reopening data for live topics.
@@ -69,7 +71,7 @@ The register presently normalizes:
 The detector extension additionally normalizes:
 
 - 20 frontier regions;
-- 35 detector bundles; and
+- 37 detector bundles; and
 - 50 maintained topics: 45 live across active, open, audit, gated and blocked states, plus five closed with retained evidence.
 
 The full-corpus census presently hashes and inventories all 2,658 in-scope Markdown/JSON artifacts across `corpus/` and the evidence ledger: 2,203 corpus narratives plus 455 evidence artifacts. It reconciles all 1,591 files containing the expanded gate vocabulary or an open-like structured status, including 1,176 of the 1,575 numbered claims and 89 evidence records; the other 399 claims are explicitly recorded as having no declared gate. It reports zero unmatched ownership records. This is a lexical, structured-status and governance exhaustion result, not a claim that every tacit scientific question has been discovered or solved.

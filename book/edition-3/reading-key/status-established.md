@@ -43,6 +43,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · the mirror face exists before the quotient (3)](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-3.md)
 - [Claim · The admissibility frontier · Transition operators make the boundary measurable (1)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-1.md)
 - [Claim · The admissibility frontier · Transition operators make the boundary measurable (2)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-2.md)
+- [Claim · The admissibility frontier · Transition operators make the boundary measurable (3)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-3.md)
 - [Claim · The admissibility frontier · the mixed interface has an exact shape (1)](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-1.md)
 - [Claim · The admissibility frontier · the mixed interface has an exact shape (2)](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-2.md)
 - [Claim · The admissibility frontier · the mixed interface has an exact shape (3)](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-3.md)

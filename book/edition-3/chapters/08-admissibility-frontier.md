@@ -250,6 +250,10 @@ Metastable helium is the clean calibration: energy permits decay while parity an
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-2.md)
 
+The practical test prepares one metastable ion, opens a calibrated electric-dipole disposal path and asks one operator model to predict intensity, detuning, angular, helicity, lifetime and line-shape records together. Agreement improves weak-channel control; only a replicated residual outside known multipoles, environment, dephasing and detector effects becomes a new-physics lead.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 

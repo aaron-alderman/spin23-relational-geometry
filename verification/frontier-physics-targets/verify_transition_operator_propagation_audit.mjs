@@ -64,7 +64,12 @@ for (const field of [
 ]) assert.ok(ex022[field], `EX-022 missing ${field}`);
 
 assert.equal(audit.openWork.unreviewedOperatorCandidates.length, audit.totals.unreviewedOperatorCandidates);
-assert.ok(audit.totals.unreviewedOperatorCandidates > 0, "audit must not falsely claim semantic exhaustion in this tranche");
+assert.equal(audit.totals.unreviewedOperatorCandidates, 0, "operator/rate semantic triage is incomplete");
+assert.equal(audit.contextualSemanticExclusions.records.length, audit.totals.contextualSemanticExclusions);
+for (const record of audit.contextualSemanticExclusions.records) {
+  assert.equal(fs.existsSync(path.join(root, record.path)), true, `missing semantic-exclusion source: ${record.path}`);
+  assert.match(record.digest, /^[0-9a-f]{64}$/);
+}
 
 console.log(JSON.stringify({
   result: "pass",

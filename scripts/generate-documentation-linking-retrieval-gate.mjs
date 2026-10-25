@@ -118,6 +118,16 @@ const heldOut = [
     id: 'minority-sign-holonomy', stratum: 'minority_new_branch', profile: 'all',
     query: 'sign holonomy physical detector central minus identity',
     targets: ['corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md']
+  },
+  {
+    id: 'plain-metastable-operator', stratum: 'physics', profile: 'all',
+    query: 'why can a higher energy state remain metastable selection rule matrix element lifetime',
+    targets: ['corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md']
+  },
+  {
+    id: 'transition-polarization-nuclear', stratum: 'physics', profile: 'all',
+    query: 'selection rules lifetime circular polarization nuclear beta gamma decay operator',
+    targets: ['corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md']
   }
 ];
 // Claim and semantic evidence each retain their default 0.2 share.  A 0.59

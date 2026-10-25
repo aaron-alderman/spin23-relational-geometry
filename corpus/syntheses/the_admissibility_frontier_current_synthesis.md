@@ -114,10 +114,9 @@ Sp(4,\mathbb R)\cong Spin_0(2,3).
 
 In this ordering, \(Spin_0(2,3)\) is not the source from which reality is supposed to descend. It is a recovered symmetry of an already admitted positive-response geometry—a valuable pole and exact completion, but not the prior container of physics.
 
-The explanatory order is therefore **Jordan admission and composition →
-living carrier and admissible relations → locally invariant carrier → Lie
-transport of thing and mirror face → holonomy, dynamics, selection and
-records**. Spin(2,3) is not the starting claim; it is the higher relation
+The explanatory order is therefore **Jordan admission and composition → typed admissibility region** (the living carrier and its admissible relations) **→
+locally invariant carrier → Lie transformation and transport** of thing and
+mirror face **→ holonomy, dynamics, selection and records**. Spin(2,3) is not the starting claim; it is the higher relation
 geometry recovered after the carrier, comparison law, positivity and
 compositional structure have been declared.
 

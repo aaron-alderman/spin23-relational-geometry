@@ -39,13 +39,13 @@ Without that return, the corpus is only a classification of possible structures.
 The [explanatory standard](EXPLANATORY_STANDARD.md) governs each arrow: begin with the things being related, state why they are alike and different, identify the reason for the difference, report mathematical and physical closure separately, and place implications beside non-implications. Pictures and speculative readings may be offered as a menu, but none is required to accept the core result.
 
 1. **Jordan asks what can coexist.** Positive states, responses, observables, compositions and eliminations delimit a cone or domain of mutually admissible possibilities.
-2. **The typed middle is the live object.** A carrier, its allowed compositions, its histories, its selectors and its records must remain jointly realizable. This compatibility region—not a group name—is the centre of the programme.
+2. **The typed admissibility region—the typed middle—is the live object.** A carrier, its allowed compositions, its histories, its selectors and its records must remain jointly realizable. This compatibility region—not a group name—is the centre of the programme.
    For a directed typed relation graph, the default pre-quotient object is now
    the source/target-and-type two-rail carrier of AZ-126. A scalar adjacency or
    Laplacian is a declared quotient of that carrier, not a neutral synonym for
    the complete relation.
 3. **The locally invariant carrier keeps perspectives comparable.** In the central symplectic instance, \(M^T\Omega M=\Omega\) joins the direct action \(M\) to its mirror face \(M^{-T}\). Pointwise invariance, compatible transport \(\nabla\Omega=0\), and globally trivial return are three different claims.
-4. **Lie asks how admitted possibilities can be transported.** Infinitesimal transformations and their closure describe motion or relation that preserves the locally declared comparison. They do not decide which states are admissible, which carrier nature realizes or which member of an orbit is selected.
+4. **Lie transformation and transport ask how admitted possibilities can move.** Infinitesimal transformations and their closure describe motion or relation that preserves the locally declared comparison. They do not decide which states are admissible, which carrier nature realizes or which member of an orbit is selected.
 5. **Dynamics lives inside, on or across the boundary.** An action, flow or update proposes histories. The admissibility gates determine whether those histories preserve positivity, type, causality, stability, global consistency and observable records.
 6. **Detectors return the construction to evidence.** A detector folds histories into records and thereby reveals some distinctions while quotienting away others.
 

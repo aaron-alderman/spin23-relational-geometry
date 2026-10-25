@@ -15,10 +15,7 @@ node tooling/search/search_corpus.mjs --query "Casimir boundary response"
 ## The current story
 
 The corpus is organized around an invariant relation rather than a single
-symmetry slogan. Its non-negotiable explanatory order is **Jordan admission
-and composition → living carrier and admissible relations → locally invariant
-carrier → Lie transport of thing and mirror face → holonomy, dynamics,
-selection and records**. In the central exact model,
+symmetry slogan. Its non-negotiable explanatory order is **Jordan admission and composition → typed admissibility region** (the living carrier and its admissible relations) **→ locally invariant carrier → Lie transformation and transport** of thing and mirror face **→ holonomy, dynamics, selection and records**. In the central exact model,
 \(M^T\Omega M=\Omega\): \(M\) moves the living carrier, \(M^{-T}\) is its
 mirror face, and \(\Omega\) carries their persistent local comparison. The
 exterior-square relation space then separates as
@@ -58,6 +55,8 @@ To enter through a concrete task, use [Start here by role](START_HERE_BY_ROLE.md
 - [Claimipedia support-native order boundary](programmes/admissibility/admissibility_125_claimipedia_support_native_order_and_semantic_boundary.md) — executes that compiler on the live captured relation source: incidence gives a canonical positive kernel and exact Spin--Temple face, but erases arrow direction and every relation type; the source-native river dependency triangle becomes the nearest honest loop-closure experiment once real maps and held-out data replace fixtures.
 
 - [Transition operators, selection rules and lifetimes](programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md) — supplies the previously missing bridge from rotational classification through a physical transition operator, reduced matrix element and phase space to partial width, lifetime and detector record; metastable helium and distinct nuclear gamma, beta and alpha mechanisms provide the worked cases and an operator-opening experiment.
+
+- [Transition-operator propagation audit](programmes/frontier-physics-targets/transition_operator_propagation_audit_v1.md) — applies that boundary across all 2,226 corpus Markdown documents, records explicit semantic exclusions instead of inserting atomic jargon into unrelated mathematics, and closes the current operator/rate review queue at zero while leaving effective-spectral and barrier-metastability mechanisms separately typed.
 
 - [Typed two-rail positive lift](programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md) — shows that positivity need not erase the relation: a 304-dimensional free source/target-and-type carrier reconstructs all 41 distinct directed typed records, realizes arrow reversal as a rail-swap mirror, and identifies the ordinary rank-33 Laplacian as an eight-direction quotient scar.
 
