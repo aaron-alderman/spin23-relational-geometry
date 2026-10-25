@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "leech-positive-charging-enclosure-v1",
+  "date": "2026-10-25",
+  "Hamiltonian": "H_N=(U/2) q^T K q + sum_i [1-(S_i+S_i^T)/2]",
+  "exactPremise": "K is the inverse of the positive-definite Leech Gram matrix, hence the charging term is positive semidefinite and may be discarded for a lower bound",
+  "analyticSpectrum": "the path potential has eigenvalues 1-cos(k*pi/(2N+2)); k=1 is inversion even and k=2 is inversion odd",
+  "globalParityRule": "the lowest product state of odd global inversion has one local odd factor and 23 local even factors",
+  "sites": 24,
+  "results": [
+    {
+      "cutoff": 1,
+      "source": "leech-z2-matrix-free-carrier-v1",
+      "localPotentialEigenvalues": {
+        "lowestEven": 0.2928932188134524,
+        "lowestOdd": 0.9999999999999999
+      },
+      "sectorIntervals": {
+        "even": {
+          "lower": 7.029437251522858,
+          "upper": 7.360877693852631
+        },
+        "odd": {
+          "lower": 7.736544032709406,
+          "upper": 8.041801073281459
+        }
+      },
+      "gapInterval": {
+        "lower": 0.37566633885677536,
+        "upper": 1.0123638217586004
+      },
+      "positiveGapCertifiedByThisBound": true,
+      "missingOddLowerMargin": 0
+    },
+    {
+      "cutoff": 2,
+      "source": "leech-z2-matrix-free-bond56-v1",
+      "localPotentialEigenvalues": {
+        "lowestEven": 0.1339745962155613,
+        "lowestOdd": 0.4999999999999999
+      },
+      "sectorIntervals": {
+        "even": {
+          "lower": 3.215390309173471,
+          "upper": 3.8731239099585157
+        },
+        "odd": {
+          "lower": 3.58141571295791,
+          "upper": 4.205473825505905
+        }
+      },
+      "gapInterval": {
+        "lower": -0.2917081970006059,
+        "upper": 0.990083516332434
+      },
+      "positiveGapCertifiedByThisBound": false,
+      "missingOddLowerMargin": 0.2917081970006059
+    },
+    {
+      "cutoff": 3,
+      "source": "leech-z2-cutoff-three-bond32-v1",
+      "localPotentialEigenvalues": {
+        "lowestEven": 0.07612046748871326,
+        "lowestOdd": 0.2928932188134524
+      },
+      "sectorIntervals": {
+        "even": {
+          "lower": 1.8268912197291183,
+          "upper": 2.7707832342081073
+        },
+        "odd": {
+          "lower": 2.0436639710538573,
+          "upper": 2.9572641520462053
+        }
+      },
+      "gapInterval": {
+        "lower": -0.72711926315425,
+        "upper": 1.130372932317087
+      },
+      "positiveGapCertifiedByThisBound": false,
+      "missingOddLowerMargin": 0.72711926315425
+    }
+  ],
+  "established": "At cutoff one the full 24-channel joined-cell parity gap has a positive analytic/variational enclosure. At cutoffs two and three the same exact lower operator is insufficient.",
+  "nextRequirement": "retain a certified positive portion of the coupled charging form, or supply a validated separator/inertia enclosure, until the cutoff-two and cutoff-three odd lower endpoints exceed their even Ritz upper endpoints"
+}

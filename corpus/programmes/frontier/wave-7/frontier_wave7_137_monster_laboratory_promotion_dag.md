@@ -313,6 +313,22 @@ Wave 7.204 opens cutoff three through bond 24 without materializing the local
 operator. Both sector energies decrease, but the 1.02% bond correction and
 opposite-sign fixed-bond gap shifts constitute an explicit convergence
 failure. No cutoff-three gap is promoted.
+Wave 7.205 reaches cutoff-two bond 56 with a 135 ppm capacity correction and
+2.40 ppm final sweep drift. Wave 7.206 reaches cutoff-three bond 32; its sweep
+drifts contract by factors 0.331 and 0.319, but the 0.582% bond correction and
+105 ppm final drift keep that cutoff outside the admissible spectrum.
+Wave 7.207 makes the missing lower-enclosure gate executable. It proves by
+counterexample that zero residual can describe an excited state, admits
+Temple--Kato only with a certified neighbouring separator, and fixes the
+sector-interval composition $[L_- - U_+,U_- - L_+]$. Full-carrier lower
+bounds were not yet implemented at that checkpoint. Wave 7.208 then discards
+the positive Leech charging form to obtain an exact separable lower operator.
+Combined with the matrix-free Ritz upper endpoints, it certifies the full
+24-channel cutoff-one gap as
+$\Delta_{N=1}\in[0.3756663388,1.0123638218]$. The same lower operator misses
+closure by 0.2917081970 at cutoff two and 0.7271192632 at cutoff three, so
+continuum and strip promotion remain open but the needed enclosure gain is
+now quantitative.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -384,6 +400,10 @@ P4 questions.
 - [Matrix-free cutoff-two bond 40](frontier_wave7_202_leech_z2_matrix_free_bond40.md)
 - [Matrix-free cutoff-two bond 48](frontier_wave7_203_leech_z2_matrix_free_bond48.md)
 - [Exact-sector cutoff-three opening](frontier_wave7_204_leech_z2_cutoff_three_opening.md)
+- [Matrix-free cutoff-two bond 56](frontier_wave7_205_leech_z2_matrix_free_bond56.md)
+- [Cutoff-three bond-32 recovery audit](frontier_wave7_206_leech_z2_cutoff_three_bond32.md)
+- [Joined-cell spectral-enclosure admission](frontier_wave7_207_leech_spectral_enclosure_admission.md)
+- [Positive-charging full-carrier enclosure](frontier_wave7_208_leech_positive_charging_enclosure.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

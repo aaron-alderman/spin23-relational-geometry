@@ -911,6 +911,28 @@ exact-sector solver. Both energies decrease, but the bond correction is 1.02%
 and successive fixed-bond gap shifts have opposite signs. The corpus records
 this as feasibility plus a convergence failure, not as a cutoff-three gap or
 an extrapolation datum.
+Wave 7.205 extends cutoff two to bond 56. The bond correction is 135 ppm and
+the final fixed-bond drift is 2.40 ppm. Wave 7.206 extends cutoff three to
+bond 32: successive sweep drifts contract by factors 0.331 and 0.319, but the
+remaining 0.582% bond correction and 105 ppm drift keep the value outside the
+admissible spectral set.
+Wave 7.207 turns “lower enclosure” into an executable admission rule. A
+zero-residual excited-state counterexample shows why residual proximity does
+not identify the ground state. Temple--Kato is admitted only with certified
+neighbour separation; Lehmann or inertia routes must record the same missing
+ordinal information. Even and odd intervals compose to
+$[L_- - U_+,U_- - L_+]$.
+
+Wave 7.208 implements the first full-carrier lower interval without requiring
+a guessed separator. The Leech charging matrix is positive, so dropping its
+quadratic form gives an exact separable path-potential lower operator. Its
+local inversion-even and inversion-odd minima are analytic. Composed with the
+sector Ritz upper bounds, they certify
+$\Delta_{N=1}\in[0.3756663388,1.0123638218]$ on all 24 joined channels. At
+cutoffs two and three this deliberately coarse lower operator falls short by
+0.2917081970 and 0.7271192632 respectively. The finite-cutoff existence proof
+therefore advances, while continuum cutoff stability and the physical strip
+gap remain explicitly open.
 
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)

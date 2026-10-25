@@ -1033,3 +1033,7 @@ recovers the ten Baby-Monster components.
 - [Matrix-free cutoff-two bond 40](../frontier/wave-7/frontier_wave7_202_leech_z2_matrix_free_bond40.md)
 - [Matrix-free cutoff-two bond 48](../frontier/wave-7/frontier_wave7_203_leech_z2_matrix_free_bond48.md)
 - [Exact-sector cutoff-three opening](../frontier/wave-7/frontier_wave7_204_leech_z2_cutoff_three_opening.md)
+- [Matrix-free cutoff-two bond 56](../frontier/wave-7/frontier_wave7_205_leech_z2_matrix_free_bond56.md)
+- [Cutoff-three bond-32 recovery audit](../frontier/wave-7/frontier_wave7_206_leech_z2_cutoff_three_bond32.md)
+- [Joined-cell spectral-enclosure admission](../frontier/wave-7/frontier_wave7_207_leech_spectral_enclosure_admission.md)
+- [Positive-charging full-carrier enclosure](../frontier/wave-7/frontier_wave7_208_leech_positive_charging_enclosure.md)

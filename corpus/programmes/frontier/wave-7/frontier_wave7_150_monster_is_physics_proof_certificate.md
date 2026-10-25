@@ -255,6 +255,22 @@ Wave 7.204 opens the full cutoff-three carrier through bond 24. Both sector
 energies decrease, but the gap has opposite-sign fixed-bond shifts and a 1.02%
 bond correction. The result is recorded as a convergence failure rather than
 used to manufacture a cutoff extrapolation.
+Waves 7.205--7.206 extend cutoff two to bond 56 and cutoff three to bond 32.
+Cutoff two reaches 135 ppm bond correction with 2.40 ppm sweep drift. Cutoff
+three recovers a contracting relaxation sequence, but its 0.582% bond
+correction and 105 ppm final drift still prohibit a promoted gap.
+Wave 7.207 formalizes the remaining enclosure requirement. A zero-residual
+excited-state counterexample rejects residual-only promotion; certified parity
+intervals must be composed as $[L_- - U_+,U_- - L_+]$, with each lower bound
+carrying a validated separator or inertia premise. No full-carrier lower bound
+had yet passed that standard at Wave 7.207. Wave 7.208 supplies the first:
+positivity of the Leech charging form gives an exact separable lower operator,
+which combines with the matrix-free sector upper bounds to enclose the full
+24-channel cutoff-one gap in
+$[0.3756663388,1.0123638218]$. This is a genuine finite-cutoff certificate,
+not a continuum result. The same analytic bound remains 0.2917081970 short at
+cutoff two and 0.7271192632 short at cutoff three, precisely quantifying the
+lower-enclosure work still required.
 
 ## Corpus links
 
@@ -316,6 +332,10 @@ used to manufacture a cutoff extrapolation.
 - [Matrix-free cutoff-two bond 40](frontier_wave7_202_leech_z2_matrix_free_bond40.md)
 - [Matrix-free cutoff-two bond 48](frontier_wave7_203_leech_z2_matrix_free_bond48.md)
 - [Exact-sector cutoff-three opening](frontier_wave7_204_leech_z2_cutoff_three_opening.md)
+- [Matrix-free cutoff-two bond 56](frontier_wave7_205_leech_z2_matrix_free_bond56.md)
+- [Cutoff-three bond-32 recovery audit](frontier_wave7_206_leech_z2_cutoff_three_bond32.md)
+- [Joined-cell spectral-enclosure admission](frontier_wave7_207_leech_spectral_enclosure_admission.md)
+- [Positive-charging full-carrier enclosure](frontier_wave7_208_leech_positive_charging_enclosure.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

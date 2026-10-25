@@ -1,0 +1,6 @@
+import assert from"node:assert/strict";import fs from"node:fs";import path from"node:path";import{fileURLToPath}from"node:url";
+const root=path.join(path.dirname(fileURLToPath(import.meta.url)),"../..");const r=JSON.parse(fs.readFileSync(path.join(root,"evidence/data/leech-z2-cutoff-three-bond32-v1.json"),"utf8"));
+assert.equal(r.schemaVersion,"leech-z2-cutoff-three-bond32-v1");for(const p of r.bond32Trajectory)assert.ok(Math.abs(p.oddEnergy-p.evenEnergy-p.gap)<1e-14);
+for(let i=1;i<r.bond32Trajectory.length;i++){assert.ok(r.bond32Trajectory[i].evenEnergy<r.bond32Trajectory[i-1].evenEnergy);assert.ok(r.bond32Trajectory[i].oddEnergy<r.bond32Trajectory[i-1].oddEnergy);assert.ok(r.bond32Trajectory[i].gapShift<0);}
+assert.ok(r.sweepDriftContractionRatios.every(x=>x<0.34));assert.ok(r.bond24To32.relativeGapShift>0.0058);assert.ok(r.finalFixedDriftRelative>1e-4);assert.equal(r.scaling.effectiveMatrixMaterialized,false);assert.ok(r.boundary.includes("Bond 40"));
+console.log(JSON.stringify({status:"PASS",cutoff:3,bonds:[24,32],bond32Gaps:r.bond32Trajectory.map(x=>x.gap),driftContractionRatios:r.sweepDriftContractionRatios,relativeBondCorrection:r.bond24To32.relativeGapShift,gapAdmittedAsPrediction:false,epistemicStatus:r.epistemicStatus}));

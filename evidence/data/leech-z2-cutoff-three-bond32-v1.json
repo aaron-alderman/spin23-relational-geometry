@@ -1,0 +1,19 @@
+{
+  "schemaVersion":"leech-z2-cutoff-three-bond32-v1","date":"2026-10-25",
+  "configuration":{"sites":24,"cutoff":3,"ratioUOveru":0.01,"order":"Wave 7.192 optimized","eigensolver":"non-materialized Z2 tensor-network ARPACK"},
+  "bond24":{"evenEnergy":2.7730487361318,"oddEnergy":2.960622074531472,"gap":0.18757333839967183},
+  "bond32Trajectory":[
+    {"cumulativeSweeps":3,"evenEnergy":2.7709850687855218,"oddEnergy":2.9577321532270817,"gap":0.18674708444155996},
+    {"cumulativeSweeps":5,"evenEnergy":2.770821822245362,"oddEnergy":2.9573836280256627,"gap":0.18656180578030046,"gapShift":-0.00018527866125950254},
+    {"cumulativeSweeps":7,"evenEnergy":2.770798188192574,"oddEnergy":2.957298686388267,"gap":0.1865004981956928,"gapShift":-0.00006130758460765051},
+    {"cumulativeSweeps":9,"evenEnergy":2.7707832342081073,"oddEnergy":2.9572641520462053,"gap":0.18648091783809795,"gapShift":-0.000019580357594861653}
+  ],
+  "bond24To32":{"gapShift":-0.0010924205615738813,"relativeGapShift":0.005823965020264269,"bothSectorEnergiesDecrease":true},
+  "sweepDriftContractionRatios":[0.3308906766058377,0.3193732186095426],
+  "finalFixedDriftRelative":0.00010499925580515024,
+  "penaltyComparator":{"wave193Gap":0.1869742088423747,"finalDifference":-0.0004932910042767524,"interpretation":"implementation comparator only, not a bound"},
+  "scaling":{"maximumSectorDimension":25120,"effectiveMatrixMaterialized":false,"maximumLocalResidual":2.8248199374342475e-10},
+  "established":"Expanding cutoff three to bond 32 lowers both energies and turns the earlier opposite-sign sweep motion into three same-sign drifts contracting by factors near one third.",
+  "boundary":"The 0.582 percent bond correction and 105 ppm final sweep drift remain too large for a cutoff-three gap. Bond 40 is required before the failure can be reclassified as convergence.",
+  "epistemicStatus":"cutoff-three convergence recovery in progress; prediction still refused"
+}

@@ -4,6 +4,8 @@
 
 **Status:** full-carrier feasibility; convergence failure
 
+**Supersession:** Wave 7.206 extends cutoff three to bond 32 and measures contracting sweep drift; convergence remains open.
+
 **Evidence:** [cutoff-three opening record](../../../../evidence/data/leech-z2-cutoff-three-opening-v1.json)
 
 **Executable:** [matrix-free exact-sector runner](../../../../scripts/smoke-leech-z2-block-dmrg.py)

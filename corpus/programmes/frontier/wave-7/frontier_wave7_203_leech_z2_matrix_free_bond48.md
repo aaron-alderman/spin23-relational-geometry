@@ -4,6 +4,8 @@
 
 **Status:** four-point contracting convergence lane; lower enclosure open
 
+**Supersession:** Wave 7.205 extends cutoff two through bond 56.
+
 **Evidence:** [bond-48 record](../../../../evidence/data/leech-z2-matrix-free-bond48-v1.json)
 
 **Executable:** [matrix-free exact-sector runner](../../../../scripts/smoke-leech-z2-block-dmrg.py)

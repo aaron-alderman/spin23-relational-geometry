@@ -1,0 +1,20 @@
+{
+  "schemaVersion":"leech-spectral-enclosure-admission-v1","date":"2026-10-25",
+  "residualCounterexample":{"spectrum":[0,1,10],"rayleigh":10,"residualNorm":0,"isGroundState":false,"conclusion":"zero residual cannot identify the ground state"},
+  "templeControl":{"spectrum":[0,2,5],"rayleigh":0.020000000000000004,"residualNorm":0.198997487421324,"certifiedNextEigenvalueLowerBound":2,"templeLowerBound":-3.469446951953614e-18,"exactGround":0},
+  "gapComposition":{"evenInterval":[1,1.01],"oddInterval":[1.3,1.32],"gapInterval":[0.29000000000000004,0.32000000000000006]},
+  "admissionRequirements":[
+    "sector-valid Ritz vectors supply variational upper bounds U_even and U_odd",
+    "each lower bound L_sector must use a validated enclosure theorem with every premise recorded",
+    "residual proximity alone is rejected because it does not label the eigenvalue",
+    "Temple-Kato is admitted only with a certified next-eigenvalue lower bound beta greater than the target Rayleigh quotient",
+    "Lehmann bounds are admitted only with their separating shift or neighbouring-eigenvalue information independently certified",
+    "inertia is admitted only when the shifted factorization or equivalent eigenvalue count is itself validated",
+    "the parity gap interval is [L_odd-U_even, U_odd-L_even] and is positive only if L_odd>U_even"
+  ],
+  "selectedImplementationFork":{"finiteReducedControls":"validate Temple-Kato and inertia counts against exact diagonalization","fullCarrier":"construct a multi-vector sector Ritz subspace, calculate residual blocks matrix-free, and add an independently validated separator via Lehmann or inertia; do not use scalar residuals as lower bounds","stopRule":"no joined-cell gap certificate until both parity sectors have certified intervals at the same cutoff and model parameters"},
+  "sources":["https://doi.org/10.1137/0612016","https://doi.org/10.1137/100793062","https://arxiv.org/abs/math/0511408","https://www.netlib.org/lapack/lug/node48.html"],
+  "established":"The exact logical and arithmetic admission rules for converting sector Ritz data into a parity-gap interval are executable and include counterexamples to residual-only promotion.",
+  "boundary":"This packet specifies and tests enclosure logic; it does not yet produce full-carrier lower bounds. A certified next-eigenvalue separator or inertia count remains to be implemented.",
+  "epistemicStatus":"executable spectral-enclosure admission standard; full-carrier enclosure implementation open"
+}

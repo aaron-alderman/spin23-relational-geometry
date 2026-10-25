@@ -1,0 +1,6 @@
+import assert from"node:assert/strict";import fs from"node:fs";import path from"node:path";import{fileURLToPath}from"node:url";
+const root=path.join(path.dirname(fileURLToPath(import.meta.url)),"../..");const r=JSON.parse(fs.readFileSync(path.join(root,"evidence/data/leech-z2-matrix-free-bond56-v1.json"),"utf8"));
+assert.equal(r.schemaVersion,"leech-z2-matrix-free-bond56-v1");for(const p of[r.bond48,r.bond56])assert.ok(Math.abs(p.oddEnergy-p.evenEnergy-p.gap)<1e-14);
+assert.ok(r.bond56.evenEnergy<r.bond48.evenEnergy&&r.bond56.oddEnergy<r.bond48.oddEnergy);assert.ok(r.bondCorrection.gapShift<0);assert.ok(r.bondCorrection.relativeGapShift<1.36e-4);
+assert.ok(r.fixedDriftContractionRatio<0.267);assert.ok(r.finalFixedDriftRelative<2.4e-6);assert.equal(r.bond56.effectiveMatrixMaterialized,false);assert.ok(r.bond56.maximumSectorDimension>=39240);assert.ok(r.boundary.includes("no lower enclosure"));
+console.log(JSON.stringify({status:"PASS",bonds:[48,56],gaps:[r.bond48.gap,r.bond56.gap],correctionRatio:r.bondCorrection.ratioToPreviousCorrection,finalSweepDrift:r.fixedBondDrifts[1],maximumSectorDimension:r.bond56.maximumSectorDimension,gapCertified:false,epistemicStatus:r.epistemicStatus}));
