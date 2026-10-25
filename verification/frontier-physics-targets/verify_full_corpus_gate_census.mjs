@@ -20,6 +20,8 @@ const excluded = new Set([
   "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
   "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.md",
   "corpus/programmes/frontier-physics-targets/physics_math_object_adjacency_overrides_v1.json",
+  "corpus/programmes/frontier-physics-targets/theory_bridge_audit_v1.json",
+  "corpus/programmes/frontier-physics-targets/theory_bridge_audit_v1.md",
 ]);
 const pattern = new RegExp(census.pattern, "i");
 const statusPattern = new RegExp(census.statusPattern, "im");

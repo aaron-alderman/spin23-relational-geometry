@@ -6,6 +6,8 @@ const target = "corpus/programmes/frontier-physics-targets/corpus_completion_exi
 const contract = JSON.parse(fs.readFileSync(path.join(root, target), "utf8"));
 const objectExpansionTarget = "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json";
 const objectExpansion = JSON.parse(fs.readFileSync(path.join(root, objectExpansionTarget), "utf8"));
+const theoryAuditTarget = "corpus/programmes/frontier-physics-targets/theory_bridge_audit_v1.json";
+const theoryAudit = JSON.parse(fs.readFileSync(path.join(root, theoryAuditTarget), "utf8"));
 const failures = [];
 
 if (contract.schema !== "frontier.corpus-completion-exit-criteria/1") failures.push("schema mismatch");
@@ -36,6 +38,15 @@ const objectLayerPasses = objectSummary.topicLayerComplete === true
   && objectSummary.routingReviewRequired === 0;
 if (!objectLayerPasses) failures.push("EXIT-01: object-level adjacency expansion is not complete");
 if (adjacencyGate?.status !== (objectLayerPasses ? "passed" : "open")) failures.push("EXIT-01: contract status is inconsistent with the object-level adjacency verifier summary");
+
+const theoryGate = contract.gates?.find(gate => gate.id === "EXIT-04");
+const theoryLayerPasses = theoryAudit.summary?.unresolvedStructuralRecords === 0
+  && theoryAudit.summary?.bridgeClusters === objectExpansion.summary?.claimFamilyClusters
+  && theoryAudit.summary?.coveredObjectFamilyCells === objectExpansion.summary?.objectFamilyCells
+  && Array.isArray(theoryAudit.records)
+  && theoryAudit.records.length === theoryAudit.summary.bridgeClusters;
+if (!theoryLayerPasses) failures.push("EXIT-04: theory-bridge audit is not structurally complete");
+if (theoryGate?.status !== (theoryLayerPasses ? "passed" : "open")) failures.push("EXIT-04: contract status is inconsistent with the theory-bridge audit summary");
 
 const allPass = contract.gates?.every(gate => gate.status === "passed") ?? false;
 if (contract.globalExit?.allGatesMustPass !== true) failures.push("global exit does not require every gate");

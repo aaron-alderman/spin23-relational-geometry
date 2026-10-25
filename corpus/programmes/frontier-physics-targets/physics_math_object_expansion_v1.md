@@ -9,9 +9,9 @@ This is the adversarial expansion below the normalized topic register. It does n
 
 | Measure | Count |
 |---|---:|
-| Inventory objects | 2895 |
+| Inventory objects | 2896 |
 | Explicitly mapped in-scope objects | 1653 |
-| Typed exclusions | 1242 |
+| Typed exclusions | 1243 |
 | Unmapped scientific objects requiring scope review | 0 |
 | Weak semantic routes requiring independent review | 0 |
 | Object × topic × applicable-family cells | 54189 |
