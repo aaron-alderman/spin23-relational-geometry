@@ -149,6 +149,12 @@ evaluated Baby-Monster answer. The Ising fusion ring is not promoted to a
 genus-two amplitude, and central-charge cancellation is not promoted to
 sectorwise phase cancellation.
 
+An exact alternative is now available: the
+[Arf/Fourier reconstruction](arf-fourier-baby-monster-reconstruction.md)
+replaces direct Baby-Monster sewing by sixteen order-23-twined Monster
+amplitudes with all flat (2A) backgrounds. Its finite transform is complete;
+those higher-genus inputs are not.
+
 ## Sources and corpus links
 
 - Yamauchi, [*2A-orbifold construction and the baby-monster vertex operator superalgebra*](https://arxiv.org/abs/math/0312164)
@@ -158,4 +164,5 @@ sectorwise phase cancellation.
 - Tuite and Zuevsky, [Part II](https://arxiv.org/abs/1308.2441)
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Joined order-46 bridge](joined-bridge-map.md)
+- [Arf/Fourier Baby-Monster reconstruction](arf-fourier-baby-monster-reconstruction.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)

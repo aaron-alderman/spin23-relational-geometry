@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "At genus two, 2A fermionization is an invertible 16-by-16 Arf-weighted Fourier transform; with a commuting order-23 insertion it reconstructs the ten even Baby-Monster amplitudes from sixteen Monster amplitudes with flat 2A backgrounds after division by the known free-Majorana factor.",
+  "cohomology": {
+    "group": "H^1(Sigma_2,F2)",
+    "dimension": 4,
+    "size": 16,
+    "evenSpinStructures": 10,
+    "oddSpinStructures": 6
+  },
+  "transform": {
+    "normalization": "1/4",
+    "kernel": "(-1)^(Arf(t+rho)+Arf(rho)+<t,S>)",
+    "integerGram": "A A^T = 16 I_16",
+    "invertible": true
+  },
+  "commutingPair": {
+    "rootClasses": ["46C", "46D"],
+    "rootOrder": 46,
+    "order23Element": "b=h^2",
+    "twoAElement": "z=h^23",
+    "commutes": true
+  },
+  "reconstruction": {
+    "bosonicInputs": 16,
+    "input": "order-23-twined genus-two Monster amplitudes for every flat 2A background",
+    "fermionicOutputs": 16,
+    "oddZeroTests": 6,
+    "evenBabyMonsterOutputs": 10,
+    "division": "Z_VB,b[delta]=Z_F,b[delta]/Z_free[delta] for even delta"
+  },
+  "relationDefect": {
+    "word": "K=S^2 R^-11",
+    "freeCycleHolonomies": ["1", "1", "1"],
+    "freeFixedOddOddEigenvalue": "-1",
+    "comparisonInvariants": "three closed-cycle holonomies and one fixed-sector eigenvalue"
+  },
+  "sourceStatus": {
+    "finiteTransformComplete": true,
+    "sixteenTwinedMonsterBackgroundAmplitudesKnown": false,
+    "babyMonsterKOperatorKnown": false
+  },
+  "boundary": "The transform is exact but does not derive the sixteen higher-genus Monster background amplitudes from genus-one scalar traces."
+}

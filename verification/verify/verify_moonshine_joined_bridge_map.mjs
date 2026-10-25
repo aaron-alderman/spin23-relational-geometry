@@ -13,6 +13,7 @@ const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.j
 const seamAction = load("../../evidence/data/moonshine-relation-defect-seam-permutation-v1.json");
 const freeMajorana = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
 const babyGate = load("../../evidence/data/moonshine-baby-monster-genus-two-source-gate-v1.json");
+const arf = load("../../evidence/data/moonshine-arf-fourier-baby-monster-reconstruction-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const fermionic = load("../../evidence/data/lattice-subroutine-monster-fermionization-bridge-v1.json");
 const igusa = load("../../evidence/data/lattice-subroutine-igusa-seam-completion-v1.json");
@@ -122,7 +123,9 @@ assert.equal(projectiveNoGo.genusOneOutcome.orientationRecovered, false);
 assert(joined.generalizedMoonshineTarget.mixedLevelSeam.genusOneCentralizerRepresentationStatus.includes("exhausted"));
 assert.equal(babyGate.established.sumCentralCharge, 24);
 assert(joined.openGates.some((entry) => entry.includes("Baby-Monster torus one-point")));
-assert.equal(joined.openGates.length, 6);
+assert(joined.openGates.some((entry) => entry.includes("Arf-Fourier")));
+assert.equal(arf.transform.invertible, true);
+assert.equal(joined.openGates.length, 7);
 
 console.log(JSON.stringify({
   order46Diamond: {

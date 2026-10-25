@@ -140,6 +140,7 @@ geometry that motivated the admissibility language.
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Baby-Monster genus-two source gate](baby-monster-genus-two-source-gate.md)
+- [Arf/Fourier Baby-Monster reconstruction](arf-fourier-baby-monster-reconstruction.md)
 - [Projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 - [Main Moonshine programme](README.md)
 - [Per-target corpus assessments](../frontier-physics-targets/frontier_physics_target_assessments_v1.md)

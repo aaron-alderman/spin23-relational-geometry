@@ -25,6 +25,8 @@
 
 **Baby-Monster source gate:** [the missing object is twined sewing data beyond characters and Ising fusion](baby-monster-genus-two-source-gate.md)
 
+**Arf/Fourier reconstruction:** [sixteen (2A)-background Monster amplitudes reconstruct the ten even Baby-Monster sectors](arf-fourier-baby-monster-reconstruction.md)
+
 ## Result
 
 The Monster branch does contain a mathematically defensible sense in which a
@@ -889,6 +891,12 @@ The source audit sharpens this further: the Baby-Monster SVOA and its
 three-object Ising fusion ring are known, but the needed order-23-twined
 torus one-point functions, intertwiners and genus-two spin vector are not
 evaluated in the reviewed literature.
+There is nevertheless an exact lightning route back through the Monster rail:
+the genus-two fermionization kernel is an invertible (16\times16)
+Arf-weighted Fourier transform. Sixteen order-23-twined Monster amplitudes
+with all flat (2A) backgrounds would transform into the fermionic spin
+vector; six odd components must vanish, and division by the known free factor
+recovers the ten Baby-Monster components.
 
 ## Sources and corpus links
 
@@ -920,3 +928,4 @@ evaluated in the reviewed literature.
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Baby-Monster genus-two source gate](baby-monster-genus-two-source-gate.md)
+- [Arf/Fourier Baby-Monster reconstruction](arf-fourier-baby-monster-reconstruction.md)

@@ -167,6 +167,8 @@ Further work in this lane is admissible only if it supplies at least one of:
   \(v_\eta(K)=i\) on the explicit relation rail;
 - order-23-twined Baby-Monster torus one-point and intertwining data sufficient
   to sew its ten-even-spin genus-two vector;
+- or, equivalently, the sixteen order-23-twined Monster genus-two amplitudes
+  with every flat (2A) background, for invertible Arf/Fourier reconstruction;
 - cross-grade Monster-module fusion or intertwiner coefficients;
 - a declared physical carrier together with dynamics and detector coupling.
 
@@ -188,4 +190,5 @@ traces or centralizer words is repetition, not frontier progress.
 - [Relation-defect seam permutation](relation-defect-seam-permutation.md)
 - [Free-Majorana relation-defect multiplier](relation-defect-free-majorana-multiplier.md)
 - [Baby-Monster genus-two source gate](baby-monster-genus-two-source-gate.md)
+- [Arf/Fourier Baby-Monster reconstruction](arf-fourier-baby-monster-reconstruction.md)
 - [Admissibility synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md)

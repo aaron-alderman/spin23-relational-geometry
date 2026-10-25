@@ -5,6 +5,7 @@ const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, 
 const gate = load("../../evidence/data/moonshine-baby-monster-genus-two-source-gate-v1.json");
 const free = load("../../evidence/data/moonshine-relation-defect-free-majorana-multiplier-v1.json");
 const joined = load("../../evidence/data/moonshine-joined-bridge-map-v1.json");
+const arf = load("../../evidence/data/moonshine-arf-fourier-baby-monster-reconstruction-v1.json");
 
 assert.equal(Number(gate.established.babyMonsterCentralCharge.split("/")[0]) / 2, 23.5);
 assert.equal(Number(gate.established.freeMajoranaCentralCharge.split("/")[0]) / 2, 0.5);
@@ -32,6 +33,10 @@ assert.equal(gate.sourceStatus.generalFermionicGenusTwoSewingFormalism, true);
 assert.equal(gate.sourceStatus.explicitFreeFermionGenusTwoVector, true);
 assert.equal(gate.sourceStatus.explicitBabyMonsterGenusTwoSpinVector, false);
 assert.equal(gate.sourceStatus.explicitOrder23TwinedBabyMonsterGenusTwoSpinVector, false);
+assert.equal(gate.alternativeReconstruction.monsterInputs, arf.reconstruction.bosonicInputs);
+assert.equal(gate.alternativeReconstruction.oddZeroTests, arf.reconstruction.oddZeroTests);
+assert.equal(gate.alternativeReconstruction.evenBabyMonsterOutputs, arf.reconstruction.evenBabyMonsterOutputs);
+assert.equal(gate.alternativeReconstruction.inputKnown, false);
 assert(joined.generalizedMoonshineTarget.requiredComparisons["46C_46D"].includes("Baby Monster"));
 
 console.log(JSON.stringify({
