@@ -6,7 +6,7 @@ This is a generated atlas, not a claim of truth or completeness. Its machine-rea
 
 **Authority boundary.** This atlas reports repository structure and declared epistemic surfaces. It does not promote claims, replace source evidence, or grant publication, corpus-admission, runtime, or deployment authority.
 
-**Coverage.** 16 declared roots across 4 routes; 6421 retained inventory objects; 4649 objects reachable through local links; 6421 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
+**Coverage.** 16 declared roots across 4 routes; 6422 retained inventory objects; 4649 objects reachable through local links; 6421 objects explicitly classified; 1 unclassified. The atlas does not pass its structural checks.
 
 ## Understand the present claim
 
