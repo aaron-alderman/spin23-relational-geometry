@@ -19,6 +19,7 @@ const excluded = new Set([
   "corpus/registers/corpus_front_door.json",
   "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
   "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.md",
+  "corpus/programmes/frontier-physics-targets/physics_math_object_adjacency_overrides_v1.json",
 ]);
 const pattern = new RegExp(census.pattern, "i");
 const statusPattern = new RegExp(census.statusPattern, "im");
@@ -60,6 +61,10 @@ for (const record of census.records) {
     for (const id of record.topicIds ?? []) if (!topicIds.has(id)) failures.push(`unknown evidence topic ${id} in ${record.path}`);
     for (const owner of record.ownerRefs ?? []) if (!fs.existsSync(path.join(root, owner))) failures.push(`missing evidence owner ${owner} in ${record.path}`);
     if (!(record.topicIds?.length || record.ownerRefs?.length)) failures.push(`evidence record has neither topic nor corpus owner ${record.path}`);
+  }
+  if (record.corpusClass === "evidence") {
+    for (const owner of record.ownerRefs ?? []) if (!fs.existsSync(path.join(root, owner))) failures.push(`missing evidence owner ${owner} in ${record.path}`);
+    if (/\/publication-manifest-v\d+\.json$/i.test(record.path) && !record.ownerRefs?.length) failures.push(`publication manifest has no retained owner ${record.path}`);
   }
   if (record.disposition === "delegated_audit" && (!record.auditRef || !fs.existsSync(path.join(root, record.auditRef)))) failures.push(`missing audit owner for ${record.path}`);
   if (["navigation", "separate_programme"].includes(record.disposition) && (!record.ownerRef || !fs.existsSync(path.join(root, record.ownerRef)))) failures.push(`missing ownerRef for ${record.path}`);

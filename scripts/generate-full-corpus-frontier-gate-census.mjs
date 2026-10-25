@@ -54,6 +54,7 @@ const derivedControlSurfaces = [
   "corpus/registers/corpus_front_door.json",
   "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
   "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.md",
+  "corpus/programmes/frontier-physics-targets/physics_math_object_adjacency_overrides_v1.json",
 ];
 const excluded = new Set([outJson, outMd, ...derivedControlSurfaces]);
 
@@ -125,6 +126,13 @@ const statusOf = (text, title) => {
   return "undeclared";
 };
 const claimIdOf = (rel) => Number(path.posix.basename(rel).match(/^(\d+)/)?.[1] ?? NaN);
+const navigationArtifacts = new Map([
+  ["corpus/EXPLANATORY_STANDARD.md", "corpus/README.md"],
+  ["corpus/START_HERE_BY_ROLE.md", "corpus/claims/0000-0099/00_research_document_map.md"],
+  ["corpus/front-door.routes.json", "corpus/claims/0000-0099/00_research_document_map.md"],
+  ["corpus/programmes/closure/manuscript_starter_kit.md", "corpus/claims/0000-0099/00_research_document_map.md"],
+  ["corpus/programmes/frontier-physics-targets/adjacency_terminal_review_crosswalk_v1.json", "corpus/programmes/frontier-physics-targets/corpus_completion_exit_criteria_v1.json"],
+]);
 const selectTopicRules = (title, text) => {
   const lead = text.slice(0, 1800);
   const context = text.slice(1800, 7000);
@@ -157,6 +165,31 @@ for (const abs of scopeRoots.flatMap((scopeRoot) => fs.existsSync(scopeRoot) ? w
     title,
     gatePhrases: [...new Set([...matches, ...(statusMatch ? [`status:${statusMatch.replace(/^\*\*Status:\*\*\s*/i, "").trim()}`] : [])])].sort(),
   };
+  if (navigationArtifacts.has(rel)) {
+    records.push({
+      ...record,
+      corpusClass: "navigation",
+      disposition: matches.length || statusMatch ? "navigation" : "no_declared_gate",
+      ownerRef: navigationArtifacts.get(rel),
+      note: "Reader, policy or control-plane navigation; scientific claims remain owned by its linked corpus objects.",
+    });
+    continue;
+  }
+  if (/^corpus\/programmes\/.*\.json$/i.test(rel)) {
+    const ownerRefs = [...new Set([...text.matchAll(/(?:corpus|evidence|verification)\/[A-Za-z0-9_./-]+\.(?:md|json|mjs)/g)]
+      .map((match) => match[0])
+      .filter((candidate) => fs.existsSync(path.join(root, candidate))))];
+    if (!ownerRefs.length) ownerRefs.push(programmeAudit(rel));
+    records.push({
+      ...record,
+      corpusClass: "evidence",
+      disposition: matches.length || statusMatch ? "evidence_record" : "no_declared_gate",
+      ...(ownerRefs.length ? { ownerRefs } : {}),
+      mappingBasis: "machine programme artifact retaining specifications, results, claims, evidence or certificates",
+      note: "Machine specifications, result packets and publication manifests support governed claims; they are not independent prose claim objects.",
+    });
+    continue;
+  }
   if (!matches.length && !statusMatch) {
     const corpusClass = rel.startsWith("evidence/") ? "evidence" : rel.startsWith("corpus/claims/") ? "claim" : rel.startsWith("corpus/programmes/") ? "programme" : rel.startsWith("corpus/registers/") || rel.startsWith("corpus/concept-map/") || rel === "corpus/README.md" ? "navigation" : "synthesis";
     const head = `${title}\n${text.slice(0, 7000)}`;
