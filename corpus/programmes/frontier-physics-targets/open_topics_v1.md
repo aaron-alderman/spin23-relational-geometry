@@ -88,7 +88,7 @@ for another dimensionless redesign.
 | OT-039 | Microscopic wall-pseudoscalar coefficient | source-derived coupling with sign, magnitude and radiative stability |
 | OT-040 | Matter-plus-field Coulomb energy current | gauge- and limit-consistent total energy continuity |
 | OT-042 | Typed triality-Furey reflection | full module, charge and orientation intertwiner |
-| OT-045 | Hecke operator or modular-trace test | compute a vector-valued/projective \(S_4\) centralizer action or relational multi-insertion record—the complete scalar insertion search is exhausted—then test whether the surviving orientation can be sewn at genus two |
+| OT-045 | Hecke operator or modular-trace test | construct cross-grade VOA/defect composition or order-23-twined genus-two sewing—the scalar, ordinary-vector and projective centralizer routes are exhausted—and test whether either retains the oriented rail |
 | OT-046 | D4 quotient-singularity localized operator | source-native Hamiltonian/Dirac/Fredholm operator with quotient-controlled spectrum |
 | OT-049 | Exceptional rank-one vacuum Hessian and gauge spectrum | stable action-level vacuum with coloured directions and matched current geometry |
 | OT-050 | Lattice-subroutine gravitational action and observable | order-23 twined genus-two and fermionic Baby-Monster data, a derived off-diagonal Jordan response, and one complete typed route to a healthy action or continuum and no-refit record |
@@ -273,10 +273,12 @@ an orientation detector. The full commuting-insertion census now closes the
 scalar version of that proposal. For an order-23 element the centralizer is
 \(C_{23}\times S_4\); its five insertion classes yield cyclic products of
 orders \(23,46,46,69,92\), and every corresponding A/B McKay--Thompson pair
-is equal. The next finite work must therefore compute the vector-valued
-projective \(S_4\) action or retain genuinely relational multi-insertion data,
-identify the corpus cycle with an oriented 23A/23B generator, and sew the
-defect characters at genus two. The
+is equal. The order-24 Monster anomaly transgresses trivially along the
+order-23 twist, so the centralizer action is linearisable; the five class
+traces determine the full graded \(S_4\) module, and scalar word traces add
+nothing. The next finite work must therefore construct cross-grade VOA or
+defect composition, identify the corpus cycle with an oriented 23A/23B
+generator, and sew the channel at genus two. The
 off-diagonal physical Jordan response and a gravitational action remain
 separate gates.
 
