@@ -7,6 +7,12 @@ const root = resolve(process.cwd());
 const write = process.argv.includes("--write");
 const trackedOnly = process.argv.includes("--tracked-only");
 const manifestName = "corpus/registers/spin23_corpus_manifest.json";
+const derivedReleaseSurfaces = new Set([
+  "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json",
+  "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.md",
+  "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.json",
+  "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
+]);
 const claimsDirectory = "corpus/claims";
 const governanceFiles = [
   "corpus/claims/0000-0099/00_research_document_map.md",
@@ -129,6 +135,7 @@ const brokenCoreLinks = governanceFiles
 
 const repositoryFiles = presentCandidateFiles
   .filter((file) => file !== manifestName)
+  .filter((file) => !derivedReleaseSurfaces.has(file))
   // Release receipts attest a frozen projection and are deliberately outside
   // the content inventory they certify. They remain tracked audit evidence.
   .filter((file) => !file.startsWith("verification/releases/"))
@@ -168,6 +175,7 @@ const manifest = {
   errors,
   warnings,
   excludedDirectories: [...excludedDirectories].sort(),
+  excludedDerivedReleaseSurfaces: [...derivedReleaseSurfaces].sort(),
   files: repositoryEntries,
 };
 
