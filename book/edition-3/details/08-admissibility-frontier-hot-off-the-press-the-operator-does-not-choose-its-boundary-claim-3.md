@@ -42,4 +42,4 @@ Supply the missing datum with a physical definition and demonstrate that it conn
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-operator-does-not-choose-its-boundary) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-operator-does-not-choose-its-boundary-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-hydrodynamic-cone-has-poles-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#hot-off-the-press-the-operator-does-not-choose-its-boundary) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-hot-off-the-press-the-operator-does-not-choose-its-boundary-claim-2.md) · [Next claim →](08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-1.md)

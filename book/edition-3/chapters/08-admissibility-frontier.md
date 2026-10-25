@@ -1055,6 +1055,25 @@ This opens a finite look-here experiment rather than a universal identification.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-operator-does-not-choose-its-boundary-claim-3.md)
 
+<a id="hot-off-the-press-the-two-rails-share-a-plane-not-a-group"></a>
+## Hot off the press — the two rails share a plane, not a group
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
+
+**Provisional integration note — 25 October 2026.** The Monster Lie algebra's Lorentzian grading lattice \(II_{1,1}\) sits exactly inside the rank-two Jordan carrier as the diagonal matrices \(\operatorname{diag}(m,n)\). The determinant becomes \(mn\), and the Weyl exchange swaps the two primitive diagonal directions. This is a shared kinematic plane, not a Monster action on the full cone and not a map from the finite Monster group to \(\operatorname{Spin}_0(2,3)\).
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-1.md)
+
+The Rule-60 calculation makes the same boundary operational. On the eleven-dimensional image of \(T=1+\sigma\) in the cyclic Golay code, \(T^{89}=\sigma^2\), while \(T\) has order \(2047=23\cdot89\). Because 89 does not divide the Monster order, Rule 60 itself cannot be a Monster element. The genuine finite symmetry is the order-23 shift \(\sigma\); Rule 60 remains a group-algebra update with an order-89 residue the proposed symmetry does not retain.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-2.md)
+
+The scalar \(\sigma\) bridge now closes exactly. Its fixed Leech lattice has Gram matrix \(\left(\begin{smallmatrix}4&1\\1&6\end{smallmatrix}\right)\) and determinant 23, and its normalized theta/eta trace is the common 23A/23B McKay--Thompson series. The quadratic-residue and nonresidue rails have Gaussian periods in \(\mathbb Q(\sqrt{-23})\), and reduction on the two Golay factors contracts them to the conjugate ideals \(\left(2,\alpha\right)\) and \(\left(2,\alpha+1\right)\): the finite-field-to-oriented-ideal-to-lattice-to-trace compiler is literal once a primitive root is declared. The inverse ideals have the same scalar theta series, so this record provably forgets orientation. A September 2026 preprint supplies a self-orbifold 23AB channel with 529 sectors, the \(U(23)\) discriminant form, an embedded \(P(23)\) parafermion algebra and a duality defect exchanging twist and charge. Its quarter-turn and fifth-power orientation exchange generate \(\mathrm{Dic}_{11}\), an exact order-44 instruction set on sector labels—not a physical dynamics. Ordinary genus-one charge projection still collapses the twenty-two nonzero charges. A separate conditional construction predicts twelve defect lines governed by \(\Gamma_1(25)\); \(X_1(25)\) also has genus twelve, an exact numerical coincidence with no derived identification. The look-here calculation is now to identify the corpus cycle with an oriented generator, compute its vector-valued defect records and sew them at genus two. A useful result would improve code, defect and modular engineering. A physical claim additionally requires the missing off-diagonal response, a dynamics and a detector record; the shared plane and chiral defect alone supply none of them.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-hot-off-the-press-the-two-rails-share-a-plane-not-a-group-claim-3.md)
+
 <a id="hot-off-the-press-the-hydrodynamic-cone-has-poles"></a>
 ## Hot off the press — the hydrodynamic cone has poles
 

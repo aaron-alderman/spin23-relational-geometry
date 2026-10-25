@@ -322,6 +322,7 @@ const sectionTaxonomy = {
   "Hot off the press — the second gauge detector needs a phase reference": "experiment",
   "Hot off the press — an odd resonance moment retains the sign": "experiment",
   "Hot off the press — the operator does not choose its boundary": "external",
+  "Hot off the press — the two rails share a plane, not a group": "conditional",
   "Kenotic confidence": "governance",
   "Why add this layer": "interpretive",
   "The unit is an episode": "interpretive",
@@ -425,6 +426,7 @@ const sectionArchetype = {
   "Hot off the press — the second gauge detector needs a phase reference": "builder",
   "Hot off the press — an odd resonance moment retains the sign": "builder",
   "Hot off the press — the operator does not choose its boundary": "translator",
+  "Hot off the press — the two rails share a plane, not a group": "auditor",
   "How to challenge a claim": "auditor",
   "A compact vocabulary": "translator",
 };
@@ -895,6 +897,15 @@ admissibilitySections.splice(orientedSeamIndex + 40, 0, [
 ]);
 
 admissibilitySections.splice(orientedSeamIndex + 41, 0, [
+  "Hot off the press — the two rails share a plane, not a group",
+  [
+    "**Provisional integration note — 25 October 2026.** The Monster Lie algebra's Lorentzian grading lattice \\(II_{1,1}\\) sits exactly inside the rank-two Jordan carrier as the diagonal matrices \\(\\operatorname{diag}(m,n)\\). The determinant becomes \\(mn\\), and the Weyl exchange swaps the two primitive diagonal directions. This is a shared kinematic plane, not a Monster action on the full cone and not a map from the finite Monster group to \\(\\operatorname{Spin}_0(2,3)\\).",
+    "The Rule-60 calculation makes the same boundary operational. On the eleven-dimensional image of \\(T=1+\\sigma\\) in the cyclic Golay code, \\(T^{89}=\\sigma^2\\), while \\(T\\) has order \\(2047=23\\cdot89\\). Because 89 does not divide the Monster order, Rule 60 itself cannot be a Monster element. The genuine finite symmetry is the order-23 shift \\(\\sigma\\); Rule 60 remains a group-algebra update with an order-89 residue the proposed symmetry does not retain.",
+    "The scalar \\(\\sigma\\) bridge now closes exactly. Its fixed Leech lattice has Gram matrix \\(\\left(\\begin{smallmatrix}4&1\\\\1&6\\end{smallmatrix}\\right)\\) and determinant 23, and its normalized theta/eta trace is the common 23A/23B McKay--Thompson series. The quadratic-residue and nonresidue rails have Gaussian periods in \\(\\mathbb Q(\\sqrt{-23})\\), and reduction on the two Golay factors contracts them to the conjugate ideals \\(\\left(2,\\alpha\\right)\\) and \\(\\left(2,\\alpha+1\\right)\\): the finite-field-to-oriented-ideal-to-lattice-to-trace compiler is literal once a primitive root is declared. The inverse ideals have the same scalar theta series, so this record provably forgets orientation. A September 2026 preprint supplies a self-orbifold 23AB channel with 529 sectors, the \\(U(23)\\) discriminant form, an embedded \\(P(23)\\) parafermion algebra and a duality defect exchanging twist and charge. Its quarter-turn and fifth-power orientation exchange generate \\(\\mathrm{Dic}_{11}\\), an exact order-44 instruction set on sector labels—not a physical dynamics. Ordinary genus-one charge projection still collapses the twenty-two nonzero charges. A separate conditional construction predicts twelve defect lines governed by \\(\\Gamma_1(25)\\); \\(X_1(25)\\) also has genus twelve, an exact numerical coincidence with no derived identification. The look-here calculation is now to identify the corpus cycle with an oriented generator, compute its vector-valued defect records and sew them at genus two. A useful result would improve code, defect and modular engineering. A physical claim additionally requires the missing off-diagonal response, a dynamics and a detector record; the shared plane and chiral defect alone supply none of them.",
+  ],
+]);
+
+admissibilitySections.splice(orientedSeamIndex + 42, 0, [
   "Hot off the press — the hydrodynamic cone has poles",
   [
     "**Provisional integration note — 25 October 2026.** The hydrodynamic rank witness now has a full effective response rather than three positive shapes. The tensor term is local at first derivative order, the shear channel has a diffusive pole, and the sound channel has two attenuated propagating poles. At the declared point every pole is retarded, every residue is nonzero and the assembled two-port spectral matrix is positive definite.",
@@ -1253,6 +1264,7 @@ const sectionEvidenceOverrides = {
   "Hot off the press — the second gauge detector needs a phase reference": ["corpus/programmes/admissibility/admissibility_116_the_minimal_second_gauge_detector_needs_a_phase_reference.md", "corpus/programmes/admissibility/admissibility_115_the_full_gauge_dictionary_turns_the_sixth_coordinate_into_a_declared_slice.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md"],
   "Hot off the press — an odd resonance moment retains the sign": ["corpus/programmes/admissibility/admissibility_117_an_odd_resonance_moment_can_supply_the_missing_sign.md", "corpus/programmes/admissibility/admissibility_116_the_minimal_second_gauge_detector_needs_a_phase_reference.md", "corpus/programmes/admissibility/admissibility_74_one_family_triangle_and_global_positivity_gate.md"],
   "Hot off the press — the operator does not choose its boundary": ["corpus/programmes/frontier/wave-7/frontier_wave7_107_boundary_domain_admissibility_bridge.md", "corpus/programmes/frontier-physics-targets/open_topics_v1.md", "corpus/programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md"],
+  "Hot off the press — the two rails share a plane, not a group": ["corpus/programmes/moonshine-program-lattice/README.md", "corpus/programmes/frontier-physics-targets/open_topics_v1.md", "corpus/programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md"],
   "Hot off the press — the hydrodynamic cone has poles": ["corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md", "corpus/programmes/admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md", "corpus/programmes/admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md", "corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md", "corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md", "corpus/programmes/admissibility/admissibility_98_gaussian_hydrodynamic_source_frame_invariance.md", "corpus/programmes/admissibility/admissibility_97_hydrodynamic_pole_residue_response_ledger.md", "corpus/claims/0200-0299/212_hydrodynamic_stress_map_can_have_local_rank_three.md", "corpus/claims/0200-0299/213_fixed_temperature_kms_herglotz_schur_sewing.md"],
   "Hot off the press — memory depends on the detector scale": ["corpus/programmes/admissibility/admissibility_99_three_scale_passive_diffusion_pushforward.md", "corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md", "corpus/claims/0200-0299/201_recursive_schur_jordan_descent_and_functorial_sewing.md"],
   "Hot off the press — a zero mode does not fix its detector weight": ["corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md", "corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md"],

@@ -1,0 +1,205 @@
+{
+  "schema": "moonshine-program-lattice-bridge/1",
+  "date": "2026-10-25",
+  "objects": {
+    "monsterDenominatorGrading": "the even unimodular Lorentzian plane II_{1,1}",
+    "jordanCarrier": "H_2(R) with quadratic norm det",
+    "golayProgram": "T = 1 + sigma on the cyclic binary Golay code G_23",
+    "moonshineObservable": "T_g(tau) = Tr_{V^natural}(g q^(L_0-1))"
+  },
+  "exactJordanEmbedding": {
+    "map": "(m,n) -> diag(m,n)",
+    "quadraticNorm": "det(diag(m,n)) = mn",
+    "polarForm": "B((m,n),(r,s)) = m*s + n*r",
+    "gramMatrix": [[0, 1], [1, 0]],
+    "determinant": -1,
+    "signature": [1, 1],
+    "weylExchange": "(m,n) -> (n,m)",
+    "interpretation": "the Monster Lie algebra grading lattice is the diagonal split plane of the full three-dimensional Jordan carrier",
+    "boundary": "this is an embedding of grading lattices, not a Monster action on H_2(R) and not a homomorphism from Spin_0(2,3) to the Monster"
+  },
+  "rule60GolayDecomposition": {
+    "code": "binary cyclic Golay [23,12,7] code",
+    "generatorPolynomial": "x^11+x^9+x^7+x^6+x^5+x+1",
+    "cyclicComplementPolynomial": "x^11+x^10+x^6+x^5+x^4+x^2+1",
+    "rule60MinimalPolynomialOnImage": "x^11+x^9+x^6+x^5+x^4+x^3+1",
+    "cyclotomicFactorRelation": "the two degree-11 factors are reciprocal and their root exponents are the two Frobenius orbits under multiplication by 2 modulo 23",
+    "fifthPowerAction": "multiplication by 5 exchanges the two Frobenius orbits",
+    "codeCardinality": 4096,
+    "kernelCardinality": 2,
+    "imageCardinality": 2048,
+    "imageDimension": 11,
+    "orderOnNonzeroImage": 2047,
+    "orderFactorization": "2047 = 23 * 89",
+    "primaryIdentity": "T^89 = sigma^2 on im(T)",
+    "order23Interpretation": "the complete 23-primary component of Rule 60 is an ordinary cyclic-shift symmetry",
+    "order89Boundary": "89 does not divide the Monster order, so T on im(T) cannot be the image of a Monster group element in a faithful action",
+    "survivingBridge": "lift sigma, not T, through extended Golay, Leech and VOA data; retain T as the group-algebra polynomial 1+sigma"
+  },
+  "order23MoonshineBoundary": {
+    "monsterClasses": ["23A", "23B"],
+    "powerMap": "fifth power exchanges 23A and 23B",
+    "traceDegeneracy": "the two classes have the same McKay-Thompson series",
+    "firstTerms": "q^-1 + 4q + 7q^2 + 13q^3 + 19q^4 + ...",
+    "etaExpression": "with F=eta(tau)eta(23tau)/(eta(2tau)eta(46tau)), T_23=(F+1)(F^2+4)/F^2",
+    "verifiedReplication": "the n=2 Faber/replication identity is checked exactly through q^15",
+    "consequence": "a genus-one scalar trace cannot decide which member of the 23A/23B pair a proposed lift occupies",
+    "requiredRefinement": "retain lift/class data or use a twisted, defect, vector-valued or higher-genus observable"
+  },
+  "order23OrientationConvention": {
+    "normalizerAction": "the Sylow-23 normalizer acts by the order-11 subgroup of squares in F_23^times, producing the two QR/QNR generator orbits",
+    "inversion": "-1 is a quadratic nonresidue modulo 23, so g and g^-1 lie in the two different Monster classes 23A and 23B",
+    "status": "23A versus 23B is an oriented-generator convention, not an invariant of the underlying cyclic subgroup",
+    "closedPart": "after choosing zeta_23/QR orientation, the Golay factor selects one prime above 2 and one nonprincipal ideal class canonically",
+    "remainingPart": "a class-sensitive defect observable may retain that choice, but no intrinsic construction can name A versus B without fixing an orientation convention"
+  },
+  "order23LeechLift": {
+    "cycleShape": "1^1 23^1",
+    "fixedRank": 2,
+    "fixedLatticeGram": [[4, 1], [1, 6]],
+    "fixedLatticeDeterminant": 23,
+    "fixedQuadraticForm": "Q_+(a,b)=2a^2+a*b+3b^2",
+    "fixedQuadraticFormDiscriminant": -23,
+    "oscillatorEtaProduct": "eta(tau)eta(23tau)",
+    "exactNormalizedIdentity": "Theta_{Lambda^sigma}/(eta(tau)eta(23tau)) - 1 = T_23A = T_23B",
+    "verifiedCoefficientRange": "q^-1 through q^30",
+    "constantInterpretation": "the removed +1 is the trace of the single invariant weight-one oscillator",
+    "cyclicSubgroupFact": "the two order-23 Leech conjugacy classes generate conjugate cyclic subgroups and therefore have the same fixed-lattice type",
+    "boundary": "the scalar identity identifies the normalized observable, not a canonical choice between the two oriented generators or a physical dynamics"
+  },
+  "discriminantMinus23OrientationGate": {
+    "reducedForms": ["[1,1,6]", "[2,1,3]", "[2,-1,3]"],
+    "classGroup": "C3",
+    "principalClass": "[1,1,6]",
+    "inverseNonprincipalPair": ["[2,1,3]", "[2,-1,3]"],
+    "orientationFact": "the nonprincipal pair is distinct under proper SL_2(Z) equivalence but exchanged by determinant-minus-one orientation reversal",
+    "thetaDegeneracy": "Theta_[2,1,3] = Theta_[2,-1,3]",
+    "etaIdentity": "Theta_[1,1,6] - Theta_[2,1,3] = 2 eta(tau)eta(23tau)",
+    "verifiedCoefficientRange": "through q^40",
+    "interpretation": "a scalar theta trace necessarily forgets which oriented nonprincipal rail was selected",
+    "survivingObservable": "an oriented, chiral, defect, vector-valued or otherwise class-sensitive refinement"
+  },
+  "discriminant23Compiler": {
+    "finiteFieldInput": "the two degree-11 factors of Phi_23 over F_2 are indexed by the quadratic-residue and nonresidue orbits modulo 23",
+    "complexFourierPeriods": "alpha=sum_{r quadratic residue} zeta_23^r and alphaBar=sum_{n nonresidue} zeta_23^n",
+    "periodRelations": ["alpha+alphaBar=-1", "alpha*alphaBar=6", "alpha^2+alpha+6=0"],
+    "quadraticField": "Q(sqrt(-23))",
+    "ringOfIntegers": "Z[alpha]",
+    "nonprincipalIdeal": "I=(2,alpha), with norm 2",
+    "fixedFormAsIdealNorm": "Q_+(a,b)=N(2a-b*alpha)/N(I)=2a^2+a*b+3b^2",
+    "modularOutput": "Theta_I/(eta(tau)eta(23tau))-1=T_23",
+    "primeAboveTwoRefinement": {
+      "cyclotomicFactorPrimes": ["P_QR=(2,g(zeta_23))", "P_QNR=(2,h(zeta_23))"],
+      "residueDegrees": [11, 11],
+      "gaussianPeriodResidues": ["alpha=0 mod P_QR", "alpha=1 mod P_QNR"],
+      "contractionsToQuadraticSubfield": ["P_QR intersect O_K=(2,alpha)", "P_QNR intersect O_K=(2,alpha+1)"],
+      "interpretation": "the two Golay factors canonically select the two conjugate norm-two nonprincipal ideals once zeta_23 and the QR period alpha are declared"
+    },
+    "rule60ResidueInterpretation": "1+zeta_23 reduces to a primitive element of F_2048 on the selected characteristic-two rail; its order 2047=23*89 is a residue-field fact, so the factor 89 need not and does not occur in the Monster",
+    "lossMap": "orientation/Galois conjugation exchanges the two rails while scalar theta summation identifies them",
+    "boundary": "the finite-field-factor to oriented-ideal-class arrow is canonical relative to a chosen zeta_23; a canonical VOA lift that names the resulting generator 23A rather than 23B remains to be constructed"
+  },
+  "order23DefectChannel": {
+    "literatureStatus": "September 2026 preprint theorem",
+    "monsterClass": "Fricke non-anomalous 23AB",
+    "selfOrbifold": "V^natural is isomorphic to V^natural/<g>",
+    "embeddedAlgebra": "P(23)=su(2)_23/u(1)",
+    "fixedPointModules": "V_{a,b}, (a,b) in Z_23^2",
+    "moduleCount": 529,
+    "conformalQuadraticForm": "h_{a,b}=a*b/23 mod 1",
+    "latticeIdentification": "this finite quadratic module is the discriminant form of U(23), the scaled Monster-Lie hyperbolic plane",
+    "modularQuarterTurn": "S:(a,b)->(b,-a), with S^2=-I and S^4=I",
+    "dualityDefectAction": "(a,b)->(b,a)",
+    "fourierBicharacter": "chi(g^a,g^k)=exp(2*pi*i*a*k/23)",
+    "dualityCategory": "Tambara-Yamagami category extending Z_23; the noninvertible duality object has quantum dimension sqrt(23)",
+    "anomalyRestriction": "the Monster anomaly has order 24, so its restriction to C_23 is zero because H^3(C_23,U(1)) has exponent 23",
+    "interpretation": "a mathematically established transition channel exchanges twist and charge rails and realizes the finite Fourier transform",
+    "boundary": "this is topological/modular dynamics inside a chiral 2D CFT, not a derived four-dimensional Hamiltonian, time coordinate or detector law"
+  },
+  "finiteTransitionSkeleton": {
+    "phaseSpace": "A=F_23^2 with twist-charge labels (a,b), quadratic refinement q(a,b)=a*b/23 mod 1, and standard alternating pairing",
+    "orientationExchange": "D_5:(a,b)->(5a,5^-1*b); 5 has order 22 and is a quadratic nonresidue modulo 23",
+    "quarterTurn": "S:(a,b)->(b,-a)",
+    "relations": ["D_5^22=1", "S^2=D_5^11=-I", "S*D_5*S^-1=D_5^-1"],
+    "generatedGroup": "dicyclic group Dic_11 of order 44 inside SL(2,23)",
+    "meaning": "D_5 exchanges the QR/QNR orientation while preserving q, and S exchanges twist and charge while reversing q; together they give a finite reversible transition skeleton",
+    "finiteSpinAdjacency": "Dic_11 < SL(2,23)=Sp(2,23) embeds as a symplectic block in Sp(4,23)=Spin(5,23), the finite Chevalley group of the same C2/B2 type as Sp(4,R)=Spin_0(2,3)",
+    "boundary": "reduction modulo 23 forgets the real signature and supplies no canonical lift to a continuous Spin(2,3) action, Hamiltonian flow or physical Wick rotation"
+  },
+  "genusOneChargeProjectionNoGo": {
+    "input": "T_{1,g^k}=T_23 for every nonzero k mod 23, because all nonidentity powers lie in 23A or 23B and those classes have the same McKay-Thompson series",
+    "neutralCharacter": "C_0=(J+22*T_23)/23",
+    "nonzeroChargeCharacters": "C_b=(J-T_23)/23 for every b=1,...,22",
+    "firstTerms": {
+      "C_0": "q^-1 + 8564 q + 934518 q^2 + ...",
+      "C_nonzero": "8560 q + 934511 q^2 + ..."
+    },
+    "consequence": "untwisted genus-one Fourier projection distinguishes neutral from nonzero charge but collapses all 22 nonzero charges, so it cannot recover the 23A/23B orientation",
+    "nextAdmissibleObservable": "a genuinely twisted-twining function, a defect trace, an additional commuting insertion, or higher-genus sewn data"
+  },
+  "parafermionRefinementBoundary": {
+    "sourceStatus": "Honda-Kaidi-Orii arXiv v2 (24 July 2026), conditional general-p construction; Volpato arXiv v2 (11 September 2026), unconditional P(N) embedding for Fricke non-anomalous classes",
+    "p": 23,
+    "parafermionCentralCharge": "44/25",
+    "commutantCentralCharge": "556/25",
+    "repSo3Rank": 12,
+    "conditionalDefectInvarianceGroup": "Gamma_1(25)",
+    "modularCurveGenus": 12,
+    "genusZeroStatus": "X_1(25) has genus 12; Gamma_1(N) is genus zero only for N<=10 or N=12",
+    "rankGenusCoincidence": "rank Rep(so(3)_23)=12 equals genus X_1(25)=12; this numerical equality is not a derived identification",
+    "interpretation": "the class-sensitive refinement, if the stronger p=23 decomposition is completed, leaves the genus-zero Hauptmodul regime rather than producing another scalar moonshine Hauptmodul",
+    "knownAlgorithm": "derive commutant characters f_[l,t] by finite Fourier projection of the 23-twisted-twining functions and insert f_[l,0] in the published duality-defect trace formula",
+    "missingInput": "an explicit p=23 character/decomposition table, evaluated after declaring the generator orientation that relates the corpus Golay rail to one member of the inverse 23A/23B pair",
+    "boundary": "the general formula is constructive, but the p=23 numerical defect McKay-Thompson series is not tabulated in the cited work and cannot be recovered from the common scalar T_23 alone"
+  },
+  "rankGenusSurvey": {
+    "domain": "odd prime divisors p of the Monster order, comparing rank Rep(so(3)_p)=(p+1)/2 with genus X_1(p+2)",
+    "values": [
+      [3, 0, 2], [5, 0, 3], [7, 0, 4], [11, 2, 6], [13, 1, 7], [17, 7, 9], [19, 5, 10],
+      [23, 12, 12], [29, 26, 15], [31, 21, 16], [41, 57, 21], [47, 69, 24], [59, 126, 30], [71, 187, 36]
+    ],
+    "uniqueEquality": "p=23 is the unique equality in this finite Monster-prime set",
+    "status": "verified numerical signpost only",
+    "boundary": "no source or construction identifies the 12 simple defect types with the 12 holomorphic differentials on X_1(25)"
+  },
+  "programmeSemantics": {
+    "stateStore": "the graded spaces V_n^natural",
+    "compositionLaw": "the vertex operation Y(a,z)b and sewing/factorization",
+    "symmetryLayer": "Monster automorphisms",
+    "observableOutput": "McKay-Thompson and generalized-moonshine graded traces",
+    "globalIntegrityLaw": "Borcherds denominator products and Hecke/replication identities",
+    "notYetPresent": "a source-derived real-time update, Hamiltonian, causal local carrier or detector map"
+  },
+  "routeVerdicts": [
+    {
+      "route": "Rule 60 equals a Monster element",
+      "status": "ruled_out",
+      "reason": "noninvertible on G_23 and order 2047 on its image contains the non-Monster prime 89"
+    },
+    {
+      "route": "order-23 shift to a twined moonshine trace",
+      "status": "closed_at_scalar_genus_one_level",
+      "reason": "the fixed Leech lattice has Gram [[4,1],[1,6]] and its normalized theta/eta trace equals the common 23A/23B McKay-Thompson series; only the oriented class choice remains unresolved"
+    },
+    {
+      "route": "Monster denominator lattice to Spin(2,3)",
+      "status": "exact_kinematic_embedding",
+      "reason": "II_{1,1} is the diagonal integral split plane in H_2(R), but the off-diagonal Jordan coordinate and physical action are absent"
+    },
+    {
+      "route": "order-23 twist-charge channel on the Monster fixed-point VOA",
+      "status": "established_current_frontier",
+      "reason": "the 23AB self-orbifold has 529 sectors with the U(23) discriminant form, a finite Fourier bicharacter, an embedded P(23) parafermion algebra and a Tambara-Yamagami duality defect"
+    },
+    {
+      "route": "untwined genus-two Monster vacuum amplitude",
+      "status": "published_aggregate_exists",
+      "reason": "a weight-12 Siegel modular numerator for the Moonshine module is known; it is an aggregate partition function, not the missing twined fermionic spin-sector family"
+    },
+    {
+      "route": "2A fermionic seam to Rule-60/Leech seam",
+      "status": "open_source_object",
+      "reason": "complete genus-two fermionic Baby-Monster multipliers and a 2A-2B defect junction/intertwiner are not supplied"
+    }
+  ]
+}

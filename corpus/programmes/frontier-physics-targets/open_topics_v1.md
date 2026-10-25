@@ -88,10 +88,10 @@ for another dimensionless redesign.
 | OT-039 | Microscopic wall-pseudoscalar coefficient | source-derived coupling with sign, magnitude and radiative stability |
 | OT-040 | Matter-plus-field Coulomb energy current | gauge- and limit-consistent total energy continuity |
 | OT-042 | Typed triality-Furey reflection | full module, charge and orientation intertwiner |
-| OT-045 | Hecke operator or modular-trace test | explicit operator domain and exact Hecke relations or modular identities |
+| OT-045 | Hecke operator or modular-trace test | identify the corpus cycle with an oriented 23AB generator, compute its now-established parafermionic duality-defect records and sew them at genus two |
 | OT-046 | D4 quotient-singularity localized operator | source-native Hamiltonian/Dirac/Fredholm operator with quotient-controlled spectrum |
 | OT-049 | Exceptional rank-one vacuum Hessian and gauge spectrum | stable action-level vacuum with coloured directions and matched current geometry |
-| OT-050 | Lattice-subroutine gravitational action and observable | one complete typed route from the Golay–Leech–Monster/genus-two carrier to a healthy local action or continuum and a no-refit record |
+| OT-050 | Lattice-subroutine gravitational action and observable | order-23 twined genus-two and fermionic Baby-Monster data, a derived off-diagonal Jordan response, and one complete typed route to a healthy action or continuum and no-refit record |
 
 Wave 7.72 and [AZ-082](../admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md)
 now separate two questions that previously looked like one. The pinned
@@ -227,6 +227,40 @@ enumeration: it is the genus-two fermionic Baby-Monster spin family, followed
 by a coherent relative-sector detector map and one complete gravitational
 route.
 
+The [Moonshine/program/lattice audit](../moonshine-program-lattice/README.md)
+sharpens OT-045 and OT-050 without adding a duplicate topic. The Monster Lie
+algebra grading plane embeds exactly as the diagonal integral
+\(II_{1,1}\subset H_2(\mathbb R)\), but this is a kinematic carrier slice,
+not a Monster action on the full cone. On the cyclic Golay image the exact
+identity \((1+\sigma)^{89}=\sigma^2\) isolates the order-23 cyclic symmetry,
+while the remaining order-89 factor proves that Rule 60 itself cannot be a
+Monster element. The scalar lift now closes: the determinant-23 Leech fixed
+lattice has Gram matrix \(\left(\begin{smallmatrix}4&1\\1&6\end{smallmatrix}\right)\),
+and its normalized theta/eta trace is exactly the common 23A/23B
+McKay--Thompson series. The inverse nonprincipal discriminant-\(-23\) forms
+have the same scalar theta series, so the record provably forgets orientation.
+Before that loss, however, reducing the Gaussian period on the two degree-eleven
+Golay factors gives \(0\) and \(1\), contracting them to the conjugate ideals
+\((2,\alpha)\) and \((2,\alpha+1)\). Thus the oriented arithmetic lift is
+canonical relative to a declared primitive root; the unresolved convention is
+which resulting Monster generator is called 23A. On the 529 sector labels,
+the fifth-power exchange and modular quarter-turn generate the exact dicyclic
+group \(\mathrm{Dic}_{11}\) of order 44. This is a reversible label calculus,
+not a Monster subgroup or physical dynamics.
+Current work sharpens that reopening again: Volpato's September 2026 preprint
+supplies a self-orbifold \(23AB\) channel with 529 sectors,
+\(q(a,b)=ab/23\), the \(U(23)\) discriminant form, an embedded \(P(23)\)
+parafermion algebra and a Tambara--Yamagami duality defect exchanging twist
+and charge. Ordinary genus-one charge projection still collapses all twenty-two
+nonzero charges to one series. A separate conditional construction predicts
+twelve \(\operatorname{Rep}(\mathfrak{so}(3)_{23})\) defect lines with
+\(\Gamma_1(25)\) invariance; \(X_1(25)\) has genus twelve, an exact but
+unexplained rank/genus coincidence. The next finite work is no longer to invent the abstract defect:
+identify the corpus cycle with an oriented 23A/23B generator, compute the
+corresponding twisted--twining and defect characters, and sew them at genus
+two. The off-diagonal physical Jordan response and a gravitational action
+remain separate gates.
+
 ## P3 — fundamental firewall
 
 | ID | Topic | Present reason for hold |
@@ -268,7 +302,7 @@ The queue exposes eight recurring unknowns that should be reported for every new
 - Do not interpret two-current rank before OT-008 closes its low-frequency limits.
 - Do not infer Berry curvature from thermal Hall without OT-011's independently measured gap, moving-crossing intervention and joint mixture test; clean-limit persistence does not exclude intrinsic many-body skew scattering.
 - Do not infer a material Casimir bridge before OT-006 and OT-007 close without refitting.
-- Do not promote relation, Leech, Golay, Jordan, (Spin(2,3)) or (E_8) contact without OT-024–OT-027.
+- Do not promote relation, Leech, Golay, Jordan, \(Spin(2,3)\) or \(E_8\) contact without OT-024–OT-027.
 - Do not reopen torsion coefficient selection without the explicit datum in OT-029.
 - Do not call a finite spectral scan a mass-gap result without OT-031.
 
