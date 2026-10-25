@@ -102,8 +102,10 @@ detector map.  None follows from reduction modulo 23.
 
 1. **Order-46 generalized traces:** highest information gain; no new
    experiment; can close or kill the central junction.
-2. **Genus-two intertwiner:** proceed only with the trace multipliers in hand;
-   compare a representation, not raw counts 12 and 10.
+2. **Mixed-level genus-two intertwiner:** use the exact
+   \(Sp(4,2)\times Sp(4,23)\) CRT carrier; a direct order-11 action on the ten
+   characteristics is impossible, so compare a coupled representation rather
+   than raw counts 12 and 10.
 3. **Finite \(\mathrm{Dic}_{11}/D_{11}\) emulator:** conventional but sharp
    test of quotient scars and detector equivalence.
 4. **Scale/RG and Spin lift:** hold until a physical carrier and action exist.
@@ -120,6 +122,7 @@ geometry that motivated the admissibility language.
 - [Order-46 observable ladder](order-46-observable-ladder.md)
 - [Centralizer augmentation gate](order-46-centralizer-augmentation.md)
 - [Galois orientation gate](order-46-galois-orientation-gate.md)
+- [Mixed-level 46 genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Main Moonshine programme](README.md)
 - [Per-target corpus assessments](../frontier-physics-targets/frontier_physics_target_assessments_v1.md)
 - [Admissibility frontier synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md)

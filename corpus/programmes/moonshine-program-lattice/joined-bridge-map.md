@@ -252,6 +252,13 @@ four-dimensional dynamics, or turn the numerical 12/12 coincidence into a
 bijection.  Those promotions remain inadmissible until the explicit
 twisted--twining and sewn intertwiners exist.
 
+The [mixed-level 46 seam](mixed-level-46-genus-two-seam.md) sharpens the
+sewn-intertwiner gate. The order-11 orientation rotation cannot act on the
+ten level-2 characteristic labels or lift as finite order in
+\(Sp(4,\mathbb Z)\). The exact common finite ambient carrier is instead
+\(Sp(4,\mathbb Z/46)\cong Sp(4,2)\times Sp(4,23)\); the missing object is a
+non-factorized vector-valued kernel coupling its two prime factors.
+
 ## Sources and corpus links
 
 - [ATLAS Monster conjugacy classes and power-up map](https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M)
@@ -263,6 +270,7 @@ twisted--twining and sewn intertwiners exist.
 - [Order-46 observable ladder](order-46-observable-ladder.md)
 - [Centralizer augmentation gate](order-46-centralizer-augmentation.md)
 - [Galois orientation gate](order-46-galois-orientation-gate.md)
+- [Mixed-level 46 genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)
 - [Leech pair-Gram / Spin(2,3) bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)
 - [Rule-60 affine seam torsor](../../claims/1700-1799/1793_the_rule60_golay_kernel_supplies_the_unique_tm23_leech_affine_seam_torsor.md)

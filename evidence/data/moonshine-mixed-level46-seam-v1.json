@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The order-11 orientation rotation cannot act faithfully on the ordinary genus-two level-2 carrier or lift as finite order in Sp(4,Z); the exact common finite carrier is instead the CRT product Sp(4,F2) x Sp(4,F23) at congruence level 46.",
+  "obstructions": {
+    "level2": {
+      "group": "Sp(4,F2)",
+      "groupOrder": 720,
+      "order11DividesGroupOrder": false,
+      "consequence": "the C11 rotation cannot act nontrivially on the ten even-characteristic orbit"
+    },
+    "integral": {
+      "group": "Sp(4,Z)",
+      "matrixDimension": 4,
+      "cyclotomicPolynomial": "Phi_11",
+      "cyclotomicDegree": 10,
+      "hasOrder11Torsion": false,
+      "consequence": "every homomorphism D11 -> Sp(4,Z) kills C11 and factors through at most C2"
+    }
+  },
+  "crtCarrier": {
+    "ring": "Z/46Z",
+    "ringFactors": ["F2", "F23"],
+    "groupFactorization": "Sp(4,Z/46Z) is isomorphic to Sp(4,F2) x Sp(4,F23)",
+    "level2Role": "ten even theta characteristics and seam parity",
+    "level23Role": "Dic11 twist-charge orientation skeleton embedded through SL(2,23)",
+    "centralSign": "-I is identity in the F2 factor and nontrivial in the F23 factor"
+  },
+  "labelResolutions": {
+    "full": {
+      "spinLabels": 10,
+      "order23Labels": 529,
+      "productLabels": 5290
+    },
+    "nonzeroSignRetaining": {
+      "spinLabels": 10,
+      "order23Labels": 528,
+      "productLabels": 5280
+    },
+    "projective": {
+      "spinLabels": 10,
+      "order23Directions": 24,
+      "productLabels": 240,
+      "lost": "scale and central sign"
+    }
+  },
+  "candidate": {
+    "type": "vector-valued genus-two modular form or defect kernel K_(delta,lambda)(Omega)",
+    "smallestInitialCarrier": 240,
+    "boundaryTraceCeiling": 8,
+    "boundaryInputs": "at most eight order-46 centralizer-augmented Galois-oriented traces",
+    "success": "a non-factorized kernel has compatible level-2 multipliers, level-23 transition action and separating degeneration",
+    "failure": "no candidate reproduces the bounded order-46 boundary traces with compatible multipliers"
+  },
+  "analyticBoundary": {
+    "labelLevel": 46,
+    "thetaMultiplierRequiresMetaplecticLift": true,
+    "possibleFinerLevels": [92, 184],
+    "warning": "the possible finer levels are an analytic search range, not a proved minimal level"
+  },
+  "physicalBoundary": "the CRT carrier is an arithmetic interface; it does not select real Spin(2,3) signature, positive energy, time orientation, dynamics or a detector"
+}

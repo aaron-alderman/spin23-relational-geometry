@@ -7,6 +7,7 @@ const register = load("../../corpus/programmes/frontier-physics-targets/frontier
 const joined = load("../../evidence/data/moonshine-joined-bridge-map-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const galois = load("../../evidence/data/moonshine-order46-galois-orientation-v1.json");
+const mixed = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
 
 const declaredTargetIds = new Set(register.coreTargets.map((target) => target.id));
 const mappedIds = crosswalk.targets.map((target) => target.id);
@@ -42,6 +43,10 @@ assert.equal(
   galois.traceInventory.orientedNonidentityTracesMaximum,
 );
 assert(crosswalk.targets.find(({id}) => id === "FPT-002").nextGate.includes("eight"));
+assert.equal(
+  crosswalk.rankedTranches[1].smallestFiniteProductCarrier,
+  mixed.labelResolutions.projective.productLabels,
+);
 assert.equal(crosswalk.rankedTranches[2].requiresNewExperiment, true);
 assert.equal(crosswalk.rankedTranches[3].requiresNewExperiment, true);
 assert(crosswalk.epistemicBoundary.includes("not evidence"));
