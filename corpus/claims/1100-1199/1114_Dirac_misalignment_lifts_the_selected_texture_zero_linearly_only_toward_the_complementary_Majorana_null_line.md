@@ -202,7 +202,7 @@ The appropriate next algebraic question is whether the finite spectral triple su
 
 ## 6. Naturalness and approximate prediction
 
-If the null-line leakage is generated at order (arepsilon), then
+If the null-line leakage is generated at order (\varepsilon), then
 
 \[
 |m_{\beta\beta}|
@@ -228,7 +228,7 @@ which is a stronger technical-naturalness statement than generic approximate ali
 
 **Quadratic branch:** if (r_{\rm ker}=0) but (r_{\rm im}\ne0), retain an approximate texture with calculable (O(\varepsilon^2)) lifting.
 
-**Phenomenology boundary:** translating (arepsilon) into eV requires the normalized Dirac and heavy scales; the dimensionless matrix theorem alone does not set an observable magnitude.
+**Phenomenology boundary:** translating (\varepsilon) into eV requires the normalized Dirac and heavy scales; the dimensionless matrix theorem alone does not set an observable magnitude.
 
 ## 8. Verdict
 

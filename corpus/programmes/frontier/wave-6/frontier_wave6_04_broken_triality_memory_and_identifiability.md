@@ -24,32 +24,32 @@ sum_i k_i=3k.
 If the detector records an outer state but not which one, its outer waiting-time survival law is
 
 [
-S_{m out}(t)
-=rac13sum_{i=1}^3e^{-k_it}.
+S_{\rm out}(t)
+=\frac13sum_{i=1}^3e^{-k_it}.
 ]
 
 This is exponential only when the rates are equal. Expanding about exact triality gives
 
 [
-S_{m out}(t)
+S_{\rm out}(t)
 =e^{-kt}
 left[
-1+rac{t^2}{6}sum_idelta_i^2
--rac{t^3}{18}sum_idelta_i^3+cdots
+1+\frac{t^2}{6}sum_idelta_i^2
+-\frac{t^3}{18}sum_idelta_i^3+cdots
 ight].
 ]
 
 The associated hazard
 
 [
-h(t)=-rac{d}{dt}log S_{m out}(t)
+h(t)=-\frac{d}{dt}log S_{\rm out}(t)
 ]
 
 obeys
 
 [
 h(0)=k,qquad
-h'(0)=-rac13sum_idelta_i^2.
+h'(0)=-\frac13sum_idelta_i^2.
 ]
 
 The first quotient-visible signature of the broken symmetry is therefore the **variance of the hidden rates**, not the oriented breaking vector.
@@ -86,9 +86,9 @@ This is the dynamical analogue of invariant theory on a triality doublet: the li
 If the outer-state label is retained, the two independent contrast parameters have Fisher matrix
 
 [
-mathcal I_{m resolved}
-=rac{1}{3k^2}
-egin{pmatrix}
+mathcal I_{\rm resolved}
+=\frac{1}{3k^2}
+\begin{pmatrix}
 2&1\
 1&2
 end{pmatrix},
@@ -97,7 +97,7 @@ end{pmatrix},
 whose determinant is
 
 [
-detmathcal I_{m resolved}=rac{1}{3k^4}>0.
+detmathcal I_{\rm resolved}=\frac{1}{3k^4}>0.
 ]
 
 Thus the hidden breaking is locally identifiable with resolved records. Two independent detector contrasts, for example

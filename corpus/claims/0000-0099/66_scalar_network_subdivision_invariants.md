@@ -97,7 +97,7 @@ and therefore
 \eta(T):=\log\rho(T)=mL.
 \]
 
-The multiplicative spectral parameter (ho), or additive rapidity (eta), is invariant under arbitrary subdivision of a homogeneous interval. It is the first nontrivial sewing observable produced by this branch.
+The multiplicative spectral parameter (\rho), or additive rapidity (eta), is invariant under arbitrary subdivision of a homogeneous interval. It is the first nontrivial sewing observable produced by this branch.
 
 For a general (Sp(4)) network there will be more spectral data and possible Maslov information. The scalar calculation says what to look for: conjugacy or spectral invariants of the composed transfer relation, not determinants of individual response charts alone.
 

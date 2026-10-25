@@ -45,7 +45,7 @@ Applying this gate gives a clean hierarchy:
 
 ## 1. General fixed-real-form criterion
 
-If (w\in V^J), then (ho(g)w) remains fixed precisely when
+If (w\in V^J), then (\rho(g)w) remains fixed precisely when
 
 \[
 J\rho(g)w=\rho(g)Jw=\rho(g)w.
@@ -124,7 +124,7 @@ Gauge transformations act on this fixed plane as ordinary rotations (R(q\theta))
 
 This is the strongest algebraic selector in the list.
 
-Its physical limitation is exact: no nontrivial projector onto one charged particle/hole half commutes with both (ho_N) and (J_N). Thus the construction is viable only if Nambu doubling is a self-dual CAR redundancy, not a prediction of mirror matter. This is precisely the boundary established in [the charged Nambu-half no-go](../../../claims/0600-0699/620_no_charged_nambu_half_preserves_both_gauge_symmetry_and_car_reality.md).
+Its physical limitation is exact: no nontrivial projector onto one charged particle/hole half commutes with both (\rho_N) and (J_N). Thus the construction is viable only if Nambu doubling is a self-dual CAR redundancy, not a prediction of mirror matter. This is precisely the boundary established in [the charged Nambu-half no-go](../../../claims/0600-0699/620_no_charged_nambu_half_preserves_both_gauge_symmetry_and_car_reality.md).
 
 **Verdict:** algebraically complete; physically conditional on a redundancy interpretation and a map to the Furey paired carrier.
 

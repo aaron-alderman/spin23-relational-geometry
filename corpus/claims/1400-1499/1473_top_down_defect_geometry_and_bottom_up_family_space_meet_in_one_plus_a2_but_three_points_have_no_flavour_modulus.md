@@ -38,7 +38,7 @@ For three distinct defect points, their fibers form the same (S_3) permutation m
 \[
 \boxed{
 H^0(\mathcal O_Z(3))
-\cong\mathbb C^3_{m perm}
+\cong\mathbb C^3_{\rm perm}
 \cong\mathbb C\mathbf1\oplus A_2.
 }
 \]

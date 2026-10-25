@@ -10,13 +10,13 @@
 Consider the genuinely matrix-valued Herglotz response
 
 \[
-F(z)=zI+rac{R_-}{-1-z}+rac{R_+}{1-z},
+F(z)=zI+\frac{R_-}{-1-z}+\frac{R_+}{1-z},
 \]
 
 with positive rank-one residues
 
 \[
-R_-=egin{pmatrix}1&0\\0&0\end{pmatrix},
+R_-=\begin{pmatrix}1&0\\0&0\end{pmatrix},
 \qquad
 R_+=\begin{pmatrix}1&1\\1&1\end{pmatrix}.
 \]

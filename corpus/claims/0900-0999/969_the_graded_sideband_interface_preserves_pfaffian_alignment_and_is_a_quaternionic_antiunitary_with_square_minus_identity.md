@@ -61,13 +61,13 @@ X\varepsilon X=-\varepsilon,
 D\varepsilon D=-\varepsilon.
 \]
 
-Thus their product preserves (arepsilon). Since
+Thus their product preserves (\varepsilon). Since
 
 \[
 DX=\varepsilon,
 \]
 
-the full antiunitary is simply (arepsilon K).
+the full antiunitary is simply (\varepsilon K).
 
 For the scattering lift, complex conjugation changes (-iX) to (+iX), while conjugation by (D) changes (X) to (-X). Again the two signs cancel.
 
@@ -98,7 +98,7 @@ Bare reality sewing has square (+I). After the grading,
 =\varepsilon^2=-I,
 \]
 
-because (arepsilon) is real. This is the defining algebraic signature of a quaternionic antiunitary structure.
+because (\varepsilon) is real. This is the defining algebraic signature of a quaternionic antiunitary structure.
 
 It places the following previously separate objects on one exact line:
 
@@ -118,7 +118,7 @@ This is a strong structural convergence, not yet a Standard-Model derivation.
 
 **Spin(2,3) trigger:** (Gamma) extends compatibly to the four-real-dimensional symplectic carrier and its inner derivations generate the missing (Sp(4,\mathbb R)) action.
 
-**Alignment falsifier:** the physical interface omits (D) or inserts a grading commuting with (arepsilon); bare (XK) then anti-aligns the face signs.
+**Alignment falsifier:** the physical interface omits (D) or inserts a grading commuting with (\varepsilon); bare (XK) then anti-aligns the face signs.
 
 **Implementation warning:** an antiunitary boundary sewing is not automatically a forward-time unitary device.
 

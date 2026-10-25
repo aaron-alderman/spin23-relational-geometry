@@ -53,9 +53,11 @@ noncommuting gates on the pre-projection twisted ground qubits.
 ## Boundary
 
 The twisted-module construction sources the representation action, while the
-certificate fixes its finite labels. Its lift through the half-oscillator
-projection to the retained weight-two states and the absolute OPE
-normalization are not yet derived; the remaining 98256 minimal-pair labels are not enumerated as a
+certificate fixes its finite labels. Wave 7.151 lifts the normal extraspecial
+**symmetry representation** through the half-oscillator projection to the
+retained weight-two states. Wave 7.152 then derives the distinct,
+source-normalized minimal-vector vertex-operator zero mode, including its
+rank-one channel factor. The remaining 98256 minimal-pair labels are not enumerated as a
 hardware table; and the 300 symmetric oscillator states and
 \(T\times T\to U\) residual products remain to be compiled. This is a genuine
 cross-sector representation bridge, not yet the full Griess algebra.
@@ -66,3 +68,5 @@ cross-sector representation bridge, not yet the full Griess algebra.
 - [Cross-sector OPE calibration](frontier_wave7_148_2b_graded_cross_sector_ope_calibration.md)
 - [Conway-to-Clifford lift](frontier_wave7_146_leech_co1_to_twelve_qubit_clifford_lift.md)
 - [Weight-two sector join](frontier_wave7_147_moonshine_weight2_sector_join_and_2b_trace.md)
+- [\(2B\)-centralizer semidirect trace protocol](frontier_wave7_151_moonshine_2b_centralizer_semidirect_trace_protocol.md)
+- [Minimal-vector twisted weight-two zero mode](frontier_wave7_152_moonshine_minimal_vector_twisted_weight2_zero_mode.md)

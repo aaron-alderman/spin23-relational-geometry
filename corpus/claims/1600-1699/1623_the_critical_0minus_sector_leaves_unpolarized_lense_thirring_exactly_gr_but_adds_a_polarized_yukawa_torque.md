@@ -127,15 +127,15 @@ For extended bodies, each Pauli vector is replaced by the appropriate species-we
 Take
 
 \[
-J_\oplus=5.86\times10^{33}\ {m kg\,m^2s^{-1}},
-\quad a=1.2270\times10^7\ {m m},
+J_\oplus=5.86\times10^{33}\ {\rm kg\,m^2s^{-1}},
+\quad a=1.2270\times10^7\ {\rm m},
 \quad e=0.0045.
 \]
 
 The nodal formula gives
 
 \[
-\dot\Omega_{\rm LT}=30.669\ {m milliarcseconds/year}.
+\dot\Omega_{\rm LT}=30.669\ {\rm milliarcseconds/year}.
 \]
 
 The critical class predicts the same $30.669$ mas/year and a torsion correction of exactly zero for unpolarized source and satellite. As a separate experimental check, Gravity Probe B reported $-37.2\pm7.2$ mas/year against the GR prediction $-39.2$ mas/year. That agreement tests the metric $2^+$ sector; it is not a direct limit on this intrinsic-spin torsion pole.
@@ -144,7 +144,7 @@ Even a polarized satellite would require a fantastically light mediator. A one-e
 
 \[
 m_\varphi\lesssim\frac{\hbar c}{a}
-=1.61\times10^{-14}\ {m eV}.
+=1.61\times10^{-14}\ {\rm eV}.
 \]
 
 At the natural point of claim 1611, $m_\varphi=2.435\times10^{18}$ GeV and

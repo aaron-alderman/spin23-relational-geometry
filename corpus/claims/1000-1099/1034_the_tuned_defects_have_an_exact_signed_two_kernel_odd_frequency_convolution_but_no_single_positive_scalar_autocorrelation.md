@@ -46,7 +46,7 @@ one obtains
 \boxed{A(\Omega)=\alpha C_{00}(\Omega)+\beta C_{01}(\Omega),}
 \]
 
-with $alpha>0$ and $eta<0$ exactly.
+with $alpha>0$ and $\beta<0$ exactly.
 
 The two-kernel coefficient form is therefore indefinite. This is not yet a physical derivation, but it identifies the precise algebraic job of the fermionic exchange sign: an ordinary positive scalar Gram bubble cannot work; a signed multicomponent loop can.
 

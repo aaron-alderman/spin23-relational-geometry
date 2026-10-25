@@ -26,7 +26,7 @@ Let
 \beta=[\mathcal O(1)]-[\mathcal O(0)]
 \]
 
-generate the reduced (K)-theory of (mathbb{CP}^1). Since (eta^2=0),
+generate the reduced (K)-theory of (mathbb{CP}^1). Since (\beta^2=0),
 
 \[
 [\mathcal O(n)]=1+n\beta,

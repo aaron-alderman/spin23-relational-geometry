@@ -153,7 +153,7 @@ A=\sigma_x,
 The normal covariance contributes $2p^2I$. The anomalous term gives
 
 \[
-M_{m anom}
+M_{\rm anom}
 =2
 \begin{pmatrix}
 s^2-v^2&-2sv\\

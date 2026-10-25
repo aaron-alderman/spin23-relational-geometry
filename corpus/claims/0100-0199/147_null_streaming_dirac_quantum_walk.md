@@ -44,7 +44,7 @@ Use the on-site mixing coin
 C(m)=e^{-im\sigma_x}.
 \]
 
-The dimensionless angle (m) becomes (m_{m phys}c^2\Delta t/\hbar) when units are restored.
+The dimensionless angle (m) becomes (m_{\rm phys}c^2\Delta t/\hbar) when units are restored.
 
 ## 3. Symmetric update
 
@@ -119,7 +119,7 @@ The effective generator is therefore the (1+1)-dimensional Dirac Hamiltonian
 \[
 H_{\rm eff}
 \simeq
-c p\,\sigma_z+m_{m phys}c^2\sigma_x.
+c p\,\sigma_z+m_{\rm phys}c^2\sigma_x.
 \]
 
 This is the first explicit realization in this programme in which “carrier plus local relation” produces a relativistic spinor dispersion rather than a scalar average.

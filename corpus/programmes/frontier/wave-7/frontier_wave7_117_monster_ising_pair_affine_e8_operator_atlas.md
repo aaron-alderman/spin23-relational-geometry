@@ -144,6 +144,14 @@ A passing nine-type atlas establishes a Monster-type axial/Ising composition
 signature. Full Monster provenance still requires the ambient
 \(V^\natural\) character and coherence gates of Wave 7.114.
 
+The first provenance junction is no longer merely a requested measurement.
+For each norm-four Leech vector, Wave 7.156 compiles the two lattice Ising
+axes on the \(98304\)-dimensional twisted weight-two block. Each has spectrum
+\(0^{47104},(1/2)^{2048},(1/16)^{49152}\), and their two Miyamoto
+involutions multiply exactly to the orbifold \(2B\) grading. This supplies a
+local \((1A,2A,2A,2B)\) entrance to the atlas. It does not yet reconstruct
+the other eight Norton--Sakuma pair types on a laboratory carrier.
+
 ## 5. Relation to Jordan structure
 
 Jordan algebras and the Griess algebra are both commutative nonassociative
@@ -172,3 +180,4 @@ for another.
 
 - [Monster Griess--Jordan corner](frontier_wave7_116_monster_griess_jordan_corner_to_spin23.md)
 - [Monster realization ladder](frontier_wave7_110_monster_physics_realization_ladder.md)
+- [Norm-four Ising spectrum and exact \(2A\)-\(2A\)-\(2B\) junction](frontier_wave7_156_moonshine_norm4_ising_spectrum_2a2b_junction.md)

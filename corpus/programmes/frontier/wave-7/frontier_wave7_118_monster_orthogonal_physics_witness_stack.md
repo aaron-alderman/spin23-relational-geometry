@@ -126,6 +126,15 @@ microscopic carrier, certify:
 9. an orientation test that cannot be explained by relabelling the
    \(\mathbb Z_{23}\) generator.
 
+The formal preflight for items 3, 4 and 8 is now substantially stronger.
+Waves 7.152--7.154 give the complete first-level twisted zero modes and the
+parametric cross-sector Griess product; Wave 7.155 freezes eight blind
+minimal-vector transitions at \(-7/8\) and an anomaly-sensitive \(1/8\)
+response; Wave 7.156 proves on the same abstract carrier that a paired pair of
+norm-four \(2A\) involutions multiplies to the \(2B\) grading. These results
+close operator definitions and expected values, not the common-carrier
+laboratory requirement.
+
 The word **same** is crucial. Building four unrelated devices, one for each
 algebraic layer, proves emulatability. Demonstrating their prescribed
 coherence on one carrier establishes a provenance-sensitive Monster
@@ -162,3 +171,6 @@ the frontier, not a premise hidden inside the word “physics.”
 - [Leech-edge orbifold proof](frontier_wave7_129_leech_edge_orbifold_proves_formal_monster_physics.md)
 - [\(744\to24\to0\) current detector](frontier_wave7_130_c24_current_ladder_and_monster_detector.md)
 - [Monster-is-physics proof certificate](frontier_wave7_150_monster_is_physics_proof_certificate.md)
+- [Cross-sector Griess-product oracle](frontier_wave7_154_moonshine_cross_sector_griess_product_oracle.md)
+- [Blind cross-sector tomography](frontier_wave7_155_moonshine_cross_sector_sparse_tomography_protocol.md)
+- [Norm-four Ising \(2A\)-\(2A\)-\(2B\) junction](frontier_wave7_156_moonshine_norm4_ising_spectrum_2a2b_junction.md)

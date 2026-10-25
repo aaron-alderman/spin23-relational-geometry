@@ -44,7 +44,7 @@ Therefore the unpolarized physical boundary spectral matrix is strictly full ran
 In the chiral basis,
 
 \[
-P_h=rac12
+P_h=\frac12
 \begin{pmatrix}
 1+hp/E&m/E\\
 m/E&1-hp/E

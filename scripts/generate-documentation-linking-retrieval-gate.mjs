@@ -120,7 +120,10 @@ const heldOut = [
     targets: ['corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md']
   }
 ];
-const graphWeights = [0, 0.3, 0.6];
+// Claim and semantic evidence each retain their default 0.2 share.  A 0.59
+// graph endpoint is therefore the strongest admissible centrality stress test
+// that still leaves a positive lexical channel.
+const graphWeights = [0, 0.2, 0.59];
 const sweep = heldOut.map(test => {
   const runs = graphWeights.map(graphWeight => {
     const result = searchCorpus({ root: ROOT, query: test.query, limit: 10, profile: test.profile, graphWeight });
@@ -134,7 +137,7 @@ const centrality = {
   authorityBoundaryPresent: /navigation aid, not evidence or truth/i.test(sourcery.tools.find(tool => tool.name === 'corpus_search')?.description ?? ''),
   graphWeights,
   tests: sweep,
-  criterion: 'Every declared target remains in the first ten results at zero, default and maximum graph weight; therefore centrality may reorder but cannot erase these technical, plain-language and minority/new-branch routes.'
+  criterion: 'Every declared target remains in the first ten results at zero, default and maximum feasible graph weight while claim, semantic and lexical channels remain live; therefore centrality may reorder but cannot erase these technical, plain-language and minority/new-branch routes.'
 };
 centrality.pass &&= centrality.authorityBoundaryPresent;
 

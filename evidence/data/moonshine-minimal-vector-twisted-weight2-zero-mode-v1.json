@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "moonshine-minimal-vector-twisted-weight2-zero-mode-v1",
+  "date": "2026-10-25",
+  "sourceFormula": {
+    "twistedVertex": "Y^T(e^alpha,z)=z^b U_alpha E_alpha(z)",
+    "inversionNormFour": "sigma=-1, alpha^2=4, alpha_0=0 and b=-2",
+    "groupFactor": "U_alpha=2^(-alpha^2) P_[alpha]=P_[alpha]/16 in the standard normalized central extension",
+    "invariantPair": "the zero mode of e^alpha+e^-alpha has the combined group factor P_[alpha]/8"
+  },
+  "compiledZeroMode": {
+    "space": "C^24 half-mode selector tensor (C^2)^tensor12",
+    "formula": "O_alpha=(R_alpha/8) tensor P_[alpha]",
+    "channelNumerator": "R_alpha=I-2 alpha (alpha^T K)",
+    "channelAction": "h maps to h-2(alpha,h)alpha",
+    "scope": "every norm-four Leech antipodal pair; 24 explicit basis-vector seeds are compiled and verified"
+  },
+  "singleOperatorFingerprint": {
+    "channelEigenvalues": [{"value": 1, "multiplicity": 23}, {"value": -7, "multiplicity": 1}],
+    "zeroModeEigenvalues": [
+      {"value": "1/8", "multiplicity": 47104},
+      {"value": "-1/8", "multiplicity": 47104},
+      {"value": "7/8", "multiplicity": 2048},
+      {"value": "-7/8", "multiplicity": 2048}
+    ],
+    "trace": 0,
+    "traceSquare": 4608,
+    "traceFourthPower": 2424,
+    "spectralRadius": "7/8"
+  },
+  "covariance": {
+    "identity": "A R_alpha = R_(A alpha) A for every Leech isometry A",
+    "catalogueGenerators": 2,
+    "markedSeeds": 24,
+    "checks": 48,
+    "hilbertSchmidtOrthogonality": "the 24 distinct marked operators have zero pair trace and self trace-square 4608"
+  },
+  "established": "the source-normalized minimal-vector zero-mode family on the retained 98304-dimensional twisted weight-two sector, including an executable 24-seed hardware dictionary",
+  "open": "Wave 7.153 closes the oscillator-bilinear zero modes and Wave 7.154 reconstructs the full T times T to U product parametrically; enumerating or streaming all 98280 minimal pairs into a hardware dictionary and laboratory tests remain open",
+  "sources": [
+    "https://arxiv.org/abs/math/0402315",
+    "https://www.math.twcu.ac.jp/~yamauchi/math/phd/myphd.pdf"
+  ]
+}

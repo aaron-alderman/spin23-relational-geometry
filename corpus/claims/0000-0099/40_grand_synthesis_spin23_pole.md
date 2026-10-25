@@ -8587,7 +8587,7 @@ See [No third Furey singlet extends the neutral M2 to M3, so the holonomy port m
 
 ### 20.300 Passive three-port holonomy requires spectral rank at least two
 
-For a rank-one spectral residue (ho=aa^\dagger),
+For a rank-one spectral residue (\rho=aa^\dagger),
 
 \[
 \rho_{12}\rho_{23}\rho_{31}=|a_1a_2a_3|^2\geq0,

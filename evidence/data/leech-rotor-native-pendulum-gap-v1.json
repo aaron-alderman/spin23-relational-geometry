@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "leech-rotor-native-pendulum-gap-v1",
+  "date": "2026-10-25",
+  "model": {
+    "singleRelativeChannel": "H_N=(U/2)n^2+u(1-cos theta) on n=-N,...,N with open, noncyclic truncation",
+    "benchmark": {"U":1,"u":1},
+    "matrix": "diagonal n^2/2+1 and nearest-neighbor entries -1/2",
+    "channels": 24
+  },
+  "cutoffSpectrum": [
+    {"N":1,"dimension":3,"groundEnergy":0.5,"firstEnergy":1.5,"gap":1.0,"betaEnergyUnitForOnePercent":7.798052761207384},
+    {"N":2,"dimension":5,"groundEnergy":0.4656460883350221,"firstEnergy":1.3486121811340026,"gap":0.8829660927989805,"betaEnergyUnitForOnePercent":8.821192386808436},
+    {"N":4,"dimension":9,"groundEnergy":0.4649351572805761,"firstEnergy":1.3433602439072247,"gap":0.8784250866266486,"betaEnergyUnitForOnePercent":8.866750622708588},
+    {"N":8,"dimension":17,"groundEnergy":0.4649351477121847,"firstEnergy":1.3433601283990821,"gap":0.8784249806868974,"betaEnergyUnitForOnePercent":8.86675169764199},
+    {"N":16,"dimension":33,"groundEnergy":0.4649351477121847,"firstEnergy":1.3433601283990821,"gap":0.8784249806868974,"betaEnergyUnitForOnePercent":8.86675169764199},
+    {"N":32,"dimension":65,"groundEnergy":0.4649351477121847,"firstEnergy":1.3433601283990821,"gap":0.8784249806868974,"betaEnergyUnitForOnePercent":8.86675169764199},
+    {"N":64,"dimension":129,"groundEnergy":0.4649351477121847,"firstEnergy":1.3433601283990821,"gap":0.8784249806868974,"betaEnergyUnitForOnePercent":8.86675169764199}
+  ],
+  "convergence": {
+    "referenceN":64,
+    "relativeGapErrors": [
+      {"N":1,"error":0.13840114066204626},
+      {"N":2,"error":0.005169607208269611},
+      {"N":4,"error":1.2060193360044477e-7},
+      {"N":8,"error":0.0}
+    ],
+    "fixedStrengthGapLimitNumerical": 0.8784249806868974,
+    "contrast": "the open integer-rotor truncation converges at fixed U and u; it does not suffer the cyclic clock penalty's p^-2 first-gap collapse"
+  },
+  "thermalCommissioning": {
+    "maximumAnyChannelExcitedProbability":0.01,
+    "convergedBetaEnergyUnit":8.86675169764199,
+    "convergedBetaGap":7.78877618875668,
+    "minimumEnergyUnitFrequencyGHzAt10mK":1.847531279848843,
+    "minimumGapFrequencyGHzAt10mK":1.622917628819659
+  },
+  "architecture": {
+    "preferredEncoding": "signed bounded integer registers with guarded noncyclic shifts, or native quantum rotors in the dual Leech basis",
+    "overflowRule": "reject or enlarge any circuit for which K^-1 maps the declared input box outside the allocated signed output box",
+    "notEquivalentTo": "a cyclic p-state clock with nearest angular labels interpreted as the physical gap"
+  },
+  "established": "a numerically certified convergent fixed-strength rotor-native relative-mode surrogate and quantitative cutoff and thermal targets",
+  "boundary": "The calculation is a 24-fold product of relative pendula. It does not include interwire propagation, the full velocity matrix, gauge fluctuations, a thermodynamic bulk-gap proof, or chiral-edge central-charge extraction."
+}

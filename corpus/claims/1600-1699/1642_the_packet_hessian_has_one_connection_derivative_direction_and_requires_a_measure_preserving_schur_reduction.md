@@ -84,7 +84,7 @@ Gaussian elimination for several rational momentum vectors.
 
 In flat space with constant (A), dimensional regularization often assigns
 scaleless ultralocal determinants no logarithmic running. On a general
-background, however, the algebraic blocks depend on (e,ar R,T), the
+background, however, the algebraic blocks depend on (e,\bar R,T), the
 couplings and the constraint Jacobian. Their logarithms can contribute local
 volume and curvature terms, and changes of variables carry compensating
 Jacobians. Discarding them before combining the Lagrangian and

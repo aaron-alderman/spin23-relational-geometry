@@ -46,7 +46,7 @@ protection requires every coupling vector to lie on one projective ray.
 Write
 
 \[
-G_i=rac1{a_i}
+G_i=\frac1{a_i}
 \begin{pmatrix}
 d_i^2&d_iy_i\\
 d_iy_i&y_i^2

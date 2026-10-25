@@ -143,7 +143,7 @@ At its minimum,
 }
 \]
 
-For a canonical Cartesian kinetic term (rac12(partial r)^2), the angular field is locally (a=ho,delta	heta), so
+For a canonical Cartesian kinetic term (\frac12(partial r)^2), the angular field is locally (a=\rho,delta\theta), so
 
 \[
 \boxed{m_a^2=\Delta.}
@@ -161,7 +161,7 @@ Define
 \xi=cs.
 \]
 
-Under a selector rotation by (arphi), the pair
+Under a selector rotation by (\varphi), the pair
 
 \[
 (\delta,\xi)
@@ -193,7 +193,7 @@ The Standard-Model weak-basis invariant (I_2) usually belongs to the first descr
 
 ## 6. Consequence for the (Spin(2,3)) carrier
 
-The selected line still generates a Jordan algebra isomorphic to (H_2(\mathbb R)), regardless of (	heta). Hence the conformal algebra remains
+The selected line still generates a Jordan algebra isomorphic to (H_2(\mathbb R)), regardless of (\theta). Hence the conformal algebra remains
 
 \[
 \mathfrak{conf}(H_2(\mathbb R))
@@ -221,7 +221,7 @@ A two-component anisotropy source may restore a diagonal selector symmetry. Its 
 
 ### Path D — vanishing matching coefficient
 
-If (c=0), CP-odd flavor data do not orient the response at quadratic order. The diagonal splitting (alpha-eta) may still select an even or odd axis.
+If (c=0), CP-odd flavor data do not orient the response at quadratic order. The diagonal splitting (alpha-\beta) may still select an even or odd axis.
 
 ## 8. Stop-everything criteria
 
@@ -239,7 +239,7 @@ Stop the flavor-orientation branch if microscopic matching gives (c=0) for every
 
 1. Classify Standard-Model gauge-invariant weight-two source pairs capable of transforming with ((\delta,\xi)).
 2. Compute the first nonzero matching contribution to (c) or prove its vanishing at a specified loop order.
-3. Derive the diagonal splitting (alpha-eta) from even matter response.
+3. Derive the diagonal splitting (alpha-\beta) from even matter response.
 4. Determine whether the response coordinate has a physical kinetic term and normalization.
 5. In a spontaneous-CP completion, compute the vacuum quotient and defect classification.
 

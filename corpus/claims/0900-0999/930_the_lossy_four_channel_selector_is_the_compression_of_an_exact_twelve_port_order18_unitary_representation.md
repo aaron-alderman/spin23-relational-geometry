@@ -12,9 +12,9 @@ The handle-lift gate left open in document 929 closes positively at finite-dimen
 In the power-normalized physical basis, the lossless selector generators have the form
 
 \[
-R_{m phys}=I_2\oplus C,
+R_{\rm phys}=I_2\oplus C,
 \qquad
-H_{m phys}=
+H_{\rm phys}=
 \begin{pmatrix}
 0&I_2\\
 I_2&0
@@ -52,9 +52,9 @@ while
 \[
 J^*\widetilde R J=I_2\oplus C,
 \qquad
-J^*\widetilde HJ=H_{m phys},
+J^*\widetilde HJ=H_{\rm phys},
 \qquad
-\widetilde HJ=JH_{m phys}.
+\widetilde HJ=JH_{\rm phys}.
 \]
 
 Thus the lossy four-channel selector is exactly the compression of a coherent twelve-port representation of the same order-eighteen group.
@@ -231,7 +231,7 @@ These are physical and analytic gates, not missing finite-group algebra.
 
 **Group falsifier:** exact enumeration of the stated matrices produces anything other than eighteen elements.
 
-**Compression falsifier:** the explicit isometry fails either $J^*\widetilde RJ=I_2\oplus C$ or $\widetilde HJ=JH_{m phys}$.
+**Compression falsifier:** the explicit isometry fails either $J^*\widetilde RJ=I_2\oplus C$ or $\widetilde HJ=JH_{\rm phys}$.
 
 **Ontology warning:** infer twelve microscopic particles from a twelve-dimensional minimal coherent dilation.
 

@@ -23,9 +23,9 @@ the character products are
 \[
 \boxed{
 \chi_{(-1)^F}
-=\chi_{Spin(1,3)\ {m center}}
-=\chi_{SU(2)_L\ {m center}}
-=\chi_{SU(3)_c\ {m center}}
+=\chi_{Spin(1,3)\ {\rm center}}
+=\chi_{SU(2)_L\ {\rm center}}
+=\chi_{SU(3)_c\ {\rm center}}
 =+1.
 }
 \]
@@ -39,7 +39,7 @@ It must instead live on a square root of the response—an individual carrier le
 The weak center acts as \(-1\) on every weak doublet and \(+1\) on every weak singlet. A bare left/right Dirac pair therefore has character
 
 \[
-(-1)_{Q\ {m or}\ L}(+1)_{f^c}=-1.
+(-1)_{Q\ {\rm or}\ L}(+1)_{f^c}=-1.
 \]
 
 This is the universal minus sign established in document 900. It also explains why the bare pair is not yet a weak singlet.
@@ -47,8 +47,8 @@ This is the universal minus sign established in document 900. It also explains w
 Both \(H\) and \(\widetilde H\) are weak doublets, so Higgs dressing supplies a second minus:
 
 \[
-(-1)_{Q\ {m or}\ L}
-(-1)_{H\ {m or}\widetilde H}
+(-1)_{Q\ {\rm or}\ L}
+(-1)_{H\ {\rm or}\widetilde H}
 (+1)_{f^c}
 =+1.
 \]
@@ -107,12 +107,12 @@ The programme now has three cleanly separated signs:
 
 The desired real two-component field cannot simply be the vector of completed Yukawa composites if the edge rule is to carry the coherent \(-I\) literally. Those composites are observable-level objects and naturally realize the order-six quotient.
 
-A coherent order-twelve realization needs an upstream root \(\psi_{m resp}\) with
+A coherent order-twelve realization needs an upstream root \(\psi_{\rm resp}\) with
 
 \[
-\psi_{m resp}\mapsto-\psi_{m resp},
+\psi_{\rm resp}\mapsto-\psi_{\rm resp},
 \qquad
-B_{LQ}\sim\psi_{m resp}\psi_{m resp}^T.
+B_{LQ}\sim\psi_{\rm resp}\psi_{\rm resp}^T.
 \]
 
 The Furey minimal ideal, a neutral Nambu/Majorana amplitude, or a Pfaffian line could provide such a root. None is yet selected uniquely.

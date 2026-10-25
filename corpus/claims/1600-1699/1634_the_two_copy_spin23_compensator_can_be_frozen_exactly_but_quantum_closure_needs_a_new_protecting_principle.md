@@ -77,7 +77,7 @@ T^{(i)}_A\wedge\star T^{(i)A}
 \end{aligned}
 \]
 
-where (ho) and (B_A) are four-form multiplier densities and
+where (\rho) and (B_A) are four-form multiplier densities and
 
 \[
  a_2=-2a_1,\qquad a_3=-\frac12a_1,

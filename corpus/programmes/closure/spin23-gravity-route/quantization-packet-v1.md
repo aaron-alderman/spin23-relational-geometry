@@ -167,7 +167,7 @@ and the gauge fermion
 \]
 
 The gauge-fixed action is (S_{\rm gf+gh}=s\Psi). The reference point is
-(alpha=eta=gamma=1). This formula defines all ghost and mixed vertices;
+(alpha=\beta=gamma=1). This formula defines all ghost and mixed vertices;
 discarding the connection terms in (sG) or the Lie-derivative terms in
 (sF) is not permitted. At the background, the propagating FP operator is
 
@@ -188,7 +188,7 @@ defined by analytic continuation back to AdS.
 
 The Euclidean coframe traceless modes and the (SO(4)) connection are
 integrated over their real slices. The conformal coframe direction uses the
-standard steepest-descent imaginary contour. Multipliers (ho,B_A) use
+standard steepest-descent imaginary contour. Multipliers (\rho,B_A) use
 imaginary Fourier contours so their integrals impose delta functionals.
 The positive-normalized pseudoscalar is real. Ghost and antighost variables
 are independent Grassmann fields.

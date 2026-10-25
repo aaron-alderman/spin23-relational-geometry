@@ -106,7 +106,7 @@ At the checkpoint, the four-dimensional physical embedding $J$ from document 930
 \[
 J^*\widetilde RJ=I_2\oplus C_{\rm loss},
 \qquad
-J^*\widetilde HJ=H_{m phys}.
+J^*\widetilde HJ=H_{\rm phys}.
 \]
 
 Thus a lossless instantaneous twelve-port feedthrough appears lossy after only four coherent combinations are retained. The omitted combinations carry amplitude and group memory.

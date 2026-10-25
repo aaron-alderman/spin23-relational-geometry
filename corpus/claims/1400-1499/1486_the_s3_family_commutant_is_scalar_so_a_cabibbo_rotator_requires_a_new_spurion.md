@@ -32,7 +32,7 @@ This is a representation obstruction, not a numerical fitting failure.
 Near the equilateral triangle, common edge scale is irrelevant.  The two
 edge-shape perturbations transform as (A_2), while the oriented loop flux
 changes sign under an odd permutation and transforms as the sign
-representation (arepsilon).  Hence the linear geometric source is
+representation (\varepsilon).  Hence the linear geometric source is
 
 \[
 W=A_2\oplus\varepsilon.
@@ -47,7 +47,7 @@ The Hermitian operators on the family doublet decompose under conjugation as
 
 The identity is the centroid shift.  The real symmetric traceless operators
 form (A_2), and (iJ), with (J) the oriented area form, spans
-(arepsilon).  Therefore
+(\varepsilon).  Therefore
 
 \[
 \operatorname{Herm}_0(A_2)=A_2\oplus\varepsilon\cong W.
@@ -60,8 +60,8 @@ Schur orthogonality gives
 (W,\operatorname{Herm}_0(A_2))=2,
 \]
 
-with one scalar on (A_2) and one scalar on (arepsilon).  The cross maps
-(A_2\leftrightarrowarepsilon) vanish.  This is exactly the edge/flux
+with one scalar on (A_2) and one scalar on (\varepsilon).  The cross maps
+(A_2\leftrightarrow\varepsilon) vanish.  This is exactly the edge/flux
 block scaling exhausted in claims 1484--1485.  It is not a hidden rotation.
 
 ## Why orientation alone does not evade the result
@@ -69,7 +69,7 @@ block scaling exhausted in claims 1484--1485.  It is not a hidden rotation.
 The matrix (iJ) commutes with the even three-cycle but changes sign under a
 reflection.  It becomes equivariant only when multiplied by an
 orientation-odd source such as the loop flux.  That construction is already
-the (arepsilon) channel above.  A constant (iJ) instead lowers (S_3)
+the (\varepsilon) channel above.  A constant (iJ) instead lowers (S_3)
 to (A_3) and splits the democratic doublet even at zero flux.
 
 Likewise, choosing a real symmetric traceless axis lowers (S_3) to the
@@ -113,7 +113,7 @@ the family identity and lies in the scalar commutant.
 
 The next admissible top-down calculation is therefore precise: search the
 defect superconnection, Peirce action and boundary-orientation data for an
-explicit covariant in (A_2) or (arepsilon), and prove its transformation
+explicit covariant in (A_2) or (\varepsilon), and prove its transformation
 law.  The next bottom-up calculation should test the one-coefficient marked
 axis or oriented-axis operator while holding one CKM invariant out.  An
 arbitrary (2\times2) family matrix is not an admissible middle.  Physical

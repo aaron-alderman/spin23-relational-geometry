@@ -31,7 +31,7 @@ Starting from \(L_{en}=2.4\times10^{-9}\), therefore,
 
 \[
 \boxed{|g_p^eg_p^p|\lesssim3.4752\times10^{-8}}
-\qquad(m_\varphi\simeq30\ \mu{\rm eV},\ 95\%\ {m confidence}).
+\qquad(m_\varphi\simeq30\ \mu{\rm eV},\ 95\%\ {\rm confidence}).
 \]
 
 This is a reconstruction from the rounded published spin fractions, not an

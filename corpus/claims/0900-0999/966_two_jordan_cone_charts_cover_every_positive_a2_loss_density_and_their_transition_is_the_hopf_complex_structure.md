@@ -88,9 +88,9 @@ The atlas therefore needs one rung beyond the real Weyl group but no arbitrary n
 
 For weak loss:
 
-- at zero frequency, (eta_n=eta_t), so both charts overlap;
-- near the tangent resonance, (eta_t/eta_n) becomes large and the tangent-even chart is required;
-- at high frequency, (eta_n/eta_t	o(3+2\sqrt2)^2), so the normal-even chart is required.
+- at zero frequency, (\beta_n=\beta_t), so both charts overlap;
+- near the tangent resonance, (\beta_t/\beta_n) becomes large and the tangent-even chart is required;
+- at high frequency, (\beta_n/\beta_t\to(3+2\sqrt2)^2), so the normal-even chart is required.
 
 The complete frequency axis is covered by switching charts inside their overlap. The single-chart failure band is therefore a coordinate obstruction, not a positivity failure of the physical density.
 

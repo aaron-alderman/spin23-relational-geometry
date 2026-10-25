@@ -466,6 +466,50 @@ cost is a dense mixing matrix with entries as large as 422, so the laboratory
 question becomes a concrete sparsity trade-off rather than an undefined
 high-body interaction.
 
+That dense mixer now has an exact finite-register implementation.
+[Wave 7.157](../frontier/wave-7/frontier_wave7_157_leech_finite_qudit_channel_mixer.md)
+reduces \(K^{-1}\bmod853\) to 24 single-qudit scales and 531 two-qudit
+controlled additions, while preserving the finite Weyl pairing and sending
+the Leech interaction columns to \(I_{24}\). The 853-level choice retains the
+centered entries through magnitude 422 and needs at most 240 binary qubits per
+chiral block as a raw allocation. This is an exact digital surrogate, not a
+continuum-limit proof or a material realization; rotor-cutoff convergence and
+infrared chirality are now the explicit Gate-A tests.
+
+The first cutoff audit catches an important distinction inside that
+surrogate. [Wave 7.158](../frontier/wave-7/frontier_wave7_158_leech_wrap_free_rotor_cutoff_ladder.md)
+computes \(\lVert K^{-1}\rVert_\infty=2579\), so a bounded position box
+\(\lVert n\rVert_\infty\le N\) is guaranteed alias-free only when
+\(p>5158N\). An explicit unit-cube input gives exact channel output 2579 but
+decodes as 20 modulo 853. The first sufficient prime is therefore 5167 for
+\(N=1\), rising to 330131 for \(N=64\); the corresponding raw 24-channel
+allocations are 312 and 456 binary qubits. This is a falsifiable convergence
+preflight, not evidence that the continuum limit has already been reached.
+
+The corresponding interaction gap creates a second, independent obstruction.
+[Wave 7.159](../frontier/wave-7/frontier_wave7_159_leech_clock_locking_gap_scaling.md)
+diagonalizes the direct clock penalty exactly and finds
+\(\Delta_p=2u_p\sin^2(\pi/p)\). Fixed coupling therefore closes the locking
+gap as \(p^{-2}\); fixing the gap instead requires
+\(u_p/\Delta_\star\sim p^2/(2\pi^2)\), rising from
+\(1.35\times10^6\) at the safe \(N=1\) rung to \(5.52\times10^9\) at
+\(N=64\). Exact relative-label thermodynamics gives
+\(\beta\Delta_\star\ge8.47114\) for at most one-percent unlocking across 24
+channels, equivalent to 1.765 GHz at 10 mK. The naïve fixed-strength clock
+route is therefore rejected; a rotor-native or multiscale kinetic-plus-cosine
+architecture is the live Gate-A design problem.
+
+The first rotor-native replacement is now executable.
+[Wave 7.160](../frontier/wave-7/frontier_wave7_160_leech_rotor_native_pendulum_gap.md)
+uses the open, noncyclic momentum truncation
+\(H_N=n^2/2+1-\cos\theta\). Its first gap converges at fixed control strengths
+to 0.8784249807; \(N=4\) differs from the \(N=64\) benchmark by only
+\(1.21\times10^{-7}\). Complete-spectrum thermodynamics across 24 independent
+relative modes gives \(\beta E_{\rm unit}\ge8.86675\), corresponding to a
+1.62292 GHz first gap at 10 mK. This repairs the local locking problem. It
+does not yet address collective interwire propagation, bulk-gap scaling or
+the extraction of 24 net chiral edge modes.
+
 The same carrier now has a quantitative dynamics record in
 [Wave 7.140](../frontier/wave-7/frontier_wave7_140_monster_edge_dynamics_and_transport_witness.md).
 For \(H=(2\pi\hbar v/L)(L_0-c/24)\), the Leech edge has a 24-fold weight-one
@@ -550,9 +594,57 @@ invariant vertex operators act on the twisted ground module through the
 corresponding extraspecial elements. The 24 sourced basis vectors compile to
 24 independent twelve-qubit Pauli labels, reproduce \(K\bmod2\) as their
 commutator matrix, and pass 48 catalogue-generator covariance checks. This is
-a genuine action on the pre-projection twisted ground module; its lift through
-the half modes, absolute OPE normalization and the full
-\(T\times T\to U\) tensor remain open.
+a genuine action on the pre-projection twisted ground module. The associated
+**symmetry** action has now been lifted through the half modes in
+[Wave 7.151](../frontier/wave-7/frontier_wave7_151_moonshine_2b_centralizer_semidirect_trace_protocol.md):
+the full 98304-state sector carries the compatible
+\(2_+^{1+24}.Co_1\) semidirect representation, with 48 seed-covariance checks
+and phase-free trace bounds. The distinct zero mode of each minimal-vector
+**vertex operator** is derived in
+[Wave 7.152](../frontier/wave-7/frontier_wave7_152_moonshine_minimal_vector_twisted_weight2_zero_mode.md).
+The twisted Heisenberg exponential supplies the missing rank-one channel
+factor, giving
+\(O_\alpha=(I-2\alpha(\alpha^TK))\otimes P_{[\alpha]}/8\).
+Its spectrum is \(\{\pm7/8,\pm1/8\}\), with multiplicities
+\(2048,2048,47104,47104\), and its trace moments are
+\((0,4608,2424)\) at powers one, two and four. The 300
+oscillator-bilinear zero modes are now closed in
+[Wave 7.153](../frontier/wave-7/frontier_wave7_153_moonshine_oscillator_bilinear_twisted_zero_modes.md):
+\(B_{h,k}=(hk^\flat+kh^\flat)/2+(h,k)I/8\). The anomalous scalar restores
+\(o(\omega)=2I\) and the Griess-unit identity \(o(\omega/2)=I\). Thus the
+entire \(98580\)-dimensional untwisted action on the \(98304\)-dimensional
+twisted block is now known parametrically. [Wave 7.154](../frontier/wave-7/frontier_wave7_154_moonshine_cross_sector_griess_product_oracle.md)
+uses invariant-form adjointness to transpose it into the full
+\(T\times T\to U\) product. The result is an executable streaming oracle:
+its oscillator component is
+\(\langle s,t\rangle[h(-1)k(-1)/2+(h,k)\omega/8]\), and each minimal-pair
+coefficient is
+\(\langle R_\alpha h,k\rangle\langle P_{[\alpha]}s,t\rangle/16\).
+It derives the universal \(e/3\) projection and predicts the marked
+cross-sector transition \(-7/4\). Laboratory tomography and held-out closure,
+not the abstract cross-sector tensor, are now open.
+
+[Wave 7.155](../frontier/wave-7/frontier_wave7_155_moonshine_cross_sector_sparse_tomography_protocol.md)
+turns that oracle into a preregistered sparse experiment. Sixteen of the 24
+marked minimal-vector seeds calibrate the channel and Pauli frames; eight are
+committed blind. Their normalized transition target is \(-7/8\), while the
+bare-Pauli impostor predicts \(+1\). At absolute tolerance 0.02 and family-wise
+failure probability 0.05, the eight holdouts require 28842 shots each, or
+230736 total. An independent oscillator test distinguishes the required
+twisted-vacuum response \(1/8\) from the no-anomaly value zero. These are
+experimental targets, not observations; the same-carrier requirement remains.
+
+The operator formulas also close a previously abstract involution junction.
+Lam and Shimakura's norm-four axes
+\(\omega_\alpha^\pm=\alpha(-1)^2/16\pm u_\alpha/4\), combined with the
+compiled zero modes, have twisted-sector spectrum
+\(0^{47104},(1/2)^{2048},(1/16)^{49152}\). Their Miyamoto involutions act as
+\(-P_{[\alpha]}\) and \(+P_{[\alpha]}\) on the twisted block, so their product
+is the \(2B\) sector sign while each involution is class \(2A\). This exact
+\((1A,2A,2A,2B)\) Klein four junction is verified for 24 marked pairs in
+[Wave 7.156](../frontier/wave-7/frontier_wave7_156_moonshine_norm4_ising_spectrum_2a2b_junction.md).
+It joins the Ising/Norton--Sakuma and orbifold-sector lanes on one operator
+dictionary; laboratory spectral resolution remains open.
 
 The accumulated result is stated as a proof certificate, rather than left as
 an implication of the review, in

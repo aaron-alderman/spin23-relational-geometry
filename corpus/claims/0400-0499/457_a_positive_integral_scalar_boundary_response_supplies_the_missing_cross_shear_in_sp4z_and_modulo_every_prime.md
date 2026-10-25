@@ -152,7 +152,7 @@ X\equiv
 The code's charge-word phase profiles already supply every diagonal logical shear, including
 
 \[
-K_{m local}=I_2\equiv-2I_2\pmod3.
+K_{\rm local}=I_2\equiv-2I_2\pmod3.
 \]
 
 Symplectic lower shears add their symmetric matrices, so

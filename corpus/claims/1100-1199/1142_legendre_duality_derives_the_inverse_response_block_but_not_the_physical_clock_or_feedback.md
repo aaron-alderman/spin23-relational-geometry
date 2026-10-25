@@ -202,7 +202,7 @@ Three cases must be separated.
 
 ### 5.1 Static or adiabatic response
 
-If (ho) is the Hessian of a real static generating functional after all Ward-null directions are removed, the quadratic Legendre theorem applies directly.
+If (\rho) is the Hessian of a real static generating functional after all Ward-null directions are removed, the quadratic Legendre theorem applies directly.
 
 ### 5.2 Lossless rational response
 
@@ -238,9 +238,9 @@ Even when the self-dual Hamiltonian is accepted,
 K_\rho^2=-I
 \]
 
-and fixed-time transport remains an elliptic rotation. If (ho) is held fixed, this is ordinary integrable dynamics.
+and fixed-time transport remains an elliptic rotation. If (\rho) is held fixed, this is ordinary integrable dynamics.
 
-If (ho) changes only because an external operator chooses a new temperature, density or frequency, the system is driven but not endogenous.
+If (\rho) changes only because an external operator chooses a new temperature, density or frequency, the system is driven but not endogenous.
 
 Genuine feedback requires a closed update such as
 
@@ -253,7 +253,7 @@ where \(E_n\) denotes any retained environment state, and where \(\Phi\) follows
 
 ## 8. Stop-everything tests
 
-**Static-action trigger:** derive the Ward-quotiented (ho) as the Hessian of a real convex Standard-Model generating functional in a specified regime.
+**Static-action trigger:** derive the Ward-quotiented (\rho) as the Hessian of a real convex Standard-Model generating functional in a specified regime.
 
 **Canonical-pair trigger:** identify the source and expectation variables with a genuine canonical pair, including units, symplectic form and boundary terms.
 
@@ -261,7 +261,7 @@ where \(E_n\) denotes any retained environment state, and where \(\Phi\) follows
 
 **Clock trigger:** derive \(\Omega\) from a pole, gap, proper-time or traversal invariant.
 
-**Feedback trigger:** show that the retained environment or stress state changes (ho) for the next passage.
+**Feedback trigger:** show that the retained environment or stress state changes (\rho) for the next passage.
 
 **Overclaim stop:** a positive frequency-domain spectral matrix and its algebraic inverse are not, without a realization theorem, an instantaneous Hamiltonian Hessian.
 
@@ -269,7 +269,7 @@ where \(E_n\) denotes any retained environment state, and where \(\Phi\) follows
 
 | Question | Verdict |
 |---|---|
-| Is (ho^{-1}) naturally derived from (ho)? | **yes, as the Hessian of the quadratic Legendre dual** |
+| Is (\rho^{-1}) naturally derived from (\rho)? | **yes, as the Hessian of the quadratic Legendre dual** |
 | Is (H=W+W^*) positive? | **yes** |
 | Does it give a symplectic generator with (K^2=-I)? | **yes, in equal-weight units** |
 | Is the relative inverse pairing forced by positivity? | **no; it is forced by the self-dual Legendre identification** |

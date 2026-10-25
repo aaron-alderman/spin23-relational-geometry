@@ -64,8 +64,8 @@ d(e_a\wedge T^a)=T_a\wedge T^a-R_{ab}\wedge e^a\wedge e^b.
 On a torsionless background, the linear part of
 (widehat X=*(R_{ab}\wedge e^a\wedge e^b)) is consequently the covariant
 divergence of axial contorsion, up to the sign already frozen by the packet.
-Because (ar X=0), the quadratic part of (widehat X^2) is simply
-((DS)^2). Metric variations of the Hodge star multiply (ar X) and do
+Because (\bar X=0), the quadratic part of (widehat X^2) is simply
+((DS)^2). Metric variations of the Hodge star multiply (\bar X) and do
 not generate an (hS) quadratic mixing term.
 
 The Einstein--Cartan scalar curvature decomposes into the Levi--Civita scalar

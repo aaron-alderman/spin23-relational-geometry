@@ -49,10 +49,10 @@ Therefore
 
 The two paths have a direct two-copy interpretation:
 
-- (p): one (alphaalpha) LNV event and one (etaeta) LNV event;
-- (q): two (alphaeta) LNV events.
+- (p): one (alphaalpha) LNV event and one (\beta\beta) LNV event;
+- (q): two (alpha\beta) LNV events.
 
-Both yield the same total final-flavor multiset: two (alpha) leptons and two (eta) leptons.
+Both yield the same total final-flavor multiset: two (alpha) leptons and two (\beta) leptons.
 
 ## 1. Positive two-path Gram
 

@@ -189,16 +189,16 @@ and an unconstrained normalized Gaussian covariance do not exist. The common coo
 After quotienting the zero mode or fixing a reference, the inverse relation holds on the physical support:
 
 \[
-C_{m phys}=T R_{m phys}^{-1}.
+C_{\rm phys}=T R_{\rm phys}^{-1}.
 \]
 
 In the unreduced coordinates this becomes the pseudoinverse statement
 
 \[
-RC=CR=T P_{m phys},
+RC=CR=T P_{\rm phys},
 \]
 
-where (P_{m phys}) projects away the common shift. This matches the programme's Ward lesson: quotient null gauge/current directions before claiming a positive (H_2) carrier or using a log determinant.
+where (P_{\rm phys}) projects away the common shift. This matches the programme's Ward lesson: quotient null gauge/current directions before claiming a positive (H_2) carrier or using a log determinant.
 
 ## 6. What fixes the scale
 

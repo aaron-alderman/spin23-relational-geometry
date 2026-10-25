@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+
+const path=new URL("../../evidence/data/moonshine-cross-sector-sparse-tomography-protocol-v1.json",import.meta.url);
+const r=JSON.parse(fs.readFileSync(path,"utf8"));
+assert.equal(r.schemaVersion,"moonshine-cross-sector-sparse-tomography-protocol-v1");
+assert.equal(r.carrierRequirements.channelModes*r.carrierRequirements.twistedDimension/r.carrierRequirements.channelModes,98304);
+assert.equal(2**r.carrierRequirements.protectedQubits,4096);
+assert.equal(r.preregisteredSplit.calibrationSeeds+r.preregisteredSplit.blindHeldOutSeeds,r.carrierRequirements.markedMinimalSeeds);
+const shots=(m,delta,epsilon)=>Math.ceil(2*Math.log(2*m/delta)/epsilon**2);
+const {familywiseFailureProbability:delta,absoluteTolerance:epsilon}=r.shotModel;
+const all=shots(24,delta,epsilon),held=shots(8,delta,epsilon);
+assert.equal(all,r.shotModel.all24ShotsPerObservable);
+assert.equal(all*24,r.shotModel.all24TotalShots);
+assert.equal(held,r.shotModel.heldout8ShotsPerObservable);
+assert.equal(held*8,r.shotModel.heldout8TotalShots);
+assert.equal(-7/8,-0.875);
+assert.equal(1-(-7/8),15/8);
+assert.ok(2*epsilon<1/8,"anomaly/no-anomaly intervals remain disjoint");
+assert.ok(2*epsilon<15/8,"Monster/bare-Pauli intervals remain disjoint");
+assert.ok(r.decisionRule.some(x=>x.includes("same device")));
+assert.ok(r.systematics.length>=6);
+console.log(JSON.stringify({status:"PASS",targetAmplitude:-7/8,barePauliImpostor:1,gap:15/8,anomalyTarget:1/8,noAnomaly:0,tolerance:epsilon,familywiseFailureProbability:delta,all24:{shotsPerObservable:all,totalShots:all*24},blindHeldout8:{shotsPerObservable:held,totalShots:held*8},systematics:r.systematics.length,boundary:r.status}));

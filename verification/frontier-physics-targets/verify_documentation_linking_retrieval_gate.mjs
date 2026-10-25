@@ -25,7 +25,7 @@ if (gate.sections?.duplicates?.exactContentCandidates?.length !== 0 || gate.sect
 if (gate.sections?.contradictions?.unresolvedCandidates !== 0) failures.push('contradiction candidates remain');
 if (gate.sections?.retrieval?.cases !== 30 || gate.sections?.retrieval?.failed !== 0 || gate.sections?.retrieval?.passRate !== 1 || gate.sections?.retrieval?.meanReciprocalRank < 0.8) failures.push('governed retrieval threshold failed');
 for (const [name, stratum] of Object.entries(gate.sections?.retrieval?.strata ?? {})) if (!stratum.pass || !stratum.ids?.length) failures.push(`${name}: retrieval stratum failed`);
-if (gate.sections?.centrality?.authorityBoundaryPresent !== true || JSON.stringify(gate.sections?.centrality?.graphWeights) !== JSON.stringify([0, 0.3, 0.6])) failures.push('centrality authority boundary or sweep drifted');
+if (gate.sections?.centrality?.authorityBoundaryPresent !== true || JSON.stringify(gate.sections?.centrality?.graphWeights) !== JSON.stringify([0, 0.2, 0.59])) failures.push('centrality authority boundary or sweep drifted');
 for (const test of gate.sections?.centrality?.tests ?? []) {
   if (!test.pass || test.runs?.length !== 3) failures.push(`${test.id}: selector sweep failed`);
   for (const run of test.runs ?? []) if (!run.firstTargetRank || run.firstTargetRank > 10) failures.push(`${test.id}: target buried at graph weight ${run.graphWeight}`);

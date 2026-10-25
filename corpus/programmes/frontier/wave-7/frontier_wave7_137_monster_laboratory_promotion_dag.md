@@ -49,14 +49,19 @@ on paper and called a Monster realization.
    \(196884=98580+98304\) across sizes and aspect ratios.
 6. **F/G — independent marked defects.** Measure the \(2A\) interface and the
    marked \(23AB\) Fourier recoupling law. Generic Ising or
-   \(\mathrm{TY}(\mathbb Z_{23})\) behavior is explicitly insufficient.
+   \(\mathrm{TY}(\mathbb Z_{23})\) behavior is explicitly insufficient. The
+   \(2A\) preflight now requires the three Ising weights and the paired
+   \(2A\cdot2A=2B\) product from Wave 7.156 on the same sector grading.
 7. **H — common root.** Construct one order-46 process whose powers return the
    already tested order-23 and order-2 operations. At \(y=1\), its connected
    ratios have frozen magnitude targets \(0.00373794542221053\) and
    \(0.0784643601781287\); \(y=0.8,1.2\) are held out.
 8. **I — operator closure.** Reconstruct a selected Jordan corner from six
    two-point and ten three-point coefficients, test the Jordan identity on
-   held-out data, and predict untrained Norton--Sakuma pair types.
+   held-out data, and predict untrained Norton--Sakuma pair types. The
+   cross-sector preflight now adds eight blind \(-7/8\) minimal-vector
+   transitions and the anomaly-sensitive \(1/8\) orthogonal oscillator
+   response before attempting those larger closures.
 
 ## What each stopping point means
 
@@ -79,7 +84,20 @@ Wave 7.138 fixes its full 24-channel integer interaction matrix, but its
 12–22-field vertex terms still require a microscopic compilation. Wave 7.139
 shows that an exact integral basis change diagonalizes those terms, trading
 vertex order for a dense channel-mixing matrix rather than leaving a formal
-many-body obstruction.
+many-body obstruction. Wave 7.157 implements that mixer exactly on 24
+853-level registers using 555 modular linear gates per chiral block. This
+closes the coefficient-faithful digital instruction set. Wave 7.158 shows
+that 853 nevertheless aliases a marked unit-cube input \(2579\mapsto20\);
+the first worst-case wrap-free prime is 5167, and the sufficient cutoff ladder
+is now explicit. Wave 7.159 then proves that a fixed-strength direct clock
+penalty loses its locking gap as \(p^{-2}\), while fixed-gap rescaling needs
+control range up to \(5.52\times10^9\) by \(N=64\). The naïve clock route is
+therefore rejected in favor of a rotor-native or multiscale design.
+Wave 7.160 supplies the first rotor-native mode: its fixed-strength gap
+converges to 0.8784249807 and reaches \(1.21\times10^{-7}\) relative accuracy
+by cutoff \(N=4\). Local locking is therefore viable; collective interwire
+gap scaling, spatial hardware locality and the infrared Leech edge remain
+unproved.
 Wave 7.142 then uses one shared dynamical sign per wire bond to gauge the
 diagonal inversion of all 24 channels and verifies all 1152 mutual null
 pairings. The remaining gate is microscopic realization plus infrared sector
@@ -88,6 +106,11 @@ Waves 7.133–136 supply executable commissioning operations and discriminators,
 not a single carrier that has passed them. The highest-value next result is
 therefore a microscopic Hamiltonian or programmable simulator whose low-energy
 edge passes A and exposes the same inversion branch cut needed for B.
+Waves 7.151–154 close the abstract first-level semidirect representation,
+source-normalized zero modes and full cross-sector Griess product. Wave 7.155
+turns their sharpest entries into a blind eight-seed protocol with target
+\(-7/8\), 0.02 tolerance and 230736 total shots. These improve Gate I but do
+not move the single-carrier frontier past A.
 
 ## Claim boundary
 
@@ -105,3 +128,10 @@ P4 questions.
 - [Normalized-character detector](frontier_wave7_134_normalized_character_commissioning_curve.md)
 - [Operator tomography](frontier_wave7_135_monster_edge_operator_tomography_dictionary.md)
 - [Symmetry-enrichment witness](frontier_wave7_136_leech_orbifold_symmetry_enrichment_witness.md)
+- [Cross-sector Griess product oracle](frontier_wave7_154_moonshine_cross_sector_griess_product_oracle.md)
+- [Sparse blind tomography protocol](frontier_wave7_155_moonshine_cross_sector_sparse_tomography_protocol.md)
+- [Norm-four Ising \(2A\)-\(2A\)-\(2B\) junction](frontier_wave7_156_moonshine_norm4_ising_spectrum_2a2b_junction.md)
+- [Finite-qudit Leech channel mixer](frontier_wave7_157_leech_finite_qudit_channel_mixer.md)
+- [Wrap-free rotor-cutoff ladder](frontier_wave7_158_leech_wrap_free_rotor_cutoff_ladder.md)
+- [Clock-locking gap scaling](frontier_wave7_159_leech_clock_locking_gap_scaling.md)
+- [Rotor-native pendulum-gap convergence](frontier_wave7_160_leech_rotor_native_pendulum_gap.md)

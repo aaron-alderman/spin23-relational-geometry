@@ -35,7 +35,7 @@ P_{12}=
 Their orders are one and two. The arithmetic carrier color cycle is the nontrivial order-three unipotent
 
 \[
-R_{m car}=
+R_{\rm car}=
 \begin{pmatrix}
 1&0&0&0\\
 0&0&0&2\\

@@ -18,9 +18,9 @@ The topology exchange/dephasing part of the combined completely positive selecto
 Here
 
 \[
-S=\sigma_x\otimes I_{m carrier},
+S=\sigma_x\otimes I_{\rm carrier},
 \qquad
-Z=\sigma_z\otimes I_{m carrier}.
+Z=\sigma_z\otimes I_{\rm carrier}.
 \]
 
 Its asymptotic channel is
@@ -34,7 +34,7 @@ the same topology Pauli twirl used in the selector of [document 688](688_the_com
 
 The result comes with an uncomfortable but useful clarification:
 
-> The steady observable algebra has no surviving topology qubit. It is exactly \(I_{m topology}\otimes M_{m carrier}\).
+> The steady observable algebra has no surviving topology qubit. It is exactly \(I_{\rm topology}\otimes M_{\rm carrier}\).
 
 This generator realizes topology erasure/decoherence, not a Hamiltonian energy splitting leaving a pure symmetric topology state.
 
@@ -51,7 +51,7 @@ L_z=\sqrt{\gamma_z}\,Z.
 Because \(S\) and \(Z\) are Hermitian unitaries, the GKSL terms are
 
 \[
-L_aOL_a^\dagger-rac12\{L_a^\dagger L_a,O\}
+L_aOL_a^\dagger-\frac12\{L_a^\dagger L_a,O\}
 =\gamma_a(U_aOU_a-O).
 \]
 
@@ -123,7 +123,7 @@ An operator fixed by both conjugations must commute with both \(\sigma_x\) and \
 
 \[
 \operatorname{Fix}(\mathcal L)
-=I_2\otimes M_{m carrier}.
+=I_2\otimes M_{\rm carrier}.
 \]
 
 Equivalently,

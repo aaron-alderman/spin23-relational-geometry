@@ -39,7 +39,7 @@ H_3(\phi)=\Delta[I-n(\phi)n(\phi)^T],
 with (Delta=1) and loop rate (omega=0.02). Its adiabatic ratio is
 
 \[
-\epsilon_{\rm ad}=rac{\omega\sqrt7}{4\Delta}simeq0.0132.
+\epsilon_{\rm ad}=\frac{\omega\sqrt7}{4\Delta}simeq0.0132.
 \]
 
 The projector closes exactly and the calibrated doublet frame returns by (+pi/2); reversing the loop gives (-pi/2). The large common dynamical phase remains explicitly typed as a quantity to remove by reference or echo rather than being mistaken for holonomy.

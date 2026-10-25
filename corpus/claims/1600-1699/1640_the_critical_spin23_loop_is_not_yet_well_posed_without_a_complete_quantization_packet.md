@@ -111,7 +111,7 @@ The programme has now reached two nested, precise boundaries:
 \[
  \operatorname{rank}K=2<8
  \quad\text{and}\quad
- N_{\rm packet}=(3\ {m available},3\ {\rm partial},8\ {\rm missing}).
+ N_{\rm packet}=(3\ {\rm available},3\ {\rm partial},8\ {\rm missing}).
 \]
 
 The first says that the known quantum data leave six displayed normal

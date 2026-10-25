@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "moonshine-2b-centralizer-semidirect-trace-protocol-v1",
+  "date": "2026-10-25",
+  "carrier": {
+    "space": "C^24 half-mode selector tensor (C^2)^tensor12 twisted ground module",
+    "dimension": 98304,
+    "centralizer": "2_+^(1+24).Co1",
+    "normalSubgroupOrder": 33554432
+  },
+  "actions": {
+    "extraspecial": "rho(n)=I_24 tensor P(n)",
+    "conwayLift": "rho(g)=G_24 tensor U_C, where C=S^-1 G^T S mod 2 and U_C is a Clifford lift",
+    "semidirectLaw": "rho(g) rho(P_x) rho(g)^-1 equals rho(P_Cx) up to the central sign fixed by the extraspecial extension",
+    "commutatorInvariant": "the Pauli symplectic pairing is exactly the Leech bilinear form modulo 2 and is preserved by both sourced generators"
+  },
+  "exactTraces": {
+    "identity": 98304,
+    "centralMinus": -98304,
+    "everyNoncentralNormalPauli": 0
+  },
+  "generatorFingerprints": [
+    {
+      "generator": 1,
+      "channelTrace": -8,
+      "fixedPauliDimension": 16,
+      "fixedPauliLabels": 65536,
+      "cliffordTraceMagnitudeUpperBound": 256,
+      "fullTraceMagnitudeUpperBound": 2048
+    },
+    {
+      "generator": 2,
+      "channelTrace": 1,
+      "fixedPauliDimension": 2,
+      "fixedPauliLabels": 4,
+      "cliffordTraceMagnitudeUpperBound": 2,
+      "fullTraceMagnitudeUpperBound": 2
+    }
+  ],
+  "traceProtocol": {
+    "factorization": "Tr_W rho(g)=Tr_24(G) Tr_4096(U_C)",
+    "phaseFreeBound": "|Tr_4096(U_C)|^2 is at most the number 2^d of Pauli labels fixed by C, where d=dim ker(C-I)",
+    "measurement": "measure the 24-channel transfer trace and the protected-space Clifford trace separately, then compare their product with the full twisted-sector inserted thermal trace",
+    "discriminator": "a tensor-product impostor may match the dimension but fails if its conjugation permutation on the 24 marked Pauli seeds differs from the same Leech automorphism acting on the half-mode channels"
+  },
+  "established": "the full first-retained twisted sector carries an executable representation-level semidirect action compatible with the sourced Leech automorphisms",
+  "notEstablished": "this representation-level certificate alone does not derive vertex-operator zero modes; Waves 7.152 and 7.153 close those families and Wave 7.154 reconstructs T times T to U parametrically, while laboratory provenance remains open",
+  "sources": [
+    "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/htm/ctblm.htm",
+    "https://arxiv.org/abs/math/0402315",
+    "https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/Leech.html"
+  ]
+}

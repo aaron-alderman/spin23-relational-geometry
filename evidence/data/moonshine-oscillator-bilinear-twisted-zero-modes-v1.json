@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "moonshine-oscillator-bilinear-twisted-zero-modes-v1",
+  "date": "2026-10-25",
+  "family": {
+    "untwistedDimension": 300,
+    "basis": "symmetric states h(-1)k(-1)1",
+    "twistedCarrierDimension": 98304,
+    "zeroMode": "B_(h,k)=[h k^flat+k h^flat]/2+(h,k)I/8 on the 24 half-mode channels, tensor I_4096",
+    "vacuumAnomaly": "the scalar (h,k)/8 is the polarization of the inversion-twisted ground weight 24/16"
+  },
+  "orthonormalFingerprints": {
+    "diagonal": {
+      "count": 24,
+      "channelSpectrum": [{"value":"9/8","multiplicity":1},{"value":"1/8","multiplicity":23}],
+      "fullTrace": 16384,
+      "fullTraceSquare": 6656
+    },
+    "offDiagonal": {
+      "count": 276,
+      "channelSpectrum": [{"value":"1/2","multiplicity":1},{"value":"-1/2","multiplicity":1},{"value":"0","multiplicity":22}],
+      "fullTrace": 0,
+      "fullTraceSquare": 2048
+    }
+  },
+  "normalization": {
+    "conformalVector": "omega=(1/2) sum_a e_a(-1)^2",
+    "omegaZeroMode": "2 I_98304",
+    "griessUnit": "e=omega/2",
+    "griessUnitZeroMode": "I_98304"
+  },
+  "covariance": {
+    "identity": "A B_(h,k)=B_(Ah,Ak) A for every Leech isometry A",
+    "catalogueGenerators": 2,
+    "gramBasisPairs": 300,
+    "checks": 600,
+    "selfAdjointness": "B^T K=K B for every compiled Gram-basis pair"
+  },
+  "established": "all 300 oscillator-bilinear zero modes on the retained twisted weight-two sector, including the twisted-vacuum scalar and Griess-unit normalization",
+  "open": "Wave 7.154 joins these maps to the minimal-vector family and reconstructs the complete T times T to U product parametrically; streaming the 98280 minimal pairs into a hardware dictionary and measuring held-out Norton-Sakuma closures remain open",
+  "sources": [
+    "https://arxiv.org/abs/math/0402315",
+    "https://www.math.twcu.ac.jp/~yamauchi/math/phd/myphd.pdf"
+  ]
+}

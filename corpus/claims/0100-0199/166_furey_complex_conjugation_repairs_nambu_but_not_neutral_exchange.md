@@ -154,7 +154,7 @@ The composite \(\Gamma=sC_F\) is therefore a mathematically valid conditional co
 The emerging antiunitary is not one mysterious operation. It factorizes into three conceptually distinct maps:
 
 \[
-\Gamma_{m total}
+\Gamma_{\rm total}
 =
 \underbrace{\kappa_{\rm ext}}_{\text{reciprocity/orientation}}
 \otimes

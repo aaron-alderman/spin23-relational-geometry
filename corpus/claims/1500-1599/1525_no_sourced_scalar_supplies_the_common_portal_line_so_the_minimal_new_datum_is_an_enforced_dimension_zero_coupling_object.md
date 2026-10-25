@@ -272,7 +272,7 @@ has nonzero family charge and is not invariant. The allowed charge-repaired
 operator is instead
 
 \[
-\frac{S_{-3}}{\Lambda_{m UV}}L_PH\nu_N^c,
+\frac{S_{-3}}{\Lambda_{\rm UV}}L_PH\nu_N^c,
 \]
 
 which has dimension five and is the dangerous cross-Dirac channel of claim

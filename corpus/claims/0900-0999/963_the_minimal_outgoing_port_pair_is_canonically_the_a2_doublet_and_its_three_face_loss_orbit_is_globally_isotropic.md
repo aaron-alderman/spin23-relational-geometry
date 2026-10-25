@@ -30,7 +30,7 @@ G_0=\sqrt{\beta_n}P_++\sqrt{\beta_t}P_-,
 B_0=G_0G_0^T,
 \]
 
-where (eta_j=-\operatorname{Im}q_j>0). The other two faces are
+where (\beta_j=-\operatorname{Im}q_j>0). The other two faces are
 
 \[
 G_k=C^kG_0C^{-k},
@@ -80,7 +80,7 @@ FB_0F=B_0,
 FG_0F=G_0.
 \]
 
-The positive square root (G_0=B_0^{1/2}) is canonical. Its conjugates are positive square roots of the transported densities. If (eta_n\ne\beta_t), the face reflection is the full residual orthogonal symmetry of the eigenspace splitting, matching the spurion theorem of document 957.
+The positive square root (G_0=B_0^{1/2}) is canonical. Its conjugates are positive square roots of the transported densities. If (\beta_n\ne\beta_t), the face reflection is the full residual orthogonal symmetry of the eigenspace splitting, matching the spurion theorem of document 957.
 
 Thus the exact frequency-dependent port coupling can be chosen as
 

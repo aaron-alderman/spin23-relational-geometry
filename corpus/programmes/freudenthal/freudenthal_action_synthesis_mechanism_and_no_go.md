@@ -170,14 +170,14 @@ The programme therefore obtains a falsifiable product law once a state and norma
 For (A>0), the log-det action is strictly convex and its solution has (C>0). If Ward identities produce null directions, the full determinant and inverse do not exist. One must first pass to the physical quotient:
 
 \[
-C_{m phys}=lambda A_{m phys}^{-1}.
+C_{\rm phys}=lambda A_{\rm phys}^{-1}.
 
 \]
 
 In unreduced coordinates the strongest statement is
 
 \[
-AC=lambda P_{m phys}.
+AC=lambda P_{\rm phys}.
 
 \]
 

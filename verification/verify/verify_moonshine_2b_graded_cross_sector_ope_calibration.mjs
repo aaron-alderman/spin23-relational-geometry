@@ -36,5 +36,5 @@ console.log(JSON.stringify({
   gramAndThreePointCoefficientsEach: symmetric,
   diagonalUnitProjection: "e/3",
   oddTwistedThreePointParity: "zero",
-  next: "tomograph the residual T-circle-T to U tensor and test Conway/Norton-Sakuma covariance"
+  next: "use the Wave 7.154 residual-product oracle in blind laboratory tomography and test Conway/Norton-Sakuma covariance"
 }));

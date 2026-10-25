@@ -127,7 +127,7 @@ The doubling is not cosmetic: it is the algebraic record of the two complex embe
 Before imposing the Hilbert-space representation kernel or unimodularity, the connected central unitary torus of
 
 \[
-\mathcal A_{m SM}\oplus\mathbb C^3
+\mathcal A_{\rm SM}\oplus\mathbb C^3
 \]
 
 has rank five:
@@ -146,7 +146,7 @@ The reduced branch now has a precise algebraic carrier and a precise burden of p
 
 Required next:
 
-1. choose a faithful particle/conjugate representation of \(\mathcal A_{m SM}\oplus\mathbb C^3\);
+1. choose a faithful particle/conjugate representation of \(\mathcal A_{\rm SM}\oplus\mathbb C^3\);
 2. place the six oriented \(P,I,N\) sectors and the \(P,S\), \(S,P\) pair in physical fermion modules;
 3. realize the connector \((S,P)\leftrightarrow(I,P)\) and its real partner as an allowed finite-Dirac block;
 4. calculate \(\Omega_D^1\) and quotient by junk;

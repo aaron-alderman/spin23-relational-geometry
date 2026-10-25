@@ -244,7 +244,7 @@ Not closed:
 
 **Falsifier:** (S_-) is identified directly with (\Gamma_{\mathbb R}) despite their different squares and tensor structures.
 
-**Falsifier:** the local interface (q'=arepsilon q, p'=\varepsilon p) is claimed to exchange (q_2) with (p_2).
+**Falsifier:** the local interface (q'=\varepsilon q, p'=\varepsilon p) is claimed to exchange (q_2) with (p_2).
 
 **Boundary warning:** symplectic admissibility of the controlled Fourier transform is treated as proof that the microscopic boundary performs it.
 

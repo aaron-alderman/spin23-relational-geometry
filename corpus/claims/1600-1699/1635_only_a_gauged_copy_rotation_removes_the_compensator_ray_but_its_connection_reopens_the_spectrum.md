@@ -64,7 +64,7 @@ the ten bivector equations have linearization
 \]
 
 Their Jacobian has rank four, not ten: they set the four components of
-(delta Y_2) transverse to (ar V) to zero while leaving its parallel
+(delta Y_2) transverse to (\bar V) to zero while leaving its parallel
 component as the infinitesimal copy angle. The norm equation adds one rank.
 The constrained tangent therefore has dimension five:
 

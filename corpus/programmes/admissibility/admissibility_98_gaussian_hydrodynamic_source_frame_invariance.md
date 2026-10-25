@@ -13,7 +13,7 @@
 The shear and sound modes of AZ-097 now live inside one quadratic source functional. With external ports \(J\), internal modes \(\phi\), local tensor term \(A\), coupling \(B\) and inverse mode kernel \(D\), its source response is
 
 \[
-W[J]=\frac12J^TAJ+rac12J^TBD^{-1}B^TJ,
+W[J]=\frac12J^TAJ+\frac12J^TBD^{-1}B^TJ,
 \qquad
 \frac{\delta^2W}{\delta J\delta J}=A+BD^{-1}B^T.
 \]

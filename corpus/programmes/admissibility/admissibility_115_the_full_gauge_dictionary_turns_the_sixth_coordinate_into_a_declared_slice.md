@@ -36,7 +36,7 @@ In the normalization of Bauer *et al.*,
 \]
 
 \[
-\widetilde c_{BB}=c_{BB}+\frac12A_2+rac43c_t+\frac13c_b+c_e.
+\widetilde c_{BB}=c_{BB}+\frac12A_2+\frac43c_t+\frac13c_b+c_e.
 \]
 
 The neutrino difference is hypercharge neutral and does not alter these three identities. The map from the eight labels

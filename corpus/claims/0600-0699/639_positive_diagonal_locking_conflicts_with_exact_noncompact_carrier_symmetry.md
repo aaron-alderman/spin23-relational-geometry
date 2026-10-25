@@ -16,7 +16,7 @@ q_{\rm top},q_{\rm chi}\in\mathbb R^3.
 A positive quadratic lock
 
 \[
-S_E=rac a2\|q_{\rm top}\|^2
+S_E=\frac a2\|q_{\rm top}\|^2
 +\frac b2\|q_{\rm chi}\|^2
 +\frac\kappa2\|q_{\rm top}-q_{\rm chi}\|^2
 \]

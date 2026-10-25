@@ -56,8 +56,14 @@ has moved rather than vanished. The next test is platform-specific: produce
 that mixing network or realize \(K^{-1}\) directly, then verify that disorder
 and unwanted tunnelling do not spoil the null-vector gap.
 
+Wave 7.157 closes the first half of that request on a digital surrogate:
+modulo 853, the mixer compiles into 24 single-register scales and 531
+two-register controlled additions per chiral block. Continuum convergence and
+physical locality remain open.
+
 ## Corpus links
 
 - [Explicit Leech interaction matrix](frontier_wave7_138_explicit_leech_k_matrix_interaction_compiler.md)
 - [Coupled-wire blueprint](frontier_wave7_131_leech_coupled_wire_null_vector_blueprint.md)
 - [Laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
+- [Finite-qudit channel mixer](frontier_wave7_157_leech_finite_qudit_channel_mixer.md)

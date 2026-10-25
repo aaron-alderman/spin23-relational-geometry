@@ -56,7 +56,7 @@ The Ophanim phrase is used here as a heuristic, not as evidence or historical id
 - the **outer wheel** is the physical internal bimodule carrying left and opposite Standard-Model actions;
 - the **inner wheel** is the family/multiplicity algebra acting in the commutant of both;
 - the **axle** is the finite Dirac operator, which couples the two layers because it need not commute with the family action;
-- the **turning relation** is the represented one-form \([D_F,ho_F(f)]\);
+- the **turning relation** is the represented one-form \([D_F,\rho_F(f)]\);
 - “eyes” can be read cautiously as observable projections or states, but this part is metaphor only and carries no theorem.
 
 The key change is ontological. Family is not another location beside weak and color. It is an internal relational action on the multiplicity of a gauge correspondence.

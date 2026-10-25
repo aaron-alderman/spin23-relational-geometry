@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "moonshine-cross-sector-sparse-tomography-protocol-v1",
+  "date": "2026-10-25",
+  "carrierRequirements": {
+    "channelModes": 24,
+    "protectedQubits": 12,
+    "twistedDimension": 98304,
+    "markedMinimalSeeds": 24
+  },
+  "preregisteredSplit": {
+    "calibrationSeeds": 16,
+    "blindHeldOutSeeds": 8,
+    "selection": "commit a public hash of the random eight-seed holdout before fitting channel bases or Clifford phases"
+  },
+  "primaryObservable": {
+    "preparation": "normalized alpha channel tensor computational state s",
+    "readout": "normalized alpha channel tensor P_[alpha]s",
+    "monsterTarget": "-7/8",
+    "barePauliImpostor": "+1",
+    "gap": "15/8",
+    "absoluteTolerance": 0.02
+  },
+  "secondaryObservables": {
+    "diagonalAlongChannel": "9/8 before range normalization",
+    "diagonalOrthogonalChannel": "1/8; a no-anomaly model predicts 0",
+    "offDiagonalEigenchannels": ["+1/2", "-1/2"],
+    "conformalZeroMode": "2 I",
+    "griessUnitZeroMode": "I",
+    "crossSectorCoordinateForUnnormalizedAlpha": "-7/4"
+  },
+  "shotModel": {
+    "estimatorRange": "[-1,1] after declared block-encoding rescaling",
+    "bound": "N >= 2 ln(2m/delta_family)/epsilon^2 for outcomes in [-1,1]",
+    "familywiseFailureProbability": 0.05,
+    "absoluteTolerance": 0.02,
+    "all24ShotsPerObservable": 34335,
+    "all24TotalShots": 824040,
+    "heldout8ShotsPerObservable": 28842,
+    "heldout8TotalShots": 230736
+  },
+  "decisionRule": [
+    "fit only the 16 calibration seeds and freeze channel/Clifford conventions",
+    "accept the cross-sector seed gate only if all eight blind amplitudes contain -7/8 within the preregistered tolerance and their signs reject +1",
+    "reject the no-anomaly model unless orthogonal diagonal response contains 1/8 and the summed conformal response contains 2",
+    "require the measured three-point coordinate to agree with -7/4 after restoring the declared norm-four channel and norm-two u_alpha conventions",
+    "do not promote to a Monster carrier unless the same device also passes sector, 2B, marked 23AB/order-46 and Norton-Sakuma gates"
+  ],
+  "systematics": [
+    "leakage outside the 24 by 4096 retained sector",
+    "channel metric miscalibration",
+    "Pauli-frame sign drift",
+    "Clifford compilation error",
+    "finite-size mixing with higher conformal levels",
+    "postselection or detector asymmetry correlated with the held-out seed labels"
+  ],
+  "status": "executable statistical protocol; no experimental dataset is claimed"
+}

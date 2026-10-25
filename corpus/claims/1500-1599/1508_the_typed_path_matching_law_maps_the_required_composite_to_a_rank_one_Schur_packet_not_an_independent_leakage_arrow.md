@@ -68,7 +68,7 @@ Eliminating the middle state \(P\) gives the effective \((L,N)\) matrix
 
 \[
 M_{LN}^{\rm eff}
-=-rac1a
+=-\frac1a
 \begin{pmatrix}
 d^2&dy\\
 dy&y^2

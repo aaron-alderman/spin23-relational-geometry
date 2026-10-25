@@ -64,7 +64,7 @@ b_H=b_C=b_{HC}=b.
 The spectrum becomes
 
 \[
-\lambda_{m common}=a+3b,
+\lambda_{\rm common}=a+3b,
 \]
 
 and

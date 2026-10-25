@@ -106,10 +106,10 @@ N_T^{(2)}=0.
 It follows that
 
 \[
-\Pi_{00}^{\rm pole}ig|_{q^2}
+\Pi_{00}^{\rm pole}\big|_{q^2}
 =-{\kappa A\over4\pi^2\epsilon}q^2,
 \qquad
-\Pi_{ii}^{\rm pole}ig|_{q^2}=0\quad(i\perp q),
+\Pi_{ii}^{\rm pole}\big|_{q^2}=0\quad(i\perp q),
 \]
 
 which matches directly to the displayed \(\delta B_{h-p}\) and

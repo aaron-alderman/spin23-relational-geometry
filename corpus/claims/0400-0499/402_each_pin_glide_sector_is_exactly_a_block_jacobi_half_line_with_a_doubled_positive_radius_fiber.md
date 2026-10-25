@@ -82,7 +82,7 @@ After orbit reduction and radial grouping, both reference and defect matrices
 satisfy
 
 \[
-H_{ho\rho'}=0
+H_{\rho\rho'}=0
 \qquad\text{whenever}\qquad
 |\rho-\rho'|>1.
 \]

@@ -118,7 +118,7 @@ Hilbert-space positivity requires
 \qquad s\rho_L(s)\rho_R(s)\ge|\rho_m(s)|^2.
 \]
 
-When the isolated one-generation channel admits a common real phase, (ho_m) can be chosen real and the block lies in (H_2(\mathbb R)_+). If two momentum-dependent phases cannot be aligned, the honest carrier is (H_2(\mathbb C)_+), not (H_2(\mathbb R)_+).
+When the isolated one-generation channel admits a common real phase, (\rho_m) can be chosen real and the block lies in (H_2(\mathbb R)_+). If two momentum-dependent phases cannot be aligned, the honest carrier is (H_2(\mathbb C)_+), not (H_2(\mathbb R)_+).
 
 An isolated electron pole has
 

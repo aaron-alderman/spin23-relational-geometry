@@ -72,11 +72,15 @@ supplies a noncentral complementary channel: 24 marked untwisted norm-four
 vertex operators act on the twisted ground module by explicit, independent
 twelve-qubit Pauli labels with commutator matrix \(K\bmod2\). This closes a
 covariant pre-projection seed for the \(U\times T\to T\) representation map
-while leaving its half-mode lift, absolute OPE normalization and the full
-residual tensor open.
+whose symmetry lift, zero-mode normalization and oscillator partner are closed
+in Waves 7.151–153. [Wave 7.154](frontier_wave7_154_moonshine_cross_sector_griess_product_oracle.md)
+then reconstructs the full residual tensor parametrically and derives this
+page's unit projection. The open gate is now laboratory tomography and
+held-out Norton--Sakuma closure, not the abstract cross-sector product.
 
 ## Corpus links
 
 - [Weight-two sector join](frontier_wave7_147_moonshine_weight2_sector_join_and_2b_trace.md)
 - [Operator-tomography dictionary](frontier_wave7_135_monster_edge_operator_tomography_dictionary.md)
 - [Conway-to-Clifford lift](frontier_wave7_146_leech_co1_to_twelve_qubit_clifford_lift.md)
+- [Full cross-sector Griess product oracle](frontier_wave7_154_moonshine_cross_sector_griess_product_oracle.md)

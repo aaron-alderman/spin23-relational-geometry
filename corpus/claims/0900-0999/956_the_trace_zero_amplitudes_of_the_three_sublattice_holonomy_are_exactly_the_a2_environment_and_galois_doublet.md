@@ -59,12 +59,12 @@ at representation level.
 Use the ordered placement basis \((e_0,e_1,e_2)\).  The cycle and reflection are
 
 \[
-C_{m pl}=
+C_{\rm pl}=
 \begin{pmatrix}
 0&0&1\\1&0&0\\0&1&0
 \end{pmatrix},
 \qquad
-F_{m pl}=
+F_{\rm pl}=
 \begin{pmatrix}
 1&0&0\\0&0&1\\0&1&0
 \end{pmatrix}.
@@ -73,11 +73,11 @@ F_{m pl}=
 They obey
 
 \[
-C_{m pl}^3=I,
+C_{\rm pl}^3=I,
 \qquad
-F_{m pl}^2=I,
+F_{\rm pl}^2=I,
 \qquad
-F_{m pl}C_{m pl}F_{m pl}=C_{m pl}^{-1}.
+F_{\rm pl}C_{\rm pl}F_{\rm pl}=C_{\rm pl}^{-1}.
 \]
 
 The group generated is \(S_3\).

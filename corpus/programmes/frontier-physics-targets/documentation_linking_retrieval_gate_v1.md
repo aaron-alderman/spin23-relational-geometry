@@ -6,7 +6,7 @@
 
 ## Verdict
 
-The gate passes under its declared scope. All **16** governed roots are typed and present; **6,454** inventoried objects are explicitly classified; **21,854** root-closure links and **1,573** canonical claims have zero missing-link or working-copy divergence findings. The governed benchmark passes **30/30** cases at MRR **0.847**. Five additional held-out questions remain discoverable through 15 zero/default/maximum-centrality runs.
+The gate passes under its declared scope. All **16** governed roots are typed and present; **6,549** inventoried objects are explicitly classified; **22,094** root-closure links and **1,573** canonical claims have zero missing-link or working-copy divergence findings. The governed benchmark passes **30/30** cases at MRR **0.917**. Five additional held-out questions remain discoverable through 15 zero/default/maximum-centrality runs.
 
 | Check | Result |
 |---|---:|
@@ -29,7 +29,7 @@ PageRank and graph weight are navigation inputs only. The selector sweep tests g
 
 | Stratum | Cases | Pass | Mean reciprocal rank |
 |---|---:|---:|---:|
-| mathematics | 3 | pass | 0.733 |
+| mathematics | 3 | pass | 0.778 |
 | physics | 3 | pass | 1.000 |
 | experiment | 4 | pass | 1.000 |
 | ordinary_language | 4 | pass | 1.000 |

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "leech-finite-qudit-channel-mixer-v1",
+  "date": "2026-10-25",
+  "input": "leech-explicit-k-matrix-v1",
+  "register": {
+    "primeDimension": 853,
+    "channelsPerChiralBlock": 24,
+    "binaryQubitsPerQuditCeiling": 10,
+    "binaryQubitsPerChiralBlockCeiling": 240,
+    "selectionReason": "853 is the first prime above twice the largest absolute entry 422 of the integral inverse K^-1"
+  },
+  "canonicalMap": {
+    "positionMap": "n maps to W n modulo 853, with W=K^-1",
+    "momentumMap": "m maps to K^T m modulo 853",
+    "symplecticCondition": "W^T K^T=I modulo 853",
+    "interactionEffect": "the 24 K-column cosine labels become the 24 standard basis labels modulo 853"
+  },
+  "compiledCircuit": {
+    "gateAlphabet": ["single-qudit nonzero scale", "two-qudit controlled modular add"],
+    "rowSwaps": 0,
+    "singleQuditScales": 24,
+    "twoQuditShears": 531,
+    "totalQuditLinearGatesPerChiralBlock": 555,
+    "inverseNonzeroEntries": 570,
+    "inverseMaximumCenteredEntry": 422
+  },
+  "established": "an exact finite-register modular implementation of the Leech integral channel basis change and its canonical dual action",
+  "boundary": "This is a digital qudit surrogate. It does not prove convergence of the 853-level truncation to the compact-boson continuum, preserve spatial locality in a particular device, or realize the Leech chiral phase in matter."
+}

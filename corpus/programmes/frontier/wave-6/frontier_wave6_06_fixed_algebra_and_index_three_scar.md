@@ -17,9 +17,9 @@ They retain different amounts of information.
 Let (P) cyclically permute three basis states. Vector averaging gives
 
 [
-E_V=rac13(I+P+P^2)
-=rac13
-egin{pmatrix}
+E_V=\frac13(I+P+P^2)
+=\frac13
+\begin{pmatrix}
 1&1&1\
 1&1&1\
 1&1&1
@@ -32,7 +32,7 @@ For operators (Xin M_3), conjugation averaging gives
 
 [
 E_A(X)
-=rac13sum_{r=0}^2P^rX P^{-r}.
+=\frac13sum_{r=0}^2P^rX P^{-r}.
 ]
 
 Its range is the three-dimensional circulant algebra

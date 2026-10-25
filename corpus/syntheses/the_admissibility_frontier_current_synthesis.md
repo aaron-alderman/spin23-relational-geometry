@@ -581,6 +581,47 @@ dense transformed kinetic matrix with coefficients up to 422. Gate A is now a
 finite hardware optimization problem—sparse vertex operators versus sparse
 channel mixing—not an unspecified topological construction.
 
+The dense choice has itself been compiled into a finite simulator primitive.
+The [finite-qudit Leech mixer](../programmes/frontier/wave-7/frontier_wave7_157_leech_finite_qudit_channel_mixer.md)
+uses 24 prime-dimension-853 registers per chiral block and implements
+\(K^{-1}\bmod853\) with 24 one-register scales and 531 two-register modular
+adds. Exact verification preserves the Weyl pairing and maps the 24 Leech
+interaction labels to \(I_{24}\). This removes the undefined channel-mixer
+box on the digital path. It does not remove the physical limit: convergence
+with rotor cutoff and wire length, survival of the bulk gap and the emergence
+of 24 chiral edge modes remain measurements.
+
+The [wrap-free cutoff audit](../programmes/frontier/wave-7/frontier_wave7_158_leech_wrap_free_rotor_cutoff_ladder.md)
+then prevents a subtler overclaim. Since
+\(\lVert K^{-1}\rVert_\infty=2579\), coefficient-faithful \(p=853\) aliases
+a marked unit-cube output \(2579\mapsto20\). Exact integer action on the
+whole \(N\)-box requires \(p>5158N\): the first sufficient primes are 5167 at
+\(N=1\) and 330131 at \(N=64\). This turns cutoff adequacy into a direct
+calibration measurement and gives the Gate-A continuum extrapolation an
+honest lower-bound ladder.
+
+No-wrap arithmetic still does not guarantee a usable Hamiltonian gap. The
+[clock-locking audit](../programmes/frontier/wave-7/frontier_wave7_159_leech_clock_locking_gap_scaling.md)
+finds \(\Delta_p=2u_p\sin^2(\pi/p)\), so fixed clock coupling loses the gap
+as \(p^{-2}\). Holding it fixed costs
+\(u_p/\Delta_\star=1.35\times10^6\) already at \(N=1\) and
+\(5.52\times10^9\) at \(N=64\). For 24 independent locking channels, the
+exact one-percent thermal threshold is
+\(\beta\Delta_\star=8.47114\), or 1.765 GHz at 10 mK. This rules out the
+naïve fixed-strength clock penalty as the continuum bridge and selects
+rotor-native or multiscale dynamics for the next microscopic attempt.
+
+That selection has a positive first result. The [rotor-native pendulum
+compiler](../programmes/frontier/wave-7/frontier_wave7_160_leech_rotor_native_pendulum_gap.md)
+uses a signed, open momentum cutoff rather than cyclic wrap. With fixed
+\(U=u=1\), its relative-mode gap converges to 0.8784249807 and the \(N=4\)
+value is already within \(1.21\times10^{-7}\) of the \(N=64\) benchmark.
+The 24-channel one-percent thermal target is
+\(\beta E_{\rm unit}=8.86675\), giving a 1.62292 GHz gap at 10 mK. The local
+locking mode therefore survives the cutoff without quadratic rescaling; the
+remaining Gate-A uncertainty has moved to collective propagation, bulk-gap
+stability and chiral-edge scaling.
+
 Nor is the resulting object dynamically static. The [edge dynamics and
 transport witness](../programmes/frontier/wave-7/frontier_wave7_140_monster_edge_dynamics_and_transport_witness.md)
 uses \(H=(2\pi\hbar v/L)(L_0-c/24)\): the Leech parent has 24 states at the
@@ -670,9 +711,54 @@ then supplies a noncentral cross-sector action. Rootlessness proves that the
 marked basis-vector operators compile to independent twelve-qubit Paulis whose
 commutator matrix is exactly \(K\bmod2\). Their covariance under both sourced
 Conway generators is executable. This is a pre-projection twisted-ground
-action; the remaining algebraic unknown is its half-mode lift, absolute
-normalization and completion into the full cross-sector Griess tensor, not the
-existence of a finite operator bridge.
+action. The [\(2B\)-centralizer semidirect compiler](../programmes/frontier/wave-7/frontier_wave7_151_moonshine_2b_centralizer_semidirect_trace_protocol.md)
+now lifts the **symmetry representation** to all 98304 half-mode-excited
+states: \(I_{24}\otimes P_x\) and \(G_{24}\otimes U_C\) obey the required
+semidirect covariance on both sourced Conway generators. Their phase-free
+trace records are \((-8,16,2048)\) and \((1,2,2)\), listing channel trace,
+fixed-Pauli dimension and full-trace magnitude bound. The remaining algebraic
+unknown is more specific: the twisted-Heisenberg contribution and absolute
+normalization in each minimal-vector vertex-operator zero mode, followed by
+completion of the cross-sector Griess tensor.
+
+That first unknown is now closed. The [minimal-vector twisted zero-mode
+compiler](../programmes/frontier/wave-7/frontier_wave7_152_moonshine_minimal_vector_twisted_weight2_zero_mode.md)
+expands the sourced inversion-twisted vertex operator and obtains
+\(O_\alpha=(I-2\alpha(\alpha^TK))\otimes P_{[\alpha]}/8\) on the retained
+98304-state sector. The 24 explicit seeds pass 48 full integral covariance
+checks, and each predicts the spectrum \(\pm7/8,\pm1/8\) and trace moments
+\(0,4608,2424\). A bare-Pauli emulator is rejected immediately because its
+squared trace is 98304 rather than 4608. The remaining finite-algebra task is
+closed by the [300 oscillator-bilinear zero-mode compiler](../programmes/frontier/wave-7/frontier_wave7_153_moonshine_oscillator_bilinear_twisted_zero_modes.md).
+Its anomaly term restores \(o(\omega)=2I\) and \(o(\omega/2)=I\), while 600
+Leech-covariance and 300 self-adjointness checks pass. The whole untwisted
+weight-two action on the twisted block is therefore known parametrically.
+The [cross-sector Griess product oracle](../programmes/frontier/wave-7/frontier_wave7_154_moonshine_cross_sector_griess_product_oracle.md)
+performs the invariant-form transpose and closes \(T\times T\to U\)
+parametrically. It reproduces the unit projection \(\langle t_1,t_2\rangle
+e/3\) and yields a new marked three-point target \(-7/4\) for all 24 seed
+minimal vectors. What remains is physical: stream the oracle into a sparse
+tomography protocol and demand held-out Norton--Sakuma closure on the same
+carrier.
+
+The [blind sparse-tomography protocol](../programmes/frontier/wave-7/frontier_wave7_155_moonshine_cross_sector_sparse_tomography_protocol.md)
+now makes that demand quantitative. It freezes sixteen seed conventions and
+holds eight back, targeting the normalized transition \(-7/8\) against the
+bare-Pauli prediction \(+1\). A 0.02 absolute tolerance with 0.05 family-wise
+failure probability costs 230736 held-out shots. A separate \(1/8\)-versus-zero
+oscillator measurement detects omission of the twisted-vacuum anomaly. This
+is the first cross-sector protocol whose alternatives fail by both magnitude
+and sign rather than by a small Moonshine coefficient.
+
+The same dictionary now produces an exact \(2A\)-\(2B\) provenance stitch.
+For every marked norm-four vector, the two lattice Ising axes have twisted
+spectrum \(0^{47104},(1/2)^{2048},(1/16)^{49152}\). Their Miyamoto
+involutions are \(-P_{[\alpha]}\) and \(+P_{[\alpha]}\) on the twisted block;
+their product is therefore the measured \(2B\) grading. The
+[Ising-spectrum junction](../programmes/frontier/wave-7/frontier_wave7_156_moonshine_norm4_ising_spectrum_2a2b_junction.md)
+turns the class-level statement \((1A,2A,2A,2B)\) into 144 spectral and 24
+operator-product checks. This is the local entrance from the Leech carrier to
+the Norton--Sakuma/affine-\(E_8\) atlas.
 
 This is enough to close the carefully typed existence question. The
 [Monster-is-physics proof certificate](../programmes/frontier/wave-7/frontier_wave7_150_monster_is_physics_proof_certificate.md)

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "moonshine-norm4-ising-spectrum-2a2b-junction-v1",
+  "date": "2026-10-25",
+  "isingAxes": {
+    "formula": "omega_alpha^plusminus=alpha(-1)^2/16 plusminus (e^alpha+e^-alpha)/4",
+    "sourceCondition": "alpha is a Leech vector of squared norm four",
+    "countFromMinimalPairs": 196560,
+    "centralCharge": "1/2"
+  },
+  "twistedZeroMode": {
+    "formula": "A_plusminus=(Q_alpha+I/2)/16 plusminus (I-2Q_alpha)P_[alpha]/32, Q_alpha=alpha alpha^flat",
+    "spectrum": [
+      {"weight":"0","multiplicity":47104},
+      {"weight":"1/2","multiplicity":2048},
+      {"weight":"1/16","multiplicity":49152}
+    ],
+    "trace": 4096,
+    "traceSquare": 704,
+    "traceCube": 268
+  },
+  "miyamotoJunction": {
+    "plusAxisOnTwisted": "tau_plus=-P_[alpha]",
+    "minusAxisOnTwisted": "tau_minus=+P_[alpha]",
+    "productOnTwisted": "tau_plus tau_minus=-I=z",
+    "productOnUntwisted": "tau_plus tau_minus=+I",
+    "monsterClasses": "tau_plus and tau_minus are 2A; z is the 2B orbifold quantum symmetry",
+    "twistedTraceEach2A": 0,
+    "kleinFourType": "(1A,2A,2A,2B)"
+  },
+  "executableScope": {
+    "markedAxes": 48,
+    "fromMinimalSeeds": 24,
+    "spectralChecks": 144,
+    "junctionChecks": 24
+  },
+  "established": "a source-backed and executable first-level Ising spectral decomposition and exact 2A-times-2A-equals-2B junction on the twisted Moonshine sector",
+  "laboratoryBoundary": "the exact VOA identity is not a measured device result; laboratory promotion requires resolving the three spectral weights and verifying the paired involution product on the same carrier",
+  "sources": [
+    "https://arxiv.org/abs/0810.5395",
+    "https://www.math.twcu.ac.jp/~yamauchi/math/phd/myphd.pdf"
+  ]
+}

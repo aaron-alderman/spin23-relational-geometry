@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "leech-clock-locking-gap-scaling-v1",
+  "date": "2026-10-25",
+  "input": "leech-wrap-free-rotor-cutoff-ladder-v1",
+  "hamiltonian": {
+    "formula": "H_lock=sum_i u_p [1-cos(2 pi d_i/p)] for 24 independent relative clock labels d_i",
+    "firstGap": "Delta_p=u_p[1-cos(2 pi/p)]",
+    "unitGapScaling": "u_p/Delta_target=1/[2 sin^2(pi/p)] asymptotic to p^2/(2 pi^2)"
+  },
+  "unitTargetGapLadder": [
+    {"N":1,"p":5167,"unitCouplingGap":7.393545748055017e-7,"couplingPerUnitGap":1352531.0237825538},
+    {"N":2,"p":10321,"unitCouplingGap":1.8530458769526726e-7,"couplingPerUnitGap":5396520.466317307},
+    {"N":4,"p":20639,"unitCouplingGap":4.633961653154834e-8,"couplingPerUnitGap":21579807.40559631},
+    {"N":8,"p":41269,"unitCouplingGap":1.158995765448003e-8,"couplingPerUnitGap":86281592.20352766},
+    {"N":16,"p":82529,"unitCouplingGap":2.8981214096424663e-9,"couplingPerUnitGap":345051106.7869194},
+    {"N":32,"p":165059,"unitCouplingGap":7.245215736527647e-10,"couplingPerUnitGap":1380221150.570268},
+    {"N":64,"p":330131,"unitCouplingGap":1.8111612849384216e-10,"couplingPerUnitGap":5521319433.647233}
+  ],
+  "dynamicRange": {
+    "couplingRatioN64ToN1": 4082.2127822296034,
+    "asymptoticCouplingOverPSquared": 0.05066059182116889,
+    "interpretation": "holding the first locking gap fixed while increasing the wrap-free cutoff requires a quadratic clock-penalty scale"
+  },
+  "thermalCommissioning": {
+    "channels": 24,
+    "maximumAnyChannelUnlockedProbability": 0.01,
+    "exactIndependentPenaltyBetaGap": 8.4711408484,
+    "minimumGapFrequencyGHzAt10mK": 1.765099353981728,
+    "test": "measure the complete relative-label histogram with the mixer off, estimate the probability that any channel has d_i nonzero, and require the preregistered one-percent bound without postselection"
+  },
+  "established": "an exact finite-clock locking spectrum, the quadratic control-scale cost of a fixed gap, and a quantitative thermal commissioning target",
+  "boundary": "This diagnoses the commuting clock-locking layer only. It neither includes rotor kinetic energy nor proves a sine-Gordon mass, a two-dimensional bulk gap, chiral central charge, or convergence to the Leech edge."
+}

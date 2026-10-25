@@ -94,7 +94,7 @@ Exact Weyl symmetry is incompatible with simultaneously fixing
 These scales could arise through spontaneous conformal breaking, but that
 adds a dilaton or a gauge field and reopens the spectrum and anomaly audit.
 
-An exact shift (arphi\mapsto\varphi+c) for the torsion pseudoscalar forbids
+An exact shift (\varphi\mapsto\varphi+c) for the torsion pseudoscalar forbids
 its mass, while the target requires (m_{0^-}^2>0). It also does not act on
 the pure metric Weyl invariant.
 
@@ -109,7 +109,7 @@ non-exact.
 ## The remaining RG condition
 
 Let (C) be the eight-row normal matrix of claim 1636 and
-(eta(g)) the beta vector of the enlarged theory. Radiative invariance of
+(\beta(g)) the beta vector of the enlarged theory. Radiative invariance of
 the target surface requires
 
 \[
@@ -117,7 +117,7 @@ the target surface requires
 \]
 
 at every point claimed to lie on an invariant surface, or at least
-(eta(g_*)=0) at a fixed point. This is stronger than power-counting
+(\beta(g_*)=0) at a fixed point. This is stronger than power-counting
 renormalizability and stronger than BRST invariance.
 
 At the weakly coupled target point, the canonical pseudoscalar determinant

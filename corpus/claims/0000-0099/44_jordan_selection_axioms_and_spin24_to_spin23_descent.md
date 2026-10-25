@@ -371,7 +371,7 @@ Thus the Lorentz quadratic on the rank-two corner is the normal derivative of th
 
 \[
 \frac{\det X_\Delta}{\Delta}
-=\det A-rac{w^\dagger\operatorname{adj}(A)w}{\Delta}.
+=\det A-\frac{w^\dagger\operatorname{adj}(A)w}{\Delta}.
 \]
 
 The real-form step then changes the determinant by the square of the removed imaginary relationship coordinate. This proves a controlled cubic-to-quadratic residue while ruling out exact norm preservation by the real selector. See [the polarized cubic residue theorem](../0700-0799/701_polarizing_the_rank_three_jordan_cubic_along_the_discarded_face_gives_the_spin23_rank_two_determinant.md).

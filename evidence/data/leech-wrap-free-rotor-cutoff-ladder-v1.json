@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "leech-wrap-free-rotor-cutoff-ladder-v1",
+  "date": "2026-10-25",
+  "input": "leech-explicit-k-matrix-v1",
+  "normBounds": {
+    "inverseMaximumRowL1": 2579,
+    "inverseMinimumRowL1": 41,
+    "kMaximumRowL1": 39,
+    "positionCondition": "p > 2 N ||K^-1||_infinity = 5158 N",
+    "momentumCondition": "p > 2 M ||K||_infinity = 78 M",
+    "jointCondition": "p > 2 max(2579 N,39 M)"
+  },
+  "cutoffLadder": [
+    {"positionCutoffN":1,"minimumPrimeDimension":5167,"binaryQubitsPerQudit":13,"binaryQubitsPer24ChannelBlock":312,"linearGateCount":556},
+    {"positionCutoffN":2,"minimumPrimeDimension":10321,"binaryQubitsPerQudit":14,"binaryQubitsPer24ChannelBlock":336,"linearGateCount":556},
+    {"positionCutoffN":4,"minimumPrimeDimension":20639,"binaryQubitsPerQudit":15,"binaryQubitsPer24ChannelBlock":360,"linearGateCount":556},
+    {"positionCutoffN":8,"minimumPrimeDimension":41269,"binaryQubitsPerQudit":16,"binaryQubitsPer24ChannelBlock":384,"linearGateCount":556},
+    {"positionCutoffN":16,"minimumPrimeDimension":82529,"binaryQubitsPerQudit":17,"binaryQubitsPer24ChannelBlock":408,"linearGateCount":556},
+    {"positionCutoffN":32,"minimumPrimeDimension":165059,"binaryQubitsPerQudit":18,"binaryQubitsPer24ChannelBlock":432,"linearGateCount":556},
+    {"positionCutoffN":64,"minimumPrimeDimension":330131,"binaryQubitsPerQudit":19,"binaryQubitsPer24ChannelBlock":456,"linearGateCount":556}
+  ],
+  "aliasWitness": {
+    "inverseRowOneBased": 4,
+    "unitCubeInput": [-1,1,-1,1,1,1,1,1,-1,-1,-1,1,-1,-1,-1,-1,1,1,1,1,1,-1,1,-1],
+    "integerOutputOnMarkedRow": 2579,
+    "centeredOutputModulo853": 20,
+    "meaning": "The coefficient-faithful p=853 mixer aliases even a unit-cube input; p=5167 is the first prime satisfying the worst-case wrap-free N=1 bound."
+  },
+  "protocol": {
+    "calibration": "prepare the marked sign vector and measure output channel four before any interacting evolution",
+    "pass": "the decoded centered output equals 2579 at p=5167 or larger, and every preregistered random vector in the N-box agrees with integer K^-1 multiplication",
+    "fail": "any modular alias, canonical-pairing failure, or disagreement with the integer oracle"
+  },
+  "established": "a sufficient exact no-alias dimension ladder for the bounded 24-channel rotor subspace and a concrete falsifier of the smaller coefficient-only truncation",
+  "boundary": "No-wrap compilation is not continuum convergence. It controls basis-change aliasing only; energy-cutoff error, Trotter error, bulk-gap stability and chiral-edge scaling remain separate measurements."
+}

@@ -210,7 +210,7 @@ can exist when (U_R^3=I): it would imply (K_R^3=I), contradicting the exact orde
 The correct target equation must instead be one of the typed forms
 
 \[
-F_{m tr}U_R=G_RF_{m tr}
+F_{\rm tr}U_R=G_RF_{\rm tr}
 
 \]
 

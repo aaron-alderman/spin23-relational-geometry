@@ -69,9 +69,9 @@ form.
 Construct a single map
 
 \[
-T:\Lambda^2_0(V_{m selector}^*)
+T:\Lambda^2_0(V_{\rm selector}^*)
 \longrightarrow
-U_{m channel}\oplus Z_{m channel}
+U_{\rm channel}\oplus Z_{\rm channel}
 \]
 
 that satisfies all of
@@ -79,7 +79,7 @@ that satisfies all of
 \[
 T\kappa_{\mathcal I}=\kappa_{2+3}T,
 \qquad
-Q_{m channel}(T\alpha,T\beta)=Q_{\rm wedge}(\alpha,\beta),
+Q_{\rm channel}(T\alpha,T\beta)=Q_{\rm wedge}(\alpha,\beta),
 \]
 
 and intertwines at least one independently observed selector generator with

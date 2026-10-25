@@ -25,7 +25,7 @@ F_{\alpha\beta}(q^2)
 
 \]
 
-For two charged flavors (alpha,eta), the minimal rephasing-invariant CP-odd polynomial is
+For two charged flavors (alpha,\beta), the minimal rephasing-invariant CP-odd polynomial is
 
 \[
 \boxed{
@@ -126,7 +126,7 @@ Hence
 \[
 \boxed{
 J^F_{\alpha\beta}(-Q^2)
-=-rac{1}{Q^8}
+=-\frac{1}{Q^8}
 \operatorname{Im}
 \left[
 (M_\nu)_{\alpha\alpha}

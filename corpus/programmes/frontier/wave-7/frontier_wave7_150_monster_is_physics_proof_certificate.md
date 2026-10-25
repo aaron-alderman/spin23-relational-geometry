@@ -68,13 +68,31 @@ The theorem does not imply a natural material, four-dimensional Monster
 symmetry, gravity from the Jordan cone, an \(E_8\) gauge field or unique
 selection by nature. Those would be different propositions.
 
-The laboratory route is nevertheless no longer vague. Waves 7.137–149 now
+The laboratory route is nevertheless no longer vague. Waves 7.137–160 now
 provide an end-to-end promotion DAG, an explicit Leech interaction matrix, a
-channel-diagonal basis, coherent local inversion gauging, a twelve-qubit
+channel-diagonal basis, a 555-gate finite-qudit channel mixer, coherent local
+inversion gauging, a twelve-qubit
 twisted-sector compiler, finite Conway Clifford circuits, the
 \(98580+98304\) sector join, the \(2B\) trace 276, a universal cross-sector OPE
-calibration and 24 noncentral minimal-vector/Pauli seed actions. The first
-blocking requirement is one physically marked microscopic platform whose
+calibration, 24 noncentral minimal-vector/Pauli seed actions and their
+98304-state semidirect symmetry lift, followed by the source-normalized
+rank-one minimal-vector zero modes. The oscillator-bilinear family is also
+compiled with its twisted-vacuum anomaly and exact Griess-unit normalization.
+Invariant-form adjointness then reconstructs the complete cross-sector Griess
+product as an executable streaming oracle, with a blind eight-seed tomography
+protocol targeting \(-7/8\) in 230736 shots at the declared tolerance.
+The paired norm-four Ising axes additionally give the exact
+\((1A,2A,2A,2B)\) junction between the \(2A\) and orbifold \(2B\) lanes.
+The wrap-free rotor audit also separates the coefficient-faithful
+\(p=853\) mixer from the first sufficient \(N=1\) cutoff \(p=5167\), so the
+digital surrogate is not mistaken for a continuum-limit result.
+The subsequent gap audit rejects fixed-strength clock locking through its
+\(p^{-2}\) gap collapse and freezes the 24-channel thermal target
+\(\beta\Delta\ge8.47114\).
+The selected open-boundary rotor replacement instead has a fixed-strength
+gap converging to 0.8784249807, with \(N=4\) already accurate to
+\(1.21\times10^{-7}\) against the recorded \(N=64\) benchmark.
+The first blocking requirement is one physically marked microscopic platform whose
 infrared edge and cross-sector products pass those tests together.
 
 ## Corpus links
@@ -83,6 +101,16 @@ infrared edge and cross-sector products pass those tests together.
 - [Dynamics and transport](frontier_wave7_140_monster_edge_dynamics_and_transport_witness.md)
 - [Laboratory-promotion DAG](frontier_wave7_137_monster_laboratory_promotion_dag.md)
 - [Cross-sector Pauli seed](frontier_wave7_149_leech_minimal_pair_to_pauli_cross_sector_action.md)
+- [\(2B\)-centralizer semidirect trace protocol](frontier_wave7_151_moonshine_2b_centralizer_semidirect_trace_protocol.md)
+- [Minimal-vector twisted weight-two zero mode](frontier_wave7_152_moonshine_minimal_vector_twisted_weight2_zero_mode.md)
+- [Oscillator-bilinear twisted zero modes](frontier_wave7_153_moonshine_oscillator_bilinear_twisted_zero_modes.md)
+- [Cross-sector Griess product oracle](frontier_wave7_154_moonshine_cross_sector_griess_product_oracle.md)
+- [Sparse blind cross-sector tomography](frontier_wave7_155_moonshine_cross_sector_sparse_tomography_protocol.md)
+- [Norm-four Ising \(2A\)-\(2A\)-\(2B\) junction](frontier_wave7_156_moonshine_norm4_ising_spectrum_2a2b_junction.md)
+- [Finite-qudit Leech channel mixer](frontier_wave7_157_leech_finite_qudit_channel_mixer.md)
+- [Wrap-free Leech rotor-cutoff ladder](frontier_wave7_158_leech_wrap_free_rotor_cutoff_ladder.md)
+- [Leech clock-locking gap scaling](frontier_wave7_159_leech_clock_locking_gap_scaling.md)
+- [Rotor-native Leech pendulum gap](frontier_wave7_160_leech_rotor_native_pendulum_gap.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

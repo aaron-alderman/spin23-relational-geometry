@@ -86,7 +86,7 @@ background.
 ## Consequences for the four fixed-surface branches
 
 1. **Sparse critical surface:** rejected at one loop because
-   (eta_{C^2}) and (eta_{R^2}) are nonzero.
+   (\beta_{C^2}) and (\beta_{R^2}) are nonzero.
 2. **Accidental gravitational cancellation:** explicitly absent; the
    Einstein and pseudoscalar contributions have the same sign in the frozen
    convention.

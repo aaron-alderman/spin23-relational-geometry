@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "moonshine-cross-sector-griess-product-oracle-v1",
+  "date": "2026-10-25",
+  "spaces": {
+    "untwisted": "U=Sym^2(H) plus the 98280 norm-four antipodal Leech pairs, dimension 98580",
+    "twisted": "T=H tensor S, where dim(H)=24 and dim(S)=4096, dimension 98304",
+    "grading": "U times U to U, U times T to T, and T times T to U"
+  },
+  "invariantForms": {
+    "oscillator": "<h(-1)k(-1),a(-1)b(-1)>=(h,a)(k,b)+(h,b)(k,a)",
+    "minimalPairs": "<u_alpha,u_beta>=2 delta_[alpha],[beta]",
+    "twisted": "<h tensor s,k tensor t>=(h,k)<s,t>",
+    "griessUnitNorm": 3
+  },
+  "productOracle": {
+    "inputs": "t1=h tensor s and t2=k tensor t",
+    "oscillatorComponent": "<s,t>[(1/2)h(-1)k(-1)+(h,k)omega/8]",
+    "minimalComponent": "sum over 98280 antipodal norm-four pairs of [(R_alpha h,k)<P_[alpha]s,t>/16] u_alpha",
+    "channelNumerator": "R_alpha=I-2 alpha alpha^flat",
+    "definingAdjointness": "<u,t1 circle t2>_U=<o(u)t1,t2>_T"
+  },
+  "certifiedConsequences": {
+    "symmetry": "t1 circle t2=t2 circle t1",
+    "unitProjection": "Proj_e(t1 circle t2)=<t1,t2> e/3",
+    "oscillatorSameProbeNormSquared": "13/16 for a unit channel vector and unit ground state",
+    "oscillatorOrthogonalChannelNormSquared": "1/4 for orthonormal channels and the same unit ground state",
+    "markedSelfAlignedMinimalCoefficient": "-7/4 for each alpha tensor s, alpha tensor P_[alpha]s against u_alpha",
+    "markedSeedChecks": 24
+  },
+  "established": "an exact parametric reconstruction of the full T times T to U Griess product from the complete U action and invariant forms",
+  "laboratoryBoundary": "the formula is an exact Moonshine-VOA product oracle, not yet a hardware realization; a device must measure held-out three-point coefficients, seed transitions and Norton-Sakuma closures on the same carrier",
+  "implementationBoundary": "the 98280-term minimal sum is defined exactly but should be streamed from a minimal-vector enumerator rather than materialized as a dense tensor",
+  "sources": [
+    "https://arxiv.org/abs/math/0402315",
+    "https://www.math.twcu.ac.jp/~yamauchi/math/phd/myphd.pdf",
+    "https://www.kurims.kyoto-u.ac.jp/EMIS/journals/CMUC/pdf/cmuc1002/griess.pdf"
+  ]
+}
