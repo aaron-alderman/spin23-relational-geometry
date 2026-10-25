@@ -4,6 +4,7 @@
 **Status:** foundational research programme; generative conjecture, not an established physical theory  
 **Companion:** [Physics contact and research docket](admissibility_01_physics_contact_and_research_docket.md)  
 **First worked probe:** [Casimir as an invariant of admitted transformations](admissibility_02_casimir_as_first_generative_probe.md)  
+**Current explanatory spine:** [The locally invariant carrier and its mirror face](admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md)
 **External collision audit:** [Meaning-Inertia as an admissibility ontology](admissibility_03_meaning_inertia_collision_audit.md)  
 **Corpus boundary:** [Comprehensive thesis and critical audit](../../syntheses/grand-synthesis/aarons_spin23_research_thesis.md)
 
@@ -30,6 +31,56 @@ becoming
 \]
 
 This is a strong conjecture. At present the corpus supports the methodological importance of admission gates much more strongly than it supports their ontological priority. The programme exists to close or expose that gap.
+
+## The first generative closure: invariant relation before spacetime
+
+The strongest current answer to “what can admissibility generate?” begins
+with a living carrier \(V\), an admitted perspective change \(M\), and a
+comparison \(\Omega\) required to survive that change:
+
+\[
+M^T\Omega M=\Omega.
+\]
+
+The corpus calls \(\Omega\) the **locally invariant carrier**. Strictly,
+\(V\) carries changing states while \(\Omega\) carries their invariant
+comparison. The intuitive name is retained because the identity of the
+construction lives in the relation rather than in any one coordinate
+description.
+
+The equation generates a mirror face rather than merely constraining one
+matrix:
+
+\[
+\Omega M=M^{-T}\Omega.
+\]
+
+Direct and dual perspectives are therefore joined by the invariant relation.
+Passing to pairwise relations separates the invariant line from a
+five-dimensional primitive remainder:
+
+\[
+\Lambda^2V^*=\mathbb R\Omega\oplus\Lambda^2_0V^*.
+\]
+
+The wedge pairing on that remainder has signature \((2,3)\), yielding the
+exact \(Sp(4,\mathbb R)\cong Spin_0(2,3)\) relation-space geometry. This is a
+genuine generative step: the higher signature is derived from the admitted
+comparison and its exterior relations. It does not yet derive physical
+spacetime, a unique connection, an action or a detector.
+
+Local preservation, carried preservation and global return remain distinct:
+
+\[
+M_x^T\Omega_xM_x=\Omega_x,\qquad
+\nabla\Omega=0,\qquad
+H_\gamma^T\Omega H_\gamma=\Omega
+\quad\text{with possibly }H_\gamma\ne I.
+\]
+
+This distinction lets the same invariant relation support nontrivial
+holonomy, memory and topology rather than freezing the system into global
+uniformity.
 
 ## What “admissible” must mean
 

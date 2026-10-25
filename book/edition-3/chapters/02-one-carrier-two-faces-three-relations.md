@@ -9,6 +9,27 @@ _Why three is meaningful_
 ![Infographic showing one carrier, two faces and the first closed consistency loop at three relations](../../../docs/edition-3/assets/one-two-three.svg)
 
 _One holds, two compare, three can fail to close._
+
+## Two exact meanings of “face”
+
+The corpus now uses “face” at two related but nonidentical levels. In a
+positive two-by-two response, the two diagonal entries are two admitted
+response faces joined by an off-diagonal channel. In symplectic transport, a
+thing acted on by \(M\) and its dual acted on by \(M^{-T}\) are mirror faces
+joined by the locally invariant carrier \(\Omega\):
+
+\[
+\Omega M=M^{-T}\Omega.
+\]
+
+The first meaning concerns two components inside one response table. The
+second concerns direct and contragredient perspectives on one transforming
+carrier. They may be connected only when a typed construction identifies the
+response faces with the direct/dual pair. Shared language alone does not make
+that identification.
+
+> **Canonical development →** [The locally invariant carrier and its mirror face](../../../corpus/programmes/admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md)
+
 <a id="the-smallest-relational-closure"></a>
 ## The smallest relational closure
 

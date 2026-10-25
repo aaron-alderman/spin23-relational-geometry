@@ -9,11 +9,13 @@ The governing explanatory order is:
 \[
 \boxed{\text{Jordan admission and composition}}
 \longrightarrow
-\boxed{\text{typed admissibility region}}
+\boxed{\text{living carrier and admissible relations}}
 \longrightarrow
-\boxed{\text{Lie transformation and transport}}
+\boxed{\text{locally invariant carrier}}
 \longrightarrow
-\boxed{\text{dynamics, selection and records}}.
+\boxed{\text{Lie transport of thing and mirror face}}
+\longrightarrow
+\boxed{\text{holonomy, dynamics, selection and records}}.
 \]
 
 The arrows do not claim that one mathematical structure temporally manufactures the next. They specify the order of explanation and the type of question assigned to each layer. Once the carrier and types are declared, the operative relation is balanced rather than one-way: Jordan composition constrains admissible Lie transport, while transport tests which Jordan relations remain dynamically stable.
@@ -38,11 +40,15 @@ The [explanatory standard](EXPLANATORY_STANDARD.md) governs each arrow: begin wi
 
 1. **Jordan asks what can coexist.** Positive states, responses, observables, compositions and eliminations delimit a cone or domain of mutually admissible possibilities.
 2. **The typed middle is the live object.** A carrier, its allowed compositions, its histories, its selectors and its records must remain jointly realizable. This compatibility region—not a group name—is the centre of the programme.
-3. **Lie asks how admitted possibilities can be transported.** Infinitesimal transformations and their closure describe motion or relation that preserves declared structure. They do not decide which states are admissible, which carrier nature realizes or which member of an orbit is selected.
-4. **Dynamics lives inside, on or across the boundary.** An action, flow or update proposes histories. The admissibility gates determine whether those histories preserve positivity, type, causality, stability, global consistency and observable records.
-5. **Detectors return the construction to evidence.** A detector folds histories into records and thereby reveals some distinctions while quotienting away others.
+3. **The locally invariant carrier keeps perspectives comparable.** In the central symplectic instance, \(M^T\Omega M=\Omega\) joins the direct action \(M\) to its mirror face \(M^{-T}\). Pointwise invariance, compatible transport \(\nabla\Omega=0\), and globally trivial return are three different claims.
+4. **Lie asks how admitted possibilities can be transported.** Infinitesimal transformations and their closure describe motion or relation that preserves the locally declared comparison. They do not decide which states are admissible, which carrier nature realizes or which member of an orbit is selected.
+5. **Dynamics lives inside, on or across the boundary.** An action, flow or update proposes histories. The admissibility gates determine whether those histories preserve positivity, type, causality, stability, global consistency and observable records.
+6. **Detectors return the construction to evidence.** A detector folds histories into records and thereby reveals some distinctions while quotienting away others.
 
-6. **Ternary structure records mediated influence.** A Jordan triple, ternary operator product or typed three-way compatibility law may encode how two terms relate through a third context. This is a mathematical form of mediated dependence, not permission to rename a cubic expression as a new physical force.
+7. **Ternary structure records mediated influence.** A Jordan triple, ternary operator product or typed three-way compatibility law may encode how two terms relate through a third context. This is a mathematical form of mediated dependence, not permission to rename a cubic expression as a new physical force.
+
+The canonical development of this vocabulary is [The locally invariant
+carrier and its mirror face](programmes/admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md).
 
 ## Originating language and the third-order arc
 

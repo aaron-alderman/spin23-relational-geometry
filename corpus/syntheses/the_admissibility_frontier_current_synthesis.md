@@ -31,6 +31,59 @@ A Lie symmetry can describe how admitted objects transform, but it cannot by its
 
 This loop, rather than a symmetry name, is the spine of the programme.
 
+## The locally invariant carrier
+
+The typed middle now has a sharper name and an exact central model. Let a
+living four-real-dimensional carrier \(V\) transform by \(M\). A locally
+invariant carrier \(\Omega\) is the comparison that survives every admitted
+local change of perspective:
+
+\[
+M^T\Omega M=\Omega.
+\]
+
+The equation exposes two inseparable faces. The thing transforms by \(M\);
+its mirror face transforms by \(M^{-T}\); and
+
+\[
+\Omega M=M^{-T}\Omega
+\]
+
+keeps them mutually intelligible. The phrase “locally invariant carrier” is
+deliberately intuitive: strictly \(V\) carries the changing objects, while
+\(\Omega\) carries their persistent comparison.
+
+Local invariance is not global immobility. Pointwise preservation,
+compatible transport and global return are separate:
+
+\[
+M_x^T\Omega_xM_x=\Omega_x,\qquad
+\nabla\Omega=0,\qquad
+H_\gamma^T\Omega H_\gamma=\Omega
+\ \text{with possibly }H_\gamma\ne I.
+\]
+
+This is the natural home of holonomy and memory. A path may preserve the
+comparison at every step and still return the attached state, frame or
+polarization changed.
+
+The higher geometry is generated rather than inserted. Pairwise relations in
+\(V\) form the six-dimensional space \(\Lambda^2V^*\). The invariant
+\(\Omega\)-line separates off, leaving the five-dimensional primitive
+remainder
+
+\[
+\Lambda^2V^*=\mathbb R\Omega\oplus\Lambda^2_0V^*.
+\]
+
+The wedge pairing on that remainder has signature \((2,3)\), and the
+symplectic action becomes the orthogonal action underlying
+\(Sp(4,\mathbb R)\cong Spin_0(2,3)\). The five-dimensional space is therefore
+a higher **relation space**, not automatically a set of extra physical
+coordinates. The [canonical locally invariant carrier
+spine](../programmes/admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md)
+states the construction and its physical firewall.
+
 ## Why Jordan and Lie must be balanced
 
 The algebraic correction follows from the experimental one. Jordan structure asks which states, responses and observables can coexist and compose while retaining positivity. Lie structure asks how those admitted objects can transform, circulate and preserve relations. The first constrains the domain of motion; the second tests which admitted relations survive motion. Jordan therefore has explanatory priority, while Lie has dynamical necessity:
@@ -38,9 +91,11 @@ The algebraic correction follows from the experimental one. Jordan structure ask
 \[
 \boxed{\text{Jordan: admission and composition}}
 \quad\rightleftarrows\quad
-\boxed{\text{typed carrier and admissibility boundary}}
+\boxed{\text{living carrier and admissibility boundary}}
 \quad\rightleftarrows\quad
-\boxed{\text{Lie: transformation and transport}}.
+\boxed{\text{locally invariant carrier}}
+\quad\rightleftarrows\quad
+\boxed{\text{Lie: thing/mirror transport}}.
 \]
 
 A Lie-only view is incomplete because it asks transformation to provide its own state space, selector, observable and detector. A Jordan-only view is also incomplete: a cone without time, transport or records is stable but sterile. The physical question lives in their balance: **what dynamics can inhabit an admitted domain without destroying the very distinctions by which that dynamics could be known?**
@@ -59,7 +114,12 @@ Sp(4,\mathbb R)\cong Spin_0(2,3).
 
 In this ordering, \(Spin_0(2,3)\) is not the source from which reality is supposed to descend. It is a recovered symmetry of an already admitted positive-response geometry—a valuable pole and exact completion, but not the prior container of physics.
 
-The explanatory order is therefore **Jordan admission and composition → typed admissibility region → Lie transformation and transport → dynamics, selection and records**. Spin(2,3) is not the starting claim; it is one exact completion recovered after the carrier, positivity and compositional structure have been declared.
+The explanatory order is therefore **Jordan admission and composition →
+living carrier and admissible relations → locally invariant carrier → Lie
+transport of thing and mirror face → holonomy, dynamics, selection and
+records**. Spin(2,3) is not the starting claim; it is the higher relation
+geometry recovered after the carrier, comparison law, positivity and
+compositional structure have been declared.
 
 ## Dynamics is the motion of the boundary
 
@@ -97,6 +157,13 @@ Every result below reports two statuses separately: **mathematical closure** ask
 ### 1. An exact response-to-symmetry hinge
 
 Positive two-channel response supplies the cone \(H_2(\mathbb R)_+\). Schur/Feshbach elimination polarizes into its Jordan triple. Tits–Kantor–Koecher closure supplies \(\mathfrak{sp}(4,\mathbb R)\), and the global construction reaches \(Spin_0(2,3)\). Executable certificates establish the finite-dimensional hinge and test whether a proposed carrier reaches the full ten generators rather than a suggestive lower-rank subalgebra.
+
+The same hinge now has a carrier-level reading. On the four-real-dimensional
+symplectic module, \(M^T\Omega M=\Omega\) pairs every direct transformation
+with its mirror action. On the primitive exterior square, the invariant
+\(\Omega\)-direction separates from five relation coordinates carrying the
+signature-\((2,3)\) wedge form. This closes the origin of the orthogonal
+envelope mathematically while leaving its physical realization open.
 
 ### 2. Selection is not an afterthought
 
