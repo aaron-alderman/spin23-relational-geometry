@@ -13,7 +13,8 @@
       "centralizerProjectionKernelOrder": 8,
       "centralParitySubgroupOrder": 2,
       "resolution": "Q_46AB is the order-eight projection kernel modulo the central involution already contained in <h>",
-      "groupStructure": "not yet determined"
+      "groupStructure": "C2^2",
+      "structureReason": "the order-eight kernel lies in the extraspecial 2^(1+24) subgroup, whose quotient by its center <z> is elementary abelian"
     },
     "46CD": {
       "involutionRail": "2A",
@@ -30,13 +31,15 @@
   "traceTarget": {
     "family": "Z(g,z*k;tau) for k representing a coset of C_M(h)/<h>",
     "newNonidentityCosetsTotalBeforeIdentifications": 4,
-    "orientationTest": "compare each normalized trace with its conjugate under a normalizer element sending h to h^5",
+    "orientationTest": "compare each normalized trace with its fifth-power cyclotomic Galois transport between the distinct 46A/46B or 46C/46D Monster classes",
+    "transportType": "Galois/power-map transport, not conjugation by a Monster normalizer element",
     "success": "at least one normalized auxiliary trace splits a 46A/46B or 46C/46D power-five pair",
     "failure": "all auxiliary traces are identified by centralizer conjugacy, modular covariance or power-five transport"
   },
   "boundaries": [
-    "quotient order does not determine the order-four group structure",
+    "the order-four type uses the extraspecial quotient E/<z>, not order alone",
     "distinct cosets need not give distinct trace functions",
+    "fifth power exchanges distinct Monster classes and therefore cannot be implemented by inner conjugation in the Monster",
     "the order-four and order-two carriers are not identified with Rule-60 deck data or genus-two spin characteristics",
     "failure exhausts scalar genus-one centralizer insertions but not vector-valued or genus-two refinements"
   ]

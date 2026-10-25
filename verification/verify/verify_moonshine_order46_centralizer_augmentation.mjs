@@ -29,12 +29,17 @@ assert.equal(cd.babyMonsterImageCentralizerOrder / cd.babyMonsterCyclicSubgroupO
 assert.equal(ab.centralizerProjectionKernelOrder, joined.centralizerLiftResolution.twoB.centralizerProjectionKernelOrder);
 
 // The augmentation starts only after the cyclic trace has been proved
-// orientation-blind and must not silently assign the unknown order-four type.
+// orientation-blind.  The order-eight kernel lies in the extraspecial
+// 2-group, so quotienting by its central involution gives a subgroup of the
+// elementary-abelian E/Z and fixes the order-four type as C2^2.
 assert.equal(ladder.cyclicOrientationNoGo.orientationRecovered, false);
-assert.equal(ab.groupStructure, "not yet determined");
+assert.equal(ab.groupStructure, "C2^2");
 assert.equal(cd.groupStructure, "C2 by its order");
+assert(ab.structureReason.includes("elementary abelian"));
 assert.equal(augmentation.traceTarget.newNonidentityCosetsTotalBeforeIdentifications, 4);
+assert(augmentation.traceTarget.transportType.includes("not conjugation"));
 assert(augmentation.boundaries.some((entry) => entry.includes("need not give distinct trace functions")));
+assert(augmentation.boundaries.some((entry) => entry.includes("cannot be implemented by inner conjugation")));
 assert(augmentation.boundaries.some((entry) => entry.includes("not vector-valued or genus-two")));
 
 console.log(JSON.stringify({
