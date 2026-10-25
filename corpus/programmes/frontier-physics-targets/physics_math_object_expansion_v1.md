@@ -13,11 +13,11 @@ This is the adversarial expansion below the normalized topic register. It does n
 | Explicitly mapped in-scope objects | 1653 |
 | Typed exclusions | 1242 |
 | Unmapped scientific objects requiring scope review | 0 |
-| Weak semantic routes requiring independent review | 250 |
-| Object × topic × applicable-family cells | 51562 |
-| Unique inherited claim cells | 51562 |
+| Weak semantic routes requiring independent review | 220 |
+| Object × topic × applicable-family cells | 51762 |
+| Unique inherited claim cells | 51762 |
 | Authored local-exception resolutions | 0 |
-| Objects with multiple topic-specific dispositions for one family | 8598 |
+| Objects with multiple topic-specific dispositions for one family | 8617 |
 | Deduplicated claim-family clusters | 445 |
 
 ## Reading the result
@@ -26,4 +26,4 @@ Each inherited cell is one object-to-topic claim family with exactly one disposi
 
 ## Current decision
 
-The topic layer is complete. The object layer is open because 0 objects lack a route and 250 mapped objects still have weak semantic routes requiring independent review.
+The topic layer is complete. The object layer is open because 0 objects lack a route and 220 mapped objects still have weak semantic routes requiring independent review.
