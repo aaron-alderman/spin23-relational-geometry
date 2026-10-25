@@ -45,21 +45,21 @@
             "type": "number",
             "minimum": 0,
             "maximum": 0.6,
-            "default": 0.3,
+            "default": 0.2,
             "description": "Declared contribution of graph context to final navigation order."
           },
           "claimWeight": {
             "type": "number",
             "minimum": 0,
             "maximum": 0.35,
-            "default": 0.17,
+            "default": 0.2,
             "description": "Declared contribution of the best exact claim passage."
           },
           "semanticWeight": {
             "type": "number",
             "minimum": 0,
             "maximum": 0.2,
-            "default": 0.08,
+            "default": 0.2,
             "description": "Declared contribution of confidence-gated corpus-local co-occurrence and exact cross-reference passage bridges; no opaque embedding model."
           }
         },
@@ -114,19 +114,19 @@
             "type": "number",
             "minimum": 0,
             "maximum": 0.6,
-            "default": 0.3
+            "default": 0.2
           },
           "claimWeight": {
             "type": "number",
             "minimum": 0,
             "maximum": 0.35,
-            "default": 0.17
+            "default": 0.2
           },
           "semanticWeight": {
             "type": "number",
             "minimum": 0,
             "maximum": 0.2,
-            "default": 0.08
+            "default": 0.2
           }
         },
         "required": [
@@ -186,7 +186,7 @@
             "type": "number",
             "minimum": 0,
             "maximum": 0.6,
-            "default": 0.3
+            "default": 0.2
           },
           "graphWeights": {
             "type": "array",
@@ -198,9 +198,9 @@
               "maximum": 0.6
             },
             "default": [
-              0.15,
-              0.3,
-              0.45
+              0.1,
+              0.2,
+              0.35
             ]
           },
           "maxSources": {
@@ -427,19 +427,19 @@
             "type": "number",
             "minimum": 0,
             "maximum": 0.6,
-            "default": 0.3
+            "default": 0.2
           },
           "claimWeight": {
             "type": "number",
             "minimum": 0,
             "maximum": 0.35,
-            "default": 0.17
+            "default": 0.2
           },
           "semanticWeight": {
             "type": "number",
             "minimum": 0,
             "maximum": 0.2,
-            "default": 0.08
+            "default": 0.2
           },
           "adaptiveWeight": {
             "type": "number",
@@ -508,18 +508,18 @@
   "members": [
     {
       "path": "tooling/search/search_corpus.mjs",
-      "bytes": 36169,
-      "sha256": "17f18f183792f2100dd6b1e1f0270e256b1a12b0c652e313cba6a07a0fc506b9"
+      "bytes": 39310,
+      "sha256": "a26c24066791ebf353b8c50155e39cd3ce83e1654579cd7f0494e0185c1ad853"
     },
     {
       "path": "tooling/search/context_hub.mjs",
-      "bytes": 15187,
-      "sha256": "13b406c9144d7cee2502e4eb8a0a7a20a661baeee15add87a3b70b2ddf5d92cb"
+      "bytes": 15317,
+      "sha256": "ddade46b6c8700ae06a95a3fa51089b326a1d7965b83fb0303998755d7231151"
     },
     {
       "path": "tooling/search/context_sweep.mjs",
-      "bytes": 9159,
-      "sha256": "2285f450d614a59e3291f78116ac8a990dba9dca46c3152804c9d19f5596d33c"
+      "bytes": 9157,
+      "sha256": "773eb15dad0839f0e23f37e631948bed97fd1533cedaf3f8c2078afbde6818ed"
     },
     {
       "path": "tooling/search/answer_stability.mjs",
@@ -538,13 +538,13 @@
     },
     {
       "path": "tooling/search/adaptive_context.mjs",
-      "bytes": 5724,
-      "sha256": "e6d12dc294b97f3621d68da8becb82d272a659bceea394ed51fbbc22fd0625ba"
+      "bytes": 5854,
+      "sha256": "cf6622786c11d6e3ec837e904e526b757427ed40800b9311513cacf7897adf82"
     },
     {
       "path": "tooling/search/corpus_search_mcp.mjs",
-      "bytes": 23484,
-      "sha256": "23422aac62a36511c55c33eeaef6a5d24166d2b3e7d39d2e4c035f7c29206935"
+      "bytes": 23956,
+      "sha256": "b1edd29d0ecd5de6adf3cdde6e38670ce2841c8e6fd57ab78b1d3fd8a4798e3a"
     },
     {
       "path": "tooling/search/benchmark_cases.json",
@@ -553,8 +553,8 @@
     },
     {
       "path": "tooling/search/benchmark_baseline_v1.json",
-      "bytes": 46251,
-      "sha256": "de651f5f41ad5245e28fb384deedc487242671493c56a5775e0e221df86d1093"
+      "bytes": 46638,
+      "sha256": "a513308cf4574374b4971767d9978e13682b5b057a52335cd1d20394d8f34911"
     },
     {
       "path": "tooling/search/run_benchmark.mjs",
@@ -563,8 +563,8 @@
     },
     {
       "path": "tooling/search/retrieval_intelligence_benchmark.mjs",
-      "bytes": 9923,
-      "sha256": "4bf89d935364afda24f2089e46f0820fd905f63457a290fcb52d475787cb772d"
+      "bytes": 10171,
+      "sha256": "317b6648d79ad28f9d1af472aad2bd43a9ebb3b47eb50c6d76e6ca7e680e2867"
     },
     {
       "path": "tooling/search/run_belief_evaluation.mjs",
@@ -573,8 +573,8 @@
     },
     {
       "path": "tooling/search/MCP.md",
-      "bytes": 9368,
-      "sha256": "a8d0190c0d657a5fba0be60f9ac7383286d278523a621dedac05bae8d9c61041"
+      "bytes": 9863,
+      "sha256": "69bb8c86990b2b267adb82c1b6307549706715db72a3fd633acf0c849d0e72bc"
     },
     {
       "path": "tooling/search/BELIEF_LOOP.md",
@@ -583,13 +583,13 @@
     },
     {
       "path": "tests/repository/corpus_search.test.mjs",
-      "bytes": 4447,
-      "sha256": "577ee2b5522bb36813fc55d99e4a046019b49adb2ff3e9048759caeadbd82d27"
+      "bytes": 5447,
+      "sha256": "454265d9e7edbe95eab8c0383f4cdcbc044c8cdc4e1af0e93832732c2077fe35"
     },
     {
       "path": "tests/repository/corpus_search_mcp.test.mjs",
-      "bytes": 9277,
-      "sha256": "9d8cb76f01fddf2272fa23ba4ed63433d9a41dfdbee43e97d89f3b1ed557e02d"
+      "bytes": 9276,
+      "sha256": "1933ebea726c79bd48aae990e950c9dda2c96753251490895b9e9e24b3e8454f"
     },
     {
       "path": "tests/repository/corpus_answer_stability.test.mjs",
@@ -651,5 +651,5 @@
     "admit through the protected lifecycle",
     "verify all nine operations through a fresh MCP connection"
   ],
-  "candidateSha256": "c038afc641fd8faf848ee654400001473dcf7991b88858a79c3f81f5b5b2c061"
+  "candidateSha256": "3b9237fe76626e23cfdf55490ee573535e5da3abe7f5f78be4056f75205a3441"
 }
