@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The Monster order-46 power map supplies an exact class-level junction from the order-23 channel to both the 2A fermionic and 2B Leech branches; the unresolved bridge is an explicit commuting-pair trace and its genus-two sewing, not the existence of a common finite-group carrier.",
+  "status": "exact class-level junction and cross-corpus carrier audit; twisted-twining evaluation and sewn intertwiner open",
+  "order46Junction": {
+    "rootOrder": 46,
+    "order23Power": 2,
+    "involutionPower": 23,
+    "order23Classes": ["23A", "23B"],
+    "leechRootClasses": ["46A", "46B"],
+    "leechInvolutionClass": "2B",
+    "fermionicRootClasses": ["46C", "46D"],
+    "fermionicInvolutionClass": "2A",
+    "allRootClassesAbove23AB": ["46A", "46B", "46C", "46D"],
+    "commutationReason": "h^2 and h^23 are powers of the same order-46 element h",
+    "source": "https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M",
+    "boundary": "the ATLAS power map establishes class-level existence; it does not assert every fixed representative of 23AB has all four kinds of order-46 root"
+  },
+  "generalizedMoonshineTarget": {
+    "commutingPair": "g=h^2 of order 23 and z=h^23 of order 2",
+    "observable": "Z(g,z;tau)=Tr_{V^natural_g}(z q^(L_0-1))",
+    "fourCases": ["46A", "46B", "46C", "46D"],
+    "requiredComparisons": {
+      "46A_46B": "compare the 2B insertion with the Leech orbifold and pair-Gram seam",
+      "46C_46D": "compare the 2A insertion with Majorana-Weyl x fermionic Baby Monster",
+      "common": "test degeneration/orientation-forgetting against the verified common scalar T_23"
+    },
+    "boundary": "the ordinary trace T_h is not by itself the two-variable twisted-twining trace"
+  },
+  "joinedCarriers": {
+    "order23TwistChargeLabels": 529,
+    "order23NonzeroLabels": 528,
+    "order23ProjectiveDirections": 24,
+    "order23ProjectiveOrbitSizes": [2, 22],
+    "inversePairedGeneratorPowers": 11,
+    "identityPlusInversePairs": 12,
+    "conditionalSo3DefectRank": 12,
+    "genusX1_25": 12,
+    "genusTwoSpinStructures": 16,
+    "evenSpinStructures": 10,
+    "oddSpinStructures": 6,
+    "evenCarrierSumZeroDimension": 9,
+    "warning": "the nearby 12 and 10 counts belong to different carriers; no labelwise bijection is implied"
+  },
+  "admissibilityLosses": [
+    {
+      "source": "oriented cyclotomic primes and inverse nonprincipal ideals",
+      "quotient": "ordinary theta series",
+      "lost": "orientation and inverse ideal-class choice"
+    },
+    {
+      "source": "23A and 23B oriented generators",
+      "quotient": "common scalar T_23",
+      "lost": "generator orientation"
+    },
+    {
+      "source": "F_23^2 minus zero",
+      "quotient": "P^1(F_23)",
+      "lost": "common scale and central sign; Dic_11 descends to D_11"
+    },
+    {
+      "source": "22 nonzero charges",
+      "quotient": "untwisted genus-one Fourier projection",
+      "lost": "individual nonzero charge; only charged versus neutral remains"
+    },
+    {
+      "source": "ten even spin-sector amplitudes",
+      "quotient": "bosonization sum",
+      "lost": "determinant/anomaly line needed for chi5"
+    },
+    {
+      "source": "chi5 with character",
+      "quotient": "chi10=chi5^2",
+      "lost": "sign character and oriented seam"
+    }
+  ],
+  "programmeLayers": [
+    "finite update",
+    "group symmetry",
+    "typed state space",
+    "graded observable",
+    "defect and sewing composition",
+    "denominator and Hecke integrity law"
+  ],
+  "openGates": [
+    "Evaluate the four order-46 commuting-pair functions Z(h^2,h^23;tau) with oriented class labels and modular multipliers.",
+    "Match the 46A/B pair to the 2B Leech orbifold and the 46C/D pair to the 2A Majorana-Weyl x Baby-Monster decomposition.",
+    "Construct the genus-two sewn vector and compare its determinant/anomaly line with the ten-even-characteristic carrier and chi5.",
+    "Determine whether the sewn off-diagonal modulus supplies the missing H_2(R) relation coordinate.",
+    "Only after the carrier map exists, ask for Hamiltonian, locality and detector laws."
+  ],
+  "forbiddenPromotions": [
+    "A common order-46 root does not identify 2A fermion parity with the Rule-60 deck bit.",
+    "The finite C2/B2 adjacency does not give a Monster action on real Spin_0(2,3).",
+    "The equality of two counts 12 does not identify defect objects with modular-curve differentials.",
+    "A chiral generalized-moonshine trace is not a four-dimensional real-time dynamics."
+  ]
+}
