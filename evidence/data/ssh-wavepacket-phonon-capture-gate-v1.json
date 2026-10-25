@@ -1,0 +1,1144 @@
+{
+  "schema": "admissibility.ssh-wavepacket-phonon-capture-gate/1",
+  "date": "2026-10-25",
+  "targets": [
+    "OT-036"
+  ],
+  "parent": "AZ-121",
+  "authority": "normalized finite wavepacket and one-phonon benchmark on the declared AZ-055 graph; not a material capture rate",
+  "parameters": {
+    "rail": "trivial",
+    "t1": 1,
+    "t2": 0.45,
+    "localEnergy": 0,
+    "localCoupling": 0.42,
+    "contactCoupling": 0.52,
+    "cells": 4,
+    "bondDerivativeBenchmark": 0.2,
+    "matterEnergyMin": -1.55,
+    "matterEnergyMax": -0.25,
+    "packetEnergy": -0.808396372627451,
+    "packetSigma": 0.12,
+    "packetCentreSite": -30,
+    "totalTime": 60,
+    "timeStep": 0.02,
+    "boundEnergy": -2.008396372627451
+  },
+  "normalization": {
+    "matterRule": "energy-normalized scattering amplitudes are multiplied by sqrt(dE) before entering the finite normalized packet",
+    "phononRule": "each displaced cluster bond contributes coherently with its mode phase and acoustic strain factor",
+    "interactionRule": "the same declared benchmark derivative multiplies every displaced cluster bond",
+    "initialNorm": 0.9999999999999998
+  },
+  "convergence": {
+    "coarse": {
+      "matterBins": 32,
+      "phononSites": 80,
+      "dE": 0.040625,
+      "initial": {
+        "norm": 1.0000000000000002,
+        "energy": -0.8083972345798208,
+        "captured": 0,
+        "conditionalMeanPhononEnergy": 0
+      },
+      "final": {
+        "norm": 0.9999999989930777,
+        "energy": -0.8083972336680036,
+        "captured": 0.001117347530122748,
+        "conditionalMeanPhononEnergy": 1.2199980022047092
+      },
+      "emittedSpectrum": [
+        {
+          "omegaMin": 0,
+          "omegaMax": 0.08333333333333333,
+          "population": 2.0751715540447262e-8
+        },
+        {
+          "omegaMin": 0.08333333333333333,
+          "omegaMax": 0.16666666666666666,
+          "population": 5.483565220300674e-8
+        },
+        {
+          "omegaMin": 0.16666666666666666,
+          "omegaMax": 0.25,
+          "population": 9.326696000758939e-8
+        },
+        {
+          "omegaMin": 0.25,
+          "omegaMax": 0.3333333333333333,
+          "population": 1.4299015376770798e-7
+        },
+        {
+          "omegaMin": 0.3333333333333333,
+          "omegaMax": 0.41666666666666663,
+          "population": 2.5823841604970457e-7
+        },
+        {
+          "omegaMin": 0.41666666666666663,
+          "omegaMax": 0.5,
+          "population": 4.5184558056232894e-7
+        },
+        {
+          "omegaMin": 0.5,
+          "omegaMax": 0.5833333333333333,
+          "population": 6.690968219499014e-7
+        },
+        {
+          "omegaMin": 0.5833333333333333,
+          "omegaMax": 0.6666666666666666,
+          "population": 0.0000010781003204996596
+        },
+        {
+          "omegaMin": 0.6666666666666666,
+          "omegaMax": 0.75,
+          "population": 0.0000020269107955769356
+        },
+        {
+          "omegaMin": 0.75,
+          "omegaMax": 0.8333333333333333,
+          "population": 0.0000026277707705848014
+        },
+        {
+          "omegaMin": 0.8333333333333333,
+          "omegaMax": 0.9166666666666666,
+          "population": 0.00002076131218832007
+        },
+        {
+          "omegaMin": 0.9166666666666666,
+          "omegaMax": 1,
+          "population": 0.00007162376840850196
+        },
+        {
+          "omegaMin": 1,
+          "omegaMax": 1.0833333333333333,
+          "population": 0.00015204933507422514
+        },
+        {
+          "omegaMin": 1.0833333333333333,
+          "omegaMax": 1.1666666666666665,
+          "population": 0.00016809344521356872
+        },
+        {
+          "omegaMin": 1.1666666666666665,
+          "omegaMax": 1.25,
+          "population": 0.0003018578580907131
+        },
+        {
+          "omegaMin": 1.25,
+          "omegaMax": 1.3333333333333333,
+          "population": 0.00009054486306699791
+        },
+        {
+          "omegaMin": 1.3333333333333333,
+          "omegaMax": 1.4166666666666665,
+          "population": 0.0001888378675815677
+        },
+        {
+          "omegaMin": 1.4166666666666665,
+          "omegaMax": 1.5,
+          "population": 0.00004114687306462934
+        },
+        {
+          "omegaMin": 1.5,
+          "omegaMax": 1.5833333333333333,
+          "population": 0.000039110941925362045
+        },
+        {
+          "omegaMin": 1.5833333333333333,
+          "omegaMax": 1.6666666666666665,
+          "population": 0.000012014428351011959
+        },
+        {
+          "omegaMin": 1.6666666666666665,
+          "omegaMax": 1.75,
+          "population": 0.000006648935363208313
+        },
+        {
+          "omegaMin": 1.75,
+          "omegaMax": 1.8333333333333333,
+          "population": 0.000004279395041672737
+        },
+        {
+          "omegaMin": 1.8333333333333333,
+          "omegaMax": 1.9166666666666665,
+          "population": 0.000004628701491485814
+        },
+        {
+          "omegaMin": 1.9166666666666665,
+          "omegaMax": 2,
+          "population": 0.000008325998074741265
+        }
+      ],
+      "reversed": {
+        "norm": 0.9999999979861552,
+        "energy": -0.8083972327561887,
+        "captured": 5.045858039940728e-21,
+        "conditionalMeanPhononEnergy": 0.4717596286598703
+      },
+      "reverseAmplitudeError": 1.3616236440972456e-9,
+      "maximumCaptured": 0.001117347530122748,
+      "maximumCaptureTime": 60,
+      "checkpoints": [
+        {
+          "time": 60,
+          "norm": 0.9999999989930777,
+          "energy": -0.8083972336680036,
+          "captured": 0.001117347530122748,
+          "conditionalMeanPhononEnergy": 1.2199980022047092
+        },
+        {
+          "time": 58,
+          "norm": 0.9999999990266419,
+          "energy": -0.808397233698395,
+          "captured": 0.0011162445576145957,
+          "conditionalMeanPhononEnergy": 1.2204296779285773
+        },
+        {
+          "time": 56,
+          "norm": 0.9999999990602062,
+          "energy": -0.808397233728792,
+          "captured": 0.0011152970078395243,
+          "conditionalMeanPhononEnergy": 1.221168001300364
+        },
+        {
+          "time": 54,
+          "norm": 0.9999999990937704,
+          "energy": -0.8083972337591817,
+          "captured": 0.001112560569496901,
+          "conditionalMeanPhononEnergy": 1.2207394401972909
+        },
+        {
+          "time": 52,
+          "norm": 0.9999999991273337,
+          "energy": -0.8083972337895771,
+          "captured": 0.0011091423609561224,
+          "conditionalMeanPhononEnergy": 1.2197235515465799
+        },
+        {
+          "time": 50,
+          "norm": 0.9999999991608979,
+          "energy": -0.8083972338199726,
+          "captured": 0.0011077022340696284,
+          "conditionalMeanPhononEnergy": 1.2198257115777238
+        },
+        {
+          "time": 48,
+          "norm": 0.9999999991944625,
+          "energy": -0.8083972338503617,
+          "captured": 0.0011074127477130554,
+          "conditionalMeanPhononEnergy": 1.2204208291777583
+        },
+        {
+          "time": 46,
+          "norm": 0.9999999992280261,
+          "energy": -0.8083972338807607,
+          "captured": 0.0011063712896169197,
+          "conditionalMeanPhononEnergy": 1.2201974109845026
+        },
+        {
+          "time": 44,
+          "norm": 0.9999999992615903,
+          "energy": -0.8083972339111549,
+          "captured": 0.0011050365063563377,
+          "conditionalMeanPhononEnergy": 1.219578465182707
+        },
+        {
+          "time": 38,
+          "norm": 0.9999999993622825,
+          "energy": -0.8083972340023345,
+          "captured": 0.0011042569346288505,
+          "conditionalMeanPhononEnergy": 1.219893031511017
+        },
+        {
+          "time": 42,
+          "norm": 0.9999999992951538,
+          "energy": -0.808397233941546,
+          "captured": 0.0011042097979560082,
+          "conditionalMeanPhononEnergy": 1.2192543110076461
+        },
+        {
+          "time": 40,
+          "norm": 0.9999999993287183,
+          "energy": -0.80839723397194,
+          "captured": 0.0011040746394741668,
+          "conditionalMeanPhononEnergy": 1.219436777460813
+        },
+        {
+          "time": 36,
+          "norm": 0.999999999395847,
+          "energy": -0.8083972340327311,
+          "captured": 0.00110368476809134,
+          "conditionalMeanPhononEnergy": 1.2198573512119433
+        },
+        {
+          "time": 34,
+          "norm": 0.9999999994294119,
+          "energy": -0.8083972340631216,
+          "captured": 0.0011022380102020878,
+          "conditionalMeanPhononEnergy": 1.2192072449124463
+        },
+        {
+          "time": 30,
+          "norm": 0.9999999994965397,
+          "energy": -0.8083972341239124,
+          "captured": 0.001101644947989197,
+          "conditionalMeanPhononEnergy": 1.2192330758916388
+        },
+        {
+          "time": 28,
+          "norm": 0.9999999995301038,
+          "energy": -0.8083972341543053,
+          "captured": 0.0011015336501376946,
+          "conditionalMeanPhononEnergy": 1.2191945538594005
+        },
+        {
+          "time": 32,
+          "norm": 0.9999999994629752,
+          "energy": -0.8083972340935173,
+          "captured": 0.0011013799429017315,
+          "conditionalMeanPhononEnergy": 1.2189023153528304
+        },
+        {
+          "time": 26,
+          "norm": 0.9999999995636675,
+          "energy": -0.8083972341846993,
+          "captured": 0.0011011310585428802,
+          "conditionalMeanPhononEnergy": 1.2198832032927853
+        },
+        {
+          "time": 24,
+          "norm": 0.9999999995972316,
+          "energy": -0.8083972342150939,
+          "captured": 0.0010962769290310162,
+          "conditionalMeanPhononEnergy": 1.2221260762296116
+        },
+        {
+          "time": 22,
+          "norm": 0.9999999996307962,
+          "energy": -0.808397234245486,
+          "captured": 0.001071996479551632,
+          "conditionalMeanPhononEnergy": 1.223505784631631
+        },
+        {
+          "time": 20,
+          "norm": 0.9999999996643606,
+          "energy": -0.8083972342758827,
+          "captured": 0.0010220937234425335,
+          "conditionalMeanPhononEnergy": 1.2320874253961256
+        },
+        {
+          "time": 18,
+          "norm": 0.9999999996979246,
+          "energy": -0.8083972343062761,
+          "captured": 0.0009416103998918952,
+          "conditionalMeanPhononEnergy": 1.2574537001679797
+        },
+        {
+          "time": 16,
+          "norm": 0.9999999997314889,
+          "energy": -0.8083972343366719,
+          "captured": 0.0007995257303306076,
+          "conditionalMeanPhononEnergy": 1.2789257539705874
+        },
+        {
+          "time": 14,
+          "norm": 0.999999999765053,
+          "energy": -0.8083972343670669,
+          "captured": 0.0006033832299629031,
+          "conditionalMeanPhononEnergy": 1.2767589318640031
+        },
+        {
+          "time": 12,
+          "norm": 0.9999999997986172,
+          "energy": -0.8083972343974553,
+          "captured": 0.00042959759309548796,
+          "conditionalMeanPhononEnergy": 1.2858454780939559
+        },
+        {
+          "time": 10,
+          "norm": 0.9999999998321802,
+          "energy": -0.8083972344278505,
+          "captured": 0.0003098068900305459,
+          "conditionalMeanPhononEnergy": 1.3328499353195065
+        },
+        {
+          "time": 8,
+          "norm": 0.9999999998657445,
+          "energy": -0.8083972344582478,
+          "captured": 0.0002147224434110758,
+          "conditionalMeanPhononEnergy": 1.339847715413342
+        },
+        {
+          "time": 6,
+          "norm": 0.9999999998993085,
+          "energy": -0.8083972344886419,
+          "captured": 0.0001487998138596628,
+          "conditionalMeanPhononEnergy": 1.305493299938484
+        },
+        {
+          "time": 4,
+          "norm": 0.9999999999328724,
+          "energy": -0.8083972345190349,
+          "captured": 0.00011191293578737829,
+          "conditionalMeanPhononEnergy": 1.3781457340046073
+        },
+        {
+          "time": 2,
+          "norm": 0.9999999999664365,
+          "energy": -0.8083972345494267,
+          "captured": 0.00005203617470301692,
+          "conditionalMeanPhononEnergy": 1.4870608080183132
+        },
+        {
+          "time": 0,
+          "norm": 1.0000000000000002,
+          "energy": -0.8083972345798208,
+          "captured": 0,
+          "conditionalMeanPhononEnergy": 0
+        }
+      ]
+    },
+    "fine": {
+      "matterBins": 64,
+      "phononSites": 160,
+      "dE": 0.0203125,
+      "initial": {
+        "norm": 0.9999999999999998,
+        "energy": -0.8083973002080703,
+        "captured": 0,
+        "conditionalMeanPhononEnergy": 0
+      },
+      "final": {
+        "norm": 0.9999999989930662,
+        "energy": -0.8083972992962386,
+        "captured": 0.0010920943262243672,
+        "conditionalMeanPhononEnergy": 1.218531634917952
+      },
+      "emittedSpectrum": [
+        {
+          "omegaMin": 0,
+          "omegaMax": 0.08333333333333333,
+          "population": 1.5268665098112794e-8
+        },
+        {
+          "omegaMin": 0.08333333333333333,
+          "omegaMax": 0.16666666666666666,
+          "population": 4.243797918495586e-8
+        },
+        {
+          "omegaMin": 0.16666666666666666,
+          "omegaMax": 0.25,
+          "population": 8.143188404063884e-8
+        },
+        {
+          "omegaMin": 0.25,
+          "omegaMax": 0.3333333333333333,
+          "population": 1.3957150649562516e-7
+        },
+        {
+          "omegaMin": 0.3333333333333333,
+          "omegaMax": 0.41666666666666663,
+          "population": 2.298680293836601e-7
+        },
+        {
+          "omegaMin": 0.41666666666666663,
+          "omegaMax": 0.5,
+          "population": 3.7204672458510604e-7
+        },
+        {
+          "omegaMin": 0.5,
+          "omegaMax": 0.5833333333333333,
+          "population": 0.0000010491644556610482
+        },
+        {
+          "omegaMin": 0.5833333333333333,
+          "omegaMax": 0.6666666666666666,
+          "population": 0.000001342911695635702
+        },
+        {
+          "omegaMin": 0.6666666666666666,
+          "omegaMax": 0.75,
+          "population": 0.0000020703483876967157
+        },
+        {
+          "omegaMin": 0.75,
+          "omegaMax": 0.8333333333333333,
+          "population": 0.000002151934585740567
+        },
+        {
+          "omegaMin": 0.8333333333333333,
+          "omegaMax": 0.9166666666666666,
+          "population": 0.000014381102166005568
+        },
+        {
+          "omegaMin": 0.9166666666666666,
+          "omegaMax": 1,
+          "population": 0.00005361201409265838
+        },
+        {
+          "omegaMin": 1,
+          "omegaMax": 1.0833333333333333,
+          "population": 0.00020970262776467253
+        },
+        {
+          "omegaMin": 1.0833333333333333,
+          "omegaMax": 1.1666666666666665,
+          "population": 0.00018624087112231825
+        },
+        {
+          "omegaMin": 1.1666666666666665,
+          "omegaMax": 1.25,
+          "population": 0.00022437768003178224
+        },
+        {
+          "omegaMin": 1.25,
+          "omegaMax": 1.3333333333333333,
+          "population": 0.00014973489305506477
+        },
+        {
+          "omegaMin": 1.3333333333333333,
+          "omegaMax": 1.4166666666666665,
+          "population": 0.00011015743812120652
+        },
+        {
+          "omegaMin": 1.4166666666666665,
+          "omegaMax": 1.5,
+          "population": 0.00006709449009946477
+        },
+        {
+          "omegaMin": 1.5,
+          "omegaMax": 1.5833333333333333,
+          "population": 0.00002888673251901625
+        },
+        {
+          "omegaMin": 1.5833333333333333,
+          "omegaMax": 1.6666666666666665,
+          "population": 0.00001367022561264922
+        },
+        {
+          "omegaMin": 1.6666666666666665,
+          "omegaMax": 1.75,
+          "population": 0.0000067011060976170886
+        },
+        {
+          "omegaMin": 1.75,
+          "omegaMax": 1.8333333333333333,
+          "population": 0.000005912953271926634
+        },
+        {
+          "omegaMin": 1.8333333333333333,
+          "omegaMax": 1.9166666666666665,
+          "population": 0.000005128602020202371
+        },
+        {
+          "omegaMin": 1.9166666666666665,
+          "omegaMax": 2,
+          "population": 0.000008998606336260801
+        }
+      ],
+      "reversed": {
+        "norm": 0.9999999979861335,
+        "energy": -0.808397298384431,
+        "captured": 5.118089932717797e-21,
+        "conditionalMeanPhononEnergy": 0.46869263189716
+      },
+      "reverseAmplitudeError": 1.361647387094965e-9,
+      "maximumCaptured": 0.0010921492681237187,
+      "maximumCaptureTime": 32,
+      "checkpoints": [
+        {
+          "time": 32,
+          "norm": 0.9999999994629689,
+          "energy": -0.8083972997217622,
+          "captured": 0.0010921492681237187,
+          "conditionalMeanPhononEnergy": 1.218597854855043
+        },
+        {
+          "time": 54,
+          "norm": 0.9999999990937607,
+          "energy": -0.8083972993874201,
+          "captured": 0.0010921308123140229,
+          "conditionalMeanPhononEnergy": 1.2185615921808293
+        },
+        {
+          "time": 34,
+          "norm": 0.9999999994294044,
+          "energy": -0.8083972996913656,
+          "captured": 0.0010921238613954623,
+          "conditionalMeanPhononEnergy": 1.2185647985209023
+        },
+        {
+          "time": 44,
+          "norm": 0.999999999261582,
+          "energy": -0.8083972995393898,
+          "captured": 0.0010921213254438482,
+          "conditionalMeanPhononEnergy": 1.2185596816808189
+        },
+        {
+          "time": 52,
+          "norm": 0.9999999991273248,
+          "energy": -0.808397299417822,
+          "captured": 0.0010921143604735418,
+          "conditionalMeanPhononEnergy": 1.2185513071595548
+        },
+        {
+          "time": 46,
+          "norm": 0.9999999992280183,
+          "energy": -0.8083972995090042,
+          "captured": 0.001092109477896669,
+          "conditionalMeanPhononEnergy": 1.2185503392127814
+        },
+        {
+          "time": 42,
+          "norm": 0.9999999992951462,
+          "energy": -0.8083972995697897,
+          "captured": 0.0010921021140392283,
+          "conditionalMeanPhononEnergy": 1.218546734140446
+        },
+        {
+          "time": 36,
+          "norm": 0.9999999993958391,
+          "energy": -0.8083972996609684,
+          "captured": 0.001092102106837461,
+          "conditionalMeanPhononEnergy": 1.2185477386169554
+        },
+        {
+          "time": 56,
+          "norm": 0.9999999990601952,
+          "energy": -0.8083972993570272,
+          "captured": 0.0010920993312669742,
+          "conditionalMeanPhononEnergy": 1.2185376712432185
+        },
+        {
+          "time": 60,
+          "norm": 0.9999999989930662,
+          "energy": -0.8083972992962386,
+          "captured": 0.0010920943262243672,
+          "conditionalMeanPhononEnergy": 1.218531634917952
+        },
+        {
+          "time": 38,
+          "norm": 0.9999999993622753,
+          "energy": -0.8083972996305815,
+          "captured": 0.0010920756261170934,
+          "conditionalMeanPhononEnergy": 1.218528411710797
+        },
+        {
+          "time": 48,
+          "norm": 0.999999999194453,
+          "energy": -0.8083972994786078,
+          "captured": 0.0010920743071228924,
+          "conditionalMeanPhononEnergy": 1.2185244364602728
+        },
+        {
+          "time": 40,
+          "norm": 0.9999999993287106,
+          "energy": -0.8083972996001828,
+          "captured": 0.0010920718879546397,
+          "conditionalMeanPhononEnergy": 1.2185256026993032
+        },
+        {
+          "time": 50,
+          "norm": 0.9999999991608883,
+          "energy": -0.8083972994482126,
+          "captured": 0.0010920717287345714,
+          "conditionalMeanPhononEnergy": 1.218521901573675
+        },
+        {
+          "time": 58,
+          "norm": 0.9999999990266307,
+          "energy": -0.8083972993266367,
+          "captured": 0.0010920690991323718,
+          "conditionalMeanPhononEnergy": 1.2185149200455023
+        },
+        {
+          "time": 30,
+          "norm": 0.9999999994965338,
+          "energy": -0.8083972997521609,
+          "captured": 0.0010918204456017995,
+          "conditionalMeanPhononEnergy": 1.2184646177114165
+        },
+        {
+          "time": 28,
+          "norm": 0.9999999995300977,
+          "energy": -0.8083972997825513,
+          "captured": 0.0010909744039948903,
+          "conditionalMeanPhononEnergy": 1.2183908459431865
+        },
+        {
+          "time": 26,
+          "norm": 0.9999999995636611,
+          "energy": -0.8083972998129517,
+          "captured": 0.001090409334999949,
+          "conditionalMeanPhononEnergy": 1.2202960712483912
+        },
+        {
+          "time": 24,
+          "norm": 0.9999999995972264,
+          "energy": -0.8083972998433416,
+          "captured": 0.0010840483644137526,
+          "conditionalMeanPhononEnergy": 1.2236373553038538
+        },
+        {
+          "time": 22,
+          "norm": 0.9999999996307911,
+          "energy": -0.8083972998737319,
+          "captured": 0.001056379054884431,
+          "conditionalMeanPhononEnergy": 1.225004604749298
+        },
+        {
+          "time": 20,
+          "norm": 0.9999999996643552,
+          "energy": -0.8083972999041292,
+          "captured": 0.0010039097697496788,
+          "conditionalMeanPhononEnergy": 1.2334425839442036
+        },
+        {
+          "time": 18,
+          "norm": 0.9999999996979199,
+          "energy": -0.8083972999345239,
+          "captured": 0.0009239406518049759,
+          "conditionalMeanPhononEnergy": 1.2594585207768032
+        },
+        {
+          "time": 16,
+          "norm": 0.999999999731484,
+          "energy": -0.8083972999649199,
+          "captured": 0.0007850988142827639,
+          "conditionalMeanPhononEnergy": 1.2813372606890905
+        },
+        {
+          "time": 14,
+          "norm": 0.9999999997650479,
+          "energy": -0.8083972999953103,
+          "captured": 0.0005939150106216217,
+          "conditionalMeanPhononEnergy": 1.278375329763625
+        },
+        {
+          "time": 12,
+          "norm": 0.9999999997986132,
+          "energy": -0.8083973000257028,
+          "captured": 0.0004264148897485042,
+          "conditionalMeanPhononEnergy": 1.2867384032099385
+        },
+        {
+          "time": 10,
+          "norm": 0.9999999998321771,
+          "energy": -0.8083973000561027,
+          "captured": 0.00031302829901166154,
+          "conditionalMeanPhononEnergy": 1.333348370139146
+        },
+        {
+          "time": 8,
+          "norm": 0.9999999998657416,
+          "energy": -0.8083973000864948,
+          "captured": 0.00022310988429726427,
+          "conditionalMeanPhononEnergy": 1.3416695730158827
+        },
+        {
+          "time": 6,
+          "norm": 0.9999999998993062,
+          "energy": -0.8083973001168883,
+          "captured": 0.00016042820639071507,
+          "conditionalMeanPhononEnergy": 1.3182891726913202
+        },
+        {
+          "time": 4,
+          "norm": 0.9999999999328706,
+          "energy": -0.8083973001472796,
+          "captured": 0.0001223176412181873,
+          "conditionalMeanPhononEnergy": 1.3946430397828031
+        },
+        {
+          "time": 2,
+          "norm": 0.9999999999664352,
+          "energy": -0.8083973001776755,
+          "captured": 0.000056135776187921266,
+          "conditionalMeanPhononEnergy": 1.4971091307070874
+        },
+        {
+          "time": 0,
+          "norm": 0.9999999999999998,
+          "energy": -0.8083973002080703,
+          "captured": 0,
+          "conditionalMeanPhononEnergy": 0
+        }
+      ]
+    },
+    "refined": {
+      "matterBins": 96,
+      "phononSites": 240,
+      "dE": 0.013541666666666667,
+      "initial": {
+        "norm": 1.0000000000000002,
+        "energy": -0.8083973129709435,
+        "captured": 0,
+        "conditionalMeanPhononEnergy": 0
+      },
+      "final": {
+        "norm": 0.9999999989930647,
+        "energy": -0.808397312059115,
+        "captured": 0.0010892760898951886,
+        "conditionalMeanPhononEnergy": 1.218216195211858
+      },
+      "emittedSpectrum": [
+        {
+          "omegaMin": 0,
+          "omegaMax": 0.08333333333333333,
+          "population": 1.3452665226000645e-8
+        },
+        {
+          "omegaMin": 0.08333333333333333,
+          "omegaMax": 0.16666666666666666,
+          "population": 3.980927081395335e-8
+        },
+        {
+          "omegaMin": 0.16666666666666666,
+          "omegaMax": 0.25,
+          "population": 7.776039126018136e-8
+        },
+        {
+          "omegaMin": 0.25,
+          "omegaMax": 0.3333333333333333,
+          "population": 1.3415838578127558e-7
+        },
+        {
+          "omegaMin": 0.3333333333333333,
+          "omegaMax": 0.41666666666666663,
+          "population": 3.215911026125154e-7
+        },
+        {
+          "omegaMin": 0.41666666666666663,
+          "omegaMax": 0.5,
+          "population": 4.1864648363385133e-7
+        },
+        {
+          "omegaMin": 0.5,
+          "omegaMax": 0.5833333333333333,
+          "population": 6.887269478004752e-7
+        },
+        {
+          "omegaMin": 0.5833333333333333,
+          "omegaMax": 0.6666666666666666,
+          "population": 0.0000011826325175015153
+        },
+        {
+          "omegaMin": 0.6666666666666666,
+          "omegaMax": 0.75,
+          "population": 0.0000026657738056215927
+        },
+        {
+          "omegaMin": 0.75,
+          "omegaMax": 0.8333333333333333,
+          "population": 0.000002187326354564605
+        },
+        {
+          "omegaMin": 0.8333333333333333,
+          "omegaMax": 0.9166666666666666,
+          "population": 0.000012291529547952346
+        },
+        {
+          "omegaMin": 0.9166666666666666,
+          "omegaMax": 1,
+          "population": 0.00004898161690709826
+        },
+        {
+          "omegaMin": 1,
+          "omegaMax": 1.0833333333333333,
+          "population": 0.0001722386307671689
+        },
+        {
+          "omegaMin": 1.0833333333333333,
+          "omegaMax": 1.1666666666666665,
+          "population": 0.0002447730484542167
+        },
+        {
+          "omegaMin": 1.1666666666666665,
+          "omegaMax": 1.25,
+          "population": 0.00019968896838158692
+        },
+        {
+          "omegaMin": 1.25,
+          "omegaMax": 1.3333333333333333,
+          "population": 0.00013623991125312517
+        },
+        {
+          "omegaMin": 1.3333333333333333,
+          "omegaMax": 1.4166666666666665,
+          "population": 0.000126039503658807
+        },
+        {
+          "omegaMin": 1.4166666666666665,
+          "omegaMax": 1.5,
+          "population": 0.00006390535194229683
+        },
+        {
+          "omegaMin": 1.5,
+          "omegaMax": 1.5833333333333333,
+          "population": 0.00003603232995430548
+        },
+        {
+          "omegaMin": 1.5833333333333333,
+          "omegaMax": 1.6666666666666665,
+          "population": 0.000014288864028693873
+        },
+        {
+          "omegaMin": 1.6666666666666665,
+          "omegaMax": 1.75,
+          "population": 0.0000067962437277232596
+        },
+        {
+          "omegaMin": 1.75,
+          "omegaMax": 1.8333333333333333,
+          "population": 0.00000562216704473679
+        },
+        {
+          "omegaMin": 1.8333333333333333,
+          "omegaMax": 1.9166666666666665,
+          "population": 0.000005261426233810436
+        },
+        {
+          "omegaMin": 1.9166666666666665,
+          "omegaMax": 2,
+          "population": 0.000009386620068851318
+        }
+      ],
+      "reversed": {
+        "norm": 0.9999999979861319,
+        "energy": -0.8083973111473318,
+        "captured": 5.126502313839884e-21,
+        "conditionalMeanPhononEnergy": 0.4681190448271298
+      },
+      "reverseAmplitudeError": 1.3616517501962419e-9,
+      "maximumCaptured": 0.0010893463134264128,
+      "maximumCaptureTime": 32,
+      "checkpoints": [
+        {
+          "time": 32,
+          "norm": 0.9999999994629672,
+          "energy": -0.8083973124846314,
+          "captured": 0.0010893463134264128,
+          "conditionalMeanPhononEnergy": 1.2182857748100604
+        },
+        {
+          "time": 34,
+          "norm": 0.9999999994294028,
+          "energy": -0.8083973124542383,
+          "captured": 0.0010892867493875508,
+          "conditionalMeanPhononEnergy": 1.2182269188459882
+        },
+        {
+          "time": 42,
+          "norm": 0.9999999992951456,
+          "energy": -0.8083973123326584,
+          "captured": 0.0010892838829548192,
+          "conditionalMeanPhononEnergy": 1.2182223658829165
+        },
+        {
+          "time": 40,
+          "norm": 0.9999999993287092,
+          "energy": -0.8083973123630589,
+          "captured": 0.0010892802806133377,
+          "conditionalMeanPhononEnergy": 1.2182202789735208
+        },
+        {
+          "time": 60,
+          "norm": 0.9999999989930647,
+          "energy": -0.808397312059115,
+          "captured": 0.0010892760898951886,
+          "conditionalMeanPhononEnergy": 1.218216195211858
+        },
+        {
+          "time": 50,
+          "norm": 0.9999999991608873,
+          "energy": -0.8083973122110796,
+          "captured": 0.0010892711314470403,
+          "conditionalMeanPhononEnergy": 1.2182128365592664
+        },
+        {
+          "time": 48,
+          "norm": 0.9999999991944523,
+          "energy": -0.8083973122414779,
+          "captured": 0.0010892709604147747,
+          "conditionalMeanPhononEnergy": 1.2182127684832587
+        },
+        {
+          "time": 52,
+          "norm": 0.9999999991273231,
+          "energy": -0.8083973121806883,
+          "captured": 0.0010892704327209455,
+          "conditionalMeanPhononEnergy": 1.218212311394908
+        },
+        {
+          "time": 44,
+          "norm": 0.9999999992615819,
+          "energy": -0.8083973123022661,
+          "captured": 0.0010892674550636082,
+          "conditionalMeanPhononEnergy": 1.2182103054427045
+        },
+        {
+          "time": 54,
+          "norm": 0.9999999990937589,
+          "energy": -0.808397312150296,
+          "captured": 0.001089267046964559,
+          "conditionalMeanPhononEnergy": 1.2182098499585992
+        },
+        {
+          "time": 58,
+          "norm": 0.9999999990266285,
+          "energy": -0.8083973120895028,
+          "captured": 0.001089265092856224,
+          "conditionalMeanPhononEnergy": 1.2182084486541747
+        },
+        {
+          "time": 46,
+          "norm": 0.9999999992280165,
+          "energy": -0.8083973122718775,
+          "captured": 0.0010892648340581465,
+          "conditionalMeanPhononEnergy": 1.2182084200946053
+        },
+        {
+          "time": 56,
+          "norm": 0.9999999990601933,
+          "energy": -0.8083973121199065,
+          "captured": 0.0010892611263506402,
+          "conditionalMeanPhononEnergy": 1.2182055993188576
+        },
+        {
+          "time": 38,
+          "norm": 0.9999999993622739,
+          "energy": -0.8083973123934436,
+          "captured": 0.0010892583427373425,
+          "conditionalMeanPhononEnergy": 1.2182047645181282
+        },
+        {
+          "time": 36,
+          "norm": 0.9999999993958395,
+          "energy": -0.8083973124238464,
+          "captured": 0.0010892524402390334,
+          "conditionalMeanPhononEnergy": 1.218200674046327
+        },
+        {
+          "time": 30,
+          "norm": 0.9999999994965325,
+          "energy": -0.808397312515028,
+          "captured": 0.0010890266962472904,
+          "conditionalMeanPhononEnergy": 1.2181591702381933
+        },
+        {
+          "time": 28,
+          "norm": 0.9999999995300964,
+          "energy": -0.8083973125454242,
+          "captured": 0.0010881644400495768,
+          "conditionalMeanPhononEnergy": 1.2180661211566233
+        },
+        {
+          "time": 26,
+          "norm": 0.9999999995636608,
+          "energy": -0.8083973125758146,
+          "captured": 0.0010876169494490637,
+          "conditionalMeanPhononEnergy": 1.2199582498495083
+        },
+        {
+          "time": 24,
+          "norm": 0.9999999995972253,
+          "energy": -0.8083973126062084,
+          "captured": 0.0010813668897708335,
+          "conditionalMeanPhononEnergy": 1.223311847514612
+        },
+        {
+          "time": 22,
+          "norm": 0.9999999996307916,
+          "energy": -0.8083973126366006,
+          "captured": 0.001053899234871082,
+          "conditionalMeanPhononEnergy": 1.2246868851280237
+        },
+        {
+          "time": 20,
+          "norm": 0.9999999996643566,
+          "energy": -0.808397312667007,
+          "captured": 0.0010016843611133958,
+          "conditionalMeanPhononEnergy": 1.2331182943142769
+        },
+        {
+          "time": 18,
+          "norm": 0.9999999996979194,
+          "energy": -0.8083973126973897,
+          "captured": 0.00092200005563085,
+          "conditionalMeanPhononEnergy": 1.2591244819891496
+        },
+        {
+          "time": 16,
+          "norm": 0.9999999997314845,
+          "energy": -0.8083973127277879,
+          "captured": 0.0007835154310228489,
+          "conditionalMeanPhononEnergy": 1.2809542747512406
+        },
+        {
+          "time": 14,
+          "norm": 0.9999999997650484,
+          "energy": -0.8083973127581748,
+          "captured": 0.0005928134166660232,
+          "conditionalMeanPhononEnergy": 1.2779227354706786
+        },
+        {
+          "time": 12,
+          "norm": 0.9999999997986141,
+          "energy": -0.8083973127885759,
+          "captured": 0.00042578122951106664,
+          "conditionalMeanPhononEnergy": 1.2862608791666135
+        },
+        {
+          "time": 10,
+          "norm": 0.9999999998321772,
+          "energy": -0.8083973128189802,
+          "captured": 0.0003126749048012524,
+          "conditionalMeanPhononEnergy": 1.3327566433167626
+        },
+        {
+          "time": 8,
+          "norm": 0.9999999998657428,
+          "energy": -0.8083973128493609,
+          "captured": 0.0002228979204795584,
+          "conditionalMeanPhononEnergy": 1.3408402176803182
+        },
+        {
+          "time": 6,
+          "norm": 0.9999999998993059,
+          "energy": -0.8083973128797535,
+          "captured": 0.00016032744693888104,
+          "conditionalMeanPhononEnergy": 1.317492687635212
+        },
+        {
+          "time": 4,
+          "norm": 0.9999999999328708,
+          "energy": -0.8083973129101623,
+          "captured": 0.00012229172181238798,
+          "conditionalMeanPhononEnergy": 1.3942575865501334
+        },
+        {
+          "time": 2,
+          "norm": 0.9999999999664354,
+          "energy": -0.8083973129405537,
+          "captured": 0.000056126449897769054,
+          "conditionalMeanPhononEnergy": 1.4969562987915377
+        },
+        {
+          "time": 0,
+          "norm": 1.0000000000000002,
+          "energy": -0.8083973129709435,
+          "captured": 0,
+          "conditionalMeanPhononEnergy": 0
+        }
+      ]
+    },
+    "coarseToFineRelativeCaptureChange": 0.022601028970464204,
+    "fineToRefinedRelativeCaptureChange": 0.002580579590521182
+  },
+  "verdict": {
+    "closed": "A normalized incoming continuum packet, the AZ-121 scattering-to-bound form factors and the AZ-120 acoustic modes now evolve in one finite Hermitian Hamiltonian with coherent multi-bond phases.",
+    "implication": "Continuum normalization is no longer a semantic gap: the graph overlap becomes a finite capture probability only after integration over a normalized packet and phonon modes.",
+    "open": "The common bond derivative remains a benchmark rather than a named material calibration; the one-phonon truncation, finite rails and fixed cluster geometry remain model boundaries.",
+    "nextCalculation": "Replace the common benchmark derivative by bond-resolved dt/du, masses and spring constants from one material or engineered device, then repeat joint matter/phonon refinement and thermal detailed balance."
+  }
+}

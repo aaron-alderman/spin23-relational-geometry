@@ -8,18 +8,19 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The graph part of the missing source has now been computed. The lower AZ-055 pole is normalized across its cluster and lead tail, the incoming state is normalized per unit energy, and all eight bond-modulation overlaps are evaluated. At emitted energy 1.2 the strongest bond overlap is 0.0214705 and varies sharply with incoming energy. This is a continuum amplitude density, not the discrete two-level coefficient used by the finite-bath benchmark. The look-here calculation is now a material-normalized incoming wavepacket with coherent multi-bond phonon phases and joint lead/rail convergence.
+> The graph overlap has now been integrated rather than substituted. A normalized incoming packet, all eight complex bond form factors and the acoustic rail evolve in one Hermitian model. For the declared common derivative (D=0.2), joint matter/phonon refinement converges to capture probability (1.0892761\times10^{-3}) with conditional phonon energy 1.2182162, while norm, energy and reverse recovery close below (1.4\times10^{-9}). The remaining look-here step is material calibration, not another freely shaped capture mechanism.
 
 ## What this commits us to
 
-The graph operator and state normalization are now explicit. The mechanism becomes physically source-native only when material scale, wavepacket normalization, coherent bond phases and continuum limits are explicit too.
+The graph operator, wavepacket normalization, coherent bond phases and finite continuum checks are explicit. The mechanism becomes a physical prediction only when a named realization supplies its bond derivatives, masses, springs, temperature and larger excitation sectors.
 
 ## What would move or defeat this claim
 
-Fix the dimensional bond derivative and phonon normalization, coherently sum all displaced bonds, and show a nonzero rail-size-stable capture probability for a normalized incoming wavepacket.
+Replace the common benchmark derivative by independently calibrated bond-resolved mechanical data. Then test whether the probability and emitted spectrum survive thermal, multiphonon and continuum refinement.
 
 ## Controlling documents
 
+- [admissibility 122](../../../corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md)
 - [admissibility 121](../../../corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md)
 - [admissibility 120](../../../corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md)
 - [AZ-055 finite-band ledger](../../../corpus/programmes/admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md)
