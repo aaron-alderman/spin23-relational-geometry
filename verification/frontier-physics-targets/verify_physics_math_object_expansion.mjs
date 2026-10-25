@@ -7,11 +7,26 @@ const target = 'corpus/programmes/frontier-physics-targets/physics_math_object_e
 const x = JSON.parse(fs.readFileSync(path.join(root, target), 'utf8'));
 const criteria = JSON.parse(fs.readFileSync(path.join(root, 'corpus/programmes/frontier-physics-targets/corpus_completion_exit_criteria_v1.json'), 'utf8'));
 const census = JSON.parse(fs.readFileSync(path.join(root, 'corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json'), 'utf8'));
+const overrides = JSON.parse(fs.readFileSync(path.join(root, 'corpus/programmes/frontier-physics-targets/physics_math_object_adjacency_overrides_v1.json'), 'utf8'));
 const allowed = new Set(criteria.requiredAdjacencyDispositions);
 const failures = [];
 const sourceByPath = new Map(census.records.map(r => [r.path, r]));
 const clusterById = new Map(x.claimFamilyClusters.map(c => [c.id, c]));
 const observedClusterCounts = new Map();
+const reviewedOverridePaths = new Set();
+for (const o of overrides.objects ?? []) {
+  if (reviewedOverridePaths.has(o.path)) failures.push(`${o.path}: duplicate authored override`);
+  reviewedOverridePaths.add(o.path);
+}
+for (const b of overrides.reviewBatches ?? []) {
+  if (!b.id || !b.routingReason || !b.topicIds?.length || !b.paths?.length) failures.push(`${b.id ?? 'unnamed batch'}: incomplete review batch`);
+  if (new Set(b.paths ?? []).size !== (b.paths ?? []).length) failures.push(`${b.id}: duplicate path inside review batch`);
+  for (const p of b.paths ?? []) {
+    if (reviewedOverridePaths.has(p)) failures.push(`${p}: appears in more than one authored review`);
+    reviewedOverridePaths.add(p);
+    if (!fs.existsSync(path.join(root, p))) failures.push(`${b.id}: missing reviewed object ${p}`);
+  }
+}
 if (clusterById.size !== x.claimFamilyClusters.length) failures.push('duplicate claim-family cluster id');
 for (const c of x.claimFamilyClusters) if (!allowed.has(c.disposition) || !c.topicId || !c.family || !c.sourceCandidateId) failures.push(`${c.id}: invalid claim-family cluster`);
 if (x.records.length !== census.records.length) failures.push('inventory count differs from census');

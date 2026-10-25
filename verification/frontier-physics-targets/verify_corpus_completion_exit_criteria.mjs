@@ -4,6 +4,8 @@ import path from "node:path";
 const root = process.cwd();
 const target = "corpus/programmes/frontier-physics-targets/corpus_completion_exit_criteria_v1.json";
 const contract = JSON.parse(fs.readFileSync(path.join(root, target), "utf8"));
+const objectExpansionTarget = "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json";
+const objectExpansion = JSON.parse(fs.readFileSync(path.join(root, objectExpansionTarget), "utf8"));
 const failures = [];
 
 if (contract.schema !== "frontier.corpus-completion-exit-criteria/1") failures.push("schema mismatch");
@@ -24,6 +26,16 @@ for (const gate of contract.gates ?? []) {
   if (!Array.isArray(gate.currentEvidence) || !gate.currentEvidence.length) failures.push(`${gate.id}: no current evidence`);
   for (const source of gate.currentEvidence ?? []) if (!fs.existsSync(path.join(root, source))) failures.push(`${gate.id}: missing evidence ${source}`);
 }
+
+const adjacencyGate = contract.gates?.find(gate => gate.id === "EXIT-01");
+const objectSummary = objectExpansion.summary ?? {};
+const objectLayerPasses = objectSummary.topicLayerComplete === true
+  && objectSummary.objectLayerComplete === true
+  && objectSummary.unmappedReviewRequired === 0
+  && objectSummary.conflictReviewRequired === 0
+  && objectSummary.routingReviewRequired === 0;
+if (!objectLayerPasses) failures.push("EXIT-01: object-level adjacency expansion is not complete");
+if (adjacencyGate?.status !== (objectLayerPasses ? "passed" : "open")) failures.push("EXIT-01: contract status is inconsistent with the object-level adjacency verifier summary");
 
 const allPass = contract.gates?.every(gate => gate.status === "passed") ?? false;
 if (contract.globalExit?.allGatesMustPass !== true) failures.push("global exit does not require every gate");

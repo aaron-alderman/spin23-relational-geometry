@@ -14,11 +14,29 @@ const read = p => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
 const census = read(censusPath);
 const candidates = read(candidatePath);
 const overrides = read(overridePath);
-const overrideByPath = new Map(overrides.objects.map(x => [x.path, x]));
+const expandedOverrides = [...overrides.objects];
+for (const batch of overrides.reviewBatches ?? []) for (const objectPath of batch.paths) {
+  expandedOverrides.push({
+    path: objectPath,
+    topicIds: batch.topicIds,
+    routingStatus: 'reviewed_route',
+    routingReason: batch.routingReason,
+    routingEvidenceRefs: [...new Set([objectPath, ...(batch.routingEvidenceRefs ?? [])])],
+  });
+}
+const overrideByPath = new Map();
+for (const override of expandedOverrides) {
+  if (overrideByPath.has(override.path)) throw new Error(`duplicate object override ${override.path}`);
+  if (!fs.existsSync(path.join(root, override.path))) throw new Error(`missing override object ${override.path}`);
+  overrideByPath.set(override.path, override);
+}
 const candidateByTopic = new Map();
 for (const c of candidates.candidates) {
   if (!candidateByTopic.has(c.topicId)) candidateByTopic.set(c.topicId, new Map());
   candidateByTopic.get(c.topicId).set(c.family, c);
+}
+for (const override of expandedOverrides) for (const topicId of override.topicIds ?? []) {
+  if (!candidateByTopic.has(topicId)) throw new Error(`unknown override topic ${topicId} for ${override.path}`);
 }
 
 const excludedDispositions = new Set(['navigation', 'evidence_record', 'separate_programme', 'delegated_audit']);
