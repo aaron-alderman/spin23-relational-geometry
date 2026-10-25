@@ -5,6 +5,7 @@ const load = (relativePath) => JSON.parse(fs.readFileSync(new URL(relativePath, 
 const gate = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
 const congruenceLift = load("../../evidence/data/moonshine-metaplectic-congruence-lift-gate-v1.json");
 const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
+const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 const moonshine = load("../../evidence/data/moonshine-program-lattice-bridge-v1.json");
 const seam = load("../../evidence/data/lattice-subroutine-oriented-seam-modular-line-v1.json");
 const mixed = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
@@ -39,6 +40,8 @@ assert.deepEqual(
   scalarNoGo.metaplecticNoGo.allowedQuarterTurnExponentsModulo8,
 );
 assert.equal(gate.couplingChannels.genuineOneBlockLift.oneDimensionalDic11CentralSignMatch, false);
+assert.equal(eta.classification.genuineScalarEtaLineExists, true);
+assert.equal(eta.relationDefect.phase, "i");
 assert.equal(gate.directFiniteIntegralLift, false);
 assert.equal(congruenceLift.integralObstruction.finiteSectionExists, false);
 assert.equal(mixed.analyticBoundary.thetaMultiplierRequiresMetaplecticLift, true);
@@ -56,5 +59,6 @@ console.log(JSON.stringify({
   },
   genuineQuarterTurnPhaseGroup: "primitive eighth roots",
   scalarMetaplecticPromotionPossible: false,
+  genuineEtaScalarLine: "survives with K phase i",
 }, null, 2));
 console.log("PASS verify_moonshine_quarter_turn_metaplectic_gate");

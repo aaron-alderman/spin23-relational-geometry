@@ -17,6 +17,8 @@
 
 **Metaplectic scalar no-go:** [the explicit relation rail forces a genuine eighth-root rather than the finite \(C_4\) phase](integral-relation-defect-metaplectic-no-go.md)
 
+**Genuine scalar survivor:** [the Dedekind eta line assigns the relation defect \(K\) the exact phase \(i\)](dedekind-eta-relation-phase.md)
+
 ## Result
 
 The Monster branch does contain a mathematically defensible sense in which a
@@ -870,8 +872,10 @@ An explicit symmetric lift reduces the selected congruence kernel to one
 infinite cyclic relation rail. On the metaplectic double cover,
 \(\widetilde S^4=\varepsilon\); hence a genuine character must take a
 primitive eighth-root value and cannot take \(i\). The next sewing
-calculation must therefore be vector-valued and keep the dicyclic center,
-metaplectic kernel and congruence relation defect distinct.
+calculation must therefore first compare the genuine Dedekind eta value
+\(v_\eta(K)=i\) with the sewn defect/Pfaffian line. A mismatch forces the
+calculation to become vector-valued and keep the dicyclic center, metaplectic
+kernel and congruence relation defect distinct.
 
 ## Sources and corpus links
 
@@ -899,3 +903,4 @@ metaplectic kernel and congruence relation defect distinct.
 - [Order-23 centralizer exhaustion](order-23-centralizer-exhaustion.md)
 - [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
+- [Dedekind eta relation phase](dedekind-eta-relation-phase.md)

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-25",
+  "claim": "The Dedekind eta multiplier is a genuine scalar metaplectic survivor on the explicit integral lift: R has phase 1, S has phase zeta8, the lifted base center has phase i, the metaplectic kernel has phase -1 and K=S^2 R^-11 has phase i.",
+  "convention": {
+    "S": [[0, 1], [-1, 0]],
+    "automorphyFactor": "(c tau+d)^(1/2)",
+    "rootNotation": "zeta24=exp(2 pi i/24)"
+  },
+  "R": {
+    "matrix": [[5, 23], [23, 106]],
+    "aPlusDOver12c": "37/92",
+    "dedekindSum": {
+      "expression": "s(106,23)=s(14,23)",
+      "value": "7/46"
+    },
+    "quarterCorrection": "1/4",
+    "multiplierExponent": "0",
+    "phaseExponentModulo24": 0,
+    "phase": "1"
+  },
+  "S": {
+    "phaseExponentModulo24": 3,
+    "phase": "zeta8"
+  },
+  "centralPhases": {
+    "liftedBaseMinusI": {
+      "word": "S^2",
+      "phaseExponentModulo24": 6,
+      "phase": "i"
+    },
+    "metaplecticKernel": {
+      "word": "S^4",
+      "phaseExponentModulo24": 12,
+      "phase": "-1"
+    }
+  },
+  "relationDefect": {
+    "word": "K=S^2 R^-11",
+    "phaseExponentModulo24": 6,
+    "phase": "i",
+    "alternateRliftPhase": "-i"
+  },
+  "classification": {
+    "finiteC4CharacterExact": true,
+    "finiteC4CharacterGenuine": false,
+    "genuineScalarEtaLineExists": true,
+    "genuineEtaLineMatchesFiniteC4Values": false,
+    "scalarRouteStatus": "open only as an anomaly-shifted mu8 line pending comparison with the sewn order-23 defect/Pfaffian phase on K",
+    "vectorValuedRouteRequiredIf": "the sewn defect phase on K is incompatible with plus or minus i, or is intrinsically non-scalar"
+  },
+  "nextTest": "compute the sewn order-23 defect/Pfaffian phase on K and compare it with the eta value i",
+  "boundary": "The eta phase is a modular-carrier result, not evidence of Monster-defect realization or physical Wick rotation."
+}

@@ -127,9 +127,13 @@ is a unique nontrivial projective \(C_2\) channel. The finite \(C_4\) channel
 retains the dicyclic center only by killing the metaplectic center, while a
 genuine scalar channel necessarily takes eighth-root values and cannot send
 the lifted quarter-turn to \(i\). The sign-retaining scalar route is therefore
-closed for the declared one-block embedding. What remains is vector-valued
-theta/Weil data capable of representing the two central operations and the
-explicit congruence relation defect separately.
+closed for the declared one-block embedding. A genuine scalar line nevertheless
+survives with a primitive eighth-root value. The
+[Dedekind eta calculation](dedekind-eta-relation-phase.md) gives
+\(S\mapsto\zeta_8\), the lifted base center \(\mapsto i\), the metaplectic
+kernel \(\mapsto-1\), and the explicit relation defect \(K\mapsto i\).
+Compatibility with the sewn defect line remains open; failure there moves
+the target to vector-valued theta/Weil data.
 
 ## Sources and corpus links
 
@@ -140,3 +144,4 @@ explicit congruence relation defect separately.
 - [Order-46 Galois orientation gate](order-46-galois-orientation-gate.md)
 - [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
+- [Dedekind eta relation phase](dedekind-eta-relation-phase.md)

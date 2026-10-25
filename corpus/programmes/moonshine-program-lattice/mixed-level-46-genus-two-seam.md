@@ -133,8 +133,12 @@ The later [integral relation-defect audit](integral-relation-defect-metaplectic-
 closes this proposed scalar lift: in the one-block metaplectic cover a
 quarter-turn lift has fourth power equal to the cover kernel, so a genuine
 character takes a primitive eighth-root value rather than \(i\). The
-5,280-label sign-retaining carrier therefore requires a vector-valued kernel;
-it has no scalar \(C_4\) metaplectic coupling in the stated embedding.
+finite \(C_4\) character therefore has no genuine scalar promotion in the
+stated embedding. A scalar eighth-root route survives: the Dedekind eta line
+assigns the relation defect \(K\) the phase \(i\). The 5,280-label carrier is
+admissible only if the sewn defect/Pfaffian line has the same phase (up to a
+globally consistent alternate lift); otherwise it requires a vector-valued
+kernel.
 
 ## 4. Why “level 46” is not yet the analytic answer
 
@@ -193,6 +197,7 @@ identifies the precise multiplier line that must be lifted analytically.
 - [Quarter-turn metaplectic coupling gate](quarter-turn-metaplectic-gate.md)
 - [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
+- [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Genus-two seam closure](../lattice-subroutine-gravity/genus-two-seam-closure.md)
 - [Oriented seam modular line](../lattice-subroutine-gravity/oriented-seam-modular-line.md)
 - [Leech pair-Gram / Spin bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)

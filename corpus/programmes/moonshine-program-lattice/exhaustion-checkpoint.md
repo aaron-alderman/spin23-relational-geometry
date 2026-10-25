@@ -27,7 +27,8 @@ Golay / Rule 60
   -> genus-one orientation no-go
   -> mixed level 2 x 23 carrier
   -> scalar metaplectic C4 no-go
-  -> vector-valued metaplectic / Weil compatibility gate
+  -> genuine eta phase on K
+  -> sewn defect comparison, then vector-valued Weil gate if needed
   -> genus-two sewing or cross-grade VOA composition
   -> only then: a possible real Spin(2,3) / physical lift
 ```
@@ -130,8 +131,11 @@ out the scalar promotion: a genuine metaplectic quarter-turn satisfies
 \(\widetilde S^4=\varepsilon\), so its scalar value must be a primitive eighth
 root when \(\varepsilon\mapsto-1\), never \(i\). The finite \(C_4\) character
 and genuine metaplectic character therefore cannot be the same line. A
-vector-valued kernel that keeps the dicyclic center, metaplectic kernel and
-\(K\) distinct is now the first surviving higher-genus target.
+The canonical Dedekind eta line supplies the genuine scalar assignment
+\(\widetilde S\mapsto\zeta_8\), lifted base center \(\mapsto i\),
+metaplectic kernel \(\mapsto-1\), and \(K\mapsto i\). The first surviving
+higher-genus target is therefore the sewn defect/Pfaffian phase on \(K\).
+Only a mismatch forces a vector-valued kernel.
 
 ## Open region and required new inputs
 
@@ -139,7 +143,7 @@ Only four fronts remain admissible:
 
 | Front | Missing object | Decisive test |
 |---|---|---|
-| mixed-level genus two | an order-23-twined vector-valued sewn kernel | represent the two central operations and \(K\) separately; test multiplier compatibility and separating degeneration |
+| mixed-level genus two | an order-23-twined sewn defect/Pfaffian line | compare its phase on \(K\) with the exact eta value \(i\); test separating degeneration |
 | cross-grade VOA structure | explicit fusion, intertwining or vertex-operator data | find an A/B-sensitive invariant not determined by graded characters |
 | finite emulator | a provenance-preserving realization of the \(\mathrm{Dic}_{11}/D_{11}\) quotient | distinguish the 44-element sign-retaining closure from the 22-element projective closure |
 | physical lift | a real carrier, action, scale and detector map | select signature, time orientation, positive energy and an observable response |
@@ -155,8 +159,8 @@ group coincidence.
 Further work in this lane is admissible only if it supplies at least one of:
 
 - an explicit order-23-twined genus-two sewing formula;
-- a vector-valued metaplectic multiplier and defect action that can be
-  compared on the explicit relation rail \(\langle K\rangle\);
+- a sewn defect/Pfaffian multiplier that can be compared with the eta phase
+  \(v_\eta(K)=i\) on the explicit relation rail;
 - cross-grade Monster-module fusion or intertwiner coefficients;
 - a declared physical carrier together with dynamics and detector coupling.
 
@@ -174,4 +178,5 @@ traces or centralizer words is repetition, not frontier progress.
 - [Quarter-turn metaplectic gate](quarter-turn-metaplectic-gate.md)
 - [Metaplectic congruence-lift gate](metaplectic-congruence-lift-gate.md)
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
+- [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Admissibility synthesis](../../syntheses/the_admissibility_frontier_current_synthesis.md)

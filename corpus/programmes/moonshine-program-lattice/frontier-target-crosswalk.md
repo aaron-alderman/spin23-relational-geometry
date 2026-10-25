@@ -107,8 +107,9 @@ detector map.  None follows from reduction modulo 23.
    \(Sp(4,2)\times Sp(4,23)\) CRT carrier; a direct order-11 action on the ten
    characteristics is impossible. The unique projective \(C_2\) sign
    coupling survives, while the scalar metaplectic \(C_4\) lift is ruled out
-   for the one-block embedding. Construct a vector-valued Weil kernel that
-   distinguishes the dicyclic center, metaplectic kernel and relation defect.
+   for the one-block embedding. The genuine eta line instead gives
+   \(v_\eta(K)=i\). Compare that phase with the sewn defect/Pfaffian line;
+   construct a vector-valued Weil kernel only if they are incompatible.
 2. **Cross-grade VOA/defect composition:** test fusion or intertwining data
    not determined by the now-exhausted graded \(S_4\) characters.
 3. **Finite \(\mathrm{Dic}_{11}/D_{11}\) emulator:** conventional but sharp
@@ -131,6 +132,7 @@ geometry that motivated the admissibility language.
 - [Mixed-level 46 genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Quarter-turn metaplectic gate](quarter-turn-metaplectic-gate.md)
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
+- [Dedekind eta relation phase](dedekind-eta-relation-phase.md)
 - [Projective-centralizer no-go](order-23-projective-centralizer-no-go.md)
 - [Main Moonshine programme](README.md)
 - [Per-target corpus assessments](../frontier-physics-targets/frontier_physics_target_assessments_v1.md)

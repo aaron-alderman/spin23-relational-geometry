@@ -10,6 +10,7 @@ const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic
 const projectiveNoGo = load("../../evidence/data/moonshine-order23-projective-centralizer-no-go-v1.json");
 const congruenceLift = load("../../evidence/data/moonshine-metaplectic-congruence-lift-gate-v1.json");
 const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
+const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 
 const sp4Order = (q) => q ** 4 * (q ** 2 - 1) * (q ** 4 - 1);
 
@@ -60,6 +61,8 @@ assert(mixed.candidate.scalarCouplingGate.projective.includes("C2"));
 assert(mixed.candidate.scalarCouplingGate.signRetaining.includes("ruled out"));
 assert.equal(quarterTurn.couplingChannels.metaplecticLift.genuine, false);
 assert.equal(scalarNoGo.outcome.projective240Route.includes("remains admissible"), true);
+assert.equal(eta.classification.genuineScalarEtaLineExists, true);
+assert(mixed.candidate.scalarCouplingGate.signRetaining.includes("K phase i"));
 assert(mixed.physicalBoundary.includes("does not select real Spin(2,3)"));
 
 console.log(JSON.stringify({

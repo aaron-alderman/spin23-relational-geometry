@@ -119,8 +119,10 @@ The level-\(2\)/\(23\) CRT carrier remains the correct genus-two ambient
 space, but its level-23 boundary input cannot be “a missing projective
 \(S_4\) character.” It must be a sewn defect or cross-grade operation. The
 quarter-turn \(C_4\) character is likewise not a dormant genus-one cocycle.
-Its proposed scalar metaplectic promotion is now ruled out for the one-block
-embedding; genus-two sewing must carry a genuinely vector-valued action.
+Its proposed finite-\(C_4\) scalar metaplectic promotion is ruled out for the
+one-block embedding. A genuine eta line with eighth-root quarter-turn value
+survives, so genus-two sewing must first decide its phase on \(K\) before a
+vector-valued action is required.
 
 The next decisive object is therefore a kernel
 \(\mathcal K_{\delta,\lambda}(\Omega)\) whose separating degeneration
@@ -136,3 +138,4 @@ characters.
 - [Mixed-level 46 genus-two seam](mixed-level-46-genus-two-seam.md)
 - [Quarter-turn metaplectic coupling gate](quarter-turn-metaplectic-gate.md)
 - [Integral relation rail and metaplectic scalar no-go](integral-relation-defect-metaplectic-no-go.md)
+- [Dedekind eta relation phase](dedekind-eta-relation-phase.md)

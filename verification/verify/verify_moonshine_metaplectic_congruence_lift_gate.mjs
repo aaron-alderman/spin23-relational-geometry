@@ -6,6 +6,7 @@ const gate = load("../../evidence/data/moonshine-metaplectic-congruence-lift-gat
 const mixed = load("../../evidence/data/moonshine-mixed-level46-seam-v1.json");
 const quarterTurn = load("../../evidence/data/moonshine-quarter-turn-metaplectic-gate-v1.json");
 const scalarNoGo = load("../../evidence/data/moonshine-integral-relation-defect-metaplectic-no-go-v1.json");
+const eta = load("../../evidence/data/moonshine-dedekind-eta-relation-phase-v1.json");
 
 assert.equal(gate.finiteQuotient.order, 44);
 assert.equal(gate.finiteQuotient.rotationOrder, 11);
@@ -25,7 +26,9 @@ assert.equal(gate.metaplecticPullback.finiteC4DataSufficient, false);
 assert.equal(gate.metaplecticPullback.requirementsCompatible, false);
 assert.equal(gate.selectedLift.K, scalarNoGo.relationDefect.KDefinition.split("=")[1].trim());
 assert.equal(scalarNoGo.metaplecticNoGo.simultaneousIAndGenuineCenterPossible, false);
-assert(gate.boundary.includes("not vector-valued"));
+assert.equal(gate.metaplecticPullback.genuineEtaSurvivor.includes("K maps to i"), true);
+assert.equal(eta.relationDefect.phase, "i");
+assert(gate.boundary.includes("not the genuine eta"));
 
 console.log(JSON.stringify({
   finiteQuotient: gate.finiteQuotient.group,
@@ -34,6 +37,7 @@ console.log(JSON.stringify({
   finiteC4DataSufficient: gate.metaplecticPullback.finiteC4DataSufficient,
   proposedScalarPhase: gate.metaplecticPullback.requiredQuarterTurnImage,
   requirementsCompatible: gate.metaplecticPullback.requirementsCompatible,
-  nextCarrier: "vector-valued",
+  etaRelationDefectPhase: eta.relationDefect.phase,
+  next: gate.nextTest,
 }, null, 2));
 console.log("PASS verify_moonshine_metaplectic_congruence_lift_gate");
