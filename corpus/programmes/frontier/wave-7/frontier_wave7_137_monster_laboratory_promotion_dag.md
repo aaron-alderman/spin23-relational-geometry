@@ -336,6 +336,21 @@ ceiling leaves the cutoff-two gap lower endpoint below zero by 0.1717081970
 and the cutoff-three endpoint below zero by 0.4571192632. The next enclosure
 must therefore preserve off-diagonal charging correlations rather than merely
 optimize 24 one-site terms.
+Wave 7.210 raises that minimum correlation order again. Shorting each
+admissible two-site block against its Leech Gram principal minor proves
+\(\lVert B_S\rVert\le1/2\); even twelve independently saturated pair blocks
+leave best possible gap-lower ceilings of \(-0.0517081970\) and
+\(-0.1871192632\) at cutoffs two and three. Enumeration of all 2,024
+three-coordinate minors finds minimum eigenvalue \(4-2\sqrt2\), making block
+size three the first disjoint correlation order not excluded by this
+universal ceiling. It is a target, not yet a certificate.
+Wave 7.211 tests the direct triple construction rather than promoting that
+possibility. Across the natural partition and 200 seeded random partitions,
+the best common-scale principal-block lower endpoint is \(-0.2844679556\).
+Independent optimization of all eight block weights improves it only to
+\(-0.2841525847\). This is scoped negative reconnaissance, not a general
+triple-block no-go; it redirects the enclosure toward overlapping
+sum-of-squares terms, general block SDPs or global eigenvalue counting.
 Wave 7.190 propagates the coupled-metric correction backward through the
 strip lane. The exact endpoint matching and 48 open-edge modes survive, but
 the strip contains $Y-1$ coupled 24-channel cells rather than $24(Y-1)$
@@ -412,6 +427,8 @@ P4 questions.
 - [Joined-cell spectral-enclosure admission](frontier_wave7_207_leech_spectral_enclosure_admission.md)
 - [Positive-charging full-carrier enclosure](frontier_wave7_208_leech_positive_charging_enclosure.md)
 - [Diagonal-enclosure no-go](frontier_wave7_209_leech_diagonal_enclosure_no_go.md)
+- [Pair-block enclosure no-go and triple frontier](frontier_wave7_210_leech_pair_block_enclosure_no_go.md)
+- [Triple principal-block reconnaissance](frontier_wave7_211_leech_triple_block_reconnaissance.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

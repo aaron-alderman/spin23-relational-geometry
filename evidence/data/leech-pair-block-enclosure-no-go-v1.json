@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "leech-pair-block-enclosure-no-go-v1",
+  "date": "2026-10-25",
+  "pairCount": 12,
+  "gramDiagonal": 4,
+  "maximumGramCoupling": 2,
+  "minimumPairGramEigenvalue": 2,
+  "maximumPairShortedNorm": 0.5,
+  "tripleFrontier": {
+    "principalMinorCount": 2024,
+    "minimumEigenvalue": 1.1715728752538095,
+    "exactMinimumEigenvalue": "4-2*sqrt(2)",
+    "maximizingShortedNorm": 0.8535533905932741,
+    "exactMaximizingShortedNorm": "(2+sqrt(2))/4",
+    "witness": {
+      "eigenvalue": 1.1715728752538095,
+      "indicesZeroBased": [
+        0,
+        3,
+        8
+      ],
+      "gram": [
+        [
+          4,
+          0,
+          -2
+        ],
+        [
+          0,
+          4,
+          -2
+        ],
+        [
+          -2,
+          -2,
+          4
+        ]
+      ]
+    },
+    "cutoffTwoUniversalGainCeiling": 0.4097056274847716,
+    "cutoffTwoGapLowerCeiling": 0.11799743048416567,
+    "ruledOutByThisCeiling": false
+  },
+  "premise": "For block-diagonal B>=0 with K-B>=0, each embedded pair block B_S obeys B_S<=(G_SS)^-1 by the block rank-update/shorting criterion.",
+  "energyCeiling": "Every two-charge vector has norm squared at most 2N^2, so one pair can add at most (U/2)||B_S|| 2N^2 to a cluster lower endpoint.",
+  "ratio": 0.01,
+  "results": [
+    {
+      "cutoff": 1,
+      "potentialOnlyOddLower": 7.736544032709406,
+      "evenRitzUpper": 7.360877693852631,
+      "maximumAddedLowerEnergy": 0.06,
+      "universalPairOddCeiling": 7.796544032709406,
+      "bestPossiblePairGapLowerCeiling": 0.43566633885677497,
+      "pairBlockClosureRuledOut": false
+    },
+    {
+      "cutoff": 2,
+      "potentialOnlyOddLower": 3.58141571295791,
+      "evenRitzUpper": 3.8731239099585157,
+      "maximumAddedLowerEnergy": 0.24,
+      "universalPairOddCeiling": 3.8214157129579096,
+      "bestPossiblePairGapLowerCeiling": -0.05170819700060614,
+      "pairBlockClosureRuledOut": true
+    },
+    {
+      "cutoff": 3,
+      "potentialOnlyOddLower": 2.0436639710538573,
+      "evenRitzUpper": 2.7707832342081073,
+      "maximumAddedLowerEnergy": 0.54,
+      "universalPairOddCeiling": 2.5836639710538574,
+      "bestPossiblePairGapLowerCeiling": -0.18711926315424998,
+      "pairBlockClosureRuledOut": true
+    }
+  ],
+  "conclusion": "Every disjoint positive one-site or two-site block split is rigorously too weak to close the cutoff-two or cutoff-three full-carrier gap interval.",
+  "firstNotExcludedDisjointBlockSize": 3,
+  "nextRequirement": "construct and exactly certify a three-charge block partition, use overlapping sum-of-squares terms, or validate a Lehmann/shifted-inertia enclosure"
+}

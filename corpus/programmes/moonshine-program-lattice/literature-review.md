@@ -944,6 +944,26 @@ cutoff three. The next lower enclosure must therefore retain correlations
 through multi-site blocks, sum-of-squares structure, or eigenvalue-counting
 machinery; tuning independent one-site charging penalties cannot succeed.
 
+Wave 7.210 proves the analogous statement for every disjoint two-site
+positive split. Each block is bounded by the inverse of its \(2\times2\)
+Leech Gram principal minor; \(|G_{ij}|\le2\) forces block norm at most
+\(1/2\). Twelve optimistically saturated pairs still leave negative
+gap-lower ceilings at cutoffs two and three. Exhausting all 2,024
+three-coordinate minors gives minimum eigenvalue \(4-2\sqrt2\), whose shorted
+norm ceiling is no longer small enough to exclude closure. Thus three-site
+correlation is the first viable disjoint-block frontier, while a constructive
+PSD partition and certified cluster spectra remain open.
+
+Wave 7.211 tests rather than assumes that triple frontier. A deterministic
+natural-plus-200-random partition search scales the eight principal
+\(K\)-blocks to the PSD boundary and solves every \(5^3\)-state cluster by
+inversion sector. The best common-scale gap lower value is
+\(-0.2844679556\); independent constrained weighting reaches only
+\(-0.2841525847\). The calculation is explicitly classified as negative
+reconnaissance, not an exhaustive no-go. It disfavors block-Jacobi principal
+triples and increases the value of overlapping \(LDL^T\) sums of squares,
+general block semidefinite optimization and Lehmann/inertia routes.
+
 The dependency graph has now been audited backward as well as extended
 forward. [Wave 7.190](../frontier/wave-7/frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 shows that the strip endpoint matching still leaves exactly 24 modes on each

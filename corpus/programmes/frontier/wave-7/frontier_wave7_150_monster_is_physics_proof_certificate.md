@@ -277,6 +277,17 @@ universal ceiling on every such separable lower operator; its best possible
 gap-lower ceiling remains \(-0.1717081970\) at cutoff two and
 \(-0.4571192632\) at cutoff three. A valid continuation must retain
 off-diagonal correlations or certify eigenvalue order by Lehmann/inertia.
+Wave 7.210 further proves that every disjoint positive one-site or two-site
+block split is insufficient: the Leech pair minors bound each shorted block
+norm by \(1/2\), leaving negative universal gap-lower ceilings at both open
+cutoffs. Three-site blocks are the first disjoint correlation order not ruled
+out; their existence as a useful global partition remains conjectural until
+an exact PSD remainder and cluster spectral intervals are produced.
+Wave 7.211 checks the simplest such construction and refuses promotion:
+201 principal-triple partitions remain more than 0.284 below closure, and
+independent block weights barely improve the best point. Because the search
+is sampled, floating point and restricted to principal-block directions, it
+is evidence against that ansatz rather than a theorem against triples.
 
 ## Corpus links
 
@@ -343,6 +354,8 @@ off-diagonal correlations or certify eigenvalue order by Lehmann/inertia.
 - [Joined-cell spectral-enclosure admission](frontier_wave7_207_leech_spectral_enclosure_admission.md)
 - [Positive-charging full-carrier enclosure](frontier_wave7_208_leech_positive_charging_enclosure.md)
 - [Diagonal-enclosure no-go](frontier_wave7_209_leech_diagonal_enclosure_no_go.md)
+- [Pair-block enclosure no-go and triple frontier](frontier_wave7_210_leech_pair_block_enclosure_no_go.md)
+- [Triple principal-block reconnaissance](frontier_wave7_211_leech_triple_block_reconnaissance.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations
