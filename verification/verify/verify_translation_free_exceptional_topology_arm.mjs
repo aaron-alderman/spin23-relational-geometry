@@ -194,8 +194,8 @@ console.log(JSON.stringify({
   e8TwoCellProjectedCoupling: {localRoots:e8TwoCell.localRoots, maximumJ:e8TwoCell.couplingSweep.at(-1).J, minimumProjectedGap:Math.min(...e8TwoCell.couplingSweep.map(x=>x.gaps.at(-1))), fullTwoCellGapCertified:false, widthGapCertified:false},
   e8TwoCellRootCountAudit: {localRootCounts:e8TwoCellRoots.localRootCounts, gapRootCountPromoted:true, splittingPromotedThroughJ:e8TwoCellRoots.splittingPromotedThroughJ, splittingCoefficientPromotedAtJ01:false},
   e8ProjectedChainWidthRootGrid: {widths:e8ChainGrid.widths, localRootCounts:e8ChainGrid.localRootCounts, minimumGridGap:Math.min(...Object.values(e8ChainGrid.gapsByRootCount).flat()), thermodynamicGapCertified:false},
-  e8ProjectedChainBoundaryComparison: {widths:e8BoundaryComparison.widths, periodicGapAtWidthFive:e8BoundaryComparison.periodicGaps.at(-1), openPeriodicDifferenceAtWidthFive:e8BoundaryComparison.openPeriodicRelativeDifferences.at(-1), thermodynamicGapCertified:false},
+  e8ProjectedChainBoundaryComparison: {periodicWidths:e8BoundaryComparison.periodicWidths, periodicGapAtWidthSix:e8BoundaryComparison.periodicGaps.at(-1), openPeriodicDifferenceAtWidthFive:e8BoundaryComparison.openPeriodicRelativeDifferences.at(-1), thermodynamicGapCertified:false},
   e8LocalOperatorDictionary: {cutoff:e8Dictionary.settings.cutoff, localRoots:e8Dictionary.settings.roots, basisStates:e8Dictionary.settings.basisStates, reusableDictionaryCertified:true},
   quasicrystalBridge: {materialClasses:quasicrystal.factorialDesign.backplanes.length, relationPrograms:quasicrystal.factorialDesign.relationPrograms.length, devices:quasicrystal.factorialDesign.totalPrimaryDevices},
-  nextGate: "larger projected widths from frozen dictionary -> controlled thermodynamic lower bound -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
+  nextGate: "controlled projected-chain lower bound or compressed larger widths -> full-charge comparison -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
 }));

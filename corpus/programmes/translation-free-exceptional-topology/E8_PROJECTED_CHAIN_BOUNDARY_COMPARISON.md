@@ -8,14 +8,14 @@
 **Certificate:** [boundary verifier](../../../verification/verify/verify_translation_free_e8_projected_chain_boundary_comparison.mjs)
 
 At cutoff eight, eight local roots and \(J=0.05\), closing the projected chain
-gives periodic first gaps
+gives periodic first gaps through width six
 
 \[
-\Delta_{3,4,5}=(0.1826163504,0.1826156104,0.1826155985).
+\Delta_{3,4,5,6}=(0.1826163504,0.1826156104,0.1826155985,0.1826155983).
 \]
 
 The successive changes are \(4.1\times10^{-6}\) and
-\(6.5\times10^{-8}\). The first excitation is inversion-odd and
+\(6.5\times10^{-8}\), followed by \(1.17\times10^{-9}\). The first excitation is inversion-odd and
 reflection-even at every width. Periodic momentum-like excited pairs appear
 above it, while the minimum itself remains uniform. This is consistent with a
 bulk \(k=0\)-like collective band minimum rather than an end mode.
@@ -25,7 +25,9 @@ differences from the periodic values are 1.65%, 0.843% and 0.499% at widths
 three, four and five. Thus boundary sensitivity is already below one percent
 at the last two widths.
 
-This is a finite boundary-condition certificate, not a thermodynamic lower
+The width-six calculation contains 262,144 projected states and has
+first-state residual below \(8\times10^{-15}\). This is still a finite
+boundary-condition certificate, not a thermodynamic lower
 bound. It also does not identify an E8 edge anomaly: the first mode is a bulk
 collective excitation of the projected chain. Larger widths should reuse a
 serialized local operator dictionary so spatial scaling no longer repeats the
