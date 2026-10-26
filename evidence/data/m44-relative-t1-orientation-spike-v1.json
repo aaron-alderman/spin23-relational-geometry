@@ -115,6 +115,26 @@
       },
       "interpretation": "a linear spatial kinematic term generalizes slightly better than a constant offset; this does not identify its physical cause and supplies no evidence for T1"
     },
+    "alternativeShapeTournament": {
+      "status": "retrospective nested five-fold hypothesis discovery; not confirmatory",
+      "coordinate": "signed angular coordinate along the published-catalogue sky-plane principal axis",
+      "models": {
+        "constant": { "formula": "a", "heldOutMaeKmPerSec": 2.071184073553451 },
+        "linearTail": { "formula": "a+b*s", "heldOutMaeKmPerSec": 2.01481523396498, "deltaVersusConstantKmPerSec": -0.056368839588471165 },
+        "sharpStep": { "formula": "a+b*sign(s-s0)", "heldOutMaeKmPerSec": 2.0334612721707135, "deltaVersusConstantKmPerSec": -0.037722801382737536, "selectedCentreRangeDeg": [1.853177955702837, 3.7066440741776088] },
+        "smoothStep": { "formula": "a+b*tanh((s-s0)/w)", "heldOutMaeKmPerSec": 2.015577562067369, "deltaVersusConstantKmPerSec": -0.05560651148608198, "selectedWidthRangeDeg": [32, 64] },
+        "clusterRelaxation": { "formula": "a+b*exp(-abs(s)/ell)", "heldOutMaeKmPerSec": 2.028223522641398, "deltaVersusConstantKmPerSec": -0.0429605509120532, "selectedLengthDegAllFolds": 64 },
+        "boundaryLayer": { "formula": "a+b*sech^2((s-s0)/w)", "heldOutMaeKmPerSec": 2.0208940417995302, "deltaVersusConstantKmPerSec": -0.05029003175392077, "selectedCentreRangeDeg": [-1.8808006891987614, -1.5357502873935438], "selectedWidthRangeDeg": [8, 16] }
+      },
+      "candidateMinusLinearPairedBootstrap95PercentIntervalsKmPerSec": {
+        "sharpStep": [-0.008706651176761785, 0.04664495190644545],
+        "smoothStep": [-0.0062988371605083495, 0.008884346918667137],
+        "clusterRelaxation": [-0.01013806755448243, 0.03965321232482032],
+        "boundaryLayer": [-0.013215549793776375, 0.027746100545989475]
+      },
+      "result": "spatial structure generalizes versus a constant offset, but no tested boundary or relaxation shape is distinguishable from an ordinary linear tail term",
+      "nextDiscriminator": "three-dimensional tail position with uncertainty, frozen ordinary phase-space predictions, or untouched spectroscopy outside the current angular window"
+    },
     "authorityLimits": [
       "membership was preselected with convergent-point kinematics, so this is not independent discovery",
       "a constant spectroscopic offset still does not identify configuration T1",
@@ -145,7 +165,7 @@
     "status": "constant-angle single-channel hypothesis non-identifying; first cross-channel pass detects an unassigned spatial residual but does not identify T1",
     "empiricalEvidenceForT1Tilt": false,
     "newPhysicsClaim": false,
-    "nextGate": "obtain the published N-body snapshot or equivalent frozen ordinary prediction; derive any theta(s) law independently of M44; then test untouched or independent spectroscopy"
+    "nextGate": "reconstruct three-dimensional tail position with uncertainty, obtain a frozen ordinary phase-space prediction, and test any independently derived theta(x) law on untouched or independent spectroscopy"
   },
   "sources": [
     "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-44/",

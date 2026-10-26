@@ -415,6 +415,123 @@ const crossValidatedComparison = (rows, foldCount = 5) => {
   };
 };
 
+const quantile = (values, probability) => {
+  const sorted = [...values].sort((left, right) => left - right);
+  return sorted[Math.floor(probability * (sorted.length - 1))];
+};
+
+const fitFeature = (rows, feature) => {
+  const transformed = rows.map(row => ({ ...row, tailCoordinate: feature(row.tailCoordinate) }));
+  const line = theilSenLine(transformed);
+  const predict = row => line.intercept + line.slope * feature(row.tailCoordinate);
+  const meanAbsoluteError = rows.reduce((sum, row) => sum + Math.abs(row.residual - predict(row)), 0) / rows.length;
+  return { ...line, predict, meanAbsoluteError };
+};
+
+const pairedBootstrapInterval = (candidateErrors, constantErrors, seed) => {
+  const deltas = candidateErrors.map((value, index) => Math.abs(value) - Math.abs(constantErrors[index]));
+  const random = seededGenerator(seed);
+  const means = [];
+  for (let iteration = 0; iteration < 3000; iteration += 1) {
+    let sum = 0;
+    for (let draw = 0; draw < deltas.length; draw += 1) sum += deltas[Math.floor(random() * deltas.length)];
+    means.push(sum / deltas.length);
+  }
+  means.sort((left, right) => left - right);
+  return [means[Math.floor(0.025 * means.length)], means[Math.floor(0.975 * means.length)]];
+};
+
+const crossValidatedShapeTournament = (rows, foldCount = 5) => {
+  const prepared = rows.map(row => ({
+    ...row,
+    fold: Number.parseInt(createHash("sha256").update(row.dr3SourceId).digest("hex").slice(0, 8), 16) % foldCount
+  }));
+  const names = ["linearTail", "sharpStep", "smoothStep", "clusterRelaxation", "boundaryLayer"];
+  const errors = Object.fromEntries(["constant", ...names].map(name => [name, []]));
+  const selections = [];
+  for (let fold = 0; fold < foldCount; fold += 1) {
+    const train = prepared.filter(row => row.fold !== fold);
+    const test = prepared.filter(row => row.fold === fold);
+    const centreCandidates = Array.from({ length: 9 }, (_, index) =>
+      quantile(train.map(row => row.tailCoordinate), 0.1 * (index + 1)));
+    const widths = [0.25, 0.5, 1, 2, 4, 8, 16, 32, 64];
+    const constant = median(train.map(row => row.residual));
+    const families = {
+      linearTail: [{ parameters: {}, feature: value => value }],
+      sharpStep: centreCandidates.map(centre => ({
+        parameters: { centreDeg: centre }, feature: value => value < centre ? -1 : 1
+      })),
+      smoothStep: centreCandidates.flatMap(centre => widths.map(width => ({
+        parameters: { centreDeg: centre, widthDeg: width },
+        feature: value => Math.tanh((value - centre) / width)
+      }))),
+      clusterRelaxation: widths.map(length => ({
+        parameters: { lengthDeg: length }, feature: value => Math.exp(-Math.abs(value) / length)
+      })),
+      boundaryLayer: centreCandidates.flatMap(centre => widths.map(width => ({
+        parameters: { centreDeg: centre, widthDeg: width },
+        feature: value => 1 / Math.cosh((value - centre) / width) ** 2
+      })))
+    };
+    const selected = {};
+    for (const name of names) {
+      let best = null;
+      for (const candidate of families[name]) {
+        const fit = fitFeature(train, candidate.feature);
+        if (best === null || fit.meanAbsoluteError < best.fit.meanAbsoluteError) best = { candidate, fit };
+      }
+      selected[name] = {
+        ...best.candidate.parameters,
+        interceptKmPerSec: best.fit.intercept,
+        amplitudeKmPerSec: best.fit.slope,
+        trainingMeanAbsoluteErrorKmPerSec: best.fit.meanAbsoluteError
+      };
+      for (const row of test) errors[name].push(row.residual - best.fit.predict(row));
+    }
+    for (const row of test) errors.constant.push(row.residual - constant);
+    selections.push({ fold, train: train.length, test: test.length, selected });
+  }
+  const constantSummary = errorSummary(errors.constant);
+  const summary = { constant: constantSummary };
+  names.forEach((name, index) => {
+    const candidate = errorSummary(errors[name]);
+    summary[name] = {
+      ...candidate,
+      deltaMeanAbsoluteErrorVersusConstantKmPerSec:
+        candidate.meanAbsoluteErrorKmPerSec - constantSummary.meanAbsoluteErrorKmPerSec,
+      pairedBootstrapDelta95PercentIntervalKmPerSec:
+        pairedBootstrapInterval(errors[name], errors.constant, 0x4d343400 + index)
+    };
+  });
+  const pairwiseAgainstLinear = Object.fromEntries(names.filter(name => name !== "linearTail").map((name, index) => {
+    const candidate = summary[name];
+    const linear = summary.linearTail;
+    return [name, {
+      deltaMeanAbsoluteErrorCandidateMinusLinearKmPerSec:
+        candidate.meanAbsoluteErrorKmPerSec - linear.meanAbsoluteErrorKmPerSec,
+      pairedBootstrapDelta95PercentIntervalKmPerSec:
+        pairedBootstrapInterval(errors[name], errors.linearTail, 0x4c494e00 + index)
+    }];
+  }));
+  return {
+    status: "retrospective nested-cross-validation shape tournament; hypothesis discovery only",
+    coordinate: "signed angular coordinate along the published-catalogue sky-plane principal axis",
+    folds: "sha256(dr3SourceId) modulo 5",
+    trainingSelection: "candidate boundary centres are training-fold deciles; widths/lengths are frozen at 0.25, 0.5, 1, 2, 4, 8, 16, 32 and 64 degrees; Theil-Sen amplitude and intercept minimize candidate training MAE",
+    models: {
+      constant: "a",
+      linearTail: "a+b*s",
+      sharpStep: "a+b*sign(s-s0)",
+      smoothStep: "a+b*tanh((s-s0)/w)",
+      clusterRelaxation: "a+b*exp(-abs(s)/ell)",
+      boundaryLayer: "a+b*sech^2((s-s0)/w)"
+    },
+    heldOut: summary,
+    pairwiseAgainstLinear,
+    selections
+  };
+};
+
 const vizierResponse = await fetch(vizierUrl);
 assert.equal(vizierResponse.ok, true);
 const catalog = parseVizier(await vizierResponse.text());
@@ -464,6 +581,7 @@ const fullBaselineResidualRows = withRadialVelocity.map(row => ({
   residual: row.radialVelocity - dot(basisAt(row.ra, row.dec).radial, velocityFits.allSelectedMembers.velocity)
 }));
 const heldOutRehearsal = crossValidatedComparison(fullBaselineResidualRows);
+const shapeTournament = crossValidatedShapeTournament(fullBaselineResidualRows);
 const centre = basisAt(medianRa, medianDec).radial;
 const gaiaJoinedDataSha256 = createHash("sha256").update(JSON.stringify(joined.map(row => ({
   dr2SourceId: row.dr2SourceId,
@@ -508,6 +626,7 @@ console.log(JSON.stringify({
   ),
   fits: analyses,
   heldOutRehearsal,
+  shapeTournament,
   falsifierBoundary: {
     independentDiscovery: false,
     constantOffsetIdentifiesT1: false,

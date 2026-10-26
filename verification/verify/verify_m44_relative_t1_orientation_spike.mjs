@@ -110,6 +110,17 @@ assert.equal(modelGate.ordinaryLinearTailModel.absoluteErrorWins +
 assert.ok(modelGate.ordinaryMinusConstantMeanAbsoluteErrorKmPerSec < 0);
 assert.ok(modelGate.pairedBootstrap.meanAbsoluteErrorDelta95PercentIntervalKmPerSec[1] < 0);
 assert.match(modelGate.comparisonStatus, /not confirmatory/u);
+const tournament = crossChannel.alternativeShapeTournament;
+assert.match(tournament.status, /not confirmatory/u);
+for (const name of ["linearTail", "sharpStep", "smoothStep", "clusterRelaxation", "boundaryLayer"]) {
+  assert.ok(tournament.models[name].heldOutMaeKmPerSec < tournament.models.constant.heldOutMaeKmPerSec);
+}
+for (const interval of Object.values(tournament.candidateMinusLinearPairedBootstrap95PercentIntervalsKmPerSec)) {
+  assert.ok(interval[0] < 0 && interval[1] > 0);
+}
+assert.equal(tournament.models.clusterRelaxation.selectedLengthDegAllFolds, 64);
+assert.ok(tournament.models.smoothStep.selectedWidthRangeDeg[0] >= 32);
+assert.match(tournament.result, /no tested boundary or relaxation shape is distinguishable/u);
 
 if (process.argv.includes("--live")) {
   const response = await fetch(control.query);
@@ -141,6 +152,7 @@ console.log(JSON.stringify({
   frozenCorpusNativeT1DifferentialPrediction: false,
   retrospectiveOrdinaryLinearTailMaeImprovementKmPerSec:
     -modelGate.ordinaryMinusConstantMeanAbsoluteErrorKmPerSec,
+  alternativeTailShapesDistinguishableFromLinear: false,
   liveCatalogueVerified: process.argv.includes("--live"),
   constantAngleIdentifiable: false,
   modularAngleDefined: false,

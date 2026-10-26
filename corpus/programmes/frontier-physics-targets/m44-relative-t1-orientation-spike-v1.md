@@ -154,6 +154,25 @@ The runner now compares these two frozen shapes with five folds assigned by `sha
 
 This is a *retrospective rehearsal*, not a confirmatory holdout: the aggregate gradient had already been inspected before the hash split and model shapes were frozen. It demonstrates that the ordinary linear spatial term is not merely an in-sample artefact, while showing that the only presently admissible corpus-native \(T_1\) model has no differential prediction to compete with it. The scientific gate therefore moves outward rather than inward: obtain the N-body snapshot or an equivalent frozen ordinary prediction, derive \(\theta(s)\) independently of M44 if the programme can, and evaluate both on spectroscopy not used anywhere in this spike.
 
+## Alternative tail-shape tournament
+
+The runner also performs a nested five-fold exploratory tournament rather than assuming the residual is linear. Candidate centres are selected from training-fold deciles, candidate widths are frozen at 0.25 through 64 degrees, and each amplitude and intercept is fitted by Theil--Sen regression. The held-out results are:
+
+| residual shape | interpretation | held-out MAE (km/s) | change from constant (km/s) |
+|---|---|---:|---:|
+| \(a\) | constant projection / null | 2.0712 | -- |
+| \(a+bs\) | ordinary linear tail drift | 2.0148 | -0.0564 |
+| \(a+b\,\mathrm{sign}(s-s_0)\) | sharp sector boundary | 2.0335 | -0.0377 |
+| \(a+b\tanh[(s-s_0)/w]\) | smooth sector transition | 2.0156 | -0.0556 |
+| \(a+b e^{-|s|/\ell}\) | cluster-centred relaxation | 2.0282 | -0.0430 |
+| \(a+b\,\mathrm{sech}^2[(s-s_0)/w]\) | localized mixing layer | 2.0209 | -0.0503 |
+
+Every spatial shape improves on the constant model in its paired bootstrap comparison. None is distinguishable from the linear model: the candidate-minus-linear 95% intervals are [-0.0087,0.0466] km/s for the sharp step, [-0.0063,0.0089] for the smooth step, [-0.0101,0.0397] for relaxation and [-0.0132,0.0277] for the localized layer.
+
+The fitted parameters explain why. The smooth step selects widths of 32 or 64 degrees and unstable centres, collapsing toward its linear limit. Relaxation selects the maximum 64-degree scale in all five folds, with compensating amplitude and intercept, so its length is not identified. The localized layer is more stable, selecting centres from -1.88 to -1.54 degrees and widths of 8 or 16 degrees, but it earns no resolved predictive advantage. Sharp-step centres range from 1.85 to 3.71 degrees and likewise do not win.
+
+This is a bounded model-equivalence result. The tails say that a spatial term is useful; their current two-dimensional angular residuals do not identify a boundary topology. A real discriminator now requires three-dimensional tail position and uncertainty, ordinary phase-space predictions, or new spectroscopy extending beyond the present angular window.
+
 ## What the present evidence says
 
 M44 is an attractive calibration ensemble, but the current corpus supplies neither a source-derived \(T_1\)-to-observable map nor a physical law assigning separate \(T_1\) orientations to nearby stellar systems. Praesepe lies within the Milky Way and its established literature treats its spectra, age, chemistry, planets and tails with ordinary stellar and Galactic dynamics.
