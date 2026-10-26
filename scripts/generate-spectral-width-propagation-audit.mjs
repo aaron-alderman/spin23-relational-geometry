@@ -34,13 +34,14 @@ const groups = {
   ],
   contextual_or_synthesis_use: [
     /\/dynatology\/|programme_closure_|grand-synthesis/u,
-    /admissibility_(?:07|7|11|32|35|56)_|frontier_wave6_|frontier_wave7_(?:11|42|104|108|140)_/u,
+    /admissibility_(?:07|7|11|32|35|56|147)_|frontier_wave6_|frontier_wave7_(?:11|42|104|108|140)_/u,
   ],
   spectrum_gap_or_residue_not_width: [
     /^corpus\/claims\//u,
     /frontier_wave7_|moonshine-program-lattice|admissibility_(?:58|69)_|lane-expansion\/programme_lane_expansion_12/u,
     /translation-free-exceptional-topology\/E8_COUPLED_WIRE_TOMOGRAPHY/u,
     /translation-free-exceptional-topology\/E8_CARTAN_SHELL10_SPECTROSCOPY/u,
+    /lattice-subroutine-gravity\/period-matrix-jordan-boundary-gate/u,
   ],
 };
 const reasons = {

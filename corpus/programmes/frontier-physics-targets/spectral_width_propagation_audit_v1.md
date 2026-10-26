@@ -7,15 +7,15 @@
 
 ## Result
 
-All **118** effective-spectral candidates emitted by the transition audit are assigned to a mechanism-safe disposition; **0** remain unreviewed. This closes a typing queue, not the physical theories in those documents.
+All **120** effective-spectral candidates emitted by the transition audit are assigned to a mechanism-safe disposition; **0** remain unreviewed. This closes a typing queue, not the physical theories in those documents.
 
 | Disposition | Documents |
 |---|---:|
 | `navigation_or_register` | 12 |
 | `open_system_or_network_width` | 12 |
 | `physical_spectroscopy_requires_width_ledger` | 18 |
-| `contextual_or_synthesis_use` | 19 |
-| `spectrum_gap_or_residue_not_width` | 57 |
+| `contextual_or_synthesis_use` | 20 |
+| `spectrum_gap_or_residue_not_width` | 58 |
 
 ## Boundary
 
@@ -82,6 +82,7 @@ An eigenvalue spectrum, response pole, fitted linewidth, ringdown constant and p
 | `corpus/programmes/admissibility/admissibility_138_kerr_separates_horizon_ergosurface_and_superradiant_channel.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
 | `corpus/programmes/admissibility/admissibility_142_a_three_resonator_parity_switch_turns_the_dual_face_into_a_detector.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |
 | `corpus/programmes/admissibility/admissibility_144_kerr_multirecord_public_data_consistency_programme.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |
+| `corpus/programmes/admissibility/admissibility_147_xi_genus_two_weil_spectral_compression_and_hyperbolic_trace_gate.md` | `contextual_or_synthesis_use` | The document uses spectral language to map, compare or govern branches; it is not an independent width determination. |
 | `corpus/programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
 | `corpus/programmes/admissibility/admissibility_28_platform_triage_for_the_quarter_turn_contraction_experiment.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
 | `corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md` | `contextual_or_synthesis_use` | The document uses spectral language to map, compare or govern branches; it is not an independent width determination. |
@@ -131,6 +132,7 @@ An eigenvalue spectrum, response pole, fitted linewidth, ringdown constant and p
 | `corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |
 | `corpus/programmes/lane-expansion/programme_lane_expansion_12_three_coupled_oscillators_realize_the_cone_and_an_orientation_odd_dynamic_witness.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/lane-expansion/programme_lane_expansion_19_absorptive_yukawa_spectroscopy_supplies_a_physical_broken_current_anchor.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
+| `corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |
 | `corpus/programmes/lattice-subroutine-gravity/two-quadrature-seam-experiment.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |
 | `corpus/programmes/lattice-subroutine-gravity/two-resonator-transfer-preflight.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |

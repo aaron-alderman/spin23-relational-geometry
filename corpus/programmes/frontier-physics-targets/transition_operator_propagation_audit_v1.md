@@ -7,7 +7,7 @@
 
 ## Result
 
-The audit scans **2289** Markdown documents and routes **336** for possible transition, spectral or metastability relevance. **70** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **99** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
+The audit scans **2296** Markdown documents and routes **338** for possible transition, spectral or metastability relevance. **70** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **99** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
 
 This is intentionally not a global search-and-replace. “Radiative stability,” a graph transition, a resonance pole, detector lag and an atomic decay do not name the same thing. The audit makes that difference visible and keeps the unresolved set enumerable.
 
@@ -94,7 +94,7 @@ Barrier escape and hysteresis use a different mechanism ledger. Effective pole o
 
 ## Remaining boundary
 
-The operator/rate queue is empty under the declared vocabulary: every hit is in the reviewed spine, carries the AZ-127 boundary in context, has no rate context, or has an explicit semantic exclusion. The **118** effective-spectral candidates are now exhaustively routed by the [spectral-width audit](spectral_width_propagation_audit_v1.md); this closes their width/lifetime typing queue, not their physical theories. The **37** barrier/kinetic candidates remain a separately typed queue. None may be silently collapsed into atomic or nuclear transition language.
+The operator/rate queue is empty under the declared vocabulary: every hit is in the reviewed spine, carries the AZ-127 boundary in context, has no rate context, or has an explicit semantic exclusion. The **120** effective-spectral candidates are now exhaustively routed by the [spectral-width audit](spectral_width_propagation_audit_v1.md); this closes their width/lifetime typing queue, not their physical theories. The **37** barrier/kinetic candidates remain a separately typed queue. None may be silently collapsed into atomic or nuclear transition language.
 
 ## Exit criterion
 
