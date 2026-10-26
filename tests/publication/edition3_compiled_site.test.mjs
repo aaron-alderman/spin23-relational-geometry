@@ -53,13 +53,22 @@ test("short articles are discoverable, shareable and machine-readable without du
     "06-proton-safety",
     "07-exceptional-horizon",
   ];
+  const standaloneArticles = [
+    ["typed-object-signatures", /The dimensional firewall/u, /Complete circulation paper →/u],
+    ["conversational-contact", /Why this is the correct starting point/u, /Canonical research source →/u],
+    ["pagerank-selection-finesse", /The exact mechanism/u, /Canonical research source →/u],
+    ["measurement-creates-branches", /trajectory collapse/u, /Canonical research source →/u],
+    ["local-information-global-identification", /globally two-to-one/u, /Canonical research source →/u],
+    ["two-mode-phase", /three-mode loop/u, /Canonical research source →/u],
+  ];
   const index = readFileSync(join(siteRoot, "articles", "index.html"), "utf8");
   assert.match(index, /<h1>Articles<\/h1>/u);
   assert.match(index, /Short, shareable routes into the corpus/u);
-  assert.equal([...index.matchAll(/<article class="article-card">/gu)].length, articleSlugs.length + 1);
+  assert.equal([...index.matchAll(/<article class="article-card">/gu)].length, articleSlugs.length + standaloneArticles.length);
   assert.match(index, /Post on X/u);
   assert.match(index, /Bluesky/u);
   assert.match(index, /href="typed-object-signatures\.html"/u);
+  for (const [slug] of standaloneArticles) assert.match(index, new RegExp(`href="${slug}\\.html"`, "u"), slug);
 
   for (const slug of articleSlugs) {
     assert.ok(index.includes(`href="../${slug}.html"`), slug);
@@ -87,6 +96,19 @@ test("short articles are discoverable, shareable and machine-readable without du
   assert.match(signatureArticle, /Share this article/u);
   assert.match(signatureArticle, /The dimensional firewall/u);
   assert.match(signatureArticle, /Complete circulation paper →/u);
+
+  for (const [slug, bodyPattern, sourcePattern] of standaloneArticles) {
+    const html = readFileSync(join(siteRoot, "articles", `${slug}.html`), "utf8");
+    assert.match(html, /<meta property="og:type" content="article">/u, slug);
+    assert.match(html, /<script type="application\/ld\+json">/u, slug);
+    assert.match(html, /"@type":"Article"/u, slug);
+    assert.match(html, new RegExp(`"url":"https://aaron-alderman.github.io/spin23-relational-geometry/edition-3/articles/${slug}\\.html"`, "u"), slug);
+    assert.match(html, /Share this article/u, slug);
+    assert.match(html, /twitter\.com\/intent\/tweet/u, slug);
+    assert.match(html, /bsky\.app\/intent\/compose/u, slug);
+    assert.match(html, bodyPattern, slug);
+    assert.match(html, sourcePattern, slug);
+  }
 });
 
 test("every corpus Markdown source has a provenance-stamped compiled library page", () => {

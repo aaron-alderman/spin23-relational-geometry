@@ -43,7 +43,49 @@ const signatureArticle = {
   slug: "typed-object-signatures",
   title: "What Physics, Knowledge, and Programs Share—and What They Do Not",
   kicker: "Typed signatures, dimensional firewalls, and trustworthy translation",
+  source: signatureArticleSource,
+  label: "Featured cross-domain article",
+  note: "A concise reader edition of the complete circulation paper.",
+  completeSource: "docs/papers/typed_object_signatures_physics_epistemics_programming_draft.md",
 };
+const sourceArticles = [
+  {
+    slug: "conversational-contact",
+    title: "From ‘this sounds stupid’ to an inspectable structure",
+    kicker: "How felt mismatch becomes a testable map of conversational contact",
+    source: "corpus/programmes/epistemology/frontier_epistemology_06_from_felt_wrong_to_legible_structure.md",
+    label: "Epistemology article",
+  },
+  {
+    slug: "pagerank-selection-finesse",
+    title: "PageRank, Perron selection and the finesse trade-off",
+    kicker: "A selector can guarantee one answer by erasing structure",
+    source: "corpus/programmes/frontier-physics-targets/page_rank_perron_selector_bridge_v1.md",
+    label: "Methods article",
+  },
+  {
+    slug: "measurement-creates-branches",
+    title: "Measurement creates branches, not unique unconditional selection",
+    kicker: "Why a record labels a branch without choosing one state for the ensemble",
+    source: "corpus/programmes/admissibility/admissibility_38_measurement_creates_branches_not_unique_unconditional_selection.md",
+    label: "Measurement article",
+  },
+  {
+    slug: "local-information-global-identification",
+    title: "Local information is not global identification",
+    kicker: "A locally full-rank detector can remain globally two-to-one",
+    source: "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
+    label: "Admissibility article",
+  },
+  {
+    slug: "two-mode-phase",
+    title: "A two-mode coupling phase is not an intrinsic seam",
+    kicker: "The smallest gauge-invariant phase needs a closed three-mode loop",
+    source: "corpus/programmes/lattice-subroutine-gravity/two-mode-phase-gauge-gate.md",
+    label: "Physics article",
+  },
+];
+const standaloneArticles = [signatureArticle, ...sourceArticles];
 const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 const sha256 = value => createHash("sha256").update(value).digest("hex");
 const posix = value => value.split(sep).join("/");
@@ -1546,11 +1588,11 @@ const directoryPageHref = (fromFile, directory) => encodePath(relative(dirname(f
 const githubBlobUrl = source => `${repositoryUrl}/blob/${encodeURIComponent(buildRevision === "local-working-tree" ? "main" : buildRevision)}/${encodePath(source)}`;
 const githubRawUrl = source => `https://raw.githubusercontent.com/aaron-alderman/spin23-relational-geometry/${encodeURIComponent(buildRevision === "local-working-tree" ? "main" : buildRevision)}/${encodePath(source)}`;
 
-const resolveMarkdownTarget = (source, target) => {
+const resolveMarkdownTarget = (source, target, fromFile = sourceOutputPath(source)) => {
   if (/^(?:[a-z]+:|#)/iu.test(target)) return target;
   const [pathPart, fragment = ""] = target.split("#", 2);
   const candidate = posix(normalize(join(dirname(source), pathPart))).replace(/^\.\//u, "");
-  if (librarySourceSet.has(candidate)) return `${sourcePageHref(sourceOutputPath(source), candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
+  if (librarySourceSet.has(candidate)) return `${sourcePageHref(fromFile, candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
   if (candidate.endsWith(".md")) return `${githubBlobUrl(candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
   return githubBlobUrl(candidate);
 };
@@ -1596,7 +1638,7 @@ const editionRouteFor = source => {
   return route.reverse();
 };
 
-const inlineMarkdown = (value, source) => {
+const inlineMarkdown = (value, source, fromFile = sourceOutputPath(source)) => {
   const code = [];
   let output = esc(value).replace(/`([^`]+)`/gu, (_, body) => `\u0000${code.push(`<code>${body}</code>`) - 1}\u0000`);
   output = output.replace(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/gu, (_, alt, target) => {
@@ -1604,7 +1646,7 @@ const inlineMarkdown = (value, source) => {
     const href = /^(?:https?:|data:)/iu.test(rawTarget) ? rawTarget : githubRawUrl(posix(normalize(join(dirname(source), rawTarget))));
     return `\u0000${code.push(`<img src="${esc(href)}" alt="${alt}">`) - 1}\u0000`;
   });
-  output = output.replace(/\[([^\]]+)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/gu, (_, label, target) => `\u0000${code.push(`<a href="${esc(resolveMarkdownTarget(source, target.replaceAll("&amp;", "&")))}">${label}</a>`) - 1}\u0000`);
+  output = output.replace(/\[([^\]]+)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/gu, (_, label, target) => `\u0000${code.push(`<a href="${esc(resolveMarkdownTarget(source, target.replaceAll("&amp;", "&"), fromFile))}">${label}</a>`) - 1}\u0000`);
   output = output.replace(/\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$|(?<!\$)\$(?!\$)[^$\n]+\$(?!\$)/gu, math => `\u0000${code.push(math) - 1}\u0000`);
   output = output.replace(/\*\*([^*]+)\*\*/gu, "<strong>$1</strong>").replace(/__([^_]+)__/gu, "<strong>$1</strong>");
   output = output.replace(/(?<!\*)\*([^*]+)\*(?!\*)/gu, "<em>$1</em>").replace(/(?<!_)_([^_]+)_(?!_)/gu, "<em>$1</em>");
@@ -1642,7 +1684,7 @@ const tableSeparator = line => {
 };
 const tableAlignment = separator => separator.startsWith(":") && separator.endsWith(":") ? "center" : separator.endsWith(":") ? "right" : separator.startsWith(":") ? "left" : null;
 
-const renderMarkdown = (markdown, source) => {
+const renderMarkdown = (markdown, source, fromFile = sourceOutputPath(source)) => {
   const lines = markdown.replace(/\r\n?/gu, "\n").split("\n");
   const displayMathStack = [];
   for (let index = 0; index < lines.length; index += 1) {
@@ -1661,9 +1703,9 @@ const renderMarkdown = (markdown, source) => {
   let displayMathDelimiter = null;
   let displayMathLines = [];
   let recoverDisplayMath = false;
-  const flushParagraph = () => { if (paragraph.length) blocks.push(`<p>${inlineMarkdown(paragraph.join(" "), source)}</p>`); paragraph = []; };
-  const flushList = () => { if (listType) blocks.push(`<${listType}>${listItems.map(item => `<li>${inlineMarkdown(item, source)}</li>`).join("")}</${listType}>`); listType = null; listItems = []; };
-  const flushQuote = () => { if (quote.length) blocks.push(`<blockquote>${renderMarkdown(quote.join("\n"), source)}</blockquote>`); quote = []; };
+  const flushParagraph = () => { if (paragraph.length) blocks.push(`<p>${inlineMarkdown(paragraph.join(" "), source, fromFile)}</p>`); paragraph = []; };
+  const flushList = () => { if (listType) blocks.push(`<${listType}>${listItems.map(item => `<li>${inlineMarkdown(item, source, fromFile)}</li>`).join("")}</${listType}>`); listType = null; listItems = []; };
+  const flushQuote = () => { if (quote.length) blocks.push(`<blockquote>${renderMarkdown(quote.join("\n"), source, fromFile)}</blockquote>`); quote = []; };
   for (let lineIndex = 0; lineIndex < lines.length; lineIndex += 1) {
     const line = lines[lineIndex];
     if (displayMathDelimiter) {
@@ -1705,7 +1747,7 @@ const renderMarkdown = (markdown, source) => {
     const heading = /^(#{1,6})\s+(.+)$/u.exec(line);
     const unordered = /^\s*[-*+]\s+(.+)$/u.exec(line);
     const ordered = /^\s*\d+[.)]\s+(.+)$/u.exec(line);
-    if (heading) { flushParagraph(); flushList(); flushQuote(); blocks.push(`<h${heading[1].length} id="${anchorId(heading[2])}">${inlineMarkdown(heading[2], source)}</h${heading[1].length}>`); continue; }
+    if (heading) { flushParagraph(); flushList(); flushQuote(); blocks.push(`<h${heading[1].length} id="${anchorId(heading[2])}">${inlineMarkdown(heading[2], source, fromFile)}</h${heading[1].length}>`); continue; }
     const separators = lineIndex + 1 < lines.length ? tableSeparator(lines[lineIndex + 1]) : null;
     if (separators && line.includes("|")) {
       flushParagraph(); flushList(); flushQuote();
@@ -1720,7 +1762,7 @@ const renderMarkdown = (markdown, source) => {
         lineIndex += 1;
       }
       lineIndex -= 1;
-      const cellHtml = (tag, value, index) => `<${tag}${alignments[index] ? ` style="text-align:${alignments[index]}"` : ""}>${inlineMarkdown(value || "", source)}</${tag}>`;
+      const cellHtml = (tag, value, index) => `<${tag}${alignments[index] ? ` style="text-align:${alignments[index]}"` : ""}>${inlineMarkdown(value || "", source, fromFile)}</${tag}>`;
       blocks.push(`<table><thead><tr>${headers.map((value, index) => cellHtml("th", value, index)).join("")}</tr></thead><tbody>${rows.map(row => `<tr>${headers.map((_, index) => cellHtml("td", row[index], index)).join("")}</tr>`).join("")}</tbody></table>`);
       continue;
     }
@@ -1937,7 +1979,7 @@ const standaloneArticleStructuredData = article => {
   };
 };
 const socialShareLinks = (chapter, prefix = "") => {
-  const pagePath = chapter === signatureArticle ? `articles/${chapter.slug}.html` : `${chapter.slug}.html`;
+  const pagePath = chapter.source ? `articles/${chapter.slug}.html` : `${chapter.slug}.html`;
   const url = publicPageUrl(pagePath);
   const text = `${typeset(chapter.title)} — ${typeset(chapter.kicker)}`;
   const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
@@ -1952,23 +1994,33 @@ const articleCardHtml = chapter => {
   const blueskyHref = `https://bsky.app/intent/compose?text=${encodeURIComponent(`${text}\n${url}`)}`;
   return `<article class="article-card"><p class="kicker">Short article</p><h2><a href="../${chapter.slug}.html">${mathHtml(chapter.title)}</a></h2><p class="lede">${mathHtml(chapter.kicker)}.</p><div class="chapter-taxonomy">${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug], "../")}${archetypeBadgeHtml(chapterArchetype[chapter.slug], "../")}</div><div class="article-actions"><a href="../${chapter.slug}.html">Read article →</a><a href="${esc(xHref)}" target="_blank" rel="noopener noreferrer">Post on X</a><a href="${esc(blueskyHref)}" target="_blank" rel="noopener noreferrer">Bluesky</a></div></article>`;
 };
-const signatureArticleCardHtml = () => {
-  const url = publicPageUrl(`articles/${signatureArticle.slug}.html`);
-  const text = `${signatureArticle.title} — ${signatureArticle.kicker}`;
+const standaloneArticleCardHtml = article => {
+  const url = publicPageUrl(`articles/${article.slug}.html`);
+  const text = `${article.title} — ${article.kicker}`;
   const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
   const blueskyHref = `https://bsky.app/intent/compose?text=${encodeURIComponent(`${text}\n${url}`)}`;
-  return `<article class="article-card"><p class="kicker">Featured cross-domain article</p><h2><a href="${signatureArticle.slug}.html">${esc(signatureArticle.title)}</a></h2><p class="lede">${esc(signatureArticle.kicker)}.</p><p class="article-note">A concise reader edition of the complete circulation paper.</p><div class="article-actions"><a href="${signatureArticle.slug}.html">Read article →</a><a href="${esc(xHref)}" target="_blank" rel="noopener noreferrer">Post on X</a><a href="${esc(blueskyHref)}" target="_blank" rel="noopener noreferrer">Bluesky</a></div></article>`;
+  const note = article.note || "A generated reader view of the canonical corpus source.";
+  return `<article class="article-card"><p class="kicker">${esc(article.label || "Corpus article")}</p><h2><a href="${article.slug}.html">${esc(article.title)}</a></h2><p class="lede">${esc(article.kicker)}.</p><p class="article-note">${esc(note)}</p><div class="article-actions"><a href="${article.slug}.html">Read article →</a><a href="${esc(xHref)}" target="_blank" rel="noopener noreferrer">Post on X</a><a href="${esc(blueskyHref)}" target="_blank" rel="noopener noreferrer">Bluesky</a></div></article>`;
 };
 const articlesIndexHtml = () => {
-  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html" aria-current="page">Articles</a> · <a href="../reading-key.html">Reading key</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">Short, shareable routes into the corpus</p><h1>Articles</h1><p class="lede">Eight focused essays introduce typed translation, the mathematical spine, physical interfaces and hard boundaries of the programme. Each is designed to stand on its own in a social link while retaining a route to its evidence and complete source.</p><aside class="boundary"><strong>Glass-box publication.</strong> These are reader views rather than detached summaries. The complete circulation paper and canonical Edition chapters remain controlling sources.</aside></header><section><div class="article-grid">${signatureArticleCardHtml()}${articleChapters.map(articleCardHtml).join("")}</div></section><p class="article-note">Social links open the platform composer with a title, thesis and canonical URL. Nothing is posted without the reader’s action.</p><nav class="page-turn"><a href="../index.html">← Edition contents</a><a href="typed-object-signatures.html">Begin with typed signatures →</a></nav>`;
+  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html" aria-current="page">Articles</a> · <a href="../reading-key.html">Reading key</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">Short, shareable routes into the corpus</p><h1>Articles</h1><p class="lede">Thirteen focused essays introduce typed translation, conversational contact, mathematical selection, measurement, physical interfaces and hard boundaries of the programme. Each is designed to stand on its own in a social link while retaining a route to its evidence and complete source.</p><aside class="boundary"><strong>Glass-box publication.</strong> These are generated reader views rather than detached summaries. Canonical corpus documents, the complete circulation paper and Edition chapters remain controlling sources.</aside></header><section><div class="article-grid">${standaloneArticles.map(standaloneArticleCardHtml).join("")}${articleChapters.map(articleCardHtml).join("")}</div></section><p class="article-note">Social links open the platform composer with a title, thesis and canonical URL. Nothing is posted without the reader’s action.</p><nav class="page-turn"><a href="../index.html">← Edition contents</a><a href="typed-object-signatures.html">Begin with typed signatures →</a></nav>`;
   return htmlDoc("Articles", body, "../", false, "articles/index.html", "Short, shareable and evidence-linked articles from The Admissibility Frontier.");
 };
-const signatureArticleHtml = () => {
-  if (!existsSync(join(root, signatureArticleSource))) throw new Error(`Missing signature article source: ${signatureArticleSource}`);
-  const markdown = readFileSync(join(root, signatureArticleSource), "utf8");
-  const bodyMarkdown = markdown.replace(/^# [^\n]+\n+_[^\n]+_\n+/u, "");
-  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html">Articles</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">Featured cross-domain article</p><h1>${esc(signatureArticle.title)}</h1><p class="lede">${esc(signatureArticle.kicker)}.</p>${socialShareLinks(signatureArticle, "../")}</header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, signatureArticleSource)}</article><nav class="page-turn"><a href="index.html">← All articles</a><a href="${esc(githubBlobUrl("docs/papers/typed_object_signatures_physics_epistemics_programming_draft.md"))}">Complete circulation paper →</a></nav>`;
-  return htmlDoc(signatureArticle.title, body, "../", false, `articles/${signatureArticle.slug}.html`, signatureArticle.kicker, { type: "article", structuredData: standaloneArticleStructuredData(signatureArticle) });
+const standaloneArticleHtml = article => {
+  if (!existsSync(join(root, article.source))) throw new Error(`Missing standalone article source: ${article.source}`);
+  const markdown = readFileSync(join(root, article.source), "utf8");
+  const firstSection = markdown.search(/^## /mu);
+  const bodyMarkdown = article === signatureArticle
+    ? markdown.replace(/^# [^\n]+\n+_[^\n]+_\n+/u, "")
+    : firstSection >= 0 ? markdown.slice(firstSection) : markdown.replace(/^# [^\n]+\n+/u, "");
+  const sourceHref = githubBlobUrl(article.completeSource || article.source);
+  const sourceLabel = article.completeSource ? "Complete circulation paper" : "Canonical research source";
+  const provenance = article.completeSource
+    ? "This concise reader edition preserves a route to the complete circulation paper."
+    : `This page is generated from <code>${esc(article.source)}</code>. The canonical source controls; publication does not create a second editorial authority.`;
+  const output = join(siteArticlesRoot, `${article.slug}.html`);
+  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html">Articles</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">${esc(article.label || "Corpus article")}</p><h1>${esc(article.title)}</h1><p class="lede">${esc(article.kicker)}.</p><aside class="boundary"><strong>Source boundary.</strong> ${provenance}</aside>${socialShareLinks(article, "../")}</header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, article.source, output)}</article><nav class="page-turn"><a href="index.html">← All articles</a><a href="${esc(sourceHref)}">${sourceLabel} →</a></nav>`;
+  return htmlDoc(article.title, body, "../", false, `articles/${article.slug}.html`, article.kicker, { type: "article", structuredData: standaloneArticleStructuredData(article) });
 };
 
 const directoryIndexHtml = directory => {
@@ -2105,11 +2157,11 @@ if (!siteOnly) {
 }
 
 const contentsHtml = chapters.map((chapter, index) => `<div class="contents-row"><span class="chapter-number">${String(index + 1).padStart(2, "0")}</span><span class="contents-copy"><a class="chapter-title" href="${chapter.slug}.html"><strong>${mathHtml(chapter.title)}</strong></a>${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug])}${archetypeBadgeHtml(chapterArchetype[chapter.slug])}</span><a class="read-link" href="${chapter.slug}.html">Read →</a></div>`).join("");
-const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section><p class="kicker">A lighter way in</p><h2>Eight short articles</h2><p class="lede">Shareable essays introduce typed translation, the programme’s exact hinge, projective loop, physical interfaces and strongest obstructions without detaching them from their evidence.</p><p><a class="proof-link" href="articles/index.html"><span><b>Browse the articles</b><small>Standalone social previews · direct X and Bluesky sharing · sources intact</small></span><i>Read →</i></a></p></section><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><section><p class="kicker">Beyond the volume</p><h2>Follow the research all the way down</h2><p class="lede">The complete corpus is compiled into a searchable library with explicit backlinks, neighbouring documents and visible routes from this Edition into deep programme waves.</p><p><a class="proof-link" href="library/index.html"><span><b>Open the complete corpus library</b><small>${librarySources.length.toLocaleString("en")} canonical Markdown documents · one generated journey</small></span><i>Explore →</i></a></p></section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
+const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section><p class="kicker">A lighter way in</p><h2>Thirteen short articles</h2><p class="lede">Shareable essays introduce typed translation, conversational contact, mathematical selection, the programme’s exact hinge, physical interfaces and strongest obstructions without detaching them from their evidence.</p><p><a class="proof-link" href="articles/index.html"><span><b>Browse the articles</b><small>Standalone social previews · direct X and Bluesky sharing · sources intact</small></span><i>Read →</i></a></p></section><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><section><p class="kicker">Beyond the volume</p><h2>Follow the research all the way down</h2><p class="lede">The complete corpus is compiled into a searchable library with explicit backlinks, neighbouring documents and visible routes from this Edition into deep programme waves.</p><p><a class="proof-link" href="library/index.html"><span><b>Open the complete corpus library</b><small>${librarySources.length.toLocaleString("en")} canonical Markdown documents · one generated journey</small></span><i>Explore →</i></a></p></section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
 writeFileSync(join(siteRoot, "book.css"), `${css}${proofCss}${contentsFixCss}${evidenceCss}${directoryCss}${articleCss}`);
 writeFileSync(join(siteRoot, "index.html"), coverHtml);
 writeFileSync(join(siteArticlesRoot, "index.html"), articlesIndexHtml());
-writeFileSync(join(siteArticlesRoot, `${signatureArticle.slug}.html`), signatureArticleHtml());
+standaloneArticles.forEach(article => writeFileSync(join(siteArticlesRoot, `${article.slug}.html`), standaloneArticleHtml(article)));
 writeFileSync(join(siteRoot, "reading-key.html"), readingKeyHtml());
 Object.keys(taxonomy).forEach(key => writeFileSync(join(siteReadingKeyRoot, `status-${key}.html`), readingKeyDetailHtml("taxonomy", key)));
 archetypes.forEach(item => writeFileSync(join(siteReadingKeyRoot, `move-${item.key}.html`), readingKeyDetailHtml("archetype", item.key)));
