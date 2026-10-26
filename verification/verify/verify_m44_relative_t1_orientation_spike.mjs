@@ -102,6 +102,14 @@ assert.ok(Math.abs(crossChannel.fullBaselineFit.tailSlopeKmPerSecPerDeg -
 assert.equal(crossChannel.fullBaselineFit.leadingBranchCount +
   crossChannel.fullBaselineFit.trailingBranchCount, crossChannel.selection.robustRadialVelocityInliers);
 assert.match(crossChannel.authorityLimits.join(" "), /not independent discovery/u);
+const modelGate = crossChannel.frozenModelGate;
+assert.equal(modelGate.spatiallyVaryingT1ModelAdmissible, false);
+assert.match(modelGate.corpusNativeT1Model, /intercept-only null/u);
+assert.equal(modelGate.ordinaryLinearTailModel.absoluteErrorWins +
+  modelGate.constantAbsoluteErrorWinsOrTies, modelGate.evaluatedRecords);
+assert.ok(modelGate.ordinaryMinusConstantMeanAbsoluteErrorKmPerSec < 0);
+assert.ok(modelGate.pairedBootstrap.meanAbsoluteErrorDelta95PercentIntervalKmPerSec[1] < 0);
+assert.match(modelGate.comparisonStatus, /not confirmatory/u);
 
 if (process.argv.includes("--live")) {
   const response = await fetch(control.query);
@@ -130,6 +138,9 @@ console.log(JSON.stringify({
   ordinarySkyPlaneAxisRatio: derivedControl.axisRatio,
   crossChannelResidualDetected: true,
   crossChannelPhysicalAttribution: "open",
+  frozenCorpusNativeT1DifferentialPrediction: false,
+  retrospectiveOrdinaryLinearTailMaeImprovementKmPerSec:
+    -modelGate.ordinaryMinusConstantMeanAbsoluteErrorKmPerSec,
   liveCatalogueVerified: process.argv.includes("--live"),
   constantAngleIdentifiable: false,
   modularAngleDefined: false,

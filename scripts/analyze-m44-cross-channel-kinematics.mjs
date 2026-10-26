@@ -336,6 +336,85 @@ const summarizeResiduals = rows => {
   };
 };
 
+const theilSenLine = rows => {
+  const slopes = [];
+  for (let left = 0; left < rows.length; left += 1) {
+    for (let right = left + 1; right < rows.length; right += 1) {
+      const difference = rows[right].tailCoordinate - rows[left].tailCoordinate;
+      if (Math.abs(difference) > 1e-12) slopes.push((rows[right].residual - rows[left].residual) / difference);
+    }
+  }
+  const slope = median(slopes);
+  const intercept = median(rows.map(row => row.residual - slope * row.tailCoordinate));
+  return { intercept, slope };
+};
+
+const errorSummary = errors => ({
+  count: errors.length,
+  meanAbsoluteErrorKmPerSec: errors.reduce((sum, value) => sum + Math.abs(value), 0) / errors.length,
+  medianAbsoluteErrorKmPerSec: median(errors.map(Math.abs)),
+  rootMeanSquareErrorKmPerSec: Math.sqrt(errors.reduce((sum, value) => sum + value * value, 0) / errors.length)
+});
+
+const crossValidatedComparison = (rows, foldCount = 5) => {
+  const prepared = rows.map(row => ({
+    ...row,
+    fold: Number.parseInt(createHash("sha256").update(row.dr3SourceId).digest("hex").slice(0, 8), 16) % foldCount
+  }));
+  const constantErrors = [];
+  const linearErrors = [];
+  const foldFits = [];
+  let linearWins = 0;
+  for (let fold = 0; fold < foldCount; fold += 1) {
+    const train = prepared.filter(row => row.fold !== fold);
+    const test = prepared.filter(row => row.fold === fold);
+    const constant = median(train.map(row => row.residual));
+    const line = theilSenLine(train);
+    foldFits.push({ fold, train: train.length, test: test.length, constantKmPerSec: constant,
+      linearInterceptKmPerSec: line.intercept, linearSlopeKmPerSecPerDeg: line.slope });
+    for (const row of test) {
+      const constantError = row.residual - constant;
+      const linearError = row.residual - (line.intercept + line.slope * row.tailCoordinate);
+      constantErrors.push(constantError);
+      linearErrors.push(linearError);
+      if (Math.abs(linearError) < Math.abs(constantError)) linearWins += 1;
+    }
+  }
+  const constant = errorSummary(constantErrors);
+  const linear = errorSummary(linearErrors);
+  const pairedAbsoluteErrorDeltas = linearErrors.map((value, index) =>
+    Math.abs(value) - Math.abs(constantErrors[index]));
+  const bootstrapRandom = seededGenerator(0x484f4c44);
+  const bootstrapMeans = [];
+  for (let iteration = 0; iteration < 5000; iteration += 1) {
+    let sum = 0;
+    for (let draw = 0; draw < pairedAbsoluteErrorDeltas.length; draw += 1) {
+      sum += pairedAbsoluteErrorDeltas[Math.floor(bootstrapRandom() * pairedAbsoluteErrorDeltas.length)];
+    }
+    bootstrapMeans.push(sum / pairedAbsoluteErrorDeltas.length);
+  }
+  bootstrapMeans.sort((left, right) => left - right);
+  return {
+    status: "retrospective rehearsal, not confirmatory: the aggregate gradient was inspected before this split was frozen",
+    split: "five folds from sha256(dr3SourceId) modulo 5",
+    constantProjectionT1Model: constant,
+    ordinaryLinearTailModel: linear,
+    deltaMeanAbsoluteErrorOrdinaryMinusConstantKmPerSec:
+      linear.meanAbsoluteErrorKmPerSec - constant.meanAbsoluteErrorKmPerSec,
+    pairedBootstrap: {
+      iterations: 5000,
+      seedHex: "0x484f4c44",
+      meanAbsoluteErrorDelta95PercentIntervalKmPerSec: [
+        bootstrapMeans[Math.floor(0.025 * bootstrapMeans.length)],
+        bootstrapMeans[Math.floor(0.975 * bootstrapMeans.length)]
+      ]
+    },
+    ordinaryLinearAbsoluteErrorWins: linearWins,
+    constantAbsoluteErrorWinsOrTies: rows.length - linearWins,
+    foldFits
+  };
+};
+
 const vizierResponse = await fetch(vizierUrl);
 assert.equal(vizierResponse.ok, true);
 const catalog = parseVizier(await vizierResponse.text());
@@ -380,6 +459,11 @@ const analyses = Object.fromEntries(Object.entries(velocityFits).map(([name, fit
     ...result.summary
   }];
 }));
+const fullBaselineResidualRows = withRadialVelocity.map(row => ({
+  ...row,
+  residual: row.radialVelocity - dot(basisAt(row.ra, row.dec).radial, velocityFits.allSelectedMembers.velocity)
+}));
+const heldOutRehearsal = crossValidatedComparison(fullBaselineResidualRows);
 const centre = basisAt(medianRa, medianDec).radial;
 const gaiaJoinedDataSha256 = createHash("sha256").update(JSON.stringify(joined.map(row => ({
   dr2SourceId: row.dr2SourceId,
@@ -423,9 +507,12 @@ console.log(JSON.stringify({
     Object.entries(velocityFits).map(([name, fit]) => [name, dot(centre, fit.velocity)])
   ),
   fits: analyses,
+  heldOutRehearsal,
   falsifierBoundary: {
     independentDiscovery: false,
     constantOffsetIdentifiesT1: false,
+    frozenCorpusNativeT1Model: "constant projection factor; predictively identical to intercept-only null",
+    spatiallyVaryingT1LawAvailable: false,
     tailGradientCouldInformSpecifiedT1Model: true
   }
 }, null, 2));

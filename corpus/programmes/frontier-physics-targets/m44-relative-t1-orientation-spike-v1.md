@@ -128,6 +128,32 @@ The fit also demonstrates why the long tails are metrologically useful. The tang
 
 The bounded update is therefore: the proposed second channel exists and contains a reproducible spatial residue, while physical attribution remains deliberately open. The next honest gate is a frozen ordinary-dynamics prediction plus a source-native \(T_1\) residual law, followed by held-out stars or an independent spectrograph. Fitting an angle to the observed slope now would merely rename the residue.
 
+## Frozen-model gate and retrospective holdout rehearsal
+
+The corpus audit supplies one configuration-\(T_1\) spectral law,
+
+\[
+\omega_{\rm obs}=\omega_1[\cos\theta+q\sin\theta].
+\]
+
+When \(q\) and \(\theta\) are cluster-wide constants, their effect on radial-velocity residuals is also constant. The frozen corpus-native model is therefore
+
+\[
+M_{T_1}: r(s)=a,
+\]
+
+which is predictively identical to the intercept-only null. The corpus contains no law for \(\theta(s)\), no boundary condition and no coupling that would determine its derivative along a tidal tail. A model \(a+bs\) cannot honestly be called \(T_1\) merely because the data prefer \(b\ne0\).
+
+There is, however, an ordinary reason to rehearse that linear term. The published Praesepe dynamical study notes that extended-tail searches require a velocity gradient, cites the compact convergent-point method's linear trend in space velocity with cluster distance, and finds systematic tail-streamline shifts from ordinary self-gravity and epicyclic motion. In the absence of a released particle snapshot bound to this spike, the smallest literature-motivated surrogate is
+
+\[
+M_{\rm dyn}: r(s)=a+bs.
+\]
+
+The runner now compares these two frozen shapes with five folds assigned by `sha256(dr3SourceId) mod 5`. Each fold is predicted from a Theil--Sen line fitted to the other four; the constant comparator uses the training median. Across all 416 held-out predictions, the constant model has mean absolute error 2.071 km/s and median absolute error 0.971 km/s. The linear-tail model gives 2.015 and 0.908 km/s respectively, and wins the paired absolute error on 222 stars versus 194. Its five fitted slopes range from -0.0738 to -0.0936 km/s/deg. A deterministic 5,000-resample paired bootstrap gives an ordinary-minus-constant mean-absolute-error change of -0.0564 km/s with 95% interval [-0.0970,-0.0176] km/s.
+
+This is a *retrospective rehearsal*, not a confirmatory holdout: the aggregate gradient had already been inspected before the hash split and model shapes were frozen. It demonstrates that the ordinary linear spatial term is not merely an in-sample artefact, while showing that the only presently admissible corpus-native \(T_1\) model has no differential prediction to compete with it. The scientific gate therefore moves outward rather than inward: obtain the N-body snapshot or an equivalent frozen ordinary prediction, derive \(\theta(s)\) independently of M44 if the programme can, and evaluate both on spectroscopy not used anywhere in this spike.
+
 ## What the present evidence says
 
 M44 is an attractive calibration ensemble, but the current corpus supplies neither a source-derived \(T_1\)-to-observable map nor a physical law assigning separate \(T_1\) orientations to nearby stellar systems. Praesepe lies within the Milky Way and its established literature treats its spectra, age, chemistry, planets and tails with ordinary stellar and Galactic dynamics.

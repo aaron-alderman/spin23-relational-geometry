@@ -85,12 +85,42 @@
       "within3Point3Deg": { "members": 922, "conditionNumber": 1449.725908363433, "centreRvKmPerSec": 33.481749309374266 },
       "within1Point5Deg": { "members": 589, "conditionNumber": 4226.763701921912, "centreRvKmPerSec": 37.04885803646172 }
     },
+    "frozenModelGate": {
+      "corpusNativeT1Model": "r(s)=a; cluster-wide theta and q enter only as a constant projection factor and are predictively identical to the intercept-only null",
+      "spatiallyVaryingT1ModelAdmissible": false,
+      "reason": "the corpus supplies no theta(s) evolution law, boundary condition or coupling kernel from which a spatial derivative can be predicted",
+      "ordinarySurrogate": "r(s)=a+b*s; literature-motivated linear tail-velocity trend, not a replacement for the published N-body particle model",
+      "comparisonStatus": "retrospective five-fold rehearsal; not confirmatory because the aggregate gradient was inspected before the split and model freeze",
+      "split": "sha256(dr3SourceId) modulo 5",
+      "training": "Theil-Sen line for ordinary surrogate; training median for constant comparator",
+      "evaluatedRecords": 416,
+      "constantModel": {
+        "meanAbsoluteErrorKmPerSec": 2.071184073553451,
+        "medianAbsoluteErrorKmPerSec": 0.9709480042196184,
+        "rootMeanSquareErrorKmPerSec": 4.172241203536308
+      },
+      "ordinaryLinearTailModel": {
+        "meanAbsoluteErrorKmPerSec": 2.01481523396498,
+        "medianAbsoluteErrorKmPerSec": 0.9077698667173532,
+        "rootMeanSquareErrorKmPerSec": 4.0959467242996785,
+        "absoluteErrorWins": 222,
+        "foldSlopeRangeKmPerSecPerDeg": [-0.09357042448432282, -0.07380958986609633]
+      },
+      "constantAbsoluteErrorWinsOrTies": 194,
+      "ordinaryMinusConstantMeanAbsoluteErrorKmPerSec": -0.056368839588471165,
+      "pairedBootstrap": {
+        "iterations": 5000,
+        "seedHex": "0x484f4c44",
+        "meanAbsoluteErrorDelta95PercentIntervalKmPerSec": [-0.09699204043324813, -0.017573380867285684]
+      },
+      "interpretation": "a linear spatial kinematic term generalizes slightly better than a constant offset; this does not identify its physical cause and supplies no evidence for T1"
+    },
     "authorityLimits": [
       "membership was preselected with convergent-point kinematics, so this is not independent discovery",
       "a constant spectroscopic offset still does not identify configuration T1",
       "no source-derived T1 law predicted the observed spatial slope before inspection",
       "ordinary tail dynamics, binaries, atmosphere-dependent shifts and Gaia RV systematics are not yet removed",
-      "the next gate is a frozen ordinary-dynamics prediction plus a preregistered T1 residual law and held-out or independent spectroscopy"
+      "the completed linear-tail comparison is only a retrospective surrogate; the next gate requires the published N-body snapshot or equivalent frozen ordinary prediction, an independently derived theta(s) law if available, and untouched or independent spectroscopy"
     ],
     "empiricalEvidenceForT1Tilt": false
   },
@@ -115,7 +145,7 @@
     "status": "constant-angle single-channel hypothesis non-identifying; first cross-channel pass detects an unassigned spatial residual but does not identify T1",
     "empiricalEvidenceForT1Tilt": false,
     "newPhysicsClaim": false,
-    "nextGate": "freeze an ordinary-dynamics prediction and a source-native T1 residual law, then test held-out members or independent spectroscopy"
+    "nextGate": "obtain the published N-body snapshot or equivalent frozen ordinary prediction; derive any theta(s) law independently of M44; then test untouched or independent spectroscopy"
   },
   "sources": [
     "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-44/",
