@@ -255,22 +255,30 @@ const spectralDiagnostics = (operator,ritz,cutoff) => {
     return {boundaryProbability,parityExpectation};
   });
   const transitionWeights=[];
+  const sineTransitionWeights=[];
   const ground=ritz[0].vector;
   for(let excited=1;excited<ritz.length;excited+=1){
     const weights=[];
+    const sineWeights=[];
     for(let channel=0;channel<8;channel+=1){
       let amplitude=0;
+      let sineAmplitude=0;
       for(let i=0;i<ground.length;i+=1){
         const minus=operator.neighbors[i*16+2*channel];
         const plus=operator.neighbors[i*16+2*channel+1];
         const driven=0.5*((minus>=0?ground[minus]:0)+(plus>=0?ground[plus]:0));
+        const sineDriven=0.5*((plus>=0?ground[plus]:0)-(minus>=0?ground[minus]:0));
         amplitude+=ritz[excited].vector[i]*driven;
+        sineAmplitude+=ritz[excited].vector[i]*sineDriven;
       }
       weights.push(amplitude**2);
+      sineWeights.push(sineAmplitude**2);
     }
     transitionWeights.push(weights);
+    sineTransitionWeights.push(sineWeights);
   }
-  return {levels,cosineDriveTransitionWeightsFromGround:transitionWeights};
+  return {levels,cosineDriveTransitionWeightsFromGround:transitionWeights,
+    sineDriveTransitionWeightsFromGround:sineTransitionWeights};
 };
 
 const args=Object.fromEntries(process.argv.slice(2).map(argument=>{

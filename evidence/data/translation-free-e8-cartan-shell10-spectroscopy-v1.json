@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "translation-free-e8-cartan-shell10-spectroscopy-v1",
+  "date": "2026-10-26",
+  "status": "first sub-one-percent increment reached with low boundary weight; confirmation shell open",
+  "model": {
+    "branch": "cartan-kernel",
+    "hamiltonian": "H=(1/2)m^T K_E8 m + sum_i(1-cos(theta_i))",
+    "operatorCompletenessCutoff": 1,
+    "cutoff": 10,
+    "basisStates": 794161
+  },
+  "solver": {
+    "method": "restarted diagonally preconditioned block Davidson",
+    "maximumSubspace": 22,
+    "cycles": 220,
+    "elapsedSeconds": 263.8660947,
+    "levels": [4.6715055247886665,4.7735239258101405,4.842481540366214,4.940480192179551],
+    "gaps": [0,0.10201840102147397,0.1709760155775477,0.2689746673908848],
+    "residuals": [1.3119717191698126e-12,2.5658969751739784e-11,1.9694284138472073e-11,1.1213908762936824e-9]
+  },
+  "cutoffDiagnostics": {
+    "boundaryProbabilities": [0.00017343669639244128,0.00018356307933024425,0.00017796273006388496,0.00018772922211524404],
+    "parityExpectations": [0.9999999999999962,-1.0000000000000036,1.000000000000004,-1.0000000000000155],
+    "gapAtCutoff8": 0.10232014344852391,
+    "gapAtCutoff10": 0.10201840102147397,
+    "relativeGapDrift8to10": 0.0029490031667298027,
+    "promotionTolerance": 0.01,
+    "firstSubPercentIncrement": true,
+    "twoSuccessiveSubPercentIncrements": false,
+    "gapPromoted": false
+  },
+  "cosineDriveWeights": {
+    "firstExcited": [2.639159271579091e-26,1.0388205833247212e-26,9.195333809313296e-27,5.023619880367143e-27,1.2086355721088727e-27,6.624738146710838e-27,1.8591207781996417e-27,3.6950233519172873e-26],
+    "secondExcited": [0.00011891631110365454,0.00010317381650073223,0.00024262858889641993,0.00014095888658772077,0.00007954015862307588,0.00006750951321781676,0.00013305616290569807,0.000058452996966647044],
+    "selectionRule": "global inversion makes the ground state even and first excitation odd; cosine drives are even and therefore do not detect the first gap"
+  },
+  "experimentalImplication": "pair weak cosine and sine/phase drives. Cosine addresses the even second excitation, while an odd sine drive is required to expose the odd first excitation and measure the true spectral gap.",
+  "established": "The eligible K-kernel branch reaches a first sub-one-percent complete-shell increment with low boundary probability and a resolved parity/drive selection rule.",
+  "boundary": "One stable increment is not the frozen two-increment promotion rule. The value 0.1020184010 remains provisional until shell 12 confirms both the gap and detector weights.",
+  "nextGate": "run shell 12 with cosine and sine transition weights and promote only if the 10-to-12 gap drift is also below one percent"
+}
