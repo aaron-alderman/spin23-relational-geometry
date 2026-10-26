@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "inverse response-jet audit from frozen summary evidence; not a raw-data refit",
+  "sources": {
+    "m44Evidence": "evidence/data/m44-relative-t1-orientation-spike-v1.json",
+    "calibrationContract": "evidence/data/m44-anchor-width-calibration-contract-v1.json"
+  },
+  "transform": {
+    "expression": "evidence -> typed response jets -> nuisance quotient -> compatible law classes -> separating observation",
+    "nuisanceKernel": [
+      "spectroscopic location zero",
+      "cluster-wide projection normalization",
+      "perspective expansion",
+      "ordinary tail dynamics",
+      "stellar population and binary mixture",
+      "measurement and fitted-model covariance"
+    ]
+  },
+  "jets": [
+    {
+      "id": "J0",
+      "name": "location",
+      "operator": "identity / intercept",
+      "state": "quotiented",
+      "value": {
+        "medianResidualKmPerSec": 1.44275521442432
+      },
+      "reason": "spectroscopic zero point and any cluster-wide projection factor act on the same constant coordinate"
+    },
+    {
+      "id": "J1",
+      "name": "spatial-gradient",
+      "operator": "first spatial derivative",
+      "state": "survives-current-quotient",
+      "value": {
+        "tailSlopeKmPerSecPerPc": -0.020055264111813454,
+        "gradientIcrsKmPerSecPerPc": [
+          0.025603550380044707,
+          0.02981366715047503,
+          -0.02049865938626852
+        ],
+        "gradientMagnitudeKmPerSecPerPc": 0.04432371349127977,
+        "heldOutMaeGainVersusTailKmPerSec": 0.02239147537081343,
+        "heldOutGain95PercentIntervalKmPerSec": [
+          0.0012394627320664407,
+          0.043503192107147724
+        ]
+      },
+      "reason": "spatial terms improve held-out prediction, including a modest three-dimensional gain beyond the tail coordinate; attribution remains open"
+    },
+    {
+      "id": "J2",
+      "name": "curvature",
+      "operator": "second spatial derivative / Hessian",
+      "state": "unresolved",
+      "value": {
+        "smoothStepWidthRangeDeg": [
+          32,
+          64
+        ],
+        "relaxationSelectedLengthDeg": 64
+      },
+      "reason": "nonlinear candidates collapse toward broad linear limits and none beats the affine tail model"
+    },
+    {
+      "id": "D",
+      "name": "discontinuity",
+      "operator": "jump / crease",
+      "state": "not-selected",
+      "value": {
+        "sharpStepMinusLinear95PercentIntervalKmPerSec": [
+          -0.008706651176761785,
+          0.04664495190644545
+        ]
+      },
+      "reason": "the interval includes zero and the selected boundary centre is not stable enough to identify a topology"
+    },
+    {
+      "id": "W",
+      "name": "residual-width",
+      "operator": "variance after location model",
+      "state": "observed-but-not-deconvolved",
+      "value": {
+        "robustResidualSigmaKmPerSec": 1.4293890487034682
+      },
+      "reason": "measurement error, fitted common velocity, binaries, atmosphere and ordinary dynamics remain mixed"
+    },
+    {
+      "id": "C",
+      "name": "cross-line-coherence",
+      "operator": "line-by-line covariance structure",
+      "state": "not-observed",
+      "value": null,
+      "reason": "Gaia catalogue RV is an aggregate product and supplies no line identity"
+    }
+  ],
+  "lawClasses": [
+    {
+      "id": "L0-ordinary-constant",
+      "semantics": "ordinary/null plus a fitted systemic offset",
+      "signature": [
+        "J0"
+      ],
+      "status": "aliases-current-null",
+      "reason": "J0 is quotiented and cannot explain the surviving J1"
+    },
+    {
+      "id": "L1-constant-displacement",
+      "semantics": "constant position in the proposed extra coordinate",
+      "signature": [
+        "J0"
+      ],
+      "status": "untestable-current-reader",
+      "reason": "requires the failed absolute-anchor gate and cannot generate J1 without an additional spatial law"
+    },
+    {
+      "id": "L2-constant-tilt",
+      "semantics": "cluster-wide orientation through the corpus frequency projection",
+      "signature": [
+        "J0"
+      ],
+      "status": "aliases-current-null",
+      "reason": "the frozen corpus law is constant and has no theta(x) derivative"
+    },
+    {
+      "id": "L3-ordinary-affine-dynamics",
+      "semantics": "tail/perspective/cluster-dynamics residual linearized over the observed domain",
+      "signature": [
+        "J0",
+        "J1",
+        "W"
+      ],
+      "status": "empirically-compatible-surrogate",
+      "reason": "the linear spatial term improves held-out prediction and ordinary dynamics already permits such structure"
+    },
+    {
+      "id": "L4-calibration-or-population-drift",
+      "semantics": "magnitude, template, membership, binary or spatial catalogue systematics",
+      "signature": [
+        "J0",
+        "J1",
+        "W"
+      ],
+      "status": "live-nuisance-class",
+      "reason": "coarse template control is insufficient and the contract leaves affine and covariance gates open"
+    },
+    {
+      "id": "L5-generic-affine-latent-response",
+      "semantics": "an unnamed latent field coupled linearly to the residual",
+      "signature": [
+        "J0",
+        "J1"
+      ],
+      "status": "observable-equivalent-but-untyped",
+      "reason": "fits the response jet but supplies no carrier law or physical semantics"
+    },
+    {
+      "id": "L6-smooth-geometric-bend",
+      "semantics": "spatially varying orientation or embedding",
+      "signature": [
+        "J1",
+        "J2"
+      ],
+      "status": "held",
+      "reason": "structurally capable, but J2 is unresolved, the eight-cluster director field preferred flat, and no observable forward map exists"
+    },
+    {
+      "id": "L7-geometric-thickness",
+      "semantics": "distribution in the proposed extra coordinate",
+      "signature": [
+        "W",
+        "C"
+      ],
+      "status": "held",
+      "reason": "W is not deconvolved, C is absent and no thickness-to-width kernel exists"
+    },
+    {
+      "id": "L8-sharp-boundary",
+      "semantics": "crease or sector transition",
+      "signature": [
+        "D"
+      ],
+      "status": "disfavored-current-data",
+      "reason": "D is not selected and the earlier multi-cluster crease generalized worst"
+    }
+  ],
+  "equivalenceClasses": [
+    {
+      "id": "E0-location-kernel",
+      "observable": "constant residual only",
+      "members": [
+        "L0-ordinary-constant",
+        "L1-constant-displacement",
+        "L2-constant-tilt"
+      ],
+      "currentDecision": "abstain",
+      "separator": "independently calibrated absolute anchor or a preregistered nonconstant carrier response"
+    },
+    {
+      "id": "E1-affine-gradient",
+      "observable": "surviving first spatial derivative",
+      "members": [
+        "L3-ordinary-affine-dynamics",
+        "L4-calibration-or-population-drift",
+        "L5-generic-affine-latent-response",
+        "L6-smooth-geometric-bend"
+      ],
+      "currentDecision": "ordinary-surrogate-preferred; semantics open",
+      "separator": "frozen N-body prediction plus line-resolved cross-instrument holdout and an independently derived geometric transfer law"
+    },
+    {
+      "id": "E2-width-mixture",
+      "observable": "undeconvolved residual scatter",
+      "members": [
+        "L3-ordinary-affine-dynamics",
+        "L4-calibration-or-population-drift",
+        "L7-geometric-thickness"
+      ],
+      "currentDecision": "abstain",
+      "separator": "multi-epoch hierarchical variance decomposition plus withheld lines and instrument"
+    }
+  ],
+  "minimalInverseAlgebra": {
+    "generators": [
+      "J0 identity/location",
+      "J1 gradient",
+      "J2 Hessian",
+      "D jump",
+      "W variance",
+      "C cross-line covariance"
+    ],
+    "presentAfterCurrentQuotient": [
+      "J1"
+    ],
+    "notYetAdmissibleAsSignal": [
+      "J0",
+      "J2",
+      "D",
+      "W",
+      "C"
+    ],
+    "interpretation": "the current data identify an affine response coordinate, not its physical generator"
+  },
+  "decision": {
+    "preferredEmpiricalModel": "ordinary affine surrogate",
+    "promotedPhysicalCause": null,
+    "geometricResult": "constant displacement and tilt remain in the location kernel; bend and thickness remain held",
+    "nextExperiment": "freeze ordinary phase-space prediction; obtain multi-epoch line-resolved spectroscopy on two independently calibrated instruments; preserve star/line/epoch/instrument identity and full covariance",
+    "termination": "do not infer a geometric forward law from these points alone"
+  },
+  "contractConsistency": {
+    "admittedAnchorCount": 0,
+    "forwardLawAvailable": false
+  }
+}
