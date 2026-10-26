@@ -76,13 +76,18 @@ const principalAxis = rows => {
   const vx = Math.cos(eastAngle);
   const vy = Math.sin(eastAngle);
   const positionAngle = ((Math.atan2(vx, vy) * 180 / Math.PI) % 180 + 180) % 180;
+  const discriminant = Math.sqrt((xx - yy) ** 2 + 4 * xy ** 2);
+  const lambdaMax = 0.5 * (xx + yy + discriminant);
+  const lambdaMin = 0.5 * (xx + yy - discriminant);
   return {
     meanRa,
     meanDec,
     cosDec,
     vx,
     vy,
-    positionAngle
+    positionAngle,
+    covarianceEigenvaluesDeg2: [lambdaMin, lambdaMax],
+    axisRatio: Math.sqrt(lambdaMax / lambdaMin)
   };
 };
 
@@ -750,6 +755,12 @@ const centreGalactocentricRadiusKpc = Math.hypot(
   solarGalactocentricRadiusKpc - centreGalacticPc[0] / 1000,
   centreGalacticPc[1] / 1000
 );
+const conditionalAngleRad = radians(conditionalTailAsT1AngleFromDiskNormalDeg);
+const directT1Overlap = Math.abs(Math.cos(conditionalAngleRad));
+const crossT2Overlap = Math.abs(Math.sin(conditionalAngleRad));
+const meanResidualFractionOfC = analyses.allSelectedMembers.ordinaryLeastSquares.meanResidual / 299792.458;
+const qForUnitResponse = (1 - directT1Overlap) / crossT2Overlap;
+const qForMeanResidualResponse = (1 + meanResidualFractionOfC - directT1Overlap) / crossT2Overlap;
 const gaiaJoinedDataSha256 = createHash("sha256").update(JSON.stringify(joined.map(row => ({
   dr2SourceId: row.dr2SourceId,
   dr3SourceId: row.dr3SourceId,
@@ -794,7 +805,9 @@ console.log(JSON.stringify({
     robustRadialVelocityInliersAllMemberFit: analyses.allSelectedMembers.ordinaryLeastSquares.count
   },
   skyPlaneControl: {
-    positionAngleEastOfNorthDeg: axis.positionAngle
+    positionAngleEastOfNorthDeg: axis.positionAngle,
+    covarianceEigenvaluesDeg2: axis.covarianceEigenvaluesDeg2,
+    axisRatio: axis.axisRatio
   },
   robustCentre: { medianRaDeg: medianRa, medianDecDeg: medianDec },
   astrometricRadialVelocityAtRobustCentreKmPerSec: Object.fromEntries(
@@ -825,6 +838,32 @@ console.log(JSON.stringify({
       azimuthAveragedDirectOverlapRms
     },
     convention: "external-galaxy inclination i=0 is face-on and i=90 is edge-on; the tail-as-T1 values are a geometric conditional, not an identification"
+  },
+  corpusDerivedHypothesisTournament: {
+    angleStatus: "conditional tail-as-M44-T1 and Galactic-normal-as-local-T1 hypothesis",
+    relativeAngleDeg: conditionalTailAsT1AngleFromDiskNormalDeg,
+    scalarFrequencyProjection: {
+      directT1Overlap,
+      crossT2Overlap,
+      directIntensityFraction: directT1Overlap ** 2,
+      crossIntensityFraction: crossT2Overlap ** 2,
+      qRequiredForUnitResponse: qForUnitResponse,
+      qRequiredForObservedMeanResidualResponse: qForMeanResidualResponse,
+      observedMeanResidualFractionOfC: meanResidualFractionOfC,
+      result: "a near-quarter-turn cannot produce only a ppm-scale shift through the scalar kernel unless q is about 0.95 or an independent normalization cancels the order-one projection"
+    },
+    normPreservingTwoChannelRotation: {
+      totalNormFraction: directT1Overlap ** 2 + crossT2Overlap ** 2,
+      observedDirectChannelFraction: directT1Overlap ** 2,
+      hiddenOrCrossChannelFraction: crossT2Overlap ** 2,
+      result: "a unitary two-channel rotation preserves total norm but predicts an almost complete channel swap; total brightness alone cannot distinguish it"
+    },
+    isotropicSpatialFrameProjection: {
+      predictedAxisRatio: 1 / directT1Overlap,
+      observedCatalogueSkyPlaneAxisRatio: axis.axisRatio,
+      predictedToObservedAxisRatio: (1 / directT1Overlap) / axis.axisRatio,
+      result: "the isotropic-source plus one-direction pure-compression special case overpredicts the observed sky-plane elongation; arbitrary intrinsic covariance remains non-identifying"
+    }
   },
   falsifierBoundary: {
     independentDiscovery: false,

@@ -141,6 +141,15 @@ assert.ok(geometry.tailTiltFromGalacticPlaneDeg < 5);
 assert.ok(slice.conditionalTailAsT1.angleFromDiskNormalDeg > 85);
 assert.match(slice.conditionalTailAsT1.status, /conditional only/u);
 assert.match(slice.interpretation, /cannot infer T1/u);
+const hypotheses = crossChannel.corpusDerivedHypothesisTournament;
+assert.ok(Math.abs(hypotheses.scalarFrequencyProjection.directT1Overlap - Math.cos(hypotheses.relativeAngleDeg * Math.PI / 180)) < 1e-15);
+assert.ok(Math.abs(hypotheses.normPreservingTwoChannelRotation.totalNormFraction - 1) < 1e-12);
+assert.ok(hypotheses.scalarFrequencyProjection.qRequiredForUnitResponse > 0.94);
+assert.ok(hypotheses.scalarFrequencyProjection.qRequiredForUnitResponse < 0.96);
+assert.ok(hypotheses.isotropicSpatialFrameProjection.predictedAxisRatio > 19);
+assert.ok(hypotheses.isotropicSpatialFrameProjection.observedCatalogueSkyPlaneAxisRatio < 4);
+assert.match(hypotheses.isotropicSpatialFrameProjection.status, /special case rejected/u);
+assert.match(hypotheses.normPreservingTwoChannelRotation.status, /open but unconfirmed/u);
 
 if (process.argv.includes("--live")) {
   const response = await fetch(control.query);
@@ -177,6 +186,9 @@ console.log(JSON.stringify({
   morphologyIdentifiesT1Orientation: false,
   m44SpiralInclinationSliceDeg: geometry.lineOfSightDiskInclinationDeg,
   m44TailTiltFromGalacticPlaneDeg: geometry.tailTiltFromGalacticPlaneDeg,
+  scalarQRequiredForUnitResponse: hypotheses.scalarFrequencyProjection.qRequiredForUnitResponse,
+  isotropicPureProjectionSpecialCase: "rejected",
+  normPreservingChannelSwap: "open but unconfirmed",
   liveCatalogueVerified: process.argv.includes("--live"),
   constantAngleIdentifiable: false,
   modularAngleDefined: false,

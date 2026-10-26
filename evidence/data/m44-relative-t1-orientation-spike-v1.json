@@ -204,6 +204,45 @@
       ],
       "interpretation": "a multi-galaxy inclination surface can scan a declared projection law, but cannot infer T1 until the mapping between the candidate axis and ordinary disc geometry is independently specified"
     },
+    "corpusDerivedHypothesisTournament": {
+      "angleStatus": "conditional tail-as-M44-T1 and Galactic-normal-as-local-T1 hypothesis",
+      "relativeAngleDeg": 87.03852891855686,
+      "scalarFrequencyProjection": {
+        "model": "kappa(theta,q)=cos(theta)+q sin(theta)",
+        "directT1Overlap": 0.05166440955264843,
+        "crossT2Overlap": 0.998664502616157,
+        "directIntensityFraction": 0.0026692112144237902,
+        "crossIntensityFraction": 0.9973307887855763,
+        "qRequiredForUnitResponse": 0.9496037838163257,
+        "qRequiredForObservedMeanResidualResponse": 0.9496088424245777,
+        "observedMeanResidualFractionOfC": 0.00000505185249383279,
+        "result": "a near-quarter-turn cannot produce only a ppm-scale shift through the scalar kernel unless q is about 0.95 or an independent normalization cancels the order-one projection",
+        "status": "naive q=0 small-perturbation reading disfavoured; general normalized model remains non-identifying"
+      },
+      "normPreservingTwoChannelRotation": {
+        "model": "two-component orthogonal rotation with conserved squared norm",
+        "totalNormFraction": 1.0000000000000002,
+        "observedDirectChannelFraction": 0.0026692112144237902,
+        "hiddenOrCrossChannelFraction": 0.9973307887855763,
+        "result": "a unitary two-channel rotation preserves total norm but predicts an almost complete channel swap; total brightness alone cannot distinguish it",
+        "status": "open but unconfirmed; requires a phase-, polarization-, carrier- or gravity-sensitive second-channel reader",
+        "typingBoundary": "quarter-turn results on other corpus carriers do not establish this celestial transport law"
+      },
+      "isotropicSpatialFrameProjection": {
+        "model": "intrinsically isotropic source with one singular direction compressed by abs(cos(theta))",
+        "predictedAxisRatio": 19.35568428360637,
+        "observedCatalogueSkyPlaneAxisRatio": 3.2740470344895076,
+        "predictedToObservedAxisRatio": 5.911852847472708,
+        "result": "the isotropic-source plus one-direction pure-compression special case overpredicts the observed sky-plane elongation",
+        "status": "special case rejected; arbitrary intrinsic covariance remains non-identifying"
+      },
+      "boundaryOrGradientMixing": {
+        "evidence": "retrospective held-out sharp-step, smooth-step, relaxation and localized-layer tournament",
+        "result": "all spatial forms improve on a constant offset but none is distinguishable from an ordinary linear tail term",
+        "status": "no boundary topology identified"
+      },
+      "verdict": "present data disfavor the two simplest literal projection stories; the norm-preserving channel-swap hypothesis survives only because the proposed second channel is not measured"
+    },
     "authorityLimits": [
       "membership was preselected with convergent-point kinematics, so this is not independent discovery",
       "a constant spectroscopic offset still does not identify configuration T1",

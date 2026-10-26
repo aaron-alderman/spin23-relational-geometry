@@ -236,6 +236,52 @@ so M44 occupies an intermediate, moderately inclined slice rather than either th
 
 The reconstructed tail axis is only 2.96 degrees from the Galactic plane and 46.53 degrees from our line of sight. Consequently, **if and only if** the tail axis were used as a surrogate for \(T_1\), it would sit 87.04 degrees from the Galactic disc normal: tantalisingly close to perpendicular. That is a conditional coordinate placement, not an identification. At M44's actual azimuth the minimal direct overlap would be \(|\cos\theta|=0.688\); averaging over an unknown azimuth at the same \((i,\alpha)\) gives an RMS overlap of 0.597. The useful result is therefore a precise place to mark M44 on an inclination surface, together with the assumption that creates the near-90-degree reading.
 
+## Corpus-derived hypothesis tournament at 87 degrees
+
+The corpus suggests several inequivalent meanings of a near-quarter-turn. Treating them as a small tournament exposes what the present evidence can already remove.
+
+### Scalar frequency projection
+
+For the declared scalar kernel
+
+\[
+\kappa(\theta,q)=\cos\theta+q\sin\theta,
+\]
+
+the conditional angle \(\theta=87.04^\circ\) gives \(|\cos\theta|=0.05166\) and \(|\sin\theta|=0.99866\). A pure \(q=0\) reading would retain only 5.17% of the frequency amplitude, an order-one effect rather than the observed parts-per-million residual. Preserving unit response requires
+
+\[
+q={1-\cos\theta\over\sin\theta}=0.94960.
+\]
+
+Including the current mean 1.515 km/s residual changes this only to 0.94961. Thus the literal scalar model is not naturally a small perturbation at this angle: it needs an off-axis component comparable to the primary component, or an additional normalization that cancels the large projection. Gaia's aggregate RV cannot decide whether such a cancellation is physical or fitted.
+
+### Norm-preserving two-channel rotation
+
+A different hypothesis treats the near-quarter-turn as a rotation of a two-component channel state rather than loss under a scalar projector. Then
+
+\[
+\cos^2\theta+\sin^2\theta=1,
+\]
+
+and total norm is preserved, but only 0.267% remains in the direct \(T_1\) component while 99.733% moves into the cross component. This model is compatible with ordinary total brightness by construction and therefore cannot be confirmed by brightness. It predicts an almost complete **channel swap**, which needs a reader that distinguishes the two components through phase, polarisation, carrier or an independently derived gravitational response. The corpus's quarter-turn audit warns that quarter-turns on other carriers cannot simply be identified with this celestial channel; this is a new physical hypothesis, not a transported theorem.
+
+### Isotropic spatial frame projection
+
+In the provisional four-spatial-dimensional frame model, the single compressed singular value at 87.04 degrees is 0.05166. If M44 were intrinsically isotropic and the visible shape were produced only by that compression, its projected axis ratio would be
+
+\[
+{1\over|\cos\theta|}=19.36.
+\]
+
+The selected catalogue has sky-plane axis ratio 3.27, smaller by a factor of 5.91. The special hypothesis “isotropic source plus pure one-direction projection” is therefore inconsistent with the measured morphology. This does not reject the general frame model because M44 has strongly non-isotropic tidal tails; allowing arbitrary intrinsic covariance restores the exact no-go described above.
+
+### Boundary or gradient mixing
+
+The earlier held-out shape tournament is the present test of a spatially varying selector: sharp step, smooth step, relaxation and localized mixing layer all fail to distinguish themselves from an ordinary linear tail term. The data currently prefer spatial structure over a constant offset, but not a boundary topology.
+
+The tournament therefore does not confirm \(T_1/T_2\). It removes two tempting simple stories: a small \(q=0\) scalar perturbation and an isotropic blob made elongated solely by 87-degree projection. The norm-preserving channel-swap hypothesis survives only because the current data do not read the proposed second channel. Its decisive experiment is carrier-tagged or phase-sensitive, not another fit to total brightness.
+
 ## What the present evidence says
 
 M44 is an attractive calibration ensemble, but the current corpus supplies neither a source-derived \(T_1\)-to-observable map nor a physical law assigning separate \(T_1\) orientations to nearby stellar systems. Praesepe lies within the Milky Way and its established literature treats its spectra, age, chemistry, planets and tails with ordinary stellar and Galactic dynamics.
