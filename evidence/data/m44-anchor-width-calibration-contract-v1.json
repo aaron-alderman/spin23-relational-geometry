@@ -1,0 +1,464 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "calibration contract; no physical promotion",
+  "abstractRequirement": {
+    "anchor": "absolute spatially resolved location channel with retained zero and affine calibration",
+    "width": "intrinsic distribution-width channel with a declared error-floor deconvolution",
+    "joint": "joint covariance plus independently derived forward maps from geometry to both observables"
+  },
+  "authority": [
+    {
+      "id": "gaia-dr3-docs",
+      "url": "https://gea.esac.esa.int/archive/documentation/GDR3/",
+      "supports": "DR3 astrometry equals EDR3; global parallax bias about -0.017 mas remains uncorrected and correction depends on position, magnitude and colour"
+    },
+    {
+      "id": "lindegren-2021",
+      "doi": "10.1051/0004-6361/202039653",
+      "supports": "parallax bias has non-trivial magnitude, colour, ecliptic-latitude and solution-type dependence"
+    },
+    {
+      "id": "katz-2023",
+      "doi": "10.1051/0004-6361/202244220",
+      "supports": "Gaia DR3 RV zero point has a magnitude trend reaching about 0.4 km/s near GRVS=14; a correction is provided"
+    },
+    {
+      "id": "gaia-covariance-docs",
+      "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Data_processing/chap_cu3ast/sec_cu3ast_intro/ssec_cu3ast_intro_tansforms.html",
+      "supports": "astrometric transformations require Jacobian propagation of the full covariance matrix"
+    },
+    {
+      "id": "soubiran-2013",
+      "doi": "10.1051/0004-6361/201220927",
+      "supports": "Gaia RV standards are externally monitored and inter-instrument zero points must be estimated"
+    }
+  ],
+  "corpusLawAudit": {
+    "method": "targeted exact-text scan for configuration-T1 frequency, projection and response-kernel laws; unrelated uses of trigonometric mixing were excluded by type",
+    "source": "corpus/syntheses/grand-synthesis/aarons_spin23_research_thesis.md",
+    "laws": [
+      {
+        "id": "L1-frequency-projection",
+        "expression": "omega_obs = omega_1 cos(theta) + omega_2 sin(theta)",
+        "inputs": [
+          "orientation theta",
+          "two frequency components"
+        ],
+        "covers": [
+          "orientation-dependent frequency mixing"
+        ],
+        "missing": [
+          "dynamical clock definition",
+          "phase transport",
+          "carrier or line assignment",
+          "displacement response",
+          "thickness/coherence response"
+        ],
+        "executableForContract": false
+      },
+      {
+        "id": "L2-spatial-frame-projection",
+        "expression": "x_obs = E^T G q",
+        "inputs": [
+          "two orthonormal 4x3 frames",
+          "intrinsic spatial coordinate"
+        ],
+        "covers": [
+          "rank-two-plus-one spatial compression"
+        ],
+        "missing": [
+          "electromagnetic transfer law",
+          "absolute extra-coordinate zero",
+          "spectral response",
+          "stochastic thickness response"
+        ],
+        "executableForContract": false
+      },
+      {
+        "id": "L3-electromagnetic-kernel-placeholder",
+        "expression": "K_EM(q, omega, theta, grad(theta))",
+        "inputs": [
+          "declared but unspecified arguments"
+        ],
+        "covers": [
+          "names the required response family"
+        ],
+        "missing": [
+          "functional form",
+          "normalization",
+          "shared gravity constraint",
+          "falsifiable carrier dependence"
+        ],
+        "executableForContract": false
+      }
+    ],
+    "conclusion": "the corpus contains no executable source-derived anchor or width transfer law; only orientation projections and an explicitly unspecified response-kernel slot"
+  },
+  "gates": [
+    {
+      "id": "typed-observable",
+      "question": "Is the measured quantity defined without using the target hypothesis?"
+    },
+    {
+      "id": "independent-zero",
+      "question": "Is its absolute zero fixed by an independent calibration at the required scale?"
+    },
+    {
+      "id": "affine-control",
+      "question": "Are spatial, magnitude, colour and instrument-dependent affine freedoms bounded?"
+    },
+    {
+      "id": "covariance",
+      "question": "Is the full measurement and fitted-nuisance covariance propagated?"
+    },
+    {
+      "id": "ordinary-controls",
+      "question": "Are binaries, stellar atmosphere, selection and ordinary dynamics controlled?"
+    },
+    {
+      "id": "forward-map",
+      "question": "Does a frozen source-derived law map the geometric variable to this observable?"
+    },
+    {
+      "id": "independent-holdout",
+      "question": "Is there a genuinely unused instrument, field or sample for validation?"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "A1-cross-channel-rv-location",
+      "role": "anchor",
+      "observable": "spectroscopic radial velocity minus an astrometry-only perspective/convergent-point prediction",
+      "currentData": "373 robust M44 residual inliers from Gaia DR3 after the frozen selection",
+      "typeStatus": "proxy-not-coordinate",
+      "gates": {
+        "typed-observable": {
+          "state": "pass",
+          "evidence": "the subtraction is defined before any T1 interpretation"
+        },
+        "independent-zero": {
+          "state": "partial",
+          "evidence": "Gaia has external RV standards, but the current residual uses Gaia aggregate RVs and no independent spectrograph zero"
+        },
+        "affine-control": {
+          "state": "partial",
+          "evidence": "template temperature was tested; Gaia DR3 RV magnitude trend, position and instrument replication remain"
+        },
+        "covariance": {
+          "state": "fail",
+          "evidence": "the current spike does not propagate the full astrometric covariance, fitted common-velocity covariance and spectral nuisance covariance jointly"
+        },
+        "ordinary-controls": {
+          "state": "partial",
+          "evidence": "robust clipping and coarse temperature control exist; binaries, convection, gravitational redshift and frozen N-body tails remain"
+        },
+        "forward-map": {
+          "state": "fail",
+          "evidence": "no corpus law maps extra-coordinate displacement to a calibrated RV residual"
+        },
+        "independent-holdout": {
+          "state": "fail",
+          "evidence": "the hash folds are retrospective and use one Gaia spectral product"
+        }
+      },
+      "falsifiers": [
+        "residual follows Gaia magnitude/template systematics",
+        "independent spectroscopy does not reproduce the spatial field",
+        "frozen ordinary dynamics explains the residual",
+        "no source-derived displacement-to-RV transfer law can be stated"
+      ],
+      "gateSummary": {
+        "pass": 1,
+        "partial": 3,
+        "fail": 3,
+        "missing": 0
+      },
+      "decision": "hold"
+    },
+    {
+      "id": "A2-parallax-photometric-location",
+      "role": "anchor",
+      "observable": "Gaia parallax distance minus independently calibrated photometric or standard-candle distance",
+      "currentData": "not constructed for the selected M44 sample",
+      "typeStatus": "conditional-proxy",
+      "gates": {
+        "typed-observable": {
+          "state": "pass",
+          "evidence": "a distance residual is independently definable"
+        },
+        "independent-zero": {
+          "state": "partial",
+          "evidence": "Gaia DR3 retains an uncorrected parallax bias and photometric distances import their own zero"
+        },
+        "affine-control": {
+          "state": "partial",
+          "evidence": "published parallax corrections depend on position, magnitude and colour"
+        },
+        "covariance": {
+          "state": "partial",
+          "evidence": "Gaia supplies astrometric correlations, but the joint photometric and cluster-model covariance is absent here"
+        },
+        "ordinary-controls": {
+          "state": "fail",
+          "evidence": "extinction, metallicity, rotation, binaries and stellar-model discrepancy have not been jointly fitted"
+        },
+        "forward-map": {
+          "state": "fail",
+          "evidence": "ordinary distance disagreement is not a derived measurement of an extra coordinate"
+        },
+        "independent-holdout": {
+          "state": "fail",
+          "evidence": "no frozen second distance ladder is attached"
+        }
+      },
+      "falsifiers": [
+        "signal tracks colour, magnitude or sky-position correction",
+        "alternative stellar models move the inferred zero",
+        "independent distance ladders disagree",
+        "no geometric transfer law survives ordinary distance calibration"
+      ],
+      "gateSummary": {
+        "pass": 1,
+        "partial": 3,
+        "fail": 3,
+        "missing": 0
+      },
+      "decision": "hold"
+    },
+    {
+      "id": "A3-line-resolved-cross-instrument-phase",
+      "role": "anchor",
+      "observable": "line-by-line wavelength residual against an astrometric velocity prediction, repeated on independent spectrographs",
+      "currentData": "absent from the present corpus",
+      "typeStatus": "preferred-future-proxy",
+      "gates": {
+        "typed-observable": {
+          "state": "pass",
+          "evidence": "line identities, instruments and astrometric prediction can be frozen before fitting"
+        },
+        "independent-zero": {
+          "state": "partial",
+          "evidence": "frequency-comb/telluric and RV-standard routes exist but no M44 contract is instantiated"
+        },
+        "affine-control": {
+          "state": "partial",
+          "evidence": "a design can stratify instrument, epoch, line, magnitude and stellar type; bounds are not yet measured"
+        },
+        "covariance": {
+          "state": "partial",
+          "evidence": "epoch and line covariance can be retained but no matrix exists yet"
+        },
+        "ordinary-controls": {
+          "state": "partial",
+          "evidence": "multi-epoch binaries and atmosphere-dependent line shifts are controllable in principle"
+        },
+        "forward-map": {
+          "state": "fail",
+          "evidence": "the required carrier- and line-dependent T1 law has not been derived"
+        },
+        "independent-holdout": {
+          "state": "partial",
+          "evidence": "a second spectrograph is an available design, not an executed holdout"
+        }
+      },
+      "falsifiers": [
+        "line residuals do not share the preregistered carrier law",
+        "effect changes with spectrograph or reduction pipeline",
+        "multi-epoch variability explains the signal",
+        "ordinary atmosphere models remove the line pattern"
+      ],
+      "gateSummary": {
+        "pass": 1,
+        "partial": 5,
+        "fail": 1,
+        "missing": 0
+      },
+      "decision": "hold"
+    },
+    {
+      "id": "A4-ordinary-spatial-depth",
+      "role": "anchor",
+      "observable": "inverse-parallax physical position or cluster depth",
+      "currentData": "available for selected M44 members",
+      "typeStatus": "type-error-as-direct-anchor",
+      "gates": {
+        "typed-observable": {
+          "state": "fail",
+          "evidence": "ordinary three-dimensional position is not the hypothesized fourth coordinate"
+        }
+      },
+      "falsifiers": [
+        "not applicable: retire the direct identification rather than fit it"
+      ],
+      "gateSummary": {
+        "pass": 0,
+        "partial": 0,
+        "fail": 1,
+        "missing": 6
+      },
+      "decision": "retire-as-direct-mapping"
+    },
+    {
+      "id": "W1-cross-channel-rv-scatter",
+      "role": "width",
+      "observable": "intrinsic scatter of the astrometry-minus-spectroscopy residual after deconvolving errors and ordinary mixtures",
+      "currentData": "robust scatter 1.43 km/s in the current M44 pass",
+      "typeStatus": "conditional-proxy",
+      "gates": {
+        "typed-observable": {
+          "state": "pass",
+          "evidence": "a residual-distribution width is independently definable"
+        },
+        "independent-zero": {
+          "state": "pass",
+          "evidence": "a width does not require a location zero, although its error floor must be calibrated"
+        },
+        "affine-control": {
+          "state": "partial",
+          "evidence": "heteroscedastic magnitude, template and spatial width changes have not been bounded"
+        },
+        "covariance": {
+          "state": "fail",
+          "evidence": "per-star measurement errors, common fitted velocity and nuisance-mixture covariance are not jointly deconvolved"
+        },
+        "ordinary-controls": {
+          "state": "fail",
+          "evidence": "binaries, rotation, atmosphere shifts and tail dynamics can all broaden the distribution"
+        },
+        "forward-map": {
+          "state": "fail",
+          "evidence": "no law maps fourth-coordinate thickness to RV-residual variance"
+        },
+        "independent-holdout": {
+          "state": "fail",
+          "evidence": "no independent spectroscopic width measurement exists"
+        }
+      },
+      "falsifiers": [
+        "width collapses after binary/measurement deconvolution",
+        "width follows stellar type or magnitude",
+        "independent instruments give incompatible intrinsic widths",
+        "no thickness-to-variance transfer law is derived"
+      ],
+      "gateSummary": {
+        "pass": 2,
+        "partial": 1,
+        "fail": 4,
+        "missing": 0
+      },
+      "decision": "hold"
+    },
+    {
+      "id": "W2-line-coherence-loss",
+      "role": "width",
+      "observable": "carrier- and line-resolved loss of cross-line coherence after ordinary atmosphere covariance",
+      "currentData": "absent from the present corpus",
+      "typeStatus": "preferred-future-proxy",
+      "gates": {
+        "typed-observable": {
+          "state": "pass",
+          "evidence": "cross-line covariance can be declared independently"
+        },
+        "independent-zero": {
+          "state": "pass",
+          "evidence": "the null is full coherence after the calibrated ordinary line model"
+        },
+        "affine-control": {
+          "state": "partial",
+          "evidence": "instrument and stellar-type dependence can be designed but are not bounded"
+        },
+        "covariance": {
+          "state": "partial",
+          "evidence": "the required line-by-epoch covariance is constructible but absent"
+        },
+        "ordinary-controls": {
+          "state": "partial",
+          "evidence": "line formation, activity, rotation and blending require an explicit hierarchical model"
+        },
+        "forward-map": {
+          "state": "fail",
+          "evidence": "no frozen thickness-to-coherence kernel exists"
+        },
+        "independent-holdout": {
+          "state": "partial",
+          "evidence": "withheld lines and a second spectrograph are available designs, not completed evidence"
+        }
+      },
+      "falsifiers": [
+        "coherence loss follows known line-formation groups",
+        "withheld lines fail",
+        "independent instruments disagree",
+        "the declared thickness kernel does not predict the covariance eigenstructure"
+      ],
+      "gateSummary": {
+        "pass": 2,
+        "partial": 4,
+        "fail": 1,
+        "missing": 0
+      },
+      "decision": "hold"
+    },
+    {
+      "id": "W3-astrometric-cluster-depth",
+      "role": "width",
+      "observable": "deconvolved variance of ordinary three-dimensional member positions",
+      "currentData": "partly available from Gaia parallaxes",
+      "typeStatus": "type-error-as-direct-width",
+      "gates": {
+        "typed-observable": {
+          "state": "fail",
+          "evidence": "ordinary cluster depth is not fourth-coordinate thickness without a forward map"
+        }
+      },
+      "falsifiers": [
+        "not applicable: retain as an ordinary nuisance/control, not a direct thickness reader"
+      ],
+      "gateSummary": {
+        "pass": 0,
+        "partial": 0,
+        "fail": 1,
+        "missing": 6
+      },
+      "decision": "retire-as-direct-mapping"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "P1-current-rv-location-plus-scatter",
+      "anchor": "A1-cross-channel-rv-location",
+      "width": "W1-cross-channel-rv-scatter",
+      "decision": "hold",
+      "reason": "both statistics reuse one residual product; joint covariance, ordinary-mixture deconvolution and both geometric forward maps are absent"
+    },
+    {
+      "id": "P2-line-resolved-location-plus-coherence",
+      "anchor": "A3-line-resolved-cross-instrument-phase",
+      "width": "W2-line-coherence-loss",
+      "decision": "preferred-future-design",
+      "reason": "one spectral campaign can retain line, epoch and instrument identity, but promotion waits for source-derived kernels and a genuinely withheld spectrograph"
+    },
+    {
+      "id": "P3-distance-location-plus-cluster-depth",
+      "anchor": "A2-parallax-photometric-location",
+      "width": "W3-astrometric-cluster-depth",
+      "decision": "retire-as-direct-geometric-pair",
+      "reason": "the apparent pair is dominated by ordinary distance and physical depth and does not type the proposed extra coordinate"
+    }
+  ],
+  "verdict": {
+    "admittedCandidates": [],
+    "heldCandidates": [
+      "A1-cross-channel-rv-location",
+      "A2-parallax-photometric-location",
+      "A3-line-resolved-cross-instrument-phase",
+      "W1-cross-channel-rv-scatter",
+      "W2-line-coherence-loss"
+    ],
+    "retiredDirectMappings": [
+      "A4-ordinary-spatial-depth",
+      "W3-astrometric-cluster-depth"
+    ],
+    "nextAction": "derive a source-native observable law before acquiring a large dataset; in parallel, specify a line-resolved two-instrument pilot that preserves raw line, epoch, star and instrument identity",
+    "noResultMeaning": "failure to calibrate an absolute anchor makes displacement untestable; it is not evidence for the ordinary/null family"
+  }
+}
