@@ -1,0 +1,99 @@
+{
+  "protocol": "spin23-programme-algebra-profiles/1",
+  "kernel": {
+    "id": "epistemic-object-signature",
+    "coordinates": [
+      "kind",
+      "domain",
+      "role",
+      "context",
+      "form",
+      "status",
+      "governingScheme",
+      "equivalence",
+      "admissibility",
+      "support",
+      "authority",
+      "time"
+    ],
+    "rule": "Every coordinate retains the same meaning across profiles. A profile may extend the kernel but may not coerce a native coordinate into an unrelated shared field."
+  },
+  "profiles": [
+    {
+      "id": "source-document",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["canonicalPath", "sha256", "mediaType", "declaredFields"],
+      "admission": "canonical path exists and byte hash is exact"
+    },
+    {
+      "id": "source-section",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["documentId", "heading", "level", "anchor", "lineStart", "lineEnd", "sha256"],
+      "admission": "section is observed in a canonical source document"
+    },
+    {
+      "id": "science",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["rank", "variance", "basis", "regime", "order", "scheme", "symmetry", "cp", "supportClass", "siDimension"],
+      "admission": "profile coordinates, dimensions and authority are explicit"
+    },
+    {
+      "id": "mathematics",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["carrier", "coefficientSystem", "dimension", "product", "invariant", "representation", "theoremStatus"],
+      "admission": "carrier and mathematical structure are named; theorem status is explicit"
+    },
+    {
+      "id": "physics",
+      "extends": "science",
+      "coordinates": ["system", "scale", "state", "observable", "dynamics", "boundary", "detector", "calibration"],
+      "admission": "mathematical closure and physical authority remain separately declared"
+    },
+    {
+      "id": "experiment",
+      "extends": "physics",
+      "coordinates": ["preparation", "intervention", "controls", "nuisanceModel", "readout", "falsifier", "decisionRule"],
+      "admission": "intervention, readout, controls and decision rule are operational"
+    },
+    {
+      "id": "epistemic-claim",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["claimVersion", "evidence", "counterevidence", "qualifications", "dependencies", "challenges", "provenance"],
+      "admission": "claim identity and version are explicit"
+    },
+    {
+      "id": "governance",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["canonicalSource", "publicationState", "verifier", "generatedProjection", "authorityBoundary"],
+      "admission": "authority and generated/canonical distinction are explicit"
+    },
+    {
+      "id": "referenced-artifact",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["locator", "existence", "sha256"],
+      "admission": "the reference is observed; existence and identity are reported rather than assumed"
+    }
+  ],
+  "transformationContract": {
+    "required": [
+      "id",
+      "kind",
+      "from",
+      "to",
+      "fromSignature",
+      "toSignature",
+      "fromDimension",
+      "toDimension",
+      "dimensionRule",
+      "dimensionDelta",
+      "changes",
+      "assumptions",
+      "losses",
+      "evidenceRefs",
+      "analogyOnly",
+      "authority"
+    ],
+    "authorityCeiling": "Composite authority cannot exceed the meet of the authority carried by its steps.",
+    "relationBoundary": "Observed hyperlinks and generic epistemic relationships are not scientific transformations."
+  }
+}

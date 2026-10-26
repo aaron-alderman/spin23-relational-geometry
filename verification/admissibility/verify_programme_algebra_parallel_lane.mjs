@@ -1,0 +1,94 @@
+#!/usr/bin/env node
+
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { join, relative, resolve, sep } from "node:path";
+import { gunzipSync } from "node:zlib";
+
+const root = resolve(process.cwd());
+const algebraPath = join(root, "corpus", "programmes", "programme-algebra", "generated", "programme_algebra_v1.json");
+if (!existsSync(algebraPath)) throw new Error("programme algebra output missing; run the compiler with --write");
+const manifest = JSON.parse(readFileSync(algebraPath, "utf8"));
+const archivePath = join(algebraPath, "..", manifest.archive.path);
+if (!existsSync(archivePath)) throw new Error("programme algebra record archive missing; run the compiler with --write");
+const archiveBytes = readFileSync(archivePath);
+const projectionBytes = gunzipSync(archiveBytes);
+const algebra = JSON.parse(projectionBytes.toString("utf8"));
+const posix = value => value.split(sep).join("/");
+const sha256 = value => createHash("sha256").update(value).digest("hex");
+const stable = value => {
+  if (Array.isArray(value)) return `[${value.map(stable).join(",")}]`;
+  if (value && typeof value === "object") return `{${Object.keys(value).sort().map(key => `${JSON.stringify(key)}:${stable(value[key])}`).join(",")}}`;
+  return JSON.stringify(value);
+};
+const stableHash = value => sha256(stable(value));
+const excluded = algebra.sources.imports ? JSON.parse(readFileSync(join(root, algebra.sources.imports.path), "utf8")).corpus.excludePrefixes : [];
+
+function walk(directory) {
+  const output = [];
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    const absolute = join(directory, entry.name);
+    const path = posix(relative(root, absolute));
+    if (excluded.some(prefix => path.startsWith(prefix))) continue;
+    if (entry.isDirectory()) output.push(...walk(absolute));
+    else if (entry.isFile() && entry.name.toLowerCase().endsWith(".md")) output.push(path);
+  }
+  return output.sort();
+}
+
+const failures = [];
+if (manifest.protocol !== "spin23-programme-algebra-manifest/1") failures.push("manifest protocol mismatch");
+if (sha256(archiveBytes) !== manifest.archive.compressedSha256) failures.push("compressed archive hash mismatch");
+if (sha256(projectionBytes) !== manifest.archive.uncompressedSha256) failures.push("projection hash mismatch");
+if (archiveBytes.length !== manifest.archive.compressedBytes) failures.push("compressed archive size mismatch");
+if (projectionBytes.length !== manifest.archive.uncompressedBytes) failures.push("projection size mismatch");
+for (const [key, value] of Object.entries(algebra.summary)) if (manifest.summary[key] !== value) failures.push(`manifest summary mismatch: ${key}`);
+if (algebra.protocol !== "spin23-programme-algebra/1") failures.push("protocol mismatch");
+if (algebra.mode !== "parallel-non-replacing") failures.push("lane is not marked parallel-non-replacing");
+const coordinates = algebra.profiles.kernel.coordinates;
+const ids = new Set();
+for (const object of algebra.objects) {
+  if (ids.has(object.id)) failures.push(`duplicate object id: ${object.id}`);
+  ids.add(object.id);
+  for (const coordinate of coordinates) if (!(coordinate in object.kernel)) failures.push(`missing ${coordinate}: ${object.id}`);
+}
+for (const relation of algebra.relations) {
+  if (!ids.has(relation.from)) failures.push(`relation source missing: ${relation.id}`);
+  if (!ids.has(relation.to)) failures.push(`relation target missing: ${relation.id}`);
+  if (relation.authority !== "structural-only; not a scientific transformation") failures.push(`relation authority widened: ${relation.id}`);
+}
+for (const transformation of algebra.transformations) {
+  if (!ids.has(transformation.from) || !ids.has(transformation.to)) failures.push(`transformation endpoint missing: ${transformation.id}`);
+  if (transformation.validation.admitted && (transformation.authority?.proposalOnly !== true || transformation.authority?.entails !== false || transformation.authority?.empiricalAuthority !== false)) failures.push(`transformation authority widened: ${transformation.id}`);
+  if (!transformation.validation.admitted && transformation.validation.reasons.length === 0) failures.push(`rejected transformation lacks refusal reason: ${transformation.id}`);
+}
+for (const receipt of algebra.compositionReceipts) {
+  for (const candidate of receipt.candidates) {
+    if (candidate.entails !== false || candidate.empiricalAuthority !== false || candidate.applicationAdmission !== false) failures.push(`candidate authority widened: ${candidate.candidateId}`);
+  }
+}
+const corpusFiles = walk(join(root, "corpus"));
+const documents = algebra.objects.filter(object => object.profile === "source-document");
+if (documents.length !== corpusFiles.length) failures.push(`document coverage mismatch: ${documents.length} != ${corpusFiles.length}`);
+for (const document of documents) {
+  const absolute = join(root, document.extension.canonicalPath);
+  if (!existsSync(absolute)) failures.push(`canonical document missing: ${document.extension.canonicalPath}`);
+  else if (sha256(readFileSync(absolute)) !== document.extension.sha256) failures.push(`canonical document hash mismatch: ${document.extension.canonicalPath}`);
+}
+const digest = stableHash(documents.map(item => [item.extension.canonicalPath, item.extension.sha256]));
+if (digest !== algebra.sources.corpus.digest) failures.push("corpus digest mismatch");
+if (algebra.coverage.structural.status !== "complete") failures.push("structural coverage not complete");
+if (algebra.coverage.scientific.status !== "seed-only") failures.push("scientific coverage boundary missing");
+if (algebra.summary.scientificFamilies !== 4) failures.push("expected four D02 seed families");
+if (algebra.summary.queriesWithCandidates !== 4) failures.push("expected four admitted positive D02 queries");
+if (algebra.summary.queriesWithoutCandidates !== 14) failures.push("expected fourteen negative D02 queries");
+if (algebra.summary.rejectedScientificTransformations !== 15) failures.push("expected fifteen retained D02 rejection fixtures");
+
+console.log(JSON.stringify({
+  protocol: "verify-spin23-programme-algebra-parallel-lane/1",
+  passed: failures.length === 0,
+  failures,
+  summary: algebra.summary,
+  corpusDigest: digest,
+}, null, 2));
+if (failures.length) process.exitCode = 1;
