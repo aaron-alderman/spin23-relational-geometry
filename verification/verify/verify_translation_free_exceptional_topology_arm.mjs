@@ -17,6 +17,7 @@ const e8CompactGap = load("translation-free-e8-cartan-compact-gap-v1.json");
 const e8RatioSpine = load("translation-free-e8-cartan-ratio-spine-v1.json");
 const e8AmplitudePerturbation = load("translation-free-e8-channel-amplitude-perturbation-v1.json");
 const e8AmplitudeStencil = load("translation-free-e8-channel-amplitude-stencil-v1.json");
+const e8MetricPerturbation = load("translation-free-e8-kinetic-metric-perturbation-v1.json");
 const quasicrystal = load("translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 
 const E8 = [
@@ -147,6 +148,9 @@ assert.equal(arm.e8ChannelAmplitudeStencil.evidence,"translation-free-e8-channel
 assert.equal(e8AmplitudeStencil.directions.length,2);
 assert.ok(Math.abs(e8AmplitudeStencil.directionCosine)<0.99);
 assert.equal(arm.e8ChannelAmplitudeStencil.openPerturbationBallCertified,false);
+assert.equal(arm.e8KineticMetricPerturbation.evidence,"translation-free-e8-kinetic-metric-perturbation-v1.json");
+assert.ok(e8MetricPerturbation.gaps.at(-1)>0.2);
+assert.equal(arm.e8KineticMetricPerturbation.openStabilityTubeCertified,false);
 assert.equal(arm.quasicrystalBackplaneBridge.evidence, "translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 assert.deepEqual(quasicrystal.factorialDesign.backplanes, ["periodic","quasicrystal","amorphous"]);
 assert.deepEqual(quasicrystal.factorialDesign.relationPrograms, ["identity","E8"]);
@@ -171,6 +175,7 @@ console.log(JSON.stringify({
   e8CartanShell10Spectroscopy: {basisStates:794161, provisionalGap:e8Shell10.cutoffDiagnostics.gapAtCutoff10, gapPromoted:false},
   e8ChannelAmplitudePerturbation: {maximumFractionalDeviation:e8AmplitudePerturbation.perturbation.maximumFractionalDeviationFromMean, gap:e8AmplitudePerturbation.cutoffLadder.at(-1).gap, openPerturbationBallCertified:false},
   e8ChannelAmplitudeStencil: {directions:e8AmplitudeStencil.directions.length, maximumFractionalDeviation:Math.max(...e8AmplitudeStencil.directions.map(d=>d.maximumFractionalDeviation)), minimumGap:Math.min(...e8AmplitudeStencil.directions.map(d=>d.finalGap??d.gaps.at(-1))), openPerturbationBallCertified:false},
+  e8KineticMetricPerturbation: {maximumScaleDeviation:e8MetricPerturbation.maximumFractionalScaleDeviation, gap:e8MetricPerturbation.gaps.at(-1), openStabilityTubeCertified:false},
   quasicrystalBridge: {materialClasses:quasicrystal.factorialDesign.backplanes.length, relationPrograms:quasicrystal.factorialDesign.relationPrograms.length, devices:quasicrystal.factorialDesign.totalPrimaryDevices},
-  nextGate: "independent amplitude and metric perturbations -> intercell gap -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
+  nextGate: "combined amplitude-plus-metric corner -> intercell gap -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
 }));
