@@ -158,7 +158,7 @@ assert.equal(arm.e8MixedPerturbationCorner.evidence,"translation-free-e8-mixed-p
 assert.equal(e8MixedCorner.promoted,true);
 assert.equal(arm.e8MixedPerturbationCorner.intercellGapCertified,false);
 assert.equal(arm.e8TwoCellProjectedCoupling.evidence,"translation-free-e8-two-cell-projected-coupling-v1.json");assert.equal(e8TwoCell.projectedDimension,16);assert.equal(e8TwoCell.projectedTwoCellGapPromoted,true);assert.equal(arm.e8TwoCellProjectedCoupling.fullTwoCellGapCertified,false);
-assert.equal(arm.e8TwoCellRootCountAudit.evidence,"translation-free-e8-two-cell-root-count-audit-v1.json");assert.equal(e8TwoCellRoots.gapRootCountPromoted,true);assert.equal(e8TwoCellRoots.splittingCoefficientPromoted,false);
+assert.equal(arm.e8TwoCellRootCountAudit.evidence,"translation-free-e8-two-cell-root-count-audit-v1.json");assert.equal(e8TwoCellRoots.gapRootCountPromoted,true);assert.equal(e8TwoCellRoots.splittingPromotedThroughJ,0.05);assert.equal(e8TwoCellRoots.splittingCoefficientPromotedAtJ01,false);
 assert.equal(arm.quasicrystalBackplaneBridge.evidence, "translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 assert.deepEqual(quasicrystal.factorialDesign.backplanes, ["periodic","quasicrystal","amorphous"]);
 assert.deepEqual(quasicrystal.factorialDesign.relationPrograms, ["identity","E8"]);
@@ -186,7 +186,7 @@ console.log(JSON.stringify({
   e8KineticMetricPerturbation: {maximumScaleDeviation:e8MetricPerturbation.maximumFractionalScaleDeviation, gap:e8MetricPerturbation.gaps.at(-1), openStabilityTubeCertified:false},
   e8MixedPerturbationCorner: {gap:e8MixedCorner.gaps.at(-1), compactCellStencilClosed:true, continuousTubeCertified:false, intercellGapCertified:false},
   e8TwoCellProjectedCoupling: {localRoots:e8TwoCell.localRoots, maximumJ:e8TwoCell.couplingSweep.at(-1).J, minimumProjectedGap:Math.min(...e8TwoCell.couplingSweep.map(x=>x.gaps.at(-1))), fullTwoCellGapCertified:false, widthGapCertified:false},
-  e8TwoCellRootCountAudit: {localRootCounts:e8TwoCellRoots.localRootCounts, gapRootCountPromoted:true, splittingCoefficientPromoted:false},
+  e8TwoCellRootCountAudit: {localRootCounts:e8TwoCellRoots.localRootCounts, gapRootCountPromoted:true, splittingPromotedThroughJ:e8TwoCellRoots.splittingPromotedThroughJ, splittingCoefficientPromotedAtJ01:false},
   quasicrystalBridge: {materialClasses:quasicrystal.factorialDesign.backplanes.length, relationPrograms:quasicrystal.factorialDesign.relationPrograms.length, devices:quasicrystal.factorialDesign.totalPrimaryDevices},
-  nextGate: "twelve-root or remainder control for splitting -> three/four-cell projected chain -> size-stable intercell gap -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
+  nextGate: "three/four-cell projected chain at J=0.05 -> size-stable intercell gap -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
 }));
