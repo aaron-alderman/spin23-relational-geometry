@@ -140,5 +140,5 @@ console.log(JSON.stringify({
   reconstructedSimpleCurrentGram: K,
   heldOutNormTwoCurrents: roots.size,
   orderedDistinctRootPairInnerProducts: pairDistribution,
-  nextGate: "compile the many-field cosine schedule to a few-body microscopic carrier and demonstrate a size-stable gap",
+  downstreamPromotion: "the finite-qudit two-local gap is certified separately; clock-to-rotor convergence and continuum E8 response remain open",
 }, null, 2));

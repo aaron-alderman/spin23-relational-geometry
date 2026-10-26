@@ -14,6 +14,8 @@
 
 **Derived exceptional layer:** [translation-free E8 coupled-wire and held-out tomography protocol](E8_COUPLED_WIRE_TOMOGRAPHY.md)
 
+**Few-body surrogate:** [E8 bounded-degree clock hardware and gap certificate](E8_FEW_BODY_CLOCK_GAP.md)
+
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
 
 ## Research question
@@ -153,8 +155,10 @@ bosonic invertible edge; arbitrary positive spatially varying interaction
 matrices preserve co-propagation and \(c_-=8\). A seven-wire irregular array
 with 48 mutually null interactions derives opposite E8 boundaries, while an
 eight-simple-current training record predicts the complete held-out 240-root
-shell. A few-body microscopic carrier, thermodynamic gap scaling and random
-connectivity remain open.
+shell. The same null schedule now has an exact two-local finite-qudit
+regularization with a width-independent bulk gap above its free-edge ground
+space. Clock-to-rotor convergence, continuum E8 anomaly recovery, a
+material-native carrier and random connectivity remain open.
 
 At rank 24, the first blind detector has now been identified exactly. Thermal
 and bulk data collide, but the weight-one current dimensions are 744, 24 and 0
@@ -164,8 +168,8 @@ branch proceeds to the existing Griess, marked-defect and sewing witness stack.
 1. Apply a spectral-localizer/Bott pipeline to a controlled crystalline-to-
    amorphous Hamiltonian family and record where response, real-space index and
    mobility gap separate.
-2. Compile the certified E8 coupled-wire cosine schedule into bounded-degree
-   few-body controls and test its gap versus width and disorder.
+2. Add the continuum kinetic metric to the two-local clock carrier and test
+   clock-to-rotor convergence, gap retention and chiral response.
 3. Run the rank-24 blind-detector problem: give an inference process only bulk
    response first, then current, defect and OPE channels, and measure the first
    channel that separates \(E_8^3\), a rooted Niemeier theory and Leech.

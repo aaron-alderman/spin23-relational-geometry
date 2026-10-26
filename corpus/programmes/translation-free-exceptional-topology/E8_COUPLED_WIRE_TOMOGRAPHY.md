@@ -2,7 +2,7 @@
 
 **Date:** 26 October 2026
 
-**Status:** continuum-local derivation and held-out current test complete; few-body hardware and thermodynamic gap open
+**Status:** continuum-local derivation and held-out current test complete; finite-qudit few-body surrogate closed; continuum gap open
 
 **Parent:** [translation-free exceptional topology](README.md)
 
@@ -82,12 +82,12 @@ many-field cosine to few-body controls—is platform dependent.
 ## Claim boundary and next gate
 
 This tranche closes the continuum-local B1 construction and opens a finite E3
-detector. It does not close a microscopic few-body Hamiltonian, random
-connectivity, a size-stable bulk gap or laboratory feasibility. The next
-decisive computation is to decompose the eight column interactions into a
-bounded-degree ancilla graph and measure the many-body gap versus array width
-and disorder. Failure there demotes this result to an effective coupled-wire
-blueprint while retaining the exact detector.
+detector. The [finite-qudit compiler](E8_FEW_BODY_CLOCK_GAP.md) now closes the
+bounded-degree hardware and exact many-body-gap gate for a digital clock
+surrogate. It does not close random connectivity, clock-to-rotor convergence,
+continuum E8 response or laboratory feasibility. Failure of that next
+promotion demotes the few-body result to a locking-incidence carrier while
+retaining the exact detector.
 
 ## Primary anchors
 

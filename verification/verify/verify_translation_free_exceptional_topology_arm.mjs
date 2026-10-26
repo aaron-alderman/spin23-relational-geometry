@@ -5,6 +5,7 @@ const load = name => JSON.parse(fs.readFileSync(new URL(`../../evidence/data/${n
 const arm = load("translation-free-exceptional-topology-arm-v1.json");
 const leechRecord = load("leech-explicit-k-matrix-v1.json");
 const e8Wire = load("translation-free-e8-coupled-wire-tomography-v1.json");
+const e8Clock = load("translation-free-e8-few-body-clock-gap-v1.json");
 
 const E8 = [
   [2,-1,0,0,0,0,0,0],
@@ -89,6 +90,11 @@ assert.equal(e8Wire.carrier.interactions, 8 * (e8Wire.carrier.wires - 1));
 assert.equal(e8Wire.boundary.totalUngappedModes, 16);
 assert.equal(e8Wire.tomography.heldOutPredictions.normTwoCurrents, 240);
 assert.equal(e8Wire.claimBoundary.microscopicFewBodyHardwareClosed, false);
+assert.equal(arm.e8FewBodyClockSeed.evidence, "translation-free-e8-few-body-clock-gap-v1.json");
+assert.equal(e8Clock.hardware.localTermBodyCount, 2);
+assert.equal(e8Clock.hardware.bulkInteractionGraphDegree, 1);
+assert.equal(e8Clock.sweep.certifiedUniformLowerBound, 0.75);
+assert.equal(e8Clock.claimBoundary.continuumE8AnomalyCertified, false);
 
 console.log(JSON.stringify({
   status: "PASS",
@@ -98,5 +104,6 @@ console.log(JSON.stringify({
   translationFreeSeed: {disorderStrengths:arm.computationalSeed.onsiteDisorderStrengths, bottIndices:arm.computationalSeed.bottIndices},
   structuralSeed: {jitterStrengths:arm.structuralDisorderSeed.jitterStrengths, bottIndices:arm.structuralDisorderSeed.bottIndices, localizerIndices:arm.structuralDisorderSeed.spectralLocalizerIndices},
   e8CoupledWireSeed: {wires:e8Wire.carrier.wires, nullInteractions:e8Wire.carrier.interactions, heldOutRoots:e8Wire.tomography.heldOutPredictions.normTwoCurrents},
-  nextGate: "few-body E8 gap scaling -> rank-24 detector ladder -> orbifold witness"
+  e8FewBodyClockSeed: {bodyCount:e8Clock.hardware.localTermBodyCount, maximumWidth:Math.max(...e8Clock.sweep.wireCounts), uniformGap:e8Clock.sweep.certifiedUniformLowerBound},
+  nextGate: "clock-to-rotor E8 response -> rank-24 detector ladder -> orbifold witness"
 }));
