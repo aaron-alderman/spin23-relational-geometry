@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "real elastic-wave adaptive reader audit",
+  "source": {
+    "provider": "NSF National Geophysical Facility / EarthScope Data Services",
+    "station": "IU.ANMO.00",
+    "eventContext": {
+      "name": "2010 Maule, Chile earthquake",
+      "usgsEvent": "official20100227063411530_30",
+      "magnitude": 8.8,
+      "originTimeUtc": "2010-02-27T06:34:11Z",
+      "role": "context only; event label is not used by the detector"
+    },
+    "stationMetadata": {
+      "path": "evidence/sources/earthscope-iu-anmo-20100227-station.txt",
+      "sha256": "b3cb053267528bc24bd04a1d63e467971a2f732c85674523b561f65248fa3128"
+    },
+    "channels": {
+      "BH1": {
+        "path": "evidence/sources/earthscope-iu-anmo-20100227-bh1.csv",
+        "url": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=IU&sta=ANMO&loc=00&cha=BH1&start=2010-02-27T06:40:00&end=2010-02-27T07:10:00&format=geocsv.inline&scale=AUTO&nodata=404",
+        "sha256": "988821994f8f34a34eab858d33c94778337454fcd409a19f349d508cbfe3fda2",
+        "uniqueSamples": 36000,
+        "segments": 35
+      },
+      "BH2": {
+        "path": "evidence/sources/earthscope-iu-anmo-20100227-bh2.csv",
+        "url": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=IU&sta=ANMO&loc=00&cha=BH2&start=2010-02-27T06:40:00&end=2010-02-27T07:10:00&format=geocsv.inline&scale=AUTO&nodata=404",
+        "sha256": "5e070946fb91e2e9fe46136ee7fb13594eaccb22706c30e2e67897929345c484",
+        "uniqueSamples": 36000,
+        "segments": 37
+      },
+      "BHZ": {
+        "path": "evidence/sources/earthscope-iu-anmo-20100227-bhz.csv",
+        "url": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=IU&sta=ANMO&loc=00&cha=BHZ&start=2010-02-27T06:40:00&end=2010-02-27T07:10:00&format=geocsv.inline&scale=AUTO&nodata=404",
+        "sha256": "2ffbe838dc02c618ac7bf5bcf9979c1b6e08007f5233dce9a364d00d85dac009",
+        "uniqueSamples": 36000,
+        "segments": 39
+      }
+    }
+  },
+  "preregisteredDetector": {
+    "baselineSeconds": 300,
+    "windowSeconds": 10,
+    "onsetThresholdRobustSigma": 8,
+    "spectrumWindowSamples": 2048,
+    "spectrumMaximumHz": 8,
+    "spectrumPreprocess": "per-component least-squares linear detrend followed by a Hann window",
+    "polarizationWindowSeconds": 60,
+    "fieldJumpRule": "maximum vector first-difference divided by baseline robust first-difference scale; diagnostic proxy only"
+  },
+  "observations": {
+    "alignedSamples": 36000,
+    "sampleRateHz": 20,
+    "startTime": "2010-02-27T06:40:00.019538Z",
+    "endTime": "2010-02-27T07:09:59.969538Z",
+    "durationSeconds": 1799.95,
+    "gapsOverOneAndHalfSamples": 0,
+    "maximumComponentTimestampSkewMs": 0,
+    "baselineRmsMedianMps": 6.03071e-7,
+    "onsetThresholdMps": 0.000001454553,
+    "detectedOnsetSeconds": 360,
+    "detectedOnsetTime": "2010-02-27T06:46:00.019Z",
+    "peakRmsMps": 0.001575416003,
+    "peakSeconds": 1700,
+    "peakTime": "2010-02-27T07:08:20.019Z",
+    "peakToBaselineRms": 2612.3236,
+    "transientGradientRatio": 228.039,
+    "spectrum": {
+      "peakFrequencyHz": 0.0098,
+      "centroidHz": 0.0141,
+      "bandwidthHz": 0.0058,
+      "windowStartTime": "2010-02-27T07:07:28.819Z"
+    },
+    "polarization": {
+      "covarianceM2PerS2": [
+        [
+          8.1933782e-9,
+          4.699475e-8,
+          -2.1762556e-9
+        ],
+        [
+          4.699475e-8,
+          7.525161859e-7,
+          -8.3487747e-9
+        ],
+        [
+          -2.1762556e-9,
+          -8.3487747e-9,
+          2.8166312e-9
+        ]
+      ],
+      "eigenvaluesM2PerS2": [
+        7.555668675e-7,
+        6.0530165e-9,
+        1.9063113e-9
+      ],
+      "concentration": 0.989576,
+      "windowStartTime": "2010-02-27T07:07:50.019Z"
+    }
+  },
+  "readerAudit": {
+    "inheritedPolicy": "evidence/data/wave-mechanism-adaptive-control-v1.json",
+    "attemptedCost": 6,
+    "fixedCompleteCost": 8,
+    "trace": [
+      {
+        "readerId": "R5",
+        "name": "constitutive-field typing",
+        "cost": 1,
+        "status": "admitted",
+        "outcome": "1",
+        "basis": "station metadata records ground velocity in m/s from a classical borehole seismometer; this admits a classical elastic carrier but does not identify a mechanism",
+        "candidatesBefore": 6,
+        "candidatesAfter": [
+          "classical_pressure_wave",
+          "phonon_focusing",
+          "riemann_shock_without_cusp"
+        ]
+      },
+      {
+        "readerId": "R6",
+        "name": "jump and entropy",
+        "cost": 2,
+        "status": "unavailable",
+        "outcome": "??",
+        "basis": "a transient-gradient proxy is 228.04 baseline robust scales, but a sampled velocity gradient is not a field discontinuity and the entropy condition is not observed",
+        "candidatesBefore": 3,
+        "candidatesAfter": [
+          "classical_pressure_wave",
+          "phonon_focusing",
+          "riemann_shock_without_cusp"
+        ]
+      },
+      {
+        "readerId": "R7",
+        "name": "directional transport",
+        "cost": 3,
+        "status": "unavailable",
+        "outcome": "?",
+        "basis": "three-component polarization concentration is 0.9896, but one spatial station cannot estimate directional group velocity",
+        "candidatesBefore": 3,
+        "candidatesAfter": [
+          "classical_pressure_wave",
+          "phonon_focusing",
+          "riemann_shock_without_cusp"
+        ]
+      }
+    ],
+    "finalCandidates": [
+      "classical_pressure_wave",
+      "phonon_focusing",
+      "riemann_shock_without_cusp"
+    ],
+    "termination": "abstain",
+    "reason": "the source supplies three-component time series at one point, not thermodynamic entropy or multi-station directional group velocity",
+    "nextMeasurements": [
+      "a spatial station array with common timing for travel-time and directional group-velocity estimation",
+      "a carrier-specific stress/strain or energy-flux account sufficient to test a jump plus entropy condition"
+    ]
+  },
+  "evidenceKinds": {
+    "observation": [
+      "timestamped ground-velocity samples",
+      "station and instrument metadata"
+    ],
+    "derivation": [
+      "robust RMS onset",
+      "three-component spectrum",
+      "polarization covariance",
+      "transient-gradient proxy"
+    ],
+    "inference": [
+      "classical elastic carrier typing"
+    ],
+    "prohibitedPromotion": [
+      "polarization to anisotropic group velocity",
+      "sample gradient to field discontinuity",
+      "signal burst to entropy-producing shock",
+      "event context to mechanism truth"
+    ]
+  },
+  "figure": {
+    "path": "evidence/figures/earthscope-seismic-adaptive-reader-audit-v1.svg",
+    "sha256": "1425f94481bcbc9733c88a3ed03810730798dc3e747e712940465cb5896c70c2"
+  },
+  "glassBox": {
+    "rawSourceHashes": true,
+    "frozenDetectorConstants": true,
+    "exactReaderTrace": true,
+    "unavailableMeasurementsVisible": true,
+    "abstentionVisible": true,
+    "noLlmRequired": true
+  },
+  "verdict": {
+    "realDataIngested": true,
+    "sourceNativeUnitsPreserved": true,
+    "adaptiveMechanismIdentificationEstablished": false,
+    "reason": "the first real-data pass correctly exposes a measurement-type gap rather than filling it with a surrogate"
+  }
+}
