@@ -49,6 +49,51 @@
     },
     "interpretation": "ordinary sky-plane catalogue axis only; not a configuration T1 measurement"
   },
+  "crossChannelDiagnostic": {
+    "status": "executed exploratory diagnostic; reproducible residual structure detected; physical attribution open",
+    "runner": "scripts/analyze-m44-cross-channel-kinematics.mjs",
+    "membershipSource": "Roeser and Schilbach 2019 VizieR J/A+A/627/A4",
+    "astrometryAndSpectroscopySource": "Gaia DR3 gaia_source joined through dr2_neighbourhood",
+    "gaiaJoinedDataSha256": "66dc703186e78583dacc3ee649b148085a7f5beebd73319c756037abd5f79c5e",
+    "selection": {
+      "lowContaminationMembers": 1247,
+      "gaiaDr3AstrometryMatches": 1247,
+      "radialVelocityErrorAtMost5KmPerSec": 416,
+      "robustRadialVelocityInliers": 373
+    },
+    "robustCentreDeg": [130.06317338, 19.68962272],
+    "method": "fit one ICRS space-velocity vector from Gaia DR3 proper motions and parallaxes without spectroscopic RV; predict astrometric RV; subtract from Gaia DR3 spectroscopic RV; regress robust-inlier residuals on signed published-catalogue PCA coordinate anchored at the median cluster centre",
+    "fullBaselineFit": {
+      "spaceVelocityIcrsKmPerSec": [1.5884334741911625, 47.06122326835162, 0.5008685450425827],
+      "astrometricRadialVelocityAtRobustCentreKmPerSec": 33.11788506771929,
+      "tangentialDesignConditionNumber": 50.839863171195,
+      "medianResidualKmPerSec": 1.44275521442432,
+      "robustResidualSigmaKmPerSec": 1.4293890487034682,
+      "tailSlopeKmPerSecPerDeg": -0.06722838418202894,
+      "tailSlopeStandardErrorKmPerSecPerDeg": 0.012427363657910324,
+      "tailCorrelation": -0.27039577522776675,
+      "inverseVarianceWeightedTailSlopeKmPerSecPerDeg": -0.05696028601887845,
+      "tailSlopeControllingGmagKmPerSecPerDeg": -0.06700428474922557,
+      "tailGmagCorrelation": 0.05728660370781218,
+      "permutationIterations": 2000,
+      "permutationTwoSidedPValue": 0.0004997501249375312,
+      "leadingBranchCount": 182,
+      "trailingBranchCount": 191
+    },
+    "apertureConditioningControl": {
+      "fullSelected": { "members": 1247, "conditionNumber": 50.839863171195, "centreRvKmPerSec": 33.11788506771929 },
+      "within3Point3Deg": { "members": 922, "conditionNumber": 1449.725908363433, "centreRvKmPerSec": 33.481749309374266 },
+      "within1Point5Deg": { "members": 589, "conditionNumber": 4226.763701921912, "centreRvKmPerSec": 37.04885803646172 }
+    },
+    "authorityLimits": [
+      "membership was preselected with convergent-point kinematics, so this is not independent discovery",
+      "a constant spectroscopic offset still does not identify configuration T1",
+      "no source-derived T1 law predicted the observed spatial slope before inspection",
+      "ordinary tail dynamics, binaries, atmosphere-dependent shifts and Gaia RV systematics are not yet removed",
+      "the next gate is a frozen ordinary-dynamics prediction plus a preregistered T1 residual law and held-out or independent spectroscopy"
+    ],
+    "empiricalEvidenceForT1Tilt": false
+  },
   "minimumSeparatingBundle": [
     "astrometric perspective or convergent-point radial velocity independent of spectral frequencies",
     "spectroscopic systemic velocity with binary, atmospheric and instrument zero-point controls",
@@ -67,15 +112,16 @@
     "membership-selection sensitivity"
   ],
   "verdict": {
-    "status": "constant-angle single-channel hypothesis non-identifying; differential cross-channel experiment conditional on a frozen coupling law",
+    "status": "constant-angle single-channel hypothesis non-identifying; first cross-channel pass detects an unassigned spatial residual but does not identify T1",
     "empiricalEvidenceForT1Tilt": false,
     "newPhysicsClaim": false,
-    "nextGate": "derive a source-native T1-to-observable kernel that predicts a non-constant residual before fitting M44 data"
+    "nextGate": "freeze an ordinary-dynamics prediction and a source-native T1 residual law, then test held-out members or independent spectroscopy"
   },
   "sources": [
     "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-44/",
     "https://doi.org/10.1051/0004-6361/201935502",
     "https://doi.org/10.26093/cds/vizier.36270004",
+    "https://gea.esac.esa.int/archive/",
     "https://doi.org/10.1051/0004-6361/202451650",
     "https://doi.org/10.1088/2041-8205/756/2/L33",
     "https://doi.org/10.1088/0004-637X/807/1/24",

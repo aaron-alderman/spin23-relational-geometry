@@ -1,9 +1,10 @@
 # M44 does not reveal a T1 angle without a cross-channel calibration
 
 **Date:** 26 October 2026  
-**Status:** source-oriented identifiability spike; constant-angle spectroscopy closed as non-identifying; differential astrometry–spectroscopy test remains conditional  
+**Status:** source-oriented identifiability spike; constant-angle spectroscopy closed as non-identifying; first differential astrometry–spectroscopy pass executed but not physically assigned
 **Evidence:** [machine-readable spike ledger](../../../evidence/data/m44-relative-t1-orientation-spike-v1.json)  
 **Certificate:** [degeneracy verifier](../../../verification/verify/verify_m44_relative_t1_orientation_spike.mjs)
+**Cross-channel runner:** [Gaia/VizieR analysis](../../../scripts/analyze-m44-cross-channel-kinematics.mjs)
 
 ## Question
 
@@ -108,6 +109,25 @@ r_i=v_{\rm spec,i}-v_{\rm ast,i}
 
 The first admissible test is not whether \(\bar r\neq0\), because a common zero point can produce that. It is whether a frozen \(T_1\) model predicts a spatial, spectral or carrier-dependent pattern in \(r_i\) that survives withheld members, the leading and trailing tails, independent spectrographs and an ordinary cluster-dynamics model.
 
+## First cross-channel pass
+
+A read-only exploratory pass joined the 1,247 low-contamination catalogue members to Gaia DR3 through the published DR2--DR3 neighbourhood table. All 1,247 obtained finite parallax and proper motion; 416 also had a Gaia DR3 radial velocity with reported uncertainty no greater than 5 km/s. The astrometric side fits a single ICRS space-velocity vector from proper motions and parallaxes only. It therefore does not ingest the spectroscopic radial velocities it later predicts.
+
+The full spatial baseline gives an astrometric radial velocity of 33.12 km/s at the robust cluster centre. Among 373 robust spectroscopic inliers, the residual has median 1.44 km/s and robust scatter 1.43 km/s. Along the signed catalogue major axis, centred on the median cluster position, its ordinary least-squares slope is
+
+\[
+-0.0672\pm0.0124\ {\rm km\,s^{-1}\,deg^{-1}},
+\qquad r=-0.270.
+\]
+
+The inverse-variance-weighted slope is -0.0570 km/s/deg. Controlling linearly for catalogue G magnitude leaves -0.0670 km/s/deg, because tail coordinate and G magnitude correlate only weakly in this selected RV sample (0.057). A deterministic 2,000-shuffle label-permutation check reaches its resolution floor, \(p=1/2001\). Recentring the sign split on the median cluster position yields 182 and 191 inliers on the two branches; the branch slopes have the same sign, but the trailing-branch estimate is individually weak.
+
+This is a detected *cross-channel structure*, not a detected \(T_1\) orientation. The membership list was selected with convergent-point kinematics; the common-velocity model omits the ordinary tail dynamics, binaries, atmosphere-dependent spectral shifts and Gaia RV systematics named above; and no source-derived \(T_1\) law predicted the slope before inspection. The 2025 N-body work specifically predicts tail self-gravity, epicyclic widening, oscillation and branch asymmetry, so an ordinary-dynamics residual is expected rather than exceptional.
+
+The fit also demonstrates why the long tails are metrologically useful. The tangential design condition number is 50.8 for the full selected sample, but 1,450 inside an approximate 3.3-degree tidal-radius aperture and 4,227 inside 1.5 degrees. The inferred centre RV correspondingly drifts from 33.12 to 33.48 and then 37.05 km/s. A narrow cluster core cannot reliably supply its own astrometric radial component; angular extent is part of the measurement instrument.
+
+The bounded update is therefore: the proposed second channel exists and contains a reproducible spatial residue, while physical attribution remains deliberately open. The next honest gate is a frozen ordinary-dynamics prediction plus a source-native \(T_1\) residual law, followed by held-out stars or an independent spectrograph. Fitting an angle to the observed slope now would merely rename the residue.
+
 ## What the present evidence says
 
 M44 is an attractive calibration ensemble, but the current corpus supplies neither a source-derived \(T_1\)-to-observable map nor a physical law assigning separate \(T_1\) orientations to nearby stellar systems. Praesepe lies within the Milky Way and its established literature treats its spectra, age, chemistry, planets and tails with ordinary stellar and Galactic dynamics.
@@ -129,6 +149,7 @@ This is a useful negative result. It converts “perhaps their axis is tilted”
 - NASA Science, [Messier 44](https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-44/).
 - S. Röser and E. Schilbach, [*Praesepe (NGC 2632) and its tidal tails*](https://doi.org/10.1051/0004-6361/201935502), *Astronomy & Astrophysics* **627** (2019), A4.
 - Röser and Schilbach, [VizieR catalogue J/A+A/627/A4](https://doi.org/10.26093/cds/vizier.36270004).
+- ESA, [Gaia Archive](https://gea.esac.esa.int/archive/), Gaia DR3 source and DR2-neighbourhood tables.
 - E. Schilbach and S. Röser, [*Dynamical model of Praesepe and its tidal tails*](https://doi.org/10.1051/0004-6361/202451650), *Astronomy & Astrophysics* (2025).
 - S. N. Quinn et al., [*Two “b”s in the Beehive: The Discovery of the First Hot Jupiters in an Open Cluster*](https://doi.org/10.1088/2041-8205/756/2/L33), *The Astrophysical Journal Letters* **756** (2012), L33.
 - T. D. Brandt and C. X. Huang, [*The Age and Age Spread of the Praesepe and Hyades Clusters*](https://doi.org/10.1088/0004-637X/807/1/24), *The Astrophysical Journal* **807** (2015), 24.

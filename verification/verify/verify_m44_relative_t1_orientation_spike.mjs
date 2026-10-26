@@ -90,6 +90,19 @@ assert.ok(Math.abs(derivedControl.positionAngle - control.majorAxisPositionAngle
 assert.ok(Math.abs(derivedControl.axisRatio - control.principalAxisRatio) < 0.01);
 assert.match(control.interpretation, /not a configuration T1 measurement/u);
 
+const crossChannel = evidence.crossChannelDiagnostic;
+assert.equal(crossChannel.selection.lowContaminationMembers, control.selectedRows);
+assert.equal(crossChannel.empiricalEvidenceForT1Tilt, false);
+assert.ok(crossChannel.fullBaselineFit.tangentialDesignConditionNumber <
+  crossChannel.apertureConditioningControl.within3Point3Deg.conditionNumber);
+assert.ok(crossChannel.apertureConditioningControl.within3Point3Deg.conditionNumber <
+  crossChannel.apertureConditioningControl.within1Point5Deg.conditionNumber);
+assert.ok(Math.abs(crossChannel.fullBaselineFit.tailSlopeKmPerSecPerDeg -
+  crossChannel.fullBaselineFit.tailSlopeControllingGmagKmPerSecPerDeg) < 0.001);
+assert.equal(crossChannel.fullBaselineFit.leadingBranchCount +
+  crossChannel.fullBaselineFit.trailingBranchCount, crossChannel.selection.robustRadialVelocityInliers);
+assert.match(crossChannel.authorityLimits.join(" "), /not independent discovery/u);
+
 if (process.argv.includes("--live")) {
   const response = await fetch(control.query);
   assert.equal(response.ok, true, "VizieR request failed: " + response.status);
@@ -115,6 +128,8 @@ console.log(JSON.stringify({
   spatialCovarianceAliases: 3,
   ordinarySkyPlanePositionAngleEastOfNorthDeg: derivedControl.positionAngle,
   ordinarySkyPlaneAxisRatio: derivedControl.axisRatio,
+  crossChannelResidualDetected: true,
+  crossChannelPhysicalAttribution: "open",
   liveCatalogueVerified: process.argv.includes("--live"),
   constantAngleIdentifiable: false,
   modularAngleDefined: false,
