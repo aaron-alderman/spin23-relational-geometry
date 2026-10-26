@@ -188,5 +188,5 @@ console.log(JSON.stringify({
   e8TwoCellProjectedCoupling: {localRoots:e8TwoCell.localRoots, maximumJ:e8TwoCell.couplingSweep.at(-1).J, minimumProjectedGap:Math.min(...e8TwoCell.couplingSweep.map(x=>x.gaps.at(-1))), fullTwoCellGapCertified:false, widthGapCertified:false},
   e8TwoCellRootCountAudit: {localRootCounts:e8TwoCellRoots.localRootCounts, gapRootCountPromoted:true, splittingCoefficientPromoted:false},
   quasicrystalBridge: {materialClasses:quasicrystal.factorialDesign.backplanes.length, relationPrograms:quasicrystal.factorialDesign.relationPrograms.length, devices:quasicrystal.factorialDesign.totalPrimaryDevices},
-  nextGate: "ten-root or remainder control for splitting -> three/four-cell projected chain -> size-stable intercell gap -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
+  nextGate: "twelve-root or remainder control for splitting -> three/four-cell projected chain -> size-stable intercell gap -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
 }));
