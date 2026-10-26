@@ -7,7 +7,7 @@
 
 ## Result
 
-The audit scans **2258** Markdown documents and routes **325** for possible transition, spectral or metastability relevance. **68** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **98** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
+The audit scans **2261** Markdown documents and routes **326** for possible transition, spectral or metastability relevance. **69** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **98** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
 
 This is intentionally not a global search-and-replace. “Radiative stability,” a graph transition, a resonance pole, detector lag and an atomic decay do not name the same thing. The audit makes that difference visible and keeps the unresolved set enumerable.
 
@@ -28,6 +28,7 @@ Barrier escape and hysteresis use a different mechanism ledger. Effective pole o
 | `corpus/programmes/admissibility/admissibility_140_observer_horizon_channel_atlas_and_exhaustion.md` | `cross_domain_channel_atlas` | Routes observer, horizon, Kerr and nuclear mechanisms without identifying their transition or width semantics. |
 | `corpus/programmes/admissibility/admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md` | `decision_analysis_not_rate_derivation` | Prioritizes source-bounded experimental lanes; linked source packets, not the ranking, control every lifetime or transition claim. |
 | `corpus/programmes/admissibility/admissibility_145_where_the_next_insight_can_enter.md` | `decision_analysis_not_rate_derivation` | Compares which source, evolution, channel and detector parameters each lane can identify; it preserves the operator-to-rate ledger and derives no new microscopic width. |
+| `corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md` | `generated_navigation_no_independent_rate_claim` | Generated typed journeys preserve source wording and transformation receipts; matrix-element and decay language remains governed by the cited scientific source and is not a new rate derivation. |
 | `corpus/programmes/admissibility/admissibility_02_casimir_as_first_generative_probe.md` | `classification_not_amplitude` | Casimir labels sectors but supplies neither the physical operator nor its strength. |
 | `corpus/programmes/admissibility/admissibility_04_dispersion_force_landscape.md` | `effective_response_boundary` | A causal response may be used effectively; microscopic line claims require the operator ledger. |
 | `corpus/programmes/admissibility/admissibility_05_invariant_atlas_time_force_measure_material_rotation.md` | `classification_not_amplitude` | Rotational organization and selection rules are followed by operator, matrix-element and detector data. |
