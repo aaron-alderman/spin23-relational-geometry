@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "maxwell-vector-potential-reconstruction-gate-v1",
+  "date": "2026-10-26",
+  "sourcePost": "https://x.com/JDRedding/status/2114493830603096480",
+  "sourceImage": "https://pbs.twimg.com/media/HVgw7DuaMAE8u8C?format=jpg&name=large",
+  "imageAudit": [
+    {
+      "claim": "B=curl A",
+      "status": "standard kinematic identity",
+      "boundary": "A is a gauge potential and is not uniquely determined by B"
+    },
+    {
+      "claim": "mu H=curl A",
+      "status": "conditional",
+      "boundary": "requires B=mu H; scalar mu is inadequate for general magnetized, anisotropic, dispersive or hysteretic media"
+    },
+    {
+      "claim": "the displayed Cartesian and epsilon component formulas",
+      "status": "correct",
+      "boundary": "they restate the curl and add no new group or topology"
+    },
+    {
+      "claim": "curl is an antisymmetric structural lift operator",
+      "status": "misleading",
+      "boundary": "the cross-product matrix k-times is real skew-symmetric, but the Fourier curl symbol i(k-times) is Hermitian and curl is formally self-adjoint under suitable boundary conditions"
+    },
+    {
+      "claim": "A-streamline knot directly represents a physical magnetic structure",
+      "status": "not licensed",
+      "boundary": "A changes under A->A+grad chi; field-line linking belongs to B and gauge-controlled helicity or Wilson data"
+    },
+    {
+      "claim": "RDGMFEQ, SID/PED tags, O-mode, Q and PED-power scaling",
+      "status": "undefined in the supplied source",
+      "boundary": "no equations, units, transformation laws, action or independent source were supplied"
+    }
+  ],
+  "typedReconstruction": {
+    "encoder": "C(A)=curl A=B",
+    "localKernel": "grad chi",
+    "gaugeQuotient": "A modulo gradients",
+    "topologicalKernel": "closed non-exact or flat connection components on domains with nonzero first cohomology",
+    "minimalDecoderData": [
+      "B on the domain",
+      "a gauge condition such as div A=0",
+      "boundary conditions",
+      "one Wilson period for each independent one-cycle"
+    ],
+    "verdict": "B alone cannot reconstruct A; gauge and topological period data are necessary"
+  },
+  "topologicalObservable": {
+    "magneticHelicity": "H_m=integral A dot B d^3x=integral A wedge dA",
+    "meaning": "under appropriate flux and boundary conditions it measures weighted linkage of magnetic flux tubes",
+    "gaugeBoundary": "absolute helicity is gauge invariant on a closed domain or when the boundary term vanishes; open magnetic boundaries require relative helicity",
+    "distinctFrom": "a decorative knot drawn from gauge-dependent A streamlines"
+  },
+  "dynamics": {
+    "electricField": "E=-partial_t A-grad phi",
+    "faraday": "partial_t B=-curl E",
+    "ampereMaxwell": "curl H=J+partial_t D",
+    "conclusion": "B=curl A is kinematics, not a dynamical law; an action, sources, constitutive response and initial/boundary data are required"
+  },
+  "materialBoundary": {
+    "localLinear": "B_i=mu_ij H_j",
+    "dispersive": "B_i(omega,k)=mu_ij(omega,k) H_j(omega,k)",
+    "hysteretic": "B at time t can depend on field history and internal material state",
+    "consequence": "a scalar mu arrow cannot represent the material lane without an independently calibrated constitutive model"
+  },
+  "corpusBridge": {
+    "typedDecoder": "curl supplies a physical example of a non-injective encoder and forces an explicit quotient before reconstruction",
+    "admissibility": "local curvature, global holonomy and material response are different detector coordinates",
+    "topology": "Wilson loops and helicity retain information erased by local B measurements",
+    "monsterAnalogy": "the 23A/23B scalar-trace collision is structurally analogous: enlarge the observable or reconstruct only the quotient"
+  },
+  "verdict": "The image has a correct Maxwell core and a suggestive knot, but its added labels do not establish a new group or dynamics. The rigorous frontier is the gauge-and-Hodge reconstruction problem: curvature plus gauge, boundary and period data, with helicity as a conditional topological observable."
+}
