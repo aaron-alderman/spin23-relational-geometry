@@ -55,6 +55,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Observers, horizons and outgoing channels (1)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-1.md)
 - [Claim · The admissibility frontier · Observers, horizons and outgoing channels (2)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-2.md)
 - [Claim · The admissibility frontier · Observers, horizons and outgoing channels (3)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-3.md)
+- [Claim · The admissibility frontier · Observers, horizons and outgoing channels (4)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-4.md)
 - [Claim · The admissibility frontier · the oriented seam becomes an experiment (1)](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-1.md)
 - [Claim · The admissibility frontier · the oriented seam becomes an experiment (2)](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-2.md)
 - [Claim · The admissibility frontier · the oriented seam becomes an experiment (3)](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-3.md)

@@ -8,7 +8,7 @@ _One exact response-to-symmetry completion_
 
 > response data → H₂(ℝ) → Peirce–Schur triple → TKK generators → 𝔰𝔭(4,ℝ) ≅ 𝔰𝔭𝔦𝔫(2,3)
 
-![Infographic tracing coupled measurements through a positive response cone and Jordan-TKK closure to Spin(2,3), with a firewall before physical spacetime](../assets/spin23-spine.svg)
+![Infographic tracing coupled measurements through a positive response cone and Jordan-TKK closure to Spin(2,3), with a firewall before physical spacetime](../../../docs/edition-3/assets/spin23-spine.svg)
 
 _The exact mathematical spine and the physical firewall._
 <a id="what-closes"></a>

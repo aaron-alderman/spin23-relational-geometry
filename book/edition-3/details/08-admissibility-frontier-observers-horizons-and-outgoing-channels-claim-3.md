@@ -17,7 +17,7 @@ The construction is admitted only after the named additional input is supplied. 
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Observers, horizons and outgoing channels”.
-- **Unit of argument:** assertion 3 of 3 in this section.
+- **Unit of argument:** assertion 3 of 4 in this section.
 - **Evidence posture:** Identify the named external input and verify that the construction follows after it is supplied.
 - **Research move:** joins several typed results while letting the weakest edge set the claim.
 
@@ -42,10 +42,11 @@ Show that the named input is inconsistent, insufficient, unavailable, or fails t
 - **admissibility 141 observer horizon and nuclear priority for next insight** — [admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md](../../../corpus/programmes/admissibility/admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md)
 - **admissibility 143 th229 shared parent host channel factorization programme** — [admissibility_143_th229_shared_parent_host_channel_factorization_programme.md](../../../corpus/programmes/admissibility/admissibility_143_th229_shared_parent_host_channel_factorization_programme.md)
 - **admissibility 144 kerr multirecord public data consistency programme** — [admissibility_144_kerr_multirecord_public_data_consistency_programme.md](../../../corpus/programmes/admissibility/admissibility_144_kerr_multirecord_public_data_consistency_programme.md)
+- **admissibility 145 where the next insight can enter** — [admissibility_145_where_the_next_insight_can_enter.md](../../../corpus/programmes/admissibility/admissibility_145_where_the_next_insight_can_enter.md)
 - **observer horizon nuclear literature review v1** — [observer_horizon_nuclear_literature_review_v1.md](../../../corpus/programmes/frontier-physics-targets/observer_horizon_nuclear_literature_review_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#observers-horizons-and-outgoing-channels) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-2.md) · [Next claim →](08-admissibility-frontier-the-third-term-is-the-mediator-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#observers-horizons-and-outgoing-channels) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-2.md) · [Next claim →](08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-4.md)

@@ -6,7 +6,7 @@ _Mediator completion and the third edge_
 
 > **Chapter function — [⌕ Auditor](../reading-key/move-auditor.md)** — checks assumptions, certificates, counterexamples and stopping rules.
 
-![Layered diagram separating Standard Model fit, chiral domain, family index and anomaly cancellation](../assets/standard-model-seam.svg)
+![Layered diagram separating Standard Model fit, chiral domain, family index and anomaly cancellation](../../../docs/edition-3/assets/standard-model-seam.svg)
 
 _Compatibility, chirality, family count and anomaly cancellation are separate gates._
 <a id="the-attractive-construction"></a>

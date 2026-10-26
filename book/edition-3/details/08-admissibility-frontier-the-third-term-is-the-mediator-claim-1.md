@@ -103,4 +103,4 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#the-third-term-is-the-mediator) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-3.md) · [Next claim →](08-admissibility-frontier-the-third-term-is-the-mediator-claim-2.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#the-third-term-is-the-mediator) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-4.md) · [Next claim →](08-admissibility-frontier-the-third-term-is-the-mediator-claim-2.md)

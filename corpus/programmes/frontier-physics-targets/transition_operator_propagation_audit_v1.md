@@ -7,7 +7,7 @@
 
 ## Result
 
-The audit scans **2245** Markdown documents and routes **323** for possible transition, spectral or metastability relevance. **67** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **98** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
+The audit scans **2258** Markdown documents and routes **325** for possible transition, spectral or metastability relevance. **68** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **98** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
 
 This is intentionally not a global search-and-replace. “Radiative stability,” a graph transition, a resonance pole, detector lag and an atomic decay do not name the same thing. The audit makes that difference visible and keeps the unresolved set enumerable.
 
@@ -27,6 +27,7 @@ Barrier escape and hysteresis use a different mechanism ledger. Effective pole o
 | `corpus/programmes/admissibility/admissibility_137_hawking_flux_requires_state_horizon_channel_and_detector.md` | `semiclassical_channel_stack` | Separates horizon geometry, field state, mode continuation, greybody scattering and detector response; it does not infer flux from a boundary word alone. |
 | `corpus/programmes/admissibility/admissibility_140_observer_horizon_channel_atlas_and_exhaustion.md` | `cross_domain_channel_atlas` | Routes observer, horizon, Kerr and nuclear mechanisms without identifying their transition or width semantics. |
 | `corpus/programmes/admissibility/admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md` | `decision_analysis_not_rate_derivation` | Prioritizes source-bounded experimental lanes; linked source packets, not the ranking, control every lifetime or transition claim. |
+| `corpus/programmes/admissibility/admissibility_145_where_the_next_insight_can_enter.md` | `decision_analysis_not_rate_derivation` | Compares which source, evolution, channel and detector parameters each lane can identify; it preserves the operator-to-rate ledger and derives no new microscopic width. |
 | `corpus/programmes/admissibility/admissibility_02_casimir_as_first_generative_probe.md` | `classification_not_amplitude` | Casimir labels sectors but supplies neither the physical operator nor its strength. |
 | `corpus/programmes/admissibility/admissibility_04_dispersion_force_landscape.md` | `effective_response_boundary` | A causal response may be used effectively; microscopic line claims require the operator ledger. |
 | `corpus/programmes/admissibility/admissibility_05_invariant_atlas_time_force_measure_material_rotation.md` | `classification_not_amplitude` | Rotational organization and selection rules are followed by operator, matrix-element and detector data. |
@@ -91,7 +92,7 @@ Barrier escape and hysteresis use a different mechanism ledger. Effective pole o
 
 ## Remaining boundary
 
-The operator/rate queue is empty under the declared vocabulary: every hit is in the reviewed spine, carries the AZ-127 boundary in context, has no rate context, or has an explicit semantic exclusion. The **110** effective-spectral candidates are now exhaustively routed by the [spectral-width audit](spectral_width_propagation_audit_v1.md); this closes their width/lifetime typing queue, not their physical theories. The **36** barrier/kinetic candidates remain a separately typed queue. None may be silently collapsed into atomic or nuclear transition language.
+The operator/rate queue is empty under the declared vocabulary: every hit is in the reviewed spine, carries the AZ-127 boundary in context, has no rate context, or has an explicit semantic exclusion. The **111** effective-spectral candidates are now exhaustively routed by the [spectral-width audit](spectral_width_propagation_audit_v1.md); this closes their width/lifetime typing queue, not their physical theories. The **36** barrier/kinetic candidates remain a separately typed queue. None may be silently collapsed into atomic or nuclear transition language.
 
 ## Exit criterion
 

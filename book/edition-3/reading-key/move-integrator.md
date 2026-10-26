@@ -69,6 +69,7 @@ Treat this mark as a verb. It names the work the passage is doing and therefore 
 - [Claim · The admissibility frontier · Observers, horizons and outgoing channels (1)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-1.md)
 - [Claim · The admissibility frontier · Observers, horizons and outgoing channels (2)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-2.md)
 - [Claim · The admissibility frontier · Observers, horizons and outgoing channels (3)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-3.md)
+- [Claim · The admissibility frontier · Observers, horizons and outgoing channels (4)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-4.md)
 - [Claim · The admissibility frontier · the mixed interface has an exact shape (1)](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-1.md)
 - [Claim · The admissibility frontier · the mixed interface has an exact shape (2)](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-2.md)
 - [Claim · The admissibility frontier · the mixed interface has an exact shape (3)](../details/08-admissibility-frontier-the-mixed-interface-has-an-exact-shape-claim-3.md)

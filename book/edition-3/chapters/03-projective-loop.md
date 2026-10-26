@@ -21,7 +21,7 @@ This is the mathematically disciplined form of the twisted odd-gear intuition: t
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/03-projective-loop-the-exact-result-claim-2.md)
 
-![Three-stage diagram showing a frustrated triangle, its connected six-cycle double cover, and a twelve-step marked return](../assets/projective-lift.svg)
+![Three-stage diagram showing a frustrated triangle, its connected six-cycle double cover, and a twelve-step marked return](../../../docs/edition-3/assets/projective-lift.svg)
 
 _The base triangle stores the obstruction; the six-cycle makes sheet parity single-valued; the twelve-step marked lift returns every decoration._
 <a id="the-reversal"></a>
@@ -50,7 +50,7 @@ The programme's three-placement loop behaves similarly. Local transitions can be
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/03-projective-loop-a-familiar-twisted-loop-picture-claim-2.md)
 
-![Schematic showing an arrow reversed after one circuit of a half-twisted strip and restored after two circuits](../assets/mobius-return.svg)
+![Schematic showing an arrow reversed after one circuit of a half-twisted strip and restored after two circuits](../../../docs/edition-3/assets/mobius-return.svg)
 
 _A half-twist needs two circuits to return both position and arrow orientation._
 <a id="central-sign-versus-handedness"></a>
@@ -68,7 +68,7 @@ The distinction is not pedantry. A physical selector must couple to something th
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/03-projective-loop-central-sign-versus-handedness-claim-2.md)
 
-![Comparison of central minus identity with positive determinant and a reflection with negative determinant](../assets/central-sign-orientation.svg)
+![Comparison of central minus identity with positive determinant and a reflection with negative determinant](../../../docs/edition-3/assets/central-sign-orientation.svg)
 
 _Central sign reversal and orientation reversal are different operations: det(−I₂)=+1, while a reflection has determinant −1._
 <a id="from-topology-to-a-defect"></a>
@@ -86,7 +86,7 @@ This cleanly separates memory from hardware: BF theory carries the sector label;
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/03-projective-loop-from-topology-to-a-defect-claim-2.md)
 
-![Layered diagram separating topological sector memory, a neutral kink wall, and a localized reader mode](../assets/topology-defect-reader.svg)
+![Layered diagram separating topological sector memory, a neutral kink wall, and a localized reader mode](../../../docs/edition-3/assets/topology-defect-reader.svg)
 
 _Memory, wall and reader are three different jobs; the latter two require additional physical structure._
 ## Chapter sources

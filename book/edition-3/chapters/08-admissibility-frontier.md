@@ -319,6 +319,10 @@ Nuclear isomers, shape coexistence, fission and compound resonances are the near
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-3.md)
 
+The five lanes share a source–evolution–channel–detector composition but differ in which block can be controlled. Thorium-229 is the fastest nested-closure test; generic nuclear reactions are the harshest vocabulary test; Unruh is the cleanest detector regression; Kerr is the strongest multi-record fundamental falsifier; Hawking is the deepest state–geometry–record endpoint. No lane yet supplies a source-derived Jordan/Lie physical bridge.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-4.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 

@@ -34,7 +34,7 @@ This table is deliberately not a unification. It prevents the same word—bounda
 
 ## Ranked work
 
-The deeper [priority assessment](admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md) distinguishes pedagogical order from discovery yield:
+The deeper [priority assessment](admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md) distinguishes pedagogical order from discovery yield, while the [causal importance analysis](admissibility_145_where_the_next_insight_can_enter.md) identifies the exact source, evolution, channel or detector block in which each next insight can enter:
 
 1. **Precision parent/channel pilot:** factor shared nuclear and host-specific parameters across controlled (^{229})Th spectroscopy, lifetime and depopulation records.
 2. **Strong-field falsifier:** reproduce a public Kerr spectroscopy likelihood and test one mass/spin posterior across unlike records.

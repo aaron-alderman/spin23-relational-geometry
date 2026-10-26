@@ -31,12 +31,16 @@ These sources establish the conventional structures against which a corpus bridg
 | LVK, [Black-hole spectroscopy and tests of general relativity with GW250114](https://arxiv.org/abs/2509.08099) (2025) | supplies the strongest current single-event multi-tone Kerr consistency record and a public route to a cross-mode likelihood | present agreement is a GR/Kerr test, not evidence for the corpus's mixed-generator identification |
 | T. H. Yoon, [Quantum optical simulator for Unruh–DeWitt detector dynamics](https://arxiv.org/abs/2511.16865) (2025 preprint) | proposes independent control of gap, phase and detector-field dynamics on a photonic platform | a simulator validates a response dictionary, not direct acceleration through vacuum |
 | M. Tomonaga and Y. Nambu, [Second-order coherence as an indicator of quantum entanglement of Hawking radiation](https://doi.org/10.1103/PhysRevD.110.105004) (2024) | identifies a correlation record richer than a fitted thermal spectrum in a moving-mirror model | moving-mirror correlations do not supply gravitational backreaction |
+| J. S. Higgins et al., [Temperature sensitivity of a thorium-229 solid-state nuclear clock](https://doi.org/10.1103/PhysRevLett.134.113801) (2025) | resolves how temperature changes the unsplit nuclear frequency and electric-quadrupole structure in one crystal, turning the host into an intervenable part of the likelihood | a calibrated host shift is not the isolated nuclear response and cannot be transported to another host without a shared-parameter test |
+| R. Zhou et al., [The reliable quantum master equation of the Unruh–DeWitt detector](https://arxiv.org/abs/2502.06411) (2025 preprint) | supplies explicit validity criteria for Markov and rotating-wave reductions in detector dynamics | an approximation-validity result is not an observation of the Unruh effect |
 
 ## Synthesis
 
 The literature supports four independent axes: observer-relative correlation sampling, geometry-dependent propagation, open-channel scattering and many-body metastability. The corpus contribution is not their discovery. It is the insistence that a proposed bridge name which axis it changes, preserve the others as controls, and carry its claim all the way to a detector likelihood.
 
 The update changes the execution order. (^{229})Th is now a live controlled parent/environment/record platform; Kerr is a live strong-field multi-record analysis; Unruh remains the detector-calculus calibration; Hawking remains the highest-payoff integration endpoint but the weakest direct next experiment.
+
+The [causal importance analysis](../admissibility/admissibility_145_where_the_next_insight_can_enter.md) uses these sources to ask a stricter question than topical priority: which independently variable block can add a sensitivity direction outside the existing nuisance span, and what would a positive or negative result teach before any new-physics promotion.
 
 ## Public execution update
 

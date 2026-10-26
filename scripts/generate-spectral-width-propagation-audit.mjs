@@ -36,6 +36,7 @@ const groups = {
   spectrum_gap_or_residue_not_width: [
     /^corpus\/claims\//u,
     /frontier_wave7_|moonshine-program-lattice|admissibility_(?:58|69)_|lane-expansion\/programme_lane_expansion_12/u,
+    /translation-free-exceptional-topology\/E8_COUPLED_WIRE_TOMOGRAPHY/u,
   ],
 };
 const reasons = {
