@@ -156,5 +156,5 @@ This is not an ontological derivation. It is a sequence of increasingly hostile 
 
 ## Practical conclusion
 
-The next two pieces of work should run together: a (^{229})Th shared-parent/host-channel factorization design and a public-data Kerr multi-record consistency analysis. Unruh supplies their detector-control language. Generic nuclear resonances stress-test the result. Hawking remains the final integration problem until a gravitational record becomes available.
+The next two pieces of work now have decision-complete contracts: the [thorium-229 shared-parent/host-channel factorization programme](admissibility_143_th229_shared_parent_host_channel_factorization_programme.md) and the [GW250114 Kerr multi-record public-data programme](admissibility_144_kerr_multirecord_public_data_consistency_programme.md). Both can begin from public releases, although the full thorium hierarchical fit remains contingent on point-level metadata and covariance. Unruh supplies their detector-control language. Generic nuclear resonances stress-test the result. Hawking remains the final integration problem until a gravitational record becomes available.
 

@@ -1,0 +1,90 @@
+import { writeFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+const write = process.argv.includes("--write");
+
+const programmes = [
+  {
+    id: "TH229-FACTOR-01",
+    topicIds: ["OT-053"],
+    detectorIds: ["DET-037", "DET-022", "DET-029"],
+    title: "Shared-parent / host-channel factorization for thorium-229",
+    executionStatus: "public_release_audit_executable_full_hierarchical_fit_metadata_contingent",
+    publicInputs: [
+      { id: "figshare-33386191", url: "https://doi.org/10.6084/m9.figshare.33386191", role: "clock datasets and plotting code" },
+      { id: "zenodo-22657608", url: "https://doi.org/10.5281/zenodo.22657608", role: "independent clock supporting data" }
+    ],
+    observable: "joint held-out line-centre, splitting, linewidth, survival and controlled-quench records",
+    nuisanceModel: ["temperature", "beam position", "site population", "inhomogeneous line shape", "laser power and frequency", "PMT or phototube response", "lock-in or servo transfer", "dead time and background"],
+    buildGate: "Reproduce a released headline quantity from checksummed point-level data and enumerate any missing acquisition metadata or covariance.",
+    bridgeGate: "A shared nuclear block predicts at least one external-host record without refit and is preferred to or predictively matches a saturated per-sample model after complexity penalty.",
+    physicsGate: "A residual repeats in an independent specimen or apparatus, follows a predeclared control, survives conventional nuclear/material/detector alternatives and matches a predeclared interaction plus companion nulls.",
+    sensitivityRequirement: "Injection/recovery for the smallest recoverable host-invariant frequency, lifetime or quench residual after full covariance and multiplicity correction.",
+    stopRule: "Stop at release reproduction if event-level records, metadata or covariance are absent; stop the bridge if host and detector freedom span the transported parameter block.",
+    outcomes: [
+      { id: "T0", condition: "shared-parent external prediction passes", classification: "theoretical_engineering", propagation: "Promote OT-053 to calibrated bridge and export the ledger to one generic open-nuclear hostile control." },
+      { id: "T1", condition: "only host-specific fits pass", classification: "conventional_model_improvement", propagation: "Retain metrology, demote the corpus bridge and improve host/defect modelling." },
+      { id: "T2", condition: "stable residual appears in one release", classification: "candidate_anomaly", propagation: "Freeze the residual and preregister independent replication; do not call it new physics." },
+      { id: "T3", condition: "replicated residual defeats declared controls", classification: "new_physics_candidate", propagation: "Open a typed interaction and companion-null programme; do not automatically promote Jordan or Spin identifications." },
+      { id: "TB", condition: "required metadata are absent", classification: "external_data_boundary", propagation: "Publish the missing-field request and stop at figure reproduction." }
+    ]
+  },
+  {
+    id: "KERR-GW250114-01",
+    topicIds: ["OT-052"],
+    detectorIds: ["DET-022", "DET-023", "DET-029", "DET-035"],
+    title: "GW250114 Kerr multi-record posterior-predictive consistency",
+    executionStatus: "public_data_executable",
+    publicInputs: [
+      { id: "gwosc-o4-discovery", url: "https://gwosc.org/o4_eventdata_docs/", role: "4096-second H1/L1 strain at 4 kHz and 16 kHz plus release documentation" },
+      { id: "zenodo-17018009", url: "https://doi.org/10.5281/zenodo.17018009", role: "four waveform-family posterior products and spectroscopy release" }
+    ],
+    observable: "held-out complex ringdown frequencies and damping predicted from a frozen remnant mass/spin posterior",
+    nuisanceModel: ["calibration uncertainty", "power spectral density", "data conditioning", "ringdown start time", "waveform family", "mode content", "nonstationary noise", "environmental or non-Kerr comparator"],
+    buildGate: "Fetch immutable release products and reproduce one published posterior summary with recorded calibration, conditioning, priors, waveform version and start-time convention.",
+    bridgeGate: "A source-derived corpus operator map predicts an additional observable combination before the likelihood is inspected; this gate is currently unsupplied.",
+    physicsGate: "A residual is detector-, calibration-, conditioning-, start-time- and waveform-stable, survives a flexible comparator, repeats in another event or record class and wins after trials and flexibility penalties.",
+    sensitivityRequirement: "Injection/recovery for fractional frequency and damping deviations after the complete start-time and model scan at a predeclared false-promotion rate.",
+    stopRule: "Do not promote a discrepancy absorbed by waveform, noise, calibration, start time or environment; do not promote a corpus bridge by shared vocabulary.",
+    outcomes: [
+      { id: "K0", condition: "common remnant posterior predicts held-out modes", classification: "conventional_constraint", propagation: "Tighten Kerr-deviation bounds while retaining the corpus-algebra bridge as absent." },
+      { id: "K1", condition: "residual tracks waveform or start time", classification: "conventional_model_improvement", propagation: "Improve waveform, noise or ringdown modelling; no new physics." },
+      { id: "K2", condition: "single-event residual survives internal controls", classification: "candidate_anomaly", propagation: "Freeze the statistic and require another event or independent record class." },
+      { id: "K3", condition: "cross-event and cross-model residual survives", classification: "new_physics_candidate", propagation: "Test explicit alternative metrics or interactions and their companion predictions." },
+      { id: "KB", condition: "source-derived corpus map predicts residual before fit", classification: "corpus_bridge_candidate", propagation: "Open a separate intertwiner and action audit; keep it distinct from the gravity claim." }
+    ]
+  }
+];
+
+const mandatory = ["observable", "nuisanceModel", "buildGate", "bridgeGate", "physicsGate", "sensitivityRequirement", "stopRule", "outcomes"];
+const audit = programmes.map(programme => ({
+  id: programme.id,
+  presentFields: mandatory.filter(field => programme[field] && programme[field].length !== 0),
+  missingFields: mandatory.filter(field => !programme[field] || programme[field].length === 0),
+  outcomeCount: programme.outcomes.length,
+  outcomesWithPropagation: programme.outcomes.filter(outcome => outcome.propagation).length,
+  hasPrematureNewPhysicsPromotion: programme.outcomes.some(outcome => outcome.classification === "new_physics"),
+  pass: mandatory.every(field => programme[field] && programme[field].length !== 0)
+    && programme.outcomes.every(outcome => outcome.condition && outcome.classification && outcome.propagation)
+    && !programme.outcomes.some(outcome => outcome.classification === "new_physics")
+}));
+
+const evidence = {
+  schema: "th229-kerr-decision-programmes/1",
+  date: "2026-10-26",
+  authority: "programme contract only; passing the design audit does not pass a build, bridge or physics gate",
+  programmes,
+  audit,
+  summary: {
+    programmeCount: programmes.length,
+    passingDesignCount: audit.filter(row => row.pass).length,
+    publicDataExecutableCount: programmes.filter(row => row.executionStatus.includes("executable")).length,
+    suppliedCorpusBridgeCount: 0,
+    automaticNewPhysicsPromotions: 0
+  }
+};
+
+if (write) writeFileSync(resolve("corpus/programmes/frontier-physics-targets/th229_kerr_decision_programmes_v1.json"), `${JSON.stringify(evidence, null, 2)}\n`);
+
+console.log(JSON.stringify({ result: audit.every(row => row.pass) ? "pass" : "fail", ...evidence.summary, wrote: write }, null, 2));
+

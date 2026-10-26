@@ -1034,6 +1034,20 @@ public-data Kerr multi-record consistency analysis. Unruh supplies the
 detector-calculus regression; generic nuclear resonances supply the hostile
 many-channel control; Hawking remains the end-to-end integration target.
 
+Those paired designs are now explicit. The [thorium-229 programme](../programmes/admissibility/admissibility_143_th229_shared_parent_host_channel_factorization_programme.md)
+asks whether one shared nuclear block can predict line, lifetime and controlled
+quench records in a held-out host after material and detector terms are
+calibrated. The [Kerr programme](../programmes/admissibility/admissibility_144_kerr_multirecord_public_data_consistency_programme.md)
+asks whether one remnant mass/spin posterior predicts held-out complex modes
+across detector, start-time and waveform-family controls. Public releases make
+both first passes executable, although the full thorium hierarchy depends on
+the released metadata and covariance. Each programme now separates four gates:
+can the analysis be built, does the corpus-specific bridge add a prediction,
+does a residual survive ordinary physics, and where does each outcome propagate?
+At present the designs pass their completeness audit, but neither supplies a
+Jordan/Spin physical bridge and neither permits a direct jump from discrepancy
+to new physics.
+
 ## Kenotic confidence
 
 This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.

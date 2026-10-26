@@ -38,6 +38,12 @@ The literature supports four independent axes: observer-relative correlation sam
 
 The update changes the execution order. (^{229})Th is now a live controlled parent/environment/record platform; Kerr is a live strong-field multi-record analysis; Unruh remains the detector-calculus calibration; Hawking remains the highest-payoff integration endpoint but the weakest direct next experiment.
 
+## Public execution update
+
+- The Hu et al. clock paper releases datasets and plotting scripts at [Figshare](https://doi.org/10.6084/m9.figshare.33386191); the independent Vienna clock releases supporting data at [Zenodo](https://doi.org/10.5281/zenodo.22657608). These support an immediate release audit. A cross-host hierarchical fit remains conditional on point-level metadata, site labels and covariance actually present in the archives.
+- [GWOSC's O4 discovery-paper release](https://gwosc.org/o4_eventdata_docs/) provides 4,096 seconds of H1/L1 strain around GW250114 at 4 kHz and 16 kHz. The associated [Zenodo archive](https://doi.org/10.5281/zenodo.17018009) provides posterior products for NRSur7dq4, SEOBNRv5PHM, PhenomXPHM and PhenomXO4a. The release is therefore executable now, while its stated preliminary calibration/data-quality boundary must be retained.
+- The corresponding decision contracts are [AZ-143](../admissibility/admissibility_143_th229_shared_parent_host_channel_factorization_programme.md) and [AZ-144](../admissibility/admissibility_144_kerr_multirecord_public_data_consistency_programme.md).
+
 ## Next review gates
 
 - add algebraic-QFT modular localization only when a specific local-algebra claim is made;
