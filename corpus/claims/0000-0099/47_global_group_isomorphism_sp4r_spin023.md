@@ -268,23 +268,32 @@ The kernel-exhaustion and connected-cover arguments remain mathematical proofs r
 
 ---
 
-## 9. Final global determination
+## 9. Final typed determination
 
-The precise statement is now:
+The conclusion has two levels that should not be compressed into one claim. First comes the Jordan object, its product and the resulting Lie algebra:
 
 \[
 \boxed{
 \begin{gathered}
 J=\operatorname{Sym}_2(\mathbb R),\qquad
 \{A,X,B\}=AXB+BXA,\\
-\operatorname{TKK}(J)\cong\mathfrak{sp}(4,\mathbb R),\\
+\operatorname{TKK}(J)\cong\mathfrak{sp}(4,\mathbb R).
+\end{gathered}
+}
+\]
+
+This is the algebraic determination: the first line declares the Jordan-triple hypothesis and the second gives its TKK reconstruction. Only after fixing the connected real groups and the kernel of the exterior-square action do we obtain the separate global-topological statement:
+
+\[
+\boxed{
+\begin{gathered}
 Sp(4,\mathbb R)/\{\pm I\}\cong SO_0(2,3),\\
 Sp(4,\mathbb R)\cong Spin_0(2,3).
 \end{gathered}
 }
 \]
 
-The first line is the Jordan-triple hypothesis. The second is the Lie-algebra reconstruction. The third and fourth are the global topology. No step follows from “recursion” without the specified carrier, product, TKK closure and real form.
+The quotient identity and double-cover identity are global topology, not consequences of the Lie-algebra isomorphism alone. No step follows from “recursion” without the specified carrier, product, TKK closure, real form, connectedness and kernel argument.
 
 ## Companion documents
 

@@ -1504,6 +1504,7 @@ const inlineMarkdown = (value, source) => {
     return `\u0000${code.push(`<img src="${esc(href)}" alt="${alt}">`) - 1}\u0000`;
   });
   output = output.replace(/\[([^\]]+)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/gu, (_, label, target) => `\u0000${code.push(`<a href="${esc(resolveMarkdownTarget(source, target.replaceAll("&amp;", "&")))}">${label}</a>`) - 1}\u0000`);
+  output = output.replace(/\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$|(?<!\$)\$(?!\$)[^$\n]+\$(?!\$)/gu, math => `\u0000${code.push(math) - 1}\u0000`);
   output = output.replace(/\*\*([^*]+)\*\*/gu, "<strong>$1</strong>").replace(/__([^_]+)__/gu, "<strong>$1</strong>");
   output = output.replace(/(?<!\*)\*([^*]+)\*(?!\*)/gu, "<em>$1</em>").replace(/(?<!_)_([^_]+)_(?!_)/gu, "<em>$1</em>");
   return output.replace(/\u0000(\d+)\u0000/gu, (_, index) => code[Number(index)]);
@@ -1518,10 +1519,21 @@ const renderMarkdown = (markdown, source) => {
   let quote = [];
   let fence = null;
   let fenceLines = [];
+  let displayMathDelimiter = null;
+  let displayMathLines = [];
   const flushParagraph = () => { if (paragraph.length) blocks.push(`<p>${inlineMarkdown(paragraph.join(" "), source)}</p>`); paragraph = []; };
   const flushList = () => { if (listType) blocks.push(`<${listType}>${listItems.map(item => `<li>${inlineMarkdown(item, source)}</li>`).join("")}</${listType}>`); listType = null; listItems = []; };
   const flushQuote = () => { if (quote.length) blocks.push(`<blockquote>${renderMarkdown(quote.join("\n"), source)}</blockquote>`); quote = []; };
   for (const line of lines) {
+    if (displayMathDelimiter) {
+      displayMathLines.push(line);
+      if (line.trim() === displayMathDelimiter) {
+        blocks.push(`<div class="display-math">${esc(displayMathLines.join("\n"))}</div>`);
+        displayMathDelimiter = null;
+        displayMathLines = [];
+      }
+      continue;
+    }
     const fenceMatch = /^```\s*([^\s]*)/u.exec(line);
     if (fence) {
       if (fenceMatch) { blocks.push(`<pre><code${fence ? ` class="language-${esc(fence)}"` : ""}>${esc(fenceLines.join("\n"))}</code></pre>`); fence = null; fenceLines = []; }
@@ -1529,6 +1541,12 @@ const renderMarkdown = (markdown, source) => {
       continue;
     }
     if (fenceMatch) { flushParagraph(); flushList(); flushQuote(); fence = fenceMatch[1] || "text"; continue; }
+    if (/^\s*\\\[\s*$/u.test(line) || /^\s*\$\$\s*$/u.test(line)) {
+      flushParagraph(); flushList(); flushQuote();
+      displayMathDelimiter = line.includes("\\[") ? "\\]" : "$$";
+      displayMathLines = [line];
+      continue;
+    }
     const heading = /^(#{1,6})\s+(.+)$/u.exec(line);
     const unordered = /^\s*[-*+]\s+(.+)$/u.exec(line);
     const ordered = /^\s*\d+[.)]\s+(.+)$/u.exec(line);
@@ -1545,9 +1563,23 @@ const renderMarkdown = (markdown, source) => {
     flushList(); flushQuote(); paragraph.push(line.trim());
   }
   if (fence) blocks.push(`<pre><code class="language-${esc(fence)}">${esc(fenceLines.join("\n"))}</code></pre>`);
+  if (displayMathDelimiter) blocks.push(`<div class="display-math">${esc(displayMathLines.join("\n"))}</div>`);
   flushParagraph(); flushList(); flushQuote();
   return blocks.join("\n");
 };
+
+const plainMathTitle = value => String(value)
+  .replace(/\\[()[\]]/gu, "")
+  .replace(/\\(?:mathbb|mathfrak|mathcal|mathrm|operatorname)\s*\{([^{}]*)\}/gu, "$1")
+  .replace(/\\(?:mathbb|mathfrak|mathcal|mathrm|operatorname)\s*([A-Za-z])/gu, "$1")
+  .replace(/\\times\b/gu, "×")
+  .replace(/\\oplus\b/gu, "⊕")
+  .replace(/\\cong\b/gu, "≅")
+  .replace(/\\pm\b/gu, "±")
+  .replace(/_\{([^{}]*)\}/gu, "_$1")
+  .replace(/\\([A-Za-z]+)/gu, "$1")
+  .replace(/[{}$]/gu, "")
+  .replace(/_([0-9]+)/gu, (_, digits) => digits.replaceAll("0", "₀").replaceAll("1", "₁").replaceAll("2", "₂").replaceAll("3", "₃").replaceAll("4", "₄").replaceAll("5", "₅").replaceAll("6", "₆").replaceAll("7", "₇").replaceAll("8", "₈").replaceAll("9", "₉"));
 
 const sourceReaderHtml = source => {
   const markdown = readFileSync(join(root, source), "utf8").replace(/\r\n?/gu, "\n");
@@ -1556,7 +1588,7 @@ const sourceReaderHtml = source => {
   const output = sourceOutputPath(source);
   const prefix = encodePath(relative(dirname(output), siteRoot)) + "/";
   const body = `<header class="mast detail-mast"><a href="${prefix}index.html">Admissibility frontier · Edition 3</a><nav><a href="${esc(githubBlobUrl(source))}">Canonical source on GitHub</a></nav></header><header class="hero source-reader-hero"><p class="kicker">Compiled corpus reading projection</p><h1>${inlineMarkdown(title, source)}</h1><aside class="boundary"><strong>Authority boundary.</strong> This page is generated from canonical Markdown during publication. It is not an editable or authoritative copy.</aside></header><section class="source-provenance"><dl><dt>Canonical path</dt><dd><code>${esc(source)}</code></dd><dt>Source SHA-256</dt><dd><code>${digest}</code></dd><dt>Build revision</dt><dd><code>${esc(buildRevision)}</code></dd></dl><p><a href="${esc(githubBlobUrl(source))}">History and editing →</a> · <a href="${esc(githubRawUrl(source))}">Raw Markdown →</a></p></section><article class="source-document">${renderMarkdown(markdown, source)}</article><nav class="page-turn"><a href="${prefix}index.html">← Edition contents</a><a href="${esc(githubBlobUrl(source))}">Canonical source →</a></nav>`;
-  return htmlDoc(title, body, prefix, false);
+  return htmlDoc(plainMathTitle(title), body, prefix, false);
 };
 
 const mdLink = source => `[${basename(source)}](${posix(relative(chaptersRoot, join(root, source)))})`;

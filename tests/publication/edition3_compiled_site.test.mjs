@@ -34,6 +34,25 @@ test("the reported kenotic-governance source resolves inside the compiled editio
   assert.match(reader, /corpus\/syntheses\/kenotic_governance_tri_omni_theism_and_a_lawful_world\.md/u);
 });
 
+test("source-reader math survives Markdown rendering and page titles remain plain text", () => {
+  const manifest = JSON.parse(readFileSync(join(siteRoot, "sources", "manifest.json"), "utf8"));
+  for (const item of manifest.sources) {
+    const html = readFileSync(join(siteRoot, item.output), "utf8");
+    const title = /<title>([^<]*)<\/title>/u.exec(html)?.[1] || "";
+    assert.doesNotMatch(title, /\\|\b(?:mathbb|mathfrak|mathcal|operatorname)\b/u, item.source);
+    for (const math of html.matchAll(/\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]/gu)) {
+      assert.doesNotMatch(math[0], /<\/?em>/u, item.source);
+    }
+  }
+
+  const globalGroup = readFileSync(join(siteRoot, "sources", "corpus", "claims", "0000-0099", "47_global_group_isomorphism_sp4r_spin023.html"), "utf8");
+  assert.match(globalGroup, /<div class="display-math">\\\[\n\\boxed\{/u);
+  assert.doesNotMatch(globalGroup, /<div class="display-math">[\s\S]*?<em>/u);
+
+  const majorana = readFileSync(join(siteRoot, "sources", "corpus", "claims", "1000-1099", "1094_the_Majorana_vacuum_stabilizer_is_the_Z6_quotiented_standard_model_times_a_split_baryon_triality_with_the_Z9_lift_cubing_to_colour_centre.html"), "utf8");
+  assert.doesNotMatch(majorana, /\\mathbb Z<em>/u);
+});
+
 test("all local links in the compiled Edition 3 HTML resolve inside the deployment artifact", () => {
   const failures = [];
   for (const file of filesBelow(siteRoot).filter(path => path.endsWith(".html"))) {
