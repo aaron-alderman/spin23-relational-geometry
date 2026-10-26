@@ -32,8 +32,8 @@ definition of the vector potential.
 
 The displayed Cartesian component expansion is correct. By itself it establishes
 neither a new “Maxwell group” nor the RDGMFEQ, SID/PED, O-mode, \(Q\), or
-PED-power terminology. The later source-repository audit in [Wave
-7.261](frontier_wave7_261_rdg_mfe_q_source_recovery_and_maxwell_bridge_gate.md)
+PED-power terminology. The later [source-repository
+audit](../../rdg-maxwell-bridge/01_rdg_mfe_q_source_recovery_and_maxwell_bridge_gate.md)
 recovers partial definitions for RDG, SID/PED, MFE and several inequivalent
 objects called \(Q\). It does not supply the missing typed electromagnetic
 complex, quaternion product, continuum theorem or dynamical recovery proof.
@@ -145,7 +145,7 @@ to reconstruct the quotient or enlarge the observable set.
 ## Corpus links
 
 - [Typed self-description and Monster reconstruction gate](frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md)
-- [RDG--MFE--Q source recovery and Maxwell bridge gate](frontier_wave7_261_rdg_mfe_q_source_recovery_and_maxwell_bridge_gate.md)
+- [RDG--Maxwell bridge programme](../../rdg-maxwell-bridge/README.md)
 - [Dynamic response, geometry, detection and metastability](../../admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md)
 - [The field closes continuity but screening needs its own carrier](../../admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md)
 - [Hopf frame defect and Chern--Simons completion](../../../claims/0600-0699/696_the_higgs_dressed_exchange_has_a_hopf_frame_defect_but_not_a_topologically_protected_standard_model_string.md)

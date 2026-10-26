@@ -1,4 +1,4 @@
-# Frontier Wave 7.261: RDG--MFE--Q source recovery and Maxwell bridge gate
+# RDG--Maxwell Bridge 01: source recovery and Maxwell bridge gate
 
 **Date:** 26 October 2026
 
@@ -9,7 +9,9 @@
 - [RDG--MFE--Q repository](https://github.com/JDRedding/RDG-MFE-Q), commit `5a43c796286e402f6863d824b87f4e38b6b12cb9`
 - [Domain papers repository](https://github.com/JDRedding/Domain-papers), commit `fbc3836218487a124a5dbfc23dd24f767750090f`
 
-**Parent:** [Maxwell curl quotient, helicity and dynamics gate](frontier_wave7_229_maxwell_curl_quotient_helicity_and_dynamics_gate.md)
+**Programme:** [RDG--Maxwell bridge](README.md)
+
+**Parent:** [Maxwell curl quotient, helicity and dynamics gate](../frontier/wave-7/frontier_wave7_229_maxwell_curl_quotient_helicity_and_dynamics_gate.md)
 
 ## Result
 
@@ -235,10 +237,12 @@ dynamic transport, topology or convergence.
 
 ## Corpus links
 
-- [Maxwell curl quotient, helicity and dynamics gate](frontier_wave7_229_maxwell_curl_quotient_helicity_and_dynamics_gate.md)
-- [Relation-face compiler from adjacency to Jordan holonomy](../../admissibility/admissibility_124_relation_face_compiler_from_adjacency_to_jordan_holonomy.md)
-- [Locally invariant carrier and mirror-face spine](../../admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md)
-- [Dynamic response, geometry, detection and metastability](../../admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md)
+- [RDG--Maxwell bridge programme](README.md)
+- [Fixed-complex selector and topology certificate](02_fixed_complex_selector_and_topology_certificate.md)
+- [Maxwell curl quotient, helicity and dynamics gate](../frontier/wave-7/frontier_wave7_229_maxwell_curl_quotient_helicity_and_dynamics_gate.md)
+- [Relation-face compiler from adjacency to Jordan holonomy](../admissibility/admissibility_124_relation_face_compiler_from_adjacency_to_jordan_holonomy.md)
+- [Locally invariant carrier and mirror-face spine](../admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md)
+- [Dynamic response, geometry, detection and metastability](../admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md)
 
 ## Sources
 

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "rdg-maxwell-remeshing-retract-v1",
+  "date": "2026-10-26",
+  "purpose": "Construct an exact topology-preserving remesh as a cochain retract and identify its reconstruction projector and unresolved fine modes.",
+  "complexes": {
+    "coarse": {
+      "description": "one oriented triangular disk",
+      "dimensions": [
+        3,
+        3,
+        1
+      ],
+      "differentialRanks": [
+        2,
+        1
+      ],
+      "betti": [
+        1,
+        0,
+        0
+      ]
+    },
+    "fine": {
+      "description": "stellar subdivision into faces 013, 123 and 203",
+      "dimensions": [
+        4,
+        6,
+        3
+      ],
+      "differentialRanks": [
+        3,
+        3
+      ],
+      "betti": [
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "chainMaps": {
+    "subdivisionResiduals": [
+      0,
+      0
+    ],
+    "collapseResiduals": [
+      0,
+      0
+    ],
+    "meaning": "S subdivides the coarse face into three fine faces; F collapses the centre vertex to coarse vertex 0."
+  },
+  "cochainMaps": {
+    "transport": "T=F^*: coarse cochains -> fine cochains",
+    "restriction": "R=S^*: fine cochains -> coarse cochains",
+    "transportCommutatorResiduals": [
+      0,
+      0
+    ],
+    "restrictionCommutatorResiduals": [
+      0,
+      0
+    ],
+    "retractResiduals": [
+      0,
+      0,
+      0
+    ],
+    "meaning": "Both maps commute with d and R_k T_k=I on every coarse degree."
+  },
+  "reconstruction": {
+    "definition": "P_k=T_k R_k on fine cochains; Q_k=I-P_k",
+    "projectorResiduals": [
+      0,
+      0,
+      0
+    ],
+    "projectorChainResiduals": [
+      0,
+      0
+    ],
+    "defectChainResiduals": [
+      0,
+      0
+    ],
+    "admittedSubcomplex": {
+      "dimensions": [
+        3,
+        3,
+        1
+      ],
+      "differentialRanks": [
+        2,
+        1
+      ],
+      "betti": [
+        1,
+        0,
+        0
+      ]
+    },
+    "unresolvedSubcomplex": {
+      "dimensions": [
+        1,
+        3,
+        2
+      ],
+      "differentialRanks": [
+        1,
+        2
+      ],
+      "betti": [
+        0,
+        0,
+        0
+      ]
+    },
+    "unresolvedDimensions": [
+      1,
+      3,
+      2
+    ],
+    "meaning": "P is an idempotent chain projector onto coarse-representable fine data; Q records internal fine modes erased by restriction."
+  },
+  "metricBoundary": {
+    "euclideanIsometryResiduals": [
+      1,
+      1,
+      0
+    ],
+    "euclideanLeastSquares": {
+      "retractResiduals": [
+        0,
+        0,
+        0
+      ],
+      "projectorResiduals": [
+        0,
+        0,
+        0
+      ],
+      "orthogonalityResiduals": [
+        0,
+        0,
+        0
+      ],
+      "restrictionChainResiduals": [
+        0,
+        0.5
+      ],
+      "projectorChainResiduals": [
+        0,
+        0.5
+      ]
+    },
+    "conclusion": "Chain-safe transport is not automatically an isometry. The Euclidean least-squares reconstruction is an orthogonal projector but fails the cochain commuting gate, so energy optimality and gauge safety cannot be merged by assumption."
+  },
+  "rdgInterpretation": {
+    "gamma": "restriction R extracts the coarse relational state",
+    "sigma": "reconstruction T, or P=TR when acting on fine data",
+    "delta": "Q=I-TR is the unresolved fine-scale residual",
+    "qGate": "admit a remesh only when T and R commute with d and declared metric/energy tolerances also pass"
+  },
+  "verdict": "A nontrivial topology-preserving geometry change can be made gauge-safe through a cochain retract. It yields an exact RDG-style reconstruction projector and residual detector, but metric and energy compatibility remain independent gates."
+}

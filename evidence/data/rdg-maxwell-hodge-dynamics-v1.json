@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "rdg-maxwell-hodge-dynamics-v1",
+  "date": "2026-10-26",
+  "purpose": "Test whether the chain-compatible RDG selector also respects constitutive/Hodge structure and source-free Maxwell dynamics.",
+  "formulation": {
+    "state": "x=(E,B) in C1 direct-sum C2",
+    "energy": "H=1/2 E^T epsilon E + 1/2 B^T nu B",
+    "generator": "K=[[0,epsilon^-1 d1^T nu],[-d1,0]]",
+    "constraints": "d0^T epsilon E and d2 B",
+    "selector": "P=Pi1 direct-sum Pi2"
+  },
+  "uniformMedium": {
+    "hamiltonianSkewResidual": 0,
+    "constraintGeneratorResidual": 0,
+    "selectorMetricCommutatorRank": 0,
+    "selectorMetricCommutatorResidual": 0,
+    "selectorDynamicsCommutatorRank": 0,
+    "selectorDynamicsCommutatorResidual": 0,
+    "cayleyStep": {
+      "dt": 0.125,
+      "energyBefore": 9.140625,
+      "energyAfter": 9.140625,
+      "energyResidual": 0,
+      "constraintResidual": 8.881784197001252e-16
+    },
+    "conclusion": "With unit positive constitutive matrices, the chain-compatible translation selector commutes with the Maxwell generator; admitted and defect sectors evolve independently."
+  },
+  "translationBreakingMedium": {
+    "epsilon": "diagonal edge mass: 1 on x=0 cells and 3 on x=1 cells",
+    "nu": "identity face mass",
+    "positive": true,
+    "hamiltonianSkewResidual": 0,
+    "constraintGeneratorResidual": 0,
+    "selectorMetricCommutatorRank": 24,
+    "selectorMetricCommutatorResidual": 1,
+    "selectorDynamicsCommutatorRank": 14,
+    "selectorDynamicsCommutatorResidual": 0.33333333333333337,
+    "admittedToDefectExchangeRank": 6,
+    "admittedToDefectWitnessColumn": 24,
+    "admittedToDefectWitnessMaxAbs": 0.16666666666666669,
+    "conclusion": "The full Maxwell system remains energy- and constraint-compatible, but material contrast breaks selector invariance and transfers an initially admitted state into the defect sector."
+  },
+  "interpretation": {
+    "topologicalGate": "[P,d]=0 is necessary but not sufficient for dynamical closure.",
+    "constitutiveGate": "The selected symmetry must also preserve epsilon and nu, equivalently the discrete Hodge/constitutive data.",
+    "dynamicsGate": "Only then does [P,K]=0 and the admitted sector become an invariant subsystem.",
+    "experimentalMeaning": "A detected Q-sector signal can be ordinary scattering from symmetry-breaking material structure; it is not by itself new physics."
+  },
+  "verdict": "The RDG selector closes source-free discrete Maxwell dynamics in a homogeneous symmetry-compatible medium. A standard positive inhomogeneous constitutive law reopens the channel and produces admitted-to-defect transfer without violating energy or Gauss constraints."
+}

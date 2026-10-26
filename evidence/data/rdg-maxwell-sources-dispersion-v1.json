@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "rdg-maxwell-sources-dispersion-v1",
+  "date": "2026-10-26",
+  "purpose": "Extend the RDG-Maxwell bridge to conserved forcing and explicit resonant material memory.",
+  "sourceContinuity": {
+    "equations": "dot(E)=epsilon^-1(d1^T nu B-J), dot(rho)=-d0^T J",
+    "gaussRecord": "d0^T epsilon E-rho",
+    "translationSelectorContinuityCommutatorRank": 0,
+    "translationSelectorContinuityResidual": 0,
+    "untypedComponentSelectorContinuityCommutatorRank": 6,
+    "untypedComponentSelectorContinuityResidual": 1,
+    "conclusion": "A source selector is admissible only when current and charge projections commute with discrete divergence; otherwise selection itself violates continuity."
+  },
+  "lorentzMaterial": {
+    "state": "(E,B,P,V) with V=dot(P)",
+    "equations": [
+      "dot(E)=d1^T B-V",
+      "dot(B)=-d1 E",
+      "dot(P)=V",
+      "dot(V)=omega_p^2 E-omega_0^2 P-gamma V"
+    ],
+    "energy": "1/2(||E||^2+||B||^2)+1/(2 omega_p^2)(||V||^2+omega_0^2||P||^2)",
+    "meaning": "resonance and lag are represented by material state, not an untyped history filter"
+  },
+  "homogeneousLossless": {
+    "omega0Squared": 4,
+    "omegaPSquared": 2.25,
+    "energyGeneratorResidual": 0,
+    "selectorMetricCommutatorRank": 0,
+    "selectorMetricCommutatorResidual": 0,
+    "selectorDynamicsCommutatorRank": 0,
+    "selectorDynamicsCommutatorResidual": 0,
+    "conclusion": "The extended selector closes the electromagnetic and material-memory state together."
+  },
+  "resonantContrast": {
+    "omega0Squared": "4 on x=0 and 9 on x=1",
+    "omegaPSquared": 2.25,
+    "energyGeneratorResidual": 0,
+    "selectorMetricCommutatorRank": 24,
+    "selectorMetricCommutatorResidual": 1.1111111111111112,
+    "selectorDynamicsCommutatorRank": 24,
+    "selectorDynamicsCommutatorResidual": 2.5,
+    "conclusion": "Spatially varying resonance preserves the full lossless energy but mixes the selector sectors through ordinary dispersive material dynamics."
+  },
+  "homogeneousDamping": {
+    "gamma": 0.3,
+    "dissipationIdentity": "K^T L+L K has only the V block -2 gamma/omega_p^2",
+    "dissipationIdentityResidual": 0,
+    "selectorDynamicsCommutatorRank": 0,
+    "conclusion": "Loss can remain selector-compatible while total energy decreases into an unmodelled bath; closing the larger system requires a bath carrier and detector."
+  },
+  "verdict": "Charge conservation adds a source-chain gate, while resonance requires an enlarged material state. Homogeneous memory can remain inside the admitted subsystem; conventional spatial variation reopens the defect channel without breaking Maxwell continuity or lossless energy conservation."
+}
