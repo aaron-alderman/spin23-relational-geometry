@@ -60,6 +60,7 @@ test("short articles are discoverable, shareable and machine-readable without du
     ["measurement-creates-branches", /trajectory collapse/u, /Canonical research source →/u],
     ["local-information-global-identification", /globally two-to-one/u, /Canonical research source →/u],
     ["two-mode-phase", /three-mode loop/u, /Canonical research source →/u],
+    ["lenses-make-many-points", /kind of spectrum everywhere/u, /Canonical research source →/u],
   ];
   const index = readFileSync(join(siteRoot, "articles", "index.html"), "utf8");
   assert.match(index, /<h1>Articles<\/h1>/u);
