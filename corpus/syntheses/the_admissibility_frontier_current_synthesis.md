@@ -1185,6 +1185,16 @@ scheduler models would reopen a new-physics path. The
 therefore strengthens OPH as a language for detector-relative local closure
 while closing its direct Jordan/Spin bridge on the current source.
 
+The [emulator preflight](../programmes/observer-patch-holography/oph_emulator_preflight_v1.md)
+makes this practical. The one-seam instrument fits in a seven-qubit digital
+design and the adjacent-seam history test in eight qubits with reusable record
+ancillas. One-step discrimination is inexpensive, but deep convergence is not:
+the conservative shot bound grows from 4,470 for the closest one-step pair to
+49,083 for `C^4` against `E` and roughly 12.6 million for `C^8`. The admitted
+programme therefore stops its primary run at depth four and treats deeper
+repair as conditional on measured coherence and memory, not as a ritual demand
+of the exact model.
+
 ## Kenotic confidence
 
 This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.

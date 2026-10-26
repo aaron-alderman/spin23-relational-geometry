@@ -17,7 +17,7 @@ The claim supplies a map or analogy. It becomes a derivation only after an expli
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Current research note — record laws sit between possibility and public fact”.
-- **Unit of argument:** assertion 1 of 3 in this section.
+- **Unit of argument:** assertion 1 of 4 in this section.
 - **Evidence posture:** Treat the passage as organization or analogy unless a cited carrier-preserving map is supplied.
 - **Research move:** joins several typed results while letting the weakest edge set the claim.
 
@@ -40,6 +40,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **oph record law executable programme v1** — [oph_record_law_executable_programme_v1.md](../../../corpus/programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md)
 - **oph channel geometry and local closure v1** — [oph_channel_geometry_and_local_closure_v1.md](../../../corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md)
 - **oph literature frontier and emulator v1** — [oph_literature_frontier_and_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_literature_frontier_and_emulator_v1.md)
+- **oph emulator preflight v1** — [oph_emulator_preflight_v1.md](../../../corpus/programmes/observer-patch-holography/oph_emulator_preflight_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

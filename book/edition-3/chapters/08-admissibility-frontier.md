@@ -252,6 +252,10 @@ The follow-on calculation closes that mathematical boundary. The channel family 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-3.md)
 
+The emulator preflight makes the cost visible. A seven-qubit one-seam or eight-qubit reusable-ancilla adjacent-seam design fits the logical carrier. The nearest one-step law pair needs a conservative 4,470 shots per arm at one-percent familywise error, while separating the fourth repair from its limit needs 49,083 and the eighth would need about 12.6 million. The primary experiment therefore stops at depth four, reverses adjacent order, and requires a disjoint-order null below total variation 0.02 after correction. That is a realistic instrument and memory benchmark; it becomes physics-facing only if a replicated residual survives the complete conventional channel model.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-4.md)
+
 <a id="three-local-motion-types"></a>
 ## Three local motion types
 
