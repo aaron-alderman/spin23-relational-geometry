@@ -16,6 +16,8 @@
 
 **Few-body surrogate:** [E8 bounded-degree clock hardware and gap certificate](E8_FEW_BODY_CLOCK_GAP.md)
 
+**Continuum promotion:** [fixed-physics clock-to-rotor convergence](E8_CLOCK_TO_ROTOR_CONVERGENCE.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -160,7 +162,10 @@ eight-simple-current training record predicts the complete held-out 240-root
 shell. The same null schedule now has an exact two-local finite-qudit
 regularization with a width-independent bulk gap above its free-edge ground
 space. Clock-to-rotor convergence, continuum E8 anomaly recovery, a
-material-native carrier and random connectivity remain open.
+material-native carrier and random connectivity remain open. The first of
+those gaps is now narrowed: one compact clock mode converges to the fixed-
+coupling rotor with (1.11\times10^{-4}) relative gap error by (q=129).
+The joined eight-channel (K_{E_8}^{-1}) metric remains open.
 
 The material route is now typed rather than associative. A quasicrystal may
 supply a phason-bearing, translation-free backplane for the programmed E8

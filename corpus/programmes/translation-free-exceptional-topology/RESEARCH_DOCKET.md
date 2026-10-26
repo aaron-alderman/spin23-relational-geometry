@@ -26,15 +26,17 @@ column cosine to two-body locks, whose commuting completion has graph degree
 one. B2 now has an exact width-independent gap above the edge-degenerate ground
 space for that clock carrier across 28 frozen width/disorder/local-dimension
 instances. Clock-to-rotor convergence, continuum E8 response and a
-material-native Hamiltonian remain open. The E8-specific detector predicts a
-held-out 240-current root shell. B4 is closed on the
+material-native Hamiltonian remain open. Local fixed-coupling clock-to-rotor
+convergence is now certified through (q=129); the coupled eight-channel
+metric remains open. The E8-specific detector predicts a held-out 240-current
+root shell. B4 is closed on the
 declared E8-cubed/Leech/Moonshine family: the bulk detector collides and
 \(\dim V_1=(744,24,0)\) separates the three candidates.
 
 | ID | task | output | gate |
 |---|---|---|---|
 | B1 | compile an \(E_8\) coupled-wire/network Hamiltonian | source-native action | continuum schedule and two-local clock surrogate closed; material carrier open |
-| B2 | disorder positions and couplings without closing the gap | disorder ensemble | exact finite-qudit uniform gap closed; continuum/rotor gap open |
+| B2 | disorder positions and couplings without closing the gap | disorder ensemble | finite-qudit uniform gap and local rotor limit closed; joined E8 rotor gap open |
 | B3 | construct three-copy rank-24 carrier | \(E_8^3\) benchmark | rank 24, determinant one, positive signature |
 | B4 | compare to the corpus Leech \(K\)-matrix | blind collision benchmark | coarse bulk detector collides; root/current detector separates |
 

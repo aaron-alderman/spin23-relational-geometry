@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "translation-free-e8-clock-to-rotor-convergence-v1",
+  "date": "2026-10-26",
+  "status": "numerically certified local clock-to-rotor convergence at fixed physical couplings",
+  "model": {
+    "continuumTarget": "H=(U/2)n^2+u(1-cos theta)",
+    "parameters": {"U":1,"u":1},
+    "clockKinetic": "(U/2)[1-cos(2pi n/q)]/[1-cos(2pi/q)]",
+    "clockPotential": "u(1-cos theta_j)",
+    "clockBoundary": "cyclic q-point phase grid",
+    "continuumReferenceCutoff": 64
+  },
+  "clockLadder": [
+    {"q":5,"groundEnergy":0.43429394538202104,"gap":0.8965754482591205},
+    {"q":9,"groundEnergy":0.4608590905732835,"gap":0.855505270218555},
+    {"q":17,"groundEnergy":0.4638597676531052,"gap":0.8726269669826708},
+    {"q":33,"groundEnergy":0.4646543503976667,"gap":0.8769273666266293},
+    {"q":65,"groundEnergy":0.4648630811460762,"gap":0.8780416962637122},
+    {"q":129,"groundEnergy":0.46491687087946487,"gap":0.8783278458327839}
+  ],
+  "continuumReference": {
+    "groundEnergy": 0.4649351477121847,
+    "gap": 0.8784249806868974
+  },
+  "convergence": {
+    "q129RelativeGroundError": 0.00003931049913037644,
+    "q129RelativeGapError": 0.00011057842872091403,
+    "gapPositiveAtEveryRung": true,
+    "idealStripWidths": [2,3,5,8,13,21,34],
+    "unpairedEdgeModesAtEveryWidth": 16,
+    "productStripGapAtQ129": 0.8783278458327839
+  },
+  "renormalizationAudit": {
+    "fixedPhysicsScaling": "scale only the clock kinetic penalty by [1-cos(2pi/q)]^-1 and keep u fixed",
+    "previousBellScaling": "scales both conjugate penalties by [1-cos(2pi/q)]^-1",
+    "previousBellContinuumMeaning": "effective rotor potential u grows as q^2 and therefore does not define the same fixed-coupling continuum limit",
+    "verdict": "the Bell gap certificate remains exact at finite q, but rotor promotion must use the fixed-physics scaling certified here"
+  },
+  "claimBoundary": {
+    "closed": "one effective compact locking mode converges from a cyclic q-clock to the fixed-coupling quantum pendulum with a nonzero local gap",
+    "open": [
+      "the full eight-channel K_E8^-1 charging metric",
+      "interchannel perturbations and thermodynamic local-gap stability",
+      "chiral edge dispersion and c_minus=8",
+      "held-out current OPE recovery on the rotor carrier",
+      "material backplane coupling"
+    ]
+  }
+}
