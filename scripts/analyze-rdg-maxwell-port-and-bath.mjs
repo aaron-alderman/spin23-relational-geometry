@@ -21,6 +21,17 @@ const sample=[0.7,-1.2];
 const energyRate=dot(sample,apply(multiply(L,K),sample));
 const output=apply(C,sample);
 const portPower=-dot(output,output);
+const transferFrequencies=[0,0.5,1,2,4,8];
+const positiveRealSamples=transferFrequencies.map(omega=>{
+  const a=omega0**2-omega**2,b=gamma*omega;
+  const denominator=omegaP**2*(a*a+b*b);
+  return {
+    omega,
+    real:denominator===0?null:gamma*omega**2/denominator,
+    imaginary:denominator===0?null:omega*a/denominator,
+  };
+});
+const minimumSampledReal=Math.min(...positiveRealSamples.map(sample=>sample.real));
 
 // Exact finite conservative dilation: identical oscillators with kappa=3/2.
 // Normal frequencies are 1 and 2, giving complete transfer at pi and recurrence at 2pi.
@@ -64,6 +75,15 @@ const record={
     samplePortPower:portPower,
     sampleBalanceResidual:Math.abs(energyRate-portPower),
     meaning:"The reduced model does not destroy unrecorded energy: it declares a nonnegative output power channel. The receiving bath state remains outside the model.",
+  },
+  positiveRealCertificate:{
+    inputOutput:"Add effort u to dot(V); use conjugate flow z=V/omegaP^2, so dot(H)=u z-gamma V^2/omegaP^2.",
+    transfer:"G(s)=z(s)/u(s)=s/[omegaP^2(s^2+gamma s+omega0^2)]",
+    boundaryRealPart:"Re G(i omega)=gamma omega^2/[omegaP^2((omega0^2-omega^2)^2+gamma^2 omega^2)] >= 0",
+    frequencies:transferFrequencies,
+    samples:positiveRealSamples,
+    minimumSampledReal,
+    interpretation:"The damped oscillator is a passive positive-real one-port. Positive-realness closes reduced input-output admissibility; it does not construct the microscopic bath.",
   },
   finiteBathDilation:{
     model:"two identical unit-frequency oscillators coupled by kappa=3/2",

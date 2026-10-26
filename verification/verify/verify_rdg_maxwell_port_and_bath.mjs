@@ -5,6 +5,9 @@ const record=JSON.parse(fs.readFileSync(new URL("../../evidence/data/rdg-maxwell
 assert.equal(record.schemaVersion,"rdg-maxwell-port-and-bath-v1");
 assert.ok(record.dissipativePort.identityResidual<1e-12);
 assert.ok(record.dissipativePort.sampleBalanceResidual<1e-12);
+assert.match(record.positiveRealCertificate.boundaryRealPart,/>= 0/);
+assert.ok(record.positiveRealCertificate.samples.every(sample=>sample.real>=-1e-12));
+assert.ok(record.positiveRealCertificate.minimumSampledReal>=-1e-12);
 assert.ok(record.finiteBathDilation.conservativeResidual<1e-12);
 assert.ok(record.finiteBathDilation.recurrenceResidual<1e-12);
 assert.ok(record.finiteBathDilation.stateAtPi.slice(0,2).every(value=>Math.abs(value)<1e-12));
@@ -16,6 +19,7 @@ assert.match(record.verdict,/independent admissibility coordinate/);
 console.log(JSON.stringify({
   status:"PASS",
   port:"damped energy loss equals declared output power",
+  transfer:"driving-point transfer is positive real",
   dilation:"finite positive bath conserves total energy",
   recurrence:"complete transfer at pi returns at 2pi",
   boundary:"exact irreversible damping needs a bath limit or coarse graining",

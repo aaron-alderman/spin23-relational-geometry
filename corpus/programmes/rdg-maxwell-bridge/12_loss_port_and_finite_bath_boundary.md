@@ -61,6 +61,37 @@ This is a complete reduced balance law. Energy has not silently disappeared;
 it has crossed a declared port. The state of whatever receives the port power
 is still outside the model.
 
+## Positive-real input--output certificate
+
+Add an applied effort (u) to the (V) equation and take its conjugate flow
+to be (z=V/\omega_p^2). Then
+
+\[
+ \dot H=uz-\frac{\gamma}{\omega_p^2}V^2,
+\]
+
+and the driving-point transfer is
+
+\[
+ G(s)=\frac{z(s)}{u(s)}
+ =\frac{s}{\omega_p^2(s^2+\gamma s+\omega_0^2)}.
+\]
+
+On the imaginary axis,
+
+\[
+ \operatorname{Re}G(i\omega)=
+ \frac{\gamma\omega^2}
+ {\omega_p^2[(\omega_0^2-\omega^2)^2+\gamma^2\omega^2]}\geq0.
+\]
+
+The evidence evaluates this expression from zero through twice the resonant
+frequency and finds no negative real part. This closes the finite rational
+one-port as passive in the positive-real sense. It does **not** close the
+microscopic question: many conservative dilations can realize the same reduced
+transfer, and exact irreversible decay still requires a limit or coarse
+graining.
+
 ## Finite conservative carrier
 
 The certificate next couples two identical unit-frequency oscillators with
@@ -133,8 +164,9 @@ not in the bare Maxwell differential.
 
 ## Logical boundary
 
-- **Exact:** port-Hamiltonian identity, sampled power balance, positive finite
-  bath conservation, complete transfer and recurrence.
+- **Exact:** port-Hamiltonian identity, sampled power balance, positive-real
+  driving-point transfer, positive finite-bath conservation, complete transfer
+  and recurrence.
 - **General mathematical boundary:** finite positive conservative systems do
   not generate a strictly dissipative semigroup on the whole closed state.
 - **Open:** continuum spectral density, fluctuation--dissipation noise,

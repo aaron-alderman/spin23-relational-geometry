@@ -31,6 +31,53 @@
     "sampleBalanceResidual": 2.7755575615628914e-17,
     "meaning": "The reduced model does not destroy unrecorded energy: it declares a nonnegative output power channel. The receiving bath state remains outside the model."
   },
+  "positiveRealCertificate": {
+    "inputOutput": "Add effort u to dot(V); use conjugate flow z=V/omegaP^2, so dot(H)=u z-gamma V^2/omegaP^2.",
+    "transfer": "G(s)=z(s)/u(s)=s/[omegaP^2(s^2+gamma s+omega0^2)]",
+    "boundaryRealPart": "Re G(i omega)=gamma omega^2/[omegaP^2((omega0^2-omega^2)^2+gamma^2 omega^2)] >= 0",
+    "frequencies": [
+      0,
+      0.5,
+      1,
+      2,
+      4,
+      8
+    ],
+    "samples": [
+      {
+        "omega": 0,
+        "real": 0,
+        "imaginary": 0
+      },
+      {
+        "omega": 0.5,
+        "real": 0.0023665838362323982,
+        "imaginary": 0.059164595905809955
+      },
+      {
+        "omega": 1,
+        "real": 0.014668133480014667,
+        "imaginary": 0.14668133480014667
+      },
+      {
+        "omega": 2,
+        "real": 1.4814814814814816,
+        "imaginary": 0
+      },
+      {
+        "omega": 4,
+        "real": 0.014668133480014667,
+        "imaginary": -0.14668133480014667
+      },
+      {
+        "omega": 8,
+        "real": 0.0023665838362323982,
+        "imaginary": -0.059164595905809955
+      }
+    ],
+    "minimumSampledReal": 0,
+    "interpretation": "The damped oscillator is a passive positive-real one-port. Positive-realness closes reduced input-output admissibility; it does not construct the microscopic bath."
+  },
   "finiteBathDilation": {
     "model": "two identical unit-frequency oscillators coupled by kappa=3/2",
     "generator": [

@@ -112,10 +112,37 @@ composable rule:
 The local “matrix” is therefore genuinely a relation carrier. Its overlap
 pattern builds the global energy geometry.
 
-## Remaining theorem
+## General algebraic assembly lemma
 
-The two-face result strongly suggests an induction over a triangular complex,
-but does not prove one. A general theorem must specify:
+The identities themselves do not require an induction. Let macroelements
+(m) have signed Boolean injections (E_{f,m}), (E_{c,m}), local transports
+(T_m), and local metrics satisfying
+
+\[
+ E_{f,m}T_m=T E_{c,m},
+ \qquad L_{c,m}=T_m^{\mathsf T}L_{f,m}T_m.
+\]
+
+Define the assembled metrics by
+
+\[
+ L_f=\sum_m E_{f,m}^{\mathsf T}L_{f,m}E_{f,m},
+ \qquad
+ L_c=\sum_m E_{c,m}^{\mathsf T}L_{c,m}E_{c,m}.
+\]
+
+Linearity immediately gives (T^{\mathsf T}L_fT=L_c). If every local block
+is positive semidefinite and the intersection of their injected kernels is
+zero, (L_f) is positive definite. The same local-to-global argument applies
+to commuting boundary squares when incidence signs agree on overlaps. Thus
+the algebraic assembly claim extends to any conforming oriented cover meeting
+these hypotheses; the two-face certificate is a concrete witness, not the
+proof's full scope.
+
+## Remaining analytical theorem
+
+What remains is not the additive identity but uniform quality. A useful
+numerical theorem must specify:
 
 - coherent orientations and collapse choices;
 - coverage ensuring global positivity;
@@ -133,8 +160,11 @@ hard part.
   residuals for the two-face mesh.
 - **Constructive pass:** standard additive macroelement assembly works on the
   first shared-edge case.
-- **Open:** arbitrary meshes, repeated refinement, conditioning, approximation
-  order and time-dependent remeshing.
+- **General algebraic result:** compatible local pullbacks and commuting
+  incidence maps assemble on any conforming oriented macroelement cover;
+  positivity holds when the assembled local kernels intersect trivially.
+- **Open:** uniform conditioning, approximation order, continuum convergence,
+  nonconforming joins and time-dependent remeshing.
 - **Not claimed:** equivalence to a published finite-element family or a
   continuum Maxwell convergence theorem.
 

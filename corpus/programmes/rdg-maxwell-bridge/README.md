@@ -2,7 +2,7 @@
 
 **Opened:** 26 October 2026
 
-**Status:** active constructive arm; fixed-complex and source-free dynamics gates passed with typed counterexamples
+**Status:** finite constructive pass complete; analytical and experimental frontiers isolated
 
 ## Purpose
 
@@ -69,6 +69,8 @@ complex.
 | Source-free torus flux cut | exact topology receipt | a non-bounding \(H^2\) flux becomes relative Wilson circulation on the two cylinder boundaries without magnetic charge |
 | Loss port and finite bath | exact pass/boundary | damping equals typed output power; a finite conservative bath returns transferred energy and cannot supply permanent Markovian loss |
 | Detector null budget | compiled eight-channel gate | every demonstrated conventional route has an exact control; new physics begins only at a held-out residual after all are bounded |
+| Primary-literature distance | bounded comparison | individual structures land in mature FEEC/DEC, port-Hamiltonian, passivity and differential-cohomology fields; the typed end-to-end audit is the programme-specific synthesis |
+| Exhaustion ledger | finite arm complete | further toy matrices no longer move the frontier; convergence theory, differential-character implementation and experiment remain |
 
 ## Documents
 
@@ -85,6 +87,8 @@ complex.
 11. [Source-free torus-flux cut gate](11_source_free_torus_flux_cut_gate.md)
 12. [Loss-port and finite-bath boundary](12_loss_port_and_finite_bath_boundary.md)
 13. [Detector null-test and residual budget](13_detector_null_test_and_residual_budget.md)
+14. [Primary literature map and frontier distance](14_primary_literature_map_and_frontier_distance.md)
+15. [Exhaustion ledger and handoff](15_exhaustion_ledger_and_handoff.md)
 
 ## Executable spine
 
@@ -149,15 +153,16 @@ node scripts/compile-rdg-maxwell-detector-budget.mjs --write
 node verification/verify/verify_rdg_maxwell_detector_budget.mjs
 ```
 
-## Next gates
+## Open frontiers after the finite pass
 
-1. Replace the completed finite-bath recurrence example with a continuum-bath
-   or positive-real transfer-function certificate when irreversible material
-   loss is required.
-2. Generalize the successful two-macroelement assembly to arbitrary oriented
-   triangular complexes and bound conditioning under repeated refinement.
-3. Generalize the completed source-free torus cut receipt to arbitrary cycles
-   using relative cohomology or differential characters.
+1. Prove uniform conditioning, approximation and stability for a family of
+   changing meshes; the algebraic local-to-global assembly identity is closed.
+2. Implement arbitrary cut/glue histories in relative differential cohomology
+   or differential characters; the representative (H^1) and (H^2) receipts
+   are closed.
+3. Execute the same-device held-out detector protocol with calibrated material,
+   port and detector uncertainties; the finite passive one-port and bath
+   boundaries are closed.
 
 ## Authority boundary
 
