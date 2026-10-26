@@ -68,6 +68,6 @@ Each cell is Recall@10 / mean reciprocal rank.
 
 Expected sources test navigation and structural recovery only. They do not establish the truth, completeness or scientific authority of any source.
 
-- Corpus digest: `56075c6f0228bf230c08c896d430477bb975d1e11e1728fdcf527427d7dd4c58`
-- Algebra archive: `ce024770e4d87d732120b31fb7e72ba3e5549bcf5fc1b15ce5591a9d0f9de8ff`
+- Corpus digest: `d09c3db276dab1800bf0c8555418fdd25151f4ab9214af40e9bb4aafb80c940c`
+- Algebra archive: `df63624275ec89aa7548340c5743f69ac28e9b9304b14ee52f7b086169dfaa7c`
 - Suite: `2fc979749f8788ff56b3278fa4c510af05127ae56c34fdac57393268a834cb64`
