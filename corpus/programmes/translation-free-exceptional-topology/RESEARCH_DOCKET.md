@@ -44,8 +44,8 @@ eligible (K)-kernel has reached shell 12 (1,604,401 states): two successive
 sub-one-percent increments promote the provisional unit-coupling compact-cell
 gap (0.1019267219), with boundary probability below (3\times10^{-5}).
 Parity requires an odd sine/phase drive to see the first gap. Five scalar
-coupling ratios and one unequal-channel direction now pass the compact-cell
-gate; an open perturbation tube, metric stability and intercell-width
+coupling ratios and two non-collinear unequal-channel directions now pass the
+compact-cell gate; an open perturbation tube, metric stability and intercell-width
 promotion remain open. The
 E8-specific detector predicts a held-out 240-current root shell. B4 is closed on the
 declared E8-cubed/Leech/Moonshine family: the bulk detector collides and

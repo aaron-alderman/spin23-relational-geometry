@@ -36,6 +36,8 @@
 
 **Nonscalar stability:** [unequal-channel amplitude perturbation](E8_CHANNEL_AMPLITUDE_PERTURBATION.md)
 
+**Finite perturbation stencil:** [two non-collinear amplitude directions](E8_CHANNEL_AMPLITUDE_STENCIL.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -274,6 +276,7 @@ translation-free topology result remains valuable after that null.
 - [E8 Cartan-kernel compact-cell gap](E8_CARTAN_COMPACT_GAP.md)
 - [E8 Cartan-kernel coupling-ratio spine](E8_CARTAN_RATIO_SPINE.md)
 - [E8 unequal-channel amplitude perturbation](E8_CHANNEL_AMPLITUDE_PERTURBATION.md)
+- [E8 channel-amplitude stability stencil](E8_CHANNEL_AMPLITUDE_STENCIL.md)
 
 ## Primary external anchors
 

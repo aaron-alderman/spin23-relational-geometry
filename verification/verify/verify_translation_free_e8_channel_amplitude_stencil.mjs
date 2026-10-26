@@ -1,0 +1,22 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const r=JSON.parse(fs.readFileSync(new URL("../../evidence/data/translation-free-e8-channel-amplitude-stencil-v1.json",import.meta.url),"utf8"));
+const mean=xs=>xs.reduce((a,b)=>a+b,0)/xs.length;
+const centered=xs=>xs.map(x=>x-r.meanPotential);
+const dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0);
+const norm=a=>Math.sqrt(dot(a,a));
+assert.equal(r.schemaVersion,"translation-free-e8-channel-amplitude-stencil-v1");
+assert.equal(r.directions.length,2);
+for(const d of r.directions){assert.ok(Math.abs(mean(d.amplitudes)-r.meanPotential)<1e-15);assert.ok(d.amplitudes.every(x=>x>0));assert.equal(d.promoted,true);}
+const [a,b]=r.directions.map(d=>centered(d.amplitudes));
+const cosine=dot(a,b)/(norm(a)*norm(b));
+assert.ok(Math.abs(cosine-r.directionCosine)<2e-15);
+assert.ok(Math.abs(cosine)<0.99);
+const d=r.directions[1];
+assert.ok(d.successiveRelativeDrifts.every(x=>x<0.01));
+assert.ok(d.finalMaximumLowFourBoundaryProbability<5.1e-6);
+assert.ok(Math.max(...d.finalFirstThreeResiduals)<4e-11);
+assert.deepEqual(d.finalParities,[1,-1,1,-1]);
+assert.ok(Math.max(...d.firstExcitedSineWeights)>1e20*d.maximumFirstExcitedCosineWeight);
+assert.match(r.boundary,/does not prove continuity/u);
+console.log(JSON.stringify({status:"PASS",directions:r.directions.length,directionCosine:r.directionCosine,maximumFractionalDeviation:Math.max(...r.directions.map(d=>d.maximumFractionalDeviation)),minimumPromotedGap:Math.min(...r.directions.map(d=>d.finalGap??d.gaps.at(-1))),openPerturbationBallCertified:false},null,2));

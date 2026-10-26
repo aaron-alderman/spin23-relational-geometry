@@ -27,7 +27,9 @@ eight sine weights become unequal. The second excitation remains even and
 cosine-bright. Thus the perturbation changes the channel fingerprint without
 destroying the selection rule.
 
-This is one certified ray through parameter space, not a neighbourhood. It
+This is one certified ray through parameter space, not a neighbourhood. A
+[second non-collinear direction](E8_CHANNEL_AMPLITUDE_STENCIL.md) now forms a
+finite stencil, but does not fill the region between samples. It
 does not establish arbitrary channel disorder, metric stability, an
 intercell or thermodynamic gap, E8 response, or material E8. Independent
 amplitude directions and positive quadratic-metric perturbations are the next
