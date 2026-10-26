@@ -218,6 +218,19 @@ Promote this branch if one of the following is established:
 3. Compare its quotient graph and cocycle with the 40-Lagrangian incidence geometry.
 4. Search Furey's weak-root structure for the anti-diagonal handle rotation.
 
+## 10. Regulus-orbit update
+
+The option of using an \(E_6\) incidence object rather than individual roots
+is now constructive. Inside the 40-point \(Q(4,3)\) polarization carrier, 45
+hyperbolic regulus-pair sections form the transitive index-45
+\(PSp_4(3)\)-set. Their 27 maximal five-cliques form the transitive index-27
+set, with incidence \(27\cdot5=45\cdot3\). This recovers the homogeneous
+line/tritangent configuration governed by \(W(E_6)^+\). The 36 elliptic
+sections also reconstruct the double-sixes through the stabilizer split
+\(27=12+15\) and the 12-line graph \(K_{6,6}\setminus6K_2\). It advances the
+\(E_6\) layer but does not make the standard \(E_6\oplus A_2\) subgroup
+transitive on the 240 \(E_8\) roots. See the [regulus closure bridge](../../programmes/regulus-closure-bridge/README.md).
+
 The standard \(W(E_6)^+\) action has now been exhaustively tested on all 1,120 \(A_2\) subsystems and has no orbit or invariant union of size 40. See [The standard even-\(E_6\) subgroup has no invariant forty-\(A_2\) cover of the \(E_8\) roots](516_the_standard_even_e6_subgroup_has_no_invariant_forty_a2_cover_of_the_e8_roots.md).
 
 ## Certificate and companions

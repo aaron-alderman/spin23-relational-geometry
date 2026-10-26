@@ -107,6 +107,14 @@ This computation does not classify every subgroup of \(W(E_8)\) abstractly isomo
 
 These routes require new data. The standard root-level route is pinned.
 
+The [regulus closure bridge](../../programmes/regulus-closure-bridge/README.md)
+now supplies one such non-root object: the same 40-polarization carrier
+constructs transitive \(PSp_4(3)\) orbits of 45 regulus-pair sections and 27
+maximal closure cliques, while its 36 elliptic sections reconstruct the 36
+double-sixes. This realizes the finite \(E_6\) cubic incidence but
+does not alter the no-go proved here for a 40-element invariant set of
+\(A_2\) root subsystems.
+
 ## 6. Consequence for the research narrative
 
 The mathematically secure chain now stops at

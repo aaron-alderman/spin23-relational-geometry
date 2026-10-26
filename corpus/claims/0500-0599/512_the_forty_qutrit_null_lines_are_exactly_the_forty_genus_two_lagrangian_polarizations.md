@@ -172,6 +172,19 @@ A successful theta construction assigning a canonical line to every oriented Lag
 3. Construct the finite Weil intertwiners between the 40 polarizations.
 4. Test whether the Furey five-field tree selects one polarization and binary decoration.
 
+## 11. Regulus-closure update
+
+The incidence calculation has now been completed at the undecorated
+polarization level. The 40 Lagrangian points and their 40 pencil lines contain
+45 hyperbolic sections, each splitting into two opposite four-line reguli.
+Their four-point-intersection graph has exactly 27 maximal five-cliques and
+reconstructs the \(27_5,45_3\) line/tritangent incidence of the cubic-surface
+\(E_6\) geometry. The 36 elliptic sections then select 12-line subgraphs
+\(K_{6,6}\setminus6K_2\), reconstructing all 36 double-sixes. This supplies a
+genuine \(PSp_4(3)\)-equivariant exceptional object other than an individual
+\(E_8\) root, but it does not construct the missing 40-\(A_2\) root cover. See
+the [regulus closure bridge](../../programmes/regulus-closure-bridge/README.md).
+
 ## Certificate and companions
 
 - [Lagrangian/Plücker/null-line certificate](../../../verification/verify/verify_40_qutrit_null_lines_are_exactly_genus_two_lagrangian_polarizations.mjs)

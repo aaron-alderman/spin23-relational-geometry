@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "regulus-spin23-bridge-v1",
+  "date": "2026-10-26",
+  "purpose": "Test whether reguli supply an exact local two-ruling closure geometry inside the corpus's 40-point qutrit Lagrangian/Spin(2,3) carrier.",
+  "ambientGeometry": {
+    "realStatement": "The Klein quadric Gr(2,4) in P(Lambda^2 R^4) has split signature (3,3); imposing a nondegenerate symplectic form selects the primitive hyperplane and its (2,3) projective null quadric LGr(2,4).",
+    "groupChain": "Spin_0(3,3) ~= SL(4,R), with symplectic stabilizer Sp(4,R) ~= Spin_0(2,3).",
+    "regulusStatement": "A nonsingular plane section of the Klein quadric is a conic representing one ruling; the polar plane section represents the opposite ruling."
+  },
+  "finiteCarrier": {
+    "field": "F3",
+    "totalTwoPlanes": 130,
+    "lagrangianPlanes": 40,
+    "projectiveNullPoints": 40,
+    "quadricLines": 40,
+    "pointsPerLine": [
+      4
+    ],
+    "linesPerPoint": [
+      4
+    ],
+    "eachQuadricLineIsLagrangianPencil": true,
+    "spreads": {
+      "definition": "ten pairwise disjoint quadric lines partitioning all 40 points",
+      "count": 0,
+      "linesPerSpread": [],
+      "pspOrbitSizes": []
+    }
+  },
+  "hyperplaneSections": {
+    "projectiveHyperplanes": 121,
+    "sizeDistribution": {
+      "10": 36,
+      "13": 40,
+      "16": 45
+    },
+    "hyperbolicSections": 45,
+    "pointsPerHyperbolicSection": 16,
+    "linesPerHyperbolicSection": 8,
+    "rulingSizes": [
+      4,
+      4
+    ],
+    "sectionCountPerPoint": [
+      18
+    ],
+    "sectionCountPerLine": [
+      9
+    ],
+    "pairIntersectionDistribution": {
+      "4": 270,
+      "7": 720
+    },
+    "pairIntersectionDegrees": {
+      "4": [
+        12
+      ],
+      "7": [
+        32
+      ]
+    },
+    "fourPointIntersectionGraph": {
+      "vertices": 45,
+      "degree": [
+        12
+      ],
+      "adjacentCommonNeighbors": [
+        3
+      ],
+      "nonadjacentCommonNeighbors": [
+        3
+      ],
+      "stronglyRegularParameters": [
+        45,
+        12,
+        3,
+        3
+      ],
+      "comparisonBoundary": "These are the parameters of the 45-object tritangent-plane graph. Parameters and group order do not by themselves supply a canonical cubic-surface labelling."
+    },
+    "reconstructedTwentySeven": {
+      "maximalFiveCliques": 27,
+      "sectionsPerClique": [
+        5
+      ],
+      "cliquesPerSection": [
+        3
+      ],
+      "cliquesPerAdjacentPair": [
+        1
+      ],
+      "incidence": "27 five-cliques x 5 sections = 45 sections x 3 five-cliques = 135 incidences",
+      "interpretation": "Treating the 45 regulus-pair sections as tritangent candidates, their 27 maximal five-cliques reconstruct the line candidates: five tritangents through each line and three lines in each tritangent."
+    },
+    "reconstructedThirtySix": {
+      "ellipticSections": 36,
+      "ellipticStabilizerOrbitOnTwentySeven": [
+        12,
+        15
+      ],
+      "incidencePairs": 432,
+      "linesPerEllipticSection": [
+        12
+      ],
+      "ellipticSectionsPerLine": [
+        16
+      ],
+      "graph": "each selected 12-line subgraph is bipartite 6+6, with degree five: K_6,6 minus a perfect matching",
+      "verifiedForAllEllipticSections": true,
+      "interpretation": "The 36 elliptic sections reconstruct the 36 double-sixes, not merely their count."
+    }
+  },
+  "closure": {
+    "verifiedForEveryHyperbolicSection": true,
+    "statement": "Any three lines in either ruling have exactly the four lines of the opposite ruling as common transversals among all 40 polar-space lines.",
+    "detector": "A fourth disjoint line belongs to the same regulus precisely when it preserves the complete four-transversal family.",
+    "interpretation": "Three local relation pencils generate a finite admissible closure; the opposite ruling is its relational dual, and fourth-line survival is an exact closure detector."
+  },
+  "exceptionalComparison": {
+    "sp4Order": 51840,
+    "projectiveSp4Order": 25920,
+    "hyperbolicSectionOrbit": 45,
+    "fullSp4StabilizerOrder": 1152,
+    "projectiveStabilizerOrder": 576,
+    "reconstructedLineOrbit": 27,
+    "fullSp4LineStabilizerOrder": 1920,
+    "projectiveLineStabilizerOrder": 960,
+    "ellipticSectionOrbit": 36,
+    "fullSp4EllipticStabilizerOrder": 1440,
+    "projectiveEllipticStabilizerOrder": 720,
+    "exactStatement": "PSp(4,3) acts transitively on the 45 regulus-pair sections, 27 reconstructed line candidates and 36 elliptic sections; their projective stabilizers have orders 576, 960 and 720 respectively.",
+    "cubicSurfaceComparison": "The even symmetry group of the 27-line/45-tritangent cubic-surface configuration is PSp(4,3), and the full Weyl group W(E6) has order 51840. The present 45-object orbit is therefore the correct finite group action to compare with tritangent planes.",
+    "boundary": "Equal degree, stabilizer order and strongly regular parameters do not yet provide a canonical label-preserving bijection to a chosen cubic surface. Sp(4,3) itself must not be identified with W(E6): its central quotient PSp(4,3) is the even subgroup in the classical cubic-surface action."
+  },
+  "sample": {
+    "hyperplaneCovector": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "rulingA": [
+      [
+        "00100",
+        "11001",
+        "11101",
+        "11201"
+      ],
+      [
+        "00010",
+        "11002",
+        "11012",
+        "11022"
+      ],
+      [
+        "00111",
+        "11021",
+        "11102",
+        "11210"
+      ],
+      [
+        "00112",
+        "11011",
+        "11120",
+        "11202"
+      ]
+    ],
+    "rulingB": [
+      [
+        "00100",
+        "11002",
+        "11102",
+        "11202"
+      ],
+      [
+        "00010",
+        "11001",
+        "11011",
+        "11021"
+      ],
+      [
+        "00112",
+        "11022",
+        "11101",
+        "11210"
+      ],
+      [
+        "00111",
+        "11012",
+        "11120",
+        "11201"
+      ]
+    ]
+  },
+  "verdict": "Regulus geometry is not decorative: it gives an exact two-face closure unit inside Q(4,3), while the symplectic primitive slice explains why the ambient Klein Spin(3,3) line carrier descends to the corpus's Spin(2,3) null carrier. No dynamics or physical identification follows from incidence alone."
+}
