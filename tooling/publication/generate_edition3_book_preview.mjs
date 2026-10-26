@@ -1715,7 +1715,22 @@ const renderMarkdown = (markdown, source, fromFile = sourceOutputPath(source)) =
   const flushList = () => {
     if (listType) {
       const start = listType === "ol" && orderedListStart !== 1 ? ` start="${orderedListStart}"` : "";
-      blocks.push(`<${listType}${start}>${listItems.map(item => `<li>${inlineMarkdown(item, source, fromFile)}</li>`).join("")}</${listType}>`);
+      const hasTasks = listType === "ul" && listItems.some(item => /^\[[ xX]\]\s+/u.test(item.text));
+      const listClass = hasTasks ? ` class="task-list"` : "";
+      const itemContentHtml = item => {
+        const task = /^\[([ xX])\]\s+([\s\S]*)$/u.exec(item.text);
+        if (!task) return inlineMarkdown(item.text, source, fromFile);
+        const checked = task[1].toLowerCase() === "x";
+        return `<input type="checkbox" disabled${checked ? " checked" : ""} aria-label="${checked ? "Completed" : "Incomplete"}"> ${inlineMarkdown(task[2], source, fromFile)}`;
+      };
+      const itemHtml = item => {
+        const taskClass = /^\[[ xX]\]\s+/u.test(item.text) ? ` class="task-list-item"` : "";
+        const nested = item.children.length
+          ? `<${item.childType}>${item.children.map(child => `<li>${itemContentHtml(child)}</li>`).join("")}</${item.childType}>`
+          : "";
+        return `<li${taskClass}>${itemContentHtml(item)}${nested}</li>`;
+      };
+      blocks.push(`<${listType}${start}${listClass}>${listItems.map(itemHtml).join("")}</${listType}>`);
     }
     listType = null;
     listItems = [];
@@ -1761,8 +1776,8 @@ const renderMarkdown = (markdown, source, fromFile = sourceOutputPath(source)) =
       continue;
     }
     const heading = /^(#{1,6})\s+(.+)$/u.exec(line);
-    const unordered = /^\s*[-*+]\s+(.+)$/u.exec(line);
-    const ordered = /^\s*\d+[.)]\s+(.+)$/u.exec(line);
+    const unordered = /^(\s*)[-*+]\s+(.+)$/u.exec(line);
+    const ordered = /^(\s*)\d+[.)]\s+(.+)$/u.exec(line);
     if (heading) { flushParagraph(); flushList(); flushQuote(); blocks.push(`<h${heading[1].length} id="${anchorId(heading[2])}">${inlineMarkdown(heading[2], source, fromFile)}</h${heading[1].length}>`); continue; }
     const separators = lineIndex + 1 < lines.length ? tableSeparator(lines[lineIndex + 1]) : null;
     if (separators && line.includes("|")) {
@@ -1786,19 +1801,45 @@ const renderMarkdown = (markdown, source, fromFile = sourceOutputPath(source)) =
     if (/^>\s?/u.test(line)) { flushParagraph(); flushList(); quote.push(line.replace(/^>\s?/u, "")); continue; }
     if (unordered || ordered) {
       flushParagraph(); flushQuote();
+      const marker = unordered || ordered;
       const nextType = unordered ? "ul" : "ol";
+      if (marker[1].length >= 2 && listType && listItems.length) {
+        const parent = listItems[listItems.length - 1];
+        if (!parent.childType) parent.childType = nextType;
+        if (parent.childType === nextType) {
+          parent.children.push({ text: marker[2], childType: null, children: [] });
+          continue;
+        }
+      }
       if (listType && listType !== nextType) flushList();
       if (!listType && ordered) orderedListStart = Number(/^\s*(\d+)/u.exec(line)[1]);
-      listType = nextType; listItems.push((unordered || ordered)[1]); continue;
+      listType = nextType;
+      listItems.push({ text: marker[2], childType: null, children: [] });
+      continue;
     }
-    if (!line.trim()) { flushParagraph(); flushList(); flushQuote(); continue; }
+    if (!line.trim()) {
+      flushParagraph();
+      if (listType) {
+        let lookahead = lineIndex + 1;
+        while (lookahead < lines.length && !lines[lookahead].trim()) lookahead += 1;
+        const nextLine = lines[lookahead] || "";
+        const resumesUnordered = listType === "ul" && /^\s*[-*+]\s+(.+)$/u.test(nextLine);
+        const resumesOrdered = listType === "ol" && /^\s*\d+[.)]\s+(.+)$/u.test(nextLine);
+        const resumesNested = /^\s{2,}(?:[-*+]|\d+[.)])\s+(.+)$/u.test(nextLine);
+        if (!resumesUnordered && !resumesOrdered && !resumesNested) flushList();
+      }
+      flushQuote();
+      continue;
+    }
     // CommonMark permits both indented and lazy continuation lines inside a
     // list item. Keep every ordinary non-blank line with the active item until
     // a real block boundary or the next marker appears. Previously wrapped
     // source lines became standalone paragraphs, closing and restarting the
     // list so every rendered item appeared as number 1.
     if (listType) {
-      listItems[listItems.length - 1] += ` ${line.trim()}`;
+      const parent = listItems[listItems.length - 1];
+      if (parent.children.length && /^\s{4,}\S/u.test(line)) parent.children[parent.children.length - 1].text += ` ${line.trim()}`;
+      else parent.text += ` ${line.trim()}`;
       continue;
     }
     flushList(); flushQuote(); paragraph.push(line.trim());
@@ -1957,7 +1998,7 @@ const proofCss = `.taxonomy-badge,.archetype-badge{text-decoration:none}.taxonom
 const contentsFixCss = `.contents .taxonomy-badge,.contents .archetype-badge{display:inline-flex}.contents .chapter-title,.contents .read-link{display:inline;padding:0;border:0}`;
 const evidenceCss = `.evidence-link{border-color:var(--gold);border-left-color:var(--gold)}.claim-unit+.claim-unit{margin-top:36px;padding-top:28px;border-top:1px dashed var(--line)}.claim-hero h1{max-width:960px}.claim-anatomy{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}.claim-anatomy article{padding:20px;border:1px solid var(--line);border-top:5px solid var(--teal);background:var(--panel)}.claim-anatomy h3{margin-top:0}.claim-source-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;padding:0;list-style:none}.claim-source-map li{display:grid;gap:9px;padding:18px;border:1px solid var(--line);background:var(--panel)}.claim-source-map strong{font:700 .9rem/1.4 var(--sans)}.claim-source-map a{font:800 .72rem/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase}.compact-proof{margin:18px 0;padding:13px 16px}.source-reader-hero h1{font-size:clamp(2.6rem,6vw,5.2rem)}.source-provenance dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;font:14px/1.5 var(--sans)}.source-provenance dt{font-weight:800}.source-provenance dd{margin:0;overflow-wrap:anywhere}.source-document{padding:50px 0}.source-document h1{font-size:clamp(2.4rem,5vw,4.5rem)}.source-document h2{margin-top:1.5em}.source-document pre{overflow:auto;padding:20px;background:#172321;color:#f6f0e6;font:14px/1.55 var(--mono)}.source-document code{overflow-wrap:anywhere}.source-document img{max-width:100%;height:auto}.source-document blockquote{margin:24px 0;padding:2px 20px;border-left:5px solid var(--gold);background:var(--panel)}.library-breadcrumb{display:flex;flex-wrap:wrap;gap:.45rem;padding:20px 0 0;color:var(--muted);font:700 .72rem/1.5 var(--sans);overflow-wrap:anywhere}.library-breadcrumb i{font-style:normal;color:var(--line)}.library-route{padding:32px 0}.library-route ol{font:14px/1.6 var(--mono)}.library-relations{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}.library-relations>div{min-width:0}.library-relations ul,.library-results{padding:0;list-style:none}.library-relations li,.library-results li{display:grid;gap:.2rem;padding:12px 0;border-top:1px solid var(--line)}.library-relations small,.library-results small{color:var(--muted);font:12px/1.4 var(--mono);overflow-wrap:anywhere}.library-search{width:100%;padding:15px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:18px var(--sans)}.library-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.library-stat{display:block;padding:18px;border:1px solid var(--line);background:var(--panel);color:var(--ink);text-decoration:none}.library-stat:hover{border-color:var(--teal)}.library-stat strong{display:block;font:700 2rem/1 var(--serif)}.library-stat span{font:700 .7rem/1.4 var(--sans);text-transform:uppercase;letter-spacing:.05em}`;
 const directoryCss = `.directory-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}.directory-card{display:flex;min-width:0;min-height:230px;flex-direction:column;align-items:flex-start}.directory-card h3{margin:.35rem 0 .55rem;font-size:clamp(1.35rem,2.2vw,1.7rem)}.directory-path{max-width:100%;margin:.15rem 0 1.2rem;color:var(--muted)}.directory-path code{font:700 .74rem/1.4 var(--mono);overflow-wrap:anywhere}.directory-open{margin-top:auto;font:800 .7rem/1.3 var(--sans);letter-spacing:.055em;text-transform:uppercase}.directory-canonical{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.7rem 1rem;align-items:baseline;margin:1.25rem 0 2rem;color:var(--muted);font:700 .72rem/1.45 var(--sans);letter-spacing:.045em;text-transform:uppercase}.directory-canonical code{min-width:0;color:var(--ink);font:.82rem/1.45 var(--mono);letter-spacing:0;text-transform:none;overflow-wrap:anywhere}@media(max-width:650px){.directory-grid{grid-template-columns:1fr}.directory-card{min-height:190px}.directory-canonical{grid-template-columns:1fr;gap:.25rem}.library-breadcrumb{gap:.35rem;font-size:.67rem}}`;
-const articleCss = `.article-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}.article-card{display:flex;flex-direction:column;min-height:300px;padding:25px;border:1px solid var(--line);border-top:6px solid var(--teal);background:var(--panel)}.article-card h2{font-size:clamp(1.7rem,3vw,2.35rem)}.article-card .lede{font-size:1.05rem}.article-actions,.share-bar{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:auto;font:800 .68rem/1.3 var(--sans);letter-spacing:.055em;text-transform:uppercase}.article-actions a,.share-bar a{display:inline-block;padding:.55rem .72rem;border:1px solid var(--line);background:var(--paper);text-decoration:none}.article-actions a:first-child,.share-bar a:first-of-type{border-color:var(--teal);background:var(--teal);color:white}.share-bar{margin:24px 0 0;padding-top:18px;border-top:1px solid var(--line)}.share-bar strong{margin-right:4px;color:var(--muted)}.article-note{font:.82rem/1.5 var(--sans);color:var(--muted)}@media(max-width:650px){.article-card{min-height:0}.share-bar{align-items:flex-start;flex-direction:column}}`;
+const articleCss = `.article-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}.article-card{display:flex;flex-direction:column;min-height:300px;padding:25px;border:1px solid var(--line);border-top:6px solid var(--teal);background:var(--panel)}.article-card h2{font-size:clamp(1.7rem,3vw,2.35rem)}.article-card .lede{font-size:1.05rem}.article-actions,.share-bar{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:auto;font:800 .68rem/1.3 var(--sans);letter-spacing:.055em;text-transform:uppercase}.article-actions a,.share-bar a{display:inline-block;padding:.55rem .72rem;border:1px solid var(--line);background:var(--paper);text-decoration:none}.article-actions a:first-child,.share-bar a:first-of-type{border-color:var(--teal);background:var(--teal);color:white}.share-bar{margin:24px 0 0;padding-top:18px;border-top:1px solid var(--line)}.share-bar strong{margin-right:4px;color:var(--muted)}.article-note{font:.82rem/1.5 var(--sans);color:var(--muted)}.task-list{list-style:none;padding-left:0}.task-list-item input{margin-right:.55rem;accent-color:var(--teal)}@media(max-width:650px){.article-card{min-height:0}.share-bar{align-items:flex-start;flex-direction:column}}`;
 const mast = `<header class="mast"><a href="index.html">Admissibility frontier · Edition 3</a><nav><a href="articles/index.html">Articles</a> · <a href="reading-key.html">Reading key</a> · <a href="08-result-ledger.html">Findings</a> · <a href="09-research-frontier.html">Frontier</a> · <a href="../concept-map/index.html">Concept atlas</a></nav></header>`;
 const mathHead = (prefix = "") => `<link rel="stylesheet" href="${prefix}vendor/katex/katex.min.css"><script defer src="${prefix}vendor/katex/katex.min.js"></script><script defer src="${prefix}vendor/katex/contrib/auto-render.min.js"></script><script defer src="${prefix}math-render.js"></script>`;
 const publicPageUrl = pagePath => `${publicEditionBase}${encodeURI(pagePath).replace(/^\/+|index\.html$/gu, "")}`;

@@ -218,6 +218,26 @@ test("GitHub-style corpus tables render as semantic HTML tables", () => {
   }
 });
 
+test("wrapped, loose and task lists retain their semantic structure", () => {
+  const readingContract = readFileSync(join(siteRoot, "library", "corpus", "READING_CONTRACT.html"), "utf8");
+  const vocabulary = /<ol><li><strong>Jordan asks what can coexist\.[\s\S]*?<p>The canonical development/u.exec(readingContract)?.[0] || "";
+  assert.equal([...vocabulary.matchAll(/<ol(?:\s[^>]*)?>/gu)].length, 1, "blank lines must not restart one numbered vocabulary list");
+  assert.equal([...vocabulary.matchAll(/<li>/gu)].length, 11, "the vocabulary list must preserve all eleven entries");
+  assert.match(vocabulary, /<li><strong>Carrier, selector and detector are different jobs\.<\/strong>/u);
+
+  const acceptance = readFileSync(join(siteRoot, "library", "corpus", "programmes", "document-acceptance", "spin23_foundational_document_acceptance_20261021.html"), "utf8");
+  assert.match(acceptance, /<ul class="task-list">/u);
+  assert.match(acceptance, /<input type="checkbox" disabled checked aria-label="Completed">/u);
+  assert.match(acceptance, /<input type="checkbox" disabled aria-label="Incomplete">/u);
+  assert.doesNotMatch(acceptance, /<li>\[[ xX]\]/u);
+
+  const nested = readFileSync(join(siteRoot, "library", "corpus", "claims", "1000-1099", "1033_odd_frequency_car_pairing_reopens_the_single_doublet_and_limits_the_doubled_car_minimality_to_the_static_even_frequency_branch.html"), "utf8");
+  const fork = /<p>The anomalous programme now forks:<\/p>([\s\S]*?)<p>Neither dominates yet\./u.exec(nested)?.[1] || "";
+  assert.equal([...fork.matchAll(/<ol(?:\s[^>]*)?>/gu)].length, 1, "the two top-level branches must remain one ordered list");
+  assert.equal([...fork.matchAll(/<ul(?:\s[^>]*)?>/gu)].length, 2, "each branch must retain its nested evidence list");
+  assert.match(fork, /<li><strong>Single-doublet odd-frequency branch<\/strong><ul><li>common two-real internal plane;<\/li>/u);
+});
+
 test("tilde-fenced corpus commands render as code and programme articles remain navigable", () => {
   const programme = readFileSync(join(siteRoot, "library", "corpus", "programmes", "programme-algebra", "README.html"), "utf8");
   assert.match(programme, /<h2 id="articles">Articles<\/h2>/u);
