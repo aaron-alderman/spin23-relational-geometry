@@ -55,7 +55,10 @@ At that coupling, widths 3--5 and roots 6--10 close a 3x3 projected gap
 convergence grid. Periodic widths 3--5 form a flat odd collective gap plateau,
 and open/periodic disagreement falls below one percent by width four. A
 thermodynamic or full-charge-chain gap remains open. The
-E8-specific detector predicts a held-out 240-current root shell. B4 is closed on the
+cutoff-eight/eight-root signed local operator dictionary is now serialized and
+replay-certified, so larger-width scans no longer repeat the charge-shell
+solve or silently change the local carrier. The E8-specific detector predicts
+a held-out 240-current root shell. B4 is closed on the
 declared E8-cubed/Leech/Moonshine family: the bulk detector collides and
 \(\dim V_1=(744,24,0)\) separates the three candidates.
 
