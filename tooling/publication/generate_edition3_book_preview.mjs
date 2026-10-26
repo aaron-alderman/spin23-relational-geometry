@@ -2,19 +2,26 @@
 
 import { createHash } from "node:crypto";
 import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
-import { basename, join, relative, resolve, sep } from "node:path";
+import { basename, dirname, join, normalize, relative, resolve, sep } from "node:path";
 
 const root = resolve(process.cwd());
+const argValue = name => {
+  const index = process.argv.indexOf(name);
+  return index >= 0 ? process.argv[index + 1] : null;
+};
+const siteOnly = process.argv.includes("--site-only");
 const bookRoot = join(root, "book", "edition-3");
 const chaptersRoot = join(bookRoot, "chapters");
 const detailsRoot = join(bookRoot, "details");
 const readingKeyRoot = join(bookRoot, "reading-key");
-const siteRoot = join(root, "docs", "edition-3");
+const siteRoot = resolve(root, argValue("--site-root") || join("docs", "edition-3"));
+const siteIndexRoot = dirname(siteRoot);
 const siteDetailsRoot = join(siteRoot, "details");
 const siteReadingKeyRoot = join(siteRoot, "reading-key");
 const assetsRoot = join(siteRoot, "assets");
 const katexSourceRoot = join(root, "tooling", "publication", "vendor", "katex");
 const katexSiteRoot = join(siteRoot, "vendor", "katex");
+const publicationAssetsRoot = join(root, "tooling", "publication", "assets");
 const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 const sha256 = value => createHash("sha256").update(value).digest("hex");
 const posix = value => value.split(sep).join("/");
@@ -1122,7 +1129,7 @@ const chapterSources = {
   "08-admissibility-frontier": ["corpus/syntheses/the_admissibility_frontier_current_synthesis.md", "corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md", "corpus/programmes/admissibility/admissibility_25_current_research_frontier_crosswalk.md", "corpus/programmes/admissibility/admissibility_58_casimir_spectral_coverage_and_distance_gate.md", "corpus/programmes/admissibility/admissibility_59_four_mode_quotient_scar_bench_and_tolerance_closure.md", "corpus/programmes/admissibility/admissibility_60_monster_lean_fold_provenance_and_reproduction_gate.md", "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md", "corpus/programmes/lattice-subroutine-gravity/monster-fermionization-bridge.md", "corpus/programmes/lattice-subroutine-gravity/period-matrix-jordan-boundary-gate.md", "corpus/programmes/lattice-subroutine-gravity/three-mode-loop-seam-preflight.md", "corpus/programmes/lattice-subroutine-gravity/modular-sign-detector-reassignment.md", "corpus/programmes/lattice-subroutine-gravity/metaplectic-phase-candidate.md", "corpus/programmes/lattice-subroutine-gravity/metaplectic-t1-s1-boundary.md", "corpus/programmes/frontier/wave-7/frontier_wave7_73_relative_metaplectic_phase_boundary.md", "corpus/programmes/frontier/wave-7/frontier_wave7_107_boundary_domain_admissibility_bridge.md", "corpus/programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md", "corpus/programmes/frontier/wave-7/frontier_wave7_39_programme_a2_double_centralizer_and_c2_no_go.md", "corpus/programmes/frontier/wave-7/frontier_wave7_40_claimipedia_operator_exhaustion_and_sp4_gate.md", "corpus/programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md", "corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md", "corpus/programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md", "corpus/programmes/frontier/wave-7/frontier_wave7_44_refinement_stability_of_the_mixed_interface.md", "corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md", "corpus/programmes/frontier/wave-7/frontier_wave7_48_sign_holonomy_physical_detector_bridge.md", "corpus/programmes/frontier/wave-7/frontier_wave7_49_kenotic_cover_h0_signature_and_h1_no_go.md", "corpus/programmes/frontier/wave-7/frontier_wave7_50_a1_a2_parabolic_kenotic_envelope.md", "corpus/programmes/frontier/wave-7/frontier_wave7_51_three_port_wick_kenosis_bridge.md", "corpus/programmes/frontier/wave-7/frontier_wave7_52_rectangular_mediator_candidate_audit.md", "1004_the_weighted_furey_root_is_a_flat_horizontal_double_cover_of_its_projector_circle_with_central_minus_identity_holonomy.md", "997_a_local_conservative_real_interface_network_realizes_the_nested_c12_transport_as_antiperiodic_six_cycle_holonomy.md"],
   "08-result-ledger": ["1398_final_wave_red_team_audit_finds_two_substantive_errors_and_preserves_four_independent_stopping_boundaries.md"],
   "09-research-frontier": ["1453_genuine_exhaustion_leaves_no_untyped_internal_work_but_seven_named_external_or_conditional_frontiers.md", "1456_the_two_zenodo_preprints_strengthen_response_controls_but_do_not_change_the_terminal_gate_partition.md", "1624_the_reopened_mass_gap_action_and_shared_scale_programme_reaches_five_irreducible_gates.md", "1788_all_finite_escapes_from_the_minimal_connection_parent_now_end_at_new_model_construction.md"],
-  "10-provenance-and-reading-map": ["00_research_document_map.md", "30_research_frontier.md", "49_multi_branch_research_registry.md"],
+  "10-provenance-and-reading-map": ["00_research_document_map.md", "30_research_frontier.md", "40_grand_synthesis_spin23_pole.md", "49_multi_branch_research_registry.md", "91_multi_branch_active_goal_log.md"],
   "11-concept-atlas": ["40_grand_synthesis_spin23_pole.md"],
   "12-optional-endpoints-and-readings": ["corpus/syntheses/admissibility_optional_endpoints_mythic_and_theological_readings.md", "corpus/syntheses/kenotic_governance_tri_omni_theism_and_a_lawful_world.md", "corpus/programmes/orientation/orientation_architecture.md", "corpus/programmes/frontier/wave-7/frontier_wave7_45_kenotic_pole_topology_audit.md", "corpus/programmes/frontier/wave-7/frontier_wave7_46_kenotic_cover_gluing_no_go.md", "corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md", "corpus/programmes/frontier/wave-7/frontier_wave7_57_security_selfhood_and_kenosis_as_three_mathematical_roles.md", "corpus/EXPLANATORY_STANDARD.md"],
 };
@@ -1470,12 +1477,94 @@ const sourceDigest = sha256(allSources.map(source => {
   return `${source}\0${sha256(canonicalText)}`;
 }).join("\n"));
 
+const sourceSet = new Set(allSources);
+const repositoryUrl = "https://github.com/aaron-alderman/spin23-relational-geometry";
+const buildRevision = process.env.GITHUB_SHA || "local-working-tree";
+const encodePath = value => posix(value).split("/").map(part => [".", ".."].includes(part) ? part : encodeURIComponent(part)).join("/");
+const sourceOutputPath = source => join(siteRoot, "sources", source.replace(/\.md$/u, ".html"));
+const sourcePageHref = (fromFile, source) => encodePath(relative(dirname(fromFile), sourceOutputPath(source)));
+const githubBlobUrl = source => `${repositoryUrl}/blob/${encodeURIComponent(buildRevision === "local-working-tree" ? "main" : buildRevision)}/${encodePath(source)}`;
+const githubRawUrl = source => `https://raw.githubusercontent.com/aaron-alderman/spin23-relational-geometry/${encodeURIComponent(buildRevision === "local-working-tree" ? "main" : buildRevision)}/${encodePath(source)}`;
+
+const resolveMarkdownTarget = (source, target) => {
+  if (/^(?:[a-z]+:|#)/iu.test(target)) return target;
+  const [pathPart, fragment = ""] = target.split("#", 2);
+  const candidate = posix(normalize(join(dirname(source), pathPart))).replace(/^\.\//u, "");
+  if (sourceSet.has(candidate)) return `${sourcePageHref(sourceOutputPath(source), candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
+  if (candidate.endsWith(".md")) return `${githubBlobUrl(candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
+  return githubBlobUrl(candidate);
+};
+
+const inlineMarkdown = (value, source) => {
+  const code = [];
+  let output = esc(value).replace(/`([^`]+)`/gu, (_, body) => `\u0000${code.push(`<code>${body}</code>`) - 1}\u0000`);
+  output = output.replace(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/gu, (_, alt, target) => {
+    const rawTarget = target.replaceAll("&amp;", "&");
+    const href = /^(?:https?:|data:)/iu.test(rawTarget) ? rawTarget : githubRawUrl(posix(normalize(join(dirname(source), rawTarget))));
+    return `\u0000${code.push(`<img src="${esc(href)}" alt="${alt}">`) - 1}\u0000`;
+  });
+  output = output.replace(/\[([^\]]+)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/gu, (_, label, target) => `\u0000${code.push(`<a href="${esc(resolveMarkdownTarget(source, target.replaceAll("&amp;", "&")))}">${label}</a>`) - 1}\u0000`);
+  output = output.replace(/\*\*([^*]+)\*\*/gu, "<strong>$1</strong>").replace(/__([^_]+)__/gu, "<strong>$1</strong>");
+  output = output.replace(/(?<!\*)\*([^*]+)\*(?!\*)/gu, "<em>$1</em>").replace(/(?<!_)_([^_]+)_(?!_)/gu, "<em>$1</em>");
+  return output.replace(/\u0000(\d+)\u0000/gu, (_, index) => code[Number(index)]);
+};
+
+const renderMarkdown = (markdown, source) => {
+  const lines = markdown.replace(/\r\n?/gu, "\n").split("\n");
+  const blocks = [];
+  let paragraph = [];
+  let listType = null;
+  let listItems = [];
+  let quote = [];
+  let fence = null;
+  let fenceLines = [];
+  const flushParagraph = () => { if (paragraph.length) blocks.push(`<p>${inlineMarkdown(paragraph.join(" "), source)}</p>`); paragraph = []; };
+  const flushList = () => { if (listType) blocks.push(`<${listType}>${listItems.map(item => `<li>${inlineMarkdown(item, source)}</li>`).join("")}</${listType}>`); listType = null; listItems = []; };
+  const flushQuote = () => { if (quote.length) blocks.push(`<blockquote>${renderMarkdown(quote.join("\n"), source)}</blockquote>`); quote = []; };
+  for (const line of lines) {
+    const fenceMatch = /^```\s*([^\s]*)/u.exec(line);
+    if (fence) {
+      if (fenceMatch) { blocks.push(`<pre><code${fence ? ` class="language-${esc(fence)}"` : ""}>${esc(fenceLines.join("\n"))}</code></pre>`); fence = null; fenceLines = []; }
+      else fenceLines.push(line);
+      continue;
+    }
+    if (fenceMatch) { flushParagraph(); flushList(); flushQuote(); fence = fenceMatch[1] || "text"; continue; }
+    const heading = /^(#{1,6})\s+(.+)$/u.exec(line);
+    const unordered = /^\s*[-*+]\s+(.+)$/u.exec(line);
+    const ordered = /^\s*\d+[.)]\s+(.+)$/u.exec(line);
+    if (heading) { flushParagraph(); flushList(); flushQuote(); blocks.push(`<h${heading[1].length} id="${anchorId(heading[2])}">${inlineMarkdown(heading[2], source)}</h${heading[1].length}>`); continue; }
+    if (/^\s*(?:---+|___+|\*\*\*+)\s*$/u.test(line)) { flushParagraph(); flushList(); flushQuote(); blocks.push("<hr>"); continue; }
+    if (/^>\s?/u.test(line)) { flushParagraph(); flushList(); quote.push(line.replace(/^>\s?/u, "")); continue; }
+    if (unordered || ordered) {
+      flushParagraph(); flushQuote();
+      const nextType = unordered ? "ul" : "ol";
+      if (listType && listType !== nextType) flushList();
+      listType = nextType; listItems.push((unordered || ordered)[1]); continue;
+    }
+    if (!line.trim()) { flushParagraph(); flushList(); flushQuote(); continue; }
+    flushList(); flushQuote(); paragraph.push(line.trim());
+  }
+  if (fence) blocks.push(`<pre><code class="language-${esc(fence)}">${esc(fenceLines.join("\n"))}</code></pre>`);
+  flushParagraph(); flushList(); flushQuote();
+  return blocks.join("\n");
+};
+
+const sourceReaderHtml = source => {
+  const markdown = readFileSync(join(root, source), "utf8").replace(/\r\n?/gu, "\n");
+  const digest = sha256(markdown);
+  const title = (/^#\s+(.+)$/mu.exec(markdown) || [null, basename(source, ".md")])[1];
+  const output = sourceOutputPath(source);
+  const prefix = encodePath(relative(dirname(output), siteRoot)) + "/";
+  const body = `<header class="mast detail-mast"><a href="${prefix}index.html">Admissibility frontier · Edition 3</a><nav><a href="${esc(githubBlobUrl(source))}">Canonical source on GitHub</a></nav></header><header class="hero source-reader-hero"><p class="kicker">Compiled corpus reading projection</p><h1>${inlineMarkdown(title, source)}</h1><aside class="boundary"><strong>Authority boundary.</strong> This page is generated from canonical Markdown during publication. It is not an editable or authoritative copy.</aside></header><section class="source-provenance"><dl><dt>Canonical path</dt><dd><code>${esc(source)}</code></dd><dt>Source SHA-256</dt><dd><code>${digest}</code></dd><dt>Build revision</dt><dd><code>${esc(buildRevision)}</code></dd></dl><p><a href="${esc(githubBlobUrl(source))}">History and editing →</a> · <a href="${esc(githubRawUrl(source))}">Raw Markdown →</a></p></section><article class="source-document">${renderMarkdown(markdown, source)}</article><nav class="page-turn"><a href="${prefix}index.html">← Edition contents</a><a href="${esc(githubBlobUrl(source))}">Canonical source →</a></nav>`;
+  return htmlDoc(title, body, prefix, false);
+};
+
 const mdLink = source => `[${basename(source)}](${posix(relative(chaptersRoot, join(root, source)))})`;
 const sourceListMd = sources => sources.map(source => `- ${mdLink(source)}`).join("\n");
-const sourceListHtml = sources => `<ul class="sources">${sources.map(source => `<li><a href="../../${encodeURI(source)}">${esc(basename(source))}</a></li>`).join("")}</ul>`;
+const sourceListHtml = (sources, fromFile = join(siteRoot, "chapter.html")) => `<ul class="sources">${sources.map(source => `<li><a href="${sourcePageHref(fromFile, source)}">${esc(basename(source))}</a></li>`).join("")}</ul>`;
 const detailFileLinkMd = file => `[${basename(file)}](${posix(relative(detailsRoot, join(root, file)))})`;
 const detailFileListMd = files => files.map(file => `- ${detailFileLinkMd(file)}`).join("\n");
-const detailFileListHtml = files => `<ul class="sources">${files.map(file => `<li><a href="../../../${encodeURI(file)}">${esc(basename(file))}</a></li>`).join("")}</ul>`;
+const detailFileListHtml = files => `<ul class="sources">${files.map(file => `<li><a href="${githubBlobUrl(file)}">${esc(basename(file))}</a></li>`).join("")}</ul>`;
 const claimDetail = (chapterSlug, heading, claimIndex) => (claimsBySection.get(`${chapterSlug}|${heading}`) || [])[claimIndex];
 const proofCtaMarkdown = (chapterSlug, heading, claimIndex) => {
   const detail = claimDetail(chapterSlug, heading, claimIndex);
@@ -1571,10 +1660,10 @@ const css = `:root{--paper:#eee7dc;--ink:#18201f;--muted:#626963;--line:#b8aea0;
 const proofCss = `.taxonomy-badge,.archetype-badge{text-decoration:none}.taxonomy-badge:hover,.archetype-badge:hover{filter:brightness(.82);box-shadow:0 0 0 2px color-mix(in srgb,var(--tax-color) 18%,transparent)}.proof-link{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:850px;margin:28px 0 4px;padding:18px 20px;border:1px solid var(--teal);border-left:6px solid var(--teal);background:var(--panel);text-decoration:none;font-family:var(--sans)}.proof-link span{display:grid;gap:2px}.proof-link b{color:var(--ink);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}.proof-link small{color:var(--muted);font-size:.92rem}.proof-link i{white-space:nowrap;font-style:normal;font-weight:700}.claim-box{padding:24px;border:1px solid var(--line);border-left:6px solid var(--teal);background:var(--panel);font:1.15rem/1.6 var(--serif)}.proof-steps{max-width:850px;padding-left:1.5rem}.proof-steps li{padding:.45rem 0}.detail-mast a{font-size:.68rem}.reading-index{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px;align-items:start}.reading-entry{display:block;padding:22px;border:1px solid var(--line);border-top:5px solid var(--tax-color,var(--teal));background:var(--panel);color:var(--ink);text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}.reading-entry:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgb(24 32 31 / .10)}.reading-entry h2{font-size:1.65rem}.reading-entry>strong{color:var(--teal);font:800 .75rem/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase}.usage-links{max-height:320px;overflow:auto;padding-right:8px;font:.83rem/1.45 var(--sans)}.usage-links li{padding:.25rem 0}.full-usage-links{max-height:none;columns:2;column-gap:34px}.full-usage-links li{break-inside:avoid;padding:.4rem 0}.contents-row{display:grid;grid-template-columns:45px minmax(0,1fr) auto;gap:15px;padding:14px 0;border-top:1px solid var(--line);align-items:center}.contents-row>.chapter-number{font-family:var(--mono);color:var(--oxide)}.chapter-title,.read-link{text-decoration:none}.chapter-title strong{color:var(--ink)}.read-link{font-family:var(--sans)}@media(max-width:650px){.proof-link{align-items:flex-start;flex-direction:column;gap:10px}.proof-link i{white-space:normal}.full-usage-links{columns:1}.contents-row{grid-template-columns:35px 1fr}.read-link{display:none}}`;
 
 const contentsFixCss = `.contents .taxonomy-badge,.contents .archetype-badge{display:inline-flex}.contents .chapter-title,.contents .read-link{display:inline;padding:0;border:0}`;
-const evidenceCss = `.evidence-link{border-color:var(--gold);border-left-color:var(--gold)}.claim-unit+.claim-unit{margin-top:36px;padding-top:28px;border-top:1px dashed var(--line)}.claim-hero h1{max-width:960px}.claim-anatomy{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}.claim-anatomy article{padding:20px;border:1px solid var(--line);border-top:5px solid var(--teal);background:var(--panel)}.claim-anatomy h3{margin-top:0}.claim-source-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;padding:0;list-style:none}.claim-source-map li{display:grid;gap:9px;padding:18px;border:1px solid var(--line);background:var(--panel)}.claim-source-map strong{font:700 .9rem/1.4 var(--sans)}.claim-source-map a{font:800 .72rem/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase}.compact-proof{margin:18px 0;padding:13px 16px}`;
+const evidenceCss = `.evidence-link{border-color:var(--gold);border-left-color:var(--gold)}.claim-unit+.claim-unit{margin-top:36px;padding-top:28px;border-top:1px dashed var(--line)}.claim-hero h1{max-width:960px}.claim-anatomy{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}.claim-anatomy article{padding:20px;border:1px solid var(--line);border-top:5px solid var(--teal);background:var(--panel)}.claim-anatomy h3{margin-top:0}.claim-source-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;padding:0;list-style:none}.claim-source-map li{display:grid;gap:9px;padding:18px;border:1px solid var(--line);background:var(--panel)}.claim-source-map strong{font:700 .9rem/1.4 var(--sans)}.claim-source-map a{font:800 .72rem/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase}.compact-proof{margin:18px 0;padding:13px 16px}.source-reader-hero h1{font-size:clamp(2.6rem,6vw,5.2rem)}.source-provenance dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;font:14px/1.5 var(--sans)}.source-provenance dt{font-weight:800}.source-provenance dd{margin:0;overflow-wrap:anywhere}.source-document{padding:50px 0}.source-document h1{font-size:clamp(2.4rem,5vw,4.5rem)}.source-document h2{margin-top:1.5em}.source-document pre{overflow:auto;padding:20px;background:#172321;color:#f6f0e6;font:14px/1.55 var(--mono)}.source-document code{overflow-wrap:anywhere}.source-document img{max-width:100%;height:auto}.source-document blockquote{margin:24px 0;padding:2px 20px;border-left:5px solid var(--gold);background:var(--panel)}`;
 const mast = `<header class="mast"><a href="index.html">Admissibility frontier · Edition 3</a><nav><a href="reading-key.html">Reading key</a> · <a href="08-result-ledger.html">Findings</a> · <a href="09-research-frontier.html">Frontier</a> · <a href="../concept-map/index.html">Concept atlas</a></nav></header>`;
 const mathHead = (prefix = "") => `<link rel="stylesheet" href="${prefix}vendor/katex/katex.min.css"><script defer src="${prefix}vendor/katex/katex.min.js"></script><script defer src="${prefix}vendor/katex/contrib/auto-render.min.js"></script><script defer src="${prefix}math-render.js"></script>`;
-const htmlDoc = (title, body) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee7dc"><title>${esc(title)} · Admissibility Frontier Edition 3</title>${mathHead()}<link rel="stylesheet" href="book.css"></head><body><main>${mast}${body}<footer>Edition 3.2 admissibility preview · 24 October 2026 · Citation set ${sourceDigest.slice(0, 12)} · Admission is not endorsement.</footer></main></body></html>`;
+const htmlDoc = (title, body, prefix = "", includeMast = true) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee7dc"><title>${esc(title)} · Admissibility Frontier Edition 3</title>${mathHead(prefix)}<link rel="stylesheet" href="${prefix}book.css"></head><body><main>${includeMast ? mast : ""}${body}<footer>Edition 3.2 admissibility preview · 24 October 2026 · Citation set ${sourceDigest.slice(0, 12)} · Admission is not endorsement.</footer></main></body></html>`;
 
 function readingKeyHtml() {
   const statusEntries = Object.entries(taxonomy).map(([key, item]) => `<a class="reading-entry tax-${key}" href="reading-key/status-${key}.html"><span class="taxonomy-badge tax-${key}"><span class="tax-icon" aria-hidden="true">${item.icon}</span><span>${esc(item.label)}</span></span><h2>${esc(item.label)}</h2><p>${esc(item.description)}</p><strong>Open ${usagesFor("taxonomy", key).length} indexed uses →</strong></a>`).join("");
@@ -1625,7 +1714,7 @@ function proofDetailHtml(detail) {
   const ablations = detail.ablations ? `<section><h2>Necessity check</h2><table><thead><tr><th>Input set</th><th>Closure dimension</th><th>Reading</th></tr></thead><tbody>${detail.ablations.map(row => `<tr><td>${mathHtml(row[0])}</td><td>${esc(row[1])}</td><td>${mathHtml(row[2])}</td></tr>`).join("")}</tbody></table></section>` : "";
   const continuation = detail.continuation ? `<section><h2>The source flow reaches the channel generator</h2><p class="lede">${mathHtml(detail.continuation)}</p></section>` : "";
   const mastDetail = `<header class="mast detail-mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="../reading-key.html">Reading key</a> · <a href="../04-furey-interface.html#${detail.backAnchor}">Furey interface</a> · <a href="../10-provenance-and-reading-map.html">Provenance</a></nav></header>`;
-  const body = `<header class="hero"><p class="kicker">${mathHtml(detail.kicker)}</p><h1>${mathHtml(detail.title)}</h1><div class="chapter-taxonomy">${taxonomyBadgeHtml(detail.taxonomy, "../")}${archetypeBadgeHtml(detail.archetype, "../")}<p>This page exposes the assumptions, proof chain, certificate files and authority boundary behind the chapter claim.</p></div></header><section><h2>Claim under audit</h2><p class="claim-box">${mathHtml(detail.claim)}</p><h3>Start with the picture</h3><p class="lede">${mathHtml(detail.ordinary)}</p></section><section><h2>Objects and assumptions</h2><table><tbody>${assumptions}</tbody></table></section><section><h2>Certificate chain</h2><ol class="proof-steps">${steps}</ol></section>${ablations}${continuation}<aside class="boundary"><strong>Authority boundary.</strong> ${mathHtml(detail.boundary)}</aside><section><div class="grid"><article class="track"><h2>Executable and inspectable certificates</h2>${detailFileListHtml(detail.certificates)}</article><article class="track"><h2>Controlling research documents</h2>${detailFileListHtml(detail.sources)}</article></div></section><nav class="page-turn"><a href="../04-furey-interface.html#${detail.backAnchor}">← Return to the chapter</a><a href="../index.html">Book contents →</a></nav>`;
+  const body = `<header class="hero"><p class="kicker">${mathHtml(detail.kicker)}</p><h1>${mathHtml(detail.title)}</h1><div class="chapter-taxonomy">${taxonomyBadgeHtml(detail.taxonomy, "../")}${archetypeBadgeHtml(detail.archetype, "../")}<p>This page exposes the assumptions, proof chain, certificate files and authority boundary behind the chapter claim.</p></div></header><section><h2>Claim under audit</h2><p class="claim-box">${mathHtml(detail.claim)}</p><h3>Start with the picture</h3><p class="lede">${mathHtml(detail.ordinary)}</p></section><section><h2>Objects and assumptions</h2><table><tbody>${assumptions}</tbody></table></section><section><h2>Certificate chain</h2><ol class="proof-steps">${steps}</ol></section>${ablations}${continuation}<aside class="boundary"><strong>Authority boundary.</strong> ${mathHtml(detail.boundary)}</aside><section><div class="grid"><article class="track"><h2>Executable and inspectable certificates</h2>${detailFileListHtml(detail.certificates)}</article><article class="track"><h2>Controlling research documents</h2>${sourceListHtml(detail.sources, join(siteDetailsRoot, `${detail.slug}.html`))}</article></div></section><nav class="page-turn"><a href="../04-furey-interface.html#${detail.backAnchor}">← Return to the chapter</a><a href="../index.html">Book contents →</a></nav>`;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee7dc"><title>${esc(typeset(detail.title))} · Admissibility Frontier Edition 3</title>${mathHead("../")}<link rel="stylesheet" href="../book.css"></head><body><main>${mastDetail}${body}<footer>Edition 3.2 admissibility preview · proof/detail page · Citation set ${sourceDigest.slice(0, 12)} · Admission is not endorsement.</footer></main></body></html>`;
 }
 
@@ -1634,28 +1723,31 @@ function claimDetailHtml(detail) {
   const previous = position > 0 ? claimDetails[position - 1] : null;
   const next = position < claimDetails.length - 1 ? claimDetails[position + 1] : null;
   const specialized = detail.specialized ? `<section><h2>Deeper certificate</h2><a class="proof-link compact-proof" href="${detail.specialized[0]}.html"><span><b>Calculation or obstruction</b><small>${esc(detail.specialized[1])}</small></span><i>Open certificate →</i></a><p>This specialized page exposes the underlying calculation or obstruction in more detail.</p></section>` : "";
-  const sourceCards = detail.sources.map(source => `<li><strong>${mathHtml(sourceDisplayName(source))}</strong><a href="../../../${encodeURI(source)}">Open controlling document →</a></li>`).join("");
+  const sourceCards = detail.sources.map(source => `<li><strong>${mathHtml(sourceDisplayName(source))}</strong><a href="${sourcePageHref(join(siteDetailsRoot, `${detail.slug}.html`), source)}">Open controlling document →</a></li>`).join("");
   const mastDetail = `<header class="mast detail-mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="../reading-key.html">Reading key</a> · <a href="../${detail.chapter.slug}.html#${anchorId(detail.heading)}">${mathHtml(detail.chapter.title)}</a> · <a href="../10-provenance-and-reading-map.html">Provenance</a></nav></header>`;
   const body = `<header class="hero claim-hero"><p class="kicker">Expanded claim page · assertion ${detail.claimIndex + 1} of ${detail.claimCount}</p><h1>${mathHtml(detail.heading)}</h1><div class="chapter-taxonomy">${taxonomyBadgeHtml(detail.taxonomy, "../")}${archetypeBadgeHtml(detail.archetype, "../")}<p>${esc(taxonomy[detail.taxonomy].description)} ${esc(archetypeByKey[detail.archetype].description)}.</p></div></header><section><p class="kicker">Exact assertion</p><blockquote class="claim-box">${mathHtml(detail.claim)}</blockquote></section><section><h2>What this commits us to</h2><p class="lede">${esc(claimCommitment(detail.taxonomy))}</p><h2>Logical anatomy</h2><div class="claim-anatomy"><article><h3>Scope</h3><p>Chapter “${mathHtml(detail.chapter.title)}”, section “${mathHtml(detail.heading)}”. This is assertion ${detail.claimIndex + 1} of ${detail.claimCount} in that section.</p></article><article><h3>Evidence posture</h3><p>${esc(evidenceReading(detail.taxonomy))}</p></article><article><h3>Research move</h3><p>${esc(archetypeByKey[detail.archetype].description)}.</p></article></div></section><section><h2>Verification route</h2><ol class="proof-steps"><li>Recover the declared objects and assumptions from the controlling documents.</li><li>Check the calculation, construction, obstruction or stopping rule on those same objects.</li><li>Compare the source conclusion with the exact assertion above; do not strengthen its verbs or enlarge its domain.</li><li>Apply the status rule and retain every named external dependency.</li></ol></section><section><h2>What would move or defeat this claim</h2><p class="lede">${esc(claimChallenge(detail.taxonomy))}</p></section>${specialized}<section><p class="kicker">Source map</p><h2>Controlling documents</h2><ul class="claim-source-map">${sourceCards}</ul><aside class="boundary"><strong>Authority boundary.</strong> This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.</aside></section><nav class="page-turn">${previous ? `<a href="${previous.slug}.html">← Previous claim</a>` : `<a href="../${detail.chapter.slug}.html#${anchorId(detail.heading)}">← Chapter</a>`}<a href="../${detail.chapter.slug}.html#${anchorId(detail.heading)}">Return to assertion</a>${next ? `<a href="${next.slug}.html">Next claim →</a>` : `<a href="../index.html">Contents →</a>`}</nav>`;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee7dc"><title>${esc(typeset(detail.heading))} · Claim page · Admissibility Frontier Edition 3</title>${mathHead("../")}<link rel="stylesheet" href="../book.css"></head><body><main>${mastDetail}${body}<footer>Edition 3.2 admissibility preview · generated claim page · Citation set ${sourceDigest.slice(0, 12)} · Admission is not endorsement.</footer></main></body></html>`;
 }
 
-mkdirSync(bookRoot, { recursive: true });
-rmSync(chaptersRoot, { recursive: true, force: true });
-rmSync(detailsRoot, { recursive: true, force: true });
-rmSync(readingKeyRoot, { recursive: true, force: true });
-rmSync(siteDetailsRoot, { recursive: true, force: true });
-rmSync(siteReadingKeyRoot, { recursive: true, force: true });
-mkdirSync(chaptersRoot, { recursive: true });
-mkdirSync(detailsRoot, { recursive: true });
-mkdirSync(readingKeyRoot, { recursive: true });
+if (!siteOnly) {
+  mkdirSync(bookRoot, { recursive: true });
+  rmSync(chaptersRoot, { recursive: true, force: true });
+  rmSync(detailsRoot, { recursive: true, force: true });
+  rmSync(readingKeyRoot, { recursive: true, force: true });
+  mkdirSync(chaptersRoot, { recursive: true });
+  mkdirSync(detailsRoot, { recursive: true });
+  mkdirSync(readingKeyRoot, { recursive: true });
+}
+rmSync(siteRoot, { recursive: true, force: true });
 mkdirSync(siteRoot, { recursive: true });
 mkdirSync(siteDetailsRoot, { recursive: true });
 mkdirSync(siteReadingKeyRoot, { recursive: true });
 mkdirSync(assetsRoot, { recursive: true });
 if (!existsSync(katexSourceRoot)) throw new Error(`Missing vendored KaTeX distribution: ${katexSourceRoot}`);
+if (!existsSync(publicationAssetsRoot)) throw new Error(`Missing publication assets: ${publicationAssetsRoot}`);
 mkdirSync(join(siteRoot, "vendor"), { recursive: true });
 cpSync(katexSourceRoot, katexSiteRoot, { recursive: true, force: true });
+cpSync(publicationAssetsRoot, assetsRoot, { recursive: true, force: true });
 writeFileSync(join(siteRoot, "math-render.js"), `document.addEventListener("DOMContentLoaded",()=>{if(typeof renderMathInElement!=="function")return;renderMathInElement(document.body,{delimiters:[{left:"\\\\(",right:"\\\\)",display:false},{left:"\\\\[",right:"\\\\]",display:true}],ignoredTags:["script","noscript","style","textarea","pre","code"],throwOnError:false,strict:false,trust:false});});\n`);
 for (const [name, source] of Object.entries(svgAssets)) writeFileSync(join(assetsRoot, name), `${typeset(source)}\n`);
 const tocMd = chapters.map((chapter, index) => {
@@ -1663,18 +1755,20 @@ const tocMd = chapters.map((chapter, index) => {
   const role = archetypeByKey[chapterArchetype[chapter.slug]];
   return `${index + 1}. [${typeset(chapter.title)}](chapters/${chapter.slug}.md) — **[${item.icon} ${item.label}](reading-key/status-${chapterTaxonomy[chapter.slug]}.md)** · **[${role.icon} ${role.name}](reading-key/move-${chapterArchetype[chapter.slug]}.md)** · ${typeset(chapter.kicker)}`;
 }).join("\n");
-const coverMd = `# The admissibility frontier\n\n## New physics by preserving distinctions\n\n**Edition 3.2 admissibility preview · 24 October 2026**\n\n![Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon](../../docs/edition-3/assets/relational-geometry-hero.png)\n\nThe next route to new physics may begin not with higher energy but with greater finesse: preserving phase, delay, boundary order, memory, orientation and cross-channel relation that ordinary measurements erase. This book follows that experimental problem backward into mathematics. Jordan structure delimits what can coexist and compose; Lie structure describes how the admitted domain moves; dynamics and detectors determine which distinctions survive as records. Spin₀(2,3) is one exact recovered completion in that passage, not its protagonist.\n\n> **Authority boundary.** This edition reports exact calculations, bounded constructions, conditional physical bridges and closed branches. It is not empirical confirmation, peer review or a derivation of the Standard Model. The strong claim that admissibility is ontologically prior to physics remains a research proposal; the finesse pathway and its typed tests are the practical result established here.\n\n## Contents\n\n${tocMd}\n\n## Other reading surfaces\n\n- [Read the canonical reading contract](../../corpus/READING_CONTRACT.md)\n- [Read the admissibility synthesis](../../corpus/syntheses/the_admissibility_frontier_current_synthesis.md)\n- [Browse the status and research-move index](reading-key.md)\n- [Open the live paged HTML edition](https://aaron-alderman.github.io/spin23-relational-geometry/)\n- [Open the interactive concept atlas](../../docs/concept-map/index.html)\n- [Inspect the paged HTML source](../../docs/edition-3/index.html)\n- [Return to the repository front door](../../README.md)\n- [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)\n\nCitation-set digest: \`${sourceDigest}\`\n`;
-writeFileSync(join(bookRoot, "README.md"), coverMd.replace("not its protagonist", "not the premise or centre of the programme"));
-writeFileSync(join(bookRoot, "reading-key.md"), readingKeyMarkdown());
-Object.keys(taxonomy).forEach(key => writeFileSync(join(readingKeyRoot, `status-${key}.md`), readingKeyDetailMarkdown("taxonomy", key)));
-archetypes.forEach(item => writeFileSync(join(readingKeyRoot, `move-${item.key}.md`), readingKeyDetailMarkdown("archetype", item.key)));
-chapters.forEach((chapter, index) => writeFileSync(join(chaptersRoot, `${chapter.slug}.md`), chapterMarkdown(chapter, index)));
-proofDetails.forEach(detail => writeFileSync(join(detailsRoot, `${detail.slug}.md`), proofDetailMarkdown(detail)));
-claimDetails.forEach(detail => writeFileSync(join(detailsRoot, `${detail.slug}.md`), claimDetailMarkdown(detail)));
-claimDetails.filter(detail => isIntegratedFormerHotSection(detail.chapter, detail.heading)).forEach(detail => {
-  const legacySlug = detail.slug.replace("08-admissibility-frontier-", "08-admissibility-frontier-hot-off-the-press-");
-  writeFileSync(join(detailsRoot, `${legacySlug}.md`), `# Integrated section\n\nThis provisional-history URL is retained as a compatibility alias. The result now appears in the book's subject order.\n\n[Open the integrated claim page](${detail.slug}.md)\n`);
-});
+const coverMd = `# The admissibility frontier\n\n## New physics by preserving distinctions\n\n**Edition 3.2 admissibility preview · 24 October 2026**\n\n![Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon](../../tooling/publication/assets/relational-geometry-hero.png)\n\nThe next route to new physics may begin not with higher energy but with greater finesse: preserving phase, delay, boundary order, memory, orientation and cross-channel relation that ordinary measurements erase. This book follows that experimental problem backward into mathematics. Jordan structure delimits what can coexist and compose; Lie structure describes how the admitted domain moves; dynamics and detectors determine which distinctions survive as records. Spin₀(2,3) is one exact recovered completion in that passage, not its protagonist.\n\n> **Authority boundary.** This edition reports exact calculations, bounded constructions, conditional physical bridges and closed branches. It is not empirical confirmation, peer review or a derivation of the Standard Model. The strong claim that admissibility is ontologically prior to physics remains a research proposal; the finesse pathway and its typed tests are the practical result established here.\n\n## Contents\n\n${tocMd}\n\n## Other reading surfaces\n\n- [Read the canonical reading contract](../../corpus/READING_CONTRACT.md)\n- [Read the admissibility synthesis](../../corpus/syntheses/the_admissibility_frontier_current_synthesis.md)\n- [Browse the status and research-move index](reading-key.md)\n- [Open the live paged HTML edition](https://aaron-alderman.github.io/spin23-relational-geometry/)\n- [Open the interactive concept atlas](../../docs/concept-map/index.html)\n- Compile the paged HTML artifact with **node tooling/publication/generate_edition3_book_preview.mjs --site-only --site-root .build/pages/edition-3**\n- [Return to the repository front door](../../README.md)\n- [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)\n\nCitation-set digest: \`${sourceDigest}\`\n`;
+if (!siteOnly) {
+  writeFileSync(join(bookRoot, "README.md"), coverMd.replace("not its protagonist", "not the premise or centre of the programme"));
+  writeFileSync(join(bookRoot, "reading-key.md"), readingKeyMarkdown());
+  Object.keys(taxonomy).forEach(key => writeFileSync(join(readingKeyRoot, `status-${key}.md`), readingKeyDetailMarkdown("taxonomy", key)));
+  archetypes.forEach(item => writeFileSync(join(readingKeyRoot, `move-${item.key}.md`), readingKeyDetailMarkdown("archetype", item.key)));
+  chapters.forEach((chapter, index) => writeFileSync(join(chaptersRoot, `${chapter.slug}.md`), chapterMarkdown(chapter, index)));
+  proofDetails.forEach(detail => writeFileSync(join(detailsRoot, `${detail.slug}.md`), proofDetailMarkdown(detail)));
+  claimDetails.forEach(detail => writeFileSync(join(detailsRoot, `${detail.slug}.md`), claimDetailMarkdown(detail)));
+  claimDetails.filter(detail => isIntegratedFormerHotSection(detail.chapter, detail.heading)).forEach(detail => {
+    const legacySlug = detail.slug.replace("08-admissibility-frontier-", "08-admissibility-frontier-hot-off-the-press-");
+    writeFileSync(join(detailsRoot, `${legacySlug}.md`), `# Integrated section\n\nThis provisional-history URL is retained as a compatibility alias. The result now appears in the book's subject order.\n\n[Open the integrated claim page](${detail.slug}.md)\n`);
+  });
+}
 
 const contentsHtml = chapters.map((chapter, index) => `<div class="contents-row"><span class="chapter-number">${String(index + 1).padStart(2, "0")}</span><span class="contents-copy"><a class="chapter-title" href="${chapter.slug}.html"><strong>${mathHtml(chapter.title)}</strong></a>${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug])}${archetypeBadgeHtml(chapterArchetype[chapter.slug])}</span><a class="read-link" href="${chapter.slug}.html">Read →</a></div>`).join("");
 const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
@@ -1690,7 +1784,17 @@ claimDetails.filter(detail => isIntegratedFormerHotSection(detail.chapter, detai
   const legacySlug = detail.slug.replace("08-admissibility-frontier-", "08-admissibility-frontier-hot-off-the-press-");
   writeFileSync(join(siteDetailsRoot, `${legacySlug}.html`), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=${detail.slug}.html"><link rel="canonical" href="${detail.slug}.html"><title>Integrated section</title></head><body><p>This result has been integrated into the book's subject order. <a href="${detail.slug}.html">Open the current claim page</a>.</p></body></html>`);
 });
-writeFileSync(join(root, "docs", "index.html"), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=edition-3/index.html"><title>The Admissibility Frontier · Edition 3</title></head><body><p><a href="edition-3/index.html">Open the Edition 3 book preview</a></p></body></html>`);
+const sourceManifest = allSources.map(source => {
+  const markdown = readFileSync(join(root, source), "utf8").replace(/\r\n?/gu, "\n");
+  const output = sourceOutputPath(source);
+  mkdirSync(dirname(output), { recursive: true });
+  writeFileSync(output, sourceReaderHtml(source));
+  return { source, output: posix(relative(siteRoot, output)), sha256: sha256(markdown) };
+});
+mkdirSync(join(siteRoot, "sources"), { recursive: true });
+writeFileSync(join(siteRoot, "sources", "manifest.json"), `${JSON.stringify({ schema: "spin23-edition3-source-readers/v1", buildRevision, citationDigest: sourceDigest, sources: sourceManifest }, null, 2)}\n`);
+mkdirSync(siteIndexRoot, { recursive: true });
+writeFileSync(join(siteIndexRoot, "index.html"), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=edition-3/index.html"><title>The Admissibility Frontier · Edition 3</title></head><body><p><a href="edition-3/index.html">Open the Edition 3 book preview</a></p></body></html>`);
 
 const publicationAuthority = {
   role: "canonical-publication-source",
@@ -1702,5 +1806,5 @@ const publicationAuthority = {
 };
 
 const metadata = { schema: "spin23-edition3-book/v1", edition: "3.2 admissibility preview", generatedAt: "2026-10-25T00:00:00.000Z", publicationAuthority, numberedCorpusDocuments: numberedCount, citationCount: allSources.length, citationDigest: sourceDigest, taxonomy, archetypes, chapters: chapters.map((chapter, index) => ({ number: index + 1, slug: chapter.slug, title: typeset(chapter.title), taxonomy: chapterTaxonomy[chapter.slug], archetype: chapterArchetype[chapter.slug], sourceCount: chapter.sources.length, sources: chapter.sources })), proofDetails: proofDetails.map(detail => ({ slug: detail.slug, title: typeset(detail.title), taxonomy: detail.taxonomy, archetype: detail.archetype, certificates: detail.certificates, sources: detail.sources })), claimDetails: claimDetails.map(detail => ({ slug: detail.slug, chapter: detail.chapter.slug, heading: typeset(detail.heading), claim: typeset(detail.claim), claimIndex: detail.claimIndex, taxonomy: detail.taxonomy, archetype: detail.archetype, sources: detail.sources })), findings: findings.map(finding => ({ ...finding, title: typeset(finding.title), statement: typeset(finding.statement), boundary: typeset(finding.boundary), taxonomy: statusTaxonomy(finding.status), archetype: statusArchetype(finding.status) })), frontiers: frontiers.map(frontier => ({ ...frontier, title: typeset(frontier.title), question: typeset(frontier.question), advance: typeset(frontier.advance), stop: typeset(frontier.stop), taxonomy: frontierTaxonomy(frontier.id), archetype: frontierArchetype(frontier.id) })) };
-writeFileSync(join(bookRoot, "book.json"), `${JSON.stringify(metadata, null, 2)}\n`);
+if (!siteOnly) writeFileSync(join(bookRoot, "book.json"), `${JSON.stringify(metadata, null, 2)}\n`);
 console.log(JSON.stringify({ bookRoot: relative(root, bookRoot), siteRoot: relative(root, siteRoot), chapters: chapters.length, claims: claimDetails.length, findings: findings.length, frontiers: frontiers.length, citations: allSources.length, digest: sourceDigest }, null, 2));

@@ -4,7 +4,7 @@
 
 **Edition 3.2 admissibility preview · 24 October 2026**
 
-![Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon](../../docs/edition-3/assets/relational-geometry-hero.png)
+![Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon](../../tooling/publication/assets/relational-geometry-hero.png)
 
 The next route to new physics may begin not with higher energy but with greater finesse: preserving phase, delay, boundary order, memory, orientation and cross-channel relation that ordinary measurements erase. This book follows that experimental problem backward into mathematics. Jordan structure delimits what can coexist and compose; Lie structure describes how the admitted domain moves; dynamics and detectors determine which distinctions survive as records. Spin₀(2,3) is one exact recovered completion in that passage, not the premise or centre of the programme.
 
@@ -34,8 +34,8 @@ The next route to new physics may begin not with higher energy but with greater 
 - [Browse the status and research-move index](reading-key.md)
 - [Open the live paged HTML edition](https://aaron-alderman.github.io/spin23-relational-geometry/)
 - [Open the interactive concept atlas](../../docs/concept-map/index.html)
-- [Inspect the paged HTML source](../../docs/edition-3/index.html)
+- Compile the paged HTML artifact with **node tooling/publication/generate_edition3_book_preview.mjs --site-only --site-root .build/pages/edition-3**
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `3951732a816349918e01e2ea3b1bed750f7d7ecc4cc2c52f4e6a2b1081f1d155`
+Citation-set digest: `b2373cbb4bc6ffd9514505a5900cb17cd3bc750aa42ab52cda136b81e6ec0893`

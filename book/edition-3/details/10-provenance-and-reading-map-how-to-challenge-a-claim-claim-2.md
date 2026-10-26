@@ -36,7 +36,9 @@ Find a provenance mismatch, stale status, broken link or stronger source that ch
 
 - **research document map** — [00_research_document_map.md](../../../corpus/claims/0000-0099/00_research_document_map.md)
 - **research frontier** — [30_research_frontier.md](../../../corpus/claims/0000-0099/30_research_frontier.md)
+- **grand synthesis spin23 pole** — [40_grand_synthesis_spin23_pole.md](../../../corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md)
 - **multi branch research registry** — [49_multi_branch_research_registry.md](../../../corpus/claims/0000-0099/49_multi_branch_research_registry.md)
+- **multi branch active goal log** — [91_multi_branch_active_goal_log.md](../../../corpus/claims/0000-0099/91_multi_branch_active_goal_log.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

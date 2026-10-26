@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "docs/**"
+      - "corpus/**"
+      - "docs/concept-map/**"
       - "book/edition-3/**"
       - "tooling/publication/**"
       - "tests/publication/**"
@@ -31,15 +32,23 @@ jobs:
       - name: Check out the corpus
         uses: actions/checkout@v5
 
-      - name: Regenerate the static book
-        run: node tooling/publication/generate_edition3_book_preview.mjs
+      - name: Assemble the disposable Pages artifact
+        run: |
+          mkdir -p .build/pages
+          cp -R docs/concept-map .build/pages/concept-map
+          node tooling/publication/generate_edition3_book_preview.mjs --site-only --site-root .build/pages/edition-3
 
-      - name: Verify generated files are committed
-        run: git diff --exit-code -- book/edition-3 docs/edition-3 docs/index.html
+      - name: Enforce the authority boundary
+        run: |
+          git diff --exit-code -- book/edition-3 corpus
+          test -z "$(git ls-files docs/edition-3 docs/index.html)"
 
       - name: Test the publication surfaces
+        env:
+          EDITION3_SITE_ROOT: .build/pages/edition-3
         run: |
           node --test tests/publication/edition3_book_preview.test.mjs
+          node --test tests/publication/edition3_compiled_site.test.mjs
           node --test tests/publication/concept_map.test.mjs
 
       - name: Configure GitHub Pages
@@ -48,7 +57,7 @@ jobs:
       - name: Upload the static book
         uses: actions/upload-pages-artifact@v4
         with:
-          path: docs
+          path: .build/pages
 
       - name: Deploy the book
         id: deployment

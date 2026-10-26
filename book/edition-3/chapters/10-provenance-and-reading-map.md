@@ -21,7 +21,7 @@ For a physical claim, also ask what prepared the state, what the measuring port 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/10-provenance-and-reading-map-how-to-challenge-a-claim-claim-2.md)
 
-This preview cites 233 controlling corpus documents from a repository containing 1573 numbered research documents at generation time. The citation-set digest is `3951732a816349918e01e2ea3b1bed750f7d7ecc4cc2c52f4e6a2b1081f1d155`.
+This preview cites 234 controlling corpus documents from a repository containing 1573 numbered research documents at generation time. The citation-set digest is `b2373cbb4bc6ffd9514505a5900cb17cd3bc750aa42ab52cda136b81e6ec0893`.
 
 ## Controlling maps
 
@@ -40,7 +40,9 @@ The generated book is a reading layer. If it conflicts with a cited research doc
 
 - [00_research_document_map.md](../../../corpus/claims/0000-0099/00_research_document_map.md)
 - [30_research_frontier.md](../../../corpus/claims/0000-0099/30_research_frontier.md)
+- [40_grand_synthesis_spin23_pole.md](../../../corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md)
 - [49_multi_branch_research_registry.md](../../../corpus/claims/0000-0099/49_multi_branch_research_registry.md)
+- [91_multi_branch_active_goal_log.md](../../../corpus/claims/0000-0099/91_multi_branch_active_goal_log.md)
 
 ---
 
