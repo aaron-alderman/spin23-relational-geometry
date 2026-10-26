@@ -152,7 +152,45 @@
         0.5
       ]
     },
-    "conclusion": "Chain-safe transport is not automatically an isometry. The Euclidean least-squares reconstruction is an orthogonal projector but fails the cochain commuting gate, so energy optimality and gauge safety cannot be merged by assumption."
+    "compatibleMetricConstruction": [
+      {
+        "weightedRestrictionResidual": 0,
+        "projectorSelfAdjointResidual": 0,
+        "transportIsometryResidual": 0,
+        "fineMetricOffDiagonalEntries": 2,
+        "diagonalMetricObstruction": {
+          "row": 3,
+          "column": 0,
+          "value": 1
+        },
+        "construction": "L_f=(B^-1)^T B^-1 for a basis B=[im(T), complement]; L_c=T^T L_f T"
+      },
+      {
+        "weightedRestrictionResidual": 0,
+        "projectorSelfAdjointResidual": 0,
+        "transportIsometryResidual": 0,
+        "fineMetricOffDiagonalEntries": 4,
+        "diagonalMetricObstruction": {
+          "row": 4,
+          "column": 0,
+          "value": -1
+        },
+        "construction": "L_f=(B^-1)^T B^-1 for a basis B=[im(T), complement]; L_c=T^T L_f T"
+      },
+      {
+        "weightedRestrictionResidual": 0,
+        "projectorSelfAdjointResidual": 0,
+        "transportIsometryResidual": 0,
+        "fineMetricOffDiagonalEntries": 6,
+        "diagonalMetricObstruction": {
+          "row": 1,
+          "column": 0,
+          "value": 1
+        },
+        "construction": "L_f=(B^-1)^T B^-1 for a basis B=[im(T), complement]; L_c=T^T L_f T"
+      }
+    ],
+    "conclusion": "Chain-safe transport is not automatically an isometry. Euclidean least squares is orthogonal but not a chain map. A positive compatible metric exists algebraically and makes the chain-safe restriction the weighted adjoint, but it is non-diagonal: locality is an additional gate."
   },
   "rdgInterpretation": {
     "gamma": "restriction R extracts the coarse relational state",

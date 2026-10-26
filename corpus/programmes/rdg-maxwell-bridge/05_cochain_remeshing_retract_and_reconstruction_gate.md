@@ -141,6 +141,42 @@ Thus the naive energy-optimal projection fails the gauge/curvature gate, while
 the chain-safe projection is not Euclidean-orthogonal. This is a genuine design
 problem, not a choice of notation.
 
+The finite problem nevertheless has a positive solution if locality is
+relaxed. Complete the columns of \(T\) to a basis
+\(B=[\operatorname{im}T,\mathcal K]\), and set
+
+\[
+ L_f=(B^{-1})^{\mathsf T}B^{-1},
+ \qquad
+ L_c=T^{\mathsf T}L_fT.
+\]
+
+These matrices are positive definite by construction. The certificate verifies
+in every degree that
+
+\[
+ R=L_c^{-1}T^{\mathsf T}L_f,
+ \qquad
+ P^{\mathsf T}L_f=L_fP.
+\]
+
+Thus the chain-safe restriction becomes the weighted adjoint of transport and
+the reconstruction becomes energy-orthogonal. But the fine metrics contain
+off-diagonal entries. Moreover each degree has a one-way nonzero entry in
+\(P\), which makes self-adjointness under any strictly positive **diagonal**
+metric impossible. The compatible solution couples distinct cells: it is
+algebraically local to the finite state space, but not a diagonal/local Hodge
+star.
+
+The remesh gate therefore separates four properties:
+
+1. commuting with \(d\);
+2. being a retract;
+3. being orthogonal for an energy metric;
+4. retaining locality/sparsity of that metric.
+
+The first three can coexist here. The fourth is not supplied by this collapse.
+
 The next gate must supply coarse and fine Hodge/mass matrices satisfying a
 controlled pullback relation such as
 

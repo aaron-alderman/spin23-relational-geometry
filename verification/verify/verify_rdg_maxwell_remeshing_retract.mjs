@@ -17,6 +17,13 @@ assert.ok(record.metricBoundary.euclideanLeastSquares.projectorResiduals.every(v
 assert.ok(record.metricBoundary.euclideanLeastSquares.orthogonalityResiduals.every(value=>value<1e-12));
 assert.ok(record.metricBoundary.euclideanLeastSquares.restrictionChainResiduals.some(value=>value>0));
 assert.ok(record.metricBoundary.euclideanLeastSquares.projectorChainResiduals.some(value=>value>0));
+for(const metric of record.metricBoundary.compatibleMetricConstruction){
+  assert.ok(metric.weightedRestrictionResidual<1e-10);
+  assert.ok(metric.projectorSelfAdjointResidual<1e-10);
+  assert.ok(metric.transportIsometryResidual<1e-10);
+  assert.ok(metric.diagonalMetricObstruction);
+}
+assert.ok(record.metricBoundary.compatibleMetricConstruction.some(metric=>metric.fineMetricOffDiagonalEntries>0));
 assert.match(record.verdict,/cochain retract/);
 
 console.log(JSON.stringify({

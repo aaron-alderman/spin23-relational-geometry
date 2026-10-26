@@ -130,6 +130,37 @@ const energyProjectorChainResiduals=[
   maxAbs(subtract(multiply(df[0],energyProjector[0]),multiply(energyProjector[1],df[0]))),
   maxAbs(subtract(multiply(df[1],energyProjector[1]),multiply(energyProjector[2],df[1]))),
 ];
+const completeBasis=(matrix,complement)=>{
+  let basis=matrix.map(row=>[...row]);
+  let current=rank(basis);
+  for(let col=0;col<matrix.length&&current<matrix.length;col+=1){
+    const candidate=basis.map((row,i)=>[...row,complement[i][col]]);
+    const next=rank(candidate);
+    if(next>current){basis=candidate;current=next;}
+  }
+  if(current!==matrix.length)throw new Error("could not complete transport basis");
+  return basis;
+};
+const compatibleMetrics=T.map((matrix,k)=>{
+  const basis=completeBasis(matrix,Q[k]);
+  const basisInverse=inverse(basis);
+  const fineMetric=multiply(transpose(basisInverse),basisInverse);
+  const coarseMetric=multiply(multiply(transpose(matrix),fineMetric),matrix);
+  const weightedRestriction=multiply(multiply(inverse(coarseMetric),transpose(matrix)),fineMetric);
+  const offDiagonalEntries=fineMetric.flatMap((row,i)=>row.filter((value,j)=>i!==j&&Math.abs(value)>1e-12)).length;
+  let diagonalObstruction=null;
+  for(let i=0;i<P[k].length&&!diagonalObstruction;i+=1)for(let j=0;j<P[k].length;j+=1){
+    if(Math.abs(P[k][i][j])>1e-12&&Math.abs(P[k][j][i])<1e-12){diagonalObstruction={row:i,column:j,value:P[k][i][j]};break;}
+  }
+  return {
+    weightedRestrictionResidual:maxAbs(subtract(weightedRestriction,R[k])),
+    projectorSelfAdjointResidual:maxAbs(subtract(multiply(transpose(P[k]),fineMetric),multiply(fineMetric,P[k]))),
+    transportIsometryResidual:maxAbs(subtract(multiply(multiply(transpose(matrix),fineMetric),matrix),coarseMetric)),
+    fineMetricOffDiagonalEntries:offDiagonalEntries,
+    diagonalMetricObstruction:diagonalObstruction,
+    construction:"L_f=(B^-1)^T B^-1 for a basis B=[im(T), complement]; L_c=T^T L_f T",
+  };
+});
 
 const record={
   schemaVersion:"rdg-maxwell-remeshing-retract-v1",
@@ -171,7 +202,8 @@ const record={
       restrictionChainResiduals:energyRestrictionChainResiduals,
       projectorChainResiduals:energyProjectorChainResiduals,
     },
-    conclusion:"Chain-safe transport is not automatically an isometry. The Euclidean least-squares reconstruction is an orthogonal projector but fails the cochain commuting gate, so energy optimality and gauge safety cannot be merged by assumption.",
+    compatibleMetricConstruction:compatibleMetrics,
+    conclusion:"Chain-safe transport is not automatically an isometry. Euclidean least squares is orthogonal but not a chain map. A positive compatible metric exists algebraically and makes the chain-safe restriction the weighted adjoint, but it is non-diagonal: locality is an additional gate.",
   },
   rdgInterpretation:{
     gamma:"restriction R extracts the coarse relational state",

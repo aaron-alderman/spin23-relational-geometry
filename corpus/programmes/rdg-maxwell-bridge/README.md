@@ -60,7 +60,8 @@ complex.
 | Explicit material memory | exact finite pass/fail pair | homogeneous Lorentz oscillators close with the field; spatially varying resonance mixes selector sectors |
 | Homogeneous damping | exact identity | loss stays selector-compatible but exposes the omitted bath carrier required for conservative closure |
 | Stellar remesh retract | exact pass | subdivision and collapse induce commuting cochain transport/restriction with \(RT=I\) |
-| Remesh reconstruction | exact pass with boundary | \(TR\) is a chain projector and \(I-TR\) an acyclic fine-mode detector, but Euclidean metric compatibility fails |
+| Remesh reconstruction | exact pass with locality boundary | \(TR\) is a chain projector; a positive compatible metric exists, but it is necessarily non-diagonal for this collapse |
+| Topology cut | exact record transfer | cutting \(S^1\) to an interval turns a Wilson period into endpoint potential mismatch rather than annihilating it |
 
 ## Documents
 
@@ -69,6 +70,7 @@ complex.
 3. [Hodge, constitutive and dynamics gate](03_hodge_constitutive_and_dynamics_gate.md)
 4. [Sources, resonance and material-memory gate](04_sources_resonance_and_material_memory_gate.md)
 5. [Cochain-remeshing retract and reconstruction gate](05_cochain_remeshing_retract_and_reconstruction_gate.md)
+6. [Topology cut, holonomy and boundary-record gate](06_topology_cut_holonomy_and_boundary_record_gate.md)
 
 ## Executable spine
 
@@ -84,6 +86,9 @@ complex.
 - [Remeshing-retract analysis](../../../scripts/analyze-rdg-maxwell-remeshing-retract.mjs)
 - [Remeshing-retract evidence](../../../evidence/data/rdg-maxwell-remeshing-retract-v1.json)
 - [Remeshing-retract verifier](../../../verification/verify/verify_rdg_maxwell_remeshing_retract.mjs)
+- [Topology-cut analysis](../../../scripts/analyze-rdg-maxwell-topology-cut.mjs)
+- [Topology-cut evidence](../../../evidence/data/rdg-maxwell-topology-cut-v1.json)
+- [Topology-cut verifier](../../../verification/verify/verify_rdg_maxwell_topology_cut.mjs)
 
 Run:
 
@@ -96,16 +101,19 @@ node scripts/analyze-rdg-maxwell-sources-and-dispersion.mjs --write
 node verification/verify/verify_rdg_maxwell_sources_and_dispersion.mjs
 node scripts/analyze-rdg-maxwell-remeshing-retract.mjs --write
 node verification/verify/verify_rdg_maxwell_remeshing_retract.mjs
+node scripts/analyze-rdg-maxwell-topology-cut.mjs --write
+node verification/verify/verify_rdg_maxwell_topology_cut.mjs
 ```
 
 ## Next gates
 
 1. Add an explicit conservative bath or port model so dissipated power becomes
    a typed output rather than disappearance.
-2. Construct compatible coarse/fine mass matrices or a variational projection
-   so gauge-safe remeshing also has a controlled energy balance.
-3. Treat topology change as a separately detected event with an induced map on
-   cohomology, never as an ordinary field update.
+2. Search for a symmetric/local remeshing pair whose chain-safe reconstruction
+   admits sparse positive Hodge matrices, rather than the dense metric required
+   by the first asymmetric collapse.
+3. Extend the cut/glue certificate from the completed additive and compact
+   \(U(1)\) one-cycle to magnetic flux on two-cycles and three-torus sectors.
 
 ## Authority boundary
 

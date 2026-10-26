@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "rdg-maxwell-topology-cut-v1",
+  "date": "2026-10-26",
+  "purpose": "Track a Wilson/cohomology record through an explicit topology-changing cut from a circle to an interval.",
+  "carriers": {
+    "circle": {
+      "cochainDimensions": [
+        3,
+        3
+      ],
+      "differentialRank": 2,
+      "betti": [
+        1,
+        1
+      ]
+    },
+    "interval": {
+      "cochainDimensions": [
+        4,
+        3
+      ],
+      "differentialRank": 3,
+      "betti": [
+        1,
+        0
+      ]
+    }
+  },
+  "gluingMap": {
+    "description": "q identifies interval endpoint 3 with endpoint 0 and maps its three oriented edges to 01,12,20",
+    "chainMapResidual": 0,
+    "cochainPullbackResidual": 0
+  },
+  "recordTransfer": {
+    "circleOneForm": [
+      1,
+      1,
+      1
+    ],
+    "circlePeriod": 3,
+    "circleD0Rank": 2,
+    "circleD0WithOneFormRank": 3,
+    "intervalPullback": [
+      1,
+      1,
+      1
+    ],
+    "intervalPotential": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "intervalGradient": [
+      1,
+      1,
+      1
+    ],
+    "exactnessResidual": 0,
+    "endpointMismatch": 3,
+    "conclusion": "The non-exact circle one-form becomes an exact interval gradient, and its Wilson period becomes the potential mismatch between the two new boundary endpoints."
+  },
+  "admissibilityRule": {
+    "cut": "retain the two endpoint values or their mismatch as a boundary detector coordinate",
+    "reglue": "identify endpoints only with an explicit transition/gluing value equal to the retained period",
+    "failure": "discarding endpoint mismatch destroys the H1 record even though local edge data can look unchanged"
+  },
+  "compactU1Extension": {
+    "linkAngles": [
+      0.4,
+      -0.7,
+      1.2
+    ],
+    "holonomy": {
+      "re": 0.6216099682706644,
+      "im": 0.7833269096274833
+    },
+    "gaugeTransformedHolonomy": {
+      "re": 0.6216099682706646,
+      "im": 0.7833269096274836
+    },
+    "gaugeHolonomyResidual": 4.0029660424867215e-16,
+    "cutGaugeFlattensEveryLinkResidual": 2.220446049250313e-16,
+    "endpointTransition": {
+      "re": 0.6216099682706644,
+      "im": -0.7833269096274833
+    },
+    "inverseHolonomy": {
+      "re": 0.6216099682706644,
+      "im": -0.7833269096274833
+    },
+    "transitionHolonomyResidual": 0,
+    "conclusion": "On the circle the link product is gauge invariant. On the cut interval all links can be gauged to one, and the inverse holonomy reappears as the relative gauge transition between endpoints."
+  },
+  "verdict": "Topology change need not annihilate a global gauge record: cutting converts additive or compact U(1) holonomy into boundary mismatch/transition data. A faithful RDG update must transport cohomology into boundary/gluing records rather than treating the changed quotient dimension as ordinary field loss."
+}
