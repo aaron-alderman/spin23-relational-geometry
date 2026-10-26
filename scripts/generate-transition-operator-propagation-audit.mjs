@@ -61,7 +61,16 @@ function sha256(text) {
   return crypto.createHash("sha256").update(text).digest("hex");
 }
 
-const excludedOutputs = new Set([outputMd]);
+// Release-control prose is downstream of this census and may contain hashes of
+// artifacts derived from it. Scanning those files back into this census creates
+// a cryptographic dependency cycle (census -> audits/certificate -> census)
+// without adding any scientific source coverage. Keep them independently
+// verified, but do not treat them as upstream physics documents here.
+const excludedOutputs = new Set([
+  outputMd,
+  "corpus/programmes/frontier-physics-targets/adversarial_release_audit_v1.md",
+  "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
+]);
 const documents = walk(corpusRoot)
   .map(file => ({ path: rel(file), text: fs.readFileSync(file, "utf8") }))
   .filter(record => !excludedOutputs.has(record.path))
