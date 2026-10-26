@@ -21,6 +21,8 @@ const importPath = join(laneRoot, "programme_algebra_imports_v1.json");
 const profilePath = join(laneRoot, "programme_algebra_profiles_v1.json");
 const imports = JSON.parse(readFileSync(importPath, "utf8"));
 const profiles = JSON.parse(readFileSync(profilePath, "utf8"));
+const adapterPath = join(root, imports.adapters);
+const adapters = JSON.parse(readFileSync(adapterPath, "utf8"));
 const kernelCoordinates = profiles.kernel.coordinates;
 const signatureFields = ["domain", "rank", "variance", "basis", "regime", "order", "scheme", "symmetry", "cp", "support"];
 const dimensionFields = ["mass", "length", "time", "current", "temperature", "amount", "luminousIntensity"];
@@ -221,7 +223,7 @@ function sourceMaterial(path) {
       const rootKind = Array.isArray(value) ? "array" : value && typeof value === "object" ? "object" : typeof value;
       const keys = rootKind === "object" ? Object.keys(value).sort() : [];
       const arrayCounts = Object.fromEntries(keys.filter(key => Array.isArray(value[key])).map(key => [key, value[key].length]));
-      structuralSummary = { kind: "json-ledger", parseable: true, rootKind, topLevelKeys: keys, rootArrayLength: Array.isArray(value) ? value.length : null, topLevelArrayCounts: arrayCounts };
+      structuralSummary = { kind: "json-ledger", parseable: true, rootKind, protocol: String(value?.protocol ?? value?.schema ?? "") || null, topLevelKeys: keys, rootArrayLength: Array.isArray(value) ? value.length : null, topLevelArrayCounts: arrayCounts };
     } catch (error) {
       structuralSummary = { kind: "json-ledger", parseable: false, error: error.message };
     }
@@ -254,6 +256,25 @@ function sourceMaterial(path) {
   };
 }
 
+function selectAdapter(record, material) {
+  const keys = record && typeof record === "object" && !Array.isArray(record) ? Object.keys(record) : [];
+  const protocol = String(record?.protocol ?? record?.schema ?? material.extension.structuralSummary.protocol ?? "");
+  const recordType = Array.isArray(record) ? "array" : record === null ? "null" : typeof record;
+  const scored = adapters.adapters.map((adapter, order) => {
+    const match = adapter.match ?? {};
+    const pathPass = !match.pathPrefix || material.extension.canonicalPath.startsWith(match.pathPrefix);
+    const protocolPass = !match.protocolPrefix || protocol.startsWith(match.protocolPrefix);
+    const recordTypePass = !match.recordTypes || match.recordTypes.includes(recordType);
+    const allPass = !match.keysAll || match.keysAll.every(key => keys.includes(key));
+    const anyPass = !match.keysAny || match.keysAny.some(key => keys.includes(key));
+    const score = (match.pathPrefix ? 16 : 0) + (match.protocolPrefix ? 8 : 0) + (match.keysAll ? 4 : 0) + (match.keysAny ? 2 : 0) + (match.recordTypes ? 1 : 0) + (Object.keys(match).length === 0 ? 0 : 1);
+    return { adapter, order, pass: pathPass && protocolPass && recordTypePass && allPass && anyPass, score };
+  }).filter(item => item.pass).sort((a, b) => b.score - a.score || a.order - b.order);
+  const selected = scored[0]?.adapter;
+  if (!selected) throw new Error(`No programme-algebra adapter matched ${material.extension.canonicalPath}`);
+  return { id: selected.id, semanticProfile: selected.semanticProfile, status: selected.status, protocol: protocol || null };
+}
+
 function jsonRecords(material) {
   if (material.extension.mediaType !== "application/json" || material.extension.structuralSummary.parseable !== true) return [];
   const value = JSON.parse(readFileSync(join(root, material.extension.canonicalPath), "utf8"));
@@ -278,6 +299,7 @@ function jsonRecords(material) {
     const label = record && typeof record === "object" && !Array.isArray(record)
       ? String(record.title ?? record.label ?? record.name ?? record.id ?? record.identifier ?? `${material.label}${pointer}`)
       : `${material.label}${pointer}`;
+    const adapter = selectAdapter(record, material);
     return {
       id: objectId("record", `${material.extension.canonicalPath}#${pointer}`),
       profile: "source-record",
@@ -296,7 +318,7 @@ function jsonRecords(material) {
         authority: "inherits ledger scope; no automatic scientific promotion",
         time: String(record?.date ?? record?.generatedAt ?? record?.createdAt ?? "") || null,
       },
-      extension: { materialId: material.id, jsonPointer: pointer, recordKind, keys, sha256: sha256(encoded) },
+      extension: { materialId: material.id, jsonPointer: pointer, recordKind, keys, sha256: sha256(encoded), semanticProfile: adapter.semanticProfile, adapterId: adapter.id, adapterStatus: adapter.status, protocol: adapter.protocol },
       provenance: { sourcePath: material.extension.canonicalPath, sourceSha256: material.extension.sha256, extraction: "deterministic-top-level-json-record" },
     };
   });
@@ -318,7 +340,7 @@ function resolveTarget(sourcePath, rawTarget) {
   return { kind: "local", locator: path, fragment: fragment || null, exists: existsSync(join(root, path)) };
 }
 
-function observedRelations(text, sourcePath, documentId, sections) {
+function observedRelations(text, sourcePath, documentId, sections, sourceUnits) {
   const lines = text.split(/\r?\n/u);
   const metadataKinds = new Map([
     ["Evidence", "declares-evidence"], ["Parent", "continues-from"], ["Continued by", "continued-by"],
@@ -326,11 +348,14 @@ function observedRelations(text, sourcePath, documentId, sections) {
   ]);
   const rows = [];
   let sectionIndex = -1;
+  let unitIndex = -1;
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
     while (sectionIndex + 1 < sections.length && sections[sectionIndex + 1].extension.lineStart <= index + 1) sectionIndex += 1;
     const section = sectionIndex >= 0 ? sections[sectionIndex] : null;
-    const from = section?.id ?? documentId;
+    while (unitIndex + 1 < sourceUnits.length && sourceUnits[unitIndex + 1].extension.lineStart <= index + 1) unitIndex += 1;
+    const unit = unitIndex >= 0 && sourceUnits[unitIndex].extension.lineEnd >= index + 1 ? sourceUnits[unitIndex] : null;
+    const from = unit?.id ?? section?.id ?? documentId;
     const metadata = /^\*\*(Evidence|Parent|Continued by|Source|Verifier|Generator):\*\*/iu.exec(line);
     for (const match of line.matchAll(/!?\[[^\]]*\]\(([^)]+)\)/gu)) {
       const target = resolveTarget(sourcePath, match[1]);
@@ -425,6 +450,26 @@ function validateTransformation(rule, byId) {
   return { admitted: reasons.length === 0, reasons };
 }
 
+function validateEpistemicTransformation(rule, byId) {
+  const reasons = [];
+  const from = byId.get(rule.from);
+  const to = byId.get(rule.to);
+  if (!from) reasons.push("from-object-missing");
+  if (!to) reasons.push("to-object-missing");
+  if (from && stable(rule.fromSignature) !== stable(from.kernel)) reasons.push("from-signature-mismatch");
+  if (to && stable(rule.toSignature) !== stable(to.kernel)) reasons.push("to-signature-mismatch");
+  if (rule.dimensionRule !== "si-base-exponent-delta") reasons.push("dimension-rule-unrecognized");
+  if (dimensionFields.some(field => rule.toDimension[field] !== rule.fromDimension[field] + rule.dimensionDelta[field])) reasons.push("dimension-delta-invalid");
+  if (!rule.authority || rule.authority.proposalOnly !== true || rule.authority.entails !== false || rule.authority.empiricalAuthority !== false) reasons.push("authority-unbounded");
+  if (!Array.isArray(rule.evidenceRefs) || rule.evidenceRefs.length === 0) reasons.push("evidence-missing");
+  if (to?.kernel.status === "unclassified") reasons.push("target-status-unclassified");
+  if (from && to) {
+    const changed = kernelCoordinates.filter(field => stable(rule.fromSignature[field]) !== stable(rule.toSignature[field]));
+    for (const field of changed) if (!rule.changes.includes(field)) reasons.push(`undeclared-change:${field}`);
+  }
+  return { admitted: reasons.length === 0, reasons };
+}
+
 function compose(graph, query) {
   const valid = graph.transformations.filter(item => item.validation.admitted);
   let frontier = [{ current: query.source, steps: [], assumptions: [], losses: [], evidenceRefs: [] }];
@@ -494,7 +539,7 @@ for (const path of markdownFiles) {
   const localUnits = parseUnits(text, path, id, localSections, { status, authority, time: date, sha256: digest });
   units.push(...localUnits);
   for (const unit of localUnits) rawRelations.push({ kind: "contains", from: unit.extension.sectionId ?? id, to: unit.id, sourcePath: path, sourceLine: unit.extension.lineStart, observed: true });
-  rawRelations.push(...observedRelations(text, path, id, localSections));
+  rawRelations.push(...observedRelations(text, path, id, localSections, localUnits));
 }
 
 const documentIds = new Set(documents.map(item => item.id));
@@ -520,6 +565,56 @@ const relations = rawRelations.map(item => {
   };
   return { id: relationId(record), ...record };
 });
+
+const documentById = new Map(documents.map(item => [item.id, item]));
+const ownerDocumentByObjectId = new Map(documents.map(item => [item.id, item.id]));
+for (const section of sections) ownerDocumentByObjectId.set(section.id, section.extension.documentId);
+for (const unit of units) ownerDocumentByObjectId.set(unit.id, unit.extension.documentId);
+const unitsByDocument = new Map(documents.map(item => [item.id, []]));
+for (const unit of units) unitsByDocument.get(unit.extension.documentId)?.push(unit);
+const evidenceKinds = new Set(["declares-evidence", "verified-by", "declares-source"]);
+const dimensionless = Object.fromEntries(dimensionFields.map(field => [field, 0]));
+const epistemicTransformations = [];
+for (const current of documents) {
+  const currentRelations = relations.filter(relation => ownerDocumentByObjectId.get(relation.from) === current.id);
+  const parentIds = [...new Set(currentRelations.filter(relation => relation.kind === "continues-from").map(relation => ownerDocumentByObjectId.get(relation.to) ?? relation.to))];
+  const evidenceRefs = [...new Set(currentRelations.filter(relation => evidenceKinds.has(relation.kind)).map(relation => relation.to))];
+  const currentUnits = unitsByDocument.get(current.id) ?? [];
+  const assumptions = currentUnits.filter(unit => unit.kernel.role === "assumption").map(unit => unit.id);
+  const losses = currentUnits.filter(unit => unit.kernel.role === "loss-declaration" || unit.kernel.role === "boundary").map(unit => unit.id);
+  for (const parentId of parentIds) {
+    const parent = documentById.get(parentId);
+    const fromSignature = parent?.kernel ?? null;
+    const toSignature = current.kernel;
+    const changes = parent ? kernelCoordinates.filter(field => stable(parent.kernel[field]) !== stable(current.kernel[field])) : [];
+    const transformation = {
+      id: objectId("transformation", `corpus-research-update:${stableHash([parentId, current.id]).slice(0, 24)}`),
+      sourceId: `research-update:${current.extension.canonicalPath}`,
+      family: "corpus-research-lineage",
+      signatureType: "epistemic-object-signature",
+      kind: "research-state-update",
+      from: parentId,
+      to: current.id,
+      fromSignature,
+      toSignature,
+      fromDimension: { ...dimensionless },
+      toDimension: { ...dimensionless },
+      dimensionRule: "si-base-exponent-delta",
+      dimensionDelta: { ...dimensionless },
+      changes,
+      assumptions,
+      losses,
+      removes: [],
+      evidenceRefs,
+      analogyOnly: false,
+      authority: { proposalOnly: true, entails: false, empiricalAuthority: false, applicationAdmission: false },
+      governingScheme: "programme-algebra/epistemic-research-update/1",
+      provenance: { sourcePath: current.extension.canonicalPath, sourceSha256: current.extension.sha256, basis: "explicit-parent-declaration" },
+    };
+    transformation.validation = validateEpistemicTransformation(transformation, documentById);
+    epistemicTransformations.push(transformation);
+  }
+}
 
 const scientificObjects = [];
 const scientificTransformations = [];
@@ -587,8 +682,8 @@ const objectTables = {
   records: {
     profile: "source-record",
     kernelDefaults: { kind: "machine-record", domain: "science-programme-data", role: "ledger-record", form: "json-record", equivalence: "json-pointer-and-canonical-value-hash", admissibility: "observed-record-boundary; schema semantics not inferred", authority: "inherits ledger scope; no automatic scientific promotion" },
-    columns: ["id", "label", "status", "governingScheme", "time", "materialId", "jsonPointer", "recordKind", "keys", "sha256", "sourcePath", "sourceSha256"],
-    rows: records.map(item => [item.id, item.label, item.kernel.status, item.kernel.governingScheme, item.kernel.time, item.extension.materialId, item.extension.jsonPointer, item.extension.recordKind, item.extension.keys, item.extension.sha256, item.provenance.sourcePath, item.provenance.sourceSha256]),
+    columns: ["id", "label", "status", "governingScheme", "time", "materialId", "jsonPointer", "recordKind", "keys", "sha256", "semanticProfile", "adapterId", "adapterStatus", "protocol", "sourcePath", "sourceSha256"],
+    rows: records.map(item => [item.id, item.label, item.kernel.status, item.kernel.governingScheme, item.kernel.time, item.extension.materialId, item.extension.jsonPointer, item.extension.recordKind, item.extension.keys, item.extension.sha256, item.extension.semanticProfile, item.extension.adapterId, item.extension.adapterStatus, item.extension.protocol, item.provenance.sourcePath, item.provenance.sourceSha256]),
     reconstruction: { context: "materialId", support: "materialId" },
   },
 };
@@ -605,8 +700,12 @@ const missingKernelCoordinates = allObjects.flatMap(item => kernelCoordinates.fi
 const danglingRelationCount = relations.filter(item => !objectIds.has(item.from) || (!objectIds.has(item.to) && !sectionIds.has(item.to) && !unitIds.has(item.to))).length;
 const declaredStatusDocuments = documents.filter(item => item.kernel.status !== "unclassified").length;
 const invalidSourceMaterials = materials.filter(item => item.kernel.status === "invalid").length;
+const recordAdapterCounts = Object.fromEntries([...new Set(records.map(item => item.extension.adapterId))].sort().map(id => [id, records.filter(item => item.extension.adapterId === id).length]));
+const fallbackRecordCount = recordAdapterCounts["generic-ledger-record"] ?? 0;
 const admittedTransformations = scientificTransformations.filter(item => item.validation.admitted);
 const rejectedTransformations = scientificTransformations.filter(item => !item.validation.admitted);
+const admittedEpistemicTransformations = epistemicTransformations.filter(item => item.validation.admitted);
+const rejectedEpistemicTransformations = epistemicTransformations.filter(item => !item.validation.admitted);
 
 const summary = {
   corpusDocuments: documents.length,
@@ -619,10 +718,15 @@ const summary = {
   declaredStatusDocuments,
   unclassifiedStatusDocuments: documents.length - declaredStatusDocuments,
   invalidSourceMaterials,
+  recordAdapterCounts,
+  fallbackRecordCount,
   scientificFamilies: imports.scientificTransformationFamilies.length,
   scientificObjects: scientificObjects.length,
   admittedScientificTransformations: admittedTransformations.length,
   rejectedScientificTransformations: rejectedTransformations.length,
+  epistemicTransformations: epistemicTransformations.length,
+  admittedEpistemicTransformations: admittedEpistemicTransformations.length,
+  rejectedEpistemicTransformations: rejectedEpistemicTransformations.length,
   scientificQueries: scientificQueries.length,
   queriesWithCandidates: compositionReceipts.filter(item => item.candidates.length > 0).length,
   queriesWithoutCandidates: compositionReceipts.filter(item => item.candidates.length === 0).length,
@@ -639,20 +743,21 @@ const output = {
   sources: {
     corpus: { root: imports.corpus.root, fileCount: documents.length + materials.length, documentCount: documents.length, materialCount: materials.length, digest: stableHash([...documents, ...materials].map(item => [item.extension.canonicalPath, item.extension.sha256]).sort((a, b) => a[0].localeCompare(b[0]))) },
     profiles: { path: posix(relative(root, profilePath)), sha256: sha256(readFileSync(profilePath)) },
+    adapters: { path: posix(relative(root, adapterPath)), sha256: sha256(readFileSync(adapterPath)) },
     imports: { path: posix(relative(root, importPath)), sha256: sha256(readFileSync(importPath)) },
     scientificFamilies: familySources,
   },
   summary,
   coverage: {
     structural: { status: "complete", filesProjected: documents.length + materials.length, filesInScope: corpusFiles.length, documentsProjected: documents.length, materialsProjected: materials.length, recordsProjected: records.length, sectionsProjected: sections.length, unitsProjected: units.length },
-    epistemic: { status: "partial", declaredStatusDocuments, unclassifiedStatusDocuments: documents.length - declaredStatusDocuments, observedRelations: relations.length },
+    epistemic: { status: "partial", declaredStatusDocuments, unclassifiedStatusDocuments: documents.length - declaredStatusDocuments, observedRelations: relations.length, admittedTransformations: admittedEpistemicTransformations.length, rejectedTransformations: rejectedEpistemicTransformations.length, boundary: "Only explicit Parent declarations are considered; admission additionally requires declared evidence, classified target state, exact endpoint signatures and bounded authority." },
     scientific: { status: "seed-only", admittedFamilies: imports.scientificTransformationFamilies.map(item => item.id), admittedTransformations: admittedTransformations.length, boundary: "No ordinary Markdown link is promoted to a scientific transformation." },
   },
   profiles,
   objects: allObjects,
   objectTables,
   relationTable,
-  transformations: scientificTransformations,
+  transformations: [...scientificTransformations, ...epistemicTransformations],
   queries: scientificQueries,
   compositionReceipts,
   verification: { duplicateObjectCount, missingKernelCoordinates, danglingRelationCount },
@@ -682,7 +787,8 @@ const manifest = {
   verification: output.verification,
 };
 
-const coverage = `# Programme Algebra Coverage\n\n**Generated:** 26 October 2026\n\n**Mode:** parallel, non-replacing\n\n**Protocol:** \`spin23-programme-algebra/1\`\n\n## Result\n\nThe compiler projects every retained in-scope corpus source: **${summary.corpusDocuments.toLocaleString("en")}** Markdown documents and **${summary.corpusMaterials.toLocaleString("en")}** JSON or image materials. The machine layer exposes **${summary.sourceRecords.toLocaleString("en")}** top-level JSON record boundaries. The prose layer contains **${summary.sourceSections.toLocaleString("en")}** authored sections and **${summary.sourceUnits.toLocaleString("en")}** bounded semantic units. It retains **${summary.observedRelations.toLocaleString("en")}** observed containment or link relations and **${summary.referencedArtifacts.toLocaleString("en")}** additional referenced artifacts.\n\nScientific admission remains intentionally narrower. The four D02 seed families contribute **${summary.scientificObjects}** typed scientific objects and **${summary.admittedScientificTransformations}** admitted transformations; **${summary.rejectedScientificTransformations}** transformations fail the strict gate. Of **${summary.scientificQueries}** bounded queries, **${summary.queriesWithCandidates}** have at least one admitted candidate and **${summary.queriesWithoutCandidates}** retain the negative boundary.\n\n## Coverage by depth\n\n| Depth | Status | Meaning |\n|---|---|---|\n| Structural | **Complete** | Every in-scope Markdown, JSON and PNG source has an exact hash-bound object; every heading, bounded Markdown unit and top-level JSON record has a stable address. |\n| Epistemic | **Partial** | ${summary.declaredStatusDocuments} documents declare status; ${summary.unclassifiedStatusDocuments} remain visibly unclassified. Explicit links and labelled provenance fields are retained without semantic promotion. |\n| Scientific | **Seed only** | Only transformations satisfying exact endpoint, dimension, assumption, loss, evidence and authority gates are admitted. Current admitted families: D02 local, operator, rank-change and boundary. |\n\n## Integrity\n\n- Invalid retained JSON/image materials: **${summary.invalidSourceMaterials}**\n- Duplicate object identities: **${summary.duplicateObjectCount}**\n- Missing kernel coordinates: **${summary.missingKernelCoordinateCount}**\n- Dangling compiled relations: **${summary.danglingRelationCount}**\n- Corpus source digest: \`${output.sources.corpus.digest}\`\n\n## Boundary\n\nThis report does not mean that every scientific argument has been formalized. It means every source has a lossless algebraic address and that the compiler can distinguish observed documentary relations from admitted scientific transformations. Lexically assigned unit roles remain provisional, and machine-ledger semantics require declared schema adapters. The untyped remainder is now measurable rather than hidden.\n\nThe existing corpus remains canonical. Replacement requires the gates in the [parallel-lane README](../README.md), including held-out retrieval or reasoning improvements and an explicit migration decision.\n`;
+const adapterRows = Object.entries(summary.recordAdapterCounts).map(([id, count]) => `| ${id} | ${count.toLocaleString("en")} |`).join("\n");
+const coverage = `# Programme Algebra Coverage\n\n**Generated:** 26 October 2026\n\n**Mode:** parallel, non-replacing\n\n**Protocol:** \`spin23-programme-algebra/1\`\n\n## Result\n\nThe compiler projects every retained in-scope corpus source: **${summary.corpusDocuments.toLocaleString("en")}** Markdown documents and **${summary.corpusMaterials.toLocaleString("en")}** JSON or image materials. The machine layer exposes **${summary.sourceRecords.toLocaleString("en")}** top-level JSON record boundaries. The prose layer contains **${summary.sourceSections.toLocaleString("en")}** authored sections and **${summary.sourceUnits.toLocaleString("en")}** bounded semantic units. It retains **${summary.observedRelations.toLocaleString("en")}** observed containment or link relations and **${summary.referencedArtifacts.toLocaleString("en")}** additional referenced artifacts.\n\nThe epistemic lane recognizes **${summary.epistemicTransformations}** explicit parent-to-child research updates: **${summary.admittedEpistemicTransformations}** pass the evidence, classified-state, exact-signature and bounded-authority gate, while **${summary.rejectedEpistemicTransformations}** remain as explicit refusal records. Scientific admission remains intentionally narrower. The four D02 seed families contribute **${summary.scientificObjects}** typed scientific objects and **${summary.admittedScientificTransformations}** admitted transformations; **${summary.rejectedScientificTransformations}** transformations fail the strict gate. Of **${summary.scientificQueries}** bounded queries, **${summary.queriesWithCandidates}** have at least one admitted candidate and **${summary.queriesWithoutCandidates}** retain the negative boundary.\n\n## Coverage by depth\n\n| Depth | Status | Meaning |\n|---|---|---|\n| Structural | **Complete** | Every in-scope Markdown, JSON and PNG source has an exact hash-bound object; every heading, bounded Markdown unit and top-level JSON record has a stable address. |\n| Epistemic | **Partial** | ${summary.declaredStatusDocuments} documents declare status; ${summary.unclassifiedStatusDocuments} remain visibly unclassified. Explicit parent declarations may become proposal-only research-state transformations, but only after the epistemic gate passes. |\n| Scientific | **Seed only** | Only transformations satisfying exact endpoint, dimension, assumption, loss, evidence and authority gates are admitted. Current admitted families: D02 local, operator, rank-change and boundary. |\n\n## Machine-record adapters\n\n| Adapter | Records |\n|---|---:|\n${adapterRows}\n\nFallback records remain structurally complete but need a schema-specific adapter before deeper semantic use. Current fallback count: **${summary.fallbackRecordCount.toLocaleString("en")}**.\n\n## Integrity\n\n- Invalid retained JSON/image materials: **${summary.invalidSourceMaterials}**\n- Duplicate object identities: **${summary.duplicateObjectCount}**\n- Missing kernel coordinates: **${summary.missingKernelCoordinateCount}**\n- Dangling compiled relations: **${summary.danglingRelationCount}**\n- Corpus source digest: \`${output.sources.corpus.digest}\`\n\n## Boundary\n\nThis report does not mean that every scientific argument has been formalized. It means every source has a lossless algebraic address and that the compiler can distinguish observed documentary relations from admitted epistemic or scientific transformations. Lexically assigned unit roles remain provisional, and machine-ledger semantics require declared schema adapters. The untyped remainder is now measurable rather than hidden.\n\nThe existing corpus remains canonical. Replacement requires the gates in the [parallel-lane README](../README.md), including held-out retrieval or reasoning improvements and an explicit migration decision.\n`;
 
 if (write) {
   mkdirSync(outputRoot, { recursive: true });

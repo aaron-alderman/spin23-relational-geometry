@@ -1,0 +1,120 @@
+{
+  "protocol": "spin23-programme-algebra-adapters/1",
+  "rule": "Adapters assign an additional semantic view to observed source records. They do not change source identity, establish truth or promote records into transformations.",
+  "adapters": [
+    {
+      "id": "corpus-file-manifest-entry",
+      "semanticProfile": "governance",
+      "match": { "keysAll": ["bytes", "path", "sha256"] },
+      "status": "key-shape-declared"
+    },
+    {
+      "id": "evidence-spine-file-entry",
+      "semanticProfile": "governance",
+      "match": { "keysAll": ["canonical", "observed", "path", "state"] },
+      "status": "key-shape-declared"
+    },
+    {
+      "id": "epistemic-claim-record",
+      "semanticProfile": "epistemic-claim",
+      "match": { "keysAll": ["declaredStatus", "defeatCondition", "evidenceRefs", "id"] },
+      "status": "key-shape-declared"
+    },
+    {
+      "id": "evidence-spine-claim-entry",
+      "semanticProfile": "epistemic-claim",
+      "match": { "keysAll": ["coverage", "declarations", "identity", "inboundReferences"] },
+      "status": "key-shape-declared"
+    },
+    {
+      "id": "typed-relation-record",
+      "semanticProfile": "epistemic-claim",
+      "match": { "keysAll": ["downstream", "relation", "semanticAuthority", "upstream"] },
+      "status": "key-shape-declared"
+    },
+    {
+      "id": "concept-map-relation",
+      "semanticProfile": "epistemic-claim",
+      "match": { "pathPrefix": "corpus/concept-map/", "keysAll": ["source", "target", "type"] },
+      "status": "path-and-key-shape-declared"
+    },
+    {
+      "id": "programme-register-entry",
+      "semanticProfile": "governance",
+      "match": { "keysAll": ["id", "status"], "keysAny": ["nextGate", "openGates", "reopenCondition", "required_output", "task"] },
+      "status": "key-shape-provisional"
+    },
+    {
+      "id": "audit-inventory-entry",
+      "semanticProfile": "governance",
+      "match": { "keysAll": ["category", "path", "reason"] },
+      "status": "key-shape-provisional"
+    },
+    {
+      "id": "verification-receipt",
+      "semanticProfile": "governance",
+      "match": { "keysAny": ["passed", "failures", "verdict", "checks", "receipt"] },
+      "status": "key-shape-provisional"
+    },
+    {
+      "id": "experiment-record",
+      "semanticProfile": "experiment",
+      "match": { "keysAny": ["detector", "readout", "measurement", "observable", "falsifier", "controls", "decisionRule"] },
+      "status": "key-shape-provisional"
+    },
+    {
+      "id": "scientific-transformation",
+      "semanticProfile": "science",
+      "match": { "keysAll": ["from", "to", "assumptions", "evidenceRefs"] },
+      "status": "key-shape-provisional"
+    },
+    {
+      "id": "claimipedia-record",
+      "semanticProfile": "epistemic-claim",
+      "match": { "protocolPrefix": "claimipedia-" },
+      "status": "protocol-family"
+    },
+    {
+      "id": "frontier-register",
+      "semanticProfile": "governance",
+      "match": { "protocolPrefix": "frontier." },
+      "status": "protocol-family"
+    },
+    {
+      "id": "gravity-publication-claim",
+      "semanticProfile": "epistemic-claim",
+      "match": { "protocolPrefix": "spin23-gravity-route-publication" },
+      "status": "protocol-family"
+    },
+    {
+      "id": "dynatology-record",
+      "semanticProfile": "epistemic-claim",
+      "match": { "protocolPrefix": "dynatology-" },
+      "status": "protocol-family"
+    },
+    {
+      "id": "monster-mathematics-record",
+      "semanticProfile": "mathematics",
+      "match": { "protocolPrefix": "monster-" },
+      "status": "protocol-family"
+    },
+    {
+      "id": "algebraic-record",
+      "semanticProfile": "mathematics",
+      "match": { "keysAny": ["algebra", "matrix", "rank", "dimension", "lattice", "group", "invariant"] },
+      "status": "key-shape-provisional"
+    },
+    {
+      "id": "scalar-ledger-entry",
+      "semanticProfile": "governance",
+      "match": { "recordTypes": ["string", "number", "boolean", "null"] },
+      "status": "scalar-structural-boundary"
+    },
+    {
+      "id": "generic-ledger-record",
+      "semanticProfile": "governance",
+      "match": {},
+      "status": "fallback-structural"
+    }
+  ]
+}

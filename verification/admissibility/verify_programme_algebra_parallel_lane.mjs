@@ -23,6 +23,7 @@ const stable = value => {
 };
 const stableHash = value => sha256(stable(value));
 const importConfig = JSON.parse(readFileSync(join(root, algebra.sources.imports.path), "utf8"));
+const adapterConfig = JSON.parse(readFileSync(join(root, algebra.sources.adapters.path), "utf8"));
 const excluded = importConfig.corpus.excludePrefixes;
 const includedExtensions = importConfig.corpus.includedExtensions;
 
@@ -39,12 +40,17 @@ function walk(directory) {
 }
 
 const failures = [];
+for (const source of [algebra.sources.profiles, algebra.sources.adapters, algebra.sources.imports, ...algebra.sources.scientificFamilies]) {
+  const absolute = join(root, source.path);
+  if (!existsSync(absolute)) failures.push(`algebra source missing: ${source.path}`);
+  else if (sha256(readFileSync(absolute)) !== source.sha256) failures.push(`algebra source hash mismatch: ${source.path}`);
+}
 if (manifest.protocol !== "spin23-programme-algebra-manifest/1") failures.push("manifest protocol mismatch");
 if (sha256(archiveBytes) !== manifest.archive.compressedSha256) failures.push("compressed archive hash mismatch");
 if (sha256(projectionBytes) !== manifest.archive.uncompressedSha256) failures.push("projection hash mismatch");
 if (archiveBytes.length !== manifest.archive.compressedBytes) failures.push("compressed archive size mismatch");
 if (projectionBytes.length !== manifest.archive.uncompressedBytes) failures.push("projection size mismatch");
-for (const [key, value] of Object.entries(algebra.summary)) if (manifest.summary[key] !== value) failures.push(`manifest summary mismatch: ${key}`);
+for (const [key, value] of Object.entries(algebra.summary)) if (stable(manifest.summary[key]) !== stable(value)) failures.push(`manifest summary mismatch: ${key}`);
 if (algebra.protocol !== "spin23-programme-algebra/1") failures.push("protocol mismatch");
 if (algebra.mode !== "parallel-non-replacing") failures.push("lane is not marked parallel-non-replacing");
 const coordinates = algebra.profiles.kernel.coordinates;
@@ -80,6 +86,12 @@ for (const transformation of algebra.transformations) {
   if (transformation.validation.admitted && (transformation.authority?.proposalOnly !== true || transformation.authority?.entails !== false || transformation.authority?.empiricalAuthority !== false)) failures.push(`transformation authority widened: ${transformation.id}`);
   if (!transformation.validation.admitted && transformation.validation.reasons.length === 0) failures.push(`rejected transformation lacks refusal reason: ${transformation.id}`);
 }
+const epistemicTransformations = algebra.transformations.filter(item => item.family === "corpus-research-lineage");
+const admittedEpistemicTransformations = epistemicTransformations.filter(item => item.validation.admitted);
+const rejectedEpistemicTransformations = epistemicTransformations.filter(item => !item.validation.admitted);
+if (epistemicTransformations.length !== algebra.summary.epistemicTransformations) failures.push("epistemic transformation summary mismatch");
+if (admittedEpistemicTransformations.length !== algebra.summary.admittedEpistemicTransformations) failures.push("admitted epistemic transformation summary mismatch");
+if (rejectedEpistemicTransformations.length !== algebra.summary.rejectedEpistemicTransformations) failures.push("rejected epistemic transformation summary mismatch");
 for (const receipt of algebra.compositionReceipts) {
   for (const candidate of receipt.candidates) {
     if (candidate.entails !== false || candidate.empiricalAuthority !== false || candidate.applicationAdmission !== false) failures.push(`candidate authority widened: ${candidate.candidateId}`);
@@ -98,6 +110,16 @@ if (materials.length !== algebra.summary.corpusMaterials) failures.push("materia
 if (sections.length !== algebra.summary.sourceSections) failures.push("section summary mismatch");
 if (units.length !== algebra.summary.sourceUnits) failures.push("unit summary mismatch");
 if (records.length !== algebra.summary.sourceRecords) failures.push("record summary mismatch");
+const recordColumns = new Map(algebra.objectTables.records.columns.map((column, index) => [column, index]));
+const adapterCounts = {};
+const declaredAdapterIds = new Set(adapterConfig.adapters.map(adapter => adapter.id));
+for (const row of records) {
+  const adapterId = row[recordColumns.get("adapterId")];
+  if (!declaredAdapterIds.has(adapterId)) failures.push(`undeclared record adapter: ${adapterId}`);
+  adapterCounts[adapterId] = (adapterCounts[adapterId] ?? 0) + 1;
+}
+if (stable(adapterCounts) !== stable(algebra.summary.recordAdapterCounts)) failures.push("record adapter summary mismatch");
+if ((adapterCounts["generic-ledger-record"] ?? 0) !== algebra.summary.fallbackRecordCount) failures.push("fallback record summary mismatch");
 for (const source of sources) {
   const absolute = join(root, source.extension.canonicalPath);
   if (!existsSync(absolute)) failures.push(`canonical source missing: ${source.extension.canonicalPath}`);
