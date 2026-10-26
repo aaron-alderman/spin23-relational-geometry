@@ -4,11 +4,11 @@
 
 **Status:** dated_saturation_under_declared_protocol
 
-**Projection:** `d20a46eee03dc7a3032a12db74f899774ef65f63cfc0a62a0770bb6cdb7c4039`
+**Projection:** `94848f83cc563ca3e1496e8e18e6585eb907e469551de40f889bd5a40cc817a7`
 
 ## Attestation
 
-All nine exit gates pass for the normalized 6,462-file scientific-content projection identified above. This is a dated protocol-saturation result: the declared adjacency, exhausted-neighbourhood, experiment, theory, literature, implication, narrative, documentation/retrieval and adversarial-release obligations are closed together. It is not a claim that nature has no unknown physics, that every proposed bridge is true, or that the external experiments have already run.
+All nine exit gates pass for the normalized 6,514-file scientific-content projection identified above. This is a dated protocol-saturation result: the declared adjacency, exhausted-neighbourhood, experiment, theory, literature, implication, narrative, documentation/retrieval and adversarial-release obligations are closed together. It is not a claim that nature has no unknown physics, that every proposed bridge is true, or that the external experiments have already run.
 
 The certificate excludes itself, release receipts and volatile generated navigation/search surfaces from its projection to avoid self-reference. Those surfaces remain separately hash-bound and freshness-tested. A clean checkout must run the release orchestrator, regenerate every declared derived surface, pass every frontier verifier and all repository tests, and retain no tracked diff.
 

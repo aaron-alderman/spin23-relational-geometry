@@ -19,6 +19,7 @@ const groups = {
     /frontier-physics-targets\/(?:detector_frontier_atlas|finesse_technology_pathway|frontier_complexity_cards|frontier_physics_target_coverage_map)/u,
     /frontier-physics-targets\/README\.md/u,
     /frontier-physics-targets\/observer_horizon_nuclear_literature_review_v1\.md/u,
+    /translation-free-exceptional-topology\/(?:README|RESEARCH_DOCKET)\.md/u,
   ],
   open_system_or_network_width: [
     /\/664_the_pole_response|\/948_each_lossy_response_face/u,
@@ -29,6 +30,7 @@ const groups = {
     /\/(?:1230|1399|1454|1456|1459|1462|1464|1469)_/u,
     /admissibility_(?:27|28|33|64|117|118|138)_|lane-expansion\/programme_lane_expansion_19/u,
     /translation-free-exceptional-topology\/QUASICRYSTAL_BACKPLANE_BRIDGE/u,
+    /translation-free-exceptional-topology\/E8_CONSTITUTIVE_METRIC_GATE/u,
   ],
   contextual_or_synthesis_use: [
     /\/dynatology\/|programme_closure_|grand-synthesis/u,
@@ -38,6 +40,7 @@ const groups = {
     /^corpus\/claims\//u,
     /frontier_wave7_|moonshine-program-lattice|admissibility_(?:58|69)_|lane-expansion\/programme_lane_expansion_12/u,
     /translation-free-exceptional-topology\/E8_COUPLED_WIRE_TOMOGRAPHY/u,
+    /translation-free-exceptional-topology\/E8_CARTAN_SHELL10_SPECTROSCOPY/u,
   ],
 };
 const reasons = {

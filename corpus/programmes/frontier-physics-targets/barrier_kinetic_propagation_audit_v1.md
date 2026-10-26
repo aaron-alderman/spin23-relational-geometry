@@ -6,14 +6,14 @@
 
 ## Result
 
-All **36** barrier, metastability and hysteresis candidates are explicitly routed; **0** remain unreviewed. The audit distinguishes quantitative escape from physical metastability without a rate, adaptive memory, algebraic language and navigation.
+All **37** barrier, metastability and hysteresis candidates are explicitly routed; **0** remain unreviewed. The audit distinguishes quantitative escape from physical metastability without a rate, adaptive memory, algebraic language and navigation.
 
 | Disposition | Documents |
 |---|---:|
 | `quantitative_escape_or_first_passage` | 3 |
 | `physical_metastability_or_selection_without_escape_rate` | 8 |
 | `memory_hysteresis_or_adaptive_dynamics` | 11 |
-| `algebraic_semantic_or_selector_use` | 5 |
+| `algebraic_semantic_or_selector_use` | 6 |
 | `navigation_governance_or_interpretive` | 9 |
 
 ## Mechanism boundary
@@ -32,6 +32,7 @@ A metastable label or exponential-looking wait is not yet a Kramers process. A p
 | `corpus/claims/1100-1199/1152_the_distinctive_learning_path_is_obstruction_driven_relational_response_learning_not_learning_in_general.md` | `memory_hysteresis_or_adaptive_dynamics` | Hysteresis or retained memory is the object; it must not be renamed thermal activation without a barrier and waiting-time model. |
 | `corpus/programmes/admissibility/admissibility_125_claimipedia_support_native_order_and_semantic_boundary.md` | `algebraic_semantic_or_selector_use` | Metastability or hysteresis is algebraic, semantic or selector language rather than a physical barrier-crossing rate. |
 | `corpus/programmes/admissibility/admissibility_14_relative_frame_link_and_spontaneous_selection.md` | `physical_metastability_or_selection_without_escape_rate` | Physical or emulator metastability/selection is discussed, but no microscopic escape-rate identification is made. |
+| `corpus/programmes/admissibility/admissibility_146_multilinear_kakeya_transversality_bounds_collective_carrier_concentration.md` | `algebraic_semantic_or_selector_use` | Metastability or hysteresis is algebraic, semantic or selector language rather than a physical barrier-crossing rate. |
 | `corpus/programmes/admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md` | `physical_metastability_or_selection_without_escape_rate` | Physical or emulator metastability/selection is discussed, but no microscopic escape-rate identification is made. |
 | `corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md` | `physical_metastability_or_selection_without_escape_rate` | Physical or emulator metastability/selection is discussed, but no microscopic escape-rate identification is made. |
 | `corpus/programmes/admissibility/admissibility_29_seebeck_nernst_guideposts_for_response_geometry.md` | `physical_metastability_or_selection_without_escape_rate` | Physical or emulator metastability/selection is discussed, but no microscopic escape-rate identification is made. |

@@ -12,10 +12,10 @@ The corpus has a closed navigation loop from target to frontier area to detector
 
 - all 22 canonical physics targets and all 20 frontier areas;
 - 38 detector bundles, including records, controls, maturity and source provenance;
-- the maintained admissibility sequence through AZ-145, including the observer/horizon, nuclear and focused public-data decision programmes;
+- the maintained admissibility sequence through AZ-146, including the observer/horizon, nuclear and focused public-data decision programmes;
 - every discovered Wave 6--7 packet file in the regenerated gate audit, with reused display numbers held under distinct audit identities;
 - every remaining programme Markdown or JSON file containing the declared open-gate vocabulary: 69 files, of which 48 map to physics topics and 21 retain separate programme governance;
-- the complete source corpus-and-evidence backstop: all 3,219 in-scope Markdown/JSON artifacts hashed and inventoried, including 1,575 numbered claims and 945 evidence artifacts; 1,885 gate-bearing or open-status files are reconciled, 1,176 claims contain declared gates, the other 399 claims are explicitly recorded without one, and zero owners remain unresolved;
+- the complete source corpus-and-evidence backstop: all 3,254 in-scope Markdown/JSON artifacts hashed and inventoried, including 1,575 numbered claims and 957 evidence artifacts; 1,904 gate-bearing or open-status files are reconciled, 1,176 claims contain declared gates, the other 399 claims are explicitly recorded without one, and zero owners remain unresolved;
 - 53 independently closable topics: 14 active, 8 open, 3 audit, 18 gated, 2 blocked and 8 closed with retained evidence.
 
 No scanned gate is orphaned. The [full-corpus census](full_corpus_gate_census_v1.md) distinguishes old closure language, live semantic ownership, navigation surfaces and separately governed inquiries rather than equating every occurrence of “open” with a new target. “Exhausted” here means the declared corpus search and ownership problem is exhausted, not that nature, unstated tacit questions, the literature, or every possible experiment is exhausted.
