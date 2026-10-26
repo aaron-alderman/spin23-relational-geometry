@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-26",
+  "runner": "scripts/run-geometry-tournament-v1.mjs",
+  "status": "executed typed composition, nuisance reduction and synthetic confusion tournament",
+  "grammar": {"geometryTypes":10,"couplingTypes":8,"readerTypes":6,"maxCouplingWordLength":2,"canonicalCouplingWords":29,"compatibleComposites":490},
+  "nuisanceQuotient": ["source gain", "signed affine spatial trend", "global phase and gain", "width calibration offset", "loop baseline offset"],
+  "reduction": {"canonicalObservableClasses":46,"mergedCompositeCount":444,"largestAliasClass":74},
+  "hypothesisLibrary": {"classIdRange":"GT1-001..GT1-046","classes":46,"materialization":"runner emits every class with representative geometry, coupling word, reader and alias count"},
+  "syntheticConfusion": {"classes":46,"trialsPerClass":30,"totalTrials":1380,"noiseSigma":0.005,"accuracy":1,"confusions":0},
+  "dogfood": {
+    "m44ConstantTiltAggregate": "aliases flat after source-normalization quotient; reproduces the conclusion that total brightness cannot identify constant tilt",
+    "localDirectorBend": "structurally readable but held because the eight-cluster field tournament preferred flat",
+    "localDirectorCrease": "structurally readable but retired for current data because the crease model generalized worst",
+    "displacementAttenuation": "not admitted to current M44 data because its required absolute distance-sensitive gain calibration is absent"
+  },
+  "admission": {"admittedSyntheticClasses":46,"realDataPromotion":false,"rule":"only nuisance-stable canonical classes that recover under the declared reader enter later real-data tournaments"},
+  "limits": ["fixed benchmark parameter values rather than fitted parameter families", "two-dimensional probe domain standing in for local coordinates", "ordinary nuisance library is bounded rather than exhaustive", "synthetic recovery is instrumentation evidence, not physical occurrence"],
+  "nextGate": "add parameter-range Jacobian rank and adversarial ordinary-nuisance generators before any real-data promotion"
+}

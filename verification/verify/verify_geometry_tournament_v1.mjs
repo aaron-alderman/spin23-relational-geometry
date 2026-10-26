@@ -1,0 +1,15 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import { execFileSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
+const evidence=JSON.parse(fs.readFileSync(new URL("../../evidence/data/geometry-tournament-v1.json",import.meta.url),"utf8"));
+const live=JSON.parse(execFileSync(process.execPath,[fileURLToPath(new URL("../../scripts/run-geometry-tournament-v1.mjs",import.meta.url))],{encoding:"utf8"}));
+assert.equal(live.grammar.geometryTypes.length,10);assert.equal(live.grammar.couplingTypes.length,8);assert.equal(live.grammar.readerTypes.length,6);
+assert.equal(live.grammar.compatibleComposites,490);assert.equal(live.reduction.canonicalObservableClasses,46);assert.equal(live.reduction.mergedCompositeCount,444);
+assert.equal(live.hypothesisLibrary.length,46);assert.equal(live.hypothesisLibrary[0].classId,"GT1-001");assert.equal(live.hypothesisLibrary[45].classId,"GT1-046");
+assert.equal(live.syntheticConfusion.totalTrials,1380);assert.equal(live.syntheticConfusion.accuracy,1);assert.deepEqual(live.syntheticConfusion.confusion,{});
+assert.match(live.dogfood.m44ConstantTiltAggregate.decision,/total brightness cannot identify/u);assert.match(live.dogfood.localDirectorCrease.decision,/generalized worst/u);
+assert.match(live.dogfood.displacementAttenuation.decision,/calibration absent/u);
+assert.equal(evidence.admission.realDataPromotion,false);assert.match(evidence.nextGate,/Jacobian rank/u);
+console.log(JSON.stringify({composites:490,canonicalClasses:46,merged:444,syntheticTrials:1380,accuracy:1,realDataPromotion:false},null,2));
+console.log("PASS verify_geometry_tournament_v1");
