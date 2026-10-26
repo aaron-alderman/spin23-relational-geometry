@@ -74,8 +74,8 @@ for another dimensionless redesign.
 | OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-071 fixes the detector budget; AZ-113 requires an independent-current export and AZ-114 closes differential detail of the same process as a source-coordinate escape. AZ-115 fixes the general dimension-five count at seven physical coordinates. The amplitude calculation still needs the three-control export for its own closure |
 | OT-048 | Five-coordinate incidence observable likelihood | AZ-081 restores the weak quotient; AZ-113--AZ-115 close the public-model, same-process and unrestricted-coordinate shortcuts. AZ-116 gives the conditional charged/neutral detector, and AZ-117 supplies an odd diphoton mass moment that can retain its missing sign against the continuum. Compute one source-complete helicity and detector likelihood across the 27 settings |
 | OT-051 | Boundary-domain selector spectrum | gated on the paper's promised public energies, matrix elements and fit code; then hold one bulk carrier fixed, vary untwisted, pi-twisted and symmetry-breaking selectors, and predict held-out spectra/OPE data without bulk retuning |
-| OT-052 | Observer-dependent detector and horizon closure | run finite-switching Unruh, Kerr-threshold and state-through-greybody likelihood controls before attempting a Jordan/Spin bridge |
-| OT-053 | Nuclear open-system seam and channel calibration | choose one isotope and join entrance spectroscopy, prompt coincidence and delayed tagging in one held-out parent-plus-channel model |
+| OT-052 | Observer-dependent detector and horizon closure | reproduce a public Kerr multi-record likelihood first; use finite-switching Unruh as its detector regression and build the state-through-greybody Hawking likelihood as the longer endpoint |
+| OT-053 | Nuclear open-system seam and channel calibration | begin with a shared-nucleus/host-channel (^{229})Th factorization, then choose a compound-resonance isotope for the hostile many-channel test |
 
 ## P2 — gated translation problems
 

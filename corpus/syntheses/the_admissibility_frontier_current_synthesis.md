@@ -1020,6 +1020,18 @@ record what is filled and what remains unfilled. The practical instruction is
 to look where changing observer access, geometry, channel coupling and
 detector folding cannot mimic one another.
 
+A deeper [priority and sensitivity audit](../programmes/admissibility/admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md)
+now separates pedagogical order from discovery yield. The controlled
+(^{229})Th transition ranks first under balanced, experiment-first and
+corpus-bridge weightings because direct laser preparation, material
+intervention, lifetime, precision frequency and feedback records coexist on
+one parent transition. Hawking ranks first only when foundational reach is
+weighted far above experimental access. The next paired work is therefore a
+shared-nucleus/host-channel factorization across (^{229})Th platforms and a
+public-data Kerr multi-record consistency analysis. Unruh supplies the
+detector-calculus regression; generic nuclear resonances supply the hostile
+many-channel control; Hawking remains the end-to-end integration target.
+
 ## Kenotic confidence
 
 This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.

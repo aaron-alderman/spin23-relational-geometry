@@ -1289,6 +1289,7 @@ const sectionEvidenceOverrides = {
     "corpus/programmes/admissibility/admissibility_138_kerr_separates_horizon_ergosurface_and_superradiant_channel.md",
     "corpus/programmes/admissibility/admissibility_139_nuclear_open_systems_calibrate_seam_channel_and_record.md",
     "corpus/programmes/admissibility/admissibility_140_observer_horizon_channel_atlas_and_exhaustion.md",
+    "corpus/programmes/admissibility/admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md",
     "corpus/programmes/frontier-physics-targets/observer_horizon_nuclear_literature_review_v1.md"
   ],
   "What closes": ["1058_a_three_generator_jordan_furey_recursion_closes_all_of_sp4_but_requires_the_furey_channel_rotation_as_a_continuous_flow.md", "1059_the_linear_furey_product_FCp_exponentiates_exactly_to_the_missing_continuous_sp4_channel_rotation_but_its_action_term_is_open.md", "47_global_group_isomorphism_sp4r_spin023.md", "202_peirce_schur_triple_recursion_to_spin23.md"],

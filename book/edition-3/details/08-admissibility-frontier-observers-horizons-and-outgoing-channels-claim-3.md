@@ -39,6 +39,7 @@ Show that the named input is inconsistent, insufficient, unavailable, or fails t
 - **admissibility 138 kerr separates horizon ergosurface and superradiant channel** — [admissibility_138_kerr_separates_horizon_ergosurface_and_superradiant_channel.md](../../../corpus/programmes/admissibility/admissibility_138_kerr_separates_horizon_ergosurface_and_superradiant_channel.md)
 - **admissibility 139 nuclear open systems calibrate seam channel and record** — [admissibility_139_nuclear_open_systems_calibrate_seam_channel_and_record.md](../../../corpus/programmes/admissibility/admissibility_139_nuclear_open_systems_calibrate_seam_channel_and_record.md)
 - **admissibility 140 observer horizon channel atlas and exhaustion** — [admissibility_140_observer_horizon_channel_atlas_and_exhaustion.md](../../../corpus/programmes/admissibility/admissibility_140_observer_horizon_channel_atlas_and_exhaustion.md)
+- **admissibility 141 observer horizon and nuclear priority for next insight** — [admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md](../../../corpus/programmes/admissibility/admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md)
 - **observer horizon nuclear literature review v1** — [observer_horizon_nuclear_literature_review_v1.md](../../../corpus/programmes/frontier-physics-targets/observer_horizon_nuclear_literature_review_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.

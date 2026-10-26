@@ -34,11 +34,14 @@ This table is deliberately not a unification. It prevents the same word—bounda
 
 ## Ranked work
 
-1. **Calibration:** reproduce the Unruh detailed-balance and finite-switching detector record with a declared state and trajectory.
-2. **Geometry:** run the Kerr horizon/ergosurface/superradiance identities as regression controls for every proposed mixed-generator bridge.
-3. **Channels:** execute the nuclear parent-plus-channel coincidence programme and demand held-out branching predictions.
-4. **Semiclassical stack:** calculate one Hawking spectrum from state through greybody propagation to a detector likelihood.
-5. **Corpus bridge:** only then seek an explicit Jordan/Lie intertwiner that predicts a held-out physical record.
+The deeper [priority assessment](admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md) distinguishes pedagogical order from discovery yield:
+
+1. **Precision parent/channel pilot:** factor shared nuclear and host-specific parameters across controlled (^{229})Th spectroscopy, lifetime and depopulation records.
+2. **Strong-field falsifier:** reproduce a public Kerr spectroscopy likelihood and test one mass/spin posterior across unlike records.
+3. **Hostile many-channel control:** execute the compound/isomer parent-plus-channel coincidence programme and demand held-out branching predictions.
+4. **Detector calibration:** reproduce Unruh detailed balance and finite-switching records with declared state, trajectory and a literal thermal comparator.
+5. **Semiclassical endpoint:** calculate one Hawking spectrum from state through greybody propagation to a detector likelihood.
+6. **Corpus bridge:** only then seek an explicit Jordan/Lie intertwiner that predicts a held-out physical record.
 
 ## Stop rules and exhaustion claim
 
