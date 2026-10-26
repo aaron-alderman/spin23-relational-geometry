@@ -42,6 +42,8 @@
 
 **Cross-perturbation closure:** [mixed amplitude-plus-metric corner](E8_MIXED_PERTURBATION_CORNER.md)
 
+**First intercell result:** [projected two-cell coupling](E8_TWO_CELL_PROJECTED_COUPLING.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -283,6 +285,7 @@ translation-free topology result remains valuable after that null.
 - [E8 channel-amplitude stability stencil](E8_CHANNEL_AMPLITUDE_STENCIL.md)
 - [E8 positive kinetic-metric perturbation](E8_KINETIC_METRIC_PERTURBATION.md)
 - [E8 mixed perturbation corner](E8_MIXED_PERTURBATION_CORNER.md)
+- [E8 projected two-cell coupling](E8_TWO_CELL_PROJECTED_COUPLING.md)
 
 ## Primary external anchors
 

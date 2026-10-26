@@ -265,7 +265,29 @@ const spectralDiagnostics = (operator,ritz,cutoff) => {
   });
   const transitionWeights=[];
   const sineTransitionWeights=[];
+  const projectedCosineMatrices=[];
+  const projectedSineProxyMatrices=[];
   const ground=ritz[0].vector;
+  for(let channel=0;channel<8;channel+=1){
+    const cosine=Array.from({length:ritz.length},()=>Array(ritz.length).fill(0));
+    const sineProxy=Array.from({length:ritz.length},()=>Array(ritz.length).fill(0));
+    for(let source=0;source<ritz.length;source+=1)for(let target=0;target<ritz.length;target+=1){
+      let c=0,a=0;
+      for(let i=0;i<operator.states.length;i+=1){
+        const minus=operator.neighbors[i*16+2*channel];
+        const plus=operator.neighbors[i*16+2*channel+1];
+        const sourceVector=ritz[source].vector;
+        const driven=0.5*((minus>=0?sourceVector[minus]:0)+(plus>=0?sourceVector[plus]:0));
+        const antisymmetricDriven=0.5*((plus>=0?sourceVector[plus]:0)-(minus>=0?sourceVector[minus]:0));
+        c+=ritz[target].vector[i]*driven;
+        a+=ritz[target].vector[i]*antisymmetricDriven;
+      }
+      cosine[target][source]=c;
+      sineProxy[target][source]=a;
+    }
+    projectedCosineMatrices.push(cosine);
+    projectedSineProxyMatrices.push(sineProxy);
+  }
   for(let excited=1;excited<ritz.length;excited+=1){
     const weights=[];
     const sineWeights=[];
@@ -287,7 +309,8 @@ const spectralDiagnostics = (operator,ritz,cutoff) => {
     sineTransitionWeights.push(sineWeights);
   }
   return {levels,cosineDriveTransitionWeightsFromGround:transitionWeights,
-    sineDriveTransitionWeightsFromGround:sineTransitionWeights};
+    sineDriveTransitionWeightsFromGround:sineTransitionWeights,
+    projectedCosineMatrices,projectedSineProxyMatrices};
 };
 
 const args=Object.fromEntries(process.argv.slice(2).map(argument=>{

@@ -19,6 +19,7 @@ const e8AmplitudePerturbation = load("translation-free-e8-channel-amplitude-pert
 const e8AmplitudeStencil = load("translation-free-e8-channel-amplitude-stencil-v1.json");
 const e8MetricPerturbation = load("translation-free-e8-kinetic-metric-perturbation-v1.json");
 const e8MixedCorner = load("translation-free-e8-mixed-perturbation-corner-v1.json");
+const e8TwoCell = load("translation-free-e8-two-cell-projected-coupling-v1.json");
 const quasicrystal = load("translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 
 const E8 = [
@@ -155,6 +156,7 @@ assert.equal(arm.e8KineticMetricPerturbation.openStabilityTubeCertified,false);
 assert.equal(arm.e8MixedPerturbationCorner.evidence,"translation-free-e8-mixed-perturbation-corner-v1.json");
 assert.equal(e8MixedCorner.promoted,true);
 assert.equal(arm.e8MixedPerturbationCorner.intercellGapCertified,false);
+assert.equal(arm.e8TwoCellProjectedCoupling.evidence,"translation-free-e8-two-cell-projected-coupling-v1.json");assert.equal(e8TwoCell.projectedDimension,16);assert.equal(e8TwoCell.projectedTwoCellGapPromoted,true);assert.equal(arm.e8TwoCellProjectedCoupling.fullTwoCellGapCertified,false);
 assert.equal(arm.quasicrystalBackplaneBridge.evidence, "translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 assert.deepEqual(quasicrystal.factorialDesign.backplanes, ["periodic","quasicrystal","amorphous"]);
 assert.deepEqual(quasicrystal.factorialDesign.relationPrograms, ["identity","E8"]);
@@ -181,6 +183,7 @@ console.log(JSON.stringify({
   e8ChannelAmplitudeStencil: {directions:e8AmplitudeStencil.directions.length, maximumFractionalDeviation:Math.max(...e8AmplitudeStencil.directions.map(d=>d.maximumFractionalDeviation)), minimumGap:Math.min(...e8AmplitudeStencil.directions.map(d=>d.finalGap??d.gaps.at(-1))), openPerturbationBallCertified:false},
   e8KineticMetricPerturbation: {maximumScaleDeviation:e8MetricPerturbation.maximumFractionalScaleDeviation, gap:e8MetricPerturbation.gaps.at(-1), openStabilityTubeCertified:false},
   e8MixedPerturbationCorner: {gap:e8MixedCorner.gaps.at(-1), compactCellStencilClosed:true, continuousTubeCertified:false, intercellGapCertified:false},
+  e8TwoCellProjectedCoupling: {localRoots:e8TwoCell.localRoots, maximumJ:e8TwoCell.couplingSweep.at(-1).J, minimumProjectedGap:Math.min(...e8TwoCell.couplingSweep.map(x=>x.gaps.at(-1))), fullTwoCellGapCertified:false, widthGapCertified:false},
   quasicrystalBridge: {materialClasses:quasicrystal.factorialDesign.backplanes.length, relationPrograms:quasicrystal.factorialDesign.relationPrograms.length, devices:quasicrystal.factorialDesign.totalPrimaryDevices},
-  nextGate: "explicit two-cell coupling -> size-stable intercell gap -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
+  nextGate: "local-root convergence -> three/four-cell projected chain -> size-stable intercell gap -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
 }));

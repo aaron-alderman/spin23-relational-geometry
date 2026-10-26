@@ -1,0 +1,27 @@
+{
+  "schemaVersion":"translation-free-e8-two-cell-projected-coupling-v1","date":"2026-10-26",
+  "localModel":"four lowest states of the cutoff-converged r=0.5 Cartan-kernel cell",
+  "interaction":"-J sum_i cos(theta_Ai-theta_Bi), projected as -J sum_i(C_i tensor C_i-A_i tensor A_i)",
+  "localRoots":4,"projectedDimension":16,"cutoffs":[6,8,10],"basisStates":[117361,340321,794161],
+  "maximumFinalLocalBoundaryProbability":0.00000497994661930371,
+  "maximumFinalLocalResidual":9.860370772746668e-11,
+  "maximumCosineSymmetryError":3.810123048617758e-15,
+  "maximumSineProxyAntisymmetryError":2.531308496145357e-14,
+  "couplingSweep":[
+    {"J":0,"gaps":[0.21955675365410876,0.21836949373596237,0.21827682153128602],"gapDrifts":[0.005407530847430938,0.00042438255953645363],"splittings":[0,0,0]},
+    {"J":0.01,"gaps":[0.21594485465978863,0.21471156566193983,0.21461396834008006],"gapDrifts":[0.005711129351944013,0.000454550836881472],"splittings":[0.0005597939786117223,0.0005626955604824957,0.0005631010076765364],"splittingDrifts":[0.00518330311085026,0.0007205445049060206]},
+    {"J":0.025,"gaps":[0.21054893309587808,0.2092472928079685,0.20914238746814817],"gapDrifts":[0.006182127208010346,0.0005013462225129062],"splittings":[0.0013831024495027933,0.0013898307413384714,0.0013907828089463337],"splittingDrifts":[0.004864637350687121,0.0006850241396627738]},
+    {"J":0.05,"gaps":[0.20161807823560007,0.20020453012259587,0.20008767575402953],"gapDrifts":[0.007011018681332769,0.0005836749472890925],"splittings":[0.0027098669929097596,0.0027214799202193163,0.0027231694588056854],"splittingDrifts":[0.0042854233583940965,0.0006208161132539076]},
+    {"J":0.1,"gaps":[0.1840195349552074,0.18239107043880143,0.18225133719784647],"gapDrifts":[0.008849411106284764,0.0007661188709446103],"splittings":[0.005177513302454528,0.00519243132040792,0.005194855259373021],"splittingDrifts":[0.002881309439865499,0.00046682157462047807]}
+  ],
+  "finalJ01LowBranches":[
+    {"role":"ground","gap":0,"swap":1,"inversion":1,"projectedExcitationNumber":0.008321798002193669},
+    {"role":"collective one-excitation","gap":0.18225133719784647,"swap":1,"inversion":-1,"projectedExcitationNumber":1.0050161006279876},
+    {"role":"relative-cell one-excitation","gap":0.1874461924572195,"swap":-1,"inversion":-1,"projectedExcitationNumber":1.006814092378127},
+    {"role":"next even collective branch","gap":0.1984527805426577,"swap":1,"inversion":1,"projectedExcitationNumber":1.0035003292784905}
+  ],
+  "projectedTwoCellGapPromoted":true,"fullTwoCellGapCertified":false,"localRootCountConverged":false,"widthOrThermodynamicGapCertified":false,
+  "established":"In the four-state-per-cell projection, positive phase-lock coupling through J=0.1 preserves a cutoff-stable nonzero gap and splits the first product doublet into collective swap-even and relative-cell swap-odd branches.",
+  "boundary":"This is an explicit projected two-cell Hamiltonian, not a diagonalization of the full two-cell charge Hilbert space. Projection-root convergence, larger width and a thermodynamic lower bound remain open.",
+  "nextGate":"repeat with larger local root counts and compare the projected low spectrum before extending to three and four cells"
+}
