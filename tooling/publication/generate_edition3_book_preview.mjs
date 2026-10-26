@@ -2062,7 +2062,7 @@ writeFileSync(join(siteRoot, "library", "manifest.json"), `${JSON.stringify({ sc
 mkdirSync(join(siteRoot, "sources"), { recursive: true });
 writeFileSync(join(siteRoot, "sources", "manifest.json"), `${JSON.stringify({ schema: "spin23-edition3-source-readers/v2", buildRevision, citationDigest: sourceDigest, libraryManifest: "../library/manifest.json", sources: sourceManifest.filter(item => item.editionCited).map(item => ({ ...item, legacyOutput: posix(relative(siteRoot, legacySourceOutputPath(item.source))) })) }, null, 2)}\n`);
 mkdirSync(siteIndexRoot, { recursive: true });
-writeFileSync(join(siteIndexRoot, "index.html"), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=edition-3/index.html"><title>The Admissibility Frontier · Edition 3</title></head><body><p><a href="edition-3/index.html">Open the Edition 3 book preview</a></p></body></html>`);
+writeFileSync(join(siteIndexRoot, "index.html"), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="google-site-verification" content="9WwsoUYrUkaJiln-l2ByjjyKOs7jVuMGIJp3rrdjFPA"><meta http-equiv="refresh" content="0; url=edition-3/index.html"><title>The Admissibility Frontier · Edition 3</title></head><body><p><a href="edition-3/index.html">Open the Edition 3 book preview</a></p></body></html>`);
 
 const publicationAuthority = {
   role: "canonical-publication-source",

@@ -12,6 +12,12 @@ const filesBelow = directory => readdirSync(directory, { withFileTypes: true }).
   return entry.isDirectory() ? filesBelow(path) : [path];
 });
 
+test("the deployed Pages root carries the Google site-verification token", () => {
+  const homepage = readFileSync(join(artifactRoot, "index.html"), "utf8");
+  assert.match(homepage, /<meta name="google-site-verification" content="9WwsoUYrUkaJiln-l2ByjjyKOs7jVuMGIJp3rrdjFPA">/u);
+  assert.match(homepage, /url=edition-3\/index\.html/u);
+});
+
 test("every corpus Markdown source has a provenance-stamped compiled library page", () => {
   const manifest = JSON.parse(readFileSync(join(siteRoot, "library", "manifest.json"), "utf8"));
   const corpusMarkdownCount = filesBelow(join(root, "corpus")).filter(path => path.endsWith(".md")).length;
