@@ -1640,6 +1640,7 @@ const renderMarkdown = (markdown, source) => {
   let listItems = [];
   let quote = [];
   let fence = null;
+  let fenceMarker = null;
   let fenceLines = [];
   let displayMathDelimiter = null;
   let displayMathLines = [];
@@ -1671,13 +1672,13 @@ const renderMarkdown = (markdown, source) => {
         continue;
       }
     }
-    const fenceMatch = /^```\s*([^\s]*)/u.exec(line);
+    const fenceMatch = /^(~~~|```)\s*([^\s]*)/u.exec(line);
     if (fence) {
-      if (fenceMatch) { blocks.push(`<pre><code${fence ? ` class="language-${esc(fence)}"` : ""}>${esc(fenceLines.join("\n"))}</code></pre>`); fence = null; fenceLines = []; }
+      if (fenceMatch && fenceMatch[1] === fenceMarker) { blocks.push(`<pre><code${fence ? ` class="language-${esc(fence)}"` : ""}>${esc(fenceLines.join("\n"))}</code></pre>`); fence = null; fenceMarker = null; fenceLines = []; }
       else fenceLines.push(line);
       continue;
     }
-    if (fenceMatch) { flushParagraph(); flushList(); flushQuote(); fence = fenceMatch[1] || "text"; continue; }
+    if (fenceMatch) { flushParagraph(); flushList(); flushQuote(); fenceMarker = fenceMatch[1]; fence = fenceMatch[2] || "text"; continue; }
     if (/^\s*\\\[\s*$/u.test(line) || /^\s*\$\$\s*$/u.test(line)) {
       flushParagraph(); flushList(); flushQuote();
       displayMathDelimiter = line.includes("\\[") ? "\\]" : "$$";

@@ -30,6 +30,13 @@ declarations remain canonical for object identities, profiles and admitted
 transformations. Generated JSON and reports are disposable projections of those
 two source classes.
 
+The first held-out retrieval tranche establishes a narrower result. Algebraic
+retrieval finds machine ledgers that Markdown-only search cannot see, but it is
+not uniformly better for prose. Naive score fusion and keyword-only routing both
+failed frozen gates. A later explicit `machine`/`prose` source-kind facet found
+all six fresh targets within the top ten while retaining the earlier failures.
+This supports a complementary typed retrieval surface, not corpus replacement.
+
 ## Six depths of conversion
 
 1. **Structural projection.** Every retained corpus Markdown document, JSON
@@ -78,13 +85,34 @@ mathematical, physical, experimental, epistemic and governance objects may
 compose internally under profile rules. A cross-profile passage is partial and
 must retain its assumptions, losses, evidence, falsifier and authority ceiling.
 
+## Articles
+
+These are the reader-facing entrances to the lane. The first three are compiled
+from the current corpus and may be regenerated; the conversion register is the
+authored audit of what the compiler does and does not claim.
+
+- **[Programme Algebra Journeys](generated/PROGRAMME_ALGEBRA_JOURNEYS.md)** —
+  follow admitted and refused research lineages, their assumptions, losses and
+  evidence, and the empirical-return surfaces they reach.
+- **[Programme Algebra Coverage](generated/PROGRAMME_ALGEBRA_COVERAGE.md)** —
+  inspect conversion depth, machine-record adapters, exclusions and the honest
+  remainder.
+- **[Programme Algebra Retrieval Benchmark](generated/PROGRAMME_ALGEBRA_RETRIEVAL_BENCHMARK.md)** —
+  compare canonical prose search with algebraic retrieval, including the failed
+  controls and the typed-facet candidate.
+- **[Whole-Corpus Conversion Register](CONVERSION_REGISTER.md)** — inspect the
+  authored L0–L6 completion audit and the boundary between structural coverage
+  and scientific admission.
+
 ## Generated outputs
 
 Run:
 
 ~~~powershell
 node tooling/programme-algebra/compile_programme_algebra.mjs --write
+node tooling/programme-algebra/run_retrieval_benchmark.mjs --out corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_RETRIEVAL_BENCHMARK.json --report corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_RETRIEVAL_BENCHMARK.md
 node verification/admissibility/verify_programme_algebra_parallel_lane.mjs
+node verification/admissibility/verify_programme_algebra_retrieval_benchmark.mjs
 ~~~
 
 The compiler writes:
@@ -99,7 +127,11 @@ The compiler writes:
 - `generated/PROGRAMME_ALGEBRA_COVERAGE.md` — the human-readable coverage and
   boundary report;
 - `generated/PROGRAMME_ALGEBRA_JOURNEYS.md` — the human reading projection for
-  composed ALE routes, empirical-return surfaces and the honest remainder.
+  composed ALE routes, empirical-return surfaces and the honest remainder;
+- `generated/PROGRAMME_ALGEBRA_RETRIEVAL_BENCHMARK.md` — the preregistered
+  canonical-versus-algebra retrieval comparison, including failed fusion and
+  validation gates. Its current verdict is open, so it does not authorize
+  replacement.
 
 Running without `--write` performs the same compilation and prints the summary
 without changing files.

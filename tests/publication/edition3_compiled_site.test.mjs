@@ -138,6 +138,15 @@ test("GitHub-style corpus tables render as semantic HTML tables", () => {
   }
 });
 
+test("tilde-fenced corpus commands render as code and programme articles remain navigable", () => {
+  const programme = readFileSync(join(siteRoot, "library", "corpus", "programmes", "programme-algebra", "README.html"), "utf8");
+  assert.match(programme, /<h2 id="articles">Articles<\/h2>/u);
+  assert.match(programme, /href="generated\/PROGRAMME_ALGEBRA_JOURNEYS\.html"/u);
+  assert.match(programme, /href="generated\/PROGRAMME_ALGEBRA_RETRIEVAL_BENCHMARK\.html"/u);
+  assert.match(programme, /<pre><code class="language-powershell">node tooling\/programme-algebra\/compile_programme_algebra\.mjs --write/u);
+  assert.doesNotMatch(programme, /<p>~~~powershell/u);
+});
+
 test("old cited-source URLs redirect to canonical corpus-library pages", () => {
   const alias = readFileSync(join(siteRoot, "sources", "corpus", "syntheses", "kenotic_governance_tri_omni_theism_and_a_lawful_world.html"), "utf8");
   assert.match(alias, /http-equiv="refresh"/u);

@@ -28,12 +28,12 @@ ALE is assumptions / losses / evidence. A refused route remains visible because 
 | 1 | Admissibility foundations: deriving physical structure from the space of the possible | Admissibility foundations: physics contact and research docket | 2/4/0 | refused: transformation::corpus-research-update:e250f71d8983a74e610c13db:evidence-missing |
 | 1 | Coordinated selector closure and the physical-provenance boundary | Local information is not global identification | 1/1/2 | admitted |
 | 1 | The public ALP UFO is a two-control slice, not the three-source test | More detail of the same W-associated process cannot open the sixth coordinate | 2/2/2 | admitted |
+| 9 | Translation-free exceptional topology | E8 Cartan-kernel shell-10 spectroscopy gate | 5/6/9 | admitted |
 | 13 | The exact source quotient has five coordinates, not two | The source-complete flavor kernel restores the weak quotient | 7/17/26 | admitted |
 | 1 | Boundary lift to a Casimir--thermoelectric admissibility compiler | Transverse joint detector and the apparatus-symmetry ceiling | 0/6/1 | admitted |
 | 16 | Invariant atlas: time, force, area, volume, material and rotation | Frequency-moment bounds and compute boundary | 18/80/18 | refused: transformation::corpus-research-update:88f72517dd3e0bc1e64ad356:evidence-missing; transformation::corpus-research-update:7d7b551ee1356a2879cb853b:evidence-missing |
 | 14 | Invariant atlas: time, force, area, volume, material and rotation | The field closes continuity, but screening needs its own carrier | 14/77/17 | refused: transformation::corpus-research-update:88f72517dd3e0bc1e64ad356:evidence-missing; transformation::corpus-research-update:7d7b551ee1356a2879cb853b:evidence-missing |
-| 2 | Translation-free exceptional topology | E8 bounded-degree clock hardware and gap certificate | 1/1/2 | admitted |
-| 1 | Translation-free exceptional topology | Translation-free exceptional topology research docket | 0/12/0 | refused: transformation::corpus-research-update:d8ac40c98a20dfa45a8e8df7:evidence-missing |
+| 1 | Translation-free exceptional topology | Translation-free exceptional topology research docket | 1/11/0 | refused: transformation::corpus-research-update:d8ac40c98a20dfa45a8e8df7:evidence-missing |
 | 1 | Frontier Wave 7.37: Claimipedia's Relation Algebra Contains an Exact \(\mathfrak{sl}_2\) Corner | Frontier Wave 7.38: The Spin--Temple Channel Has Semisimple Core \(\mathbb Q\oplus M_2(\mathbb Q)\) | 2/0/0 | refused: transformation::corpus-research-update:b6ab43226f203d9ba74f9871:evidence-missing |
 | 2 | Admissibility foundations: deriving physical structure from the space of the possible | The dispersion-force landscape around Casimir, van der Waals and London | 8/25/0 | refused: transformation::corpus-research-update:b045d460646104d6f43a4ad7:evidence-missing; transformation::corpus-research-update:860bc464a62634c259007ff7:evidence-missing |
 | 1 | The authored rail grading closes the local Clifford cell but opens a co-incidence channel | Cross-corpus Clifford-cell atlas and exhaustion | 1/3/0 | refused: transformation::corpus-research-update:75410a3a1dfb1dec5538d440:evidence-missing |
@@ -45,6 +45,7 @@ ALE is assumptions / losses / evidence. A refused route remains visible because 
 | 1 | Four-mode quotient-scar bench and tolerance closure | One action now generates the four-mode bench record | 0/4/2 | admitted |
 | 2 | Contextual triangle bound: real global content, but standard positivity | Storage typing reverses the population-wide cross-frequency verdict | 0/1/4 | admitted |
 | 6 | Invariant atlas: time, force, area, volume, material and rotation | Measurement creates branches, not unique unconditional selection | 9/59/8 | refused: transformation::corpus-research-update:88f72517dd3e0bc1e64ad356:evidence-missing; transformation::corpus-research-update:7d7b551ee1356a2879cb853b:evidence-missing |
+| 1 | Translation-free exceptional topology | Quasicrystal backplane bridge | 0/4/1 | admitted |
 
 ## Empirical-return surfaces
 

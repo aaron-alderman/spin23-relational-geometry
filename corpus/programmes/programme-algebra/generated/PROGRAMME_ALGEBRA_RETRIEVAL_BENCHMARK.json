@@ -1,0 +1,1098 @@
+{
+  "protocol": "spin23-programme-algebra-retrieval-comparison/1",
+  "generatedAt": "2026-10-26T00:00:00.000Z",
+  "authorityBoundary": "Expected sources test navigation and structural recovery only. They do not establish the truth, completeness or scientific authority of any source.",
+  "suite": {
+    "path": "tooling/programme-algebra/benchmark_cases_v1.json",
+    "sha256": "2fc979749f8788ff56b3278fa4c510af05127ae56c34fdac57393268a834cb64",
+    "cases": 24
+  },
+  "corpusDigest": "7be80e9d9a573b1e00b40d76ba6ab353d7f7bf5f28a9b0d5d5fbc7c8859bb6a6",
+  "algebraArchiveSha256": "d439c32fba5eb7c13aedb6396718a596aa200dd2158b691e46297e125e19d78c",
+  "controls": {
+    "canonical": "existing Markdown lexical/claim/semantic/graph search",
+    "algebra": "hash-bound document, unit, record, transformation, route and empirical-return projection",
+    "fusion": "discarded intent-weighted reciprocal-rank fusion control",
+    "routed": "keyword intent routing for the first validation stratum; explicit machine/prose source-kind selection for the later faceted-validation stratum",
+    "limit": 20
+  },
+  "diagnostics": {
+    "naiveFusionHoldoutPassed": false,
+    "interpretation": "The failed fusion and keyword-router controls remain visible. The later typed-facet result tests a different, explicit interface and cannot retroactively qualify either failed design."
+  },
+  "summary": {
+    "all": {
+      "cases": 24,
+      "canonical": {
+        "recallAt5": 0.2916666666666667,
+        "recallAt10": 0.2916666666666667,
+        "meanReciprocalRank": 0.2222222222222222
+      },
+      "algebra": {
+        "recallAt5": 0.5416666666666666,
+        "recallAt10": 0.875,
+        "meanReciprocalRank": 0.29821817615935264
+      },
+      "fusion": {
+        "recallAt5": 0.5416666666666666,
+        "recallAt10": 0.75,
+        "meanReciprocalRank": 0.36104242979242973
+      },
+      "routed": {
+        "recallAt5": 0.625,
+        "recallAt10": 0.8333333333333334,
+        "meanReciprocalRank": 0.4103213507625272
+      }
+    },
+    "calibration": {
+      "cases": 6,
+      "canonical": {
+        "recallAt5": 0.3333333333333333,
+        "recallAt10": 0.3333333333333333,
+        "meanReciprocalRank": 0.25
+      },
+      "algebra": {
+        "recallAt5": 0.5,
+        "recallAt10": 1,
+        "meanReciprocalRank": 0.49074074074074076
+      },
+      "fusion": {
+        "recallAt5": 0.6666666666666666,
+        "recallAt10": 0.8333333333333334,
+        "meanReciprocalRank": 0.3796296296296296
+      },
+      "routed": {
+        "recallAt5": 0.5,
+        "recallAt10": 0.8333333333333334,
+        "meanReciprocalRank": 0.5462962962962963
+      }
+    },
+    "holdout": {
+      "cases": 6,
+      "canonical": {
+        "recallAt5": 0.3333333333333333,
+        "recallAt10": 0.3333333333333333,
+        "meanReciprocalRank": 0.2222222222222222
+      },
+      "algebra": {
+        "recallAt5": 0.5,
+        "recallAt10": 1,
+        "meanReciprocalRank": 0.3367724867724868
+      },
+      "fusion": {
+        "recallAt5": 0.5,
+        "recallAt10": 0.6666666666666666,
+        "meanReciprocalRank": 0.43213268213268224
+      },
+      "routed": {
+        "recallAt5": 0.6666666666666666,
+        "recallAt10": 1,
+        "meanReciprocalRank": 0.47962962962962963
+      }
+    },
+    "validation": {
+      "cases": 6,
+      "canonical": {
+        "recallAt5": 0.16666666666666666,
+        "recallAt10": 0.16666666666666666,
+        "meanReciprocalRank": 0.08333333333333333
+      },
+      "algebra": {
+        "recallAt5": 0.5,
+        "recallAt10": 0.5,
+        "meanReciprocalRank": 0.12369281045751636
+      },
+      "fusion": {
+        "recallAt5": 0.16666666666666666,
+        "recallAt10": 0.5,
+        "meanReciprocalRank": 0.14074074074074075
+      },
+      "routed": {
+        "recallAt5": 0.5,
+        "recallAt10": 0.5,
+        "meanReciprocalRank": 0.12369281045751636
+      }
+    },
+    "faceted-validation": {
+      "cases": 6,
+      "canonical": {
+        "recallAt5": 0.3333333333333333,
+        "recallAt10": 0.3333333333333333,
+        "meanReciprocalRank": 0.3333333333333333
+      },
+      "algebra": {
+        "recallAt5": 0.6666666666666666,
+        "recallAt10": 1,
+        "meanReciprocalRank": 0.24166666666666667
+      },
+      "fusion": {
+        "recallAt5": 0.8333333333333334,
+        "recallAt10": 1,
+        "meanReciprocalRank": 0.4916666666666667
+      },
+      "routed": {
+        "recallAt5": 0.8333333333333334,
+        "recallAt10": 1,
+        "meanReciprocalRank": 0.4916666666666667
+      }
+    }
+  },
+  "gates": {
+    "holdoutRecallAt10NonRegressing": true,
+    "holdoutMrrNonRegressing": true,
+    "machineOnlyHoldoutRecovered": true,
+    "atLeastOneHeldOutImprovement": true,
+    "routedValidationRecallAt10AtLeastBestLane": true,
+    "routedValidationMrrNonRegressing": true,
+    "routedValidationMarkdownNonRegressing": false,
+    "routedValidationMachineRecoveredAt10": false,
+    "facetedValidationRecallAt10Complete": true,
+    "facetedValidationMrrAtLeastBestLane": true,
+    "facetedValidationKindRespected": true
+  },
+  "qualified": false,
+  "cases": [
+    {
+      "id": "calibration-hydrodynamic-lineage",
+      "split": "calibration",
+      "capability": "composed-lineage",
+      "query": "Which endpoint of the hydrodynamic parent chain admits positive stationary Gaussian fluctuations after poles residues and KMS noise?",
+      "expectedSource": "corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md",
+      "canonicalRank": 1,
+      "algebraRank": 6,
+      "fusionRank": 1,
+      "routedRank": 1,
+      "movement": -5,
+      "canonicalTop5": [
+        "corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md",
+        "corpus/programmes/admissibility/admissibility_97_hydrodynamic_pole_residue_response_ledger.md",
+        "corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md"
+      ],
+      "algebraTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md",
+        "corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md",
+        "corpus/programmes/admissibility/admissibility_97_hydrodynamic_pole_residue_response_ledger.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/admissibility/admissibility_104_relaxation_auxiliary_gaussian_kms_completion.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/admissibility/admissibility_100_local_derivative_hydrodynamic_frame_invariance.md",
+        "corpus/programmes/admissibility/admissibility_97_hydrodynamic_pole_residue_response_ledger.md",
+        "corpus/programmes/admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md"
+      ]
+    },
+    {
+      "id": "calibration-e8-edge-lineage",
+      "split": "calibration",
+      "capability": "composed-lineage",
+      "query": "What explicit child protocol follows translation-free exceptional topology at the E8 edge?",
+      "expectedSource": "corpus/programmes/translation-free-exceptional-topology/E8_EDGE_PROTOCOL.md",
+      "canonicalRank": 2,
+      "algebraRank": 9,
+      "fusionRank": 3,
+      "routedRank": 9,
+      "movement": -7,
+      "canonicalTop5": [
+        "corpus/programmes/translation-free-exceptional-topology/README.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_EDGE_PROTOCOL.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_COUPLED_WIRE_TOMOGRAPHY.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_237_fixed_physics_clock_scaling_converges_to_the_e8_locking_rotor.md",
+        "corpus/programmes/translation-free-exceptional-topology/QUASICRYSTAL_BACKPLANE_BRIDGE.md"
+      ],
+      "algebraTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/translation-free-exceptional-topology/README.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/translation-free-exceptional-topology/README.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_COUPLED_WIRE_TOMOGRAPHY.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_EDGE_PROTOCOL.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_FEW_BODY_CLOCK_GAP.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_CONSTITUTIVE_METRIC_GATE.md"
+      ],
+      "routedTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/translation-free-exceptional-topology/README.md"
+      ]
+    },
+    {
+      "id": "calibration-complete-experiment-programmes",
+      "split": "calibration",
+      "capability": "empirical-return",
+      "query": "Which machine ledger contains protocol-complete frontier experiments with preparation intervention detector transfer nuisance covariance record and decision rule?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+      "canonicalRank": null,
+      "algebraRank": 1,
+      "fusionRank": 2,
+      "routedRank": 1,
+      "movement": 20,
+      "canonicalTop5": [
+        "corpus/programmes/programme-algebra/README.md",
+        "corpus/programmes/frontier-physics-targets/experiment_exit_audit_v1.md",
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_COVERAGE.md",
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/programmes/frontier-physics-targets/finesse_technology_pathway_v1.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json"
+      ]
+    },
+    {
+      "id": "calibration-incomplete-experiment-atlas",
+      "split": "calibration",
+      "capability": "explicit-refusal",
+      "query": "Which earlier experiment atlas is refused empirical-return admission because detector and nuisance model fields are missing?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 2,
+      "fusionRank": null,
+      "routedRank": null,
+      "movement": 19,
+      "canonicalTop5": [
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md",
+        "corpus/programmes/programme-algebra/README.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md",
+        "corpus/programmes/frontier-physics-targets/experiment_exit_audit_v1.md"
+      ],
+      "algebraTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md",
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md",
+        "corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md",
+        "corpus/programmes/programme-algebra/README.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md",
+        "corpus/programmes/programme-algebra/README.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md",
+        "corpus/programmes/frontier-physics-targets/experiment_exit_audit_v1.md"
+      ]
+    },
+    {
+      "id": "calibration-instrumentation-return",
+      "split": "calibration",
+      "capability": "empirical-return",
+      "query": "Which ledger joins quotient-scar carriers to detectors nuisance models decision rules and falsifiers for thirty-nine complete returns?",
+      "expectedSource": "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 6,
+      "fusionRank": 9,
+      "routedRank": 6,
+      "movement": 15,
+      "canonicalTop5": [
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/quotient-scars/README.md",
+        "corpus/programmes/frontier-physics-targets/finesse_technology_pathway_v1.md",
+        "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md"
+      ],
+      "algebraTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/dynatology/dynatology_02_corpus_crosswalk.md"
+      ],
+      "routedTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json"
+      ]
+    },
+    {
+      "id": "calibration-defeat-graph",
+      "split": "calibration",
+      "capability": "typed-machine-record",
+      "query": "Which machine graph records declared claim status consequences non-implications evidence references and defeat conditions?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 1,
+      "fusionRank": 3,
+      "routedRank": 1,
+      "movement": 20,
+      "canonicalTop5": [
+        "corpus/programmes/frontier-physics-targets/corpus_completion_exit_criteria_v1.md",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md",
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_COVERAGE.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/30_research_frontier.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.md",
+        "corpus/programmes/frontier-physics-targets/corpus_completion_exit_criteria_v1.md",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/30_research_frontier.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/30_research_frontier.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json"
+      ]
+    },
+    {
+      "id": "holdout-detector-route-refusal",
+      "split": "holdout",
+      "capability": "explicit-refusal",
+      "query": "Where does the invariant-atlas lineage terminate in an adversarial detector equivalence analysis, and why is the composed passage refused for missing evidence?",
+      "expectedSource": "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+      "canonicalRank": 3,
+      "algebraRank": 7,
+      "fusionRank": 1,
+      "routedRank": 3,
+      "movement": -4,
+      "canonicalTop5": [
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md",
+        "corpus/programmes/dynatology/mystery_atlas_00_governance_and_claimipedia_reconciliation.md",
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/README.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md",
+        "corpus/programmes/admissibility/admissibility_05_invariant_atlas_time_force_measure_material_rotation.md",
+        "corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md",
+        "corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md",
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md",
+        "corpus/programmes/dynatology/mystery_atlas_00_governance_and_claimipedia_reconciliation.md",
+        "corpus/programmes/admissibility/admissibility_33_hybrid_bosonic_carrier_and_adversarial_thermal_hall_frontier.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md",
+        "corpus/programmes/dynatology/mystery_atlas_00_governance_and_claimipedia_reconciliation.md",
+        "corpus/programmes/admissibility/admissibility_35_adversarial_detector_equivalence_atlas.md",
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/README.md"
+      ]
+    },
+    {
+      "id": "holdout-casimir-platform-route",
+      "split": "holdout",
+      "capability": "composed-lineage",
+      "query": "Which endpoint closes the long admissibility route at a same-carrier Casimir thermoelectric platform?",
+      "expectedSource": "corpus/programmes/admissibility/admissibility_31_same_carrier_platform_closure_for_casimir_thermoelectric_response.md",
+      "canonicalRank": 1,
+      "algebraRank": 3,
+      "fusionRank": 1,
+      "routedRank": 1,
+      "movement": -2,
+      "canonicalTop5": [
+        "corpus/programmes/admissibility/admissibility_31_same_carrier_platform_closure_for_casimir_thermoelectric_response.md",
+        "corpus/README.md",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md",
+        "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md",
+        "corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/admissibility/admissibility_31_same_carrier_platform_closure_for_casimir_thermoelectric_response.md",
+        "corpus/programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md",
+        "corpus/programmes/admissibility/admissibility_00_foundational_programme.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/admissibility/admissibility_31_same_carrier_platform_closure_for_casimir_thermoelectric_response.md",
+        "corpus/README.md",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md",
+        "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md",
+        "corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/admissibility/admissibility_31_same_carrier_platform_closure_for_casimir_thermoelectric_response.md",
+        "corpus/README.md",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md",
+        "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md",
+        "corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md"
+      ]
+    },
+    {
+      "id": "holdout-th229-incomplete-return",
+      "split": "holdout",
+      "capability": "explicit-refusal",
+      "query": "Which thorium-229 Kerr decision programme remains short of empirical return because preparation intervention and detector are absent?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/th229_kerr_decision_programmes_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 3,
+      "fusionRank": 9,
+      "routedRank": 3,
+      "movement": 18,
+      "canonicalTop5": [
+        "corpus/programmes/admissibility/admissibility_143_th229_shared_parent_host_channel_factorization_programme.md",
+        "corpus/programmes/admissibility/admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md",
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md",
+        "corpus/programmes/frontier-physics-targets/observer_horizon_nuclear_literature_review_v1.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier-physics-targets/th229_kerr_decision_programmes_v1.json",
+        "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/admissibility/admissibility_143_th229_shared_parent_host_channel_factorization_programme.md",
+        "corpus/programmes/admissibility/admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md",
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/programmes/programme-algebra/README.md",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier-physics-targets/th229_kerr_decision_programmes_v1.json",
+        "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md"
+      ]
+    },
+    {
+      "id": "holdout-evidence-spine-records",
+      "split": "holdout",
+      "capability": "typed-machine-record",
+      "query": "Which machine ledger records canonical versus observed file state and claim declarations with inbound references?",
+      "expectedSource": "corpus/registers/corpus_evidence_spine.json",
+      "canonicalRank": null,
+      "algebraRank": 1,
+      "fusionRank": 3,
+      "routedRank": 1,
+      "movement": 20,
+      "canonicalTop5": [
+        "corpus/EVIDENCE_SPINE.md",
+        "corpus/programmes/programme-algebra/README.md",
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_COVERAGE.md",
+        "corpus/README.md",
+        "corpus/FRONT_DOOR.md"
+      ],
+      "algebraTop5": [
+        "corpus/registers/corpus_evidence_spine.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/claims/0000-0099/30_research_frontier.md"
+      ],
+      "fusionTop5": [
+        "corpus/claims/0000-0099/30_research_frontier.md",
+        "corpus/FRONT_DOOR.md",
+        "corpus/registers/corpus_evidence_spine.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md"
+      ],
+      "routedTop5": [
+        "corpus/registers/corpus_evidence_spine.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/claims/0000-0099/30_research_frontier.md"
+      ]
+    },
+    {
+      "id": "holdout-claimipedia-publication-batch",
+      "split": "holdout",
+      "capability": "adapter-family",
+      "query": "Which Claimipedia machine batch carries frontier publication candidates while retaining its protocol-family identity?",
+      "expectedSource": "corpus/programmes/frontier/parallel/frontier_parallel_claimipedia_publication_batch.json",
+      "canonicalRank": null,
+      "algebraRank": 10,
+      "fusionRank": 13,
+      "routedRank": 10,
+      "movement": 11,
+      "canonicalTop5": [
+        "corpus/governance/claimipedia_sync_status_2026-10-19.md",
+        "corpus/FRONT_DOOR.md",
+        "corpus/programmes/frontier/parallel/frontier_parallel_09_convergence_checkpoint.md",
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_RETRIEVAL_BENCHMARK.md",
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_COVERAGE.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md",
+        "corpus/claims/0000-0099/00_research_document_map.md",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/admissibility/admissibility_93_frozen_two_tone_within_batch_protocol.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"
+      ]
+    },
+    {
+      "id": "holdout-d02-boundary-source",
+      "split": "holdout",
+      "capability": "scientific-transformation-source",
+      "query": "Which common algebra source retains D02 boundary transformations and their negative admission controls?",
+      "expectedSource": "integrations/claimipedia/research-method/generated/d02-boundary-common-algebra2-graph.json",
+      "canonicalRank": null,
+      "algebraRank": 9,
+      "fusionRank": 14,
+      "routedRank": 9,
+      "movement": 12,
+      "canonicalTop5": [
+        "corpus/programmes/programme-algebra/README.md",
+        "corpus/programmes/admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md",
+        "corpus/programmes/admissibility/admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md",
+        "corpus/programmes/admissibility/admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md",
+        "corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_COVERAGE.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/admissibility/admissibility_82_claimipedia_source_native_paths_pass_live_sourcery_but_dimension_and_operator_gates_remain.md",
+        "corpus/programmes/admissibility/admissibility_83_first_common_algebra2_path_and_legacy_dimension_projection.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_72_claimipedia_sourcery_typed_extraction_no_go.md",
+        "corpus/programmes/admissibility/admissibility_84_all_d02_families_pass_common_algebra2_record_layer.md",
+        "corpus/programmes/admissibility/admissibility_86_positive_spectral_atom_and_measure_evaluation_witness.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json"
+      ]
+    },
+    {
+      "id": "validation-complexity-cards",
+      "split": "validation",
+      "capability": "typed-machine-record",
+      "query": "Which machine ledger classifies preparation sampling detection and verification scaling as polynomial exponential empirical unknown or convergence unknown?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.json",
+      "canonicalRank": null,
+      "algebraRank": null,
+      "fusionRank": null,
+      "routedRank": null,
+      "movement": 0,
+      "canonicalTop5": [
+        "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md",
+        "corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md",
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/programmes/admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md"
+      ],
+      "algebraTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/admissibility/admissibility_07_zone_known_unknown_frontiers.md",
+        "corpus/programmes/admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md"
+      ],
+      "routedTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json"
+      ]
+    },
+    {
+      "id": "validation-detector-register",
+      "split": "validation",
+      "capability": "typed-machine-record",
+      "query": "Which detector register joins frontier areas to computational physical executable and missing-translation detector statuses?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/detector_frontier_register_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 17,
+      "fusionRank": null,
+      "routedRank": 17,
+      "movement": 4,
+      "canonicalTop5": [
+        "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md",
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/open_topics_v1.md",
+        "corpus/programmes/translation-free-exceptional-topology/README.md"
+      ],
+      "algebraTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md",
+        "corpus/programmes/translation-free-exceptional-topology/README.md",
+        "corpus/programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md"
+      ],
+      "routedTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md"
+      ]
+    },
+    {
+      "id": "validation-mystery-distance",
+      "split": "validation",
+      "capability": "adapter-family",
+      "query": "Which Dynatology protocol ledger scores mysteries by carrier dynamics detector evidence and promotion debt?",
+      "expectedSource": "corpus/programmes/dynatology/mystery_distance_register_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 5,
+      "fusionRank": 6,
+      "routedRank": 5,
+      "movement": 16,
+      "canonicalTop5": [
+        "corpus/programmes/dynatology/README.md",
+        "corpus/README.md",
+        "corpus/programmes/dynatology/mystery_atlas_04_deep_distance_to_corpus.md",
+        "corpus/programmes/dynatology/mystery_atlas_00_governance_and_claimipedia_reconciliation.md",
+        "corpus/programmes/quotient-scars/README.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/dynatology/mystery_atlas_04_deep_distance_to_corpus.md",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/dynatology/mystery_distance_register_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/dynatology/mystery_atlas_04_deep_distance_to_corpus.md",
+        "corpus/programmes/dynatology/mystery_atlas_00_governance_and_claimipedia_reconciliation.md",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/dynatology/mystery_atlas_04_deep_distance_to_corpus.md",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/dynatology/mystery_distance_register_v1.json"
+      ]
+    },
+    {
+      "id": "validation-open-topics",
+      "split": "validation",
+      "capability": "typed-machine-record",
+      "query": "Which machine register lists open topic identifiers dependencies nearest evidence and promotion tests for the frontier programme?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 5,
+      "fusionRank": 9,
+      "routedRank": 5,
+      "movement": 16,
+      "canonicalTop5": [
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/programmes/frontier-physics-targets/open_topics_v1.md",
+        "corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md",
+        "corpus/programmes/frontier-physics-targets/corpus_completion_exit_criteria_v1.md",
+        "corpus/programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/open_topics_v1.md",
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json"
+      ]
+    },
+    {
+      "id": "validation-e8-tomography-prose",
+      "split": "validation",
+      "capability": "composed-lineage",
+      "query": "What coupled-wire tomography protocol follows the translation-free E8 programme and specifies the next physical readout?",
+      "expectedSource": "corpus/programmes/translation-free-exceptional-topology/E8_COUPLED_WIRE_TOMOGRAPHY.md",
+      "canonicalRank": 2,
+      "algebraRank": 5,
+      "fusionRank": 2,
+      "routedRank": 5,
+      "movement": -3,
+      "canonicalTop5": [
+        "corpus/programmes/translation-free-exceptional-topology/README.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_COUPLED_WIRE_TOMOGRAPHY.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_FEW_BODY_CLOCK_GAP.md",
+        "corpus/programmes/frontier/wave-7/frontier_wave7_234_translation_free_e8_coupled_wire_and_held_out_root_tomography.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_EDGE_PROTOCOL.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/translation-free-exceptional-topology/README.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_COUPLED_WIRE_TOMOGRAPHY.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/translation-free-exceptional-topology/README.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_COUPLED_WIRE_TOMOGRAPHY.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_FEW_BODY_CLOCK_GAP.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_CONSTITUTIVE_METRIC_GATE.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_CLOCK_TO_ROTOR_CONVERGENCE.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/translation-free-exceptional-topology/README.md",
+        "corpus/programmes/translation-free-exceptional-topology/E8_COUPLED_WIRE_TOMOGRAPHY.md"
+      ]
+    },
+    {
+      "id": "validation-wave-gate-audit",
+      "split": "validation",
+      "capability": "adapter-family",
+      "query": "Which frontier machine audit records wave gate outcomes and propagation status across the research programme?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/frontier_wave_gate_audit_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 12,
+      "fusionRank": 15,
+      "routedRank": 12,
+      "movement": 9,
+      "canonicalTop5": [
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/README.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/transition_operator_propagation_audit_v1.md",
+        "corpus/programmes/programme-algebra/README.md"
+      ],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/README.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md"
+      ]
+    },
+    {
+      "id": "faceted-continuation-map",
+      "split": "faceted-validation",
+      "sourceKind": "machine",
+      "capability": "typed-facet",
+      "query": "Which continuation map records landscape questions decision tests and separate go and no-go signals for programme lanes?",
+      "expectedSource": "corpus/registers/programme/programme_lane_continuation_map.json",
+      "canonicalRank": null,
+      "algebraRank": 6,
+      "fusionRank": 6,
+      "routedRank": 6,
+      "movement": 15,
+      "canonicalTop5": [],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json"
+      ]
+    },
+    {
+      "id": "faceted-admissibility-zone-register",
+      "split": "faceted-validation",
+      "sourceKind": "machine",
+      "capability": "typed-facet",
+      "query": "Which register separates known and unknown experimental bounds from known and unknown theory bounds in the admissibility zone?",
+      "expectedSource": "corpus/programmes/admissibility/admissibility_zone_register_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 3,
+      "fusionRank": 3,
+      "routedRank": 3,
+      "movement": 18,
+      "canonicalTop5": [],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/admissibility/admissibility_zone_register_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier-physics-targets/theory_bridge_audit_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/admissibility/admissibility_zone_register_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier-physics-targets/theory_bridge_audit_v1.json"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/admissibility/admissibility_zone_register_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier-physics-targets/theory_bridge_audit_v1.json"
+      ]
+    },
+    {
+      "id": "faceted-quarter-turn-propagation-audit",
+      "split": "faceted-validation",
+      "sourceKind": "machine",
+      "capability": "typed-facet",
+      "query": "Which propagation audit tracks quarter-turn split-complex and dual-number categories across corpus paths?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/quarter_turn_split_dual_propagation_audit_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 4,
+      "fusionRank": 4,
+      "routedRank": 4,
+      "movement": 17,
+      "canonicalTop5": [],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/quarter_turn_split_dual_propagation_audit_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/quarter_turn_split_dual_propagation_audit_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/quarter_turn_split_dual_propagation_audit_v1.json",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json"
+      ]
+    },
+    {
+      "id": "faceted-documentation-gate",
+      "split": "faceted-validation",
+      "sourceKind": "machine",
+      "capability": "typed-facet",
+      "query": "Which retrieval gate ledger records link authority duplicate contradiction centrality and provenance sections?",
+      "expectedSource": "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json",
+      "canonicalRank": null,
+      "algebraRank": 5,
+      "fusionRank": 5,
+      "routedRank": 5,
+      "movement": 16,
+      "canonicalTop5": [],
+      "algebraTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
+        "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
+        "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json"
+      ],
+      "routedTop5": [
+        "corpus/programmes/frontier-physics-targets/full_corpus_gate_census_v1.json",
+        "corpus/programmes/frontier-physics-targets/physics_math_object_expansion_v1.json",
+        "corpus/programmes/frontier-physics-targets/claim_implication_defeat_graph_v1.json",
+        "corpus/programmes/frontier/wave-7/science_admissibility_instrumentation_v1.json",
+        "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json"
+      ]
+    },
+    {
+      "id": "faceted-transverse-detector-prose",
+      "split": "faceted-validation",
+      "sourceKind": "prose",
+      "capability": "typed-facet",
+      "query": "Where is the transverse joint detector shown to satisfy Onsager closure yet fail injectivity at a reflection quotient?",
+      "expectedSource": "corpus/programmes/admissibility/admissibility_54_transverse_joint_detector_symmetry_ceiling.md",
+      "canonicalRank": 1,
+      "algebraRank": 3,
+      "fusionRank": 1,
+      "routedRank": 1,
+      "movement": -2,
+      "canonicalTop5": [
+        "corpus/programmes/admissibility/admissibility_54_transverse_joint_detector_symmetry_ceiling.md",
+        "corpus/programmes/admissibility/admissibility_53_boundary_lift_to_casimir_thermoelectric_compiler.md",
+        "corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ],
+      "algebraTop5": [
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/programmes/admissibility/admissibility_54_transverse_joint_detector_symmetry_ceiling.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+        "corpus/claims/0000-0099/30_research_frontier.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/admissibility/admissibility_54_transverse_joint_detector_symmetry_ceiling.md",
+        "corpus/programmes/admissibility/admissibility_53_boundary_lift_to_casimir_thermoelectric_compiler.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/admissibility/admissibility_54_transverse_joint_detector_symmetry_ceiling.md",
+        "corpus/programmes/admissibility/admissibility_53_boundary_lift_to_casimir_thermoelectric_compiler.md",
+        "corpus/programmes/admissibility/admissibility_56_certificate_preserving_descent_and_commuting_square_atlas.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/programmes/admissibility/admissibility_107_global_nonlinear_detector_injectivity.md"
+      ]
+    },
+    {
+      "id": "faceted-fixed-index-defect-prose",
+      "split": "faceted-validation",
+      "sourceKind": "prose",
+      "capability": "typed-facet",
+      "query": "Which result says a fixed chiral index cannot carry an additional continuously varying protected defect label?",
+      "expectedSource": "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+      "canonicalRank": 1,
+      "algebraRank": 6,
+      "fusionRank": 1,
+      "routedRank": 1,
+      "movement": -5,
+      "canonicalTop5": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md"
+      ],
+      "algebraTop5": [
+        "corpus/claims/0000-0099/91_multi_branch_active_goal_log.md",
+        "corpus/claims/0000-0099/49_multi_branch_research_registry.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+        "corpus/claims/0000-0099/30_research_frontier.md",
+        "corpus/claims/0000-0099/00_research_document_map.md"
+      ],
+      "fusionTop5": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+        "corpus/claims/0000-0099/30_research_frontier.md",
+        "corpus/claims/0300-0399/321_selector_topology_anomalies_and_the_aiii_index_do_not_by_themselves_select_three_generations.md"
+      ],
+      "routedTop5": [
+        "corpus/programmes/admissibility/admissibility_105_fixed_index_defect_information_no_go.md",
+        "corpus/programmes/admissibility/admissibility_106_reflection_resolved_defect_transport.md",
+        "corpus/syntheses/the_admissibility_frontier_current_synthesis.md",
+        "corpus/claims/0000-0099/40_grand_synthesis_spin23_pole.md",
+        "corpus/programmes/frontier-physics-targets/frontier_physics_target_assessments_v1.md"
+      ]
+    }
+  ]
+}
