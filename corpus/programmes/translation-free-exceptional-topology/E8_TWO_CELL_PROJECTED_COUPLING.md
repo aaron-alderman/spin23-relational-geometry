@@ -35,7 +35,8 @@ relative-cell mode. Both remain inversion-odd.
 This is the first dynamical meaning of the cell index in the nonlinear rotor
 lane: coupling does not merely shift the local line, it resolves motion in
 phase and out of phase between cells. The result is nevertheless a projected
-two-cell certificate. Four local roots have not been compared with a larger
-retained manifold, the full product charge basis was not diagonalized, and no
-width-independent or thermodynamic gap follows. Root-count convergence is the
-next gate, followed by three- and four-cell projected chains.
+two-cell certificate. The [local-root audit](E8_TWO_CELL_ROOT_COUNT_AUDIT.md)
+promotes the gap through eight roots but withholds the quantitative splitting
+coefficient. The full product charge basis was not diagonalized, and no
+width-independent or thermodynamic gap follows. Ten roots or a controlled
+downfolding remainder is next, followed by three- and four-cell chains.

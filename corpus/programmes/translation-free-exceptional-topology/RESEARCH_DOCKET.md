@@ -49,8 +49,9 @@ compact-cell gate; one positive kinetic-metric direction also passes. An open
 perturbation tube and intercell-width promotion remain open; one mixed
 amplitude-plus-metric corner passes and closes the planned finite stencil. A
 four-state-per-cell projected dimer now has a cutoff-stable gap and resolves
-collective from relative-cell modes through J=0.1, but root-count and width
-convergence remain open. The
+collective from relative-cell modes through J=0.1. The projected gap now also
+passes a four/six/eight-root ladder, while the fine splitting coefficient and
+width convergence remain open. The
 E8-specific detector predicts a held-out 240-current root shell. B4 is closed on the
 declared E8-cubed/Leech/Moonshine family: the bulk detector collides and
 \(\dim V_1=(744,24,0)\) separates the three candidates.

@@ -44,6 +44,8 @@
 
 **First intercell result:** [projected two-cell coupling](E8_TWO_CELL_PROJECTED_COUPLING.md)
 
+**Projection audit:** [two-cell local-root convergence](E8_TWO_CELL_ROOT_COUNT_AUDIT.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -286,6 +288,7 @@ translation-free topology result remains valuable after that null.
 - [E8 positive kinetic-metric perturbation](E8_KINETIC_METRIC_PERTURBATION.md)
 - [E8 mixed perturbation corner](E8_MIXED_PERTURBATION_CORNER.md)
 - [E8 projected two-cell coupling](E8_TWO_CELL_PROJECTED_COUPLING.md)
+- [E8 two-cell local-root audit](E8_TWO_CELL_ROOT_COUNT_AUDIT.md)
 
 ## Primary external anchors
 

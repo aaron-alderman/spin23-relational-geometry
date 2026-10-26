@@ -322,6 +322,7 @@ const iterations=Number(args.iterations??64);
 const method=args.method??"lanczos";
 const maxSubspace=Number(args.maxSubspace??16);
 const cycles=Number(args.cycles??40);
+const roots=Number(args.roots??4);
 const kineticStrength=Number(args.kinetic??1);
 const potentialStrength=Number(args.potential??1);
 const channelPotentials=args.channelPotentials?.split(",").map(Number)??null;
@@ -331,7 +332,7 @@ for(const cutoff of cutoffs)for(const branch of branches){
   const started=performance.now();
   const operator=compile(cutoff,branch,{kineticStrength,potentialStrength,channelPotentials,kineticScales});
   const result=method==="davidson"
-    ? davidson(operator,{roots:4,maxSubspace,cycles,tolerance:1e-10,seed:823240+cutoff+(branch==="inverse-kernel"?100:0)})
+    ? davidson(operator,{roots,maxSubspace,cycles,tolerance:1e-10,seed:823240+cutoff+(branch==="inverse-kernel"?100:0)})
     : lanczos(operator,iterations,823239+cutoff+(branch==="inverse-kernel"?100:0));
   const diagnostics=method==="davidson"?spectralDiagnostics(operator,result.ritz,cutoff):undefined;
   const levels=result.ritz.map(({energy,residual})=>({energy,residual}));
@@ -350,7 +351,7 @@ for(const cutoff of cutoffs)for(const branch of branches){
 }
 console.log(JSON.stringify({
   schemaVersion:"translation-free-e8-joined-rotor-solver-output-v1",
-  settings:{cutoffs,branches,method,iterations,maxSubspace,cycles,kineticStrength,potentialStrength,
+  settings:{cutoffs,branches,method,iterations,maxSubspace,cycles,roots,kineticStrength,potentialStrength,
     channelPotentials:channelPotentials??Array(8).fill(potentialStrength),
     kineticScales:kineticScales??Array(8).fill(1),
     meanPotential:(channelPotentials??Array(8).fill(potentialStrength)).reduce((sum,value)=>sum+value,0)/8,

@@ -1,0 +1,6 @@
+import assert from "node:assert/strict";import fs from "node:fs";
+const r=JSON.parse(fs.readFileSync(new URL("../../evidence/data/translation-free-e8-two-cell-root-count-audit-v1.json",import.meta.url),"utf8"));const rel=(a,b)=>Math.abs(b-a)/Math.abs(a);
+assert.equal(r.schemaVersion,"translation-free-e8-two-cell-root-count-audit-v1");assert.deepEqual(r.projectedDimensions,r.localRootCounts.map(x=>x*x));
+for(const point of r.records){for(let i=0;i<2;i++){assert.ok(Math.abs(rel(point.gaps[i],point.gaps[i+1])-point.gapRootDrifts[i])<2e-15);assert.ok(Math.abs(rel(point.splittings[i],point.splittings[i+1])-point.splittingRootDrifts[i])<2e-15);assert.ok(point.gapRootDrifts[i]<0.01);}assert.ok(point.splittingRootDrifts.some(x=>x>0.01));}
+assert.equal(r.gapRootCountPromoted,true);assert.equal(r.symmetryLabelsStable,true);assert.equal(r.splittingCoefficientPromoted,false);assert.match(r.boundary,/fails the one-percent root-count gate/u);
+console.log(JSON.stringify({status:"PASS",localRootCounts:r.localRootCounts,maximumGapRootDrift:Math.max(...r.records.flatMap(x=>x.gapRootDrifts)),minimumFinalGap:Math.min(...r.records.map(x=>x.gaps.at(-1))),maximumFinalSplittingDrift:Math.max(...r.records.map(x=>x.splittingRootDrifts.at(-1))),gapRootCountPromoted:true,splittingCoefficientPromoted:false},null,2));
