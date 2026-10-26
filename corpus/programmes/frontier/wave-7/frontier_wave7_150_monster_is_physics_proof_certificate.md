@@ -379,6 +379,12 @@ Wave 7.227 completes the synthetic three-packet path and repairs the even-arm
 Hoeffding dictionary. The actual \(\pm1\) estimator requires 32308 shots per
 pair, four times the old count. The corrected twin accepts the exact shell and
 rejects every named counterfeit on its preregistered observable.
+Wave 7.228 audits a proposed “self-residence” shortcut. Fixed points, centres,
+character profiles, divisibility, reflective programs and fixed fields are
+not one invariant. After typing the carrier, encoder, decoder and quotient,
+the surviving idea becomes a useful stronger gate: same-carrier traces,
+defect operations and OPE data must reconstruct the marked object and predict
+held-out channels. Catalogue replay does not satisfy that gate.
 
 ## Corpus links
 
@@ -463,6 +469,7 @@ rejects every named counterfeit on its preregistered observable.
 - [24-port commissioning digital twin](frontier_wave7_225_leech_24port_commissioning_digital_twin.md)
 - [Nonlinear commissioning digital twin](frontier_wave7_226_leech_nonlinear_commissioning_digital_twin.md)
 - [Charge-shell digital twin and Hadamard repair](frontier_wave7_227_leech_charge_shell_digital_twin_and_hadamard_repair.md)
+- [Typed self-description and reconstruction gate](frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md)
 - [Orthogonal witness stack](frontier_wave7_118_monster_orthogonal_physics_witness_stack.md)
 
 ## Primary foundations

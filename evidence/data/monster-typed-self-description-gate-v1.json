@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "monster-typed-self-description-gate-v1",
+  "date": "2026-10-26",
+  "sourcePrompt": "https://x.com/introsp3ctor/status/2114516919399190647",
+  "typedDefinition": {
+    "carrier": "a declared set or type X",
+    "descriptionSpace": "a declared set or type Delta",
+    "encoder": "D:X->Delta",
+    "decoder": "R:Delta->X",
+    "equivalence": "a declared relation approximately-equal on X",
+    "selfSet": "Self_(D,R,~)(X)={x in X | R(D(x))~x}",
+    "warning": "Self(G) is not an invariant of a group G until D, R and the equality notion are fixed."
+  },
+  "sourceClaimAudit": [
+    {
+      "criterion": "box symmetry",
+      "status": "counterexample",
+      "correctType": "fixed points of a permutation action on an exponent box",
+      "reason": "For the Monster exponent caps [46,20,9,6,2,3,1,1,1], cap-preserving permutations have order 3!=6, not 9!. Their common fixed set has 1658160 points, not only the origin. If all nine caps were equal and positive, the full S9 action would instead fix every diagonal point."
+    },
+    {
+      "criterion": "central action",
+      "status": "exact after retyping",
+      "correctType": "Z(G)=Fix of all inner automorphisms",
+      "reason": "Centrality is an invariance statement. It does not follow from, or define, decoder recovery from an action table."
+    },
+    {
+      "criterion": "character trace",
+      "status": "exact on the conjugacy-class quotient",
+      "correctType": "the full irreducible-character profile separates conjugacy classes",
+      "reason": "Characters are class functions and cannot distinguish distinct elements in the same conjugacy class. A selected family or finite head requires a separate injectivity proof."
+    },
+    {
+      "criterion": "element order and exact fit",
+      "status": "not self-description",
+      "correctType": "a coarse invariant and a divisibility predicate",
+      "reason": "Lagrange divisibility is necessary for element orders in a finite group but neither divisibility nor an order value normally isolates an element or class."
+    },
+    {
+      "criterion": "meta-grammar and checker artifact",
+      "status": "candidate reflective fixed point",
+      "correctType": "a typed code/interpret/validate diagram",
+      "reason": "Self-validation becomes self-description only if the serializer, interpreter, target equivalence and completeness claim are explicitly proved."
+    },
+    {
+      "criterion": "Frobenius fixed field",
+      "status": "exact fixed-point example",
+      "correctType": "Fix(x->x^3) inside GF(27) is GF(3)",
+      "reason": "This is a genuine endomorphism fixed-point set, but it is not a decoder construction unless an encoder and decoder are additionally supplied."
+    }
+  ],
+  "finiteCertificates": {
+    "monsterPrimeExponentCaps": [46, 20, 9, 6, 2, 3, 1, 1, 1],
+    "capPreservingPermutationCount": 6,
+    "commonFixedBoxPointCount": 1658160,
+    "equalPositiveCapS9FixedPointLowerBound": 2,
+    "s3": {
+      "centreSize": 1,
+      "conjugacyClassSizes": [1, 3, 2],
+      "elementOrderMultiplicities": {
+        "1": 1,
+        "2": 3,
+        "3": 2
+      },
+      "fullIrreducibleCharacterProfileCount": 3,
+      "elementCount": 6
+    },
+    "gf27": {
+      "modulus": "a^3-a-1 over GF(3)",
+      "xCubedFixedCount": 3,
+      "xTo27FixedCount": 27
+    }
+  },
+  "monsterOperationalTarget": {
+    "carrier": "a declared quotient of physical defect labels, VOA realizations or calibrated operator models",
+    "encoder": "same-carrier measurements of twined traces, fusion/power maps, modular response and held-out OPE coefficients",
+    "decoder": "a preregistered reconstruction algorithm returning the carrier object up to the declared equivalence",
+    "admission": [
+      "injectivity on the declared quotient",
+      "stability under measured noise and nuisance transformations",
+      "held-out prediction rather than training-set replay",
+      "same-carrier closure across character, defect and OPE channels",
+      "counterfeit rejection against non-Monster c=24 and lookup-table models"
+    ],
+    "interpretation": "A passing diagram would establish operational self-reconstruction of a physical Monster realization. It would be stronger than numerical resemblance but is not required by the existing mathematical proof of Moonshine."
+  },
+  "verdict": "The source post points toward a useful reconstruction principle, but its six rows are not one theorem. The admissible common core is a typed equalizer or commuting reconstruction diagram; only after quotient, maps and equivalence are fixed can fixed points, characters, reflection and physical self-reconstruction be compared."
+}

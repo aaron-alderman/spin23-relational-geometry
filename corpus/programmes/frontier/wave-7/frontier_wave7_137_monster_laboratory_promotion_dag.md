@@ -479,6 +479,13 @@ source-normalized zero modes and full cross-sector Griess product. Wave 7.155
 turns their sharpest entries into a blind eight-seed protocol with target
 \(-7/8\), 0.02 tolerance and 230736 total shots. These improve Gate I but do
 not move the single-carrier frontier past A.
+Wave 7.228 adds a provenance test above the existing gates rather than a new
+shortcut around them. A declared measurement encoder and reconstruction
+decoder must be injective on the chosen quotient, robust to nuisances and
+predictive on held-out character, defect and OPE channels. Its finite audit
+also rejects the proposed \(9!\)-box and order-divisibility arguments. This
+gate can certify operational self-reconstruction only after A--I have supplied
+one carrier; it cannot manufacture Monster provenance from stored metadata.
 
 ## Claim boundary
 
@@ -551,6 +558,7 @@ P4 questions.
 - [24-port commissioning digital twin](frontier_wave7_225_leech_24port_commissioning_digital_twin.md)
 - [Nonlinear commissioning digital twin](frontier_wave7_226_leech_nonlinear_commissioning_digital_twin.md)
 - [Charge-shell digital twin and Hadamard repair](frontier_wave7_227_leech_charge_shell_digital_twin_and_hadamard_repair.md)
+- [Typed self-description and reconstruction gate](frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md)
 - [Product-to-coupled dependency audit](frontier_wave7_190_leech_product_to_coupled_dependency_audit.md)
 - [Rotor-strip gap and edge-mode count](frontier_wave7_161_leech_rotor_strip_gap_and_edge_count.md)
 - [Leech-edge chiral-dispersion preregistration](frontier_wave7_162_leech_edge_chiral_dispersion_preregistration.md)

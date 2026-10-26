@@ -22,6 +22,10 @@ assert.match(evidence.deduction.at(-1), /exact physical realization/);
 assert.equal(evidence.independentPhysicalRealization.status, "established-at-declared-scope");
 assert.equal(evidence.laboratoryFrontier.status, "open");
 assert.equal(evidence.laboratoryFrontier.protocol, "monster-laboratory-promotion-dag-v1");
+assert.equal(evidence.operationalSelfReconstruction.status, "optional-stronger-frontier");
+assert.equal(evidence.operationalSelfReconstruction.evidence, "monster-typed-self-description-gate-v1");
+assert.match(evidence.operationalSelfReconstruction.requirement, /held-out trace, defect and OPE channels/);
+assert.match(evidence.operationalSelfReconstruction.boundary, /does not refute/);
 assert.ok(evidence.notDeduced.length >= 5);
 for (const forbidden of ["four-dimensional spacetime", "fundamentally selects", "response algebra is gravity", "E8 gauge field"]) {
   assert.ok(evidence.notDeduced.some((item) => item.includes(forbidden)), `missing scope refusal: ${forbidden}`);

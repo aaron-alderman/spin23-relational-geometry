@@ -59,6 +59,10 @@ const labOpen = evidence.gates.filter((gate) => gate.status === "laboratory-open
 assert.deepEqual(labOpen, ["D", "E", "F", "G", "H", "I"]);
 assert.equal(evidence.currentFrontier.firstUnclosedGate, "A");
 assert.equal(evidence.promotion.natureSelectionStillOpen, true);
+assert.equal(evidence.optionalProvenanceGate.id, "R");
+assert.deepEqual(evidence.optionalProvenanceGate.dependsOn, ["I"]);
+assert.match(evidence.optionalProvenanceGate.pass, /injective and stable reconstruction/);
+assert.match(evidence.optionalProvenanceGate.failMeaning, /does not undo Gates A through I/);
 
 console.log(JSON.stringify({
   status: "PASS",

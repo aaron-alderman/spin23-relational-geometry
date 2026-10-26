@@ -1267,6 +1267,17 @@ that a natural material, four-dimensional spacetime, gravity or the Standard
 Model selects the Monster. Those are laboratory and nature-selection claims,
 not missing clauses silently folded into the word “physics.”
 
+A proposed “self-residence” synthesis has also been audited against this
+literature and corpus. Its useful core is not a new invariant
+\(\operatorname{Self}(G)\): the result changes with the encoder, decoder and
+equivalence relation. Centres, character profiles, Frobenius fixed fields,
+order divisibility and self-validating programs therefore cannot be identified
+without changing types. [Wave 7.228](../frontier/wave-7/frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md)
+retains the strongest version as an operational target: measured twined
+traces, fusion/power maps and OPE data on one carrier reconstruct the marked
+object and predict held-out channels. That would strengthen physical
+provenance, but catalogue replay and numerical fitting do not achieve it.
+
 ## Frontier after the review
 
 The literature does supply a physical string-theory realization of the
