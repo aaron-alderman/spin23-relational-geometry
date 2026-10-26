@@ -2,6 +2,7 @@
 
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
+import fs from "node:fs";
 
 const names = ["Melotte_25", "Melotte_111", "Melotte_22", "Melotte_20", "IC_2391", "IC_2602", "NGC_2451A", "NGC_2632"];
 const base = "https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/A%2bA/673/A114/members";
@@ -146,8 +147,13 @@ const pairwise = [];
 for (let i = 0; i < clusters.length; i += 1) for (let j = i + 1; j < clusters.length; j += 1) pairwise.push({ left: clusters[i].name, right: clusters[j].name,
   separationPc: norm(clusters[i].centreIcrsPc.map((v,k)=>v-clusters[j].centreIcrsPc[k])), directorAngleDeg: acuteDeg(clusters[i].directorIcrs, clusters[j].directorIcrs) });
 
-console.log(JSON.stringify({ schemaVersion: "0.1.0", status: "retrospective homogeneous-catalogue field spike; not confirmatory",
+const result = { schemaVersion: "0.1.0", status: "retrospective homogeneous-catalogue field spike; not confirmatory",
   authority: { catalogue: "Hunt and Reffert 2023 corrected Gaia DR3 members", source: "J/A+A/673/A114/members", doi: "10.1051/0004-6361/202346285" },
   frozenSelection: { clusterNames: names, memberGate: "inrt=True; Prob>=0.5; parallax>0; RUWE<=1.4; NSS=0", rvGate: "finite RV and e_RV<=5 km/s; then 3 robust residual sigmas" },
   clusters, m44CrossCatalogueAcuteAngleDeg: acuteDeg(m44.directorIcrs, frozenM44), pairwise, leaveOneClusterOut: summaries,
-  verdict: "the lowest leave-one-cluster-out error determines whether the present sparse ordinary director estimates prefer flat, smooth-affine or two-region structure; no four-dimensional curl or Frobenius claim is admitted without an explicit normal lift and denser independent field" }, null, 2));
+  verdict: "the lowest leave-one-cluster-out error determines whether the present sparse ordinary director estimates prefer flat, smooth-affine or two-region structure; no four-dimensional curl or Frobenius claim is admitted without an explicit normal lift and denser independent field" };
+const output=`${JSON.stringify(result,null,2)}\n`;
+if(process.argv.includes("--write-full-snapshot")){
+  fs.writeFileSync(new URL("../evidence/data/local-cluster-director-field-full-snapshot-v1.json",import.meta.url),output);
+  console.log("wrote evidence/data/local-cluster-director-field-full-snapshot-v1.json");
+}else console.log(output.trimEnd());
