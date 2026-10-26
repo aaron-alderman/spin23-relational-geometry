@@ -83,6 +83,10 @@ test("corpus hierarchy nodes are navigable index pages", () => {
   }
   const frontier = readFileSync(join(siteRoot, "library", "corpus", "programmes", "frontier", "index.html"), "utf8");
   assert.match(frontier, /href="wave-7\/index\.html">Wave 7<\/a>/u);
+  assert.match(frontier, /<code>parallel\/<\/code>/u);
+  assert.match(frontier, /Directory · 1 document</u);
+  assert.match(frontier, /Open directory →/u);
+  assert.doesNotMatch(frontier, /<code>corpus\/programmes\/frontier\/parallel\/<\/code>/u);
 });
 
 test("GitHub-style corpus tables render as semantic HTML tables", () => {
