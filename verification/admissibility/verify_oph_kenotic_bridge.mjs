@@ -11,6 +11,7 @@ const bridgePath = "corpus/programmes/observer-patch-holography/oph_bridge_matri
 const lanePath = "corpus/programmes/observer-patch-holography/README.md";
 const programmePath = "corpus/programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md";
 const geometryPath = "corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md";
+const literaturePath = "corpus/programmes/observer-patch-holography/oph_literature_frontier_and_emulator_v1.md";
 const synthesisPath = "corpus/syntheses/the_admissibility_frontier_current_synthesis.md";
 const chapterPath = "book/edition-3/chapters/08-admissibility-frontier.md";
 const detectorPath = "corpus/programmes/frontier-physics-targets/detector_frontier_register_v1.json";
@@ -53,7 +54,7 @@ requireCondition(emulatorTopic.detectorIds.includes("DET-039"), "OT-055 does not
 requireCondition(detector.sourceRefs.includes(lanePath), "DET-039 does not cite OPH lane");
 requireCondition(detector.sourceRefs.includes(geometryPath), "DET-039 does not cite executed geometry");
 requireCondition(topic.status === "closed" && topic.closureEvidence === geometryPath, "OT-054 closure mismatch");
-requireCondition(emulatorTopic.status === "active" && emulatorTopic.progressEvidence === geometryPath, "OT-055 progress mismatch");
+requireCondition(emulatorTopic.status === "active" && emulatorTopic.progressEvidence === literaturePath, "OT-055 progress mismatch");
 
 for (const path of [lanePath, programmePath, synthesisPath, chapterPath]) {
   const text = readText(path);

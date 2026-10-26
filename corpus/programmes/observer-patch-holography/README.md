@@ -34,7 +34,8 @@ The result strengthens the corpus's detector and local-closure language. It does
 2. [Jordan--channel--Lie analysis](oph_jordan_channel_lie_bridge_v1.md) identifies the exact contact and the non-identifications.
 3. [Executable bridge programme](oph_record_law_executable_programme_v1.md) gives build, bridge, physics and propagation gates.
 4. [Channel geometry and local-closure result](oph_channel_geometry_and_local_closure_v1.md) executes Gates 1--4.
-5. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
+5. [Literature frontier and emulator plan](oph_literature_frontier_and_emulator_v1.md) places the result against quantum-channel research and specifies Gate 5.
+6. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
 
 ## What is filled
 

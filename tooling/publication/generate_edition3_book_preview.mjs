@@ -1355,6 +1355,7 @@ const sectionEvidenceOverrides = {
     "corpus/programmes/observer-patch-holography/oph_jordan_channel_lie_bridge_v1.md",
     "corpus/programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md",
     "corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md",
+    "corpus/programmes/observer-patch-holography/oph_literature_frontier_and_emulator_v1.md",
   ],
   "Three local motion types": [
     "corpus/programmes/admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md",
