@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 
 const record = JSON.parse(fs.readFileSync(new URL("../../evidence/data/monster-typed-self-description-gate-v1.json", import.meta.url), "utf8"));
+const bridge = JSON.parse(fs.readFileSync(new URL("../../evidence/data/moonshine-program-lattice-bridge-v1.json", import.meta.url), "utf8"));
 assert.equal(record.schemaVersion, "monster-typed-self-description-gate-v1");
 
 const factorial = n => Array.from({length:n}, (_, i) => i + 1).reduce((a, b) => a * b, 1);
@@ -79,11 +80,17 @@ assert.equal(fixed3.length, record.finiteCertificates.gf27.xCubedFixedCount);
 assert.equal(fixed27.length, record.finiteCertificates.gf27.xTo27FixedCount);
 
 assert.equal(record.sourceClaimAudit.filter(x => x.status.startsWith("exact")).length, 3);
+assert.deepEqual(record.knownCorpusCollision.domain, ["23A", "23B"]);
+assert.equal(record.knownCorpusCollision.injective, false);
+assert.equal(record.knownCorpusCollision.sourceEvidence, "moonshine-program-lattice-bridge-v1");
+assert.match(bridge.order23MoonshineBoundary.traceDegeneracy, /same McKay-Thompson series/);
+assert.match(bridge.order23OrientationConvention.status, /oriented-generator convention/);
 assert.match(record.verdict, /typed equalizer or commuting reconstruction diagram/);
 console.log(JSON.stringify({
   status: "PASS",
   box: {capPermutationCount, fixedBoxPoints, fullS9: factorial(9)},
   s3: {elements: permutations.length, centre: centre.length, conjugacyClassSizes: classes.map(c => c.length).sort((a,b)=>a-b), orderCounts, characterProfiles: classProfiles.length},
   gf27: {fixedByCube: fixed3.length, fixedByPower27: fixed27.length},
-  operationalTarget: "injective, stable, held-out same-carrier reconstruction"
+  operationalTarget: "injective, stable, held-out same-carrier reconstruction",
+  knownCollision: "23A and 23B have the same scalar genus-one encoder output"
 }));

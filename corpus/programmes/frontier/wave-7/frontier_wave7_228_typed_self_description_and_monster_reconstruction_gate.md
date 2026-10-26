@@ -18,9 +18,9 @@ The proposed set
  \operatorname{Self}(G)=\{g\in G:R(D(g))=g\}
 \]
 
-is not an invariant of (G). Its value depends on a carrier (X), a
-description space \(\Delta\), an encoder (D:X\to\Delta), a decoder
-(R:\Delta\to X), and the equality or quotient under which reconstruction is
+is not an invariant of \(G\). Its value depends on a carrier \(X\), a
+description space \(\Delta\), an encoder \(D:X\to\Delta\), a decoder
+\(R:\Delta\to X\), and the equality or quotient under which reconstruction is
 judged. The admissible form is therefore
 
 \[
@@ -28,7 +28,7 @@ judged. The admissible form is therefore
  =\{x\in X:R(D(x))\sim x\}.}
 \]
 
-This is an equalizer of the identity and (R\circ D), possibly after passage
+This is an equalizer of the identity and \(R\circ D\), possibly after passage
 to a declared quotient. With those types fixed, self-description becomes a
 strong and testable reconstruction property. Without them, fixed points,
 centrality, character profiles, integer divisibility and program reflection
@@ -38,14 +38,14 @@ cannot be counted in the same table.
 
 | proposal | correct mathematical object | audit |
 |---|---|---|
-| exponent-box symmetry | common fixed points of a permutation action | the Monster cap vector gives (3!=6) cap-preserving permutations and 1,658,160 common fixed box points, not (9!) and one point |
-| central elements | fixed points of all inner automorphisms | exact after retyping; this is (Z(G)), not decoder recovery |
-| character profile | invariant of (G/\!\!/G), the conjugacy-class set | a complete irreducible profile separates classes, never elements within one class; a finite Moonshine head needs its own injectivity proof |
+| exponent-box symmetry | common fixed points of a permutation action | the Monster cap vector gives \(3!=6\) cap-preserving permutations and 1,658,160 common fixed box points, not \(9!\) and one point |
+| central elements | fixed points of all inner automorphisms | exact after retyping; this is \(Z(G)\), not decoder recovery |
+| character profile | invariant of \(G/\!\!/G\), the conjugacy-class set | a complete irreducible profile separates classes, never elements within one class; a finite Moonshine head needs its own injectivity proof |
 | element order / exact fit | coarse invariant and divisibility predicate | neither order nor divisibility normally isolates an element or class |
 | meta-grammar | reflective code--interpret--validate diagram | potentially genuine, but serializer, interpreter, equivalence and completeness must be stated |
-| Frobenius | endomorphism fixed-point subfield | exact: (x\mapsto x^3) fixes 3 elements of \(\mathbb F_{27}\), while (x\mapsto x^{27}) fixes all 27 |
+| Frobenius | endomorphism fixed-point subfield | exact: \(x\mapsto x^3\) fixes 3 elements of \(\mathbb F_{27}\), while \(x\mapsto x^{27}\) fixes all 27 |
 
-The executable certificate makes the distinction concrete in (S_3). Its
+The executable certificate makes the distinction concrete in \(S_3\). Its
 centre has one element; its six elements occupy conjugacy classes of sizes
 1, 3 and 2; the full irreducible-character profiles distinguish exactly the
 three classes; and element order has multiplicities 1, 3 and 2. These are
@@ -58,9 +58,9 @@ the Monster order are
  (46,20,9,6,2,3,1,1,1).
 \]
 
-Only the three cap-one coordinates may be freely permuted, giving (S_3),
-not (S_9). Conversely, if all nine caps were equal and positive so that the
-full (S_9) acted, every constant diagonal tuple would be fixed, so the origin
+Only the three cap-one coordinates may be freely permuted, giving \(S_3\),
+not \(S_9\). Conversely, if all nine caps were equal and positive so that the
+full \(S_9\) acted, every constant diagonal tuple would be fixed, so the origin
 would still not be unique.
 
 ## What the corrected idea contributes to the physics programme
@@ -87,12 +87,34 @@ It is a preregistered commuting diagram on one physical carrier:
 
 Admission requires injectivity on the declared quotient, stability under the
 measured nuisance model, held-out predictions, same-carrier closure across
-the character/defect/OPE channels, and rejection of non-Monster (c=24) and
+the character/defect/OPE channels, and rejection of non-Monster \(c=24\) and
 lookup-table counterfeits. The held-out clause is decisive: replaying a stored
 catalogue proves software parity, not physical self-description.
 
+## The corpus already contains the decisive injectivity test
+
+The ordinary genus-one scalar encoder is known to obey
+
+\[
+ D(23A)=T_{23A}=T_{23B}=D(23B).
+\]
+
+Therefore no decoder fed only that series can return the oriented input on
+the two-element carrier \(\{23A,23B\}\). This is not an implementation
+shortcoming; it is a proof of non-injectivity. Self-reconstruction becomes
+well typed in exactly two ways:
+
+1. declare the carrier to be the unoriented quotient \(23AB\); or
+2. enlarge \(D\) with an orientation-sensitive commuting-pair, genus-two or
+   defect-junction observable.
+
+This recasts the programme's long-running orientation problem as a precise
+decoder obstruction. The missing observable is not decorative extra data: it
+is the minimum kind of datum required to make oriented self-description
+possible at all.
+
 This gives the corpus a useful additional frontier. The existing programme
-asks whether a device realizes (V^\natural). The reconstruction gate asks
+asks whether a device realizes \(V^\natural\). The reconstruction gate asks
 whether a finite set of its own operational observables can recover and then
 predict the rest of its marked structure. Passing would be a powerful form of
 physical provenance and autonomous calibration. Failing would not refute
@@ -103,7 +125,7 @@ self-description dictionary.
 
 - **Theorem-level:** centres are inner-automorphism fixed points; full
   irreducible characters separate conjugacy classes; the stated finite box,
-  (S_3) and \(\mathbb F_{27}\) counts are executable.
+  \(S_3\) and \(\mathbb F_{27}\) counts are executable.
 - **Corpus inference:** a typed reconstruction diagram fits the existing
   same-carrier trace, defect and Griess witness stack.
 - **Conjecture:** a practically finite, noise-stable Moonshine observable set
@@ -120,6 +142,7 @@ self-description dictionary.
 - [Signal--artifact identifiability](frontier_wave7_223_leech_signal_artifact_identifiability.md)
 - [Self-generated holonomy projector no-go](../../admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md)
 - [Typed action, return map and terminal tests](../../../claims/1100-1199/1192_how_the_programme_closes_over_itself_a_single_typed_action_a_return_map_and_terminal_tests.md)
+- [Moonshine programme/lattice bridge](../../moonshine-program-lattice/README.md)
 
 ## Sources
 
