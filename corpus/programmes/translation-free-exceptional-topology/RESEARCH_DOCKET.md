@@ -46,7 +46,8 @@ gap (0.1019267219), with boundary probability below (3\times10^{-5}).
 Parity requires an odd sine/phase drive to see the first gap. Five scalar
 coupling ratios and two non-collinear unequal-channel directions now pass the
 compact-cell gate; one positive kinetic-metric direction also passes. An open
-perturbation tube, mixed perturbations and intercell-width promotion remain open. The
+perturbation tube and intercell-width promotion remain open; one mixed
+amplitude-plus-metric corner passes and closes the planned finite stencil. The
 E8-specific detector predicts a held-out 240-current root shell. B4 is closed on the
 declared E8-cubed/Leech/Moonshine family: the bulk detector collides and
 \(\dim V_1=(744,24,0)\) separates the three candidates.

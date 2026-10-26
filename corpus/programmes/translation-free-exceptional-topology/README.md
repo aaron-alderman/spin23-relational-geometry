@@ -40,6 +40,8 @@
 
 **Metric stability:** [positive kinetic-metric perturbation](E8_KINETIC_METRIC_PERTURBATION.md)
 
+**Cross-perturbation closure:** [mixed amplitude-plus-metric corner](E8_MIXED_PERTURBATION_CORNER.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -280,6 +282,7 @@ translation-free topology result remains valuable after that null.
 - [E8 unequal-channel amplitude perturbation](E8_CHANNEL_AMPLITUDE_PERTURBATION.md)
 - [E8 channel-amplitude stability stencil](E8_CHANNEL_AMPLITUDE_STENCIL.md)
 - [E8 positive kinetic-metric perturbation](E8_KINETIC_METRIC_PERTURBATION.md)
+- [E8 mixed perturbation corner](E8_MIXED_PERTURBATION_CORNER.md)
 
 ## Primary external anchors
 
