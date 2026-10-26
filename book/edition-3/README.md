@@ -10,7 +10,7 @@ The next route to new physics may begin not with higher energy but with greater 
 
 > **Authority boundary.** This edition reports exact calculations, bounded constructions, conditional physical bridges and closed branches. It is not empirical confirmation, peer review or a derivation of the Standard Model. The strong claim that admissibility is ontologically prior to physics remains a research proposal; the finesse pathway and its typed tests are the practical result established here.
 
-> **Call to action.** Help build the distributed search: take one carrier, theorem, computation, detector, negative control or experimental gate; prove it, build it, reproduce it or kill it; then return a packet another contributor can continue. [Read *Do Not Search the Monster. Build the Ladder.*](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md)
+> **Call to action.** Help build the distributed search: take one carrier, theorem, computation, detector, negative control or experimental gate; prove it, build it, reproduce it or kill it; then return a packet another contributor can continue. [Join the Halloween Monster Hunt](https://aaron-alderman.github.io/halloween-monster-hunt/) or [read the full call to action](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md).
 
 ## Contents
 
