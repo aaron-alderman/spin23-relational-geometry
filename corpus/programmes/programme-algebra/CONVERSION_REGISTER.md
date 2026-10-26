@@ -2,7 +2,7 @@
 
 **Date:** 26 October 2026
 
-**Status:** active whole-corpus conversion goal; parallel lane remains non-replacing
+**Status:** L0–L6 conversion complete with explicit boundaries; parallel lane remains non-replacing
 
 ## Completion criterion
 
@@ -59,3 +59,8 @@ is not a scientific failure or an excuse to infer missing structure.
 The generated coverage report is the controlling progress measure. Counts may
 rise as atomization becomes finer; status is determined by closed gates rather
 than by a shrinking file count alone.
+
+The compiler's `conversionAudit` closes this conversion criterion only when all
+six levels pass. It deliberately does not close the replacement gate: held-out
+retrieval/reasoning comparison, human reading quality and an explicit migration
+decision remain separate work.

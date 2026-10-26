@@ -97,7 +97,9 @@ The compiler writes:
   disposable archive is intentionally ignored by Git and is regenerated
   locally or in CI; its exact hashes and sizes remain in the tracked manifest;
 - `generated/PROGRAMME_ALGEBRA_COVERAGE.md` — the human-readable coverage and
-  boundary report.
+  boundary report;
+- `generated/PROGRAMME_ALGEBRA_JOURNEYS.md` — the human reading projection for
+  composed ALE routes, empirical-return surfaces and the honest remainder.
 
 Running without `--write` performs the same compilation and prints the summary
 without changing files.

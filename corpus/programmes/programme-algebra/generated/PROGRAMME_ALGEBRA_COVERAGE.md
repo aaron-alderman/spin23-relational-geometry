@@ -8,16 +8,16 @@
 
 ## Result
 
-The compiler projects every retained in-scope corpus source: **2,262** Markdown documents and **282** JSON or image materials. The machine layer exposes **28,140** top-level JSON record boundaries. The prose layer contains **31,727** authored sections and **170,483** bounded semantic units. It retains **247,566** observed containment or link relations and **3,513** additional referenced artifacts.
+The compiler projects every retained in-scope corpus source: **2,264** Markdown documents and **282** JSON or image materials. The machine layer exposes **28,141** top-level JSON record boundaries. The prose layer contains **31,736** authored sections and **170,541** bounded semantic units. It retains **247,646** observed containment or link relations and **3,517** additional referenced artifacts.
 
-The epistemic lane recognizes **118** explicit parent-to-child research updates: **98** pass the evidence, classified-state, exact-signature and bounded-authority gate, while **20** remain as explicit refusal records. Their maximal chains produce **16** admitted and **15** rejected ALE route receipts. The empirical-return lane finds **87** experiment-shaped records: **61** join all six required fields and **26** retain their missing-field refusals. Scientific admission remains intentionally narrower. The four D02 seed families contribute **45** typed scientific objects and **16** admitted transformations; **15** transformations fail the strict gate. Of **18** bounded queries, **4** have at least one admitted candidate and **14** retain the negative boundary.
+The epistemic lane recognizes **119** explicit parent-to-child research updates: **99** pass the evidence, classified-state, exact-signature and bounded-authority gate, while **20** remain as explicit refusal records. Their maximal chains produce **16** admitted and **15** rejected ALE route receipts. The empirical-return lane finds **87** experiment-shaped records: **61** join all six required fields and **26** retain their missing-field refusals. Scientific admission remains intentionally narrower. The four D02 seed families contribute **45** typed scientific objects and **16** admitted transformations; **15** transformations fail the strict gate. Of **18** bounded queries, **4** have at least one admitted candidate and **14** retain the negative boundary.
 
 ## Coverage by depth
 
 | Depth | Status | Meaning |
 |---|---|---|
 | Structural | **Complete** | Every in-scope Markdown, JSON and PNG source has an exact hash-bound object; every heading, bounded Markdown unit and top-level JSON record has a stable address. |
-| Epistemic | **Partial** | 2006 documents declare status; 256 remain visibly unclassified. Explicit parent declarations may become proposal-only research-state transformations, but only after the epistemic gate passes. |
+| Epistemic | **Partial** | 2008 documents declare status; 256 remain visibly unclassified. Explicit parent declarations may become proposal-only research-state transformations, but only after the epistemic gate passes. |
 | Composed routes | **Partial** | Maximal explicit parent chains retain assumption, loss and evidence valuations; any failed edge, cycle or depth overflow rejects the route. |
 | Empirical return | **Partial** | Complete packets join preparation, intervention, detector, nuisance model, record and decision rule. Admission means protocol completeness, never execution or empirical confirmation. |
 | Scientific | **Seed only** | Only transformations satisfying exact endpoint, dimension, assumption, loss, evidence and authority gates are admitted. Current admitted families: D02 local, operator, rank-change and boundary. |
@@ -39,7 +39,7 @@ The epistemic lane recognizes **118** explicit parent-to-child research updates:
 | frontier-experiment-atlas | 24 |
 | frontier-experiment-programme | 22 |
 | frontier-parallel-claim | 155 |
-| frontier-register | 11,209 |
+| frontier-register | 11,210 |
 | generic-ledger-record | 318 |
 | gravity-publication-claim | 455 |
 | lane-expansion-record | 50 |
@@ -59,7 +59,7 @@ Fallback records remain structurally complete but need a schema-specific adapter
 - Duplicate object identities: **0**
 - Missing kernel coordinates: **0**
 - Dangling compiled relations: **0**
-- Corpus source digest: `76a48d73eece600bb29fd9a382d805b1111d1bd4fa5ee6c680cd070887643721`
+- Corpus source digest: `638fd9e62c039999aad031c370da12880dd876b3bf8a744f8233d32e736c6c49`
 
 ## Boundary
 

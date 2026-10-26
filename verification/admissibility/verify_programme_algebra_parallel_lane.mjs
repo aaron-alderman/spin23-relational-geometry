@@ -161,6 +161,10 @@ if (algebra.summary.scientificFamilies !== 4) failures.push("expected four D02 s
 if (algebra.summary.queriesWithCandidates !== 4) failures.push("expected four admitted positive D02 queries");
 if (algebra.summary.queriesWithoutCandidates !== 14) failures.push("expected fourteen negative D02 queries");
 if (algebra.summary.rejectedScientificTransformations !== 15) failures.push("expected fifteen retained D02 rejection fixtures");
+if (algebra.conversionAudit.protocol !== "spin23-programme-algebra-conversion-audit/1") failures.push("conversion audit protocol mismatch");
+if (algebra.conversionAudit.status !== "complete-with-explicit-boundaries") failures.push("conversion audit status mismatch");
+for (const [level, result] of Object.entries(algebra.conversionAudit.levels)) if (result.passed !== true) failures.push(`conversion level failed: ${level}`);
+if (algebra.conversionAudit.passed !== true || algebra.coverage.conversion.passed !== true) failures.push("whole-corpus conversion audit failed");
 
 console.log(JSON.stringify({
   protocol: "verify-spin23-programme-algebra-parallel-lane/1",
