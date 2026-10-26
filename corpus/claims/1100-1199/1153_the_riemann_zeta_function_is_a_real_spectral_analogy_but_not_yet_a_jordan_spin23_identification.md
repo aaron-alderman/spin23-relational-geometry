@@ -283,6 +283,18 @@ A direct arithmetic branch becomes serious only if at least one of the following
 
 Without one of these, the zeta connection should remain a conceptual analogy.
 
+## 10.1 Update: a natural local-arithmetic spectral family now exists
+
+[AZ-147](../../programmes/admissibility/admissibility_147_xi_genus_two_weil_spectral_compression_and_hyperbolic_trace_gate.md)
+records an important refinement. Suzuki constructs self-adjoint extensions of
+the differentiation operator in Hilbert spaces defined by Weil's quadratic form
+on finite intervals. Assuming RH, their positive eigenvalues converge
+monotonically from above to the distinct positive zeta-zero ordinates as the
+interval expands, even though each finite problem is defined from local
+archimedean and prime-power data rather than the zeros. This crosses the
+“natural operator” gate conditionally. It does not prove RH: positivity of the
+unshifted Weil form and the global spectral realization enter under RH.
+
 ## 11. Decision
 
 Keep the Riemann zeta function as a high-value comparison object, not as a claimed component of the physical theory.

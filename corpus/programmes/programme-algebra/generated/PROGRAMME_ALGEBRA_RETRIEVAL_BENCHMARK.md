@@ -16,7 +16,7 @@ Each cell is Recall@10 / mean reciprocal rank.
 
 | Split | Cases | Canonical | Algebra | Naive fusion | Routed |
 |---|---:|---:|---:|---:|---:|
-| calibration | 6 | 0.333 / 0.250 | 1.000 / 0.487 | 0.833 / 0.378 | 0.833 / 0.546 |
+| calibration | 6 | 0.333 / 0.250 | 1.000 / 0.487 | 0.833 / 0.380 | 0.833 / 0.546 |
 | holdout | 6 | 0.333 / 0.222 | 1.000 / 0.337 | 0.667 / 0.432 | 1.000 / 0.480 |
 | validation | 6 | 0.167 / 0.083 | 0.500 / 0.124 | 0.500 / 0.141 | 0.500 / 0.124 |
 | faceted-validation | 6 | 0.333 / 0.333 | 1.000 / 0.242 | 1.000 / 0.492 | 1.000 / 0.492 |
@@ -29,7 +29,7 @@ Each cell is Recall@10 / mean reciprocal rank.
 | calibration | calibration-e8-edge-lineage | 2 | 9 | 3 | 9 |
 | calibration | calibration-complete-experiment-programmes | — | 1 | 2 | 1 |
 | calibration | calibration-incomplete-experiment-atlas | — | 2 | — | — |
-| calibration | calibration-instrumentation-return | — | 6 | 10 | 6 |
+| calibration | calibration-instrumentation-return | — | 6 | 9 | 6 |
 | calibration | calibration-defeat-graph | — | 1 | 3 | 1 |
 | holdout | holdout-detector-route-refusal | 3 | 7 | 1 | 3 |
 | holdout | holdout-casimir-platform-route | 1 | 3 | 1 | 1 |
@@ -68,6 +68,6 @@ Each cell is Recall@10 / mean reciprocal rank.
 
 Expected sources test navigation and structural recovery only. They do not establish the truth, completeness or scientific authority of any source.
 
-- Corpus digest: `9c8855045ee860dbddcf4d93ce571468cc71959101072127c752591164135529`
-- Algebra archive: `75c5363968d3bac90678fa0fe3815886f530e384ef278f6313f18ec90a592160`
+- Corpus digest: `56075c6f0228bf230c08c896d430477bb975d1e11e1728fdcf527427d7dd4c58`
+- Algebra archive: `ce024770e4d87d732120b31fb7e72ba3e5549bcf5fc1b15ce5591a9d0f9de8ff`
 - Suite: `2fc979749f8788ff56b3278fa4c510af05127ae56c34fdac57393268a834cb64`
