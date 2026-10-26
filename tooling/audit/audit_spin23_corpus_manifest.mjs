@@ -8,10 +8,19 @@ const write = process.argv.includes("--write");
 const trackedOnly = process.argv.includes("--tracked-only");
 const manifestName = "corpus/registers/spin23_corpus_manifest.json";
 const derivedReleaseSurfaces = new Set([
+  // These generated navigation/search surfaces bind back to the canonical
+  // manifest or to one another. They remain independently freshness-tested,
+  // but including their bytes here would make the manifest self-referential.
+  "corpus/EVIDENCE_SPINE.md",
+  "corpus/FRONT_DOOR.md",
+  "corpus/registers/corpus_evidence_spine.json",
+  "corpus/registers/corpus_front_door.json",
   "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.json",
   "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.md",
   "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.json",
   "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
+  "tooling/search/benchmark_baseline_v1.json",
+  "tooling/search/sourcery_admission_candidate_v1.json",
 ]);
 const claimsDirectory = "corpus/claims";
 const governanceFiles = [

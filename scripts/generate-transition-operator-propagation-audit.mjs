@@ -68,8 +68,11 @@ function sha256(text) {
 // verified, but do not treat them as upstream physics documents here.
 const excludedOutputs = new Set([
   outputMd,
+  "corpus/EVIDENCE_SPINE.md",
+  "corpus/FRONT_DOOR.md",
   "corpus/programmes/frontier-physics-targets/adversarial_release_audit_v1.md",
   "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
+  "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.md",
 ]);
 const documents = walk(corpusRoot)
   .map(file => ({ path: rel(file), text: fs.readFileSync(file, "utf8") }))

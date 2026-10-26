@@ -6,7 +6,7 @@ This is a generated atlas, not a claim of truth or completeness. Its machine-rea
 
 **Authority boundary.** This atlas reports repository structure and declared epistemic surfaces. It does not promote claims, replace source evidence, or grant publication, corpus-admission, runtime, or deployment authority.
 
-**Coverage.** 16 declared roots across 4 routes; 6886 retained inventory objects; 5053 objects reachable through local links; 6886 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
+**Coverage.** 16 declared roots across 4 routes; 6884 retained inventory objects; 5051 objects reachable through local links; 6884 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
 
 ## Understand the present claim
 
@@ -73,7 +73,7 @@ Reachability measures what the declared entrances actually expose through local 
 |---|---:|---:|---:|---|
 | automation | 1 | 0 | 1.3 KiB | repository workflow automation |
 | claims | 1575 | 1566 | 15.5 MiB | append-only claim and provenance ledger |
-| corpus-navigation | 11 | 11 | 128.3 KiB | canonical corpus navigation, vocabulary, and reading rules |
+| corpus-navigation | 11 | 11 | 117.1 KiB | canonical corpus navigation, vocabulary, and reading rules |
 | evidence | 743 | 613 | 14.3 MiB | data, figures, and retained observations |
 | generated-publication | 621 | 12 | 12.4 MiB | generated deployable reading surfaces |
 | governance | 2 | 1 | 7.7 KiB | repository and publication governance |
@@ -81,11 +81,11 @@ Reachability measures what the declared entrances actually expose through local 
 | legal | 2 | 2 | 54.0 KiB | legal notices and policy |
 | programmes | 918 | 698 | 40.6 MiB | bounded research programmes, registers, and closure work |
 | reader-editions | 518 | 334 | 2.9 MiB | curated reader-facing editions |
-| registers | 13 | 6 | 13.3 MiB | machine-readable inventory, state, and audit records |
+| registers | 13 | 6 | 55.8 KiB | machine-readable inventory, state, and audit records |
 | repository-front-door | 8 | 5 | 26.4 KiB | root navigation, machine retrieval, stewardship, contribution, legal, and text-identity surfaces |
 | syntheses | 4 | 4 | 255.6 KiB | current and thesis-scale interpretive surfaces |
 | tests | 14 | 3 | 77.7 KiB | repository and publication invariants |
-| tooling | 125 | 20 | 3.6 MiB | generation, audit, migration, and publication utilities |
+| tooling | 123 | 18 | 3.5 MiB | generation, audit, migration, and publication utilities |
 | verification | 2056 | 1773 | 6.7 MiB | executable certificates and verification navigation |
 
 ## Structural contract

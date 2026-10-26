@@ -7,7 +7,7 @@
 
 ## Result
 
-The audit scans **2245** Markdown documents and routes **321** for possible transition, spectral or metastability relevance. **67** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **98** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
+The audit scans **2242** Markdown documents and routes **321** for possible transition, spectral or metastability relevance. **67** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **98** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
 
 This is intentionally not a global search-and-replace. “Radiative stability,” a graph transition, a resonance pole, detector lag and an atomic decay do not name the same thing. The audit makes that difference visible and keeps the unresolved set enumerable.
 
