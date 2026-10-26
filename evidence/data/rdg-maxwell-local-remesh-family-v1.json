@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "rdg-maxwell-local-remesh-family-v1",
+  "date": "2026-10-26",
+  "purpose": "Exhaust the boundary-fixed simplicial collapse family for the minimal stellar triangle remesh and test local diagonal metric compatibility.",
+  "family": {
+    "fineCentreChoices": [
+      0,
+      1,
+      2
+    ],
+    "boundaryRule": "vertices 0,1,2 remain fixed; centre vertex 3 must map to one coarse vertex",
+    "exhaustiveWithinRule": true,
+    "cases": [
+      {
+        "centreMapsTo": 0,
+        "chainResiduals": [
+          0,
+          0
+        ],
+        "retractResiduals": [
+          0,
+          0,
+          0
+        ],
+        "projectorRanks": [
+          3,
+          3,
+          1
+        ],
+        "diagonalMetricObstructions": [
+          {
+            "row": 3,
+            "column": 0,
+            "value": 1
+          },
+          {
+            "row": 4,
+            "column": 0,
+            "value": -1
+          },
+          {
+            "row": 1,
+            "column": 0,
+            "value": 1
+          }
+        ],
+        "allDegreesObstructPositiveDiagonalSelfAdjointness": true
+      },
+      {
+        "centreMapsTo": 1,
+        "chainResiduals": [
+          0,
+          0
+        ],
+        "retractResiduals": [
+          0,
+          0,
+          0
+        ],
+        "projectorRanks": [
+          3,
+          3,
+          1
+        ],
+        "diagonalMetricObstructions": [
+          {
+            "row": 3,
+            "column": 1,
+            "value": 1
+          },
+          {
+            "row": 3,
+            "column": 0,
+            "value": 1
+          },
+          {
+            "row": 2,
+            "column": 0,
+            "value": 1
+          }
+        ],
+        "allDegreesObstructPositiveDiagonalSelfAdjointness": true
+      },
+      {
+        "centreMapsTo": 2,
+        "chainResiduals": [
+          0,
+          0
+        ],
+        "retractResiduals": [
+          0,
+          0,
+          0
+        ],
+        "projectorRanks": [
+          3,
+          3,
+          1
+        ],
+        "diagonalMetricObstructions": [
+          {
+            "row": 3,
+            "column": 2,
+            "value": 1
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "value": -1
+          },
+          {
+            "row": 0,
+            "column": 1,
+            "value": 1
+          }
+        ],
+        "allDegreesObstructPositiveDiagonalSelfAdjointness": true
+      }
+    ]
+  },
+  "result": {
+    "chainMapCases": 3,
+    "retractCases": 3,
+    "positiveDiagonalMetricCompatibleCases": 0,
+    "conclusion": "All three simplicial collapses are exact cochain retracts, and all three have one-way projector support in every degree. No strictly positive diagonal metric can make their reconstruction projectors self-adjoint."
+  },
+  "boundary": {
+    "proved": "finite no-go for boundary-fixed simplicial vertex collapses of this one-face stellar subdivision",
+    "notProved": "no-go for general weighted cochain maps, other subdivisions, block-local Hodge matrices or finite-element commuting projections",
+    "nextRoute": "enlarge the transport family beyond vertex maps or accept sparse block couplings as the minimal local metric unit"
+  },
+  "verdict": "The first nontrivial remesh family closes the gauge/retract gates but not the positive diagonal-Hodge gate. The obstruction is family-wide rather than an artefact of choosing which original vertex receives the centre."
+}

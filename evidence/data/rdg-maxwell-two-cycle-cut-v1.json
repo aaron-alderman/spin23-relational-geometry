@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "rdg-maxwell-two-cycle-cut-v1",
+  "date": "2026-10-26",
+  "purpose": "Track a two-cycle flux class through puncturing of a tetrahedral sphere and identify its boundary/cap record.",
+  "carriers": {
+    "sphere": {
+      "dimensions": [
+        4,
+        6,
+        4
+      ],
+      "differentialRanks": [
+        3,
+        3
+      ],
+      "betti": [
+        1,
+        0,
+        1
+      ]
+    },
+    "puncturedDisk": {
+      "dimensions": [
+        4,
+        6,
+        3
+      ],
+      "differentialRanks": [
+        3,
+        3
+      ],
+      "betti": [
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "closedFlux": {
+    "orientedFaceValues": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "totalSphereFlux": 4,
+    "d1Rank": 3,
+    "d1WithFluxRank": 4,
+    "conclusion": "The constant outward face flux is a non-exact H2 representative on the closed tetrahedral sphere."
+  },
+  "puncture": {
+    "removedFace": "outward face 123",
+    "retainedFaceFlux": [
+      1,
+      1,
+      1
+    ],
+    "edgePotential": [
+      1,
+      -1,
+      0,
+      -3,
+      0,
+      0
+    ],
+    "reconstructedFaceFlux": [
+      1,
+      1,
+      1
+    ],
+    "exactnessResidual": 0,
+    "boundaryChain": [
+      0,
+      0,
+      0,
+      -1,
+      1,
+      -1
+    ],
+    "removedCapBoundary": [
+      0,
+      0,
+      0,
+      1,
+      -1,
+      1
+    ],
+    "boundaryCancellationResidual": 0,
+    "boundaryCirculation": 3,
+    "retainedDiskFlux": 3,
+    "removedCapFlux": 1,
+    "reconstructionIdentityResidual": 0,
+    "conclusion": "After puncturing, the retained flux is exact. Its integral becomes the circulation on the new boundary; the removed cap flux is the additional gluing record needed to reconstruct total closed flux."
+  },
+  "compactPhase": {
+    "closedSurfacePhase": {
+      "re": -0.6536436208636119,
+      "im": -0.7568024953079282
+    },
+    "diskBoundaryPhase": {
+      "re": -0.9899924966004454,
+      "im": 0.1411200080598672
+    },
+    "capPhase": {
+      "re": 0.5403023058681398,
+      "im": 0.8414709848078965
+    },
+    "productResidual": 0
+  },
+  "physicalBoundary": {
+    "sourceFreeMaxwell": "On a closed sphere bounding a volume, d2 B=0 forces total magnetic flux to zero.",
+    "nonzeroExample": "The nonzero H2 class is a topological/cochain example; electromagnetically it requires magnetic charge, a deleted interior, or a non-bounding two-cycle such as a torus sector.",
+    "retainedLesson": "Whatever its physical source, puncturing moves the bulk H2 record into boundary circulation plus cap/gluing flux."
+  },
+  "verdict": "The two-cycle analogue of the Wilson cut rule holds exactly: puncturing converts a non-exact closed-surface flux into exact face curvature whose integral is recorded by boundary circulation, while the removed cap carries the remaining gluing datum."
+}

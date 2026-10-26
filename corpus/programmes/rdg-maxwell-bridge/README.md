@@ -62,6 +62,8 @@ complex.
 | Stellar remesh retract | exact pass | subdivision and collapse induce commuting cochain transport/restriction with \(RT=I\) |
 | Remesh reconstruction | exact pass with locality boundary | \(TR\) is a chain projector; a positive compatible metric exists, but it is necessarily non-diagonal for this collapse |
 | Topology cut | exact record transfer | cutting \(S^1\) to an interval turns a Wilson period into endpoint potential mismatch rather than annihilating it |
+| Two-cycle puncture | exact record transfer with physical boundary | puncturing \(S^2\) turns an \(H^2\) flux into boundary circulation plus cap flux; nonzero closed-sphere magnetic flux is not source-free Maxwell |
+| Minimal simplicial remesh family | exhaustive finite no-go | all three boundary-fixed collapses are chain retracts; none admits a positive diagonal metric making reconstruction self-adjoint |
 
 ## Documents
 
@@ -71,6 +73,8 @@ complex.
 4. [Sources, resonance and material-memory gate](04_sources_resonance_and_material_memory_gate.md)
 5. [Cochain-remeshing retract and reconstruction gate](05_cochain_remeshing_retract_and_reconstruction_gate.md)
 6. [Topology cut, holonomy and boundary-record gate](06_topology_cut_holonomy_and_boundary_record_gate.md)
+7. [Two-cycle flux, puncture and cap-record gate](07_two_cycle_flux_puncture_and_cap_record_gate.md)
+8. [Local diagonal-Hodge remesh-family no-go](08_local_diagonal_hodge_remesh_family_no_go.md)
 
 ## Executable spine
 
@@ -89,6 +93,12 @@ complex.
 - [Topology-cut analysis](../../../scripts/analyze-rdg-maxwell-topology-cut.mjs)
 - [Topology-cut evidence](../../../evidence/data/rdg-maxwell-topology-cut-v1.json)
 - [Topology-cut verifier](../../../verification/verify/verify_rdg_maxwell_topology_cut.mjs)
+- [Two-cycle-cut analysis](../../../scripts/analyze-rdg-maxwell-two-cycle-cut.mjs)
+- [Two-cycle-cut evidence](../../../evidence/data/rdg-maxwell-two-cycle-cut-v1.json)
+- [Two-cycle-cut verifier](../../../verification/verify/verify_rdg_maxwell_two_cycle_cut.mjs)
+- [Local-remesh-family analysis](../../../scripts/analyze-rdg-maxwell-local-remesh-family.mjs)
+- [Local-remesh-family evidence](../../../evidence/data/rdg-maxwell-local-remesh-family-v1.json)
+- [Local-remesh-family verifier](../../../verification/verify/verify_rdg_maxwell_local_remesh_family.mjs)
 
 Run:
 
@@ -103,17 +113,21 @@ node scripts/analyze-rdg-maxwell-remeshing-retract.mjs --write
 node verification/verify/verify_rdg_maxwell_remeshing_retract.mjs
 node scripts/analyze-rdg-maxwell-topology-cut.mjs --write
 node verification/verify/verify_rdg_maxwell_topology_cut.mjs
+node scripts/analyze-rdg-maxwell-two-cycle-cut.mjs --write
+node verification/verify/verify_rdg_maxwell_two_cycle_cut.mjs
+node scripts/analyze-rdg-maxwell-local-remesh-family.mjs --write
+node verification/verify/verify_rdg_maxwell_local_remesh_family.mjs
 ```
 
 ## Next gates
 
 1. Add an explicit conservative bath or port model so dissipated power becomes
    a typed output rather than disappearance.
-2. Search for a symmetric/local remeshing pair whose chain-safe reconstruction
-   admits sparse positive Hodge matrices, rather than the dense metric required
-   by the first asymmetric collapse.
-3. Extend the cut/glue certificate from the completed additive and compact
-   \(U(1)\) one-cycle to magnetic flux on two-cycles and three-torus sectors.
+2. Enlarge remeshing beyond simplicial vertex collapses and test whether
+   weighted transport or sparse block-local Hodge matrices evade the completed
+   diagonal no-go for the minimal collapse family.
+3. Transfer the completed one- and two-cycle cut/glue receipts to a
+   source-free non-bounding three-torus flux sector.
 
 ## Authority boundary
 
