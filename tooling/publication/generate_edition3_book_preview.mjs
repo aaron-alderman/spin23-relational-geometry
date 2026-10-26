@@ -18,6 +18,7 @@ const siteRoot = resolve(root, argValue("--site-root") || join("docs", "edition-
 const siteIndexRoot = dirname(siteRoot);
 const siteDetailsRoot = join(siteRoot, "details");
 const siteReadingKeyRoot = join(siteRoot, "reading-key");
+const siteArticlesRoot = join(siteRoot, "articles");
 const assetsRoot = join(siteRoot, "assets");
 const katexSourceRoot = join(root, "tooling", "publication", "vendor", "katex");
 const katexSiteRoot = join(siteRoot, "vendor", "katex");
@@ -28,6 +29,15 @@ const publicEditionBase = `${publicSiteBase}edition-3/`;
 const socialImageUrl = `${publicEditionBase}assets/relational-geometry-hero.png`;
 const socialImageAlt = "Relational geometry represented by two linked faces, a central hinge, compass, ruler and M\u00f6bius ribbon";
 const socialDescription = "A glass-box research corpus tracing relational geometry, admissibility, Spin(2,3), physical interfaces, exact results, obstructions and open experimental gates.";
+const articleSlugs = new Set([
+  "01-the-revised-spine",
+  "02-one-carrier-two-faces-three-relations",
+  "03-projective-loop",
+  "04-furey-interface",
+  "05-standard-model-seam",
+  "06-proton-safety",
+  "07-exceptional-horizon",
+]);
 const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 const sha256 = value => createHash("sha256").update(value).digest("hex");
 const posix = value => value.split(sep).join("/");
@@ -1873,17 +1883,57 @@ const proofCss = `.taxonomy-badge,.archetype-badge{text-decoration:none}.taxonom
 const contentsFixCss = `.contents .taxonomy-badge,.contents .archetype-badge{display:inline-flex}.contents .chapter-title,.contents .read-link{display:inline;padding:0;border:0}`;
 const evidenceCss = `.evidence-link{border-color:var(--gold);border-left-color:var(--gold)}.claim-unit+.claim-unit{margin-top:36px;padding-top:28px;border-top:1px dashed var(--line)}.claim-hero h1{max-width:960px}.claim-anatomy{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}.claim-anatomy article{padding:20px;border:1px solid var(--line);border-top:5px solid var(--teal);background:var(--panel)}.claim-anatomy h3{margin-top:0}.claim-source-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;padding:0;list-style:none}.claim-source-map li{display:grid;gap:9px;padding:18px;border:1px solid var(--line);background:var(--panel)}.claim-source-map strong{font:700 .9rem/1.4 var(--sans)}.claim-source-map a{font:800 .72rem/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase}.compact-proof{margin:18px 0;padding:13px 16px}.source-reader-hero h1{font-size:clamp(2.6rem,6vw,5.2rem)}.source-provenance dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;font:14px/1.5 var(--sans)}.source-provenance dt{font-weight:800}.source-provenance dd{margin:0;overflow-wrap:anywhere}.source-document{padding:50px 0}.source-document h1{font-size:clamp(2.4rem,5vw,4.5rem)}.source-document h2{margin-top:1.5em}.source-document pre{overflow:auto;padding:20px;background:#172321;color:#f6f0e6;font:14px/1.55 var(--mono)}.source-document code{overflow-wrap:anywhere}.source-document img{max-width:100%;height:auto}.source-document blockquote{margin:24px 0;padding:2px 20px;border-left:5px solid var(--gold);background:var(--panel)}.library-breadcrumb{display:flex;flex-wrap:wrap;gap:.45rem;padding:20px 0 0;color:var(--muted);font:700 .72rem/1.5 var(--sans);overflow-wrap:anywhere}.library-breadcrumb i{font-style:normal;color:var(--line)}.library-route{padding:32px 0}.library-route ol{font:14px/1.6 var(--mono)}.library-relations{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}.library-relations>div{min-width:0}.library-relations ul,.library-results{padding:0;list-style:none}.library-relations li,.library-results li{display:grid;gap:.2rem;padding:12px 0;border-top:1px solid var(--line)}.library-relations small,.library-results small{color:var(--muted);font:12px/1.4 var(--mono);overflow-wrap:anywhere}.library-search{width:100%;padding:15px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:18px var(--sans)}.library-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.library-stat{display:block;padding:18px;border:1px solid var(--line);background:var(--panel);color:var(--ink);text-decoration:none}.library-stat:hover{border-color:var(--teal)}.library-stat strong{display:block;font:700 2rem/1 var(--serif)}.library-stat span{font:700 .7rem/1.4 var(--sans);text-transform:uppercase;letter-spacing:.05em}`;
 const directoryCss = `.directory-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}.directory-card{display:flex;min-width:0;min-height:230px;flex-direction:column;align-items:flex-start}.directory-card h3{margin:.35rem 0 .55rem;font-size:clamp(1.35rem,2.2vw,1.7rem)}.directory-path{max-width:100%;margin:.15rem 0 1.2rem;color:var(--muted)}.directory-path code{font:700 .74rem/1.4 var(--mono);overflow-wrap:anywhere}.directory-open{margin-top:auto;font:800 .7rem/1.3 var(--sans);letter-spacing:.055em;text-transform:uppercase}.directory-canonical{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.7rem 1rem;align-items:baseline;margin:1.25rem 0 2rem;color:var(--muted);font:700 .72rem/1.45 var(--sans);letter-spacing:.045em;text-transform:uppercase}.directory-canonical code{min-width:0;color:var(--ink);font:.82rem/1.45 var(--mono);letter-spacing:0;text-transform:none;overflow-wrap:anywhere}@media(max-width:650px){.directory-grid{grid-template-columns:1fr}.directory-card{min-height:190px}.directory-canonical{grid-template-columns:1fr;gap:.25rem}.library-breadcrumb{gap:.35rem;font-size:.67rem}}`;
-const mast = `<header class="mast"><a href="index.html">Admissibility frontier · Edition 3</a><nav><a href="reading-key.html">Reading key</a> · <a href="08-result-ledger.html">Findings</a> · <a href="09-research-frontier.html">Frontier</a> · <a href="../concept-map/index.html">Concept atlas</a></nav></header>`;
+const articleCss = `.article-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}.article-card{display:flex;flex-direction:column;min-height:300px;padding:25px;border:1px solid var(--line);border-top:6px solid var(--teal);background:var(--panel)}.article-card h2{font-size:clamp(1.7rem,3vw,2.35rem)}.article-card .lede{font-size:1.05rem}.article-actions,.share-bar{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:auto;font:800 .68rem/1.3 var(--sans);letter-spacing:.055em;text-transform:uppercase}.article-actions a,.share-bar a{display:inline-block;padding:.55rem .72rem;border:1px solid var(--line);background:var(--paper);text-decoration:none}.article-actions a:first-child,.share-bar a:first-of-type{border-color:var(--teal);background:var(--teal);color:white}.share-bar{margin:24px 0 0;padding-top:18px;border-top:1px solid var(--line)}.share-bar strong{margin-right:4px;color:var(--muted)}.article-note{font:.82rem/1.5 var(--sans);color:var(--muted)}@media(max-width:650px){.article-card{min-height:0}.share-bar{align-items:flex-start;flex-direction:column}}`;
+const mast = `<header class="mast"><a href="index.html">Admissibility frontier · Edition 3</a><nav><a href="articles/index.html">Articles</a> · <a href="reading-key.html">Reading key</a> · <a href="08-result-ledger.html">Findings</a> · <a href="09-research-frontier.html">Frontier</a> · <a href="../concept-map/index.html">Concept atlas</a></nav></header>`;
 const mathHead = (prefix = "") => `<link rel="stylesheet" href="${prefix}vendor/katex/katex.min.css"><script defer src="${prefix}vendor/katex/katex.min.js"></script><script defer src="${prefix}vendor/katex/contrib/auto-render.min.js"></script><script defer src="${prefix}math-render.js"></script>`;
 const publicPageUrl = pagePath => `${publicEditionBase}${encodeURI(pagePath).replace(/^\/+|index\.html$/gu, "")}`;
-const documentHead = (title, pagePath, description = socialDescription) => {
+const jsonLd = value => `<script type="application/ld+json">${JSON.stringify(value).replaceAll("<", "\\u003c")}</script>`;
+const documentHead = (title, pagePath, description = socialDescription, options = {}) => {
   const canonicalUrl = publicPageUrl(pagePath);
-  return `<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee7dc"><meta name="google-site-verification" content="${googleSiteVerificationToken}"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${esc(canonicalUrl)}"><meta property="og:type" content="website"><meta property="og:site_name" content="The Admissibility Frontier"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonicalUrl)}"><meta property="og:image" content="${socialImageUrl}"><meta property="og:image:width" content="1536"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="${esc(socialImageAlt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${socialImageUrl}"><meta name="twitter:image:alt" content="${esc(socialImageAlt)}">`;
+  const pageType = options.type || "website";
+  const structuredData = options.structuredData ? jsonLd(options.structuredData) : "";
+  return `<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee7dc"><meta name="google-site-verification" content="${googleSiteVerificationToken}"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${esc(canonicalUrl)}"><meta property="og:type" content="${pageType}"><meta property="og:site_name" content="The Admissibility Frontier"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonicalUrl)}"><meta property="og:image" content="${socialImageUrl}"><meta property="og:image:width" content="1536"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="${esc(socialImageAlt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${socialImageUrl}"><meta name="twitter:image:alt" content="${esc(socialImageAlt)}">${structuredData}`;
 };
 const verificationHead = `<meta name="google-site-verification" content="${googleSiteVerificationToken}">`;
-const htmlDoc = (title, body, prefix = "", includeMast = true, pagePath = prefix === "../" ? "library/index.html" : "index.html", description = socialDescription) => {
+const htmlDoc = (title, body, prefix = "", includeMast = true, pagePath = prefix === "../" ? "library/index.html" : "index.html", description = socialDescription, options = {}) => {
   const fullTitle = `${title} · Admissibility Frontier Edition 3`;
-  return `<!doctype html><html lang="en"><head>${documentHead(fullTitle, pagePath, description)}${mathHead(prefix)}<link rel="stylesheet" href="${prefix}book.css"></head><body><main>${includeMast ? mast : ""}${body}<footer>Edition 3.2 admissibility preview · 24 October 2026 · Citation set ${sourceDigest.slice(0, 12)} · Admission is not endorsement.</footer></main></body></html>`;
+  return `<!doctype html><html lang="en"><head>${documentHead(fullTitle, pagePath, description, options)}${mathHead(prefix)}<link rel="stylesheet" href="${prefix}book.css"></head><body><main>${includeMast ? mast : ""}${body}<footer>Edition 3.2 admissibility preview · 24 October 2026 · Citation set ${sourceDigest.slice(0, 12)} · Admission is not endorsement.</footer></main></body></html>`;
+};
+
+const articleChapters = chapters.filter(chapter => articleSlugs.has(chapter.slug));
+const articleDescription = chapter => `${typeset(chapter.kicker)}. A short, evidence-linked article from The Admissibility Frontier.`;
+const articleStructuredData = chapter => {
+  const url = publicPageUrl(`${chapter.slug}.html`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: typeset(chapter.title),
+    description: articleDescription(chapter),
+    image: [socialImageUrl],
+    inLanguage: "en",
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    isPartOf: { "@type": "Book", name: "The Admissibility Frontier", url: publicPageUrl("index.html") },
+  };
+};
+const socialShareLinks = (chapter, prefix = "") => {
+  const url = publicPageUrl(`${chapter.slug}.html`);
+  const text = `${typeset(chapter.title)} — ${typeset(chapter.kicker)}`;
+  const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+  const blueskyHref = `https://bsky.app/intent/compose?text=${encodeURIComponent(`${text}\n${url}`)}`;
+  const linkedInHref = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+  return `<div class="share-bar"><strong>Share this article</strong><a href="${esc(xHref)}" target="_blank" rel="noopener noreferrer">Post on X</a><a href="${esc(blueskyHref)}" target="_blank" rel="noopener noreferrer">Bluesky</a><a href="${esc(linkedInHref)}" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="${prefix}articles/index.html">More articles</a></div>`;
+};
+const articleCardHtml = chapter => {
+  const url = publicPageUrl(`${chapter.slug}.html`);
+  const text = `${typeset(chapter.title)} — ${typeset(chapter.kicker)}`;
+  const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+  const blueskyHref = `https://bsky.app/intent/compose?text=${encodeURIComponent(`${text}\n${url}`)}`;
+  return `<article class="article-card"><p class="kicker">Short article</p><h2><a href="../${chapter.slug}.html">${mathHtml(chapter.title)}</a></h2><p class="lede">${mathHtml(chapter.kicker)}.</p><div class="chapter-taxonomy">${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug], "../")}${archetypeBadgeHtml(chapterArchetype[chapter.slug], "../")}</div><div class="article-actions"><a href="../${chapter.slug}.html">Read article →</a><a href="${esc(xHref)}" target="_blank" rel="noopener noreferrer">Post on X</a><a href="${esc(blueskyHref)}" target="_blank" rel="noopener noreferrer">Bluesky</a></div></article>`;
+};
+const articlesIndexHtml = () => {
+  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html" aria-current="page">Articles</a> · <a href="../reading-key.html">Reading key</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">Short, shareable routes into the corpus</p><h1>Articles</h1><p class="lede">Seven focused essays introduce the mathematical spine, physical interfaces and hard boundaries of the programme. Each is designed to stand on its own in a social link while keeping its status, sources and deeper evidence one click away.</p><aside class="boundary"><strong>Glass-box publication.</strong> These are reader views of the Edition’s canonical chapters, not detached summaries. Their evidence links and authority boundaries travel with them.</aside></header><section><div class="article-grid">${articleChapters.map(articleCardHtml).join("")}</div></section><p class="article-note">Social links open the platform composer with a title, thesis and canonical URL. Nothing is posted without the reader’s action.</p><nav class="page-turn"><a href="../index.html">← Edition contents</a><a href="../01-the-revised-spine.html">Begin with the Jordan–Lie hinge →</a></nav>`;
+  return htmlDoc("Articles", body, "../", false, "articles/index.html", "Short, shareable and evidence-linked articles from The Admissibility Frontier.");
 };
 
 const directoryIndexHtml = directory => {
@@ -1935,7 +1985,8 @@ function chapterHtml(chapter, index) {
   const next = index < chapters.length - 1 ? chapters[index + 1] : null;
   const chapterTaxon = taxonomy[chapterTaxonomy[chapter.slug]];
   const chapterRole = archetypeByKey[chapterArchetype[chapter.slug]];
-  let body = `<header class="hero"><p class="kicker">${mathHtml(chapter.kicker)}</p><h1>${mathHtml(chapter.title)}</h1><div class="chapter-taxonomy">${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug])}${archetypeBadgeHtml(chapterArchetype[chapter.slug])}<p><strong>Status:</strong> ${esc(chapterTaxon.description)} <strong>Function:</strong> ${esc(chapterRole.description)}.</p></div>${chapter.equation ? `<div class="equation">${mathHtml(chapter.equation)}</div>` : ""}</header>`;
+  const isArticle = articleSlugs.has(chapter.slug);
+  let body = `<header class="hero"><p class="kicker">${isArticle ? "Short article · " : ""}${mathHtml(chapter.kicker)}</p><h1>${mathHtml(chapter.title)}</h1><div class="chapter-taxonomy">${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug])}${archetypeBadgeHtml(chapterArchetype[chapter.slug])}<p><strong>Status:</strong> ${esc(chapterTaxon.description)} <strong>Function:</strong> ${esc(chapterRole.description)}.</p></div>${chapter.equation ? `<div class="equation">${mathHtml(chapter.equation)}</div>` : ""}${isArticle ? socialShareLinks(chapter) : ""}</header>`;
   body += visualHtml(chapter);
   if (chapter.slug === "00-front-matter") body += `${taxonomyLegendHtml()}${archetypeLegendHtml()}`;
   for (const [heading, paragraphs] of chapter.sections || []) {
@@ -1950,7 +2001,7 @@ function chapterHtml(chapter, index) {
   if (chapter.kind === "concept-map") body += `<section><h2>One graph, typed connections</h2><p class="lede">The atlas separates the established mathematical spine from physical realization, projective topology, obstructions and the exceptional horizon. Select any node to see its status, connections and controlling evidence.</p><p><a class="boundary" href="../concept-map/index.html"><strong>Open the interactive concept atlas →</strong></a></p></section><section><h2>The non-negotiable reading rule</h2><p class="lede">A path inherits its weakest edge. Dotted analogy and unresolved dependency never become derivation by proximity to the Spin(2,3) hinge.</p></section>`;
   if (chapter.sources?.length) body += `<section class="chapter-sources"><h2>Chapter sources</h2>${sourceListHtml(chapter.sources)}</section>`;
   body += `<nav class="page-turn"><a href="${previous ? `${previous.slug}.html` : "index.html"}">← ${esc(typeset(previous ? previous.title : "Cover"))}</a>${next ? `<a href="${next.slug}.html">${esc(typeset(next.title))} →</a>` : ""}</nav>`;
-  return htmlDoc(typeset(chapter.title), body, "", true, `${chapter.slug}.html`);
+  return htmlDoc(typeset(chapter.title), body, "", true, `${chapter.slug}.html`, isArticle ? articleDescription(chapter) : socialDescription, isArticle ? { type: "article", structuredData: articleStructuredData(chapter) } : {});
 }
 
 function proofDetailHtml(detail) {
@@ -1989,6 +2040,7 @@ rmSync(siteRoot, { recursive: true, force: true });
 mkdirSync(siteRoot, { recursive: true });
 mkdirSync(siteDetailsRoot, { recursive: true });
 mkdirSync(siteReadingKeyRoot, { recursive: true });
+mkdirSync(siteArticlesRoot, { recursive: true });
 mkdirSync(assetsRoot, { recursive: true });
 if (!existsSync(katexSourceRoot)) throw new Error(`Missing vendored KaTeX distribution: ${katexSourceRoot}`);
 if (!existsSync(publicationAssetsRoot)) throw new Error(`Missing publication assets: ${publicationAssetsRoot}`);
@@ -2018,9 +2070,10 @@ if (!siteOnly) {
 }
 
 const contentsHtml = chapters.map((chapter, index) => `<div class="contents-row"><span class="chapter-number">${String(index + 1).padStart(2, "0")}</span><span class="contents-copy"><a class="chapter-title" href="${chapter.slug}.html"><strong>${mathHtml(chapter.title)}</strong></a>${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug])}${archetypeBadgeHtml(chapterArchetype[chapter.slug])}</span><a class="read-link" href="${chapter.slug}.html">Read →</a></div>`).join("");
-const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><section><p class="kicker">Beyond the volume</p><h2>Follow the research all the way down</h2><p class="lede">The complete corpus is compiled into a searchable library with explicit backlinks, neighbouring documents and visible routes from this Edition into deep programme waves.</p><p><a class="proof-link" href="library/index.html"><span><b>Open the complete corpus library</b><small>${librarySources.length.toLocaleString("en")} canonical Markdown documents · one generated journey</small></span><i>Explore →</i></a></p></section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
-writeFileSync(join(siteRoot, "book.css"), `${css}${proofCss}${contentsFixCss}${evidenceCss}${directoryCss}`);
+const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section><p class="kicker">A lighter way in</p><h2>Seven short articles</h2><p class="lede">Shareable essays introduce the programme’s exact hinge, projective loop, physical interfaces and strongest obstructions without detaching them from their evidence.</p><p><a class="proof-link" href="articles/index.html"><span><b>Browse the articles</b><small>Standalone social previews · direct X and Bluesky sharing · sources intact</small></span><i>Read →</i></a></p></section><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><section><p class="kicker">Beyond the volume</p><h2>Follow the research all the way down</h2><p class="lede">The complete corpus is compiled into a searchable library with explicit backlinks, neighbouring documents and visible routes from this Edition into deep programme waves.</p><p><a class="proof-link" href="library/index.html"><span><b>Open the complete corpus library</b><small>${librarySources.length.toLocaleString("en")} canonical Markdown documents · one generated journey</small></span><i>Explore →</i></a></p></section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
+writeFileSync(join(siteRoot, "book.css"), `${css}${proofCss}${contentsFixCss}${evidenceCss}${directoryCss}${articleCss}`);
 writeFileSync(join(siteRoot, "index.html"), coverHtml);
+writeFileSync(join(siteArticlesRoot, "index.html"), articlesIndexHtml());
 writeFileSync(join(siteRoot, "reading-key.html"), readingKeyHtml());
 Object.keys(taxonomy).forEach(key => writeFileSync(join(siteReadingKeyRoot, `status-${key}.html`), readingKeyDetailHtml("taxonomy", key)));
 archetypes.forEach(item => writeFileSync(join(siteReadingKeyRoot, `move-${item.key}.html`), readingKeyDetailHtml("archetype", item.key)));

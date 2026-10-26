@@ -43,6 +43,40 @@ test("the public entry points expose a large, absolute social card", () => {
   assert.match(chapter, /<link rel="canonical" href="https:\/\/aaron-alderman\.github\.io\/spin23-relational-geometry\/edition-3\/03-projective-loop\.html">/u);
 });
 
+test("short articles are discoverable, shareable and machine-readable without duplicating their chapter URLs", () => {
+  const articleSlugs = [
+    "01-the-revised-spine",
+    "02-one-carrier-two-faces-three-relations",
+    "03-projective-loop",
+    "04-furey-interface",
+    "05-standard-model-seam",
+    "06-proton-safety",
+    "07-exceptional-horizon",
+  ];
+  const index = readFileSync(join(siteRoot, "articles", "index.html"), "utf8");
+  assert.match(index, /<h1>Articles<\/h1>/u);
+  assert.match(index, /Short, shareable routes into the corpus/u);
+  assert.equal([...index.matchAll(/<article class="article-card">/gu)].length, articleSlugs.length);
+  assert.match(index, /Post on X/u);
+  assert.match(index, /Bluesky/u);
+
+  for (const slug of articleSlugs) {
+    assert.ok(index.includes(`href="../${slug}.html"`), slug);
+    const html = readFileSync(join(siteRoot, `${slug}.html`), "utf8");
+    assert.match(html, /<meta property="og:type" content="article">/u, slug);
+    assert.match(html, /<script type="application\/ld\+json">/u, slug);
+    assert.match(html, /"@type":"Article"/u, slug);
+    assert.match(html, new RegExp(`"url":"https://aaron-alderman.github.io/spin23-relational-geometry/edition-3/${slug}\\.html"`, "u"), slug);
+    assert.match(html, /Share this article/u, slug);
+    assert.match(html, /twitter\.com\/intent\/tweet/u, slug);
+    assert.match(html, /bsky\.app\/intent\/compose/u, slug);
+  }
+
+  const frontMatter = readFileSync(join(siteRoot, "00-front-matter.html"), "utf8");
+  assert.match(frontMatter, /<meta property="og:type" content="website">/u);
+  assert.doesNotMatch(frontMatter, /Share this article/u);
+});
+
 test("every corpus Markdown source has a provenance-stamped compiled library page", () => {
   const manifest = JSON.parse(readFileSync(join(siteRoot, "library", "manifest.json"), "utf8"));
   const corpusMarkdownCount = filesBelow(join(root, "corpus")).filter(path => path.endsWith(".md")).length;

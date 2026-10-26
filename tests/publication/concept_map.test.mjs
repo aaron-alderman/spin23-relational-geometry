@@ -64,3 +64,8 @@ test("generated Three.js atlas exists and uses pinned official module convention
   assert.match(graphData, /J₃\(𝕆\)/u);
   assert.match(graphData, /Sp\(4,ℝ\)/u);
 });
+
+test("the atlas keeps the lightweight article surface discoverable", () => {
+  const html = readFileSync(new URL("docs/concept-map/index.html", root), "utf8");
+  assert.match(html, /href="\.\.\/edition-3\/articles\/index\.html">Articles<\/a>/u);
+});
