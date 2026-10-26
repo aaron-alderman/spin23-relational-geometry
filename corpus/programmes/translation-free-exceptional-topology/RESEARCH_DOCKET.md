@@ -48,6 +48,22 @@ declared E8-cubed/Leech/Moonshine family: the bulk detector collides and
 | C4 | disorder the microscopic realization | RG/stability study | same infrared witness or explicit enrichment-loss boundary |
 | C5 | close the return test | held-out prediction | same carrier reconstructs and predicts an unseen defect history |
 
+## Tranche D — quasicrystal material backplane
+
+**Progress:** D0 is closed as a typed protocol. The source proposal's acoustic
+growth, phason and multi-sensor ideas have been retained, while automatic E8,
+new-gravity and room-temperature-superconductivity promotions are quarantined.
+Fabrication and measurement remain open.
+
+| ID | task | output | gate |
+|---|---|---|---|
+| D1 | fabricate matched periodic, quasicrystalline and amorphous backplanes | blinded 3-class material set | diffraction and composition identify every class independently |
+| D2 | resolve phason and ordinary mechanical channels | mode ledger | phason coordinate survives mounting and thermal nulls |
+| D3 | install identity and E8 relation programmes | balanced 3x2 array | full eight-port transfer matrix matches assigned programme |
+| D4 | measure gap, edge and root records | blind interaction contrast | quasicrystal-by-E8 contrast survives all 232 held-out currents |
+| D5 | open material response channels | transport/thermal/nonlinear bundle | effect does not reduce to mass, temperature, drive or scalar transport |
+| D6 | open precision residual channel | upper bound or replicated anomaly | conventional stress-energy and apparatus backgrounds rejected first |
+
 ## Earliest useful result
 
 The earliest publishable result need not reach Monster. A complete result is:

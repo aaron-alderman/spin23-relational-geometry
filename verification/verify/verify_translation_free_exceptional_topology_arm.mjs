@@ -6,6 +6,7 @@ const arm = load("translation-free-exceptional-topology-arm-v1.json");
 const leechRecord = load("leech-explicit-k-matrix-v1.json");
 const e8Wire = load("translation-free-e8-coupled-wire-tomography-v1.json");
 const e8Clock = load("translation-free-e8-few-body-clock-gap-v1.json");
+const quasicrystal = load("translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 
 const E8 = [
   [2,-1,0,0,0,0,0,0],
@@ -95,6 +96,11 @@ assert.equal(e8Clock.hardware.localTermBodyCount, 2);
 assert.equal(e8Clock.hardware.bulkInteractionGraphDegree, 1);
 assert.equal(e8Clock.sweep.certifiedUniformLowerBound, 0.75);
 assert.equal(e8Clock.claimBoundary.continuumE8AnomalyCertified, false);
+assert.equal(arm.quasicrystalBackplaneBridge.evidence, "translation-free-e8-quasicrystal-backplane-bridge-v1.json");
+assert.deepEqual(quasicrystal.factorialDesign.backplanes, ["periodic","quasicrystal","amorphous"]);
+assert.deepEqual(quasicrystal.factorialDesign.relationPrograms, ["identity","E8"]);
+assert.equal(quasicrystal.factorialDesign.totalPrimaryDevices, 48);
+assert.ok(quasicrystal.hardFirewalls.some(rule => /diffraction is not evidence of E8/u.test(rule)));
 
 console.log(JSON.stringify({
   status: "PASS",
@@ -105,5 +111,6 @@ console.log(JSON.stringify({
   structuralSeed: {jitterStrengths:arm.structuralDisorderSeed.jitterStrengths, bottIndices:arm.structuralDisorderSeed.bottIndices, localizerIndices:arm.structuralDisorderSeed.spectralLocalizerIndices},
   e8CoupledWireSeed: {wires:e8Wire.carrier.wires, nullInteractions:e8Wire.carrier.interactions, heldOutRoots:e8Wire.tomography.heldOutPredictions.normTwoCurrents},
   e8FewBodyClockSeed: {bodyCount:e8Clock.hardware.localTermBodyCount, maximumWidth:Math.max(...e8Clock.sweep.wireCounts), uniformGap:e8Clock.sweep.certifiedUniformLowerBound},
-  nextGate: "clock-to-rotor E8 response -> rank-24 detector ladder -> orbifold witness"
+  quasicrystalBridge: {materialClasses:quasicrystal.factorialDesign.backplanes.length, relationPrograms:quasicrystal.factorialDesign.relationPrograms.length, devices:quasicrystal.factorialDesign.totalPrimaryDevices},
+  nextGate: "clock-to-rotor E8 response plus blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
 }));

@@ -16,6 +16,8 @@
 
 **Few-body surrogate:** [E8 bounded-degree clock hardware and gap certificate](E8_FEW_BODY_CLOCK_GAP.md)
 
+**Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
+
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
 
 ## Research question
@@ -160,6 +162,14 @@ regularization with a width-independent bulk gap above its free-edge ground
 space. Clock-to-rotor convergence, continuum E8 anomaly recovery, a
 material-native carrier and random connectivity remain open.
 
+The material route is now typed rather than associative. A quasicrystal may
+supply a phason-bearing, translation-free backplane for the programmed E8
+network, but icosahedral diffraction and higher-dimensional cut-and-project
+geometry do not establish E8. A blinded 48-device factorial design compares
+periodic, quasicrystalline and amorphous backplanes under identity and E8
+relation programmes, then promotes only through gap, edge and held-out-current
+records.
+
 At rank 24, the first blind detector has now been identified exactly. Thermal
 and bulk data collide, but the weight-one current dimensions are 744, 24 and 0
 for E8-cubed, the Leech lattice theory and Moonshine. Only the zero-current
@@ -176,6 +186,8 @@ branch proceeds to the existing Griess, marked-defect and sewing witness stack.
 4. Test whether an inversion-orbifold edge flows toward the same infrared
    witness under independently sampled local disorder or instead retains only
    the coarse \(c=24\) class.
+5. Fabricate the periodic/quasicrystalline/amorphous backplane matrix and test
+   whether the material changes the E8 programme beyond either main effect.
 
 ## Promotion and kill gates
 
@@ -203,6 +215,7 @@ translation-free topology result remains valuable after that null.
 - [Monster proof certificate](../frontier/wave-7/frontier_wave7_150_monster_is_physics_proof_certificate.md)
 - [Pure-topological memory no-go](../../claims/1200-1299/1200_the_pure_z3_bf_carrier_forgets_the_projector_so_reflexive_closure_requires_non_topological_boundary_memory.md)
 - [Typed Monster reconstruction gate](../frontier/wave-7/frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md)
+- [Quasicrystal backplane bridge](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 ## Primary external anchors
 
@@ -212,3 +225,4 @@ translation-free topology result remains valuable after that null.
 - Lim, Mulligan and Teo, [*Partial fillings of the bosonic E8 quantum Hall state*](https://doi.org/10.1103/PhysRevB.108.035136).
 - Lam, Yamada and Yamauchi, [*Vertex operator algebras, extended E8 diagram, and McKay's observation on the Monster simple group*](https://arxiv.org/abs/math/0403010).
 - Makkar, [*Vertex algebras, topological defects, and Moonshine*](https://arxiv.org/abs/2412.21141).
+- Else et al., [*Quantum Many-Body Topology of Quasicrystals*](https://doi.org/10.1103/PhysRevX.11.041051).
