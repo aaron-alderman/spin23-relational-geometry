@@ -6,7 +6,7 @@ _Why three is meaningful_
 
 > **Chapter function — [⌖ Cartographer](../reading-key/move-cartographer.md)** — maps territory, distinctions, dependencies and interfaces.
 
-![Infographic showing one carrier, two faces and the first closed consistency loop at three relations](../../../docs/edition-3/assets/one-two-three.svg)
+![Infographic showing one carrier, two faces and the first closed consistency loop at three relations](../assets/one-two-three.svg)
 
 _One holds, two compare, three can fail to close._
 <a id="the-smallest-relational-closure"></a>

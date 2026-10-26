@@ -6,7 +6,7 @@
 
 ## Result
 
-All **35** barrier, metastability and hysteresis candidates are explicitly routed; **0** remain unreviewed. The audit distinguishes quantitative escape from physical metastability without a rate, adaptive memory, algebraic language and navigation.
+All **36** barrier, metastability and hysteresis candidates are explicitly routed; **0** remain unreviewed. The audit distinguishes quantitative escape from physical metastability without a rate, adaptive memory, algebraic language and navigation.
 
 | Disposition | Documents |
 |---|---:|
@@ -14,7 +14,7 @@ All **35** barrier, metastability and hysteresis candidates are explicitly route
 | `physical_metastability_or_selection_without_escape_rate` | 8 |
 | `memory_hysteresis_or_adaptive_dynamics` | 11 |
 | `algebraic_semantic_or_selector_use` | 5 |
-| `navigation_governance_or_interpretive` | 8 |
+| `navigation_governance_or_interpretive` | 9 |
 
 ## Mechanism boundary
 
@@ -36,12 +36,12 @@ A metastable label or exponential-looking wait is not yet a Kramers process. A p
 | `corpus/programmes/admissibility/admissibility_26_three_mode_quarter_turn_and_two_datum_contraction.md` | `physical_metastability_or_selection_without_escape_rate` | Physical or emulator metastability/selection is discussed, but no microscopic escape-rate identification is made. |
 | `corpus/programmes/admissibility/admissibility_29_seebeck_nernst_guideposts_for_response_geometry.md` | `physical_metastability_or_selection_without_escape_rate` | Physical or emulator metastability/selection is discussed, but no microscopic escape-rate identification is made. |
 | `corpus/programmes/admissibility/admissibility_36_frontier_expansion_cost_backaction_scale_and_rare_events.md` | `quantitative_escape_or_first_passage` | Quantitative escape, first-passage or rare-event language: barrier, prefactor, bath, preparation and waiting-time law must be declared. |
-| `corpus/programmes/dynatology/dynatology_00_ontology_and_scope.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim. |
-| `corpus/programmes/dynatology/dynatology_01_investigation_protocol.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim. |
-| `corpus/programmes/epistemology/frontier_epistemology_03_personality_archetypes_and_stories_as_cultural_dynamics.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim. |
-| `corpus/programmes/frontier-physics-targets/experiment_starter_kit.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim. |
-| `corpus/programmes/frontier-physics-targets/frontier_physics_lineage_and_lightning_path_v1.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim. |
-| `corpus/programmes/frontier-physics-targets/frontier_physics_target_set_v1.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim. |
+| `corpus/programmes/dynatology/dynatology_00_ontology_and_scope.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim; a stable return class may name metastability as one possible realization without supplying a barrier or escape law. |
+| `corpus/programmes/dynatology/dynatology_01_investigation_protocol.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim; a stable return class may name metastability as one possible realization without supplying a barrier or escape law. |
+| `corpus/programmes/epistemology/frontier_epistemology_03_personality_archetypes_and_stories_as_cultural_dynamics.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim; a stable return class may name metastability as one possible realization without supplying a barrier or escape law. |
+| `corpus/programmes/frontier-physics-targets/experiment_starter_kit.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim; a stable return class may name metastability as one possible realization without supplying a barrier or escape law. |
+| `corpus/programmes/frontier-physics-targets/frontier_physics_lineage_and_lightning_path_v1.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim; a stable return class may name metastability as one possible realization without supplying a barrier or escape law. |
+| `corpus/programmes/frontier-physics-targets/frontier_physics_target_set_v1.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim; a stable return class may name metastability as one possible realization without supplying a barrier or escape law. |
 | `corpus/programmes/frontier-physics-targets/page_rank_perron_selector_bridge_v1.md` | `algebraic_semantic_or_selector_use` | Metastability or hysteresis is algebraic, semantic or selector language rather than a physical barrier-crossing rate. |
 | `corpus/programmes/frontier/wave-6/frontier_wave6_03_resolved_versus_lumped_d4_dynamics.md` | `quantitative_escape_or_first_passage` | Quantitative escape, first-passage or rare-event language: barrier, prefactor, bath, preparation and waiting-time law must be declared. |
 | `corpus/programmes/frontier/wave-6/frontier_wave6_04_broken_triality_memory_and_identifiability.md` | `quantitative_escape_or_first_passage` | Quantitative escape, first-passage or rare-event language: barrier, prefactor, bath, preparation and waiting-time law must be declared. |
@@ -53,12 +53,13 @@ A metastable label or exponential-looking wait is not yet a Kramers process. A p
 | `corpus/programmes/frontier/wave-7/frontier_wave7_12_wall_pseudoscalar_closes_oriented_equilibrium_selection.md` | `physical_metastability_or_selection_without_escape_rate` | Physical or emulator metastability/selection is discussed, but no microscopic escape-rate identification is made. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_16_leech_24_plus_jordan_3_bridge.md` | `algebraic_semantic_or_selector_use` | Metastability or hysteresis is algebraic, semantic or selector language rather than a physical barrier-crossing rate. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_19_shape_of_the_admissibility_bounds.md` | `memory_hysteresis_or_adaptive_dynamics` | Hysteresis or retained memory is the object; it must not be renamed thermal activation without a barrier and waiting-time model. |
+| `corpus/programmes/frontier/wave-7/frontier_wave7_230_the_terminal_is_a_stable_reconstructible_return_class.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim; a stable return class may name metastability as one possible realization without supplying a barrier or escape law. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_47_kenotic_enriched_loop_reopening_template.md` | `memory_hysteresis_or_adaptive_dynamics` | Hysteresis or retained memory is the object; it must not be renamed thermal activation without a barrier and waiting-time model. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_63_gram_disk_dynamics_and_causal_globalization.md` | `memory_hysteresis_or_adaptive_dynamics` | Hysteresis or retained memory is the object; it must not be renamed thermal activation without a barrier and waiting-time model. |
 | `corpus/programmes/orientation/orientation_architecture.md` | `algebraic_semantic_or_selector_use` | Metastability or hysteresis is algebraic, semantic or selector language rather than a physical barrier-crossing rate. |
 | `corpus/programmes/quotient-scars/README.md` | `physical_metastability_or_selection_without_escape_rate` | Physical or emulator metastability/selection is discussed, but no microscopic escape-rate identification is made. |
-| `corpus/START_HERE_BY_ROLE.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim. |
-| `corpus/syntheses/kenotic_governance_tri_omni_theism_and_a_lawful_world.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim. |
+| `corpus/START_HERE_BY_ROLE.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim; a stable return class may name metastability as one possible realization without supplying a barrier or escape law. |
+| `corpus/syntheses/kenotic_governance_tri_omni_theism_and_a_lawful_world.md` | `navigation_governance_or_interpretive` | Navigation, governance or interpretation inherits source mechanisms and makes no independent kinetic claim; a stable return class may name metastability as one possible realization without supplying a barrier or escape law. |
 
 ## Exit and reopening
 

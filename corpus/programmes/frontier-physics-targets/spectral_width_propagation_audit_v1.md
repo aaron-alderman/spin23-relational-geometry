@@ -7,7 +7,7 @@
 
 ## Result
 
-All **109** effective-spectral candidates emitted by the transition audit are assigned to a mechanism-safe disposition; **0** remain unreviewed. This closes a typing queue, not the physical theories in those documents.
+All **110** effective-spectral candidates emitted by the transition audit are assigned to a mechanism-safe disposition; **0** remain unreviewed. This closes a typing queue, not the physical theories in those documents.
 
 | Disposition | Documents |
 |---|---:|
@@ -15,7 +15,7 @@ All **109** effective-spectral candidates emitted by the transition audit are as
 | `open_system_or_network_width` | 12 |
 | `physical_spectroscopy_requires_width_ledger` | 16 |
 | `contextual_or_synthesis_use` | 19 |
-| `spectrum_gap_or_residue_not_width` | 52 |
+| `spectrum_gap_or_residue_not_width` | 53 |
 
 ## Boundary
 
@@ -123,6 +123,7 @@ An eigenvalue spectrum, response pole, fitted linewidth, ringdown constant and p
 | `corpus/programmes/frontier/wave-7/frontier_wave7_188_leech_nonlinear_commissioning_packet.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_192_leech_joined_cell_mps_order.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_226_leech_nonlinear_commissioning_digital_twin.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
+| `corpus/programmes/frontier/wave-7/frontier_wave7_229_maxwell_curl_quotient_helicity_and_dynamics_gate.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md` | `contextual_or_synthesis_use` | The document uses spectral language to map, compare or govern branches; it is not an independent width determination. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |

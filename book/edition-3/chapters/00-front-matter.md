@@ -6,7 +6,7 @@ _How to read this volume_
 
 > **Chapter function — [▤ Steward](../reading-key/move-steward.md)** — preserves provenance, memory, status and continuity.
 
-![Eight collaborators performing complementary research functions around an unfinished map](../../../docs/edition-3/assets/research-archetypes-workshop.png)
+![Eight collaborators performing complementary research functions around an unfinished map](../assets/research-archetypes-workshop.png)
 
 _A research programme is a relay of functions, not a single heroic viewpoint._
 ## How to read the icons

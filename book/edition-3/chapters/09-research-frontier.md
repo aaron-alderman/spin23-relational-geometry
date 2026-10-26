@@ -6,7 +6,7 @@ _Legacy action gates, the graph lane and the current torsion-parent boundary_
 
 > **Chapter function — [✦ Scout](../reading-key/move-scout.md)** — opens a plausible new route or searches beyond the present ingredients.
 
-![Terminal gate map grouping A5 and A7 as internally exhausted, A2 and A9 as conditionally constructed, and A4 A6 A11 as externally open](../../../docs/edition-3/assets/terminal-gates.svg)
+![Terminal gate map grouping A5 and A7 as internally exhausted, A2 and A9 as conditionally constructed, and A4 A6 A11 as externally open](../assets/terminal-gates.svg)
 
 _The terminal partition says where new information must enter._
 <a id="A2"></a>
