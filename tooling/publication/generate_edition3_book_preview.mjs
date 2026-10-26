@@ -1662,7 +1662,7 @@ const sourceReaderHtml = source => {
   const routeExplanation = editionSourceSet.has(source)
     ? `<p><strong>Why this page is here:</strong> Edition 3 cites this document directly.</p>`
     : route.length
-      ? `<p><strong>Why this page is here:</strong> the shortest known corpus-link route from an Edition 3 source is:</p><ol>${route.map(item => `<li>${libraryLink(output, item, basename(item, ".md"))}</li>`).join("")}</ol>`
+      ? `<p><strong>Why this page is here:</strong> the shortest known corpus-link route from an Edition 3 source is:</p><ol>${route.map(item => `<li>${libraryLink(output, item)}</li>`).join("")}</ol>`
       : `<p><strong>Why this page is here:</strong> it belongs to the wider canonical corpus. No explicit Markdown-link route from an Edition 3 citation was found; enter it through hierarchy or search.</p>`;
   const backlinkList = incoming.length ? `<ul>${incoming.map(item => `<li>${libraryLink(output, item)}<small>${esc(item)}</small></li>`).join("")}</ul>` : "<p>No explicit inbound Markdown links were found.</p>";
   const outgoingList = outgoing.length ? `<ul>${outgoing.map(item => `<li>${libraryLink(output, item)}<small>${esc(item)}</small></li>`).join("")}</ul>` : "<p>No explicit outgoing corpus links were found.</p>";

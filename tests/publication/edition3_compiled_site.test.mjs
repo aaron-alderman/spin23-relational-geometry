@@ -44,6 +44,8 @@ test("deep frontier pages join the HTML journey with graph context", () => {
   const html = readFileSync(target, "utf8");
   assert.match(html, /Wider corpus/u);
   assert.match(html, /Route into this page/u);
+  assert.match(html, /Moonshine as program, lattice formula and constrained carrier/u);
+  assert.doesNotMatch(html, />README<\/a>/u);
   assert.match(html, /Inbound corpus links/u);
   assert.match(html, /literature-review\.md/u);
   assert.match(html, /frontier_wave7_137_/u);
