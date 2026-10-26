@@ -56,6 +56,24 @@ test("deep frontier pages join the HTML journey with graph context", () => {
   assert.equal(search.documents.some(item => item.source.endsWith("frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md")), true);
 });
 
+test("GitHub-style corpus tables render as semantic HTML tables", () => {
+  const moonshine = readFileSync(join(siteRoot, "library", "corpus", "programmes", "moonshine-program-lattice", "README.html"), "utf8");
+  const section = moonshine.slice(moonshine.indexOf("Four non-equivalent meanings of program"), moonshine.indexOf("Generalized moonshine is the closest established transition language"));
+  assert.match(section, /<table><thead><tr><th>meaning<\/th><th>mathematical object<\/th><th>present status<\/th><\/tr><\/thead>/u);
+  assert.match(section, /<td>update program<\/td>/u);
+  assert.match(section, /<td>generative verifier<\/td>/u);
+  assert.doesNotMatch(section, /\|---\|---\|---\|/u);
+
+  const manifest = JSON.parse(readFileSync(join(siteRoot, "library", "manifest.json"), "utf8"));
+  for (const item of manifest.documents) {
+    const markdown = readFileSync(join(root, item.source), "utf8");
+    const html = readFileSync(join(siteRoot, item.output), "utf8");
+    const markdownTables = [...markdown.matchAll(/^\s*\|?\s*:?-{3,}:?\s*\|/gmu)].length;
+    const renderedTables = [...html.matchAll(/<table>/gu)].length;
+    assert.equal(renderedTables, markdownTables, item.source);
+  }
+});
+
 test("old cited-source URLs redirect to canonical corpus-library pages", () => {
   const alias = readFileSync(join(siteRoot, "sources", "corpus", "syntheses", "kenotic_governance_tri_omni_theism_and_a_lawful_world.html"), "utf8");
   assert.match(alias, /http-equiv="refresh"/u);

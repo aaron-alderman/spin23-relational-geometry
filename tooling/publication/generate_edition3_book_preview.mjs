@@ -1567,8 +1567,45 @@ const inlineMarkdown = (value, source) => {
   return output.replace(/\u0000(\d+)\u0000/gu, (_, index) => code[Number(index)]);
 };
 
+const splitMarkdownTableRow = line => {
+  let value = line.trim();
+  if (value.startsWith("|")) value = value.slice(1);
+  if (value.endsWith("|") && !value.endsWith("\\|")) value = value.slice(0, -1);
+  const cells = [];
+  let cell = "";
+  let escaped = false;
+  let inCode = false;
+  let inMath = false;
+  for (let index = 0; index < value.length; index += 1) {
+    const character = value[index];
+    const next = value[index + 1];
+    if (character === "\\" && ["(", "["].includes(next)) { cell += character + next; inMath = true; index += 1; continue; }
+    if (character === "\\" && [")", "]"].includes(next)) { cell += character + next; inMath = false; index += 1; continue; }
+    if (character === "$" && !inCode) { cell += character; inMath = !inMath; continue; }
+    if (escaped) { cell += character; escaped = false; continue; }
+    if (character === "\\") { cell += character; escaped = true; continue; }
+    if (character === "`") { cell += character; inCode = !inCode; continue; }
+    if (character === "|" && !inCode && !inMath) { cells.push(cell.trim()); cell = ""; continue; }
+    cell += character;
+  }
+  cells.push(cell.trim());
+  return cells;
+};
+const tableSeparator = line => {
+  if (!line.includes("|")) return null;
+  const cells = splitMarkdownTableRow(line);
+  return cells.length > 1 && cells.every(cell => /^:?-{3,}:?$/u.test(cell)) ? cells : null;
+};
+const tableAlignment = separator => separator.startsWith(":") && separator.endsWith(":") ? "center" : separator.endsWith(":") ? "right" : separator.startsWith(":") ? "left" : null;
+
 const renderMarkdown = (markdown, source) => {
   const lines = markdown.replace(/\r\n?/gu, "\n").split("\n");
+  const displayMathStack = [];
+  for (let index = 0; index < lines.length; index += 1) {
+    if (/^\s*\\\[\s*$/u.test(lines[index])) displayMathStack.push(index);
+    else if (/^\s*\\\]\s*$/u.test(lines[index]) && displayMathStack.length) displayMathStack.pop();
+  }
+  const unmatchedDisplayMathOpeners = new Set(displayMathStack);
   const blocks = [];
   let paragraph = [];
   let listType = null;
@@ -1578,18 +1615,33 @@ const renderMarkdown = (markdown, source) => {
   let fenceLines = [];
   let displayMathDelimiter = null;
   let displayMathLines = [];
+  let recoverDisplayMath = false;
   const flushParagraph = () => { if (paragraph.length) blocks.push(`<p>${inlineMarkdown(paragraph.join(" "), source)}</p>`); paragraph = []; };
   const flushList = () => { if (listType) blocks.push(`<${listType}>${listItems.map(item => `<li>${inlineMarkdown(item, source)}</li>`).join("")}</${listType}>`); listType = null; listItems = []; };
   const flushQuote = () => { if (quote.length) blocks.push(`<blockquote>${renderMarkdown(quote.join("\n"), source)}</blockquote>`); quote = []; };
-  for (const line of lines) {
+  for (let lineIndex = 0; lineIndex < lines.length; lineIndex += 1) {
+    const line = lines[lineIndex];
     if (displayMathDelimiter) {
-      displayMathLines.push(line);
       if (line.trim() === displayMathDelimiter) {
+        displayMathLines.push(line);
         blocks.push(`<div class="display-math">${esc(displayMathLines.join("\n"))}</div>`);
         displayMathDelimiter = null;
         displayMathLines = [];
+        recoverDisplayMath = false;
+        continue;
       }
-      continue;
+      const beginsNewBlock = /^(?:#{1,6}\s+|>|\s*[-*+]\s+|\s*\d+[.)]\s+)/u.test(line) || (line.includes("|") && lineIndex + 1 < lines.length && tableSeparator(lines[lineIndex + 1]));
+      if (recoverDisplayMath && (!line.trim() || beginsNewBlock)) {
+        displayMathLines.push(displayMathDelimiter);
+        blocks.push(`<div class="display-math recovered-math">${esc(displayMathLines.join("\n"))}</div>`);
+        displayMathDelimiter = null;
+        displayMathLines = [];
+        recoverDisplayMath = false;
+        if (!line.trim()) continue;
+      } else {
+        displayMathLines.push(line);
+        continue;
+      }
     }
     const fenceMatch = /^```\s*([^\s]*)/u.exec(line);
     if (fence) {
@@ -1602,12 +1654,31 @@ const renderMarkdown = (markdown, source) => {
       flushParagraph(); flushList(); flushQuote();
       displayMathDelimiter = line.includes("\\[") ? "\\]" : "$$";
       displayMathLines = [line];
+      recoverDisplayMath = unmatchedDisplayMathOpeners.has(lineIndex);
       continue;
     }
     const heading = /^(#{1,6})\s+(.+)$/u.exec(line);
     const unordered = /^\s*[-*+]\s+(.+)$/u.exec(line);
     const ordered = /^\s*\d+[.)]\s+(.+)$/u.exec(line);
     if (heading) { flushParagraph(); flushList(); flushQuote(); blocks.push(`<h${heading[1].length} id="${anchorId(heading[2])}">${inlineMarkdown(heading[2], source)}</h${heading[1].length}>`); continue; }
+    const separators = lineIndex + 1 < lines.length ? tableSeparator(lines[lineIndex + 1]) : null;
+    if (separators && line.includes("|")) {
+      flushParagraph(); flushList(); flushQuote();
+      const headers = splitMarkdownTableRow(line);
+      const alignments = separators.map(tableAlignment);
+      const rows = [];
+      lineIndex += 2;
+      while (lineIndex < lines.length && lines[lineIndex].trim() && lines[lineIndex].includes("|")) {
+        const cells = splitMarkdownTableRow(lines[lineIndex]);
+        if (cells.length < 2) break;
+        rows.push(cells);
+        lineIndex += 1;
+      }
+      lineIndex -= 1;
+      const cellHtml = (tag, value, index) => `<${tag}${alignments[index] ? ` style="text-align:${alignments[index]}"` : ""}>${inlineMarkdown(value || "", source)}</${tag}>`;
+      blocks.push(`<table><thead><tr>${headers.map((value, index) => cellHtml("th", value, index)).join("")}</tr></thead><tbody>${rows.map(row => `<tr>${headers.map((_, index) => cellHtml("td", row[index], index)).join("")}</tr>`).join("")}</tbody></table>`);
+      continue;
+    }
     if (/^\s*(?:---+|___+|\*\*\*+)\s*$/u.test(line)) { flushParagraph(); flushList(); flushQuote(); blocks.push("<hr>"); continue; }
     if (/^>\s?/u.test(line)) { flushParagraph(); flushList(); quote.push(line.replace(/^>\s?/u, "")); continue; }
     if (unordered || ordered) {
@@ -1620,7 +1691,7 @@ const renderMarkdown = (markdown, source) => {
     flushList(); flushQuote(); paragraph.push(line.trim());
   }
   if (fence) blocks.push(`<pre><code class="language-${esc(fence)}">${esc(fenceLines.join("\n"))}</code></pre>`);
-  if (displayMathDelimiter) blocks.push(`<div class="display-math">${esc(displayMathLines.join("\n"))}</div>`);
+  if (displayMathDelimiter) blocks.push(`<div class="display-math${recoverDisplayMath ? " recovered-math" : ""}">${esc([...displayMathLines, displayMathDelimiter].join("\n"))}</div>`);
   flushParagraph(); flushList(); flushQuote();
   return blocks.join("\n");
 };
