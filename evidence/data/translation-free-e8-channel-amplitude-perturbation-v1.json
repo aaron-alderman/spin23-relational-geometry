@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "translation-free-e8-channel-amplitude-perturbation-v1",
+  "date": "2026-10-26",
+  "model": "H=(1/2)n^T K_E8 n + sum_i u_i(1-cos theta_i)",
+  "baseline": {"channelPotentials":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"promotedGap":0.218276821531302},
+  "perturbation": {"channelPotentials":[0.55,0.45,0.54,0.46,0.53,0.47,0.52,0.48],"meanPotential":0.5,"maximumFractionalDeviationFromMean":0.1,"preservedSymmetry":"global inversion theta -> -theta","brokenSymmetry":"equal-channel locking"},
+  "cutoffLadder": [
+    {"cutoff":6,"basisStates":117361,"groundEnergy":3.0366342918237224,"firstEnergy":3.255168774973806,"gap":0.2185344831500835,"maximumLowFourBoundaryProbability":0.0008393411042581097},
+    {"cutoff":8,"basisStates":340321,"groundEnergy":3.0356236164160313,"firstEnergy":3.252955258151092,"gap":0.2173316417350608,"maximumLowFourBoundaryProbability":0.00006379192775575998},
+    {"cutoff":10,"basisStates":794161,"groundEnergy":3.035529088348578,"firstEnergy":3.252767986385231,"gap":0.21723889803665264,"maximumLowFourBoundaryProbability":0.000005009275489115736}
+  ],
+  "successiveRelativeGapDrifts": [0.005504126386299477,0.0004267381301119076],
+  "finalRelativeGapShiftFromSymmetricBaseline": -0.00475507883690037,
+  "finalLowFourResiduals": [1.1343920241982283e-11,9.836489156312208e-12,2.1142021977400186e-11,5.6784248235663585e-8],
+  "finalParities": [1,-1,1,-1],
+  "firstExcitedSineWeights": [0.000644963095811301,0.004851956401587513,0.007925045007096836,0.007191450417612446,0.0027652709263215774,0.0011995482810586136,0.00015420413710611237,0.0023041506039014996],
+  "maximumFirstExcitedCosineWeight": 1e-24,
+  "secondExcitedCosineWeights": [0.0005103060466088924,0.001989679066803412,0.002153792547408439,0.002416707006706315,0.0009967814559873668,0.000687282081487184,0.00015594094675666612,0.0012888133072164309],
+  "promoted": true,
+  "established": "One frozen positive channel-amplitude perturbation with ten-percent maximum deviation retains a converged nonzero compact-cell gap and the parity-resolved sine/cosine detector.",
+  "boundary": "One direction does not certify an open perturbation ball, arbitrary disorder, a bulk many-body gap, a topological response or a material realization.",
+  "nextGate": "test independent amplitude directions and perturb the positive quadratic metric before constructing intercell coupling"
+}

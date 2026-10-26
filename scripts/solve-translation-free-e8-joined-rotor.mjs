@@ -67,11 +67,15 @@ const stepsFor = branch => branch==="cartan-kernel"
   ? Array.from({length:8},(_,i)=>Int16Array.from(Array.from({length:8},(_,j)=>Number(i===j))))
   : Array.from({length:8},(_,column)=>Int16Array.from(Kinv.map(row=>row[column])));
 
-const compile = (cutoff,branch,{kineticStrength=1,potentialStrength=1}={}) => {
+const compile = (cutoff,branch,{kineticStrength=1,potentialStrength=1,channelPotentials=null}={}) => {
   const states=enumerateShell(cutoff);
   const indices=new Map(states.map((state,index)=>[key(state),index]));
+  const amplitudes=channelPotentials??Array(8).fill(potentialStrength);
+  assert.equal(amplitudes.length,8,"eight channel potentials");
+  assert.ok(amplitudes.every(value=>Number.isFinite(value)&&value>=0),"nonnegative finite channel potentials");
+  const potentialOffset=amplitudes.reduce((sum,value)=>sum+value,0);
   const kineticEnergies=Float64Array.from(states,state=>quadratic(state)/2);
-  const diagonal=Float64Array.from(kineticEnergies,energy=>kineticStrength*energy+8*potentialStrength);
+  const diagonal=Float64Array.from(kineticEnergies,energy=>kineticStrength*energy+potentialOffset);
   const steps=stepsFor(branch);
   const neighbors=new Int32Array(states.length*16).fill(-1);
   for(let index=0;index<states.length;index+=1){
@@ -89,13 +93,13 @@ const compile = (cutoff,branch,{kineticStrength=1,potentialStrength=1}={}) => {
       const offset=i*16;
       for(let slot=0;slot<16;slot+=1){
         const neighbor=neighbors[offset+slot];
-        if(neighbor>=0) value-=0.5*potentialStrength*input[neighbor];
+        if(neighbor>=0) value-=0.5*amplitudes[Math.floor(slot/2)]*input[neighbor];
       }
       output[i]=value;
     }
     return output;
   };
-  return {states,kineticEnergies,diagonal,neighbors,matvec};
+  return {states,kineticEnergies,diagonal,neighbors,amplitudes,matvec};
 };
 
 const dot=(a,b)=>{let sum=0;for(let i=0;i<a.length;i+=1)sum+=a[i]*b[i];return sum;};
@@ -293,10 +297,11 @@ const maxSubspace=Number(args.maxSubspace??16);
 const cycles=Number(args.cycles??40);
 const kineticStrength=Number(args.kinetic??1);
 const potentialStrength=Number(args.potential??1);
+const channelPotentials=args.channelPotentials?.split(",").map(Number)??null;
 const records=[];
 for(const cutoff of cutoffs)for(const branch of branches){
   const started=performance.now();
-  const operator=compile(cutoff,branch,{kineticStrength,potentialStrength});
+  const operator=compile(cutoff,branch,{kineticStrength,potentialStrength,channelPotentials});
   const result=method==="davidson"
     ? davidson(operator,{roots:4,maxSubspace,cycles,tolerance:1e-10,seed:823240+cutoff+(branch==="inverse-kernel"?100:0)})
     : lanczos(operator,iterations,823239+cutoff+(branch==="inverse-kernel"?100:0));
@@ -317,6 +322,9 @@ for(const cutoff of cutoffs)for(const branch of branches){
 }
 console.log(JSON.stringify({
   schemaVersion:"translation-free-e8-joined-rotor-solver-output-v1",
-  settings:{cutoffs,branches,method,iterations,maxSubspace,cycles,kineticStrength,potentialStrength,ratio:potentialStrength/kineticStrength},
+  settings:{cutoffs,branches,method,iterations,maxSubspace,cycles,kineticStrength,potentialStrength,
+    channelPotentials:channelPotentials??Array(8).fill(potentialStrength),
+    meanPotential:(channelPotentials??Array(8).fill(potentialStrength)).reduce((sum,value)=>sum+value,0)/8,
+    ratio:(channelPotentials?.reduce((sum,value)=>sum+value,0)/8??potentialStrength)/kineticStrength},
   records,
 },null,2));

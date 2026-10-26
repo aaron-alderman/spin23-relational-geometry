@@ -2,7 +2,7 @@
 
 **Date:** 26 October 2026
 
-**Status:** five ratio points promoted; perturbation tube open
+**Status:** five ratio points promoted; one nonscalar direction promoted; perturbation tube open
 
 **Evidence:** [ratio ledger](../../../evidence/data/translation-free-e8-cartan-ratio-spine-v1.json)  
 **Certificate:** [spine verifier](../../../verification/verify/verify_translation_free_e8_cartan_ratio_spine.mjs)
@@ -24,6 +24,7 @@ numerics, not solver failure: stronger locking spreads charge support.
 
 Shell-six runs at (r=2,4) have 2.8% and 5.0% boundary weight and remain
 reconnaissance. The five promoted points are a sampled stability spine, not
-a proof of every intermediate ratio. Channel and metric perturbations are
-required before calling this an open
-stability tube.
+a proof of every intermediate ratio. One
+[unequal-channel direction](E8_CHANNEL_AMPLITUDE_PERTURBATION.md) now
+survives, but independent amplitude directions and metric perturbations are
+required before calling this an open stability tube.
