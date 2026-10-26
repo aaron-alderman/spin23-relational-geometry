@@ -285,6 +285,36 @@ A measured width still need not be that population lifetime. Pure dephasing, qua
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-4.md)
 
+<a id="a-seam-changes-the-menu-of-continuations"></a>
+## A seam changes the menu of continuations
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+A seam in the local motion algebra is not another name for a decay operator. It changes the kind of continuation available to a mode; a decay channel still needs its own coupling and destination. Full dynamics can remain invertible while the parent-mode projection has no practical return, because the continuation is carried by other modes. This makes a conditional W/Z conjecture precise without promoting it: a proposed elliptic/separating mixture may alter continuation geometry, while any additional pathway must be independently derived and must predict more than the known total width. Without an outgoing channel, seam crossing may become a candidate local closure point only after reflection, trapping, mode conversion, state-space extension and unobserved records are excluded.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-a-seam-changes-the-menu-of-continuations-claim-1.md)
+
+<a id="observers-horizons-and-outgoing-channels"></a>
+## Observers, horizons and outgoing channels
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — Works after a named field, coefficient, boundary condition or control is supplied.
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+This section marks a live integration boundary. An accelerated detector closes over a field state, worldline, switching and transition record; its thermal detailed-balance ratio does not mean the global Minkowski vacuum has changed.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-1.md)
+
+Hawking radiation needs a geometry, quantum state, mode continuation, greybody scattering and detector. Kerr further separates the horizon, ergosurface, light ring and superradiant threshold. Their mixed-generator shape is suggestive, but no source-derived map identifies them with the local Spin(2,3) cell.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-2.md)
+
+Nuclear isomers, shape coexistence, fission and compound resonances are the near-term hostile controls. They let one vary parent structure, channel coupling and detector record separately. Success first earns better theory engineering; only a replicated residual outside established nuclear, gravitational and detector models earns a new-physics claim.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-3.md)
+
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator
 
@@ -323,7 +353,7 @@ Each experiment has two valuable outcomes: improved theory or technology if esta
 
 > **Research move — [⚒ Builder](../reading-key/move-builder.md)** — constructs a model, mechanism, calculation, protocol or intervention.
 
-This result arrived after the chapter's main story was stabilized. It is included as a visible integration queue, not as settled narrative; once the mathematics, terminology and experimental interpretation firm, its pieces should be redistributed into the Jordan–Lie, detector and research-frontier sections.
+The claim is kept as a bounded integration surface: its mathematics, terminology and experimental interpretation stand or fail on the reasons given here, without requiring the reader to know the order in which they were found.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-1.md)
 

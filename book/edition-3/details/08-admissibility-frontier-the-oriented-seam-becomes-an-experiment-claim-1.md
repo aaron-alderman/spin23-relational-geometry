@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> This result arrived after the chapter's main story was stabilized. It is included as a visible integration queue, not as settled narrative; once the mathematics, terminology and experimental interpretation firm, its pieces should be redistributed into the Jordan–Lie, detector and research-frontier sections.
+> The claim is kept as a bounded integration surface: its mathematics, terminology and experimental interpretation stand or fail on the reasons given here, without requiring the reader to know the order in which they were found.
 
 ## What this commits us to
 

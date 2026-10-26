@@ -1,11 +1,11 @@
 # Open topics v1
 
-**Date:** 25 October 2026
+**Date:** 26 October 2026
 **Status:** maintained working queue  
 **Machine authority:** [open-topic register](open_topics_register_v1.json)  
 **Detector map:** [detector and frontier atlas](detector_frontier_atlas_v1.md)
 
-The register contains **51** independently closable topics: **43 remain live and eight are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
+The register contains **53** independently closable topics: **45 remain live and eight are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
 
 ## Operating rule
 
@@ -74,6 +74,8 @@ for another dimensionless redesign.
 | OT-047 | Renormalized source quotient, operational rank and KMS response | AZ-071 fixes the detector budget; AZ-113 requires an independent-current export and AZ-114 closes differential detail of the same process as a source-coordinate escape. AZ-115 fixes the general dimension-five count at seven physical coordinates. The amplitude calculation still needs the three-control export for its own closure |
 | OT-048 | Five-coordinate incidence observable likelihood | AZ-081 restores the weak quotient; AZ-113--AZ-115 close the public-model, same-process and unrestricted-coordinate shortcuts. AZ-116 gives the conditional charged/neutral detector, and AZ-117 supplies an odd diphoton mass moment that can retain its missing sign against the continuum. Compute one source-complete helicity and detector likelihood across the 27 settings |
 | OT-051 | Boundary-domain selector spectrum | gated on the paper's promised public energies, matrix elements and fit code; then hold one bulk carrier fixed, vary untwisted, pi-twisted and symmetry-breaking selectors, and predict held-out spectra/OPE data without bulk retuning |
+| OT-052 | Observer-dependent detector and horizon closure | run finite-switching Unruh, Kerr-threshold and state-through-greybody likelihood controls before attempting a Jordan/Spin bridge |
+| OT-053 | Nuclear open-system seam and channel calibration | choose one isotope and join entrance spectroscopy, prompt coincidence and delayed tagging in one held-out parent-plus-channel model |
 
 ## P2 — gated translation problems
 

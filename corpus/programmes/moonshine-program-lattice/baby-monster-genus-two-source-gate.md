@@ -80,7 +80,7 @@ construction requires:
 1. the \(b\)-action on \(VB^0,VB^1,VB_T\) and compatible intertwining spaces;
 2. \(b\)-twined torus one-point functions for the homogeneous sewing states;
 3. invariant bilinear forms and dual-basis contractions;
-4. a convergent vector \(Z^{(2)}_{VB,b}[\delta](\Omega)\) on the ten even
+4. a convergent vector $Z^{(2)}_{VB,b}\lbrack\delta\rbrack(\Omega)$ on the ten even
    characteristics;
 5. its monomial action under \(K=S^2R^{-11}\);
 6. separating degeneration to the order-23 genus-one traces.

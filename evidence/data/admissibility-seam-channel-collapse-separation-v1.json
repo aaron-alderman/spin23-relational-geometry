@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-26",
+  "protocol": "admissibility-seam-channel-collapse-separation/1",
+  "packet": "AZ-135",
+  "localGenerator": {
+    "formula": "G(a,b)=a I+b J",
+    "relations": ["I^2=-1", "J^2=1", "I J=-J I"],
+    "square": "G^2=(b^2-a^2) 1",
+    "discriminant": "Delta=b^2-a^2",
+    "types": ["Delta<0:elliptic", "Delta=0:parabolic", "Delta>0:hyperbolic"],
+    "finiteFlowInvertible": true
+  },
+  "separations": {
+    "seamImpliesChannel": false,
+    "channelImpliesSeam": false,
+    "localNoReturnImpliesGlobalNoninvertibility": false,
+    "chartExitImpliesCollapse": false,
+    "firstExitImpliesCentroid": false
+  },
+  "coupledSectorModel": {
+    "parentBlock": "H_P(G)",
+    "channelBlock": "H_Q",
+    "coupling": "V",
+    "effectiveOperator": "H_eff(E)=H_P(G)+V^dagger(E-H_Q+i0)^-1 V",
+    "widthRequiresCouplingAndOnShellContinuation": true
+  },
+  "wzConjecture": {
+    "status": "conditional_not_derived",
+    "standardModelDecayRetained": true,
+    "t1t2TerminologyCollisionFlagged": true,
+    "spin23EmbeddingDerived": false,
+    "additionalChannelDerived": false,
+    "totalWidthFitSufficient": false
+  },
+  "continuationsBeforeCollapse": [
+    "outgoing_decay_channel",
+    "stable_or_metastable_mode_conversion",
+    "reflection_or_trapping",
+    "state_space_extension",
+    "environment_or_detector_record"
+  ],
+  "nextGate": "Derive a physical T_e/T_h embedding and parent-plus-channel amplitude, then predict a channel-specific polarization, threshold, production-history or line-shape contrast without fitting the total W/Z width."
+}

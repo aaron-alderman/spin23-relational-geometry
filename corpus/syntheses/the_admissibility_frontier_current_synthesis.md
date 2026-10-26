@@ -547,6 +547,8 @@ The first explicit search for a new contextual inequality has also produced a di
 
 [AZ-134](../programmes/admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md) closes the current-source path-adjoint route negatively. Exhausting all 24 permutations of Challenges, DependsOn, Qualifies and Supports, including all 10 involutions, finds no global reversal rule. The best rules match only two records—the reciprocal Spin--Temple Supports/Qualifies cell—and leave 41 unmatched. In particular the DependsOn river triangle has no reverse endpoint pairs under any type. A formal reverse completion remains possible, but it adds semantics the source did not author. Reopening now requires new reverse records, an independent contravariant functor or a physical reverse-control dictionary with held-out predictions.
 
+[AZ-135](../programmes/admissibility/admissibility_135_a_seam_changes_continuations_but_does_not_by_itself_trigger_decay.md) joins the local seam alphabet to the transition ledger without identifying them. A parabolic crossing changes the local continuation type; a decay still requires its own operator, matrix element and on-shell destination. Full symplectic flow remains invertible while its projection onto one parent mode can lose return, so “no way back” is local to a chart, timescale and detector resolution. The conditional W/Z reading is retained only in this disciplined form: a proposed elliptic/separating mixture may change which continuations are available, and an independently derived extra channel may use that opening. If no channel exists, collapse is only the last candidate after mode conversion, reflection, trapping, state-space extension and environment records have been excluded. The next gate is a physical embedding and channel-specific prediction; a fit to the known total width is not evidence for the mechanism.
+
 The two-current quantum-field-theory lane is now decomposed rather than merely deferred. [AZ-067](../programmes/admissibility/admissibility_67_two_current_source_and_scheme_census.md) shows that the two source labels do not make the full problem two-component. Ultraviolet operator mixing, broken-phase threshold/contact matching and finite-temperature KMS/relaxation are three distinct work packages. Established literature fixes their architecture and protects the Dirac $B-L$ Ward row, but does not calculate the corpus-specific incidence shear, contact tensor, thermal coefficients or invariant ratios. The first permissible computation is therefore a declared-scheme one-loop source subblock; a Majorana mass is a separate branch, and published ALP running tests only the broken incidence direction rather than realizing the full two-port vector response.
 
 Whole-corpus reconciliation sharpens that conclusion again. [AZ-068](../programmes/admissibility/admissibility_68_five_coordinate_source_quotient_and_two_current_no_go.md) recovers the already-certified field-content calculation: after hypercharge and contact/EOM redundancies are removed, the physical source quotient has four Yukawa-breaking coordinates and one independent anomaly coordinate. Completed $B-L$ is its unique null axis, but neither incidence convention is an eigenvector of the leading positive Yukawa-channel metric. Thus the rank-two Jordan cone remains exact for a selected pair of ports, while the Standard Model does not microscopically close those ports by itself. The empirical and computational target is now a stable singular-value gap in the five-channel response—one broken direction plus $B-L$ over a declared energy window—not another basis rotation that makes incidence look special.
@@ -979,6 +981,44 @@ input depends only on the preserved product \(ab\). The scalar defect trace
 therefore closes negatively as an orientation detector. The surviving gate is
 an additional commuting insertion or genus-two sewing, not the acquisition of
 529 independent functions.
+
+## Observers, horizons and nuclear controls
+
+The observer/horizon tranche now repairs a real imbalance in the corpus. An
+accelerated detector does not establish a changed global vacuum: its response
+closes over a state, worldline, switching function, coupling and record. In
+the stationary uniform-acceleration limit the excitation/de-excitation ratio
+is thermal, and the executable audit reproduces the KMS ratio at nine
+acceleration-gap settings. This is the cleanest physical example of local
+closure without a global-closure claim.
+
+Hawking and Kerr physics then split several boundaries that evocative language
+often collapses. A Hawking record needs a geometry, a declared quantum state,
+mode continuation, exterior greybody scattering and a detector. In Kerr, the
+horizon, stationary-limit surface, ergoregion, light ring, quasinormal
+boundary and superradiant threshold are different things. The horizon
+generator mixes time translation and rotation, and bosonic amplification can
+occur for (0<\omega<m\Omega_H), but this does not identify the Kerr system
+with the corpus's local (T_{\rm e}/T_{\rm h}) cell or derive
+(Spin_0(2,3)). The weak-field Lense--Thirring lane remains valid; the new
+packet supplies the missing strong-field taxonomy and its bridge firewall.
+
+Nuclear physics becomes a control rather than an incidental example. Isomers,
+shape coexistence, fission, compound resonances and competing gamma, beta,
+particle and conversion channels put parent structure, selection rules,
+continuum coupling, widths and detector records in one data-rich finite
+system. A three-arm entrance/coincidence/delayed-tag programme now tests
+whether the seam/channel distinction improves held-out prediction before it
+is exported to W/Z conjectures. If conventional nuclear theory closes the
+records, the result is useful theoretical engineering; only a replicated
+symmetry-specific residual after reaction and detector covariance can reopen
+new physics.
+
+The consolidated [observer, horizon and channel atlas](../programmes/admissibility/admissibility_140_observer_horizon_channel_atlas_and_exhaustion.md)
+and [bounded literature review](../programmes/frontier-physics-targets/observer_horizon_nuclear_literature_review_v1.md)
+record what is filled and what remains unfilled. The practical instruction is
+to look where changing observer access, geometry, channel coupling and
+detector folding cannot mimic one another.
 
 ## Kenotic confidence
 

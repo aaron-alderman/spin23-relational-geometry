@@ -11,6 +11,8 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 ## Every current use
 
 - [The admissibility frontier · Dynamics moves the boundary](../chapters/08-admissibility-frontier.md#dynamics-moves-the-boundary)
+- [The admissibility frontier · A seam changes the menu of continuations](../chapters/08-admissibility-frontier.md#a-seam-changes-the-menu-of-continuations)
+- [The admissibility frontier · Observers, horizons and outgoing channels](../chapters/08-admissibility-frontier.md#observers-horizons-and-outgoing-channels)
 - [The admissibility frontier · the oriented seam becomes an experiment](../chapters/08-admissibility-frontier.md#the-oriented-seam-becomes-an-experiment)
 - [The admissibility frontier · the missing middle has a type](../chapters/08-admissibility-frontier.md#the-missing-middle-has-a-type)
 - [The admissibility frontier · the logical frontier is two controls, not one group name](../chapters/08-admissibility-frontier.md#the-logical-frontier-is-two-controls-not-one-group-name)
@@ -49,6 +51,10 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [MIXED-INTERFACE · Realize one mixed-interface return on a calibrated carrier](../chapters/09-research-frontier.md#MIXED-INTERFACE)
 - [Claim · The admissibility frontier · Dynamics moves the boundary (1)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-1.md)
 - [Claim · The admissibility frontier · Dynamics moves the boundary (2)](../details/08-admissibility-frontier-dynamics-moves-the-boundary-claim-2.md)
+- [Claim · The admissibility frontier · A seam changes the menu of continuations (1)](../details/08-admissibility-frontier-a-seam-changes-the-menu-of-continuations-claim-1.md)
+- [Claim · The admissibility frontier · Observers, horizons and outgoing channels (1)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-1.md)
+- [Claim · The admissibility frontier · Observers, horizons and outgoing channels (2)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-2.md)
+- [Claim · The admissibility frontier · Observers, horizons and outgoing channels (3)](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-3.md)
 - [Claim · The admissibility frontier · the oriented seam becomes an experiment (1)](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-1.md)
 - [Claim · The admissibility frontier · the oriented seam becomes an experiment (2)](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-2.md)
 - [Claim · The admissibility frontier · the oriented seam becomes an experiment (3)](../details/08-admissibility-frontier-the-oriented-seam-becomes-an-experiment-claim-3.md)

@@ -44,4 +44,4 @@ Locate a mismatched definition, an omitted assumption, a failed certificate step
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#transition-operators-make-the-boundary-measurable) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-3.md) · [Next claim →](08-admissibility-frontier-the-third-term-is-the-mediator-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#transition-operators-make-the-boundary-measurable) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-3.md) · [Next claim →](08-admissibility-frontier-a-seam-changes-the-menu-of-continuations-claim-1.md)
