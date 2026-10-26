@@ -42,6 +42,9 @@ branch and 7.80% in the inverse branch. Those shifts are smaller than the
 previous increment but remain above one percent. The solver bottleneck is
 closed at this rung; the continuum inference bottleneck is not.
 
-Cutoff ten, boundary-shell probability and eight drive-transition weights are
-next. The gap should be promoted only after two successive complete-shell
-increments satisfy the tolerance, so an accidental plateau cannot pass.
+For the (K)-kernel branch, cutoff ten, boundary-shell probability and eight
+drive-transition weights are next. The inverse branch has a stricter
+[operator-completeness gate](E8_OPERATOR_COMPLETENESS_GATE.md): its largest
+dense cosine step first enters at shell 15, so shells 10 and 12 cannot yet
+serve as full-model convergence points. A gap should be promoted only after
+two successive operator-complete increments satisfy the tolerance.

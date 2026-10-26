@@ -87,8 +87,8 @@
   "e8AdaptiveShellSolver": {
     "evidence": "translation-free-e8-adaptive-shell-solver-plan-v1.json",
     "sharedKineticCarrier": "E8 theta shells",
-    "cutoffKineticEnergies": [4,6,8,10,12],
-    "basisSizes": [26641,117361,340321,794161,1604401],
+    "cutoffKineticEnergies": [4,6,8,10,12,15],
+    "basisSizes": [26641,117361,340321,794161,1604401,3721681],
     "maximumNeighborsPerState": 16,
     "scope": "Exact shell counts and matrix-free operator compilation; converged nonlinear eigenvalues remain open."
   },
@@ -109,6 +109,14 @@
     "relativeGapDrift6to8": [0.03112944773249888,0.07800336044413199],
     "continuumGapPromoted": false,
     "scope": "Bounded-subspace solver validated against full Lanczos; shell-eight residuals pass but cutoff drift rejects continuum-gap promotion."
+  },
+  "e8OperatorCompletenessGate": {
+    "evidence": "translation-free-e8-operator-completeness-gate-v1.json",
+    "cartanFirstCompleteCutoff": 1,
+    "inverseVacuumStepEnergies": [2,7,15,10,6,3,1,4],
+    "inverseFirstCompleteCutoff": 15,
+    "inverseFirstCompleteBasis": 3721681,
+    "scope": "Exact pre-solver gate: inverse-branch shells below 15 omit at least one full vacuum cosine channel and cannot count as full-model convergence evidence."
   },
   "quasicrystalBackplaneBridge": {
     "evidence": "translation-free-e8-quasicrystal-backplane-bridge-v1.json",

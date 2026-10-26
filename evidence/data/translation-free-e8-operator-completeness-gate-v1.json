@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "translation-free-e8-operator-completeness-gate-v1",
+  "date": "2026-10-26",
+  "status": "exact truncation admissibility correction; inverse branch first operator-complete at shell 15",
+  "commonKineticBasis": "Q(m)=m^T K_E8 m with H_kin=Q/2",
+  "stepAudit": {
+    "cartanKernel": {
+      "steps": "plus/minus e_i",
+      "vacuumStepEnergies": [1,1,1,1,1,1,1,1],
+      "firstCompleteCutoff": 1
+    },
+    "inverseKernel": {
+      "steps": "plus/minus K_E8^-1 e_i",
+      "vacuumStepEnergies": [2,7,15,10,6,3,1,4],
+      "firstCompleteCutoff": 15
+    }
+  },
+  "inverseBranchCompleteness": [
+    {"cutoff":2,"activeVacuumChannels":2,"missingVacuumPotentialNormSquaredFraction":0.75,"basisStates":2401},
+    {"cutoff":4,"activeVacuumChannels":4,"missingVacuumPotentialNormSquaredFraction":0.5,"basisStates":26641},
+    {"cutoff":6,"activeVacuumChannels":5,"missingVacuumPotentialNormSquaredFraction":0.375,"basisStates":117361},
+    {"cutoff":8,"activeVacuumChannels":6,"missingVacuumPotentialNormSquaredFraction":0.25,"basisStates":340321},
+    {"cutoff":10,"activeVacuumChannels":7,"missingVacuumPotentialNormSquaredFraction":0.125,"basisStates":794161},
+    {"cutoff":12,"activeVacuumChannels":7,"missingVacuumPotentialNormSquaredFraction":0.125,"basisStates":1604401},
+    {"cutoff":15,"activeVacuumChannels":8,"missingVacuumPotentialNormSquaredFraction":0,"basisStates":3721681}
+  ],
+  "thetaExtension": [
+    {"m":13,"normSquared":26,"multiplicity":527520,"cumulativeStates":2131921},
+    {"m":14,"normSquared":28,"multiplicity":743040,"cumulativeStates":2874961},
+    {"m":15,"normSquared":30,"multiplicity":846720,"cumulativeStates":3721681}
+  ],
+  "interpretation": {
+    "cartanKernel": "all eight cosine generators act on the vacuum from the first complete shell; subsequent cutoff drift is an ordinary state-space convergence question",
+    "inverseKernel": "shells below 15 project away at least one entire vacuum-to-step channel, so their spectra are operator-incomplete reconnaissance rather than admissible convergence rungs",
+    "cutoff8Correction": "the recorded inverse-kernel cutoff-8 gap remains a valid eigenvalue of its projected Hamiltonian but is not a full eight-cosine approximation"
+  },
+  "established": "A complete-shell basis is not automatically complete for the declared operator set. Exact step energies provide a pre-solver admissibility gate, and the inverse branch first passes it at kinetic cutoff 15.",
+  "boundary": "Operator completeness at cutoff 15 is necessary, not sufficient, for spectral convergence. It does not promote the inverse-branch gap.",
+  "nextGate": "continue the cartan branch at shells 10 and 12; redesign or distribute the inverse solve for shell 15 before treating its cutoff sequence as convergence evidence"
+}

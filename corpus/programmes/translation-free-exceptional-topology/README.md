@@ -26,6 +26,8 @@
 
 **Restarted solve:** [340,321-state Davidson promotion audit](E8_RESTARTED_DAVIDSON.md)
 
+**Truncation firewall:** [E8 operator-completeness gate](E8_OPERATOR_COMPLETENESS_GATE.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -186,6 +188,9 @@ both graphs. Their nonlinear spectra separate, but their first gaps still
 drift by 6.35% and 21.46% from cutoff four to six, so neither continuum gap is
 promoted. A restarted block solver now reaches 340,321 states; the next gap
 drifts shrink to 3.11% and 7.80% but still fail the same one-percent gate.
+The inverse branch also fails an earlier operator gate: its dense cosine steps
+cost up to 15 kinetic units, so shells below 15 omit at least one complete
+vacuum drive channel. Its first operator-complete basis has 3,721,681 states.
 
 The material route is now typed rather than associative. A quasicrystal may
 supply a phason-bearing, translation-free backplane for the programmed E8
@@ -246,6 +251,7 @@ translation-free topology result remains valuable after that null.
 - [E8 adaptive-shell nonlinear solver](E8_ADAPTIVE_SHELL_SOLVER.md)
 - [E8 joined-rotor nonlinear reconnaissance](E8_JOINED_ROTOR_RECON.md)
 - [E8 restarted nonlinear eigensolver](E8_RESTARTED_DAVIDSON.md)
+- [E8 operator-completeness gate](E8_OPERATOR_COMPLETENESS_GATE.md)
 
 ## Primary external anchors
 

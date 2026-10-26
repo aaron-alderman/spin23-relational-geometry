@@ -11,6 +11,7 @@ const e8Metric = load("translation-free-e8-constitutive-metric-gate-v1.json");
 const e8Shell = load("translation-free-e8-adaptive-shell-solver-plan-v1.json");
 const e8Recon = load("translation-free-e8-joined-rotor-cutoff-recon-v1.json");
 const e8Davidson = load("translation-free-e8-restarted-davidson-v1.json");
+const e8Operator = load("translation-free-e8-operator-completeness-gate-v1.json");
 const quasicrystal = load("translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 
 const E8 = [
@@ -111,7 +112,7 @@ assert.deepEqual(e8Metric.coxeterCertificate.exponents, [1,7,11,13,17,19,23,29])
 assert.equal(e8Metric.conditionalRotorCell.branches.length, 3);
 assert.ok(e8Metric.topologicalInput.notFixedByE8.includes("charging kernel"));
 assert.equal(arm.e8AdaptiveShellSolver.evidence, "translation-free-e8-adaptive-shell-solver-plan-v1.json");
-assert.equal(e8Shell.thetaSeries.shells.at(-1).cumulativeStates, 1604401);
+assert.equal(e8Shell.thetaSeries.shells.at(-1).cumulativeStates, 3721681);
 assert.equal(e8Shell.solverPlan.maximumNeighborsPerState, 16);
 assert.equal(arm.e8JoinedRotorRecon.evidence, "translation-free-e8-joined-rotor-cutoff-recon-v1.json");
 assert.equal(Math.max(...e8Recon.records.map(item=>item.basisStates)),117361);
@@ -121,6 +122,9 @@ assert.equal(arm.e8RestartedDavidson.evidence,"translation-free-e8-restarted-dav
 assert.ok(e8Davidson.cutoff8.every(item=>item.basisStates===340321));
 assert.equal(e8Davidson.cutoffAssessment.cartanKernelPromoted,false);
 assert.equal(e8Davidson.cutoffAssessment.inverseKernelPromoted,false);
+assert.equal(arm.e8OperatorCompletenessGate.evidence,"translation-free-e8-operator-completeness-gate-v1.json");
+assert.equal(e8Operator.stepAudit.inverseKernel.firstCompleteCutoff,15);
+assert.equal(e8Operator.inverseBranchCompleteness.at(-1).basisStates,3721681);
 assert.equal(arm.quasicrystalBackplaneBridge.evidence, "translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 assert.deepEqual(quasicrystal.factorialDesign.backplanes, ["periodic","quasicrystal","amorphous"]);
 assert.deepEqual(quasicrystal.factorialDesign.relationPrograms, ["identity","E8"]);
@@ -141,6 +145,7 @@ console.log(JSON.stringify({
   e8AdaptiveShellSolver: {maximumBasis:e8Shell.thetaSeries.shells.at(-1).cumulativeStates, maximumNeighbors:e8Shell.solverPlan.maximumNeighborsPerState},
   e8JoinedRotorRecon: {largestBasis:Math.max(...e8Recon.records.map(item=>item.basisStates)), continuumGapPromoted:false},
   e8RestartedDavidson: {largestBasis:340321, continuumGapPromoted:false},
+  e8OperatorCompletenessGate: {inverseFirstCompleteCutoff:15, inverseFirstCompleteBasis:3721681},
   quasicrystalBridge: {materialClasses:quasicrystal.factorialDesign.backplanes.length, relationPrograms:quasicrystal.factorialDesign.relationPrograms.length, devices:quasicrystal.factorialDesign.totalPrimaryDevices},
   nextGate: "clock-to-rotor E8 response plus blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
 }));

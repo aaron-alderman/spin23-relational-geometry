@@ -26,6 +26,9 @@
       {"m":10,"normSquared":20,"multiplicity":272160,"cumulativeStates":794161},
       {"m":11,"normSquared":22,"multiplicity":319680,"cumulativeStates":1113841},
       {"m":12,"normSquared":24,"multiplicity":490560,"cumulativeStates":1604401}
+      ,{"m":13,"normSquared":26,"multiplicity":527520,"cumulativeStates":2131921}
+      ,{"m":14,"normSquared":28,"multiplicity":743040,"cumulativeStates":2874961}
+      ,{"m":15,"normSquared":30,"multiplicity":846720,"cumulativeStates":3721681}
     ]
   },
   "commonBasisDifferentOperators": {
@@ -38,13 +41,13 @@
   "solverPlan": {
     "representation": "hash-indexed complete E8 shells with matrix-free symmetric matvec",
     "maximumNeighborsPerState": 16,
-    "cutoffSequenceKineticEnergy": [4,6,8,10,12],
-    "basisSizes": [26641,117361,340321,794161,1604401],
-    "fourVectorMemoryMiB": [0.813,3.582,10.386,24.236,48.962],
+    "cutoffSequenceKineticEnergy": [4,6,8,10,12,15],
+    "basisSizes": [26641,117361,340321,794161,1604401,3721681],
+    "fourVectorMemoryMiB": [0.813,3.582,10.386,24.236,48.962,113.577],
     "observables": ["ground energy", "first three gaps", "parity labels", "transition weights under eight local drives", "cutoff residual"],
     "stabilityGate": "promote a level only when successive complete-shell cutoffs agree inside the preregistered tolerance and its boundary probability or residual decreases"
   },
   "established": "The joined nonlinear problem does not require an anisotropic Cartesian box. Exact E8 theta coefficients give the basis size in advance, and the K/K^-1 hypotheses can be compared on one kinetic carrier by changing only the sixteen potential transitions.",
-  "boundary": "This packet sizes and compiles the sparse problem; it does not report converged nonlinear eigenvalues. A projected finite-shell eigenvalue is variational data, not yet the continuum gap.",
+  "boundary": "This packet sizes and compiles the sparse problem; it does not report converged nonlinear eigenvalues. A projected finite-shell eigenvalue is variational data, not yet the continuum gap. The inverse step set is not operator-complete before shell 15.",
   "nextGate": "implement the common-shell enumerator and matrix-free lowest-eigenpair solver, then publish the first cutoff convergence table for both step sets"
 }

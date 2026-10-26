@@ -202,7 +202,7 @@ const davidson = (operator,{roots=4,maxSubspace=16,cycles=40,tolerance=1e-10,see
       return {energy:item.value,vector,image,residual,residualNorm:norm(residual)};
     });
     last=ritz;
-    if(ritz.every(item=>item.residualNorm<tolerance))return {iterations:cycle,subspace:basis.length,ritz:ritz.map(({energy,residualNorm})=>({energy,residual:residualNorm}))};
+    if(ritz.every(item=>item.residualNorm<tolerance))return {iterations:cycle,subspace:basis.length,ritz:ritz.map(({energy,residualNorm,vector})=>({energy,residual:residualNorm,vector}))};
 
     const corrections=[];
     for(const item of ritz){
@@ -235,7 +235,42 @@ const davidson = (operator,{roots=4,maxSubspace=16,cycles=40,tolerance=1e-10,see
       images.push(...corrections.map(vector=>operator.matvec(vector)));
     }
   }
-  return {iterations:cycles,subspace:basis.length,ritz:last.map(({energy,residualNorm})=>({energy,residual:residualNorm}))};
+  return {iterations:cycles,subspace:basis.length,ritz:last.map(({energy,residualNorm,vector})=>({energy,residual:residualNorm,vector}))};
+};
+
+const spectralDiagnostics = (operator,ritz,cutoff) => {
+  const boundaryMask=Uint8Array.from(operator.diagonal,value=>Number(Math.abs((value-8)-cutoff)<1e-12));
+  const inversion=new Int32Array(operator.states.length);
+  const indices=new Map(operator.states.map((state,index)=>[key(state),index]));
+  for(let index=0;index<operator.states.length;index+=1){
+    inversion[index]=indices.get(Array.from(operator.states[index],value=>-value).join(","));
+  }
+  const levels=ritz.map(item=>{
+    let boundaryProbability=0;
+    let parityExpectation=0;
+    for(let i=0;i<item.vector.length;i+=1){
+      boundaryProbability+=boundaryMask[i]*item.vector[i]**2;
+      parityExpectation+=item.vector[i]*item.vector[inversion[i]];
+    }
+    return {boundaryProbability,parityExpectation};
+  });
+  const transitionWeights=[];
+  const ground=ritz[0].vector;
+  for(let excited=1;excited<ritz.length;excited+=1){
+    const weights=[];
+    for(let channel=0;channel<8;channel+=1){
+      let amplitude=0;
+      for(let i=0;i<ground.length;i+=1){
+        const minus=operator.neighbors[i*16+2*channel];
+        const plus=operator.neighbors[i*16+2*channel+1];
+        const driven=0.5*((minus>=0?ground[minus]:0)+(plus>=0?ground[plus]:0));
+        amplitude+=ritz[excited].vector[i]*driven;
+      }
+      weights.push(amplitude**2);
+    }
+    transitionWeights.push(weights);
+  }
+  return {levels,cosineDriveTransitionWeightsFromGround:transitionWeights};
 };
 
 const args=Object.fromEntries(process.argv.slice(2).map(argument=>{
@@ -254,6 +289,8 @@ for(const cutoff of cutoffs)for(const branch of branches){
   const result=method==="davidson"
     ? davidson(operator,{roots:4,maxSubspace,cycles,tolerance:1e-10,seed:823240+cutoff+(branch==="inverse-kernel"?100:0)})
     : lanczos(operator,iterations,823239+cutoff+(branch==="inverse-kernel"?100:0));
+  const diagnostics=method==="davidson"?spectralDiagnostics(operator,result.ritz,cutoff):undefined;
+  const levels=result.ritz.map(({energy,residual})=>({energy,residual}));
   records.push({
     cutoffKineticEnergy:cutoff,
     branch,
@@ -261,8 +298,9 @@ for(const cutoff of cutoffs)for(const branch of branches){
     method,
     iterations:result.iterations,
     retainedSubspace:result.subspace??result.iterations,
-    levels:result.ritz,
-    gapsFromGround:result.ritz.map(item=>item.energy-result.ritz[0].energy),
+    levels,
+    gapsFromGround:levels.map(item=>item.energy-levels[0].energy),
+    ...(diagnostics?{diagnostics}:{}),
     elapsedSeconds:(performance.now()-started)/1000,
   });
 }

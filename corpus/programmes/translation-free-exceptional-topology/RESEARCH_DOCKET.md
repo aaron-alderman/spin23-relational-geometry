@@ -30,14 +30,17 @@ material-native Hamiltonian remain open. Local fixed-coupling clock-to-rotor
 convergence is now certified through (q=129); the coupled eight-channel
 metric is no longer treated as uniquely implied by topology: the (K) and
 (K^{-1}) constitutive branches have exact, distinct Coxeter resonance
-fingerprints, and full eight-port calibration is the next gate. The E8-
-theta series now also supplies a shared complete-shell sparse basis through
-1,604,401 states for the conditional nonlinear eigensolve; eigenvalue
+fingerprints, and full eight-port calibration is the next gate. The E8 theta
+series now also supplies a shared complete-shell sparse basis through
+3,721,681 states for the conditional nonlinear eigensolve; eigenvalue
 reconnaissance has reached 117,361 states, but the first-gap drift still fails
 the one-percent promotion gate. A restarted Davidson solve has now reached
 340,321 states at shell eight; 3.11% and 7.80% drift still reject promotion.
-Shells 10--12 and leakage/transition estimators remain open. The E8-
-specific detector predicts a held-out 240-current root shell. B4 is closed on the
+Shells 10--12 and leakage/transition estimators remain open. The (K)-kernel
+and inverse-kernel paths now bifurcate: all (K)-kernel cosine steps
+are present from shell one, while the inverse step set is not complete until
+shell 15 (3,721,681 states). Lower inverse rungs remain reconnaissance. The
+E8-specific detector predicts a held-out 240-current root shell. B4 is closed on the
 declared E8-cubed/Leech/Moonshine family: the bulk detector collides and
 \(\dim V_1=(744,24,0)\) separates the three candidates.
 

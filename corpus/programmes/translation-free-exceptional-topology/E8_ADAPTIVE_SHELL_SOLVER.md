@@ -48,6 +48,7 @@ dimensions.
 | 8 | 340,321 | 10.386 MiB |
 | 10 | 794,161 | 24.236 MiB |
 | 12 | 1,604,401 | 48.962 MiB |
+| 15 | 3,721,681 | 113.577 MiB |
 
 Each row has at most sixteen potential neighbors, so the Hamiltonian should be
 applied matrix-free. The difficult inverse-kernel branch is not dense as an
@@ -66,3 +67,8 @@ This construction avoids the misleading coordinate-box cost created by the
 smallest Cartan eigenvalue and preserves every state at a given kinetic
 energy. It is now concrete enough to implement as a hash-indexed shell
 enumerator plus a matrix-free block Lanczos or Davidson solve.
+
+The [operator-completeness audit](E8_OPERATOR_COMPLETENESS_GATE.md) adds a
+necessary qualification: the dense inverse-branch step with the largest
+vacuum kinetic cost first enters at shell 15. Lower inverse-branch rungs are
+useful reconnaissance but not complete eight-cosine approximations.
