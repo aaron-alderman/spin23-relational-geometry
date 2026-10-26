@@ -128,6 +128,16 @@ assert.ok(tail3d.parallaxPerturbedSlope95PercentIntervalKmPerSecPerPc[0] < tail3
 assert.ok(tail3d.parallaxPerturbedSlope95PercentIntervalKmPerSecPerPc[1] > tail3d.nominalResidualSlopeKmPerSecPerPc);
 assert.ok(Math.abs(tail3d.spectralControl.templateTemperatureSlopeControllingTailKmPerSecPer1000K) < 0.01);
 assert.match(tail3d.spectralControl.interpretation, /cannot test line-by-line/u);
+const candidateDirection = crossChannel.exceptionalDirectionCandidate;
+assert.match(candidateDirection.status, /not a T1 identification/u);
+assert.equal(candidateDirection.robustInliers, tail3d.robustResidualInliers);
+assert.ok(candidateDirection.designConditionNumber < 25);
+assert.ok(candidateDirection.acuteAngleFromTailAxisDeg > 60);
+assert.ok(candidateDirection.acuteAngleFromLineOfSightDeg > 85);
+assert.ok(candidateDirection.foldDirectionAngleFromFullRangeDeg[1] < 10);
+assert.ok(candidateDirection.deltaMaeCartesianMinusTailKmPerSec < 0);
+assert.ok(candidateDirection.pairedBootstrapDeltaMaeCartesianMinusTail95PercentIntervalKmPerSec[1] < 0);
+assert.match(candidateDirection.interpretation, /ordinary candidate or nuisance axis/u);
 const orientation = crossChannel.orientationPriorControl;
 assert.equal(orientation.morphologyIdentifiesT1Orientation, false);
 assert.ok(Math.abs(orientation.isotropicUnorientedAxes3d.probabilityWithin10DegOf90 - Math.sin(Math.PI / 18)) < 1e-15);
@@ -197,6 +207,9 @@ console.log(JSON.stringify({
     -modelGate.ordinaryMinusConstantMeanAbsoluteErrorKmPerSec,
   alternativeTailShapesDistinguishableFromLinear: false,
   threeDimensionalResidualSlopeKmPerSecPerPc: tail3d.nominalResidualSlopeKmPerSecPerPc,
+  candidateDirectionAngleFromTailDeg: candidateDirection.acuteAngleFromTailAxisDeg,
+  candidateDirectionAngleFromLineOfSightDeg: candidateDirection.acuteAngleFromLineOfSightDeg,
+  candidateDirectionHeldOutMaeGainVersusTailKmPerSec: -candidateDirection.deltaMaeCartesianMinusTailKmPerSec,
   morphologyIdentifiesT1Orientation: false,
   m44SpiralInclinationSliceDeg: geometry.lineOfSightDiskInclinationDeg,
   m44TailTiltFromGalacticPlaneDeg: geometry.tailTiltFromGalacticPlaneDeg,

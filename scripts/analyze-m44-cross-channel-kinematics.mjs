@@ -34,6 +34,38 @@ const solve3 = (matrix, vector) => {
   return augmented.map(row => row[3]);
 };
 
+const symmetricEigenvalues3 = matrix => {
+  const diagonalized = matrix.map(row => [...row]);
+  for (let iteration = 0; iteration < 50; iteration += 1) {
+    let p = 0;
+    let q = 1;
+    for (const [left, right] of [[0, 1], [0, 2], [1, 2]]) {
+      if (Math.abs(diagonalized[left][right]) > Math.abs(diagonalized[p][q])) [p, q] = [left, right];
+    }
+    if (Math.abs(diagonalized[p][q]) < 1e-12) break;
+    const angle = 0.5 * Math.atan2(2 * diagonalized[p][q], diagonalized[q][q] - diagonalized[p][p]);
+    const cosine = Math.cos(angle);
+    const sine = Math.sin(angle);
+    const app = diagonalized[p][p];
+    const aqq = diagonalized[q][q];
+    const apq = diagonalized[p][q];
+    diagonalized[p][p] = cosine * cosine * app - 2 * sine * cosine * apq + sine * sine * aqq;
+    diagonalized[q][q] = sine * sine * app + 2 * sine * cosine * apq + cosine * cosine * aqq;
+    diagonalized[p][q] = 0;
+    diagonalized[q][p] = 0;
+    for (let index = 0; index < 3; index += 1) {
+      if (index === p || index === q) continue;
+      const aip = diagonalized[index][p];
+      const aiq = diagonalized[index][q];
+      diagonalized[index][p] = cosine * aip - sine * aiq;
+      diagonalized[p][index] = diagonalized[index][p];
+      diagonalized[index][q] = sine * aip + cosine * aiq;
+      diagonalized[q][index] = diagonalized[index][q];
+    }
+  }
+  return diagonalized.map((row, index) => row[index]).sort((a, b) => a - b);
+};
+
 const basisAt = (raDeg, decDeg) => {
   const ra = radians(raDeg);
   const dec = radians(decDeg);
@@ -673,6 +705,94 @@ const summarize3dTail = rows => {
   };
 };
 
+const robustResidualInliers = rows => {
+  const residualMedian = median(rows.map(row => row.residual));
+  const residualMad = median(rows.map(row => Math.abs(row.residual - residualMedian)));
+  const robustSigma = 1.4826 * residualMad;
+  return rows.filter(row => Math.abs(row.residual - residualMedian) <= 3 * Math.max(robustSigma, 0.5));
+};
+
+const fitCartesianGradient = rows => {
+  const positioned = rows.map(row => ({ row, position: positionFromAstrometry(row) }));
+  const meanPosition = [0, 1, 2].map(index =>
+    positioned.reduce((sum, item) => sum + item.position[index], 0) / positioned.length);
+  const meanResidual = positioned.reduce((sum, item) => sum + item.row.residual, 0) / positioned.length;
+  const normal = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+  const right = [0, 0, 0];
+  for (const item of positioned) {
+    const delta = item.position.map((value, index) => value - meanPosition[index]);
+    const residual = item.row.residual - meanResidual;
+    for (let left = 0; left < 3; left += 1) {
+      right[left] += delta[left] * residual;
+      for (let column = 0; column < 3; column += 1) normal[left][column] += delta[left] * delta[column];
+    }
+  }
+  const gradient = solve3(normal, right);
+  const eigenvalues = symmetricEigenvalues3(normal);
+  const gradientNorm = Math.hypot(...gradient);
+  const unitDirection = gradient.map(value => value / gradientNorm);
+  return {
+    meanPosition,
+    meanResidual,
+    gradient,
+    gradientNorm,
+    unitDirection,
+    designEigenvaluesPc2: eigenvalues,
+    designConditionNumber: eigenvalues[2] / eigenvalues[0],
+    predict: row => meanResidual + dot(
+      positionFromAstrometry(row).map((value, index) => value - meanPosition[index]),
+      gradient
+    )
+  };
+};
+
+const scanExceptionalDirectionCandidate = (rows, tailAxis, lineOfSight) => {
+  const inliers = robustResidualInliers(rows);
+  const full = fitCartesianGradient(inliers);
+  const errors = { constant: [], tail: [], cartesian3d: [] };
+  const foldAngles = [];
+  for (let fold = 0; fold < 5; fold += 1) {
+    const tagged = inliers.map(row => ({
+      ...row,
+      fold: Number.parseInt(createHash("sha256").update(row.dr3SourceId).digest("hex").slice(0, 8), 16) % 5
+    }));
+    const train = tagged.filter(row => row.fold !== fold);
+    const test = tagged.filter(row => row.fold === fold);
+    const constant = median(train.map(row => row.residual));
+    const tail = theilSenLine(train.map(row => ({ ...row, tailCoordinate: row.tailCoordinate3dPc })));
+    const cartesian = fitCartesianGradient(train);
+    foldAngles.push(acuteAxisAngleDeg(cartesian.unitDirection, full.unitDirection));
+    for (const row of test) {
+      errors.constant.push(row.residual - constant);
+      errors.tail.push(row.residual - (tail.intercept + tail.slope * row.tailCoordinate3dPc));
+      errors.cartesian3d.push(row.residual - cartesian.predict(row));
+    }
+  }
+  const summaries = Object.fromEntries(Object.entries(errors).map(([name, values]) => [name, errorSummary(values)]));
+  const directionGalactic = icrsToGalactic(full.unitDirection);
+  return {
+    status: "retrospective ordinary-data candidate-direction scan; not a T1 identification or confirmatory holdout",
+    robustInliers: inliers.length,
+    gradientIcrsKmPerSecPerPc: full.gradient,
+    gradientMagnitudeKmPerSecPerPc: full.gradientNorm,
+    unitDirectionIcrs: full.unitDirection,
+    unitDirectionGalactic: directionGalactic,
+    tiltFromGalacticPlaneDeg: degrees(Math.asin(Math.abs(directionGalactic[2]))),
+    acuteAngleFromGalacticDiskNormalDeg: 90 - degrees(Math.asin(Math.abs(directionGalactic[2]))),
+    acuteAngleFromTailAxisDeg: acuteAxisAngleDeg(full.unitDirection, tailAxis),
+    acuteAngleFromLineOfSightDeg: acuteAxisAngleDeg(full.unitDirection, lineOfSight),
+    designEigenvaluesPc2: full.designEigenvaluesPc2,
+    designConditionNumber: full.designConditionNumber,
+    foldDirectionAngleFromFullRangeDeg: [Math.min(...foldAngles), Math.max(...foldAngles)],
+    heldOut: summaries,
+    deltaMaeCartesianMinusTailKmPerSec:
+      summaries.cartesian3d.meanAbsoluteErrorKmPerSec - summaries.tail.meanAbsoluteErrorKmPerSec,
+    pairedBootstrapDeltaMaeCartesianMinusTail95PercentIntervalKmPerSec:
+      pairedBootstrapInterval(errors.cartesian3d, errors.tail, 0x55334452),
+    result: "the scan asks whether residuals select a stable three-dimensional ordinary direction beyond the tail; attribution remains open"
+  };
+};
+
 const vizierResponse = await fetch(vizierUrl);
 assert.equal(vizierResponse.ok, true);
 const catalog = parseVizier(await vizierResponse.text());
@@ -734,6 +854,7 @@ const shapeTournament = process.argv.includes("--quick")
   : crossValidatedShapeTournament(fullBaselineResidualRows);
 const threeDimensionalTail = summarize3dTail(fullBaselineResidualRows);
 const centre = basisAt(medianRa, medianDec).radial;
+const exceptionalDirectionCandidate = scanExceptionalDirectionCandidate(fullBaselineResidualRows, tail3d.vector, centre);
 const centreGalacticPc = icrsToGalactic(tail3d.centre);
 const tailAxisGalactic = icrsToGalactic(tail3d.vector);
 const centreDistancePc = Math.hypot(...centreGalacticPc);
@@ -823,6 +944,7 @@ console.log(JSON.stringify({
     centreIcrsPc: tail3d.centre,
     ...threeDimensionalTail
   },
+  exceptionalDirectionCandidate,
   spiralInclinationSlice: {
     centreGalacticCartesianPc: centreGalacticPc,
     centreGalacticLongitudeDeg,

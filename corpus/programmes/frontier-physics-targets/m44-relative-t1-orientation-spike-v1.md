@@ -193,6 +193,24 @@ The binned data show why a surface is more honest than one coefficient. Most cen
 
 Gaia's catalogue RV is an aggregate spectral result rather than a per-line carrier test. As a first atmosphere/template control, the pass joins `rv_template_teff`. Regressing robust residuals jointly on three-dimensional tail position and template temperature gives -0.02011 km/s/pc for the tail term and only -0.0081 km/s per 1,000 K for the temperature term. The spatial coefficient survives this coarse spectral control. That does **not** establish a universal frequency shift: line-by-line spectra, gravitational and convective shifts, binaries, template mismatch and instrument zero points remain required.
 
+## Does the residual field select a candidate exceptional direction?
+
+The rank-two-plus-one model says that an angle alone is insufficient: an exceptional direction \(u\) inside our three-space must also be located. A bounded ordinary-data scan therefore fits
+
+\[
+r(\mathbf x)=a+\mathbf g\cdot(\mathbf x-\bar{\mathbf x})
+\]
+
+to the 373 robust RV residual inliers, with \(\mathbf x\) the inverse-parallax heliocentric Cartesian position. The fitted gradient has magnitude 0.04432 km/s/pc and ICRS unit direction
+
+\[
+\hat{\mathbf g}=(0.57765,\ 0.67263,\ -0.46248).
+\]
+
+It is 63.18 degrees from the reconstructed tail axis, 88.79 degrees from the line of sight, 57.71 degrees above the Galactic plane and 32.29 degrees from the Galactic disc normal. Across the five source-ID folds, the fitted direction moves by 1.50--9.53 degrees from the full-sample direction. The Cartesian model's held-out MAE is 1.0448 km/s, compared with 1.0672 km/s for the tail-only model; the paired bootstrap interval for the improvement is [-0.0435, -0.00124] km/s.
+
+This is evidence that the ordinary residual field contains a modest reproducible three-dimensional directional term beyond the single tail coordinate. It is **not** evidence that the direction is \(u\) or configuration \(T_1\). The scan is retrospective, uses the same membership and common-velocity construction, relies on inverse parallax, and has no independent spectral carrier. Perspective-model error, tail curvature, binaries, catalogue systematics or ordinary cluster dynamics remain sufficient explanations. Its correct role is a frozen candidate/nuisance axis for an independent dataset—not a promoted physical interpretation.
+
 ## Does the cluster shape favour ninety degrees?
 
 No likelihood follows from size or elongation alone. The corpus has no law mapping a cluster's ordinary spatial covariance, mass, formation plane or tidal-tail axis to its configuration-\(T_1\) orientation. The earlier covariance no-go therefore still applies.

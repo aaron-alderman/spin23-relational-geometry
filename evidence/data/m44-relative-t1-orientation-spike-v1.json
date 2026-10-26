@@ -153,6 +153,31 @@
       "surface": "12 equal-count robust-inlier bins along the 3-D tail and 28 populated tail-by-template-temperature cells are emitted by the analysis runner",
       "interpretation": "three-dimensional spatial structure is present in this reconstruction but does not identify boundary topology or T1 coupling"
     },
+    "exceptionalDirectionCandidate": {
+      "status": "retrospective ordinary-data candidate-direction scan; not a T1 identification or confirmatory holdout",
+      "robustInliers": 373,
+      "model": "r(x)=a+g dot (x-mean(x)) using inverse-parallax heliocentric Cartesian positions",
+      "gradientIcrsKmPerSecPerPc": [0.025603550380044707, 0.02981366715047503, -0.02049865938626852],
+      "gradientMagnitudeKmPerSecPerPc": 0.04432371349127977,
+      "unitDirectionIcrs": [0.5776490362226067, 0.6726346869907586, -0.4624761278249265],
+      "unitDirectionGalactic": [-0.3954407538754781, -0.35924746011465886, -0.8453211653229682],
+      "tiltFromGalacticPlaneDeg": 57.706362426571864,
+      "acuteAngleFromGalacticDiskNormalDeg": 32.293637573428136,
+      "acuteAngleFromTailAxisDeg": 63.18315337622727,
+      "acuteAngleFromLineOfSightDeg": 88.78622550906294,
+      "designEigenvaluesPc2": [7499.1948646427645, 20715.833964062218, 156080.0357210364],
+      "designConditionNumber": 20.812905723642842,
+      "foldDirectionAngleFromFullRangeDeg": [1.5044793105129384, 9.527178756099305],
+      "heldOut": {
+        "constant": { "meanAbsoluteErrorKmPerSec": 1.1099394679399521, "medianAbsoluteErrorKmPerSec": 0.8327587460603993, "rootMeanSquareErrorKmPerSec": 1.480499209936528 },
+        "tail": { "meanAbsoluteErrorKmPerSec": 1.0671801580158646, "medianAbsoluteErrorKmPerSec": 0.8068772493991987, "rootMeanSquareErrorKmPerSec": 1.430747177559369 },
+        "cartesian3d": { "meanAbsoluteErrorKmPerSec": 1.0447886826450512, "medianAbsoluteErrorKmPerSec": 0.7524033858695423, "rootMeanSquareErrorKmPerSec": 1.4158351131885951 }
+      },
+      "deltaMaeCartesianMinusTailKmPerSec": -0.02239147537081343,
+      "pairedBootstrapDeltaMaeCartesianMinusTail95PercentIntervalKmPerSec": [-0.043503192107147724, -0.0012394627320664407],
+      "result": "the ordinary residual field contains a modest reproducible three-dimensional directional term beyond the tail coordinate",
+      "interpretation": "freeze as an ordinary candidate or nuisance axis for independent data; perspective-model error, tail curvature, binaries, catalogue systematics and ordinary dynamics remain sufficient explanations"
+    },
     "orientationPriorControl": {
       "morphologyIdentifiesT1Orientation": false,
       "reason": "no source-native law maps ordinary cluster size, shape, formation plane or tidal-tail axis to configuration-T1 orientation",
