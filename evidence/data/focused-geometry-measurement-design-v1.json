@@ -1,0 +1,1366 @@
+{
+  "schemaVersion": "0.1.0",
+  "source": "focused geometry tournament v2 shortlist",
+  "readerBundles": {
+    "directional": [
+      "mixX",
+      "mixY"
+    ],
+    "coherence": [
+      "coherence"
+    ],
+    "width": [
+      "width"
+    ],
+    "anchor": [
+      "anchor"
+    ]
+  },
+  "nuisancePolicies": {
+    "calibrated": "reader zero and spatial calibration retained",
+    "zero-unknown": "one unknown constant zero per scalar channel",
+    "affine-unknown": "constant zeros plus affine anchor drift and perspective expansion"
+  },
+  "enumeration": {
+    "subsetsTested": 15,
+    "results": [
+      {
+        "readerBundles": [
+          "directional"
+        ],
+        "scalarChannels": 2,
+        "observableClasses": {
+          "calibrated": 3,
+          "zero-unknown": 2,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "coherence"
+        ],
+        "scalarChannels": 1,
+        "observableClasses": {
+          "calibrated": 2,
+          "zero-unknown": 1,
+          "affine-unknown": 1
+        }
+      },
+      {
+        "readerBundles": [
+          "directional",
+          "coherence"
+        ],
+        "scalarChannels": 3,
+        "observableClasses": {
+          "calibrated": 4,
+          "zero-unknown": 2,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "width"
+        ],
+        "scalarChannels": 1,
+        "observableClasses": {
+          "calibrated": 2,
+          "zero-unknown": 1,
+          "affine-unknown": 1
+        }
+      },
+      {
+        "readerBundles": [
+          "directional",
+          "width"
+        ],
+        "scalarChannels": 3,
+        "observableClasses": {
+          "calibrated": 4,
+          "zero-unknown": 2,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "coherence",
+          "width"
+        ],
+        "scalarChannels": 2,
+        "observableClasses": {
+          "calibrated": 2,
+          "zero-unknown": 1,
+          "affine-unknown": 1
+        }
+      },
+      {
+        "readerBundles": [
+          "directional",
+          "coherence",
+          "width"
+        ],
+        "scalarChannels": 4,
+        "observableClasses": {
+          "calibrated": 4,
+          "zero-unknown": 2,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "anchor"
+        ],
+        "scalarChannels": 1,
+        "observableClasses": {
+          "calibrated": 4,
+          "zero-unknown": 3,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "directional",
+          "anchor"
+        ],
+        "scalarChannels": 3,
+        "observableClasses": {
+          "calibrated": 4,
+          "zero-unknown": 3,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "coherence",
+          "anchor"
+        ],
+        "scalarChannels": 2,
+        "observableClasses": {
+          "calibrated": 5,
+          "zero-unknown": 3,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "directional",
+          "coherence",
+          "anchor"
+        ],
+        "scalarChannels": 4,
+        "observableClasses": {
+          "calibrated": 5,
+          "zero-unknown": 3,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "width",
+          "anchor"
+        ],
+        "scalarChannels": 2,
+        "observableClasses": {
+          "calibrated": 5,
+          "zero-unknown": 3,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "directional",
+          "width",
+          "anchor"
+        ],
+        "scalarChannels": 4,
+        "observableClasses": {
+          "calibrated": 5,
+          "zero-unknown": 3,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "coherence",
+          "width",
+          "anchor"
+        ],
+        "scalarChannels": 3,
+        "observableClasses": {
+          "calibrated": 5,
+          "zero-unknown": 3,
+          "affine-unknown": 2
+        }
+      },
+      {
+        "readerBundles": [
+          "directional",
+          "coherence",
+          "width",
+          "anchor"
+        ],
+        "scalarChannels": 5,
+        "observableClasses": {
+          "calibrated": 5,
+          "zero-unknown": 3,
+          "affine-unknown": 2
+        }
+      }
+    ],
+    "minimalSeparatingSets": {
+      "calibrated": [
+        {
+          "readerBundles": [
+            "coherence",
+            "anchor"
+          ],
+          "scalarChannels": 2
+        },
+        {
+          "readerBundles": [
+            "width",
+            "anchor"
+          ],
+          "scalarChannels": 2
+        }
+      ],
+      "zeroUnknown": [],
+      "affineUnknown": []
+    }
+  },
+  "selectedDesign": {
+    "readerBundles": [
+      "width",
+      "anchor"
+    ],
+    "reason": "smallest calibrated linear-response design; width is preferred to coherence because coherence is only quadratically sensitive near zero",
+    "semanticCoverage": {
+      "ordinary": "zero reference",
+      "constantTilt": "linear anchor plane",
+      "finiteThickness": "width",
+      "constantDisplacement": "constant anchor",
+      "smoothBend": "quadratic anchor surface"
+    }
+  },
+  "sensitivity": {
+    "trialsPerCell": 300,
+    "likelihoodRatioPenalty": 6.63,
+    "amplitudes": [
+      0.01,
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.4,
+      0.6
+    ],
+    "noiseLevels": [
+      0.002,
+      0.004,
+      0.008,
+      0.016,
+      0.032
+    ],
+    "oneVersusOrdinary": [
+      {
+        "family": "constantTilt",
+        "noiseSigma": 0.002,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 1
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "constantTilt",
+        "noiseSigma": 0.004,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 1
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "constantTilt",
+        "noiseSigma": 0.008,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.8
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.02
+      },
+      {
+        "family": "constantTilt",
+        "noiseSigma": 0.016,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.07333333333333333
+          },
+          {
+            "amplitude": 0.02,
+            "power": 0.78
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.04
+      },
+      {
+        "family": "constantTilt",
+        "noiseSigma": 0.032,
+        "falsePositiveRate": 0.0033333333333333335,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.006666666666666667
+          },
+          {
+            "amplitude": 0.02,
+            "power": 0.06666666666666667
+          },
+          {
+            "amplitude": 0.04,
+            "power": 0.78
+          },
+          {
+            "amplitude": 0.06,
+            "power": 0.9966666666666667
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.06
+      },
+      {
+        "family": "finiteThickness",
+        "noiseSigma": 0.002,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 1
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "finiteThickness",
+        "noiseSigma": 0.004,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 1
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "finiteThickness",
+        "noiseSigma": 0.008,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.9933333333333333
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "finiteThickness",
+        "noiseSigma": 0.016,
+        "falsePositiveRate": 0.0033333333333333335,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.6766666666666666
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.02
+      },
+      {
+        "family": "finiteThickness",
+        "noiseSigma": 0.032,
+        "falsePositiveRate": 0.006666666666666667,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.12
+          },
+          {
+            "amplitude": 0.02,
+            "power": 0.6933333333333334
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.04
+      },
+      {
+        "family": "constantDisplacement",
+        "noiseSigma": 0.002,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 1
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "constantDisplacement",
+        "noiseSigma": 0.004,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 1
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "constantDisplacement",
+        "noiseSigma": 0.008,
+        "falsePositiveRate": 0.0033333333333333335,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.99
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "constantDisplacement",
+        "noiseSigma": 0.016,
+        "falsePositiveRate": 0.01,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.6766666666666666
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.02
+      },
+      {
+        "family": "constantDisplacement",
+        "noiseSigma": 0.032,
+        "falsePositiveRate": 0.006666666666666667,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.11666666666666667
+          },
+          {
+            "amplitude": 0.02,
+            "power": 0.68
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.04
+      },
+      {
+        "family": "smoothBend",
+        "noiseSigma": 0.002,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 1
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "smoothBend",
+        "noiseSigma": 0.004,
+        "falsePositiveRate": 0,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 1
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.01
+      },
+      {
+        "family": "smoothBend",
+        "noiseSigma": 0.008,
+        "falsePositiveRate": 0.01,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.83
+          },
+          {
+            "amplitude": 0.02,
+            "power": 1
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.02
+      },
+      {
+        "family": "smoothBend",
+        "noiseSigma": 0.016,
+        "falsePositiveRate": 0.0033333333333333335,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.22666666666666666
+          },
+          {
+            "amplitude": 0.02,
+            "power": 0.84
+          },
+          {
+            "amplitude": 0.04,
+            "power": 1
+          },
+          {
+            "amplitude": 0.06,
+            "power": 1
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.04
+      },
+      {
+        "family": "smoothBend",
+        "noiseSigma": 0.032,
+        "falsePositiveRate": 0.01,
+        "power": [
+          {
+            "amplitude": 0.01,
+            "power": 0.03666666666666667
+          },
+          {
+            "amplitude": 0.02,
+            "power": 0.2
+          },
+          {
+            "amplitude": 0.04,
+            "power": 0.8
+          },
+          {
+            "amplitude": 0.06,
+            "power": 0.9933333333333333
+          },
+          {
+            "amplitude": 0.08,
+            "power": 1
+          },
+          {
+            "amplitude": 0.1,
+            "power": 1
+          },
+          {
+            "amplitude": 0.15,
+            "power": 1
+          },
+          {
+            "amplitude": 0.2,
+            "power": 1
+          },
+          {
+            "amplitude": 0.3,
+            "power": 1
+          },
+          {
+            "amplitude": 0.4,
+            "power": 1
+          },
+          {
+            "amplitude": 0.6,
+            "power": 1
+          }
+        ],
+        "minimumAmplitudeAt95Power": 0.06
+      }
+    ],
+    "fiveWayAtAmplitudePointOne": [
+      {
+        "noiseSigma": 0.002,
+        "truthAmplitude": 0.1,
+        "accuracy": 1,
+        "trials": 1500,
+        "confusion": {}
+      },
+      {
+        "noiseSigma": 0.004,
+        "truthAmplitude": 0.1,
+        "accuracy": 1,
+        "trials": 1500,
+        "confusion": {}
+      },
+      {
+        "noiseSigma": 0.008,
+        "truthAmplitude": 0.1,
+        "accuracy": 0.9986666666666667,
+        "trials": 1500,
+        "confusion": {
+          "ordinary->smoothBend": 2
+        }
+      },
+      {
+        "noiseSigma": 0.016,
+        "truthAmplitude": 0.1,
+        "accuracy": 0.9966666666666667,
+        "trials": 1500,
+        "confusion": {
+          "ordinary->smoothBend": 3,
+          "ordinary->constantTilt": 1,
+          "ordinary->constantDisplacement": 1
+        }
+      },
+      {
+        "noiseSigma": 0.032,
+        "truthAmplitude": 0.1,
+        "accuracy": 0.9953333333333333,
+        "trials": 1500,
+        "confusion": {
+          "ordinary->finiteThickness": 2,
+          "ordinary->smoothBend": 1,
+          "ordinary->constantDisplacement": 1,
+          "smoothBend->constantDisplacement": 3
+        }
+      }
+    ]
+  },
+  "decisions": {
+    "smallestCalibratedDesign": "absolute spatial anchor plus width reader",
+    "calibrationInvariant": "no tested reader subset separates all five if every channel zero is unknown; displacement necessarily aliases ordinary",
+    "affineInvariant": "if the anchor is only defined modulo an affine plane, both displacement and tilt lose absolute identifiability",
+    "operationalNext": "measure or bound anchor-zero, anchor-affine and width-zero calibration errors before collecting a larger hypothesis vocabulary",
+    "claimBoundary": "sensitivity values use dimensionless normalized channels and are design diagnostics, not astronomical instrument requirements"
+  }
+}
