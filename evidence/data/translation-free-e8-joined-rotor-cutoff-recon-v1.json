@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "translation-free-e8-joined-rotor-cutoff-recon-v1",
+  "date": "2026-10-26",
+  "status": "matrix-free solver executed through 117361 states; projected spectra resolved; continuum gaps not converged",
+  "hamiltonian": "H=(1/2)m^T K m + 8 - (1/2) sum_s T_s on complete E8 kinetic shells",
+  "branches": {
+    "cartan-kernel": "steps s=plus/minus e_i",
+    "inverse-kernel": "steps s=plus/minus K^-1 e_i"
+  },
+  "solver": {
+    "script": "scripts/solve-translation-free-e8-joined-rotor.mjs",
+    "enumeration": "Cholesky sphere enumeration checked against exact E8 theta coefficients",
+    "eigensolver": "180-step fully reorthogonalized Lanczos at cutoffs 3,4,6; 96 steps at cutoffs 1,2",
+    "potentialStrength": 1,
+    "maximumNeighborsPerState": 16
+  },
+  "records": [
+    {"cutoff":1,"basisStates":241,"branch":"cartan-kernel","levels":[6.276774114550855,6.7061096259732595,6.713466731472928,6.88422700428358],"gaps":[0,0.4293355114224049,0.4366926169220733,0.6074528897327252],"maximumProjectedResidual":1.1e-14},
+    {"cutoff":1,"basisStates":241,"branch":"inverse-kernel","levels":[7.532843065896941,8.034074173710938,8.164563975793717,8.190983005625045],"gaps":[0,0.5012311078139966,0.6317209098967762,0.6581399397281036],"maximumProjectedResidual":1e-14},
+    {"cutoff":2,"basisStates":2401,"branch":"cartan-kernel","levels":[5.468592266719505,5.710502796918282,5.74668525358154,5.873794905260209],"gaps":[0,0.24191053019877717,0.27809298686203476,0.40520263854070393],"maximumProjectedResidual":2e-12},
+    {"cutoff":2,"basisStates":2401,"branch":"inverse-kernel","levels":[7.273990516149342,7.864515658326931,7.888238454671988,7.904492585542069],"gaps":[0,0.5905251421775883,0.614247938522646,0.630502069392727],"maximumProjectedResidual":2e-12},
+    {"cutoff":3,"basisStates":9121,"branch":"cartan-kernel","levels":[5.082400302432675,5.21785962439658,5.272125635594822,5.39280897470728],"gaps":[0,0.13545932196390442,0.1897253331621469,0.31040867227460467],"maximumProjectedResidual":9e-15},
+    {"cutoff":3,"basisStates":9121,"branch":"inverse-kernel","levels":[7.057354781377099,7.53137084230947,7.5848237107312775,7.594302111045316],"gaps":[0,0.4740160609323709,0.5274689293541783,0.5369473296682168],"maximumProjectedResidual":2e-14},
+    {"cutoff":4,"basisStates":26641,"branch":"cartan-kernel","levels":[4.865702459093906,4.9784706083824375,5.041235609619915,5.148051283576562],"gaps":[0,0.11276814928853174,0.17553315052600915,0.2823488244826562],"maximumProjectedResidual":1.1e-14},
+    {"cutoff":4,"basisStates":26641,"branch":"inverse-kernel","levels":[6.898490951360056,7.367371422090456,7.367780784759156,7.406521933888618],"gaps":[0,0.46888047073039996,0.4692898333990998,0.5080309825285614],"maximumProjectedResidual":8e-14},
+    {"cutoff":6,"basisStates":117361,"branch":"cartan-kernel","levels":[4.710109754701787,4.815717406011922,4.882982432460483,4.982514296053047],"gaps":[0,0.10560765131013472,0.1728726777586953,0.2724045413512597],"maximumProjectedResidual":8e-15},
+    {"cutoff":6,"basisStates":117361,"branch":"inverse-kernel","levels":[6.685580010743094,7.053824049872944,7.056672672218853,7.0860674424986785],"gaps":[0,0.3682440391298494,0.3710926614757586,0.4004874317555842],"maximumProjectedResidual":4e-14}
+  ],
+  "cutoffAssessment": {
+    "cartanKernelGapCutoff4": 0.11276814928853174,
+    "cartanKernelGapCutoff6": 0.10560765131013472,
+    "cartanKernelRelativeDrift4to6": 0.06349752145063557,
+    "inverseKernelGapCutoff4": 0.46888047073039996,
+    "inverseKernelGapCutoff6": 0.3682440391298494,
+    "inverseKernelRelativeDrift4to6": 0.21463131412529057,
+    "promotionTolerance": 0.01,
+    "cartanKernelPromoted": false,
+    "inverseKernelPromoted": false
+  },
+  "established": "Complete-shell projected spectra distinguish the two constitutive step graphs nonperturbatively, and the matrix-free solver reaches 117361 states with small projected Ritz residuals.",
+  "boundary": "Small projected residual certifies the eigenpair of the finite projected Hamiltonian, not cutoff convergence. The first gaps drift by more than the one-percent promotion tolerance, so neither is reported as the continuum nonlinear gap.",
+  "nextGate": "replace full-basis reorthogonalization with a restarted block solver, run complete shells 8,10,12 and require level, transition-weight and boundary-leakage convergence"
+}

@@ -22,6 +22,8 @@
 
 **Nonlinear solver:** [E8 adaptive kinetic-shell compilation](E8_ADAPTIVE_SHELL_SOLVER.md)
 
+**Nonlinear reconnaissance:** [117,361-state joined-rotor cutoff audit](E8_JOINED_ROTOR_RECON.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -177,6 +179,10 @@ calibrate the physical branch before a nonlinear joined gap is meaningful.
 The subsequent sparse calculation is now compiled: unimodularity gives both
 branches one E8-theta kinetic-shell basis, while their distinct cosine step
 sets define different sixteen-neighbor hopping graphs.
+That solver has now resolved four projected levels through 117,361 states for
+both graphs. Their nonlinear spectra separate, but their first gaps still
+drift by 6.35% and 21.46% from cutoff four to six, so neither continuum gap is
+promoted.
 
 The material route is now typed rather than associative. A quasicrystal may
 supply a phason-bearing, translation-free backplane for the programmed E8
@@ -235,6 +241,7 @@ translation-free topology result remains valuable after that null.
 - [Quasicrystal backplane bridge](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 - [E8 constitutive-metric gate](E8_CONSTITUTIVE_METRIC_GATE.md)
 - [E8 adaptive-shell nonlinear solver](E8_ADAPTIVE_SHELL_SOLVER.md)
+- [E8 joined-rotor nonlinear reconnaissance](E8_JOINED_ROTOR_RECON.md)
 
 ## Primary external anchors
 
