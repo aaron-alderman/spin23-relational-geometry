@@ -32,9 +32,10 @@ two source classes.
 
 ## Three depths of conversion
 
-1. **Structural projection.** Every retained `corpus/**/*.md` document and every
-   Markdown heading becomes a hash-bound object. Containment and explicit links
-   become observed relations. This layer is complete by construction.
+1. **Structural projection.** Every retained corpus Markdown document, JSON
+   ledger and image becomes a hash-bound object. Every Markdown heading and
+   bounded semantic unit receives its own address. Containment and explicit
+   links become observed relations. This layer is complete by construction.
 2. **Epistemic projection.** Declared status, date, evidence, parent, continuation,
    source, generator and verifier fields become typed coordinates or relations.
    Missing declarations remain visible as missing; the compiler does not invent
@@ -78,7 +79,9 @@ The compiler writes:
   identities, counts, coverage and archive hashes;
 - `generated/programme_algebra_records_v1.json.gz` — the deterministic complete
   machine-readable projection and admission receipts, compressed to avoid
-  repeating the twelve-coordinate kernel tens of thousands of times in Git;
+  repeating the twelve-coordinate kernel tens of thousands of times. This
+  disposable archive is intentionally ignored by Git and is regenerated
+  locally or in CI; its exact hashes and sizes remain in the tracked manifest;
 - `generated/PROGRAMME_ALGEBRA_COVERAGE.md` — the human-readable coverage and
   boundary report.
 

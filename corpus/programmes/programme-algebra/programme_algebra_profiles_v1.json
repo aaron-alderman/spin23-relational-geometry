@@ -32,6 +32,24 @@
       "admission": "section is observed in a canonical source document"
     },
     {
+      "id": "source-unit",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["documentId", "sectionId", "unitKind", "lineStart", "lineEnd", "sha256"],
+      "admission": "bounded semantic unit is deterministically observed in a canonical source document"
+    },
+    {
+      "id": "source-material",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["canonicalPath", "sha256", "mediaType", "bytes", "structuralSummary"],
+      "admission": "retained non-Markdown corpus artifact exists and byte hash is exact"
+    },
+    {
+      "id": "source-record",
+      "extends": "epistemic-object-signature",
+      "coordinates": ["materialId", "jsonPointer", "recordKind", "keys", "sha256"],
+      "admission": "record boundary is deterministically observed in a retained parseable JSON ledger; domain semantics require a declared adapter"
+    },
+    {
       "id": "science",
       "extends": "epistemic-object-signature",
       "coordinates": ["rank", "variance", "basis", "regime", "order", "scheme", "symmetry", "cp", "supportClass", "siDimension"],

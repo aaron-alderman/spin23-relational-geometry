@@ -22,7 +22,9 @@ const stable = value => {
   return JSON.stringify(value);
 };
 const stableHash = value => sha256(stable(value));
-const excluded = algebra.sources.imports ? JSON.parse(readFileSync(join(root, algebra.sources.imports.path), "utf8")).corpus.excludePrefixes : [];
+const importConfig = JSON.parse(readFileSync(join(root, algebra.sources.imports.path), "utf8"));
+const excluded = importConfig.corpus.excludePrefixes;
+const includedExtensions = importConfig.corpus.includedExtensions;
 
 function walk(directory) {
   const output = [];
@@ -31,7 +33,7 @@ function walk(directory) {
     const path = posix(relative(root, absolute));
     if (excluded.some(prefix => path.startsWith(prefix))) continue;
     if (entry.isDirectory()) output.push(...walk(absolute));
-    else if (entry.isFile() && entry.name.toLowerCase().endsWith(".md")) output.push(path);
+    else if (entry.isFile() && includedExtensions.some(extension => entry.name.toLowerCase().endsWith(extension))) output.push(path);
   }
   return output.sort();
 }
@@ -52,11 +54,27 @@ for (const object of algebra.objects) {
   ids.add(object.id);
   for (const coordinate of coordinates) if (!(coordinate in object.kernel)) failures.push(`missing ${coordinate}: ${object.id}`);
 }
-for (const relation of algebra.relations) {
-  if (!ids.has(relation.from)) failures.push(`relation source missing: ${relation.id}`);
-  if (!ids.has(relation.to)) failures.push(`relation target missing: ${relation.id}`);
-  if (relation.authority !== "structural-only; not a scientific transformation") failures.push(`relation authority widened: ${relation.id}`);
+for (const [name, table] of Object.entries(algebra.objectTables)) {
+  const columnIndex = new Map(table.columns.map((column, index) => [column, index]));
+  for (const coordinate of coordinates) {
+    if (!(coordinate in table.kernelDefaults) && !columnIndex.has(coordinate) && !(coordinate in (table.reconstruction ?? {}))) failures.push(`table ${name} cannot reconstruct kernel coordinate ${coordinate}`);
+  }
+  const idIndex = columnIndex.get("id");
+  for (const row of table.rows) {
+    const id = row[idIndex];
+    if (ids.has(id)) failures.push(`duplicate table object id: ${id}`);
+    ids.add(id);
+  }
 }
+const relationColumns = new Map(algebra.relationTable.columns.map((column, index) => [column, index]));
+for (const row of algebra.relationTable.rows) {
+  const id = row[relationColumns.get("id")];
+  const from = row[relationColumns.get("from")];
+  const to = row[relationColumns.get("to")];
+  if (!ids.has(from)) failures.push(`relation source missing: ${id}`);
+  if (!ids.has(to)) failures.push(`relation target missing: ${id}`);
+}
+if (algebra.relationTable.defaults.authority !== "structural-only; not a scientific transformation") failures.push("relation authority widened");
 for (const transformation of algebra.transformations) {
   if (!ids.has(transformation.from) || !ids.has(transformation.to)) failures.push(`transformation endpoint missing: ${transformation.id}`);
   if (transformation.validation.admitted && (transformation.authority?.proposalOnly !== true || transformation.authority?.entails !== false || transformation.authority?.empiricalAuthority !== false)) failures.push(`transformation authority widened: ${transformation.id}`);
@@ -69,15 +87,27 @@ for (const receipt of algebra.compositionReceipts) {
 }
 const corpusFiles = walk(join(root, "corpus"));
 const documents = algebra.objects.filter(object => object.profile === "source-document");
-if (documents.length !== corpusFiles.length) failures.push(`document coverage mismatch: ${documents.length} != ${corpusFiles.length}`);
-for (const document of documents) {
-  const absolute = join(root, document.extension.canonicalPath);
-  if (!existsSync(absolute)) failures.push(`canonical document missing: ${document.extension.canonicalPath}`);
-  else if (sha256(readFileSync(absolute)) !== document.extension.sha256) failures.push(`canonical document hash mismatch: ${document.extension.canonicalPath}`);
+const materials = algebra.objects.filter(object => object.profile === "source-material");
+const sections = algebra.objectTables.sections.rows;
+const units = algebra.objectTables.units.rows;
+const records = algebra.objectTables.records.rows;
+const sources = [...documents, ...materials];
+if (sources.length !== corpusFiles.length) failures.push(`source coverage mismatch: ${sources.length} != ${corpusFiles.length}`);
+if (documents.length !== algebra.summary.corpusDocuments) failures.push("document summary mismatch");
+if (materials.length !== algebra.summary.corpusMaterials) failures.push("material summary mismatch");
+if (sections.length !== algebra.summary.sourceSections) failures.push("section summary mismatch");
+if (units.length !== algebra.summary.sourceUnits) failures.push("unit summary mismatch");
+if (records.length !== algebra.summary.sourceRecords) failures.push("record summary mismatch");
+for (const source of sources) {
+  const absolute = join(root, source.extension.canonicalPath);
+  if (!existsSync(absolute)) failures.push(`canonical source missing: ${source.extension.canonicalPath}`);
+  else if (sha256(readFileSync(absolute)) !== source.extension.sha256) failures.push(`canonical source hash mismatch: ${source.extension.canonicalPath}`);
 }
-const digest = stableHash(documents.map(item => [item.extension.canonicalPath, item.extension.sha256]));
+const digest = stableHash(sources.map(item => [item.extension.canonicalPath, item.extension.sha256]).sort((a, b) => a[0].localeCompare(b[0])));
 if (digest !== algebra.sources.corpus.digest) failures.push("corpus digest mismatch");
 if (algebra.coverage.structural.status !== "complete") failures.push("structural coverage not complete");
+if (algebra.coverage.structural.filesProjected !== corpusFiles.length) failures.push("structural file count mismatch");
+if (algebra.summary.invalidSourceMaterials !== 0) failures.push("invalid retained JSON/image material");
 if (algebra.coverage.scientific.status !== "seed-only") failures.push("scientific coverage boundary missing");
 if (algebra.summary.scientificFamilies !== 4) failures.push("expected four D02 seed families");
 if (algebra.summary.queriesWithCandidates !== 4) failures.push("expected four admitted positive D02 queries");
