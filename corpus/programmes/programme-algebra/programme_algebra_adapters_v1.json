@@ -51,6 +51,30 @@
       "status": "key-shape-provisional"
     },
     {
+      "id": "quotient-scar-record",
+      "semanticProfile": "epistemic-claim",
+      "match": { "pathPrefix": "corpus/programmes/quotient-scars/" },
+      "status": "path-family"
+    },
+    {
+      "id": "lane-expansion-record",
+      "semanticProfile": "governance",
+      "match": { "pathPrefix": "corpus/programmes/lane-expansion/" },
+      "status": "path-family"
+    },
+    {
+      "id": "no-go-atlas-record",
+      "semanticProfile": "epistemic-claim",
+      "match": { "pathPrefix": "corpus/registers/programme/programme_no_go_atlas" },
+      "status": "path-family"
+    },
+    {
+      "id": "frontier-parallel-claim",
+      "semanticProfile": "epistemic-claim",
+      "match": { "pathPrefix": "corpus/programmes/frontier/parallel/" },
+      "status": "path-family"
+    },
+    {
       "id": "verification-receipt",
       "semanticProfile": "governance",
       "match": { "keysAny": ["passed", "failures", "verdict", "checks", "receipt"] },
@@ -59,7 +83,7 @@
     {
       "id": "experiment-record",
       "semanticProfile": "experiment",
-      "match": { "keysAny": ["detector", "readout", "measurement", "observable", "falsifier", "controls", "decisionRule"] },
+      "match": { "keysAny": ["detector", "detector_transfer_function", "readout", "measurement", "observable", "observables", "falsifier", "controls", "decisionRule", "nuisance_and_covariance_model", "controlled_variables", "carrier_and_preparation"] },
       "status": "key-shape-provisional"
     },
     {
@@ -72,6 +96,18 @@
       "id": "claimipedia-record",
       "semanticProfile": "epistemic-claim",
       "match": { "protocolPrefix": "claimipedia-" },
+      "status": "protocol-family"
+    },
+    {
+      "id": "frontier-experiment-programme",
+      "semanticProfile": "experiment",
+      "match": { "protocolPrefix": "frontier.experiment-programmes/" },
+      "status": "protocol-family"
+    },
+    {
+      "id": "frontier-experiment-atlas",
+      "semanticProfile": "experiment",
+      "match": { "protocolPrefix": "frontier.experiment-atlas/" },
       "status": "protocol-family"
     },
     {

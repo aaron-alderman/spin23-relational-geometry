@@ -275,6 +275,8 @@ function selectAdapter(record, material) {
   return { id: selected.id, semanticProfile: selected.semanticProfile, status: selected.status, protocol: protocol || null };
 }
 
+const experimentRecordSources = [];
+
 function jsonRecords(material) {
   if (material.extension.mediaType !== "application/json" || material.extension.structuralSummary.parseable !== true) return [];
   const value = JSON.parse(readFileSync(join(root, material.extension.canonicalPath), "utf8"));
@@ -300,7 +302,7 @@ function jsonRecords(material) {
       ? String(record.title ?? record.label ?? record.name ?? record.id ?? record.identifier ?? `${material.label}${pointer}`)
       : `${material.label}${pointer}`;
     const adapter = selectAdapter(record, material);
-    return {
+    const item = {
       id: objectId("record", `${material.extension.canonicalPath}#${pointer}`),
       profile: "source-record",
       label: label.slice(0, 180),
@@ -321,6 +323,8 @@ function jsonRecords(material) {
       extension: { materialId: material.id, jsonPointer: pointer, recordKind, keys, sha256: sha256(encoded), semanticProfile: adapter.semanticProfile, adapterId: adapter.id, adapterStatus: adapter.status, protocol: adapter.protocol },
       provenance: { sourcePath: material.extension.canonicalPath, sourceSha256: material.extension.sha256, extraction: "deterministic-top-level-json-record" },
     };
+    if (adapter.semanticProfile === "experiment") experimentRecordSources.push({ item, record });
+    return item;
   });
 }
 
@@ -470,6 +474,83 @@ function validateEpistemicTransformation(rule, byId) {
   return { admitted: reasons.length === 0, reasons };
 }
 
+function composeEpistemicRoutes(transformations, maxDepth = 64) {
+  const outgoing = new Map();
+  const targetIds = new Set();
+  for (const transformation of transformations) {
+    if (!outgoing.has(transformation.from)) outgoing.set(transformation.from, []);
+    outgoing.get(transformation.from).push(transformation);
+    targetIds.add(transformation.to);
+  }
+  for (const edges of outgoing.values()) edges.sort((a, b) => a.id.localeCompare(b.id));
+  const starts = [...outgoing.keys()].filter(id => !targetIds.has(id)).sort();
+  const visited = new Set();
+  const paths = [];
+  const walk = (node, steps, seenNodes) => {
+    const edges = outgoing.get(node) ?? [];
+    if (steps.length >= maxDepth) { paths.push({ steps, cycle: false, truncated: true }); return; }
+    if (edges.length === 0) { if (steps.length) paths.push({ steps, cycle: false, truncated: false }); return; }
+    for (const edge of edges) {
+      visited.add(edge.id);
+      if (seenNodes.has(edge.to)) { paths.push({ steps: [...steps, edge], cycle: true, truncated: false }); continue; }
+      walk(edge.to, [...steps, edge], new Set([...seenNodes, edge.to]));
+    }
+  };
+  for (const start of starts) walk(start, [], new Set([start]));
+  for (const edge of transformations.filter(item => !visited.has(item.id)).sort((a, b) => a.id.localeCompare(b.id))) walk(edge.from, [], new Set([edge.from]));
+  const unique = new Map();
+  for (const path of paths) unique.set(stableHash(path.steps.map(step => step.id)), path);
+  return [...unique.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([hash, path]) => {
+    const assumptions = [...new Set(path.steps.flatMap(step => step.assumptions))];
+    const losses = [...new Set(path.steps.flatMap(step => step.losses))];
+    const evidenceRefs = [...new Set(path.steps.flatMap(step => step.evidenceRefs))];
+    const refusalReasons = path.steps.flatMap(step => step.validation.reasons.map(reason => `${step.id}:${reason}`));
+    if (path.cycle) refusalReasons.push("route-cycle");
+    if (path.truncated) refusalReasons.push(`route-depth-exceeds:${maxDepth}`);
+    return {
+      id: objectId("route", `corpus-research-lineage:${hash.slice(0, 24)}`),
+      family: "corpus-research-lineage",
+      from: path.steps[0].from,
+      to: path.steps.at(-1).to,
+      steps: path.steps.map(step => step.id),
+      depth: path.steps.length,
+      ale: { assumptions, losses, evidenceRefs },
+      validation: { admitted: refusalReasons.length === 0, reasons: refusalReasons, cycle: path.cycle, truncated: path.truncated },
+      authority: { proposalOnly: true, entails: false, empiricalAuthority: false, applicationAdmission: false },
+    };
+  });
+}
+
+function empiricalReturnPacket({ item, record }) {
+  const preparation = record.carrier_and_preparation ?? record.preparation ?? (record.carrier || record.input || record.platform ? { carrier: record.carrier ?? null, input: record.input ?? null, platform: record.platform ?? null } : null);
+  const intervention = record.controlled_variables ?? record.intervention ?? record.protocol ?? null;
+  const detector = record.detector_transfer_function ?? record.detector ?? null;
+  const nuisanceModel = record.nuisance_and_covariance_model ?? record.nuisanceModel ?? null;
+  const outputRecord = record.observables ?? record.record ?? record.output ?? record.observable ?? null;
+  const decisionRule = record.decisionRule ?? record.bridge_go_no_go ?? ((record.success || record.nullValue || record.stopRule) ? { success: record.success ?? null, nullValue: record.nullValue ?? null, stopRule: record.stopRule ?? null, analysis: record.analysis ?? null } : null);
+  const evidenceRefs = record.programmeEvidenceRefs ?? record.sourceRefs ?? [];
+  const fields = { preparation, intervention, detector, nuisanceModel, record: outputRecord, decisionRule };
+  const missingFields = Object.entries(fields).filter(([, value]) => value === null || value === undefined || (Array.isArray(value) && value.length === 0)).map(([key]) => key);
+  return {
+    id: objectId("empirical-return", stableHash(item.id).slice(0, 24)),
+    sourceRecordId: item.id,
+    profile: "experiment",
+    fields,
+    fieldMap: {
+      preparation: record.carrier_and_preparation !== undefined ? "carrier_and_preparation" : record.preparation !== undefined ? "preparation" : "carrier/input/platform",
+      intervention: record.controlled_variables !== undefined ? "controlled_variables" : record.intervention !== undefined ? "intervention" : "protocol",
+      detector: record.detector_transfer_function !== undefined ? "detector_transfer_function" : "detector",
+      nuisanceModel: record.nuisance_and_covariance_model !== undefined ? "nuisance_and_covariance_model" : "nuisanceModel",
+      record: record.observables !== undefined ? "observables" : record.record !== undefined ? "record" : record.output !== undefined ? "output" : "observable",
+      decisionRule: record.decisionRule !== undefined ? "decisionRule" : record.bridge_go_no_go !== undefined ? "bridge_go_no_go" : "success/nullValue/stopRule/analysis",
+    },
+    evidenceRefs,
+    validation: { admitted: missingFields.length === 0, reasons: missingFields.map(field => `missing:${field}`) },
+    authority: { proposalOnly: true, entails: false, empiricalAuthority: false, applicationAdmission: false },
+    provenance: { sourcePath: item.provenance.sourcePath, sourceSha256: item.provenance.sourceSha256, jsonPointer: item.extension.jsonPointer },
+  };
+}
+
 function compose(graph, query) {
   const valid = graph.transformations.filter(item => item.validation.admitted);
   let frontier = [{ current: query.source, steps: [], assumptions: [], losses: [], evidenceRefs: [] }];
@@ -506,6 +587,7 @@ const sections = [];
 const units = [];
 const materials = materialFiles.map(sourceMaterial);
 const records = materials.flatMap(jsonRecords);
+const empiricalReturns = experimentRecordSources.map(empiricalReturnPacket);
 const rawRelations = [];
 for (const record of records) rawRelations.push({ kind: "contains", from: record.extension.materialId, to: record.id, sourcePath: record.provenance.sourcePath, sourceLine: null, observed: true });
 for (const path of markdownFiles) {
@@ -615,6 +697,7 @@ for (const current of documents) {
     epistemicTransformations.push(transformation);
   }
 }
+const epistemicRouteReceipts = composeEpistemicRoutes(epistemicTransformations);
 
 const scientificObjects = [];
 const scientificTransformations = [];
@@ -706,6 +789,10 @@ const admittedTransformations = scientificTransformations.filter(item => item.va
 const rejectedTransformations = scientificTransformations.filter(item => !item.validation.admitted);
 const admittedEpistemicTransformations = epistemicTransformations.filter(item => item.validation.admitted);
 const rejectedEpistemicTransformations = epistemicTransformations.filter(item => !item.validation.admitted);
+const admittedEpistemicRoutes = epistemicRouteReceipts.filter(item => item.validation.admitted);
+const rejectedEpistemicRoutes = epistemicRouteReceipts.filter(item => !item.validation.admitted);
+const admittedEmpiricalReturns = empiricalReturns.filter(item => item.validation.admitted);
+const rejectedEmpiricalReturns = empiricalReturns.filter(item => !item.validation.admitted);
 
 const summary = {
   corpusDocuments: documents.length,
@@ -727,6 +814,12 @@ const summary = {
   epistemicTransformations: epistemicTransformations.length,
   admittedEpistemicTransformations: admittedEpistemicTransformations.length,
   rejectedEpistemicTransformations: rejectedEpistemicTransformations.length,
+  epistemicRoutes: epistemicRouteReceipts.length,
+  admittedEpistemicRoutes: admittedEpistemicRoutes.length,
+  rejectedEpistemicRoutes: rejectedEpistemicRoutes.length,
+  empiricalReturns: empiricalReturns.length,
+  admittedEmpiricalReturns: admittedEmpiricalReturns.length,
+  rejectedEmpiricalReturns: rejectedEmpiricalReturns.length,
   scientificQueries: scientificQueries.length,
   queriesWithCandidates: compositionReceipts.filter(item => item.candidates.length > 0).length,
   queriesWithoutCandidates: compositionReceipts.filter(item => item.candidates.length === 0).length,
@@ -750,14 +843,17 @@ const output = {
   summary,
   coverage: {
     structural: { status: "complete", filesProjected: documents.length + materials.length, filesInScope: corpusFiles.length, documentsProjected: documents.length, materialsProjected: materials.length, recordsProjected: records.length, sectionsProjected: sections.length, unitsProjected: units.length },
-    epistemic: { status: "partial", declaredStatusDocuments, unclassifiedStatusDocuments: documents.length - declaredStatusDocuments, observedRelations: relations.length, admittedTransformations: admittedEpistemicTransformations.length, rejectedTransformations: rejectedEpistemicTransformations.length, boundary: "Only explicit Parent declarations are considered; admission additionally requires declared evidence, classified target state, exact endpoint signatures and bounded authority." },
+    epistemic: { status: "partial", declaredStatusDocuments, unclassifiedStatusDocuments: documents.length - declaredStatusDocuments, observedRelations: relations.length, admittedTransformations: admittedEpistemicTransformations.length, rejectedTransformations: rejectedEpistemicTransformations.length, admittedRoutes: admittedEpistemicRoutes.length, rejectedRoutes: rejectedEpistemicRoutes.length, boundary: "Only explicit Parent declarations are considered; admission additionally requires declared evidence, classified target state, exact endpoint signatures and bounded authority." },
     scientific: { status: "seed-only", admittedFamilies: imports.scientificTransformationFamilies.map(item => item.id), admittedTransformations: admittedTransformations.length, boundary: "No ordinary Markdown link is promoted to a scientific transformation." },
+    empiricalReturn: { status: "partial", admittedPackets: admittedEmpiricalReturns.length, rejectedPackets: rejectedEmpiricalReturns.length, boundary: "A packet is admitted only when preparation, intervention, detector, nuisance model, record and decision rule are all present. Admission describes protocol completeness, not execution or empirical confirmation." },
   },
   profiles,
   objects: allObjects,
   objectTables,
   relationTable,
   transformations: [...scientificTransformations, ...epistemicTransformations],
+  epistemicRouteReceipts,
+  empiricalReturns,
   queries: scientificQueries,
   compositionReceipts,
   verification: { duplicateObjectCount, missingKernelCoordinates, danglingRelationCount },
@@ -788,7 +884,7 @@ const manifest = {
 };
 
 const adapterRows = Object.entries(summary.recordAdapterCounts).map(([id, count]) => `| ${id} | ${count.toLocaleString("en")} |`).join("\n");
-const coverage = `# Programme Algebra Coverage\n\n**Generated:** 26 October 2026\n\n**Mode:** parallel, non-replacing\n\n**Protocol:** \`spin23-programme-algebra/1\`\n\n## Result\n\nThe compiler projects every retained in-scope corpus source: **${summary.corpusDocuments.toLocaleString("en")}** Markdown documents and **${summary.corpusMaterials.toLocaleString("en")}** JSON or image materials. The machine layer exposes **${summary.sourceRecords.toLocaleString("en")}** top-level JSON record boundaries. The prose layer contains **${summary.sourceSections.toLocaleString("en")}** authored sections and **${summary.sourceUnits.toLocaleString("en")}** bounded semantic units. It retains **${summary.observedRelations.toLocaleString("en")}** observed containment or link relations and **${summary.referencedArtifacts.toLocaleString("en")}** additional referenced artifacts.\n\nThe epistemic lane recognizes **${summary.epistemicTransformations}** explicit parent-to-child research updates: **${summary.admittedEpistemicTransformations}** pass the evidence, classified-state, exact-signature and bounded-authority gate, while **${summary.rejectedEpistemicTransformations}** remain as explicit refusal records. Scientific admission remains intentionally narrower. The four D02 seed families contribute **${summary.scientificObjects}** typed scientific objects and **${summary.admittedScientificTransformations}** admitted transformations; **${summary.rejectedScientificTransformations}** transformations fail the strict gate. Of **${summary.scientificQueries}** bounded queries, **${summary.queriesWithCandidates}** have at least one admitted candidate and **${summary.queriesWithoutCandidates}** retain the negative boundary.\n\n## Coverage by depth\n\n| Depth | Status | Meaning |\n|---|---|---|\n| Structural | **Complete** | Every in-scope Markdown, JSON and PNG source has an exact hash-bound object; every heading, bounded Markdown unit and top-level JSON record has a stable address. |\n| Epistemic | **Partial** | ${summary.declaredStatusDocuments} documents declare status; ${summary.unclassifiedStatusDocuments} remain visibly unclassified. Explicit parent declarations may become proposal-only research-state transformations, but only after the epistemic gate passes. |\n| Scientific | **Seed only** | Only transformations satisfying exact endpoint, dimension, assumption, loss, evidence and authority gates are admitted. Current admitted families: D02 local, operator, rank-change and boundary. |\n\n## Machine-record adapters\n\n| Adapter | Records |\n|---|---:|\n${adapterRows}\n\nFallback records remain structurally complete but need a schema-specific adapter before deeper semantic use. Current fallback count: **${summary.fallbackRecordCount.toLocaleString("en")}**.\n\n## Integrity\n\n- Invalid retained JSON/image materials: **${summary.invalidSourceMaterials}**\n- Duplicate object identities: **${summary.duplicateObjectCount}**\n- Missing kernel coordinates: **${summary.missingKernelCoordinateCount}**\n- Dangling compiled relations: **${summary.danglingRelationCount}**\n- Corpus source digest: \`${output.sources.corpus.digest}\`\n\n## Boundary\n\nThis report does not mean that every scientific argument has been formalized. It means every source has a lossless algebraic address and that the compiler can distinguish observed documentary relations from admitted epistemic or scientific transformations. Lexically assigned unit roles remain provisional, and machine-ledger semantics require declared schema adapters. The untyped remainder is now measurable rather than hidden.\n\nThe existing corpus remains canonical. Replacement requires the gates in the [parallel-lane README](../README.md), including held-out retrieval or reasoning improvements and an explicit migration decision.\n`;
+const coverage = `# Programme Algebra Coverage\n\n**Generated:** 26 October 2026\n\n**Mode:** parallel, non-replacing\n\n**Protocol:** \`spin23-programme-algebra/1\`\n\n## Result\n\nThe compiler projects every retained in-scope corpus source: **${summary.corpusDocuments.toLocaleString("en")}** Markdown documents and **${summary.corpusMaterials.toLocaleString("en")}** JSON or image materials. The machine layer exposes **${summary.sourceRecords.toLocaleString("en")}** top-level JSON record boundaries. The prose layer contains **${summary.sourceSections.toLocaleString("en")}** authored sections and **${summary.sourceUnits.toLocaleString("en")}** bounded semantic units. It retains **${summary.observedRelations.toLocaleString("en")}** observed containment or link relations and **${summary.referencedArtifacts.toLocaleString("en")}** additional referenced artifacts.\n\nThe epistemic lane recognizes **${summary.epistemicTransformations}** explicit parent-to-child research updates: **${summary.admittedEpistemicTransformations}** pass the evidence, classified-state, exact-signature and bounded-authority gate, while **${summary.rejectedEpistemicTransformations}** remain as explicit refusal records. Their maximal chains produce **${summary.admittedEpistemicRoutes}** admitted and **${summary.rejectedEpistemicRoutes}** rejected ALE route receipts. The empirical-return lane finds **${summary.empiricalReturns}** experiment-shaped records: **${summary.admittedEmpiricalReturns}** join all six required fields and **${summary.rejectedEmpiricalReturns}** retain their missing-field refusals. Scientific admission remains intentionally narrower. The four D02 seed families contribute **${summary.scientificObjects}** typed scientific objects and **${summary.admittedScientificTransformations}** admitted transformations; **${summary.rejectedScientificTransformations}** transformations fail the strict gate. Of **${summary.scientificQueries}** bounded queries, **${summary.queriesWithCandidates}** have at least one admitted candidate and **${summary.queriesWithoutCandidates}** retain the negative boundary.\n\n## Coverage by depth\n\n| Depth | Status | Meaning |\n|---|---|---|\n| Structural | **Complete** | Every in-scope Markdown, JSON and PNG source has an exact hash-bound object; every heading, bounded Markdown unit and top-level JSON record has a stable address. |\n| Epistemic | **Partial** | ${summary.declaredStatusDocuments} documents declare status; ${summary.unclassifiedStatusDocuments} remain visibly unclassified. Explicit parent declarations may become proposal-only research-state transformations, but only after the epistemic gate passes. |\n| Composed routes | **Partial** | Maximal explicit parent chains retain assumption, loss and evidence valuations; any failed edge, cycle or depth overflow rejects the route. |\n| Empirical return | **Partial** | Complete packets join preparation, intervention, detector, nuisance model, record and decision rule. Admission means protocol completeness, never execution or empirical confirmation. |\n| Scientific | **Seed only** | Only transformations satisfying exact endpoint, dimension, assumption, loss, evidence and authority gates are admitted. Current admitted families: D02 local, operator, rank-change and boundary. |\n\n## Machine-record adapters\n\n| Adapter | Records |\n|---|---:|\n${adapterRows}\n\nFallback records remain structurally complete but need a schema-specific adapter before deeper semantic use. Current fallback count: **${summary.fallbackRecordCount.toLocaleString("en")}**.\n\n## Integrity\n\n- Invalid retained JSON/image materials: **${summary.invalidSourceMaterials}**\n- Duplicate object identities: **${summary.duplicateObjectCount}**\n- Missing kernel coordinates: **${summary.missingKernelCoordinateCount}**\n- Dangling compiled relations: **${summary.danglingRelationCount}**\n- Corpus source digest: \`${output.sources.corpus.digest}\`\n\n## Boundary\n\nThis report does not mean that every scientific argument has been formalized or every experiment has run. It means every source has a lossless algebraic address and that the compiler can distinguish observed documentary relations, admitted epistemic/scientific transformations, composed routes and protocol-complete empirical-return packets. Lexically assigned unit roles remain provisional, and machine-ledger semantics require declared schema adapters. The untyped remainder is now measurable rather than hidden.\n\nThe existing corpus remains canonical. Replacement requires the gates in the [parallel-lane README](../README.md), including held-out retrieval or reasoning improvements and an explicit migration decision.\n`;
 
 if (write) {
   mkdirSync(outputRoot, { recursive: true });

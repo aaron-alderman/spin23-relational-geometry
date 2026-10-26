@@ -2,7 +2,7 @@
 
 **Date:** 26 October 2026
 
-**Status:** parallel compilation lane; complete structural projection, partial scientific transformation admission
+**Status:** parallel compilation lane; complete structural projection, partial epistemic, route, empirical-return and scientific admission
 
 **Authority:** the existing corpus remains canonical; this lane may not replace or promote it without an explicit later decision
 
@@ -30,7 +30,7 @@ declarations remain canonical for object identities, profiles and admitted
 transformations. Generated JSON and reports are disposable projections of those
 two source classes.
 
-## Three depths of conversion
+## Six depths of conversion
 
 1. **Structural projection.** Every retained corpus Markdown document, JSON
    ledger and image becomes a hash-bound object. Every Markdown heading and
@@ -45,6 +45,17 @@ two source classes.
    losses, evidence and authority pass the common-algebra gates. The four D02
    families are the initial admitted seed. Ordinary Markdown links never become
    scientific transformations merely because they connect scientific prose.
+4. **Research-state transformations.** An explicit `Parent` declaration may
+   become a proposal-only epistemic transformation when both documents exist,
+   the target has a declared status, evidence is attached and every changed
+   kernel coordinate is named. Failed candidates remain refusal records.
+5. **Composed routes.** Maximal parent chains are composed into bounded ALE
+   receipts: assumptions, losses and evidence travel with the route. One failed
+   edge, a cycle or a depth overflow rejects the whole route without erasing it.
+6. **Empirical return.** Experiment-shaped records are normalized to preparation,
+   intervention, detector, nuisance model, record and decision rule. A complete
+   six-field packet means the proposed protocol closes syntactically; it does
+   not mean the experiment ran or its hypothesis was confirmed.
 
 ## Shared kernel and profiles
 
@@ -58,6 +69,9 @@ meaning kind, domain, role, context, form, status, governing scheme,
 equivalence, admissibility, support, authority and time. Domain profiles extend
 that kernel without changing its meanings. The initial profiles are declared in
 [`programme_algebra_profiles_v1.json`](programme_algebra_profiles_v1.json).
+Machine-record schema views and their deliberately provisional matching rules
+are declared separately in
+[`programme_algebra_adapters_v1.json`](programme_algebra_adapters_v1.json).
 
 This is a family of typed categories, not one forced vector algebra. Scientific,
 mathematical, physical, experimental, epistemic and governance objects may

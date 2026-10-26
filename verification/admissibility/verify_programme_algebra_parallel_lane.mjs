@@ -92,6 +92,19 @@ const rejectedEpistemicTransformations = epistemicTransformations.filter(item =>
 if (epistemicTransformations.length !== algebra.summary.epistemicTransformations) failures.push("epistemic transformation summary mismatch");
 if (admittedEpistemicTransformations.length !== algebra.summary.admittedEpistemicTransformations) failures.push("admitted epistemic transformation summary mismatch");
 if (rejectedEpistemicTransformations.length !== algebra.summary.rejectedEpistemicTransformations) failures.push("rejected epistemic transformation summary mismatch");
+const epistemicTransformationIds = new Set(epistemicTransformations.map(item => item.id));
+const admittedEpistemicRoutes = algebra.epistemicRouteReceipts.filter(item => item.validation.admitted);
+const rejectedEpistemicRoutes = algebra.epistemicRouteReceipts.filter(item => !item.validation.admitted);
+for (const route of algebra.epistemicRouteReceipts) {
+  if (!route.steps.length || route.steps.some(step => !epistemicTransformationIds.has(step))) failures.push(`epistemic route step missing: ${route.id}`);
+  if (route.depth !== route.steps.length) failures.push(`epistemic route depth mismatch: ${route.id}`);
+  if (!route.ale || !Array.isArray(route.ale.assumptions) || !Array.isArray(route.ale.losses) || !Array.isArray(route.ale.evidenceRefs)) failures.push(`epistemic route ALE missing: ${route.id}`);
+  if (route.validation.admitted && (route.authority?.proposalOnly !== true || route.authority?.entails !== false || route.authority?.empiricalAuthority !== false)) failures.push(`epistemic route authority widened: ${route.id}`);
+  if (!route.validation.admitted && route.validation.reasons.length === 0) failures.push(`rejected epistemic route lacks refusal reason: ${route.id}`);
+}
+if (algebra.epistemicRouteReceipts.length !== algebra.summary.epistemicRoutes) failures.push("epistemic route summary mismatch");
+if (admittedEpistemicRoutes.length !== algebra.summary.admittedEpistemicRoutes) failures.push("admitted epistemic route summary mismatch");
+if (rejectedEpistemicRoutes.length !== algebra.summary.rejectedEpistemicRoutes) failures.push("rejected epistemic route summary mismatch");
 for (const receipt of algebra.compositionReceipts) {
   for (const candidate of receipt.candidates) {
     if (candidate.entails !== false || candidate.empiricalAuthority !== false || candidate.applicationAdmission !== false) failures.push(`candidate authority widened: ${candidate.candidateId}`);
@@ -120,6 +133,19 @@ for (const row of records) {
 }
 if (stable(adapterCounts) !== stable(algebra.summary.recordAdapterCounts)) failures.push("record adapter summary mismatch");
 if ((adapterCounts["generic-ledger-record"] ?? 0) !== algebra.summary.fallbackRecordCount) failures.push("fallback record summary mismatch");
+const admittedEmpiricalReturns = algebra.empiricalReturns.filter(item => item.validation.admitted);
+const rejectedEmpiricalReturns = algebra.empiricalReturns.filter(item => !item.validation.admitted);
+const empiricalFields = ["preparation", "intervention", "detector", "nuisanceModel", "record", "decisionRule"];
+for (const packet of algebra.empiricalReturns) {
+  if (!ids.has(packet.sourceRecordId)) failures.push(`empirical return source missing: ${packet.id}`);
+  const missing = empiricalFields.filter(field => packet.fields[field] === null || packet.fields[field] === undefined || (Array.isArray(packet.fields[field]) && packet.fields[field].length === 0));
+  if (packet.validation.admitted !== (missing.length === 0)) failures.push(`empirical return admission mismatch: ${packet.id}`);
+  if (packet.validation.admitted && (packet.authority?.proposalOnly !== true || packet.authority?.entails !== false || packet.authority?.empiricalAuthority !== false)) failures.push(`empirical return authority widened: ${packet.id}`);
+  if (!packet.validation.admitted && packet.validation.reasons.length === 0) failures.push(`rejected empirical return lacks refusal reason: ${packet.id}`);
+}
+if (algebra.empiricalReturns.length !== algebra.summary.empiricalReturns) failures.push("empirical return summary mismatch");
+if (admittedEmpiricalReturns.length !== algebra.summary.admittedEmpiricalReturns) failures.push("admitted empirical return summary mismatch");
+if (rejectedEmpiricalReturns.length !== algebra.summary.rejectedEmpiricalReturns) failures.push("rejected empirical return summary mismatch");
 for (const source of sources) {
   const absolute = join(root, source.extension.canonicalPath);
   if (!existsSync(absolute)) failures.push(`canonical source missing: ${source.extension.canonicalPath}`);
