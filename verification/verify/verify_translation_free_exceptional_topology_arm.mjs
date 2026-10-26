@@ -135,7 +135,7 @@ assert.equal(e8Shell10.cutoffDiagnostics.gapPromoted,false);
 assert.equal(arm.e8CartanCompactGap.evidence,"translation-free-e8-cartan-compact-gap-v1.json");
 assert.equal(e8CompactGap.convergence.successivePassingIncrements,2);
 assert.match(e8CompactGap.boundary,/not a rigorous lower bound/u);
-assert.deepEqual(e8RatioSpine.promotedPoints.map(p=>p.ratio),[0.25,0.5,1]);
+assert.deepEqual(e8RatioSpine.promotedPoints.map(p=>p.ratio),[0.25,0.375,0.5,1]);
 assert.match(e8RatioSpine.boundary,/not a proof for every r/u);
 assert.equal(arm.quasicrystalBackplaneBridge.evidence, "translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 assert.deepEqual(quasicrystal.factorialDesign.backplanes, ["periodic","quasicrystal","amorphous"]);
