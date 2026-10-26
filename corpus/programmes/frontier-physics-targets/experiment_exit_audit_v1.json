@@ -1,18 +1,18 @@
 {
   "schema": "frontier.experiment-exit-audit/1",
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "authority": "Strict explicit-field audit for EXIT-03. Semantically suggestive legacy text is not silently promoted into a conventional null, transfer function, covariance model, sensitivity calculation or go/no-go decision.",
   "criteriaRef": "corpus/programmes/frontier-physics-targets/corpus_completion_exit_criteria_v1.json",
   "atlasRef": "corpus/programmes/frontier-physics-targets/frontier_experiment_programmes_v2.json",
   "summary": {
-    "experiments": 21,
+    "experiments": 22,
     "requiredFieldsPerExperiment": 18,
-    "totalRequiredCells": 378,
-    "explicitCells": 378,
+    "totalRequiredCells": 396,
+    "explicitCells": 396,
     "missingCells": 0,
-    "exitReadyExperiments": 21,
+    "exitReadyExperiments": 22,
     "experimentsMissingWork": 0,
-    "threeDecisionLayersExplicit": 21,
+    "threeDecisionLayersExplicit": 22,
     "missingByField": {
       "hypothesis": 0,
       "strongest_conventional_null": 0,
@@ -234,7 +234,8 @@
         "OT-035",
         "OT-043",
         "OT-044",
-        "OT-048"
+        "OT-048",
+        "OT-052"
       ],
       "detectorIds": [
         "DET-002",
@@ -430,7 +431,8 @@
         "DET-007",
         "DET-012",
         "DET-015",
-        "DET-017"
+        "DET-017",
+        "DET-037"
       ],
       "fields": {
         "hypothesis": {
@@ -720,7 +722,8 @@
       "readiness": "ready_now_on_existing_hardware",
       "topicIds": [
         "OT-004",
-        "OT-043"
+        "OT-043",
+        "OT-052"
       ],
       "detectorIds": [
         "DET-008",
@@ -906,13 +909,15 @@
         "OT-010",
         "OT-020",
         "OT-023",
-        "OT-043"
+        "OT-043",
+        "OT-053"
       ],
       "detectorIds": [
         "DET-007",
         "DET-008",
         "DET-011",
-        "DET-013"
+        "DET-013",
+        "DET-037"
       ],
       "fields": {
         "hypothesis": {
@@ -1004,14 +1009,17 @@
         "OT-014",
         "OT-036",
         "OT-041",
-        "OT-051"
+        "OT-051",
+        "OT-052",
+        "OT-053"
       ],
       "detectorIds": [
         "DET-006",
         "DET-013",
         "DET-014",
         "DET-022",
-        "DET-023"
+        "DET-023",
+        "DET-037"
       ],
       "fields": {
         "hypothesis": {
@@ -1602,12 +1610,14 @@
         "OT-048",
         "OT-049",
         "OT-050",
-        "OT-051"
+        "OT-051",
+        "OT-053"
       ],
       "detectorIds": [
         "DET-027",
         "DET-035",
-        "DET-036"
+        "DET-036",
+        "DET-038"
       ],
       "fields": {
         "hypothesis": {
@@ -1701,7 +1711,9 @@
         "OT-031",
         "OT-040",
         "OT-046",
-        "OT-051"
+        "OT-051",
+        "OT-052",
+        "OT-053"
       ],
       "detectorIds": [
         "DET-016",
@@ -1803,7 +1815,8 @@
         "OT-047",
         "OT-048",
         "OT-049",
-        "OT-050"
+        "OT-050",
+        "OT-052"
       ],
       "detectorIds": [
         "DET-029",
@@ -2002,6 +2015,98 @@
       "detectorIds": [
         "DET-029",
         "DET-036"
+      ],
+      "fields": {
+        "hypothesis": {
+          "status": "explicit",
+          "sourceField": "hypothesis"
+        },
+        "strongest_conventional_null": {
+          "status": "explicit",
+          "sourceField": "strongest_conventional_null"
+        },
+        "carrier_and_preparation": {
+          "status": "explicit",
+          "sourceField": "carrier_and_preparation"
+        },
+        "controlled_variables": {
+          "status": "explicit",
+          "sourceField": "controlled_variables"
+        },
+        "observables": {
+          "status": "explicit",
+          "sourceField": "observables"
+        },
+        "detector_transfer_function": {
+          "status": "explicit",
+          "sourceField": "detector_transfer_function"
+        },
+        "calibration_and_reference_channels": {
+          "status": "explicit",
+          "sourceField": "calibration_and_reference_channels"
+        },
+        "nuisance_and_covariance_model": {
+          "status": "explicit",
+          "sourceField": "nuisance_and_covariance_model"
+        },
+        "predicted_signal_scale": {
+          "status": "explicit",
+          "sourceField": "predicted_signal_scale"
+        },
+        "power_or_sensitivity_calculation": {
+          "status": "explicit",
+          "sourceField": "power_or_sensitivity_calculation"
+        },
+        "blind_or_preregistered_analysis_rule": {
+          "status": "explicit",
+          "sourceField": "blind_or_preregistered_analysis_rule"
+        },
+        "build_go_no_go": {
+          "status": "explicit",
+          "sourceField": "build_go_no_go"
+        },
+        "bridge_go_no_go": {
+          "status": "explicit",
+          "sourceField": "bridge_go_no_go"
+        },
+        "physics_go_no_go": {
+          "status": "explicit",
+          "sourceField": "physics_go_no_go"
+        },
+        "positive_null_ambiguous_outcome_branches": {
+          "status": "explicit",
+          "sourceField": "positive_null_ambiguous_outcome_branches"
+        },
+        "replication_rule": {
+          "status": "explicit",
+          "sourceField": "replication_rule"
+        },
+        "data_metadata_and_code_release_contract": {
+          "status": "explicit",
+          "sourceField": "data_metadata_and_code_release_contract"
+        },
+        "claim_status_propagation": {
+          "status": "explicit",
+          "sourceField": "claim_status_propagation"
+        }
+      },
+      "explicitFields": 18,
+      "missingFields": 0,
+      "threeDecisionLayersExplicit": true,
+      "exitReady": true
+    },
+    {
+      "experimentId": "EX-022",
+      "title": "Single-ion operator-opening and lifetime ledger",
+      "mode": "laboratory_atomic_spectroscopy",
+      "readiness": "ready_on_established_platform",
+      "topicIds": [
+        "OT-036"
+      ],
+      "detectorIds": [
+        "DET-013",
+        "DET-014",
+        "DET-037"
       ],
       "fields": {
         "hypothesis": {

@@ -1,7 +1,8 @@
 # Frontier experiment atlas v1
 
-**Date:** 2026-10-25  
-**Coverage:** 20/20 frontier areas; 51/51 maintained topics; 37/37 detector bundles.
+**Date:** 2026-10-26
+
+**Coverage:** 20/20 frontier areas; 53/53 maintained topics; 38/38 detector bundles.
 
 This atlas converts every canonical frontier into a realistic controlled experiment. “Experiment” is used in the broad scientific sense: a laboratory intervention where a physical carrier exists, a reproducible computation where the object is discrete, and a theorem/falsification benchmark where uniform limits or an action are the actual missing datum. A blocked fundamental frontier is not disguised as build-ready hardware.
 
@@ -125,7 +126,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-03 — Detector resolution and semantic fibres (detector fold)  
 **Mode/readiness:** computational_hybrid; ready_now  
 **Indicative scale:** 6–10 weeks; modelling, statistics and domain-review trio  
-**Topics:** OT-001, OT-010, OT-019, OT-021, OT-033, OT-034, OT-035, OT-043, OT-044, OT-048
+**Topics:** OT-001, OT-010, OT-019, OT-021, OT-033, OT-034, OT-035, OT-043, OT-044, OT-048, OT-052
 
 **Detector bundles:** DET-002, DET-003, DET-026, DET-029, DET-030, DET-036
 
@@ -344,7 +345,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-08 — Measurement backaction and conditioning (measurement quotient)  
 **Mode/readiness:** laboratory; ready_now_on_existing_hardware  
 **Indicative scale:** 6–12 months on a superconducting qutrit or continuously monitored qubit  
-**Topics:** OT-004, OT-043
+**Topics:** OT-004, OT-043, OT-052
 
 **Detector bundles:** DET-008, DET-009
 
@@ -434,7 +435,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-10 — Metastability, rare events and hysteresis (large-deviation boundary)  
 **Mode/readiness:** laboratory; ready_now  
 **Indicative scale:** 6–12 months; long unattended acquisition required  
-**Topics:** OT-010, OT-020, OT-023, OT-043
+**Topics:** OT-010, OT-020, OT-023, OT-043, OT-053
 
 **Detector bundles:** DET-007, DET-008, DET-011, DET-013, DET-037
 
@@ -477,7 +478,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-11 — Spectral boundary dynamics (pole, cut and threshold)  
 **Mode/readiness:** laboratory; ready_now  
 **Indicative scale:** 4–9 months with microwave or acoustic resonators  
-**Topics:** OT-012, OT-013, OT-014, OT-036, OT-041, OT-051
+**Topics:** OT-012, OT-013, OT-014, OT-036, OT-041, OT-051, OT-052, OT-053
 
 **Detector bundles:** DET-006, DET-013, DET-014, DET-022, DET-023, DET-037
 
@@ -741,9 +742,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-17 — Operator and carrier translation (translation gap)  
 **Mode/readiness:** hybrid; staged  
 **Indicative scale:** 12–24 months after a source-native map is written  
-**Topics:** OT-017, OT-024, OT-025, OT-026, OT-027, OT-035, OT-038, OT-039, OT-042, OT-045, OT-046, OT-047, OT-048, OT-049, OT-050, OT-051
+**Topics:** OT-017, OT-024, OT-025, OT-026, OT-027, OT-035, OT-038, OT-039, OT-042, OT-045, OT-046, OT-047, OT-048, OT-049, OT-050, OT-051, OT-053
 
-**Detector bundles:** DET-027, DET-035, DET-036
+**Detector bundles:** DET-027, DET-035, DET-036, DET-038
 
 **Platform.** A photonic three-mode chip and an acoustic or microwave three-port emulator implementing the same declared A2 operation in native units.
 
@@ -784,7 +785,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-18 — Consistency, scattering and continuum control (consistency boundary)  
 **Mode/readiness:** theorem_computation; ready_now  
 **Indicative scale:** 6–18 months depending on whether a theorem survives  
-**Topics:** OT-014, OT-016, OT-018, OT-021, OT-031, OT-040, OT-046, OT-051
+**Topics:** OT-014, OT-016, OT-018, OT-021, OT-031, OT-040, OT-046, OT-051, OT-052, OT-053
 
 **Detector bundles:** DET-016, DET-022, DET-023, DET-030, DET-034
 
@@ -827,7 +828,7 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-19 — Flavour, gravity and cosmology (fundamental firewall)  
 **Mode/readiness:** conditional_hybrid; conditional_on_action  
 **Indicative scale:** 12–36 months after a frozen action and matching packet exist  
-**Topics:** OT-028, OT-029, OT-030, OT-031, OT-042, OT-047, OT-048, OT-049, OT-050
+**Topics:** OT-028, OT-029, OT-030, OT-031, OT-042, OT-047, OT-048, OT-049, OT-050, OT-052
 
 **Detector bundles:** DET-029, DET-031, DET-032, DET-033, DET-034, DET-035, DET-036
 

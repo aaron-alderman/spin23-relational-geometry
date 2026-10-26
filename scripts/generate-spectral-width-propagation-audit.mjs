@@ -22,7 +22,7 @@ const groups = {
   ],
   open_system_or_network_width: [
     /\/664_the_pole_response|\/948_each_lossy_response_face/u,
-    /admissibility_(?:109|142|59|62)_|frontier_wave7_(?:65|70)_/u,
+    /admissibility_(?:109|142|144|59|62)_|frontier_wave7_(?:65|70)_/u,
     /lattice-subroutine-gravity\/(?:three-mode-loop-seam|two-quadrature-seam|two-resonator-transfer)/u,
   ],
   physical_spectroscopy_requires_width_ledger: [
@@ -40,7 +40,7 @@ const groups = {
 };
 const reasons = {
   navigation_or_register: "Navigation, coverage or detector inventory; it inherits source widths and makes no independent microscopic identification.",
-  open_system_or_network_width: "A declared effective network, environment rate, ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime.",
+  open_system_or_network_width: "A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled.",
   physical_spectroscopy_requires_width_ledger: "A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width.",
   contextual_or_synthesis_use: "The document uses spectral language to map, compare or govern branches; it is not an independent width determination.",
   spectrum_gap_or_residue_not_width: "The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made.",

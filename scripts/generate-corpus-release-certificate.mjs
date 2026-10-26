@@ -41,7 +41,7 @@ const gateStates = Object.fromEntries(contract.gates.map(gate => [gate.id, gate.
 const pass = Object.values(gateStates).every(status => status === 'passed') && contract.completionClaimAllowed === true
   && audit.summary?.pass === true && documentation.summary?.pass === true;
 const output = {
-  schema: 'frontier.corpus-saturation-release-certificate/1', date: '2026-10-25',
+  schema: 'frontier.corpus-saturation-release-certificate/1', date: '2026-10-26',
   status: pass ? 'dated_saturation_under_declared_protocol' : 'release_candidate_not_complete',
   authority: 'This certificate attests protocol saturation of a normalized scientific-content projection. It does not claim final truth, empirical confirmation, or exhaustion of nature and mathematics.',
   projection: {
@@ -57,10 +57,11 @@ const output = {
   },
   reopening: 'Any changed included file, failed gate, new adjacency, new evidence, new contradiction candidate, failed regeneration, or qualifying external result invalidates this certificate and requires a new dated release.'
 };
-const md = `# Corpus saturation release certificate v1\n\n**Date:** 25 October 2026  \n**Status:** ${output.status}  \n**Projection:** \`${projectionSha256}\`\n\n## Attestation\n\nAll nine exit gates pass for the normalized ${records.length.toLocaleString()}-file scientific-content projection identified above. This is a dated protocol-saturation result: the declared adjacency, exhausted-neighbourhood, experiment, theory, literature, implication, narrative, documentation/retrieval and adversarial-release obligations are closed together. It is not a claim that nature has no unknown physics, that every proposed bridge is true, or that the external experiments have already run.\n\nThe certificate excludes itself, release receipts and volatile generated navigation/search surfaces from its projection to avoid self-reference. Those surfaces remain separately hash-bound and freshness-tested. A clean checkout must run the release orchestrator, regenerate every declared derived surface, pass every frontier verifier and all repository tests, and retain no tracked diff.\n\nAny included-file change or reopening event invalidates this dated certificate.\n`;
+const md = `# Corpus saturation release certificate v1\n\n**Date:** 25 October 2026\n\n**Status:** ${output.status}\n\n**Projection:** \`${projectionSha256}\`\n\n## Attestation\n\nAll nine exit gates pass for the normalized ${records.length.toLocaleString()}-file scientific-content projection identified above. This is a dated protocol-saturation result: the declared adjacency, exhausted-neighbourhood, experiment, theory, literature, implication, narrative, documentation/retrieval and adversarial-release obligations are closed together. It is not a claim that nature has no unknown physics, that every proposed bridge is true, or that the external experiments have already run.\n\nThe certificate excludes itself, release receipts and volatile generated navigation/search surfaces from its projection to avoid self-reference. Those surfaces remain separately hash-bound and freshness-tested. A clean checkout must run the release orchestrator, regenerate every declared derived surface, pass every frontier verifier and all repository tests, and retain no tracked diff.\n\nAny included-file change or reopening event invalidates this dated certificate.\n`;
+const datedMd = md.replace('25 October 2026', '26 October 2026');
 if (WRITE) {
   fs.writeFileSync(path.join(ROOT, OUT_JSON), `${JSON.stringify(output, null, 2)}\n`);
-  fs.writeFileSync(path.join(ROOT, OUT_MD), md);
+  fs.writeFileSync(path.join(ROOT, OUT_MD), datedMd);
 }
 console.log(JSON.stringify({ result: pass ? 'pass' : 'not_ready', outputs: [OUT_JSON, OUT_MD], status: output.status, projection: output.projection }, null, 2));
 if (!pass) process.exitCode = 1;

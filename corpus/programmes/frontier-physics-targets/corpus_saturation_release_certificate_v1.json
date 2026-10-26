@@ -1,13 +1,13 @@
 {
   "schema": "frontier.corpus-saturation-release-certificate/1",
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "status": "dated_saturation_under_declared_protocol",
   "authority": "This certificate attests protocol saturation of a normalized scientific-content projection. It does not claim final truth, empirical confirmation, or exhaustion of nature and mathematics.",
   "projection": {
     "algorithm": "Sort repository files by POSIX path; exclude self-referential certificates, release receipts and volatile generated navigation/search surfaces; normalize CRLF to LF for text; hash path, byte length and SHA-256 records.",
-    "sha256": "f384b49bbc629be3038fb7db36b2c3651436a04d3fefbc844fcce5a354872d83",
-    "files": 6764,
-    "bytes": 119339717,
+    "sha256": "2da139f9a6c62aefa2706920711e1a913ad812137dac2b07f6b1f95122107eed",
+    "files": 7010,
+    "bytes": 122883691,
     "exclusions": [
       "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.json",
       "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
@@ -35,8 +35,8 @@
     "EXIT-09": "passed"
   },
   "controls": {
-    "adversarialAuditSha256": "eb5c85cb6f266f6078e3ff853c13e072cd416e5c77d6bbc30720d325214535d0",
-    "documentationGateSha256": "eb6741e0996cddee9e65f3d0fd64db1374cfa09b6b7c754eb8c8f2e72fbbb7bf",
+    "adversarialAuditSha256": "210c5417774d51419da68002cd87d1416fddeccd91d076c64b9b2e1b571aec76",
+    "documentationGateSha256": "51a7042a4a52cf34b93311f584c33446faaf257842b0f5fa8f2abfd30b4ed5e5",
     "requiredCleanCheckoutCommand": "node tooling/release/run_corpus_release_audit.mjs --write-receipt <outside-or-excluded-receipt-path>",
     "cleanCheckoutRequirement": "The committed checkout must be clean before regeneration; every declared generator, every frontier verifier and all repository tests must pass; regeneration must leave no tracked diff."
   },
