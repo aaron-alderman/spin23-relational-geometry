@@ -435,6 +435,16 @@ Spin(2,3)\Longrightarrow\text{Riemann hypothesis}.
 
 The arithmetic quotient is the new hinge. The next question is whether the research programme contains any independent reason for the continuous response geometry to acquire the lattice \(Sp(4,\mathbb Z)\).
 
+[AZ-147](../../programmes/admissibility/admissibility_147_xi_genus_two_weil_spectral_compression_and_hyperbolic_trace_gate.md)
+adds a distinct arithmetic route that should not be collapsed into this one.
+Localized Weil quadratic forms and self-adjoint differentiation operators
+produce finite spectra converging to zeta ordinates under RH without passing
+through the genus-two Jordan tube. Conversely, a new Xi discriminant produces
+a genuine genus-two curve and period lattice, but does not identify its marked
+cycles with this automorphic quotient. Zeta scattering, Weil spectral
+compression and Xi genus-two geometry are now three typed constructions, not
+one inferred equivalence.
+
 ## Executable structural certificate
 
 Run:

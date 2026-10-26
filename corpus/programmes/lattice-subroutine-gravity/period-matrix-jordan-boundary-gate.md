@@ -130,3 +130,11 @@ with:
 - no arbitrary multiplication by \(\chi_5\) inserted merely to force the zero.
 
 Without those conditions, the period-matrix/Jordan resemblance remains a carrier analogy rather than a physical seam map.
+
+The later [Xi genus-two audit](../admissibility/admissibility_147_xi_genus_two_weil_spectral_compression_and_hyperbolic_trace_gate.md)
+does not alter this no-go. It supplies a new genus-two curve whose branch
+geometry is constructed from the Riemann \(\Xi\)-function, so its normalized
+period matrix gives another authentic point of \(\mathfrak H_2\). No reported
+result sends its arithmetic nonresonance, Kummer specialization or heat motion
+to \(\det\operatorname{Im}\Omega=0\). The new comparison must preserve marked
+cycles and strata rather than identify the carriers by genus alone.
