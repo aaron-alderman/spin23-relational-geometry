@@ -2,7 +2,7 @@
 
 import { createHash } from "node:crypto";
 import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
-import { basename, dirname, join, normalize, relative, resolve, sep } from "node:path";
+import { basename, dirname, extname, join, normalize, relative, resolve, sep } from "node:path";
 
 const root = resolve(process.cwd());
 const argValue = name => {
@@ -1477,11 +1477,27 @@ const sourceDigest = sha256(allSources.map(source => {
   return `${source}\0${sha256(canonicalText)}`;
 }).join("\n"));
 
-const sourceSet = new Set(allSources);
+const filesBelow = directory => readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+  const path = join(directory, entry.name);
+  return entry.isDirectory() ? filesBelow(path) : [path];
+});
+const naturalCompare = (a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" });
+const librarySources = filesBelow(join(root, "corpus"))
+  .filter(file => extname(file).toLowerCase() === ".md")
+  .map(file => posix(relative(root, file)))
+  .sort(naturalCompare);
+const librarySourceSet = new Set(librarySources);
+const editionSourceSet = new Set(allSources);
+const markdownBySource = new Map(librarySources.map(source => [source, readFileSync(join(root, source), "utf8").replace(/\r\n?/gu, "\n")]));
+const titleBySource = new Map(librarySources.map(source => {
+  const markdown = markdownBySource.get(source);
+  return [source, (/^#\s+(.+)$/mu.exec(markdown) || [null, basename(source, ".md")])[1]];
+}));
 const repositoryUrl = "https://github.com/aaron-alderman/spin23-relational-geometry";
 const buildRevision = process.env.GITHUB_SHA || "local-working-tree";
 const encodePath = value => posix(value).split("/").map(part => [".", ".."].includes(part) ? part : encodeURIComponent(part)).join("/");
-const sourceOutputPath = source => join(siteRoot, "sources", source.replace(/\.md$/u, ".html"));
+const sourceOutputPath = source => join(siteRoot, "library", source.replace(/\.md$/u, ".html"));
+const legacySourceOutputPath = source => join(siteRoot, "sources", source.replace(/\.md$/u, ".html"));
 const sourcePageHref = (fromFile, source) => encodePath(relative(dirname(fromFile), sourceOutputPath(source)));
 const githubBlobUrl = source => `${repositoryUrl}/blob/${encodeURIComponent(buildRevision === "local-working-tree" ? "main" : buildRevision)}/${encodePath(source)}`;
 const githubRawUrl = source => `https://raw.githubusercontent.com/aaron-alderman/spin23-relational-geometry/${encodeURIComponent(buildRevision === "local-working-tree" ? "main" : buildRevision)}/${encodePath(source)}`;
@@ -1490,9 +1506,50 @@ const resolveMarkdownTarget = (source, target) => {
   if (/^(?:[a-z]+:|#)/iu.test(target)) return target;
   const [pathPart, fragment = ""] = target.split("#", 2);
   const candidate = posix(normalize(join(dirname(source), pathPart))).replace(/^\.\//u, "");
-  if (sourceSet.has(candidate)) return `${sourcePageHref(sourceOutputPath(source), candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
+  if (librarySourceSet.has(candidate)) return `${sourcePageHref(sourceOutputPath(source), candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
   if (candidate.endsWith(".md")) return `${githubBlobUrl(candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
   return githubBlobUrl(candidate);
+};
+
+const corpusLinksFrom = source => {
+  const links = new Set();
+  for (const match of markdownBySource.get(source).matchAll(/(?<!!)\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/gu)) {
+    const target = match[1].replace(/^<|>$/gu, "");
+    if (/^(?:[a-z]+:|#)/iu.test(target)) continue;
+    const pathPart = target.split(/[?#]/u, 1)[0];
+    let decoded = pathPart;
+    try { decoded = decodeURIComponent(pathPart); } catch { /* Retain malformed source text for faithful fallback. */ }
+    const candidate = posix(normalize(join(dirname(source), decoded))).replace(/^\.\//u, "");
+    if (librarySourceSet.has(candidate)) links.add(candidate);
+  }
+  return [...links].sort(naturalCompare);
+};
+const outgoingBySource = new Map(librarySources.map(source => [source, corpusLinksFrom(source)]));
+const incomingBySource = new Map(librarySources.map(source => [source, []]));
+for (const [source, targets] of outgoingBySource) for (const target of targets) incomingBySource.get(target).push(source);
+for (const incoming of incomingBySource.values()) incoming.sort(naturalCompare);
+
+const graphNeighbours = new Map(librarySources.map(source => [source, new Set(outgoingBySource.get(source))]));
+for (const [source, targets] of outgoingBySource) for (const target of targets) graphNeighbours.get(target).add(source);
+const routeParent = new Map();
+const routeRoot = new Map();
+const routeQueue = allSources.filter(source => librarySourceSet.has(source));
+for (const source of routeQueue) routeRoot.set(source, source);
+for (let index = 0; index < routeQueue.length; index += 1) {
+  const source = routeQueue[index];
+  for (const neighbour of [...graphNeighbours.get(source)].sort(naturalCompare)) {
+    if (routeRoot.has(neighbour)) continue;
+    routeRoot.set(neighbour, routeRoot.get(source));
+    routeParent.set(neighbour, source);
+    routeQueue.push(neighbour);
+  }
+}
+const editionRouteFor = source => {
+  if (editionSourceSet.has(source)) return [source];
+  if (!routeRoot.has(source)) return [];
+  const route = [source];
+  while (routeParent.has(route[route.length - 1])) route.push(routeParent.get(route[route.length - 1]));
+  return route.reverse();
 };
 
 const inlineMarkdown = (value, source) => {
@@ -1576,18 +1633,40 @@ const plainMathTitle = value => String(value)
   .replace(/\\oplus\b/gu, "⊕")
   .replace(/\\cong\b/gu, "≅")
   .replace(/\\pm\b/gu, "±")
+  .replace(/\\[,;:! ]/gu, " ")
   .replace(/_\{([^{}]*)\}/gu, "_$1")
   .replace(/\\([A-Za-z]+)/gu, "$1")
+  .replaceAll("\\", "")
+  .replace(/\b(?:mathbb|mathfrak|mathcal|operatorname)\s*/gu, "")
+  .replace(/\bmathbb\s+Z\b/gu, "ℤ")
+  .replace(/\bmathbb\s+R\b/gu, "ℝ")
   .replace(/[{}$]/gu, "")
   .replace(/_([0-9]+)/gu, (_, digits) => digits.replaceAll("0", "₀").replaceAll("1", "₁").replaceAll("2", "₂").replaceAll("3", "₃").replaceAll("4", "₄").replaceAll("5", "₅").replaceAll("6", "₆").replaceAll("7", "₇").replaceAll("8", "₈").replaceAll("9", "₉"));
 
+const libraryLink = (fromFile, source, label = titleBySource.get(source)) => `<a href="${sourcePageHref(fromFile, source)}">${esc(plainMathTitle(label))}</a>`;
 const sourceReaderHtml = source => {
-  const markdown = readFileSync(join(root, source), "utf8").replace(/\r\n?/gu, "\n");
+  const markdown = markdownBySource.get(source);
   const digest = sha256(markdown);
-  const title = (/^#\s+(.+)$/mu.exec(markdown) || [null, basename(source, ".md")])[1];
+  const title = titleBySource.get(source);
   const output = sourceOutputPath(source);
   const prefix = encodePath(relative(dirname(output), siteRoot)) + "/";
-  const body = `<header class="mast detail-mast"><a href="${prefix}index.html">Admissibility frontier · Edition 3</a><nav><a href="${esc(githubBlobUrl(source))}">Canonical source on GitHub</a></nav></header><header class="hero source-reader-hero"><p class="kicker">Compiled corpus reading projection</p><h1>${inlineMarkdown(title, source)}</h1><aside class="boundary"><strong>Authority boundary.</strong> This page is generated from canonical Markdown during publication. It is not an editable or authoritative copy.</aside></header><section class="source-provenance"><dl><dt>Canonical path</dt><dd><code>${esc(source)}</code></dd><dt>Source SHA-256</dt><dd><code>${digest}</code></dd><dt>Build revision</dt><dd><code>${esc(buildRevision)}</code></dd></dl><p><a href="${esc(githubBlobUrl(source))}">History and editing →</a> · <a href="${esc(githubRawUrl(source))}">Raw Markdown →</a></p></section><article class="source-document">${renderMarkdown(markdown, source)}</article><nav class="page-turn"><a href="${prefix}index.html">← Edition contents</a><a href="${esc(githubBlobUrl(source))}">Canonical source →</a></nav>`;
+  const libraryHomeHref = encodePath(relative(dirname(output), join(siteRoot, "library", "index.html")));
+  const siblings = librarySources.filter(candidate => dirname(candidate) === dirname(source));
+  const siblingIndex = siblings.indexOf(source);
+  const previous = siblingIndex > 0 ? siblings[siblingIndex - 1] : null;
+  const next = siblingIndex < siblings.length - 1 ? siblings[siblingIndex + 1] : null;
+  const incoming = incomingBySource.get(source);
+  const outgoing = outgoingBySource.get(source);
+  const route = editionRouteFor(source);
+  const breadcrumb = source.split("/").map((part, index, parts) => index === parts.length - 1 ? `<span>${esc(part)}</span>` : `<span>${esc(part)}</span>`).join("<i>›</i>");
+  const routeExplanation = editionSourceSet.has(source)
+    ? `<p><strong>Why this page is here:</strong> Edition 3 cites this document directly.</p>`
+    : route.length
+      ? `<p><strong>Why this page is here:</strong> the shortest known corpus-link route from an Edition 3 source is:</p><ol>${route.map(item => `<li>${libraryLink(output, item, basename(item, ".md"))}</li>`).join("")}</ol>`
+      : `<p><strong>Why this page is here:</strong> it belongs to the wider canonical corpus. No explicit Markdown-link route from an Edition 3 citation was found; enter it through hierarchy or search.</p>`;
+  const backlinkList = incoming.length ? `<ul>${incoming.map(item => `<li>${libraryLink(output, item)}<small>${esc(item)}</small></li>`).join("")}</ul>` : "<p>No explicit inbound Markdown links were found.</p>";
+  const outgoingList = outgoing.length ? `<ul>${outgoing.map(item => `<li>${libraryLink(output, item)}<small>${esc(item)}</small></li>`).join("")}</ul>` : "<p>No explicit outgoing corpus links were found.</p>";
+  const body = `<header class="mast detail-mast"><a href="${prefix}index.html">Admissibility frontier · Edition 3</a><nav><a href="${libraryHomeHref}">Corpus library</a> · <a href="${esc(githubBlobUrl(source))}">Canonical source</a></nav></header><nav class="library-breadcrumb"><a href="${libraryHomeHref}">Corpus library</a><i>›</i>${breadcrumb}</nav><header class="hero source-reader-hero"><p class="kicker">Compiled corpus reading projection · ${editionSourceSet.has(source) ? "Edition 3 cited source" : "Wider corpus"}</p><h1>${inlineMarkdown(title, source)}</h1><aside class="boundary"><strong>Authority boundary.</strong> This page is generated from canonical Markdown during publication. It is not an editable or authoritative copy.</aside></header><section class="source-provenance"><dl><dt>Canonical path</dt><dd><code>${esc(source)}</code></dd><dt>Source SHA-256</dt><dd><code>${digest}</code></dd><dt>Build revision</dt><dd><code>${esc(buildRevision)}</code></dd><dt>Corpus links</dt><dd>${incoming.length} inbound · ${outgoing.length} outbound</dd></dl><p><a href="${esc(githubBlobUrl(source))}">History and editing →</a> · <a href="${esc(githubRawUrl(source))}">Raw Markdown →</a></p></section><section class="library-route"><h2>Route into this page</h2>${routeExplanation}</section><article class="source-document">${renderMarkdown(markdown, source)}</article><section class="library-relations"><div><p class="kicker">Referenced by</p><h2>Inbound corpus links</h2>${backlinkList}</div><div><p class="kicker">Continues toward</p><h2>Outgoing corpus links</h2>${outgoingList}</div></section><nav class="page-turn">${previous ? libraryLink(output, previous, `← ${basename(previous, ".md")}`) : `<a href="${libraryHomeHref}">← Corpus library</a>`}${next ? libraryLink(output, next, `${basename(next, ".md")} →`) : `<a href="${esc(githubBlobUrl(source))}">Canonical source →</a>`}</nav>`;
   return htmlDoc(plainMathTitle(title), body, prefix, false);
 };
 
@@ -1692,7 +1771,7 @@ const css = `:root{--paper:#eee7dc;--ink:#18201f;--muted:#626963;--line:#b8aea0;
 const proofCss = `.taxonomy-badge,.archetype-badge{text-decoration:none}.taxonomy-badge:hover,.archetype-badge:hover{filter:brightness(.82);box-shadow:0 0 0 2px color-mix(in srgb,var(--tax-color) 18%,transparent)}.proof-link{display:flex;justify-content:space-between;align-items:center;gap:24px;max-width:850px;margin:28px 0 4px;padding:18px 20px;border:1px solid var(--teal);border-left:6px solid var(--teal);background:var(--panel);text-decoration:none;font-family:var(--sans)}.proof-link span{display:grid;gap:2px}.proof-link b{color:var(--ink);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}.proof-link small{color:var(--muted);font-size:.92rem}.proof-link i{white-space:nowrap;font-style:normal;font-weight:700}.claim-box{padding:24px;border:1px solid var(--line);border-left:6px solid var(--teal);background:var(--panel);font:1.15rem/1.6 var(--serif)}.proof-steps{max-width:850px;padding-left:1.5rem}.proof-steps li{padding:.45rem 0}.detail-mast a{font-size:.68rem}.reading-index{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px;align-items:start}.reading-entry{display:block;padding:22px;border:1px solid var(--line);border-top:5px solid var(--tax-color,var(--teal));background:var(--panel);color:var(--ink);text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}.reading-entry:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgb(24 32 31 / .10)}.reading-entry h2{font-size:1.65rem}.reading-entry>strong{color:var(--teal);font:800 .75rem/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase}.usage-links{max-height:320px;overflow:auto;padding-right:8px;font:.83rem/1.45 var(--sans)}.usage-links li{padding:.25rem 0}.full-usage-links{max-height:none;columns:2;column-gap:34px}.full-usage-links li{break-inside:avoid;padding:.4rem 0}.contents-row{display:grid;grid-template-columns:45px minmax(0,1fr) auto;gap:15px;padding:14px 0;border-top:1px solid var(--line);align-items:center}.contents-row>.chapter-number{font-family:var(--mono);color:var(--oxide)}.chapter-title,.read-link{text-decoration:none}.chapter-title strong{color:var(--ink)}.read-link{font-family:var(--sans)}@media(max-width:650px){.proof-link{align-items:flex-start;flex-direction:column;gap:10px}.proof-link i{white-space:normal}.full-usage-links{columns:1}.contents-row{grid-template-columns:35px 1fr}.read-link{display:none}}`;
 
 const contentsFixCss = `.contents .taxonomy-badge,.contents .archetype-badge{display:inline-flex}.contents .chapter-title,.contents .read-link{display:inline;padding:0;border:0}`;
-const evidenceCss = `.evidence-link{border-color:var(--gold);border-left-color:var(--gold)}.claim-unit+.claim-unit{margin-top:36px;padding-top:28px;border-top:1px dashed var(--line)}.claim-hero h1{max-width:960px}.claim-anatomy{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}.claim-anatomy article{padding:20px;border:1px solid var(--line);border-top:5px solid var(--teal);background:var(--panel)}.claim-anatomy h3{margin-top:0}.claim-source-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;padding:0;list-style:none}.claim-source-map li{display:grid;gap:9px;padding:18px;border:1px solid var(--line);background:var(--panel)}.claim-source-map strong{font:700 .9rem/1.4 var(--sans)}.claim-source-map a{font:800 .72rem/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase}.compact-proof{margin:18px 0;padding:13px 16px}.source-reader-hero h1{font-size:clamp(2.6rem,6vw,5.2rem)}.source-provenance dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;font:14px/1.5 var(--sans)}.source-provenance dt{font-weight:800}.source-provenance dd{margin:0;overflow-wrap:anywhere}.source-document{padding:50px 0}.source-document h1{font-size:clamp(2.4rem,5vw,4.5rem)}.source-document h2{margin-top:1.5em}.source-document pre{overflow:auto;padding:20px;background:#172321;color:#f6f0e6;font:14px/1.55 var(--mono)}.source-document code{overflow-wrap:anywhere}.source-document img{max-width:100%;height:auto}.source-document blockquote{margin:24px 0;padding:2px 20px;border-left:5px solid var(--gold);background:var(--panel)}`;
+const evidenceCss = `.evidence-link{border-color:var(--gold);border-left-color:var(--gold)}.claim-unit+.claim-unit{margin-top:36px;padding-top:28px;border-top:1px dashed var(--line)}.claim-hero h1{max-width:960px}.claim-anatomy{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}.claim-anatomy article{padding:20px;border:1px solid var(--line);border-top:5px solid var(--teal);background:var(--panel)}.claim-anatomy h3{margin-top:0}.claim-source-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;padding:0;list-style:none}.claim-source-map li{display:grid;gap:9px;padding:18px;border:1px solid var(--line);background:var(--panel)}.claim-source-map strong{font:700 .9rem/1.4 var(--sans)}.claim-source-map a{font:800 .72rem/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase}.compact-proof{margin:18px 0;padding:13px 16px}.source-reader-hero h1{font-size:clamp(2.6rem,6vw,5.2rem)}.source-provenance dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;font:14px/1.5 var(--sans)}.source-provenance dt{font-weight:800}.source-provenance dd{margin:0;overflow-wrap:anywhere}.source-document{padding:50px 0}.source-document h1{font-size:clamp(2.4rem,5vw,4.5rem)}.source-document h2{margin-top:1.5em}.source-document pre{overflow:auto;padding:20px;background:#172321;color:#f6f0e6;font:14px/1.55 var(--mono)}.source-document code{overflow-wrap:anywhere}.source-document img{max-width:100%;height:auto}.source-document blockquote{margin:24px 0;padding:2px 20px;border-left:5px solid var(--gold);background:var(--panel)}.library-breadcrumb{display:flex;flex-wrap:wrap;gap:.45rem;padding:20px 0 0;color:var(--muted);font:700 .72rem/1.5 var(--sans);overflow-wrap:anywhere}.library-breadcrumb i{font-style:normal;color:var(--line)}.library-route{padding:32px 0}.library-route ol{font:14px/1.6 var(--mono)}.library-relations{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}.library-relations>div{min-width:0}.library-relations ul,.library-results{padding:0;list-style:none}.library-relations li,.library-results li{display:grid;gap:.2rem;padding:12px 0;border-top:1px solid var(--line)}.library-relations small,.library-results small{color:var(--muted);font:12px/1.4 var(--mono);overflow-wrap:anywhere}.library-search{width:100%;padding:15px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:18px var(--sans)}.library-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.library-stat{padding:18px;border:1px solid var(--line);background:var(--panel)}.library-stat strong{display:block;font:700 2rem/1 var(--serif)}.library-stat span{font:700 .7rem/1.4 var(--sans);text-transform:uppercase;letter-spacing:.05em}`;
 const mast = `<header class="mast"><a href="index.html">Admissibility frontier · Edition 3</a><nav><a href="reading-key.html">Reading key</a> · <a href="08-result-ledger.html">Findings</a> · <a href="09-research-frontier.html">Frontier</a> · <a href="../concept-map/index.html">Concept atlas</a></nav></header>`;
 const mathHead = (prefix = "") => `<link rel="stylesheet" href="${prefix}vendor/katex/katex.min.css"><script defer src="${prefix}vendor/katex/katex.min.js"></script><script defer src="${prefix}vendor/katex/contrib/auto-render.min.js"></script><script defer src="${prefix}math-render.js"></script>`;
 const htmlDoc = (title, body, prefix = "", includeMast = true) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee7dc"><title>${esc(title)} · Admissibility Frontier Edition 3</title>${mathHead(prefix)}<link rel="stylesheet" href="${prefix}book.css"></head><body><main>${includeMast ? mast : ""}${body}<footer>Edition 3.2 admissibility preview · 24 October 2026 · Citation set ${sourceDigest.slice(0, 12)} · Admission is not endorsement.</footer></main></body></html>`;
@@ -1803,7 +1882,7 @@ if (!siteOnly) {
 }
 
 const contentsHtml = chapters.map((chapter, index) => `<div class="contents-row"><span class="chapter-number">${String(index + 1).padStart(2, "0")}</span><span class="contents-copy"><a class="chapter-title" href="${chapter.slug}.html"><strong>${mathHtml(chapter.title)}</strong></a>${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug])}${archetypeBadgeHtml(chapterArchetype[chapter.slug])}</span><a class="read-link" href="${chapter.slug}.html">Read →</a></div>`).join("");
-const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
+const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><section><p class="kicker">Beyond the volume</p><h2>Follow the research all the way down</h2><p class="lede">The complete corpus is compiled into a searchable library with explicit backlinks, neighbouring documents and visible routes from this Edition into deep programme waves.</p><p><a class="proof-link" href="library/index.html"><span><b>Open the complete corpus library</b><small>${librarySources.length.toLocaleString("en")} canonical Markdown documents · one generated journey</small></span><i>Explore →</i></a></p></section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
 writeFileSync(join(siteRoot, "book.css"), `${css}${proofCss}${contentsFixCss}${evidenceCss}`);
 writeFileSync(join(siteRoot, "index.html"), coverHtml);
 writeFileSync(join(siteRoot, "reading-key.html"), readingKeyHtml());
@@ -1816,15 +1895,44 @@ claimDetails.filter(detail => isIntegratedFormerHotSection(detail.chapter, detai
   const legacySlug = detail.slug.replace("08-admissibility-frontier-", "08-admissibility-frontier-hot-off-the-press-");
   writeFileSync(join(siteDetailsRoot, `${legacySlug}.html`), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=${detail.slug}.html"><link rel="canonical" href="${detail.slug}.html"><title>Integrated section</title></head><body><p>This result has been integrated into the book's subject order. <a href="${detail.slug}.html">Open the current claim page</a>.</p></body></html>`);
 });
-const sourceManifest = allSources.map(source => {
-  const markdown = readFileSync(join(root, source), "utf8").replace(/\r\n?/gu, "\n");
+const sourceManifest = librarySources.map(source => {
+  const markdown = markdownBySource.get(source);
   const output = sourceOutputPath(source);
   mkdirSync(dirname(output), { recursive: true });
   writeFileSync(output, sourceReaderHtml(source));
-  return { source, output: posix(relative(siteRoot, output)), sha256: sha256(markdown) };
+  return {
+    source,
+    output: posix(relative(siteRoot, output)),
+    sha256: sha256(markdown),
+    title: plainMathTitle(titleBySource.get(source)),
+    editionCited: editionSourceSet.has(source),
+    inboundCount: incomingBySource.get(source).length,
+    outboundCount: outgoingBySource.get(source).length,
+  };
 });
+for (const source of allSources) {
+  const legacyOutput = legacySourceOutputPath(source);
+  const canonicalOutput = sourceOutputPath(source);
+  const target = encodePath(relative(dirname(legacyOutput), canonicalOutput));
+  mkdirSync(dirname(legacyOutput), { recursive: true });
+  writeFileSync(legacyOutput, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=${esc(target)}"><link rel="canonical" href="${esc(target)}"><title>Corpus library redirect</title></head><body><p>This source reader moved into the full corpus library. <a href="${esc(target)}">Open the canonical compiled page</a>.</p></body></html>`);
+}
+const searchIndex = sourceManifest.map(item => ({ source: item.source, title: item.title, href: item.output.replace(/^library\//u, ""), editionCited: item.editionCited, inboundCount: item.inboundCount, outboundCount: item.outboundCount }));
+const topLevelCounts = new Map();
+for (const source of librarySources) {
+  const section = source.split("/")[1] || "root";
+  topLevelCounts.set(section, (topLevelCounts.get(section) || 0) + 1);
+}
+const libraryIndexPath = join(siteRoot, "library", "index.html");
+const libraryStats = [...topLevelCounts].sort(([a], [b]) => naturalCompare(a, b)).map(([section, count]) => `<div class="library-stat"><strong>${count.toLocaleString("en")}</strong><span>${esc(section)}</span></div>`).join("");
+const initialLibraryResults = searchIndex.slice(0, 80).map(item => `<li><a href="${encodePath(item.href)}">${esc(item.title)}</a><small>${esc(item.source)} · ${item.editionCited ? "Edition 3 citation" : "wider corpus"} · ${item.inboundCount} in / ${item.outboundCount} out</small></li>`).join("");
+const libraryIndexHtml = htmlDoc("Corpus library", `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="../index.html">Book</a></nav></header><header class="hero"><p class="kicker">Generated from canonical Markdown · ${librarySources.length.toLocaleString("en")} documents</p><h1>Corpus library</h1><p class="lede">The complete research corpus as a navigable reading layer. Search titles and paths, follow explicit links and backlinks, or move through neighbouring documents. Markdown remains the sole source of truth.</p><aside class="boundary"><strong>Authority boundary.</strong> Every page below is rebuilt from <code>corpus/**/*.md</code>. Edit the Markdown, never the compiled HTML.</aside></header><section><h2>Shape of the corpus</h2><div class="library-stats">${libraryStats}</div></section><section><p class="kicker">Path and title search</p><h2>Find a document</h2><input id="library-search" class="library-search" type="search" placeholder="Try monster, triality, admissibility, wave-7…" autocomplete="off"><p id="library-count">Showing the first ${Math.min(80, searchIndex.length)} of ${searchIndex.length.toLocaleString("en")} documents.</p><ul id="library-results" class="library-results">${initialLibraryResults}</ul></section><nav class="page-turn"><a href="../index.html">← Edition contents</a><a href="manifest.json">Library manifest →</a></nav><script>const indexUrl="search-index.json";const input=document.querySelector("#library-search");const list=document.querySelector("#library-results");const count=document.querySelector("#library-count");const escapeHtml=value=>String(value).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");let documents=[];const render=()=>{const query=input.value.trim().toLowerCase();const words=query.split(/\\s+/).filter(Boolean);const matches=documents.filter(item=>words.every(word=>(item.title+" "+item.source).toLowerCase().includes(word))).slice(0,200);list.innerHTML=matches.map(item=>"<li><a href=\""+encodeURI(item.href)+"\">"+escapeHtml(item.title)+"</a><small>"+escapeHtml(item.source)+" · "+(item.editionCited?"Edition 3 citation":"wider corpus")+" · "+item.inboundCount+" in / "+item.outboundCount+" out</small></li>").join("");count.textContent="Showing "+matches.length+(query?" matching":" of "+documents.length)+" documents"+(matches.length===200?" (first 200)":"")+".";};fetch(indexUrl).then(response=>response.json()).then(data=>{documents=data.documents;input.addEventListener("input",render);});</script>`, "../", false);
+mkdirSync(join(siteRoot, "library"), { recursive: true });
+writeFileSync(libraryIndexPath, libraryIndexHtml);
+writeFileSync(join(siteRoot, "library", "search-index.json"), `${JSON.stringify({ schema: "spin23-edition3-corpus-search/v1", documents: searchIndex })}\n`);
+writeFileSync(join(siteRoot, "library", "manifest.json"), `${JSON.stringify({ schema: "spin23-edition3-corpus-library/v1", buildRevision, citationDigest: sourceDigest, documentCount: sourceManifest.length, editionCitationCount: allSources.length, documents: sourceManifest }, null, 2)}\n`);
 mkdirSync(join(siteRoot, "sources"), { recursive: true });
-writeFileSync(join(siteRoot, "sources", "manifest.json"), `${JSON.stringify({ schema: "spin23-edition3-source-readers/v1", buildRevision, citationDigest: sourceDigest, sources: sourceManifest }, null, 2)}\n`);
+writeFileSync(join(siteRoot, "sources", "manifest.json"), `${JSON.stringify({ schema: "spin23-edition3-source-readers/v2", buildRevision, citationDigest: sourceDigest, libraryManifest: "../library/manifest.json", sources: sourceManifest.filter(item => item.editionCited).map(item => ({ ...item, legacyOutput: posix(relative(siteRoot, legacySourceOutputPath(item.source))) })) }, null, 2)}\n`);
 mkdirSync(siteIndexRoot, { recursive: true });
 writeFileSync(join(siteIndexRoot, "index.html"), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=edition-3/index.html"><title>The Admissibility Frontier · Edition 3</title></head><body><p><a href="edition-3/index.html">Open the Edition 3 book preview</a></p></body></html>`);
 
@@ -1839,4 +1947,4 @@ const publicationAuthority = {
 
 const metadata = { schema: "spin23-edition3-book/v1", edition: "3.2 admissibility preview", generatedAt: "2026-10-25T00:00:00.000Z", publicationAuthority, numberedCorpusDocuments: numberedCount, citationCount: allSources.length, citationDigest: sourceDigest, taxonomy, archetypes, chapters: chapters.map((chapter, index) => ({ number: index + 1, slug: chapter.slug, title: typeset(chapter.title), taxonomy: chapterTaxonomy[chapter.slug], archetype: chapterArchetype[chapter.slug], sourceCount: chapter.sources.length, sources: chapter.sources })), proofDetails: proofDetails.map(detail => ({ slug: detail.slug, title: typeset(detail.title), taxonomy: detail.taxonomy, archetype: detail.archetype, certificates: detail.certificates, sources: detail.sources })), claimDetails: claimDetails.map(detail => ({ slug: detail.slug, chapter: detail.chapter.slug, heading: typeset(detail.heading), claim: typeset(detail.claim), claimIndex: detail.claimIndex, taxonomy: detail.taxonomy, archetype: detail.archetype, sources: detail.sources })), findings: findings.map(finding => ({ ...finding, title: typeset(finding.title), statement: typeset(finding.statement), boundary: typeset(finding.boundary), taxonomy: statusTaxonomy(finding.status), archetype: statusArchetype(finding.status) })), frontiers: frontiers.map(frontier => ({ ...frontier, title: typeset(frontier.title), question: typeset(frontier.question), advance: typeset(frontier.advance), stop: typeset(frontier.stop), taxonomy: frontierTaxonomy(frontier.id), archetype: frontierArchetype(frontier.id) })) };
 if (!siteOnly) writeFileSync(join(bookRoot, "book.json"), `${JSON.stringify(metadata, null, 2)}\n`);
-console.log(JSON.stringify({ bookRoot: relative(root, bookRoot), siteRoot: relative(root, siteRoot), chapters: chapters.length, claims: claimDetails.length, findings: findings.length, frontiers: frontiers.length, citations: allSources.length, digest: sourceDigest }, null, 2));
+console.log(JSON.stringify({ bookRoot: relative(root, bookRoot), siteRoot: relative(root, siteRoot), chapters: chapters.length, claims: claimDetails.length, findings: findings.length, frontiers: frontiers.length, citations: allSources.length, libraryDocuments: librarySources.length, digest: sourceDigest }, null, 2));

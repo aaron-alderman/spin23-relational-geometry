@@ -13,7 +13,9 @@ node --test tests/publication/edition3_book_preview.test.mjs
 node --test tests/publication/edition3_compiled_site.test.mjs
 ```
 
-The `--site-only` boundary is mandatory in deployment. It prevents publication from rewriting canonical Markdown or metadata. The compiler fails when a cited source is absent, emits a digest manifest for every cited source, and produces source-reader pages carrying canonical paths, source SHA-256 values and the build revision.
+The `--site-only` boundary is mandatory in deployment. It prevents publication from rewriting canonical Markdown or metadata. The compiler fails when a cited source is absent and compiles every `corpus/**/*.md` document into the disposable `library/` reading layer. That layer includes stable deep routes, folder neighbours, explicit-link backlinks, shortest known routes from Edition 3 citations, a static search index, canonical paths, source SHA-256 values and the build revision. The former `sources/` URLs remain generated redirects for compatibility.
+
+`library/manifest.json` inventories the complete compiled corpus; `library/search-index.json` drives client-side title and path search. Neither file is authoritative. Adding, moving, linking or editing canonical Markdown changes the next build automatically, so no generated HTML needs to be maintained by hand.
 
 The GitHub Pages workflow assembles `.build/pages`, validates the complete local link graph and uploads that disposable directory. Nothing below `.build/` or `docs/edition-3/` should be committed.
 

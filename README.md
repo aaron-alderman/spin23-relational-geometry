@@ -40,6 +40,7 @@ This is **not a completed unified theory**. Established mathematics, reproducibl
 | Writer, translator or reviewer | [Explanatory standard](corpus/EXPLANATORY_STANDARD.md) |
 | Start with the present story | [The admissibility frontier: current synthesis](corpus/syntheses/the_admissibility_frontier_current_synthesis.md) |
 | General reader | [Edition 3.2 admissibility book preview](book/edition-3/README.md) |
+| Deep corpus journey | [Browse every canonical corpus document with search, backlinks and route context](https://aaron-alderman.github.io/spin23-relational-geometry/edition-3/library/) |
 | Researcher | [Canonical corpus guide](corpus/README.md) |
 | Map the whole interior | [Generated corpus front door](corpus/FRONT_DOOR.md) |
 | Trace a claim to evidence | [Generated corpus evidence spine](corpus/EVIDENCE_SPINE.md) |
