@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "0.3.0",
+  "shortlist": {
+    "ranking": [
+      "ordinary",
+      "constantTilt",
+      "finiteThickness",
+      "constantDisplacement",
+      "smoothBend"
+    ],
+    "selectionBasis": [
+      "parsimony",
+      "compatibility with current evidence",
+      "reader feasibility"
+    ],
+    "excluded": {
+      "crease": "current whole-cluster validation generalized worst",
+      "saddle": "adds unsupported curvature structure",
+      "defect": "localization freedoms exceed current evidence",
+      "twist": "requires a stable field and loop reader"
+    }
+  },
+  "algebra": {
+    "form": "geometry -> coupling channels -> declared reader regime -> nuisance quotient -> observable class",
+    "gridPoints": 25,
+    "channels": [
+      "mixX",
+      "mixY",
+      "coherence",
+      "width",
+      "anchor"
+    ]
+  },
+  "regimes": [
+    {
+      "id": "current-relative",
+      "meaning": "relative readers with unknown zero levels and ordinary perspective expansion",
+      "channels": [
+        "mixX",
+        "mixY",
+        "coherence",
+        "width"
+      ],
+      "nuisances": [
+        "mixZeroX",
+        "mixZeroY",
+        "widthZero",
+        "coherenceZero",
+        "perspectiveExpansion"
+      ],
+      "observableClasses": [
+        {
+          "classId": "current-relative-C1",
+          "members": [
+            "ordinary",
+            "constantTilt",
+            "finiteThickness",
+            "constantDisplacement"
+          ]
+        },
+        {
+          "classId": "current-relative-C2",
+          "members": [
+            "smoothBend"
+          ]
+        }
+      ],
+      "identifiability": [
+        {
+          "family": "ordinary",
+          "parameters": 0,
+          "localRank": 0,
+          "identifiable": true
+        },
+        {
+          "family": "constantTilt",
+          "parameters": 2,
+          "localRank": 0,
+          "identifiable": false
+        },
+        {
+          "family": "finiteThickness",
+          "parameters": 1,
+          "localRank": 0,
+          "identifiable": false
+        },
+        {
+          "family": "constantDisplacement",
+          "parameters": 1,
+          "localRank": 0,
+          "identifiable": false
+        },
+        {
+          "family": "smoothBend",
+          "parameters": 1,
+          "localRank": 1,
+          "identifiable": true
+        }
+      ],
+      "tournament": {
+        "observableClassAccuracy": 0.978030303030303,
+        "unpenalizedObservableClassAccuracy": 0.771969696969697,
+        "trials": 1320,
+        "abstentions": 1207,
+        "noiseSigma": 0.004,
+        "likelihoodRatioPenalty": 6.63,
+        "confusion": {
+          "current-relative-C1->current-relative-C2": 11,
+          "current-relative-C2->current-relative-C1": 18
+        },
+        "unpenalizedConfusion": {
+          "current-relative-C1->current-relative-C2": 297,
+          "current-relative-C2->current-relative-C1": 4
+        }
+      }
+    },
+    {
+      "id": "calibrated-relative",
+      "meaning": "calibrated directional and width readers, but no absolute extra-coordinate anchor",
+      "channels": [
+        "mixX",
+        "mixY",
+        "coherence",
+        "width"
+      ],
+      "nuisances": [],
+      "observableClasses": [
+        {
+          "classId": "calibrated-relative-C1",
+          "members": [
+            "ordinary",
+            "constantDisplacement"
+          ]
+        },
+        {
+          "classId": "calibrated-relative-C2",
+          "members": [
+            "constantTilt"
+          ]
+        },
+        {
+          "classId": "calibrated-relative-C3",
+          "members": [
+            "finiteThickness"
+          ]
+        },
+        {
+          "classId": "calibrated-relative-C4",
+          "members": [
+            "smoothBend"
+          ]
+        }
+      ],
+      "identifiability": [
+        {
+          "family": "ordinary",
+          "parameters": 0,
+          "localRank": 0,
+          "identifiable": true
+        },
+        {
+          "family": "constantTilt",
+          "parameters": 2,
+          "localRank": 2,
+          "identifiable": true
+        },
+        {
+          "family": "finiteThickness",
+          "parameters": 1,
+          "localRank": 1,
+          "identifiable": true
+        },
+        {
+          "family": "constantDisplacement",
+          "parameters": 1,
+          "localRank": 0,
+          "identifiable": false
+        },
+        {
+          "family": "smoothBend",
+          "parameters": 1,
+          "localRank": 1,
+          "identifiable": true
+        }
+      ],
+      "tournament": {
+        "observableClassAccuracy": 1,
+        "unpenalizedObservableClassAccuracy": 1,
+        "trials": 1320,
+        "abstentions": 140,
+        "noiseSigma": 0.004,
+        "likelihoodRatioPenalty": 6.63,
+        "confusion": {},
+        "unpenalizedConfusion": {}
+      }
+    },
+    {
+      "id": "anchored-full",
+      "meaning": "calibrated relative readers plus an absolute displacement-sensitive anchor",
+      "channels": [
+        "mixX",
+        "mixY",
+        "coherence",
+        "width",
+        "anchor"
+      ],
+      "nuisances": [],
+      "observableClasses": [
+        {
+          "classId": "anchored-full-C1",
+          "members": [
+            "ordinary"
+          ]
+        },
+        {
+          "classId": "anchored-full-C2",
+          "members": [
+            "constantTilt"
+          ]
+        },
+        {
+          "classId": "anchored-full-C3",
+          "members": [
+            "finiteThickness"
+          ]
+        },
+        {
+          "classId": "anchored-full-C4",
+          "members": [
+            "constantDisplacement"
+          ]
+        },
+        {
+          "classId": "anchored-full-C5",
+          "members": [
+            "smoothBend"
+          ]
+        }
+      ],
+      "identifiability": [
+        {
+          "family": "ordinary",
+          "parameters": 0,
+          "localRank": 0,
+          "identifiable": true
+        },
+        {
+          "family": "constantTilt",
+          "parameters": 2,
+          "localRank": 2,
+          "identifiable": true
+        },
+        {
+          "family": "finiteThickness",
+          "parameters": 1,
+          "localRank": 1,
+          "identifiable": true
+        },
+        {
+          "family": "constantDisplacement",
+          "parameters": 1,
+          "localRank": 1,
+          "identifiable": true
+        },
+        {
+          "family": "smoothBend",
+          "parameters": 1,
+          "localRank": 1,
+          "identifiable": true
+        }
+      ],
+      "tournament": {
+        "observableClassAccuracy": 1,
+        "unpenalizedObservableClassAccuracy": 1,
+        "trials": 1320,
+        "abstentions": 0,
+        "noiseSigma": 0.004,
+        "likelihoodRatioPenalty": 6.63,
+        "confusion": {},
+        "unpenalizedConfusion": {}
+      }
+    }
+  ],
+  "decisions": {
+    "currentRelative": "ordinary, constant tilt, finite thickness and constant displacement share one observable class; smooth bend retains a nonlinear directional remainder but remains empirically unsupported",
+    "calibratedRelative": "constant displacement remains aliased with ordinary; tilt, thickness and bend become separately testable",
+    "anchoredFull": "all five families become distinct and all non-null parameter families are locally identifiable",
+    "nextMeasurement": "calibrate directional and width zero levels first; add an absolute displacement-sensitive anchor only if constant displacement remains scientifically important",
+    "safety": "no real-data promotion; this tranche tests observability and abstention, not physical truth"
+  }
+}
