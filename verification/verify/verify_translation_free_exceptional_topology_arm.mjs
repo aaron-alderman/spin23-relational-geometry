@@ -14,6 +14,7 @@ const e8Davidson = load("translation-free-e8-restarted-davidson-v1.json");
 const e8Operator = load("translation-free-e8-operator-completeness-gate-v1.json");
 const e8Shell10 = load("translation-free-e8-cartan-shell10-spectroscopy-v1.json");
 const e8CompactGap = load("translation-free-e8-cartan-compact-gap-v1.json");
+const e8RatioSpine = load("translation-free-e8-cartan-ratio-spine-v1.json");
 const quasicrystal = load("translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 
 const E8 = [
@@ -134,6 +135,8 @@ assert.equal(e8Shell10.cutoffDiagnostics.gapPromoted,false);
 assert.equal(arm.e8CartanCompactGap.evidence,"translation-free-e8-cartan-compact-gap-v1.json");
 assert.equal(e8CompactGap.convergence.successivePassingIncrements,2);
 assert.match(e8CompactGap.boundary,/not a rigorous lower bound/u);
+assert.deepEqual(e8RatioSpine.promotedPoints.map(p=>p.ratio),[0.25,0.5,1]);
+assert.match(e8RatioSpine.boundary,/not a proof for every r/u);
 assert.equal(arm.quasicrystalBackplaneBridge.evidence, "translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 assert.deepEqual(quasicrystal.factorialDesign.backplanes, ["periodic","quasicrystal","amorphous"]);
 assert.deepEqual(quasicrystal.factorialDesign.relationPrograms, ["identity","E8"]);

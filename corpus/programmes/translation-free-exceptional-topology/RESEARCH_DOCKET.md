@@ -40,9 +40,11 @@ Shells 10--12 and leakage/transition estimators remain open. The (K)-kernel
 and inverse-kernel paths now bifurcate: all (K)-kernel cosine steps
 are present from shell one, while the inverse step set is not complete until
 shell 15 (3,721,681 states). Lower inverse rungs remain reconnaissance. The
-eligible (K)-kernel has reached shell 10 (794,161 states): its 0.295% gap
-increment and low boundary weight enter the plateau tube, but shell 12 must
-confirm it. Parity requires an odd sine/phase drive to see the first gap. The
+eligible (K)-kernel has reached shell 12 (1,604,401 states): two successive
+sub-one-percent increments promote the provisional unit-coupling compact-cell
+gap (0.1019267219), with boundary probability below (3\times10^{-5}).
+Parity requires an odd sine/phase drive to see the first gap. Coupling-ratio,
+perturbation and intercell-width promotion remain open. The
 E8-specific detector predicts a held-out 240-current root shell. B4 is closed on the
 declared E8-cubed/Leech/Moonshine family: the bulk detector collides and
 \(\dim V_1=(744,24,0)\) separates the three candidates.

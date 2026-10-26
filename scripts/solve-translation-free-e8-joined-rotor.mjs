@@ -67,10 +67,11 @@ const stepsFor = branch => branch==="cartan-kernel"
   ? Array.from({length:8},(_,i)=>Int16Array.from(Array.from({length:8},(_,j)=>Number(i===j))))
   : Array.from({length:8},(_,column)=>Int16Array.from(Kinv.map(row=>row[column])));
 
-const compile = (cutoff,branch) => {
+const compile = (cutoff,branch,{kineticStrength=1,potentialStrength=1}={}) => {
   const states=enumerateShell(cutoff);
   const indices=new Map(states.map((state,index)=>[key(state),index]));
-  const diagonal=Float64Array.from(states,state=>quadratic(state)/2+8);
+  const kineticEnergies=Float64Array.from(states,state=>quadratic(state)/2);
+  const diagonal=Float64Array.from(kineticEnergies,energy=>kineticStrength*energy+8*potentialStrength);
   const steps=stepsFor(branch);
   const neighbors=new Int32Array(states.length*16).fill(-1);
   for(let index=0;index<states.length;index+=1){
@@ -88,13 +89,13 @@ const compile = (cutoff,branch) => {
       const offset=i*16;
       for(let slot=0;slot<16;slot+=1){
         const neighbor=neighbors[offset+slot];
-        if(neighbor>=0) value-=0.5*input[neighbor];
+        if(neighbor>=0) value-=0.5*potentialStrength*input[neighbor];
       }
       output[i]=value;
     }
     return output;
   };
-  return {states,diagonal,neighbors,matvec};
+  return {states,kineticEnergies,diagonal,neighbors,matvec};
 };
 
 const dot=(a,b)=>{let sum=0;for(let i=0;i<a.length;i+=1)sum+=a[i]*b[i];return sum;};
@@ -239,7 +240,7 @@ const davidson = (operator,{roots=4,maxSubspace=16,cycles=40,tolerance=1e-10,see
 };
 
 const spectralDiagnostics = (operator,ritz,cutoff) => {
-  const boundaryMask=Uint8Array.from(operator.diagonal,value=>Number(Math.abs((value-8)-cutoff)<1e-12));
+  const boundaryMask=Uint8Array.from(operator.kineticEnergies,value=>Number(Math.abs(value-cutoff)<1e-12));
   const inversion=new Int32Array(operator.states.length);
   const indices=new Map(operator.states.map((state,index)=>[key(state),index]));
   for(let index=0;index<operator.states.length;index+=1){
@@ -290,10 +291,12 @@ const iterations=Number(args.iterations??64);
 const method=args.method??"lanczos";
 const maxSubspace=Number(args.maxSubspace??16);
 const cycles=Number(args.cycles??40);
+const kineticStrength=Number(args.kinetic??1);
+const potentialStrength=Number(args.potential??1);
 const records=[];
 for(const cutoff of cutoffs)for(const branch of branches){
   const started=performance.now();
-  const operator=compile(cutoff,branch);
+  const operator=compile(cutoff,branch,{kineticStrength,potentialStrength});
   const result=method==="davidson"
     ? davidson(operator,{roots:4,maxSubspace,cycles,tolerance:1e-10,seed:823240+cutoff+(branch==="inverse-kernel"?100:0)})
     : lanczos(operator,iterations,823239+cutoff+(branch==="inverse-kernel"?100:0));
@@ -314,6 +317,6 @@ for(const cutoff of cutoffs)for(const branch of branches){
 }
 console.log(JSON.stringify({
   schemaVersion:"translation-free-e8-joined-rotor-solver-output-v1",
-  settings:{cutoffs,branches,method,iterations,maxSubspace,cycles,potentialStrength:1},
+  settings:{cutoffs,branches,method,iterations,maxSubspace,cycles,kineticStrength,potentialStrength,ratio:potentialStrength/kineticStrength},
   records,
 },null,2));

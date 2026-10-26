@@ -32,6 +32,8 @@
 
 **Promoted local result:** [Cartan-kernel compact-cell gap](E8_CARTAN_COMPACT_GAP.md)
 
+**Parameter stability:** [Cartan-kernel coupling-ratio spine](E8_CARTAN_RATIO_SPINE.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -202,6 +204,9 @@ so detector quadrature is part of the promotion gate.
 Shell 12 now supplies that confirmation: the provisional unit-coupling compact-
 cell gap is (0.1019267219), while all bulk, anomaly and material promotions
 remain open.
+Three ratios (u/U=0.25,0.5,1) now pass the same convergence and detector
+gates. They form a sampled stability spine; intermediate ratios and explicit
+channel/metric perturbations remain necessary for an open tube.
 
 The material route is now typed rather than associative. A quasicrystal may
 supply a phason-bearing, translation-free backplane for the programmed E8
@@ -265,6 +270,7 @@ translation-free topology result remains valuable after that null.
 - [E8 operator-completeness gate](E8_OPERATOR_COMPLETENESS_GATE.md)
 - [E8 Cartan-kernel shell-10 spectroscopy](E8_CARTAN_SHELL10_SPECTROSCOPY.md)
 - [E8 Cartan-kernel compact-cell gap](E8_CARTAN_COMPACT_GAP.md)
+- [E8 Cartan-kernel coupling-ratio spine](E8_CARTAN_RATIO_SPINE.md)
 
 ## Primary external anchors
 
