@@ -206,7 +206,7 @@ p(\theta)=\sin\theta,
 
 Near-perpendicular orientations occupy more solid angle: the probability of lying within \(\delta\) of 90 degrees is \(\sin\delta\), giving 8.72% within 5 degrees and 17.36% within 10 degrees. Exact 90 degrees still has probability zero under a continuous prior. If the orientations instead live on an unoriented circle, the acute angle is uniform and the corresponding probabilities are 5.56% and 11.11%. Choosing between these priors requires the missing configuration geometry; M44's observed shape does not choose it.
 
-Visibility adds a stronger constraint. In the minimal \(q=0\) projection, direct electromagnetic overlap is \(|\cos\theta|\), which vanishes at 90 degrees. A bright visible M44 therefore disfavors exact orthogonality under that naive pure-projection model. At 90 degrees the full declared kernel is \(\kappa=q\), so nonzero off-axis coupling or reciprocal boundary mixing can restore visibility. The required \(q\), boundary transport and carrier dependence must be predicted together; otherwise brightness simply fits another free parameter.
+Visibility does not add a whole-object constraint in the rank-two-plus-one geometry. At 90 degrees the common two-plane remains fully transmitted while only the exceptional component vanishes. A bright visible M44 therefore does **not** disfavor orthogonality. The minimal \(q=0\) kernel becomes constraining only for a carrier independently assigned to the exceptional direction; at that point a resolved nonzero response would require off-axis coupling, reciprocal boundary mixing or rejection of the model. Total brightness cannot perform that assignment.
 
 ## Spiral-galaxy inclination as a slicing template
 
@@ -251,6 +251,20 @@ P=E^TG=\operatorname{diag}(1,1,\cos\theta).
 \]
 
 Thus an 87-degree relation leaves two directions unchanged and compresses only one. The hypotheses below must be typed relative to that \(2+1\) decomposition.
+
+### How many freedoms remain?
+
+Fix our three-plane \(E\) in four dimensions and let \(n_E\) be its unit normal. A second three-plane can be written using
+
+\[
+n_G=\cos\theta\,n_E+\sin\theta\,u,
+\qquad u\in E,
+\qquad \lVert u\rVert=1.
+\]
+
+The common plane is \(E\cap u^\perp\). The relative placement therefore has three parameters: the principal angle \(\theta\), plus two angles selecting the exceptional direction \(u\) inside our three-space. If all ambient rotations are treated as gauge, only \(\theta\) survives as an invariant. The Milky Way is not unmarked, however: its disc normal, line of sight, spiral structure and M44 tail supply physical landmarks, so the orientation of \(u\) cannot be quotiented away when predicting data.
+
+This also sharpens the status of 87.04 degrees. It is an ordinary three-dimensional angle between the reconstructed M44 tail and the Galactic disc normal. It equals the hyperplane principal angle only under an additional **normal-axis lift** declaring those two ordinary vectors to represent the normals \(n_G\) and \(n_E\) in the four-dimensional model. If they instead represent axes inside the sectors, carrier directions or merely morphological landmarks, their 87-degree angle does not determine \(\theta\). The numerical tournament below retains 87.04 degrees as a declared rehearsal, not a measurement of the four-dimensional principal angle.
 
 ### Scalar frequency projection on the unique direction
 
@@ -300,7 +314,7 @@ The earlier comparison between 19.36 and the observed sky-plane axis ratio 3.27 
 
 The earlier held-out shape tournament is the present test of a spatially varying selector: sharp step, smooth step, relaxation and localized mixing layer all fail to distinguish themselves from an ordinary linear tail term. The data currently prefer spatial structure over a constant offset, but not a boundary topology.
 
-The corrected tournament therefore does not confirm or reject the rank-two-plus-one \(T_1/T_2\) geometry. It rejects applying the 0.05166 factor to the whole object, withdraws the direct sky-axis-ratio comparison, and retains the scalar and channel-swap tests only for the unique rotated direction. The decisive experiment must locate that exceptional singular direction and attach a carrier-tagged, phase-sensitive or joint EM/gravitational observable to it.
+The corrected tournament therefore does not confirm or reject the rank-two-plus-one \(T_1/T_2\) geometry. It rejects applying the 0.05166 factor to the whole object, withdraws the direct sky-axis-ratio comparison, and retains the scalar and channel-swap tests only for the unique rotated direction. It also exposes the actual inverse problem: infer \((\theta,u)\), not merely \(\theta\). The decisive experiment must locate the exceptional direction \(u\) and attach a carrier-tagged, phase-sensitive or joint EM/gravitational observable to it.
 
 ## What the present evidence says
 

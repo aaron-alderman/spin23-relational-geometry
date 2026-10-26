@@ -842,8 +842,19 @@ console.log(JSON.stringify({
     convention: "external-galaxy inclination i=0 is face-on and i=90 is edge-on; the tail-as-T1 values are a geometric conditional, not an identification"
   },
   corpusDerivedHypothesisTournament: {
-    angleStatus: "conditional tail-as-M44-T1 and Galactic-normal-as-local-T1 hypothesis",
+    angleStatus: "numerical rehearsal: the ordinary tail-to-Galactic-normal angle is used as the hyperplane principal angle only in an explicitly declared normal-axis lift into four dimensions",
     relativeAngleDeg: conditionalTailAsT1AngleFromDiskNormalDeg,
+    relativeDegreesOfFreedomAudit: {
+      fixedObserverThreePlaneInFourDimensions: true,
+      relativeOrientationParameters: 3,
+      principalAngleInvariantsUnderUnmarkedFrameRotations: 1,
+      exceptionalDirectionOrientationParametersInsideObserverThreePlane: 2,
+      parameterization: "n_G = cos(theta)*n_E + sin(theta)*u, with u a unit vector in E; E intersect G = E intersect u-perp",
+      projectionInAdaptedBasis: "diag(1,1,cos(theta))",
+      ordinaryVectorAngleFixesPrincipalAngle: false,
+      normalAxisBranch: "the measured 87.04-degree tail-to-disc-normal angle may be carried into theta only after declaring those ordinary vectors to be lifts of the two hyperplane normals",
+      result: "theta fixes the compression strength but not which Milky-Way-frame direction is exceptional; physical landmarks prevent quotienting away the two-angle choice of u"
+    },
     uniqueDirectionScalarFrequencyProjection: {
       directT1Overlap,
       crossT2Overlap,
@@ -875,6 +886,7 @@ console.log(JSON.stringify({
       volumeCompressionAbsDeterminant: directT1Overlap,
       conditionNumber: 1 / directT1Overlap,
       observedCatalogueSkyPlaneAxisRatio: axis.axisRatio,
+      covarianceIdentifiability: "for every theta below 90 degrees and every observed positive-definite covariance, C_intrinsic = inverse(P)*C_observed*inverse(P)^T reproduces the observation; morphology alone cannot recover theta or u",
       result: "two directions transmit unchanged and one is compressed; the two-dimensional sky axis ratio cannot be compared directly with the three-dimensional condition number without the intrinsic covariance and viewing map",
       status: "non-identifying with present data; the earlier direct axis-ratio rejection is withdrawn"
     }

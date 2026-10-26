@@ -132,7 +132,8 @@ const orientation = crossChannel.orientationPriorControl;
 assert.equal(orientation.morphologyIdentifiesT1Orientation, false);
 assert.ok(Math.abs(orientation.isotropicUnorientedAxes3d.probabilityWithin10DegOf90 - Math.sin(Math.PI / 18)) < 1e-15);
 assert.equal(orientation.isotropicUnorientedAxes3d.probabilityAtExactly90, 0);
-assert.match(orientation.visibilityConstraint, /vanishes at 90 degrees/u);
+assert.match(orientation.visibilityConstraint, /common plane remains visible/u);
+assert.match(orientation.visibilityConstraint, /does not disfavor orthogonality/u);
 const slice = crossChannel.spiralInclinationSlicingTemplate;
 const geometry = slice.m44MeasuredGeometry;
 assert.ok(Math.abs(geometry.lineOfSightDiskInclinationDeg - (90 - Math.abs(geometry.centreGalacticLatitudeDeg))) < 1e-12);
@@ -142,9 +143,15 @@ assert.ok(slice.conditionalTailAsT1.angleFromDiskNormalDeg > 85);
 assert.match(slice.conditionalTailAsT1.status, /conditional only/u);
 assert.match(slice.interpretation, /cannot infer T1/u);
 const hypotheses = crossChannel.corpusDerivedHypothesisTournament;
+const freedomAudit = hypotheses.relativeDegreesOfFreedomAudit;
 const uniqueScalar = hypotheses.uniqueDirectionScalarFrequencyProjection;
 const uniqueRotation = hypotheses.uniquePlaneTwoChannelRotation;
 const frameProjection = hypotheses.rankTwoPlusOneSpatialFrameProjection;
+assert.equal(freedomAudit.relativeOrientationParameters, 3);
+assert.equal(freedomAudit.principalAngleInvariantsUnderUnmarkedFrameRotations, 1);
+assert.equal(freedomAudit.exceptionalDirectionOrientationParametersInsideObserverThreePlane, 2);
+assert.equal(freedomAudit.ordinaryVectorAngleFixesPrincipalAngle, false);
+assert.match(freedomAudit.result, /two-angle choice of u/u);
 assert.ok(Math.abs(uniqueScalar.directT1Overlap - Math.cos(hypotheses.relativeAngleDeg * Math.PI / 180)) < 1e-15);
 assert.ok(Math.abs(uniqueRotation.totalNormFraction - 1) < 1e-12);
 assert.ok(uniqueScalar.qRequiredForUnitResponse > 0.94);
@@ -155,6 +162,7 @@ assert.equal(frameProjection.rankAtExactly90Deg, 2);
 assert.ok(Math.abs(frameProjection.isotropicMeanRetainedPower - (2 + uniqueScalar.directT1Overlap ** 2) / 3) < 1e-15);
 assert.ok(frameProjection.isotropicMeanRetainedPower > 2 / 3);
 assert.match(frameProjection.status, /axis-ratio rejection is withdrawn/u);
+assert.match(frameProjection.covarianceIdentifiability, /morphology alone cannot recover theta or u/u);
 assert.match(uniqueRotation.status, /open but unconfirmed/u);
 
 if (process.argv.includes("--live")) {
@@ -194,6 +202,8 @@ console.log(JSON.stringify({
   m44TailTiltFromGalacticPlaneDeg: geometry.tailTiltFromGalacticPlaneDeg,
   uniqueDirectionQRequiredForUnitResponse: uniqueScalar.qRequiredForUnitResponse,
   rankTwoPlusOneIsotropicMeanRetainedPower: frameProjection.isotropicMeanRetainedPower,
+  relativeOrientationParameters: freedomAudit.relativeOrientationParameters,
+  exceptionalDirectionOrientationParameters: freedomAudit.exceptionalDirectionOrientationParametersInsideObserverThreePlane,
   directSkyAxisRatioRejection: "withdrawn",
   uniquePlaneChannelSwap: "open but unconfirmed",
   liveCatalogueVerified: process.argv.includes("--live"),
