@@ -18,6 +18,8 @@
 
 **Continuum promotion:** [fixed-physics clock-to-rotor convergence](E8_CLOCK_TO_ROTOR_CONVERGENCE.md)
 
+**Constitutive join:** [E8 metric calibration gate](E8_CONSTITUTIVE_METRIC_GATE.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -165,7 +167,11 @@ space. Clock-to-rotor convergence, continuum E8 anomaly recovery, a
 material-native carrier and random connectivity remain open. The first of
 those gaps is now narrowed: one compact clock mode converges to the fixed-
 coupling rotor with (1.11\times10^{-4}) relative gap error by (q=129).
-The joined eight-channel (K_{E_8}^{-1}) metric remains open.
+The next join is now typed more carefully. The topological (K_{E_8}) form
+does not select the positive constitutive energy matrix. Using (K^{-1}) as
+a charging kernel and using it as a capacitance/Gram matrix predict different
+eight-mode Coxeter fingerprints. Weak eight-port tomography must select and
+calibrate the physical branch before a nonlinear joined gap is meaningful.
 
 The material route is now typed rather than associative. A quasicrystal may
 supply a phason-bearing, translation-free backplane for the programmed E8
@@ -183,8 +189,9 @@ branch proceeds to the existing Griess, marked-defect and sewing witness stack.
 1. Apply a spectral-localizer/Bott pipeline to a controlled crystalline-to-
    amorphous Hamiltonian family and record where response, real-space index and
    mobility gap separate.
-2. Add the continuum kinetic metric to the two-local clock carrier and test
-   clock-to-rotor convergence, gap retention and chiral response.
+2. Reconstruct the continuum constitutive matrix by eight-port tomography,
+   then test cutoff-stable nonlinear gap retention and chiral response on that
+   measured branch.
 3. Run the rank-24 blind-detector problem: give an inference process only bulk
    response first, then current, defect and OPE channels, and measure the first
    channel that separates \(E_8^3\), a rooted Niemeier theory and Leech.
@@ -221,6 +228,7 @@ translation-free topology result remains valuable after that null.
 - [Pure-topological memory no-go](../../claims/1200-1299/1200_the_pure_z3_bf_carrier_forgets_the_projector_so_reflexive_closure_requires_non_topological_boundary_memory.md)
 - [Typed Monster reconstruction gate](../frontier/wave-7/frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md)
 - [Quasicrystal backplane bridge](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
+- [E8 constitutive-metric gate](E8_CONSTITUTIVE_METRIC_GATE.md)
 
 ## Primary external anchors
 

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "translation-free-e8-constitutive-metric-gate-v1",
+  "date": "2026-10-26",
+  "status": "topological/constitutive separation closed; physical charging kernel requires calibration",
+  "topologicalInput": {
+    "edgeAction": "S=(1/4pi) integral [K_IJ partial_t phi_I partial_x phi_J - V_IJ(x) partial_x phi_I partial_x phi_J]",
+    "fixedByE8": ["integral compactification and commutator form K_E8", "determinant 1", "positive signature 8", "chiral central charge 8", "240 norm-two currents"],
+    "notFixedByE8": ["positive velocity/energy matrix V", "capacitance matrix", "charging kernel", "absolute resonance scale"],
+    "conclusion": "The E8 K-matrix is topological data, not a constitutive equation. A joined rotor Hamiltonian cannot be inferred from K alone."
+  },
+  "conditionalRotorCell": {
+    "hamiltonian": "H=(1/2)n^T M n + sum_i(1-cos(theta_i))",
+    "canonicalCoordinates": "[theta_i,n_j]=i delta_ij",
+    "harmonicFormula": "omega_a=sqrt(lambda_a(M))",
+    "branches": [
+      {
+        "id": "dual-form-is-charging-kernel",
+        "assumption": "M=K_E8^-1",
+        "frequenciesAscending": [0.5006861729989603,0.5355724968185144,0.5961816464179737,0.6433797829465836,0.7945078645328747,0.9180392293883314,1.3952140548126681,9.553661304648745],
+        "ratiosToSoftest": [1,1.0696770266504374,1.1907292003831942,1.2849961066288913,1.5868380382346299,1.8335621770610344,2.7866039248812355,19.08113668772831]
+      },
+      {
+        "id": "dual-form-is-capacitance-or-gram",
+        "assumption": "G=K_E8^-1 and M=G^-1=K_E8",
+        "frequenciesAscending": [0.10467191248588716,0.7167358990906004,1.0892780700300544,1.258640782099675,1.554291922913942,1.6773411358908483,1.867160852994404,1.997259069509148],
+        "ratiosToSoftest": [1,6.847452024794498,10.406593747648596,12.024627736398498,14.849178600071019,16.02474910465597,17.83822239080758,19.081136687728307]
+      },
+      {
+        "id": "isotropic-control",
+        "assumption": "M=I_8",
+        "frequenciesAscending": [1,1,1,1,1,1,1,1],
+        "ratiosToSoftest": [1,1,1,1,1,1,1,1]
+      }
+    ]
+  },
+  "coxeterCertificate": {
+    "coxeterNumber": 30,
+    "exponents": [1,7,11,13,17,19,23,29],
+    "cartanEigenvalueFormula": "lambda_m=2-2cos(pi*m/30)=4sin^2(pi*m/60)",
+    "cartanEigenvaluesAscending": [0.010956209263453219,0.5137103490452113,1.1865267138484,1.5841766183644816,2.4158233816355197,2.8134732861516016,3.48628965095479,3.989043790736548],
+    "conditionNumber": 364.0897772957775,
+    "frequencySpanBothReciprocalBranches": 19.08113668772831
+  },
+  "measurementGate": {
+    "prerequisite": "measure the full small-signal eight-port admittance or transfer matrix before installing or strongly driving the cosine locks",
+    "protocol": "fit one overall energy scale and compare the seven held-out resonance ratios with the three frozen branch fingerprints; then reconstruct M directly from the calibrated quadratic response",
+    "decision": "select a conditional rotor Hamiltonian only if the reconstructed positive M agrees with its proposed circuit or material realization within the declared error budget",
+    "rejection": "reject E8-metric dynamics if a topological K label is used to predict resonance data without an independently measured constitutive matrix"
+  },
+  "established": "The two corpus-plausible K/K^-1 joins are mathematically distinct and experimentally separable by linear spectroscopy; the E8 Coxeter spectrum supplies an exact eight-mode fingerprint conditional on the chosen constitutive realization.",
+  "boundary": "No nonlinear eight-rotor gap, material implementation, chiral anomaly recovery or 240-current response follows from this harmonic conditional calculation. Arbitrary positive V is compatible with the same E8 topological class.",
+  "nextGate": "calibrate one concrete positive M, then compute cutoff-stable nonlinear spectra of that measured eight-dimensional compact Hamiltonian"
+}
