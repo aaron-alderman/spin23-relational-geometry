@@ -2,7 +2,7 @@
 
 **Date:** 26 October 2026
 
-**Status:** supplied diagram audited; gauge reconstruction certificate exact; proposed extra vocabulary unsupported
+**Status:** supplied diagram audited; gauge reconstruction certificate exact; source vocabulary subsequently recovered but Maxwell recovery remains unproved
 
 **Source post:** [J. D. Redding](https://x.com/JDRedding/status/2114493830603096480)
 
@@ -30,10 +30,13 @@ only for a restricted local, linear and isotropic medium. Anisotropy requires
 The constitutive arrow is therefore a separate physical lane, not part of the
 definition of the vector potential.
 
-The displayed Cartesian component expansion is correct. It establishes
-neither a new “Maxwell group” nor the unexplained RDGMFEQ, SID/PED, O-mode,
-\(Q\), or PED-power terminology. Those labels have no supplied definitions,
-units, transformation laws, action or independent source.
+The displayed Cartesian component expansion is correct. By itself it establishes
+neither a new “Maxwell group” nor the RDGMFEQ, SID/PED, O-mode, \(Q\), or
+PED-power terminology. The later source-repository audit in [Wave
+7.261](frontier_wave7_261_rdg_mfe_q_source_recovery_and_maxwell_bridge_gate.md)
+recovers partial definitions for RDG, SID/PED, MFE and several inequivalent
+objects called \(Q\). It does not supply the missing typed electromagnetic
+complex, quaternion product, continuum theorem or dynamical recovery proof.
 
 ## Curl is an encoder with a kernel
 
@@ -134,13 +137,15 @@ to reconstruct the quotient or enlarge the observable set.
 - **Conditional physics:** \(\mathbf B=\mu\mathbf H\) and gauge invariance of
   absolute helicity require their stated material and boundary assumptions.
 - **Unsupported in the supplied image:** RDGMFEQ, SID/PED tagging, O-mode,
-  \(\nabla\times Q\) and PED-power scaling.
+  \(\nabla\times Q\) and PED-power scaling. The linked repositories define
+  parts of this vocabulary, but definition is not yet derivation.
 - **Not claimed:** electromagnetism and Moonshine share a physical carrier;
   their common feature here is the mathematics of non-injective observation.
 
 ## Corpus links
 
 - [Typed self-description and Monster reconstruction gate](frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md)
+- [RDG--MFE--Q source recovery and Maxwell bridge gate](frontier_wave7_261_rdg_mfe_q_source_recovery_and_maxwell_bridge_gate.md)
 - [Dynamic response, geometry, detection and metastability](../../admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md)
 - [The field closes continuity but screening needs its own carrier](../../admissibility/admissibility_119_the_field_closes_continuity_but_screening_needs_its_own_carrier.md)
 - [Hopf frame defect and Chern--Simons completion](../../../claims/0600-0699/696_the_higgs_dressed_exchange_has_a_hopf_frame_defect_but_not_a_topologically_protected_standard_model_string.md)
