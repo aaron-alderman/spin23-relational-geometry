@@ -761,6 +761,8 @@ const crossT2Overlap = Math.abs(Math.sin(conditionalAngleRad));
 const meanResidualFractionOfC = analyses.allSelectedMembers.ordinaryLeastSquares.meanResidual / 299792.458;
 const qForUnitResponse = (1 - directT1Overlap) / crossT2Overlap;
 const qForMeanResidualResponse = (1 + meanResidualFractionOfC - directT1Overlap) / crossT2Overlap;
+const isotropicMeanRetainedPower = (2 + directT1Overlap ** 2) / 3;
+const isotropicRmsRetainedAmplitude = Math.sqrt(isotropicMeanRetainedPower);
 const gaiaJoinedDataSha256 = createHash("sha256").update(JSON.stringify(joined.map(row => ({
   dr2SourceId: row.dr2SourceId,
   dr3SourceId: row.dr3SourceId,
@@ -842,7 +844,7 @@ console.log(JSON.stringify({
   corpusDerivedHypothesisTournament: {
     angleStatus: "conditional tail-as-M44-T1 and Galactic-normal-as-local-T1 hypothesis",
     relativeAngleDeg: conditionalTailAsT1AngleFromDiskNormalDeg,
-    scalarFrequencyProjection: {
+    uniqueDirectionScalarFrequencyProjection: {
       directT1Overlap,
       crossT2Overlap,
       directIntensityFraction: directT1Overlap ** 2,
@@ -850,19 +852,31 @@ console.log(JSON.stringify({
       qRequiredForUnitResponse: qForUnitResponse,
       qRequiredForObservedMeanResidualResponse: qForMeanResidualResponse,
       observedMeanResidualFractionOfC: meanResidualFractionOfC,
-      result: "a near-quarter-turn cannot produce only a ppm-scale shift through the scalar kernel unless q is about 0.95 or an independent normalization cancels the order-one projection"
+      result: "for a carrier known to occupy the unique rotated direction, a near-quarter-turn cannot produce only a ppm-scale shift through the scalar kernel unless q is about 0.95 or an independent normalization cancels the order-one projection",
+      scope: "this is not a whole-object brightness law; two spatial directions are shared in the rank-two-plus-one frame model"
     },
-    normPreservingTwoChannelRotation: {
+    uniquePlaneTwoChannelRotation: {
       totalNormFraction: directT1Overlap ** 2 + crossT2Overlap ** 2,
       observedDirectChannelFraction: directT1Overlap ** 2,
       hiddenOrCrossChannelFraction: crossT2Overlap ** 2,
-      result: "a unitary two-channel rotation preserves total norm but predicts an almost complete channel swap; total brightness alone cannot distinguish it"
+      result: "within the unique rotated two-plane, a unitary channel rotation preserves norm but predicts an almost complete channel swap; total brightness alone cannot distinguish it"
     },
-    isotropicSpatialFrameProjection: {
-      predictedAxisRatio: 1 / directT1Overlap,
+    rankTwoPlusOneSpatialFrameProjection: {
+      ambientDimension: 4,
+      sourceAndObserverSubspaceDimension: 3,
+      guaranteedIntersectionDimensionAtLeast: 2,
+      singularValues: [1, 1, directT1Overlap],
+      rankAtExactly90Deg: 2,
+      uniqueDirectionAmplitudeFraction: directT1Overlap,
+      uniqueDirectionPowerFraction: directT1Overlap ** 2,
+      isotropicMeanRetainedPower,
+      isotropicRmsRetainedAmplitude,
+      isotropicMeanLostPower: 1 - isotropicMeanRetainedPower,
+      volumeCompressionAbsDeterminant: directT1Overlap,
+      conditionNumber: 1 / directT1Overlap,
       observedCatalogueSkyPlaneAxisRatio: axis.axisRatio,
-      predictedToObservedAxisRatio: (1 / directT1Overlap) / axis.axisRatio,
-      result: "the isotropic-source plus one-direction pure-compression special case overpredicts the observed sky-plane elongation; arbitrary intrinsic covariance remains non-identifying"
+      result: "two directions transmit unchanged and one is compressed; the two-dimensional sky axis ratio cannot be compared directly with the three-dimensional condition number without the intrinsic covariance and viewing map",
+      status: "non-identifying with present data; the earlier direct axis-ratio rejection is withdrawn"
     }
   },
   falsifierBoundary: {

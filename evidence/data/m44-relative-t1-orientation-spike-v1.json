@@ -207,7 +207,7 @@
     "corpusDerivedHypothesisTournament": {
       "angleStatus": "conditional tail-as-M44-T1 and Galactic-normal-as-local-T1 hypothesis",
       "relativeAngleDeg": 87.03852891855686,
-      "scalarFrequencyProjection": {
+      "uniqueDirectionScalarFrequencyProjection": {
         "model": "kappa(theta,q)=cos(theta)+q sin(theta)",
         "directT1Overlap": 0.05166440955264843,
         "crossT2Overlap": 0.998664502616157,
@@ -216,32 +216,43 @@
         "qRequiredForUnitResponse": 0.9496037838163257,
         "qRequiredForObservedMeanResidualResponse": 0.9496088424245777,
         "observedMeanResidualFractionOfC": 0.00000505185249383279,
-        "result": "a near-quarter-turn cannot produce only a ppm-scale shift through the scalar kernel unless q is about 0.95 or an independent normalization cancels the order-one projection",
-        "status": "naive q=0 small-perturbation reading disfavoured; general normalized model remains non-identifying"
+        "result": "for a carrier known to occupy the unique rotated direction, a near-quarter-turn cannot produce only a ppm-scale shift through the scalar kernel unless q is about 0.95 or an independent normalization cancels the order-one projection",
+        "scope": "not a whole-object brightness law; two spatial directions are shared in the rank-two-plus-one frame model",
+        "status": "unique-direction q=0 small-perturbation reading disfavoured; no carrier assignment is presently available"
       },
-      "normPreservingTwoChannelRotation": {
+      "uniquePlaneTwoChannelRotation": {
         "model": "two-component orthogonal rotation with conserved squared norm",
         "totalNormFraction": 1.0000000000000002,
         "observedDirectChannelFraction": 0.0026692112144237902,
         "hiddenOrCrossChannelFraction": 0.9973307887855763,
-        "result": "a unitary two-channel rotation preserves total norm but predicts an almost complete channel swap; total brightness alone cannot distinguish it",
+        "result": "within the unique rotated two-plane a unitary channel rotation preserves norm but predicts an almost complete channel swap; the two common spatial directions are unchanged and total brightness alone cannot distinguish it",
         "status": "open but unconfirmed; requires a phase-, polarization-, carrier- or gravity-sensitive second-channel reader",
         "typingBoundary": "quarter-turn results on other corpus carriers do not establish this celestial transport law"
       },
-      "isotropicSpatialFrameProjection": {
-        "model": "intrinsically isotropic source with one singular direction compressed by abs(cos(theta))",
-        "predictedAxisRatio": 19.35568428360637,
+      "rankTwoPlusOneSpatialFrameProjection": {
+        "model": "two three-dimensional subspaces of a four-dimensional ambient space with a guaranteed common two-plane",
+        "ambientDimension": 4,
+        "sourceAndObserverSubspaceDimension": 3,
+        "guaranteedIntersectionDimensionAtLeast": 2,
+        "singularValues": [1, 1, 0.05166440955264843],
+        "rankAtExactly90Deg": 2,
+        "uniqueDirectionAmplitudeFraction": 0.05166440955264843,
+        "uniqueDirectionPowerFraction": 0.0026692112144237902,
+        "isotropicMeanRetainedPower": 0.6675564037381413,
+        "isotropicRmsRetainedAmplitude": 0.8170412497164028,
+        "isotropicMeanLostPower": 0.3324435962618587,
+        "volumeCompressionAbsDeterminant": 0.05166440955264843,
+        "conditionNumber": 19.35568428360637,
         "observedCatalogueSkyPlaneAxisRatio": 3.2740470344895076,
-        "predictedToObservedAxisRatio": 5.911852847472708,
-        "result": "the isotropic-source plus one-direction pure-compression special case overpredicts the observed sky-plane elongation",
-        "status": "special case rejected; arbitrary intrinsic covariance remains non-identifying"
+        "result": "two directions transmit unchanged and one is compressed; the two-dimensional sky axis ratio cannot be compared directly with the three-dimensional condition number without the intrinsic covariance and viewing map",
+        "status": "non-identifying with present data; the earlier direct axis-ratio rejection is withdrawn"
       },
       "boundaryOrGradientMixing": {
         "evidence": "retrospective held-out sharp-step, smooth-step, relaxation and localized-layer tournament",
         "result": "all spatial forms improve on a constant offset but none is distinguishable from an ordinary linear tail term",
         "status": "no boundary topology identified"
       },
-      "verdict": "present data disfavor the two simplest literal projection stories; the norm-preserving channel-swap hypothesis survives only because the proposed second channel is not measured"
+      "verdict": "present data neither confirm nor reject the rank-two-plus-one frame geometry; only a unique-direction scalar reading is constrained, and the exceptional singular direction has not been assigned to an observed carrier"
     },
     "authorityLimits": [
       "membership was preselected with convergent-point kinematics, so this is not independent discovery",

@@ -142,14 +142,20 @@ assert.ok(slice.conditionalTailAsT1.angleFromDiskNormalDeg > 85);
 assert.match(slice.conditionalTailAsT1.status, /conditional only/u);
 assert.match(slice.interpretation, /cannot infer T1/u);
 const hypotheses = crossChannel.corpusDerivedHypothesisTournament;
-assert.ok(Math.abs(hypotheses.scalarFrequencyProjection.directT1Overlap - Math.cos(hypotheses.relativeAngleDeg * Math.PI / 180)) < 1e-15);
-assert.ok(Math.abs(hypotheses.normPreservingTwoChannelRotation.totalNormFraction - 1) < 1e-12);
-assert.ok(hypotheses.scalarFrequencyProjection.qRequiredForUnitResponse > 0.94);
-assert.ok(hypotheses.scalarFrequencyProjection.qRequiredForUnitResponse < 0.96);
-assert.ok(hypotheses.isotropicSpatialFrameProjection.predictedAxisRatio > 19);
-assert.ok(hypotheses.isotropicSpatialFrameProjection.observedCatalogueSkyPlaneAxisRatio < 4);
-assert.match(hypotheses.isotropicSpatialFrameProjection.status, /special case rejected/u);
-assert.match(hypotheses.normPreservingTwoChannelRotation.status, /open but unconfirmed/u);
+const uniqueScalar = hypotheses.uniqueDirectionScalarFrequencyProjection;
+const uniqueRotation = hypotheses.uniquePlaneTwoChannelRotation;
+const frameProjection = hypotheses.rankTwoPlusOneSpatialFrameProjection;
+assert.ok(Math.abs(uniqueScalar.directT1Overlap - Math.cos(hypotheses.relativeAngleDeg * Math.PI / 180)) < 1e-15);
+assert.ok(Math.abs(uniqueRotation.totalNormFraction - 1) < 1e-12);
+assert.ok(uniqueScalar.qRequiredForUnitResponse > 0.94);
+assert.ok(uniqueScalar.qRequiredForUnitResponse < 0.96);
+assert.deepEqual(frameProjection.singularValues.slice(0, 2), [1, 1]);
+assert.equal(frameProjection.guaranteedIntersectionDimensionAtLeast, 2);
+assert.equal(frameProjection.rankAtExactly90Deg, 2);
+assert.ok(Math.abs(frameProjection.isotropicMeanRetainedPower - (2 + uniqueScalar.directT1Overlap ** 2) / 3) < 1e-15);
+assert.ok(frameProjection.isotropicMeanRetainedPower > 2 / 3);
+assert.match(frameProjection.status, /axis-ratio rejection is withdrawn/u);
+assert.match(uniqueRotation.status, /open but unconfirmed/u);
 
 if (process.argv.includes("--live")) {
   const response = await fetch(control.query);
@@ -186,9 +192,10 @@ console.log(JSON.stringify({
   morphologyIdentifiesT1Orientation: false,
   m44SpiralInclinationSliceDeg: geometry.lineOfSightDiskInclinationDeg,
   m44TailTiltFromGalacticPlaneDeg: geometry.tailTiltFromGalacticPlaneDeg,
-  scalarQRequiredForUnitResponse: hypotheses.scalarFrequencyProjection.qRequiredForUnitResponse,
-  isotropicPureProjectionSpecialCase: "rejected",
-  normPreservingChannelSwap: "open but unconfirmed",
+  uniqueDirectionQRequiredForUnitResponse: uniqueScalar.qRequiredForUnitResponse,
+  rankTwoPlusOneIsotropicMeanRetainedPower: frameProjection.isotropicMeanRetainedPower,
+  directSkyAxisRatioRejection: "withdrawn",
+  uniquePlaneChannelSwap: "open but unconfirmed",
   liveCatalogueVerified: process.argv.includes("--live"),
   constantAngleIdentifiable: false,
   modularAngleDefined: false,

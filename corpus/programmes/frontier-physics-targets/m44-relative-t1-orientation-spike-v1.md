@@ -238,9 +238,21 @@ The reconstructed tail axis is only 2.96 degrees from the Galactic plane and 46.
 
 ## Corpus-derived hypothesis tournament at 87 degrees
 
-The corpus suggests several inequivalent meanings of a near-quarter-turn. Treating them as a small tournament exposes what the present evidence can already remove.
+The corpus suggests several inequivalent meanings of a near-quarter-turn. The correct spatial starting point is not a scalar overlap. For two three-dimensional subspaces \(E,G\subset\mathbb R^4\),
 
-### Scalar frequency projection
+\[
+\dim(E\cap G)\geq 3+3-4=2.
+\]
+
+After choosing bases adapted to their common plane, the projection is
+
+\[
+P=E^TG=\operatorname{diag}(1,1,\cos\theta).
+\]
+
+Thus an 87-degree relation leaves two directions unchanged and compresses only one. The hypotheses below must be typed relative to that \(2+1\) decomposition.
+
+### Scalar frequency projection on the unique direction
 
 For the declared scalar kernel
 
@@ -248,15 +260,15 @@ For the declared scalar kernel
 \kappa(\theta,q)=\cos\theta+q\sin\theta,
 \]
 
-the conditional angle \(\theta=87.04^\circ\) gives \(|\cos\theta|=0.05166\) and \(|\sin\theta|=0.99866\). A pure \(q=0\) reading would retain only 5.17% of the frequency amplitude, an order-one effect rather than the observed parts-per-million residual. Preserving unit response requires
+the conditional angle \(\theta=87.04^\circ\) gives \(|\cos\theta|=0.05166\) and \(|\sin\theta|=0.99866\). For a spectral carrier independently known to occupy the unique rotated direction, a pure \(q=0\) reading would retain only 5.17% of its amplitude, an order-one effect rather than the observed parts-per-million residual. Preserving unit response in that component requires
 
 \[
 q={1-\cos\theta\over\sin\theta}=0.94960.
 \]
 
-Including the current mean 1.515 km/s residual changes this only to 0.94961. Thus the literal scalar model is not naturally a small perturbation at this angle: it needs an off-axis component comparable to the primary component, or an additional normalization that cancels the large projection. Gaia's aggregate RV cannot decide whether such a cancellation is physical or fitted.
+Including the current mean 1.515 km/s residual changes this only to 0.94961. This statement does **not** apply to the whole object or its total brightness: the other two spatial directions lie in the common plane. It constrains only a carrier assigned to the unique rotated direction, and Gaia's aggregate RV does not supply that assignment.
 
-### Norm-preserving two-channel rotation
+### Two-channel rotation in the unique two-plane
 
 A different hypothesis treats the near-quarter-turn as a rotation of a two-component channel state rather than loss under a scalar projector. Then
 
@@ -264,23 +276,31 @@ A different hypothesis treats the near-quarter-turn as a rotation of a two-compo
 \cos^2\theta+\sin^2\theta=1,
 \]
 
-and total norm is preserved, but only 0.267% remains in the direct \(T_1\) component while 99.733% moves into the cross component. This model is compatible with ordinary total brightness by construction and therefore cannot be confirmed by brightness. It predicts an almost complete **channel swap**, which needs a reader that distinguishes the two components through phase, polarisation, carrier or an independently derived gravitational response. The corpus's quarter-turn audit warns that quarter-turns on other carriers cannot simply be identified with this celestial channel; this is a new physical hypothesis, not a transported theorem.
+and norm in the unique rotated two-plane is preserved, but only 0.267% remains in its direct component while 99.733% moves into the cross component. The two common spatial directions are untouched. This model is compatible with ordinary total brightness and therefore cannot be confirmed by brightness. It predicts an almost complete **channel swap only in the exceptional direction**, which needs a reader that distinguishes components through phase, polarisation, carrier or an independently derived gravitational response. The corpus's quarter-turn audit warns that quarter-turns on other carriers cannot simply be identified with this celestial channel; this is a new physical hypothesis, not a transported theorem.
 
-### Isotropic spatial frame projection
+### Rank-two-plus-one spatial frame projection
 
-In the provisional four-spatial-dimensional frame model, the single compressed singular value at 87.04 degrees is 0.05166. If M44 were intrinsically isotropic and the visible shape were produced only by that compression, its projected axis ratio would be
+In the provisional four-spatial-dimensional frame model, the singular values at 87.04 degrees are
 
 \[
-{1\over|\cos\theta|}=19.36.
+\{1,1,0.05166\}.
 \]
 
-The selected catalogue has sky-plane axis ratio 3.27, smaller by a factor of 5.91. The special hypothesis “isotropic source plus pure one-direction projection” is therefore inconsistent with the measured morphology. This does not reject the general frame model because M44 has strongly non-isotropic tidal tails; allowing arbitrary intrinsic covariance restores the exact no-go described above.
+For an isotropic distribution of three-dimensional signal directions, the mean retained power is
+
+\[
+{1^2+1^2+\cos^2\theta\over3}=0.66756,
+\]
+
+with RMS retained amplitude 0.8170. At exactly 90 degrees the map has rank two rather than vanishing: it retains the common plane and loses only the exceptional component. The determinant or oriented volume is compressed by 0.05166 and the condition number is 19.36, but neither is a predicted two-dimensional sky axis ratio.
+
+The earlier comparison between 19.36 and the observed sky-plane axis ratio 3.27 was therefore invalid and is withdrawn. A 2-D image already includes a separate observer projection, and M44's intrinsic covariance is highly anisotropic because of its tidal tails. Testing this model requires either an independently reconstructed intrinsic 3-D covariance or an ensemble with a frozen population model and varying principal angle.
 
 ### Boundary or gradient mixing
 
 The earlier held-out shape tournament is the present test of a spatially varying selector: sharp step, smooth step, relaxation and localized mixing layer all fail to distinguish themselves from an ordinary linear tail term. The data currently prefer spatial structure over a constant offset, but not a boundary topology.
 
-The tournament therefore does not confirm \(T_1/T_2\). It removes two tempting simple stories: a small \(q=0\) scalar perturbation and an isotropic blob made elongated solely by 87-degree projection. The norm-preserving channel-swap hypothesis survives only because the current data do not read the proposed second channel. Its decisive experiment is carrier-tagged or phase-sensitive, not another fit to total brightness.
+The corrected tournament therefore does not confirm or reject the rank-two-plus-one \(T_1/T_2\) geometry. It rejects applying the 0.05166 factor to the whole object, withdraws the direct sky-axis-ratio comparison, and retains the scalar and channel-swap tests only for the unique rotated direction. The decisive experiment must locate that exceptional singular direction and attach a carrier-tagged, phase-sensitive or joint EM/gravitational observable to it.
 
 ## What the present evidence says
 
