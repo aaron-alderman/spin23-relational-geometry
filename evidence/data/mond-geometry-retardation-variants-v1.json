@@ -1,0 +1,711 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "proposal tournament; analytic and synthetic checks only",
+  "conventions": {
+    "x": "g_N/a0",
+    "y": "g/a0",
+    "fourier": "exp(-i omega t)",
+    "retardedExponentialKernel": "H=1/(1-i omega tau)",
+    "warning": "complex response phase is convention-dependent; causal support is not"
+  },
+  "authority": {
+    "literature": [
+      {
+        "role": "MOND deep limit",
+        "url": "https://doi.org/10.1086/161130"
+      },
+      {
+        "role": "AQUAL",
+        "url": "https://doi.org/10.1086/162570"
+      },
+      {
+        "role": "QUMOND",
+        "url": "https://arxiv.org/abs/0911.5464"
+      },
+      {
+        "role": "modified-inertia memory",
+        "url": "https://arxiv.org/abs/2208.07073"
+      }
+    ],
+    "corpusInputs": [
+      "corpus/syntheses/grand-synthesis/aarons_spin23_research_thesis.md",
+      "evidence/data/local-cluster-radial-timelike-field-v1.json"
+    ]
+  },
+  "variants": [
+    {
+      "id": "V1",
+      "name": "instantaneous AQUAL simple-mu",
+      "modificationSite": "nonlinear elliptic field constitutive law",
+      "equation": "div[mu(|grad Phi|/a0) grad Phi] = 4 pi G rho; mu(y)=y/(1+y)",
+      "geometry": "matter-centred nonlinear spatial response; spherical vacuum potential tends to sqrt(G M a0) ln r",
+      "retardation": "none in the nonrelativistic equation; a relativistic/hyperbolic completion remains required",
+      "identifies": [
+        "deep-MOND logarithmic lapse candidate",
+        "BTFR normalization once a0 is fixed",
+        "instantaneous modified-gravity EFE"
+      ],
+      "doesNotIdentify": [
+        "lensing metric",
+        "causal propagation kernel"
+      ]
+    },
+    {
+      "id": "V2",
+      "name": "instantaneous QUMOND standard-nu",
+      "modificationSite": "nonlinear source construction followed by linear Poisson solve",
+      "equation": "Delta Phi = div[nu(|grad Phi_N|/a0) grad Phi_N]",
+      "geometry": "ordinary Poisson geometry sourced by baryons plus a derived phantom-density field",
+      "retardation": "none in the nonrelativistic equation",
+      "identifies": [
+        "same deep and Newtonian limits as V1",
+        "different transition-region and nonspherical source geometry"
+      ],
+      "doesNotIdentify": [
+        "relativistic lensing completion",
+        "time-domain response"
+      ]
+    },
+    {
+      "id": "V3",
+      "name": "external-field anisotropic AQUAL",
+      "modificationSite": "linearized constitutive tensor around an external field",
+      "equation": "mu_e [Delta + L_e partial_parallel^2] deltaPhi = 4 pi G deltaRho",
+      "geometry": "environment-selected axis with unequal parallel and perpendicular susceptibility",
+      "retardation": "instantaneous; the external field is evaluated at the current state",
+      "identifies": [
+        "modified-gravity EFE",
+        "quadrupolar/anisotropic internal response"
+      ],
+      "doesNotIdentify": [
+        "orbital-history dependence"
+      ]
+    },
+    {
+      "id": "V4",
+      "name": "causal relaxation of the MOND field excess",
+      "modificationSite": "retarded field response",
+      "equation": "g(omega)=g_N+[g_MOND(g_N)-g_N]/(1-i omega tau)",
+      "geometry": "V1 static geometry with a causal relaxation fibre; tau must be derived rather than fitted per object",
+      "retardation": "exponential retarded kernel acting only on the MOND excess",
+      "identifies": [
+        "static V1 at zero frequency",
+        "frequency-dependent suppression and phase lag"
+      ],
+      "doesNotIdentify": [
+        "a covariant parent action",
+        "whether tau is universal or dynamically generated"
+      ]
+    },
+    {
+      "id": "V5",
+      "name": "trajectory-memory modified inertia",
+      "modificationSite": "inertial response of trajectories",
+      "equation": "g_N(t)=mu(q(t)) g(t), q=K_ret * |g| / a0",
+      "geometry": "history space rather than a purely spatial metric; the state is a trajectory functional",
+      "retardation": "causal memory; linear response depends on internal/external frequency ratios",
+      "identifies": [
+        "static simple-mu law",
+        "history-sensitive EFE and noncircular response"
+      ],
+      "doesNotIdentify": [
+        "unique memory kernel",
+        "relativistic lensing law"
+      ]
+    }
+  ],
+  "probes": {
+    "staticCurves": {
+      "aqualSimple": [
+        {
+          "x": 0.000001,
+          "y": 0.0010005001,
+          "boost": 1000.500125
+        },
+        {
+          "x": 0.0001,
+          "y": 0.010050125,
+          "boost": 100.5012499922
+        },
+        {
+          "x": 0.01,
+          "y": 0.105124922,
+          "boost": 10.5124921973
+        },
+        {
+          "x": 0.1,
+          "y": 0.3701562119,
+          "boost": 3.7015621187
+        },
+        {
+          "x": 1,
+          "y": 1.6180339887,
+          "boost": 1.6180339887
+        },
+        {
+          "x": 10,
+          "y": 10.9160797831,
+          "boost": 1.0916079783
+        },
+        {
+          "x": 100,
+          "y": 100.9901951359,
+          "boost": 1.0099019514
+        },
+        {
+          "x": 10000,
+          "y": 10000.99990002,
+          "boost": 1.00009999
+        },
+        {
+          "x": 1000000,
+          "y": 1000000.999999,
+          "boost": 1.000001
+        }
+      ],
+      "qumondStandard": [
+        {
+          "x": 0.000001,
+          "y": 0.0010000003,
+          "boost": 1000.00025
+        },
+        {
+          "x": 0.0001,
+          "y": 0.01000025,
+          "boost": 100.0025000312
+        },
+        {
+          "x": 0.01,
+          "y": 0.1002503117,
+          "boost": 10.0250311716
+        },
+        {
+          "x": 0.1,
+          "y": 0.3242297364,
+          "boost": 3.2422973641
+        },
+        {
+          "x": 1,
+          "y": 1.2720196495,
+          "boost": 1.2720196495
+        },
+        {
+          "x": 10,
+          "y": 10.0493877991,
+          "boost": 1.0049387799
+        },
+        {
+          "x": 100,
+          "y": 100.0049993751,
+          "boost": 1.0000499938
+        },
+        {
+          "x": 10000,
+          "y": 10000.00005,
+          "boost": 1.000000005
+        },
+        {
+          "x": 1000000,
+          "y": 1000000.0000005,
+          "boost": 1
+        }
+      ]
+    },
+    "staticDiagnostics": {
+      "aqualSimple": {
+        "deepLogSlope": 0.50025,
+        "deepBtfrCoefficientY2OverX": 1.0010005001,
+        "newtonianFractionalExcessAtX1e6": 9.99999e-7
+      },
+      "qumondStandard": {
+        "deepLogSlope": 0.50000025,
+        "deepBtfrCoefficientY2OverX": 1.0000005,
+        "newtonianFractionalExcessAtX1e6": 1e-12
+      }
+    },
+    "externalFieldAnisotropy": [
+      {
+        "yExternal": 0.03,
+        "muExternal": 0.0291262136,
+        "logDerivative": 0.9708737864,
+        "perpendicularGain": 34.3333333333,
+        "parallelGain": 17.4203612479,
+        "parallelToPerpendicular": 0.5073891626
+      },
+      {
+        "yExternal": 0.1,
+        "muExternal": 0.0909090909,
+        "logDerivative": 0.9090909091,
+        "perpendicularGain": 11,
+        "parallelGain": 5.7619047619,
+        "parallelToPerpendicular": 0.5238095238
+      },
+      {
+        "yExternal": 0.3,
+        "muExternal": 0.2307692308,
+        "logDerivative": 0.7692307692,
+        "perpendicularGain": 4.3333333333,
+        "parallelGain": 2.4492753623,
+        "parallelToPerpendicular": 0.5652173913
+      },
+      {
+        "yExternal": 1,
+        "muExternal": 0.5,
+        "logDerivative": 0.5,
+        "perpendicularGain": 2,
+        "parallelGain": 1.3333333333,
+        "parallelToPerpendicular": 0.6666666667
+      },
+      {
+        "yExternal": 3,
+        "muExternal": 0.75,
+        "logDerivative": 0.25,
+        "perpendicularGain": 1.3333333333,
+        "parallelGain": 1.0666666667,
+        "parallelToPerpendicular": 0.8
+      }
+    ],
+    "causalFieldRelaxation": [
+      {
+        "x": 0.01,
+        "yStatic": 0.105124922,
+        "responses": [
+          {
+            "omegaTau": 0,
+            "acceleration": {
+              "re": 0.105124922,
+              "im": 0,
+              "magnitude": 0.105124922,
+              "phaseRadians": 0
+            },
+            "mondExcessTransfer": {
+              "re": 1,
+              "im": 0,
+              "magnitude": 1,
+              "phaseRadians": 0
+            }
+          },
+          {
+            "omegaTau": 0.1,
+            "acceleration": {
+              "re": 0.1041830911,
+              "im": 0.0094183091,
+              "magnitude": 0.1046079395,
+              "phaseRadians": 0.0901564472
+            },
+            "mondExcessTransfer": {
+              "re": 0.9900990099,
+              "im": 0.099009901,
+              "magnitude": 0.9950371902,
+              "phaseRadians": 0.0996686525
+            }
+          },
+          {
+            "omegaTau": 1,
+            "acceleration": {
+              "re": 0.057562461,
+              "im": 0.047562461,
+              "magnitude": 0.0746701052,
+              "phaseRadians": 0.6905586142
+            },
+            "mondExcessTransfer": {
+              "re": 0.5,
+              "im": 0.5,
+              "magnitude": 0.7071067812,
+              "phaseRadians": 0.7853981634
+            }
+          },
+          {
+            "omegaTau": 10,
+            "acceleration": {
+              "re": 0.0109418309,
+              "im": 0.0094183091,
+              "magnitude": 0.014437043,
+              "phaseRadians": 0.7107087088
+            },
+            "mondExcessTransfer": {
+              "re": 0.0099009901,
+              "im": 0.099009901,
+              "magnitude": 0.099503719,
+              "phaseRadians": 1.4711276743
+            }
+          },
+          {
+            "omegaTau": 100,
+            "acceleration": {
+              "re": 0.0100095115,
+              "im": 0.0009511541,
+              "magnitude": 0.0100546017,
+              "phaseRadians": 0.0947405491
+            },
+            "mondExcessTransfer": {
+              "re": 0.00009999,
+              "im": 0.0099990001,
+              "magnitude": 0.0099995,
+              "phaseRadians": 1.5607966601
+            }
+          }
+        ]
+      },
+      {
+        "x": 1,
+        "yStatic": 1.6180339887,
+        "responses": [
+          {
+            "omegaTau": 0,
+            "acceleration": {
+              "re": 1.6180339887,
+              "im": 0,
+              "magnitude": 1.6180339887,
+              "phaseRadians": 0
+            },
+            "mondExcessTransfer": {
+              "re": 1,
+              "im": 0,
+              "magnitude": 1,
+              "phaseRadians": 0
+            }
+          },
+          {
+            "omegaTau": 0.1,
+            "acceleration": {
+              "re": 1.6119148403,
+              "im": 0.061191484,
+              "magnitude": 1.6130758972,
+              "phaseRadians": 0.0379437631
+            },
+            "mondExcessTransfer": {
+              "re": 0.9900990099,
+              "im": 0.099009901,
+              "magnitude": 0.9950371902,
+              "phaseRadians": 0.0996686525
+            }
+          },
+          {
+            "omegaTau": 1,
+            "acceleration": {
+              "re": 1.3090169944,
+              "im": 0.3090169944,
+              "magnitude": 1.3449970239,
+              "phaseRadians": 0.2318238045
+            },
+            "mondExcessTransfer": {
+              "re": 0.5,
+              "im": 0.5,
+              "magnitude": 0.7071067812,
+              "phaseRadians": 0.7853981634
+            }
+          },
+          {
+            "omegaTau": 10,
+            "acceleration": {
+              "re": 1.0061191484,
+              "im": 0.061191484,
+              "magnitude": 1.0079782431,
+              "phaseRadians": 0.0607444976
+            },
+            "mondExcessTransfer": {
+              "re": 0.0099009901,
+              "im": 0.099009901,
+              "magnitude": 0.099503719,
+              "phaseRadians": 1.4711276743
+            }
+          },
+          {
+            "omegaTau": 100,
+            "acceleration": {
+              "re": 1.0000617972,
+              "im": 0.0061797219,
+              "magnitude": 1.0000808903,
+              "phaseRadians": 0.0061792614
+            },
+            "mondExcessTransfer": {
+              "re": 0.00009999,
+              "im": 0.0099990001,
+              "magnitude": 0.0099995,
+              "phaseRadians": 1.5607966601
+            }
+          }
+        ]
+      },
+      {
+        "x": 100,
+        "yStatic": 100.9901951359,
+        "responses": [
+          {
+            "omegaTau": 0,
+            "acceleration": {
+              "re": 100.9901951359,
+              "im": 0,
+              "magnitude": 100.9901951359,
+              "phaseRadians": 0
+            },
+            "mondExcessTransfer": {
+              "re": 1,
+              "im": 0,
+              "magnitude": 1,
+              "phaseRadians": 0
+            }
+          },
+          {
+            "omegaTau": 0.1,
+            "acceleration": {
+              "re": 100.9803912237,
+              "im": 0.0980391224,
+              "magnitude": 100.9804388154,
+              "phaseRadians": 0.0009708726
+            },
+            "mondExcessTransfer": {
+              "re": 0.9900990099,
+              "im": 0.099009901,
+              "magnitude": 0.9950371902,
+              "phaseRadians": 0.0996686525
+            }
+          },
+          {
+            "omegaTau": 1,
+            "acceleration": {
+              "re": 100.495097568,
+              "im": 0.495097568,
+              "magnitude": 100.4963171305,
+              "phaseRadians": 0.0049265444
+            },
+            "mondExcessTransfer": {
+              "re": 0.5,
+              "im": 0.5,
+              "magnitude": 0.7071067812,
+              "phaseRadians": 0.7853981634
+            }
+          },
+          {
+            "omegaTau": 10,
+            "acceleration": {
+              "re": 100.0098039122,
+              "im": 0.0980391224,
+              "magnitude": 100.0098519659,
+              "phaseRadians": 0.0009802948
+            },
+            "mondExcessTransfer": {
+              "re": 0.0099009901,
+              "im": 0.099009901,
+              "magnitude": 0.099503719,
+              "phaseRadians": 1.4711276743
+            }
+          },
+          {
+            "omegaTau": 100,
+            "acceleration": {
+              "re": 100.0000990096,
+              "im": 0.0099009613,
+              "magnitude": 100.0000994998,
+              "phaseRadians": 0.0000990095
+            },
+            "mondExcessTransfer": {
+              "re": 0.00009999,
+              "im": 0.0099990001,
+              "magnitude": 0.0099995,
+              "phaseRadians": 1.5607966601
+            }
+          }
+        ]
+      }
+    ],
+    "modifiedInertiaLinearization": [
+      {
+        "x": 0.01,
+        "y0": 0.105124922,
+        "mu0": 0.095124922,
+        "linearResponses": [
+          {
+            "omegaRatio": 0,
+            "deltaYOverDeltaX": {
+              "re": 5.5187305029,
+              "im": 0,
+              "magnitude": 5.5187305029,
+              "phaseRadians": 0
+            }
+          },
+          {
+            "omegaRatio": 0.1,
+            "deltaYOverDeltaX": {
+              "re": 5.5324550991,
+              "im": -0.2614364142,
+              "magnitude": 5.5386287493,
+              "phaseRadians": -0.0472199178
+            }
+          },
+          {
+            "omegaRatio": 1,
+            "deltaYOverDeltaX": {
+              "re": 6.5976348477,
+              "im": -2.0551779981,
+              "magnitude": 6.9103214244,
+              "phaseRadians": -0.3019756141
+            }
+          },
+          {
+            "omegaRatio": 10,
+            "deltaYOverDeltaX": {
+              "re": 10.3376358523,
+              "im": -0.9179412704,
+              "magnitude": 10.3783106136,
+              "phaseRadians": -0.0885637739
+            }
+          },
+          {
+            "omegaRatio": 100,
+            "deltaYOverDeltaX": {
+              "re": 10.5106808436,
+              "im": -0.0950904179,
+              "magnitude": 10.5111109776,
+              "phaseRadians": -0.0090467806
+            }
+          }
+        ]
+      },
+      {
+        "x": 1,
+        "y0": 1.6180339887,
+        "mu0": 0.6180339887,
+        "linearResponses": [
+          {
+            "omegaRatio": 0,
+            "deltaYOverDeltaX": {
+              "re": 1.1708203932,
+              "im": 0,
+              "magnitude": 1.1708203932,
+              "phaseRadians": 0
+            }
+          },
+          {
+            "omegaRatio": 0.1,
+            "deltaYOverDeltaX": {
+              "re": 1.1731498369,
+              "im": -0.0321921196,
+              "magnitude": 1.1735914419,
+              "phaseRadians": -0.0274338726
+            }
+          },
+          {
+            "omegaRatio": 1,
+            "deltaYOverDeltaX": {
+              "re": 1.3245110167,
+              "im": -0.2123952179,
+              "magnitude": 1.3414325037,
+              "phaseRadians": -0.1590037769
+            }
+          },
+          {
+            "omegaRatio": 10,
+            "deltaYOverDeltaX": {
+              "re": 1.6096530311,
+              "im": -0.060645179,
+              "magnitude": 1.6107950578,
+              "phaseRadians": -0.037658121
+            }
+          },
+          {
+            "omegaRatio": 100,
+            "deltaYOverDeltaX": {
+              "re": 1.6179485949,
+              "im": -0.0061791598,
+              "magnitude": 1.6179603943,
+              "phaseRadians": -0.0038191138
+            }
+          }
+        ]
+      },
+      {
+        "x": 100,
+        "y0": 100.9901951359,
+        "mu0": 0.9901951359,
+        "linearResponses": [
+          {
+            "omegaRatio": 0,
+            "deltaYOverDeltaX": {
+              "re": 1.0000961446,
+              "im": 0,
+              "magnitude": 1.0000961446,
+              "phaseRadians": 0
+            }
+          },
+          {
+            "omegaRatio": 0.1,
+            "deltaYOverDeltaX": {
+              "re": 1.0001913738,
+              "im": -0.0009616291,
+              "magnitude": 1.0001918361,
+              "phaseRadians": -0.0009614448
+            }
+          },
+          {
+            "omegaRatio": 1,
+            "deltaYOverDeltaX": {
+              "re": 1.0049512113,
+              "im": -0.00490267,
+              "magnitude": 1.0049631701,
+              "phaseRadians": -0.0048784767
+            }
+          },
+          {
+            "omegaRatio": 10,
+            "deltaYOverDeltaX": {
+              "re": 1.0098029703,
+              "im": -0.0009802,
+              "magnitude": 1.009803446,
+              "phaseRadians": -0.0009706841
+            }
+          },
+          {
+            "omegaRatio": 100,
+            "deltaYOverDeltaX": {
+              "re": 1.0099009516,
+              "im": -0.0000990094,
+              "magnitude": 1.0099009564,
+              "phaseRadians": -0.0000980387
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "admissibility": {
+    "commonStaticChecks": {
+      "deepSlopeOneHalf": true,
+      "btfrCoefficientOne": true,
+      "newtonianRecovery": true
+    },
+    "externalFieldTensor": {
+      "positiveGains": true,
+      "parallelNoLargerThanPerpendicular": true
+    },
+    "retardation": {
+      "zeroFrequencyFieldMatchesStatic": true,
+      "fieldKernelBounded": true,
+      "modifiedInertiaFinite": true,
+      "causalPoleStatement": "the exponential kernel has its only pole at omega=-i/tau under the stated Fourier convention"
+    }
+  },
+  "discrimination": {
+    "staticSphericalRotation": "separates interpolation choices mainly near x approximately 1; cannot distinguish V1 from V4 at equilibrium",
+    "nonsphericalFieldMap": "can distinguish AQUAL constitutive geometry from QUMOND derived-source geometry",
+    "externalFieldOrientation": "tests V3-like anisotropy, but instantaneous modified gravity and trajectory memory predict different dependence on orbital history",
+    "timeDomainForcing": "separates V4 field lag from V1-V3 instantaneous laws and from V5 trajectory-dependent response",
+    "lensing": "requires a relativistic completion and cannot be inferred from these nonrelativistic proposals"
+  },
+  "m44Boundary": {
+    "currentUse": "design constraints only",
+    "reason": "the current cluster director snapshot has neither a baryonic mass model nor member-level orbit histories, so fitting these variants would manufacture an identification",
+    "nextData": [
+      "member-level baryonic mass and selection model",
+      "full astrometric covariance",
+      "independent radial velocities",
+      "Galactic external-field direction and orbit history",
+      "preregistered spatial and temporal residual readers"
+    ]
+  },
+  "verdict": {
+    "winner": null,
+    "statement": "V1-V3 are distinguishable spatial modified-gravity geometries; V4 and V5 add inequivalent causal structures. Static MOND behavior fixes only the zero-frequency limit, so no retardation model is selected without time-domain or orbit-history data."
+  }
+}
