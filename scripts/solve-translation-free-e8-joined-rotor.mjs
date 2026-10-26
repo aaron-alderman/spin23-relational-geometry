@@ -157,22 +157,110 @@ const lanczos = (operator, iterations, seed=823239) => {
   return {iterations:alphas.length,ritz};
 };
 
+const orthonormalize = (vector,basis,tolerance=1e-11) => {
+  for(let pass=0;pass<2;pass+=1)for(const q of basis){
+    const overlap=dot(q,vector);
+    if(overlap!==0)axpy(vector,-overlap,q);
+  }
+  const length=norm(vector);
+  if(length<tolerance)return null;
+  scale(vector,1/length);
+  return vector;
+};
+
+const combine = (basis,coefficients) => {
+  const output=new Float64Array(basis[0].length);
+  for(let column=0;column<basis.length;column+=1)axpy(output,coefficients[column],basis[column]);
+  return output;
+};
+
+const davidson = (operator,{roots=4,maxSubspace=16,cycles=40,tolerance=1e-10,seed=823240}={}) => {
+  const n=operator.states.length;
+  let state=seed>>>0;
+  const random=()=>{state=(1664525*state+1013904223)>>>0;return state/2**32-.5;};
+  let basis=[];
+  // Seed the Perron-like ground vector explicitly, then span held-out directions.
+  for(let root=0;root<roots;root+=1){
+    const candidate=root===0?Float64Array.from({length:n},()=>1):Float64Array.from({length:n},random);
+    const normalized=orthonormalize(candidate,basis);
+    if(normalized)basis.push(normalized);
+  }
+  let images=basis.map(vector=>operator.matvec(vector));
+  let last=[];
+  for(let cycle=1;cycle<=cycles;cycle+=1){
+    const projected=Array.from({length:basis.length},(_,i)=>Array.from({length:basis.length},(_,j)=>dot(basis[i],images[j])));
+    // Remove insignificant asymmetry introduced by floating point accumulation.
+    for(let i=0;i<projected.length;i+=1)for(let j=i+1;j<projected.length;j+=1){
+      const mean=(projected[i][j]+projected[j][i])/2;
+      projected[i][j]=projected[j][i]=mean;
+    }
+    const eigensystem=symmetricEigensystem(projected).slice(0,roots);
+    const ritz=eigensystem.map(item=>{
+      const vector=combine(basis,item.vector);
+      const image=combine(images,item.vector);
+      const residual=Float64Array.from(image,(value,i)=>value-item.value*vector[i]);
+      return {energy:item.value,vector,image,residual,residualNorm:norm(residual)};
+    });
+    last=ritz;
+    if(ritz.every(item=>item.residualNorm<tolerance))return {iterations:cycle,subspace:basis.length,ritz:ritz.map(({energy,residualNorm})=>({energy,residual:residualNorm}))};
+
+    const corrections=[];
+    for(const item of ritz){
+      if(item.residualNorm<tolerance)continue;
+      const correction=new Float64Array(n);
+      for(let i=0;i<n;i+=1){
+        let denominator=operator.diagonal[i]-item.energy;
+        if(Math.abs(denominator)<0.2)denominator=denominator<0?-0.2:0.2;
+        correction[i]=-item.residual[i]/denominator;
+      }
+      const normalized=orthonormalize(correction,[...basis,...corrections]);
+      if(normalized)corrections.push(normalized);
+    }
+    if(!corrections.length)break;
+    if(basis.length+corrections.length>maxSubspace){
+      const restarted=[];
+      for(const item of ritz){
+        const normalized=orthonormalize(item.vector,restarted);
+        if(normalized)restarted.push(normalized);
+      }
+      for(const correction of corrections){
+        if(restarted.length>=maxSubspace)break;
+        const normalized=orthonormalize(correction,restarted);
+        if(normalized)restarted.push(normalized);
+      }
+      basis=restarted;
+      images=basis.map(vector=>operator.matvec(vector));
+    }else{
+      basis.push(...corrections);
+      images.push(...corrections.map(vector=>operator.matvec(vector)));
+    }
+  }
+  return {iterations:cycles,subspace:basis.length,ritz:last.map(({energy,residualNorm})=>({energy,residual:residualNorm}))};
+};
+
 const args=Object.fromEntries(process.argv.slice(2).map(argument=>{
   const [name,value="true"]=argument.replace(/^--/u,"").split("=");return [name,value];
 }));
 const cutoffs=(args.cutoffs??"1,2,3,4").split(",").map(Number);
 const branches=(args.branches??"cartan-kernel,inverse-kernel").split(",");
 const iterations=Number(args.iterations??64);
+const method=args.method??"lanczos";
+const maxSubspace=Number(args.maxSubspace??16);
+const cycles=Number(args.cycles??40);
 const records=[];
 for(const cutoff of cutoffs)for(const branch of branches){
   const started=performance.now();
   const operator=compile(cutoff,branch);
-  const result=lanczos(operator,iterations,823239+cutoff+(branch==="inverse-kernel"?100:0));
+  const result=method==="davidson"
+    ? davidson(operator,{roots:4,maxSubspace,cycles,tolerance:1e-10,seed:823240+cutoff+(branch==="inverse-kernel"?100:0)})
+    : lanczos(operator,iterations,823239+cutoff+(branch==="inverse-kernel"?100:0));
   records.push({
     cutoffKineticEnergy:cutoff,
     branch,
     basisStates:operator.states.length,
-    lanczosIterations:result.iterations,
+    method,
+    iterations:result.iterations,
+    retainedSubspace:result.subspace??result.iterations,
     levels:result.ritz,
     gapsFromGround:result.ritz.map(item=>item.energy-result.ritz[0].energy),
     elapsedSeconds:(performance.now()-started)/1000,
@@ -180,6 +268,6 @@ for(const cutoff of cutoffs)for(const branch of branches){
 }
 console.log(JSON.stringify({
   schemaVersion:"translation-free-e8-joined-rotor-solver-output-v1",
-  settings:{cutoffs,branches,iterations,potentialStrength:1},
+  settings:{cutoffs,branches,method,iterations,maxSubspace,cycles,potentialStrength:1},
   records,
 },null,2));

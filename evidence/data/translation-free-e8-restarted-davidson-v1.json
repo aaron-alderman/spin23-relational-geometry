@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "translation-free-e8-restarted-davidson-v1",
+  "date": "2026-10-26",
+  "status": "restarted solver validated and complete-shell cutoff 8 executed; continuum gap still open",
+  "implementation": {
+    "script": "scripts/solve-translation-free-e8-joined-rotor.mjs",
+    "method": "block Davidson with diagonal preconditioning, thick Ritz restart and explicit residuals",
+    "validation": "cutoff-2 Davidson energies agree with the fully reorthogonalized Lanczos reference",
+    "matrixRepresentation": "matrix-free E8 shell with at most sixteen potential neighbors per state"
+  },
+  "validationAtCutoff2": {
+    "basisStates": 2401,
+    "cartanKernelFirstTwo": [5.46859226671951,5.710502796918289],
+    "inverseKernelFirstTwo": [7.27399051614934,7.8645156583269396],
+    "maximumDifferenceFromLanczosFirstTwo": 9e-15
+  },
+  "cutoff8": [
+    {
+      "branch": "cartan-kernel",
+      "basisStates": 340321,
+      "maximumSubspace": 24,
+      "cycles": 160,
+      "levels": [4.677874540345561,4.780194683794085,4.8489217870017605,4.947190998433541],
+      "gaps": [0,0.10232014344852391,0.1710472466561992,0.2693164580879799],
+      "maximumResidual": 6.8e-9,
+      "firstTwoMaximumResidual": 6.4e-12,
+      "elapsedSeconds": 86.6307396
+    },
+    {
+      "branch": "inverse-kernel",
+      "basisStates": 340321,
+      "maximumSubspace": 28,
+      "cycles": 171,
+      "levels": [6.528222504400659,6.86774227101486,6.87841250048189,6.933394286244265],
+      "gaps": [0,0.3395197666142007,0.35018999608123025,0.40517178184360514],
+      "maximumResidual": 9.9e-11,
+      "firstTwoMaximumResidual": 1.5e-11,
+      "elapsedSeconds": 95.3787658
+    }
+  ],
+  "resourceComparison": {
+    "fullLanczos180VectorBasisMiBAtCutoff8": 467.3597717285156,
+    "cartanDavidsonBasisPlusImagesCeilingMiB": 124.6292724609375,
+    "inverseDavidsonBasisPlusImagesCeilingMiB": 145.40081787109375,
+    "qualification": "figures count Float64 Krylov vectors only and exclude shell maps, state coordinates and runtime overhead"
+  },
+  "cutoffAssessment": {
+    "cartanGapCutoff6": 0.10560765131013472,
+    "cartanGapCutoff8": 0.10232014344852391,
+    "cartanRelativeDrift6to8": 0.03112944773249888,
+    "inverseGapCutoff6": 0.3682440391298494,
+    "inverseGapCutoff8": 0.3395197666142007,
+    "inverseRelativeDrift6to8": 0.07800336044413199,
+    "promotionTolerance": 0.01,
+    "cartanKernelPromoted": false,
+    "inverseKernelPromoted": false
+  },
+  "established": "A bounded-subspace restarted solver reproduces the full-Lanczos references and reaches the 340321-state complete E8 shell for both nonlinear step graphs.",
+  "boundary": "Residual convergence at cutoff 8 does not erase 3.11% and 7.80% shell drift. Neither last gap is a promoted continuum value.",
+  "nextGate": "run cutoff 10 with the restarted solver, add boundary-leakage and drive-transition estimators, and require sub-one-percent agreement on two successive increments"
+}

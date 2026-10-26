@@ -10,6 +10,7 @@ const e8Rotor = load("translation-free-e8-clock-to-rotor-convergence-v1.json");
 const e8Metric = load("translation-free-e8-constitutive-metric-gate-v1.json");
 const e8Shell = load("translation-free-e8-adaptive-shell-solver-plan-v1.json");
 const e8Recon = load("translation-free-e8-joined-rotor-cutoff-recon-v1.json");
+const e8Davidson = load("translation-free-e8-restarted-davidson-v1.json");
 const quasicrystal = load("translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 
 const E8 = [
@@ -116,6 +117,10 @@ assert.equal(arm.e8JoinedRotorRecon.evidence, "translation-free-e8-joined-rotor-
 assert.equal(Math.max(...e8Recon.records.map(item=>item.basisStates)),117361);
 assert.equal(e8Recon.cutoffAssessment.cartanKernelPromoted,false);
 assert.equal(e8Recon.cutoffAssessment.inverseKernelPromoted,false);
+assert.equal(arm.e8RestartedDavidson.evidence,"translation-free-e8-restarted-davidson-v1.json");
+assert.ok(e8Davidson.cutoff8.every(item=>item.basisStates===340321));
+assert.equal(e8Davidson.cutoffAssessment.cartanKernelPromoted,false);
+assert.equal(e8Davidson.cutoffAssessment.inverseKernelPromoted,false);
 assert.equal(arm.quasicrystalBackplaneBridge.evidence, "translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 assert.deepEqual(quasicrystal.factorialDesign.backplanes, ["periodic","quasicrystal","amorphous"]);
 assert.deepEqual(quasicrystal.factorialDesign.relationPrograms, ["identity","E8"]);
@@ -135,6 +140,7 @@ console.log(JSON.stringify({
   e8ConstitutiveMetricGate: {branches:e8Metric.conditionalRotorCell.branches.length, coxeterNumber:e8Metric.coxeterCertificate.coxeterNumber},
   e8AdaptiveShellSolver: {maximumBasis:e8Shell.thetaSeries.shells.at(-1).cumulativeStates, maximumNeighbors:e8Shell.solverPlan.maximumNeighborsPerState},
   e8JoinedRotorRecon: {largestBasis:Math.max(...e8Recon.records.map(item=>item.basisStates)), continuumGapPromoted:false},
+  e8RestartedDavidson: {largestBasis:340321, continuumGapPromoted:false},
   quasicrystalBridge: {materialClasses:quasicrystal.factorialDesign.backplanes.length, relationPrograms:quasicrystal.factorialDesign.relationPrograms.length, devices:quasicrystal.factorialDesign.totalPrimaryDevices},
   nextGate: "clock-to-rotor E8 response plus blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
 }));
