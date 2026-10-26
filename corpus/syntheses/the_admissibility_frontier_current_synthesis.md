@@ -212,6 +212,8 @@ The strongest potentially original mathematical cluster is the combined Furey te
 
 The same mathematical objects occur, with properly bounded meanings, in projector quantum geometry, non-Abelian holonomy, open-system selection, Floquet and non-Hermitian dynamics, generalized symmetries, defects, response theory, thermal and anomalous Hall transport, Seebeck/Nernst effects, Casimir/Lifshitz forces, metastability, scattering bounds and consistency-first physics.
 
+The [translation-free exceptional-topology arm](../programmes/translation-free-exceptional-topology/README.md) now makes one further separation explicit. Real-space topology belongs to a local operator carrier and can survive after translation symmetry and the Brillouin-zone presentation are removed. Exceptional data then enter as increasingly fine boundary enrichments rather than as synonyms for the bulk invariant. The first exact comparison is already decisive: \(E_8^3\) and the Leech lattice share rank 24, determinant one, positive signature 24 and chiral central charge 24, while their norm-two root counts are 720 and zero. Coarse topology therefore supplies a stable return class but cannot identify the boundary algebra; current spectra, orbifold sectors, defects and OPE records are required to approach Monster reconstruction.
+
 The resulting “look here” guide does not say that these fields prove the programme. It shows where a shared object is exact, where only a mechanism is shared, where the relationship is analogical, and which measurement could promote or kill the bridge.
 
 ### 6. The frontier is instrumented

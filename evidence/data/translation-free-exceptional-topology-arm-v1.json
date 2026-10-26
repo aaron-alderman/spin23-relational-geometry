@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "translation-free-exceptional-topology-arm-v1",
+  "date": "2026-10-26",
+  "status": "active research arm; finite rank-24 collision certified; physical carrier open",
+  "researchQuestion": "Which real-space topological data survive loss of translation symmetry, and which boundary observables distinguish E8, rank-24 lattice, Leech-orbifold and Monster-enriched realizations?",
+  "translationFreeTrunk": {
+    "carrier": ["point set or locality graph X", "local Hamiltonian H", "spectral or mobility projector P"],
+    "candidateInvariants": ["Bott index", "local Chern or winding marker", "spectral-localizer index", "Fredholm index"],
+    "requiredProtection": ["locality", "spectral or mobility gap", "finite-size scaling", "bulk-boundary agreement"],
+    "firewall": "A nonquantized Hall response without a stable real-space invariant is response geometry, not by itself an admitted topological phase."
+  },
+  "exceptionalEnrichmentLadder": [
+    {"level": "T0", "object": "real-space K-class", "detector": "index and boundary transport"},
+    {"level": "T1", "object": "E8 invertible chiral unit", "detector": "c_minus=8 plus source-native current algebra"},
+    {"level": "T2", "object": "rank-24 c=24 lattice edge", "detector": "current/root spectrum beyond central charge"},
+    {"level": "T3", "object": "Leech inversion orbifold", "detector": "untwisted/twisted sector join"},
+    {"level": "T4", "object": "Monster-enriched boundary", "detector": "frame/Griess, 2A, marked 23AB, order-46 and sewing witness"}
+  ],
+  "certifiedSeed": {
+    "coarseDetector": ["rank", "determinant", "positive signature", "chiral central charge"],
+    "E8Cubed": {"rank": 24, "determinant": 1, "positiveSignature": 24, "chiralCentralCharge": 24, "normTwoRootCount": 720},
+    "Leech": {"rank": 24, "determinant": 1, "positiveSignature": 24, "chiralCentralCharge": 24, "normTwoRootCount": 0, "rootCountSource": "Nebe-Sloane Leech catalogue as recorded in leech-explicit-k-matrix-v1.json"},
+    "verdict": "The coarse invertible-bulk detector collides, while root/current content separates the boundary lattices."
+  },
+  "paperTrigger": {
+    "title": "Giant berry curvature in amorphous ferromagnet Co2MnGa",
+    "doi": "10.1016/j.matt.2025.101988",
+    "use": "Motivates translation-free quantum geometry; does not by itself establish an amorphous topological phase."
+  },
+  "computationalSeed": {
+    "model": "8x8 real-space Qi-Wu-Zhang Chern insulator",
+    "mass": -1,
+    "frozenDisorderSeed": 231,
+    "onsiteDisorderStrengths": [0, 0.5, 1, 2],
+    "bottIndices": [1, 1, 1, 1],
+    "spectralGaps": [1.999999999999998, 1.7986745444916576, 1.5637030591391206, 1.0548152448766612],
+    "scope": "Translation symmetry is broken for nonzero disorder and the finite real-space Bott class survives; structural amorphization and exceptional-edge realization remain open."
+  },
+  "firstKillTests": [
+    "no real-space invariant can be defined on the declared carrier",
+    "the invariant changes without a gap/locality failure under allowed perturbations",
+    "boundary response disagrees with the bulk index",
+    "all exceptional records factor through central charge or a smaller edge algebra",
+    "the Monster witness is programmed rather than derived from one carrier and action"
+  ],
+  "joins": [
+    "FPT-005 orientation and phase lifts",
+    "FPT-006 projector holonomy",
+    "FPT-009 exceptional and arithmetic structures",
+    "FPT-017 scale-stable admissibility",
+    "FPT-021 disorder localization and glassy memory",
+    "OT-024 Leech and Moonshine carrier",
+    "OT-026 physical realization",
+    "OT-027 detector and provenance",
+    "OT-034 terminal closure"
+  ]
+}

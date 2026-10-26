@@ -84,6 +84,30 @@ H₂(ℝ), J₃(𝕆), E₆, E₇, E₈, lattice constructions and moonshine occ
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/07-exceptional-horizon-where-the-exceptional-programme-actually-stands-claim-1.md)
 
+<a id="translation-free-topology-and-exceptional-boundary-memory"></a>
+## Translation-free topology and exceptional boundary memory
+
+> **Section status — [◇ Conditional](../reading-key/status-conditional.md)** — The real-space topology and lattice facts are established; their realization on one exceptional physical carrier remains open.
+
+> **Research move — [⌖ Cartographer](../reading-key/move-cartographer.md)** — separates coarse bulk topology from fine boundary reconstruction.
+
+When translation symmetry is removed, topology need not disappear. The carrier
+can be a local Hamiltonian and projector on a point set, with its invariant
+read by a Bott index, local marker, spectral localizer or Fredholm pairing.
+This moves the programme away from treating a Brillouin-zone presentation as
+the ontology and toward asking which operator class survives admissible
+disorder and coarse-graining.
+
+The exceptional structures then occupy different detector depths. The
+\(E_8\) form supplies an elementary chiral invertible edge with central charge
+eight. Three copies and the Leech lattice share the coarse rank-24, positive,
+even-unimodular and \(c=24\) data, yet \(E_8^3\) has 720 norm-two roots while
+the Leech lattice has none. Bulk response therefore cannot select the boundary
+algebra. The Leech orbifold, twisted sector and Monster defect/OPE structure
+are progressively finer boundary memories, not names for the same invariant.
+
+> **New research arm →** [Translation-free exceptional topology](../../../corpus/programmes/translation-free-exceptional-topology/README.md)
+
 ## Chapter sources
 
 - [33_octonions_leech_lattice_jordan_branch.md](../../../corpus/claims/0000-0099/33_octonions_leech_lattice_jordan_branch.md)

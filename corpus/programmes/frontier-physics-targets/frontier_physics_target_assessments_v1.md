@@ -215,6 +215,7 @@ These are reach assessments, not truth probabilities. “Within reach” means t
 **Disorder, localization and glassy memory — within reach as an audit column.**
 
 - **Corpus assets:** the [frontier disorder/glass docket](../admissibility/admissibility_36_frontier_expansion_cost_backaction_scale_and_rare_events.md), the result that [topological memory forgets the projector](../../claims/1200-1299/1200_the_pure_z3_bf_carrier_forgets_the_projector_so_reflexive_closure_requires_non_topological_boundary_memory.md), and the [gapped-memory orientation no-go](../../claims/1200-1299/1205_a_u3_equivariant_gapped_memory_sector_can_preserve_a_projector_but_cannot_originate_its_orientation.md).
+- **New joined arm:** [translation-free exceptional topology](../translation-free-exceptional-topology/README.md) turns disorder into a layer-by-layer intervention: real-space K-class, \(E_8\) chiral unit, rank-24 boundary lattice, Leech orbifold and Monster defect memory. Its first certificate proves that \(E_8^3\) and Leech collide under the coarse \((24,1,24,24)\) bulk detector while norm-two current content separates them.
 - **Why it is close:** disorder strength, sample identity, waiting time and history can be varied on the photonic, acoustic and magnetic candidate platforms.
 - **Missing join:** robustness of topology, detector overlap and selector attraction has not been measured in the same ensemble.
 - **Next promotion test:** jointly scale disorder, sample count and waiting time; require topology, contraction and rare dwell statistics to be reported separately.

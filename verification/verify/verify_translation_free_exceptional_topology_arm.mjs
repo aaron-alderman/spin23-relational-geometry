@@ -1,0 +1,90 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+
+const load = name => JSON.parse(fs.readFileSync(new URL(`../../evidence/data/${name}`, import.meta.url), "utf8"));
+const arm = load("translation-free-exceptional-topology-arm-v1.json");
+const leechRecord = load("leech-explicit-k-matrix-v1.json");
+
+const E8 = [
+  [2,-1,0,0,0,0,0,0],
+  [-1,2,-1,0,0,0,0,0],
+  [0,-1,2,-1,0,0,0,-1],
+  [0,0,-1,2,-1,0,0,0],
+  [0,0,0,-1,2,-1,0,0],
+  [0,0,0,0,-1,2,-1,0],
+  [0,0,0,0,0,-1,2,0],
+  [0,0,-1,0,0,0,0,2]
+];
+
+const detBareiss = matrix => {
+  const a = matrix.map(row => row.map(BigInt));
+  let sign = 1n;
+  let previous = 1n;
+  for (let k = 0; k < a.length - 1; k++) {
+    if (a[k][k] === 0n) {
+      const pivot = a.findIndex((row, i) => i > k && row[k] !== 0n);
+      assert.notEqual(pivot, -1, "singular matrix");
+      [a[k], a[pivot]] = [a[pivot], a[k]];
+      sign *= -1n;
+    }
+    const current = a[k][k];
+    for (let i = k + 1; i < a.length; i++) {
+      for (let j = k + 1; j < a.length; j++) {
+        a[i][j] = (a[i][j] * current - a[i][k] * a[k][j]) / previous;
+      }
+    }
+    previous = current;
+  }
+  return sign * a.at(-1).at(-1);
+};
+
+const leadingMinor = (matrix, n) => matrix.slice(0,n).map(row => row.slice(0,n));
+const assertPositiveDefiniteIntegralForm = matrix => {
+  assert.ok(matrix.every((row,i) => row.length === matrix.length && row.every((x,j) => Number.isInteger(x) && x === matrix[j][i])));
+  for (let n = 1; n <= matrix.length; n++) assert.ok(detBareiss(leadingMinor(matrix,n)) > 0n, `leading minor ${n}`);
+};
+
+const blockDiagonal = (matrix, copies) => {
+  const n = matrix.length;
+  return Array.from({length:n*copies}, (_,i) => Array.from({length:n*copies}, (_,j) => {
+    if (Math.floor(i/n) !== Math.floor(j/n)) return 0;
+    return matrix[i%n][j%n];
+  }));
+};
+
+assert.equal(arm.schemaVersion, "translation-free-exceptional-topology-arm-v1");
+assertPositiveDefiniteIntegralForm(E8);
+assert.equal(detBareiss(E8), 1n);
+assert.ok(E8.every((row,i) => row[i] % 2 === 0));
+
+const E8cubed = blockDiagonal(E8, 3);
+assertPositiveDefiniteIntegralForm(E8cubed);
+assert.equal(E8cubed.length, 24);
+assert.equal(detBareiss(E8cubed), 1n);
+
+const leech = leechRecord.K;
+assertPositiveDefiniteIntegralForm(leech);
+assert.equal(leech.length, 24);
+assert.equal(detBareiss(leech), 1n);
+assert.ok(leech.every((row,i) => row[i] % 2 === 0));
+
+const e8Summary = arm.certifiedSeed.E8Cubed;
+const leechSummary = arm.certifiedSeed.Leech;
+for (const field of ["rank", "determinant", "positiveSignature", "chiralCentralCharge"]) {
+  assert.equal(e8Summary[field], leechSummary[field], `coarse detector must collide on ${field}`);
+}
+assert.equal(e8Summary.normTwoRootCount, 720);
+assert.equal(leechSummary.normTwoRootCount, 0);
+assert.notEqual(e8Summary.normTwoRootCount, leechSummary.normTwoRootCount);
+assert.match(arm.certifiedSeed.verdict, /collides/);
+assert.deepEqual(arm.computationalSeed.bottIndices, [1,1,1,1]);
+assert.ok(arm.computationalSeed.spectralGaps.every(gap => gap > 1));
+
+console.log(JSON.stringify({
+  status: "PASS",
+  arm: "translation-free exceptional topology",
+  coarseBulkCollision: {rank:24, determinant:1, signature:24, chiralCentralCharge:24},
+  boundarySeparation: {E8CubedNormTwoRoots:720, LeechNormTwoRoots:0},
+  translationFreeSeed: {disorderStrengths:arm.computationalSeed.onsiteDisorderStrengths, bottIndices:arm.computationalSeed.bottIndices},
+  nextGate: "real-space invariant -> disordered E8 edge -> rank-24 detector ladder -> orbifold witness"
+}));
