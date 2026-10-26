@@ -23,6 +23,7 @@ const e8TwoCell = load("translation-free-e8-two-cell-projected-coupling-v1.json"
 const e8TwoCellRoots = load("translation-free-e8-two-cell-root-count-audit-v1.json");
 const e8ChainGrid = load("translation-free-e8-projected-chain-width-root-grid-v1.json");
 const e8BoundaryComparison = load("translation-free-e8-projected-chain-boundary-comparison-v1.json");
+const e8Quasiparticle = load("translation-free-e8-projected-chain-quasiparticle-v1.json");
 const e8Dictionary = load("translation-free-e8-local-operator-dictionary-r8-v1.json");
 const quasicrystal = load("translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 
@@ -164,6 +165,7 @@ assert.equal(arm.e8TwoCellProjectedCoupling.evidence,"translation-free-e8-two-ce
 assert.equal(arm.e8TwoCellRootCountAudit.evidence,"translation-free-e8-two-cell-root-count-audit-v1.json");assert.equal(e8TwoCellRoots.gapRootCountPromoted,true);assert.equal(e8TwoCellRoots.splittingPromotedThroughJ,0.05);assert.equal(e8TwoCellRoots.splittingCoefficientPromotedAtJ01,false);
 assert.equal(arm.e8ProjectedChainWidthRootGrid.evidence,"translation-free-e8-projected-chain-width-root-grid-v1.json");assert.equal(e8ChainGrid.finiteWidthRootGridPromoted,true);assert.equal(e8ChainGrid.thermodynamicGapCertified,false);
 assert.equal(arm.e8ProjectedChainBoundaryComparison.evidence,"translation-free-e8-projected-chain-boundary-comparison-v1.json");assert.equal(e8BoundaryComparison.periodicFiniteWidthPlateauPromoted,true);assert.equal(e8BoundaryComparison.thermodynamicGapCertified,false);
+assert.equal(arm.e8ProjectedChainQuasiparticle.evidence,"translation-free-e8-projected-chain-quasiparticle-v1.json");assert.equal(e8Quasiparticle.quasiparticleCarrierPromoted,true);assert.equal(e8Quasiparticle.thermodynamicGapCertified,false);assert.ok(e8Quasiparticle.excessExcitationCounts.at(-1)>.995);
 assert.equal(arm.e8LocalOperatorDictionary.evidence,"translation-free-e8-local-operator-dictionary-r8-v1.json");assert.equal(e8Dictionary.settings.roots,8);assert.equal(arm.e8LocalOperatorDictionary.reusableDictionaryCertified,true);
 assert.equal(arm.quasicrystalBackplaneBridge.evidence, "translation-free-e8-quasicrystal-backplane-bridge-v1.json");
 assert.deepEqual(quasicrystal.factorialDesign.backplanes, ["periodic","quasicrystal","amorphous"]);
@@ -195,6 +197,7 @@ console.log(JSON.stringify({
   e8TwoCellRootCountAudit: {localRootCounts:e8TwoCellRoots.localRootCounts, gapRootCountPromoted:true, splittingPromotedThroughJ:e8TwoCellRoots.splittingPromotedThroughJ, splittingCoefficientPromotedAtJ01:false},
   e8ProjectedChainWidthRootGrid: {widths:e8ChainGrid.widths, localRootCounts:e8ChainGrid.localRootCounts, minimumGridGap:Math.min(...Object.values(e8ChainGrid.gapsByRootCount).flat()), thermodynamicGapCertified:false},
   e8ProjectedChainBoundaryComparison: {periodicWidths:e8BoundaryComparison.periodicWidths, periodicGapAtWidthSix:e8BoundaryComparison.periodicGaps.at(-1), openPeriodicDifferenceAtWidthFive:e8BoundaryComparison.openPeriodicRelativeDifferences.at(-1), thermodynamicGapCertified:false},
+  e8ProjectedChainQuasiparticle: {periodicWidths:e8Quasiparticle.widths, excessExcitationCountAtWidthSix:e8Quasiparticle.excessExcitationCounts.at(-1), oneParticleBandMinimum:e8Quasiparticle.oneParticleBand.minimumEnergyAboveProductVacuum, manyBodyGapAtWidthSix:e8Quasiparticle.manyBodyGaps.at(-1), thermodynamicGapCertified:false},
   e8LocalOperatorDictionary: {cutoff:e8Dictionary.settings.cutoff, localRoots:e8Dictionary.settings.roots, basisStates:e8Dictionary.settings.basisStates, reusableDictionaryCertified:true},
   quasicrystalBridge: {materialClasses:quasicrystal.factorialDesign.backplanes.length, relationPrograms:quasicrystal.factorialDesign.relationPrograms.length, devices:quasicrystal.factorialDesign.totalPrimaryDevices},
   nextGate: "controlled projected-chain lower bound or compressed larger widths -> full-charge comparison -> blinded backplane interaction -> rank-24 detector ladder -> orbifold witness"
