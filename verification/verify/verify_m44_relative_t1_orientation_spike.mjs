@@ -133,6 +133,14 @@ assert.equal(orientation.morphologyIdentifiesT1Orientation, false);
 assert.ok(Math.abs(orientation.isotropicUnorientedAxes3d.probabilityWithin10DegOf90 - Math.sin(Math.PI / 18)) < 1e-15);
 assert.equal(orientation.isotropicUnorientedAxes3d.probabilityAtExactly90, 0);
 assert.match(orientation.visibilityConstraint, /vanishes at 90 degrees/u);
+const slice = crossChannel.spiralInclinationSlicingTemplate;
+const geometry = slice.m44MeasuredGeometry;
+assert.ok(Math.abs(geometry.lineOfSightDiskInclinationDeg - (90 - Math.abs(geometry.centreGalacticLatitudeDeg))) < 1e-12);
+assert.ok(geometry.lineOfSightDiskInclinationDeg > 50 && geometry.lineOfSightDiskInclinationDeg < 70);
+assert.ok(geometry.tailTiltFromGalacticPlaneDeg < 5);
+assert.ok(slice.conditionalTailAsT1.angleFromDiskNormalDeg > 85);
+assert.match(slice.conditionalTailAsT1.status, /conditional only/u);
+assert.match(slice.interpretation, /cannot infer T1/u);
 
 if (process.argv.includes("--live")) {
   const response = await fetch(control.query);
@@ -167,6 +175,8 @@ console.log(JSON.stringify({
   alternativeTailShapesDistinguishableFromLinear: false,
   threeDimensionalResidualSlopeKmPerSecPerPc: tail3d.nominalResidualSlopeKmPerSecPerPc,
   morphologyIdentifiesT1Orientation: false,
+  m44SpiralInclinationSliceDeg: geometry.lineOfSightDiskInclinationDeg,
+  m44TailTiltFromGalacticPlaneDeg: geometry.tailTiltFromGalacticPlaneDeg,
   liveCatalogueVerified: process.argv.includes("--live"),
   constantAngleIdentifiable: false,
   modularAngleDefined: false,

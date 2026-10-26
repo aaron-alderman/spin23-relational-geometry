@@ -171,6 +171,39 @@
       "visibilityConstraint": "for q=0 direct overlap abs(cos(theta)) vanishes at 90 degrees; visible M44 disfavors exact orthogonality in the naive pure-projection model, while nonzero q or reciprocal boundary mixing can restore coupling",
       "verdict": "near-90 angles may have more prior measure under isotropic 3-D axes, but M44 morphology supplies no posterior preference and exact orthogonality requires an explicit mixing channel"
     },
+    "spiralInclinationSlicingTemplate": {
+      "convention": "external-galaxy inclination i=0 is face-on and i=90 is edge-on",
+      "projection": "cos(theta)=cos(i)cos(alpha)+sin(i)sin(alpha)cos(phi)",
+      "azimuthAveragedDirectOverlapRms": "sqrt(cos(i)^2 cos(alpha)^2 + 0.5 sin(i)^2 sin(alpha)^2)",
+      "m44MeasuredGeometry": {
+        "centreGalacticCartesianPc": [-140.30440037009524, -67.62375587555343, 98.66398795791221],
+        "centreGalacticLongitudeDeg": 205.73308413069736,
+        "centreGalacticLatitudeDeg": 32.35317845176942,
+        "centreDistancePc": 184.37158035252472,
+        "adoptedSolarGalactocentricRadiusKpc": 8.15,
+        "centreGalactocentricRadiusKpc": 8.290580198222226,
+        "lineOfSightDiskInclinationDeg": 57.64682154823058,
+        "tailAxisGalactic": [0.4343317987818506, 0.8992700803611013, -0.05166440955264834],
+        "tailTiltFromGalacticPlaneDeg": 2.9614710814431353,
+        "tailLineOfSightAcuteAngleDeg": 46.52780697528532
+      },
+      "conditionalTailAsT1": {
+        "status": "geometric conditional only; the tail axis is not identified with configuration T1",
+        "angleFromDiskNormalDeg": 87.03852891855686,
+        "actualDirectOverlapAbsCos": 0.6880024535760777,
+        "azimuthAveragedDirectOverlapRms": 0.5971820164421661
+      },
+      "placement": "M44 is an intermediate approximately 58-degree sightline slice in the Solar/Local-Arm radial neighbourhood; its reconstructed tail is nearly in the Galactic plane",
+      "controls": [
+        "disc inclination and position-angle uncertainty",
+        "finite disc thickness and intrinsic ellipticity",
+        "dust path length and selection with inclination",
+        "spiral morphology, pitch angle and radial position",
+        "stellar population, age and carrier consistency",
+        "embedded Milky Way vantage versus external-galaxy viewing geometry"
+      ],
+      "interpretation": "a multi-galaxy inclination surface can scan a declared projection law, but cannot infer T1 until the mapping between the candidate axis and ordinary disc geometry is independently specified"
+    },
     "authorityLimits": [
       "membership was preselected with convergent-point kinematics, so this is not independent discovery",
       "a constant spectroscopic offset still does not identify configuration T1",
@@ -209,6 +242,9 @@
     "https://doi.org/10.26093/cds/vizier.36270004",
     "https://gea.esac.esa.int/archive/",
     "https://doi.org/10.1051/0004-6361/202451650",
+    "https://arxiv.org/abs/1910.03357",
+    "https://doi.org/10.1051/0004-6361/202039751",
+    "https://doi.org/10.1111/j.1365-2966.2010.16335.x",
     "https://doi.org/10.1088/2041-8205/756/2/L33",
     "https://doi.org/10.1088/0004-637X/807/1/24",
     "https://doi.org/10.1088/0004-637X/775/1/58"

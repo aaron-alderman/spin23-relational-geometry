@@ -208,6 +208,34 @@ Near-perpendicular orientations occupy more solid angle: the probability of lyin
 
 Visibility adds a stronger constraint. In the minimal \(q=0\) projection, direct electromagnetic overlap is \(|\cos\theta|\), which vanishes at 90 degrees. A bright visible M44 therefore disfavors exact orthogonality under that naive pure-projection model. At 90 degrees the full declared kernel is \(\kappa=q\), so nonzero off-axis coupling or reciprocal boundary mixing can restore visibility. The required \(q\), boundary transport and carrier dependence must be predicted together; otherwise brightness simply fits another free parameter.
 
+## Spiral-galaxy inclination as a slicing template
+
+Spiral galaxies do provide a useful ordinary-geometry family of slices. Let \(i\) be the conventional disc inclination, with 0 degrees face-on and 90 degrees edge-on. Let a candidate axis make polar angle \(\alpha\) from the disc normal and azimuth \(\phi\) from the observer's tilt plane. Then
+
+\[
+\cos\theta
+=\cos i\cos\alpha+\sin i\sin\alpha\cos\phi.
+\]
+
+Across many galaxies, inclination can therefore scan a declared projection kernel while \(\alpha\), radius, morphology, dust, stellar population and carrier are held or modelled. If azimuth is unresolved, the corresponding root-mean-square direct overlap is
+
+\[
+\sqrt{\langle\cos^2\theta\rangle_\phi}
+=\sqrt{\cos^2i\cos^2\alpha+\tfrac12\sin^2i\sin^2\alpha}.
+\]
+
+This is a geometric slicing template, not yet a \(T_1\) measurement. Ordinary inclination is itself inferred from projected axis ratio under a finite-thickness model and becomes entangled with dust and morphology, especially toward edge-on views.
+
+The current Gaia reconstruction places M44 at heliocentric Galactic coordinates \((l,b)=(205.73,32.35)\) degrees and 184.37 pc. Adopting the 8.15 kpc Solar Galactocentric radius used by Reid et al. gives \(R\simeq8.29\) kpc: roughly the Solar/Local-Arm radial neighbourhood, though an old moving cluster is not a clean tracer of the present young arm ridge. Its sightline corresponds to an external-disc inclination analogue of
+
+\[
+i_{\rm slice}=90^\circ-|b|=57.65^\circ,
+\]
+
+so M44 occupies an intermediate, moderately inclined slice rather than either the face-on or edge-on limit.
+
+The reconstructed tail axis is only 2.96 degrees from the Galactic plane and 46.53 degrees from our line of sight. Consequently, **if and only if** the tail axis were used as a surrogate for \(T_1\), it would sit 87.04 degrees from the Galactic disc normal: tantalisingly close to perpendicular. That is a conditional coordinate placement, not an identification. At M44's actual azimuth the minimal direct overlap would be \(|\cos\theta|=0.688\); averaging over an unknown azimuth at the same \((i,\alpha)\) gives an RMS overlap of 0.597. The useful result is therefore a precise place to mark M44 on an inclination surface, together with the assumption that creates the near-90-degree reading.
+
 ## What the present evidence says
 
 M44 is an attractive calibration ensemble, but the current corpus supplies neither a source-derived \(T_1\)-to-observable map nor a physical law assigning separate \(T_1\) orientations to nearby stellar systems. Praesepe lies within the Milky Way and its established literature treats its spectra, age, chemistry, planets and tails with ordinary stellar and Galactic dynamics.
@@ -231,6 +259,9 @@ This is a useful negative result. It converts “perhaps their axis is tilted”
 - Röser and Schilbach, [VizieR catalogue J/A+A/627/A4](https://doi.org/10.26093/cds/vizier.36270004).
 - ESA, [Gaia Archive](https://gea.esac.esa.int/archive/), Gaia DR3 source and DR2-neighbourhood tables.
 - E. Schilbach and S. Röser, [*Dynamical model of Praesepe and its tidal tails*](https://doi.org/10.1051/0004-6361/202451650), *Astronomy & Astrophysics* (2025).
+- M. J. Reid et al., [*Trigonometric Parallaxes of High-Mass Star-Forming Regions: Our View of the Milky Way*](https://arxiv.org/abs/1910.03357), *The Astrophysical Journal* **885** (2019), 131.
+- H. Monteiro et al., [*Milky Way spiral arms from open clusters in Gaia EDR3*](https://doi.org/10.1051/0004-6361/202039751), *Astronomy & Astrophysics* **655** (2021), A44.
+- K. L. Masters et al., [*Galaxy Zoo: dust in spiral galaxies*](https://doi.org/10.1111/j.1365-2966.2010.16335.x), *Monthly Notices of the Royal Astronomical Society* **404** (2010), 792.
 - S. N. Quinn et al., [*Two “b”s in the Beehive: The Discovery of the First Hot Jupiters in an Open Cluster*](https://doi.org/10.1088/2041-8205/756/2/L33), *The Astrophysical Journal Letters* **756** (2012), L33.
 - T. D. Brandt and C. X. Huang, [*The Age and Age Spread of the Praesepe and Hyades Clusters*](https://doi.org/10.1088/0004-637X/807/1/24), *The Astrophysical Journal* **807** (2015), 24.
 - A. M. Boesgaard, B. Roper and D. Lum, [*The Chemical Composition of Praesepe (M44)*](https://doi.org/10.1088/0004-637X/775/1/58), *The Astrophysical Journal* **775** (2013), 58.

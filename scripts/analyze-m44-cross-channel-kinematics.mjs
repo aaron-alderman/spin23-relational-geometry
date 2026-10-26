@@ -46,6 +46,15 @@ const basisAt = (raDeg, decDeg) => {
 
 const dot = (left, right) => left.reduce((sum, value, index) => sum + value * right[index], 0);
 
+const icrsToGalacticMatrix = [
+  [-0.0548755604, -0.8734370902, -0.4838350155],
+  [0.4941094279, -0.4448296300, 0.7469822445],
+  [-0.8676661490, -0.1980763734, 0.4559837762]
+];
+const icrsToGalactic = vector => icrsToGalacticMatrix.map(row => dot(row, vector));
+const degrees = angle => angle * 180 / Math.PI;
+const acuteAxisAngleDeg = (left, right) => degrees(Math.acos(Math.min(1, Math.abs(dot(left, right)))));
+
 const principalAxis = rows => {
   const meanRa = rows.reduce((sum, row) => sum + row.ra, 0) / rows.length;
   const meanDec = rows.reduce((sum, row) => sum + row.dec, 0) / rows.length;
@@ -720,6 +729,27 @@ const shapeTournament = process.argv.includes("--quick")
   : crossValidatedShapeTournament(fullBaselineResidualRows);
 const threeDimensionalTail = summarize3dTail(fullBaselineResidualRows);
 const centre = basisAt(medianRa, medianDec).radial;
+const centreGalacticPc = icrsToGalactic(tail3d.centre);
+const tailAxisGalactic = icrsToGalactic(tail3d.vector);
+const centreDistancePc = Math.hypot(...centreGalacticPc);
+const centreDirectionGalactic = centreGalacticPc.map(value => value / centreDistancePc);
+const centreGalacticLongitudeDeg = ((degrees(Math.atan2(centreGalacticPc[1], centreGalacticPc[0])) % 360) + 360) % 360;
+const centreGalacticLatitudeDeg = degrees(Math.asin(centreDirectionGalactic[2]));
+const lineOfSightDiskInclinationDeg = 90 - Math.abs(centreGalacticLatitudeDeg);
+const tailTiltFromGalacticPlaneDeg = degrees(Math.asin(Math.abs(tailAxisGalactic[2])));
+const conditionalTailAsT1AngleFromDiskNormalDeg = 90 - tailTiltFromGalacticPlaneDeg;
+const tailLineOfSightAcuteAngleDeg = acuteAxisAngleDeg(tailAxisGalactic, centreDirectionGalactic);
+const radiansLineOfSightInclination = radians(lineOfSightDiskInclinationDeg);
+const radiansConditionalT1Angle = radians(conditionalTailAsT1AngleFromDiskNormalDeg);
+const azimuthAveragedDirectOverlapRms = Math.sqrt(
+  Math.cos(radiansLineOfSightInclination) ** 2 * Math.cos(radiansConditionalT1Angle) ** 2 +
+  0.5 * Math.sin(radiansLineOfSightInclination) ** 2 * Math.sin(radiansConditionalT1Angle) ** 2
+);
+const solarGalactocentricRadiusKpc = 8.15;
+const centreGalactocentricRadiusKpc = Math.hypot(
+  solarGalactocentricRadiusKpc - centreGalacticPc[0] / 1000,
+  centreGalacticPc[1] / 1000
+);
 const gaiaJoinedDataSha256 = createHash("sha256").update(JSON.stringify(joined.map(row => ({
   dr2SourceId: row.dr2SourceId,
   dr3SourceId: row.dr3SourceId,
@@ -777,6 +807,24 @@ console.log(JSON.stringify({
     axisIcrs: tail3d.vector,
     centreIcrsPc: tail3d.centre,
     ...threeDimensionalTail
+  },
+  spiralInclinationSlice: {
+    centreGalacticCartesianPc: centreGalacticPc,
+    centreGalacticLongitudeDeg,
+    centreGalacticLatitudeDeg,
+    centreDistancePc,
+    adoptedSolarGalactocentricRadiusKpc: solarGalactocentricRadiusKpc,
+    centreGalactocentricRadiusKpc,
+    lineOfSightDiskInclinationDeg,
+    tailAxisGalactic,
+    tailTiltFromGalacticPlaneDeg,
+    tailLineOfSightAcuteAngleDeg,
+    conditionalTailAsT1: {
+      angleFromDiskNormalDeg: conditionalTailAsT1AngleFromDiskNormalDeg,
+      actualDirectOverlapAbsCos: Math.abs(dot(tailAxisGalactic, centreDirectionGalactic)),
+      azimuthAveragedDirectOverlapRms
+    },
+    convention: "external-galaxy inclination i=0 is face-on and i=90 is edge-on; the tail-as-T1 values are a geometric conditional, not an identification"
   },
   falsifierBoundary: {
     independentDiscovery: false,
