@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "translation-free-e8-coupled-wire-tomography-v1",
+  "date": "2026-10-26",
+  "status": "exact continuum-local coupled-wire and current-tomography certificate",
+  "carrier": {
+    "targetForm": "E8 Cartan matrix",
+    "rank": 8,
+    "wires": 7,
+    "modesPerWire": 16,
+    "wireForm": "+E8 direct-sum -E8",
+    "interactions": 48,
+    "interactionRule": "(K e_I) on R_y plus (K e_I) on L_(y+1)",
+    "localityGraph": "open path with irregular embedded spacings"
+  },
+  "disorder": {
+    "seed": 823234,
+    "positions": [0, 0.847681936971, 1.989066025126, 3.303649611399, 4.512837897474, 5.209965081257, 6.300798840751],
+    "minimumCoupling": 0.354752631881,
+    "translationSymmetry": false,
+    "openStrongCouplingCondition": "all 48 pinning amplitudes remain strictly positive"
+  },
+  "boundary": {
+    "left": {"form": "-E8", "modes": 8},
+    "right": {"form": "+E8", "modes": 8},
+    "totalUngappedModes": 16,
+    "anyonQuotientOrder": 1,
+    "oneEdgeChiralCentralChargeMagnitude": 8
+  },
+  "tomography": {
+    "trainingRecord": "8x8 simple-current OPE exponent matrix K_E8",
+    "inference": "the measured integral Gram matrix is even, positive and unimodular; its Weyl closure supplies the E8 root shell",
+    "heldOutPredictions": {
+      "normTwoCurrents": 240,
+      "allScalingWeights": 1,
+      "test": "withhold nonsimple root sources, reconstruct them by Weyl reflections, then compare measured short-distance exponents and resonance locations"
+    },
+    "orderedDistinctRootPairInnerProducts": {
+      "-2": 240,
+      "-1": 13440,
+      "0": 30240,
+      "1": 13440
+    }
+  },
+  "claimBoundary": {
+    "closed": [
+      "finite source-native E8 coupled-wire interaction schedule",
+      "mutual Haldane-null condition",
+      "irregular transverse geometry and positive nonuniform coupling realization",
+      "two opposite E8 boundaries by exact mode count",
+      "E8-specific 240-current held-out tomography target"
+    ],
+    "microscopicFewBodyHardwareClosed": false,
+    "thermodynamicGapClosed": false,
+    "randomConnectivityClosed": false,
+    "warning": "The null-vector strong-coupling construction is continuum-local and target-native. It is not yet a few-body lattice Hamiltonian or a numerical thermodynamic gap proof."
+  },
+  "externalAnchors": [
+    {"title": "A non-Abelian twist to integer quantum Hall states", "url": "https://arxiv.org/abs/1901.09043"},
+    {"title": "Partial fillings of the bosonic E8 quantum Hall state", "doi": "10.1103/PhysRevB.108.035136"}
+  ]
+}

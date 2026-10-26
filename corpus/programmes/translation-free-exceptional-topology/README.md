@@ -12,6 +12,8 @@
 
 **First exceptional layer:** [translation-free E8 edge protocol](E8_EDGE_PROTOCOL.md)
 
+**Derived exceptional layer:** [translation-free E8 coupled-wire and held-out tomography protocol](E8_COUPLED_WIRE_TOMOGRAPHY.md)
+
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
 
 ## Research question
@@ -145,11 +147,14 @@ spectral-localizer index at jitter strengths \(0,0.10,0.25,0.40\). Both retain
 one nontrivial class and both gaps remain open. This is structural disorder on
 a fixed locality graph, not yet a fully random graph.
 
-The first exceptional layer is also exact at effective-edge level. The E8
-Cartan form defines an eight-channel bosonic invertible edge; arbitrary
-positive spatially varying interaction matrices preserve co-propagation and
-\(c_-=8\). The microscopic random-point bulk and E8-specific current/OPE
-detector remain the next join.
+The first exceptional layer is exact first at effective-edge level and now at
+continuum-local coupled-wire level. The E8 Cartan form defines an eight-channel
+bosonic invertible edge; arbitrary positive spatially varying interaction
+matrices preserve co-propagation and \(c_-=8\). A seven-wire irregular array
+with 48 mutually null interactions derives opposite E8 boundaries, while an
+eight-simple-current training record predicts the complete held-out 240-root
+shell. A few-body microscopic carrier, thermodynamic gap scaling and random
+connectivity remain open.
 
 At rank 24, the first blind detector has now been identified exactly. Thermal
 and bulk data collide, but the weight-one current dimensions are 744, 24 and 0
@@ -159,8 +164,8 @@ branch proceeds to the existing Griess, marked-defect and sewing witness stack.
 1. Apply a spectral-localizer/Bott pipeline to a controlled crystalline-to-
    amorphous Hamiltonian family and record where response, real-space index and
    mobility gap separate.
-2. Build a disordered coupled-wire or resonator model of the \(E_8\) edge and
-   test whether \(c_-=8\) survives after translation symmetry is removed.
+2. Compile the certified E8 coupled-wire cosine schedule into bounded-degree
+   few-body controls and test its gap versus width and disorder.
 3. Run the rank-24 blind-detector problem: give an inference process only bulk
    response first, then current, defect and OPE channels, and measure the first
    channel that separates \(E_8^3\), a rooted Niemeier theory and Leech.

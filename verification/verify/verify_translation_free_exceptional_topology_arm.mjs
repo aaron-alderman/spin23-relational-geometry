@@ -4,6 +4,7 @@ import fs from "node:fs";
 const load = name => JSON.parse(fs.readFileSync(new URL(`../../evidence/data/${name}`, import.meta.url), "utf8"));
 const arm = load("translation-free-exceptional-topology-arm-v1.json");
 const leechRecord = load("leech-explicit-k-matrix-v1.json");
+const e8Wire = load("translation-free-e8-coupled-wire-tomography-v1.json");
 
 const E8 = [
   [2,-1,0,0,0,0,0,0],
@@ -83,6 +84,11 @@ assert.deepEqual(arm.structuralDisorderSeed.bottIndices, [1,1,1,1]);
 assert.deepEqual(arm.structuralDisorderSeed.spectralLocalizerIndices, [-1,-1,-1,-1]);
 assert.ok(arm.structuralDisorderSeed.periodicSpectralGaps.every(gap => gap > 1.5));
 assert.ok(arm.structuralDisorderSeed.localizerGaps.every(gap => gap > 0.7));
+assert.equal(arm.e8CoupledWireSeed.evidence, "translation-free-e8-coupled-wire-tomography-v1.json");
+assert.equal(e8Wire.carrier.interactions, 8 * (e8Wire.carrier.wires - 1));
+assert.equal(e8Wire.boundary.totalUngappedModes, 16);
+assert.equal(e8Wire.tomography.heldOutPredictions.normTwoCurrents, 240);
+assert.equal(e8Wire.claimBoundary.microscopicFewBodyHardwareClosed, false);
 
 console.log(JSON.stringify({
   status: "PASS",
@@ -91,5 +97,6 @@ console.log(JSON.stringify({
   boundarySeparation: {E8CubedNormTwoRoots:720, LeechNormTwoRoots:0},
   translationFreeSeed: {disorderStrengths:arm.computationalSeed.onsiteDisorderStrengths, bottIndices:arm.computationalSeed.bottIndices},
   structuralSeed: {jitterStrengths:arm.structuralDisorderSeed.jitterStrengths, bottIndices:arm.structuralDisorderSeed.bottIndices, localizerIndices:arm.structuralDisorderSeed.spectralLocalizerIndices},
-  nextGate: "real-space invariant -> disordered E8 edge -> rank-24 detector ladder -> orbifold witness"
+  e8CoupledWireSeed: {wires:e8Wire.carrier.wires, nullInteractions:e8Wire.carrier.interactions, heldOutRoots:e8Wire.tomography.heldOutPredictions.normTwoCurrents},
+  nextGate: "few-body E8 gap scaling -> rank-24 detector ladder -> orbifold witness"
 }));
