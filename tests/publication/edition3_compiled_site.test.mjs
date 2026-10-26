@@ -110,6 +110,17 @@ test("short articles are discoverable, shareable and machine-readable without du
     assert.match(html, bodyPattern, slug);
     assert.match(html, sourcePattern, slug);
   }
+
+  const lithium = readFileSync(join(siteRoot, "articles", "lithium-niobate-relational-workbench.html"), "utf8");
+  const experiment = /<h2 id="a-practical-experiment-for-the-corpus">[\s\S]*?<h2 id="what-the-material-changes">/u.exec(lithium)?.[0] || "";
+  assert.equal([...experiment.matchAll(/<ol(?:\s[^>]*)?>/gu)].length, 1, "the six-step experiment must be one ordered list");
+  assert.equal([...experiment.matchAll(/<li>/gu)].length, 6, "the experiment must retain all six list items");
+  assert.match(experiment, /<li>Fabricate or select[\s\S]*?optical or synthetic-frequency modes\.<\/li>/u);
+  assert.match(experiment, /<li>Retain a coherent reference[\s\S]*?not intensity alone\.<\/li>/u);
+
+  const signatures = readFileSync(join(siteRoot, "articles", "typed-object-signatures.html"), "utf8");
+  assert.match(signatures, /<li>whether the object is an observation, claim, objection, inference, or recommendation;<\/li>/u, "wrapped unordered items must remain inside one list item");
+  assert.match(signatures, /<li>physics without epistemic typing can overstate what a mathematical isomorphism establishes;<\/li>/u, "wrapped unordered article prose must not become a detached paragraph");
 });
 
 test("every corpus Markdown source has a provenance-stamped compiled library page", () => {

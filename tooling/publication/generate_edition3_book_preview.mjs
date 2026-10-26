@@ -1703,6 +1703,7 @@ const renderMarkdown = (markdown, source, fromFile = sourceOutputPath(source)) =
   let paragraph = [];
   let listType = null;
   let listItems = [];
+  let orderedListStart = 1;
   let quote = [];
   let fence = null;
   let fenceMarker = null;
@@ -1711,7 +1712,15 @@ const renderMarkdown = (markdown, source, fromFile = sourceOutputPath(source)) =
   let displayMathLines = [];
   let recoverDisplayMath = false;
   const flushParagraph = () => { if (paragraph.length) blocks.push(`<p>${inlineMarkdown(paragraph.join(" "), source, fromFile)}</p>`); paragraph = []; };
-  const flushList = () => { if (listType) blocks.push(`<${listType}>${listItems.map(item => `<li>${inlineMarkdown(item, source, fromFile)}</li>`).join("")}</${listType}>`); listType = null; listItems = []; };
+  const flushList = () => {
+    if (listType) {
+      const start = listType === "ol" && orderedListStart !== 1 ? ` start="${orderedListStart}"` : "";
+      blocks.push(`<${listType}${start}>${listItems.map(item => `<li>${inlineMarkdown(item, source, fromFile)}</li>`).join("")}</${listType}>`);
+    }
+    listType = null;
+    listItems = [];
+    orderedListStart = 1;
+  };
   const flushQuote = () => { if (quote.length) blocks.push(`<blockquote>${renderMarkdown(quote.join("\n"), source, fromFile)}</blockquote>`); quote = []; };
   for (let lineIndex = 0; lineIndex < lines.length; lineIndex += 1) {
     const line = lines[lineIndex];
@@ -1779,9 +1788,19 @@ const renderMarkdown = (markdown, source, fromFile = sourceOutputPath(source)) =
       flushParagraph(); flushQuote();
       const nextType = unordered ? "ul" : "ol";
       if (listType && listType !== nextType) flushList();
+      if (!listType && ordered) orderedListStart = Number(/^\s*(\d+)/u.exec(line)[1]);
       listType = nextType; listItems.push((unordered || ordered)[1]); continue;
     }
     if (!line.trim()) { flushParagraph(); flushList(); flushQuote(); continue; }
+    // CommonMark permits both indented and lazy continuation lines inside a
+    // list item. Keep every ordinary non-blank line with the active item until
+    // a real block boundary or the next marker appears. Previously wrapped
+    // source lines became standalone paragraphs, closing and restarting the
+    // list so every rendered item appeared as number 1.
+    if (listType) {
+      listItems[listItems.length - 1] += ` ${line.trim()}`;
+      continue;
+    }
     flushList(); flushQuote(); paragraph.push(line.trim());
   }
   if (fence) blocks.push(`<pre><code class="language-${esc(fence)}">${esc(fenceLines.join("\n"))}</code></pre>`);
