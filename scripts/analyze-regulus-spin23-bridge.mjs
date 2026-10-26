@@ -278,6 +278,37 @@ for(const matrix of group){
 }
 if(cliqueOrbit.size!==fiveCliques.length)throw new Error("five-clique action is not transitive");
 const ellipticSections=sectionsBySize[10];
+const planeNonzeroVectors=plane=>{
+  const [u,v]=plane,output=new Set();
+  for(let a=0;a<q;a+=1)for(let b=0;b<q;b+=1){
+    if(a===0&&b===0)continue;
+    output.add(u.map((value,index)=>mod(a*value+b*v[index])).join(""));
+  }
+  return output;
+};
+const ellipticSpreadCertificates=ellipticSections.map(section=>{
+  const planes=section.points.map(point=>pointToPlane.get(point));
+  const pairwiseIntersectionDimensions=[];
+  for(const [left,right] of combinations(planes,2))pairwiseIntersectionDimensions.push(4-rank([...left,...right]));
+  const coveredNonzeroVectors=new Set();
+  for(const plane of planes)for(const vector of planeNonzeroVectors(plane))coveredNonzeroVectors.add(vector);
+  return {
+    lagrangianPlanes:planes.length,
+    vectorsPerPlane:[...new Set(planes.map(plane=>planeNonzeroVectors(plane).size))],
+    pairwiseIntersectionDimensions:[...new Set(pairwiseIntersectionDimensions)].sort((a,b)=>a-b),
+    coveredNonzeroVectors:coveredNonzeroVectors.size,
+  };
+});
+const ellipticSpreadTypes=[...new Set(ellipticSpreadCertificates.map(certificate=>JSON.stringify(certificate)))].map(value=>JSON.parse(value));
+if(ellipticSpreadTypes.length!==1||ellipticSpreadTypes[0].lagrangianPlanes!==10||ellipticSpreadTypes[0].vectorsPerPlane.join(",")!=="8"||ellipticSpreadTypes[0].pairwiseIntersectionDimensions.join(",")!=="0"||ellipticSpreadTypes[0].coveredNonzeroVectors!==80){
+  throw new Error(`elliptic sections are not symplectic spreads: ${JSON.stringify(ellipticSpreadTypes)}`);
+}
+const ellipticPointIntersectionDistribution={},ellipticPointIntersectionDegrees={};
+for(let i=0;i<ellipticSections.length;i+=1)for(let j=i+1;j<ellipticSections.length;j+=1){
+  const intersection=ellipticSections[i].points.filter(point=>ellipticSections[j].points.includes(point)).length;
+  ellipticPointIntersectionDistribution[intersection]=(ellipticPointIntersectionDistribution[intersection]??0)+1;
+}
+for(const intersection of Object.keys(ellipticPointIntersectionDistribution))ellipticPointIntersectionDegrees[intersection]=[...new Set(ellipticSections.map((section,i)=>ellipticSections.filter((other,j)=>i!==j&&section.points.filter(point=>other.points.includes(point)).length===Number(intersection)).length))].sort((a,b)=>a-b);
 const ellipticKey=section=>section.points.join("|");
 const ellipticIndexByKey=new Map(ellipticSections.map((section,index)=>[ellipticKey(section),index]));
 const actElliptic=(matrix,index)=>ellipticIndexByKey.get(ellipticSections[index].points.map(point=>actPoint(matrix,point)).sort().join("|"));
@@ -331,11 +362,27 @@ for(const selection of doubleSixSelections){
 }
 if(sixes.size!==72)throw new Error(`six-line row reconstruction failed: ${sixes.size}`);
 const doubleSixIntersectionDistribution={},doubleSixIntersectionDegrees={};
+const spreadDoubleSixIntersectionContingency={};
 for(let i=0;i<doubleSixSelections.length;i+=1)for(let j=i+1;j<doubleSixSelections.length;j+=1){
   const intersection=doubleSixSelections[i].filter(line=>doubleSixSelections[j].includes(line)).length;
+  const spreadIntersection=ellipticSections[i].points.filter(point=>ellipticSections[j].points.includes(point)).length;
   doubleSixIntersectionDistribution[intersection]=(doubleSixIntersectionDistribution[intersection]??0)+1;
+  const jointKey=`${spreadIntersection} common bases / ${intersection} common cubic lines`;
+  spreadDoubleSixIntersectionContingency[jointKey]=(spreadDoubleSixIntersectionContingency[jointKey]??0)+1;
 }
 for(const intersection of Object.keys(doubleSixIntersectionDistribution))doubleSixIntersectionDegrees[intersection]=[...new Set(doubleSixSelections.map((selection,i)=>doubleSixSelections.filter((other,j)=>i!==j&&selection.filter(line=>other.includes(line)).length===Number(intersection)).length))].sort((a,b)=>a-b);
+const spreadFourOverlapAdjacency=ellipticSections.map((section,i)=>ellipticSections.map((other,j)=>i!==j&&section.points.filter(point=>other.points.includes(point)).length===4));
+const spreadFourOverlapDegrees=spreadFourOverlapAdjacency.map(row=>row.filter(Boolean).length);
+const spreadFourOverlapAdjacentCommon=[],spreadFourOverlapNonadjacentCommon=[];
+for(let i=0;i<ellipticSections.length;i+=1)for(let j=i+1;j<ellipticSections.length;j+=1){
+  const common=spreadFourOverlapAdjacency[i].filter((adjacent,k)=>adjacent&&spreadFourOverlapAdjacency[j][k]).length;
+  (spreadFourOverlapAdjacency[i][j]?spreadFourOverlapAdjacentCommon:spreadFourOverlapNonadjacentCommon).push(common);
+}
+const spreadOverlapAssociationScheme={
+  fourBasisGraphParameters:[ellipticSections.length,...new Set(spreadFourOverlapDegrees),...new Set(spreadFourOverlapAdjacentCommon),...new Set(spreadFourOverlapNonadjacentCommon)],
+  oneBasisComplementParameters:[ellipticSections.length,ellipticSections.length-1-spreadFourOverlapDegrees[0],...new Set(spreadFourOverlapNonadjacentCommon.map(value=>ellipticSections.length-2-2*spreadFourOverlapDegrees[0]+value)),...new Set(spreadFourOverlapAdjacentCommon.map(value=>ellipticSections.length-2*spreadFourOverlapDegrees[0]+value))],
+};
+if(spreadOverlapAssociationScheme.fourBasisGraphParameters.join(",")!=="36,15,6,6"||spreadOverlapAssociationScheme.oneBasisComplementParameters.join(",")!=="36,20,10,12")throw new Error(`spread overlap association scheme failed: ${JSON.stringify(spreadOverlapAssociationScheme)}`);
 const doubleSixIndexByKey=new Map(doubleSixSelections.map((selection,index)=>[[...selection].sort((a,b)=>a-b).join(","),index]));
 const azygeticTriadKeys=new Set(),azygeticClosureFailures=[];
 for(let left=0;left<doubleSixSelections.length;left+=1)for(let right=left+1;right<doubleSixSelections.length;right+=1){
@@ -503,6 +550,11 @@ const record={
     },
     reconstructedThirtySix:{
       ellipticSections:ellipticSections.length,
+      symplecticSpreadCertificate:ellipticSpreadTypes[0],
+      spreadPairIntersectionDistribution:ellipticPointIntersectionDistribution,
+      spreadPairIntersectionDegrees:ellipticPointIntersectionDegrees,
+      symplecticSpreadInterpretation:"Each 10-point elliptic section is an ovoid of Q(4,3). Under the Lagrangian dictionary its ten pairwise-disjoint Lagrangian planes partition all 80 nonzero vectors of F_3^4, so it is a symplectic spread. In the standard two-qutrit Pauli representation those ten maximal commuting classes yield a complete set of ten stabilizer mutually unbiased bases.",
+      polarDualityBoundary:"This does not contradict finiteCarrier.spreads.count = 0: there is no spread made from the forty lines of Q(4,3), whereas these are 10-point ovoids of Q(4,3), equivalently spreads made from ten Lagrangian planes in the original W(3,3) phase space.",
       ellipticStabilizerOrbitOnTwentySeven:stabilizerCliqueOrbits.map(orbit=>orbit.length),
       incidencePairs:doubleSixRelation.size,
       linesPerEllipticSection:linesPerDoubleSix,
@@ -512,6 +564,8 @@ const record={
       sixLineRows:sixes.size,
       pairIntersectionDistribution:doubleSixIntersectionDistribution,
       pairIntersectionDegrees:doubleSixIntersectionDegrees,
+      spreadDoubleSixIntersectionContingency,
+      spreadOverlapAssociationScheme,
       syzygeticPairs:doubleSixIntersectionDistribution[4],
       azygeticPairs:doubleSixIntersectionDistribution[6],
       azygeticTriads:azygeticTriads.length,

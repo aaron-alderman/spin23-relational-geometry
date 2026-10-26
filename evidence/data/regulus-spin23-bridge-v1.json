@@ -94,6 +94,30 @@
     },
     "reconstructedThirtySix": {
       "ellipticSections": 36,
+      "symplecticSpreadCertificate": {
+        "lagrangianPlanes": 10,
+        "vectorsPerPlane": [
+          8
+        ],
+        "pairwiseIntersectionDimensions": [
+          0
+        ],
+        "coveredNonzeroVectors": 80
+      },
+      "spreadPairIntersectionDistribution": {
+        "1": 360,
+        "4": 270
+      },
+      "spreadPairIntersectionDegrees": {
+        "1": [
+          20
+        ],
+        "4": [
+          15
+        ]
+      },
+      "symplecticSpreadInterpretation": "Each 10-point elliptic section is an ovoid of Q(4,3). Under the Lagrangian dictionary its ten pairwise-disjoint Lagrangian planes partition all 80 nonzero vectors of F_3^4, so it is a symplectic spread. In the standard two-qutrit Pauli representation those ten maximal commuting classes yield a complete set of ten stabilizer mutually unbiased bases.",
+      "polarDualityBoundary": "This does not contradict finiteCarrier.spreads.count = 0: there is no spread made from the forty lines of Q(4,3), whereas these are 10-point ovoids of Q(4,3), equivalently spreads made from ten Lagrangian planes in the original W(3,3) phase space.",
       "ellipticStabilizerOrbitOnTwentySeven": [
         12,
         15
@@ -118,6 +142,24 @@
         ],
         "6": [
           20
+        ]
+      },
+      "spreadDoubleSixIntersectionContingency": {
+        "1 common bases / 6 common cubic lines": 360,
+        "4 common bases / 4 common cubic lines": 270
+      },
+      "spreadOverlapAssociationScheme": {
+        "fourBasisGraphParameters": [
+          36,
+          15,
+          6,
+          6
+        ],
+        "oneBasisComplementParameters": [
+          36,
+          20,
+          10,
+          12
         ]
       },
       "syzygeticPairs": 270,

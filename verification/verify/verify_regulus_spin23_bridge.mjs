@@ -24,6 +24,15 @@ assert.deepEqual(record.hyperplaneSections.reconstructedTwentySeven.sectionsPerC
 assert.deepEqual(record.hyperplaneSections.reconstructedTwentySeven.cliquesPerSection,[3]);
 assert.deepEqual(record.hyperplaneSections.reconstructedTwentySeven.cliquesPerAdjacentPair,[1]);
 assert.equal(record.hyperplaneSections.reconstructedThirtySix.ellipticSections,36);
+assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.symplecticSpreadCertificate,{
+  lagrangianPlanes:10,
+  vectorsPerPlane:[8],
+  pairwiseIntersectionDimensions:[0],
+  coveredNonzeroVectors:80,
+});
+assert.match(record.hyperplaneSections.reconstructedThirtySix.symplecticSpreadInterpretation,/complete set of ten stabilizer mutually unbiased bases/);
+assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.spreadPairIntersectionDistribution,{1:360,4:270});
+assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.spreadPairIntersectionDegrees,{1:[20],4:[15]});
 assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.ellipticStabilizerOrbitOnTwentySeven,[12,15]);
 assert.equal(record.hyperplaneSections.reconstructedThirtySix.incidencePairs,432);
 assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.linesPerEllipticSection,[12]);
@@ -32,6 +41,14 @@ assert.equal(record.hyperplaneSections.reconstructedThirtySix.verifiedForAllElli
 assert.equal(record.hyperplaneSections.reconstructedThirtySix.sixLineRows,72);
 assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.pairIntersectionDistribution,{4:270,6:360});
 assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.pairIntersectionDegrees,{4:[15],6:[20]});
+assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.spreadDoubleSixIntersectionContingency,{
+  "1 common bases / 6 common cubic lines":360,
+  "4 common bases / 4 common cubic lines":270,
+});
+assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.spreadOverlapAssociationScheme,{
+  fourBasisGraphParameters:[36,15,6,6],
+  oneBasisComplementParameters:[36,20,10,12],
+});
 assert.equal(record.hyperplaneSections.reconstructedThirtySix.azygeticTriads,120);
 assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.azygeticPairClosureMultiplicity,[1]);
 assert.equal(record.hyperplaneSections.reconstructedForty.steinerTrihedralPairs,120);
@@ -78,6 +95,7 @@ console.log(JSON.stringify({
   closure:"three lines recover exactly the opposite four-line regulus",
   graph:"section graph is SRG(45,12,3,3)",
   exceptional:"the carrier reconstructs 27 lines, 36 double-sixes, 40 Steiner triads and 45 tritangents",
+  quantum:"each double-six label also selects a 10-plane symplectic spread and hence a complete two-qutrit stabilizer-MUB package",
   symmetry:"an anti-symplectic similitude completes PSp(4,3) to the order-51840 W(E6) action",
   hecke:"432 double-six/line flags form W(E6)/S5 with orbital rank 26",
   nearMiss:"240 trihedra have the right 40x3x2 typing but the wrong PSp(4,3) orbit structure for the phase fibers",

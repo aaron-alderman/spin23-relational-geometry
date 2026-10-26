@@ -11241,6 +11241,19 @@ transitive on the trihedra and has three 80-orbits on the phase-fiber product.
 The regulus route therefore completes the finite \(E_6\) incidence story while
 strengthening, rather than evading, the \(E_8\) representation boundary.
 
+The 36 elliptic sections also close a previously implicit quantum-information
+branch. Each is a ten-point ovoid of \(Q(4,3)\), hence ten pairwise-disjoint
+Lagrangian planes partitioning the 80 nonzero vectors of
+\(\mathbb F_3^4\). It is therefore a symplectic spread. Under the two-qutrit
+Pauli dictionary, those planes are ten maximal commuting classes whose joint
+eigenbases form a complete stabilizer MUB. The same 36-object orbit is thus
+simultaneously the double-six carrier and the carrier of labelled complete
+two-qutrit measurement frames. Moreover, the two double-six relations become
+an exact measurement-frame overlap algebra: the 270 syzygetic pairs share
+four bases, while the 360 azygetic pairs share one, and every azygetic pair
+retains its unique ternary closure. This is an exact dictionary, not a
+derivation of quantum mechanics or a dynamical rule selecting one frame.
+
 See [Regulus closure bridge](../../programmes/regulus-closure-bridge/README.md).
 
 ### 20.429 The five Furey support fields present the rank-four spinor before the rank-five vector

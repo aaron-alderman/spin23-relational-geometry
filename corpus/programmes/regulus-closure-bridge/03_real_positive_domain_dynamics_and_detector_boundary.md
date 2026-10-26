@@ -132,6 +132,15 @@ This is a geometry/detector protocol, not yet a proposed fundamental-force
 experiment. The corpus currently contains no physical system in which the
 measured observables are forced to be these projective lines.
 
+There is now a fully finite detector analogue. Each of the 36 elliptic
+sections is a symplectic spread and therefore a complete two-qutrit
+stabilizer-MUB frame. Two frames share either four bases (the syzygetic
+relation) or one basis (the azygetic relation). A two-qutrit implementation
+can consequently test the incidence law directly through calibrated
+commuting Pauli contexts and transition probabilities. That would verify the
+finite carrier realization, not the real Plücker lift or a fundamental
+interaction. See [the spread/MUB completion](05_double_sixes_symplectic_spreads_and_two_qutrit_mubs.md).
+
 ## 6. Relation to the existing dynamics lanes
 
 The regulus bridge joins rather than replaces four established results:

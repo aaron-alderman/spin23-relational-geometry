@@ -33,6 +33,10 @@ The executable calculation over \(\mathbb F_3\) finds:
 - 36 elliptic sections whose stabilizers split the 27 lines as \(12+15\),
   with each 12 forming \(K_{6,6}\) minus a perfect matching: the 36 classical
   double-sixes;
+- the same 36 elliptic sections as ten-plane symplectic spreads, hence as 36
+  labelled complete stabilizer-MUB frames for the two-qutrit carrier;
+- an exact measurement-frame overlap algebra: 270 pairs share four bases and
+  360 pairs share one, matching the syzygetic/azygetic double-six split;
 - 120 Steiner trihedral pairs and 40 Steiner triads, equivariantly identified
   with the 40 Lagrangian points;
 - an anti-symplectic outer involution completing the finite action to the full
@@ -69,6 +73,7 @@ Continue through:
 - [Full E₆ completion, the 432-point Hecke carrier and the 240-object boundary](02_full_e6_completion_hecke_carrier_and_240_boundary.md)
 - [Real positive-domain, dynamics and detector boundary](03_real_positive_domain_dynamics_and_detector_boundary.md)
 - [Regulus programme exhaustion ledger](04_regulus_exhaustion_ledger.md)
+- [Double-sixes, symplectic spreads and complete two-qutrit measurements](05_double_sixes_symplectic_spreads_and_two_qutrit_mubs.md)
 
 ## Authority boundary
 

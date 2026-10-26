@@ -170,6 +170,16 @@ The group representation match does not choose those observables by itself.
 - **Open:** a physical observable intertwiner and Furey/Higgs selection of the genus-two ribbon.
 - **Not established:** that code operations are implemented by literal physical mapping classes.
 
+The later regulus calculation supplies a global measurement-frame completion
+of the same finite carrier. Among the 40 Lagrangian planes, each of the 36
+elliptic \(Q(4,3)\) sections selects ten planes with pairwise zero
+intersection and partitions all 80 nonzero Pauli labels. These symplectic
+spreads give complete sets of ten two-qutrit stabilizer mutually unbiased
+bases. The result organizes all Pauli directions into compatible measurement
+contexts; it still does not select a physical context or implement its
+measurements. See [Double-sixes, symplectic spreads and complete two-qutrit
+measurements](../../programmes/regulus-closure-bridge/05_double_sixes_symplectic_spreads_and_two_qutrit_mubs.md).
+
 ## 9. Stop-everything and falsification gates
 
 **Stop-everything trigger:** identify the two logical puncture charges with the two handle holonomies and realize the sum-cycle Dehn twist as a gauge-invariant Furey/code operation.

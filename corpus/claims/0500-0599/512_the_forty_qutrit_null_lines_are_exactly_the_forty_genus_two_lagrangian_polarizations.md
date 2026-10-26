@@ -193,6 +193,20 @@ on the trihedra but has three 80-orbits on the phase fibers. The comparison
 therefore sharpens the exceptional interpretation while rejecting a new
 cardinality shortcut.
 
+There is, however, one further exact grouping of these 40 polarizations. The
+36 elliptic sections are ten-point ovoids of \(Q(4,3)\). In Lagrangian
+language, each is a set of ten pairwise trivially intersecting planes whose
+eight nonzero vectors partition all 80 nonzero vectors of
+\(\mathbb F_3^4\). Each is therefore a symplectic spread. Under the standard
+two-qutrit Pauli dictionary, its planes are ten maximal commuting classes and
+their joint eigenbases form a complete set of ten stabilizer mutually
+unbiased bases. Thus the 36 reconstructed double-sixes also label 36
+placements of a complete two-qutrit measurement frame. See
+[the spread/MUB completion](../../programmes/regulus-closure-bridge/05_double_sixes_symplectic_spreads_and_two_qutrit_mubs.md).
+The 270 syzygetic frame pairs share four bases and form
+\(\operatorname{SRG}(36,15,6,6)\); the 360 azygetic pairs share one and form
+its \(\operatorname{SRG}(36,20,10,12)\) complement.
+
 ## Certificate and companions
 
 - [Lagrangian/Plücker/null-line certificate](../../../verification/verify/verify_40_qutrit_null_lines_are_exactly_genus_two_lagrangian_polarizations.mjs)
