@@ -15,10 +15,18 @@ const filesBelow = directory => readdirSync(directory, { withFileTypes: true }).
 test("every corpus Markdown source has a provenance-stamped compiled library page", () => {
   const manifest = JSON.parse(readFileSync(join(siteRoot, "library", "manifest.json"), "utf8"));
   const corpusMarkdownCount = filesBelow(join(root, "corpus")).filter(path => path.endsWith(".md")).length;
+  const corpusDirectoryCount = new Set(filesBelow(join(root, "corpus")).filter(path => path.endsWith(".md")).flatMap(path => {
+    const directories = [];
+    let directory = dirname(path);
+    while (directory.startsWith(join(root, "corpus"))) { directories.push(directory); directory = dirname(directory); }
+    return directories;
+  })).size;
   const citationCount = JSON.parse(readFileSync(join(root, "book", "edition-3", "book.json"), "utf8")).citationCount;
   assert.equal(manifest.schema, "spin23-edition3-corpus-library/v1");
   assert.equal(manifest.documentCount, corpusMarkdownCount);
   assert.equal(manifest.documents.length, corpusMarkdownCount);
+  assert.equal(manifest.directoryCount, corpusDirectoryCount);
+  assert.equal(manifest.directories.length, corpusDirectoryCount);
   assert.equal(manifest.editionCitationCount, citationCount);
   assert.equal(manifest.documents.filter(item => item.editionCited).length, citationCount);
   assert.match(manifest.citationDigest, /^[a-f0-9]{64}$/u);
@@ -44,6 +52,10 @@ test("deep frontier pages join the HTML journey with graph context", () => {
   const html = readFileSync(target, "utf8");
   assert.match(html, /Wider corpus/u);
   assert.match(html, /Route into this page/u);
+  assert.match(html, /href="\.\.\/\.\.\/\.\.\/index\.html">Corpus<\/a>/u);
+  assert.match(html, /href="\.\.\/\.\.\/index\.html">Programmes<\/a>/u);
+  assert.match(html, /href="\.\.\/index\.html">Frontier<\/a>/u);
+  assert.match(html, /href="index\.html">Wave 7<\/a>/u);
   assert.match(html, /Moonshine as program, lattice formula and constrained carrier/u);
   assert.doesNotMatch(html, />README<\/a>/u);
   assert.match(html, /Inbound corpus links/u);
@@ -54,6 +66,23 @@ test("deep frontier pages join the HTML journey with graph context", () => {
   assert.equal(existsSync(join(siteRoot, "library", "index.html")), true);
   const search = JSON.parse(readFileSync(join(siteRoot, "library", "search-index.json"), "utf8"));
   assert.equal(search.documents.some(item => item.source.endsWith("frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md")), true);
+  assert.equal(search.documents.some(item => item.kind === "directory" && item.source === "corpus/programmes/frontier/wave-7/"), true);
+});
+
+test("corpus hierarchy nodes are navigable index pages", () => {
+  const expected = [
+    ["corpus", "Corpus"],
+    [join("corpus", "programmes"), "Programmes"],
+    [join("corpus", "programmes", "frontier"), "Frontier"],
+    [join("corpus", "programmes", "frontier", "wave-7"), "Wave 7"],
+  ];
+  for (const [directory, title] of expected) {
+    const html = readFileSync(join(siteRoot, "library", directory, "index.html"), "utf8");
+    assert.match(html, new RegExp(`<h1>${title}</h1>`, "u"));
+    assert.match(html, /generated navigation index/u);
+  }
+  const frontier = readFileSync(join(siteRoot, "library", "corpus", "programmes", "frontier", "index.html"), "utf8");
+  assert.match(frontier, /href="wave-7\/index\.html">Wave 7<\/a>/u);
 });
 
 test("GitHub-style corpus tables render as semantic HTML tables", () => {
