@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-26",
+  "status": "executed retrospective homogeneous-catalogue field spike; no local curl or crease detected",
+  "authority": {
+    "catalogue": "Hunt and Reffert 2023 corrected Gaia DR3 members",
+    "source": "J/A+A/673/A114/members",
+    "paperDoi": "https://doi.org/10.1051/0004-6361/202346285",
+    "runner": "scripts/analyze-local-cluster-director-field.mjs"
+  },
+  "frozenSelection": {
+    "clusterNames": ["Melotte_25", "Melotte_111", "Melotte_22", "Melotte_20", "IC_2391", "IC_2602", "NGC_2451A", "NGC_2632"],
+    "memberGate": "inrt=True; Prob>=0.5; parallax>0; RUWE<=1.4; NSS=0",
+    "rvGate": "finite RV and e_RV<=5 km/s; then 3 robust residual sigmas",
+    "selectionTiming": "cluster sample and quality gates fixed from catalogue metadata before any director estimates were inspected"
+  },
+  "method": {
+    "perCluster": "fit common ICRS space velocity from proper motions and parallaxes; subtract predicted astrometric RV from Gaia RV; regress robust residuals on 3-D inverse-parallax Cartesian position",
+    "director": "sign-invariant Q=u*transpose(u)",
+    "comparison": "leave one entire cluster out; compare flat mean-Q, smooth affine Q(x), and nested two-region plane split",
+    "boundary": "ordinary residual-gradient directors are proxies only; no lift to a four-dimensional normal field is supplied"
+  },
+  "clusterDiagnostics": [
+    {"name":"Melotte_25","robustRvRows":151,"foldDirectionRangeDeg":[4.566398502914761,19.958841681783117]},
+    {"name":"Melotte_111","robustRvRows":48,"foldDirectionRangeDeg":[4.050779378774708,23.103664422548448]},
+    {"name":"Melotte_22","robustRvRows":194,"foldDirectionRangeDeg":[18.132128120116484,42.42481658715027]},
+    {"name":"Melotte_20","robustRvRows":105,"foldDirectionRangeDeg":[5.062079426798996,25.067835154890915]},
+    {"name":"IC_2391","robustRvRows":40,"foldDirectionRangeDeg":[14.548156532061347,68.11039244423785]},
+    {"name":"IC_2602","robustRvRows":55,"foldDirectionRangeDeg":[8.959421143432966,55.7622942332237]},
+    {"name":"NGC_2451A","robustRvRows":31,"foldDirectionRangeDeg":[10.922315567322988,76.61870369959645]},
+    {"name":"NGC_2632","robustRvRows":235,"foldDirectionRangeDeg":[16.13855925742342,29.078006823419532]}
+  ],
+  "m44CrossCatalogueAcuteAngleDeg": 26.292499657184248,
+  "leaveOneClusterOut": {
+    "flat": {"meanProjectorComponentSquaredError":0.531333209838067,"medianProjectorComponentSquaredError":0.339497499564092},
+    "smoothAffine": {"meanProjectorComponentSquaredError":0.5979929294563746,"medianProjectorComponentSquaredError":0.5095656711239624},
+    "crease": {"meanProjectorComponentSquaredError":0.7729725505267198,"medianProjectorComponentSquaredError":0.7918808784683125}
+  },
+  "result": {
+    "preferredModel": "flat",
+    "smoothBendingDetected": false,
+    "creaseDetected": false,
+    "curlOrFrobeniusTestAdmitted": false,
+    "reason": "the flat model has the lowest held-out error; several cluster directors are fold-unstable; ordinary 3-D directors have no source-derived lift to four-dimensional normals",
+    "nextGate": "improve per-cluster direction stability with full astrometric covariance and independent spectroscopy, then repeat on a larger preregistered spatial sample before attempting derivative, holonomy or integrability estimates"
+  }
+}
