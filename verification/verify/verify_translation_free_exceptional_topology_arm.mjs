@@ -79,6 +79,10 @@ assert.notEqual(e8Summary.normTwoRootCount, leechSummary.normTwoRootCount);
 assert.match(arm.certifiedSeed.verdict, /collides/);
 assert.deepEqual(arm.computationalSeed.bottIndices, [1,1,1,1]);
 assert.ok(arm.computationalSeed.spectralGaps.every(gap => gap > 1));
+assert.deepEqual(arm.structuralDisorderSeed.bottIndices, [1,1,1,1]);
+assert.deepEqual(arm.structuralDisorderSeed.spectralLocalizerIndices, [-1,-1,-1,-1]);
+assert.ok(arm.structuralDisorderSeed.periodicSpectralGaps.every(gap => gap > 1.5));
+assert.ok(arm.structuralDisorderSeed.localizerGaps.every(gap => gap > 0.7));
 
 console.log(JSON.stringify({
   status: "PASS",
@@ -86,5 +90,6 @@ console.log(JSON.stringify({
   coarseBulkCollision: {rank:24, determinant:1, signature:24, chiralCentralCharge:24},
   boundarySeparation: {E8CubedNormTwoRoots:720, LeechNormTwoRoots:0},
   translationFreeSeed: {disorderStrengths:arm.computationalSeed.onsiteDisorderStrengths, bottIndices:arm.computationalSeed.bottIndices},
+  structuralSeed: {jitterStrengths:arm.structuralDisorderSeed.jitterStrengths, bottIndices:arm.structuralDisorderSeed.bottIndices, localizerIndices:arm.structuralDisorderSeed.spectralLocalizerIndices},
   nextGate: "real-space invariant -> disordered E8 edge -> rank-24 detector ladder -> orbifold witness"
 }));

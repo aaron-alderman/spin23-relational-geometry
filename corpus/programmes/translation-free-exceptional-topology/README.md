@@ -8,6 +8,12 @@
 
 **Translation-free seed:** [disordered real-space QWZ Bott verifier](../../../verification/verify/verify_translation_free_qwz_disorder.py)
 
+**Structural cross-check:** [jittered-point Bott/localizer verifier](../../../verification/verify/verify_translation_free_structural_disorder.py)
+
+**First exceptional layer:** [translation-free E8 edge protocol](E8_EDGE_PROTOCOL.md)
+
+**Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
+
 ## Research question
 
 What remains topological when translation symmetry, the Brillouin zone and a
@@ -133,8 +139,22 @@ Qi--Wu--Zhang carrier at mass \(-1\) is subjected to one frozen onsite-disorder
 field at strengths \(0,0.5,1,2\). Translation symmetry is broken at every
 nonzero strength, while the occupied-projector Bott index remains nontrivial
 and the finite spectral gap remains open. This establishes the computation
-path; it does not yet model structural amorphization or prove an exceptional
-edge.
+path. A second certificate displaces the point carrier itself, recomputes every
+bond direction and cross-checks the periodic Bott index against an open-boundary
+spectral-localizer index at jitter strengths \(0,0.10,0.25,0.40\). Both retain
+one nontrivial class and both gaps remain open. This is structural disorder on
+a fixed locality graph, not yet a fully random graph.
+
+The first exceptional layer is also exact at effective-edge level. The E8
+Cartan form defines an eight-channel bosonic invertible edge; arbitrary
+positive spatially varying interaction matrices preserve co-propagation and
+\(c_-=8\). The microscopic random-point bulk and E8-specific current/OPE
+detector remain the next join.
+
+At rank 24, the first blind detector has now been identified exactly. Thermal
+and bulk data collide, but the weight-one current dimensions are 744, 24 and 0
+for E8-cubed, the Leech lattice theory and Moonshine. Only the zero-current
+branch proceeds to the existing Griess, marked-defect and sewing witness stack.
 
 1. Apply a spectral-localizer/Bott pipeline to a controlled crystalline-to-
    amorphous Hamiltonian family and record where response, real-space index and

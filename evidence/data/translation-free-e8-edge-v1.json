@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "translation-free-e8-edge-v1",
+  "date": "2026-10-26",
+  "status": "effective edge certified; microscopic realization open",
+  "carrier": {
+    "fields": 8,
+    "commutatorForm": "E8 Cartan matrix",
+    "interactionField": "spatially varying positive-definite V(x)",
+    "translationSymmetryRequired": false
+  },
+  "topologicalData": {
+    "rank": 8,
+    "determinant": 1,
+    "signature": 8,
+    "chiralCentralCharge": 8,
+    "anyonQuotientOrder": 1,
+    "bosonicEvenForm": true,
+    "normTwoRootCount": 240
+  },
+  "frozenDisorderTest": {
+    "seed": 8231,
+    "positions": 32,
+    "amplitudes": [0.25, 0.5, 1, 2],
+    "samples": 128,
+    "acceptance": "all generalized velocity eigenvalues are real and positive",
+    "interpretation": "positive random interactions preserve the same-chirality effective edge"
+  },
+  "detectorHierarchy": [
+    {"rung": "E0", "record": "eight co-propagating modes", "identifies": "rank-eight chirality only"},
+    {"rung": "E1", "record": "c_minus=8 and trivial anyon quotient", "identifies": "bosonic invertible bulk class"},
+    {"rung": "E2", "record": "even unimodular integral current lattice", "identifies": "unique rank-eight lattice class"},
+    {"rung": "E3", "record": "norm-two current and OPE witness", "identifies": "E8 boundary provenance"}
+  ],
+  "boundary": "Thermal Hall response alone cannot distinguish E8 provenance; the microscopic bulk, current-lattice reconstruction and held-out operator record remain open."
+}

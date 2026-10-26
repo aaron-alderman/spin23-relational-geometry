@@ -5,6 +5,11 @@
 
 ## Tranche A — establish the translation-free trunk
 
+**Progress:** A1 has a fixed-connectivity structurally disordered realization;
+A2 is closed for Bott/localizer agreement on the frozen finite family; A3 is
+open beyond the certified four-point jitter interval and toward random
+connectivity, ensemble and size scaling.
+
 | ID | task | output | gate |
 |---|---|---|---|
 | A1 | choose a two-dimensional local Hamiltonian with crystalline and random-point realizations | frozen carrier and parameter file | same local degrees and couplings in both presentations |
@@ -14,6 +19,12 @@
 | A5 | adversarially vary detector resolution | quotient ledger | topology distinguished from detector survival |
 
 ## Tranche B — insert the exceptional chiral unit
+
+**Progress:** B1 is closed at effective K-matrix edge level. B2 is closed for
+same-chirality propagation under the frozen positive \(V(x)\) ensemble but
+remains open for a microscopic random-point bulk and an E8-specific detector.
+B4 is closed on the declared E8-cubed/Leech/Moonshine family: the bulk detector
+collides and \(\dim V_1=(744,24,0)\) separates the three candidates.
 
 | ID | task | output | gate |
 |---|---|---|---|

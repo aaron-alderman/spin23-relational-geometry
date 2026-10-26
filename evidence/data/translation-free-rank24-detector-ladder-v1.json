@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "translation-free-rank24-detector-ladder-v1",
+  "date": "2026-10-26",
+  "status": "exact on declared E8-cubed/Leech/Moonshine family",
+  "bulkCollision": {
+    "detector": ["rank", "determinant", "positive signature", "chiral central charge"],
+    "record": [24, 1, 24, 24],
+    "candidates": ["E8^3 lattice edge", "Leech lattice edge", "Moonshine orbifold edge"]
+  },
+  "weightOneDetector": {
+    "formulaForLatticeVOA": "dim(V1)=rank+normTwoRootCount",
+    "E8Cubed": {"rank": 24, "normTwoRootCount": 720, "dimV1": 744},
+    "Leech": {"rank": 24, "normTwoRootCount": 0, "dimV1": 24},
+    "Moonshine": {"dimV1": 0, "source": "orbifold character certificate"},
+    "injectiveOnDeclaredFamily": true
+  },
+  "characterBoundary": {
+    "form": "J(q)+dim(V1)",
+    "consequence": "The untwined genus-one character adds no identifying information after c=24 and dim(V1) are fixed.",
+    "unrestrictedMoonshineUniquenessClaimed": false
+  },
+  "detectorOrder": [
+    "D0 bulk thermal/topological record",
+    "D1 weight-one current dimension",
+    "D2 frame and Griess multiplication",
+    "D3 marked 2A, 23AB and order-46 defects",
+    "D4 sewing and held-out prediction"
+  ]
+}
