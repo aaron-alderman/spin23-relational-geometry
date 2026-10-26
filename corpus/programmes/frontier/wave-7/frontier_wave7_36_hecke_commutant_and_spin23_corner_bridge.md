@@ -248,3 +248,21 @@ same homogeneous carrier, not merely the same group name.
 This does not join Claimipedia or the continuous Spin(2,3) generators to the
 Hecke algebra. Those intertwiners remain open. It does close the finite-carrier
 part of the promotion gate.
+
+## Subsequent frame-algebra compression
+
+Forgetting the marked cubic line but retaining its double-six sends the
+432 flags onto 36 complete two-qutrit MUB frames. If \(H_{\rm ds}\) is the
+double-six stabilizer, then
+
+\[
+S_5\subset H_{\rm ds}\subset W(E_6),\qquad
+[H_{\rm ds}:S_5]=12.
+\]
+
+The fiber-constant submodule has dimension 36 and commutant dimension three.
+Its exact basis is \(I,A_4,A_1\), where two frames share four bases or one.
+Thus the rank-three Bose–Mesner algebra is a certified Hecke compression of
+the rank-26 flag algebra. It is the result of forgetting the selected line
+inside each twelve-line double-six, not a second numerical coincidence. See
+[the two-qutrit operator and selector completion](../../regulus-closure-bridge/06_two_qutrit_operator_noise_and_selector_completion.md).

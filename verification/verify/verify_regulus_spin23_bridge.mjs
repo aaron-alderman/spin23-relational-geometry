@@ -20,10 +20,15 @@ assert.deepEqual(record.hyperplaneSections.pairIntersectionDistribution,{4:270,7
 assert.deepEqual(record.hyperplaneSections.pairIntersectionDegrees,{4:[12],7:[32]});
 assert.deepEqual(record.hyperplaneSections.fourPointIntersectionGraph.stronglyRegularParameters,[45,12,3,3]);
 assert.equal(record.hyperplaneSections.reconstructedTwentySeven.maximalFiveCliques,27);
+assert.equal(record.hyperplaneSections.reconstructedTwentySeven.cubicLineMeetNeighbors.length,27);
+assert.ok(record.hyperplaneSections.reconstructedTwentySeven.cubicLineMeetNeighbors.every(neighbors=>neighbors.length===10));
 assert.deepEqual(record.hyperplaneSections.reconstructedTwentySeven.sectionsPerClique,[5]);
 assert.deepEqual(record.hyperplaneSections.reconstructedTwentySeven.cliquesPerSection,[3]);
 assert.deepEqual(record.hyperplaneSections.reconstructedTwentySeven.cliquesPerAdjacentPair,[1]);
 assert.equal(record.hyperplaneSections.reconstructedThirtySix.ellipticSections,36);
+assert.equal(record.hyperplaneSections.reconstructedThirtySix.ellipticSectionCovectors.length,36);
+assert.equal(record.hyperplaneSections.reconstructedThirtySix.doubleSixCubicLineIndices.length,36);
+assert.ok(record.hyperplaneSections.reconstructedThirtySix.doubleSixCubicLineIndices.every(lines=>lines.length===12));
 assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.symplecticSpreadCertificate,{
   lagrangianPlanes:10,
   vectorsPerPlane:[8],

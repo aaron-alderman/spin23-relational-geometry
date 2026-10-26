@@ -1082,6 +1082,21 @@ At present the designs pass their completeness audit, but neither supplies a
 Jordan/Spin physical bridge and neither permits a direct jump from discrepancy
 to new physics.
 
+The finite [regulus closure programme](../programmes/regulus-closure-bridge/README.md)
+now supplies the most complete exact example of the method. Forty
+Lagrangian polarizations generate the classical \(E_6\) incidence hierarchy,
+and the 36 double-sixes simultaneously become complete two-qutrit
+stabilizer-MUB frames. All 360 rank-one projectors are explicit. Their
+one-basis/four-basis overlap algebra closes in three dimensions with spectral
+sectors \(1+15+20\), compressing the earlier 432-flag Hecke carrier. Its
+maximal cliques reconstruct 120 azygetic closures, 216 skew cubic-line pairs
+and 45 tritangents. This also sharpens the boundary: symmetric linear noise
+mixes rather than selects a frame, pure relation optimization selects
+composite incidence clusters, and the finite action is a non-split
+mod-three quotient rather than a canonical subgroup of the integral or real
+four-carrier. The nearest experiment is therefore an explicit two-qutrit
+frame/leakage/transition test, not an \(E_8\) or new-force declaration.
+
 ## Kenotic confidence
 
 This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.
@@ -1141,6 +1156,7 @@ Choose the entrance that matches the work you want to do:
 - **Choose an experiment:** [Frontier experiment atlas](../programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md).
 - **Audit whether it can actually be reached and checked:** [Frontier complexity cards](../programmes/frontier-physics-targets/frontier_complexity_cards_v1.md).
 - **Inspect the exact mixed frontier:** [Mixed-interface resolution](../programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md).
+- **Follow the finite regulus carrier into explicit two-qutrit operators and selector dynamics:** [Regulus closure bridge](../programmes/regulus-closure-bridge/README.md).
 - **Follow a closed route and a controlled refusal:** [Two cross-carrier vertical slices](../programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md).
 - **Choose among all 39 instrumented relations and returns:** [Instrumented admissibility atlas](../programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md).
 - **Inspect the reasoning algebra:** [Sourcery ALE algebra](../programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md).

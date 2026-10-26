@@ -11254,6 +11254,41 @@ four bases, while the 360 azygetic pairs share one, and every azygetic pair
 retains its unique ternary closure. This is an exact dictionary, not a
 derivation of quantum mechanics or a dynamical rule selecting one frame.
 
+The operator completion constructs all 360 rank-one two-qutrit stabilizer
+projectors explicitly. Relation-invariant frame dynamics closes on the
+three-dimensional algebra
+\(\operatorname{span}\{I,A_4,A_1\}\), with spectral multiplicities
+\(1+15+20\). Hence a frame-preserving noise process has only two nontrivial
+decay rates. Symmetric irreducible linear noise converges to the uniform
+frame distribution and cannot be the missing selector; nonlinear instability
+can begin in either the 15- or 20-dimensional sector, but a unique winning
+frame still requires bias, boundary data or history.
+
+This frame-label process is typed separately from the earlier quadratic
+handle twirl. The handle twirl acts on response bilinears and selects the
+symplectic carrier; the new Bose–Mesner channel acts only after that carrier
+has been reduced modulo three and organized into 36 complete measurement
+frames. The former may explain carrier selection, while the latter classifies
+frame transport and proves that symmetric linear transport cannot choose a
+frame.
+
+The measurement-frame overlap graph itself retains the deeper cubic
+incidence. Its 120 maximal one-basis triangles are exactly the azygetic
+closures; its 216 maximal one-basis five-cliques recover all 216 skew
+cubic-line pairs; and its 135 maximal four-basis four-cliques recover the 45
+tritangents with multiplicity three. Thus the operational MUB language can
+reconstruct these classical \(E_6\) objects without treating their counts as
+exceptional coincidences.
+
+The lift boundary is now also exact. Although
+\(Sp(4,\mathbb Z)\twoheadrightarrow Sp(4,\mathbb F_3)\), the quotient does not
+split: an integral section would embed an order-51,840 finite group in
+\(GL(4,\mathbb Z)\), whose finite subgroups have maximal order 1,152. Nor can
+the projective finite symmetry embed faithfully in the real four-dimensional
+symplectic group. The finite exceptional carrier is therefore an arithmetic
+quotient of the integral/real carrier, not a canonical finite subgroup inside
+it.
+
 See [Regulus closure bridge](../../programmes/regulus-closure-bridge/README.md).
 
 ### 20.429 The five Furey support fields present the rank-four spinor before the rank-five vector

@@ -226,6 +226,28 @@ claim would require a reproducible residual that survives the complete
 electro-optic, nonlinear, thermal, photorefractive, acoustic and detector
 model, then repeats on an independent carrier.
 
+## Regulus-frame extension
+
+The completed regulus programme supplies a larger but still finite target for
+frequency-bin hardware. Forty explicitly listed two-qutrit commuting classes
+form 36 complete ten-basis MUB frames. Their frame-overlap algebra has only
+two relations: pairs share either four bases or one. A frequency processor
+with nine coherent modes can therefore be tested in stages:
+
+1. compile and calibrate the 40 Weyl commuting-class measurements;
+2. verify the ten-basis MUB relations frame by frame;
+3. apply frame-preserving Clifford control noise and quantify leakage outside
+   the 36 frames;
+4. fit the conditional transition kernel to the exact three-dimensional
+   algebra \(\operatorname{span}\{I,A_4,A_1\}\);
+5. predict held-out one-overlap and four-overlap transitions.
+
+The distinction between leakage and relation residual is essential. Generic
+loss, dispersion or non-Clifford mode mixing need not map one full frame to
+another; those effects must not be disguised as a failed exceptional
+transition law. See [the operator/noise completion](../regulus-closure-bridge/06_two_qutrit_operator_noise_and_selector_completion.md)
+and [the experimental resolution](../regulus-closure-bridge/07_integral_real_and_experimental_resolution.md).
+
 ## What the material changes
 
 Lithium niobate does not change the equations of known physics. It changes

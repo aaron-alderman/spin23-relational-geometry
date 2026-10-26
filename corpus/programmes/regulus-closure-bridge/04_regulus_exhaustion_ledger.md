@@ -27,6 +27,15 @@ A branch is exhausted here when it has reached one of four states:
 | ovoid/spread duality | each elliptic section is ten pairwise-disjoint Lagrangian planes partitioning all 80 nonzero vectors of \(\mathbb F_3^4\) | exact |
 | two-qutrit measurement frame | every spread gives ten maximal commuting Pauli classes and therefore a complete ten-basis stabilizer MUB | exact standard dictionary; physical realization not inferred |
 | frame overlap algebra | 270 syzygetic pairs share four bases and form \(\operatorname{SRG}(36,15,6,6)\); 360 azygetic pairs share one and form its \(\operatorname{SRG}(36,20,10,12)\) complement; the latter retain the unique ternary closure | exact |
+| explicit two-qutrit operators | all 40 bases, 360 stabilizer states and 36 complete MUB frames constructed from Weyl projectors | exact |
+| invariant noise algebra | all relation-invariant linear channels lie in \(\operatorname{span}\{I,A_4,A_1\}\) and have two measurable nontrivial rates | exact |
+| Hecke compression | the 36-frame rank-three algebra is the fiber-constant compression of the rank-26 \(W(E_6)/S_5\) algebra along twelve flags per double-six | exact join |
+| MUB clique closure | maximal one-overlap \(K_3\)s are the 120 azygetic closures, maximal \(K_5\)s recover all 216 skew cubic-line pairs, and four-overlap \(K_4\)s recover the 45 tritangents with multiplicity three | exact |
+| linear selector | irreducible symmetric noise tends to the uniform frame and cannot select one | rejected |
+| nonlinear selector | 15- and 20-dimensional instability thresholds derived; pure relation attraction selects 135 \(K_4\) tritangent-cover clusters or 216 \(K_5\) skew-pair clusters, while a unique frame still needs bias, history or boundary data | exact conditional model |
+| equivariant integral lift | quotient exists, but a section would require an impossible order-51,840 finite subgroup of \(GL(4,\mathbb Z)\) | obstructed |
+| faithful real four-dimensional lift | finite symmetry would have to embed in \(U(2)\), which \(PSp_4(3)\) cannot do | obstructed |
+| device-level Pauli/Plücker map | exact calibration criterion and held-out residual test specified | needs implementation |
 | syzygetic/azygetic closure | 270 four-overlap pairs, 360 six-overlap pairs and 120 unique azygetic triples | exact |
 | Steiner hierarchy | 120 pairs, 240 trihedra and 40 line-partitioning triads | exact |
 | degree-40 carrier | Lagrangian points/tangent sections are equivariantly the Steiner triads; polar lines are the other index-40 action | exact and typed |

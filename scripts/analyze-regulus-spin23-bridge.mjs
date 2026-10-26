@@ -542,6 +542,7 @@ const record={
     },
     reconstructedTwentySeven:{
       maximalFiveCliques:fiveCliques.length,
+      cubicLineMeetNeighbors:fiveCliques.map((_,line)=>fiveCliques.map((__,other)=>other).filter(other=>other!==line&&lineCandidatesMeet(line,other))),
       sectionsPerClique:[...new Set(fiveCliques.map(clique=>clique.length))],
       cliquesPerSection:[...new Set(cliquesPerSection)].sort((a,b)=>a-b),
       cliquesPerAdjacentPair:[...new Set(adjacencyCliqueMultiplicities)].sort((a,b)=>a-b),
@@ -550,6 +551,8 @@ const record={
     },
     reconstructedThirtySix:{
       ellipticSections:ellipticSections.length,
+      ellipticSectionCovectors:ellipticSections.map(section=>section.covector),
+      doubleSixCubicLineIndices:doubleSixSelections,
       symplecticSpreadCertificate:ellipticSpreadTypes[0],
       spreadPairIntersectionDistribution:ellipticPointIntersectionDistribution,
       spreadPairIntersectionDegrees:ellipticPointIntersectionDegrees,

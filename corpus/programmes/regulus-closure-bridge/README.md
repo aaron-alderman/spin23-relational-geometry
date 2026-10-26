@@ -37,6 +37,15 @@ The executable calculation over \(\mathbb F_3\) finds:
   labelled complete stabilizer-MUB frames for the two-qutrit carrier;
 - an exact measurement-frame overlap algebra: 270 pairs share four bases and
   360 pairs share one, matching the syzygetic/azygetic double-six split;
+- an explicit construction of all 360 rank-one two-qutrit stabilizer
+  projectors and all 36 complete MUB frames;
+- a three-dimensional invariant frame-noise algebra with spectral sectors
+  \(1+15+20\), plus an exact proof that symmetric linear noise mixes rather
+  than selects a frame;
+- maximal-clique recovery of the 120 azygetic closures, all 216 skew
+  cubic-line pairs and all 45 tritangents from measurement-frame overlaps;
+- a no-section theorem: the finite carrier is a quotient of the
+  integral/real symplectic carrier, not a canonically embedded finite copy;
 - 120 Steiner trihedral pairs and 40 Steiner triads, equivariantly identified
   with the 40 Lagrangian points;
 - an anti-symplectic outer involution completing the finite action to the full
@@ -74,6 +83,8 @@ Continue through:
 - [Real positive-domain, dynamics and detector boundary](03_real_positive_domain_dynamics_and_detector_boundary.md)
 - [Regulus programme exhaustion ledger](04_regulus_exhaustion_ledger.md)
 - [Double-sixes, symplectic spreads and complete two-qutrit measurements](05_double_sixes_symplectic_spreads_and_two_qutrit_mubs.md)
+- [Two-qutrit operator, noise and selector completion](06_two_qutrit_operator_noise_and_selector_completion.md)
+- [Integral, real and experimental resolution](07_integral_real_and_experimental_resolution.md)
 
 ## Authority boundary
 
