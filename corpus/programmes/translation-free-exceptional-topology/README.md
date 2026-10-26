@@ -30,6 +30,8 @@
 
 **Plateau candidate:** [Cartan-kernel shell-10 spectroscopy gate](E8_CARTAN_SHELL10_SPECTROSCOPY.md)
 
+**Promoted local result:** [Cartan-kernel compact-cell gap](E8_CARTAN_COMPACT_GAP.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -197,6 +199,9 @@ The eligible (K)-kernel branch now reaches 794,161 states with a 0.295%
 gap increment and boundary probability below (1.9\times10^{-4}). It needs
 one confirming shell. Its odd first excitation is sine-bright and cosine-dark,
 so detector quadrature is part of the promotion gate.
+Shell 12 now supplies that confirmation: the provisional unit-coupling compact-
+cell gap is (0.1019267219), while all bulk, anomaly and material promotions
+remain open.
 
 The material route is now typed rather than associative. A quasicrystal may
 supply a phason-bearing, translation-free backplane for the programmed E8
@@ -259,6 +264,7 @@ translation-free topology result remains valuable after that null.
 - [E8 restarted nonlinear eigensolver](E8_RESTARTED_DAVIDSON.md)
 - [E8 operator-completeness gate](E8_OPERATOR_COMPLETENESS_GATE.md)
 - [E8 Cartan-kernel shell-10 spectroscopy](E8_CARTAN_SHELL10_SPECTROSCOPY.md)
+- [E8 Cartan-kernel compact-cell gap](E8_CARTAN_COMPACT_GAP.md)
 
 ## Primary external anchors
 

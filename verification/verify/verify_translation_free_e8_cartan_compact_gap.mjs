@@ -1,0 +1,16 @@
+import assert from "node:assert/strict";import fs from "node:fs";
+const r=JSON.parse(fs.readFileSync(new URL("../../evidence/data/translation-free-e8-cartan-compact-gap-v1.json",import.meta.url),"utf8"));
+assert.equal(r.schemaVersion,"translation-free-e8-cartan-compact-gap-v1");
+const rel=(a,b)=>Math.abs(b-a)/a;
+assert.ok(Math.abs(rel(r.convergence.gap8,r.convergence.gap10)-r.convergence.relativeDrift8to10)<2e-15);
+assert.ok(Math.abs(rel(r.convergence.gap10,r.convergence.gap12)-r.convergence.relativeDrift10to12)<2e-15);
+assert.ok(r.convergence.relativeDrift8to10<r.convergence.promotionTolerance);
+assert.ok(r.convergence.relativeDrift10to12<r.convergence.promotionTolerance);
+assert.equal(r.convergence.successivePassingIncrements,2);
+assert.equal(r.convergence.promotedCompactCellGap,r.cutoff12.gaps[1]);
+assert.ok(Math.max(...r.cutoff12.boundaryProbabilities)<3e-5);
+assert.ok(Math.max(...r.cutoff12.residuals)<1e-10);
+assert.deepEqual(r.cutoff12.parities,[1,-1,1,-1]);
+assert.ok(r.detector.maximumFirstExcitedSineWeight>1e20*r.detector.maximumFirstExcitedCosineWeight);
+assert.match(r.boundary,/not a rigorous lower bound/u);
+console.log(JSON.stringify({status:"PASS",basisStates:r.cutoff12.basisStates,promotedCompactCellGap:r.convergence.promotedCompactCellGap,lastRelativeDrift:r.convergence.relativeDrift10to12,maximumBoundaryProbability:Math.max(...r.cutoff12.boundaryProbabilities),claimBoundary:r.boundary},null,2));
