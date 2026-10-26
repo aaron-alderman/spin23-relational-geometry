@@ -83,6 +83,7 @@ def main():
     parser.add_argument("--keep", type=int, default=4000)
     parser.add_argument("--selection", choices=("aggregate", "balanced"), default="balanced")
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--output", help="optional JSON output path; relative paths resolve from the repository root")
     args = parser.parse_args()
     sites = 24
     metric = ENGINE.load_metric(sites, args.order)
@@ -229,8 +230,10 @@ def main():
             "boundary": "The targeted finite correction is a valid enlarged Rayleigh-Ritz space. Even if all 24 values cross the separator, an exterior residual enclosure is still required for Lehmann admission."
         }
     }
-    if args.write:
-        target = os.path.join(ROOT, "evidence", "data", "leech-odd-targeted-second-enrichment-v1.json")
+    if args.write or args.output:
+        target = args.output or os.path.join("evidence", "data", "leech-odd-targeted-second-enrichment-v1.json")
+        if not os.path.isabs(target):
+            target = os.path.join(ROOT, target)
         with open(target, "w", encoding="utf8") as stream:
             json.dump(output, stream, indent=2)
             stream.write("\n")
