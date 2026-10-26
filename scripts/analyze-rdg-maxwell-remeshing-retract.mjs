@@ -157,6 +157,8 @@ const compatibleMetrics=T.map((matrix,k)=>{
     projectorSelfAdjointResidual:maxAbs(subtract(multiply(transpose(P[k]),fineMetric),multiply(fineMetric,P[k]))),
     transportIsometryResidual:maxAbs(subtract(multiply(multiply(transpose(matrix),fineMetric),matrix),coarseMetric)),
     fineMetricOffDiagonalEntries:offDiagonalEntries,
+    fineMetric,
+    coarseMetric,
     diagonalMetricObstruction:diagonalObstruction,
     construction:"L_f=(B^-1)^T B^-1 for a basis B=[im(T), complement]; L_c=T^T L_f T",
   };

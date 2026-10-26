@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "rdg-maxwell-two-macroelement-assembly-v1",
+  "date": "2026-10-26",
+  "purpose": "Test whether two exact sparse remesh metrics assemble across a shared edge without losing chain adjointness, positivity or macroelement locality.",
+  "mesh": {
+    "coarse": {
+      "vertices": 4,
+      "edges": 5,
+      "faces": 2,
+      "facesList": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    },
+    "fine": {
+      "vertices": 6,
+      "edges": 11,
+      "faces": 6,
+      "centres": [
+        4,
+        5
+      ]
+    },
+    "sharedCoarseEdge": [
+      0,
+      2
+    ]
+  },
+  "topology": {
+    "coarseRanks": [
+      3,
+      2
+    ],
+    "fineRanks": [
+      5,
+      6
+    ],
+    "coarseBetti": [
+      1,
+      0,
+      0
+    ],
+    "fineBetti": [
+      1,
+      0,
+      0
+    ]
+  },
+  "assembly": {
+    "chainResiduals": [
+      0,
+      0
+    ],
+    "retractResiduals": [
+      0,
+      0,
+      0
+    ],
+    "metricPullbackResiduals": [
+      0,
+      0,
+      0
+    ],
+    "weightedRestrictionResiduals": [
+      0,
+      0,
+      0
+    ],
+    "projectorSelfAdjointResiduals": [
+      0,
+      0,
+      0
+    ],
+    "restrictionChainResiduals": [
+      0,
+      0
+    ],
+    "metricSymmetryResiduals": [
+      0,
+      0,
+      0
+    ],
+    "fineMetricRanks": [
+      6,
+      11,
+      6
+    ],
+    "fineMetricDimensions": [
+      6,
+      11,
+      6
+    ],
+    "offDiagonalEntries": [
+      4,
+      8,
+      12
+    ],
+    "directCentreToCentreOrCrossMacroResidual": 0,
+    "coarseMetrics": [
+      [
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "conclusion": "Standard additive macroelement assembly preserves the exact metric pullback, weighted-adjoint restriction, chain map and self-adjoint reconstruction identities across the shared edge."
+  },
+  "positivity": {
+    "argument": "Each assembled fine metric is a sum of positive local Gram forms. Every global degree of freedom lies in at least one macroelement, so the sum is positive definite; full matrix rank is independently reported.",
+    "verifiedFullRanks": true
+  },
+  "locality": {
+    "meaning": "No coupling directly joins the two centre stars or faces belonging exclusively to different macroelements. Shared vertices and the shared edge mediate assembly.",
+    "crossMacroResidual": 0
+  },
+  "verdict": "The sparse macroelement escape survives the first overlap test. Two locally exact remesh blocks assemble into positive global metrics while retaining cochain transport, weighted adjointness and energy-orthogonal reconstruction; arbitrary meshes and conditioning remain open."
+}

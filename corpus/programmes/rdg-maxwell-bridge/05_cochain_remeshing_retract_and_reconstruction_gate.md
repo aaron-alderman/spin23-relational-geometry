@@ -141,8 +141,8 @@ Thus the naive energy-optimal projection fails the gauge/curvature gate, while
 the chain-safe projection is not Euclidean-orthogonal. This is a genuine design
 problem, not a choice of notation.
 
-The finite problem nevertheless has a positive solution if locality is
-relaxed. Complete the columns of \(T\) to a basis
+The finite problem nevertheless has a positive solution if **diagonal**
+locality is relaxed. Complete the columns of \(T\) to a basis
 \(B=[\operatorname{im}T,\mathcal K]\), and set
 
 \[
@@ -161,12 +161,17 @@ in every degree that
 \]
 
 Thus the chain-safe restriction becomes the weighted adjoint of transport and
-the reconstruction becomes energy-orthogonal. But the fine metrics contain
+the reconstruction becomes energy-orthogonal. The fine metrics contain
 off-diagonal entries. Moreover each degree has a one-way nonzero entry in
 \(P\), which makes self-adjointness under any strictly positive **diagonal**
-metric impossible. The compatible solution couples distinct cells: it is
-algebraically local to the finite state space, but not a diagonal/local Hodge
-star.
+metric impossible.
+
+The exact matrices sharpen this boundary. They contain only 2, 4 and 6
+off-diagonal entries in degrees 0, 1 and 2: one vertex pair, two edge pairs and
+one three-face block. Every coupling remains inside the single refined
+triangle. The escape is therefore sparse and macroelement-local, although not
+cell-diagonal. Global assembly across adjacent macroelements remains a separate
+gate.
 
 The remesh gate therefore separates four properties:
 
@@ -175,7 +180,8 @@ The remesh gate therefore separates four properties:
 3. being orthogonal for an energy metric;
 4. retaining locality/sparsity of that metric.
 
-The first three can coexist here. The fourth is not supplied by this collapse.
+The first three coexist here. The fourth survives in a weaker block-local
+form, not as one independent scalar weight per cell.
 
 The next gate must supply coarse and fine Hodge/mass matrices satisfying a
 controlled pullback relation such as

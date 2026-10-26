@@ -89,13 +89,14 @@ into coarse cells, while reconstruction copies or combines coarse information
 back into fine cells asymmetrically. A diagonal metric can rescale cells but
 cannot create the reciprocal couplings required for self-adjointness.
 
-Bridge 05 showed that a positive **dense** metric can make the same projector
-self-adjoint. Together the results say:
+Bridge 05 showed that a positive **sparse macroelement-block** metric can make
+the same projector self-adjoint. Together the results say:
 
 - gauge-safe simplicial collapse is available;
 - energy-compatible inner products are available;
 - a cellwise diagonal/local energy metric is not available for this family;
-- off-diagonal couplings are doing indispensable reconstruction work.
+- off-diagonal couplings inside the refined macroelement are doing
+  indispensable reconstruction work.
 
 ## What the no-go does not cover
 
@@ -103,7 +104,7 @@ The result does not exclude:
 
 - weighted cochain transports that are not induced by a vertex map;
 - another subdivision or a larger macroelement;
-- sparse block-local mass matrices;
+- assembly of the exhibited block-local mass matrices across shared cells;
 - finite-element commuting projections;
 - approximate commuting/energy bounds with controlled residuals.
 
@@ -127,8 +128,8 @@ move. Purely pointwise weights cannot see the directional reconstruction.
   identities and explicit asymmetric-support witnesses in every degree.
 - **No-go scope:** boundary-fixed centre-to-original-vertex simplicial maps for
   one stellar triangle subdivision.
-- **Open:** weighted and block-local transports, other complexes, approximate
-  stability and continuum refinement.
+- **Open:** global block assembly, weighted transports, other complexes,
+  approximate stability and continuum refinement.
 - **Not claimed:** impossibility of local energy-compatible remeshing in
   general.
 

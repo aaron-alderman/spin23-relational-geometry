@@ -64,6 +64,11 @@ complex.
 | Topology cut | exact record transfer | cutting \(S^1\) to an interval turns a Wilson period into endpoint potential mismatch rather than annihilating it |
 | Two-cycle puncture | exact record transfer with physical boundary | puncturing \(S^2\) turns an \(H^2\) flux into boundary circulation plus cap flux; nonzero closed-sphere magnetic flux is not source-free Maxwell |
 | Minimal simplicial remesh family | exhaustive finite no-go | all three boundary-fixed collapses are chain retracts; none admits a positive diagonal metric making reconstruction self-adjoint |
+| Macroelement metric escape | exact constructive pass | one vertex pair, two edge pairs and a three-face block suffice to make the chain retract energy-adjoint on the refined triangle |
+| Two-macroelement assembly | exact overlap pass | adjacent refined triangles assemble to positive sparse global metrics while preserving chain and weighted-adjoint identities |
+| Source-free torus flux cut | exact topology receipt | a non-bounding \(H^2\) flux becomes relative Wilson circulation on the two cylinder boundaries without magnetic charge |
+| Loss port and finite bath | exact pass/boundary | damping equals typed output power; a finite conservative bath returns transferred energy and cannot supply permanent Markovian loss |
+| Detector null budget | compiled eight-channel gate | every demonstrated conventional route has an exact control; new physics begins only at a held-out residual after all are bounded |
 
 ## Documents
 
@@ -75,6 +80,11 @@ complex.
 6. [Topology cut, holonomy and boundary-record gate](06_topology_cut_holonomy_and_boundary_record_gate.md)
 7. [Two-cycle flux, puncture and cap-record gate](07_two_cycle_flux_puncture_and_cap_record_gate.md)
 8. [Local diagonal-Hodge remesh-family no-go](08_local_diagonal_hodge_remesh_family_no_go.md)
+9. [Sparse macroelement metric escape](09_sparse_macroelement_metric_escape.md)
+10. [Two-macroelement assembly gate](10_two_macroelement_assembly_gate.md)
+11. [Source-free torus-flux cut gate](11_source_free_torus_flux_cut_gate.md)
+12. [Loss-port and finite-bath boundary](12_loss_port_and_finite_bath_boundary.md)
+13. [Detector null-test and residual budget](13_detector_null_test_and_residual_budget.md)
 
 ## Executable spine
 
@@ -99,6 +109,18 @@ complex.
 - [Local-remesh-family analysis](../../../scripts/analyze-rdg-maxwell-local-remesh-family.mjs)
 - [Local-remesh-family evidence](../../../evidence/data/rdg-maxwell-local-remesh-family-v1.json)
 - [Local-remesh-family verifier](../../../verification/verify/verify_rdg_maxwell_local_remesh_family.mjs)
+- [Two-macroelement analysis](../../../scripts/analyze-rdg-maxwell-two-macroelement-assembly.mjs)
+- [Two-macroelement evidence](../../../evidence/data/rdg-maxwell-two-macroelement-assembly-v1.json)
+- [Two-macroelement verifier](../../../verification/verify/verify_rdg_maxwell_two_macroelement_assembly.mjs)
+- [Torus-flux-cut analysis](../../../scripts/analyze-rdg-maxwell-torus-flux-cut.mjs)
+- [Torus-flux-cut evidence](../../../evidence/data/rdg-maxwell-torus-flux-cut-v1.json)
+- [Torus-flux-cut verifier](../../../verification/verify/verify_rdg_maxwell_torus_flux_cut.mjs)
+- [Port/bath analysis](../../../scripts/analyze-rdg-maxwell-port-and-bath.mjs)
+- [Port/bath evidence](../../../evidence/data/rdg-maxwell-port-and-bath-v1.json)
+- [Port/bath verifier](../../../verification/verify/verify_rdg_maxwell_port_and_bath.mjs)
+- [Detector-budget compiler](../../../scripts/compile-rdg-maxwell-detector-budget.mjs)
+- [Detector-budget evidence](../../../evidence/data/rdg-maxwell-detector-null-budget-v1.json)
+- [Detector-budget verifier](../../../verification/verify/verify_rdg_maxwell_detector_budget.mjs)
 
 Run:
 
@@ -117,17 +139,25 @@ node scripts/analyze-rdg-maxwell-two-cycle-cut.mjs --write
 node verification/verify/verify_rdg_maxwell_two_cycle_cut.mjs
 node scripts/analyze-rdg-maxwell-local-remesh-family.mjs --write
 node verification/verify/verify_rdg_maxwell_local_remesh_family.mjs
+node scripts/analyze-rdg-maxwell-two-macroelement-assembly.mjs --write
+node verification/verify/verify_rdg_maxwell_two_macroelement_assembly.mjs
+node scripts/analyze-rdg-maxwell-torus-flux-cut.mjs --write
+node verification/verify/verify_rdg_maxwell_torus_flux_cut.mjs
+node scripts/analyze-rdg-maxwell-port-and-bath.mjs --write
+node verification/verify/verify_rdg_maxwell_port_and_bath.mjs
+node scripts/compile-rdg-maxwell-detector-budget.mjs --write
+node verification/verify/verify_rdg_maxwell_detector_budget.mjs
 ```
 
 ## Next gates
 
-1. Add an explicit conservative bath or port model so dissipated power becomes
-   a typed output rather than disappearance.
-2. Enlarge remeshing beyond simplicial vertex collapses and test whether
-   weighted transport or sparse block-local Hodge matrices evade the completed
-   diagonal no-go for the minimal collapse family.
-3. Transfer the completed one- and two-cycle cut/glue receipts to a
-   source-free non-bounding three-torus flux sector.
+1. Replace the completed finite-bath recurrence example with a continuum-bath
+   or positive-real transfer-function certificate when irreversible material
+   loss is required.
+2. Generalize the successful two-macroelement assembly to arbitrary oriented
+   triangular complexes and bound conditioning under repeated refinement.
+3. Generalize the completed source-free torus cut receipt to arbitrary cycles
+   using relative cohomology or differential characters.
 
 ## Authority boundary
 

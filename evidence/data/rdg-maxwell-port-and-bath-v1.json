@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "rdg-maxwell-port-and-bath-v1",
+  "date": "2026-10-26",
+  "purpose": "Close homogeneous Lorentz damping as a typed power port and locate the boundary between finite conservative baths and irreversible Markovian loss.",
+  "dissipativePort": {
+    "oscillator": "dot(P)=V; dot(V)=-omega0^2 P-gamma V",
+    "parameters": {
+      "omega0": 2,
+      "omegaP": 1.5,
+      "gamma": 0.3
+    },
+    "energyMetric": [
+      [
+        1.7777777777777777,
+        0
+      ],
+      [
+        0,
+        0.4444444444444444
+      ]
+    ],
+    "output": "y=sqrt(gamma)/omegaP times V",
+    "identity": "K^T L+L K=-2 C^T C, hence dot(H)=-y^T y",
+    "identityResidual": 5.551115123125783e-17,
+    "sampleState": [
+      0.7,
+      -1.2
+    ],
+    "sampleEnergyRate": -0.19199999999999995,
+    "samplePortPower": -0.19199999999999998,
+    "sampleBalanceResidual": 2.7755575615628914e-17,
+    "meaning": "The reduced model does not destroy unrecorded energy: it declares a nonnegative output power channel. The receiving bath state remains outside the model."
+  },
+  "finiteBathDilation": {
+    "model": "two identical unit-frequency oscillators coupled by kappa=3/2",
+    "generator": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        -2.5,
+        0,
+        1.5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1.5,
+        0,
+        -2.5,
+        0
+      ]
+    ],
+    "energyMetric": [
+      [
+        2.5,
+        0,
+        -1.5,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        -1.5,
+        0,
+        2.5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "conservativeResidual": 0,
+    "initialState": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "stateAtPi": [
+      0,
+      1.8369701987210297e-16,
+      -1,
+      -3.061616997868383e-16
+    ],
+    "stateAtTwoPi": [
+      1,
+      6.123233995736766e-16,
+      0,
+      -3.6739403974420594e-16
+    ],
+    "energyInitial": 1.25,
+    "energyAtPi": 1.25,
+    "energyAtTwoPi": 1.25,
+    "recurrenceResidual": 6.123233995736766e-16,
+    "interpretation": "At t=pi the observed oscillator q,p is exactly zero and energy sits in the bath oscillator; at t=2pi the full initial state returns."
+  },
+  "irreversibilityBoundary": {
+    "finitePositiveBath": "A finite autonomous positive-energy conservative dilation has oscillatory/quasiperiodic normal modes. It can mimic loss over a window but generically permits recurrence.",
+    "exactMarkovianLoss": "Permanent exponential damping requires an infinite/continuous bath, a thermodynamic limit, stochastic resetting, or an explicit coarse-graining/semigroup assumption.",
+    "detectorRule": "Record both port power and any return channel before treating attenuation as disappearance or fundamental irreversibility."
+  },
+  "verdict": "Damping can be typed exactly as an energy-output port, while a finite conservative carrier converts apparent loss into reversible transfer and recurrence. The bath/limit assumption is an independent admissibility coordinate, not hidden inside gamma."
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "rdg-maxwell-torus-flux-cut-v1",
+  "date": "2026-10-26",
+  "purpose": "Move a source-free non-bounding torus H2 flux into boundary Wilson data by cutting one periodic direction.",
+  "carriers": {
+    "torus": {
+      "dimensions": [
+        4,
+        8,
+        4
+      ],
+      "ranks": [
+        3,
+        3
+      ],
+      "betti": [
+        1,
+        2,
+        1
+      ]
+    },
+    "cylinder": {
+      "dimensions": [
+        6,
+        10,
+        4
+      ],
+      "ranks": [
+        5,
+        4
+      ],
+      "betti": [
+        1,
+        1,
+        0
+      ]
+    }
+  },
+  "cutMap": {
+    "description": "identify cylinder x=2 boundary with x=0 to recover the 2x2 periodic torus",
+    "chainResiduals": [
+      0,
+      0
+    ],
+    "cochainResiduals": [
+      0,
+      0
+    ]
+  },
+  "fluxTransfer": {
+    "torusFlux": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "torusFluxSum": 4,
+    "torusD1Rank": 3,
+    "torusD1WithFluxRank": 4,
+    "cylinderFlux": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "cylinderPotential": [
+      -1,
+      0,
+      -1,
+      0,
+      -4,
+      0,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "reconstructionResidual": 0,
+    "boundaryChain": [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "boundarySplitResidual": 0,
+    "leftBoundaryCirculation": 4,
+    "rightBoundaryCirculation": 0,
+    "netBoundaryCirculation": 4,
+    "retainedFlux": 4,
+    "stokesResidual": 0,
+    "conclusion": "The non-exact torus face flux becomes exact on the cut cylinder. Its period is the difference of Wilson circulations on the two new boundary circles."
+  },
+  "sourceFreeInterpretation": {
+    "embedding": "Treat the 2-torus as an xy cross-section of the periodic three-torus from Bridge 02 and the face cochain as constant B_z.",
+    "gauss": "The corresponding three-dimensional face field has d2 B=0 exactly and the xy two-cycle is non-bounding, so nonzero flux requires no magnetic charge.",
+    "contrast": "Unlike the punctured-sphere example, this is a source-free global flux sector."
+  },
+  "compactPhase": {
+    "torusFluxPhase": {
+      "re": -0.6536436208636119,
+      "im": -0.7568024953079282
+    },
+    "boundaryWilsonRatioPhase": {
+      "re": -0.6536436208636119,
+      "im": -0.7568024953079282
+    },
+    "residual": 0
+  },
+  "verdict": "A source-free non-bounding H2 flux obeys the same topology receipt: cutting the torus converts bulk flux into the relative Wilson circulation of the two new boundaries, without invoking magnetic charge or losing the global record."
+}
