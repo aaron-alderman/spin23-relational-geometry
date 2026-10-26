@@ -533,3 +533,20 @@ P=\Pi_1\!\left(\mathcal R[P]\right).
 
 If that equation follows from one typed action and is stable, the programme closes over itself. If it cannot be formulated without manually choosing its answer, the circle remains narrative rather than dynamical.
 
+## Later refinement: fixed point to stable return class
+
+Wave 7.230 sharpens this endpoint without retracting it. The fixed projector
+above is the \(m=1\), zero-residue special case of a broader terminal:
+
+\[
+ \Phi^m(C)\sim C,
+\]
+
+with stable transverse dynamics, a declared detector quotient and a measurable
+return residue. This refinement is required because later corpus results show
+that identical fixed points and contractions can hide inequivalent driven,
+equilibrium and monitored implementations, while gauge fields and Moonshine
+traces can erase global or oriented information. The terminal must therefore
+include path, provenance, detector injectivity and the thermodynamic/resource
+ledger. See [Wave 7.230](../../programmes/frontier/wave-7/frontier_wave7_230_the_terminal_is_a_stable_reconstructible_return_class.md).
+

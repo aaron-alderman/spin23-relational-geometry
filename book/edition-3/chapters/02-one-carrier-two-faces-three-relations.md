@@ -87,6 +87,35 @@ A scaled cycle graph canonically isolates a real first-harmonic plane under refi
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/02-one-carrier-two-faces-three-relations-the-graph-result-claim-1.md)
 
+<a id="the-terminal-is-a-return-class"></a>
+## The terminal is a return class
+
+The sequence does not end at three. Three relations close the first diagnostic
+loop and return to the carrier:
+
+\[
+ 1\longrightarrow2\longrightarrow3\longrightarrow1'.
+\]
+
+The prime matters. The returned carrier may be equivalent to the original
+under a declared gauge, basis or detector quotient while retaining phase,
+orientation, memory, entropy production or another path residue. Repetition
+therefore forms a helix rather than an immobile point.
+
+The corpus's strongest terminal is a **stable reconstructible return class**:
+the process returns to the same declared equivalence class, contracts
+transverse perturbations, preserves the residue needed to distinguish its
+mechanism, and predicts held-out records. A fixed point is the special case
+with one-step return and zero residue. Limit cycles, holonomies, metastable
+attractors and renormalization fixed shapes are equally admissible when their
+return depth and detector are stated.
+
+This is why “spin deeper and deeper” need not mean failure to converge. The
+microscopic state may keep moving while the law of admissible transport
+stabilizes.
+
+> **Corpus synthesis →** [Wave 7.230: the terminal is a stable reconstructible return class](../../../corpus/programmes/frontier/wave-7/frontier_wave7_230_the_terminal_is_a_stable_reconstructible_return_class.md)
+
 ## Chapter sources
 
 - [202_peirce_schur_triple_recursion_to_spin23.md](../../../corpus/claims/0200-0299/202_peirce_schur_triple_recursion_to_spin23.md)
