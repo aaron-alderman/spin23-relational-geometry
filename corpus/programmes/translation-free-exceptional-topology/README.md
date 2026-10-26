@@ -48,6 +48,8 @@
 
 **Finite width stability:** [projected-chain width/root grid](E8_PROJECTED_CHAIN_WIDTH_ROOT_GRID.md)
 
+**Boundary comparison:** [open versus periodic projected chains](E8_PROJECTED_CHAIN_BOUNDARY_COMPARISON.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -292,6 +294,7 @@ translation-free topology result remains valuable after that null.
 - [E8 projected two-cell coupling](E8_TWO_CELL_PROJECTED_COUPLING.md)
 - [E8 two-cell local-root audit](E8_TWO_CELL_ROOT_COUNT_AUDIT.md)
 - [E8 projected-chain width/root grid](E8_PROJECTED_CHAIN_WIDTH_ROOT_GRID.md)
+- [E8 projected-chain boundary comparison](E8_PROJECTED_CHAIN_BOUNDARY_COMPARISON.md)
 
 ## Primary external anchors
 
