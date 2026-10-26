@@ -54,6 +54,7 @@ test("short articles are discoverable, shareable and machine-readable without du
     "07-exceptional-horizon",
   ];
   const standaloneArticles = [
+    ["monster-distributed-search", /parallelize the searches, but serialize the promotions/u, /Canonical research source →/u],
     ["typed-object-signatures", /The dimensional firewall/u, /Complete circulation paper →/u],
     ["conversational-contact", /Why this is the correct starting point/u, /Canonical research source →/u],
     ["pagerank-selection-finesse", /The exact mechanism/u, /Canonical research source →/u],
