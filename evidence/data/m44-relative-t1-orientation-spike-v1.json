@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-26",
+  "object": {
+    "names": ["M44", "Praesepe", "Beehive Cluster", "NGC 2632"],
+    "role": "nearby coeval open-cluster calibration ensemble with extended tidal tails"
+  },
+  "semanticAudit": {
+    "configurationT1": "exploratory locally dominant electromagnetic/null transport sector; only meaning admitted to the spike",
+    "modularT1": "genus-two theta-characteristic transformation; not a celestial vector and has no defined angle to M44",
+    "workflowT1": "execution-tranche label; irrelevant",
+    "ordinaryTailAxis": "spatial or phase-space principal direction; measurable but not identified with configuration T1"
+  },
+  "declaredModel": {
+    "projection": "omegaObserved = omega1 * (1 - v/c) * kappa(theta,q)",
+    "kappa": "cos(theta) + q*sin(theta)",
+    "q": "omega2/omega1",
+    "spatialProjection": "CObserved = P*CIntrinsic*transpose(P)"
+  },
+  "exactResults": {
+    "constantSpectralAngle": "not identifiable separately from systemic radial velocity in the declared single-channel model",
+    "velocityAlias": "D(vPrime) = D(v)*kappa(theta,q)/kappa(thetaPrime,q)",
+    "unknownHiddenRatio": "only combinations of q and theta enter one projected frequency record",
+    "spatialAngle": "not identifiable from observed cluster covariance without an independently fixed intrinsic covariance",
+    "modularAngle": "undefined due to type mismatch"
+  },
+  "ordinarySpatialControl": {
+    "dataset": "VizieR J/A+A/627/A4/stars",
+    "datasetDoi": "https://doi.org/10.26093/cds/vizier.36270004",
+    "query": "https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/A%2bA/627/A4&-out.all=1",
+    "retrievedUtc": "2026-10-26T06:21:56Z",
+    "totalRows": 1393,
+    "normalizedDataRowsSha256": "d465fee19444b58d872d33f492c69b8909848bcfb14b059648a688dbde3527c5",
+    "selection": "pcont <= 0.01",
+    "selectedRows": 1247,
+    "method": "tangent-plane PCA with x=(RA-meanRA)*cos(meanDec), y=Dec-meanDec; covariance normalized by N",
+    "meanRaDeg": 130.442949488701,
+    "meanDecDeg": 21.4034420494868,
+    "covarianceDeg2": [
+      [8.42144238184982, 11.326431434131],
+      [11.326431434131, 64.4571749166591]
+    ],
+    "majorAxisPositionAngleEastOfNorthDeg": 11.01,
+    "principalAxisRatio": 3.27,
+    "thresholdSensitivity": {
+      "pcontRange": [0, 0.1],
+      "positionAngleRangeDeg": [9.92, 11.01],
+      "axisRatioRange": [3.16, 3.33]
+    },
+    "interpretation": "ordinary sky-plane catalogue axis only; not a configuration T1 measurement"
+  },
+  "minimumSeparatingBundle": [
+    "astrometric perspective or convergent-point radial velocity independent of spectral frequencies",
+    "spectroscopic systemic velocity with binary, atmospheric and instrument zero-point controls",
+    "signed leading/trailing tidal-tail coordinate",
+    "preregistered multi-line or multi-carrier q law",
+    "parallax-anchored multiband photometry",
+    "jointly specified electromagnetic and gravitational kernels before mass comparison"
+  ],
+  "controls": [
+    "Galactic tidal-tail dynamics",
+    "cluster evaporation and mass segregation",
+    "unresolved binaries",
+    "stellar gravitational redshift and convective line shifts",
+    "instrumental radial-velocity zero points",
+    "extinction, metallicity, rotation and stellar-model uncertainty",
+    "membership-selection sensitivity"
+  ],
+  "verdict": {
+    "status": "constant-angle single-channel hypothesis non-identifying; differential cross-channel experiment conditional on a frozen coupling law",
+    "empiricalEvidenceForT1Tilt": false,
+    "newPhysicsClaim": false,
+    "nextGate": "derive a source-native T1-to-observable kernel that predicts a non-constant residual before fitting M44 data"
+  },
+  "sources": [
+    "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-44/",
+    "https://doi.org/10.1051/0004-6361/201935502",
+    "https://doi.org/10.26093/cds/vizier.36270004",
+    "https://doi.org/10.1051/0004-6361/202451650",
+    "https://doi.org/10.1088/2041-8205/756/2/L33",
+    "https://doi.org/10.1088/0004-637X/807/1/24",
+    "https://doi.org/10.1088/0004-637X/775/1/58"
+  ]
+}
+
