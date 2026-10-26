@@ -96,6 +96,14 @@ The programme would need an additional radial/scale organization or a larger \(S
 
 Consequently, holography remains a high-value spectral and mechanism factory, but it is not a proof bridge unless those five steps are supplied.
 
+The later [bulk-cone exact-record gate](../../programmes/admissibility/admissibility_145_bulk_cone_resolution_exact_correlators_overrule_sharp_semiclassical_geometry.md)
+sharpens this boundary from a different direction. Even when a classical bulk
+geometry and returning null ray are perfectly regular, their predicted sharp
+boundary singularity can be forbidden by exact finite-\(G_N\) CFT
+analyticity. A bulk construction must therefore establish not only its radial
+spectrum and dictionary but also that its proposed singular support survives
+the exact boundary observable and the declared order of limits.
+
 ## Sources
 
 - [Witten, anti-de Sitter thermal phase transition and confinement](https://arxiv.org/abs/hep-th/9803131)

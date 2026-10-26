@@ -16,7 +16,7 @@ Each cell is Recall@10 / mean reciprocal rank.
 
 | Split | Cases | Canonical | Algebra | Naive fusion | Routed |
 |---|---:|---:|---:|---:|---:|
-| calibration | 6 | 0.333 / 0.250 | 1.000 / 0.491 | 0.833 / 0.380 | 0.833 / 0.546 |
+| calibration | 6 | 0.333 / 0.250 | 1.000 / 0.487 | 0.833 / 0.380 | 0.833 / 0.546 |
 | holdout | 6 | 0.333 / 0.222 | 1.000 / 0.337 | 0.667 / 0.432 | 1.000 / 0.480 |
 | validation | 6 | 0.167 / 0.083 | 0.500 / 0.124 | 0.500 / 0.141 | 0.500 / 0.124 |
 | faceted-validation | 6 | 0.333 / 0.333 | 1.000 / 0.242 | 1.000 / 0.492 | 1.000 / 0.492 |
@@ -25,7 +25,7 @@ Each cell is Recall@10 / mean reciprocal rank.
 
 | Split | Case | Canonical rank | Algebra rank | Fusion rank | Routed rank |
 |---|---|---:|---:|---:|---:|
-| calibration | calibration-hydrodynamic-lineage | 1 | 6 | 1 | 1 |
+| calibration | calibration-hydrodynamic-lineage | 1 | 7 | 1 | 1 |
 | calibration | calibration-e8-edge-lineage | 2 | 9 | 3 | 9 |
 | calibration | calibration-complete-experiment-programmes | — | 1 | 2 | 1 |
 | calibration | calibration-incomplete-experiment-atlas | — | 2 | — | — |
@@ -68,6 +68,6 @@ Each cell is Recall@10 / mean reciprocal rank.
 
 Expected sources test navigation and structural recovery only. They do not establish the truth, completeness or scientific authority of any source.
 
-- Corpus digest: `7be80e9d9a573b1e00b40d76ba6ab353d7f7bf5f28a9b0d5d5fbc7c8859bb6a6`
-- Algebra archive: `d439c32fba5eb7c13aedb6396718a596aa200dd2158b691e46297e125e19d78c`
+- Corpus digest: `eacba2b213b5531473ea1e4a91ab7010415704461f95b5de40a4063a575adc3c`
+- Algebra archive: `dfbcabd8b0a6b71922609fc213dcd6d968b766fff701e04500e0eefb66e2af98`
 - Suite: `2fc979749f8788ff56b3278fa4c510af05127ae56c34fdac57393268a834cb64`

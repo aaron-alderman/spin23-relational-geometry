@@ -161,6 +161,14 @@ This is not proposed Yang--Mills dynamics. It is a counterexample to the inferen
 
 Even a rigorous positive planar gap would need an additional theorem excluding low-energy states whose overlaps vanish with \(N\). Without spectral convergence uniform near zero energy, no finite-\(N\) lower bound follows.
 
+The same noncommuting-limit mechanism now has a holographic singular-support
+witness. In [the bulk-cone exact-record gate](../../programmes/admissibility/admissibility_145_bulk_cone_resolution_exact_correlators_overrule_sharp_semiclassical_geometry.md),
+a sharp singularity appears when the classical/large-\(N\) bulk channel is
+taken first, while the exact finite-\(G_N\) correlator remains regular away
+from the boundary light cone. The two results do not identify gauge-theory
+gaps with bulk-cone propagation; together they show why pointwise asymptotic
+control cannot transport a nonuniform spectral or singular-support statement.
+
 ## Loop-equation closure boundary
 
 Under unbroken center symmetry and factorization, reduced and unreduced planar loop equations match. That establishes neither:
