@@ -1,0 +1,244 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "deterministic experiment compiler; no observation authorized or performed",
+  "inputs": {
+    "inverse": "evidence/data/m44-inverse-response-jets-v1.json",
+    "contract": "evidence/data/m44-anchor-width-calibration-contract-v1.json"
+  },
+  "objective": "separate every pair that co-occurs in a current observable equivalence class",
+  "ambiguityPairs": [
+    "L0-ordinary-constant::L1-constant-displacement",
+    "L0-ordinary-constant::L2-constant-tilt",
+    "L1-constant-displacement::L2-constant-tilt",
+    "L3-ordinary-affine-dynamics::L4-calibration-or-population-drift",
+    "L3-ordinary-affine-dynamics::L5-generic-affine-latent-response",
+    "L3-ordinary-affine-dynamics::L6-smooth-geometric-bend",
+    "L3-ordinary-affine-dynamics::L7-geometric-thickness",
+    "L4-calibration-or-population-drift::L5-generic-affine-latent-response",
+    "L4-calibration-or-population-drift::L6-smooth-geometric-bend",
+    "L4-calibration-or-population-drift::L7-geometric-thickness",
+    "L5-generic-affine-latent-response::L6-smooth-geometric-bend"
+  ],
+  "prerequisites": [
+    {
+      "id": "P1-forward-law",
+      "stage": 0,
+      "deliverable": "source-derived displacement, tilt, bend and thickness response on named carriers, including normalization and falsifiers",
+      "status": "missing"
+    },
+    {
+      "id": "P2-full-covariance",
+      "stage": 1,
+      "deliverable": "member-level astrometric, spectral, fitted-model and selection covariance with provenance",
+      "status": "missing"
+    }
+  ],
+  "actions": [
+    {
+      "id": "X1-absolute-anchor-pilot",
+      "stage": 2,
+      "type": "calibration+observation",
+      "prerequisites": [
+        "P1-forward-law"
+      ],
+      "separates": [
+        "L0-ordinary-constant::L1-constant-displacement",
+        "L0-ordinary-constant::L2-constant-tilt",
+        "L1-constant-displacement::L2-constant-tilt"
+      ],
+      "deliverable": "calibrated anchor surface with retained constant and affine terms on held-out standards",
+      "failureMeaning": "E0 remains one location-kernel class; displacement is untestable rather than absent"
+    },
+    {
+      "id": "X2-frozen-ordinary-phase-space",
+      "stage": 1,
+      "type": "model",
+      "prerequisites": [
+        "P2-full-covariance"
+      ],
+      "separates": [
+        "L3-ordinary-affine-dynamics::L5-generic-affine-latent-response",
+        "L3-ordinary-affine-dynamics::L6-smooth-geometric-bend"
+      ],
+      "deliverable": "member-level ordinary residual prediction frozen before new spectroscopy",
+      "failureMeaning": "ordinary dynamics remains an unfrozen flexible explanation"
+    },
+    {
+      "id": "X3-cross-instrument-replication",
+      "stage": 2,
+      "type": "replication",
+      "prerequisites": [
+        "P2-full-covariance"
+      ],
+      "separates": [
+        "L3-ordinary-affine-dynamics::L4-calibration-or-population-drift",
+        "L4-calibration-or-population-drift::L5-generic-affine-latent-response",
+        "L4-calibration-or-population-drift::L6-smooth-geometric-bend",
+        "L4-calibration-or-population-drift::L7-geometric-thickness"
+      ],
+      "deliverable": "same frozen targets and lines measured on a withheld independently calibrated spectrograph",
+      "failureMeaning": "instrument-specific structure remains inside the affine and width classes"
+    },
+    {
+      "id": "X4-carrier-law-line-holdout",
+      "stage": 2,
+      "type": "derivation+observation",
+      "prerequisites": [
+        "P1-forward-law"
+      ],
+      "separates": [
+        "L3-ordinary-affine-dynamics::L6-smooth-geometric-bend",
+        "L4-calibration-or-population-drift::L6-smooth-geometric-bend",
+        "L5-generic-affine-latent-response::L6-smooth-geometric-bend"
+      ],
+      "deliverable": "preregistered carrier/line response followed by withheld-line evaluation",
+      "failureMeaning": "geometric bend remains only an untyped member of the affine-response class"
+    },
+    {
+      "id": "X5-hierarchical-width-deconvolution",
+      "stage": 2,
+      "type": "multi-epoch inference",
+      "prerequisites": [
+        "P1-forward-law",
+        "P2-full-covariance"
+      ],
+      "separates": [
+        "L3-ordinary-affine-dynamics::L7-geometric-thickness",
+        "L4-calibration-or-population-drift::L7-geometric-thickness"
+      ],
+      "deliverable": "joint star/line/epoch/instrument covariance with binary, atmosphere and measurement mixtures separated",
+      "failureMeaning": "W remains an undeconvolved width mixture"
+    }
+  ],
+  "marginalCoverage": [
+    {
+      "action": "X1-absolute-anchor-pilot",
+      "pairs": [
+        "L0-ordinary-constant::L1-constant-displacement",
+        "L0-ordinary-constant::L2-constant-tilt",
+        "L1-constant-displacement::L2-constant-tilt"
+      ],
+      "count": 3,
+      "uniquelyRequiredPairs": [
+        "L0-ordinary-constant::L1-constant-displacement",
+        "L0-ordinary-constant::L2-constant-tilt",
+        "L1-constant-displacement::L2-constant-tilt"
+      ]
+    },
+    {
+      "action": "X2-frozen-ordinary-phase-space",
+      "pairs": [
+        "L3-ordinary-affine-dynamics::L5-generic-affine-latent-response",
+        "L3-ordinary-affine-dynamics::L6-smooth-geometric-bend"
+      ],
+      "count": 2,
+      "uniquelyRequiredPairs": [
+        "L3-ordinary-affine-dynamics::L5-generic-affine-latent-response"
+      ]
+    },
+    {
+      "action": "X3-cross-instrument-replication",
+      "pairs": [
+        "L3-ordinary-affine-dynamics::L4-calibration-or-population-drift",
+        "L4-calibration-or-population-drift::L5-generic-affine-latent-response",
+        "L4-calibration-or-population-drift::L6-smooth-geometric-bend",
+        "L4-calibration-or-population-drift::L7-geometric-thickness"
+      ],
+      "count": 4,
+      "uniquelyRequiredPairs": [
+        "L3-ordinary-affine-dynamics::L4-calibration-or-population-drift",
+        "L4-calibration-or-population-drift::L5-generic-affine-latent-response"
+      ]
+    },
+    {
+      "action": "X4-carrier-law-line-holdout",
+      "pairs": [
+        "L3-ordinary-affine-dynamics::L6-smooth-geometric-bend",
+        "L4-calibration-or-population-drift::L6-smooth-geometric-bend",
+        "L5-generic-affine-latent-response::L6-smooth-geometric-bend"
+      ],
+      "count": 3,
+      "uniquelyRequiredPairs": [
+        "L5-generic-affine-latent-response::L6-smooth-geometric-bend"
+      ]
+    },
+    {
+      "action": "X5-hierarchical-width-deconvolution",
+      "pairs": [
+        "L3-ordinary-affine-dynamics::L7-geometric-thickness",
+        "L4-calibration-or-population-drift::L7-geometric-thickness"
+      ],
+      "count": 2,
+      "uniquelyRequiredPairs": [
+        "L3-ordinary-affine-dynamics::L7-geometric-thickness"
+      ]
+    }
+  ],
+  "cover": {
+    "completeCoverExists": true,
+    "minimumActionCount": 5,
+    "selectedActions": [
+      "X1-absolute-anchor-pilot",
+      "X2-frozen-ordinary-phase-space",
+      "X3-cross-instrument-replication",
+      "X4-carrier-law-line-holdout",
+      "X5-hierarchical-width-deconvolution"
+    ],
+    "coveredPairs": [
+      "L0-ordinary-constant::L1-constant-displacement",
+      "L0-ordinary-constant::L2-constant-tilt",
+      "L1-constant-displacement::L2-constant-tilt",
+      "L3-ordinary-affine-dynamics::L4-calibration-or-population-drift",
+      "L3-ordinary-affine-dynamics::L5-generic-affine-latent-response",
+      "L3-ordinary-affine-dynamics::L6-smooth-geometric-bend",
+      "L3-ordinary-affine-dynamics::L7-geometric-thickness",
+      "L4-calibration-or-population-drift::L5-generic-affine-latent-response",
+      "L4-calibration-or-population-drift::L6-smooth-geometric-bend",
+      "L4-calibration-or-population-drift::L7-geometric-thickness",
+      "L5-generic-affine-latent-response::L6-smooth-geometric-bend"
+    ],
+    "uncoveredPairs": []
+  },
+  "stagedProgram": [
+    {
+      "stage": 0,
+      "name": "derive",
+      "items": [
+        "P1-forward-law"
+      ],
+      "stop": "do not acquire a large bespoke dataset if the carrier-specific law remains undefined"
+    },
+    {
+      "stage": 1,
+      "name": "reconstruct",
+      "items": [
+        "P2-full-covariance",
+        "X2-frozen-ordinary-phase-space"
+      ],
+      "stop": "do not call residual structure anomalous until the ordinary prediction and covariance are frozen"
+    },
+    {
+      "stage": 2,
+      "name": "observe-once-retain-identity",
+      "items": [
+        "X1-absolute-anchor-pilot",
+        "X3-cross-instrument-replication",
+        "X4-carrier-law-line-holdout",
+        "X5-hierarchical-width-deconvolution"
+      ],
+      "stop": "retain raw star/line/epoch/instrument identity; do not collapse to one catalogue velocity"
+    },
+    {
+      "stage": 3,
+      "name": "adjudicate",
+      "items": [
+        "rerun response-jet inversion",
+        "compare only preregistered observable classes",
+        "abstain on remaining aliases"
+      ],
+      "stop": "no physical promotion without independent held-out separation"
+    }
+  ],
+  "decision": "the five actions form the unique minimum complete cover under the declared discrimination graph",
+  "caveat": "pair coverage means an action supplies a declared discriminator; it does not guarantee statistical power or a positive geometric result"
+}
