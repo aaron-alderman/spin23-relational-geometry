@@ -54,7 +54,7 @@
     "runner": "scripts/analyze-m44-cross-channel-kinematics.mjs",
     "membershipSource": "Roeser and Schilbach 2019 VizieR J/A+A/627/A4",
     "astrometryAndSpectroscopySource": "Gaia DR3 gaia_source joined through dr2_neighbourhood",
-    "gaiaJoinedDataSha256": "66dc703186e78583dacc3ee649b148085a7f5beebd73319c756037abd5f79c5e",
+    "gaiaJoinedDataSha256": "ea0784368fb2f323d7d40adcf4a513e1c610bc73196518295bd89487664d5597",
     "selection": {
       "lowContaminationMembers": 1247,
       "gaiaDr3AstrometryMatches": 1247,
@@ -135,6 +135,42 @@
       "result": "spatial structure generalizes versus a constant offset, but no tested boundary or relaxation shape is distinguishable from an ordinary linear tail term",
       "nextDiscriminator": "three-dimensional tail position with uncertainty, frozen ordinary phase-space predictions, or untouched spectroscopy outside the current angular window"
     },
+    "threeDimensionalTailAndSpectralSurface": {
+      "method": "heliocentric Cartesian positions from Gaia DR3 sky direction and inverse parallax; robust component-wise median centre; principal covariance axis from all 1247 selected members; axis sign aligned to the published sky-plane tail coordinate",
+      "axisIcrs": [0.46533108330102996, -0.7691499807057572, 0.4380357178292918],
+      "centreIcrsPc": [-111.32165519827126, 133.08511258841574, 62.359614597986265],
+      "rvRecords": 416,
+      "robustResidualInliers": 373,
+      "nominalResidualSlopeKmPerSecPerPc": -0.020055264111813454,
+      "parallaxPerturbedSlope95PercentIntervalKmPerSecPerPc": [-0.02028375946710094, -0.01978886549679585],
+      "uncertaintyBoundary": "2000 deterministic Gaussian perturbations of along-axis coordinate from reported parallax error; membership, common-velocity fit, correlations and PCA axis held fixed",
+      "spectralControl": {
+        "recordsWithRvTemplateTemperature": 373,
+        "tailSlopeControllingTemplateTemperatureKmPerSecPerPc": -0.02011236650999924,
+        "templateTemperatureSlopeControllingTailKmPerSecPer1000K": -0.00813258157625887,
+        "interpretation": "the spatial term survives a coarse Gaia RV-template-temperature control; aggregate catalogue RV cannot test line-by-line carrier coherence"
+      },
+      "surface": "12 equal-count robust-inlier bins along the 3-D tail and 28 populated tail-by-template-temperature cells are emitted by the analysis runner",
+      "interpretation": "three-dimensional spatial structure is present in this reconstruction but does not identify boundary topology or T1 coupling"
+    },
+    "orientationPriorControl": {
+      "morphologyIdentifiesT1Orientation": false,
+      "reason": "no source-native law maps ordinary cluster size, shape, formation plane or tidal-tail axis to configuration-T1 orientation",
+      "isotropicUnorientedAxes3d": {
+        "acuteAngleDensity": "p(theta)=sin(theta), 0<=theta<=pi/2",
+        "probabilityWithin5DegOf90": 0.08715574274765817,
+        "probabilityWithin10DegOf90": 0.17364817766693033,
+        "probabilityAtExactly90": 0
+      },
+      "unorientedCircle": {
+        "acuteAngleDensity": "uniform on [0,pi/2]",
+        "probabilityWithin5DegOf90": 0.05555555555555555,
+        "probabilityWithin10DegOf90": 0.1111111111111111,
+        "probabilityAtExactly90": 0
+      },
+      "visibilityConstraint": "for q=0 direct overlap abs(cos(theta)) vanishes at 90 degrees; visible M44 disfavors exact orthogonality in the naive pure-projection model, while nonzero q or reciprocal boundary mixing can restore coupling",
+      "verdict": "near-90 angles may have more prior measure under isotropic 3-D axes, but M44 morphology supplies no posterior preference and exact orthogonality requires an explicit mixing channel"
+    },
     "authorityLimits": [
       "membership was preselected with convergent-point kinematics, so this is not independent discovery",
       "a constant spectroscopic offset still does not identify configuration T1",
@@ -165,7 +201,7 @@
     "status": "constant-angle single-channel hypothesis non-identifying; first cross-channel pass detects an unassigned spatial residual but does not identify T1",
     "empiricalEvidenceForT1Tilt": false,
     "newPhysicsClaim": false,
-    "nextGate": "reconstruct three-dimensional tail position with uncertainty, obtain a frozen ordinary phase-space prediction, and test any independently derived theta(x) law on untouched or independent spectroscopy"
+    "nextGate": "replace inverse-parallax PCA with a full astrometric-covariance tail model, obtain frozen ordinary phase-space predictions, and test line-resolved or independent spectroscopy outside the present sample"
   },
   "sources": [
     "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-44/",

@@ -106,7 +106,8 @@ const fetchGaia = async sourceIds => {
   for (let offset = 0; offset < sourceIds.length; offset += 200) {
     const ids = sourceIds.slice(offset, offset + 200);
     const query = "SELECT n.dr2_source_id,n.dr3_source_id,n.angular_distance,n.magnitude_difference," +
-      "g.ra,g.dec,g.parallax,g.pmra,g.pmdec,g.radial_velocity,g.radial_velocity_error " +
+      "g.ra,g.dec,g.parallax,g.parallax_error,g.pmra,g.pmdec," +
+      "g.radial_velocity,g.radial_velocity_error,g.grvs_mag,g.rv_template_teff,g.rv_nb_transits " +
       "FROM gaiadr3.dr2_neighbourhood AS n " +
       "JOIN gaiadr3.gaia_source AS g ON n.dr3_source_id=g.source_id " +
       "WHERE n.dr2_source_id IN (" + ids.join(",") + ") " +
@@ -129,10 +130,14 @@ const fetchGaia = async sourceIds => {
           ra: Number(row.ra),
           dec: Number(row.dec),
           parallax: Number(row.parallax),
+          parallaxError: row.parallax_error === "" ? null : Number(row.parallax_error),
           pmra: Number(row.pmra),
           pmdec: Number(row.pmdec),
           radialVelocity: row.radial_velocity === "" ? null : Number(row.radial_velocity),
-          radialVelocityError: row.radial_velocity_error === "" ? null : Number(row.radial_velocity_error)
+          radialVelocityError: row.radial_velocity_error === "" ? null : Number(row.radial_velocity_error),
+          grvsMag: row.grvs_mag === "" ? null : Number(row.grvs_mag),
+          rvTemplateTeff: row.rv_template_teff === "" ? null : Number(row.rv_template_teff),
+          rvNbTransits: row.rv_nb_transits === "" ? null : Number(row.rv_nb_transits)
         });
       }
     }
@@ -532,6 +537,128 @@ const crossValidatedShapeTournament = (rows, foldCount = 5) => {
   };
 };
 
+const positionFromAstrometry = row => {
+  const distancePc = 1000 / row.parallax;
+  return basisAt(row.ra, row.dec).radial.map(component => component * distancePc);
+};
+
+const principalAxis3d = rows => {
+  const positioned = rows.map(row => ({ row, position: positionFromAstrometry(row) }));
+  const centre = [0, 1, 2].map(index => median(positioned.map(item => item.position[index])));
+  const covariance = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+  for (const item of positioned) {
+    const delta = item.position.map((value, index) => value - centre[index]);
+    for (let left = 0; left < 3; left += 1) {
+      for (let right = 0; right < 3; right += 1) covariance[left][right] += delta[left] * delta[right];
+    }
+  }
+  let vector = [1, 1, 1].map(value => value / Math.sqrt(3));
+  for (let iteration = 0; iteration < 100; iteration += 1) {
+    const next = covariance.map(row => dot(row, vector));
+    const norm = Math.hypot(...next);
+    vector = next.map(value => value / norm);
+  }
+  const coordinate = row => dot(positionFromAstrometry(row).map((value, index) => value - centre[index]), vector);
+  return { centre, vector, coordinate };
+};
+
+const gaussianGenerator = seed => {
+  const uniform = seededGenerator(seed);
+  let spare = null;
+  return () => {
+    if (spare !== null) {
+      const value = spare;
+      spare = null;
+      return value;
+    }
+    const radius = Math.sqrt(-2 * Math.log(Math.max(uniform(), Number.EPSILON)));
+    const angle = 2 * Math.PI * uniform();
+    spare = radius * Math.sin(angle);
+    return radius * Math.cos(angle);
+  };
+};
+
+const summarize3dTail = rows => {
+  const usable = rows.filter(row => finite(row.tailCoordinate3dPc) && finite(row.tailCoordinate3dSigmaPc));
+  const residualMedian = median(usable.map(row => row.residual));
+  const residualMad = median(usable.map(row => Math.abs(row.residual - residualMedian)));
+  const robustSigma = 1.4826 * residualMad;
+  const inliers = usable.filter(row => Math.abs(row.residual - residualMedian) <= 3 * Math.max(robustSigma, 0.5));
+  const nominal = linearSummary(inliers.map(row => ({ ...row, tailCoordinate: row.tailCoordinate3dPc })));
+  const gaussian = gaussianGenerator(0x33445441);
+  const slopes = [];
+  for (let iteration = 0; iteration < 2000; iteration += 1) {
+    const perturbed = inliers.map(row => ({
+      ...row,
+      tailCoordinate: row.tailCoordinate3dPc + gaussian() * row.tailCoordinate3dSigmaPc
+    }));
+    slopes.push(linearSummary(perturbed).slopeKmPerSecPerDeg);
+  }
+  slopes.sort((left, right) => left - right);
+  const ordered = [...inliers].sort((left, right) => left.tailCoordinate3dPc - right.tailCoordinate3dPc);
+  const bins = [];
+  const binCount = 12;
+  for (let index = 0; index < binCount; index += 1) {
+    const slice = ordered.slice(Math.floor(index * ordered.length / binCount), Math.floor((index + 1) * ordered.length / binCount));
+    bins.push({
+      count: slice.length,
+      tailCoordinatePc: median(slice.map(row => row.tailCoordinate3dPc)),
+      tailCoordinateSigmaPc: median(slice.map(row => row.tailCoordinate3dSigmaPc)),
+      residualKmPerSec: median(slice.map(row => row.residual)),
+      residualErrorKmPerSec: median(slice.map(row => row.radialVelocityError)),
+      spectralShiftPartsPerMillion: median(slice.map(row => row.residual / 299792.458 * 1e6))
+    });
+  }
+  const spectral = inliers.filter(row => finite(row.rvTemplateTeff));
+  const meanTail = spectral.reduce((sum, row) => sum + row.tailCoordinate3dPc, 0) / spectral.length;
+  const meanTemperature = spectral.reduce((sum, row) => sum + row.rvTemplateTeff, 0) / spectral.length;
+  const meanResidual = spectral.reduce((sum, row) => sum + row.residual, 0) / spectral.length;
+  const normal = [[spectral.length, 0, 0], [0, 0, 0], [0, 0, 0]];
+  const right = [spectral.length * meanResidual, 0, 0];
+  for (const row of spectral) {
+    const tail = row.tailCoordinate3dPc - meanTail;
+    const temperature = (row.rvTemplateTeff - meanTemperature) / 1000;
+    normal[1][1] += tail * tail;
+    normal[1][2] += tail * temperature;
+    normal[2][1] += tail * temperature;
+    normal[2][2] += temperature * temperature;
+    right[1] += tail * row.residual;
+    right[2] += temperature * row.residual;
+  }
+  const spectralCoefficients = solve3(normal, right);
+  const surfaceCells = [];
+  const tailCuts = Array.from({ length: 7 }, (_, index) => quantile(spectral.map(row => row.tailCoordinate3dPc), index / 6));
+  const temperatureCuts = [3000, 4000, 5000, 6000, 7500, 10000];
+  for (let tailIndex = 0; tailIndex < tailCuts.length - 1; tailIndex += 1) {
+    for (let temperatureIndex = 0; temperatureIndex < temperatureCuts.length - 1; temperatureIndex += 1) {
+      const cell = spectral.filter(row => row.tailCoordinate3dPc >= tailCuts[tailIndex] &&
+        (tailIndex === tailCuts.length - 2 ? row.tailCoordinate3dPc <= tailCuts[tailIndex + 1] : row.tailCoordinate3dPc < tailCuts[tailIndex + 1]) &&
+        row.rvTemplateTeff >= temperatureCuts[temperatureIndex] && row.rvTemplateTeff < temperatureCuts[temperatureIndex + 1]);
+      if (cell.length >= 3) surfaceCells.push({
+        count: cell.length,
+        tailCoordinatePc: median(cell.map(row => row.tailCoordinate3dPc)),
+        templateTeffK: median(cell.map(row => row.rvTemplateTeff)),
+        residualKmPerSec: median(cell.map(row => row.residual)),
+        spectralShiftPartsPerMillion: median(cell.map(row => row.residual / 299792.458 * 1e6))
+      });
+    }
+  }
+  return {
+    usable: usable.length,
+    robustInliers: inliers.length,
+    nominalSlopeKmPerSecPerPc: nominal.slopeKmPerSecPerDeg,
+    parallaxPerturbedSlope95PercentIntervalKmPerSecPerPc: [slopes[50], slopes[1950]],
+    parallaxPerturbation: "2000 deterministic Gaussian draws of the along-axis coordinate only; membership and common-velocity fit held fixed",
+    bins,
+    spectralControl: {
+      recordsWithRvTemplateTemperature: spectral.length,
+      tailSlopeControllingTemplateTemperatureKmPerSecPerPc: spectralCoefficients[1],
+      templateTemperatureSlopeControllingTailKmPerSecPer1000K: spectralCoefficients[2],
+      surfaceCells
+    }
+  };
+};
+
 const vizierResponse = await fetch(vizierUrl);
 assert.equal(vizierResponse.ok, true);
 const catalog = parseVizier(await vizierResponse.text());
@@ -554,11 +681,18 @@ const velocityFits = {
 };
 const tailCoordinate = row => ((row.ra - medianRa) * axis.cosDec) * axis.vx +
   (row.dec - medianDec) * axis.vy;
+const tail3d = principalAxis3d(joined);
+const axisAlignment = joined.reduce((sum, row) => sum + tailCoordinate(row) * tail3d.coordinate(row), 0);
+if (axisAlignment < 0) tail3d.vector.forEach((value, index) => { tail3d.vector[index] = -value; });
 const withRadialVelocity = joined
   .filter(row => finite(row.radialVelocity) && finite(row.radialVelocityError) && row.radialVelocityError <= 5)
   .map(row => ({
     ...row,
     tailCoordinate: tailCoordinate(row),
+    tailCoordinate3dPc: tail3d.coordinate(row),
+    tailCoordinate3dSigmaPc: finite(row.parallaxError)
+      ? Math.abs(dot(basisAt(row.ra, row.dec).radial, tail3d.vector)) * 1000 * row.parallaxError / row.parallax ** 2
+      : null,
     astrometricRadialVelocity: dot(basisAt(row.ra, row.dec).radial, velocityFits.allSelectedMembers.velocity)
   }));
 
@@ -581,7 +715,10 @@ const fullBaselineResidualRows = withRadialVelocity.map(row => ({
   residual: row.radialVelocity - dot(basisAt(row.ra, row.dec).radial, velocityFits.allSelectedMembers.velocity)
 }));
 const heldOutRehearsal = crossValidatedComparison(fullBaselineResidualRows);
-const shapeTournament = crossValidatedShapeTournament(fullBaselineResidualRows);
+const shapeTournament = process.argv.includes("--quick")
+  ? { status: "omitted by --quick" }
+  : crossValidatedShapeTournament(fullBaselineResidualRows);
+const threeDimensionalTail = summarize3dTail(fullBaselineResidualRows);
 const centre = basisAt(medianRa, medianDec).radial;
 const gaiaJoinedDataSha256 = createHash("sha256").update(JSON.stringify(joined.map(row => ({
   dr2SourceId: row.dr2SourceId,
@@ -589,10 +726,14 @@ const gaiaJoinedDataSha256 = createHash("sha256").update(JSON.stringify(joined.m
   ra: row.ra,
   dec: row.dec,
   parallax: row.parallax,
+  parallaxError: row.parallaxError,
   pmra: row.pmra,
   pmdec: row.pmdec,
   radialVelocity: row.radialVelocity,
-  radialVelocityError: row.radialVelocityError
+  radialVelocityError: row.radialVelocityError,
+  grvsMag: row.grvsMag,
+  rvTemplateTeff: row.rvTemplateTeff,
+  rvNbTransits: row.rvNbTransits
 })))).digest("hex");
 
 assert.equal(catalog.length, 1393);
@@ -600,6 +741,11 @@ assert.equal(selected.length, 1247);
 assert.ok(joined.length > 1200);
 assert.ok(withRadialVelocity.length > 350);
 assert.ok(core.length > 500);
+
+if (process.argv.includes("--hash-only")) {
+  console.log(gaiaJoinedDataSha256);
+  process.exit(0);
+}
 
 console.log(JSON.stringify({
   authority: {
@@ -627,6 +773,11 @@ console.log(JSON.stringify({
   fits: analyses,
   heldOutRehearsal,
   shapeTournament,
+  threeDimensionalTail: {
+    axisIcrs: tail3d.vector,
+    centreIcrsPc: tail3d.centre,
+    ...threeDimensionalTail
+  },
   falsifierBoundary: {
     independentDiscovery: false,
     constantOffsetIdentifiesT1: false,

@@ -121,6 +121,18 @@ for (const interval of Object.values(tournament.candidateMinusLinearPairedBootst
 assert.equal(tournament.models.clusterRelaxation.selectedLengthDegAllFolds, 64);
 assert.ok(tournament.models.smoothStep.selectedWidthRangeDeg[0] >= 32);
 assert.match(tournament.result, /no tested boundary or relaxation shape is distinguishable/u);
+const tail3d = crossChannel.threeDimensionalTailAndSpectralSurface;
+assert.equal(tail3d.rvRecords, crossChannel.selection.radialVelocityErrorAtMost5KmPerSec);
+assert.equal(tail3d.robustResidualInliers, crossChannel.selection.robustRadialVelocityInliers);
+assert.ok(tail3d.parallaxPerturbedSlope95PercentIntervalKmPerSecPerPc[0] < tail3d.nominalResidualSlopeKmPerSecPerPc);
+assert.ok(tail3d.parallaxPerturbedSlope95PercentIntervalKmPerSecPerPc[1] > tail3d.nominalResidualSlopeKmPerSecPerPc);
+assert.ok(Math.abs(tail3d.spectralControl.templateTemperatureSlopeControllingTailKmPerSecPer1000K) < 0.01);
+assert.match(tail3d.spectralControl.interpretation, /cannot test line-by-line/u);
+const orientation = crossChannel.orientationPriorControl;
+assert.equal(orientation.morphologyIdentifiesT1Orientation, false);
+assert.ok(Math.abs(orientation.isotropicUnorientedAxes3d.probabilityWithin10DegOf90 - Math.sin(Math.PI / 18)) < 1e-15);
+assert.equal(orientation.isotropicUnorientedAxes3d.probabilityAtExactly90, 0);
+assert.match(orientation.visibilityConstraint, /vanishes at 90 degrees/u);
 
 if (process.argv.includes("--live")) {
   const response = await fetch(control.query);
@@ -153,6 +165,8 @@ console.log(JSON.stringify({
   retrospectiveOrdinaryLinearTailMaeImprovementKmPerSec:
     -modelGate.ordinaryMinusConstantMeanAbsoluteErrorKmPerSec,
   alternativeTailShapesDistinguishableFromLinear: false,
+  threeDimensionalResidualSlopeKmPerSecPerPc: tail3d.nominalResidualSlopeKmPerSecPerPc,
+  morphologyIdentifiesT1Orientation: false,
   liveCatalogueVerified: process.argv.includes("--live"),
   constantAngleIdentifiable: false,
   modularAngleDefined: false,

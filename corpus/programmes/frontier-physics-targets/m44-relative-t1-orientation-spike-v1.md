@@ -173,6 +173,41 @@ The fitted parameters explain why. The smooth step selects widths of 32 or 64 de
 
 This is a bounded model-equivalence result. The tails say that a spatial term is useful; their current two-dimensional angular residuals do not identify a boundary topology. A real discriminator now requires three-dimensional tail position and uncertainty, ordinary phase-space predictions, or new spectroscopy extending beyond the present angular window.
 
+## Three-dimensional tail and spectral-shift surface
+
+The next pass reconstructs a heliocentric Cartesian position from each Gaia DR3 parallax and sky direction, obtains a robust-centred three-dimensional principal axis from all 1,247 selected members, and aligns its sign to the published sky-plane tail direction. The resulting ICRS unit axis is
+
+\[
+(0.4653,-0.7691,0.4380).
+\]
+
+All 416 RV records have finite parallax uncertainty. For the 373 robust residual inliers, the spectral residual changes along this reconstructed coordinate by
+
+\[
+-0.02006\ {\rm km\,s^{-1}\,pc^{-1}}.
+\]
+
+Two thousand deterministic Gaussian perturbations of the along-axis coordinate using the reported parallax uncertainties give [-0.02028,-0.01979] km/s/pc. This narrow interval measures only coordinate-error propagation: it holds membership, the fitted common velocity and the PCA axis fixed, and therefore is not a full astrometric covariance or model uncertainty.
+
+The binned data show why a surface is more honest than one coefficient. Most central bins have median residuals around 1.3--2.0 km/s (roughly 4--7 parts per million as a fractional spectral shift), while the most distant positive-tail bin, centred near 49 pc, falls to 0.078 km/s. The three-dimensional slope is therefore real within this reconstruction but strongly levered by the extended tail population.
+
+Gaia's catalogue RV is an aggregate spectral result rather than a per-line carrier test. As a first atmosphere/template control, the pass joins `rv_template_teff`. Regressing robust residuals jointly on three-dimensional tail position and template temperature gives -0.02011 km/s/pc for the tail term and only -0.0081 km/s per 1,000 K for the temperature term. The spatial coefficient survives this coarse spectral control. That does **not** establish a universal frequency shift: line-by-line spectra, gravitational and convective shifts, binaries, template mismatch and instrument zero points remain required.
+
+## Does the cluster shape favour ninety degrees?
+
+No likelihood follows from size or elongation alone. The corpus has no law mapping a cluster's ordinary spatial covariance, mass, formation plane or tidal-tail axis to its configuration-\(T_1\) orientation. The earlier covariance no-go therefore still applies.
+
+There is a purely geometric prior observation. If two unoriented axes are independently isotropic in three dimensions, their acute relative angle has density
+
+\[
+p(\theta)=\sin\theta,
+\qquad 0\leq\theta\leq\frac\pi2.
+\]
+
+Near-perpendicular orientations occupy more solid angle: the probability of lying within \(\delta\) of 90 degrees is \(\sin\delta\), giving 8.72% within 5 degrees and 17.36% within 10 degrees. Exact 90 degrees still has probability zero under a continuous prior. If the orientations instead live on an unoriented circle, the acute angle is uniform and the corresponding probabilities are 5.56% and 11.11%. Choosing between these priors requires the missing configuration geometry; M44's observed shape does not choose it.
+
+Visibility adds a stronger constraint. In the minimal \(q=0\) projection, direct electromagnetic overlap is \(|\cos\theta|\), which vanishes at 90 degrees. A bright visible M44 therefore disfavors exact orthogonality under that naive pure-projection model. At 90 degrees the full declared kernel is \(\kappa=q\), so nonzero off-axis coupling or reciprocal boundary mixing can restore visibility. The required \(q\), boundary transport and carrier dependence must be predicted together; otherwise brightness simply fits another free parameter.
+
 ## What the present evidence says
 
 M44 is an attractive calibration ensemble, but the current corpus supplies neither a source-derived \(T_1\)-to-observable map nor a physical law assigning separate \(T_1\) orientations to nearby stellar systems. Praesepe lies within the Milky Way and its established literature treats its spectra, age, chemistry, planets and tails with ordinary stellar and Galactic dynamics.
