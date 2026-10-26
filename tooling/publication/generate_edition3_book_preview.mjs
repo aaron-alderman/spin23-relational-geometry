@@ -629,6 +629,16 @@ admissibilityHotSection[1][2] = "Those obstructions now assign two detectors rat
 const admissibilitySections = chapterSkeletons
   .find(chapter => chapter.slug === "08-admissibility-frontier")
   .sections;
+const dynamicsBoundaryIndex = admissibilitySections
+  .findIndex(([heading]) => heading === "Dynamics moves the boundary");
+admissibilitySections.splice(dynamicsBoundaryIndex + 1, 0, [
+  "Current research note — record laws sit between possibility and public fact",
+  [
+    "A reproducible finite-observer construction now supplies an exact example of the layer the Jordan–Lie language previously left implicit. Positive operators describe which quantum possibilities can coexist; reversible transformations describe how an admitted carrier can move; completely positive record channels describe how coherence is retained, contracted or converted into a public classical record. Repair then composes those local updates through a history. The channel is not an afterthought: it is the typed passage from possibility to fact.",
+    "At the pinned Observer Patch Holography source revision, four distinct admissible record laws share one classical repair table while retaining different quantum coherences. A phase-sensitive detector separates them through one complex coherence coordinate, repeated repair selects different idempotent limits, and the full focused suite reproduces exactly. This is a real local-closure and detector result, but it does not select which law nature uses.",
+    "The same calculation also marks the mathematical boundary. Generic Choi positivity is a cone of channels, not yet the rank-two Jordan cone H₂(R)+; three slow coherence modes are not a canonical three-dimensional Jordan carrier; and no Spin₀(2,3) action follows from the record-law family. The next gates are therefore concrete: classify the channel family and fixed-point geometry, test overlap consistency across repair schedules, search for a source-invariant H₂(R) corner, and only then ask whether a reversible derivation closes as sp(4,R). A null result still returns a useful detector-equivalence classification and a sharper account of local closure.",
+  ],
+]);
 const orientedSeamIndex = admissibilitySections
   .findIndex(([heading]) => heading === "the oriented seam becomes an experiment");
 admissibilitySections.splice(orientedSeamIndex + 1, 0, [
@@ -1339,6 +1349,12 @@ const proofLinkBySection = new Map([
 ]);
 
 const sectionEvidenceOverrides = {
+  "Current research note — record laws sit between possibility and public fact": [
+    "corpus/programmes/observer-patch-holography/README.md",
+    "corpus/programmes/observer-patch-holography/oph_kenotic_claim_and_premise_audit_v1.md",
+    "corpus/programmes/observer-patch-holography/oph_jordan_channel_lie_bridge_v1.md",
+    "corpus/programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md",
+  ],
   "Three local motion types": [
     "corpus/programmes/admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md",
     "corpus/programmes/admissibility/admissibility_130_quarter_turn_and_mirror_generate_the_dual_seam.md",

@@ -5,7 +5,7 @@
 **Machine authority:** [open-topic register](open_topics_register_v1.json)  
 **Detector map:** [detector and frontier atlas](detector_frontier_atlas_v1.md)
 
-The register contains **53** independently closable topics: **45 remain live and eight are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
+The register contains **54** independently closable topics: **46 remain live and eight are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
 
 ## Operating rule
 
@@ -76,6 +76,7 @@ for another dimensionless redesign.
 | OT-051 | Boundary-domain selector spectrum | gated on the paper's promised public energies, matrix elements and fit code; then hold one bulk carrier fixed, vary untwisted, pi-twisted and symmetry-breaking selectors, and predict held-out spectra/OPE data without bulk retuning |
 | OT-052 | Observer-dependent detector and horizon closure | execute [AZ-144](../admissibility/admissibility_144_kerr_multirecord_public_data_consistency_programme.md) on the public GW250114 strain and posterior products; use finite-switching Unruh as its detector regression and build the state-through-greybody Hawking likelihood as the longer endpoint |
 | OT-053 | Nuclear open-system seam and channel calibration | audit the two public 2026 clock releases and execute [AZ-143](../admissibility/admissibility_143_th229_shared_parent_host_channel_factorization_programme.md) where metadata permit; then choose a compound-resonance isotope for the hostile many-channel test |
+| OT-054 | OPH record-law local closure and Jordan--channel--Lie bridge | execute the [pinned OPH programme](../observer-patch-holography/oph_record_law_executable_programme_v1.md): complete Choi/fixed-point geometry, adjacent-seam schedule and gluing audit, canonical `H_2(R)` corner census, and CP-semigroup embeddability test before any `sp(4,R)` interpretation |
 
 ## P2 — gated translation problems
 
@@ -414,6 +415,7 @@ The queue exposes eight recurring unknowns that should be reported for every new
 6. **detector:** which records separate the leading mechanisms after nuisance folding?
 7. **scale:** which conclusions survive size, time, frequency and coarse-graining limits?
 8. **translation:** what typed map connects formal structures to physical operators and observations?
+9. **record law:** which completely positive instrument decides what becomes a retained record, and is it selected or merely one member of an admitted family?
 
 ## Stop rules
 
@@ -424,6 +426,7 @@ The queue exposes eight recurring unknowns that should be reported for every new
 - Do not promote relation, Leech, Golay, Jordan, \(Spin(2,3)\) or \(E_8\) contact without OT-024–OT-027.
 - Do not reopen torsion coefficient selection without the explicit datum in OT-029.
 - Do not call a finite spectral scan a mass-gap result without OT-031.
+- Do not identify an observer consensus, positive channel or three-dimensional slow sector with the corpus's Jordan/Spin hinge before OT-054 derives a canonical invariant `H_2(R)` corner and a held-out record.
 
 The maintained list is intentionally finite. New topics should be added only when they introduce a distinct carrier, detector, boundary, translation or falsifier not already represented here.
 

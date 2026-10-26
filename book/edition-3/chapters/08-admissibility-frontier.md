@@ -235,6 +235,23 @@ Collapsing rails and relation types gives the ordinary support Laplacian of rank
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-3.md)
 
+<a id="current-research-note-record-laws-sit-between-possibility-and-public-fact"></a>
+## Current research note — record laws sit between possibility and public fact
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+A reproducible finite-observer construction now supplies an exact example of the layer the Jordan–Lie language previously left implicit. Positive operators describe which quantum possibilities can coexist; reversible transformations describe how an admitted carrier can move; completely positive record channels describe how coherence is retained, contracted or converted into a public classical record. Repair then composes those local updates through a history. The channel is not an afterthought: it is the typed passage from possibility to fact.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-1.md)
+
+At the pinned Observer Patch Holography source revision, four distinct admissible record laws share one classical repair table while retaining different quantum coherences. A phase-sensitive detector separates them through one complex coherence coordinate, repeated repair selects different idempotent limits, and the full focused suite reproduces exactly. This is a real local-closure and detector result, but it does not select which law nature uses.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-2.md)
+
+The same calculation also marks the mathematical boundary. Generic Choi positivity is a cone of channels, not yet the rank-two Jordan cone H₂(ℝ)+; three slow coherence modes are not a canonical three-dimensional Jordan carrier; and no Spin₀(2,3) action follows from the record-law family. The next gates are therefore concrete: classify the channel family and fixed-point geometry, test overlap consistency across repair schedules, search for a source-invariant H₂(ℝ) corner, and only then ask whether a reversible derivation closes as 𝔰𝔭(4,ℝ). A null result still returns a useful detector-equivalence classification and a sharper account of local closure.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-3.md)
+
 <a id="three-local-motion-types"></a>
 ## Three local motion types
 

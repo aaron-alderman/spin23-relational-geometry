@@ -1,0 +1,80 @@
+{
+  "schema": "spin23.oph-record-law-reproduction/v1",
+  "date": "2026-10-26",
+  "source": {
+    "repository": "https://github.com/FloatingPragma/observer-patch-holography",
+    "commit": "0045a99143c6cc8443d2c2c5c5bb4055451dd115",
+    "commitDate": "2026-10-26T20:37:14+07:00",
+    "files": {
+      "model/record_laws/README.md": "b7e6976ea446a3d7e63e5b0b2f4867a835d9a6455669880f651e18e3106116c7",
+      "model/record_laws/results.json": "c5310747f8f0ae2ca0970bdfce22a86f4d73556d4e115bbc82e0e4ab54cf9697",
+      "model/record_laws/instrument_results.json": "478ad93abf8cc96fd62484fbecc395176388c2807de80e795c19d4bbc4c05751",
+      "model/record_laws/burn_in_results.json": "9f34ebcde8e64e51467bab945f234de2254fc4ac77d706089278dda03abf671b"
+    }
+  },
+  "environment": {
+    "platform": "Windows",
+    "python": "3.12.14",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "sympy": "1.14.0",
+      "pytest": "9.0.2"
+    },
+    "isolation": "Disposable virtual environment outside the cloned source tree"
+  },
+  "runs": [
+    {
+      "command": "python -m model.record_laws --check model/record_laws/results.json",
+      "exitCode": 0,
+      "result": "Admissible record laws, ladder, completion and interference forms replayed."
+    },
+    {
+      "command": "python -m model.record_laws.instrument_contract --check model/record_laws/instrument_results.json",
+      "exitCode": 0,
+      "result": "Unread-channel equality and distinct committed instruments replayed."
+    },
+    {
+      "command": "python -m model.record_laws.burn_in --check model/record_laws/burn_in_results.json",
+      "exitCode": 0,
+      "result": {
+        "all_tables_same_gap": "(5-sqrt(5))/60",
+        "exact_replay": true,
+        "physical_law_selected": false
+      }
+    },
+    {
+      "command": "python -m pytest -q -W error model/record_laws",
+      "exitCode": 0,
+      "result": "36 passed in 42.85s"
+    },
+    {
+      "command": "python -m model.verify --hashes-only",
+      "exitCode": 0,
+      "result": "Verified 1275 model artifacts"
+    }
+  ],
+  "provenanceControl": {
+    "initialOutcome": "One of 36 tests failed when the virtual environment was placed inside the cloned source tree because 738 environment files were correctly detected as unpinned source-root files.",
+    "correction": "The environment was recreated outside the source tree without modifying OPH source.",
+    "correctedOutcome": "36 of 36 tests passed.",
+    "interpretation": "The initial failure validates the source-closure guard and is not evidence against the record-law theorem."
+  },
+  "reproducedClaims": [
+    "The declared one-seam admissible record-law family and its positivity checks replay.",
+    "The C0-C-E-T record ladder and the E/T idempotent endpoints replay.",
+    "The exact composition and finite repetition identities replay.",
+    "The phase-referenced interference forms replay.",
+    "Unread-channel equality does not imply equality of committed instruments.",
+    "The admitted warm-up tables share the declared gap and do not select a physical law."
+  ],
+  "notReproducedOrNotImplied": [
+    "Selection of the twelve-port carrier by nature",
+    "Selection of one physical record law",
+    "A canonical H2(R) or Spin(2,3) bridge",
+    "A controlled interacting relativistic continuum on the same histories",
+    "Responsive same-model gravity",
+    "Empirical agreement with the observed universe",
+    "A unique globally strictly increasing entropy"
+  ]
+}

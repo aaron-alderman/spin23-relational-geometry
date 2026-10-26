@@ -1082,6 +1082,86 @@ At present the designs pass their completeness audit, but neither supplies a
 Jordan/Spin physical bridge and neither permits a direct jump from discrepancy
 to new physics.
 
+## Observer repair exposes the channel between Jordan and Lie
+
+A kenotic audit of [Observer Patch Holography](../programmes/observer-patch-holography/README.md)
+now supplies a more exact observer example. The linked public claim is much
+stronger than the underlying construction: it presents one observer-repair
+process as the unique reconciliation of quantum mechanics and gravity and as
+an explanation of observed dimensionality, forward time and increasing cosmic
+entropy. The project's own premise and construction ledgers retain carrier
+selection, physical clock, radial structure, interacting relativistic limit,
+responsive gravity, observed matter and empirical completion as open or
+conditional. The result should therefore be read neither as a completed theory
+of everything nor dismissed as observer language.
+
+The bounded finite result is real and has been independently replayed at the
+pinned public revision. For one seam of a twelve-port total-two carrier, OPH
+classifies a convex family of completely positive **admissible record laws**.
+All members implement the same classical repair probabilities while preserving
+different quantum coherences. Four named laws form a record ladder: `C0`
+records current, `C` adds the coin, `E` adds pre-repair contrast and `T` records
+both endpoint loads. Exactly `E` and `T` are idempotent in the declared family.
+Repeated repair composes the coherence coordinates explicitly, but the common
+warm-up equilibrium and gap select no physical law. The source receipt says so
+directly: `physical_law_selected=false`.
+
+Classical current histories quotient this family. A coherent reference reopens
+it: one phase-resolved projector measures
+
+\[
+p_+(\theta)=\frac38+\frac12\operatorname{Re}(g e^{-i\theta}),
+\]
+
+and therefore distinguishes laws that every declared current-only feedback
+protocol identifies. This is a source-native instance of the corpus's detector
+principle: agreement under one record map is not identity under a stronger map.
+The [reproduction receipt](../../evidence/data/oph-record-law-reproduction-v1.json)
+records the pinned commit and hashes, exact channel, instrument and burn-in
+replays, 36 passing focused tests and 1,275 verified model artifacts. It also
+retains the useful initial failure in which an in-tree virtual environment was
+correctly rejected as unpinned source.
+
+The conceptual consequence is a refinement, not a replacement, of the
+Jordan--Lie hinge. Jordan structure governs positive coexistence. Lie structure
+governs reversible derivations and transport. A positive channel or instrument
+governs branching, contraction, information loss and record creation. Repair
+then composes those instruments into histories, and overlap comparison tests
+whether local record closures can coexist. These jobs have different
+invariants:
+
+\[
+\text{Jordan admission}
+\longrightarrow
+\text{reversible or contractive operation}
+\longrightarrow
+\text{instrument outcome}
+\longrightarrow
+\text{retained record}
+\longrightarrow
+\text{record-conditioned continuation}.
+\]
+
+Generic matrix positivity does not supply the corpus's special
+`H_2(R)` carrier. The OPH Choi blocks have many positive two-by-two principal
+minors, any of which can resemble a rank-two cone after a chosen real-phase
+restriction. A bridge requires a source-derived invariant projector, inherited
+Jordan closure, complete coordinate observability and survival under repair,
+schedule, overlap and detector controls. Three slow modes are likewise not a
+derivation of physical three-space. No `Sp(4,R)` or `Spin_0(2,3)` identification
+currently follows.
+
+This opens [OT-054](../programmes/frontier-physics-targets/open_topics_v1.md)
+and [DET-039](../programmes/frontier-physics-targets/detector_frontier_atlas_v1.md).
+The [executable programme](../programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md)
+first reconstructs complete Choi, fixed-point, peripheral and information-loss
+geometry; then composes adjacent seams under reversed schedules; then enumerates
+source-native Jordan-closed real two-dimensional operator subspaces; and only
+after CP-semigroup embeddability is established compares a reversible
+derivation algebra with `sp(4,R)`. The likely useful null is already valuable:
+OPH may provide an excellent executable language for local detector closure
+even if it supplies no fundamental Jordan/Spin bridge.
+
 ## Kenotic confidence
 
 This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.
