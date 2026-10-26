@@ -12,10 +12,35 @@ const filesBelow = directory => readdirSync(directory, { withFileTypes: true }).
   return entry.isDirectory() ? filesBelow(path) : [path];
 });
 
-test("the deployed Pages root carries the Google site-verification token", () => {
+test("every deployed HTML page carries the Google site-verification token", () => {
+  const htmlFiles = filesBelow(artifactRoot).filter(path => path.endsWith(".html"));
+  assert.ok(htmlFiles.length > 100, "expected the complete generated publication");
+  const missing = htmlFiles
+    .filter(path => !readFileSync(path, "utf8").includes('<meta name="google-site-verification" content="9WwsoUYrUkaJiln-l2ByjjyKOs7jVuMGIJp3rrdjFPA">'))
+    .map(path => relative(artifactRoot, path));
+  assert.deepEqual(missing, []);
+
   const homepage = readFileSync(join(artifactRoot, "index.html"), "utf8");
-  assert.match(homepage, /<meta name="google-site-verification" content="9WwsoUYrUkaJiln-l2ByjjyKOs7jVuMGIJp3rrdjFPA">/u);
   assert.match(homepage, /url=edition-3\/index\.html/u);
+});
+
+test("the public entry points expose a large, absolute social card", () => {
+  const expectedImage = "https://aaron-alderman.github.io/spin23-relational-geometry/edition-3/assets/relational-geometry-hero.png";
+  const expectedCanonical = "https://aaron-alderman.github.io/spin23-relational-geometry/edition-3/";
+  for (const path of [join(artifactRoot, "index.html"), join(siteRoot, "index.html")]) {
+    const html = readFileSync(path, "utf8");
+    assert.match(html, /<meta name="twitter:card" content="summary_large_image">/u);
+    assert.match(html, /<meta name="twitter:title" content="[^"]+">/u);
+    assert.match(html, /<meta name="twitter:description" content="[^"]+">/u);
+    assert.ok(html.includes(`<meta name="twitter:image" content="${expectedImage}">`));
+    assert.ok(html.includes(`<meta property="og:image" content="${expectedImage}">`));
+    assert.ok(html.includes(`<meta property="og:url" content="${expectedCanonical}">`));
+    assert.ok(html.includes(`<link rel="canonical" href="${expectedCanonical}">`));
+  }
+
+  const chapter = readFileSync(join(siteRoot, "03-projective-loop.html"), "utf8");
+  assert.match(chapter, /<meta property="og:url" content="https:\/\/aaron-alderman\.github\.io\/spin23-relational-geometry\/edition-3\/03-projective-loop\.html">/u);
+  assert.match(chapter, /<link rel="canonical" href="https:\/\/aaron-alderman\.github\.io\/spin23-relational-geometry\/edition-3\/03-projective-loop\.html">/u);
 });
 
 test("every corpus Markdown source has a provenance-stamped compiled library page", () => {
