@@ -185,6 +185,14 @@ genuine \(PSp_4(3)\)-equivariant exceptional object other than an individual
 \(E_8\) root, but it does not construct the missing 40-\(A_2\) root cover. See
 the [regulus closure bridge](../../programmes/regulus-closure-bridge/README.md).
 
+The 40 Lagrangian points are, more precisely, equivariantly identified with
+the 40 Steiner triads: each triad contains three Steiner pairs, each containing
+two trihedra. This produces another exact (40\times3\times2=240)
+factorization. It is not the same 240-point action: (PSp_4(3)) is transitive
+on the trihedra but has three 80-orbits on the phase fibers. The comparison
+therefore sharpens the exceptional interpretation while rejecting a new
+cardinality shortcut.
+
 ## Certificate and companions
 
 - [Lagrangian/Plücker/null-line certificate](../../../verification/verify/verify_40_qutrit_null_lines_are_exactly_genus_two_lagrangian_polarizations.mjs)

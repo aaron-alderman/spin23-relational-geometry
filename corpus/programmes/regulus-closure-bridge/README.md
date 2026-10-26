@@ -33,6 +33,12 @@ The executable calculation over \(\mathbb F_3\) finds:
 - 36 elliptic sections whose stabilizers split the 27 lines as \(12+15\),
   with each 12 forming \(K_{6,6}\) minus a perfect matching: the 36 classical
   double-sixes;
+- 120 Steiner trihedral pairs and 40 Steiner triads, equivariantly identified
+  with the 40 Lagrangian points;
+- an anti-symplectic outer involution completing the finite action to the full
+  order-51,840 \(W(E_6)\) symmetry;
+- a 432-point double-six/line flag carrier exactly equal to
+  \(W(E_6)/S_5\), with commutant dimension 26;
 - transitive \(PSp_4(3)\) actions on the reconstructed 27 lines, 36
   double-sixes and 45 tritangent planes.
 
@@ -57,6 +63,12 @@ node verification/verify/verify_regulus_spin23_bridge.mjs
 
 See [Regulus closure, the symplectic slice and the finite E₆ incidence
 layer](01_regulus_closure_symplectic_slice_and_e6_incidence.md).
+
+Continue through:
+
+- [Full E₆ completion, the 432-point Hecke carrier and the 240-object boundary](02_full_e6_completion_hecke_carrier_and_240_boundary.md)
+- [Real positive-domain, dynamics and detector boundary](03_real_positive_domain_dynamics_and_detector_boundary.md)
+- [Regulus programme exhaustion ledger](04_regulus_exhaustion_ledger.md)
 
 ## Authority boundary
 

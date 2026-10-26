@@ -29,6 +29,24 @@ assert.equal(record.hyperplaneSections.reconstructedThirtySix.incidencePairs,432
 assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.linesPerEllipticSection,[12]);
 assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.ellipticSectionsPerLine,[16]);
 assert.equal(record.hyperplaneSections.reconstructedThirtySix.verifiedForAllEllipticSections,true);
+assert.equal(record.hyperplaneSections.reconstructedThirtySix.sixLineRows,72);
+assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.pairIntersectionDistribution,{4:270,6:360});
+assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.pairIntersectionDegrees,{4:[15],6:[20]});
+assert.equal(record.hyperplaneSections.reconstructedThirtySix.azygeticTriads,120);
+assert.deepEqual(record.hyperplaneSections.reconstructedThirtySix.azygeticPairClosureMultiplicity,[1]);
+assert.equal(record.hyperplaneSections.reconstructedForty.steinerTrihedralPairs,120);
+assert.deepEqual(record.hyperplaneSections.reconstructedForty.trihedraPerPair,[2]);
+assert.equal(record.hyperplaneSections.reconstructedForty.steinerTriads,40);
+assert.equal(record.hyperplaneSections.reconstructedForty.cubicLinesPartitionedByEachTriad,true);
+assert.deepEqual(record.hyperplaneSections.reconstructedForty.tangentSectionStabilizerOrbitSizes,[1,12,27]);
+assert.deepEqual(record.hyperplaneSections.reconstructedForty.polarLineStabilizerOrbitSizes,[4,36]);
+assert.equal(record.hyperplaneSections.reconstructedForty.equivariantCarrier,"tangent sections / Lagrangian points");
+assert.equal(record.hyperplaneSections.reconstructedForty.equivariantBijectionPairs,40);
+assert.equal(record.hyperplaneSections.reconstructedTwoForty.trihedra,240);
+assert.deepEqual(record.hyperplaneSections.reconstructedTwoForty.trihedraPerLagrangianPoint,[6]);
+assert.deepEqual(record.hyperplaneSections.reconstructedTwoForty.pspOrbitSizes,[240]);
+assert.deepEqual(record.hyperplaneSections.reconstructedTwoForty.corpusFiberPspOrbitSizes,[80,80,80]);
+assert.equal(record.hyperplaneSections.reconstructedTwoForty.equivariantVerdict,"not the same PSp(4,3)-set");
 assert.equal(record.closure.verifiedForEveryHyperbolicSection,true);
 assert.equal(record.exceptionalComparison.sp4Order,51840);
 assert.equal(record.exceptionalComparison.projectiveSp4Order,25920);
@@ -38,6 +56,18 @@ assert.equal(record.exceptionalComparison.reconstructedLineOrbit,27);
 assert.equal(record.exceptionalComparison.projectiveLineStabilizerOrder,960);
 assert.equal(record.exceptionalComparison.ellipticSectionOrbit,36);
 assert.equal(record.exceptionalComparison.projectiveEllipticStabilizerOrder,720);
+assert.equal(record.outerCompletion.symplecticMultiplier,2);
+assert.equal(record.outerCompletion.normalizesSp4,true);
+assert.equal(record.outerCompletion.projectivelyOutsideSp4,true);
+assert.equal(record.outerCompletion.extendedProjectiveOrder,51840);
+assert.deepEqual(record.outerCompletion.actsOn,{cubicLines:27,doubleSixes:36,steinerTriads:40,tritangentPlanes:45});
+assert.equal(record.outerCompletion.preservesCubicLineIncidence,true);
+assert.equal(record.heckeCarrierJoin.flags,432);
+assert.equal(record.heckeCarrierJoin.fullProjectiveStabilizerOrder,120);
+assert.equal(record.heckeCarrierJoin.stabilizerPermutationOrder,120);
+assert.equal(record.heckeCarrierJoin.homogeneousSpace,"W(E6)/S5");
+assert.equal(record.heckeCarrierJoin.stabilizerOrbitalCount,26);
+assert.equal(record.heckeCarrierJoin.commutantDimension,26);
 assert.match(record.exceptionalComparison.boundary,/must not be identified/);
 assert.match(record.verdict,/No dynamics or physical identification/);
 
@@ -47,7 +77,9 @@ console.log(JSON.stringify({
   reguli:"45 hyperbolic sections each split into two four-line rulings",
   closure:"three lines recover exactly the opposite four-line regulus",
   graph:"section graph is SRG(45,12,3,3)",
-  exceptional:"27 maximal five-cliques and 36 elliptic sections reconstruct the line/tritangent/double-six incidence",
-  symmetry:"PSp(4,3) is transitive on the 27 lines, 36 double-sixes and 45 tritangents",
+  exceptional:"the carrier reconstructs 27 lines, 36 double-sixes, 40 Steiner triads and 45 tritangents",
+  symmetry:"an anti-symplectic similitude completes PSp(4,3) to the order-51840 W(E6) action",
+  hecke:"432 double-six/line flags form W(E6)/S5 with orbital rank 26",
+  nearMiss:"240 trihedra have the right 40x3x2 typing but the wrong PSp(4,3) orbit structure for the phase fibers",
   boundary:"E6 comparison is exact at group-action type, not yet a canonical cubic-surface labelling",
 }));

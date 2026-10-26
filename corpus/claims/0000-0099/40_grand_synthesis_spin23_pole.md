@@ -11217,6 +11217,32 @@ The abstract subgroup relation \(S_3\times PSp_4(3)\subset W(E_8)\) remains exac
 
 See [The standard even-\(E_6\) subgroup has no invariant forty-\(A_2\) cover of the \(E_8\) roots](../0500-0599/516_the_standard_even_e6_subgroup_has_no_invariant_forty_a2_cover_of_the_e8_roots.md).
 
+### 20.428a Regulus closure reconstructs the full finite \(E_6\) incidence hierarchy
+
+The 40 Lagrangian points of \(Q(4,3)\) contain 45 hyperbolic sections, each
+with two opposite four-line reguli. Exact transversal closure reconstructs 27
+maximal five-cliques as cubic lines. The 36 elliptic sections reconstruct the
+double-sixes, and the 40 tangent sections are equivariantly the 40 Steiner
+triads. An anti-symplectic similitude completes the even \(PSp_4(3)\) action
+to the order-51,840 full \(W(E_6)\) action.
+
+The incident double-six/line flags form
+
+\[
+36\cdot12=27\cdot16=432
+\]
+
+objects with stabilizer \(S_5\), hence the exact homogeneous carrier
+\(W(E_6)/S_5\) underlying the corpus's 26-dimensional Hecke commutant.
+
+The same construction contains 240 trihedra organized as \(40\times3\times2\),
+but this does not identify them with the phase fibers: \(PSp_4(3)\) is
+transitive on the trihedra and has three 80-orbits on the phase-fiber product.
+The regulus route therefore completes the finite \(E_6\) incidence story while
+strengthening, rather than evading, the \(E_8\) representation boundary.
+
+See [Regulus closure bridge](../../programmes/regulus-closure-bridge/README.md).
+
 ### 20.429 The five Furey support fields present the rank-four spinor before the rank-five vector
 
 The five sign weights on \(\{u^c_1,d_1,e,\nu,d^c_1\}\) have rank four and unique primitive relation

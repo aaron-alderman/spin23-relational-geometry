@@ -115,6 +115,11 @@ double-sixes. This realizes the finite \(E_6\) cubic incidence but
 does not alter the no-go proved here for a 40-element invariant set of
 \(A_2\) root subsystems.
 
+It also explains what the 40 polarizations can index without entering the
+root cover: they are equivariantly the 40 Steiner triads of the reconstructed
+cubic incidence. The associated 240 trihedra fail the phase-fiber orbit test,
+so this alternative does not evade the present (E_8) obstruction.
+
 ## 6. Consequence for the research narrative
 
 The mathematically secure chain now stops at

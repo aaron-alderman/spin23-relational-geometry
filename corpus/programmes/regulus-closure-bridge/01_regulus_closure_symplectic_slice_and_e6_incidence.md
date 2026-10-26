@@ -303,15 +303,23 @@ individual root orbit.
 - **Not claimed:** \(E_8\), a particle spectrum, spacetime microstructure or a
   physical role for cubic surfaces.
 
-## 12. Next decisive tests
+## 12. Subsequent closure
 
-1. Adjoin the outer involution and verify the full \(W(E_6)\) action on the
-   reconstructed \(27/36/45\) configuration.
-2. Compare the 45 regulus-pair objects with the corpus's existing
-   \(E_6\oplus A_2\subset E_8\) branch, without returning to the already
-   falsified invariant 40-\(A_2\) cover.
-3. Formulate a real positive-domain version in which a measured relation
-   selects a ruling and closure failure becomes a detector residual.
+All three next tests from the first pass have now been completed:
+
+1. an anti-symplectic similitude supplies the outer involution and completes
+   the action to the full order-51,840 \(W(E_6)\) symmetry;
+2. the 40 Lagrangian points reconstruct the 40 Steiner triads, while the
+   resulting 240 trihedra fail the phase-fiber orbit test and therefore do not
+   reopen the failed \(E_8\)-root cover;
+3. the real lift separates the Lagrangian boundary, positive Siegel interior,
+   Riccati transport and experiment-dependent detector residual.
+
+The same completion identifies the 432 incident double-six/line flags as
+\(W(E_6)/S_5\), joining the regulus geometry to the corpus's existing
+26-dimensional Hecke commutant. See [the full E₆ completion](02_full_e6_completion_hecke_carrier_and_240_boundary.md),
+[the real lift](03_real_positive_domain_dynamics_and_detector_boundary.md)
+and [the exhaustion ledger](04_regulus_exhaustion_ledger.md).
 
 ## Primary references
 

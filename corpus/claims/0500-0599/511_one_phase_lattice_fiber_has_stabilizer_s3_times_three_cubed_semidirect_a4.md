@@ -221,6 +221,15 @@ as the stabilizer of a qutrit polarization or generation structure.
 - The order-27 kernel is elementary abelian; treating it as a nonabelian Heisenberg group contradicts the enumeration.
 - Group-order equality alone is insufficient to identify a physical symmetry.
 
+## 10. Subsequent regulus boundary
+
+The cubic-incidence construction contains a natural 240-object set of
+trihedra, but its \(PSp_4(3)\) point stabilizer has projective order 108 because
+the action is transitive. The qutrit factor here has stabilizer order 324 on
+each 80-element oriented-null orbit. This stabilizer mismatch is an exact
+obstruction to identifying the two 240-object actions despite their common
+\(40\times3\times2\) factorization. See the [regulus exhaustion ledger](../../programmes/regulus-closure-bridge/04_regulus_exhaustion_ledger.md).
+
 ## Certificate and companions
 
 - [Exact fiber-stabilizer enumeration](../../../verification/identify/identify_exact_stabilizer_of_one_cross_prime_phase_lattice_fiber.mjs)

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "regulus-spin23-bridge-v1",
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "purpose": "Test whether reguli supply an exact local two-ruling closure geometry inside the corpus's 40-point qutrit Lagrangian/Spin(2,3) carrier.",
   "ambientGeometry": {
     "realStatement": "The Klein quadric Gr(2,4) in P(Lambda^2 R^4) has split signature (3,3); imposing a nondegenerate symplectic form selects the primitive hyperplane and its (2,3) projective null quadric LGr(2,4).",
@@ -107,7 +107,77 @@
       ],
       "graph": "each selected 12-line subgraph is bipartite 6+6, with degree five: K_6,6 minus a perfect matching",
       "verifiedForAllEllipticSections": true,
+      "sixLineRows": 72,
+      "pairIntersectionDistribution": {
+        "4": 270,
+        "6": 360
+      },
+      "pairIntersectionDegrees": {
+        "4": [
+          15
+        ],
+        "6": [
+          20
+        ]
+      },
+      "syzygeticPairs": 270,
+      "azygeticPairs": 360,
+      "azygeticTriads": 120,
+      "azygeticPairClosureMultiplicity": [
+        1
+      ],
       "interpretation": "The 36 elliptic sections reconstruct the 36 double-sixes, not merely their count."
+    },
+    "reconstructedForty": {
+      "steinerTrihedralPairs": 120,
+      "trihedraPerPair": [
+        2
+      ],
+      "tritangentPlanesPerTrihedron": [
+        3
+      ],
+      "cubicLinesPerPair": [
+        9
+      ],
+      "steinerTriads": 40,
+      "pairsPerTriad": [
+        3
+      ],
+      "cubicLinesPartitionedByEachTriad": true,
+      "tangentSectionStabilizerOrbitSizes": [
+        1,
+        12,
+        27
+      ],
+      "polarLineStabilizerOrbitSizes": [
+        4,
+        36
+      ],
+      "equivariantCarrier": "tangent sections / Lagrangian points",
+      "equivariantBijectionPairs": 40,
+      "interpretation": "The 45 tritangent candidates internally reconstruct 120 Steiner trihedral pairs and 40 triads partitioning the 27 cubic lines. Stabilizer fixed points identify which natural degree-40 polar-space carrier is equivariantly equivalent to those triads."
+    },
+    "reconstructedTwoForty": {
+      "trihedra": 240,
+      "factorization": "40 Steiner triads x 3 Steiner pairs x 2 trihedra",
+      "trihedraPerLagrangianPoint": [
+        6
+      ],
+      "pspOrbitSizes": [
+        240
+      ],
+      "pspOrbitIntersectionsPerLagrangianPoint": [
+        [
+          6
+        ]
+      ],
+      "corpusFiberPspOrbitSizes": [
+        80,
+        80,
+        80
+      ],
+      "equivariantVerdict": "not the same PSp(4,3)-set",
+      "interpretation": "The exact 40 x 3 x 2 factorization mirrors the corpus's 40 Lagrangian polarizations x three binary decorations x two Plucker orientations, but the actions differ decisively: PSp(4,3) is transitive on the 240 trihedra whereas it has three 80-orbits on the product fiber by fixing the binary decoration. The match is typed cardinality, not an equivariant identification."
     }
   },
   "closure": {
@@ -131,6 +201,93 @@
     "exactStatement": "PSp(4,3) acts transitively on the 45 regulus-pair sections, 27 reconstructed line candidates and 36 elliptic sections; their projective stabilizers have orders 576, 960 and 720 respectively.",
     "cubicSurfaceComparison": "The even symmetry group of the 27-line/45-tritangent cubic-surface configuration is PSp(4,3), and the full Weyl group W(E6) has order 51840. The present 45-object orbit is therefore the correct finite group action to compare with tritangent planes.",
     "boundary": "Equal degree, stabilizer order and strongly regular parameters do not yet provide a canonical label-preserving bijection to a chosen cubic surface. Sp(4,3) itself must not be identified with W(E6): its central quotient PSp(4,3) is the even subgroup in the classical cubic-surface action."
+  },
+  "outerCompletion": {
+    "representative": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "symplecticMultiplier": 2,
+    "normalizesSp4": true,
+    "projectivelyOutsideSp4": true,
+    "projectiveEvenSubgroupOrder": 25920,
+    "extendedProjectiveOrder": 51840,
+    "actsOn": {
+      "cubicLines": 27,
+      "doubleSixes": 36,
+      "steinerTriads": 40,
+      "tritangentPlanes": 45
+    },
+    "preservesCubicLineIncidence": true,
+    "squaresToIdentityProjectively": true,
+    "interpretation": "An anti-symplectic similitude supplies the missing outer involution. Adjoining it to PSp(4,3) gives PCSp(4,3) of order 51840 acting faithfully on the reconstructed cubic incidence, the full W(E6) symmetry type.",
+    "boundary": "This completes the abstract finite incidence action. It does not choose a particular complex cubic equation or promote the configuration to physical dynamics."
+  },
+  "heckeCarrierJoin": {
+    "flags": 432,
+    "definition": "incident pairs (double-six, cubic line contained in that double-six)",
+    "incidenceCount": "36 x 12 = 27 x 16 = 432",
+    "evenGroupTransitive": true,
+    "evenProjectiveStabilizerOrder": 60,
+    "fullProjectiveStabilizerOrder": 120,
+    "stabilizerActionDegree": 5,
+    "stabilizerPermutationOrder": 120,
+    "stabilizerIdentification": "S5, because the faithful action on the five tritangent planes through the selected cubic line contains all 120 permutations",
+    "homogeneousSpace": "W(E6)/S5",
+    "stabilizerOrbitalCount": 26,
+    "stabilizerOrbitSizes": [
+      1,
+      1,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      10,
+      10,
+      10,
+      10,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      30,
+      30,
+      30,
+      30,
+      60
+    ],
+    "commutantDimension": 26,
+    "interpretation": "The regulus reconstruction supplies the exact 432-point coset carrier whose permutation commutant is the 26-dimensional H(S5\\W(E6)/S5) algebra already present in the corpus.",
+    "boundary": "Equality of the carrier and orbital rank joins the finite geometries. It does not identify the Hecke operators with Spin(2,3) generators or physical observables."
   },
   "sample": {
     "hyperplaneCovector": [

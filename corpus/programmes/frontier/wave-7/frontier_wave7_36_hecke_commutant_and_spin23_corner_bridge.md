@@ -220,3 +220,31 @@ W33 Hecke algebra is attached to a different carrier, and Claimipedia has not
 yet been linearized into the proposed commutant calculation.  A common carrier
 and explicit intertwiners—not matching dimensions, primes or names—are the
 promotion gate.
+
+## Subsequent exact regulus join
+
+The “different carrier” boundary has now moved for the finite \(E_6\) lane.
+The [regulus closure programme](../../regulus-closure-bridge/README.md)
+reconstructs 36 double-sixes and 27 cubic lines inside the 40-point
+\(Q(4,3)\) carrier. Their incident flags form
+
+\[
+ 36\cdot12=27\cdot16=432
+\]
+
+objects. The completed order-51,840 \(W(E_6)\) action is transitive on these
+flags; a flag stabilizer acts as all permutations of the five tritangents
+through the selected line and is therefore \(S_5\). Consequently the new
+carrier is exactly
+
+\[
+ W(E_6)/S_5,
+\]
+
+and its stabilizer has 26 orbits, independently recovering the commutant
+dimension. The W33 Hecke algebra and the regulus construction now share the
+same homogeneous carrier, not merely the same group name.
+
+This does not join Claimipedia or the continuous Spin(2,3) generators to the
+Hecke algebra. Those intertwiners remain open. It does close the finite-carrier
+part of the promotion gate.

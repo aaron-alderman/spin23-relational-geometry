@@ -198,6 +198,32 @@ const adjacencyCliqueMultiplicities=[];
 for(let i=0;i<hyperbolicSections.length;i+=1)for(let j=i+1;j<hyperbolicSections.length;j+=1)if(sectionAdjacent(i,j)){
   adjacencyCliqueMultiplicities.push(fiveCliques.filter(clique=>clique.includes(i)&&clique.includes(j)).length);
 }
+const tritangentLineSets=hyperbolicSections.map((_,section)=>fiveCliques.map((clique,line)=>clique.includes(section)?line:null).filter(line=>line!==null));
+if(tritangentLineSets.some(lineSet=>lineSet.length!==3))throw new Error("tritangent candidate does not contain three reconstructed lines");
+const steinerSupportMap=new Map();
+for(const triple of combinations(hyperbolicSections.map((_,index)=>index),3)){
+  const lineSets=triple.map(section=>tritangentLineSets[section]);
+  const support=new Set(lineSets.flat());
+  if(support.size!==9)continue;
+  const supportKey=[...support].sort((a,b)=>a-b).join(",");
+  if(!steinerSupportMap.has(supportKey))steinerSupportMap.set(supportKey,[]);
+  steinerSupportMap.get(supportKey).push(triple);
+}
+const steinerPairs=[...steinerSupportMap].filter(([,trihedra])=>trihedra.length===2).map(([supportKey,trihedra])=>({
+  support:supportKey.split(",").map(Number),
+  trihedra,
+}));
+if(steinerPairs.length!==120||steinerPairs.some(pair=>pair.trihedra.some(trihedron=>trihedron.length!==3)))throw new Error("Steiner trihedral-pair reconstruction failed");
+const steinerPairIndexBySupport=new Map(steinerPairs.map((pair,index)=>[pair.support.join(","),index]));
+const steinerTriads=[];
+for(let left=0;left<steinerPairs.length;left+=1)for(let middle=left+1;middle<steinerPairs.length;middle+=1){
+  const union=new Set([...steinerPairs[left].support,...steinerPairs[middle].support]);
+  if(union.size!==18)continue;
+  const complement=fiveCliques.map((_,index)=>index).filter(index=>!union.has(index)).join(",");
+  const right=steinerPairIndexBySupport.get(complement);
+  if(right!==undefined&&right>middle)steinerTriads.push([left,middle,right]);
+}
+if(steinerTriads.length!==40)throw new Error(`Steiner triad reconstruction failed: ${steinerTriads.length}`);
 const lineCandidatesMeet=(left,right)=>left!==right&&fiveCliques[left].some(section=>fiveCliques[right].includes(section));
 const bipartition=selection=>{
   const color=new Map();
@@ -294,11 +320,124 @@ const validDoubleSixGraphs=doubleSixSelections.filter(selection=>{
 if(doubleSixRelation.size!==432||linesPerDoubleSix.join(",")!=="12"||doubleSixesPerLine.join(",")!=="16"||validDoubleSixGraphs!==36){
   throw new Error(`double-six reconstruction failed: relation=${doubleSixRelation.size}, lines=${linesPerDoubleSix}, perLine=${doubleSixesPerLine}, graphs=${validDoubleSixGraphs}`);
 }
+const sixes=new Map();
+for(const selection of doubleSixSelections){
+  const parts=bipartition(selection);
+  for(const part of parts){
+    const partKey=[...part].sort((a,b)=>a-b).join(",");
+    if(part.some((line,i)=>part.slice(i+1).some(other=>lineCandidatesMeet(line,other))))throw new Error("double-six row is not six pairwise-skew cubic lines");
+    sixes.set(partKey,[...part].sort((a,b)=>a-b));
+  }
+}
+if(sixes.size!==72)throw new Error(`six-line row reconstruction failed: ${sixes.size}`);
+const doubleSixIntersectionDistribution={},doubleSixIntersectionDegrees={};
+for(let i=0;i<doubleSixSelections.length;i+=1)for(let j=i+1;j<doubleSixSelections.length;j+=1){
+  const intersection=doubleSixSelections[i].filter(line=>doubleSixSelections[j].includes(line)).length;
+  doubleSixIntersectionDistribution[intersection]=(doubleSixIntersectionDistribution[intersection]??0)+1;
+}
+for(const intersection of Object.keys(doubleSixIntersectionDistribution))doubleSixIntersectionDegrees[intersection]=[...new Set(doubleSixSelections.map((selection,i)=>doubleSixSelections.filter((other,j)=>i!==j&&selection.filter(line=>other.includes(line)).length===Number(intersection)).length))].sort((a,b)=>a-b);
+const doubleSixIndexByKey=new Map(doubleSixSelections.map((selection,index)=>[[...selection].sort((a,b)=>a-b).join(","),index]));
+const azygeticTriadKeys=new Set(),azygeticClosureFailures=[];
+for(let left=0;left<doubleSixSelections.length;left+=1)for(let right=left+1;right<doubleSixSelections.length;right+=1){
+  if(doubleSixSelections[left].filter(line=>doubleSixSelections[right].includes(line)).length!==6)continue;
+  const leftSet=new Set(doubleSixSelections[left]),rightSet=new Set(doubleSixSelections[right]);
+  const symmetricDifference=fiveCliques.map((_,line)=>line).filter(line=>leftSet.has(line)!==rightSet.has(line)).join(",");
+  const closure=doubleSixIndexByKey.get(symmetricDifference);
+  if(closure===undefined)azygeticClosureFailures.push([left,right]);
+  else azygeticTriadKeys.add([left,right,closure].sort((a,b)=>a-b).join(","));
+}
+const azygeticTriads=[...azygeticTriadKeys].map(item=>item.split(",").map(Number));
+const azygeticEdgeMultiplicities=[];
+for(let left=0;left<doubleSixSelections.length;left+=1)for(let right=left+1;right<doubleSixSelections.length;right+=1)if(doubleSixSelections[left].filter(line=>doubleSixSelections[right].includes(line)).length===6)azygeticEdgeMultiplicities.push(azygeticTriads.filter(triad=>triad.includes(left)&&triad.includes(right)).length);
+if(azygeticClosureFailures.length||azygeticTriads.length!==120||[...new Set(azygeticEdgeMultiplicities)].join(",")!=="1")throw new Error(`azygetic double-six closure failed: failures=${azygeticClosureFailures.length}, triads=${azygeticTriads.length}, edgeMultiplicities=${[...new Set(azygeticEdgeMultiplicities)]}`);
 const lineIndexByKey=new Map(lines.map((line,index)=>[line.join("|"),index]));
 const actLine=(matrix,lineIndex)=>{
   const image=lines[lineIndex].map(point=>actPoint(matrix,point)).sort().join("|");
   return lineIndexByKey.get(image);
 };
+const steinerPairKey=pair=>steinerPairs[pair].support.join(",");
+const actSteinerPair=(matrix,index)=>steinerPairIndexBySupport.get(cliqueKey(steinerPairs[index].support.map(line=>actClique(matrix,line))));
+const steinerTriadKey=triad=>[...triad].sort((a,b)=>a-b).join(",");
+const steinerTriadIndexByKey=new Map(steinerTriads.map((triad,index)=>[steinerTriadKey(triad),index]));
+const actSteinerTriad=(matrix,index)=>steinerTriadIndexByKey.get(steinerTriadKey(steinerTriads[index].map(pair=>actSteinerPair(matrix,pair))));
+const orbitPartition=(matrices,count,action)=>{
+  const unseen=new Set(Array.from({length:count},(_,index)=>index)),orbits=[];
+  while(unseen.size){
+    const representative=unseen.values().next().value,orbit=new Set();
+    for(const matrix of matrices){const image=action(matrix,representative);if(image===undefined)throw new Error("orbit action left reconstructed family");orbit.add(image);}
+    orbit.forEach(index=>unseen.delete(index));orbits.push([...orbit].sort((a,b)=>a-b));
+  }
+  return orbits.sort((left,right)=>left.length-right.length);
+};
+const tangentSections=sectionsBySize[13];
+const tangentIndexByKey=new Map(tangentSections.map((section,index)=>[section.points.join("|"),index]));
+const actTangent=(matrix,index)=>tangentIndexByKey.get(tangentSections[index].points.map(point=>actPoint(matrix,point)).sort().join("|"));
+const tangentOrbit=new Set(),tangentStabilizer=[],tangentRepresentatives=new Map();
+for(const matrix of group){
+  const image=actTangent(matrix,0);
+  if(image===undefined)throw new Error("tangent-section orbit left the 40-section family");
+  tangentOrbit.add(image);if(!tangentRepresentatives.has(image))tangentRepresentatives.set(image,matrix);if(image===0)tangentStabilizer.push(matrix);
+}
+const polarLineStabilizer=group.filter(matrix=>actLine(matrix,0)===0);
+const tangentStabilizerTriadOrbits=orbitPartition(tangentStabilizer,steinerTriads.length,actSteinerTriad);
+const polarLineStabilizerTriadOrbits=orbitPartition(polarLineStabilizer,steinerTriads.length,actSteinerTriad);
+const tangentFixedTriads=tangentStabilizerTriadOrbits.filter(orbit=>orbit.length===1).flat();
+const polarLineFixedTriads=polarLineStabilizerTriadOrbits.filter(orbit=>orbit.length===1).flat();
+if(tangentOrbit.size!==40||tangentStabilizer.length!==1296||polarLineStabilizer.length!==1296)throw new Error("40-object orbit/stabilizer failed");
+if(tangentFixedTriads.length+polarLineFixedTriads.length!==1)throw new Error("Steiner triads did not select exactly one of the two degree-40 actions");
+const steinerCarrier=tangentFixedTriads.length===1?"tangent sections / Lagrangian points":"polar-space lines / projective one-spaces";
+const steinerSeed=tangentFixedTriads[0]??polarLineFixedTriads[0];
+const steinerRelation=new Set();
+const steinerRepresentatives=tangentFixedTriads.length===1?tangentRepresentatives:new Map();
+if(!tangentFixedTriads.length){
+  for(const matrix of group){const image=actLine(matrix,0);if(!steinerRepresentatives.has(image))steinerRepresentatives.set(image,matrix);}
+}
+for(const [carrier,matrix] of steinerRepresentatives)steinerRelation.add(`${carrier}:${actSteinerTriad(matrix,steinerSeed)}`);
+if(steinerRelation.size!==40)throw new Error("degree-40 Steiner-triad bijection failed");
+const tangentToSteinerTriad=new Map([...steinerRelation].map(item=>item.split(":").map(Number)));
+const steinerTriadToTangent=new Map([...tangentToSteinerTriad].map(([tangent,triad])=>[triad,tangent]));
+const trihedra=[];
+for(let pair=0;pair<steinerPairs.length;pair+=1)for(const trihedron of steinerPairs[pair].trihedra)trihedra.push({pair,sections:[...trihedron].sort((a,b)=>a-b)});
+const trihedronIndexByKey=new Map(trihedra.map((trihedron,index)=>[trihedron.sections.join(","),index]));
+if(trihedra.length!==240||trihedronIndexByKey.size!==240)throw new Error("240 trihedra were not reconstructed uniquely");
+const steinerPairToTriad=new Map();
+steinerTriads.forEach((triad,triadIndex)=>triad.forEach(pair=>steinerPairToTriad.set(pair,triadIndex)));
+const trihedronBase=trihedra.map(trihedron=>steinerTriadToTangent.get(steinerPairToTriad.get(trihedron.pair)));
+const actTrihedron=(matrix,index)=>trihedronIndexByKey.get(cliqueKey(trihedra[index].sections.map(section=>actSection(matrix,section))));
+const trihedronOrbits=orbitPartition(group,trihedra.length,actTrihedron);
+const trihedraPerBase=[...new Set(tangentSections.map((_,base)=>trihedronBase.filter(item=>item===base).length))].sort((a,b)=>a-b);
+const orbitIntersectionsPerBase=trihedronOrbits.map(orbit=>[...new Set(tangentSections.map((_,base)=>orbit.filter(trihedron=>trihedronBase[trihedron]===base).length))].sort((a,b)=>a-b));
+if(trihedraPerBase.join(",")!=="6"||trihedronOrbits.map(orbit=>orbit.length).join(",")!=="240"||orbitIntersectionsPerBase.some(counts=>counts.join(",")!=="6"))throw new Error("trihedron bundle reconstruction failed");
+
+const Anti=[[1,0,0,0],[0,1,0,0],[0,0,2,0],[0,0,0,2]];
+if(all4.some(u=>all4.some(v=>symplectic(matrixApply(Anti,u),matrixApply(Anti,v))!==mod(2*symplectic(u,v)))))throw new Error("outer representative is not anti-symplectic");
+if(group.some(matrix=>matrixKey(matrix)===matrixKey(Anti)||matrixKey(matrix)===matrixKey(Anti.map(row=>row.map(value=>mod(2*value))))))throw new Error("outer representative lies projectively in Sp(4,3)");
+for(const generator of [F1,F2,D1,D2,Swap,U])if(!groupKeys.has(matrixKey(matrixMultiply(matrixMultiply(Anti,generator),Anti))))throw new Error("anti-symplectic representative does not normalize Sp(4,3)");
+const outerLinePermutation=fiveCliques.map((_,index)=>actClique(Anti,index));
+const outerSectionPermutation=hyperbolicSections.map((_,index)=>actSection(Anti,index));
+const outerEllipticPermutation=ellipticSections.map((_,index)=>actElliptic(Anti,index));
+const outerSteinerPermutation=steinerTriads.map((_,index)=>actSteinerTriad(Anti,index));
+if([outerLinePermutation,outerSectionPermutation,outerEllipticPermutation,outerSteinerPermutation].some(permutation=>permutation.some(index=>index===undefined)||new Set(permutation).size!==permutation.length))throw new Error("outer action is not a permutation on a reconstructed family");
+if(outerLinePermutation.some((image,index)=>outerLinePermutation[image]!==index))throw new Error("outer action does not square projectively to identity");
+for(let i=0;i<fiveCliques.length;i+=1)for(let j=0;j<fiveCliques.length;j+=1)if(lineCandidatesMeet(i,j)!==lineCandidatesMeet(outerLinePermutation[i],outerLinePermutation[j]))throw new Error("outer action does not preserve cubic-line incidence");
+for(const relation of doubleSixRelation){
+  const [elliptic,line]=relation.split(":").map(Number);
+  if(!doubleSixRelation.has(`${actElliptic(Anti,elliptic)}:${actClique(Anti,line)}`))throw new Error("outer action does not preserve double-six flags");
+}
+const flagPairs=[...doubleSixRelation].map(item=>item.split(":").map(Number)).sort((left,right)=>left[0]-right[0]||left[1]-right[1]);
+const flagIndexByKey=new Map(flagPairs.map((flag,index)=>[flag.join(":"),index]));
+const actFlag=(matrix,index)=>flagIndexByKey.get(`${actElliptic(matrix,flagPairs[index][0])}:${actClique(matrix,flagPairs[index][1])}`);
+const evenFlagOrbit=new Set(group.map(matrix=>actFlag(matrix,0)));
+if(evenFlagOrbit.size!==432||evenFlagOrbit.has(undefined))throw new Error("PSp(4,3) is not transitive on double-six/line flags");
+const extendedMatrices=[...group,...group.map(matrix=>matrixMultiply(Anti,matrix))];
+const flagStabilizer=extendedMatrices.filter(matrix=>actFlag(matrix,0)===0);
+if(flagStabilizer.length!==240)throw new Error(`full flag stabilizer has wrong lifted order: ${flagStabilizer.length}`);
+const seedLine=flagPairs[0][1],seedTritangents=fiveCliques[seedLine];
+const seedTritangentPosition=new Map(seedTritangents.map((section,index)=>[section,index]));
+const flagStabilizerPermutations=new Set(flagStabilizer.map(matrix=>seedTritangents.map(section=>seedTritangentPosition.get(actSection(matrix,section))).join(",")));
+if(flagStabilizerPermutations.has("undefined")||flagStabilizerPermutations.size!==120)throw new Error("flag stabilizer does not realize the full S5 action");
+const flagStabilizerOrbits=orbitPartition(flagStabilizer,flagPairs.length,actFlag);
+if(flagStabilizerOrbits.length!==26)throw new Error(`double-six flag action has commutant rank ${flagStabilizerOrbits.length}, expected 26`);
 const spreadKey=spread=>[...spread].sort((a,b)=>a-b).join(",");
 const spreadKeySet=new Set(spreads.map(spreadKey));
 const spreadOrbits=[];const unseenSpreads=new Set(spreadKeySet);
@@ -312,7 +451,7 @@ spreadOrbits.sort((a,b)=>a-b);
 
 const record={
   schemaVersion:"regulus-spin23-bridge-v1",
-  date:"2026-10-26",
+  date:"2026-10-27",
   purpose:"Test whether reguli supply an exact local two-ruling closure geometry inside the corpus's 40-point qutrit Lagrangian/Spin(2,3) carrier.",
   ambientGeometry:{
     realStatement:"The Klein quadric Gr(2,4) in P(Lambda^2 R^4) has split signature (3,3); imposing a nondegenerate symplectic form selects the primitive hyperplane and its (2,3) projective null quadric LGr(2,4).",
@@ -370,7 +509,38 @@ const record={
       ellipticSectionsPerLine:doubleSixesPerLine,
       graph:"each selected 12-line subgraph is bipartite 6+6, with degree five: K_6,6 minus a perfect matching",
       verifiedForAllEllipticSections:validDoubleSixGraphs===ellipticSections.length,
+      sixLineRows:sixes.size,
+      pairIntersectionDistribution:doubleSixIntersectionDistribution,
+      pairIntersectionDegrees:doubleSixIntersectionDegrees,
+      syzygeticPairs:doubleSixIntersectionDistribution[4],
+      azygeticPairs:doubleSixIntersectionDistribution[6],
+      azygeticTriads:azygeticTriads.length,
+      azygeticPairClosureMultiplicity:[...new Set(azygeticEdgeMultiplicities)],
       interpretation:"The 36 elliptic sections reconstruct the 36 double-sixes, not merely their count.",
+    },
+    reconstructedForty:{
+      steinerTrihedralPairs:steinerPairs.length,
+      trihedraPerPair:[...new Set(steinerPairs.map(pair=>pair.trihedra.length))],
+      tritangentPlanesPerTrihedron:[...new Set(steinerPairs.flatMap(pair=>pair.trihedra.map(trihedron=>trihedron.length)))],
+      cubicLinesPerPair:[...new Set(steinerPairs.map(pair=>pair.support.length))],
+      steinerTriads:steinerTriads.length,
+      pairsPerTriad:[...new Set(steinerTriads.map(triad=>triad.length))],
+      cubicLinesPartitionedByEachTriad:steinerTriads.every(triad=>new Set(triad.flatMap(pair=>steinerPairs[pair].support)).size===27),
+      tangentSectionStabilizerOrbitSizes:tangentStabilizerTriadOrbits.map(orbit=>orbit.length),
+      polarLineStabilizerOrbitSizes:polarLineStabilizerTriadOrbits.map(orbit=>orbit.length),
+      equivariantCarrier:steinerCarrier,
+      equivariantBijectionPairs:steinerRelation.size,
+      interpretation:"The 45 tritangent candidates internally reconstruct 120 Steiner trihedral pairs and 40 triads partitioning the 27 cubic lines. Stabilizer fixed points identify which natural degree-40 polar-space carrier is equivariantly equivalent to those triads.",
+    },
+    reconstructedTwoForty:{
+      trihedra:trihedra.length,
+      factorization:"40 Steiner triads x 3 Steiner pairs x 2 trihedra",
+      trihedraPerLagrangianPoint:trihedraPerBase,
+      pspOrbitSizes:trihedronOrbits.map(orbit=>orbit.length),
+      pspOrbitIntersectionsPerLagrangianPoint:orbitIntersectionsPerBase,
+      corpusFiberPspOrbitSizes:[80,80,80],
+      equivariantVerdict:"not the same PSp(4,3)-set",
+      interpretation:"The exact 40 x 3 x 2 factorization mirrors the corpus's 40 Lagrangian polarizations x three binary decorations x two Plucker orientations, but the actions differ decisively: PSp(4,3) is transitive on the 240 trihedra whereas it has three 80-orbits on the product fiber by fixing the binary decoration. The match is typed cardinality, not an equivariant identification.",
     },
   },
   closure:{
@@ -394,6 +564,41 @@ const record={
     exactStatement:"PSp(4,3) acts transitively on the 45 regulus-pair sections, 27 reconstructed line candidates and 36 elliptic sections; their projective stabilizers have orders 576, 960 and 720 respectively.",
     cubicSurfaceComparison:"The even symmetry group of the 27-line/45-tritangent cubic-surface configuration is PSp(4,3), and the full Weyl group W(E6) has order 51840. The present 45-object orbit is therefore the correct finite group action to compare with tritangent planes.",
     boundary:"Equal degree, stabilizer order and strongly regular parameters do not yet provide a canonical label-preserving bijection to a chosen cubic surface. Sp(4,3) itself must not be identified with W(E6): its central quotient PSp(4,3) is the even subgroup in the classical cubic-surface action.",
+  },
+  outerCompletion:{
+    representative:Anti,
+    symplecticMultiplier:2,
+    normalizesSp4:true,
+    projectivelyOutsideSp4:true,
+    projectiveEvenSubgroupOrder:group.length/2,
+    extendedProjectiveOrder:group.length,
+    actsOn:{
+      cubicLines:outerLinePermutation.length,
+      doubleSixes:outerEllipticPermutation.length,
+      steinerTriads:outerSteinerPermutation.length,
+      tritangentPlanes:outerSectionPermutation.length,
+    },
+    preservesCubicLineIncidence:true,
+    squaresToIdentityProjectively:true,
+    interpretation:"An anti-symplectic similitude supplies the missing outer involution. Adjoining it to PSp(4,3) gives PCSp(4,3) of order 51840 acting faithfully on the reconstructed cubic incidence, the full W(E6) symmetry type.",
+    boundary:"This completes the abstract finite incidence action. It does not choose a particular complex cubic equation or promote the configuration to physical dynamics.",
+  },
+  heckeCarrierJoin:{
+    flags:flagPairs.length,
+    definition:"incident pairs (double-six, cubic line contained in that double-six)",
+    incidenceCount:"36 x 12 = 27 x 16 = 432",
+    evenGroupTransitive:true,
+    evenProjectiveStabilizerOrder:(group.length/evenFlagOrbit.size)/2,
+    fullProjectiveStabilizerOrder:flagStabilizer.length/2,
+    stabilizerActionDegree:seedTritangents.length,
+    stabilizerPermutationOrder:flagStabilizerPermutations.size,
+    stabilizerIdentification:"S5, because the faithful action on the five tritangent planes through the selected cubic line contains all 120 permutations",
+    homogeneousSpace:"W(E6)/S5",
+    stabilizerOrbitalCount:flagStabilizerOrbits.length,
+    stabilizerOrbitSizes:flagStabilizerOrbits.map(orbit=>orbit.length),
+    commutantDimension:flagStabilizerOrbits.length,
+    interpretation:"The regulus reconstruction supplies the exact 432-point coset carrier whose permutation commutant is the 26-dimensional H(S5\\W(E6)/S5) algebra already present in the corpus.",
+    boundary:"Equality of the carrier and orbital rank joins the finite geometries. It does not identify the Hecke operators with Spin(2,3) generators or physical observables.",
   },
   sample:{
     hyperplaneCovector:hyperbolicSections[0]?.covector,

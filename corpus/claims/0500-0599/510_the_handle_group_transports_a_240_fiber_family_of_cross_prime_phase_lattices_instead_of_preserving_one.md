@@ -223,6 +223,22 @@ The programme should re-root if:
 3. Determine the exact stabilizer order and presentation inside the finite mod-six handle image.
 4. Search the Furey tree for a canonical point of the \(3\times80\) fiber space.
 
+## 13. Subsequent 240-trihedra comparison
+
+The [regulus closure programme](../../programmes/regulus-closure-bridge/README.md)
+independently reconstructs 240 cubic-surface trihedra with the same typed
+factorization
+
+\[
+ 40\text{ Steiner triads}\times3\text{ Steiner pairs}\times2\text{ trihedra}.
+\]
+
+This is not the missing identification. \(PSp_4(3)\) is transitive on those
+240 trihedra, whereas its action on the present phase fibers has three
+80-element orbits, one for each retained binary decoration. The matching
+\(40\times3\times2\) grammar is exact; the permutation representations are
+inequivalent.
+
 ## Certificate and companions
 
 - [Handle-generator wedge and 240-fiber orbit certificate](../../../verification/analyze/analyze_integral_handle_generators_on_index_six_wedge_lattice.mjs)

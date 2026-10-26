@@ -231,6 +231,12 @@ sections also reconstruct the double-sixes through the stabilizer split
 \(E_6\) layer but does not make the standard \(E_6\oplus A_2\) subgroup
 transitive on the 240 \(E_8\) roots. See the [regulus closure bridge](../../programmes/regulus-closure-bridge/README.md).
 
+The regulus completion also constructs 240 trihedra, but the even-(E_6)
+factor is transitive on them rather than splitting them into the three
+80-orbits required by the binary-decoration product. Thus even the closest
+known (E_6) incidence carrier does not realize the faithful phase-fiber
+permutation representation.
+
 The standard \(W(E_6)^+\) action has now been exhaustively tested on all 1,120 \(A_2\) subsystems and has no orbit or invariant union of size 40. See [The standard even-\(E_6\) subgroup has no invariant forty-\(A_2\) cover of the \(E_8\) roots](516_the_standard_even_e6_subgroup_has_no_invariant_forty_a2_cover_of_the_e8_roots.md).
 
 ## Certificate and companions
