@@ -56,9 +56,10 @@ test("short articles are discoverable, shareable and machine-readable without du
   const index = readFileSync(join(siteRoot, "articles", "index.html"), "utf8");
   assert.match(index, /<h1>Articles<\/h1>/u);
   assert.match(index, /Short, shareable routes into the corpus/u);
-  assert.equal([...index.matchAll(/<article class="article-card">/gu)].length, articleSlugs.length);
+  assert.equal([...index.matchAll(/<article class="article-card">/gu)].length, articleSlugs.length + 1);
   assert.match(index, /Post on X/u);
   assert.match(index, /Bluesky/u);
+  assert.match(index, /href="typed-object-signatures\.html"/u);
 
   for (const slug of articleSlugs) {
     assert.ok(index.includes(`href="../${slug}.html"`), slug);
@@ -75,6 +76,17 @@ test("short articles are discoverable, shareable and machine-readable without du
   const frontMatter = readFileSync(join(siteRoot, "00-front-matter.html"), "utf8");
   assert.match(frontMatter, /<meta property="og:type" content="website">/u);
   assert.doesNotMatch(frontMatter, /Share this article/u);
+
+  const signatureSource = readFileSync(join(root, "docs", "papers", "typed_object_signatures_physics_epistemics_programming_article.md"), "utf8");
+  const signatureWords = signatureSource.trim().split(/\s+/u).length;
+  assert.ok(signatureWords >= 900 && signatureWords <= 1_800, `expected a light article, received ${signatureWords} words`);
+  const signatureArticle = readFileSync(join(siteRoot, "articles", "typed-object-signatures.html"), "utf8");
+  assert.match(signatureArticle, /What Physics, Knowledge, and Programs Share/u);
+  assert.match(signatureArticle, /<meta property="og:type" content="article">/u);
+  assert.match(signatureArticle, /"@type":"Article"/u);
+  assert.match(signatureArticle, /Share this article/u);
+  assert.match(signatureArticle, /The dimensional firewall/u);
+  assert.match(signatureArticle, /Complete circulation paper →/u);
 });
 
 test("every corpus Markdown source has a provenance-stamped compiled library page", () => {

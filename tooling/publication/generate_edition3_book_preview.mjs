@@ -38,6 +38,12 @@ const articleSlugs = new Set([
   "06-proton-safety",
   "07-exceptional-horizon",
 ]);
+const signatureArticleSource = "docs/papers/typed_object_signatures_physics_epistemics_programming_article.md";
+const signatureArticle = {
+  slug: "typed-object-signatures",
+  title: "What Physics, Knowledge, and Programs Share—and What They Do Not",
+  kicker: "Typed signatures, dimensional firewalls, and trustworthy translation",
+};
 const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 const sha256 = value => createHash("sha256").update(value).digest("hex");
 const posix = value => value.split(sep).join("/");
@@ -1916,8 +1922,23 @@ const articleStructuredData = chapter => {
     isPartOf: { "@type": "Book", name: "The Admissibility Frontier", url: publicPageUrl("index.html") },
   };
 };
+const standaloneArticleStructuredData = article => {
+  const url = publicPageUrl(`articles/${article.slug}.html`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.kicker,
+    image: [socialImageUrl],
+    inLanguage: "en",
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    isPartOf: { "@type": "CreativeWork", name: "Spin(2,3) Relational Geometry", url: publicSiteBase },
+  };
+};
 const socialShareLinks = (chapter, prefix = "") => {
-  const url = publicPageUrl(`${chapter.slug}.html`);
+  const pagePath = chapter === signatureArticle ? `articles/${chapter.slug}.html` : `${chapter.slug}.html`;
+  const url = publicPageUrl(pagePath);
   const text = `${typeset(chapter.title)} — ${typeset(chapter.kicker)}`;
   const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
   const blueskyHref = `https://bsky.app/intent/compose?text=${encodeURIComponent(`${text}\n${url}`)}`;
@@ -1931,9 +1952,23 @@ const articleCardHtml = chapter => {
   const blueskyHref = `https://bsky.app/intent/compose?text=${encodeURIComponent(`${text}\n${url}`)}`;
   return `<article class="article-card"><p class="kicker">Short article</p><h2><a href="../${chapter.slug}.html">${mathHtml(chapter.title)}</a></h2><p class="lede">${mathHtml(chapter.kicker)}.</p><div class="chapter-taxonomy">${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug], "../")}${archetypeBadgeHtml(chapterArchetype[chapter.slug], "../")}</div><div class="article-actions"><a href="../${chapter.slug}.html">Read article →</a><a href="${esc(xHref)}" target="_blank" rel="noopener noreferrer">Post on X</a><a href="${esc(blueskyHref)}" target="_blank" rel="noopener noreferrer">Bluesky</a></div></article>`;
 };
+const signatureArticleCardHtml = () => {
+  const url = publicPageUrl(`articles/${signatureArticle.slug}.html`);
+  const text = `${signatureArticle.title} — ${signatureArticle.kicker}`;
+  const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+  const blueskyHref = `https://bsky.app/intent/compose?text=${encodeURIComponent(`${text}\n${url}`)}`;
+  return `<article class="article-card"><p class="kicker">Featured cross-domain article</p><h2><a href="${signatureArticle.slug}.html">${esc(signatureArticle.title)}</a></h2><p class="lede">${esc(signatureArticle.kicker)}.</p><p class="article-note">A concise reader edition of the complete circulation paper.</p><div class="article-actions"><a href="${signatureArticle.slug}.html">Read article →</a><a href="${esc(xHref)}" target="_blank" rel="noopener noreferrer">Post on X</a><a href="${esc(blueskyHref)}" target="_blank" rel="noopener noreferrer">Bluesky</a></div></article>`;
+};
 const articlesIndexHtml = () => {
-  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html" aria-current="page">Articles</a> · <a href="../reading-key.html">Reading key</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">Short, shareable routes into the corpus</p><h1>Articles</h1><p class="lede">Seven focused essays introduce the mathematical spine, physical interfaces and hard boundaries of the programme. Each is designed to stand on its own in a social link while keeping its status, sources and deeper evidence one click away.</p><aside class="boundary"><strong>Glass-box publication.</strong> These are reader views of the Edition’s canonical chapters, not detached summaries. Their evidence links and authority boundaries travel with them.</aside></header><section><div class="article-grid">${articleChapters.map(articleCardHtml).join("")}</div></section><p class="article-note">Social links open the platform composer with a title, thesis and canonical URL. Nothing is posted without the reader’s action.</p><nav class="page-turn"><a href="../index.html">← Edition contents</a><a href="../01-the-revised-spine.html">Begin with the Jordan–Lie hinge →</a></nav>`;
+  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html" aria-current="page">Articles</a> · <a href="../reading-key.html">Reading key</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">Short, shareable routes into the corpus</p><h1>Articles</h1><p class="lede">Eight focused essays introduce typed translation, the mathematical spine, physical interfaces and hard boundaries of the programme. Each is designed to stand on its own in a social link while retaining a route to its evidence and complete source.</p><aside class="boundary"><strong>Glass-box publication.</strong> These are reader views rather than detached summaries. The complete circulation paper and canonical Edition chapters remain controlling sources.</aside></header><section><div class="article-grid">${signatureArticleCardHtml()}${articleChapters.map(articleCardHtml).join("")}</div></section><p class="article-note">Social links open the platform composer with a title, thesis and canonical URL. Nothing is posted without the reader’s action.</p><nav class="page-turn"><a href="../index.html">← Edition contents</a><a href="typed-object-signatures.html">Begin with typed signatures →</a></nav>`;
   return htmlDoc("Articles", body, "../", false, "articles/index.html", "Short, shareable and evidence-linked articles from The Admissibility Frontier.");
+};
+const signatureArticleHtml = () => {
+  if (!existsSync(join(root, signatureArticleSource))) throw new Error(`Missing signature article source: ${signatureArticleSource}`);
+  const markdown = readFileSync(join(root, signatureArticleSource), "utf8");
+  const bodyMarkdown = markdown.replace(/^# [^\n]+\n+_[^\n]+_\n+/u, "");
+  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html">Articles</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">Featured cross-domain article</p><h1>${esc(signatureArticle.title)}</h1><p class="lede">${esc(signatureArticle.kicker)}.</p>${socialShareLinks(signatureArticle, "../")}</header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, signatureArticleSource)}</article><nav class="page-turn"><a href="index.html">← All articles</a><a href="${esc(githubBlobUrl("docs/papers/typed_object_signatures_physics_epistemics_programming_draft.md"))}">Complete circulation paper →</a></nav>`;
+  return htmlDoc(signatureArticle.title, body, "../", false, `articles/${signatureArticle.slug}.html`, signatureArticle.kicker, { type: "article", structuredData: standaloneArticleStructuredData(signatureArticle) });
 };
 
 const directoryIndexHtml = directory => {
@@ -2070,10 +2105,11 @@ if (!siteOnly) {
 }
 
 const contentsHtml = chapters.map((chapter, index) => `<div class="contents-row"><span class="chapter-number">${String(index + 1).padStart(2, "0")}</span><span class="contents-copy"><a class="chapter-title" href="${chapter.slug}.html"><strong>${mathHtml(chapter.title)}</strong></a>${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug])}${archetypeBadgeHtml(chapterArchetype[chapter.slug])}</span><a class="read-link" href="${chapter.slug}.html">Read →</a></div>`).join("");
-const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section><p class="kicker">A lighter way in</p><h2>Seven short articles</h2><p class="lede">Shareable essays introduce the programme’s exact hinge, projective loop, physical interfaces and strongest obstructions without detaching them from their evidence.</p><p><a class="proof-link" href="articles/index.html"><span><b>Browse the articles</b><small>Standalone social previews · direct X and Bluesky sharing · sources intact</small></span><i>Read →</i></a></p></section><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><section><p class="kicker">Beyond the volume</p><h2>Follow the research all the way down</h2><p class="lede">The complete corpus is compiled into a searchable library with explicit backlinks, neighbouring documents and visible routes from this Edition into deep programme waves.</p><p><a class="proof-link" href="library/index.html"><span><b>Open the complete corpus library</b><small>${librarySources.length.toLocaleString("en")} canonical Markdown documents · one generated journey</small></span><i>Explore →</i></a></p></section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
+const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section><p class="kicker">A lighter way in</p><h2>Eight short articles</h2><p class="lede">Shareable essays introduce typed translation, the programme’s exact hinge, projective loop, physical interfaces and strongest obstructions without detaching them from their evidence.</p><p><a class="proof-link" href="articles/index.html"><span><b>Browse the articles</b><small>Standalone social previews · direct X and Bluesky sharing · sources intact</small></span><i>Read →</i></a></p></section><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><section><p class="kicker">Beyond the volume</p><h2>Follow the research all the way down</h2><p class="lede">The complete corpus is compiled into a searchable library with explicit backlinks, neighbouring documents and visible routes from this Edition into deep programme waves.</p><p><a class="proof-link" href="library/index.html"><span><b>Open the complete corpus library</b><small>${librarySources.length.toLocaleString("en")} canonical Markdown documents · one generated journey</small></span><i>Explore →</i></a></p></section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
 writeFileSync(join(siteRoot, "book.css"), `${css}${proofCss}${contentsFixCss}${evidenceCss}${directoryCss}${articleCss}`);
 writeFileSync(join(siteRoot, "index.html"), coverHtml);
 writeFileSync(join(siteArticlesRoot, "index.html"), articlesIndexHtml());
+writeFileSync(join(siteArticlesRoot, `${signatureArticle.slug}.html`), signatureArticleHtml());
 writeFileSync(join(siteRoot, "reading-key.html"), readingKeyHtml());
 Object.keys(taxonomy).forEach(key => writeFileSync(join(siteReadingKeyRoot, `status-${key}.html`), readingKeyDetailHtml("taxonomy", key)));
 archetypes.forEach(item => writeFileSync(join(siteReadingKeyRoot, `move-${item.key}.html`), readingKeyDetailHtml("archetype", item.key)));
