@@ -82,6 +82,12 @@ quotient, and which source semantics make the grading and exchange canonical.
 Repeated local algebra is evidence for a reusable grammar, not for a shared
 carrier or physical mechanism.
 
+When using the carrier--selector--detector grammar, identify the physical
+degree of freedom, the intervention that changes the selected face and the
+closed-loop invariant separately. Demonstrate that allowed local relabellings
+leave the detector record fixed. A third component, measurement or fitted
+parameter is not a triality detector merely because it is numbered three.
+
 The compact prose grammar is:
 
 > **Because — but — therefore — still open.**  

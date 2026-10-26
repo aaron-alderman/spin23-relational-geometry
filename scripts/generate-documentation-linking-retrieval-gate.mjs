@@ -151,6 +151,11 @@ const heldOut = [
       'corpus/programmes/admissibility/admissibility_133_the_incidence_coincidence_doublet_detects_odd_cycle_topology.md',
       'corpus/programmes/admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md'
     ]
+  },
+  {
+    id: 'three-resonator-triality-detector', stratum: 'physics', profile: 'all',
+    query: 'three resonator carrier selector detector loop parity cubic pole product determinant experiment',
+    targets: ['corpus/programmes/admissibility/admissibility_142_a_three_resonator_parity_switch_turns_the_dual_face_into_a_detector.md']
   }
 ];
 // Claim and semantic evidence each retain their default 0.2 share.  A 0.59

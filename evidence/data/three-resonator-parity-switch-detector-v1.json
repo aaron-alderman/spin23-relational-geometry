@@ -1,0 +1,59 @@
+{
+  "protocol": "three-resonator-parity-switch-detector/1",
+  "packet": "AZ-142",
+  "parents": ["AZ-110", "AZ-133"],
+  "carrier": "three equal-mass scalar resonators",
+  "selector": "edge parity s_ij in {+1,-1}",
+  "detector": "loop parity Phi=s12*s23*s31 and the cubic pole-product difference",
+  "model": {
+    "potential": "V=(m/2) omega0^2 sum_i x_i^2+(m/2) sum_ij kappa_ij (x_i-s_ij x_j)^2",
+    "positiveEdgeMagnitudes": ["kappa12", "kappa23", "kappa31"],
+    "unfrustratedFlux": 1,
+    "frustratedFlux": -1
+  },
+  "exactInvariants": {
+    "traceDifference": 0,
+    "quadraticMomentDifference": 0,
+    "determinantDifference": "det(D_-)-det(D_+)=4*kappa12*kappa23*kappa31",
+    "cutEdgeLimit": "zero if any kappa_ij is zero",
+    "onsiteDependence": "the determinant difference is independent of common omega0^2"
+  },
+  "equalCouplingExample": {
+    "ordinaryCouplingEigenvaluesInKappaUnits": [0, 3, 3],
+    "frustratedCouplingEigenvaluesInKappaUnits": [1, 1, 4],
+    "ordinaryFrequenciesAtZeroOnsiteInSqrtKappaUnits": [0, 1.7320508075688772, 1.7320508075688772],
+    "frustratedFrequenciesAtZeroOnsiteInSqrtKappaUnits": [1, 1, 2]
+  },
+  "buildScaleExample": {
+    "massKg": 0.01,
+    "onsiteSpringNPerM": 1,
+    "edgeSpringNPerM": 1,
+    "omega0SquaredPerSecondSquared": 100,
+    "kappaPerSecondSquared": 100,
+    "ordinaryFrequenciesHz": [1.5915494309189535, 3.183098861837907, 3.183098861837907],
+    "frustratedFrequenciesHz": [2.2507907903927653, 2.2507907903927653, 3.5588127170858854],
+    "ordinarySquaredAngularFrequencyProductPerSecond6": 16000000,
+    "frustratedSquaredAngularFrequencyProductPerSecond6": 20000000,
+    "differencePerSecond6": 4000000,
+    "differenceRelativeToOrdinary": 0.25,
+    "designTargets": {
+      "modeFrequencyRelativeUncertaintyMax": 0.005,
+      "edgeCouplingRelativeUncertaintyMax": 0.01
+    }
+  },
+  "controls": {
+    "singleEdgeFlip": "changes loop parity and activates determinant shift",
+    "twoIncidentEdgeFlip": "node gauge transformation; preserves loop parity and spectrum",
+    "openChain": "has no loop parity and no cubic product term",
+    "measurement": "complete complex three-port transfer matrix with shared nuisance parameters"
+  },
+  "decision": {
+    "physicalPlatformExists": true,
+    "exactConventionalPrediction": true,
+    "pairwiseCalibrationSufficientToPredictClosedLoop": true,
+    "observationWouldValidateGrammar": true,
+    "observationAloneWouldBeNewPhysics": false,
+    "frontierResidualRequiresConventionalEnvelopeClosure": true
+  },
+  "reopeningDatum": "A preregistered determinant residual that survives shared-parameter complex-response fitting, gauge and open-chain controls, blind repetition, device scaling and replication on a second carrier."
+}

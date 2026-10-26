@@ -95,3 +95,8 @@ Reopen only if one of the following is supplied independently:
    operation; or
 3. a physical device dictionary whose reverse controls predict held-out path
    records without adding the missing arrows by definition.
+
+AZ-142 subsequently supplies a physical parity selector on a three-resonator
+triangle, but it deliberately does not assign Supports, Challenges,
+DependsOn or Qualifies to couplings. It therefore calibrates the
+carrier--selector--detector grammar while respecting this semantic no-go.

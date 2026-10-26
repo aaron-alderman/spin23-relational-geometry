@@ -28,6 +28,10 @@ const neighbouringLandmarks = new Map([
   ["corpus/claims/1500-1599/1505_the_real_completed_two_path_geometry_uniquely_lifts_the_mask_reflection_as_J_odd_relation_sheet_parity.md", "The sheet parity is a positive-square involution anticommuting with a KO-6 real structure; semilinearity and KO-sign must be retained."],
 ]);
 
+const physicalCalibrations = new Map([
+  ["corpus/programmes/admissibility/admissibility_142_a_three_resonator_parity_switch_turns_the_dual_face_into_a_detector.md", "A programmable three-resonator ring realizes the Laplacian/signless selector physically and exposes loop parity in a held-out cubic pole-product invariant without identifying Claimipedia semantics with forces."],
+]);
+
 const canonicalPaths = new Set([
   "corpus/programmes/admissibility/admissibility_126_typed_two_rail_positive_lift_preserves_the_mirror_face.md",
   "corpus/programmes/admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md",
@@ -58,6 +62,9 @@ const candidates = corpusFiles.flatMap(path => {
   } else if (neighbouringLandmarks.has(path)) {
     category = "typed_neighbour_not_identical";
     reason = neighbouringLandmarks.get(path);
+  } else if (physicalCalibrations.has(path)) {
+    category = "physical_detector_calibration";
+    reason = physicalCalibrations.get(path);
   } else if (/nilpotent|square[- ]zero|dual[- ]number/iu.test(text)) {
     category = "nilpotent_or_dual_language_other_mechanism";
     reason = "Contains a nilpotent, square-zero or dual-number structure whose carrier and partner operators must not be inferred from lexical overlap.";
@@ -92,7 +99,8 @@ const output = {
     unclassified: 0,
     categories: counts,
     exactOtherCarrierCells: exactOtherCarriers.size,
-    typedNeighbourLandmarks: neighbouringLandmarks.size
+    typedNeighbourLandmarks: neighbouringLandmarks.size,
+    physicalDetectorCalibrations: physicalCalibrations.size
   },
   decision: {
     sameLocalAlgebraImpliesSameCarrier: false,

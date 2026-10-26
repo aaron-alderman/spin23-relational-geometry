@@ -47,6 +47,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Three local motion types (3)](../details/08-admissibility-frontier-three-local-motion-types-claim-3.md)
 - [Claim · The admissibility frontier · Three local motion types (4)](../details/08-admissibility-frontier-three-local-motion-types-claim-4.md)
 - [Claim · The admissibility frontier · Three local motion types (5)](../details/08-admissibility-frontier-three-local-motion-types-claim-5.md)
+- [Claim · The admissibility frontier · Three local motion types (6)](../details/08-admissibility-frontier-three-local-motion-types-claim-6.md)
 - [Claim · The admissibility frontier · Transition operators make the boundary measurable (1)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-1.md)
 - [Claim · The admissibility frontier · Transition operators make the boundary measurable (2)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-2.md)
 - [Claim · The admissibility frontier · Transition operators make the boundary measurable (3)](../details/08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-3.md)

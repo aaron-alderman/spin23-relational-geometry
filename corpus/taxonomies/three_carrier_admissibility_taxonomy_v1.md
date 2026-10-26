@@ -269,6 +269,22 @@ adjoint is therefore absent; the free mirror must not be relabelled as an
 authored path star. See [AZ-133](../programmes/admissibility/admissibility_133_the_incidence_coincidence_doublet_detects_odd_cycle_topology.md)
 and [AZ-134](../programmes/admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md).
 
+### Carrier--selector--detector physical cell
+
+The minimal physical reading is now executable rather than metaphorical:
+
+- **carrier = thing:** the three resonator amplitudes that can move;
+- **dual face = selector:** the equal/opposite parity chosen on each coupling;
+- **triality relation = detector:** the gauge-invariant product obtained only
+  after the third edge closes the loop.
+
+For a weighted triangle, switching the loop product leaves the trace and
+quadratic spectral moment unchanged but shifts the determinant by
+$4\kappa_{12}\kappa_{23}\kappa_{31}$. Thus the detector is not a third
+object placed beside the carrier and selector. It is the closure record that
+exists only when the three pairwise relations compose. See
+[AZ-142](../programmes/admissibility/admissibility_142_a_three_resonator_parity_switch_turns_the_dual_face_into_a_detector.md).
+
 ### Spin–Temple cell and context
 
 The opposite `Supports` and `Qualifies` arrows between Spin and Temple define

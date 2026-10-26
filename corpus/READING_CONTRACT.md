@@ -52,7 +52,9 @@ The [explanatory standard](EXPLANATORY_STANDARD.md) governs each arrow: begin wi
 8. **Dynamics lives inside, on or across the boundary.** An action, flow or update proposes histories. The admissibility gates determine whether those histories preserve positivity, type, causality, stability, global consistency and observable records.
 9. **Detectors return the construction to evidence.** A detector folds histories into records and thereby reveals some distinctions while quotienting away others.
 
-10. **Ternary structure records mediated influence.** A Jordan triple, ternary operator product or typed three-way compatibility law may encode how two terms relate through a third context. This is a mathematical form of mediated dependence, not permission to rename a cubic expression as a new physical force.
+10. **Carrier, selector and detector are different jobs.** The carrier is the thing that can vary; a dual face is a sourced intervention selecting between relational alternatives; a triality detector is the gauge-resistant closure record that first exists when three pairwise relations compose. Three objects do not make triality unless the third relation produces such a record.
+
+11. **Ternary structure records mediated influence.** A Jordan triple, ternary operator product or typed three-way compatibility law may encode how two terms relate through a third context. This is a mathematical form of mediated dependence, not permission to rename a cubic expression as a new physical force.
 
 The canonical development of this vocabulary is [The locally invariant
 carrier and its mirror face](programmes/admissibility/admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md).

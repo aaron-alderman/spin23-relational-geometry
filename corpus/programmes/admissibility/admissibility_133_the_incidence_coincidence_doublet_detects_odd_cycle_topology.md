@@ -140,3 +140,13 @@ components. One primary application stating the result explicitly is Liu,
 [doi:10.5402/2011/282940](https://doi.org/10.5402/2011/282940). The new work in
 AZ-133 is the exact placement of the captured Claimipedia incidence and
 co-incidence kernels into that theorem, not the theorem itself.
+
+## Subsequent physical calibration
+
+[AZ-142](admissibility_142_a_three_resonator_parity_switch_turns_the_dual_face_into_a_detector.md)
+realizes the same Laplacian/signless-Laplacian choice on a physical weighted
+triangle without identifying graph semantics with forces. Programmable
+coupling parity selects the face; the three-edge loop product is the detector;
+and the two sectors first separate in the cubic pole product by the exact
+amount $4\kappa_{12}\kappa_{23}\kappa_{31}$. This supplies an engineered
+calibration of the topology theorem, not a physicalization of Claimipedia.

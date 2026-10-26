@@ -81,7 +81,7 @@ for another dimensionless redesign.
 
 | ID | Topic | Reopen datum required |
 |---|---|---|
-| OT-024 | Relation-emulator hardware dictionary | AZ-110 closes network and detector design; build the frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
+| OT-024 | Relation-emulator hardware dictionary | run AZ-142's three-resonator parity-switch determinant test first; on pass, build AZ-110's frozen 16-mode directed device, measure covariance and run the blind QR-003 wall test |
 | OT-025 | Nonlocal 24-dimensional form or code functor | a source-derived replacement for the incidence form or explicit sacrificed property |
 | OT-026 | Graph-to-Jordan translation | AZ-131--AZ-134 close the local rail cell, doubled positive response and current-source adjoint search. Only the Spin–Temple pair is reciprocal; reopen globally with independently authored reverse semantics or an external contravariant functor predicting held-out paths |
 | OT-027 | Physical operator and dynamics functor | AZ-124 separates support, positive kernel, Schur face, holonomy and detector; a source-native action must still generate those operators, amplitudes and records |
@@ -230,6 +230,16 @@ records unmatched. The current-source path-adjoint route is therefore closed
 negatively. OT-026 reopens only with independently authored reverse semantics,
 an external contravariant functor or a device dictionary predicting held-out
 reverse-path records.
+
+[AZ-142](../admissibility/admissibility_142_a_three_resonator_parity_switch_turns_the_dual_face_into_a_detector.md)
+supplies the nearest physical calibration without pretending that relation
+labels are forces. Three programmable resonators realize node amplitudes as
+carrier, coupling parity as selector and loop parity as detector. The two
+flux sectors have identical trace and quadratic spectral moment, but their
+pole-product determinants differ by exactly
+$4\kappa_{12}\kappa_{23}\kappa_{31}$. This makes AZ-142 an executable
+precursor for OT-024; success validates the detector grammar inside ordinary
+mechanics, while only a controlled residual can reopen fundamental physics.
 
 [AZ-113](../admissibility/admissibility_113_the_public_alp_ufo_is_a_two_control_slice_not_the_three_source_test.md)
 

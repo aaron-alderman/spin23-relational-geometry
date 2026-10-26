@@ -262,6 +262,10 @@ The two rail responses nevertheless have a sharp quotient signature: incidence b
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-local-motion-types-claim-5.md)
 
+The carrier–selector–detector reading now has a minimal physical calibration. Three resonator amplitudes are the carrier, programmable equal-or-opposite coupling parity is the selector, and the product around the closed triangle is the triality detector. Reversing that loop parity leaves the trace and quadratic spectral moment unchanged but shifts the determinant—the product of the three squared pole frequencies—by exactly four times the product of the three calibrated coupling magnitudes. Agreement validates an engineered instance under ordinary mechanics; only a residual surviving shared-parameter response fitting, gauge controls, scaling and cross-carrier replication enters the new-physics lane.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-three-local-motion-types-claim-6.md)
+
 <a id="transition-operators-make-the-boundary-measurable"></a>
 ## Transition operators make the boundary measurable
 

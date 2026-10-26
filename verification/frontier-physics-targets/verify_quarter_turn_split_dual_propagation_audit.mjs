@@ -16,6 +16,8 @@ assert.equal(audit.summary.unclassified, 0);
 assert.equal(audit.decision.claimipediaSourceNativeCellClosed, true);
 assert.equal(audit.decision.crossCarrierIntertwinerClosed, false);
 assert.equal(audit.decision.physicalActionClosed, false);
+assert.equal(audit.summary.physicalDetectorCalibrations, 1);
+assert(audit.candidates.some(item => item.path.includes("admissibility_142_a_three_resonator") && item.category === "physical_detector_calibration"));
 assert.equal(audit.landmarks.length, 6);
 for (const expected of [
   "902_the_product_of_furey_handle_and_higgs_channel_gradings",

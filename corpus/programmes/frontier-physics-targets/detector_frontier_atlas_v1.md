@@ -97,9 +97,10 @@ These cover FA-11 and FA-13–FA-15. The immediate computational edge is the low
 - **DET-028 — arithmetic lattice and code invariants:** exact Gram, discriminant, norm, weight, distance and radical data. Wave 7.71 adds restricted logical-group order, Pauli-orbit size, forbidden-transition and leakage records, with generator removal, a universal-compiler positive control and held-out gate words. These records verify the declared finite alphabet without paying for unrestricted logical tomography.
 - **DET-029 — efficient information:** nuisance-projected Fisher/Schur separation and information per calibrated cost. Wave 7.65 adds held-out modulation classification and latent-depth error, with exact power-only equivalence as a mandatory null control. Wave 7.70 requires model-containment testing before classification: the normalized G2 transfer lies exactly inside the generic two-mode family, so only the pre-fold rank jump remains discriminating.
 - **DET-030 — complexity card:** preparation, sampling, detection, verification and error scaling.
+- **DET-038 — three-resonator loop-parity determinant:** independently calibrates three coupling magnitudes on an open chain, closes the loop in both parity sectors and tests the exact cubic pole-product shift with a shared complex-response fit. A two-edge node-gauge flip and an open-chain run are mandatory null controls.
 - **DET-036 — flavor-changing meson ALP likelihood:** binned visible and missing-energy \(B\to K^{(*)}a\) records, decay-length acceptance and a profiled \(\widetilde c_{WW}\)/current/gluon/UV-flavor information block. AZ-079 isolates a direct \(c_{WW}\) matching term, but AZ-081 shows that the published MFV source-complete kernel recombines it into \(\widetilde c_{WW}\), so this detector does not supply an independent \((A_2,c_{WW})\) row in that scope. Mass sidebands, charged/neutral and \(K/K^*\) splits, form-factor covariance and a one-coupling comparator make it a constraint and cross-scale validation arm.
 
-These span FA-03 and FA-16–FA-18. DET-027 is sufficient for the declared emulator, not yet for a physical relation carrier.
+These span FA-03 and FA-16–FA-18. DET-038 is the physical calibration precursor; DET-027 is sufficient for the declared emulator, not yet for a physical relation carrier.
 
 ### Missing translation-level detectors
 

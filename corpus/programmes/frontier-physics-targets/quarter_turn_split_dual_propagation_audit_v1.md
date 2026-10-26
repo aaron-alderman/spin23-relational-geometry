@@ -7,14 +7,15 @@
 
 ## Result
 
-The audit scans **2236** corpus Markdown documents and routes all **237** documents containing the declared quarter-turn, split, dual, nilpotent or anticommutation vocabulary. No lexical occurrence is allowed to imply a shared carrier or dynamics.
+The audit scans **2245** corpus Markdown documents and routes all **240** documents containing the declared quarter-turn, split, dual, nilpotent or anticommutation vocabulary. No lexical occurrence is allowed to imply a shared carrier or dynamics.
 
 - `canonical_claimipedia_rail_cell`: **6**
-- `clifford_or_anticommutation_other_typing`: **58**
-- `complex_or_quarter_turn_other_carrier`: **108**
+- `clifford_or_anticommutation_other_typing`: **59**
+- `complex_or_quarter_turn_other_carrier`: **109**
 - `exact_cl11_grammar_other_carrier`: **3**
 - `navigation_or_interpretive_reference`: **2**
 - `nilpotent_or_dual_language_other_mechanism`: **57**
+- `physical_detector_calibration`: **1**
 - `typed_neighbour_not_identical`: **3**
 
 Three non-Claimipedia branches carry the complete real-linear local grammar on their own typed carriers. Three further landmarks are close but retain antiunitary, KO-sign or lone-nilpotent distinctions. The remaining documents are conservatively routed by mechanism class rather than promoted by terminology.
@@ -196,6 +197,8 @@ Three non-Claimipedia branches carry the complete real-linear local grammar on t
 | `corpus/programmes/admissibility/admissibility_132_cross_corpus_clifford_cell_atlas_and_exhaustion.md` | `nilpotent_or_dual_language_other_mechanism` | Contains a nilpotent, square-zero or dual-number structure whose carrier and partner operators must not be inferred from lexical overlap. |
 | `corpus/programmes/admissibility/admissibility_133_the_incidence_coincidence_doublet_detects_odd_cycle_topology.md` | `canonical_claimipedia_rail_cell` | Part of the source-native typed-rail derivation and its local comparator. |
 | `corpus/programmes/admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md` | `canonical_claimipedia_rail_cell` | Part of the source-native typed-rail derivation and its local comparator. |
+| `corpus/programmes/admissibility/admissibility_135_a_seam_changes_continuations_but_does_not_by_itself_trigger_decay.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
+| `corpus/programmes/admissibility/admissibility_142_a_three_resonator_parity_switch_turns_the_dual_face_into_a_detector.md` | `physical_detector_calibration` | A programmable three-resonator ring realizes the Laplacian/signless selector physically and exposes loop parity in a held-out cubic pole-product invariant without identifying Claimipedia semantics with forces. |
 | `corpus/programmes/admissibility/admissibility_20_linear_flow_versus_antiunitary_edge_dynamics.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
 | `corpus/programmes/admissibility/admissibility_21_quarter_turn_wick_goldstone_cloud_and_open_closure.md` | `nilpotent_or_dual_language_other_mechanism` | Contains a nilpotent, square-zero or dual-number structure whose carrier and partner operators must not be inferred from lexical overlap. |
 | `corpus/programmes/admissibility/admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
@@ -216,6 +219,7 @@ Three non-Claimipedia branches carry the complete real-linear local grammar on t
 | `corpus/programmes/frontier-physics-targets/README.md` | `nilpotent_or_dual_language_other_mechanism` | Contains a nilpotent, square-zero or dual-number structure whose carrier and partner operators must not be inferred from lexical overlap. |
 | `corpus/programmes/frontier-physics-targets/frontier_exhaustion_checkpoint_v1.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
 | `corpus/programmes/frontier-physics-targets/frontier_physics_lineage_and_lightning_path_v1.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
+| `corpus/programmes/frontier-physics-targets/observer_horizon_nuclear_literature_review_v1.md` | `clifford_or_anticommutation_other_typing` | Contains anticommutation or Clifford structure; signature, linearity, carrier and dynamics remain local to that document. |
 | `corpus/programmes/frontier-physics-targets/open_topics_v1.md` | `nilpotent_or_dual_language_other_mechanism` | Contains a nilpotent, square-zero or dual-number structure whose carrier and partner operators must not be inferred from lexical overlap. |
 | `corpus/programmes/frontier/parallel/frontier_parallel_kantor_07_qft_frame_compatibility_and_residual_anchor_no_go.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
 | `corpus/programmes/frontier/parallel/frontier_parallel_qft_01_born_incidence_bl_current_cut.md` | `clifford_or_anticommutation_other_typing` | Contains anticommutation or Clifford structure; signature, linearity, carrier and dynamics remain local to that document. |

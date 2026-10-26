@@ -44,4 +44,4 @@ Locate a mismatched definition, an omitted assumption, a failed certificate step
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#transition-operators-make-the-boundary-measurable) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-three-local-motion-types-claim-5.md) · [Next claim →](08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-2.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#transition-operators-make-the-boundary-measurable) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-three-local-motion-types-claim-6.md) · [Next claim →](08-admissibility-frontier-transition-operators-make-the-boundary-measurable-claim-2.md)

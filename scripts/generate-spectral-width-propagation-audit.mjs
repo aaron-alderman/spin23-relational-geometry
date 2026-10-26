@@ -18,15 +18,16 @@ const groups = {
     /20_corpus_file_by_file_register|43_relational_carrier_programme_integration|568_claimipedia_export|1588_eight_external_phenomena/u,
     /frontier-physics-targets\/(?:detector_frontier_atlas|finesse_technology_pathway|frontier_complexity_cards|frontier_physics_target_coverage_map)/u,
     /frontier-physics-targets\/README\.md/u,
+    /frontier-physics-targets\/observer_horizon_nuclear_literature_review_v1\.md/u,
   ],
   open_system_or_network_width: [
     /\/664_the_pole_response|\/948_each_lossy_response_face/u,
-    /admissibility_(?:109|59|62)_|frontier_wave7_(?:65|70)_/u,
+    /admissibility_(?:109|142|59|62)_|frontier_wave7_(?:65|70)_/u,
     /lattice-subroutine-gravity\/(?:three-mode-loop-seam|two-quadrature-seam|two-resonator-transfer)/u,
   ],
   physical_spectroscopy_requires_width_ledger: [
     /\/(?:1230|1399|1454|1456|1459|1462|1464|1469)_/u,
-    /admissibility_(?:27|28|33|64|117|118)_|lane-expansion\/programme_lane_expansion_19/u,
+    /admissibility_(?:27|28|33|64|117|118|138)_|lane-expansion\/programme_lane_expansion_19/u,
   ],
   contextual_or_synthesis_use: [
     /\/dynatology\/|programme_closure_|grand-synthesis/u,

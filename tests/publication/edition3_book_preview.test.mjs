@@ -45,6 +45,9 @@ test("the expanded narrative chapters are substantial rather than chapter stubs"
   assert.match(admissibility, /Three other certified corpus carriers repeat the same Cl\(1,1\) grammar/u);
   assert.match(admissibility, /signless Laplacian of rank thirty-five/u);
   assert.match(admissibility, /leaves forty-one records unmatched/u);
+  assert.match(admissibility, /Three resonator amplitudes are the carrier/u);
+  assert.match(admissibility, /trace and quadratic spectral moment unchanged/u);
+  assert.match(admissibility, /four times the product of the three calibrated coupling magnitudes/u);
   assert.match(admissibility, /The finesse technology pathway/u);
   assert.match(admissibility, /The oriented seam becomes an experiment/iu);
   assert.match(admissibility, /The mixed interface has an exact shape/iu);

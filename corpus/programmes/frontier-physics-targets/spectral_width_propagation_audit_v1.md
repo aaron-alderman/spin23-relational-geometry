@@ -7,13 +7,13 @@
 
 ## Result
 
-All **105** effective-spectral candidates emitted by the transition audit are assigned to a mechanism-safe disposition; **0** remain unreviewed. This closes a typing queue, not the physical theories in those documents.
+All **108** effective-spectral candidates emitted by the transition audit are assigned to a mechanism-safe disposition; **0** remain unreviewed. This closes a typing queue, not the physical theories in those documents.
 
 | Disposition | Documents |
 |---|---:|
-| `navigation_or_register` | 9 |
-| `open_system_or_network_width` | 10 |
-| `physical_spectroscopy_requires_width_ledger` | 15 |
+| `navigation_or_register` | 10 |
+| `open_system_or_network_width` | 11 |
+| `physical_spectroscopy_requires_width_ledger` | 16 |
 | `contextual_or_synthesis_use` | 19 |
 | `spectrum_gap_or_residue_not_width` | 52 |
 
@@ -79,6 +79,8 @@ An eigenvalue spectrum, response pole, fitted linewidth, ringdown constant and p
 | `corpus/programmes/admissibility/admissibility_11_cyclic_tile_composition_and_dynamics.md` | `contextual_or_synthesis_use` | The document uses spectral language to map, compare or govern branches; it is not an independent width determination. |
 | `corpus/programmes/admissibility/admissibility_117_an_odd_resonance_moment_can_supply_the_missing_sign.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
 | `corpus/programmes/admissibility/admissibility_118_detector_folding_preserves_the_design_but_not_a_clean_odd_record.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
+| `corpus/programmes/admissibility/admissibility_138_kerr_separates_horizon_ergosurface_and_superradiant_channel.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
+| `corpus/programmes/admissibility/admissibility_142_a_three_resonator_parity_switch_turns_the_dual_face_into_a_detector.md` | `open_system_or_network_width` | A declared effective network, environment rate, ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime. |
 | `corpus/programmes/admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
 | `corpus/programmes/admissibility/admissibility_28_platform_triage_for_the_quarter_turn_contraction_experiment.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
 | `corpus/programmes/admissibility/admissibility_32_wide_frontier_atlas_and_iterative_research_queue.md` | `contextual_or_synthesis_use` | The document uses spectral language to map, compare or govern branches; it is not an independent width determination. |
@@ -101,6 +103,7 @@ An eigenvalue spectrum, response pole, fitted linewidth, ringdown constant and p
 | `corpus/programmes/frontier-physics-targets/finesse_technology_pathway_v1.md` | `navigation_or_register` | Navigation, coverage or detector inventory; it inherits source widths and makes no independent microscopic identification. |
 | `corpus/programmes/frontier-physics-targets/frontier_complexity_cards_v1.md` | `navigation_or_register` | Navigation, coverage or detector inventory; it inherits source widths and makes no independent microscopic identification. |
 | `corpus/programmes/frontier-physics-targets/frontier_physics_target_coverage_map_v1.md` | `navigation_or_register` | Navigation, coverage or detector inventory; it inherits source widths and makes no independent microscopic identification. |
+| `corpus/programmes/frontier-physics-targets/observer_horizon_nuclear_literature_review_v1.md` | `navigation_or_register` | Navigation, coverage or detector inventory; it inherits source widths and makes no independent microscopic identification. |
 | `corpus/programmes/frontier-physics-targets/README.md` | `navigation_or_register` | Navigation, coverage or detector inventory; it inherits source widths and makes no independent microscopic identification. |
 | `corpus/programmes/frontier/wave-6/frontier_wave6_00_magic_square_triple_bond_branch_spike.md` | `contextual_or_synthesis_use` | The document uses spectral language to map, compare or govern branches; it is not an independent width determination. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_104_cubed_commutator_dynamics_and_error_budget.md` | `contextual_or_synthesis_use` | The document uses spectral language to map, compare or govern branches; it is not an independent width determination. |
