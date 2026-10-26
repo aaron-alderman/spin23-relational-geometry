@@ -17,7 +17,7 @@ The claim supplies a map or analogy. It becomes a derivation only after an expli
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Current research note — record laws sit between possibility and public fact”.
-- **Unit of argument:** assertion 2 of 4 in this section.
+- **Unit of argument:** assertion 2 of 5 in this section.
 - **Evidence posture:** Treat the passage as organization or analogy unless a cited carrier-preserving map is supplied.
 - **Research move:** joins several typed results while letting the weakest edge set the claim.
 

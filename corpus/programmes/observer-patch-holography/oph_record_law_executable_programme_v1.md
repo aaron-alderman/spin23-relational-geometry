@@ -1,11 +1,11 @@
 # OPH record-law executable bridge programme v1
 
 **Date:** 26 October 2026  
-**Status:** build gate passed for the pinned finite package; bridge and physics gates open  
+**Status:** Gates 1--4 resolved; Gate 5 independently executable; physical attachment open
 **Targets:** FPT-001, FPT-002, FPT-015, FPT-016, FPT-017, FPT-019  
 **Frontiers:** FA-03, FA-04, FA-07, FA-08, FA-09, FA-15, FA-17, FA-18  
 **Detector:** DET-039  
-**Open topic:** OT-054
+**Topics:** OT-054 closed no-go; OT-055 active emulator
 
 ## Question
 
@@ -89,7 +89,7 @@ compute complete outcome histories, final channels, fixed objects and restrictio
 
 ## Gate 3: Jordan-corner canonicality
 
-**Outcome (26 October 2026): closed no-go for canonical `H_2(R)`.** `E` retains 55 two-level `H_2(C)` corners. Port permutation leaves two spectator orbits and phase covariance supplies no preferred real slice.
+**Outcome (26 October 2026): closed no-go for canonical `H_2(R)`.** `E` fixes a full `M_56(C)` block. Every complex two-plane in that block gives an `H_2(C)` corner, so the choices form `Gr_C(2,56)`; 55 is only the source-basis empty/full subfamily. The source supplies neither a preferred two-plane nor a phase reference selecting a real slice.
 
 ### Calculation
 

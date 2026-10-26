@@ -7,11 +7,11 @@
 
 ## Result
 
-The audit scans **2301** corpus Markdown documents and routes all **242** documents containing the declared quarter-turn, split, dual, nilpotent or anticommutation vocabulary. No lexical occurrence is allowed to imply a shared carrier or dynamics.
+The audit scans **2309** corpus Markdown documents and routes all **243** documents containing the declared quarter-turn, split, dual, nilpotent or anticommutation vocabulary. No lexical occurrence is allowed to imply a shared carrier or dynamics.
 
 - `canonical_claimipedia_rail_cell`: **6**
 - `clifford_or_anticommutation_other_typing`: **59**
-- `complex_or_quarter_turn_other_carrier`: **110**
+- `complex_or_quarter_turn_other_carrier`: **111**
 - `exact_cl11_grammar_other_carrier`: **3**
 - `navigation_or_interpretive_reference`: **2**
 - `nilpotent_or_dual_language_other_mechanism`: **58**
@@ -261,6 +261,7 @@ Three non-Claimipedia branches carry the complete real-linear local grammar on t
 | `corpus/programmes/moonshine-program-lattice/mixed-level-46-genus-two-seam.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
 | `corpus/programmes/moonshine-program-lattice/order-23-projective-centralizer-no-go.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
 | `corpus/programmes/moonshine-program-lattice/quarter-turn-metaplectic-gate.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
+| `corpus/programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
 | `corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md` | `nilpotent_or_dual_language_other_mechanism` | Contains a nilpotent, square-zero or dual-number structure whose carrier and partner operators must not be inferred from lexical overlap. |
 | `corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_RETRIEVAL_BENCHMARK.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |
 | `corpus/programmes/quotient-scars/README.md` | `complex_or_quarter_turn_other_carrier` | Contains a compact or complex direction without an audited identification with the Claimipedia rail mirror. |

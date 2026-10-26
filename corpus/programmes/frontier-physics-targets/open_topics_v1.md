@@ -402,7 +402,7 @@ separate gates.
 | OT-041 | Both band-edge collision controls and their linear local scaling are certified by cofactor and sheet continuation. | [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md) |
 | OT-043 | In the small-index calibrated LTI family, power-only records are exactly AM/FM blind; the carrier plus both coherent sidebands reconstruct mixed modulation across 972 held-out cases. | [Wave 7.65](../frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md) |
 | OT-044 | The normalized two-channel G2 fold is exactly an ordinary coupled-oscillator response; unequal addressed perturbations of a verified pre-fold D4 star provide the rank-two-to-rank-four reopening test. | [Wave 7.70](../frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md) |
-| OT-054 | The OPH record-law family is an exact nine-real-dimensional Choi spectrahedron, but its 55 two-level corners supply no canonical `H_2(R)` slice; adjacent seams retain order, and every law is non-injective, closing the direct Jordan/Spin and finite-time generator routes. | [OPH channel geometry](../observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md) |
+| OT-054 | The OPH record-law family is an exact nine-real-dimensional Choi spectrahedron, but its fixed `M_56(C)` block contains a Grassmannian of complex two-level corners and supplies no canonical `H_2(R)` slice; adjacent seams retain order, and every law is non-injective, closing the direct Jordan/Spin and finite-time generator routes. | [OPH channel geometry](../observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md) |
 
 ## Cross-cutting unknowns
 

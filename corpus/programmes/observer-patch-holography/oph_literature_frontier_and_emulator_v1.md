@@ -53,7 +53,7 @@ The OPH-specific target is not merely process fidelity. It is whether four imple
 | non-embeddable singular channel | standard principle | one common killed matrix unit proves it for the whole admitted family |
 | idempotent fixed spaces | standard theory | exact dimensions `3236` and `3126` and a typed 110-direction record difference |
 | multi-time order dependence | standard process-tensor concern | exhaustive adjacent/disjoint census on all 6,084 matrix units |
-| Jordan structure | standard operator-algebra language | exact negative result: 55 `H_2(C)` corners, no canonical `H_2(R)` slice |
+| Jordan structure | standard operator-algebra language | exact negative result: a fixed `M_56(C)` block with `Gr_C(2,56)` possible `H_2(C)` corners, but no canonical `H_2(R)` slice; 55 counts only basis-aligned empty/full pairs |
 | new physics | not established | no physical carrier attachment, source selection or anomalous record exists |
 
 The likely publishable mathematical object is therefore a worked channel benchmark with exact certificates and unusually clear negative gates. Its value rises if the source calculation is made independent, the complete spectrahedral boundary is parameterized constructively and the noisy almost-idempotent geometry is connected to observable confidence regions. Its value does not rise by renaming the fixed space spacetime.

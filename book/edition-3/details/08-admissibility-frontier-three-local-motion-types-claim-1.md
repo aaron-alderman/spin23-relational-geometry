@@ -48,4 +48,4 @@ Locate a mismatched definition, an omitted assumption, a failed certificate step
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#three-local-motion-types) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-4.md) · [Next claim →](08-admissibility-frontier-three-local-motion-types-claim-2.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#three-local-motion-types) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-5.md) · [Next claim →](08-admissibility-frontier-three-local-motion-types-claim-2.md)

@@ -1,11 +1,11 @@
 # Observer Patch Holography: kenotic bridge lane
 
 **Date:** 26 October 2026  
-**Status:** exact finite record-law result reproduced; physical and ontological bridges open  
+**Status:** internal mathematical lane exhausted at the pinned revision; independent implementation and physical bridges open
 **Source boundary:** external OPH repository pinned at `0045a99143c6cc8443d2c2c5c5bb4055451dd115`  
 **Evidence:** [reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json)  
 **Verification:** `node verification/admissibility/verify_oph_kenotic_bridge.mjs`  
-**Open topic:** OT-054  
+**Topics:** OT-054 closed no-go; OT-055 active emulator
 **Detector:** DET-039
 
 ## Result
@@ -36,7 +36,8 @@ The result strengthens the corpus's detector and local-closure language. It does
 4. [Channel geometry and local-closure result](oph_channel_geometry_and_local_closure_v1.md) executes Gates 1--4.
 5. [Literature frontier and emulator plan](oph_literature_frontier_and_emulator_v1.md) places the result against quantum-channel research and specifies Gate 5.
 6. [Emulator preflight](oph_emulator_preflight_v1.md) fixes the logical resources, shot-cost boundary and staged admission gates.
-7. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
+7. [Internal exhaustion checkpoint](oph_internal_exhaustion_checkpoint_v1.md) states what the source can still settle internally and what now requires an independent implementation or physical attachment.
+8. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
 
 ## What is filled
 
@@ -68,7 +69,7 @@ The result strengthens the corpus's detector and local-closure language. It does
 - A local-to-global theorem showing that compatible patch closures possess a unique faithful global completion.
 - A uniquely defined total entropy whose strict monotonicity follows for the full closed system.
 
-The `H_2(R)` item is now a scoped no-go rather than an unexamined gap: `E` retains 55 possible `H_2(C)` two-level corners, split into two spectator orbits, and the source supplies neither a preferred corner nor a phase reference selecting a real slice.
+The `H_2(R)` item is now a scoped no-go rather than an unexamined gap: `E` fixes a full `M_56(C)` block and therefore contains continuously many `H_2(C)` two-level corners, parameterized by `Gr_C(2,56)`. The number 55 counts only the source-basis empty/full pairs read by one multiplier. The source supplies neither a preferred complex two-plane nor a phase reference selecting a real slice.
 
 ## Corpus relationship
 

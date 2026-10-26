@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The follow-on calculation closes that mathematical boundary. The channel family is an exact nine-real-dimensional Choi spectrahedron; its two idempotent laws have fixed spaces of dimensions 3,236 and 3,126, differing by 110 empty-to-full seam coherences. Every family member is non-injective, so no discrete repair is a finite-time exponential of a bounded autonomous generator. All five named laws commute on disjoint seams and fail to commute on adjacent seams. The 55 retained two-level corners are H₂(C) corners split across two spectator orbits, with no source-selected corner or real phase slice. Thus the current source yields detector- and schedule-relative local closure, not a canonical H₂(ℝ) carrier or Spin₀(2,3) action. The surviving practical target is a phase- and order-sensitive emulator with explicit scheduler controls.
+> The follow-on calculation closes that mathematical boundary. The channel family is an exact nine-real-dimensional Choi spectrahedron; its two idempotent laws have fixed spaces of dimensions 3,236 and 3,126, differing by 110 empty-to-full seam coherences. Every family member is non-injective, so no discrete repair is a finite-time exponential of a bounded autonomous generator. All five named laws commute on disjoint seams and fail to commute on adjacent seams. The first idempotent fixes a full M₅₆(C) block, so its complex two-level corners form Gr_C(2,56); 55 counts only the source-basis empty/full pairs. No source rule chooses one complex plane or a real phase slice. Thus the current source yields detector- and schedule-relative local closure, not a canonical H₂(ℝ) carrier or Spin₀(2,3) action. The surviving practical target is a phase- and order-sensitive emulator with explicit scheduler controls.
 
 ## What this commits us to
 
@@ -17,7 +17,7 @@ The claim supplies a map or analogy. It becomes a derivation only after an expli
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Current research note — record laws sit between possibility and public fact”.
-- **Unit of argument:** assertion 3 of 4 in this section.
+- **Unit of argument:** assertion 3 of 5 in this section.
 - **Evidence posture:** Treat the passage as organization or analogy unless a cited carrier-preserving map is supplied.
 - **Research move:** joins several typed results while letting the weakest edge set the claim.
 

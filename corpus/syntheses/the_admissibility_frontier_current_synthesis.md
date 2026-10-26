@@ -1167,10 +1167,11 @@ fails to commute on adjacent seams. The order difference already appears on a
 diagonal probability distribution. Local closure is consequently qualified by
 incidence and schedule: causal separation closes, but shared ports require an
 authored scheduler, a confluence theorem or an explicit quotient. The Jordan
-census also terminates negatively. `E` retains 55 possible two-level
-`H_2(C)` corners, split into two spectator-permutation orbits; no source
-symmetry selects a corner or the phase reference needed to reduce it to
-`H_2(R)`.
+census also terminates negatively. `E` fixes a full `M_56(C)` block, so its
+two-level `H_2(C)` corners form `Gr_C(2,56)`; the 55 source-basis empty/full
+pairs split into two spectator-permutation orbits but are only a marked
+subfamily. No source symmetry selects a complex two-plane or the phase
+reference needed to reduce it to `H_2(R)`.
 
 This closes [OT-054](../programmes/frontier-physics-targets/open_topics_v1.md)
 as a useful no-go and opens OT-055 around the surviving experiment.

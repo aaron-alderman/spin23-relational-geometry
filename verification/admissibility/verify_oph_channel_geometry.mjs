@@ -23,7 +23,8 @@ requireCondition(data.choiGeometry.blocks.join(",") === "2,4,2", "wrong Choi blo
 requireCondition(data.continuousTimeEmbedding.allFamilyMembersNonInjective === true, "non-injectivity boundary missing");
 requireCondition(data.continuousTimeEmbedding.finiteTimeBoundedGeneratorEmbedding === false, "finite-time generator no-go missing");
 
-requireCondition(data.jordanCornerCensus.complexTwoLevelCornersRetainedByE === multiplicity["00"], "Jordan-corner count mismatch");
+requireCondition(data.jordanCornerCensus.decoherenceFreeHilbertDimension === multiplicity["00"] + multiplicity["11"], "decoherence-free block mismatch");
+requireCondition(data.jordanCornerCensus.basisAlignedEmptyFullCorners === multiplicity["00"], "basis-aligned Jordan-corner count mismatch");
 requireCondition(Object.values(data.jordanCornerCensus.spectatorPermutationOrbits).reduce((a, b) => a + b, 0) === multiplicity["00"], "spectator orbits do not cover the corners");
 requireCondition(data.jordanCornerCensus.selfAdjointRealDimension === 4, "H2(C) dimension mismatch");
 requireCondition(data.jordanCornerCensus.H2RRealDimension === 3, "H2(R) dimension mismatch");
@@ -50,7 +51,8 @@ console.log(JSON.stringify({
   choiRealDimension: data.choiGeometry.realParameters,
   fixedDimensions: { E: data.fixedPointGeometry.E.fixedSpaceDimension, T: data.fixedPointGeometry.T.fixedSpaceDimension },
   emptyFullDifference: data.fixedPointGeometry.differenceDimension,
-  jordanCorners: data.jordanCornerCensus.complexTwoLevelCornersRetainedByE,
+  decoherenceFreeBlock: data.jordanCornerCensus.decoherenceFreeMatrixBlock,
+  basisAlignedEmptyFullCorners: data.jordanCornerCensus.basisAlignedEmptyFullCorners,
   adjacentScheduleDependentLaws: laws.length,
   disjointCommutingLaws: laws.length,
   finiteTimeGeneratorEmbedding: data.continuousTimeEmbedding.finiteTimeBoundedGeneratorEmbedding,

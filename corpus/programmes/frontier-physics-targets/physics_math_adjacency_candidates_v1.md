@@ -6,24 +6,24 @@
 
 **Machine authority:** [adjacency candidate register](physics_math_adjacency_candidates_v1.json)
 
-This is the first finite search universe under [EXIT-01](corpus_completion_exit_criteria_v1.md). It crosses all 53 maintained topics with every adjacency family applicable to their 20 frontier areas, producing **542 candidate questions**. Generation is not evidence of a relationship. Every candidate begins unreviewed and must acquire one allowed disposition, exact evidence, a reason, preserved and lost structure, implications and a reopening trigger.
+This is the first finite search universe under [EXIT-01](corpus_completion_exit_criteria_v1.md). It crosses all 55 maintained topics with every adjacency family applicable to their 20 frontier areas, producing **565 candidate questions**. Generation is not evidence of a relationship. Every candidate begins unreviewed and must acquire one allowed disposition, exact evidence, a reason, preserved and lost structure, implications and a reopening trigger.
 
 ## Candidate counts by relation family
 
 | Family | Candidates |
 |---|---:|
-| same mathematics different physical carrier | 51 |
-| same carrier different representation | 49 |
-| reduction quotient lift extension | 33 |
-| boundary bulk defect topology | 43 |
-| static driven dissipative measurement conditioned dynamics | 48 |
-| weak strong coupling and frequency limits | 43 |
-| finite infinite size and order of limits | 44 |
-| duality intertwiner shared action and cross grade map | 34 |
-| conservation anomaly index and response invariant | 43 |
-| detector pushforward and information loss | 53 |
-| thermodynamic causal positive and kms compatibility | 48 |
-| alternative mechanism with same record | 53 |
+| same mathematics different physical carrier | 53 |
+| same carrier different representation | 51 |
+| reduction quotient lift extension | 35 |
+| boundary bulk defect topology | 45 |
+| static driven dissipative measurement conditioned dynamics | 50 |
+| weak strong coupling and frequency limits | 45 |
+| finite infinite size and order of limits | 46 |
+| duality intertwiner shared action and cross grade map | 35 |
+| conservation anomaly index and response invariant | 45 |
+| detector pushforward and information loss | 55 |
+| thermodynamic causal positive and kms compatibility | 50 |
+| alternative mechanism with same record | 55 |
 
 ## Completion boundary
 

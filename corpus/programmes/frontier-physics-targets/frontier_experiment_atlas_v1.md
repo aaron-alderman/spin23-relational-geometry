@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-26
 
-**Coverage:** 20/20 frontier areas; 53/53 maintained topics; 38/38 detector bundles.
+**Coverage:** 20/20 frontier areas; 55/55 maintained topics; 39/39 detector bundles.
 
 This atlas converts every canonical frontier into a realistic controlled experiment. “Experiment” is used in the broad scientific sense: a laboratory intervention where a physical carrier exists, a reproducible computation where the object is discrete, and a theorem/falsification benchmark where uniform limits or an action are the actual missing datum. A blocked fundamental frontier is not disguised as build-ready hardware.
 
@@ -126,9 +126,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-03 — Detector resolution and semantic fibres (detector fold)  
 **Mode/readiness:** computational_hybrid; ready_now  
 **Indicative scale:** 6–10 weeks; modelling, statistics and domain-review trio  
-**Topics:** OT-001, OT-010, OT-019, OT-021, OT-033, OT-034, OT-035, OT-043, OT-044, OT-048, OT-052
+**Topics:** OT-001, OT-010, OT-019, OT-021, OT-033, OT-034, OT-035, OT-043, OT-044, OT-048, OT-052, OT-054, OT-055
 
-**Detector bundles:** DET-002, DET-003, DET-026, DET-029, DET-030, DET-036
+**Detector bundles:** DET-002, DET-003, DET-026, DET-029, DET-030, DET-036, DET-039
 
 **Platform.** A benchmark mixing real declaration trees, driven-oscillator records, five-coordinate incidence records and synthetic mechanism pairs with controlled collisions.
 
@@ -169,9 +169,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-04 — Positivity, rank and response cones (cone and rank surface)  
 **Mode/readiness:** hybrid; ready_after_design  
 **Indicative scale:** 3–6 months on an existing microwave or transport platform  
-**Topics:** OT-008, OT-047
+**Topics:** OT-008, OT-047, OT-054, OT-055
 
-**Detector bundles:** DET-004, DET-019
+**Detector bundles:** DET-004, DET-019, DET-039
 
 **Platform.** A passive two-port microwave network first, followed by a common-sample particle/energy response implementation.
 
@@ -302,9 +302,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-07 — Dynamical selection and attraction (basin boundary)  
 **Mode/readiness:** laboratory; ready_after_design  
 **Indicative scale:** 9–18 months; can share EX-006 hardware  
-**Topics:** OT-003, OT-009, OT-013, OT-022, OT-037, OT-039
+**Topics:** OT-003, OT-009, OT-013, OT-022, OT-037, OT-039, OT-054
 
-**Detector bundles:** DET-004, DET-006, DET-007, DET-008, DET-011, DET-017, DET-025
+**Detector bundles:** DET-004, DET-006, DET-007, DET-008, DET-011, DET-017, DET-025, DET-039
 
 **Platform.** The holonomy chip or modular acoustic loop extended by a separately addressable dissipative or anisotropic selector segment Y.
 
@@ -345,9 +345,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-08 — Measurement backaction and conditioning (measurement quotient)  
 **Mode/readiness:** laboratory; ready_now_on_existing_hardware  
 **Indicative scale:** 6–12 months on a superconducting qutrit or continuously monitored qubit  
-**Topics:** OT-004, OT-043, OT-052
+**Topics:** OT-004, OT-043, OT-052, OT-054, OT-055
 
-**Detector bundles:** DET-008, DET-009
+**Detector bundles:** DET-008, DET-009, DET-039
 
 **Platform.** A three-level superconducting circuit with single-shot IQ readout, real-time feedback and calibrated missed-record efficiency.
 
@@ -390,9 +390,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-09 — Thermodynamic cost and resource budgets (resource tradeoff)  
 **Mode/readiness:** laboratory; ready_now  
 **Indicative scale:** 4–8 months on an optical-feedback trap  
-**Topics:** OT-005, OT-036
+**Topics:** OT-005, OT-036, OT-054, OT-055
 
-**Detector bundles:** DET-009, DET-010
+**Detector bundles:** DET-009, DET-010, DET-039
 
 **Platform.** A 1–2 μm colloidal bead in a programmable double-well optical or feedback potential.
 
@@ -656,9 +656,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-15 — Disorder, causal spread and scale (scaling frontier)  
 **Mode/readiness:** laboratory_computational; ready_after_design  
 **Indicative scale:** 6–12 months on a programmable resonator or qubit array  
-**Topics:** OT-011, OT-019, OT-021, OT-022, OT-023, OT-051
+**Topics:** OT-011, OT-019, OT-021, OT-022, OT-023, OT-051, OT-054, OT-055
 
-**Detector bundles:** DET-011, DET-012, DET-014, DET-015, DET-020, DET-021, DET-024, DET-025, DET-026, DET-030
+**Detector bundles:** DET-011, DET-012, DET-014, DET-015, DET-020, DET-021, DET-024, DET-025, DET-026, DET-030, DET-039
 
 **Platform.** Arrays of 16–128 microwave/acoustic resonators or available quantum-simulator sites with programmable onsite disorder and couplings.
 
@@ -742,9 +742,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-17 — Operator and carrier translation (translation gap)  
 **Mode/readiness:** hybrid; staged  
 **Indicative scale:** 12–24 months after a source-native map is written  
-**Topics:** OT-017, OT-024, OT-025, OT-026, OT-027, OT-035, OT-038, OT-039, OT-042, OT-045, OT-046, OT-047, OT-048, OT-049, OT-050, OT-051, OT-053
+**Topics:** OT-017, OT-024, OT-025, OT-026, OT-027, OT-035, OT-038, OT-039, OT-042, OT-045, OT-046, OT-047, OT-048, OT-049, OT-050, OT-051, OT-053, OT-054
 
-**Detector bundles:** DET-027, DET-035, DET-036, DET-038
+**Detector bundles:** DET-027, DET-035, DET-036, DET-038, DET-039
 
 **Platform.** A photonic three-mode chip and an acoustic or microwave three-port emulator implementing the same declared A2 operation in native units.
 
@@ -785,9 +785,9 @@ This atlas converts every canonical frontier into a realistic controlled experim
 **Frontier:** FA-18 — Consistency, scattering and continuum control (consistency boundary)  
 **Mode/readiness:** theorem_computation; ready_now  
 **Indicative scale:** 6–18 months depending on whether a theorem survives  
-**Topics:** OT-014, OT-016, OT-018, OT-021, OT-031, OT-040, OT-046, OT-051, OT-052, OT-053
+**Topics:** OT-014, OT-016, OT-018, OT-021, OT-031, OT-040, OT-046, OT-051, OT-052, OT-053, OT-054, OT-055
 
-**Detector bundles:** DET-016, DET-022, DET-023, DET-030, DET-034
+**Detector bundles:** DET-016, DET-022, DET-023, DET-030, DET-034, DET-039
 
 **Platform.** Families of finite chains, lattice gauge Hamiltonians and D4 defect operators with controllable volume, regulator, time and observable class.
 

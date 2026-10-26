@@ -77,15 +77,17 @@ This does not forbid a singular infinite-time limit, a time-dependent measuremen
 
 ## 4. The Jordan-corner census
 
-For each of the 55 empty-seam spectator states, `E` retains a two-level corner with the full-seam state. Its self-adjoint operators form `H_2(C)`, of real dimension four. A copy of `H_2(R)` can be obtained only by choosing a real phase slice, reducing four coordinates to three.
+`E` acts as the identity on the direct sum of the 55-dimensional empty-seam sector and the unique full-seam state. Its fixed system therefore contains the full matrix block `M_56(C)`, not merely 55 isolated corners. Every complex two-plane in that block supplies an `H_2(C)` self-adjoint corner; the space of choices is the Grassmannian `Gr_C(2,56)`. The 55 empty/full pairs are only the source-basis-aligned corners read by the multiplier `k`.
+
+Each `H_2(C)` self-adjoint corner has real dimension four. A copy of `H_2(R)` can be obtained only by choosing a real phase slice, reducing four coordinates to three.
 
 The source supplies neither choice canonically:
 
-- the 55 spectator states split under port permutations into a ten-element double-occupation orbit and a 45-element distinct-pair orbit;
+- the 55 source-basis empty states split under port permutations into a ten-element double-occupation orbit and a 45-element distinct-pair orbit;
 - no source invariant selects one corner inside either orbit;
 - number-phase covariance rotates the complex coherence, so a real slice requires an additional phase reference.
 
-The channel family therefore contains many *possible* rank-two Jordan slices but selects no canonical `H_2(R)_+`. Without that selection the TKK route to `sp(4,R)` has no source-native starting carrier here.
+The channel family therefore contains continuously many *possible* rank-two complex Jordan corners, including 55 basis-aligned empty/full candidates, but selects no canonical `H_2(R)_+`. Without that selection the TKK route to `sp(4,R)` has no source-native starting carrier here.
 
 ## 5. Overlap and schedule
 
@@ -119,7 +121,7 @@ The shared port makes the first repair alter the input seen by the second. Disjo
 |---|---|---|
 | complete channel geometry | exact pass | the admissible one-seam channel region is known |
 | two-seam local closure | no-go | adjacent order is observable; global closure is not inherited |
-| canonical Jordan corner | no-go | many `H_2(C)` corners exist, but no source-selected `H_2(R)` slice |
+| canonical Jordan corner | no-go | a full `M_56(C)` fixed block contains continuously many `H_2(C)` corners, but no source-selected `H_2(R)` slice |
 | continuous generator | no-go | discrete repair is non-injective and cannot be finite-time `exp(tL)` |
 
 The next live work begins after these closures, not by repeating them. One route asks whether an explicit scheduler plus a declared quotient produces a useful higher-range closure. The other builds the phase-sensitive record-law emulator and tests the exact coherence and order witnesses. Neither route presently derives Spin(2,3), spacetime or a physical law of nature.

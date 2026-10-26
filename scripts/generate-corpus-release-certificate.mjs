@@ -16,6 +16,17 @@ const excluded = new Set([
   'corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.md'
 ]);
 const sha256 = value => crypto.createHash('sha256').update(value).digest('hex');
+const writeWithTransientRetry = (target, value) => {
+  for (let attempt = 0; ; attempt += 1) {
+    try {
+      fs.writeFileSync(target, value);
+      return;
+    } catch (error) {
+      if (attempt >= 4 || !['UNKNOWN', 'EPERM', 'EBUSY'].includes(error?.code)) throw error;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 100 * (attempt + 1));
+    }
+  }
+};
 const normalizedBytes = file => {
   const raw = fs.readFileSync(file);
   if (raw.includes(0)) return raw;
@@ -60,8 +71,8 @@ const output = {
 const md = `# Corpus saturation release certificate v1\n\n**Date:** 25 October 2026\n\n**Status:** ${output.status}\n\n**Projection:** \`${projectionSha256}\`\n\n## Attestation\n\nAll nine exit gates pass for the normalized ${records.length.toLocaleString()}-file scientific-content projection identified above. This is a dated protocol-saturation result: the declared adjacency, exhausted-neighbourhood, experiment, theory, literature, implication, narrative, documentation/retrieval and adversarial-release obligations are closed together. It is not a claim that nature has no unknown physics, that every proposed bridge is true, or that the external experiments have already run.\n\nThe certificate excludes itself, release receipts and volatile generated navigation/search surfaces from its projection to avoid self-reference. Those surfaces remain separately hash-bound and freshness-tested. A clean checkout must run the release orchestrator, regenerate every declared derived surface, pass every frontier verifier and all repository tests, and retain no tracked diff.\n\nAny included-file change or reopening event invalidates this dated certificate.\n`;
 const datedMd = md.replace('25 October 2026', '26 October 2026');
 if (WRITE) {
-  fs.writeFileSync(path.join(ROOT, OUT_JSON), `${JSON.stringify(output, null, 2)}\n`);
-  fs.writeFileSync(path.join(ROOT, OUT_MD), datedMd);
+  writeWithTransientRetry(path.join(ROOT, OUT_JSON), `${JSON.stringify(output, null, 2)}\n`);
+  writeWithTransientRetry(path.join(ROOT, OUT_MD), datedMd);
 }
 console.log(JSON.stringify({ result: pass ? 'pass' : 'not_ready', outputs: [OUT_JSON, OUT_MD], status: output.status, projection: output.projection }, null, 2));
 if (!pass) process.exitCode = 1;

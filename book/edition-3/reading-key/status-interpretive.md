@@ -57,6 +57,7 @@ Treat this label as a scope boundary. It tells you what kind of support exists a
 - [Claim · The admissibility frontier · Current research note — record laws sit between possibility and public fact (2)](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-2.md)
 - [Claim · The admissibility frontier · Current research note — record laws sit between possibility and public fact (3)](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-3.md)
 - [Claim · The admissibility frontier · Current research note — record laws sit between possibility and public fact (4)](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-4.md)
+- [Claim · The admissibility frontier · Current research note — record laws sit between possibility and public fact (5)](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-5.md)
 - [Claim · The admissibility frontier · The third term is the mediator (1)](../details/08-admissibility-frontier-the-third-term-is-the-mediator-claim-1.md)
 - [Claim · The admissibility frontier · The third term is the mediator (2)](../details/08-admissibility-frontier-the-third-term-is-the-mediator-claim-2.md)
 - [Claim · The admissibility frontier · a lost sign becomes a detector (1)](../details/08-admissibility-frontier-a-lost-sign-becomes-a-detector-claim-1.md)

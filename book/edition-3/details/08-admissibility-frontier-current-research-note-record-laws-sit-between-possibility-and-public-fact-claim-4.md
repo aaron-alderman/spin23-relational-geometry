@@ -17,7 +17,7 @@ The claim supplies a map or analogy. It becomes a derivation only after an expli
 ## Logical anatomy
 
 - **Scope:** chapter “The admissibility frontier”, section “Current research note — record laws sit between possibility and public fact”.
-- **Unit of argument:** assertion 4 of 4 in this section.
+- **Unit of argument:** assertion 4 of 5 in this section.
 - **Evidence posture:** Treat the passage as organization or analogy unless a cited carrier-preserving map is supplied.
 - **Research move:** joins several typed results while letting the weakest edge set the claim.
 
@@ -46,4 +46,4 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 
 ---
 
-[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#current-research-note-record-laws-sit-between-possibility-and-public-fact) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-3.md) · [Next claim →](08-admissibility-frontier-three-local-motion-types-claim-1.md)
+[Return to the assertion in the chapter](../chapters/08-admissibility-frontier.md#current-research-note-record-laws-sit-between-possibility-and-public-fact) · [Book contents](../README.md) · [← Previous claim](08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-3.md) · [Next claim →](08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-5.md)
