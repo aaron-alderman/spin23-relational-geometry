@@ -2,11 +2,11 @@
 
 ## A call for a distributed search for exceptional structure in physics
 
-The Monster group is famous for being almost impossibly large. Its order is approximately (8\times10^{53}). That number is arresting, but it is also a distraction. Nobody should search the Monster by enumerating its elements, just as nobody understands a crystal by listing every atom in every possible sample. The Monster is accessible through compressed structure: generators and relations, representations and characters, the Griess algebra, the Moonshine module (V^\natural), modular functions, defects and composition laws.
+The Monster group is famous for being almost impossibly large. Its order is approximately \(8\times 10^{53}\). That number is arresting, but it is also a distraction. Nobody should search the Monster by enumerating its elements, just as nobody understands a crystal by listing every atom in every possible sample. The Monster is accessible through compressed structure: generators and relations, representations and characters, the Griess algebra, the Moonshine module \(V^\natural\), modular functions, defects and composition laws.
 
 The hard problem is not the size of the group. It is the length of the physical derivation.
 
-Can a bounded-degree local Hamiltonian be constructed whose thermodynamic boundary operator algebra is demonstrably (V^\natural)? Can that construction produce a detector response fixed by Monster data and not reproducible by (E_8^3), the Leech lattice, another Niemeier theory or a smaller symmetry? Can every step be independently checked, including the steps that fail?
+Can a bounded-degree local Hamiltonian be constructed whose thermodynamic boundary operator algebra is demonstrably \(V^\natural\)? Can that construction produce a detector response fixed by Monster data and not reproducible by \(E_8^3\), the Leech lattice, another Niemeier theory or a smaller symmetry? Can every step be independently checked, including the steps that fail?
 
 This is too large for one calculation and too interconnected for isolated papers. It is, however, chartable. It can be divided into parallel searches joined by strict interfaces. This article is a call to build that distributed search.
 
@@ -18,7 +18,7 @@ It is already established mathematics that Monster symmetry organizes the Moonsh
 
 The actionable target is narrower and stronger:
 
-> Construct one local, bounded-degree physical carrier; prove that its thermodynamic boundary algebra realizes (V^\natural); and derive at least one observable that requires the resulting Monster action rather than merely sharing a character, central charge or suggestive integer.
+> Construct one local, bounded-degree physical carrier; prove that its thermodynamic boundary algebra realizes \(V^\natural\); and derive at least one observable that requires the resulting Monster action rather than merely sharing a character, central charge or suggestive integer.
 
 This target can succeed or fail. It names the carrier, the limit, the algebra and the discriminating measurement. It also prevents the programme from declaring victory whenever 196883, 196884 or another Moonshine number appears in unrelated data.
 
@@ -63,7 +63,7 @@ Around this serial spine, however, many searches can run simultaneously:
 - candidate Hamiltonians, clock and rotor realizations, coupled wires and quantum-simulator encodings;
 - rigorous gap methods, tensor networks, linked-cluster expansions and finite-size criteria;
 - real-space topology, disorder stability and bulk-boundary comparison;
-- (E_8), rank-24 lattice and orbifold constructions;
+- \(E_8\), rank-24 lattice and orbifold constructions;
 - current, defect, junction and operator-product detectors;
 - materials, microwave, acoustic, photonic and synthetic-dimension implementations;
 - negative controls and no-go theorems;
@@ -75,11 +75,11 @@ This is the central organizational insight: parallelize the searches, but serial
 
 The corpus's [translation-free exceptional-topology programme](../programmes/translation-free-exceptional-topology/README.md) supplies an initial map rather than a completed theory. It begins with a local operator carrier and real-space topological indices, then treats exceptional structure as progressively finer boundary memory.
 
-One exact collision already explains why the detector ladder matters. (E_8^3) and the Leech lattice are both positive, even, unimodular rank-24 lattices. At the coarse level they share rank, determinant, signature and chiral central charge. Yet their norm-two content differs sharply: (E_8^3) has 720 roots, while the Leech lattice has none. The corresponding weight-one current dimensions distinguish (E_8^3), the Leech lattice VOA and the Moonshine module as 744, 24 and 0 within the declared candidate family. Thermal transport alone cannot make that distinction; current spectroscopy can. The [rank-24 detector ladder](../programmes/translation-free-exceptional-topology/RANK24_DETECTOR_LADDER.md) then proceeds to Griess multiplication, marked defects and sewing.
+One exact collision already explains why the detector ladder matters. \(E_8^3\) and the Leech lattice are both positive, even, unimodular rank-24 lattices. At the coarse level they share rank, determinant, signature and chiral central charge. Yet their norm-two content differs sharply: \(E_8^3\) has 720 roots, while the Leech lattice has none. The corresponding weight-one current dimensions distinguish \(E_8^3\), the Leech lattice VOA and the Moonshine module as 744, 24 and 0 within the declared candidate family. Thermal transport alone cannot make that distinction; current spectroscopy can. The [rank-24 detector ladder](../programmes/translation-free-exceptional-topology/RANK24_DETECTOR_LADDER.md) then proceeds to Griess multiplication, marked defects and sewing.
 
-The (E_8) carrier lane has also crossed several nontrivial finite gates. A compact cell has a converged numerical gap; unequal-channel and kinetic-metric perturbations have been tested; projected cells have been coupled into chains; open and periodic boundaries approach the same gap scale; and the lowest odd excitation has been identified as a mobile, driven quasiparticle. A uniform local odd transition places 99.932% of its normalized finite-chain spectral weight in the first pole at the largest exact width tested. Its nonzero-momentum sidebands follow the predicted Bloch dispersion to better than 0.63% in the tested window.
+The \(E_8\) carrier lane has also crossed several nontrivial finite gates. A compact cell has a converged numerical gap; unequal-channel and kinetic-metric perturbations have been tested; projected cells have been coupled into chains; open and periodic boundaries approach the same gap scale; and the lowest odd excitation has been identified as a mobile, driven quasiparticle. A uniform local odd transition places 99.932% of its normalized finite-chain spectral weight in the first pole at the largest exact width tested. Its nonzero-momentum sidebands follow the predicted Bloch dispersion to better than 0.63% in the tested window.
 
-These results are meaningful because their boundary is explicit. They establish a finite projected carrier and detector channel. They do not establish a thermodynamic gap, the full charge Hilbert space, an (E_8) current algebra in matter, a rank-24 edge or the Monster. The current [thermodynamic-gap route audit](../programmes/translation-free-exceptional-topology/E8_THERMODYNAMIC_GAP_ROUTE_AUDIT.md) identifies weak-coupling cluster methods as structurally appropriate while rejecting a direct use of frustration-free finite-size criteria without the required decomposition.
+These results are meaningful because their boundary is explicit. They establish a finite projected carrier and detector channel. They do not establish a thermodynamic gap, the full charge Hilbert space, an \(E_8\) current algebra in matter, a rank-24 edge or the Monster. The current [thermodynamic-gap route audit](../programmes/translation-free-exceptional-topology/E8_THERMODYNAMIC_GAP_ROUTE_AUDIT.md) identifies weak-coupling cluster methods as structurally appropriate while rejecting a direct use of frustration-free finite-size criteria without the required decomposition.
 
 That combination—positive construction plus precise refusal—is the model for the distributed programme.
 
@@ -103,7 +103,7 @@ Derive the edge from the same bulk carrier. Measure or calculate energy transpor
 
 ### 4. Rank-24 discrimination
 
-Place (E_8^3), rooted Niemeier, Leech and orbifold candidates behind identical detectors. The early tests are deliberately inexpensive: thermal response, then weight-one current content, then weight-two multiplication. Expensive defect tomography should begin only after coarser rivals have been rejected.
+Place \(E_8^3\), rooted Niemeier, Leech and orbifold candidates behind identical detectors. The early tests are deliberately inexpensive: thermal response, then weight-one current content, then weight-two multiplication. Expensive defect tomography should begin only after coarser rivals have been rejected.
 
 This lane needs both constructors and adversaries. For every claimed Monster witness, somebody should attempt to reproduce it with a smaller algebra, an accidental degeneracy or a programmed lookup table.
 
@@ -148,11 +148,11 @@ Negative results are first-class contributions. Discovering that a detector fact
 
 The first distributed tranche does not require solving Moonshine in the laboratory. It requires closing specific nearby gates:
 
-- extract explicit, parity-resolved constants for a weakly coupled projected (E_8) chain, or show that the measured coupling lies outside the theorem's domain;
+- extract explicit, parity-resolved constants for a weakly coupled projected \(E_8\) chain, or show that the measured coupling lies outside the theorem's domain;
 - construct a certified compressed-chain calculation beyond direct product enumeration and compare it with the exact width-six plateau;
 - lift the projected local-root chain into the full multi-cell charge Hilbert space with controlled error;
-- derive a source-native rank-24 boundary candidate from three (E_8) units and calculate its weight-one spectrum;
-- design a blind (E_8^3)/Niemeier/Leech detector challenge using identical synthetic data and held-out observables;
+- derive a source-native rank-24 boundary candidate from three \(E_8\) units and calculate its weight-one spectrum;
+- design a blind \(E_8^3\)/Niemeier/Leech detector challenge using identical synthetic data and held-out observables;
 - give a minimal physical implementation of inversion gauging in which the twisted sector is forced rather than inserted;
 - identify one Monster-marked defect or sewing observable with a realistic readout and an explicit smaller-algebra null model;
 - formalize the contribution packet and build a public dashboard showing filled, failed, conditional and unfilled nodes.
@@ -161,17 +161,17 @@ Each bounty is independently valuable. Together they shorten the serial critical
 
 ## What this programme is not
 
-This is not a crowdsourced search for numerology. It is not an invitation to match unexplained peaks to coefficients of (J(q)). It is not a claim that (E_8), the Leech lattice or the Monster must appear in nature because they are beautiful. It is not an attempt to replace established condensed-matter, conformal-field-theory or representation-theory standards with a private vocabulary.
+This is not a crowdsourced search for numerology. It is not an invitation to match unexplained peaks to coefficients of \(J(q)\). It is not a claim that \(E_8\), the Leech lattice or the Monster must appear in nature because they are beautiful. It is not an attempt to replace established condensed-matter, conformal-field-theory or representation-theory standards with a private vocabulary.
 
 The programme succeeds only by becoming less private: conventional definitions, source-native derivations, reproducible calculations, adversarial controls and results that specialists can inspect without accepting the surrounding speculation.
 
-Nor does every branch need to reach the Monster to matter. A new gapped (E_8) simulator, a translation-free bulk-edge construction, a rank-24 spectroscopic discriminator or a quantitative quasiparticle theorem would each stand independently.
+Nor does every branch need to reach the Monster to matter. A new gapped \(E_8\) simulator, a translation-free bulk-edge construction, a rank-24 spectroscopic discriminator or a quantitative quasiparticle theorem would each stand independently.
 
 ## What success would look like
 
 Success arrives in stages.
 
-The first stage is a thermodynamically controlled (E_8) carrier with a measured odd pole and boundary response. The second is a rank-24 construction whose current spectrum distinguishes its lattice algebra. The third is a physical orbifold retaining both sectors and their sewing. The fourth is a compact Monster certificate: not all group elements, but enough generators, products, marked defects and held-out traces to make the action unavoidable. The final stage is an experiment or simulation in which that certificate predicts something not used to build it.
+The first stage is a thermodynamically controlled \(E_8\) carrier with a measured odd pole and boundary response. The second is a rank-24 construction whose current spectrum distinguishes its lattice algebra. The third is a physical orbifold retaining both sectors and their sewing. The fourth is a compact Monster certificate: not all group elements, but enough generators, products, marked defects and held-out traces to make the action unavoidable. The final stage is an experiment or simulation in which that certificate predicts something not used to build it.
 
 At every stage the map should show what is filled, what failed, what remains conditional and what has never been attempted. That map is the admissibility zone: the boundary between structures the carrier can support and structures we have only imagined.
 

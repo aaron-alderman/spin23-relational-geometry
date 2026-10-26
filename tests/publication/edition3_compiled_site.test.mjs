@@ -112,6 +112,14 @@ test("short articles are discoverable, shareable and machine-readable without du
     assert.match(html, sourcePattern, slug);
   }
 
+  const monsterHunt = readFileSync(join(siteRoot, "articles", "monster-distributed-search.html"), "utf8");
+  assert.match(monsterHunt, /\\\(8\\times 10\^\{53\}\\\)/u, "Monster order must retain inline-math delimiters");
+  assert.match(monsterHunt, /\\\(V\^\\natural\\\)/u, "Moonshine module notation must retain inline-math delimiters");
+  assert.match(monsterHunt, /\\\(E_8\^3\\\)/u, "rank-24 lattice notation must retain inline-math delimiters");
+  assert.match(monsterHunt, /\\\(J\(q\)\\\)/u, "modular-function notation must retain inline-math delimiters");
+  assert.doesNotMatch(monsterHunt, /(?<!\\)\((?:8\\times|V\^\\natural|E_8|J\(q\))/u, "known article mathematics must not fall back to prose parentheses");
+  assert.doesNotMatch(monsterHunt, /E<em>8\^3/u, "underscores in unrendered E8 notation must not become Markdown emphasis");
+
   const lithium = readFileSync(join(siteRoot, "articles", "lithium-niobate-relational-workbench.html"), "utf8");
   const experiment = /<h2 id="a-practical-experiment-for-the-corpus">[\s\S]*?<h2 id="what-the-material-changes">/u.exec(lithium)?.[0] || "";
   assert.equal([...experiment.matchAll(/<ol(?:\s[^>]*)?>/gu)].length, 1, "the six-step experiment must be one ordered list");
