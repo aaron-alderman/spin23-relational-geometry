@@ -238,6 +238,17 @@ test("wrapped, loose and task lists retain their semantic structure", () => {
   assert.match(fork, /<li><strong>Single-doublet odd-frequency branch<\/strong><ul><li>common two-real internal plane;<\/li>/u);
 });
 
+test("parenthesized link destinations and emphasized labels survive compilation", () => {
+  const nonlinear = readFileSync(join(siteRoot, "library", "corpus", "claims", "1700-1799", "1787_nonlinear_lorentz_realization_restores_a_positive_metric_but_produces_a_massive_vector_triplet.html"), "utf8");
+  assert.match(nonlinear, /href="https:\/\/doi\.org\/10\.1016\/0370-2693\(80\)90739-X"/u);
+  assert.match(nonlinear, /<a href="https:\/\/doi\.org\/10\.1016\/0370-2693\(80\)90739-X"><em>Nonlinear realizations of compact and noncompact gauge groups<\/em><\/a>/u);
+  assert.doesNotMatch(nonlinear, /href="https:\/\/doi\.org\/10\.1016\/0370-2693\(80"/u);
+
+  const measurement = readFileSync(join(siteRoot, "articles", "measurement-creates-branches.html"), "utf8");
+  assert.match(measurement, /<a href="https:\/\/www\.nature\.com\/articles\/s42005-025-02443-0"><em>Postselection-free experimental observation/u);
+  assert.doesNotMatch(measurement, /<a [^>]*>\*[^<]+\*<\/a>/u);
+});
+
 test("tilde-fenced corpus commands render as code and programme articles remain navigable", () => {
   const programme = readFileSync(join(siteRoot, "library", "corpus", "programmes", "programme-algebra", "README.html"), "utf8");
   assert.match(programme, /<h2 id="articles">Articles<\/h2>/u);

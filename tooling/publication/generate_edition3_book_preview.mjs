@@ -1648,15 +1648,57 @@ const editionRouteFor = source => {
 const inlineMarkdown = (value, source, fromFile = sourceOutputPath(source)) => {
   const code = [];
   let output = esc(value).replace(/`([^`]+)`/gu, (_, body) => `\u0000${code.push(`<code>${body}</code>`) - 1}\u0000`);
-  output = output.replace(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/gu, (_, alt, target) => {
-    const rawTarget = target.replaceAll("&amp;", "&");
-    const href = /^(?:https?:|data:)/iu.test(rawTarget) ? rawTarget : githubRawUrl(posix(normalize(join(dirname(source), rawTarget))));
-    return `\u0000${code.push(`<img src="${esc(href)}" alt="${alt}">`) - 1}\u0000`;
-  });
-  output = output.replace(/\[([^\]]+)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/gu, (_, label, target) => `\u0000${code.push(`<a href="${esc(resolveMarkdownTarget(source, target.replaceAll("&amp;", "&"), fromFile))}">${label}</a>`) - 1}\u0000`);
   output = output.replace(/\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$|(?<!\$)\$(?!\$)[^$\n]+\$(?!\$)/gu, math => `\u0000${code.push(math) - 1}\u0000`);
-  output = output.replace(/\*\*([^*]+)\*\*/gu, "<strong>$1</strong>").replace(/__([^_]+)__/gu, "<strong>$1</strong>");
-  output = output.replace(/(?<!\*)\*([^*]+)\*(?!\*)/gu, "<em>$1</em>").replace(/(?<!_)_([^_]+)_(?!_)/gu, "<em>$1</em>");
+  const formatEmphasis = input => input
+    .replace(/\*\*([^*]+)\*\*/gu, "<strong>$1</strong>")
+    .replace(/__([^_]+)__/gu, "<strong>$1</strong>")
+    .replace(/(?<!\*)\*([^*]+)\*(?!\*)/gu, "<em>$1</em>")
+    .replace(/(?<!_)_([^_]+)_(?!_)/gu, "<em>$1</em>");
+  const destinationFrom = inside => {
+    const trimmed = inside.trim();
+    if (trimmed.startsWith("&lt;")) {
+      const close = trimmed.indexOf("&gt;");
+      if (close >= 0) return trimmed.slice(4, close);
+    }
+    let depth = 0;
+    for (let index = 0; index < trimmed.length; index += 1) {
+      if (trimmed[index] === "(") depth += 1;
+      else if (trimmed[index] === ")" && depth > 0) depth -= 1;
+      else if (/\s/u.test(trimmed[index]) && depth === 0) return trimmed.slice(0, index);
+    }
+    return trimmed;
+  };
+  const replaceDestinations = input => {
+    const opener = /(!?)\[([^\]]*)\]\(/gu;
+    let rendered = "";
+    let cursor = 0;
+    let match;
+    while ((match = opener.exec(input))) {
+      let depth = 1;
+      let end = opener.lastIndex;
+      for (; end < input.length && depth > 0; end += 1) {
+        if (input[end] === "\\") { end += 1; continue; }
+        if (input[end] === "(") depth += 1;
+        else if (input[end] === ")") depth -= 1;
+      }
+      if (depth !== 0) continue;
+      rendered += input.slice(cursor, match.index);
+      const target = destinationFrom(input.slice(opener.lastIndex, end - 1)).replaceAll("&amp;", "&");
+      if (match[1]) {
+        const href = /^(?:https?:|data:)/iu.test(target) ? target : githubRawUrl(posix(normalize(join(dirname(source), target))));
+        const alt = match[2].replace(/[*_]/gu, "");
+        rendered += `\u0000${code.push(`<img src="${esc(href)}" alt="${alt}">`) - 1}\u0000`;
+      } else {
+        const label = formatEmphasis(match[2]);
+        rendered += `\u0000${code.push(`<a href="${esc(resolveMarkdownTarget(source, target, fromFile))}">${label}</a>`) - 1}\u0000`;
+      }
+      cursor = end;
+      opener.lastIndex = end;
+    }
+    return rendered + input.slice(cursor);
+  };
+  output = replaceDestinations(output);
+  output = formatEmphasis(output);
   return output.replace(/\u0000(\d+)\u0000/gu, (_, index) => code[Number(index)]);
 };
 
