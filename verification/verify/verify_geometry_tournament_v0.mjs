@@ -1,0 +1,16 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const evidence = JSON.parse(fs.readFileSync(new URL("../../evidence/data/geometry-tournament-v0.json", import.meta.url), "utf8"));
+assert.equal(evidence.grammar.geometries.length, 10);
+assert.equal(evidence.grammar.readerKernels.length, 7);
+assert.equal(evidence.grammar.composites, 20);
+assert.equal(evidence.reduction.aggregateUncalibratedProjectionClasses, 5);
+assert.equal(evidence.reduction.declaredReaderClasses, 18);
+assert.equal(evidence.reduction.fullSeparatingBundleGeometryClasses, 10);
+assert.deepEqual(evidence.reduction.declaredAliases[0], ["flat_projection", "displacement_projection"]);
+assert.equal(evidence.syntheticRecovery.totalTrials, 1600);
+assert.equal(evidence.syntheticRecovery.accuracy, 1);
+assert.equal(evidence.admission.realDataPromotion, false);
+assert.match(evidence.nextGate, /typed coupling as a separate algebraic layer/u);
+console.log(JSON.stringify({composites:20, aggregateClasses:5, declaredClasses:18, geometryClasses:10, syntheticAccuracy:1, realDataPromotion:false}, null, 2));
+console.log("PASS verify_geometry_tournament_v0");

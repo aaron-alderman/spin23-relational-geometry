@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-10-26",
+  "runner": "scripts/run-geometry-tournament-v0.mjs",
+  "status": "executed deterministic primitive geometry-reader tournament",
+  "grammar": {
+    "geometries": ["flat", "displaced", "tilt", "bend", "saddle", "crease", "thickness", "gradedThickness", "defect", "twist"],
+    "readerKernels": ["projection", "attenuation", "signed", "phase", "mixing", "decoherence", "holonomy"],
+    "composites": 20,
+    "scope": "v0 combines one geometry primitive with one coupling-reader kernel; longer algebraic words remain a later gate"
+  },
+  "reduction": {
+    "aggregateUncalibratedProjectionClasses": 5,
+    "declaredReaderClasses": 18,
+    "fullSeparatingBundleGeometryClasses": 10,
+    "declaredAliases": [
+      ["flat_projection", "displacement_projection"],
+      ["bend_projection", "saddle_projection"]
+    ],
+    "interpretation": "constant displacement is invisible to translation-invariant projection; slope-magnitude projection cannot distinguish bowl from saddle sign structure"
+  },
+  "syntheticRecovery": {
+    "noiseSigma": 0.01,
+    "trialsPerUniqueDeclaredClass": 100,
+    "uniqueDeclaredModels": 16,
+    "totalTrials": 1600,
+    "accuracy": 1,
+    "confusions": {}
+  },
+  "admission": {
+    "rule": "retire or merge aliases before real-data fitting; add a reader only when it separates a preregistered equivalence class",
+    "displacement": "requires an absolute, distance-sensitive or signed reader",
+    "thickness": "requires a distribution-sensitive reader",
+    "twist": "requires a loop or parallel-transport reader",
+    "realDataPromotion": false,
+    "reason": "synthetic distinguishability demonstrates instrumentation logic, not physical occurrence"
+  },
+  "nextGate": "add typed coupling as a separate algebraic layer, canonicalize low-word-length compositions, add nuisance generators and require inject-recover plus confusion tests before real-data admission"
+}
