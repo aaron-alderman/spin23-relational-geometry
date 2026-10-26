@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "translation-free-e8-adaptive-shell-solver-plan-v1",
+  "date": "2026-10-26",
+  "status": "exact shared kinetic-shell count and matrix-free nonlinear solver plan",
+  "integralEquivalence": {
+    "cartanBranch": "Q_K(n)=n^T K n",
+    "inverseBranch": "Q_inverse(n)=n^T K^-1 n",
+    "bijection": "m=K^-1 n in Z^8, n=K m",
+    "identity": "Q_inverse(n)=m^T K m",
+    "consequence": "both conditional charging branches have the same kinetic energy multiplicities and can use one E8-shell enumerator"
+  },
+  "thetaSeries": {
+    "formula": "Theta_E8(q)=1+240 sum_{m>=1} sigma_3(m) q^m",
+    "normConvention": "shell m has squared E8 norm 2m and kinetic energy m when H_kin=Q/2",
+    "shells": [
+      {"m":0,"normSquared":0,"multiplicity":1,"cumulativeStates":1},
+      {"m":1,"normSquared":2,"multiplicity":240,"cumulativeStates":241},
+      {"m":2,"normSquared":4,"multiplicity":2160,"cumulativeStates":2401},
+      {"m":3,"normSquared":6,"multiplicity":6720,"cumulativeStates":9121},
+      {"m":4,"normSquared":8,"multiplicity":17520,"cumulativeStates":26641},
+      {"m":5,"normSquared":10,"multiplicity":30240,"cumulativeStates":56881},
+      {"m":6,"normSquared":12,"multiplicity":60480,"cumulativeStates":117361},
+      {"m":7,"normSquared":14,"multiplicity":82560,"cumulativeStates":199921},
+      {"m":8,"normSquared":16,"multiplicity":140400,"cumulativeStates":340321},
+      {"m":9,"normSquared":18,"multiplicity":181680,"cumulativeStates":522001},
+      {"m":10,"normSquared":20,"multiplicity":272160,"cumulativeStates":794161},
+      {"m":11,"normSquared":22,"multiplicity":319680,"cumulativeStates":1113841},
+      {"m":12,"normSquared":24,"multiplicity":490560,"cumulativeStates":1604401}
+    ]
+  },
+  "commonBasisDifferentOperators": {
+    "commonKineticBasis": "integer m ordered by m^T K m/2 and truncated by complete E8 shells",
+    "cartanKernelPotentialSteps": "m maps to m plus or minus e_i",
+    "inverseKernelPotentialSteps": "m maps to m plus or minus K^-1 e_i",
+    "maximumStepL1Norm": 135,
+    "interpretation": "the two models share diagonal kinetic energies but have different sparse hopping graphs; topology has not made their dynamics equivalent"
+  },
+  "solverPlan": {
+    "representation": "hash-indexed complete E8 shells with matrix-free symmetric matvec",
+    "maximumNeighborsPerState": 16,
+    "cutoffSequenceKineticEnergy": [4,6,8,10,12],
+    "basisSizes": [26641,117361,340321,794161,1604401],
+    "fourVectorMemoryMiB": [0.813,3.582,10.386,24.236,48.962],
+    "observables": ["ground energy", "first three gaps", "parity labels", "transition weights under eight local drives", "cutoff residual"],
+    "stabilityGate": "promote a level only when successive complete-shell cutoffs agree inside the preregistered tolerance and its boundary probability or residual decreases"
+  },
+  "established": "The joined nonlinear problem does not require an anisotropic Cartesian box. Exact E8 theta coefficients give the basis size in advance, and the K/K^-1 hypotheses can be compared on one kinetic carrier by changing only the sixteen potential transitions.",
+  "boundary": "This packet sizes and compiles the sparse problem; it does not report converged nonlinear eigenvalues. A projected finite-shell eigenvalue is variational data, not yet the continuum gap.",
+  "nextGate": "implement the common-shell enumerator and matrix-free lowest-eigenpair solver, then publish the first cutoff convergence table for both step sets"
+}

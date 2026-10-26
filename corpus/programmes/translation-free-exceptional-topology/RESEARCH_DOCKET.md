@@ -31,6 +31,9 @@ convergence is now certified through (q=129); the coupled eight-channel
 metric is no longer treated as uniquely implied by topology: the (K) and
 (K^{-1}) constitutive branches have exact, distinct Coxeter resonance
 fingerprints, and full eight-port calibration is the next gate. The E8-
+theta series now also supplies a shared complete-shell sparse basis through
+1,604,401 states for the conditional nonlinear eigensolve; eigenvalue
+convergence itself remains open. The E8-
 specific detector predicts a held-out 240-current root shell. B4 is closed on the
 declared E8-cubed/Leech/Moonshine family: the bulk detector collides and
 \(\dim V_1=(744,24,0)\) separates the three candidates.

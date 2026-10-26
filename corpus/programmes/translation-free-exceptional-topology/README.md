@@ -20,6 +20,8 @@
 
 **Constitutive join:** [E8 metric calibration gate](E8_CONSTITUTIVE_METRIC_GATE.md)
 
+**Nonlinear solver:** [E8 adaptive kinetic-shell compilation](E8_ADAPTIVE_SHELL_SOLVER.md)
+
 **Material bridge:** [quasicrystal backplane experiment](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 
 **Rank-24 inference:** [current and defect detector ladder](RANK24_DETECTOR_LADDER.md)
@@ -172,6 +174,9 @@ does not select the positive constitutive energy matrix. Using (K^{-1}) as
 a charging kernel and using it as a capacitance/Gram matrix predict different
 eight-mode Coxeter fingerprints. Weak eight-port tomography must select and
 calibrate the physical branch before a nonlinear joined gap is meaningful.
+The subsequent sparse calculation is now compiled: unimodularity gives both
+branches one E8-theta kinetic-shell basis, while their distinct cosine step
+sets define different sixteen-neighbor hopping graphs.
 
 The material route is now typed rather than associative. A quasicrystal may
 supply a phason-bearing, translation-free backplane for the programmed E8
@@ -229,6 +234,7 @@ translation-free topology result remains valuable after that null.
 - [Typed Monster reconstruction gate](../frontier/wave-7/frontier_wave7_228_typed_self_description_and_monster_reconstruction_gate.md)
 - [Quasicrystal backplane bridge](QUASICRYSTAL_BACKPLANE_BRIDGE.md)
 - [E8 constitutive-metric gate](E8_CONSTITUTIVE_METRIC_GATE.md)
+- [E8 adaptive-shell nonlinear solver](E8_ADAPTIVE_SHELL_SOLVER.md)
 
 ## Primary external anchors
 
