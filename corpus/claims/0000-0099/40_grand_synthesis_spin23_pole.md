@@ -11264,6 +11264,16 @@ frame distribution and cannot be the missing selector; nonlinear instability
 can begin in either the 15- or 20-dimensional sector, but a unique winning
 frame still requires bias, boundary data or history.
 
+That bias is now operationally explicit. All 40 basis measurements compile
+from a six-generator Clifford alphabet in at most seven steps. Every frame
+contains four product bases and six entangled bases, each entangled basis
+requiring one mutual gate. Weighted shortest-path compilation divides control-
+cost space into chambers with different cheapest frames: equal costs select
+frame 21 in the machine labelling, phase-expensive control selects frame 20,
+and other profiles leave different tied sets. Hardware can therefore select a
+frame, but the winner is a property of the calibrated implementation rather
+than a canonical object of the (W(E_6)) geometry.
+
 This frame-label process is typed separately from the earlier quadratic
 handle twirl. The handle twirl acts on response bilinears and selects the
 symplectic carrier; the new Bose–Mesner channel acts only after that carrier

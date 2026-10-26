@@ -1094,8 +1094,11 @@ and 45 tritangents. This also sharpens the boundary: symmetric linear noise
 mixes rather than selects a frame, pure relation optimization selects
 composite incidence clusters, and the finite action is a non-split
 mod-three quotient rather than a canonical subgroup of the integral or real
-four-carrier. The nearest experiment is therefore an explicit two-qutrit
-frame/leakage/transition test, not an \(E_8\) or new-force declaration.
+four-carrier. A weighted Clifford compiler adds the missing practical
+asymmetry: calibrated control costs select cheapest frames in different cost
+chambers, without making any winner intrinsic. The nearest experiment is
+therefore an explicit two-qutrit frame/cost/leakage/transition test, not an
+\(E_8\) or new-force declaration.
 
 ## Kenotic confidence
 

@@ -232,15 +232,17 @@ The completed regulus programme supplies a larger but still finite target for
 frequency-bin hardware. Forty explicitly listed two-qutrit commuting classes
 form 36 complete ten-basis MUB frames. Their frame-overlap algebra has only
 two relations: pairs share either four bases or one. A frequency processor
-with nine coherent modes can therefore be tested in stages:
+with nine coherent modes can therefore be tested with a separate calibration
+checklist:
 
-1. compile and calibrate the 40 Weyl commuting-class measurements;
-2. verify the ten-basis MUB relations frame by frame;
-3. apply frame-preserving Clifford control noise and quantify leakage outside
-   the 36 frames;
-4. fit the conditional transition kernel to the exact three-dimensional
-   algebra \(\operatorname{span}\{I,A_4,A_1\}\);
-5. predict held-out one-overlap and four-overlap transitions.
+| Calibration gate | Required record |
+|---|---|
+| commuting classes | compile and calibrate the 40 Weyl measurements |
+| control costs | assign measured costs to the six logical Clifford generators and pre-register the cheapest predicted frame or tied set |
+| MUB geometry | verify the ten-basis relations frame by frame |
+| leakage | apply frame-preserving Clifford control noise and quantify probability outside the 36 frames |
+| invariant channel | fit the conditional kernel to \(\operatorname{span}\{I,A_4,A_1\}\) |
+| held-out prediction | predict one-overlap and four-overlap transitions |
 
 The distinction between leakage and relation residual is essential. Generic
 loss, dispersion or non-Clifford mode mixing need not map one full frame to

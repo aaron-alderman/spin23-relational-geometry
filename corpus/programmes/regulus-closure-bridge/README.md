@@ -42,6 +42,9 @@ The executable calculation over \(\mathbb F_3\) finds:
 - a three-dimensional invariant frame-noise algebra with spectral sectors
   \(1+15+20\), plus an exact proof that symmetric linear noise mixes rather
   than selects a frame;
+- a weighted Clifford compiler in which calibrated control costs select
+  cheapest frames in hardware-dependent chambers without making any frame
+  intrinsically preferred;
 - maximal-clique recovery of the 120 azygetic closures, all 216 skew
   cubic-line pairs and all 45 tritangents from measurement-frame overlaps;
 - a no-section theorem: the finite carrier is a quotient of the
@@ -64,12 +67,18 @@ physical carrier or an \(E_8\) root identification.
 - [Analysis](../../../scripts/analyze-regulus-spin23-bridge.mjs)
 - [Machine evidence](../../../evidence/data/regulus-spin23-bridge-v1.json)
 - [Independent verifier](../../../verification/verify/verify_regulus_spin23_bridge.mjs)
+- [Two-qutrit operator and selector analysis](../../../scripts/analyze-regulus-mub-selector-dynamics.mjs)
+- [Operator/selector machine evidence](../../../evidence/data/regulus-mub-selector-dynamics-v1.json)
+- [Operator/selector verifier](../../../verification/verify/verify_regulus_mub_selector_dynamics.mjs)
+- [Frame-channel fitter](../../../scripts/fit-regulus-frame-channel.mjs)
 
 Run:
 
 ```powershell
 node scripts/analyze-regulus-spin23-bridge.mjs --write
 node verification/verify/verify_regulus_spin23_bridge.mjs
+node scripts/analyze-regulus-mub-selector-dynamics.mjs --write
+node verification/verify/verify_regulus_mub_selector_dynamics.mjs
 ```
 
 ## Detailed finding

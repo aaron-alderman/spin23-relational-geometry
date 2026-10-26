@@ -68,6 +68,67 @@ for(const u of vectors(4))for(const v of vectors(4)){
 }
 const lagrangians=[...planeMap.values()].filter(([u,v])=>symplectic(u,v)===0);
 if(lagrangians.length!==40)throw new Error(`expected 40 Lagrangians, got ${lagrangians.length}`);
+const finiteMatrixApply=(matrix,vector)=>matrix.map(row=>mod(row.reduce((sum,entry,index)=>sum+entry*vector[index],0)));
+const finiteMatrixMultiply=(left,right)=>left.map(row=>right[0].map((_,column)=>mod(row.reduce((sum,entry,index)=>sum+entry*right[index][column],0))));
+const I4=[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
+const cliffordGenerators={
+  F1:[[0,0,1,0],[0,1,0,0],[-1,0,0,0],[0,0,0,1]],
+  F2:[[1,0,0,0],[0,0,0,1],[0,0,1,0],[0,-1,0,0]],
+  D1:[[1,0,0,0],[0,1,0,0],[1,0,1,0],[0,0,0,1]],
+  D2:[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,1,0,1]],
+  Swap:[[0,1,0,0],[1,0,0,0],[0,0,0,1],[0,0,1,0]],
+  U:[[1,0,0,0],[0,1,0,0],[0,1,1,0],[1,0,0,1]],
+};
+const inverseGate={F1:["F1","F1","F1"],F2:["F2","F2","F2"],D1:["D1","D1"],D2:["D2","D2"],Swap:["Swap"],U:["U","U"]};
+const planeKey=plane=>rref(plane).flat().join("");
+const lagrangianIndexByKey=new Map(lagrangians.map((plane,index)=>[planeKey(plane),index]));
+const computationalPlaneIndex=lagrangianIndexByKey.get("00100001");
+if(computationalPlaneIndex===undefined)throw new Error("computational Z plane not found");
+const cliffordWords=Array(lagrangians.length).fill(null),cliffordMatrices=Array(lagrangians.length).fill(null),orbitQueue=[computationalPlaneIndex];
+cliffordWords[computationalPlaneIndex]=[];cliffordMatrices[computationalPlaneIndex]=I4;
+for(let cursor=0;cursor<orbitQueue.length;cursor+=1){
+  const source=orbitQueue[cursor];
+  for(const [name,generator] of Object.entries(cliffordGenerators)){
+    const imagePlane=rref(lagrangians[source].map(vector=>finiteMatrixApply(generator,vector)));
+    const target=lagrangianIndexByKey.get(planeKey(imagePlane));
+    if(target===undefined)throw new Error("Clifford generator left Lagrangian orbit");
+    if(cliffordWords[target]!==null)continue;
+    cliffordWords[target]=[...cliffordWords[source],name];
+    cliffordMatrices[target]=finiteMatrixMultiply(generator,cliffordMatrices[source]);
+    orbitQueue.push(target);
+  }
+}
+if(orbitQueue.length!==40)throw new Error(`Clifford compiler reached ${orbitQueue.length} bases, expected 40`);
+for(let target=0;target<lagrangians.length;target+=1){
+  const compiledPlane=rref(lagrangians[computationalPlaneIndex].map(vector=>finiteMatrixApply(cliffordMatrices[target],vector)));
+  if(planeKey(compiledPlane)!==planeKey(lagrangians[target]))throw new Error(`Clifford word does not reach basis ${target}`);
+}
+const measurementWords=cliffordWords.map(word=>word.slice().reverse().flatMap(name=>inverseGate[name]));
+for(let target=0;target<lagrangians.length;target+=1){
+  let measuredPlane=lagrangians[target];
+  for(const name of measurementWords[target])measuredPlane=rref(measuredPlane.map(vector=>finiteMatrixApply(cliffordGenerators[name],vector)));
+  if(planeKey(measuredPlane)!==planeKey(lagrangians[computationalPlaneIndex]))throw new Error(`measurement word does not return basis ${target} to computational readout`);
+}
+const cliffordWordLengthDistribution=cliffordWords.reduce((distribution,word)=>({...distribution,[word.length]:(distribution[word.length]??0)+1}),{});
+const localPhaseSpaces=[[[1,0,0,0],[0,0,1,0]],[[0,1,0,0],[0,0,0,1]]];
+const intersectionDimension=(left,right)=>left.length+right.length-rank([...left,...right]);
+const productBasisFlags=lagrangians.map(plane=>localPhaseSpaces.every(local=>intersectionDimension(plane,local)===1));
+if(productBasisFlags.filter(Boolean).length!==16)throw new Error("expected 16 product stabilizer bases");
+const productBasesPerFrame=frames=>frames.map(frame=>frame.planes.filter(index=>productBasisFlags[index]).length);
+const bestEntanglingCosts=Array.from({length:40},()=>[Infinity,Infinity]),entanglingOptimizedWords=Array(40).fill(null),costQueue=[computationalPlaneIndex];
+bestEntanglingCosts[computationalPlaneIndex]=[0,0];entanglingOptimizedWords[computationalPlaneIndex]=[];
+const costLess=(left,right)=>left[0]<right[0]||(left[0]===right[0]&&left[1]<right[1]);
+while(costQueue.length){
+  costQueue.sort((left,right)=>bestEntanglingCosts[left][0]-bestEntanglingCosts[right][0]||bestEntanglingCosts[left][1]-bestEntanglingCosts[right][1]);
+  const source=costQueue.shift(),sourceWord=entanglingOptimizedWords[source];
+  for(const [name,generator] of Object.entries(cliffordGenerators)){
+    const target=lagrangianIndexByKey.get(planeKey(lagrangians[source].map(vector=>finiteMatrixApply(generator,vector))));
+    const candidate=[bestEntanglingCosts[source][0]+(name==="U"?1:0),bestEntanglingCosts[source][1]+1];
+    if(!costLess(candidate,bestEntanglingCosts[target]))continue;
+    bestEntanglingCosts[target]=candidate;entanglingOptimizedWords[target]=[...sourceWord,name];costQueue.push(target);
+  }
+}
+if(bestEntanglingCosts.some((cost,index)=>cost[0]!==Number(!productBasisFlags[index])))throw new Error("product/entangled basis classification disagrees with minimal mutual-gate cost");
 const pointKeys=lagrangians.map(plane=>key(primitive(wedge(...plane))));
 if(new Set(pointKeys).size!==40)throw new Error("Plucker map is not injective");
 
@@ -260,6 +321,85 @@ for(let i=0;i<lagrangians.length;i+=1)for(let j=i+1;j<lagrangians.length;j+=1){
 const numericalTolerance=1e-10;
 if(Math.max(maxHermitianResidual,maxIdempotencyResidual,maxCompletenessResidual,maxWithinBasisOverlapResidual,maxMubResidual)>numericalTolerance)throw new Error("explicit Pauli-projector MUB verification failed");
 
+const summarizeFrameWordCosts=words=>{
+  const totals=frames.map(frame=>frame.planes.reduce((sum,index)=>sum+words[index].length,0));
+  const minimum=Math.min(...totals),maximum=Math.max(...totals),distribution={};
+  totals.forEach(total=>distribution[total]=(distribution[total]??0)+1);
+  return {minimum,maximum,distribution,minimumFrames:totals.map((total,index)=>total===minimum?index:null).filter(index=>index!==null),maximumFrames:totals.map((total,index)=>total===maximum?index:null).filter(index=>index!==null),totals};
+};
+const shortestWordFrameCosts=summarizeFrameWordCosts(cliffordWords),mutualOptimizedFrameCosts=summarizeFrameWordCosts(entanglingOptimizedWords);
+const optimizedMutualGatesPerFrame=[...new Set(frames.map(frame=>frame.planes.reduce((sum,index)=>sum+entanglingOptimizedWords[index].filter(name=>name==="U").length,0)))];
+const optimizeWeightedCompiler=gateWeights=>{
+  const costs=Array(40).fill(Infinity),words=Array(40).fill(null),settled=Array(40).fill(false);
+  costs[computationalPlaneIndex]=0;words[computationalPlaneIndex]=[];
+  while(settled.some(value=>!value)){
+    let source=-1;
+    for(let index=0;index<40;index+=1)if(!settled[index]&&(source<0||costs[index]<costs[source]))source=index;
+    if(source<0||!Number.isFinite(costs[source]))throw new Error("weighted compiler did not reach every basis");
+    settled[source]=true;
+    for(const [name,generator] of Object.entries(cliffordGenerators)){
+      const target=lagrangianIndexByKey.get(planeKey(lagrangians[source].map(vector=>finiteMatrixApply(generator,vector))));
+      const candidate=costs[source]+gateWeights[name];
+      if(candidate>=costs[target])continue;
+      costs[target]=candidate;words[target]=[...words[source],name];
+    }
+  }
+  const totals=frames.map(frame=>frame.planes.reduce((sum,index)=>sum+costs[index],0));
+  const minimum=Math.min(...totals),maximum=Math.max(...totals),distribution={};
+  totals.forEach(total=>distribution[total]=(distribution[total]??0)+1);
+  return {
+    gateWeights,
+    basisCosts:costs,
+    preparationWords:words,
+    frameCosts:{
+      minimum,maximum,distribution,
+      minimumFrames:totals.map((total,index)=>total===minimum?index:null).filter(index=>index!==null),
+      maximumFrames:totals.map((total,index)=>total===maximum?index:null).filter(index=>index!==null),
+      totals,
+    },
+  };
+};
+const controlCostProfiles={
+  equal:optimizeWeightedCompiler({F1:1,F2:1,D1:1,D2:1,Swap:1,U:1}),
+  mutualExpensive:optimizeWeightedCompiler({F1:1,F2:1,D1:1,D2:1,Swap:1,U:10}),
+  fourierExpensive:optimizeWeightedCompiler({F1:5,F2:5,D1:1,D2:1,Swap:1,U:1}),
+  phaseExpensive:optimizeWeightedCompiler({F1:1,F2:1,D1:5,D2:5,Swap:1,U:1}),
+  swapExpensive:optimizeWeightedCompiler({F1:1,F2:1,D1:1,D2:1,Swap:5,U:1}),
+  asymmetricQutrits:optimizeWeightedCompiler({F1:1,F2:2,D1:1,D2:2,Swap:2,U:5}),
+};
+const controlCostProfileSummary=Object.fromEntries(Object.entries(controlCostProfiles).map(([name,profile])=>[name,{gateWeights:profile.gateWeights,minimum:profile.frameCosts.minimum,maximum:profile.frameCosts.maximum,minimumFrames:profile.frameCosts.minimumFrames,maximumFrames:profile.frameCosts.maximumFrames}]));
+const summarizeIntegerControlGrid=maxWeight=>{
+  const names=Object.keys(cliffordGenerators),membershipCounts=Array(36).fill(0),uniqueWinCounts=Array(36).fill(0),tieSizeDistribution={},minimizerSets=new Map();
+  let profiles=0;
+  const visit=(offset,weights)=>{
+    if(offset<names.length){
+      for(let weight=1;weight<=maxWeight;weight+=1)visit(offset+1,{...weights,[names[offset]]:weight});
+      return;
+    }
+    profiles+=1;
+    const result=optimizeWeightedCompiler(weights).frameCosts.minimumFrames;
+    result.forEach(index=>membershipCounts[index]+=1);
+    if(result.length===1)uniqueWinCounts[result[0]]+=1;
+    tieSizeDistribution[result.length]=(tieSizeDistribution[result.length]??0)+1;
+    const key=result.join(",");
+    if(!minimizerSets.has(key))minimizerSets.set(key,{frames:result,exampleGateWeights:weights,count:0});
+    minimizerSets.get(key).count+=1;
+  };
+  visit(0,{});
+  return {
+    weightDomain:`each of ${names.join(",")} independently ranges over integers 1..${maxWeight}`,
+    profiles,
+    tieSizeDistribution,
+    framesEverMinimizing:membershipCounts.map((count,index)=>count?index:null).filter(index=>index!==null),
+    framesUniquelyMinimizing:uniqueWinCounts.map((count,index)=>count?index:null).filter(index=>index!==null),
+    membershipCounts,
+    uniqueWinCounts,
+    distinctMinimizerSets:[...minimizerSets.values()].sort((left,right)=>left.frames.length-right.frames.length||left.frames.join(",").localeCompare(right.frames.join(","))),
+    boundary:"This is an exhaustive integer-grid census for weights 1..maxWeight, not a proof that the continuous positive control-cost fan has no additional chambers.",
+  };
+};
+const integerControlCostGrid=summarizeIntegerControlGrid(4);
+
 const record={
   schemaVersion:"regulus-mub-selector-dynamics-v1",
   date:"2026-10-27",
@@ -267,12 +407,15 @@ const record={
     phaseSpace:"F_3^4 with coordinates (x_1,x_2,z_1,z_2)",
     hilbertDimension:9,
     lagrangianCommutingClasses:lagrangians.length,
+    computationalPlaneIndex,
     stabilizerStates:distinctStabilizerProjectors,
     frames:frames.length,
     basesPerFrame:[...new Set(frames.map(frame=>frame.planes.length))],
     statesPerFrame:90,
     nonidentityPaulisPerBasis:8,
     nonidentityPaulisCoveredPerFrame:80,
+    productStabilizerBases:productBasisFlags.filter(Boolean).length,
+    entangledStabilizerBases:productBasisFlags.filter(value=>!value).length,
     disjointPlanePairs,
     displacementConvention:"D(x,z)=omega^(2 x.z) X^x Z^z over F_3; on an isotropic plane D(u)D(v)=D(u+v)",
     rankOneProjectorFormula:"P_(a,b)=1/9 sum_(s,t in F_3) omega^(-as-bt) D(su+tv)",
@@ -287,6 +430,24 @@ const record={
     representativeFrame:frames[0],
     framePlaneIndices:frames.map(frame=>frame.planes),
     lagrangianGenerators:lagrangians,
+    cliffordCompiler:{
+      alphabet:Object.keys(cliffordGenerators),
+      generatorMatrices:cliffordGenerators,
+      preparationWords:cliffordWords,
+      measurementWords,
+      preparationWordLengthDistribution:cliffordWordLengthDistribution,
+      maximumPreparationWordLength:Math.max(...cliffordWords.map(word=>word.length)),
+      entanglingOptimizedPreparationWords:entanglingOptimizedWords,
+      entanglingOptimizedCosts:bestEntanglingCosts,
+      productEntanglementStructure:{
+        productBasisIndices:productBasisFlags.map((value,index)=>value?index:null).filter(index=>index!==null),
+        productBasesPerFrame:[...new Set(productBasesPerFrame(frames))],
+        entangledBasesPerFrame:[...new Set(productBasesPerFrame(frames).map(count=>10-count))],
+        minimumMutualGatesForProductBases:[...new Set(bestEntanglingCosts.filter((_,index)=>productBasisFlags[index]).map(cost=>cost[0]))],
+        minimumMutualGatesForEntangledBases:[...new Set(bestEntanglingCosts.filter((_,index)=>!productBasisFlags[index]).map(cost=>cost[0]))],
+      },
+      interpretation:"Each preparation word sends the computational Z Lagrangian to the target commuting class. Reverse inverse words compile every target basis measurement back to computational readout; outcome relabelling is determined by the transported plane generators.",
+    },
     interpretation:"The 40 Lagrangian planes give all 360 two-qutrit stabilizer states. Each of the 36 elliptic frames selects ten disjoint commuting classes and therefore 90 states in a complete stabilizer MUB.",
   },
   overlapAssociationScheme:{
@@ -342,6 +503,16 @@ const record={
       energies:"for F=-j p^T A p/2, the optimum energies are -3j4/8 and -2j1/5 respectively",
     },
     uniqueSelectionBoundary:"With h=0 the equations may break symmetry but cannot canonically name one of 36 equivalent frames. A unique frame requires an external field, boundary condition, initial-condition choice, nonlinear history or source-derived asymmetry.",
+  },
+  implementationSelector:{
+    shortestWordFrameCosts,
+    mutualOptimizedFrameCosts,
+    optimizedMutualGatesPerFrame,
+    controlCostProfiles,
+    controlCostProfileSummary,
+    integerControlCostGrid,
+    result:"Under the declared logical alphabet and equal gate costs, shortest total preparation length uniquely selects frame 21 with cost 40. When mutual-gate count is minimized first, every frame needs six mutual gates and frames 10, 11 and 21 tie at total length 43.",
+    boundary:"Compiler cost is a real selector only after a hardware alphabet and gate weights are fixed. The control-cost profiles form samples from a selector fan: changes of hardware weights can change the minimizing frame or its degeneracy. This breaks W(E6) symmetry through implementation choices and is not an intrinsic preferred frame of the finite geometry.",
   },
   liftObstructions:{
     integralCarrier:"Reduction Sp(4,Z) -> Sp(4,F_3) supplies the finite carrier and is surjective, so individual finite transformations have integral lifts.",

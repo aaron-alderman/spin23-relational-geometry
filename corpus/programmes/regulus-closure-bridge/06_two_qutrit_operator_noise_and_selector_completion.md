@@ -48,6 +48,72 @@ executable calculation constructs all of them and verifies:
 The largest floating-point verification residual is below
 \(1.1\times10^{-15}\), against a \(10^{-10}\) tolerance.
 
+### Clifford measurement compiler
+
+Every commuting-class measurement is compiled from the corpus's established
+finite control alphabet:
+
+\[
+\{F_1,F_2,D_1,D_2,\mathrm{Swap},U\},
+\]
+
+where \(F_i\) are local Fourier changes, \(D_i\) are local quadratic phases,
+and \(U\) is the mutual shear/controlled phase. Breadth-first compilation from
+the computational \(Z\)-plane reaches all 40 bases:
+
+| Shortest preparation length | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Number of bases | 1 | 2 | 3 | 5 | 7 | 11 | 8 | 3 |
+
+Thus no basis requires more than seven finite generators before
+device-specific optimization. Relative to the fixed two-qutrit tensor split:
+
+- 16 of the 40 stabilizer bases are product bases;
+- 24 are entangled bases;
+- every one of the 36 complete MUB frames contains exactly four product and
+  six entangled bases;
+- lexicographically minimizing mutual gates proves every product basis needs
+  zero \(U\) gates and every entangled basis needs exactly one.
+
+The evidence record contains the preparation and inverse measurement word for
+every basis. This is a logical Clifford compiler, not yet a pulse, electrode
+or interferometer compiler.
+
+### The control-cost selector fan
+
+Once the alphabet is assigned physical costs, total frame preparation cost is
+an explicit symmetry-breaking field. Weighted shortest-path compilation gives
+the following samples. Frame numbers are the zero-based machine identifiers in
+the evidence record.
+
+| Cost profile | Cheapest frame or frames | Minimum total cost |
+|---|---:|---:|
+| all six generators cost 1 | 21 | 40 |
+| mutual gate \(U\) costs 10 | 10, 11, 21 | 97 |
+| local Fourier gates cost 5 | 5, 6, 7, 22, 23, 24, 29, 30, 31 | 117 |
+| local phase gates cost 5 | 20 | 60 |
+| swap costs 5 | 21 | 40 |
+| asymmetric second-qutrit and mutual costs | 11, 21 | 79 |
+
+These profiles prove that implementation can select a frame, but also that
+the selected frame is not intrinsic. Shortest-path costs are piecewise-linear
+functions of the gate weights, so weight space is divided into chambers in
+which different frames or ties minimize the cost. The samples certify several
+such chambers; they do not yet enumerate the complete polyhedral fan.
+
+An exhaustive census of all \(4^6=4096\) positive integer cost vectors with
+each generator weight in \(\{1,2,3,4\}\) finds 29 distinct minimizing sets.
+Seventeen of the 36 frames occur in at least one cheapest set, while only
+frames 10, 11, 20 and 21 occur as unique winners on this grid. Of the 4096
+profiles, 2138 have a unique winner and 1958 have a tie. These frequencies
+are a census of a chosen integer grid, not probabilities and not a proof that
+the continuous positive fan contains no additional chambers.
+
+This is the concrete bridge between the abstract no-selector result and a
+laboratory choice: calibration supplies the external field. A device should
+therefore report its gate-cost vector and pre-register the frame predicted by
+that vector, rather than retrospectively calling frame 21 canonical.
+
 ## 2. The complete frame algebra
 
 Let \(A_4\) join frames sharing four bases and \(A_1\) join frames sharing one
@@ -196,6 +262,18 @@ need not map a complete stabilizer frame to another member of the 36-frame
 set. Such a channel has a leakage component that must be measured before its
 conditional frame-preserving part is fitted to the three-parameter algebra.
 
+The [frame-channel fitter](../../../scripts/fit-regulus-frame-channel.mjs)
+accepts a JSON object containing a 36 by 36 **matrix** and an optional
+36-entry **leakageByInput** vector. Run
+
+    node scripts/fit-regulus-frame-channel.mjs path/to/channel.json
+
+It returns the fitted weights, both nontrivial sector eigenvalues,
+relation-wise scatter, row-sum range, leakage summary and the normalized
+residual outside the Bose--Mesner algebra. Its verifier recovers a known
+invariant channel exactly and detects a row-preserving perturbation whose
+global relation means are unchanged.
+
 ## 5. Linear noise does not select a frame
 
 If both relation rates connect the graph, the invariant Markov process tends
@@ -268,6 +346,7 @@ cluster to one vertex.
 | Can the onset of selection be classified? | yes; the first instability is in the 15- or 20-dimensional sector |
 | What does pure relation optimization select? | a 135-fold tritangent-cover cluster or a 216-fold skew-pair cluster |
 | Does the mathematics choose the winning frame? | no; that requires asymmetry or nonlinear history |
+| Can a declared implementation choose one? | yes; weighted compilation does, but the winner changes across hardware-cost chambers |
 | Can the overlap graph recover cubic objects? | yes; 120 closures, 216 skew pairs and 45 tritangents |
 
 ## 8. Relation to the corpus's existing twirls

@@ -86,16 +86,21 @@ The smallest decisive experiment needs one controllable nine-dimensional
 Hilbert space interpreted as two qutrits.
 
 1. Calibrate the two-qutrit Weyl operators \(X_1,X_2,Z_1,Z_2\).
-2. Implement the 40 commuting-class measurements specified by the machine
-   record.
-3. Verify rank-one completeness within each basis and overlap \(1/9\) for
+2. Compile the 40 commuting-class measurements using the supplied Clifford
+   words. The logical maximum is seven generators; each complete frame has
+   four product measurements and six entangled measurements, each of the
+   latter requiring at least one mutual gate.
+3. Calibrate a physical cost for each available generator, re-run weighted
+   compilation, and pre-register the cheapest predicted frame or tied set.
+   This turns implementation asymmetry into a prospective selector test.
+4. Verify rank-one completeness within each basis and overlap \(1/9\) for
    bases placed in one spread.
-4. Assemble all 36 ten-basis frames.
-5. Apply calibrated frame-preserving Clifford controls or evolve a
+5. Assemble all 36 ten-basis frames.
+6. Apply calibrated frame-preserving Clifford controls or evolve a
    coarse-grained selector variable on the frame labels.
-6. Quantify leakage into outputs that are not any of the 36 complete frames.
-7. Estimate the conditional \(36\times36\) frame transition matrix.
-8. Fit
+7. Quantify leakage into outputs that are not any of the 36 complete frames.
+8. Estimate the conditional \(36\times36\) frame transition matrix.
+9. Fit
 
    \[
    K=\alpha I+\beta A_4/15+\gamma A_1/20
@@ -103,7 +108,7 @@ Hilbert space interpreted as two qutrits.
 
    on a training subset and predict held-out one-overlap and four-overlap
    transitions.
-9. Measure the residual perpendicular to
+10. Measure the residual perpendicular to
    \(\operatorname{span}\{I,A_4,A_1\}\).
 
 The experiment has four principal outcomes:
@@ -191,7 +196,10 @@ No further relabelling of the present 36 frames can supply it.
 | Proposed route | Outcome |
 |---|---|
 | explicit MUB realization | completed computationally |
+| measurement compilation | all 40 bases compiled in at most seven logical Clifford generators; every frame has four product and six one-mutual-gate entangled bases |
+| implementation selector | weighted compilation exhibits multiple hardware-cost chambers with different cheapest frames; selection is operational but not intrinsic |
 | relation-dependent noise | complete two-rate model and residual test |
+| measured-channel analysis | reusable fitter separates leakage and returns invariant weights, sector eigenvalues and off-algebra residual |
 | spontaneous selection by linear noise | ruled out |
 | nonlinear symmetry breaking | instability sectors derived; winning frame remains contingent |
 | canonical integral embedding | ruled out by finite-subgroup order |
