@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The same calculation also marks the mathematical boundary. Generic Choi positivity is a cone of channels, not yet the rank-two Jordan cone H₂(ℝ)+; three slow coherence modes are not a canonical three-dimensional Jordan carrier; and no Spin₀(2,3) action follows from the record-law family. The next gates are therefore concrete: classify the channel family and fixed-point geometry, test overlap consistency across repair schedules, search for a source-invariant H₂(ℝ) corner, and only then ask whether a reversible derivation closes as 𝔰𝔭(4,ℝ). A null result still returns a useful detector-equivalence classification and a sharper account of local closure.
+> The follow-on calculation closes that mathematical boundary. The channel family is an exact nine-real-dimensional Choi spectrahedron; its two idempotent laws have fixed spaces of dimensions 3,236 and 3,126, differing by 110 empty-to-full seam coherences. Every family member is non-injective, so no discrete repair is a finite-time exponential of a bounded autonomous generator. All five named laws commute on disjoint seams and fail to commute on adjacent seams. The 55 retained two-level corners are H₂(C) corners split across two spectator orbits, with no source-selected corner or real phase slice. Thus the current source yields detector- and schedule-relative local closure, not a canonical H₂(ℝ) carrier or Spin₀(2,3) action. The surviving practical target is a phase- and order-sensitive emulator with explicit scheduler controls.
 
 ## What this commits us to
 
@@ -38,6 +38,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **oph kenotic claim and premise audit v1** — [oph_kenotic_claim_and_premise_audit_v1.md](../../../corpus/programmes/observer-patch-holography/oph_kenotic_claim_and_premise_audit_v1.md)
 - **oph jordan channel lie bridge v1** — [oph_jordan_channel_lie_bridge_v1.md](../../../corpus/programmes/observer-patch-holography/oph_jordan_channel_lie_bridge_v1.md)
 - **oph record law executable programme v1** — [oph_record_law_executable_programme_v1.md](../../../corpus/programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md)
+- **oph channel geometry and local closure v1** — [oph_channel_geometry_and_local_closure_v1.md](../../../corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

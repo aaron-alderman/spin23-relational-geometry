@@ -10,6 +10,7 @@ const evidencePath = "evidence/data/oph-record-law-reproduction-v1.json";
 const bridgePath = "corpus/programmes/observer-patch-holography/oph_bridge_matrix_v1.json";
 const lanePath = "corpus/programmes/observer-patch-holography/README.md";
 const programmePath = "corpus/programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md";
+const geometryPath = "corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md";
 const synthesisPath = "corpus/syntheses/the_admissibility_frontier_current_synthesis.md";
 const chapterPath = "book/edition-3/chapters/08-admissibility-frontier.md";
 const detectorPath = "corpus/programmes/frontier-physics-targets/detector_frontier_register_v1.json";
@@ -43,11 +44,16 @@ requireCondition(bridge.summary.physicalRecordLawSelected === false, "record-law
 
 const detector = detectors.detectors.find(({ id }) => id === "DET-039");
 const topic = topics.topics.find(({ id }) => id === "OT-054");
+const emulatorTopic = topics.topics.find(({ id }) => id === "OT-055");
 requireCondition(detector, "DET-039 missing");
 requireCondition(topic, "OT-054 missing");
+requireCondition(emulatorTopic, "OT-055 missing");
 requireCondition(topic.detectorIds.includes("DET-039"), "OT-054 does not use DET-039");
+requireCondition(emulatorTopic.detectorIds.includes("DET-039"), "OT-055 does not use DET-039");
 requireCondition(detector.sourceRefs.includes(lanePath), "DET-039 does not cite OPH lane");
-requireCondition(topic.progressEvidence === lanePath, "OT-054 progress evidence mismatch");
+requireCondition(detector.sourceRefs.includes(geometryPath), "DET-039 does not cite executed geometry");
+requireCondition(topic.status === "closed" && topic.closureEvidence === geometryPath, "OT-054 closure mismatch");
+requireCondition(emulatorTopic.status === "active" && emulatorTopic.progressEvidence === geometryPath, "OT-055 progress mismatch");
 
 for (const path of [lanePath, programmePath, synthesisPath, chapterPath]) {
   const text = readText(path);
@@ -67,7 +73,8 @@ console.log(JSON.stringify({
   verifiedArtifacts: 1275,
   bridgeRows: bridge.rows.length,
   detector: detector.id,
-  openTopic: topic.id,
+  closedTopic: topic.id,
+  openTopic: emulatorTopic.id,
   physicalLawSelected: false,
   canonicalH2R: false,
   spin23Derived: false

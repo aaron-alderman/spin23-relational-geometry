@@ -1151,16 +1151,39 @@ schedule, overlap and detector controls. Three slow modes are likewise not a
 derivation of physical three-space. No `Sp(4,R)` or `Spin_0(2,3)` identification
 currently follows.
 
-This opens [OT-054](../programmes/frontier-physics-targets/open_topics_v1.md)
-and [DET-039](../programmes/frontier-physics-targets/detector_frontier_atlas_v1.md).
-The [executable programme](../programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md)
-first reconstructs complete Choi, fixed-point, peripheral and information-loss
-geometry; then composes adjacent seams under reversed schedules; then enumerates
-source-native Jordan-closed real two-dimensional operator subspaces; and only
-after CP-semigroup embeddability is established compares a reversible
-derivation algebra with `sp(4,R)`. The likely useful null is already valuable:
-OPH may provide an excellent executable language for local detector closure
-even if it supplies no fundamental Jordan/Spin bridge.
+The first bridge tranche has now been executed rather than merely proposed.
+The five multipliers define an exact nine-real-dimensional Choi spectrahedron.
+The two idempotents `E` and `T` project onto fixed spaces of dimensions 3,236
+and 3,126; their 110-dimensional difference is exactly the coherence between
+the 55 empty-seam spectator states and the unique full-seam state. Every law
+in the family kills a coherence between current-disjoint seam sectors, so no
+law is injective and none can be a finite-time `exp(tL)` for a bounded
+time-independent generator. Discrete record formation is therefore not a
+hidden continuous Lie flow.
+
+The local-to-global boundary is equally sharp. A complete 6,084-matrix-unit
+census finds that every named law commutes on disjoint seams, while every one
+fails to commute on adjacent seams. The order difference already appears on a
+diagonal probability distribution. Local closure is consequently qualified by
+incidence and schedule: causal separation closes, but shared ports require an
+authored scheduler, a confluence theorem or an explicit quotient. The Jordan
+census also terminates negatively. `E` retains 55 possible two-level
+`H_2(C)` corners, split into two spectator-permutation orbits; no source
+symmetry selects a corner or the phase reference needed to reduce it to
+`H_2(R)`.
+
+This closes [OT-054](../programmes/frontier-physics-targets/open_topics_v1.md)
+as a useful no-go and opens OT-055 around the surviving experiment.
+[DET-039](../programmes/frontier-physics-targets/detector_frontier_atlas_v1.md)
+now has two exact targets: distinguish classically identical record laws by
+phase tomography, and distinguish adjacent repair orders while confirming that
+disjoint repairs commute. A physical emulator can improve measurement and
+feedback engineering even if conventional channel theory closes every record.
+Only a preregistered residual surviving calibration, dilation, memory and
+scheduler models would reopen a new-physics path. The
+[executed result](../programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md)
+therefore strengthens OPH as a language for detector-relative local closure
+while closing its direct Jordan/Spin bridge on the current source.
 
 ## Kenotic confidence
 

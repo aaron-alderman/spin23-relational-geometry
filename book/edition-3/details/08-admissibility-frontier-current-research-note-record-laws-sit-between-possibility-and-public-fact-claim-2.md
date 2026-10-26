@@ -38,6 +38,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **oph kenotic claim and premise audit v1** — [oph_kenotic_claim_and_premise_audit_v1.md](../../../corpus/programmes/observer-patch-holography/oph_kenotic_claim_and_premise_audit_v1.md)
 - **oph jordan channel lie bridge v1** — [oph_jordan_channel_lie_bridge_v1.md](../../../corpus/programmes/observer-patch-holography/oph_jordan_channel_lie_bridge_v1.md)
 - **oph record law executable programme v1** — [oph_record_law_executable_programme_v1.md](../../../corpus/programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md)
+- **oph channel geometry and local closure v1** — [oph_channel_geometry_and_local_closure_v1.md](../../../corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

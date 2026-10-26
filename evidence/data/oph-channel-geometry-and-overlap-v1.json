@@ -1,0 +1,71 @@
+{
+  "schema": "grand-theory.oph-channel-geometry-and-overlap.v1",
+  "date": "2026-10-26",
+  "source": {
+    "repository": "https://github.com/FloatingPragma/observer-patch-holography",
+    "commit": "0045a99143c6cc8443d2c2c5c5bb4055451dd115",
+    "sourceFile": "model/record_laws/family.py",
+    "carrierStates": 78,
+    "matrixUnits": 6084
+  },
+  "choiGeometry": {
+    "parameters": ["k", "g", "h", "m", "n"],
+    "realParameters": 9,
+    "blocks": [2, 4, 2],
+    "swapAdaptedMiddleBlock": "[1,sqrt(2)g,k; sqrt(2)conj(g),1/2+m,sqrt(2)conj(h); conj(k),sqrt(2)h,1] plus antisymmetric eigenvalue 1/2-m",
+    "admissibility": [
+      "m is real and -1/2 <= m <= 1/2",
+      "abs(n)^2 <= 1/2",
+      "the displayed 3 by 3 Hermitian block is positive semidefinite"
+    ],
+    "interpretation": "a spectrahedral family of completely positive record channels, not a state cone"
+  },
+  "fixedPointGeometry": {
+    "seamKeyMultiplicities": {"00": 55, "10": 10, "01": 10, "11": 1, "20": 1, "02": 1},
+    "E": {"idempotent": true, "fixedSpaceDimension": 3236, "retainsEmptyFullCoherence": true},
+    "T": {"idempotent": true, "fixedSpaceDimension": 3126, "retainsEmptyFullCoherence": false},
+    "differenceDimension": 110,
+    "differenceFormula": "2 * multiplicity(00) * multiplicity(11)",
+    "nonIdempotentLimits": {"C0": "E", "C": "E", "C_signed": "E"}
+  },
+  "continuousTimeEmbedding": {
+    "commonKilledMatrixUnitSeamKeys": ["00", "02"],
+    "allFamilyMembersNonInjective": true,
+    "finiteTimeBoundedGeneratorEmbedding": false,
+    "reason": "Every channel kills a matrix unit whose endpoint keys have no common current fiber, whereas exp(tL) is invertible at finite t."
+  },
+  "jordanCornerCensus": {
+    "complexTwoLevelCornersRetainedByE": 55,
+    "spectatorPermutationOrbits": {"doubleOccupation": 10, "twoDistinctOccupations": 45},
+    "selfAdjointCorner": "H_2(C)",
+    "selfAdjointRealDimension": 4,
+    "H2RRealDimension": 3,
+    "canonicalH2RSelected": false,
+    "reason": "A real slice requires an extra phase reference and no source symmetry selects one spectator corner."
+  },
+  "twoSeamOverlapCensus": {
+    "adjacentRepresentative": [[0, 1], [0, 5]],
+    "disjointRepresentative": [[0, 1], [2, 3]],
+    "namedLaws": {
+      "C0": {"adjacentDifferingMatrixUnits": 307, "disjointDifferingMatrixUnits": 0},
+      "C": {"adjacentDifferingMatrixUnits": 303, "disjointDifferingMatrixUnits": 0},
+      "C_signed": {"adjacentDifferingMatrixUnits": 303, "disjointDifferingMatrixUnits": 0},
+      "E": {"adjacentDifferingMatrixUnits": 249, "disjointDifferingMatrixUnits": 0},
+      "T": {"adjacentDifferingMatrixUnits": 249, "disjointDifferingMatrixUnits": 0}
+    },
+    "diagonalWitness": {
+      "inputOccupiedPorts": [5, 11],
+      "first01Then05": {"5,11": "1/2", "0,11": "1/2"},
+      "first05Then01": {"5,11": "1/2", "0,11": "1/4", "1,11": "1/4"}
+    },
+    "disjointSeamsCommute": true,
+    "adjacentSeamsCommute": false,
+    "scheduleIndependentLocalClosure": false
+  },
+  "gateResults": {
+    "gate1ChannelGeometry": "pass_exact",
+    "gate2LocalClosure": "closed_no_go_at_two_adjacent_updates",
+    "gate3CanonicalJordanCorner": "closed_no_canonical_H2R",
+    "gate4ContinuousGenerator": "closed_no_finite_time_bounded_generator_embedding"
+  }
+}

@@ -5,7 +5,7 @@
 **Machine authority:** [open-topic register](open_topics_register_v1.json)  
 **Detector map:** [detector and frontier atlas](detector_frontier_atlas_v1.md)
 
-The register contains **54** independently closable topics: **46 remain live and eight are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
+The register contains **55** independently closable topics: **46 remain live and nine are closed with retained evidence**. The whole-corpus scope and ranked execution order are summarized in the [frontier exhaustion checkpoint](frontier_exhaustion_checkpoint_v1.md).
 
 ## Operating rule
 
@@ -76,7 +76,7 @@ for another dimensionless redesign.
 | OT-051 | Boundary-domain selector spectrum | gated on the paper's promised public energies, matrix elements and fit code; then hold one bulk carrier fixed, vary untwisted, pi-twisted and symmetry-breaking selectors, and predict held-out spectra/OPE data without bulk retuning |
 | OT-052 | Observer-dependent detector and horizon closure | execute [AZ-144](../admissibility/admissibility_144_kerr_multirecord_public_data_consistency_programme.md) on the public GW250114 strain and posterior products; use finite-switching Unruh as its detector regression and build the state-through-greybody Hawking likelihood as the longer endpoint |
 | OT-053 | Nuclear open-system seam and channel calibration | audit the two public 2026 clock releases and execute [AZ-143](../admissibility/admissibility_143_th229_shared_parent_host_channel_factorization_programme.md) where metadata permit; then choose a compound-resonance isotope for the hostile many-channel test |
-| OT-054 | OPH record-law local closure and Jordan--channel--Lie bridge | execute the [pinned OPH programme](../observer-patch-holography/oph_record_law_executable_programme_v1.md): complete Choi/fixed-point geometry, adjacent-seam schedule and gluing audit, canonical `H_2(R)` corner census, and CP-semigroup embeddability test before any `sp(4,R)` interpretation |
+| OT-055 | OPH scheduler-qualified record-law emulator | build the phase- and order-sensitive Gate-5 emulator from the [executed geometry](../observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md), with adjacent-order reversal and a disjoint-seam null |
 
 ## P2 — gated translation problems
 
@@ -402,10 +402,11 @@ separate gates.
 | OT-041 | Both band-edge collision controls and their linear local scaling are certified by cofactor and sheet continuation. | [AZ-055](../admissibility/admissibility_55_finite_band_levinson_and_adaptive_pole_collisions.md) |
 | OT-043 | In the small-index calibrated LTI family, power-only records are exactly AM/FM blind; the carrier plus both coherent sidebands reconstruct mixed modulation across 972 held-out cases. | [Wave 7.65](../frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md) |
 | OT-044 | The normalized two-channel G2 fold is exactly an ordinary coupled-oscillator response; unequal addressed perturbations of a verified pre-fold D4 star provide the rank-two-to-rank-four reopening test. | [Wave 7.70](../frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md) |
+| OT-054 | The OPH record-law family is an exact nine-real-dimensional Choi spectrahedron, but its 55 two-level corners supply no canonical `H_2(R)` slice; adjacent seams retain order, and every law is non-injective, closing the direct Jordan/Spin and finite-time generator routes. | [OPH channel geometry](../observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md) |
 
 ## Cross-cutting unknowns
 
-The queue exposes eight recurring unknowns that should be reported for every new arm:
+The queue exposes nine recurring unknowns that should be reported for every new arm:
 
 1. **carrier:** what physical degrees of freedom hold the state?
 2. **admission:** which constraints define allowed states and transformations?
@@ -426,7 +427,7 @@ The queue exposes eight recurring unknowns that should be reported for every new
 - Do not promote relation, Leech, Golay, Jordan, \(Spin(2,3)\) or \(E_8\) contact without OT-024–OT-027.
 - Do not reopen torsion coefficient selection without the explicit datum in OT-029.
 - Do not call a finite spectral scan a mass-gap result without OT-031.
-- Do not identify an observer consensus, positive channel or three-dimensional slow sector with the corpus's Jordan/Spin hinge before OT-054 derives a canonical invariant `H_2(R)` corner and a held-out record.
+- OT-054 closes the direct identification: the current OPH source has no canonical invariant `H_2(R)` corner, adjacent updates retain schedule order and the record laws are non-injective. Use OT-055 for the narrower emulator and scheduler-qualified quotient question.
 
 The maintained list is intentionally finite. New topics should be added only when they introduce a distinct carrier, detector, boundary, translation or falsifier not already represented here.
 

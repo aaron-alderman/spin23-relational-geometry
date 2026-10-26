@@ -636,7 +636,7 @@ admissibilitySections.splice(dynamicsBoundaryIndex + 1, 0, [
   [
     "A reproducible finite-observer construction now supplies an exact example of the layer the Jordan–Lie language previously left implicit. Positive operators describe which quantum possibilities can coexist; reversible transformations describe how an admitted carrier can move; completely positive record channels describe how coherence is retained, contracted or converted into a public classical record. Repair then composes those local updates through a history. The channel is not an afterthought: it is the typed passage from possibility to fact.",
     "At the pinned Observer Patch Holography source revision, four distinct admissible record laws share one classical repair table while retaining different quantum coherences. A phase-sensitive detector separates them through one complex coherence coordinate, repeated repair selects different idempotent limits, and the full focused suite reproduces exactly. This is a real local-closure and detector result, but it does not select which law nature uses.",
-    "The same calculation also marks the mathematical boundary. Generic Choi positivity is a cone of channels, not yet the rank-two Jordan cone H₂(R)+; three slow coherence modes are not a canonical three-dimensional Jordan carrier; and no Spin₀(2,3) action follows from the record-law family. The next gates are therefore concrete: classify the channel family and fixed-point geometry, test overlap consistency across repair schedules, search for a source-invariant H₂(R) corner, and only then ask whether a reversible derivation closes as sp(4,R). A null result still returns a useful detector-equivalence classification and a sharper account of local closure.",
+    "The follow-on calculation closes that mathematical boundary. The channel family is an exact nine-real-dimensional Choi spectrahedron; its two idempotent laws have fixed spaces of dimensions 3,236 and 3,126, differing by 110 empty-to-full seam coherences. Every family member is non-injective, so no discrete repair is a finite-time exponential of a bounded autonomous generator. All five named laws commute on disjoint seams and fail to commute on adjacent seams. The 55 retained two-level corners are H₂(C) corners split across two spectator orbits, with no source-selected corner or real phase slice. Thus the current source yields detector- and schedule-relative local closure, not a canonical H₂(R) carrier or Spin₀(2,3) action. The surviving practical target is a phase- and order-sensitive emulator with explicit scheduler controls.",
   ],
 ]);
 const orientedSeamIndex = admissibilitySections
@@ -1354,6 +1354,7 @@ const sectionEvidenceOverrides = {
     "corpus/programmes/observer-patch-holography/oph_kenotic_claim_and_premise_audit_v1.md",
     "corpus/programmes/observer-patch-holography/oph_jordan_channel_lie_bridge_v1.md",
     "corpus/programmes/observer-patch-holography/oph_record_law_executable_programme_v1.md",
+    "corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md",
   ],
   "Three local motion types": [
     "corpus/programmes/admissibility/admissibility_129_elliptic_hyperbolic_parabolic_local_alphabet.md",

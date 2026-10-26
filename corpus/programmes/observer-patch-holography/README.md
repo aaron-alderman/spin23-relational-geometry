@@ -33,7 +33,8 @@ The result strengthens the corpus's detector and local-closure language. It does
 1. [Kenotic claim and premise audit](oph_kenotic_claim_and_premise_audit_v1.md) separates exact theorem, construction choice, bridge and public claim.
 2. [Jordan--channel--Lie analysis](oph_jordan_channel_lie_bridge_v1.md) identifies the exact contact and the non-identifications.
 3. [Executable bridge programme](oph_record_law_executable_programme_v1.md) gives build, bridge, physics and propagation gates.
-4. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
+4. [Channel geometry and local-closure result](oph_channel_geometry_and_local_closure_v1.md) executes Gates 1--4.
+5. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
 
 ## What is filled
 
@@ -48,6 +49,10 @@ The result strengthens the corpus's detector and local-closure language. It does
   p_+(\theta)=\frac38+\frac12\operatorname{Re}(g e^{-i\theta}).
   \]
 - The exact replay, committed-instrument replay, warm-up receipt, 36 focused tests and 1,275 model-artifact hashes pass at the pinned source revision.
+- The record-law family is exactly a nine-real-dimensional Choi spectrahedron.
+- `E` and `T` have fixed-space dimensions 3,236 and 3,126; their 110-dimensional difference is empty--full seam coherence.
+- All named laws commute on disjoint seams and fail to commute on adjacent seams.
+- Every family member is non-injective, closing direct finite-time bounded-generator embedding.
 
 ## What is unfilled
 
@@ -60,6 +65,8 @@ The result strengthens the corpus's detector and local-closure language. It does
 - A canonical `H_2(R)` operator-system corner and any derived `Sp(4,R)` or `Spin_0(2,3)` action.
 - A local-to-global theorem showing that compatible patch closures possess a unique faithful global completion.
 - A uniquely defined total entropy whose strict monotonicity follows for the full closed system.
+
+The `H_2(R)` item is now a scoped no-go rather than an unexamined gap: `E` retains 55 possible `H_2(C)` two-level corners, split into two spectator orbits, and the source supplies neither a preferred corner nor a phase reference selecting a real slice.
 
 ## Corpus relationship
 
