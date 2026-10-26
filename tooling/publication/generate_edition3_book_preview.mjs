@@ -53,6 +53,8 @@ const sourceArticles = [
     slug: "monster-distributed-search",
     title: "Do Not Search the Monster. Build the Ladder.",
     kicker: "A call for a distributed search for exceptional structure in physics",
+    socialImage: "monster-distributed-search-social.jpg",
+    socialImageAlt: "A luminous geometric ladder rises from physical hardware toward an immense faceted constellation",
     source: "corpus/syntheses/the_monster_distributed_search_call_to_action.md",
     label: "Call to action",
     note: "Seven parallel workstreams, a serial proof path and reproducible packets for contributors.",
@@ -2056,8 +2058,14 @@ const jsonLd = value => `<script type="application/ld+json">${JSON.stringify(val
 const documentHead = (title, pagePath, description = socialDescription, options = {}) => {
   const canonicalUrl = publicPageUrl(pagePath);
   const pageType = options.type || "website";
+  const pageSocialImageUrl = options.socialImage
+    ? `${publicEditionBase}assets/${encodeURIComponent(options.socialImage)}`
+    : socialImageUrl;
+  const pageSocialImageAlt = options.socialImageAlt || socialImageAlt;
+  const pageSocialImageWidth = options.socialImage ? 1200 : 1536;
+  const pageSocialImageHeight = options.socialImage ? 630 : 1024;
   const structuredData = options.structuredData ? jsonLd(options.structuredData) : "";
-  return `<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee7dc"><meta name="google-site-verification" content="${googleSiteVerificationToken}"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${esc(canonicalUrl)}"><meta property="og:type" content="${pageType}"><meta property="og:site_name" content="The Admissibility Frontier"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonicalUrl)}"><meta property="og:image" content="${socialImageUrl}"><meta property="og:image:width" content="1536"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="${esc(socialImageAlt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${socialImageUrl}"><meta name="twitter:image:alt" content="${esc(socialImageAlt)}">${structuredData}`;
+  return `<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eee7dc"><meta name="google-site-verification" content="${googleSiteVerificationToken}"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="${esc(canonicalUrl)}"><meta property="og:type" content="${pageType}"><meta property="og:site_name" content="The Admissibility Frontier"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonicalUrl)}"><meta property="og:image" content="${pageSocialImageUrl}"><meta property="og:image:secure_url" content="${pageSocialImageUrl}"><meta property="og:image:type" content="image/${options.socialImage ? "jpeg" : "png"}"><meta property="og:image:width" content="${pageSocialImageWidth}"><meta property="og:image:height" content="${pageSocialImageHeight}"><meta property="og:image:alt" content="${esc(pageSocialImageAlt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${pageSocialImageUrl}"><meta name="twitter:image:alt" content="${esc(pageSocialImageAlt)}">${structuredData}`;
 };
 const verificationHead = `<meta name="google-site-verification" content="${googleSiteVerificationToken}">`;
 const htmlDoc = (title, body, prefix = "", includeMast = true, pagePath = prefix === "../" ? "library/index.html" : "index.html", description = socialDescription, options = {}) => {
@@ -2088,7 +2096,7 @@ const standaloneArticleStructuredData = article => {
     "@type": "Article",
     headline: article.title,
     description: article.kicker,
-    image: [socialImageUrl],
+    image: [article.socialImage ? `${publicEditionBase}assets/${encodeURIComponent(article.socialImage)}` : socialImageUrl],
     inLanguage: "en",
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
@@ -2137,7 +2145,12 @@ const standaloneArticleHtml = article => {
     : `This page is generated from <code>${esc(article.source)}</code>. The canonical source controls; publication does not create a second editorial authority.`;
   const output = join(siteArticlesRoot, `${article.slug}.html`);
   const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html">Articles</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">${esc(article.label || "Corpus article")}</p><h1>${esc(article.title)}</h1><p class="lede">${esc(article.kicker)}.</p><aside class="boundary"><strong>Source boundary.</strong> ${provenance}</aside>${socialShareLinks(article, "../")}</header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, article.source, output)}</article><nav class="page-turn"><a href="index.html">← All articles</a><a href="${esc(sourceHref)}">${sourceLabel} →</a></nav>`;
-  return htmlDoc(article.title, body, "../", false, `articles/${article.slug}.html`, article.kicker, { type: "article", structuredData: standaloneArticleStructuredData(article) });
+  return htmlDoc(article.title, body, "../", false, `articles/${article.slug}.html`, article.kicker, {
+    type: "article",
+    structuredData: standaloneArticleStructuredData(article),
+    socialImage: article.socialImage,
+    socialImageAlt: article.socialImageAlt,
+  });
 };
 
 const directoryIndexHtml = directory => {

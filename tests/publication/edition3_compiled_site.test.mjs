@@ -68,6 +68,17 @@ test("short articles are discoverable, shareable and machine-readable without du
   assert.match(index, /Short, shareable routes into the corpus/u);
   assert.equal([...index.matchAll(/<article class="article-card">/gu)].length, articleSlugs.length + standaloneArticles.length);
   assert.match(index, /Post on X/u);
+
+  const monsterArticle = readFileSync(join(siteRoot, "articles", "monster-distributed-search.html"), "utf8");
+  const monsterCard = "https://aaron-alderman.github.io/spin23-relational-geometry/edition-3/assets/monster-distributed-search-social.jpg";
+  assert.ok(monsterArticle.includes(`<meta property="og:image" content="${monsterCard}">`));
+  assert.ok(monsterArticle.includes(`<meta property="og:image:secure_url" content="${monsterCard}">`));
+  assert.ok(monsterArticle.includes('<meta property="og:image:type" content="image/jpeg">'));
+  assert.ok(monsterArticle.includes('<meta property="og:image:width" content="1200">'));
+  assert.ok(monsterArticle.includes('<meta property="og:image:height" content="630">'));
+  assert.ok(monsterArticle.includes(`<meta name="twitter:image" content="${monsterCard}">`));
+  assert.ok(monsterArticle.includes(`"image":["${monsterCard}"]`));
+  assert.ok(monsterArticle.includes('A luminous geometric ladder rises from physical hardware'));
   assert.match(index, /Bluesky/u);
   assert.match(index, /href="typed-object-signatures\.html"/u);
   for (const [slug] of standaloneArticles) assert.match(index, new RegExp(`href="${slug}\\.html"`, "u"), slug);
