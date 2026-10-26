@@ -28,6 +28,7 @@ const groups = {
   physical_spectroscopy_requires_width_ledger: [
     /\/(?:1230|1399|1454|1456|1459|1462|1464|1469)_/u,
     /admissibility_(?:27|28|33|64|117|118|138)_|lane-expansion\/programme_lane_expansion_19/u,
+    /translation-free-exceptional-topology\/QUASICRYSTAL_BACKPLANE_BRIDGE/u,
   ],
   contextual_or_synthesis_use: [
     /\/dynatology\/|programme_closure_|grand-synthesis/u,

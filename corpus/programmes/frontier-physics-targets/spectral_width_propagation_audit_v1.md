@@ -7,15 +7,15 @@
 
 ## Result
 
-All **111** effective-spectral candidates emitted by the transition audit are assigned to a mechanism-safe disposition; **0** remain unreviewed. This closes a typing queue, not the physical theories in those documents.
+All **113** effective-spectral candidates emitted by the transition audit are assigned to a mechanism-safe disposition; **0** remain unreviewed. This closes a typing queue, not the physical theories in those documents.
 
 | Disposition | Documents |
 |---|---:|
 | `navigation_or_register` | 10 |
 | `open_system_or_network_width` | 12 |
-| `physical_spectroscopy_requires_width_ledger` | 16 |
+| `physical_spectroscopy_requires_width_ledger` | 17 |
 | `contextual_or_synthesis_use` | 19 |
-| `spectrum_gap_or_residue_not_width` | 54 |
+| `spectrum_gap_or_residue_not_width` | 55 |
 
 ## Boundary
 
@@ -124,6 +124,7 @@ An eigenvalue spectrum, response pole, fitted linewidth, ringdown constant and p
 | `corpus/programmes/frontier/wave-7/frontier_wave7_192_leech_joined_cell_mps_order.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_226_leech_nonlinear_commissioning_digital_twin.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_229_maxwell_curl_quotient_helicity_and_dynamics_gate.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
+| `corpus/programmes/frontier/wave-7/frontier_wave7_236_quasicrystal_is_the_backplane_not_the_e8_claim.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md` | `contextual_or_synthesis_use` | The document uses spectral language to map, compare or govern branches; it is not an independent width determination. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_65_drive_to_record_am_fm_benchmark.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |
 | `corpus/programmes/frontier/wave-7/frontier_wave7_70_g2_response_folding_no_go.md` | `open_system_or_network_width` | A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled. |
@@ -135,6 +136,7 @@ An eigenvalue spectrum, response pole, fitted linewidth, ringdown constant and p
 | `corpus/programmes/moonshine-program-lattice/joined-bridge-map.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/moonshine-program-lattice/README.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
 | `corpus/programmes/translation-free-exceptional-topology/E8_COUPLED_WIRE_TOMOGRAPHY.md` | `spectrum_gap_or_residue_not_width` | The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made. |
+| `corpus/programmes/translation-free-exceptional-topology/QUASICRYSTAL_BACKPLANE_BRIDGE.md` | `physical_spectroscopy_requires_width_ledger` | A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width. |
 | `corpus/syntheses/grand-synthesis/aarons_spin23_research_thesis.md` | `contextual_or_synthesis_use` | The document uses spectral language to map, compare or govern branches; it is not an independent width determination. |
 
 ## Exit and reopening

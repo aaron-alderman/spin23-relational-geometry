@@ -7,7 +7,7 @@
 
 ## Result
 
-The audit scans **2261** Markdown documents and routes **326** for possible transition, spectral or metastability relevance. **69** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **98** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
+The audit scans **2266** Markdown documents and routes **329** for possible transition, spectral or metastability relevance. **70** authoritative documents have an explicit reviewed disposition, **14** additional operator/rate candidates carry the AZ-127 boundary in context, **98** are excluded because their full document contains no decay/capture/lifetime/width context, and **0** rate-context keyword collisions have an explicit semantic exclusion. **0** rate-context candidates remain for semantic triage.
 
 This is intentionally not a global search-and-replace. “Radiative stability,” a graph transition, a resonance pole, detector lag and an atomic decay do not name the same thing. The audit makes that difference visible and keeps the unresolved set enumerable.
 
@@ -42,6 +42,7 @@ Barrier escape and hysteresis use a different mechanism ledger. Effective pole o
 | `corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md` | `detector_bundle` | DET-037 joins lifetime, polarization, environmental and acceptance records. |
 | `corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md` | `experiment_programme` | EX-022 supplies an apparatus, controls and build/bridge/physics decisions. |
 | `corpus/syntheses/the_admissibility_frontier_current_synthesis.md` | `synthesis_bridge` | The current synthesis routes transition claims to the established bridge. |
+| `corpus/syntheses/lenses_make_many_points_spectral_type_multiscale_closure_and_admissibility.md` | `spectral_type_theorem_not_transition_rate` | The paper distinguishes spectral support, pure-point type, transport and detector records; its mentions of matrix elements, resonances and loss are controls or non-claims, not a microscopic operator-to-rate derivation. |
 | `corpus/claims/0000-0099/00_research_document_map.md` | `navigation_no_independent_rate_claim` | Index language points to controlling documents and makes no independent operator-to-rate claim. |
 | `corpus/claims/0000-0099/01_standard_model_as_stress_energy_full_analysis.md` | `field_theory_operator_not_transition_rate` | Stress and Standard-Model operator language concerns field content and response, not a computed decay lifetime. |
 | `corpus/claims/0000-0099/24_symmetry_phonons_experiments_and_supporting_corpora.md` | `operator_ledger_required_before_rate_promotion` | The survey names physical transitions; any quantitative rate promotion must use the AZ-127 ledger. |
@@ -93,7 +94,7 @@ Barrier escape and hysteresis use a different mechanism ledger. Effective pole o
 
 ## Remaining boundary
 
-The operator/rate queue is empty under the declared vocabulary: every hit is in the reviewed spine, carries the AZ-127 boundary in context, has no rate context, or has an explicit semantic exclusion. The **111** effective-spectral candidates are now exhaustively routed by the [spectral-width audit](spectral_width_propagation_audit_v1.md); this closes their width/lifetime typing queue, not their physical theories. The **36** barrier/kinetic candidates remain a separately typed queue. None may be silently collapsed into atomic or nuclear transition language.
+The operator/rate queue is empty under the declared vocabulary: every hit is in the reviewed spine, carries the AZ-127 boundary in context, has no rate context, or has an explicit semantic exclusion. The **113** effective-spectral candidates are now exhaustively routed by the [spectral-width audit](spectral_width_propagation_audit_v1.md); this closes their width/lifetime typing queue, not their physical theories. The **36** barrier/kinetic candidates remain a separately typed queue. None may be silently collapsed into atomic or nuclear transition language.
 
 ## Exit criterion
 

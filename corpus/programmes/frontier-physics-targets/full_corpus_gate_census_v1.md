@@ -8,21 +8,21 @@ This census is the corpus-wide backstop above the packet and programme audits. I
 
 ## Result
 
-- Narrative artifacts scanned: **3212**
-- Hashed inventory records: **3212**
-- Files containing gate language or an open-like structured status: **1879**
+- Narrative artifacts scanned: **3219**
+- Hashed inventory records: **3219**
+- Files containing gate language or an open-like structured status: **1885**
 - Matching claim files: **1176**
 - Claim files explicitly recorded with no declared gate: **399**
-- Evidence artifacts / evidence artifacts with gate language: **943 / 177**
+- Evidence artifacts / evidence artifacts with gate language: **945 / 178**
 - Unresolved ownership records: **0**
 
 | Disposition | Files |
 |---|---:|
-| delegated_audit | 515 |
-| evidence_record | 177 |
-| mapped | 1166 |
+| delegated_audit | 519 |
+| evidence_record | 178 |
+| mapped | 1167 |
 | navigation | 9 |
-| no_declared_gate | 1333 |
+| no_declared_gate | 1334 |
 | separate_programme | 12 |
 
 ## Use rule
