@@ -204,9 +204,9 @@ so detector quadrature is part of the promotion gate.
 Shell 12 now supplies that confirmation: the provisional unit-coupling compact-
 cell gap is (0.1019267219), while all bulk, anomaly and material promotions
 remain open.
-Three ratios (u/U=0.25,0.5,1) now pass the same convergence and detector
-gates. They form a sampled stability spine; intermediate ratios and explicit
-channel/metric perturbations remain necessary for an open tube.
+Five ratios (u/U=0.25,0.375,0.5,0.75,1) now pass the same convergence and
+detector gates. They form a sampled stability spine; explicit channel and
+metric perturbations remain necessary for an open tube.
 
 The material route is now typed rather than associative. A quasicrystal may
 supply a phason-bearing, translation-free backplane for the programmed E8
