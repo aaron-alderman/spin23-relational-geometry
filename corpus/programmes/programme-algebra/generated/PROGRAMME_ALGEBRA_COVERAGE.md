@@ -8,7 +8,7 @@
 
 ## Result
 
-The compiler projects every retained in-scope corpus source: **2,287** Markdown documents and **282** JSON or image materials. The machine layer exposes **28,153** top-level JSON record boundaries. The prose layer contains **31,807** authored sections and **170,968** bounded semantic units. It retains **248,270** observed containment or link relations and **3,551** additional referenced artifacts.
+The compiler projects every retained in-scope corpus source: **2,290** Markdown documents and **282** JSON or image materials. The machine layer exposes **28,154** top-level JSON record boundaries. The prose layer contains **31,820** authored sections and **171,065** bounded semantic units. It retains **248,402** observed containment or link relations and **3,557** additional referenced artifacts.
 
 The epistemic lane recognizes **127** explicit parent-to-child research updates: **107** pass the evidence, classified-state, exact-signature and bounded-authority gate, while **20** remain as explicit refusal records. Their maximal chains produce **17** admitted and **15** rejected ALE route receipts. The empirical-return lane finds **87** experiment-shaped records: **61** join all six required fields and **26** retain their missing-field refusals. Scientific admission remains intentionally narrower. The four D02 seed families contribute **45** typed scientific objects and **16** admitted transformations; **15** transformations fail the strict gate. Of **18** bounded queries, **4** have at least one admitted candidate and **14** retain the negative boundary.
 
@@ -17,7 +17,7 @@ The epistemic lane recognizes **127** explicit parent-to-child research updates:
 | Depth | Status | Meaning |
 |---|---|---|
 | Structural | **Complete** | Every in-scope Markdown, JSON and PNG source has an exact hash-bound object; every heading, bounded Markdown unit and top-level JSON record has a stable address. |
-| Epistemic | **Partial** | 2031 documents declare status; 256 remain visibly unclassified. Explicit parent declarations may become proposal-only research-state transformations, but only after the epistemic gate passes. |
+| Epistemic | **Partial** | 2034 documents declare status; 256 remain visibly unclassified. Explicit parent declarations may become proposal-only research-state transformations, but only after the epistemic gate passes. |
 | Composed routes | **Partial** | Maximal explicit parent chains retain assumption, loss and evidence valuations; any failed edge, cycle or depth overflow rejects the route. |
 | Empirical return | **Partial** | Complete packets join preparation, intervention, detector, nuisance model, record and decision rule. Admission means protocol completeness, never execution or empirical confirmation. |
 | Scientific | **Seed only** | Only transformations satisfying exact endpoint, dimension, assumption, loss, evidence and authority gates are admitted. Current admitted families: D02 local, operator, rank-change and boundary. |
@@ -39,7 +39,7 @@ The epistemic lane recognizes **127** explicit parent-to-child research updates:
 | frontier-experiment-atlas | 24 |
 | frontier-experiment-programme | 22 |
 | frontier-parallel-claim | 155 |
-| frontier-register | 11,222 |
+| frontier-register | 11,223 |
 | generic-ledger-record | 318 |
 | gravity-publication-claim | 455 |
 | lane-expansion-record | 50 |
@@ -59,7 +59,7 @@ Fallback records remain structurally complete but need a schema-specific adapter
 - Duplicate object identities: **0**
 - Missing kernel coordinates: **0**
 - Dangling compiled relations: **0**
-- Corpus source digest: `eacba2b213b5531473ea1e4a91ab7010415704461f95b5de40a4063a575adc3c`
+- Corpus source digest: `9c8855045ee860dbddcf4d93ce571468cc71959101072127c752591164135529`
 
 ## Boundary
 

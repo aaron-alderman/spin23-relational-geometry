@@ -90,6 +90,14 @@ where projection of the two-plane back to the reference \(\mathbb C^2\) is no
 longer invertible. Rank loss of \(E\) happens *inside* the chart; loss of
 transversality leaves the chart. These must not be conflated.
 
+The later [multilinear Kakeya gate](../../admissibility/admissibility_146_multilinear_kakeya_transversality_bounds_collective_carrier_concentration.md)
+adds an analytic companion to this geometric distinction. A uniform exterior-
+determinant bound controls collective concentration of transverse direction
+families, whereas its degeneration marks loss of that control. This does not
+identify Grassmannian planes with Kakeya tubes; it shows that transversality can
+be both a chart condition and a quantitative overlap bound once the carrier and
+detector are separately typed.
+
 This gives the filled/unfilled map two precise meanings: determinantal strata
 within one observational chart and genuinely missing chart coverage beyond
 its transversality boundary.

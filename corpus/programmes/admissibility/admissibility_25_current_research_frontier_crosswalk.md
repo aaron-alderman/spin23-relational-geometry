@@ -39,6 +39,7 @@ Every comparison below receives one of four grades.
 |---|---|---|---|---|
 | admissibility zone with filled, excluded and open regions | S-matrix bootstrap, EFT positivity/causality bounds and swampland-style consistency programmes | physical principles carve out allowed regions before a unique microscopic model is known | C | define a non-arbitrary admission functional that produces a bound not already implied by unitarity, analyticity, causality or positivity |
 | spectral projector \(P\), tangent \(dP\), horizontal generator and Wilson holonomy | projector-based quantum geometry on Grassmannians | the mathematical carrier is the same | A | exhibit a typed Hamiltonian or response operator whose measured spectral projector is the corpus projector |
+| transverse carrier families and exterior-determinant conditioning | multilinear Kakeya, restriction and decoupling theory | an exact inequality bounds collective tube concentration from direction counts, scale and a wedge-product transversality margin | A/B | construct a wave-packet dictionary and detector norm for one corpus propagation model; exterior-algebra resemblance alone is insufficient |
 | universal connection \([P,dP]\) and finite quarter-turn holonomy | non-Abelian geometric phases and quantum-geometric limits on Wilczek--Zee holonomy | projector motion generates basis-independent subspace transport; curvature constrains attainable holonomy | A | derive the corpus quarter-turn from a physical control surface and measure its curvature cost |
 | matrix-valued link transport and cyclic holonomy | synthetic non-Abelian gauge fields in photonic frequency dimensions | modulated resonators implement matrix-valued hopping and expose gauge-field signatures in spectra and trajectories | B | implement the exact return map and distinguish projective closure from coherent central-sign closure |
 | topology and defects constrain later symmetry breaking | generalized and non-invertible symmetries, SymTFT, and defect-protected phase transitions | extended/topological operators constrain sectors, selection rules and phase structure beyond ordinary Noether symmetry | B | identify the corpus defect operator, its fusion/composition law and measurable charged observables |
@@ -174,6 +175,7 @@ Those claims require typed actions, degrees of freedom, causal and quantum consi
 - S.-M. Huang, [*Quantum-State Projectors on Grassmannian: Geometry, Holonomy, and Topology*](https://arxiv.org/abs/2608.06777) (2026).
 - F. Impens and D. Guéry-Odelin, [*Quantum Geometric Limits for Non-Abelian Holonomies*](https://arxiv.org/abs/2605.28754) (2026).
 - D. Cheng et al., [*Non-Abelian lattice gauge fields in the photonic synthetic frequency dimension*](https://arxiv.org/abs/2406.00321) (published in *Nature* 637, 2025).
+- L. Guth, [*A short proof of the multilinear Kakeya inequality*](https://arxiv.org/abs/1409.4683) (2014), together with Bennett--Carbery--Tao's [multilinear restriction and Kakeya framework](https://arxiv.org/abs/math/0509262), for quantitative transversality and multiscale overlap control.
 
 ### Consistency and generalized-symmetry frontiers
 
