@@ -47,7 +47,7 @@ rank-24 c=24 candidate family
 Leech inversion orbifold with twisted sector
         |
         v
-Moonshine module V^natural
+Moonshine module V♮
         |
         v
 Monster action, defects and sewing

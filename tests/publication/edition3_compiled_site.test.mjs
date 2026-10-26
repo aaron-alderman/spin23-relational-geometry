@@ -117,6 +117,8 @@ test("short articles are discoverable, shareable and machine-readable without du
   assert.match(monsterHunt, /\\\(V\^\\natural\\\)/u, "Moonshine module notation must retain inline-math delimiters");
   assert.match(monsterHunt, /\\\(E_8\^3\\\)/u, "rank-24 lattice notation must retain inline-math delimiters");
   assert.match(monsterHunt, /\\\(J\(q\)\\\)/u, "modular-function notation must retain inline-math delimiters");
+  assert.match(monsterHunt, /Moonshine module V♮/u, "the preformatted proof ladder must use a readable non-TeX fallback");
+  assert.doesNotMatch(monsterHunt, /Moonshine module V\^natural/u, "preformatted code must not expose raw TeX-like notation");
   assert.doesNotMatch(monsterHunt, /(?<!\\)\((?:8\\times|V\^\\natural|E_8|J\(q\))/u, "known article mathematics must not fall back to prose parentheses");
   assert.doesNotMatch(monsterHunt, /E<em>8\^3/u, "underscores in unrendered E8 notation must not become Markdown emphasis");
 
