@@ -9,15 +9,15 @@ This is the adversarial expansion below the normalized topic register. It does n
 
 | Measure | Count |
 |---|---:|
-| Inventory objects | 3254 |
-| Explicitly mapped in-scope objects | 1701 |
-| Typed exclusions | 1553 |
+| Inventory objects | 3264 |
+| Explicitly mapped in-scope objects | 1704 |
+| Typed exclusions | 1560 |
 | Unmapped scientific objects requiring scope review | 0 |
 | Weak semantic routes requiring independent review | 0 |
-| Object × topic × applicable-family cells | 55279 |
-| Unique inherited claim cells | 55279 |
+| Object × topic × applicable-family cells | 55351 |
+| Unique inherited claim cells | 55351 |
 | Authored local-exception resolutions | 0 |
-| Objects with multiple topic-specific dispositions for one family | 9273 |
+| Objects with multiple topic-specific dispositions for one family | 9279 |
 | Deduplicated claim-family clusters | 481 |
 
 ## Reading the result

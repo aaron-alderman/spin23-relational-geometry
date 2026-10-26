@@ -7,7 +7,7 @@
 
 ## Result
 
-The audit scans **2294** corpus Markdown documents and routes all **242** documents containing the declared quarter-turn, split, dual, nilpotent or anticommutation vocabulary. No lexical occurrence is allowed to imply a shared carrier or dynamics.
+The audit scans **2301** corpus Markdown documents and routes all **242** documents containing the declared quarter-turn, split, dual, nilpotent or anticommutation vocabulary. No lexical occurrence is allowed to imply a shared carrier or dynamics.
 
 - `canonical_claimipedia_rail_cell`: **6**
 - `clifford_or_anticommutation_other_typing`: **59**
