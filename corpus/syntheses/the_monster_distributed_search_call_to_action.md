@@ -10,6 +10,8 @@ Can a bounded-degree local Hamiltonian be constructed whose thermodynamic bounda
 
 This is too large for one calculation and too interconnected for isolated papers. It is, however, chartable. It can be divided into parallel searches joined by strict interfaces. This article is a call to build that distributed search.
 
+> **Enter the live hunt.** The [Halloween Monster Hunt](https://aaron-alderman.github.io/halloween-monster-hunt/) turns this programme into a searchable expedition map, with active trails, ruled-out branches, open bounties and a downloadable field file for agents.
+
 ## The target must be sharper than “the Monster is physics”
 
 There are several claims hiding inside that phrase, and they should not be confused.

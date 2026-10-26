@@ -58,6 +58,12 @@ const sourceArticles = [
     source: "corpus/syntheses/the_monster_distributed_search_call_to_action.md",
     label: "Call to action",
     note: "Seven parallel workstreams, a serial proof path and reproducible packets for contributors.",
+    externalCta: {
+      href: "https://aaron-alderman.github.io/halloween-monster-hunt/",
+      title: "Enter the Halloween Monster Hunt",
+      description: "Search the live trail map, inspect ruled-out branches, choose a bounty or download the field file for agents.",
+      action: "Open the dedicated site →",
+    },
   },
   {
     slug: "conversational-contact",
@@ -2143,8 +2149,11 @@ const standaloneArticleHtml = article => {
   const provenance = article.completeSource
     ? "This concise reader edition preserves a route to the complete circulation paper."
     : `This page is generated from <code>${esc(article.source)}</code>. The canonical source controls; publication does not create a second editorial authority.`;
+  const externalCta = article.externalCta
+    ? `<a class="proof-link" href="${esc(article.externalCta.href)}"><span><b>${esc(article.externalCta.title)}</b><small>${esc(article.externalCta.description)}</small></span><i>${esc(article.externalCta.action)}</i></a>`
+    : "";
   const output = join(siteArticlesRoot, `${article.slug}.html`);
-  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html">Articles</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">${esc(article.label || "Corpus article")}</p><h1>${esc(article.title)}</h1><p class="lede">${esc(article.kicker)}.</p><aside class="boundary"><strong>Source boundary.</strong> ${provenance}</aside>${socialShareLinks(article, "../")}</header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, article.source, output)}</article><nav class="page-turn"><a href="index.html">← All articles</a><a href="${esc(sourceHref)}">${sourceLabel} →</a></nav>`;
+  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html">Articles</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">${esc(article.label || "Corpus article")}</p><h1>${esc(article.title)}</h1><p class="lede">${esc(article.kicker)}.</p><aside class="boundary"><strong>Source boundary.</strong> ${provenance}</aside>${socialShareLinks(article, "../")}${externalCta}</header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, article.source, output)}</article><nav class="page-turn"><a href="index.html">← All articles</a><a href="${esc(sourceHref)}">${sourceLabel} →</a></nav>`;
   return htmlDoc(article.title, body, "../", false, `articles/${article.slug}.html`, article.kicker, {
     type: "article",
     structuredData: standaloneArticleStructuredData(article),

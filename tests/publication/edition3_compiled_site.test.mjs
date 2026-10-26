@@ -79,6 +79,9 @@ test("short articles are discoverable, shareable and machine-readable without du
   assert.ok(monsterArticle.includes(`<meta name="twitter:image" content="${monsterCard}">`));
   assert.ok(monsterArticle.includes(`"image":["${monsterCard}"]`));
   assert.ok(monsterArticle.includes('A luminous geometric ladder rises from physical hardware'));
+  assert.match(monsterArticle, /Enter the Halloween Monster Hunt/u);
+  assert.match(monsterArticle, /href="https:\/\/aaron-alderman\.github\.io\/halloween-monster-hunt\/"/u);
+  assert.match(monsterArticle, /Open the dedicated site →/u);
   assert.match(index, /Bluesky/u);
   assert.match(index, /href="typed-object-signatures\.html"/u);
   for (const [slug] of standaloneArticles) assert.match(index, new RegExp(`href="${slug}\\.html"`, "u"), slug);
