@@ -9,6 +9,8 @@ Projecting onto all seven one-local-excitation flavours gives a Bloch Hamiltonia
 
 The simplest drive already addresses this state almost perfectly. Let $O=\sum_n(|1\rangle\langle0|+|0\rangle\langle1|)_n$, the uniform transition between the local ground state and lowest odd state. The normalized fraction of $O|\Omega\rangle$ carried by the first pole is 99.9316%, 99.9320%, 99.9320% and 99.9320% at widths three through six. At width six only 0.06797% leaks into higher odd states, while both the pole weight and oscillator strength per site have converged to a few parts in $10^9$.
 
+The nonzero-momentum sidebands test motion rather than merely state preparation. At widths three through six, the first $k=\pm2\pi/L$ doublet lies at 0.187076, 0.185647, 0.184736 and 0.184161. The one-particle Bloch model predicts 0.185903, 0.184535, 0.183666 and 0.183121: absolute agreement better than 0.63% throughout. Dividing the exact sideband lift by $1-\cos k$ gives a dressed cosine scale that moves monotonically from 0.002973 to 0.003092. Thus the carrier has a resolved phase-frequency dispersion, not just a repeated gap.
+
 ## What this changes
 
 The flat finite-size gap now has a concrete effective-theory interpretation: an odd one-quantum quasiparticle with a $k=0$ band minimum and a small multi-particle dressing cloud. The bare uniform odd drive is already an accurate quasi-local creator and an apparatus-facing detector channel. Its small residual spectral leakage supplies the remainder that a controlled Schrieffer-Wolff, Feshbach or finite-size lower-bound argument must bound.
