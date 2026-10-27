@@ -1,0 +1,62 @@
+{
+  "protocol": "spin23-context-hub-observatory-deployment-refresh-receipt/4",
+  "date": "2026-10-27",
+  "source": {
+    "repository": "https://github.com/aaron-alderman/spin23-relational-geometry.git",
+    "branch": "codex/oph-main-merge",
+    "commit": "5faa77e8a2cebe03acc8c7366fd3f2aa0a3e98c1"
+  },
+  "applicationCandidate": {
+    "path": "tooling/search/observatory_application_candidate_v1.json",
+    "candidateSha256": "9f8c5aaf728a6b1b435bb7fad49d79af35bfcfc57ae52aba562551c70ad74066",
+    "members": 36,
+    "memberMismatchesAfterRefresh": 0,
+    "newCapability": "read-only live collective maturity endpoint"
+  },
+  "deployment": {
+    "root": "C:\\Users\\aaron\\grand-theory\\.context-hub\\observatory-runtime",
+    "marker": "C:\\Users\\aaron\\grand-theory\\.context-hub\\observatory-runtime\\DEPLOYMENT.json",
+    "installedLauncher": "C:\\Users\\aaron\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Spin23-Context-Hub-Observatory.cmd"
+  },
+  "recovery": {
+    "previousPid": 32116,
+    "recoveredPid": 33316,
+    "healthStatus": "ok",
+    "operatorId": "context-hub.operator.local",
+    "writeProtected": true,
+    "credentialSha256": "c34b27a7cfdac3b48477af7c7edfefae95119da4d7de38e8e664142d66530ca1"
+  },
+  "stateContinuity": {
+    "stableFilesExcludingVolatilePidAndLogs": 70,
+    "aggregateSha256Before": "8c6d06fed19b3a14120eacf4aed5ebb532e042efa809cc60c6c829595a796968",
+    "aggregateSha256After": "8c6d06fed19b3a14120eacf4aed5ebb532e042efa809cc60c6c829595a796968",
+    "unchanged": true
+  },
+  "liveMaturityEndpoint": {
+    "path": "/api/maturity",
+    "populationSha256": "3c131096ad4555b3224bf414a9e83c232de54ff4bfe2f0e91c308906f291a328",
+    "mature": false,
+    "missingGates": [
+      "negativeEpisodeGovernanceObserved",
+      "independentEvidenceObserved",
+      "enoughContributions",
+      "contributorDiversity",
+      "positiveContributionGovernanceObserved",
+      "negativeContributionGovernanceObserved",
+      "downstreamImpactObserved",
+      "bothPositiveAndNegativeGovernanceObserved"
+    ]
+  },
+  "scope": {
+    "proves": [
+      "live read-only reproduction of the retained population audit",
+      "hash-exact application deployment and state continuity",
+      "public visibility of missing maturity evidence without write authority"
+    ],
+    "doesNotProve": [
+      "protected application admission",
+      "collective maturity or independent longitudinal utility",
+      "truth, corpus promotion or model-training authority"
+    ]
+  }
+}
