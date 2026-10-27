@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "admissibility-graded-beltrami-impedance-defect-spike-v1",
+  "date": "2026-10-27",
+  "status": "bounded_programme_admitted_first_finite_spike_closed",
+  "operatorChain": [
+    "geometry_and_boundary",
+    "graded_curl_beltrami_operator",
+    "helicity_eigenspace",
+    "projector_holonomy",
+    "defect_conditioned_resolvent",
+    "herglotz_impedance",
+    "cayley_scattering_record"
+  ],
+  "parityRepair": {
+    "rawAdjointSign": "(-1)^(p+1)",
+    "rawSquareSign": "(-1)^(p+1)",
+    "selfAdjointDegrees": [1, 3],
+    "skewAdjointDegrees": [0, 2, 4],
+    "repair": "Bhat_p=B_p for odd p and i B_p for even p",
+    "warning": "The repair changes real structure, determinant phase and flow convention."
+  },
+  "finiteWitness": {
+    "quarterTurn": [[0, -1], [1, 0]],
+    "defectOperator": {
+      "baseline": [[-1, 0.4], [0.4, 2]],
+      "perturbed": [[-1, 0.4], [0.4, 2.3]],
+      "baselinePoles": [-1.0524174696260025, 2.0524174696260022],
+      "perturbedPoles": [-1.0477926846349646, 2.3477926846349644]
+    },
+    "upperHalfPlaneProbe": [0.2, 0.7],
+    "portVector": [1, 0.6]
+  },
+  "sharedNoRefitGate": {
+    "singleInputs": [
+      "self_adjoint_operator_domain",
+      "defect_definition",
+      "parameter_loop",
+      "port_map",
+      "loss_and_detector_calibration"
+    ],
+    "heldOutOutputs": [
+      "oriented_two_mode_holonomy",
+      "impedance_pole_and_residue_displacement"
+    ],
+    "success": "One frozen parameter ledger predicts both records within preregistered uncertainty.",
+    "failure": "Separate fits, an undeclared domain change, or a phase-blind record do not close the chain."
+  },
+  "authorityBoundary": {
+    "admitted": [
+      "graded Beltrami family",
+      "Maxwell helicity bridge",
+      "gapped-projector holonomy programme",
+      "defect-resolvent-to-impedance bridge",
+      "paired no-refit experiment"
+    ],
+    "notAdmitted": [
+      "universal Hopf-bundle force unification",
+      "curl determinant equals particle mass",
+      "one-scale Standard Model derivation",
+      "fundamental substrate inference from an emulator"
+    ]
+  },
+  "nextGate": "Realize one controlled Beltrami-like doublet in a topolectrical, microwave or synthetic-frequency device and preregister the joint holonomy/pole prediction under one defect."
+}
+
