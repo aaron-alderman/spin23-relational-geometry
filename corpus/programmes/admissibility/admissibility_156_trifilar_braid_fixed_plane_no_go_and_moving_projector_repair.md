@@ -2,7 +2,7 @@
 
 **Date:** 28 October 2026
 
-**Status:** exact three-conductor quotient, symplectic lift and bare-braid holonomy no-go; tunable moving-projector repair is mathematical until a passive synthesis closes
+**Status:** exact three-conductor quotient, symplectic lift and bare-braid holonomy no-go; tunable moving-projector repair advanced by the [ideal transformer synthesis](admissibility_157_transformer_synthesis_closes_the_trifilar_matrix_but_opens_a_control_work_port.md)
 
 **Parents:** [electrochemical carrier and stochastic reset](admissibility_155_electrochemical_carrier_stochastic_gate_and_metabolic_reset.md), [locally invariant carrier](admissibility_123_locally_invariant_carrier_and_mirror_face_spine.md), [universal projector connection](admissibility_22_universal_projector_connection_as_quarter_turn_crossbar.md), [matrix-residue identifiability](admissibility_152_scalar_impedance_cannot_identify_dark_holonomy_but_matrix_residues_can.md), [RDG--Maxwell bridge](../rdg-maxwell-bridge/README.md)
 
@@ -226,10 +226,10 @@ sign condition at some phases. Consequently
 \text{ordinary capacitor synthesis}.}
 \]
 
-The repair options are themselves experimental branches:
+The repair options were experimental branches at this stage:
 
-1. find a different passive LC embedding with auxiliary nodes whose Schur
-   complement realizes the required effective family;
+1. test whether a different passive LC embedding with auxiliary nodes can
+   realize the required effective family;
 2. use transformers or impedance inverters with a complete loss ledger;
 3. synthesize the coupling actively and treat supply power/noise as ports;
 4. enlarge the carrier so a physically admissible projector loop exists
@@ -237,6 +237,12 @@ The repair options are themselves experimental branches:
 
 No holonomy claim is admitted until the realized matrix family, not merely the
 desired eigenvectors, is measured.
+
+**Successor result.** [AZ-157](admissibility_157_transformer_synthesis_closes_the_trifilar_matrix_but_opens_a_control_work_port.md)
+closes the first option negatively: Kron reduction preserves the positive-
+capacitor sign class. It closes the second algebraically with an exact ideal
+multiport-transformer factorization, while leaving component bandwidth,
+parasitics and any time-dependent controller work as physical gates.
 
 ## Experimental sequence
 
@@ -293,9 +299,10 @@ reconstruct that change.
 
 ## Verdict
 
-The LC-loaded trifilar braid remains the best human-scale next device, but its
+The LC-loaded trifilar braid remains a human-scale next device, but its
 first job is to demonstrate the fixed-plane no-go. The simplest braid gives a
 real \(C_3\) action and useful modal physics, not geometric return. A tunable
-moving bright direction supplies the exact quarter-turn repair; passive
-network synthesis is the remaining construction gate. This converts the
-braid from visual analogy into a falsifiable three-port programme.
+moving bright direction supplies the exact quarter-turn repair. AZ-157 closes
+the ideal passive matrix factorization and moves the remaining construction
+gate to finite-band transformer hardware and control-work accounting. This
+converts the braid from visual analogy into a falsifiable three-port programme.
