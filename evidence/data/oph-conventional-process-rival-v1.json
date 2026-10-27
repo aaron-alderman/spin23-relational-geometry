@@ -1,0 +1,304 @@
+{
+  "schema": "oph-conventional-process-rival-v1",
+  "generated": "2026-10-27",
+  "seed": 1347571523,
+  "model": {
+    "class": "ordinary finite-dimensional quantum instrument with common SPAM, dephasing, phase-reference and schedule-visibility nuisances",
+    "parameters": [
+      "visibility",
+      "dephasing",
+      "phaseOffset",
+      "readoutFlip",
+      "scheduleVisibility"
+    ],
+    "noPerSettingRefit": true,
+    "truthUsedOnlyToGenerateSyntheticQualificationData": {
+      "visibility": 0.94,
+      "dephasing": 0.97,
+      "phaseOffset": 0.08,
+      "readoutFlip": 0.015,
+      "scheduleVisibility": 0.92
+    }
+  },
+  "training": {
+    "shotsPerSetting": 20000,
+    "rows": [
+      {
+        "law": "C0",
+        "depth": 1,
+        "theta": 0,
+        "shots": 20000,
+        "plus": 14009,
+        "frequency": 0.70045,
+        "truth": 0.7000889476627535
+      },
+      {
+        "law": "C0",
+        "depth": 1,
+        "theta": 1.5707963267948966,
+        "shots": 20000,
+        "plus": 7047,
+        "frequency": 0.35235,
+        "truth": 0.35298790158014753
+      },
+      {
+        "law": "C0",
+        "depth": 1,
+        "theta": 3.141592653589793,
+        "shots": 20000,
+        "plus": 1102,
+        "frequency": 0.0551,
+        "truth": 0.05741105233724652
+      },
+      {
+        "law": "C",
+        "depth": 1,
+        "theta": 0,
+        "shots": 20000,
+        "plus": 12124,
+        "frequency": 0.6062,
+        "truth": 0.6059709489516821
+      },
+      {
+        "law": "C",
+        "depth": 1,
+        "theta": 1.5707963267948966,
+        "shots": 20000,
+        "plus": 7235,
+        "frequency": 0.36175,
+        "truth": 0.3605334455097271
+      },
+      {
+        "law": "C",
+        "depth": 1,
+        "theta": 3.141592653589793,
+        "shots": 20000,
+        "plus": 3052,
+        "frequency": 0.1526,
+        "truth": 0.15152905104831793
+      },
+      {
+        "law": "C0",
+        "depth": 2,
+        "theta": 0,
+        "shots": 20000,
+        "plus": 11965,
+        "frequency": 0.59825,
+        "truth": 0.5991543204831317
+      },
+      {
+        "law": "C0",
+        "depth": 2,
+        "theta": 1.5707963267948966,
+        "shots": 20000,
+        "plus": 7226,
+        "frequency": 0.3613,
+        "truth": 0.3610799421444353
+      },
+      {
+        "law": "C",
+        "depth": 2,
+        "theta": 0,
+        "shots": 20000,
+        "plus": 9750,
+        "frequency": 0.4875,
+        "truth": 0.4889521602415658
+      },
+      {
+        "law": "C",
+        "depth": 2,
+        "theta": 1.5707963267948966,
+        "shots": 20000,
+        "plus": 7439,
+        "frequency": 0.37195,
+        "truth": 0.36991497107221766
+      },
+      {
+        "law": "E",
+        "depth": 1,
+        "theta": 0,
+        "shots": 20000,
+        "plus": 7449,
+        "frequency": 0.37245,
+        "truth": 0.37875000000000003
+      },
+      {
+        "law": "T",
+        "depth": 1,
+        "theta": 3.141592653589793,
+        "shots": 20000,
+        "plus": 7583,
+        "frequency": 0.37915,
+        "truth": 0.37875000000000003
+      }
+    ]
+  },
+  "fit": {
+    "loss": 144587.70558032507,
+    "parameters": {
+      "visibility": 0.94,
+      "dephasing": 0.965,
+      "phaseOffset": 0.08,
+      "readoutFlip": 0.014
+    },
+    "scheduleVisibility": 0.915,
+    "scheduleLoss": 37024.377732285495
+  },
+  "heldOut": {
+    "shotsPerSetting": 50000,
+    "rows": [
+      {
+        "law": "C0",
+        "depth": 1,
+        "theta": 1.0471975511965976,
+        "shots": 50000,
+        "plus": 25706,
+        "observed": 0.51412,
+        "predicted": 0.5171441181081751,
+        "truth": 0.5171088421449895,
+        "residual": -0.0030241181081750446,
+        "z": -1.3532224467288205
+      },
+      {
+        "law": "C",
+        "depth": 1,
+        "theta": 4.71238898038469,
+        "shots": 50000,
+        "plus": 19876,
+        "observed": 0.39752,
+        "predicted": 0.3967541143964384,
+        "truth": 0.3969665544902729,
+        "residual": 0.0007658856035616113,
+        "z": 0.3500588038369728
+      },
+      {
+        "law": "C0",
+        "depth": 3,
+        "theta": 1.0471975511965976,
+        "shots": 50000,
+        "plus": 22032,
+        "observed": 0.44064,
+        "predicted": 0.4430544344426427,
+        "truth": 0.44384091728711034,
+        "residual": -0.002414434442642721,
+        "z": -1.0868397175905973
+      },
+      {
+        "law": "C",
+        "depth": 3,
+        "theta": 3.141592653589793,
+        "shots": 50000,
+        "plus": 16367,
+        "observed": 0.32734,
+        "predicted": 0.32549247396951564,
+        "truth": 0.3253019522828406,
+        "residual": 0.001847526030484381,
+        "z": 0.8816814277816856
+      },
+      {
+        "law": "C0",
+        "depth": 4,
+        "theta": 0,
+        "shots": 50000,
+        "plus": 24197,
+        "observed": 0.48394,
+        "predicted": 0.48080452523883477,
+        "truth": 0.4824392125712892,
+        "residual": 0.0031354747611652134,
+        "z": 1.4032614318141412
+      },
+      {
+        "law": "C",
+        "depth": 4,
+        "theta": 1.5707963267948966,
+        "shots": 50000,
+        "plus": 18831,
+        "observed": 0.37662,
+        "predicted": 0.376449533298742,
+        "truth": 0.3766717803204624,
+        "residual": 0.00017046670125803187,
+        "z": 0.07867475033917576
+      },
+      {
+        "law": "E",
+        "depth": 3,
+        "theta": 1.0471975511965976,
+        "shots": 50000,
+        "plus": 19064,
+        "observed": 0.38128,
+        "predicted": 0.3785,
+        "truth": 0.37875000000000003,
+        "residual": 0.0027800000000000047,
+        "z": 1.2816702088189273
+      },
+      {
+        "law": "T",
+        "depth": 4,
+        "theta": 0,
+        "shots": 50000,
+        "plus": 18886,
+        "observed": 0.37772,
+        "predicted": 0.3785,
+        "truth": 0.37875000000000003,
+        "residual": -0.0007800000000000029,
+        "z": -0.3596053103880451
+      }
+    ],
+    "maximumAbsoluteZ": 1.4032614318141412,
+    "passThreshold": 4.5,
+    "pass": true
+  },
+  "schedule": {
+    "forwardCounts": [
+      9766,
+      9668,
+      566
+    ],
+    "reverseCounts": [
+      9724,
+      5194,
+      5082
+    ],
+    "predictions": {
+      "forward": [
+        0.48583333333333334,
+        0.48583333333333334,
+        0.02833333333333332
+      ],
+      "reverse": [
+        0.48583333333333334,
+        0.25708333333333333,
+        0.25708333333333333
+      ]
+    },
+    "fittedVisibility": 0.915
+  },
+  "injectedResidualControl": {
+    "setting": {
+      "law": "C",
+      "depth": 3,
+      "theta": 1.0471975511965976,
+      "shots": 50000
+    },
+    "injectedProbabilityShift": 0.04,
+    "observed": 0.44436,
+    "frozenModelPrediction": 0.4013234391750275,
+    "z": 19.632661119738046,
+    "frozenModelRejects": true,
+    "expandedSettingSpecificOffsetCanAbsorb": true,
+    "fittedExpandedProbabilityOffset": 0.04303656082497248,
+    "interpretation": "rejection of the frozen nuisance model is an anomaly trigger, not new physics; a freely added setting-specific offset absorbs this single residual and must be replaced by a physically constrained alternative, replication or independent calibration"
+  },
+  "finiteMemoryControl": {
+    "disjointOrderBiasParameter": "mu",
+    "exampleMu": 0.02,
+    "inducedTotalVariation": 0.04,
+    "interpretation": "a disjoint-order residual is representable by an ordinary finite-memory process tensor; it invalidates the OPH-specific comparison until predicted on held-out schedules"
+  },
+  "decision": {
+    "conventionalModelPredictsHeldOut": true,
+    "injectedResidualDetected": true,
+    "residualUniquelyIdentifiesNewPhysics": false,
+    "disposition": "ordinary instrument/process modeling closes the synthetic benchmark; hardware residuals require frozen alternatives, held-out prediction and replication"
+  }
+}

@@ -42,6 +42,10 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **oph literature frontier and emulator v1** — [oph_literature_frontier_and_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_literature_frontier_and_emulator_v1.md)
 - **oph emulator preflight v1** — [oph_emulator_preflight_v1.md](../../../corpus/programmes/observer-patch-holography/oph_emulator_preflight_v1.md)
 - **oph independent reference emulator v1** — [oph_independent_reference_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_independent_reference_emulator_v1.md)
+- **oph gate5 digital emulator v1** — [oph_gate5_digital_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_gate5_digital_emulator_v1.md)
+- **oph conventional process rival v1** — [oph_conventional_process_rival_v1.md](../../../corpus/programmes/observer-patch-holography/oph_conventional_process_rival_v1.md)
+- **oph schedule quotient and detector cost v1** — [oph_schedule_quotient_and_detector_cost_v1.md](../../../corpus/programmes/observer-patch-holography/oph_schedule_quotient_and_detector_cost_v1.md)
+- **oph record information dilation and reset ledger v1** — [oph_record_information_dilation_and_reset_ledger_v1.md](../../../corpus/programmes/observer-patch-holography/oph_record_information_dilation_and_reset_ledger_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

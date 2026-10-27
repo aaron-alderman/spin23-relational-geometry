@@ -1,0 +1,202 @@
+{
+  "schema": "oph-schedule-quotient-census-v1",
+  "generated": "2026-10-27",
+  "witness": {
+    "labels": [
+      "shared",
+      "forward_endpoint",
+      "reverse_endpoint"
+    ],
+    "forward": [
+      0.5,
+      0.5,
+      0
+    ],
+    "reverse": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "totalVariation": 0.25,
+    "scheduleInformationBits": 0.15563906222956647
+  },
+  "partitionCount": 5,
+  "census": [
+    {
+      "blocks": [
+        [
+          "shared"
+        ],
+        [
+          "forward_endpoint"
+        ],
+        [
+          "reverse_endpoint"
+        ]
+      ],
+      "forward": [
+        0.5,
+        0.5,
+        0
+      ],
+      "reverse": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "totalVariation": 0.25,
+      "scheduleInformationBits": 0.15563906222956647,
+      "erasesOrder": false,
+      "mergedEndpointIdentity": false
+    },
+    {
+      "blocks": [
+        [
+          "shared",
+          "forward_endpoint"
+        ],
+        [
+          "reverse_endpoint"
+        ]
+      ],
+      "forward": [
+        1,
+        0
+      ],
+      "reverse": [
+        0.75,
+        0.25
+      ],
+      "totalVariation": 0.25,
+      "scheduleInformationBits": 0.13792538097003,
+      "erasesOrder": false,
+      "mergedEndpointIdentity": false
+    },
+    {
+      "blocks": [
+        [
+          "shared",
+          "reverse_endpoint"
+        ],
+        [
+          "forward_endpoint"
+        ]
+      ],
+      "forward": [
+        0.5,
+        0.5
+      ],
+      "reverse": [
+        0.75,
+        0.25
+      ],
+      "totalVariation": 0.25,
+      "scheduleInformationBits": 0.048794940695398636,
+      "erasesOrder": false,
+      "mergedEndpointIdentity": false
+    },
+    {
+      "blocks": [
+        [
+          "shared"
+        ],
+        [
+          "forward_endpoint",
+          "reverse_endpoint"
+        ]
+      ],
+      "forward": [
+        0.5,
+        0.5
+      ],
+      "reverse": [
+        0.5,
+        0.5
+      ],
+      "totalVariation": 0,
+      "scheduleInformationBits": 0,
+      "erasesOrder": true,
+      "mergedEndpointIdentity": true
+    },
+    {
+      "blocks": [
+        [
+          "shared",
+          "forward_endpoint",
+          "reverse_endpoint"
+        ]
+      ],
+      "forward": [
+        1
+      ],
+      "reverse": [
+        1
+      ],
+      "totalVariation": 0,
+      "scheduleInformationBits": 0,
+      "erasesOrder": true,
+      "mergedEndpointIdentity": true
+    }
+  ],
+  "theorem": {
+    "erasingQuotientCount": 2,
+    "iffCondition": "a deterministic quotient erases this adjacent-order witness if and only if it identifies forward_endpoint with reverse_endpoint",
+    "verifiedAcrossAllPartitions": true,
+    "minimalNontrivial": {
+      "blocks": [
+        [
+          "shared"
+        ],
+        [
+          "forward_endpoint",
+          "reverse_endpoint"
+        ]
+      ],
+      "forward": [
+        0.5,
+        0.5
+      ],
+      "reverse": [
+        0.5,
+        0.5
+      ],
+      "totalVariation": 0,
+      "scheduleInformationBits": 0,
+      "erasesOrder": true,
+      "mergedEndpointIdentity": true
+    }
+  },
+  "lawDetector": {
+    "coordinates": [
+      "g phase probe",
+      "k empty-full probe"
+    ],
+    "signatures": {
+      "C0": {
+        "g": 0.7071067811865475,
+        "k": 1
+      },
+      "C": {
+        "g": 0.5,
+        "k": 1
+      },
+      "E": {
+        "g": 0,
+        "k": 1
+      },
+      "T": {
+        "g": 0,
+        "k": 0
+      }
+    },
+    "allFourNamedLawsSeparated": true,
+    "productQuotientPreservesLawCoordinates": true,
+    "interpretation": "quotienting only the schedule-record coordinate leaves the independently measured g and k coordinates unchanged"
+  },
+  "decision": {
+    "canEraseOrderWithoutErasingNamedLawDistinction": true,
+    "cost": "the quotient discards which non-common endpoint carried the current and reduces schedule information to exactly zero",
+    "doesNotProveChannelConfluence": true,
+    "disposition": "declare this as detector coarsening, not as equality or commutation of the underlying adjacent repair channels"
+  }
+}

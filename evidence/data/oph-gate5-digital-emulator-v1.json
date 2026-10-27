@@ -1,0 +1,1418 @@
+{
+  "schema": "oph-gate5-digital-emulator-v1",
+  "generated": "2026-10-27",
+  "seed": 1196705077,
+  "scope": {
+    "completed": [
+      "named-law logical instrument lowering",
+      "universal two-level circuit representation",
+      "circuit-level phase tomography",
+      "circuit-level k probe",
+      "finite-sample disjoint equivalence design"
+    ],
+    "open": [
+      "backend-native CX/single-qubit transpilation",
+      "calibration-aware routing",
+      "hardware execution",
+      "physical attachment"
+    ]
+  },
+  "circuits": {
+    "C0": {
+      "law": "C0",
+      "gateSet": {
+        "name": "real two-level Givens plus computational-basis phase flip",
+        "semantics": "Givens(p,q,c,s) acts only on computational basis amplitudes p and q; phase_flip(i) multiplies basis amplitude i by -1",
+        "backendBoundary": "Each two-level gate has an exact Gray-code controlled-rotation lowering; backend coupling-map routing and calibration-aware transpilation remain platform-specific."
+      },
+      "qubits": 5,
+      "dimension": 32,
+      "activeInputColumns": 6,
+      "recordCount": 3,
+      "recordQubits": 2,
+      "stages": [
+        {
+          "input": 0,
+          "skipped": false,
+          "householderSupport": 2,
+          "gateCount": 3,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 1,
+          "skipped": false,
+          "householderSupport": 2,
+          "gateCount": 5,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 2,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 3,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 1.1102230246251565e-16
+        },
+        {
+          "input": 4,
+          "skipped": false,
+          "householderSupport": 2,
+          "gateCount": 5,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 5,
+          "skipped": false,
+          "householderSupport": 2,
+          "gateCount": 5,
+          "columnError": 2.220446049250313e-16
+        }
+      ],
+      "gates": [
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 1,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 1,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 5,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 4,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 4,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 5,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 14,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 9,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 8,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 8,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 9,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 14,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 13,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 12,
+          "c": 0.5773502691896258,
+          "s": 0.8164965809277261
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 8,
+          "c": 0.8660254037844386,
+          "s": -0.4999999999999999
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 8,
+          "c": 0.8660254037844386,
+          "s": 0.4999999999999999
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 12,
+          "c": 0.5773502691896258,
+          "s": -0.8164965809277261
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 13,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 16,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 6,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 6,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 16,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 20,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 4,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 4,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 20,
+          "c": 0,
+          "s": -1
+        }
+      ],
+      "resources": {
+        "totalGates": 32,
+        "givens": 26,
+        "phaseFlips": 6,
+        "maximumHouseholderSupport": 3,
+        "circuitSha256": "06d1d82360cd8ef9c338ac5b2d348bd3c26ef34b974f495b04173eed5231f8e2"
+      },
+      "verification": {
+        "maximumCompiledColumnError": 2.220446049250313e-16,
+        "allActiveColumnsPass": true
+      }
+    },
+    "C": {
+      "law": "C",
+      "gateSet": {
+        "name": "real two-level Givens plus computational-basis phase flip",
+        "semantics": "Givens(p,q,c,s) acts only on computational basis amplitudes p and q; phase_flip(i) multiplies basis amplitude i by -1",
+        "backendBoundary": "Each two-level gate has an exact Gray-code controlled-rotation lowering; backend coupling-map routing and calibration-aware transpilation remain platform-specific."
+      },
+      "qubits": 6,
+      "dimension": 64,
+      "activeInputColumns": 6,
+      "recordCount": 6,
+      "recordQubits": 3,
+      "stages": [
+        {
+          "input": 0,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 5,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 1,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 2,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 3,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 3.3306690738754696e-16
+        },
+        {
+          "input": 4,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 5,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        }
+      ],
+      "gates": [
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 4,
+          "c": 0.8164965809277261,
+          "s": -0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 1,
+          "c": 0.8660254037844386,
+          "s": -0.4999999999999999
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 1,
+          "c": 0.8660254037844386,
+          "s": 0.4999999999999999
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 4,
+          "c": 0.8164965809277261,
+          "s": 0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 12,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 9,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 8,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865476
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 8,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865476
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 9,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 12,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 26,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 20,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 16,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865476
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 16,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865476
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 20,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 26,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 25,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 24,
+          "c": 0.5773502691896258,
+          "s": 0.8164965809277261
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 19,
+          "c": 0.8660254037844387,
+          "s": -0.49999999999999994
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 19,
+          "c": 0.8660254037844387,
+          "s": 0.49999999999999994
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 24,
+          "c": 0.5773502691896258,
+          "s": -0.8164965809277261
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 25,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 32,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 13,
+          "c": 0.8164965809277261,
+          "s": -0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 10,
+          "c": 0.8660254037844386,
+          "s": -0.4999999999999999
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 10,
+          "c": 0.8660254037844386,
+          "s": 0.4999999999999999
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 13,
+          "c": 0.8164965809277261,
+          "s": 0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 32,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 40,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 11,
+          "c": 0.8164965809277261,
+          "s": -0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 8,
+          "c": 0.8660254037844386,
+          "s": -0.4999999999999999
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 8,
+          "c": 0.8660254037844386,
+          "s": 0.4999999999999999
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 11,
+          "c": 0.8164965809277261,
+          "s": 0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 40,
+          "c": 0,
+          "s": -1
+        }
+      ],
+      "resources": {
+        "totalGates": 40,
+        "givens": 34,
+        "phaseFlips": 6,
+        "maximumHouseholderSupport": 3,
+        "circuitSha256": "17c45e13072de41e0db2c2c4ce1c4e3b0760f1ded02a1332cdf63721f83ef649"
+      },
+      "verification": {
+        "maximumCompiledColumnError": 3.3306690738754696e-16,
+        "allActiveColumnsPass": true
+      }
+    },
+    "E": {
+      "law": "E",
+      "gateSet": {
+        "name": "real two-level Givens plus computational-basis phase flip",
+        "semantics": "Givens(p,q,c,s) acts only on computational basis amplitudes p and q; phase_flip(i) multiplies basis amplitude i by -1",
+        "backendBoundary": "Each two-level gate has an exact Gray-code controlled-rotation lowering; backend coupling-map routing and calibration-aware transpilation remain platform-specific."
+      },
+      "qubits": 7,
+      "dimension": 128,
+      "activeInputColumns": 6,
+      "recordCount": 10,
+      "recordQubits": 4,
+      "stages": [
+        {
+          "input": 0,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 5,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 1,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 2,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 3,
+          "skipped": false,
+          "householderSupport": 2,
+          "gateCount": 5,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 4,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 5,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        }
+      ],
+      "gates": [
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 7,
+          "c": 0.8164965809277261,
+          "s": -0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 2,
+          "c": 0.8660254037844386,
+          "s": -0.4999999999999999
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 2,
+          "c": 0.8660254037844386,
+          "s": 0.4999999999999999
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 7,
+          "c": 0.8164965809277261,
+          "s": 0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 23,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 18,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 16,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865476
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 16,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865476
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 18,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 23,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 51,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 40,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 32,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865476
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 32,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865476
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 40,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 51,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 48,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 37,
+          "c": 0.3826834323650899,
+          "s": -0.9238795325112867
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 37,
+          "c": 0.3826834323650899,
+          "s": 0.9238795325112867
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 48,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 64,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 25,
+          "c": 0.8164965809277261,
+          "s": -0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 20,
+          "c": 0.8660254037844386,
+          "s": -0.4999999999999999
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 20,
+          "c": 0.8660254037844386,
+          "s": 0.4999999999999999
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 25,
+          "c": 0.8164965809277261,
+          "s": 0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 64,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 80,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 22,
+          "c": 0.8164965809277261,
+          "s": -0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 17,
+          "c": 0.8660254037844386,
+          "s": -0.4999999999999999
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 17,
+          "c": 0.8660254037844386,
+          "s": 0.4999999999999999
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 22,
+          "c": 0.8164965809277261,
+          "s": 0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 80,
+          "c": 0,
+          "s": -1
+        }
+      ],
+      "resources": {
+        "totalGates": 38,
+        "givens": 32,
+        "phaseFlips": 6,
+        "maximumHouseholderSupport": 3,
+        "circuitSha256": "aa917541a7f47eae7e12bda9579879addc2f80569093d6a303e4f5afe7b0f983"
+      },
+      "verification": {
+        "maximumCompiledColumnError": 2.220446049250313e-16,
+        "allActiveColumnsPass": true
+      }
+    },
+    "T": {
+      "law": "T",
+      "gateSet": {
+        "name": "real two-level Givens plus computational-basis phase flip",
+        "semantics": "Givens(p,q,c,s) acts only on computational basis amplitudes p and q; phase_flip(i) multiplies basis amplitude i by -1",
+        "backendBoundary": "Each two-level gate has an exact Gray-code controlled-rotation lowering; backend coupling-map routing and calibration-aware transpilation remain platform-specific."
+      },
+      "qubits": 7,
+      "dimension": 128,
+      "activeInputColumns": 6,
+      "recordCount": 12,
+      "recordQubits": 4,
+      "stages": [
+        {
+          "input": 0,
+          "skipped": false,
+          "householderSupport": 2,
+          "gateCount": 3,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 1,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 2,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 3,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 3.3306690738754696e-16
+        },
+        {
+          "input": 4,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        },
+        {
+          "input": 5,
+          "skipped": false,
+          "householderSupport": 3,
+          "gateCount": 7,
+          "columnError": 2.220446049250313e-16
+        }
+      ],
+      "gates": [
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 6,
+          "c": 0.3826834323650899,
+          "s": -0.9238795325112867
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 6,
+          "c": 0.3826834323650899,
+          "s": 0.9238795325112867
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 26,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 20,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 16,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865476
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 16,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865476
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 20,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 26,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 51,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 41,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 32,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865476
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 32,
+          "c": 0.7071067811865475,
+          "s": -0.7071067811865476
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 41,
+          "c": 0.7071067811865475,
+          "s": 0.7071067811865475
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 51,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 49,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 48,
+          "c": 0.5773502691896258,
+          "s": 0.8164965809277261
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 39,
+          "c": 0.8660254037844387,
+          "s": -0.49999999999999994
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 39,
+          "c": 0.8660254037844387,
+          "s": 0.49999999999999994
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 48,
+          "c": 0.5773502691896258,
+          "s": -0.8164965809277261
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 49,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 64,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 27,
+          "c": 0.8164965809277261,
+          "s": -0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 21,
+          "c": 0.8660254037844386,
+          "s": -0.4999999999999999
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 21,
+          "c": 0.8660254037844386,
+          "s": 0.4999999999999999
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 27,
+          "c": 0.8164965809277261,
+          "s": 0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 64,
+          "c": 0,
+          "s": -1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 80,
+          "c": 0,
+          "s": 1
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 24,
+          "c": 0.8164965809277261,
+          "s": -0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 18,
+          "c": 0.8660254037844386,
+          "s": -0.4999999999999999
+        },
+        {
+          "kind": "phase_flip",
+          "index": 0
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 18,
+          "c": 0.8660254037844386,
+          "s": 0.4999999999999999
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 24,
+          "c": 0.8164965809277261,
+          "s": 0.5773502691896258
+        },
+        {
+          "kind": "givens",
+          "p": 0,
+          "q": 80,
+          "c": 0,
+          "s": -1
+        }
+      ],
+      "resources": {
+        "totalGates": 38,
+        "givens": 32,
+        "phaseFlips": 6,
+        "maximumHouseholderSupport": 3,
+        "circuitSha256": "61e6a6f470a9f4b5b8b837fc102f318d90b907a3e044dcfc7272b82a34525d6b"
+      },
+      "verification": {
+        "maximumCompiledColumnError": 3.3306690738754696e-16,
+        "allActiveColumnsPass": true
+      }
+    }
+  },
+  "observables": {
+    "phaseTomography": {
+      "C0": [
+        {
+          "theta": 0,
+          "probability": 0.7285533905932735
+        },
+        {
+          "theta": 3.141592653589793,
+          "probability": 0.0214466094067262
+        },
+        {
+          "theta": 1.5707963267948966,
+          "probability": 0.3749999999999998
+        },
+        {
+          "theta": 1.0471975511965976,
+          "probability": 0.5517766952966368
+        },
+        {
+          "theta": 4.71238898038469,
+          "probability": 0.3749999999999998
+        }
+      ],
+      "C": [
+        {
+          "theta": 0,
+          "probability": 0.6249999999999999
+        },
+        {
+          "theta": 3.141592653589793,
+          "probability": 0.12499999999999997
+        },
+        {
+          "theta": 1.5707963267948966,
+          "probability": 0.375
+        },
+        {
+          "theta": 1.0471975511965976,
+          "probability": 0.4999999999999999
+        },
+        {
+          "theta": 4.71238898038469,
+          "probability": 0.3749999999999999
+        }
+      ],
+      "E": [
+        {
+          "theta": 0,
+          "probability": 0.3749999999999998
+        },
+        {
+          "theta": 3.141592653589793,
+          "probability": 0.3749999999999998
+        },
+        {
+          "theta": 1.5707963267948966,
+          "probability": 0.3749999999999998
+        },
+        {
+          "theta": 1.0471975511965976,
+          "probability": 0.37499999999999983
+        },
+        {
+          "theta": 4.71238898038469,
+          "probability": 0.3749999999999998
+        }
+      ],
+      "T": [
+        {
+          "theta": 0,
+          "probability": 0.3749999999999999
+        },
+        {
+          "theta": 3.141592653589793,
+          "probability": 0.37500000000000006
+        },
+        {
+          "theta": 1.5707963267948966,
+          "probability": 0.375
+        },
+        {
+          "theta": 1.0471975511965976,
+          "probability": 0.375
+        },
+        {
+          "theta": 4.71238898038469,
+          "probability": 0.375
+        }
+      ]
+    },
+    "kProbe": {
+      "C0": 0.9999999999999993,
+      "C": 0.9999999999999996,
+      "E": 0.9999999999999996,
+      "T": 0.4999999999999998
+    }
+  },
+  "equivalence": {
+    "method": "two-sample total-variation upper confidence bound from the Weissman multinomial L1 inequality with a union bound",
+    "alpha": 0.01,
+    "margin": 0.02,
+    "outcomes": 4,
+    "minimumShotsPerOrderIfEmpiricalTvWereZero": 39687,
+    "pilot": {
+      "shotsPerOrder": 5000,
+      "left": {
+        "10": 0.2428,
+        "11": 0.256,
+        "00": 0.2426,
+        "01": 0.2586
+      },
+      "right": {
+        "10": 0.2466,
+        "11": 0.2494,
+        "00": 0.2558,
+        "01": 0.2482
+      },
+      "empiricalTv": 0.017000000000000015,
+      "confidenceUpperBound": 0.07334669358946734,
+      "margin": 0.02,
+      "equivalentAtMargin": false
+    },
+    "qualification": {
+      "shotsPerOrder": 200000,
+      "left": {
+        "10": 0.249125,
+        "11": 0.25175,
+        "00": 0.249405,
+        "01": 0.24972
+      },
+      "right": {
+        "10": 0.248895,
+        "11": 0.25029,
+        "00": 0.249545,
+        "01": 0.25127
+      },
+      "empiricalTv": 0.0016899999999999832,
+      "confidenceUpperBound": 0.01059919451811625,
+      "margin": 0.02,
+      "equivalentAtMargin": true
+    }
+  },
+  "decision": {
+    "allCircuitsPass": true,
+    "phaseTargetsPass": true,
+    "kProbePass": true,
+    "pilotEquivalenceCertified": false,
+    "qualificationEquivalenceCertified": true,
+    "digitalGate5Pass": true,
+    "hardwareGate5Pass": false
+  }
+}

@@ -1228,6 +1228,43 @@ four named definite-current instruments into sparse logical isometries with
 record counts `3/6/10/12` and completeness error below `2.3e-16`. Native-gate
 lowering and the device run remain open.
 
+The [digital Gate-5 execution](../programmes/observer-patch-holography/oph_gate5_digital_emulator_v1.md)
+now carries those isometries into an independently simulated universal
+two-level circuit representation. The four laws require 32, 40, 38 and 38
+Givens/phase gates on five, six, seven and seven logical qubits; every active
+column closes below `3.4e-16`, and circuit-level `g` and `k` records reproduce
+the held-out targets. It also makes the disjoint null operational: the retained
+one-percent concentration bound cannot certify `TV < 0.02` at 5,000 shots even
+if the empirical distance vanishes, needs at least 39,687 shots per order in
+that ideal case, and passes at 200,000 shots with upper bound `0.01060` in the
+frozen run. Digital Gate 5 is therefore complete. Backend routing, conventional
+noise/process-memory fitting and hardware execution remain separate gates.
+
+The next two calculations sharpen what those gates mean. A
+[shared conventional rival](../programmes/observer-patch-holography/oph_conventional_process_rival_v1.md)
+fits only training settings and predicts eight held-out synthetic phase/depth
+records with maximum absolute residual `1.41` standard errors. It detects a
+deliberately injected `+0.04` probability displacement at `19.63` standard
+errors, but an unconstrained setting offset can absorb one point and ordinary
+finite memory can imitate an order residual. Rejection is therefore an anomaly
+trigger, not an identification.
+
+The [complete quotient census](../programmes/observer-patch-holography/oph_schedule_quotient_and_detector_cost_v1.md)
+also answers OT-055's logical question. Of the five partitions of the minimal
+three-record witness, exactly two erase schedule order, and both identify the
+two oriented endpoints. The separate `g/k` coordinates still distinguish all
+four named laws, so order can be erased without erasing law identity. The price
+is exact loss of the schedule information; the adjacent channels have not
+become confluent. Finally, the
+[record ledger](../programmes/observer-patch-holography/oph_record_information_dilation_and_reset_ledger_v1.md)
+shows average stored information rising from `1.5000` to `3.5850` bits along
+the named refinement ladder. A fresh-record collision dilation exactly realizes
+the discrete process and resolves the system-only generator obstruction, but it
+does not derive a clock, Hamiltonian, global entropy law or measured heat cost.
+The remaining boundary is now genuinely physical: named-backend routing,
+calibration-aware execution, held-out process prediction and independent
+replication.
+
 ## Kenotic confidence
 
 This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.

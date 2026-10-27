@@ -1,0 +1,139 @@
+{
+  "schema": "oph-record-information-ledger-v1",
+  "generated": "2026-10-27",
+  "assumptions": {
+    "inputPrior": "uniform over the six one-seam endpoint keys",
+    "recordBasis": "authored computational record basis of the named instrument",
+    "resetTemperatureKelvin": 300,
+    "landauerScope": "classical stored-record erasure lower bound; not total device dissipation and not an entropy theorem for the closed universe"
+  },
+  "instruments": [
+    {
+      "law": "C0",
+      "recordCount": 3,
+      "recordQubits": 2,
+      "totalLogicalQubits": 5,
+      "unusedComputationalRecordLabels": 1,
+      "recordDistribution": [
+        0.25,
+        0.5,
+        0.25
+      ],
+      "recordEntropyBits": 1.5,
+      "conditionalRecordEntropyBits": 0.3333333333333333,
+      "inputRecordMutualInformationBits": 1.1666666666666667,
+      "physicalRecordCapacityBits": 1.584962500721156,
+      "encodedRecordCapacityBits": 2,
+      "encodingOverheadBits": 0.4150374992788439,
+      "resetLowerBoundAt300KJoules": 4.306468327618086e-21,
+      "resetLowerBoundWithInputSideInformationAt300KJoules": 9.56992961692908e-22
+    },
+    {
+      "law": "C",
+      "recordCount": 6,
+      "recordQubits": 3,
+      "totalLogicalQubits": 6,
+      "unusedComputationalRecordLabels": 2,
+      "recordDistribution": [
+        0.08333333333333331,
+        0.24999999999999994,
+        0.16666666666666663,
+        0.16666666666666663,
+        0.24999999999999994,
+        0.08333333333333331
+      ],
+      "recordEntropyBits": 2.4591479170272446,
+      "conditionalRecordEntropyBits": 0.9999999999999999,
+      "inputRecordMutualInformationBits": 1.4591479170272446,
+      "physicalRecordCapacityBits": 2.584962500721156,
+      "encodedRecordCapacityBits": 3,
+      "encodingOverheadBits": 0.4150374992788439,
+      "resetLowerBoundAt300KJoules": 7.060161745070544e-21,
+      "resetLowerBoundWithInputSideInformationAt300KJoules": 2.8709788850787235e-21
+    },
+    {
+      "law": "E",
+      "recordCount": 10,
+      "recordQubits": 4,
+      "totalLogicalQubits": 7,
+      "unusedComputationalRecordLabels": 6,
+      "recordDistribution": [
+        0.08333333333333331,
+        0.08333333333333331,
+        0.16666666666666663,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.16666666666666663,
+        0.08333333333333331,
+        0.08333333333333331
+      ],
+      "recordEntropyBits": 3.2516291673878226,
+      "conditionalRecordEntropyBits": 0.9999999999999999,
+      "inputRecordMutualInformationBits": 2.2516291673878226,
+      "physicalRecordCapacityBits": 3.321928094887362,
+      "encodedRecordCapacityBits": 4,
+      "encodingOverheadBits": 0.6780719051126378,
+      "resetLowerBoundAt300KJoules": 9.33535868167655e-21,
+      "resetLowerBoundWithInputSideInformationAt300KJoules": 2.8709788850787235e-21
+    },
+    {
+      "law": "T",
+      "recordCount": 12,
+      "recordQubits": 4,
+      "totalLogicalQubits": 7,
+      "unusedComputationalRecordLabels": 4,
+      "recordDistribution": [
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331,
+        0.08333333333333331
+      ],
+      "recordEntropyBits": 3.5849625007211556,
+      "conditionalRecordEntropyBits": 0.9999999999999999,
+      "inputRecordMutualInformationBits": 2.5849625007211556,
+      "physicalRecordCapacityBits": 3.584962500721156,
+      "encodedRecordCapacityBits": 4,
+      "encodingOverheadBits": 0.4150374992788439,
+      "resetLowerBoundAt300KJoules": 1.0292351643369458e-20,
+      "resetLowerBoundWithInputSideInformationAt300KJoules": 2.8709788850787235e-21
+    }
+  ],
+  "checks": {
+    "refinementRecordEntropyNondecreasing": true,
+    "recordCounts": {
+      "C0": 3,
+      "C": 6,
+      "E": 10,
+      "T": 12
+    },
+    "recordQubits": {
+      "C0": 2,
+      "C": 3,
+      "E": 4,
+      "T": 4
+    },
+    "allConditionalDistributionsNormalized": true
+  },
+  "dilation": {
+    "exactConstruction": "one fresh computational record ancilla per repair attempt, followed by the compiled Stinespring isometry; tracing the record gives the unread channel",
+    "repeatedProcess": "a collision model using a fresh ancilla at each step",
+    "consequence": "the discrete process is exactly realizable without a finite-time bounded generator on the system alone",
+    "nonConsequence": "the dilation does not select a unique Hamiltonian, clock, bath, reset mechanism or thermodynamic completion"
+  },
+  "decision": {
+    "informationLedgerClosedForNamedDigitalInstruments": true,
+    "globalEntropyMonotonicityDerived": false,
+    "physicalResourceCostMeasured": false,
+    "disposition": "use the ledger as an engineering lower bound and detector-accounting tool; measure complete control, reset and refrigeration costs on hardware"
+  }
+}

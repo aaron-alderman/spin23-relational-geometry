@@ -1,7 +1,7 @@
 # Observer Patch Holography: kenotic bridge lane
 
 **Date:** 26 October 2026  
-**Status:** internal mathematical lane and independent logical instrument reference complete; native-gate lowering, hardware and physical bridges open
+**Status:** internal mathematical lane, independent digital Gate 5 and synthetic conventional rival complete; backend execution and physical bridges open
 **Source boundary:** external OPH repository pinned at `0045a99143c6cc8443d2c2c5c5bb4055451dd115`  
 **Evidence:** [reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json)  
 **Verification:** `node verification/admissibility/verify_oph_kenotic_bridge.mjs`  
@@ -37,8 +37,12 @@ The result strengthens the corpus's detector and local-closure language. It does
 5. [Literature frontier and emulator plan](oph_literature_frontier_and_emulator_v1.md) places the result against quantum-channel research and specifies Gate 5.
 6. [Emulator preflight](oph_emulator_preflight_v1.md) fixes the logical resources, shot-cost boundary and staged admission gates.
 7. [Independent reference emulator](oph_independent_reference_emulator_v1.md) implements the written observable contract without importing the OPH code and exposes the remaining instrument/compiler boundary.
-8. [Internal exhaustion checkpoint](oph_internal_exhaustion_checkpoint_v1.md) states what the source can still settle internally and what now requires an independent implementation or physical attachment.
-9. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
+8. [Gate-5 digital emulator](oph_gate5_digital_emulator_v1.md) lowers the four named instruments to verified two-level circuits and replaces the raw disjoint-null cutoff with a powered equivalence test.
+9. [Conventional instrument and process rival](oph_conventional_process_rival_v1.md) predicts held-out synthetic records and makes explicit why anomaly detection is not anomaly identification.
+10. [Schedule quotient and detector cost](oph_schedule_quotient_and_detector_cost_v1.md) classifies all quotients of the minimal adjacent witness and distinguishes detector coarsening from channel confluence.
+11. [Record information, dilation and reset ledger](oph_record_information_dilation_and_reset_ledger_v1.md) quantifies memory, ancilla and conditional erasure costs without promoting them to global thermodynamics.
+12. [Internal exhaustion checkpoint](oph_internal_exhaustion_checkpoint_v1.md) states what the source can still settle internally and what now requires an independent implementation or physical attachment.
+13. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
 
 ## What is filled
 
@@ -59,6 +63,11 @@ The result strengthens the corpus's detector and local-closure language. It does
 - Every family member is non-injective, closing direct finite-time bounded-generator embedding.
 - A clean-room logical reference reproduces the phase, repetition and adjacent/disjoint schedule targets and compiles definite-current instruments for the four named laws without importing the source implementation.
 - The 5,000-shot disjoint simulation shows why a raw total-variation cutoff must be replaced by an uncertainty-aware equivalence test.
+- The four named instruments compile to 32/40/38/38 two-level gates on 5/6/7/7 logical qubits and reproduce their active columns below `3.4e-16` error.
+- A conservative disjoint equivalence design requires at least 39,687 shots per order even at zero empirical distance; the retained 200,000-shot qualification run closes below `0.02`.
+- One shared conventional nuisance model predicts eight held-out synthetic phase/depth records with maximum absolute residual `1.41` standard errors; a `+0.04` injected probability displacement is detected at `19.63` standard errors but does not uniquely identify new physics.
+- Exactly two of the five deterministic quotients of the three-record adjacent witness erase order; both merge the oriented endpoint labels. The independent `g/k` law detector can survive, so the closure is detector-relative rather than channel confluence.
+- Along `C0 -> C -> E -> T`, average stored record information rises from `1.5000` to `3.5850` bits for the declared uniform input prior; the exact fresh-ancilla dilation resolves the system-only bounded-generator obstruction but does not select a physical Hamiltonian or thermodynamic completion.
 
 ## What is unfilled
 
@@ -71,7 +80,8 @@ The result strengthens the corpus's detector and local-closure language. It does
 - A canonical `H_2(R)` operator-system corner and any derived `Sp(4,R)` or `Spin_0(2,3)` action.
 - A local-to-global theorem showing that compatible patch closures possess a unique faithful global completion.
 - A uniquely defined total entropy whose strict monotonicity follows for the full closed system.
-- A native gate decomposition and hardware run of the seven/eight-qubit design.
+- Backend-specific controlled-rotation/CX routing, calibration-aware transpilation and a hardware run of the seven/eight-qubit design.
+- A hardware-fitted finite-memory process model that predicts held-out schedules rather than merely absorbing them after observation.
 
 The `H_2(R)` item is now a scoped no-go rather than an unexamined gap: `E` fixes a full `M_56(C)` block and therefore contains continuously many `H_2(C)` two-level corners, parameterized by `Gr_C(2,56)`. The number 55 counts only the source-basis empty/full pairs read by one multiplier. The source supplies neither a preferred complex two-plane nor a phase reference selecting a real slice.
 

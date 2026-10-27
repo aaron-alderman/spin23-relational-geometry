@@ -1,7 +1,7 @@
 # OPH record-law executable bridge programme v1
 
 **Date:** 26 October 2026  
-**Status:** Gates 1--4 resolved; Gate-5 logical instrument reference complete; native-gate execution and physical attachment open
+**Status:** Gates 1--4, digital Gate 5, quotient census and synthetic conventional rival resolved; backend execution and physical attachment open
 **Targets:** FPT-001, FPT-002, FPT-015, FPT-016, FPT-017, FPT-019  
 **Frontiers:** FA-03, FA-04, FA-07, FA-08, FA-09, FA-15, FA-17, FA-18  
 **Detector:** DET-039  
@@ -59,6 +59,8 @@ For `C0`, `C`, `E`, `T`, the signed and quarter-turn controls, and a stratified 
 ## Gate 2: local closure and schedule
 
 **Outcome (26 October 2026): closed no-go for schedule-independent two-seam closure.** All five named laws commute on disjoint seams and fail to commute on adjacent seams; the failure already has a diagonal classical witness. A higher-range result now requires a declared scheduler, quotient or confluence theorem.
+
+**Quotient result (27 October 2026): exact detector-relative pass.** Exhausting all five partitions of the minimal three-record witness shows that order is erased exactly when the two oriented endpoint labels are identified. The smallest quotient retains common versus non-common outcome, and a product detector can retain the independent `g/k` law coordinates. This is detector coarsening, not commutation or equality of the adjacent channels.
 
 ### Calculation
 
@@ -124,7 +126,7 @@ Test whether the selected discrete channel is embeddable in a completely positiv
 
 ## Gate 5: physical emulator
 
-**Current result (27 October 2026): logical-instrument independent pass; hardware gate open.** The [clean-room reference](oph_independent_reference_emulator_v1.md) implements the written seam update and detector equations without importing the OPH implementation, predicts held-out phases, reproduces the exact adjacent/disjoint witnesses and compiles definite-current Kraus/isometry tables for `C0`, `C`, `E` and `T`. Native-gate lowering and a device record remain open.
+**Current result (27 October 2026): independent digital and synthetic-rival pass; hardware gate open.** The [clean-room reference](oph_independent_reference_emulator_v1.md) implements the written seam update and detector equations without importing the OPH implementation. The [digital execution](oph_gate5_digital_emulator_v1.md) compiles its named-law isometries to verified two-level circuits, predicts held-out phases, reproduces the exact adjacent/disjoint witnesses and supplies a powered disjoint equivalence rule. A [shared conventional rival](oph_conventional_process_rival_v1.md) predicts eight held-out synthetic phase/depth records with maximum absolute residual `1.41` standard errors. It detects a `+0.04` positive control at `19.63` standard errors while demonstrating why rejection alone does not identify new physics. Backend-specific routing, hardware-calibrated process fitting and a device record remain open.
 
 ### Minimal implementation
 

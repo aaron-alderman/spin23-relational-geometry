@@ -21,7 +21,7 @@ For a physical claim, also ask what prepared the state, what the measuring port 
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/10-provenance-and-reading-map-how-to-challenge-a-claim-claim-2.md)
 
-This preview cites 243 controlling corpus documents from a repository containing 1573 numbered research documents at generation time. The citation-set digest is `c9d3b1537d889ec1af514e5beb863ac2a83bf56160b37db92505006ba3cea7f6`.
+This preview cites 247 controlling corpus documents from a repository containing 1574 numbered research documents at generation time. The citation-set digest is `55fb25f227cc646c2d27fa0a56d80bc03d968b24e0aacd8ee6a9df6a40c7c899`.
 
 ## Controlling maps
 

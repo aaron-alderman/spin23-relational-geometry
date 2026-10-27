@@ -1,6 +1,6 @@
 # OPH record-law emulator preflight v1
 
-**Status:** executable digital-emulator specification; hardware not run  
+**Status:** digital logical emulator executed; backend hardware not run
 **Date:** 26 October 2026  
 **Evidence:** [`oph-emulator-preflight-v1.json`](../../../evidence/data/oph-emulator-preflight-v1.json)  
 **Verifier:** `node verification/admissibility/verify_oph_emulator_preflight.mjs`
@@ -41,7 +41,7 @@ Depth is the cost wall. For `C`, the phase-zero separation from `E` is `2^(-r-1)
 | C | depths 5--8 clear a frozen measured-visibility power calculation |
 | D | a second platform is attempted only after one complete conventional instrument/process-tensor model predicts held-out data |
 
-The ideal adjacent-order total-variation distance is 0.25; the disjoint ideal is zero. Five thousand shots per order make the adjacent effect easy in the ideal model. The hard requirement is the null: after self-consistent preparation/readout correction, the inferred underlying disjoint-order distance must remain below total variation 0.02 with a predeclared confidence or equivalence bound. A raw empirical distance is not that bound: the [independent reference run](oph_independent_reference_emulator_v1.md) obtains `0.0204` from two 5,000-shot samples of exactly identical distributions. If both adjacent and disjoint pairs retain statistically resolved order after that correction, the device has uncontrolled memory and the OPH-specific comparison fails.
+The ideal adjacent-order total-variation distance is 0.25; the disjoint ideal is zero. Five thousand shots per order make the adjacent effect easy in the ideal model. The hard requirement is the null: after self-consistent preparation/readout correction, the inferred underlying disjoint-order distance must remain below total variation 0.02 with a predeclared confidence or equivalence bound. A raw empirical distance is not that bound: the [independent reference run](oph_independent_reference_emulator_v1.md) obtains `0.0204` from two 5,000-shot samples of exactly identical distributions. The [digital Gate-5 execution](oph_gate5_digital_emulator_v1.md) fixes a conservative two-sample bound and shows that even zero empirical distance needs 39,687 shots per order; its 200,000-shot qualification run passes. If both adjacent and disjoint pairs retain statistically resolved order after correction, the device has uncontrolled memory and the OPH-specific comparison fails.
 
 ## Interpretation
 
