@@ -28,7 +28,7 @@ The “55 corners” shorthand is retired. Fifty-five is only the number of sour
 
 ## What remains outside the source
 
-1. **Backend lowering.** The independent logical reference, named-law Kraus/isometry compiler and universal two-level circuit execution are complete. What remains is coupling-map-aware lowering to a named backend basis and the seven-qubit one-seam/eight-qubit adjacent-seam device designs.
+1. **Backend lowering.** The independent logical reference, named-law Kraus/isometry compiler and universal two-level circuit execution are complete. `ibm_fez` is the named eligible target and its required provenance packet is frozen. What remains requires external account access: export the live target and calibration, choose a connected eight-qubit subgraph and perform coupling-map-aware native synthesis.
 2. **Stage-A device execution.** At 5,000 shots per phase/law, recover the common classical table and the one-step `g`/`k` phase contrasts under a frozen calibration model.
 3. **Stage-B device execution.** Reverse adjacent order, retain the ideal total-variation target `0.25`, and use the digital packet's powered equivalence test to place the corrected underlying disjoint-order distance below `0.02`; the conservative qualification design uses 200,000 shots per order.
 4. **Hardware process-model comparison.** The deterministic synthetic qualification now passes with one shared ordinary nuisance model and a finite-memory control. Fit its physically expanded instrument/process-tensor counterpart to device training records and predict held-out phase, depth and order records without per-setting refits.

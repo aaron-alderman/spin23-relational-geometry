@@ -41,8 +41,9 @@ The result strengthens the corpus's detector and local-closure language. It does
 9. [Conventional instrument and process rival](oph_conventional_process_rival_v1.md) predicts held-out synthetic records and makes explicit why anomaly detection is not anomaly identification.
 10. [Schedule quotient and detector cost](oph_schedule_quotient_and_detector_cost_v1.md) classifies all quotients of the minimal adjacent witness and distinguishes detector coarsening from channel confluence.
 11. [Record information, dilation and reset ledger](oph_record_information_dilation_and_reset_ledger_v1.md) quantifies memory, ancilla and conditional erasure costs without promoting them to global thermodynamics.
-12. [Internal exhaustion checkpoint](oph_internal_exhaustion_checkpoint_v1.md) states what the source can still settle internally and what now requires an independent implementation or physical attachment.
-13. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
+12. [Physical attachment and hardware handoff](oph_physical_attachment_and_hardware_handoff_v1.md) names `ibm_fez`, freezes the target/calibration packet and locates the exact external execution boundary.
+13. [Internal exhaustion checkpoint](oph_internal_exhaustion_checkpoint_v1.md) states what the source can still settle internally and what now requires an independent implementation or physical attachment.
+14. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
 
 ## What is filled
 
@@ -82,6 +83,7 @@ The result strengthens the corpus's detector and local-closure language. It does
 - A uniquely defined total entropy whose strict monotonicity follows for the full closed system.
 - Backend-specific controlled-rotation/CX routing, calibration-aware transpilation and a hardware run of the seven/eight-qubit design.
 - A hardware-fitted finite-memory process model that predicts held-out schedules rather than merely absorbing them after observation.
+- A timestamped `ibm_fez` target export, connected eight-qubit layout, calibration-aware native compilation and the preregistered 530,000-shot qualification record.
 
 The `H_2(R)` item is now a scoped no-go rather than an unexamined gap: `E` fixes a full `M_56(C)` block and therefore contains continuously many `H_2(C)` two-level corners, parameterized by `Gr_C(2,56)`. The number 55 counts only the source-basis empty/full pairs read by one multiplier. The source supplies neither a preferred complex two-plane nor a phase reference selecting a real slice.
 

@@ -1,0 +1,97 @@
+{
+  "schema": "oph-physical-attachment-handoff-v1",
+  "generated": "2026-10-27",
+  "candidate": {
+    "backend": "ibm_fez",
+    "processor": {
+      "family": "Heron",
+      "revision": 2,
+      "programmableQubits": 156
+    },
+    "documentedInstructions": [
+      "cz",
+      "id",
+      "delay",
+      "measure",
+      "measure_reset",
+      "measure_2",
+      "measure_reset_2",
+      "reset",
+      "reset_2",
+      "rz",
+      "sx",
+      "x",
+      "if_else",
+      "store",
+      "xslow"
+    ],
+    "source": "https://quantum.cloud.ibm.com/docs/en/guides/qpu-information",
+    "eligibility": "capacity, CZ entangling gates, phase control, measurement, reset and classical control are documented; actual access and a current Target export are not present in this workspace"
+  },
+  "logicalRequirement": {
+    "oneSeamQubits": 7,
+    "adjacentSeamQubits": 8,
+    "abstractInstrumentGates": {
+      "C0": 32,
+      "C": 40,
+      "E": 38,
+      "T": 38
+    },
+    "caveat": "two-level logical gates are not native CZ counts; a current target-aware synthesis is mandatory"
+  },
+  "targetExportRequired": [
+    "backend name and semantic version",
+    "processor family and revision",
+    "timestamped Target or equivalent ISA serialization",
+    "chosen connected 8-qubit induced subgraph",
+    "instruction errors and durations on every used qubit and edge",
+    "readout, reset, T1 and T2 properties",
+    "transpiler version, seed, initial layout and optimization settings",
+    "complete transpiled circuits and hashes"
+  ],
+  "sampling": {
+    "phaseTomography": {
+      "circuits": 12,
+      "shotsEach": 5000
+    },
+    "kProbe": {
+      "circuits": 4,
+      "shotsEach": 5000
+    },
+    "repetition": {
+      "circuits": 8,
+      "shotsEach": 5000
+    },
+    "adjacentOrders": {
+      "circuits": 2,
+      "shotsEach": 5000
+    },
+    "disjointOrders": {
+      "circuits": 2,
+      "shotsEach": 200000
+    }
+  },
+  "minimumQualificationShotsExcludingCalibrationAndTomography": 530000,
+  "executionStages": [
+    "export and hash the live backend Target before circuit synthesis",
+    "select an eight-qubit connected subgraph using frozen calibration-only criteria",
+    "transpile all laws and controls with fixed seed and retain rejected layouts",
+    "run calibration and designated training records before opening held-out records",
+    "fit one shared SPAM, damping, coherent-error, leakage, reset and finite-memory model",
+    "open held-out phase, depth, adjacent and disjoint records and apply frozen decisions",
+    "repeat any surviving residual after recalibration and on an independent implementation"
+  ],
+  "hardStops": [
+    "no account credential or backend Target is available in this workspace",
+    "Qiskit and qiskit-ibm-runtime are not installed in this workspace",
+    "no QPU job has been submitted and no hardware record exists",
+    "backend names, calibrations and access are time-dependent and must be re-exported at execution"
+  ],
+  "decision": {
+    "attachmentEligible": true,
+    "backendTranspilationComplete": false,
+    "hardwareGate5Pass": false,
+    "empiricalPhysicsClaimEligible": false,
+    "disposition": "the remaining work requires external software, account access, a timestamped target and QPU records; the corpus-side executable package is complete"
+  }
+}

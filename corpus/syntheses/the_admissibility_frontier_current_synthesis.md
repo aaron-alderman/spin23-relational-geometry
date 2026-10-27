@@ -1265,6 +1265,17 @@ The remaining boundary is now genuinely physical: named-backend routing,
 calibration-aware execution, held-out process prediction and independent
 replication.
 
+That boundary now has a [named handoff](../programmes/observer-patch-holography/oph_physical_attachment_and_hardware_handoff_v1.md).
+`ibm_fez`, a documented 156-qubit Heron r2 processor with native phase,
+entangling, measurement, reset and control-flow instructions, is eligible in
+principle for the seven/eight-qubit design. The frozen packet requires a live
+target and calibration export, one connected eight-qubit layout and at least
+530,000 qualification shots before calibration and tomography. No credential,
+target export or QPU record exists in the workspace. Hardware Gate 5 therefore
+remains false, but the corpus-side work has reached its honest executable
+endpoint: the unresolved data are external observations, not another missing
+analogy or ideal calculation.
+
 ## Kenotic confidence
 
 This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.

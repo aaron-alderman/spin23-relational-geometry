@@ -46,6 +46,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **oph conventional process rival v1** — [oph_conventional_process_rival_v1.md](../../../corpus/programmes/observer-patch-holography/oph_conventional_process_rival_v1.md)
 - **oph schedule quotient and detector cost v1** — [oph_schedule_quotient_and_detector_cost_v1.md](../../../corpus/programmes/observer-patch-holography/oph_schedule_quotient_and_detector_cost_v1.md)
 - **oph record information dilation and reset ledger v1** — [oph_record_information_dilation_and_reset_ledger_v1.md](../../../corpus/programmes/observer-patch-holography/oph_record_information_dilation_and_reset_ledger_v1.md)
+- **oph physical attachment and hardware handoff v1** — [oph_physical_attachment_and_hardware_handoff_v1.md](../../../corpus/programmes/observer-patch-holography/oph_physical_attachment_and_hardware_handoff_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 
