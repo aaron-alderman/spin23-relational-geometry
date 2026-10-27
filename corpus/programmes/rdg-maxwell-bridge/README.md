@@ -100,6 +100,7 @@ complex.
 23. [Transformer synthesis closes the trifilar matrix but opens a control-work port](../admissibility/admissibility_157_transformer_synthesis_closes_the_trifilar_matrix_but_opens_a_control_work_port.md)
 24. [Four cells calibrate, but a finite projector ladder pays for the quarter-turn](../admissibility/admissibility_158_four_cells_calibrate_but_a_finite_projector_ladder_pays_for_the_quarter_turn.md)
 25. [A detuned fourth mode generates the dark channel, but low-frequency coherence is the hard gate](../admissibility/admissibility_159_a_detuned_fourth_mode_generates_the_dark_channel_but_low_frequency_coherence_is_the_hard_gate.md)
+26. [The adiabatic window is finite, and the first device should be an active metered emulator](../admissibility/admissibility_160_the_adiabatic_window_is_finite_and_the_first_device_should_be_an_active_metered_emulator.md)
 
 ## Executable spine
 

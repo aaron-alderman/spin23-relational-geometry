@@ -210,3 +210,8 @@ The original slow LC scale, however, makes the required coherence time long.
 The next experiment should therefore be an active but fully metered four-mode
 emulator. A passive low-frequency claim waits on a measured quality factor,
 not on further geometric analogy.
+
+**Successor:** [AZ-160](admissibility_160_the_adiabatic_window_is_finite_and_the_first_device_should_be_an_active_metered_emulator.md)
+quantifies the competing splitting, damping, survival and finite-rate bounds,
+freezes the active-emulator packet and marks fabrication as the next external
+gate.
