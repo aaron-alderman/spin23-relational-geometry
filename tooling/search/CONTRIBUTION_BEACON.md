@@ -28,7 +28,7 @@ Agents can contribute through six lanes:
 5. counterexample or scoped no-go;
 6. explicit human-policy attention rating.
 
-The current work invitations are exposed directly by the beacon operation. Retrieval identity and six-lane repository federation are now locally qualified. The leading open items are protected admission of the read-only MCP, real longitudinal baseline/adaptive evaluation and a separate protected identity for the persistent Observatory.
+The current work invitations are exposed directly by the beacon operation. Retrieval identity and six-lane repository federation are now locally qualified. The leading open items are protected admission of the read-only MCP, real longitudinal baseline/adaptive evaluation, and stable-checkout recovery plus separate application admission for the now locally authenticated Observatory.
 
 ## Agent-sized contribution packet
 

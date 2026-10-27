@@ -76,9 +76,9 @@
     {
       "id": "BEACON-004",
       "priority": "P1",
-      "title": "Give the Observatory a protected identity",
-      "need": "The persistent approval-gated host is local and intentionally excluded from the read-only MCP candidate.",
-      "doneWhen": "A separately named write-capable application is qualified with append-only persistence, approval, rollback, freeze and source-drift controls."
+      "title": "Complete protected Observatory recovery and admission",
+      "need": "The named local operator now bearer-protects all state-changing actions while proposal intake remains open. The guarded logon installer must run from a stable merged checkout, and the write-capable host remains intentionally excluded from the read-only MCP candidate.",
+      "doneWhen": "A stable primary checkout survives a logon restart with the same append-only state and protected operator identity, and the separately named write-capable application is qualified without inheriting read-only MCP authority."
     }
   ],
   "authority": {
