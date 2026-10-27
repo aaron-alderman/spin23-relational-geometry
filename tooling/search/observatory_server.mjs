@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import { createObservatoryRuntime } from "./observatory_runtime.mjs";
 import { getContributionBeacon } from "./contribution_beacon.mjs";
 import { createContributionStore } from "./contribution_store.mjs";
+import { auditCollectivePopulation } from "./collective_instrument_audit.mjs";
 
 const moduleDirectory = dirname(fileURLToPath(import.meta.url));
 const publicRoot = join(moduleDirectory, "observatory", "public");
@@ -19,6 +20,7 @@ const staticFiles = new Map([
 ]);
 const contentTypes = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8" };
 const contributionTypes = new Set(["verification-receipt", "retrieval-miss", "answer-stability", "missing-source", "counterexample-or-no-go", "human-attention-rating"]);
+const collectivePolicy = JSON.parse(readFileSync(join(moduleDirectory, "collective_instrument_policy_v1.json"), "utf8"));
 
 function validateContribution(input) {
   if (!input || Array.isArray(input) || typeof input !== "object") throw new Error("contribution must be an object");
@@ -108,8 +110,12 @@ export function createObservatoryServer({ root = resolve(moduleDirectory, "../..
         if (!existsSync(path)) return send(response, 404, { error: "Observatory asset is missing" });
         return send(response, 200, readFileSync(path), contentTypes[extname(path)] ?? "application/octet-stream");
       }
-      if (request.method === "GET" && url.pathname === "/api/health") return send(response, 200, { status: "ok", protocol: "spin23-context-hub-observatory/1", persistence: runtime.store.root, contributionBeacon: "/api/beacon", operator: { id: operatorId, writeProtected: Boolean(operatorToken), credentialSha256: tokenIdentity(operatorToken) } });
-      if (request.method === "GET" && url.pathname === "/api/beacon") return send(response, 200, { ...getContributionBeacon(), live: { contributionsEndpoint: "/api/contributions", pendingContributions: contributions.list().filter(item => item.disposition === "pending").length } });
+      if (request.method === "GET" && url.pathname === "/api/health") return send(response, 200, { status: "ok", protocol: "spin23-context-hub-observatory/1", persistence: runtime.store.root, contributionBeacon: "/api/beacon", maturityAudit: "/api/maturity", operator: { id: operatorId, writeProtected: Boolean(operatorToken), credentialSha256: tokenIdentity(operatorToken) } });
+      if (request.method === "GET" && url.pathname === "/api/beacon") return send(response, 200, { ...getContributionBeacon(), live: { contributionsEndpoint: "/api/contributions", maturityEndpoint: "/api/maturity", pendingContributions: contributions.list().filter(item => item.disposition === "pending").length } });
+      if (request.method === "GET" && url.pathname === "/api/maturity") {
+        const episodes = runtime.listEpisodes().map(item => runtime.getEpisode(item.episodeId));
+        return send(response, 200, auditCollectivePopulation({ episodes, contributions: contributions.list(), policy: collectivePolicy }));
+      }
       if (url.pathname === "/api/contributions" && request.method === "GET") return send(response, 200, { contributions: contributions.list() });
       if (url.pathname === "/api/contributions" && request.method === "POST") {
         const contribution = validateContribution(await body(request));

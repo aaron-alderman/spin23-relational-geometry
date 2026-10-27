@@ -30,6 +30,8 @@ Accordingly the report is `mature: false`. Repeating the warm-up cannot close th
 
 The auditor exits nonzero while maturity is false. That is a monitoring result, not a broken test and not permission to lower thresholds after seeing the population.
 
+The live Observatory exposes the same computation read-only at `GET /api/maturity`. No operator credential is required because the response contains only already inspectable episode/contribution identities and aggregate evidence; the endpoint has no mutation or admission path.
+
 ## Run
 
 Against the stable local deployment:

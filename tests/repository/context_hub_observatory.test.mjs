@@ -129,10 +129,12 @@ test("local Observatory server exposes static UI and the episode API", async t =
   const health = await fetch(`${running.url}/api/health`).then(response => response.json());
   assert.equal(health.status, "ok");
   assert.equal(health.contributionBeacon, "/api/beacon");
+  assert.equal(health.maturityAudit, "/api/maturity");
   const beacon = await fetch(`${running.url}/api/beacon`).then(response => response.json());
   assert.equal(beacon.status, "live-local");
   assert.equal(beacon.authority.corpusPromotion, false);
   assert.equal(beacon.live.contributionsEndpoint, "/api/contributions");
+  assert.equal(beacon.live.maturityEndpoint, "/api/maturity");
   const contributionResponse = await fetch(`${running.url}/api/contributions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ type: "retrieval-miss", objective: "boundary response candidate", profile: "audit", contributor: "fixture-agent", expected: "alpha should be selected", observed: "alpha was omitted", narrowConclusion: "one bounded retrieval miss", nextTest: "repeat against the same corpus identity", sourcePaths: ["corpus/programmes/alpha.md"], dependsOn: ["BEACON-002"] }) });
   assert.equal(contributionResponse.status, 201);
   const contribution = await contributionResponse.json();
@@ -162,6 +164,12 @@ test("local Observatory server exposes static UI and the episode API", async t =
   const planned = await plannedResponse.json();
   assert.equal(planned.episode.metrics.turns, 1);
   assert.equal(planned.episode.authority.corpusPromotion, false);
+  const maturity = await fetch(`${running.url}/api/maturity`).then(response => response.json());
+  assert.equal(maturity.protocol, "spin23-context-hub-collective-instrument-audit/1");
+  assert.equal(maturity.mature, false);
+  assert.equal(maturity.metrics.episodes, 1);
+  assert.equal(maturity.metrics.rejectedContributions, 1);
+  assert.equal(maturity.authority.corpusPromotion, false);
 });
 test("operator identity protects episode and contribution coordination writes while intake stays open", async t => {
   const { root, stateRoot } = fixture(t);
