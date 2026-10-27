@@ -37,14 +37,16 @@ powershell -ExecutionPolicy Bypass -File tooling/search/start_observatory.ps1
 
 Then open `http://127.0.0.1:4178`. Choose another port with `--port`. Runtime episodes are written beneath `.context-hub/episodes/`, which is excluded from Git. The browser asks for the token on the first protected write and keeps it only in that tab's session storage. Read it locally from `.context-hub/operator.token`; never commit or transmit it.
 
-After the branch is merged into a stable primary checkout, logon recovery can be installed for the current Windows user:
+From a stable non-managed checkout or exact deployment snapshot, logon recovery can be installed for the current Windows user:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File tooling/search/manage_observatory_startup.ps1 -Action Install -WhatIf
 powershell -ExecutionPolicy Bypass -File tooling/search/manage_observatory_startup.ps1 -Action Install
 ```
 
-`Status` reports the installed launcher and `Uninstall` removes it. The installer refuses linked and managed worktrees because their paths are disposable; therefore this active worktree cannot honestly close the reboot-recovery gate. The generated logon launcher contains only the stable repository path and port. The operator credential remains in ignored runtime state and is created on first launch.
+`Status` reports the installed launcher and `Uninstall` removes it. The installer refuses linked and managed worktrees because their paths are disposable. The generated logon launcher contains only the stable repository path and port. The operator credential remains in ignored runtime state and is created on first launch.
+
+The retained [durable-startup receipt](durable_startup_receipt_v1.json) records the current installation. The pushed commit was materialized as a static deployment beneath the primary checkout's ignored `.context-hub/` directory, all 46 runtime-state files matched during handoff, and invocation of the exact installed launcher replaced the process while preserving the persistence path and credential hash. This proves launcher recovery; it does not pretend that a physical reboot has already been observed.
 
 The health endpoint is `/api/health`; `/api/beacon` exposes the same optional contribution invitation as the read-only MCP operation `corpus_contribution_beacon`. An agent may inspect and contribute without creating or adopting an adaptive episode. `POST /api/contributions` records a validated proposal in a separate append-only inbox and returns its hash-chain receipt. `GET /api/contributions` exposes dependency, claim, attribution, disposition and downstream-impact views. `POST /api/contributions/:id/claim`, `/release`, `/decision` and `/impact` append the corresponding coordination receipt. Inbox acceptance is acknowledgement only and cannot mutate an episode, admit attention evidence or promote corpus content.
 
