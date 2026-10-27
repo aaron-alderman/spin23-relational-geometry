@@ -50,6 +50,12 @@
       "title": "Isolate aggregate qualification identity drift",
       "outcome": "The drift came from recursively hashing raw generated evidence-spine control metadata into retrieval identity, not from concurrent search. Retrieval now hashes only the exact claim-evidence projection it consumes. Two serial and two parallel clean-process 30-case runs match the retained corpus, evidence and baseline identities exactly at MRR 0.925.",
       "receipt": "tooling/search/retrieval_identity_qualification_v1.json"
+    },
+    {
+      "id": "BEACON-005",
+      "title": "Implement identity-preserving federation",
+      "outcome": "Six repository-snapshot lanes now preserve native object, exact content, revision, status and relation identity. The composer keeps lane-native order, quotas and crossing penalties separate, requires dated bibliographic identity for external literature, and grants no global rank or promotion authority.",
+      "receipt": "tests/repository/registered_federation_adapters.test.mjs"
     }
   ],
   "openOpportunities": [
@@ -73,13 +79,6 @@
       "title": "Give the Observatory a protected identity",
       "need": "The persistent approval-gated host is local and intentionally excluded from the read-only MCP candidate.",
       "doneWhen": "A separately named write-capable application is qualified with append-only persistence, approval, rollback, freeze and source-drift controls."
-    },
-    {
-      "id": "BEACON-005",
-      "priority": "P2",
-      "title": "Implement identity-preserving federation",
-      "need": "The exact-byte canonical-corpus/publication adapter pair now passes positive and negative fixtures. Claimipedia, Sourcery derivations and external literature remain separate unconnected lanes.",
-      "doneWhen": "Lane-native ranking, quotas, crossing penalties and revision-pinned identities pass positive and negative cross-lane fixtures."
     }
   ],
   "authority": {

@@ -14,7 +14,7 @@
 | Real longitudinal evaluation | warm-up gate closed; independent longitudinal gate open | The retained 12-case warm-up passes all engineering gates; preregistered independent tasks must still compare baseline and adaptive attention over multiple turns. |
 | Protected Observatory identity | open | A separately named write-capable application passes persistence, authentication, approval, rollback, freeze, recovery and drift controls. |
 | Agent-facing work ecology | closed locally | Opportunities, dependency declarations, exclusive claims/releases, attribution, dispositions and downstream-impact receipts share one append-only contribution chain without admission authority. |
-| Identity-preserving federation | canonical + publication adapter pair closed locally; other lanes open | Exact-byte, revision-pinned canonical/publication adapters and positive/negative fixtures pass; Claimipedia, Sourcery and external-literature adapters remain outstanding. |
+| Identity-preserving federation | all six repository-snapshot lanes closed locally; live refresh and protected delivery open | Canonical corpus, Claimipedia claims, Sourcery derivations, publication, experiment artifacts and dated external literature retain native object, revision, status and relation identity under positive and negative fixtures. |
 | Mature collective instrument | open | Longitudinal utility improves without evidence multiplication, concentration, capture or loss of complete replay. |
 
 ## Delivery order

@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 
-export const FEDERATION_LANES = Object.freeze(["canonical-corpus", "claimipedia", "sourcery-derivation", "publication", "external-literature"]);
+export const FEDERATION_LANES = Object.freeze(["canonical-corpus", "claimipedia", "sourcery-derivation", "publication", "experiment", "external-literature"]);
 const laneSet = new Set(FEDERATION_LANES);
 const relationKinds = new Set(["same-source", "authored-link", "revision-pinned-join", "structurally-inferred", "query-generated"]);
 const sha256 = value => createHash("sha256").update(value).digest("hex");
@@ -13,6 +13,7 @@ function validateResult(result, lane) {
   if (typeof result.status !== "string" || !result.status || result.status.length > 1000) throw new Error(`federation ${lane} status is invalid`);
   if (typeof result.withinLaneScore !== "number" || !Number.isFinite(result.withinLaneScore) || result.withinLaneScore < 0) throw new Error(`federation ${lane} withinLaneScore is invalid`);
   if (!result.relation || !relationKinds.has(result.relation.kind) || typeof result.relation.target !== "string" || !result.relation.target) throw new Error(`federation ${lane} relation is invalid`);
+  if (lane === "external-literature" && (!result.bibliographicIdentity || typeof result.bibliographicIdentity.url !== "string" || !/^https?:\/\//u.test(result.bibliographicIdentity.url) || typeof result.bibliographicIdentity.searchedAt !== "string" || !/^\d{4}-\d{2}-\d{2}$/u.test(result.bibliographicIdentity.searchedAt))) throw new Error("federation external-literature result lacks bibliographic identity");
   if (result.readAuthority !== true || result.promotionAuthority !== false) throw new Error(`federation ${lane} authority must be read-only and non-promoting`);
   return { ...result, lane };
 }

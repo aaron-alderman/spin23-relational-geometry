@@ -26,4 +26,5 @@ test("federation rejects unpinned, opaque or promotion-capable inputs", () => {
   assert.throws(() => composeFederatedContext({ lanes: { unknown: [] } }), /lane unknown/iu);
   assert.throws(() => composeFederatedContext({ lanes: { claimipedia: [{ ...item("claim/a", hash("a"), 1), revision: "" }] } }), /immutable/iu);
   assert.throws(() => composeFederatedContext({ lanes: { claimipedia: [{ ...item("claim/a", hash("a"), 1), promotionAuthority: true }] } }), /non-promoting/iu);
+  assert.throws(() => composeFederatedContext({ lanes: { "external-literature": [item("paper/a", hash("a"), 1)] } }), /bibliographic identity/iu);
 });

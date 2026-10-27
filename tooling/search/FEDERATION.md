@@ -1,6 +1,6 @@
 # Context Hub federation contract
 
-**Status:** packet composer and the first canonical-corpus/publication adapter pair implemented and locally tested; Claimipedia, Sourcery, external-literature and protected admission remain open
+**Status:** all six repository-snapshot adapters and the packet composer implemented and locally tested; live remote refresh and protected admission remain open
 **Depends on:** [local MCP contract](MCP.md), [Sourcery admission candidate](sourcery_admission_candidate_v1.json)
 
 ## Purpose
@@ -44,6 +44,13 @@ Federation remains closed until the local benchmark is extended with cross-lane 
 
 The local [`federated_context.mjs`](federated_context.mjs) enforces the composition contract. It validates immutable object and revision identities, preserves lane-native ordering, applies explicit quotas and crossing penalties, round-robins lanes without manufacturing a global scalar rank, collapses exact cross-lane duplicates by target-plus-content identity and refuses promotion-capable inputs.
 
-[`local_federation_adapters.mjs`](local_federation_adapters.mjs) closes the first safe adapter pair. It projects the governed local search into distinct canonical-corpus and Edition 3 publication lanes, then re-reads and hashes the exact source bytes. Publication results are marked as reading surfaces, never canonical claims. A publication crossing names an authored link to a canonical source when one exists; otherwise it is explicitly `query-generated`. Non-canonical paths, missing sources and undeclared lanes fail or remain outside the packet. The retained fixtures cover both successful authored crossing and rejected path identities, and a full-corpus exercise retrieves the admissibility synthesis beside its linked book chapter with separate revisions and authority.
+[`local_federation_adapters.mjs`](local_federation_adapters.mjs) closes the first safe adapter pair. It projects the governed local search into distinct canonical-corpus and Edition 3 publication lanes, then re-reads and hashes the exact source bytes. Publication results are marked as reading surfaces, never canonical claims. A publication crossing names an authored link to a canonical source when one exists; otherwise it is explicitly `query-generated`. Non-canonical paths, missing sources and undeclared lanes fail or remain outside the packet.
 
-This does **not** imply Claimipedia, Sourcery or external-literature federation. Each still needs its own revision-pinned read interface, lane-native rank, identity join and negative fixtures. The two local lanes also currently share the governed corpus search engine before being separated and re-ranked inside each lane; a future native publication index may replace that projection without changing the packet contract.
+[`registered_federation_adapters.mjs`](registered_federation_adapters.mjs) closes the remaining repository-snapshot lanes without pretending their objects are alike:
+
+- **Claimipedia** ranks individual manifest claims, preserves claim ID and epistemic state, hashes the exact claim object and resolves evidence basenames uniquely through the canonical manifest;
+- **Sourcery derivation** ranks individual typed transformation steps, retaining slice, assumptions, losses, refusal, composer disposition and the authored corpus reference;
+- **experiment** ranks exact retained JSON artifacts and reports whether empirical authority was actually declared rather than inferring it from file presence;
+- **external literature** ranks support and opposition separately from the dated 22-target search register and refuses any result without a URL plus search date.
+
+The all-lane repository test supplies at least one object from canonical corpus, Claimipedia, Sourcery derivation, publication, experiment and external literature in one packet, while retaining separate lane receipts and refusing both a global scalar rank and cross-lane promotion. This is snapshot federation, not live remote synchronization: later source updates require a new retained file identity, and protected delivery remains governed by its separate admission gate. The canonical and publication lanes currently share the governed corpus search engine before being separated and re-ranked inside each lane; a future native publication index may replace that projection without changing the packet contract.
