@@ -18,6 +18,8 @@ test("Observatory application candidate is exact, separately named and excludes 
   assert.equal(built.qualification.protectedWarmupEvidence.operatorId, "context-hub.operator.local");
   assert.equal(built.qualification.protectedWarmupEvidence.writeProtected, true);
   assert.equal(built.qualification.protectedWarmupEvidence.sameRunEvidenceOnly, true);
+  assert.equal(built.maturityMonitoring.mature, false);
+  assert.ok(built.maturityMonitoring.missingGates.includes("independentEvidenceObserved"));
   assert.equal(built.members.some(item => item.path.includes(".context-hub") || /token|episodes|contributions/iu.test(item.path)), false);
   assert.match(built.candidateSha256, /^[0-9a-f]{64}$/u);
 });

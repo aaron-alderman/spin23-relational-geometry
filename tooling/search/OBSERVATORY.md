@@ -83,6 +83,8 @@ The episode view exposes:
 - append-only event revisions and hashes;
 - recorded versus counterfactual state and source-set comparisons.
 
+The cross-episode [`collective instrument audit`](COLLECTIVE_INSTRUMENT_AUDIT.md) adds population-level checks that a single episode cannot supply: objective, source and contributor concentration; independence-class counts; positive and negative governance; downstream impact; corpus-generation stratification; replayability and family/source reuse. Its current `mature: false` result is retained rather than hidden by the successful engineering warm-up.
+
 The adaptive outcome balance is an operational diagnostic, not a scientific score. It reports whether subsequently observed positive or negative attention utility favored the adaptive-only or baseline-only set. Human ratings are marked `human-policy`; they express a preference over attention rather than independent empirical evidence.
 
 For a longitudinal trial, episode creation may include a `taskSchedule` containing 2–100 unique subquestions under one umbrella objective. The schedule is bound into both the initial belief-state identity and the public governance receipt. Scheduled episodes refuse every undeclared task; unscheduled episodes retain exact objective equality. This permits within-objective learning across preregistered tasks without allowing undeclared cross-objective transfer. The local UI exposes the same optional schedule.

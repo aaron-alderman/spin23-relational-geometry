@@ -66,8 +66,8 @@
     },
     {
       "path": "tooling/search/contribution_beacon_v1.json",
-      "bytes": 5663,
-      "sha256": "d7a7019e8de2f8cf1ae0caa98511fa13e8c9928ee50839a3b015327e1b221545"
+      "bytes": 6300,
+      "sha256": "6149acd67d6fea280f507ff5e889c675728ace22b31f0ec1f022a2ce3086db3e"
     },
     {
       "path": "tooling/search/contribution_store.mjs",
@@ -140,6 +140,26 @@
       "sha256": "ec260b778b35c033685da226965ece6dc0253d1998a4e83f9fa1a7b801bed121"
     },
     {
+      "path": "tooling/search/collective_instrument_audit.mjs",
+      "bytes": 9644,
+      "sha256": "f2c995000150dec540ad9d386fc4f5cc69eabbc30f7aa8565b59fc9bf63b24d5"
+    },
+    {
+      "path": "tooling/search/collective_instrument_policy_v1.json",
+      "bytes": 1528,
+      "sha256": "350503a5a6257174c4c94dc86b32c8f5314417eb3619e32e574905bdf6874ada"
+    },
+    {
+      "path": "tooling/search/collective_instrument_audit_live_v1.json",
+      "bytes": 14848,
+      "sha256": "bb36ebdad520bdb090bc0ca2bb4b1b5f35d39ec005252294acaf779f4aeb6667"
+    },
+    {
+      "path": "tooling/search/COLLECTIVE_INSTRUMENT_AUDIT.md",
+      "bytes": 3258,
+      "sha256": "5f06b87debaa2effb8f89810cdb386822b39567d15ad57eac54ba82d7886282a"
+    },
+    {
       "path": "tooling/search/corpus_projection_manifest_v1.json",
       "bytes": 688013,
       "sha256": "898504dbd1026910eabae172a55d2bc879432044e45b3674f104a16e37e220ca"
@@ -151,8 +171,8 @@
     },
     {
       "path": "tooling/search/OBSERVATORY.md",
-      "bytes": 10774,
-      "sha256": "59fdf8675f8f9e6b67c534df850816908abb23f6bdb6aa6e42a5bb5e3efc9ee1"
+      "bytes": 11230,
+      "sha256": "5efc699543675ba9abd8c0724a61b23386bfde1eb3f642dc7906a379a39c2a49"
     },
     {
       "path": "evidence/data/context-hub-observatory-warmup-20261027.json",
@@ -180,14 +200,19 @@
       "sha256": "67eef1f52acc6a9772e87d21609dfc4e3b75797ea13fce13d8a24586eaf6be6a"
     },
     {
+      "path": "tests/repository/collective_instrument_audit.test.mjs",
+      "bytes": 2279,
+      "sha256": "e141ee3cf653fe801d3d26fcb776bbe94ea8c7689adae12ac77aaf94200e96b1"
+    },
+    {
       "path": "tests/repository/observatory_application_candidate.test.mjs",
-      "bytes": 1632,
-      "sha256": "615e01dceda5cee10e15abe60e5752f6b8336500b584e415c7428f652be44161"
+      "bytes": 1780,
+      "sha256": "172a2812e5fb6c98919c75efe44b5d790d2080005c086a1fc16f47e54f02f0db"
     }
   ],
   "qualification": {
     "commands": [
-      "node --test --test-concurrency=1 tests/repository/context_hub_observatory.test.mjs tests/repository/corpus_projection_manifest.test.mjs tests/repository/longitudinal_evaluation.test.mjs tests/repository/longitudinal_trial_cli.test.mjs tests/repository/observatory_application_candidate.test.mjs",
+      "node --test --test-concurrency=1 tests/repository/context_hub_observatory.test.mjs tests/repository/corpus_projection_manifest.test.mjs tests/repository/longitudinal_evaluation.test.mjs tests/repository/longitudinal_trial_cli.test.mjs tests/repository/collective_instrument_audit.test.mjs tests/repository/observatory_application_candidate.test.mjs",
       "node tooling/search/run_corpus_observatory_evaluation.mjs",
       "node tooling/audit/audit_markdown_links.mjs",
       "git diff --check"
@@ -221,6 +246,24 @@
       "sameRunEvidenceOnly": true
     }
   },
+  "maturityMonitoring": {
+    "policy": "tooling/search/collective_instrument_policy_v1.json",
+    "latestAudit": "tooling/search/collective_instrument_audit_live_v1.json",
+    "policySha256": "95eea3efc3f7093f6cae90546002f2f7104e5e91acb77f0734c7c7db83d9261c",
+    "populationSha256": "3c131096ad4555b3224bf414a9e83c232de54ff4bfe2f0e91c308906f291a328",
+    "mature": false,
+    "missingGates": [
+      "negativeEpisodeGovernanceObserved",
+      "independentEvidenceObserved",
+      "enoughContributions",
+      "contributorDiversity",
+      "positiveContributionGovernanceObserved",
+      "negativeContributionGovernanceObserved",
+      "downstreamImpactObserved",
+      "bothPositiveAndNegativeGovernanceObserved"
+    ],
+    "note": "A false maturity result is retained evidence, not a qualification failure or permission to lower the preregistered thresholds."
+  },
   "admissionSequence": [
     "stage these exact source members without credentials or mutable ledgers",
     "materialize and verify the bound corpus projection separately",
@@ -231,5 +274,5 @@
     "verify state continuity, rollback, freeze and rejection controls through a fresh application session",
     "retain physical reboot or logon observation as a separate operational receipt"
   ],
-  "candidateSha256": "7d21b4750df31bb33cd17b554ba2d7707df41890fec34c55f893fb241d491644"
+  "candidateSha256": "c3fde88640be366aa33fbf4982dd59d8f17e584fd35197fb04a8d40a2c6d60a1"
 }

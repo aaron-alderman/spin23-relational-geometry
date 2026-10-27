@@ -31,6 +31,10 @@ const sources = [
   "tooling/search/longitudinal_trial_cli.mjs",
   "tooling/search/longitudinal_evaluation_template_v1.json",
   "tooling/search/LONGITUDINAL_EVALUATION.md",
+  "tooling/search/collective_instrument_audit.mjs",
+  "tooling/search/collective_instrument_policy_v1.json",
+  "tooling/search/collective_instrument_audit_live_v1.json",
+  "tooling/search/COLLECTIVE_INSTRUMENT_AUDIT.md",
   "tooling/search/corpus_projection_manifest_v1.json",
   "tooling/search/durable_startup_receipt_v1.json",
   "tooling/search/OBSERVATORY.md",
@@ -39,6 +43,7 @@ const sources = [
   "tests/repository/corpus_projection_manifest.test.mjs",
   "tests/repository/longitudinal_evaluation.test.mjs",
   "tests/repository/longitudinal_trial_cli.test.mjs",
+  "tests/repository/collective_instrument_audit.test.mjs",
   "tests/repository/observatory_application_candidate.test.mjs",
 ];
 
@@ -48,6 +53,7 @@ export function buildObservatoryApplicationCandidate() {
   const projection = JSON.parse(readFileSync(resolve(moduleDirectory, "corpus_projection_manifest_v1.json"), "utf8"));
   const startup = JSON.parse(readFileSync(resolve(moduleDirectory, "durable_startup_receipt_v1.json"), "utf8"));
   const warmup = JSON.parse(readFileSync(resolve(root, "evidence/data/context-hub-observatory-warmup-20261027.json"), "utf8"));
+  const collectiveAudit = JSON.parse(readFileSync(resolve(moduleDirectory, "collective_instrument_audit_live_v1.json"), "utf8"));
   const members = sources.map(path => {
     const bytes = readFileSync(resolve(root, path));
     return { path, bytes: bytes.length, sha256: sha256(bytes) };
@@ -85,7 +91,7 @@ export function buildObservatoryApplicationCandidate() {
     members,
     qualification: {
       commands: [
-        "node --test --test-concurrency=1 tests/repository/context_hub_observatory.test.mjs tests/repository/corpus_projection_manifest.test.mjs tests/repository/longitudinal_evaluation.test.mjs tests/repository/longitudinal_trial_cli.test.mjs tests/repository/observatory_application_candidate.test.mjs",
+        "node --test --test-concurrency=1 tests/repository/context_hub_observatory.test.mjs tests/repository/corpus_projection_manifest.test.mjs tests/repository/longitudinal_evaluation.test.mjs tests/repository/longitudinal_trial_cli.test.mjs tests/repository/collective_instrument_audit.test.mjs tests/repository/observatory_application_candidate.test.mjs",
         "node tooling/search/run_corpus_observatory_evaluation.mjs",
         "node tooling/audit/audit_markdown_links.mjs",
         "git diff --check",
@@ -118,6 +124,15 @@ export function buildObservatoryApplicationCandidate() {
         corpusContentSha256: warmup.corpusContentSha256,
         sameRunEvidenceOnly: warmup.authority?.sameRunEvidenceOnly ?? null,
       },
+    },
+    maturityMonitoring: {
+      policy: "tooling/search/collective_instrument_policy_v1.json",
+      latestAudit: "tooling/search/collective_instrument_audit_live_v1.json",
+      policySha256: collectiveAudit.policySha256,
+      populationSha256: collectiveAudit.populationSha256,
+      mature: collectiveAudit.mature,
+      missingGates: collectiveAudit.missingGates,
+      note: "A false maturity result is retained evidence, not a qualification failure or permission to lower the preregistered thresholds."
     },
     admissionSequence: [
       "stage these exact source members without credentials or mutable ledgers",
