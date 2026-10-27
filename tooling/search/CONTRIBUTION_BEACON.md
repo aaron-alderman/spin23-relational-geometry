@@ -28,7 +28,7 @@ Agents can contribute through six lanes:
 5. counterexample or scoped no-go;
 6. explicit human-policy attention rating.
 
-The current work invitations are exposed directly by the beacon operation. Retrieval identity and six-lane repository federation are now locally qualified. The read-only candidate also retains a per-object manifest for all 2,398 indexed documents, so a contributor can verify exactly which payload must cross into Sourcery rather than treating “the corpus” as an informal pointer. The leading open items are integration of Sourcery's passed bounded-discovery prerequisite, exact payload materialization and protected admission of the read-only MCP, real longitudinal baseline/adaptive evaluation, and separate application admission for the now locally authenticated, durably launched Observatory.
+The current work invitations are exposed directly by the beacon operation. Retrieval identity and six-lane repository federation are now locally qualified. The read-only candidate also retains a per-object manifest for all 2,398 indexed documents, so a contributor can verify exactly which payload must cross into Sourcery rather than treating “the corpus” as an informal pointer. The write-capable Observatory has its own exact application candidate, excluding credentials and mutable state, rather than borrowing the read-only MCP's identity. The leading open items are integration of Sourcery's passed bounded-discovery prerequisite, exact payload materialization and protected admission of the read-only MCP, real longitudinal baseline/adaptive evaluation, and protected admission of that separately authenticated, durably launched application.
 
 ## Agent-sized contribution packet
 

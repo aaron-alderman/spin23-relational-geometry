@@ -1,0 +1,205 @@
+{
+  "protocol": "spin23-context-hub-observatory-application-candidate/1",
+  "status": "local-candidate-not-protected-application-admitted",
+  "applicationIdentity": {
+    "id": "context-hub.observatory.local",
+    "writePrincipal": "context-hub.operator.local",
+    "networkBoundary": "127.0.0.1",
+    "stateProtocol": "append-only-hash-chain",
+    "recoveryDeploymentSourceCommit": "c0451c55fb5532d8c29ade72807d19ae12301019",
+    "corpusProjectionManifestSha256": "7b31c33d369e8148bda1ff08f0a588053e51cec7de7d61565b99b3a3210e4b51",
+    "corpusContentSha256": "678bec5d080f0663a54c2a804689209f7d733989008bd416290cc542bcaad2fe"
+  },
+  "authorityBoundary": {
+    "writesLocalEpisodeAndContributionLedgersOnly": true,
+    "anonymousIntakeCreatesProposalOnly": true,
+    "humanApprovalRequiredForAttentionAdmission": true,
+    "readOnlyMcpAuthorityInherited": false,
+    "corpusPromotion": false,
+    "scientificTruthEstablished": false,
+    "modelWeightTraining": false,
+    "protectedApplicationAdmission": false
+  },
+  "excludedRuntimeMaterial": [
+    ".context-hub/operator.token",
+    ".context-hub/episodes/**",
+    ".context-hub/contributions/**",
+    ".context-hub/observatory.pid",
+    ".context-hub/*.log",
+    "installed startup launcher bytes outside the repository"
+  ],
+  "members": [
+    {
+      "path": "tooling/search/search_corpus.mjs",
+      "bytes": 40685,
+      "sha256": "01364dd76ce1936d7d309287d25c9a0bd64c2e84cc10e1bbea3e439b2f0b2531"
+    },
+    {
+      "path": "tooling/search/context_hub.mjs",
+      "bytes": 15317,
+      "sha256": "ddade46b6c8700ae06a95a3fa51089b326a1d7965b83fb0303998755d7231151"
+    },
+    {
+      "path": "tooling/search/adaptive_context.mjs",
+      "bytes": 6258,
+      "sha256": "a954b3126f1f90c61d923a10d5df6722620ad0d8680a6a94fd22c23074325957"
+    },
+    {
+      "path": "tooling/search/answer_stability.mjs",
+      "bytes": 8089,
+      "sha256": "1d52a5141982ae041365b96356d61f3c8972c7639cd2ff6d387e2847a9e8cdcb"
+    },
+    {
+      "path": "tooling/search/belief_state.mjs",
+      "bytes": 21455,
+      "sha256": "59709b7ad01e28c7752fb16e00d26364ee42dd313861be2a9ce89f6f8dacaae3"
+    },
+    {
+      "path": "tooling/search/belief_observations.mjs",
+      "bytes": 4302,
+      "sha256": "9b0c6acb789419a2f2cb082ee6fd89f067bb8bfe6ebb6bea8cc072180f7c4f92"
+    },
+    {
+      "path": "tooling/search/contribution_beacon.mjs",
+      "bytes": 925,
+      "sha256": "0ccd3c06bc36d61c79aa73cc411b661a134950cfa4c72ab0ac07a88b0ca83de4"
+    },
+    {
+      "path": "tooling/search/contribution_beacon_v1.json",
+      "bytes": 5587,
+      "sha256": "9884a2779ac348e36234088de4b04b8a22221fa93515e0e397b95ea40fbd9d83"
+    },
+    {
+      "path": "tooling/search/contribution_store.mjs",
+      "bytes": 9619,
+      "sha256": "651bdad499ad99e542bfff019cd2e8d6f37844a1609286ad56180f5106addcfd"
+    },
+    {
+      "path": "tooling/search/episode_store.mjs",
+      "bytes": 5907,
+      "sha256": "1aea04ba790035a6514b3c70c7808d0b1fc6f896673849217c662c726c3421a0"
+    },
+    {
+      "path": "tooling/search/observatory_runtime.mjs",
+      "bytes": 25020,
+      "sha256": "86981d4edfb6afb4400b6beb31b874f8dfc8f7e7b7d294b71673bb3caca6b7f0"
+    },
+    {
+      "path": "tooling/search/observatory_server.mjs",
+      "bytes": 12363,
+      "sha256": "75ad08e9091cb4a2801e08482988ada0f00b0cede6d8257186e8f6013a0bb43b"
+    },
+    {
+      "path": "tooling/search/observatory/public/index.html",
+      "bytes": 11532,
+      "sha256": "5f7443ade7512cedf6b442a1ab811d0cebe459c0260e79fcd1b5965829f9a2a6"
+    },
+    {
+      "path": "tooling/search/observatory/public/app.js",
+      "bytes": 21487,
+      "sha256": "7a580b67fd9aa136db3aa27fe6947346629bcd8c14b25ba07aff798a78e568dd"
+    },
+    {
+      "path": "tooling/search/observatory/public/styles.css",
+      "bytes": 10301,
+      "sha256": "5eb93a52cd44d17c3f443497a97e6c2f3a6417f4e11543be432181dd3d6fc27b"
+    },
+    {
+      "path": "tooling/search/start_observatory.ps1",
+      "bytes": 2424,
+      "sha256": "fbfb9461fca4af75eaaa67bdc6f65c7d7c9316cac1e3dabbba946f877a3bac70"
+    },
+    {
+      "path": "tooling/search/manage_observatory_startup.ps1",
+      "bytes": 2718,
+      "sha256": "7693e4d7cee147b87c5d98999c6d688ceee231f609caaed07488524a8d2c48be"
+    },
+    {
+      "path": "tooling/search/run_corpus_observatory_evaluation.mjs",
+      "bytes": 20774,
+      "sha256": "2e29b2eebbd1abb2e389941c44422cc2d818f43ec7f87672f3ab3135dce1c1f9"
+    },
+    {
+      "path": "tooling/search/corpus_projection_manifest_v1.json",
+      "bytes": 688013,
+      "sha256": "898504dbd1026910eabae172a55d2bc879432044e45b3674f104a16e37e220ca"
+    },
+    {
+      "path": "tooling/search/durable_startup_receipt_v1.json",
+      "bytes": 2189,
+      "sha256": "98f79c1bc3646b843db6e6f88c7646b601f7f7feddea48752a35665c35e60f31"
+    },
+    {
+      "path": "tooling/search/OBSERVATORY.md",
+      "bytes": 10543,
+      "sha256": "a86c79274a043684e7ca514cca28301dd7be26ef5bf081d6c31adc66a55142aa"
+    },
+    {
+      "path": "evidence/data/context-hub-observatory-warmup-20261027.json",
+      "bytes": 16044,
+      "sha256": "161df8d62e94662c17e32c80dcc7a8d43263f6aa2f9135c532f3f9ca3c822499"
+    },
+    {
+      "path": "tests/repository/context_hub_observatory.test.mjs",
+      "bytes": 16093,
+      "sha256": "41cf94793b245624814daf3326188cf81e9969b3e8c1bfa9a682b9566e4427eb"
+    },
+    {
+      "path": "tests/repository/corpus_projection_manifest.test.mjs",
+      "bytes": 920,
+      "sha256": "b0cc1da398c4aacfc4d56d8b0b2a2e46eb07aa900380eb84b3974dc5488a283d"
+    },
+    {
+      "path": "tests/repository/observatory_application_candidate.test.mjs",
+      "bytes": 1632,
+      "sha256": "615e01dceda5cee10e15abe60e5752f6b8336500b584e415c7428f652be44161"
+    }
+  ],
+  "qualification": {
+    "commands": [
+      "node --test --test-concurrency=1 tests/repository/context_hub_observatory.test.mjs tests/repository/corpus_projection_manifest.test.mjs tests/repository/observatory_application_candidate.test.mjs",
+      "node tooling/search/run_corpus_observatory_evaluation.mjs",
+      "node tooling/audit/audit_markdown_links.mjs",
+      "git diff --check"
+    ],
+    "negativeControls": [
+      "missing or invalid operator bearer token rejected for every episode mutation and contribution coordination write",
+      "anonymous contribution intake creates a proposal receipt only and cannot admit attention evidence",
+      "tampered, truncated or reordered event chains rejected",
+      "stale expected revision and concurrent writer lock fail closed",
+      "freeze prevents proposals, approvals, rollback and policy changes",
+      "rollback appends a restoration event and never deletes intervening history",
+      "source-version, corpus-identity and causal-family replay mismatches rejected",
+      "credentials, mutable ledgers, PID and logs absent from the admitted package",
+      "localhost binding, body-size bound and restrictive browser policy retained",
+      "application admission grants neither read-only MCP authority nor corpus-promotion authority"
+    ],
+    "recoveryEvidence": {
+      "receipt": "tooling/search/durable_startup_receipt_v1.json",
+      "installedLauncherRehearsed": true,
+      "processReplacementObserved": true,
+      "credentialContinuityObserved": true,
+      "physicalRebootObserved": false
+    },
+    "protectedWarmupEvidence": {
+      "receipt": "evidence/data/context-hub-observatory-warmup-20261027.json",
+      "passed": true,
+      "operatorId": "context-hub.operator.local",
+      "credentialSha256": "c34b27a7cfdac3b48477af7c7edfefae95119da4d7de38e8e664142d66530ca1",
+      "writeProtected": true,
+      "corpusContentSha256": "678bec5d080f0663a54c2a804689209f7d733989008bd416290cc542bcaad2fe",
+      "sameRunEvidenceOnly": true
+    }
+  },
+  "admissionSequence": [
+    "stage these exact source members without credentials or mutable ledgers",
+    "materialize and verify the bound corpus projection separately",
+    "run the declared application, tamper, authorization, recovery and authority-boundary tests",
+    "inspect an empty-state launch and a copied-state recovery as different cases",
+    "bind a protected application identity distinct from the read-only MCP identity",
+    "admit and activate only the exact qualified package",
+    "verify state continuity, rollback, freeze and rejection controls through a fresh application session",
+    "retain physical reboot or logon observation as a separate operational receipt"
+  ],
+  "candidateSha256": "e23eb18a91879250c96146745c17e8daf252ac6769218055f66db3fb2a06b0be"
+}

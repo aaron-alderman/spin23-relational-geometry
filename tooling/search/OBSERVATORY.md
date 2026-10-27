@@ -7,6 +7,7 @@
 **Interface:** [browser client](observatory/public/index.html)
 **Regression:** [Observatory tests](../../tests/repository/context_hub_observatory.test.mjs)
 **Warm-up evaluation:** [retained 12-case receipt](../../evidence/data/context-hub-observatory-warmup-20261027.json)
+**Protected-application candidate:** [exact candidate manifest](observatory_application_candidate_v1.json)
 
 ## What makes the loop operational
 
@@ -100,4 +101,4 @@ Each episode is one JSONL file. Every event binds its episode, monotonic revisio
 
 The Observatory writes only its local episode ledger. It cannot modify corpus sources, change epistemic status, promote claims, admit applications or train model weights. Every influence must identify an explicit recorded turn and is bound to that turn's source-version hash, evidence receipt, causal evidence family, producer, independence class and derived selection arm. The host re-hashes source bytes and refuses both caller-supplied version mismatches and drift from the recorded turn. Observations from one causal family collapse to one effective update per source; adverse evidence wins conflicts within that family. Local machine proposals are host-labelled `same-run` and human ratings `human-policy`; this interface cannot self-declare independent verification. The underlying attention state rejects replay of the same receipt or family for the same source.
 
-The write-capable host is intentionally excluded from the read-only Sourcery MCP candidate. It now has a distinct local authenticated identity, but this is not protected application admission. Durable reboot startup and a separately admitted application lifecycle remain explicit open gates.
+The write-capable host is intentionally excluded from the read-only Sourcery MCP candidate. Its separate `context-hub.observatory.local` application candidate hashes the runtime, UI, launch/recovery controls, corpus projection dependency and qualification tests while expressly excluding the operator token, episode and contribution ledgers, PID and logs. This closes package identity, not protected application admission. The retained launcher rehearsal closes process recovery; a natural reboot/logon observation and a separately admitted application lifecycle remain explicit operational gates.

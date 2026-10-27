@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { createHash } from "node:crypto";
 
 const defaultBaseUrl = "http://127.0.0.1:4178";
 const defaultOutput = resolve(".context-hub", "evaluations", "corpus-warmup-latest.json");
+const defaultOperatorTokenFile = resolve(".context-hub", "operator.token");
 const sha256 = value => createHash("sha256").update(value).digest("hex");
 
 // Each case is an objective-scoped, preregistered relevance check. The marker is
@@ -98,19 +99,22 @@ const cases = [
 ];
 
 function parseArgs(argv) {
-  const result = { baseUrl: defaultBaseUrl, output: defaultOutput };
+  const result = { baseUrl: defaultBaseUrl, output: defaultOutput, operatorTokenFile: defaultOperatorTokenFile };
   for (let index = 0; index < argv.length; index += 1) {
     if (argv[index] === "--base-url") result.baseUrl = argv[++index];
     else if (argv[index] === "--out") result.output = resolve(argv[++index]);
+    else if (argv[index] === "--operator-token-file") result.operatorTokenFile = resolve(argv[++index]);
     else throw new Error(`unknown argument: ${argv[index]}`);
   }
   return result;
 }
 
-async function api(baseUrl, path, { method = "GET", body } = {}) {
+async function api(baseUrl, path, operatorToken, { method = "GET", body } = {}) {
+  const headers = body === undefined ? {} : { "content-type": "application/json" };
+  if (operatorToken) headers.authorization = `Bearer ${operatorToken}`;
   const response = await fetch(`${baseUrl}${path}`, {
     method,
-    headers: body === undefined ? {} : { "content-type": "application/json" },
+    headers,
     body: body === undefined ? undefined : JSON.stringify(body),
   });
   const payload = await response.json();
@@ -123,11 +127,11 @@ const position = (sources, path) => {
   return index < 0 ? null : index + 1;
 };
 
-async function runCase(baseUrl, testCase) {
+async function runCase(baseUrl, operatorToken, testCase) {
   const sourceText = readFileSync(resolve(testCase.expectedSource), "utf8");
   if (!testCase.marker.test(sourceText)) throw new Error(`${testCase.id}: preregistered marker is absent from ${testCase.expectedSource}`);
   const sourceVersionSha256 = sha256(sourceText);
-  const episode = await api(baseUrl, "/api/episodes", {
+  const episode = await api(baseUrl, "/api/episodes", operatorToken, {
     method: "POST",
     body: {
       objective: testCase.objective,
@@ -135,11 +139,11 @@ async function runCase(baseUrl, testCase) {
       controls: { adaptiveWeight: 0.2, explorationWeight: 0.05, graphWeight: 0.3, maxSources: 6, maxCharacters: 12000 },
     },
   });
-  const first = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, { method: "POST", body: { task: testCase.objective } });
+  const first = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, operatorToken, { method: "POST", body: { task: testCase.objective } });
   const firstBaseline = first.turn.plan.baseline.sources;
   const firstAdaptive = first.turn.plan.adaptive.sources;
   const candidateRank = first.turn.plan.candidateUniverse.find(source => source.path === testCase.expectedSource)?.rank ?? null;
-  const proposed = await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals`, {
+  const proposed = await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals`, operatorToken, {
     method: "POST",
     body: {
       observations: [{
@@ -153,17 +157,17 @@ async function runCase(baseUrl, testCase) {
       }],
     },
   });
-  const approved = await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals/${proposed.proposal.proposalId}/decision`, {
+  const approved = await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals/${proposed.proposal.proposalId}/decision`, operatorToken, {
     method: "POST",
     body: { decision: "approve", reason: "Exact source identity and preregistered boundary marker verified for this objective-scoped retrieval episode." },
   });
-  const second = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, { method: "POST", body: { task: testCase.objective } });
+  const second = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, operatorToken, { method: "POST", body: { task: testCase.objective } });
   const secondBaseline = second.turn.plan.baseline.sources;
   const secondAdaptive = second.turn.plan.adaptive.sources;
   const adaptivePosition = position(secondAdaptive, testCase.expectedSource);
   let answerReceiptSha256 = null;
   if (adaptivePosition !== null) {
-    const answer = await api(baseUrl, `/api/episodes/${episode.episodeId}/answers`, {
+    const answer = await api(baseUrl, `/api/episodes/${episode.episodeId}/answers`, operatorToken, {
       method: "POST",
       body: {
         turnId: second.turn.turnId,
@@ -181,7 +185,7 @@ async function runCase(baseUrl, testCase) {
     });
     answerReceiptSha256 = answer.answer.receipt.receiptSha256;
   }
-  const replay = await api(baseUrl, `/api/episodes/${episode.episodeId}/replay`, {
+  const replay = await api(baseUrl, `/api/episodes/${episode.episodeId}/replay`, operatorToken, {
     method: "POST",
     body: { adaptiveWeight: 0.2, explorationWeight: 0.05, graphWeight: 0.3, processVariance: 0.01 },
   });
@@ -216,10 +220,10 @@ async function runCase(baseUrl, testCase) {
   };
 }
 
-async function runAdversarialCanary(baseUrl) {
+async function runAdversarialCanary(baseUrl, operatorToken) {
   const testCase = cases.find(item => item.id === "jordan-positive-order");
   const expectedText = readFileSync(resolve(testCase.expectedSource), "utf8");
-  const episode = await api(baseUrl, "/api/episodes", {
+  const episode = await api(baseUrl, "/api/episodes", operatorToken, {
     method: "POST",
     body: {
       objective: testCase.objective,
@@ -228,10 +232,10 @@ async function runAdversarialCanary(baseUrl) {
     },
   });
   const initialStateSha256 = episode.beliefState.stateSha256;
-  const first = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, { method: "POST", body: { task: testCase.objective } });
+  const first = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, operatorToken, { method: "POST", body: { task: testCase.objective } });
   const distractor = first.turn.plan.baseline.sources.find(source => source.path !== testCase.expectedSource);
   if (!distractor) throw new Error("adversarial canary could not identify a competing selected source");
-  const proposed = await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals`, {
+  const proposed = await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals`, operatorToken, {
     method: "POST",
     body: {
       observations: [
@@ -256,25 +260,25 @@ async function runAdversarialCanary(baseUrl) {
       ],
     },
   });
-  const approved = await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals/${proposed.proposal.proposalId}/decision`, {
+  const approved = await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals/${proposed.proposal.proposalId}/decision`, operatorToken, {
     method: "POST",
     body: { decision: "approve", reason: "Exercise bounded positive and adverse attention evidence against exact source receipts." },
   });
-  const second = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, { method: "POST", body: { task: testCase.objective } });
+  const second = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, operatorToken, { method: "POST", body: { task: testCase.objective } });
   const beforeExpected = position(first.turn.plan.baseline.sources, testCase.expectedSource);
   const afterExpected = position(second.turn.plan.adaptive.sources, testCase.expectedSource);
   const beforeDistractor = position(first.turn.plan.baseline.sources, distractor.path);
   const afterDistractor = position(second.turn.plan.adaptive.sources, distractor.path);
-  const rolledBack = await api(baseUrl, `/api/episodes/${episode.episodeId}/rollback`, {
+  const rolledBack = await api(baseUrl, `/api/episodes/${episode.episodeId}/rollback`, operatorToken, {
     method: "POST",
     body: { targetStateSha256: initialStateSha256, reason: "Adversarial canary: prove admitted attention state is reversible." },
   });
-  const third = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, { method: "POST", body: { task: testCase.objective } });
+  const third = await api(baseUrl, `/api/episodes/${episode.episodeId}/turns`, operatorToken, { method: "POST", body: { task: testCase.objective } });
   const rollbackRestoredParity = JSON.stringify(third.turn.plan.baseline.sources.map(source => source.path)) === JSON.stringify(third.turn.plan.adaptive.sources.map(source => source.path));
-  await api(baseUrl, `/api/episodes/${episode.episodeId}/freeze`, { method: "POST", body: { frozen: true } });
+  await api(baseUrl, `/api/episodes/${episode.episodeId}/freeze`, operatorToken, { method: "POST", body: { frozen: true } });
   let frozenUpdateRefused = false;
   try {
-    await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals`, {
+    await api(baseUrl, `/api/episodes/${episode.episodeId}/proposals`, operatorToken, {
       method: "POST",
       body: { observations: [{ type: "user-rating", sourcePath: distractor.path, turnId: third.turn.turnId, value: 0.5 }] },
     });
@@ -301,7 +305,11 @@ async function runAdversarialCanary(baseUrl) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  const health = await api(options.baseUrl, "/api/health");
+  if (!existsSync(options.operatorTokenFile)) throw new Error(`operator token file does not exist: ${options.operatorTokenFile}`);
+  const operatorToken = readFileSync(options.operatorTokenFile, "utf8").trim();
+  if (!operatorToken) throw new Error("operator token file is empty");
+  const health = await api(options.baseUrl, "/api/health", null);
+  if (health.operator?.writeProtected !== true || health.operator.credentialSha256 !== sha256(operatorToken)) throw new Error("operator token does not match the protected Observatory identity");
   const startedAt = new Date().toISOString();
   const results = [];
   for (const testCase of cases) {
@@ -309,7 +317,7 @@ async function main() {
     let result = null;
     for (let attempt = 1; attempt <= 3 && result === null; attempt += 1) {
       try {
-        result = await runCase(options.baseUrl, testCase);
+        result = await runCase(options.baseUrl, operatorToken, testCase);
       } catch (error) {
         if (!/corpus identity is stale/iu.test(error.message) || attempt === 3) throw error;
         process.stderr.write(`  corpus drift refused attempt ${attempt}; restarting this objective from current bytes\n`);
@@ -318,18 +326,19 @@ async function main() {
     results.push(result);
   }
   process.stderr.write("adversarial canary: positive/adverse evidence, rollback and freeze\n");
-  const adversarialCanary = await runAdversarialCanary(options.baseUrl);
+  const adversarialCanary = await runAdversarialCanary(options.baseUrl, operatorToken);
 
   // Exercise the objective firewall against a real warmed episode.
   let crossObjectiveRefused = false;
   try {
-    await api(options.baseUrl, `/api/episodes/${results[0].episodeId}/turns`, { method: "POST", body: { task: cases[1].objective } });
+    await api(options.baseUrl, `/api/episodes/${results[0].episodeId}/turns`, operatorToken, { method: "POST", body: { task: cases[1].objective } });
   } catch (error) {
     crossObjectiveRefused = /exactly match/iu.test(error.message);
   }
   const corpusIdentities = [...new Set([...results.map(result => result.corpusContentSha256), adversarialCanary.corpusContentSha256])];
   const report = {
     protocol: "spin23-corpus-observatory-warmup-evaluation/1",
+    operator: { id: health.operator.id, credentialSha256: health.operator.credentialSha256, writeProtected: true },
     startedAt,
     completedAt: new Date().toISOString(),
     corpusContentSha256: corpusIdentities.length === 1 ? corpusIdentities[0] : null,
