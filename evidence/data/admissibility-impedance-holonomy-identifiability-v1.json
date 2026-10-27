@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "admissibility-impedance-holonomy-identifiability-v1",
+  "date": "2026-10-27",
+  "status": "scalar_no_go_and_matrix_residue_repair_closed",
+  "darkDoubletWitness": {
+    "dimension": 4,
+    "doubletRank": 2,
+    "latitudeCosine": 0.75,
+    "solidAngle": 1.5707963267948966,
+    "holonomy": "quarter-turn",
+    "scalarPort": [0, 0, 0, 1],
+    "scalarObservabilityRank": 1,
+    "scalarResponse": "1/(Delta-z)",
+    "fullPortObservabilityRank": 4
+  },
+  "identifiabilityRule": {
+    "response": "G_C(z;q)=sum_a C*P_a(q)C/(lambda_a(q)-z)",
+    "darkCondition": "C*P_a=0",
+    "degenerateClusterGate": "The port restriction to the rank-r target cluster must have rank r throughout the loop.",
+    "remainingEquivalence": "A minimal realization is identifiable only up to internal unitary equivalence unless the port-to-carrier map is independently calibrated."
+  },
+  "sharedNoRefitOutputs": [
+    "pole trajectories",
+    "matrix residue trajectories",
+    "projector holonomy",
+    "signed eta estimator"
+  ],
+  "nextGate": "Audit a concrete multiport device for cluster-rank observability before designing the held-out defect and reversed-loop experiment."
+}
