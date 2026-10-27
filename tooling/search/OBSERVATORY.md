@@ -37,6 +37,15 @@ powershell -ExecutionPolicy Bypass -File tooling/search/start_observatory.ps1
 
 Then open `http://127.0.0.1:4178`. Choose another port with `--port`. Runtime episodes are written beneath `.context-hub/episodes/`, which is excluded from Git. The browser asks for the token on the first protected write and keeps it only in that tab's session storage. Read it locally from `.context-hub/operator.token`; never commit or transmit it.
 
+After the branch is merged into a stable primary checkout, logon recovery can be installed for the current Windows user:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tooling/search/manage_observatory_startup.ps1 -Action Install -WhatIf
+powershell -ExecutionPolicy Bypass -File tooling/search/manage_observatory_startup.ps1 -Action Install
+```
+
+`Status` reports the installed launcher and `Uninstall` removes it. The installer refuses linked and managed worktrees because their paths are disposable; therefore this active worktree cannot honestly close the reboot-recovery gate. The generated logon launcher contains only the stable repository path and port. The operator credential remains in ignored runtime state and is created on first launch.
+
 The health endpoint is `/api/health`; `/api/beacon` exposes the same optional contribution invitation as the read-only MCP operation `corpus_contribution_beacon`. An agent may inspect and contribute without creating or adopting an adaptive episode. `POST /api/contributions` records a validated proposal in a separate append-only inbox and returns its hash-chain receipt. `GET /api/contributions` exposes dependency, claim, attribution, disposition and downstream-impact views. `POST /api/contributions/:id/claim`, `/release`, `/decision` and `/impact` append the corresponding coordination receipt. Inbox acceptance is acknowledgement only and cannot mutate an episode, admit attention evidence or promote corpus content.
 
 The server binds to localhost only, accepts JSON requests up to 2 MiB, exposes no cross-origin permission, serves a restrictive content-security policy and has no endpoint for deleting or rewriting events. The launcher names the write principal `context-hub.operator.local`. Its bearer token protects episode creation and every episode mutation, plus contribution claim, release, disposition and impact actions. Direct contribution submission deliberately remains open because it creates only a proposal receipt and has no admission effect. `/api/health` reports the principal and credential hash, never the credential.
