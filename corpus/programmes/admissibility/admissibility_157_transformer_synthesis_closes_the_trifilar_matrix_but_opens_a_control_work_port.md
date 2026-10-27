@@ -42,20 +42,20 @@ Because the bright and dark projectors are orthogonal,
 T(\phi)^TT(\phi)=K(\phi).
 \]
 
-Three unit capacitors on transformed ports (y=T x) therefore store
+Three unit capacitors on transformed ports \(y=T x\) therefore store
 
 \[
 U=\frac12y^Ty=\frac12x^TKx.
 \]
 
-With ideal transformer port laws (v_y=T v_x) and
-(i_x=T^Ti_y), instantaneous power is preserved. The static synthesis is
+With ideal transformer port laws \(v_y=T v_x\) and
+\(i_x=T^Ti_y\), instantaneous power is preserved. The static synthesis is
 lossless and reciprocal at the ideal network level. It is not an ordinary
 capacitor graph, and it is not yet a claim about a realizable broadband
 three-winding component.
 
-When (T), (K), or the admitted projector moves in time, the controller
-becomes another physical port. For a coordinate (x),
+When \(T\), \(K\), or the admitted projector moves in time, the controller
+becomes another physical port. For a coordinate \(x\),
 
 \[
 \frac{dU}{dt}
@@ -69,7 +69,7 @@ has a lossless transformer realization.
 ## Why hidden capacitors cannot help
 
 Let the full nodal capacitance matrix be partitioned into measured boundary
-nodes (b) and hidden internal nodes (i):
+nodes \(b\) and hidden internal nodes \(i\):
 
 \[
 C=\begin{pmatrix}C_{bb}&C_{bi}\\C_{ib}&C_{ii}\end{pmatrix}.
@@ -90,7 +90,7 @@ remain nonpositive and its row sums remain nonnegative. Auxiliary capacitor
 nodes can alter magnitudes and densify connections, but they cannot reverse
 the sign class.
 
-For the AZ-156 fixture (k_d=2), (k_b=1), the phase-zero target contains
+For the AZ-156 fixture \(k_d=2\), \(k_b=1\), the phase-zero target contains
 
 \[
 K(0)_{12}=\frac1{32}>0,
@@ -106,7 +106,7 @@ as previously stated.
 
 The transformer does not make a forbidden capacitor negative. It changes the
 relation between external coordinates and the coordinates seen by positive
-storage elements. Winding orientation permits signed entries in (T), while
+storage elements. Winding orientation permits signed entries in \(T\), while
 the paired transpose in the current law keeps power invariant:
 
 \[
@@ -119,12 +119,12 @@ v_x^Ti_x
 This is the circuit version of the corpus grammar:
 
 - the capacitor voltages are the **carrier** or stored thing;
-- (T) is the **selector** or dual face that declares which combinations the
+- \(T\) is the **selector** or dual face that declares which combinations the
   storage elements see;
-- (T^TT=K) is the **detector relation** returned to the external ports.
+- \(T^TT=K\) is the **detector relation** returned to the external ports.
 
 The factorization is not unique. Orthogonal transformations on the internal
-capacitor ports leave (T^TT) unchanged. Those hidden choices are physically
+capacitor ports leave \(T^TT\) unchanged. Those hidden choices are physically
 irrelevant only if loss, parasitics and detector coupling are also transformed
 or shown not to distinguish them.
 
@@ -135,15 +135,15 @@ There are three distinct implementations.
 ### Static spatial sequence
 
 A segmented line may contain fixed transformer matrices
-(T(\phi_1),T(\phi_2),\ldots) at successive locations. No parameter changes
+\(T(\phi_1),T(\phi_2),\ldots\) at successive locations. No parameter changes
 in time, but the propagating state encounters a spatial loop. Interface
 reflections, dynamical phase, dispersion and loss must be predicted with the
 same frozen model. This is the cleanest nominally passive route.
 
 ### Mechanically or electronically tuned sequence
 
-One device changes (T(t)) while the state remains in it. The term
-(\tfrac12x^T\dot Kx) must be measured or bounded. Even adiabatic control can
+One device changes \(T(t)\) while the state remains in it. The term
+\(\tfrac12x^T\dot Kx\) must be measured or bounded. Even adiabatic control can
 exchange energy; slow is not synonymous with free.
 
 ### Active synthetic coupling
@@ -159,7 +159,7 @@ The immediate experiment no longer needs to search blindly for a mysterious
 three-wire braid effect.
 
 1. Build a static three-port transformer/capacitor cell for several frozen
-   values of (phi), beginning with (0,\pi/2,\pi,3\pi/2).
+   values of \(\phi\), beginning with \(0,\pi/2,\pi,3\pi/2\).
 2. Measure the full complex terminal admittance, not three scalar magnitudes,
    and fit one parasitic model across all settings.
 3. Verify the bright singlet, dark doublet, projector motion and gap before
@@ -204,5 +204,10 @@ This note proves an ideal matrix factorization and a capacitor-only no-go. It
 does not prove that a compact reciprocal transformer with the required signed
 turns ratios, bandwidth, degeneracy and low loss is readily fabricable. It
 does not show that an experimental loop is adiabatic, that its observed return
-is geometric, or that a trifilar cable realizes (T(\phi)) by itself. Those
+is geometric, or that a trifilar cable realizes \(T(\phi)\) by itself. Those
 are the remaining hardware and detector gates.
+
+**Successor:** [AZ-158](admissibility_158_four_cells_calibrate_but_a_finite_projector_ladder_pays_for_the_quarter_turn.md)
+shows that four frozen settings calibrate the matrix family but do not resolve
+the transport: a finite projection ladder converges to the quarter-turn while
+carrying an independently measurable contraction cost.

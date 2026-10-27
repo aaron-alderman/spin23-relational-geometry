@@ -98,6 +98,7 @@ complex.
 21. [TUFT claim disposition and Beltrami programme exhaustion](../admissibility/admissibility_154_tuft_claim_disposition_and_beltrami_programme_exhaustion.md)
 22. [Trifilar braid fixed-plane no-go and moving-projector repair](../admissibility/admissibility_156_trifilar_braid_fixed_plane_no_go_and_moving_projector_repair.md)
 23. [Transformer synthesis closes the trifilar matrix but opens a control-work port](../admissibility/admissibility_157_transformer_synthesis_closes_the_trifilar_matrix_but_opens_a_control_work_port.md)
+24. [Four cells calibrate, but a finite projector ladder pays for the quarter-turn](../admissibility/admissibility_158_four_cells_calibrate_but_a_finite_projector_ladder_pays_for_the_quarter_turn.md)
 
 ## Executable spine
 
