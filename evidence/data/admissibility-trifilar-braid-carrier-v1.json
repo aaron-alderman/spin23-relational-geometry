@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "admissibility-trifilar-braid-carrier-v1",
+  "date": "2026-10-28",
+  "basis": {
+    "common": [0.5773502691896258, 0.5773502691896258, 0.5773502691896258],
+    "differential1": [0.7071067811865475, -0.7071067811865475, 0],
+    "differential2": [0.4082482904638631, 0.4082482904638631, -0.8164965809277261]
+  },
+  "cyclicPermutation": [
+    [0, 0, 1],
+    [1, 0, 0],
+    [0, 1, 0]
+  ],
+  "bareBraidBoundary": {
+    "differentialProjectorMoves": false,
+    "restrictedRotationDegreesMagnitude": 120,
+    "geometricHolonomy": "identity under canonical fixed-projector transport",
+    "interpretation": "The nontrivial endpoint action is a conductor permutation or modal transfer, not moving-subspace holonomy."
+  },
+  "slowLineFixture": {
+    "cellSpacingMeters": 0.1,
+    "seriesInductanceHenry": 1,
+    "shuntCapacitanceFarad": 0.0001,
+    "probeFrequencyHertz": 5
+  },
+  "movingProjectorRepair": {
+    "latitudeCosine": 0.75,
+    "darkEigenvalue": 2,
+    "brightEigenvalue": 1,
+    "rank": 2,
+    "solidAngleRadians": 1.5707963267948966,
+    "targetHolonomy": "quarter-turn",
+    "ordinaryPairwiseCapacitorRealizableForWholeLoop": false
+  },
+  "requiredRecords": [
+    "full three-port impedance or scattering matrix",
+    "common and differential modal decomposition",
+    "pole and matrix-residue trajectories",
+    "reconstructed moving projector",
+    "forward and reversed coherent return",
+    "stored energy, loss and prompt-feedthrough ledger"
+  ],
+  "nextGate": "Find or build a passive enlarged LC realization of the moving-projector loop, or declare an active emulator and close its supply/noise ports."
+}

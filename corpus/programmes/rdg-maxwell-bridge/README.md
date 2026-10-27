@@ -96,6 +96,7 @@ complex.
 19. [Scalar impedance cannot identify dark holonomy](../admissibility/admissibility_152_scalar_impedance_cannot_identify_dark_holonomy_but_matrix_residues_can.md)
 20. [Passive loss and the holonomy gap](../admissibility/admissibility_153_passive_loss_requires_a_bath_ledger_and_can_destroy_the_holonomy_gap.md)
 21. [TUFT claim disposition and Beltrami programme exhaustion](../admissibility/admissibility_154_tuft_claim_disposition_and_beltrami_programme_exhaustion.md)
+22. [Trifilar braid fixed-plane no-go and moving-projector repair](../admissibility/admissibility_156_trifilar_braid_fixed_plane_no_go_and_moving_projector_repair.md)
 
 ## Executable spine
 
