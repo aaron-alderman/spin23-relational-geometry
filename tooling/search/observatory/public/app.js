@@ -15,7 +15,15 @@ function toast(message, error = false) {
 }
 
 async function api(path, options = {}) {
-  const response = await fetch(path, { ...options, headers: { ...(options.body ? { "content-type": "application/json" } : {}), ...options.headers } });
+  let token = sessionStorage.getItem("contextHubOperatorToken");
+  let response = await fetch(path, { ...options, headers: { ...(options.body ? { "content-type": "application/json" } : {}), ...(token ? { authorization: `Bearer ${token}` } : {}), ...options.headers } });
+  if (response.status === 401 && options.method === "POST") {
+    token = window.prompt("Observatory operator token (stored for this browser tab only):")?.trim();
+    if (token) {
+      sessionStorage.setItem("contextHubOperatorToken", token);
+      response = await fetch(path, { ...options, headers: { ...(options.body ? { "content-type": "application/json" } : {}), authorization: `Bearer ${token}`, ...options.headers } });
+    }
+  }
   const value = await response.json();
   if (!response.ok) throw new Error(value.error ?? `Request failed: ${response.status}`);
   return value;

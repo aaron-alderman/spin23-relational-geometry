@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { createServer } from "node:http";
+import { createHash, timingSafeEqual } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -66,6 +67,16 @@ function send(response, status, value, type = "application/json; charset=utf-8")
   });
   response.end(body);
 }
+function tokenIdentity(token) {
+  return token ? createHash("sha256").update(token).digest("hex") : null;
+}
+function authorised(request, token) {
+  if (!token) return true;
+  const supplied = request.headers.authorization?.replace(/^Bearer\s+/iu, "") ?? "";
+  const expectedBytes = Buffer.from(token);
+  const suppliedBytes = Buffer.from(supplied);
+  return suppliedBytes.length === expectedBytes.length && timingSafeEqual(suppliedBytes, expectedBytes);
+}
 async function body(request) {
   const chunks = [];
   let length = 0;
@@ -79,19 +90,25 @@ async function body(request) {
   try { return JSON.parse(Buffer.concat(chunks).toString("utf8")); }
   catch { throw new Error("request body is not valid JSON"); }
 }
-export function createObservatoryServer({ root = resolve(moduleDirectory, "../.."), stateRoot } = {}) {
+export function createObservatoryServer({ root = resolve(moduleDirectory, "../.."), stateRoot, operatorToken, operatorId = "context-hub.operator.local" } = {}) {
   const runtime = createObservatoryRuntime({ root, stateRoot });
   const contributionRoot = stateRoot ? resolve(stateRoot, "..", "contributions") : resolve(root, ".context-hub", "contributions");
   const contributions = createContributionStore({ root: contributionRoot });
   const server = createServer(async (request, response) => {
     try {
       const url = new URL(request.url, "http://127.0.0.1");
+      const protectedContributionWrite = request.method === "POST" && /^\/api\/contributions\/contrib_[0-9a-f]{16}\/(?:claim|release|decision|impact)$/u.test(url.pathname);
+      const protectedEpisodeWrite = request.method === "POST" && (url.pathname === "/api/episodes" || /^\/api\/episodes\/ep_[0-9a-f]{16}(?:\/.*)?$/u.test(url.pathname));
+      if ((protectedContributionWrite || protectedEpisodeWrite) && !authorised(request, operatorToken)) {
+        response.setHeader("www-authenticate", 'Bearer realm="Context Hub Observatory"');
+        return send(response, 401, { error: "A valid Observatory operator bearer token is required", operatorId });
+      }
       if (request.method === "GET" && staticFiles.has(url.pathname)) {
         const path = join(publicRoot, staticFiles.get(url.pathname));
         if (!existsSync(path)) return send(response, 404, { error: "Observatory asset is missing" });
         return send(response, 200, readFileSync(path), contentTypes[extname(path)] ?? "application/octet-stream");
       }
-      if (request.method === "GET" && url.pathname === "/api/health") return send(response, 200, { status: "ok", protocol: "spin23-context-hub-observatory/1", persistence: runtime.store.root, contributionBeacon: "/api/beacon" });
+      if (request.method === "GET" && url.pathname === "/api/health") return send(response, 200, { status: "ok", protocol: "spin23-context-hub-observatory/1", persistence: runtime.store.root, contributionBeacon: "/api/beacon", operator: { id: operatorId, writeProtected: Boolean(operatorToken), credentialSha256: tokenIdentity(operatorToken) } });
       if (request.method === "GET" && url.pathname === "/api/beacon") return send(response, 200, { ...getContributionBeacon(), live: { contributionsEndpoint: "/api/contributions", pendingContributions: contributions.list().filter(item => item.disposition === "pending").length } });
       if (url.pathname === "/api/contributions" && request.method === "GET") return send(response, 200, { contributions: contributions.list() });
       if (url.pathname === "/api/contributions" && request.method === "POST") {
@@ -134,10 +151,10 @@ export function createObservatoryServer({ root = resolve(moduleDirectory, "../..
   });
   return { server, runtime, contributions };
 }
-export async function startObservatoryServer({ root, stateRoot, host = "127.0.0.1", port = 4178 } = {}) {
+export async function startObservatoryServer({ root, stateRoot, host = "127.0.0.1", port = 4178, operatorToken, operatorId } = {}) {
   if (host !== "127.0.0.1" && host !== "localhost") throw new Error("Observatory V1 binds to localhost only");
   if (!Number.isInteger(port) || port < 0 || port > 65535) throw new Error("port must be an integer from 0 to 65535");
-  const observatory = createObservatoryServer({ root, stateRoot });
+  const observatory = createObservatoryServer({ root, stateRoot, operatorToken, operatorId });
   await new Promise((resolveListen, reject) => {
     observatory.server.once("error", reject);
     observatory.server.listen(port, host, resolveListen);
@@ -147,9 +164,14 @@ export async function startObservatoryServer({ root, stateRoot, host = "127.0.0.
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const portIndex = process.argv.indexOf("--port");
   const stateIndex = process.argv.indexOf("--state-root");
+  const tokenFileIndex = process.argv.indexOf("--operator-token-file");
+  const operatorIdIndex = process.argv.indexOf("--operator-id");
   const port = portIndex >= 0 ? Number(process.argv[portIndex + 1]) : 4178;
   const stateRoot = stateIndex >= 0 ? resolve(process.argv[stateIndex + 1]) : undefined;
-  startObservatoryServer({ port, stateRoot }).then(({ url, runtime }) => {
+  const operatorToken = tokenFileIndex >= 0 ? readFileSync(resolve(process.argv[tokenFileIndex + 1]), "utf8").trim() : undefined;
+  const operatorId = operatorIdIndex >= 0 ? process.argv[operatorIdIndex + 1] : undefined;
+  if (tokenFileIndex >= 0 && !operatorToken) throw new Error("operator token file is empty");
+  startObservatoryServer({ port, stateRoot, operatorToken, operatorId }).then(({ url, runtime }) => {
     process.stdout.write(`Context Hub Observatory listening at ${url}\nEpisode store: ${runtime.store.root}\n`);
   }).catch(error => {
     process.stderr.write(`${error instanceof Error ? error.stack : String(error)}\n`);

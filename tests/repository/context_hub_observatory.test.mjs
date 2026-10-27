@@ -163,3 +163,23 @@ test("local Observatory server exposes static UI and the episode API", async t =
   assert.equal(planned.episode.metrics.turns, 1);
   assert.equal(planned.episode.authority.corpusPromotion, false);
 });
+test("operator identity protects episode and contribution coordination writes while intake stays open", async t => {
+  const { root, stateRoot } = fixture(t);
+  const operatorToken = "fixture-operator-token";
+  const running = await startObservatoryServer({ root, stateRoot, port: 0, operatorToken, operatorId: "fixture.operator" });
+  t.after(() => new Promise(resolve => running.server.close(resolve)));
+  const health = await fetch(`${running.url}/api/health`).then(response => response.json());
+  assert.deepEqual({ id: health.operator.id, writeProtected: health.operator.writeProtected }, { id: "fixture.operator", writeProtected: true });
+  assert.match(health.operator.credentialSha256, /^[0-9a-f]{64}$/u);
+  const proposal = await fetch(`${running.url}/api/contributions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ type: "retrieval-miss", objective: "boundary response candidate", profile: "audit", contributor: "fixture-agent", expected: "alpha", observed: "beta", narrowConclusion: "bounded miss", nextTest: "repeat", sourcePaths: [] }) });
+  assert.equal(proposal.status, 201, "proposal intake must not require operator authority");
+  const contribution = await proposal.json();
+  const deniedClaim = await fetch(`${running.url}/api/contributions/${contribution.contributionId}/claim`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ actor: "fixture-reviewer" }) });
+  assert.equal(deniedClaim.status, 401);
+  const deniedEpisode = await fetch(`${running.url}/api/episodes`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ objective: "boundary response candidate", profile: "audit" }) });
+  assert.equal(deniedEpisode.status, 401);
+  const authorisedEpisode = await fetch(`${running.url}/api/episodes`, { method: "POST", headers: { "content-type": "application/json", authorization: `Bearer ${operatorToken}` }, body: JSON.stringify({ objective: "boundary response candidate", profile: "audit" }) });
+  assert.equal(authorisedEpisode.status, 201);
+  const authorisedClaim = await fetch(`${running.url}/api/contributions/${contribution.contributionId}/claim`, { method: "POST", headers: { "content-type": "application/json", authorization: `Bearer ${operatorToken}` }, body: JSON.stringify({ actor: "fixture-reviewer" }) });
+  assert.equal(authorisedClaim.status, 200);
+});

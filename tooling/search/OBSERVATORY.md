@@ -29,17 +29,17 @@ A proposal never changes the admitted attention state. Approval is a second even
 node tooling/search/observatory_server.mjs
 ```
 
-On Windows, the idempotent hidden launcher retains logs and a PID beneath `.context-hub/`:
+On Windows, the idempotent hidden launcher retains logs, a PID and a generated 256-bit operator token beneath the ignored `.context-hub/` directory:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File tooling/search/start_observatory.ps1
 ```
 
-Then open `http://127.0.0.1:4178`. Choose another port with `--port`. Runtime episodes are written beneath `.context-hub/episodes/`, which is excluded from Git.
+Then open `http://127.0.0.1:4178`. Choose another port with `--port`. Runtime episodes are written beneath `.context-hub/episodes/`, which is excluded from Git. The browser asks for the token on the first protected write and keeps it only in that tab's session storage. Read it locally from `.context-hub/operator.token`; never commit or transmit it.
 
 The health endpoint is `/api/health`; `/api/beacon` exposes the same optional contribution invitation as the read-only MCP operation `corpus_contribution_beacon`. An agent may inspect and contribute without creating or adopting an adaptive episode. `POST /api/contributions` records a validated proposal in a separate append-only inbox and returns its hash-chain receipt. `GET /api/contributions` exposes dependency, claim, attribution, disposition and downstream-impact views. `POST /api/contributions/:id/claim`, `/release`, `/decision` and `/impact` append the corresponding coordination receipt. Inbox acceptance is acknowledgement only and cannot mutate an episode, admit attention evidence or promote corpus content.
 
-The server binds to localhost only, accepts JSON requests up to 2 MiB, exposes no cross-origin permission, serves a restrictive content-security policy and has no endpoint for deleting or rewriting events.
+The server binds to localhost only, accepts JSON requests up to 2 MiB, exposes no cross-origin permission, serves a restrictive content-security policy and has no endpoint for deleting or rewriting events. The launcher names the write principal `context-hub.operator.local`. Its bearer token protects episode creation and every episode mutation, plus contribution claim, release, disposition and impact actions. Direct contribution submission deliberately remains open because it creates only a proposal receipt and has no admission effect. `/api/health` reports the principal and credential hash, never the credential.
 
 ## Visible controls
 
@@ -89,4 +89,4 @@ Each episode is one JSONL file. Every event binds its episode, monotonic revisio
 
 The Observatory writes only its local episode ledger. It cannot modify corpus sources, change epistemic status, promote claims, admit applications or train model weights. Every influence must identify an explicit recorded turn and is bound to that turn's source-version hash, evidence receipt, causal evidence family, producer, independence class and derived selection arm. The host re-hashes source bytes and refuses both caller-supplied version mismatches and drift from the recorded turn. Observations from one causal family collapse to one effective update per source; adverse evidence wins conflicts within that family. Local machine proposals are host-labelled `same-run` and human ratings `human-policy`; this interface cannot self-declare independent verification. The underlying attention state rejects replay of the same receipt or family for the same source.
 
-The write-capable host is intentionally excluded from the read-only Sourcery MCP candidate. A future protected admission would require a distinct application identity and lifecycle.
+The write-capable host is intentionally excluded from the read-only Sourcery MCP candidate. It now has a distinct local authenticated identity, but this is not protected application admission. Durable reboot startup and a separately admitted application lifecycle remain explicit open gates.
