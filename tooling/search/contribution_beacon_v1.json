@@ -70,8 +70,8 @@
       "id": "BEACON-003",
       "priority": "P1",
       "title": "Run longitudinal baseline versus adaptive episodes",
-      "need": "The scheduled 12-task protocol and signed verifier are ready, but no independent evaluator key or real paired outcome set has been registered.",
-      "doneWhen": "An independent evaluator registers before context generation, scores all six held-out baseline/adaptive pairs, signs the exact receipts, and every utility, diversity, citation, rollback, freeze and drift gate passes."
+      "need": "The scheduled 12-task protocol, pre-context blinding commitment, opaque scorecard CLI and signed verifier are ready, but no independent evaluator key or real paired outcome set has been registered.",
+      "doneWhen": "An independent evaluator registers before context generation, scores and signs all six opaque held-out pairs without the arm mapping, and post-score unblinding verifies every utility, diversity, citation, rollback, freeze and drift gate."
     },
     {
       "id": "BEACON-004",

@@ -3,7 +3,7 @@ import { generateKeyPairSync, sign } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { sha256, stableStringify } from "../../tooling/search/belief_state.mjs";
-import { finalizeLongitudinalPlan, verifyLongitudinalRun } from "../../tooling/search/longitudinal_evaluation.mjs";
+import { assembleBlindedLongitudinalRun, createBlindedScorecard, finalizeLongitudinalPlan, signBlindedScorecard, verifyLongitudinalRun } from "../../tooling/search/longitudinal_evaluation.mjs";
 
 const template = JSON.parse(readFileSync(new URL("../../tooling/search/longitudinal_evaluation_template_v1.json", import.meta.url), "utf8"));
 const hash = character => character.repeat(64);
@@ -44,4 +44,46 @@ test("the verifier refuses self-evaluation, signature substitution and evidence-
   const { evaluatorSignature, ...duplicatePayload } = duplicate.run;
   duplicate.run.evaluatorSignature.signatureBase64 = sign(null, Buffer.from(stableStringify(duplicatePayload)), duplicate.privateKey).toString("base64");
   assert.throws(() => verifyLongitudinalRun(duplicate.plan, duplicate.run), /reused across tasks/iu);
+});
+
+test("preregistered opaque scorecards are signed before exact post-score unblinding", () => {
+  const { publicKey, privateKey } = generateKeyPairSync("ed25519");
+  const secret = "42".repeat(32);
+  const plan = finalizeLongitudinalPlan(template, {
+    evaluatorIdentity: "independent-blind-fixture",
+    evaluatorPublicKeyPem: publicKey.export({ type: "spki", format: "pem" }),
+    selectionHost: "observatory-selection-fixture",
+    blindingCommitmentSha256: sha256(secret),
+  });
+  const outcomes = plan.tasks.filter(task => task.phase === "evaluation").map((task, index) => {
+    const family = sha256(`blind-family-${index}`);
+    const arm = (name, answer) => ({
+      contextReceiptSha256: sha256(`${name}-context-${index}`),
+      answerReceiptSha256: sha256(`${name}-receipt-${index}`),
+      evidenceSha256: sha256(`${name}-evidence-${index}`),
+      evidenceFamilySha256: family,
+      unsupportedCitations: 0,
+      sourcePaths: [`corpus/${name}-${index}.md`],
+      answerText: answer,
+      answerSha256: sha256(answer),
+    });
+    return { taskId: task.id, baseline: arm("baseline", `baseline answer ${index}`), adaptive: arm("adaptive", `adaptive answer ${index}`) };
+  });
+  const draft = { protocol: "spin23-context-hub-longitudinal-answer-draft/1", planSha256: plan.planSha256, selectionHost: plan.selectionHost, corpusContentSha256: hash("c"), model: { name: "fixed-blind-fixture" }, outcomes };
+  const scorecard = createBlindedScorecard(plan, draft, secret);
+  assert.equal(JSON.stringify(scorecard).includes('"baseline"'), false);
+  assert.equal(JSON.stringify(scorecard).includes('"adaptive"'), false);
+  for (const item of scorecard.outcomes) for (const arm of item.arms) {
+    arm.score = arm.answerText.startsWith("adaptive") ? 0.8 : 0.6;
+    arm.notes = "Scored under an opaque arm label.";
+  }
+  const signed = signBlindedScorecard(plan, scorecard, privateKey.export({ type: "pkcs8", format: "pem" }));
+  const run = assembleBlindedLongitudinalRun(plan, signed, secret, { safety: { rollbackRestored: true, freezeRefused: true, sourceDriftRefused: true } });
+  const report = verifyLongitudinalRun(plan, run);
+  assert.equal(report.passed, true);
+  assert.equal(report.metrics.meanPairedDelta > 0, true);
+  const tampered = structuredClone(run);
+  tampered.blindedEvaluation.outcomes[0].arms[0].score = 1;
+  assert.throws(() => verifyLongitudinalRun(plan, tampered), /signature/iu);
+  assert.throws(() => assembleBlindedLongitudinalRun(plan, signed, "24".repeat(32), { safety: run.safety }), /commitment/iu);
 });

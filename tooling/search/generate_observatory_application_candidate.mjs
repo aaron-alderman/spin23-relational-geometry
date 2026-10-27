@@ -27,12 +27,18 @@ const sources = [
   "tooling/search/start_observatory.ps1",
   "tooling/search/manage_observatory_startup.ps1",
   "tooling/search/run_corpus_observatory_evaluation.mjs",
+  "tooling/search/longitudinal_evaluation.mjs",
+  "tooling/search/longitudinal_trial_cli.mjs",
+  "tooling/search/longitudinal_evaluation_template_v1.json",
+  "tooling/search/LONGITUDINAL_EVALUATION.md",
   "tooling/search/corpus_projection_manifest_v1.json",
   "tooling/search/durable_startup_receipt_v1.json",
   "tooling/search/OBSERVATORY.md",
   "evidence/data/context-hub-observatory-warmup-20261027.json",
   "tests/repository/context_hub_observatory.test.mjs",
   "tests/repository/corpus_projection_manifest.test.mjs",
+  "tests/repository/longitudinal_evaluation.test.mjs",
+  "tests/repository/longitudinal_trial_cli.test.mjs",
   "tests/repository/observatory_application_candidate.test.mjs",
 ];
 
@@ -79,7 +85,7 @@ export function buildObservatoryApplicationCandidate() {
     members,
     qualification: {
       commands: [
-        "node --test --test-concurrency=1 tests/repository/context_hub_observatory.test.mjs tests/repository/corpus_projection_manifest.test.mjs tests/repository/observatory_application_candidate.test.mjs",
+        "node --test --test-concurrency=1 tests/repository/context_hub_observatory.test.mjs tests/repository/corpus_projection_manifest.test.mjs tests/repository/longitudinal_evaluation.test.mjs tests/repository/longitudinal_trial_cli.test.mjs tests/repository/observatory_application_candidate.test.mjs",
         "node tooling/search/run_corpus_observatory_evaluation.mjs",
         "node tooling/audit/audit_markdown_links.mjs",
         "git diff --check",

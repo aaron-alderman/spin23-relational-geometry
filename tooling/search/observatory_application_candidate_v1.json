@@ -66,8 +66,8 @@
     },
     {
       "path": "tooling/search/contribution_beacon_v1.json",
-      "bytes": 5587,
-      "sha256": "9884a2779ac348e36234088de4b04b8a22221fa93515e0e397b95ea40fbd9d83"
+      "bytes": 5663,
+      "sha256": "d7a7019e8de2f8cf1ae0caa98511fa13e8c9928ee50839a3b015327e1b221545"
     },
     {
       "path": "tooling/search/contribution_store.mjs",
@@ -120,6 +120,26 @@
       "sha256": "2e29b2eebbd1abb2e389941c44422cc2d818f43ec7f87672f3ab3135dce1c1f9"
     },
     {
+      "path": "tooling/search/longitudinal_evaluation.mjs",
+      "bytes": 17203,
+      "sha256": "621ab3c0b50537ddb2bb3a145466b29b22b557ae65112eb0bdf53475c7c12f9c"
+    },
+    {
+      "path": "tooling/search/longitudinal_trial_cli.mjs",
+      "bytes": 4887,
+      "sha256": "718c3e2d98a29e0ca9b454f927aca4a1a292ea8a5445b81eedf54bc178bbb70d"
+    },
+    {
+      "path": "tooling/search/longitudinal_evaluation_template_v1.json",
+      "bytes": 2451,
+      "sha256": "db3d4e97956c572fecfe85dfd19110eebd41a747b9e66b98c715ecdafaac5831"
+    },
+    {
+      "path": "tooling/search/LONGITUDINAL_EVALUATION.md",
+      "bytes": 6866,
+      "sha256": "ec260b778b35c033685da226965ece6dc0253d1998a4e83f9fa1a7b801bed121"
+    },
+    {
       "path": "tooling/search/corpus_projection_manifest_v1.json",
       "bytes": 688013,
       "sha256": "898504dbd1026910eabae172a55d2bc879432044e45b3674f104a16e37e220ca"
@@ -131,8 +151,8 @@
     },
     {
       "path": "tooling/search/OBSERVATORY.md",
-      "bytes": 10543,
-      "sha256": "a86c79274a043684e7ca514cca28301dd7be26ef5bf081d6c31adc66a55142aa"
+      "bytes": 10774,
+      "sha256": "59fdf8675f8f9e6b67c534df850816908abb23f6bdb6aa6e42a5bb5e3efc9ee1"
     },
     {
       "path": "evidence/data/context-hub-observatory-warmup-20261027.json",
@@ -150,6 +170,16 @@
       "sha256": "b0cc1da398c4aacfc4d56d8b0b2a2e46eb07aa900380eb84b3974dc5488a283d"
     },
     {
+      "path": "tests/repository/longitudinal_evaluation.test.mjs",
+      "bytes": 6520,
+      "sha256": "b172a1abe063997d1a71c8807c9f202f614141cf7d281b807a4031ee58be8126"
+    },
+    {
+      "path": "tests/repository/longitudinal_trial_cli.test.mjs",
+      "bytes": 3837,
+      "sha256": "67eef1f52acc6a9772e87d21609dfc4e3b75797ea13fce13d8a24586eaf6be6a"
+    },
+    {
       "path": "tests/repository/observatory_application_candidate.test.mjs",
       "bytes": 1632,
       "sha256": "615e01dceda5cee10e15abe60e5752f6b8336500b584e415c7428f652be44161"
@@ -157,7 +187,7 @@
   ],
   "qualification": {
     "commands": [
-      "node --test --test-concurrency=1 tests/repository/context_hub_observatory.test.mjs tests/repository/corpus_projection_manifest.test.mjs tests/repository/observatory_application_candidate.test.mjs",
+      "node --test --test-concurrency=1 tests/repository/context_hub_observatory.test.mjs tests/repository/corpus_projection_manifest.test.mjs tests/repository/longitudinal_evaluation.test.mjs tests/repository/longitudinal_trial_cli.test.mjs tests/repository/observatory_application_candidate.test.mjs",
       "node tooling/search/run_corpus_observatory_evaluation.mjs",
       "node tooling/audit/audit_markdown_links.mjs",
       "git diff --check"
@@ -201,5 +231,5 @@
     "verify state continuity, rollback, freeze and rejection controls through a fresh application session",
     "retain physical reboot or logon observation as a separate operational receipt"
   ],
-  "candidateSha256": "e23eb18a91879250c96146745c17e8daf252ac6769218055f66db3fb2a06b0be"
+  "candidateSha256": "7d21b4750df31bb33cd17b554ba2d7707df41890fec34c55f893fb241d491644"
 }

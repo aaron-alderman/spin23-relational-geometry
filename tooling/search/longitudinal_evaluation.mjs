@@ -1,4 +1,4 @@
-import { createHash, createPublicKey, verify as verifySignature } from "node:crypto";
+import { createHash, createPublicKey, createPrivateKey, sign as createSignature, verify as verifySignature } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -7,6 +7,8 @@ import { sha256, stableStringify } from "./belief_state.mjs";
 const templateProtocol = "spin23-context-hub-longitudinal-template/1";
 const planProtocol = "spin23-context-hub-longitudinal-plan/1";
 const runProtocol = "spin23-context-hub-longitudinal-run/1";
+const draftProtocol = "spin23-context-hub-longitudinal-answer-draft/1";
+const scorecardProtocol = "spin23-context-hub-longitudinal-blinded-scorecard/1";
 const hashPattern = /^[0-9a-f]{64}$/u;
 
 const planPayload = plan => {
@@ -18,6 +20,20 @@ const runPayload = run => {
   return payload;
 };
 const keyFingerprint = publicKeyPem => createHash("sha256").update(createPublicKey(publicKeyPem).export({ type: "spki", format: "der" })).digest("hex");
+const scorecardPayload = scorecard => {
+  const { evaluatorSignature, ...payload } = scorecard;
+  return payload;
+};
+const armFields = arm => ({
+  contextReceiptSha256: arm.contextReceiptSha256,
+  answerReceiptSha256: arm.answerReceiptSha256,
+  evidenceSha256: arm.evidenceSha256,
+  evidenceFamilySha256: arm.evidenceFamilySha256,
+  score: arm.score,
+  unsupportedCitations: arm.unsupportedCitations,
+  sourcePaths: arm.sourcePaths,
+});
+const baselineLabel = (secret, taskId) => parseInt(sha256(`${secret}\0${taskId}`).slice(0, 2), 16) % 2 === 0 ? "arm-a" : "arm-b";
 
 function validateTasks(tasks) {
   if (!Array.isArray(tasks) || tasks.length < 8 || tasks.length > 100) throw new Error("longitudinal plan requires 8 to 100 tasks");
@@ -33,7 +49,7 @@ function validateTasks(tasks) {
   if (tasks.filter(task => task.phase === "calibration").length < 4 || tasks.filter(task => task.phase === "evaluation").length < 4) throw new Error("longitudinal plan requires at least four calibration and four evaluation tasks");
 }
 
-export function finalizeLongitudinalPlan(template, { evaluatorIdentity, evaluatorPublicKeyPem } = {}) {
+export function finalizeLongitudinalPlan(template, { evaluatorIdentity, evaluatorPublicKeyPem, selectionHost, blindingCommitmentSha256 } = {}) {
   if (!template || template.protocol !== templateProtocol) throw new Error("longitudinal template protocol is invalid");
   validateTasks(template.tasks);
   if (typeof evaluatorIdentity !== "string" || evaluatorIdentity.trim().length < 2 || evaluatorIdentity.length > 200) throw new Error("independent evaluator identity is required");
@@ -46,9 +62,91 @@ export function finalizeLongitudinalPlan(template, { evaluatorIdentity, evaluato
     tasks: template.tasks,
     thresholds: template.thresholds,
     evaluator: { identity: evaluatorIdentity.trim(), publicKeySha256: keyFingerprint(evaluatorPublicKeyPem), publicKeyPem: evaluatorPublicKeyPem },
+    ...(selectionHost || blindingCommitmentSha256 ? {
+      selectionHost: typeof selectionHost === "string" && selectionHost.trim().length >= 2 && selectionHost.length <= 200 ? selectionHost.trim() : (() => { throw new Error("selection host identity is required for blinded evaluation"); })(),
+      blinding: { algorithm: "sha256-secret-task-parity-v1", commitmentSha256: hashPattern.test(blindingCommitmentSha256 ?? "") ? blindingCommitmentSha256 : (() => { throw new Error("blinding commitment is required for blinded evaluation"); })() },
+    } : {}),
     authority: template.authority,
   };
   return { ...payload, planSha256: sha256(payload) };
+}
+
+function validateDraftArm(arm, taskId, name) {
+  validateArm({ ...arm, score: 0 }, taskId, name);
+  if (typeof arm.answerText !== "string" || arm.answerText.length > 200000 || !hashPattern.test(arm.answerSha256 ?? "") || sha256(arm.answerText) !== arm.answerSha256) throw new Error(`${taskId} ${name} answer text identity is invalid`);
+}
+
+export function createBlindedScorecard(plan, draft, blindingSecret) {
+  if (!plan?.blinding || !hashPattern.test(blindingSecret ?? "") || sha256(blindingSecret) !== plan.blinding.commitmentSha256) throw new Error("blinding secret does not match the preregistered commitment");
+  if (!draft || draft.protocol !== draftProtocol || draft.planSha256 !== plan.planSha256 || draft.selectionHost !== plan.selectionHost || !hashPattern.test(draft.corpusContentSha256 ?? "")) throw new Error("longitudinal answer draft identity is invalid");
+  const tasks = plan.tasks.filter(task => task.phase === "evaluation");
+  if (!Array.isArray(draft.outcomes) || draft.outcomes.length !== tasks.length) throw new Error("longitudinal answer draft does not contain every evaluation task");
+  const byId = new Map(draft.outcomes.map(item => [item.taskId, item]));
+  if (byId.size !== tasks.length || tasks.some(task => !byId.has(task.id))) throw new Error("longitudinal answer draft task identities are invalid");
+  const outcomes = tasks.map(task => {
+    const item = byId.get(task.id);
+    validateDraftArm(item.baseline, task.id, "baseline");
+    validateDraftArm(item.adaptive, task.id, "adaptive");
+    if (item.baseline.evidenceFamilySha256 !== item.adaptive.evidenceFamilySha256) throw new Error(`${task.id} draft arms must share one evaluation family`);
+    const baseLabel = baselineLabel(blindingSecret, task.id);
+    const label = arm => arm === "baseline" ? baseLabel : baseLabel === "arm-a" ? "arm-b" : "arm-a";
+    return {
+      taskId: task.id,
+      task: task.task,
+      arms: ["baseline", "adaptive"].map(name => ({ label: label(name), ...item[name], score: null, notes: null })).sort((left, right) => left.label.localeCompare(right.label)),
+    };
+  });
+  return { protocol: scorecardProtocol, planSha256: plan.planSha256, evaluator: plan.evaluator.identity, selectionHost: plan.selectionHost, corpusContentSha256: draft.corpusContentSha256, model: draft.model, outcomes, authority: plan.authority };
+}
+
+function validateScoredScorecard(plan, scorecard, requireSignature = true) {
+  if (!scorecard || scorecard.protocol !== scorecardProtocol || scorecard.planSha256 !== plan.planSha256 || scorecard.evaluator !== plan.evaluator.identity || scorecard.selectionHost !== plan.selectionHost || !hashPattern.test(scorecard.corpusContentSha256 ?? "")) throw new Error("blinded scorecard identity is invalid");
+  const tasks = plan.tasks.filter(task => task.phase === "evaluation");
+  const byId = new Map((scorecard.outcomes ?? []).map(item => [item.taskId, item]));
+  if (byId.size !== tasks.length || tasks.some(task => !byId.has(task.id))) throw new Error("blinded scorecard task identities are invalid");
+  for (const task of tasks) {
+    const item = byId.get(task.id);
+    if (!Array.isArray(item.arms) || item.arms.length !== 2 || new Set(item.arms.map(arm => arm.label)).size !== 2 || item.arms.some(arm => !["arm-a", "arm-b"].includes(arm.label))) throw new Error(`${task.id} blinded arm labels are invalid`);
+    for (const arm of item.arms) {
+      validateArm(arm, task.id, arm.label);
+      if (typeof arm.answerText !== "string" || sha256(arm.answerText) !== arm.answerSha256) throw new Error(`${task.id} ${arm.label} answer text identity is invalid`);
+      if (arm.notes !== null && arm.notes !== undefined && (typeof arm.notes !== "string" || arm.notes.length > 4000)) throw new Error(`${task.id} ${arm.label} notes are invalid`);
+    }
+  }
+  if (requireSignature) {
+    const signature = scorecard.evaluatorSignature;
+    if (!signature || signature.algorithm !== "Ed25519" || typeof signature.signatureBase64 !== "string" || !verifySignature(null, Buffer.from(stableStringify(scorecardPayload(scorecard))), createPublicKey(plan.evaluator.publicKeyPem), Buffer.from(signature.signatureBase64, "base64"))) throw new Error("blinded evaluator signature is invalid");
+  }
+}
+
+export function signBlindedScorecard(plan, scorecard, evaluatorPrivateKeyPem) {
+  validateScoredScorecard(plan, scorecard, false);
+  const signatureBase64 = createSignature(null, Buffer.from(stableStringify(scorecardPayload(scorecard))), createPrivateKey(evaluatorPrivateKeyPem)).toString("base64");
+  return { ...scorecardPayload(scorecard), evaluatorSignature: { algorithm: "Ed25519", signatureBase64 } };
+}
+
+export function assembleBlindedLongitudinalRun(plan, signedScorecard, blindingSecret, { safety } = {}) {
+  validateScoredScorecard(plan, signedScorecard, true);
+  if (!hashPattern.test(blindingSecret ?? "") || sha256(blindingSecret) !== plan.blinding?.commitmentSha256) throw new Error("blinding secret does not match the preregistered commitment");
+  const outcomes = plan.tasks.filter(task => task.phase === "evaluation").map(task => {
+    const item = signedScorecard.outcomes.find(candidate => candidate.taskId === task.id);
+    const base = baselineLabel(blindingSecret, task.id);
+    const byLabel = new Map(item.arms.map(arm => [arm.label, arm]));
+    return { taskId: task.id, baseline: armFields(byLabel.get(base)), adaptive: armFields(byLabel.get(base === "arm-a" ? "arm-b" : "arm-a")) };
+  });
+  return {
+    protocol: runProtocol,
+    planSha256: plan.planSha256,
+    corpusContentSha256: signedScorecard.corpusContentSha256,
+    selectionHost: plan.selectionHost,
+    evaluator: plan.evaluator.identity,
+    model: signedScorecard.model,
+    outcomes,
+    safety,
+    authority: { corpusPromotion: false, changesTruthStatus: false, modelWeightTraining: false },
+    blindingSecret,
+    blindedEvaluation: signedScorecard,
+  };
 }
 
 function validateArm(arm, taskId, name) {
@@ -63,10 +161,17 @@ export function verifyLongitudinalRun(plan, run) {
   validateTasks(plan.tasks);
   if (keyFingerprint(plan.evaluator.publicKeyPem) !== plan.evaluator.publicKeySha256) throw new Error("longitudinal evaluator key does not match the preregistration");
   if (!run || run.protocol !== runProtocol || run.planSha256 !== plan.planSha256 || run.evaluator !== plan.evaluator.identity) throw new Error("longitudinal run identity is invalid");
+  if (plan.selectionHost && run.selectionHost !== plan.selectionHost) throw new Error("longitudinal selection host does not match the preregistration");
   if (run.selectionHost === run.evaluator) throw new Error("longitudinal evaluator must be independent of the selection host");
   if (!hashPattern.test(run.corpusContentSha256 ?? "") || !run.authority || run.authority.corpusPromotion !== false || run.authority.changesTruthStatus !== false || run.authority.modelWeightTraining !== false) throw new Error("longitudinal run authority is invalid");
-  const signature = run.evaluatorSignature;
-  if (!signature || signature.algorithm !== "Ed25519" || typeof signature.signatureBase64 !== "string" || !verifySignature(null, Buffer.from(stableStringify(runPayload(run))), createPublicKey(plan.evaluator.publicKeyPem), Buffer.from(signature.signatureBase64, "base64"))) throw new Error("longitudinal evaluator signature is invalid");
+  if (plan.blinding) {
+    validateScoredScorecard(plan, run.blindedEvaluation, true);
+    const assembled = assembleBlindedLongitudinalRun(plan, run.blindedEvaluation, run.blindingSecret, { safety: run.safety });
+    if (stableStringify(assembled.outcomes) !== stableStringify(run.outcomes) || assembled.corpusContentSha256 !== run.corpusContentSha256) throw new Error("unblinded longitudinal outcomes do not match the signed scorecard");
+  } else {
+    const signature = run.evaluatorSignature;
+    if (!signature || signature.algorithm !== "Ed25519" || typeof signature.signatureBase64 !== "string" || !verifySignature(null, Buffer.from(stableStringify(runPayload(run))), createPublicKey(plan.evaluator.publicKeyPem), Buffer.from(signature.signatureBase64, "base64"))) throw new Error("longitudinal evaluator signature is invalid");
+  }
   const evaluationTasks = plan.tasks.filter(task => task.phase === "evaluation");
   if (!Array.isArray(run.outcomes) || run.outcomes.length !== evaluationTasks.length) throw new Error("longitudinal run does not contain every evaluation task exactly once");
   const byId = new Map(run.outcomes.map(outcome => [outcome.taskId, outcome]));
