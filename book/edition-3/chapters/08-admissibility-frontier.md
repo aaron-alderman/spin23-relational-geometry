@@ -235,6 +235,31 @@ Collapsing rails and relation types gives the ordinary support Laplacian of rank
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-the-mirror-face-exists-before-the-quotient-claim-3.md)
 
+<a id="current-research-note-record-laws-sit-between-possibility-and-public-fact"></a>
+## Current research note — record laws sit between possibility and public fact
+
+> **Research move — [⊕ Integrator](../reading-key/move-integrator.md)** — joins several typed results while letting the weakest edge set the claim.
+
+A reproducible finite-observer construction now supplies an exact example of the layer the Jordan–Lie language previously left implicit. Positive operators describe which quantum possibilities can coexist; reversible transformations describe how an admitted carrier can move; completely positive record channels describe how coherence is retained, contracted or converted into a public classical record. Repair then composes those local updates through a history. The channel is not an afterthought: it is the typed passage from possibility to fact.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-1.md)
+
+At the pinned Observer Patch Holography source revision, four distinct admissible record laws share one classical repair table while retaining different quantum coherences. A phase-sensitive detector separates them through one complex coherence coordinate, repeated repair selects different idempotent limits, and the full focused suite reproduces exactly. This is a real local-closure and detector result, but it does not select which law nature uses.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-2.md)
+
+The follow-on calculation closes that mathematical boundary. The channel family is an exact nine-real-dimensional Choi spectrahedron; its two idempotent laws have fixed spaces of dimensions 3,236 and 3,126, differing by 110 empty-to-full seam coherences. Every family member is non-injective, so no discrete repair is a finite-time exponential of a bounded autonomous generator. All five named laws commute on disjoint seams and fail to commute on adjacent seams. The first idempotent fixes a full M₅₆(C) block, so its complex two-level corners form Gr_C(2,56); 55 counts only the source-basis empty/full pairs. No source rule chooses one complex plane or a real phase slice. Thus the current source yields detector- and schedule-relative local closure, not a canonical H₂(ℝ) carrier or Spin₀(2,3) action. The surviving practical target is a phase- and order-sensitive emulator with explicit scheduler controls.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-3.md)
+
+The emulator preflight makes the cost visible. A seven-qubit one-seam or eight-qubit reusable-ancilla adjacent-seam design fits the logical carrier. The nearest one-step law pair needs a conservative 4,470 shots per arm at one-percent familywise error, while separating the fourth repair from its limit needs 49,083 and the eighth would need about 12.6 million. The primary experiment therefore stops at depth four, reverses adjacent order, and requires an uncertainty-aware bound placing the corrected underlying disjoint-order distance below 0.02. That is a realistic instrument and memory benchmark; it becomes physics-facing only if a replicated residual survives the complete conventional channel model.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-4.md)
+
+At this pinned revision the internal OPH lane is exhausted in a precise, limited sense, and a clean-room logical reference now implements the seam, phase and repetition equations and compiles the four named definite-current instruments without importing the source code. It predicts held-out phases, recovers adjacent-order total variation 0.25 and exact disjoint commutation, and verifies the sparse logical isometries to machine precision. It also shows that two 5,000-shot null samples can have raw empirical distance just above 0.02, so the null must be an uncertainty-aware equivalence statement rather than a cutoff on raw frequencies. The remaining steps are native-gate lowering, device execution, a complete process model, independent-platform replication, or a physical attachment predicting records beyond ordinary channel theory. This stop rule prevents a successful logical replay from being mistaken for hardware or physics.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-current-research-note-record-laws-sit-between-possibility-and-public-fact-claim-5.md)
+
 <a id="three-local-motion-types"></a>
 ## Three local motion types
 
@@ -318,6 +343,10 @@ Hawking radiation needs a geometry, quantum state, mode continuation, greybody s
 Nuclear isomers, shape coexistence, fission and compound resonances are the near-term hostile controls. They let one vary parent structure, channel coupling and detector record separately. Success first earns better theory engineering; only a replicated residual outside established nuclear, gravitational and detector models earns a new-physics claim.
 
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-3.md)
+
+The five lanes share a source–evolution–channel–detector composition but differ in which block can be controlled. Thorium-229 is the fastest nested-closure test; generic nuclear reactions are the harshest vocabulary test; Unruh is the cleanest detector regression; Kerr is the strongest multi-record fundamental falsifier; Hawking is the deepest state–geometry–record endpoint. No lane yet supplies a source-derived Jordan/Lie physical bridge.
+
+> **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-observers-horizons-and-outgoing-channels-claim-4.md)
 
 <a id="the-third-term-is-the-mediator"></a>
 ## The third term is the mediator

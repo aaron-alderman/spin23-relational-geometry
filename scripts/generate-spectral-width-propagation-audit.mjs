@@ -19,28 +19,34 @@ const groups = {
     /frontier-physics-targets\/(?:detector_frontier_atlas|finesse_technology_pathway|frontier_complexity_cards|frontier_physics_target_coverage_map)/u,
     /frontier-physics-targets\/README\.md/u,
     /frontier-physics-targets\/observer_horizon_nuclear_literature_review_v1\.md/u,
+    /translation-free-exceptional-topology\/(?:README|RESEARCH_DOCKET)\.md/u,
   ],
   open_system_or_network_width: [
     /\/664_the_pole_response|\/948_each_lossy_response_face/u,
-    /admissibility_(?:109|142|59|62)_|frontier_wave7_(?:65|70)_/u,
+    /admissibility_(?:109|142|144|59|62)_|frontier_wave7_(?:65|70)_/u,
     /lattice-subroutine-gravity\/(?:three-mode-loop-seam|two-quadrature-seam|two-resonator-transfer)/u,
   ],
   physical_spectroscopy_requires_width_ledger: [
     /\/(?:1230|1399|1454|1456|1459|1462|1464|1469)_/u,
     /admissibility_(?:27|28|33|64|117|118|138)_|lane-expansion\/programme_lane_expansion_19/u,
+    /translation-free-exceptional-topology\/QUASICRYSTAL_BACKPLANE_BRIDGE/u,
+    /translation-free-exceptional-topology\/E8_CONSTITUTIVE_METRIC_GATE/u,
   ],
   contextual_or_synthesis_use: [
     /\/dynatology\/|programme_closure_|grand-synthesis/u,
-    /admissibility_(?:07|7|11|32|35|56)_|frontier_wave6_|frontier_wave7_(?:11|42|104|108|140)_/u,
+    /admissibility_(?:07|7|11|32|35|56|147)_|frontier_wave6_|frontier_wave7_(?:11|42|104|108|140)_/u,
   ],
   spectrum_gap_or_residue_not_width: [
     /^corpus\/claims\//u,
     /frontier_wave7_|moonshine-program-lattice|admissibility_(?:58|69)_|lane-expansion\/programme_lane_expansion_12/u,
+    /translation-free-exceptional-topology\/E8_COUPLED_WIRE_TOMOGRAPHY/u,
+    /translation-free-exceptional-topology\/E8_CARTAN_SHELL10_SPECTROSCOPY/u,
+    /lattice-subroutine-gravity\/period-matrix-jordan-boundary-gate/u,
   ],
 };
 const reasons = {
   navigation_or_register: "Navigation, coverage or detector inventory; it inherits source widths and makes no independent microscopic identification.",
-  open_system_or_network_width: "A declared effective network, environment rate, ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime.",
+  open_system_or_network_width: "A declared effective network, environment rate, quasinormal ringdown or pole width is valid on its carrier but is not promoted to a microscopic population lifetime; detector response, analysis-window broadening and physical damping must remain separately controlled.",
   physical_spectroscopy_requires_width_ledger: "A proposed or physical spectroscopy lane must carry AZ-128 population, phase, static-spread, drive, apparatus and convention fields before interpreting a width.",
   contextual_or_synthesis_use: "The document uses spectral language to map, compare or govern branches; it is not an independent width determination.",
   spectrum_gap_or_residue_not_width: "The result concerns eigenvalues, bands, gaps, residues, support or algebraic poles; no measured linewidth-to-lifetime identification is made.",

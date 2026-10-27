@@ -27,7 +27,14 @@ const markdownRoots = ["corpus", "book/edition-3/chapters", "verification"];
 // would make baseline and front-door regeneration recursively invalidate one
 // another.  Its dedicated repository test governs its own byte identity.
 const contentIdentityExcludedPaths = new Set([
+  // Generated evidence/navigation prose is searchable but its machine twin is
+  // already bound separately below. Keeping it out of the content hash avoids
+  // counting the same control surface twice.
+  "corpus/EVIDENCE_SPINE.md",
   "corpus/FRONT_DOOR.md",
+  // This gate records the benchmark produced from the search identity; it is a
+  // downstream verifier and therefore cannot also define that identity.
+  "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.md",
   // The release certificate contains the projection hash it reports. It stays
   // searchable, but cannot recursively define the retained search identity.
   "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",

@@ -8,6 +8,17 @@ const outJson = "corpus/programmes/frontier-physics-targets/quarter_turn_split_d
 const outMd = "corpus/programmes/frontier-physics-targets/quarter_turn_split_dual_propagation_audit_v1.md";
 const posix = value => value.split(sep).join("/");
 const digest = value => createHash("sha256").update(value).digest("hex");
+const writeWithTransientRetry = (path, value) => {
+  for (let attempt = 0; ; attempt += 1) {
+    try {
+      writeFileSync(path, value);
+      return;
+    } catch (error) {
+      if (attempt >= 4 || !["UNKNOWN", "EPERM", "EBUSY"].includes(error?.code)) throw error;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 100 * (attempt + 1));
+    }
+  }
+};
 
 function walk(directory) {
   return readdirSync(directory).flatMap(name => {
@@ -142,8 +153,8 @@ The semantic propagation queue is closed when every matching corpus document has
 `;
 
 if (write) {
-  writeFileSync(join(root, outJson), `${JSON.stringify(output, null, 2)}\n`);
-  writeFileSync(join(root, outMd), md);
+  writeWithTransientRetry(join(root, outJson), `${JSON.stringify(output, null, 2)}\n`);
+  writeWithTransientRetry(join(root, outMd), md);
 }
 
 console.log(JSON.stringify({ result: "pass", write, outputs: write ? [outJson, outMd] : [], summary: output.summary }, null, 2));

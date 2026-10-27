@@ -10,7 +10,7 @@ The next route to new physics may begin not with higher energy but with greater 
 
 > **Authority boundary.** This edition reports exact calculations, bounded constructions, conditional physical bridges and closed branches. It is not empirical confirmation, peer review or a derivation of the Standard Model. The strong claim that admissibility is ontologically prior to physics remains a research proposal; the finesse pathway and its typed tests are the practical result established here.
 
-> **Call to action.** Help build the distributed search: take one carrier, theorem, computation, detector, negative control or experimental gate; prove it, build it, reproduce it or kill it; then return a packet another contributor can continue. [Join the Halloween Monster Hunt](https://aaron-alderman.github.io/halloween-monster-hunt/) or [read the full call to action](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md).
+> **Call to action.** Help build the distributed search: take one carrier, theorem, computation, detector, negative control or experimental gate; prove it, build it, reproduce it or kill it; then return a packet another contributor can continue. [Join the Halloween Monster Hunt](https://aaron-alderman.github.io/halloween-monster-hunt/) or [read the full call to action](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md)
 
 ## Contents
 
@@ -40,4 +40,4 @@ The next route to new physics may begin not with higher energy but with greater 
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `3b1465aa9f47af9a87c1620f483a898e4bff71fabecbd1629811164198fd3b09`
+Citation-set digest: `c9d3b1537d889ec1af514e5beb863ac2a83bf56160b37db92505006ba3cea7f6`

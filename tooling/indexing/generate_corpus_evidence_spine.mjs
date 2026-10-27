@@ -254,7 +254,9 @@ const linkedObjectPaths = [...new Set(claims.flatMap(claim => [
 
 const spine = {
   schema: "spin23-corpus-evidence-spine/v1",
-  generatedAt: new Date().toISOString(),
+  // A derived index must be reproducible from its canonical input. Wall-clock
+  // time is not evidence and made clean-checkout regeneration change bytes.
+  generatedAt: manifest.generatedAt,
   purpose: "A read-only structural join from claims to exact references, declared evidence and certificates, scoped verdict text, and inbound consumer candidates.",
   authorityBoundary: "Observed means text or identity present in the retained repository. Inferred means a reversible path or lexical classification, never scientific promotion. Missing means the join was not found, not that the underlying evidence does not exist. This index grants no scheduling, publication, runtime, corpus-admission, or scientific authority.",
   source: {

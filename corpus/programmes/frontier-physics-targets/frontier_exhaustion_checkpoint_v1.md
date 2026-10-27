@@ -2,7 +2,7 @@
 
 **Date:** 25 October 2026
 **Status:** explicit gate enumeration exhausted across the complete corpus Markdown/JSON scope; physics programme remains open  
-**Queue authority:** [50-topic register](open_topics_register_v1.json)
+**Queue authority:** [53-topic register](open_topics_register_v1.json)
 
 **Durable completion authority:** [corpus completion exit criteria](corpus_completion_exit_criteria_v1.md). The checkpoint below establishes current-input search and ownership exhaustion only; it does not establish full physics–mathematics saturation.
 
@@ -11,12 +11,12 @@
 The corpus has a closed navigation loop from target to frontier area to detector bundle to open topic to next action, closure condition and kill test. The audit covers:
 
 - all 22 canonical physics targets and all 20 frontier areas;
-- 36 detector bundles, including records, controls, maturity and source provenance;
-- all 117 admissibility packets; AZ-041--AZ-117 now sit in a machine-maintained continuation register rather than outside the older zone register;
-- all 93 Wave 6--7 packet files in the reconciled audit (17 Wave 6 and 76 Wave 7), with reused display numbers held under distinct audit identities;
+- 38 detector bundles, including records, controls, maturity and source provenance;
+- the maintained admissibility sequence through AZ-147, including the observer/horizon, nuclear and focused public-data decision programmes;
+- every discovered Wave 6--7 packet file in the regenerated gate audit, with reused display numbers held under distinct audit identities;
 - every remaining programme Markdown or JSON file containing the declared open-gate vocabulary: 69 files, of which 48 map to physics topics and 21 retain separate programme governance;
-- the complete source corpus-and-evidence backstop: all 2,710 in-scope Markdown/JSON artifacts hashed and inventoried (2,230 corpus narratives and 480 evidence artifacts, excluding the independently verified generated control surfaces); 1,617 gate-bearing or open-status files reconciled, including 1,176 of 1,575 numbered claims and 92 evidence ledgers; the other 399 claims explicitly certified as containing no declared gate; zero unresolved owners;
-- 50 independently closable topics: 11 active, 10 open, 3 audit, 17 gated, 2 blocked and 7 closed with retained evidence.
+- the complete source corpus-and-evidence backstop: all 3,264 in-scope Markdown/JSON artifacts hashed and inventoried, including 1,575 numbered claims and 960 evidence artifacts; 1,909 gate-bearing or open-status files are reconciled, 1,176 claims contain declared gates, the other 399 claims are explicitly recorded without one, and zero owners remain unresolved;
+- 53 independently closable topics: 14 active, 8 open, 3 audit, 18 gated, 2 blocked and 8 closed with retained evidence.
 
 No scanned gate is orphaned. The [full-corpus census](full_corpus_gate_census_v1.md) distinguishes old closure language, live semantic ownership, navigation surfaces and separately governed inquiries rather than equating every occurrence of “open” with a new target. “Exhausted” here means the declared corpus search and ownership problem is exhausted, not that nature, unstated tacit questions, the literature, or every possible experiment is exhausted.
 
@@ -100,7 +100,7 @@ AZ-066 fires OT-018's kill test on its most natural finite response candidate. T
 
 [AZ-122](../admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md) performs that normalization rather than estimating it. A right-moving energy-space packet, all eight complex bond form factors and a finite acoustic rail evolve under one Hermitian Hamiltonian. For the declared common derivative benchmark (D=0.2), the 96-bin/240-site calculation gives capture probability (1.0892761\times10^{-3}), conditional phonon energy 1.2182162 and 0.258% change from the preceding joint refinement. Norm, energy and backward phase recovery close below (1.4\times10^{-9}). The finite source-native capture mechanism is now closed; OT-036 moves to gated because its remaining inputs—bond-resolved (dt/du), masses, springs, thermal state and multiphonon sector—belong to a named material or engineered device rather than the corpus.
 
-The [residual frontier exhaustion boundary](residual_frontier_exhaustion_boundary_v1.md) now classifies every maintained nonclosed topic. Eight of 51 topics are closed; the remaining 43 split into 17 physical experiment or calibrated-hardware gates, three compute-scale or unreleased-source gates, 18 missing-model/action/cross-grade construction gates, two blocked open problems and three continuing audits. Under the declared admission rule, no nonclosed topic remains as a finite corpus-ready calculation with all inputs present. This is exhaustion of the self-contained repository search, not exhaustion of the frontier: every live branch now names the external datum or new construction required to reopen it.
+The [residual frontier exhaustion boundary](residual_frontier_exhaustion_boundary_v1.md) now classifies every maintained nonclosed topic. Nine of 55 topics are closed; the remaining 46 split into 20 physical experiment, public-data or calibrated-hardware gates, three compute-scale or unreleased-source gates, 18 missing-model/action/cross-grade construction gates, two blocked open problems and three continuing audits. Under the declared admission rule, no nonclosed topic remains as a finite corpus-ready calculation with all inputs present. This is exhaustion of the self-contained repository search, not exhaustion of the frontier: every live branch now names the external datum, public analysis or new construction required to reopen it.
 
 [AZ-095](../admissibility/admissibility_95_cross_frequency_shared_measure_bound.md) executes the first of those routes. A single positive relaxation spectrum forces a Loewner divided-difference kernel to be positive across frequency. The passive response `1/(s+1)+s/100` is positive and decreasing on the test interval yet violates every two-frequency kernel minor; typing and removing the ordinary inductive term restores the positive relaxation kernel exactly. The constraint is real and detector-useful, but it is standard Stieltjes–Loewner carrier theory. OT-018 therefore remains open at a sharper boundary: measured covariance first, then a premise not reducible to choosing a narrower conventional response class.
 

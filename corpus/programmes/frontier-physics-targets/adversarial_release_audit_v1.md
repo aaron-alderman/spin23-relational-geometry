@@ -1,7 +1,9 @@
 # Adversarial release audit v1
 
-**Date:** 25 October 2026  
-**Status:** passed  
+**Date:** 26 October 2026
+
+**Status:** passed
+
 **Machine authority:** [audit JSON](adversarial_release_audit_v1.json)
 
 ## Result

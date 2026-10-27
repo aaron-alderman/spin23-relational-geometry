@@ -7,7 +7,7 @@
 
 ## Result
 
-The corpus currently resolves twenty distinct frontier regions with thirty-seven detector bundles. The machine register, rather than this prose count, is authoritative for status totals as bundles are added or reclassified.
+The corpus currently resolves twenty distinct frontier regions with thirty-nine detector bundles. The machine register, rather than this prose count, is authoritative for status totals as bundles are added or reclassified.
 
 The word **detector** is used operationally:
 
@@ -62,6 +62,7 @@ These detectors map FA-01 through FA-03. They are exact within the pinned comput
 - **DET-009 — instrument and trajectory tomography:** separates conditioned trajectories from the unconditional channel.
 - **DET-010 — thermodynamic resource ledger:** records heat, work, entropy production, activity, mixing time and reset cost.
 - **DET-011 — rare-event recorder:** records dwell times, first passage, switching paths and full hysteretic distributions.
+- **DET-039 — record-law channel and local-closure tomography:** reconstructs complete positive record instruments, their Choi blocks, fixed states and observables, peripheral/contractive spectra, information-loss kernels and schedule-dependent overlap closures. Its phase-referenced `g` and `k` probes separate laws that share every classical current record; a generic positive principal minor is retained as a false `H_2(R)` bridge control. The computational baseline is now exact: disjoint seams commute, adjacent seams retain order, and a full fixed `M_56(C)` block contains continuously many complex two-level corners but no source-canonical real Jordan slice. Hardware execution remains open.
 
 Together these span FA-04 through FA-10. No single headline signal—endpoint return, phase, contraction or hysteresis—closes the bundle.
 
@@ -121,6 +122,8 @@ These are called missing detectors because no corpus-specific model presently ma
 | Was apparent rotation differential loss? | DET-005 + DET-006 |
 | Was one state dynamically selected? | DET-007 + DET-008 |
 | Was selection only postselection? | DET-008 + DET-009 |
+| Do identical classical histories conceal different record laws? | DET-009 + DET-039, with coherent `g`/`k` references and every outcome retained |
+| Does a local fixed object glue globally? | DET-026 + DET-039, with seam-order, scheduler and overlap controls |
 | What did selection cost? | DET-009 + DET-010 |
 | Was persistence equilibrium or kinetic? | DET-007 + DET-011 |
 | Is a long lifetime caused by a weak/closed operator channel? | DET-013 + DET-014 + DET-037 |
@@ -153,5 +156,5 @@ More repetitions of a detector that maps two mechanisms to the same record do no
 
 ## 5. Current exhaustion boundary
 
-The inventory is exhausted at the level of detector *types* represented in the current corpus: structural, geometric, dynamical, thermodynamic, material, spectral, topological, arithmetic, statistical and fundamental-translation detectors are all present. Exhaustion of the science has not been reached. The open work is to instantiate, join, calibrate and adversarially test these bundles on shared carriers. That work is tracked in the open-topic register rather than inferred from this taxonomy.
+The inventory is exhausted at the level of detector *types* represented in the current corpus: structural, geometric, dynamical, channel/instrument, thermodynamic, material, spectral, topological, arithmetic, statistical and fundamental-translation detectors are all present. Exhaustion of the science has not been reached. The open work is to instantiate, join, calibrate and adversarially test these bundles on shared carriers. DET-039 makes the channel layer explicit: a state-space symmetry, an unread channel, a committed instrument and an accepted public record are not interchangeable. The remaining work is tracked in the open-topic register rather than inferred from this taxonomy.
 

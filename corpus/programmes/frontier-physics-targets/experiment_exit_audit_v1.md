@@ -1,8 +1,8 @@
 # Experiment exit audit v1
 
-**Generated:** 2026-10-25
+**Generated:** 2026-10-26
 
-**Status:** 0 explicit programme cells remain missing across 21 experiments
+**Status:** 0 explicit programme cells remain missing across 22 experiments
 
 **Machine authority:** [experiment exit audit](experiment_exit_audit_v1.json)
 

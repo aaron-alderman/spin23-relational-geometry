@@ -1,29 +1,29 @@
 # Physics–mathematics adjacency candidates v1
 
-**Generated:** 2026-10-25
+**Generated:** 2026-10-26
 
 **Status:** topic-level candidate universe generated; 0 candidates remain unreviewed
 
 **Machine authority:** [adjacency candidate register](physics_math_adjacency_candidates_v1.json)
 
-This is the first finite search universe under [EXIT-01](corpus_completion_exit_criteria_v1.md). It crosses all 51 maintained topics with every adjacency family applicable to their 20 frontier areas, producing **518 candidate questions**. Generation is not evidence of a relationship. Every candidate begins unreviewed and must acquire one allowed disposition, exact evidence, a reason, preserved and lost structure, implications and a reopening trigger.
+This is the first finite search universe under [EXIT-01](corpus_completion_exit_criteria_v1.md). It crosses all 55 maintained topics with every adjacency family applicable to their 20 frontier areas, producing **565 candidate questions**. Generation is not evidence of a relationship. Every candidate begins unreviewed and must acquire one allowed disposition, exact evidence, a reason, preserved and lost structure, implications and a reopening trigger.
 
 ## Candidate counts by relation family
 
 | Family | Candidates |
 |---|---:|
-| same mathematics different physical carrier | 49 |
-| same carrier different representation | 47 |
-| reduction quotient lift extension | 31 |
-| boundary bulk defect topology | 41 |
-| static driven dissipative measurement conditioned dynamics | 46 |
-| weak strong coupling and frequency limits | 41 |
-| finite infinite size and order of limits | 42 |
-| duality intertwiner shared action and cross grade map | 32 |
-| conservation anomaly index and response invariant | 41 |
-| detector pushforward and information loss | 51 |
-| thermodynamic causal positive and kms compatibility | 46 |
-| alternative mechanism with same record | 51 |
+| same mathematics different physical carrier | 53 |
+| same carrier different representation | 51 |
+| reduction quotient lift extension | 35 |
+| boundary bulk defect topology | 45 |
+| static driven dissipative measurement conditioned dynamics | 50 |
+| weak strong coupling and frequency limits | 45 |
+| finite infinite size and order of limits | 46 |
+| duality intertwiner shared action and cross grade map | 35 |
+| conservation anomaly index and response invariant | 45 |
+| detector pushforward and information loss | 55 |
+| thermodynamic causal positive and kms compatibility | 50 |
+| alternative mechanism with same record | 55 |
 
 ## Completion boundary
 

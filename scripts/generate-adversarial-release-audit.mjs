@@ -104,15 +104,16 @@ const summary = {
 };
 
 const output = {
-  schema: 'frontier.adversarial-release-audit/1', date: '2026-10-25',
+  schema: 'frontier.adversarial-release-audit/1', date: '2026-10-26',
   authority: 'Adversarial release control, not scientific evidence. Deterministic sampling can reveal failures but cannot prove the absence of every semantic error.',
   method: 'Stratified deterministic sampling by claim state, authored review of the highest-risk cross-wording candidate pairs, fail-closed mutation tests, and explicit external-blocker contracts.',
   summary, provenanceSample, semanticReviews, mutationTests, externalBlockers
 };
-const md = `# Adversarial release audit v1\n\n**Date:** 25 October 2026  \n**Status:** ${summary.pass ? 'passed' : 'open'}  \n**Machine authority:** [audit JSON](adversarial_release_audit_v1.json)\n\n## Result\n\nA deterministic, state-stratified sample of **${summary.provenanceSamples}** claims has zero source-digest or coverage failures. All **${summary.mutationTests}** deliberate overclaim, type, provenance and propagation mutations are rejected. Six high-similarity, differently classified claim pairs have authored scope dispositions and no unresolved contradiction. Two external-blocker classes name the missing datum, in-scope impossibility, searched neighbourhood, affected branches, reopening trigger and review event.\n\nThis is adversarial evidence, not omniscience. It does not prove that every differently worded sentence in 6,000-plus files is mutually consistent. It makes the sample reproducible, attacks the controls directly and preserves the exact boundary of the claim.\n\n## Mutation controls\n\n${mutationTests.map(test => `- **${test.id}:** ${test.mutation} Rejected by ${test.rejectedBy}.`).join('\n')}\n\n## Semantic candidate dispositions\n\n${semanticReviews.map(item => `- **${item.leftId} / ${item.rightId}:** ${item.disposition} — ${item.reason}`).join('\n')}\n`;
+const md = `# Adversarial release audit v1\n\n**Date:** 25 October 2026\n\n**Status:** ${summary.pass ? 'passed' : 'open'}\n\n**Machine authority:** [audit JSON](adversarial_release_audit_v1.json)\n\n## Result\n\nA deterministic, state-stratified sample of **${summary.provenanceSamples}** claims has zero source-digest or coverage failures. All **${summary.mutationTests}** deliberate overclaim, type, provenance and propagation mutations are rejected. Six high-similarity, differently classified claim pairs have authored scope dispositions and no unresolved contradiction. Two external-blocker classes name the missing datum, in-scope impossibility, searched neighbourhood, affected branches, reopening trigger and review event.\n\nThis is adversarial evidence, not omniscience. It does not prove that every differently worded sentence in 6,000-plus files is mutually consistent. It makes the sample reproducible, attacks the controls directly and preserves the exact boundary of the claim.\n\n## Mutation controls\n\n${mutationTests.map(test => `- **${test.id}:** ${test.mutation} Rejected by ${test.rejectedBy}.`).join('\n')}\n\n## Semantic candidate dispositions\n\n${semanticReviews.map(item => `- **${item.leftId} / ${item.rightId}:** ${item.disposition} — ${item.reason}`).join('\n')}\n`;
+const datedMd = md.replace('25 October 2026', '26 October 2026');
 if (WRITE) {
   fs.writeFileSync(path.join(ROOT, OUT_JSON), `${JSON.stringify(output, null, 2)}\n`);
-  fs.writeFileSync(path.join(ROOT, OUT_MD), md);
+  fs.writeFileSync(path.join(ROOT, OUT_MD), datedMd);
 }
 console.log(JSON.stringify({ result: summary.pass ? 'pass' : 'fail', outputs: [OUT_JSON, OUT_MD], summary }, null, 2));
 if (!summary.pass) process.exitCode = 1;

@@ -62,6 +62,7 @@ test("short articles are discoverable, shareable and machine-readable without du
     ["local-information-global-identification", /globally two-to-one/u, /Canonical research source →/u],
     ["two-mode-phase", /three-mode loop/u, /Canonical research source →/u],
     ["lithium-niobate-relational-workbench", /Phase matching is an admissibility condition/u, /Canonical research source →/u],
+    ["lenses-make-many-points", /kind of spectrum everywhere/u, /Canonical research source →/u],
   ];
   const index = readFileSync(join(siteRoot, "articles", "index.html"), "utf8");
   assert.match(index, /<h1>Articles<\/h1>/u);

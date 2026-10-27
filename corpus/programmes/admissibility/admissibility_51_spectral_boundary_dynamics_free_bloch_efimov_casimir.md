@@ -24,6 +24,8 @@ The corpus's bound/free intuition becomes dynamically useful after replacing a b
 
 The boundary is not an empty separator.  It may support states that are localized normal to an interface but extended tangentially, threshold resonances with long dwell times, or a tower of bound states accumulating at a continuum edge.  Static spectral data specify the admissible places; dynamics transports amplitude, energy and phase within and between them.
 
+The word `continuum` must itself be typed. Becker and Yang's 2026 construction gives smooth nonnegative potentials for which the spectral **set** and essential spectrum remain \([0,\infty)\), while the continuous spectral subspace vanishes and positive pure-point eigenvalues are dense. The standalone paper [Lenses make many points](../../syntheses/lenses_make_many_points_spectral_type_multiscale_closure_and_admissibility.md) develops the consequence: support, spectral type, state geometry, dynamics, scale and detector record are separate fields. The stratification below describes conventional sectors; it must not infer transport from energy support alone.
+
 This packet also records a controlled semantic observation.  The Greek words used in later discussion of the biblical Fall can describe boundary crossing, deviation, descent and binding as a sequence of type shapes.  That correspondence is heuristic and contributes no evidence for electron binding, Efimov physics, Casimir forces or Spin(2,3).
 
 ## 1. Type firewall: stationary is not static

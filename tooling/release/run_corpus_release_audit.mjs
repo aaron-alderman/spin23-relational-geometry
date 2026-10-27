@@ -31,8 +31,13 @@ const generators = [
   ['scripts/generate-terminal-neighbourhood-candidates.mjs', '--write'],
   ['scripts/generate-frontier-experiment-atlas.mjs', '--write'],
   ['scripts/generate-frontier-experiment-programmes-v2.mjs', '--write'],
+  ['scripts/run-th229-kerr-decision-programme-audit.mjs', '--write'],
   ['scripts/generate-frontier-complexity-cards.mjs', '--write'],
   ['scripts/generate-experiment-exit-audit.mjs', '--write'],
+  ['scripts/generate-transition-operator-propagation-audit.mjs', '--write'],
+  ['scripts/generate-spectral-width-propagation-audit.mjs', '--write'],
+  ['scripts/generate-barrier-kinetic-propagation-audit.mjs', '--write'],
+  ['scripts/generate-quarter-turn-split-dual-propagation-audit.mjs', '--write'],
   ['scripts/generate-full-corpus-frontier-gate-census.mjs', '--write'],
   ['scripts/generate-physics-math-object-expansion.mjs', '--write'],
   ['scripts/generate-theory-bridge-audit.mjs', '--write'],
@@ -54,9 +59,10 @@ for (const args of generators) {
   steps.push({ kind: 'generator', ...result });
   if (result.status !== 0) break;
 }
-const verifierFiles = fs.readdirSync(path.join(ROOT, 'verification/frontier-physics-targets')).filter(name => /^verify_.*\.mjs$/u.test(name)).sort();
+const verifierFiles = fs.readdirSync(path.join(ROOT, 'verification/frontier-physics-targets')).filter(name => /^verify_.*\.mjs$/u.test(name)).sort().map(name => `verification/frontier-physics-targets/${name}`);
+verifierFiles.push('verification/admissibility/verify_th229_kerr_decision_programmes.mjs');
 if (steps.every(step => step.status === 0)) for (const name of verifierFiles) {
-  const result = run(process.execPath, [`verification/frontier-physics-targets/${name}`]);
+  const result = run(process.execPath, [name]);
   steps.push({ kind: 'verifier', ...result });
   if (result.status !== 0) break;
 }
@@ -68,7 +74,7 @@ const pass = initialStatus.status === 0 && steps.every(step => step.status === 0
 const certificatePath = path.join(ROOT, 'corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.json');
 const certificate = fs.existsSync(certificatePath) ? JSON.parse(fs.readFileSync(certificatePath, 'utf8')) : null;
 const receipt = {
-  schema: 'frontier.clean-checkout-release-receipt/1', date: '2026-10-25', result: pass ? 'pass' : 'fail',
+  schema: 'frontier.clean-checkout-release-receipt/1', date: '2026-10-26', result: pass ? 'pass' : 'fail',
   checkout: { commit: head.stdoutTail.trim(), tree: tree.stdoutTail.trim(), initiallyClean: !initialStatus.stdoutTail.trim(), finallyClean: !finalStatus.stdoutTail.trim() },
   projectionSha256: certificate?.projection?.sha256 ?? null,
   summary: { generators: steps.filter(step => step.kind === 'generator').length, verifiers: steps.filter(step => step.kind === 'verifier').length, repositoryTestFiles: testFiles.length, failedSteps: steps.filter(step => step.status !== 0).length },

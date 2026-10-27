@@ -61,7 +61,19 @@ function sha256(text) {
   return crypto.createHash("sha256").update(text).digest("hex");
 }
 
-const excludedOutputs = new Set([outputMd]);
+// Release-control prose is downstream of this census and may contain hashes of
+// artifacts derived from it. Scanning those files back into this census creates
+// a cryptographic dependency cycle (census -> audits/certificate -> census)
+// without adding any scientific source coverage. Keep them independently
+// verified, but do not treat them as upstream physics documents here.
+const excludedOutputs = new Set([
+  outputMd,
+  "corpus/EVIDENCE_SPINE.md",
+  "corpus/FRONT_DOOR.md",
+  "corpus/programmes/frontier-physics-targets/adversarial_release_audit_v1.md",
+  "corpus/programmes/frontier-physics-targets/corpus_saturation_release_certificate_v1.md",
+  "corpus/programmes/frontier-physics-targets/documentation_linking_retrieval_gate_v1.md",
+]);
 const documents = walk(corpusRoot)
   .map(file => ({ path: rel(file), text: fs.readFileSync(file, "utf8") }))
   .filter(record => !excludedOutputs.has(record.path))
@@ -106,6 +118,8 @@ const reviewed = [
   ["corpus/programmes/admissibility/admissibility_137_hawking_flux_requires_state_horizon_channel_and_detector.md", "semiclassical_channel_stack", "Separates horizon geometry, field state, mode continuation, greybody scattering and detector response; it does not infer flux from a boundary word alone."],
   ["corpus/programmes/admissibility/admissibility_140_observer_horizon_channel_atlas_and_exhaustion.md", "cross_domain_channel_atlas", "Routes observer, horizon, Kerr and nuclear mechanisms without identifying their transition or width semantics."],
   ["corpus/programmes/admissibility/admissibility_141_observer_horizon_and_nuclear_priority_for_next_insight.md", "decision_analysis_not_rate_derivation", "Prioritizes source-bounded experimental lanes; linked source packets, not the ranking, control every lifetime or transition claim."],
+  ["corpus/programmes/admissibility/admissibility_145_where_the_next_insight_can_enter.md", "decision_analysis_not_rate_derivation", "Compares which source, evolution, channel and detector parameters each lane can identify; it preserves the operator-to-rate ledger and derives no new microscopic width."],
+  ["corpus/programmes/programme-algebra/generated/PROGRAMME_ALGEBRA_JOURNEYS.md", "generated_navigation_no_independent_rate_claim", "Generated typed journeys preserve source wording and transformation receipts; matrix-element and decay language remains governed by the cited scientific source and is not a new rate derivation."],
   ["corpus/programmes/admissibility/admissibility_02_casimir_as_first_generative_probe.md", "classification_not_amplitude", "Casimir labels sectors but supplies neither the physical operator nor its strength."],
   ["corpus/programmes/admissibility/admissibility_04_dispersion_force_landscape.md", "effective_response_boundary", "A causal response may be used effectively; microscopic line claims require the operator ledger."],
   ["corpus/programmes/admissibility/admissibility_05_invariant_atlas_time_force_measure_material_rotation.md", "classification_not_amplitude", "Rotational organization and selection rules are followed by operator, matrix-element and detector data."],
@@ -119,6 +133,7 @@ const reviewed = [
   ["corpus/programmes/frontier-physics-targets/detector_frontier_atlas_v1.md", "detector_bundle", "DET-037 joins lifetime, polarization, environmental and acceptance records."],
   ["corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md", "experiment_programme", "EX-022 supplies an apparatus, controls and build/bridge/physics decisions."],
   ["corpus/syntheses/the_admissibility_frontier_current_synthesis.md", "synthesis_bridge", "The current synthesis routes transition claims to the established bridge."],
+  ["corpus/syntheses/lenses_make_many_points_spectral_type_multiscale_closure_and_admissibility.md", "spectral_type_theorem_not_transition_rate", "The paper distinguishes spectral support, pure-point type, transport and detector records; its mentions of matrix elements, resonances and loss are controls or non-claims, not a microscopic operator-to-rate derivation."],
   ["corpus/claims/0000-0099/00_research_document_map.md", "navigation_no_independent_rate_claim", "Index language points to controlling documents and makes no independent operator-to-rate claim."],
   ["corpus/claims/0000-0099/01_standard_model_as_stress_energy_full_analysis.md", "field_theory_operator_not_transition_rate", "Stress and Standard-Model operator language concerns field content and response, not a computed decay lifetime."],
   ["corpus/claims/0000-0099/24_symmetry_phonons_experiments_and_supporting_corpora.md", "operator_ledger_required_before_rate_promotion", "The survey names physical transitions; any quantitative rate promotion must use the AZ-127 ledger."],

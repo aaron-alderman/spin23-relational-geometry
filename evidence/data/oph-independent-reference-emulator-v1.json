@@ -1,0 +1,1215 @@
+{
+  "schema": "oph-independent-reference-emulator-v1",
+  "generated": "2026-10-27",
+  "independence": {
+    "implementation": "clean-room JavaScript from the published mathematical record-law specification",
+    "importsOriginalOphCode": false,
+    "comparesAgainstOriginalReceiptAtRuntime": false,
+    "encodedInputs": [
+      "native fair-coin seam update",
+      "g/k detector equations",
+      "entrywise repetition law"
+    ],
+    "establishedForNamedLaws": [
+      "definite-current Kraus reconstruction",
+      "logical Stinespring isometry",
+      "authored computational record basis"
+    ],
+    "notEstablished": [
+      "unique dilation",
+      "native hardware gate decomposition",
+      "physical realization"
+    ]
+  },
+  "seed": 1330661425,
+  "shotsPerSetting": 5000,
+  "commonClassicalTable": [
+    {
+      "input": [
+        0,
+        0
+      ],
+      "outcomes": [
+        {
+          "current": 0,
+          "output": [
+            0,
+            0
+          ],
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "input": [
+        1,
+        1
+      ],
+      "outcomes": [
+        {
+          "current": 0,
+          "output": [
+            1,
+            1
+          ],
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "input": [
+        1,
+        0
+      ],
+      "outcomes": [
+        {
+          "current": 1,
+          "output": [
+            0,
+            1
+          ],
+          "probability": 0.5
+        },
+        {
+          "current": 0,
+          "output": [
+            1,
+            0
+          ],
+          "probability": 0.5
+        }
+      ]
+    },
+    {
+      "input": [
+        0,
+        1
+      ],
+      "outcomes": [
+        {
+          "current": 0,
+          "output": [
+            0,
+            1
+          ],
+          "probability": 0.5
+        },
+        {
+          "current": -1,
+          "output": [
+            1,
+            0
+          ],
+          "probability": 0.5
+        }
+      ]
+    },
+    {
+      "input": [
+        2,
+        0
+      ],
+      "outcomes": [
+        {
+          "current": 1,
+          "output": [
+            1,
+            1
+          ],
+          "probability": 1
+        }
+      ]
+    },
+    {
+      "input": [
+        0,
+        2
+      ],
+      "outcomes": [
+        {
+          "current": -1,
+          "output": [
+            1,
+            1
+          ],
+          "probability": 1
+        }
+      ]
+    }
+  ],
+  "instrumentCompiler": {
+    "carrierBasis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "recordBasisPolicy": "one computational ancilla label per declared record value; unused bit strings are leakage states",
+    "instruments": {
+      "C0": {
+        "recordCount": 3,
+        "recordQubits": 2,
+        "systemQubits": 3,
+        "totalLogicalQubits": 5,
+        "definiteCurrent": true,
+        "maxIsometryError": 2.220446049250313e-16,
+        "multipliers": {
+          "k": 1,
+          "g": 0.7071067811865476,
+          "h": 0.7071067811865476,
+          "m": 0.5000000000000001,
+          "n": 0.7071067811865476
+        },
+        "branches": [
+          {
+            "record": "j:-1",
+            "mappings": [
+              {
+                "inputIndex": 3,
+                "outputIndex": 2,
+                "current": -1,
+                "amplitude": 0.7071067811865476
+              },
+              {
+                "inputIndex": 5,
+                "outputIndex": 1,
+                "current": -1,
+                "amplitude": 1
+              }
+            ]
+          },
+          {
+            "record": "j:0",
+            "mappings": [
+              {
+                "inputIndex": 0,
+                "outputIndex": 0,
+                "current": 0,
+                "amplitude": 1
+              },
+              {
+                "inputIndex": 1,
+                "outputIndex": 1,
+                "current": 0,
+                "amplitude": 1
+              },
+              {
+                "inputIndex": 2,
+                "outputIndex": 2,
+                "current": 0,
+                "amplitude": 0.7071067811865476
+              },
+              {
+                "inputIndex": 3,
+                "outputIndex": 3,
+                "current": 0,
+                "amplitude": 0.7071067811865476
+              }
+            ]
+          },
+          {
+            "record": "j:1",
+            "mappings": [
+              {
+                "inputIndex": 2,
+                "outputIndex": 3,
+                "current": 1,
+                "amplitude": 0.7071067811865476
+              },
+              {
+                "inputIndex": 4,
+                "outputIndex": 1,
+                "current": 1,
+                "amplitude": 1
+              }
+            ]
+          }
+        ]
+      },
+      "C": {
+        "recordCount": 6,
+        "recordQubits": 3,
+        "systemQubits": 3,
+        "totalLogicalQubits": 6,
+        "definiteCurrent": true,
+        "maxIsometryError": 2.220446049250313e-16,
+        "multipliers": {
+          "k": 0.9999999999999998,
+          "g": 0.4999999999999999,
+          "h": 0.4999999999999999,
+          "m": 0,
+          "n": 0.4999999999999999
+        },
+        "branches": [
+          {
+            "record": "c:0|j:-1",
+            "mappings": [
+              {
+                "inputIndex": 5,
+                "outputIndex": 1,
+                "current": -1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|j:0",
+            "mappings": [
+              {
+                "inputIndex": 0,
+                "outputIndex": 0,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              },
+              {
+                "inputIndex": 1,
+                "outputIndex": 1,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              },
+              {
+                "inputIndex": 3,
+                "outputIndex": 3,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|j:1",
+            "mappings": [
+              {
+                "inputIndex": 2,
+                "outputIndex": 3,
+                "current": 1,
+                "amplitude": 0.7071067811865475
+              },
+              {
+                "inputIndex": 4,
+                "outputIndex": 1,
+                "current": 1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|j:-1",
+            "mappings": [
+              {
+                "inputIndex": 3,
+                "outputIndex": 2,
+                "current": -1,
+                "amplitude": 0.7071067811865475
+              },
+              {
+                "inputIndex": 5,
+                "outputIndex": 1,
+                "current": -1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|j:0",
+            "mappings": [
+              {
+                "inputIndex": 0,
+                "outputIndex": 0,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              },
+              {
+                "inputIndex": 1,
+                "outputIndex": 1,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              },
+              {
+                "inputIndex": 2,
+                "outputIndex": 2,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|j:1",
+            "mappings": [
+              {
+                "inputIndex": 4,
+                "outputIndex": 1,
+                "current": 1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          }
+        ]
+      },
+      "E": {
+        "recordCount": 10,
+        "recordQubits": 4,
+        "systemQubits": 3,
+        "totalLogicalQubits": 7,
+        "definiteCurrent": true,
+        "maxIsometryError": 2.220446049250313e-16,
+        "multipliers": {
+          "k": 0.9999999999999998,
+          "g": 0,
+          "h": 0,
+          "m": 0,
+          "n": 0
+        },
+        "branches": [
+          {
+            "record": "c:0|d:-1",
+            "mappings": [
+              {
+                "inputIndex": 3,
+                "outputIndex": 3,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|d:-2",
+            "mappings": [
+              {
+                "inputIndex": 5,
+                "outputIndex": 1,
+                "current": -1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|d:0",
+            "mappings": [
+              {
+                "inputIndex": 0,
+                "outputIndex": 0,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              },
+              {
+                "inputIndex": 1,
+                "outputIndex": 1,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|d:1",
+            "mappings": [
+              {
+                "inputIndex": 2,
+                "outputIndex": 3,
+                "current": 1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|d:2",
+            "mappings": [
+              {
+                "inputIndex": 4,
+                "outputIndex": 1,
+                "current": 1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|d:-1",
+            "mappings": [
+              {
+                "inputIndex": 3,
+                "outputIndex": 2,
+                "current": -1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|d:-2",
+            "mappings": [
+              {
+                "inputIndex": 5,
+                "outputIndex": 1,
+                "current": -1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|d:0",
+            "mappings": [
+              {
+                "inputIndex": 0,
+                "outputIndex": 0,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              },
+              {
+                "inputIndex": 1,
+                "outputIndex": 1,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|d:1",
+            "mappings": [
+              {
+                "inputIndex": 2,
+                "outputIndex": 2,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|d:2",
+            "mappings": [
+              {
+                "inputIndex": 4,
+                "outputIndex": 1,
+                "current": 1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          }
+        ]
+      },
+      "T": {
+        "recordCount": 12,
+        "recordQubits": 4,
+        "systemQubits": 3,
+        "totalLogicalQubits": 7,
+        "definiteCurrent": true,
+        "maxIsometryError": 2.220446049250313e-16,
+        "multipliers": {
+          "k": 0,
+          "g": 0,
+          "h": 0,
+          "m": 0,
+          "n": 0
+        },
+        "branches": [
+          {
+            "record": "c:0|k:0,0",
+            "mappings": [
+              {
+                "inputIndex": 0,
+                "outputIndex": 0,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|k:0,1",
+            "mappings": [
+              {
+                "inputIndex": 3,
+                "outputIndex": 3,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|k:0,2",
+            "mappings": [
+              {
+                "inputIndex": 5,
+                "outputIndex": 1,
+                "current": -1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|k:1,0",
+            "mappings": [
+              {
+                "inputIndex": 2,
+                "outputIndex": 3,
+                "current": 1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|k:1,1",
+            "mappings": [
+              {
+                "inputIndex": 1,
+                "outputIndex": 1,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:0|k:2,0",
+            "mappings": [
+              {
+                "inputIndex": 4,
+                "outputIndex": 1,
+                "current": 1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|k:0,0",
+            "mappings": [
+              {
+                "inputIndex": 0,
+                "outputIndex": 0,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|k:0,1",
+            "mappings": [
+              {
+                "inputIndex": 3,
+                "outputIndex": 2,
+                "current": -1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|k:0,2",
+            "mappings": [
+              {
+                "inputIndex": 5,
+                "outputIndex": 1,
+                "current": -1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|k:1,0",
+            "mappings": [
+              {
+                "inputIndex": 2,
+                "outputIndex": 2,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|k:1,1",
+            "mappings": [
+              {
+                "inputIndex": 1,
+                "outputIndex": 1,
+                "current": 0,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          },
+          {
+            "record": "c:1|k:2,0",
+            "mappings": [
+              {
+                "inputIndex": 4,
+                "outputIndex": 1,
+                "current": 1,
+                "amplitude": 0.7071067811865475
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "pass": true
+  },
+  "phase": {
+    "C0": {
+      "declaredG": [
+        0.7071067811865475,
+        0
+      ],
+      "fittedG": [
+        0.6914,
+        -0.009600000000000053
+      ],
+      "observations": [
+        {
+          "theta": 0,
+          "exact": 0.7285533905932737,
+          "plus": 3572,
+          "shots": 5000,
+          "frequency": 0.7144
+        },
+        {
+          "theta": 3.141592653589793,
+          "exact": 0.02144660940672627,
+          "plus": 115,
+          "shots": 5000,
+          "frequency": 0.023
+        },
+        {
+          "theta": 1.5707963267948966,
+          "exact": 0.375,
+          "plus": 1851,
+          "shots": 5000,
+          "frequency": 0.3702
+        },
+        {
+          "theta": 1.0471975511965976,
+          "exact": 0.5517766952966369,
+          "plus": 2766,
+          "shots": 5000,
+          "frequency": 0.5532
+        },
+        {
+          "theta": 4.71238898038469,
+          "exact": 0.37499999999999994,
+          "plus": 1843,
+          "shots": 5000,
+          "frequency": 0.3686
+        }
+      ],
+      "heldOut": [
+        {
+          "theta": 1.0471975511965976,
+          "prediction": 0.5436930780618348,
+          "actual": 0.5532,
+          "residual": 0.00950692193816527
+        },
+        {
+          "theta": 4.71238898038469,
+          "prediction": 0.37979999999999997,
+          "actual": 0.3686,
+          "residual": -0.011199999999999988
+        }
+      ]
+    },
+    "C": {
+      "declaredG": [
+        0.5,
+        0
+      ],
+      "fittedG": [
+        0.49200000000000005,
+        -0.0031999999999999806
+      ],
+      "observations": [
+        {
+          "theta": 0,
+          "exact": 0.625,
+          "plus": 3103,
+          "shots": 5000,
+          "frequency": 0.6206
+        },
+        {
+          "theta": 3.141592653589793,
+          "exact": 0.125,
+          "plus": 643,
+          "shots": 5000,
+          "frequency": 0.1286
+        },
+        {
+          "theta": 1.5707963267948966,
+          "exact": 0.375,
+          "plus": 1867,
+          "shots": 5000,
+          "frequency": 0.3734
+        },
+        {
+          "theta": 1.0471975511965976,
+          "exact": 0.5,
+          "plus": 2446,
+          "shots": 5000,
+          "frequency": 0.4892
+        },
+        {
+          "theta": 4.71238898038469,
+          "exact": 0.37499999999999994,
+          "plus": 1894,
+          "shots": 5000,
+          "frequency": 0.3788
+        }
+      ],
+      "heldOut": [
+        {
+          "theta": 1.0471975511965976,
+          "prediction": 0.49661435935394493,
+          "actual": 0.4892,
+          "residual": -0.00741435935394491
+        },
+        {
+          "theta": 4.71238898038469,
+          "prediction": 0.37659999999999993,
+          "actual": 0.3788,
+          "residual": 0.0022000000000000908
+        }
+      ]
+    },
+    "E": {
+      "declaredG": [
+        0,
+        0
+      ],
+      "fittedG": [
+        -0.010599999999999998,
+        0.0048000000000000265
+      ],
+      "observations": [
+        {
+          "theta": 0,
+          "exact": 0.375,
+          "plus": 1860,
+          "shots": 5000,
+          "frequency": 0.372
+        },
+        {
+          "theta": 3.141592653589793,
+          "exact": 0.375,
+          "plus": 1913,
+          "shots": 5000,
+          "frequency": 0.3826
+        },
+        {
+          "theta": 1.5707963267948966,
+          "exact": 0.375,
+          "plus": 1887,
+          "shots": 5000,
+          "frequency": 0.3774
+        },
+        {
+          "theta": 1.0471975511965976,
+          "exact": 0.375,
+          "plus": 1875,
+          "shots": 5000,
+          "frequency": 0.375
+        },
+        {
+          "theta": 4.71238898038469,
+          "exact": 0.375,
+          "plus": 1811,
+          "shots": 5000,
+          "frequency": 0.3622
+        }
+      ],
+      "heldOut": [
+        {
+          "theta": 1.0471975511965976,
+          "prediction": 0.37442846096908267,
+          "actual": 0.375,
+          "residual": 0.000571539030917334
+        },
+        {
+          "theta": 4.71238898038469,
+          "prediction": 0.3726,
+          "actual": 0.3622,
+          "residual": -0.010399999999999965
+        }
+      ]
+    },
+    "T": {
+      "declaredG": [
+        0,
+        0
+      ],
+      "fittedG": [
+        -0.005400000000000016,
+        0.0043999999999999595
+      ],
+      "observations": [
+        {
+          "theta": 0,
+          "exact": 0.375,
+          "plus": 1868,
+          "shots": 5000,
+          "frequency": 0.3736
+        },
+        {
+          "theta": 3.141592653589793,
+          "exact": 0.375,
+          "plus": 1895,
+          "shots": 5000,
+          "frequency": 0.379
+        },
+        {
+          "theta": 1.5707963267948966,
+          "exact": 0.375,
+          "plus": 1886,
+          "shots": 5000,
+          "frequency": 0.3772
+        },
+        {
+          "theta": 1.0471975511965976,
+          "exact": 0.375,
+          "plus": 1847,
+          "shots": 5000,
+          "frequency": 0.3694
+        },
+        {
+          "theta": 4.71238898038469,
+          "exact": 0.375,
+          "plus": 1890,
+          "shots": 5000,
+          "frequency": 0.378
+        }
+      ],
+      "heldOut": [
+        {
+          "theta": 1.0471975511965976,
+          "prediction": 0.3755552558883257,
+          "actual": 0.3694,
+          "residual": -0.006155255888325717
+        },
+        {
+          "theta": 4.71238898038469,
+          "prediction": 0.3728,
+          "actual": 0.378,
+          "residual": 0.005199999999999982
+        }
+      ]
+    },
+    "C_signed": {
+      "declaredG": [
+        -0.5,
+        0
+      ],
+      "fittedG": [
+        -0.5037999999999999,
+        -0.007199999999999984
+      ],
+      "observations": [
+        {
+          "theta": 0,
+          "exact": 0.125,
+          "plus": 618,
+          "shots": 5000,
+          "frequency": 0.1236
+        },
+        {
+          "theta": 3.141592653589793,
+          "exact": 0.625,
+          "plus": 3137,
+          "shots": 5000,
+          "frequency": 0.6274
+        },
+        {
+          "theta": 1.5707963267948966,
+          "exact": 0.375,
+          "plus": 1857,
+          "shots": 5000,
+          "frequency": 0.3714
+        },
+        {
+          "theta": 1.0471975511965976,
+          "exact": 0.24999999999999997,
+          "plus": 1263,
+          "shots": 5000,
+          "frequency": 0.2526
+        },
+        {
+          "theta": 4.71238898038469,
+          "exact": 0.37500000000000006,
+          "plus": 1846,
+          "shots": 5000,
+          "frequency": 0.3692
+        }
+      ],
+      "heldOut": [
+        {
+          "theta": 1.0471975511965976,
+          "prediction": 0.24593230854637602,
+          "actual": 0.2526,
+          "residual": 0.006667691453623975
+        },
+        {
+          "theta": 4.71238898038469,
+          "prediction": 0.37860000000000005,
+          "actual": 0.3692,
+          "residual": -0.009400000000000075
+        }
+      ]
+    },
+    "C0_quarter": {
+      "declaredG": [
+        0,
+        -0.7071067811865475
+      ],
+      "fittedG": [
+        -0.022999999999999965,
+        -0.7044
+      ],
+      "observations": [
+        {
+          "theta": 0,
+          "exact": 0.375,
+          "plus": 1844,
+          "shots": 5000,
+          "frequency": 0.3688
+        },
+        {
+          "theta": 3.141592653589793,
+          "exact": 0.37499999999999994,
+          "plus": 1959,
+          "shots": 5000,
+          "frequency": 0.3918
+        },
+        {
+          "theta": 1.5707963267948966,
+          "exact": 0.02144660940672627,
+          "plus": 114,
+          "shots": 5000,
+          "frequency": 0.0228
+        },
+        {
+          "theta": 1.0471975511965976,
+          "exact": 0.06881378215210276,
+          "plus": 307,
+          "shots": 5000,
+          "frequency": 0.0614
+        },
+        {
+          "theta": 4.71238898038469,
+          "exact": 0.7285533905932737,
+          "plus": 3692,
+          "shots": 5000,
+          "frequency": 0.7384
+        }
+      ],
+      "heldOut": [
+        {
+          "theta": 1.0471975511965976,
+          "prediction": 0.06423585278712074,
+          "actual": 0.0614,
+          "residual": -0.0028358527871207365
+        },
+        {
+          "theta": 4.71238898038469,
+          "prediction": 0.7272000000000001,
+          "actual": 0.7384,
+          "residual": 0.011199999999999877
+        }
+      ]
+    }
+  },
+  "repetition": {
+    "C0": [
+      {
+        "depth": 1,
+        "phase0Probability": 0.7285533905932737
+      },
+      {
+        "depth": 2,
+        "phase0Probability": 0.625
+      },
+      {
+        "depth": 3,
+        "phase0Probability": 0.5517766952966369
+      },
+      {
+        "depth": 4,
+        "phase0Probability": 0.49999999999999994
+      }
+    ],
+    "C": [
+      {
+        "depth": 1,
+        "phase0Probability": 0.625
+      },
+      {
+        "depth": 2,
+        "phase0Probability": 0.5
+      },
+      {
+        "depth": 3,
+        "phase0Probability": 0.4375
+      },
+      {
+        "depth": 4,
+        "phase0Probability": 0.40625
+      }
+    ],
+    "E": [
+      {
+        "depth": 1,
+        "phase0Probability": 0.375
+      },
+      {
+        "depth": 2,
+        "phase0Probability": 0.375
+      },
+      {
+        "depth": 3,
+        "phase0Probability": 0.375
+      },
+      {
+        "depth": 4,
+        "phase0Probability": 0.375
+      }
+    ],
+    "T": [
+      {
+        "depth": 1,
+        "phase0Probability": 0.375
+      },
+      {
+        "depth": 2,
+        "phase0Probability": 0.375
+      },
+      {
+        "depth": 3,
+        "phase0Probability": 0.375
+      },
+      {
+        "depth": 4,
+        "phase0Probability": 0.375
+      }
+    ]
+  },
+  "kProbe": {
+    "C0": 1,
+    "C": 1,
+    "E": 1,
+    "T": 0.5,
+    "C_signed": 1,
+    "C0_quarter": 1
+  },
+  "schedule": {
+    "adjacent": {
+      "forwardSeams": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "reverseSeams": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "exactForward": {
+        "0,0,0,0,0,1,0,0,0,0,0,1": 0.5,
+        "1,0,0,0,0,0,0,0,0,0,0,1": 0.5
+      },
+      "exactReverse": {
+        "0,0,0,0,0,1,0,0,0,0,0,1": 0.5,
+        "0,1,0,0,0,0,0,0,0,0,0,1": 0.25,
+        "1,0,0,0,0,0,0,0,0,0,0,1": 0.25
+      },
+      "exactTotalVariation": 0.25,
+      "observedForward": {
+        "0,0,0,0,0,1,0,0,0,0,0,1": 0.5022,
+        "1,0,0,0,0,0,0,0,0,0,0,1": 0.4978
+      },
+      "observedReverse": {
+        "0,0,0,0,0,1,0,0,0,0,0,1": 0.5004,
+        "0,1,0,0,0,0,0,0,0,0,0,1": 0.2512,
+        "1,0,0,0,0,0,0,0,0,0,0,1": 0.2484
+      },
+      "observedTotalVariation": 0.2512
+    },
+    "disjoint": {
+      "forwardSeams": [
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "reverseSeams": [
+        [
+          5,
+          6
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "exactForward": {
+        "0,1,0,0,0,0,1,0,0,0,0,0": 0.25,
+        "0,1,0,0,0,1,0,0,0,0,0,0": 0.25,
+        "1,0,0,0,0,0,1,0,0,0,0,0": 0.25,
+        "1,0,0,0,0,1,0,0,0,0,0,0": 0.25
+      },
+      "exactReverse": {
+        "0,1,0,0,0,0,1,0,0,0,0,0": 0.25,
+        "0,1,0,0,0,1,0,0,0,0,0,0": 0.25,
+        "1,0,0,0,0,0,1,0,0,0,0,0": 0.25,
+        "1,0,0,0,0,1,0,0,0,0,0,0": 0.25
+      },
+      "exactTotalVariation": 0,
+      "observedForward": {
+        "0,1,0,0,0,0,1,0,0,0,0,0": 0.2532,
+        "0,1,0,0,0,1,0,0,0,0,0,0": 0.2452,
+        "1,0,0,0,0,0,1,0,0,0,0,0": 0.254,
+        "1,0,0,0,0,1,0,0,0,0,0,0": 0.2476
+      },
+      "observedReverse": {
+        "0,1,0,0,0,0,1,0,0,0,0,0": 0.2416,
+        "0,1,0,0,0,1,0,0,0,0,0,0": 0.258,
+        "1,0,0,0,0,0,1,0,0,0,0,0": 0.2452,
+        "1,0,0,0,0,1,0,0,0,0,0,0": 0.2552
+      },
+      "observedTotalVariation": 0.020399999999999988,
+      "maximumObservedCellDifference": 0.012800000000000006,
+      "conservativeCellNullEnvelope": 0.051709232164741825
+    }
+  },
+  "decision": {
+    "alpha": 0.01,
+    "heldOutAbsoluteResidualTolerance": 0.04895493661361633,
+    "allHeldOutPhasePredictionsPass": true,
+    "adjacentOrderPass": true,
+    "disjointRawEngineeringThresholdPass": false,
+    "disjointSamplingCompatibilityPass": true,
+    "exactDisjointCommutationPass": true,
+    "logicalReferencePass": true,
+    "hardwareGate5Pass": false,
+    "disposition": "observable-level independent reference complete; circuit compiler and physical run remain open"
+  }
+}

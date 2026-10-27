@@ -124,6 +124,8 @@ compositional structure have been declared.
 
 Dynamics is not appended after a static classification. It continually changes which distinctions remain admissible. A bound state, resonance, Bloch-like boundary mode and free continuum state are not simply four nouns; they are regions connected by pole motion, spectral flow, capture, decay and memory. Casimir response, thermoelectric transport, hysteresis, metastability and scattering delay are useful because each reads a different part of that changing boundary.
 
+One exact 2026 result now sharpens the word “spectrum.” Becker and Yang construct arbitrarily weak smooth nonnegative potentials whose spectrum and essential spectrum remain the entire half-line \([0,\infty)\), yet whose continuous spectral subspace is absent: dense positive eigenvalues supply a pure-point realization of the same energy set. The [standalone analysis](lenses_make_many_points_spectral_type_multiscale_closure_and_admissibility.md) draws the bounded lesson. Spectral support, spectral type, state geometry, transport, scale and detector record are different coordinates of admissibility. The construction also gives a rigorous model of nested local closure: finite annular devices handle growing energy windows with controlled residuals and summable exceptions; the global conclusion is earned by their composition, not by naming a single threshold. This is a conventional scalar Schrödinger theorem, not evidence for \(Spin(2,3)\), \(E_8\), collapse or a new force. Its near-term invitation is a matched-control wave experiment that asks whether weak, organized multiscale geometry localizes more effectively than radial, random and periodic comparators.
+
 A proposed action, flow or update still matters. But its physical content is now tested by asking:
 
 - which carrier it moves;
@@ -574,8 +576,6 @@ The first explicit search for a new contextual inequality has also produced a di
 [AZ-134](../programmes/admissibility/admissibility_134_no_global_semantic_adjoint_exists_on_the_current_claimipedia_relation_source.md) closes the current-source path-adjoint route negatively. Exhausting all 24 permutations of Challenges, DependsOn, Qualifies and Supports, including all 10 involutions, finds no global reversal rule. The best rules match only two records—the reciprocal Spin--Temple Supports/Qualifies cell—and leave 41 unmatched. In particular the DependsOn river triangle has no reverse endpoint pairs under any type. A formal reverse completion remains possible, but it adds semantics the source did not author. Reopening now requires new reverse records, an independent contravariant functor or a physical reverse-control dictionary with held-out predictions.
 
 [AZ-142](../programmes/admissibility/admissibility_142_a_three_resonator_parity_switch_turns_the_dual_face_into_a_detector.md) then gives that physical dictionary its smallest honest calibration. On a three-resonator ring, amplitudes are the carrier, programmable coupling parities are the dual-face selector and the gauge-invariant product of all three parities is the triality detector. Reversing loop parity preserves both the trace and quadratic spectral moment of the dynamical matrix but shifts its determinant—the product of the three squared pole frequencies—by exactly $4\kappa_{12}\kappa_{23}\kappa_{31}$. The third relation therefore creates the first invariant that pairwise calibration and two coarse spectral summaries cannot retain. Observing the shift validates an engineered embodiment under ordinary mechanics; only a residual surviving shared-parameter response fitting, gauge controls, device scaling and cross-carrier replication becomes a frontier anomaly.
-
-[AZ-148](../programmes/admissibility/admissibility_148_lithium_niobate_as_a_relational_physics_workbench.md) identifies lithium niobate as a fabrication-ready host for the same discipline. Its optical, microwave, acoustic, thermal and ferroelectric channels remain physically distinct, yet coexist on one ordered substrate. Domain orientation, quasi-phase matching, pump phase and electrode drive supply sourced selectors; spectra, heterodyne quadratures and correlations supply records. The resulting article separates three operations that loose language can conflate: logarithms make multiplicative weights additive, quadratic susceptibility creates sum and difference frequencies, and periodic poling supplies momentum for coherent accumulation. A proposed three-mode closure experiment would validate a material embodiment of the grammar under established physics; it becomes a frontier test only after electro-optic, nonlinear, thermal, photorefractive, acoustic and detector accounts are closed without per-configuration refitting.
 
 [AZ-135](../programmes/admissibility/admissibility_135_a_seam_changes_continuations_but_does_not_by_itself_trigger_decay.md) joins the local seam alphabet to the transition ledger without identifying them. A parabolic crossing changes the local continuation type; a decay still requires its own operator, matrix element and on-shell destination. Full symplectic flow remains invertible while its projection onto one parent mode can lose return, so “no way back” is local to a chart, timescale and detector resolution. The conditional W/Z reading is retained only in this disciplined form: a proposed elliptic/separating mixture may change which continuations are available, and an independently derived extra channel may use that opening. If no channel exists, collapse is only the last candidate after mode conversion, reflection, trapping, state-space extension and environment records have been excluded. The next gate is a physical embedding and channel-specific prediction; a fit to the known total width is not evidence for the mechanism.
 
@@ -1100,6 +1100,134 @@ chambers, without making any winner intrinsic. The nearest experiment is
 therefore an explicit two-qutrit frame/cost/leakage/transition test, not an
 \(E_8\) or new-force declaration.
 
+## Observer repair exposes the channel between Jordan and Lie
+
+A kenotic audit of [Observer Patch Holography](../programmes/observer-patch-holography/README.md)
+now supplies a more exact observer example. The linked public claim is much
+stronger than the underlying construction: it presents one observer-repair
+process as the unique reconciliation of quantum mechanics and gravity and as
+an explanation of observed dimensionality, forward time and increasing cosmic
+entropy. The project's own premise and construction ledgers retain carrier
+selection, physical clock, radial structure, interacting relativistic limit,
+responsive gravity, observed matter and empirical completion as open or
+conditional. The result should therefore be read neither as a completed theory
+of everything nor dismissed as observer language.
+
+The bounded finite result is real and has been independently replayed at the
+pinned public revision. For one seam of a twelve-port total-two carrier, OPH
+classifies a convex family of completely positive **admissible record laws**.
+All members implement the same classical repair probabilities while preserving
+different quantum coherences. Four named laws form a record ladder: `C0`
+records current, `C` adds the coin, `E` adds pre-repair contrast and `T` records
+both endpoint loads. Exactly `E` and `T` are idempotent in the declared family.
+Repeated repair composes the coherence coordinates explicitly, but the common
+warm-up equilibrium and gap select no physical law. The source receipt says so
+directly: `physical_law_selected=false`.
+
+Classical current histories quotient this family. A coherent reference reopens
+it: one phase-resolved projector measures
+
+\[
+p_+(\theta)=\frac38+\frac12\operatorname{Re}(g e^{-i\theta}),
+\]
+
+and therefore distinguishes laws that every declared current-only feedback
+protocol identifies. This is a source-native instance of the corpus's detector
+principle: agreement under one record map is not identity under a stronger map.
+The [reproduction receipt](../../evidence/data/oph-record-law-reproduction-v1.json)
+records the pinned commit and hashes, exact channel, instrument and burn-in
+replays, 36 passing focused tests and 1,275 verified model artifacts. It also
+retains the useful initial failure in which an in-tree virtual environment was
+correctly rejected as unpinned source.
+
+The conceptual consequence is a refinement, not a replacement, of the
+Jordan--Lie hinge. Jordan structure governs positive coexistence. Lie structure
+governs reversible derivations and transport. A positive channel or instrument
+governs branching, contraction, information loss and record creation. Repair
+then composes those instruments into histories, and overlap comparison tests
+whether local record closures can coexist. These jobs have different
+invariants:
+
+\[
+\text{Jordan admission}
+\longrightarrow
+\text{reversible or contractive operation}
+\longrightarrow
+\text{instrument outcome}
+\longrightarrow
+\text{retained record}
+\longrightarrow
+\text{record-conditioned continuation}.
+\]
+
+Generic matrix positivity does not supply the corpus's special
+`H_2(R)` carrier. The OPH Choi blocks have many positive two-by-two principal
+minors, any of which can resemble a rank-two cone after a chosen real-phase
+restriction. A bridge requires a source-derived invariant projector, inherited
+Jordan closure, complete coordinate observability and survival under repair,
+schedule, overlap and detector controls. Three slow modes are likewise not a
+derivation of physical three-space. No `Sp(4,R)` or `Spin_0(2,3)` identification
+currently follows.
+
+The first bridge tranche has now been executed rather than merely proposed.
+The five multipliers define an exact nine-real-dimensional Choi spectrahedron.
+The two idempotents `E` and `T` project onto fixed spaces of dimensions 3,236
+and 3,126; their 110-dimensional difference is exactly the coherence between
+the 55 empty-seam spectator states and the unique full-seam state. Every law
+in the family kills a coherence between current-disjoint seam sectors, so no
+law is injective and none can be a finite-time `exp(tL)` for a bounded
+time-independent generator. Discrete record formation is therefore not a
+hidden continuous Lie flow.
+
+The local-to-global boundary is equally sharp. A complete 6,084-matrix-unit
+census finds that every named law commutes on disjoint seams, while every one
+fails to commute on adjacent seams. The order difference already appears on a
+diagonal probability distribution. Local closure is consequently qualified by
+incidence and schedule: causal separation closes, but shared ports require an
+authored scheduler, a confluence theorem or an explicit quotient. The Jordan
+census also terminates negatively. `E` fixes a full `M_56(C)` block, so its
+two-level `H_2(C)` corners form `Gr_C(2,56)`; the 55 source-basis empty/full
+pairs split into two spectator-permutation orbits but are only a marked
+subfamily. No source symmetry selects a complex two-plane or the phase
+reference needed to reduce it to `H_2(R)`.
+
+This closes [OT-054](../programmes/frontier-physics-targets/open_topics_v1.md)
+as a useful no-go and opens OT-055 around the surviving experiment.
+[DET-039](../programmes/frontier-physics-targets/detector_frontier_atlas_v1.md)
+now has two exact targets: distinguish classically identical record laws by
+phase tomography, and distinguish adjacent repair orders while confirming that
+disjoint repairs commute. A physical emulator can improve measurement and
+feedback engineering even if conventional channel theory closes every record.
+Only a preregistered residual surviving calibration, dilation, memory and
+scheduler models would reopen a new-physics path. The
+[executed result](../programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md)
+therefore strengthens OPH as a language for detector-relative local closure
+while closing its direct Jordan/Spin bridge on the current source.
+
+The [emulator preflight](../programmes/observer-patch-holography/oph_emulator_preflight_v1.md)
+makes this practical. The one-seam instrument fits in a seven-qubit digital
+design and the adjacent-seam history test in eight qubits with reusable record
+ancillas. One-step discrimination is inexpensive, but deep convergence is not:
+the conservative shot bound grows from 4,470 for the closest one-step pair to
+49,083 for `C^4` against `E` and roughly 12.6 million for `C^8`. The admitted
+programme therefore stops its primary run at depth four and treats deeper
+repair as conditional on measured coherence and memory, not as a ritual demand
+of the exact model.
+
+The [independent reference](../programmes/observer-patch-holography/oph_independent_reference_emulator_v1.md)
+now implements the written seam, phase and repetition equations without
+importing the OPH code or consulting its receipts at runtime. It predicts
+held-out phases, reproduces adjacent-order total variation `0.25` and confirms
+exact disjoint commutation. It also catches a practical error in the first
+preflight wording: two 5,000-shot samples drawn from identical disjoint
+distributions can have raw empirical total variation just above `0.02`.
+Consequently the null must be an uncertainty-aware equivalence statement about
+the underlying corrected distributions, not a cutoff on raw frequencies. The
+observable oracle is now independent. The same reference also compiles the
+four named definite-current instruments into sparse logical isometries with
+record counts `3/6/10/12` and completeness error below `2.3e-16`. Native-gate
+lowering and the device run remain open.
+
 ## Kenotic confidence
 
 This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.
@@ -1159,7 +1287,6 @@ Choose the entrance that matches the work you want to do:
 - **Choose an experiment:** [Frontier experiment atlas](../programmes/frontier-physics-targets/frontier_experiment_atlas_v1.md).
 - **Audit whether it can actually be reached and checked:** [Frontier complexity cards](../programmes/frontier-physics-targets/frontier_complexity_cards_v1.md).
 - **Inspect the exact mixed frontier:** [Mixed-interface resolution](../programmes/frontier/wave-7/frontier_wave7_39_mixed_interface_resolution.md).
-- **Follow the finite regulus carrier into explicit two-qutrit operators and selector dynamics:** [Regulus closure bridge](../programmes/regulus-closure-bridge/README.md).
 - **Follow a closed route and a controlled refusal:** [Two cross-carrier vertical slices](../programmes/frontier/wave-7/frontier_wave7_41_two_cross_carrier_vertical_slices.md).
 - **Choose among all 39 instrumented relations and returns:** [Instrumented admissibility atlas](../programmes/frontier/wave-7/frontier_wave7_42_instrumented_admissibility_atlas.md).
 - **Inspect the reasoning algebra:** [Sourcery ALE algebra](../programmes/frontier/wave-7/frontier_wave7_43_sourcery_ale_algebra.md).
