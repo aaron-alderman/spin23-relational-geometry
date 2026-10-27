@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> At this pinned revision the internal OPH lane is exhausted in a precise, limited sense: reproduction, complete one-seam geometry, fixed-space census, semigroup obstruction, adjacent/disjoint schedule census, literature placement and emulator power analysis are complete. The remaining steps are external rather than missing algebra: compile on an independent stack, run the staged emulator, fit a process model, replicate on a second platform, or supply a physical source attachment that predicts records beyond ordinary channel theory. This stop rule prevents further symbolic elaboration from being mistaken for evidence.
+> At this pinned revision the internal OPH lane is exhausted in a precise, limited sense, and a clean-room logical reference now implements the seam, phase and repetition equations and compiles the four named definite-current instruments without importing the source code. It predicts held-out phases, recovers adjacent-order total variation 0.25 and exact disjoint commutation, and verifies the sparse logical isometries to machine precision. It also shows that two 5,000-shot null samples can have raw empirical distance just above 0.02, so the null must be an uncertainty-aware equivalence statement rather than a cutoff on raw frequencies. The remaining steps are native-gate lowering, device execution, a complete process model, independent-platform replication, or a physical attachment predicting records beyond ordinary channel theory. This stop rule prevents a successful logical replay from being mistaken for hardware or physics.
 
 ## What this commits us to
 
@@ -41,6 +41,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **oph channel geometry and local closure v1** — [oph_channel_geometry_and_local_closure_v1.md](../../../corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md)
 - **oph literature frontier and emulator v1** — [oph_literature_frontier_and_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_literature_frontier_and_emulator_v1.md)
 - **oph emulator preflight v1** — [oph_emulator_preflight_v1.md](../../../corpus/programmes/observer-patch-holography/oph_emulator_preflight_v1.md)
+- **oph independent reference emulator v1** — [oph_independent_reference_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_independent_reference_emulator_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

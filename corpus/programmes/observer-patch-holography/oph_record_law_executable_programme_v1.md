@@ -1,7 +1,7 @@
 # OPH record-law executable bridge programme v1
 
 **Date:** 26 October 2026  
-**Status:** Gates 1--4 resolved; Gate 5 independently executable; physical attachment open
+**Status:** Gates 1--4 resolved; Gate-5 logical instrument reference complete; native-gate execution and physical attachment open
 **Targets:** FPT-001, FPT-002, FPT-015, FPT-016, FPT-017, FPT-019  
 **Frontiers:** FA-03, FA-04, FA-07, FA-08, FA-09, FA-15, FA-17, FA-18  
 **Detector:** DET-039  
@@ -123,6 +123,8 @@ Test whether the selected discrete channel is embeddable in a completely positiv
 - **No-go:** `sp(4,R)` appears only after an arbitrary logarithm, basis choice or enlarged control set.
 
 ## Gate 5: physical emulator
+
+**Current result (27 October 2026): logical-instrument independent pass; hardware gate open.** The [clean-room reference](oph_independent_reference_emulator_v1.md) implements the written seam update and detector equations without importing the OPH implementation, predicts held-out phases, reproduces the exact adjacent/disjoint witnesses and compiles definite-current Kraus/isometry tables for `C0`, `C`, `E` and `T`. Native-gate lowering and a device record remain open.
 
 ### Minimal implementation
 

@@ -8,7 +8,7 @@ _Expanded claim page · The admissibility frontier_
 
 ## Exact assertion
 
-> The emulator preflight makes the cost visible. A seven-qubit one-seam or eight-qubit reusable-ancilla adjacent-seam design fits the logical carrier. The nearest one-step law pair needs a conservative 4,470 shots per arm at one-percent familywise error, while separating the fourth repair from its limit needs 49,083 and the eighth would need about 12.6 million. The primary experiment therefore stops at depth four, reverses adjacent order, and requires a disjoint-order null below total variation 0.02 after correction. That is a realistic instrument and memory benchmark; it becomes physics-facing only if a replicated residual survives the complete conventional channel model.
+> The emulator preflight makes the cost visible. A seven-qubit one-seam or eight-qubit reusable-ancilla adjacent-seam design fits the logical carrier. The nearest one-step law pair needs a conservative 4,470 shots per arm at one-percent familywise error, while separating the fourth repair from its limit needs 49,083 and the eighth would need about 12.6 million. The primary experiment therefore stops at depth four, reverses adjacent order, and requires an uncertainty-aware bound placing the corrected underlying disjoint-order distance below 0.02. That is a realistic instrument and memory benchmark; it becomes physics-facing only if a replicated residual survives the complete conventional channel model.
 
 ## What this commits us to
 
@@ -41,6 +41,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **oph channel geometry and local closure v1** — [oph_channel_geometry_and_local_closure_v1.md](../../../corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md)
 - **oph literature frontier and emulator v1** — [oph_literature_frontier_and_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_literature_frontier_and_emulator_v1.md)
 - **oph emulator preflight v1** — [oph_emulator_preflight_v1.md](../../../corpus/programmes/observer-patch-holography/oph_emulator_preflight_v1.md)
+- **oph independent reference emulator v1** — [oph_independent_reference_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_independent_reference_emulator_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

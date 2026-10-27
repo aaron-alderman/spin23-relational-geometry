@@ -76,7 +76,7 @@ for another dimensionless redesign.
 | OT-051 | Boundary-domain selector spectrum | gated on the paper's promised public energies, matrix elements and fit code; then hold one bulk carrier fixed, vary untwisted, pi-twisted and symmetry-breaking selectors, and predict held-out spectra/OPE data without bulk retuning |
 | OT-052 | Observer-dependent detector and horizon closure | execute [AZ-144](../admissibility/admissibility_144_kerr_multirecord_public_data_consistency_programme.md) on the public GW250114 strain and posterior products; use finite-switching Unruh as its detector regression and build the state-through-greybody Hawking likelihood as the longer endpoint |
 | OT-053 | Nuclear open-system seam and channel calibration | audit the two public 2026 clock releases and execute [AZ-143](../admissibility/admissibility_143_th229_shared_parent_host_channel_factorization_programme.md) where metadata permit; then choose a compound-resonance isotope for the hostile many-channel test |
-| OT-055 | OPH scheduler-qualified record-law emulator | build the phase- and order-sensitive Gate-5 emulator from the [executed geometry](../observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md), with adjacent-order reversal and a disjoint-seam null |
+| OT-055 | OPH scheduler-qualified record-law emulator | lower the definite-current isometries from the [independent logical reference](../observer-patch-holography/oph_independent_reference_emulator_v1.md) into a named gate set, then execute held-out phase/order tests with an uncertainty-aware disjoint equivalence bound |
 
 ## P2 — gated translation problems
 

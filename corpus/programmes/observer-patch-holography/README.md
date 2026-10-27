@@ -1,7 +1,7 @@
 # Observer Patch Holography: kenotic bridge lane
 
 **Date:** 26 October 2026  
-**Status:** internal mathematical lane exhausted at the pinned revision; independent implementation and physical bridges open
+**Status:** internal mathematical lane and independent logical instrument reference complete; native-gate lowering, hardware and physical bridges open
 **Source boundary:** external OPH repository pinned at `0045a99143c6cc8443d2c2c5c5bb4055451dd115`  
 **Evidence:** [reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json)  
 **Verification:** `node verification/admissibility/verify_oph_kenotic_bridge.mjs`  
@@ -36,8 +36,9 @@ The result strengthens the corpus's detector and local-closure language. It does
 4. [Channel geometry and local-closure result](oph_channel_geometry_and_local_closure_v1.md) executes Gates 1--4.
 5. [Literature frontier and emulator plan](oph_literature_frontier_and_emulator_v1.md) places the result against quantum-channel research and specifies Gate 5.
 6. [Emulator preflight](oph_emulator_preflight_v1.md) fixes the logical resources, shot-cost boundary and staged admission gates.
-7. [Internal exhaustion checkpoint](oph_internal_exhaustion_checkpoint_v1.md) states what the source can still settle internally and what now requires an independent implementation or physical attachment.
-8. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
+7. [Independent reference emulator](oph_independent_reference_emulator_v1.md) implements the written observable contract without importing the OPH code and exposes the remaining instrument/compiler boundary.
+8. [Internal exhaustion checkpoint](oph_internal_exhaustion_checkpoint_v1.md) states what the source can still settle internally and what now requires an independent implementation or physical attachment.
+9. [Reproduction receipt](../../../evidence/data/oph-record-law-reproduction-v1.json) records the external commit, hashes, commands, environment and outcomes.
 
 ## What is filled
 
@@ -56,6 +57,8 @@ The result strengthens the corpus's detector and local-closure language. It does
 - `E` and `T` have fixed-space dimensions 3,236 and 3,126; their 110-dimensional difference is empty--full seam coherence.
 - All named laws commute on disjoint seams and fail to commute on adjacent seams.
 - Every family member is non-injective, closing direct finite-time bounded-generator embedding.
+- A clean-room logical reference reproduces the phase, repetition and adjacent/disjoint schedule targets and compiles definite-current instruments for the four named laws without importing the source implementation.
+- The 5,000-shot disjoint simulation shows why a raw total-variation cutoff must be replaced by an uncertainty-aware equivalence test.
 
 ## What is unfilled
 
@@ -68,6 +71,7 @@ The result strengthens the corpus's detector and local-closure language. It does
 - A canonical `H_2(R)` operator-system corner and any derived `Sp(4,R)` or `Spin_0(2,3)` action.
 - A local-to-global theorem showing that compatible patch closures possess a unique faithful global completion.
 - A uniquely defined total entropy whose strict monotonicity follows for the full closed system.
+- A native gate decomposition and hardware run of the seven/eight-qubit design.
 
 The `H_2(R)` item is now a scoped no-go rather than an unexamined gap: `E` fixes a full `M_56(C)` block and therefore contains continuously many `H_2(C)` two-level corners, parameterized by `Gr_C(2,56)`. The number 55 counts only the source-basis empty/full pairs read by one multiplier. The source supplies neither a preferred complex two-plane nor a phase reference selecting a real slice.
 

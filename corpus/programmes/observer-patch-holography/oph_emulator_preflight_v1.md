@@ -41,7 +41,7 @@ Depth is the cost wall. For `C`, the phase-zero separation from `E` is `2^(-r-1)
 | C | depths 5--8 clear a frozen measured-visibility power calculation |
 | D | a second platform is attempted only after one complete conventional instrument/process-tensor model predicts held-out data |
 
-The ideal adjacent-order total-variation distance is 0.25; the disjoint ideal is zero. Five thousand shots per order make the adjacent effect easy in the ideal model. The hard requirement is the null: after self-consistent preparation/readout correction, disjoint order must remain below total variation 0.02. If both adjacent and disjoint pairs retain order, the device has uncontrolled memory and the OPH-specific comparison fails.
+The ideal adjacent-order total-variation distance is 0.25; the disjoint ideal is zero. Five thousand shots per order make the adjacent effect easy in the ideal model. The hard requirement is the null: after self-consistent preparation/readout correction, the inferred underlying disjoint-order distance must remain below total variation 0.02 with a predeclared confidence or equivalence bound. A raw empirical distance is not that bound: the [independent reference run](oph_independent_reference_emulator_v1.md) obtains `0.0204` from two 5,000-shot samples of exactly identical distributions. If both adjacent and disjoint pairs retain statistically resolved order after that correction, the device has uncontrolled memory and the OPH-specific comparison fails.
 
 ## Interpretation
 

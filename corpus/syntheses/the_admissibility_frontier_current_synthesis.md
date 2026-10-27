@@ -1196,6 +1196,20 @@ programme therefore stops its primary run at depth four and treats deeper
 repair as conditional on measured coherence and memory, not as a ritual demand
 of the exact model.
 
+The [independent reference](../programmes/observer-patch-holography/oph_independent_reference_emulator_v1.md)
+now implements the written seam, phase and repetition equations without
+importing the OPH code or consulting its receipts at runtime. It predicts
+held-out phases, reproduces adjacent-order total variation `0.25` and confirms
+exact disjoint commutation. It also catches a practical error in the first
+preflight wording: two 5,000-shot samples drawn from identical disjoint
+distributions can have raw empirical total variation just above `0.02`.
+Consequently the null must be an uncertainty-aware equivalence statement about
+the underlying corrected distributions, not a cutoff on raw frequencies. The
+observable oracle is now independent. The same reference also compiles the
+four named definite-current instruments into sparse logical isometries with
+record counts `3/6/10/12` and completeness error below `2.3e-16`. Native-gate
+lowering and the device run remain open.
+
 ## Kenotic confidence
 
 This synthesis uses a kenotic presentation principle: authority should be proportional to what the reasons can support. That principle does not require a bloodless or apologetic voice.

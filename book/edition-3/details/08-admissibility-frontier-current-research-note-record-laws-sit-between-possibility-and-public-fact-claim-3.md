@@ -41,6 +41,7 @@ Provide an explicit map that preserves the claimed structure, then identify an o
 - **oph channel geometry and local closure v1** — [oph_channel_geometry_and_local_closure_v1.md](../../../corpus/programmes/observer-patch-holography/oph_channel_geometry_and_local_closure_v1.md)
 - **oph literature frontier and emulator v1** — [oph_literature_frontier_and_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_literature_frontier_and_emulator_v1.md)
 - **oph emulator preflight v1** — [oph_emulator_preflight_v1.md](../../../corpus/programmes/observer-patch-holography/oph_emulator_preflight_v1.md)
+- **oph independent reference emulator v1** — [oph_independent_reference_emulator_v1.md](../../../corpus/programmes/observer-patch-holography/oph_independent_reference_emulator_v1.md)
 
 > **Authority boundary.** This page is an automatically generated reading and audit layer. The cited research documents and executable certificates remain authoritative.
 

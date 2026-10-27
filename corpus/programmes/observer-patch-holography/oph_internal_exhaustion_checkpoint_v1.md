@@ -26,14 +26,14 @@ The “55 corners” shorthand is retired. Fifty-five is only the number of sour
 
 ## What remains outside the source
 
-1. **Independent compilation.** Lower the seven-qubit one-seam and eight-qubit adjacent-seam instruments onto a named device or an independently written simulator.
-2. **Stage-A execution.** At 5,000 shots per phase/law, recover the common classical table and the one-step `g`/`k` phase contrasts under a frozen calibration model.
-3. **Stage-B execution.** Reverse adjacent order, retain the ideal total-variation target `0.25`, and require the corrected disjoint-order null to remain below `0.02`.
+1. **Native-gate lowering.** The independent logical reference and named-law definite-current Kraus/isometry compiler are complete. What remains is to lower those sparse isometries onto a named simulator and the seven-qubit one-seam/eight-qubit adjacent-seam device designs.
+2. **Stage-A device execution.** At 5,000 shots per phase/law, recover the common classical table and the one-step `g`/`k` phase contrasts under a frozen calibration model.
+3. **Stage-B device execution.** Reverse adjacent order, retain the ideal total-variation target `0.25`, and require an uncertainty-aware bound on the corrected underlying disjoint-order distance to remain below `0.02`; raw empirical total variation is not an equivalence test.
 4. **Process-model comparison.** Fit an ordinary instrument/process-tensor model and test held-out phase, depth and order records without per-setting refits.
 5. **Independent replication.** Repeat on a second implementation or platform before treating a residual as architecture-specific.
 6. **Physical attachment.** Identify a real carrier, preparation, interaction, detector and nuisance model whose frozen OPH-derived relation predicts a record not already supplied by conventional quantum-channel theory.
 
-Steps 1--5 can establish useful theoretical engineering: a compact benchmark for branching records, retained coherence, memory and scheduler dependence. They do not by themselves establish an ontology. A new-physics branch opens only at step 6, and only if a replicated residual survives the complete conventional model.
+The clean-room observable replay already establishes a useful reference calculation. Steps 1--5 can establish further theoretical engineering: a compact benchmark for branching records, retained coherence, memory and scheduler dependence. They do not by themselves establish an ontology. A new-physics branch opens only at step 6, and only if a replicated residual survives the complete conventional model.
 
 ## Reopening rules
 
