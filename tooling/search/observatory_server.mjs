@@ -5,6 +5,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createObservatoryRuntime } from "./observatory_runtime.mjs";
+import { getContributionBeacon } from "./contribution_beacon.mjs";
 
 const moduleDirectory = dirname(fileURLToPath(import.meta.url));
 const publicRoot = join(moduleDirectory, "observatory", "public");
@@ -50,7 +51,8 @@ export function createObservatoryServer({ root = resolve(moduleDirectory, "../..
         if (!existsSync(path)) return send(response, 404, { error: "Observatory asset is missing" });
         return send(response, 200, readFileSync(path), contentTypes[extname(path)] ?? "application/octet-stream");
       }
-      if (request.method === "GET" && url.pathname === "/api/health") return send(response, 200, { status: "ok", protocol: "spin23-context-hub-observatory/1", persistence: runtime.store.root });
+      if (request.method === "GET" && url.pathname === "/api/health") return send(response, 200, { status: "ok", protocol: "spin23-context-hub-observatory/1", persistence: runtime.store.root, contributionBeacon: "/api/beacon" });
+      if (request.method === "GET" && url.pathname === "/api/beacon") return send(response, 200, getContributionBeacon());
       if (url.pathname === "/api/episodes" && request.method === "GET") return send(response, 200, { episodes: runtime.listEpisodes() });
       if (url.pathname === "/api/episodes" && request.method === "POST") return send(response, 201, runtime.createEpisode(await body(request)));
       const match = /^\/api\/episodes\/(ep_[0-9a-f]{16})(?:\/(.*))?$/u.exec(url.pathname);

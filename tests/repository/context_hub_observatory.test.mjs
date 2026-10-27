@@ -91,6 +91,10 @@ test("local Observatory server exposes static UI and the episode API", async t =
   t.after(() => new Promise(resolve => running.server.close(resolve)));
   const health = await fetch(`${running.url}/api/health`).then(response => response.json());
   assert.equal(health.status, "ok");
+  assert.equal(health.contributionBeacon, "/api/beacon");
+  const beacon = await fetch(`${running.url}/api/beacon`).then(response => response.json());
+  assert.equal(beacon.status, "live-local");
+  assert.equal(beacon.authority.corpusPromotion, false);
   const page = await fetch(running.url);
   assert.equal(page.status, 200);
   assert.match(await page.text(), /Context Hub Observatory/iu);

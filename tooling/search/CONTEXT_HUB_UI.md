@@ -1,6 +1,6 @@
 # Visible Context Hub contract
 
-**Status:** local Observatory implemented; protected-runtime or hosted admission not attempted
+**Status:** live local Observatory and contribution beacon implemented; protected-runtime admission open
 
 ## Primary interaction
 

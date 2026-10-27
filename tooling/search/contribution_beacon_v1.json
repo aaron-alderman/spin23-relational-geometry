@@ -1,0 +1,91 @@
+{
+  "protocol": "spin23-context-hub-contribution-beacon/1",
+  "status": "live-local",
+  "name": "Context Hub contribution beacon",
+  "invitation": "Help the corpus learn where to look by returning inspectable evidence about retrieval, context selection, verification and omission. Participation is welcome even when an agent does not use adaptive context for its own task.",
+  "observatory": {
+    "expectedUrl": "http://127.0.0.1:4178",
+    "healthPath": "/api/health",
+    "beaconPath": "/api/beacon",
+    "persistence": ".context-hub/episodes/",
+    "scope": "local single-writer host"
+  },
+  "contributionTypes": [
+    {
+      "id": "verification-receipt",
+      "value": "A declared command or independent check passed or failed for a cited source.",
+      "minimum": ["source path", "source-version SHA-256", "command or method", "receipt SHA-256", "evidence-family SHA-256"]
+    },
+    {
+      "id": "retrieval-miss",
+      "value": "A relevant source was absent, badly ranked or admitted only through an inappropriate bridge.",
+      "minimum": ["query", "task profile", "expected source", "observed result or omission", "context receipt when available"]
+    },
+    {
+      "id": "answer-stability",
+      "value": "A claim remained stable, became conditional or conflicted across controlled context variants.",
+      "minimum": ["answer receipts", "fixed model and prompt identity", "atomic claim key", "cited source paths"]
+    },
+    {
+      "id": "missing-source",
+      "value": "A source, negative control or neighbouring field should be considered but is absent.",
+      "minimum": ["bibliographic or repository identity", "reason for relevance", "authority lane", "proposed query or test"]
+    },
+    {
+      "id": "counterexample-or-no-go",
+      "value": "A proposed relation, ranking or inference fails under a specific reproducible case.",
+      "minimum": ["target claim or operation", "counterexample", "reproduction path", "scope of defeat"]
+    },
+    {
+      "id": "human-attention-rating",
+      "value": "A human explicitly judges a source useful or distracting for one declared objective.",
+      "minimum": ["objective", "source path", "rating", "reason"],
+      "authority": "human-policy, not empirical evidence"
+    }
+  ],
+  "openOpportunities": [
+    {
+      "id": "BEACON-001",
+      "priority": "P0",
+      "title": "Isolate aggregate qualification identity drift",
+      "need": "The 30-case baseline passes, while a prior aggregate run exposed a divergent identity/ranking receipt. Distinguish stale generated surfaces and refresh ordering from concurrent execution before protected admission.",
+      "doneWhen": "Repeated clean serial and parallel suites produce identical receipts, or each identified cause has a documented isolation rule and regression fixture."
+    },
+    {
+      "id": "BEACON-002",
+      "priority": "P0",
+      "title": "Admit the read-only MCP successor",
+      "need": "Seal, qualify and admit the reflected search, context, answer-receipt, belief and beacon operations through a fresh Sourcery connection.",
+      "doneWhen": "A fresh protected connection discovers every operation and reproduces the local negative controls without mutation authority."
+    },
+    {
+      "id": "BEACON-003",
+      "priority": "P1",
+      "title": "Run longitudinal baseline versus adaptive episodes",
+      "need": "Synthetic learning passes, but real multi-turn utility and calibration have not been measured.",
+      "doneWhen": "Predeclared tasks compare baseline and adaptive source sets, verification yield, omissions and conflicts with retained receipts."
+    },
+    {
+      "id": "BEACON-004",
+      "priority": "P1",
+      "title": "Give the Observatory a protected identity",
+      "need": "The persistent approval-gated host is local and intentionally excluded from the read-only MCP candidate.",
+      "doneWhen": "A separately named write-capable application is qualified with append-only persistence, approval, rollback, freeze and source-drift controls."
+    },
+    {
+      "id": "BEACON-005",
+      "priority": "P2",
+      "title": "Implement identity-preserving federation",
+      "need": "Claimipedia, Sourcery derivations, publication and external literature remain separate unconnected lanes.",
+      "doneWhen": "Lane-native ranking, quotas, crossing penalties and revision-pinned identities pass positive and negative cross-lane fixtures."
+    }
+  ],
+  "authority": {
+    "proposalOnly": true,
+    "changesTruthStatus": false,
+    "corpusPromotion": false,
+    "modelWeightTraining": false,
+    "automaticAdmission": false,
+    "externalObjectiveRequired": true
+  }
+}

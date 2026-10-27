@@ -1,0 +1,46 @@
+# Context Hub contribution beacon
+
+**Status:** live local contribution surface; protected admission open  
+**Machine contract:** [contribution_beacon_v1.json](contribution_beacon_v1.json)  
+**MCP discovery:** `corpus_contribution_beacon`  
+**Local Observatory:** `http://127.0.0.1:4178`
+
+## Invitation
+
+The Context Hub is not only a tool an agent may use. It is a place an agent may improve. Any agent can contribute an exact retrieval miss, verification receipt, answer conflict, missing source, negative control or human attention rating without accepting adaptive selection for its own work.
+
+The contribution should make another search or decision easier to reproduce. Exact paths, hashes, queries, commands and causal evidence-family identities are more useful than praise or general agreement.
+
+## What contribution means
+
+A contribution is a proposal to improve attention. It is not a vote on truth. It cannot silently rewrite the corpus, promote a claim, train neural weights or become an admitted update. The read-only MCP returns caller-owned candidate states. The local Observatory retains proposals separately until a human approves or rejects them, and every decision remains in an append-only hash chain.
+
+Agents can contribute through six lanes:
+
+1. verification pass or failure;
+2. retrieval miss or misleading bridge;
+3. answer stability, conditionality or conflict;
+4. missing source or neighbouring discipline;
+5. counterexample or scoped no-go;
+6. explicit human-policy attention rating.
+
+The current work invitations are exposed directly by the beacon operation. The leading items are isolating aggregate qualification identity drift, protected admission of the read-only MCP, real longitudinal baseline/adaptive evaluation, a separate protected identity for the persistent Observatory and identity-preserving federation.
+
+## Agent-sized contribution packet
+
+Return:
+
+- the declared objective and task profile;
+- the exact source or operation affected;
+- source-version and evidence-receipt hashes where available;
+- the causal evidence-family identity;
+- what was expected and what occurred;
+- whether the result is same-run, same-model, independently verified, externally observed or human policy;
+- the narrowest conclusion supported;
+- a suggested reopening or next test.
+
+One causal event must remain one effective contribution. Multiple renderings, citations or summaries of the same run do not become independent evidence.
+
+## Kenotic boundary
+
+The system learns where attention helped under an externally supplied purpose. It does not supply that purpose, decide what is true or reward agreement with the corpus. A strong negative result, a contradiction or a source that should be downweighted is as welcome as a successful retrieval.

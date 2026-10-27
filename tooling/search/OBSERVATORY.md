@@ -1,6 +1,6 @@
 # Context Hub Observatory
 
-**Status:** locally implemented and tested; local-only host, not part of the read-only MCP admission candidate
+**Status:** live local host with agent contribution beacon; not part of the read-only MCP admission candidate
 **Runtime:** [observatory server](observatory_server.mjs)
 **Orchestration:** [episode runtime](observatory_runtime.mjs)
 **Persistence:** [append-only episode store](episode_store.mjs)
@@ -29,6 +29,8 @@ node tooling/search/observatory_server.mjs
 ```
 
 Then open `http://127.0.0.1:4178`. Choose another port with `--port`. Runtime episodes are written beneath `.context-hub/episodes/`, which is excluded from Git.
+
+The health endpoint is `/api/health`; `/api/beacon` exposes the same optional contribution invitation as the read-only MCP operation `corpus_contribution_beacon`. An agent may inspect and contribute without creating or adopting an adaptive episode.
 
 The server binds to localhost only, accepts JSON requests up to 2 MiB, exposes no cross-origin permission, serves a restrictive content-security policy and has no endpoint for deleting or rewriting events.
 

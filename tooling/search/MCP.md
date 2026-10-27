@@ -1,6 +1,6 @@
 # Corpus search MCP candidate
 
-**Status:** locally implemented and tested read-only successor; not sealed or admitted into the protected Sourcery or Claimipedia runtime
+**Status:** live local read-only successor with contribution beacon; not sealed or admitted into the protected Sourcery or Claimipedia runtime
 **Implementation:** [corpus search MCP server](corpus_search_mcp.mjs)  
 **Regression:** [MCP search tests](../../tests/repository/corpus_search_mcp.test.mjs)
 
@@ -25,6 +25,10 @@ This candidate gives an LLM a bounded way to find, assemble and inspect the corp
 The graph is built from authored local Markdown links. Exact Markdown paragraphs form bounded claim units with role, line range and a content-derived identity. Link-bearing paragraphs can route a query through a synthesis or register to its underlying source while retaining the bridge source, line range and hash. Corpus-local co-occurrence expansion is admitted only when at least two sufficiently specific query terms independently support the same candidate term; otherwise it returns no expansion rather than inventing semantic confidence. Reverse-navigation edges help recover context, but are downweighted. A selector sweep reports how rankings move under three PageRank mixing values. None of these quantities changes the source's declared epistemic status.
 
 ## Reflected operations
+
+### `corpus_contribution_beacon`
+
+Returns the live work invitations, contribution packet contract, local Observatory endpoints and authority boundary without starting a belief episode. It exists so an agent can help improve retrieval or evidence handling even when it does not use adaptive context for its own task. Contributions remain optional proposals and require a separate state-owning host plus approval before they can influence attention.
 
 ### `corpus_context`
 
@@ -111,13 +115,13 @@ The server uses newline-delimited MCP JSON-RPC over stdio and has no package dep
 
 ## Protected-runtime admission path
 
-Local execution is complete. Protected admission remains intentionally open and must proceed through the existing Sourcery lifecycle:
+Local execution is live. Protected admission remains intentionally open and must proceed through the existing Sourcery lifecycle:
 
-1. import the nine reflected tool contracts into a fresh development lane;
+1. import the ten reflected tool contracts into a fresh development lane;
 2. bind corpus identity to an immutable or explicitly refreshed source snapshot;
 3. run the regression suite in a declared projection;
 4. inspect the candidate and its authority receipts;
 5. bless, seal, qualify and admit the successor through a fresh MCP connection;
 6. verify operation discovery, search/read parity, belief-state replay, traversal rejection and absence of mutation authority.
 
-Until that sequence closes, this file records a working local interface and an admission candidate—not a selected production capability.
+Until that sequence closes, this file records a working local interface and an admission candidate—not a selected production capability. The [contribution beacon](CONTRIBUTION_BEACON.md) and local Observatory are nevertheless active local entry points.

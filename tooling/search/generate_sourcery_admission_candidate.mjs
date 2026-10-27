@@ -17,6 +17,8 @@ const sources = [
   "tooling/search/belief_state.mjs",
   "tooling/search/belief_observations.mjs",
   "tooling/search/adaptive_context.mjs",
+  "tooling/search/contribution_beacon.mjs",
+  "tooling/search/contribution_beacon_v1.json",
   "tooling/search/corpus_search_mcp.mjs",
   "tooling/search/benchmark_cases.json",
   "tooling/search/benchmark_baseline_v1.json",
@@ -25,6 +27,7 @@ const sources = [
   "tooling/search/run_belief_evaluation.mjs",
   "tooling/search/MCP.md",
   "tooling/search/BELIEF_LOOP.md",
+  "tooling/search/CONTRIBUTION_BEACON.md",
   "tests/repository/corpus_search.test.mjs",
   "tests/repository/corpus_search_mcp.test.mjs",
   "tests/repository/corpus_answer_stability.test.mjs",
@@ -59,7 +62,7 @@ export function buildSourceryAdmissionCandidate() {
       commands: [
         "node tooling/search/run_benchmark.mjs",
         "node tooling/search/retrieval_intelligence_benchmark.mjs",
-        "node --test tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
+        "node --test --test-concurrency=1 tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
         "node tooling/search/run_belief_evaluation.mjs",
         "node tooling/audit/audit_markdown_links.mjs",
         "git diff --check"
@@ -85,7 +88,7 @@ export function buildSourceryAdmissionCandidate() {
       "bless the tested candidate snapshot",
       "seal and qualify a successor package",
       "admit through the protected lifecycle",
-      "verify all nine operations through a fresh MCP connection"
+      "verify all ten operations through a fresh MCP connection"
     ]
   };
   return { ...payload, candidateSha256: sha256(JSON.stringify(payload)) };

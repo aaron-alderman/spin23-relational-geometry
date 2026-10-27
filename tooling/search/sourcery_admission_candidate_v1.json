@@ -12,6 +12,22 @@
   },
   "tools": [
     {
+      "name": "corpus_contribution_beacon",
+      "description": "Discover the live Context Hub contribution surface without starting a belief episode. Returns open work invitations, acceptable evidence packets, local Observatory entry points and strict authority limits. Contributing is optional and never promotes truth, mutates the corpus or trains model weights.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
       "name": "corpus_search",
       "description": "Search the canonical research corpus. Combines document BM25, exact claim-passage matching, confidence-gated corpus-local distributional expansion, exact cross-reference passage bridges and personalized PageRank. Returns drill-down identities, declared epistemic status and selector sensitivity. Ranking is a navigation aid, not evidence or truth.",
       "inputSchema": {
@@ -542,9 +558,19 @@
       "sha256": "cf6622786c11d6e3ec837e904e526b757427ed40800b9311513cacf7897adf82"
     },
     {
+      "path": "tooling/search/contribution_beacon.mjs",
+      "bytes": 825,
+      "sha256": "63078064419979254188f0fb24eb17094322d848a55f54e703c0329cad3a7f02"
+    },
+    {
+      "path": "tooling/search/contribution_beacon_v1.json",
+      "bytes": 4639,
+      "sha256": "eb0c1442d41d7345e0b42824aaa526174cdc81292655492bce7e9ad40cfe6f89"
+    },
+    {
       "path": "tooling/search/corpus_search_mcp.mjs",
-      "bytes": 23956,
-      "sha256": "b1edd29d0ecd5de6adf3cdde6e38670ce2841c8e6fd57ab78b1d3fd8a4798e3a"
+      "bytes": 25153,
+      "sha256": "84bbe703a281e25f2696347805f16e157eeaaff9a872f0833a366539a1639dc6"
     },
     {
       "path": "tooling/search/benchmark_cases.json",
@@ -553,8 +579,8 @@
     },
     {
       "path": "tooling/search/benchmark_baseline_v1.json",
-      "bytes": 47197,
-      "sha256": "f4a18ced8eada6067c37cec58c8d77a9f8cddde72e32f804009916bfb25a0899"
+      "bytes": 47076,
+      "sha256": "4ebabcd22bfd92902378ef7d9763f83aecc31b2367f6c8c169498c080f559f4e"
     },
     {
       "path": "tooling/search/run_benchmark.mjs",
@@ -573,13 +599,18 @@
     },
     {
       "path": "tooling/search/MCP.md",
-      "bytes": 9863,
-      "sha256": "69bb8c86990b2b267adb82c1b6307549706715db72a3fd633acf0c849d0e72bc"
+      "bytes": 10428,
+      "sha256": "305c20baee32eb7b6efc232eb46cebccb7055d6dccfdd8ceac5116fc4b7cf30d"
     },
     {
       "path": "tooling/search/BELIEF_LOOP.md",
       "bytes": 7397,
       "sha256": "fe2a55d340bfd8ca215604e66664687220a3bf5b83e9c63a9a6574326399f3c3"
+    },
+    {
+      "path": "tooling/search/CONTRIBUTION_BEACON.md",
+      "bytes": 2765,
+      "sha256": "366a8869fab33af0ea8991b5f910907626b3d7e9ce965d0f715e4f2eec7a6332"
     },
     {
       "path": "tests/repository/corpus_search.test.mjs",
@@ -588,8 +619,8 @@
     },
     {
       "path": "tests/repository/corpus_search_mcp.test.mjs",
-      "bytes": 9276,
-      "sha256": "1933ebea726c79bd48aae990e950c9dda2c96753251490895b9e9e24b3e8454f"
+      "bytes": 9959,
+      "sha256": "a93691f53605fc6676283a6c744f65f362553bfc9b6272b17a2d38f837d02fc3"
     },
     {
       "path": "tests/repository/corpus_answer_stability.test.mjs",
@@ -623,7 +654,7 @@
     "commands": [
       "node tooling/search/run_benchmark.mjs",
       "node tooling/search/retrieval_intelligence_benchmark.mjs",
-      "node --test tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
+      "node --test --test-concurrency=1 tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
       "node tooling/search/run_belief_evaluation.mjs",
       "node tooling/audit/audit_markdown_links.mjs",
       "git diff --check"
@@ -649,7 +680,7 @@
     "bless the tested candidate snapshot",
     "seal and qualify a successor package",
     "admit through the protected lifecycle",
-    "verify all nine operations through a fresh MCP connection"
+    "verify all ten operations through a fresh MCP connection"
   ],
-  "candidateSha256": "3e54f413288927f412ccd7cbddf5096fcb282da7f37bca154e012617d8705f78"
+  "candidateSha256": "ac27d9f098a2b3e8741550a0a371e3c17dc46206e34f9789ee62cf8a61e6bd69"
 }
