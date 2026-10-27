@@ -91,6 +91,7 @@ complex.
 14. [Primary literature map and frontier distance](14_primary_literature_map_and_frontier_distance.md)
 15. [Exhaustion ledger and handoff](15_exhaustion_ledger_and_handoff.md)
 16. [Graded Beltrami, impedance and defect investigation spike](../admissibility/admissibility_149_graded_beltrami_impedance_defect_investigation_spike.md)
+17. [Lagrangian boundary selector and Maslov spectral flow](../admissibility/admissibility_150_lagrangian_boundary_selector_and_maslov_spectral_flow.md)
 
 ## Executable spine
 
