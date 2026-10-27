@@ -94,6 +94,7 @@ complex.
 17. [Lagrangian boundary selector and Maslov spectral flow](../admissibility/admissibility_150_lagrangian_boundary_selector_and_maslov_spectral_flow.md)
 18. [Curl eta asymmetry as an orientation record](../admissibility/admissibility_151_curl_eta_asymmetry_is_an_orientation_record_not_a_mass_formula.md)
 19. [Scalar impedance cannot identify dark holonomy](../admissibility/admissibility_152_scalar_impedance_cannot_identify_dark_holonomy_but_matrix_residues_can.md)
+20. [Passive loss and the holonomy gap](../admissibility/admissibility_153_passive_loss_requires_a_bath_ledger_and_can_destroy_the_holonomy_gap.md)
 
 ## Executable spine
 
