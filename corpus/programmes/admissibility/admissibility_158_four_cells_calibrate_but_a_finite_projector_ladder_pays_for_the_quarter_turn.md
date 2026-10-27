@@ -159,3 +159,8 @@ projections give sub-degree angular accuracy but substantial contraction, and
 “run down the channel” into a quantitative design rule and prevents the
 geometric angle from being rescued by silently normalizing away the cost of
 selection.
+
+**Successor:** [AZ-159](admissibility_159_a_detuned_fourth_mode_generates_the_dark_channel_but_low_frequency_coherence_is_the_hard_gate.md)
+replaces the projectors by a norm-preserving four-resonator generator and
+finds that the low-frequency fixture is limited primarily by coherence time,
+not by adiabatic convergence.

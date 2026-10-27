@@ -99,6 +99,7 @@ complex.
 22. [Trifilar braid fixed-plane no-go and moving-projector repair](../admissibility/admissibility_156_trifilar_braid_fixed_plane_no_go_and_moving_projector_repair.md)
 23. [Transformer synthesis closes the trifilar matrix but opens a control-work port](../admissibility/admissibility_157_transformer_synthesis_closes_the_trifilar_matrix_but_opens_a_control_work_port.md)
 24. [Four cells calibrate, but a finite projector ladder pays for the quarter-turn](../admissibility/admissibility_158_four_cells_calibrate_but_a_finite_projector_ladder_pays_for_the_quarter_turn.md)
+25. [A detuned fourth mode generates the dark channel, but low-frequency coherence is the hard gate](../admissibility/admissibility_159_a_detuned_fourth_mode_generates_the_dark_channel_but_low_frequency_coherence_is_the_hard_gate.md)
 
 ## Executable spine
 
