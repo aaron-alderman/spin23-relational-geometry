@@ -93,7 +93,7 @@ function renderEpisode() {
   $("#episode-view").hidden = false;
   $("#episode-id").textContent = `${episode.episodeId} · revision ${episode.revision}`;
   $("#episode-objective").textContent = episode.objective;
-  $("#episode-meta").textContent = `${episode.profile} profile · corpus ${shortHash(episode.corpusContentSha256)} · policy ${shortHash(episode.governance.policySha256)} · admitted ${shortHash(episode.governance.admittedStateSha256)}${episode.governance.candidateStateSha256 ? ` · candidate ${shortHash(episode.governance.candidateStateSha256)}` : ""}`;
+  $("#episode-meta").textContent = `${episode.profile} profile${episode.taskSchedule.length ? ` · ${episode.taskSchedule.length} preregistered tasks` : " · exact-objective turns"} · corpus ${shortHash(episode.corpusContentSha256)} · policy ${shortHash(episode.governance.policySha256)} · admitted ${shortHash(episode.governance.admittedStateSha256)}${episode.governance.candidateStateSha256 ? ` · candidate ${shortHash(episode.governance.candidateStateSha256)}` : ""}`;
   $("#corpus-short").textContent = shortHash(episode.corpusContentSha256);
   $("#head-hash").textContent = `head ${shortHash(episode.headSha256)}`;
   $("#freeze-state").textContent = episode.frozen ? "learning frozen" : "learning open";
@@ -205,8 +205,10 @@ $("#create-episode").addEventListener("click", async () => {
   try {
     const objective = $("#objective").value.trim();
     const profile = $("#new-profile").value;
-    const episode = await api("/api/episodes", { method: "POST", body: JSON.stringify({ objective, profile }) });
+    const taskSchedule = $("#task-schedule").value.split(/\r?\n/u).map(value => value.trim()).filter(Boolean);
+    const episode = await api("/api/episodes", { method: "POST", body: JSON.stringify({ objective, profile, ...(taskSchedule.length ? { taskSchedule } : {}) }) });
     $("#objective").value = "";
+    $("#task-schedule").value = "";
     await refreshEpisodes(episode.episodeId);
     toast("Episode created with an untouched prior.");
   } catch (error) { toast(error.message, true); }

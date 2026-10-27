@@ -60,7 +60,9 @@ export function buildAdaptiveCorpusContext({
   const state = verifyBeliefState(beliefState);
   const selectedProfile = profile ?? state.episode.profile;
   const normalizedTask = typeof task === "string" ? task.trim() : "";
-  if (normalizedTask !== state.episode.objective) throw new Error("adaptive task must exactly match the belief episode objective; create a new episode or an explicit governed transfer for a different task");
+  const taskSchedule = state.episode.taskSchedule ?? [];
+  const taskAllowed = taskSchedule.length ? taskSchedule.includes(normalizedTask) : normalizedTask === state.episode.objective;
+  if (!taskAllowed) throw new Error(taskSchedule.length ? "adaptive task is outside the belief episode's preregistered taskSchedule" : "adaptive task must exactly match the belief episode objective; create a new episode or an explicit governed transfer for a different task");
   if (selectedProfile !== state.episode.profile) throw new Error("adaptive profile must exactly match the belief episode profile; create a new episode or an explicit governed transfer for a different profile");
   if (typeof adaptiveWeight !== "number" || !Number.isFinite(adaptiveWeight) || adaptiveWeight < 0 || adaptiveWeight > 0.2) throw new Error("adaptiveWeight must be from 0 to 0.2");
   if (typeof explorationWeight !== "number" || !Number.isFinite(explorationWeight) || explorationWeight < 0 || explorationWeight > 0.05) throw new Error("explorationWeight must be from 0 to 0.05");
@@ -98,7 +100,7 @@ export function buildAdaptiveCorpusContext({
     task: normalizedTask,
     beliefStateSha256: state.stateSha256,
     corpusContentSha256: identity.corpusContentSha256,
-    controls: { requestedAdaptiveWeight: adaptiveWeight, effectiveAdaptiveWeight, maximumAdaptiveWeight: 0.2, requestedExplorationWeight: explorationWeight, effectiveExplorationWeight, maximumExplorationWeight: 0.05, emptyStatePreservesBaseline: !hasLearnedSources },
+    controls: { requestedAdaptiveWeight: adaptiveWeight, effectiveAdaptiveWeight, maximumAdaptiveWeight: 0.2, requestedExplorationWeight: explorationWeight, effectiveExplorationWeight, maximumExplorationWeight: 0.05, emptyStatePreservesBaseline: !hasLearnedSources, taskScope: taskSchedule.length ? "preregistered-schedule" : "exact-objective", taskScheduleSha256: taskSchedule.length ? sha256(taskSchedule) : null },
     baseline: { receipt: baseline.receipt, sources: baseline.sources.map(sourceView) },
     adaptive: { ...adaptive, context: undefined, sources: adaptive.sources.map(sourceView) },
     candidateUniverse: adaptive.candidateUniverse.map(candidateView),

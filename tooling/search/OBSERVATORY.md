@@ -73,7 +73,11 @@ The episode view exposes:
 
 The adaptive outcome balance is an operational diagnostic, not a scientific score. It reports whether subsequently observed positive or negative attention utility favored the adaptive-only or baseline-only set. Human ratings are marked `human-policy`; they express a preference over attention rather than independent empirical evidence.
 
+For a longitudinal trial, episode creation may include a `taskSchedule` containing 2–100 unique subquestions under one umbrella objective. The schedule is bound into both the initial belief-state identity and the public governance receipt. Scheduled episodes refuse every undeclared task; unscheduled episodes retain exact objective equality. This permits within-objective learning across preregistered tasks without allowing undeclared cross-objective transfer. The local UI exposes the same optional schedule.
+
 The retained 12-case corpus warm-up passes candidate recall, empty-state parity, answer receipts, deterministic replay, objective isolation, adverse-evidence direction, rollback, freeze and authority gates against one exact corpus identity. It is same-run objective-scoped engineering evidence. Because the expected source and marker are preregistered from the corpus itself, it does not close the stronger longitudinal gate requiring independent downstream task outcomes.
+
+[`LONGITUDINAL_EVALUATION.md`](LONGITUDINAL_EVALUATION.md) defines that stronger gate. Its executable verifier requires a public key registered before context generation, six paired held-out tasks, exact context/answer/evidence identities, causal-family discipline, utility and concentration limits, and rollback/freeze/drift controls. The template deliberately has no evaluator key and cannot self-pass; no real longitudinal result is claimed yet.
 
 Replay uses the candidate universe recorded with each original turn, including source identities and retrieval scores. It therefore tests alternate selector and estimator controls against what was eligible then, not against a silently changed live search result. Turns created before candidate-universe receipts fail closed rather than claiming faithful replay.
 

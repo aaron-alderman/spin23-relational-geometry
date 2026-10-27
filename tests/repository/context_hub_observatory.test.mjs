@@ -110,6 +110,18 @@ test("runtime executes plan, answer, proposed update, approval, monitoring and r
   assert.throws(() => runtime.rollback(episode.episodeId, { targetStateSha256: proposed.proposal.successorState.stateSha256 }), /frozen/iu);
   assert.equal(runtime.listEpisodes()[0].metrics.turns, 1);
 });
+test("one objective may preregister a bounded longitudinal task schedule without opening cross-objective transfer", t => {
+  const { root, stateRoot } = fixture(t);
+  const runtime = createObservatoryRuntime({ root, stateRoot, idFactory: () => "ep_3333333333333333" });
+  const tasks = ["boundary response alpha", "boundary response beta"];
+  let episode = runtime.createEpisode({ objective: "audit one bounded response family", taskSchedule: tasks, profile: "audit" });
+  assert.deepEqual(episode.taskSchedule, tasks);
+  assert.match(episode.governance.taskScheduleSha256, /^[0-9a-f]{64}$/u);
+  const planned = runtime.planTurn(episode.episodeId, { task: tasks[0] });
+  assert.equal(planned.turn.task, tasks[0]);
+  assert.throws(() => runtime.planTurn(episode.episodeId, { task: "an undeclared neighbouring objective" }), /outside the preregistered/iu);
+  assert.throws(() => runtime.createEpisode({ objective: "bad schedule", taskSchedule: ["same", "same"] }), /unique/iu);
+});
 test("local Observatory server exposes static UI and the episode API", async t => {
   const { root, stateRoot } = fixture(t);
   const running = await startObservatoryServer({ root, stateRoot, port: 0 });
