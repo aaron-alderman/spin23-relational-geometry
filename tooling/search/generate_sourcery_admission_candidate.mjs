@@ -9,6 +9,7 @@ import { corpusSearchMcpTools } from "./corpus_search_mcp.mjs";
 const moduleDirectory = dirname(fileURLToPath(import.meta.url));
 const root = resolve(moduleDirectory, "../..");
 const outputPath = resolve(moduleDirectory, "sourcery_admission_candidate_v1.json");
+const projectionManifestPath = resolve(moduleDirectory, "corpus_projection_manifest_v1.json");
 const sources = [
   "tooling/search/search_corpus.mjs",
   "tooling/search/context_hub.mjs",
@@ -19,6 +20,8 @@ const sources = [
   "tooling/search/adaptive_context.mjs",
   "tooling/search/contribution_beacon.mjs",
   "tooling/search/contribution_beacon_v1.json",
+  "tooling/search/generate_corpus_projection_manifest.mjs",
+  "tooling/search/corpus_projection_manifest_v1.json",
   "tooling/search/corpus_search_mcp.mjs",
   "tooling/search/benchmark_cases.json",
   "tooling/search/benchmark_baseline_v1.json",
@@ -36,12 +39,14 @@ const sources = [
   "tests/repository/corpus_belief_state.test.mjs",
   "tests/repository/corpus_belief_evaluation.test.mjs",
   "tests/repository/corpus_search_benchmark.test.mjs",
+  "tests/repository/corpus_projection_manifest.test.mjs",
   "tests/repository/corpus_search_admission_candidate.test.mjs"
 ];
 
 const sha256 = bytes => createHash("sha256").update(bytes).digest("hex");
 
 export function buildSourceryAdmissionCandidate() {
+  const projection = JSON.parse(readFileSync(projectionManifestPath, "utf8"));
   const members = sources.map(path => {
     const bytes = readFileSync(resolve(root, path));
     return { path, bytes: bytes.length, sha256: sha256(bytes) };
@@ -57,6 +62,15 @@ export function buildSourceryAdmissionCandidate() {
       corpusPromotion: false,
       applicationAdmission: false,
       protectedRuntimeSelected: false
+    },
+    corpusProjection: {
+      protocol: projection.protocol,
+      manifestSha256: projection.manifestSha256,
+      corpusContentSha256: projection.corpusContentSha256,
+      evidenceProjectionSha256: projection.evidenceProjectionSha256,
+      documentCount: projection.documentCount,
+      exactPayloadMaterialized: false,
+      note: "The retained manifest binds every required object. Protected publication must transfer and re-hash the exact bytes; the inventory is not itself the corpus payload."
     },
     tools: corpusSearchMcpTools,
     members,
@@ -82,7 +96,8 @@ export function buildSourceryAdmissionCandidate() {
         "empty belief state preserves baseline source selection",
         "adaptive influence capped and never changes epistemic status",
         "MCP server retains no hidden belief state",
-        "unrelated generated evidence-spine control metadata cannot change retrieval identity"
+        "unrelated generated evidence-spine control metadata cannot change retrieval identity",
+        "missing, extra or hash-mismatched projection objects rejected before protected publication"
       ]
     },
     admissionSequence: [

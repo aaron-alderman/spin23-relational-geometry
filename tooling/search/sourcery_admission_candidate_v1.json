@@ -10,6 +10,15 @@
     "applicationAdmission": false,
     "protectedRuntimeSelected": false
   },
+  "corpusProjection": {
+    "protocol": "spin23-corpus-projection-manifest/1",
+    "manifestSha256": "7b31c33d369e8148bda1ff08f0a588053e51cec7de7d61565b99b3a3210e4b51",
+    "corpusContentSha256": "678bec5d080f0663a54c2a804689209f7d733989008bd416290cc542bcaad2fe",
+    "evidenceProjectionSha256": "6814423b4e342b3e4281aeb13db79ec8e1bd0adf26cc1381dcd43e7dd3a7f491",
+    "documentCount": 2398,
+    "exactPayloadMaterialized": false,
+    "note": "The retained manifest binds every required object. Protected publication must transfer and re-hash the exact bytes; the inventory is not itself the corpus payload."
+  },
   "tools": [
     {
       "name": "corpus_contribution_beacon",
@@ -524,8 +533,8 @@
   "members": [
     {
       "path": "tooling/search/search_corpus.mjs",
-      "bytes": 40443,
-      "sha256": "6f4ddfe03df996cb564eb1c535c5d4fe6e1c6dbe7f494c8b8dcafa31cbbaccea"
+      "bytes": 40685,
+      "sha256": "01364dd76ce1936d7d309287d25c9a0bd64c2e84cc10e1bbea3e439b2f0b2531"
     },
     {
       "path": "tooling/search/context_hub.mjs",
@@ -564,8 +573,18 @@
     },
     {
       "path": "tooling/search/contribution_beacon_v1.json",
-      "bytes": 5254,
-      "sha256": "7f7ef351426c12fefbdc15fe5143ad79522422485b70202ab0a16ae308c22b18"
+      "bytes": 5439,
+      "sha256": "b47bc321d742a19426205784d1529bc80e09c757ab35ea264e620eb6059e2f84"
+    },
+    {
+      "path": "tooling/search/generate_corpus_projection_manifest.mjs",
+      "bytes": 2500,
+      "sha256": "e9eedfff3c0f94a99cc23ae91876b310a81d62c67cd4463289379fe11a38aaa4"
+    },
+    {
+      "path": "tooling/search/corpus_projection_manifest_v1.json",
+      "bytes": 688013,
+      "sha256": "898504dbd1026910eabae172a55d2bc879432044e45b3674f104a16e37e220ca"
     },
     {
       "path": "tooling/search/corpus_search_mcp.mjs",
@@ -609,8 +628,8 @@
     },
     {
       "path": "tooling/search/MCP.md",
-      "bytes": 10427,
-      "sha256": "09f7cac88cc8c835e1f345fa1c8d4a1cb65d2d2e856705167ae9efce87c9071d"
+      "bytes": 11128,
+      "sha256": "6635d1c9b88a3350ec3beb454bfe46ae005648ca7d6934717449a58827f575b8"
     },
     {
       "path": "tooling/search/BELIEF_LOOP.md",
@@ -619,8 +638,8 @@
     },
     {
       "path": "tooling/search/CONTRIBUTION_BEACON.md",
-      "bytes": 3945,
-      "sha256": "82e4cbb3c6acf8a03e753d7ea96700b7c85a9876e17d6941cf2cb464a8367e9f"
+      "bytes": 4261,
+      "sha256": "384d983e1e4e99a117edd39c6e2ee722163ddef8cd586de9600ebabbaf480333"
     },
     {
       "path": "tests/repository/corpus_search.test.mjs",
@@ -653,9 +672,14 @@
       "sha256": "04949ee0acc164b7f8ac021b92a5429e5e725265020cdcb6e0b61a7d78483166"
     },
     {
+      "path": "tests/repository/corpus_projection_manifest.test.mjs",
+      "bytes": 920,
+      "sha256": "b0cc1da398c4aacfc4d56d8b0b2a2e46eb07aa900380eb84b3974dc5488a283d"
+    },
+    {
       "path": "tests/repository/corpus_search_admission_candidate.test.mjs",
-      "bytes": 774,
-      "sha256": "7d0ed829b2a69e0bbc0d6528cb46d2fd52442d7e5013c12ad17dad327e8da573"
+      "bytes": 987,
+      "sha256": "c20e3f942146009c31133ee0fc367cdfd5660dbcaa29e485f01d64cb1dd09cfb"
     }
   ],
   "qualification": {
@@ -686,7 +710,8 @@
       "empty belief state preserves baseline source selection",
       "adaptive influence capped and never changes epistemic status",
       "MCP server retains no hidden belief state",
-      "unrelated generated evidence-spine control metadata cannot change retrieval identity"
+      "unrelated generated evidence-spine control metadata cannot change retrieval identity",
+      "missing, extra or hash-mismatched projection objects rejected before protected publication"
     ]
   },
   "admissionSequence": [
@@ -699,5 +724,5 @@
     "admit through the protected lifecycle",
     "verify all ten operations through a fresh MCP connection"
   ],
-  "candidateSha256": "a95e679ca09f8d5c22ca898430bdd259ff2a37bd8c6d54ab6142f09bd33323c1"
+  "candidateSha256": "0531f5ffa1e75e2f4a4053bc54144ccbb93cbe0fd04cb11828870654518cdc1e"
 }

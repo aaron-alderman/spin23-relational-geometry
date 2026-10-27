@@ -87,6 +87,8 @@ Every result also reports `retrievalSupport`: matched query tokens, their docume
 
 This benchmark measures recovery of preregistered navigation targets. It does not show that the expected source is uniquely relevant, complete or true. The retained `sourcery_admission_candidate_v1.json` hashes this local successor and its qualification benchmark, but remains an unsealed, unadmitted candidate; a fresh protected-lifecycle package is still required before runtime admission.
 
+The candidate now also binds [`corpus_projection_manifest_v1.json`](corpus_projection_manifest_v1.json): a deterministic inventory of all 2,398 indexed Markdown objects, their byte lengths and SHA-256 identities, the evidence-spine identity and the aggregate retrieval-content identity. This closes ambiguity about *which bytes* must be published across the Windows/Linux boundary. It does not contain or admit those bytes. A protected publisher must materialize every listed object, reject missing, extra or mismatched indexed objects, rebuild the index and reproduce the aggregate identity before the ten operations can be qualified.
+
 ## Authority boundary
 
 Every search and read result declares:
@@ -118,7 +120,7 @@ The server uses newline-delimited MCP JSON-RPC over stdio and has no package dep
 Local execution is live. Protected admission remains intentionally open and must proceed through the existing Sourcery lifecycle:
 
 1. import the ten reflected tool contracts into a fresh development lane;
-2. bind corpus identity to an immutable or explicitly refreshed source snapshot;
+2. materialize the exact objects bound by the corpus projection manifest, reject inventory mismatch and reproduce its aggregate corpus identity;
 3. run the regression suite in a declared projection;
 4. inspect the candidate and its authority receipts;
 5. bless, seal, qualify and admit the successor through a fresh MCP connection;

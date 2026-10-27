@@ -20,13 +20,13 @@ const KNOWN_CORRECTIONS = new Map([
 ]);
 
 const toPosix = value => value.split(sep).join("/");
-const markdownRoots = ["corpus", "book/edition-3/chapters", "verification"];
+export const CORPUS_MARKDOWN_ROOTS = Object.freeze(["corpus", "book/edition-3/chapters", "verification"]);
 // Generated navigation certificates remain searchable, but cannot define the
 // scientific-content identity that they themselves report.  In particular,
 // FRONT_DOOR inventories the retained retrieval baseline; hashing it here
 // would make baseline and front-door regeneration recursively invalidate one
 // another.  Its dedicated repository test governs its own byte identity.
-const contentIdentityExcludedPaths = new Set([
+export const CONTENT_IDENTITY_EXCLUDED_PATHS = new Set([
   // Generated evidence/navigation prose is searchable but its machine twin is
   // already bound separately below. Keeping it out of the content hash avoids
   // counting the same control surface twice.
@@ -88,6 +88,11 @@ function walkMarkdown(root, relativeRoot) {
   if (statSync(start).isDirectory()) visit(start);
   else if (extname(start).toLowerCase() === ".md") output.push(toPosix(relative(root, start)));
   return output;
+}
+
+export function indexedMarkdownPaths(root = process.cwd()) {
+  const resolvedRoot = resolve(root instanceof URL ? fileURLToPath(root) : root);
+  return [...new Set(CORPUS_MARKDOWN_ROOTS.flatMap(item => walkMarkdown(resolvedRoot, item)))].sort();
 }
 
 function extractTitle(text, path) {
@@ -276,7 +281,7 @@ function buildIndex(root) {
   const resolvedRoot = resolve(root instanceof URL ? fileURLToPath(root) : root);
   const now = Date.now();
   if (cache?.root === resolvedRoot && now - cache.checkedAt < cacheValidationIntervalMs) return cache.index;
-  const paths = [...new Set(markdownRoots.flatMap(item => walkMarkdown(resolvedRoot, item)))].sort();
+  const paths = indexedMarkdownPaths(resolvedRoot);
   const evidenceSpinePath = join(resolvedRoot, "corpus", "registers", "corpus_evidence_spine.json");
   const fingerprintHash = createHash("sha256");
   for (const path of paths) {
@@ -296,7 +301,7 @@ function buildIndex(root) {
   const contentHash = createHash("sha256");
   const documents = paths.map((path, id) => {
     const text = readFileSync(join(resolvedRoot, path), "utf8");
-    if (!contentIdentityExcludedPaths.has(path)) {
+    if (!CONTENT_IDENTITY_EXCLUDED_PATHS.has(path)) {
       contentHash.update(`${path}\0`);
       contentHash.update(text);
       contentHash.update("\n");
