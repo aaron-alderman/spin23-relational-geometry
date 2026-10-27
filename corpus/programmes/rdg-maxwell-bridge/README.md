@@ -92,6 +92,7 @@ complex.
 15. [Exhaustion ledger and handoff](15_exhaustion_ledger_and_handoff.md)
 16. [Graded Beltrami, impedance and defect investigation spike](../admissibility/admissibility_149_graded_beltrami_impedance_defect_investigation_spike.md)
 17. [Lagrangian boundary selector and Maslov spectral flow](../admissibility/admissibility_150_lagrangian_boundary_selector_and_maslov_spectral_flow.md)
+18. [Curl eta asymmetry as an orientation record](../admissibility/admissibility_151_curl_eta_asymmetry_is_an_orientation_record_not_a_mass_formula.md)
 
 ## Executable spine
 
