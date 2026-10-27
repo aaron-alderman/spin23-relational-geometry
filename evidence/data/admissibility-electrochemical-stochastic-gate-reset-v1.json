@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "admissibility-electrochemical-stochastic-gate-reset-v1",
+  "date": "2026-10-27",
+  "electrochemicalWitness": {
+    "temperatureKelvin": 310,
+    "gasConstant": 8.314462618,
+    "faradayConstant": 96485.33212,
+    "species": [
+      {"name": "sodium", "valence": 1, "outsideMillimolar": 145, "insideMillimolar": 12},
+      {"name": "potassium", "valence": 1, "outsideMillimolar": 4, "insideMillimolar": 140}
+    ]
+  },
+  "stochasticGateWitness": {
+    "openingRatePerSecond": 20,
+    "closingRatePerSecond": 80,
+    "channelCounts": [100, 10000],
+    "gateTimeConstantSeconds": 0.01,
+    "probeFrequenciesHertz": [1, 7.8, 40]
+  },
+  "recoveryWitness": {
+    "channelRecoveryTimeConstantSeconds": 0.003,
+    "metabolicResourceTimeConstantSeconds": 1,
+    "rule": "Fast channel recovery and slow gradient restoration are distinct state variables and must not be fitted as one refractory constant."
+  },
+  "schumannMagnitudeWitness": {
+    "representativeEnvironmentalElectricFieldASDVoltPerMeterRootHertz": 0.0003,
+    "comparisonEquivalentNoiseBandwidthHertz": 1,
+    "representativeSlicePhaseEntrainmentFieldVoltPerMeter": 0.2,
+    "bodyTransferIncluded": false,
+    "interpretation": "Illustrative one-hertz-equivalent literature-scale comparison, not a universal neural threshold."
+  },
+  "trifilarBasis": {
+    "common": [0.5773502691896258, 0.5773502691896258, 0.5773502691896258],
+    "differential1": [0.7071067811865475, -0.7071067811865475, 0],
+    "differential2": [0.4082482904638631, 0.4082482904638631, -0.8164965809277261]
+  },
+  "maxwellDemonGate": [
+    "measurement",
+    "stored_record",
+    "conditional_action",
+    "free_energy_change",
+    "record_reset"
+  ],
+  "nextGate": "Build the LC-loaded trifilar emulator and require one frozen stochastic electrochemical model to predict full matrix response, dwell statistics, phase locking, loss and slow recovery."
+}
