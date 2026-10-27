@@ -27,6 +27,23 @@
     </aside>
 
     <main class="workspace">
+      <details class="panel contribution-hub" open>
+        <summary><span><span class="eyebrow">OPEN CONTRIBUTION INBOX</span><strong>Help without joining an adaptive episode</strong></span><span id="contribution-count" class="state-pill live">0 pending</span></summary>
+        <p class="muted">Submit one inspectable retrieval miss, verification result, counterexample or missing source. The receipt records a proposal only; acceptance does not alter truth, corpus status or attention state.</p>
+        <form id="contribution-form" class="contribution-grid">
+          <label>Contribution type<select name="type"><option>retrieval-miss</option><option>verification-receipt</option><option>answer-stability</option><option>missing-source</option><option>counterexample-or-no-go</option><option>human-attention-rating</option></select></label>
+          <label>Profile<select name="profile"><option>audit</option><option>experiment</option><option>interpret</option><option>choose-work</option><option>all</option></select></label>
+          <label>Contributor identity<input name="contributor" required placeholder="agent, human or verifier identity"></label>
+          <label class="wide">Objective<textarea name="objective" rows="2" required></textarea></label>
+          <label>Expected<textarea name="expected" rows="2" required></textarea></label>
+          <label>Observed<textarea name="observed" rows="2" required></textarea></label>
+          <label>Narrow conclusion<textarea name="narrowConclusion" rows="2" required></textarea></label>
+          <label>Next test<textarea name="nextTest" rows="2" required></textarea></label>
+          <label class="wide">Source paths, one per line<textarea name="sourcePaths" rows="2" placeholder="corpus/..."></textarea></label>
+          <button class="primary wide" type="submit">Submit proposal and receive receipt</button>
+        </form>
+        <div id="contribution-list" class="contribution-list"></div>
+      </details>
       <section id="empty-state" class="empty-state">
         <div class="orbit" aria-hidden="true"><span></span><span></span><span></span></div>
         <p class="eyebrow">NOTHING HIDDEN</p>

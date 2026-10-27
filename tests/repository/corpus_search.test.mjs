@@ -72,6 +72,22 @@ test("semantic indexing excludes tilde fences, comments and table separators", t
   assert.equal(visible.results[0].claimMatch.lineEnd, 13);
 });
 
+test("retrieval identity ignores evidence-spine control metadata outside the consumed claim projection", t => {
+  const fixture = mkdtempSync(join(tmpdir(), "corpus-search-identity-projection-"));
+  t.after(() => rmSync(fixture, { recursive: true, force: true }));
+  const roots = [join(fixture, "left"), join(fixture, "right")];
+  for (const [index, directory] of roots.entries()) {
+    mkdirSync(join(directory, "corpus", "registers"), { recursive: true });
+    writeFileSync(join(directory, "corpus", "source.md"), "# Stable source\n\nExact stable retrieval content.\n");
+    writeFileSync(join(directory, "corpus", "registers", "corpus_evidence_spine.json"), JSON.stringify({ schema: "spin23-corpus-evidence-spine/v1", source: { canonicalManifest: { sha256: String(index).repeat(64) } }, objectIdentities: [{ path: `unrelated-${index}` }], claims: [] }));
+  }
+  const left = searchCorpus({ root: roots[0], query: "stable retrieval", limit: 5 });
+  const right = searchCorpus({ root: roots[1], query: "stable retrieval", limit: 5 });
+  assert.equal(left.evidenceSpineSha256, right.evidenceSpineSha256);
+  assert.equal(left.corpusContentSha256, right.corpusContentSha256);
+  assert.deepEqual(left.results.map(item => item.path), right.results.map(item => item.path));
+});
+
 test("graph propagation surfaces linked context while preserving declared status", () => {
   const result = searchCorpus({ root, query: "finite band Levinson pole collision", limit: 12, profile: "experiment" });
   assert.ok(result.results.some(item => item.graphScore > item.lexicalScore));

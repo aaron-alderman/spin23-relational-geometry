@@ -23,6 +23,8 @@ const sources = [
   "tooling/search/benchmark_cases.json",
   "tooling/search/benchmark_baseline_v1.json",
   "tooling/search/run_benchmark.mjs",
+  "tooling/search/qualify_retrieval_identity.mjs",
+  "tooling/search/retrieval_identity_qualification_v1.json",
   "tooling/search/retrieval_intelligence_benchmark.mjs",
   "tooling/search/run_belief_evaluation.mjs",
   "tooling/search/MCP.md",
@@ -33,7 +35,8 @@ const sources = [
   "tests/repository/corpus_answer_stability.test.mjs",
   "tests/repository/corpus_belief_state.test.mjs",
   "tests/repository/corpus_belief_evaluation.test.mjs",
-  "tests/repository/corpus_search_benchmark.test.mjs"
+  "tests/repository/corpus_search_benchmark.test.mjs",
+  "tests/repository/corpus_search_admission_candidate.test.mjs"
 ];
 
 const sha256 = bytes => createHash("sha256").update(bytes).digest("hex");
@@ -61,6 +64,7 @@ export function buildSourceryAdmissionCandidate() {
       benchmark: { legacyCases: 30, paraphraseCases: 12, holdoutCases: 6, requiredPassRate: 1, minimumMeanReciprocalRank: 0.8 },
       commands: [
         "node tooling/search/run_benchmark.mjs",
+        "node tooling/search/qualify_retrieval_identity.mjs",
         "node tooling/search/retrieval_intelligence_benchmark.mjs",
         "node --test --test-concurrency=1 tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
         "node tooling/search/run_belief_evaluation.mjs",
@@ -77,7 +81,8 @@ export function buildSourceryAdmissionCandidate() {
         "belief state tampering and stale corpus identity rejected",
         "empty belief state preserves baseline source selection",
         "adaptive influence capped and never changes epistemic status",
-        "MCP server retains no hidden belief state"
+        "MCP server retains no hidden belief state",
+        "unrelated generated evidence-spine control metadata cannot change retrieval identity"
       ]
     },
     admissionSequence: [

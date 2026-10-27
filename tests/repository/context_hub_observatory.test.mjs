@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 import { createEpisodeStore } from "../../tooling/search/episode_store.mjs";
+import { createContributionStore } from "../../tooling/search/contribution_store.mjs";
 import { createObservatoryRuntime } from "../../tooling/search/observatory_runtime.mjs";
 import { startObservatoryServer } from "../../tooling/search/observatory_server.mjs";
 
@@ -33,6 +34,18 @@ test("episode store is append-only, revision-guarded and hash-chain verified", t
   lines[1] = JSON.stringify(tampered);
   writeFileSync(path, `${lines.join("\n")}\n`);
   assert.throws(() => store.load(created.episodeId), /integrity verification/iu);
+});
+test("contribution inbox issues an immutable receipt and a non-admitting disposition", t => {
+  const { stateRoot } = fixture(t);
+  const store = createContributionStore({ root: join(stateRoot, "..", "contributions"), idFactory: () => "contrib_1111111111111111", now: () => "2026-10-27T00:00:00.000Z" });
+  const submitted = store.submit({ type: "retrieval-miss", objective: "bounded attention", profile: "audit", contributor: "fixture-agent", expected: "alpha", observed: "beta", narrowConclusion: "alpha was omitted", nextTest: "repeat", sourcePaths: [] });
+  assert.equal(submitted.disposition, "pending");
+  assert.match(submitted.headSha256, /^[0-9a-f]{64}$/u);
+  const decided = store.decide(submitted.contributionId, { decision: "accept", reason: "Valid inbox report." });
+  assert.equal(decided.disposition, "accepted");
+  assert.equal(decided.decision.admissionEffect, false);
+  assert.equal(store.list().length, 1);
+  assert.throws(() => store.decide(submitted.contributionId, { decision: "reject" }), /already has a disposition/iu);
 });
 test("runtime executes plan, answer, proposed update, approval, monitoring and replay", t => {
   const { root, stateRoot } = fixture(t);
@@ -95,6 +108,17 @@ test("local Observatory server exposes static UI and the episode API", async t =
   const beacon = await fetch(`${running.url}/api/beacon`).then(response => response.json());
   assert.equal(beacon.status, "live-local");
   assert.equal(beacon.authority.corpusPromotion, false);
+  assert.equal(beacon.live.contributionsEndpoint, "/api/contributions");
+  const contributionResponse = await fetch(`${running.url}/api/contributions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ type: "retrieval-miss", objective: "boundary response candidate", profile: "audit", contributor: "fixture-agent", expected: "alpha should be selected", observed: "alpha was omitted", narrowConclusion: "one bounded retrieval miss", nextTest: "repeat against the same corpus identity", sourcePaths: ["corpus/programmes/alpha.md"] }) });
+  assert.equal(contributionResponse.status, 201);
+  const contribution = await contributionResponse.json();
+  assert.equal(contribution.disposition, "pending");
+  assert.equal(contribution.authority.admissionEffect, false);
+  const inbox = await fetch(`${running.url}/api/contributions`).then(response => response.json());
+  assert.equal(inbox.contributions.length, 1);
+  const dispositionResponse = await fetch(`${running.url}/api/contributions/${contribution.contributionId}/decision`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ decision: "reject", reason: "Fixture disposition." }) });
+  assert.equal(dispositionResponse.status, 200);
+  assert.equal((await dispositionResponse.json()).disposition, "rejected");
   const page = await fetch(running.url);
   assert.equal(page.status, 200);
   assert.match(await page.text(), /Context Hub Observatory/iu);

@@ -1,5 +1,5 @@
 const $ = selector => document.querySelector(selector);
-const state = { episodes: [], episode: null };
+const state = { episodes: [], episode: null, contributions: [] };
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"]/gu, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[character]);
@@ -27,6 +27,20 @@ async function refreshEpisodes(selectId) {
   renderEpisodeList();
   const target = selectId ?? state.episode?.episodeId;
   if (target && state.episodes.some(item => item.episodeId === target)) await loadEpisode(target);
+}
+
+async function refreshContributions() {
+  const result = await api("/api/contributions");
+  state.contributions = result.contributions;
+  const pending = state.contributions.filter(item => item.disposition === "pending");
+  $("#contribution-count").textContent = `${pending.length} pending`;
+  $("#contribution-list").innerHTML = state.contributions.length ? state.contributions.map(item => `<article class="contribution-item"><div><strong>${escapeHtml(item.proposed.type)}</strong><small>${escapeHtml(item.proposed.contributor)} · ${escapeHtml(item.proposed.profile)} · ${escapeHtml(item.contributionId)}</small><p>${escapeHtml(item.proposed.narrowConclusion)}</p><code>${shortHash(item.headSha256)}</code></div><span class="state-pill ${item.disposition === "pending" ? "live" : ""}">${escapeHtml(item.disposition)}</span>${item.disposition === "pending" ? `<div class="proposal-actions"><button class="secondary approve" data-contribution="${item.contributionId}" data-contribution-decision="accept">Accept receipt</button><button class="secondary reject" data-contribution="${item.contributionId}" data-contribution-decision="reject">Reject</button></div>` : ""}</article>`).join("") : '<p class="muted">No outside contributions yet.</p>';
+  document.querySelectorAll("[data-contribution-decision]").forEach(button => button.addEventListener("click", () => decideContribution(button.dataset.contribution, button.dataset.contributionDecision)));
+}
+
+async function decideContribution(contributionId, decision) {
+  try { await api(`/api/contributions/${contributionId}/decision`, { method: "POST", body: JSON.stringify({ decision, reason: "Disposition recorded through the local Observatory; no admission effect." }) }); await refreshContributions(); toast(`Contribution ${decision}ed; attention state unchanged.`); }
+  catch (error) { toast(error.message, true); }
 }
 
 function renderEpisodeList() {
@@ -167,6 +181,17 @@ $("#create-episode").addEventListener("click", async () => {
     toast("Episode created with an untouched prior.");
   } catch (error) { toast(error.message, true); }
 });
+$("#contribution-form").addEventListener("submit", async event => {
+  event.preventDefault();
+  try {
+    const data = Object.fromEntries(new FormData(event.currentTarget));
+    data.sourcePaths = data.sourcePaths.split(/\r?\n/u).map(value => value.trim()).filter(Boolean);
+    const contribution = await api("/api/contributions", { method: "POST", body: JSON.stringify(data) });
+    event.currentTarget.reset();
+    await refreshContributions();
+    toast(`Contribution receipt ${shortHash(contribution.headSha256)} recorded.`);
+  } catch (error) { toast(error.message, true); }
+});
 $("#refresh").addEventListener("click", () => refreshEpisodes().catch(error => toast(error.message, true)));
 $("#freeze-toggle").addEventListener("click", async () => {
   try { state.episode = await api(`/api/episodes/${state.episode.episodeId}/freeze`, { method: "POST", body: JSON.stringify({ frozen: !state.episode.frozen }) }); renderEpisode(); renderEpisodeList(); }
@@ -222,4 +247,4 @@ $("#replay-form").addEventListener("submit", async event => {
   catch (error) { toast(error.message, true); }
 });
 
-refreshEpisodes().catch(error => toast(error.message, true));
+Promise.all([refreshEpisodes(), refreshContributions()]).catch(error => toast(error.message, true));

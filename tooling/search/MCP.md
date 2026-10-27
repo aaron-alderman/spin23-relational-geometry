@@ -77,7 +77,7 @@ Builds both baseline and adaptive context selections for the exact objective and
 
 Reads at most 30,000 characters from one Markdown path under `corpus/`, `book/edition-3/chapters/` or `verification/`. Absolute paths, traversal, non-Markdown files, unknown arguments and out-of-range bounds fail closed.
 
-All nine operations declare `readOnlyHint`, `idempotentHint`, `destructiveHint: false` and `openWorldHint: false`. The index checks indexed source metadata after a short cache-validation interval and rebuilds automatically when the corpus changes.
+All ten operations declare `readOnlyHint`, `idempotentHint`, `destructiveHint: false` and `openWorldHint: false`. The index checks indexed source metadata after a short cache-validation interval and rebuilds automatically when the corpus changes.
 
 ## Retrieval intelligence evaluation
 

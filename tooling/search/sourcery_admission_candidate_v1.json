@@ -524,8 +524,8 @@
   "members": [
     {
       "path": "tooling/search/search_corpus.mjs",
-      "bytes": 39904,
-      "sha256": "3f1c82bad314b2ad5b7b6100e9e5f89df43ab5618e02217bf08be6b7b7148ab3"
+      "bytes": 40443,
+      "sha256": "6f4ddfe03df996cb564eb1c535c5d4fe6e1c6dbe7f494c8b8dcafa31cbbaccea"
     },
     {
       "path": "tooling/search/context_hub.mjs",
@@ -559,13 +559,13 @@
     },
     {
       "path": "tooling/search/contribution_beacon.mjs",
-      "bytes": 825,
-      "sha256": "63078064419979254188f0fb24eb17094322d848a55f54e703c0329cad3a7f02"
+      "bytes": 925,
+      "sha256": "0ccd3c06bc36d61c79aa73cc411b661a134950cfa4c72ab0ac07a88b0ca83de4"
     },
     {
       "path": "tooling/search/contribution_beacon_v1.json",
-      "bytes": 4639,
-      "sha256": "eb0c1442d41d7345e0b42824aaa526174cdc81292655492bce7e9ad40cfe6f89"
+      "bytes": 4736,
+      "sha256": "a225161848d5d80c0a3245dbd87678145ed3b4eb7050e7dc2d9753a366fade5c"
     },
     {
       "path": "tooling/search/corpus_search_mcp.mjs",
@@ -580,12 +580,22 @@
     {
       "path": "tooling/search/benchmark_baseline_v1.json",
       "bytes": 47076,
-      "sha256": "4ebabcd22bfd92902378ef7d9763f83aecc31b2367f6c8c169498c080f559f4e"
+      "sha256": "1c0e6e19810b1e2f46e902a98cfcdaf3d9d72879013b93970ba358c16f338ed2"
     },
     {
       "path": "tooling/search/run_benchmark.mjs",
       "bytes": 6762,
       "sha256": "47072abd21a84c449f958ed6396ab870f57a3b19823885497b680c5628ba705a"
+    },
+    {
+      "path": "tooling/search/qualify_retrieval_identity.mjs",
+      "bytes": 3064,
+      "sha256": "5c6b29183cee4429f9f0757ecde3f6424ac1bf71249356e1d4d1957c8365b37e"
+    },
+    {
+      "path": "tooling/search/retrieval_identity_qualification_v1.json",
+      "bytes": 2295,
+      "sha256": "17dda0f623114dae3814915c0bc4a22f20089eb87d9a0edd38c836e3cb8a4f51"
     },
     {
       "path": "tooling/search/retrieval_intelligence_benchmark.mjs",
@@ -599,8 +609,8 @@
     },
     {
       "path": "tooling/search/MCP.md",
-      "bytes": 10428,
-      "sha256": "305c20baee32eb7b6efc232eb46cebccb7055d6dccfdd8ceac5116fc4b7cf30d"
+      "bytes": 10427,
+      "sha256": "09f7cac88cc8c835e1f345fa1c8d4a1cb65d2d2e856705167ae9efce87c9071d"
     },
     {
       "path": "tooling/search/BELIEF_LOOP.md",
@@ -609,18 +619,18 @@
     },
     {
       "path": "tooling/search/CONTRIBUTION_BEACON.md",
-      "bytes": 2765,
-      "sha256": "366a8869fab33af0ea8991b5f910907626b3d7e9ce965d0f715e4f2eec7a6332"
+      "bytes": 3251,
+      "sha256": "bf76e1b34db7c0bb6adeaf3f909cf7ed73112ae2fe65adb7e55ba730c2ccaa37"
     },
     {
       "path": "tests/repository/corpus_search.test.mjs",
-      "bytes": 6647,
-      "sha256": "0b0d3f766d483f76ee3d0ad0d0fae96bb820a4cad5dfa16d099a73f330524ad3"
+      "bytes": 7922,
+      "sha256": "4ce12d11b93813a863da9699619b1aa84d55c6d502ae145ac59f90a8347bbf58"
     },
     {
       "path": "tests/repository/corpus_search_mcp.test.mjs",
-      "bytes": 9959,
-      "sha256": "a93691f53605fc6676283a6c744f65f362553bfc9b6272b17a2d38f837d02fc3"
+      "bytes": 10048,
+      "sha256": "a436bd4b398dfd3749ccac7f864081c9a9f1d6431c5e4cb26801a791bc0d5037"
     },
     {
       "path": "tests/repository/corpus_answer_stability.test.mjs",
@@ -641,6 +651,11 @@
       "path": "tests/repository/corpus_search_benchmark.test.mjs",
       "bytes": 1009,
       "sha256": "04949ee0acc164b7f8ac021b92a5429e5e725265020cdcb6e0b61a7d78483166"
+    },
+    {
+      "path": "tests/repository/corpus_search_admission_candidate.test.mjs",
+      "bytes": 774,
+      "sha256": "7d0ed829b2a69e0bbc0d6528cb46d2fd52442d7e5013c12ad17dad327e8da573"
     }
   ],
   "qualification": {
@@ -653,6 +668,7 @@
     },
     "commands": [
       "node tooling/search/run_benchmark.mjs",
+      "node tooling/search/qualify_retrieval_identity.mjs",
       "node tooling/search/retrieval_intelligence_benchmark.mjs",
       "node --test --test-concurrency=1 tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
       "node tooling/search/run_belief_evaluation.mjs",
@@ -669,7 +685,8 @@
       "belief state tampering and stale corpus identity rejected",
       "empty belief state preserves baseline source selection",
       "adaptive influence capped and never changes epistemic status",
-      "MCP server retains no hidden belief state"
+      "MCP server retains no hidden belief state",
+      "unrelated generated evidence-spine control metadata cannot change retrieval identity"
     ]
   },
   "admissionSequence": [
@@ -682,5 +699,5 @@
     "admit through the protected lifecycle",
     "verify all ten operations through a fresh MCP connection"
   ],
-  "candidateSha256": "ac27d9f098a2b3e8741550a0a371e3c17dc46206e34f9789ee62cf8a61e6bd69"
+  "candidateSha256": "acb6414a4c5503febd59b0768fb6bcae4e061dbfe275e64a32338a27ead4516f"
 }

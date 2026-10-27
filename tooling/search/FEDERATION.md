@@ -1,6 +1,6 @@
 # Context Hub federation contract
 
-**Status:** architecture contract; federation not yet implemented  
+**Status:** identity-preserving packet composer implemented and locally tested; live lane adapters and protected admission remain open
 **Depends on:** [local MCP contract](MCP.md), [Sourcery admission candidate](sourcery_admission_candidate_v1.json)
 
 ## Purpose
@@ -41,3 +41,5 @@ No global scalar rank may erase lane identity. PageRank edges across lanes must 
 ## Admission gates
 
 Federation remains closed until the local benchmark is extended with cross-lane positive and negative fixtures, the protected MCP candidate is admitted, and each connected lane supplies a read-only revision-pinned interface. The first safe federation is canonical corpus plus its own publication surface; Claimipedia and Sourcery follow only after identity-preserving joins are verified.
+
+The local [`federated_context.mjs`](federated_context.mjs) now enforces the composition half of this contract. It validates immutable object and revision identities, preserves lane-native ordering, applies explicit quotas and crossing penalties, round-robins lanes without manufacturing a global scalar rank, collapses exact cross-lane duplicates by target-plus-content identity and refuses promotion-capable inputs. This closes the packet algebra, not the adapters: no live Claimipedia, Sourcery or external-literature connection is implied.

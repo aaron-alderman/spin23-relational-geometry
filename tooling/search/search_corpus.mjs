@@ -248,7 +248,7 @@ function loadEvidenceSpine(root) {
   try {
     const raw = readFileSync(path);
     const spine = JSON.parse(raw.toString("utf8"));
-    const byPath = new Map((spine.claims ?? []).map(claim => [claim.identity.path, {
+    const projectedClaims = (spine.claims ?? []).map(claim => [claim.identity.path, {
       legacyId: claim.legacyId,
       key: claim.key,
       identityState: claim.identity.state,
@@ -259,8 +259,14 @@ function loadEvidenceSpine(root) {
       evidenceLinks: (claim.links ?? []).filter(link => ["source", "evidence", "certificate"].includes(link.role)).slice(0, 24).map(evidenceTarget),
       inboundConsumerCount: claim.inboundReferences?.length ?? 0,
       inboundConsumers: (claim.inboundReferences ?? []).slice(0, 12).map(reference => ({ path: reference.source?.path ?? reference.path ?? null, line: reference.observation?.line ?? null })),
-    }]));
-    return { path, sha256: createHash("sha256").update(raw).digest("hex"), byPath };
+    }]).sort(([left], [right]) => left.localeCompare(right));
+    const byPath = new Map(projectedClaims);
+    // Search consumes only this claim-evidence projection. Hashing the raw
+    // generated spine would recursively bind retrieval identity to unrelated
+    // repository inventory files, including the benchmark that records that
+    // identity. The raw spine remains governed by its own manifest checks.
+    const projectionSha256 = createHash("sha256").update(JSON.stringify(projectedClaims)).digest("hex");
+    return { path, sha256: projectionSha256, rawSha256: createHash("sha256").update(raw).digest("hex"), byPath };
   } catch {
     return { path: null, sha256: null, byPath: new Map() };
   }

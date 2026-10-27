@@ -25,7 +25,8 @@ test("MCP contribution beacon invites bounded work without starting an episode",
   const beacon = response.result.structuredContent;
   assert.equal(beacon.protocol, "spin23-context-hub-contribution-beacon/1");
   assert.equal(beacon.status, "live-local");
-  assert.ok(beacon.openOpportunities.length >= 5);
+  assert.ok(beacon.openOpportunities.length >= 4);
+  assert.equal(beacon.completedMilestones.some(item => item.id === "BEACON-001"), true);
   assert.equal(beacon.authority.proposalOnly, true);
   assert.equal(beacon.authority.changesTruthStatus, false);
   assert.match(beacon.beaconSha256, /^[0-9a-f]{64}$/u);

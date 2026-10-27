@@ -6,6 +6,7 @@
 **Persistence:** [append-only episode store](episode_store.mjs)
 **Interface:** [browser client](observatory/public/index.html)
 **Regression:** [Observatory tests](../../tests/repository/context_hub_observatory.test.mjs)
+**Warm-up evaluation:** [retained 12-case receipt](../../evidence/data/context-hub-observatory-warmup-20261027.json)
 
 ## What makes the loop operational
 
@@ -28,9 +29,15 @@ A proposal never changes the admitted attention state. Approval is a second even
 node tooling/search/observatory_server.mjs
 ```
 
+On Windows, the idempotent hidden launcher retains logs and a PID beneath `.context-hub/`:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tooling/search/start_observatory.ps1
+```
+
 Then open `http://127.0.0.1:4178`. Choose another port with `--port`. Runtime episodes are written beneath `.context-hub/episodes/`, which is excluded from Git.
 
-The health endpoint is `/api/health`; `/api/beacon` exposes the same optional contribution invitation as the read-only MCP operation `corpus_contribution_beacon`. An agent may inspect and contribute without creating or adopting an adaptive episode.
+The health endpoint is `/api/health`; `/api/beacon` exposes the same optional contribution invitation as the read-only MCP operation `corpus_contribution_beacon`. An agent may inspect and contribute without creating or adopting an adaptive episode. `POST /api/contributions` records a validated proposal in a separate append-only inbox and returns its hash-chain receipt. `GET /api/contributions` exposes dispositions; `POST /api/contributions/:id/decision` records acceptance or rejection. Inbox acceptance is acknowledgement only and cannot mutate an episode, admit attention evidence or promote corpus content.
 
 The server binds to localhost only, accepts JSON requests up to 2 MiB, exposes no cross-origin permission, serves a restrictive content-security policy and has no endpoint for deleting or rewriting events.
 
@@ -66,11 +73,13 @@ The episode view exposes:
 
 The adaptive outcome balance is an operational diagnostic, not a scientific score. It reports whether subsequently observed positive or negative attention utility favored the adaptive-only or baseline-only set. Human ratings are marked `human-policy`; they express a preference over attention rather than independent empirical evidence.
 
+The retained 12-case corpus warm-up passes candidate recall, empty-state parity, answer receipts, deterministic replay, objective isolation, adverse-evidence direction, rollback, freeze and authority gates against one exact corpus identity. It is same-run objective-scoped engineering evidence. Because the expected source and marker are preregistered from the corpus itself, it does not close the stronger longitudinal gate requiring independent downstream task outcomes.
+
 Replay uses the candidate universe recorded with each original turn, including source identities and retrieval scores. It therefore tests alternate selector and estimator controls against what was eligible then, not against a silently changed live search result. Turns created before candidate-universe receipts fail closed rather than claiming faithful replay.
 
 ## Episode format and concurrency
 
-Each episode is one JSONL file. Every event binds its episode, monotonic revision, type, timestamp, predecessor hash and payload into an event SHA-256 identity. Loading verifies the complete chain. Appends require the expected current revision and acquire a per-episode lock, so stale or competing writers fail closed. V1 is deliberately a local single-writer system; abandoned lock recovery and distributed persistence are not automated.
+Each episode is one JSONL file. Every event binds its episode, monotonic revision, type, timestamp, predecessor hash and payload into an event SHA-256 identity. Loading verifies the complete chain. Appends require the expected current revision and acquire a per-episode lock, so stale or competing writers fail closed. Each outside contribution is a separate JSONL chain containing one immutable proposal and at most one disposition. V1 is deliberately a local single-writer system; abandoned lock recovery and distributed persistence are not automated.
 
 ## Authority boundary
 

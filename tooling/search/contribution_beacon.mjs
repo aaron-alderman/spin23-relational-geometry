@@ -17,6 +17,7 @@ export function getContributionBeacon() {
     contributionEntryPoints: {
       mcp: "corpus_contribution_beacon",
       observatory: beacon.observatory.expectedUrl,
+      observatoryInbox: `${beacon.observatory.expectedUrl}${beacon.observatory.contributionsPath}`,
       documentation: "tooling/search/CONTRIBUTION_BEACON.md"
     }
   };

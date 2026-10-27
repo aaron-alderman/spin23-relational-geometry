@@ -7,6 +7,7 @@
     "expectedUrl": "http://127.0.0.1:4178",
     "healthPath": "/api/health",
     "beaconPath": "/api/beacon",
+    "contributionsPath": "/api/contributions",
     "persistence": ".context-hub/episodes/",
     "scope": "local single-writer host"
   },
@@ -43,14 +44,15 @@
       "authority": "human-policy, not empirical evidence"
     }
   ],
-  "openOpportunities": [
+  "completedMilestones": [
     {
       "id": "BEACON-001",
-      "priority": "P0",
       "title": "Isolate aggregate qualification identity drift",
-      "need": "The 30-case baseline passes, while a prior aggregate run exposed a divergent identity/ranking receipt. Distinguish stale generated surfaces and refresh ordering from concurrent execution before protected admission.",
-      "doneWhen": "Repeated clean serial and parallel suites produce identical receipts, or each identified cause has a documented isolation rule and regression fixture."
-    },
+      "outcome": "The drift came from recursively hashing raw generated evidence-spine control metadata into retrieval identity, not from concurrent search. Retrieval now hashes only the exact claim-evidence projection it consumes. Two serial and two parallel clean-process 30-case runs match the retained corpus, evidence and baseline identities exactly at MRR 0.925.",
+      "receipt": "tooling/search/retrieval_identity_qualification_v1.json"
+    }
+  ],
+  "openOpportunities": [
     {
       "id": "BEACON-002",
       "priority": "P0",

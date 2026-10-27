@@ -6,6 +6,7 @@ import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createObservatoryRuntime } from "./observatory_runtime.mjs";
 import { getContributionBeacon } from "./contribution_beacon.mjs";
+import { createContributionStore } from "./contribution_store.mjs";
 
 const moduleDirectory = dirname(fileURLToPath(import.meta.url));
 const publicRoot = join(moduleDirectory, "observatory", "public");
@@ -16,6 +17,40 @@ const staticFiles = new Map([
   ["/styles.css", "styles.css"],
 ]);
 const contentTypes = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8" };
+const contributionTypes = new Set(["verification-receipt", "retrieval-miss", "answer-stability", "missing-source", "counterexample-or-no-go", "human-attention-rating"]);
+
+function validateContribution(input) {
+  if (!input || Array.isArray(input) || typeof input !== "object") throw new Error("contribution must be an object");
+  const text = (name, maximum, required = true) => {
+    const value = typeof input[name] === "string" ? input[name].trim() : "";
+    if ((required && !value) || value.length > maximum) throw new Error(`contribution ${name} is invalid`);
+    return value || null;
+  };
+  const type = text("type", 80);
+  if (!contributionTypes.has(type)) throw new Error("contribution type is not declared by the beacon");
+  const profile = text("profile", 40);
+  if (!["all", "interpret", "choose-work", "audit", "experiment"].includes(profile)) throw new Error("contribution profile is invalid");
+  const sourcePaths = input.sourcePaths ?? [];
+  if (!Array.isArray(sourcePaths) || sourcePaths.length > 20 || sourcePaths.some(path => typeof path !== "string" || path.length > 500 || path.includes("..") || path.includes("\\"))) throw new Error("contribution sourcePaths are invalid");
+  const hashes = Object.fromEntries(["sourceVersionSha256", "receiptSha256", "evidenceFamilySha256"].map(name => {
+    const value = input[name] ?? null;
+    if (value !== null && (typeof value !== "string" || !/^[0-9a-f]{64}$/u.test(value))) throw new Error(`contribution ${name} is invalid`);
+    return [name, value];
+  }));
+  return {
+    type,
+    objective: text("objective", 2000),
+    profile,
+    contributor: text("contributor", 200),
+    expected: text("expected", 4000),
+    observed: text("observed", 4000),
+    narrowConclusion: text("narrowConclusion", 4000),
+    nextTest: text("nextTest", 4000),
+    method: text("method", 2000, false),
+    sourcePaths,
+    ...hashes,
+  };
+}
 
 function send(response, status, value, type = "application/json; charset=utf-8") {
   const body = type.startsWith("application/json") ? JSON.stringify(value) : value;
@@ -43,6 +78,8 @@ async function body(request) {
 }
 export function createObservatoryServer({ root = resolve(moduleDirectory, "../.."), stateRoot } = {}) {
   const runtime = createObservatoryRuntime({ root, stateRoot });
+  const contributionRoot = stateRoot ? resolve(stateRoot, "..", "contributions") : resolve(root, ".context-hub", "contributions");
+  const contributions = createContributionStore({ root: contributionRoot });
   const server = createServer(async (request, response) => {
     try {
       const url = new URL(request.url, "http://127.0.0.1");
@@ -52,7 +89,12 @@ export function createObservatoryServer({ root = resolve(moduleDirectory, "../..
         return send(response, 200, readFileSync(path), contentTypes[extname(path)] ?? "application/octet-stream");
       }
       if (request.method === "GET" && url.pathname === "/api/health") return send(response, 200, { status: "ok", protocol: "spin23-context-hub-observatory/1", persistence: runtime.store.root, contributionBeacon: "/api/beacon" });
-      if (request.method === "GET" && url.pathname === "/api/beacon") return send(response, 200, getContributionBeacon());
+      if (request.method === "GET" && url.pathname === "/api/beacon") return send(response, 200, { ...getContributionBeacon(), live: { contributionsEndpoint: "/api/contributions", pendingContributions: contributions.list().filter(item => item.disposition === "pending").length } });
+      if (url.pathname === "/api/contributions" && request.method === "GET") return send(response, 200, { contributions: contributions.list() });
+      if (url.pathname === "/api/contributions" && request.method === "POST") return send(response, 201, contributions.submit(validateContribution(await body(request))));
+      const contributionMatch = /^\/api\/contributions\/(contrib_[0-9a-f]{16})(?:\/decision)?$/u.exec(url.pathname);
+      if (contributionMatch && request.method === "GET" && !url.pathname.endsWith("/decision")) return send(response, 200, contributions.get(contributionMatch[1]));
+      if (contributionMatch && request.method === "POST" && url.pathname.endsWith("/decision")) return send(response, 200, contributions.decide(contributionMatch[1], await body(request)));
       if (url.pathname === "/api/episodes" && request.method === "GET") return send(response, 200, { episodes: runtime.listEpisodes() });
       if (url.pathname === "/api/episodes" && request.method === "POST") return send(response, 201, runtime.createEpisode(await body(request)));
       const match = /^\/api\/episodes\/(ep_[0-9a-f]{16})(?:\/(.*))?$/u.exec(url.pathname);
@@ -77,7 +119,7 @@ export function createObservatoryServer({ root = resolve(moduleDirectory, "../..
       return send(response, status, { error: message });
     }
   });
-  return { server, runtime };
+  return { server, runtime, contributions };
 }
 export async function startObservatoryServer({ root, stateRoot, host = "127.0.0.1", port = 4178 } = {}) {
   if (host !== "127.0.0.1" && host !== "localhost") throw new Error("Observatory V1 binds to localhost only");

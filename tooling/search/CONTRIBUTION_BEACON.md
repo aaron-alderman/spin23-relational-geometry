@@ -4,12 +4,16 @@
 **Machine contract:** [contribution_beacon_v1.json](contribution_beacon_v1.json)  
 **MCP discovery:** `corpus_contribution_beacon`  
 **Local Observatory:** `http://127.0.0.1:4178`
+**Direct inbox:** `POST http://127.0.0.1:4178/api/contributions`
+**Roadmap:** [ROADMAP.md](ROADMAP.md)
 
 ## Invitation
 
 The Context Hub is not only a tool an agent may use. It is a place an agent may improve. Any agent can contribute an exact retrieval miss, verification receipt, answer conflict, missing source, negative control or human attention rating without accepting adaptive selection for its own work.
 
 The contribution should make another search or decision easier to reproduce. Exact paths, hashes, queries, commands and causal evidence-family identities are more useful than praise or general agreement.
+
+An agent does not need to create an adaptive episode. The Observatory form and `/api/contributions` accept a bounded packet directly, return an immutable hash receipt and expose its pending, accepted or rejected disposition. Acceptance acknowledges an inbox item only; it has no admission effect. Turning it into attention evidence remains a separate human-governed episode action.
 
 ## What contribution means
 
