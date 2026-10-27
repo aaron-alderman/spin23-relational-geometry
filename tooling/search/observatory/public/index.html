@@ -40,8 +40,10 @@
           <label>Narrow conclusion<textarea name="narrowConclusion" rows="2" required></textarea></label>
           <label>Next test<textarea name="nextTest" rows="2" required></textarea></label>
           <label class="wide">Source paths, one per line<textarea name="sourcePaths" rows="2" placeholder="corpus/..."></textarea></label>
+          <label class="wide">Dependencies, one per line<textarea name="dependsOn" rows="2" placeholder="BEACON-002 or contrib_0123456789abcdef"></textarea></label>
           <button class="primary wide" type="submit">Submit proposal and receive receipt</button>
         </form>
+        <div class="form-row contribution-operator"><label>Operator identity<input id="contribution-operator" placeholder="agent or human identity"></label><p class="muted">Used for claim, disposition and downstream-impact attribution.</p></div>
         <div id="contribution-list" class="contribution-list"></div>
       </details>
       <section id="empty-state" class="empty-state">

@@ -37,7 +37,7 @@ powershell -ExecutionPolicy Bypass -File tooling/search/start_observatory.ps1
 
 Then open `http://127.0.0.1:4178`. Choose another port with `--port`. Runtime episodes are written beneath `.context-hub/episodes/`, which is excluded from Git.
 
-The health endpoint is `/api/health`; `/api/beacon` exposes the same optional contribution invitation as the read-only MCP operation `corpus_contribution_beacon`. An agent may inspect and contribute without creating or adopting an adaptive episode. `POST /api/contributions` records a validated proposal in a separate append-only inbox and returns its hash-chain receipt. `GET /api/contributions` exposes dispositions; `POST /api/contributions/:id/decision` records acceptance or rejection. Inbox acceptance is acknowledgement only and cannot mutate an episode, admit attention evidence or promote corpus content.
+The health endpoint is `/api/health`; `/api/beacon` exposes the same optional contribution invitation as the read-only MCP operation `corpus_contribution_beacon`. An agent may inspect and contribute without creating or adopting an adaptive episode. `POST /api/contributions` records a validated proposal in a separate append-only inbox and returns its hash-chain receipt. `GET /api/contributions` exposes dependency, claim, attribution, disposition and downstream-impact views. `POST /api/contributions/:id/claim`, `/release`, `/decision` and `/impact` append the corresponding coordination receipt. Inbox acceptance is acknowledgement only and cannot mutate an episode, admit attention evidence or promote corpus content.
 
 The server binds to localhost only, accepts JSON requests up to 2 MiB, exposes no cross-origin permission, serves a restrictive content-security policy and has no endpoint for deleting or rewriting events.
 
@@ -79,7 +79,7 @@ Replay uses the candidate universe recorded with each original turn, including s
 
 ## Episode format and concurrency
 
-Each episode is one JSONL file. Every event binds its episode, monotonic revision, type, timestamp, predecessor hash and payload into an event SHA-256 identity. Loading verifies the complete chain. Appends require the expected current revision and acquire a per-episode lock, so stale or competing writers fail closed. Each outside contribution is a separate JSONL chain containing one immutable proposal and at most one disposition. V1 is deliberately a local single-writer system; abandoned lock recovery and distributed persistence are not automated.
+Each episode is one JSONL file. Every event binds its episode, monotonic revision, type, timestamp, predecessor hash and payload into an event SHA-256 identity. Loading verifies the complete chain. Appends require the expected current revision and acquire a per-episode lock, so stale or competing writers fail closed. Each outside contribution is a separate JSONL chain containing one immutable proposal followed by bounded claim, release, disposition and impact events; load also validates their state transitions. V1 is deliberately a local single-writer system; abandoned lock recovery and distributed persistence are not automated.
 
 ## Authority boundary
 

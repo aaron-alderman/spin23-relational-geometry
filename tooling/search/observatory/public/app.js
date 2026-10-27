@@ -34,13 +34,43 @@ async function refreshContributions() {
   state.contributions = result.contributions;
   const pending = state.contributions.filter(item => item.disposition === "pending");
   $("#contribution-count").textContent = `${pending.length} pending`;
-  $("#contribution-list").innerHTML = state.contributions.length ? state.contributions.map(item => `<article class="contribution-item"><div><strong>${escapeHtml(item.proposed.type)}</strong><small>${escapeHtml(item.proposed.contributor)} · ${escapeHtml(item.proposed.profile)} · ${escapeHtml(item.contributionId)}</small><p>${escapeHtml(item.proposed.narrowConclusion)}</p><code>${shortHash(item.headSha256)}</code></div><span class="state-pill ${item.disposition === "pending" ? "live" : ""}">${escapeHtml(item.disposition)}</span>${item.disposition === "pending" ? `<div class="proposal-actions"><button class="secondary approve" data-contribution="${item.contributionId}" data-contribution-decision="accept">Accept receipt</button><button class="secondary reject" data-contribution="${item.contributionId}" data-contribution-decision="reject">Reject</button></div>` : ""}</article>`).join("") : '<p class="muted">No outside contributions yet.</p>';
+  $("#contribution-list").innerHTML = state.contributions.length ? state.contributions.map(item => {
+    const dependency = item.dependencies.length ? `<small>depends on ${item.dependencies.map(escapeHtml).join(" · ")}</small>` : "";
+    const claim = item.claim ? `<small>claimed by ${escapeHtml(item.claim.actor)}</small>` : "";
+    const impact = item.impacts.length ? `<small>${item.impacts.length} downstream impact${item.impacts.length === 1 ? "" : "s"}: ${item.impacts.map(entry => `${escapeHtml(entry.kind)} → ${escapeHtml(entry.target)}`).join(" · ")}</small>` : "";
+    const coordination = item.disposition === "pending" ? `<div class="proposal-actions">${item.claim ? `<button class="secondary" data-contribution-action="release" data-contribution="${item.contributionId}">Release</button>` : `<button class="secondary" data-contribution-action="claim" data-contribution="${item.contributionId}">Claim work</button>`}<button class="secondary approve" data-contribution-decision="accept" data-contribution="${item.contributionId}">Accept receipt</button><button class="secondary reject" data-contribution-decision="reject" data-contribution="${item.contributionId}">Reject</button></div>` : `<div class="proposal-actions"><button class="secondary" data-contribution-action="impact" data-contribution="${item.contributionId}">Record downstream impact</button></div>`;
+    return `<article class="contribution-item"><div><strong>${escapeHtml(item.proposed.type)}</strong><small>${escapeHtml(item.proposed.contributor)} · ${escapeHtml(item.proposed.profile)} · ${escapeHtml(item.contributionId)}</small><p>${escapeHtml(item.proposed.narrowConclusion)}</p>${dependency}${claim}${impact}<code>${shortHash(item.headSha256)}</code></div><span class="state-pill ${item.disposition === "pending" ? "live" : ""}">${escapeHtml(item.disposition)}</span>${coordination}</article>`;
+  }).join("") : '<p class="muted">No outside contributions yet.</p>';
   document.querySelectorAll("[data-contribution-decision]").forEach(button => button.addEventListener("click", () => decideContribution(button.dataset.contribution, button.dataset.contributionDecision)));
+  document.querySelectorAll("[data-contribution-action]").forEach(button => button.addEventListener("click", () => coordinateContribution(button.dataset.contribution, button.dataset.contributionAction)));
 }
 
 async function decideContribution(contributionId, decision) {
-  try { await api(`/api/contributions/${contributionId}/decision`, { method: "POST", body: JSON.stringify({ decision, reason: "Disposition recorded through the local Observatory; no admission effect." }) }); await refreshContributions(); toast(`Contribution ${decision}ed; attention state unchanged.`); }
+  try { await api(`/api/contributions/${contributionId}/decision`, { method: "POST", body: JSON.stringify({ decision, actor: contributionOperator(), reason: "Disposition recorded through the local Observatory; no admission effect." }) }); await refreshContributions(); toast(`Contribution ${decision}ed; attention state unchanged.`); }
   catch (error) { toast(error.message, true); }
+}
+
+function contributionOperator() {
+  const actor = $("#contribution-operator").value.trim();
+  if (!actor) throw new Error("Enter an operator identity before coordinating work.");
+  return actor;
+}
+
+async function coordinateContribution(contributionId, action) {
+  try {
+    const actor = contributionOperator();
+    let payload = { actor };
+    if (action === "impact") {
+      const target = window.prompt("Exact downstream target (file, test, episode or work item):");
+      if (!target) return;
+      const kind = window.prompt("Impact kind: documentation, test, episode-proposal, linked-work, or no-change", "linked-work");
+      if (!kind) return;
+      payload = { actor, target, kind };
+    }
+    await api(`/api/contributions/${contributionId}/${action}`, { method: "POST", body: JSON.stringify(payload) });
+    await refreshContributions();
+    toast(`${action} event recorded; admission state unchanged.`);
+  } catch (error) { toast(error.message, true); }
 }
 
 function renderEpisodeList() {
@@ -186,6 +216,7 @@ $("#contribution-form").addEventListener("submit", async event => {
   try {
     const data = Object.fromEntries(new FormData(event.currentTarget));
     data.sourcePaths = data.sourcePaths.split(/\r?\n/u).map(value => value.trim()).filter(Boolean);
+    data.dependsOn = data.dependsOn.split(/\r?\n/u).map(value => value.trim()).filter(Boolean);
     const contribution = await api("/api/contributions", { method: "POST", body: JSON.stringify(data) });
     event.currentTarget.reset();
     await refreshContributions();

@@ -35,17 +35,29 @@ test("episode store is append-only, revision-guarded and hash-chain verified", t
   writeFileSync(path, `${lines.join("\n")}\n`);
   assert.throws(() => store.load(created.episodeId), /integrity verification/iu);
 });
-test("contribution inbox issues an immutable receipt and a non-admitting disposition", t => {
+test("contribution inbox coordinates claims, dependencies, disposition and downstream impact without admission", t => {
   const { stateRoot } = fixture(t);
   const store = createContributionStore({ root: join(stateRoot, "..", "contributions"), idFactory: () => "contrib_1111111111111111", now: () => "2026-10-27T00:00:00.000Z" });
-  const submitted = store.submit({ type: "retrieval-miss", objective: "bounded attention", profile: "audit", contributor: "fixture-agent", expected: "alpha", observed: "beta", narrowConclusion: "alpha was omitted", nextTest: "repeat", sourcePaths: [] });
+  const submitted = store.submit({ type: "retrieval-miss", objective: "bounded attention", profile: "audit", contributor: "fixture-agent", expected: "alpha", observed: "beta", narrowConclusion: "alpha was omitted", nextTest: "repeat", sourcePaths: [], dependsOn: ["BEACON-002"] });
   assert.equal(submitted.disposition, "pending");
+  assert.deepEqual(submitted.dependencies, ["BEACON-002"]);
   assert.match(submitted.headSha256, /^[0-9a-f]{64}$/u);
-  const decided = store.decide(submitted.contributionId, { decision: "accept", reason: "Valid inbox report." });
+  const claimed = store.claim(submitted.contributionId, { actor: "fixture-reviewer" });
+  assert.equal(claimed.claim.actor, "fixture-reviewer");
+  assert.throws(() => store.claim(submitted.contributionId, { actor: "other-reviewer" }), /already claimed/iu);
+  const released = store.release(submitted.contributionId, { actor: "fixture-reviewer" });
+  assert.equal(released.claim, null);
+  store.claim(submitted.contributionId, { actor: "fixture-reviewer" });
+  const decided = store.decide(submitted.contributionId, { decision: "accept", actor: "fixture-reviewer", reason: "Valid inbox report." });
   assert.equal(decided.disposition, "accepted");
   assert.equal(decided.decision.admissionEffect, false);
+  const impacted = store.recordImpact(submitted.contributionId, { kind: "test", actor: "fixture-reviewer", target: "tests/repository/example.test.mjs", receiptSha256: "a".repeat(64) });
+  assert.equal(impacted.impacts.length, 1);
+  assert.equal(impacted.impacts[0].admissionEffect, false);
+  assert.deepEqual(impacted.attribution.impactActors, ["fixture-reviewer"]);
   assert.equal(store.list().length, 1);
   assert.throws(() => store.decide(submitted.contributionId, { decision: "reject" }), /already has a disposition/iu);
+  assert.throws(() => store.recordImpact("contrib_2222222222222222", { kind: "test", actor: "fixture-reviewer", target: "missing" }), /does not exist/iu);
 });
 test("runtime executes plan, answer, proposed update, approval, monitoring and replay", t => {
   const { root, stateRoot } = fixture(t);
@@ -109,16 +121,22 @@ test("local Observatory server exposes static UI and the episode API", async t =
   assert.equal(beacon.status, "live-local");
   assert.equal(beacon.authority.corpusPromotion, false);
   assert.equal(beacon.live.contributionsEndpoint, "/api/contributions");
-  const contributionResponse = await fetch(`${running.url}/api/contributions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ type: "retrieval-miss", objective: "boundary response candidate", profile: "audit", contributor: "fixture-agent", expected: "alpha should be selected", observed: "alpha was omitted", narrowConclusion: "one bounded retrieval miss", nextTest: "repeat against the same corpus identity", sourcePaths: ["corpus/programmes/alpha.md"] }) });
+  const contributionResponse = await fetch(`${running.url}/api/contributions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ type: "retrieval-miss", objective: "boundary response candidate", profile: "audit", contributor: "fixture-agent", expected: "alpha should be selected", observed: "alpha was omitted", narrowConclusion: "one bounded retrieval miss", nextTest: "repeat against the same corpus identity", sourcePaths: ["corpus/programmes/alpha.md"], dependsOn: ["BEACON-002"] }) });
   assert.equal(contributionResponse.status, 201);
   const contribution = await contributionResponse.json();
   assert.equal(contribution.disposition, "pending");
   assert.equal(contribution.authority.admissionEffect, false);
   const inbox = await fetch(`${running.url}/api/contributions`).then(response => response.json());
   assert.equal(inbox.contributions.length, 1);
-  const dispositionResponse = await fetch(`${running.url}/api/contributions/${contribution.contributionId}/decision`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ decision: "reject", reason: "Fixture disposition." }) });
+  const claimResponse = await fetch(`${running.url}/api/contributions/${contribution.contributionId}/claim`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ actor: "fixture-reviewer" }) });
+  assert.equal(claimResponse.status, 200);
+  assert.equal((await claimResponse.json()).claim.actor, "fixture-reviewer");
+  const dispositionResponse = await fetch(`${running.url}/api/contributions/${contribution.contributionId}/decision`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ decision: "reject", actor: "fixture-reviewer", reason: "Fixture disposition." }) });
   assert.equal(dispositionResponse.status, 200);
   assert.equal((await dispositionResponse.json()).disposition, "rejected");
+  const impactResponse = await fetch(`${running.url}/api/contributions/${contribution.contributionId}/impact`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "no-change", actor: "fixture-reviewer", target: "bounded fixture review" }) });
+  assert.equal(impactResponse.status, 200);
+  assert.equal((await impactResponse.json()).impacts.length, 1);
   const page = await fetch(running.url);
   assert.equal(page.status, 200);
   assert.match(await page.text(), /Context Hub Observatory/iu);

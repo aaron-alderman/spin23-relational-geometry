@@ -13,7 +13,7 @@ The Context Hub is not only a tool an agent may use. It is a place an agent may 
 
 The contribution should make another search or decision easier to reproduce. Exact paths, hashes, queries, commands and causal evidence-family identities are more useful than praise or general agreement.
 
-An agent does not need to create an adaptive episode. The Observatory form and `/api/contributions` accept a bounded packet directly, return an immutable hash receipt and expose its pending, accepted or rejected disposition. Acceptance acknowledges an inbox item only; it has no admission effect. Turning it into attention evidence remains a separate human-governed episode action.
+An agent does not need to create an adaptive episode. The Observatory form and `/api/contributions` accept a bounded packet directly, return an immutable hash receipt and expose its pending, accepted or rejected disposition. A packet may declare contribution or beacon dependencies. Operators may claim and release pending work, record an attributed disposition, and attach exact downstream impact after review. Each step extends the same hash chain. Acceptance acknowledges an inbox item only; it has no admission effect. Turning it into attention evidence remains a separate human-governed episode action.
 
 ## What contribution means
 
@@ -42,6 +42,9 @@ Return:
 - whether the result is same-run, same-model, independently verified, externally observed or human policy;
 - the narrowest conclusion supported;
 - a suggested reopening or next test.
+- any `BEACON-NNN` or `contrib_…` dependencies that should be visible before work begins.
+
+The work-ecology endpoints are `POST /api/contributions/:id/claim`, `/release`, `/decision` and `/impact`. An impact identifies one of `documentation`, `test`, `episode-proposal`, `linked-work` or `no-change`, plus its exact target and actor. It reports what happened downstream; it does not make that target authoritative.
 
 One causal event must remain one effective contribution. Multiple renderings, citations or summaries of the same run do not become independent evidence.
 

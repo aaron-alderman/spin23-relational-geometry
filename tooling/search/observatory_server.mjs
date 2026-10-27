@@ -32,6 +32,8 @@ function validateContribution(input) {
   if (!["all", "interpret", "choose-work", "audit", "experiment"].includes(profile)) throw new Error("contribution profile is invalid");
   const sourcePaths = input.sourcePaths ?? [];
   if (!Array.isArray(sourcePaths) || sourcePaths.length > 20 || sourcePaths.some(path => typeof path !== "string" || path.length > 500 || path.includes("..") || path.includes("\\"))) throw new Error("contribution sourcePaths are invalid");
+  const dependsOn = input.dependsOn ?? [];
+  if (!Array.isArray(dependsOn) || dependsOn.length > 20 || dependsOn.some(value => typeof value !== "string" || (!/^contrib_[0-9a-f]{16}$/u.test(value) && !/^BEACON-[0-9]{3}$/u.test(value)))) throw new Error("contribution dependsOn references are invalid");
   const hashes = Object.fromEntries(["sourceVersionSha256", "receiptSha256", "evidenceFamilySha256"].map(name => {
     const value = input[name] ?? null;
     if (value !== null && (typeof value !== "string" || !/^[0-9a-f]{64}$/u.test(value))) throw new Error(`contribution ${name} is invalid`);
@@ -48,6 +50,7 @@ function validateContribution(input) {
     nextTest: text("nextTest", 4000),
     method: text("method", 2000, false),
     sourcePaths,
+    dependsOn: [...new Set(dependsOn)],
     ...hashes,
   };
 }
@@ -91,10 +94,20 @@ export function createObservatoryServer({ root = resolve(moduleDirectory, "../..
       if (request.method === "GET" && url.pathname === "/api/health") return send(response, 200, { status: "ok", protocol: "spin23-context-hub-observatory/1", persistence: runtime.store.root, contributionBeacon: "/api/beacon" });
       if (request.method === "GET" && url.pathname === "/api/beacon") return send(response, 200, { ...getContributionBeacon(), live: { contributionsEndpoint: "/api/contributions", pendingContributions: contributions.list().filter(item => item.disposition === "pending").length } });
       if (url.pathname === "/api/contributions" && request.method === "GET") return send(response, 200, { contributions: contributions.list() });
-      if (url.pathname === "/api/contributions" && request.method === "POST") return send(response, 201, contributions.submit(validateContribution(await body(request))));
-      const contributionMatch = /^\/api\/contributions\/(contrib_[0-9a-f]{16})(?:\/decision)?$/u.exec(url.pathname);
-      if (contributionMatch && request.method === "GET" && !url.pathname.endsWith("/decision")) return send(response, 200, contributions.get(contributionMatch[1]));
-      if (contributionMatch && request.method === "POST" && url.pathname.endsWith("/decision")) return send(response, 200, contributions.decide(contributionMatch[1], await body(request)));
+      if (url.pathname === "/api/contributions" && request.method === "POST") {
+        const contribution = validateContribution(await body(request));
+        for (const dependency of contribution.dependsOn.filter(value => value.startsWith("contrib_"))) contributions.get(dependency);
+        return send(response, 201, contributions.submit(contribution));
+      }
+      const contributionMatch = /^\/api\/contributions\/(contrib_[0-9a-f]{16})(?:\/(claim|release|decision|impact))?$/u.exec(url.pathname);
+      if (contributionMatch && request.method === "GET" && !contributionMatch[2]) return send(response, 200, contributions.get(contributionMatch[1]));
+      if (contributionMatch && request.method === "POST") {
+        const input = await body(request);
+        if (contributionMatch[2] === "claim") return send(response, 200, contributions.claim(contributionMatch[1], input));
+        if (contributionMatch[2] === "release") return send(response, 200, contributions.release(contributionMatch[1], input));
+        if (contributionMatch[2] === "decision") return send(response, 200, contributions.decide(contributionMatch[1], input));
+        if (contributionMatch[2] === "impact") return send(response, 200, contributions.recordImpact(contributionMatch[1], input));
+      }
       if (url.pathname === "/api/episodes" && request.method === "GET") return send(response, 200, { episodes: runtime.listEpisodes() });
       if (url.pathname === "/api/episodes" && request.method === "POST") return send(response, 201, runtime.createEpisode(await body(request)));
       const match = /^\/api\/episodes\/(ep_[0-9a-f]{16})(?:\/(.*))?$/u.exec(url.pathname);

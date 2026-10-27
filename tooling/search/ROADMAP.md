@@ -13,8 +13,8 @@
 | Protected read-only MCP | open; carrier/adapter decision isolated | A fresh Sourcery connection discovers and executes every operation against a revision-pinned corpus without mutation authority. See [`protected_admission_preflight_v1.json`](protected_admission_preflight_v1.json). |
 | Real longitudinal evaluation | warm-up gate closed; independent longitudinal gate open | The retained 12-case warm-up passes all engineering gates; preregistered independent tasks must still compare baseline and adaptive attention over multiple turns. |
 | Protected Observatory identity | open | A separately named write-capable application passes persistence, authentication, approval, rollback, freeze, recovery and drift controls. |
-| Agent-facing work ecology | partial | Opportunities and receipts exist; claiming, attribution, dependency and downstream-impact views remain open. |
-| Identity-preserving federation | packet algebra closed locally; adapters open | Revision-pinned lane adapters and cross-lane positive/negative fixtures pass without global-rank or promotion leakage. |
+| Agent-facing work ecology | closed locally | Opportunities, dependency declarations, exclusive claims/releases, attribution, dispositions and downstream-impact receipts share one append-only contribution chain without admission authority. |
+| Identity-preserving federation | canonical + publication adapter pair closed locally; other lanes open | Exact-byte, revision-pinned canonical/publication adapters and positive/negative fixtures pass; Claimipedia, Sourcery and external-literature adapters remain outstanding. |
 | Mature collective instrument | open | Longitudinal utility improves without evidence multiplication, concentration, capture or loss of complete replay. |
 
 ## Delivery order

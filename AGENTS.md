@@ -4,7 +4,7 @@ This repository maintains a live, kenotic Context Hub for improving how agents f
 
 - Read [`tooling/search/CONTRIBUTION_BEACON.md`](tooling/search/CONTRIBUTION_BEACON.md) for the current opportunities and evidence contract.
 - The MCP operation `corpus_contribution_beacon` exposes the same invitation without creating an episode.
-- A local agent may submit one bounded packet directly to `POST http://127.0.0.1:4178/api/contributions`; the returned receipt is proposal-only and inbox acceptance has no admission effect.
+- A local agent may submit one bounded packet directly to `POST http://127.0.0.1:4178/api/contributions`; dependencies, claims, releases, dispositions and downstream impacts remain attributed in its append-only receipt chain. Inbox acceptance has no admission effect.
 - Contributions are proposals. They cannot silently change scientific status, corpus content, model weights or an admitted attention state.
 - Prefer exact source paths, hashes, reproduction commands and independent evidence-family identities.
 - Do not multiply one causal event into several apparent confirmations.
