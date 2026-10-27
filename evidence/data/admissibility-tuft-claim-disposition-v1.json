@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "admissibility-tuft-claim-disposition-v1",
+  "date": "2026-10-27",
+  "auditBoundary": {
+    "primaryRecord": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5288710",
+    "versionRecord": "https://philarchive.org/versions/NIETTU",
+    "ssrnLastRevisionObserved": "2026-06-22",
+    "latestFileFullyRetrieved": false,
+    "rule": "Re-run against an immutable version number and file hash before attributing repaired or removed claims."
+  },
+  "claims": [
+    {"id":"T1","claim":"BU(1)=CP-infinity classifies principal U(1) bundles over paracompact bases","status":"established_mathematics","corpusUse":"classifying-space theorem only"},
+    {"id":"T2","claim":"The classifying space is uniquely physical spacetime","status":"not_derived","missing":"physical instantiation map and selector"},
+    {"id":"T3","claim":"The finite hierarchy must terminate at CP4/S9","status":"not_derived","missing":"finite-shell termination principle"},
+    {"id":"T4","claim":"S5 directly supplies SU(3)","status":"contradicted_as_identification","witness":{"dimensionS5":5,"dimensionSU3":8}},
+    {"id":"T5","claim":"B=*d is uniformly self-adjoint on the middle degree of S3,S5,S7,S9","status":"false_as_written_repairable","repair":"use *d for odd p and i*d for even p, with declared domain and kernel quotient"},
+    {"id":"T6","claim":"A positive S3 spectral ladder is the full curl determinant","status":"under_specified","missing":"negative branch, helicity projector, zero modes, spectral cut and eta phase"},
+    {"id":"T7","claim":"A first-order indefinite real Gaussian directly defines the determinant","status":"ill_typed_without_contour","missing":"contour or replacement by abs(B), B^2, or a justified chiral sector"},
+    {"id":"T8","claim":"Hopf topology fixes an absolute radius","status":"contradicted_without_scale","witness":"topological charge is invariant under R to cR while eigenvalues scale as 1/c"},
+    {"id":"T9","claim":"v^2=k hbar c/R^3 with dimensionless k","status":"dimensionally_inconsistent","witness":{"massDimensionLeft":2,"massDimensionRight":3}},
+    {"id":"T10","claim":"Compactness implies ultraviolet finiteness and a unique vacuum","status":"not_implied","witness":"a compact elliptic problem has a discrete but unbounded spectrum"},
+    {"id":"T11","claim":"Kahler geometry and fiber torsion uniquely derive four-dimensional gravity","status":"not_derived","missing":"Lorentzian field map, action, equations, degree count, consistent reduction and limits"},
+    {"id":"T12","claim":"Masses, mixings, anomalous moments and phase wobble are predictive","status":"empirically_open","missing":"versioned code/data, parameter ledger, covariance, null model, held-out predictions and apparatus coupling"}
+  ],
+  "exhaustion": {
+    "closedAnalyticGates": ["operator_parity","lagrangian_boundary_domain","maslov_spectral_flow","eta_orientation_record","matrix_residue_observability","passive_loss_and_bath"],
+    "reopenConditions": ["immutable_repaired_TUFT_version","released_prediction_code_and_data","calibrated_multiport_device_data"],
+    "verdict": "No additional symbolic bridge is admissible without new versioned or empirical evidence."
+  }
+}
