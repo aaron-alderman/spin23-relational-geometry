@@ -189,3 +189,8 @@ projector supplies the geometry; a transformer or detuned bus supplies the
 matrix; the four-mode generator supplies dynamics; and the tolerance window
 selects a finite loop rate. The next object is not another analogy. It is a
 four-mode emulator, its matrix response and its complete energy/noise ledger.
+
+**Successor:** [AZ-161](admissibility_161_a_node_only_four_mode_virtual_instrument_closes_the_software_gate.md)
+implements the complete four-mode virtual experiment with Node.js built-ins,
+records 24 ideal, nonideal and control runs, and independently replays the
+finite optimum without specialist software.

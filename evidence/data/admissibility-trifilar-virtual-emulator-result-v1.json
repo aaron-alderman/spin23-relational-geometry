@@ -1,0 +1,1281 @@
+{
+  "schemaVersion": "admissibility-trifilar-virtual-emulator-result-v1",
+  "configDate": "2026-10-28",
+  "configSha256": "fdd66586aa3f1402d476b72b96e10b5b1f153ef0ca7a5e2ccf6b1dde90ed4c10",
+  "engine": {
+    "runtime": "Node.js built-ins only",
+    "equations": "four complex coupled modes with real symmetric Hamiltonian and diagonal amplitude damping",
+    "integrator": "fixed-step fourth-order Runge-Kutta",
+    "exactBrightDarkGapPerSecond": 1.540659228538015
+  },
+  "config": {
+    "schemaVersion": "admissibility-trifilar-virtual-emulator-config-v1",
+    "date": "2026-10-28",
+    "latitudeCosine": 0.75,
+    "primaryAngularFrequencyPerSecond": 100,
+    "busDetuningPerSecond": -40,
+    "couplingNormPerSecond": 8,
+    "gapToLoopRateRatios": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "maximumIntegratorStepSeconds": 0.0025,
+    "scenarios": {
+      "ideal": {
+        "primaryDetuningPerSecond": [
+          0,
+          0,
+          0
+        ],
+        "directPrimaryCouplingPerSecond": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "amplitudeDampingPerSecond": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "metered": {
+        "primaryDetuningPerSecond": [
+          0.00005,
+          -0.00004,
+          0.00001
+        ],
+        "directPrimaryCouplingPerSecond": [
+          [
+            0,
+            0.00002,
+            -0.00001
+          ],
+          [
+            0.00002,
+            0,
+            0.000015
+          ],
+          [
+            -0.00001,
+            0.000015,
+            0
+          ]
+        ],
+        "amplitudeDampingPerSecond": [
+          0.00045,
+          0.0005,
+          0.00055,
+          0.002
+        ]
+      }
+    },
+    "controls": [
+      {
+        "name": "forward",
+        "direction": 1
+      },
+      {
+        "name": "reverse",
+        "direction": -1
+      },
+      {
+        "name": "fixed",
+        "direction": 0
+      }
+    ],
+    "writeTarget": "evidence/data/admissibility-trifilar-virtual-emulator-result-v1.json"
+  },
+  "runs": [
+    {
+      "scenario": "ideal",
+      "control": "forward",
+      "direction": 1,
+      "gapToLoopRate": 4,
+      "loopRatePerSecond": 0.38516480713450374,
+      "durationSeconds": 16.31297873220652,
+      "integrationSteps": 6526,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.0007327970731497732,
+            0.9257305724956628
+          ],
+          [
+            -0.9257305724956664,
+            -0.06776878080066756
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.10204449561273901,
+            0.3176855402765352
+          ],
+          [
+            -0.3176855402765377,
+            0.04618724059151061
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9999999978922813,
+        0.965889165403777
+      ],
+      "singularValueRatio": 1.0353154727377492,
+      "rawTargetOverlap": 0.9787242693189669,
+      "conditionalTargetOverlap": 0.9787242693563211,
+      "commonPhaseRadians": 0.33057976989910526,
+      "returnedAngleDegrees": -92.42576801312755,
+      "populations": {
+        "dark": 0.9664709378144836,
+        "bright": 0.032255149542210586,
+        "bus": 0.0012739125669736435,
+        "dissipatedNorm": 7.633227383507801e-11,
+        "total": 0.9999999999236677,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.05160513923824171
+    },
+    {
+      "scenario": "ideal",
+      "control": "reverse",
+      "direction": -1,
+      "gapToLoopRate": 4,
+      "loopRatePerSecond": 0.38516480713450374,
+      "durationSeconds": 16.31297873220652,
+      "integrationSteps": 6526,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.0007327970731497732,
+            -0.9257305724956628
+          ],
+          [
+            0.9257305724956664,
+            -0.06776878080066756
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.10204449561273901,
+            -0.3176855402765352
+          ],
+          [
+            0.3176855402765377,
+            0.04618724059151061
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9999999978922813,
+        0.965889165403777
+      ],
+      "singularValueRatio": 1.0353154727377492,
+      "rawTargetOverlap": 0.9787242693189669,
+      "conditionalTargetOverlap": 0.9787242693563211,
+      "commonPhaseRadians": 0.33057976989910526,
+      "returnedAngleDegrees": 92.42576801312755,
+      "populations": {
+        "dark": 0.9664709378144836,
+        "bright": 0.032255149542210586,
+        "bus": 0.0012739125669736435,
+        "dissipatedNorm": 7.633227383507801e-11,
+        "total": 0.9999999999236677,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.05160513923824171
+    },
+    {
+      "scenario": "ideal",
+      "control": "fixed",
+      "direction": 0,
+      "gapToLoopRate": 4,
+      "loopRatePerSecond": 0.38516480713450374,
+      "durationSeconds": 16.31297873220652,
+      "integrationSteps": 6526,
+      "returnMatrix": {
+        "real": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "imaginary": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "singularValues": [
+        1,
+        1
+      ],
+      "singularValueRatio": 1,
+      "rawTargetOverlap": 1,
+      "conditionalTargetOverlap": 1,
+      "commonPhaseRadians": 0,
+      "returnedAngleDegrees": 0,
+      "populations": {
+        "dark": 1,
+        "bright": 0,
+        "bus": 0,
+        "dissipatedNorm": 0,
+        "total": 1,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0
+    },
+    {
+      "scenario": "ideal",
+      "control": "forward",
+      "direction": 1,
+      "gapToLoopRate": 8,
+      "loopRatePerSecond": 0.19258240356725187,
+      "durationSeconds": 32.62595746441304,
+      "integrationSteps": 13051,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.0002090554697557886,
+            0.9821245191422727
+          ],
+          [
+            -0.9821245191422752,
+            -0.01805524255266933
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03936523662241921,
+            0.16377972584178316
+          ],
+          [
+            -0.16377972584178407,
+            0.0320896954139049
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9999998630640836,
+        0.9928194292822037
+      ],
+      "singularValueRatio": 1.0072323662995508,
+      "rawTargetOverlap": 0.9956868833610557,
+      "conditionalTargetOverlap": 0.9956868833800582,
+      "commonPhaseRadians": 0.1652401218879119,
+      "returnedAngleDegrees": -90.55275790629653,
+      "populations": {
+        "dark": 0.9928450726442134,
+        "bright": 0.006889096957690139,
+        "bus": 0.0002658303599269463,
+        "dissipatedNorm": 3.816946758661288e-11,
+        "total": 0.9999999999618305,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.01100949901104071
+    },
+    {
+      "scenario": "ideal",
+      "control": "reverse",
+      "direction": -1,
+      "gapToLoopRate": 8,
+      "loopRatePerSecond": 0.19258240356725187,
+      "durationSeconds": 32.62595746441304,
+      "integrationSteps": 13051,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.0002090554697557886,
+            -0.9821245191422727
+          ],
+          [
+            0.9821245191422752,
+            -0.01805524255266933
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03936523662241921,
+            -0.16377972584178316
+          ],
+          [
+            0.16377972584178407,
+            0.0320896954139049
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9999998630640836,
+        0.9928194292822037
+      ],
+      "singularValueRatio": 1.0072323662995508,
+      "rawTargetOverlap": 0.9956868833610557,
+      "conditionalTargetOverlap": 0.9956868833800582,
+      "commonPhaseRadians": 0.1652401218879119,
+      "returnedAngleDegrees": 90.55275790629653,
+      "populations": {
+        "dark": 0.9928450726442134,
+        "bright": 0.006889096957690139,
+        "bus": 0.0002658303599269463,
+        "dissipatedNorm": 3.816946758661288e-11,
+        "total": 0.9999999999618305,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.01100949901104071
+    },
+    {
+      "scenario": "ideal",
+      "control": "fixed",
+      "direction": 0,
+      "gapToLoopRate": 8,
+      "loopRatePerSecond": 0.19258240356725187,
+      "durationSeconds": 32.62595746441304,
+      "integrationSteps": 13051,
+      "returnMatrix": {
+        "real": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "imaginary": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "singularValues": [
+        1,
+        1
+      ],
+      "singularValueRatio": 1,
+      "rawTargetOverlap": 1,
+      "conditionalTargetOverlap": 1,
+      "commonPhaseRadians": 0,
+      "returnedAngleDegrees": 0,
+      "populations": {
+        "dark": 1,
+        "bright": 0,
+        "bus": 0,
+        "dissipatedNorm": 0,
+        "total": 1,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0
+    },
+    {
+      "scenario": "ideal",
+      "control": "forward",
+      "direction": 1,
+      "gapToLoopRate": 16,
+      "loopRatePerSecond": 0.09629120178362593,
+      "durationSeconds": 65.25191492882608,
+      "integrationSteps": 26101,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.000055828180331173715,
+            0.9955828910320292
+          ],
+          [
+            -0.9955828910320309,
+            -0.004585005275160932
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.018094015350151385,
+            0.08251016451837491
+          ],
+          [
+            -0.0825101645183752,
+            0.01717605901142364
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9999999178507587,
+        0.9983135982307259
+      ],
+      "singularValueRatio": 1.0016891682363351,
+      "rawTargetOverlap": 0.9989961061808723,
+      "conditionalTargetOverlap": 0.9989961061904081,
+      "commonPhaseRadians": 0.08268727168797069,
+      "returnedAngleDegrees": -90.13480291377465,
+      "populations": {
+        "dark": 0.9983149380569515,
+        "bright": 0.0016245537847062981,
+        "bus": 0.0000605081392516079,
+        "dissipatedNorm": 1.9090617975336954e-11,
+        "total": 0.9999999999809094,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.00259244341410027
+    },
+    {
+      "scenario": "ideal",
+      "control": "reverse",
+      "direction": -1,
+      "gapToLoopRate": 16,
+      "loopRatePerSecond": 0.09629120178362593,
+      "durationSeconds": 65.25191492882608,
+      "integrationSteps": 26101,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.000055828180331173715,
+            -0.9955828910320292
+          ],
+          [
+            0.9955828910320309,
+            -0.004585005275160932
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.018094015350151385,
+            -0.08251016451837491
+          ],
+          [
+            0.0825101645183752,
+            0.01717605901142364
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9999999178507587,
+        0.9983135982307259
+      ],
+      "singularValueRatio": 1.0016891682363351,
+      "rawTargetOverlap": 0.9989961061808723,
+      "conditionalTargetOverlap": 0.9989961061904081,
+      "commonPhaseRadians": 0.08268727168797069,
+      "returnedAngleDegrees": 90.13480291377465,
+      "populations": {
+        "dark": 0.9983149380569515,
+        "bright": 0.0016245537847062981,
+        "bus": 0.0000605081392516079,
+        "dissipatedNorm": 1.9090617975336954e-11,
+        "total": 0.9999999999809094,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.00259244341410027
+    },
+    {
+      "scenario": "ideal",
+      "control": "fixed",
+      "direction": 0,
+      "gapToLoopRate": 16,
+      "loopRatePerSecond": 0.09629120178362593,
+      "durationSeconds": 65.25191492882608,
+      "integrationSteps": 26101,
+      "returnMatrix": {
+        "real": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "imaginary": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "singularValues": [
+        1,
+        1
+      ],
+      "singularValueRatio": 1,
+      "rawTargetOverlap": 1,
+      "conditionalTargetOverlap": 1,
+      "commonPhaseRadians": 0,
+      "returnedAngleDegrees": 0,
+      "populations": {
+        "dark": 1,
+        "bright": 0,
+        "bus": 0,
+        "dissipatedNorm": 0,
+        "total": 1,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0
+    },
+    {
+      "scenario": "ideal",
+      "control": "forward",
+      "direction": 1,
+      "gapToLoopRate": 32,
+      "loopRatePerSecond": 0.04814560089181297,
+      "durationSeconds": 130.50382985765216,
+      "integrationSteps": 52202,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.000014184854346701171,
+            0.9988990942446807
+          ],
+          [
+            -0.9988990942446776,
+            -0.001150723574539116
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.008844452073564843,
+            0.04133263076962588
+          ],
+          [
+            -0.041332630769625865,
+            0.008729418556190078
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9999999947304893,
+        0.9995855819709207
+      ],
+      "singularValueRatio": 1.0004145845708894,
+      "rawTargetOverlap": 0.9997538631329105,
+      "conditionalTargetOverlap": 0.9997538631376787,
+      "commonPhaseRadians": 0.04135459320460022,
+      "returnedAngleDegrees": -90.03348811845831,
+      "populations": {
+        "dark": 0.9995856625725615,
+        "bright": 0.00039869654428273377,
+        "bus": 0.000015640873617033552,
+        "dissipatedNorm": 9.538703160671957e-12,
+        "total": 0.9999999999904613,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.000637456381137694
+    },
+    {
+      "scenario": "ideal",
+      "control": "reverse",
+      "direction": -1,
+      "gapToLoopRate": 32,
+      "loopRatePerSecond": 0.04814560089181297,
+      "durationSeconds": 130.50382985765216,
+      "integrationSteps": 52202,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.000014184854346701171,
+            -0.9988990942446807
+          ],
+          [
+            0.9988990942446776,
+            -0.001150723574539116
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.008844452073564843,
+            -0.04133263076962588
+          ],
+          [
+            0.041332630769625865,
+            0.008729418556190078
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9999999947304893,
+        0.9995855819709207
+      ],
+      "singularValueRatio": 1.0004145845708894,
+      "rawTargetOverlap": 0.9997538631329105,
+      "conditionalTargetOverlap": 0.9997538631376787,
+      "commonPhaseRadians": 0.04135459320460022,
+      "returnedAngleDegrees": 90.03348811845831,
+      "populations": {
+        "dark": 0.9995856625725615,
+        "bright": 0.00039869654428273377,
+        "bus": 0.000015640873617033552,
+        "dissipatedNorm": 9.538703160671957e-12,
+        "total": 0.9999999999904613,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.000637456381137694
+    },
+    {
+      "scenario": "ideal",
+      "control": "fixed",
+      "direction": 0,
+      "gapToLoopRate": 32,
+      "loopRatePerSecond": 0.04814560089181297,
+      "durationSeconds": 130.50382985765216,
+      "integrationSteps": 52202,
+      "returnMatrix": {
+        "real": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "imaginary": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "singularValues": [
+        1,
+        1
+      ],
+      "singularValueRatio": 1,
+      "rawTargetOverlap": 1,
+      "conditionalTargetOverlap": 1,
+      "commonPhaseRadians": 0,
+      "returnedAngleDegrees": 0,
+      "populations": {
+        "dark": 1,
+        "bright": 0,
+        "bus": 0,
+        "dissipatedNorm": 0,
+        "total": 1,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0
+    },
+    {
+      "scenario": "metered",
+      "control": "forward",
+      "direction": 1,
+      "gapToLoopRate": 4,
+      "loopRatePerSecond": 0.38516480713450374,
+      "durationSeconds": 16.31297873220652,
+      "integrationSteps": 6526,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.0009169605833569637,
+            0.9221416608200419
+          ],
+          [
+            -0.9219845575630322,
+            -0.06726492459975213
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.10147137224622897,
+            0.3160997748130179
+          ],
+          [
+            -0.316551596983575,
+            0.04574445702192023
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9959785006325677,
+        0.9620114241026065
+      ],
+      "singularValueRatio": 1.0353083920616084,
+      "rawTargetOverlap": 0.9748139909187762,
+      "conditionalTargetOverlap": 0.9787541585595861,
+      "commonPhaseRadians": 0.3304814979620154,
+      "returnedAngleDegrees": -92.42528710582853,
+      "populations": {
+        "dark": 0.9587195769131112,
+        "bright": 0.03198251765427759,
+        "bus": 0.0012627177484024362,
+        "dissipatedNorm": 0.008035187684208744,
+        "total": 0.9919648123157913,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.051532563514455405
+    },
+    {
+      "scenario": "metered",
+      "control": "reverse",
+      "direction": -1,
+      "gapToLoopRate": 4,
+      "loopRatePerSecond": 0.38516480713450374,
+      "durationSeconds": 16.31297873220652,
+      "integrationSteps": 6526,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.0009169605833572559,
+            -0.921984557563033
+          ],
+          [
+            0.9221416608200458,
+            -0.06726492459975505
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.10147137224622901,
+            -0.3165515969835757
+          ],
+          [
+            0.3160997748130181,
+            0.045744457021919385
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9959785006325718,
+        0.9620114241026072
+      ],
+      "singularValueRatio": 1.035308392061612,
+      "rawTargetOverlap": 0.9748139909187787,
+      "conditionalTargetOverlap": 0.9787541574321826,
+      "commonPhaseRadians": 0.33048149796201504,
+      "returnedAngleDegrees": 92.42528710582863,
+      "populations": {
+        "dark": 0.958719576913116,
+        "bright": 0.03198251927296575,
+        "bus": 0.001262718414955929,
+        "dissipatedNorm": 0.008035185398962308,
+        "total": 0.9919648146010377,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.05153255920547319
+    },
+    {
+      "scenario": "metered",
+      "control": "fixed",
+      "direction": 0,
+      "gapToLoopRate": 4,
+      "loopRatePerSecond": 0.38516480713450374,
+      "durationSeconds": 16.31297873220652,
+      "integrationSteps": 6526,
+      "returnMatrix": {
+        "real": [
+          [
+            0.995929844617642,
+            -7.795438109764475e-9
+          ],
+          [
+            -7.795438109732366e-9,
+            0.9959805806677096
+          ]
+        ],
+        "imaginary": [
+          [
+            0.0006498694732511896,
+            -0.00008250466610194935
+          ],
+          [
+            -0.00008250466610194951,
+            -0.0006892434484349852
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9959808225724893,
+        0.9959300600624723
+      ],
+      "singularValueRatio": 1.0000509699546711,
+      "rawTargetOverlap": 0.9959552128372515,
+      "conditionalTargetOverlap": 0.9999997702671843,
+      "commonPhaseRadians": -0.000019766940661012316,
+      "returnedAngleDegrees": 9.236764964845458e-19,
+      "populations": {
+        "dark": 0.9919272417341061,
+        "bright": 4.532614159179512e-16,
+        "bus": 1.2575241563882395e-14,
+        "dissipatedNorm": 0.008072758265880942,
+        "total": 0.9919272417341191,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0
+    },
+    {
+      "scenario": "metered",
+      "control": "forward",
+      "direction": 1,
+      "gapToLoopRate": 8,
+      "loopRatePerSecond": 0.19258240356725187,
+      "durationSeconds": 32.62595746441304,
+      "integrationSteps": 13051,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.0005415465596454146,
+            0.9744073959060513
+          ],
+          [
+            -0.9742441409298241,
+            -0.017548168631343355
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03858723269038782,
+            0.16179852310337947
+          ],
+          [
+            -0.16277380406523662,
+            0.03125975862127204
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9918414181389132,
+        0.9850484620036458
+      ],
+      "singularValueRatio": 1.006896062881465,
+      "rawTargetOverlap": 0.9877487038179891,
+      "conditionalTargetOverlap": 0.995711322196606,
+      "commonPhaseRadians": 0.16504735209613575,
+      "returnedAngleDegrees": -90.55242986994774,
+      "populations": {
+        "dark": 0.9770349356157793,
+        "bright": 0.006773809046514599,
+        "bus": 0.00026137684307805134,
+        "dissipatedNorm": 0.015929878494628125,
+        "total": 0.9840701215053719,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.011007630902568085
+    },
+    {
+      "scenario": "metered",
+      "control": "reverse",
+      "direction": -1,
+      "gapToLoopRate": 8,
+      "loopRatePerSecond": 0.19258240356725187,
+      "durationSeconds": 32.62595746441304,
+      "integrationSteps": 13051,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.000541546559644377,
+            -0.97424414092983
+          ],
+          [
+            0.974407395906048,
+            -0.01754816863134545
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03858723269038873,
+            -0.1627738040652381
+          ],
+          [
+            0.16179852310337775,
+            0.03125975862127243
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9918414181389271,
+        0.9850484620036345
+      ],
+      "singularValueRatio": 1.0068960628814905,
+      "rawTargetOverlap": 0.9877487038179903,
+      "conditionalTargetOverlap": 0.9957113215192406,
+      "commonPhaseRadians": 0.1650473520961354,
+      "returnedAngleDegrees": 90.55242986994779,
+      "populations": {
+        "dark": 0.9770349356157818,
+        "bright": 0.0067738088729417415,
+        "bus": 0.00026137835554281084,
+        "dissipatedNorm": 0.015929877155733574,
+        "total": 0.9840701228442664,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.011007510233413462
+    },
+    {
+      "scenario": "metered",
+      "control": "fixed",
+      "direction": 0,
+      "gapToLoopRate": 8,
+      "loopRatePerSecond": 0.19258240356725187,
+      "durationSeconds": 32.62595746441304,
+      "integrationSteps": 13051,
+      "returnMatrix": {
+        "real": [
+          [
+            0.991875826262756,
+            -1.8776363495151475e-8
+          ],
+          [
+            -1.8776363495298978e-8,
+            0.9919768352036304
+          ]
+        ],
+        "imaginary": [
+          [
+            0.0012944488083282304,
+            -0.00016434190423566714
+          ],
+          [
+            -0.00016434190423566692,
+            -0.00137294617871334
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9919777989319836,
+        0.9918766845362097
+      ],
+      "singularValueRatio": 1.0001019425069166,
+      "rawTargetOverlap": 0.991926331509692,
+      "conditionalTargetOverlap": 0.9999990810688506,
+      "commonPhaseRadians": -0.000039568145290649376,
+      "returnedAngleDegrees": -4.2603261192704325e-18,
+      "populations": {
+        "dark": 0.9839196554502433,
+        "bright": 1.0763642742541277e-15,
+        "bus": 3.9864345379876663e-14,
+        "dissipatedNorm": 0.01608034454971574,
+        "total": 0.9839196554502843,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0
+    },
+    {
+      "scenario": "metered",
+      "control": "forward",
+      "direction": 1,
+      "gapToLoopRate": 16,
+      "loopRatePerSecond": 0.09629120178362593,
+      "durationSeconds": 65.25191492882608,
+      "integrationSteps": 26101,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.0006462786394348167,
+            0.9798764146125408
+          ],
+          [
+            -0.9797134951080828,
+            -0.003901695388550859
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.016757886480519405,
+            0.07983009144912831
+          ],
+          [
+            -0.08180307032440073,
+            0.015740131939290566
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9836907166430671,
+        0.982831470615432
+      ],
+      "singularValueRatio": 1.0008742557125252,
+      "rawTargetOverlap": 0.9831223084214636,
+      "conditionalTargetOverlap": 0.9990174944437689,
+      "commonPhaseRadians": 0.0822968594257079,
+      "returnedAngleDegrees": -90.13451575048634,
+      "populations": {
+        "dark": 0.9668025628209218,
+        "bright": 0.0015703698753795545,
+        "bus": 0.000058584468964897453,
+        "dissipatedNorm": 0.03156848283473379,
+        "total": 0.9684315171652662,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.0025969156256637053
+    },
+    {
+      "scenario": "metered",
+      "control": "reverse",
+      "direction": -1,
+      "gapToLoopRate": 16,
+      "loopRatePerSecond": 0.09629120178362593,
+      "durationSeconds": 65.25191492882608,
+      "integrationSteps": 26101,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.000646278639436146,
+            -0.979713495108092
+          ],
+          [
+            0.9798764146125101,
+            -0.0039016953885564754
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.016757886480519797,
+            -0.0818030703244013
+          ],
+          [
+            0.07983009144912717,
+            0.0157401319392909
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9836907166430897,
+        0.9828314706153878
+      ],
+      "singularValueRatio": 1.0008742557125934,
+      "rawTargetOverlap": 0.9831223084214529,
+      "conditionalTargetOverlap": 0.9990174940970952,
+      "commonPhaseRadians": 0.0822968594257085,
+      "returnedAngleDegrees": 90.13451575048654,
+      "populations": {
+        "dark": 0.9668025628209006,
+        "bright": 0.0015703699805484114,
+        "bus": 0.00005858503591607307,
+        "dissipatedNorm": 0.03156848216263497,
+        "total": 0.968431517837365,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.00259687060814493
+    },
+    {
+      "scenario": "metered",
+      "control": "fixed",
+      "direction": 0,
+      "gapToLoopRate": 16,
+      "loopRatePerSecond": 0.09629120178362593,
+      "durationSeconds": 65.25191492882608,
+      "integrationSteps": 26101,
+      "returnMatrix": {
+        "real": [
+          [
+            0.9838159521184638,
+            -5.014996818788809e-8
+          ],
+          [
+            -5.014996818791369e-8,
+            0.9840161295910871
+          ]
+        ],
+        "imaginary": [
+          [
+            0.0025678649688325892,
+            -0.0003260301226018635
+          ],
+          [
+            -0.00032603012260186155,
+            -0.0027238616043567857
+          ]
+        ]
+      },
+      "singularValues": [
+        0.984019953573004,
+        0.9838193573274467
+      ],
+      "singularValueRatio": 1.0002038954042358,
+      "rawTargetOverlap": 0.9839160439463692,
+      "conditionalTargetOverlap": 0.9999963242771833,
+      "commonPhaseRadians": -0.00007927334687109073,
+      "returnedAngleDegrees": -7.497940039485982e-19,
+      "populations": {
+        "dark": 0.9680978984410037,
+        "bright": 2.2634661562430448e-15,
+        "bus": 5.580190658941389e-14,
+        "dissipatedNorm": 0.031902101558938245,
+        "total": 0.9680978984410618,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0
+    },
+    {
+      "scenario": "metered",
+      "control": "forward",
+      "direction": 1,
+      "gapToLoopRate": 32,
+      "loopRatePerSecond": 0.04814560089181297,
+      "durationSeconds": 130.50382985765216,
+      "integrationSteps": 52202,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.001096472525227666,
+            0.9675014878163204
+          ],
+          [
+            -0.9673431429066697,
+            -0.000026049598940326908
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.006388956719372924,
+            0.03731441023663355
+          ],
+          [
+            -0.04121639951149954,
+            0.006158573864679742
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9690356852895777,
+        0.9674465526432423
+      ],
+      "singularValueRatio": 1.001642605105154,
+      "rawTargetOverlap": 0.968218832846852,
+      "conditionalTargetOverlap": 0.9997702486088087,
+      "commonPhaseRadians": 0.04056539129404403,
+      "returnedAngleDegrees": -90.03346256821318,
+      "populations": {
+        "dark": 0.9374914957929676,
+        "bright": 0.0003725261151371059,
+        "bus": 0.000014594698502442115,
+        "dissipatedNorm": 0.062121383393392904,
+        "total": 0.9378786166066071,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.0006404342835769263
+    },
+    {
+      "scenario": "metered",
+      "control": "reverse",
+      "direction": -1,
+      "gapToLoopRate": 32,
+      "loopRatePerSecond": 0.04814560089181297,
+      "durationSeconds": 130.50382985765216,
+      "integrationSteps": 52202,
+      "returnMatrix": {
+        "real": [
+          [
+            -0.0010964725252337099,
+            -0.9673431429066689
+          ],
+          [
+            0.9675014878163231,
+            -0.000026049598932118738
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.00638895671937294,
+            -0.04121639951149942
+          ],
+          [
+            0.03731441023663375,
+            0.006158573864680115
+          ]
+        ]
+      },
+      "singularValues": [
+        0.9690356852895974,
+        0.9674465526432247
+      ],
+      "singularValueRatio": 1.0016426051051925,
+      "rawTargetOverlap": 0.968218832846853,
+      "conditionalTargetOverlap": 0.9997702484364988,
+      "commonPhaseRadians": 0.04056539129404403,
+      "returnedAngleDegrees": 90.03346256821311,
+      "populations": {
+        "dark": 0.9374914957929695,
+        "bright": 0.00037252637304021686,
+        "bus": 0.000014594763885089762,
+        "dissipatedNorm": 0.062121383070105174,
+        "total": 0.9378786169298948,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0.0006404152943452818
+    },
+    {
+      "scenario": "metered",
+      "control": "fixed",
+      "direction": 0,
+      "gapToLoopRate": 32,
+      "loopRatePerSecond": 0.04814560089181297,
+      "durationSeconds": 130.50382985765216,
+      "integrationSteps": 52202,
+      "returnMatrix": {
+        "real": [
+          [
+            0.9678871274166623,
+            -1.4954626724938002e-7
+          ],
+          [
+            -1.4954626724942222e-7,
+            0.9682802175777698
+          ]
+        ],
+        "imaginary": [
+          [
+            0.005052613071129153,
+            -0.000641572527015055
+          ],
+          [
+            -0.0006415725270150522,
+            -0.005360647474155569
+          ]
+        ]
+      },
+      "singularValues": [
+        0.968295269018916,
+        0.9679005278631502
+      ],
+      "singularValueRatio": 1.0004078323592172,
+      "rawTargetOverlap": 0.9680836847488937,
+      "conditionalTargetOverlap": 0.9999852971364711,
+      "commonPhaseRadians": -0.00015909492597521063,
+      "returnedAngleDegrees": -1.2619019207816124e-18,
+      "populations": {
+        "dark": 0.9372135799210899,
+        "bright": 1.0712158499391046e-14,
+        "bus": 1.938082886828852e-14,
+        "dissipatedNorm": 0.06278642007888002,
+        "total": 0.93721357992112,
+        "ledgerResidual": 0
+      },
+      "controllerWorkRotatingFrame": 0
+    }
+  ]
+}
