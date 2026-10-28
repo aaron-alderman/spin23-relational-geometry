@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "common-operator-atlas-v1",
+  "date": "2026-10-28",
+  "status": "canonical cross-domain translation lane; no physical identifications",
+  "source": {
+    "title": "It's all connected",
+    "url": "https://pbs.twimg.com/media/HVnVRCXbAAAFX1i?format=jpg&name=4096x4096",
+    "role": "prompt-supplied candidate topology; not an authority"
+  },
+  "coverageLabels": ["filled", "partial", "unfilled"],
+  "coverageSemantics": "Frozen pre-investigation snapshot. Follow-on closure is recorded below and does not imply physical or experimental identification.",
+  "investigationClosure": {
+    "status": "twelve baseline-unfilled nodes closed at literature-and-operator level; eight positive and three negative executable witnesses; control implementation frontier retained",
+    "closedNodeIds": ["tweedie", "flow_matching", "wasserstein", "natural_gradient", "mirror_descent", "heavy_ball", "adam", "muon", "attention", "rope", "linear_attention", "mamba"],
+    "documents": ["03_stochastic_transport_square.md", "04_optimization_dynamics.md", "05_sequence_operator_crosswalk.md", "06_executable_bridge_laboratory.md", "07_source_and_literature_record.md"],
+    "remainingImplementationFrontier": ["laplace_z", "kalman", "pid"]
+  },
+  "edgeTypes": [
+    "exact_identity",
+    "conjugacy",
+    "duality",
+    "metric_change",
+    "discretization",
+    "scaling_limit",
+    "probabilistic_reinterpretation",
+    "observable_equivalence",
+    "analogy_only"
+  ],
+  "families": [
+    "probability_generative",
+    "optimization",
+    "sequence_models",
+    "dynamics_signals_control",
+    "linear_algebra_common_dynamics"
+  ],
+  "nodes": [
+    {"id":"heat","label":"Heat equation","family":"probability_generative","coverage":"partial","links":["../admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md"]},
+    {"id":"diffusion","label":"Diffusion","family":"probability_generative","coverage":"filled","links":["../admissibility/admissibility_103_causal_stable_hydrodynamic_relaxation_wedge.md"]},
+    {"id":"brownian_sde","label":"SDE / Brownian motion","family":"probability_generative","coverage":"partial","links":["../admissibility/admissibility_128_widths_coherence_and_escape_are_not_one_lifetime.md"]},
+    {"id":"langevin","label":"Langevin dynamics","family":"probability_generative","coverage":"filled","links":["../admissibility/admissibility_102_nonlinear_stochastic_frame_and_noise_induced_drift.md","../../claims/1600-1699/1621_the_stochastic_quantization_relaxation_gap_is_mobility_dependent_and_not_the_physical_yang_mills_gap.md"]},
+    {"id":"tweedie","label":"Tweedie's formula","family":"probability_generative","coverage":"unfilled","links":["03_stochastic_transport_square.md"]},
+    {"id":"flow_matching","label":"Flow matching","family":"probability_generative","coverage":"unfilled","links":["03_stochastic_transport_square.md"]},
+    {"id":"wasserstein","label":"Wasserstein flow","family":"probability_generative","coverage":"unfilled","links":["03_stochastic_transport_square.md"]},
+    {"id":"gaussian","label":"Gaussian","family":"probability_generative","coverage":"filled","links":["../admissibility/admissibility_101_gaussian_schwinger_keldysh_kms_completion.md"]},
+    {"id":"kl","label":"KL divergence","family":"probability_generative","coverage":"partial","links":["../admissibility/admissibility_37_selector_contraction_does_not_determine_thermodynamic_cost.md"]},
+
+    {"id":"gradient_descent","label":"Gradient descent","family":"optimization","coverage":"partial","links":["../admissibility/admissibility_17_action_metric_audit_positive_selection_versus_causal_geometry.md"]},
+    {"id":"newton","label":"Newton's method","family":"optimization","coverage":"partial","links":["../admissibility/admissibility_17_action_metric_audit_positive_selection_versus_causal_geometry.md"]},
+    {"id":"natural_gradient","label":"Natural gradient","family":"optimization","coverage":"unfilled","links":["04_optimization_dynamics.md"]},
+    {"id":"mirror_descent","label":"Mirror descent","family":"optimization","coverage":"unfilled","links":["04_optimization_dynamics.md"]},
+    {"id":"heavy_ball","label":"Heavy-ball momentum","family":"optimization","coverage":"unfilled","links":["../admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md","04_optimization_dynamics.md"]},
+    {"id":"adam","label":"Adam / EMAs","family":"optimization","coverage":"unfilled","links":["04_optimization_dynamics.md"]},
+    {"id":"muon","label":"Muon optimizer","family":"optimization","coverage":"unfilled","links":["04_optimization_dynamics.md"]},
+    {"id":"hessian","label":"Hessian","family":"optimization","coverage":"filled","links":["../admissibility/admissibility_98_gaussian_hydrodynamic_source_frame_invariance.md"]},
+
+    {"id":"softmax_gibbs","label":"Softmax / Gibbs","family":"sequence_models","coverage":"partial","links":["../freudenthal/freudenthal_action_02_gaussian_schur_boundary_realization.md"]},
+    {"id":"attention","label":"Attention","family":"sequence_models","coverage":"unfilled","links":["05_sequence_operator_crosswalk.md"]},
+    {"id":"rope","label":"RoPE","family":"sequence_models","coverage":"unfilled","links":["05_sequence_operator_crosswalk.md"]},
+    {"id":"linear_attention","label":"Linear attention","family":"sequence_models","coverage":"unfilled","links":["05_sequence_operator_crosswalk.md"]},
+    {"id":"mamba","label":"Mamba selective state-space model","family":"sequence_models","coverage":"unfilled","links":["05_sequence_operator_crosswalk.md"]},
+
+    {"id":"convolution","label":"Convolution","family":"dynamics_signals_control","coverage":"filled","links":["../../claims/0800-0899/819_restoring_both_square_flips_turns_the_four_channel_response_into_a_v4_convolution_algebra_with_walsh_hadamard_relational_eigenchannels.md"]},
+    {"id":"fourier","label":"Fourier transform","family":"dynamics_signals_control","coverage":"filled","links":["../../claims/0300-0399/340_the_textured_aiii_operator_is_fredholm_when_the_wall_mass_stays_gapped_at_infinity.md"]},
+    {"id":"state_space","label":"State-space model","family":"dynamics_signals_control","coverage":"filled","links":["../admissibility/admissibility_109_four_mode_sk_action_to_record.md"]},
+    {"id":"laplace_z","label":"Laplace / z-transform","family":"dynamics_signals_control","coverage":"partial","links":["../../claims/0000-0099/70_lorentzian_passivity_and_causal_response.md"]},
+    {"id":"kalman","label":"Kalman filter","family":"dynamics_signals_control","coverage":"partial","links":["../../syntheses/grand-synthesis/aarons_spin23_research_thesis.md"]},
+    {"id":"pid","label":"PID feedback","family":"dynamics_signals_control","coverage":"partial","links":["../admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md"]},
+
+    {"id":"complex_exponential","label":"Complex exponential","family":"linear_algebra_common_dynamics","coverage":"filled","links":["../admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md"]},
+    {"id":"eigen_svd","label":"Eigenvalues and SVD","family":"linear_algebra_common_dynamics","coverage":"filled","links":["../admissibility/admissibility_27_robustness_window_for_projective_return_coherent_holonomy_and_selection.md"]},
+    {"id":"damped_oscillator","label":"Damped oscillator","family":"linear_algebra_common_dynamics","coverage":"filled","links":["../admissibility/admissibility_06_dynamic_response_geometry_detection_metastability.md"]},
+    {"id":"matrix_exponential","label":"Matrix exponential","family":"linear_algebra_common_dynamics","coverage":"filled","links":["../observer-patch-holography/oph_literature_frontier_and_emulator_v1.md"]}
+  ],
+  "edges": [
+    {"from":"heat","to":"diffusion","type":"exact_identity","scope":"scalar constant-coefficient heat equation read as diffusion PDE"},
+    {"from":"brownian_sde","to":"diffusion","type":"probabilistic_reinterpretation","scope":"Brownian transition density solves the diffusion equation"},
+    {"from":"langevin","to":"softmax_gibbs","type":"observable_equivalence","scope":"stationary Gibbs law under detailed-balance and ergodicity assumptions"},
+    {"from":"langevin","to":"gradient_descent","type":"scaling_limit","scope":"zero-noise drift with a declared mobility and clock"},
+    {"from":"langevin","to":"wasserstein","type":"probabilistic_reinterpretation","scope":"density evolution as metric gradient flow under regularity assumptions"},
+    {"from":"gaussian","to":"tweedie","type":"probabilistic_reinterpretation","scope":"posterior mean expressed through the score of a Gaussian-corrupted density"},
+    {"from":"kl","to":"natural_gradient","type":"metric_change","scope":"local second variation induces Fisher geometry under regularity and identifiability"},
+    {"from":"gradient_descent","to":"newton","type":"metric_change","scope":"local preconditioning by an invertible Hessian; not a global equivalence"},
+    {"from":"gradient_descent","to":"mirror_descent","type":"duality","scope":"Legendre/Bregman primal-dual update under convexity"},
+    {"from":"damped_oscillator","to":"heavy_ball","type":"discretization","scope":"momentum iteration from a damped second-order flow"},
+    {"from":"hessian","to":"newton","type":"metric_change","scope":"inverse-Hessian local update where the Hessian is nonsingular"},
+    {"from":"softmax_gibbs","to":"attention","type":"conjugacy","scope":"row-wise normalized exponential weights; energies versus logits remain differently typed"},
+    {"from":"complex_exponential","to":"rope","type":"conjugacy","scope":"paired real coordinates represented by complex planar rotations"},
+    {"from":"attention","to":"linear_attention","type":"observable_equivalence","scope":"selected kernel factorizations approximate or reproduce attention outputs"},
+    {"from":"state_space","to":"mamba","type":"discretization","scope":"selective discrete state-space recurrence; learned input dependence retained"},
+    {"from":"state_space","to":"convolution","type":"observable_equivalence","scope":"linear time-invariant zero-state input-output realization"},
+    {"from":"convolution","to":"fourier","type":"conjugacy","scope":"Fourier diagonalization under transform-domain assumptions"},
+    {"from":"state_space","to":"laplace_z","type":"conjugacy","scope":"continuous/discrete transfer representation under declared initial conditions"},
+    {"from":"gaussian","to":"kalman","type":"probabilistic_reinterpretation","scope":"linear Gaussian predict-condition cycle"},
+    {"from":"state_space","to":"pid","type":"analogy_only","scope":"PID closes a selected feedback loop but is not a generic state-space equivalence"},
+    {"from":"matrix_exponential","to":"state_space","type":"exact_identity","scope":"finite-dimensional homogeneous linear state transition"},
+    {"from":"eigen_svd","to":"matrix_exponential","type":"conjugacy","scope":"spectral evaluation when diagonalizable; Jordan/functional calculus otherwise"},
+    {"from":"complex_exponential","to":"fourier","type":"exact_identity","scope":"Fourier characters are complex exponentials"},
+    {"from":"damped_oscillator","to":"laplace_z","type":"conjugacy","scope":"transfer-domain solution with initial conditions and stability declared"}
+  ],
+  "dynatologyMapping": {
+    "X": "carrier represented by the node card",
+    "A": "domain, positivity, normalization, causality and resource constraints",
+    "T": "typed atlas edges",
+    "J": "energy, action, loss, likelihood or undefined",
+    "rho": "state elimination, projection, conditioning or representation map",
+    "L": "generator, differential operator, update or recurrence",
+    "D": "observable, output, innovation or record",
+    "I": "preserved spectrum, measure, response or declared invariant",
+    "R": "discretization, scale, composition and continuum maps"
+  },
+  "authorityBoundary": "A shared equation or matrix proposes a bridge but does not identify carriers, clocks, units, energies, probabilities, causal laws or detectors. Physical promotion requires source-native constitutive and experimental data."
+}
