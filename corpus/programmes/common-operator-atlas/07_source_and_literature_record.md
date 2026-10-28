@@ -64,6 +64,22 @@ claim that all nodes are one physical system.
   Spaces”](https://arxiv.org/abs/2312.00752), establishes input-dependent
   selective state-space parameters and the hardware-aware scan.
 
+### Estimation, control and physical embodiment
+
+- Kalman, [“A New Approach to Linear Filtering and Prediction
+  Problems”](https://doi.org/10.1115/1.3662552), supplies the state-transition,
+  innovation and covariance recursion and states the filtering/regulator
+  duality.
+- Åström and Rundqwist, [“Integrator Windup and How to Avoid
+  It”](https://doi.org/10.23919/ACC.1989.4790464), treats actuator saturation
+  as a nonlinear break in a nominally linear feedback loop and develops
+  anti-windup structure.
+- Dinh et al., [“Reconfigurable synthetic dimension frequency lattices in an
+  integrated lithium niobate ring cavity”](https://doi.org/10.1038/s42005-024-01676-9),
+  demonstrates controlled inter-mode coupling and gauge phase in the selected
+  device family. It supports the platform choice, not the proposed estimator
+  or any new-physics reading.
+
 ## Literature verdict
 
 The diagram is directionally valuable but mathematically under-typed. The

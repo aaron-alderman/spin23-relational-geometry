@@ -50,6 +50,15 @@ modern computational formalisms.
 8. [Source and literature record](07_source_and_literature_record.md) records
    the prompt image's limited provenance and the primary literature used to
    adjudicate its links.
+9. [Control-and-inference closure](08_control_and_inference_closure.md) closes
+   state space, Laplace/z transforms, controllability, observability, Kalman
+   innovation and saturated PID into one typed feedback loop.
+10. [Lithium-niobate estimator/controller design](09_lithium_niobate_estimator_controller.md)
+    applies that loop to the corpus's three-mode synthetic-frequency ring while
+    preventing nuisance control from erasing the held-out closure observable.
+11. [Machine-readable control register](control_inference_closure_v1.json)
+    freezes the equations, tests, physical channel allocation and authority
+    boundary.
 
 ## Finding
 
@@ -75,7 +84,10 @@ At that baseline it was incomplete in three different senses:
 This tranche closes the twelve **unfilled** boxes at literature-and-operator
 level through the stochastic, optimization and sequence documents above. It
 does not relabel them as experimentally or physically filled. Kalman, PID and
-Laplace/z remain thinner implementation frontiers. The largest gap was
+Laplace/z were the thinner implementation frontiers; documents 08--09 and the
+third verifier now close them at linear-Gaussian/software-design level. The
+remaining frontier is nonlinear, non-Gaussian and hardware-calibrated rather
+than a missing operator definition. The largest gap was
 therefore not another exceptional group but a typed calculus explaining when
 the same operator can be read as physical evolution, probability transport,
 optimization, inference, filtering or computation; that calculus and its
@@ -117,4 +129,5 @@ Run:
 ```powershell
 node verification/verify/verify_common_operator_atlas.mjs
 node verification/verify/verify_common_operator_bridges.mjs
+node verification/verify/verify_common_operator_control_loop.mjs
 ```

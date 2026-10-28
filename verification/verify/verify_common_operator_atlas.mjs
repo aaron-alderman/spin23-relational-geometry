@@ -42,7 +42,8 @@ assert(JSON.stringify(baselineUnfilled) === JSON.stringify(closed), "follow-on c
 for (const document of atlas.investigationClosure.documents) {
   assert(fs.existsSync(path.join(path.dirname(atlasPath), document)), `missing closure document: ${document}`);
 }
-assert(atlas.investigationClosure.remainingImplementationFrontier.length > 0, "completion must retain real implementation frontiers");
+assert(atlas.investigationClosure.remainingImplementationFrontier.length === 0, "control implementation queue is not closed");
+assert(atlas.investigationClosure.nextResearchFrontier.length >= 4, "hardware and nonlinear frontiers were erased");
 
 const dynatologyKeys = ["X", "A", "T", "J", "rho", "L", "D", "I", "R"];
 assert(dynatologyKeys.every((key) => typeof atlas.dynatologyMapping[key] === "string"), "dynatology mapping incomplete");

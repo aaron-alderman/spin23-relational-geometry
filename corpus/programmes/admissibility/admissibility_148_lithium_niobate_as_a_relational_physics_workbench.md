@@ -278,3 +278,7 @@ technology and a validated experimental language. If it does not, the same
 device provides the reversals, nuisance channels and independent records
 needed to say exactly what failed.
 
+The follow-on [three-mode estimator/controller design](../common-operator-atlas/09_lithium_niobate_estimator_controller.md)
+now supplies the missing state-space, Kalman-innovation, nuisance-lock,
+anti-windup and held-out-science-channel architecture for this experiment.
+
