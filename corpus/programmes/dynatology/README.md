@@ -70,6 +70,8 @@ It does not replace physics, ontology, dynamics, optimization or modal logic. It
 54. [Common Operator Atlas](../common-operator-atlas/README.md) applies the Dynatology tuple to diffusion, stochastic dynamics, optimization, sequence models, linear algebra and control while refusing to identify physical and computational clocks merely because their equations coincide.
 55. [Operator-atlas coverage audit](../common-operator-atlas/01_diagram_to_corpus_coverage_audit.md) marks all thirty-two visible diagram nodes as filled, partial or unfilled against substantive corpus evidence.
 56. [Typed operator translation grammar](../common-operator-atlas/02_typed_translation_grammar.md) distinguishes nine arrow types and requires carrier, metric, clock, detector, invariant, loss and authority receipts.
+57. [Golden contraction and Golay pixelation](mystery_atlas_23_golden_golay_pixelation_spike.md) proves that the 55-pixel golden residual is exactly `phi^-10`, verifies the ternary Golay code as a perfect radius-two finite pixelation, proves that a bare cyclic labelling cannot intrinsically select step 21, compiles the `21/34` pair into a maximum-locality forward/reverse scan of all 220 double-error states, and extends it to a bounded-step cycle through all 243 correctable errors.
+58. [Golden--Golay pixelation record](golden_golay_pixelation_v1.json) freezes the integer transformation, exact residual, syndrome decoder, modulo-55 control, Euler support circuit, signed Gray scheduler, full-sphere scheduler, continuous-encoder no-go and intrinsic-ordering gate.
 
 ## Relation to neighbouring programmes
 
@@ -88,6 +90,7 @@ Run:
 node verification/verify/verify_dynatology_register.mjs
 node verification/verify/verify_dynatology_mystery_atlas.mjs
 node verification/verify/verify_dynatology_aether_substrate_frontier.mjs
+node verification/verify/verify_dynatology_golden_golay_pixelation.mjs
 node verification/verify/verify_brain_function_atlas.mjs
 node verification/verify/verify_brain_relationship_atlas.mjs
 ```
