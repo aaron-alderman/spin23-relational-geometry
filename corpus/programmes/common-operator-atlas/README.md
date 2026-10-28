@@ -65,6 +65,10 @@ modern computational formalisms.
 13. [Phase-reversal preregistration and hardware handoff](11_phase_reversal_preregistration_and_hardware_handoff.md)
     freezes the blinded trial logic, negative controls, abort rules and the
     exact measured fields required before device-specific numbers are allowed.
+14. [Negative Results and Reopening Ledger](../negative-results/README.md)
+    preserves failed implementations, conditional obstructions, structural
+    no-go results and inconclusive tests without confusing one class for
+    another or erasing an obstruction after a repair is found.
 
 ## Finding
 
