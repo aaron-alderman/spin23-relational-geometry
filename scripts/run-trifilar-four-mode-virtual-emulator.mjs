@@ -195,6 +195,10 @@ function complexReturnMetrics(evolution, config, direction) {
   ];
 
   return {
+    finalState: {
+      real: evolution.state.re,
+      imaginary: evolution.state.im,
+    },
     returnMatrix: { real: returnRe, imaginary: returnIm },
     singularValues,
     singularValueRatio: singularValues[0] / Math.max(singularValues[1], 1e-30),

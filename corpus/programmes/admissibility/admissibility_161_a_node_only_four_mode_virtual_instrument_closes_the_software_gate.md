@@ -167,3 +167,6 @@ replay the complete mathematical experiment, and the declared nonideal model
 selects a finite optimum at \(r=8\). What remains is real-time implementation,
 I/O calibration and hardware evidence—not specialist simulation software and
 not another geometric analogy.
+
+The software-side successor is [AZ-162: the hardware-ready acquisition packet
+exhausts the nonphysical branch](admissibility_162_the_hardware_ready_acquisition_packet_exhausts_the_nonphysical_branch.md).

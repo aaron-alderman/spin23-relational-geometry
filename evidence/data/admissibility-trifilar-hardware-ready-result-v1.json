@@ -1,0 +1,438 @@
+{
+  "schemaVersion": "admissibility-trifilar-hardware-ready-result-v1",
+  "configDate": "2026-10-28",
+  "selectedRun": {
+    "scenario": "metered",
+    "control": "forward",
+    "gapToLoopRate": 8
+  },
+  "sourceTruth": {
+    "returnedAngleDegrees": -90.55242986994774,
+    "rawTargetOverlap": 0.9877487038179891,
+    "returnMatrix": {
+      "real": [
+        [
+          -0.0005415465596454146,
+          0.9744073959060513
+        ],
+        [
+          -0.9742441409298241,
+          -0.017548168631343355
+        ]
+      ],
+      "imaginary": [
+        [
+          -0.03858723269038782,
+          0.16179852310337947
+        ],
+        [
+          -0.16277380406523662,
+          0.03125975862127204
+        ]
+      ]
+    }
+  },
+  "acquisition": {
+    "sampleRateHertz": 48000,
+    "carrierHertz": 1000,
+    "blockSizeSamples": 240,
+    "inputChannels": 4,
+    "outputChannels": 4,
+    "trials": 512,
+    "calibrationSamplesPerChannel": 256,
+    "rawRowsPerStressCase": 32,
+    "seed": 1414678866
+  },
+  "stressResults": [
+    {
+      "name": "baseline",
+      "settings": {
+        "adcBits": 20,
+        "fullScale": 1.2,
+        "noiseRms": 0.00002,
+        "clockJitterSecondsRms": 2e-8,
+        "saturationAmplitude": 1.1,
+        "slewLimitAmplitudePerSecond": 10000,
+        "calibrated": true,
+        "latencyDriftSamples": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "name": "baseline"
+      },
+      "estimatedChannelTransfer": [
+        [
+          1.0119617151848945,
+          -0.008841404763608285
+        ],
+        [
+          0.9929831986267067,
+          0.0052076603962520895
+        ],
+        [
+          1.0057974100565052,
+          -0.020198636006008686
+        ],
+        [
+          0.988940168800515,
+          0.010776589657392255
+        ]
+      ],
+      "reconstructedReturn": {
+        "real": [
+          [
+            -0.000541876965906048,
+            0.9744126531532658
+          ],
+          [
+            -0.974244114286835,
+            -0.017548822189448414
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03858863207094372,
+            0.16178884931276868
+          ],
+          [
+            -0.16278291893386204,
+            0.03125965964941958
+          ]
+        ]
+      },
+      "targetOverlap": 0.9877512376647329,
+      "relativeMatrixError": 0.16847327987471789,
+      "returnedAngleDegrees": -90.55246365163705,
+      "relativeErrorToSource": 0.000010287559093341488,
+      "angleErrorToSourceDegrees": -0.00003378168931078562,
+      "trialAngleStdDegrees": 0.0008701429967487142
+    },
+    {
+      "name": "uncalibrated",
+      "settings": {
+        "adcBits": 20,
+        "fullScale": 1.2,
+        "noiseRms": 0.00002,
+        "clockJitterSecondsRms": 2e-8,
+        "saturationAmplitude": 1.1,
+        "slewLimitAmplitudePerSecond": 10000,
+        "calibrated": false,
+        "latencyDriftSamples": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "name": "uncalibrated"
+      },
+      "estimatedChannelTransfer": [
+        [
+          1.0119619369143842,
+          -0.00883973821615086
+        ],
+        [
+          0.9929869952077822,
+          0.005184553322366003
+        ],
+        [
+          1.0057954016164803,
+          -0.020192516272083905
+        ],
+        [
+          0.9889410149488592,
+          0.010775029683141812
+        ]
+      ],
+      "reconstructedReturn": {
+        "real": [
+          [
+            -0.0003373328088119541,
+            0.9667344252914652
+          ],
+          [
+            -0.9858551070033296,
+            -0.016764583889894803
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03831980902653602,
+            0.16572578857020226
+          ],
+          [
+            -0.15043049764536565,
+            0.03165915481023888
+          ]
+        ]
+      },
+      "targetOverlap": 0.9890096914263309,
+      "relativeMatrixError": 0.1645492676847548,
+      "returnedAngleDegrees": -90.51983280657184,
+      "relativeErrorToSource": 0.013617516546557903,
+      "angleErrorToSourceDegrees": 0.032597063375902735,
+      "trialAngleStdDegrees": 0.0008252079949445549
+    },
+    {
+      "name": "ten_bit",
+      "settings": {
+        "adcBits": 10,
+        "fullScale": 1.2,
+        "noiseRms": 0.00002,
+        "clockJitterSecondsRms": 2e-8,
+        "saturationAmplitude": 1.1,
+        "slewLimitAmplitudePerSecond": 10000,
+        "calibrated": true,
+        "latencyDriftSamples": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "name": "ten_bit"
+      },
+      "estimatedChannelTransfer": [
+        [
+          1.013865102639294,
+          -0.007319648093837339
+        ],
+        [
+          0.990592375366571,
+          0.005442815249268873
+        ],
+        [
+          1.0074838709677374,
+          -0.018956011730205058
+        ],
+        [
+          0.9879648093841621,
+          0.014451612903225497
+        ]
+      ],
+      "reconstructedReturn": {
+        "real": [
+          [
+            -0.0013988288874431762,
+            0.9778204294079301
+          ],
+          [
+            -0.9723281155571468,
+            -0.01787725761436514
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03906961613532871,
+            0.1615940143135941
+          ],
+          [
+            -0.16093694078255352,
+            0.031116578951593248
+          ]
+        ]
+      },
+      "targetOverlap": 0.9883199841681641,
+      "relativeMatrixError": 0.1674622649485188,
+      "returnedAngleDegrees": -90.58885211577275,
+      "relativeErrorToSource": 0.003185782699672105,
+      "angleErrorToSourceDegrees": -0.036422245825008304,
+      "trialAngleStdDegrees": 6.110667527536862e-13
+    },
+    {
+      "name": "high_noise",
+      "settings": {
+        "adcBits": 20,
+        "fullScale": 1.2,
+        "noiseRms": 0.001,
+        "clockJitterSecondsRms": 2e-8,
+        "saturationAmplitude": 1.1,
+        "slewLimitAmplitudePerSecond": 10000,
+        "calibrated": true,
+        "latencyDriftSamples": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "name": "high_noise"
+      },
+      "estimatedChannelTransfer": [
+        [
+          1.0119805958085972,
+          -0.008914632000572076
+        ],
+        [
+          0.9932403068450035,
+          0.005303940347614888
+        ],
+        [
+          1.0061204899506475,
+          -0.020105857234819113
+        ],
+        [
+          0.988868256204849,
+          0.010914517559545422
+        ]
+      ],
+      "reconstructedReturn": {
+        "real": [
+          [
+            -0.0004662014971563562,
+            0.9741623856827444
+          ],
+          [
+            -0.9740762215990012,
+            -0.017548805433520494
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03860818221249748,
+            0.1616300009058335
+          ],
+          [
+            -0.1628191106009267,
+            0.031217168001476683
+          ]
+        ]
+      },
+      "targetOverlap": 0.9875349230357175,
+      "relativeMatrixError": 0.16844468795075315,
+      "returnedAngleDegrees": -90.5507112564885,
+      "relativeErrorToSource": 0.0002545440910254166,
+      "angleErrorToSourceDegrees": 0.0017186134592463986,
+      "trialAngleStdDegrees": 0.041075017393450375
+    },
+    {
+      "name": "latency_drift",
+      "settings": {
+        "adcBits": 20,
+        "fullScale": 1.2,
+        "noiseRms": 0.00002,
+        "clockJitterSecondsRms": 2e-8,
+        "saturationAmplitude": 1.1,
+        "slewLimitAmplitudePerSecond": 10000,
+        "calibrated": true,
+        "latencyDriftSamples": [
+          0.2,
+          -0.15,
+          0.1,
+          -0.25
+        ],
+        "name": "latency_drift"
+      },
+      "estimatedChannelTransfer": [
+        [
+          1.0119599191760256,
+          -0.008825220656606347
+        ],
+        [
+          0.9929771232386806,
+          0.005184169944925432
+        ],
+        [
+          1.0058016829983558,
+          -0.020190423431801052
+        ],
+        [
+          0.9889485058293402,
+          0.010789005078321035
+        ]
+      ],
+      "reconstructedReturn": {
+        "real": [
+          [
+            0.00021727865454135696,
+            0.9710489692336821
+          ],
+          [
+            -0.9768555904342935,
+            -0.017427819416218782
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03858827491637929,
+            0.1809084339240519
+          ],
+          [
+            -0.14301087320422792,
+            0.0314910682224207
+          ]
+        ]
+      },
+      "targetOverlap": 0.9873266798666178,
+      "relativeMatrixError": 0.16931969116806164,
+      "returnedAngleDegrees": -90.52637546504214,
+      "relativeErrorToSource": 0.01990865703452507,
+      "angleErrorToSourceDegrees": 0.026054404905607953,
+      "trialAngleStdDegrees": 0.0008808206735415946
+    },
+    {
+      "name": "clipping_slew",
+      "settings": {
+        "adcBits": 20,
+        "fullScale": 1.2,
+        "noiseRms": 0.00002,
+        "clockJitterSecondsRms": 2e-8,
+        "saturationAmplitude": 0.5,
+        "slewLimitAmplitudePerSecond": 2200,
+        "calibrated": true,
+        "latencyDriftSamples": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "name": "clipping_slew"
+      },
+      "estimatedChannelTransfer": [
+        [
+          1.0021917330663048,
+          -0.008747181174451502
+        ],
+        [
+          0.9834007052428289,
+          0.005137520921250582
+        ],
+        [
+          0.9960895064730715,
+          -0.01998810743151469
+        ],
+        [
+          0.9793967040984201,
+          0.010678904227165664
+        ]
+      ],
+      "reconstructedReturn": {
+        "real": [
+          [
+            -0.0005436377305671511,
+            0.3487779818888908
+          ],
+          [
+            -0.4908535375186053,
+            -0.017718960237645826
+          ]
+        ],
+        "imaginary": [
+          [
+            -0.03896474208945214,
+            0.05791768332194994
+          ],
+          [
+            -0.08271349922183574,
+            0.03156089671833504
+          ]
+        ]
+      },
+      "targetOverlap": 0.42566366355557184,
+      "relativeMatrixError": 0.5900613597527696,
+      "returnedAngleDegrees": -91.29431092667339,
+      "relativeErrorToSource": 0.5733133854622626,
+      "angleErrorToSourceDegrees": -0.7418810567256457,
+      "trialAngleStdDegrees": 0.0019606990546509953
+    }
+  ]
+}
