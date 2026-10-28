@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "lithium-niobate-nonlinear-control-twin-v1",
+  "date": "2026-10-28",
+  "status": "dimensionless software stress model; no fitted device parameters",
+  "normalization": {
+    "time": "one unit is an unspecified reference linewidth inverse",
+    "amplitude": "modal amplitudes are normalized development coordinates",
+    "detuning": "one unit is an unspecified reference linewidth",
+    "command": "normalized actuator coordinate before hardware calibration"
+  },
+  "state": [
+    "three complex modal amplitudes",
+    "thermal detuning memory",
+    "photorefractive detuning memory",
+    "external common drift",
+    "estimator state and covariance",
+    "controller integral and delayed actuator queue"
+  ],
+  "effects": [
+    "mode-dependent loss",
+    "complex closed-loop coupling phase",
+    "Kerr-like intensity detuning",
+    "thermal relaxation and heating",
+    "saturating photorefractive memory",
+    "additive and state-scaled process noise",
+    "nonlinear detector response",
+    "detector clipping",
+    "actuator magnitude and slew limits",
+    "command delay",
+    "PI anti-windup"
+  ],
+  "baseParameters": {
+    "dt": 0.02,
+    "steps": 800,
+    "burnIn": 400,
+    "linewidths": [0.62, 0.71, 0.66],
+    "bareDetunings": [-0.18, 0.03, 0.14],
+    "couplingMagnitude": 0.19,
+    "loopPhaseMagnitude": 1.05,
+    "driveAmplitude": 0.42,
+    "kerr": 0.07,
+    "thermalTime": 5.5,
+    "thermalDrive": 0.035,
+    "thermalCoefficient": 0.32,
+    "photorefractiveTime": 18,
+    "photorefractiveDrive": 0.022,
+    "photorefractiveSaturationIntensity": 0.8,
+    "photorefractiveCoefficient": 0.28,
+    "processNoise": 0.0015,
+    "detectorNoise": 0.012,
+    "detectorCubic": 0.18,
+    "detectorClip": 1.2,
+    "commandLimit": 0.65,
+    "commandSlew": 0.055,
+    "commandDelaySteps": 2,
+    "proportionalGain": 0.58,
+    "integralGain": 0.045,
+    "antiWindupGain": 0.7,
+    "estimatorProcessVariance": 0.0008,
+    "estimatorMeasurementVariance": 0.000144
+  },
+  "strategies": [
+    "linear_kalman_pi",
+    "extended_kalman_pi",
+    "augmented_memory_ekf_pi",
+    "extended_kalman_constrained_predictive"
+  ],
+  "scenarios": [
+    {"id": "nominal", "overrides": {}},
+    {"id": "strong_nonlinearity", "overrides": {"kerr": 0.24, "detectorCubic": 0.42}},
+    {"id": "long_delay", "overrides": {"commandDelaySteps": 9}},
+    {"id": "detector_clipping", "overrides": {"detectorClip": 0.018}},
+    {"id": "slow_memory", "overrides": {"photorefractiveTime": 55, "photorefractiveCoefficient": 0.42}}
+  ],
+  "softwareAcceptance": {
+    "finiteMetricsRequired": true,
+    "nominalMaximumLockRms": 0.18,
+    "minimumOrientationOddMagnitude": 0.0001,
+    "scienceChannelMayEnterController": false,
+    "universalStrategyWinnerRequired": false,
+    "nonlinearScenarioMustExposeLinearizationCost": true,
+    "slowMemoryScenarioMustTestAugmentedEstimator": true
+  },
+  "authorityBoundary": "All values are dimensionless development parameters chosen to exercise failure modes. They must be replaced by identified device parameters before any hardware prediction."
+}

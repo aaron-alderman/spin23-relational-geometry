@@ -1,0 +1,933 @@
+{
+  "schemaVersion": "lithium-niobate-nonlinear-control-twin-result-v1",
+  "generatedFrom": "corpus/programmes/common-operator-atlas/lithium_niobate_nonlinear_twin_v1.json",
+  "deterministicSeedPolicy": "9271 + 1000*scenarioIndex + 37*strategyIndex; common seed across phase reversal",
+  "status": "PASS",
+  "results": [
+    {
+      "scenario": "nominal",
+      "strategy": "linear_kalman_pi",
+      "positive": {
+        "lockRms": 0.02438467801993981,
+        "innovationRms": 0.015299313490362218,
+        "innovationMean": 0.00032047557150202406,
+        "innovationLagOne": -0.431179133205284,
+        "scienceMean": -0.05478143759677862,
+        "scienceRms": 0.05502814664316675,
+        "commandRms": 0.17814451931718836,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.24528487852060193,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.02451517041377775,
+        "innovationRms": 0.015299363916970255,
+        "innovationMean": 0.0003227927880888126,
+        "innovationLagOne": -0.4311811292984309,
+        "scienceMean": 0.05240497955117393,
+        "scienceRms": 0.05244466921954707,
+        "commandRms": 0.17863595368676408,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.24631238112640105,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.02444992421685878,
+        "innovationRms": 0.015299338703666236,
+        "innovationBiasMagnitude": 0.00032163417979541836,
+        "innovationLagMagnitude": 0.43118013125185745,
+        "orientationOdd": -0.05359320857397627,
+        "orientationEven": -0.0011882290228023458,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "nominal",
+      "strategy": "extended_kalman_pi",
+      "positive": {
+        "lockRms": 0.02420624323572579,
+        "innovationRms": 0.016603362271859545,
+        "innovationMean": 0.00027974519155992203,
+        "innovationLagOne": -0.46383708712906974,
+        "scienceMean": -0.056439498110465426,
+        "scienceRms": 0.05671681094982721,
+        "commandRms": 0.1792117929205319,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.233662078852203,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.02434248105845111,
+        "innovationRms": 0.016603412941299953,
+        "innovationMean": 0.00028173554778932895,
+        "innovationLagOne": -0.46383824020380593,
+        "scienceMean": 0.05316168816983241,
+        "scienceRms": 0.0532094252828207,
+        "commandRms": 0.17973654234015857,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2346334160298223,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.02427436214708845,
+        "innovationRms": 0.01660338760657975,
+        "innovationBiasMagnitude": 0.00028074036967462546,
+        "innovationLagMagnitude": 0.46383766366643786,
+        "orientationOdd": -0.054800593140148915,
+        "orientationEven": -0.0016389049703165078,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "nominal",
+      "strategy": "augmented_memory_ekf_pi",
+      "positive": {
+        "lockRms": 0.024978580924808345,
+        "innovationRms": 0.016588392872710172,
+        "innovationMean": 0.00021159775937337454,
+        "innovationLagOne": -0.46005869928556065,
+        "scienceMean": -0.05438016825122472,
+        "scienceRms": 0.05456519337437511,
+        "commandRms": 0.1782142326021931,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2528354507213504,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.025124913802794198,
+        "innovationRms": 0.016588401955745565,
+        "innovationMean": 0.00021158267795431604,
+        "innovationLagOne": -0.46005957318000934,
+        "scienceMean": 0.05614896795564858,
+        "scienceRms": 0.05622379351352403,
+        "commandRms": 0.17873332150601054,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2538911352834805,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.025051747363801273,
+        "innovationRms": 0.01658839741422787,
+        "innovationBiasMagnitude": 0.00021159021866384528,
+        "innovationLagMagnitude": 0.460059136232785,
+        "orientationOdd": -0.05526456810343665,
+        "orientationEven": 0.0008843998522119305,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "nominal",
+      "strategy": "extended_kalman_constrained_predictive",
+      "positive": {
+        "lockRms": 0.028584004106565485,
+        "innovationRms": 0.01525814060751059,
+        "innovationMean": 0.000165080469253223,
+        "innovationLagOne": -0.43084146688169445,
+        "scienceMean": -0.05776759113476281,
+        "scienceRms": 0.057995329214261454,
+        "commandRms": 0.1831219219032154,
+        "saturationFraction": 0.25625,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2258968988732442,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.028611741109053162,
+        "innovationRms": 0.015258167784590925,
+        "innovationMean": 0.00016736699865395902,
+        "innovationLagOne": -0.4308416054284064,
+        "scienceMean": 0.06135638878385733,
+        "scienceRms": 0.06154031456022852,
+        "commandRms": 0.18372587227373385,
+        "saturationFraction": 0.25625,
+        "clippingFraction": 0,
+        "finalEstimate": 0.22691950321550625,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.028597872607809324,
+        "innovationRms": 0.015258154196050758,
+        "innovationBiasMagnitude": 0.000166223733953591,
+        "innovationLagMagnitude": 0.4308415361550504,
+        "orientationOdd": -0.05956198995931007,
+        "orientationEven": 0.0017943988245472595,
+        "saturationFraction": 0.25625,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "strong_nonlinearity",
+      "strategy": "linear_kalman_pi",
+      "positive": {
+        "lockRms": 0.02493084649013632,
+        "innovationRms": 0.014464775598182019,
+        "innovationMean": 0.00030885119159520044,
+        "innovationLagOne": -0.3979350161805374,
+        "scienceMean": -0.05039769580257028,
+        "scienceRms": 0.05045137230540487,
+        "commandRms": 0.1788380470053026,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.24314192965302664,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.025097506856956504,
+        "innovationRms": 0.014464847244020754,
+        "innovationMean": 0.00031167939598842405,
+        "innovationLagOne": -0.39793232380041044,
+        "scienceMean": 0.04519029992822186,
+        "scienceRms": 0.045536019170856305,
+        "commandRms": 0.17942415123231212,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.24437438713558754,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.025014176673546412,
+        "innovationRms": 0.014464811421101387,
+        "innovationBiasMagnitude": 0.0003102652937918123,
+        "innovationLagMagnitude": 0.3979336699904739,
+        "orientationOdd": -0.047793997865396065,
+        "orientationEven": -0.002603697937174212,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "strong_nonlinearity",
+      "strategy": "extended_kalman_pi",
+      "positive": {
+        "lockRms": 0.02504127999073094,
+        "innovationRms": 0.01529054915586196,
+        "innovationMean": 0.0002909324749024677,
+        "innovationLagOne": -0.42153857537908707,
+        "scienceMean": -0.04878196323876379,
+        "scienceRms": 0.048833292671293334,
+        "commandRms": 0.1795863853452792,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2355083126815771,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.025229715676600182,
+        "innovationRms": 0.015290636282802582,
+        "innovationMean": 0.00029411519402126256,
+        "innovationLagOne": -0.42153845658351763,
+        "scienceMean": 0.04492811517349125,
+        "scienceRms": 0.045407709305459995,
+        "commandRms": 0.18027139896578717,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.236901660320744,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.02513549783366556,
+        "innovationRms": 0.01529059271933227,
+        "innovationBiasMagnitude": 0.0002925238344618651,
+        "innovationLagMagnitude": 0.4215385159813023,
+        "orientationOdd": -0.04685503920612752,
+        "orientationEven": -0.0019269240326362722,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "strong_nonlinearity",
+      "strategy": "augmented_memory_ekf_pi",
+      "positive": {
+        "lockRms": 0.02545246434915092,
+        "innovationRms": 0.015462801524600023,
+        "innovationMean": 0.00018230688051368453,
+        "innovationLagOne": -0.4106652258765373,
+        "scienceMean": -0.05034512916141489,
+        "scienceRms": 0.05043073144962092,
+        "commandRms": 0.1805028697356383,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.24584203938973762,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.025607004445364727,
+        "innovationRms": 0.015462824553845442,
+        "innovationMean": 0.00018227064119244056,
+        "innovationLagOne": -0.41066752899463255,
+        "scienceMean": 0.043419020298931764,
+        "scienceRms": 0.04378774498457191,
+        "commandRms": 0.18104178783452854,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.24699411732393806,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.025529734397257822,
+        "innovationRms": 0.015462813039222732,
+        "innovationBiasMagnitude": 0.00018228876085306253,
+        "innovationLagMagnitude": 0.41066637743558493,
+        "orientationOdd": -0.04688207473017333,
+        "orientationEven": -0.0034630544312415634,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "strong_nonlinearity",
+      "strategy": "extended_kalman_constrained_predictive",
+      "positive": {
+        "lockRms": 0.02803565937140794,
+        "innovationRms": 0.017006942146374465,
+        "innovationMean": 0.0002141661241300586,
+        "innovationLagOne": -0.5116887693073006,
+        "scienceMean": -0.05400564378741124,
+        "scienceRms": 0.05412826600566054,
+        "commandRms": 0.18839658954881539,
+        "saturationFraction": 0.26625,
+        "clippingFraction": 0,
+        "finalEstimate": 0.23979867132513188,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.028072553655277298,
+        "innovationRms": 0.017006977421086724,
+        "innovationMean": 0.00021711725850611892,
+        "innovationLagOne": -0.5116887991463347,
+        "scienceMean": 0.05305294442498512,
+        "scienceRms": 0.053465577340757964,
+        "commandRms": 0.1892101208231956,
+        "saturationFraction": 0.26625,
+        "clippingFraction": 0,
+        "finalEstimate": 0.24114256840347456,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.02805410651334262,
+        "innovationRms": 0.017006959783730596,
+        "innovationBiasMagnitude": 0.00021564169131808874,
+        "innovationLagMagnitude": 0.5116887842268176,
+        "orientationOdd": -0.05352929410619818,
+        "orientationEven": -0.0004763496812130591,
+        "saturationFraction": 0.26625,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "long_delay",
+      "strategy": "linear_kalman_pi",
+      "positive": {
+        "lockRms": 0.02652553503592311,
+        "innovationRms": 0.0161623679229046,
+        "innovationMean": 0.0002742464996536424,
+        "innovationLagOne": -0.44444966560839616,
+        "scienceMean": -0.05452408654643422,
+        "scienceRms": 0.054663777503971486,
+        "commandRms": 0.17574446069282548,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.23720434325190445,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.026677962396413887,
+        "innovationRms": 0.01616240009838058,
+        "innovationMean": 0.00027647080708841364,
+        "innovationLagOne": -0.44445016763107054,
+        "scienceMean": 0.053075710766528485,
+        "scienceRms": 0.05314534256983607,
+        "commandRms": 0.17625386554043626,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.23823096060606866,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.0266017487161685,
+        "innovationRms": 0.01616238401064259,
+        "innovationBiasMagnitude": 0.00027535865337102803,
+        "innovationLagMagnitude": 0.4444499166197333,
+        "orientationOdd": -0.053799898656481354,
+        "orientationEven": -0.000724187889952866,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "long_delay",
+      "strategy": "extended_kalman_pi",
+      "positive": {
+        "lockRms": 0.026572943629171335,
+        "innovationRms": 0.015023654525445271,
+        "innovationMean": 0.0003003685429301578,
+        "innovationLagOne": -0.4595692256090861,
+        "scienceMean": -0.05520430372901003,
+        "scienceRms": 0.05529997849781343,
+        "commandRms": 0.17547821744279055,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.23601772568267532,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.026717364899845848,
+        "innovationRms": 0.015023706249693302,
+        "innovationMean": 0.00030257517492446074,
+        "innovationLagOne": -0.45957053013266136,
+        "scienceMean": 0.05446614786710371,
+        "scienceRms": 0.05455052019250407,
+        "commandRms": 0.17596127582599128,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.23703875130610114,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.026645154264508593,
+        "innovationRms": 0.015023680387569287,
+        "innovationBiasMagnitude": 0.00030147185892730926,
+        "innovationLagMagnitude": 0.4595698778708737,
+        "orientationOdd": -0.05483522579805687,
+        "orientationEven": -0.0003690779309531607,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "long_delay",
+      "strategy": "augmented_memory_ekf_pi",
+      "positive": {
+        "lockRms": 0.026974022991657125,
+        "innovationRms": 0.015690138634031157,
+        "innovationMean": 0.00018216017304482202,
+        "innovationLagOne": -0.3915021643128289,
+        "scienceMean": -0.05602796456015431,
+        "scienceRms": 0.056250577766085656,
+        "commandRms": 0.1755191145727105,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2391802657738505,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.02712986049269251,
+        "innovationRms": 0.015690149357770463,
+        "innovationMean": 0.0001821452154726739,
+        "innovationLagOne": -0.3915024187279389,
+        "scienceMean": 0.05185432806148631,
+        "scienceRms": 0.05190762743764377,
+        "commandRms": 0.17602185028939737,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.24018652237490126,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.027051941742174818,
+        "innovationRms": 0.01569014399590081,
+        "innovationBiasMagnitude": 0.00018215269425874797,
+        "innovationLagMagnitude": 0.3915022915203839,
+        "orientationOdd": -0.05394114631082031,
+        "orientationEven": -0.002086818249334002,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "long_delay",
+      "strategy": "extended_kalman_constrained_predictive",
+      "positive": {
+        "lockRms": 0.047627800925390755,
+        "innovationRms": 0.016847318985357143,
+        "innovationMean": 0.000212623146457937,
+        "innovationLagOne": -0.40459606144838606,
+        "scienceMean": -0.05730821438226223,
+        "scienceRms": 0.057603966779891894,
+        "commandRms": 0.18740829626165648,
+        "saturationFraction": 0.71,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2347441313006186,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.04764459641665711,
+        "innovationRms": 0.016847366014441454,
+        "innovationMean": 0.00021500629980735142,
+        "innovationLagOne": -0.40459585078153726,
+        "scienceMean": 0.060031141899601986,
+        "scienceRms": 0.060147358052995224,
+        "commandRms": 0.18795752506808777,
+        "saturationFraction": 0.71,
+        "clippingFraction": 0,
+        "finalEstimate": 0.23574544813996012,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.047636198671023935,
+        "innovationRms": 0.016847342499899297,
+        "innovationBiasMagnitude": 0.0002138147231326442,
+        "innovationLagMagnitude": 0.4045959561149617,
+        "orientationOdd": -0.05866967814093211,
+        "orientationEven": 0.0013614637586698772,
+        "saturationFraction": 0.71,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "detector_clipping",
+      "strategy": "linear_kalman_pi",
+      "positive": {
+        "lockRms": 0.07642459937633125,
+        "innovationRms": 0.0003539185719316047,
+        "innovationMean": 0.0003399559995735568,
+        "innovationLagOne": 0.5548313487629296,
+        "scienceMean": -0.05098742993395225,
+        "scienceRms": 0.05107461869443865,
+        "commandRms": 0.12706767003327601,
+        "saturationFraction": 0,
+        "clippingFraction": 0.905,
+        "finalEstimate": 0.20724553279973162,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.07700692214127815,
+        "innovationRms": 0.0003497176566920417,
+        "innovationMean": 0.0003400046069738066,
+        "innovationLagOne": 0.9922698123580644,
+        "scienceMean": 0.036050686050615524,
+        "scienceRms": 0.03632688403104714,
+        "commandRms": 0.12707112665427542,
+        "saturationFraction": 0,
+        "clippingFraction": 0.90625,
+        "finalEstimate": 0.20726264421888707,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.07671576075880471,
+        "innovationRms": 0.0003518181143118232,
+        "innovationBiasMagnitude": 0.0003399803032736817,
+        "innovationLagMagnitude": 0.773550580560497,
+        "orientationOdd": -0.04351905799228389,
+        "orientationEven": -0.007468371941668363,
+        "saturationFraction": 0,
+        "clippingFraction": 0.905625
+      }
+    },
+    {
+      "scenario": "detector_clipping",
+      "strategy": "extended_kalman_pi",
+      "positive": {
+        "lockRms": 0.07681265109594239,
+        "innovationRms": 0.0003481248237471136,
+        "innovationMean": 0.0003384561005873662,
+        "innovationLagOne": 0.9922698183630776,
+        "scienceMean": -0.04965004625048341,
+        "scienceRms": 0.04969885731297703,
+        "commandRms": 0.1263959209051064,
+        "saturationFraction": 0,
+        "clippingFraction": 0.92375,
+        "finalEstimate": 0.20629222609668835,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.07743441852753664,
+        "innovationRms": 0.0003481267487413901,
+        "innovationMean": 0.0003384579721178749,
+        "innovationLagOne": 0.9922698183631008,
+        "scienceMean": 0.03681376938669899,
+        "scienceRms": 0.037232239771413496,
+        "commandRms": 0.1263967157623016,
+        "saturationFraction": 0,
+        "clippingFraction": 0.92375,
+        "finalEstimate": 0.20629336681832475,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.07712353481173952,
+        "innovationRms": 0.00034812578624425185,
+        "innovationBiasMagnitude": 0.00033845703635262053,
+        "innovationLagMagnitude": 0.9922698183630891,
+        "orientationOdd": -0.043231907818591195,
+        "orientationEven": -0.00641813843189221,
+        "saturationFraction": 0,
+        "clippingFraction": 0.92375
+      }
+    },
+    {
+      "scenario": "detector_clipping",
+      "strategy": "augmented_memory_ekf_pi",
+      "positive": {
+        "lockRms": 0.07352774703183504,
+        "innovationRms": 0.00026567636632842946,
+        "innovationMean": 0.00023980433640831785,
+        "innovationLagOne": 0.9923020778379611,
+        "scienceMean": -0.05006912184603172,
+        "scienceRms": 0.05014540628187238,
+        "commandRms": 0.12664413390120668,
+        "saturationFraction": 0,
+        "clippingFraction": 0.92,
+        "finalEstimate": 0.2066552886241646,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.07415543723819921,
+        "innovationRms": 0.0002638190837382281,
+        "innovationMean": 0.0002376322826195665,
+        "innovationLagOne": 0.9923129498364218,
+        "scienceMean": 0.037602297967915456,
+        "scienceRms": 0.037931036420644874,
+        "commandRms": 0.12664721162536935,
+        "saturationFraction": 0,
+        "clippingFraction": 0.92,
+        "finalEstimate": 0.20665991881450585,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.07384159213501712,
+        "innovationRms": 0.0002647477250333288,
+        "innovationBiasMagnitude": 0.00023871830951394216,
+        "innovationLagMagnitude": 0.9923075138371915,
+        "orientationOdd": -0.04383570990697359,
+        "orientationEven": -0.006233411939058131,
+        "saturationFraction": 0,
+        "clippingFraction": 0.92
+      }
+    },
+    {
+      "scenario": "detector_clipping",
+      "strategy": "extended_kalman_constrained_predictive",
+      "positive": {
+        "lockRms": 0.20204409260957729,
+        "innovationRms": 0.05453681399857321,
+        "innovationMean": -0.000042162335190793626,
+        "innovationLagOne": -0.0024099387978781203,
+        "scienceMean": -0.03338280858969076,
+        "scienceRms": 0.034738694470024124,
+        "commandRms": 0.03892107245505435,
+        "saturationFraction": 0.98625,
+        "clippingFraction": 0.95375,
+        "finalEstimate": 0.013228866359834772,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.20265884147527455,
+        "innovationRms": 0.05453681399857321,
+        "innovationMean": -0.000042162335190793626,
+        "innovationLagOne": -0.0024099387978781203,
+        "scienceMean": 0.006057742251759437,
+        "scienceRms": 0.018861560815808594,
+        "commandRms": 0.03892107262093045,
+        "saturationFraction": 0.98625,
+        "clippingFraction": 0.95375,
+        "finalEstimate": 0.01322887057141172,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.2023514670424259,
+        "innovationRms": 0.05453681399857321,
+        "innovationBiasMagnitude": 0.000042162335190793626,
+        "innovationLagMagnitude": 0.0024099387978781203,
+        "orientationOdd": -0.0197202754207251,
+        "orientationEven": -0.013662533168965662,
+        "saturationFraction": 0.98625,
+        "clippingFraction": 0.95375
+      }
+    },
+    {
+      "scenario": "slow_memory",
+      "strategy": "linear_kalman_pi",
+      "positive": {
+        "lockRms": 0.027551909189331716,
+        "innovationRms": 0.014318469416191191,
+        "innovationMean": 0.0002716747874825122,
+        "innovationLagOne": -0.40425951445586766,
+        "scienceMean": -0.055102163975573513,
+        "scienceRms": 0.055250605615866706,
+        "commandRms": 0.19152691052498177,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2543834745376293,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.027719937850283944,
+        "innovationRms": 0.014318518864990719,
+        "innovationMean": 0.0002742635578374177,
+        "innovationLagOne": -0.40425912363287836,
+        "scienceMean": 0.05365606398790623,
+        "scienceRms": 0.05371798985813305,
+        "commandRms": 0.19212281617846613,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.25555785394444974,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.02763592351980783,
+        "innovationRms": 0.014318494140590955,
+        "innovationBiasMagnitude": 0.00027296917265996496,
+        "innovationLagMagnitude": 0.404259319044373,
+        "orientationOdd": -0.05437911398173988,
+        "orientationEven": -0.0007230499938336403,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "slow_memory",
+      "strategy": "extended_kalman_pi",
+      "positive": {
+        "lockRms": 0.02595947397405165,
+        "innovationRms": 0.015651661653752754,
+        "innovationMean": 0.0003444778299170161,
+        "innovationLagOne": -0.46583589523025387,
+        "scienceMean": -0.05569243476419249,
+        "scienceRms": 0.056003149471779465,
+        "commandRms": 0.18923466213840429,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2622674143256433,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.02611618533908577,
+        "innovationRms": 0.015651722143576834,
+        "innovationMean": 0.0003468511001879975,
+        "innovationLagOne": -0.46583580369020866,
+        "scienceMean": 0.052003329649774443,
+        "scienceRms": 0.052051951644861635,
+        "commandRms": 0.1898036588848568,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2633909392237675,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.026037829656568708,
+        "innovationRms": 0.015651691898664794,
+        "innovationBiasMagnitude": 0.0003456644650525068,
+        "innovationLagMagnitude": 0.46583584946023127,
+        "orientationOdd": -0.05384788220698347,
+        "orientationEven": -0.0018445525572090248,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "slow_memory",
+      "strategy": "augmented_memory_ekf_pi",
+      "positive": {
+        "lockRms": 0.027420451719560597,
+        "innovationRms": 0.016420865531050696,
+        "innovationMean": 0.00017334133548762353,
+        "innovationLagOne": -0.5095813708612908,
+        "scienceMean": -0.05378873297523587,
+        "scienceRms": 0.05397671448189563,
+        "commandRms": 0.19383858936620155,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.26054885525210125,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.027581765025832896,
+        "innovationRms": 0.016420869456482287,
+        "innovationMean": 0.00017331995828334827,
+        "innovationLagOne": -0.5095823762665754,
+        "scienceMean": 0.05202627380553805,
+        "scienceRms": 0.05207408884555937,
+        "commandRms": 0.19442040520222836,
+        "saturationFraction": 0,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2617137784070457,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.027501108372696745,
+        "innovationRms": 0.01642086749376649,
+        "innovationBiasMagnitude": 0.0001733306468854859,
+        "innovationLagMagnitude": 0.5095818735639331,
+        "orientationOdd": -0.05290750339038696,
+        "orientationEven": -0.0008812295848489096,
+        "saturationFraction": 0,
+        "clippingFraction": 0
+      }
+    },
+    {
+      "scenario": "slow_memory",
+      "strategy": "extended_kalman_constrained_predictive",
+      "positive": {
+        "lockRms": 0.029305090630315445,
+        "innovationRms": 0.015715961674889218,
+        "innovationMean": 0.0002713093243530192,
+        "innovationLagOne": -0.4852530135981323,
+        "scienceMean": -0.0576965520402083,
+        "scienceRms": 0.0579283557501067,
+        "commandRms": 0.19748848229868113,
+        "saturationFraction": 0.25125,
+        "clippingFraction": 0,
+        "finalEstimate": 0.2591368254833183,
+        "finite": true
+      },
+      "negative": {
+        "lockRms": 0.029339319301225273,
+        "innovationRms": 0.015716009836802738,
+        "innovationMean": 0.00027369701536483586,
+        "innovationLagOne": -0.4852527135724416,
+        "scienceMean": 0.059532763179103325,
+        "scienceRms": 0.059691369887665116,
+        "commandRms": 0.19819011359422378,
+        "saturationFraction": 0.25125,
+        "clippingFraction": 0,
+        "finalEstimate": 0.26025620225540214,
+        "finite": true
+      },
+      "pair": {
+        "lockRms": 0.029322204965770357,
+        "innovationRms": 0.015715985755845978,
+        "innovationBiasMagnitude": 0.0002725031698589275,
+        "innovationLagMagnitude": 0.48525286358528696,
+        "orientationOdd": -0.05861465760965581,
+        "orientationEven": 0.0009181055694475124,
+        "saturationFraction": 0.25125,
+        "clippingFraction": 0
+      }
+    }
+  ],
+  "byScenario": {
+    "nominal": {
+      "lowestLockRms": "extended_kalman_pi",
+      "ranking": [
+        {
+          "strategy": "extended_kalman_pi",
+          "lockRms": 0.02427436214708845
+        },
+        {
+          "strategy": "linear_kalman_pi",
+          "lockRms": 0.02444992421685878
+        },
+        {
+          "strategy": "augmented_memory_ekf_pi",
+          "lockRms": 0.025051747363801273
+        },
+        {
+          "strategy": "extended_kalman_constrained_predictive",
+          "lockRms": 0.028597872607809324
+        }
+      ],
+      "allOrientationOddRetained": true
+    },
+    "strong_nonlinearity": {
+      "lowestLockRms": "linear_kalman_pi",
+      "ranking": [
+        {
+          "strategy": "linear_kalman_pi",
+          "lockRms": 0.025014176673546412
+        },
+        {
+          "strategy": "extended_kalman_pi",
+          "lockRms": 0.02513549783366556
+        },
+        {
+          "strategy": "augmented_memory_ekf_pi",
+          "lockRms": 0.025529734397257822
+        },
+        {
+          "strategy": "extended_kalman_constrained_predictive",
+          "lockRms": 0.02805410651334262
+        }
+      ],
+      "allOrientationOddRetained": true
+    },
+    "long_delay": {
+      "lowestLockRms": "linear_kalman_pi",
+      "ranking": [
+        {
+          "strategy": "linear_kalman_pi",
+          "lockRms": 0.0266017487161685
+        },
+        {
+          "strategy": "extended_kalman_pi",
+          "lockRms": 0.026645154264508593
+        },
+        {
+          "strategy": "augmented_memory_ekf_pi",
+          "lockRms": 0.027051941742174818
+        },
+        {
+          "strategy": "extended_kalman_constrained_predictive",
+          "lockRms": 0.047636198671023935
+        }
+      ],
+      "allOrientationOddRetained": true
+    },
+    "detector_clipping": {
+      "lowestLockRms": "augmented_memory_ekf_pi",
+      "ranking": [
+        {
+          "strategy": "augmented_memory_ekf_pi",
+          "lockRms": 0.07384159213501712
+        },
+        {
+          "strategy": "linear_kalman_pi",
+          "lockRms": 0.07671576075880471
+        },
+        {
+          "strategy": "extended_kalman_pi",
+          "lockRms": 0.07712353481173952
+        },
+        {
+          "strategy": "extended_kalman_constrained_predictive",
+          "lockRms": 0.2023514670424259
+        }
+      ],
+      "allOrientationOddRetained": true
+    },
+    "slow_memory": {
+      "lowestLockRms": "extended_kalman_pi",
+      "ranking": [
+        {
+          "strategy": "extended_kalman_pi",
+          "lockRms": 0.026037829656568708
+        },
+        {
+          "strategy": "augmented_memory_ekf_pi",
+          "lockRms": 0.027501108372696745
+        },
+        {
+          "strategy": "linear_kalman_pi",
+          "lockRms": 0.02763592351980783
+        },
+        {
+          "strategy": "extended_kalman_constrained_predictive",
+          "lockRms": 0.029322204965770357
+        }
+      ],
+      "allOrientationOddRetained": true
+    }
+  },
+  "strategyAdjudication": {
+    "nonlinearEkfReducesBias": true,
+    "memoryAugmentationImprovesLag": false,
+    "memoryResult": "The declared augmented memory state did not reduce innovation lag from one scalar lock channel; additional independent readout or a different state/noise model is required."
+  },
+  "conclusions": [
+    "No strategy is authorized as a universal winner; rankings are scenario dependent.",
+    "The reduced EKF lowers nonlinear innovation bias in the declared strong-nonlinearity case.",
+    "Delay, clipping, slow memory and saturation remain visible in retained diagnostics.",
+    "Adding hidden memory coordinates without another informative detector did not whiten innovations; state augmentation alone is not observability.",
+    "The orientation-odd science record remains outside feedback and survives every software stress scenario.",
+    "Dimensionless success is not a hardware prediction."
+  ]
+}

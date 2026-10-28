@@ -59,6 +59,12 @@ modern computational formalisms.
 11. [Machine-readable control register](control_inference_closure_v1.json)
     freezes the equations, tests, physical channel allocation and authority
     boundary.
+12. [Nonlinear digital twin and strategy adjudication](10_nonlinear_digital_twin_and_strategy_adjudication.md)
+    stress-tests four estimator/controller strategies across nonlinearity,
+    delay, clipping and slow-memory regimes and retains negative results.
+13. [Phase-reversal preregistration and hardware handoff](11_phase_reversal_preregistration_and_hardware_handoff.md)
+    freezes the blinded trial logic, negative controls, abort rules and the
+    exact measured fields required before device-specific numbers are allowed.
 
 ## Finding
 
@@ -130,4 +136,5 @@ Run:
 node verification/verify/verify_common_operator_atlas.mjs
 node verification/verify/verify_common_operator_bridges.mjs
 node verification/verify/verify_common_operator_control_loop.mjs
+node verification/verify/verify_common_operator_nonlinear_twin.mjs
 ```

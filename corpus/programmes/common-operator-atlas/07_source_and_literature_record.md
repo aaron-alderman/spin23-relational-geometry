@@ -79,6 +79,14 @@ claim that all nodes are one physical system.
   demonstrates controlled inter-mode coupling and gauge phase in the selected
   device family. It supports the platform choice, not the proposed estimator
   or any new-physics reading.
+- Julier and Uhlmann, [“The Unscented Kalman Filter for Nonlinear
+  Estimation”](https://doi.org/10.1109/ACC.2000.882463), motivates sigma-point
+  propagation when nonlinear transformations make first-order linearization
+  inadequate; it does not repair an unobservable or unidentified state.
+- Ren et al., [“Photorefractive and pyroelectric photonic memory and long-term
+  stability in thin-film lithium niobate microresonators”](https://doi.org/10.1038/s44310-024-00052-3),
+  supplies the empirical reason to include distinct slow material memories and
+  to require cut- and device-specific recovery measurements.
 
 ## Literature verdict
 

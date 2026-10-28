@@ -125,3 +125,7 @@ innovation becomes a selector only through an estimator/controller map; and
 that selector is legitimate only inside actuator and authority limits. The
 held-out channel prevents the resulting cybernetic loop from becoming
 self-confirming.
+
+The software-only continuation is now complete in the [nonlinear digital
+twin](10_nonlinear_digital_twin_and_strategy_adjudication.md) and the
+[phase-reversal preregistration and hardware handoff](11_phase_reversal_preregistration_and_hardware_handoff.md).
