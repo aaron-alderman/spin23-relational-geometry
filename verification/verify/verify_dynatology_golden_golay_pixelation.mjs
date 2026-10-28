@@ -18,6 +18,8 @@ const syndrome = (H, e) => H.map((row) => mod3(row.reduce((sum, x, i) => sum + x
 const key = (vector) => vector.join("");
 
 assert.equal(record.schema, "dynatology-golden-golay-pixelation/1");
+assert.equal(record.openGate.status, "resolved_by_equivariant_successor_no_go");
+assert.ok(fs.existsSync(path.join(path.dirname(recordPath), record.openGate.resolutionRecord)));
 const golden = record.goldenTransformation;
 assert.deepEqual(pow(golden.matrixS, golden.iterate), golden.matrixS5);
 assert.equal(golden.matrixS5[0][0] + golden.matrixS5[1][1], golden.trace);
@@ -205,4 +207,4 @@ for (const boundary of [
   "a_Golay_origin_of_the_golden_angle"
 ]) assert.ok(record.promotionBoundary.doesNotEstablish.includes(boundary), `missing boundary ${boundary}`);
 
-console.log(`Dynatology golden--Golay pixelation: PASS residual=${residual}; syndromes=${syndromeMap.size}; traversal=55; intrinsicOrdering=open`);
+console.log(`Dynatology golden--Golay pixelation: PASS residual=${residual}; syndromes=${syndromeMap.size}; traversal=55; intrinsicOrdering=resolved-no-go`);

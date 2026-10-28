@@ -20,6 +20,14 @@ operations:
 They fit together mathematically, but the encoder between their carriers is
 still missing.
 
+**Subsequent resolution.** [Mystery Atlas 24](mystery_atlas_24_golden_golay_integral_encoder_audit.md)
+recovers an exact integral two-to-eleven encoder from the existing arithmetic
+Golay lift. Its ternary shadow has parameters `[11,2,6]` and reduces the golden
+matrix to order four, not 55. The same audit closes the intrinsic ordering gate:
+sharp four-transitivity implies that the identity is the only fully
+`M11`-equivariant deterministic successor on the 55 secants. The statements
+below record the state and open test at the time of this initial spike.
+
 Let
 
 \[

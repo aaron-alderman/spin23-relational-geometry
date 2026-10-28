@@ -72,6 +72,8 @@ It does not replace physics, ontology, dynamics, optimization or modal logic. It
 56. [Typed operator translation grammar](../common-operator-atlas/02_typed_translation_grammar.md) distinguishes nine arrow types and requires carrier, metric, clock, detector, invariant, loss and authority receipts.
 57. [Golden contraction and Golay pixelation](mystery_atlas_23_golden_golay_pixelation_spike.md) proves that the 55-pixel golden residual is exactly `phi^-10`, verifies the ternary Golay code as a perfect radius-two finite pixelation, proves that a bare cyclic labelling cannot intrinsically select step 21, compiles the `21/34` pair into a maximum-locality forward/reverse scan of all 220 double-error states, and extends it to a bounded-step cycle through all 243 correctable errors.
 58. [Golden--Golay pixelation record](golden_golay_pixelation_v1.json) freezes the integer transformation, exact residual, syndrome decoder, modulo-55 control, Euler support circuit, signed Gray scheduler, full-sphere scheduler, continuous-encoder no-go and intrinsic-ordering gate.
+59. [Golden--Golay integral encoder audit](mystery_atlas_24_golden_golay_integral_encoder_audit.md) recovers the existing arithmetic lift's exact two-to-eleven encoder, identifies its equidistant `[11,2,6]` ternary shadow and order-four golden reduction, and closes the intrinsic 55-secant ordering gate by an equivariant-successor no-go.
+60. [Golden--Golay integral encoder record](golden_golay_integral_encoder_audit_v1.json) freezes the encoder, basis gauge, finite orbit census, Coxeter-cap stabilizer orbits, resolved gate and external-evidence stop rule.
 
 ## Relation to neighbouring programmes
 
@@ -91,6 +93,7 @@ node verification/verify/verify_dynatology_register.mjs
 node verification/verify/verify_dynatology_mystery_atlas.mjs
 node verification/verify/verify_dynatology_aether_substrate_frontier.mjs
 node verification/verify/verify_dynatology_golden_golay_pixelation.mjs
+node verification/verify/verify_dynatology_golden_golay_integral_encoder.mjs
 node verification/verify/verify_brain_function_atlas.mjs
 node verification/verify/verify_brain_relationship_atlas.mjs
 ```
