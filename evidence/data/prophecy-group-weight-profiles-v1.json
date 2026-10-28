@@ -1,0 +1,55 @@
+{
+  "protocol": "prophetic-admissibility/group-weight-profiles/1",
+  "date": "2026-10-28",
+  "formula": {
+    "effectiveAttentionWeight": "groupMultiplier * individualOverride",
+    "defaultIndividualOverride": 1,
+    "overlapRule": "maximum applicable group multiplier unless the profile declares an ordered precedence list",
+    "prohibition": "The effective attention weight may control sampling or prior attention. It must not be inserted into textual specificity, source dating, fulfilment match or independence scores."
+  },
+  "profiles": [
+    {
+      "id": "individual-evidence-neutral",
+      "label": "Evaluate every text individually",
+      "interpretation": "Canon and exclusion history confer no automatic evidential bonus or penalty.",
+      "groupMultipliers": {"default": 1},
+      "overlapRule": "all memberships resolve to 1"
+    },
+    {
+      "id": "protestant-authority-prior",
+      "label": "Protestant reception prior",
+      "interpretation": "Models the authority judgment of a Protestant canonical boundary without calling that judgment empirical proof.",
+      "groupMultipliers": {"protestant-66": 1, "catholic-deuterocanon": 0.35, "eastern-orthodox-anagignoskomena": 0.25, "ethiopian-broader-canon": 0.2, "second-temple-pseudepigrapha": 0.15, "nag-hammadi-codices": 0.1, "related-late-antique-revelatory": 0.1, "default": 0.1},
+      "overlapRule": "maximum"
+    },
+    {
+      "id": "ethiopian-orthodox-authority-prior",
+      "label": "Ethiopian broader-canon reception prior",
+      "interpretation": "Gives full sampling attention to the Ethiopian canonical family while retaining other ancient corpora as comparators.",
+      "groupMultipliers": {"shared-nicene-core": 1, "ethiopian-broader-canon": 1, "catholic-deuterocanon": 0.8, "eastern-orthodox-anagignoskomena": 0.8, "second-temple-pseudepigrapha": 0.4, "nag-hammadi-codices": 0.15, "related-late-antique-revelatory": 0.15, "default": 0.2},
+      "overlapRule": "maximum"
+    },
+    {
+      "id": "hidden-knowledge-stress-test",
+      "label": "Suppression or loss may hide valuable knowledge",
+      "interpretation": "Upweights excluded ancient corpora to test whether the conclusion changes when marginalization is treated as a possible preservation failure rather than a reliability signal.",
+      "groupMultipliers": {"protestant-66": 1, "catholic-deuterocanon": 1.1, "eastern-orthodox-anagignoskomena": 1.1, "ethiopian-broader-canon": 1.25, "second-temple-pseudepigrapha": 1.25, "nag-hammadi-codices": 1.25, "related-late-antique-revelatory": 1.25, "default": 1},
+      "overlapRule": "maximum"
+    },
+    {
+      "id": "successful-filter-stress-test",
+      "label": "Communal filtering may have removed unreliable material",
+      "interpretation": "Downweights noncanonical corpora to test the hypothesis that long communal selection retained the more reliable witnesses.",
+      "groupMultipliers": {"protestant-66": 1, "catholic-deuterocanon": 0.65, "eastern-orthodox-anagignoskomena": 0.55, "ethiopian-broader-canon": 0.5, "second-temple-pseudepigrapha": 0.3, "nag-hammadi-codices": 0.2, "related-late-antique-revelatory": 0.2, "default": 0.2},
+      "overlapRule": "maximum"
+    },
+    {
+      "id": "manuscript-and-date-only",
+      "label": "Ignore canon; weight only item-level historical evidence",
+      "interpretation": "Every group multiplier is one. Subsequent item-level source date, manuscript date, specificity and independence fields do all evidential work.",
+      "groupMultipliers": {"default": 1},
+      "overlapRule": "all memberships resolve to 1"
+    }
+  ],
+  "warning": "The numerical multipliers are scenario controls, not learned probabilities. Conclusions must be reported across profiles rather than selecting the profile that gives the desired answer."
+}

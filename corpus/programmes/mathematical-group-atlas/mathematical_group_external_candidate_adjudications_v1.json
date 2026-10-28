@@ -1,0 +1,350 @@
+{
+  "schema": "mathematical-group-external-candidate-adjudications/1",
+  "date": "2026-10-28",
+  "authority": "human_review_of_deterministic_external_object_clusters_not_independent_mathematical_proof",
+  "basis": {
+    "scan": "mathematical_group_external_object_corpus_scan_v1.json",
+    "externalObjectRegister": "mathematical_group_external_object_register_v1.json",
+    "catalogue": "mathematical_group_catalogue_v1.json",
+    "signatureRule": "sorted_object_ids__sorted_group_ids__sorted_predicates__polarity"
+  },
+  "dispositionVocabulary": [
+    "promoted",
+    "partially_promoted",
+    "retained_qualification",
+    "deferred_secondary_external_type",
+    "rejected_false_positive"
+  ],
+  "adjudications": [
+    {
+      "id": "external-adjudication:sp4R-so23-lie-isomorphism",
+      "signature": {
+        "objectIds": ["obj:lie:so23", "obj:lie:sp4R"],
+        "groupIds": [],
+        "predicates": ["isomorphism", "lie_algebra"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:46ff8129e7303a6d",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:Spin023-iso-Sp4R"],
+      "externalRelationIds": ["extrel:sp4R-isomorphic-so23"],
+      "assessment": "The repeated formula is exactly the split-real Lie-algebra isomorphism. Its separate group-level relation retains identity-component and global-form caveats.",
+      "reviewedEvidenceIds": ["external-scan:c64ed221bb22cddd", "external-scan:c939a9c975f84752"]
+    },
+    {
+      "id": "external-adjudication:B2-C2-root-seam",
+      "signature": {
+        "objectIds": ["obj:root:B2", "obj:root:C2"],
+        "groupIds": ["grp:Sp4R", "grp:Spin0_2_3"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:6ee137ca8fcfaf9c",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:Spin023-iso-Sp4R"],
+      "externalRelationIds": ["extrel:B2-isomorphic-C2", "extrel:Spin023-root-B2", "extrel:Sp4R-root-C2"],
+      "assessment": "The corpus correctly joins the B2/C2 root-system seam to the Spin_0(2,3)/Sp(4,R) carrier. Long/short root exchange and global-form loss remain explicit.",
+      "reviewedEvidenceIds": ["external-scan:fcc0193a9d664698", "external-scan:dbbe2121f38fc391"]
+    },
+    {
+      "id": "external-adjudication:WE6-S5-coset-carrier",
+      "signature": {
+        "objectIds": ["obj:space:WE6modS5"],
+        "groupIds": ["grp:E6compact", "grp:S5", "grp:WE6"],
+        "predicates": [],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:95dbca758521632a",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:S5-subgroup-WE6"],
+      "externalRelationIds": ["extrel:WE6-quotient-S5-432"],
+      "assessment": "The 432-point carrier is the declared W(E6)/S5 coset space. The associated Hecke algebra is an endomorphism/commutant object, not another group identification.",
+      "reviewedEvidenceIds": ["external-scan:e786f86506736459", "external-scan:748a4505f8f9aa96"]
+    },
+    {
+      "id": "external-adjudication:Spin10-half-spin-16",
+      "signature": {
+        "objectIds": ["obj:rep:Spin10HalfSpin16"],
+        "groupIds": ["grp:Spin10"],
+        "predicates": [],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:8965fdb0b045e6fc",
+      "disposition": "promoted",
+      "groupRelationshipIds": [],
+      "externalRelationIds": ["extrel:Spin10-rep-16"],
+      "assessment": "These occurrences identify the Spin(10) half-spin 16 as a representation carrier. Chirality and conjugation remain convention-bearing data.",
+      "reviewedEvidenceIds": ["external-scan:a8a301addab6268e", "external-scan:9924dd4a67e59e16"]
+    },
+    {
+      "id": "external-adjudication:E6-27-branching",
+      "signature": {
+        "objectIds": ["obj:rep:E6Fundamental27"],
+        "groupIds": ["grp:E6compact"],
+        "predicates": ["branching"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:f29873e6e2c0daa5",
+      "disposition": "partially_promoted",
+      "groupRelationshipIds": ["rel:Spin10U1-subgroup-E6"],
+      "externalRelationIds": ["extrel:E6-rep-27", "extrel:E6-27-restricts-Spin10U1"],
+      "assessment": "The fundamental 27 and its 16+10+1 restriction are typed. The same cluster also discusses real completions and other branch-specific carriers that require separate objects.",
+      "reviewedEvidenceIds": ["external-scan:79efb03ff2b1d4df", "external-scan:b7b4d1da14fbdb0f"]
+    },
+    {
+      "id": "external-adjudication:CP2-isomorphism-secondary-objects",
+      "signature": {
+        "objectIds": ["obj:space:CP2"],
+        "groupIds": [],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:bc0969fe1b922d4a",
+      "disposition": "retained_qualification",
+      "groupRelationshipIds": ["rel:U2-subgroup-SU3"],
+      "externalRelationIds": ["extrel:SU3-quotient-U2-CP2"],
+      "assessment": "The residual CP2-only isomorphism cluster is produced where a multiline formula leaves the left endpoint on the preceding line. The Grassmannian endpoint is now typed and promoted through a separate joined cluster; these fragments remain qualified rather than being guessed line-locally.",
+      "reviewedEvidenceIds": ["external-scan:2b3c04de4f1d3544", "external-scan:c91ccc23641b3a43"]
+    },
+    {
+      "id": "external-adjudication:CP2-tangent-HomLQ-bundle-isomorphism",
+      "signature": {
+        "objectIds": ["obj:bundle:HomLQ", "obj:bundle:TCP2", "obj:space:CP2"],
+        "groupIds": [],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:ed3becde2224dee4",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:U2-subgroup-SU3"],
+      "externalRelationIds": ["extrel:CP2-L-bundle", "extrel:CP2-Q-bundle", "extrel:CP2-HomLQ-bundle", "extrel:CP2-tangent-bundle", "extrel:CP2-HomLQ-construction", "extrel:CP2-tangent-is-HomLQ"],
+      "assessment": "The repeated formula is an isomorphism of complex rank-two vector bundles over CP2, not an identity of groups or total spaces. L, Q, Hom(L,Q), and T CP2 are now separately typed and joined through their common base.",
+      "reviewedEvidenceIds": ["external-scan:424374ae3336bf50", "external-scan:87683538c46a2aab"]
+    },
+    {
+      "id": "external-adjudication:CP2-degree-two-cohomology",
+      "signature": {
+        "objectIds": ["obj:cohomology:H2CP2Z", "obj:space:CP2"],
+        "groupIds": [],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:2dee25a127b77e10",
+      "disposition": "promoted",
+      "groupRelationshipIds": [],
+      "externalRelationIds": ["extrel:H2CP2Z-cohomology-of-CP2", "extrel:H2CP2Z-underlying-Z"],
+      "assessment": "The formula identifies the underlying abelian group of degree-two integral cohomology with Z. The typed object retains its base, degree, and coefficients so the forgetful group isomorphism cannot erase its cohomological role.",
+      "reviewedEvidenceIds": ["external-scan:c566fa800a124e75"]
+    },
+    {
+      "id": "external-adjudication:WE6-S5-Hecke-commutant",
+      "signature": {
+        "objectIds": ["obj:algebra:EndWE6Q432", "obj:algebra:HeckeS5WE6S5", "obj:rep:WE6Permutation432", "obj:space:WE6modS5"],
+        "groupIds": ["grp:E6compact", "grp:S5", "grp:WE6"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:41fccbc99dfbccac",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:S5-subgroup-WE6"],
+      "externalRelationIds": ["extrel:WE6-permutation-module-432", "extrel:Hecke-S5-WE6-S5", "extrel:End-WE6-Q432-commutant", "extrel:Hecke-is-End-WE6-Q432"],
+      "assessment": "The declared double-coset Hecke algebra and equivariant endomorphism algebra are typed as associative algebras acting around the 432-dimensional permutation carrier. The 26-dimensional block arithmetic is verified internally, while independent recomputation of the captured matrix-unit laws remains explicitly absent.",
+      "reviewedEvidenceIds": ["external-scan:a166c4ae63f51235"]
+    },
+    {
+      "id": "external-adjudication:GrC2_3-is-CP2",
+      "signature": {
+        "objectIds": ["obj:space:CP2", "obj:space:GrC2_3"],
+        "groupIds": [],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:5e2cb81a49b693d0",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:U2-subgroup-SU3"],
+      "externalRelationIds": ["extrel:SU3-quotient-U2-CP2", "extrel:GrC2_3-is-CP2"],
+      "assessment": "The complex Grassmannian Gr_C(2,3) and CP2 are separately typed spaces joined by annihilator or orthogonal-complement duality. This does not collapse their points without declaring the duality map, and it is not a group isomorphism.",
+      "reviewedEvidenceIds": ["external-scan:30fbb505752f2077", "external-scan:934985aca7cd37a1"]
+    },
+    {
+      "id": "external-adjudication:compact-B2-C2-lie-seam",
+      "signature": {
+        "objectIds": ["obj:lie:sp2Compact"],
+        "groupIds": ["grp:Sp2Compact", "grp:Spin5"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:cac5f3587711dabd",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:Spin5-iso-Sp2Compact", "rel:Spin5-cover-SO5"],
+      "externalRelationIds": ["extrel:Spin5-has-lie-so5Compact", "extrel:Sp2Compact-has-lie-sp2Compact", "extrel:sp2Compact-isomorphic-so5Compact", "extrel:Spin5-root-B2", "extrel:Sp2Compact-root-C2"],
+      "assessment": "Compact Spin(5) and compact Sp(2)=USp(4) are promoted as isomorphic simply connected Lie groups, with their compact real Lie algebras and B2/C2 root labels separately typed. The SO(5) endpoint remains a double-covered global form, and none of these records identifies the compact seam with split Spin_0(2,3) or Sp(4,R).",
+      "reviewedEvidenceIds": ["external-scan:68adc426aae64202"]
+    },
+    {
+      "id": "external-adjudication:SU22-SO24-conformal-lie-seam",
+      "signature": {
+        "objectIds": ["obj:lie:so24", "obj:lie:su22"],
+        "groupIds": [],
+        "predicates": ["isomorphism", "lie_algebra"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:5186aece6f9b208e",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:Spin024-iso-SU22", "rel:SU22-subgroup-SU33"],
+      "externalRelationIds": ["extrel:SU22-has-lie-su22", "extrel:Spin024-has-lie-so24", "extrel:su22-isomorphic-so24", "extrel:su22-root-A3", "extrel:so24-root-A3"],
+      "assessment": "The repeated formulas identify the conformal real Lie algebras su(2,2) and so(2,4), not arbitrary real forms sharing complex type A3=D3. The global group isomorphism and selected inclusion into SU(3,3) remain separate typed maps, so Lie-algebra equivalence cannot erase global form or activate the larger carrier.",
+      "reviewedEvidenceIds": ["external-scan:8bbf215654118332", "external-scan:d9cee47cb92324ed"]
+    },
+    {
+      "id": "external-adjudication:SO3SO2-diagonal-locking-orbit",
+      "signature": {
+        "objectIds": ["obj:space:SO3xSO2modSO2diag"],
+        "groupIds": ["grp:SO2", "grp:SO3", "grp:SO3xSO2"],
+        "predicates": [],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:7680d50dc788d463",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:SO3SO2-product", "rel:SO2diag-subgroup-SO3SO2"],
+      "externalRelationIds": ["extrel:SO3SO2-quotient-SO2diag-locking-orbit"],
+      "assessment": "The displayed fraction denotes the three-dimensional connected locking orbit with diagonal-circle stabilizer. It is typed as a homogeneous space; the notation is not promoted to a quotient-group map, and the selected SO(3) axis remains part of the stabilizer embedding.",
+      "reviewedEvidenceIds": ["external-scan:7afd8b624f37a9ab"]
+    },
+    {
+      "id": "external-adjudication:CP2-special-block-stabilizer-presentation",
+      "signature": {
+        "objectIds": ["obj:space:CP2"],
+        "groupIds": ["grp:SU3", "grp:S_U1xU2", "grp:U1", "grp:U1xU2", "grp:U2"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:66c90fcc17d872aa",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:U1U2-product", "rel:SU1U2-product-determinant-sequence", "rel:SU1U2-iso-U2", "rel:SU1U2-subgroup-SU3"],
+      "externalRelationIds": ["extrel:SU3-quotient-SU1U2-CP2", "extrel:SU3-quotient-U2-CP2"],
+      "assessment": "The formula identifies CP2 with the homogeneous quotient SU(3)/S(U(1) x U(2)). The named special block stabilizer is isomorphic to U(2), but its product-determinant kernel presentation and embedding are retained; neither quotient notation is a quotient group.",
+      "reviewedEvidenceIds": ["external-scan:d9ef4c80977a38c6"]
+    },
+    {
+      "id": "external-adjudication:U11-maximal-compact-unit-disk",
+      "signature": {
+        "objectIds": ["obj:space:UnitDisk"],
+        "groupIds": ["grp:U1", "grp:U1_1", "grp:U1xU1"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:e04667a752311149",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:U1U1-direct-product", "rel:U1U1-subgroup-U11"],
+      "externalRelationIds": ["extrel:U11-quotient-U1U1-UnitDisk"],
+      "assessment": "The formula identifies the homogeneous symmetric space U(1,1)/(U(1) x U(1)) with the complex unit disk. The maximal compact torus is a stabilizer rather than a normal subgroup, so the slash is not promoted to a quotient-group homomorphism and the disk is not identified with either group.",
+      "reviewedEvidenceIds": ["external-scan:4f5d5a520911bbaa"]
+    },
+    {
+      "id": "external-adjudication:cross-prime-finite-quadratic-module",
+      "signature": {
+        "objectIds": ["obj:fqm:CrossPrimePhaseModule"],
+        "groupIds": [],
+        "predicates": ["representation"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:2f80ccec353c598d",
+      "disposition": "partially_promoted",
+      "groupRelationshipIds": ["rel:V4-direct-product", "rel:C3C3-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "externalRelationIds": ["extrel:CrossPrimeA-underlying-C6C6"],
+      "assessment": "The corpus-specific aliases identify the 36-element cross-prime finite quadratic module. The scanner's generic 'representation' predicate is triggered by the word module and is not promoted as a group representation. What is promoted is the refined object and its forgetful underlying-group relation to C6^2.",
+      "reviewedEvidenceIds": ["external-scan:69b8c068af0332b6", "external-scan:3d190b6e850c386c", "external-scan:49d01ce63d6aeddf", "external-scan:09f73d2ee6625bb9", "external-scan:b0634cc54d11518e", "external-scan:9e5a662645d94674"]
+    },
+    {
+      "id": "external-adjudication:cross-prime-discriminant-lattice",
+      "signature": {
+        "objectIds": ["obj:fqm:CrossPrimePhaseModule", "obj:lattice:CrossPrimeLorentzianL"],
+        "groupIds": [],
+        "predicates": ["representation"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:95a6901451a9611d",
+      "disposition": "partially_promoted",
+      "groupRelationshipIds": ["rel:V4C3C3-direct-product-C6C6"],
+      "externalRelationIds": ["extrel:CrossPrimeA-underlying-C6C6", "extrel:CrossPrimeA-discriminant-of-L"],
+      "assessment": "The title and synthesis references identify the cross-prime module as the discriminant form of the rank-four even lattice <-2>^2 + U(-3). This is promoted as a discriminant-form relation, not as a representation relation. The signature-(1,3) lattice realization is explicitly not a spacetime identification.",
+      "reviewedEvidenceIds": ["external-scan:ea5cc484282ffabc", "external-scan:5a7510e608654128", "external-scan:10b58f01d5f1d5ad", "external-scan:43c33a43261e3484", "external-scan:ab17bcdb47e19273", "external-scan:f8d1389e9551ef80"]
+    },
+    {
+      "id": "external-adjudication:cross-prime-full-refined-certificate",
+      "signature": {
+        "objectIds": ["obj:fqm:CrossPrimePhaseModule", "obj:lattice:CrossPrimeLorentzianL"],
+        "groupIds": ["grp:C2", "grp:C3", "grp:C6"],
+        "predicates": ["isomorphism", "representation"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:fea4b00ccac5ac19",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:V4-direct-product", "rel:C3C3-direct-product", "rel:C6C6-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "externalRelationIds": ["extrel:CrossPrimeA-underlying-C6C6", "extrel:CrossPrimeA-discriminant-of-L"],
+      "assessment": "The captured certificate contains the primary decomposition, the C6^2 invariant-factor isomorphism, the explicit lattice and the -i Gauss/Weil phase. The isomorphism predicate belongs to the underlying group and discriminant-form identifications; 'module' here means finite quadratic module rather than an untyped representation.",
+      "reviewedEvidenceIds": ["external-scan:7deef52ea2648128"]
+    },
+    {
+      "id": "external-adjudication:U3-line-orbit-is-CP2",
+      "signature": {
+        "objectIds": ["obj:space:CP2"],
+        "groupIds": ["grp:U1", "grp:U1xU2", "grp:U2", "grp:U3"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:bde808ce137c8f90",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:U1U2-product", "rel:U1U2-subgroup-U3"],
+      "externalRelationIds": ["extrel:U3-quotient-U1U2-CP2"],
+      "assessment": "The repeated formula identifies the complex-line orbit U(3)/(U(1) x U(2)) with CP2. The block stabilizer is nonnormal, so this is an isomorphism of homogeneous spaces rather than a group quotient or an isomorphism among the displayed groups.",
+      "reviewedEvidenceIds": ["external-scan:385545b0fcd37fad", "external-scan:60e747ca21a8ceba", "external-scan:36a53cf0c5dfcf91"]
+    },
+    {
+      "id": "external-adjudication:U3-transitivity-does-not-select-line",
+      "signature": {
+        "objectIds": ["obj:space:CP2"],
+        "groupIds": ["grp:U3"],
+        "predicates": ["action"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "external-cluster:c02ea7996a0ab1b7",
+      "disposition": "retained_qualification",
+      "groupRelationshipIds": ["rel:U1U2-subgroup-U3"],
+      "externalRelationIds": ["extrel:U3-quotient-U1U2-CP2"],
+      "assessment": "U(3) transitivity on CP2 is retained together with its negative consequence: a U(3)-invariant functional on a single projector orbit is constant and cannot prefer one projective line. The orbit relation supplies geometry, not a symmetry-breaking selector.",
+      "reviewedEvidenceIds": ["external-scan:69e5d39f4af20cfa", "external-scan:ecbf86f7d213a6cc", "external-scan:0d21fd290f6a4b15", "external-scan:b573d3dfe39b20cd"]
+    },
+    {
+      "id": "external-adjudication:U3-projector-stabilizer-action",
+      "signature": {
+        "objectIds": ["obj:space:CP2"],
+        "groupIds": ["grp:U3"],
+        "predicates": ["action", "stabilizer"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:de633e6119f41169",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:U1U2-product", "rel:U1U2-subgroup-U3"],
+      "externalRelationIds": ["extrel:U3-quotient-U1U2-CP2"],
+      "assessment": "Rank-one projectors form the transitive U(3) orbit CP2, and a selected projector has line-plane stabilizer U(1) x U(2). The stabilizer controls the equivariant response form but does not canonically orient the projector.",
+      "reviewedEvidenceIds": ["external-scan:8a8a0b41d4e963af"]
+    },
+    {
+      "id": "external-adjudication:SO23-signature12-section-orbit",
+      "signature": {
+        "objectIds": ["obj:space:Signature12SectionsR23"],
+        "groupIds": [],
+        "predicates": ["action", "stabilizer"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "external-cluster:f5b495edff1fe3c6",
+      "disposition": "promoted",
+      "groupRelationshipIds": ["rel:SO012SO011-direct-product", "rel:SO012SO011-subgroup-SO023"],
+      "externalRelationIds": ["extrel:SO023-quotient-SO012SO011-SectionOrbit"],
+      "assessment": "The family of oriented signature-(1,2) sections is promoted as the six-dimensional homogeneous orbit SO_0(2,3)/(SO_0(1,2) x SO_0(1,1)). Its four-dimensional stabilizer is nonnormal, so the slash denotes an orbit space rather than a quotient group. The record neither selects a preferred section nor supplies the separate spin-cover preimage.",
+      "reviewedEvidenceIds": ["external-scan:705a753ec2a57bad"]
+    }
+  ]
+}

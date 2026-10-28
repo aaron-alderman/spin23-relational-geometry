@@ -1,0 +1,206 @@
+{
+  "schema": "brain-relationship-atlas/1",
+  "date": "2026-10-28",
+  "authority": "typed_conditional_relationship_model_not_unique_neuroanatomy_or_consciousness_theory",
+  "algebra": "corpus/programmes/dynatology/brain_relationship_algebra_v1.md",
+  "imports": {
+    "brainFunctionAtlas": "corpus/programmes/dynatology/brain_function_atlas_v2.json",
+    "missingMiddleRegister": "corpus/programmes/dynatology/brain_function_missing_middle_register_v1.json"
+  },
+  "nodeImports": [
+    { "selector": "primitiveOperators", "namespace": "op", "nodeType": "operation", "identityField": "id" },
+    { "selector": "composites", "namespace": "feature", "nodeType": "feature", "identityField": "label" },
+    { "selector": "primitiveOperators[].candidateSystems", "namespace": "system", "nodeType": "system", "identityField": "value" },
+    { "selector": "primitiveOperators[].groundMeasures", "namespace": "measure", "nodeType": "measure", "identityField": "value" },
+    { "selector": "middles", "namespace": "middle", "nodeType": "middle", "identityField": "id" },
+    { "selector": "crossCuttingMiddles", "namespace": "middle", "nodeType": "middle", "identityField": "id" }
+  ],
+  "localNodes": [
+    { "id": "residue:phenomenal_status", "type": "residue", "label": "phenomenal status beyond currently discriminated access relations" },
+    { "id": "claim:relational_model", "type": "claim", "label": "the model is the typed organization, not an inventory of parts" },
+    { "id": "claim:whole_organization", "type": "claim", "label": "a factor or operator inventory does not determine the whole organization" },
+    { "id": "source:atlas_v2", "type": "source", "label": "brain function atlas v2" },
+    { "id": "source:missing_middles", "type": "source", "label": "brain function missing-middle register v1" },
+    { "id": "source:algebra", "type": "source", "label": "brain relationship algebra v1" },
+    { "id": "source:mystery_atlas_22", "type": "source", "label": "attention, will and conscious access brain atlas" }
+  ],
+  "relationFamilies": [
+    "transformational",
+    "control",
+    "implementation",
+    "grounding",
+    "compilation",
+    "causal",
+    "temporal",
+    "semantic",
+    "evidential",
+    "provenance",
+    "equivalence",
+    "negative",
+    "unknown"
+  ],
+  "relationDefaults": {
+    "timescale": "not_yet_resolved",
+    "carrier": "not_yet_resolved",
+    "law": "not_yet_resolved",
+    "alternatives": []
+  },
+  "relationGenerators": [
+    { "kind": "feature_compilation", "source": "brainFunctionAtlas.composites", "idPrefix": "compile/" },
+    { "kind": "candidate_implementation", "source": "brainFunctionAtlas.primitiveOperators", "idPrefix": "implement/" },
+    { "kind": "measurement_grounding", "source": "brainFunctionAtlas.primitiveOperators", "idPrefix": "ground/" },
+    { "kind": "missing_middle", "source": "missingMiddleRegister.middles", "idPrefix": "middle/" },
+    { "kind": "cross_cutting_middle", "source": "missingMiddleRegister.crossCuttingMiddles", "idPrefix": "middle/" }
+  ],
+  "crossCuttingTargetOverrides": {
+    "MM-X02": ["residue:phenomenal_status"]
+  },
+  "relations": [
+    {
+      "id": "negative/access-not-phenomenality",
+      "sources": ["feature:conscious_access"],
+      "targets": ["feature:conscious_experience"],
+      "family": "negative",
+      "polarity": "does_not_imply",
+      "predicate": "is_sufficient_for",
+      "conditions": ["current_evidence_model"],
+      "evidence": "retained_distinction",
+      "falsifier": "a_discriminating_law_makes_access_and_phenomenality_extensionally_equivalent",
+      "provenance": ["source:atlas_v2", "source:mystery_atlas_22"]
+    },
+    {
+      "id": "negative/report-not-access",
+      "sources": ["feature:report"],
+      "targets": ["feature:conscious_access"],
+      "family": "negative",
+      "polarity": "does_not_imply",
+      "predicate": "is_sufficient_for",
+      "conditions": ["motor_memory_and_task_demands_may_contribute"],
+      "evidence": "retained_distinction",
+      "falsifier": "report_variation_tracks_access_under_all_discriminating_no_report_conditions",
+      "provenance": ["source:atlas_v2", "source:mystery_atlas_22"]
+    },
+    {
+      "id": "negative-recognition-not-control",
+      "sources": ["feature:metacognition"],
+      "targets": ["op:O10", "op:O11", "op:O12"],
+      "family": "negative",
+      "polarity": "does_not_imply",
+      "predicate": "has_causal_access_to",
+      "conditions": ["accurate_recognition_without_enactment"],
+      "evidence": "missing_middle_MM_X01",
+      "falsifier": "recognized_correction_always_changes_control_policy_and_action_when_capacity_is_held_constant",
+      "provenance": ["source:missing_middles"]
+    },
+    {
+      "id": "negative-anatomy-not-exclusive-ownership",
+      "sources": ["system:aMCC_dACC"],
+      "targets": ["op:O10"],
+      "family": "negative",
+      "polarity": "does_not_imply",
+      "predicate": "exclusively_owns",
+      "conditions": ["candidate_implementation_mapping"],
+      "evidence": "distributed_many_to_many_implementation",
+      "falsifier": "specificity_and_necessity_are_shown_across_contexts_without_compensation",
+      "provenance": ["source:atlas_v2", "source:mystery_atlas_22"]
+    },
+    {
+      "id": "negative-correlation-not-cause",
+      "sources": ["measure:decoding"],
+      "targets": ["op:O03"],
+      "family": "negative",
+      "polarity": "does_not_imply",
+      "predicate": "causally_implements",
+      "conditions": ["observational_decoding_only"],
+      "evidence": "methodological_constraint",
+      "falsifier": "independent_perturbation_establishes_the_claimed_causal_join",
+      "provenance": ["source:atlas_v2", "source:algebra"]
+    },
+    {
+      "id": "negative-inventory-not-organization",
+      "sources": ["op:O01", "op:O02", "op:O03", "op:O04", "op:O05", "op:O06", "op:O07", "op:O08", "op:O09", "op:O10", "op:O11", "op:O12", "op:O13", "op:O14", "op:O15"],
+      "targets": ["claim:whole_organization"],
+      "family": "negative",
+      "polarity": "does_not_determine",
+      "predicate": "uniquely_specifies",
+      "conditions": ["without_join_laws_context_and_history"],
+      "evidence": "factor_extension_and_system_identification_analogy",
+      "falsifier": "the_inventory_uniquely_reconstructs_all_admissible_relations_and_held_out_traces",
+      "provenance": ["source:algebra"]
+    },
+    {
+      "id": "unknown-access-to-phenomenality",
+      "sources": ["op:O04", "op:O05"],
+      "targets": ["residue:phenomenal_status"],
+      "family": "unknown",
+      "polarity": "unknown",
+      "predicate": "determines",
+      "conditions": ["current_measurement_and_model_class"],
+      "evidence": "underdetermined",
+      "falsifier": "a_discriminating_transfer_law_predicts_held_out_phenomenal_status",
+      "provenance": ["source:missing_middles", "source:mystery_atlas_22"]
+    },
+    {
+      "id": "provenance/algebra-to-model",
+      "sources": ["source:algebra"],
+      "targets": ["claim:relational_model"],
+      "family": "provenance",
+      "polarity": "supports",
+      "predicate": "defines",
+      "conditions": ["schema_version_1"],
+      "evidence": "direct_source",
+      "falsifier": "schema_and_document_diverge",
+      "provenance": ["source:algebra"]
+    }
+  ],
+  "declaredPaths": [
+    {
+      "id": "adaptive-agent-cycle",
+      "relations": ["middle/MM-01", "middle/MM-02", "middle/MM-03", "middle/MM-04", "middle/MM-05", "middle/MM-06", "middle/MM-07", "middle/MM-08", "middle/MM-09", "middle/MM-10", "middle/MM-11", "middle/MM-12", "middle/MM-13", "middle/MM-14", "middle/MM-15"],
+      "operator": "sequential_with_declared_external_inputs",
+      "externalInputs": ["capacity", "context", "goal", "body_state", "memory", "outcome", "parameters"],
+      "claim": "inspectable_cycle_not_proof_of_a_unique_mechanism"
+    },
+    {
+      "id": "selection-access-maintenance",
+      "relations": ["middle/MM-04", "middle/MM-05"],
+      "operator": "sequential",
+      "externalInputs": ["capacity", "task"],
+      "claim": "typed_candidate_path"
+    }
+  ],
+  "conflictPolicy": {
+    "error": "same_sources_targets_predicate_conditions_have_both_positive_and_negative_polarity_without_contested_declaration",
+    "retain": ["different_context", "different_timescale", "different_carrier", "named_competing_bridge", "unknown_relation"],
+    "silenceIsEvidence": false
+  },
+  "evidencePolicy": {
+    "newHumanExperimentation": "not_proposed",
+    "admissible": [
+      "published_observations_and_null_results",
+      "ethically_released_open_data_under_original_reuse_constraints",
+      "existing_clinical_lesion_stimulation_and_comparative_literature",
+      "computational_reconstruction",
+      "synthetic_agents",
+      "cross_dataset_prediction_with_immutable_provenance"
+    ],
+    "missingEvidence": "must_remain_explicitly_unknown"
+  },
+  "reopenConditions": [
+    "an_edge_requires_a_relation_family_not_in_the_schema",
+    "a_pairwise_edge_hides_a_joint_input",
+    "a_hyperedge_decomposes_under_a_verified_law",
+    "contexts_produce_incompatible_laws",
+    "a_direct_edge_disagrees_with_every_admissible_composition",
+    "an_unknown_becomes_measurable",
+    "a_negative_constraint_is_defeated",
+    "an_imported_identity_or_authority_changes",
+    "provenance_no_longer_resolves"
+  ],
+  "sourceRefs": [
+    "corpus/programmes/dynatology/brain_relationship_algebra_v1.md",
+    "corpus/programmes/dynatology/brain_function_atlas_v2.json",
+    "corpus/programmes/dynatology/brain_function_missing_middle_register_v1.json",
+    "corpus/programmes/dynatology/mystery_atlas_22_attention_will_and_conscious_access_brain_atlas.md"
+  ]
+}

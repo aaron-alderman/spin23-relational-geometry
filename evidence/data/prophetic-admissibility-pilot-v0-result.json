@@ -1,0 +1,117 @@
+{
+  "protocol": "prophetic-admissibility/source-admission-pilot/0",
+  "generatedAt": "2026-10-28",
+  "caseCount": 8,
+  "predictiveCalibrationAdmittedCount": 0,
+  "predictiveRankingIdentified": false,
+  "minimumCasesForPilotSplit": 6,
+  "majorCandidateRankingAuthorized": false,
+  "gateFailureCounts": {
+    "pre_event_source": 7,
+    "independent_outcome": 2,
+    "bounded_target": 3,
+    "frozen_time_rule": 2,
+    "anchor_restraint": 2,
+    "repair_ledger": 4,
+    "rival_coverage": 3
+  },
+  "cases": [
+    {
+      "id": "nahum-nineveh-fall",
+      "lane": "ancient-text",
+      "authorityRung": 4,
+      "failedGates": [
+        "pre_event_source",
+        "repair_ledger",
+        "rival_coverage"
+      ],
+      "predictiveCalibrationAdmitted": false,
+      "rejectionReceipt": "The present dating interval touches the event boundary; the pilot has not established a securely pre-event textual form independent of the predicted fall."
+    },
+    {
+      "id": "jeremiah-seventy-years",
+      "lane": "ancient-text",
+      "authorityRung": 4,
+      "failedGates": [
+        "pre_event_source",
+        "bounded_target",
+        "frozen_time_rule",
+        "anchor_restraint",
+        "repair_ledger",
+        "rival_coverage"
+      ],
+      "predictiveCalibrationAdmitted": false,
+      "rejectionReceipt": "Babylonian domination, Jerusalem's destruction, exile and return supply different admissible endpoints; the textual forms and seventy-year semantics require a source-layer audit before scoring."
+    },
+    {
+      "id": "ezekiel-nebuchadnezzar-tyre",
+      "lane": "ancient-text-adverse",
+      "authorityRung": 4,
+      "failedGates": [
+        "pre_event_source"
+      ],
+      "predictiveCalibrationAdmitted": false,
+      "rejectionReceipt": "This is admitted as an adverse interpretation-and-repair case, not yet as predictive calibration; source layers and the relation between Nebuchadnezzar and later Alexander receptions must remain separate."
+    },
+    {
+      "id": "daniel-eleven-antiochus",
+      "lane": "ancient-text-negative-control",
+      "authorityRung": 3,
+      "failedGates": [
+        "pre_event_source",
+        "repair_ledger"
+      ],
+      "predictiveCalibrationAdmitted": false,
+      "rejectionReceipt": "The source-date inference is entangled with the apparent transition from accurate sequence to inaccurate endpoint; it is a control for ex-eventu identification, not an independent prediction witness."
+    },
+    {
+      "id": "jeremiah-hananiah-one-year",
+      "lane": "internal-narrative",
+      "authorityRung": 2,
+      "failedGates": [
+        "pre_event_source",
+        "independent_outcome",
+        "rival_coverage"
+      ],
+      "predictiveCalibrationAdmitted": false,
+      "rejectionReceipt": "Excellent internal test form, but the same narrative reports oracle and outcome; it can train annotation, not establish foresight."
+    },
+    {
+      "id": "mark-thirteen-temple",
+      "lane": "dating-overlap",
+      "authorityRung": 4,
+      "failedGates": [
+        "pre_event_source",
+        "frozen_time_rule",
+        "repair_ledger"
+      ],
+      "predictiveCalibrationAdmitted": false,
+      "rejectionReceipt": "A source-date interval spanning AD 70 cannot independently validate pre-event prediction without an earlier securely dated textual witness or source layer."
+    },
+    {
+      "id": "acts-agabus-famine",
+      "lane": "retrospective-narrative",
+      "authorityRung": 3,
+      "failedGates": [
+        "pre_event_source",
+        "bounded_target"
+      ],
+      "predictiveCalibrationAdmitted": false,
+      "rejectionReceipt": "External famine evidence can support historical retrodiction, but the surviving prophecy report postdates the event and cannot validate foresight."
+    },
+    {
+      "id": "newton-2060-lower-bound",
+      "lane": "open-interpreter-forecast",
+      "authorityRung": 1,
+      "failedGates": [
+        "independent_outcome",
+        "bounded_target",
+        "anchor_restraint"
+      ],
+      "predictiveCalibrationAdmitted": false,
+      "rejectionReceipt": "Open forecasts cannot calibrate a rule; the unbounded 'may end later' clause also prevents 2060 from acting as a terminal falsification date."
+    }
+  ],
+  "decision": "No predictive ranking is identified. Expand and provenance-close the calibration registry before fitting hermeneutic operators.",
+  "claimBoundary": "This audit measures source admission only; it neither validates nor falsifies divine prophecy."
+}

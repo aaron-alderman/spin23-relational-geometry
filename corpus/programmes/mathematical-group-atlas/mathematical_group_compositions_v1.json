@@ -1,0 +1,1314 @@
+{
+  "schema": "mathematical-group-composition-declarations/1",
+  "authority": "curated_compositions_requiring_exact_map_identity_and_seam_matching",
+  "compositions": [
+    {
+      "id": "composition:SL2Z-to-PSp4F3",
+      "name": "single integral handle to projective ternary symplectic image",
+      "steps": [
+        { "mapId": "map:SL2Z-subgroup-Sp4Z:inclusion" },
+        { "mapId": "map:Sp4Z-reduction-F3:homomorphism" },
+        { "mapId": "map:Sp4F3-projective-quotient:quotient" }
+      ],
+      "status": "corpus_established",
+      "statement": "The integral handle inclusion, reduction modulo three and projectivization compose without an abstract-group identity seam.",
+      "provenance": ["SRC-CORPUS-INTEGRAL-SP4", "SRC-CORPUS-SP4F3"],
+      "caveats": ["the_composite_need_not_be_injective", "one_handle_does_not_supply_all_mutual_handle_generators"],
+      "falsifier": "any_declared_map_fails_or_adjacent_domain_and_codomain_differ"
+    },
+    {
+      "id": "composition:Spin013-to-SO023",
+      "name": "Lorentz selector stabilizer into the projective Spin(2,3) carrier",
+      "steps": [
+        { "mapId": "map:Spin013-subgroup-Spin023:inclusion" },
+        { "mapId": "map:Spin023-cover-SO023:covering" }
+      ],
+      "status": "corpus_established",
+      "statement": "The lifted selector stabilizer composes with the Spin(2,3) covering map to give a homomorphism into SO_0(2,3).",
+      "provenance": ["SRC-CORPUS-LORENTZ-SELECTOR", "SRC-CORPUS-SPIN23"],
+      "caveats": ["the_selector_choice_is_retained", "the_composite_has_the_cover_kernel_intersection"],
+      "falsifier": "the_stabilizer_inclusion_or_covering_map_fails"
+    },
+    {
+      "id": "composition:Spin023-to-SO024",
+      "name": "selected Spin(2,3) subgroup into the Spin(2,4) orthogonal base",
+      "steps": [
+        { "mapId": "map:Spin023-subgroup-Spin024:inclusion" },
+        { "mapId": "map:Spin024-cover-SO024:covering" }
+      ],
+      "status": "corpus_established",
+      "statement": "The selected-direction inclusion composes with the Spin(2,4) cover.",
+      "provenance": ["SRC-CORPUS-SPIN24"],
+      "caveats": ["this_does_not_remove_the_selected_direction_dependency"],
+      "falsifier": "the_selected_stabilizer_or_covering_map_fails"
+    },
+    {
+      "id": "composition:C23-to-Monster-centralizer",
+      "name": "order-23 cyclic factor through its declared Monster centralizer",
+      "steps": [
+        { "mapId": "map:C23xS4-direct-product:factor-1-inclusion" },
+        { "mapId": "map:C23xS4-centralizer-in-M:centralizer-inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The declared C23 factor includes into C23 x S4 and then into the Monster as the order-23 centralizer subgroup.",
+      "provenance": ["SRC-CORPUS-MONSTER23", "SRC-ATLAS"],
+      "caveats": ["23A_versus_23B_naming_requires_the_declared_orientation"],
+      "falsifier": "the_factor_or_centralizer_inclusion_fails"
+    },
+    {
+      "id": "composition:GSM-to-Spin10-via-SU5",
+      "name": "faithful Standard Model global group through the SU(5) chain",
+      "steps": [
+        { "mapId": "map:GSM-iso-SU3U2Flag:isomorphism" },
+        { "mapId": "map:SU3U2Flag-subgroup-SU5:inclusion" },
+        { "mapId": "map:SU5-subgroup-Spin10:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The faithful Standard Model global form embeds in Spin(10) through its exact S(U3 x U2) identification and the standard SU(5) subgroup.",
+      "provenance": ["SRC-CORPUS-GLOBAL-SM", "SRC-SLANSKY-GUT"],
+      "caveats": ["the_chain_is_group_theoretic_and_does_not_derive_a_unified_dynamics"],
+      "falsifier": "the_global_SM_identification_or_either_subgroup_embedding_fails"
+    },
+    {
+      "id": "composition:SU4-to-Spin10-via-PatiSalam",
+      "name": "colour-lepton SU(4) through the globally correct Pati-Salam subgroup",
+      "steps": [
+        { "mapId": "map:PatiSalam-cover-product:factor-1-inclusion" },
+        { "mapId": "map:PatiSalam-central-C2-quotient:quotient" },
+        { "mapId": "map:PatiSalam-subgroup-Spin10:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The SU(4) factor maps through the central Pati-Salam quotient before entering Spin(10).",
+      "provenance": ["SRC-SLANSKY-GUT", "SRC-CORPUS-PATI-SALAM"],
+      "caveats": ["the_other_two_SU2_factors_and_the_C2_kernel_remain_part_of_the_ambient_Pati_Salam_structure"],
+      "falsifier": "the_factor_inclusion_center_quotient_or_Spin10_embedding_fails"
+    },
+    {
+      "id": "composition:Spin10-to-E6-via-global-quotient",
+      "name": "Spin(10) factor through the globally correct E6 maximal-rank subgroup",
+      "steps": [
+        { "mapId": "map:Spin10U1-product:factor-1-inclusion" },
+        { "mapId": "map:Spin10U1-central-C4-quotient:quotient" },
+        { "mapId": "map:Spin10U1-subgroup-E6:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The Spin(10) factor reaches compact E6 through the central C4 quotient required by the ambient global form.",
+      "provenance": ["SRC-SLANSKY-GUT", "SRC-CORPUS-E6-CARRIER"],
+      "caveats": ["the_chain_does_not_make_a_selected_Spin10_representation_into_a_standalone_E6_representation"],
+      "falsifier": "the_factor_inclusion_center_quotient_or_E6_embedding_fails"
+    },
+    {
+      "id": "composition:B3-to-PSL2Z-via-SL2Z",
+      "name": "three-strand braid representation followed by projectivization",
+      "steps": [
+        { "mapId": "map:B3-surjection-SL2Z:homomorphism" },
+        { "mapId": "map:SL2Z-projective-quotient:quotient" }
+      ],
+      "status": "corpus_established",
+      "statement": "The standard B3 matrix representation followed by projectivization has the same endpoints as quotienting B3 by its full infinite cyclic center.",
+      "provenance": ["SRC-CORPUS-BRAID-MODULAR", "SRC-CORPUS-BRAID-CONGRUENCE"],
+      "caveats": ["the_first_map_retains_the_central_minus_identity_before_projectivization","endpoint_agreement_does_not_replace_checking_the_composite_kernel"],
+      "falsifier": "the_generator_images_projective_kernel_or_adjacent_map_types_differ"
+    },
+    {
+      "id": "composition:SL2R-to-Spin023-via-Spin012",
+      "name": "real rank-one spin subgroup inside the Spin(2,3) carrier",
+      "steps": [
+        { "mapId": "map:Spin012-iso-SL2R:isomorphism", "direction": "inverse" },
+        { "mapId": "map:Spin012-subgroup-Spin023:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The SL(2,R) model of Spin_0(1,2) embeds into Spin_0(2,3) after a signature-(1,2) section is selected.",
+      "provenance": ["SRC-WEBER-LIE-NOTES", "SRC-CORPUS-SPIN12-SECTION"],
+      "caveats": ["the_embedding_depends_on_the_selected_section","the_isomorphism_does_not_make_SL2R_the_universal_cover_of_SO0_1_2"],
+      "falsifier": "the_rank_one_isomorphism_selected_section_or_spin_inclusion_fails"
+    },
+    {
+      "id": "composition:Spin012-to-SO023-via-orthogonal-section",
+      "name": "rank-one spin cover through the selected orthogonal section",
+      "steps": [
+        { "mapId": "map:Spin012-cover-SO012:covering" },
+        { "mapId": "map:SO012-subgroup-SO023:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The Spin_0(1,2) double cover followed by the selected SO_0(1,2) block inclusion maps into SO_0(2,3).",
+      "provenance": ["SRC-WEBER-LIE-NOTES", "SRC-CORPUS-SPIN12-SECTION"],
+      "caveats": ["this_declares_a_typed_route_not_equality_with_every_other_route_until_the_covering_square_is_intertwined"],
+      "falsifier": "the_cover_or_selected_orthogonal_inclusion_fails"
+    },
+    {
+      "id": "composition:Spin012-to-SO023-via-spin-section",
+      "name": "rank-one spin subgroup through the Spin(2,3) cover",
+      "steps": [
+        { "mapId": "map:Spin012-subgroup-Spin023:inclusion" },
+        { "mapId": "map:Spin023-cover-SO023:covering" }
+      ],
+      "status": "corpus_established",
+      "statement": "The selected Spin_0(1,2) inclusion followed by the Spin_0(2,3) covering map gives a second typed route into SO_0(2,3).",
+      "provenance": ["SRC-CORPUS-SPIN12-SECTION", "SRC-CORPUS-SPIN23"],
+      "caveats": ["endpoint_agreement_with_the_orthogonal_section_route_does_not_by_itself_prove_map_equality"],
+      "falsifier": "the_spin_inclusion_or_ambient_cover_fails"
+    },
+    {
+      "id": "composition:SU11-to-Spin023-via-rank-one-triangle",
+      "name": "indefinite unitary rank-one model into the Spin(2,3) carrier",
+      "steps": [
+        { "mapId": "map:SU11-iso-SL2R:isomorphism" },
+        { "mapId": "map:Spin012-iso-SL2R:isomorphism", "direction": "inverse" },
+        { "mapId": "map:Spin012-subgroup-Spin023:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "Cayley conjugation identifies SU(1,1) with SL(2,R), the rank-one spin isomorphism identifies that model with Spin_0(1,2), and the selected section embeds it into Spin_0(2,3).",
+      "provenance": ["SRC-CORPUS-RANKONE-REAL-TRIANGLE", "SRC-WEBER-LIE-NOTES", "SRC-CORPUS-SPIN12-SECTION"],
+      "caveats": ["the_final_embedding_depends_on_the_selected_signature_1_2_section","each_matrix_model_retains_its_displayed_form_until_the_declared_intertwiner_is_applied"],
+      "falsifier": "the_Cayley_map_rank_one_spin_isomorphism_or_selected_section_inclusion_fails"
+    },
+    {
+      "id": "composition:SL2R-to-Spin023-via-Spin022-left-factor",
+      "name": "left SL(2,R) factor through Spin_0(2,2) into Spin_0(2,3)",
+      "steps": [
+        { "mapId": "map:SL2R-square-product:factor-1-inclusion" },
+        { "mapId": "map:Spin022-iso-SL2R-square:isomorphism", "direction": "inverse" },
+        { "mapId": "map:Spin022-subgroup-Spin023:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The first SL(2,R) factor enters the selected Spin_0(2,2) stabilizer and then Spin_0(2,3).",
+      "provenance": ["SRC-CORPUS-SPIN22", "SRC-HALL-LIE"],
+      "caveats": ["the_first_and_second_factor_embeddings_are_distinct_before_any_factor_exchange_is_declared","the_Spin022_embedding_retains_its_selected_stress_plane"],
+      "falsifier": "the_factor_inclusion_exceptional_isomorphism_or_Spin022_embedding_fails"
+    },
+    {
+      "id": "composition:SL2R-to-Spin023-via-Spin022-right-factor",
+      "name": "right SL(2,R) factor through Spin_0(2,2) into Spin_0(2,3)",
+      "steps": [
+        { "mapId": "map:SL2R-square-product:factor-2-inclusion" },
+        { "mapId": "map:Spin022-iso-SL2R-square:isomorphism", "direction": "inverse" },
+        { "mapId": "map:Spin022-subgroup-Spin023:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The second SL(2,R) factor enters the selected Spin_0(2,2) stabilizer and then Spin_0(2,3).",
+      "provenance": ["SRC-CORPUS-SPIN22", "SRC-HALL-LIE"],
+      "caveats": ["the_first_and_second_factor_embeddings_are_distinct_before_any_factor_exchange_is_declared","the_Spin022_embedding_retains_its_selected_stress_plane"],
+      "falsifier": "the_factor_inclusion_exceptional_isomorphism_or_Spin022_embedding_fails"
+    },
+    {
+      "id": "composition:Spin024-to-SU33-via-SU22",
+      "name": "Spin(2,4) through its SU(2,2) model into the selected SU(3,3) block",
+      "steps": [
+        { "mapId": "map:Spin024-iso-SU22:isomorphism" },
+        { "mapId": "map:SU22-subgroup-SU33:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The exceptional global-form isomorphism identifies Spin_0(2,4) with SU(2,2), after which the selected signature-(2,2) block includes into SU(3,3).",
+      "provenance": ["SRC-CORPUS-SPIN24", "SRC-CORPUS-H3C-CARRIER-LADDER"],
+      "caveats": ["the_SU22_block_fixes_one_positive_and_one_negative_direction", "the_group_theoretic_carrier_inclusion_does_not_activate_a_physical_SU33_symmetry"],
+      "falsifier": "the_exceptional_isomorphism_or_selected_block_inclusion_fails"
+    },
+    {
+      "id": "composition:Spin023-to-SU33-via-Spin024",
+      "name": "real rank-two Peirce corner through Spin(2,4) and SU(2,2) into SU(3,3)",
+      "steps": [
+        { "mapId": "map:Spin023-subgroup-Spin024:inclusion" },
+        { "mapId": "map:Spin024-iso-SU22:isomorphism" },
+        { "mapId": "map:SU22-subgroup-SU33:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The selected Spin_0(2,3) stabilizer enters Spin_0(2,4), is transported to SU(2,2), and then enters the selected SU(2,2) block of SU(3,3).",
+      "provenance": ["SRC-CORPUS-SPIN23", "SRC-CORPUS-SPIN24", "SRC-CORPUS-H3C-CARRIER-LADDER"],
+      "caveats": ["both_selected_subspace_dependencies_are_retained", "this_is_a_typed_carrier_route_not_evidence_that_the_full_SU33_symmetry_is_physically_activated"],
+      "falsifier": "the_selected_Spin023_inclusion_exceptional_isomorphism_or_SU22_block_inclusion_fails"
+    },
+    {
+      "id": "composition:Spin2-to-U1-via-SO2-cover",
+      "name": "Spin(2) double cover expressed as a unit-circle squaring map",
+      "steps": [
+        { "mapId": "map:Spin2-cover-SO2:covering" },
+        { "mapId": "map:SO2-iso-U1:isomorphism" }
+      ],
+      "status": "established",
+      "statement": "The Spin(2) double cover followed by the rotation-to-phase isomorphism is the degree-two map z maps to z squared on U(1).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-SO2-U1-SEAM"],
+      "caveats": ["this_composite_has_kernel_C2_and_is_not_equal_to_the_separately_declared_Spin2_to_U1_isomorphism"],
+      "falsifier": "the_cover_rotation_phase_intertwiner_or_degree_two_kernel_fails"
+    },
+    {
+      "id": "composition:SU2-to-SU3-via-U2-global-form",
+      "name": "SU(2) factor through the central quotient U(2) into SU(3)",
+      "steps": [
+        { "mapId": "map:SU2U1-product:factor-1-inclusion" },
+        { "mapId": "map:SU2U1-central-C2-quotient-U2:quotient" },
+        { "mapId": "map:U2-subgroup-SU3:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The SU(2) factor enters the covering product, descends through its diagonal C2 quotient to U(2), and then enters SU(3) with determinant compensation.",
+      "provenance": ["SRC-HALL-LIE"],
+      "caveats": ["the_intermediate_U2_global_form_must_not_be_replaced_by_an_unquotiented_SU2_times_U1_product"],
+      "falsifier": "the_factor_inclusion_central_quotient_or_compensated_block_embedding_fails"
+    },
+    {
+      "id": "composition:U1-to-SU3-via-U2-global-form",
+      "name": "central U(1) factor through U(2) into SU(3)",
+      "steps": [
+        { "mapId": "map:SU2U1-product:factor-2-inclusion" },
+        { "mapId": "map:SU2U1-central-C2-quotient-U2:quotient" },
+        { "mapId": "map:U2-subgroup-SU3:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The U(1) factor maps through U(2) to the determinant-compensated circle subgroup of SU(3).",
+      "provenance": ["SRC-HALL-LIE"],
+      "caveats": ["the_parameterization_in_SU3_has_weights_1_1_minus2_and_retains_the_diagonal_C2_identification_in_the_covering_product"],
+      "falsifier": "the_factor_inclusion_central_quotient_or_circle_embedding_fails"
+    },
+    {
+      "id": "composition:SU3-to-SU4-via-U3-global-form",
+      "name": "SU(3) factor through the central quotient U(3) into SU(4)",
+      "steps": [
+        { "mapId": "map:SU3U1-product:factor-1-inclusion" },
+        { "mapId": "map:SU3U1-central-C3-quotient-U3:quotient" },
+        { "mapId": "map:U3-subgroup-SU4:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The SU(3) factor enters the covering product, descends through its diagonal C3 quotient to U(3), and then enters SU(4) with determinant compensation.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-SU4-SU3U1-BREAKING"],
+      "caveats": ["the_residual_global_group_inside_SU4_is_U3_not_the_unquotiented_SU3_times_U1_product"],
+      "falsifier": "the_factor_inclusion_central_quotient_or_compensated_block_embedding_fails"
+    },
+    {
+      "id": "composition:U1-to-SU4-via-U3-global-form",
+      "name": "B-L-shaped U(1) factor through U(3) into SU(4)",
+      "steps": [
+        { "mapId": "map:SU3U1-product:factor-2-inclusion" },
+        { "mapId": "map:SU3U1-central-C3-quotient-U3:quotient" },
+        { "mapId": "map:U3-subgroup-SU4:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The U(1) factor maps through U(3) to the determinant-compensated circle subgroup diag(z,z,z,z^-3) of SU(4).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-SU4-SU3U1-BREAKING"],
+      "caveats": ["physical_B_minus_L_normalization_is_additional_representation_data", "the_covering_product_retains_a_diagonal_C3_kernel"],
+      "falsifier": "the_factor_inclusion_C3_quotient_or_weighted_circle_embedding_fails"
+    },
+    {
+      "id": "composition:SU3U1-to-SU4-via-U3-global-form",
+      "name": "covering product through its faithful U(3) image into SU(4)",
+      "steps": [
+        { "mapId": "map:SU3U1-central-C3-quotient-U3:quotient" },
+        { "mapId": "map:U3-subgroup-SU4:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "SU(3) x U(1) maps onto the residual U(3) subgroup of SU(4), with diagonal C3 kernel, then embeds by determinant compensation.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-SU4-SU3U1-BREAKING"],
+      "caveats": ["the_composite_is_not_injective", "the_image_is_U3_and_not_an_unquotiented_direct_product_inside_SU4", "charge_normalization_is_representation_data"],
+      "falsifier": "the_C3_kernel_image_or_compensated_block_embedding_differs"
+    },
+    {
+      "id": "composition:C3-through-SU3U1-quotient",
+      "name": "diagonal cubic kernel through the SU(3) x U(1) quotient",
+      "steps": [
+        { "mapId": "map:SU3U1-central-C3-quotient-U3:kernel-inclusion" },
+        { "mapId": "map:SU3U1-central-C3-quotient-U3:quotient" }
+      ],
+      "status": "established",
+      "statement": "The diagonal C3 kernel inclusion followed by the quotient to U(3) is the trivial homomorphism.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-SU4-SU3U1-BREAKING"],
+      "caveats": ["the_kernel_is_diagonal_across_the_SU3_center_and_U1_phase"],
+      "falsifier": "the_composite_is_nontrivial_or_the_kernel_differs"
+    },
+    {
+      "id": "composition:SU3SU2-to-GSM-via-cover",
+      "name": "nonabelian Standard Model product through the covering group and C6 quotient",
+      "steps": [
+        { "mapId": "map:SU3SU2-subgroup-SMCover:inclusion" },
+        { "mapId": "map:SM-central-Z6-quotient:quotient" }
+      ],
+      "status": "established",
+      "statement": "The nonabelian SU(3) x SU(2) product enters the unquotiented Standard Model cover at unit hypercharge and then descends injectively to the faithful C6 quotient.",
+      "provenance": ["SRC-CORPUS-GLOBAL-SM", "SRC-CORPUS-SU3SU2-MODULES"],
+      "caveats": ["injectivity_uses_the_trivial_intersection_of_the_diagonal_C6_kernel_with_the_unit_hypercharge_slice", "the_composite_does_not_supply_the_U1_factor"],
+      "falsifier": "the_cover_inclusion_or_trivial_kernel_intersection_fails"
+    },
+    {
+      "id": "composition:SU3-to-GSM-via-nonabelian-product",
+      "name": "colour SU(3) factor through the nonabelian product into the faithful Standard Model group",
+      "steps": [
+        { "mapId": "map:SU3SU2-product:factor-1-inclusion" },
+        { "mapId": "map:SU3SU2-subgroup-GSM:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The SU(3) factor includes into SU(3) x SU(2) and then into the faithful Standard Model global group.",
+      "provenance": ["SRC-CORPUS-GLOBAL-SM", "SRC-CORPUS-SU3SU2-MODULES"],
+      "caveats": ["this_factor_route_does_not_encode_weak_isospin_or_hypercharge_representation_data"],
+      "falsifier": "either_factor_or_global_subgroup_inclusion_fails"
+    },
+    {
+      "id": "composition:SU2-to-GSM-via-nonabelian-product",
+      "name": "weak SU(2) factor through the nonabelian product into the faithful Standard Model group",
+      "steps": [
+        { "mapId": "map:SU3SU2-product:factor-2-inclusion" },
+        { "mapId": "map:SU3SU2-subgroup-GSM:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The SU(2) factor includes into SU(3) x SU(2) and then into the faithful Standard Model global group.",
+      "provenance": ["SRC-CORPUS-GLOBAL-SM", "SRC-CORPUS-SU3SU2-MODULES"],
+      "caveats": ["this_factor_route_does_not_encode_colour_or_hypercharge_representation_data"],
+      "falsifier": "either_factor_or_global_subgroup_inclusion_fails"
+    },
+    {
+      "id": "composition:SO2-to-SO3SO2-via-axial-first-factor",
+      "name": "selected axial circle through SO(3) into the first product factor",
+      "steps": [
+        { "mapId": "map:SO2-subgroup-SO3:inclusion" },
+        { "mapId": "map:SO3SO2-product:factor-1-inclusion" }
+      ],
+      "status": "established",
+      "statement": "A selected-axis SO(2) enters SO(3) and then the first factor of SO(3) x SO(2).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-LOCKING-ORBITS"],
+      "caveats": ["this_map_theta_to_Rtheta_identity_is_distinct_from_the_second_factor_circle_and_from_the_diagonal_locking_stabilizer"],
+      "falsifier": "the_axis_selection_or_either_inclusion_fails"
+    },
+    {
+      "id": "composition:U2-to-SU3-via-special-block-stabilizer",
+      "name": "U(2) through S(U(1) x U(2)) into SU(3)",
+      "steps": [
+        { "mapId": "map:SU1U2-iso-U2:isomorphism", "direction": "inverse" },
+        { "mapId": "map:SU1U2-subgroup-SU3:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The abstract U(2) model is transported to the determinant-one block stabilizer and included in SU(3).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-CP2-BUNDLES"],
+      "caveats": ["this_route_agrees_with_the_direct_determinant_compensated_U2_embedding_only_through_the_declared_block_intertwiner"],
+      "falsifier": "the_special_block_isomorphism_or_SU3_inclusion_fails"
+    },
+    {
+      "id": "composition:U1-to-U3-via-line-plane-stabilizer",
+      "name": "line phase through U(1) x U(2) into U(3)",
+      "steps": [
+        { "mapId": "map:U1U2-product:factor-1-inclusion" },
+        { "mapId": "map:U1U2-subgroup-U3:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The U(1) factor acts on the selected complex line and enters U(3) through the block stabilizer.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-CP2-BUNDLES"],
+      "caveats": ["the_selected_line_is_retained"],
+      "falsifier": "the_factor_or_block_inclusion_fails"
+    },
+    {
+      "id": "composition:U2-to-U3-via-line-plane-stabilizer",
+      "name": "plane unitary factor through U(1) x U(2) into U(3)",
+      "steps": [
+        { "mapId": "map:U1U2-product:factor-2-inclusion" },
+        { "mapId": "map:U1U2-subgroup-U3:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The U(2) factor acts on the complementary complex plane and enters U(3) through the block stabilizer.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-CP2-BUNDLES"],
+      "caveats": ["the_selected_complementary_plane_is_retained"],
+      "falsifier": "the_factor_or_block_inclusion_fails"
+    },
+    {
+      "id": "composition:Sp4Z-to-Spin023-via-real-carrier",
+      "name": "integral symplectic lattice through the real carrier into Spin_0(2,3)",
+      "steps": [
+        { "mapId": "map:Sp4Z-subgroup-Sp4R:inclusion" },
+        { "mapId": "map:Spin023-iso-Sp4R:isomorphism", "direction": "inverse" }
+      ],
+      "status": "corpus_established",
+      "statement": "Sp(4,Z) first includes in Sp(4,R), then the real Lie-group isomorphism transports its image to an arithmetic subgroup of Spin_0(2,3).",
+      "provenance": ["SRC-CORPUS-INTEGRAL-SP4", "SRC-CORPUS-SP4-ARITHMETIC-CARRIER", "SRC-CORPUS-SPIN23"],
+      "caveats": ["the_composite_is_an_injective_discrete_lattice_embedding_not_an_isomorphism_of_Sp4Z_with_either_real_group"],
+      "falsifier": "the_integral_inclusion_or_real_group_isomorphism_fails_or_the_composite_loses_injectivity"
+    },
+    {
+      "id": "composition:C23-to-M-via-order23-centralizer",
+      "name": "cyclic order-23 factor through its declared Monster centralizer",
+      "steps": [
+        { "mapId": "map:C23xS4-direct-product:factor-1-inclusion" },
+        { "mapId": "map:C23xS4-centralizer-in-M:centralizer-inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The C23 factor embeds in C23 x S4 and the full centralizer includes in the Monster.",
+      "provenance": ["SRC-ATLAS", "SRC-CORPUS-MONSTER23"],
+      "caveats": ["the_23A_versus_23B_label_requires_the_declared_orientation","this_group_embedding_does_not_select_a_character_or_physical_interpretation"],
+      "falsifier": "the_factor_inclusion_or_centralizer_identification_fails"
+    },
+    {
+      "id": "composition:S4-to-M-via-order23-centralizer",
+      "name": "S4 factor through the declared order-23 Monster centralizer",
+      "steps": [
+        { "mapId": "map:C23xS4-direct-product:factor-2-inclusion" },
+        { "mapId": "map:C23xS4-centralizer-in-M:centralizer-inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The S4 factor embeds in C23 x S4 and the full centralizer includes in the Monster.",
+      "provenance": ["SRC-ATLAS", "SRC-CORPUS-MONSTER23"],
+      "caveats": ["this_is_the_specific_S4_factor_of_the_declared_centralizer_not_every_abstract_S4_embedding_in_the_Monster","representation_data_does_not_change_the_group_map"],
+      "falsifier": "the_factor_inclusion_or_centralizer_identification_fails"
+    },
+    {
+      "id": "composition:C3-through-C9-extension",
+      "name": "cube subgroup through the order-nine lift to its faithful quotient",
+      "steps": [
+        { "mapId": "map:C9-central-C3-quotient-C3:kernel-inclusion" },
+        { "mapId": "map:C9-central-C3-quotient-C3:quotient" }
+      ],
+      "status": "corpus_established",
+      "statement": "The kernel inclusion followed by the quotient map is the trivial homomorphism C3 -> C3, witnessing exactness at C9.",
+      "provenance": ["SRC-CORPUS-Z9-LIFT", "SRC-EXEC-Z9-REDUCTION"],
+      "caveats": ["the_equal_endpoint_group_ids_do_not_make_this_an_identity_map", "triviality_is_a_property_of_this_composite_and_is_not_inferred_from_endpoint_identity_alone", "the_non_split_C9_sequence_does_not_contradict_the_separate_hypercharge_dressed_split_complement_of_the_full_vacuum_stabilizer"],
+      "falsifier": "the_kernel_image_is_not_annihilated_by_the_quotient_or_either_declared_map_fails"
+    },
+    {
+      "id": "composition:C3-through-C6-to-C2",
+      "name": "order-three subgroup through C6 to the parity quotient",
+      "steps": [
+        { "mapId": "map:C6-central-C3-quotient-C2:kernel-inclusion" },
+        { "mapId": "map:C6-central-C3-quotient-C2:quotient" }
+      ],
+      "status": "established",
+      "statement": "The C3 kernel inclusion followed by the C6 parity quotient is the trivial homomorphism C3 -> C2.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-RESIDUAL-Z6"],
+      "caveats": ["the_abstract_exactness_statement_does_not_supply_the_physical_colour_center_identification"],
+      "falsifier": "the_kernel_image_is_not_annihilated_by_the_quotient_or_either_declared_map_fails"
+    },
+    {
+      "id": "composition:C2-through-C6-to-C3",
+      "name": "order-two subgroup through C6 to the triality quotient",
+      "steps": [
+        { "mapId": "map:C6-central-C2-quotient-C3:kernel-inclusion" },
+        { "mapId": "map:C6-central-C2-quotient-C3:quotient" }
+      ],
+      "status": "corpus_established",
+      "statement": "The C2 kernel inclusion followed by the C6 triality quotient is the trivial homomorphism C2 -> C3.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-RESIDUAL-Z6"],
+      "caveats": ["the_abstract_exactness_statement_does_not_by_itself_promote_the_quotient_to_a_dynamical_topological_sector"],
+      "falsifier": "the_kernel_image_is_not_annihilated_by_the_quotient_or_either_declared_map_fails"
+    },
+    {
+      "id": "composition:B3-to-S3-via-mod2-congruence",
+      "name": "braid representation through mod-two congruence to the three-letter permutation group",
+      "steps": [
+        { "mapId": "map:B3-surjection-SL2Z:homomorphism" },
+        { "mapId": "map:SL2Z-reduction-F2:homomorphism" },
+        { "mapId": "map:SL2F2-iso-PSL2F2:isomorphism" },
+        { "mapId": "map:PSL2F2-iso-S3:isomorphism" }
+      ],
+      "status": "corpus_established",
+      "statement": "The standard B3 representation, reduction modulo two and projective-line action compose to a surjection onto S3.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-BRAID-CONGRUENCE"],
+      "caveats": ["the_intermediate_GL2F2_model_is_isomorphic_but_not_a_separate_required_step_of_this_composite", "the_result_is_the_mod_two_permutation_shadow_not_an_identification_of_B3_with_S3"],
+      "falsifier": "any_declared_map_fails_or_the_composite_image_is_not_all_of_S3"
+    },
+    {
+      "id": "composition:SL2F3-to-A4-via-PSL2F3",
+      "name": "mod-three central quotient followed by the tetrahedral identification",
+      "steps": [
+        { "mapId": "map:SL2F3-central-quotient-PSL2F3:quotient" },
+        { "mapId": "map:PSL2F3-iso-A4:isomorphism" }
+      ],
+      "status": "corpus_established",
+      "statement": "The named quotient SL(2,F3) -> A4 factors as projectivization followed by PSL(2,F3) ~= A4.",
+      "provenance": ["SRC-ATLAS", "SRC-GAP-SMALLGRP", "SRC-CORPUS-BRAID-CONGRUENCE"],
+      "caveats": ["this_composite_is_extensionally_the_quotient_map_of_the_separate_SL2F3_central_cover_A4_relation", "the_intermediate_PSL2F3_identity_must_not_be_erased_when_tracking_the_scalar_kernel"],
+      "falsifier": "the_projective_quotient_or_tetrahedral_isomorphism_fails_or_the_composite_differs_from_the_central_cover_quotient"
+    },
+    {
+      "id": "composition:SL2F5-to-A5-via-PSL2F5",
+      "name": "mod-five central quotient followed by the icosahedral identification",
+      "steps": [
+        { "mapId": "map:SL2F5-central-quotient-PSL2F5:quotient" },
+        { "mapId": "map:PSL2F5-iso-A5:isomorphism" }
+      ],
+      "status": "corpus_established",
+      "statement": "The named quotient SL(2,F5) -> A5 factors as projectivization followed by PSL(2,F5) ~= A5.",
+      "provenance": ["SRC-ATLAS", "SRC-GAP-SMALLGRP", "SRC-CORPUS-BRAID-CONGRUENCE"],
+      "caveats": ["this_composite_is_extensionally_the_quotient_map_of_the_separate_SL2F5_central_cover_A5_relation", "the_intermediate_PSL2F5_identity_must_not_be_erased_when_tracking_the_scalar_kernel"],
+      "falsifier": "the_projective_quotient_or_icosahedral_isomorphism_fails_or_the_composite_differs_from_the_central_cover_quotient"
+    },
+    {
+      "id": "composition:B3-to-A4-via-mod3-congruence",
+      "name": "braid representation through mod-three projectivization to the tetrahedral rotation group",
+      "steps": [
+        { "mapId": "map:B3-surjection-SL2Z:homomorphism" },
+        { "mapId": "map:SL2Z-reduction-F3:homomorphism" },
+        { "mapId": "map:SL2F3-central-quotient-PSL2F3:quotient" },
+        { "mapId": "map:PSL2F3-iso-A4:isomorphism" }
+      ],
+      "status": "corpus_established",
+      "statement": "The standard B3 representation, reduction modulo three, projectivization and projective-line action compose to a surjection onto A4.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-ATLAS", "SRC-CORPUS-BRAID-CONGRUENCE"],
+      "caveats": ["minus_identity_survives_modulo_three_and_is_removed_only_by_the_explicit_projective_quotient", "the_result_is_a_finite_tetrahedral_shadow_not_an_identification_of_B3_with_A4"],
+      "falsifier": "any_declared_map_fails_or_the_composite_image_is_not_all_of_A4"
+    },
+    {
+      "id": "composition:B3-to-A5-via-mod5-congruence",
+      "name": "braid representation through mod-five projectivization to the icosahedral rotation group",
+      "steps": [
+        { "mapId": "map:B3-surjection-SL2Z:homomorphism" },
+        { "mapId": "map:SL2Z-reduction-F5:homomorphism" },
+        { "mapId": "map:SL2F5-central-quotient-PSL2F5:quotient" },
+        { "mapId": "map:PSL2F5-iso-A5:isomorphism" }
+      ],
+      "status": "corpus_established",
+      "statement": "The standard B3 representation, reduction modulo five, projectivization and projective action compose to a surjection onto A5.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-ATLAS", "SRC-CORPUS-BRAID-CONGRUENCE"],
+      "caveats": ["minus_identity_survives_modulo_five_and_is_removed_only_by_the_explicit_projective_quotient", "the_result_is_a_finite_icosahedral_shadow_not_an_identification_of_B3_with_A5"],
+      "falsifier": "any_declared_map_fails_or_the_composite_image_is_not_all_of_A5"
+    },
+    {
+      "id": "composition:Sp4Z-to-Sp4R-via-Sp4Q",
+      "name": "integral symplectic group through rational points to the real carrier",
+      "steps": [
+        { "mapId": "map:Sp4Z-subgroup-Sp4Q:inclusion" },
+        { "mapId": "map:Sp4Q-subgroup-Sp4R:inclusion" }
+      ],
+      "status": "established",
+      "statement": "Coefficient extension composes the inclusions Sp(4,Z) -> Sp(4,Q) -> Sp(4,R).",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-SP4Q-HADAMARD", "SRC-CORPUS-INTEGRAL-SP4"],
+      "caveats": ["the_composite_is_an_inclusion_of_rational_points_into_a_real_Lie_group_not_an_isomorphism_or_topological_density_claim"],
+      "falsifier": "either_coefficient_inclusion_fails_or_the_composite_does_not_equal_entrywise_Z_to_R_inclusion"
+    },
+    {
+      "id": "composition:Sp4Z-to-GL4Q-via-Sp4Q",
+      "name": "integral symplectic group through rational symplectic points into the rational linear ambient",
+      "steps": [
+        { "mapId": "map:Sp4Z-subgroup-Sp4Q:inclusion" },
+        { "mapId": "map:Sp4Q-subgroup-GL4Q:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The defining representation after rational scalar extension embeds Sp(4,Z) in GL(4,Q) through Sp(4,Q).",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-GL4-INTEGRAL-RATIONAL", "SRC-CORPUS-SP4Q-HADAMARD"],
+      "caveats": ["the_composite_forgets_the_requirement_that_ambient_GL4Q_conjugacies_preserve_the_symplectic_form"],
+      "falsifier": "either_inclusion_fails_or_the_composite_is_not_the_defining_rational_representation"
+    },
+    {
+      "id": "composition:Sp4Z-to-GL4R-via-ambient-scalar-extension",
+      "name": "integral symplectic group through integral and rational general-linear ambient groups",
+      "steps": [
+        { "mapId": "map:Sp4Z-subgroup-GL4Z:inclusion" },
+        { "mapId": "map:GL4Z-subgroup-GL4Q:inclusion" },
+        { "mapId": "map:GL4Q-subgroup-GL4R:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The defining integral representation and scalar extension compose to Sp(4,Z) -> GL(4,Z) -> GL(4,Q) -> GL(4,R).",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-GL4-INTEGRAL-RATIONAL", "SRC-CORPUS-INTEGRAL-SP4"],
+      "caveats": ["this_ambient_composite_forgets_symplectic_form_preservation_after_the_first_inclusion", "real_or_rational_conjugacy_in_the_target_does_not_imply_integral_conjugacy_in_GL4Z"],
+      "falsifier": "any_declared_inclusion_fails_or_the_composite_differs_from_entrywise_Z_to_R_inclusion"
+    },
+    {
+      "id": "composition:C3-to-Sp4R-via-U11",
+      "name": "selected order-three turn through its pseudo-unitary envelope into the real symplectic carrier",
+      "steps": [
+        { "mapId": "map:C3-subgroup-U11:inclusion" },
+        { "mapId": "map:U11-subgroup-Sp4R:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The selected finite turn embeds in U(1,1), whose realification embeds in Sp(4,R).",
+      "provenance": ["SRC-CORPUS-U11-CENTRALIZER", "SRC-HALL-LIE"],
+      "caveats": ["the_finite_C3_element_does_not_force_the_full_continuous_envelope", "the_U11_embedding_depends_on_the_selected_complex_structure_and_Hermitian_form"],
+      "falsifier": "either_selected_inclusion_fails_or_the_composite_does_not_preserve_the_declared_real_symplectic_form"
+    },
+    {
+      "id": "composition:SU11-to-Sp4R-via-U11",
+      "name": "special pseudo-unitary determinant kernel into the real symplectic carrier",
+      "steps": [
+        { "mapId": "map:SU11-subgroup-U11:inclusion" },
+        { "mapId": "map:U11-subgroup-Sp4R:inclusion" }
+      ],
+      "status": "established",
+      "statement": "The determinant-one subgroup SU(1,1) embeds through U(1,1) into Sp(4,R).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-U11-CENTRALIZER"],
+      "caveats": ["this_factorization_does_not_replace_the_separate_SU11_to_SL2R_isomorphism", "the_ambient_embedding_retains_the_selected_complex_structure"],
+      "falsifier": "either_inclusion_fails_or_the_composite_is_not_the_standard_realified_SU11_action"
+    },
+    {
+      "id": "composition:SU11-through-U11-determinant",
+      "name": "pseudo-unitary determinant-kernel exactness witness",
+      "steps": [
+        { "mapId": "map:U11-determinant-sequence:kernel-inclusion" },
+        { "mapId": "map:U11-determinant-sequence:quotient" }
+      ],
+      "status": "established",
+      "statement": "The SU(1,1) kernel inclusion followed by determinant is the trivial homomorphism SU(1,1) -> U(1).",
+      "provenance": ["SRC-HALL-LIE"],
+      "caveats": ["exactness_does_not_make_the_standard_determinant_section_central"],
+      "falsifier": "the_kernel_image_is_not_annihilated_by_determinant_or_either_declared_map_fails"
+    },
+    {
+      "id": "composition:SU4-through-U4-determinant",
+      "name": "rank-four unitary determinant-kernel exactness witness",
+      "steps": [
+        { "mapId": "map:U4-determinant-sequence:kernel-inclusion" },
+        { "mapId": "map:U4-determinant-sequence:quotient" }
+      ],
+      "status": "established",
+      "statement": "The SU(4) kernel inclusion followed by determinant is the trivial homomorphism SU(4) -> U(1).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-U4-COMPONENT"],
+      "caveats": ["exactness_does_not_identify_U4_with_the_direct_product_SU4_times_U1", "a_finite_determinant_phase_extension_need_not_generate_all_of_U4"],
+      "falsifier": "the_kernel_image_is_not_annihilated_by_determinant_or_either_declared_map_fails"
+    },
+    {
+      "id": "composition:SU4-to-U4-via-H4mu3",
+      "name": "identity component through the determinant-mu3 subgroup into U(4)",
+      "steps": [
+        { "mapId": "map:H4mu3-determinant-sequence:kernel-inclusion" },
+        { "mapId": "map:H4mu3-subgroup-U4:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "SU(4) includes in the three-component determinant-mu3 subgroup, which is a proper subgroup of U(4).",
+      "provenance": ["SRC-CORPUS-U4-COMPONENT", "SRC-HALL-LIE"],
+      "caveats": ["the_intermediate_finite_component_extension_is_not_all_of_U4", "this_factorization_retains_the_specific_scalar_mu3_section"],
+      "falsifier": "either_inclusion_fails_or_the_composite_differs_from_the_standard_SU4_inclusion_in_U4"
+    },
+    {
+      "id": "composition:SU4-through-H4mu3-determinant",
+      "name": "finite-component determinant-kernel exactness witness",
+      "steps": [
+        { "mapId": "map:H4mu3-determinant-sequence:kernel-inclusion" },
+        { "mapId": "map:H4mu3-determinant-sequence:quotient" }
+      ],
+      "status": "corpus_established",
+      "statement": "The SU(4) kernel inclusion followed by restricted determinant is the trivial homomorphism SU(4) -> C3.",
+      "provenance": ["SRC-CORPUS-U4-COMPONENT"],
+      "caveats": ["this_exactness_witness_uses_the_finite_component_group_not_the_full_U4_determinant_target_U1"],
+      "falsifier": "the_kernel_image_is_not_annihilated_by_restricted_determinant_or_either_declared_map_fails"
+    },
+    {
+      "id": "composition:C3-to-U4-via-H4mu3",
+      "name": "central scalar component through the determinant-mu3 subgroup into U(4)",
+      "steps": [
+        { "mapId": "map:H4mu3-direct-product:factor-2-inclusion" },
+        { "mapId": "map:H4mu3-subgroup-U4:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The scalar mu3 factor embeds centrally in H_4^(3) and hence in U(4).",
+      "provenance": ["SRC-CORPUS-U4-COMPONENT"],
+      "caveats": ["this_is_the_selected_scalar_section_not_every_order_three_subgroup_of_U4"],
+      "falsifier": "the_scalar_section_or_ambient_inclusion_fails"
+    },
+    {
+      "id": "composition:H4mu3-SU4-factor-roundtrip",
+      "name": "SU(4) factor inclusion followed by its coordinate projection",
+      "steps": [
+        { "mapId": "map:H4mu3-direct-product:factor-1-inclusion" },
+        { "mapId": "map:H4mu3-direct-product:factor-1-projection" }
+      ],
+      "status": "corpus_established",
+      "statement": "The SU(4) factor inclusion followed by first-coordinate projection is the identity homomorphism on SU(4).",
+      "provenance": ["SRC-CORPUS-U4-COMPONENT"],
+      "caveats": ["the_identity_depends_on_the_declared_central_product_coordinates"],
+      "falsifier": "the_declared_factor_inclusion_and_projection_do_not_compose_to_identity"
+    },
+    {
+      "id": "composition:H4mu3-C3-factor-roundtrip",
+      "name": "C3 scalar factor inclusion followed by its coordinate projection",
+      "steps": [
+        { "mapId": "map:H4mu3-direct-product:factor-2-inclusion" },
+        { "mapId": "map:H4mu3-direct-product:factor-2-projection" }
+      ],
+      "status": "corpus_established",
+      "statement": "The central C3 factor inclusion followed by second-coordinate projection is the identity homomorphism on C3.",
+      "provenance": ["SRC-CORPUS-U4-COMPONENT"],
+      "caveats": ["the_identity_uses_the_selected_scalar_mu3_section"],
+      "falsifier": "the_declared_factor_inclusion_and_projection_do_not_compose_to_identity"
+    },
+    {
+      "id": "composition:H4mu3-SU4-to-C3-cross-projection",
+      "name": "SU(4) factor inclusion followed by the other coordinate projection",
+      "steps": [
+        { "mapId": "map:H4mu3-direct-product:factor-1-inclusion" },
+        { "mapId": "map:H4mu3-direct-product:factor-2-projection" }
+      ],
+      "status": "corpus_established",
+      "statement": "The SU(4) factor inclusion followed by C3-coordinate projection is the trivial homomorphism SU(4) -> C3.",
+      "provenance": ["SRC-CORPUS-U4-COMPONENT"],
+      "caveats": ["triviality_is_a_coordinate_property_of_the_declared_direct_product_model"],
+      "falsifier": "the_cross_coordinate_of_the_SU4_factor_is_nontrivial"
+    },
+    {
+      "id": "composition:C9-to-U4-via-H4mu3",
+      "name": "selected order-nine lift through the determinant-mu3 subgroup into U(4)",
+      "steps": [
+        { "mapId": "map:C9-subgroup-H4mu3:inclusion" },
+        { "mapId": "map:H4mu3-subgroup-U4:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The selected gauge-dressed C9 embeds in H_4^(3) and hence in U(4).",
+      "provenance": ["SRC-CORPUS-U4-COMPONENT", "SRC-EXEC-U4-COMPONENT"],
+      "caveats": ["the_composite_retains_the_selected_order_nine_generator", "this_is_not_the_central_scalar_C3_section"],
+      "falsifier": "the_selected_C9_or_either_inclusion_fails"
+    },
+    {
+      "id": "composition:C9-through-H4mu3-component",
+      "name": "order-nine lift projected to the split component group",
+      "steps": [
+        { "mapId": "map:C9-subgroup-H4mu3:inclusion" },
+        { "mapId": "map:H4mu3-determinant-sequence:quotient" }
+      ],
+      "status": "corpus_established",
+      "statement": "Embedding the selected C9 and applying restricted determinant gives its surjective component quotient C9 -> C3, whose kernel is generated by U cubed.",
+      "provenance": ["SRC-CORPUS-U4-COMPONENT", "SRC-EXEC-U4-COMPONENT", "SRC-CORPUS-Z9-LIFT"],
+      "caveats": ["the_component_quotient_does_not_split_inside_C9", "the_ambient_H4mu3_sequence_splits_through_a_different_central_C3_section"],
+      "falsifier": "the_composite_component_map_differs_from_the_order_nine_quotient"
+    },
+    {
+      "id": "composition:C9-cube-kernel-through-H4mu3-component",
+      "name": "cube subgroup annihilated by the ambient component projection",
+      "steps": [
+        { "mapId": "map:C9-central-C3-quotient-C3:kernel-inclusion" },
+        { "mapId": "map:C9-subgroup-H4mu3:inclusion" },
+        { "mapId": "map:H4mu3-determinant-sequence:quotient" }
+      ],
+      "status": "corpus_established",
+      "statement": "The cube C3 kernel of the selected C9 lies in the SU(4) identity component, so its composite to the H_4^(3) component C3 is the trivial homomorphism.",
+      "provenance": ["SRC-CORPUS-U4-COMPONENT", "SRC-EXEC-U4-COMPONENT", "SRC-CORPUS-Z9-LIFT"],
+      "caveats": ["this_kernel_C3_is_inside_SU4_and_is_not_the_central_scalar_component_section"],
+      "falsifier": "U_cubed_has_nontrivial_determinant_component_or_any_declared_map_fails"
+    },
+    {
+      "id": "composition:U1U1-first-factor-roundtrip",
+      "name": "first circle inclusion and projection in the maximal compact two-torus",
+      "steps": [
+        { "mapId": "map:U1U1-direct-product:factor-1-inclusion" },
+        { "mapId": "map:U1U1-direct-product:factor-1-projection" }
+      ],
+      "status": "established",
+      "statement": "The first U(1) factor inclusion followed by first-coordinate projection is the identity homomorphism on U(1).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-U11-CENTRALIZER"],
+      "caveats": ["the_two_U1_factors_have_distinct_coordinate_roles_despite_their_abstract_identity"],
+      "falsifier": "the_declared_factor_inclusion_and_projection_do_not_compose_to_identity"
+    },
+    {
+      "id": "composition:SO012-to-SO023-via-section-stabilizer",
+      "name": "signature-(1,2) factor through the connected section stabilizer",
+      "steps": [
+        { "mapId": "map:SO012SO011-direct-product:factor-1-inclusion" },
+        { "mapId": "map:SO012SO011-subgroup-SO023:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The carrier SO_0(1,2) factor embeds in the block stabilizer and hence in SO_0(2,3).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-SPIN12-SECTION"],
+      "caveats": ["the_composite_depends_on_the_selected_signature_1_2_section", "this_is_the_orthogonal_group_map_not_a_spin_lift"],
+      "falsifier": "the_factor_or_block_stabilizer_inclusion_fails"
+    },
+    {
+      "id": "composition:SO011-to-SO023-via-section-stabilizer",
+      "name": "complementary boost factor through the connected section stabilizer",
+      "steps": [
+        { "mapId": "map:SO012SO011-direct-product:factor-2-inclusion" },
+        { "mapId": "map:SO012SO011-subgroup-SO023:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "The complementary SO_0(1,1) boost factor embeds in the block stabilizer and hence in SO_0(2,3).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-SPIN12-SECTION", "SRC-CORPUS-SO11-BOOST"],
+      "caveats": ["the_composite_depends_on_the_selected_complementary_plane", "this_factor_is_the_pointwise_stabilizer_of_the_carrier_section"],
+      "falsifier": "the_factor_or_block_stabilizer_inclusion_fails"
+    },
+    {
+      "id": "composition:SO012-section-stabilizer-roundtrip",
+      "name": "carrier orthogonal factor inclusion followed by coordinate projection",
+      "steps": [
+        { "mapId": "map:SO012SO011-direct-product:factor-1-inclusion" },
+        { "mapId": "map:SO012SO011-direct-product:factor-1-projection" }
+      ],
+      "status": "corpus_established",
+      "statement": "The SO_0(1,2) factor inclusion followed by its coordinate projection is the identity homomorphism.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-SPIN12-SECTION"],
+      "caveats": ["the_identity_uses_the_selected_block_product_coordinates"],
+      "falsifier": "the_declared_factor_inclusion_and_projection_do_not_compose_to_identity"
+    },
+    {
+      "id": "composition:Sp4Z-to-F2-via-CRT46",
+      "name": "integral symplectic reduction modulo 46 followed by the mod-2 CRT projection",
+      "steps": [
+        { "mapId": "map:Sp4Z-reduction-Z46:homomorphism" },
+        { "mapId": "map:Sp4Z46-CRT-product:factor-1-projection" }
+      ],
+      "status": "corpus_established",
+      "statement": "Reduction Sp(4,Z) -> Sp(4,Z/46Z) followed by the first CRT projection equals direct reduction modulo 2.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-MIXED-LEVEL46", "SRC-CORPUS-INTEGRAL-SP4"],
+      "caveats": ["the_equality_is_entrywise_under_the_declared_CRT_coordinates"],
+      "falsifier": "the_composite_differs_from_entrywise_reduction_mod_2"
+    },
+    {
+      "id": "composition:Sp4Z-to-F23-via-CRT46",
+      "name": "integral symplectic reduction modulo 46 followed by the mod-23 CRT projection",
+      "steps": [
+        { "mapId": "map:Sp4Z-reduction-Z46:homomorphism" },
+        { "mapId": "map:Sp4Z46-CRT-product:factor-2-projection" }
+      ],
+      "status": "corpus_established",
+      "statement": "Reduction Sp(4,Z) -> Sp(4,Z/46Z) followed by the second CRT projection equals direct reduction modulo 23.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-MIXED-LEVEL46", "SRC-CORPUS-INTEGRAL-SP4"],
+      "caveats": ["the_equality_is_entrywise_under_the_declared_CRT_coordinates"],
+      "falsifier": "the_composite_differs_from_entrywise_reduction_mod_23"
+    },
+    {
+      "id": "composition:Sp4F2-CRT46-roundtrip",
+      "name": "mod-2 CRT factor inclusion followed by projection",
+      "steps": [
+        { "mapId": "map:Sp4Z46-CRT-product:factor-1-inclusion" },
+        { "mapId": "map:Sp4Z46-CRT-product:factor-1-projection" }
+      ],
+      "status": "established",
+      "statement": "The Sp(4,F2) CRT factor inclusion followed by its coordinate projection is the identity.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-MIXED-LEVEL46"],
+      "caveats": ["the_inclusion_uses_the_mod_2_CRT_idempotent"],
+      "falsifier": "the_declared_factor_inclusion_and_projection_do_not_compose_to_identity"
+    },
+    {
+      "id": "composition:Sp4F23-CRT46-roundtrip",
+      "name": "mod-23 CRT factor inclusion followed by projection",
+      "steps": [
+        { "mapId": "map:Sp4Z46-CRT-product:factor-2-inclusion" },
+        { "mapId": "map:Sp4Z46-CRT-product:factor-2-projection" }
+      ],
+      "status": "established",
+      "statement": "The Sp(4,F23) CRT factor inclusion followed by its coordinate projection is the identity.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-MIXED-LEVEL46"],
+      "caveats": ["the_inclusion_uses_the_mod_23_CRT_idempotent"],
+      "falsifier": "the_declared_factor_inclusion_and_projection_do_not_compose_to_identity"
+    },
+    {
+      "id": "composition:Dic11-to-Sp4F23-via-rank-one-block",
+      "name": "dicyclic torus normalizer through the rank-one symplectic block",
+      "steps": [
+        { "mapId": "map:Dic11-subgroup-SL2F23:inclusion" },
+        { "mapId": "map:SL2F23-iso-Sp2F23:isomorphism" },
+        { "mapId": "map:Sp2F23-subgroup-Sp4F23:inclusion" }
+      ],
+      "status": "corpus_established",
+      "statement": "Dic_11 embeds in Sp(4,F23) through SL(2,F23)=Sp(2,F23) acting on a chosen symplectic plane.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-F23-SYMPLECTIC-CHAIN"],
+      "caveats": ["the_rank_one_block_embedding_depends_on_a_chosen_nondegenerate_symplectic_plane", "this_route_does_not_identify_Dic11_with_an_ambient_group"],
+      "falsifier": "any_inclusion_or_the_rank_one_SL2_Sp2_isomorphism_fails"
+    },
+    {
+      "id": "composition:SL2F23-to-Spin5F23-via-symplectic-block",
+      "name": "rank-one finite linear group through the B2-C2 symplectic block seam",
+      "steps": [
+        { "mapId": "map:SL2F23-iso-Sp2F23:isomorphism" },
+        { "mapId": "map:Sp2F23-subgroup-Sp4F23:inclusion" },
+        { "mapId": "map:Sp4F23-iso-Spin5F23:isomorphism" }
+      ],
+      "status": "corpus_established",
+      "statement": "SL(2,F23) enters Spin(5,F23) by the degree-two symplectic identity, a selected block inclusion and the simply connected B2=C2 isomorphism.",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-F23-SYMPLECTIC-CHAIN"],
+      "caveats": ["the_selected_block_and_simply_connected_global_form_are_retained", "this_does_not_pass_to_SO5_or_PSp4_without_a_central_quotient"],
+      "falsifier": "any_step_or_the_declared_global_form_fails"
+    },
+    {
+      "id": "composition:Dic11-to-Spin5F23-via-finite-ladder",
+      "name": "complete finite-23 dicyclic-to-spin ladder",
+      "steps": [
+        { "mapId": "map:Dic11-subgroup-SL2F23:inclusion" },
+        { "mapId": "map:SL2F23-iso-Sp2F23:isomorphism" },
+        { "mapId": "map:Sp2F23-subgroup-Sp4F23:inclusion" },
+        { "mapId": "map:Sp4F23-iso-Spin5F23:isomorphism" }
+      ],
+      "status": "corpus_established",
+      "statement": "The declared finite-field ladder gives a composable embedding of Dic_11 into simply connected Spin(5,F23).",
+      "provenance": ["SRC-HALL-LIE", "SRC-CORPUS-F23-SYMPLECTIC-CHAIN"],
+      "caveats": ["the_composite_retains_the_selected_torus_normalizer_and_symplectic_plane", "abstract_containment_does_not_transport_a_physical_representation_without_an_intertwiner"],
+      "falsifier": "any_step_of_the_finite_field_ladder_fails"
+    },
+    {
+      "id": "composition:C2-coordinate1-to-C6C6-via-primary-CRT",
+      "name": "first binary coordinate through V4 into the CRT module",
+      "steps": [{"mapId":"map:V4-direct-product:factor-1-inclusion"},{"mapId":"map:V4C3C3-direct-product-C6C6:factor-1-inclusion"}],
+      "status": "corpus_established",
+      "statement": "The first C2 primary coordinate enters the first C6 coordinate under componentwise CRT.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-CRT-QUADRATIC-MODULE"],
+      "caveats": ["this_is_the_underlying_group_map_and_does_not_alone_preserve_q"],
+      "falsifier": "the_composite_differs_from_the_first_binary_CRT_coordinate_embedding"
+    },
+    {
+      "id": "composition:C2-coordinate1-to-C6C6-via-invariant-factor",
+      "name": "first binary coordinate through C6 into the first invariant factor",
+      "steps": [{"mapId":"map:C6-direct-product:factor-1-inclusion"},{"mapId":"map:C6C6-direct-product:factor-1-inclusion"}],
+      "status": "corpus_established",
+      "statement": "The first C2 primary coordinate enters the first C6 invariant factor, agreeing with the primary-CRT route.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-CRT-QUADRATIC-MODULE"],
+      "caveats": ["agreement_is_relative_to_the_declared_coordinate_ordering"],
+      "falsifier": "the_composite_differs_from_the_first_binary_CRT_coordinate_embedding"
+    },
+    {
+      "id": "composition:C2-coordinate2-to-C6C6-via-primary-CRT",
+      "name": "second binary coordinate through V4 into the CRT module",
+      "steps": [{"mapId":"map:V4-direct-product:factor-2-inclusion"},{"mapId":"map:V4C3C3-direct-product-C6C6:factor-1-inclusion"}],
+      "status": "corpus_established",
+      "statement": "The second C2 primary coordinate enters the second C6 coordinate under componentwise CRT.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-CRT-QUADRATIC-MODULE"],
+      "caveats": ["this_is_the_underlying_group_map_and_does_not_alone_preserve_q"],
+      "falsifier": "the_composite_differs_from_the_second_binary_CRT_coordinate_embedding"
+    },
+    {
+      "id": "composition:C2-coordinate2-to-C6C6-via-invariant-factor",
+      "name": "second binary coordinate through C6 into the second invariant factor",
+      "steps": [{"mapId":"map:C6-direct-product:factor-1-inclusion"},{"mapId":"map:C6C6-direct-product:factor-2-inclusion"}],
+      "status": "corpus_established",
+      "statement": "The second C2 primary coordinate enters the second C6 invariant factor, agreeing with the primary-CRT route.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-CRT-QUADRATIC-MODULE"],
+      "caveats": ["agreement_is_relative_to_the_declared_coordinate_ordering"],
+      "falsifier": "the_composite_differs_from_the_second_binary_CRT_coordinate_embedding"
+    },
+    {
+      "id": "composition:C3-coordinate1-to-C6C6-via-primary-CRT",
+      "name": "first ternary coordinate through C3 squared into the CRT module",
+      "steps": [{"mapId":"map:C3C3-direct-product:factor-1-inclusion"},{"mapId":"map:V4C3C3-direct-product-C6C6:factor-2-inclusion"}],
+      "status": "corpus_established",
+      "statement": "The first C3 primary coordinate enters the first C6 coordinate under componentwise CRT.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-CRT-QUADRATIC-MODULE"],
+      "caveats": ["this_is_the_underlying_group_map_and_does_not_alone_preserve_q"],
+      "falsifier": "the_composite_differs_from_the_first_ternary_CRT_coordinate_embedding"
+    },
+    {
+      "id": "composition:C3-coordinate1-to-C6C6-via-invariant-factor",
+      "name": "first ternary coordinate through C6 into the first invariant factor",
+      "steps": [{"mapId":"map:C6-direct-product:factor-2-inclusion"},{"mapId":"map:C6C6-direct-product:factor-1-inclusion"}],
+      "status": "corpus_established",
+      "statement": "The first C3 primary coordinate enters the first C6 invariant factor, agreeing with the primary-CRT route.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-CRT-QUADRATIC-MODULE"],
+      "caveats": ["agreement_is_relative_to_the_declared_coordinate_ordering"],
+      "falsifier": "the_composite_differs_from_the_first_ternary_CRT_coordinate_embedding"
+    },
+    {
+      "id": "composition:C3-coordinate2-to-C6C6-via-primary-CRT",
+      "name": "second ternary coordinate through C3 squared into the CRT module",
+      "steps": [{"mapId":"map:C3C3-direct-product:factor-2-inclusion"},{"mapId":"map:V4C3C3-direct-product-C6C6:factor-2-inclusion"}],
+      "status": "corpus_established",
+      "statement": "The second C3 primary coordinate enters the second C6 coordinate under componentwise CRT.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-CRT-QUADRATIC-MODULE"],
+      "caveats": ["this_is_the_underlying_group_map_and_does_not_alone_preserve_q"],
+      "falsifier": "the_composite_differs_from_the_second_ternary_CRT_coordinate_embedding"
+    },
+    {
+      "id": "composition:C3-coordinate2-to-C6C6-via-invariant-factor",
+      "name": "second ternary coordinate through C6 into the second invariant factor",
+      "steps": [{"mapId":"map:C6-direct-product:factor-2-inclusion"},{"mapId":"map:C6C6-direct-product:factor-2-inclusion"}],
+      "status": "corpus_established",
+      "statement": "The second C3 primary coordinate enters the second C6 invariant factor, agreeing with the primary-CRT route.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-CRT-QUADRATIC-MODULE"],
+      "caveats": ["agreement_is_relative_to_the_declared_coordinate_ordering"],
+      "falsifier": "the_composite_differs_from_the_second_ternary_CRT_coordinate_embedding"
+    },
+    {
+      "id": "composition:S3-first-factor-to-OPlus4F2",
+      "name": "first triangle permutation factor into the plus-type orthogonal group",
+      "steps": [{"mapId":"map:S3xS3-direct-product:factor-1-inclusion"},{"mapId":"map:S3WrC2-semidirect-product:normal-factor-inclusion"},{"mapId":"map:OPlus4F2-iso-S3WrC2:isomorphism"}],
+      "status": "corpus_established",
+      "statement": "The first S3 factor permutes one triangle and embeds into O+(4,2) through the wreath-product model.",
+      "provenance": ["SRC-CORPUS-OPLUS4F2", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_factor_label_depends_on_an_ordering_of_the_two_nonsingular_triangles"],
+      "falsifier": "the_composite_fails_injectivity_or_does_not_fix_the_other_triangle_pointwise"
+    },
+    {
+      "id": "composition:S3-second-factor-to-OPlus4F2",
+      "name": "second triangle permutation factor into the plus-type orthogonal group",
+      "steps": [{"mapId":"map:S3xS3-direct-product:factor-2-inclusion"},{"mapId":"map:S3WrC2-semidirect-product:normal-factor-inclusion"},{"mapId":"map:OPlus4F2-iso-S3WrC2:isomorphism"}],
+      "status": "corpus_established",
+      "statement": "The second S3 factor permutes the other triangle and embeds into O+(4,2) through the wreath-product model.",
+      "provenance": ["SRC-CORPUS-OPLUS4F2", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_factor_label_depends_on_an_ordering_of_the_two_nonsingular_triangles"],
+      "falsifier": "the_composite_fails_injectivity_or_does_not_fix_the_other_triangle_pointwise"
+    },
+    {
+      "id": "composition:S3WrC2-acting-C2-roundtrip",
+      "name": "wreath-product swap-section roundtrip",
+      "steps": [{"mapId":"map:S3WrC2-semidirect-product:acting-factor-inclusion"},{"mapId":"map:S3WrC2-semidirect-product:acting-factor-projection"}],
+      "status": "established",
+      "statement": "Including the block-swapping C2 and projecting back is the identity homomorphism on C2.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_selected_involution_exchanges_the_two_triangle_blocks"],
+      "falsifier": "the_declared_section_is_not_a_right_inverse_to_the_projection"
+    },
+    {
+      "id": "composition:S3xS3-through-wreath-quotient",
+      "name": "wreath-product base through the block-swap quotient",
+      "steps": [{"mapId":"map:S3WrC2-semidirect-product:normal-factor-inclusion"},{"mapId":"map:S3WrC2-semidirect-product:acting-factor-projection"}],
+      "status": "established",
+      "statement": "The normal S3 x S3 base followed by the C2 quotient is the trivial homomorphism.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["triviality_is_a_statement_about_the_swap_quotient_not_about_the_faithful_degree_six_action"],
+      "falsifier": "the_normal_base_has_nontrivial_image_in_the_declared_quotient"
+    },
+    {
+      "id": "composition:S3xS3-first-factor-roundtrip",
+      "name": "first S3 product-factor roundtrip",
+      "steps": [{"mapId":"map:S3xS3-direct-product:factor-1-inclusion"},{"mapId":"map:S3xS3-direct-product:factor-1-projection"}],
+      "status": "established",
+      "statement": "First-factor inclusion followed by first projection is the identity homomorphism on S3.",
+      "provenance": ["SRC-ROT-GROUPS"],
+      "caveats": ["the_two_isomorphic_factors_remain_separately_typed_by_coordinate"],
+      "falsifier": "the_product_factor_projection_is_not_a_left_inverse"
+    },
+    {
+      "id": "composition:S3xS3-second-factor-roundtrip",
+      "name": "second S3 product-factor roundtrip",
+      "steps": [{"mapId":"map:S3xS3-direct-product:factor-2-inclusion"},{"mapId":"map:S3xS3-direct-product:factor-2-projection"}],
+      "status": "established",
+      "statement": "Second-factor inclusion followed by second projection is the identity homomorphism on S3.",
+      "provenance": ["SRC-ROT-GROUPS"],
+      "caveats": ["the_two_isomorphic_factors_remain_separately_typed_by_coordinate"],
+      "falsifier": "the_product_factor_projection_is_not_a_left_inverse"
+    },
+    {
+      "id": "composition:S3xS3-first-to-second-cross-projection",
+      "name": "first S3 factor through the second projection",
+      "steps": [{"mapId":"map:S3xS3-direct-product:factor-1-inclusion"},{"mapId":"map:S3xS3-direct-product:factor-2-projection"}],
+      "status": "established",
+      "statement": "First-factor inclusion followed by second projection is the trivial homomorphism.",
+      "provenance": ["SRC-ROT-GROUPS"],
+      "caveats": ["triviality_certifies_coordinate_independence_not_inequivalence_of_the_abstract_factors"],
+      "falsifier": "the_cross_projection_has_nontrivial_image"
+    },
+    {
+      "id": "composition:S3xS3-second-to-first-cross-projection",
+      "name": "second S3 factor through the first projection",
+      "steps": [{"mapId":"map:S3xS3-direct-product:factor-2-inclusion"},{"mapId":"map:S3xS3-direct-product:factor-1-projection"}],
+      "status": "established",
+      "statement": "Second-factor inclusion followed by first projection is the trivial homomorphism.",
+      "provenance": ["SRC-ROT-GROUPS"],
+      "caveats": ["triviality_certifies_coordinate_independence_not_inequivalence_of_the_abstract_factors"],
+      "falsifier": "the_cross_projection_has_nontrivial_image"
+    },
+    {
+      "id": "composition:S3-flag-factor-to-OPlus4F2",
+      "name": "three-coordinate flag permutations into the shell orthogonal group",
+      "steps": [{"mapId":"map:S3C2-direct-product:factor-1-inclusion"},{"mapId":"map:S3C2-flag-stabilizer-OPlus4F2:inclusion"}],
+      "status": "corpus_established",
+      "statement": "The S3 flag factor embeds in O+(4,2) through the selected order-12 flag stabilizer.",
+      "provenance": ["SRC-CORPUS-SHELL-FLAG-STABILIZER", "SRC-EXEC-SHELL-FLAG-STABILIZER"],
+      "caveats": ["the_route_depends_on_the_selected_transported_three_plus_two_flag"],
+      "falsifier": "the_factor_route_fails_injectivity_or_does_not_preserve_the_selected_flag"
+    },
+    {
+      "id": "composition:C2-flag-factor-to-OPlus4F2",
+      "name": "two-coordinate flag permutation into the shell orthogonal group",
+      "steps": [{"mapId":"map:S3C2-direct-product:factor-2-inclusion"},{"mapId":"map:S3C2-flag-stabilizer-OPlus4F2:inclusion"}],
+      "status": "corpus_established",
+      "statement": "The C2 ~= S2 flag factor embeds in O+(4,2) through the selected order-12 flag stabilizer.",
+      "provenance": ["SRC-CORPUS-SHELL-FLAG-STABILIZER", "SRC-EXEC-SHELL-FLAG-STABILIZER"],
+      "caveats": ["this_C2_permutes_the_two_coordinate_block_and_is_not_the_wreath_block_swap"],
+      "falsifier": "the_factor_route_fails_injectivity_or_does_not_preserve_the_selected_flag"
+    },
+    {
+      "id": "composition:MatchedParity-to-OPlus4F2-via-block-base",
+      "name": "matched-parity block subgroup into the shell orthogonal group",
+      "steps": [{"mapId":"map:MatchedParity-kernel-of-mismatch:kernel-inclusion"},{"mapId":"map:S3WrC2-semidirect-product:normal-factor-inclusion"},{"mapId":"map:OPlus4F2-iso-S3WrC2:isomorphism"}],
+      "status": "corpus_established",
+      "statement": "The order-18 matched-parity group embeds through the order-36 block base into O+(4,2).",
+      "provenance": ["SRC-CORPUS-MATCHED-S3-PARITY", "SRC-EXEC-MATCHED-S3-PARITY", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["this_arithmetic_binary_image_is_not_the_order_12_selected_flag_stabilizer"],
+      "falsifier": "any_inclusion_in_the_block_base_route_fails"
+    },
+    {
+      "id": "composition:MatchedParity-through-mismatch-quotient",
+      "name": "matched-parity kernel through the mismatch character",
+      "steps": [{"mapId":"map:MatchedParity-kernel-of-mismatch:kernel-inclusion"},{"mapId":"map:MatchedParity-kernel-of-mismatch:quotient"}],
+      "status": "corpus_established",
+      "statement": "The matched-parity subgroup followed by the parity-mismatch quotient is the trivial homomorphism.",
+      "provenance": ["SRC-CORPUS-MATCHED-S3-PARITY", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["triviality_encodes_equal_sign_not_equal_group_elements"],
+      "falsifier": "an_equal-sign_pair_has_nontrivial_mismatch_character"
+    },
+    {
+      "id": "composition:Mismatch-C2-section-roundtrip",
+      "name": "parity-mismatch section roundtrip",
+      "steps": [{"mapId":"map:MatchedParity-kernel-of-mismatch:splitting-section"},{"mapId":"map:MatchedParity-kernel-of-mismatch:quotient"}],
+      "status": "corpus_established",
+      "statement": "The chosen one-factor transposition section followed by the mismatch quotient is the identity homomorphism on C2.",
+      "provenance": ["SRC-CORPUS-MATCHED-S3-PARITY", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_section_is_not_central_and_is_not_the_simultaneous_transposition_inside_the_kernel"],
+      "falsifier": "the_declared_section_is_not_a_right_inverse"
+    },
+    {
+      "id": "composition:C3C3-through-MatchedParity-quotient",
+      "name": "even-even base through the simultaneous-sign quotient",
+      "steps": [{"mapId":"map:MatchedParity-semidirect-C3C3-C2:normal-factor-inclusion"},{"mapId":"map:MatchedParity-semidirect-C3C3-C2:acting-factor-projection"}],
+      "status": "established",
+      "statement": "The C3 x C3 normal base followed by the simultaneous-sign C2 quotient is the trivial homomorphism.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["this_C2_is_internal_to_the_matched_group_and_differs_from_the_mismatch_quotient_of_S3_x_S3"],
+      "falsifier": "the_even_even_base_has_nontrivial_image_in_the_semidirect_quotient"
+    },
+    {
+      "id": "composition:MatchedParity-C2-section-roundtrip",
+      "name": "simultaneous-transposition section roundtrip",
+      "steps": [{"mapId":"map:MatchedParity-semidirect-C3C3-C2:acting-factor-inclusion"},{"mapId":"map:MatchedParity-semidirect-C3C3-C2:acting-factor-projection"}],
+      "status": "established",
+      "statement": "The simultaneous-transposition C2 section followed by the semidirect projection is the identity homomorphism on C2.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["this_section_lies_inside_the_matched_kernel_of_the_outer_mismatch_character"],
+      "falsifier": "the_declared_section_is_not_a_right_inverse"
+    },
+    {
+      "id": "composition:MatchedParity-first-kernel-through-projection",
+      "name": "first-projection C3 kernel composite",
+      "steps": [{"mapId":"map:MatchedParity-first-projection:kernel-inclusion"},{"mapId":"map:MatchedParity-first-projection:quotient"}],
+      "status": "established",
+      "statement": "The second-factor A3 kernel followed by first-coordinate projection is the trivial homomorphism.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_kernel_coordinate_is_part_of_the_map_identity"],
+      "falsifier": "the_declared_kernel_has_nontrivial_first_coordinate"
+    },
+    {
+      "id": "composition:MatchedParity-first-projection-roundtrip",
+      "name": "first-coordinate diagonal-section roundtrip",
+      "steps": [{"mapId":"map:MatchedParity-first-projection:splitting-section"},{"mapId":"map:MatchedParity-first-projection:quotient"}],
+      "status": "established",
+      "statement": "The diagonal S3 section followed by first-coordinate projection is the identity homomorphism on S3.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_section_is_diagonal_and_not_a_coordinate-factor_inclusion"],
+      "falsifier": "the_declared_section_is_not_a_right_inverse"
+    },
+    {
+      "id": "composition:MatchedParity-second-kernel-through-projection",
+      "name": "second-projection C3 kernel composite",
+      "steps": [{"mapId":"map:MatchedParity-second-projection:kernel-inclusion"},{"mapId":"map:MatchedParity-second-projection:quotient"}],
+      "status": "established",
+      "statement": "The first-factor A3 kernel followed by second-coordinate projection is the trivial homomorphism.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_kernel_coordinate_is_part_of_the_map_identity"],
+      "falsifier": "the_declared_kernel_has_nontrivial_second_coordinate"
+    },
+    {
+      "id": "composition:MatchedParity-second-projection-roundtrip",
+      "name": "second-coordinate diagonal-section roundtrip",
+      "steps": [{"mapId":"map:MatchedParity-second-projection:splitting-section"},{"mapId":"map:MatchedParity-second-projection:quotient"}],
+      "status": "established",
+      "statement": "The diagonal S3 section followed by second-coordinate projection is the identity homomorphism on S3.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_section_is_diagonal_and_not_a_coordinate-factor_inclusion"],
+      "falsifier": "the_declared_section_is_not_a_right_inverse"
+    },
+    {
+      "id": "composition:DiagonalS3-first-projection",
+      "name": "explicit diagonal S3 through first projection",
+      "steps": [{"mapId":"map:DiagonalS3-subgroup-MatchedParity:inclusion"},{"mapId":"map:MatchedParity-first-projection:quotient"}],
+      "status": "established",
+      "statement": "The explicit diagonal S3 inclusion followed by first-coordinate projection is the identity homomorphism.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_identity_depends_on_the_named_coordinate_order"],
+      "falsifier": "the_diagonal_embedding_does_not_project_identically"
+    },
+    {
+      "id": "composition:DiagonalS3-second-projection",
+      "name": "explicit diagonal S3 through second projection",
+      "steps": [{"mapId":"map:DiagonalS3-subgroup-MatchedParity:inclusion"},{"mapId":"map:MatchedParity-second-projection:quotient"}],
+      "status": "established",
+      "statement": "The explicit diagonal S3 inclusion followed by second-coordinate projection is the identity homomorphism.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-EXEC-OPLUS4F2"],
+      "caveats": ["the_identity_depends_on_the_named_coordinate_order"],
+      "falsifier": "the_diagonal_embedding_does_not_project_identically"
+    },
+    {
+      "id": "composition:S3-C3-kernel-through-sign",
+      "name": "C3 rotation subgroup through the S3 sign quotient",
+      "steps": [{"mapId":"map:S3-split-extension:kernel-inclusion"},{"mapId":"map:S3-split-extension:quotient"}],
+      "status": "established",
+      "statement": "The C3 kernel inclusion followed by the S3 sign quotient is the trivial homomorphism C3 -> C2.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-C3-CONJUGATE-SECTORS"],
+      "caveats": ["the_external_C2_automorphism_of_C3_is_realized_by_conjugation_only_after_forming_the_semidirect_product_S3"],
+      "falsifier": "the_rotation_subgroup_has_nontrivial_sign"
+    },
+    {
+      "id": "composition:S3-C2-section-roundtrip",
+      "name": "inversion section through the S3 sign quotient",
+      "steps": [{"mapId":"map:S3-split-extension:splitting-section"},{"mapId":"map:S3-split-extension:quotient"}],
+      "status": "established",
+      "statement": "The selected transposition C2 section followed by the S3 sign quotient is the identity homomorphism on C2.",
+      "provenance": ["SRC-ROT-GROUPS", "SRC-CORPUS-C3-CONJUGATE-SECTORS"],
+      "caveats": ["different transposition_sections_are_conjugate_and_the_selected_section_is_not_central"],
+      "falsifier": "the_declared_section_is_not_a_right_inverse_to_sign"
+    },
+    {
+      "id": "composition:C3-to-U1U1-via-C3U1",
+      "name": "colour cube-root phase into the ambient phase torus",
+      "steps": [{"mapId":"map:C3U1-direct-product:factor-1-inclusion"},{"mapId":"map:C3U1-subgroup-U1U1:inclusion"}],
+      "status": "corpus_established",
+      "statement": "The colour C3 factor includes in the residual C3 x U(1) ambiguity and then in the original U(1) x U(1) phase torus.",
+      "provenance": ["SRC-CORPUS-C3U1-RESIDUAL-PHASE", "SRC-EXEC-C3U1-RESIDUAL-PHASE"],
+      "caveats": ["this_is_the_first_colour_phase_coordinate_not_an_untyped_C3_embedding_in_the_torus"],
+      "falsifier": "the_factor_inclusion_or_residual_phase_embedding_fails"
+    },
+    {
+      "id": "composition:U1-to-U1U1-via-C3U1",
+      "name": "unfixed weak phase into the ambient phase torus",
+      "steps": [{"mapId":"map:C3U1-direct-product:factor-2-inclusion"},{"mapId":"map:C3U1-subgroup-U1U1:inclusion"}],
+      "status": "corpus_established",
+      "statement": "The full weak U(1) factor survives in the residual C3 x U(1) ambiguity and includes in the original phase torus.",
+      "provenance": ["SRC-CORPUS-C3U1-RESIDUAL-PHASE", "SRC-CORPUS-WEAK-PHASE-NOGO", "SRC-EXEC-C3U1-RESIDUAL-PHASE"],
+      "caveats": ["replacing_this_continuous_factor_by_C2_requires_extra_phase_sensitive_sewing"],
+      "falsifier": "the_weak_phase_is_intrinsically_reduced_by_the_bare_Jordan_data_or_the_embedding_fails"
+    },
+    {
+      "id": "composition:C6-to-U1U1-via-C3U1",
+      "name": "conditional sixfold residual phase into the ambient torus",
+      "steps": [{"mapId":"map:C6-subgroup-C3U1:inclusion"},{"mapId":"map:C3U1-subgroup-U1U1:inclusion"}],
+      "status": "corpus_established",
+      "statement": "Given the identified common volume, the finite C6 residual subgroup includes through C3 x U(1) into the original U(1) x U(1) ambiguity.",
+      "provenance": ["SRC-CORPUS-C3U1-RESIDUAL-PHASE", "SRC-CORPUS-WEAK-PHASE-NOGO", "SRC-EXEC-C3U1-RESIDUAL-PHASE", "SRC-ROT-GROUPS"],
+      "caveats": ["the_composite_is_not_available_without_the_declared_volume_sewing", "the_image_has_first_coordinate_C3_and_second_coordinate_C2"],
+      "falsifier": "the_volume_condition_holds_but_the_six_residual_pairs_do_not_form_the_declared_subgroup"
+    },
+    {
+      "id": "composition:Tits-to-B-via-full-automorphism-product",
+      "name": "Tits group through its full automorphism factor into the Baby Monster",
+      "steps": [{"mapId":"map:Tits-split-automorphism-extension:kernel-inclusion"},{"mapId":"map:S4TitsAut-direct-product:factor-2-inclusion"},{"mapId":"map:S4TitsAut-maximal-subgroup-B:inclusion"}],
+      "status": "established",
+      "statement": "The Tits simple group embeds in its full automorphism group, then in the second factor of S4 x ^2F4(2), and hence in the Baby Monster.",
+      "provenance": ["SRC-ATLAS-TITS", "SRC-ATLAS-BABY-MONSTER", "SRC-CONWAY-ATLAS"],
+      "caveats": ["this_is_the_selected_Tits_subgroup_in_the_ATLAS_Baby_Monster_maximal_subgroup", "it_does_not_identify_the_Tits_outer_involution_with_Monster_2A_or_fermion_parity"],
+      "falsifier": "any_declared_inclusion_or_the_maximal_subgroup_shape_fails"
+    },
+    {
+      "id": "composition:TitsAut-to-B-via-product",
+      "name": "full Tits automorphism factor into the Baby Monster",
+      "steps": [{"mapId":"map:S4TitsAut-direct-product:factor-2-inclusion"},{"mapId":"map:S4TitsAut-maximal-subgroup-B:inclusion"}],
+      "status": "established",
+      "statement": "The full group ^2F4(2)=T:2 embeds as the second direct factor of a maximal Baby Monster subgroup.",
+      "provenance": ["SRC-ATLAS-TITS", "SRC-ATLAS-BABY-MONSTER"],
+      "caveats": ["the_embedding_is_factor_typed_and_does_not_include_the_independent_S4_coordinate"],
+      "falsifier": "the_factor_inclusion_or_Baby_Monster_maximal_subgroup_embedding_fails"
+    },
+    {
+      "id": "composition:S4-to-B-via-Tits-local-product",
+      "name": "Tits-local S4 factor into the Baby Monster",
+      "steps": [{"mapId":"map:S4TitsAut-direct-product:factor-1-inclusion"},{"mapId":"map:S4TitsAut-maximal-subgroup-B:inclusion"}],
+      "status": "established",
+      "statement": "The S4 factor of the Tits-local maximal product embeds in the Baby Monster.",
+      "provenance": ["SRC-ATLAS-BABY-MONSTER"],
+      "caveats": ["this_specific_S4_embedding_is_not_identified_with_the_S4_factor_in_a_Monster_order_23_centralizer"],
+      "falsifier": "the_factor_inclusion_or_Baby_Monster_maximal_subgroup_embedding_fails"
+    },
+    {
+      "id": "composition:C2-to-M-via-2B-central-kernel",
+      "name": "central involution of 2.B into the Monster",
+      "steps": [{"mapId":"map:2B-central-extension:kernel-inclusion"},{"mapId":"map:2B-subgroup-M:inclusion"}],
+      "status": "established",
+      "statement": "The central C2 kernel of 2.B -> B includes through the 2A centralizer into the Monster as its selected 2A involution.",
+      "provenance": ["SRC-ATLAS", "SRC-CONWAY-ATLAS"],
+      "caveats": ["this_composite_tracks_the_selected_2A_class_and_is_not_a_generic_involution_embedding"],
+      "falsifier": "the_central_kernel_does_not_map_to_the_selected_Monster_2A_involution"
+    },
+    {
+      "id": "composition:Tits-to-M-via-compatible-2B-lift",
+      "name": "selected Baby Monster Tits subgroup lifted compatibly through 2.B into the Monster",
+      "steps": [{"mapId":"map:Tits-subgroup-2B-compatible-lift:inclusion"},{"mapId":"map:2B-subgroup-M:inclusion"}],
+      "status": "corpus_established",
+      "statement": "The unique complement in the split pullback of the selected Baby Monster Tits subgroup embeds through 2.B into the Monster.",
+      "provenance": ["SRC-ATLAS-TITS", "SRC-ATLAS-BABY-MONSTER", "SRC-LAM-YAMADA-MCKAY-E7", "SRC-EXEC-MBT-PULLBACK"],
+      "caveats": ["this_constructs_a_compatible_Monster_embedding_but_does_not_yet_identify_its_ATLAS_conjugacy_class", "the_central_2A_kernel_is_not_the_outer_C2_of_T_colon_2"],
+      "falsifier": "the_restricted_extension_fails_to_split_or_either_inclusion_fails"
+    },
+    {
+      "id": "composition:Tits-preimage-to-M-via-2B",
+      "name": "split C2 times Tits preimage into the Monster",
+      "steps": [{"mapId":"map:C2Tits-subgroup-2B:inclusion"},{"mapId":"map:2B-subgroup-M:inclusion"}],
+      "status": "corpus_established",
+      "statement": "The full preimage C2 x T of the selected Baby Monster Tits subgroup embeds through the 2A centralizer into the Monster.",
+      "provenance": ["SRC-ATLAS-TITS", "SRC-ATLAS-BABY-MONSTER", "SRC-LAM-YAMADA-MCKAY-E7", "SRC-EXEC-MBT-PULLBACK"],
+      "caveats": ["C2_times_T_is_not_the_nonsplit_outer_extension_T_colon_2", "the_full_S4_times_T_colon_2_preimage_remains_open"],
+      "falsifier": "the_preimage_structure_or_2B_inclusion_fails"
+    }
+  ]
+}

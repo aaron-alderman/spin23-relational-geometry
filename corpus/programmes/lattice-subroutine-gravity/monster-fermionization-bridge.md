@@ -82,6 +82,8 @@ The Monster has two relevant non-anomalous involutions:
 
 This is promising because the fermionic and Leech branches meet in one bosonic parent. It is not yet an intertwiner. The Rule-60/Golay deck bit belongs to the corpus's Leech seam construction; the free-fermion parity belongs to the \(2A\) branch. Their equality cannot be inferred from both being \(\mathbb Z_2\).
 
+The [Monster--Baby Monster--Tits corpus bridge](../moonshine-program-lattice/monster-baby-tits-corpus-bridge.md) adds a further control at exactly this point. The selected `2A` also chooses `2.B -> B` and hence a Tits-local subgroup of the Baby Monster, but the outer quotient of `T:2`, the central kernel of `2.B -> B`, and the centre carried by the `GL(2,3)` lift are distinct occurrences of abstract `C2`. Character restriction to the selected Tits complement can probe the Baby-Monster weight-two sector deterministically; it does not identify any of those involutions with fermion parity or the Rule-60 deck bit.
+
 ## Genus-two technology exists
 
 Independent work on fermionic vertex-operator superalgebras gives explicit genus-two sewing formulae for free fermions in terms of Szegő kernels, infinite determinants and theta functions, with controlled modular properties on the sewing domain.

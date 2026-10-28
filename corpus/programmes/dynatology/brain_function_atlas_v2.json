@@ -1,0 +1,246 @@
+{
+  "schema": "brain-function-atlas/2",
+  "date": "2026-10-27",
+  "authority": "operationally_complete_model_class_not_unique_anatomy_or_consciousness_theory",
+  "scope": {
+    "included": "closed_adaptive_human_agent_loop_from_viability_and_evidence_to_action_learning_and_offline_consolidation",
+    "excluded": [
+      "cellular_and_molecular_implementation_below_the_selected_grain",
+      "exhaustive_neuroanatomy",
+      "clinical_diagnosis_or_treatment",
+      "ontological_reduction_of_phenomenal_experience"
+    ],
+    "completenessCriterion": "every_feature_maps_to_one_primary_operator_a_composition_an_overlay_an_unresolved_residue_or_a_lower_level_implementation_detail",
+    "mutualExclusionCriterion": "primitive_operators_are_distinguished_by_the_new_output_type_produced_from_their_immediate_inputs"
+  },
+  "evidenceGrades": {
+    "E0": "interpretive_or_untested_localization",
+    "E1": "correlational_activation_connectivity_or_individual_difference",
+    "E2": "convergent_multimodal_lesion_association_or_cross_species_evidence",
+    "E3": "specific_causal_lesion_stimulation_or_controlled_perturbation",
+    "E4": "preregistered_independently_replicated_discriminating_causal_evidence"
+  },
+  "primitiveOperators": [
+    {
+      "id": "O01",
+      "label": "capacity_and_viability_regulation",
+      "signature": "body_state_external_constraints_intervention_to_viable_readiness_state",
+      "outputType": "viable_readiness_state",
+      "candidateSystems": ["brainstem_arousal", "hypothalamus", "basal_forebrain", "central_thalamus", "autonomic_endocrine_effectors"],
+      "groundMeasures": ["sleep_wake_state", "responsiveness", "EEG", "pupil", "ECG_HRV", "respiration", "perturbational_complexity"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O02",
+      "label": "transduction",
+      "signature": "external_and_internal_change_to_modality_specific_evidence",
+      "outputType": "modality_specific_evidence",
+      "candidateSystems": ["sensory_receptors_and_pathways", "spinal_vagal_interoception", "thalamic_relays", "primary_sensory_cortex"],
+      "groundMeasures": ["detection_threshold", "evoked_response", "masking", "sensory_lesion"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O03",
+      "label": "hidden_state_estimation",
+      "signature": "evidence_prior_and_parameters_to_posterior_world_body_or_agent_belief",
+      "outputType": "posterior_state_belief",
+      "candidateSystems": ["sensory_association_hierarchies", "hippocampal_models", "cerebellar_models", "insula", "default_network_subsystems"],
+      "groundMeasures": ["psychometric_function", "decoding", "prediction_error", "illusion", "generalization"],
+      "evidence": "E2"
+    },
+    {
+      "id": "O04",
+      "label": "selection_precision_and_scope",
+      "signature": "candidate_evidence_representations_and_targets_to_routing_weights",
+      "outputType": "routing_weight_vector",
+      "candidateSystems": ["dorsal_attention", "pulvinar", "sensory_gain", "basal_ganglia_gating", "prefrontal_gating"],
+      "groundMeasures": ["cueing_benefit", "distractor_cost", "gaze", "pupil", "modality_specific_gain"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O05",
+      "label": "cross_system_availability",
+      "signature": "selected_content_and_capacity_to_cross_system_availability_state",
+      "outputType": "availability_token",
+      "candidateSystems": ["posterior_recurrent_processing", "frontoparietal_broadcast_candidate", "thalamocortical_coordination"],
+      "groundMeasures": ["cross_task_generalization", "no_report_contrast", "delayed_use", "masking", "causal_perturbation"],
+      "evidence": "E2"
+    },
+    {
+      "id": "O06",
+      "label": "active_maintenance",
+      "signature": "available_content_task_and_previous_state_to_maintained_state_without_current_input",
+      "outputType": "maintained_task_or_memory_state",
+      "candidateSystems": ["frontoparietal_working_memory", "sensory_working_memory", "thalamus", "basal_ganglia"],
+      "groundMeasures": ["delay_accuracy", "interference_cost", "perturb_and_recover", "delay_state_decoding"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O07",
+      "label": "relevance_and_interrupt_priority",
+      "signature": "estimated_state_task_and_target_to_priority_or_reset_signal",
+      "outputType": "priority_reset_signal",
+      "candidateSystems": ["anterior_insula_aMCC_salience", "right_ventral_attention", "amygdala", "neuromodulatory_arousal"],
+      "groundMeasures": ["surprise_by_relevance_interaction", "reorienting_latency", "pupil", "autonomic_response"],
+      "evidence": "E2"
+    },
+    {
+      "id": "O08",
+      "label": "valuation",
+      "signature": "estimated_state_body_target_and_possible_outcome_to_multidimensional_value_cost_vector",
+      "outputType": "value_cost_vector",
+      "candidateSystems": ["vmPFC_OFC", "striatum", "amygdala", "insula", "hypothalamus", "distributed_affective_systems"],
+      "groundMeasures": ["revealed_preference", "effort_discounting", "risk_discounting", "delay_discounting", "affect", "physiological_cost"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O09",
+      "label": "target_and_goal_formation",
+      "signature": "value_need_context_memory_and_previous_targets_to_ranked_goal_constraint_stack",
+      "outputType": "ranked_goal_constraint_stack",
+      "candidateSystems": ["hippocampal_prefrontal_prospection", "vmPFC_OFC", "striatum", "hypothalamic_need_systems"],
+      "groundMeasures": ["goal_choice", "outcome_devaluation", "prospective_planning", "preference_reversal"],
+      "evidence": "E2"
+    },
+    {
+      "id": "O10",
+      "label": "control_allocation",
+      "signature": "value_goal_priority_and_maintained_state_to_control_gain_strategy_and_interruption_budget",
+      "outputType": "control_allocation_vector",
+      "candidateSystems": ["aMCC_dACC", "anterior_insula", "lateral_PFC", "multiple_demand", "striatum"],
+      "groundMeasures": ["demand_avoidance", "control_discounting", "conflict_adaptation", "effort_perturbation"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O11",
+      "label": "policy_selection",
+      "signature": "belief_maintained_state_goal_control_and_parameters_to_intervention_distribution",
+      "outputType": "policy_distribution",
+      "candidateSystems": ["basal_ganglia", "prefrontal", "premotor", "hippocampal_planning", "cerebellum"],
+      "groundMeasures": ["choice_distribution", "reaction_time_distribution", "exploration", "stopping", "policy_switch"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O12",
+      "label": "actuation",
+      "signature": "selected_policy_to_motor_autonomic_cognitive_or_symbolic_intervention",
+      "outputType": "intervention",
+      "candidateSystems": ["motor_premotor", "brainstem_spinal_effectors", "autonomic_systems", "language_motor_networks"],
+      "groundMeasures": ["EMG", "force", "kinematics", "speech", "gaze", "visceral_response"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O13",
+      "label": "outcome_comparison_and_credit",
+      "signature": "predicted_and_observed_consequence_to_signed_error_progress_and_credit_signal",
+      "outputType": "error_progress_credit_signal",
+      "candidateSystems": ["cerebellum", "aMCC_dACC", "striatum", "sensory_comparators", "neuromodulators"],
+      "groundMeasures": ["error_related_negativity", "reward_prediction_error", "sensory_attenuation", "post_error_adjustment"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O14",
+      "label": "online_learning_and_retention",
+      "signature": "parameters_error_credit_state_and_intervention_to_updated_model_value_or_policy_parameters",
+      "outputType": "updated_online_parameters",
+      "candidateSystems": ["hippocampus", "striatum", "cerebellum", "cortex", "neuromodulatory_plasticity"],
+      "groundMeasures": ["trialwise_learning_rate", "reversal", "near_transfer", "feedback_manipulation"],
+      "evidence": "E3"
+    },
+    {
+      "id": "O15",
+      "label": "offline_consolidation_reorganization_and_downselection",
+      "signature": "recent_traces_and_offline_state_to_stabilized_or_restructured_long_term_model",
+      "outputType": "consolidated_long_term_parameters",
+      "candidateSystems": ["hippocampal_neocortical_replay", "sleep_oscillations", "systems_consolidation", "synaptic_consolidation"],
+      "groundMeasures": ["next_day_retention", "far_transfer", "sleep_staging", "targeted_memory_reactivation"],
+      "evidence": "E3"
+    }
+  ],
+  "overlayAxes": {
+    "target": ["world", "body", "task", "self", "other_agent", "group", "operator"],
+    "timescale": ["millisecond", "episode", "day", "development", "institution"],
+    "mode": ["automatic", "deliberate", "broad", "narrow", "tonic", "phasic", "online", "offline"],
+    "expression": ["covert", "motor", "autonomic", "symbolic_public"],
+    "implementationAnnotations": ["hemisphere_weighting", "network", "region", "cell_type", "oscillation", "neuromodulator"],
+    "unresolved": ["phenomenal_status", "ontological_status"]
+  },
+  "composites": [
+    {"label": "interoception", "primary": "O03", "dependsOn": ["O01", "O02"], "overlays": {"target": "body"}},
+    {"label": "allostasis_and_homeostasis", "primary": "O01", "dependsOn": ["O03", "O08", "O09", "O12", "O13"]},
+    {"label": "perception", "primary": "O03", "dependsOn": ["O02", "O04"]},
+    {"label": "spatial_and_temporal_orientation", "primary": "O03", "dependsOn": ["O02", "O06", "O14", "O15"]},
+    {"label": "alertness", "primary": "O01", "dependsOn": ["O07"]},
+    {"label": "sustained_attention", "primary": "O04", "dependsOn": ["O01", "O06", "O10"]},
+    {"label": "vigilance", "primary": "O07", "dependsOn": ["O01", "O04", "O06"]},
+    {"label": "focused_attention", "primary": "O04", "dependsOn": ["O03"]},
+    {"label": "divided_attention", "primary": "O04", "dependsOn": ["O06", "O10", "O11"]},
+    {"label": "working_memory", "primary": "O06", "dependsOn": ["O04"]},
+    {"label": "long_term_memory_encoding", "primary": "O14", "dependsOn": ["O03", "O04", "O13"]},
+    {"label": "memory_retrieval_and_recollection", "primary": "O03", "dependsOn": ["O04", "O14", "O15"]},
+    {"label": "ignition", "primary": "O05", "dependsOn": ["O01", "O03", "O04"], "status": "candidate_nonlinear_dynamical_signature"},
+    {"label": "metacognition", "primary": "O03", "dependsOn": ["O05", "O06"], "overlays": {"target": "operator"}},
+    {"label": "affect_and_emotion", "primary": "O08", "dependsOn": ["O01", "O03", "O07", "O12"]},
+    {"label": "emotion_regulation", "primary": "O10", "dependsOn": ["O03", "O04", "O08", "O11", "O12"]},
+    {"label": "motivation_reward_and_avoidance", "primary": "O08", "dependsOn": ["O01", "O09", "O10"]},
+    {"label": "imagination_and_planning", "primary": "O03", "dependsOn": ["O08", "O09", "O11"], "overlays": {"mode": "counterfactual"}},
+    {"label": "reasoning_and_problem_solving", "primary": "O03", "dependsOn": ["O05", "O06", "O08", "O09", "O10", "O11"]},
+    {"label": "decision", "primary": "O11", "dependsOn": ["O03", "O08", "O09", "O10"]},
+    {"label": "inhibition", "primary": "O10", "dependsOn": ["O11", "O12"]},
+    {"label": "will_and_tenacity", "primary": "O10", "dependsOn": ["O08", "O09", "O11", "O12"]},
+    {"label": "action_intention_and_initiation", "primary": "O11", "dependsOn": ["O09", "O10", "O12"]},
+    {"label": "agency", "primary": "O03", "dependsOn": ["O11", "O12", "O13"], "overlays": {"target": "self_other_causal_attribution"}},
+    {"label": "body_ownership", "primary": "O03", "dependsOn": ["O01", "O02"], "overlays": {"target": "self_body"}},
+    {"label": "self_model", "primary": "O03", "dependsOn": ["O01", "O13", "O14", "O15"], "overlays": {"target": "self", "timescale": "cross_time"}},
+    {"label": "social_cognition", "primary": "O03", "dependsOn": ["O08", "O09", "O11"], "overlays": {"target": "other_agent_or_group"}},
+    {"label": "language", "primary": "O03", "dependsOn": ["O06", "O12"], "status": "representational_format_and_symbolic_output_channel"},
+    {"label": "report", "primary": "O12", "dependsOn": ["O05", "O06", "O11"], "overlays": {"expression": "symbolic_public"}},
+    {"label": "creativity", "primary": "O03", "dependsOn": ["O07", "O08", "O11", "O14"], "overlays": {"mode": "generative_counterfactual"}},
+    {"label": "sleep", "primary": "O01", "dependsOn": ["O15"], "overlays": {"mode": "offline_capacity_regime"}},
+    {"label": "dreaming", "primary": "O03", "dependsOn": ["O15"], "overlays": {"mode": "offline", "unresolved": "phenomenal_status"}},
+    {"label": "broad_open_attention", "primary": "O04", "dependsOn": ["O03", "O07"], "overlays": {"mode": "broad_low_commitment_low_reset_threshold"}},
+    {"label": "narrow_targeted_attention", "primary": "O04", "dependsOn": ["O03", "O06", "O10"], "overlays": {"mode": "narrow_high_precision_high_commitment"}},
+    {"label": "consciousness_capacity", "primary": "O01", "dependsOn": ["O03", "O05"], "overlays": {"unresolved": "phenomenal_status"}},
+    {"label": "conscious_content", "primary": "O03", "dependsOn": ["O01", "O04"], "overlays": {"unresolved": "phenomenal_status"}},
+    {"label": "conscious_access", "primary": "O05", "dependsOn": ["O01", "O03", "O04"]},
+    {"label": "conscious_experience", "primary": "O05", "dependsOn": ["O01", "O03", "O04"], "overlays": {"unresolved": "phenomenal_status"}, "status": "access_and_capacity_candidates_do_not_close_phenomenology"}
+  ],
+  "legacyCoverage": [
+    {"legacyId": "BA-001", "primary": "O01"},
+    {"legacyId": "BA-002", "primary": "O01"},
+    {"legacyId": "BA-003", "primary": "O07"},
+    {"legacyId": "BA-004", "primary": "O04"},
+    {"legacyId": "BA-005", "primary": "O07"},
+    {"legacyId": "BA-006", "primary": "O05"},
+    {"legacyId": "BA-007", "primary": "O03"},
+    {"legacyId": "BA-008", "primary": "O10"},
+    {"legacyId": "BA-009", "primary": "O11"},
+    {"legacyId": "BA-010", "primary": "O03"},
+    {"legacyId": "BA-011", "primary": "O03"},
+    {"legacyId": "BA-012", "primary": "O14"}
+  ],
+  "groundingProtocol": {
+    "newHumanExperimentation": "not_proposed",
+    "admissibleEvidence": ["published_effects_and_nulls", "ethically_released_open_data", "existing_clinical_lesion_and_stimulation_literature", "existing_comparative_and_naturalistic_observations", "computational_reconstruction", "synthetic_agents", "cross_dataset_prediction"],
+    "recoverWhenAvailable": ["timestamped_events", "accuracy_reaction_time_omissions", "gaze_pupil", "EEG", "ECG_HRV", "respiration", "electrodermal_activity", "force_or_kinematics", "confidence", "authorship_judgment", "sleep_wake_history", "later_retention", "immutable_task_and_raw_event_provenance"],
+    "unitOfAnalysis": "typed_transfer_law_between_source_output_and_target_input",
+    "modelClass": "hierarchical_state_space_or_mechanistic_transfer_model_with_dataset_and_person_effects_as_nuisance_structure_explicit_missingness_and_nested_join_ablations",
+    "retentionRule": "retain_a_join_only_if_removal_harms_held_out_prediction_or_destroys_an_existing_well_supported_dissociation_and_the_result_survives_dataset_shift",
+    "missingMiddleRegister": "corpus/programmes/dynatology/brain_function_missing_middle_register_v1.json",
+    "relationshipAtlas": "corpus/programmes/dynatology/brain_relationship_atlas_v1.json"
+  },
+  "reopenConditions": [
+    "feature_does_not_compile_into_primitives_overlays_residue_or_implementation",
+    "two_primitives_are_observationally_indistinguishable_across_proposed_interventions",
+    "one_primitive_has_two_independently_perturbable_output_types",
+    "ground_measure_cannot_distinguish_target_from_dependency",
+    "anatomy_is_used_to_repair_functional_ambiguity",
+    "phenomenal_status_is_inferred_from_access_report_or_self_model"
+  ],
+  "sourceRefs": [
+    "corpus/programmes/dynatology/mystery_atlas_22_attention_will_and_conscious_access_brain_atlas.md",
+    "corpus/programmes/dynatology/brain_function_atlas_v1.json",
+    "corpus/programmes/orientation/orientation_architecture.md",
+    "corpus/claims/1100-1199/1144_consciousness_is_a_live_organizational_spike_but_not_yet_the_missing_physical_coupling.md"
+  ]
+}

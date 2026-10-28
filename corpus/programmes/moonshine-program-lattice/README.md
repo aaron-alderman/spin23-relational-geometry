@@ -928,6 +928,7 @@ recovers the ten Baby-Monster components.
 - Lin and Shao, [*Duality Defect of the Monster CFT*](https://arxiv.org/abs/1911.00042)
 - [Existing lattice-subroutine programme](../lattice-subroutine-gravity/README.md)
 - [Monster fermionization bridge](../lattice-subroutine-gravity/monster-fermionization-bridge.md)
+- [Monster--Baby Monster--Tits local spectral microscope](monster-baby-tits-corpus-bridge.md)
 - [Rule-60/Golay seam torsor](../../claims/1700-1799/1793_the_rule60_golay_kernel_supplies_the_unique_tm23_leech_affine_seam_torsor.md)
 - [Connected/discrete symmetry separation](../../claims/0100-0199/138_connected_continuous_vs_arithmetic_symmetry_separation.md)
 - [Leech pair-Gram bridge](../../claims/1200-1299/1217_leech_pair_gram_geometry_reaches_spin23_but_needs_an_orientation_twist_and_affine_theta_shift.md)

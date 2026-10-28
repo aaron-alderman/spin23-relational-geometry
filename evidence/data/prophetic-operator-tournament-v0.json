@@ -1,0 +1,115 @@
+{
+  "protocol": "prophetic-admissibility/operator-tournament/0",
+  "generatedAt": "2026-10-28",
+  "design": {
+    "type": "retrospective calendar-held-out control",
+    "trainingRule": "closed source records with sourceYear < 1900",
+    "heldOutRule": "closed source records with sourceYear >= 1900",
+    "outcomeEncoding": {
+      "match": 1,
+      "partial": 0.5,
+      "miss": 0
+    },
+    "properScore": "mean Brier score; lower is better",
+    "limitation": "The registry is deliberately assembled for control and source-method diversity, not sampled from a defined forecast population. The split was authored after historical outcomes were known."
+  },
+  "trainingIds": [
+    "southcott-shiloh-1814",
+    "miller-1843-1844",
+    "smith-south-carolina-war-1832"
+  ],
+  "heldOutIds": [
+    "rutherford-1925-patriarchs",
+    "whisenant-rapture-1988",
+    "camping-2011"
+  ],
+  "fittedParameters": {
+    "globalLaplaceProbability": 0.3,
+    "exactTerminalLaplaceProbability": 0.25,
+    "terminalTrainingCount": 2
+  },
+  "ranking": [
+    {
+      "id": "skeptical-terminal-null",
+      "description": "Exact terminal forecasts have 0.05 prior success probability in the declared window.",
+      "fittedFromTraining": false,
+      "meanBrier": 0.0025000000000000005,
+      "rows": [
+        {
+          "id": "rutherford-1925-patriarchs",
+          "observed": 0,
+          "predicted": 0.05,
+          "brier": 0.0025000000000000005
+        },
+        {
+          "id": "whisenant-rapture-1988",
+          "observed": 0,
+          "predicted": 0.05,
+          "brier": 0.0025000000000000005
+        },
+        {
+          "id": "camping-2011",
+          "observed": 0,
+          "predicted": 0.05,
+          "brier": 0.0025000000000000005
+        }
+      ]
+    },
+    {
+      "id": "operator-family-laplace",
+      "description": "Laplace-smoothed success rate for pre-1900 exact terminal forecasts.",
+      "fittedFromTraining": true,
+      "meanBrier": 0.0625,
+      "rows": [
+        {
+          "id": "rutherford-1925-patriarchs",
+          "observed": 0,
+          "predicted": 0.25,
+          "brier": 0.0625
+        },
+        {
+          "id": "whisenant-rapture-1988",
+          "observed": 0,
+          "predicted": 0.25,
+          "brier": 0.0625
+        },
+        {
+          "id": "camping-2011",
+          "observed": 0,
+          "predicted": 0.25,
+          "brier": 0.0625
+        }
+      ]
+    },
+    {
+      "id": "global-laplace",
+      "description": "One Laplace-smoothed success rate for all pre-1900 closed forecasts.",
+      "fittedFromTraining": true,
+      "meanBrier": 0.09000000000000001,
+      "rows": [
+        {
+          "id": "rutherford-1925-patriarchs",
+          "observed": 0,
+          "predicted": 0.3,
+          "brier": 0.09
+        },
+        {
+          "id": "whisenant-rapture-1988",
+          "observed": 0,
+          "predicted": 0.3,
+          "brier": 0.09
+        },
+        {
+          "id": "camping-2011",
+          "observed": 0,
+          "predicted": 0.3,
+          "brier": 0.09
+        }
+      ]
+    }
+  ],
+  "winner": "skeptical-terminal-null",
+  "positiveHermeneuticRankingIdentified": false,
+  "decision": "The skeptical exact-date null wins the selected held-out control. Exact terminal arithmetic earns adverse evidence; no positive hermeneutic operator is validated.",
+  "authorityBoundary": "This tournament ranks prediction calibration on a small selected modern control registry. It does not rank biblical truth, divine agency, or all prophetic discourse."
+}

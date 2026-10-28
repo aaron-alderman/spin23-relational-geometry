@@ -1,0 +1,68 @@
+{
+  "protocol": "prophetic-admissibility/chronology-registry/1",
+  "date": "2026-10-28",
+  "window": {"earliestYear": 2026, "latestYear": 2100, "filterAfterEnumeration": true},
+  "calendar": {"system": "astronomical year numbering", "examples": {"538 BCE": -537, "457 BCE": -456, "AD 1": 1}, "reason": "Astronomical numbering supplies year zero and makes addition unambiguous."},
+  "grammar": {
+    "maximumTermsIncludingAnchor": 3,
+    "allowed": ["anchor + one duration", "anchor + one duration + one explicitly linked increment", "anchor + the same jubilee duration twice"],
+    "forbidden": ["unregistered anchor", "unregistered duration", "arbitrary sign choice", "arbitrary coefficient", "digit operation", "cross-family addition without a registered recipe"]
+  },
+  "durations": [
+    {"id":"days-1260","quantity":1260,"unit":"prophetic-days","sourceIds":["dan-007-four-beasts","rev-011-forty-two-months","rev-011-two-witnesses","rev-012-woman-wilderness","rev-013-beast-forty-two"],"families":["apocalyptic-duration"]},
+    {"id":"days-1290","quantity":1290,"unit":"prophetic-days","sourceIds":["dan-012-1290-1335"],"families":["apocalyptic-duration"]},
+    {"id":"days-1335","quantity":1335,"unit":"prophetic-days","sourceIds":["dan-012-1290-1335"],"families":["apocalyptic-duration"]},
+    {"id":"seventy-sevens-490","quantity":490,"unit":"years-under-seventy-sevens-reading","sourceIds":["dan-009-seventy-weeks"],"families":["daniel-decree"]},
+    {"id":"days-2300","quantity":2300,"unit":"prophetic-days","sourceIds":["dan-008-media-persia-greece"],"families":["daniel-2300"]},
+    {"id":"millennium-1000","quantity":1000,"unit":"years","sourceIds":["rev-020-millennium"],"families":["millennium"]},
+    {"id":"generation-40","quantity":40,"unit":"years","sourceIds":["mat-024-generation"],"families":["modern-generation"],"status":"reception convention, not a duration stated by Matthew"},
+    {"id":"generation-70","quantity":70,"unit":"years","sourceIds":["mat-024-generation"],"families":["modern-generation"],"status":"reception convention informed by Psalm 90:10"},
+    {"id":"generation-80","quantity":80,"unit":"years","sourceIds":["mat-024-generation"],"families":["modern-generation"],"status":"reception convention informed by Psalm 90:10"},
+    {"id":"generation-100","quantity":100,"unit":"years","sourceIds":["mat-024-generation"],"families":["modern-generation"],"status":"stress-test convention"},
+    {"id":"generation-120","quantity":120,"unit":"years","sourceIds":["mat-024-generation"],"families":["modern-generation"],"status":"reception convention sometimes linked to Genesis 6:3"},
+    {"id":"jubilee-49","quantity":49,"unit":"years","sourceIds":[],"families":["jubilee"],"status":"Leviticus 25 seven-times-seven cycle"},
+    {"id":"four-ezra-400","quantity":400,"unit":"years","sourceIds":["4ezr-007-messiah-400"],"families":["second-temple-duration"]}
+  ],
+  "anchors": [
+    {"id":"cyrus-538-bce","astronomicalYear":-537,"label":"Cyrus/Babylon transition and early return policy","families":["daniel-decree"],"tier":"historical-anchor"},
+    {"id":"artaxerxes-ezra-457-bce","astronomicalYear":-456,"label":"Traditional 457 BCE Artaxerxes/Ezra commission anchor","families":["daniel-decree","daniel-2300"],"tier":"interpretive-historical-anchor"},
+    {"id":"artaxerxes-nehemiah-444-bce","astronomicalYear":-443,"label":"Traditional 444 BCE Nehemiah/Jerusalem decree anchor","families":["daniel-decree"],"tier":"interpretive-historical-anchor"},
+    {"id":"alexander-persia-331-bce","astronomicalYear":-330,"label":"Alexander's conquest of Persia around 331 BCE","families":["daniel-2300"],"tier":"newtonian-historical-anchor"},
+    {"id":"antiochus-desecration-167-bce","astronomicalYear":-166,"label":"Antiochene temple desecration","families":["apocalyptic-preterist"],"tier":"historical-anchor"},
+    {"id":"antiochus-rededication-164-bce","astronomicalYear":-163,"label":"Temple rededication under Judas Maccabeus","families":["apocalyptic-preterist"],"tier":"historical-anchor"},
+    {"id":"jesus-ministry-30","astronomicalYear":30,"label":"Early bound for Jesus' death/resurrection chronology","families":["millennium","second-temple-duration"],"tier":"historical-range-bound"},
+    {"id":"jesus-ministry-33","astronomicalYear":33,"label":"Late bound for Jesus' death/resurrection chronology","families":["millennium","second-temple-duration"],"tier":"historical-range-bound"},
+    {"id":"jerusalem-destruction-70","astronomicalYear":70,"label":"Roman destruction of Jerusalem and the Second Temple","families":["apocalyptic-roman","millennium","second-temple-duration"],"tier":"historical-anchor"},
+    {"id":"edict-milan-313","astronomicalYear":313,"label":"Constantinian toleration milestone","families":["apocalyptic-roman","millennium"],"tier":"reception-anchor"},
+    {"id":"nicaea-325","astronomicalYear":325,"label":"Council of Nicaea","families":["apocalyptic-roman"],"tier":"reception-anchor"},
+    {"id":"western-empire-476","astronomicalYear":476,"label":"Conventional fall of the western Roman imperial office","families":["apocalyptic-roman"],"tier":"reception-anchor"},
+    {"id":"historicist-papal-538","astronomicalYear":538,"label":"Historicist papal-supremacy starting convention","families":["apocalyptic-historicist"],"tier":"reception-anchor"},
+    {"id":"historicist-papal-606","astronomicalYear":606,"label":"Historicist universal-bishop starting convention","families":["apocalyptic-historicist"],"tier":"reception-anchor"},
+    {"id":"pepin-papal-states-756","astronomicalYear":756,"label":"Donation of Pepin/Papal States milestone","families":["apocalyptic-historicist","newton-stage"],"tier":"historical-reception-anchor"},
+    {"id":"lombard-conquest-774","astronomicalYear":774,"label":"Charlemagne's conquest of the Lombard kingdom","families":["newton-stage"],"tier":"historical-stage-anchor"},
+    {"id":"newton-three-kings-800","astronomicalYear":800,"label":"Newton's selected completion of the conquest of the three kings","families":["apocalyptic-historicist","newton-stage","millennium"],"tier":"primary-source-explicit","source":"https://www.newtonproject.ox.ac.uk/view/texts/normalized/THEM00437"},
+    {"id":"millennial-epoch-1000","astronomicalYear":1000,"label":"Calendar millennium reception anchor","families":["millennium"],"tier":"stress-test-anchor"},
+    {"id":"balfour-1917","astronomicalYear":1917,"label":"Balfour Declaration/Jerusalem-transition reception anchor","families":["modern-generation","jubilee"],"tier":"modern-reception-anchor"},
+    {"id":"israel-1948","astronomicalYear":1948,"label":"Establishment of the State of Israel reception anchor","families":["modern-generation","jubilee"],"tier":"modern-reception-anchor"},
+    {"id":"jerusalem-1967","astronomicalYear":1967,"label":"1967 Jerusalem/war reception anchor","families":["modern-generation","jubilee"],"tier":"modern-reception-anchor"}
+  ],
+  "recipes": [
+    {"id":"daniel-decree-490","anchorFamily":"daniel-decree","durationFamily":"daniel-decree","operator":"fixed-years","tradition":"Daniel seventy-weeks","attestationTier":"historically-attested"},
+    {"id":"daniel-2300-day-year","anchorFamily":"daniel-2300","durationFamily":"daniel-2300","operator":"day-year","tradition":"Daniel 2300 historicist/Newtonian","attestationTier":"historically-attested"},
+    {"id":"preterist-literal-days","anchorFamily":"apocalyptic-preterist","durationFamily":"apocalyptic-duration","operator":"literal-days","tradition":"Antiochene preterist","attestationTier":"historically-attested"},
+    {"id":"roman-literal-days","anchorFamily":"apocalyptic-roman","durationFamily":"apocalyptic-duration","operator":"literal-days","tradition":"Roman-preterist control","attestationTier":"stress-test"},
+    {"id":"roman-day-year","anchorFamily":"apocalyptic-roman","durationFamily":"apocalyptic-duration","operator":"day-year","tradition":"Roman historicist extension","attestationTier":"reception-extension"},
+    {"id":"historicist-literal-days","anchorFamily":"apocalyptic-historicist","durationFamily":"apocalyptic-duration","operator":"literal-days","tradition":"Historicist literal control","attestationTier":"stress-test"},
+    {"id":"historicist-day-year","anchorFamily":"apocalyptic-historicist","durationFamily":"apocalyptic-duration","operator":"day-year","tradition":"Papal historicist","attestationTier":"historically-attested"},
+    {"id":"newton-stage-day-year","anchorFamily":"newton-stage","durationFamily":"apocalyptic-duration","operator":"day-year","tradition":"Newton historical-stage sensitivity","attestationTier":"reception-extension"},
+    {"id":"millennium-literal-years","anchorFamily":"millennium","durationFamily":"millennium","operator":"fixed-years","tradition":"Millennial chronology","attestationTier":"historically-attested"},
+    {"id":"modern-generation-fixed","anchorFamily":"modern-generation","durationFamily":"modern-generation","operator":"fixed-years","tradition":"Modern Israel generation chronology","attestationTier":"reception-extension"},
+    {"id":"modern-jubilee-single","anchorFamily":"jubilee","durationFamily":"jubilee","operator":"fixed-years","tradition":"Modern Israel jubilee chronology","attestationTier":"reception-extension"},
+    {"id":"modern-jubilee-double","anchorFamily":"jubilee","durationFamily":"jubilee","operator":"repeat-once","tradition":"Modern Israel double-jubilee chronology","attestationTier":"stress-test"},
+    {"id":"four-ezra-messianic","anchorFamily":"second-temple-duration","durationFamily":"second-temple-duration","operator":"fixed-years","tradition":"4 Ezra messianic duration sensitivity","attestationTier":"textual-extension"}
+  ],
+  "linkedIncrements": [
+    {"fromDurationId":"days-1260","increment":30,"toDurationId":"days-1290"},
+    {"fromDurationId":"days-1290","increment":45,"toDurationId":"days-1335"}
+  ]
+}

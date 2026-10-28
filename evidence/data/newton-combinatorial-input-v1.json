@@ -1,0 +1,47 @@
+{
+  "protocol": "prophetic-admissibility/newton-combinatorial-input/1",
+  "date": "2026-10-28",
+  "analysisWindow": {"earliest": "2026-10-28", "latest": "2100-12-31", "filterStage": "after-enumeration"},
+  "grammar": {
+    "maximumTermsIncludingAnchor": 3,
+    "allowedForms": ["anchor + duration", "anchor + baseDuration + explicitly-linkedIncrement"],
+    "prohibited": ["arbitrary subtraction", "arbitrary multiplication", "digit reversal", "digit concatenation", "gematria", "unlinked cross-text addition", "choosing an anchor because its result falls inside the analysis window"],
+    "simplicityOrder": "fewer terms first; direct source expression before derived equivalent; fewer interpretive extensions first"
+  },
+  "anchors": [
+    {
+      "id": "newton-complete-three-kings-800",
+      "year": 800,
+      "label": "Newton's completion of the conquest of the three kings",
+      "sourceStatus": "explicitly selected by Newton",
+      "source": "https://www.newtonproject.ox.ac.uk/view/texts/normalized/THEM00437"
+    }
+  ],
+  "durationFamily": {
+    "id": "daniel-revelation-apocalyptic-duration-family",
+    "aliases": [
+      {"quantity": 1260, "unit": "prophetic-days", "linkedForms": ["42 months", "time, times and half a time"], "sourceIds": ["dan-007-four-beasts", "rev-011-forty-two-months", "rev-011-two-witnesses", "rev-012-woman-wilderness", "rev-013-beast-forty-two"]},
+      {"quantity": 1290, "unit": "prophetic-days", "linkedForms": [], "sourceIds": ["dan-012-1290-1335"]},
+      {"quantity": 1335, "unit": "prophetic-days", "linkedForms": [], "sourceIds": ["dan-012-1290-1335"]}
+    ],
+    "increments": [
+      {"id": "increment-1260-to-1290", "quantity": 30, "unit": "prophetic-days", "from": 1260, "to": 1290, "sourceStatus": "arithmetic difference between adjacent registered durations"},
+      {"id": "increment-1290-to-1335", "quantity": 45, "unit": "prophetic-days", "from": 1290, "to": 1335, "sourceStatus": "arithmetic difference between adjacent registered durations"}
+    ],
+    "sources": [
+      "https://www.newtonproject.ox.ac.uk/view/texts/normalized/THEM00437",
+      "https://www.biblegateway.com/passage/?search=Daniel%207%3A25%3B%2012%3A7-13%3B%20Revelation%2011%3A2-3%3B%2012%3A6%2C14%3B%2013%3A5&version=NRSVUE"
+    ]
+  },
+  "operators": [
+    {"id": "literal-days", "yearsPerPropheticDay": 0.0027378508, "status": "control", "mayComposeIncrement": false},
+    {"id": "newton-day-year", "yearsPerPropheticDay": 1, "status": "explicit Newton method", "mayComposeIncrement": true},
+    {"id": "day-millennium", "yearsPerPropheticDay": 1000, "status": "speculative control", "mayComposeIncrement": false}
+  ],
+  "rankingRule": [
+    "Newton-explicit expression before extensions",
+    "more distinct source books before fewer",
+    "fewer terms before more",
+    "raw derivation count only after algebraic and lineage deduplication"
+  ]
+}

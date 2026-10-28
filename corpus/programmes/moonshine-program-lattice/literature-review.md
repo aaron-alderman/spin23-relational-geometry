@@ -310,6 +310,16 @@ affine Cartan matrix and shows why overlap alone is insufficient: the
 \(3C\) and \(4B\) types both have overlap \(1/256\) but different return
 orders. See [Wave 7.117](../frontier/wave-7/frontier_wave7_117_monster_ising_pair_affine_e8_operator_atlas.md).
 
+A selected Ising vector also opens a different, occurrence-sensitive route:
+its Monster `2A` centralizer is `2.B`, its effective commutant action is the
+Baby Monster `B`, and a Tits-local maximal subgroup can be lifted and followed
+back into the Monster. The resulting [Monster--Baby Monster--Tits spectral
+microscope](monster-baby-tits-corpus-bridge.md) is a deterministic character
+restriction test on the same weight-two operator space. It is not another
+interpretation of the affine-`E8` diagram: the Tits outer involution, Monster
+`2A`, lift centres and fermion parity remain distinct occurrences, and the
+Tits group cannot carry the order-23 rail.
+
 ### 5.3 The order-46 connected benchmark
 
 The common order-46 carrier does not automatically couple its order-2 and
