@@ -2867,6 +2867,16 @@ whether any independently motivated physical carrier realizes one face. No
 Monster action, genus-two law, \(Sp(4,\mathbb Z)\), \(Spin(2,3)\) or dynamics is
 inferred from the genus-one identity.
 
+[Claims 1797--1799](../1700-1799/1799_the_torus_knot_rogers_ramanujan_lane_is_exhausted_at_four_categorified_or_physical_inputs.md)
+complete the follow-through. The scalar product exactly recovers the coprime
+pair through its least period and maximum exponent, but groupoid volume cannot
+recover the module category. The product is also a normalized nonunitary
+\(\mathcal W_a(a,a+b)\) character; \((2,3)\) is the \(M(2,5)\) Yang--Lee
+character and therefore has a genuine critical-physics interpretation. The
+remaining frontier is four external inputs: categorified Quot/HOMFLY/perverse
+proofs, the full linear-term character family, a sector-resolved experimental
+character tower, or an operational module-to-device functor.
+
 [AZ-045](../../programmes/admissibility/admissibility_45_finite_q_odd_torus_gauge_ladder.md) executes that ladder in an exact two-particle spinless Ewald surrogate through (L=3,5,7,9). The normalized centre/endpoint current separation falls from 0.301 to 0.0375 with fitted exponent 1.902 in (q_{\min}), consistent with an (O(q^2)) redistribution effect. This supports, but does not prove at production density, a common long-wavelength current. The next gate is source-complete fixed-density moment scaling and screened-order collision.
 
 [AZ-046](../../programmes/admissibility/admissibility_46_screened_finite_q_order_of_limits_ladder.md) closes the dilute screening collision: unscreened, fixed (\mu=0.5), and size-scaled (\mu=q_{\min}) reciprocal Yukawa paths have gauge-separation exponents 1.902, 1.922 and 1.937. The agreement removes screening order as the immediate surrogate obstruction. It leaves source-complete fixed-density equal-time moments as the decisive computational boundary and does not admit spectral-rank interpretation.

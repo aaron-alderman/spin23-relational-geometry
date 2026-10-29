@@ -13243,3 +13243,18 @@ Each cycle ends by updating this registry, including branches that failed or bec
 - **Executable specialization:** the \((2,3)\) witness matches the first Rogers--Ramanujan sum and product through degree 80 and reconstructs the period-five mask \(10010\).
 - **Branch effect:** B10 gains a theorem-level compiler benchmark; B09 gains a genus-one comparison but no physical braid carrier or second handle; B12 gains a positive control but no Monster action, VOA or sewing law.
 - **Boundary:** the trefoil \(T(2,3)\) is not the braid group \(B_3\), and genus-one modularity is not an \(Sp(4,\mathbb Z)\), \(Spin(2,3)\) or physics bridge.
+
+## Cycle 881 — reconstruction, nonunitary CFT lift and exhaustion
+
+- B10 closes the scalar reconstruction gate: the exponent least period is
+  \(a+b\), its maximum is \(a-1\), and the product recovers the coprime pair.
+- The categorical inverse remains impossible: equal groupoid volumes need not
+  come from equivalent categories, and \(t=1\) plus infinite rank erase named
+  gradings.
+- B12 gains an exact \(\mathcal W_a(a,a+b)\)-character comparison. It does not
+  gain a Monster action, holomorphic \(c=24\) object or Borcherds denominator.
+- The \((2,3)\) character is the nonunitary Yang--Lee \(M(2,5)\) primary
+  character. This reopens a critical-physics comparison while leaving the
+  finite-module-to-experiment map absent.
+- [1799](../1700-1799/1799_the_torus_knot_rogers_ramanujan_lane_is_exhausted_at_four_categorified_or_physical_inputs.md)
+  freezes further work at four explicit new-input gates.

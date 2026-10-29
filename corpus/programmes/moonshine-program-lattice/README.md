@@ -54,6 +54,14 @@ action, Moonshine module, McKay--Thompson function, genus-two sewing law,
 show exactly what an honest cross-reading compiler looks like before the
 Moonshine branch asks for the much stronger missing structures.
 
+The completed follow-through sharpens the control. [The Euler product
+reconstructs the coprime pair exactly](../../claims/1700-1799/1797_the_periodic_product_exactly_reconstructs_the_coprime_torus_knot_type_but_not_its_module_category.md),
+yet cannot reconstruct the module category; and [the product is already a
+nonunitary \(\mathcal W\)-character](../../claims/1700-1799/1798_the_product_has_a_precise_nonunitary_w_algebra_and_yang_lee_bridge_not_a_spin23_or_monster_bridge.md).
+This makes it a stronger positive control but a sharper Moonshine no-go: a VOA
+character and modular product do not by themselves provide a finite group
+action, holomorphic \(c=24\) theory, Borcherds denominator or sewing system.
+
 The Monster branch does contain a mathematically defensible sense in which a
 program is encoded by a lattice-like formula, but four meanings of “program”
 must be separated.  The cyclic Golay Rule-60 map is an actual finite update

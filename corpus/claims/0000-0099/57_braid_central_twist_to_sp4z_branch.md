@@ -157,6 +157,13 @@ certified example of a geometric carrier compiling to a modular product, while
 the physical braid carrier, metaplectic observable and second modular handle
 remain absent here.
 
+The completed reconstruction audit strengthens this boundary. The product's
+least exponent period and maximum recover \(a+b\) and \(a-1\), so it
+[determines the torus-knot type](../1700-1799/1797_the_periodic_product_exactly_reconstructs_the_coprime_torus_knot_type_but_not_its_module_category.md).
+Its exact [nonunitary \(\mathcal W_a\)-character interpretation](../1700-1799/1798_the_product_has_a_precise_nonunitary_w_algebra_and_yang_lee_bridge_not_a_spin23_or_monster_bridge.md)
+still lives at genus one. Recoverability of \((a,b)\) is not a second modular
+handle and supplies no \(B_3\to Sp(4,\mathbb Z)\) state-space action.
+
 ## Companion documents
 
 - [Phase-space/Lagrangian branch](52_phase_space_lagrangian_grassmannian_branch.md)

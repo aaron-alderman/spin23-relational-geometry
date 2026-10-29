@@ -113,6 +113,12 @@ authored audit of what the compiler does and does not claim.
   retaining the non-equivalent carriers, maps, assumptions and authority of
   the three readings. It does not license an automatic physical or Monster
   interpretation.
+- **[Reconstruction, CFT lift and exhaustion](../../claims/1700-1799/1799_the_torus_knot_rogers_ramanujan_lane_is_exhausted_at_four_categorified_or_physical_inputs.md)** —
+  demonstrates the algebraic distinction between an invertible projection
+  (the product recovers \(\{a,b\}\)), a lossy projection (groupoid volume does
+  not recover the module category), and a valid cross-profile interpretation
+  (the same product is a nonunitary \(\mathcal W\)-character). Four new-input
+  gates prevent those facts from being promoted to Monster or Spin(2,3).
 
 ## Generated outputs
 

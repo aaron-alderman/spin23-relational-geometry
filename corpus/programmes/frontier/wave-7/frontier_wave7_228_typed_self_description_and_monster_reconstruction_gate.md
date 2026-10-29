@@ -144,6 +144,13 @@ reconstructs every marked datum of the others. The Monster problem is stronger:
 its decoder must retain class orientation, multiplication and held-out
 operational predictions rather than only a scalar genus-one series.
 
+The follow-through makes the control especially discriminating. The scalar
+Euler product [does reconstruct the coprime pair and gap poset](../../../claims/1700-1799/1797_the_periodic_product_exactly_reconstructs_the_coprime_torus_knot_type_but_not_its_module_category.md),
+but it cannot reconstruct the finite-module category because groupoid volume
+is non-injective. This is exactly the distinction required here: successful
+recovery of a coarse source label does not establish recovery of the marked
+carrier, its morphisms or its multiplication law.
+
 ## Corpus links
 
 - [Monster-is-physics proof certificate](frontier_wave7_150_monster_is_physics_proof_certificate.md)

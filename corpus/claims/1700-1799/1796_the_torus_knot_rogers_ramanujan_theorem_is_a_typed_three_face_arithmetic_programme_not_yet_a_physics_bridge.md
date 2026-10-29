@@ -3,8 +3,10 @@
 **Date:** 29 October 2026
 
 **Status:** source theorem admitted; classical \((2,3)\) specialization
-independently checked; Monster, \(Sp(4,\mathbb Z)\), \(Spin(2,3)\), dynamics
-and physical realization not implied
+independently checked; continuation recovers the torus-knot type exactly and
+admits the nonunitary \(\mathcal W\)-character/Yang--Lee bridge, while Monster,
+\(Sp(4,\mathbb Z)\), \(Spin(2,3)\) and a finite-module physical realization
+remain unproved
 
 **Source post:** [J. D. Redding](https://x.com/JDRedding/status/2115792713857765527)
 
@@ -23,6 +25,15 @@ and [the typed reconstruction gate](../../programmes/frontier/wave-7/frontier_wa
 and [classical specialization verifier](../../../verification/verify/verify_torus_knot_rogers_ramanujan_three_face.mjs)
 
 ## Result
+
+**Continuation:** [Claim 1797](1797_the_periodic_product_exactly_reconstructs_the_coprime_torus_knot_type_but_not_its_module_category.md)
+proves that the periodic product reconstructs \(\{a,b\}\), its numerical
+semigroup and gap poset exactly, while groupoid volume cannot reconstruct the
+module category. [Claim 1798](1798_the_product_has_a_precise_nonunitary_w_algebra_and_yang_lee_bridge_not_a_spin23_or_monster_bridge.md)
+corrects the initial physics boundary: the product is an exact normalized
+nonunitary \(\mathcal W_a(a,a+b)\) character, with \((2,3)\) landing on the
+experimentally accessible Yang--Lee universality class. [Claim 1799](1799_the_torus_knot_rogers_ramanujan_lane_is_exhausted_at_four_categorified_or_physical_inputs.md)
+records the resulting exhaustion boundary.
 
 For coprime integers \(1<a<b\), Huang, Lau and Ono prove the conjecture of
 Huang, Jiang and Oblomkov that joins three presentations of the same graded
