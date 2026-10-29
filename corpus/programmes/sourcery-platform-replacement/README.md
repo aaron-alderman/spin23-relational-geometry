@@ -16,4 +16,6 @@ The [repository boundary review](repository-boundary-review-v1.json) applies the
 
 The [repository existence correction](repository-existence-correction-v1.json) retains the failed absence inference and its containment. The existing repository refused duplicate creation; no remote mutation occurred, and the local inert bootstrap has no authority.
 
+The [Git candidate receipt](git-candidate-receipt-v1.json) records the architecture-only candidate in the existing owner: draft `sourcerytech/sourcery-platform` PR #1 at commit `f2c446c`. The unchanged repository suite passes 44/44; source receiving, merge, adoption, activation and production remain separate gates.
+
 During migration, every material authority, custody, process, trust and external-effect crossing remains an explicit Seam. An accidental compatibility Seam becomes seamless only after all consumers have crossed, blocking residuals are closed, the legacy mechanism is unreachable at runtime and an accepted retirement witness exists.
