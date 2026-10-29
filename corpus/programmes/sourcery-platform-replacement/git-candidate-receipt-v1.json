@@ -1,0 +1,65 @@
+{
+  "protocol": "sourcery/platform-git-candidate-receipt/1",
+  "id": "algebraic-platform-replacement-git-candidate-v1",
+  "status": "draft-review-only",
+  "recordedAt": "2026-10-29",
+  "repository": "sourcerytech/sourcery-platform",
+  "basis": {
+    "branch": "main",
+    "commit": "e379c8a1a33fb75b7a253f0f84d04aec4af97fdf"
+  },
+  "candidate": {
+    "branch": "codex/algebraic-platform-replacement-v1",
+    "commit": "f2c446c",
+    "pullRequest": "https://github.com/sourcerytech/sourcery-platform/pull/1",
+    "pullRequestState": "draft",
+    "files": [
+      "architecture/algebraic-platform-replacement/README.md",
+      "architecture/algebraic-platform-replacement/audit-schema-receipt.json",
+      "architecture/algebraic-platform-replacement/boundary-contract.json",
+      "architecture/algebraic-platform-replacement/current-seams.json",
+      "architecture/algebraic-platform-replacement/provenance.json",
+      "architecture/algebraic-platform-replacement/qualification.json"
+    ]
+  },
+  "claim": "Architecture-only candidate inside the existing canonical Git owner. It defines kernel, platform and shell boundaries, the staged migration, initial Seam ledger and exact provenance without receiving executable source.",
+  "qualification": {
+    "architectureJson": "pass",
+    "gitDiffCheck": "pass",
+    "existingRepositorySuite": {
+      "command": "node --test test/*.test.mjs",
+      "tests": 44,
+      "pass": 44,
+      "fail": 0
+    },
+    "githubChecks": "none-configured-or-reported-for-branch"
+  },
+  "unchanged": [
+    "root package",
+    "root REL programmes",
+    "SDK",
+    "deployment",
+    "runtime dependency closure",
+    "release scripts",
+    "runtime selection",
+    "production"
+  ],
+  "nextGate": {
+    "action": "Review and merge the architecture-only PR before receiving the exact MJS audit schema or platform sources.",
+    "retained": [
+      "source receiving",
+      "merge",
+      "package adoption",
+      "runtime activation",
+      "production change",
+      "legacy retirement"
+    ]
+  },
+  "authority": {
+    "grantsMerge": false,
+    "grantsSourceReceiving": false,
+    "grantsAdoption": false,
+    "grantsActivation": false,
+    "grantsProductionChange": false
+  }
+}

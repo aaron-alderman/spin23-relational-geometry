@@ -1,0 +1,202 @@
+{
+  "protocol": "sourcery/platform-repository-boundary-review/1",
+  "id": "platform-repository-boundary-review-v1",
+  "status": "corrected-existing-repository-architecture-branch-only",
+  "observedAt": "2026-10-29",
+  "question": "Do the minimal imperative kernel, algebraic platform and algebraic shell have sufficiently independent lifecycles to justify three new repositories?",
+  "liveObservations": {
+    "repositoryExistence": [
+      {
+        "name": "sourcerytech/sourcery-kernel",
+        "githubResult": "not-found-through-sourcerytech-account"
+      },
+      {
+        "name": "sourcerytech/sourcery-platform",
+        "githubResult": "existing-private-repository",
+        "defaultBranch": "main",
+        "head": "e379c8a1a33fb75b7a253f0f84d04aec4af97fdf",
+        "package": "@sourcery/platform@0.1.0",
+        "declaredRole": "minimal generic application host above Sourcery Core; projection layer, not semantic authority"
+      },
+      {
+        "name": "sourcerytech/sourcery-shell",
+        "githubResult": "not-found-through-sourcerytech-account"
+      }
+    ],
+    "scopeCorrection": {
+      "originalObservation": "The general GitHub connector returned not-found for all three names.",
+      "correctedObservation": "The configured sourcerytech GitHub account resolves sourcery-platform; the other two names remain absent.",
+      "classification": "no-blame connection-scope provenance error",
+      "harmPrevented": "The create attempt refused because the name already existed. No existing repository, branch or file was modified.",
+      "accountability": "All repository-existence checks now require the configured source-owner account before an absence claim."
+    },
+    "acceptedDependencies": [
+      {
+        "repository": "sourcerytech/claimipedia-core",
+        "commit": "a5845d2f9bc51e0bad0aed800b64dc7421856645",
+        "version": "0.7.0",
+        "boundary": "Owns the shared expression evaluator, process interpreter, fixed codecs, byte mechanisms, generic read-only loopback transport and authored DOM/presentation mechanisms. It owns no selected corpus, registry, credential or publication authority."
+      },
+      {
+        "repository": "sourcerytech/qualification-runner",
+        "commit": "233d9d19368ca7145a589fe4cf91158134861bcb",
+        "version": "0.3.0",
+        "boundary": "Owns bounded subprocess qualification and exact receipts. It does not authenticate actors, grant authority or establish domain truth."
+      },
+      {
+        "repository": "sourcerytech/git-receiving",
+        "commit": "0c32c96a2adb837970348e50368b545a7e95b889",
+        "version": "0.5.1",
+        "boundary": "Owns generic comparison and exact byte receiving. Consumers own allowed scope, human gates and final selection."
+      }
+    ],
+    "activeProductOwner": {
+      "chat": "Move to server",
+      "state": "active",
+      "latestConsequence": "claimipedia-core 0.7.0 merged and sealed; exact-peer consumer receiving remains in progress",
+      "collisionRule": "Do not modify the active product consumers from this lane."
+    }
+  },
+  "decision": {
+    "useExisting": [
+      {
+        "repository": "sourcerytech/sourcery-platform",
+        "visibility": "private",
+        "defaultBranch": "main",
+        "shape": "existing generic platform repository; stage the replacement on a separate architecture branch without changing root runtime selection"
+      }
+    ],
+    "doNotCreateYet": [
+      "sourcerytech/sourcery-kernel",
+      "sourcerytech/sourcery-shell"
+    ],
+    "reason": [
+      "The kernel adapters, platform state semantics and MCP/shell composition presently require one source closure and one qualification event.",
+      "Their initial versions will change together while legacy Seams are crossed.",
+      "Three repositories would introduce version coordination and provenance crossings without an observed independent lifecycle.",
+      "A package boundary is sufficient to enforce dependency direction and makes a later repository split mechanical if lifecycle evidence appears.",
+      "This is a CommonReduction of repository machinery, not a collapse of kernel/platform/shell semantic distinctions.",
+      "The existing repository is already the closest declared owner and prevents creation of a parallel platform authority."
+    ]
+  },
+  "repositoryShape": {
+    "root": {
+      "owns": [
+        "exact dependency lock",
+        "cross-package qualification",
+        "source provenance",
+        "repository boundary contract"
+      ],
+      "migrationConstraint": "The accepted root currently owns the generic application host and production-release closure. Initial replacement work must be architecture-only and must not alter its package.json, release scripts, deployment, runtime dependencies or selected source."
+    },
+    "initialNamespace": "architecture/algebraic-platform-replacement",
+    "packages": [
+      {
+        "name": "@sourcerytech/sourcery-kernel",
+        "path": "packages/kernel",
+        "status": "private-internal-initially",
+        "owns": [
+          "typed effect-port adapters",
+          "SQLite and filesystem mechanisms",
+          "process, transport and runtime-loader mechanisms",
+          "clock, randomness, cryptographic verification and exact effect receipts"
+        ],
+        "mustNotOwn": [
+          "platform policy",
+          "authority inference",
+          "selection defaults",
+          "application logic"
+        ]
+      },
+      {
+        "name": "@sourcerytech/sourcery-platform",
+        "path": "packages/platform",
+        "status": "private-internal-initially",
+        "dependsOn": [
+          "@sourcerytech/sourcery-kernel",
+          "@sourcerytech/expression-algebra"
+        ],
+        "owns": [
+          "object and provenance semantics",
+          "workspace and authoring lifecycle",
+          "package and executable closure",
+          "qualification, admission, activation and serving states",
+          "authority, custody, recovery and retirement laws"
+        ]
+      },
+      {
+        "name": "@sourcerytech/sourcery-shell",
+        "path": "packages/shell",
+        "status": "private-internal-initially",
+        "dependsOn": [
+          "@sourcerytech/sourcery-platform",
+          "@sourcerytech/sourcery-kernel",
+          "@sourcerytech/expression-algebra"
+        ],
+        "owns": [
+          "MCP/session state-machine composition",
+          "just-connected and available-action projections",
+          "human hold, stop and return semantics",
+          "reflection-driven auto-UI projections"
+        ],
+        "mustNotOwn": [
+          "platform authority",
+          "application-domain policy",
+          "a second scheduler"
+        ]
+      }
+    ],
+    "dependencyDirection": [
+      "accepted shared mechanisms -> kernel",
+      "kernel -> platform",
+      "kernel + platform -> shell",
+      "shell never imports application products",
+      "platform never imports shell"
+    ]
+  },
+  "initialClosure": {
+    "stage": "existing-repository-architecture-branch-only",
+    "include": [
+      "README and boundary contract",
+      "target kernel/platform/shell package topology without active package manifests",
+      "function-level MJS audit schema source receipt from grand-theory commit 868f940b",
+      "provenance record linking exact Temple and Git observations",
+      "explicit no-runtime status"
+    ],
+    "exclude": [
+      "legacy MJS source",
+      "Temple database or snapshot copies",
+      "application assets",
+      "runtime selection",
+      "credentials",
+      "installation or deployment scripts"
+    ],
+    "acceptance": [
+      "candidate is based on exact existing main e379c8a1a33fb75b7a253f0f84d04aec4af97fdf",
+      "all package boundaries are documented",
+      "no executable source or runtime authority is present",
+      "provenance references are exact",
+      "JSON contracts parse and dependency direction is acyclic"
+    ]
+  },
+  "splitPredicate": {
+    "rule": "Split an internal package into an independent repository only when it has an independently governed release, admission, custody or consumer lifecycle.",
+    "evidenceRequired": [
+      "independent consumer set",
+      "independent versioning need",
+      "independent qualification and acceptance",
+      "acyclic external dependency direction",
+      "migration and rollback plan"
+    ]
+  },
+  "authority": {
+    "grantsRepositoryBootstrap": false,
+    "grantsArchitectureBranch": true,
+    "grantsSourceReceiving": false,
+    "grantsMergeBeyondBootstrap": false,
+    "grantsPackagePublication": false,
+    "grantsRuntimeAdoption": false,
+    "grantsActivation": false,
+    "grantsProductionChange": false
+  }
+}

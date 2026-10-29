@@ -1,0 +1,63 @@
+{
+  "protocol": "sourcery/repository-existence-correction/1",
+  "id": "sourcery-platform-repository-existence-correction-v1",
+  "status": "corrected-no-remote-mutation",
+  "observedAt": "2026-10-29",
+  "originalObservation": {
+    "mechanism": "general GitHub connector",
+    "result": "not-found for sourcerytech/sourcery-kernel, sourcerytech/sourcery-platform and sourcerytech/sourcery-shell",
+    "unsupportedInference": "all three repository names were absent"
+  },
+  "correctedObservation": {
+    "mechanism": "GitHub CLI using the configured sourcerytech account",
+    "repositories": [
+      {
+        "name": "sourcerytech/sourcery-platform",
+        "state": "existing-private",
+        "defaultBranch": "main",
+        "head": "e379c8a1a33fb75b7a253f0f84d04aec4af97fdf",
+        "headMessage": "Admit complete production runtime closure",
+        "package": "@sourcery/platform@0.1.0",
+        "declaredRole": "minimal generic application host above Sourcery Core; projection layer, not semantic authority",
+        "openPullRequests": 0
+      },
+      {
+        "name": "sourcerytech/sourcery-kernel",
+        "state": "not-found-through-configured-owner-account"
+      },
+      {
+        "name": "sourcerytech/sourcery-shell",
+        "state": "not-found-through-configured-owner-account"
+      }
+    ]
+  },
+  "incident": {
+    "classification": "no-blame connection-scope provenance error",
+    "mechanismFailure": "Repository visibility depended on the selected GitHub account, but the first observation was treated as global absence.",
+    "harm": "A local inert bootstrap was prepared for a name already owned by the product.",
+    "containment": [
+      "The remote create operation refused because the repository already existed.",
+      "No remote branch, commit, file, setting or description was changed.",
+      "The local bootstrap was not attached or pushed.",
+      "Move to server was notified of the collision and corrected owner."
+    ],
+    "directionalChange": [
+      "Repository absence claims require the configured source-owner account.",
+      "An existing owner is inspected before any create action.",
+      "The replacement is staged inside the existing repository on a separate architecture branch.",
+      "Parallel kernel and shell repositories remain uncreated."
+    ]
+  },
+  "localBootstrap": {
+    "path": ".tmp/sourcery-platform-seed",
+    "commit": "7f8a90f",
+    "authority": "none",
+    "disposition": "local ignored evidence only; do not push or treat as source"
+  },
+  "authority": {
+    "grantsRemoteMutation": false,
+    "grantsMerge": false,
+    "grantsRuntimeChange": false,
+    "grantsProductionChange": false
+  }
+}
