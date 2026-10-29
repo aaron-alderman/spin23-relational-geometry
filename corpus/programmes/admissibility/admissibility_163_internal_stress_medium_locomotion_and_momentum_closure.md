@@ -339,6 +339,13 @@ The corpus therefore admits the **question**, not the claimed force:
  \text{centre-of-mass residual after every ordinary momentum port is bounded?}}
 \]
 
+The public assertion that ordinary QED positively derives this thrust now has
+a separate equation-by-equation audit. It finds that the patent substitutes
+\(d(Ut)=0\) for stationary action, differentiates energy with respect to an
+absolute translation, and replaces a closed Maxwell-stress integral by
+selected scalar pressure patches. See
+[the Exodus QED translation-symmetry audit](admissibility_164_exodus_qed_claim_translation_symmetry_and_whole_boundary_audit.md).
+
 ## 8. Experimental programme
 
 ### Gate E0: freeze the system boundary
