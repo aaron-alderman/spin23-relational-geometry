@@ -29,9 +29,11 @@ for (const letter of manifest.letters) {
 for (const recipient of ["Cohl Furey", "Lisa Randall", "Eric Weinstein"]) assert(recipients.has(recipient));
 
 const generator = fs.readFileSync(path.join(root, "tooling", "publication", "generate_edition3_book_preview.mjs"), "utf8");
-for (const token of ["siteLettersRoot", "lettersIndexHtml", "letterHtml", "Nothing on these pages is sent automatically"]) {
+for (const token of ["siteLettersRoot", "lettersIndexHtml", "letterHtml", "Three unsent letters"]) {
   assert(generator.includes(token), "publication generator lacks " + token);
 }
+assert(!generator.includes('<a href="letters/index.html">Letters</a>'), "letters must not occupy the global mast");
+assert(!generator.includes('<a href="../letters/index.html">Letters</a>'), "letters must not occupy nested masts");
 
 console.log("PASS open-letters publication");
 console.log("letters=" + manifest.letters.length + " statuses=" + [...new Set(manifest.letters.map(letter => letter.status))].join(","));

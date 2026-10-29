@@ -4,7 +4,7 @@
 
 **Status:** version-bounded external claim audit and programme exhaustion statement; no empirical endorsement
 
-**Parents:** [graded Beltrami programme](admissibility_149_graded_beltrami_impedance_defect_programme.md), [Lagrangian boundary selector](admissibility_150_lagrangian_boundary_selector_and_maslov_spectral_flow.md), [curl eta record](admissibility_151_curl_eta_asymmetry_is_an_orientation_record_not_a_mass_formula.md), [matrix-residue identifiability](admissibility_152_scalar_impedance_cannot_identify_dark_holonomy_but_matrix_residues_can.md), [passive-loss boundary](admissibility_153_passive_loss_requires_a_bath_ledger_and_can_destroy_the_holonomy_gap.md)
+**Parents:** [graded Beltrami programme](admissibility_149_graded_beltrami_impedance_defect_investigation_spike.md), [Lagrangian boundary selector](admissibility_150_lagrangian_boundary_selector_and_maslov_spectral_flow.md), [curl eta record](admissibility_151_curl_eta_asymmetry_is_an_orientation_record_not_a_mass_formula.md), [matrix-residue identifiability](admissibility_152_scalar_impedance_cannot_identify_dark_holonomy_but_matrix_residues_can.md), [passive-loss boundary](admissibility_153_passive_loss_requires_a_bath_ledger_and_can_destroy_the_holonomy_gap.md)
 
 **Evidence:** [TUFT disposition matrix](../../../evidence/data/admissibility-tuft-claim-disposition-v1.json); [independent verifier](../../../verification/admissibility/verify_tuft_claim_disposition.mjs)
 
