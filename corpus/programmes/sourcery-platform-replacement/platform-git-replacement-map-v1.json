@@ -1,0 +1,396 @@
+{
+  "protocol": "sourcery/platform-git-replacement-map/1",
+  "id": "platform-git-replacement-map-v1",
+  "status": "staged-inactive-plan",
+  "recordedAt": "2026-10-29",
+  "claim": "Move the non-application Sourcery platform and shell to algebra-owned Git sources while reducing MJS to a minimal imperative kernel. Preserve material crossings as explicit Seams until every consumer has crossed and retirement has been witnessed.",
+  "authority": {
+    "grantsAuthority": false,
+    "createsRepository": false,
+    "changesRuntimeSelection": false,
+    "changesProduction": false,
+    "changesTempleSource": false,
+    "retainedGates": [
+      "repository creation",
+      "source merge",
+      "package adoption",
+      "runtime activation",
+      "exclusive writer handover",
+      "legacy retirement",
+      "publication"
+    ]
+  },
+  "basis": {
+    "grandTheory": {
+      "commit": "51a2f0dac84fdbc7927ca104708329ac5a422f25",
+      "semanticCollapseRecord": {
+        "path": "integrations/sourcery/remote-development-migration-20261023/semantic-collapse-alignment-20261028-v1.json",
+        "sha256": "18fbbc13a71518545fa89ec6a36c3da21d8c2e5be83ef92e0063ef1b12451358"
+      },
+      "standaloneAcceptanceRecord": {
+        "path": "integrations/sourcery/remote-development-migration-20261023/standalone-acceptance-audit-v1.json",
+        "sha256": "e32a4cae3a3988a6ca5a1bc5ac073f1f9e8b3bb6dbf32583ee8f22c100ef6bd5"
+      }
+    },
+    "templeObservation": {
+      "laneId": "integration/main",
+      "snapshotId": "4082f461-ed20-498c-bc4a-747c6d1b4239",
+      "path": "programme/platform-symmetry-executable-identity-20261028/common-reduction-seam-contract.json",
+      "sha256": "48ad9857c63d7b8e776d80a71293e4a1edb8bcfa13bdfbea0b651840aa0a489a",
+      "scope": "Exact read-only source observation; not Git receiving, merge, activation or current-main authority."
+    },
+    "liveCollisionObservation": {
+      "ownerChat": "Move to server",
+      "repository": "sourcerytech/claimipedia-core",
+      "acceptedMain": "dfb98dbb630b1bf00ca1e0da2d3dbf81e73bc048",
+      "activeBranch": "codex/core-presentation-algebra-v1",
+      "observedBranchHead": "cde06655558720570794bf96f6460dcf4c5e4f6a",
+      "pullRequest": "https://github.com/sourcerytech/claimipedia-core/pull/7",
+      "disposition": "Do not duplicate or edit this active tranche from this lane. Reconcile only after its Git disposition is known."
+    }
+  },
+  "architecturalDecision": {
+    "sourceAuthority": "Git repositories own durable source and provenance. Commits, tags, packages and CI receipts identify exact candidates.",
+    "templeRole": "Temple may consume, qualify and run immutable Git artifacts during migration; it is not the replacement authoring authority and must not receive a second copy merely to restate Git source.",
+    "algebraRule": "All platform and shell decisions, policies, mappings, defaults, selection laws, refusal laws and state transitions are authored as algebra.",
+    "kernelRule": "MJS remains only where the machine must perform an effect, observe bytes or time, cross a process/transport boundary, parse or evaluate the algebra, or implement a fixed codec. Boundary code cannot choose platform policy.",
+    "migrationRule": "Semantic correspondence is required; byte-for-byte faithfulness to failed decomposition is not. Symmetry breaks are recorded faithfully and then either preserved as essential Seams or deliberately collapsed with witnesses.",
+    "seamRule": "Legacy behavior may remain reachable behind an accidental Seam only while named consumers cross. Seamless completion requires zero open residuals, legacy runtime unreachability and an accepted retirement witness."
+  },
+  "gitTopology": {
+    "existingOwners": [
+      {
+        "repository": "claimipedia-core",
+        "role": "Shared expression algebra, interpreters, fixed codecs and application-neutral rendering mechanisms",
+        "constraint": "Do not turn Claimipedia-specific or Sourcery control-plane policy into generic core merely to avoid creating the correct owner."
+      },
+      {
+        "repository": "qualification-runner",
+        "role": "Bounded execution, qualification composition, process/file custody observations and exact receipts",
+        "constraint": "Qualification observes and reports; it does not acquire source or runtime authority."
+      },
+      {
+        "repository": "git-receiving",
+        "role": "Git/archive receiving contracts, provenance comparison and receiving witnesses",
+        "constraint": "Keep filesystem, Git and archive effects behind typed ports; receiving does not imply admission or adoption."
+      },
+      {
+        "repository": "claimipedia",
+        "role": "Claimipedia product composition and application-specific authority/compatibility rules",
+        "constraint": "Application policy stays outside the platform replacement."
+      },
+      {
+        "repository": "epistemic-core",
+        "role": "Epistemic record and revision laws",
+        "constraint": "Consumer of platform mechanisms; not a platform control-plane owner."
+      },
+      {
+        "repository": "science-programme",
+        "role": "Scientific programme and gate laws",
+        "constraint": "Scientific acceptance remains distinct from source and runtime acceptance."
+      },
+      {
+        "repository": "claimipedia-science",
+        "role": "Scientific reader composition",
+        "constraint": "Application reader consumer; not a platform source owner."
+      },
+      {
+        "repository": "frontier-physics-programme",
+        "role": "Frontier physics programme and captured scientific evidence",
+        "constraint": "Captured sources remain evidence; active programme policy is independently digestible."
+      }
+    ],
+    "proposedOwners": [
+      {
+        "repository": "sourcery-kernel",
+        "status": "proposed-not-created",
+        "role": "Minimal imperative kernel: algebra evaluator/compiler boundary, exact codecs, byte/hash/time/random observation, filesystem/process/network/SQLite/crypto adapters and typed effect receipts",
+        "mustNotContain": [
+          "workspace policy",
+          "promotion policy",
+          "authority inference",
+          "application logic",
+          "selection defaults",
+          "compatibility decisions"
+        ]
+      },
+      {
+        "repository": "sourcery-platform",
+        "status": "proposed-not-created",
+        "role": "Algebraic object, workspace, package, qualification, custody, admission, activation, recovery and retirement semantics",
+        "dependsOn": [
+          "sourcery-kernel",
+          "qualification-runner",
+          "git-receiving"
+        ],
+        "mustNotContain": [
+          "application assets",
+          "direct operating-system effects",
+          "a second scheduler or authority registry"
+        ]
+      },
+      {
+        "repository": "sourcery-shell",
+        "status": "proposed-not-created",
+        "role": "Algebraic MCP/session/surface/auto-UI composition and human-visible state-machine projections",
+        "dependsOn": [
+          "sourcery-platform",
+          "sourcery-kernel",
+          "claimipedia-core"
+        ],
+        "mustNotContain": [
+          "platform authority",
+          "hidden filesystem discovery",
+          "parallel scheduling",
+          "application-domain policy"
+        ]
+      }
+    ],
+    "creationDecision": "Create the three proposed repositories only after their dependency directions and initial source closures are reviewed together. A repository boundary must correspond to an independently versioned lifecycle, not an arbitrary folder split."
+  },
+  "componentCatalogue": [
+    {
+      "component": "algebra-language-and-evaluation",
+      "targetOwner": "sourcery-kernel with reusable expression mechanisms in claimipedia-core",
+      "algebraOwns": [
+        "operation definitions",
+        "composition",
+        "state transitions",
+        "refusal laws"
+      ],
+      "kernelRetains": [
+        "parser/evaluator/compiler mechanics",
+        "fixed primitive dispatch",
+        "exact serialization codecs"
+      ]
+    },
+    {
+      "component": "content-object-and-provenance",
+      "targetOwner": "sourcery-platform plus git-receiving",
+      "algebraOwns": [
+        "typed identities",
+        "lineage",
+        "source/artifact/runtime distinctions",
+        "receiving admissibility"
+      ],
+      "kernelRetains": [
+        "byte reads",
+        "hashing",
+        "Git and archive adapters"
+      ]
+    },
+    {
+      "component": "workspace-and-authoring",
+      "targetOwner": "sourcery-platform",
+      "algebraOwns": [
+        "lane and snapshot lifecycle",
+        "declared closure",
+        "commit/proposal/merge laws",
+        "lease and collision semantics"
+      ],
+      "kernelRetains": [
+        "SQLite transactions",
+        "filesystem materialization",
+        "clock observation"
+      ]
+    },
+    {
+      "component": "package-and-executable-closure",
+      "targetOwner": "sourcery-platform",
+      "algebraOwns": [
+        "package membership",
+        "complete executable identity",
+        "dependency closure",
+        "selection refusals"
+      ],
+      "kernelRetains": [
+        "module loading",
+        "process spawning",
+        "runtime binary and environment observation"
+      ]
+    },
+    {
+      "component": "qualification-admission-activation-serving",
+      "targetOwner": "sourcery-platform plus qualification-runner",
+      "algebraOwns": [
+        "distinct lifecycle states",
+        "check composition",
+        "admission predicates",
+        "activation and serving postconditions"
+      ],
+      "kernelRetains": [
+        "test execution",
+        "atomic switch mechanism",
+        "listener/process observation"
+      ]
+    },
+    {
+      "component": "authority-custody-and-recovery",
+      "targetOwner": "sourcery-platform",
+      "algebraOwns": [
+        "grant and epoch laws",
+        "writer fencing",
+        "custody transfer",
+        "uncertain-effect reconciliation",
+        "compensation and return"
+      ],
+      "kernelRetains": [
+        "cryptographic verification",
+        "atomic persistence",
+        "effect and postcondition observation"
+      ]
+    },
+    {
+      "component": "mcp-session-shell-and-auto-ui",
+      "targetOwner": "sourcery-shell",
+      "algebraOwns": [
+        "just-connected state",
+        "available actions",
+        "capability and refusal projection",
+        "human hold/stop/return",
+        "reflection-driven surface composition"
+      ],
+      "kernelRetains": [
+        "MCP transport",
+        "socket and HTTP boundary",
+        "browser event bridge"
+      ]
+    },
+    {
+      "component": "observation-receipts-and-retirement",
+      "targetOwner": "sourcery-platform",
+      "algebraOwns": [
+        "observation/derivation/inference/recommendation distinctions",
+        "residual ledgers",
+        "consumer crossings",
+        "retirement witnesses"
+      ],
+      "kernelRetains": [
+        "exact timestamp and byte observation",
+        "receipt signing"
+      ]
+    }
+  ],
+  "transition": {
+    "phases": [
+      {
+        "order": 1,
+        "name": "audit",
+        "purpose": "Trace every platform/shell MJS file reachable from accepted entrypoints and classify its functions by semantic decision, interpreter/primitive, external effect, evidence fixture or dead/duplicate code.",
+        "outputs": [
+          "content-addressed MJS inventory",
+          "entrypoint-to-file reachability graph",
+          "function-level classification",
+          "symmetry-break and collision ledger"
+        ],
+        "exit": "Every reachable function has one disposition and exact source identity; unknown dynamic edges remain visible residuals."
+      },
+      {
+        "order": 2,
+        "name": "extract",
+        "purpose": "Move semantic decisions into authored algebra without copying accidental implementation structure.",
+        "outputs": [
+          "domain algebra roots",
+          "typed ports",
+          "predecessor oracles",
+          "semantic and metamorphic witnesses"
+        ],
+        "exit": "New algebra preserves declared invariants, records deliberate corrections and leaves effects behind typed boundaries."
+      },
+      {
+        "order": 3,
+        "name": "collate",
+        "purpose": "Unify repeated reductions into common platform laws and assign each remaining effect to the minimal kernel.",
+        "outputs": [
+          "common reductions",
+          "repository dependency manifests",
+          "consumer crossing plans",
+          "residual ledgers"
+        ],
+        "exit": "No duplicated platform policy remains across repositories and dependency direction is acyclic and explicit."
+      },
+      {
+        "order": 4,
+        "name": "collapse",
+        "purpose": "Switch consumers to immutable Git artifacts, prove legacy runtime unreachability and retire accidental Seams.",
+        "outputs": [
+          "consumer conformance receipts",
+          "activated-generation observations",
+          "retirement witnesses",
+          "rollback-preserving recovery receipts"
+        ],
+        "exit": "All consumers crossed, zero blocking residuals, legacy unreachable, independent runtime observation accepted."
+      }
+    ],
+    "firstNonCollidingTranche": {
+      "name": "platform-shell-source-index-and-boundary-contracts",
+      "scope": [
+        "Define initial source closures for sourcery-kernel, sourcery-platform and sourcery-shell.",
+        "Index accepted Temple platform/shell MJS sources by exact snapshot/path/hash without filesystem crawling as authority.",
+        "Classify functions and dynamic load edges; do not yet rewrite or receive source.",
+        "Exclude the active claimipedia-core presentation tranche owned by Move to server."
+      ],
+      "acceptance": [
+        "bounded or filtered source discovery preserves snapshot, path, hash and source identity",
+        "each proposed repository has a closed initial responsibility set",
+        "every crossing has a named Seam and owner",
+        "unknown dynamic edges are explicit residuals",
+        "no Temple, Git main, runtime or production mutation"
+      ],
+      "nextGate": "Review dependency directions and exact initial closures before creating the three Git repositories."
+    }
+  },
+  "knownSymmetryBreaks": [
+    {
+      "break": "mutable-checkout-executable-selection",
+      "classification": "accidental",
+      "target": "complete immutable executable binding",
+      "preserveDuringMigration": true
+    },
+    {
+      "break": "duplicated-policy-between-mjs-and-algebra",
+      "classification": "accidental",
+      "target": "single algebraic policy owner with thin adapters",
+      "preserveDuringMigration": false
+    },
+    {
+      "break": "ambiguous-receiving-identities",
+      "classification": "accidental",
+      "target": "typed SourceBasis/ContentObject/Artifact/ExecutableClosure/RuntimeInstance identities",
+      "preserveDuringMigration": false
+    },
+    {
+      "break": "acceptance-by-legacy-parity-only",
+      "classification": "accidental",
+      "target": "invariant, refusal, correction and consumer acceptance witnesses",
+      "preserveDuringMigration": false
+    },
+    {
+      "break": "effects-require-imperative-mechanisms",
+      "classification": "essential",
+      "target": "minimal typed kernel ports with exact receipts",
+      "preserveDuringMigration": true
+    },
+    {
+      "break": "authority-and-custody-crossings",
+      "classification": "essential",
+      "target": "explicit Seams; never collapsed by storage or code reuse",
+      "preserveDuringMigration": true
+    }
+  ],
+  "completion": {
+    "platformAlgebraDrivenWhen": [
+      "all reachable platform and shell semantic decisions are algebra-owned",
+      "the imperative kernel contains only enumerated mechanisms",
+      "repository dependencies and executable closures are immutable and exact",
+      "each authority, custody, process, trust and external-effect crossing remains an explicit Seam",
+      "all consumers have crossed with accepted receipts"
+    ],
+    "seamlessWhen": [
+      "all accidental Seams have accepted retirement witnesses",
+      "legacy mechanisms are unreachable in the activated generation",
+      "zero blocking residuals remain",
+      "recovery preserves the successor closure"
+    ]
+  }
+}
