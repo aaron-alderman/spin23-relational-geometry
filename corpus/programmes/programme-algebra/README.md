@@ -104,6 +104,16 @@ authored audit of what the compiler does and does not claim.
   authored L0–L6 completion audit and the boundary between structural coverage
   and scientific admission.
 
+### External theorem benchmark
+
+- **[Torus-knot Rogers--Ramanujan three-face programme](../../claims/1700-1799/1796_the_torus_knot_rogers_ramanujan_theorem_is_a_typed_three_face_arithmetic_programme_not_yet_a_physics_bridge.md)** —
+  a proved benchmark in which one source object has a finite-field counting
+  face, a gap-poset \(q\)-series face and a periodic Euler-product face. The
+  benchmark tests whether the algebra can preserve equality of outputs while
+  retaining the non-equivalent carriers, maps, assumptions and authority of
+  the three readings. It does not license an automatic physical or Monster
+  interpretation.
+
 ## Generated outputs
 
 Run:

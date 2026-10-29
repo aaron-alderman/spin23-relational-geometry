@@ -37,6 +37,23 @@
 
 ## Result
 
+### Admitted arithmetic control: one object, three exact readings
+
+[Claim 1796](../../claims/1700-1799/1796_the_torus_knot_rogers_ramanujan_theorem_is_a_typed_three_face_arithmetic_programme_not_yet_a_physics_bridge.md)
+adds a theorem-level positive control for the phrase “program encoded by a
+lattice-like formula.” For every coprime \(1<a<b\), the same series is (i) a
+normalized finite-field count of commuting nilpotent pairs satisfying
+\(A^a=B^b\), (ii) the Huang--Jiang--Oblomkov gap-vector sum, and (iii) an
+explicit periodic Euler product. Thus a geometric moduli problem, a finite
+combinatorial programme and a modular product are three proved readings of
+one arithmetic object, not a resemblance inferred from matching coefficients.
+
+This is a control, not a Monster result. The theorem supplies no Monster
+action, Moonshine module, McKay--Thompson function, genus-two sewing law,
+\(Sp(4,\mathbb Z)\) transformation or physical dynamics. Its value here is to
+show exactly what an honest cross-reading compiler looks like before the
+Moonshine branch asks for the much stronger missing structures.
+
 The Monster branch does contain a mathematically defensible sense in which a
 program is encoded by a lattice-like formula, but four meanings of “program”
 must be separated.  The cyclic Golay Rule-60 map is an actual finite update

@@ -133,6 +133,17 @@ self-description dictionary.
 - **Not licensed:** calling divisibility, a self-validating grammar or a
   character-table lookup a physical realization of the Monster.
 
+## A proved reconstruction control now exists
+
+[The torus-knot Rogers--Ramanujan theorem](../../../claims/1700-1799/1796_the_torus_knot_rogers_ramanujan_theorem_is_a_typed_three_face_arithmetic_programme_not_yet_a_physics_bridge.md)
+provides a clean positive control for this gate. A finite-field groupoid count,
+a numerical-semigroup gap sum and a periodic Euler product are proved to return
+the same series, while their carriers and maps remain explicitly different.
+It demonstrates typed equivalence of outputs without claiming that one face
+reconstructs every marked datum of the others. The Monster problem is stronger:
+its decoder must retain class orientation, multiplication and held-out
+operational predictions rather than only a scalar genus-one series.
+
 ## Corpus links
 
 - [Monster-is-physics proof certificate](frontier_wave7_150_monster_is_physics_proof_certificate.md)
@@ -143,6 +154,7 @@ self-description dictionary.
 - [Self-generated holonomy projector no-go](../../admissibility/admissibility_24_self_generated_holonomy_preserves_but_cannot_choose_the_projector.md)
 - [Typed action, return map and terminal tests](../../../claims/1100-1199/1192_how_the_programme_closes_over_itself_a_single_typed_action_a_return_map_and_terminal_tests.md)
 - [Moonshine programme/lattice bridge](../../moonshine-program-lattice/README.md)
+- [Torus-knot Rogers--Ramanujan three-face programme](../../../claims/1700-1799/1796_the_torus_knot_rogers_ramanujan_theorem_is_a_typed_three_face_arithmetic_programme_not_yet_a_physics_bridge.md)
 
 ## Sources
 

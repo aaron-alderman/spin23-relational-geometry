@@ -142,8 +142,24 @@ The new unlock condition is narrower:
 
 [`verification/verify/verify-b3-sl2-sp4-central-twist.mjs`](../../../verification/verify/verify-b3-sl2-sp4-central-twist.mjs) verifies the braid relation, symplectic embedding, central image \(-I_4\), trivial Jordan action and squared-center identity.
 
+## 9. Torus-knot arithmetic control and the notation boundary
+
+[Claim 1796](../1700-1799/1796_the_torus_knot_rogers_ramanujan_theorem_is_a_typed_three_face_arithmetic_programme_not_yet_a_physics_bridge.md)
+admits the proved torus-knot Rogers--Ramanujan theorem as a genus-one
+arithmetic control. Its \((a,b)=(2,3)\) specialization concerns the torus knot
+\(T(2,3)\). That object is **not** the three-strand braid group \(B_3\) used in
+this document. A presentation of a knot as a closed braid does not identify
+the knot with the braid group, nor does the resulting Rogers--Ramanujan product
+promote the embedded \(SL(2,\mathbb Z)\) above to \(Sp(4,\mathbb Z)\).
+
+The new theorem therefore sharpens rather than closes B09: it supplies a
+certified example of a geometric carrier compiling to a modular product, while
+the physical braid carrier, metaplectic observable and second modular handle
+remain absent here.
+
 ## Companion documents
 
 - [Phase-space/Lagrangian branch](52_phase_space_lagrangian_grassmannian_branch.md)
 - [Grand synthesis](40_grand_synthesis_spin23_pole.md)
 - [Multi-branch registry](49_multi_branch_research_registry.md)
+- [Torus-knot Rogers--Ramanujan three-face programme](../1700-1799/1796_the_torus_knot_rogers_ramanujan_theorem_is_a_typed_three_face_arithmetic_programme_not_yet_a_physics_bridge.md)

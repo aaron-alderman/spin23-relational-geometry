@@ -906,3 +906,7 @@ The central distinction throughout is this: **a list of correct particle represe
 ## External constructive-QFT reopening
 
 - [1794](../1700-1799/1794_openais_reported_lean_formalized_yang_mills_existence_is_an_external_reopening_datum_not_a_mass_gap_result.md) records OpenAI's official report of a Lean-formalized Balaban-route Yang--Mills existence construction as an external reopening datum. Because the physics artifacts remain withheld, the corpus does not yet admit the existence theorem; the source does not separately report a positive physical mass gap, and no Spin(2,3), E6 or Standard-Model bridge follows.
+
+## Torus-knot Rogers--Ramanujan arithmetic admission
+
+- [1796](../1700-1799/1796_the_torus_knot_rogers_ramanujan_theorem_is_a_typed_three_face_arithmetic_programme_not_yet_a_physics_bridge.md) admits the proved equality between a normalized finite-field count on the torus-knot singularity, the Huang--Jiang--Oblomkov gap-vector series and an explicit periodic Euler product for coprime \(1<a<b\). The \((2,3)\) certificate reproduces the first Rogers--Ramanujan identity through degree 80 and its period-five mask. It is a typed arithmetic programme and Moonshine control, not a Monster, \(Sp(4,\mathbb Z)\), \(Spin(2,3)\) or physics result.

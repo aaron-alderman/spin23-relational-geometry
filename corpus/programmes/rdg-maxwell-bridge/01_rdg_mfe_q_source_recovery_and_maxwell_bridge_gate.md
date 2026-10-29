@@ -235,6 +235,15 @@ dynamic transport, topology or convergence.
   \(Q\), admissibility predicate \(Q\), quotient map \(Q\) and wave operator
   \(\square\) are not interchangeable.
 
+### Same-author provenance is not a mathematical edge
+
+The later [torus-knot Rogers--Ramanujan post and theorem admission](../../claims/1700-1799/1796_the_torus_knot_rogers_ramanujan_theorem_is_a_typed_three_face_arithmetic_programme_not_yet_a_physics_bridge.md)
+shares J. D. Redding as the social-media source that brought it to the corpus,
+but it does not supply a theorem about RDG, MFE, Maxwell theory or dynamic
+graphs. The arithmetic result is independently sourced to its authors and is
+linked here only to prevent author-level provenance from being mistaken for a
+mathematical dependency.
+
 ## Corpus links
 
 - [RDG--Maxwell bridge programme](README.md)

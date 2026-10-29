@@ -2855,6 +2855,18 @@ gate.
 
 [AZ-044](../../programmes/admissibility/admissibility_44_finite_q_energy_continuity_kernel_and_gauge_boundary.md) executes the first finite-q route. The real-pair and reciprocal-density interaction-energy modes agree at all nine 3x3 wavevectors to at worst (4.56\times10^{-15}), and both centre- and endpoint-gauge longitudinal currents satisfy exact continuity at (10^{-15}). Their current difference norm is nevertheless 9.75 at (q_{\min}=2\pi/3), so a single small torus cannot establish energy-density gauge invariance in the transport limit. The frontier is now an odd-size ladder of normalized current moments, followed by screened and dynamical order-of-limits tests.
 
+## 29 October 2026 — torus-knot Rogers--Ramanujan three-face admission
+
+[Claim 1796](../1700-1799/1796_the_torus_knot_rogers_ramanujan_theorem_is_a_typed_three_face_arithmetic_programme_not_yet_a_physics_bridge.md)
+admits a current theorem as an exact arithmetic benchmark: for coprime
+\(1<a<b\), a normalized finite-field count of commuting nilpotent solutions to
+\(A^a=B^b\), a numerical-semigroup gap-vector sum and a periodic Euler product
+are the same \(q\)-series. The live frontier is now to formalize the general
+finite identity, test what marked data survives passage between faces and ask
+whether any independently motivated physical carrier realizes one face. No
+Monster action, genus-two law, \(Sp(4,\mathbb Z)\), \(Spin(2,3)\) or dynamics is
+inferred from the genus-one identity.
+
 [AZ-045](../../programmes/admissibility/admissibility_45_finite_q_odd_torus_gauge_ladder.md) executes that ladder in an exact two-particle spinless Ewald surrogate through (L=3,5,7,9). The normalized centre/endpoint current separation falls from 0.301 to 0.0375 with fitted exponent 1.902 in (q_{\min}), consistent with an (O(q^2)) redistribution effect. This supports, but does not prove at production density, a common long-wavelength current. The next gate is source-complete fixed-density moment scaling and screened-order collision.
 
 [AZ-046](../../programmes/admissibility/admissibility_46_screened_finite_q_order_of_limits_ladder.md) closes the dilute screening collision: unscreened, fixed (\mu=0.5), and size-scaled (\mu=q_{\min}) reciprocal Yukawa paths have gauge-separation exponents 1.902, 1.922 and 1.937. The agreement removes screening order as the immediate surrogate obstruction. It leaves source-complete fixed-density equal-time moments as the decisive computational boundary and does not admit spectral-rank interpretation.
