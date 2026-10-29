@@ -28,3 +28,14 @@ that makes one of them the physical chirality.
 Record the orientation as geometric input and test any chiral preference in the
 action or boundary state rather than attributing it to incidence alone.
 
+## Warped-face comparison
+
+The [Karch--Randall comparator](../1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md)
+places the same \(AdS_4\) symmetry inside an \(AdS_5\) parent, but its
+four-dimensional gravitational regime is selected by brane data and a
+localized spin-2 spectrum. Twistor incidence and warped localization are
+therefore complementary constructions, not interchangeable explanations:
+one reconstructs oriented conformal geometry from declared incidence and
+reality data; the other derives an effective response from embedding,
+junction and spectral data.
+

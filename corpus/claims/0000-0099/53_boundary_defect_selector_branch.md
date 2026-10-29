@@ -132,6 +132,20 @@ The branch must decide among:
 
 Each has different observables and conservation laws.
 
+### A dynamical brane comparator
+
+The [Karch--Randall construction](../1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md)
+shows what additional data a literal brane interpretation would require.
+There, an \(AdS_4\) face inside \(AdS_5\) has the desired
+\(SO(2,3)\subset SO(2,4)\) placement, but effective four-dimensional gravity
+comes from a localized spin-2 spectral measure rather than from subgroup
+restriction alone. In compact warped models the face separation is also a
+radion modulus until a stabilizing sector generates its potential.
+
+This supplies a hostile control for B08: a genuine boundary/brane selector
+must predict its fluctuation spectrum, constraint response and detector
+residues. A normal vector and induced real form are not yet dynamics.
+
 ---
 
 ## 7. Observable handles
@@ -192,3 +206,4 @@ Demote the branch if the boundary is merely a coordinate cutoff, if no intrinsic
 - [Phase-space/Lagrangian branch](52_phase_space_lagrangian_grassmannian_branch.md)
 - [Stress reduction gate](46_stress_energy_to_jordan_carrier_reduction_gate.md)
 - [Multi-branch registry](49_multi_branch_research_registry.md)
+- [Karch--Randall warped-face comparator](../1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md)

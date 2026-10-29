@@ -92,6 +92,17 @@ What remains chosen is precisely the physical datum that selects the stabiliser.
 
 One of the two strongest exact parent candidates, alongside Spin(3,3). It is mathematically cleaner than the exceptional chains but still fails the physical-origin and observable gates.
 
+### Warped-face comparator
+
+[Karch--Randall locally localized gravity](../1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md)
+provides an independent physical realization of the exact group placement:
+an \(AdS_4\) brane with \(Spin_0(2,3)\) symmetry sits inside an \(AdS_5\)
+bulk with \(Spin_0(2,4)\) symmetry. The reduction becomes observable only
+after the embedding, junction conditions and localized spin-2 spectral measure
+are supplied. This strengthens the branch as a model of an ambient-to-face
+selection but does not derive the corpus's \(H_2(\mathbb C)\to H_2(\mathbb R)\)
+carrier map.
+
 ## Spin(3,3) branch
 
 ### Files

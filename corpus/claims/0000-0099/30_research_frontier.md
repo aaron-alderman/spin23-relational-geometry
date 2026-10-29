@@ -2815,6 +2815,16 @@ The parent-covariance loophole is also closed in [1736--1737](../1700-1799/1737_
 
 [Claims 1771--1772](../1700-1799/1772_the_higher_spin_loophole_is_real_but_relocates_the_selector_to_boundary_phase_and_dictionary_data.md) execute the higher-spin escape.  AdS4 Vasiliev/vector-model families legitimately leave the finite-species flat-S-matrix domain but carry a continuous parity phase tied to a planar Chern--Simons coupling.  Their scalar is not automatically the independent massive PGT \(0^-\) mode.  The frontier is a complete normalized higher-spin/PGT dictionary, extended supersymmetry, or the stabilized compactification.
 
+[Claim 1795](../1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md)
+now makes the stabilized warped option concrete without promoting it to the
+corpus carrier. Karch--Randall realizes
+\(Spin_0(2,3)\subset Spin_0(2,4)\) as an \(AdS_4\) face inside \(AdS_5\);
+Randall--Sundrum and Goldberger--Wise separate warp redshift, graviton
+localization and radion stabilization. The frontier is a typed intertwiner
+from the Jordan real-form selector to brane/bulk data plus a normalized
+localized spectrum and detector response. Shared group names alone fail the
+gate.
+
 [Claims 1773--1774](../1700-1799/1774_extended_supersymmetry_reaches_the_same_boundary_a_specific_gauging_vacuum_and_torsion_map.md) execute the representative extended-supersymmetry branch.  General N=2 supergravity fixes the geometric form of vector, hyper and tensor couplings but not the target manifold, gauged isometry, coupling, moment maps or vacuum.  Canonical combinations such as \(gk/\sqrt{h_{aa}}\) remain model dependent, and the multiplet is not the isolated PGT pole.  The frontier is a fully specified gauged-supergravity vacuum and torsion map.
 
 [Claims 1775--1776](../1700-1799/1776_maximal_supersymmetry_closes_the_generic_higher_n_escape_at_a_specific_uplift_and_torsion_dictionary.md) execute the strongest higher-N double-back.  Maximal N=8 SO(8)-gauged supergravity admits a continuous omega deformation with the same maximally symmetric quadratic spectrum but different interactions.  The 128+128 multiplet supplies no automatic identity between a pseudoscalar and independent PGT torsion.  The frontier is now one specified uplift, vacuum/breaking trajectory and normalized torsion matching calculation, not a further increase of supersymmetry.

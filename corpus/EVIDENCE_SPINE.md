@@ -12,17 +12,17 @@ The spine never promotes a claim, converts a passing script into a broader proof
 
 ## Coverage
 
-1574 claim documents are indexed by path plus canonical SHA-256. There are 1573 unique legacy numeric IDs and 1 preserved collision(s). 1574 claim files match their canonical identity; 0 differ in the working copy.
+1575 claim documents are indexed by path plus canonical SHA-256. There are 1574 unique legacy numeric IDs and 1 preserved collision(s). 1575 claim files match their canonical identity; 0 differ in the working copy.
 
 | Join | Observed | Inferred | Missing |
 |---|---:|---:|---:|
-| source | 83 | 155 | 1336 |
-| evidence | 332 | 7 | 1235 |
-| certificate | 589 | 804 | 181 |
-| scopedVerdict | 527 | 343 | 704 |
-| knownConsumer | 0 | 276 | 1298 |
+| source | 84 | 155 | 1336 |
+| evidence | 333 | 7 | 1235 |
+| certificate | 589 | 805 | 181 |
+| scopedVerdict | 528 | 343 | 704 |
+| knownConsumer | 0 | 282 | 1293 |
 
-The index contains 12584 observed outgoing links, 813 inbound consumer candidates, and 0 unresolved local claim links.
+The index contains 12608 observed outgoing links, 829 inbound consumer candidates, and 0 unresolved local claim links.
 
 ## Record contract
 

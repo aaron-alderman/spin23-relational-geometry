@@ -108,6 +108,15 @@ Massless spin-1/2 fields are allowed by relativistic QFT. No exactly massless fu
 
 AdS4 can be represented as a hyperboloid in flat five-dimensional space of signature \((2,3)\). Its connected isometry algebra is \(\mathfrak{so}(2,3)\); the spin cover is \(\mathrm{Spin}(2,3)\). The Lorentz stabiliser enters through the coset \(SO(2,3)/SO(1,3)\) (with global qualifications). Also \(\mathrm{Spin}(2,3)\cong Sp(4,\mathbb R)\), with maximal compact subgroup \(U(2)\). \(\mathrm{Spin}(3,3)\) is locally related to \(SL(4,\mathbb R)\). None of these identities alone establishes the universe's symmetry group.
 
+Karch--Randall adds a precise neighboring construction:
+\(AdS_4\subset AdS_5\) realizes
+\(Spin_0(2,3)\subset Spin_0(2,4)\) as face and ambient isometries, while a
+localized spin-2 spectral measure determines the effective lower-dimensional
+gravity. This demonstrates that the group ladder can arise in a physical
+model, but it does not identify the thesis's Jordan carrier with the brane.
+The missing bridge is a carrier-, source- and observable-preserving
+intertwiner; see [claim 1795](../../claims/1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md).
+
 **Correction:** choosing a nonzero null vector in \(\mathbb R^{2,3}\) does not simply reduce the geometry to ordinary \(\mathrm{Spin}(1,3)\). Its orthogonal complement is four-dimensional but metric-degenerate; the quotient by the null line is three-dimensional with signature \((1,2)\). The proposed constrained null transport direction can be retained, but a physical Lorentzian 3+1 sector requires another selection mechanism.
 
 ## The programme's central selection hypothesis
@@ -240,6 +249,13 @@ Electromagnetic observability is **statistical**, not an absolute projector. One
 ## Gravity and the missing-mass proposal
 
 The core possibility is that the gravitational source samples aspects of a larger configuration unavailable to luminous-mass inference. Higher-dimensional braneworld reductions provide mathematical precedents: effective 4D gravitational equations can include projected bulk Weyl curvature and quadratic matter corrections. These examples often use an extra **spacelike** dimension, so they do not validate the proposed timelike configuration interpretation.
+
+Warped examples sharpen the dynamics warning. A lower-dimensional face is not
+autonomous merely because it has an induced metric: radion stabilization,
+bulk constraints and the pole-plus-continuum response can be required to
+recover its effective curvature. Any configuration-space reading must derive
+an equivalent retained constraint record rather than borrowing the
+extra-dimensional vocabulary.
 
 A flat global tilt is generally a coordinate choice, not extra mass. Physically meaningful candidates include varying relative orientation, extrinsic curvature, bulk fields and different coupling kernels. The theory must predict **rotation curves, gravitational lensing, cluster mass distributions, structure formation and CMB cosmology from the same parameters**. Merely undercounting visible stars cannot automatically explain gravitational effects. The Bullet Cluster and other merging clusters are especially constraining because lensing and baryonic gas distributions differ.
 

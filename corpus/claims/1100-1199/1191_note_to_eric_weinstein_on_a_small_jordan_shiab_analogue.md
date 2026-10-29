@@ -1,5 +1,7 @@
 # Note to Eric Weinstein on a small Jordan–Shiab analogue
 
+**Status: draft; not sent**
+
 **Subject: A finite Jordan “ship in a bottle” that may be close to your language**
 
 Eric—
