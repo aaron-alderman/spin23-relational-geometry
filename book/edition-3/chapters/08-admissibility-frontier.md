@@ -1347,6 +1347,12 @@ The graph part of the missing source has now been computed and correctly normali
 > **Expanded claim page →** [Inspect the claim’s scope, logic, verification route, boundary and sources](../details/08-admissibility-frontier-capture-does-not-need-a-sink-claim-3.md)
 
 <a id="kenotic-confidence"></a>
+## Internal stress is not reactionless locomotion
+
+Broken symmetry and a cyclic internal stroke can select a direction, but they do not supply the missing momentum port. Birds and fish exchange momentum with wakes; a sailboat exchanges it through air, water and keel; a low-Reynolds-number swimmer traces a non-reciprocal loop in shape space. Equilibrium Brownian motion supplies fluctuations but not persistent directed transport. Any device that appears to move through internal stress alone must therefore close the matter, field, radiation, gas, thermal, vibration and support ledgers before an additional carrier is admitted. The useful experiment is a floating multi-input system driven through opposite control-loop orientations: ordinary bilinear artefacts are even under loop reversal, geometric response is odd, and every surviving impulse still has to appear at a declared boundary.
+
+> **Expanded programme →** [What is the device swimming in?](../../../corpus/programmes/admissibility/admissibility_163_internal_stress_medium_locomotion_and_momentum_closure.md)
+
 ## Kenotic confidence
 
 > **Section status — [▦ Ledger / governance](../reading-key/status-governance.md)** — Preserves provenance, status, stopping rules and navigation.
@@ -1423,6 +1429,7 @@ AI can map dispersed results, optimize separating interventions and maintain the
 - [admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md](../../../corpus/programmes/admissibility/admissibility_120_a_unitary_acoustic_rail_replaces_the_hand_shaped_capture_bath.md)
 - [admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md](../../../corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md)
 - [admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md](../../../corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md)
+- [admissibility_163_internal_stress_medium_locomotion_and_momentum_closure.md](../../../corpus/programmes/admissibility/admissibility_163_internal_stress_medium_locomotion_and_momentum_closure.md)
 
 ---
 

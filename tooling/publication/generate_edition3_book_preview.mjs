@@ -109,6 +109,13 @@ const sourceArticles = [
     label: "Experimental physics article",
   },
   {
+    slug: "internal-stress-medium-locomotion",
+    title: "What is the device swimming in?",
+    kicker: "Internal stress, broken symmetry and control loops still require a momentum port",
+    source: "corpus/programmes/admissibility/admissibility_163_internal_stress_medium_locomotion_and_momentum_closure.md",
+    label: "Frontier physics article",
+  },
+  {
     slug: "lenses-make-many-points",
     title: "Lenses make many points",
     kicker: "Spectral type, multiscale closure and what a small potential can hide",

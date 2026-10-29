@@ -1,0 +1,131 @@
+{
+  "schema": "admissibility.medium-locomotion-control-gate/1",
+  "generatedBy": "scripts/run-medium-locomotion-control-gate.mjs",
+  "date": "2026-10-29",
+  "loopControl": {
+    "amplitude": 2,
+    "phases": [
+      -1.5707963267948966,
+      -0.7853981633974483,
+      0,
+      0.7853981633974483,
+      1.5707963267948966
+    ],
+    "loops": [
+      {
+        "phase": -1.5707963267948966,
+        "meanSquareDrive": 4,
+        "bilinearMean": 1.2246467991473532e-16,
+        "orientedArea": 12.566370614359172
+      },
+      {
+        "phase": -0.7853981633974483,
+        "meanSquareDrive": 4,
+        "bilinearMean": 1.4142135623730951,
+        "orientedArea": 8.885765876316732
+      },
+      {
+        "phase": 0,
+        "meanSquareDrive": 4,
+        "bilinearMean": 2,
+        "orientedArea": 0
+      },
+      {
+        "phase": 0.7853981633974483,
+        "meanSquareDrive": 4,
+        "bilinearMean": 1.4142135623730951,
+        "orientedArea": -8.885765876316732
+      },
+      {
+        "phase": 1.5707963267948966,
+        "meanSquareDrive": 4,
+        "bilinearMean": 1.2246467991473532e-16,
+        "orientedArea": -12.566370614359172
+      }
+    ],
+    "pairResiduals": [
+      {
+        "phase": 0.7853981633974483,
+        "powerEvenResidual": 0,
+        "bilinearEvenResidual": 0,
+        "areaOddResidual": 0
+      },
+      {
+        "phase": 1.5707963267948966,
+        "powerEvenResidual": 0,
+        "bilinearEvenResidual": 0,
+        "areaOddResidual": 0
+      }
+    ],
+    "maximumSymmetryResidual": 0
+  },
+  "stochasticRing": {
+    "equilibrium": {
+      "affinity": 0,
+      "forwardRate": 1,
+      "reverseRate": 1,
+      "probability": 0.3333333333333333,
+      "edgeCurrent": 0,
+      "entropyProduction": 0
+    },
+    "driven": {
+      "affinity": 1.2,
+      "forwardRate": 1.2214027581601699,
+      "reverseRate": 0.8187307530779819,
+      "probability": 0.3333333333333333,
+      "edgeCurrent": 0.13422400169406262,
+      "entropyProduction": 0.1610688020328751
+    }
+  },
+  "momentumLedgers": [
+    {
+      "id": "closed-matter-field",
+      "deviceImpulse": 1,
+      "fieldImpulse": -1,
+      "environmentalImpulse": 0,
+      "outgoingImpulse": 0,
+      "residual": 0
+    },
+    {
+      "id": "ordinary-external-port",
+      "deviceImpulse": 1,
+      "fieldImpulse": 0,
+      "environmentalImpulse": -1,
+      "outgoingImpulse": 0,
+      "residual": 0
+    },
+    {
+      "id": "declared-radiation-port",
+      "deviceImpulse": 1,
+      "fieldImpulse": 0,
+      "environmentalImpulse": 0,
+      "outgoingImpulse": -1,
+      "residual": 0
+    },
+    {
+      "id": "untyped-force",
+      "deviceImpulse": 1,
+      "fieldImpulse": 0,
+      "environmentalImpulse": 0,
+      "outgoingImpulse": 0,
+      "residual": 1
+    }
+  ],
+  "photonBound": {
+    "targetForceN": 0.01,
+    "speedOfLightMPerS": 299792458,
+    "idealPhotonPowerW": 2997924.58
+  },
+  "admission": {
+    "oppositeLoopsHoldPowerFixed": true,
+    "bilinearMixingIsOrientationEven": true,
+    "geometricAreaIsOrientationOdd": true,
+    "equilibriumDetailedBalanceHasNoDirectedCurrent": true,
+    "nonequilibriumAffinityProducesCurrentAndEntropy": true,
+    "declaredMomentumPortsClose": true,
+    "forceWithoutReceivingCarrierFailsClosure": true,
+    "tenMilliNewtonPhotonBenchmarkIsApproximatelyThreeMegawatts": true,
+    "newSubstrateIdentified": false,
+    "exodusForceIndependentlyReplicated": false
+  }
+}
