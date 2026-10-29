@@ -8,4 +8,8 @@ The map does not create repositories or grant source merge, package adoption, ru
 
 The [source-discovery checkpoint](source-discovery-checkpoint-v1.json) records the first tranche's current mechanism gap: the serving generation exposes only the unbounded workspace inventory, while the bounded, source-identity-preserving successor is qualified but inactive. It retains the exact successor evidence and assigns its eventual semantics and adapter to the proposed Git owners without retrying the refused Temple promotion path.
 
+The [platform-shell extraction checkpoint](platform-shell-extraction-checkpoint-v1.json) reconciles seven already-merged semantic extraction lanes. It records their exact source-lane heads while explicitly withholding file-closure, Git-receiving, adoption and retirement claims until bounded discovery can provide path/hash drill-down.
+
+The [MJS audit schema](mjs-audit-schema-v1.json) defines the function-level evidence needed for the first phase: exact Git or Temple source identity, entrypoint reachability, static and dynamic edges, semantic coordinates, effects, disposition, witnesses, Seams, symmetry breaks and unresolved residuals.
+
 During migration, every material authority, custody, process, trust and external-effect crossing remains an explicit Seam. An accidental compatibility Seam becomes seamless only after all consumers have crossed, blocking residuals are closed, the legacy mechanism is unreachable at runtime and an accepted retirement witness exists.

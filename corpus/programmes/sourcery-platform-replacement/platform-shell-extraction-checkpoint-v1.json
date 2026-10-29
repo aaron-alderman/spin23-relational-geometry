@@ -1,0 +1,119 @@
+{
+  "protocol": "sourcery/platform-shell-extraction-checkpoint/1",
+  "id": "platform-shell-extraction-checkpoint-v1",
+  "status": "merged-lane-evidence-path-closure-pending",
+  "observedAt": "2026-10-29",
+  "receivingContext": {
+    "laneId": "integration/main",
+    "snapshotId": "4f20143b-17c0-4a9e-84d0-0427f23520f2",
+    "connectionId": "linux-claimipedia-development-7b3be9e5-7832-4974-96c9-ee29f1cf6ad9:integration/main",
+    "scope": "Current blessed main observation. Each source lane is terminal merged, but this checkpoint does not infer its exact file closure without bounded discovery."
+  },
+  "mergedSourceLanes": [
+    {
+      "laneId": "task/platform-shell-common-reduction-seam-application-20261028",
+      "headSnapshotId": "3feeeab1-c429-4ea3-8e01-84c846e83bde",
+      "terminalDisposition": "merged",
+      "semanticDomain": "CommonReduction, Seam, SymmetryBreak, Residual, ConsumerCrossing and RetirementWitness application"
+    },
+    {
+      "laneId": "task/platform-shell-ps01-ps05-mcp-semantics-extraction-20261029",
+      "headSnapshotId": "4567e516-2dc2-4685-8590-59bbe67eb719",
+      "terminalDisposition": "merged",
+      "semanticDomain": "PS01 and PS05 MCP semantics"
+    },
+    {
+      "laneId": "task/platform-shell-ps02-ps09-ps11-remaining-domains-20261029",
+      "headSnapshotId": "27dd6828-e7d2-4df9-9ddf-1852ba8edfbb",
+      "terminalDisposition": "merged",
+      "semanticDomain": "PS02, PS09 and PS11 remaining platform-shell domains"
+    },
+    {
+      "laneId": "task/platform-shell-ps03-ps04-supervisor-runtime-extraction-20261029",
+      "headSnapshotId": "e59e6dfe-f132-4f85-ab9c-5f9a14b111e4",
+      "terminalDisposition": "merged",
+      "semanticDomain": "PS03 and PS04 supervisor/runtime semantics"
+    },
+    {
+      "laneId": "task/platform-shell-ps06-ps08-matrix-managed-deploy-extraction-20261029",
+      "headSnapshotId": "9b298625-0169-4242-9d30-5f9c5d0d00ee",
+      "terminalDisposition": "merged",
+      "semanticDomain": "PS06 and PS08 matrix and managed-deploy semantics"
+    },
+    {
+      "laneId": "task/platform-shell-ps07-nginx-route-transaction-extraction-20261029",
+      "headSnapshotId": "c2e84744-e227-40a4-9d2f-bc6367cadbc4",
+      "terminalDisposition": "merged",
+      "semanticDomain": "PS07 nginx route transaction semantics"
+    },
+    {
+      "laneId": "task/platform-shell-ps10-tool-catalog-extraction-20261028",
+      "headSnapshotId": "177e84aa-db8e-4ad0-9d0c-ba69269d30f3",
+      "terminalDisposition": "merged",
+      "semanticDomain": "PS10 tool-catalog semantics"
+    }
+  ],
+  "interpretation": {
+    "established": [
+      "The seven named source lanes are closed, archived and recorded as merged.",
+      "The current blessed main snapshot postdates those merged dispositions.",
+      "The platform-shell semantic decomposition has begun and covers the named PS domains."
+    ],
+    "notEstablished": [
+      "exact file paths and hashes contributed by each lane",
+      "complete MJS reachability or function-level classification",
+      "consumer adoption",
+      "runtime selection",
+      "legacy unreachability",
+      "Seam retirement",
+      "Git receipt into the proposed repositories"
+    ],
+    "reason": "The current serving workspace inventory remains unbounded; replaying its complete listing would violate the bounded source-discovery requirement."
+  },
+  "gitReceivingPlan": {
+    "rule": "Receive semantic sources by exact path and hash into their lifecycle owner; do not reproduce the Temple lane hierarchy as the new repository architecture.",
+    "initialPartition": [
+      {
+        "target": "sourcery-platform",
+        "domains": [
+          "CommonReduction and Seam lifecycle",
+          "supervisor/runtime state semantics",
+          "managed deployment and route transaction semantics",
+          "tool-catalog eligibility and platform lifecycle laws"
+        ]
+      },
+      {
+        "target": "sourcery-shell",
+        "domains": [
+          "MCP interaction and session semantics",
+          "human-facing capability/refusal projection",
+          "surface composition"
+        ]
+      },
+      {
+        "target": "sourcery-kernel",
+        "domains": [
+          "only the enumerated effect adapters and evaluator/codec mechanics referenced by the semantic sources"
+        ]
+      }
+    ],
+    "pending": "Use bounded discovery to attach exact source path, hash, predecessor and residual identities before any Git receiving claim."
+  },
+  "nextAuditStep": {
+    "action": "Define the function-level MJS audit schema and seed it with already-known exact files while bounded discovery remains inactive.",
+    "doesNotRequire": [
+      "Temple mutation",
+      "repository creation",
+      "active claimipedia-core edits",
+      "runtime activation"
+    ]
+  },
+  "authority": {
+    "grantsReceiving": false,
+    "grantsRepositoryCreation": false,
+    "grantsMerge": false,
+    "grantsAdoption": false,
+    "grantsActivation": false,
+    "grantsRetirement": false
+  }
+}
