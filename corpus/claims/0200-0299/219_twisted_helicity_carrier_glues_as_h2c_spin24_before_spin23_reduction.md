@@ -158,3 +158,4 @@ The [twisted \(H_2(\mathbb C)\) gluing certificate](../../../verification/verify
 - [Hypercharge does not automatically cancel Chern eight](218_furey_hypercharge_does_not_automatically_cancel_celestial_chern_eight.md)
 - [Jordan selection and Spin(2,4)-to-Spin(2,3) descent](../0000-0099/44_jordan_selection_axioms_and_spin24_to_spin23_descent.md)
 - [Hopf phase descent](../0100-0199/123_hopf_phase_descent_and_carrier_correction.md)
+- [Karch--Randall warped-face comparator](../1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md): an independent physical realization of a selected \(Spin(2,3)\) face inside a \(Spin(2,4)\) ambient geometry, with the carrier-identification problem left open.

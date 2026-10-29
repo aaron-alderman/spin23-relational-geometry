@@ -1,0 +1,1841 @@
+{
+  "schema": "mathematical-group-candidate-adjudications/1",
+  "date": "2026-10-28",
+  "authority": "human_review_of_deterministic_candidate_clusters_not_independent_mathematical_proof",
+  "basis": {
+    "scan": "mathematical_group_corpus_scan_v1.json",
+    "catalogue": "mathematical_group_catalogue_v1.json",
+    "signatureRule": "sorted_group_ids__sorted_predicates__polarity"
+  },
+  "dispositionVocabulary": [
+    "promoted",
+    "corrected_global_form",
+    "corrected_predicate_scope",
+    "promoted_external_object",
+    "partially_promoted_external_object",
+    "retained_qualification",
+    "deferred_external_object",
+    "rejected_false_positive",
+    "superseded_by_resolution"
+  ],
+  "adjudications": [
+    {
+      "id": "adjudication:Sp4R-Spin023-isomorphism-positive",
+      "signature": {
+        "groupIds": ["grp:Sp4R", "grp:Spin0_2_3"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:a1640880f9d23dc4",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:Spin023-iso-Sp4R"],
+      "assessment": "The repeated corpus identification has a reviewed real-Lie-group isomorphism record; identity components and global forms remain explicit caveats.",
+      "reviewedEvidenceIds": ["scan:f8a5e42a328eb322"]
+    },
+    {
+      "id": "adjudication:Sp4R-Spin023-isomorphism-qualified",
+      "signature": {
+        "groupIds": ["grp:Sp4R", "grp:Spin0_2_3"],
+        "predicates": ["isomorphism"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:59a91a533e1580a2",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:Spin023-iso-Sp4R"],
+      "assessment": "Negative language in this cluster primarily limits physical, representational or global-form transfer; it does not negate the reviewed abstract real-Lie-group isomorphism.",
+      "reviewedEvidenceIds": []
+    },
+    {
+      "id": "adjudication:SM-product-shorthand",
+      "signature": {
+        "groupIds": ["grp:SU2", "grp:SU3", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:d5c500cbd15f40a9",
+      "disposition": "superseded_by_resolution",
+      "supersededBy": ["adjudication:SM-cover-full-product-resolution", "adjudication:SM-C6-faithful-quotient-resolution"],
+      "supersessionReason": "Algorithm 9 resolves the named three-factor cover and Algorithm 8 resolves the written C6 kernel, splitting the former factor-only cluster into cover and quotient-aware successors.",
+      "relationshipIds": ["rel:SM-cover-product", "rel:SM-central-Z6-quotient", "rel:GSM-iso-SU3U2Flag"],
+      "assessment": "The factors correctly define the unquotiented cover, while the faithful Standard Model global group in the reviewed corpus is its central C6 quotient, equivalently S(U(3) x U(2)) for the declared normalization.",
+      "reviewedEvidenceIds": ["scan:04eb7f4e975c67af", "scan:c4feadb4074f41c7"]
+    },
+    {
+      "id": "adjudication:U3-U2-special-product-shorthand",
+      "signature": {
+        "groupIds": ["grp:U2", "grp:U3"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:4c77bfcc038dd5f6",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:U3xU2-product", "rel:SU3U2Flag-determinant-sequence"],
+      "assessment": "Most reviewed occurrences are S(U(3) x U(2)), the kernel of the product-determinant map from U(3) x U(2) to U(1), rather than the unrestricted direct product.",
+      "reviewedEvidenceIds": ["scan:ab0cdef9edf72f9f", "scan:d1b0b1e68161605e"]
+    },
+    {
+      "id": "adjudication:Pati-Salam-product-shorthand",
+      "signature": {
+        "groupIds": ["grp:SU2", "grp:SU2xSU2", "grp:SU4"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:bf309f8bd60c71b8",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:PatiSalam-cover-product", "rel:PatiSalam-central-C2-quotient", "rel:PatiSalam-subgroup-Spin10"],
+      "assessment": "The notation correctly names the Lie-algebra-level factors and unquotiented cover; the subgroup embedded in simply connected Spin(10) is the diagonal central C2 quotient.",
+      "reviewedEvidenceIds": ["scan:f52526f2fe40e4e7", "scan:dff581194bb646b1"]
+    },
+    {
+      "id": "adjudication:Sp4R-U2-isomorphism-language",
+      "signature": {
+        "groupIds": ["grp:Sp4R", "grp:U2"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:41c4bcfa88645378",
+      "disposition": "promoted_external_object",
+      "relationshipIds": ["rel:U2-maximal-compact-Sp4R"],
+      "externalRelationIds": ["extrel:Sp4R-quotient-U2-SiegelH2"],
+      "assessment": "The apparent isomorphism belongs to the homogeneous-space statement Sp(4,R)/U(2) = H_2, not an isomorphism between the two groups. The ambient group, stabilizer and space are now separately typed.",
+      "reviewedEvidenceIds": ["scan:c3f06153abc1aa86"]
+    },
+    {
+      "id": "adjudication:Spin10-U1-E6-product-shorthand",
+      "signature": {
+        "groupIds": ["grp:Spin10", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:ea3954f157195508",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:Spin10U1-product", "rel:Spin10U1-central-C4-quotient", "rel:Spin10U1-subgroup-E6"],
+      "assessment": "Spin(10) x U(1) is the correct cover-level product, but its standard maximal-rank image in simply connected compact E6 is the diagonal central C4 quotient.",
+      "reviewedEvidenceIds": ["scan:85fcd80cd9b9243e"]
+    },
+    {
+      "id": "adjudication:WE6-S5-coset-language",
+      "signature": {
+        "groupIds": ["grp:E6compact", "grp:S5", "grp:WE6"],
+        "predicates": ["weyl_group"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:0e35b294595dfe32",
+      "disposition": "promoted_external_object",
+      "relationshipIds": ["rel:S5-subgroup-WE6"],
+      "externalRelationIds": ["extrel:WE6-quotient-S5-432"],
+      "assessment": "The repeated W(E6)/S5 expression is a 432-point coset carrier and its Hecke/double-coset algebra, not a new group isomorphism. The selected S5 parabolic class remains part of the identity.",
+      "reviewedEvidenceIds": ["scan:a166c4ae63f51235", "scan:e786f86506736459"]
+    },
+    {
+      "id": "adjudication:Spin10-representation-language",
+      "signature": {
+        "groupIds": ["grp:Spin10"],
+        "predicates": ["representation"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:d065f0e9c2437d79",
+      "disposition": "partially_promoted_external_object",
+      "relationshipIds": [],
+      "externalRelationIds": ["extrel:Spin10-rep-16", "extrel:Spin10-rep-10"],
+      "assessment": "The cluster mixes several Spin(10) modules. The reviewed half-spin 16 and vector 10 now have typed identities; remaining occurrences require representation-specific adjudication rather than cluster-wide promotion.",
+      "reviewedEvidenceIds": ["scan:5483e7817719a537", "scan:eb00de844c282cae"]
+    },
+    {
+      "id": "adjudication:E6-representation-language",
+      "signature": {
+        "groupIds": ["grp:E6compact"],
+        "predicates": ["representation"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:e33c74629255f74d",
+      "disposition": "partially_promoted_external_object",
+      "relationshipIds": [],
+      "externalRelationIds": ["extrel:E6-rep-27", "extrel:E6-27-restricts-Spin10U1"],
+      "assessment": "The fundamental 27 and its Spin(10) x U(1) branching are now typed. Other E6 modules in the same cluster, including symmetric 351 variants, remain distinct review work.",
+      "reviewedEvidenceIds": ["scan:8f0773ae347df5e2", "scan:11736729bb3159c8"]
+    },
+    {
+      "id": "adjudication:F23-symplectic-spin-transition-chain",
+      "signature": {
+        "groupIds": ["grp:SL2F23", "grp:Sp2F23", "grp:Sp4F23", "grp:Spin5F23"],
+        "predicates": ["isomorphism", "subgroup"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:e47ab2f3b384e18d",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SL2F23-iso-Sp2F23", "rel:Sp2F23-subgroup-Sp4F23", "rel:Sp4F23-iso-Spin5F23"],
+      "assessment": "The degree-two determinant/symplectic identity, block embedding, and simply connected B2/C2 exceptional isomorphism are distinct maps in one finite-field chain. The Spin5 endpoint is not silently replaced by SO5 or Omega5; its central global form remains explicit.",
+      "reviewedEvidenceIds": ["scan:06b6b8f8a6c4334d"]
+    },
+    {
+      "id": "adjudication:compact-and-split-B2-C2-real-form-seam",
+      "signature": {
+        "groupIds": ["grp:Sp2Compact", "grp:Sp4R", "grp:Spin0_2_3", "grp:Spin5"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:b28c1c3903fc0228",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:Spin5-iso-Sp2Compact", "rel:Spin023-iso-Sp4R"],
+      "externalRelationIds": ["extrel:sp2Compact-isomorphic-so5Compact", "extrel:sp4R-isomorphic-so23"],
+      "assessment": "The line contains two separate exceptional B2/C2 isomorphisms: one compact and one split. They share a complexified root-system type but not a real form, Killing signature, positivity structure, or automatic transfer of physical conclusions. The atlas promotes both pairs while explicitly refusing a cross-pair identification.",
+      "reviewedEvidenceIds": ["scan:9b8061d231aaed09"]
+    },
+    {
+      "id": "adjudication:B3-center-projective-modular-quotient",
+      "signature": {
+        "groupIds": ["grp:B3Braid", "grp:PSL2Z"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:43114bccc865e82e",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:B3-center-quotient-PSL2Z", "rel:B3-surjection-SL2Z", "rel:SL2Z-projective-quotient"],
+      "assessment": "The corpus quotient language is resolved into two compatible routes: direct quotient of B3 by its infinite cyclic full-twist center, and the standard surjection to SL(2,Z) followed by its central C2 projectivization. The generated composition retains the intermediate central sign rather than flattening the routes into typography.",
+      "reviewedEvidenceIds": ["scan:98591be71d68c111"]
+    },
+    {
+      "id": "adjudication:rank-one-real-group-isomorphism-triangle",
+      "signature": {
+        "groupIds": ["grp:SL2R", "grp:SU1_1", "grp:Spin0_1_2"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:41ac21b7ce11059b",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SU11-iso-SL2R", "rel:Spin012-iso-SL2R"],
+      "externalRelationIds": ["extrel:su11-isomorphic-sl2R", "extrel:sl2R-isomorphic-so12"],
+      "assessment": "The corpus triangle is resolved through two explicit real-Lie-group isomorphisms with SL(2,R) as the shared model. Cayley conjugation and the determinant-preserving spin action are separate intertwiners; the triangle does not identify the displayed matrix forms without those maps or turn SL(2,R) into the infinite universal cover.",
+      "reviewedEvidenceIds": ["scan:36a3ac6b1495998d"]
+    },
+    {
+      "id": "adjudication:Spin12-selected-section-in-Spin23",
+      "signature": {
+        "groupIds": ["grp:Spin0_1_2", "grp:Spin0_2_3"],
+        "predicates": ["stabilizer"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:9c8a7c2389f5725a",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:Spin012-subgroup-Spin023", "rel:SO012-subgroup-SO023"],
+      "externalRelationIds": ["extrel:Spin012-has-lie-so12", "extrel:Spin012-root-A1"],
+      "assessment": "The boundary Spin(1,2) symmetry is promoted as a selected-section stabilizer subgroup of Spin_0(2,3), not as a canonical unqualified inclusion. Its orthogonal base inclusion, spin cover, Lie algebra, and A1 root type remain separately typed, and the subgroup relation does not force the corpus's candidate minor vector onto a null orbit.",
+      "reviewedEvidenceIds": ["scan:ca85b4db98316200"]
+    },
+    {
+      "id": "adjudication:Spin23-Spin24-SU33-carrier-ladder",
+      "signature": {
+        "groupIds": ["grp:SU3_3", "grp:Spin0_2_3", "grp:Spin0_2_4"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:770ced5e1a7f8f05",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:Spin023-subgroup-Spin024", "rel:Spin024-iso-SU22", "rel:SU22-subgroup-SU33"],
+      "externalRelationIds": ["extrel:su22-isomorphic-so24", "extrel:SU33-root-A5"],
+      "assessment": "The scanner's isomorphism predicate comes from the adjacent Peirce-corner identity on the same line; the displayed group ladder itself contains selected inclusions. The atlas therefore promotes the typed route Spin_0(2,3) -> Spin_0(2,4) ≅ SU(2,2) -> SU(3,3), retains both selected-subspace dependencies, and refuses to infer physical activation of the full SU(3,3) carrier.",
+      "reviewedEvidenceIds": ["scan:500c3d67bbad28a1"]
+    },
+    {
+      "id": "adjudication:SO2-U1-rotation-phase-isomorphism",
+      "signature": {
+        "groupIds": ["grp:SO2", "grp:U1"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:2b144bbce855799f",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SO2-iso-U1", "rel:Spin2-cover-SO2", "rel:Spin2-iso-U1"],
+      "assessment": "The connected planar rotation group and the unit complex phases are isomorphic through theta -> exp(i theta). This does not collapse the nearby Spin(2) maps: under these models the cover Spin(2) -> SO(2) becomes z -> z^2, whereas the separately declared Spin(2) -> U(1) isomorphism is bijective.",
+      "reviewedEvidenceIds": ["scan:a8cac5589f071b4f", "scan:88056962196af717", "scan:1923b25ef7540dfd"]
+    },
+    {
+      "id": "adjudication:SU3-U1-product-global-form-seam",
+      "signature": {
+        "groupIds": ["grp:SU3", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:aaf332444de5b212",
+      "disposition": "superseded_by_resolution",
+      "supersededBy": ["adjudication:SU3-U1-explicit-product-alias"],
+      "supersessionReason": "Algorithm 7 resolves the named product node in the same evidence.",
+      "relationshipIds": ["rel:SU3U1-product", "rel:SU3U1-central-C3-quotient-U3", "rel:U3-subgroup-SU4"],
+      "assessment": "The cluster mixes literal covering-product notation, representation-level symmetry labels, and residual SU(4)-breaking shorthand. The atlas retains SU(3) x U(1) as a named covering product but records that its effective global subgroup inside SU(4) is U(3) = (SU(3) x U(1))/C3. Physical charge normalization and the faithful quotient for a chosen matter spectrum remain representation data rather than consequences of the typography.",
+      "reviewedEvidenceIds": ["scan:bcc26e0cef399443"]
+    },
+    {
+      "id": "adjudication:SU2-U1-electroweak-product-boundary",
+      "signature": {
+        "groupIds": ["grp:SU2", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:692cb018be37cbff",
+      "disposition": "superseded_by_resolution",
+      "supersededBy": ["adjudication:SU2-U1-explicit-product-alias"],
+      "supersessionReason": "Algorithm 7 resolves the named product node in the same evidence.",
+      "relationshipIds": ["rel:SU2U1-product", "rel:SU2U1-central-C2-quotient-U2", "rel:U2-subgroup-SU3"],
+      "assessment": "The corpus uses SU(2)_L x U(1)_Y primarily as electroweak covering-product notation. The atlas types that product and the standard diagonal C2 quotient U(2), but does not choose the faithful electroweak global form without the represented matter and charge lattice. The determinant-compensated U(2) inclusion into SU(3) is a separate explicit map.",
+      "reviewedEvidenceIds": ["scan:fe78815d434008c1"]
+    },
+    {
+      "id": "adjudication:SU3-SU2-nonabelian-product-modules",
+      "signature": {
+        "groupIds": ["grp:SU2", "grp:SU3"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:15400fca42dda495",
+      "disposition": "superseded_by_resolution",
+      "supersededBy": ["adjudication:SU3-SU2-explicit-product-alias"],
+      "supersessionReason": "Algorithm 7 resolves the named product node in the same evidence.",
+      "relationshipIds": ["rel:SU3SU2-product", "rel:SU3SU2-subgroup-SMCover", "rel:SU3SU2-subgroup-GSM"],
+      "assessment": "The corpus consistently uses SU(3) x SU(2) as the nonabelian product acting on module blocks, intertwiners and singlets. The atlas promotes that product and separately records its unit-hypercharge embedding in the Standard Model cover and its injective descent through the diagonal C6 quotient. Hypercharge and the full faithful Standard Model group are not silently reconstructed from the two-factor notation.",
+      "reviewedEvidenceIds": ["scan:682e089db31f0b43"]
+    },
+    {
+      "id": "adjudication:SO3-SO2-locking-product",
+      "signature": {
+        "groupIds": ["grp:SO2", "grp:SO3"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:4b637575bf24b79f",
+      "disposition": "superseded_by_resolution",
+      "supersededBy": ["adjudication:SO3-SO2-explicit-product-alias"],
+      "supersessionReason": "Algorithm 7 resolves the named product node in the same evidence.",
+      "relationshipIds": ["rel:SO3SO2-product", "rel:SO2-subgroup-SO3", "rel:SO2diag-subgroup-SO3SO2"],
+      "externalRelationIds": ["extrel:SO3SO2-quotient-SO2diag-locking-orbit"],
+      "assessment": "The repeated SO(3)_L x SO(2)_R notation is a connected direct product acting on the 3-by-2 locking tensor. The selected-axis SO(2) in the first factor, the second factor circle, and the diagonal locking stabilizer are three distinct embeddings. Dividing by the diagonal stabilizer produces a homogeneous orbit, not a quotient group, because the stabilizer is not normal.",
+      "reviewedEvidenceIds": ["scan:28e1eb5c3e2012c1", "scan:6ee484b29511a24b"]
+    },
+    {
+      "id": "adjudication:SU3-U1-explicit-product-alias",
+      "signature": {
+        "groupIds": ["grp:SU3", "grp:SU3xU1", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:e964be2d694cc7c3",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:SU3U1-product", "rel:SU3U1-central-C3-quotient-U3", "rel:U3-subgroup-SU4"],
+      "assessment": "Algorithm 7 resolves the written product itself as well as its two factors. The explicit product is retained as the covering group; contexts that use it as the SU(4) residual symmetry still descend through the diagonal C3 quotient to U(3).",
+      "reviewedEvidenceIds": ["scan:41dec419bcda5724"]
+    },
+    {
+      "id": "adjudication:SU2-U1-explicit-product-alias",
+      "signature": {
+        "groupIds": ["grp:SU2", "grp:SU2xU1", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:8e1cbca9fba0c6f1",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:SU2U1-product", "rel:SU2U1-central-C2-quotient-U2"],
+      "assessment": "The exact electroweak product alias now resolves as a named covering group. The faithful quotient still depends on the matter representation and charge lattice, so the atlas retains both the product and its standard C2 quotient without choosing a universal physical global form.",
+      "reviewedEvidenceIds": ["scan:9aba3fadf5cc3ab9"]
+    },
+    {
+      "id": "adjudication:SU3-SU2-explicit-product-alias",
+      "signature": {
+        "groupIds": ["grp:SU2", "grp:SU3", "grp:SU3xSU2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:a4affced550a3767",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SU3SU2-product", "rel:SU3SU2-subgroup-SMCover", "rel:SU3SU2-subgroup-GSM"],
+      "assessment": "The scanner now resolves the explicit nonabelian product as a durable group identity in module and intertwiner contexts. Its embeddings into the Standard Model cover and faithful quotient remain separate from the product's action on any particular representation.",
+      "reviewedEvidenceIds": ["scan:559ec16089c3924c", "scan:d25110d6a5b92c35", "scan:f165cd0d2b03825b"]
+    },
+    {
+      "id": "adjudication:SO3-SO2-explicit-product-alias",
+      "signature": {
+        "groupIds": ["grp:SO2", "grp:SO3", "grp:SO3xSO2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:a3242633a82c892a",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SO3SO2-product", "rel:SO2diag-subgroup-SO3SO2"],
+      "externalRelationIds": ["extrel:SO3SO2-quotient-SO2diag-locking-orbit"],
+      "assessment": "The exact product alias is now resolved in tensor-module and orbit formulas. The product action, diagonal stabilizer and homogeneous quotient remain distinct types even when they occur on the same source line.",
+      "reviewedEvidenceIds": ["scan:7afd8b624f37a9ab", "scan:fbbfac0c84223f87"]
+    },
+    {
+      "id": "adjudication:S-U1-U2-special-block-kernel",
+      "signature": {
+        "groupIds": ["grp:S_U1xU2", "grp:U1", "grp:U1xU2", "grp:U2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:c2fee87edd19fc6b",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:U1U2-product", "rel:SU1U2-product-determinant-sequence", "rel:SU1U2-iso-U2", "rel:SU1U2-subgroup-SU3"],
+      "externalRelationIds": ["extrel:SU3-quotient-SU1U2-CP2"],
+      "assessment": "The S prefix is structural: S(U(1) x U(2)) is the product-determinant kernel, not the full direct product. It is isomorphic to U(2), embeds as the selected-line stabilizer in SU(3), and presents the CP2 homogeneous quotient.",
+      "reviewedEvidenceIds": ["scan:e179eb8a445ebcd5", "scan:8a9513922a20c196", "scan:d1481ea3abe4928c"]
+    },
+    {
+      "id": "adjudication:U1-U2-line-plane-product",
+      "signature": {
+        "groupIds": ["grp:U1", "grp:U1xU2", "grp:U2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:d67bce149fadef5e",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:U1U2-product", "rel:U1U2-subgroup-U3"],
+      "assessment": "The full U(1) x U(2) product is the block-diagonal stabilizer of a selected line and complementary plane in U(3). It remains distinct from its determinant-one kernel inside SU(3).",
+      "reviewedEvidenceIds": ["scan:3ad56d85076f65a2", "scan:37c2ca3a74e3ca5e", "scan:31ba6ad2deffb2ff"]
+    },
+    {
+      "id": "adjudication:Sp4-arithmetic-carrier-positive-scope",
+      "signature": {
+        "groupIds": ["grp:Sp4R", "grp:Sp4Z", "grp:Spin0_2_3"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:2fb12f40f6576afe",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:Sp4Z-subgroup-Sp4R", "rel:Spin023-iso-Sp4R"],
+      "assessment": "The source lines contain two adjacent predicates: Sp(4,Z) is a discrete arithmetic lattice subgroup of Sp(4,R), while only Sp(4,R) is isomorphic to Spin_0(2,3). Co-occurrence must not extend the isomorphism predicate to the integral group.",
+      "reviewedEvidenceIds": ["scan:e8526369fba812ad", "scan:4426e497f1d354f1", "scan:8ccd7606e904e2ab", "scan:25dd0eea72a7d679", "scan:770391d46f8a268d", "scan:4b60895394eb3df5", "scan:47232fe08bdb89ab"]
+    },
+    {
+      "id": "adjudication:Sp4-arithmetic-carrier-qualified-scope",
+      "signature": {
+        "groupIds": ["grp:Sp4R", "grp:Sp4Z", "grp:Spin0_2_3"],
+        "predicates": ["isomorphism", "subgroup"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:b83d37fd542fdf46",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:Sp4Z-subgroup-Sp4R", "rel:Spin023-iso-Sp4R"],
+      "assessment": "The qualified evidence explicitly preserves the arithmetic subgroup boundary and rejects unrelated physical promotion. The typed chain is retained as subgroup followed by real-group isomorphism, never as a three-way isomorphism.",
+      "reviewedEvidenceIds": ["scan:cf855de79913c52c", "scan:7949b996c76d22c8", "scan:4d5595b70d47323f", "scan:07df5642299dcb26"]
+    },
+    {
+      "id": "adjudication:Sp4-arithmetic-carrier-physical-qualification",
+      "signature": {
+        "groupIds": ["grp:Sp4R", "grp:Sp4Z", "grp:Spin0_2_3"],
+        "predicates": ["isomorphism"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:8d4558785d983097",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:Sp4Z-subgroup-Sp4R", "rel:Spin023-iso-Sp4R"],
+      "assessment": "The arithmetic chain is exact, but the evidence expressly denies automatic identification of the lattice action with a microscopic or physical Spin(2,3) operation. The algebraic maps are promoted while the physical interpretation remains unpromoted.",
+      "reviewedEvidenceIds": ["scan:f16c17eb12d68e2e", "scan:8e9f4416f176fd71", "scan:7cf077c7edb0f3a1"]
+    },
+    {
+      "id": "adjudication:Spin024-SU22-real-form-isomorphism",
+      "signature": {
+        "groupIds": ["grp:SU2_2", "grp:Spin0_2_4"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:4300f3a297b46641",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:Spin024-iso-SU22"],
+      "assessment": "The six exact occurrences consistently state the exceptional real-form isomorphism Spin_0(2,4) ~= SU(2,2). The promoted edge retains identity-component and global-form scope and does not by itself activate either carrier physically.",
+      "reviewedEvidenceIds": ["scan:bb0790ce1fe1c1a5", "scan:45c139ea354d8738", "scan:f8800a9b5a516991", "scan:99eb7974270fa6d7", "scan:2ee2265b98f8db4f", "scan:c309d19e33a07570"]
+    },
+    {
+      "id": "adjudication:C23-S4-centralizer-structure",
+      "signature": {
+        "groupIds": ["grp:C23", "grp:C23xS4", "grp:S4"],
+        "predicates": ["centralizer"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:6c86dbd9b73abeb6",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C23xS4-direct-product", "rel:C23xS4-centralizer-in-M"],
+      "assessment": "The evidence repeatedly verifies the order-552 centralizer structure C23 x S4. The product construction and its role as the declared order-23 Monster centralizer remain separate typed relations because the local evidence lines often omit the ambient Monster token.",
+      "reviewedEvidenceIds": ["scan:7063a24a6938cc11", "scan:ad7234ec1364a61b", "scan:843f7eca447d4b2a", "scan:60ba699fba63e0ed", "scan:740eb099ad4ad981", "scan:eeeb3f33ceb44c7c"]
+    },
+    {
+      "id": "adjudication:C23-S4-Monster-representation-boundary",
+      "signature": {
+        "groupIds": ["grp:C23", "grp:C23xS4", "grp:M", "grp:S4"],
+        "predicates": ["centralizer", "conjugacy", "representation"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:8d0a57615df033ec",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:C23xS4-direct-product", "rel:C23xS4-centralizer-in-M"],
+      "assessment": "The group-level result is the exact C23 x S4 centralizer inclusion in the Monster. Fixed-point-module characters, insertion classes and equality of A/B McKay--Thompson pairs are representation-level evidence and limitations; they do not introduce another group-group arrow or canonically resolve the 23A/23B naming orientation.",
+      "reviewedEvidenceIds": ["scan:8aeff6a66d540524", "scan:dbdf92dbb7ccd374", "scan:7cdf3e28403b8b3a", "scan:2db326f5ea2036e7", "scan:a04a84efef9e5a76", "scan:3e2cd3a7d7577159", "scan:d1f24231800edc49", "scan:f4ada8584f178afc", "scan:1515eca21e1ddd06", "scan:6d5029ae8b182278", "scan:02a1f08742f118fe", "scan:4fd1c1c5b409957f"]
+    },
+    {
+      "id": "adjudication:SM-cover-full-product-resolution",
+      "signature": {
+        "groupIds": ["grp:SMCover", "grp:SU2", "grp:SU2xU1", "grp:SU3", "grp:SU3xSU2", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:2d54889006888636",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SM-cover-product", "rel:SU3SU2-product", "rel:SU3SU2-subgroup-SMCover", "rel:SU2U1-product"],
+      "assessment": "Algorithm 9 resolves the full labelled product SU(3)_c x SU(2)_L x U(1)_Y as the named Standard Model covering group while retaining the overlapping two-factor products as distinct catalogue nodes. Bare covariance, singlet and module statements establish use of the cover notation but do not by themselves select the faithful global quotient.",
+      "reviewedEvidenceIds": ["scan:c4feadb4074f41c7", "scan:4255d4796230077f", "scan:14b1250e287734d4", "scan:74d69274e05ec7cd", "scan:4d2696826b22b34e", "scan:33d472706d1cc560", "scan:27480a1a756df9e7", "scan:65120e3e407e1178", "scan:16f1f4469dd1ec22", "scan:56c4cdd142f8f93a", "scan:5b324be6bf806dc3", "scan:66e8515cdc929e4f", "scan:dc4a333d8c99ac4a", "scan:f872ab18b4cce029", "scan:01ce50df94146def", "scan:259dc9b38ee58a05", "scan:20e1ecff3b9ff5ea", "scan:3c05151bcf393231", "scan:8a70af44cc591a75", "scan:814311bd5b64b1b4", "scan:4fbe42b7eb91caed", "scan:d3adf4d089484731", "scan:3649ffa174ba701a"]
+    },
+    {
+      "id": "adjudication:SM-C6-faithful-quotient-resolution",
+      "signature": {
+        "groupIds": ["grp:C6", "grp:SMCover", "grp:SU2", "grp:SU2xU1", "grp:SU3", "grp:SU3xSU2", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:14b95e4bab9e9fa6",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:SM-cover-product", "rel:SM-central-Z6-quotient", "rel:GSM-iso-SU3U2Flag"],
+      "assessment": "The numerator is the three-factor covering product and the resolved C6 token is its diagonal central kernel. The displayed fractions therefore denote the faithful Standard Model quotient GSM, not an isomorphism of the cover with its quotient and not a product with C6.",
+      "reviewedEvidenceIds": ["scan:04eb7f4e975c67af", "scan:66e607c5e1e64068", "scan:e59666a66f008b3b", "scan:da8c3b3a4b09ecd3", "scan:8aad6b74e3115490", "scan:c8408e42f92cc15c", "scan:096ec83d2e63ff57", "scan:92f2d1900be13253", "scan:3268d6bb50d56fac", "scan:48c0a6b6d3e26a60", "scan:1a3e438ccb886e3f", "scan:bdbf174caa5e16dd", "scan:98ff4dde27a27937", "scan:a986682820bd7544", "scan:982c66872b7d6473", "scan:439d638bf32f59f6", "scan:9e7415fdd9e933ab", "scan:8e86e04df5a4521a"]
+    },
+    {
+      "id": "adjudication:SM-C6-explicit-quotient-language",
+      "signature": {
+        "groupIds": ["grp:C6", "grp:SMCover", "grp:SU2", "grp:SU2xU1", "grp:SU3", "grp:SU3xSU2", "grp:U1"],
+        "predicates": ["direct_product", "quotient"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:31a5d942aaee334b",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:SM-cover-product", "rel:SM-central-Z6-quotient"],
+      "assessment": "Where prose explicitly says quotient, the same typed boundary is direct: C6 is the central kernel of the covering product's map to GSM. The notation is not a direct product with C6 and the quotient map remains non-split.",
+      "reviewedEvidenceIds": ["scan:ac927d3d50bc661f", "scan:4628bfebfe792ba3"]
+    },
+    {
+      "id": "adjudication:C9-C3-faithful-quotient",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C9"],
+        "predicates": ["quotient"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:d3bb255ba29b34e3",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:C9-central-C3-quotient-C3"],
+      "assessment": "The fieldwise cyclic lift is C9, its cube subgroup is a central C3 kernel, and the faithful action on gauge-equivalence classes is the quotient C9/C3 ~= C3. This non-split cyclic exact sequence is not the same claim as the separately hypercharge-dressed split C3 complement of the full vacuum stabilizer.",
+      "reviewedEvidenceIds": ["scan:c3bace2265283c26", "scan:59b0f37e41645a9c", "scan:1f9fa8d44a59cf1b", "scan:038409cc68490e59", "scan:d6427aca85ef6560", "scan:2c2303271208a0e5", "scan:44f7472190dfd835", "scan:5da48fced805e82a", "scan:0add561efe4bb459", "scan:aa0c973ef2d592c8", "scan:e3e231f254b32b74", "scan:33de297eb32b7a74", "scan:1a5251b542d39149", "scan:2fbce5bbe47ae0d5"]
+    },
+    {
+      "id": "adjudication:C9-C3-quotient-isomorphism-scope",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C9"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:018e899a38e7209c",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C9-central-C3-quotient-C3"],
+      "assessment": "Most evidence states C9/K ~= C3 for the declared cube kernel K; it does not state C9 ~= C3. One co-clustered line instead states the unrelated bordism-group result Omega_5^Spin(B C3) ~= C9. The promoted group relation is therefore only the quotient exact sequence, while the bordism isomorphism remains external mathematical-object data.",
+      "reviewedEvidenceIds": ["scan:38dfb1d7b0cb51c9", "scan:f8ad95f07403657a", "scan:130636c5c6707b7a", "scan:578b502dd500aa40", "scan:2363ae76497b7fb8", "scan:19acb56acc35edda", "scan:8d0dfcbc8aefa358", "scan:45be7603f996c3b8", "scan:29fb848fd6bd4e12"]
+    },
+    {
+      "id": "adjudication:PSL2F2-S3-projective-line-isomorphism",
+      "signature": {
+        "groupIds": ["grp:PSL2F2", "grp:S3"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:257da33f4e1722f4",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:PSL2F2-iso-S3"],
+      "assessment": "The mod-two projective special linear group acts faithfully on the three points of P1(F2), yielding PSL(2,2) ~= S3. The action supplies the isomorphism witness; the shared order alone would not.",
+      "reviewedEvidenceIds": ["scan:b63718ca751c0f9b", "scan:1f89cb70c2099e0f"]
+    },
+    {
+      "id": "adjudication:SL2F2-S3-characteristic-two-collapse",
+      "signature": {
+        "groupIds": ["grp:S3", "grp:SL2F2"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:fc09a4381869679e",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SL2F2-iso-PSL2F2", "rel:PSL2F2-iso-S3"],
+      "assessment": "SL(2,2) has trivial scalar centre, so projectivization is an isomorphism; composing it with the projective-line action gives SL(2,2) ~= S3. This characteristic-two collapse must not be generalized to SL(2,q) for odd q.",
+      "reviewedEvidenceIds": ["scan:c58d95b22bfda24e", "scan:89a3455f6ea11ddc"]
+    },
+    {
+      "id": "adjudication:GL2F2-S3-determinant-collapse",
+      "signature": {
+        "groupIds": ["grp:GL2F2", "grp:S3"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:5727c1feb5f12d58",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:GL2F2-iso-SL2F2", "rel:SL2F2-iso-PSL2F2", "rel:PSL2F2-iso-S3"],
+      "assessment": "Because F2 has only one nonzero scalar, every invertible 2 x 2 matrix has determinant one. Thus GL(2,2)=SL(2,2), and the reviewed projectivization and projective-line maps carry it to S3. The three construction stages remain separately typed despite the abstract groups being isomorphic.",
+      "reviewedEvidenceIds": ["scan:d2c51b734e068af9"]
+    },
+    {
+      "id": "adjudication:PSL2F3-A4-projective-line-isomorphism",
+      "signature": {
+        "groupIds": ["grp:A4", "grp:PSL2F3"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:5619c0896282b749",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:PSL2F3-iso-A4"],
+      "assessment": "The projective action of PSL(2,3) on the four points of P1(F3) is faithful and has order twelve, yielding PSL(2,3) ~= A4. The preceding SL(2,3) stage remains a distinct central C2 cover because minus identity survives in odd characteristic.",
+      "reviewedEvidenceIds": ["scan:377773068faf5061", "scan:c08a2e5764ec2f47"]
+    },
+    {
+      "id": "adjudication:PSL2F5-A5-projective-isomorphism",
+      "signature": {
+        "groupIds": ["grp:A5", "grp:PSL2F5"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:4045eced600953eb",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:PSL2F5-iso-A5"],
+      "assessment": "The reviewed finite modular evidence identifies PSL(2,5) with the order-sixty icosahedral rotation group A5. The isomorphism begins only after quotienting SL(2,5) by its central scalar C2; equal order or the binary-icosahedral name alone is not the witness.",
+      "reviewedEvidenceIds": ["scan:fb8c7f1e19760d34", "scan:901e1ab159c49ad9"]
+    },
+    {
+      "id": "adjudication:PSL2-small-prime-projective-shadow-family",
+      "signature": {
+        "groupIds": ["grp:A4", "grp:A5", "grp:PSL2F2", "grp:PSL2F3", "grp:PSL2F5", "grp:S3"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:b12fd7e7117f9426",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:PSL2F2-iso-S3", "rel:PSL2F3-iso-A4", "rel:PSL2F5-iso-A5"],
+      "assessment": "The compact source line states three pairwise exceptional isomorphisms: PSL(2,2) ~= S3, PSL(2,3) ~= A4 and PSL(2,5) ~= A5. It does not assert a six-way isomorphism. The atlas retains three typed edges and their separate characteristic-dependent quotient constructions.",
+      "reviewedEvidenceIds": ["scan:0cb2115d6d623e7b"]
+    },
+    {
+      "id": "adjudication:C4-C2-cubed-invariant-factor-product",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C2cubed", "grp:C4", "grp:C4xC2cubed"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:8ea7951a62ed10e9",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C4C2cubed-direct-product"],
+      "assessment": "Algorithm 11 resolves the complete Smith-normal-form product C4 x C2^3. The repeated C2 factor has multiplicity three and the source does not assert C4 ~= C2; the order-thirty-two product node preserves both facts.",
+      "reviewedEvidenceIds": ["scan:c8fd91dccd3fdad6", "scan:f98e5198bab160b0", "scan:1e17de41613d1518", "scan:dbe66e11ec9971f9", "scan:4e8643e6d4948c09", "scan:5e31dd9a3b3e192d"]
+    },
+    {
+      "id": "adjudication:C4-C2-invariant-factor-product",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C4", "grp:C4xC2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:61990c175ad2f940",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C4C2-direct-product"],
+      "assessment": "The reviewed additive notation denotes the abelian invariant-factor product C4 x C2 of order eight. It is distinct from both C8 and any pairwise isomorphism between C4 and C2.",
+      "reviewedEvidenceIds": ["scan:7b226b18375630b0", "scan:eddf2856e91691fd"]
+    },
+    {
+      "id": "adjudication:C6-coprime-direct-product-isomorphism",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C6"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:20b8971419055b73",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C6-direct-product"],
+      "assessment": "The corpus repeatedly uses the Chinese-remainder isomorphism C2 x C3 ~= C6. Coprimality is the witness; the record must not be generalized to noncoprime cyclic factors.",
+      "reviewedEvidenceIds": ["scan:279569cd84e9775b", "scan:8e9fc13aa761ccd7", "scan:c9e987374358db94", "scan:8a7465269e199380", "scan:a782ca8292908ac4", "scan:d4acae3985914c7e", "scan:7b8aa043edb6cceb", "scan:6fafcbad3e54e55a"]
+    },
+    {
+      "id": "adjudication:C2-C3-product-coordinate-scope",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:9bc6307648438da3",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C6-direct-product"],
+      "assessment": "These lines use C3 x C2 as a product coordinate space without always naming the isomorphic result C6. The factor product is supported, but no physical interpretation of either coordinate follows from the abstract CRT identification.",
+      "reviewedEvidenceIds": ["scan:4795a1dd72822173", "scan:78440eca224eaf20", "scan:72871679bdd420d5", "scan:d0adf8961928b303", "scan:a5cd7edcd3ed2f8e"]
+    },
+    {
+      "id": "adjudication:C6-to-C3-faithful-quotient",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C6"],
+        "predicates": ["quotient"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:f78a6c1a3dd908a5",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C6-central-C2-quotient-C3"],
+      "assessment": "The exact abstract statement is C6/<g^3> ~= C3 with central order-two kernel. Some evidence additionally identifies that kernel with an existing spin-weak centre and calls the quotient baryon triality; those are contextual physical claims and the quotient alone does not create a dynamical BF sector.",
+      "reviewedEvidenceIds": ["scan:c8be6be3b7f1ccec", "scan:a11dead6ac890ef1", "scan:5372c338e6b92724"]
+    },
+    {
+      "id": "adjudication:C6-C3-quotient-isomorphism-scope",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C6"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:62ceb1af8e454112",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C6-central-C2-quotient-C3"],
+      "assessment": "The displayed isomorphism applies to the quotient C6/<g^3>, not to C6 itself. The atlas therefore promotes the split central exact sequence and rejects any pairwise C6 ~= C3 reading.",
+      "reviewedEvidenceIds": ["scan:67d3507517e96526", "scan:36c92c3e97165ddc"]
+    },
+    {
+      "id": "adjudication:C6-C3-qualified-physical-quotient",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C6"],
+        "predicates": ["quotient"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:2c26180424cd5633",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:C6-central-C2-quotient-C3", "rel:C6-central-C3-quotient-C2"],
+      "assessment": "The cyclic quotient relations are exact, while these lines qualify their physical use: identifying a factor with the colour centre or matter parity needs a declared global form, and a faithful C6 quotient is not itself a dynamical topological sector.",
+      "reviewedEvidenceIds": ["scan:1964ba94be6d8b61", "scan:d9365858ce83aa76", "scan:413130a61c9e8bb3", "scan:333ada0d01274bcc", "scan:9463c49a41b439a0"]
+    },
+    {
+      "id": "adjudication:C6-two-quotient-directions-qualified",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C6"],
+        "predicates": ["quotient"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:7b35fbd53a78b2ef",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:C6-central-C3-quotient-C2", "rel:C6-central-C2-quotient-C3"],
+      "assessment": "C6 has both split central quotient directions because C6 ~= C2 x C3. The evidence qualifies which factor is physically independent after a chosen gauge-centre identification; without that global-form choice only the abstract product and exact sequences are unconditional.",
+      "reviewedEvidenceIds": ["scan:6efb7b62944f6d50", "scan:4709f04177d7b416"]
+    },
+    {
+      "id": "adjudication:C6-verifier-two-quotient-directions",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C6"],
+        "predicates": ["quotient"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:5ad6464c871fd933",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C6-central-C3-quotient-C2", "rel:C6-central-C2-quotient-C3"],
+      "assessment": "The verifier evidence names both exact quotient directions explicitly. Each has a different kernel generator and quotient codomain; their coexistence is the typed expression of C6 ~= C2 x C3, not an ambiguity.",
+      "reviewedEvidenceIds": ["scan:a5d8e105e4fbe4f4", "scan:f0fd372e4fc4127e"]
+    },
+    {
+      "id": "adjudication:rank-two-CRT-product",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C3xC3", "grp:C6xC6", "grp:V4"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:34f4242ec945893d",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:V4-direct-product", "rel:C3C3-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "assessment": "The source product is rank two: (C2)^2 x (C3)^2, with the first factor resolved as V4 and the whole product resolved as C6^2. The separately catalogued C3^2 node and componentwise CRT relation preserve the missing multiplicity and do not reduce this to a pairwise C2/C3 relation.",
+      "reviewedEvidenceIds": ["scan:d3c7f02abf36895e", "scan:ee3c1c3c31021516"]
+    },
+    {
+      "id": "adjudication:rank-two-CRT-isomorphism",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C3xC3", "grp:C6", "grp:C6xC6", "grp:V4"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:2a30c921b83a4d49",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:V4-direct-product", "rel:C3C3-direct-product", "rel:C6C6-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "assessment": "The isomorphism is between the complete rank-two products (C2)^2 x (C3)^2 and (C6)^2 by coordinatewise CRT. It is not a five-way isomorphism among the resolved factor and result nodes, and the quadratic refinement mentioned nearby is extra structure.",
+      "reviewedEvidenceIds": ["scan:3ef00d273d04a47b"]
+    },
+    {
+      "id": "adjudication:C6-CRT-isomorphism-verifier-scope",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C6"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:82eb104443a2fbfc",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C6-direct-product"],
+      "assessment": "The executable lines abbreviate the CRT statement C2 x C3 ~= C6. They do not assert that any two of C2, C3 and C6 are isomorphic in isolation.",
+      "reviewedEvidenceIds": ["scan:cd3bb1adac9c00fc"]
+    },
+    {
+      "id": "adjudication:rank-two-C6-CRT-verifier-scope",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C6", "grp:C6xC6"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:32919d2945097cce",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C6-direct-product", "rel:C6C6-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "assessment": "The executable summary abbreviates the rank-two statement (C2)^2 x (C3)^2 ~= (C6)^2. The resolved C6 node is a constituent type and C6^2 is the product result; the line does not assert a four-way isomorphism among every resolved node.",
+      "reviewedEvidenceIds": ["scan:bb7404f3b24843ef"]
+    },
+    {
+      "id": "adjudication:Hadamard-discriminant-invariant-factors",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C8", "grp:C18", "grp:C8xC8", "grp:C18xC18", "grp:HadamardDisc"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:50e25a1ee2696e34",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C8C8-direct-product", "rel:C18C18-direct-product", "rel:HadamardDisc-invariant-product"],
+      "assessment": "The reviewed expression is one invariant-factor decomposition of the complete discriminant group: C8^2 x C2 x C18^2. The scanner resolves both component and product nodes on the same line, but this is not a five-way pairwise product or isomorphism. Its order is 41472, and the abstract abelian group does not by itself determine the discriminant quadratic form.",
+      "reviewedEvidenceIds": ["scan:81750c1db58d7416", "scan:d9b4a7be435d89bd", "scan:18d9dbbc637bcc54"]
+    },
+    {
+      "id": "adjudication:Hadamard-discriminant-primary-decomposition",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C2cubed", "grp:C8", "grp:C8xC8", "grp:C9", "grp:C9xC9", "grp:HadamardDisc2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:20603d6cc9664de6",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C8C8-direct-product", "rel:C2cubed-direct-product", "rel:C9C9-direct-product", "rel:HadamardDisc2-direct-product", "rel:HadamardDisc-primary-product"],
+      "assessment": "The source gives two adjacent but typed primary components: C8^2 x C2^3 at p=2 and C9^2 at p=3. Their coprime product reconstructs the complete Hadamard discriminant group. The cluster is not a six-way isomorphism, and neither primary-group record erases the quadratic refinement on its summands.",
+      "reviewedEvidenceIds": ["scan:a25f1212a1c3a195", "scan:a212c43ffcd80e96"]
+    },
+    {
+      "id": "adjudication:Hadamard-two-primary-source-witness",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C2cubed", "grp:C8", "grp:C8xC8", "grp:HadamardDisc2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:c0a301689ec03f68",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C8C8-direct-product", "rel:C2cubed-direct-product", "rel:HadamardDisc2-direct-product"],
+      "assessment": "The authoritative claim line directly witnesses the two-primary group C8^2 x C2^3. Multiplicity three on C2 is part of the Smith decomposition; the result is neither cyclic C512 nor determined as a quadratic module by its group type alone.",
+      "reviewedEvidenceIds": ["scan:c3679305a66e4f25"]
+    },
+    {
+      "id": "adjudication:C18-Hadamard-summand-scope",
+      "signature": {
+        "groupIds": ["grp:C18", "grp:C18xC18"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:b91aa35cc1f225ca",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C18-direct-product", "rel:C18C18-direct-product", "rel:HadamardDisc-invariant-product"],
+      "assessment": "This continuation line contains the repeated C18 summand of the multiline invariant-factor display. Read with the surrounding claim it contributes C18^2 to the Hadamard discriminant group. Line-local extraction sees only C18, so the atlas retains the full relation through the source and executable witnesses rather than promoting a self-product from this fragment alone.",
+      "reviewedEvidenceIds": ["scan:614522bce7677b1a"]
+    },
+    {
+      "id": "adjudication:C12-fundamental-group-role",
+      "signature": {
+        "groupIds": ["grp:C12"],
+        "predicates": ["quotient", "subgroup"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:ba308097d03d8066",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": [],
+      "assessment": "The cited heterotic construction uses C12 as a fundamental group arising from a free order-twelve quotient. This role is independent of the root-of-unity value group mu12 in the CRT phase module and of the explicitly rejected C12^2 state-group candidate. Shared abstract group type does not identify the constructions.",
+      "reviewedEvidenceIds": ["scan:ec5f7638ff1c32dc"]
+    },
+    {
+      "id": "adjudication:C12-root-of-unity-value-group",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C4", "grp:C12"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:171179a4c563f456",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C12-direct-product"],
+      "assessment": "The roots-of-unity line is the coprime CRT isomorphism mu4 x mu3 ~= mu12, abstractly C4 x C3 ~= C12. Its role is a quadratic-refinement value group. It does not turn the adjacent cross-prime state carrier C6^2 into C12^2 and does not identify this occurrence with an unrelated C12 fundamental group.",
+      "reviewedEvidenceIds": ["scan:7d5f559ea67acda1"]
+    },
+    {
+      "id": "adjudication:rank-two-CRT-with-C12-value-group-context",
+      "signature": {
+        "groupIds": ["grp:C12", "grp:C2", "grp:C3", "grp:C3xC3", "grp:C6", "grp:C6xC6", "grp:V4"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:0220707d8e3c80d6",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:V4-direct-product", "rel:C3C3-direct-product", "rel:C6C6-direct-product", "rel:V4C3C3-direct-product-C6C6", "rel:C12-direct-product"],
+      "assessment": "This compact log sentence combines two different statements: the state-group CRT isomorphism C2^2 x C3^2 ~= C6^2 and the fact that the associated quadratic values lie in mu12. C12 is contextual value-group evidence, not another factor or an isomorphic state carrier. The atlas keeps the two typed relationships separate.",
+      "reviewedEvidenceIds": ["scan:8d431d2330944a44"]
+    },
+    {
+      "id": "adjudication:Sp4F3-no-four-dimensional-integral-section",
+      "signature": {
+        "groupIds": ["grp:GL4Z", "grp:Sp4F3"],
+        "predicates": ["subgroup"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:9296f2e072ff39d8",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:Sp4F3-nonembedding-GL4Z"],
+      "assessment": "The order-51840 finite symplectic group cannot embed faithfully in GL(4,Z), whose finite subgroups have order at most 1152. This is a dimension-four integral-section obstruction; it does not rule out higher-dimensional integral representations of Sp(4,3).",
+      "reviewedEvidenceIds": ["scan:38e01e7afe6e2646"]
+    },
+    {
+      "id": "adjudication:Sp4F3-inside-GL4F3-Weyl-context",
+      "signature": {
+        "groupIds": ["grp:GL4F3", "grp:Sp4F3"],
+        "predicates": ["conjugacy", "weyl_group"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:b530bb77fa446196",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:Sp4F3-subgroup-GL4F3"],
+      "assessment": "The line discusses a D5 Weyl action whose candidate matrices are compared for conjugacy first in GL(4,3) and then in its symplectic subgroup. It does not say either ambient group is a Weyl group. The promoted group relation is only Sp(4,3) < GL(4,3); the dynamical no-go concerns particular elements and representations.",
+      "reviewedEvidenceIds": ["scan:43d003739a944c1b"]
+    },
+    {
+      "id": "adjudication:GL4Z-integral-conjugacy-obstruction",
+      "signature": {
+        "groupIds": ["grp:GL4Z"],
+        "predicates": ["conjugacy", "isomorphism"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:d76d02689cd51ecf",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:GL4Z-subgroup-GL4Q", "rel:GL4Q-subgroup-GL4R"],
+      "assessment": "The isomorphism predicate belongs to cokernels used as invariants of two matrices, not to GL(4,Z) itself. Unequal Smith invariants obstruct integral conjugacy even though the matrices become conjugate after extending scalars to Q and R. The scalar-extension ladder preserves this distinction.",
+      "reviewedEvidenceIds": ["scan:0add5787060ecae6"]
+    },
+    {
+      "id": "adjudication:GL4Z-index-four-quotient-context",
+      "signature": {
+        "groupIds": ["grp:GL4Z"],
+        "predicates": ["conjugacy", "quotient"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:316f066e2d10cd4d",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:GL4Z-subgroup-GL4Q", "rel:GL4Q-subgroup-GL4R"],
+      "assessment": "The quotient is the missing index-four saturation between lattice presentations, not a quotient of GL(4,Z). The group occurrence specifies the failed integral conjugacy ambient; rational and real conjugacy live after scalar extension.",
+      "reviewedEvidenceIds": ["scan:6bcd1a67ecd4c6f9"]
+    },
+    {
+      "id": "adjudication:Sp4Q-integral-strengthening",
+      "signature": {
+        "groupIds": ["grp:Sp4Q"],
+        "predicates": ["subgroup"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:6ba517efbf9af76c",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:Sp4Z-subgroup-Sp4Q"],
+      "assessment": "The claim explicitly strengthens a rational symplectic embedding to an integral realization in the completed lattice. Membership in Sp(4,Q) is a weaker intermediate fact and must not be reported as the endpoint.",
+      "reviewedEvidenceIds": ["scan:66a7e873f03e78ed"]
+    },
+    {
+      "id": "adjudication:Sp4Q-Hadamard-defect-scope",
+      "signature": {
+        "groupIds": ["grp:Sp4Q"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:bbe2b6129e2b9328",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:Sp4Q-subgroup-GL4Q"],
+      "assessment": "The rational symplectic group hosts the lifted Hadamard correspondence. The nearby direct sum C2 plus C12 is its abelian defect, not a direct-product decomposition of Sp(4,Q). This candidate therefore preserves provenance without promoting a false group product.",
+      "reviewedEvidenceIds": ["scan:4d4bf9b8816f898e"]
+    },
+    {
+      "id": "adjudication:GL4Z-block-conjugacy",
+      "signature": {
+        "groupIds": ["grp:GL4Z"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:dc6e9ec0237cbfe9",
+      "disposition": "deferred_external_object",
+      "relationshipIds": [],
+      "assessment": "The notation says a particular integral matrix W is GL(4,Z)-conjugate to the block sum S plus S. It is a relation among matrix operators under a group action, not an isomorphism or direct-product decomposition of GL(4,Z). A future typed matrix-conjugacy object layer should carry the intertwiner and block decomposition.",
+      "reviewedEvidenceIds": ["scan:4660ce48bd485e2d"]
+    },
+    {
+      "id": "adjudication:GL4Z-direct-sum-conjugacy",
+      "signature": {
+        "groupIds": ["grp:GL4Z"],
+        "predicates": ["conjugacy", "direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:16462317aa8fed02",
+      "disposition": "deferred_external_object",
+      "relationshipIds": [],
+      "assessment": "The direct sum belongs to two trace-three matrix blocks and the GL(4,Z) occurrence specifies their integral conjugacy ambient. It does not decompose the general linear group. The matrix and intertwiner should be represented in the external-object layer before promotion.",
+      "reviewedEvidenceIds": ["scan:a1aaf9be1150fa56"]
+    },
+    {
+      "id": "adjudication:C6-C3-quotient-with-conjugate-qutrit-context",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C6"],
+        "predicates": ["conjugacy", "quotient"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:6c2696223c4d4c31",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C6-central-C2-quotient-C3"],
+      "assessment": "The group-level statement is the faithful C6 quotient to C3. The word conjugate modifies a proposed qutrit carrier, not either cyclic group and not a conjugacy relation between C6 and C3. The physical topological-order inference remains explicitly rejected without additional boundary or gauging structure.",
+      "reviewedEvidenceIds": ["scan:410e5eecd095726c"]
+    },
+    {
+      "id": "adjudication:C6-two-quotient-directions-with-conjugate-pair-context",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C6"],
+        "predicates": ["conjugacy", "quotient"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:55a72ed11f185090",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C6-central-C3-quotient-C2", "rel:C6-central-C2-quotient-C3"],
+      "assessment": "The conjugate objects are finite qutrit pairs produced by a declared transgression, while C2, C3 and C6 specify competing global-form quotient data. No conjugacy among the cyclic groups is asserted. Fixing the maximal C6 quotient blocks the prime-three transport route in this context without invalidating the abstract split exact sequences.",
+      "reviewedEvidenceIds": ["scan:1171d3d81cd8bbcb"]
+    },
+    {
+      "id": "adjudication:U11-maximal-compact-disk",
+      "signature": {
+        "groupIds": ["grp:U1", "grp:U1_1", "grp:U1xU1"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:db687a4f3aa9a170",
+      "disposition": "promoted_external_object",
+      "relationshipIds": ["rel:U1U1-direct-product", "rel:U1U1-subgroup-U11"],
+      "externalRelationIds": ["extrel:U11-quotient-U1U1-UnitDisk"],
+      "assessment": "The displayed isomorphism is between the homogeneous space U(1,1)/(U(1) x U(1)) and the unit disk. It is not a group isomorphism and the maximal compact stabilizer is not normal. The group inclusion and the typed space quotient are therefore recorded separately.",
+      "reviewedEvidenceIds": ["scan:4f5d5a520911bbaa"]
+    },
+    {
+      "id": "adjudication:U11-continuous-completion-boundary",
+      "signature": {
+        "groupIds": ["grp:U1_1"],
+        "predicates": ["centralizer"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:40d18a246c1e47db",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:C3-subgroup-U11", "rel:U11-subgroup-Sp4R"],
+      "assessment": "The corpus distinguishes a source-compatible U(1,1) continuous centralizer envelope from the subgroup actually generated by the discrete machine matrices. The finite C3 inclusion and continuous symplectic embedding remain valid, but neither asserts that the machine alone generates the full envelope.",
+      "reviewedEvidenceIds": ["scan:2767f1c820715b99"]
+    },
+    {
+      "id": "adjudication:Spin8-triality-outer-action",
+      "signature": {
+        "groupIds": ["grp:Spin8"],
+        "predicates": ["automorphism_group"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:2d4d8fa56303e844",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:S3-triality-action-Spin8"],
+      "assessment": "The three eight-dimensional representation types are permuted by the outer automorphism group S3 of Spin(8)/type D4. The action is attached to Spin(8), while passage to one fixed SO(8) quotient must retain the selected central kernel.",
+      "reviewedEvidenceIds": ["scan:20542014637a2f1a"]
+    },
+    {
+      "id": "adjudication:Spin8-triality-not-braid-identification",
+      "signature": {
+        "groupIds": ["grp:Spin8"],
+        "predicates": ["representation"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:2ee4e3a126ca4f39",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:S3-triality-action-Spin8"],
+      "assessment": "Triality's permutation of representation types is not a braid-group identification merely because both structures involve three objects. A functor or explicit intertwining representation would be additional data.",
+      "reviewedEvidenceIds": ["scan:e00c259747b0d6e4"]
+    },
+    {
+      "id": "adjudication:U4-determinant-mu3-subgroup",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:H4mu3", "grp:SU4", "grp:U4"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:22b926c98fe0f06c",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:H4mu3-direct-product", "rel:H4mu3-subgroup-U4", "rel:H4mu3-determinant-sequence"],
+      "assessment": "The direct-product isomorphism belongs to the specifically named three-component subgroup H_4^(3)={h in U(4): det h in mu3}, not to U(4). The atlas now retains H_4^(3) as its own group, its central split SU(4)-by-C3 sequence and its proper normal embedding in U(4).",
+      "reviewedEvidenceIds": ["scan:65e90b2163752053"]
+    },
+    {
+      "id": "adjudication:U4-finite-component-extension-boundary",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:H4mu3", "grp:SU4", "grp:U4"],
+        "predicates": ["direct_product", "extension", "isomorphism", "stabilizer"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:cbb60bdc640af3a0",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:H4mu3-direct-product", "rel:H4mu3-subgroup-U4", "rel:H4mu3-determinant-sequence", "rel:C9-subgroup-H4mu3", "rel:U4-determinant-sequence"],
+      "assessment": "The order-nine representative selects a C9 subgroup which surjects onto the split C3 component group inside the determinant-mu3 subgroup. Its cube lies in SU(4), but it does not turn the finite extension into all of connected U(4), and it is distinct from both the central scalar splitting and U(4)'s noncentral determinant sequence with quotient U(1). Nearby anomaly and stabilizer qualifications do not alter this group structure.",
+      "reviewedEvidenceIds": ["scan:97a0c07493419304"]
+    },
+    {
+      "id": "adjudication:SO12-SO11-local-stabilizer-product",
+      "signature": {
+        "groupIds": ["grp:SO0_1_1", "grp:SO0_1_2", "grp:SO0_1_2xSO0_1_1"],
+        "predicates": ["action", "direct_product", "representation", "stabilizer"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:668d9d3addfb151f",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SO012SO011-direct-product", "rel:SO012SO011-subgroup-SO023", "rel:SO01_1-subgroup-SO02_3", "rel:SO012-subgroup-SO023"],
+      "assessment": "For an orthogonal decomposition into nondegenerate signature-(1,2) and signature-(1,1) blocks, the connected block-diagonal stabilizer inside SO_0(2,3) is the exact product SO_0(1,2) x SO_0(1,1). The source's word 'locally' is therefore strengthened only at this SO identity-component level. The inverse image in Spin_0(2,3) still requires separate central-kernel accounting and is not inferred from this product.",
+      "reviewedEvidenceIds": ["scan:55107632c237ca37"]
+    },
+    {
+      "id": "adjudication:SO12-SO11-explicit-block-product",
+      "signature": {
+        "groupIds": ["grp:SO0_1_1", "grp:SO0_1_2", "grp:SO0_1_2xSO0_1_1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:2632b83d7a290928",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SO012SO011-direct-product"],
+      "assessment": "The displayed product is retained as a first-class group rather than being flattened into two nearby mentions. Its factor inclusions and projections are typed maps, so the two factors remain distinguishable and their identity roundtrips are mechanically checkable.",
+      "reviewedEvidenceIds": ["scan:782e00be98101553", "scan:cb52aca4216c7133", "scan:a7b35269d6d9c5e3"]
+    },
+    {
+      "id": "adjudication:SO23-signature12-section-stabilizer",
+      "signature": {
+        "groupIds": ["grp:SO0_1_2xSO0_1_1", "grp:SO0_2_3"],
+        "predicates": ["action", "stabilizer"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:06a95fba5c72ac2f",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SO012SO011-subgroup-SO023"],
+      "assessment": "The connected setwise stabilizer of a chosen nondegenerate signature-(1,2) section is the four-dimensional block subgroup SO_0(1,2) x SO_0(1,1) in SO_0(2,3). It is not normal: the resulting six-dimensional object is a homogeneous orbit, not a quotient group. No preferred section or spin lift follows.",
+      "reviewedEvidenceIds": ["scan:28056af7e3c3c004"]
+    },
+    {
+      "id": "adjudication:SO23-section-selector-noncanonicity",
+      "signature": {
+        "groupIds": ["grp:SO0_1_1", "grp:SO0_1_2", "grp:SO0_1_2xSO0_1_1", "grp:SO0_2_3"],
+        "predicates": ["action", "direct_product", "representation", "stabilizer", "subgroup"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:1f333882453d61a4",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:SO012SO011-direct-product", "rel:SO012SO011-subgroup-SO023", "rel:SO01_1-subgroup-SO02_3", "rel:SO012-subgroup-SO023"],
+      "assessment": "The stabilizer calculation establishes the orbit and its dimensions but does not canonically select a point of that orbit. The pointwise SO_0(1,1) factor, the setwise product stabilizer and the ambient SO_0(2,3) action are therefore kept distinct. Any parity, odd-axis or Jordan selector must declare which level it reduces.",
+      "reviewedEvidenceIds": ["scan:86f263f6ccc8d8c7"]
+    },
+    {
+      "id": "adjudication:SU4-to-SU3U1-breaking-global-form",
+      "signature": {
+        "groupIds": ["grp:SU3", "grp:SU3xU1", "grp:SU4", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:3a508e766389846e",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:SU3U1-product", "rel:SU3U1-central-C3-quotient-U3", "rel:U3-subgroup-SU4"],
+      "assessment": "The conventional breaking label SU(3) x U(1) names the covering product and Lie-algebra factors. Its faithful connected image inside SU(4) is U(3)=(SU(3) x U(1))/C3 under determinant compensation. The diagonal C3 kernel and the B-L charge normalization are therefore retained rather than suppressed by the shorthand arrow.",
+      "reviewedEvidenceIds": ["scan:7b5053b292ad9731", "scan:7c5a584dca68f09d"]
+    },
+    {
+      "id": "adjudication:SU4-breaking-does-not-protect-response-line",
+      "signature": {
+        "groupIds": ["grp:SU3", "grp:SU3xU1", "grp:SU4", "grp:U1"],
+        "predicates": ["action", "direct_product"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:07ac0517ca7ed1c2",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:SU3U1-product", "rel:SU3U1-central-C3-quotient-U3", "rel:U3-subgroup-SU4"],
+      "assessment": "The residual global group is the U(3) image of the SU(3) x U(1) cover, but neither presentation protects equality of the two response coefficients after ordinary breaking. The group relationship is promoted while the source's negative representation-theoretic conclusion remains attached: an additional remnant, spurion or RG invariant would be required.",
+      "reviewedEvidenceIds": ["scan:8b584102c25de25f", "scan:93207632b67f6211"]
+    },
+    {
+      "id": "adjudication:SU4-breaking-negative-trigger-global-form",
+      "signature": {
+        "groupIds": ["grp:SU3", "grp:SU4", "grp:U1"],
+        "predicates": ["action", "direct_product"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:17a15e26ca6b0fc5",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:SU3U1-product", "rel:SU3U1-central-C3-quotient-U3", "rel:U3-subgroup-SU4"],
+      "assessment": "The trigger text uses factor shorthand but concerns the faithful residual action after SU(4) breaking. That action factors through U(3), and its inability to force a=b is preserved. The atlas correction is global-form bookkeeping, not a reversal of the negative dynamical trigger.",
+      "reviewedEvidenceIds": ["scan:58f815e782b0525b"]
+    },
+    {
+      "id": "adjudication:SU4-breaking-residual-invariant-space",
+      "signature": {
+        "groupIds": ["grp:SU3", "grp:SU4", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:18dc39c154783eac",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:SU3U1-product", "rel:SU3U1-central-C3-quotient-U3", "rel:U3-subgroup-SU4"],
+      "assessment": "The two-dimensional residual invariant space is computed using the SU(3) and U(1) factor action, but the embedded connected subgroup is their C3 quotient U(3). Passing to the faithful image does not restore the lost response constraint; the qualification and the global-form correction are compatible.",
+      "reviewedEvidenceIds": ["scan:66d8c67ffe4c3be3"]
+    },
+    {
+      "id": "adjudication:SU4-root-directions-versus-residual-current-symmetry",
+      "signature": {
+        "groupIds": ["grp:SU3", "grp:SU3xU1", "grp:SU4", "grp:U1"],
+        "predicates": ["subgroup"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:b5b56bbe45ea0e3a",
+      "disposition": "corrected_global_form",
+      "relationshipIds": ["rel:SU3U1-product", "rel:SU3U1-central-C3-quotient-U3", "rel:U3-subgroup-SU4"],
+      "assessment": "Commutation with the residual SU(3) and U(1) factor action means commutation with their U(3) image in SU(4); failure on the six complementary colour-lepton root directions is precisely failure to extend to all of SU(4). The covering product remains useful notation but is not the injected subgroup itself.",
+      "reviewedEvidenceIds": ["scan:bcc097a284d32f0e"]
+    },
+    {
+      "id": "adjudication:cross-prime-primary-decomposition",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C3xC3", "grp:C6xC6", "grp:V4"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:34f4242ec945893d",
+      "disposition": "promoted_external_object",
+      "relationshipIds": ["rel:V4-direct-product", "rel:C3C3-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "assessment": "The displayed primary decomposition is V4 x (C3 x C3), whose componentwise CRT image is C6 x C6. The underlying abelian-group product is promoted together with a separately typed finite quadratic module; the product relation alone does not preserve or reconstruct q.",
+      "reviewedEvidenceIds": ["scan:d3c7f02abf36895e", "scan:ee3c1c3c31021516"]
+    },
+    {
+      "id": "adjudication:cross-prime-invariant-factor-identification",
+      "signature": {
+        "groupIds": ["grp:C6", "grp:C6xC6"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:4a6e3acf9dabd2f7",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C6C6-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "assessment": "The isomorphism identifies a named order-36 module A with C6 x C6; it does not identify one C6 factor with its square. The module's quadratic refinement and orthogonal group are additional structure outside the abstract invariant-factor decomposition.",
+      "reviewedEvidenceIds": ["scan:467402d470fb1f2d", "scan:04fe271b0949268d", "scan:84af79a02ed31193"]
+    },
+    {
+      "id": "adjudication:cross-prime-CRT-primary-to-invariant",
+      "signature": {
+        "groupIds": ["grp:C6", "grp:C6xC6"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:9ad320f7823efece",
+      "disposition": "promoted_external_object",
+      "relationshipIds": ["rel:C6-direct-product", "rel:C6C6-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "assessment": "Componentwise CRT turns the binary and ternary primary coordinates into two C6 invariant factors. Both coordinate routes are now explicit compositions into C6 x C6. Promotion is paired with the finite-quadratic-module object so the group isomorphism cannot erase q.",
+      "reviewedEvidenceIds": ["scan:816b38e199aebe8e"]
+    },
+    {
+      "id": "adjudication:cross-prime-executable-state-group",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C6", "grp:C6xC6"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:32919d2945097cce",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:V4-direct-product", "rel:C3C3-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "assessment": "The executable receipt abbreviates the primary squares as (Z2)^2 and (Z3)^2. Its isomorphism target is the complete state group C6^2, not a pairwise isomorphism among C2, C3 and C6. The explicit order 36 is consistent with the two-stage product.",
+      "reviewedEvidenceIds": ["scan:bb7404f3b24843ef"]
+    },
+    {
+      "id": "adjudication:cross-prime-state-versus-value-group",
+      "signature": {
+        "groupIds": ["grp:C12", "grp:C6", "grp:C6xC6"],
+        "predicates": ["representation"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:cbca083d967de9cc",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:C6C6-direct-product", "rel:C12-direct-product"],
+      "assessment": "The state group is C6 x C6, while the quadratic values lie in the twelfth-root group mu12 abstractly modeled by C12. The value group therefore represents phases of q; it is not a C12 x C12 state carrier and does not replace the underlying order-36 group.",
+      "reviewedEvidenceIds": ["scan:1f3ab2f6e088ba17"]
+    },
+    {
+      "id": "adjudication:cross-prime-synthesis-line",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C3", "grp:C3xC3", "grp:C6", "grp:C6xC6", "grp:V4"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:2a30c921b83a4d49",
+      "disposition": "promoted_external_object",
+      "relationshipIds": ["rel:V4-direct-product", "rel:C3C3-direct-product", "rel:C6-direct-product", "rel:C6C6-direct-product", "rel:V4C3C3-direct-product-C6C6"],
+      "assessment": "The synthesis line correctly compresses the primary decomposition and componentwise CRT isomorphism. The atlas expands it into named product maps and the refined finite-quadratic-module object, preventing the concise notation from conflating state coordinates with phase values.",
+      "reviewedEvidenceIds": ["scan:3ef00d273d04a47b"]
+    },
+    {
+      "id": "adjudication:cross-prime-synthesis-with-value-group",
+      "signature": {
+        "groupIds": ["grp:C12", "grp:C2", "grp:C3", "grp:C3xC3", "grp:C6", "grp:C6xC6", "grp:V4"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:0220707d8e3c80d6",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:V4-direct-product", "rel:C3C3-direct-product", "rel:C6-direct-product", "rel:C6C6-direct-product", "rel:V4C3C3-direct-product-C6C6", "rel:C12-direct-product"],
+      "assessment": "The state-group isomorphism is V4 x C3^2 ~= C6^2. The simultaneously mentioned mu12 is the quadratic value group and is abstractly cyclic of order twelve; it is not another factor of the state group. The refined object register records that type separation directly.",
+      "reviewedEvidenceIds": ["scan:8d431d2330944a44"]
+    },
+    {
+      "id": "adjudication:Sp4Z46-CRT-factorization-evidence",
+      "signature": {
+        "groupIds": ["grp:Sp4F2", "grp:Sp4F23", "grp:Sp4Z46"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:6e283ab1148e5ff7",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:Sp4Z46-CRT-product", "rel:Sp4Z-reduction-Z46", "rel:Sp4Z-reduction-F2", "rel:Sp4Z-reduction-F23"],
+      "assessment": "The isomorphism is Sp(4,Z/46Z) ~= Sp(4,F2) x Sp(4,F23), induced entrywise by the Chinese remainder ring isomorphism. It is not an isomorphism between the two factors, whose orders differ. The integral reduction and both coordinate projections are retained as separate maps.",
+      "reviewedEvidenceIds": ["scan:53055173ac68e87c", "scan:6d32753b59a24980", "scan:d04c8e1afb5fad63"]
+    },
+    {
+      "id": "adjudication:Sp4Z46-explicit-CRT-product",
+      "signature": {
+        "groupIds": ["grp:Sp4F2", "grp:Sp4F23", "grp:Sp4Z46"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:8643ab2cd1ad8805",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:Sp4Z46-CRT-product"],
+      "assessment": "The displayed direct product is the canonical CRT decomposition relative to the mod-2 and mod-23 idempotents. Both factor inclusions, both projections and their identity roundtrips are typed; the decomposition does not collapse the factors or their distinct finite-field actions.",
+      "reviewedEvidenceIds": ["scan:c9bf010cd57efc0a", "scan:9dcb3d3aa6ef0048"]
+    },
+    {
+      "id": "adjudication:Sp4F23-Spin5F23-simply-connected-seam",
+      "signature": {
+        "groupIds": ["grp:Sp4F23", "grp:Spin5F23"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:ab5930536369b05b",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:Sp4F23-iso-Spin5F23"],
+      "assessment": "The exceptional B2=C2 identification over F23 is promoted at the simply connected global form: Sp(4,F23) ~= Spin(5,F23). It does not identify SO(5,F23), Omega(5,F23) or PSp(4,F23) without separately tracking the central quotient.",
+      "reviewedEvidenceIds": ["scan:95c7ea20c757950b", "scan:cf9f36fbce322e6d", "scan:67fd56700aa2c6df"]
+    },
+    {
+      "id": "adjudication:Dic11-to-Spin5F23-condensed-ladder",
+      "signature": {
+        "groupIds": ["grp:Dic11", "grp:SL2F23", "grp:Sp4F23", "grp:Spin5F23"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:cb863f168773e1a5",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:Dic11-subgroup-SL2F23", "rel:SL2F23-iso-Sp2F23", "rel:Sp2F23-subgroup-Sp4F23", "rel:Sp4F23-iso-Spin5F23"],
+      "assessment": "The condensed chain contains inclusions at Dic_11 < SL(2,F23) and at the selected rank-one block inside Sp(4,F23); the isomorphism marker applies only to the final Sp(4,F23) ~= Spin(5,F23) seam. The omitted Sp(2,F23) node is restored in the composable map path.",
+      "reviewedEvidenceIds": ["scan:21aad319ca2b48db", "scan:b0a31b859c3bacae"]
+    },
+    {
+      "id": "adjudication:SL2F23-Sp2F23-Sp4F23-Spin5F23-ladder",
+      "signature": {
+        "groupIds": ["grp:SL2F23", "grp:Sp2F23", "grp:Sp4F23", "grp:Spin5F23"],
+        "predicates": ["isomorphism", "subgroup"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:e47ab2f3b384e18d",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SL2F23-iso-Sp2F23", "rel:Sp2F23-subgroup-Sp4F23", "rel:Sp4F23-iso-Spin5F23"],
+      "assessment": "The full ladder is typed as an isomorphism SL(2,F23) ~= Sp(2,F23), a chosen symplectic-plane block inclusion into Sp(4,F23), and the simply connected B2=C2 isomorphism to Spin(5,F23). The composition preserves which steps are equivalences and which depend on a selected block.",
+      "reviewedEvidenceIds": ["scan:06b6b8f8a6c4334d"]
+    },
+    {
+      "id": "adjudication:U3-line-plane-stabilizer-product",
+      "signature": {
+        "groupIds": ["grp:U1", "grp:U1xU2", "grp:U2", "grp:U3"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:488c73ff58a11a58",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:U1U2-product", "rel:U1U2-subgroup-U3"],
+      "assessment": "The exact stabilizer statement and the U(3)/(U(1) x U(2)) formulas use the reviewed line-plane block product and its nonnormal inclusion in U(3). One evidence line is instead a larger flavour product in which U(2) and U(1) are separate factors; it supports those factor identities but not this particular selected-line embedding.",
+      "reviewedEvidenceIds": ["scan:65964977458eb1fa", "scan:7604cabe0e6032d1", "scan:d32a29731b51012d", "scan:c3a9221761d2636e", "scan:f5043564562509c9"]
+    },
+    {
+      "id": "adjudication:U3-line-stabilizer-scope",
+      "signature": {
+        "groupIds": ["grp:U1", "grp:U1xU2", "grp:U2"],
+        "predicates": ["direct_product", "stabilizer"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:c7fd93e454747d0a",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:U1U2-product", "rel:U1U2-subgroup-U3", "rel:SU1U2-product-determinant-sequence", "rel:SU1U2-iso-U2"],
+      "assessment": "A selected line in the full U(3) carrier has stabilizer U(1) x U(2). Imposing determinant one replaces that full product by the kernel S(U(1) x U(2)), isomorphic to U(2). The cluster contains both contexts, so the atlas promotes both typed stabilizers without identifying them.",
+      "reviewedEvidenceIds": ["scan:6b79f4a9df988507", "scan:5d293b52afdda996", "scan:c5fa6c814950eca1", "scan:0aaed3be3e8a9ff1", "scan:ca97c6710844dbef"]
+    },
+    {
+      "id": "adjudication:U3-CP2-line-orbit",
+      "signature": {
+        "groupIds": ["grp:U1", "grp:U1xU2", "grp:U2", "grp:U3"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:8285c4e29fc71ea6",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:U1U2-product", "rel:U1U2-subgroup-U3"],
+      "assessment": "The direct product is the U(1) x U(2) block stabilizer. The displayed isomorphism identifies its homogeneous orbit U(3)/(U(1) x U(2)) with CP2; it is not an isomorphism among U(1), U(2), U(3) or the product group. The space-level relation is retained in the external-object register.",
+      "reviewedEvidenceIds": ["scan:385545b0fcd37fad", "scan:60e747ca21a8ceba", "scan:36a53cf0c5dfcf91"]
+    },
+    {
+      "id": "adjudication:special-line-block-is-U2",
+      "signature": {
+        "groupIds": ["grp:S_U1xU2", "grp:U1", "grp:U1xU2", "grp:U2"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:e3588b7a7d8dd28c",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:U1U2-product", "rel:SU1U2-product-determinant-sequence", "rel:SU1U2-iso-U2"],
+      "assessment": "S(U(1) x U(2)) is the determinant-one kernel inside the full product and is isomorphic to U(2) by B -> (det B)^-1 x B. The product presentation, kernel inclusion and abstract isomorphism are all retained because collapsing them would lose the embedding used by the SU(3) stabilizer.",
+      "reviewedEvidenceIds": ["scan:1a44acd3f37d2a1b", "scan:bf9d708363e4f244", "scan:e7da904302252d54"]
+    },
+    {
+      "id": "adjudication:special-line-block-in-SU3",
+      "signature": {
+        "groupIds": ["grp:SU3", "grp:S_U1xU2", "grp:U1", "grp:U1xU2", "grp:U2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:eafdd5d070af7498",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:U1U2-product", "rel:SU1U2-product-determinant-sequence", "rel:SU1U2-subgroup-SU3"],
+      "assessment": "The subgroup of SU(3) is the special determinant-one block S(U(1) x U(2)), not the unrestricted direct product. Quotient notation in the remaining sources denotes the CP2 homogeneous space and does not make this nonnormal stabilizer a quotient-group kernel of SU(3).",
+      "reviewedEvidenceIds": ["scan:2f7aed4e37f8038a", "scan:09c326ebaf950368", "scan:5f6895e6a71abd50"]
+    },
+    {
+      "id": "adjudication:SU2-two-factor-product",
+      "signature": {
+        "groupIds": ["grp:SU2", "grp:SU2xSU2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:1839ebab44aebd8e",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:SU2SU2-direct-product"],
+      "assessment": "The recurring left-right and custodial notation is the declared direct product SU(2) x SU(2). The atlas preserves two separately indexed factor inclusions and projections; this product identity alone does not select a diagonal subgroup, parity action or Pati-Salam quotient.",
+      "reviewedEvidenceIds": ["scan:b3cf06f3463c9fec", "scan:ebb93be011928402"]
+    },
+    {
+      "id": "adjudication:U1-two-factor-product",
+      "signature": {
+        "groupIds": ["grp:U1", "grp:U1xU1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:7311793271207aea",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:U1U1-direct-product"],
+      "assessment": "Exact two-phase occurrences instantiate the reviewed two-torus direct product with distinct coordinate maps. When the matched pair occurs inside a longer phase product, this record applies only to that named pair and does not collapse the full higher-rank torus to U(1) x U(1).",
+      "reviewedEvidenceIds": ["scan:48cbf79ec7d3e3a0", "scan:34f88a84b7a5b741"]
+    },
+    {
+      "id": "adjudication:C2-cubed-discriminant-identification",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C2cubed"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:b4bc165bc60da41a",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C2cubed-direct-product"],
+      "assessment": "The isomorphism is between a particular lattice quotient or defect group and C2^3, not between C2 and C2^3. The atlas direct-product relation supplies the target group's three independent C2 coordinates; the source quotient retains its own construction and quadratic data.",
+      "reviewedEvidenceIds": ["scan:2acbda806c7d9250", "scan:fa4b78ffafa3c3c7"]
+    },
+    {
+      "id": "adjudication:V4-discriminant-identification",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:V4"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:6661cf3567998e7c",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:V4-direct-product"],
+      "assessment": "The displayed isomorphism identifies a D2 lattice discriminant quotient with V4=C2 x C2. It does not identify one C2 factor with V4. The product coordinates are now bidirectional maps, while any discriminant quadratic refinement remains external to the abstract group decomposition.",
+      "reviewedEvidenceIds": ["scan:074116de43ee3c7b", "scan:f25c306a60126252"]
+    },
+    {
+      "id": "adjudication:C4-C2-product-identification",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C4", "grp:C4xC2"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:b4c4653a5ccc121c",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C4C2-direct-product"],
+      "assessment": "The named kernels are identified with the abelian group C4 x C2. The atlas records both coordinate inclusions and projections; this abstract invariant-factor decomposition does not by itself transport a chosen generator, phase form or lattice embedding.",
+      "reviewedEvidenceIds": ["scan:77d311e969f85aea", "scan:e2230b0a1f06d675"]
+    },
+    {
+      "id": "adjudication:C4-C2cubed-product-identification",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:C2cubed", "grp:C4", "grp:C4xC2cubed"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:d443e167175bea57",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C2cubed-direct-product", "rel:C4C2cubed-direct-product"],
+      "assessment": "The quotient M/I is identified with the invariant-factor group C4 x C2^3. The nested product records expose all four coordinate maps while preserving the distinction between abstract group structure and the quotient's selected lattice generators or forms.",
+      "reviewedEvidenceIds": ["scan:3fa48c9665fe001a", "scan:98d6722abc0b90c7"]
+    },
+    {
+      "id": "adjudication:S3-wreath-nested-token-scope",
+      "signature": {
+        "groupIds": ["grp:S3", "grp:S3WrC2"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:f96ffc3c2d80c514",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:S3WrC2-semidirect-product", "rel:OPlus4F2-iso-S3WrC2"],
+      "assessment": "The S3 token is a factor nested inside the wreath-product name, not a claim that S3 is isomorphic to the order-72 group. The reviewed isomorphism is O+(4,2) ~= S3 wr C2, whose normal base is S3 x S3 and whose acting C2 swaps the factors.",
+      "reviewedEvidenceIds": ["scan:cada5f7d4cb6600f", "scan:42b15dcdfb50ef48"]
+    },
+    {
+      "id": "adjudication:S3-direct-square",
+      "signature": {
+        "groupIds": ["grp:S3xS3"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:1d10fc0c30a202ec",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:S3xS3-direct-product"],
+      "assessment": "The order-36 block group is the direct square S3 x S3. The two factor maps remain coordinate-typed because later matched-parity and orientation constraints distinguish diagonal, fiber-product and full-product subgroups.",
+      "reviewedEvidenceIds": ["scan:10c97f2e59fe2bae", "scan:bd7c046ad0fbc1ad"]
+    },
+    {
+      "id": "adjudication:OPlus4F2-wreath-identification",
+      "signature": {
+        "groupIds": ["grp:OPlus4F2", "grp:S3", "grp:S3WrC2"],
+        "predicates": ["isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:8e0184f3bcc1ef2f",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:OPlus4F2-iso-S3WrC2", "rel:S3WrC2-semidirect-product"],
+      "assessment": "The displayed chain identifies the shell quotient with O+(4,2) and with the full wreath product. The separately resolved S3 token is internal notation for a wreath factor, not a third group isomorphic to the order-72 endpoints.",
+      "reviewedEvidenceIds": ["scan:9de48958760b1d2b", "scan:e2a53f0622f3c154"]
+    },
+    {
+      "id": "adjudication:OPlus4F2-swap-extension-structure",
+      "signature": {
+        "groupIds": ["grp:OPlus4F2", "grp:S3", "grp:S3xS3"],
+        "predicates": ["direct_product", "isomorphism", "semidirect_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:c070c77fdb1bf981",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:S3xS3-direct-product", "rel:S3WrC2-semidirect-product", "rel:OPlus4F2-iso-S3WrC2"],
+      "assessment": "The formula is the structured identification O+(4,2) ~= (S3 x S3) semidirect C2. It is not an isomorphism between O+(4,2), S3, and S3 x S3 separately; the missing middle type is the order-72 wreath product and the outer involution acts by factor exchange.",
+      "reviewedEvidenceIds": ["scan:0f122a3d715e86ee", "scan:44de08f039ef6ea4"]
+    },
+    {
+      "id": "adjudication:S3-square-swap-extension",
+      "signature": {
+        "groupIds": ["grp:S3xS3"],
+        "predicates": ["direct_product", "semidirect_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:90328f31a2b44260",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:S3xS3-direct-product", "rel:S3WrC2-semidirect-product"],
+      "assessment": "The line denotes the normal direct-product base inside its split swap extension. The atlas retains the distinction between the order-36 base and the order-72 semidirect product even when the outer C2 is not separately resolved by the extractor.",
+      "reviewedEvidenceIds": ["scan:2364b556ed7f0472"]
+    },
+    {
+      "id": "adjudication:S3-C2-direct-product",
+      "signature": {
+        "groupIds": ["grp:S3xC2"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:152badae1c8aea0c",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:S3C2-direct-product"],
+      "assessment": "The named order-twelve group is the direct product S3 x C2 (equivalently S3 x S2 in the flag model). Coordinate permutations on the three- and two-element blocks commute, intersect trivially and generate the full product.",
+      "reviewedEvidenceIds": ["scan:1d30f5c203039dee", "scan:012dac63559109fe"]
+    },
+    {
+      "id": "adjudication:S3-C2-stabilizer-family",
+      "signature": {
+        "groupIds": ["grp:S3xC2"],
+        "predicates": ["direct_product", "stabilizer"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:db268d3a05eb3fc0",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:S3C2-direct-product", "rel:S3C2-flag-stabilizer-OPlus4F2"],
+      "assessment": "The cluster correctly recognizes several order-twelve S3 x C2 stabilizers, but it combines different carriers and embeddings. The reviewed three-plus-two flag instance is the index-six subgroup of O+(4,2); other stabilizer occurrences retain their own selected objects and must not inherit that embedding automatically.",
+      "reviewedEvidenceIds": ["scan:45561b3f5916ae32", "scan:e856dac3c703bf06"]
+    },
+    {
+      "id": "adjudication:matched-parity-subscript-scope",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:MatchedParityS3S3"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:7a60378fb49c5a10",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:MatchedParity-kernel-of-mismatch", "rel:MatchedParity-semidirect-C3C3-C2"],
+      "assessment": "In S3 x_{C2} S3 the resolved C2 is the common parity quotient decorating a fiber product, not a direct-product factor. The order-eighteen group is the kernel of parity mismatch in S3 x S3 and internally is (C3 x C3) semidirect C2 with simultaneous inversion.",
+      "reviewedEvidenceIds": ["scan:b86bf1044f730447", "scan:09a886eadfd9d782"]
+    },
+    {
+      "id": "adjudication:S3-C2-factor-scope",
+      "signature": {
+        "groupIds": ["grp:S3", "grp:S3xC2"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:07b6bd36ae8cd373",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:S3C2-direct-product"],
+      "assessment": "The isomorphism target is the whole order-twelve group S3 x C2. The separately resolved S3 is a product factor, not a group isomorphic to the result; factor inclusion and product identification are distinct maps.",
+      "reviewedEvidenceIds": ["scan:88f68b2ffc555465", "scan:82a689c67c566d65"]
+    },
+    {
+      "id": "adjudication:matched-parity-versus-full-block",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:MatchedParityS3S3", "grp:S3xS3"],
+        "predicates": ["direct_product", "quotient"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:92df0f77c5f9dcba",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:S3xS3-direct-product", "rel:MatchedParity-kernel-of-mismatch"],
+      "assessment": "The full block group is the order-thirty-six direct square S3 x S3. The matched-parity group is its normal index-two kernel under the parity-mismatch quotient to C2; it is not a second direct-product presentation of the same group.",
+      "reviewedEvidenceIds": ["scan:a627095cd1fd60e4"]
+    },
+    {
+      "id": "adjudication:S3-C2-flag-subgroup-OPlus4F2",
+      "signature": {
+        "groupIds": ["grp:OPlus4F2", "grp:S3xC2"],
+        "predicates": ["direct_product", "subgroup"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:d411cb0ef06f20e8",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:S3C2-direct-product", "rel:S3C2-flag-stabilizer-OPlus4F2"],
+      "assessment": "The transported block-permutation product S3 x C2 embeds as the selected three-plus-two flag stabilizer in O(q_J)=O+(4,2). Exhaustive finite verification gives order 12 inside order 72, hence index six, and the embedding is nonnormal and flag-dependent.",
+      "reviewedEvidenceIds": ["scan:3473629cba996ad1"]
+    },
+    {
+      "id": "adjudication:matched-parity-isomorphism-nested-scope",
+      "signature": {
+        "groupIds": ["grp:C2", "grp:MatchedParityS3S3", "grp:S3"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:ec01702ff0330912",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:MatchedParity-kernel-of-mismatch", "rel:MatchedParity-semidirect-C3C3-C2"],
+      "assessment": "The isomorphism names the whole matched-parity fiber product. The extracted S3 tokens are its two coordinate groups and C2 is their common sign quotient; none is separately isomorphic to the order-eighteen result.",
+      "reviewedEvidenceIds": ["scan:35f9f9c7c093b3e5"]
+    },
+    {
+      "id": "adjudication:H4mu3-product-display",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:H4mu3", "grp:SU4"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:456c242bc7196971",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:H4mu3-direct-product", "rel:H4mu3-determinant-sequence"],
+      "assessment": "The displayed SU(4) x C3 is the abstract product structure of the three-component determinant preimage H_4^(3). The atlas retains the named embedded subgroup as well as its factors, so the product typography does not erase which subgroup of U(4) is meant.",
+      "reviewedEvidenceIds": ["scan:aff0773e4bd6b5e2"]
+    },
+    {
+      "id": "adjudication:H4mu3-central-splitting",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:H4mu3", "grp:SU4"],
+        "predicates": ["direct_product", "isomorphism"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:cc78f91fbd4398bd",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:H4mu3-direct-product", "rel:H4mu3-determinant-sequence"],
+      "assessment": "The central scalar C3 section proves H_4^(3) is isomorphic to SU(4) x C3. This split ambient component sequence is distinct from the selected nonsplit C3 -> C9 -> C3 sequence carried by the gauge-dressed order-nine generator.",
+      "reviewedEvidenceIds": ["scan:fe1c254bfaf56160"]
+    },
+    {
+      "id": "adjudication:A5-gate-C3-conjugacy-false-positive",
+      "signature": {
+        "groupIds": ["grp:A5", "grp:C3"],
+        "predicates": ["conjugacy"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:0635f809a3cb5750",
+      "disposition": "superseded_by_resolution",
+      "supersededBy": ["adjudication:C3-external-inversion-not-inner-conjugacy"],
+      "supersessionReason": "Scanner algorithm 17 recognizes A5 as a programme-gate label in gate, selector and audit contexts. The source never relates the alternating group A5 to the C3 sectors.",
+      "relationshipIds": [],
+      "assessment": "This former cluster was lexical contamination: A5 meant the programme's selector gate, not the alternating group. No A5-C3 mathematical relationship is supported by this evidence.",
+      "reviewedEvidenceIds": ["scan:2ce25da1483e9e04"]
+    },
+    {
+      "id": "adjudication:C3-external-inversion-not-inner-conjugacy",
+      "signature": {
+        "groupIds": ["grp:C3"],
+        "predicates": ["conjugacy"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:b961c71e3655d9d9",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C3-automorphism-C2", "rel:S3-split-extension"],
+      "assessment": "The sectors labelled 1 and 2 are not conjugate inside the abelian group C3. They are exchanged by the external inversion automorphism in Aut(C3)=C2; adjoining that involution produces the semidirect product C3 semidirect C2 isomorphic to S3. The response theorem uses the external involution and supplies no alternating-group A5 selector.",
+      "reviewedEvidenceIds": ["scan:2ce25da1483e9e04", "scan:b9456e00b2be3afc"]
+    },
+    {
+      "id": "adjudication:C3U1-unconditional-residual-product",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C3xU1", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:57e19984a5f9e35e",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:C3U1-direct-product", "rel:C3U1-subgroup-U1U1"],
+      "assessment": "The repeated Z3 x U(1) notation denotes the unconditional residual intertwiner ambiguity: octonion compatibility restricts the colour phase to C3 while the weak Jordan observable data leaves a full U(1). The named product is an ambiguity group and is not thereby promoted to a physical gauge symmetry.",
+      "reviewedEvidenceIds": ["scan:a527d2f2bc268bc2", "scan:c463bc27fdc5e3cb", "scan:88b43d35474bf7f5", "scan:71a9336d110a2be7"]
+    },
+    {
+      "id": "adjudication:C3U1-not-yet-finite",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C3xU1", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:01ca959756b7ac4e",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:C3U1-direct-product", "rel:C6-subgroup-C3U1"],
+      "assessment": "The qualification is structural: C3 x U(1) has three circle components and is not finite. A finite C6 subgroup appears only after extra common-volume sewing reduces the weak U(1) coordinate to C2; the atlas retains that condition rather than reading the finite endpoint backwards into the unconditional product.",
+      "reviewedEvidenceIds": ["scan:2790456b40c97f52"]
+    },
+    {
+      "id": "adjudication:C3U1-weak-central-action-scope",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C3xU1", "grp:U1"],
+        "predicates": ["action", "direct_product"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:6cb64477ca2843ec",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:C3U1-direct-product"],
+      "assessment": "The action language in this evidence concerns the central U(1) action: it is trivial on H2(C) observables but has determinant-line weight two. It is not a separate asserted action of the entire C3 x U(1) product, while the same evidence does support the product ambiguity and its weak-phase no-go boundary.",
+      "reviewedEvidenceIds": ["scan:d50701ef8c662502"]
+    },
+    {
+      "id": "adjudication:C3U1-cannot-unconditionally-reduce-to-C6",
+      "signature": {
+        "groupIds": ["grp:C3", "grp:C3xU1", "grp:C6", "grp:U1"],
+        "predicates": ["direct_product"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:c2c7c65ca4a4c09e",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:C3U1-direct-product", "rel:C6-direct-product", "rel:C6-subgroup-C3U1"],
+      "assessment": "Bare weak Jordan data cannot reduce the unconditional C3 x U(1) ambiguity to C6. With separately identified normalized five-volume lines, beta squared equals one and C3 x C2 is isomorphic to C6; without that sewing datum the finite subgroup relationship is unavailable. The residual sixfold frame group also remains distinct from the faithful gauge kernel unless its hypercharge phase is supplied.",
+      "reviewedEvidenceIds": ["scan:c902e1379acae25e"]
+    },
+    {
+      "id": "adjudication:Tits-full-automorphism-group",
+      "signature": {
+        "groupIds": ["grp:TitsAut"],
+        "predicates": ["automorphism_group"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:ef48d2e89389722f",
+      "disposition": "promoted",
+      "relationshipIds": ["rel:Tits-automorphism-group", "rel:Tits-split-automorphism-extension"],
+      "assessment": "The full automorphism group of the simple Tits group is ^2F4(2)=T:2. The atlas records both the index-two automorphism-group inclusion and the split, noncentral exact sequence 1 -> T -> T:2 -> C2 -> 1; its outer C2 is not identified with the Monster 2A class, fermion parity or an Ising defect.",
+      "reviewedEvidenceIds": ["scan:34b94a9b1c954798"]
+    },
+    {
+      "id": "adjudication:S4-Tits-local-maximal-subgroup-B",
+      "signature": {
+        "groupIds": ["grp:S4", "grp:S4xTitsAut"],
+        "predicates": ["subgroup"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:7574df9a8daa35dc",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:S4TitsAut-direct-product", "rel:S4TitsAut-maximal-subgroup-B"],
+      "assessment": "The ATLAS maximal subgroup of the Baby Monster is the whole direct product S4 x ^2F4(2), not merely the separately resolved S4 token. The S4 factor embeds through the selected product coordinate, and this embedding-specific S4 must not be conflated with the S4 appearing in the Monster order-23 normalizer or centralizer rail.",
+      "reviewedEvidenceIds": ["scan:1be63d9cfa3b937c"]
+    },
+    {
+      "id": "adjudication:Baby-Monster-involvement-not-embedding",
+      "signature": {
+        "groupIds": ["grp:B", "grp:M"],
+        "predicates": ["quotient", "subgroup"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:184abea3c2e63478",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:2B-subgroup-M", "rel:2B-central-extension", "rel:B-nonembedding-M"],
+      "assessment": "The Baby Monster is involved in the Monster because 2.B is a Monster subgroup and B is its quotient by the central C2. These are two composable arrows C2 -> 2.B -> B and 2.B -> M, not an arrow B -> M; reversing the quotient would falsely manufacture a Baby Monster embedding.",
+      "reviewedEvidenceIds": ["scan:87f78fdf7d877b80"]
+    },
+    {
+      "id": "adjudication:Baby-Monster-no-subgroup-arrow-to-Monster",
+      "signature": {
+        "groupIds": ["grp:B", "grp:M"],
+        "predicates": ["subgroup"],
+        "polarity": "negative_or_qualified"
+      },
+      "observedClusterId": "cluster:ac162bfe489494bb",
+      "disposition": "retained_qualification",
+      "relationshipIds": ["rel:B-nonembedding-M", "rel:2B-subgroup-M", "rel:2B-central-extension"],
+      "assessment": "The negative boundary is intentional and structural: B is not contained in M even though its double cover 2.B is a maximal subgroup of M. The map graph therefore exposes involvement through a quotient while refusing a B-to-M subgroup path.",
+      "reviewedEvidenceIds": ["scan:13ed3ebea86bfc3d"]
+    },
+    {
+      "id": "adjudication:Baby-Monster-centralizer-scope",
+      "signature": {
+        "groupIds": ["grp:B", "grp:M"],
+        "predicates": ["centralizer"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:d28bcf80b21e2d36",
+      "disposition": "corrected_predicate_scope",
+      "relationshipIds": ["rel:2B-subgroup-M", "rel:2B-central-extension"],
+      "assessment": "The relevant Monster involution centralizer is 2.B=C_M(2A), not B itself. The source sentence discusses centralizer arithmetic for an element of B after passage through the double cover; the scanner's B-M co-resolution must retain that missing middle rather than label B as a Monster centralizer.",
+      "reviewedEvidenceIds": ["scan:16915bc35d8b018e"]
+    },
+    {
+      "id": "adjudication:Baby-Monster-conjugacy-link-is-bibliographic",
+      "signature": {
+        "groupIds": ["grp:B", "grp:M"],
+        "predicates": ["conjugacy"],
+        "polarity": "positive_or_descriptive"
+      },
+      "observedClusterId": "cluster:dcb9009f22e4ddc8",
+      "disposition": "rejected_false_positive",
+      "relationshipIds": [],
+      "assessment": "This candidate is a bibliography entry whose link title says Baby Monster conjugacy classes while the surrounding document also discusses the Monster. It supports neither a conjugacy relation between B and M nor a new group map, so no catalogue relationship is promoted from it.",
+      "reviewedEvidenceIds": ["scan:d8c33ffa712d4da5"]
+    }
+  ]
+}

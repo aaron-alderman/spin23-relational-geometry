@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "admissibility-trifilar-hardware-handoff-v1",
+  "date": "2026-10-28",
+  "purpose": "Capability-level handoff from the dependency-free acquisition emulator to a first coherent four-channel loopback and device record.",
+  "software": {
+    "runner": "scripts/run-trifilar-hardware-ready-acquisition.mjs",
+    "configuration": "evidence/data/admissibility-trifilar-hardware-ready-config-v1.json",
+    "verifier": "verification/admissibility/verify_trifilar_hardware_ready_acquisition.mjs"
+  },
+  "minimumCapabilities": {
+    "host": "A computer able to run a maintained Node.js runtime",
+    "interface": "One full-duplex interface with at least four phase-coherent inputs and four phase-coherent outputs sharing one sample clock",
+    "nominalSampleRateHertz": 48000,
+    "nominalResolutionBits": 24,
+    "carrierHertz": 1000,
+    "blockSizeSamples": 240,
+    "analogueProtection": "Input/output levels, grounding and isolation appropriate to the selected interface and emulator",
+    "cables": "Eight short, labelled connections plus one independent loopback/calibration path"
+  },
+  "channelMap": [
+    { "index": 0, "role": "primary_1" },
+    { "index": 1, "role": "primary_2" },
+    { "index": 2, "role": "primary_3" },
+    { "index": 3, "role": "bus" }
+  ],
+  "rawSchema": [
+    "stress_case",
+    "trial",
+    "input_basis",
+    "channel",
+    "true_re",
+    "true_im",
+    "measured_re",
+    "measured_im",
+    "corrected_re",
+    "corrected_im"
+  ],
+  "loopbackAdmission": {
+    "minimumRawRows": 1000,
+    "maximumRelativeErrorToSource": 0.001,
+    "maximumAbsoluteAngleErrorDegrees": 0.01,
+    "requiredControls": ["forward", "reverse", "fixed"],
+    "rule": "Pass the coherent loopback and frozen negative controls before attaching a physical four-mode emulator. Do not refit by direction."
+  },
+  "stopConditions": [
+    "Any input or output clips or reaches a protection limit.",
+    "Channel order, polarity or shared-clock status is unresolved.",
+    "A single calibration fails to predict both basis injections.",
+    "Forward and reverse data require direction-specific nuisance parameters.",
+    "A fixed-path control returns a statistically resolved rotation.",
+    "Supply, timing or detector records are missing from a claimed physical run."
+  ],
+  "externalBoundary": "The packet specifies and rehearses the acquisition contract. It contains no measured voltage, current, impedance, supply-power, temperature or timing record from physical equipment and therefore makes no claim that a physical device exhibits the simulated holonomy."
+}

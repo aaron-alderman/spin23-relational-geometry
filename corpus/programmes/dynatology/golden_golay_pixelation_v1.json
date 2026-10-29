@@ -1,0 +1,181 @@
+{
+  "schema": "dynatology-golden-golay-pixelation/1",
+  "date": "2026-10-28",
+  "status": "exact_golden_residual_and_perfect_ternary_pixelation_with_intrinsic_ordering_gate_resolved_by_subsequent_no_go",
+  "goldenTransformation": {
+    "matrixS": [[2, 1], [1, 1]],
+    "iterate": 5,
+    "matrixS5": [[89, 55], [55, 34]],
+    "trace": 123,
+    "determinant": 1,
+    "eigenvalues": ["phi^10", "phi^-10"],
+    "pixelDenominator": 55,
+    "forwardIntegerStep": 21,
+    "reverseIntegerStep": 34,
+    "exactResidual": "55/phi^2-21=34-55/phi=phi^-10",
+    "residualApproximation": 0.008130618755783348,
+    "perStepAngularErrorDegrees": 0.05321859549239217
+  },
+  "ternaryGolayPixelation": {
+    "codeParameters": [11, 6, 5],
+    "fieldOrder": 3,
+    "correctionRadius": 2,
+    "parityCheckRank": 5,
+    "parityCheckRows": [
+      [1, 2, 2, 2, 1, 0, 1, 0, 0, 0, 0],
+      [0, 1, 2, 2, 2, 1, 0, 1, 0, 0, 0],
+      [2, 1, 2, 0, 1, 2, 0, 0, 1, 0, 0],
+      [1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0],
+      [2, 2, 2, 1, 0, 1, 0, 0, 0, 0, 1]
+    ],
+    "radiusTwoBall": {
+      "weightZero": 1,
+      "weightOne": 22,
+      "coordinatePairSupports": 55,
+      "nonzeroValueAssignmentsPerPair": 4,
+      "weightTwo": 220,
+      "total": 243
+    },
+    "syndromeCount": 243,
+    "codewordCount": 729,
+    "ambientVectorCount": 177147,
+    "perfectPackingIdentity": "3^6*(1+11*2+C(11,2)*4)=3^11",
+    "decoder": "syndrome_to_unique_error_of_weight_at_most_two",
+    "llmRequired": false
+  },
+  "mod55Arithmetic": {
+    "crt": "Z/55Z isomorphic to Z/5Z times Z/11Z",
+    "twentyOneCoordinates": [1, -1],
+    "thirtyFourCoordinates": [-1, 1],
+    "twentyOneSquaredMod55": 1,
+    "thirtyFourSquaredMod55": 1,
+    "productMod55": 54,
+    "additiveTraversalLengths": {"21": 55, "34": 55},
+    "selectionNoGo": "translation_by_21_is_conjugate_to_translation_by_1_under_multiplication_by_21_so_a_bare_C55_does_not_select_the_golden_step"
+  },
+  "golaySymmetryNoGo": {
+    "secantSet": "the_55_unordered_pairs_of_11_coordinates",
+    "homogeneity": "the_sharply_four_transitive_M11_action_is_transitive_on_unordered_coordinate_pairs",
+    "coordinateOrder55Possible": false,
+    "reason": "a_permutation_order_divisible_by_5_and_11_requires_disjoint_5_and_11_cycles_and_therefore_at_least_16_coordinates",
+    "inducedPairActionBoundary": "the_order_of_the_action_on_pairs_divides_the_order_of_the_coordinate_permutation",
+    "consequence": "a_55_step_scan_requires_added_orientation_metric_clock_extended_carrier_or_scheduler"
+  },
+  "schedulerCompiler": {
+    "status": "deterministic_authored_scheduler_not_intrinsic_Golay_symmetry",
+    "supportGraph": "edges_of_K11",
+    "reasonEulerian": "all_11_vertices_have_even_degree_10",
+    "vertexCircuit": [0, 1, 2, 0, 3, 1, 4, 0, 5, 1, 6, 0, 7, 1, 8, 0, 9, 1, 10, 2, 3, 4, 2, 5, 3, 6, 2, 7, 3, 8, 2, 9, 3, 10, 4, 5, 6, 4, 7, 5, 8, 4, 9, 5, 10, 6, 7, 8, 6, 9, 7, 10, 8, 9, 10, 0],
+    "labelRule": "label(edge_at_position_n)=21*n mod 55",
+    "forwardStep": 21,
+    "reverseStep": 34,
+    "supportsVisited": 55,
+    "sharedCoordinateTransitions": 55,
+    "maximumSharedCoordinateTransitions": 55,
+    "supportSymmetricDifferencePerTransition": 2,
+    "randomCyclicOrderingExpectedSharedTransitions": "55/3",
+    "engineeringInterpretation": "maximum_locality_scan_of_all_double_error_supports_with_one_coordinate_retained_at_each_step",
+    "nonUniquenessBoundary": "every_unit_step_modulo_55_can_be_compiled_onto_the_same_Euler_circuit_by_relabelling"
+  },
+  "signedDoubleErrorScheduler": {
+    "status": "complete_deterministic_scan_of_the_weight_two_error_shell",
+    "valueConvention": {"plus": 1, "minus": 2},
+    "perOrientedSupportGrayPath": [[1, 1], [1, 2], [2, 2], [2, 1]],
+    "states": 220,
+    "uniqueSyndromes": 220,
+    "cyclicTransitionCensus": {
+      "hammingDistanceOne": 165,
+      "hammingDistanceTwo": 55,
+      "beyondCorrectionRadius": 0
+    },
+    "boundaryInvariant": "the_shared_coordinate_retains_value_plus_between_successive_support_blocks",
+    "forwardOrientation": "support_labels_advance_by_21",
+    "reverseOrientation": "reverse_schedule_support_labels_advance_by_34",
+    "scopeBoundary": "scans_the_220_weight_two_errors_not_the_zero_and_22_weight_one_errors_or_a_physical_signal_space"
+  },
+  "completeSphereScheduler": {
+    "status": "complete_deterministic_cycle_of_all_radius_two_errors",
+    "base": "signedDoubleErrorScheduler",
+    "insertions": {
+      "order": "all_22_weight_one_errors_in_coordinate_then_value_order_followed_by_the_zero_error",
+      "edgeSelection": "lexicographically_minimize_max_new_distance_then_transition_distance_increase_then_current_edge_index"
+    },
+    "states": 243,
+    "weightCensus": {"0": 1, "1": 22, "2": 220},
+    "uniqueSyndromes": 243,
+    "cyclicTransitionCensus": {
+      "hammingDistanceOne": 198,
+      "hammingDistanceTwo": 45,
+      "beyondCorrectionRadius": 0
+    },
+    "interpretation": "the_full_Golay_error_pixel_has_a_cycle_whose_every_step_stays_within_the_code_correction_radius",
+    "authorityBoundary": "the_route_is_deterministically_authored_and_not_M11_invariant"
+  },
+  "continuousEncoderNoGo": {
+    "status": "underdetermined_without_scale_frame_and_quantizer",
+    "residual": "phi^-10",
+    "unitGainNearestIntegerResult": 0,
+    "unitCellCondition": "abs(phi^-10)<1/2",
+    "counterfamily": "q_a(r)=round(a*r) mod 3 changes_with_gain_a",
+    "missingObjects": [
+      "eleven_channel_encoder",
+      "gain_and_noise_scale",
+      "quantization_thresholds",
+      "metric",
+      "tie_rule"
+    ],
+    "stopRule": "do_not_optimize_or_promote_the_continuous_bridge_until_at_least_one_missing_object_is_supplied_independently"
+  },
+  "corpusContacts": [
+    {
+      "path": "mystery_atlas_15_girih_inflation_intertwiner_and_index_two_scar.md",
+      "role": "supplies_the_integral_phi_squared_transformation"
+    },
+    {
+      "path": "../../claims/0600-0699/605_the_golay_middle_action_defines_a_coxeter_cap_involution_and_code_cocode_duality.md",
+      "role": "supplies_the_11_cap_55_secants_and_two_five_dimensional_M11_modules"
+    },
+    {
+      "path": "../../claims/0500-0599/589_the_ternary_golay_p_space_survives_in_a_nonunit_residue_class_but_real_signature_raises_the_first_lift.md",
+      "role": "supplies_the_corpus_ternary_Golay_parity_check_and_integral_lift_boundary"
+    }
+  ],
+  "continuousLift": {
+    "candidateLattice": "Lambda_C={z in Z^11 : z mod 3 in C11}",
+    "requiredDeclarations": ["encoder", "quantizer", "metric", "boundary_convention", "tie_rule"],
+    "warning": "Hamming_nearest_residue_decoding_is_not_automatically_Euclidean_nearest_lattice_decoding"
+  },
+  "openGate": {
+    "id": "gate:intrinsic-golay-support-ordering",
+    "status": "resolved_by_equivariant_successor_no_go",
+    "resolutionRecord": "golden_golay_integral_encoder_audit_v1.json",
+    "question": "Does a source-native metric orientation or transport law on the 55 Coxeter-cap secants distinguish the 21/34 traversal pair before cyclic labels are chosen?",
+    "requiredEvidence": [
+      "label_independent_objective",
+      "full_coprime_step_controls",
+      "randomized_labelling_controls",
+      "held_out_geometric_or_syndrome_observable",
+      "M11_action_response"
+    ],
+    "resolution": "sharp_four_transitivity_gives_base_secant_stabilizer_orbits_1_18_36_so_the_identity_is_the_only_fully_M11_equivariant_deterministic_successor"
+  },
+  "promotionBoundary": {
+    "establishes": [
+      "phi^-10_is_the_exact_55_pixel_golden_residual",
+      "the_ternary_Golay_code_is_a_perfect_radius_two_finite_pixelation",
+      "55_counts_both_the_golden_denominator_and_the_Golay_pair_supports",
+      "bare_cyclic_order_does_not_select_step_21",
+      "the_21_34_pair_compiles_a_maximum_locality_forward_reverse_scheduler",
+      "the_support_scheduler_and_four_state_Gray_path_scan_all_220_weight_two_errors_with_transition_distance_at_most_two",
+      "all_243_radius_two_errors_admit_a_deterministically_compiled_cycle_with_transition_distance_at_most_two",
+      "the_continuous_encoder_is_not_determined_by_the_scalar_golden_residual"
+    ],
+    "doesNotEstablish": [
+      "a_canonical_Z55_labelling_of_Golay_secants",
+      "an_M11_invariant_golden_traversal",
+      "a_physical_encoder_from_the_golden_mode_to_11_trits",
+      "Euclidean_nearest_lattice_decoding",
+      "a_Golay_origin_of_the_golden_angle"
+    ]
+  }
+}

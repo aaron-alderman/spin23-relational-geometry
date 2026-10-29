@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "admissibility-trifilar-tolerance-window-v1",
+  "date": "2026-10-28",
+  "fixture": {
+    "primaryAngularFrequencyPerSecond": 100,
+    "exactBrightDarkGapPerSecond": 1.540659228538015,
+    "testedGapToLoopRateRatios": [8, 32],
+    "coherentAngleBudgetDegrees": 1,
+    "maximumDarkSingularValueRatio": 1.01,
+    "meanAmplitudeSurvival": 0.9,
+    "nonadiabaticLeakageCoefficient": 0.44
+  },
+  "errorChannels": [
+    "finite-rate coherent bright leakage",
+    "traceless dark-doublet splitting",
+    "mean bath loss",
+    "dark-plane damping anisotropy",
+    "bus-elimination and participation error",
+    "controller work, latency and injected noise"
+  ],
+  "heuristic": {
+    "finiteRateProxy": "A/r^2",
+    "splittingAccumulationProxy": "2*pi*eta*r",
+    "balancedRatio": "r_star = (A/(pi*eta))^(1/3)",
+    "scope": "design heuristic, not a rigorous combined error bound"
+  },
+  "decisionRule": "Choose the smallest measured gap/loop-rate ratio that meets the bright-leakage target after the independently fitted splitting, anisotropic loss and control errors are propagated through the same return model."
+}

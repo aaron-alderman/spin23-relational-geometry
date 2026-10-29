@@ -56,3 +56,12 @@ The current evidence supports two possible eventual endpoints:
 
 It does not yet support a predictive \(E_8\), Freudenthal or Spin(2,3) universe claim.
 
+## Relation to the negative-result ledger
+
+This atlas identifies the first failed bridge in each whole-programme route.
+The complementary [Negative Results and Reopening Ledger](../negative-results/README.md)
+works at the finer grain of a calculation, detector, experiment or
+implementation. It distinguishes a failed run from a conditional obstruction,
+an exact no-go and a test that was never capable of deciding. Repairs reopen
+records; they do not erase the original scoped result.
+

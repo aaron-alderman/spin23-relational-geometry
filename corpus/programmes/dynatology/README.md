@@ -61,6 +61,19 @@ It does not replace physics, ontology, dynamics, optimization or modal logic. It
 45. [Blind Figure 4F continuity record](girih_figure4f_blind_continuity_v1.json) freezes the twenty-four-trial stability sweep, resolution-sensitive raw counts, invariant registered delta, allowed inputs, non-results and branch-closing reopen conditions.
 46. [Aether, substrate and the universal-cone problem](mystery_atlas_21_aether_substrate_and_universal_cone.md) separates structured vacuum, preferred-frame fields, emergent Lorentz symmetry, analogue media, relational microstructure and dark condensates, then turns the surviving question into eight falsifiable research fronts.
 47. [Aether/substrate frontier register](aether_substrate_frontier_register_v1.json) freezes the seven branch types, their recovery burdens and kill tests, plus the eight ranked research fronts.
+48. [Attention, will and conscious-access brain atlas](mystery_atlas_22_attention_will_and_conscious_access_brain_atlas.md) separates McGilchrist's five attention labels, broad/narrow attentional stance, arousal, selection, ignition, metacognition, control allocation, action, agency and retained transformation into typed distributed operations.
+49. [Brain function atlas v1 record](brain_function_atlas_v1.json) preserves the initial feature-centred constructs, candidate systems, anatomical nodes, evidence grades, required separations and next discriminating gates.
+50. [MECE brain function atlas v2](brain_function_atlas_v2.json) closes the adaptive loop with fifteen output-typed primitive operators, compiles familiar faculties as composites or overlays, covers every v1 construct and specifies a minimum ground protocol and executable reopening conditions.
+51. [Brain-function missing-middle register](brain_function_missing_middle_register_v1.json) makes the fifteen canonical joins and four cross-cutting joins the research objects, with candidate carriers, translation laws, observable traces, competing bridges and failure conditions under a no-new-human-experiment default.
+52. [Brain relationship algebra v1](brain_relationship_algebra_v1.md) makes conditional relations primary, defines typed hyperedges and composition, and treats negative and unknown relations as first-class knowledge rather than omissions.
+53. [Executable brain relationship atlas v1](brain_relationship_atlas_v1.json) imports the operator and missing-middle authorities without copying them, expands typed nodes into provenance-bearing candidate, negative and unresolved relations, and exposes a glass-box query surface.
+54. [Common Operator Atlas](../common-operator-atlas/README.md) applies the Dynatology tuple to diffusion, stochastic dynamics, optimization, sequence models, linear algebra and control while refusing to identify physical and computational clocks merely because their equations coincide.
+55. [Operator-atlas coverage audit](../common-operator-atlas/01_diagram_to_corpus_coverage_audit.md) marks all thirty-two visible diagram nodes as filled, partial or unfilled against substantive corpus evidence.
+56. [Typed operator translation grammar](../common-operator-atlas/02_typed_translation_grammar.md) distinguishes nine arrow types and requires carrier, metric, clock, detector, invariant, loss and authority receipts.
+57. [Golden contraction and Golay pixelation](mystery_atlas_23_golden_golay_pixelation_spike.md) proves that the 55-pixel golden residual is exactly `phi^-10`, verifies the ternary Golay code as a perfect radius-two finite pixelation, proves that a bare cyclic labelling cannot intrinsically select step 21, compiles the `21/34` pair into a maximum-locality forward/reverse scan of all 220 double-error states, and extends it to a bounded-step cycle through all 243 correctable errors.
+58. [Golden--Golay pixelation record](golden_golay_pixelation_v1.json) freezes the integer transformation, exact residual, syndrome decoder, modulo-55 control, Euler support circuit, signed Gray scheduler, full-sphere scheduler, continuous-encoder no-go and intrinsic-ordering gate.
+59. [Golden--Golay integral encoder audit](mystery_atlas_24_golden_golay_integral_encoder_audit.md) recovers the existing arithmetic lift's exact two-to-eleven encoder, identifies its equidistant `[11,2,6]` ternary shadow and order-four golden reduction, and closes the intrinsic 55-secant ordering gate by an equivariant-successor no-go.
+60. [Golden--Golay integral encoder record](golden_golay_integral_encoder_audit_v1.json) freezes the encoder, basis gauge, finite orbit census, Coxeter-cap stabilizer orbits, resolved gate and external-evidence stop rule.
 
 ## Relation to neighbouring programmes
 
@@ -79,5 +92,9 @@ Run:
 node verification/verify/verify_dynatology_register.mjs
 node verification/verify/verify_dynatology_mystery_atlas.mjs
 node verification/verify/verify_dynatology_aether_substrate_frontier.mjs
+node verification/verify/verify_dynatology_golden_golay_pixelation.mjs
+node verification/verify/verify_dynatology_golden_golay_integral_encoder.mjs
+node verification/verify/verify_brain_function_atlas.mjs
+node verification/verify/verify_brain_relationship_atlas.mjs
 ```
 

@@ -65,6 +65,10 @@ Promotion requires all of the following:
 
 A frequency-shifted synthetic field producing the same effect would support generic ELF entrainment, not Schumann-specific coupling. No effect under adequate sensitivity would close the direct-coupling branch at that dose while leaving indirect geomagnetic or circadian questions open.
 
+### Electrochemical and stochastic bridge
+
+The nearest mechanistic bridge is now [AZ-155](../admissibility/admissibility_155_electrochemical_carrier_stochastic_gate_and_metabolic_reset.md). It keeps five states distinct: extracellular field, membrane voltage, ion activities, stochastic channel conformation and ATP-maintained gradient. Ion-channel noise can support a stochastic-resonance test, but an ordinary voltage-sensitive pore is not a Maxwell demon without a separate measurement, record, conditional action and reset ledger. Fast refractoriness is chiefly channel inactivation and residual potassium conductance; metabolic pumping supplies a slower resource-restoration coordinate. In a declared one-hertz equivalent noise bandwidth, a representative natural Schumann electric amplitude remains roughly 667 times below one published weak-field slice entrainment scale before body-to-tissue transfer, so any direct hypothesis must measure the missing collective gain rather than infer it from a 7.8 Hz match.
+
 ## 6. Altered states, meditation and psychedelics
 
 Dreaming, anesthesia, meditation, seizure, sensory deprivation and psychedelics change conscious contents and organization. They are high-value perturbations because they move the system through distinct metastable regimes. The research target is a transition invariant that generalizes across report, no-report physiology and intervention—not the importation of visionary geometry as a microscopic map.

@@ -1,0 +1,288 @@
+{
+  "schema": "brain-function-missing-middle-register/1",
+  "date": "2026-10-27",
+  "authority": "candidate_interface_register_not_closed_mechanism_or_human_experiment_programme",
+  "evidencePolicy": {
+    "newHumanExperimentation": "not_proposed",
+    "admissibleSources": [
+      "published_observations_and_null_results",
+      "ethically_released_open_data_under_original_reuse_constraints",
+      "existing_lesion_stimulation_and_clinical_literature",
+      "existing_comparative_and_naturalistic_observations",
+      "computational_reconstruction_and_synthetic_agents",
+      "cross_dataset_prediction_with_immutable_provenance"
+    ],
+    "prohibitions": [
+      "no_new_subject_recruitment_is_implied",
+      "no_new_intervention_is_implied",
+      "no_reidentification_or_consent_expansion",
+      "no_missing_modality_may_be_imputed_as_observed_evidence"
+    ]
+  },
+  "joinGrades": {
+    "J0": "typed_gap_only",
+    "J1": "candidate_carrier_or_translation_named",
+    "J2": "convergent_association_or_existing_dissociation",
+    "J3": "existing_causal_or_natural_perturbation_constrains_the_join",
+    "J4": "quantitative_transfer_law_predicts_held_out_traces_across_datasets",
+    "J5": "independently_replicated_transfer_law_defeats_named_competing_bridges"
+  },
+  "requiredClosureFields": [
+    "source_output",
+    "carrier",
+    "translation_law",
+    "target_input",
+    "observable_trace",
+    "competing_bridge",
+    "failure_condition"
+  ],
+  "middles": [
+    {
+      "id": "MM-01",
+      "label": "capacity_to_evidence_gain",
+      "sourceOps": ["O01"],
+      "targetOps": ["O02"],
+      "sourceOutput": "viable_readiness_state",
+      "targetInput": "transduction_gain_and_noise_regime",
+      "candidateCarrier": "neuromodulatory_thalamic_autonomic_and_receptor_gain_state",
+      "candidateLaw": "state_dependent_gain_noise_and_dynamic_range_transform",
+      "observableTrace": "threshold_evoked_response_and_variability_shift_at_matched_stimulus",
+      "competingBridge": "all_observed_change_is_post_transduction_decision_or_motor_variation",
+      "failureCondition": "transduction_level_measures_are_invariant_when_capacity_state_changes",
+      "grade": "J2"
+    },
+    {
+      "id": "MM-02",
+      "label": "evidence_to_hidden_state_estimate",
+      "sourceOps": ["O02"],
+      "targetOps": ["O03"],
+      "sourceOutput": "modality_specific_evidence",
+      "targetInput": "likelihood_compatible_evidence",
+      "candidateCarrier": "hierarchical_population_code_with_learned_priors_and_recurrent_error_signals",
+      "candidateLaw": "approximate_probabilistic_or_dynamical_state_estimation",
+      "observableTrace": "psychometric_bias_uncertainty_generalization_and_prediction_error",
+      "competingBridge": "direct_stimulus_response_mapping_without_latent_state_estimation",
+      "failureCondition": "a_direct_mapping_predicts_held_out_ambiguity_and_generalization_equally_well",
+      "grade": "J2"
+    },
+    {
+      "id": "MM-03",
+      "label": "belief_to_precision_and_scope",
+      "sourceOps": ["O03"],
+      "targetOps": ["O04"],
+      "sourceOutput": "posterior_state_belief",
+      "targetInput": "candidate_streams_with_expected_relevance_and_uncertainty",
+      "candidateCarrier": "frontoparietal_pulvinar_basal_ganglia_and_sensory_gain_coupling",
+      "candidateLaw": "belief_goal_and_uncertainty_conditioned_precision_allocation",
+      "observableTrace": "cueing_distractor_and_gain_changes_conditioned_on_prior_and_scope",
+      "competingBridge": "fixed_salience_or_motor_preparation_explains_routing",
+      "failureCondition": "routing_does_not_change_with_belief_or_uncertainty_after_salience_is_matched",
+      "grade": "J2"
+    },
+    {
+      "id": "MM-04",
+      "label": "selection_to_cross_system_availability",
+      "sourceOps": ["O04"],
+      "targetOps": ["O05"],
+      "sourceOutput": "routing_weight_vector",
+      "targetInput": "selected_content_under_capacity_constraints",
+      "candidateCarrier": "recurrent_posterior_frontoparietal_and_thalamocortical_coordination",
+      "candidateLaw": "nonlinear_threshold_or_attractor_transition_to_wider_availability",
+      "observableTrace": "selected_content_becomes_usable_by_novel_downstream_tasks_without_equating_use_with_report",
+      "competingBridge": "late_signal_is_entirely_task_report_or_working_memory",
+      "failureCondition": "availability_markers_disappear_when_report_memory_and_motor_demands_are_removed",
+      "grade": "J1"
+    },
+    {
+      "id": "MM-05",
+      "label": "availability_to_active_maintenance",
+      "sourceOps": ["O05"],
+      "targetOps": ["O06"],
+      "sourceOutput": "availability_token",
+      "targetInput": "content_selected_for_persistence",
+      "candidateCarrier": "frontoparietal_sensory_thalamic_and_activity_silent_synaptic_states",
+      "candidateLaw": "task_gated_write_and_refresh_into_a_maintenance_state",
+      "observableTrace": "delay_use_interference_and_perturb_then_recover_after_initial_access",
+      "competingBridge": "maintenance_is_continuous_attention_to_residual_input",
+      "failureCondition": "maintenance_never_dissociates_from_current_sensory_selection",
+      "grade": "J2"
+    },
+    {
+      "id": "MM-06",
+      "label": "state_goal_and_context_to_interrupt_priority",
+      "sourceOps": ["O03", "O06", "O09"],
+      "targetOps": ["O07"],
+      "sourceOutput": "estimated_state_maintained_context_and_goal_stack",
+      "targetInput": "candidate_change_with_task_and_organism_relevance",
+      "candidateCarrier": "anterior_insula_aMCC_right_ventral_attention_amygdala_and_neuromodulators",
+      "candidateLaw": "surprise_times_relevance_times_interruptibility_transform",
+      "observableTrace": "reorienting_and_autonomic_response_to_matched_surprise_with_different_relevance",
+      "competingBridge": "physical_surprise_alone_sets_priority",
+      "failureCondition": "goal_and_context_do_not_change_reset_probability_at_matched_surprise",
+      "grade": "J2"
+    },
+    {
+      "id": "MM-07",
+      "label": "inferred_significance_to_embodied_value",
+      "sourceOps": ["O03", "O07"],
+      "targetOps": ["O08"],
+      "sourceOutput": "estimated_state_and_priority_signal",
+      "targetInput": "candidate_outcome_in_body_need_and_history_context",
+      "candidateCarrier": "insula_vmPFC_OFC_amygdala_striatum_hypothalamus_and_autonomic_loop",
+      "candidateLaw": "contextual_multidimensional_valuation_over_reward_cost_risk_delay_effort_and_affect",
+      "observableTrace": "preference_and_physiological_cost_change_with_body_state_and_revaluation",
+      "competingBridge": "priority_salience_and_value_are_one_scalar",
+      "failureCondition": "priority_and_value_cannot_be_dissociated_by_devaluation_or_body_state",
+      "grade": "J2"
+    },
+    {
+      "id": "MM-08",
+      "label": "need_and_value_to_ranked_target",
+      "sourceOps": ["O01", "O03", "O08"],
+      "targetOps": ["O09"],
+      "sourceOutput": "body_need_estimated_possibilities_and_value_cost_vector",
+      "targetInput": "candidate_desired_states_and_constraints",
+      "candidateCarrier": "hippocampal_prefrontal_prospection_vmPFC_OFC_striatal_and_hypothalamic_coupling",
+      "candidateLaw": "constraint_sensitive_target_formation_and_hierarchical_ranking",
+      "observableTrace": "goal_choice_devaluation_preference_reversal_and_subgoal_structure",
+      "competingBridge": "highest_immediate_value_directly_determines_action_without_goal_state",
+      "failureCondition": "goal_structure_adds_no_prediction_beyond_immediate_value",
+      "grade": "J1"
+    },
+    {
+      "id": "MM-09",
+      "label": "goal_to_control_allocation",
+      "sourceOps": ["O06", "O07", "O08", "O09"],
+      "targetOps": ["O10"],
+      "sourceOutput": "maintained_context_priority_value_and_goal_stack",
+      "targetInput": "candidate_control_demands_and_strategies",
+      "candidateCarrier": "aMCC_dACC_anterior_insula_lateral_PFC_multiple_demand_and_striatum",
+      "candidateLaw": "expected_value_of_control_under_effort_uncertainty_progress_and_interrupt_cost",
+      "observableTrace": "demand_avoidance_persistence_switching_and_autonomic_mobilization",
+      "competingBridge": "control_is_only_conflict_detection_or_motor_difficulty",
+      "failureCondition": "allocation_has_no_effect_after_conflict_motor_and_value_terms_are_modelled",
+      "grade": "J2"
+    },
+    {
+      "id": "MM-10",
+      "label": "control_conditioned_policy_selection",
+      "sourceOps": ["O03", "O06", "O09", "O10"],
+      "targetOps": ["O11"],
+      "sourceOutput": "belief_context_goal_and_control_vector",
+      "targetInput": "candidate_intervention_set",
+      "candidateCarrier": "prefrontal_basal_ganglia_hippocampal_premotor_and_cerebellar_loops",
+      "candidateLaw": "bounded_policy_inference_or_action_selection_with_exploration_and_stopping",
+      "observableTrace": "choice_reaction_time_exploration_stopping_and_switch_distribution",
+      "competingBridge": "stimulus_value_directly_triggers_action_without_policy_selection",
+      "failureCondition": "policy_latent_state_adds_no_held_out_prediction_beyond_stimulus_response_value",
+      "grade": "J2"
+    },
+    {
+      "id": "MM-11",
+      "label": "policy_to_actuation",
+      "sourceOps": ["O11"],
+      "targetOps": ["O12"],
+      "sourceOutput": "policy_distribution",
+      "targetInput": "effector_specific_command_and_timing_requirements",
+      "candidateCarrier": "premotor_motor_basal_ganglia_cerebellar_brainstem_spinal_autonomic_and_language_loops",
+      "candidateLaw": "policy_sampling_parameterization_and_effector_compilation",
+      "observableTrace": "preparation_EMG_kinematics_speech_gaze_and_visceral_response",
+      "competingBridge": "reported_intention_is_the_motor_command",
+      "failureCondition": "preparation_selection_and_execution_cannot_be_dissociated_in_existing_evidence",
+      "grade": "J3"
+    },
+    {
+      "id": "MM-12",
+      "label": "consequence_alignment_and_credit",
+      "sourceOps": ["O02", "O03", "O11", "O12"],
+      "targetOps": ["O13"],
+      "sourceOutput": "observed_evidence_predicted_state_policy_and_efference",
+      "targetInput": "expected_and_observed_consequences_with_candidate_causes",
+      "candidateCarrier": "cerebellar_sensory_striatal_and_medial_frontal_comparator_loops",
+      "candidateLaw": "prediction_error_progress_estimation_and_temporal_structural_credit_assignment",
+      "observableTrace": "sensory_attenuation_error_signal_reward_prediction_error_and_post_error_adjustment",
+      "competingBridge": "all_error_signals_are_undifferentiated_surprise",
+      "failureCondition": "error_sign_and_credit_do_not_track_action_prediction_or_goal_progress",
+      "grade": "J3"
+    },
+    {
+      "id": "MM-13",
+      "label": "error_and_credit_to_online_update",
+      "sourceOps": ["O13"],
+      "targetOps": ["O14"],
+      "sourceOutput": "error_progress_credit_signal",
+      "targetInput": "eligible_model_value_and_policy_parameters",
+      "candidateCarrier": "dopaminergic_cholinergic_hippocampal_striatal_cerebellar_and_cortical_plasticity",
+      "candidateLaw": "credit_weighted_parameter_update_with_context_dependent_learning_rate",
+      "observableTrace": "trialwise_update_reversal_savings_and_near_transfer",
+      "competingBridge": "behavioural_change_is_fatigue_priming_or_unretained_state_change",
+      "failureCondition": "change_does_not_persist_or_generalize_as_predicted_by_the_updated_parameter",
+      "grade": "J3"
+    },
+    {
+      "id": "MM-14",
+      "label": "online_change_to_offline_consolidation",
+      "sourceOps": ["O14"],
+      "targetOps": ["O15"],
+      "sourceOutput": "updated_online_parameters_and_recent_traces",
+      "targetInput": "traces_selected_for_stabilization_reorganization_or_weakening",
+      "candidateCarrier": "hippocampal_replay_slow_oscillation_spindle_ripple_coupling_and_synaptic_remodelling",
+      "candidateLaw": "salience_and_structure_conditioned_replay_integration_and_downselection",
+      "observableTrace": "next_day_retention_transfer_interference_and_sleep_stage_coupling",
+      "competingBridge": "later_performance_is_only_decay_or_continued_online_rehearsal",
+      "failureCondition": "offline_state_and_reactivation_do_not_predict_change_beyond_elapsed_time",
+      "grade": "J2"
+    },
+    {
+      "id": "MM-15",
+      "label": "retained_structure_to_cued_reconstruction",
+      "sourceOps": ["O15", "O02"],
+      "targetOps": ["O03"],
+      "sourceOutput": "consolidated_parameters_and_present_cue",
+      "targetInput": "prior_and_likelihood_structure_for_current_estimation",
+      "candidateCarrier": "hippocampal_pattern_completion_neocortical_semantic_structure_and_context_gating",
+      "candidateLaw": "cue_conditioned_reconstruction_rather_than_literal_trace_playback",
+      "observableTrace": "context_dependent_recall_generalization_reconsolidation_and_systematic_distortion",
+      "competingBridge": "memory_is_literal_location_stable_replay",
+      "failureCondition": "reconstruction_model_does_not_outpredict_storage_playback_on_context_shift",
+      "grade": "J2"
+    }
+  ],
+  "crossCuttingMiddles": [
+    {
+      "id": "MM-X01",
+      "label": "recognition_to_enactment",
+      "sourceOps": ["O03", "O13"],
+      "targetOps": ["O10", "O11", "O12"],
+      "question": "why_an_accurately_represented_correction_sometimes_lacks_causal_access_to_control_policy_or_action"
+    },
+    {
+      "id": "MM-X02",
+      "label": "selection_access_and_phenomenality",
+      "sourceOps": ["O04", "O05"],
+      "targetOps": [],
+      "question": "which_joins_are_computationally_identifiable_and_where_phenomenal_status_remains_underdetermined"
+    },
+    {
+      "id": "MM-X03",
+      "label": "intention_outcome_and_agency",
+      "sourceOps": ["O11", "O12", "O13"],
+      "targetOps": ["O03"],
+      "question": "how_causal_evidence_becomes_self_attribution_rather_than_merely_successful_control"
+    },
+    {
+      "id": "MM-X04",
+      "label": "broad_narrow_switching",
+      "sourceOps": ["O03", "O07", "O10"],
+      "targetOps": ["O04"],
+      "question": "how_scope_precision_commitment_and_interrupt_threshold_change_together_without_hemisphere_reification"
+    }
+  ],
+  "relationshipAtlas": "corpus/programmes/dynatology/brain_relationship_atlas_v1.json",
+  "nextAction": "rank_middles_by_evidence_gap_corpus_relevance_and_reusability_then_attempt_transfer_law_reconstruction_from_existing_sources_only",
+  "sourceRefs": [
+    "corpus/programmes/dynatology/brain_function_atlas_v2.json",
+    "corpus/programmes/dynatology/mystery_atlas_22_attention_will_and_conscious_access_brain_atlas.md",
+    "corpus/programmes/orientation/orientation_architecture.md"
+  ]
+}

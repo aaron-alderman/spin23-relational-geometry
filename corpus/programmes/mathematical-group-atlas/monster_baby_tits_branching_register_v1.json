@@ -1,0 +1,132 @@
+{
+  "schema": "monster-baby-tits-branching-register/1",
+  "date": "2026-10-28",
+  "authority": "deterministic_branching_plan_known_decompositions_and_recovered_character_table_fusion_chain_not_yet_executed_branching_output",
+  "literatureRecovery": {
+    "status": "required_tables_and_principal_fusions_available",
+    "review": "monster_baby_tits_literature_review_v1.md",
+    "availableTableIdentifiers": ["M", "2.B", "B", "(GL(2,3)x2F4(2)').2", "S4x2F4(2)'.2", "2F4(2)'.2", "2F4(2)'"],
+    "storedFusionEdges": [
+      ["2F4(2)'", "2F4(2)'.2"],
+      ["S4x2F4(2)'.2", "B"],
+      ["(GL(2,3)x2F4(2)').2", "S4x2F4(2)'.2"],
+      ["(GL(2,3)x2F4(2)').2", "2.B"],
+      ["2.B", "M"]
+    ],
+    "provenance": ["SRC-CTBLLIB-B", "SRC-CTBLLIB-BM16", "SRC-CTBLLIB-2B", "SRC-CTBLLIB-BM16-LIFT", "SRC-CTBLLIB-TITS", "SRC-BREUER-MAGAARD-WILSON-B", "SRC-BREUER-MAGAARD-WILSON-M"],
+    "boundary": "the_remaining_work_is_to_execute_and_record_restrictions_and_to_recover_or_construct_the_factor_inclusion_into_the_lifted_table_not_to_solve_a_new_character_table_problem"
+  },
+  "knownDecompositions": [
+    {
+      "id": "branching:MonsterGriess-to-2B",
+      "parentRepresentation": "obj:rep:MonsterGriess196884",
+      "actingGroupOccurrence": "occ:2B:M-2A-centralizer",
+      "status": "established",
+      "summands": [
+        {"representation":"obj:rep:2BTrivial1","dimension":"1","multiplicity":"2","central2AAction":"+1"},
+        {"representation":"obj:rep:2B4371Plus","dimension":"4371","multiplicity":"1","central2AAction":"+1"},
+        {"representation":"obj:rep:2B96255Plus","dimension":"96255","multiplicity":"1","central2AAction":"+1"},
+        {"representation":"obj:rep:2B96256Minus","dimension":"96256","multiplicity":"1","central2AAction":"-1"}
+      ],
+      "dimensionCheck":"196884",
+      "provenance":["SRC-LAM-YAMADA-MCKAY-E7"],
+      "caveats":["only_positive_central_action_constituents_descend_to_ordinary_B_representations"]
+    },
+    {
+      "id": "branching:BabyMonsterVOA-weight2",
+      "parentRepresentation": "obj:rep:BabyMonsterGriess96256",
+      "actingGroupOccurrence": "occ:B:2B-effective-quotient",
+      "status": "established",
+      "summands": [
+        {"label":"trivial","dimension":"1","multiplicity":"1"},
+        {"label":"B_irreducible_96255","dimension":"96255","multiplicity":"1"}
+      ],
+      "dimensionCheck":"96256",
+      "provenance":["SRC-LAM-YAMADA-MCKAY-E7"],
+      "caveats":["the_weight_two_space_is_not_the_negative_96256_dimensional_2B_constituent"]
+    }
+  ],
+  "openComputations": [
+    {
+      "id": "branching-open:B96256-to-selected-Tits",
+      "parentRepresentation": "obj:rep:BabyMonsterGriess96256",
+      "sourceOccurrence": "occ:B:2B-effective-quotient",
+      "targetOccurrence": "occ:Tits:B-local-derived",
+      "status": "ready_library_lookup",
+      "requiredInputs": [
+        "ordinary_character_table_of_B",
+        "ordinary_character_table_of_S4_times_T_colon_2",
+        "ordinary_character_table_of_T_colon_2",
+        "ordinary_character_table_of_T",
+        "stored_class_fusion_S4_times_T_colon_2_to_B",
+        "stored_index_two_class_fusion_T_to_T_colon_2"
+      ],
+      "algorithm": [
+        "restrict_the_B_character_1_plus_96255_along_the_verified_maximal_subgroup_fusion",
+        "restrict_to_the_T_colon_2_factor_using_the_selected_product_coordinate",
+        "restrict_to_the_derived_Tits_subgroup",
+        "take_inner_products_with_Tits_irreducible_characters",
+        "require_nonnegative_integral_multiplicities_and_exact_dimension_sum"
+      ],
+      "requiredOutputs": ["irreducible_character_ids","multiplicities","fixed_space_dimension","class_fusion_receipt"]
+    },
+    {
+      "id": "branching-open:M196884-to-compatible-Tits",
+      "parentRepresentation": "obj:rep:MonsterGriess196884",
+      "sourceOccurrence": "occ:M:moonshine-ambient",
+      "targetOccurrence": "occ:Tits:M-compatible-lift",
+      "status": "ready_library_lookup_with_factor_inclusion_recovery",
+      "requiredInputs": [
+        "ordinary_character_tables_of_M_2B_the_lifted_local_subgroup_and_T",
+        "stored_class_fusions_2B_to_M_and_lifted_local_subgroup_to_2B",
+        "verified_inclusion_of_the_normal_T_factor_into_the_lifted_local_table",
+        "the_established_2B_summand_characters_not_only_their_dimensions"
+      ],
+      "algorithm": [
+        "restrict_each_2B_constituent_to_the_selected_C2_times_T_preimage",
+        "project_to_the_unique_Tits_complement_occurrence",
+        "decompose_by_character_inner_products",
+        "retain_the_central_2A_eigenvalue_as_separate_metadata",
+        "require_nonnegative_integral_multiplicities_and_exact_dimension_sum"
+      ],
+      "requiredOutputs": ["irreducible_character_ids","multiplicities_by_2B_parent","fixed_space_dimension","class_fusion_receipt"]
+    },
+    {
+      "id": "branching-open:compare-compatible-Tits-sectors",
+      "parentComputations": ["branching-open:B96256-to-selected-Tits","branching-open:M196884-to-compatible-Tits"],
+      "status": "waiting_on_parent_computations",
+      "algorithm": [
+        "compare_only_constituents_transported_by_the_selected_2B_to_B_quotient_and_unique_Tits_complement",
+        "separate_equal_abstract_Tits_characters_from_equal_occurrence_level_actions",
+        "report_matches_residuals_and_unmatched_central_sign_sectors"
+      ],
+      "requiredOutputs": ["matched_constituents","residual_constituents","occurrence_compatibility_assessment"]
+    },
+    {
+      "id": "branching-open:resolve-Tits-local-S4-representations",
+      "sourceOccurrence": "occ:S4:B-Tits-local-factor",
+      "status": "ready_library_lookup",
+      "requiredInputs": ["verified_S4_factor_class_fusion_into_B_or_relevant_B_modules"],
+      "algorithm": [
+        "restrict_selected_B_modules_to_the_S4_factor",
+        "distinguish_the_two_faithful_three_dimensional_irreducibles_by_character_and_determinant",
+        "do_not_transport_the_result_to_the_order_23_centralizer_S4_without_a_separate_intertwiner"
+      ],
+      "requiredOutputs": ["S4_irrep_multiplicities","standard_3_vs_sign_twisted_3prime_labels","embedding_specific_receipt"]
+    }
+  ],
+  "deterministicExecutionContract": {
+    "llmRequired": false,
+    "preferredEngines": ["GAP_Character_Table_Library", "AtlasRep", "Magma_character_tables"],
+      "localAvailabilityAtRecordTime": {"GAP":false,"Sage":false,"Magma":false,"CTblLibWebCatalogue":true},
+    "admissionRules": [
+      "every_character_table_has_a_source_identifier_and_checksum",
+      "every_class_fusion_is_unique_or_its_selected_choice_is_declared",
+      "all_multiplicities_are_nonnegative_integers",
+      "constituent_dimensions_sum_to_the_parent_dimension",
+      "central_kernel_eigenvalues_are_preserved",
+      "occurrence_ids_are_never_replaced_by_abstract_group_ids_in_results"
+    ],
+    "failureMode":"retain_open_computation_with_exact_missing_input_list"
+  }
+}

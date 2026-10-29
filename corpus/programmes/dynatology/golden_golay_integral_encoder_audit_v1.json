@@ -1,0 +1,113 @@
+{
+  "schema": "dynatology-golden-golay-integral-encoder-audit/1",
+  "date": "2026-10-28",
+  "status": "exact_two_to_eleven_integral_encoder_with_order_four_ternary_shadow_and_intrinsic_successor_no_go",
+  "sourceCarrier": {
+    "claim": "../../claims/0500-0599/597_a_shifted_logical_representative_restores_exact_monomial_symmetry_to_the_integral_golay_lift.md",
+    "coefficientVector": [2, 2, 2, 2, 2, 2, -4, -4, -1, -1, -1],
+    "encoderRows": [
+      [1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0],
+      [1, 0, -3, -3, 0, 1, -1, -1, -4, 4, 0]
+    ],
+    "signedMonomialInvolution": {
+      "zeroBasedPermutation": [5, 1, 3, 2, 4, 0, 7, 6, 9, 8, 10],
+      "sourceCoordinateSigns": [1, -1, 1, 1, -1, 1, 1, 1, -1, -1, -1],
+      "actionOnEncoderRows": "identity"
+    },
+    "exactProperties": {
+      "rank": 2,
+      "weightedLinearSum": [0, 0],
+      "weightedGram": [[0, 0], [0, 0]],
+      "interpretation": "the_plus_one_face_of_the_null_compensated_integral_Golay_lift"
+    }
+  },
+  "goldenDynamics": {
+    "matrixS": [[2, 1], [1, 1]],
+    "integerAction": "coefficient_update_followed_by_the_fixed_two_to_eleven_encoder",
+    "derivedFromSurvivingC2": false,
+    "reason": "the_surviving_involution_is_identity_on_the_two_face_whereas_S_has_infinite_order_over_Z",
+    "weightedAdmissibility": "every_integer_iterate_remains_in_the_same_totally_isotropic_face",
+    "uniformEuclideanPullback": [[6, -6], [-6, 54]],
+    "uniformEuclideanIsometry": false,
+    "metricBoundary": "the_weighted_P_form_vanishes_on_the_face_and_the_uniform_channel_metric_is_extra_structure"
+  },
+  "ternaryShadow": {
+    "encoderRowsMod3": [
+      [1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0],
+      [1, 0, 0, 0, 0, 1, 2, 2, 2, 1, 0]
+    ],
+    "parameters": [11, 2, 6],
+    "codewords": 9,
+    "nonzeroCodewords": 8,
+    "nonzeroWeightCensus": {"6": 8},
+    "identicallyZeroCoordinatesZeroBased": [1, 4, 10],
+    "activeCoordinates": 8,
+    "matrixSMod3": [[2, 1], [1, 1]],
+    "matrixSMod3Squared": [[2, 0], [0, 2]],
+    "matrixSMod3Order": 4,
+    "nonzeroCoefficientOrbits": [4, 4],
+    "consequence": "the_exact_golden_growth_survives_over_Z_but_its_ternary_shadow_is_a_quarter_turn_not_a_55_step_scan"
+  },
+  "basisGauge": {
+    "group": "GL(2,3)",
+    "groupOrder": 48,
+    "centralizerOfSMod3Order": 8,
+    "conjugacyClassSize": 6,
+    "interpretation": "the_two_dimensional_subspace_is_intrinsic_to_the_chosen_lift_but_no_basis_free_datum_selects_one_of_the_six_conjugate_quarter_turns",
+    "uniformEuclideanShortestFlag": {
+      "shortestPrimitiveCoefficientLines": [[1, 0]],
+      "shortestIndependentCoefficientLines": [[1, 1]],
+      "squaredLengths": [6, 48],
+      "boundary": "this_selects_unoriented_lattice_lines_not_the_golden_update_or_a_quantizer"
+    }
+  },
+  "coxeterCapSuccessorNoGo": {
+    "sourceClaims": [
+      "../../claims/0600-0699/603_the_golay_sewing_tensor_intrinsically_reconstructs_m11_but_not_spin5.md",
+      "../../claims/0600-0699/604_the_intrinsic_m11_flag_does_not_yield_a_spin23_metric_before_symmetry_is_gone.md",
+      "../../claims/0600-0699/605_the_golay_middle_action_defines_a_coxeter_cap_involution_and_code_cocode_duality.md"
+    ],
+    "secants": 55,
+    "fixedBaseSecantStabilizerOrbits": {
+      "sameSecant": 1,
+      "oneSharedCapPoint": 18,
+      "disjointCapPoints": 36
+    },
+    "proofBasis": "sharp_four_transitivity_of_M11_on_the_eleven_cap_points",
+    "invariantMetricClasses": 3,
+    "equivariantDeterministicSuccessors": ["identity"],
+    "result": "no_nontrivial_M11_equivariant_deterministic_successor_on_the_55_secants_exists",
+    "metricResult": "an_M11_invariant_secant_metric_can_rank_orbits_but_cannot_select_one_member_inside_an_18_or_36_element_orbit",
+    "fiveCarrierMetricBoundary": "the_intrinsic_five_dimensional_M11_module_has_no_nonzero_invariant_symmetric_bilinear_form"
+  },
+  "closure": {
+    "resolvedFormerGate": "gate:intrinsic-golay-support-ordering",
+    "resolution": "closed_by_equivariant_successor_no_go",
+    "establishes": [
+      "a_corpus_native_integral_two_to_eleven_encoder_exists",
+      "the_encoder_face_is_selected_by_the_surviving_signed_monomial_involution",
+      "its_ternary_reduction_is_an_equidistant_11_2_6_subcode",
+      "the_golden_matrix_has_order_four_on_that_ternary_subcode",
+      "full_M11_equivariance_allows_no_nonidentity_deterministic_secant_successor"
+    ],
+    "doesNotEstablish": [
+      "that_the_surviving_C2_generates_the_golden_dynamics",
+      "a_canonical_basis_or_orientation_on_the_two_face",
+      "a_55_step_golden_action_on_the_ternary_subcode",
+      "an_eleven_active_channel_physical_encoder",
+      "a_gain_noise_model_or_quantizer",
+      "a_Golay_origin_of_the_golden_angle"
+    ],
+    "externalEvidenceGate": {
+      "question": "What_independent_observable_selects_a_basis_orientation_scale_and_quantizer_for_the_two_face_or_breaks_M11_on_the_secants?",
+      "minimumPacket": [
+        "source_native_orientation_or_clock",
+        "measured_or_independently_derived_channel_couplings",
+        "gain_and_noise_scale",
+        "quantization_thresholds_and_tie_rule",
+        "held_out_observable_distinguishing_S_from_its_controls"
+      ],
+      "stopRule": "do_not_promote_the_integral_encoder_to_a_physical_or_intrinsic_golden_Golay_bridge_without_this_packet"
+    }
+  }
+}

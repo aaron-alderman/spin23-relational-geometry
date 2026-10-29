@@ -1,0 +1,109 @@
+{
+  "schema": "monster-baby-tits-corpus-crosswalk/1",
+  "date": "2026-10-28",
+  "authority": "corpus_integration_crosswalk_not_new_group_theory",
+  "upstream": {
+    "occurrenceRegister": "../mathematical-group-atlas/monster_baby_tits_occurrence_register_v1.json",
+    "branchingRegister": "../mathematical-group-atlas/monster_baby_tits_branching_register_v1.json",
+    "literatureReview": "../mathematical-group-atlas/monster_baby_tits_literature_review_v1.md"
+  },
+  "selectedPath": [
+    "occ:C2:M-2A-Ising",
+    "occ:2B:M-2A-centralizer",
+    "occ:B:2B-effective-quotient",
+    "occ:S4TitsAut:B-maximal-local",
+    "occ:Tits:B-local-derived",
+    "occ:C2xTits:2B-preimage",
+    "occ:Tits:2B-unique-complement",
+    "occ:Tits:M-compatible-lift"
+  ],
+  "corpusContacts": [
+    {
+      "id": "contact:ising-pair-atlas",
+      "path": "../frontier/wave-7/frontier_wave7_117_monster_ising_pair_affine_e8_operator_atlas.md",
+      "connection": "the_selected_Ising_axis_supplies_the_Monster_2A_occurrence_whose_centralizer_starts_the_restriction_path",
+      "boundary": "the_Tits_locality_does_not_supply_or_identify_the_affine_E8_pair_atlas"
+    },
+    {
+      "id": "contact:griess-jordan",
+      "path": "../frontier/wave-7/frontier_wave7_116_monster_griess_jordan_corner_to_spin23.md",
+      "connection": "both_probe_the_weight_two_Monster_Griess_space_but_one_selects_a_Jordan_corner_and_the_other_restricts_group_representations",
+      "boundary": "a_Tits_fixed_space_is_not_a_dynamically_selected_Jordan_corner"
+    },
+    {
+      "id": "contact:monster-fermionization",
+      "path": "../lattice-subroutine-gravity/monster-fermionization-bridge.md",
+      "connection": "both_use_the_selected_Monster_2A_and_Baby_Monster_commutant_split",
+      "boundary": "the_Tits_outer_C2_and_lift_centres_are_not_fermion_parity_without_an_intertwiner"
+    },
+    {
+      "id": "contact:moonshine-program-lattice",
+      "path": "README.md",
+      "connection": "the_restriction_receipt_adds_an_occurrence_sensitive_character_probe_to_the_existing_Moonshine_programme",
+      "boundary": "Tits_has_no_order_23_rail_and_does_not_replace_the_joined_bridge"
+    },
+    {
+      "id": "contact:current-synthesis",
+      "path": "../../syntheses/the_admissibility_frontier_current_synthesis.md",
+      "connection": "the_seam_links_the_existing_Ising_Griess_and_fermionization_results_by_a_deterministic_local_spectral_probe",
+      "boundary": "representation_transport_is_not_physical_selection_or_spacetime_promotion"
+    }
+  ],
+  "distinctions": [
+    {
+      "id": "distinction:outer-vs-2A",
+      "left": "occ:C2:Tits-outer",
+      "right": "occ:C2:M-2A-Ising",
+      "status": "must_remain_distinct"
+    },
+    {
+      "id": "distinction:B-quotient-vs-M-subgroup",
+      "left": "occ:B:2B-effective-quotient",
+      "right": "occ:2B:M-2A-centralizer",
+      "status": "quotient_map_must_not_be_reversed"
+    },
+    {
+      "id": "distinction:S4-occurrences",
+      "left": "occ:S4:B-Tits-local-factor",
+      "right": "occ:S4:M-order23-centralizer-factor",
+      "status": "same_abstract_group_different_occurrences"
+    },
+    {
+      "id": "distinction:weight2-96256-sectors",
+      "left": "obj:rep:BabyMonsterGriess96256",
+      "right": "obj:rep:2B96256Minus",
+      "status": "same_dimension_different_representations_and_central_action"
+    }
+  ],
+  "measurements": [
+    {
+      "id": "measurement:B-weight2-to-Tits",
+      "branchingTask": "branching-open:B96256-to-selected-Tits",
+      "outputs": ["irreducible_multiplicities", "fixed_space_dimension", "fusion_receipt"]
+    },
+    {
+      "id": "measurement:M-Griess-to-Tits",
+      "branchingTask": "branching-open:M196884-to-compatible-Tits",
+      "outputs": ["multiplicities_by_2B_parent", "central_2A_eigenvalue", "fixed_space_dimension", "fusion_receipt"]
+    },
+    {
+      "id": "measurement:sector-comparison",
+      "branchingTask": "branching-open:compare-compatible-Tits-sectors",
+      "outputs": ["matched_constituents", "residual_constituents", "occurrence_compatibility_assessment"]
+    }
+  ],
+  "promotionBoundary": {
+    "establishes": [
+      "an_occurrence_sensitive_restriction_path",
+      "a_deterministic_weight_two_spectral_probe",
+      "a_negative_control_for_involution_and_exceptional_object_conflation"
+    ],
+    "doesNotEstablish": [
+      "an_E8_current_or_gauge_symmetry",
+      "a_Tits_order_23_rail",
+      "an_identification_of_any_outer_or_central_C2_with_fermion_parity",
+      "a_physical_carrier_or_dynamical_selector",
+      "the_remaining_Monster_Tits_conjugacy_class_identification"
+    ]
+  }
+}

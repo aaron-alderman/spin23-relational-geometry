@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "admissibility-trifilar-virtual-emulator-config-v1",
+  "date": "2026-10-28",
+  "latitudeCosine": 0.75,
+  "primaryAngularFrequencyPerSecond": 100,
+  "busDetuningPerSecond": -40,
+  "couplingNormPerSecond": 8,
+  "gapToLoopRateRatios": [4, 8, 16, 32],
+  "maximumIntegratorStepSeconds": 0.0025,
+  "scenarios": {
+    "ideal": {
+      "primaryDetuningPerSecond": [0, 0, 0],
+      "directPrimaryCouplingPerSecond": [[0, 0, 0], [0, 0, 0], [0, 0, 0]],
+      "amplitudeDampingPerSecond": [0, 0, 0, 0]
+    },
+    "metered": {
+      "primaryDetuningPerSecond": [0.00005, -0.00004, 0.00001],
+      "directPrimaryCouplingPerSecond": [[0, 0.00002, -0.00001], [0.00002, 0, 0.000015], [-0.00001, 0.000015, 0]],
+      "amplitudeDampingPerSecond": [0.00045, 0.0005, 0.00055, 0.002]
+    }
+  },
+  "controls": [
+    { "name": "forward", "direction": 1 },
+    { "name": "reverse", "direction": -1 },
+    { "name": "fixed", "direction": 0 }
+  ],
+  "writeTarget": "evidence/data/admissibility-trifilar-virtual-emulator-result-v1.json"
+}

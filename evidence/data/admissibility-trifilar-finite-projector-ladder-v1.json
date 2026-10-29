@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "admissibility-trifilar-finite-projector-ladder-v1",
+  "date": "2026-10-28",
+  "latitudeCosine": 0.75,
+  "targetAngleDegrees": -90,
+  "orientationConvention": "increasing phi with frame columns e_phi and e_theta",
+  "samples": [
+    { "steps": 4, "angleDegrees": -68.70695012345296, "singularValues": [0.4181273269098981, 0.23943164819896057] },
+    { "steps": 8, "angleDegrees": -85.47742080586076, "singularValues": [0.6521467126503033, 0.5119476981726252] },
+    { "steps": 16, "angleDegrees": -88.91132200302091, "singularValues": [0.8082465626165968, 0.7196216004747578] },
+    { "steps": 32, "angleDegrees": -89.7303508393663, "singularValues": [0.899121301077289, 0.8489068480715226] },
+    { "steps": 64, "angleDegrees": -89.93274369022153, "singularValues": [0.9482327396914053, 0.9214428045214963] },
+    { "steps": 128, "angleDegrees": -89.98319564748145, "singularValues": [0.973774054191472, 0.9599287143804359] }
+  ],
+  "designThresholds": {
+    "subDegreeAngleMinimumStepsInSampledLadder": 32,
+    "bothSingularValuesAbove095MinimumStepsInSampledLadder": 128
+  },
+  "interpretiveBoundary": {
+    "fourSettingsPurpose": "matrix and projector calibration",
+    "projectionProductMechanism": "explicit filtering / Zeno-type transport with finite-step contraction",
+    "adiabaticLCMechanism": "gapped coupled-mode dynamics with separately predicted phase and loss",
+    "equivalentMechanisms": false
+  },
+  "requiredRecords": [
+    "full complex two-by-two return matrix",
+    "polar rotation angle",
+    "both return singular values",
+    "reflected, transmitted, dissipated and filtered power",
+    "forward and reverse order",
+    "reconstructed three-port projector sequence"
+  ]
+}

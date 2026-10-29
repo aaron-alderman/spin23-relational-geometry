@@ -34,6 +34,7 @@ The next route to new physics may begin not with higher energy but with greater 
 - [Read the canonical reading contract](../../corpus/READING_CONTRACT.md)
 - [Read the admissibility synthesis](../../corpus/syntheses/the_admissibility_frontier_current_synthesis.md)
 - [Browse the status and research-move index](reading-key.md)
+- [Browse candidate research letters](https://aaron-alderman.github.io/spin23-relational-geometry/edition-3/letters/)
 - [Open the live paged HTML edition](https://aaron-alderman.github.io/spin23-relational-geometry/)
 - [Open the interactive concept atlas](../../docs/concept-map/index.html)
 - [Follow letters and conversations](../../corpus/correspondence/README.md)
@@ -41,4 +42,4 @@ The next route to new physics may begin not with higher energy but with greater 
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)
 
-Citation-set digest: `7baf9b02361c538578a0554d10fca42cef50c50c00052f55aafe19ca0890814a`
+Citation-set digest: `61bc280a088a82b0284cf82b5ccc812b2aa497c599e1f90ae4860afd334e1e64`

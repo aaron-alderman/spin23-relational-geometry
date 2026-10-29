@@ -189,6 +189,14 @@ Only the fourth is minimally required by the effective theory. The construction 
 
 The two fixed planes naturally resemble the two faces of the relational carrier, but identifying them with the Jordan/stress faces requires a typed source map.
 
+This orbifold must not be conflated with Randall--Sundrum or Karch--Randall
+warped gravity. Here the reflection parity is introduced to project a
+topological BF zero-mode sector. In the warped models the five-dimensional
+metric, brane stress, junction conditions and graviton spectrum determine the
+effective gravitational response. The [warped-face comparator](../1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md)
+is therefore a test of what a literal extra-dimensional completion would add,
+not evidence that this folding construction already contains one.
+
 ## 6. Relation to the rank-split family symmetry
 
 If the compact \(U(1)_X\) is Higgsed by \(S_{q=3}\), its infrared gauge sector is four-dimensional level-three BF. The orbifold parity then selects the interface zero modes without changing the level.

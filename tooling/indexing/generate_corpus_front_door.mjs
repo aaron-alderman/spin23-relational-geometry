@@ -57,6 +57,7 @@ function classify(path) {
     [/^docs\//u, ["generated-publication", "generated deployable reading surfaces"]],
     [/^legal\//u, ["legal", "legal notices and policy"]],
     [/^\.github\//u, ["automation", "repository workflow automation"]],
+    [/^(?:inspect_capability_rule|supervisor_query)\.py$/u, ["tooling", "tracked root-level corpus inspection utilities"]],
     [/^(?:README\.md|AGENTS\.md|llms\.txt|LICENSE\.md|THIRD_PARTY_NOTICES\.md|CHRISTIAN_STEWARDSHIP_COVENANT\.md|CONTRIBUTING\.md|\.gitignore|\.gitattributes)$/u, ["repository-front-door", "root navigation, machine retrieval, agent guidance, stewardship, contribution, legal, and text-identity surfaces"]],
   ];
   for (const [pattern, result] of rules) if (pattern.test(path)) return { zone: result[0], reason: result[1] };

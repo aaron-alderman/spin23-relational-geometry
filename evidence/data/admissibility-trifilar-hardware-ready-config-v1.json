@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "admissibility-trifilar-hardware-ready-config-v1",
+  "date": "2026-10-28",
+  "sourceResult": "evidence/data/admissibility-trifilar-virtual-emulator-result-v1.json",
+  "selectedRun": { "scenario": "metered", "control": "forward", "gapToLoopRate": 8 },
+  "acquisition": {
+    "sampleRateHertz": 48000,
+    "carrierHertz": 1000,
+    "blockSizeSamples": 240,
+    "inputChannels": 4,
+    "outputChannels": 4,
+    "trials": 512,
+    "calibrationSamplesPerChannel": 256,
+    "rawRowsPerStressCase": 32,
+    "seed": 1414678866
+  },
+  "channels": [
+    { "gain": 1.012, "phaseDegrees": 0.4, "latencySamples": 0.12 },
+    { "gain": 0.993, "phaseDegrees": -0.3, "latencySamples": -0.08 },
+    { "gain": 1.006, "phaseDegrees": 0.2, "latencySamples": 0.18 },
+    { "gain": 0.989, "phaseDegrees": -0.5, "latencySamples": -0.15 }
+  ],
+  "baseline": {
+    "adcBits": 20,
+    "fullScale": 1.2,
+    "noiseRms": 0.00002,
+    "clockJitterSecondsRms": 2e-8,
+    "saturationAmplitude": 1.1,
+    "slewLimitAmplitudePerSecond": 10000,
+    "calibrated": true,
+    "latencyDriftSamples": [0, 0, 0, 0]
+  },
+  "stressCases": [
+    { "name": "baseline" },
+    { "name": "uncalibrated", "calibrated": false },
+    { "name": "ten_bit", "adcBits": 10 },
+    { "name": "high_noise", "noiseRms": 0.001 },
+    { "name": "latency_drift", "latencyDriftSamples": [0.2, -0.15, 0.1, -0.25] },
+    { "name": "clipping_slew", "saturationAmplitude": 0.5, "slewLimitAmplitudePerSecond": 2200 }
+  ],
+  "outputs": {
+    "result": "evidence/data/admissibility-trifilar-hardware-ready-result-v1.json",
+    "rawCsv": "evidence/data/admissibility-trifilar-hardware-ready-synthetic-raw-v1.csv",
+    "figure": "evidence/figures/admissibility-trifilar-hardware-ready-stress-v1.svg"
+  }
+}

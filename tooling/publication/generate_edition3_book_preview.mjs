@@ -20,9 +20,10 @@ const siteDetailsRoot = join(siteRoot, "details");
 const siteReadingKeyRoot = join(siteRoot, "reading-key");
 const siteArticlesRoot = join(siteRoot, "articles");
 const siteCorrespondenceRoot = join(siteRoot, "correspondence");
-const siteLettersRoot = join(siteCorrespondenceRoot, "letters");
+const siteCorrespondenceLettersRoot = join(siteCorrespondenceRoot, "letters");
 const siteConversationsRoot = join(siteCorrespondenceRoot, "conversations");
 const siteOphConversationRoot = join(siteConversationsRoot, "oph-admissibility-frontier");
+const siteLettersRoot = join(siteRoot, "letters");
 const assetsRoot = join(siteRoot, "assets");
 const katexSourceRoot = join(root, "tooling", "publication", "vendor", "katex");
 const katexSiteRoot = join(siteRoot, "vendor", "katex");
@@ -120,6 +121,15 @@ const sourceArticles = [
   },
 ];
 const standaloneArticles = [signatureArticle, ...sourceArticles];
+const letterManifestPath = join(root, "corpus", "programmes", "open-letters", "letter_manifest.json");
+if (!existsSync(letterManifestPath)) throw new Error("Missing canonical open-letter manifest");
+const letterManifest = JSON.parse(readFileSync(letterManifestPath, "utf8"));
+if (letterManifest.schema !== "admissibility-frontier-open-letters/v1") throw new Error("Unsupported open-letter manifest schema");
+const letters = letterManifest.letters;
+for (const letter of letters) {
+  if (!letter.slug || !letter.recipient || !letter.status || !letter.source || !letter.question) throw new Error("Incomplete open-letter manifest entry");
+  if (!existsSync(join(root, letter.source))) throw new Error(`Missing open-letter source: ${letter.source}`);
+}
 const esc = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 const sha256 = value => createHash("sha256").update(value).digest("hex");
 const posix = value => value.split(sep).join("/");
@@ -2097,6 +2107,7 @@ const evidenceCss = `.evidence-link{border-color:var(--gold);border-left-color:v
 const directoryCss = `.directory-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}.directory-card{display:flex;min-width:0;min-height:230px;flex-direction:column;align-items:flex-start}.directory-card h3{margin:.35rem 0 .55rem;font-size:clamp(1.35rem,2.2vw,1.7rem)}.directory-path{max-width:100%;margin:.15rem 0 1.2rem;color:var(--muted)}.directory-path code{font:700 .74rem/1.4 var(--mono);overflow-wrap:anywhere}.directory-open{margin-top:auto;font:800 .7rem/1.3 var(--sans);letter-spacing:.055em;text-transform:uppercase}.directory-canonical{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.7rem 1rem;align-items:baseline;margin:1.25rem 0 2rem;color:var(--muted);font:700 .72rem/1.45 var(--sans);letter-spacing:.045em;text-transform:uppercase}.directory-canonical code{min-width:0;color:var(--ink);font:.82rem/1.45 var(--mono);letter-spacing:0;text-transform:none;overflow-wrap:anywhere}@media(max-width:650px){.directory-grid{grid-template-columns:1fr}.directory-card{min-height:190px}.directory-canonical{grid-template-columns:1fr;gap:.25rem}.library-breadcrumb{gap:.35rem;font-size:.67rem}}`;
 const articleCss = `.article-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}.article-card{display:flex;flex-direction:column;min-height:300px;padding:25px;border:1px solid var(--line);border-top:6px solid var(--teal);background:var(--panel)}.article-card h2{font-size:clamp(1.7rem,3vw,2.35rem)}.article-card .lede{font-size:1.05rem}.article-actions,.share-bar{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:auto;font:800 .68rem/1.3 var(--sans);letter-spacing:.055em;text-transform:uppercase}.article-actions a,.share-bar a{display:inline-block;padding:.55rem .72rem;border:1px solid var(--line);background:var(--paper);text-decoration:none}.article-actions a:first-child,.share-bar a:first-of-type{border-color:var(--teal);background:var(--teal);color:white}.share-bar{margin:24px 0 0;padding-top:18px;border-top:1px solid var(--line)}.share-bar strong{margin-right:4px;color:var(--muted)}.article-note{font:.82rem/1.5 var(--sans);color:var(--muted)}.task-list{list-style:none;padding-left:0}.task-list-item input{margin-right:.55rem;accent-color:var(--teal)}@media(max-width:650px){.article-card{min-height:0}.share-bar{align-items:flex-start;flex-direction:column}}`;
 const correspondenceCss = `.mast nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.2rem .5rem}@media(max-width:650px){.mast nav{justify-content:flex-start}}`;
+const letterCss = `.letter-card{min-height:260px;border-top-color:var(--gold)}.letter-card .article-actions{margin-top:1.25rem}.letter-hero{padding-bottom:36px}.letter-hero h1{max-width:920px}.letter-body{max-width:780px;padding:36px 0}.letter-body>p:first-child{font-size:1.1rem}.letter-body h2{margin-top:2.4em;font-size:1.35rem}.letter-body ul{font:1rem/1.55 var(--sans)}.letter-source-note{margin:0;color:var(--muted);font:.78rem/1.5 var(--sans)}`;
 const mastHtml = (prefix = "", current = "") => {
   const item = (id, href, label) => `<a href="${href}"${current === id ? ' aria-current="page"' : ""}>${label}</a>`;
   return `<header class="mast"><a href="${prefix}index.html">Admissibility frontier · Edition 3</a><nav>${item("articles", `${prefix}articles/index.html`, "Articles")} · ${item("findings", `${prefix}08-result-ledger.html`, "Findings")} · ${item("frontier", `${prefix}09-research-frontier.html`, "Frontier")} · ${item("atlas", `${prefix}../concept-map/index.html`, "Atlas")} · ${item("correspondence", `${prefix}correspondence/index.html`, "Correspondence")} · ${item("reading-key", `${prefix}reading-key.html`, "Reading key")}</nav></header>`;
@@ -2217,10 +2228,11 @@ const correspondenceIndexHtml = () => {
   return htmlDoc("Correspondence", body, "../", false, "correspondence/index.html", "Letters and conversations that changed The Admissibility Frontier without becoming evidence by agreement alone.");
 };
 
-const lettersIndexHtml = () => {
+const correspondenceLettersIndexHtml = () => {
   const programme = "../../library/corpus/programmes/open-letters/spin23_open_letter_answer_programme.html";
   const synthesis = "../../library/corpus/claims/1600-1699/1633_the_eight_open_letter_answers_reduce_to_four_executable_packets_without_closing_the_physical_lift.html";
-  const body = `${mastHtml("../../", "correspondence")}<header class="hero"><p class="kicker">Correspondence · dated and addressed</p><h1>Letters</h1><p class="lede">Letters preserve questions, invitations and replies at the point they were sent or received. Later corrections may be linked, but the original communication is not silently rewritten.</p><aside class="boundary"><strong>Attribution boundary.</strong> The existing answer packet contains standalone AI answers, not replies from the named addressees and not peer review.</aside></header><section><div class="article-grid">${correspondenceCard(programme, "Open-letter programme", "Eight questions, four executable packets", "The existing Spin(2,3) letters and answer assessment are now reachable through a public correspondence route.", "Open programme")}${correspondenceCard(synthesis, "Integrated finding", "What the answers changed", "The eight answers sharpen four work packets without closing the physical lift.", "Inspect finding")}</div></section><nav class="page-turn"><a href="../index.html">← Correspondence</a><a href="../conversations/index.html">Conversations →</a></nav>`;
+  const currentLetters = letters.map(letter => correspondenceCard(`../../letters/${letter.slug}.html`, letterStatusLabel(letter.status), `Letter to ${letter.recipient}`, letter.question, "Read letter")).join("");
+  const body = `${mastHtml("../../", "correspondence")}<header class="hero"><p class="kicker">Correspondence · dated and addressed</p><h1>Letters</h1><p class="lede">Letters preserve questions, invitations and replies at the point they were sent or received. Later corrections may be linked, but the original communication is not silently rewritten.</p><aside class="boundary"><strong>Attribution boundary.</strong> Drafts are not sent correspondence. The existing answer packet contains standalone AI answers, not replies from the named addressees and not peer review.</aside></header><section><p class="kicker">Current individual letters</p><div class="article-grid">${currentLetters}</div></section><section><p class="kicker">Earlier programme</p><div class="article-grid">${correspondenceCard(programme, "Open-letter programme", "Eight questions, four executable packets", "The existing Spin(2,3) letters and answer assessment are now reachable through a public correspondence route.", "Open programme")}${correspondenceCard(synthesis, "Integrated finding", "What the answers changed", "The eight answers sharpen four work packets without closing the physical lift.", "Inspect finding")}</div></section><nav class="page-turn"><a href="../index.html">← Correspondence</a><a href="../conversations/index.html">Conversations →</a></nav>`;
   return htmlDoc("Letters", body, "../../", false, "correspondence/letters/index.html", "Dated questions, invitations and replies connected to The Admissibility Frontier.");
 };
 
@@ -2274,6 +2286,29 @@ const ophConversationEntryHtml = (entry, index) => {
   const socialLinks = entry.socialLinks.map(([label, href]) => `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a>`).join("");
   const body = `${mastHtml("../../../", "correspondence")}<header class="hero"><p class="kicker">OPH and the Admissibility Frontier · page ${entry.page} of ${ophConversationEntries.length}</p><h1>${esc(entry.title)}</h1><p class="lede">${esc(entry.description)}</p><div class="share-bar"><strong>Public thread on X</strong>${socialLinks}</div><aside class="boundary"><strong>Conversation boundary.</strong> This is an attributed corpus entry, not a joint statement. Linked posts control the author's wording; later clarification does not rewrite earlier correspondence.</aside></header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, entry.source, output)}</article><p class="article-note">Canonical source: <a href="${sourceHref}"><code>${esc(entry.source)}</code></a></p><nav class="page-turn">${previousLink}${nextLink}</nav>`;
   return htmlDoc(entry.title, body, "../../../", false, `correspondence/conversations/oph-admissibility-frontier/${entry.output}`, entry.description, { type: "article" });
+};
+
+const letterStatusLabel = status => ({
+  draft: "Draft · not sent",
+  "ready-for-review": "Ready for review · not sent",
+  sent: "Sent",
+  "response-integrated": "Response integrated",
+}[status] || status);
+const letterCardHtml = letter => `<article class="article-card letter-card"><p class="kicker">${esc(letterStatusLabel(letter.status))}</p><h2><a href="${letter.slug}.html">${esc(letter.recipient)}</a></h2><p class="lede">${esc(letter.question)}</p><div class="article-actions"><a href="${letter.slug}.html">Read letter →</a></div></article>`;
+const lettersIndexHtml = () => {
+  const body = `${mastHtml("../", "correspondence")}<header class="hero letter-hero"><p class="kicker">Draft correspondence</p><h1>Letters</h1><p class="lede">Three unsent letters asking where a mature corpus connection holds—and where it fails.</p></header><section><div class="article-grid">${letters.map(letterCardHtml).join("")}</div></section><nav class="page-turn"><a href="../correspondence/index.html">← Correspondence</a><a href="../library/corpus/programmes/open-letters/index.html">Sources and status →</a></nav>`;
+  return htmlDoc("Letters", body, "../", false, "letters/index.html", "Candidate, evidence-linked research correspondence from The Admissibility Frontier.");
+};
+const letterHtml = letter => {
+  const markdown = readFileSync(join(root, letter.source), "utf8");
+  const bodyMarkdown = markdown
+    .replace(/^# [^\n]+\n+/u, "")
+    .replace(/^\*\*Status[^\n]*\n+/u, "")
+    .replace(/^\*\*Subject[^\n]*\n+/u, "");
+  const output = join(siteLettersRoot, `${letter.slug}.html`);
+  const sourceHref = githubBlobUrl(letter.source);
+  const body = `${mastHtml("../", "correspondence")}<header class="hero letter-hero"><p class="kicker">${esc(letterStatusLabel(letter.status))}</p><h1>Letter to ${esc(letter.recipient)}</h1></header><article class="source-document letter-body">${renderMarkdown(bodyMarkdown, letter.source, output)}</article><p class="letter-source-note">Generated from canonical Markdown. <a href="${esc(sourceHref)}">View source</a>.</p><nav class="page-turn"><a href="index.html">← All letters</a><a href="../library/index.html">Corpus library →</a></nav>`;
+  return htmlDoc(`Letter to ${letter.recipient}`, body, "../", false, `letters/${letter.slug}.html`, letter.question);
 };
 
 const directoryIndexHtml = directory => {
@@ -2382,6 +2417,8 @@ mkdirSync(siteDetailsRoot, { recursive: true });
 mkdirSync(siteReadingKeyRoot, { recursive: true });
 mkdirSync(siteArticlesRoot, { recursive: true });
 mkdirSync(siteLettersRoot, { recursive: true });
+mkdirSync(siteCorrespondenceRoot, { recursive: true });
+mkdirSync(siteCorrespondenceLettersRoot, { recursive: true });
 mkdirSync(siteConversationsRoot, { recursive: true });
 mkdirSync(siteOphConversationRoot, { recursive: true });
 mkdirSync(assetsRoot, { recursive: true });
@@ -2402,7 +2439,8 @@ if (!siteOnly) {
   writeFileSync(join(bookRoot, "README.md"), coverMd
     .replace("not its protagonist", "not the premise or centre of the programme")
     .replace("- [Open the interactive concept atlas](../../docs/concept-map/index.html)\n", "- [Open the interactive concept atlas](../../docs/concept-map/index.html)\n- [Follow letters and conversations](../../corpus/correspondence/README.md)\n")
-    .replace("[Read *Do Not Search the Monster. Build the Ladder.*](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md)", "[Join the Halloween Monster Hunt](https://aaron-alderman.github.io/halloween-monster-hunt/) or [read the full call to action](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md)"));
+    .replace("[Read *Do Not Search the Monster. Build the Ladder.*](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md)", "[Join the Halloween Monster Hunt](https://aaron-alderman.github.io/halloween-monster-hunt/) or [read the full call to action](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md)")
+    .replace("- [Open the live paged HTML edition]", "- [Browse candidate research letters](https://aaron-alderman.github.io/spin23-relational-geometry/edition-3/letters/)\n- [Open the live paged HTML edition]"));
   writeFileSync(join(bookRoot, "reading-key.md"), readingKeyMarkdown());
   Object.keys(taxonomy).forEach(key => writeFileSync(join(readingKeyRoot, `status-${key}.md`), readingKeyDetailMarkdown("taxonomy", key)));
   archetypes.forEach(item => writeFileSync(join(readingKeyRoot, `move-${item.key}.md`), readingKeyDetailMarkdown("archetype", item.key)));
@@ -2417,12 +2455,16 @@ if (!siteOnly) {
 
 const contentsHtml = chapters.map((chapter, index) => `<div class="contents-row"><span class="chapter-number">${String(index + 1).padStart(2, "0")}</span><span class="contents-copy"><a class="chapter-title" href="${chapter.slug}.html"><strong>${mathHtml(chapter.title)}</strong></a>${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug])}${archetypeBadgeHtml(chapterArchetype[chapter.slug])}</span><a class="read-link" href="${chapter.slug}.html">Read →</a></div>`).join("");
 const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section><p class="kicker">Call to action · distributed research</p><h2>Help build the ladder</h2><p class="lede">Take one carrier, theorem, computation, detector, negative control or experimental gate. Prove it, build it, reproduce it or kill it—then return a packet another contributor can continue.</p><p><a class="proof-link" href="articles/monster-distributed-search.html"><span><b>Do Not Search the Monster. Build the Ladder.</b><small>Seven parallel workstreams · serial proof obligations · immediate open bounties</small></span><i>Join →</i></a></p></section><section><p class="kicker">A lighter way in</p><h2>${standaloneArticles.length + articleChapters.length} short articles</h2><p class="lede">Shareable essays introduce typed translation, conversational contact, mathematical selection, the programme’s exact hinge, physical interfaces and strongest obstructions without detaching them from their evidence.</p><p><a class="proof-link" href="articles/index.html"><span><b>Browse the articles</b><small>Standalone social previews · direct X and Bluesky sharing · sources intact</small></span><i>Read →</i></a></p></section><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><section><p class="kicker">Beyond the volume</p><h2>Follow the research all the way down</h2><p class="lede">The complete corpus is compiled into a searchable library with explicit backlinks, neighbouring documents and visible routes from this Edition into deep programme waves.</p><p><a class="proof-link" href="library/index.html"><span><b>Open the complete corpus library</b><small>${librarySources.length.toLocaleString("en")} canonical Markdown documents · one generated journey</small></span><i>Explore →</i></a></p></section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
-writeFileSync(join(siteRoot, "book.css"), `${css}${proofCss}${contentsFixCss}${evidenceCss}${directoryCss}${articleCss}${correspondenceCss}`);
-writeFileSync(join(siteRoot, "index.html"), coverHtml.replace('href="articles/monster-distributed-search.html"', 'href="https://aaron-alderman.github.io/halloween-monster-hunt/"'));
+writeFileSync(join(siteRoot, "book.css"), `${css}${proofCss}${contentsFixCss}${evidenceCss}${directoryCss}${articleCss}${letterCss}${correspondenceCss}`);
+writeFileSync(join(siteRoot, "index.html"), coverHtml
+  .replace('href="articles/monster-distributed-search.html"', 'href="https://aaron-alderman.github.io/halloween-monster-hunt/"')
+  .replace('</section><nav class="page-turn"><span></span>', '<p><a href="letters/index.html">Read the three draft research letters →</a></p></section><nav class="page-turn"><span></span>'));
 writeFileSync(join(siteArticlesRoot, "index.html"), articlesIndexHtml());
 standaloneArticles.forEach(article => writeFileSync(join(siteArticlesRoot, `${article.slug}.html`), standaloneArticleHtml(article)));
-writeFileSync(join(siteCorrespondenceRoot, "index.html"), correspondenceIndexHtml());
 writeFileSync(join(siteLettersRoot, "index.html"), lettersIndexHtml());
+letters.forEach(letter => writeFileSync(join(siteLettersRoot, `${letter.slug}.html`), letterHtml(letter)));
+writeFileSync(join(siteCorrespondenceRoot, "index.html"), correspondenceIndexHtml());
+writeFileSync(join(siteCorrespondenceLettersRoot, "index.html"), correspondenceLettersIndexHtml());
 writeFileSync(join(siteConversationsRoot, "index.html"), conversationsIndexHtml());
 ophConversationEntries.forEach((entry, index) => writeFileSync(join(siteOphConversationRoot, entry.output), ophConversationEntryHtml(entry, index)));
 writeFileSync(join(siteRoot, "reading-key.html"), readingKeyHtml());

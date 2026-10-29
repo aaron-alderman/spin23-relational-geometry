@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "common-operator-control-inference-v1",
+  "date": "2026-10-28",
+  "status": "closed at linear-Gaussian software-design level; hardware validation open",
+  "operatorChain": [
+    "continuous_state_space",
+    "laplace_transfer",
+    "zero_order_hold",
+    "discrete_state_space",
+    "z_transfer",
+    "observability",
+    "kalman_innovation",
+    "pid_with_anti_windup",
+    "actuated_carrier"
+  ],
+  "equations": {
+    "continuous": "xdot=A*x+B*u+w; y=C*x+D*u+v",
+    "laplace": "H(s)=C*(sI-A)^(-1)*B+D under zero initial state",
+    "zoh": "F=exp(A*Delta); G=integral_0^Delta exp(A*tau)*B dtau",
+    "discrete": "x[k+1]=F*x[k]+G*u[k]+w[k]",
+    "z": "H(z)=C*(zI-F)^(-1)*G+D",
+    "innovation": "r[k]=y[k]-C*xhat_minus[k]",
+    "pid": "u_raw=Kp*e+Ki*xi-Kd*ydot; xi_dot=e+Kaw*(u_applied-u_raw)"
+  },
+  "executableWitnesses": [
+    "exact_scalar_zero_order_hold",
+    "discrete_state_space_equals_impulse_convolution",
+    "controllability_and_observability_rank",
+    "kalman_covariance_contraction",
+    "anti_windup_recovery",
+    "three_mode_science_channel_survives_nuisance_lock"
+  ],
+  "deliberateRefusals": [
+    "scalar_transfer_does_not_identify_unobservable_state",
+    "saturated_loop_is_not_one_fixed_linear_transfer",
+    "science_residual_must_not_be_controller_error"
+  ],
+  "lithiumNiobateAllocation": {
+    "carrier": "three complex modal amplitudes plus declared slow nuisance coordinates",
+    "selector": "pairwise coupling drives and closed-loop phase",
+    "detector": "phase-referenced multiport heterodyne quadratures",
+    "estimator": "real six-state linear Gaussian filter augmented by common detuning",
+    "controlError": "estimated common detuning only",
+    "fastActuator": "electro-optic frequency or phase drive",
+    "slowActuator": "heater or DC bias",
+    "heldOutScienceChannel": "orientation-odd coherent transfer under opposite loop phase",
+    "firewall": "held-out science channel is never an input to either controller during the trial"
+  },
+  "remainingFrontiers": [
+    "hardware identification of A,B,C,D,Q,R and actuator limits",
+    "independent slow-memory readout or designed excitation",
+    "device-data selection of nonlinear filter and delay-robust control",
+    "independent-device held-out closure"
+  ],
+  "authorityBoundary": "Software closure proves scoped operator identities and failures. It does not validate a lithium-niobate device model or promote a residual to new physics without frozen calibration and independent replication."
+}

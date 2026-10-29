@@ -70,6 +70,7 @@ complex.
 | Loss port and finite bath | exact pass/boundary | damping equals typed output power; a finite conservative bath returns transferred energy and cannot supply permanent Markovian loss |
 | Detector null budget | compiled eight-channel gate | every demonstrated conventional route has an exact control; new physics begins only at a held-out residual after all are bounded |
 | Primary-literature distance | bounded comparison | individual structures land in mature FEEC/DEC, port-Hamiltonian, passivity and differential-cohomology fields; the typed end-to-end audit is the programme-specific synthesis |
+| Graded Beltrami/impedance extension | bounded programme admitted | curl parity is repaired as a graded family; a shared operator/domain/defect must predict both gapped-eigenspace holonomy and passive impedance-pole motion without refitting |
 | Exhaustion ledger | finite arm complete | further toy matrices no longer move the frontier; convergence theory, differential-character implementation and experiment remain |
 
 ## Documents
@@ -89,6 +90,19 @@ complex.
 13. [Detector null-test and residual budget](13_detector_null_test_and_residual_budget.md)
 14. [Primary literature map and frontier distance](14_primary_literature_map_and_frontier_distance.md)
 15. [Exhaustion ledger and handoff](15_exhaustion_ledger_and_handoff.md)
+16. [Graded Beltrami, impedance and defect investigation spike](../admissibility/admissibility_149_graded_beltrami_impedance_defect_investigation_spike.md)
+17. [Lagrangian boundary selector and Maslov spectral flow](../admissibility/admissibility_150_lagrangian_boundary_selector_and_maslov_spectral_flow.md)
+18. [Curl eta asymmetry as an orientation record](../admissibility/admissibility_151_curl_eta_asymmetry_is_an_orientation_record_not_a_mass_formula.md)
+19. [Scalar impedance cannot identify dark holonomy](../admissibility/admissibility_152_scalar_impedance_cannot_identify_dark_holonomy_but_matrix_residues_can.md)
+20. [Passive loss and the holonomy gap](../admissibility/admissibility_153_passive_loss_requires_a_bath_ledger_and_can_destroy_the_holonomy_gap.md)
+21. [TUFT claim disposition and Beltrami programme exhaustion](../admissibility/admissibility_154_tuft_claim_disposition_and_beltrami_programme_exhaustion.md)
+22. [Trifilar braid fixed-plane no-go and moving-projector repair](../admissibility/admissibility_156_trifilar_braid_fixed_plane_no_go_and_moving_projector_repair.md)
+23. [Transformer synthesis closes the trifilar matrix but opens a control-work port](../admissibility/admissibility_157_transformer_synthesis_closes_the_trifilar_matrix_but_opens_a_control_work_port.md)
+24. [Four cells calibrate, but a finite projector ladder pays for the quarter-turn](../admissibility/admissibility_158_four_cells_calibrate_but_a_finite_projector_ladder_pays_for_the_quarter_turn.md)
+25. [A detuned fourth mode generates the dark channel, but low-frequency coherence is the hard gate](../admissibility/admissibility_159_a_detuned_fourth_mode_generates_the_dark_channel_but_low_frequency_coherence_is_the_hard_gate.md)
+26. [The adiabatic window is finite, and the first device should be an active metered emulator](../admissibility/admissibility_160_the_adiabatic_window_is_finite_and_the_first_device_should_be_an_active_metered_emulator.md)
+27. [A Node-only four-mode virtual instrument closes the software gate](../admissibility/admissibility_161_a_node_only_four_mode_virtual_instrument_closes_the_software_gate.md)
+28. [The hardware-ready acquisition packet exhausts the nonphysical branch](../admissibility/admissibility_162_the_hardware_ready_acquisition_packet_exhausts_the_nonphysical_branch.md)
 
 ## Executable spine
 
@@ -163,6 +177,10 @@ node verification/verify/verify_rdg_maxwell_detector_budget.mjs
 3. Execute the same-device held-out detector protocol with calibrated material,
    port and detector uncertainties; the finite passive one-port and bath
    boundaries are closed.
+4. Realize a gapped Beltrami-like doublet and require one frozen defect model
+   to predict both oriented projector holonomy and complex impedance-pole
+   displacement; the finite parity, positivity and pole-ledger checks are
+   closed.
 
 ## Authority boundary
 

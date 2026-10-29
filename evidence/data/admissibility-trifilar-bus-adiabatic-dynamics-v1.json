@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "admissibility-trifilar-bus-adiabatic-dynamics-v1",
+  "date": "2026-10-28",
+  "latitudeCosine": 0.75,
+  "integrationSteps": 40000,
+  "componentFixture": {
+    "primaryAngularFrequencyPerSecond": 100,
+    "busDetuningPerSecond": -40,
+    "couplingNormPerSecond": 8,
+    "amplitudeSurvivalTargets": [0.5, 0.9]
+  },
+  "dynamicalSamples": [
+    { "gapToLoopRate": 4, "meanBrightLeakage": 0.03470030385810871, "targetProcessOverlap": 0.9777824700120119, "correctedAngleDegrees": -92.50955389033956 },
+    { "gapToLoopRate": 8, "meanBrightLeakage": 0.007426558226325576, "targetProcessOverlap": 0.9954927526339599, "correctedAngleDegrees": -90.56786252093958 },
+    { "gapToLoopRate": 16, "meanBrightLeakage": 0.0017480893993731127, "targetProcessOverlap": 0.9989518849025318, "correctedAngleDegrees": -90.13816544739183 },
+    { "gapToLoopRate": 32, "meanBrightLeakage": 0.0004297249255348282, "targetProcessOverlap": 0.9997431074737564, "correctedAngleDegrees": -90.03430288658586 },
+    { "gapToLoopRate": 64, "meanBrightLeakage": 0.00010696699558902163, "targetProcessOverlap": 0.9999361013255121, "correctedAngleDegrees": -90.00856080266483 }
+  ],
+  "mechanismBoundary": {
+    "generator": "H(phi) = gap n(phi)n(phi)^T after removal of the common primary frequency",
+    "busReduction": "three identical primary modes coupled by signed amplitudes g n_i(phi) to one detuned auxiliary mode",
+    "localAdiabaticRatio": "loopRate * sqrt(1-c^2) / gap",
+    "projectionProductEquivalent": false,
+    "timeVaryingControlPortRequired": true
+  },
+  "requiredRecords": [
+    "four-mode pole and residue fit including the bus",
+    "instantaneous bright-dark gap",
+    "dark-doublet splitting and damping anisotropy",
+    "full complex two-by-two return",
+    "bright leakage",
+    "absolute survival without normalization",
+    "controller work for time-varying couplings"
+  ]
+}

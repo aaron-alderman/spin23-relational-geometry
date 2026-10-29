@@ -77,6 +77,17 @@ That would make the crossover a reset of scale but not automatically a
 reset of topological, gauge or quantum information.  Exactly which data
 cross is the decisive junction problem.
 
+## Independent warped-face comparator
+
+The [Karch--Randall warped-face claim](../1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md)
+records a distinct realization of the same group inclusion. In that
+construction an \(AdS_4\) brane is embedded in an \(AdS_5\) bulk, giving
+\(Spin(2,3)\subset Spin(2,4)\) as face and ambient isometries. This is useful
+evidence that the ladder is geometrically natural, but it does not identify
+the CCC crossover, the corpus Jordan carrier and the brane construction. Such
+an identification still requires a typed map between carriers, dynamics and
+observables.
+
 ## Reproduction
 
 ~~~powershell

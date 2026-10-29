@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "lithium-niobate-phase-reversal-preregistration-v1",
+  "date": "2026-10-28",
+  "status": "analysis and authority rules frozen; device-specific numerical fields require blinded pilot calibration",
+  "hypotheses": {
+    "primaryNull": "one frozen conventional model predicts the orientation-odd coherent-transfer statistic in both +Phi and -Phi configurations within the preregistered covariance budget",
+    "primaryAlternative": "a configuration-odd residual remains after the frozen conventional model, declared nuisance projection and multiplicity correction",
+    "notTested": "the experiment does not directly test E8, Spin(2,3), an aether, gravity or a new fundamental interaction"
+  },
+  "channels": {
+    "lock": "estimated common detuning from common-mode heterodyne quadratures",
+    "science": "orientation-odd phase-referenced multiport coherent transfer",
+    "innovation": "full estimator residual retained for bias, autocorrelation and configuration-dependence tests",
+    "safety": "applied command, saturation, slew, optical power and thermal limits"
+  },
+  "firewalls": [
+    "science statistic is not available to either controller during acquisition",
+    "phase label is withheld from nuisance-model fitting after calibration freeze",
+    "Q and R may not be inflated after unblinding",
+    "applied rather than requested commands are logged",
+    "abort data are retained and classified rather than silently dropped"
+  ],
+  "requiredMeasuredFields": [
+    "device identifier, cut, geometry and domain map",
+    "sampling clock and synchronization uncertainty",
+    "continuous A,B,C,D estimates with covariance",
+    "discrete F,G and zero-order-hold validation residual",
+    "process and detector covariance estimates Q,R",
+    "actuator magnitude, slew, delay and hysteresis",
+    "mode linewidths, detunings and complex pairwise couplings",
+    "thermal, photorefractive and pyroelectric relaxation curves",
+    "detector linearity, clipping, phase reference and transfer function",
+    "controllability and observability singular values"
+  ],
+  "design": {
+    "unit": "one randomized +Phi/-Phi block on one device after lock qualification",
+    "randomization": "balanced blocked random order generated before unblinding",
+    "blinding": "analysis receives opaque configuration labels until calibration, exclusions and nuisance model are frozen",
+    "negativeControls": [
+      "open one coupling to destroy loop closure",
+      "reverse port labels in analysis and hardware where possible",
+      "repeat at reduced power",
+      "inject a known synthetic detector phase",
+      "run drive-off and single-link calibrations"
+    ],
+    "replication": "repeat the frozen protocol on a second independently characterized device"
+  },
+  "primaryStatistic": {
+    "definition": "calibration-fixed weighted difference of forward and reverse complex transfer that changes sign under Phi reversal",
+    "weights": "REQUIRED_MEASURED_BEFORE_UNBLINDING",
+    "covariance": "one shared covariance model estimated from calibration and negative controls",
+    "test": "two-sided configuration-odd contrast with familywise alpha 0.01",
+    "multiplicity": "Holm correction across any preregistered secondary quadratures or frequency bins"
+  },
+  "qualificationRules": [
+    "closed-loop poles and delay margin satisfy the frozen robust-stability budget",
+    "lock RMS is below the calibration-fixed fraction of the narrowest linewidth",
+    "saturation and slew-limit occupancy are below frozen limits",
+    "innovation mean and lag tests pass on calibration data",
+    "observability and controllability smallest singular values exceed the frozen conditioning floor"
+  ],
+  "abortRules": [
+    "loss of phase reference or clock synchronization",
+    "unlogged actuator clipping or thermal safety intervention",
+    "mode crossing invalidates the frozen state labeling",
+    "innovation excursion crosses the calibration-fixed safety threshold",
+    "device damage or irreversible drift beyond the declared recovery window"
+  ],
+  "exclusionPolicy": "Only predeclared safety and acquisition-integrity exclusions are allowed. All excluded blocks, reasons and labels remain in the audit record.",
+  "interpretationLadder": [
+    "control failure: no science inference",
+    "estimator failure: reopen identification without inspecting the blinded statistic",
+    "conventional closure: validated relational photonic controller",
+    "single-device residual: targeted systematic investigation",
+    "independent replicated residual: qualified new-physics investigation, not discovery"
+  ],
+  "hardwareBoundary": "Numerical thresholds, weights and sample size cannot be honestly frozen until pilot measurements provide device covariance, effect scale, bandwidth and safety limits. The rules that derive and freeze them are fixed here."
+}

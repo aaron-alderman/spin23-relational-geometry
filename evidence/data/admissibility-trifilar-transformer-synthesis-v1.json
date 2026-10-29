@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "admissibility-trifilar-transformer-synthesis-v1",
+  "date": "2026-10-28",
+  "targetFamily": {
+    "darkEigenvalue": 2,
+    "brightEigenvalue": 1,
+    "latitudeCosine": 0.75,
+    "sampleCount": 360
+  },
+  "capacitorOnlyBoundary": {
+    "fullNetworkClass": "symmetric grounded graph Laplacian / Stieltjes matrix",
+    "hiddenNodeElimination": "Schur complement / Kron reduction",
+    "classPreservedUnderElimination": true,
+    "targetFamilyRealizable": false,
+    "reason": "The target has positive off-diagonal entries at some phases, while positive pairwise-capacitor nodal matrices and their Kron reductions have nonpositive off-diagonal entries."
+  },
+  "idealTransformerClosure": {
+    "factor": "T(phi) = sqrt(k_d) P(phi) + sqrt(k_b) n(phi)n(phi)^T",
+    "identity": "T(phi)^T T(phi) = K(phi)",
+    "storage": "three unit capacitors on y = T x",
+    "portLaws": [
+      "v_y = T v_x",
+      "i_x = T^T i_y"
+    ],
+    "instantaneousPowerPreserved": true,
+    "staticIdealNetwork": "lossless reciprocal coordinate transformer plus positive storage"
+  },
+  "controlWorkBoundary": {
+    "energy": "U = 0.5 x^T K(t) x",
+    "derivative": "dU/dt = x^T K xdot + 0.5 x^T Kdot x",
+    "controllerTerm": "0.5 x^T Kdot x",
+    "timeVaryingImplementationAutonomouslyPassive": false
+  },
+  "preferredImplementations": [
+    "static spatial cascade of frozen transformer-capacitor cells",
+    "time-tuned cell with measured controller work",
+    "active emulator with declared pump, supply, noise and latency ports"
+  ],
+  "requiredRecords": [
+    "full complex three-port admittance or scattering matrix",
+    "bright and dark pole and residue trajectories",
+    "reconstructed rank-two projector",
+    "forward and reverse returned dark frame",
+    "reflection, insertion loss and parasitic model",
+    "controller or pump work when parameters vary in time"
+  ],
+  "nextGate": "Realize four frozen transformer-capacitor cells, fit one parasitic model across them, and recover the moving projector from matrix-valued terminal data before closing a loop."
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "admissibility-lagrangian-boundary-maslov-flow-v1",
+  "date": "2026-10-27",
+  "status": "operator_theoretic_bridge_closed_curl_realization_open",
+  "curlBoundaryTheorem": {
+    "greenPairing": "integral_boundary trace(u) wedge trace(v)",
+    "selector": "complete Lagrangian subspace of the trace symplectic space",
+    "output": "self-adjoint extension of curl",
+    "topologicalSectorDimension": "2g for a genus-g boundary",
+    "selectedTopologicalDimension": "g"
+  },
+  "minimalExtensionModel": {
+    "operator": "-i d/dx on [0,1]",
+    "boundaryCondition": "u(1)=exp(i theta)u(0)",
+    "boundaryGraph": "span_C{(1,exp(i theta))}",
+    "spectrum": "lambda_n(theta)=2 pi n+theta",
+    "thetaInterval": [-1.5707963267948966, 4.71238898038469],
+    "spectralFlow": 1,
+    "maslovCrossingCount": 1,
+    "crossingOrientation": "positive"
+  },
+  "typedSeparation": {
+    "wilczekZeeHolonomy": "unitary transport inside a gapped degenerate eigenspace",
+    "maslovIndex": "integer intersection count of Lagrangian paths",
+    "spectralFlow": "signed eigenvalue crossings of a self-adjoint Fredholm family",
+    "warning": "Shared quarter-turn language or angle does not identify these records."
+  },
+  "nextGate": "Build a boundary-controlled passive device in which independently calibrated Lagrangian boundary motion predicts signed impedance-pole spectral flow without relabelling."
+}
