@@ -158,3 +158,4 @@ The [twisted \(H_2(\mathbb C)\) gluing certificate](../../../verification/verify
 - [Hypercharge does not automatically cancel Chern eight](218_furey_hypercharge_does_not_automatically_cancel_celestial_chern_eight.md)
 - [Jordan selection and Spin(2,4)-to-Spin(2,3) descent](../0000-0099/44_jordan_selection_axioms_and_spin24_to_spin23_descent.md)
 - [Hopf phase descent](../0100-0199/123_hopf_phase_descent_and_carrier_correction.md)
+- [Randall warped-geometry programme](../../programmes/randall-warped-geometry/README.md), especially the Karch--Randall comparison: it supplies an independent physical realization of a selected \(Spin(2,3)\) face inside a \(Spin(2,4)\) ambient geometry, while leaving the carrier-identification problem open.
