@@ -12,6 +12,8 @@ The [platform-shell extraction checkpoint](platform-shell-extraction-checkpoint-
 
 The [MJS audit schema](mjs-audit-schema-v1.json) defines the function-level evidence needed for the first phase: exact Git or Temple source identity, entrypoint reachability, static and dynamic edges, semantic coordinates, effects, disposition, witnesses, Seams, symmetry breaks and unresolved residuals.
 
-The [repository boundary review](repository-boundary-review-v1.json) applies the common-reduction rule to the proposed Git topology. It replaces the premature three-repository split with one private `sourcery-platform` repository containing strict kernel, platform and shell packages. A package becomes an independent repository only after an independently governed lifecycle is observed.
+The [repository boundary review](repository-boundary-review-v1.json) applies the common-reduction rule to the proposed Git topology. It corrects an initial connection-scope absence error: the private `sourcery-platform` repository already exists and is the candidate canonical owner. Replacement work therefore begins as an architecture-only branch inside that repository, with strict kernel, platform and shell boundaries and no root runtime change. A package becomes an independent repository only after an independently governed lifecycle is observed.
+
+The [repository existence correction](repository-existence-correction-v1.json) retains the failed absence inference and its containment. The existing repository refused duplicate creation; no remote mutation occurred, and the local inert bootstrap has no authority.
 
 During migration, every material authority, custody, process, trust and external-effect crossing remains an explicit Seam. An accidental compatibility Seam becomes seamless only after all consumers have crossed, blocking residuals are closed, the legacy mechanism is unreachable at runtime and an accepted retirement witness exists.

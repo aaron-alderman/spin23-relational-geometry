@@ -1,7 +1,7 @@
 {
   "protocol": "sourcery/platform-git-replacement-map/1",
   "id": "platform-git-replacement-map-v1",
-  "status": "staged-inactive-plan",
+  "status": "staged-inactive-plan-superseded-in-part-by-repository-boundary-review-v1",
   "recordedAt": "2026-10-29",
   "claim": "Move the non-application Sourcery platform and shell to algebra-owned Git sources while reducing MJS to a minimal imperative kernel. Preserve material crossings as explicit Seams until every consumer has crossed and retirement has been witnessed.",
   "authority": {
@@ -103,7 +103,7 @@
     "proposedOwners": [
       {
         "repository": "sourcery-kernel",
-        "status": "proposed-not-created",
+        "status": "internal-package-boundary-not-independent-repository",
         "role": "Minimal imperative kernel: algebra evaluator/compiler boundary, exact codecs, byte/hash/time/random observation, filesystem/process/network/SQLite/crypto adapters and typed effect receipts",
         "mustNotContain": [
           "workspace policy",
@@ -116,7 +116,7 @@
       },
       {
         "repository": "sourcery-platform",
-        "status": "proposed-not-created",
+        "status": "existing-private-canonical-candidate-at-e379c8a1a33fb75b7a253f0f84d04aec4af97fdf",
         "role": "Algebraic object, workspace, package, qualification, custody, admission, activation, recovery and retirement semantics",
         "dependsOn": [
           "sourcery-kernel",
@@ -131,7 +131,7 @@
       },
       {
         "repository": "sourcery-shell",
-        "status": "proposed-not-created",
+        "status": "internal-package-boundary-not-independent-repository",
         "role": "Algebraic MCP/session/surface/auto-UI composition and human-visible state-machine projections",
         "dependsOn": [
           "sourcery-platform",
@@ -146,7 +146,7 @@
         ]
       }
     ],
-    "creationDecision": "Create the three proposed repositories only after their dependency directions and initial source closures are reviewed together. A repository boundary must correspond to an independently versioned lifecycle, not an arbitrary folder split."
+    "creationDecision": "Do not create parallel repositories. Use the existing private sourcerytech/sourcery-platform owner and stage kernel, platform and shell as strict internal boundaries. Split a package only after an independently governed lifecycle is evidenced. See repository-boundary-review-v1.json."
   },
   "componentCatalogue": [
     {

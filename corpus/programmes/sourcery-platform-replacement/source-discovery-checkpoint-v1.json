@@ -61,15 +61,18 @@
     "decision": "Treat the qualified successor as exact migration evidence and a source candidate for the new Git-owned shell/platform boundary. Do not patch the live Temple promotion machinery refusal-by-refusal.",
     "targetOwners": [
       {
-        "repository": "sourcery-shell",
+        "repository": "sourcerytech/sourcery-platform",
+        "packageBoundary": "shell",
         "owns": "bounded human-facing discovery request/result algebra and MCP interaction composition"
       },
       {
-        "repository": "sourcery-platform",
+        "repository": "sourcerytech/sourcery-platform",
+        "packageBoundary": "platform",
         "owns": "immutable workspace discovery semantics, source identity and refusal laws"
       },
       {
-        "repository": "sourcery-kernel",
+        "repository": "sourcerytech/sourcery-platform",
+        "packageBoundary": "kernel",
         "owns": "the minimal SQLite/object enumeration adapter required to execute the declared query"
       }
     ],
@@ -78,7 +81,7 @@
       "left": "active unbounded temple_workspace_list_files",
       "right": "Git-owned bounded discovery contract and thin kernel adapter",
       "retirementRequires": [
-        "new repositories created and exact source received",
+        "existing platform owner has received the exact source on an accepted branch",
         "bounded discovery qualified against immutable Git artifacts",
         "shell consumer crossed",
         "legacy operation pressure path unreachable or explicitly compatibility-only",
@@ -87,8 +90,8 @@
     }
   },
   "nextAction": {
-    "action": "Review the three proposed repository boundaries and exact initial closures, then create the repositories and receive this qualified successor as evidence-bound source without activating it.",
-    "blockedUntil": "Repository-boundary review and repository creation gate",
+    "action": "Prepare an architecture-only branch in the existing sourcerytech/sourcery-platform owner, then receive this qualified successor as evidence-bound source without activating it.",
+    "blockedUntil": "Existing repository collision reconciliation and exact initial closure review",
     "safeWorkThatCanContinue": [
       "catalogue already-known exact platform/shell sources",
       "define function-level audit schema",

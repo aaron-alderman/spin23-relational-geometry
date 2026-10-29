@@ -1,24 +1,35 @@
 {
   "protocol": "sourcery/platform-repository-boundary-review/1",
   "id": "platform-repository-boundary-review-v1",
-  "status": "review-complete-create-only-repository-authorized-by-continuation",
+  "status": "corrected-existing-repository-architecture-branch-only",
   "observedAt": "2026-10-29",
   "question": "Do the minimal imperative kernel, algebraic platform and algebraic shell have sufficiently independent lifecycles to justify three new repositories?",
   "liveObservations": {
-    "proposedRepositoryNames": [
+    "repositoryExistence": [
       {
         "name": "sourcerytech/sourcery-kernel",
-        "githubResult": "not-found"
+        "githubResult": "not-found-through-sourcerytech-account"
       },
       {
         "name": "sourcerytech/sourcery-platform",
-        "githubResult": "not-found"
+        "githubResult": "existing-private-repository",
+        "defaultBranch": "main",
+        "head": "e379c8a1a33fb75b7a253f0f84d04aec4af97fdf",
+        "package": "@sourcery/platform@0.1.0",
+        "declaredRole": "minimal generic application host above Sourcery Core; projection layer, not semantic authority"
       },
       {
         "name": "sourcerytech/sourcery-shell",
-        "githubResult": "not-found"
+        "githubResult": "not-found-through-sourcerytech-account"
       }
     ],
+    "scopeCorrection": {
+      "originalObservation": "The general GitHub connector returned not-found for all three names.",
+      "correctedObservation": "The configured sourcerytech GitHub account resolves sourcery-platform; the other two names remain absent.",
+      "classification": "no-blame connection-scope provenance error",
+      "harmPrevented": "The create attempt refused because the name already existed. No existing repository, branch or file was modified.",
+      "accountability": "All repository-existence checks now require the configured source-owner account before an absence claim."
+    },
     "acceptedDependencies": [
       {
         "repository": "sourcerytech/claimipedia-core",
@@ -47,12 +58,12 @@
     }
   },
   "decision": {
-    "create": [
+    "useExisting": [
       {
         "repository": "sourcerytech/sourcery-platform",
         "visibility": "private",
         "defaultBranch": "main",
-        "shape": "single repository with strict workspace packages"
+        "shape": "existing generic platform repository; stage the replacement on a separate architecture branch without changing root runtime selection"
       }
     ],
     "doNotCreateYet": [
@@ -64,7 +75,8 @@
       "Their initial versions will change together while legacy Seams are crossed.",
       "Three repositories would introduce version coordination and provenance crossings without an observed independent lifecycle.",
       "A package boundary is sufficient to enforce dependency direction and makes a later repository split mechanical if lifecycle evidence appears.",
-      "This is a CommonReduction of repository machinery, not a collapse of kernel/platform/shell semantic distinctions."
+      "This is a CommonReduction of repository machinery, not a collapse of kernel/platform/shell semantic distinctions.",
+      "The existing repository is already the closest declared owner and prevents creation of a parallel platform authority."
     ]
   },
   "repositoryShape": {
@@ -74,8 +86,10 @@
         "cross-package qualification",
         "source provenance",
         "repository boundary contract"
-      ]
+      ],
+      "migrationConstraint": "The accepted root currently owns the generic application host and production-release closure. Initial replacement work must be architecture-only and must not alter its package.json, release scripts, deployment, runtime dependencies or selected source."
     },
+    "initialNamespace": "architecture/algebraic-platform-replacement",
     "packages": [
       {
         "name": "@sourcerytech/sourcery-kernel",
@@ -141,13 +155,13 @@
     ]
   },
   "initialClosure": {
-    "stage": "repository-bootstrap-only",
+    "stage": "existing-repository-architecture-branch-only",
     "include": [
       "README and boundary contract",
-      "workspace package manifests",
-      "function-level MJS audit schema received from grand-theory commit 868f940b",
+      "target kernel/platform/shell package topology without active package manifests",
+      "function-level MJS audit schema source receipt from grand-theory commit 868f940b",
       "provenance record linking exact Temple and Git observations",
-      "empty source roots with explicit no-runtime status"
+      "explicit no-runtime status"
     ],
     "exclude": [
       "legacy MJS source",
@@ -158,7 +172,7 @@
       "installation or deployment scripts"
     ],
     "acceptance": [
-      "repository is private with default branch main",
+      "candidate is based on exact existing main e379c8a1a33fb75b7a253f0f84d04aec4af97fdf",
       "all package boundaries are documented",
       "no executable source or runtime authority is present",
       "provenance references are exact",
@@ -176,7 +190,8 @@
     ]
   },
   "authority": {
-    "grantsRepositoryBootstrap": true,
+    "grantsRepositoryBootstrap": false,
+    "grantsArchitectureBranch": true,
     "grantsSourceReceiving": false,
     "grantsMergeBeyondBootstrap": false,
     "grantsPackagePublication": false,
