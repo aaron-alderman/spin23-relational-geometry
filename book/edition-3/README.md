@@ -36,6 +36,7 @@ The next route to new physics may begin not with higher energy but with greater 
 - [Browse the status and research-move index](reading-key.md)
 - [Open the live paged HTML edition](https://aaron-alderman.github.io/spin23-relational-geometry/)
 - [Open the interactive concept atlas](../../docs/concept-map/index.html)
+- [Follow letters and conversations](../../corpus/correspondence/README.md)
 - Compile the paged HTML artifact with **node tooling/publication/generate_edition3_book_preview.mjs --site-only --site-root .build/pages/edition-3**
 - [Return to the repository front door](../../README.md)
 - [Inspect the complete corpus manifest](../../corpus/registers/spin23_corpus_manifest.json)

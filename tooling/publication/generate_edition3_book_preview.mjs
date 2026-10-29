@@ -19,6 +19,10 @@ const siteIndexRoot = dirname(siteRoot);
 const siteDetailsRoot = join(siteRoot, "details");
 const siteReadingKeyRoot = join(siteRoot, "reading-key");
 const siteArticlesRoot = join(siteRoot, "articles");
+const siteCorrespondenceRoot = join(siteRoot, "correspondence");
+const siteLettersRoot = join(siteCorrespondenceRoot, "letters");
+const siteConversationsRoot = join(siteCorrespondenceRoot, "conversations");
+const siteOphConversationRoot = join(siteConversationsRoot, "oph-admissibility-frontier");
 const assetsRoot = join(siteRoot, "assets");
 const katexSourceRoot = join(root, "tooling", "publication", "vendor", "katex");
 const katexSiteRoot = join(siteRoot, "vendor", "katex");
@@ -2092,7 +2096,12 @@ const contentsFixCss = `.contents .taxonomy-badge,.contents .archetype-badge{dis
 const evidenceCss = `.evidence-link{border-color:var(--gold);border-left-color:var(--gold)}.claim-unit+.claim-unit{margin-top:36px;padding-top:28px;border-top:1px dashed var(--line)}.claim-hero h1{max-width:960px}.claim-anatomy{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}.claim-anatomy article{padding:20px;border:1px solid var(--line);border-top:5px solid var(--teal);background:var(--panel)}.claim-anatomy h3{margin-top:0}.claim-source-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;padding:0;list-style:none}.claim-source-map li{display:grid;gap:9px;padding:18px;border:1px solid var(--line);background:var(--panel)}.claim-source-map strong{font:700 .9rem/1.4 var(--sans)}.claim-source-map a{font:800 .72rem/1.3 var(--sans);letter-spacing:.04em;text-transform:uppercase}.compact-proof{margin:18px 0;padding:13px 16px}.source-reader-hero h1{font-size:clamp(2.6rem,6vw,5.2rem)}.source-provenance dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;font:14px/1.5 var(--sans)}.source-provenance dt{font-weight:800}.source-provenance dd{margin:0;overflow-wrap:anywhere}.source-document{padding:50px 0}.source-document h1{font-size:clamp(2.4rem,5vw,4.5rem)}.source-document h2{margin-top:1.5em}.source-document pre{overflow:auto;padding:20px;background:#172321;color:#f6f0e6;font:14px/1.55 var(--mono)}.source-document code{overflow-wrap:anywhere}.source-document img{max-width:100%;height:auto}.source-document blockquote{margin:24px 0;padding:2px 20px;border-left:5px solid var(--gold);background:var(--panel)}.library-breadcrumb{display:flex;flex-wrap:wrap;gap:.45rem;padding:20px 0 0;color:var(--muted);font:700 .72rem/1.5 var(--sans);overflow-wrap:anywhere}.library-breadcrumb i{font-style:normal;color:var(--line)}.library-route{padding:32px 0}.library-route ol{font:14px/1.6 var(--mono)}.library-relations{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}.library-relations>div{min-width:0}.library-relations ul,.library-results{padding:0;list-style:none}.library-relations li,.library-results li{display:grid;gap:.2rem;padding:12px 0;border-top:1px solid var(--line)}.library-relations small,.library-results small{color:var(--muted);font:12px/1.4 var(--mono);overflow-wrap:anywhere}.library-search{width:100%;padding:15px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:18px var(--sans)}.library-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.library-stat{display:block;padding:18px;border:1px solid var(--line);background:var(--panel);color:var(--ink);text-decoration:none}.library-stat:hover{border-color:var(--teal)}.library-stat strong{display:block;font:700 2rem/1 var(--serif)}.library-stat span{font:700 .7rem/1.4 var(--sans);text-transform:uppercase;letter-spacing:.05em}`;
 const directoryCss = `.directory-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}.directory-card{display:flex;min-width:0;min-height:230px;flex-direction:column;align-items:flex-start}.directory-card h3{margin:.35rem 0 .55rem;font-size:clamp(1.35rem,2.2vw,1.7rem)}.directory-path{max-width:100%;margin:.15rem 0 1.2rem;color:var(--muted)}.directory-path code{font:700 .74rem/1.4 var(--mono);overflow-wrap:anywhere}.directory-open{margin-top:auto;font:800 .7rem/1.3 var(--sans);letter-spacing:.055em;text-transform:uppercase}.directory-canonical{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.7rem 1rem;align-items:baseline;margin:1.25rem 0 2rem;color:var(--muted);font:700 .72rem/1.45 var(--sans);letter-spacing:.045em;text-transform:uppercase}.directory-canonical code{min-width:0;color:var(--ink);font:.82rem/1.45 var(--mono);letter-spacing:0;text-transform:none;overflow-wrap:anywhere}@media(max-width:650px){.directory-grid{grid-template-columns:1fr}.directory-card{min-height:190px}.directory-canonical{grid-template-columns:1fr;gap:.25rem}.library-breadcrumb{gap:.35rem;font-size:.67rem}}`;
 const articleCss = `.article-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}.article-card{display:flex;flex-direction:column;min-height:300px;padding:25px;border:1px solid var(--line);border-top:6px solid var(--teal);background:var(--panel)}.article-card h2{font-size:clamp(1.7rem,3vw,2.35rem)}.article-card .lede{font-size:1.05rem}.article-actions,.share-bar{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:auto;font:800 .68rem/1.3 var(--sans);letter-spacing:.055em;text-transform:uppercase}.article-actions a,.share-bar a{display:inline-block;padding:.55rem .72rem;border:1px solid var(--line);background:var(--paper);text-decoration:none}.article-actions a:first-child,.share-bar a:first-of-type{border-color:var(--teal);background:var(--teal);color:white}.share-bar{margin:24px 0 0;padding-top:18px;border-top:1px solid var(--line)}.share-bar strong{margin-right:4px;color:var(--muted)}.article-note{font:.82rem/1.5 var(--sans);color:var(--muted)}.task-list{list-style:none;padding-left:0}.task-list-item input{margin-right:.55rem;accent-color:var(--teal)}@media(max-width:650px){.article-card{min-height:0}.share-bar{align-items:flex-start;flex-direction:column}}`;
-const mast = `<header class="mast"><a href="index.html">Admissibility frontier · Edition 3</a><nav><a href="articles/index.html">Articles</a> · <a href="reading-key.html">Reading key</a> · <a href="08-result-ledger.html">Findings</a> · <a href="09-research-frontier.html">Frontier</a> · <a href="../concept-map/index.html">Concept atlas</a></nav></header>`;
+const correspondenceCss = `.mast nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.2rem .5rem}@media(max-width:650px){.mast nav{justify-content:flex-start}}`;
+const mastHtml = (prefix = "", current = "") => {
+  const item = (id, href, label) => `<a href="${href}"${current === id ? ' aria-current="page"' : ""}>${label}</a>`;
+  return `<header class="mast"><a href="${prefix}index.html">Admissibility frontier · Edition 3</a><nav>${item("articles", `${prefix}articles/index.html`, "Articles")} · ${item("findings", `${prefix}08-result-ledger.html`, "Findings")} · ${item("frontier", `${prefix}09-research-frontier.html`, "Frontier")} · ${item("atlas", `${prefix}../concept-map/index.html`, "Atlas")} · ${item("correspondence", `${prefix}correspondence/index.html`, "Correspondence")} · ${item("reading-key", `${prefix}reading-key.html`, "Reading key")}</nav></header>`;
+};
+const mast = mastHtml();
 const mathHead = (prefix = "") => `<link rel="stylesheet" href="${prefix}vendor/katex/katex.min.css"><script defer src="${prefix}vendor/katex/katex.min.js"></script><script defer src="${prefix}vendor/katex/contrib/auto-render.min.js"></script><script defer src="${prefix}math-render.js"></script>`;
 const publicPageUrl = pagePath => `${publicEditionBase}${encodeURI(pagePath).replace(/^\/+|index\.html$/gu, "")}`;
 const jsonLd = value => `<script type="application/ld+json">${JSON.stringify(value).replaceAll("<", "\\u003c")}</script>`;
@@ -2169,7 +2178,7 @@ const standaloneArticleCardHtml = article => {
   return `<article class="article-card"><p class="kicker">${esc(article.label || "Corpus article")}</p><h2><a href="${article.slug}.html">${esc(article.title)}</a></h2><p class="lede">${esc(article.kicker)}.</p><p class="article-note">${esc(note)}</p><div class="article-actions"><a href="${article.slug}.html">Read article →</a><a href="${esc(xHref)}" target="_blank" rel="noopener noreferrer">Post on X</a><a href="${esc(blueskyHref)}" target="_blank" rel="noopener noreferrer">Bluesky</a></div></article>`;
 };
 const articlesIndexHtml = () => {
-  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html" aria-current="page">Articles</a> · <a href="../reading-key.html">Reading key</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">Short, shareable routes into the corpus</p><h1>Articles</h1><p class="lede">${standaloneArticles.length + articleChapters.length} focused essays introduce typed translation, conversational contact, mathematical selection, measurement, physical interfaces and hard boundaries of the programme. Each is designed to stand on its own in a social link while retaining a route to its evidence and complete source.</p><aside class="boundary"><strong>Glass-box publication.</strong> These are generated reader views rather than detached summaries. Canonical corpus documents, the complete circulation paper and Edition chapters remain controlling sources.</aside></header><section><div class="article-grid">${standaloneArticles.map(standaloneArticleCardHtml).join("")}${articleChapters.map(articleCardHtml).join("")}</div></section><p class="article-note">Social links open the platform composer with a title, thesis and canonical URL. Nothing is posted without the reader’s action.</p><nav class="page-turn"><a href="../index.html">← Edition contents</a><a href="typed-object-signatures.html">Begin with typed signatures →</a></nav>`;
+  const body = `${mastHtml("../", "articles")}<header class="hero"><p class="kicker">Short, shareable routes into the corpus</p><h1>Articles</h1><p class="lede">${standaloneArticles.length + articleChapters.length} focused essays introduce typed translation, conversational contact, mathematical selection, measurement, physical interfaces and hard boundaries of the programme. Each is designed to stand on its own in a social link while retaining a route to its evidence and complete source.</p><aside class="boundary"><strong>Glass-box publication.</strong> These are generated reader views rather than detached summaries. Canonical corpus documents, the complete circulation paper and Edition chapters remain controlling sources.</aside></header><section><div class="article-grid">${standaloneArticles.map(standaloneArticleCardHtml).join("")}${articleChapters.map(articleCardHtml).join("")}</div></section><p class="article-note">Social links open the platform composer with a title, thesis and canonical URL. Nothing is posted without the reader’s action.</p><nav class="page-turn"><a href="../index.html">← Edition contents</a><a href="typed-object-signatures.html">Begin with typed signatures →</a></nav>`;
   return htmlDoc("Articles", body, "../", false, "articles/index.html", "Short, shareable and evidence-linked articles from The Admissibility Frontier.");
 };
 const standaloneArticleHtml = article => {
@@ -2188,13 +2197,83 @@ const standaloneArticleHtml = article => {
     ? `<a class="proof-link" href="${esc(article.externalCta.href)}"><span><b>${esc(article.externalCta.title)}</b><small>${esc(article.externalCta.description)}</small></span><i>${esc(article.externalCta.action)}</i></a>`
     : "";
   const output = join(siteArticlesRoot, `${article.slug}.html`);
-  const body = `<header class="mast"><a href="../index.html">Admissibility frontier · Edition 3</a><nav><a href="index.html">Articles</a> · <a href="../library/index.html">Corpus library</a></nav></header><header class="hero"><p class="kicker">${esc(article.label || "Corpus article")}</p><h1>${esc(article.title)}</h1><p class="lede">${esc(article.kicker)}.</p><aside class="boundary"><strong>Source boundary.</strong> ${provenance}</aside>${socialShareLinks(article, "../")}${externalCta}</header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, article.source, output)}</article><nav class="page-turn"><a href="index.html">← All articles</a><a href="${esc(sourceHref)}">${sourceLabel} →</a></nav>`;
+  const body = `${mastHtml("../", "articles")}<header class="hero"><p class="kicker">${esc(article.label || "Corpus article")}</p><h1>${esc(article.title)}</h1><p class="lede">${esc(article.kicker)}.</p><aside class="boundary"><strong>Source boundary.</strong> ${provenance}</aside>${socialShareLinks(article, "../")}${externalCta}</header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, article.source, output)}</article><nav class="page-turn"><a href="index.html">← All articles</a><a href="${esc(sourceHref)}">${sourceLabel} →</a></nav>`;
   return htmlDoc(article.title, body, "../", false, `articles/${article.slug}.html`, article.kicker, {
     type: "article",
     structuredData: standaloneArticleStructuredData(article),
     socialImage: article.socialImage,
     socialImageAlt: article.socialImageAlt,
   });
+};
+
+const correspondenceCard = (href, label, title, description, action) => `<article class="article-card"><p class="kicker">${esc(label)}</p><h2><a href="${esc(href)}">${esc(title)}</a></h2><p class="lede">${esc(description)}</p><div class="article-actions"><a href="${esc(href)}">${esc(action)} →</a></div></article>`;
+
+const correspondenceIndexHtml = () => {
+  const cards = [
+    correspondenceCard("letters/index.html", "Dated and addressed", "Letters", "Questions, invitations and replies preserved at the point they were sent or received.", "Browse letters"),
+    correspondenceCard("conversations/index.html", "Evolving contact", "Conversations", "Faithful tracks of clarification, correction, surviving difference and newly opened work.", "Follow conversations"),
+  ].join("");
+  const body = `${mastHtml("../", "correspondence")}<header class="hero"><p class="kicker">Contact without automatic promotion</p><h1>Correspondence</h1><p class="lede">Correspondence preserves contact with people, papers and outside programmes. Letters record what was asked or answered at a particular time. Conversations record how understanding changed.</p><aside class="boundary"><strong>Authority boundary.</strong> Agreement is not evidence and disagreement is not defeat. Attributed statements remain theirs; editorial summaries remain interpretations; findings and experiments retain separate admission paths.</aside></header><section><div class="article-grid">${cards}</div></section><nav class="page-turn"><a href="../index.html">← Edition contents</a><a href="../library/corpus/correspondence/index.html">Canonical correspondence source →</a></nav>`;
+  return htmlDoc("Correspondence", body, "../", false, "correspondence/index.html", "Letters and conversations that changed The Admissibility Frontier without becoming evidence by agreement alone.");
+};
+
+const lettersIndexHtml = () => {
+  const programme = "../../library/corpus/programmes/open-letters/spin23_open_letter_answer_programme.html";
+  const synthesis = "../../library/corpus/claims/1600-1699/1633_the_eight_open_letter_answers_reduce_to_four_executable_packets_without_closing_the_physical_lift.html";
+  const body = `${mastHtml("../../", "correspondence")}<header class="hero"><p class="kicker">Correspondence · dated and addressed</p><h1>Letters</h1><p class="lede">Letters preserve questions, invitations and replies at the point they were sent or received. Later corrections may be linked, but the original communication is not silently rewritten.</p><aside class="boundary"><strong>Attribution boundary.</strong> The existing answer packet contains standalone AI answers, not replies from the named addressees and not peer review.</aside></header><section><div class="article-grid">${correspondenceCard(programme, "Open-letter programme", "Eight questions, four executable packets", "The existing Spin(2,3) letters and answer assessment are now reachable through a public correspondence route.", "Open programme")}${correspondenceCard(synthesis, "Integrated finding", "What the answers changed", "The eight answers sharpen four work packets without closing the physical lift.", "Inspect finding")}</div></section><nav class="page-turn"><a href="../index.html">← Correspondence</a><a href="../conversations/index.html">Conversations →</a></nav>`;
+  return htmlDoc("Letters", body, "../../", false, "correspondence/letters/index.html", "Dated questions, invitations and replies connected to The Admissibility Frontier.");
+};
+
+const conversationsIndexHtml = () => {
+  const conversation = "oph-admissibility-frontier/index.html";
+  const body = `${mastHtml("../../", "correspondence")}<header class="hero"><p class="kicker">Correspondence · evolving contact</p><h1>Conversations</h1><p class="lede">Conversations preserve how an initial reading changed through clarification, correction and reply. Entries are displayed newest first, while pagination lets a reader walk backwards through what changed.</p><aside class="boundary"><strong>Faithfulness boundary.</strong> “Mutual” is used only for explicitly shared ground. Best-case readings and speculative extensions remain attributed to the programme unless another participant endorses them.</aside></header><section><div class="article-grid">${correspondenceCard(conversation, "2 entries · newest first · open", "OPH and the Admissibility Frontier", "A response to the consciousness challenge, followed by the initial kenotic OPH audit that opened the exchange.", "Read conversation")}</div><p class="article-note"><strong>Public thread on X:</strong> <a href="https://x.com/muellerberndt/status/2114676116434645342" target="_blank" rel="noopener noreferrer">initial OPH post ↗</a> · <a href="https://x.com/muellerberndt/status/2115751264797753537" target="_blank" rel="noopener noreferrer">Mueller's response ↗</a></p></section><nav class="page-turn"><a href="../index.html">← Correspondence</a><a href="../letters/index.html">Letters →</a></nav>`;
+  return htmlDoc("Conversations", body, "../../", false, "correspondence/conversations/index.html", "Faithful, evolving records of clarification and changed understanding in The Admissibility Frontier.");
+};
+
+const ophConversationEntries = [
+  {
+    page: 1,
+    title: "Response: a consciousness protocol and a bounded best-case reading",
+    kicker: "Current response · 29 October 2026",
+    source: "corpus/correspondence/conversations/oph-and-admissibility-frontier/response.md",
+    output: "index.html",
+    description: "The corpus accepts the symmetrical consciousness gap, proposes a shared protocol and marks the Peirce-field extension as speculative.",
+    socialLinks: [
+      ["Mueller's response on X ↗", "https://x.com/muellerberndt/status/2115751264797753537"],
+      ["Initial OPH post on X ↗", "https://x.com/muellerberndt/status/2114676116434645342"],
+    ],
+  },
+  {
+    page: 2,
+    title: "Initial correspondence: the kenotic OPH audit",
+    kicker: "Initial correspondence · 26 October 2026",
+    source: "corpus/correspondence/conversations/oph-and-admissibility-frontier/initial-correspondence.md",
+    output: "initial-correspondence.html",
+    description: "The preserved initial OPH reading, including the consciousness interface it left too quiet.",
+    socialLinks: [
+      ["Initial OPH post on X ↗", "https://x.com/muellerberndt/status/2114676116434645342"],
+      ["Mueller's later response on X ↗", "https://x.com/muellerberndt/status/2115751264797753537"],
+    ],
+  },
+];
+
+const ophConversationEntryHtml = (entry, index) => {
+  const markdown = readFileSync(join(root, entry.source), "utf8");
+  const firstSection = markdown.search(/^## /mu);
+  const bodyMarkdown = firstSection >= 0 ? markdown.slice(firstSection) : markdown.replace(/^# [^\n]+\n+/u, "");
+  const output = join(siteOphConversationRoot, entry.output);
+  const newer = index > 0 ? ophConversationEntries[index - 1] : null;
+  const older = index < ophConversationEntries.length - 1 ? ophConversationEntries[index + 1] : null;
+  const sourceHref = `../../../library/${entry.source.replace(/\.md$/u, ".html")}`;
+  const previousLink = newer
+    ? `<a href="${newer.output}">← Newer: ${esc(newer.title)}</a>`
+    : `<a href="../index.html">← All conversations</a>`;
+  const nextLink = older
+    ? `<a href="${older.output}">Older: ${esc(older.title)} →</a>`
+    : `<a href="../index.html">All conversations →</a>`;
+  const socialLinks = entry.socialLinks.map(([label, href]) => `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a>`).join("");
+  const body = `${mastHtml("../../../", "correspondence")}<header class="hero"><p class="kicker">OPH and the Admissibility Frontier · page ${entry.page} of ${ophConversationEntries.length}</p><h1>${esc(entry.title)}</h1><p class="lede">${esc(entry.description)}</p><div class="share-bar"><strong>Public thread on X</strong>${socialLinks}</div><aside class="boundary"><strong>Conversation boundary.</strong> This is an attributed corpus entry, not a joint statement. Linked posts control the author's wording; later clarification does not rewrite earlier correspondence.</aside></header><article class="source-document article-body">${renderMarkdown(bodyMarkdown, entry.source, output)}</article><p class="article-note">Canonical source: <a href="${sourceHref}"><code>${esc(entry.source)}</code></a></p><nav class="page-turn">${previousLink}${nextLink}</nav>`;
+  return htmlDoc(entry.title, body, "../../../", false, `correspondence/conversations/oph-admissibility-frontier/${entry.output}`, entry.description, { type: "article" });
 };
 
 const directoryIndexHtml = directory => {
@@ -2302,6 +2381,9 @@ mkdirSync(siteRoot, { recursive: true });
 mkdirSync(siteDetailsRoot, { recursive: true });
 mkdirSync(siteReadingKeyRoot, { recursive: true });
 mkdirSync(siteArticlesRoot, { recursive: true });
+mkdirSync(siteLettersRoot, { recursive: true });
+mkdirSync(siteConversationsRoot, { recursive: true });
+mkdirSync(siteOphConversationRoot, { recursive: true });
 mkdirSync(assetsRoot, { recursive: true });
 if (!existsSync(katexSourceRoot)) throw new Error(`Missing vendored KaTeX distribution: ${katexSourceRoot}`);
 if (!existsSync(publicationAssetsRoot)) throw new Error(`Missing publication assets: ${publicationAssetsRoot}`);
@@ -2319,6 +2401,7 @@ const coverMd = `# The admissibility frontier\n\n## New physics by preserving di
 if (!siteOnly) {
   writeFileSync(join(bookRoot, "README.md"), coverMd
     .replace("not its protagonist", "not the premise or centre of the programme")
+    .replace("- [Open the interactive concept atlas](../../docs/concept-map/index.html)\n", "- [Open the interactive concept atlas](../../docs/concept-map/index.html)\n- [Follow letters and conversations](../../corpus/correspondence/README.md)\n")
     .replace("[Read *Do Not Search the Monster. Build the Ladder.*](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md)", "[Join the Halloween Monster Hunt](https://aaron-alderman.github.io/halloween-monster-hunt/) or [read the full call to action](../../corpus/syntheses/the_monster_distributed_search_call_to_action.md)"));
   writeFileSync(join(bookRoot, "reading-key.md"), readingKeyMarkdown());
   Object.keys(taxonomy).forEach(key => writeFileSync(join(readingKeyRoot, `status-${key}.md`), readingKeyDetailMarkdown("taxonomy", key)));
@@ -2334,10 +2417,14 @@ if (!siteOnly) {
 
 const contentsHtml = chapters.map((chapter, index) => `<div class="contents-row"><span class="chapter-number">${String(index + 1).padStart(2, "0")}</span><span class="contents-copy"><a class="chapter-title" href="${chapter.slug}.html"><strong>${mathHtml(chapter.title)}</strong></a>${taxonomyBadgeHtml(chapterTaxonomy[chapter.slug])}${archetypeBadgeHtml(chapterArchetype[chapter.slug])}</span><a class="read-link" href="${chapter.slug}.html">Read →</a></div>`).join("");
 const coverHtml = htmlDoc("The admissibility frontier", `<header class="hero"><p class="kicker">Volume II · Edition 3.2 admissibility preview</p><h1>The admissibility frontier<br><em>New physics by preserving distinctions</em></h1><p class="lede">The next frontier may require more finesse, not only more energy. Preserve the phase, delay, boundary order, memory and cross-channel relation that ordinary measurements erase; then ask whether the recovered record closes under established physics or exposes a reproducible residual.</p><aside class="boundary"><strong>Authority boundary.</strong> This volume is not empirical confirmation, peer review or a derivation of the Standard Model. Admissibility is an executable research method here; its stronger ontological status remains open.</aside><img class="hero-art" src="assets/relational-geometry-hero.png" alt="Relational geometry represented by two linked faces, a central hinge, compass, ruler and Möbius ribbon"></header><section><p class="kicker">Call to action · distributed research</p><h2>Help build the ladder</h2><p class="lede">Take one carrier, theorem, computation, detector, negative control or experimental gate. Prove it, build it, reproduce it or kill it—then return a packet another contributor can continue.</p><p><a class="proof-link" href="articles/monster-distributed-search.html"><span><b>Do Not Search the Monster. Build the Ladder.</b><small>Seven parallel workstreams · serial proof obligations · immediate open bounties</small></span><i>Join →</i></a></p></section><section><p class="kicker">A lighter way in</p><h2>${standaloneArticles.length + articleChapters.length} short articles</h2><p class="lede">Shareable essays introduce typed translation, conversational contact, mathematical selection, the programme’s exact hinge, physical interfaces and strongest obstructions without detaching them from their evidence.</p><p><a class="proof-link" href="articles/index.html"><span><b>Browse the articles</b><small>Standalone social previews · direct X and Bluesky sharing · sources intact</small></span><i>Read →</i></a></p></section><section class="contents"><p class="kicker">Fourteen substantial reader chapters + interactive atlas</p><h2>Choose a chapter</h2>${contentsHtml}</section><section><p class="kicker">Beyond the volume</p><h2>Follow the research all the way down</h2><p class="lede">The complete corpus is compiled into a searchable library with explicit backlinks, neighbouring documents and visible routes from this Edition into deep programme waves.</p><p><a class="proof-link" href="library/index.html"><span><b>Open the complete corpus library</b><small>${librarySources.length.toLocaleString("en")} canonical Markdown documents · one generated journey</small></span><i>Explore →</i></a></p></section><nav class="page-turn"><span></span><a href="00-front-matter.html">Begin the volume →</a></nav>`);
-writeFileSync(join(siteRoot, "book.css"), `${css}${proofCss}${contentsFixCss}${evidenceCss}${directoryCss}${articleCss}`);
+writeFileSync(join(siteRoot, "book.css"), `${css}${proofCss}${contentsFixCss}${evidenceCss}${directoryCss}${articleCss}${correspondenceCss}`);
 writeFileSync(join(siteRoot, "index.html"), coverHtml.replace('href="articles/monster-distributed-search.html"', 'href="https://aaron-alderman.github.io/halloween-monster-hunt/"'));
 writeFileSync(join(siteArticlesRoot, "index.html"), articlesIndexHtml());
 standaloneArticles.forEach(article => writeFileSync(join(siteArticlesRoot, `${article.slug}.html`), standaloneArticleHtml(article)));
+writeFileSync(join(siteCorrespondenceRoot, "index.html"), correspondenceIndexHtml());
+writeFileSync(join(siteLettersRoot, "index.html"), lettersIndexHtml());
+writeFileSync(join(siteConversationsRoot, "index.html"), conversationsIndexHtml());
+ophConversationEntries.forEach((entry, index) => writeFileSync(join(siteOphConversationRoot, entry.output), ophConversationEntryHtml(entry, index)));
 writeFileSync(join(siteRoot, "reading-key.html"), readingKeyHtml());
 Object.keys(taxonomy).forEach(key => writeFileSync(join(siteReadingKeyRoot, `status-${key}.html`), readingKeyDetailHtml("taxonomy", key)));
 archetypes.forEach(item => writeFileSync(join(siteReadingKeyRoot, `move-${item.key}.html`), readingKeyDetailHtml("archetype", item.key)));

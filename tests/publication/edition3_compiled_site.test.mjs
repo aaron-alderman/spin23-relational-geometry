@@ -149,6 +149,40 @@ test("short articles are discoverable, shareable and machine-readable without du
   assert.match(signatures, /<li>physics without epistemic typing can overstate what a mathematical isomorphism establishes;<\/li>/u, "wrapped unordered article prose must not become a detached paragraph");
 });
 
+test("the public menu exposes a bounded correspondence lane", () => {
+  const home = readFileSync(join(siteRoot, "index.html"), "utf8");
+  assert.match(home, /Articles<\/a> · <a href="08-result-ledger\.html">Findings<\/a> · <a href="09-research-frontier\.html">Frontier<\/a>/u);
+  assert.match(home, /<a href="\.\.\/concept-map\/index\.html">Atlas<\/a> · <a href="correspondence\/index\.html">Correspondence<\/a> · <a href="reading-key\.html">Reading key<\/a>/u);
+
+  const correspondence = readFileSync(join(siteRoot, "correspondence", "index.html"), "utf8");
+  const letters = readFileSync(join(siteRoot, "correspondence", "letters", "index.html"), "utf8");
+  const conversations = readFileSync(join(siteRoot, "correspondence", "conversations", "index.html"), "utf8");
+  assert.match(correspondence, /<h1>Correspondence<\/h1>/u);
+  assert.match(correspondence, /Agreement is not evidence and disagreement is not defeat/u);
+  assert.match(correspondence, /href="letters\/index\.html"/u);
+  assert.match(correspondence, /href="conversations\/index\.html"/u);
+  assert.match(letters, /<h1>Letters<\/h1>/u);
+  assert.match(letters, /Eight questions, four executable packets/u);
+  assert.match(conversations, /<h1>Conversations<\/h1>/u);
+  assert.match(conversations, /OPH and the Admissibility Frontier/u);
+  assert.match(conversations, /2 entries · newest first · open/u);
+  assert.match(conversations, /href="oph-admissibility-frontier\/index\.html"/u);
+
+  const response = readFileSync(join(siteRoot, "correspondence", "conversations", "oph-admissibility-frontier", "index.html"), "utf8");
+  const initial = readFileSync(join(siteRoot, "correspondence", "conversations", "oph-admissibility-frontier", "initial-correspondence.html"), "utf8");
+  assert.match(response, /page 1 of 2/u);
+  assert.match(response, /A consciousness protocol/u);
+  assert.match(response, /Speculative extension: the Peirce field/u);
+  assert.match(response, /Older: Initial correspondence/u);
+  assert.match(response, /Public thread on X/u);
+  assert.match(response, /href="https:\/\/x\.com\/muellerberndt\/status\/2115751264797753537"/u);
+  assert.match(response, /href="https:\/\/x\.com\/muellerberndt\/status\/2114676116434645342"/u);
+  assert.match(initial, /page 2 of 2/u);
+  assert.match(initial, /What the initial reading left too quiet/u);
+  assert.match(initial, /Newer: Response/u);
+  assert.match(initial, /Initial OPH post on X/u);
+});
+
 test("every corpus Markdown source has a provenance-stamped compiled library page", () => {
   const manifest = JSON.parse(readFileSync(join(siteRoot, "library", "manifest.json"), "utf8"));
   const corpusMarkdownCount = filesBelow(join(root, "corpus")).filter(path => path.endsWith(".md")).length;

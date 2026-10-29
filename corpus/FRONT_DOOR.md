@@ -6,7 +6,7 @@ This is a generated atlas, not a claim of truth or completeness. Its machine-rea
 
 **Authority boundary.** This atlas reports repository structure and declared epistemic surfaces. It does not promote claims, replace source evidence, or grant publication, corpus-admission, runtime, or deployment authority.
 
-**Coverage.** 16 declared roots across 4 routes; 6614 retained inventory objects; 5237 objects reachable through local links; 6614 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
+**Coverage.** 17 declared roots across 5 routes; 6637 retained inventory objects; 5250 objects reachable through local links; 6637 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
 
 ## Understand the present claim
 
@@ -41,6 +41,14 @@ Move from a statement to its status, certificate, data, counterevidence, and rep
 | [verification-guide](../verification/README.md) | verification navigation | routes to executable certificates; a passing certificate has only its declared scope | repository verification layer |
 | [document-map](claims/0000-0099/00_research_document_map.md) | accretive provenance ledger | preserves chronology and links; not a standalone current synthesis | append-only claims ledger |
 
+## Follow correspondence
+
+Read attributed letters and evolving conversations without confusing exchange, agreement, or disagreement with scientific evidence.
+
+| Root | Status | Authority | Provenance |
+|---|---|---|---|
+| [correspondence-index](correspondence/README.md) | attributed interpretive history | routes to bounded letters and conversations; does not create joint endorsement or change claim status | maintained corpus source |
+
 ## Audit authority and provenance
 
 Inspect the exact inventory, publication boundary, repository history, and stewardship constraints.
@@ -58,10 +66,10 @@ A minimum dataset is capability-specific, not one universal subset. The **declar
 
 | Capability | Roots | Declared core files | Observed core bytes | Discoverable files | Observed discoverable bytes |
 |---|---|---:|---:|---:|---:|
-| Interpret faithfully | `reading-contract`, `current-synthesis`, `explanatory-standard`, `glossary` | 4 | 212.7 KiB | 5430 | 83.1 MiB |
-| Choose one bounded research task | `reading-contract`, `role-map`, `open-topics`, `target-set` | 6 | 158.7 KiB | 5430 | 83.1 MiB |
-| Audit claims, provenance, and authority | `reading-contract`, `evidence-spine`, `result-ledger`, `verification-guide`, `document-map`, `corpus-manifest`, `publication-authority` | 11 | 15.1 MiB | 5430 | 83.1 MiB |
-| Design a discriminating experiment | `reading-contract`, `current-synthesis`, `experiment-atlas`, `target-set`, `verification-guide` | 8 | 322.9 KiB | 5430 | 83.1 MiB |
+| Interpret faithfully | `reading-contract`, `current-synthesis`, `explanatory-standard`, `glossary` | 4 | 212.7 KiB | 5443 | 83.9 MiB |
+| Choose one bounded research task | `reading-contract`, `role-map`, `open-topics`, `target-set` | 6 | 158.7 KiB | 5443 | 83.9 MiB |
+| Audit claims, provenance, and authority | `reading-contract`, `evidence-spine`, `result-ledger`, `verification-guide`, `document-map`, `corpus-manifest`, `publication-authority` | 11 | 15.1 MiB | 5443 | 83.9 MiB |
+| Design a discriminating experiment | `reading-contract`, `current-synthesis`, `experiment-atlas`, `target-set`, `verification-guide` | 8 | 322.9 KiB | 5443 | 83.9 MiB |
 
 These profiles are map-only candidates, not admitted packages. Before extracting one, add the selected capability's exact runtime, provenance and falsification dependencies, then independently qualify the derived artifact. Use the full sealed or canonical corpus when custody, exact release reproduction, history, or unknown future questions matter.
 
@@ -73,7 +81,7 @@ Reachability measures what the declared entrances actually expose through local 
 |---|---:|---:|---:|---|
 | automation | 1 | 0 | 1.7 KiB | repository workflow automation |
 | claims | 1576 | 1567 | 15.5 MiB | append-only claim and provenance ledger |
-| corpus-navigation | 11 | 11 | 120.1 KiB | canonical corpus navigation, vocabulary, and reading rules |
+| corpus-navigation | 15 | 15 | 135.5 KiB | canonical corpus navigation, vocabulary, and reading rules |
 | evidence | 826 | 665 | 19.7 MiB | data, figures, and retained observations |
 | generated-publication | 9 | 1 | 137.0 KiB | generated deployable reading surfaces |
 | governance | 2 | 1 | 7.7 KiB | repository and publication governance |
@@ -84,8 +92,8 @@ Reachability measures what the declared entrances actually expose through local 
 | registers | 13 | 6 | 55.8 KiB | machine-readable inventory, state, and audit records |
 | repository-front-door | 9 | 5 | 29.5 KiB | root navigation, machine retrieval, agent guidance, stewardship, contribution, legal, and text-identity surfaces |
 | syntheses | 6 | 6 | 318.6 KiB | current and thesis-scale interpretive surfaces |
-| tests | 19 | 3 | 118.9 KiB | repository and publication invariants |
-| tooling | 145 | 30 | 10.6 MiB | generation, audit, migration, and publication utilities |
+| tests | 23 | 3 | 135.5 KiB | repository and publication invariants |
+| tooling | 160 | 39 | 11.3 MiB | generation, audit, migration, and publication utilities |
 | verification | 2132 | 1817 | 6.9 MiB | executable certificates and verification navigation |
 
 ## Structural contract
