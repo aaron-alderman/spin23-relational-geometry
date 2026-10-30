@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "admissibility-klein-experimental-capability-frontier-v1",
+  "date": "2026-10-30",
+  "status": "no-equipment-identifiability-and-capability-frontier-gate",
+  "seed": 177,
+  "monteCarloTrialsPerHypothesis": 4000,
+  "noiseFractions": [0.01, 0.03, 0.1, 0.2],
+  "hypotheses": {
+    "klein_hodge": {"oneLapMultiplier": -1, "nullity": 1, "firstPositiveGap": 1.59147782, "tOnePercentNu": 1.4468},
+    "klein_bochner": {"oneLapMultiplier": -1, "nullity": 0, "firstPositiveGap": 0.27426631, "tOnePercentNu": 8.3954},
+    "klein_deformation": {"oneLapMultiplier": -1, "nullity": 0, "firstPositiveGap": 0.54853261, "tOnePercentNu": 4.1977},
+    "rotation_hodge": {"oneLapMultiplier": 1, "nullity": 2, "firstPositiveGap": 0.97202599, "tOnePercentNu": 2.3689},
+    "rotation_bochner": {"oneLapMultiplier": 1, "nullity": 0, "firstPositiveGap": 0.12439483, "tOnePercentNu": 18.5103},
+    "rotation_deformation": {"oneLapMultiplier": 1, "nullity": 1, "firstPositiveGap": 0.54853261, "tOnePercentNu": 4.1977}
+  },
+  "throatSweep": {
+    "epsilon": [0.025, 0.05, 0.1, 0.2, 0.25],
+    "relativeNoise": 0.02,
+    "expectedExponent": 2
+  },
+  "nonlinearSweep": {
+    "drive": [0.02, 0.04, 0.08, 0.16, 0.32, 0.64],
+    "allowedDaughterPowerLaw": 2,
+    "forbiddenLeakagePowerLaw": 3,
+    "leakageFractionStop": 0.01
+  },
+  "thresholds": {
+    "minimumSignedReturnAccuracyAtTwentyPercentNoise": 0.99,
+    "minimumSixHypothesisAccuracyAtTenPercentNoise": 0.95,
+    "minimumPowerOnlyDegeneracyCount": 1,
+    "minimumQuadraticExponent": 1.9,
+    "maximumQuadraticExponent": 2.1,
+    "maximumEnergyObservationBudgetNu": 20,
+    "minimumNonlinearClosureDrive": 0.08
+  },
+  "nextGate": "Choose a programmable physical platform, calibrate its full complex transfer matrix and repeat the signed-return, spectrum, throat-scaling and nonlinear-closure sequence with measured uncertainty."
+}

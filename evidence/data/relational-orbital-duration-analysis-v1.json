@@ -1,0 +1,5852 @@
+{
+  "schema": "relational-orbital-duration-analysis/v1",
+  "date": "2026-10-30",
+  "runsSha256": "fe9d5efbbfc530f703db9f252cd6e83317504c0cfa827ec75dd20c11ad8478a7",
+  "previousAtlasSha256": "42c31bb9f218387a649742391d54a5f84ff3115623544e68f2a6cc7aefbfbc80",
+  "wholeSample": {
+    "sampleSize": 96,
+    "monitoringHorizon": 3000,
+    "counts": {
+      "administratively_right_censored": 61,
+      "observed_exit_range": 24,
+      "resolution_disagreement_with_censoring": 10,
+      "numerically_unresolved": 1
+    },
+    "restrictedMeanDuration": {
+      "lower": 2165.807682291667,
+      "upper": 2482.208024088541,
+      "interpretation": "Average min(exit duration, monitoring horizon), with numerical ambiguity retained; no tail extrapolation"
+    },
+    "quantiles": [
+      {
+        "p": 0.05,
+        "restrictedLowerCycles": 145.9578125,
+        "restrictedUpperCycles": 291.8,
+        "unrestrictedUpperIdentified": true,
+        "atMonitoringCeiling": false
+      },
+      {
+        "p": 0.5,
+        "restrictedLowerCycles": 3000,
+        "restrictedUpperCycles": 3000,
+        "unrestrictedUpperIdentified": false,
+        "atMonitoringCeiling": true
+      },
+      {
+        "p": 0.95,
+        "restrictedLowerCycles": 3000,
+        "restrictedUpperCycles": 3000,
+        "unrestrictedUpperIdentified": false,
+        "atMonitoringCeiling": true
+      }
+    ],
+    "curve": [
+      {
+        "cycles": 0,
+        "survived": 95,
+        "exited": 0,
+        "unresolved": 1,
+        "denominator": 96,
+        "survivalLower": 0.9895833333333334,
+        "survivalUpper": 1
+      },
+      {
+        "cycles": 99.384375,
+        "survived": 94,
+        "exited": 0,
+        "unresolved": 2,
+        "denominator": 96,
+        "survivalLower": 0.9791666666666666,
+        "survivalUpper": 1
+      },
+      {
+        "cycles": 99.3890625,
+        "survived": 94,
+        "exited": 1,
+        "unresolved": 1,
+        "denominator": 96,
+        "survivalLower": 0.9791666666666666,
+        "survivalUpper": 0.9895833333333334
+      },
+      {
+        "cycles": 116.2765625,
+        "survived": 93,
+        "exited": 1,
+        "unresolved": 2,
+        "denominator": 96,
+        "survivalLower": 0.96875,
+        "survivalUpper": 0.9895833333333334
+      },
+      {
+        "cycles": 123.328125,
+        "survived": 93,
+        "exited": 2,
+        "unresolved": 1,
+        "denominator": 96,
+        "survivalLower": 0.96875,
+        "survivalUpper": 0.9791666666666666
+      },
+      {
+        "cycles": 127.046875,
+        "survived": 92,
+        "exited": 2,
+        "unresolved": 2,
+        "denominator": 96,
+        "survivalLower": 0.9583333333333334,
+        "survivalUpper": 0.9791666666666666
+      },
+      {
+        "cycles": 145.9578125,
+        "survived": 91,
+        "exited": 2,
+        "unresolved": 3,
+        "denominator": 96,
+        "survivalLower": 0.9479166666666666,
+        "survivalUpper": 0.9791666666666666
+      },
+      {
+        "cycles": 157.4125,
+        "survived": 91,
+        "exited": 3,
+        "unresolved": 2,
+        "denominator": 96,
+        "survivalLower": 0.9479166666666666,
+        "survivalUpper": 0.96875
+      },
+      {
+        "cycles": 182.775,
+        "survived": 90,
+        "exited": 3,
+        "unresolved": 3,
+        "denominator": 96,
+        "survivalLower": 0.9375,
+        "survivalUpper": 0.96875
+      },
+      {
+        "cycles": 216.115625,
+        "survived": 89,
+        "exited": 3,
+        "unresolved": 4,
+        "denominator": 96,
+        "survivalLower": 0.9270833333333334,
+        "survivalUpper": 0.96875
+      },
+      {
+        "cycles": 218.09375,
+        "survived": 88,
+        "exited": 3,
+        "unresolved": 5,
+        "denominator": 96,
+        "survivalLower": 0.9166666666666666,
+        "survivalUpper": 0.96875
+      },
+      {
+        "cycles": 226.85,
+        "survived": 87,
+        "exited": 3,
+        "unresolved": 6,
+        "denominator": 96,
+        "survivalLower": 0.90625,
+        "survivalUpper": 0.96875
+      },
+      {
+        "cycles": 226.9375,
+        "survived": 86,
+        "exited": 3,
+        "unresolved": 7,
+        "denominator": 96,
+        "survivalLower": 0.8958333333333334,
+        "survivalUpper": 0.96875
+      },
+      {
+        "cycles": 259.640625,
+        "survived": 86,
+        "exited": 4,
+        "unresolved": 6,
+        "denominator": 96,
+        "survivalLower": 0.8958333333333334,
+        "survivalUpper": 0.9583333333333334
+      },
+      {
+        "cycles": 280.5,
+        "survived": 85,
+        "exited": 4,
+        "unresolved": 7,
+        "denominator": 96,
+        "survivalLower": 0.8854166666666666,
+        "survivalUpper": 0.9583333333333334
+      },
+      {
+        "cycles": 283,
+        "survived": 84,
+        "exited": 4,
+        "unresolved": 8,
+        "denominator": 96,
+        "survivalLower": 0.875,
+        "survivalUpper": 0.9583333333333334
+      },
+      {
+        "cycles": 291.8,
+        "survived": 84,
+        "exited": 5,
+        "unresolved": 7,
+        "denominator": 96,
+        "survivalLower": 0.875,
+        "survivalUpper": 0.9479166666666666
+      },
+      {
+        "cycles": 303.11875,
+        "survived": 83,
+        "exited": 5,
+        "unresolved": 8,
+        "denominator": 96,
+        "survivalLower": 0.8645833333333334,
+        "survivalUpper": 0.9479166666666666
+      },
+      {
+        "cycles": 318.36875,
+        "survived": 83,
+        "exited": 6,
+        "unresolved": 7,
+        "denominator": 96,
+        "survivalLower": 0.8645833333333334,
+        "survivalUpper": 0.9375
+      },
+      {
+        "cycles": 321.965625,
+        "survived": 83,
+        "exited": 7,
+        "unresolved": 6,
+        "denominator": 96,
+        "survivalLower": 0.8645833333333334,
+        "survivalUpper": 0.9270833333333334
+      },
+      {
+        "cycles": 355.834375,
+        "survived": 82,
+        "exited": 7,
+        "unresolved": 7,
+        "denominator": 96,
+        "survivalLower": 0.8541666666666666,
+        "survivalUpper": 0.9270833333333334
+      },
+      {
+        "cycles": 432.328125,
+        "survived": 82,
+        "exited": 8,
+        "unresolved": 6,
+        "denominator": 96,
+        "survivalLower": 0.8541666666666666,
+        "survivalUpper": 0.9166666666666666
+      },
+      {
+        "cycles": 486.3671875,
+        "survived": 82,
+        "exited": 9,
+        "unresolved": 5,
+        "denominator": 96,
+        "survivalLower": 0.8541666666666666,
+        "survivalUpper": 0.90625
+      },
+      {
+        "cycles": 496.778125,
+        "survived": 81,
+        "exited": 9,
+        "unresolved": 6,
+        "denominator": 96,
+        "survivalLower": 0.84375,
+        "survivalUpper": 0.90625
+      },
+      {
+        "cycles": 505.8,
+        "survived": 80,
+        "exited": 9,
+        "unresolved": 7,
+        "denominator": 96,
+        "survivalLower": 0.8333333333333334,
+        "survivalUpper": 0.90625
+      },
+      {
+        "cycles": 507.628125,
+        "survived": 79,
+        "exited": 9,
+        "unresolved": 8,
+        "denominator": 96,
+        "survivalLower": 0.8229166666666666,
+        "survivalUpper": 0.90625
+      },
+      {
+        "cycles": 516.7984375,
+        "survived": 79,
+        "exited": 10,
+        "unresolved": 7,
+        "denominator": 96,
+        "survivalLower": 0.8229166666666666,
+        "survivalUpper": 0.8958333333333334
+      },
+      {
+        "cycles": 529.809375,
+        "survived": 78,
+        "exited": 10,
+        "unresolved": 8,
+        "denominator": 96,
+        "survivalLower": 0.8125,
+        "survivalUpper": 0.8958333333333334
+      },
+      {
+        "cycles": 543.19375,
+        "survived": 77,
+        "exited": 10,
+        "unresolved": 9,
+        "denominator": 96,
+        "survivalLower": 0.8020833333333334,
+        "survivalUpper": 0.8958333333333334
+      },
+      {
+        "cycles": 559.88125,
+        "survived": 77,
+        "exited": 11,
+        "unresolved": 8,
+        "denominator": 96,
+        "survivalLower": 0.8020833333333334,
+        "survivalUpper": 0.8854166666666666
+      },
+      {
+        "cycles": 563.6125,
+        "survived": 77,
+        "exited": 12,
+        "unresolved": 7,
+        "denominator": 96,
+        "survivalLower": 0.8020833333333334,
+        "survivalUpper": 0.875
+      },
+      {
+        "cycles": 612.946875,
+        "survived": 77,
+        "exited": 13,
+        "unresolved": 6,
+        "denominator": 96,
+        "survivalLower": 0.8020833333333334,
+        "survivalUpper": 0.8645833333333334
+      },
+      {
+        "cycles": 656.815625,
+        "survived": 77,
+        "exited": 14,
+        "unresolved": 5,
+        "denominator": 96,
+        "survivalLower": 0.8020833333333334,
+        "survivalUpper": 0.8541666666666666
+      },
+      {
+        "cycles": 672.4796875,
+        "survived": 76,
+        "exited": 14,
+        "unresolved": 6,
+        "denominator": 96,
+        "survivalLower": 0.7916666666666666,
+        "survivalUpper": 0.8541666666666666
+      },
+      {
+        "cycles": 676.596875,
+        "survived": 75,
+        "exited": 14,
+        "unresolved": 7,
+        "denominator": 96,
+        "survivalLower": 0.78125,
+        "survivalUpper": 0.8541666666666666
+      },
+      {
+        "cycles": 794.9484375,
+        "survived": 74,
+        "exited": 14,
+        "unresolved": 8,
+        "denominator": 96,
+        "survivalLower": 0.7708333333333334,
+        "survivalUpper": 0.8541666666666666
+      },
+      {
+        "cycles": 802.8921875,
+        "survived": 73,
+        "exited": 14,
+        "unresolved": 9,
+        "denominator": 96,
+        "survivalLower": 0.7604166666666666,
+        "survivalUpper": 0.8541666666666666
+      },
+      {
+        "cycles": 816.3,
+        "survived": 73,
+        "exited": 14,
+        "unresolved": 9,
+        "denominator": 96,
+        "survivalLower": 0.7604166666666666,
+        "survivalUpper": 0.8541666666666666
+      },
+      {
+        "cycles": 851.640625,
+        "survived": 72,
+        "exited": 14,
+        "unresolved": 10,
+        "denominator": 96,
+        "survivalLower": 0.75,
+        "survivalUpper": 0.8541666666666666
+      },
+      {
+        "cycles": 860.259375,
+        "survived": 71,
+        "exited": 14,
+        "unresolved": 11,
+        "denominator": 96,
+        "survivalLower": 0.7395833333333334,
+        "survivalUpper": 0.8541666666666666
+      },
+      {
+        "cycles": 862.4609375,
+        "survived": 70,
+        "exited": 14,
+        "unresolved": 12,
+        "denominator": 96,
+        "survivalLower": 0.7291666666666666,
+        "survivalUpper": 0.8541666666666666
+      },
+      {
+        "cycles": 973.390625,
+        "survived": 70,
+        "exited": 15,
+        "unresolved": 11,
+        "denominator": 96,
+        "survivalLower": 0.7291666666666666,
+        "survivalUpper": 0.84375
+      },
+      {
+        "cycles": 1035.653125,
+        "survived": 69,
+        "exited": 15,
+        "unresolved": 12,
+        "denominator": 96,
+        "survivalLower": 0.71875,
+        "survivalUpper": 0.84375
+      },
+      {
+        "cycles": 1038.34375,
+        "survived": 68,
+        "exited": 15,
+        "unresolved": 13,
+        "denominator": 96,
+        "survivalLower": 0.7083333333333334,
+        "survivalUpper": 0.84375
+      },
+      {
+        "cycles": 1097.096875,
+        "survived": 67,
+        "exited": 15,
+        "unresolved": 14,
+        "denominator": 96,
+        "survivalLower": 0.6979166666666666,
+        "survivalUpper": 0.84375
+      },
+      {
+        "cycles": 1130.35,
+        "survived": 66,
+        "exited": 15,
+        "unresolved": 15,
+        "denominator": 96,
+        "survivalLower": 0.6875,
+        "survivalUpper": 0.84375
+      },
+      {
+        "cycles": 1130.353125,
+        "survived": 65,
+        "exited": 15,
+        "unresolved": 16,
+        "denominator": 96,
+        "survivalLower": 0.6770833333333334,
+        "survivalUpper": 0.84375
+      },
+      {
+        "cycles": 1242.378125,
+        "survived": 65,
+        "exited": 16,
+        "unresolved": 15,
+        "denominator": 96,
+        "survivalLower": 0.6770833333333334,
+        "survivalUpper": 0.8333333333333334
+      },
+      {
+        "cycles": 1266.146875,
+        "survived": 65,
+        "exited": 17,
+        "unresolved": 14,
+        "denominator": 96,
+        "survivalLower": 0.6770833333333334,
+        "survivalUpper": 0.8229166666666666
+      },
+      {
+        "cycles": 1512.021875,
+        "survived": 65,
+        "exited": 18,
+        "unresolved": 13,
+        "denominator": 96,
+        "survivalLower": 0.6770833333333334,
+        "survivalUpper": 0.8125
+      },
+      {
+        "cycles": 1648.20625,
+        "survived": 65,
+        "exited": 19,
+        "unresolved": 12,
+        "denominator": 96,
+        "survivalLower": 0.6770833333333334,
+        "survivalUpper": 0.8020833333333334
+      },
+      {
+        "cycles": 1662.64375,
+        "survived": 65,
+        "exited": 20,
+        "unresolved": 11,
+        "denominator": 96,
+        "survivalLower": 0.6770833333333334,
+        "survivalUpper": 0.7916666666666666
+      },
+      {
+        "cycles": 1752.4203125,
+        "survived": 65,
+        "exited": 21,
+        "unresolved": 10,
+        "denominator": 96,
+        "survivalLower": 0.6770833333333334,
+        "survivalUpper": 0.78125
+      },
+      {
+        "cycles": 2023.196875,
+        "survived": 64,
+        "exited": 21,
+        "unresolved": 11,
+        "denominator": 96,
+        "survivalLower": 0.6666666666666666,
+        "survivalUpper": 0.78125
+      },
+      {
+        "cycles": 2083.6421875,
+        "survived": 63,
+        "exited": 21,
+        "unresolved": 12,
+        "denominator": 96,
+        "survivalLower": 0.65625,
+        "survivalUpper": 0.78125
+      },
+      {
+        "cycles": 2084.7640625,
+        "survived": 62,
+        "exited": 21,
+        "unresolved": 13,
+        "denominator": 96,
+        "survivalLower": 0.6458333333333334,
+        "survivalUpper": 0.78125
+      },
+      {
+        "cycles": 2268.9546875,
+        "survived": 62,
+        "exited": 22,
+        "unresolved": 12,
+        "denominator": 96,
+        "survivalLower": 0.6458333333333334,
+        "survivalUpper": 0.7708333333333334
+      },
+      {
+        "cycles": 2274.171875,
+        "survived": 62,
+        "exited": 23,
+        "unresolved": 11,
+        "denominator": 96,
+        "survivalLower": 0.6458333333333334,
+        "survivalUpper": 0.7604166666666666
+      },
+      {
+        "cycles": 2290.98125,
+        "survived": 62,
+        "exited": 24,
+        "unresolved": 10,
+        "denominator": 96,
+        "survivalLower": 0.6458333333333334,
+        "survivalUpper": 0.75
+      },
+      {
+        "cycles": 2407.759375,
+        "survived": 61,
+        "exited": 24,
+        "unresolved": 11,
+        "denominator": 96,
+        "survivalLower": 0.6354166666666666,
+        "survivalUpper": 0.75
+      },
+      {
+        "cycles": 3000,
+        "survived": 61,
+        "exited": 24,
+        "unresolved": 11,
+        "denominator": 96,
+        "survivalLower": 0.6354166666666666,
+        "survivalUpper": 0.75
+      }
+    ]
+  },
+  "byRatio": [
+    {
+      "ratio": 1.4,
+      "sampleSize": 48,
+      "monitoringHorizon": 3000,
+      "counts": {
+        "administratively_right_censored": 14,
+        "observed_exit_range": 24,
+        "resolution_disagreement_with_censoring": 9,
+        "numerically_unresolved": 1
+      },
+      "restrictedMeanDuration": {
+        "lower": 1376.1474283854168,
+        "upper": 1964.416048177083,
+        "interpretation": "Average min(exit duration, monitoring horizon), with numerical ambiguity retained; no tail extrapolation"
+      },
+      "quantiles": [
+        {
+          "p": 0.05,
+          "restrictedLowerCycles": 116.2765625,
+          "restrictedUpperCycles": 157.4125,
+          "unrestrictedUpperIdentified": true,
+          "atMonitoringCeiling": false
+        },
+        {
+          "p": 0.5,
+          "restrictedLowerCycles": 851.640625,
+          "restrictedUpperCycles": 2290.98125,
+          "unrestrictedUpperIdentified": true,
+          "atMonitoringCeiling": false
+        },
+        {
+          "p": 0.95,
+          "restrictedLowerCycles": 3000,
+          "restrictedUpperCycles": 3000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        }
+      ],
+      "curve": [
+        {
+          "cycles": 0,
+          "survived": 47,
+          "exited": 0,
+          "unresolved": 1,
+          "denominator": 48,
+          "survivalLower": 0.9791666666666666,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 99.384375,
+          "survived": 46,
+          "exited": 0,
+          "unresolved": 2,
+          "denominator": 48,
+          "survivalLower": 0.9583333333333334,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 99.3890625,
+          "survived": 46,
+          "exited": 1,
+          "unresolved": 1,
+          "denominator": 48,
+          "survivalLower": 0.9583333333333334,
+          "survivalUpper": 0.9791666666666666
+        },
+        {
+          "cycles": 116.2765625,
+          "survived": 45,
+          "exited": 1,
+          "unresolved": 2,
+          "denominator": 48,
+          "survivalLower": 0.9375,
+          "survivalUpper": 0.9791666666666666
+        },
+        {
+          "cycles": 123.328125,
+          "survived": 45,
+          "exited": 2,
+          "unresolved": 1,
+          "denominator": 48,
+          "survivalLower": 0.9375,
+          "survivalUpper": 0.9583333333333334
+        },
+        {
+          "cycles": 127.046875,
+          "survived": 44,
+          "exited": 2,
+          "unresolved": 2,
+          "denominator": 48,
+          "survivalLower": 0.9166666666666666,
+          "survivalUpper": 0.9583333333333334
+        },
+        {
+          "cycles": 145.9578125,
+          "survived": 43,
+          "exited": 2,
+          "unresolved": 3,
+          "denominator": 48,
+          "survivalLower": 0.8958333333333334,
+          "survivalUpper": 0.9583333333333334
+        },
+        {
+          "cycles": 157.4125,
+          "survived": 43,
+          "exited": 3,
+          "unresolved": 2,
+          "denominator": 48,
+          "survivalLower": 0.8958333333333334,
+          "survivalUpper": 0.9375
+        },
+        {
+          "cycles": 182.775,
+          "survived": 42,
+          "exited": 3,
+          "unresolved": 3,
+          "denominator": 48,
+          "survivalLower": 0.875,
+          "survivalUpper": 0.9375
+        },
+        {
+          "cycles": 216.115625,
+          "survived": 41,
+          "exited": 3,
+          "unresolved": 4,
+          "denominator": 48,
+          "survivalLower": 0.8541666666666666,
+          "survivalUpper": 0.9375
+        },
+        {
+          "cycles": 218.09375,
+          "survived": 40,
+          "exited": 3,
+          "unresolved": 5,
+          "denominator": 48,
+          "survivalLower": 0.8333333333333334,
+          "survivalUpper": 0.9375
+        },
+        {
+          "cycles": 226.85,
+          "survived": 39,
+          "exited": 3,
+          "unresolved": 6,
+          "denominator": 48,
+          "survivalLower": 0.8125,
+          "survivalUpper": 0.9375
+        },
+        {
+          "cycles": 226.9375,
+          "survived": 38,
+          "exited": 3,
+          "unresolved": 7,
+          "denominator": 48,
+          "survivalLower": 0.7916666666666666,
+          "survivalUpper": 0.9375
+        },
+        {
+          "cycles": 259.640625,
+          "survived": 38,
+          "exited": 4,
+          "unresolved": 6,
+          "denominator": 48,
+          "survivalLower": 0.7916666666666666,
+          "survivalUpper": 0.9166666666666666
+        },
+        {
+          "cycles": 280.5,
+          "survived": 37,
+          "exited": 4,
+          "unresolved": 7,
+          "denominator": 48,
+          "survivalLower": 0.7708333333333334,
+          "survivalUpper": 0.9166666666666666
+        },
+        {
+          "cycles": 283,
+          "survived": 36,
+          "exited": 4,
+          "unresolved": 8,
+          "denominator": 48,
+          "survivalLower": 0.75,
+          "survivalUpper": 0.9166666666666666
+        },
+        {
+          "cycles": 291.8,
+          "survived": 36,
+          "exited": 5,
+          "unresolved": 7,
+          "denominator": 48,
+          "survivalLower": 0.75,
+          "survivalUpper": 0.8958333333333334
+        },
+        {
+          "cycles": 303.11875,
+          "survived": 35,
+          "exited": 5,
+          "unresolved": 8,
+          "denominator": 48,
+          "survivalLower": 0.7291666666666666,
+          "survivalUpper": 0.8958333333333334
+        },
+        {
+          "cycles": 318.36875,
+          "survived": 35,
+          "exited": 6,
+          "unresolved": 7,
+          "denominator": 48,
+          "survivalLower": 0.7291666666666666,
+          "survivalUpper": 0.875
+        },
+        {
+          "cycles": 321.965625,
+          "survived": 35,
+          "exited": 7,
+          "unresolved": 6,
+          "denominator": 48,
+          "survivalLower": 0.7291666666666666,
+          "survivalUpper": 0.8541666666666666
+        },
+        {
+          "cycles": 355.834375,
+          "survived": 34,
+          "exited": 7,
+          "unresolved": 7,
+          "denominator": 48,
+          "survivalLower": 0.7083333333333334,
+          "survivalUpper": 0.8541666666666666
+        },
+        {
+          "cycles": 432.328125,
+          "survived": 34,
+          "exited": 8,
+          "unresolved": 6,
+          "denominator": 48,
+          "survivalLower": 0.7083333333333334,
+          "survivalUpper": 0.8333333333333334
+        },
+        {
+          "cycles": 486.3671875,
+          "survived": 34,
+          "exited": 9,
+          "unresolved": 5,
+          "denominator": 48,
+          "survivalLower": 0.7083333333333334,
+          "survivalUpper": 0.8125
+        },
+        {
+          "cycles": 496.778125,
+          "survived": 33,
+          "exited": 9,
+          "unresolved": 6,
+          "denominator": 48,
+          "survivalLower": 0.6875,
+          "survivalUpper": 0.8125
+        },
+        {
+          "cycles": 505.8,
+          "survived": 32,
+          "exited": 9,
+          "unresolved": 7,
+          "denominator": 48,
+          "survivalLower": 0.6666666666666666,
+          "survivalUpper": 0.8125
+        },
+        {
+          "cycles": 507.628125,
+          "survived": 31,
+          "exited": 9,
+          "unresolved": 8,
+          "denominator": 48,
+          "survivalLower": 0.6458333333333334,
+          "survivalUpper": 0.8125
+        },
+        {
+          "cycles": 516.7984375,
+          "survived": 31,
+          "exited": 10,
+          "unresolved": 7,
+          "denominator": 48,
+          "survivalLower": 0.6458333333333334,
+          "survivalUpper": 0.7916666666666666
+        },
+        {
+          "cycles": 529.809375,
+          "survived": 30,
+          "exited": 10,
+          "unresolved": 8,
+          "denominator": 48,
+          "survivalLower": 0.625,
+          "survivalUpper": 0.7916666666666666
+        },
+        {
+          "cycles": 543.19375,
+          "survived": 29,
+          "exited": 10,
+          "unresolved": 9,
+          "denominator": 48,
+          "survivalLower": 0.6041666666666666,
+          "survivalUpper": 0.7916666666666666
+        },
+        {
+          "cycles": 559.88125,
+          "survived": 29,
+          "exited": 11,
+          "unresolved": 8,
+          "denominator": 48,
+          "survivalLower": 0.6041666666666666,
+          "survivalUpper": 0.7708333333333334
+        },
+        {
+          "cycles": 563.6125,
+          "survived": 29,
+          "exited": 12,
+          "unresolved": 7,
+          "denominator": 48,
+          "survivalLower": 0.6041666666666666,
+          "survivalUpper": 0.75
+        },
+        {
+          "cycles": 612.946875,
+          "survived": 29,
+          "exited": 13,
+          "unresolved": 6,
+          "denominator": 48,
+          "survivalLower": 0.6041666666666666,
+          "survivalUpper": 0.7291666666666666
+        },
+        {
+          "cycles": 656.815625,
+          "survived": 29,
+          "exited": 14,
+          "unresolved": 5,
+          "denominator": 48,
+          "survivalLower": 0.6041666666666666,
+          "survivalUpper": 0.7083333333333334
+        },
+        {
+          "cycles": 672.4796875,
+          "survived": 28,
+          "exited": 14,
+          "unresolved": 6,
+          "denominator": 48,
+          "survivalLower": 0.5833333333333334,
+          "survivalUpper": 0.7083333333333334
+        },
+        {
+          "cycles": 676.596875,
+          "survived": 27,
+          "exited": 14,
+          "unresolved": 7,
+          "denominator": 48,
+          "survivalLower": 0.5625,
+          "survivalUpper": 0.7083333333333334
+        },
+        {
+          "cycles": 794.9484375,
+          "survived": 26,
+          "exited": 14,
+          "unresolved": 8,
+          "denominator": 48,
+          "survivalLower": 0.5416666666666666,
+          "survivalUpper": 0.7083333333333334
+        },
+        {
+          "cycles": 802.8921875,
+          "survived": 25,
+          "exited": 14,
+          "unresolved": 9,
+          "denominator": 48,
+          "survivalLower": 0.5208333333333334,
+          "survivalUpper": 0.7083333333333334
+        },
+        {
+          "cycles": 816.3,
+          "survived": 25,
+          "exited": 14,
+          "unresolved": 9,
+          "denominator": 48,
+          "survivalLower": 0.5208333333333334,
+          "survivalUpper": 0.7083333333333334
+        },
+        {
+          "cycles": 851.640625,
+          "survived": 24,
+          "exited": 14,
+          "unresolved": 10,
+          "denominator": 48,
+          "survivalLower": 0.5,
+          "survivalUpper": 0.7083333333333334
+        },
+        {
+          "cycles": 860.259375,
+          "survived": 23,
+          "exited": 14,
+          "unresolved": 11,
+          "denominator": 48,
+          "survivalLower": 0.4791666666666667,
+          "survivalUpper": 0.7083333333333334
+        },
+        {
+          "cycles": 973.390625,
+          "survived": 23,
+          "exited": 15,
+          "unresolved": 10,
+          "denominator": 48,
+          "survivalLower": 0.4791666666666667,
+          "survivalUpper": 0.6875
+        },
+        {
+          "cycles": 1035.653125,
+          "survived": 22,
+          "exited": 15,
+          "unresolved": 11,
+          "denominator": 48,
+          "survivalLower": 0.4583333333333333,
+          "survivalUpper": 0.6875
+        },
+        {
+          "cycles": 1038.34375,
+          "survived": 21,
+          "exited": 15,
+          "unresolved": 12,
+          "denominator": 48,
+          "survivalLower": 0.4375,
+          "survivalUpper": 0.6875
+        },
+        {
+          "cycles": 1097.096875,
+          "survived": 20,
+          "exited": 15,
+          "unresolved": 13,
+          "denominator": 48,
+          "survivalLower": 0.4166666666666667,
+          "survivalUpper": 0.6875
+        },
+        {
+          "cycles": 1130.35,
+          "survived": 19,
+          "exited": 15,
+          "unresolved": 14,
+          "denominator": 48,
+          "survivalLower": 0.3958333333333333,
+          "survivalUpper": 0.6875
+        },
+        {
+          "cycles": 1130.353125,
+          "survived": 18,
+          "exited": 15,
+          "unresolved": 15,
+          "denominator": 48,
+          "survivalLower": 0.375,
+          "survivalUpper": 0.6875
+        },
+        {
+          "cycles": 1242.378125,
+          "survived": 18,
+          "exited": 16,
+          "unresolved": 14,
+          "denominator": 48,
+          "survivalLower": 0.375,
+          "survivalUpper": 0.6666666666666666
+        },
+        {
+          "cycles": 1266.146875,
+          "survived": 18,
+          "exited": 17,
+          "unresolved": 13,
+          "denominator": 48,
+          "survivalLower": 0.375,
+          "survivalUpper": 0.6458333333333334
+        },
+        {
+          "cycles": 1512.021875,
+          "survived": 18,
+          "exited": 18,
+          "unresolved": 12,
+          "denominator": 48,
+          "survivalLower": 0.375,
+          "survivalUpper": 0.625
+        },
+        {
+          "cycles": 1648.20625,
+          "survived": 18,
+          "exited": 19,
+          "unresolved": 11,
+          "denominator": 48,
+          "survivalLower": 0.375,
+          "survivalUpper": 0.6041666666666666
+        },
+        {
+          "cycles": 1662.64375,
+          "survived": 18,
+          "exited": 20,
+          "unresolved": 10,
+          "denominator": 48,
+          "survivalLower": 0.375,
+          "survivalUpper": 0.5833333333333334
+        },
+        {
+          "cycles": 1752.4203125,
+          "survived": 18,
+          "exited": 21,
+          "unresolved": 9,
+          "denominator": 48,
+          "survivalLower": 0.375,
+          "survivalUpper": 0.5625
+        },
+        {
+          "cycles": 2023.196875,
+          "survived": 17,
+          "exited": 21,
+          "unresolved": 10,
+          "denominator": 48,
+          "survivalLower": 0.3541666666666667,
+          "survivalUpper": 0.5625
+        },
+        {
+          "cycles": 2083.6421875,
+          "survived": 16,
+          "exited": 21,
+          "unresolved": 11,
+          "denominator": 48,
+          "survivalLower": 0.3333333333333333,
+          "survivalUpper": 0.5625
+        },
+        {
+          "cycles": 2084.7640625,
+          "survived": 15,
+          "exited": 21,
+          "unresolved": 12,
+          "denominator": 48,
+          "survivalLower": 0.3125,
+          "survivalUpper": 0.5625
+        },
+        {
+          "cycles": 2268.9546875,
+          "survived": 15,
+          "exited": 22,
+          "unresolved": 11,
+          "denominator": 48,
+          "survivalLower": 0.3125,
+          "survivalUpper": 0.5416666666666666
+        },
+        {
+          "cycles": 2274.171875,
+          "survived": 15,
+          "exited": 23,
+          "unresolved": 10,
+          "denominator": 48,
+          "survivalLower": 0.3125,
+          "survivalUpper": 0.5208333333333334
+        },
+        {
+          "cycles": 2290.98125,
+          "survived": 15,
+          "exited": 24,
+          "unresolved": 9,
+          "denominator": 48,
+          "survivalLower": 0.3125,
+          "survivalUpper": 0.5
+        },
+        {
+          "cycles": 2407.759375,
+          "survived": 14,
+          "exited": 24,
+          "unresolved": 10,
+          "denominator": 48,
+          "survivalLower": 0.2916666666666667,
+          "survivalUpper": 0.5
+        },
+        {
+          "cycles": 3000,
+          "survived": 14,
+          "exited": 24,
+          "unresolved": 10,
+          "denominator": 48,
+          "survivalLower": 0.2916666666666667,
+          "survivalUpper": 0.5
+        }
+      ]
+    },
+    {
+      "ratio": 1.425,
+      "sampleSize": 48,
+      "monitoringHorizon": 3000,
+      "counts": {
+        "administratively_right_censored": 47,
+        "observed_exit_range": 0,
+        "resolution_disagreement_with_censoring": 1,
+        "numerically_unresolved": 0
+      },
+      "restrictedMeanDuration": {
+        "lower": 2955.4679361979165,
+        "upper": 3000,
+        "interpretation": "Average min(exit duration, monitoring horizon), with numerical ambiguity retained; no tail extrapolation"
+      },
+      "quantiles": [
+        {
+          "p": 0.05,
+          "restrictedLowerCycles": 3000,
+          "restrictedUpperCycles": 3000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        },
+        {
+          "p": 0.5,
+          "restrictedLowerCycles": 3000,
+          "restrictedUpperCycles": 3000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        },
+        {
+          "p": 0.95,
+          "restrictedLowerCycles": 3000,
+          "restrictedUpperCycles": 3000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        }
+      ],
+      "curve": [
+        {
+          "cycles": 0,
+          "survived": 48,
+          "exited": 0,
+          "unresolved": 0,
+          "denominator": 48,
+          "survivalLower": 1,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 862.4609375,
+          "survived": 47,
+          "exited": 0,
+          "unresolved": 1,
+          "denominator": 48,
+          "survivalLower": 0.9791666666666666,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 3000,
+          "survived": 47,
+          "exited": 0,
+          "unresolved": 1,
+          "denominator": 48,
+          "survivalLower": 0.9791666666666666,
+          "survivalUpper": 1
+        }
+      ]
+    }
+  ],
+  "previousNeighbourhoods": [
+    {
+      "center": {
+        "ratio": 1.575,
+        "phase": 0
+      },
+      "sampleSize": 25,
+      "monitoringHorizon": 1000,
+      "counts": {
+        "administratively_right_censored": 25,
+        "observed_exit_range": 0,
+        "resolution_disagreement_with_censoring": 0,
+        "numerically_unresolved": 0
+      },
+      "restrictedMeanDuration": {
+        "lower": 1000,
+        "upper": 1000,
+        "interpretation": "Average min(exit duration, monitoring horizon), with numerical ambiguity retained; no tail extrapolation"
+      },
+      "quantiles": [
+        {
+          "p": 0.05,
+          "restrictedLowerCycles": 1000,
+          "restrictedUpperCycles": 1000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        },
+        {
+          "p": 0.5,
+          "restrictedLowerCycles": 1000,
+          "restrictedUpperCycles": 1000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        },
+        {
+          "p": 0.95,
+          "restrictedLowerCycles": 1000,
+          "restrictedUpperCycles": 1000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        }
+      ],
+      "curve": [
+        {
+          "cycles": 0,
+          "survived": 25,
+          "exited": 0,
+          "unresolved": 0,
+          "denominator": 25,
+          "survivalLower": 1,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 1000,
+          "survived": 25,
+          "exited": 0,
+          "unresolved": 0,
+          "denominator": 25,
+          "survivalLower": 1,
+          "survivalUpper": 1
+        }
+      ]
+    },
+    {
+      "center": {
+        "ratio": 1.4,
+        "phase": 0
+      },
+      "sampleSize": 25,
+      "monitoringHorizon": 1000,
+      "counts": {
+        "administratively_right_censored": 25,
+        "observed_exit_range": 0,
+        "resolution_disagreement_with_censoring": 0,
+        "numerically_unresolved": 0
+      },
+      "restrictedMeanDuration": {
+        "lower": 1000,
+        "upper": 1000,
+        "interpretation": "Average min(exit duration, monitoring horizon), with numerical ambiguity retained; no tail extrapolation"
+      },
+      "quantiles": [
+        {
+          "p": 0.05,
+          "restrictedLowerCycles": 1000,
+          "restrictedUpperCycles": 1000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        },
+        {
+          "p": 0.5,
+          "restrictedLowerCycles": 1000,
+          "restrictedUpperCycles": 1000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        },
+        {
+          "p": 0.95,
+          "restrictedLowerCycles": 1000,
+          "restrictedUpperCycles": 1000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        }
+      ],
+      "curve": [
+        {
+          "cycles": 0,
+          "survived": 25,
+          "exited": 0,
+          "unresolved": 0,
+          "denominator": 25,
+          "survivalLower": 1,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 1000,
+          "survived": 25,
+          "exited": 0,
+          "unresolved": 0,
+          "denominator": 25,
+          "survivalLower": 1,
+          "survivalUpper": 1
+        }
+      ]
+    },
+    {
+      "center": {
+        "ratio": 1.4,
+        "phase": 0.2617993877991494
+      },
+      "sampleSize": 25,
+      "monitoringHorizon": 1000,
+      "counts": {
+        "administratively_right_censored": 7,
+        "observed_exit_range": 10,
+        "resolution_disagreement_with_censoring": 8,
+        "numerically_unresolved": 0
+      },
+      "restrictedMeanDuration": {
+        "lower": 624.253125,
+        "upper": 820.8221249999999,
+        "interpretation": "Average min(exit duration, monitoring horizon), with numerical ambiguity retained; no tail extrapolation"
+      },
+      "quantiles": [
+        {
+          "p": 0.05,
+          "restrictedLowerCycles": 314.3140625,
+          "restrictedUpperCycles": 443.7015625,
+          "unrestrictedUpperIdentified": true,
+          "atMonitoringCeiling": false
+        },
+        {
+          "p": 0.5,
+          "restrictedLowerCycles": 498.8828125,
+          "restrictedUpperCycles": 1000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": false
+        },
+        {
+          "p": 0.95,
+          "restrictedLowerCycles": 1000,
+          "restrictedUpperCycles": 1000,
+          "unrestrictedUpperIdentified": false,
+          "atMonitoringCeiling": true
+        }
+      ],
+      "curve": [
+        {
+          "cycles": 0,
+          "survived": 25,
+          "exited": 0,
+          "unresolved": 0,
+          "denominator": 25,
+          "survivalLower": 1,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 271.1234375,
+          "survived": 24,
+          "exited": 0,
+          "unresolved": 1,
+          "denominator": 25,
+          "survivalLower": 0.96,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 314.3140625,
+          "survived": 23,
+          "exited": 0,
+          "unresolved": 2,
+          "denominator": 25,
+          "survivalLower": 0.92,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 394.353125,
+          "survived": 22,
+          "exited": 0,
+          "unresolved": 3,
+          "denominator": 25,
+          "survivalLower": 0.88,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 408.5734375,
+          "survived": 21,
+          "exited": 0,
+          "unresolved": 4,
+          "denominator": 25,
+          "survivalLower": 0.84,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 409.9328125,
+          "survived": 20,
+          "exited": 0,
+          "unresolved": 5,
+          "denominator": 25,
+          "survivalLower": 0.8,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 433.925,
+          "survived": 19,
+          "exited": 0,
+          "unresolved": 6,
+          "denominator": 25,
+          "survivalLower": 0.76,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 434.021875,
+          "survived": 18,
+          "exited": 0,
+          "unresolved": 7,
+          "denominator": 25,
+          "survivalLower": 0.72,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 436.0015625,
+          "survived": 17,
+          "exited": 0,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.68,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 436.8890625,
+          "survived": 16,
+          "exited": 0,
+          "unresolved": 9,
+          "denominator": 25,
+          "survivalLower": 0.64,
+          "survivalUpper": 1
+        },
+        {
+          "cycles": 437.87109375,
+          "survived": 16,
+          "exited": 1,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.64,
+          "survivalUpper": 0.96
+        },
+        {
+          "cycles": 442.0859375,
+          "survived": 15,
+          "exited": 1,
+          "unresolved": 9,
+          "denominator": 25,
+          "survivalLower": 0.6,
+          "survivalUpper": 0.96
+        },
+        {
+          "cycles": 443.7015625,
+          "survived": 15,
+          "exited": 2,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.6,
+          "survivalUpper": 0.92
+        },
+        {
+          "cycles": 450.88125,
+          "survived": 14,
+          "exited": 2,
+          "unresolved": 9,
+          "denominator": 25,
+          "survivalLower": 0.56,
+          "survivalUpper": 0.92
+        },
+        {
+          "cycles": 457.81875,
+          "survived": 14,
+          "exited": 3,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.56,
+          "survivalUpper": 0.88
+        },
+        {
+          "cycles": 458.4515625,
+          "survived": 14,
+          "exited": 4,
+          "unresolved": 7,
+          "denominator": 25,
+          "survivalLower": 0.56,
+          "survivalUpper": 0.84
+        },
+        {
+          "cycles": 467.6953125,
+          "survived": 14,
+          "exited": 5,
+          "unresolved": 6,
+          "denominator": 25,
+          "survivalLower": 0.56,
+          "survivalUpper": 0.8
+        },
+        {
+          "cycles": 481.1390625,
+          "survived": 14,
+          "exited": 6,
+          "unresolved": 5,
+          "denominator": 25,
+          "survivalLower": 0.56,
+          "survivalUpper": 0.76
+        },
+        {
+          "cycles": 487.3609375,
+          "survived": 13,
+          "exited": 6,
+          "unresolved": 6,
+          "denominator": 25,
+          "survivalLower": 0.52,
+          "survivalUpper": 0.76
+        },
+        {
+          "cycles": 498.8828125,
+          "survived": 12,
+          "exited": 6,
+          "unresolved": 7,
+          "denominator": 25,
+          "survivalLower": 0.48,
+          "survivalUpper": 0.76
+        },
+        {
+          "cycles": 513.4640625,
+          "survived": 11,
+          "exited": 6,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.44,
+          "survivalUpper": 0.76
+        },
+        {
+          "cycles": 533.59375,
+          "survived": 10,
+          "exited": 6,
+          "unresolved": 9,
+          "denominator": 25,
+          "survivalLower": 0.4,
+          "survivalUpper": 0.76
+        },
+        {
+          "cycles": 555.99375,
+          "survived": 10,
+          "exited": 7,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.4,
+          "survivalUpper": 0.72
+        },
+        {
+          "cycles": 626.54609375,
+          "survived": 10,
+          "exited": 8,
+          "unresolved": 7,
+          "denominator": 25,
+          "survivalLower": 0.4,
+          "survivalUpper": 0.68
+        },
+        {
+          "cycles": 650.0625,
+          "survived": 9,
+          "exited": 8,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.36,
+          "survivalUpper": 0.68
+        },
+        {
+          "cycles": 664.8765625,
+          "survived": 9,
+          "exited": 9,
+          "unresolved": 7,
+          "denominator": 25,
+          "survivalLower": 0.36,
+          "survivalUpper": 0.64
+        },
+        {
+          "cycles": 738.0953125,
+          "survived": 8,
+          "exited": 9,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.32,
+          "survivalUpper": 0.64
+        },
+        {
+          "cycles": 752.7671875,
+          "survived": 7,
+          "exited": 9,
+          "unresolved": 9,
+          "denominator": 25,
+          "survivalLower": 0.28,
+          "survivalUpper": 0.64
+        },
+        {
+          "cycles": 926.459375,
+          "survived": 7,
+          "exited": 10,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.28,
+          "survivalUpper": 0.6
+        },
+        {
+          "cycles": 1000,
+          "survived": 7,
+          "exited": 10,
+          "unresolved": 8,
+          "denominator": 25,
+          "survivalLower": 0.28,
+          "survivalUpper": 0.6
+        }
+      ]
+    }
+  ],
+  "durations": [
+    {
+      "id": "1.400:0",
+      "ratio": 1.4,
+      "phase": 0.06544984694978735,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:1",
+      "ratio": 1.4,
+      "phase": 0.19634954084936207,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:2",
+      "ratio": 1.4,
+      "phase": 0.3272492347489368,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 226.9375,
+      "upperObservedCycles": 321.965625,
+      "restrictedLowerCycles": 226.9375,
+      "restrictedUpperCycles": 321.965625,
+      "reciprocalDurationRange": {
+        "lower": 0.0031059216337147796,
+        "upper": 0.004406499586890664
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:3",
+      "ratio": 1.4,
+      "phase": 0.4581489286485115,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 355.834375,
+      "upperObservedCycles": 973.390625,
+      "restrictedLowerCycles": 355.834375,
+      "restrictedUpperCycles": 973.390625,
+      "reciprocalDurationRange": {
+        "lower": 0.0010273367898935744,
+        "upper": 0.002810296222786233
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:4",
+      "ratio": 1.4,
+      "phase": 0.5890486225480862,
+      "split": "train",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 2023.196875,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 2023.196875,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0004942672719381301
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:5",
+      "ratio": 1.4,
+      "phase": 0.7199483164476609,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 794.9484375,
+      "upperObservedCycles": 1512.021875,
+      "restrictedLowerCycles": 794.9484375,
+      "restrictedUpperCycles": 1512.021875,
+      "reciprocalDurationRange": {
+        "lower": 0.0006613660930004734,
+        "upper": 0.0012579432235188212
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:6",
+      "ratio": 1.4,
+      "phase": 0.8508480103472357,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:7",
+      "ratio": 1.4,
+      "phase": 0.9817477042468102,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:8",
+      "ratio": 1.4,
+      "phase": 1.1126473981463851,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:9",
+      "ratio": 1.4,
+      "phase": 1.2435470920459597,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:10",
+      "ratio": 1.4,
+      "phase": 1.3744467859455345,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 2084.7640625,
+      "upperObservedCycles": 2274.171875,
+      "restrictedLowerCycles": 2084.7640625,
+      "restrictedUpperCycles": 2274.171875,
+      "reciprocalDurationRange": {
+        "lower": 0.0004397205026554996,
+        "upper": 0.00047967058622491005
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:11",
+      "ratio": 1.4,
+      "phase": 1.505346479845109,
+      "split": "train",
+      "status": "numerically_unresolved",
+      "lowerObservedCycles": 0,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 0,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": null
+      }
+    },
+    {
+      "id": "1.400:12",
+      "ratio": 1.4,
+      "phase": 1.636246173744684,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 145.9578125,
+      "upperObservedCycles": 291.8,
+      "restrictedLowerCycles": 145.9578125,
+      "restrictedUpperCycles": 291.8,
+      "reciprocalDurationRange": {
+        "lower": 0.003427004797806717,
+        "upper": 0.006851294787663388
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:13",
+      "ratio": 1.4,
+      "phase": 1.7671458676442586,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 99.384375,
+      "upperObservedCycles": 99.3890625,
+      "restrictedLowerCycles": 99.384375,
+      "restrictedUpperCycles": 99.3890625,
+      "reciprocalDurationRange": {
+        "lower": 0.0100614692889371,
+        "upper": 0.010061943841775932
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:14",
+      "ratio": 1.4,
+      "phase": 1.8980455615438334,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 116.2765625,
+      "upperObservedCycles": 123.328125,
+      "restrictedLowerCycles": 116.2765625,
+      "restrictedUpperCycles": 123.328125,
+      "reciprocalDurationRange": {
+        "lower": 0.00810845052578234,
+        "upper": 0.008600185441498582
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:15",
+      "ratio": 1.4,
+      "phase": 2.028945255443408,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 543.19375,
+      "upperObservedCycles": 563.6125,
+      "restrictedLowerCycles": 543.19375,
+      "restrictedUpperCycles": 563.6125,
+      "reciprocalDurationRange": {
+        "lower": 0.0017742686686331478,
+        "upper": 0.0018409637445202564
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:16",
+      "ratio": 1.4,
+      "phase": 2.159844949342983,
+      "split": "test",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 672.4796875,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 672.4796875,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0014870337626368827
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:17",
+      "ratio": 1.4,
+      "phase": 2.2907446432425576,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 303.11875,
+      "upperObservedCycles": 656.815625,
+      "restrictedLowerCycles": 303.11875,
+      "restrictedUpperCycles": 656.815625,
+      "reciprocalDurationRange": {
+        "lower": 0.001522497276157217,
+        "upper": 0.003299037093548321
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:18",
+      "ratio": 1.4,
+      "phase": 2.421644337142132,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 283,
+      "upperObservedCycles": 486.3671875,
+      "restrictedLowerCycles": 283,
+      "restrictedUpperCycles": 486.3671875,
+      "reciprocalDurationRange": {
+        "lower": 0.0020560597542366075,
+        "upper": 0.0035335689045936395
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:19",
+      "ratio": 1.4,
+      "phase": 2.5525440310417067,
+      "split": "train",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 1130.35,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 1130.35,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0008846817357455656
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:20",
+      "ratio": 1.4,
+      "phase": 2.6834437249412812,
+      "split": "train",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 2083.6421875,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 2083.6421875,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.00047992885054790627
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:21",
+      "ratio": 1.4,
+      "phase": 2.8143434188408563,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 1035.653125,
+      "upperObservedCycles": 1266.146875,
+      "restrictedLowerCycles": 1035.653125,
+      "restrictedUpperCycles": 1266.146875,
+      "reciprocalDurationRange": {
+        "lower": 0.0007897977870853254,
+        "upper": 0.0009655742602041585
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:22",
+      "ratio": 1.4,
+      "phase": 2.9452431127404313,
+      "split": "train",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 496.778125,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 496.778125,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.002012971082412294
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:23",
+      "ratio": 1.4,
+      "phase": 3.076142806640006,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:24",
+      "ratio": 1.4,
+      "phase": 3.2070425005395804,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:25",
+      "ratio": 1.4,
+      "phase": 3.337942194439155,
+      "split": "train",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 860.259375,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 860.259375,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.001162440107089795
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:26",
+      "ratio": 1.4,
+      "phase": 3.46884188833873,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 280.5,
+      "upperObservedCycles": 2290.98125,
+      "restrictedLowerCycles": 280.5,
+      "restrictedUpperCycles": 2290.98125,
+      "reciprocalDurationRange": {
+        "lower": 0.00043649418780708054,
+        "upper": 0.0035650623885918
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:27",
+      "ratio": 1.4,
+      "phase": 3.599741582238305,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 802.8921875,
+      "upperObservedCycles": 1662.64375,
+      "restrictedLowerCycles": 802.8921875,
+      "restrictedUpperCycles": 1662.64375,
+      "reciprocalDurationRange": {
+        "lower": 0.0006014517541716317,
+        "upper": 0.0012454972355799639
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:28",
+      "ratio": 1.4,
+      "phase": 3.730641276137879,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 529.809375,
+      "upperObservedCycles": 559.88125,
+      "restrictedLowerCycles": 529.809375,
+      "restrictedUpperCycles": 559.88125,
+      "reciprocalDurationRange": {
+        "lower": 0.0017860930331208627,
+        "upper": 0.0018874713192834685
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:29",
+      "ratio": 1.4,
+      "phase": 3.861540970037454,
+      "split": "train",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 1097.096875,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 1097.096875,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0009114965348889541
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:30",
+      "ratio": 1.4,
+      "phase": 3.9924406639370287,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 218.09375,
+      "upperObservedCycles": 1648.20625,
+      "restrictedLowerCycles": 218.09375,
+      "restrictedUpperCycles": 1648.20625,
+      "reciprocalDurationRange": {
+        "lower": 0.0006067201844429361,
+        "upper": 0.004585184123799971
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:31",
+      "ratio": 1.4,
+      "phase": 4.123340357836604,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 507.628125,
+      "upperObservedCycles": 516.7984375,
+      "restrictedLowerCycles": 507.628125,
+      "restrictedUpperCycles": 516.7984375,
+      "reciprocalDurationRange": {
+        "lower": 0.0019349903703994849,
+        "upper": 0.0019699460111671312
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:32",
+      "ratio": 1.4,
+      "phase": 4.254240051736178,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 1038.34375,
+      "upperObservedCycles": 1752.4203125,
+      "restrictedLowerCycles": 1038.34375,
+      "restrictedUpperCycles": 1752.4203125,
+      "reciprocalDurationRange": {
+        "lower": 0.0005706393568181149,
+        "upper": 0.0009630722003190177
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:33",
+      "ratio": 1.4,
+      "phase": 4.385139745635753,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 182.775,
+      "upperObservedCycles": 259.640625,
+      "restrictedLowerCycles": 182.775,
+      "restrictedUpperCycles": 259.640625,
+      "reciprocalDurationRange": {
+        "lower": 0.0038514774026599265,
+        "upper": 0.005471207769115032
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:34",
+      "ratio": 1.4,
+      "phase": 4.516039439535327,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 127.046875,
+      "upperObservedCycles": 157.4125,
+      "restrictedLowerCycles": 127.046875,
+      "restrictedUpperCycles": 157.4125,
+      "reciprocalDurationRange": {
+        "lower": 0.006352735646787898,
+        "upper": 0.007871110564506211
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:35",
+      "ratio": 1.4,
+      "phase": 4.646939133434903,
+      "split": "test",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 216.115625,
+      "upperObservedCycles": 432.328125,
+      "restrictedLowerCycles": 216.115625,
+      "restrictedUpperCycles": 432.328125,
+      "reciprocalDurationRange": {
+        "lower": 0.0023130579348729623,
+        "upper": 0.004627152710499299
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:36",
+      "ratio": 1.4,
+      "phase": 4.7778388273344765,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 851.640625,
+      "upperObservedCycles": 1242.378125,
+      "restrictedLowerCycles": 851.640625,
+      "restrictedUpperCycles": 1242.378125,
+      "reciprocalDurationRange": {
+        "lower": 0.0008049079260792684,
+        "upper": 0.0011742042014494082
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:37",
+      "ratio": 1.4,
+      "phase": 4.908738521234052,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 505.8,
+      "upperObservedCycles": 612.946875,
+      "restrictedLowerCycles": 505.8,
+      "restrictedUpperCycles": 612.946875,
+      "reciprocalDurationRange": {
+        "lower": 0.0016314627593133583,
+        "upper": 0.0019770660340055358
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:38",
+      "ratio": 1.4,
+      "phase": 5.0396382151336265,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:39",
+      "ratio": 1.4,
+      "phase": 5.170537909033201,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:40",
+      "ratio": 1.4,
+      "phase": 5.301437602932776,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:41",
+      "ratio": 1.4,
+      "phase": 5.432337296832351,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:42",
+      "ratio": 1.4,
+      "phase": 5.563236990731926,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 676.596875,
+      "upperObservedCycles": 2268.9546875,
+      "restrictedLowerCycles": 676.596875,
+      "restrictedUpperCycles": 2268.9546875,
+      "reciprocalDurationRange": {
+        "lower": 0.00044073158688851075,
+        "upper": 0.0014779849522657048
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:43",
+      "ratio": 1.4,
+      "phase": 5.694136684631499,
+      "split": "train",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 2407.759375,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 2407.759375,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.00041532389423257877
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:44",
+      "ratio": 1.4,
+      "phase": 5.825036378531075,
+      "split": "train",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 1130.353125,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 1130.353125,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0008846792899342849
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:45",
+      "ratio": 1.4,
+      "phase": 5.955936072430649,
+      "split": "train",
+      "status": "observed_exit_range",
+      "lowerObservedCycles": 226.85,
+      "upperObservedCycles": 318.36875,
+      "restrictedLowerCycles": 226.85,
+      "restrictedUpperCycles": 318.36875,
+      "reciprocalDurationRange": {
+        "lower": 0.0031410117984255683,
+        "upper": 0.004408199250606128
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:46",
+      "ratio": 1.4,
+      "phase": 6.086835766330224,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.400:47",
+      "ratio": 1.4,
+      "phase": 6.217735460229799,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:0",
+      "ratio": 1.425,
+      "phase": 0.06544984694978735,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:1",
+      "ratio": 1.425,
+      "phase": 0.19634954084936207,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:2",
+      "ratio": 1.425,
+      "phase": 0.3272492347489368,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:3",
+      "ratio": 1.425,
+      "phase": 0.4581489286485115,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:4",
+      "ratio": 1.425,
+      "phase": 0.5890486225480862,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:5",
+      "ratio": 1.425,
+      "phase": 0.7199483164476609,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:6",
+      "ratio": 1.425,
+      "phase": 0.8508480103472357,
+      "split": "train",
+      "status": "resolution_disagreement_with_censoring",
+      "lowerObservedCycles": 862.4609375,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 862.4609375,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.001159472802210245
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:7",
+      "ratio": 1.425,
+      "phase": 0.9817477042468102,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:8",
+      "ratio": 1.425,
+      "phase": 1.1126473981463851,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:9",
+      "ratio": 1.425,
+      "phase": 1.2435470920459597,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:10",
+      "ratio": 1.425,
+      "phase": 1.3744467859455345,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:11",
+      "ratio": 1.425,
+      "phase": 1.505346479845109,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:12",
+      "ratio": 1.425,
+      "phase": 1.636246173744684,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:13",
+      "ratio": 1.425,
+      "phase": 1.7671458676442586,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:14",
+      "ratio": 1.425,
+      "phase": 1.8980455615438334,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:15",
+      "ratio": 1.425,
+      "phase": 2.028945255443408,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:16",
+      "ratio": 1.425,
+      "phase": 2.159844949342983,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:17",
+      "ratio": 1.425,
+      "phase": 2.2907446432425576,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:18",
+      "ratio": 1.425,
+      "phase": 2.421644337142132,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:19",
+      "ratio": 1.425,
+      "phase": 2.5525440310417067,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:20",
+      "ratio": 1.425,
+      "phase": 2.6834437249412812,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:21",
+      "ratio": 1.425,
+      "phase": 2.8143434188408563,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:22",
+      "ratio": 1.425,
+      "phase": 2.9452431127404313,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:23",
+      "ratio": 1.425,
+      "phase": 3.076142806640006,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:24",
+      "ratio": 1.425,
+      "phase": 3.2070425005395804,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:25",
+      "ratio": 1.425,
+      "phase": 3.337942194439155,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:26",
+      "ratio": 1.425,
+      "phase": 3.46884188833873,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:27",
+      "ratio": 1.425,
+      "phase": 3.599741582238305,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:28",
+      "ratio": 1.425,
+      "phase": 3.730641276137879,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:29",
+      "ratio": 1.425,
+      "phase": 3.861540970037454,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:30",
+      "ratio": 1.425,
+      "phase": 3.9924406639370287,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:31",
+      "ratio": 1.425,
+      "phase": 4.123340357836604,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:32",
+      "ratio": 1.425,
+      "phase": 4.254240051736178,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:33",
+      "ratio": 1.425,
+      "phase": 4.385139745635753,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:34",
+      "ratio": 1.425,
+      "phase": 4.516039439535327,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:35",
+      "ratio": 1.425,
+      "phase": 4.646939133434903,
+      "split": "test",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:36",
+      "ratio": 1.425,
+      "phase": 4.7778388273344765,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:37",
+      "ratio": 1.425,
+      "phase": 4.908738521234052,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:38",
+      "ratio": 1.425,
+      "phase": 5.0396382151336265,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:39",
+      "ratio": 1.425,
+      "phase": 5.170537909033201,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:40",
+      "ratio": 1.425,
+      "phase": 5.301437602932776,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:41",
+      "ratio": 1.425,
+      "phase": 5.432337296832351,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:42",
+      "ratio": 1.425,
+      "phase": 5.563236990731926,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:43",
+      "ratio": 1.425,
+      "phase": 5.694136684631499,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:44",
+      "ratio": 1.425,
+      "phase": 5.825036378531075,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:45",
+      "ratio": 1.425,
+      "phase": 5.955936072430649,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:46",
+      "ratio": 1.425,
+      "phase": 6.086835766330224,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    },
+    {
+      "id": "1.425:47",
+      "ratio": 1.425,
+      "phase": 6.217735460229799,
+      "split": "train",
+      "status": "administratively_right_censored",
+      "lowerObservedCycles": 3000,
+      "upperObservedCycles": null,
+      "restrictedLowerCycles": 3000,
+      "restrictedUpperCycles": 3000,
+      "reciprocalDurationRange": {
+        "lower": 0,
+        "upper": 0.0003333333333333333
+      },
+      "interpretation": "Range across accepted numerical resolutions; not a certified physical enclosure or hazard rate"
+    }
+  ],
+  "prediction": [
+    {
+      "name": "constant",
+      "horizons": [
+        {
+          "cycles": 100,
+          "model": {
+            "featureNames": [],
+            "means": [],
+            "scales": [],
+            "beta": [
+              -4.962844630259905
+            ],
+            "penalty": 1,
+            "trainingRows": 71,
+            "trainingExits": 0,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 24,
+            "unresolved": 0,
+            "scoreOnResolved": 0.04113618827160498,
+            "scoreLower": 0.04113618827160498,
+            "scoreUpper": 0.04113618827160498,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:14",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:15",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:16",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:17",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:30",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:31",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:33",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:34",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.400:35",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.006944444444444459
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.006944444444444459
+            }
+          ],
+          "trainingUnresolved": 1
+        },
+        {
+          "cycles": 300,
+          "model": {
+            "featureNames": [],
+            "means": [],
+            "scales": [],
+            "beta": [
+              -4.905274778438428
+            ],
+            "penalty": 1,
+            "trainingRows": 67,
+            "trainingExits": 0,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 22,
+            "unresolved": 2,
+            "scoreOnResolved": 0.22398454702736725,
+            "scoreLower": 0.20532367358708203,
+            "scoreUpper": 0.287431516724337,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:15",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:16",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:17",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:30",
+              "label": null,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:31",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.400:35",
+              "label": null,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.0073529411764705985
+            }
+          ],
+          "trainingUnresolved": 5
+        },
+        {
+          "cycles": 1000,
+          "model": {
+            "featureNames": [],
+            "means": [],
+            "scales": [],
+            "beta": [
+              -2.1799827709017134
+            ],
+            "penalty": 1,
+            "trainingRows": 63,
+            "trainingExits": 6,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 22,
+            "unresolved": 2,
+            "scoreOnResolved": 0.3363092595880682,
+            "scoreLower": 0.30914306640625,
+            "scoreUpper": 0.37554931640625,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:15",
+              "label": 1,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:16",
+              "label": null,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:17",
+              "label": 1,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:30",
+              "label": null,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:31",
+              "label": 1,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.400:35",
+              "label": 1,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.10156249999999999
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.10156249999999999
+            }
+          ],
+          "trainingUnresolved": 9
+        },
+        {
+          "cycles": 3000,
+          "model": {
+            "featureNames": [],
+            "means": [],
+            "scales": [],
+            "beta": [
+              -1.2992829841302613
+            ],
+            "penalty": 1,
+            "trainingRows": 62,
+            "trainingExits": 13,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 23,
+            "unresolved": 1,
+            "scoreOnResolved": 0.3192102928127774,
+            "scoreLower": 0.3078231292517008,
+            "scoreUpper": 0.33163265306122464,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:15",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:16",
+              "label": null,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:17",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:30",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:31",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:32",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.400:35",
+              "label": 1,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.21428571428571422
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.21428571428571422
+            }
+          ],
+          "trainingUnresolved": 10
+        }
+      ]
+    },
+    {
+      "name": "geometry",
+      "horizons": [
+        {
+          "cycles": 100,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase"
+            ],
+            "means": [
+              0.3454466700800644,
+              -0.01405435103152963,
+              0.12522742944115883
+            ],
+            "scales": [
+              0.008848910725113762,
+              0.6204150783915325,
+              0.7740837788231133
+            ],
+            "beta": [
+              -4.962844630259905,
+              1.1970798653796436e-14,
+              -7.541395157673867e-17,
+              1.597211042277378e-17
+            ],
+            "penalty": 1,
+            "trainingRows": 71,
+            "trainingExits": 0,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 24,
+            "unresolved": 0,
+            "scoreOnResolved": 0.04113618827160498,
+            "scoreLower": 0.04113618827160498,
+            "scoreUpper": 0.04113618827160498,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:14",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:15",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:16",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:17",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:30",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:31",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:33",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:34",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:35",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.006944444444444539
+            }
+          ],
+          "trainingUnresolved": 1
+        },
+        {
+          "cycles": 300,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase"
+            ],
+            "means": [
+              0.34598245715223463,
+              -0.01993679511993301,
+              0.12979189803442015
+            ],
+            "scales": [
+              0.008825111159212619,
+              0.6297552500387625,
+              0.7656140754019507
+            ],
+            "beta": [
+              -4.905274778438429,
+              6.139652099470827e-15,
+              -5.366823839044846e-17,
+              1.955367602473183e-17
+            ],
+            "penalty": 1,
+            "trainingRows": 67,
+            "trainingExits": 0,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 22,
+            "unresolved": 2,
+            "scoreOnResolved": 0.22398454702736725,
+            "scoreLower": 0.20532367358708203,
+            "scoreUpper": 0.287431516724337,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:15",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:16",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:17",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:30",
+              "label": null,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:31",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:35",
+              "label": null,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            }
+          ],
+          "trainingUnresolved": 5
+        },
+        {
+          "cycles": 1000,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase"
+            ],
+            "means": [
+              0.34630533500976923,
+              0.00018870393719344668,
+              0.16616019623600584
+            ],
+            "scales": [
+              0.008794990570502073,
+              0.6240860661669942,
+              0.7634836839080731
+            ],
+            "beta": [
+              -2.6926053823516476,
+              -1.1705626568693328,
+              -0.1449662066380666,
+              0.003418301784493899
+            ],
+            "penalty": 1,
+            "trainingRows": 63,
+            "trainingExits": 6,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 22,
+            "unresolved": 2,
+            "scoreOnResolved": 0.265857077525087,
+            "scoreLower": 0.24710605583739964,
+            "scoreUpper": 0.2971096050866644,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.16566632500107256
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.1661347771012177
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.1671483145046477
+            },
+            {
+              "id": "1.400:15",
+              "label": 1,
+              "probability": 0.16869736931684506
+            },
+            {
+              "id": "1.400:16",
+              "label": null,
+              "probability": 0.17076680594276275
+            },
+            {
+              "id": "1.400:17",
+              "label": 1,
+              "probability": 0.17333544869259007
+            },
+            {
+              "id": "1.400:30",
+              "label": null,
+              "probability": 0.22919060306605946
+            },
+            {
+              "id": "1.400:31",
+              "label": 1,
+              "probability": 0.232557570472892
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.23537126876288614
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.23756833414717532
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.23909858957497088
+            },
+            {
+              "id": "1.400:35",
+              "label": 1,
+              "probability": 0.23992673595090896
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.018480792335689087
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.018542299720807013
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.018675586710197624
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.018879855528275334
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.019153802637419736
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.019495526670669394
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.02742214986288888
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.02793241307737023
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.028361859947695835
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.028699129467203675
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.028935049049055642
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.029063072602344007
+            }
+          ],
+          "trainingUnresolved": 9
+        },
+        {
+          "cycles": 3000,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase"
+            ],
+            "means": [
+              0.346463933370875,
+              -0.02654714755866313,
+              0.16312487792266292
+            ],
+            "scales": [
+              0.00877580782818719,
+              0.6338050929052504,
+              0.7556299539897697
+            ],
+            "beta": [
+              -2.0802728431544617,
+              -1.7033412097654832,
+              -0.0651158690139978,
+              -0.40851524690887636
+            ],
+            "penalty": 1,
+            "trainingRows": 62,
+            "trainingExits": 13,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 23,
+            "unresolved": 1,
+            "scoreOnResolved": 0.10432519295855991,
+            "scoreLower": 0.10880335757580722,
+            "scoreUpper": 0.11211847569227995,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.4693808129158262
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.48731185865937476
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.5052554867303097
+            },
+            {
+              "id": "1.400:15",
+              "label": 1,
+              "probability": 0.5228590731313777
+            },
+            {
+              "id": "1.400:16",
+              "label": null,
+              "probability": 0.5397814173976727
+            },
+            {
+              "id": "1.400:17",
+              "label": 1,
+              "probability": 0.5557047440223711
+            },
+            {
+              "id": "1.400:30",
+              "label": 1,
+              "probability": 0.5934468110748583
+            },
+            {
+              "id": "1.400:31",
+              "label": 1,
+              "probability": 0.5818347473532571
+            },
+            {
+              "id": "1.400:32",
+              "label": 1,
+              "probability": 0.5685127810688879
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.553690730243278
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.5376198632200747
+            },
+            {
+              "id": "1.400:35",
+              "label": 1,
+              "probability": 0.5205898169438556
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.02770540809348519
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.029708467393144245
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.031849117002763945
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.034095454744764074
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.03640593536569907
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.03872953868960881
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.0449090093993311
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.04289773425115499
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.04071408358104241
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.03842712116399891
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.03610202025731753
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.03379722126601876
+            }
+          ],
+          "trainingUnresolved": 10
+        }
+      ]
+    },
+    {
+      "name": "firstOrder",
+      "horizons": [
+        {
+          "cycles": 100,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase",
+              "logFirstResponse"
+            ],
+            "means": [
+              0.3454466700800644,
+              -0.01405435103152963,
+              0.12522742944115883,
+              1.0816593979592466
+            ],
+            "scales": [
+              0.008848910725113762,
+              0.6204150783915325,
+              0.7740837788231133,
+              0.3488626640451258
+            ],
+            "beta": [
+              -4.962844630259905,
+              1.1984885463680796e-14,
+              -6.594057423760051e-17,
+              -1.7158500130775768e-17,
+              3.325761534642226e-16
+            ],
+            "penalty": 1,
+            "trainingRows": 71,
+            "trainingExits": 0,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 24,
+            "unresolved": 0,
+            "scoreOnResolved": 0.04113618827160498,
+            "scoreLower": 0.04113618827160498,
+            "scoreUpper": 0.04113618827160498,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:14",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:15",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:16",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:17",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:30",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:31",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:33",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:34",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:35",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.006944444444444539
+            }
+          ],
+          "trainingUnresolved": 1
+        },
+        {
+          "cycles": 300,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase",
+              "logFirstResponse"
+            ],
+            "means": [
+              0.34598245715223463,
+              -0.01993679511993301,
+              0.12979189803442015,
+              1.0729185328702033
+            ],
+            "scales": [
+              0.008825111159212619,
+              0.6297552500387625,
+              0.7656140754019507,
+              0.34555894452097086
+            ],
+            "beta": [
+              -4.905274778438429,
+              6.138639462620718e-15,
+              -5.458693877886861e-17,
+              2.1929881489994127e-17,
+              -2.802245804279896e-17
+            ],
+            "penalty": 1,
+            "trainingRows": 67,
+            "trainingExits": 0,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 22,
+            "unresolved": 2,
+            "scoreOnResolved": 0.22398454702736725,
+            "scoreLower": 0.20532367358708203,
+            "scoreUpper": 0.287431516724337,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:15",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:16",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:17",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:30",
+              "label": null,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:31",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:35",
+              "label": null,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            }
+          ],
+          "trainingUnresolved": 5
+        },
+        {
+          "cycles": 1000,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase",
+              "logFirstResponse"
+            ],
+            "means": [
+              0.34630533500976923,
+              0.00018870393719344668,
+              0.16616019623600584,
+              1.1048370520133415
+            ],
+            "scales": [
+              0.008794990570502073,
+              0.6240860661669942,
+              0.7634836839080731,
+              0.3578489454952595
+            ],
+            "beta": [
+              -2.8223705033123796,
+              -1.0887836200852774,
+              -0.06165613621813515,
+              -0.131634697267865,
+              0.5814110186610404
+            ],
+            "penalty": 1,
+            "trainingRows": 63,
+            "trainingExits": 6,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 22,
+            "unresolved": 2,
+            "scoreOnResolved": 0.3190771332859506,
+            "scoreLower": 0.2942583551917924,
+            "scoreUpper": 0.35415198286930966,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.09585086210408357
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.1006036673963495
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.10402215240058653
+            },
+            {
+              "id": "1.400:15",
+              "label": 1,
+              "probability": 0.10514254357491463
+            },
+            {
+              "id": "1.400:16",
+              "label": null,
+              "probability": 0.10226267776009142
+            },
+            {
+              "id": "1.400:17",
+              "label": 1,
+              "probability": 0.09522151389143925
+            },
+            {
+              "id": "1.400:30",
+              "label": null,
+              "probability": 0.17901379010970095
+            },
+            {
+              "id": "1.400:31",
+              "label": 1,
+              "probability": 0.15476514682567613
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.14693109483956987
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.14745958880897733
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.1415085084877761
+            },
+            {
+              "id": "1.400:35",
+              "label": 1,
+              "probability": 0.12545757897143306
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.011494956464181907
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.012233499308897989
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.012866376993587133
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.013291325369184677
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.013347814585286093
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.012724468951056929
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.04531998045341954
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.04224772040100724
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.024580757359987014
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.019414980300161692
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.0187251255291857
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.018018178308319664
+            }
+          ],
+          "trainingUnresolved": 9
+        },
+        {
+          "cycles": 3000,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase",
+              "logFirstResponse"
+            ],
+            "means": [
+              0.346463933370875,
+              -0.02654714755866313,
+              0.16312487792266292,
+              1.0925595360276776
+            ],
+            "scales": [
+              0.00877580782818719,
+              0.6338050929052504,
+              0.7556299539897697,
+              0.35572141111922656
+            ],
+            "beta": [
+              -2.089229384169374,
+              -1.6859910554622097,
+              -0.024820165640832455,
+              -0.48328197675848866,
+              0.19894645830714808
+            ],
+            "penalty": 1,
+            "trainingRows": 62,
+            "trainingExits": 13,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 23,
+            "unresolved": 1,
+            "scoreOnResolved": 0.11890565024494788,
+            "scoreLower": 0.12381869065518387,
+            "scoreUpper": 0.12493201281576514,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.43621155929388483
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.4594038717965653
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.480898287705021
+            },
+            {
+              "id": "1.400:15",
+              "label": 1,
+              "probability": 0.4995130464802995
+            },
+            {
+              "id": "1.400:16",
+              "label": null,
+              "probability": 0.5133598659269751
+            },
+            {
+              "id": "1.400:17",
+              "label": 1,
+              "probability": 0.5216938381060449
+            },
+            {
+              "id": "1.400:30",
+              "label": 1,
+              "probability": 0.5854837219486745
+            },
+            {
+              "id": "1.400:31",
+              "label": 1,
+              "probability": 0.5561126411383168
+            },
+            {
+              "id": "1.400:32",
+              "label": 1,
+              "probability": 0.534682120227608
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.5176274287941873
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.495207083811427
+            },
+            {
+              "id": "1.400:35",
+              "label": 1,
+              "probability": 0.46452207069860507
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.02500192005200279
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.027479391155319936
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.03002073756274888
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.03249372303168702
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.03468559220504575
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.036187392128302354
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.05595433057867981
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.05162659238260897
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.040355979527054726
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.034833798318701495
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.03206051106883626
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.02942055108902689
+            }
+          ],
+          "trainingUnresolved": 10
+        }
+      ]
+    },
+    {
+      "name": "secondOrder",
+      "horizons": [
+        {
+          "cycles": 100,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase",
+              "logFirstResponse",
+              "logSecondResponse"
+            ],
+            "means": [
+              0.3454466700800644,
+              -0.01405435103152963,
+              0.12522742944115883,
+              1.0816593979592466,
+              2.2972862858618073
+            ],
+            "scales": [
+              0.008848910725113762,
+              0.6204150783915325,
+              0.7740837788231133,
+              0.3488626640451258,
+              0.8947860713161938
+            ],
+            "beta": [
+              -4.962844630259905,
+              1.2002379536797045e-14,
+              -5.812544023129809e-17,
+              -5.990459120857631e-17,
+              2.48872750347619e-16,
+              3.793181290910203e-16
+            ],
+            "penalty": 1,
+            "trainingRows": 71,
+            "trainingExits": 0,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 24,
+            "unresolved": 0,
+            "scoreOnResolved": 0.04113618827160498,
+            "scoreLower": 0.04113618827160498,
+            "scoreUpper": 0.04113618827160498,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 0,
+              "probability": 0.006944444444444367
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.006944444444444367
+            },
+            {
+              "id": "1.400:14",
+              "label": 0,
+              "probability": 0.006944444444444367
+            },
+            {
+              "id": "1.400:15",
+              "label": 0,
+              "probability": 0.006944444444444367
+            },
+            {
+              "id": "1.400:16",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:17",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:30",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:31",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:33",
+              "label": 0,
+              "probability": 0.006944444444444367
+            },
+            {
+              "id": "1.400:34",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.400:35",
+              "label": 0,
+              "probability": 0.006944444444444374
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.0069444444444445325
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.0069444444444445325
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.0069444444444445325
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.006944444444444539
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.0069444444444445325
+            }
+          ],
+          "trainingUnresolved": 1
+        },
+        {
+          "cycles": 300,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase",
+              "logFirstResponse",
+              "logSecondResponse"
+            ],
+            "means": [
+              0.34598245715223463,
+              -0.01993679511993301,
+              0.12979189803442015,
+              1.0729185328702033,
+              2.275200790775318
+            ],
+            "scales": [
+              0.008825111159212619,
+              0.6297552500387625,
+              0.7656140754019507,
+              0.34555894452097086,
+              0.9059299412313458
+            ],
+            "beta": [
+              -4.905274778438429,
+              6.150201117516804e-15,
+              -4.767819353506417e-17,
+              -9.770133579904416e-18,
+              -8.970268263103258e-17,
+              2.8078646242760187e-16
+            ],
+            "penalty": 1,
+            "trainingRows": 67,
+            "trainingExits": 0,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 22,
+            "unresolved": 2,
+            "scoreOnResolved": 0.22398454702736725,
+            "scoreLower": 0.20532367358708203,
+            "scoreUpper": 0.287431516724337,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.007352941176470542
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:15",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:16",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:17",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:30",
+              "label": null,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:31",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.007352941176470542
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.400:35",
+              "label": null,
+              "probability": 0.007352941176470549
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.007352941176470625
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.0073529411764706315
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.007352941176470625
+            }
+          ],
+          "trainingUnresolved": 5
+        },
+        {
+          "cycles": 1000,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase",
+              "logFirstResponse",
+              "logSecondResponse"
+            ],
+            "means": [
+              0.34630533500976923,
+              0.00018870393719344668,
+              0.16616019623600584,
+              1.1048370520133415,
+              2.338534043870284
+            ],
+            "scales": [
+              0.008794990570502073,
+              0.6240860661669942,
+              0.7634836839080731,
+              0.3578489454952595,
+              0.8959416250003438
+            ],
+            "beta": [
+              -2.832368511103943,
+              -1.0806098065448142,
+              -0.06782244709070501,
+              -0.16342458089819561,
+              0.5036385252870944,
+              0.14173227587413062
+            ],
+            "penalty": 1,
+            "trainingRows": 63,
+            "trainingExits": 6,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 22,
+            "unresolved": 2,
+            "scoreOnResolved": 0.3253421811322345,
+            "scoreLower": 0.30006394203786235,
+            "scoreUpper": 0.35966345056747634,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.08454894779960592
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.08496913138210707
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.09024143573282599
+            },
+            {
+              "id": "1.400:15",
+              "label": 1,
+              "probability": 0.09521820739705214
+            },
+            {
+              "id": "1.400:16",
+              "label": null,
+              "probability": 0.10087329476069795
+            },
+            {
+              "id": "1.400:17",
+              "label": 1,
+              "probability": 0.0999704416597428
+            },
+            {
+              "id": "1.400:30",
+              "label": null,
+              "probability": 0.18393260288393282
+            },
+            {
+              "id": "1.400:31",
+              "label": 1,
+              "probability": 0.15313337833441304
+            },
+            {
+              "id": "1.400:32",
+              "label": 0,
+              "probability": 0.13436597837824288
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.12423517769627819
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.12840273957485157
+            },
+            {
+              "id": "1.400:35",
+              "label": 1,
+              "probability": 0.12962298059085622
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.01154929895647101
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.011554665001213582
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.011454004509369165
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.010952593513726391
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.0120939559724162
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.01294384395559562
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.0437120150878443
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.04435806927353134
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.028611221407581103
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.019354981186111224
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.016947048523987065
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.014900047954122475
+            }
+          ],
+          "trainingUnresolved": 9
+        },
+        {
+          "cycles": 3000,
+          "model": {
+            "featureNames": [
+              "logSizeRatio",
+              "sinPhase",
+              "cosPhase",
+              "logFirstResponse",
+              "logSecondResponse"
+            ],
+            "means": [
+              0.346463933370875,
+              -0.02654714755866313,
+              0.16312487792266292,
+              1.0925595360276776,
+              2.3302399397646973
+            ],
+            "scales": [
+              0.00877580782818719,
+              0.6338050929052504,
+              0.7556299539897697,
+              0.35572141111922656,
+              0.9241682330221473
+            ],
+            "beta": [
+              -2.090203894171231,
+              -1.671667183373632,
+              -0.022912544206080736,
+              -0.5202695171462534,
+              0.06126158486268361,
+              0.22711827081388986
+            ],
+            "penalty": 1,
+            "trainingRows": 62,
+            "trainingExits": 13,
+            "standardization": "training rows with resolved horizon labels only",
+            "interceptPrior": "Beta(0.5,0.5) penalty on intercept probability; no test tuning"
+          },
+          "test": {
+            "total": 24,
+            "resolved": 23,
+            "unresolved": 1,
+            "scoreOnResolved": 0.13345245054803828,
+            "scoreLower": 0.13767385616122135,
+            "scoreUpper": 0.13896329247459363,
+            "interpretation": "Best/worst numerical label assignments on the fixed test design, not a sampling confidence interval"
+          },
+          "predictions": [
+            {
+              "id": "1.400:12",
+              "label": 1,
+              "probability": 0.39442248987926415
+            },
+            {
+              "id": "1.400:13",
+              "label": 1,
+              "probability": 0.3981542746902271
+            },
+            {
+              "id": "1.400:14",
+              "label": 1,
+              "probability": 0.4291872025639342
+            },
+            {
+              "id": "1.400:15",
+              "label": 1,
+              "probability": 0.46512142449476895
+            },
+            {
+              "id": "1.400:16",
+              "label": null,
+              "probability": 0.5154732357604672
+            },
+            {
+              "id": "1.400:17",
+              "label": 1,
+              "probability": 0.5505326765700311
+            },
+            {
+              "id": "1.400:30",
+              "label": 1,
+              "probability": 0.5947734406625721
+            },
+            {
+              "id": "1.400:31",
+              "label": 1,
+              "probability": 0.5493586570568073
+            },
+            {
+              "id": "1.400:32",
+              "label": 1,
+              "probability": 0.492887047804439
+            },
+            {
+              "id": "1.400:33",
+              "label": 1,
+              "probability": 0.4395738211712963
+            },
+            {
+              "id": "1.400:34",
+              "label": 1,
+              "probability": 0.45094286169261666
+            },
+            {
+              "id": "1.400:35",
+              "label": 1,
+              "probability": 0.47955167714990465
+            },
+            {
+              "id": "1.425:12",
+              "label": 0,
+              "probability": 0.026335165691070958
+            },
+            {
+              "id": "1.425:13",
+              "label": 0,
+              "probability": 0.02624099524000588
+            },
+            {
+              "id": "1.425:14",
+              "label": 0,
+              "probability": 0.026102470937732103
+            },
+            {
+              "id": "1.425:15",
+              "label": 0,
+              "probability": 0.025036170959131313
+            },
+            {
+              "id": "1.425:16",
+              "label": 0,
+              "probability": 0.030836263724611724
+            },
+            {
+              "id": "1.425:17",
+              "label": 0,
+              "probability": 0.038327191193809104
+            },
+            {
+              "id": "1.425:30",
+              "label": 0,
+              "probability": 0.05144849924924079
+            },
+            {
+              "id": "1.425:31",
+              "label": 0,
+              "probability": 0.05419527860694966
+            },
+            {
+              "id": "1.425:32",
+              "label": 0,
+              "probability": 0.050345975981788214
+            },
+            {
+              "id": "1.425:33",
+              "label": 0,
+              "probability": 0.03457481645142299
+            },
+            {
+              "id": "1.425:34",
+              "label": 0,
+              "probability": 0.027484772042993905
+            },
+            {
+              "id": "1.425:35",
+              "label": 0,
+              "probability": 0.02199014872952539
+            }
+          ],
+          "trainingUnresolved": 10
+        }
+      ]
+    }
+  ],
+  "primaryHorizon": 3000,
+  "boundaries": {
+    "infiniteLifetimeIdentified": false,
+    "physicalHazardEstimated": false,
+    "confidenceIntervalComputed": false,
+    "exactLifetimeCertified": false,
+    "predictionTarget": "exit by each finite horizon, conditional on surviving the ten-cycle feature window",
+    "predictorInterpretation": "Frozen ridge logistic models on a declared deterministic design; not a derived perturbation lifetime bound",
+    "labelPolicy": "Unresolved training labels omitted; unresolved test labels retained in best/worst score bounds. Omission can be informative.",
+    "extrapolation": "No estimate of unrestricted mean or unobserved tail; no reciprocal duration called an escape rate"
+  }
+}

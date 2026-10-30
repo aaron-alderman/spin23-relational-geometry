@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "admissibility-klein-pseudospectral-flow-v1",
+  "date": "2026-10-30",
+  "status": "executable_refinement_gate",
+  "equation": "two-dimensional incompressible Navier--Stokes in vorticity form on the flat torus double cover",
+  "deckMap": "(x,y) -> (x+pi,-y)",
+  "initialStreamfunction": "normalized cos(x)cos(y) plus sin(2x)sin(y)",
+  "runs": {
+    "coarse": {
+      "maximumWavenumber": 6,
+      "timeStep": 0.001,
+      "finalTime": 0.4
+    },
+    "fine": {
+      "maximumWavenumber": 8,
+      "timeStep": 0.0005,
+      "finalTime": 0.4
+    }
+  },
+  "viscosity": 0.01,
+  "rotationControl": {
+    "returnMap": "(x,y) -> (x+pi,y)",
+    "sector": "even axial harmonics",
+    "initialStreamfunction": "scaled cos(2y) plus scaled sin(2x)sin(y)",
+    "matchedInitialEnergy": 1,
+    "matchedInitialEnstrophy": 4.142857142857143,
+    "retainedRealDimension": 144,
+    "dimensionMatch": "Remove the four conjugate high-frequency pairs with abs(k)=K and abs(m)>=K-1 from the 152-dimensional zero-mean rotation sector."
+  },
+  "thresholds": {
+    "maximumForbiddenSectorRatio": 1e-12,
+    "maximumRealityErrorRatio": 1e-12,
+    "maximumEnergyBudgetResidual": 1e-7,
+    "maximumLowModeRelativeDifference": 0.0011,
+    "maximumFineBoundaryEnergyFraction": 0.000001,
+    "minimumDaughterModeAmplitude": 0.000001
+  },
+  "daughterModes": [
+    [1, 0],
+    [3, 0],
+    [1, 2],
+    [3, 2]
+  ],
+  "nonClaims": [
+    "This is a flat two-dimensional spectral truncation, not a three-dimensional CFD result.",
+    "Projection enforces the declared quotient and is not evidence that an unconstrained device acquires it.",
+    "Agreement of two resolutions is a numerical check, not a proof of continuum convergence."
+  ]
+}

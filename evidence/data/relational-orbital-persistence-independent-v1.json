@@ -1,0 +1,243 @@
+{
+  "schema": "relational-orbital-persistence-independent/v1",
+  "date": "2026-10-30",
+  "atlasSha256": "42c31bb9f218387a649742391d54a5f84ff3115623544e68f2a6cc7aefbfbc80",
+  "method": "scipy.integrate.solve_ivp DOP853",
+  "rtol": 1e-11,
+  "atol": 1e-13,
+  "numpyVersion": "2.5.4",
+  "scipyVersion": "1.18.1",
+  "controls": [
+    {
+      "ratio": 1.575,
+      "phase": 0,
+      "requestedCycles": 1000,
+      "completedCycles": 1000.0,
+      "event": null,
+      "maxSampledRelativeEnergyError": 8.31938244908234e-09,
+      "finalRelations": [
+        0.8668342793764285,
+        1.8473349279146425,
+        2.584910145107556
+      ],
+      "rhsEvaluations": 514190,
+      "splittingOutcomes": [
+        null,
+        null,
+        null
+      ],
+      "sameMonitoredOutcomeAsAllSplittings": true
+    },
+    {
+      "ratio": 1.4,
+      "phase": 0,
+      "requestedCycles": 1000,
+      "completedCycles": 1000.0,
+      "event": null,
+      "maxSampledRelativeEnergyError": 9.141603106740507e-09,
+      "finalRelations": [
+        1.1615385769935873,
+        1.1811159004770524,
+        2.3226765754341527
+      ],
+      "rhsEvaluations": 521246,
+      "splittingOutcomes": [
+        null,
+        null,
+        null
+      ],
+      "sameMonitoredOutcomeAsAllSplittings": true
+    },
+    {
+      "ratio": 1.4,
+      "phase": 0.2617993877991494,
+      "requestedCycles": 1000,
+      "completedCycles": 878.7482789264893,
+      "event": "close_encounter",
+      "maxSampledRelativeEnergyError": 1.5651643696537234e-08,
+      "finalRelations": [
+        0.9583670756249275,
+        1.0501542112092148,
+        0.10482965576834449
+      ],
+      "rhsEvaluations": 563333,
+      "splittingOutcomes": [
+        "close_encounter",
+        "close_encounter",
+        "close_encounter"
+      ],
+      "sameMonitoredOutcomeAsAllSplittings": true
+    }
+  ],
+  "shortTimeControl": {
+    "ratio": 1.5874010519681994,
+    "phase": 1.2,
+    "requestedCycles": 10,
+    "completedCycles": 10.0,
+    "event": null,
+    "maxSampledRelativeEnergyError": 1.8697627539543892e-10,
+    "finalRelations": [
+      0.7719603963155852,
+      1.5183670431404739,
+      1.286904858909386
+    ],
+    "rhsEvaluations": 5402,
+    "splittingDistanceDifference": 2.453360470491782e-05
+  },
+  "shortTimeRefinement": [
+    {
+      "stepsPerPeriod": 160,
+      "values": [
+        0.7719563524336228,
+        1.5183834491923989,
+        1.287295371544356
+      ],
+      "first": [
+        -0.004193712024878479,
+        0.4073182045124283,
+        2.781738979595798
+      ],
+      "second": [
+        0.4541525635098989,
+        0.49346968105463834,
+        3.953645267198352
+      ],
+      "distanceErrorAgainstDOP853": 0.0003908780239310479
+    },
+    {
+      "stepsPerPeriod": 320,
+      "values": [
+        0.7719601430763608,
+        1.518368073381662,
+        1.2869293695648814
+      ],
+      "first": [
+        -0.004265254372610065,
+        0.4073002191379868,
+        2.781488949177327
+      ],
+      "second": [
+        0.45392397316304134,
+        0.49355602407105204,
+        3.957266533288725
+      ],
+      "distanceErrorAgainstDOP853": 2.453360470491782e-05
+    },
+    {
+      "stepsPerPeriod": 640,
+      "values": [
+        0.7719603798873439,
+        1.5183671076331893,
+        1.2869064046366212
+      ],
+      "first": [
+        -0.004269737257408669,
+        0.4072990904848252,
+        2.781473239868663
+      ],
+      "second": [
+        0.4539096314548277,
+        0.493561447379123,
+        3.9574938261330423
+      ],
+      "distanceErrorAgainstDOP853": 1.5471592945694032e-06
+    },
+    {
+      "stepsPerPeriod": 1280,
+      "values": [
+        0.771960394682431,
+        1.518367047198659,
+        1.2869049679088056
+      ],
+      "first": [
+        -0.004270017627954091,
+        0.4072990198766564,
+        2.7814722569588706
+      ],
+      "second": [
+        0.45390873429356415,
+        0.49356178676845935,
+        3.957508046985617
+      ],
+      "distanceErrorAgainstDOP853": 1.0908716472724952e-07
+    }
+  ],
+  "independentTaylorComparison": [
+    {
+      "epsilon": 0.001,
+      "refinements": [
+        {
+          "stepsPerPeriod": 160,
+          "firstOrderResidual": 1.7293991406861913e-06,
+          "secondOrderResidual": 2.803057835077033e-07
+        },
+        {
+          "stepsPerPeriod": 320,
+          "firstOrderResidual": 1.9855814676086655e-06,
+          "secondOrderResidual": 2.1381990269056958e-08
+        },
+        {
+          "stepsPerPeriod": 640,
+          "firstOrderResidual": 2.001714583783534e-06,
+          "secondOrderResidual": 5.29407721751191e-09
+        },
+        {
+          "stepsPerPeriod": 1280,
+          "firstOrderResidual": 2.0027241267713543e-06,
+          "secondOrderResidual": 4.332449717700881e-09
+        }
+      ]
+    },
+    {
+      "epsilon": 0.0005,
+      "refinements": [
+        {
+          "stepsPerPeriod": 160,
+          "firstOrderResidual": 3.649299428995644e-07,
+          "secondOrderResidual": 1.3916519065615806e-07
+        },
+        {
+          "stepsPerPeriod": 320,
+          "firstOrderResidual": 4.925667413684438e-07,
+          "secondOrderResidual": 9.251604295246827e-09
+        },
+        {
+          "stepsPerPeriod": 640,
+          "firstOrderResidual": 5.00631901433542e-07,
+          "secondOrderResidual": 1.1075512830735284e-09
+        },
+        {
+          "stepsPerPeriod": 1280,
+          "firstOrderResidual": 5.011366522017994e-07,
+          "secondOrderResidual": 6.13043131665762e-10
+        }
+      ]
+    },
+    {
+      "epsilon": 0.00025,
+      "refinements": [
+        {
+          "stepsPerPeriod": 160,
+          "firstOrderResidual": 5.80945706605027e-08,
+          "secondOrderResidual": 6.949017523026168e-08
+        },
+        {
+          "stepsPerPeriod": 320,
+          "firstOrderResidual": 1.2106569388648994e-07,
+          "secondOrderResidual": 4.425605763004947e-09
+        },
+        {
+          "stepsPerPeriod": 640,
+          "firstOrderResidual": 1.2509703589325802e-07,
+          "secondOrderResidual": 3.3929150512455686e-10
+        },
+        {
+          "stepsPerPeriod": 1280,
+          "firstOrderResidual": 1.2534940244309143e-07,
+          "secondOrderResidual": 8.6252358377361e-11
+        }
+      ]
+    }
+  ],
+  "boundary": "Agreement of finite runs is not a rigorous time bound; individual chaotic trajectories need not converge over the monitoring window."
+}

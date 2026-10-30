@@ -480,6 +480,80 @@ that the brain literally evaluates the equations sequentially.  Its value is
 identifiability: deleting or merging an operator must change a named output and
 therefore a possible experiment.
 
+## 12A. Bounded observer--controller compression
+
+The useful part of a **witness/navigator** distinction is operational rather
+than anatomical or metaphysical.  It compresses two families of transformations
+already present in the atlas:
+
+- a **witness-like observation** is O03 state estimation directed toward the
+  state, reliability or output of another operator, made available through O05
+  and, where required, maintained through O06;
+- a **navigator-like intervention** combines O09 target formation, O10 control
+  allocation, O11 policy selection and O12 actuation, with O14--O15 changing
+  what later becomes automatic.
+
+Neither family is one brain region, inner person or independent substance.  A
+minimal closed-loop statement is
+
+\[
+\begin{aligned}
+z_t &= H(y_{\leq t},m_{\leq t},\pi_{\leq t},\varepsilon_{\leq t};\theta_t),\\
+u_t &\sim P(z_t,g_t,c_t;\theta_t),\\
+(x_{t+1},b_{t+1}) &= F(x_t,b_t,u_t,\eta_t),\\
+\theta_{t+1} &= L(\theta_t,\varepsilon_t,z_t,u_t).
+\end{aligned}
+\]
+
+Here \(z_t\) is partial, delayed and model-dependent observation, not a
+transparent read of the complete organism.  Producing or attending to
+\(z_t\) can change routing, priority, control and memory.  The observer is
+therefore stateful and has back-action.  There is no biologically admissible
+**pure read port** in this model.
+
+Several phenomenological kinds of "write" compile without adding new
+faculties:
+
+| Informal write | Atlas compilation | Retained boundary |
+|---|---|---|
+| initiation | O09 target + O10 allocation + O11 policy + O12 actuation | action is still prepared by distributed recurrent dynamics |
+| inhibition | O10 changes O11 selection or delays/cancels O12 | success depends on detection, stopping latency and commitment state |
+| constraint-setting | O09 changes targets or O14 changes policy/model parameters | a changed constraint is not yet durable transformation |
+| transformative | repeated O14 update plus O15 consolidation/reorganization | retention must survive time, stress and context |
+| indirect or conditions-first control | modify evidence, environment, target or viability conditions, then permit ordinary dynamics to run | withdrawal is useful only where the target process is independently viable |
+| minimum intervention near a sensitive boundary | a small \(u_t\) selects among currently available trajectories | sensitivity does not imply zero thermodynamic, neural or social cost |
+
+This compilation preserves a valuable account of bounded agency.  An agent
+need not originate every candidate action to participate causally in selection,
+inhibition, constraint-setting and the construction of future policies.  It
+also preserves the difference between forcing an unavailable trajectory and
+changing conditions so an available trajectory becomes selectable.  The
+feasible set and the intervention cost must nevertheless be measured rather
+than inferred from a feeling of effortlessness.
+
+Sleep fits the same architecture without an anti-control metaphysics.  It is
+an O01 capacity regime in which O15 replay, down-selection and consolidation
+can alter later performance.  Dream phenomenology and any wider interpretation
+remain separate from that established functional role.
+
+### Epistemic and safety guardrails
+
+- A quiet, bodily or intuitive signal is evidence entering O03/O07/O08.  It is
+  not an infallible oracle and remains vulnerable to trauma, bias, illness,
+  confabulation, urgency and social installation.
+- "Field", "phase", "symmetry breaking", "manifold" and "criticality" retain
+  their domain-specific meanings.  A mathematical analogy does not identify a
+  quantum field, neural process, conscious experience, social relation and
+  theological ground.
+- Metacognitive access does not entail phenomenal consciousness, and
+  phenomenal consciousness is not inserted as an unexplained cause of control,
+  learning or retention.
+- A useful intervention must remain contestable by consequences, independent
+  records, other affected agents and the possibility that non-reception
+  reflects a wrong model rather than insufficient force.
+
+The corresponding claim is recorded in [Claim 1802](../../claims/1800-1899/1802_witness_and_navigator_compile_into_a_bounded_observer_controller_loop.md).
+
 ## 13. Touching ground without experimenting on people
 
 The first ground model should not begin with new subject recruitment or with

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "admissibility-klein-double-cover-stokes-v1",
+  "date": "2026-10-30",
+  "status": "exact_linear_stokes_double_cover_closed",
+  "domain": {
+    "cover": "flat_torus_2pi_by_2pi",
+    "deckMap": "(x,y) -> (x+pi,-y)",
+    "deckJacobian": [[1, 0], [0, -1]],
+    "quotient": "Klein_bottle"
+  },
+  "transformationLaws": {
+    "pressure": "deck_even",
+    "streamfunction": "deck_odd",
+    "velocity": "deck_equivariant"
+  },
+  "modes": [
+    {
+      "id": "A",
+      "streamfunction": "cos(x) cos(y)",
+      "axialHarmonic": 1,
+      "transverseHarmonic": 1,
+      "transverseParity": 1,
+      "laplacianEigenvalue": 2
+    },
+    {
+      "id": "B",
+      "streamfunction": "sin(2x) sin(y)",
+      "axialHarmonic": 2,
+      "transverseHarmonic": 1,
+      "transverseParity": -1,
+      "laplacianEigenvalue": 5
+    }
+  ],
+  "stokesWitness": {
+    "viscosity": 0.1,
+    "time": 3,
+    "initialAmplitude": 1,
+    "constantForcing": 0.25,
+    "solution": "a(t)=a0 exp(-nu lambda t)+F/(nu lambda)(1-exp(-nu lambda t))"
+  },
+  "detector": {
+    "oneLapLongitudinalMultiplier": 1,
+    "oneLapTransverseMultiplier": -1,
+    "twoLapMultiplier": 1,
+    "powerBlindToTransverseSign": true
+  },
+  "nextGate": "Enumerate and simulate quotient-admissible nonlinear Fourier triads against the rotation-only control."
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "relational-orbital-duration-config/v1",
+  "id": "ROP-002",
+  "date": "2026-10-30",
+  "modelSource": "evidence/data/relational-orbital-persistence-config-v1.json",
+  "semimajorAxisRatios": [1.4, 1.425],
+  "phaseCount": 48,
+  "phaseOffsetInGridCells": 0.5,
+  "monitorCycles": [100, 300, 1000, 3000],
+  "stepsPerInnerPeriod": [320, 640],
+  "earlyFeatureCycles": 10,
+  "earlyFeatureStepsPerPeriod": 640,
+  "phaseSectors": 8,
+  "heldOutPhaseSectors": [2, 5],
+  "ridgePenalty": 1,
+  "models": {
+    "constant": [],
+    "geometry": ["logSizeRatio", "sinPhase", "cosPhase"],
+    "firstOrder": ["logSizeRatio", "sinPhase", "cosPhase", "logFirstResponse"],
+    "secondOrder": ["logSizeRatio", "sinPhase", "cosPhase", "logFirstResponse", "logSecondResponse"]
+  },
+  "primaryHorizon": 3000,
+  "primaryScore": "Held-out Brier score for exit by 3000 cycles, with best/worst assignments for numerically unresolved labels",
+  "secondaryScore": "Held-out Brier scores at 100, 300 and 1000 cycles; restricted-duration summaries without tail extrapolation",
+  "featureDefinitions": "Max Euclidean norms of first and second derivatives of three normalized pair distances with respect to initial outer mean anomaly, sampled at each of the first ten inner periods; log1p transformed",
+  "domainChoice": "Sensitive slice chosen from the previous exploratory atlas. This is a prospective computational test split within that slice, not external astrophysical validation or independent experiment registration.",
+  "uncertaintyPolicy": "Keep administrative right censoring distinct from resolution disagreement. Duration ranges and survival envelopes describe the tested integrations, not certified bounds for the exact flow. No test-set tuning."
+}

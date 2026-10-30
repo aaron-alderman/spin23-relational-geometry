@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "admissibility-surface-viscosity-three-convention-v1",
+  "date": "2026-10-30",
+  "status": "three_convention_energy_and_kernel_gate",
+  "epsilon": 0.25,
+  "positiveOperators": {
+    "hodge": "Delta_H=d delta+delta d",
+    "bochner": "nabla-star nabla",
+    "deformation": "2 Def-star Def"
+  },
+  "identitiesOnDivergenceFreeFields": {
+    "weitzenbock": "Q_H=Q_B+integral K |u|^2",
+    "deformation": "Q_D=Q_B-integral K |u|^2"
+  },
+  "thresholds": {
+    "maximumIdentityResidual": 1e-10,
+    "maximumDeclaredKernelEnergy": 1e-12,
+    "minimumSeparatedEnergy": 0.001
+  },
+  "primarySources": [
+    "https://doi.org/10.1016/j.geomphys.2017.07.015",
+    "https://doi.org/10.1007/s00028-020-00648-0",
+    "https://doi.org/10.1007/s00021-022-00742-y",
+    "https://arxiv.org/abs/2002.06350"
+  ],
+  "nextGate": "Build finite vector or one-form matrices for all three forms and compare their quotient kernels and low spectra."
+}

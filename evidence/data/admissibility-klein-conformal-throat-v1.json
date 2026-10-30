@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "admissibility-klein-conformal-throat-v1",
+  "date": "2026-10-30",
+  "status": "deck_compatible_area_normalized_geometry_gate",
+  "metric": "g=exp(2 sigma(x)) (dx^2+dy^2)",
+  "sigma": "c+epsilon cos(2x)",
+  "epsilon": 0.25,
+  "normalization": "choose c so the mean of exp(2 sigma) is one",
+  "deckMaps": {
+    "klein": "(x,y) -> (x+pi,-y)",
+    "rotation": "(x,y) -> (x+pi,y)"
+  },
+  "thresholds": {
+    "maximumAreaRelativeError": 1e-12,
+    "maximumGaussBonnetResidual": 1e-12,
+    "maximumDeckCompatibilityError": 1e-12,
+    "maximumForbiddenCrossMass": 1e-12,
+    "minimumAllowedCrossMass": 0.01
+  },
+  "testModes": {
+    "A": "cos(x)cos(y)",
+    "A3": "cos(3x)cos(y)",
+    "B": "sin(2x)sin(y)",
+    "C": "cos(2y)"
+  },
+  "nonClaims": [
+    "A conformal metric is a surface-geometry model, not yet a no-slip physical duct.",
+    "Rayleigh quotients of test functions are not exact curved eigenvalues unless the generalized eigenproblem is solved.",
+    "Deck compatibility preserves topology but does not by itself create a topology-sensitive scalar signal."
+  ],
+  "nextGate": "Insert the weighted mass matrix and curvature-aware viscous operator into the matched dynamical comparison."
+}

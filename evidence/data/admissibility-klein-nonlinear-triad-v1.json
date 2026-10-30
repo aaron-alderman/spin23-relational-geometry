@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "admissibility-klein-nonlinear-triad-v1",
+  "date": "2026-10-30",
+  "status": "exact_first_quadratic_closure",
+  "inputs": [
+    {
+      "id": "A",
+      "function": "cos(x) cos(y)",
+      "laplacianEigenvalue": 2
+    },
+    {
+      "id": "B",
+      "function": "sin(2x) sin(y)",
+      "laplacianEigenvalue": 5
+    }
+  ],
+  "poissonBracket": {
+    "formula": "J(A,B)=1/4 cos(x)+3/4 cos(3x)-3/4 cos(x)cos(2y)-1/4 cos(3x)cos(2y)",
+    "vorticityCrossFactor": 3,
+    "daughterModes": [
+      {"k": 1, "m": 0, "coefficient": 0.25},
+      {"k": 3, "m": 0, "coefficient": 0.75},
+      {"k": 1, "m": 2, "coefficient": -0.75},
+      {"k": 3, "m": 2, "coefficient": -0.25}
+    ]
+  },
+  "selectionLaw": "(-1)^k times transverseParity equals -1",
+  "conservationChecks": [
+    "integral psi J(psi,omega) equals zero",
+    "integral omega J(psi,omega) equals zero"
+  ],
+  "nextGate": "De-aliased pseudo-spectral time integration with equal-dimension rotation control."
+}

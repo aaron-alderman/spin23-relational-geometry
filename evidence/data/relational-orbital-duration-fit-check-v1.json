@@ -1,0 +1,39 @@
+{
+  "schema": "relational-orbital-duration-fit-check/v1",
+  "date": "2026-10-30",
+  "status": "pass",
+  "runsSha256": "fe9d5efbbfc530f703db9f252cd6e83317504c0cfa827ec75dd20c11ad8478a7",
+  "analysisSha256": "0734f81ebe7527bd85adc51c2ad48e4620001c96070963ab2159546fe5cd36f5",
+  "method": "Independent design construction, standardization and scipy.optimize BFGS at the primary horizon",
+  "models": [
+    {
+      "model": "constant",
+      "maximumCoefficientDifference": 2.2009061240169103e-12,
+      "gradientNorm": 2.334132886971929e-11,
+      "optimizerSuccess": true,
+      "optimizerMessage": "Optimization terminated successfully."
+    },
+    {
+      "model": "geometry",
+      "maximumCoefficientDifference": 6.422329335009636e-10,
+      "gradientNorm": 3.2890330855979554e-09,
+      "optimizerSuccess": false,
+      "optimizerMessage": "Desired error not necessarily achieved due to precision loss."
+    },
+    {
+      "model": "firstOrder",
+      "maximumCoefficientDifference": 9.254471772246475e-10,
+      "gradientNorm": 9.280810266493438e-09,
+      "optimizerSuccess": false,
+      "optimizerMessage": "Desired error not necessarily achieved due to precision loss."
+    },
+    {
+      "model": "secondOrder",
+      "maximumCoefficientDifference": 1.331150745187415e-09,
+      "gradientNorm": 6.1129867427113524e-09,
+      "optimizerSuccess": false,
+      "optimizerMessage": "Desired error not necessarily achieved due to precision loss."
+    }
+  ],
+  "boundary": "Checks statistical optimization, not gravitational exit durations or population calibration."
+}

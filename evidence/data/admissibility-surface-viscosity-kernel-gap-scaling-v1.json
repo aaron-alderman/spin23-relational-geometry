@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "admissibility-surface-viscosity-kernel-gap-scaling-v1",
+  "date": "2026-10-30",
+  "status": "kernel_and_small_throat_gap_scaling_gate",
+  "epsilonSweep": [0.0125, 0.025, 0.05, 0.1, 0.2, 0.25],
+  "kernelDimensions": {
+    "klein": {"hodge": 1, "bochner": 0, "deformation": 0},
+    "rotation": {"hodge": 2, "bochner": 0, "deformation": 1}
+  },
+  "thresholds": {
+    "maximumProtectedGap": 1e-12,
+    "minimumLiftedGap": 1e-6,
+    "minimumSmallEpsilonExponent": 1.95,
+    "maximumSmallEpsilonExponent": 2.05,
+    "maximumIdentityResidual": 1e-11
+  },
+  "nextGate": "Assemble mixed finite vector bases and verify the kernel counts and first positive spectra without relying only on named witness fields."
+}

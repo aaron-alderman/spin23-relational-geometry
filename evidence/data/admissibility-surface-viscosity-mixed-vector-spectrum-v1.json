@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "admissibility-surface-viscosity-mixed-vector-spectrum-v1",
+  "date": "2026-10-30",
+  "status": "mixed_vector_generalized_spectrum_gate",
+  "epsilon": 0.25,
+  "baseDimension": 7,
+  "refinedDimension": 9,
+  "decayExperiment": {
+    "viscosity": 1,
+    "observationTime": 50,
+    "plateauRelativeTolerance": 0.00001,
+    "initialVector": "a_i proportional to 1/(i+1), normalized to unit kinetic energy"
+  },
+  "expectedNullities": {
+    "klein": {"hodge": 1, "bochner": 0, "deformation": 0},
+    "rotation": {"hodge": 2, "bochner": 0, "deformation": 1}
+  },
+  "thresholds": {
+    "zeroEigenvalue": 1e-8,
+    "maximumGeneralizedResidual": 1e-8,
+    "minimumPositiveEigenvalue": 1e-5,
+    "maximumIdentityMatrixResidual": 1e-8,
+    "maximumRefinedFirstGapRelativeDifference": 0.08
+  },
+  "nextGate": "Evolve matched initial vector fields under all six quotient/convention operators and design a minimal decay-ratio experiment."
+}

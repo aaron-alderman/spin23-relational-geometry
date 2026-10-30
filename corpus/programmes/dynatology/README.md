@@ -74,6 +74,13 @@ It does not replace physics, ontology, dynamics, optimization or modal logic. It
 58. [Golden--Golay pixelation record](golden_golay_pixelation_v1.json) freezes the integer transformation, exact residual, syndrome decoder, modulo-55 control, Euler support circuit, signed Gray scheduler, full-sphere scheduler, continuous-encoder no-go and intrinsic-ordering gate.
 59. [Golden--Golay integral encoder audit](mystery_atlas_24_golden_golay_integral_encoder_audit.md) recovers the existing arithmetic lift's exact two-to-eleven encoder, identifies its equidistant `[11,2,6]` ternary shadow and order-four golden reduction, and closes the intrinsic 55-secant ordering gate by an equivariant-successor no-go.
 60. [Golden--Golay integral encoder record](golden_golay_integral_encoder_audit_v1.json) freezes the encoder, basis gauge, finite orbit census, Coxeter-cap stabilizer orbits, resolved gate and external-evidence stop rule.
+61. [Bounded witness/navigator compilation](../../claims/1800-1899/1802_witness_and_navigator_compile_into_a_bounded_observer_controller_loop.md) retains the source document's useful observer, intervention, conditions-first and consolidation motifs while compiling them into the existing fifteen-operator loop; pure read/write ports, energy-free control, infallible intuition and cross-domain field identities are explicitly rejected.
+
+## Relational orbital persistence
+
+[Relational orbital persistence in a planetary three body model](relational_orbital_persistence_v1.md) supplies an executed finite-time viability example: 408 initial configurations, three timestep resolutions, first and second variational equations, sampled neighbourhoods and independent adaptive controls. Its phase-sensitive persistence is conventional Newtonian dynamics; a certified nonlinear region, formation selection and quantum extension remain open.
+
+[Duration of relational stability and early prediction](relational_orbital_duration_v1.md) makes exit duration the primary observable, preserves censoring and numerical disagreement, and extends monitoring to 3,000 cycles on 96 new states. A frozen phase-sector test finds that initial geometry predicts finite-window survival better than a constant baseline, while the chosen early perturbation norms add no predictive improvement.
 
 ## Relation to neighbouring programmes
 

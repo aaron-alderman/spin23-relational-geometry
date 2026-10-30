@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "admissibility-klein-twisted-flow-parity-v1",
+  "date": "2026-10-30",
+  "status": "exact_parity_witness_closed_cfd_open",
+  "quotient": {
+    "baseLength": 1,
+    "returnMap": "(s,phi) -> (s+L,-phi)",
+    "doubleCoverLength": 2,
+    "orientationReversing": true
+  },
+  "modeWitnesses": [
+    {
+      "sector": "mirror_even",
+      "crossSection": "cos(m phi)",
+      "oneLapMultiplier": 1,
+      "twoLapMultiplier": 1,
+      "axialWavenumberUnitsOfPiOverL": [0, 2, 4, 6]
+    },
+    {
+      "sector": "mirror_odd",
+      "crossSection": "sin(m phi)",
+      "oneLapMultiplier": -1,
+      "twoLapMultiplier": 1,
+      "axialWavenumberUnitsOfPiOverL": [1, 3, 5, 7]
+    }
+  ],
+  "controls": [
+    "open_untwisted",
+    "open_local_twist",
+    "closed_rotation",
+    "closed_reflection"
+  ],
+  "detectors": [
+    "one_lap_two_lap_mode_parity",
+    "mode_resolved_wall_stress",
+    "complex_hydraulic_impedance"
+  ],
+  "nonClaims": [
+    "A visually twisted surface is not thereby a Klein bottle.",
+    "This witness does not address three-dimensional Navier--Stokes regularity.",
+    "The scalar parity witness is not the tensorial velocity sewing rule."
+  ],
+  "nextGate": "Solve Stokes flow on the torus double cover with deck-equivariant forcing and verify detector overlap before nonlinear CFD."
+}

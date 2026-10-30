@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "admissibility-ordered-defect-commutator-control-v1",
+  "date": "2026-10-30",
+  "status": "ordered_perturbation_commutator_control_gate",
+  "durations": [0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1],
+  "generators": {
+    "A": [[0, 1], [-1, 0]],
+    "B": [[1, 0], [0, -1]],
+    "commutingControl": [[0, 2], [-2, 0]]
+  },
+  "thresholds": {
+    "minimumNoncommutingExponent": 1.95,
+    "maximumNoncommutingExponent": 2.05,
+    "maximumCommutingOrderResidual": 1e-12,
+    "maximumLeadingCommutatorRelativeErrorAtSmallestDuration": 0.001
+  },
+  "nextGate": "Apply two calibrated localized perturbations in both orders on the physical emulator; compare the measured commutator record with the independently identified generator commutator and hysteresis/latency controls."
+}

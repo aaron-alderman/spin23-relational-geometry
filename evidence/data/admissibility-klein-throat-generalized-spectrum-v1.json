@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "admissibility-klein-throat-generalized-spectrum-v1",
+  "date": "2026-10-30",
+  "status": "finite_generalized_eigenproblem_gate",
+  "epsilon": 0.25,
+  "basisDimension": 8,
+  "refinedBasisDimension": 16,
+  "linearEvolution": {
+    "viscosity": 0.01,
+    "finalTime": 2,
+    "initialCoefficient": "first normalized basis vector"
+  },
+  "kleinBasis": [
+    "cos(x)cos(y)",
+    "cos(3x)cos(y)",
+    "cos(5x)cos(y)",
+    "cos(7x)cos(y)",
+    "sin(2x)sin(y)",
+    "sin(4x)sin(y)",
+    "sin(6x)sin(y)",
+    "sin(8x)sin(y)"
+  ],
+  "rotationBasis": [
+    "cos(y)",
+    "cos(2x)cos(y)",
+    "cos(4x)cos(y)",
+    "cos(6x)cos(y)",
+    "sin(2x)sin(y)",
+    "sin(4x)sin(y)",
+    "sin(6x)sin(y)",
+    "sin(8x)sin(y)"
+  ],
+  "thresholds": {
+    "maximumGeneralizedResidual": 1e-9,
+    "maximumMassAsymmetry": 1e-12,
+    "minimumMassEigenvalue": 0.5,
+    "maximumCrossBlockMass": 1e-12,
+    "maximumFlatLimitEigenvalueError": 1e-10
+    ,"maximumLowSpectrumRelativeDifference": 0.0001,
+    "maximumEnergyIdentityResidual": 1e-12
+  },
+  "nonClaims": [
+    "The finite Ritz spectrum is not the complete Laplace--Beltrami spectrum.",
+    "The scalar generalized operator is not yet the full viscous vector operator.",
+    "Different quotient spectra do not by themselves imply different total dissipation under arbitrary initial data."
+  ],
+  "nextGate": "Use the generalized mass/stiffness pair in the curved linear evolution while retaining the nonlinear quotient projection."
+}
