@@ -10,7 +10,32 @@
     "applicationAdmission": false,
     "protectedRuntimeSelected": false
   },
+  "corpusProjection": {
+    "protocol": "spin23-corpus-projection-manifest/1",
+    "manifestSha256": "7b31c33d369e8148bda1ff08f0a588053e51cec7de7d61565b99b3a3210e4b51",
+    "corpusContentSha256": "678bec5d080f0663a54c2a804689209f7d733989008bd416290cc542bcaad2fe",
+    "evidenceProjectionSha256": "6814423b4e342b3e4281aeb13db79ec8e1bd0adf26cc1381dcd43e7dd3a7f491",
+    "documentCount": 2398,
+    "exactPayloadMaterialized": false,
+    "note": "The retained manifest binds every required object. Protected publication must transfer and re-hash the exact bytes; the inventory is not itself the corpus payload."
+  },
   "tools": [
+    {
+      "name": "corpus_contribution_beacon",
+      "description": "Discover the live Context Hub contribution surface without starting a belief episode. Returns open work invitations, acceptable evidence packets, local Observatory entry points and strict authority limits. Contributing is optional and never promotes truth, mutates the corpus or trains model weights.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
     {
       "name": "corpus_search",
       "description": "Search the canonical research corpus. Combines document BM25, exact claim-passage matching, confidence-gated corpus-local distributional expansion, exact cross-reference passage bridges and personalized PageRank. Returns drill-down identities, declared epistemic status and selector sensitivity. Ranking is a navigation aid, not evidence or truth.",
@@ -508,8 +533,8 @@
   "members": [
     {
       "path": "tooling/search/search_corpus.mjs",
-      "bytes": 39904,
-      "sha256": "3f1c82bad314b2ad5b7b6100e9e5f89df43ab5618e02217bf08be6b7b7148ab3"
+      "bytes": 40685,
+      "sha256": "01364dd76ce1936d7d309287d25c9a0bd64c2e84cc10e1bbea3e439b2f0b2531"
     },
     {
       "path": "tooling/search/context_hub.mjs",
@@ -528,8 +553,8 @@
     },
     {
       "path": "tooling/search/belief_state.mjs",
-      "bytes": 20658,
-      "sha256": "dd6232006e7959dfa5457910f58df74bb96b2bd80184fe82d73e223ace53ff8d"
+      "bytes": 21455,
+      "sha256": "59709b7ad01e28c7752fb16e00d26364ee42dd313861be2a9ce89f6f8dacaae3"
     },
     {
       "path": "tooling/search/belief_observations.mjs",
@@ -538,13 +563,33 @@
     },
     {
       "path": "tooling/search/adaptive_context.mjs",
-      "bytes": 5854,
-      "sha256": "cf6622786c11d6e3ec837e904e526b757427ed40800b9311513cacf7897adf82"
+      "bytes": 6258,
+      "sha256": "a954b3126f1f90c61d923a10d5df6722620ad0d8680a6a94fd22c23074325957"
+    },
+    {
+      "path": "tooling/search/contribution_beacon.mjs",
+      "bytes": 925,
+      "sha256": "0ccd3c06bc36d61c79aa73cc411b661a134950cfa4c72ab0ac07a88b0ca83de4"
+    },
+    {
+      "path": "tooling/search/contribution_beacon_v1.json",
+      "bytes": 6300,
+      "sha256": "6149acd67d6fea280f507ff5e889c675728ace22b31f0ec1f022a2ce3086db3e"
+    },
+    {
+      "path": "tooling/search/generate_corpus_projection_manifest.mjs",
+      "bytes": 2500,
+      "sha256": "e9eedfff3c0f94a99cc23ae91876b310a81d62c67cd4463289379fe11a38aaa4"
+    },
+    {
+      "path": "tooling/search/corpus_projection_manifest_v1.json",
+      "bytes": 688013,
+      "sha256": "898504dbd1026910eabae172a55d2bc879432044e45b3674f104a16e37e220ca"
     },
     {
       "path": "tooling/search/corpus_search_mcp.mjs",
-      "bytes": 23956,
-      "sha256": "b1edd29d0ecd5de6adf3cdde6e38670ce2841c8e6fd57ab78b1d3fd8a4798e3a"
+      "bytes": 25153,
+      "sha256": "84bbe703a281e25f2696347805f16e157eeaaff9a872f0833a366539a1639dc6"
     },
     {
       "path": "tooling/search/benchmark_cases.json",
@@ -553,13 +598,23 @@
     },
     {
       "path": "tooling/search/benchmark_baseline_v1.json",
-      "bytes": 47197,
-      "sha256": "f4a18ced8eada6067c37cec58c8d77a9f8cddde72e32f804009916bfb25a0899"
+      "bytes": 47076,
+      "sha256": "1c0e6e19810b1e2f46e902a98cfcdaf3d9d72879013b93970ba358c16f338ed2"
     },
     {
       "path": "tooling/search/run_benchmark.mjs",
       "bytes": 6762,
       "sha256": "47072abd21a84c449f958ed6396ab870f57a3b19823885497b680c5628ba705a"
+    },
+    {
+      "path": "tooling/search/qualify_retrieval_identity.mjs",
+      "bytes": 3064,
+      "sha256": "5c6b29183cee4429f9f0757ecde3f6424ac1bf71249356e1d4d1957c8365b37e"
+    },
+    {
+      "path": "tooling/search/retrieval_identity_qualification_v1.json",
+      "bytes": 2295,
+      "sha256": "17dda0f623114dae3814915c0bc4a22f20089eb87d9a0edd38c836e3cb8a4f51"
     },
     {
       "path": "tooling/search/retrieval_intelligence_benchmark.mjs",
@@ -573,8 +628,8 @@
     },
     {
       "path": "tooling/search/MCP.md",
-      "bytes": 9863,
-      "sha256": "69bb8c86990b2b267adb82c1b6307549706715db72a3fd633acf0c849d0e72bc"
+      "bytes": 11128,
+      "sha256": "6635d1c9b88a3350ec3beb454bfe46ae005648ca7d6934717449a58827f575b8"
     },
     {
       "path": "tooling/search/BELIEF_LOOP.md",
@@ -582,14 +637,19 @@
       "sha256": "fe2a55d340bfd8ca215604e66664687220a3bf5b83e9c63a9a6574326399f3c3"
     },
     {
+      "path": "tooling/search/CONTRIBUTION_BEACON.md",
+      "bytes": 4794,
+      "sha256": "46effabe7a620ad3a9289bca605adf26626c258569597e0b85464dfab2fb3c35"
+    },
+    {
       "path": "tests/repository/corpus_search.test.mjs",
-      "bytes": 6647,
-      "sha256": "0b0d3f766d483f76ee3d0ad0d0fae96bb820a4cad5dfa16d099a73f330524ad3"
+      "bytes": 7922,
+      "sha256": "4ce12d11b93813a863da9699619b1aa84d55c6d502ae145ac59f90a8347bbf58"
     },
     {
       "path": "tests/repository/corpus_search_mcp.test.mjs",
-      "bytes": 9276,
-      "sha256": "1933ebea726c79bd48aae990e950c9dda2c96753251490895b9e9e24b3e8454f"
+      "bytes": 10188,
+      "sha256": "af29b054af3f9e76aed1abad414d547e3018461356dd521c0308103161f26d70"
     },
     {
       "path": "tests/repository/corpus_answer_stability.test.mjs",
@@ -610,6 +670,16 @@
       "path": "tests/repository/corpus_search_benchmark.test.mjs",
       "bytes": 1009,
       "sha256": "04949ee0acc164b7f8ac021b92a5429e5e725265020cdcb6e0b61a7d78483166"
+    },
+    {
+      "path": "tests/repository/corpus_projection_manifest.test.mjs",
+      "bytes": 920,
+      "sha256": "b0cc1da398c4aacfc4d56d8b0b2a2e46eb07aa900380eb84b3974dc5488a283d"
+    },
+    {
+      "path": "tests/repository/corpus_search_admission_candidate.test.mjs",
+      "bytes": 987,
+      "sha256": "c20e3f942146009c31133ee0fc367cdfd5660dbcaa29e485f01d64cb1dd09cfb"
     }
   ],
   "qualification": {
@@ -622,8 +692,9 @@
     },
     "commands": [
       "node tooling/search/run_benchmark.mjs",
+      "node tooling/search/qualify_retrieval_identity.mjs",
       "node tooling/search/retrieval_intelligence_benchmark.mjs",
-      "node --test tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
+      "node --test --test-concurrency=1 tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
       "node tooling/search/run_belief_evaluation.mjs",
       "node tooling/audit/audit_markdown_links.mjs",
       "git diff --check"
@@ -638,7 +709,9 @@
       "belief state tampering and stale corpus identity rejected",
       "empty belief state preserves baseline source selection",
       "adaptive influence capped and never changes epistemic status",
-      "MCP server retains no hidden belief state"
+      "MCP server retains no hidden belief state",
+      "unrelated generated evidence-spine control metadata cannot change retrieval identity",
+      "missing, extra or hash-mismatched projection objects rejected before protected publication"
     ]
   },
   "admissionSequence": [
@@ -649,7 +722,7 @@
     "bless the tested candidate snapshot",
     "seal and qualify a successor package",
     "admit through the protected lifecycle",
-    "verify all nine operations through a fresh MCP connection"
+    "verify all ten operations through a fresh MCP connection"
   ],
-  "candidateSha256": "3e54f413288927f412ccd7cbddf5096fcb282da7f37bca154e012617d8705f78"
+  "candidateSha256": "c601f3e1dfd8dbd7a8d20e22c96b652faf0fa54238e0bfba9257bc0a3750e61a"
 }

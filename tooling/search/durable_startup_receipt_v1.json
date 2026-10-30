@@ -1,0 +1,54 @@
+{
+  "protocol": "spin23-context-hub-durable-startup-receipt/1",
+  "date": "2026-10-27",
+  "source": {
+    "repository": "https://github.com/aaron-alderman/spin23-relational-geometry.git",
+    "branch": "codex/oph-main-merge",
+    "commit": "c0451c55fb5532d8c29ade72807d19ae12301019"
+  },
+  "deployment": {
+    "root": "C:\\Users\\aaron\\grand-theory\\.context-hub\\observatory-runtime",
+    "mode": "detached-static-snapshot",
+    "markerSha256": "be0a6b5046268bcce90059c524f8a938427907d653971574cf06e0d53ec5344b",
+    "sourceRecoverableFromPushedCommit": true
+  },
+  "startup": {
+    "kind": "current-user-windows-startup-folder",
+    "launcher": "C:\\Users\\aaron\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Spin23-Context-Hub-Observatory.cmd",
+    "launcherSha256": "4441442a3aa7aec3ac7493b431d39de9c9978f8253f1fb5d23ccc0eaa82cbebb",
+    "installed": true
+  },
+  "stateHandoff": {
+    "sourceFiles": 46,
+    "copiedFiles": 46,
+    "copyMismatches": 0,
+    "stableFilesExcludingVolatilePidAndLogs": 43,
+    "stableStateAggregateSha256": "913e6a97108d420afb1b43f5028d15975dbd11553bdf5f755c9ce64026b3b285"
+  },
+  "recoveryRehearsal": {
+    "launcherInvoked": true,
+    "previousPid": 24680,
+    "recoveredPid": 38004,
+    "newProcessObserved": true,
+    "healthStatus": "ok",
+    "persistence": "C:\\Users\\aaron\\grand-theory\\.context-hub\\observatory-runtime\\.context-hub\\episodes",
+    "operatorId": "context-hub.operator.local",
+    "writeProtected": true,
+    "credentialSha256Before": "c34b27a7cfdac3b48477af7c7edfefae95119da4d7de38e8e664142d66530ca1",
+    "credentialSha256After": "c34b27a7cfdac3b48477af7c7edfefae95119da4d7de38e8e664142d66530ca1"
+  },
+  "scope": {
+    "proves": [
+      "installed per-user logon launcher",
+      "recovery through the exact installed launcher",
+      "state and credential continuity across process replacement",
+      "stable path independent of the managed Codex worktree"
+    ],
+    "doesNotProve": [
+      "a completed physical reboot or user logon observation",
+      "protected Sourcery application admission",
+      "multi-host failover",
+      "truth, corpus promotion or model training authority"
+    ]
+  }
+}

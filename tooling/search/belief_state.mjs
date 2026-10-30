@@ -54,10 +54,12 @@ export function verifyBeliefState(state) {
   if (state.protocol !== STATE_PROTOCOL) throw new Error("beliefState protocol is invalid");
   if (!shaPattern.test(state.stateSha256 ?? "") || sha256(statePayload(state)) !== state.stateSha256) throw new Error("beliefState integrity check failed");
   exactObject(state.episode, "beliefState.episode");
-  rejectUnknown(state.episode, new Set(["objective", "profile", "corpusContentSha256"]), "beliefState.episode");
+  rejectUnknown(state.episode, new Set(["objective", "profile", "corpusContentSha256", "taskSchedule"]), "beliefState.episode");
   if (!shaPattern.test(state.episode?.corpusContentSha256 ?? "")) throw new Error("beliefState corpus identity is invalid");
   if (typeof state.episode?.objective !== "string" || state.episode.objective.length < 2 || state.episode.objective.length > 500) throw new Error("beliefState objective is invalid");
   if (!profiles.has(state.episode?.profile)) throw new Error("beliefState profile is invalid");
+  const taskSchedule = state.episode.taskSchedule ?? [];
+  if (!Array.isArray(taskSchedule) || taskSchedule.length > 100 || taskSchedule.some(task => typeof task !== "string" || task.length < 2 || task.length > 500) || new Set(taskSchedule).size !== taskSchedule.length || taskSchedule.includes(state.episode.objective)) throw new Error("beliefState taskSchedule is invalid");
   exactObject(state.policy, "beliefState.policy");
   rejectUnknown(state.policy, new Set(["estimator", "prior", "processVariance", "observationPolicySha256"]), "beliefState.policy");
   if (state.policy.estimator !== "bounded scalar Kalman-like source-utility update") throw new Error("beliefState estimator is invalid");
@@ -97,14 +99,15 @@ export function verifyBeliefState(state) {
   return state;
 }
 
-export function initializeBeliefState({ objective, profile = "all", corpusContentSha256, processVariance = 0.01 } = {}) {
+export function initializeBeliefState({ objective, taskSchedule = [], profile = "all", corpusContentSha256, processVariance = 0.01 } = {}) {
   if (typeof objective !== "string" || objective.trim().length < 2 || objective.length > 500) throw new Error("objective must contain 2 to 500 characters");
   if (!profiles.has(profile)) throw new Error("profile is invalid");
+  if (!Array.isArray(taskSchedule) || taskSchedule.length > 100 || taskSchedule.some(task => typeof task !== "string" || task.length < 2 || task.length > 500) || new Set(taskSchedule).size !== taskSchedule.length || taskSchedule.includes(objective.trim())) throw new Error("taskSchedule is invalid");
   if (!shaPattern.test(corpusContentSha256 ?? "")) throw new Error("corpusContentSha256 must be a SHA-256 identity");
   if (!Number.isFinite(processVariance) || processVariance < 0.0001 || processVariance > 0.1) throw new Error("processVariance must be from 0.0001 to 0.1");
   const payload = {
     protocol: STATE_PROTOCOL,
-    episode: { objective: objective.trim(), profile, corpusContentSha256 },
+    episode: { objective: objective.trim(), profile, corpusContentSha256, ...(taskSchedule.length ? { taskSchedule } : {}) },
     policy: {
       estimator: "bounded scalar Kalman-like source-utility update",
       prior: { utilityMean: 0.5, utilityVariance: 0.25 },
@@ -116,7 +119,7 @@ export function initializeBeliefState({ objective, profile = "all", corpusConten
     evidenceLedger: [],
     evidenceFamilies: [],
     sequence: 0,
-    historySha256: sha256(`${STATE_PROTOCOL}\0${objective.trim()}\0${profile}\0${corpusContentSha256}`),
+    historySha256: sha256(`${STATE_PROTOCOL}\0${objective.trim()}\0${profile}\0${corpusContentSha256}\0${stableStringify(taskSchedule)}`),
     authority: { externalTelosRequired: true, changesTruthStatus: false, entails: false, empiricalAuthority: false, corpusPromotion: false, modelWeightTraining: false },
   };
   return { ...payload, stateSha256: sha256(payload) };

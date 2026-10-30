@@ -15,8 +15,22 @@ test("MCP advertises bounded read-only corpus retrieval", async () => {
   const initialized = await request(1, "initialize");
   assert.equal(initialized.result.serverInfo.name, "spin23-corpus-search");
   const listed = await request(2, "tools/list");
-  assert.deepEqual(listed.result.tools.map(tool => tool.name), ["corpus_search", "corpus_context", "corpus_context_sweep", "corpus_answer_receipt", "corpus_answer_stability", "corpus_belief_initialize", "corpus_belief_update", "corpus_adaptive_context", "corpus_read"]);
+  assert.deepEqual(listed.result.tools.map(tool => tool.name), ["corpus_contribution_beacon", "corpus_search", "corpus_context", "corpus_context_sweep", "corpus_answer_receipt", "corpus_answer_stability", "corpus_belief_initialize", "corpus_belief_update", "corpus_adaptive_context", "corpus_read"]);
   assert.ok(listed.result.tools.every(tool => tool.annotations.readOnlyHint === true));
+});
+
+test("MCP contribution beacon invites bounded work without starting an episode", async () => {
+  const response = await request(17, "tools/call", { name: "corpus_contribution_beacon", arguments: {} });
+  assert.equal(response.result.isError, undefined);
+  const beacon = response.result.structuredContent;
+  assert.equal(beacon.protocol, "spin23-context-hub-contribution-beacon/1");
+  assert.equal(beacon.status, "live-local");
+  assert.deepEqual(beacon.openOpportunities.map(item => item.id), ["BEACON-002", "BEACON-003", "BEACON-004"]);
+  assert.ok(beacon.completedMilestones.some(item => item.id === "BEACON-005"));
+  assert.equal(beacon.completedMilestones.some(item => item.id === "BEACON-001"), true);
+  assert.equal(beacon.authority.proposalOnly, true);
+  assert.equal(beacon.authority.changesTruthStatus, false);
+  assert.match(beacon.beaconSha256, /^[0-9a-f]{64}$/u);
 });
 
 test("MCP search returns structured, authority-bounded graph results", async () => {

@@ -18,6 +18,8 @@
       <section class="create-panel">
         <label for="objective">New externally governed objective</label>
         <textarea id="objective" rows="3" placeholder="What should this episode attend to?"></textarea>
+        <label for="task-schedule">Preregistered subquestions (optional, one per line)</label>
+        <textarea id="task-schedule" rows="4" placeholder="Use at least two unique tasks for a longitudinal episode"></textarea>
         <div class="form-row"><select id="new-profile" aria-label="New episode profile"><option>all</option><option>interpret</option><option>choose-work</option><option>audit</option><option>experiment</option></select><button id="create-episode" class="primary">Create episode</button></div>
       </section>
 
@@ -27,11 +29,31 @@
     </aside>
 
     <main class="workspace">
+      <details class="panel contribution-hub" open>
+        <summary><span><span class="eyebrow">OPEN CONTRIBUTION INBOX</span><strong>Help without joining an adaptive episode</strong></span><span id="contribution-count" class="state-pill live">0 pending</span></summary>
+        <p class="muted">Submit one inspectable retrieval miss, verification result, counterexample or missing source. The receipt records a proposal only; acceptance does not alter truth, corpus status or attention state.</p>
+        <form id="contribution-form" class="contribution-grid">
+          <label>Contribution type<select name="type"><option>retrieval-miss</option><option>verification-receipt</option><option>answer-stability</option><option>missing-source</option><option>counterexample-or-no-go</option><option>human-attention-rating</option></select></label>
+          <label>Profile<select name="profile"><option>audit</option><option>experiment</option><option>interpret</option><option>choose-work</option><option>all</option></select></label>
+          <label>Contributor identity<input name="contributor" required placeholder="agent, human or verifier identity"></label>
+          <label class="wide">Objective<textarea name="objective" rows="2" required></textarea></label>
+          <label>Expected<textarea name="expected" rows="2" required></textarea></label>
+          <label>Observed<textarea name="observed" rows="2" required></textarea></label>
+          <label>Narrow conclusion<textarea name="narrowConclusion" rows="2" required></textarea></label>
+          <label>Next test<textarea name="nextTest" rows="2" required></textarea></label>
+          <label class="wide">Source paths, one per line<textarea name="sourcePaths" rows="2" placeholder="corpus/..."></textarea></label>
+          <label class="wide">Dependencies, one per line<textarea name="dependsOn" rows="2" placeholder="BEACON-002 or contrib_0123456789abcdef"></textarea></label>
+          <button class="primary wide" type="submit">Submit proposal and receive receipt</button>
+        </form>
+        <div class="form-row contribution-operator"><label>Operator identity<input id="contribution-operator" placeholder="agent or human identity"></label><p class="muted">Used for claim, disposition and downstream-impact attribution.</p></div>
+        <div id="contribution-list" class="contribution-list"></div>
+      </details>
       <section id="empty-state" class="empty-state">
         <div class="orbit" aria-hidden="true"><span></span><span></span><span></span></div>
         <p class="eyebrow">NOTHING HIDDEN</p>
         <h2>Create or select an episode.</h2>
         <p>The Observatory holds attention in public: every context choice, innovation and accepted update remains inspectable and replayable.</p>
+        <p><a href="/api/beacon">Open the agent contribution beacon</a>—verification, contradiction and missing-source reports are welcome even without an adaptive episode.</p>
       </section>
 
       <div id="episode-view" hidden>

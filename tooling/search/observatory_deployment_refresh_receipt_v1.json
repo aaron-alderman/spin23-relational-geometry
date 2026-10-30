@@ -1,0 +1,55 @@
+{
+  "protocol": "spin23-context-hub-observatory-deployment-refresh-receipt/1",
+  "date": "2026-10-27",
+  "source": {
+    "repository": "https://github.com/aaron-alderman/spin23-relational-geometry.git",
+    "branch": "codex/oph-main-merge",
+    "commit": "901d62f0dab9c12dae5c41b730c3b654ea6bbc59"
+  },
+  "applicationCandidate": {
+    "path": "tooling/search/observatory_application_candidate_v1.json",
+    "candidateSha256": "e23eb18a91879250c96146745c17e8daf252ac6769218055f66db3fb2a06b0be",
+    "members": 25,
+    "memberMismatchesAfterRefresh": 0
+  },
+  "deployment": {
+    "root": "C:\\Users\\aaron\\grand-theory\\.context-hub\\observatory-runtime",
+    "marker": "C:\\Users\\aaron\\grand-theory\\.context-hub\\observatory-runtime\\DEPLOYMENT.json",
+    "mode": "candidate-member-refreshed-static-snapshot",
+    "installedLauncher": "C:\\Users\\aaron\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Spin23-Context-Hub-Observatory.cmd"
+  },
+  "recovery": {
+    "previousPid": 38004,
+    "recoveredPid": 11460,
+    "newProcessObserved": true,
+    "healthStatus": "ok",
+    "operatorId": "context-hub.operator.local",
+    "writeProtected": true,
+    "credentialSha256": "c34b27a7cfdac3b48477af7c7edfefae95119da4d7de38e8e664142d66530ca1"
+  },
+  "stateContinuity": {
+    "stableFilesExcludingVolatilePidAndLogs": 70,
+    "aggregateSha256Before": "8c6d06fed19b3a14120eacf4aed5ebb532e042efa809cc60c6c829595a796968",
+    "aggregateSha256After": "8c6d06fed19b3a14120eacf4aed5ebb532e042efa809cc60c6c829595a796968",
+    "unchanged": true
+  },
+  "liveSurface": {
+    "beaconServesRefreshedCandidate": true,
+    "pendingContributions": 2,
+    "authenticatedWarmupProposal": "contrib_ef22251d46540bc7"
+  },
+  "scope": {
+    "proves": [
+      "hash-exact application-member refresh in the stable deployment",
+      "installed-launcher recovery under a new process",
+      "credential and append-only state continuity across refresh",
+      "live serving of the refreshed contribution beacon"
+    ],
+    "doesNotProve": [
+      "protected application admission",
+      "a natural physical reboot or user logon observation",
+      "independent longitudinal utility",
+      "truth, corpus promotion or model-training authority"
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "protocol": "spin23-context-hub-contribution-beacon/1",
+  "status": "live-local",
+  "name": "Context Hub contribution beacon",
+  "invitation": "Help the corpus learn where to look by returning inspectable evidence about retrieval, context selection, verification and omission. Participation is welcome even when an agent does not use adaptive context for its own task.",
+  "observatory": {
+    "expectedUrl": "http://127.0.0.1:4178",
+    "healthPath": "/api/health",
+    "beaconPath": "/api/beacon",
+    "contributionsPath": "/api/contributions",
+    "persistence": ".context-hub/episodes/",
+    "scope": "local single-writer host"
+  },
+  "contributionTypes": [
+    {
+      "id": "verification-receipt",
+      "value": "A declared command or independent check passed or failed for a cited source.",
+      "minimum": ["source path", "source-version SHA-256", "command or method", "receipt SHA-256", "evidence-family SHA-256"]
+    },
+    {
+      "id": "retrieval-miss",
+      "value": "A relevant source was absent, badly ranked or admitted only through an inappropriate bridge.",
+      "minimum": ["query", "task profile", "expected source", "observed result or omission", "context receipt when available"]
+    },
+    {
+      "id": "answer-stability",
+      "value": "A claim remained stable, became conditional or conflicted across controlled context variants.",
+      "minimum": ["answer receipts", "fixed model and prompt identity", "atomic claim key", "cited source paths"]
+    },
+    {
+      "id": "missing-source",
+      "value": "A source, negative control or neighbouring field should be considered but is absent.",
+      "minimum": ["bibliographic or repository identity", "reason for relevance", "authority lane", "proposed query or test"]
+    },
+    {
+      "id": "counterexample-or-no-go",
+      "value": "A proposed relation, ranking or inference fails under a specific reproducible case.",
+      "minimum": ["target claim or operation", "counterexample", "reproduction path", "scope of defeat"]
+    },
+    {
+      "id": "human-attention-rating",
+      "value": "A human explicitly judges a source useful or distracting for one declared objective.",
+      "minimum": ["objective", "source path", "rating", "reason"],
+      "authority": "human-policy, not empirical evidence"
+    }
+  ],
+  "completedMilestones": [
+    {
+      "id": "BEACON-001",
+      "title": "Isolate aggregate qualification identity drift",
+      "outcome": "The drift came from recursively hashing raw generated evidence-spine control metadata into retrieval identity, not from concurrent search. Retrieval now hashes only the exact claim-evidence projection it consumes. Two serial and two parallel clean-process 30-case runs match the retained corpus, evidence and baseline identities exactly at MRR 0.925.",
+      "receipt": "tooling/search/retrieval_identity_qualification_v1.json"
+    },
+    {
+      "id": "BEACON-005",
+      "title": "Implement identity-preserving federation",
+      "outcome": "Six repository-snapshot lanes now preserve native object, exact content, revision, status and relation identity. The composer keeps lane-native order, quotas and crossing penalties separate, requires dated bibliographic identity for external literature, and grants no global rank or promotion authority.",
+      "receipt": "tests/repository/registered_federation_adapters.test.mjs"
+    }
+  ],
+  "openOpportunities": [
+    {
+      "id": "BEACON-002",
+      "priority": "P0",
+      "title": "Admit the read-only MCP successor",
+      "need": "Integrate and seal Sourcery's already-passing bounded-discovery prerequisite, materialize and re-hash every object in the retained 2,398-document transport manifest, then qualify the reflected search, context, answer-receipt, belief and beacon operations.",
+      "doneWhen": "The protected host reproduces the manifest's aggregate corpus identity, and a fresh connection discovers every operation and reproduces the local negative controls without mutation authority."
+    },
+    {
+      "id": "BEACON-003",
+      "priority": "P1",
+      "title": "Run longitudinal baseline versus adaptive episodes",
+      "need": "The scheduled 12-task protocol, pre-context blinding commitment, opaque scorecard CLI and signed verifier are ready, but no independent evaluator key or real paired outcome set has been registered.",
+      "doneWhen": "An independent evaluator registers before context generation, scores and signs all six opaque held-out pairs without the arm mapping, and post-score unblinding verifies every utility, diversity, citation, rollback, freeze and drift gate."
+    },
+    {
+      "id": "BEACON-004",
+      "priority": "P1",
+      "title": "Admit the protected Observatory application separately",
+      "need": "The exact separately named application candidate, local operator authentication, stable deployment snapshot and installed logon launcher now preserve package, write-protection and state identity across rehearsed process recovery. Credentials and mutable ledgers are excluded. The write-capable host remains outside the read-only MCP candidate and has no protected application admission.",
+      "doneWhen": "The `context-hub.observatory.local` package is independently qualified, admitted and reverified through a fresh session with append-only persistence, approval, rollback, freeze, recovery and drift controls, without inheriting read-only MCP or corpus-promotion authority."
+    },
+    {
+      "id": "BEACON-006",
+      "priority": "P1",
+      "title": "Supply real collective-use evidence",
+      "need": "The retained population passes engineering volume, replay, rollback, freeze, concentration, identity and authority gates, but all 70 observations are same-run and two pending proposals have no dispositions or downstream impacts.",
+      "doneWhen": "The preregistered collective policy passes with independent or external evidence families, at least four contributors, both accepted and rejected episode and contribution decisions, attributed downstream impacts, bounded concentration and intact replay."
+    }
+  ],
+  "authority": {
+    "proposalOnly": true,
+    "changesTruthStatus": false,
+    "corpusPromotion": false,
+    "modelWeightTraining": false,
+    "automaticAdmission": false,
+    "externalObjectiveRequired": true
+  }
+}

@@ -34,6 +34,18 @@ function normalizedControls(controls = {}) {
     maxCharacters,
   };
 }
+function normalizedTaskSchedule(taskSchedule, objective) {
+  if (taskSchedule === undefined || taskSchedule === null) return [];
+  if (!Array.isArray(taskSchedule) || taskSchedule.length < 2 || taskSchedule.length > 100) throw new Error("taskSchedule must contain 2 to 100 preregistered tasks");
+  const normalized = taskSchedule.map((task, index) => {
+    const value = typeof task === "string" ? task.trim() : "";
+    if (value.length < 2 || value.length > 500) throw new Error(`taskSchedule item ${index + 1} is invalid`);
+    return value;
+  });
+  if (new Set(normalized).size !== normalized.length) throw new Error("taskSchedule tasks must be unique");
+  if (normalized.includes(objective.trim())) throw new Error("taskSchedule tasks must be scoped subquestions, not a duplicate of the umbrella objective");
+  return normalized;
+}
 function jaccard(left, right) {
   const a = new Set(left);
   const b = new Set(right);
@@ -75,7 +87,7 @@ function deriveEpisode(record) {
       decisions.push(event.payload);
     } else if (event.type === "replay.completed") replays.push(event.payload);
   }
-  return { ...record, objective: created.objective, profile: created.profile, corpusContentSha256: created.corpusContentSha256, beliefState, controls, frozen, turns, answers, proposals: [...proposals.values()], decisions, replays };
+  return { ...record, objective: created.objective, taskSchedule: created.taskSchedule ?? [], profile: created.profile, corpusContentSha256: created.corpusContentSha256, beliefState, controls, frozen, turns, answers, proposals: [...proposals.values()], decisions, replays };
 }
 function episodeMetrics(episode) {
   const estimates = Object.values(episode.beliefState.sources);
@@ -120,6 +132,7 @@ function publicEpisode(episode) {
     revision: episode.revision,
     headSha256: episode.headSha256,
     objective: episode.objective,
+    taskSchedule: episode.taskSchedule,
     profile: episode.profile,
     corpusContentSha256: episode.corpusContentSha256,
     frozen: episode.frozen,
@@ -130,6 +143,7 @@ function publicEpisode(episode) {
       candidateStateSha256: pending?.successorState.stateSha256 ?? null,
       policySha256: sha256(stableStringify(episode.controls)),
       objectiveSha256: sha256(episode.objective),
+      taskScheduleSha256: sha256(stableStringify(episode.taskSchedule)),
       profileSha256: sha256(episode.profile),
       admittedHistory,
     },
@@ -150,11 +164,14 @@ export function createObservatoryRuntime({ root = process.cwd(), stateRoot, now,
   const current = episodeId => deriveEpisode(store.load(episodeId));
   const view = episodeId => publicEpisode(current(episodeId));
 
-  function createEpisode({ objective, profile = "all", controls = {} } = {}) {
+  function createEpisode({ objective, taskSchedule, profile = "all", controls = {} } = {}) {
+    const normalizedObjective = typeof objective === "string" ? objective.trim() : "";
+    if (normalizedObjective.length < 2 || normalizedObjective.length > 500) throw new Error("objective must contain 2 to 500 characters");
     const normalized = normalizedControls({ ...controls, profile });
-    const identity = searchCorpus({ root: corpusRoot, query: objective, profile, limit: 1 });
-    const initialBeliefState = initializeBeliefState({ objective, profile, corpusContentSha256: identity.corpusContentSha256, processVariance: normalized.processVariance });
-    const record = store.create({ objective: objective.trim(), profile, corpusContentSha256: identity.corpusContentSha256, controls: normalized, initialBeliefState });
+    const schedule = normalizedTaskSchedule(taskSchedule, normalizedObjective);
+    const identity = searchCorpus({ root: corpusRoot, query: normalizedObjective, profile, limit: 1 });
+    const initialBeliefState = initializeBeliefState({ objective: normalizedObjective, taskSchedule: schedule, profile, corpusContentSha256: identity.corpusContentSha256, processVariance: normalized.processVariance });
+    const record = store.create({ objective: normalizedObjective, taskSchedule: schedule, profile, corpusContentSha256: identity.corpusContentSha256, controls: normalized, initialBeliefState });
     return publicEpisode(deriveEpisode(record));
   }
 
@@ -168,7 +185,8 @@ export function createObservatoryRuntime({ root = process.cwd(), stateRoot, now,
   function planTurn(episodeId, { task } = {}) {
     const episode = current(episodeId);
     const normalizedTask = task === undefined ? episode.objective : typeof task === "string" ? task.trim() : "";
-    if (normalizedTask !== episode.objective) throw new Error("turn task must exactly match the episode objective; create a new episode for a different objective");
+    const allowed = episode.taskSchedule.length ? episode.taskSchedule.includes(normalizedTask) : normalizedTask === episode.objective;
+    if (!allowed) throw new Error(episode.taskSchedule.length ? "turn task is outside the preregistered taskSchedule" : "turn task must exactly match the episode objective; create a new episode for a different objective");
     const plan = buildAdaptiveCorpusContext({ root: corpusRoot, task: normalizedTask, beliefState: episode.beliefState, ...episode.controls });
     const turn = { turnId: id("turn"), task: normalizedTask, stateSha256: episode.beliefState.stateSha256, policySha256: sha256(stableStringify(episode.controls)), controls: episode.controls, plan };
     const record = store.append(episodeId, "turn.planned", turn, { expectedRevision: episode.revision });
@@ -288,7 +306,7 @@ export function createObservatoryRuntime({ root = process.cwd(), stateRoot, now,
   function replay(episodeId, { processVariance, adaptiveWeight, explorationWeight, graphWeight } = {}) {
     const episode = current(episodeId);
     const controls = normalizedControls({ ...episode.controls, processVariance: processVariance ?? episode.controls.processVariance, adaptiveWeight: adaptiveWeight ?? episode.controls.adaptiveWeight, explorationWeight: explorationWeight ?? episode.controls.explorationWeight, graphWeight: graphWeight ?? episode.controls.graphWeight });
-    let state = initializeBeliefState({ objective: episode.objective, profile: episode.profile, corpusContentSha256: episode.corpusContentSha256, processVariance: controls.processVariance });
+    let state = initializeBeliefState({ objective: episode.objective, taskSchedule: episode.taskSchedule, profile: episode.profile, corpusContentSha256: episode.corpusContentSha256, processVariance: controls.processVariance });
     const replayStateByRecordedSha256 = new Map([[episode.events[0].payload.initialBeliefState.stateSha256, state]]);
     const proposalById = new Map(episode.proposals.map(proposal => [proposal.proposalId, proposal]));
     const turnComparisons = [];

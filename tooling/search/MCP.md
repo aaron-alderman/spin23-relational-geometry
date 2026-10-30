@@ -1,6 +1,6 @@
 # Corpus search MCP candidate
 
-**Status:** locally implemented and tested read-only successor; not sealed or admitted into the protected Sourcery or Claimipedia runtime
+**Status:** live local read-only successor with contribution beacon; not sealed or admitted into the protected Sourcery or Claimipedia runtime
 **Implementation:** [corpus search MCP server](corpus_search_mcp.mjs)  
 **Regression:** [MCP search tests](../../tests/repository/corpus_search_mcp.test.mjs)
 
@@ -25,6 +25,10 @@ This candidate gives an LLM a bounded way to find, assemble and inspect the corp
 The graph is built from authored local Markdown links. Exact Markdown paragraphs form bounded claim units with role, line range and a content-derived identity. Link-bearing paragraphs can route a query through a synthesis or register to its underlying source while retaining the bridge source, line range and hash. Corpus-local co-occurrence expansion is admitted only when at least two sufficiently specific query terms independently support the same candidate term; otherwise it returns no expansion rather than inventing semantic confidence. Reverse-navigation edges help recover context, but are downweighted. A selector sweep reports how rankings move under three PageRank mixing values. None of these quantities changes the source's declared epistemic status.
 
 ## Reflected operations
+
+### `corpus_contribution_beacon`
+
+Returns the live work invitations, contribution packet contract, local Observatory endpoints and authority boundary without starting a belief episode. It exists so an agent can help improve retrieval or evidence handling even when it does not use adaptive context for its own task. Contributions remain optional proposals and require a separate state-owning host plus approval before they can influence attention.
 
 ### `corpus_context`
 
@@ -73,7 +77,7 @@ Builds both baseline and adaptive context selections for the exact objective and
 
 Reads at most 30,000 characters from one Markdown path under `corpus/`, `book/edition-3/chapters/` or `verification/`. Absolute paths, traversal, non-Markdown files, unknown arguments and out-of-range bounds fail closed.
 
-All nine operations declare `readOnlyHint`, `idempotentHint`, `destructiveHint: false` and `openWorldHint: false`. The index checks indexed source metadata after a short cache-validation interval and rebuilds automatically when the corpus changes.
+All ten operations declare `readOnlyHint`, `idempotentHint`, `destructiveHint: false` and `openWorldHint: false`. The index checks indexed source metadata after a short cache-validation interval and rebuilds automatically when the corpus changes.
 
 ## Retrieval intelligence evaluation
 
@@ -82,6 +86,8 @@ All nine operations declare `readOnlyHint`, `idempotentHint`, `destructiveHint: 
 Every result also reports `retrievalSupport`: matched query tokens, their document-level coverage and whether the hit is a direct passage, an authored cross-reference bridge, graph-assisted or only a weak local match. This classification explains navigation fit; it is explicitly not confidence in truth or scientific validity.
 
 This benchmark measures recovery of preregistered navigation targets. It does not show that the expected source is uniquely relevant, complete or true. The retained `sourcery_admission_candidate_v1.json` hashes this local successor and its qualification benchmark, but remains an unsealed, unadmitted candidate; a fresh protected-lifecycle package is still required before runtime admission.
+
+The candidate now also binds [`corpus_projection_manifest_v1.json`](corpus_projection_manifest_v1.json): a deterministic inventory of all 2,398 indexed Markdown objects, their byte lengths and SHA-256 identities, the evidence-spine identity and the aggregate retrieval-content identity. This closes ambiguity about *which bytes* must be published across the Windows/Linux boundary. It does not contain or admit those bytes. A protected publisher must materialize every listed object, reject missing, extra or mismatched indexed objects, rebuild the index and reproduce the aggregate identity before the ten operations can be qualified.
 
 ## Authority boundary
 
@@ -111,13 +117,13 @@ The server uses newline-delimited MCP JSON-RPC over stdio and has no package dep
 
 ## Protected-runtime admission path
 
-Local execution is complete. Protected admission remains intentionally open and must proceed through the existing Sourcery lifecycle:
+Local execution is live. Protected admission remains intentionally open and must proceed through the existing Sourcery lifecycle:
 
-1. import the nine reflected tool contracts into a fresh development lane;
-2. bind corpus identity to an immutable or explicitly refreshed source snapshot;
+1. import the ten reflected tool contracts into a fresh development lane;
+2. materialize the exact objects bound by the corpus projection manifest, reject inventory mismatch and reproduce its aggregate corpus identity;
 3. run the regression suite in a declared projection;
 4. inspect the candidate and its authority receipts;
 5. bless, seal, qualify and admit the successor through a fresh MCP connection;
 6. verify operation discovery, search/read parity, belief-state replay, traversal rejection and absence of mutation authority.
 
-Until that sequence closes, this file records a working local interface and an admission candidate—not a selected production capability.
+Until that sequence closes, this file records a working local interface and an admission candidate—not a selected production capability. The [contribution beacon](CONTRIBUTION_BEACON.md) and local Observatory are nevertheless active local entry points.

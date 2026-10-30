@@ -5,7 +5,7 @@
   "source": {
     "routes": {
       "path": "corpus/front-door.routes.json",
-      "sha256": "794d505fb4ffd6931b5e5e058f74c9423dbe267acc74e35ac153b11b5222adde"
+      "sha256": "e8a402307f9ad0af55e707da8ef5e7d553a35616192441e21521e5015c21b15b"
     },
     "canonicalInventory": {
       "path": "corpus/registers/spin23_corpus_manifest.json",
@@ -18,22 +18,22 @@
           "corpus/claims/1700-1799/1795_karch_randall_realizes_a_spin23_face_inside_spin24_but_not_the_jordan_carrier_map.md"
         ],
         "numberedDocumentCount": 1575,
-        "repositoryFileCount": 6764,
-        "repositoryBytes": 141484041
+        "repositoryFileCount": 6808,
+        "repositoryBytes": 142442702
       },
-      "sha256": "c29a45496dc1bce7294d2743d9666045c4d7c11f29155b22ea7ef4dd6dae3034"
+      "sha256": "46ef2023b8eb71ca5fbe3af44935d57543e3cb98562a715b176373d23a03fcfd"
     },
     "inventoryBasis": "canonical manifest plus the declared front-door control surfaces"
   },
   "passed": true,
   "summary": {
-    "routes": 4,
-    "roots": 16,
-    "inventoryObjects": 6769,
-    "reachableObjects": 5356,
-    "explicitlyClassifiedObjects": 6769,
+    "routes": 5,
+    "roots": 17,
+    "inventoryObjects": 6813,
+    "reachableObjects": 5381,
+    "explicitlyClassifiedObjects": 6813,
     "unclassifiedObjects": 0,
-    "rootClosureLinks": 24230,
+    "rootClosureLinks": 24269,
     "closureBrokenLinks": 0
   },
   "routes": [
@@ -143,6 +143,20 @@
       ]
     },
     {
+      "id": "correspondence",
+      "title": "Follow correspondence",
+      "purpose": "Read attributed letters and evolving conversations without confusing exchange, agreement, or disagreement with scientific evidence.",
+      "roots": [
+        {
+          "id": "correspondence-index",
+          "path": "corpus/correspondence/README.md",
+          "epistemicStatus": "attributed interpretive history",
+          "authority": "routes to bounded letters and conversations; does not create joint endorsement or change claim status",
+          "provenance": "maintained corpus source"
+        }
+      ]
+    },
+    {
       "id": "governance",
       "title": "Audit authority and provenance",
       "purpose": "Inspect the exact inventory, publication boundary, repository history, and stewardship constraints.",
@@ -196,16 +210,16 @@
     {
       "id": "corpus-navigation",
       "reason": "canonical corpus navigation, vocabulary, and reading rules",
-      "files": 11,
-      "canonicalBytes": 131086,
-      "reachableFiles": 11
+      "files": 15,
+      "canonicalBytes": 146803,
+      "reachableFiles": 15
     },
     {
       "id": "evidence",
       "reason": "data, figures, and retained observations",
-      "files": 871,
-      "canonicalBytes": 22030707,
-      "reachableFiles": 698
+      "files": 872,
+      "canonicalBytes": 22046751,
+      "reachableFiles": 699
     },
     {
       "id": "generated-publication",
@@ -246,7 +260,7 @@
       "id": "reader-editions",
       "reason": "curated reader-facing editions",
       "files": 533,
-      "canonicalBytes": 6554119,
+      "canonicalBytes": 6554195,
       "reachableFiles": 340
     },
     {
@@ -258,9 +272,9 @@
     },
     {
       "id": "repository-front-door",
-      "reason": "root navigation, machine retrieval, stewardship, contribution, legal, and text-identity surfaces",
-      "files": 8,
-      "canonicalBytes": 28386,
+      "reason": "root navigation, machine retrieval, agent guidance, stewardship, contribution, legal, and text-identity surfaces",
+      "files": 9,
+      "canonicalBytes": 30238,
       "reachableFiles": 5
     },
     {
@@ -273,16 +287,16 @@
     {
       "id": "tests",
       "reason": "repository and publication invariants",
-      "files": 15,
-      "canonicalBytes": 102143,
+      "files": 23,
+      "canonicalBytes": 138783,
       "reachableFiles": 3
     },
     {
       "id": "tooling",
       "reason": "tracked root-level corpus inspection utilities",
-      "files": 132,
-      "canonicalBytes": 11011018,
-      "reachableFiles": 19
+      "files": 162,
+      "canonicalBytes": 11899350,
+      "reachableFiles": 39
     },
     {
       "id": "verification",
@@ -324,12 +338,12 @@
         ]
       },
       "discoverableClosure": {
-        "files": 5555,
-        "canonicalBytes": 81276492,
-        "observedBytes": 101155258,
+        "files": 5580,
+        "canonicalBytes": 82160497,
+        "observedBytes": 102055001,
         "unknownByteFiles": 204,
         "brokenLinks": [],
-        "pathSetSha256": "7063caff05cf4b1b4fa34d3d42247068c68f8f1e3e4e3b9d9f7ab44095d6c7f1"
+        "pathSetSha256": "afcd7696865f89d0f81a6e69d1c713c272bc93073262bc8fb69081510d1d4558"
       },
       "qualification": "map-only; independently qualify any derived package and add execution dependencies for the selected capability"
     },
@@ -369,12 +383,12 @@
         ]
       },
       "discoverableClosure": {
-        "files": 5555,
-        "canonicalBytes": 81276492,
-        "observedBytes": 101155258,
+        "files": 5580,
+        "canonicalBytes": 82160497,
+        "observedBytes": 102055001,
         "unknownByteFiles": 204,
         "brokenLinks": [],
-        "pathSetSha256": "7063caff05cf4b1b4fa34d3d42247068c68f8f1e3e4e3b9d9f7ab44095d6c7f1"
+        "pathSetSha256": "afcd7696865f89d0f81a6e69d1c713c272bc93073262bc8fb69081510d1d4558"
       },
       "qualification": "map-only; independently qualify any derived package and add execution dependencies for the selected capability"
     },
@@ -410,7 +424,7 @@
       "entrySurface": {
         "files": 11,
         "canonicalBytes": 390493,
-        "observedBytes": 15887009,
+        "observedBytes": 15898560,
         "unknownByteFiles": 3,
         "paths": [
           "book/edition-3/chapters/08-result-ledger.md",
@@ -427,12 +441,12 @@
         ]
       },
       "discoverableClosure": {
-        "files": 5555,
-        "canonicalBytes": 81276492,
-        "observedBytes": 101155258,
+        "files": 5580,
+        "canonicalBytes": 82160497,
+        "observedBytes": 102055001,
         "unknownByteFiles": 204,
         "brokenLinks": [],
-        "pathSetSha256": "7063caff05cf4b1b4fa34d3d42247068c68f8f1e3e4e3b9d9f7ab44095d6c7f1"
+        "pathSetSha256": "afcd7696865f89d0f81a6e69d1c713c272bc93073262bc8fb69081510d1d4558"
       },
       "qualification": "map-only; independently qualify any derived package and add execution dependencies for the selected capability"
     },
@@ -477,12 +491,12 @@
         ]
       },
       "discoverableClosure": {
-        "files": 5555,
-        "canonicalBytes": 81276492,
-        "observedBytes": 101155258,
+        "files": 5580,
+        "canonicalBytes": 82160497,
+        "observedBytes": 102055001,
         "unknownByteFiles": 204,
         "brokenLinks": [],
-        "pathSetSha256": "7063caff05cf4b1b4fa34d3d42247068c68f8f1e3e4e3b9d9f7ab44095d6c7f1"
+        "pathSetSha256": "afcd7696865f89d0f81a6e69d1c713c272bc93073262bc8fb69081510d1d4558"
       },
       "qualification": "map-only; independently qualify any derived package and add execution dependencies for the selected capability"
     }

@@ -1,5 +1,5 @@
 const $ = selector => document.querySelector(selector);
-const state = { episodes: [], episode: null };
+const state = { episodes: [], episode: null, contributions: [] };
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"]/gu, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[character]);
@@ -15,7 +15,15 @@ function toast(message, error = false) {
 }
 
 async function api(path, options = {}) {
-  const response = await fetch(path, { ...options, headers: { ...(options.body ? { "content-type": "application/json" } : {}), ...options.headers } });
+  let token = sessionStorage.getItem("contextHubOperatorToken");
+  let response = await fetch(path, { ...options, headers: { ...(options.body ? { "content-type": "application/json" } : {}), ...(token ? { authorization: `Bearer ${token}` } : {}), ...options.headers } });
+  if (response.status === 401 && options.method === "POST") {
+    token = window.prompt("Observatory operator token (stored for this browser tab only):")?.trim();
+    if (token) {
+      sessionStorage.setItem("contextHubOperatorToken", token);
+      response = await fetch(path, { ...options, headers: { ...(options.body ? { "content-type": "application/json" } : {}), authorization: `Bearer ${token}`, ...options.headers } });
+    }
+  }
   const value = await response.json();
   if (!response.ok) throw new Error(value.error ?? `Request failed: ${response.status}`);
   return value;
@@ -27,6 +35,50 @@ async function refreshEpisodes(selectId) {
   renderEpisodeList();
   const target = selectId ?? state.episode?.episodeId;
   if (target && state.episodes.some(item => item.episodeId === target)) await loadEpisode(target);
+}
+
+async function refreshContributions() {
+  const result = await api("/api/contributions");
+  state.contributions = result.contributions;
+  const pending = state.contributions.filter(item => item.disposition === "pending");
+  $("#contribution-count").textContent = `${pending.length} pending`;
+  $("#contribution-list").innerHTML = state.contributions.length ? state.contributions.map(item => {
+    const dependency = item.dependencies.length ? `<small>depends on ${item.dependencies.map(escapeHtml).join(" · ")}</small>` : "";
+    const claim = item.claim ? `<small>claimed by ${escapeHtml(item.claim.actor)}</small>` : "";
+    const impact = item.impacts.length ? `<small>${item.impacts.length} downstream impact${item.impacts.length === 1 ? "" : "s"}: ${item.impacts.map(entry => `${escapeHtml(entry.kind)} → ${escapeHtml(entry.target)}`).join(" · ")}</small>` : "";
+    const coordination = item.disposition === "pending" ? `<div class="proposal-actions">${item.claim ? `<button class="secondary" data-contribution-action="release" data-contribution="${item.contributionId}">Release</button>` : `<button class="secondary" data-contribution-action="claim" data-contribution="${item.contributionId}">Claim work</button>`}<button class="secondary approve" data-contribution-decision="accept" data-contribution="${item.contributionId}">Accept receipt</button><button class="secondary reject" data-contribution-decision="reject" data-contribution="${item.contributionId}">Reject</button></div>` : `<div class="proposal-actions"><button class="secondary" data-contribution-action="impact" data-contribution="${item.contributionId}">Record downstream impact</button></div>`;
+    return `<article class="contribution-item"><div><strong>${escapeHtml(item.proposed.type)}</strong><small>${escapeHtml(item.proposed.contributor)} · ${escapeHtml(item.proposed.profile)} · ${escapeHtml(item.contributionId)}</small><p>${escapeHtml(item.proposed.narrowConclusion)}</p>${dependency}${claim}${impact}<code>${shortHash(item.headSha256)}</code></div><span class="state-pill ${item.disposition === "pending" ? "live" : ""}">${escapeHtml(item.disposition)}</span>${coordination}</article>`;
+  }).join("") : '<p class="muted">No outside contributions yet.</p>';
+  document.querySelectorAll("[data-contribution-decision]").forEach(button => button.addEventListener("click", () => decideContribution(button.dataset.contribution, button.dataset.contributionDecision)));
+  document.querySelectorAll("[data-contribution-action]").forEach(button => button.addEventListener("click", () => coordinateContribution(button.dataset.contribution, button.dataset.contributionAction)));
+}
+
+async function decideContribution(contributionId, decision) {
+  try { await api(`/api/contributions/${contributionId}/decision`, { method: "POST", body: JSON.stringify({ decision, actor: contributionOperator(), reason: "Disposition recorded through the local Observatory; no admission effect." }) }); await refreshContributions(); toast(`Contribution ${decision}ed; attention state unchanged.`); }
+  catch (error) { toast(error.message, true); }
+}
+
+function contributionOperator() {
+  const actor = $("#contribution-operator").value.trim();
+  if (!actor) throw new Error("Enter an operator identity before coordinating work.");
+  return actor;
+}
+
+async function coordinateContribution(contributionId, action) {
+  try {
+    const actor = contributionOperator();
+    let payload = { actor };
+    if (action === "impact") {
+      const target = window.prompt("Exact downstream target (file, test, episode or work item):");
+      if (!target) return;
+      const kind = window.prompt("Impact kind: documentation, test, episode-proposal, linked-work, or no-change", "linked-work");
+      if (!kind) return;
+      payload = { actor, target, kind };
+    }
+    await api(`/api/contributions/${contributionId}/${action}`, { method: "POST", body: JSON.stringify(payload) });
+    await refreshContributions();
+    toast(`${action} event recorded; admission state unchanged.`);
+  } catch (error) { toast(error.message, true); }
 }
 
 function renderEpisodeList() {
@@ -49,7 +101,7 @@ function renderEpisode() {
   $("#episode-view").hidden = false;
   $("#episode-id").textContent = `${episode.episodeId} · revision ${episode.revision}`;
   $("#episode-objective").textContent = episode.objective;
-  $("#episode-meta").textContent = `${episode.profile} profile · corpus ${shortHash(episode.corpusContentSha256)} · policy ${shortHash(episode.governance.policySha256)} · admitted ${shortHash(episode.governance.admittedStateSha256)}${episode.governance.candidateStateSha256 ? ` · candidate ${shortHash(episode.governance.candidateStateSha256)}` : ""}`;
+  $("#episode-meta").textContent = `${episode.profile} profile${episode.taskSchedule.length ? ` · ${episode.taskSchedule.length} preregistered tasks` : " · exact-objective turns"} · corpus ${shortHash(episode.corpusContentSha256)} · policy ${shortHash(episode.governance.policySha256)} · admitted ${shortHash(episode.governance.admittedStateSha256)}${episode.governance.candidateStateSha256 ? ` · candidate ${shortHash(episode.governance.candidateStateSha256)}` : ""}`;
   $("#corpus-short").textContent = shortHash(episode.corpusContentSha256);
   $("#head-hash").textContent = `head ${shortHash(episode.headSha256)}`;
   $("#freeze-state").textContent = episode.frozen ? "learning frozen" : "learning open";
@@ -161,10 +213,24 @@ $("#create-episode").addEventListener("click", async () => {
   try {
     const objective = $("#objective").value.trim();
     const profile = $("#new-profile").value;
-    const episode = await api("/api/episodes", { method: "POST", body: JSON.stringify({ objective, profile }) });
+    const taskSchedule = $("#task-schedule").value.split(/\r?\n/u).map(value => value.trim()).filter(Boolean);
+    const episode = await api("/api/episodes", { method: "POST", body: JSON.stringify({ objective, profile, ...(taskSchedule.length ? { taskSchedule } : {}) }) });
     $("#objective").value = "";
+    $("#task-schedule").value = "";
     await refreshEpisodes(episode.episodeId);
     toast("Episode created with an untouched prior.");
+  } catch (error) { toast(error.message, true); }
+});
+$("#contribution-form").addEventListener("submit", async event => {
+  event.preventDefault();
+  try {
+    const data = Object.fromEntries(new FormData(event.currentTarget));
+    data.sourcePaths = data.sourcePaths.split(/\r?\n/u).map(value => value.trim()).filter(Boolean);
+    data.dependsOn = data.dependsOn.split(/\r?\n/u).map(value => value.trim()).filter(Boolean);
+    const contribution = await api("/api/contributions", { method: "POST", body: JSON.stringify(data) });
+    event.currentTarget.reset();
+    await refreshContributions();
+    toast(`Contribution receipt ${shortHash(contribution.headSha256)} recorded.`);
   } catch (error) { toast(error.message, true); }
 });
 $("#refresh").addEventListener("click", () => refreshEpisodes().catch(error => toast(error.message, true)));
@@ -222,4 +288,4 @@ $("#replay-form").addEventListener("submit", async event => {
   catch (error) { toast(error.message, true); }
 });
 
-refreshEpisodes().catch(error => toast(error.message, true));
+Promise.all([refreshEpisodes(), refreshContributions()]).catch(error => toast(error.message, true));

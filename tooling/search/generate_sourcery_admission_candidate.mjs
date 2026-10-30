@@ -9,6 +9,7 @@ import { corpusSearchMcpTools } from "./corpus_search_mcp.mjs";
 const moduleDirectory = dirname(fileURLToPath(import.meta.url));
 const root = resolve(moduleDirectory, "../..");
 const outputPath = resolve(moduleDirectory, "sourcery_admission_candidate_v1.json");
+const projectionManifestPath = resolve(moduleDirectory, "corpus_projection_manifest_v1.json");
 const sources = [
   "tooling/search/search_corpus.mjs",
   "tooling/search/context_hub.mjs",
@@ -17,25 +18,35 @@ const sources = [
   "tooling/search/belief_state.mjs",
   "tooling/search/belief_observations.mjs",
   "tooling/search/adaptive_context.mjs",
+  "tooling/search/contribution_beacon.mjs",
+  "tooling/search/contribution_beacon_v1.json",
+  "tooling/search/generate_corpus_projection_manifest.mjs",
+  "tooling/search/corpus_projection_manifest_v1.json",
   "tooling/search/corpus_search_mcp.mjs",
   "tooling/search/benchmark_cases.json",
   "tooling/search/benchmark_baseline_v1.json",
   "tooling/search/run_benchmark.mjs",
+  "tooling/search/qualify_retrieval_identity.mjs",
+  "tooling/search/retrieval_identity_qualification_v1.json",
   "tooling/search/retrieval_intelligence_benchmark.mjs",
   "tooling/search/run_belief_evaluation.mjs",
   "tooling/search/MCP.md",
   "tooling/search/BELIEF_LOOP.md",
+  "tooling/search/CONTRIBUTION_BEACON.md",
   "tests/repository/corpus_search.test.mjs",
   "tests/repository/corpus_search_mcp.test.mjs",
   "tests/repository/corpus_answer_stability.test.mjs",
   "tests/repository/corpus_belief_state.test.mjs",
   "tests/repository/corpus_belief_evaluation.test.mjs",
-  "tests/repository/corpus_search_benchmark.test.mjs"
+  "tests/repository/corpus_search_benchmark.test.mjs",
+  "tests/repository/corpus_projection_manifest.test.mjs",
+  "tests/repository/corpus_search_admission_candidate.test.mjs"
 ];
 
 const sha256 = bytes => createHash("sha256").update(bytes).digest("hex");
 
 export function buildSourceryAdmissionCandidate() {
+  const projection = JSON.parse(readFileSync(projectionManifestPath, "utf8"));
   const members = sources.map(path => {
     const bytes = readFileSync(resolve(root, path));
     return { path, bytes: bytes.length, sha256: sha256(bytes) };
@@ -52,14 +63,24 @@ export function buildSourceryAdmissionCandidate() {
       applicationAdmission: false,
       protectedRuntimeSelected: false
     },
+    corpusProjection: {
+      protocol: projection.protocol,
+      manifestSha256: projection.manifestSha256,
+      corpusContentSha256: projection.corpusContentSha256,
+      evidenceProjectionSha256: projection.evidenceProjectionSha256,
+      documentCount: projection.documentCount,
+      exactPayloadMaterialized: false,
+      note: "The retained manifest binds every required object. Protected publication must transfer and re-hash the exact bytes; the inventory is not itself the corpus payload."
+    },
     tools: corpusSearchMcpTools,
     members,
     qualification: {
       benchmark: { legacyCases: 30, paraphraseCases: 12, holdoutCases: 6, requiredPassRate: 1, minimumMeanReciprocalRank: 0.8 },
       commands: [
         "node tooling/search/run_benchmark.mjs",
+        "node tooling/search/qualify_retrieval_identity.mjs",
         "node tooling/search/retrieval_intelligence_benchmark.mjs",
-        "node --test tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
+        "node --test --test-concurrency=1 tests/repository/corpus_search.test.mjs tests/repository/corpus_search_mcp.test.mjs tests/repository/corpus_answer_stability.test.mjs tests/repository/corpus_belief_state.test.mjs tests/repository/corpus_belief_evaluation.test.mjs tests/repository/corpus_search_benchmark.test.mjs",
         "node tooling/search/run_belief_evaluation.mjs",
         "node tooling/audit/audit_markdown_links.mjs",
         "git diff --check"
@@ -74,7 +95,9 @@ export function buildSourceryAdmissionCandidate() {
         "belief state tampering and stale corpus identity rejected",
         "empty belief state preserves baseline source selection",
         "adaptive influence capped and never changes epistemic status",
-        "MCP server retains no hidden belief state"
+        "MCP server retains no hidden belief state",
+        "unrelated generated evidence-spine control metadata cannot change retrieval identity",
+        "missing, extra or hash-mismatched projection objects rejected before protected publication"
       ]
     },
     admissionSequence: [
@@ -85,7 +108,7 @@ export function buildSourceryAdmissionCandidate() {
       "bless the tested candidate snapshot",
       "seal and qualify a successor package",
       "admit through the protected lifecycle",
-      "verify all nine operations through a fresh MCP connection"
+      "verify all ten operations through a fresh MCP connection"
     ]
   };
   return { ...payload, candidateSha256: sha256(JSON.stringify(payload)) };

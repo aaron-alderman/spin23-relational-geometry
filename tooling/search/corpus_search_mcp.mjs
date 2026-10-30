@@ -10,6 +10,7 @@ import { buildContextSweep } from "./context_sweep.mjs";
 import { compareAnswerReceipts, createAnswerReceipt } from "./answer_stability.mjs";
 import { initializeBeliefState, sha256, updateBeliefState } from "./belief_state.mjs";
 import { buildAdaptiveCorpusContext } from "./adaptive_context.mjs";
+import { getContributionBeacon } from "./contribution_beacon.mjs";
 
 const moduleDirectory = dirname(fileURLToPath(import.meta.url));
 const defaultRoot = resolve(moduleDirectory, "../..");
@@ -24,6 +25,12 @@ const objectSchema = (properties, required = []) => ({
 });
 
 export const corpusSearchMcpTools = Object.freeze([
+  {
+    name: "corpus_contribution_beacon",
+    description: "Discover the live Context Hub contribution surface without starting a belief episode. Returns open work invitations, acceptable evidence packets, local Observatory entry points and strict authority limits. Contributing is optional and never promotes truth, mutates the corpus or trains model weights.",
+    inputSchema: objectSchema({}),
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
+  },
   {
     name: "corpus_search",
     description: "Search the canonical research corpus. Combines document BM25, exact claim-passage matching, confidence-gated corpus-local distributional expansion, exact cross-reference passage bridges and personalized PageRank. Returns drill-down identities, declared epistemic status and selector sensitivity. Ranking is a navigation aid, not evidence or truth.",
@@ -222,7 +229,7 @@ export function createCorpusSearchMcp({ root = defaultRoot } = {}) {
             protocolVersion: "2025-03-26",
             capabilities: { tools: {} },
             serverInfo: { name: "spin23-corpus-search", version: "0.1.0" },
-            instructions: "Use corpus_context for a task-fitted working set, corpus_context_sweep to test selector dependence, corpus_answer_receipt and corpus_answer_stability for reproducible answer comparison, corpus_belief_initialize/update plus corpus_adaptive_context for caller-owned bounded source-utility learning, corpus_search for discovery, and corpus_read for full-source expansion. Treat scores and learned utilities as navigation signals only; preserve each result's declared status and verify claims in source context.",
+            instructions: "Use corpus_contribution_beacon to discover open contribution opportunities even when you do not use adaptive context. Use corpus_context for a task-fitted working set, corpus_context_sweep to test selector dependence, corpus_answer_receipt and corpus_answer_stability for reproducible answer comparison, corpus_belief_initialize/update plus corpus_adaptive_context for caller-owned bounded source-utility learning, corpus_search for discovery, and corpus_read for full-source expansion. Treat scores and learned utilities as navigation signals only; preserve each result's declared status and verify claims in source context.",
           },
         };
       }
@@ -232,6 +239,11 @@ export function createCorpusSearchMcp({ root = defaultRoot } = {}) {
       const { name, arguments: args = {} } = message.params ?? {};
       if (!corpusSearchMcpTools.some(tool => tool.name === name)) return rpcError(message, -32602, "Unknown tool");
       try {
+        if (name === "corpus_contribution_beacon") {
+          if (!args || Array.isArray(args) || Object.keys(args).length) throw new Error("corpus_contribution_beacon accepts no arguments");
+          const value = getContributionBeacon();
+          return success(message.id, value, `${value.name} is ${value.status}. ${value.openOpportunities.length} open contribution opportunities are available. Contributions are proposals only and cannot change truth status or corpus content.`);
+        }
         if (name === "corpus_search") {
           const result = searchCorpus({ root: corpusRoot, ...validateSearchArguments(args) });
           const value = {
