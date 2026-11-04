@@ -1,0 +1,65 @@
+{
+  "commit": "e66a4630428da1e05fc96b28432e6fffbf7950b1",
+  "records": [
+    {
+      "path": "sdk/browser/frontend.mjs",
+      "commit": "e66a4630428da1e05fc96b28432e6fffbf7950b1",
+      "retainedSha256": "840d459a6f8d88a2ec0df339d576f7e9f0f215cc764c7bb6d77065984571429b",
+      "fixtureSha256": "801167fdcec5eadfbcfc6e7a2e5b243209dcfd20b8376c1678de825e57afaf14"
+    },
+    {
+      "path": "sdk/browser/canvas-renderer.mjs",
+      "commit": "e66a4630428da1e05fc96b28432e6fffbf7950b1",
+      "retainedSha256": "6ddb419905e4bb4bc26c3b080eba05202ba8df96216ea16989537584b00f4c8f",
+      "fixtureSha256": "b95ff53483d4c61e3e2f704e7974693bf45a5a789c46c341a906cf45335aba8a"
+    }
+  ],
+  "observations": [
+    {
+      "id": "zero-geometry",
+      "before": {
+        "xIsNaN": true,
+        "yIsNaN": true
+      },
+      "after": {
+        "code": "invalid-canvas-geometry",
+        "name": "Error"
+      }
+    },
+    {
+      "id": "foreign-origin-discard",
+      "before": "/path?id=one",
+      "after": {
+        "code": "cross-origin-browser-route-url",
+        "name": "Error"
+      }
+    },
+    {
+      "id": "invalid-port-silent-fallback",
+      "before": "https://example.test/",
+      "after": {
+        "code": "invalid-browser-port",
+        "name": "Error"
+      }
+    },
+    {
+      "id": "surface-query-hash",
+      "before": "https://example.test:8443/path%3Fq=one%23hash",
+      "after": "https://example.test:8443/path?q=one#hash"
+    },
+    {
+      "id": "ambiguous-target-first-wins",
+      "before": {
+        "subject": "one",
+        "role": "authenticatedDefault",
+        "path": "/one"
+      },
+      "after": {
+        "code": "ambiguous-route-target",
+        "name": "Error"
+      }
+    }
+  ],
+  "scope": "Two exact retained source bodies with only import locations rewritten and three former private functions exposed. Exercised functions are current hit-test/routing boundaries; this is not a full historical checkout/bootstrap or a proof of universal equivalence.",
+  "scientificAcceptance": false
+}

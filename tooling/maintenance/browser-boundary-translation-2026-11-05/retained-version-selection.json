@@ -1,0 +1,249 @@
+{
+  "selections": [
+    {
+      "subject": "module.browserRuntimeDefaults",
+      "source": "sdk/browser/browser-runtime-registries.rel",
+      "selectedCommit": "b47a95040d1213771552f10584d499ea0e1f6cd7",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ExplicitPossiblyAbsentOrFalsyBoundaryValueAndAuthoredFallback"
+        ],
+        "targetDomain": [
+          "ExactValueOrExplicitFallbackWithFreshEmptyContainerProjectionWhereRequested"
+        ],
+        "forwardMap": [
+          "selectFallbackByUndefinedNullishOrFalsyPolicyOrProjectStringArrayAndObjectAbsence"
+        ],
+        "reverseMapOrAbsence": [
+          "absent.FallbackOutputDoesNotRevealWhichAdmittedAbsenceProducedIt"
+        ],
+        "preservedInformation": [
+          "exactSuppliedNonAbsentValueIdentityAndExactAuthoredFallbackIdentity"
+        ],
+        "lostInformation": [
+          "undefinedNullAndFalsyDistinctionsDeclaredByEachSelectedPolicy"
+        ],
+        "identity": [
+          "oneExplicitPolicyApplicationPerBoundaryValue"
+        ],
+        "partiality": [
+          "totalForAllJavaScriptValues"
+        ],
+        "failure": [
+          "onlyNativeStringConversionFaultIdentity"
+        ],
+        "authorityEffect": [
+          "pureInvocationLocalSelectionAndFreshContainerAllocationOnly"
+        ],
+        "stateOwner": [
+          "callerOwnsValuesAndFallbacksNoPersistentState"
+        ],
+        "evidence": [
+          "directDefaultPolicyCharacterizationAndConsumerDifferentialTests"
+        ],
+        "falsifier": [
+          "undefinedPolicyTreatsNullAsAbsentOrFreshContainerIsSharedAcrossInvocations"
+        ],
+        "default": [
+          "none.AllFallbacksAreRequiredExplicitArguments"
+        ],
+        "lifecycle": [
+          "observeSelectReturn"
+        ],
+        "ordering": [
+          "observeValueBeforeFallbackSelection"
+        ],
+        "adapterSeam": [
+          "none"
+        ],
+        "symmetryBreak": [
+          "selectedAbsenceClassesCollapseToAuthoredFallback"
+        ]
+      }
+    },
+    {
+      "subject": "module.browserRuntimeSourceBoundary",
+      "source": "sdk/browser/browser-runtime-registries.rel",
+      "selectedCommit": "b47a95040d1213771552f10584d499ea0e1f6cd7",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ExplicitRuntimeSourceObjectsBrowserPathsFilesystemPathsModuleObjectsAndCapabilityLabels"
+        ],
+        "targetDomain": [
+          "ExactImportSpecifierOrAlreadyMaterializedRuntimeModule"
+        ],
+        "forwardMap": [
+          "selectEnvironmentSpecificSourceIdentityProjectAbsolutePathsToCacheBustedFileUrlsThenDynamicallyImportUnlessAlreadyMaterialized"
+        ],
+        "reverseMapOrAbsence": [
+          "absent.ImportedModulesAndFileUrlsDoNotRecoverCallerObjectAliasesOrRelativePathSpelling"
+        ],
+        "preservedInformation": [
+          "runtimeModuleIdentityBrowserPathPrecedenceNodeFilePrecedenceAbsolutePathBytesAndFilesystemModificationTime"
+        ],
+        "lostInformation": [
+          "sourceObjectAliasNamesRelativePathSpellingAndPriorFilesystemModificationTimes"
+        ],
+        "identity": [
+          "oneResolvedSpecifierOrModuleForTheExactSourceEnvironmentAndCapability"
+        ],
+        "partiality": [
+          "dynamicImportAndNodeFilesystemStatMustAdmitTheResolvedSource"
+        ],
+        "failure": [
+          "unchangedFilesystemUrlAndDynamicImportFaultIdentity"
+        ],
+        "authorityEffect": [
+          "readOnlyNodeFilesystemStatAndExistenceObservationPlusDynamicModuleImport"
+        ],
+        "stateOwner": [
+          "callerOwnsSourceAndEnvironmentModuleLoaderOwnsImportedModuleCache"
+        ],
+        "evidence": [
+          "registrySourceCharacterizationAndFullBrowserRegistryDifferentialSuite"
+        ],
+        "falsifier": [
+          "browserPathLosesToFileInBrowserOrPortablePosixAbsoluteSourceBecomesFileUrlUnderNode"
+        ],
+        "default": [
+          "sourceObjectsWithoutRecognizedPathsRemainExactAndNonAbsoluteStringsRemainExactOutsideFrontendCwdResolution"
+        ],
+        "lifecycle": [
+          "classifySelectResolveObserveImportReturn"
+        ],
+        "ordering": [
+          "nodeFileThenBrowserPathThenFileForObjectsAndWindowsAbsoluteThenPosixAbsoluteThenEnvironmentForPaths"
+        ],
+        "adapterSeam": [
+          "nodeFilesystemPathUrlAndDynamicImportAreTheOnlyEffects"
+        ],
+        "symmetryBreak": [
+          "relativeAndAbsolutePathFormsCollapseToModuleIdentityAfterImport"
+        ]
+      }
+    },
+    {
+      "subject": "module.browserCanvasHitTesting",
+      "source": "sdk/browser/browser-canvas-baseline.rel",
+      "selectedCommit": "d2d131c2cb84dec41ce70faff8c5d22fae329777",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "CanvasElementFramebufferGeometryPointerClientCoordinatesInteractionRegionsTypeAndPoint"
+        ],
+        "targetDomain": [
+          "ClampedFramebufferCellPointAndLastPaintedMatchingInteractionRegionOrAction"
+        ],
+        "forwardMap": [
+          "projectClientCoordinatesThroughBoundingRectangleScaleClampToCellThenReverseScanRegionsForTypeAndHalfOpenContainment"
+        ],
+        "reverseMapOrAbsence": [
+          "absent.CellCoordinatesDoNotRecoverSubcellPointerCoordinatesScaleOrBoundingRectangleAndActionDoesNotRecoverOverlappedEarlierRegions"
+        ],
+        "preservedInformation": [
+          "selectedCellRequestedInteractionTypeLastMatchingRegionIdentityAndExactActionReference"
+        ],
+        "lostInformation": [
+          "subcellPointerPositionBrowserPixelScaleBoundingRectangleAndEveryOccludedEarlierMatchingRegion"
+        ],
+        "identity": [
+          "oneClampedCellPerPointerObservationAndAtMostOneLastPaintedRegionOrActionPerTypeAndPoint"
+        ],
+        "partiality": [
+          "interactionLookupReturnsUndefinedWhenNoRegionOfTheRequestedTypeContainsThePoint"
+        ],
+        "failure": [
+          "malformedCanvasGeometryFramebufferOrInteractionCollectionsRetainNativeAccessAndArithmeticFailureIdentity"
+        ],
+        "authorityEffect": [
+          "readOnlyCanvasBoundingRectangleObservationAndPureFramebufferGeometryProjectionOnly"
+        ],
+        "stateOwner": [
+          "callerOwnsCanvasFramebufferEventPointRegionsAndActionsModuleOwnsNoState"
+        ],
+        "evidence": [
+          "focusedCoordinateClampOverlapOrderingRegionAndActionPredecessorDifferentialTests"
+        ],
+        "falsifier": [
+          "outOfBoundsPointEscapesClampEarlierOverlappedRegionWinsOrRegionAndActionLookupsDisagree"
+        ],
+        "default": [
+          "none"
+        ],
+        "lifecycle": [
+          "observeRectangleProjectScaleFloorClampThenReverseScanAndOptionallyProjectAction"
+        ],
+        "ordering": [
+          "interactionRegionsResolveInReverseAuthoredOrderSoLastPaintedMatchingRegionWins"
+        ],
+        "adapterSeam": [
+          "canvasBoundingClientRectIsTheOnlyDomObservationWhileClampRemainsOwnedByTheRuntimeEngine"
+        ],
+        "symmetryBreak": [
+          "continuousClientCoordinatesCollapseToDiscreteCellsAndOverlappingRegionsCollapseToTheLastPaintedMatch"
+        ]
+      }
+    },
+    {
+      "subject": "module.browserFrontendNetRouting",
+      "source": "sdk/browser/browser-canvas-baseline.rel",
+      "selectedCommit": "38be7a1280e667a45475c0f6088e73601c01e999",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "BrowserFrontendNetRouting"
+        ],
+        "targetDomain": [
+          "RouteTargetAndOriginAwareUrl"
+        ],
+        "forwardMap": [
+          "frontendNetRouting.operation"
+        ],
+        "reverseMapOrAbsence": [
+          "MissingTargetOrOriginRemainsTypedFailure"
+        ],
+        "preservedInformation": [
+          "RouteTargetRoleSubjectPortPathAndQuery"
+        ],
+        "lostInformation": [
+          "None"
+        ],
+        "identity": [
+          "ExplicitAbsentEmptyAndRootPathCases"
+        ],
+        "partiality": [
+          "MissingTargetsAndOriginsRemainInvalid"
+        ],
+        "failure": [
+          "TypedRouteResolutionFailureWithoutMutation"
+        ],
+        "authorityEffect": [
+          "PureRouteLookupAndUrlConstruction"
+        ],
+        "stateOwner": [
+          "RuntimeNetworkConfiguration"
+        ],
+        "evidence": [
+          "CanonicalRouteTargetAndOriginInputs"
+        ],
+        "falsifier": [
+          "ImplicitFallbackOrUncataloguedRouteTarget"
+        ],
+        "default": [
+          "AbsentOptionsEmptySavePathAndRootPathAreExplicit"
+        ]
+      }
+    }
+  ],
+  "reason": "Complete retained primary declarations selected at their recorded coordinates; all variants remain available in the retained document. Current guards, shared boundaries and finite qualification limits are explicit amendments, not generic algebra restoration."
+}

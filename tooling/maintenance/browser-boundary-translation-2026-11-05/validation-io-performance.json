@@ -1,0 +1,29 @@
+{
+  "node": "v24.22.1",
+  "platform": "win32",
+  "availableRows": 9119,
+  "sampleFiles": 1024,
+  "method": "Deterministic strided 1,024-file sample from the preserved prior SDK/consumer artifacts; ABBA cache-order control. Every read verifies its expected SHA-256. This is a file-read/hash microbenchmark, not total pipeline speedup.",
+  "results": [
+    {
+      "mode": "serial-sync",
+      "elapsedMs": 17904.329800000003,
+      "files": 1024
+    },
+    {
+      "mode": "parallel-stream-8",
+      "elapsedMs": 170.74790000000212,
+      "files": 1024
+    },
+    {
+      "mode": "parallel-stream-8",
+      "elapsedMs": 153.7043999999987,
+      "files": 1024
+    },
+    {
+      "mode": "serial-sync",
+      "elapsedMs": 172.72359999999753,
+      "files": 1024
+    }
+  ]
+}
