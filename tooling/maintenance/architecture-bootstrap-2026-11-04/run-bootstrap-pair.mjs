@@ -1,0 +1,6 @@
+import {writeFileSync,readFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {runLocalSourceBootstrap,compareLocalBootstraps} from '../../../.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap.mjs';
+const audit=new URL('./',import.meta.url),manifestPath=resolve('tooling/maintenance/architecture-bootstrap-2026-11-04/bootstrap-inputs.json'),environment=Object.fromEntries(['PATH','SYSTEMROOT','WINDIR','TEMP','TMP'].filter(name=>typeof process.env[name]==='string').map(name=>[name,process.env[name]]));
+const receipts=[];for(const pass of ['a','b']){const destination=resolve('.platform-reconstitution/architecture-bootstrap-validation-2026-11-04/reader-qualified-pass-'+pass);console.log(JSON.stringify({phase:'starting-independent-bootstrap',pass,destination}));const receipt=await runLocalSourceBootstrap({manifestPath,destination,environment});writeFileSync(new URL('bootstrap-'+pass+'.json',audit),JSON.stringify(receipt,null,2)+'\n');receipts.push(receipt);console.log(JSON.stringify({phase:'bootstrap-complete',pass,sourceIdentity:receipt.sourceIdentity,model:receipt.reader.model,mutationStatus:receipt.reader.mutationStatus}));}
+const comparison=compareLocalBootstraps(...receipts);writeFileSync(new URL('bootstrap-comparison.json',audit),JSON.stringify(comparison,null,2)+'\n');console.log(JSON.stringify(comparison));

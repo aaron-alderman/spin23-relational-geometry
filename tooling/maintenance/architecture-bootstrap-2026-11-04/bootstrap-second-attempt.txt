@@ -1,0 +1,12 @@
+{"phase":"starting-independent-bootstrap","pass":"a","destination":"C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\architecture-bootstrap-validation-2026-11-04\\pinned-pass-a"}
+file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-files.mjs:13
+export async function verifyRows(root,rows){const base=await realpath(root);for(const row of rows){const file=inside(root,row.path),actual=await realpath(file);if(!actual.startsWith(base+sep)||!(await lstat(file)).isFile()||digest(await readFile(file))!==row.sha256)throw Error('Bootstrap byte mismatch or escaped source: '+row.path);}}
+                                                                                                                                                                                                                                                                                ^
+
+Error: Bootstrap byte mismatch or escaped source: RECONSTITUTION.md
+    at verifyRows (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-files.mjs:13:273)
+    at async materializeSourceGraph (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-materialize.mjs:22:3)
+    at async runLocalSourceBootstrap (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap.mjs:8:14)
+    at async file:///C:/Users/aaron/grand-theory/tooling/maintenance/architecture-bootstrap-2026-11-04/run-bootstrap-pair.mjs:5:266
+
+Node.js v24.22.1

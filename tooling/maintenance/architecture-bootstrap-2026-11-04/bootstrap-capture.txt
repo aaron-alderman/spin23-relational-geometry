@@ -1,0 +1,41 @@
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+C:/Users/aaron/grand-theory/.platform-reconstitution/bundles/architecture-bootstrap-final-2026-11-04/expression-algebra.bundle is okay
+{"captured":"expression-algebra","files":179}
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+C:/Users/aaron/grand-theory/.platform-reconstitution/bundles/architecture-bootstrap-final-2026-11-04/sourcery-platform-reconciled.bundle is okay
+{"captured":"sourcery-platform-reconciled","files":1128}
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+C:/Users/aaron/grand-theory/.platform-reconstitution/bundles/architecture-bootstrap-final-2026-11-04/claimipedia-core.bundle is okay
+{"captured":"claimipedia-core","files":206}
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+C:/Users/aaron/grand-theory/.platform-reconstitution/bundles/architecture-bootstrap-final-2026-11-04/epistemic-core.bundle is okay
+{"captured":"epistemic-core","files":104}
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+C:/Users/aaron/grand-theory/.platform-reconstitution/bundles/architecture-bootstrap-final-2026-11-04/claimipedia-science.bundle is okay
+{"captured":"claimipedia-science","files":24}
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+C:/Users/aaron/grand-theory/.platform-reconstitution/bundles/architecture-bootstrap-final-2026-11-04/science-programme.bundle is okay
+{"captured":"science-programme","files":44}
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+C:\Users\aaron\grand-theory\tooling\maintenance\architecture-bootstrap-2026-11-04\capture-bootstrap-inputs.cjs:6
+for(const name of names){const source=path.join(base,name),status=git(source,['status','--porcelain=v1']).toString();if(!['claimipedia','science-programme'].includes(name)&&status.trim())throw Error('Pinned source must be clean: '+name);const bundle=path.join(destination,name+'.bundle');git(source,['bundle','create',bundle,'--all']);const verification=git(source,['bundle','verify',bundle]).toString();const record={name,directory:name,commit:git(source,['rev-parse','HEAD']).toString().trim(),tree:git(source,['rev-parse','HEAD^{tree}']).toString().trim(),bundle,bundleSha256:sha(fs.readFileSync(bundle)),verification,files:[],status};for(const file of git(source,['ls-files','-z']).toString().split('\0').filter(Boolean)){const p=path.join(source,file);if(!fs.lstatSync(p).isFile())throw Error('Tracked source must be regular: '+p);const bytes=fs.readFileSync(p);record.files.push({path:file,sha256:sha(bytes),bytes:bytes.length});}if(['claimipedia','science-programme'].includes(name)){const bytes=git(source,['diff','--binary']);if(name==='claimipedia'){const expected=fs.readFileSync(path.join(base,'bundles/preservation-2026-11-04/supplementary/claimipedia-unstaged.patch'));if(!bytes.equals(expected))throw Error('Claimipedia user overlay changed');}else{const previous=require('../integrated-contract-migration-2026-11-04/claimipedia-assembly-inputs.json').sources.find(r=>r.name===name);if(previous.commit!==record.commit||previous.status!==status||previous.files.some(r=>record.files.find(f=>f.path===r.path)?.sha256!==r.sha256))throw Error('Science programme pre-existing overlay changed');}const file=path.join(destination,name+'-working.patch');fs.writeFileSync(file,bytes);record.patch={path:file,sha256:sha(bytes)};}repositories.push(record);console.log(JSON.stringify({captured:name,files:record.files.length}));}
+                                                                                                                                                                                           ^
+
+Error: Pinned source must be clean: qualification-runner
+    at Object.<anonymous> (C:\Users\aaron\grand-theory\tooling\maintenance\architecture-bootstrap-2026-11-04\capture-bootstrap-inputs.cjs:6:194)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.22.1

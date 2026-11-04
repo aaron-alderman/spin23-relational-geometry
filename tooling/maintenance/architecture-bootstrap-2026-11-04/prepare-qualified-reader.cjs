@@ -1,0 +1,4 @@
+const fs=require('fs'),path=require('path'),audit=__dirname;
+const refresher=path.join(audit,'refresh-bootstrap-reader.cjs');fs.writeFileSync(refresher,fs.readFileSync(refresher,'utf8').replace('row.previousCommit=row.commit;',"row.previousCommit='c91f49b485accf1d3db1683aa87bfd2094bce2e7';"));
+for(const name of ['run-bootstrap-pair.mjs','finalize-baseline.cjs']){const file=path.join(audit,name);fs.writeFileSync(file,fs.readFileSync(file,'utf8').replaceAll('/final-pass-','/reader-qualified-pass-').replaceAll('architecture-bootstrap-final-preservation-2026-11-04','architecture-bootstrap-qualified-preservation-2026-11-04'));}
+for(const name of ['prepare-claimipedia-assembly.cjs','verify-assembly-consumers.cjs']){const file=path.join(audit,name);fs.writeFileSync(file,fs.readFileSync(file,'utf8').replaceAll('claimipedia-against-assembly','claimipedia-against-qualified-assembly'));}

@@ -1,0 +1,13 @@
+{"phase":"starting-independent-bootstrap","pass":"a","destination":"C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\architecture-bootstrap-validation-2026-11-04\\exact-pass-a"}
+file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-files.mjs:14
+export function exactCheckoutBytes(bytes,expected){if(digest(bytes)===expected)return bytes;if(bytes.includes(0))throw Error('Binary checkout byte mismatch.');const lf=Buffer.from(bytes.toString('utf8').replaceAll('\r\n','\n')),crlf=Buffer.from(lf.toString('utf8').replaceAll('\n','\r\n'));for(const candidate of [lf,crlf])if(digest(candidate)===expected)return candidate;throw Error('Checkout differs beyond a pinned LF/CRLF representation.');}
+                                                                                                                                                                                                                                                                                                                                                                                          ^
+
+Error: Checkout differs beyond a pinned LF/CRLF representation.
+    at exactCheckoutBytes (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-files.mjs:14:379)
+    at materializeCheckoutBytes (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-files.mjs:15:236)
+    at async materializeSourceGraph (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-materialize.mjs:22:3)
+    at async runLocalSourceBootstrap (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap.mjs:8:14)
+    at async file:///C:/Users/aaron/grand-theory/tooling/maintenance/architecture-bootstrap-2026-11-04/run-bootstrap-pair.mjs:5:265
+
+Node.js v24.22.1

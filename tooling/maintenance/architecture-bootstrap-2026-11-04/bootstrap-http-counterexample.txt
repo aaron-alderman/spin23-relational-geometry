@@ -1,0 +1,12 @@
+{"phase":"starting-independent-bootstrap","pass":"a","destination":"C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\architecture-bootstrap-validation-2026-11-04\\verified-pass-a"}
+file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-reader.mjs:12
+  const response=await fetch(url,{signal:AbortSignal.timeout(30000)}),body=await response.arrayBuffer();if(response.status!==200)throw Error('Reader root request refused: '+response.status);
+                                                                                                                                       ^
+
+Error: Reader root request refused: 500
+    at observeBootstrapReader (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-reader.mjs:12:136)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async runLocalSourceBootstrap (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap.mjs:13:15)
+    at async file:///C:/Users/aaron/grand-theory/tooling/maintenance/architecture-bootstrap-2026-11-04/run-bootstrap-pair.mjs:5:268
+
+Node.js v24.22.1
