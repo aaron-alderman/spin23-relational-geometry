@@ -1,0 +1,28 @@
+{
+  "baselineCommit": "1a7526d40dea6b5abeaf5f4cc540b7b447ecb6f3",
+  "sourceSha256": "3c4b1f9bcc4391a23b82e3e47b3050d2fbb8a68bb36283512bb415efbfaca7a8",
+  "inputs": [
+    {
+      "mapping": {
+        "partition": "b:c",
+        "lane": "d"
+      },
+      "options": {
+        "projectName": "a"
+      }
+    },
+    {
+      "mapping": {
+        "partition": "c",
+        "lane": "d"
+      },
+      "options": {
+        "projectName": "a:b"
+      }
+    }
+  ],
+  "keys": [
+    "rel-lane-storage:a:b%3Ac:d",
+    "rel-lane-storage:a%3Ab:c:d"
+  ]
+}
