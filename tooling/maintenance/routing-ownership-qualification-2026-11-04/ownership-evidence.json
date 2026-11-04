@@ -1,0 +1,368 @@
+{
+  "observedAt": "2026-11-04T04:02:24.644Z",
+  "selectedSource": "dd39e52b7552f9fd1f18730afb460b2f8c6071d5",
+  "predecessor": "f9cc5e4726ef803465673cc72fca713912291828",
+  "genericOwner": {
+    "path": ".platform-reconstitution/expression-algebra",
+    "commit": "5bcde83eb3ff167ba49df57a1463ce242ad389dc",
+    "clean": true,
+    "readmeSha256": "96bad84673feabc8d159e5edfdcc20aedcee337baa622cfd310b2ebc2ded8ae0",
+    "scope": "Domain-neutral values, operations, codecs, authoring and evaluation; Sourcery policy remains Sourcery-owned."
+  },
+  "selectedOwner": {
+    "path": "sdk/core/route-runtime.mjs",
+    "platformReadmeSha256": "07f237e5d2812679329a8077a260e904ebd093c1a97a29014efbe95652c5214a",
+    "decision": "Authored route parameter grammar, decoding/refusal rules, RouteCachePolicy vocabulary and HTTP cache-header projection remain Sourcery policy. No generic opcode/export was fabricated."
+  },
+  "historicalVariant": {
+    "commit": "f8fbe25eb69b8a7ae1aaaf657ef7f7cad419c8aa",
+    "retainedRef": "refs/recovery/route-runtime-variant-f8fbe25e",
+    "source": "predecessor/retained-route-runtime-resolution.mjs",
+    "whitespaceCounterexample": {
+      "pattern": "/items/:id",
+      "candidate": " /items/a ",
+      "retainedVariantMatched": true,
+      "selectedPredecessorMatched": false
+    },
+    "disposition": "Not promoted; observed behavior differs from selected source."
+  },
+  "amendments": [
+    {
+      "path": "test/route-path-match-algebra.test.mjs",
+      "originalSha256": "19b5868764c127fd77f63277d849f9d86dd123c1548382e77186623c128bd068",
+      "selectedSha256": "683705a932ab768feb04730d3c5f1ed4133c81776f525c680f684ab15c273dde",
+      "expectedContractUnchanged": true,
+      "testNames": [
+        "route path matching preserves static and parameter segments",
+        "route path matching rejects duplicate, invalid, and encoded-slash parameters"
+      ],
+      "assertionCount": 5,
+      "assertions": [
+        {
+          "method": "deepEqual",
+          "expected": {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "matched"
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": true
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "params"
+                },
+                "value": {
+                  "type": "ObjectExpression",
+                  "properties": [
+                    {
+                      "type": "Property",
+                      "method": false,
+                      "shorthand": false,
+                      "computed": false,
+                      "key": {
+                        "type": "Identifier",
+                        "name": "id"
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "value": "a b"
+                      },
+                      "kind": "init"
+                    }
+                  ]
+                },
+                "kind": "init"
+              }
+            ]
+          }
+        },
+        {
+          "method": "deepEqual",
+          "expected": {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "matched"
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": false
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "params"
+                },
+                "value": {
+                  "type": "ObjectExpression",
+                  "properties": []
+                },
+                "kind": "init"
+              }
+            ]
+          }
+        },
+        {
+          "method": "equal",
+          "expected": {
+            "type": "Literal",
+            "value": false
+          }
+        },
+        {
+          "method": "equal",
+          "expected": {
+            "type": "Literal",
+            "value": false
+          }
+        },
+        {
+          "method": "equal",
+          "expected": {
+            "type": "Literal",
+            "value": false
+          }
+        }
+      ],
+      "ownershipChange": "shared generic API expectation replaced by explicit Sourcery-owned runtime contract",
+      "inputChange": "object argument becomes existing positional route API",
+      "diff": "diff --git \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\route-path-match-algebra.test.mjs\" \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform-reconciled\\\\test\\\\route-path-match-algebra.test.mjs\"\nindex cc3a1de4..23cc0bd5 100644\n--- \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\route-path-match-algebra.test.mjs\"\n+++ \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform-reconciled\\\\test\\\\route-path-match-algebra.test.mjs\"\n@@ -1,14 +1,15 @@\n import test from 'node:test';\n import assert from 'node:assert/strict';\n-import {routePathMatchValue} from '../../expression-algebra/src/index.mjs';\n+// Ownership amendment: authored route syntax belongs to Sourcery's route runtime.\n+import {matchRoutePath} from '../sdk/core/route-runtime.mjs';\n \n test('route path matching preserves static and parameter segments',()=>{\n- assert.deepEqual(routePathMatchValue({pattern:'/items/:id',candidate:'/items/a%20b'}),{matched:true,params:{id:'a b'}});\n- assert.deepEqual(routePathMatchValue({pattern:'/items/static',candidate:'/items/value'}),{matched:false,params:{}});\n+ assert.deepEqual(matchRoutePath('/items/:id','/items/a%20b'),{matched:true,params:{id:'a b'}});\n+ assert.deepEqual(matchRoutePath('/items/static','/items/value'),{matched:false,params:{}});\n });\n \n test('route path matching rejects duplicate, invalid, and encoded-slash parameters',()=>{\n- assert.equal(routePathMatchValue({pattern:'/x/:id/:id',candidate:'/x/a/a'}).matched,false);\n- assert.equal(routePathMatchValue({pattern:'/x/:id',candidate:'/x/a%2Fb'}).matched,false);\n- assert.equal(routePathMatchValue({pattern:'/x/:id',candidate:'/x/%E0%A4%A'}).matched,false);\n+ assert.equal(matchRoutePath('/x/:id/:id','/x/a/a').matched,false);\n+ assert.equal(matchRoutePath('/x/:id','/x/a%2Fb').matched,false);\n+ assert.equal(matchRoutePath('/x/:id','/x/%E0%A4%A').matched,false);\n });\n"
+    },
+    {
+      "path": "test/route-cache-lowering-algebra.test.mjs",
+      "originalSha256": "aa5949e53f84a225999c174858da8221f6ed867e12267c066377c4364cb1ff99",
+      "selectedSha256": "1c0acd8f8590cc4ea4c0f28c7fdde0b50d9fd03ea1d5a33661b978523eb30535",
+      "expectedContractUnchanged": true,
+      "testNames": [
+        "route cache lowering preserves revalidate and no-store header semantics",
+        "route cache lowering rejects invalid authored policy values"
+      ],
+      "assertionCount": 4,
+      "assertions": [
+        {
+          "method": "equal",
+          "expected": {
+            "type": "Literal",
+            "value": "public, no-cache, max-age=60, must-revalidate"
+          }
+        },
+        {
+          "method": "equal",
+          "expected": {
+            "type": "Literal",
+            "value": "private, no-store"
+          }
+        },
+        {
+          "method": "throws",
+          "expected": {
+            "type": "Literal",
+            "value": {
+              "regex": "strategy must be",
+              "flags": ""
+            },
+            "regex": {
+              "pattern": "strategy must be",
+              "flags": ""
+            }
+          }
+        },
+        {
+          "method": "throws",
+          "expected": {
+            "type": "Literal",
+            "value": {
+              "regex": "validator must be",
+              "flags": ""
+            },
+            "regex": {
+              "pattern": "validator must be",
+              "flags": ""
+            }
+          }
+        }
+      ],
+      "ownershipChange": "shared generic API expectation replaced by explicit Sourcery-owned runtime contract",
+      "inputChange": "same policy object, existing Sourcery header-lowering API",
+      "diff": "diff --git \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\route-cache-lowering-algebra.test.mjs\" \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform-reconciled\\\\test\\\\route-cache-lowering-algebra.test.mjs\"\nindex a316ef44..9c7d49a9 100644\n--- \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\route-cache-lowering-algebra.test.mjs\"\n+++ \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform-reconciled\\\\test\\\\route-cache-lowering-algebra.test.mjs\"\n@@ -1,13 +1,14 @@\n import test from 'node:test';\n import assert from 'node:assert/strict';\n-import {routeCacheLoweringValue} from '../../expression-algebra/src/index.mjs';\n+// Header policy is Sourcery-owned; no missing generic operation is synthesized.\n+import {lowerRouteCachePolicy} from '../sdk/core/route-runtime.mjs';\n \n test('route cache lowering preserves revalidate and no-store header semantics',()=>{\n- assert.equal(routeCacheLoweringValue({subject:'cache.a',strategy:'revalidate',visibility:'public',validator:'contentDigest',maxAgeSeconds:'60'}),'public, no-cache, max-age=60, must-revalidate');\n- assert.equal(routeCacheLoweringValue({subject:'cache.a',strategy:'noStore',visibility:'private',validator:'contentDigest',maxAgeSeconds:0}),'private, no-store');\n+ assert.equal(lowerRouteCachePolicy({subject:'cache.a',strategy:'revalidate',visibility:'public',validator:'contentDigest',maxAgeSeconds:'60'}),'public, no-cache, max-age=60, must-revalidate');\n+ assert.equal(lowerRouteCachePolicy({subject:'cache.a',strategy:'noStore',visibility:'private',validator:'contentDigest',maxAgeSeconds:0}),'private, no-store');\n });\n \n test('route cache lowering rejects invalid authored policy values',()=>{\n- assert.throws(()=>routeCacheLoweringValue({subject:'cache.a',strategy:'other',visibility:'public',validator:'contentDigest',maxAgeSeconds:0}),/strategy must be/);\n- assert.throws(()=>routeCacheLoweringValue({subject:'cache.a',strategy:'revalidate',visibility:'public',validator:'other',maxAgeSeconds:0}),/validator must be/);\n+ assert.throws(()=>lowerRouteCachePolicy({subject:'cache.a',strategy:'other',visibility:'public',validator:'contentDigest',maxAgeSeconds:0}),/strategy must be/);\n+ assert.throws(()=>lowerRouteCachePolicy({subject:'cache.a',strategy:'revalidate',visibility:'public',validator:'other',maxAgeSeconds:0}),/validator must be/);\n });\n"
+    },
+    {
+      "path": "test/route-cache-policy-algebra.test.mjs",
+      "originalSha256": "6a6a5533c9d114a13e94db8ca540f0533fa6342a3e120c13f44520ed0e103321",
+      "selectedSha256": "dac6e914dc11bd98662781a9c61e90c25eefb55870c0e3103abaa0724c39d65a",
+      "expectedContractUnchanged": true,
+      "testNames": [
+        "route cache policy preserves explicit fields",
+        "route cache policy refuses empty subject without inventing identity"
+      ],
+      "assertionCount": 2,
+      "assertions": [
+        {
+          "method": "deepEqual",
+          "expected": {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "subject"
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "cache.a"
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "route"
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "route.a"
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "strategy"
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "revalidate"
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "visibility"
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "public"
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "maxAgeSeconds"
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "60"
+                },
+                "kind": "init"
+              },
+              {
+                "type": "Property",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "name": "validator"
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "contentDigest"
+                },
+                "kind": "init"
+              }
+            ]
+          }
+        },
+        {
+          "method": "equal",
+          "expected": {
+            "type": "Literal",
+            "value": null
+          }
+        }
+      ],
+      "ownershipChange": "shared generic API expectation replaced by explicit Sourcery-owned runtime contract",
+      "inputChange": "generic record becomes authored fact source plus subject",
+      "diff": "diff --git \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\route-cache-policy-algebra.test.mjs\" \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform-reconciled\\\\test\\\\route-cache-policy-algebra.test.mjs\"\nindex 43974dd4..844cf577 100644\n--- \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\route-cache-policy-algebra.test.mjs\"\n+++ \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform-reconciled\\\\test\\\\route-cache-policy-algebra.test.mjs\"\n@@ -1,13 +1,18 @@\n import test from 'node:test';\n import assert from 'node:assert/strict';\n-import {routeCachePolicyValue} from '../../expression-algebra/src/index.mjs';\n+import {routeCachePolicySpec} from '../sdk/core/route-runtime.mjs';\n+\n+// Explicit input-contract amendment: project authored facts, not a generic record.\n+const sourceFor=policy=>Object.entries(policy).filter(([key])=>key!=='subject').map(([p,o])=>({s:policy.subject,p,o,pol:'is'}));\n \n test('route cache policy preserves explicit fields',()=>{\n- assert.deepEqual(routeCachePolicyValue({subject:'cache.a',route:'route.a',strategy:'revalidate',visibility:'public',maxAgeSeconds:'60',validator:'contentDigest'}),{\n+ const policy={subject:'cache.a',route:'route.a',strategy:'revalidate',visibility:'public',maxAgeSeconds:'60',validator:'contentDigest'};\n+ assert.deepEqual(routeCachePolicySpec(sourceFor(policy),policy.subject),{\n   subject:'cache.a',route:'route.a',strategy:'revalidate',visibility:'public',maxAgeSeconds:'60',validator:'contentDigest',\n  });\n });\n \n test('route cache policy refuses empty subject without inventing identity',()=>{\n- assert.equal(routeCachePolicyValue({route:'route.a'}),null);\n+ const policy={route:'route.a'};\n+ assert.equal(routeCachePolicySpec(sourceFor(policy),policy.subject),null);\n });\n"
+    }
+  ],
+  "unresolvedAccessPolicy": {
+    "path": "test/route-access-policy-algebra.test.mjs",
+    "originalSha256": "c5d675c51d7f512879b164ddb10728356e55d47702d95dda63c4b11e632dc7c7",
+    "input": {
+      "subject": "policy.a",
+      "route": "page.a",
+      "unauthenticatedTarget": "target.guest"
+    },
+    "retainedExpectation": {
+      "authenticatedTarget": {
+        "type": "undefined"
+      },
+      "unauthorizedTarget": {
+        "type": "undefined"
+      }
+    },
+    "selectedFactProjection": {
+      "authenticatedTarget": {
+        "type": "string",
+        "value": ""
+      },
+      "unauthorizedTarget": {
+        "type": "string",
+        "value": ""
+      }
+    },
+    "conclusion": "Contract/input-domain difference, not proof of a runtime bug. Kept unresolved; expected values were not rewritten."
+  },
+  "scope": "One local ownership/conformance run; no generic API equivalence, executable-algebra or deployment admission."
+}
