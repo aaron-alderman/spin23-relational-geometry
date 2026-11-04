@@ -1,0 +1,47 @@
+{
+  "predecessor": "809e989971a9b636c74e778bb7c7ba204e17cd98",
+  "input": [
+    {
+      "s": "boot",
+      "p": "initialLane",
+      "o": "lane",
+      "pol": "is"
+    },
+    {
+      "s": "boot",
+      "p": "initialLane",
+      "o": "lane",
+      "pol": "is-not"
+    }
+  ],
+  "value": "lane",
+  "issues": [
+    {
+      "code": "invalid-persistence-metadata",
+      "message": "facts: PageBoot boot.initialLane references unknown subject \"lane\".",
+      "severity": "error",
+      "subject": "boot",
+      "predicate": "initialLane",
+      "hint": "initialLane must point to an authored Lane subject. The authored REL lane descriptor type is Lane. sessionInspectorPage boots need durable and published lane bindings plus an initialLane.",
+      "bootKind": "unknown",
+      "targetSubject": "lane"
+    },
+    {
+      "code": "invalid-persistence-metadata",
+      "message": "facts: PageBoot boot.initialLane must reference a Lane; found \"lane\".",
+      "severity": "error",
+      "subject": "boot",
+      "predicate": "initialLane",
+      "hint": "initialLane must point to a Lane subject so the runtime can materialize witness/projection views correctly. The authored REL lane descriptor type is Lane. sessionInspectorPage boots need durable and published lane bindings plus an initialLane.",
+      "bootKind": "unknown",
+      "targetSubject": "lane",
+      "expectedType": "Lane"
+    }
+  ],
+  "omittedType": "accepted",
+  "expected": {
+    "value": "",
+    "missingFieldDiagnostic": true,
+    "omittedType": "TypeError"
+  }
+}

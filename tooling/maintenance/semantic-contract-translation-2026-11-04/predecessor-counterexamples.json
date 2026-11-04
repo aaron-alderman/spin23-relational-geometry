@@ -1,0 +1,120 @@
+{
+  "predecessor": "809e989971a9b636c74e778bb7c7ba204e17cd98",
+  "pageBoot": {
+    "input": [
+      {
+        "s": "boot",
+        "p": "laneBinding",
+        "o": "b",
+        "pol": "is"
+      },
+      {
+        "s": "b",
+        "p": "role",
+        "o": "durable",
+        "pol": "is"
+      },
+      {
+        "s": "b",
+        "p": "lane",
+        "o": "old",
+        "pol": "is"
+      },
+      {
+        "s": "b",
+        "p": "lane",
+        "o": "new",
+        "pol": "is"
+      },
+      {
+        "s": "b",
+        "p": "lane",
+        "o": "new",
+        "pol": "is-not"
+      },
+      {
+        "s": "boot",
+        "p": "laneBinding",
+        "o": "b",
+        "pol": "is-not"
+      }
+    ],
+    "array": {
+      "subject": "boot",
+      "kind": "",
+      "laneBindings": [],
+      "laneBindingByRole": {},
+      "inspectorPage": "",
+      "laneStateKey": "",
+      "initialLane": "",
+      "contextStateKey": "",
+      "initialContext": "",
+      "recordIsaStateKey": "",
+      "initialRecordIsa": "",
+      "queryParam": "",
+      "semanticMutationPreviewMode": "",
+      "semanticMutationConfirmationMode": ""
+    },
+    "store": {
+      "subject": "boot",
+      "laneBindings": [
+        {
+          "subject": "b",
+          "role": "durable",
+          "lane": "new"
+        }
+      ],
+      "laneBindingByRole": {
+        "durable": {
+          "subject": "b",
+          "role": "durable",
+          "lane": "new"
+        }
+      }
+    },
+    "expectedBindings": []
+  },
+  "factQuery": {
+    "input": [
+      {
+        "s": "a\u001fb",
+        "p": "c",
+        "o": "d",
+        "pol": "is"
+      },
+      {
+        "s": "a",
+        "p": "b\u001fc",
+        "o": "d",
+        "pol": "is"
+      }
+    ],
+    "actual": [
+      {
+        "s": "a",
+        "p": "b\u001fc",
+        "o": "d"
+      }
+    ],
+    "expectedRows": 2,
+    "retractedActual": [],
+    "expectedRemainingSubject": "a\u001fb"
+  },
+  "proposal": {
+    "input": {
+      "kind": "fact-proposal",
+      "facts": [
+        {
+          "s": "",
+          "p": "p",
+          "o": "o",
+          "pol": "is"
+        }
+      ]
+    },
+    "accepted": true,
+    "sameIdentity": true,
+    "expected": "invalid-proposal refusal"
+  },
+  "scientificAcceptance": false
+}
