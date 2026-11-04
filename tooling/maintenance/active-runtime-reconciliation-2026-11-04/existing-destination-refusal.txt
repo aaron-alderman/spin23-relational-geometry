@@ -1,0 +1,12 @@
+{"phase":"starting-isolated-bootstrap","pass":"a","destination":"C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\active-runtime-validation-2026-11-04\\pass-a"}
+file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-files.mjs:11
+export async function freshDirectory(directory){const current=await lstat(directory).catch(error=>error.code==='ENOENT'?null:Promise.reject(error));if(current)throw Error('Bootstrap requires a nonexistent destination.');await mkdir(directory,{recursive:true});}
+                                                                                                                                                                     ^
+
+Error: Bootstrap requires a nonexistent destination.
+    at freshDirectory (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-files.mjs:11:166)
+    at async materializeSourceGraph (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-materialize.mjs:7:2)
+    at async runLocalSourceBootstrap (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap.mjs:8:14)
+    at async file:///C:/Users/aaron/grand-theory/tooling/maintenance/active-runtime-reconciliation-2026-11-04/run-bootstrap-pair.mjs:3:230
+
+Node.js v24.22.1

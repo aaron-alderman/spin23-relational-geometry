@@ -1,0 +1,5 @@
+import {readFileSync,writeFileSync} from 'node:fs';import {resolve} from 'node:path';
+import {runtimeModuleInputs} from '../../../.platform-reconstitution/sourcery-platform-reconciled/assurance/runtime-module-inputs.mjs';
+import {buildRuntimeModuleGraph} from '../../../.platform-reconstitution/sourcery-platform-reconciled/assurance/runtime-module-graph.mjs';
+const report=JSON.parse(readFileSync(new URL('../architecture-bootstrap-2026-11-04/current-assurance.json',import.meta.url))).report,input=runtimeModuleInputs(resolve('.platform-reconstitution/sourcery-platform-reconciled'),report),graph=buildRuntimeModuleGraph(input);
+writeFileSync(new URL('current-runtime-graph.json',import.meta.url),JSON.stringify({sourcePolicy:input.sourcePolicy,seeds:input.seeds,nodes:graph.nodes,findings:graph.findings,dynamicBoundaries:graph.dynamicBoundaries},null,2)+'\n');console.log(JSON.stringify({seeds:input.seeds.length,nodes:graph.nodes.length,findings:graph.findings,dynamicBoundaries:graph.dynamicBoundaries}));
