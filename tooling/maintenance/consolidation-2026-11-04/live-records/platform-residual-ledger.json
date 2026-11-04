@@ -1,0 +1,105 @@
+{
+  "kind": "platform-reconstitution-residual-ledger",
+  "authority": {
+    "path": ".platform-reconstitution/sourcery-platform-authority",
+    "sourceCommit": "6d05a67755cf5e88c4cd9999f96e6713b113d0a7",
+    "localReceiptCommit": "6d05a67755cf5e88c4cd9999f96e6713b113d0a7",
+    "runtimeAssurance": "fresh full assembly, runtime consumer closure and scoped programme-completion check passed; no application authority granted"
+  },
+  "residuals": [
+    {
+      "id": "core.semanticMutation.contractPolicy",
+      "domain": "sdk/plugins/core",
+      "kind": "pure-semantic-mjs",
+      "file": "sdk/plugins/core/semantic-mutation-runtime.mjs",
+      "evidence": "coreContractPolicyProvider contains a closed slot-to-policy lookup and timestamp classification with no external effects.",
+      "algebraStatus": "resolved-in-schema-algebra",
+      "resolution": "expects and editorKind facts were added to sdk/plugins/core/stdlib.rel; the MJS adapter now projects authored slot policy without a private lookup table.",
+      "verification": "semantic-mutation-policy.test.mjs and platform runtime assurance passed"
+    },
+    {
+      "id": "platform.sdk.semanticInventory",
+      "domain": "sdk",
+      "kind": "programme-wide",
+      "evidence": "Deterministic inventories at sdk/semantic-module-inventory.json and sdk/semantic-domain-inventory.json cover 324 MJS modules, 288 runtime modules, and 32 runtime domains. The largest candidate domains are sdk/server (59 modules/35,334 lines), sdk/plugins/data-space (9/29,912), sdk/platform-daemon (28/19,640), sdk/core (48/16,976), sdk/browser (17/15,097), and sdk/project (7/9,496). Core runtime-build choice vocabularies, semantic-authority families, operation-to-authority mappings, and semantic mutation action contracts now derive from authored REL policy rather than private MJS tables.",
+      "algebraStatus": "domain-inventory-classified-heuristic",
+      "verification": "semantic-module-inventory.test.mjs and semantic-domain-inventory.test.mjs regenerate deterministic complete-coverage inventories; classifications remain triage evidence, not semantic-zero proof",
+      "requiredAction": "replace heuristic classifications with direct domain ownership/effect receipts, then migrate complete semantic and mixed domains into executable algebra; continue core policy and semantic-runtime tranches",
+      "currentInventory": {
+        "mjsModules": 324,
+        "runtimeModules": 288,
+        "runtimeLines": 183452,
+        "semanticCandidates": 121,
+        "mixedBoundaryCandidates": 182,
+        "effectBoundaryCandidates": 7,
+        "semanticZeroStatus": "unproven"
+      }
+    },
+    {
+      "id": "postgres.semanticMutation.contractPolicy",
+      "domain": "sdk/plugins/postgres-rel",
+      "kind": "pure-semantic-mjs",
+      "file": "sdk/plugins/postgres-rel/semantic-mutation-runtime.mjs",
+      "algebraStatus": "resolved-in-schema-algebra",
+      "resolution": "expects, editorKind, and canonicalValueType facts were added to schema.rel; the MJS adapter now projects authored slot policy.",
+      "verification": "semantic-mutation-policy.test.mjs and platform runtime assurance passed"
+    },
+    {
+      "id": "data-space.semanticMutation.operationInventory",
+      "domain": "sdk/plugins/data-space/deferred",
+      "kind": "programme-preparatory-contract",
+      "file": "sdk/plugins/data-space/deferred/runtime/semantic-mutation-runtime.mjs",
+      "evidence": "19 createFacts mutation handlers previously had operation identity only in MJS guards and export order.",
+      "algebraStatus": "partial-semantic-policy-lowered",
+      "resolution": "19 DataSpaceMutationOperation subjects now declare kind, handler, stage, effectClass, and exact source in deferred/stdlib.rel; trusted-bridge vocabularies and issue-action defaults/transitions are now read from authored policy facts.",
+      "verification": "data-space-operation-contract.test.mjs proves one-to-one authored operation coverage against runtime guards; trusted-bridge allowed values/template defaults, issue-action transitions, and paired issue-suppression creation/removal policy now derive from authored schema; focused policy and platform assurance passed",
+      "requiredAction": "lower each operation's validation/planning semantics into executable algebra while retaining only append/custody adapters in MJS"
+    },
+    {
+      "id": "bootstrap.github-only",
+      "domain": "platform",
+      "kind": "bootstrap",
+      "evidence": "The retained sourcery-platform authority does contain composition.rel and composition.plugin.rel plus historical projection manifests, but no retained src/kernel/composition.mjs and no matching composeLayerWorkspaces/readLayerManifest implementation. The current Temple bootstrap/materialization path is independently exercised by the workspace runtime suite (thin-fork, seal/reopen, and bounded projection tests); the older four-layer clean-assembly path still fails immediately against retained claimipedia-core because that interpreter source is absent. No four-layer bootstrap target was produced.",
+      "algebraStatus": "resolved-full-clean-bootstrap",
+      "resolution": "Fresh assembly of retained candidate 6d05a67755cf5e88c4cd9999f96e6713b113d0a7 verified 12906 unique files, composition proof e2d66ab4011912a19851f975ba0e7a5d6d5b300c90aa7d05325f7923117142c5, runtime payload da60e72e332241d5946cf77eebb3adf5b6289024e6ea3016089cf8ce220f1be5; receipt tooling/maintenance/consolidation-2026-11-04/assembly-proof.json. Retained local projections are verified; equivalence to current upstream main is not established.",
+      "verification": "full clean assembly and integrated programme completion passed",
+      "requiredAction": "retain receipt and continue programme-wide semantic/effect boundary audit",
+      "previousResolution": "Fresh assembly of retained candidate 6d05a67755cf5e88c4cd9999f96e6713b113d0a7 verified 12906 unique files, composition proof e2d66ab4011912a19851f975ba0e7a5d6d5b300c90aa7d05325f7923117142c5, runtime payload da60e72e332241d5946cf77eebb3adf5b6289024e6ea3016089cf8ce220f1be5; receipt tooling/maintenance/consolidation-2026-11-04/assembly-proof.json. Retained local projections are verified; equivalence to current upstream main is not established."
+    },
+    {
+      "id": "bootstrap.runtimeConsumerAssurance",
+      "domain": "platform/runtime-dependencies",
+      "kind": "assurance-contract",
+      "algebraStatus": "resolved-explicit-optional-dynamic-boundary",
+      "evidence": "The executable artifact js.sourcery.appFoundation.browserEvidence is an optional dynamic-only browser adapter. Playwright is explicitly declared optional-not-admitted in runtime-dependencies.sources.json and sealed runtime-dependencies.json; the verifier now distinguishes declared dependencies from observed static/dynamic import modes. Full clean assembly passed with playwright and terser present only as optional dynamic-only declarations and no runtime payload.",
+      "verification": "platform-runtime-native-dependency tests passed; full clean assembly platform runtime proof valid",
+      "requiredAction": "retain receipt and monitor future dependency declarations through assurance"
+    },
+    {
+      "id": "source.upstreamReconciliation",
+      "domain": "platform/source-authority",
+      "kind": "provenance",
+      "algebraStatus": "open",
+      "evidence": {
+        "observedAt": "2026-11-04T02:33:35.421Z",
+        "repository": "https://github.com/sourcerytech/sourcery-platform.git",
+        "transport": "authenticated Git clone; connector returned 404",
+        "upstreamMain": "9c7f73fe58a3b6ae030f9bbd2407ca49efef44c3",
+        "candidate": "6d05a67755cf5e88c4cd9999f96e6713b113d0a7",
+        "mergeBase": "49924654f7476f0a2b73597680fa8dc3ac2ce5e5",
+        "candidateOnlyCommits": 37,
+        "upstreamOnlyCommits": 52,
+        "candidateOrigin": "C:\\Users\\aaron\\sourcery\\sourcery-platform",
+        "localSourceHead": "9c2be0eaa95c44c45abbd8d45dd7f5e293cbba6e",
+        "status": "diverged; reconciliation required; candidate is not current upstream main"
+      },
+      "requiredAction": "Compare and reconcile local and upstream changes by ownership and intent; do not merge, reset, or promote based solely on passing bootstrap."
+    }
+  ],
+  "counts": {
+    "open": 3,
+    "runtimeSemanticMjsResiduals": 121,
+    "runtimeSemanticMjsResidualsBasis": "conservative semantic-candidate count; direct domain audits may reduce this count",
+    "assuranceRegressions": 0
+  }
+}

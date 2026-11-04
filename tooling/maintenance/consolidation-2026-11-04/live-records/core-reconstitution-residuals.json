@@ -1,0 +1,29 @@
+{
+  "kind": "reconstitution-residuals",
+  "observedAt": "2026-11-04T02:34:46.886Z",
+  "status": "historical oracle sources recovered; local witness authority unchanged",
+  "previousRecord": "bundles/preservation-2026-11-04/pre-reconciliation-records/core-reconstitution-residuals.json",
+  "deletedHistory": [],
+  "recoveredHistoricalSources": [
+    {
+      "commit": "844fa64abe4ee58f37add8f8e1b8e9fcfe2343d2",
+      "source": ".platform-reconstitution/recovery/claimipedia-core",
+      "retainedRef": "refs/recovery/oracles/expression-844fa64",
+      "objectType": "commit",
+      "runtimeDependency": false
+    },
+    {
+      "commit": "dfb98dbb630b1bf00ca1e0da2d3dbf81e73bc048",
+      "source": ".platform-reconstitution/recovery/claimipedia-core",
+      "retainedRef": "refs/recovery/oracles/presentation-dfb98db",
+      "objectType": "commit",
+      "runtimeDependency": false
+    }
+  ],
+  "remainingVerification": {
+    "expressionAlgebra": "99/99 tests passed; fresh test receipt retained in current audit",
+    "claimipediaCore": "71/71 tests passed after exact history recovery and SDK helper ownership repair",
+    "sourceClosure": "passed"
+  },
+  "decision": "Exact historical objects recovered without merging histories or changing executable Core source. Missing dependency histories remain a separate recovery hold."
+}

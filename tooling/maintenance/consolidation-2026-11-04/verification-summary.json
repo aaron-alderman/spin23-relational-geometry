@@ -1,0 +1,56 @@
+{
+  "observedAt": "2026-11-04T02:34:46.886Z",
+  "lineage": {
+    "observedAt": "2026-11-04T02:34:46.886Z",
+    "repository": "https://github.com/sourcerytech/sourcery-platform.git",
+    "transport": "authenticated Git clone; connector returned 404",
+    "upstreamMain": "9c7f73fe58a3b6ae030f9bbd2407ca49efef44c3",
+    "candidate": "6d05a67755cf5e88c4cd9999f96e6713b113d0a7",
+    "mergeBase": "49924654f7476f0a2b73597680fa8dc3ac2ce5e5",
+    "candidateOnlyCommits": 37,
+    "upstreamOnlyCommits": 52,
+    "candidateOrigin": "C:\\Users\\aaron\\sourcery\\sourcery-platform",
+    "localSourceHead": "9c2be0eaa95c44c45abbd8d45dd7f5e293cbba6e",
+    "status": "diverged; reconciliation required; candidate is not current upstream main"
+  },
+  "assemblyReceiptSha256": "7aaad980670742e5a0339bc3dcc28a7729f4ea61e63d3e49ceac0c082e234709",
+  "assemblyTarget": ".platform-reconstitution/.assembly-validation-2026-11-04",
+  "previousAssemblyRetained": ".platform-reconstitution/.tmp-full-assembly",
+  "recoveredHistoricalSources": [
+    {
+      "commit": "844fa64abe4ee58f37add8f8e1b8e9fcfe2343d2",
+      "source": ".platform-reconstitution/recovery/claimipedia-core",
+      "retainedRef": "refs/recovery/oracles/expression-844fa64",
+      "objectType": "commit",
+      "runtimeDependency": false
+    },
+    {
+      "commit": "dfb98dbb630b1bf00ca1e0da2d3dbf81e73bc048",
+      "source": ".platform-reconstitution/recovery/claimipedia-core",
+      "retainedRef": "refs/recovery/oracles/presentation-dfb98db",
+      "objectType": "commit",
+      "runtimeDependency": false
+    }
+  ],
+  "sdkRepairCommit": "6d911ff5592e6ef74cb14862d86abb239d870f11",
+  "sourceAuthority": "local witnesses and diverged candidate; no promotion",
+  "missingDependencyCommits": [
+    {
+      "repository": "epistemic-core",
+      "commit": "274a2a541789ee2e8b6576ec3aeb5d9651165338",
+      "remoteResult": "upload-pack: not our ref"
+    },
+    {
+      "repository": "claimipedia-science",
+      "commit": "647e065a69867ee767c5d9b7dac04bdce1946d19",
+      "remoteResult": "upload-pack: not our ref"
+    }
+  ],
+  "newDependencyLink": {
+    "path": ".platform-reconstitution/sourcery-platform/sdk/node_modules/@sourcerytech/expression-algebra",
+    "target": ".platform-reconstitution/expression-algebra",
+    "kind": "junction; unlink without traversal before any future removal"
+  },
+  "productionChanged": false,
+  "cleanupPerformed": false
+}

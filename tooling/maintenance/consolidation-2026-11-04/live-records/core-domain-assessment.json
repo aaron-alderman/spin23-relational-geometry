@@ -1,0 +1,22 @@
+{
+  "kind": "core-domain-assessment",
+  "basis": "C:/Users/aaron/sourcery/sourcery-platform/sdk/core@9c2be0eaa95c44c45abbd8d45dd7f5e293cbba6e",
+  "observation": "The core directory contains 48 MJS files and only one REL file. Static effect screening finds 42 files with no direct filesystem/network/process imports or other obvious effect markers.",
+  "semanticClusters": [
+    {"cluster":"admissibility","files":10,"lines":2664,"classification":"pure semantic candidate","next":"derive executable contracts from existing declarations and diagnostics"},
+    {"cluster":"semantic-authoring-lowering","files":8,"lines":2948,"classification":"pure semantic candidate","next":"map lowering/merge/propagation ports into algebra operations"},
+    {"cluster":"semantic-mutation","files":7,"lines":2738,"classification":"pure semantic candidate","next":"separate fact-state planning from persistence/custody"},
+    {"cluster":"semantic-runtime-and-routing","files":10,"lines":2077,"classification":"mixed semantic candidate","next":"identify pure projections versus runtime/boundary custody"},
+    {"cluster":"diagnostics-and-lanes","files":6,"lines":495,"classification":"pure semantic candidate","next":"preserve refusal/evidence semantics in algebra"}
+  ],
+  "effectfulOrMixed": [
+    "benchmarks/fact-store.mjs",
+    "canonical-values.mjs",
+    "decode-runtime.mjs",
+    "deploy-test-admission.mjs",
+    "rel-core.mjs",
+    "runtime-build-policy.mjs"
+  ],
+  "firstDomainScaleTranche": "admissibility + semantic-authoring-lowering",
+  "guardrail": "No file is retired or moved until its pure behavior, effects, authority, and algebra contract are directly witnessed."
+}
