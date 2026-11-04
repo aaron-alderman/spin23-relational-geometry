@@ -1,0 +1,125 @@
+{
+  "changes": [
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-values.mjs",
+      "function": "mutationAdapterChoiceDetailsValue",
+      "before": "function mutationAdapterChoiceDetailsValue({contract,sourceType,targetType,transforms=[],policy}){\n if(!mutationRequiresStrictChoiceValidationValue(contract,policy))return null;\n if(!sourceType||!targetType)return[];\n const unnecessary=sourceType===targetType&&sourceType!=='blob';\n return transforms.map(t=>({value:t.subject,label:t.value,disabled:unnecessary||t.sourceType!==sourceType||t.targetType!==targetType,reason:unnecessary?'no transform required':t.sourceType!==sourceType||t.targetType!==targetType?`requires ${t.sourceType} to ${t.targetType}`:''}));\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-values.mjs",
+      "function": "mutationChoiceSourceSelectionValue",
+      "before": "function mutationChoiceSourceSelectionValue({provider,enumeration,adapter,reference,slotValueType}){if(Array.isArray(provider))return provider;if(Array.isArray(enumeration))return enumeration;if(Array.isArray(adapter))return adapter;return slotValueType==='ref'&&Array.isArray(reference)?reference:[];}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-values.mjs",
+      "function": "normalizeMutationEditablePromptInputValue",
+      "before": "function normalizeMutationEditablePromptInputValue(input={},policy){return{...input,currentContext:emptyIfAbsent(input.currentContext,policy.missingCurrentContext),mode:emptyIfAbsent(input.mode,policy.missingMode),record:emptyIfAbsent(input.record,{}),typedRecord:emptyIfAbsent(input.typedRecord,{}),choiceDetailsProviders:emptyIfAbsent(input.choiceDetailsProviders,[]),contractPolicyProviders:emptyIfAbsent(input.contractPolicyProviders,[]),profiler:emptyIfAbsent(input.profiler,policy.missingProfiler)};}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-editable-prompt-input.mjs",
+      "function": "normalizeEditablePromptInput",
+      "before": "function normalizeEditablePromptInput(input) {\n  const request = input === undefined ? {} : input;\n  return Object.freeze({\n    subject: request.subject,\n    predicate: request.predicate,\n    record: supplied(request, \"record\", {}),\n    typedRecord: supplied(request, \"typedRecord\", {}),\n    currentContext: supplied(request, \"currentContext\", POLICY.missingCurrentContext),\n    mode: supplied(request, \"mode\", POLICY.missingMode),\n    choiceDetailsProviders: supplied(request, \"choiceDetailsProviders\", EMPTY_LIST),\n    contractPolicyProviders: supplied(request, \"contractPolicyProviders\", EMPTY_LIST),\n    profiler: supplied(request, \"profiler\", POLICY.missingProfiler),\n  });\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-choice-adapter.mjs",
+      "function": "requiresStrictChoiceValidation",
+      "before": "function requiresStrictChoiceValidation(contract) {\n  return contract.iface?.type === POLICY.adapterInterface && contract.slot?.predicate === POLICY.adapterPredicate;\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-choice-details.mjs",
+      "function": "contractChoiceDetails",
+      "before": "function contractChoiceDetails(contract, context) {\n  const slot = Object(contract.slot);\n  const addingMany = context.mode === \"add\" && slotIsMany(slot);\n  const existing = addingMany ? new Set(existingContractValues(contract)) : null;\n  const provided = providerChoiceDetails(contract, context);\n  if (provided !== null) return provided;\n  if (Array.isArray(slot.allowed) && slot.allowed.length) return enumerationChoiceDetails(slot.allowed, existing);\n  const adapter = adapterTransformChoiceDetails(contract, context);\n  if (adapter !== null) return adapter;\n  if (slot.valueType !== \"ref\") return [];\n  const policy = applyContractPolicy(contract, context);\n  const compatibleType = [contract.compatibleRefType, policy.compatibleRefType, \"\"].find(Boolean);\n  return referenceChoiceDetails(context, compatibleType, existing);\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-choice-validation.mjs",
+      "function": "validateChoiceValue",
+      "before": "function validateChoiceValue(contract, value, context, helpers) {\n  const slot = Object(contract.slot);\n  if (slot.valueType === \"ref\" && !requiresStrictChoiceValidation(contract)) return;\n  const choices = contractChoiceDetails(contract, context);\n  if (!choices.length) return;\n  const match = choices.find(choice => choice.value === value);\n  const subject = text(contract.subject, \"<unknown>\");\n  const predicate = text(slot.predicate, \"\");\n  if (match === undefined) helpers.failSemantic(helpers.mutationIssue(\n    \"invalid-mutation-value\", `Mutation value for ${subject}.${predicate} failed allowed-value validation.`,\n    { subject: text(contract.subject, \"\"), predicate, value, allowed: choices.filter(choice => !choice.disabled).map(choice => choice.value) },\n  ), { statusCode: 400 });\n  if (match.disabled) {\n    const reason = text(match.reason, \"disabled choice\");\n    helpers.failSemantic(helpers.mutationIssue(\n      \"invalid-mutation-value\", `Mutation value for ${subject}.${predicate} is unavailable: ${reason}.`,\n      { subject: text(contract.subject, \"\"), predicate, value, reason },\n    ), { statusCode: 400 });\n  }\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-contract-resolution-values.mjs",
+      "function": "preferredSiblingText",
+      "before": "function preferredSiblingText(projectedValue, currentValue) {\n  if (projectedValue) return String(projectedValue);\n  if (currentValue) return String(currentValue);\n  return POLICY.missingSiblingValue;\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-contract-resolution-values.mjs",
+      "function": "assignmentParentSubjects",
+      "before": "function assignmentParentSubjects(prog, assignmentSubject) {\n  return asStore(prog).factsForObject(assignmentSubject)\n    .filter(fact => fact.p === POLICY.assignmentParentPredicate && fact.pol !== \"is-not\")\n    .map(fact => fact.s);\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-contract-resolution-values.mjs",
+      "function": "assignmentSiblingValue",
+      "before": "function assignmentSiblingValue(prog, projection, parentSubject, predicate) {\n  for (const assignmentSubject of asStore(prog).objects(parentSubject, POLICY.assignmentParentPredicate)) {\n    const projectedAssignment = projection?.[assignmentSubject];\n    const currentPredicate = latestResolutionText(prog, assignmentSubject, POLICY.assignmentNamePredicate);\n    const assignmentPredicate = preferredSiblingText(projectedAssignment?.predicate, currentPredicate).trim();\n    if (assignmentPredicate !== predicate) continue;\n    const currentValue = latestResolutionText(prog, assignmentSubject, POLICY.assignmentValuePredicate);\n    return preferredSiblingText(projectedAssignment?.value, currentValue);\n  }\n  return POLICY.missingSiblingValue;\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-context-state.mjs",
+      "function": "activeSubjectBindings",
+      "before": "function activeSubjectBindings(prog, contextSubject, subject) {\n  return contextBindings(prog, contextSubject).filter(binding => binding.memberSubject === subject);\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-context-state.mjs",
+      "function": "activeSubjectReferences",
+      "before": "function activeSubjectReferences(prog, contextSubject, subject) {\n  return contextReferenceBindings(prog, contextSubject).filter(reference => reference.targetSubject === subject);\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-context-state.mjs",
+      "function": "explicitBindingForMutation",
+      "before": "function explicitBindingForMutation(combinedFacts, contextSubject, subject) {\n  const binding = activeSubjectBindings(combinedFacts, contextSubject, subject)[0];\n  return binding ? binding : null;\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-context-state.mjs",
+      "function": "explicitReferenceForMutation",
+      "before": "function explicitReferenceForMutation(combinedFacts, contextSubject, subject, referenceSubject) {\n  const references = activeSubjectReferences(combinedFacts, contextSubject, subject);\n  const selection = referenceSubject === undefined ? POLICY.missingReference : referenceSubject;\n  if (selection) {\n    const reference = references.find(candidate => candidate.subject === selection);\n    return reference ? reference : null;\n  }\n  return references.length === 1 ? references[0] : null;\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-context-execution.mjs",
+      "function": "classifyContextMutationOperation",
+      "before": "function classifyContextMutationOperation(operation) {\n  return POLICY.operationRoutes.get(operation);\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-context-execution.mjs",
+      "function": "resolveKnownMutationContext",
+      "before": "function resolveKnownMutationContext(prog, contextSubject, contextSpecs, helpers) {\n  const context = contextSpecs(prog).find(entry => entry.subject === contextSubject);\n  if (!context) {\n    helpers.fail(helpers.issue(\n      POLICY.unknownContextDiagnostic,\n      `Unknown context: ${contextSubject}.`,\n      { context: contextSubject },\n    ), { statusCode: POLICY.unknownContextStatus });\n  }\n  return context;\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-context-execution.mjs",
+      "function": "prepareContextMutation",
+      "before": "function prepareContextMutation(input, helpers) {\n  const { semantic, actor, subject, record, mutation } = input;\n  const operation = mutation.operation;\n  const kind = classifyContextMutationOperation(operation);\n  if (!kind) {\n    helpers.fail(helpers.issue(\n      POLICY.unknownOperationDiagnostic,\n      `Unknown mutation operation: ${operation}.`,\n      { operation },\n    ), { statusCode: POLICY.unknownOperationStatus });\n  }\n  const context = mutation.context === undefined ? POLICY.missingContext : mutation.context;\n  helpers.ensureKnownContext(semantic, context);\n  const scope = helpers.authorityScopeForOperation(semantic, actor, operation, { context, subject, record });\n  if (!scope.allowed) {\n    helpers.fail(helpers.issue(\n      POLICY.deniedDiagnostic,\n      `Actor ${actor} lacks ${operation} authority for ${subject} in ${context}.`,\n      { actor, subject, context, operation, requiredAuthority: scope.authority, grant: scope.grant },\n    ), { statusCode: POLICY.deniedStatus });\n  }\n  return Object.freeze({ context, scope, kind });\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-removal.mjs",
+      "function": "removableValueAction",
+      "before": "function removableValueAction(subject, slot, values, projection, policyFacts) {\n  if (!values.length) return null;\n  if (slot.cardinality === POLICY.singleCardinality) return null;\n  if (slot.cardinality === POLICY.minimumOneCardinality && values.length <= 1) return null;\n  const reference = slot.valueType === POLICY.referenceValueType;\n  if (values.length === 1) return singleRemovalAction(subject, slot, values[0], reference, policyFacts);\n  return multipleRemovalAction(subject, slot, values, projection, reference, policyFacts);\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-removal.mjs",
+      "function": "removableValueActions",
+      "before": "function removableValueActions(subject, slot, values, projection, policyFacts) {\n  const action = removableValueAction(subject, slot, values, projection, policyFacts);\n  if (!action) return Object.freeze([]);\n  const reference = slot.valueType === POLICY.referenceValueType;\n  const title = reference ? POLICY.referenceTitle : POLICY.ordinaryTitle;\n  const suffix = action.prompt?.editorKind === POLICY.editorKind ? \"...\" : \"\";\n  return Object.freeze([{\n    kind: POLICY.actionRowKind, text: `${title} ${slot.predicate}${suffix}`,\n    action, semanticColorRole: POLICY.actionRowColor,\n  }]);\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-removal-single.mjs",
+      "function": "singleRemovalAction",
+      "before": "function singleRemovalAction(subject, slot, value, reference, policyFacts) {\n  const options = {\n    policyFacts,\n    title: `${reference ? POLICY.referenceTitle : POLICY.ordinaryTitle} ${slot.predicate}`,\n    subject, predicate: slot.predicate,\n    valueType: typeof slot.valueType === \"string\" && slot.valueType ? slot.valueType : POLICY.fallbackValueType,\n    value,\n  };\n  return reference ? buildDetachRelationAction(options) : buildRemoveFactAction(options);\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-removal-multiple.mjs",
+      "function": "multipleRemovalAction",
+      "before": "function multipleRemovalAction(subject, slot, values, projection, reference, policyFacts) {\n  const choiceDetails = removalChoiceDetails(values, projection);\n  const title = reference ? POLICY.referenceTitle : POLICY.ordinaryTitle;\n  const verb = reference ? POLICY.referenceVerb : POLICY.ordinaryVerb;\n  const valueType = typeof slot.valueType === \"string\" && slot.valueType ? slot.valueType : POLICY.fallbackValueType;\n  return buildSemanticMutationAction({\n    policyFacts,\n    title: `${title} ${slot.predicate}`, operation: reference ? POLICY.referenceOperation : POLICY.ordinaryOperation,\n    subject, predicate: slot.predicate, valueType,\n    prompt: {\n      message: `Choose ${slot.predicate} value to ${verb} from ${subject}`,\n      defaultValue: choiceDetails[0].value, allowBlank: false, answerField: POLICY.answerField,\n      editorKind: POLICY.editorKind, stage: POLICY.stage, choices: choiceDetails.map(choice => choice.value),\n      choiceDetails, valueType,\n    },\n  });\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-slot-action.mjs",
+      "function": "slotMutationAction",
+      "before": "function slotMutationAction(prog, projection, interfaces, context, subject, slot, record, typedRecord, options, helpers) {\n  const mode = slotActionMode(slot, record, options.mode);\n  const copy = slotEditorCopy(slot, mode);\n  const resolved = buildEditableSlotPrompt(prog, projection, interfaces, {\n    subject, predicate: slot.predicate, record, typedRecord, currentContext: context, mode,\n    choiceDetailsProviders: options.choiceDetailsProviders, contractPolicyProviders: options.contractPolicyProviders,\n  }, helpers);\n  return buildSemanticMutationAction({\n    policyFacts: prog?.facts || prog,\n    title: `${copy.title} ${firstText([resolved?.fieldLabel, slot.predicate])}`,\n    operation: mode === POLICY.addMode ? POLICY.addOperation : POLICY.setOperation,\n    subject, predicate: slot.predicate,\n    valueType: firstText([resolved?.valueType, slot.valueType, POLICY.fallbackValueType]),\n    prompt: resolved === null ? intrinsicSlotPrompt(slot, subject, record, typedRecord, mode) : resolved,\n  });\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-restore-request.mjs",
+      "function": "normalizeRestoreRequest",
+      "before": "function normalizeRestoreRequest(mutation, helpers) {\n  const descriptor = Object(mutation.restoreDeletedCluster);\n  const explicit = [\n    [Array.isArray(descriptor.restoredSubjects), \"restoreDeletedCluster restoredSubjects must be an explicit array.\"],\n    [Array.isArray(descriptor.authorityTargets), \"restoreDeletedCluster authorityTargets must be an explicit array.\"],\n  ].find(entry => !entry[0]);\n  if (explicit) reject(helpers, explicit[1]);\n  const tupleFacts = normalizeRestoreFacts(mutation, helpers);\n  const restoredSubjects = uniqueRefList(tupleFacts.map(fact => fact.s));\n  if (!restoredSubjects.length) reject(helpers, \"restoreDeletedCluster must recreate at least one deleted subject.\");\n  const descriptorSubjects = uniqueRefList(descriptor.restoredSubjects);\n  if (!sameReferenceSet(restoredSubjects, descriptorSubjects)) reject(\n    helpers, \"restoreDeletedCluster restoredSubjects must match the recreated subject ids.\",\n    { restoredSubjects, descriptorRestoredSubjects: descriptorSubjects },\n  );\n  const authorityTargets = uniqueRefList(descriptor.authorityTargets);\n  if (!authorityTargets.length) reject(helpers, \"restoreDeletedCluster requires at least one authority target anchor.\");\n  return { descriptor, tupleFacts, restoredSubjects, authorityTargets };\n}"
+    },
+    {
+      "path": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-restore-interface.mjs",
+      "function": "restoreSubjectInterface",
+      "before": "function restoreSubjectInterface(tupleFacts, subject, interfaces, helpers) {\n  const types = uniqueRefList(tupleFacts.filter(fact => fact.s === subject && fact.p === RESTORE_POLICY.typePredicate).map(fact => fact.o));\n  const matches = types.filter(type => interfaces.has(type));\n  if (matches.length > 1) helpers.failSemantic(helpers.mutationIssue(\n    \"ambiguous-interface\", `Subject matches multiple schema interfaces: ${matches.join(\", \")}.`, { subject },\n  ), { statusCode: 400 });\n  return matches.length ? interfaces.get(matches[0]) : null;\n}"
+    }
+  ],
+  "scope": "Lazy policy/choice evaluation, action effects and restore identity checks remain explicit. All value projection stays in the Sourcery owner."
+}

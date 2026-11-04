@@ -1,0 +1,61 @@
+const fs=require('node:fs'),path=require('node:path');
+const source=path.resolve('.platform-reconstitution/sourcery-platform-reconciled/sdk/core'),audit=__dirname;
+const {parse}=require('../../../.platform-reconstitution/sourcery-platform-authority/runtime-dependency-payloads/acorn');
+const changes=[];
+function replace(file,name,body,imports){const target=path.join(source,'semantic-mutation-'+file+'.mjs');let text=fs.readFileSync(target,'utf8');const ast=parse(text,{ecmaVersion:'latest',sourceType:'module'});const node=ast.body.map(n=>n.type==='ExportNamedDeclaration'?n.declaration:n).find(n=>n?.type==='FunctionDeclaration'&&n.id.name===name);if(!node)throw Error(file+' missing '+name);const before=text.slice(node.start,node.end);text=text.slice(0,node.body.start)+'{\n'+body+'\n}'+text.slice(node.body.end);const line='import { '+imports.join(', ')+' } from "./semantic-mutation-values.mjs";\n';if(!text.includes(line))text=line+text;fs.writeFileSync(target,text);changes.push({file:path.basename(target),function:name,before,afterBody:body});}
+const R=(file,name,body,...imports)=>replace(file,name,body,imports);
+R('authored-facts','uniqueRefList','  return mutationUniqueReferenceListValue(values);','mutationUniqueReferenceListValue');
+R('authored-facts','nonEmptyString','  return mutationNonEmptyStringValue(value);','mutationNonEmptyStringValue');
+R('authored-facts','factTupleFromMutationFact','  return mutationAuthoredFactTupleValue(fact, canonicalizeValue, AUTHORED_FACTS_POLICY.missingPolarity);','mutationAuthoredFactTupleValue');
+R('authored-facts','oneFactValue',`  const plan = mutationOneFactValueValue(facts, subject, predicate);
+  if (plan.ok) return plan.value;
+  helpers.failSemantic(helpers.mutationIssue("invalid-generated-cluster", \`Generated subject \${subject} must declare exactly one \${predicate}.\`, { subject, predicate }), { statusCode: 400 });`,'mutationOneFactValueValue');
+R('authored-facts','manyFactValues','  return mutationManyFactValuesValue(facts, subject, predicate);','mutationManyFactValuesValue');
+R('contract-resolution-compatibility','firstCompatibleContract','  return mutationFirstCompatibleContractValue(candidates);','mutationFirstCompatibleContractValue');
+R('contract-intrinsic','validateTimestampValue','  return mutationTimestampValidationValue(value);','mutationTimestampValidationValue');
+R('contract-policy','applyContractPolicy',`  return mutationContractPolicyMergeValue(contract, contractSlotAuthoredPolicy(contract, context), resolveContractProviderPolicy(contract, context), MUTATION_CONTRACT_POLICY.stringFields, MUTATION_CONTRACT_POLICY.structuredFields);`,'mutationContractPolicyMergeValue');
+R('removal-choice','removalChoiceDetails','  return mutationRemovalChoiceDetailsValue(values, projection);','mutationRemovalChoiceDetailsValue');
+R('reclassification-choices','selectedReclassificationDefault','  return mutationChoiceDefaultValue(choices);','mutationChoiceDefaultValue');
+R('reclassification-choices','reclassificationChoiceDetails','  return mutationReclassificationChoiceRowsValue({ knownTypes: knownInterfaceTypes(prog), authoredTypes: Array.isArray(record.isa) ? record.isa : [], interfaces, compatibleIssues: iface => reclassificationCompatibilityIssues(record, iface) });','mutationReclassificationChoiceRowsValue');
+R('reclassification-preservation','authoredInterfaceTypes','  return Object.freeze(mutationAuthoredInterfaceTypesValue(record, interfaces));','mutationAuthoredInterfaceTypesValue');
+R('reclassification-preservation','reclassificationPreservedPredicates','  return Object.freeze(mutationReclassificationPreservedPredicatesValue(record, targetIface, RECLASSIFICATION_POLICY));','mutationReclassificationPreservedPredicatesValue');
+R('projection-visibility','visibleRecord','  return mutationVisibleRecordValue(projection, subject, POLICY);','mutationVisibleRecordValue');
+R('projection-references','incomingProjectionReferences','  return Object.freeze(mutationIncomingProjectionReferencesValue(projection === undefined ? EMPTY_PROJECTION : projection, targetSubject === undefined ? POLICY.missingTargetSubject : targetSubject, POLICY));','mutationIncomingProjectionReferencesValue');
+R('projection-interface','slotForPredicate','  return mutationSlotForPredicateValue(iface, predicate, POLICY);','mutationSlotForPredicateValue');
+R('restore-request','sameReferenceSet','  return mutationReferenceSetsEqualValue(uniqueRefList(left), uniqueRefList(right));','mutationReferenceSetsEqualValue');
+R('restore-interface','restoreSlot','  return mutationRestoreSlotValue(iface, predicate);','mutationRestoreSlotValue');
+R('slot-action-mode','slotActionMode','  return mutationSlotActionModeValue(slot, record, mode, POLICY);','mutationSlotActionModeValue');
+R('presentation-reference','fallbackRefPrompt','  return mutationFallbackReferencePromptValue(contract, currentContext);','mutationFallbackReferencePromptValue');
+R('editable-prompt-default','editablePromptDefault','  return mutationEditablePromptDefaultValue({ contract, record, typedRecord, requestedPredicate, adding, currentCanonicalDefault });','mutationEditablePromptDefaultValue');
+R('editable-prompt-mode','editablePromptMode','  return mutationEditablePromptModeValue(contract, requestedMode, requestedPredicate, { ...POLICY, manyCardinality: "many" });','mutationEditablePromptModeValue');
+R('editable-prompt-editor','editablePromptEditor','  return mutationEditablePromptEditorValue({ slot: contract.slot, spec: contractEditorSpec(contract), choiceDetails, policy: POLICY });','mutationEditablePromptEditorValue');
+R('editable-prompt-shape','editablePromptShape','  return mutationEditablePromptShapeValue({ base, contract, choiceDetails, mergeCandidates, validation, fallbackPrompt: fallbackRefPrompt(contract, currentContext), policy: POLICY });','mutationEditablePromptShapeValue');
+R('merge-candidate-row','mergeCandidateRow','  const state = mergeCandidateState(choice, defaultValue);\n  return mutationMergeCandidateRowValue({ contract, choice, mode, state, outcomeClass: mergeCandidateOutcomeClass(state), policy: POLICY });','mutationMergeCandidateRowValue');
+R('choice-reference','referenceChoiceDetails','  if (!compatibleType || !context.currentContext) return [];\n  return mutationReferenceChoiceDetailsValue(contextVisibleSubjects(context.prog, context.projection, context.currentContext), context.projection, compatibleType, existingValues, POLICY.referenceExistingReason);','mutationReferenceChoiceDetailsValue');
+R('context-identity','sanitizeRefPart','  return mutationSanitizeReferencePartValue(value, POLICY.identityFallback);','mutationSanitizeReferencePartValue');
+R('context-identity','ensureScopedNameAvailable',`  const conflicts = mutationScopedNameConflictsValue({ name, existingBinding, bindings: contextBindings(prog, contextSubject), references: contextReferenceBindings(prog, contextSubject) });
+  if (conflicts.length) helpers.fail(helpers.issue(helpers.invalidDiagnostic, \`Context name \${contextSubject}/\${name} is already assigned to \${conflicts[0].subject}.\`, { context: contextSubject, name, subject, conflicts }));`,'mutationScopedNameConflictsValue');
+R('reclassification-predicate','predicateCompatibilityIssues',`  const slot = slotMap.get(predicate);
+  return mutationPredicateCompatibilityIssuesValue({ predicate, values: slot === undefined ? [] : valueListFromRecord(record, predicate), slot: slot === undefined ? undefined : { ...slot, many: slotIsMany(slot) }, targetIface, policy, validateValue: (_slot, value) => validateValueAgainstSlot(slot, value) });`,'mutationPredicateCompatibilityIssuesValue');
+R('reclassification-predicate','requiredSlotCompatibilityIssues','  if (!requiredSlot(slot)) return [];\n  return mutationRequiredSlotCompatibilityIssuesValue({ values: valueListFromRecord(record, slot.predicate), targetIface, slot: { ...slot, required: true } });','mutationRequiredSlotCompatibilityIssuesValue');
+// Runtime safety correction: empty strings are missing fields, not boolean false.
+R('restore-request-facts','normalizeRestoreFacts',`  if (!Array.isArray(mutation.facts)) reject(helpers, "restoreDeletedCluster facts must be an explicit array.");
+  if (!mutation.facts.length) reject(helpers, "restoreDeletedCluster createFacts requires a non-empty authored fact list.");
+  const tupleFacts = mutation.facts.map(factTupleFromMutationFact);
+  for (const fact of tupleFacts) if (!mutationRestoreFactValidityValue(fact).ok) reject(helpers, "restoreDeletedCluster facts must be fully specified positive authored facts.", { fact });
+  return tupleFacts;`,'mutationRestoreFactValidityValue');
+R('restore-required','requireRestoreSlots',`  const missing = mutationMissingRestoreRequiredPredicatesValue(subjectFacts, iface.slots, RESTORE_POLICY.typePredicate, RESTORE_POLICY.requiredCardinalities);
+  if (missing.length) helpers.failSemantic(helpers.mutationIssue("invalid-restore-deleted-cluster", \`restoreDeletedCluster subject \${subject} is missing required \${missing[0].predicate}.\`, { subject, predicate: missing[0].predicate, type: iface.type }), { statusCode: 409 });`,'mutationMissingRestoreRequiredPredicatesValue');
+R('property-prepare','preparePropertyMutation',`  const { record, combinedFacts, projection, interfaces, subject, operation, mutation, contractPolicyProviders } = input;
+  helpers.authorize();
+  const { slot } = helpers.ensureSlotWritable(record, interfaces, mutation.predicate);
+  const editableContract = helpers.resolveEditableSlotContract(combinedFacts, projection, interfaces, subject, mutation.predicate, { contractPolicyProviders });
+  const currentValue = operation === POLICY.addOperation && !POLICY.manyCardinalities.has(slot.cardinality) ? helpers.currentSingleValue(combinedFacts, subject, slot.predicate) : undefined;
+  const plan = planPropertyMutation({ operation, slot, currentValue, subject });
+  if (plan.refusal) { const { code, message, details, statusCode } = plan.refusal; helpers.fail(helpers.issue(code, message, details), statusCode === undefined ? undefined : { statusCode }); }
+  return Object.freeze({ slot, canonicalSlot: editableContract ? editableContract.slot : slot, editableContract, effectiveOperation: plan.effectiveOperation });`,'mutationPropertyClearPlanValue');
+// The planner import is kept separate from the value surface to retain authored
+// execution-policy compilation as the source of operation vocabulary.
+const file=path.join(source,'semantic-mutation-property-prepare.mjs');fs.writeFileSync(file,'import { planPropertyMutation } from "./semantic-mutation-property-plan.mjs";\n'+fs.readFileSync(file,'utf8'));
+fs.writeFileSync(path.join(audit,'runtime-plan-wiring.json'),JSON.stringify({changes,scope:'Runtime owners delegate value projection to the Sourcery value-plan owner. Policy compilation, authorization and effects remain in their existing owners.'},null,2)+'\n');
+console.log(JSON.stringify({functionsRewired:changes.length}));

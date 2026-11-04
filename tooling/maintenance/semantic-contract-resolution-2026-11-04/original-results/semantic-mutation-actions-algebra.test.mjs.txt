@@ -1,0 +1,41 @@
+✖ canonical action adapter preserves operation vocabulary and descriptor shape (2.4341ms)
+✔ action builder contract declares no authority effect and explicit falsifiers (19.6374ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 159.908
+
+✖ failing tests:
+
+test at test\semantic-mutation-actions-algebra.test.mjs:5:1
+✖ canonical action adapter preserves operation vocabulary and descriptor shape (2.4341ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + []
+  - [
+  -   'setProperty',
+  -   'addFact',
+  -   'removeFact',
+  -   'detachRelation',
+  -   'deleteSubject',
+  -   'reclassify',
+  -   'createFacts'
+  - ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/semantic-contract-validation-2026-11-04/retained-originals-final/test/semantic-mutation-actions-algebra.test.mjs:6:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'setProperty', 'addFact', 'removeFact', 'detachRelation', 'deleteSubject', 'reclassify', 'createFacts' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

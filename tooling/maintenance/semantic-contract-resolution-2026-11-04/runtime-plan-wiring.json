@@ -1,0 +1,203 @@
+{
+  "changes": [
+    {
+      "file": "semantic-mutation-authored-facts.mjs",
+      "function": "uniqueRefList",
+      "before": "function uniqueRefList(values) {\n  if (!Array.isArray(values)) throw new TypeError(\"Reference values must be an explicit array.\");\n  return Object.freeze([...new Set(values.filter(Boolean))]);\n}",
+      "afterBody": "  return mutationUniqueReferenceListValue(values);"
+    },
+    {
+      "file": "semantic-mutation-authored-facts.mjs",
+      "function": "nonEmptyString",
+      "before": "function nonEmptyString(value) {\n  return typeof value === \"string\" && value.trim();\n}",
+      "afterBody": "  return mutationNonEmptyStringValue(value);"
+    },
+    {
+      "file": "semantic-mutation-authored-facts.mjs",
+      "function": "factTupleFromMutationFact",
+      "before": "function factTupleFromMutationFact(fact) {\n  if (typeof fact !== \"object\") throw new TypeError(\"Authored mutation fact must be an object.\");\n  const polarity = fact.pol == null ? AUTHORED_FACTS_POLICY.missingPolarity : textOrEmpty(fact.pol);\n  return {\n    s: canonicalizeValue(\"ref\", textOrEmpty(fact.s)),\n    p: canonicalizeValue(\"string\", textOrEmpty(fact.p)),\n    o: canonicalizeValue(\"string\", textOrEmpty(fact.o)),\n    pol: canonicalizeValue(\"string\", polarity),\n  };\n}",
+      "afterBody": "  return mutationAuthoredFactTupleValue(fact, canonicalizeValue, AUTHORED_FACTS_POLICY.missingPolarity);"
+    },
+    {
+      "file": "semantic-mutation-authored-facts.mjs",
+      "function": "oneFactValue",
+      "before": "function oneFactValue(facts, subject, predicate, helpers) {\n  const matches = facts.filter(fact => fact.s === subject && fact.p === predicate);\n  if (!matches.length) return \"\";\n  if (matches.length === 1) return matches[0].o;\n  helpers.failSemantic(helpers.mutationIssue(\n    \"invalid-generated-cluster\",\n    `Generated subject ${subject} must declare exactly one ${predicate}.`,\n    { subject, predicate },\n  ), { statusCode: 400 });\n}",
+      "afterBody": "  const plan = mutationOneFactValueValue(facts, subject, predicate);\n  if (plan.ok) return plan.value;\n  helpers.failSemantic(helpers.mutationIssue(\"invalid-generated-cluster\", `Generated subject ${subject} must declare exactly one ${predicate}.`, { subject, predicate }), { statusCode: 400 });"
+    },
+    {
+      "file": "semantic-mutation-authored-facts.mjs",
+      "function": "manyFactValues",
+      "before": "function manyFactValues(facts, subject, predicate) {\n  return facts.filter(fact => fact.s === subject && fact.p === predicate).map(fact => fact.o);\n}",
+      "afterBody": "  return mutationManyFactValuesValue(facts, subject, predicate);"
+    },
+    {
+      "file": "semantic-mutation-contract-resolution-compatibility.mjs",
+      "function": "firstCompatibleContract",
+      "before": "function firstCompatibleContract(candidates) {\n  if (!candidates.length) return null;\n  const first = candidates[0];\n  const expected = signature(first);\n  return candidates.every(candidate => signature(candidate) === expected) ? first : null;\n}",
+      "afterBody": "  return mutationFirstCompatibleContractValue(candidates);"
+    },
+    {
+      "file": "semantic-mutation-contract-intrinsic.mjs",
+      "function": "validateTimestampValue",
+      "before": "function validateTimestampValue(value) {\n  if (!ISO_TIMESTAMP_RE.test(String(value))) return \"invalid timestamp; expected canonical ISO 8601 timestamp\";\n  if (!Number.isFinite(Date.parse(String(value)))) return \"invalid timestamp; expected canonical ISO 8601 timestamp\";\n  return \"\";\n}",
+      "afterBody": "  return mutationTimestampValidationValue(value);"
+    },
+    {
+      "file": "semantic-mutation-contract-policy.mjs",
+      "function": "applyContractPolicy",
+      "before": "function applyContractPolicy(contract, context) {\n  const authored = contractSlotAuthoredPolicy(contract, context);\n  const provided = resolveContractProviderPolicy(contract, context);\n  if (authored === null && provided === null) return contract;\n  const merged = { ...Object(authored), ...Object(provided) };\n  const result = { ...contract };\n  for (const field of MUTATION_CONTRACT_POLICY.stringFields) {\n    if (Object.prototype.hasOwnProperty.call(merged, field)) result[field] = String(merged[field]);\n  }\n  for (const field of MUTATION_CONTRACT_POLICY.structuredFields) {\n    if (Object.prototype.hasOwnProperty.call(merged, field)) result[field] = merged[field];\n  }\n  return result;\n}",
+      "afterBody": "  return mutationContractPolicyMergeValue(contract, contractSlotAuthoredPolicy(contract, context), resolveContractProviderPolicy(contract, context), MUTATION_CONTRACT_POLICY.stringFields, MUTATION_CONTRACT_POLICY.structuredFields);"
+    },
+    {
+      "file": "semantic-mutation-removal-choice.mjs",
+      "function": "removalChoiceDetails",
+      "before": "function removalChoiceDetails(values, projection) {\n  return Object.freeze(values.map(value => {\n    const normalized = String(value);\n    const record = Object(projection[normalized]);\n    const label = firstText([record.label, record.name, normalized]);\n    return { value: normalized, label: label === normalized ? normalized : `${label} (${normalized})`, disabled: false, reason: \"\" };\n  }));\n}",
+      "afterBody": "  return mutationRemovalChoiceDetailsValue(values, projection);"
+    },
+    {
+      "file": "semantic-mutation-reclassification-choices.mjs",
+      "function": "selectedReclassificationDefault",
+      "before": "function selectedReclassificationDefault(choices) {\n  const enabled = choices.find(choice => !choice.disabled);\n  if (enabled !== undefined) return enabled.value;\n  if (choices.length > 0) return choices[0].value;\n  return \"\";\n}",
+      "afterBody": "  return mutationChoiceDefaultValue(choices);"
+    },
+    {
+      "file": "semantic-mutation-reclassification-choices.mjs",
+      "function": "reclassificationChoiceDetails",
+      "before": "function reclassificationChoiceDetails(prog, record, interfaces) {\n  const authoredTypes = Array.isArray(record.isa) ? record.isa : [];\n  const currentTypes = new Set(authoredTypes.filter(type => interfaces.has(type)));\n  return knownInterfaceTypes(prog).map(type => {\n    const iface = interfaces.get(type);\n    if (iface === undefined) return { value: type, label: type, disabled: true, reason: \"interface unavailable\" };\n    if (currentTypes.has(type)) return { value: type, label: type, disabled: false, reason: \"\" };\n    const issues = reclassificationCompatibilityIssues(record, iface);\n    return {\n      value: type,\n      label: type,\n      disabled: issues.length > 0,\n      reason: issues.length > 0 ? issues[0].reason : \"\",\n    };\n  });\n}",
+      "afterBody": "  return mutationReclassificationChoiceRowsValue({ knownTypes: knownInterfaceTypes(prog), authoredTypes: Array.isArray(record.isa) ? record.isa : [], interfaces, compatibleIssues: iface => reclassificationCompatibilityIssues(record, iface) });"
+    },
+    {
+      "file": "semantic-mutation-reclassification-preservation.mjs",
+      "function": "authoredInterfaceTypes",
+      "before": "function authoredInterfaceTypes(record, interfaces) {\n  const types = Array.isArray(record.isa) ? record.isa : [];\n  return Object.freeze(types.filter(type => interfaces.has(type)));\n}",
+      "afterBody": "  return Object.freeze(mutationAuthoredInterfaceTypesValue(record, interfaces));"
+    },
+    {
+      "file": "semantic-mutation-reclassification-preservation.mjs",
+      "function": "reclassificationPreservedPredicates",
+      "before": "function reclassificationPreservedPredicates(record, targetIface) {\n  const reserved = new Set(RECLASSIFICATION_POLICY.reservedPredicates);\n  const targetSlots = new Set(targetIface.slots.filter(slot => !reserved.has(slot.predicate)).map(slot => slot.predicate));\n  const openTarget = targetIface.mode === RECLASSIFICATION_POLICY.openMode;\n  return Object.freeze(Object.keys(record)\n    .filter(key => !reserved.has(key))\n    .filter(predicate => openTarget ? true : targetSlots.has(predicate))\n    .sort((left, right) => left.localeCompare(right)));\n}",
+      "afterBody": "  return Object.freeze(mutationReclassificationPreservedPredicatesValue(record, targetIface, RECLASSIFICATION_POLICY));"
+    },
+    {
+      "file": "semantic-mutation-projection-visibility.mjs",
+      "function": "visibleRecord",
+      "before": "function visibleRecord(projection, subject) {\n  const record = projection?.[subject];\n  return record && typeof record === \"object\" && Array.isArray(record[POLICY.typeField]) ? record : null;\n}",
+      "afterBody": "  return mutationVisibleRecordValue(projection, subject, POLICY);"
+    },
+    {
+      "file": "semantic-mutation-projection-references.mjs",
+      "function": "incomingProjectionReferences",
+      "before": "function incomingProjectionReferences(projection, targetSubject) {\n  const normalizedProjection = projection === undefined ? EMPTY_PROJECTION : projection;\n  const normalizedTarget = targetSubject === undefined ? POLICY.missingTargetSubject : targetSubject;\n  const references = [];\n  for (const [candidateSubject, record] of Object.entries(normalizedProjection)) {\n    if (!visibleRecord(normalizedProjection, candidateSubject)) continue;\n    if (candidateSubject === normalizedTarget) continue;\n    references.push(...referencesFromRecord(candidateSubject, record, normalizedTarget));\n  }\n  return Object.freeze(references);\n}",
+      "afterBody": "  return Object.freeze(mutationIncomingProjectionReferencesValue(projection === undefined ? EMPTY_PROJECTION : projection, targetSubject === undefined ? POLICY.missingTargetSubject : targetSubject, POLICY));"
+    },
+    {
+      "file": "semantic-mutation-projection-interface.mjs",
+      "function": "slotForPredicate",
+      "before": "function slotForPredicate(iface, predicate) {\n  const slot = iface?.slots.find(candidate => candidate[POLICY.slotPredicateField] === predicate);\n  return slot === undefined ? null : slot;\n}",
+      "afterBody": "  return mutationSlotForPredicateValue(iface, predicate, POLICY);"
+    },
+    {
+      "file": "semantic-mutation-restore-request.mjs",
+      "function": "sameReferenceSet",
+      "before": "function sameReferenceSet(left, right) {\n  const a = [...uniqueRefList(left)].sort((x, y) => x.localeCompare(y));\n  const b = [...uniqueRefList(right)].sort((x, y) => x.localeCompare(y));\n  return a.length === b.length && a.every((value, index) => value === b[index]);\n}",
+      "afterBody": "  return mutationReferenceSetsEqualValue(uniqueRefList(left), uniqueRefList(right));"
+    },
+    {
+      "file": "semantic-mutation-restore-interface.mjs",
+      "function": "restoreSlot",
+      "before": "function restoreSlot(iface, predicate) {\n  const slot = iface.slots.find(candidate => candidate.predicate === predicate);\n  return slot === undefined ? null : slot;\n}",
+      "afterBody": "  return mutationRestoreSlotValue(iface, predicate);"
+    },
+    {
+      "file": "semantic-mutation-slot-action-mode.mjs",
+      "function": "slotActionMode",
+      "before": "function slotActionMode(slot, record, requestedMode) {\n  if (requestedMode !== POLICY.autoMode) return requestedMode;\n  const present = Object.hasOwn(record, slot.predicate);\n  return [slotIsMany(slot), !present].includes(true) ? POLICY.addMode : POLICY.setMode;\n}",
+      "afterBody": "  return mutationSlotActionModeValue(slot, record, mode, POLICY);"
+    },
+    {
+      "file": "semantic-mutation-presentation-reference.mjs",
+      "function": "fallbackRefPrompt",
+      "before": "function fallbackRefPrompt(contract, currentContext) {\n  const compatibleType = typeof contract.compatibleRefType === \"string\" ? contract.compatibleRefType : \"\";\n  if (!compatibleType) return {};\n  const target = currentContext ? `${compatibleType} visible in ${currentContext}` : compatibleType;\n  return { fallbackMessage: `No compatible ${target} is currently visible. Enter a reference manually.` };\n}",
+      "afterBody": "  return mutationFallbackReferencePromptValue(contract, currentContext);"
+    },
+    {
+      "file": "semantic-mutation-editable-prompt-default.mjs",
+      "function": "editablePromptDefault",
+      "before": "function editablePromptDefault(contract, record, typedRecord, requestedPredicate, adding) {\n  if (contract.viaAssignment) return Object.hasOwn(record, requestedPredicate) ? String(record[requestedPredicate]) : \"\";\n  if (adding && !Object.hasOwn(record, contract.slot.predicate)) return currentCanonicalDefault(contract.slot, {}, {});\n  return currentCanonicalDefault(contract.slot, record, typedRecord);\n}",
+      "afterBody": "  return mutationEditablePromptDefaultValue({ contract, record, typedRecord, requestedPredicate, adding, currentCanonicalDefault });"
+    },
+    {
+      "file": "semantic-mutation-editable-prompt-mode.mjs",
+      "function": "editablePromptMode",
+      "before": "function editablePromptMode(contract, requestedMode, requestedPredicate) {\n  const adding = [requestedMode === POLICY.addMode, !contract.viaAssignment && slotIsMany(contract.slot)].includes(true);\n  return {\n    adding,\n    mode: adding ? POLICY.addMode : POLICY.setMode,\n    fieldLabel: contract.viaAssignment ? contract.slot.predicate : requestedPredicate,\n  };\n}",
+      "afterBody": "  return mutationEditablePromptModeValue(contract, requestedMode, requestedPredicate, { ...POLICY, manyCardinality: \"many\" });"
+    },
+    {
+      "file": "semantic-mutation-editable-prompt-editor.mjs",
+      "function": "editablePromptEditor",
+      "before": "function editablePromptEditor(contract, choiceDetails) {\n  const slot = contract.slot;\n  const spec = contractEditorSpec(contract);\n  const editorKind = choiceDetails.length\n    ? POLICY.choiceEditor\n    : firstText([spec?.editorKind, spec?.canonicalValueType, slot.valueType]);\n  const valueType = firstText([\n    spec?.canonicalValueType,\n    spec?.editorKind === POLICY.timestampEditor ? POLICY.timestampEditor : \"\",\n    slot.valueType,\n  ]);\n  return { editorKind, valueType };\n}",
+      "afterBody": "  return mutationEditablePromptEditorValue({ slot: contract.slot, spec: contractEditorSpec(contract), choiceDetails, policy: POLICY });"
+    },
+    {
+      "file": "semantic-mutation-editable-prompt-shape.mjs",
+      "function": "editablePromptShape",
+      "before": "function editablePromptShape(base, contract, choiceDetails, mergeCandidates, validation, currentContext) {\n  const { editorKind, valueType, ...prompt } = base;\n  if (editorKind) prompt.editorKind = editorKind;\n  if (validation) prompt.contractValidation = validation;\n  if (choiceDetails.length) {\n    prompt.choices = choiceDetails.map(choice => choice.value);\n    prompt.choiceDetails = choiceDetails;\n  }\n  if (mergeCandidates.length) prompt.mergeCandidates = mergeCandidates;\n  if (valueType) prompt.valueType = valueType;\n  const enabled = choiceDetails.some(choice => !choice.disabled);\n  if (contract.slot.valueType === POLICY.referenceValueType && [!choiceDetails.length, !enabled].includes(true)) {\n    Object.assign(prompt, fallbackRefPrompt(contract, currentContext));\n  }\n  return prompt;\n}",
+      "afterBody": "  return mutationEditablePromptShapeValue({ base, contract, choiceDetails, mergeCandidates, validation, fallbackPrompt: fallbackRefPrompt(contract, currentContext), policy: POLICY });"
+    },
+    {
+      "file": "semantic-mutation-merge-candidate-row.mjs",
+      "function": "mergeCandidateRow",
+      "before": "function mergeCandidateRow(contract, choice, mode, defaultValue) {\n  const slot = Object(contract.slot);\n  const sourceSubject = firstText([choice.value]);\n  const targetSubject = firstText([contract.subject]);\n  const targetPredicate = firstText([slot.predicate]);\n  const state = mergeCandidateState(choice, defaultValue);\n  const label = firstText([choice.label, sourceSubject, targetPredicate]);\n  const titleLead = state === POLICY.availableState ? \"Bind\" : (state === POLICY.currentState ? \"Current binding\" : \"Bind unavailable\");\n  return {\n    id: `${POLICY.relationKind}:${targetSubject}:${targetPredicate}:${sourceSubject}`,\n    relationKind: POLICY.relationKind, outcomeClass: mergeCandidateOutcomeClass(state), sourceSubject,\n    targetFamily: POLICY.targetFamily, ownerSubject: firstText([contract.parentSubject, contract.subject]),\n    targetSubject, targetPredicate, state, title: `${titleLead} ${label}`,\n    detail: candidateDetail(contract, choice, state),\n    disabledReason: state === POLICY.disabledState ? firstText([choice.reason, POLICY.blockedReasonFallback]) : \"\",\n    previewLabel: firstText([choice.label, sourceSubject]),\n    commitDescriptor: {\n      operation: mode === \"add\" ? POLICY.addOperation : POLICY.setOperation,\n      subject: targetSubject, predicate: targetPredicate, valueType: POLICY.eligibleValueType, value: sourceSubject,\n    },\n  };\n}",
+      "afterBody": "  const state = mergeCandidateState(choice, defaultValue);\n  return mutationMergeCandidateRowValue({ contract, choice, mode, state, outcomeClass: mergeCandidateOutcomeClass(state), policy: POLICY });"
+    },
+    {
+      "file": "semantic-mutation-choice-reference.mjs",
+      "function": "referenceChoiceDetails",
+      "before": "function referenceChoiceDetails(context, compatibleType, existingValues) {\n  if (!compatibleType) return [];\n  if (!context.currentContext) return [];\n  return contextVisibleSubjects(context.prog, context.projection, context.currentContext)\n    .sort((left, right) => left.localeCompare(right))\n    .map(candidate => {\n      const record = Object(context.projection[candidate]);\n      const types = Array.isArray(record.isa) ? record.isa : [];\n      const compatible = types.includes(compatibleType);\n      const label = firstText([record.label, record.name, candidate]);\n      const present = existingValues instanceof Set && existingValues.has(candidate);\n      const reason = present ? POLICY.referenceExistingReason : (compatible ? \"\" : `not a ${compatibleType}`);\n      return {\n        value: candidate, label: label === candidate ? candidate : `${label} (${candidate})`,\n        disabled: [present, !compatible].includes(true), reason,\n      };\n    });\n}",
+      "afterBody": "  if (!compatibleType || !context.currentContext) return [];\n  return mutationReferenceChoiceDetailsValue(contextVisibleSubjects(context.prog, context.projection, context.currentContext), context.projection, compatibleType, existingValues, POLICY.referenceExistingReason);"
+    },
+    {
+      "file": "semantic-mutation-context-identity.mjs",
+      "function": "sanitizeRefPart",
+      "before": "function sanitizeRefPart(value) {\n  const source = value ? value : POLICY.identityFallback;\n  const sanitized = String(source).replace(/[^A-Za-z0-9_.-]+/g, \"_\").replace(/^_+|_+$/g, \"\");\n  return sanitized ? sanitized : POLICY.identityFallback;\n}",
+      "afterBody": "  return mutationSanitizeReferencePartValue(value, POLICY.identityFallback);"
+    },
+    {
+      "file": "semantic-mutation-context-identity.mjs",
+      "function": "ensureScopedNameAvailable",
+      "before": "function ensureScopedNameAvailable(prog, contextSubject, subject, name, existingBinding, helpers) {\n  const conflicts = [\n    ...contextBindings(prog, contextSubject)\n      .filter(binding => binding.name === name && binding.subject !== existingBinding && binding.memberSubject)\n      .map(binding => ({ entry: binding.subject, entryType: \"ContextBinding\", subject: binding.memberSubject, name: binding.name })),\n    ...contextReferenceBindings(prog, contextSubject)\n      .filter(reference => reference.name === name)\n      .map(reference => ({ entry: reference.subject, entryType: \"ContextReference\", subject: reference.targetSubject, name: reference.name })),\n  ].filter(conflict => conflict.subject);\n  if (conflicts.length) helpers.fail(helpers.issue(\n    helpers.invalidDiagnostic,\n    `Context name ${contextSubject}/${name} is already assigned to ${conflicts[0].subject}.`,\n    { context: contextSubject, name, subject, conflicts },\n  ));\n}",
+      "afterBody": "  const conflicts = mutationScopedNameConflictsValue({ name, existingBinding, bindings: contextBindings(prog, contextSubject), references: contextReferenceBindings(prog, contextSubject) });\n  if (conflicts.length) helpers.fail(helpers.issue(helpers.invalidDiagnostic, `Context name ${contextSubject}/${name} is already assigned to ${conflicts[0].subject}.`, { context: contextSubject, name, subject, conflicts }));"
+    },
+    {
+      "file": "semantic-mutation-reclassification-predicate.mjs",
+      "function": "predicateCompatibilityIssues",
+      "before": "function predicateCompatibilityIssues(record, targetIface, slotMap, predicate, policy) {\n  const slot = slotMap.get(predicate);\n  if (slot === undefined) {\n    if (targetIface.mode === policy.closedMode) {\n      return [{ predicate, reason: `${predicate} is not allowed on ${targetIface.type}` }];\n    }\n    return [];\n  }\n  const values = valueListFromRecord(record, predicate);\n  if (!slotIsMany(slot) && values.length > 1) {\n    return [{ predicate, reason: `${predicate} would violate ${targetIface.type}.${predicate} cardinality` }];\n  }\n  for (const value of values) {\n    const reason = validateValueAgainstSlot(slot, value);\n    if (reason !== \"\") return [{ predicate, reason }];\n  }\n  return [];\n}",
+      "afterBody": "  const slot = slotMap.get(predicate);\n  return mutationPredicateCompatibilityIssuesValue({ predicate, values: slot === undefined ? [] : valueListFromRecord(record, predicate), slot: slot === undefined ? undefined : { ...slot, many: slotIsMany(slot) }, targetIface, policy, validateValue: (_slot, value) => validateValueAgainstSlot(slot, value) });"
+    },
+    {
+      "file": "semantic-mutation-reclassification-predicate.mjs",
+      "function": "requiredSlotCompatibilityIssues",
+      "before": "function requiredSlotCompatibilityIssues(record, targetIface, slot) {\n  if (!requiredSlot(slot)) return [];\n  const values = valueListFromRecord(record, slot.predicate);\n  if (values.length === 0) {\n    return [{ predicate: slot.predicate, reason: `${slot.predicate} is required by ${targetIface.type}` }];\n  }\n  return [];\n}",
+      "afterBody": "  if (!requiredSlot(slot)) return [];\n  return mutationRequiredSlotCompatibilityIssuesValue({ values: valueListFromRecord(record, slot.predicate), targetIface, slot: { ...slot, required: true } });"
+    },
+    {
+      "file": "semantic-mutation-restore-request-facts.mjs",
+      "function": "normalizeRestoreFacts",
+      "before": "function normalizeRestoreFacts(mutation, helpers) {\n  if (!Array.isArray(mutation.facts)) reject(helpers, \"restoreDeletedCluster facts must be an explicit array.\");\n  if (!mutation.facts.length) reject(helpers, \"restoreDeletedCluster createFacts requires a non-empty authored fact list.\");\n  const tupleFacts = mutation.facts.map(factTupleFromMutationFact);\n  for (const fact of tupleFacts) {\n    const fields = [nonEmptyString(fact.s), nonEmptyString(fact.p), nonEmptyString(fact.o)];\n    if (fields.includes(false)) reject(helpers, \"restoreDeletedCluster facts must be fully specified positive authored facts.\", { fact });\n    if (fact.pol !== RESTORE_POLICY.positivePolarity) reject(helpers, \"restoreDeletedCluster facts must be fully specified positive authored facts.\", { fact });\n  }\n  return tupleFacts;\n}",
+      "afterBody": "  if (!Array.isArray(mutation.facts)) reject(helpers, \"restoreDeletedCluster facts must be an explicit array.\");\n  if (!mutation.facts.length) reject(helpers, \"restoreDeletedCluster createFacts requires a non-empty authored fact list.\");\n  const tupleFacts = mutation.facts.map(factTupleFromMutationFact);\n  for (const fact of tupleFacts) if (!mutationRestoreFactValidityValue(fact).ok) reject(helpers, \"restoreDeletedCluster facts must be fully specified positive authored facts.\", { fact });\n  return tupleFacts;"
+    },
+    {
+      "file": "semantic-mutation-restore-required.mjs",
+      "function": "requireRestoreSlots",
+      "before": "function requireRestoreSlots(subject, iface, subjectFacts, helpers) {\n  const authored = subjectFacts.filter(fact => fact.p !== RESTORE_POLICY.typePredicate);\n  for (const slot of iface.slots.filter(candidate => RESTORE_POLICY.requiredCardinalities.includes(candidate.cardinality))) {\n    if (slot.predicate === RESTORE_POLICY.typePredicate) continue;\n    if (authored.some(fact => fact.p === slot.predicate)) continue;\n    helpers.failSemantic(helpers.mutationIssue(\n      \"invalid-restore-deleted-cluster\", `restoreDeletedCluster subject ${subject} is missing required ${slot.predicate}.`,\n      { subject, predicate: slot.predicate, type: iface.type },\n    ), { statusCode: 409 });\n  }\n}",
+      "afterBody": "  const missing = mutationMissingRestoreRequiredPredicatesValue(subjectFacts, iface.slots, RESTORE_POLICY.typePredicate, RESTORE_POLICY.requiredCardinalities);\n  if (missing.length) helpers.failSemantic(helpers.mutationIssue(\"invalid-restore-deleted-cluster\", `restoreDeletedCluster subject ${subject} is missing required ${missing[0].predicate}.`, { subject, predicate: missing[0].predicate, type: iface.type }), { statusCode: 409 });"
+    },
+    {
+      "file": "semantic-mutation-property-prepare.mjs",
+      "function": "preparePropertyMutation",
+      "before": "function preparePropertyMutation(input, helpers) {\n  const { record, combinedFacts, projection, interfaces, subject, operation, mutation, contractPolicyProviders } = input;\n  helpers.authorize();\n  const { slot } = helpers.ensureSlotWritable(record, interfaces, mutation.predicate);\n  const editableContract = helpers.resolveEditableSlotContract(\n    combinedFacts, projection, interfaces, subject, mutation.predicate, { contractPolicyProviders },\n  );\n  const canonicalSlot = editableContract ? editableContract.slot : slot;\n  if (operation === POLICY.detachOperation && slot.valueType !== POLICY.referenceValueType) {\n    helpers.fail(helpers.issue(\n      POLICY.detachDiagnostic,\n      `Slot ${slot.predicate} does not support ${POLICY.detachOperation} because it is not a ${POLICY.referenceValueType} slot.`,\n      { subject, predicate: slot.predicate, valueType: slot.valueType },\n    ), { statusCode: POLICY.badRequestStatus });\n  }\n  const effectiveOperation = effectivePropertyMutationOperation(operation, slot.cardinality);\n  const many = POLICY.manyCardinalities.has(slot.cardinality);\n  if (operation === POLICY.addOperation && !many && helpers.currentSingleValue(combinedFacts, subject, slot.predicate) != null) {\n    helpers.fail(helpers.issue(\n      POLICY.alreadySetDiagnostic,\n      `Subject ${subject} already has ${slot.predicate}; ${POLICY.addOperation} only fills an empty slot.`,\n      { subject, predicate: slot.predicate, cardinality: slot.cardinality },\n    ), { statusCode: POLICY.conflictStatus });\n  }\n  if (effectiveOperation === POLICY.appendOperation && !many) {\n    helpers.fail(helpers.issue(\n      POLICY.appendDiagnostic,\n      `Slot ${slot.predicate} does not support ${POLICY.appendOperation}.`,\n      { subject, predicate: slot.predicate, cardinality: slot.cardinality },\n    ));\n  }\n  return Object.freeze({ slot, canonicalSlot, editableContract, effectiveOperation });\n}",
+      "afterBody": "  const { record, combinedFacts, projection, interfaces, subject, operation, mutation, contractPolicyProviders } = input;\n  helpers.authorize();\n  const { slot } = helpers.ensureSlotWritable(record, interfaces, mutation.predicate);\n  const editableContract = helpers.resolveEditableSlotContract(combinedFacts, projection, interfaces, subject, mutation.predicate, { contractPolicyProviders });\n  const currentValue = operation === POLICY.addOperation && !POLICY.manyCardinalities.has(slot.cardinality) ? helpers.currentSingleValue(combinedFacts, subject, slot.predicate) : undefined;\n  const plan = planPropertyMutation({ operation, slot, currentValue, subject });\n  if (plan.refusal) { const { code, message, details, statusCode } = plan.refusal; helpers.fail(helpers.issue(code, message, details), statusCode === undefined ? undefined : { statusCode }); }\n  return Object.freeze({ slot, canonicalSlot: editableContract ? editableContract.slot : slot, editableContract, effectiveOperation: plan.effectiveOperation });"
+    }
+  ],
+  "scope": "Runtime owners delegate value projection to the Sourcery value-plan owner. Policy compilation, authorization and effects remain in their existing owners."
+}

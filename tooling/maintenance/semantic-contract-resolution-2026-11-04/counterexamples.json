@@ -1,0 +1,79 @@
+{
+  "predecessor": "c57f2679c3500174390e8f06c173a62bc90a0cbb",
+  "sourceCommit": "f534f34d2562df684fa8a6be48f0297a6b5a62c9",
+  "compatibility": {
+    "input": [
+      {
+        "iface": {
+          "type": "A:B"
+        },
+        "slot": {
+          "predicate": "C",
+          "valueType": "string"
+        }
+      },
+      {
+        "iface": {
+          "type": "A"
+        },
+        "slot": {
+          "predicate": "B:C",
+          "valueType": "string"
+        }
+      }
+    ],
+    "predecessorIncorrectlyCompatible": true,
+    "currentCompatible": false
+  },
+  "staleTarget": {
+    "input": [
+      {
+        "s": "item",
+        "p": "name",
+        "o": "A",
+        "pol": "is"
+      },
+      {
+        "s": "item",
+        "p": "name",
+        "o": "A",
+        "pol": "is-not"
+      }
+    ],
+    "predecessorMissesRetractionOnlyChange": true,
+    "currentDetectsRetractionOnlyChange": true,
+    "currentDetectsReordering": true
+  },
+  "restore": {
+    "input": {
+      "facts": [
+        {
+          "s": "item",
+          "p": "name",
+          "o": ""
+        }
+      ]
+    },
+    "predecessor": {
+      "accepted": true,
+      "value": [
+        {
+          "s": "item",
+          "p": "name",
+          "o": "",
+          "pol": "is"
+        }
+      ]
+    },
+    "current": {
+      "accepted": false,
+      "error": {
+        "name": "Error",
+        "code": "invalid-restore-deleted-cluster",
+        "statusCode": 400,
+        "message": "restoreDeletedCluster facts must be fully specified positive authored facts."
+      }
+    }
+  },
+  "scope": "Exact predecessor functions reconstructed for bounded counterexamples; same-run engineering evidence, not an independent scientific confirmation. Current stale-target refusal is separately exercised through actual proposal admission."
+}

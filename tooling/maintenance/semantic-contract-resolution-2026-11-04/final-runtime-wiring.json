@@ -1,0 +1,50 @@
+{
+  "changes": [
+    {
+      "file": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-values.mjs",
+      "function": "mutationAuthorityResolutionValue",
+      "before": "function mutationAuthorityResolutionValue({subject,subjectAuthorized=false,helperTargets=[],authorizedHelper='',scopedTargets=[],authorizedTarget=''}){\n if(subjectAuthorized)return{allowed:true,mode:'subject',authoritySubject:subject,helperTargets:[]};\n if(authorizedHelper)return{allowed:true,mode:'helper-target',authoritySubject:authorizedHelper,helperTargets};\n const targets=unique([...helperTargets,...scopedTargets]);\n return authorizedTarget?{allowed:true,mode:'scope-target',authoritySubject:authorizedTarget,helperTargets:targets}:{allowed:false,mode:'',authoritySubject:'',helperTargets:targets};\n}"
+    },
+    {
+      "file": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-authority.mjs",
+      "function": "resolvePropertyMutationAuthority",
+      "before": "function resolvePropertyMutationAuthority(prog, actor, combinedFacts, subject) {\n  if (hasSubjectMutationAuthority(combinedFacts, actor, subject)) return {\n    allowed: true, mode: \"subject\", authoritySubject: subject, helperTargets: Object.freeze([]),\n  };\n  const helperTargets = helperMutationAuthorityTargets(combinedFacts, subject);\n  const scopedTargets = scopedAuthorityTargets(combinedFacts, subject);\n  const targets = uniqueRefList([...helperTargets, ...scopedTargets]);\n  const authoritySubject = targets.find(target => hasSubjectMutationAuthority(combinedFacts, actor, target));\n  if (authoritySubject !== undefined) return {\n    allowed: true,\n    mode: helperTargets.includes(authoritySubject) ? \"helper-target\" : \"scope-target\",\n    authoritySubject,\n    helperTargets: targets,\n  };\n  return { allowed: false, mode: \"\", authoritySubject: \"\", helperTargets: targets };\n}"
+    },
+    {
+      "file": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-authority-scope.mjs",
+      "function": "scopedAuthorityTargets",
+      "before": "function scopedAuthorityTargets(facts, subject) {\n  return walkScopeTargets(asStore(facts), subject, new Set());\n}"
+    },
+    {
+      "file": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-contract-resolution-values.mjs",
+      "function": "preferredSiblingText",
+      "before": "function preferredSiblingText(projectedValue, currentValue) {\n return mutationPreferredSiblingTextValue(projectedValue,currentValue,POLICY.missingSiblingValue);\n}"
+    },
+    {
+      "file": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-contract-duplicate.mjs",
+      "function": "duplicateContractValueReason",
+      "before": "function duplicateContractValueReason(contract, value, context) {\n  if (context.operation !== POLICY.duplicateOperation) return \"\";\n  const slot = Object(contract.slot);\n  const explicit = Array.isArray(context.existingValues) ? context.existingValues : [];\n  const values = explicit.length ? explicit : existingContractValues(contract);\n  if (!values.includes(String(value))) return \"\";\n  const eligible = [Boolean(contract.compatibleRefType), Array.isArray(slot.allowed) && slot.allowed.length > 0].includes(true);\n  if (!eligible) return \"\";\n  return slotIsRef(slot) ? POLICY.duplicateReferenceReason : POLICY.duplicateScalarReason;\n}"
+    },
+    {
+      "file": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-contract-validation.mjs",
+      "function": "validateContractValue",
+      "before": "function validateContractValue(contract, value, context, helpers) {\n  const intrinsic = validateContractIntrinsicValue(contract, value);\n  const duplicate = duplicateContractValueReason(contract, value, context);\n  const reason = intrinsic ? intrinsic : duplicate;\n  if (!reason) return;\n  const slot = Object(contract.slot);\n  const subject = text(contract.subject, \"<unknown>\");\n  const predicate = text(slot.predicate, \"\");\n  helpers.failSemantic(helpers.mutationIssue(\n    \"invalid-mutation-value\",\n    `Mutation value for ${subject}.${predicate} is invalid: ${reason}.`,\n    { subject: text(contract.subject, \"\"), predicate, value, reason },\n  ), { statusCode: 400 });\n}"
+    },
+    {
+      "file": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-delete-subject.mjs",
+      "function": "executeDeleteSubjectMutation",
+      "before": "function executeDeleteSubjectMutation(input, helpers) {\n  const { dynamicFacts, subject, meta } = input;\n  helpers.authorize();\n  const incoming = helpers.currentIncomingActiveFacts(dynamicFacts, subject);\n  if (incoming.length) {\n    helpers.fail(helpers.issue(\n      POLICY.incomingDiagnostic,\n      `Subject ${subject} cannot be deleted while other facts still reference it.`,\n      { subject, references: incoming.map(fact => ({ subject: fact.s, predicate: fact.p })) },\n    ), { statusCode: POLICY.incomingStatus });\n  }\n  const currentFacts = dynamicFacts.factsForSubject(subject).filter(fact => fact.pol === POLICY.currentPolarity);\n  if (!currentFacts.length) {\n    helpers.fail(helpers.issue(\n      POLICY.emptyDiagnostic,\n      `Subject ${subject} has no current facts to delete.`,\n      { subject },\n    ), { statusCode: POLICY.emptyStatus });\n  }\n  return currentFacts.map(fact => helpers.deltaFact(subject, fact.p, fact.o, POLICY.deltaPolarity, meta));\n}"
+    },
+    {
+      "file": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-projection-interface.mjs",
+      "function": "activeInterface",
+      "before": "function activeInterface(record, interfaces, helpers) {\n  const types = Array.isArray(record?.[POLICY.typeField]) ? record[POLICY.typeField] : [];\n  const matches = types.filter(type => interfaces.has(type));\n  if (matches.length > 1) {\n    const subject = record?.[POLICY.subjectField] ? record[POLICY.subjectField] : POLICY.missingSubjectIdentity;\n    helpers.fail(helpers.issue(\n      POLICY.ambiguousInterfaceDiagnostic,\n      `Subject matches multiple schema interfaces: ${matches.join(\", \")}.`,\n      { subject },\n    ));\n  }\n  return matches.length ? interfaces.get(matches[0]) : null;\n}"
+    },
+    {
+      "file": "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\sdk\\core\\semantic-mutation-property-canonicalization.mjs",
+      "function": "canonicalizeMutationValue",
+      "before": "function canonicalizeMutationValue(slot, mutation, subject, helpers) {\n  const mimeType = mutation.mimeType === undefined ? POLICY.missingMimeType : mutation.mimeType;\n  try {\n    return canonicalizeSlotValue(slot, mutation.value, { mimeType });\n  } catch (error) {\n    const valueType = slot.valueType ? slot.valueType : POLICY.missingValueType;\n    helpers.fail(helpers.issue(\n      POLICY.invalidValueDiagnostic,\n      `Mutation value for ${subject}.${slot.predicate} is not a canonical ${valueType}: ${error.message}`,\n      { subject, predicate: slot.predicate, valueType, value: mutation?.value },\n    ), { statusCode: POLICY.invalidValueStatus });\n  }\n}"
+    }
+  ],
+  "scope": "Remaining planners and refusals are consumed by real domain owners. Positive write plans remain separate from scalar retractions. Framed target fingerprints retain all history."
+}
